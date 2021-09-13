@@ -2,66 +2,64 @@
 title: Document.createTextNode()
 slug: Web/API/Document/createTextNode
 tags:
-- API
-- DOM
-- Document
-- Method
-- Reference
-- createTextNode
+  - API
+  - DOM
+  - Document
+  - Method
+  - Reference
+  - createTextNode
 browser-compat: api.Document.createTextNode
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>Creates a new {{domxref("Text")}} node. This method can be used to escape HTML
-  characters.</p>
+Creates a new {{domxref("Text")}} node. This method can be used to escape HTML
+characters.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>text</var> = document.createTextNode(<var>data</var>);
-</pre>
+```js
+var text = document.createTextNode(data);
+```
 
-<ul>
-  <li><var>text</var> is a {{domxref("Text")}} node.</li>
-  <li><var>data</var> is a <a
-      href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>
-    containing the data to be put in the text node.</li>
-</ul>
+- _text_ is a {{domxref("Text")}} node.
+- _data_ is a [string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
+  containing the data to be put in the text node.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-&lt;title&gt;createTextNode example&lt;/title&gt;
-&lt;script&gt;
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>createTextNode example</title>
+<script>
 function addTextNode(text) {
   var newtext = document.createTextNode(text),
       p1 = document.getElementById("p1");
 
   p1.appendChild(newtext);
 }
-&lt;/script&gt;
-&lt;/head&gt;
+</script>
+</head>
 
-&lt;body&gt;
-  &lt;button onclick="addTextNode('YES! ');"&gt;YES!&lt;/button&gt;
-  &lt;button onclick="addTextNode('NO! ');"&gt;NO!&lt;/button&gt;
-  &lt;button onclick="addTextNode('WE CAN! ');"&gt;WE CAN!&lt;/button&gt;
+<body>
+  <button onclick="addTextNode('YES! ');">YES!</button>
+  <button onclick="addTextNode('NO! ');">NO!</button>
+  <button onclick="addTextNode('WE CAN! ');">WE CAN!</button>
 
-  &lt;hr /&gt;
+  <hr />
 
-  &lt;p id="p1"&gt;First line of paragraph.&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+  <p id="p1">First line of paragraph.</p>
+</body>
+</html>
+```
 
-</pre>
+{{EmbedLiveSample('Example')}}
 
-<p>{{EmbedLiveSample('Example')}}</p>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

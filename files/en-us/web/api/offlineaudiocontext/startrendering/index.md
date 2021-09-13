@@ -10,73 +10,71 @@ tags:
   - startRendering
 browser-compat: api.OfflineAudioContext.startRendering
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>The <code>startRendering()</code> method of the {{ domxref("OfflineAudioContext") }}
-  Interface starts rendering the audio graph, taking into account the current connections
-  and the current scheduled changes.</p>
+The `startRendering()` method of the {{ domxref("OfflineAudioContext") }}
+Interface starts rendering the audio graph, taking into account the current connections
+and the current scheduled changes.
 
-<p>The {{event("complete")}} event (of type {{domxref("OfflineAudioCompletionEvent")}}) is
-  raised when the rendering is finished, containing the resulting
-  {{domxref("AudioBuffer")}} in its <code>renderedBuffer</code> property.</p>
+The {{event("complete")}} event (of type {{domxref("OfflineAudioCompletionEvent")}}) is
+raised when the rendering is finished, containing the resulting
+{{domxref("AudioBuffer")}} in its `renderedBuffer` property.
 
-<div>
-  <p>Browsers currently support two versions of the <code>startRendering()</code> method —
-    an older event-based version and a newer promise-based version. The former will
-    eventually be removed, but currently both mechanisms are provided for legacy reasons.
-  </p>
-</div>
+Browsers currently support two versions of the `startRendering()` method —
+an older event-based version and a newer promise-based version. The former will
+eventually be removed, but currently both mechanisms are provided for legacy reasons.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>Event-based version:</p>
+Event-based version:
 
-<pre class="brush: js">offlineAudioCtx.startRendering();
+```js
+offlineAudioCtx.startRendering();
 offlineAudioCtx.oncomplete = function(e) {
   // e.renderedBuffer contains the output buffer
-}</pre>
+}
+```
 
-<p>Promise-based version:</p>
+Promise-based version:
 
-<pre class="brush: js">offlineAudioCtx.startRendering().then(function(buffer) {
+```js
+offlineAudioCtx.startRendering().then(function(buffer) {
   // buffer contains the output buffer
 });
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>Void.</p>
+Void.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this simple example, we declare both an {{domxref("AudioContext")}} and an
-  <code>OfflineAudioContext</code> object. We use the <code>AudioContext</code> to load an
-  audio track via XHR ({{domxref("BaseAudioContext.decodeAudioData")}}), then the
-  <code>OfflineAudioContext</code> to render the audio into an
-  {{domxref("AudioBufferSourceNode")}} and play the track through. After the offline audio
-  graph is set up, you need to render it to an {{domxref("AudioBuffer")}} using
-  {{domxref("OfflineAudioContext.startRendering")}}.</p>
+In this simple example, we declare both an {{domxref("AudioContext")}} and an
+`OfflineAudioContext` object. We use the `AudioContext` to load an
+audio track via XHR ({{domxref("BaseAudioContext.decodeAudioData")}}), then the
+`OfflineAudioContext` to render the audio into an
+{{domxref("AudioBufferSourceNode")}} and play the track through. After the offline audio
+graph is set up, you need to render it to an {{domxref("AudioBuffer")}} using
+{{domxref("OfflineAudioContext.startRendering")}}.
 
-<p>When the <code>startRendering()</code> promise resolves, rendering has completed and
-  the output <code>AudioBuffer</code> is returned out of the promise.</p>
+When the `startRendering()` promise resolves, rendering has completed and
+the output `AudioBuffer` is returned out of the promise.
 
-<p>At this point we create another audio context, create an
-  {{domxref("AudioBufferSourceNode")}} inside it, and set its buffer to be equal to the
-  promise <code>AudioBuffer</code>. This is then played as part of a simple standard audio
-  graph.</p>
+At this point we create another audio context, create an
+{{domxref("AudioBufferSourceNode")}} inside it, and set its buffer to be equal to the
+promise `AudioBuffer`. This is then played as part of a simple standard audio
+graph.
 
-<div class="note">
-  <p><strong>Note:</strong> For a working example, see our <a
-      href="https://mdn.github.io/webaudio-examples/offline-audio-context-promise/">offline-audio-context-promise</a>
-    Github repo (see the <a href="https://github.com/mdn/webaudio-examples">source
-      code</a> too.)</p>
-</div>
+> **Note:** For a working example, see our [offline-audio-context-promise](https://mdn.github.io/webaudio-examples/offline-audio-context-promise/)
+> Github repo (see the [source
+> code](https://github.com/mdn/webaudio-examples) too.)
 
-<pre class="brush: js">// define online and offline audio context
+```js
+// define online and offline audio context
 
 var audioCtx = new AudioContext();
 var offlineCtx = new OfflineAudioContext(2,44100*40,44100);
@@ -125,19 +123,17 @@ function getData() {
 
 // Run getData to start the process off
 
-getData();</pre>
+getData();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
-  </li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

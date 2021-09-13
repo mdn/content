@@ -9,29 +9,33 @@ tags:
   - TransformStream
 browser-compat: api.TransformStream.writable
 ---
-<p>{{APIRef("Streams")}}</p>
+{{APIRef("Streams")}}
 
-<p>The <strong><code>writable</code></strong> read-only property of the {{domxref("TransformStream")}} interface returns the {{domxref("WritableStream")}} instance controlled by this <code>TransformStream</code>.</p>
+The **`writable`** read-only property of the {{domxref("TransformStream")}} interface returns the {{domxref("WritableStream")}} instance controlled by this `TransformStream`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let writable = TransformStream.writable;</pre>
+```js
+let writable = TransformStream.writable;
+```
 
-<h3>Value</h3>
-<p>A {{domxref("WritableStream")}}.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("WritableStream")}}.
 
-<p>The following example creates a new {{domxref("TransformStream")}} as a <code>textEncoderStream</code>, and prints the value of <code>writable</code> to the console.</p>
+## Examples
 
-<pre class="brush: js">const textEncoderStream = new TransformStream();
-console.log(textEncoderStream.writable) // a WritableStream</pre>
+The following example creates a new {{domxref("TransformStream")}} as a `textEncoderStream`, and prints the value of `writable` to the console.
 
-<h2 id="Specifications">Specifications</h2>
+```js
+const textEncoderStream = new TransformStream();
+console.log(textEncoderStream.writable) // a WritableStream
+```
 
-<p>{{Specifications}}</p>
+## Specifications
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+{{Specifications}}
 
-<p>{{Compat}}</p>
+## Browser compatibility
 
+{{Compat}}

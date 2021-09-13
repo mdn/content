@@ -12,34 +12,30 @@ tags:
   - WebUSB API
 browser-compat: api.USBInterface
 ---
-<div>{{draft}}{{securecontext_header}}{{APIRef("WebUSB API")}}</div>
+{{draft}}{{securecontext_header}}{{APIRef("WebUSB API")}}
 
-<p>The <code>USBInterface</code> interface of the <a href="/en-US/docs/Web/API/WebUSB_API" rel="nofollow">WebUSB API</a> provides information about an interface provided by the USB device. An interface represents a feature of the device which implements a particular protocol and may contain endpoints for bidirectional communication.</p>
+The `USBInterface` interface of the [WebUSB API](/en-US/docs/Web/API/WebUSB_API) provides information about an interface provided by the USB device. An interface represents a feature of the device which implements a particular protocol and may contain endpoints for bidirectional communication.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("USBInterface.USBInterface")}}</dt>
- <dd>Creates a new <code>USBInterface</code> object which will be populated with information about the interface on the provided <code>USBConfiguration</code> with the given interface number.</dd>
-</dl>
+- {{domxref("USBInterface.USBInterface")}}
+  - : Creates a new `USBInterface` object which will be populated with information about the interface on the provided `USBConfiguration` with the given interface number.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("USBInterface.interfaceNumber")}}{{readonlyInline}}</dt>
- <dd>Returns the interface number of this interface. This is equal to the <code>bInterfaceNumber</code> field of the interface descriptor defining this interface.</dd>
- <dt>{{domxref("USBInterface.alternate")}}{{readonlyInline}}</dt>
- <dd>Returns the currently selected alternative configuration of this interface. By default this is the <code>USBAlternateInterface</code> from <code>alternates</code> with <code>alternateSetting</code> equal to <code>0</code>. It can be changed by calling <code>USBDevice.selectAlternateInterface()</code> with any other value found in <code>alternates</code>.</dd>
- <dt>{{domxref("USBInterface.alternates")}}{{readonlyInline}}</dt>
- <dd>Returns an array containing instances of the <code>USBAlternateInterface</code> interface describing each of the alternative configurations possible for this interface.</dd>
- <dt><strong>{{domxref("USBInterface.claimed")}}</strong>{{readonlyInline}}</dt>
- <dd>Returns whether or not this interface has been claimed by the current page by calling <code>USBDevice.claimInterface()</code>.</dd>
-</dl>
+- {{domxref("USBInterface.interfaceNumber")}}{{readonlyInline}}
+  - : Returns the interface number of this interface. This is equal to the `bInterfaceNumber` field of the interface descriptor defining this interface.
+- {{domxref("USBInterface.alternate")}}{{readonlyInline}}
+  - : Returns the currently selected alternative configuration of this interface. By default this is the `USBAlternateInterface` from `alternates` with `alternateSetting` equal to `0`. It can be changed by calling `USBDevice.selectAlternateInterface()` with any other value found in `alternates`.
+- {{domxref("USBInterface.alternates")}}{{readonlyInline}}
+  - : Returns an array containing instances of the `USBAlternateInterface` interface describing each of the alternative configurations possible for this interface.
+- **{{domxref("USBInterface.claimed")}}**{{readonlyInline}}
+  - : Returns whether or not this interface has been claimed by the current page by calling `USBDevice.claimInterface()`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

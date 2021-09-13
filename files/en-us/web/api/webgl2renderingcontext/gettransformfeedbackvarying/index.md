@@ -2,54 +2,51 @@
 title: WebGL2RenderingContext.getTransformFeedbackVarying()
 slug: Web/API/WebGL2RenderingContext/getTransformFeedbackVarying
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGL2
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGL2
 browser-compat: api.WebGL2RenderingContext.getTransformFeedbackVarying
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGL2RenderingContext.getTransformFeedbackVarying()</code></strong>
-  method of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL 2 API</a> returns
-  information about varying variables from {{domxref("WebGLTransformFeedback")}} buffers.
-</p>
+The **`WebGL2RenderingContext.getTransformFeedbackVarying()`**
+method of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) returns
+information about varying variables from {{domxref("WebGLTransformFeedback")}} buffers.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">WebGLActiveInfo <var>gl</var>.getTransformFeedbackVarying(program, index);
-</pre>
+```js
+WebGLActiveInfo gl.getTransformFeedbackVarying(program, index);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>program</dt>
-  <dd>A {{domxref("WebGLProgram")}}.</dd>
-  <dt>index</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLuint")}} specifying the index of the varying variable whose
-    information to retrieve<code>.</code></dd>
-</dl>
+- program
+  - : A {{domxref("WebGLProgram")}}.
+- index
+  - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the index of the varying variable whose
+    information to retrieve`.`
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("WebGLActiveInfo")}} object.</p>
+A {{domxref("WebGLActiveInfo")}} object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">activeInfo = gl.getTransformFeedbackVarying(program, 0);
-</pre>
+```js
+activeInfo = gl.getTransformFeedbackVarying(program, 0);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLTransformFeedback")}}</li>
-</ul>
+- {{domxref("WebGLTransformFeedback")}}

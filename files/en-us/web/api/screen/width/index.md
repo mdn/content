@@ -2,44 +2,46 @@
 title: Screen.width
 slug: Web/API/Screen/width
 tags:
-- API
-- CSSOM View
-- Property
-- Reference
+  - API
+  - CSSOM View
+  - Property
+  - Reference
 browser-compat: api.Screen.width
 ---
-<p>{{APIRef("CSSOM")}}</p>
+{{APIRef("CSSOM")}}
 
-<p>The <code><strong>Screen.width</strong></code> read-only property returns the width of
-  the screen in pixels.</p>
+The **`Screen.width`** read-only property returns the width of
+the screen in pixels.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>lWidth</var> = window.screen.width
-</pre>
+```js
+lWidth = window.screen.width
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js;">// Crude way to check that the screen is at least 1024x768
-if (window.screen.width &gt;= 1024 &amp;&amp; window.screen.height &gt;= 768) {
+```js
+// Crude way to check that the screen is at least 1024x768
+if (window.screen.width >= 1024 && window.screen.height >= 768) {
   // Resolution is 1024x768 or above
 }
-</pre>
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Note that not all of the width given by this property may be available to the window
-  itself. When other widgets occupy space that cannot be used by the <code>window</code>
-  object, there is a difference in <code>window.screen.width</code> and
-  <code>window.screen.availWidth</code>. See also {{DOMxRef("screen.height")}}.</p>
+Note that not all of the width given by this property may be available to the window
+itself. When other widgets occupy space that cannot be used by the `window`
+object, there is a difference in `window.screen.width` and
+`window.screen.availWidth`. See also {{DOMxRef("screen.height")}}.
 
-<p>Internet Explorer will take into account the zoom setting when reporting the screen
-  width. It will only return the real width of the screen if the zoom is set to 100%.</p>
+Internet Explorer will take into account the zoom setting when reporting the screen
+width. It will only return the real width of the screen if the zoom is set to 100%.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

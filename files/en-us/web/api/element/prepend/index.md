@@ -11,92 +11,94 @@ tags:
   - prepend
 browser-compat: api.Element.prepend
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>Element.prepend()</code></strong> method inserts a set of
-  {{domxref("Node")}} objects or {{domxref("DOMString")}} objects before the first child
-  of the {{domxref("Element")}}. {{domxref("DOMString")}} objects are inserted as
-  equivalent {{domxref("Text")}} nodes.</p>
+The **`Element.prepend()`** method inserts a set of
+{{domxref("Node")}} objects or {{domxref("DOMString")}} objects before the first child
+of the {{domxref("Element")}}. {{domxref("DOMString")}} objects are inserted as
+equivalent {{domxref("Text")}} nodes.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">prepend(...nodesOrDOMStrings);
-</pre>
+```js
+prepend(...nodesOrDOMStrings);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>nodesOrDOMStrings</code></dt>
-  <dd>A set of {{domxref("Node")}} or {{domxref("DOMString")}} objects to insert.</dd>
-</dl>
+- `nodesOrDOMStrings`
+  - : A set of {{domxref("Node")}} or {{domxref("DOMString")}} objects to insert.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>undefined</code>.</p>
+`undefined`.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<ul>
-  <li>{{domxref("HierarchyRequestError")}}: Node cannot be inserted at the specified point
-    in the hierarchy.</li>
-</ul>
+- {{domxref("HierarchyRequestError")}}: Node cannot be inserted at the specified point
+  in the hierarchy.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Prepending_an_element">Prepending an element</h3>
+### Prepending an element
 
-<pre class="brush: js">let div = document.createElement("div");
+```js
+let div = document.createElement("div");
 let p = document.createElement("p");
 let span = document.createElement("span");
 div.append(p);
 div.prepend(span);
 
-console.log(div.childNodes); // NodeList [ &lt;span&gt;, &lt;p&gt; ]
-</pre>
+console.log(div.childNodes); // NodeList [ <span>, <p> ]
+```
 
-<h3 id="Prepending_text">Prepending text</h3>
+### Prepending text
 
-<pre class="brush: js">let div = document.createElement("div");
+```js
+let div = document.createElement("div");
 div.append("Some text");
 div.prepend("Headline: ");
 
-console.log(div.textContent); // "Headline: Some text"</pre>
+console.log(div.textContent); // "Headline: Some text"
+```
 
-<h3 id="Appending_an_element_and_text">Appending an element and text</h3>
+### Appending an element and text
 
-<pre class="brush: js">let div = document.createElement("div");
+```js
+let div = document.createElement("div");
 let p = document.createElement("p");
 div.prepend("Some text", p);
 
-console.log(div.childNodes); // NodeList [ #text "Some text", &lt;p&gt; ]</pre>
+console.log(div.childNodes); // NodeList [ #text "Some text", <p> ]
+```
 
-<h3 id="The_prepend_method_is_unscopable">The prepend method is unscopable</h3>
+### The prepend method is unscopable
 
-<p>The <code>prepend()</code> method is not scoped into the <code>with</code> statement.
-  See {{jsxref("Symbol.unscopables")}} for more information.</p>
+The `prepend()` method is not scoped into the `with` statement.
+See {{jsxref("Symbol.unscopables")}} for more information.
 
-<pre class="brush: js">let div = document.createElement("div");
+```js
+let div = document.createElement("div");
 
 with(div) {
   prepend("foo");
 }
-// ReferenceError: prepend is not defined </pre>
+// ReferenceError: prepend is not defined
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Element.append()")}}</li>
-  <li>{{domxref("Node.appendChild()")}}</li>
-  <li>{{domxref("Node.insertBefore()")}}</li>
-  <li>{{domxref("Element.before()")}}</li>
-  <li>{{domxref("Element.insertAdjacentElement()")}}</li>
-  <li>{{domxref("NodeList")}}</li>
-</ul>
+- {{domxref("Element.append()")}}
+- {{domxref("Node.appendChild()")}}
+- {{domxref("Node.insertBefore()")}}
+- {{domxref("Element.before()")}}
+- {{domxref("Element.insertAdjacentElement()")}}
+- {{domxref("NodeList")}}

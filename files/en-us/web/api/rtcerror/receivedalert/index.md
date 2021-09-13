@@ -2,46 +2,45 @@
 title: RTCError.receivedAlert
 slug: Web/API/RTCError/receivedAlert
 tags:
-- API
-- DTLS
-- Error
-- Networking
-- Property
-- RTCError
-- Read-only
-- Reference
-- WebRTC
-- WebRTC API
-- WebRTC Device API
-- receivedAlert
+  - API
+  - DTLS
+  - Error
+  - Networking
+  - Property
+  - RTCError
+  - Read-only
+  - Reference
+  - WebRTC
+  - WebRTC API
+  - WebRTC Device API
+  - receivedAlert
 browser-compat: api.RTCError.receivedAlert
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The {{domxref("RTCError")}} read-only property
-  <code><strong>receivedAlert</strong></code> specifies the fatal {{Glossary("DTLS")}}
-  error which resulted in an alert being received from the remote peer.</p>
+The {{domxref("RTCError")}} read-only property
+**`receivedAlert`** specifies the fatal {{Glossary("DTLS")}}
+error which resulted in an alert being received from the remote peer.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">let <em>receivedAlert</em> = <em>rtcError</em>.receivedAlert;</pre>
+```js
+let receivedAlert = rtcError.receivedAlert;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An unsigned long integer value specifying the fatal {{Glossary("DTLS")}} error which
-  resulted in an alert being received from the remote peer.</p>
+An unsigned long integer value specifying the fatal {{Glossary("DTLS")}} error which
+resulted in an alert being received from the remote peer.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This property is <code>null</code> if the <code>RTCError</code> doesn't represent a
-    DTLS error (with {{domxref("RTCError.errorDetail", "errorDetail")}} set to
-    <code>dtls-failure</code>).</p>
-</div>
+> **Note:** This property is `null` if the `RTCError` doesn't represent a
+> DTLS error (with {{domxref("RTCError.errorDetail", "errorDetail")}} set to
+> `dtls-failure`).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

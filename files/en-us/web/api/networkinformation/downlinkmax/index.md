@@ -11,32 +11,32 @@ tags:
   - Reference
 browser-compat: api.NetworkInformation.downlinkMax
 ---
-<p>{{APIRef("Network Information API")}}{{SeeCompatTable}}</p>
+{{APIRef("Network Information API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>NetworkInformation.downlinkMax</code></strong> read-only property
-  returns the maximum downlink speed, in megabits per second (Mbps), for the underlying
-  connection technology.</p>
+The **`NetworkInformation.downlinkMax`** read-only property
+returns the maximum downlink speed, in megabits per second (Mbps), for the underlying
+connection technology.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>max</em> = NetworkInformation.<em>downlinkMax</em></pre>
+```js
+var max = NetworkInformation.downlinkMax
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<ul>
-  <li>an <code>unrestricted double</code> representing the maximum downlink speed,
-    in megabits per second (Mb/s), for the underlying connection technology.</li>
-</ul>
+- an `unrestricted double` representing the maximum downlink speed,
+  in megabits per second (Mb/s), for the underlying connection technology.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example monitors the connection using the <code>change</code> event and
-  logs changes as they occur.</p>
+The following example monitors the connection using the `change` event and
+logs changes as they occur.
 
-<pre class="brush: js">function logConnectionType() {
+```js
+function logConnectionType() {
   var connectionType = 'not supported';
   var downlinkMax = 'not supported';
 
@@ -53,12 +53,13 @@ browser-compat: api.NetworkInformation.downlinkMax
 }
 
 logConnectionType();
-navigator.connection.addEventListener('change', logConnectionType);</pre>
+navigator.connection.addEventListener('change', logConnectionType);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

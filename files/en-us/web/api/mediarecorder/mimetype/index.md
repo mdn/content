@@ -14,49 +14,45 @@ tags:
   - mimeType
 browser-compat: api.MediaRecorder.mimeType
 ---
-<div>{{APIRef("MediaStream Recording")}}</div>
+{{APIRef("MediaStream Recording")}}
 
-<p>The <strong><code>mimeType</code></strong> read-only
-    property returns the {{Glossary("MIME")}} media type that was specified when creating
-    the {{domxref("MediaRecorder")}} object, or, if none was specified, which was chosen
-    by the browser. This is the file format of the file that would result from
-  writing all of the recorded data to disk.</p>
+The **`mimeType`** read-only
+property returns the {{Glossary("MIME")}} media type that was specified when creating
+the {{domxref("MediaRecorder")}} object, or, if none was specified, which was chosen
+by the browser. This is the file format of the file that would result from
+writing all of the recorded data to disk.
 
-<p>Keep in mind that not all codecs are supported by a given container; if you write media
-  using a codec that is not supported by a given media container, the resulting file may
-  not work reliably if at all when you try to play it back. See our <a
-    href="/en-US/docs/Web/Media/Formats">media type and format guide</a> for information
-  about container and codec support across browsers.</p>
+Keep in mind that not all codecs are supported by a given container; if you write media
+using a codec that is not supported by a given media container, the resulting file may
+not work reliably if at all when you try to play it back. See our [media type and format guide](/en-US/docs/Web/Media/Formats) for information
+about container and codec support across browsers.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The term "MIME type" is officially considered to be
-    historical; these strings are now officially known as <strong>media types</strong>.
-    MDN Web Docs content uses the terms interchangeably.</p>
-</div>
+> **Note:** The term "MIME type" is officially considered to be
+> historical; these strings are now officially known as **media types**.
+> MDN Web Docs content uses the terms interchangeably.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>mimeType</em> = <em>mediaRecorder</em>.mimeType</pre>
+```js
+var mimeType = mediaRecorder.mimeType
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>The MIME media type which describes the format of the recorded media, as a
-  {{domxref("DOMString")}}. This string <em>may</em> include the <a
-    href="/en-US/docs/Web/Media/Formats/codecs_parameter"><code>codecs</code>
-    parameter,</a> giving details about the codecs and the codec configurations used by
-  the media recorder.</p>
+The MIME media type which describes the format of the recorded media, as a
+{{domxref("DOMString")}}. This string _may_ include the [`codecs`
+parameter,](/en-US/docs/Web/Media/Formats/codecs_parameter) giving details about the codecs and the codec configurations used by
+the media recorder.
 
-<p>The media type strings are standardized by the Internet Assigned Numbers Authority
-  (IANA). For their official list of defined media type strings, see the article <a
-    href="https://www.iana.org/assignments/media-types/media-types.xhtml">Media Types</a>
-  on the IANA site. See also <a
-    href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">media types</a> to learn more
-  about media types and how they're used in web content and by web browsers.</p>
+The media type strings are standardized by the Internet Assigned Numbers Authority
+(IANA). For their official list of defined media type strings, see the article [Media Types](https://www.iana.org/assignments/media-types/media-types.xhtml)
+on the IANA site. See also [media types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) to learn more
+about media types and how they're used in web content and by web browsers.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">...
+```js
+...
 
 if (navigator.mediaDevices) {
   console.log('getUserMedia supported.');
@@ -80,38 +76,36 @@ if (navigator.mediaDevices) {
     .catch(function(error) {
       console.log(error.message);
     });
-</pre>
+```
 
-<p>Changing line 14 to the following causes <code>MediaRecorder</code> to try to use AVC
-  Constrained Baseline Profile Level 4 for video and AAC-LC (Low Complexity) for audio,
-  which is good for mobile and other possible resource-constrained situations.</p>
+Changing line 14 to the following causes `MediaRecorder` to try to use AVC
+Constrained Baseline Profile Level 4 for video and AAC-LC (Low Complexity) for audio,
+which is good for mobile and other possible resource-constrained situations.
 
-<pre class="brush: js">mimeType: 'video/mp4; codecs="avc1.424028, mp4a.40.2"'</pre>
+```js
+mimeType: 'video/mp4; codecs="avc1.424028, mp4a.40.2"'
+```
 
-<p>Assuming this configuration is acceptable to the user agent, the value returned later
-  by <code>m.mimeType</code> would then be
-  <code>video/mp4; codecs="avc1.424028, mp4a.40.2"</code>.</p>
+Assuming this configuration is acceptable to the user agent, the value returned later
+by `m.mimeType` would then be
+`video/mp4; codecs="avc1.424028, mp4a.40.2"`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API">Using
-      the MediaRecorder API</a></li>
-  <li><a href="/en-US/docs/Web/Media/Formats/codecs_parameter">The "codecs" parameter in
-      common media types</a></li>
-  <li><a href="https://mdn.github.io/web-dictaphone/">Web Dictaphone</a>: MediaRecorder +
-    getUserMedia + Web Audio API visualization demo, by <a
-      href="https://twitter.com/chrisdavidmills">Chris Mills</a> (<a
-      href="https://github.com/mdn/web-dictaphone/">source on Github</a>.)</li>
-  <li><a href="http://simpl.info/mediarecorder/">simpl.info MediaStream Recording
-      demo</a>, by <a href="https://twitter.com/sw12">Sam Dutton</a>.</li>
-  <li>{{domxref("MediaDevices.getUserMedia()")}}</li>
-</ul>
+- [Using
+  the MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
+- [The "codecs" parameter in
+  common media types](/en-US/docs/Web/Media/Formats/codecs_parameter)
+- [Web Dictaphone](https://mdn.github.io/web-dictaphone/): MediaRecorder +
+  getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on Github](https://github.com/mdn/web-dictaphone/).)
+- [simpl.info MediaStream Recording
+  demo](http://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
+- {{domxref("MediaDevices.getUserMedia()")}}

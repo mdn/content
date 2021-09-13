@@ -2,56 +2,41 @@
 title: LockedFile.abort()
 slug: Web/API/LockedFile/abort
 tags:
-- API
-- Files
-- Method
-- Non Standard
-- Reference
-- WebAPI
+  - API
+  - Files
+  - Method
+  - Non Standard
+  - Reference
+  - WebAPI
 ---
-<p>{{APIRef("File System API")}}{{non-standard_header}}</p>
+{{APIRef("File System API")}}{{non-standard_header}}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>The <code>abort</code> method is used to release the lock on the
-  {{domxref("LockedFile")}} object, making it inactive: its {{domxref("LockedFile.active",
-  "active")}} property is set to false and all ongoing operations are canceled.</p>
+The `abort` method is used to release the lock on the
+{{domxref("LockedFile")}} object, making it inactive: its {{domxref("LockedFile.active",
+  "active")}} property is set to false and all ongoing operations are canceled.
 
-<div class="note">
-  <p><strong>Note:</strong> When an ongoing operation is canceled, there is no rollback
-    (it is not a database transaction), therefore the file can be corrupted if the
-    canceled operation was performing some writing.</p>
-</div>
+> **Note:** When an ongoing operation is canceled, there is no rollback
+> (it is not a database transaction), therefore the file can be corrupted if the
+> canceled operation was performing some writing.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var request = <em>instanceOfLockedFile</em>.abort();</pre>
+```js
+var request = instanceOfLockedFile.abort();
+```
 
-<h3 id="Return">Return</h3>
+### Return
 
-<p>A {{domxref("FileRequest")}} object to handle the success or failure of the operation.
-</p>
+A {{domxref("FileRequest")}} object to handle the success or failure of the operation.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('FileSystem')}}</td>
-      <td>{{Spec2('FileSystem')}}</td>
-      <td>Draft proposal</td>
-    </tr>
-  </tbody>
-</table>
+| Specification                        | Status                           | Comment        |
+| ------------------------------------ | -------------------------------- | -------------- |
+| {{SpecName('FileSystem')}} | {{Spec2('FileSystem')}} | Draft proposal |
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("LockedFile")}}</li>
-</ul>
+- {{domxref("LockedFile")}}

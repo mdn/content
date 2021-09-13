@@ -11,44 +11,46 @@ tags:
   - Reference
 browser-compat: api.Gamepad.timestamp
 ---
-<div>{{APIRef("Gamepad API")}}</div>
+{{APIRef("Gamepad API")}}
 
-<p>The <strong><code>Gamepad.timestamp</code></strong> property of the
-	{{domxref("Gamepad")}} interface returns a {{domxref("DOMHighResTimeStamp")}}
-	representing the last time the data for this gamepad was updated.</p>
+The **`Gamepad.timestamp`** property of the
+{{domxref("Gamepad")}} interface returns a {{domxref("DOMHighResTimeStamp")}}
+representing the last time the data for this gamepad was updated.
 
-<p>The idea behind this is to allow developers to determine if the <code>axes</code> and
-	<code>button</code> data have been updated from the hardware. The value must be
-	relative to the <code>navigationStart</code> attribute of the
-	<code>{{domxref("PerformanceTiming")}}</code> interface. Values are monotonically
-	increasing, meaning that they can be compared to determine the ordering of updates, as
-	newer values will always be greater than or equal to older values.</p>
+The idea behind this is to allow developers to determine if the `axes` and
+`button` data have been updated from the hardware. The value must be
+relative to the `navigationStart` attribute of the
+`{{domxref("PerformanceTiming")}}` interface. Values are monotonically
+increasing, meaning that they can be compared to determine the ordering of updates, as
+newer values will always be greater than or equal to older values.
 
-<div class="note">
-	<p><strong>Note:</strong> This property is not currently supported anywhere.</p>
-</div>
+> **Note:** This property is not currently supported anywhere.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const timestamp = gamepad.timestamp;</pre>
+```js
+const timestamp = gamepad.timestamp;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var gp = navigator.getGamepads()[0];
-console.log(gp.timestamp);</pre>
+```js
+var gp = navigator.getGamepads()[0];
+console.log(gp.timestamp);
+```
 
-<h2 id="Value">Value</h2>
+## Value
 
-<p>A {{domxref("DOMHighResTimeStamp")}}.</p>
+A {{domxref("DOMHighResTimeStamp")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<p><a href="/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API">Using the Gamepad API</a></p>
+[Using the Gamepad API](/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)

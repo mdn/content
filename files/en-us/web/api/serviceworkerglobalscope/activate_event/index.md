@@ -9,36 +9,39 @@ tags:
   - ServiceWorkerGlobalScope
 browser-compat: api.ServiceWorkerGlobalScope.activate_event
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p>The <strong><code>activate</code></strong> event of the {{domxref("ServiceWorkerGlobalScope")}} interface is fired when a {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.active")}} worker.</p>
+The **`activate`** event of the {{domxref("ServiceWorkerGlobalScope")}} interface is fired when a {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.active")}} worker.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("ExtendableEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("ServiceWorkerGlobalScope.onactivate")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("ExtendableEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{domxref("ServiceWorkerGlobalScope.onactivate")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following snippet shows how you could use an <code>activate</code> event handler to upgrade a cache.</p>
+The following snippet shows how you could use an `activate` event handler to upgrade a cache.
 
-<pre class="brush: js">globalScope.addEventListener('activate', function(event) {
+```js
+globalScope.addEventListener('activate', function(event) {
   var cacheAllowlist = ['v2'];
 
   event.waitUntil(
@@ -48,26 +51,27 @@ browser-compat: api.ServiceWorkerGlobalScope.activate_event
       }
     })
   );
-});</pre>
+});
+```
 
-<p>You can also set up the event handler using the {{domxref("ServiceWorkerGlobalScope.onactivate")}} property:</p>
+You can also set up the event handler using the {{domxref("ServiceWorkerGlobalScope.onactivate")}} property:
 
-<pre class="brush: js">globalScope.onactivate = function(event) {
+```js
+globalScope.onactivate = function(event) {
   ...
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("ServiceWorkerGlobalScope/install_event", "install")}} event</li>
- <li>{{domxref("ServiceWorkerGlobalScope")}}</li>
- <li><a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a></li>
-</ul>
+- {{domxref("ServiceWorkerGlobalScope/install_event", "install")}} event
+- {{domxref("ServiceWorkerGlobalScope")}}
+- [Service Worker API](/en-US/docs/Web/API/Service_Worker_API)

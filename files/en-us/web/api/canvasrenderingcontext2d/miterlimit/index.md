@@ -9,54 +9,52 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.miterLimit
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code><strong>CanvasRenderingContext2D.miterLimit</strong></code> property of the
-  Canvas 2D API sets the miter limit ratio.</p>
+The **`CanvasRenderingContext2D.miterLimit`** property of the
+Canvas 2D API sets the miter limit ratio.
 
-<div class="note">
-  <p><strong>Note:</strong> For more info about miters, see <a
-      href="/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Applying
-      styles and color</a> in the <a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas
-      tutorial</a>.</p>
-</div>
+> **Note:** For more info about miters, see [Applying
+> styles and color](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) in the [Canvas
+> tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>ctx</em>.miterLimit = <em>value</em>;</pre>
+```js
+ctx.miterLimit = value;
+```
 
-<h3 id="Options">Options</h3>
+### Options
 
-<dl>
-  <dt><code>value</code></dt>
-  <dd>A number specifying the miter limit ratio, in coordinate space units. Zero,
+- `value`
+  - : A number specifying the miter limit ratio, in coordinate space units. Zero,
     negative, {{jsxref("Infinity")}}, and {{jsxref("NaN")}} values are ignored. The
-    default value is <code>10.0</code>.</dd>
-</dl>
+    default value is `10.0`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_the_miterLimit_property">Using the <code>miterLimit</code> property</h3>
+### Using the `miterLimit` property
 
-<p>See the chapter <a
-    href="/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#a_demo_of_the_miterlimit_property">Applying
-    styles and color</a> in the <a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas
-    tutorial</a> for more information.</p>
+See the chapter [Applying
+styles and color](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#a_demo_of_the_miterlimit_property) in the [Canvas
+tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial) for more information.
 
-<pre class="brush: html hidden">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
+```html hidden
+<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
 ctx.beginPath();
 ctx.moveTo(0,0);
 ctx.lineWidth = 15;
 ctx.lineTo(100, 100);
-ctx.stroke();&lt;/textarea&gt;
-</pre>
+ctx.stroke();</textarea>
+```
 
-<pre class="brush: js hidden">var canvas = document.getElementById("canvas");
+```js hidden
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -79,39 +77,33 @@ edit.addEventListener("click", function() {
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
-</pre>
+```
 
-<p>{{EmbedLiveSample("A_demo_of_the_miterLimit_property", "400", "180",
+{{EmbedLiveSample("A_demo_of_the_miterLimit_property", "400", "180",
   "canvas_miterlimit.png",
-  "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}</p>
+  "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h3 id="WebKitBlink-specific_notes">WebKit/Blink-specific notes</h3>
+### WebKit/Blink-specific notes
 
-<ul>
-  <li>In WebKit- and Blink-based Browsers, a non-standard and deprecated method
-    <code>ctx.setMiterLimit()</code> is implemented in addition to this property.</li>
-</ul>
+- In WebKit- and Blink-based Browsers, a non-standard and deprecated method
+  `ctx.setMiterLimit()` is implemented in addition to this property.
 
-<h3 id="Gecko-specific_notes">Gecko-specific notes</h3>
+### Gecko-specific notes
 
-<ul>
-  <li>Starting Gecko 2.0 {{geckoRelease("2.0")}}, setting <code>miterLimit</code> to a
-    negative value no longer throws an exception; instead, it properly ignores
-    non-positive values.</li>
-</ul>
+- Starting Gecko 2.0 {{geckoRelease("2.0")}}, setting `miterLimit` to a
+  negative value no longer throws an exception; instead, it properly ignores
+  non-positive values.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining this property: {{domxref("CanvasRenderingContext2D")}}</li>
-  <li>{{domxref("CanvasRenderingContext2D.lineCap")}}</li>
-  <li>{{domxref("CanvasRenderingContext2D.lineJoin")}}</li>
-</ul>
+- The interface defining this property: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.lineCap")}}
+- {{domxref("CanvasRenderingContext2D.lineJoin")}}

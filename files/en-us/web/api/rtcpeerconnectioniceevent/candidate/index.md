@@ -2,54 +2,55 @@
 title: RTCPeerConnectionIceEvent.candidate
 slug: Web/API/RTCPeerConnectionIceEvent/candidate
 tags:
-- Candidate
-- Negotiation
-- Networking
-- Property
-- RTCPeerConnectionIceEvent
-- Reference
-- SDP
-- WebRTC
-- WebRTC API
-- rtc
+  - Candidate
+  - Negotiation
+  - Networking
+  - Property
+  - RTCPeerConnectionIceEvent
+  - Reference
+  - SDP
+  - WebRTC
+  - WebRTC API
+  - rtc
 browser-compat: api.RTCPeerConnectionIceEvent.candidate
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The read-only <strong><code>candidate</code></strong> property
-    of the {{domxref("RTCPeerConnectionIceEvent")}} interface returns the
-    {{domxref("RTCIceCandidate")}} associated with the event.</p>
+The read-only **`candidate`** property
+of the {{domxref("RTCPeerConnectionIceEvent")}} interface returns the
+{{domxref("RTCIceCandidate")}} associated with the event.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"> var <em>candidate</em> = <em>event</em>.candidate;</pre>
+```js
+ var candidate = event.candidate;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("RTCIceCandidate")}} object representing the ICE candidate that has been
-  received, or <code>null</code> to indicate that there are no further candidates for this
-  negotiation session.</p>
+An {{domxref("RTCIceCandidate")}} object representing the ICE candidate that has been
+received, or `null` to indicate that there are no further candidates for this
+negotiation session.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">pc.onicecandidate = function( ev ) {
+```js
+pc.onicecandidate = function( ev ) {
   alert("The ICE candidate (transport address: '" +
     ev.candidate.candidate +
     "') has been added to this connection.");
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{event("icecandidate")}}</li>
-  <li>{{domxref("RTCPeerConnection")}}</li>
-</ul>
+- {{event("icecandidate")}}
+- {{domxref("RTCPeerConnection")}}

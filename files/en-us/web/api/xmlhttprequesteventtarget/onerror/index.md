@@ -2,52 +2,52 @@
 title: XMLHttpRequestEventTarget.onerror
 slug: Web/API/XMLHttpRequestEventTarget/onerror
 tags:
-- API
-- Event Handler
-- Property
-- Reference
-- Web
-- XMLHttpRequestEventTarget
+  - API
+  - Event Handler
+  - Property
+  - Reference
+  - Web
+  - XMLHttpRequestEventTarget
 browser-compat: api.XMLHttpRequestEventTarget.onerror
 ---
-<div>{{APIRef("XMLHttpRequest")}}</div>
+{{APIRef("XMLHttpRequest")}}
 
-<p>The <strong><code>XMLHttpRequestEventTarget.onerror</code></strong> is the function
-	called when an {{domxref("XMLHttpRequest")}} transaction fails due to an error.</p>
+The **`XMLHttpRequestEventTarget.onerror`** is the function
+called when an {{domxref("XMLHttpRequest")}} transaction fails due to an error.
 
-<p>It's important to note that this is only called if there's an error at the
-  <em>network</em> level. If the error only exists at the <em>application</em> level
-  (e.g. an HTTP error code is sent), this method will not be called.</p>
+It's important to note that this is only called if there's an error at the
+_network_ level. If the error only exists at the _application_ level
+(e.g. an HTTP error code is sent), this method will not be called.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-	class="brush: js"><em>XMLHttpRequest</em>.onerror = <em>callback</em>;</pre>
+```js
+XMLHttpRequest.onerror = callback;
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<ul>
-	<li><code><em>callback</em></code> is the function to be executed when the request
-		fails.</li>
-</ul>
+- `callback` is the function to be executed when the request
+  fails.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var xmlhttp = new XMLHttpRequest(),
+```js
+var xmlhttp = new XMLHttpRequest(),
   method = 'GET',
   url = 'https://developer.mozilla.org/';
 
-xmlhttp.open(<em>method</em>, <em>url</em>, true);
+xmlhttp.open(method, url, true);
 xmlhttp.onerror = function () {
   console.log("** An error occurred during the transaction");
 };
 xmlhttp.send();
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

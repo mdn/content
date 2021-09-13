@@ -12,38 +12,38 @@ tags:
   - Fetch
 browser-compat: api.BackgroundFetchManager.get
 ---
-<div>{{DefaultAPISidebar("Background Fetch API")}}</div>
+{{DefaultAPISidebar("Background Fetch API")}}
 
-<p>The <strong><code>get()</code></strong> method of the {{domxref("BackgroundFetchManager")}} interface returns a {{jsxref("Promise")}} that resolves with the {{domxref("BackgroundFetchRegistration")}} associated with the provided <code>id</code> or {{jsxref("undefined")}} if the <code>id</code> is not found. </p>
+The **`get()`** method of the {{domxref("BackgroundFetchManager")}} interface returns a {{jsxref("Promise")}} that resolves with the {{domxref("BackgroundFetchRegistration")}} associated with the provided `id` or {{jsxref("undefined")}} if the `id` is not found.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">let backgroundFetchRegistration = BackgroundFetchManager.get(id);</pre>
+    let backgroundFetchRegistration = BackgroundFetchManager.get(id);
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-<dt><code>id</code></dt>
-<dd>the ID of a {{domxref("backgroundFetchRegistration")}} defined by calling {{domxref("BackgroundFetchRegistration.fetch","fetch()")}}.</dd>
-</dl>
+- `id`
+  - : the ID of a {{domxref("backgroundFetchRegistration")}} defined by calling {{domxref("BackgroundFetchRegistration.fetch","fetch()")}}.
 
-<h3 id="Returns">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} that resolves with a {{domxref("BackgroundFetchRegistration")}} or {{jsxref("undeffined")}}.</p>
+A {{jsxref("Promise")}} that resolves with a {{domxref("BackgroundFetchRegistration")}} or {{jsxref("undeffined")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following examples shows how to use <code>get()</code> to retrieve a {{domxref("BackgroundFetchRegistration")}}. With an active {{domxref('ServiceWorker', 'service worker')}}, use the {{domxref('ServiceWorkerRegistration.backgroundFetch')}} to access the <code>BackgroundFetchManager</code> object and call its <code>get()</code> method.</p>
+The following examples shows how to use `get()` to retrieve a {{domxref("BackgroundFetchRegistration")}}. With an active {{domxref('ServiceWorker', 'service worker')}}, use the {{domxref('ServiceWorkerRegistration.backgroundFetch')}} to access the `BackgroundFetchManager` object and call its `get()` method.
 
-<pre class="brush: js">navigator.serviceWorker.ready.then(async (swReg) => {
+```js
+navigator.serviceWorker.ready.then(async (swReg) => {
   const bgFetch = await swReg.backgroundFetch.get('my-fetch');
 });
-my code block</pre>
+my code block
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

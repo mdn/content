@@ -11,84 +11,89 @@ tags:
   - keydown
 browser-compat: api.Document.keydown_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <strong><code>keydown</code></strong> event is fired when a key is pressed.</p>
+The **`keydown`** event is fired when a key is pressed.
 
-<p>Unlike the {{domxref("Document/keypress_event", "keypress")}} event, the <code>keydown</code> event is fired for all keys, regardless of whether they produce a character value.</p>
+Unlike the {{domxref("Document/keypress_event", "keypress")}} event, the `keydown` event is fired for all keys, regardless of whether they produce a character value.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("KeyboardEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("GlobalEventHandlers.onkeydown", "onkeydown")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("KeyboardEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{domxref("GlobalEventHandlers.onkeydown", "onkeydown")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>The <code>keydown</code> and {{domxref("Document/keyup_event", "keyup")}} events provide a code indicating which key is pressed, while {{domxref("Document/keypress_event", "keypress")}} indicates which <em>character</em> was entered. For example, a lowercase "a" will be reported as 65 by <code>keydown</code> and <code>keyup</code>, but as 97 by <code>keypress</code>. An uppercase "A" is reported as 65 by all events.</p>
+The `keydown` and {{domxref("Document/keyup_event", "keyup")}} events provide a code indicating which key is pressed, while {{domxref("Document/keypress_event", "keypress")}} indicates which _character_ was entered. For example, a lowercase "a" will be reported as 65 by `keydown` and `keyup`, but as 97 by `keypress`. An uppercase "A" is reported as 65 by all events.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="addEventListener_keydown_example">addEventListener keydown example</h3>
+### addEventListener keydown example
 
-<p>This example logs the {{domxref("KeyboardEvent.code")}} value whenever you press down a key.</p>
+This example logs the {{domxref("KeyboardEvent.code")}} value whenever you press down a key.
 
-<pre class="brush: html">&lt;p&gt;Focus the IFrame first (e.g. by clicking in it), then try pressing some keys.&lt;/p&gt;
-&lt;p id="log"&gt;&lt;/p&gt;</pre>
+```html
+<p>Focus the IFrame first (e.g. by clicking in it), then try pressing some keys.</p>
+<p id="log"></p>
+```
 
-<pre class="brush: js">document.addEventListener('keydown', logKey);
+```js
+document.addEventListener('keydown', logKey);
 
 function logKey(e) {
   log.textContent += ` ${e.code}`;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("addEventListener_keydown_example")}}</p>
+{{EmbedLiveSample("addEventListener_keydown_example")}}
 
-<h3 id="onkeydown_equivalent">onkeydown equivalent</h3>
+### onkeydown equivalent
 
-<pre class="brush: js">document.onkeydown = logKey;</pre>
+```js
+document.onkeydown = logKey;
+```
 
+### Ignoring keydown during IME composition
 
-<h3 id="Ignoring_keydown_during_ime_composition">Ignoring keydown during IME composition</h3>
+An _Input Method Editor (IME)_ is a program that enables users to enter characters that are not supported by their keyboard using some other key combination.
 
-<p>An <em>Input Method Editor (IME)</em> is a program that enables users to enter characters that are not supported by their keyboard using some other key combination.</p>
+Since Firefox 65, the `keydown` and {{domxref("Document/keyup_event", "keyup")}} events are now fired during IME composition ({{bug(354358)}}). To ignore all `keydown` events that are part of composition, do something like this (229 is a special value set for a `keyCode` relating to an event that has been processed by an IME):
 
-<p>Since Firefox 65, the <code>keydown</code> and {{domxref("Document/keyup_event", "keyup")}} events are now fired during IME composition ({{bug(354358)}}). To ignore all <code>keydown</code> events that are part of composition, do something like this (229 is a special value set for a <code>keyCode</code> relating to an event that has been processed by an IME):</p>
-
-<pre class="brush: js">eventTarget.addEventListener("keydown", event =&gt; {
+```js
+eventTarget.addEventListener("keydown", event => {
   if (event.isComposing || event.keyCode === 229) {
     return;
   }
   // do something
 });
-</pre>
+```
 
+## Specifications
 
-<h2 id="Specifications">Specifications</h2>
+{{Specifications}}
 
-<p>{{Specifications}}</p>
+## Browser compatibility
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+{{Compat}}
 
-<p>{{Compat}}</p>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{domxref("Document/keypress_event", "keypress")}}</li>
- <li>{{domxref("Document/keyup_event", "keyup")}}</li>
- <li>{{domxref("Element")}}: {{domxref("Element/keydown_event", "keydown")}} event</li>
-</ul>
+- {{domxref("Document/keypress_event", "keypress")}}
+- {{domxref("Document/keyup_event", "keyup")}}
+- {{domxref("Element")}}: {{domxref("Element/keydown_event", "keydown")}} event

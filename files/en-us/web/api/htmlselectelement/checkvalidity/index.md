@@ -2,37 +2,35 @@
 title: HTMLSelectElement.checkValidity()
 slug: Web/API/HTMLSelectElement/checkValidity
 tags:
-- API
-- Constraint Validation API
-- HTML DOM
-- HTMLSelectElement
-- Method
-- Reference
+  - API
+  - Constraint Validation API
+  - HTML DOM
+  - HTMLSelectElement
+  - Method
+  - Reference
 browser-compat: api.HTMLSelectElement.checkValidity
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p>The <code><strong>HTMLSelectElement.checkValidity()</strong></code> method checks
-  whether the element has any constraints and whether it satisfies them. If the element
-  fails its constraints, the browser fires a cancelable {{event("invalid")}} event at the
-  element, and then returns <code>false</code>.</p>
+The **`HTMLSelectElement.checkValidity()`** method checks
+whether the element has any constraints and whether it satisfies them. If the element
+fails its constraints, the browser fires a cancelable {{event("invalid")}} event at the
+element, and then returns `false`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>result</em> = <em>selectElt</em>.checkValidity();</pre>
+```js
+var result = selectElt.checkValidity();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">Form validation</a>
-  </li>
-</ul>
+- [Form validation](/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation)

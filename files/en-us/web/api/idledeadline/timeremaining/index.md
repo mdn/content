@@ -10,54 +10,53 @@ tags:
   - timeRemaining
 browser-compat: api.IdleDeadline.timeRemaining
 ---
-<p>{{APIRef("Background Tasks")}}{{SeeCompatTable}}</p>
+{{APIRef("Background Tasks")}}{{SeeCompatTable}}
 
-<p>The <strong><code>timeRemaining()</code></strong> method
-  on the {{domxref("IdleDeadline")}} interface returns the estimated number of
-  milliseconds remaining in the current idle period. The callback can call this method at
-  any time to determine how much time it can continue to work before it must return. For
-  example, if the callback finishes a task and has another one to begin, it can call
-  <code>timeRemaining()</code> to see if there's enough time to complete the next task. If
-  there isn't, the callback can just return immediately, or look for other work to do with
-  the remaining time.</p>
+The **`timeRemaining()`** method
+on the {{domxref("IdleDeadline")}} interface returns the estimated number of
+milliseconds remaining in the current idle period. The callback can call this method at
+any time to determine how much time it can continue to work before it must return. For
+example, if the callback finishes a task and has another one to begin, it can call
+`timeRemaining()` to see if there's enough time to complete the next task. If
+there isn't, the callback can just return immediately, or look for other work to do with
+the remaining time.
 
-<p>By the time <code>timeRemaining()</code> reaches 0, it is suggested that the callback
-  should return control to the user agent's event loop.</p>
+By the time `timeRemaining()` reaches 0, it is suggested that the callback
+should return control to the user agent's event loop.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>timeRemaining</em> = <em>IdleDeadline</em>.timeRemaining();
-</pre>
+```js
+timeRemaining = IdleDeadline.timeRemaining();
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("DOMHighResTimeStamp")}} value (which is a floating-point number)
-  representing the number of milliseconds the user agent estimates are left in the current
-  idle period. The value is ideally accurate to within about 5 microseconds.</p>
+A {{domxref("DOMHighResTimeStamp")}} value (which is a floating-point number)
+representing the number of milliseconds the user agent estimates are left in the current
+idle period. The value is ideally accurate to within about 5 microseconds.
 
-<p>If the {{domxref("IdleDeadline")}} object's {{domxref("IdleDeadline.didTimeout",
-  "didTimeout")}} property is true, this method returns zero.</p>
+If the {{domxref("IdleDeadline")}} object's {{domxref("IdleDeadline.didTimeout",
+  "didTimeout")}} property is true, this method returns zero.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See our <a href="/en-US/docs/Web/API/Background_Tasks_API#example">complete example</a>
-  in the article <a href="/en-US/docs/Web/API/Background_Tasks_API">Cooperative Scheduling
-    of Background Tasks API</a>.</p>
+See our [complete example](/en-US/docs/Web/API/Background_Tasks_API#example)
+in the article [Cooperative Scheduling
+of Background Tasks API](/en-US/docs/Web/API/Background_Tasks_API).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Background_Tasks_API">Collaborative Scheduling of
-      Background Tasks</a></li>
-  <li>{{domxref("IdleDeadline")}}</li>
-  <li>{{domxref("Window.requestIdleCallback()")}}</li>
-  <li>{{domxref("Window.cancelIdleCallback()")}}</li>
-</ul>
+- [Collaborative Scheduling of
+  Background Tasks](/en-US/docs/Web/API/Background_Tasks_API)
+- {{domxref("IdleDeadline")}}
+- {{domxref("Window.requestIdleCallback()")}}
+- {{domxref("Window.cancelIdleCallback()")}}

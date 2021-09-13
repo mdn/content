@@ -2,89 +2,89 @@
 title: CanvasRenderingContext2D.isPointInStroke()
 slug: Web/API/CanvasRenderingContext2D/isPointInStroke
 tags:
-- API
-- Canvas
-- CanvasRenderingContext2D
-- Method
-- Reference
+  - API
+  - Canvas
+  - CanvasRenderingContext2D
+  - Method
+  - Reference
 browser-compat: api.CanvasRenderingContext2D.isPointInStroke
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The
-  <strong><code>CanvasRenderingContext2D.isPointInStroke()</code></strong>
-  method of the Canvas 2D API reports whether or not the specified point is inside the
-  area contained by the stroking of a path.</p>
+The
+**`CanvasRenderingContext2D.isPointInStroke()`**
+method of the Canvas 2D API reports whether or not the specified point is inside the
+area contained by the stroking of a path.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>ctx</em>.isPointInStroke(<em>x</em>, <em>y</em>);
-<em>ctx</em>.isPointInStroke(<em>path</em>, <em>x</em>, <em>y</em>);
-</pre>
+```js
+ctx.isPointInStroke(x, y);
+ctx.isPointInStroke(path, x, y);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>x</code></dt>
-  <dd>The x-axis coordinate of the point to check.</dd>
-  <dt><code>y</code></dt>
-  <dd>The y-axis coordinate of the point to check.</dd>
-  <dt><code>path</code></dt>
-  <dd>A {{domxref("Path2D")}} path to check against. If unspecified, the current path is
-    used.</dd>
-</dl>
+- `x`
+  - : The x-axis coordinate of the point to check.
+- `y`
+  - : The y-axis coordinate of the point to check.
+- `path`
+  - : A {{domxref("Path2D")}} path to check against. If unspecified, the current path is
+    used.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<dl>
-  <dt>A boolean value</dt>
-  <dd>A Boolean, which is <code>true</code> if the point is inside the area contained by
-    the stroking of a path, otherwise <code>false</code>.</dd>
-</dl>
+- A boolean value
+  - : A Boolean, which is `true` if the point is inside the area contained by
+    the stroking of a path, otherwise `false`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Checking_a_point_in_the_current_path">Checking a point in the current path</h3>
+### Checking a point in the current path
 
-<p>This example uses the <code>isPointInStroke()</code> method to check if a point is
-  within the area of the current path's stroke.</p>
+This example uses the `isPointInStroke()` method to check if a point is
+within the area of the current path's stroke.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-&lt;p&gt;In stroke: &lt;code id="result"&gt;false&lt;/code&gt;&lt;/p&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+<p>In stroke: <code id="result">false</code></p>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js;">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const result = document.getElementById('result');
 
 ctx.rect(10, 10, 100, 100);
 ctx.stroke();
 result.innerText = ctx.isPointInStroke(50, 10);
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Checking_a_point_in_the_current_path', 700, 220) }}</p>
+{{ EmbedLiveSample('Checking_a_point_in_the_current_path', 700, 220) }}
 
-<h3 id="Checking_a_point_in_the_specified_path">Checking a point in the specified path
-</h3>
+### Checking a point in the specified path
 
-<p>Whenever you move the mouse, this example checks whether the cursor is in the stroke of
-  an elliptical <code>Path2D</code> path. If yes, the ellipse's stroke becomes green,
-  otherwise it is red.</p>
+Whenever you move the mouse, this example checks whether the cursor is in the stroke of
+an elliptical `Path2D` path. If yes, the ellipse's stroke becomes green,
+otherwise it is red.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // Create ellipse
@@ -110,22 +110,20 @@ canvas.addEventListener('mousemove', function(event) {
   ctx.fill(ellipse);
   ctx.stroke(ellipse);
 });
-</pre>
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Checking_a_point_in_the_specified_path', 700, 180) }}</p>
+{{ EmbedLiveSample('Checking_a_point_in_the_specified_path', 700, 180) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining this method: {{domxref("CanvasRenderingContext2D")}}</li>
-</ul>
+- The interface defining this method: {{domxref("CanvasRenderingContext2D")}}

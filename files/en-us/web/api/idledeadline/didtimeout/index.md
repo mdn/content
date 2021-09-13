@@ -14,56 +14,55 @@ tags:
   - requestIdleCallback
 browser-compat: api.IdleDeadline.didTimeout
 ---
-<div>{{APIRef("Background Tasks")}}</div>
+{{APIRef("Background Tasks")}}
 
-<p>The read-only <strong><code>didTimeout</code></strong> property on the
-  <strong>{{domxref("IdleDeadline")}}</strong> interface is a Boolean value which
-  indicates whether or not the idle callback is being invoked because the timeout interval
-  specified when {{domxref("Window.requestIdleCallback()")}} was called has expired.</p>
+The read-only **`didTimeout`** property on the
+**{{domxref("IdleDeadline")}}** interface is a Boolean value which
+indicates whether or not the idle callback is being invoked because the timeout interval
+specified when {{domxref("Window.requestIdleCallback()")}} was called has expired.
 
-<p>If <code>didTimeout</code> is <code>true</code>, the <code>IdleDeadline</code> object's
-  {{domxref("IdleDeadline.timeRemaining", "timeRemaining()")}} method will return
-  approximately 0.</p>
+If `didTimeout` is `true`, the `IdleDeadline` object's
+{{domxref("IdleDeadline.timeRemaining", "timeRemaining()")}} method will return
+approximately 0.
 
-<p>Idle callbacks support the concept of a timeout in order to ensure that whatever task
-  they're meant to perform actually happens, even if the user agent never has enough idle
-  time available. Your callback will typically check the value of <code>didTimeout</code>
-  if it needs to perform an action even if the browser is too busy to grant you the time;
-  you should react by performing the needed task or, ideally, a minimal amount of work
-  that can be done to keep things moving along, then schedule a new callback to try again
-  to get the rest of the work done.</p>
+Idle callbacks support the concept of a timeout in order to ensure that whatever task
+they're meant to perform actually happens, even if the user agent never has enough idle
+time available. Your callback will typically check the value of `didTimeout`
+if it needs to perform an action even if the browser is too busy to grant you the time;
+you should react by performing the needed task or, ideally, a minimal amount of work
+that can be done to keep things moving along, then schedule a new callback to try again
+to get the rest of the work done.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>timedOut</em> = <em>IdleDeadline</em>.didTimeout;</pre>
+```js
+var timedOut = IdleDeadline.didTimeout;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A Boolean which is <code>true</code> if the callback is running due to the callback's
-  timeout period elapsing or <code>false</code> if the callback is running because the
-  user agent is idle and is offering time to the callback.</p>
+A Boolean which is `true` if the callback is running due to the callback's
+timeout period elapsing or `false` if the callback is running because the
+user agent is idle and is offering time to the callback.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See our <a href="/en-US/docs/Web/API/Background_Tasks_API#example">complete example</a>
-  in the article <a href="/en-US/docs/Web/API/Background_Tasks_API">Cooperative Scheduling
-    of Background Tasks API</a>.</p>
+See our [complete example](/en-US/docs/Web/API/Background_Tasks_API#example)
+in the article [Cooperative Scheduling
+of Background Tasks API](/en-US/docs/Web/API/Background_Tasks_API).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Background_Tasks_API">Collaborative Scheduling of
-      Background Tasks</a></li>
-  <li>{{domxref("IdleDeadline")}}</li>
-  <li>{{domxref("Window.requestIdleCallback()")}}</li>
-  <li>{{domxref("Window.cancelIdleCallback()")}}</li>
-</ul>
+- [Collaborative Scheduling of
+  Background Tasks](/en-US/docs/Web/API/Background_Tasks_API)
+- {{domxref("IdleDeadline")}}
+- {{domxref("Window.requestIdleCallback()")}}
+- {{domxref("Window.cancelIdleCallback()")}}

@@ -10,33 +10,35 @@ tags:
   - parent
 browser-compat: api.ConvolverNode.normalize
 ---
-<div>{{ APIRef("Web Audio API") }}</div>
+{{ APIRef("Web Audio API") }}
 
-<p>The <code>normalize</code> property of the {{ domxref("ConvolverNode") }} interface
-  is a boolean that controls whether the impulse response from the buffer will be
-    scaled by an equal-power normalization when the <code>buffer</code> attribute is set,
-    or not.</p>
+The `normalize` property of the {{ domxref("ConvolverNode") }} interface
+is a boolean that controls whether the impulse response from the buffer will be
+scaled by an equal-power normalization when the `buffer` attribute is set,
+or not.
 
-<p>Its default value is <code>true</code> in order to achieve a more uniform output
-    level from the convolver, when loaded with diverse impulse responses. If normalize is
-    set to <code>false</code>, then the convolution will be rendered with no
-    pre-processing/scaling of the impulse response. Changes to this value do not take
-    effect until the next time the <code>buffer</code> attribute is set.</p>
+Its default value is `true` in order to achieve a more uniform output
+level from the convolver, when loaded with diverse impulse responses. If normalize is
+set to `false`, then the convolution will be rendered with no
+pre-processing/scaling of the impulse response. Changes to this value do not take
+effect until the next time the `buffer` attribute is set.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var audioCtx = new AudioContext();
+```js
+var audioCtx = new AudioContext();
 var convolver = audioCtx.createConvolver();
 convolver.normalize = false;
-</pre>
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A boolean.</p>
+A boolean.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+```js
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var convolver = audioCtx.createConvolver();
 
   ...
@@ -63,19 +65,17 @@ ajaxRequest.send();
   ...
 
 convolver.normalize = false; // must be set before the buffer, to take effect
-convolver.buffer = concertHallBuffer;</pre>
+convolver.buffer = concertHallBuffer;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
-  </li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

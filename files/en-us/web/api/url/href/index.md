@@ -2,46 +2,46 @@
 title: URL.href
 slug: Web/API/URL/href
 tags:
-- API
-- Property
-- Reference
-- URL
-- URL API
+  - API
+  - Property
+  - Reference
+  - URL
+  - URL API
 browser-compat: api.URL.href
 ---
-<div>{{ApiRef("URL API")}}</div>
+{{ApiRef("URL API")}}
 
-<p>The <strong><code>href</code></strong> property of the {{domxref("URL")}} interface is
-  a {{domxref("USVString")}} containing the whole URL.</p>
+The **`href`** property of the {{domxref("URL")}} interface is
+a {{domxref("USVString")}} containing the whole URL.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const <em>urlString</em> = <em>url</em>.href
-<em>url</em>.href = <em>newUrlString</em>
-</pre>
+```js
+const urlString = url.href
+url.href = newUrlString
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("USVString")}}.</p>
+A {{domxref("USVString")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">const url = new URL('https://developer.mozilla.org/en-US/docs/Web/API/URL/href');
+```js
+const url = new URL('https://developer.mozilla.org/en-US/docs/Web/API/URL/href');
 console.log(url.href); // Logs: 'https://developer.mozilla.org/en-US/docs/Web/API/URL/href'
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("URL")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("URL")}} interface it belongs to.

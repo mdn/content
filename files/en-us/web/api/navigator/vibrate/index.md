@@ -2,58 +2,54 @@
 title: Navigator.vibrate()
 slug: Web/API/Navigator/vibrate
 tags:
-- API
-- Method
-- Navigator
-- Reference
-- Vibration API
+  - API
+  - Method
+  - Navigator
+  - Reference
+  - Vibration API
 browser-compat: api.Navigator.vibrate
 ---
-<div>{{APIRef("Vibration API")}}</div>
+{{APIRef("Vibration API")}}
 
-<p>The <strong><code>Navigator.vibrate()</code></strong> method pulses the vibration
-  hardware on the device, if such hardware exists. If the device doesn't support
-  vibration, this method has no effect. If a vibration pattern is already in progress when
-  this method is called, the previous pattern is halted and the new one begins instead.
-</p>
+The **`Navigator.vibrate()`** method pulses the vibration
+hardware on the device, if such hardware exists. If the device doesn't support
+vibration, this method has no effect. If a vibration pattern is already in progress when
+this method is called, the previous pattern is halted and the new one begins instead.
 
-<p>If the method was unable to vibrate because of invalid parameters, it will return
-  <code>false</code>, else it returns <code>true</code>. If the pattern leads to a too
-  long vibration, it is truncated: the max length depends on the implementation.</p>
+If the method was unable to vibrate because of invalid parameters, it will return
+`false`, else it returns `true`. If the pattern leads to a too
+long vibration, it is truncated: the max length depends on the implementation.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>successBool</em> = navigator.vibrate(<em><var>pattern</var></em>);
-</pre>
+```js
+var successBool = navigator.vibrate(pattern);
+```
 
-<dl>
-  <dt><code><var>pattern</var></code></dt>
-  <dd>Provides a pattern of vibration and pause intervals. Each value indicates a number
+- `pattern`
+  - : Provides a pattern of vibration and pause intervals. Each value indicates a number
     of milliseconds to vibrate or pause, in alternation. You may provide either a single
     value (to vibrate once for that many milliseconds) or an array of values to
-    alternately vibrate, pause, then vibrate again. See <a
-      href="/en-US/docs/WebAPI/Vibration">Vibration API</a> for details.</dd>
-</dl>
+    alternately vibrate, pause, then vibrate again. See [Vibration API](/en-US/docs/WebAPI/Vibration) for details.
 
-<p>Passing a value of <code>0</code>, an empty array, or an array containing all zeros
-  will cancel any currently ongoing vibration pattern.</p>
+Passing a value of `0`, an empty array, or an array containing all zeros
+will cancel any currently ongoing vibration pattern.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">navigator.vibrate(200); // vibrate for 200ms
+```js
+navigator.vibrate(200); // vibrate for 200ms
 navigator.vibrate([100,30,100,30,100,30,200,30,200,30,200,30,100,30,100,30,100]); // Vibrate 'SOS' in Morse.
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/WebAPI/Vibration">Vibration API</a></li>
-</ul>
+- [Vibration API](/en-US/docs/WebAPI/Vibration)

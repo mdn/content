@@ -12,34 +12,32 @@ tags:
   - Web Performance
 browser-compat: api.LayoutShiftAttribution
 ---
-<div>{{APIRef("Layout Instability API")}}</div>
+{{APIRef("Layout Instability API")}}
 
-<p>The <code>LayoutShiftAttribution</code> interface of the <a href="/en-US/docs/Web/API/Layout_Instability_API">Layout Instability API</a> provides debugging information about elements which have shifted.</p>
+The `LayoutShiftAttribution` interface of the [Layout Instability API](/en-US/docs/Web/API/Layout_Instability_API) provides debugging information about elements which have shifted.
 
-<p>Instances of <code>LayoutShiftAttribution</code> are returned in an array by calling {{domxref("LayoutShift.sources")}}.</p>
+Instances of `LayoutShiftAttribution` are returned in an array by calling {{domxref("LayoutShift.sources")}}.
 
-<h2 id="Properties">Properties</h2>
-<dl>
- <dt>{{domxref("LayoutShiftAttribution.Node")}}{{ReadOnlyInline}}</dt>
- <dd>Returns the element that has shifted (null if it has been removed).</dd>
- <dt>{{domxref("LayoutShiftAttribution.previousRect")}}{{ReadOnlyInline}}</dt>
- <dd>Returns a {{domxref("DOMRectReadOnly")}} object representing the position of the element before the shift.</dd>
- <dt>{{domxref("LayoutShiftAttribution.currentRect")}}{{ReadOnlyInline}}</dt>
- <dd>Returns a {{domxref("DOMRectReadOnly")}} object representing the position of the element after the shift.</dd>
-</dl>
+## Properties
 
-<h2 id="Methods">Methods</h2>
+- {{domxref("LayoutShiftAttribution.Node")}}{{ReadOnlyInline}}
+  - : Returns the element that has shifted (null if it has been removed).
+- {{domxref("LayoutShiftAttribution.previousRect")}}{{ReadOnlyInline}}
+  - : Returns a {{domxref("DOMRectReadOnly")}} object representing the position of the element before the shift.
+- {{domxref("LayoutShiftAttribution.currentRect")}}{{ReadOnlyInline}}
+  - : Returns a {{domxref("DOMRectReadOnly")}} object representing the position of the element after the shift.
 
-<dl>
-  <dt>{{domxref("LayoutShiftAttribution.toJSON()")}}</dt>
- <dd>Returns a JSON representation of the <code>LayoutShiftAttribution</code> object.</dd>
-</dl>
+## Methods
 
-<h2 id="Examples">Examples</h2>
+- {{domxref("LayoutShiftAttribution.toJSON()")}}
+  - : Returns a JSON representation of the `LayoutShiftAttribution` object.
 
-<p>The following example finds the element that is causing the largest layout shift, and prints that <code>node</code> to the console. For more detail on this see <a href="https://web.dev/debug-web-vitals-in-the-field/">Debug Web Vitals in the field</a>.</p>
+## Examples
 
-<pre class="brush: js">function getCLSDebugTarget(entries) {
+The following example finds the element that is causing the largest layout shift, and prints that `node` to the console. For more detail on this see [Debug Web Vitals in the field](https://web.dev/debug-web-vitals-in-the-field/).
+
+```js
+function getCLSDebugTarget(entries) {
   const largestEntry = entries.reduce((a, b) => {
     return a && a.value > b.value ? a : b;
   });
@@ -52,19 +50,18 @@ browser-compat: api.LayoutShiftAttribution
       return largestSource.node;
     }
   }
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://web.dev/debug-layout-shifts/">Debug layout shifts</a></li>
-  <li><a href="https://web.dev/debug-web-vitals-in-the-field/">Debug Web Vitals in the field</a></li>
-</ul>
+- [Debug layout shifts](https://web.dev/debug-layout-shifts/)
+- [Debug Web Vitals in the field](https://web.dev/debug-web-vitals-in-the-field/)

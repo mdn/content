@@ -7,41 +7,38 @@ tags:
   - WebGL
 browser-compat: api.WebGLShaderPrecisionFormat
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong>WebGLShaderPrecisionFormat</strong> interface is part of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> and represents the information returned by calling the {{domxref("WebGLRenderingContext.getShaderPrecisionFormat()")}} method.</p>
+The **WebGLShaderPrecisionFormat** interface is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and represents the information returned by calling the {{domxref("WebGLRenderingContext.getShaderPrecisionFormat()")}} method.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("WebGLShaderPrecisionFormat.rangeMin")}} {{ReadOnlyInline}}</dt>
- <dd>The base 2 log of the absolute value of the minimum value that can be represented.</dd>
- <dt>{{domxref("WebGLShaderPrecisionFormat.rangeMax")}} {{ReadOnlyInline}}</dt>
- <dd>The base 2 log of the absolute value of the maximum value that can be represented.</dd>
- <dt>{{domxref("WebGLShaderPrecisionFormat.precision")}} {{ReadOnlyInline}}</dt>
- <dd>The number of bits of precision that can be represented. For integer formats this value is always 0.</dd>
-</dl>
+- {{domxref("WebGLShaderPrecisionFormat.rangeMin")}} {{ReadOnlyInline}}
+  - : The base 2 log of the absolute value of the minimum value that can be represented.
+- {{domxref("WebGLShaderPrecisionFormat.rangeMax")}} {{ReadOnlyInline}}
+  - : The base 2 log of the absolute value of the maximum value that can be represented.
+- {{domxref("WebGLShaderPrecisionFormat.precision")}} {{ReadOnlyInline}}
+  - : The number of bits of precision that can be represented. For integer formats this value is always 0.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>A <code>WebGLShaderPrecisionFormat</code> object is returned by the {{domxref("WebGLRenderingContext.getShaderPrecisionFormat()")}} method.</p>
+A `WebGLShaderPrecisionFormat` object is returned by the {{domxref("WebGLRenderingContext.getShaderPrecisionFormat()")}} method.
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 gl.getShaderPrecisionFormat(gl.VERTEX_SHADER, gl.MEDIUM_FLOAT);
 // WebGLShaderPrecisionFormat { rangeMin: 127, rangeMax: 127, precision: 23 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.getShaderPrecisionFormat()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.getShaderPrecisionFormat()")}}

@@ -2,109 +2,106 @@
 title: Document.open()
 slug: Web/API/Document/open
 tags:
-- API
-- DOM
-- Document
-- Method
-- Reference
-- open
+  - API
+  - DOM
+  - Document
+  - Method
+  - Reference
+  - open
 browser-compat: api.Document.open
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>Document.open()</code></strong> method opens a document for
-  {{domxref("Document.write", "writing", "", "1")}}.</p>
+The **`Document.open()`** method opens a document for
+{{domxref("Document.write", "writing", "", "1")}}.
 
-<p>This does come with some side effects. For example:</p>
+This does come with some side effects. For example:
 
-<ul>
-  <li>All event listeners currently registered on the document, nodes inside the document,
-    or the document's window are removed.</li>
-  <li>All existing nodes are removed from the document.</li>
-</ul>
+- All event listeners currently registered on the document, nodes inside the document,
+  or the document's window are removed.
+- All existing nodes are removed from the document.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">document.open();
-</pre>
+```js
+document.open();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code>Document</code> object instance.</p>
+A `Document` object instance.
 
-<h2 id="Example">Examples</h2>
+## Examples
 
-<p>The following simple code opens the document and replaces its content with a number of
-  different HTML fragments, before closing it again.</p>
+The following simple code opens the document and replaces its content with a number of
+different HTML fragments, before closing it again.
 
-<pre class="brush: js">document.open();
-document.write("&lt;p&gt;Hello world!&lt;/p&gt;");
-document.write("&lt;p&gt;I am a fish&lt;/p&gt;");
-document.write("&lt;p&gt;The number is 42&lt;/p&gt;");
+```js
+document.open();
+document.write("<p>Hello world!</p>");
+document.write("<p>I am a fish</p>");
+document.write("<p>The number is 42</p>");
 document.close();
-</pre>
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>An automatic <code>document.open()</code> call happens when
-  {{domxref("document.write()")}} is called after the page has loaded.</p>
+An automatic `document.open()` call happens when
+{{domxref("document.write()")}} is called after the page has loaded.
 
-<h3 id="Gecko-specific_notes">Gecko-specific notes</h3>
+### Gecko-specific notes
 
-<p>Starting with Gecko 1.9, this method is subject to the same same-origin policy as other
-  properties, and does not work if doing so would change the document's origin.</p>
+Starting with Gecko 1.9, this method is subject to the same same-origin policy as other
+properties, and does not work if doing so would change the document's origin.
 
-<p>Starting with Gecko 1.9.2, <code>document.open()</code> uses the <a
-    href="/docs/Security_check_basics">principal</a> of the document whose URI it uses,
-  instead of fetching the principal off the stack. As a result, you can no longer call
-  {{domxref("document.write()")}} into an untrusted document from chrome, even using <a
-    href="/en-US/docs/wrappedJSObject"><code>wrappedJSObject</code></a>. See <a
-    href="/en-US/docs/Security_check_basics">Security check basics</a> for more about principals.
-</p>
+Starting with Gecko 1.9.2, `document.open()` uses the [principal](/docs/Security_check_basics) of the document whose URI it uses,
+instead of fetching the principal off the stack. As a result, you can no longer call
+{{domxref("document.write()")}} into an untrusted document from chrome, even using [`wrappedJSObject`](/en-US/docs/wrappedJSObject). See [Security check basics](/en-US/docs/Security_check_basics) for more about principals.
 
-<h2 id="Three-argument_document.open">Three-argument document.open()</h2>
+## Three-argument document.open()
 
-<p>There is a lesser-known and little-used three-argument version of
-  <code>document.open()</code> , which is an alias of {{domxref("Window.open()")}} (see
-  its page for full details).</p>
+There is a lesser-known and little-used three-argument version of
+`document.open()` , which is an alias of {{domxref("Window.open()")}} (see
+its page for full details).
 
-<p>This call, for example opens github.com in a new window, with its opener set to
-  <code>null</code>:</p>
+This call, for example opens github.com in a new window, with its opener set to
+`null`:
 
-<pre
-  class="brush: js">document.open('https://www.github.com','', 'noopener=true')</pre>
+```js
+document.open('https://www.github.com','', 'noopener=true')
+```
 
-<h2 id="Two-argument_document.open">Two-argument document.open()</h2>
+## Two-argument document.open()
 
-<p>Browsers used to support a two-argument <code>document.open()</code>, with the
-  following signature:</p>
+Browsers used to support a two-argument `document.open()`, with the
+following signature:
 
-<pre class="brush: js">document.open(<em>type</em>, <em>replace</em>)</pre>
+```js
+document.open(type, replace)
+```
 
-<p>Where <code>type</code> specified the MIME type of the data you are writing (e.g.
-  <code>text/html</code>) and replace if set (i.e. a string of <code>"replace"</code>)
-  specified that the history entry for the new document would replace the current history
-  entry of the document being written to.</p>
+Where `type` specified the MIME type of the data you are writing (e.g.
+`text/html`) and replace if set (i.e. a string of `"replace"`)
+specified that the history entry for the new document would replace the current history
+entry of the document being written to.
 
-<p>This form is now obsolete; it won't throw an error, but instead just forwards to
-  <code>document.open()</code> (i.e. is the equivalent of just running it with no
-  arguments).  The history-replacement behavior now always happens.</p>
+This form is now obsolete; it won't throw an error, but instead just forwards to
+`document.open()` (i.e. is the equivalent of just running it with no
+arguments).  The history-replacement behavior now always happens.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Document")}}</li>
-  <li>{{domxref("Window.open()")}}</li>
-</ul>
+- {{domxref("Document")}}
+- {{domxref("Window.open()")}}

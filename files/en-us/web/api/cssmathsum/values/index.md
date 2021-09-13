@@ -2,35 +2,37 @@
 title: CSSMathSum.values
 slug: Web/API/CSSMathSum/values
 tags:
-- API
-- CSS Typed Object Model API
-- CSSMathSum
-- Experimental
-- Houdini
-- NeedsExample
-- Property
-- Reference
-- values
+  - API
+  - CSS Typed Object Model API
+  - CSSMathSum
+  - Experimental
+  - Houdini
+  - NeedsExample
+  - Property
+  - Reference
+  - values
 browser-compat: api.CSSMathSum.values
 ---
-<div>{{draft}}{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}</div>
+{{draft}}{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>CSSMathSum.values</code></strong> read-only property
-  of the {{domxref("CSSMathSum")}} interface returns a {{domxref('CSSNumericArray')}}
-  object which contains one or more {{domxref('CSSNumericValue')}} objects.</p>
+The **`CSSMathSum.values`** read-only property
+of the {{domxref("CSSMathSum")}} interface returns a {{domxref('CSSNumericArray')}}
+object which contains one or more {{domxref('CSSNumericValue')}} objects.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>cssNumericArray</em> = CSSMathSum.values;</pre>
+```js
+var cssNumericArray = CSSMathSum.values;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref('CSSNumericArray')}}.</p>
+A {{domxref('CSSNumericArray')}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -10,35 +10,32 @@ tags:
   - Reference
 browser-compat: api.MediaQueryListEvent
 ---
-<p>{{APIRef("CSSOM")}}</p>
+{{APIRef("CSSOM")}}
 
-<p>The <code>MediaQueryListEvent</code> object stores information on the changes that have happened to a {{DOMxRef("MediaQueryList")}} object — instances are available as the event object on a function referenced by a {{DOMxRef("MediaQueryList.onchange")}} property or {{DOMxRef("MediaQueryList.addListener()")}} call.</p>
+The `MediaQueryListEvent` object stores information on the changes that have happened to a {{DOMxRef("MediaQueryList")}} object — instances are available as the event object on a function referenced by a {{DOMxRef("MediaQueryList.onchange")}} property or {{DOMxRef("MediaQueryList.addListener()")}} call.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{DOMxRef("MediaQueryListEvent.MediaQueryListEvent()", "MediaQueryListEvent()")}}</dt>
- <dd>Creates a new <code>MediaQueryListEvent</code> instance.</dd>
-</dl>
+- {{DOMxRef("MediaQueryListEvent.MediaQueryListEvent()", "MediaQueryListEvent()")}}
+  - : Creates a new `MediaQueryListEvent` instance.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>The <code>MediaQueryListEvent</code> interface inherits properties from its parent interface, {{DOMxRef("Event")}}.</em></p>
+_The `MediaQueryListEvent` interface inherits properties from its parent interface, {{DOMxRef("Event")}}._
 
-<dl>
- <dt>{{DOMxRef("MediaQueryListEvent.matches")}}{{ReadOnlyInline}}</dt>
- <dd>A boolean value that is <code>true</code> if the {{DOMxRef("document")}} currently matches the media query list, or <code>false</code> if not.</dd>
- <dt>{{DOMxRef("MediaQueryListEvent.media")}}{{ReadOnlyInline}}</dt>
- <dd>A {{DOMxRef("DOMString")}} representing a serialized media query.</dd>
-</dl>
+- {{DOMxRef("MediaQueryListEvent.matches")}}{{ReadOnlyInline}}
+  - : A boolean value that is `true` if the {{DOMxRef("document")}} currently matches the media query list, or `false` if not.
+- {{DOMxRef("MediaQueryListEvent.media")}}{{ReadOnlyInline}}
+  - : A {{DOMxRef("DOMString")}} representing a serialized media query.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>The <code>MediaQueryListEvent</code> interface inherits methods from its parent interface, {{DOMxRef("Event")}}.</em></p>
+_The `MediaQueryListEvent` interface inherits methods from its parent interface, {{DOMxRef("Event")}}._
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var mql = window.matchMedia('(max-width: 600px)');
+```js
+var mql = window.matchMedia('(max-width: 600px)');
 
 function screenTest(e) {
   if (e.matches) {
@@ -52,21 +49,20 @@ function screenTest(e) {
   }
 }
 
-mql.addListener(screenTest);</pre>
+mql.addListener(screenTest);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">Media queries</a></li>
- <li><a href="/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries">Using media queries from code</a></li>
- <li>{{DOMxRef("window.matchMedia()")}}</li>
- <li>{{DOMxRef("MediaQueryList")}}</li>
-</ul>
+- [Media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Using media queries from code](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- {{DOMxRef("window.matchMedia()")}}
+- {{DOMxRef("MediaQueryList")}}

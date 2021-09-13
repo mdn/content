@@ -11,38 +11,42 @@ tags:
   - Reference
 browser-compat: api.Gamepad.index
 ---
-<div>{{APIRef("Gamepad API")}}</div>
+{{APIRef("Gamepad API")}}
 
-<p>The <code><strong>Gamepad.index</strong></code> property of the {{domxref("Gamepad") }}
-	interface returns an integer that is auto-incremented to be unique for each device
-	currently connected to the system.</p>
+The **`Gamepad.index`** property of the {{domxref("Gamepad") }}
+interface returns an integer that is auto-incremented to be unique for each device
+currently connected to the system.
 
-<p>This can be used to distinguish multiple controllers; a gamepad that is disconnected
-	and reconnected will retain the same index.</p>
+This can be used to distinguish multiple controllers; a gamepad that is disconnected
+and reconnected will retain the same index.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const index = gamepad.index;</pre>
+```js
+const index = gamepad.index;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">window.addEventListener("gamepadconnected", function() {
+```js
+window.addEventListener("gamepadconnected", function() {
   var gp = navigator.getGamepads()[0];
   gamepadInfo.innerHTML = "Gamepad connected at index " + gp.index + ": " + gp.id + ".";
-});</pre>
+});
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{jsxref("number") }}.</p>
+A {{jsxref("number") }}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<p><a href="/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API">Using the Gamepad API</a></p>
+[Using the Gamepad API](/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)

@@ -8,38 +8,25 @@ tags:
   - Reference
   - Typed Arrays
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p><code><strong>ArrayBufferView</strong></code> is a helper type representing any of the following JavaScript {{jsxref("TypedArray")}} types:</p>
+**`ArrayBufferView`** is a helper type representing any of the following JavaScript {{jsxref("TypedArray")}} types:
 
-<ul>
- <li>{{jsxref("Int8Array")}},</li>
- <li>{{jsxref("Uint8Array")}},</li>
- <li>{{jsxref("Uint8ClampedArray")}},</li>
- <li>{{jsxref("Int16Array")}},</li>
- <li>{{jsxref("Uint16Array")}},</li>
- <li>{{jsxref("Int32Array")}},</li>
- <li>{{jsxref("Uint32Array")}},</li>
- <li>{{jsxref("Float32Array")}},</li>
- <li>{{jsxref("Float64Array")}} or</li>
- <li>{{jsxref("DataView")}}.</li>
-</ul>
+- {{jsxref("Int8Array")}},
+- {{jsxref("Uint8Array")}},
+- {{jsxref("Uint8ClampedArray")}},
+- {{jsxref("Int16Array")}},
+- {{jsxref("Uint16Array")}},
+- {{jsxref("Int32Array")}},
+- {{jsxref("Uint32Array")}},
+- {{jsxref("Float32Array")}},
+- {{jsxref("Float64Array")}} or
+- {{jsxref("DataView")}}.
 
-<p>This is a helper type to simplify the specification; it isn't an interface, and there are no objects implementing it.</p>
+This is a helper type to simplify the specification; it isn't an interface, and there are no objects implementing it.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebIDL', "#ArrayBufferView", "ArrayBufferView")}}</td>
-   <td>{{Spec2('WebIDL')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                    | Status                   | Comment             |
+| -------------------------------------------------------------------------------- | ------------------------ | ------------------- |
+| {{SpecName('WebIDL', "#ArrayBufferView", "ArrayBufferView")}} | {{Spec2('WebIDL')}} | Initial definition. |

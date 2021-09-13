@@ -2,59 +2,58 @@
 title: IDBRequest.transaction
 slug: Web/API/IDBRequest/transaction
 tags:
-- API
-- Database
-- IDBRequest
-- IndexedDB
-- Property
-- Reference
-- Storage
-- transaction
+  - API
+  - Database
+  - IDBRequest
+  - IndexedDB
+  - Property
+  - Reference
+  - Storage
+  - transaction
 browser-compat: api.IDBRequest.transaction
 ---
-<p>{{ APIRef("IndexedDB") }}</p>
+{{ APIRef("IndexedDB") }}
 
-<div>
-  <p>The <strong><code>transaction</code></strong> read-only property of the IDBRequest
-    interface returns the transaction for the request, that is, the transaction the
-    request is being made inside.</p>
+The **`transaction`** read-only property of the IDBRequest
+interface returns the transaction for the request, that is, the transaction the
+request is being made inside.
 
-  <p>This property can be <code>null</code> for requests not made within transactions,
-    such as for requests returned from {{domxref("IDBFactory.open")}} — in this case
-    you're just connecting to a database, so there is no transaction to return. If a
-    version upgrade is needed when opening a database then during the
-    {{domxref("IDBOpenDBRequest.onupgradeneeded", "upgradeneeded")}} event handler the
-    <strong><code>transaction</code></strong> property will be an
-    {{domxref("IDBTransaction")}} with {{domxref("IDBTransaction.mode", "mode")}} equal
-    to <code>"versionchange"</code>, and can be used to access existing object stores and
-    indexes, or abort the upgrade. Following the upgrade, the
-    <strong><code>transaction</code></strong> property will again be <code>null</code>.
-  </p>
+This property can be `null` for requests not made within transactions,
+such as for requests returned from {{domxref("IDBFactory.open")}} — in this case
+you're just connecting to a database, so there is no transaction to return. If a
+version upgrade is needed when opening a database then during the
+{{domxref("IDBOpenDBRequest.onupgradeneeded", "upgradeneeded")}} event handler the
+**`transaction`** property will be an
+{{domxref("IDBTransaction")}} with {{domxref("IDBTransaction.mode", "mode")}} equal
+to `"versionchange"`, and can be used to access existing object stores and
+indexes, or abort the upgrade. Following the upgrade, the
+**`transaction`** property will again be `null`.
 
-  <p>{{AvailableInWorkers}}</p>
-</div>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>myTransaction</em> = <em>request</em>.transaction;</pre>
+```js
+var myTransaction = request.transaction;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("IDBTransaction")}}.</p>
+An {{domxref("IDBTransaction")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example requests a given record title, <code>onsuccess</code> gets the
-  associated record from the {{domxref("IDBObjectStore")}} (made available
-  as <code>objectStoreTitleRequest.result</code>), updates
-    one property of the record, and then puts the updated record back into the object
-    store in another request. The source of the requests is logged to the developer
-    console — both originate from the same transaction. For a full working example, see
-    our <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> app
-    (<a href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</p>
+The following example requests a given record title, `onsuccess` gets the
+associated record from the {{domxref("IDBObjectStore")}} (made available
+as `objectStoreTitleRequest.result`), updates
+one property of the record, and then puts the updated record back into the object
+store in another request. The source of the requests is logged to the developer
+console — both originate from the same transaction. For a full working example, see
+our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app
+([view example live](https://mdn.github.io/to-do-notifications/).)
 
-<pre class="brush: js">var title = "Walk dog";
+```js
+var title = "Walk dog";
 
 // Open up a transaction as usual
 var objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
@@ -82,23 +81,23 @@ objectStoreTitleRequest.onsuccess = function() {
     displayData();
   };
 };
+```
 
-</pre>
+This example shows how a the **`transaction`** property can be
+used during a version upgrade to access existing object stores:
 
-<p>This example shows how a the <strong><code>transaction</code></strong> property can be
-  used during a version upgrade to access existing object stores:</p>
-
-<pre class="brush: js">var openRequest = indexedDB.open('db', 2);
+```js
+var openRequest = indexedDB.open('db', 2);
 console.log(openRequest.transaction); // Will log "null".
 
 openRequest.onupgradeneeded = function(event) {
   console.log(openRequest.transaction.mode); // Will log "versionchange".
   var db = openRequest.result;
-  if (event.oldVersion &lt; 1) {
+  if (event.oldVersion < 1) {
     // New database, create "books" object store.
     db.createObjectStore('books');
   }
-  if (event.oldVersion &lt; 2) {
+  if (event.oldVersion < 2) {
     // Upgrading from v1 database: add index on "title" to "books" store.
     var bookStore = openRequest.transaction.objectStore('books');
     bookStore.createIndex('by_title', 'title');
@@ -108,27 +107,23 @@ openRequest.onupgradeneeded = function(event) {
 openRequest.onsuccess = function() {
   console.log(openRequest.transaction); // Will log "null".
 };
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
-  <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
-  <li>Using transactions: {{domxref("IDBTransaction")}}</li>
-  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
-  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
-  <li>Using cursors: {{domxref("IDBCursor")}}</li>
-  <li>Reference example: <a class="external"
-      href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
-      Notifications</a> (<a class="external"
-      href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do
+  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

@@ -11,46 +11,48 @@ tags:
   - onicegatheringstatechange
 browser-compat: api.RTCPeerConnection.onicegatheringstatechange
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The <code><strong>RTCPeerConnection.onicegatheringstatechange</strong></code> property
-  is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> which specifies a function to be called when the
-  {{DOMxRef("RTCPeerConnection/icegatheringstatechange_event", "icegatheringstatechange")}} event is sent to an
-  {{domxref("RTCPeerConnection")}} instance. This happens when the ICE gathering
-  state—that is, whether or not the ICE agent is actively gathering candidates—changes.
-</p>
+The **`RTCPeerConnection.onicegatheringstatechange`** property
+is an [event handler](/en-US/docs/Web/Events/Event_handlers) which specifies a function to be called when the
+{{DOMxRef("RTCPeerConnection/icegatheringstatechange_event", "icegatheringstatechange")}} event is sent to an
+{{domxref("RTCPeerConnection")}} instance. This happens when the ICE gathering
+state—that is, whether or not the ICE agent is actively gathering candidates—changes.
 
-<p>You don't need to watch for this event unless you have specific reasons to want to
-  closely monitor the state of ICE gathering.</p>
+You don't need to watch for this event unless you have specific reasons to want to
+closely monitor the state of ICE gathering.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>RTCPeerConnection</em>.onicegatheringstatechange = <em>eventHandler</em>;
-</pre>
+```js
+RTCPeerConnection.onicegatheringstatechange = eventHandler;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A function you provide which is passed a single parameter: an {{domxref("Event")}}
-  object containing the {{DOMxRef("RTCPeerConnection/icegatheringstatechange_event", "icegatheringstatechange")}} event. You can determine the
-  new state of ICE gathering by looking at the value of the
-  {{domxref("RTCPeerConnection.iceGatheringState")}} property.</p>
+A function you provide which is passed a single parameter: an {{domxref("Event")}}
+object containing the {{DOMxRef("RTCPeerConnection/icegatheringstatechange_event", "icegatheringstatechange")}} event. You can determine the
+new state of ICE gathering by looking at the value of the
+{{domxref("RTCPeerConnection.iceGatheringState")}} property.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example updates status information presented to the user to let them know what's
-  happening by examining the current value of the
-  {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} property each
-  time it changes and changing the contents of a status display based on the new
-  information.</p>
+This example updates status information presented to the user to let them know what's
+happening by examining the current value of the
+{{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} property each
+time it changes and changing the contents of a status display based on the new
+information.
 
-<p>The status is presented as text in a {{HTMLElement("div")}} element:</p>
+The status is presented as text in a {{HTMLElement("div")}} element:
 
-<pre class="brush: html">&lt;div id="iceStatus"&gt;&lt;/div&gt;
-</pre>
+```html
+<div id="iceStatus"></div>
+```
 
-<p>The actual event handler looks like this:</p>
+The actual event handler looks like this:
 
-<pre class="brush: js">pc.onicegatheringstatechange = function() {
+```js
+pc.onicegatheringstatechange = function() {
   let label = "Unknown";
 
   switch(pc.iceGatheringState) {
@@ -64,19 +66,18 @@ browser-compat: api.RTCPeerConnection.onicegatheringstatechange
   }
 
   document.getElementById("iceStatus").innerHTML = label;
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{DOMxRef("RTCPeerConnection/icegatheringstatechange_event", "icegatheringstatechange")}} event and its type, {{domxref("Event")}}.</li>
-  <li>{{domxref("RTCPeerConnection.iceGatheringState")}}</li>
-</ul>
+- The {{DOMxRef("RTCPeerConnection/icegatheringstatechange_event", "icegatheringstatechange")}} event and its type, {{domxref("Event")}}.
+- {{domxref("RTCPeerConnection.iceGatheringState")}}

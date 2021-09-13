@@ -9,14 +9,14 @@ tags:
   - Reference
 browser-compat: api.ImageBitmap.height
 ---
-<div>{{APIRef("Canvas API")}}</div>
+{{APIRef("Canvas API")}}
 
-<p>The read-only <code><strong>ImageBitmap.height</strong></code> property returns the {{domxref("ImageBitmap")}} object's height in CSS pixels.</p>
+The read-only **`ImageBitmap.height`** property returns the {{domxref("ImageBitmap")}} object's height in CSS pixels.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,60 +2,57 @@
 title: RTCDtlsTransport.state
 slug: Web/API/RTCDtlsTransport/state
 tags:
-- API
-- Property
-- RTCDtlsTransport
-- Read-only
-- Reference
-- WebRTC
-- state
+  - API
+  - Property
+  - RTCDtlsTransport
+  - Read-only
+  - Reference
+  - WebRTC
+  - state
 browser-compat: api.RTCDtlsTransport.state
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The <strong><code>state</code></strong> read-only property of the
-  {{DOMxRef("RTCDtlsTransport")}} interface provides information which describes a
-  Datagram Transport Layer Security (<strong>{{Glossary("DTLS")}}</strong>) transport state.</p>
+The **`state`** read-only property of the
+{{DOMxRef("RTCDtlsTransport")}} interface provides information which describes a
+Datagram Transport Layer Security (**{{Glossary("DTLS")}}**) transport state.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let <var>myState</var> = <var>dtlsTransport</var>.state;</pre>
+```js
+let myState = dtlsTransport.state;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A string. Its value is one of the following:</p>
+A string. Its value is one of the following:
 
-<dl>
-  <dt><code>new</code></dt>
-  <dd>The initial state when DTLS has not started negotiating yet.</dd>
-  <dt><code>connecting</code></dt>
-  <dd>DTLS is in the process of negotiating a secure connection and verifying the remote fingerprint.</dd>
-  <dt><code>connected</code></dt>
-  <dd>DTLS has completed negotiation of a secure connection and verified the remote fingerprint.</dd>
-  <dt><code>closed</code></dt>
-  <dd>The transport has been closed intentionally as the result of receipt of a
-    <code>close_notify</code> alert, or calling {{DOMxRef("RTCPeerConnection.close()")}}.
-  </dd>
-  <dt><code>failed</code></dt>
-  <dd>The transport has failed as the result of an error (such as receipt of an error
-    alert or failure to validate the remote fingerprint).</dd>
-</dl>
+- `new`
+  - : The initial state when DTLS has not started negotiating yet.
+- `connecting`
+  - : DTLS is in the process of negotiating a secure connection and verifying the remote fingerprint.
+- `connected`
+  - : DTLS has completed negotiation of a secure connection and verified the remote fingerprint.
+- `closed`
+  - : The transport has been closed intentionally as the result of receipt of a
+    `close_notify` alert, or calling {{DOMxRef("RTCPeerConnection.close()")}}.
+- `failed`
+  - : The transport has failed as the result of an error (such as receipt of an error
+    alert or failure to validate the remote fingerprint).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>See <a href="/en-US/docs/Web/API/RTCDtlsTransport#examples"><code>RTCDtlsTransport</code></a> for example code.</p>
+See [`RTCDtlsTransport`](/en-US/docs/Web/API/RTCDtlsTransport#examples) for example code.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
-  <li>{{DOMxRef("RTCDtlsTransport")}}</li>
-</ul>
+- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+- {{DOMxRef("RTCDtlsTransport")}}

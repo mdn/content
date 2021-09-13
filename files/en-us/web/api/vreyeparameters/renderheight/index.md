@@ -14,40 +14,39 @@ tags:
   - renderHeight
 browser-compat: api.VREyeParameters.renderHeight
 ---
-<p>{{APIRef("WebVR API")}}{{Deprecated_Header}}</p>
+{{APIRef("WebVR API")}}{{Deprecated_Header}}
 
-<p>The <strong><code>renderHeight</code></strong> read-only property of the {{domxref("VREyeParameters")}} interface describes the recommended render target height of each eye viewport, in pixels.</p>
+The **`renderHeight`** read-only property of the {{domxref("VREyeParameters")}} interface describes the recommended render target height of each eye viewport, in pixels.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This property was part of the old <a href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</a>. It has been superseded by the <a href="https://immersive-web.github.io/webxr/">WebXR Device API</a>.</p>
-</div>
+> **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-<p>This is already in device pixel units, so there's no need to multiply by <a href="/en-US/docs/Web/API/Window/devicePixelRatio">Window.devicePixelRatio</a> before setting to <a href="/en-US/docs/Web/API/HTMLCanvasElement/height">HTMLCanvasElement.height.</a></p>
+This is already in device pixel units, so there's no need to multiply by [Window.devicePixelRatio](/en-US/docs/Web/API/Window/devicePixelRatio) before setting to [HTMLCanvasElement.height.](/en-US/docs/Web/API/HTMLCanvasElement/height)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var myRenderHeight = eyeParametersInstance.renderHeight;</pre>
+```js
+var myRenderHeight = eyeParametersInstance.renderHeight;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A number, representing the height in pixels.</p>
+A number, representing the height in pixels.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>See <a href="/en-US/docs/Web/API/VREyeParameters#examples"><code>VREyeParameters</code></a> for example code.</p>
+See [`VREyeParameters`](/en-US/docs/Web/API/VREyeParameters#examples) for example code.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This property was part of the old <a href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</a> that has been superseded by the <a href="https://immersive-web.github.io/webxr/">WebXR Device API</a>. It is no longer on track to becoming a standard.</p>
-<p>Until all browsers have implemented the new <a href="/en-US/docs/Web/API/WebXR_Device_API/Fundamentals">WebXR APIs</a>, it is recommended to rely on frameworks, like <a href="https://aframe.io/">A-Frame</a>, <a href="https://www.babylonjs.com/">Babylon.js</a>, or <a href="https://threejs.org/">Three.js</a>, or a <a href="https://github.com/immersive-web/webxr-polyfill">polyfill</a>, to develop WebXR applications that will work across all browsers <a href="https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/">[1]</a>.</p>
+This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) that has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/). It is no longer on track to becoming a standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals), it is recommended to rely on frameworks, like [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), or [Three.js](https://threejs.org/), or a [polyfill](https://github.com/immersive-web/webxr-polyfill), to develop WebXR applications that will work across all browsers [\[1\]](https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/).
 
-<p>{{Compat}}</p>
+## Browser compatibility
 
-<h2 id="See_also">See also</h2>
+{{Compat}}
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebVR_API">WebVR API homepage</a></li>
- <li><a href="https://mixedreality.mozilla.org/">https://mixedreality.mozilla.org/</a> — demos, downloads, and other resources from the Mozilla VR team.</li>
-</ul>
+## See also
+
+- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API)
+- <https://mixedreality.mozilla.org/> — demos, downloads, and other resources from the Mozilla VR team.

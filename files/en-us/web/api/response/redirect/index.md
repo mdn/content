@@ -11,75 +11,55 @@ tags:
   - Response
 browser-compat: api.Response.redirect
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p>The <strong><code>redirect()</code></strong> method of the {{domxref("Response")}}
-  interface returns a <code>Response</code> resulting in a redirect to the specified URL.
-</p>
+The **`redirect()`** method of the {{domxref("Response")}}
+interface returns a `Response` resulting in a redirect to the specified URL.
 
-<div class="note">
-  <p><strong>Note:</strong> This is mainly relevant to the <a
-      href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a>. A controlling
-    service worker could intercept a page's request and redirect it as desired. This will
-    actually lead to a real redirect if a service worker sends it upstream.</p>
-</div>
+> **Note:** This is mainly relevant to the [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API). A controlling
+> service worker could intercept a page's request and redirect it as desired. This will
+> actually lead to a real redirect if a service worker sends it upstream.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>response</em> = Response.redirect(<em>url</em>, <em>status</em>);</pre>
+```js
+var response = Response.redirect(url, status);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>url</code></dt>
-  <dd>The URL that the new response is to originate from.</dd>
-  <dt><code>status</code> {{optional_inline}}</dt>
-  <dd>An optional status code for the response (e.g., <code>302</code>.)</dd>
-</dl>
+- `url`
+  - : The URL that the new response is to originate from.
+- `status` {{optional_inline}}
+  - : An optional status code for the response (e.g., `302`.)
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("Response")}} object.</p>
+A {{domxref("Response")}} object.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Exception</th>
-      <th scope="col">Explanation</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>RangeError</code></td>
-      <td>The specified status is not a redirect status.</td>
-    </tr>
-    <tr>
-      <td><code>TypeError</code></td>
-      <td>The specified URL is invalid.</td>
-    </tr>
-  </tbody>
-</table>
+| Exception    | Explanation                                    |
+| ------------ | ---------------------------------------------- |
+| `RangeError` | The specified status is not a redirect status. |
+| `TypeError`  | The specified URL is invalid.                  |
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">responseObj.redirect('https://www.example.com', 302);</pre>
+```js
+responseObj.redirect('https://www.example.com', 302);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
-  <li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a>
-  </li>
-  <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP](/en-US/docs/Web/HTTP)

@@ -11,23 +11,25 @@ tags:
   - Reference
 browser-compat: api.BroadcastChannel.name
 ---
-<p>{{APIRef("BroadCastChannel API")}}</p>
+{{APIRef("BroadCastChannel API")}}
 
-<p>The read-only <code><strong>BroadcastChannel.name</strong></code> property returns a
-  {{domxref("DOMString")}}, which uniquely identifies the given channel with its name.
-  This name is passed to the {{domxref("BroadcastChannel.BroadCastChannel",
-  "BroadcastChannel()")}} constructor at creation time and is therefore read-only.</p>
+The read-only **`BroadcastChannel.name`** property returns a
+{{domxref("DOMString")}}, which uniquely identifies the given channel with its name.
+This name is passed to the {{domxref("BroadcastChannel.BroadCastChannel",
+  "BroadcastChannel()")}} constructor at creation time and is therefore read-only.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var str = channel.name;
-</pre>
+```js
+var str = channel.name;
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">// Connect to a channel
+```js
+// Connect to a channel
 var bc = new BroadcastChannel('test_channel');
 
 // More operations (like postMessage, …)
@@ -36,18 +38,17 @@ var bc = new BroadcastChannel('test_channel');
 console.log(bc.name); // "test_channel"
 
 // When done, disconnect from the channel
-bc.close();</pre>
+bc.close();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("BroadcastChannel")}}, the interface it belongs to.</li>
-</ul>
+- {{domxref("BroadcastChannel")}}, the interface it belongs to.

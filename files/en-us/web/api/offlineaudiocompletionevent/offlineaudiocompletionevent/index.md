@@ -2,56 +2,48 @@
 title: OfflineAudioCompletionEvent()
 slug: Web/API/OfflineAudioCompletionEvent/OfflineAudioCompletionEvent
 tags:
-- API
-- Audio
-- Constructor
-- OfflineAudioCompletionEvent
-- Reference
-- Web Audio API
+  - API
+  - Audio
+  - Constructor
+  - OfflineAudioCompletionEvent
+  - Reference
+  - Web Audio API
 browser-compat: api.OfflineAudioCompletionEvent.OfflineAudioCompletionEvent
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<p>The <code><strong>OfflineAudioCompletionEvent()</strong></code> constructor of the <a
-		href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> creates a new
-	{{domxref("OfflineAudioCompletionEvent")}} object instance.</p>
+The **`OfflineAudioCompletionEvent()`** constructor of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) creates a new
+{{domxref("OfflineAudioCompletionEvent")}} object instance.
 
-<div class="note">
-	<p><strong>Note:</strong> You wouldn't generally use the constructor manually.
-		<code>OfflineAudioCompletionEvent</code>s are despatched to
-		{{domxref("OfflineAudioContext")}} instances for legacy reasons.</p>
-</div>
+> **Note:** You wouldn't generally use the constructor manually.
+> `OfflineAudioCompletionEvent`s are despatched to
+> {{domxref("OfflineAudioContext")}} instances for legacy reasons.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-	class="brush: js">var offlineAudioCompletionEvent = new OfflineAudioCompletionEvent(<em>type</em>, <em>init</em>)</pre>
+```js
+var offlineAudioCompletionEvent = new OfflineAudioCompletionEvent(type, init)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-	<dt><em>type </em>{{optional_inline}}</dt>
-	<dd>A {{domxref("DOMString")}} representing the type of object to create.</dd>
-	<dt><em>init</em> {{optional_inline}}</dt>
-	<dd>Options are as follows:
-		<ul>
-			<li><code>renderedBuffer</code>: The rendered {{domxref("AudioBuffer")}}
-				containing the audio data.</li>
-		</ul>
-	</dd>
-</dl>
+- _type_ {{optional_inline}}
+  - : A {{domxref("DOMString")}} representing the type of object to create.
+- _init_ {{optional_inline}}
 
-<h3 id="Return_value">Return value</h3>
+  - : Options are as follows:
 
-<p>A new {{domxref("OfflineAudioCompletionEvent")}} object instance.</p>
+    - `renderedBuffer`: The rendered {{domxref("AudioBuffer")}}
+      containing the audio data.
 
-<h2 id="Specifications">Specifications</h2>
+### Return value
+
+A new {{domxref("OfflineAudioCompletionEvent")}} object instance.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
-
-	<p>{{Compat}}</p>
-</div>
+{{Compat}}

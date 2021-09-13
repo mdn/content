@@ -9,39 +9,37 @@ tags:
   - WebGL2
 browser-compat: api.WebGLSync
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLSync</code></strong> interface is part of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL 2</a> API and is used to synchronize activities between the GPU and the application.</p>
+The **`WebGLSync`** interface is part of the [WebGL 2](/en-US/docs/Web/API/WebGL_API) API and is used to synchronize activities between the GPU and the application.
 
-<p>When working with <code>WebGLSync</code> objects, the following methods of the {{domxref("WebGL2RenderingContext")}} are useful:</p>
+When working with `WebGLSync` objects, the following methods of the {{domxref("WebGL2RenderingContext")}} are useful:
 
-<ul>
- <li>{{domxref("WebGL2RenderingContext.fenceSync()")}}</li>
- <li>{{domxref("WebGL2RenderingContext.deleteSync()")}}</li>
- <li>{{domxref("WebGL2RenderingContext.isSync()")}}</li>
- <li>{{domxref("WebGL2RenderingContext.clientWaitSync()")}}</li>
- <li>{{domxref("WebGL2RenderingContext.waitSync()")}}</li>
- <li>{{domxref("WebGL2RenderingContext.getSyncParameter()")}}</li>
-</ul>
+- {{domxref("WebGL2RenderingContext.fenceSync()")}}
+- {{domxref("WebGL2RenderingContext.deleteSync()")}}
+- {{domxref("WebGL2RenderingContext.isSync()")}}
+- {{domxref("WebGL2RenderingContext.clientWaitSync()")}}
+- {{domxref("WebGL2RenderingContext.waitSync()")}}
+- {{domxref("WebGL2RenderingContext.getSyncParameter()")}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Creating_a_WebGLSync_object">Creating a <code>WebGLSync</code> object</h3>
+### Creating a `WebGLSync` object
 
-<p>in this example, <code>gl</code> must be a {{domxref("WebGL2RenderingContext")}}. <code>WebGLSync</code> objects are not available in WebGL 1.</p>
+in this example, `gl` must be a {{domxref("WebGL2RenderingContext")}}. `WebGLSync` objects are not available in WebGL 1.
 
-<pre class="brush: js">var sync = gl.fenceSync(gl.SYNC_GPU_COMMANDS_COMPLETE, 0);</pre>
+```js
+var sync = gl.fenceSync(gl.SYNC_GPU_COMMANDS_COMPLETE, 0);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.finish()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.finish()")}}

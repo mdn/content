@@ -2,50 +2,48 @@
 title: performance.clearMarks()
 slug: Web/API/Performance/clearMarks
 tags:
-- API
-- Method
-- Reference
-- Web Performance
+  - API
+  - Method
+  - Reference
+  - Web Performance
 browser-compat: api.Performance.clearMarks
 ---
-<div>{{APIRef("User Timing API")}}</div>
+{{APIRef("User Timing API")}}
 
-<p>The <strong><code>clearMarks()</code></strong> method removes the <em>named mark</em>
-  from the browser's performance entry buffer. If the method is called with no arguments,
-  all {{domxref("PerformanceEntry","performance entries")}} with an
-  {{domxref("PerformanceEntry.entryType","entry type")}} of "<code>mark</code>" will be
-  removed from the performance entry buffer.</p>
+The **`clearMarks()`** method removes the _named mark_
+from the browser's performance entry buffer. If the method is called with no arguments,
+all {{domxref("PerformanceEntry","performance entries")}} with an
+{{domxref("PerformanceEntry.entryType","entry type")}} of "`mark`" will be
+removed from the performance entry buffer.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>performance</em>.clearMarks();
-<em>performance</em>.clearMarks(name);
-</pre>
+```js
+performance.clearMarks();
+performance.clearMarks(name);
+```
 
-<h3 id="Arguments">Arguments</h3>
+### Arguments
 
-<dl>
-  <dt>name {{optional_inline}}</dt>
-  <dd>A {{domxref("DOMString")}} representing the name of the timestamp. If this argument
+- name {{optional_inline}}
+  - : A {{domxref("DOMString")}} representing the name of the timestamp. If this argument
     is omitted, all {{domxref("PerformanceEntry","performance entries")}} with an
-    {{domxref("PerformanceEntry.entryType","entry type")}} of "<code>mark</code>" will be
-    removed.</dd>
-</dl>
+    {{domxref("PerformanceEntry.entryType","entry type")}} of "`mark`" will be
+    removed.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<dl>
-  <dt>void</dt>
-  <dd> </dd>
-</dl>
+- void
+  - :
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example shows both uses of the <code>clearMarks()</code> method.</p>
+The following example shows both uses of the `clearMarks()` method.
 
-<pre class="brush: js">// Create a small helper to show how many PerformanceMark entries there are.
+```js
+// Create a small helper to show how many PerformanceMark entries there are.
 function logMarkCount() {
   console.log(
     "Found this many entries: " + performance.getEntriesByType("mark").length
@@ -69,12 +67,12 @@ logMarkCount() // "Found this many entries: 4"
 // Delete all of the PerformanceMark entries.
 performance.clearMarks();
 logMarkCount() // "Found this many entries: 0"
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

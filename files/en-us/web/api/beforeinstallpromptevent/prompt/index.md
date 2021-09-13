@@ -2,47 +2,49 @@
 title: BeforeInstallPromptEvent.prompt()
 slug: Web/API/BeforeInstallPromptEvent/prompt
 tags:
-- API
-- BeforeInstallPromptEvent
-- Experimental
-- Method
-- Reference
-- prompt
+  - API
+  - BeforeInstallPromptEvent
+  - Experimental
+  - Method
+  - Reference
+  - prompt
 browser-compat: api.BeforeInstallPromptEvent.prompt
 ---
-<p>The <strong><code>prompt()</code></strong> method of the
-    {{domxref("BeforeInstallPromptEvent")}} interface allows a developer to show the
-    install prompt at a time of their own choosing.</p>
+The **`prompt()`** method of the
+{{domxref("BeforeInstallPromptEvent")}} interface allows a developer to show the
+install prompt at a time of their own choosing.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">BeforeInstallPromptEvent.prompt()</pre>
+```js
+BeforeInstallPromptEvent.prompt()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>An empty {{jsxref("Promise")}}.</p>
+An empty {{jsxref("Promise")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre>var isTooSoon = true;
-window.addEventListener("beforeinstallprompt", function(e) {
-  if (isTooSoon) {
-    e.preventDefault(); // Prevents prompt display
-    // Prompt later instead:
-    setTimeout(function() {
-      isTooSoon = false;
-      e.prompt(); // Throws if called more than once or default not prevented
-    }, 10000);
-  }
+    var isTooSoon = true;
+    window.addEventListener("beforeinstallprompt", function(e) {
+      if (isTooSoon) {
+        e.preventDefault(); // Prevents prompt display
+        // Prompt later instead:
+        setTimeout(function() {
+          isTooSoon = false;
+          e.prompt(); // Throws if called more than once or default not prevented
+        }, 10000);
+      }
 
-  // The event was re-dispatched in response to our request
-  // ...
-});</pre>
+      // The event was re-dispatched in response to our request
+      // ...
+    });
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

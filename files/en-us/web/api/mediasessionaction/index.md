@@ -14,70 +14,70 @@ tags:
   - Type
 browser-compat: api.MediaSessionAction
 ---
-<p>The <code>MediaSessionAction</code> enumerated type describes an action that the user may perform in a media session, such as playing, pausing, or seeking.</p>
+The `MediaSessionAction` enumerated type describes an action that the user may perform in a media session, such as playing, pausing, or seeking.
 
-<p>You pass one of these values into the {{domxref("MediaSession")}} interface's {{domxref("MediaSession.setActionHandler", "setActionHandler()")}} method to indicate the action for which the handler will be called.</p>
+You pass one of these values into the {{domxref("MediaSession")}} interface's {{domxref("MediaSession.setActionHandler", "setActionHandler()")}} method to indicate the action for which the handler will be called.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>A media session action's type is specified using a string from the <code>MediaSessionAction</code> enumerated type.</p>
+A media session action's type is specified using a string from the `MediaSessionAction` enumerated type.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<p>Each of the actions is a common media session control request. Implement support for each of these in order to allow that type of action to be performed. The following strings identify the currently available types of media session action:</p>
+Each of the actions is a common media session control request. Implement support for each of these in order to allow that type of action to be performed. The following strings identify the currently available types of media session action:
 
-<dl>
- <dt><code>nexttrack</code></dt>
- <dd>Advances playback to the next track.</dd>
- <dt><code>pause</code></dt>
- <dd>Pauses playback of the media.</dd>
- <dt><code>play</code></dt>
- <dd>Begins (or resumes) playback of the media.</dd>
- <dt><code>previoustrack</code></dt>
- <dd>Moves back to the previous track.</dd>
- <dt><code>seekbackward</code></dt>
- <dd>Seeks backward through the media from the current position. The {{domxref("MediaSessionActionDetails")}} property {{domxref("MediaSessionActionDetails.seekOffset", "seekOffset")}} specifies the amount of time to seek backward.</dd>
- <dt><code>seekforward</code></dt>
- <dd>Seeks forward from the current position through the media. The {{domxref("MediaSessionActionDetails")}} property {{domxref("MediaSessionActionDetails.seekOffset", "seekOffset")}} specifies the amount of time to seek forward.</dd>
- <dt><code>seekto</code></dt>
- <dd>Moves the playback position to the specified time within the media. The time to which to seek is specified in the {{domxref("MediaSessionActionDetails")}} property {{domxref("MediaSessionActionDetails.seekTime", "seekTime")}}. If you intend to perform multiple <code>seekto</code> operations in rapid succession, you can also specify the {{domxref("MediaSessionActionDetails")}} property {{domxref("MediaSessionActionDetails.fastSeek", "fastSeek")}} property with a value of <code>true</code>. This lets the browser know it can take steps to optimize repeated operations, and is likely to result in improved performance.</dd>
- <dt><code>skipad</code></dt>
- <dd>Skips past the currently playing advertisement or commercial. This action may or may not be available, depending on the platform and {{Glossary("user agent")}}, or may be disabled due to subscription level or other circumstances.</dd>
- <dt><code>stop</code></dt>
- <dd>Halts playback entirely.</dd>
-</dl>
+- `nexttrack`
+  - : Advances playback to the next track.
+- `pause`
+  - : Pauses playback of the media.
+- `play`
+  - : Begins (or resumes) playback of the media.
+- `previoustrack`
+  - : Moves back to the previous track.
+- `seekbackward`
+  - : Seeks backward through the media from the current position. The {{domxref("MediaSessionActionDetails")}} property {{domxref("MediaSessionActionDetails.seekOffset", "seekOffset")}} specifies the amount of time to seek backward.
+- `seekforward`
+  - : Seeks forward from the current position through the media. The {{domxref("MediaSessionActionDetails")}} property {{domxref("MediaSessionActionDetails.seekOffset", "seekOffset")}} specifies the amount of time to seek forward.
+- `seekto`
+  - : Moves the playback position to the specified time within the media. The time to which to seek is specified in the {{domxref("MediaSessionActionDetails")}} property {{domxref("MediaSessionActionDetails.seekTime", "seekTime")}}. If you intend to perform multiple `seekto` operations in rapid succession, you can also specify the {{domxref("MediaSessionActionDetails")}} property {{domxref("MediaSessionActionDetails.fastSeek", "fastSeek")}} property with a value of `true`. This lets the browser know it can take steps to optimize repeated operations, and is likely to result in improved performance.
+- `skipad`
+  - : Skips past the currently playing advertisement or commercial. This action may or may not be available, depending on the platform and {{Glossary("user agent")}}, or may be disabled due to subscription level or other circumstances.
+- `stop`
+  - : Halts playback entirely.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>A media session action may be generated by any media session action source; these sources include anything from UI widgets within the browser itself to media control keys on the user's keyboard to buttons on the user's headset or earbuds.</p>
+A media session action may be generated by any media session action source; these sources include anything from UI widgets within the browser itself to media control keys on the user's keyboard to buttons on the user's headset or earbuds.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Adding_action_handlers">Adding action handlers</h3>
+### Adding action handlers
 
-<p>This example implements seek forward and backward actions for an audio player by setting up the <code>{{anch("seekforward")}}</code> and <code>{{anch("seekbackward")}}</code> action handlers.</p>
+This example implements seek forward and backward actions for an audio player by setting up the `{{anch("seekforward")}}` and `{{anch("seekbackward")}}` action handlers.
 
-<pre class="brush: js">let skipTime = 10; // Time to skip in seconds
+```js
+let skipTime = 10; // Time to skip in seconds
 
-navigator.mediaSession.setActionHandler('seekforward', details =&gt; {
+navigator.mediaSession.setActionHandler('seekforward', details => {
  // User clicked "Seek Forward" media notification icon.
  audio.currentTime = Math.min(audio.currentTime + skipTime,
                audio.duration);
 });
 
-navigator.mediaSession.setActionHandler('seekbackward', details =&gt; {
+navigator.mediaSession.setActionHandler('seekbackward', details => {
  // User clicked "Seek Backward" media notification icon.
  audio.currentTime = Math.max(audio.currentTime - skipTime, 0);
 });
-</pre>
+```
 
-<p>In this case, both the <code>seekforward</code> and <code>seekbackward</code> handlers are using a fixed distance, ignoring the time specified by the {{domxref("MediaSessionActionDetails")}} passed into the handler.</p>
+In this case, both the `seekforward` and `seekbackward` handlers are using a fixed distance, ignoring the time specified by the {{domxref("MediaSessionActionDetails")}} passed into the handler.
 
-<h3 id="Supporting_multiple_actions_in_one_handler_function">Supporting multiple actions in one handler function</h3>
+### Supporting multiple actions in one handler function
 
-<p>You can also, if you prefer, use a single function to handle multiple action types, by checking the value of the <code>MediaSessionActionDetails</code> object's {{domxref("MediaSessionActionDetails.action", "action")}} property:</p>
+You can also, if you prefer, use a single function to handle multiple action types, by checking the value of the `MediaSessionActionDetails` object's {{domxref("MediaSessionActionDetails.action", "action")}} property:
 
-<pre class="brush: js">let skipTime = 7;
+```js
+let skipTime = 7;
 
 navigator.mediaSession.setActionHandler("seekforward", handleSeek);
 navigator.mediaSession.setActionHandler("seekbackward", handleSeek);
@@ -93,15 +93,16 @@ function handleSeek(details) {
       break;
   }
 }
-</pre>
+```
 
-<p>Here, the <code>handleSeek()</code> function handles both <code>seekbackward</code> and <code>seekforward</code> actions.</p>
+Here, the `handleSeek()` function handles both `seekbackward` and `seekforward` actions.
 
-<h3 id="Using_data_provided_by_MediaSessionActionDetails">Using data provided by MediaSessionActionDetails</h3>
+### Using data provided by MediaSessionActionDetails
 
-<p>In this example, instead of seeking a specified distance, the <code>seekforward</code> and <code>seekbackward</code> handlers use the time specified in the <code>MediaSessionActionDetails</code> object's {{domxref("MediaSessionActionDetails.seekOffset", "seekOffset")}} property.</p>
+In this example, instead of seeking a specified distance, the `seekforward` and `seekbackward` handlers use the time specified in the `MediaSessionActionDetails` object's {{domxref("MediaSessionActionDetails.seekOffset", "seekOffset")}} property.
 
-<pre class="brush: js">navigator.mediaSession.setActionHandler("seekforward", handleSeek);
+```js
+navigator.mediaSession.setActionHandler("seekforward", handleSeek);
 navigator.mediaSession.setActionHandler("seekbackward", handleSeek);
 
 function handleSeek(details) {
@@ -114,11 +115,13 @@ function handleSeek(details) {
       audio.currentTime = Math.max(audio.currentTime - details.seekOffset, 0);
       break;
   }
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-<p>{{Compat}}</p>
+## Browser compatibility
+
+{{Compat}}

@@ -13,26 +13,26 @@ tags:
   - isPresenting
 browser-compat: api.VRDisplay.isPresenting
 ---
-<div>{{APIRef("WebVR API")}}{{Deprecated_Header}}</div>
+{{APIRef("WebVR API")}}{{Deprecated_Header}}
 
-<p>The <code><strong>isPresenting</strong></code> read-only property of the {{domxref("VRDisplay")}} interface returns a boolean value indicating whether the <code>VRDisplay</code> is currently having content presented through it.</p>
+The **`isPresenting`** read-only property of the {{domxref("VRDisplay")}} interface returns a boolean value indicating whether the `VRDisplay` is currently having content presented through it.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This property was part of the old <a href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</a>. It has been superseded by the <a href="https://immersive-web.github.io/webxr/">WebXR Device API</a>.</p>
-</div>
+> **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var isItPresenting = vrDisplayInstance.isPresenting;
-</pre>
+```js
+var isItPresenting = vrDisplayInstance.isPresenting;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A boolean value; <code>true</code> means the display is presenting; <code>false</code> means it isn't.</p>
+A boolean value; `true` means the display is presenting; `false` means it isn't.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">function onVRExitPresent () {
+```js
+function onVRExitPresent () {
   // No sense in exiting presentation if we're not actually presenting.
   // (This may happen if we get an event like vrdisplaydeactivate when
   // we weren't presenting.)
@@ -42,29 +42,27 @@ browser-compat: api.VRDisplay.isPresenting
     // Nothing to do because we're handling things in onVRPresentChange.
   }, function (err) {
     var errMsg = "exitPresent failed.";
-    if (err &amp;&amp; err.message) {
-      errMsg += "&lt;br/&gt;" + err.message
+    if (err && err.message) {
+      errMsg += "<br/>" + err.message
     }
     VRSamplesUtil.addError(errMsg, 2000);
   });
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Note:</strong> Code snippet taken from <a href="https://github.com/toji/webvr.info/blob/master/samples/03-vr-presentation.html">Google's VR Presentation demo</a>.</p>
-</div>
+> **Note:** Code snippet taken from [Google's VR Presentation demo](https://github.com/toji/webvr.info/blob/master/samples/03-vr-presentation.html).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This property was part of the old <a href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</a> that has been superseded by the <a href="https://immersive-web.github.io/webxr/">WebXR Device API</a>. It is no longer on track to becoming a standard.</p>
-<p>Until all browsers have implemented the new <a href="/en-US/docs/Web/API/WebXR_Device_API/Fundamentals">WebXR APIs</a>, it is recommended to rely on frameworks, like <a href="https://aframe.io/">A-Frame</a>, <a href="https://www.babylonjs.com/">Babylon.js</a>, or <a href="https://threejs.org/">Three.js</a>, or a <a href="https://github.com/immersive-web/webxr-polyfill">polyfill</a>, to develop WebXR applications that will work across all browsers <a href="https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/">[1]</a>.</p>
+This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) that has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/). It is no longer on track to becoming a standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals), it is recommended to rely on frameworks, like [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), or [Three.js](https://threejs.org/), or a [polyfill](https://github.com/immersive-web/webxr-polyfill), to develop WebXR applications that will work across all browsers [\[1\]](https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/).
 
-<p>{{Compat}}</p>
+## Browser compatibility
 
-<h2 id="See_also">See also</h2>
+{{Compat}}
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebVR_API">WebVR API homepage</a></li>
- <li><a href="https://mixedreality.mozilla.org/">https://mixedreality.mozilla.org/</a> — demos, downloads, and other resources from the Mozilla VR team.</li>
-</ul>
+## See also
+
+- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API)
+- <https://mixedreality.mozilla.org/> — demos, downloads, and other resources from the Mozilla VR team.

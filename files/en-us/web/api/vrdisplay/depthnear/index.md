@@ -13,49 +13,49 @@ tags:
   - depthNear
 browser-compat: api.VRDisplay.depthNear
 ---
-<div>{{APIRef("WebVR API")}}{{Deprecated_Header}}</div>
+{{APIRef("WebVR API")}}{{Deprecated_Header}}
 
-<p>The <code><strong>depthNear</strong></code> property of the {{domxref("VRDisplay")}} interface gets and sets the z-depth defining the near plane of the <a href="https://en.wikipedia.org/wiki/Viewing_frustum">eye view frustum</a>, i.e. the nearest viewable boundary of the scene.</p>
+The **`depthNear`** property of the {{domxref("VRDisplay")}} interface gets and sets the z-depth defining the near plane of the [eye view frustum](https://en.wikipedia.org/wiki/Viewing_frustum), i.e. the nearest viewable boundary of the scene.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This property was part of the old <a href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</a>. It has been superseded by the <a href="https://immersive-web.github.io/webxr/">WebXR Device API</a>.</p>
-</div>
+> **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-<p>Generally you should leave the value as is, but you might want to increase it if you are trying to improve performance on slower computers, and/or your UI makes sense with the near boundary made further away.</p>
+Generally you should leave the value as is, but you might want to increase it if you are trying to improve performance on slower computers, and/or your UI makes sense with the near boundary made further away.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var mydepthNear = vrDisplayInstance.depthNear;
+```js
+var mydepthNear = vrDisplayInstance.depthNear;
 
 vrDisplayInstance.depthNear = 1.0;
-</pre>
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A double, representing the z-depth in meters; its initial value is <code>0.01</code>.</p>
+A double, representing the z-depth in meters; its initial value is `0.01`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js ">var vrDisplay;
+```js
+var vrDisplay;
 
 navigator.getVRDisplays().then(function(displays) {
   vrDisplay = displays[0];
   vrDisplay.depthNear = 1.0;
   vrDisplay.depthFar = 7500.0;
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This property was part of the old <a href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</a> that has been superseded by the <a href="https://immersive-web.github.io/webxr/">WebXR Device API</a>. It is no longer on track to becoming a standard.</p>
-<p>Until all browsers have implemented the new <a href="/en-US/docs/Web/API/WebXR_Device_API/Fundamentals">WebXR APIs</a>, it is recommended to rely on frameworks, like <a href="https://aframe.io/">A-Frame</a>, <a href="https://www.babylonjs.com/">Babylon.js</a>, or <a href="https://threejs.org/">Three.js</a>, or a <a href="https://github.com/immersive-web/webxr-polyfill">polyfill</a>, to develop WebXR applications that will work across all browsers <a href="https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/">[1]</a>.</p>
+This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) that has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/). It is no longer on track to becoming a standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals), it is recommended to rely on frameworks, like [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), or [Three.js](https://threejs.org/), or a [polyfill](https://github.com/immersive-web/webxr-polyfill), to develop WebXR applications that will work across all browsers [\[1\]](https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/).
 
-<p>{{Compat}}</p>
+## Browser compatibility
 
-<h2 id="See_also">See also</h2>
+{{Compat}}
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebVR_API">WebVR API homepage</a></li>
- <li><a href="https://mixedreality.mozilla.org/">https://mixedreality.mozilla.org/</a> — demos, downloads, and other resources from the Mozilla VR team.</li>
-</ul>
+## See also
+
+- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API)
+- <https://mixedreality.mozilla.org/> — demos, downloads, and other resources from the Mozilla VR team.

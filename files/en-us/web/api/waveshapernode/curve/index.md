@@ -10,43 +10,40 @@ tags:
   - curve
 browser-compat: api.WaveShaperNode.curve
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>The <code>curve</code> property of the {{ domxref("WaveShaperNode") }} interface is a {{jsxref("Float32Array")}} of numbers describing the distortion to apply.</p>
+The `curve` property of the {{ domxref("WaveShaperNode") }} interface is a {{jsxref("Float32Array")}} of numbers describing the distortion to apply.
 
-<p>The mid-element of the array is applied to any signal value of <code>0</code>, the first one to signal values of <code>-1</code>, and the last to signal values of <code>1</code>; values lower than <code>-1</code> or greater than <code>1</code> are treated like <code>-1</code> or <code>1</code> respectively.</p>
+The mid-element of the array is applied to any signal value of `0`, the first one to signal values of `-1`, and the last to signal values of `1`; values lower than `-1` or greater than `1` are treated like `-1` or `1` respectively.
 
-<p>If necessary, intermediate values of the distortion curve are linearly interpolated.</p>
+If necessary, intermediate values of the distortion curve are linearly interpolated.
 
-<div class="notecard note">
-<p><strong>Note:</strong> The array can be a <code>null</code> value: in that case, no distortion is applied to the input signal.</p>
-</div>
+> **Note:** The array can be a `null` value: in that case, no distortion is applied to the input signal.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var audioCtx = new AudioContext();
+```js
+var audioCtx = new AudioContext();
 var distortion = audioCtx.createWaveShaper();
 distortion.curve = myCurveDataArray; // myCurveDataArray is a Float32Array
-</pre>
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{jsxref("Float32Array")}}.</p>
+A {{jsxref("Float32Array")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See <a href="/en-US/docs/Web/API/BaseAudioContext/createWaveShaper#example"><code>BaseAudioContext.createWaveShaper()</code></a> for example code.</p>
+See [`BaseAudioContext.createWaveShaper()`](/en-US/docs/Web/API/BaseAudioContext/createWaveShaper#example) for example code.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

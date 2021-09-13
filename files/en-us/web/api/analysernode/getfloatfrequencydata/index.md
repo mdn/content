@@ -9,54 +9,55 @@ tags:
   - Web Audio API
 browser-compat: api.AnalyserNode.getFloatFrequencyData
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>The <strong><code>getFloatFrequencyData()</code></strong> method of the {{domxref("AnalyserNode")}} Interface copies the current frequency data into a {{jsxref("Float32Array")}} array passed into it.</p>
+The **`getFloatFrequencyData()`** method of the {{domxref("AnalyserNode")}} Interface copies the current frequency data into a {{jsxref("Float32Array")}} array passed into it.
 
-<p>Each item in the array represents the decibel value for a specific frequency. The frequencies are spread linearly from 0 to 1/2 of the sample rate. For example, for a <code>48000</code> Hz sample rate, the last item of the array will represent the decibel value for <code>24000</code> Hz.</p>
+Each item in the array represents the decibel value for a specific frequency. The frequencies are spread linearly from 0 to 1/2 of the sample rate. For example, for a `48000` Hz sample rate, the last item of the array will represent the decibel value for `24000` Hz.
 
-<p>If you need higher performance and don't care about precision, you can use {{domxref("AnalyserNode.getByteFrequencyData()")}} instead, which works on a {{jsxref("Uint8Array")}}.</p>
+If you need higher performance and don't care about precision, you can use {{domxref("AnalyserNode.getByteFrequencyData()")}} instead, which works on a {{jsxref("Uint8Array")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var audioCtx = new AudioContext();
+```js
+var audioCtx = new AudioContext();
 var analyser = audioCtx.createAnalyser();
 var dataArray = new Float32Array(analyser.frequencyBinCount); // Float32Array should be the same length as the frequencyBinCount
 
-void <em>analyser</em>.getFloatFrequencyData(dataArray); // fill the Float32Array with data returned from getFloatFrequencyData()
-</pre>
+void analyser.getFloatFrequencyData(dataArray); // fill the Float32Array with data returned from getFloatFrequencyData()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>array</code></dt>
- <dd>The {{jsxref("Float32Array")}} that the frequency domain data will be copied to. For any sample which is silent, the value is <code>-<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity">Infinity</a></code>.<br>
- If the array has fewer elements than the {{domxref("AnalyserNode.frequencyBinCount")}}, excess elements are dropped. If it has more elements than needed, excess elements are ignored.</dd>
-</dl>
+- `array`
+  - : The {{jsxref("Float32Array")}} that the frequency domain data will be copied to. For any sample which is silent, the value is `-Infinity`.
+    If the array has fewer elements than the {{domxref("AnalyserNode.frequencyBinCount")}}, excess elements are dropped. If it has more elements than needed, excess elements are ignored.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">const audioCtx = new AudioContext();
+```js
+const audioCtx = new AudioContext();
 const analyser = audioCtx.createAnalyser();
 // Float32Array should be the same length as the frequencyBinCount
 const myDataArray = new Float32Array(analyser.frequencyBinCount);
 // fill the Float32Array with data returned from getFloatFrequencyData()
 analyser.getFloatFrequencyData(myDataArray);
-</pre>
+```
 
-<h3 id="Drawing_a_spectrum">Drawing a spectrum</h3>
+### Drawing a spectrum
 
-<p>The following example shows basic usage of an {{domxref("AudioContext")}} to connect a {{domxref("MediaElementAudioSourceNode")}} to an <code>AnalyserNode</code>. While the audio is playing, we collect the frequency data repeatedly with {{domxref("window.requestAnimationFrame()","requestAnimationFrame()")}} and draw a "winamp bargraph style" to a {{htmlelement("canvas")}} element.</p>
+The following example shows basic usage of an {{domxref("AudioContext")}} to connect a {{domxref("MediaElementAudioSourceNode")}} to an `AnalyserNode`. While the audio is playing, we collect the frequency data repeatedly with {{domxref("window.requestAnimationFrame()","requestAnimationFrame()")}} and draw a "winamp bargraph style" to a {{htmlelement("canvas")}} element.
 
-<p>For more complete applied examples/information, check out our <a href="https://mdn.github.io/voice-change-o-matic-float-data/">Voice-change-O-matic-float-data</a> demo (see the <a href="https://github.com/mdn/voice-change-o-matic-float-data">source code</a> too).</p>
+For more complete applied examples/information, check out our [Voice-change-O-matic-float-data](https://mdn.github.io/voice-change-o-matic-float-data/) demo (see the [source code](https://github.com/mdn/voice-change-o-matic-float-data) too).
 
-<pre class="brush: html">&lt;!doctype html&gt;
-&lt;body&gt;
-&lt;script&gt;
+```html
+<!doctype html>
+<body>
+<script>
 const audioCtx = new AudioContext();
 
 //Create audio source
@@ -102,7 +103,7 @@ function draw() {
   //Draw spectrum
   const barWidth = (canvas.width / bufferLength) * 2.5;
   let posX = 0;
-  for (let i = 0; i &lt; bufferLength; i++) {
+  for (let i = 0; i < bufferLength; i++) {
     const barHeight = (dataArray[i] + 140) * 2;
     canvasCtx.fillStyle = 'rgb(' + Math.floor(barHeight + 100) + ', 50, 50)';
     canvasCtx.fillRect(posX, canvas.height - barHeight / 2, barWidth, barHeight / 2);
@@ -111,19 +112,18 @@ function draw() {
 };
 
 draw();
-&lt;/script&gt;
-&lt;/body&gt;</pre>
+</script>
+</body>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

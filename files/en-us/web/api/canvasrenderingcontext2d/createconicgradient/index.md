@@ -2,63 +2,59 @@
 title: CanvasRenderingContext2D.createConicGradient()
 slug: Web/API/CanvasRenderingContext2D/createConicGradient
 tags:
-- API
-- Canvas
-- CanvasRenderingContext2D
-- Gradients
-- Conic
-- Method
-- Reference
+  - API
+  - Canvas
+  - CanvasRenderingContext2D
+  - Gradients
+  - Conic
+  - Method
+  - Reference
 browser-compat: api.CanvasRenderingContext2D.createConicGradient
 ---
+{{APIRef}}
 
-<div>{{APIRef}}</div>
+The **`CanvasRenderingContext2D.createConicGradient()`** method of the Canvas 2D API creates a gradient around a point with given coordinates.
 
-<p>The <strong><code>CanvasRenderingContext2D.createConicGradient()</code></strong> method of the Canvas 2D API creates a gradient around a point with given coordinates.</p>
+This method returns a conic {{domxref("CanvasGradient")}}. To be applied to a shape, the gradient must first be assigned to the {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} or {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}} properties.
 
-<p>This method returns a conic {{domxref("CanvasGradient")}}. To be applied to a shape, the gradient must first be assigned to the {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} or {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}} properties.</p>
+> **Note:** Gradient coordinates are global, i.e., relative to the current coordinate space. When applied to a shape, the coordinates are NOT relative to the shape's coordinates.
 
-<div class="note">
-  <p><strong>Note:</strong> Gradient coordinates are global, i.e., relative to the current coordinate space. When applied to a shape, the coordinates are NOT relative to the shape's coordinates.</p>
-</div>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+CanvasGradient ctx.createConicGradient(startAngle, x, y);
+```
 
-<pre class="brush: js">CanvasGradient <var>ctx</var>.createConicGradient(<var>startAngle</var>, <var>x</var>, <var>y</var>);
-</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `startAngle`
+  - : The angle at which to begin the gradient, in radians. Angle measurements start vertically above the centre and move around clockwise.
+- `x`
+  - : The x-axis coordinate of the centre of the gradient.
+- `y`
+  - : The y-axis coordinate of the centre of the gradient.
 
-<dl>
-  <dt><code>startAngle</code></dt>
-  <dd>The angle at which to begin the gradient, in radians. Angle measurements start vertically above the centre and move around clockwise.</dd>
-  <dt><code>x</code></dt>
-  <dd>The x-axis coordinate of the centre of the gradient.</dd>
-  <dt><code>y</code></dt>
-  <dd>The y-axis coordinate of the centre of the gradient.</dd>
-</dl>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+- {{domxref("CanvasGradient")}}
+  - : A conic `CanvasGradient`.
 
-<dl>
-  <dt>{{domxref("CanvasGradient")}}</dt>
-  <dd>A conic <code>CanvasGradient</code>.</dd>
-</dl>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Filling a rectangle with a conic gradient
 
-<h3 id="Filling_a_rectangle_with_a_conic_gradient">Filling a rectangle with a conic gradient</h3>
+This example initializes a conic gradient using the `createConicGradient()` method. Five color stops between around the center coordinate are then created. Finally, the gradient is assigned to the canvas context, and is rendered to a filled rectangle.
 
-<p>This example initializes a conic gradient using the <code>createConicGradient()</code> method. Five color stops between around the center coordinate are then created. Finally, the gradient is assigned to the canvas context, and is rendered to a filled rectangle.</p>
+#### HTML
 
-<h4 id="HTML">HTML</h4>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+#### JavaScript
 
-<h4 id="JavaScript">JavaScript</h4>
-
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 // Create a conic gradient
@@ -76,25 +72,23 @@ gradient.addColorStop(1, "blue");
 // Set the fill style and draw a rectangle
 ctx.fillStyle = gradient;
 ctx.fillRect(20, 20, 200, 200);
-</pre>
+```
 
-<h4 id="Rectangle_result">Rectangle result</h4>
+#### Rectangle result
 
-<p>{{ EmbedLiveSample('Filling_a_rectangle_with_a_conic_gradient', 700, 200) }}</p>
+{{ EmbedLiveSample('Filling_a_rectangle_with_a_conic_gradient', 700, 200) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining this method: {{domxref("CanvasRenderingContext2D")}}</li>
-  <li>{{domxref("CanvasGradient")}}</li>
-  <li>{{domxref("CanvasRenderingContext2D.createLinearGradient()")}}</li>
-  <li>{{domxref("CanvasRenderingContext2D.createRadialGradient()")}}</li>
-</ul>
+- The interface defining this method: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasGradient")}}
+- {{domxref("CanvasRenderingContext2D.createLinearGradient()")}}
+- {{domxref("CanvasRenderingContext2D.createRadialGradient()")}}

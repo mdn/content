@@ -10,48 +10,51 @@ tags:
   - Response
 browser-compat: api.Response.text
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p>The <strong><code>text()</code></strong> method of the {{domxref("Response")}} interface takes
-  a {{domxref("Response")}} stream and reads it to completion. It returns a promise that
-  resolves with a {{jsxref("String")}}. The response
-  is <em>always</em> decoded using UTF-8.</p>
+The **`text()`** method of the {{domxref("Response")}} interface takes
+a {{domxref("Response")}} stream and reads it to completion. It returns a promise that
+resolves with a {{jsxref("String")}}. The response
+is *always* decoded using UTF-8.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>response</var>.text().then(function (<var>text</var>) {
+```js
+response.text().then(function (text) {
   // do something with the text response
-});</pre>
+});
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A Promise that resolves with a {{jsxref("String")}}.</p>
+A Promise that resolves with a {{jsxref("String")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In our <a href="https://github.com/mdn/fetch-examples/tree/master/fetch-text">fetch
-    text example</a> (run <a href="https://mdn.github.io/fetch-examples/fetch-text/">fetch
-    text live</a>), we have an {{htmlelement("article")}} element and three links (stored
-  in the <code>myLinks</code> array.) First, we loop through all of these and give each
-  one an <code>onclick</code> event handler so that the <code>getData()</code> function is
-  run — with the link's <code>data-page</code> identifier passed to it as an argument —
-  when one of the links is clicked.</p>
+In our [fetch
+text example](https://github.com/mdn/fetch-examples/tree/master/fetch-text) (run [fetch
+text live](https://mdn.github.io/fetch-examples/fetch-text/)), we have an {{htmlelement("article")}} element and three links (stored
+in the `myLinks` array.) First, we loop through all of these and give each
+one an `onclick` event handler so that the `getData()` function is
+run — with the link's `data-page` identifier passed to it as an argument —
+when one of the links is clicked.
 
-<p>When <code>getData()</code> is run, we create a new request using the
-  {{domxref("Request.Request","Request()")}} constructor, then use it to fetch a specific
-  <code>.txt</code> file. When the fetch is successful, we read a {{domxref("USVString")}}
-  (text) object out of the response using <code>text()</code>, then set the
-  {{domxref("Element.innerHTML","innerHTML")}} of the {{htmlelement("article")}} element
-  equal to the text object.</p>
+When `getData()` is run, we create a new request using the
+{{domxref("Request.Request","Request()")}} constructor, then use it to fetch a specific
+`.txt` file. When the fetch is successful, we read a {{domxref("USVString")}}
+(text) object out of the response using `text()`, then set the
+{{domxref("Element.innerHTML","innerHTML")}} of the {{htmlelement("article")}} element
+equal to the text object.
 
-<pre class="brush: js">let myArticle = document.querySelector('article');
+```js
+let myArticle = document.querySelector('article');
 let myLinks = document.querySelectorAll('ul a');
 
-for(let i = 0; i &lt;= myLinks.length-1; i++) {
+for(let i = 0; i <= myLinks.length-1; i++) {
   myLinks[i].onclick = function(e) {
     e.preventDefault();
     let linkData = e.target.getAttribute('data-page');
@@ -67,20 +70,19 @@ function getData(pageId) {
       myArticle.innerHTML = text;
     });
   });
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
-  <li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a></li>
-  <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP](/en-US/docs/Web/HTTP)

@@ -11,92 +11,90 @@ tags:
   - Response
 browser-compat: api.Response
 ---
-<div>{{APIRef("Fetch API")}}</div>
+{{APIRef("Fetch API")}}
 
-<p>The <strong><code>Response</code></strong> interface of the <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> represents the response to a request.</p>
+The **`Response`** interface of the [Fetch API](/en-US/docs/Web/API/Fetch_API) represents the response to a request.
 
-<p>You can create a new <code>Response</code> object using the {{domxref("Response.Response()")}} constructor, but you are more likely to encounter a <code>Response</code> object being returned as the result of another API operation—for example, a service worker {{domxref("Fetchevent.respondWith")}}, or a simple {{domxref("fetch()")}}.</p>
+You can create a new `Response` object using the {{domxref("Response.Response()")}} constructor, but you are more likely to encounter a `Response` object being returned as the result of another API operation—for example, a service worker {{domxref("Fetchevent.respondWith")}}, or a simple {{domxref("fetch()")}}.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("Response.Response","Response()")}}</dt>
- <dd>Creates a new <code>Response</code> object.</dd>
-</dl>
+- {{domxref("Response.Response","Response()")}}
+  - : Creates a new `Response` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("Response.body")}} {{readonlyInline}}</dt>
- <dd>A {{domxref("ReadableStream")}} of the body contents.</dd>
- <dt>{{domxref("Response.bodyUsed")}} {{readonlyInline}}</dt>
- <dd>Stores a boolean value that declares whether the body has been used in a response yet.</dd>
- <dt>{{domxref("Response.headers")}} {{readonlyinline}}</dt>
- <dd>The {{domxref("Headers")}} object associated with the response.</dd>
- <dt>{{domxref("Response.ok")}} {{readonlyinline}}</dt>
- <dd>A boolean indicating whether the response was successful (status in the range <code>200</code>–<code>299</code>) or not.</dd>
- <dt>{{domxref("Response.redirected")}} {{ReadOnlyInline}}</dt>
- <dd>Indicates whether or not the response is the result of a redirect (that is, its URL list has more than one entry).</dd>
- <dt>{{domxref("Response.status")}} {{readonlyinline}}</dt>
- <dd>The status code of the response. (This will be <code>200</code> for a success).</dd>
- <dt>{{domxref("Response.statusText")}} {{readonlyinline}}</dt>
- <dd>The status message corresponding to the status code. (e.g., <code>OK</code> for <code>200</code>).</dd>
- <dt>{{domxref("Response.trailers")}}</dt>
- <dd>A {{jsxref("Promise")}} resolving to a {{domxref("Headers")}} object, associated with the response with {{domxref("Response.headers")}} for values of the HTTP {{HTTPHeader("Trailer")}} header.</dd>
- <dt>{{domxref("Response.type")}} {{readonlyinline}}</dt>
- <dd>The type of the response (e.g., <code>basic</code>, <code>cors</code>).</dd>
- <dt>{{domxref("Response.url")}} {{readonlyinline}}</dt>
- <dd>The URL of the response.</dd>
-</dl>
+- {{domxref("Response.body")}} {{readonlyInline}}
+  - : A {{domxref("ReadableStream")}} of the body contents.
+- {{domxref("Response.bodyUsed")}} {{readonlyInline}}
+  - : Stores a boolean value that declares whether the body has been used in a response yet.
+- {{domxref("Response.headers")}} {{readonlyinline}}
+  - : The {{domxref("Headers")}} object associated with the response.
+- {{domxref("Response.ok")}} {{readonlyinline}}
+  - : A boolean indicating whether the response was successful (status in the range `200`–`299`) or not.
+- {{domxref("Response.redirected")}} {{ReadOnlyInline}}
+  - : Indicates whether or not the response is the result of a redirect (that is, its URL list has more than one entry).
+- {{domxref("Response.status")}} {{readonlyinline}}
+  - : The status code of the response. (This will be `200` for a success).
+- {{domxref("Response.statusText")}} {{readonlyinline}}
+  - : The status message corresponding to the status code. (e.g., `OK` for `200`).
+- {{domxref("Response.trailers")}}
+  - : A {{jsxref("Promise")}} resolving to a {{domxref("Headers")}} object, associated with the response with {{domxref("Response.headers")}} for values of the HTTP {{HTTPHeader("Trailer")}} header.
+- {{domxref("Response.type")}} {{readonlyinline}}
+  - : The type of the response (e.g., `basic`, `cors`).
+- {{domxref("Response.url")}} {{readonlyinline}}
+  - : The URL of the response.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("Response.arrayBuffer()")}}</dt>
- <dd>Returns a promise that resolves with an {{jsxref("ArrayBuffer")}} representation of the response body.</dd>
- <dt>{{domxref("Response.blob()")}}</dt>
- <dd>Returns a promise that resolves with a {{domxref("Blob")}} representation of the response body.</dd>
- <dt>{{domxref("Response.clone()")}}</dt>
- <dd>Creates a clone of a <code>Response</code> object.</dd>
- <dt>{{domxref("Response.error()")}}</dt>
- <dd>Returns a new <code>Response</code> object associated with a network error.</dd>
- <dt>{{domxref("Response.formData()")}}</dt>
- <dd>Returns a promise that resolves with a {{domxref("FormData")}} representation of the response body.</dd>
- <dt>{{domxref("Response.json()")}}</dt>
- <dd>Returns a promise that resolves with the result of parsing the response body text as {{jsxref("JSON")}}.</dd>
- <dt>{{domxref("Response.redirect()")}}</dt>
- <dd>Creates a new response with a different URL.</dd>
- <dt>{{domxref("Response.text()")}}</dt>
- <dd>Returns a promise that resolves with a text representation of the response body.</dd>
-</dl>
+- {{domxref("Response.arrayBuffer()")}}
+  - : Returns a promise that resolves with an {{jsxref("ArrayBuffer")}} representation of the response body.
+- {{domxref("Response.blob()")}}
+  - : Returns a promise that resolves with a {{domxref("Blob")}} representation of the response body.
+- {{domxref("Response.clone()")}}
+  - : Creates a clone of a `Response` object.
+- {{domxref("Response.error()")}}
+  - : Returns a new `Response` object associated with a network error.
+- {{domxref("Response.formData()")}}
+  - : Returns a promise that resolves with a {{domxref("FormData")}} representation of the response body.
+- {{domxref("Response.json()")}}
+  - : Returns a promise that resolves with the result of parsing the response body text as {{jsxref("JSON")}}.
+- {{domxref("Response.redirect()")}}
+  - : Creates a new response with a different URL.
+- {{domxref("Response.text()")}}
+  - : Returns a promise that resolves with a text representation of the response body.
 
+## Examples
 
-<h2 id="Examples">Examples</h2>
+### Fetching an image
 
-<h3 id="Fetching_an_image">Fetching an image</h3>
+In our [basic fetch example](https://github.com/mdn/fetch-examples/tree/master/basic-fetch) ([run example live](https://mdn.github.io/fetch-examples/basic-fetch/)) we use a simple `fetch()` call to grab an image and display it in an {{htmlelement("img")}} element. The `fetch()` call returns a promise, which resolves to the `Response` object associated with the resource fetch operation.
 
-<p>In our <a href="https://github.com/mdn/fetch-examples/tree/master/basic-fetch">basic fetch example</a> (<a href="https://mdn.github.io/fetch-examples/basic-fetch/">run example live</a>) we use a simple <code>fetch()</code> call to grab an image and display it in an {{htmlelement("img")}} element. The <code>fetch()</code> call returns a promise, which resolves to the <code>Response</code> object associated with the resource fetch operation.</p>
+You'll notice that since we are requesting an image, we need to run {{domxref("Response.blob")}} to give the response its correct MIME type.
 
-<p>You'll notice that since we are requesting an image, we need to run {{domxref("Response.blob")}} to give the response its correct MIME type.</p>
-
-<pre class="brush: js">const image = document.querySelector('.my-image');
+```js
+const image = document.querySelector('.my-image');
 fetch('flowers.jpg')
-.then(response =&gt; response.blob())
-.then(blob =&gt; {
+.then(response => response.blob())
+.then(blob => {
   const objectURL = URL.createObjectURL(blob);
   image.src = objectURL;
-});</pre>
+});
+```
 
-<p>You can also use the {{domxref("Response.Response()")}} constructor to create your own custom <code>Response</code> object:</p>
+You can also use the {{domxref("Response.Response()")}} constructor to create your own custom `Response` object:
 
-<pre class="brush: js">const response = new Response();</pre>
+```js
+const response = new Response();
+```
 
-<h3 id="An_Ajax_Call">An Ajax Call</h3>
+### An Ajax Call
 
-<p>Here we call a PHP program file that generates a JSON string, displaying the result as a JSON value, including simple error handling.</p>
+Here we call a PHP program file that generates a JSON string, displaying the result as a JSON value, including simple error handling.
 
-<pre class="brush: js">// Function to do an Ajax call
-const doAjax = async () =&gt; {
+```js
+// Function to do an Ajax call
+const doAjax = async () => {
   const response = await fetch('Ajax.php'); // Generate the Response object
   if (response.ok) {
     const jsonValue = await response.json(); // Get JSON value from the response body
@@ -108,20 +106,18 @@ const doAjax = async () =&gt; {
 
 // Call the function and output value or error message to console
 doAjax().then(console.log).catch(console.log);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
- <li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP](/en-US/docs/Web/HTTP)

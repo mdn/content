@@ -7,58 +7,66 @@ tags:
   - Web Speech API
 browser-compat: api.SpeechRecognition.audioend_event
 ---
-<div>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</div>
+{{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-<p>The <code><strong>audioend</strong></code> event of the <a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a> is fired when the user agent has finished capturing audio for speech recognition.</p>
+The **`audioend`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) is fired when the user agent has finished capturing audio for speech recognition.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler</th>
-   <td><code><a href="/en-US/docs/Web/API/SpeechRecognition/onaudioend">onaudioend</a></code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/API/SpeechRecognition/onaudioend"
+            >onaudioend</a
+          ></code
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>You can use the <code>audioend</code> event in an <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener</a></code> method:</p>
+You can use the `audioend` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
-<pre class="brush: js">var recognition = new webkitSpeechRecognition() || new SpeechRecognition();
+```js
+var recognition = new webkitSpeechRecognition() || new SpeechRecognition();
 
 recognition.addEventListener('audioend', function() {
   console.log('Audio capturing ended');
-});</pre>
+});
+```
 
-<p>Or use the <a href="/en-US/docs/Web/API/SpeechRecognition/onaudioend">onaudioend</a> event handler property:</p>
+Or use the [onaudioend](/en-US/docs/Web/API/SpeechRecognition/onaudioend) event handler property:
 
-<pre class="brush: js">recognition.onaudioend = function() {
+```js
+recognition.onaudioend = function() {
   console.log('Audio capturing ended');
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
- <li><code><a href="/en-US/docs/Web/API/SpeechRecognition/onaudioend">onaudioend</a></code> event handler</li>
-</ul>
+- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)
+- [`onaudioend`](/en-US/docs/Web/API/SpeechRecognition/onaudioend) event handler

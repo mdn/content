@@ -9,36 +9,34 @@ tags:
   - Reference
 browser-compat: api.Window.outerHeight
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <strong><code>Window.outerHeight</code></strong> read-only property returns the height in pixels of the whole browser window, including any sidebar, window chrome, and window-resizing borders/handles.</p>
+The **`Window.outerHeight`** read-only property returns the height in pixels of the whole browser window, including any sidebar, window chrome, and window-resizing borders/handles.
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>To change the size of a window, see {{domxref("window.resizeBy()")}} and {{domxref("window.resizeTo()")}}.</p>
+To change the size of a window, see {{domxref("window.resizeBy()")}} and {{domxref("window.resizeTo()")}}.
 
-<p>To get the inner height of a window, i.e. the height of the page being displayed, see {{domxref("window.innerHeight")}}.</p>
+To get the inner height of a window, i.e. the height of the page being displayed, see {{domxref("window.innerHeight")}}.
 
-<h3 id="Graphical_example">Graphical example</h3>
+### Graphical example
 
-<p>The following figure shows the difference between <code>outerHeight</code> and <code>innerHeight</code>.</p>
+The following figure shows the difference between `outerHeight` and `innerHeight`.
 
-<p><img alt="innerHeight vs outerHeight illustration" src="firefoxinnervsouterheight2.png"></p>
+![innerHeight vs outerHeight illustration](firefoxinnervsouterheight2.png)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("window.innerHeight")}}</li>
- <li>{{domxref("window.innerWidth")}}</li>
- <li>{{domxref("window.outerWidth")}}</li>
- <li>{{domxref("window.resizeBy()")}}</li>
- <li>{{domxref("window.resizeTo()")}}</li>
-</ul>
+- {{domxref("window.innerHeight")}}
+- {{domxref("window.innerWidth")}}
+- {{domxref("window.outerWidth")}}
+- {{domxref("window.resizeBy()")}}
+- {{domxref("window.resizeTo()")}}

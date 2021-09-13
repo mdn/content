@@ -10,49 +10,44 @@ tags:
   - Streams
 browser-compat: api.ReadableStreamDefaultReader
 ---
-<p>{{APIRef("Streams")}}</p>
+{{APIRef("Streams")}}
 
-<p>The <strong><code>ReadableStreamDefaultReader</code></strong> interface of the <a href="/en-US/docs/Web/API/Streams_API">Streams API</a> represents a default reader that can be used to read stream data supplied from a network (e.g. a fetch request). </p>
+The **`ReadableStreamDefaultReader`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a default reader that can be used to read stream data supplied from a network (e.g. a fetch request).
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("ReadableStreamDefaultReader.ReadableStreamDefaultReader", "ReadableStreamDefaultReader()")}}</dt>
- <dd>Creates and returns a <code>ReadableStreamDefaultReader</code> object instance.</dd>
-</dl>
+- {{domxref("ReadableStreamDefaultReader.ReadableStreamDefaultReader", "ReadableStreamDefaultReader()")}}
+  - : Creates and returns a `ReadableStreamDefaultReader` object instance.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("ReadableStreamDefaultReader.closed")}} {{readonlyInline}}</dt>
- <dd>Returns a {{jsxref("Promise")}} that fulfills when the stream closes or the reader's lock is released, or rejects if the stream throws an error. This property enables you to write code that responds to an end to the streaming process.</dd>
-</dl>
+- {{domxref("ReadableStreamDefaultReader.closed")}} {{readonlyInline}}
+  - : Returns a {{jsxref("Promise")}} that fulfills when the stream closes or the reader's lock is released, or rejects if the stream throws an error. This property enables you to write code that responds to an end to the streaming process.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("ReadableStreamDefaultReader.cancel()")}}</dt>
- <dd>Returns a {{jsxref("Promise")}} that resolves when the stream is canceled. Calling this method signals a loss of interest in the stream by a consumer. The supplied <code>reason</code> argument will be given to the underlying source, which may or may not use it.</dd>
- <dt>{{domxref("ReadableStreamDefaultReader.read()")}}</dt>
- <dd>Returns a promise providing access to the next chunk in the stream's internal queue.</dd>
- <dt>{{domxref("ReadableStreamDefaultReader.releaseLock()")}}</dt>
- <dd>Releases the reader's lock on the stream.</dd>
-</dl>
+- {{domxref("ReadableStreamDefaultReader.cancel()")}}
+  - : Returns a {{jsxref("Promise")}} that resolves when the stream is canceled. Calling this method signals a loss of interest in the stream by a consumer. The supplied `reason` argument will be given to the underlying source, which may or may not use it.
+- {{domxref("ReadableStreamDefaultReader.read()")}}
+  - : Returns a promise providing access to the next chunk in the stream's internal queue.
+- {{domxref("ReadableStreamDefaultReader.releaseLock()")}}
+  - : Releases the reader's lock on the stream.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the following example, an artifical {{domxref("Response")}} is created to stream HTML fragments fetched from another resource to the browser.</p>
+In the following example, an artifical {{domxref("Response")}} is created to stream HTML fragments fetched from another resource to the browser.
 
-<p>It demonstrates the usage of a {{domxref("ReadableStream")}} in combination with a {{jsxref("Uint8Array")}}.</p>
+It demonstrates the usage of a {{domxref("ReadableStream")}} in combination with a {{jsxref("Uint8Array")}}.
 
-<pre class="brush: js">fetch("https://www.example.org/").then((response) =&gt; {
+```js
+fetch("https://www.example.org/").then((response) => {
   const reader = response.body.getReader();
   const stream = new ReadableStream({
     start(controller) {
       // The following function handles each data chunk
       function push() {
         // "done" is a Boolean and value a "Uint8Array"
-        return reader.read().then(({ done, value }) =&gt; {
+        return reader.read().then(({ done, value }) => {
           // Is there no more data to read?
           if (done) {
             // Tell the browser that we have finished sending data
@@ -72,12 +67,12 @@ browser-compat: api.ReadableStreamDefaultReader
 
   return new Response(stream, { headers: { "Content-Type": "text/html" } });
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

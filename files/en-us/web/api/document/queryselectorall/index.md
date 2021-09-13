@@ -16,167 +16,167 @@ tags:
   - querySelectorAll
 browser-compat: api.Document.querySelectorAll
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The {{domxref("Document")}} method <code><strong>querySelectorAll()</strong></code>
-  returns a static (not live) {{domxref("NodeList")}} representing a list of the
-  document's elements that match the specified group of selectors.</p>
+The {{domxref("Document")}} method **`querySelectorAll()`**
+returns a static (not live) {{domxref("NodeList")}} representing a list of the
+document's elements that match the specified group of selectors.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>elementList</var> = <em>parentNode</em>.querySelectorAll(<var>selectors</var>);
-</pre>
+```js
+elementList = parentNode.querySelectorAll(selectors);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>selectors</code></dt>
-  <dd>A {{domxref("DOMString")}} containing one or more selectors to match against. This
-    string must be a valid <a href="/en-US/docs/Web/CSS/CSS_Selectors">CSS selector</a>
-    string; if it's not, a <code>SyntaxError</code> exception is thrown. See <a
-      href="/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors">Locating
-      DOM elements using selectors</a> for more information about using selectors to
+- `selectors`
+  - : A {{domxref("DOMString")}} containing one or more selectors to match against. This
+    string must be a valid [CSS selector](/en-US/docs/Web/CSS/CSS_Selectors)
+    string; if it's not, a `SyntaxError` exception is thrown. See [Locating
+    DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors) for more information about using selectors to
     identify elements. Multiple selectors may be specified by separating them using
-    commas.</dd>
-</dl>
+    commas.
 
-<div class="note">
-  <p><strong>Note:</strong> Characters which are not part of standard CSS syntax must be
-    escaped using a backslash character. Since JavaScript also uses backslash escaping,
-    special care must be taken when writing string literals using these characters. See <a
-      href="/en-US/docs/Web/API/Document/querySelector#escaping_special_characters">Escaping
-      special characters</a> for more information.</p>
-</div>
+> **Note:** Characters which are not part of standard CSS syntax must be
+> escaped using a backslash character. Since JavaScript also uses backslash escaping,
+> special care must be taken when writing string literals using these characters. See [Escaping
+> special characters](/en-US/docs/Web/API/Document/querySelector#escaping_special_characters) for more information.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A non-live {{domxref("NodeList")}} containing one {{domxref("Element")}} object for
-  each element that matches at least one of the specified selectors or an empty
-  {{domxref("NodeList")}} in case of no matches.</p>
+A non-live {{domxref("NodeList")}} containing one {{domxref("Element")}} object for
+each element that matches at least one of the specified selectors or an empty
+{{domxref("NodeList")}} in case of no matches.
 
-<div class="note">
-  <p><strong>Note:</strong> If the specified <code>selectors</code> include a <a
-      href="/en-US/docs/Web/CSS/Pseudo-elements">CSS pseudo-element</a>, the returned list
-    is always empty.</p>
-</div>
+> **Note:** If the specified `selectors` include a [CSS pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements), the returned list
+> is always empty.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt><code>SyntaxError</code></dt>
-  <dd>The syntax of the specified <code>selectors</code> string is not valid.</dd>
-</dl>
+- `SyntaxError`
+  - : The syntax of the specified `selectors` string is not valid.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Obtaining_a_list_of_matches">Obtaining a list of matches</h3>
+### Obtaining a list of matches
 
-<p>To obtain a {{domxref("NodeList")}} of all of the {{HTMLElement("p")}} elements in the
-  document:</p>
+To obtain a {{domxref("NodeList")}} of all of the {{HTMLElement("p")}} elements in the
+document:
 
-<pre class="brush: js">const matches = document.querySelectorAll("p");</pre>
+```js
+const matches = document.querySelectorAll("p");
+```
 
-<p>This example returns a list of all {{HTMLElement("div")}} elements within the document
-  with a class of either <code>note</code> or <code>alert</code>:</p>
+This example returns a list of all {{HTMLElement("div")}} elements within the document
+with a class of either `note` or `alert`:
 
-<pre class="brush: js">const matches = document.querySelectorAll("div.note, div.alert");
-</pre>
+```js
+const matches = document.querySelectorAll("div.note, div.alert");
+```
 
-<p>Here, we get a list of <code>&lt;p&gt;</code> elements whose immediate parent element
-  is a {{HTMLElement("div")}} with the class <code>highlighted</code> and which are
-  located inside a container whose ID is <code>test</code>.</p>
+Here, we get a list of `<p>` elements whose immediate parent element
+is a {{HTMLElement("div")}} with the class `highlighted` and which are
+located inside a container whose ID is `test`.
 
-<pre class="brush: js">const container = document.querySelector("#test");
-const matches = container.querySelectorAll("div.highlighted &gt; p");</pre>
+```js
+const container = document.querySelector("#test");
+const matches = container.querySelectorAll("div.highlighted > p");
+```
 
-<p>This example uses an <a href="/en-US/docs/Web/CSS/Attribute_selectors">attribute
-    selector</a> to return a list of the {{HTMLElement("iframe")}} elements in the
-  document that contain an attribute named <code>data-src</code>:</p>
+This example uses an [attribute
+selector](/en-US/docs/Web/CSS/Attribute_selectors) to return a list of the {{HTMLElement("iframe")}} elements in the
+document that contain an attribute named `data-src`:
 
-<pre
-  class="brush: js">const matches = document.querySelectorAll("iframe[data-src]");</pre>
+```js
+const matches = document.querySelectorAll("iframe[data-src]");
+```
 
-<p>Here, an attribute selector is used to return a list of the list items contained within
-  a list whose ID is <code>userlist</code> which have a <code>data-active</code> attribute
-  whose value is <code>1</code>:</p>
+Here, an attribute selector is used to return a list of the list items contained within
+a list whose ID is `userlist` which have a `data-active` attribute
+whose value is `1`:
 
-<pre class="brush: js">const container = document.querySelector("#userlist");
-const matches = container.querySelectorAll("li[data-active='1']");</pre>
+```js
+const container = document.querySelector("#userlist");
+const matches = container.querySelectorAll("li[data-active='1']");
+```
 
-<h3 id="Accessing_the_matches">Accessing the matches</h3>
+### Accessing the matches
 
-<p>Once the {{domxref("NodeList")}} of matching elements is returned, you can examine it
-  just like any array. If the array is empty (that is, its <code>length</code> property is
-  0), then no matches were found.</p>
+Once the {{domxref("NodeList")}} of matching elements is returned, you can examine it
+just like any array. If the array is empty (that is, its `length` property is
+0\), then no matches were found.
 
-<p>Otherwise, you can use standard array notation to access the contents of the list. You
-  can use any common looping statement, such as:</p>
+Otherwise, you can use standard array notation to access the contents of the list. You
+can use any common looping statement, such as:
 
-<pre class="brush: js">const highlightedItems = userList.querySelectorAll(".highlighted");
+```js
+const highlightedItems = userList.querySelectorAll(".highlighted");
 
 highlightedItems.forEach(function(userItem) {
   deleteUser(userItem);
-});</pre>
+});
+```
 
-<h2 id="User_notes">User notes</h2>
+## User notes
 
-<p><code>querySelectorAll()</code> behaves differently than most common JavaScript DOM
-  libraries, which might lead to unexpected results.</p>
+`querySelectorAll()` behaves differently than most common JavaScript DOM
+libraries, which might lead to unexpected results.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<p>Consider this HTML, with its three nested {{HTMLElement("div")}} blocks.</p>
+Consider this HTML, with its three nested {{HTMLElement("div")}} blocks.
 
-<pre class="brush: html">&lt;div class="outer"&gt;
-  &lt;div class="select"&gt;
-    &lt;div class="inner"&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+```html
+<div class="outer">
+  <div class="select">
+    <div class="inner">
+    </div>
+  </div>
+</div>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">const select = document.querySelector('.select');
+```js
+const select = document.querySelector('.select');
 const inner = select.querySelectorAll('.outer .inner');
 inner.length; // 1, not 0!
-</pre>
+```
 
-<p>In this example, when selecting <code>.outer .inner</code> in the context the
-  <code>&lt;div&gt;</code> with the class <code>select</code>, the element with the class
-  <code>.inner</code> is still found, even though <code>.outer</code> is not a descendant
-  of the base element on which the search is performed (<code>.select</code>). By default,
-  <code>querySelectorAll()</code> only verifies that the last element in the selector is
-  within the search scope.</p>
+In this example, when selecting `.outer .inner` in the context the
+`<div>` with the class `select`, the element with the class
+`.inner` is still found, even though `.outer` is not a descendant
+of the base element on which the search is performed (`.select`). By default,
+`querySelectorAll()` only verifies that the last element in the selector is
+within the search scope.
 
-<p>The {{cssxref(":scope")}} pseudo-class restores the expected behavior, only matching
-  selectors on descendants of the base element:</p>
+The {{cssxref(":scope")}} pseudo-class restores the expected behavior, only matching
+selectors on descendants of the base element:
 
-<pre class="brush: js">const select = document.querySelector('.select');
+```js
+const select = document.querySelector('.select');
 const inner = select.querySelectorAll(':scope .outer .inner');
 inner.length; // 0
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a
-      href="/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors">Locating
-      DOM elements using selectors</a></li>
-  <li><a href="/en-US/docs/Web/CSS/Attribute_selectors">Attribute selectors</a> in the CSS
-    Guide</li>
-  <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors">Attribute
-      selectors</a> in the MDN Learning Area</li>
-  <li>{{domxref("Element.querySelector()")}} and {{domxref("Element.querySelectorAll()")}}
-  </li>
-  <li>{{domxref("Document.querySelector()")}}</li>
-  <li>{{domxref("DocumentFragment.querySelector()")}} and
-    {{domxref("DocumentFragment.querySelectorAll()")}}</li>
-</ul>
+- [Locating
+  DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
+- [Attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) in the CSS
+  Guide
+- [Attribute
+  selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors) in the MDN Learning Area
+- {{domxref("Element.querySelector()")}} and {{domxref("Element.querySelectorAll()")}}
+- {{domxref("Document.querySelector()")}}
+- {{domxref("DocumentFragment.querySelector()")}} and
+  {{domxref("DocumentFragment.querySelectorAll()")}}

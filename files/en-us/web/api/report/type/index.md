@@ -2,34 +2,36 @@
 title: Report.type
 slug: Web/API/Report/type
 tags:
-- API
-- Experimental
-- Property
-- Reference
-- Report
-- Reporting API
-- Type
+  - API
+  - Experimental
+  - Property
+  - Reference
+  - Report
+  - Reporting API
+  - Type
 browser-compat: api.Report.type
 ---
-<div>{{APIRef("Reporting API")}}{{SeeCompatTable}}</div>
+{{APIRef("Reporting API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>type</code></strong> read-only property of the {{domxref("Report")}}
-  interface returns the type of report generated, e.g. <code>deprecation</code> or
-  <code>intervention</code>.</p>
+The **`type`** read-only property of the {{domxref("Report")}}
+interface returns the type of report generated, e.g. `deprecation` or
+`intervention`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let reportType = reportInstance.type
-</pre>
+```js
+let reportType = reportInstance.type
+```
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A string representing the type of the report. Currently the available types are
-  <code>deprecation</code>, <code>intervention</code>, and <code>crash</code>.</p>
+A string representing the type of the report. Currently the available types are
+`deprecation`, `intervention`, and `crash`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">let options = {
+```js
+let options = {
   types: ['deprecation'],
   buffered: true
 }
@@ -39,18 +41,16 @@ let observer = new ReportingObserver(function(reports, observer) {
   // Log the first report's report type, i.e. "deprecation"
   console.log(firstReport.type);
 }, options);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Reporting_API">Reporting API</a></li>
-</ul>
+- [Reporting API](/en-US/docs/Web/API/Reporting_API)

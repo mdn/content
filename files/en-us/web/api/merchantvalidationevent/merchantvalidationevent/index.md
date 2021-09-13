@@ -14,54 +14,46 @@ tags:
   - Reference
 browser-compat: api.MerchantValidationEvent.MerchantValidationEvent
 ---
-<p>{{deprecated_header}}{{non-standard_header}}{{securecontext_header}}</p>
+{{deprecated_header}}{{non-standard_header}}{{securecontext_header}}
 
-<p>The <strong><code>MerchantValidationEvent()</code></strong> constructor creates a new {{domxref("MerchantValidationEvent")}} object. You should not have to create these events yourself; instead, just handle the {{event("merchantvalidation")}} event.</p>
+The **`MerchantValidationEvent()`** constructor creates a new {{domxref("MerchantValidationEvent")}} object. You should not have to create these events yourself; instead, just handle the {{event("merchantvalidation")}} event.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>merchantValidationEvent</em> = new MerchantValidationEvent(<em>type</em>, <em>options</em>);
-</pre>
+```js
+merchantValidationEvent = new MerchantValidationEvent(type, options);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>type</code></dt>
- <dd>A {{domxref("DOMString")}} which must be <code>merchantvalidation</code>, the only type of event which uses the <code>MerchantValidationEvent</code> interface.</dd>
- <dt><code>options</code> {{optional_inline}}</dt>
- <dd>
- <p>An optional dictionary which may contain zero or more of the following properties:</p>
+- `type`
+  - : A {{domxref("DOMString")}} which must be `merchantvalidation`, the only type of event which uses the `MerchantValidationEvent` interface.
+- `options` {{optional_inline}}
 
- <dl>
-  <dt><code>methodName</code> {{optional_inline}}</dt>
-  <dd>A {{domxref("DOMString")}} containing the payment method identifier for the payment handler being used. This is an empty string by default.</dd>
-  <dt><code>validationURL</code> {{optional_inline}}</dt>
-  <dd>The URL from which to retrieve payment handler specific verification information used to validate the merchant. This is an empty string by default.</dd>
- </dl>
- </dd>
-</dl>
+  - : An optional dictionary which may contain zero or more of the following properties:
 
-<h3 id="Return_value">Return value</h3>
+    - `methodName` {{optional_inline}}
+      - : A {{domxref("DOMString")}} containing the payment method identifier for the payment handler being used. This is an empty string by default.
+    - `validationURL` {{optional_inline}}
+      - : The URL from which to retrieve payment handler specific verification information used to validate the merchant. This is an empty string by default.
 
-<p>A newly-created {{domxref("MerchantValidationEvent")}} providing the information that needs to be delivered to the client-side code to present to the {{Glossary("user agent")}} by calling {{domxref("MerchantValidationEvent.complete", "complete()")}}.</p>
+### Return value
 
-<h3 id="Exceptions">Exceptions</h3>
+A newly-created {{domxref("MerchantValidationEvent")}} providing the information that needs to be delivered to the client-side code to present to the {{Glossary("user agent")}} by calling {{domxref("MerchantValidationEvent.complete", "complete()")}}.
 
-<dl>
- <dt><code>TypeError</code></dt>
- <dd>The string specified as <code>validationURL</code> could not be parsed as a URL.</dd>
- <dt><code>RangeError</code></dt>
- <dd>The specified <code>methodName</code> does not correspond to a known and supported merchant or is not a well-formed standard payment method identifier.</dd>
-</dl>
+### Exceptions
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+- `TypeError`
+  - : The string specified as `validationURL` could not be parsed as a URL.
+- `RangeError`
+  - : The specified `methodName` does not correspond to a known and supported merchant or is not a well-formed standard payment method identifier.
 
-<p>{{Compat}}</p>
+## Browser compatibility
 
-<h2 id="See_also">See also</h2>
+{{Compat}}
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Payment_Request_API">Payment Request API</a></li>
- <li><a href="/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API">Using the Payment Request API</a></li>
- <li><a href="/en-US/docs/Web/API/Payment_Request_API/Concepts">Payment processing concepts</a></li>
-</ul>
+## See also
+
+- [Payment Request API](/en-US/docs/Web/API/Payment_Request_API)
+- [Using the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
+- [Payment processing concepts](/en-US/docs/Web/API/Payment_Request_API/Concepts)

@@ -2,54 +2,55 @@
 title: msCapsLockWarningOff
 slug: Web/API/msCapsLockWarningOff
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>{{Non-standard_header()}}</p>
+{{Non-standard_header()}}
 
-<p>The <code><strong>msCapsLockWarningOff</strong></code> read/write property turns automatic caps lock warning on or off for validated password input fields.</p>
+The **`msCapsLockWarningOff`** read/write property turns automatic caps lock warning on or off for validated password input fields.
 
-<p>This proprietary property is specific to Internet Explorer and Microsoft Edge.</p>
+This proprietary property is specific to Internet Explorer and Microsoft Edge.
 
-<p>Starting with Internet Explorer 10, input type=password fields will automatically display a warning if the caps lock is on. This property enables this warning to be disabled.</p>
+Starting with Internet Explorer 10, input type=password fields will automatically display a warning if the caps lock is on. This property enables this warning to be disabled.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: html">document.msCapsLockWarningOff = true;
-</pre>
+```html
+document.msCapsLockWarningOff = true;
+```
 
-<h2 id="Value">Value</h2>
+## Value
 
-<p>Type: <strong>boolean</strong></p>
+Type: **boolean**
 
-<p><em>False</em>: Default. Automatic caps lock warning is turned on.</p>
+_False_: Default. Automatic caps lock warning is turned on.
 
-<p><em>True</em>: Automatic caps lock warning is turned off.</p>
+_True_: Automatic caps lock warning is turned off.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>Fiddle: <a href="https://jsfiddle.net/jonathansampson/mqcHA/1/">https://jsfiddle.net/jonathansampson/mqcHA/1/</a></p>
+Fiddle: <https://jsfiddle.net/jonathansampson/mqcHA/1/>
 
-<h2 id="Example_2">Example 2</h2>
+## Example 2
 
-<pre>&lt;html&gt;
-&lt;head&gt;
-    &lt;title&gt;msCapsLockWarningOff example&lt;/title&gt;
-    &lt;script type="text/javascript"&gt;
+    <html>
+    <head>
+        <title>msCapsLockWarningOff example</title>
+        <script type="text/javascript">
 
-        function capsOff() {
-                  if (document.msCapsLockWarningOff == false) {
-                document.msCapsLockWarningOff = true;
-                document.getElementById("caps").innerHTML = "Warning off";
-            } else {
-                document.msCapsLockWarningOff = false;
-                document.getElementById("caps").innerHTML = "Warning on";
+            function capsOff() {
+                      if (document.msCapsLockWarningOff == false) {
+                    document.msCapsLockWarningOff = true;
+                    document.getElementById("caps").innerHTML = "Warning off";
+                } else {
+                    document.msCapsLockWarningOff = false;
+                    document.getElementById("caps").innerHTML = "Warning on";
+                }
             }
-        }
 
-    &lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;label&gt;Type a password: input type="password" /&gt;&lt;/label&gt;&lt;br /&gt;
-&lt;button id="caps" onclick="capsOff();"&gt;Warning off&lt;/button&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+        </script>
+    </head>
+    <body>
+    <label>Type a password: input type="password" /></label><br />
+    <button id="caps" onclick="capsOff();">Warning off</button>
+    </body>
+    </html>

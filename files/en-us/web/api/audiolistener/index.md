@@ -9,89 +9,75 @@ tags:
   - Web Audio API
 browser-compat: api.AudioListener
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>The <code>AudioListener</code> interface represents the position and orientation of the unique person listening to the audio scene, and is used in <a href="/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics">audio spatialization</a>. All {{domxref("PannerNode")}}s spatialize in relation to the <code>AudioListener</code> stored in the {{domxref("BaseAudioContext.listener")}} attribute.</p>
+The `AudioListener` interface represents the position and orientation of the unique person listening to the audio scene, and is used in [audio spatialization](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics). All {{domxref("PannerNode")}}s spatialize in relation to the `AudioListener` stored in the {{domxref("BaseAudioContext.listener")}} attribute.
 
-<p>It is important to note that there is only one listener per context and that it isn't an {{domxref("AudioNode")}}.</p>
+It is important to note that there is only one listener per context and that it isn't an {{domxref("AudioNode")}}.
 
-<p><img alt="We see the position, up and front vectors of an AudioListener, with the up and front vectors at 90° from the other." src="webaudiolistenerreduced.png"></p>
+![We see the position, up and front vectors of an AudioListener, with the up and front vectors at 90° from the other.](webaudiolistenerreduced.png)
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<div class="note">
-<p><strong>Note:</strong> The position, forward, and up value are set and retrieved using different syntaxes. Retrieval is done by accessing, for example, <code>AudioListener.positionX</code>, while setting the same property is done with <code>AudioListener.positionX.value</code>. This is why these values are not marked read only, which is how they appear in the specification's IDL.</p>
-</div>
+> **Note:** The position, forward, and up value are set and retrieved using different syntaxes. Retrieval is done by accessing, for example, `AudioListener.positionX`, while setting the same property is done with `AudioListener.positionX.value`. This is why these values are not marked read only, which is how they appear in the specification's IDL.
 
-<dl>
-	<dt>{{domxref("AudioListener.positionX")}}</dt>
-	<dd>Represents the horizontal position of the listener in a right-hand cartesian coordinate system. The default is 0.</dd>
-	<dt>{{domxref("AudioListener.positionY")}}</dt>
-	<dd>Represents the vertical position of the listener in a right-hand cartesian coordinate system. The default is 0.</dd>
-	<dt>{{domxref("AudioListener.positionZ")}}</dt>
-	<dd>Represents the longitudinal (back and forth) position of the listener in a right-hand cartesian coordinate system. The default is 0.</dd>
-	<dt>{{domxref("AudioListener.forwardX")}}</dt>
-	<dd>Represents the horizontal position of the listener's forward direction in the same cartesian coordinate system as the position (<code>positionX</code>, <code>positionY</code>, and <code>positionZ</code>) values. The forward and up values are linearly independent of each other. The default is 0.</dd>
-	<dt>{{domxref("AudioListener.forwardY")}}</dt>
-	<dd>Represents the vertical position of the listener's forward direction in the same cartesian coordinate system as the position (<code>positionX</code>, <code>positionY</code>, and <code>positionZ</code>) values. The forward and up values are linearly independent of each other. The default is 0.</dd>
-	<dt>{{domxref("AudioListener.forwardZ")}}</dt>
-	<dd>Represents the longitudinal (back and forth) position of the listener's forward direction in the same cartesian coordinate system as the position (<code>positionX</code>, <code>positionY</code>, and <code>positionZ</code>) values. The forward and up values are linearly independent of each other. The default is -1.</dd>
-	<dt>{{domxref("AudioListener.upX")}}</dt>
-	<dd>Represents the horizontal position of the top of the listener's head in the same cartesian coordinate system as the position (<code>positionX</code>, <code>positionY</code>, and <code>positionZ</code>) values. The forward and up values are linearly independent of each other. The default is 0.</dd>
-	<dt>{{domxref("AudioListener.upY")}}</dt>
-	<dd>Represents the vertical position of the top of the listener's head in the same cartesian coordinate system as the position (<code>positionX</code>, <code>positionY</code>, and <code>positionZ</code>) values. The forward and up values are linearly independent of each other. The default is 1.</dd>
-	<dt>{{domxref("AudioListener.upZ")}}</dt>
-	<dd>Represents the longitudinal (back and forth) position of the top of the listener's head in the same cartesian coordinate system as the position (<code>positionX</code>, <code>positionY</code>, and <code>positionZ</code>) values. The forward and up values are linearly independent of each other. The default is 0.</dd>
-</dl>
+- {{domxref("AudioListener.positionX")}}
+  - : Represents the horizontal position of the listener in a right-hand cartesian coordinate system. The default is 0.
+- {{domxref("AudioListener.positionY")}}
+  - : Represents the vertical position of the listener in a right-hand cartesian coordinate system. The default is 0.
+- {{domxref("AudioListener.positionZ")}}
+  - : Represents the longitudinal (back and forth) position of the listener in a right-hand cartesian coordinate system. The default is 0.
+- {{domxref("AudioListener.forwardX")}}
+  - : Represents the horizontal position of the listener's forward direction in the same cartesian coordinate system as the position (`positionX`, `positionY`, and `positionZ`) values. The forward and up values are linearly independent of each other. The default is 0.
+- {{domxref("AudioListener.forwardY")}}
+  - : Represents the vertical position of the listener's forward direction in the same cartesian coordinate system as the position (`positionX`, `positionY`, and `positionZ`) values. The forward and up values are linearly independent of each other. The default is 0.
+- {{domxref("AudioListener.forwardZ")}}
+  - : Represents the longitudinal (back and forth) position of the listener's forward direction in the same cartesian coordinate system as the position (`positionX`, `positionY`, and `positionZ`) values. The forward and up values are linearly independent of each other. The default is -1.
+- {{domxref("AudioListener.upX")}}
+  - : Represents the horizontal position of the top of the listener's head in the same cartesian coordinate system as the position (`positionX`, `positionY`, and `positionZ`) values. The forward and up values are linearly independent of each other. The default is 0.
+- {{domxref("AudioListener.upY")}}
+  - : Represents the vertical position of the top of the listener's head in the same cartesian coordinate system as the position (`positionX`, `positionY`, and `positionZ`) values. The forward and up values are linearly independent of each other. The default is 1.
+- {{domxref("AudioListener.upZ")}}
+  - : Represents the longitudinal (back and forth) position of the top of the listener's head in the same cartesian coordinate system as the position (`positionX`, `positionY`, and `positionZ`) values. The forward and up values are linearly independent of each other. The default is 0.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
-	<dt>{{domxref("AudioListener.setOrientation()")}} {{deprecated_inline}}</dt>
-	<dd>Sets the orientation of the listener.</dd>
-	<dt>{{domxref("AudioListener.setPosition()")}} {{deprecated_inline}}</dt>
-	<dd>Sets the position of the listener.</dd>
-</dl>
+- {{domxref("AudioListener.setOrientation()")}} {{deprecated_inline}}
+  - : Sets the orientation of the listener.
+- {{domxref("AudioListener.setPosition()")}} {{deprecated_inline}}
+  - : Sets the position of the listener.
 
-<div class="note">
-<p><strong>Note:</strong> Although these methods are deprecated they are currently the only way to set the orientation and position in Firefox, Internet Explorer and Safari.</p>
-</div>
+> **Note:** Although these methods are deprecated they are currently the only way to set the orientation and position in Firefox, Internet Explorer and Safari.
 
-<h2 id="Deprecated_features">Deprecated features</h2>
+## Deprecated features
 
-<dl>
-	<dt>{{domxref("AudioListener.dopplerFactor")}} {{deprecated_inline}}</dt>
-	<dd>A double value representing the amount of pitch shift to use when rendering a <a href="https://en.wikipedia.org/wiki/Doppler_effect">doppler effect</a>.</dd>
-	<dt>{{domxref("AudioListener.speedOfSound")}} {{deprecated_inline}}</dt>
-	<dd>Is a double value representing the speed of sound, in <em>meters per second</em>.</dd>
-</dl>
+- {{domxref("AudioListener.dopplerFactor")}} {{deprecated_inline}}
+  - : A double value representing the amount of pitch shift to use when rendering a [doppler effect](https://en.wikipedia.org/wiki/Doppler_effect).
+- {{domxref("AudioListener.speedOfSound")}} {{deprecated_inline}}
+  - : Is a double value representing the speed of sound, in _meters per second_.
 
-<p>In a previous version of the specification, the <code>dopplerFactor</code> and <code>speedOfSound</code> properties and the <code>setPosition()</code> method could be used to control the doppler effect applied to {{domxref("AudioBufferSourceNode")}}s connected downstream — these would be pitched up and down according to the relative speed of the {{domxref("PannerNode")}} and the {{domxref("AudioListener")}}. These features had a number of problems:</p>
+In a previous version of the specification, the `dopplerFactor` and `speedOfSound` properties and the `setPosition()` method could be used to control the doppler effect applied to {{domxref("AudioBufferSourceNode")}}s connected downstream — these would be pitched up and down according to the relative speed of the {{domxref("PannerNode")}} and the {{domxref("AudioListener")}}. These features had a number of problems:
 
-<ul>
-	<li>Only {{domxref("AudioBufferSourceNode")}}s were pitched up or down, not other source nodes.</li>
-	<li>The behavior to adopt when an {{domxref("AudioBufferSourceNode")}} was connected to multiple {{domxref("PannerNode")}}s was unclear.</li>
-	<li>Because the velocity of the panner and the listener were not {{domxref("AudioParam")}}s, the pitch modification could not be smoothly applied, resulting in audio glitches.</li>
-</ul>
+- Only {{domxref("AudioBufferSourceNode")}}s were pitched up or down, not other source nodes.
+- The behavior to adopt when an {{domxref("AudioBufferSourceNode")}} was connected to multiple {{domxref("PannerNode")}}s was unclear.
+- Because the velocity of the panner and the listener were not {{domxref("AudioParam")}}s, the pitch modification could not be smoothly applied, resulting in audio glitches.
 
-<p>Because of these issues, these properties and methods have been removed.</p>
+Because of these issues, these properties and methods have been removed.
 
-<p>The <code>setOrientation()</code> and <code>setPosition()</code> methods have been replaced by setting their property value equivilents. For example <code>setPosition(x, y, z)</code> can be achieved by setting <code>positionX.value</code>, <code>positionY.value</code>, and <code>positionZ.value</code> respectively.</p>
+The `setOrientation()` and `setPosition()` methods have been replaced by setting their property value equivilents. For example `setPosition(x, y, z)` can be achieved by setting `positionX.value`, `positionY.value`, and `positionZ.value` respectively.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See <a href="/en-US/docs/Web/API/BaseAudioContext/createPanner#example"><code>BaseAudioContext.createPanner()</code></a> for example code.</p>
+See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

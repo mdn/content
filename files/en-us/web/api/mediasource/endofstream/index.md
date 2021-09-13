@@ -14,45 +14,42 @@ tags:
   - endOfStream
 browser-compat: api.MediaSource.endOfStream
 ---
-<div>{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}</div>
+{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
-<p>The <code><strong>endOfStream()</strong></code> method of the
-  {{domxref("MediaSource")}} interface signals the end of the stream.</p>
+The **`endOfStream()`** method of the
+{{domxref("MediaSource")}} interface signals the end of the stream.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>mediaSource</em>.endOfStream(<em>endOfStreamError</em>);</pre>
+```js
+mediaSource.endOfStream(endOfStreamError);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>endOfStreamError {{optional_inline}}</dt>
-  <dd>A {{domxref("DOMString")}} representing an error to throw when the end of the stream
+- endOfStreamError {{optional_inline}}
+
+  - : A {{domxref("DOMString")}} representing an error to throw when the end of the stream
     is reached. The possible values are:
-    <ul>
-      <li><code>network</code>: Terminates playback and signals that a network error has
-        occurred. This can be used create a custom error handler related to media streams.
-        For example, you might have a function that handles media chunk requests, separate
-        from other network requests. When you make an <a
-          href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a> call for a media
-        chunk, and <code>onabort</code> or <code>onerror</code> triggers, you might want
-        to call <code>endOfStream('network')</code>, display a descriptive message in the
-        UI, and maybe retry the network request immediately or wait until the network is
-        back up (via some kind of polling.)</li>
-      <li><code>decode</code>: Terminates playback and signals that a decoding error has
-        occurred. This can be used to indicate that a parsing error has occurred while
-        fetching media data; maybe the data is corrupt, or is encoded using a codec that
-        the browser doesn't know how to decode.</li>
-    </ul>
-  </dd>
-</dl>
 
-<h3 id="Return_value">Return value</h3>
+    - `network`: Terminates playback and signals that a network error has
+      occurred. This can be used create a custom error handler related to media streams.
+      For example, you might have a function that handles media chunk requests, separate
+      from other network requests. When you make an [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) call for a media
+      chunk, and `onabort` or `onerror` triggers, you might want
+      to call `endOfStream('network')`, display a descriptive message in the
+      UI, and maybe retry the network request immediately or wait until the network is
+      back up (via some kind of polling.)
+    - `decode`: Terminates playback and signals that a decoding error has
+      occurred. This can be used to indicate that a parsing error has occurred while
+      fetching media data; maybe the data is corrupt, or is encoded using a codec that
+      the browser doesn't know how to decode.
 
-<p>{{jsxref('undefined')}}</p>
+### Return value
 
-<h3 id="Exceptions">Exceptions</h3>
+{{jsxref('undefined')}}
+
+### Exceptions
 
 <table class="no-markdown">
   <thead>
@@ -64,29 +61,31 @@ browser-compat: api.MediaSource.endOfStream
   <tbody>
     <tr>
       <td><code>InvalidStateError</code></td>
-      <td>{{domxref("MediaSource.readyState")}} is not equal to <code>open</code>, or one
-        or more of the {{domxref("SourceBuffer")}} objects in
-        {{domxref("MediaSource.sourceBuffers")}} are being updated (i.e. their
-        {{domxref("SourceBuffer.updating")}} property is <code>true</code>.)</td>
+      <td>
+        {{domxref("MediaSource.readyState")}} is not equal to
+        <code>open</code>, or one or more of the
+        {{domxref("SourceBuffer")}} objects in
+        {{domxref("MediaSource.sourceBuffers")}} are being updated
+        (i.e. their {{domxref("SourceBuffer.updating")}} property is
+        <code>true</code>.)
+      </td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following snippet is from a simple example written by Nick Desaulniers (<a
-    href="https://nickdesaulniers.github.io/netfix/demo/bufferAll.html">view the full demo
-    live</a>, or <a
-    href="https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html">download
-    the source</a> for further investigation.)</p>
+The following snippet is from a simple example written by Nick Desaulniers ([view the full demo
+live](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download
+the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation.)
 
-<pre
-  class="brush: js ">var assetURL = 'frag_bunny.mp4';
+```js
+var assetURL = 'frag_bunny.mp4';
 // Need to be specific for Blink regarding codecs
 // ./mp4info frag_bunny.mp4 | grep Codec
-var mimeCodec = 'video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;';
+var mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
 
-if ('MediaSource' in window &amp;&amp; MediaSource.isTypeSupported(mimeCodec)) {
+if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
   var mediaSource = new MediaSource;
   //console.log(mediaSource.readyState); // closed
   video.src = URL.createObjectURL(mediaSource);
@@ -107,19 +106,18 @@ function sourceOpen (_) {
     });
     sourceBuffer.appendBuffer(buf);
   });
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("SourceBuffer")}}</li>
-  <li>{{domxref("SourceBufferList")}}</li>
-</ul>
+- {{domxref("SourceBuffer")}}
+- {{domxref("SourceBufferList")}}

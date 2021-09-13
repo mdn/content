@@ -9,41 +9,42 @@ tags:
   - Method
 browser-compat: api.DataTransferItem.getAsFileSystemHandle
 ---
-<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("HTML Drag and Drop API")}}
-</div>
+{{draft}}{{securecontext_header}}{{DefaultAPISidebar("HTML Drag and Drop API")}}
 
-<p>The <strong><code>getAsFileSystemHandle()</code></strong> method of the
-  {{domxref("DataTransferItem")}} interface returns a {{domxref('FileSystemFileHandle')}}
-  if the dragged item is a file, or a {{domxref('FileSystemDirectoryHandle')}} if the
-  dragged item is a directory.</p>
+The **`getAsFileSystemHandle()`** method of the
+{{domxref("DataTransferItem")}} interface returns a {{domxref('FileSystemFileHandle')}}
+if the dragged item is a file, or a {{domxref('FileSystemDirectoryHandle')}} if the
+dragged item is a directory.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>handle</var> = DataTransferItem.getAsFileSystemHandle();</pre>
+```js
+var handle = DataTransferItem.getAsFileSystemHandle();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref('FileSystemFileHandle')}} or {{domxref('FileSystemDirectoryHandle')}}.</p>
+A {{domxref('FileSystemFileHandle')}} or {{domxref('FileSystemDirectoryHandle')}}.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example uses the <code>getAsFileSystemHandle</code> method to return
-  {{domxref('FileSystemHandle','file handles')}} for dropped items.</p>
+This example uses the `getAsFileSystemHandle` method to return
+{{domxref('FileSystemHandle','file handles')}} for dropped items.
 
-<pre class="brush: js">elem.addEventListener('dragover', (e) =&gt; {
+```js
+elem.addEventListener('dragover', (e) => {
   // Prevent navigation.
   e.preventDefault();
 });
-elem.addEventListener('drop', async (e) =&gt; {
+elem.addEventListener('drop', async (e) => {
   // Prevent navigation.
   e.preventDefault();
 
@@ -59,20 +60,19 @@ elem.addEventListener('drop', async (e) =&gt; {
       }
     }
   }
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/File_System_Access_API">File System Access API</a></li>
-  <li><a href="https://web.dev/file-system-access/">The File System Access API:
-      simplifying access to local files</a></li>
-</ul>
+- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
+- [The File System Access API:
+  simplifying access to local files](https://web.dev/file-system-access/)

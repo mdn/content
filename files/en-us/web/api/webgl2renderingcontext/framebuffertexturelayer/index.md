@@ -2,83 +2,78 @@
 title: WebGL2RenderingContext.framebufferTextureLayer()
 slug: Web/API/WebGL2RenderingContext/framebufferTextureLayer
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGL2
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGL2
 browser-compat: api.WebGL2RenderingContext.framebufferTextureLayer
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGL2RenderingContext.framebufferTextureLayer()</code></strong>
-  method of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL 2 API</a> attaches a single
-  layer of a texture to a framebuffer.</p>
+The **`WebGL2RenderingContext.framebufferTextureLayer()`**
+method of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) attaches a single
+layer of a texture to a framebuffer.
 
-<p>This method is similar to {{domxref("WebGLRenderingContext.framebufferTexture2D()")}},
-  but only a given single layer of the texture level is attached to the attachment point.
-</p>
+This method is similar to {{domxref("WebGLRenderingContext.framebufferTexture2D()")}},
+but only a given single layer of the texture level is attached to the attachment point.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">void <var>gl</var>.framebufferTextureLayer(<var>target</var>, <var>attachment</var>, <var>texture</var>, <var>level</var>, <var>layer</var>);</pre>
+```js
+void gl.framebufferTextureLayer(target, attachment, texture, level, layer);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>target</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target). Possible values:
-    <ul>
-      <li><code>gl.FRAMEBUFFER</code>: Collection buffer data storage of color, alpha,
-        depth and stencil buffers used to render an image.</li>
-      <li><code>gl.DRAW_FRAMEBUFFER</code>: Equivalent to <code>gl.FRAMEBUFFER</code>.
-      </li>
-      <li><code>gl.READ_FRAMEBUFFER</code>: Used as a source for reading operations.</li>
-    </ul>
-  </dd>
-  <dt><code>attachment</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the attachment point for the
-    <code>texture</code>. Possible values:
-    <ul>
-      <li><code>gl.COLOR_ATTACHMENT{0-15}</code>: Attaches the texture to one of the
-        framebuffer's color buffers.</li>
-      <li><code>gl.DEPTH_ATTACHMENT</code>: Attaches the texture to the framebuffer's
-        depth buffer.</li>
-      <li><code>gl.STENCIL_ATTACHMENT</code>: Attaches the texture to the framebuffer's
-        stencil buffer.</li>
-      <li><code>gl.DEPTH_STENCIL_ATTACHMENT</code>: depth and stencil buffer.</li>
-    </ul>
-  </dd>
-  <dt><code>texture</code></dt>
-  <dd>A {{domxref("WebGLTexture")}} object whose image to attach.</dd>
-  <dt><code>level</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLint")}} specifying the mipmap level of the texture image to attach.
-  </dd>
-  <dt><code>layer</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLint")}} specifying the layer of the texture image to attach.</dd>
-</dl>
+- `target`
 
-<h3 id="Return_value">Return value</h3>
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target). Possible values:
 
-<p>None.</p>
+    - `gl.FRAMEBUFFER`: Collection buffer data storage of color, alpha,
+      depth and stencil buffers used to render an image.
+    - `gl.DRAW_FRAMEBUFFER`: Equivalent to `gl.FRAMEBUFFER`.
+    - `gl.READ_FRAMEBUFFER`: Used as a source for reading operations.
 
-<h2 id="Examples">Examples</h2>
+- `attachment`
 
-<pre class="brush: js">gl.framebufferTextureLayer(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0,
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the attachment point for the
+    `texture`. Possible values:
+
+    - `gl.COLOR_ATTACHMENT{0-15}`: Attaches the texture to one of the
+      framebuffer's color buffers.
+    - `gl.DEPTH_ATTACHMENT`: Attaches the texture to the framebuffer's
+      depth buffer.
+    - `gl.STENCIL_ATTACHMENT`: Attaches the texture to the framebuffer's
+      stencil buffer.
+    - `gl.DEPTH_STENCIL_ATTACHMENT`: depth and stencil buffer.
+
+- `texture`
+  - : A {{domxref("WebGLTexture")}} object whose image to attach.
+- `level`
+  - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the mipmap level of the texture image to attach.
+- `layer`
+  - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the layer of the texture image to attach.
+
+### Return value
+
+None.
+
+## Examples
+
+```js
+gl.framebufferTextureLayer(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0,
                            texture, 0, 8);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.framebufferTexture2D()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.framebufferTexture2D()")}}

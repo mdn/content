@@ -11,39 +11,35 @@ tags:
   - StyleSheet
 browser-compat: api.StyleSheet
 ---
-<div>{{APIRef("CSSOM")}}</div>
+{{APIRef("CSSOM")}}
 
-<p>An object implementing the <code>StyleSheet</code> interface represents a single style sheet. CSS style sheets will further implement the more specialized {{domxref("CSSStyleSheet")}} interface.</p>
+An object implementing the `StyleSheet` interface represents a single style sheet. CSS style sheets will further implement the more specialized {{domxref("CSSStyleSheet")}} interface.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("StyleSheet.disabled")}}</dt>
- <dd>Is a boolean value representing whether the current stylesheet has been applied or not.</dd>
- <dt>{{domxref("StyleSheet.href")}} {{readonlyInline}}</dt>
- <dd>Returns a {{domxref("DOMString")}} representing the location of the stylesheet.</dd>
- <dt>{{domxref("StyleSheet.media")}} {{readonlyInline}}</dt>
- <dd>Returns a {{domxref("MediaList")}} representing the intended destination medium for style information.</dd>
- <dt>{{domxref("StyleSheet.ownerNode")}} {{readonlyInline}}</dt>
- <dd>Returns a {{domxref("Node")}} associating this style sheet with the current document.</dd>
- <dt>{{domxref("StyleSheet.parentStyleSheet")}} {{readonlyInline}}</dt>
- <dd>Returns a {{domxref("StyleSheet")}} including this one, if any; returns <code>null</code> if there aren't any.</dd>
- <dt>{{domxref("StyleSheet.title")}} {{readonlyInline}}</dt>
- <dd>Returns a {{domxref("DOMString")}} representing the advisory title of the current style sheet.</dd>
- <dt>{{domxref("StyleSheet.type")}}{{readonlyInline}}</dt>
- <dd>Returns a {{domxref("DOMString")}} representing the style sheet language for this style sheet.</dd>
-</dl>
+- {{domxref("StyleSheet.disabled")}}
+  - : Is a boolean value representing whether the current stylesheet has been applied or not.
+- {{domxref("StyleSheet.href")}} {{readonlyInline}}
+  - : Returns a {{domxref("DOMString")}} representing the location of the stylesheet.
+- {{domxref("StyleSheet.media")}} {{readonlyInline}}
+  - : Returns a {{domxref("MediaList")}} representing the intended destination medium for style information.
+- {{domxref("StyleSheet.ownerNode")}} {{readonlyInline}}
+  - : Returns a {{domxref("Node")}} associating this style sheet with the current document.
+- {{domxref("StyleSheet.parentStyleSheet")}} {{readonlyInline}}
+  - : Returns a {{domxref("StyleSheet")}} including this one, if any; returns `null` if there aren't any.
+- {{domxref("StyleSheet.title")}} {{readonlyInline}}
+  - : Returns a {{domxref("DOMString")}} representing the advisory title of the current style sheet.
+- {{domxref("StyleSheet.type")}}{{readonlyInline}}
+  - : Returns a {{domxref("DOMString")}} representing the style sheet language for this style sheet.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("CSSStyleSheet")}}</li>
-</ul>
+- {{domxref("CSSStyleSheet")}}

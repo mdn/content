@@ -2,49 +2,50 @@
 title: MessageEvent.origin
 slug: Web/API/MessageEvent/origin
 tags:
-- API
-- DOM
-- MessageEvent
-- Property
-- Reference
-- messaging
-- origin
+  - API
+  - DOM
+  - MessageEvent
+  - Property
+  - Reference
+  - messaging
+  - origin
 browser-compat: api.MessageEvent.origin
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <code><strong>origin</strong></code> read-only property of the
-  {{domxref("MessageEvent")}} interface is a {{domxref("USVString")}} representing the
-  origin of the message emitter.</p>
+The **`origin`** read-only property of the
+{{domxref("MessageEvent")}} interface is a {{domxref("USVString")}} representing the
+origin of the message emitter.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var origin = messageEvent.origin;</pre>
+```js
+var origin = messageEvent.origin;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("USVString")}} representing the origin.</p>
+A {{domxref("USVString")}} representing the origin.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">myWorker.onmessage = function(e) {
+```js
+myWorker.onmessage = function(e) {
   result.textContent = e.data;
   console.log('Message received from worker');
   console.log(e.origin);
 };
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("ExtendableMessageEvent")}} — similar to this interface but used in
-    interfaces that needs to give more flexibility to authors.</li>
-</ul>
+- {{domxref("ExtendableMessageEvent")}} — similar to this interface but used in
+  interfaces that needs to give more flexibility to authors.

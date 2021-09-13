@@ -8,52 +8,49 @@ tags:
   - CSSStyleSheet
 browser-compat: api.CSSStyleSheet.CSSStyleSheet
 ---
-<div>{{APIRef("CSSOM")}}</div>
+{{APIRef("CSSOM")}}
 
-<p>The <strong><code>CSSStyleSheet()</code></strong> constructor creates a new {{domxref("CSSStyleSheet")}} object which represents a single <a href="/en-US/docs/Glossary/Stylesheet">Stylesheet</a>.</p>
+The **`CSSStyleSheet()`** constructor creates a new {{domxref("CSSStyleSheet")}} object which represents a single [Stylesheet](/en-US/docs/Glossary/Stylesheet).
 
-<p>After constructing a stylesheet the {{domxref("CSSStyleSheet.replace()")}} or {{domxref("CSSStyleSheet.replaceSync()")}} methods can be used to add rules to the new stylesheet.</p>
+After constructing a stylesheet the {{domxref("CSSStyleSheet.replace()")}} or {{domxref("CSSStyleSheet.replaceSync()")}} methods can be used to add rules to the new stylesheet.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">new CSSStyleSheet();
-new CSSStyleSheet(options);</pre>
+```js
+new CSSStyleSheet();
+new CSSStyleSheet(options);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>options</code>{{optional_inline}}</dt>
-  <dd>An object containing the following:
-    <dl>
-      <dt><code>baseURL</code>{{optional_inline}}</dt>
-      <dd>A {{domxref("DOMString","string")}} containing the <code>baseURL</code> used to resolve relative URLs in the stylesheet.</dd>
-      <dt><code>media</code>{{optional_inline}}</dt>
-      <dd>A {{domxref("MediaList")}} containing a list of media rules, or a {{domxref("DOMString","string")}} containing a single rule.</dd>
-      <dt><code>disabled</code>{{optional_inline}}</dt>
-      <dd>A {{jsxref("Boolean")}} indicating whether the stylesheet is disabled. False by default.</dd>
-    </dl>
-  </dd>
-</dl>
+- `options`{{optional_inline}}
 
-<h2 id="Examples">Examples</h2>
+  - : An object containing the following:
 
-<p>In the following example a new {{domxref("CSSStyleSheet")}} is constructed, with a media rule of <code>"print"</code>. Printing {{domxref("StyleSheet.media")}} to the console returns a {{domxref("MediaList")}} with a single entry for this print rule.</p>
+    - `baseURL`{{optional_inline}}
+      - : A {{domxref("DOMString","string")}} containing the `baseURL` used to resolve relative URLs in the stylesheet.
+    - `media`{{optional_inline}}
+      - : A {{domxref("MediaList")}} containing a list of media rules, or a {{domxref("DOMString","string")}} containing a single rule.
+    - `disabled`{{optional_inline}}
+      - : A {{jsxref("Boolean")}} indicating whether the stylesheet is disabled. False by default.
 
-<pre class="brush: css">let stylesheet = new CSSStyleSheet({media: 'print'});
-console.log(stylesheet.media);</pre>
+## Examples
 
-<h2 id="Specifications">Specifications</h2>
+In the following example a new {{domxref("CSSStyleSheet")}} is constructed, with a media rule of `"print"`. Printing {{domxref("StyleSheet.media")}} to the console returns a {{domxref("MediaList")}} with a single entry for this print rule.
 
-<p>{{Specifications}}</p>
+```css
+let stylesheet = new CSSStyleSheet({media: 'print'});
+console.log(stylesheet.media);
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Specifications
 
-<p>{{Compat}}</p>
+{{Specifications}}
 
-<h2>Polyfill</h2>
+## Browser compatibility
 
-<ul>
-  <li><a href="https://www.npmjs.com/package/construct-style-sheets-polyfill">construct-style-sheets-polyfill</a></li>
-</ul>
+{{Compat}}
 
+## Polyfill
 
+- [construct-style-sheets-polyfill](https://www.npmjs.com/package/construct-style-sheets-polyfill)

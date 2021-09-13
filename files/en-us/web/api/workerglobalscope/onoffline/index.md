@@ -10,30 +10,32 @@ tags:
   - onoffline
 browser-compat: api.WorkerGlobalScope.onoffline
 ---
-<p>{{APIRef("Web Workers API")}}</p>
+{{APIRef("Web Workers API")}}
 
-<p>The <strong><code>onoffline</code></strong> property of the {{domxref("WorkerGlobalScope")}} interface represents an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> to be called when the {{event("offline")}} event occurs.</p>
+The **`onoffline`** property of the {{domxref("WorkerGlobalScope")}} interface represents an [event handler](/en-US/docs/Web/Events/Event_handlers) to be called when the {{event("offline")}} event occurs.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre>self.onoffline = function() { ... };</pre>
+    self.onoffline = function() { ... };
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following code snippet shows an <code>onoffline</code> handler set inside a worker:</p>
+The following code snippet shows an `onoffline` handler set inside a worker:
 
-<pre class="brush: js">self.onoffline = function() {
+```js
+self.onoffline = function() {
   console.log('Your worker is now offline');
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<p>The {{domxref("WorkerGlobalScope")}} interface it belongs to.</p>
+The {{domxref("WorkerGlobalScope")}} interface it belongs to.

@@ -9,30 +9,30 @@ tags:
   - Reference
 browser-compat: api.ValidityState.stepMismatch
 ---
-<p>The read-only <strong><code>stepMismatch</code></strong> property of a <strong><code><a href="/en-US/docs/Web/API/ValidityState">ValidityState</a></code></strong> object indicates if the value of an {{HTMLElement("input")}}, after having been edited by the user, does not conform to the constraints set by the element's <code>step</code> attribute.</p>
+The read-only **`stepMismatch`** property of a **[`ValidityState`](/en-US/docs/Web/API/ValidityState)** object indicates if the value of an {{HTMLElement("input")}}, after having been edited by the user, does not conform to the constraints set by the element's `step` attribute.
 
-<p>If the field is numeric in nature, including the {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}} and {{HTMLElement("input/range", "range")}} types and the step value is not <code>any</code>, if the value don't doesn't conform to the constraints set by the <code><a href="/en-US/docs/Web/HTML/Attributes/step">step</a></code> and <code><a href="/en-US/docs/Web/HTML/Attributes/min">min</a></code> values, then <code>stepMismatch</code> will be true. If the remainder of the form control's value less the <code><a href="/en-US/docs/Web/HTML/Attributes/min">min</a></code> value, divided by the <code><a href="/en-US/docs/Web/HTML/Attributes/step">step</a></code> value (which defaults to 1 if omitted) is not zero, there is a mismatch. </p>
+If the field is numeric in nature, including the {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}} and {{HTMLElement("input/range", "range")}} types and the step value is not `any`, if the value don't doesn't conform to the constraints set by the [`step`](/en-US/docs/Web/HTML/Attributes/step) and [`min`](/en-US/docs/Web/HTML/Attributes/min) values, then `stepMismatch` will be true. If the remainder of the form control's value less the [`min`](/en-US/docs/Web/HTML/Attributes/min) value, divided by the [`step`](/en-US/docs/Web/HTML/Attributes/step) value (which defaults to 1 if omitted) is not zero, there is a mismatch.
 
-<p>Given the following:</p>
+Given the following:
 
-<pre class="brush: html">&lt;input type="number" min="20" max="40" step="2"/&gt;</pre>
+```html
+<input type="number" min="20" max="40" step="2"/>
+```
 
-<p>if <code>(value - min) % 2 != 0</code>, <code>stepMismatch</code> will be true.</p>
+if `(value - min) % 2 != 0`, `stepMismatch` will be true.
 
-<p>If true, the element matches the {{cssxref(":invalid")}} and {{cssxref(":out-of-range")}} CSS pseudo-classes.</p>
+If true, the element matches the {{cssxref(":invalid")}} and {{cssxref(":out-of-range")}} CSS pseudo-classes.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">Constraint validation</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Form_validation">Forms: Data form validation</a></li>
- <li><a href="/en-US/docs/Web/HTML/Attributes/step"><code>step</code> attribute</a></li>
-</ul>
+- [Constraint validation](/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation)
+- [Forms: Data form validation](/en-US/docs/Learn/Forms/Form_validation)
+- [`step` attribute](/en-US/docs/Web/HTML/Attributes/step)

@@ -12,108 +12,116 @@ tags:
   - onblur
 browser-compat: api.Element.blur_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <strong><code>blur</code></strong> event fires when an element has lost focus. The main difference between this event and {{domxref("Element/focusout_event", "focusout")}} is that <code>focusout</code> <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling_and_capture">bubbles</a> while <code>blur</code> does not.</p>
+The **`blur`** event fires when an element has lost focus. The main difference between this event and {{domxref("Element/focusout_event", "focusout")}} is that `focusout` [bubbles](/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling_and_capture) while `blur` does not.
 
-<p>The opposite of <code>blur</code> is {{domxref("Element/focus_event", "focus")}}.</p>
+The opposite of `blur` is {{domxref("Element/focus_event", "focus")}}.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{DOMxRef("FocusEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("GlobalEventHandlers/onblur", "onblur")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Sync / Async</th>
-   <td>Sync</td>
-  </tr>
-  <tr>
-   <th scope="row">Composed</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{DOMxRef("FocusEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{domxref("GlobalEventHandlers/onblur", "onblur")}}
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Sync / Async</th>
+      <td>Sync</td>
+    </tr>
+    <tr>
+      <th scope="row">Composed</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Simple_example">Simple example</h3>
+### Simple example
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush:html;">&lt;form id="form"&gt;
-  &lt;input type="text" placeholder="text input"&gt;
-  &lt;input type="password" placeholder="password"&gt;
-&lt;/form&gt;</pre>
+```html
+<form id="form">
+  <input type="text" placeholder="text input">
+  <input type="password" placeholder="password">
+</form>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const password = document.querySelector('input[type="password"]');
+```js
+const password = document.querySelector('input[type="password"]');
 
-password.addEventListener('focus', (event) =&gt; {
+password.addEventListener('focus', (event) => {
   event.target.style.background = 'pink';
 });
 
-password.addEventListener('blur', (event) =&gt; {
+password.addEventListener('blur', (event) => {
   event.target.style.background = '';
-});</pre>
+});
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Simple_example", '100%', '50px')}}</p>
+{{EmbedLiveSample("Simple_example", '100%', '50px')}}
 
-<h3 id="Event_delegation">Event delegation</h3>
+### Event delegation
 
-<p>There are two ways of implementing event delegation for this event: by using the {{Event("focusout")}} event, or by setting the <code>useCapture</code> parameter of {{domxref("EventTarget.addEventListener()", "addEventListener()")}} to <code>true</code>.</p>
+There are two ways of implementing event delegation for this event: by using the {{Event("focusout")}} event, or by setting the `useCapture` parameter of {{domxref("EventTarget.addEventListener()", "addEventListener()")}} to `true`.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush:html;">&lt;form id="form"&gt;
-  &lt;input type="text" placeholder="text input"&gt;
-  &lt;input type="password" placeholder="password"&gt;
-&lt;/form&gt;</pre>
+```html
+<form id="form">
+  <input type="text" placeholder="text input">
+  <input type="password" placeholder="password">
+</form>
+```
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const form = document.getElementById('form');
+```js
+const form = document.getElementById('form');
 
-form.addEventListener('focus', (event) =&gt; {
+form.addEventListener('focus', (event) => {
   event.target.style.background = 'pink';
 }, true);
 
-form.addEventListener('blur', (event) =&gt; {
+form.addEventListener('blur', (event) => {
   event.target.style.background = '';
-}, true);</pre>
+}, true);
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Event_delegation", '100%', '50px')}}</p>
+{{EmbedLiveSample("Event_delegation", '100%', '50px')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>The value of {{DOMxRef("Document.activeElement")}} varies across browsers while this event is being handled ({{bug(452307)}}): IE10 sets it to the element that the focus will move to, while Firefox and Chrome often set it to the <code>body</code> of the document.</p>
+The value of {{DOMxRef("Document.activeElement")}} varies across browsers while this event is being handled ({{bug(452307)}}): IE10 sets it to the element that the focus will move to, while Firefox and Chrome often set it to the `body` of the document.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Related events: {{domxref("Element/focus_event", "focus")}}, {{domxref("Element/focusin_event", "focusin")}}, {{domxref("Element/focusout_event", "focusout")}}</li>
- <li>This event on <code>Window</code> targets: {{domxref("Window/blur_event", "blur")}} event</li>
-</ul>
+- Related events: {{domxref("Element/focus_event", "focus")}}, {{domxref("Element/focusin_event", "focusin")}}, {{domxref("Element/focusout_event", "focusout")}}
+- This event on `Window` targets: {{domxref("Window/blur_event", "blur")}} event

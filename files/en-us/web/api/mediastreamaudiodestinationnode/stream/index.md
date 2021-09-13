@@ -11,39 +11,36 @@ tags:
   - stream
 browser-compat: api.MediaStreamAudioDestinationNode.stream
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>The <code>stream</code> property of the {{ domxref("AudioContext") }} interface represents a {{domxref("MediaStream")}} containing a single audio {{domxref("MediaStreamTrack")}} with the same number of channels as the node itself.</p>
+The `stream` property of the {{ domxref("AudioContext") }} interface represents a {{domxref("MediaStream")}} containing a single audio {{domxref("MediaStreamTrack")}} with the same number of channels as the node itself.
 
-<p>You can use this property to get a stream out of the audio graph and feed it into another construct, such as a <a href="/en-US/docs/Web/API/MediaStream_Recording_API">Media Recorder</a>.</p>
-</div>
+You can use this property to get a stream out of the audio graph and feed it into another construct, such as a [Media Recorder](/en-US/docs/Web/API/MediaStream_Recording_API).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var audioCtx = new AudioContext();
+```js
+var audioCtx = new AudioContext();
 var destination = audioCtx.createMediaStreamDestination();
 var myStream = destination.stream;
-</pre>
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("MediaStream")}} containing a single audio track. The audio track is a {{domxref("MediaStreamTrack")}} whose {{domxref("MediaStreamTrack.kind", "kind")}} is <code>audio</code>.</p>
+A {{domxref("MediaStream")}} containing a single audio track. The audio track is a {{domxref("MediaStreamTrack")}} whose {{domxref("MediaStreamTrack.kind", "kind")}} is `audio`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See <a href="/en-US/docs/Web/API/AudioContext/createMediaStreamDestination#examples"><code>AudioContext.createMediaStreamDestination()</code></a> for example code that creates a <code>MediaStreamAudioDestinationNode</code> and uses its <code>stream</code> property as a source for audio to be recorded.</p>
+See [`AudioContext.createMediaStreamDestination()`](/en-US/docs/Web/API/AudioContext/createMediaStreamDestination#examples) for example code that creates a `MediaStreamAudioDestinationNode` and uses its `stream` property as a source for audio to be recorded.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

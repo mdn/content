@@ -2,41 +2,42 @@
 title: HTMLContentElement.select
 slug: Web/API/HTMLContentElement/select
 tags:
-- API
-- HTML DOM
-- Property
-- Reference
-- Web Components
-- Deprecated
+  - API
+  - HTML DOM
+  - Property
+  - Reference
+  - Web Components
+  - Deprecated
 browser-compat: api.HTMLContentElement.select
 ---
-<p>{{ APIRef("Web Components") }}{{Deprecated_header}}</p>
+{{ APIRef("Web Components") }}{{Deprecated_header}}
 
-<p>The <code><strong>HTMLContentElement.select</strong></code> property reflects the
-  <code>select</code> attribute. It is a {{domxref("DOMString")}} containing a
-  space-separated list of CSS selectors that select the content to insert in place of the
-  &lt;content&gt; element.</p>
+The **`HTMLContentElement.select`** property reflects the
+`select` attribute. It is a {{domxref("DOMString")}} containing a
+space-separated list of CSS selectors that select the content to insert in place of the
+\<content> element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>object</em>.select = "<em>CSSselector</em> <em>CSSselector</em> ...";
-</pre>
+```js
+object.select = "CSSselector CSSselector ...";
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">// Select &lt;h1&gt; elements and elements with class="error"
-myContentObject.select = "h1 .error";</pre>
+```js
+// Select <h1> elements and elements with class="error"
+myContentObject.select = "h1 .error";
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This feature is no longer defined by any standards.</p>
+This feature is no longer defined by any standards.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/HTMLContentElement">HTMLContentElement</a></li>
-</ul>
+- [HTMLContentElement](/en-US/docs/Web/API/HTMLContentElement)

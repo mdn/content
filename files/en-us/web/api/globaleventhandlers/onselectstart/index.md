@@ -2,64 +2,64 @@
 title: GlobalEventHandlers.onselectstart
 slug: Web/API/GlobalEventHandlers/onselectstart
 tags:
-- API
-- Event Handler
-- Experimental
-- GlobalEventHandlers
-- Property
-- Reference
-- Selection
-- Selection API
-- onselectstart
+  - API
+  - Event Handler
+  - Experimental
+  - GlobalEventHandlers
+  - Property
+  - Reference
+  - Selection
+  - Selection API
+  - onselectstart
 browser-compat: api.GlobalEventHandlers.onselectstart
 ---
-<div>{{ApiRef('DOM')}}{{SeeCompatTable}}</div>
+{{ApiRef('DOM')}}{{SeeCompatTable}}
 
-<p>The <code><strong>onselectstart</strong></code> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> that
-  processes {{event("selectstart")}} events.</p>
+The **`onselectstart`** property of the
+{{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
+processes {{event("selectstart")}} events.
 
-<p>The <code>selectstart</code> event fires when the user starts to make a new text
-  selection on a webpage.</p>
+The `selectstart` event fires when the user starts to make a new text
+selection on a webpage.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>object</em>.onselectstart = <em>functionRef</em>;
-</pre>
+```js
+object.onselectstart = functionRef;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p><code>functionRef</code> is a function name or a <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function
-    expression</a>. The function receives a {{domxref("FocusEvent")}} object as its sole
-  argument.</p>
+`functionRef` is a function name or a [function
+expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("FocusEvent")}} object as its sole
+argument.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">document.onselectstart = function() {
+```js
+document.onselectstart = function() {
   console.log('Selection started!');
 };
-</pre>
+```
 
-<p>For a full example, see our <a
-    href="https://github.com/chrisdavidmills/selection-api-examples/#key-quote-generator-see-it-running-live">Key
-    quote generator</a> demo.</p>
+For a full example, see our [Key
+quote generator](https://github.com/chrisdavidmills/selection-api-examples/#key-quote-generator-see-it-running-live) demo.
 
-<pre class="brush: js">document.onselectstart = () =&gt; {
+```js
+document.onselectstart = () => {
   return false; // cancel selection
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{event("selectstart")}} event</li>
-  <li>Related event handler: {{domxref("GlobalEventHandlers.onselectionchange")}}</li>
-</ul>
+- {{event("selectstart")}} event
+- Related event handler: {{domxref("GlobalEventHandlers.onselectionchange")}}

@@ -2,57 +2,59 @@
 title: SVGGeometryElement.isPointInStroke()
 slug: Web/API/SVGGeometryElement/isPointInStroke
 tags:
-- API
-- DOM
-- Method
-- Reference
-- SVG
-- SVG DOM
+  - API
+  - DOM
+  - Method
+  - Reference
+  - SVG
+  - SVG DOM
 browser-compat: api.SVGGeometryElement.isPointInStroke
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <code><strong>SVGGeometryElement.isPointInStroke()</strong></code> method
-  determines whether a given point is within the stroke shape of an element. Normal hit
-  testing rules apply; the value of the {{cssxref("pointer-events")}} property on the
-  element determines whether a point is considered to be within the stroke. The
-  <code>point</code> argument is interpreted as a point in the local coordiante system of
-  the element.</p>
+The **`SVGGeometryElement.isPointInStroke()`** method
+determines whether a given point is within the stroke shape of an element. Normal hit
+testing rules apply; the value of the {{cssxref("pointer-events")}} property on the
+element determines whether a point is considered to be within the stroke. The
+`point` argument is interpreted as a point in the local coordiante system of
+the element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">boolean <var>someElement</var>.isPointInStroke(DOMPointInit <var>point</var>);
-</pre>
+```js
+boolean someElement.isPointInStroke(DOMPointInit point);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>point</dt>
-  <dd>An object interpreted as a point in the local coordinate system
-    of the element.</dd>
-</dl>
+- point
+  - : An object interpreted as a point in the local coordinate system
+    of the element.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A boolean indicating whether the given point is within the stroke or not.</p>
+A boolean indicating whether the given point is within the stroke or not.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<pre class="brush: html">&lt;svg viewBox="0 0 100 100" width="150" height="150"
-    xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;circle id="circle" cx="50" cy="50" r="45"
-      fill="white" stroke="black" stroke-width="10"/&gt;
+```html
+<svg viewBox="0 0 100 100" width="150" height="150"
+    xmlns="http://www.w3.org/2000/svg">
+  <circle id="circle" cx="50" cy="50" r="45"
+      fill="white" stroke="black" stroke-width="10"/>
 
-  &lt;circle cx="10" cy="10" r="5" fill="seagreen"/&gt;
-  &lt;circle cx="40" cy="30" r="5" fill="seagreen"/&gt;
-  &lt;circle cx="83" cy="17" r="5" fill="seagreen"/&gt;
-&lt;/svg&gt;</pre>
+  <circle cx="10" cy="10" r="5" fill="seagreen"/>
+  <circle cx="40" cy="30" r="5" fill="seagreen"/>
+  <circle cx="83" cy="17" r="5" fill="seagreen"/>
+</svg>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">var circle = document.getElementById('circle');
+```js
+var circle = document.getElementById('circle');
 
 // Point not in circle
 console.log('Point at 10,10:', circle.isPointInStroke(new DOMPoint(10, 10)));
@@ -61,16 +63,17 @@ console.log('Point at 10,10:', circle.isPointInStroke(new DOMPoint(10, 10)));
 console.log('Point at 40,30:', circle.isPointInStroke(new DOMPoint(40, 30)));
 
 // Point in circle stroke
-console.log('Point at 83,17:', circle.isPointInStroke(new DOMPoint(83, 17)));</pre>
+console.log('Point at 83,17:', circle.isPointInStroke(new DOMPoint(83, 17)));
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example", "150", "150")}}</p>
+{{EmbedLiveSample("Example", "150", "150")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -7,59 +7,67 @@ tags:
   - Web Speech API
 browser-compat: api.SpeechRecognition.nomatch_event
 ---
-<div>{{APIRef("Web Speech API")}} {{SeeCompatTable}}</div>
+{{APIRef("Web Speech API")}} {{SeeCompatTable}}
 
-<p>The <code><strong>nomatch</strong></code> event of the <a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a> is fired when the speech recognition service returns a final result with no significant recognition.</p>
+The **`nomatch`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) is fired when the speech recognition service returns a final result with no significant recognition.
 
-<p>This may involve some degree of recognition, which doesn't meet or exceed the {{domxref("SpeechRecognitionAlternative.confidence","confidence")}} threshold.</p>
+This may involve some degree of recognition, which doesn't meet or exceed the {{domxref("SpeechRecognitionAlternative.confidence","confidence")}} threshold.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("SpeechRecognitionEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td><code><a href="/en-US/docs/Web/API/SpeechRecognition/onnomatch">onnomatch</a></code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("SpeechRecognitionEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/API/SpeechRecognition/onnomatch"
+            >onnomatch</a
+          ></code
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>You can use the <code>nomatch</code> event in an <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener</a></code> method:</p>
+You can use the `nomatch` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
-<pre class="brush: js">var recognition = new webkitSpeechRecognition() || new SpeechRecognition();
+```js
+var recognition = new webkitSpeechRecognition() || new SpeechRecognition();
 
 recognition.addEventListener('nomatch', function() {
   console.log('Speech not recognized');
-});</pre>
+});
+```
 
-<p>Or use the <code><a href="/en-US/docs/Web/API/SpeechRecognition/onnomatch">onnomatch</a></code> event handler property:</p>
+Or use the [`onnomatch`](/en-US/docs/Web/API/SpeechRecognition/onnomatch) event handler property:
 
-<pre class="brush: js">recognition.onnomatch = function() {
+```js
+recognition.onnomatch = function() {
   console.log('Speech not recognized');
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)

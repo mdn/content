@@ -10,42 +10,36 @@ tags:
   - requestIdleCallback
 browser-compat: api.IdleDeadline
 ---
-<div>{{APIRef("Background Tasks")}}</div>
+{{APIRef("Background Tasks")}}
 
-<p>The <code>IdleDeadline</code> interface is used as the data type of the input parameter to idle callbacks established by calling {{domxref("Window.requestIdleCallback()")}}. It offers a method, {{domxref("IdleDeadline.timeRemaining", "timeRemaining()")}}, which lets you determine how much longer the user agent estimates it will remain idle and a property, {{domxref("IdleDeadline.didTimeout", "didTimeout")}}, which lets you determine if your callback is executing because its timeout duration expired.</p>
+The `IdleDeadline` interface is used as the data type of the input parameter to idle callbacks established by calling {{domxref("Window.requestIdleCallback()")}}. It offers a method, {{domxref("IdleDeadline.timeRemaining", "timeRemaining()")}}, which lets you determine how much longer the user agent estimates it will remain idle and a property, {{domxref("IdleDeadline.didTimeout", "didTimeout")}}, which lets you determine if your callback is executing because its timeout duration expired.
 
-<p>To learn more about how request callbacks work, see <a href="/en-US/docs/Web/API/Background_Tasks_API">Collaborative Scheduling of Background Tasks</a>.</p>
+To learn more about how request callbacks work, see [Collaborative Scheduling of Background Tasks](/en-US/docs/Web/API/Background_Tasks_API).
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("IdleDeadline.didTimeout")}} {{ReadOnlyInline}}</dt>
- <dd>A Boolean whose value is <code>true</code> if the callback is being executed because the timeout specified when the idle callback was installed has expired.</dd>
-</dl>
+- {{domxref("IdleDeadline.didTimeout")}} {{ReadOnlyInline}}
+  - : A Boolean whose value is `true` if the callback is being executed because the timeout specified when the idle callback was installed has expired.
 
-<h2 id="methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("IdleDeadline.timeRemaining()")}}</dt>
- <dd>Returns a {{domxref("DOMHighResTimeStamp")}}, which is a floating-point value providing an estimate of the number of milliseconds remaining in the current idle period. If the idle period is over, the value is 0. Your callback can call this repeatedly to see if there's enough time left to do more work before returning.</dd>
-</dl>
+- {{domxref("IdleDeadline.timeRemaining()")}}
+  - : Returns a {{domxref("DOMHighResTimeStamp")}}, which is a floating-point value providing an estimate of the number of milliseconds remaining in the current idle period. If the idle period is over, the value is 0. Your callback can call this repeatedly to see if there's enough time left to do more work before returning.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See our <a href="/en-US/docs/Web/API/Background_Tasks_API#example">complete example</a> in the article <a href="/en-US/docs/Web/API/Background_Tasks_API">Cooperative Scheduling of Background Tasks API</a>.</p>
+See our [complete example](/en-US/docs/Web/API/Background_Tasks_API#example) in the article [Cooperative Scheduling of Background Tasks API](/en-US/docs/Web/API/Background_Tasks_API).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Background_Tasks_API">Cooperative Scheduling of Background Tasks API</a></li>
- <li>{{domxref("Window.requestIdleCallback()")}}</li>
- <li>{{domxref("Window.cancelIdleCallback()")}}</li>
-</ul>
+- [Cooperative Scheduling of Background Tasks API](/en-US/docs/Web/API/Background_Tasks_API)
+- {{domxref("Window.requestIdleCallback()")}}
+- {{domxref("Window.cancelIdleCallback()")}}

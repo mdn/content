@@ -11,45 +11,41 @@ tags:
   - getModifierState
 browser-compat: api.MouseEvent.getModifierState
 ---
-<div>{{APIRef("DOM Events")}}</div>
+{{APIRef("DOM Events")}}
 
-<p>The <strong><code>MouseEvent.getModifierState()</code></strong> method returns the
-  current state of the specified modifier key: <code>true</code> if the modifier is active
-  (i.e., the modifier key is pressed or locked), otherwise, <code>false</code>.</p>
+The **`MouseEvent.getModifierState()`** method returns the
+current state of the specified modifier key: `true` if the modifier is active
+(i.e., the modifier key is pressed or locked), otherwise, `false`.
 
-<p>See the document of
-  {{domxref("KeyboardEvent.getModifierState","KeyboardEvent.getModifierState()")}} for
-  details.</p>
+See the document of
+{{domxref("KeyboardEvent.getModifierState","KeyboardEvent.getModifierState()")}} for
+details.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var active = event.getModifierState(keyArg);</pre>
+```js
+var active = event.getModifierState(keyArg);
+```
 
-<h3 id="Returns">Returns </h3>
+### Returns 
 
-<p>A boolean value</p>
+A boolean value
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><em><code>keyArg</code></em></dt>
-  <dd>A modifier key value. The value must be one of the {{domxref("KeyboardEvent.key")}}
-    values which represent modifier keys or <code>"Accel"</code>{{deprecated_inline}}. This is case-sensitive.
-  </dd>
-</dl>
+- _`keyArg`_
+  - : A modifier key value. The value must be one of the {{domxref("KeyboardEvent.key")}}
+    values which represent modifier keys or `"Accel"`{{deprecated_inline}}. This is case-sensitive.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("MouseEvent")}} this method belongs to.</li>
-  <li>{{domxref("KeyboardEvent.getModifierState")}}</li>
-</ul>
+- The {{domxref("MouseEvent")}} this method belongs to.
+- {{domxref("KeyboardEvent.getModifierState")}}

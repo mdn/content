@@ -2,102 +2,100 @@
 title: FileSystemEntry.getParent()
 slug: Web/API/FileSystemEntry/getParent
 tags:
-- API
-- File and Directory Entry API
-- FileSystemEntry
-- Files
-- Method
-- Reference
-- getParent
+  - API
+  - File and Directory Entry API
+  - FileSystemEntry
+  - Files
+  - Method
+  - Reference
+  - getParent
 browser-compat: api.FileSystemEntry.getParent
 ---
-<p>{{APIRef("File and Directory Entries API")}}</p>
+{{APIRef("File and Directory Entries API")}}
 
-<p>The {{domxref("FileSystemEntry")}} interface's method
-    <strong><code>getParent()</code></strong> obtains a
-    {{domxref("FileSystemDirectoryEntry")}}.</p>
+The {{domxref("FileSystemEntry")}} interface's method
+**`getParent()`** obtains a
+{{domxref("FileSystemDirectoryEntry")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>FileSystemEntry</em>.getParent(<em>successCallback</em>[, <em>errorCallback</em>]);</pre>
+```js
+FileSystemEntry.getParent(successCallback[, errorCallback]);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>successCallback</code></dt>
-  <dd>A function which is called when the parent directory entry has been retrieved. The
+- `successCallback`
+  - : A function which is called when the parent directory entry has been retrieved. The
     callback receives a single input parameter: a {{domxref("FileSystemDirectoryEntry")}}
     object representing the parent directory. The parent of the root directory is
-    considered to be the root directory, itself, so be sure to watch for that.</dd>
-  <dt><code>errorCallback</code> {{optional_inline}}</dt>
-  <dd>An optional callback which is executed if an error occurs. There's a single
-    parameter: a {{domxref("DOMException")}} describing what went wrong.</dd>
-</dl>
+    considered to be the root directory, itself, so be sure to watch for that.
+- `errorCallback` {{optional_inline}}
+  - : An optional callback which is executed if an error occurs. There's a single
+    parameter: a {{domxref("DOMException")}} describing what went wrong.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{jsxref("undefined")}}.</p>
+{{jsxref("undefined")}}.
 
-<h3 id="Errors">Errors</h3>
+### Errors
 
-<dl>
-  <dt><code>FileError.INVALID_STATE_ERR</code></dt>
-  <dd>The operation failed because the file system's state doesn't permit it. This can
+- `FileError.INVALID_STATE_ERR`
+  - : The operation failed because the file system's state doesn't permit it. This can
     happen, for example, if the file system's cached state differs from the actual state
-    of the file system.</dd>
-  <dt><code>FileError.NOT_FOUND_ERR</code></dt>
-  <dd>The specified path could not be found.</dd>
-  <dt><code>FileError.SECURITY_ERR</code></dt>
-  <dd>Security restrictions prohibit obtaining the parent directory's information.</dd>
-</dl>
+    of the file system.
+- `FileError.NOT_FOUND_ERR`
+  - : The specified path could not be found.
+- `FileError.SECURITY_ERR`
+  - : Security restrictions prohibit obtaining the parent directory's information.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example renames  the file specified by the variable <code>fileEntry</code> to
-  <code>"newname.html"</code>.</p>
+This example renames  the file specified by the variable `fileEntry` to
+`"newname.html"`.
 
-<pre class="brush: js">fileEntry.getParent(function(parent) {
+```js
+fileEntry.getParent(function(parent) {
   fileEntry.moveTo(parent, "newname.html", function(updatedEntry) {
     console.log("File " + fileEntry.name + " renamed to newname.html.");
   });
 }, function(error) {
   console.error("An error occurred: Unable to rename " + fileEntry.name
         + " to newname.html.");
-});</pre>
+});
+```
 
-<p>This is accomplished by first obtaining a {{domxref("FileSystemDirectoryEntry")}}
-  object representing the directory the file is currently located in. Then
-  {{domxref("FileSystemEntry.moveTo", "moveTo()")}} is used to rename the file within that
-  directory.</p>
+This is accomplished by first obtaining a {{domxref("FileSystemDirectoryEntry")}}
+object representing the directory the file is currently located in. Then
+{{domxref("FileSystemEntry.moveTo", "moveTo()")}} is used to rename the file within that
+directory.
 
-<h2 id="Using_promises">Using promises</h2>
+## Using promises
 
-<p>Currently, there isn't a {{jsxref("Promise")}}-based version of this method. You can,
-  however, create a simple helper function to adapt it, like this:</p>
+Currently, there isn't a {{jsxref("Promise")}}-based version of this method. You can,
+however, create a simple helper function to adapt it, like this:
 
-<pre class="brush: js">function getParentPromise(entry) {
-  return new Promise((resolve, reject) =&gt; {
+```js
+function getParentPromise(entry) {
+  return new Promise((resolve, reject) => {
     entry.getParent(resolve, reject);
   });
-}</pre>
+}
+```
 
-<p>A similar approach can be taken elsewhere in the File and Directory Entries API.</p>
+A similar approach can be taken elsewhere in the File and Directory Entries API.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory
-      Entries API</a></li>
-  <li><a
-      href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">Introduction
-      to the File System API</a></li>
-</ul>
+- [File and Directory
+  Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction
+  to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)

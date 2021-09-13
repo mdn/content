@@ -2,49 +2,52 @@
 title: CanvasRenderingContext2D.getLineDash()
 slug: Web/API/CanvasRenderingContext2D/getLineDash
 tags:
-- API
-- Canvas
-- CanvasRenderingContext2D
-- Method
-- Reference
+  - API
+  - Canvas
+  - CanvasRenderingContext2D
+  - Method
+  - Reference
 browser-compat: api.CanvasRenderingContext2D.getLineDash
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <strong><code>getLineDash()</code></strong> method of the Canvas 2D API's
-  {{domxref("CanvasRenderingContext2D")}} interface gets the current line dash pattern.
-</p>
+The **`getLineDash()`** method of the Canvas 2D API's
+{{domxref("CanvasRenderingContext2D")}} interface gets the current line dash pattern.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>ctx</em>.getLineDash();</pre>
+```js
+ctx.getLineDash();
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An {{jsxref("Array")}} of numbers that specify distances to alternately draw a line and
-  a gap (in coordinate space units). If the number, when setting the elements, is odd, the
-  elements of the array get copied and concatenated. For example, setting the line dash to
-  <code>[5, 15, 25]</code> will result in getting back
-  <code>[5, 15, 25, 5, 15, 25]</code>.</p>
+An {{jsxref("Array")}} of numbers that specify distances to alternately draw a line and
+a gap (in coordinate space units). If the number, when setting the elements, is odd, the
+elements of the array get copied and concatenated. For example, setting the line dash to
+`[5, 15, 25]` will result in getting back
+`[5, 15, 25, 5, 15, 25]`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Getting_the_current_line_dash_setting">Getting the current line dash setting</h3>
+### Getting the current line dash setting
 
-<p>This example demonstrates the <code>getLineDash()</code> method.</p>
+This example demonstrates the `getLineDash()` method.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<p>As set by {{domxref("CanvasRenderingContext2D.setLineDash()", "setLineDash()")}},
-  strokes consist of lines that are 10 units wide, with spaces of 20 units in between each
-  line.</p>
+As set by {{domxref("CanvasRenderingContext2D.setLineDash()", "setLineDash()")}},
+strokes consist of lines that are 10 units wide, with spaces of 20 units in between each
+line.
 
-<pre class="brush: js;">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.setLineDash([10, 20]);
@@ -55,24 +58,22 @@ ctx.beginPath();
 ctx.moveTo(0, 50);
 ctx.lineTo(300, 50);
 ctx.stroke();
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Getting_the_current_line_dash_setting', 700, 180) }}</p>
+{{ EmbedLiveSample('Getting_the_current_line_dash_setting', 700, 180) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining this method: {{domxref("CanvasRenderingContext2D")}}</li>
-  <li>{{domxref("CanvasRenderingContext2D.setLineDash()")}}</li>
-  <li>{{domxref("CanvasRenderingContext2D.lineDashOffset")}}</li>
-</ul>
+- The interface defining this method: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.setLineDash()")}}
+- {{domxref("CanvasRenderingContext2D.lineDashOffset")}}

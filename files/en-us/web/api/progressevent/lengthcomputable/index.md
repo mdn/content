@@ -2,35 +2,34 @@
 title: ProgressEvent.lengthComputable
 slug: Web/API/ProgressEvent/lengthComputable
 tags:
-- API
-- Progress Events
-- ProgressEvent
-- Property
+  - API
+  - Progress Events
+  - ProgressEvent
+  - Property
 browser-compat: api.ProgressEvent.lengthComputable
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p>The
-    <code><strong>ProgressEvent.lengthComputable</strong></code> read-only property is a
-    boolean flag indicating if the resource concerned by the
-    {{domxref("ProgressEvent")}} has a length that can be calculated. If not, the
-    {{domxref("ProgressEvent.total")}} property has no significant value.</p>
+The
+**`ProgressEvent.lengthComputable`** read-only property is a
+boolean flag indicating if the resource concerned by the
+{{domxref("ProgressEvent")}} has a length that can be calculated. If not, the
+{{domxref("ProgressEvent.total")}} property has no significant value.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>flag</em> = <em>ProgressEvent</em>.lengthComputable</pre>
+```js
+flag = ProgressEvent.lengthComputable
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("ProgressEvent")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("ProgressEvent")}} interface it belongs to.

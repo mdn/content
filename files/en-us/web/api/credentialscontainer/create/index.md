@@ -2,80 +2,73 @@
 title: CredentialsContainer.create()
 slug: Web/API/CredentialsContainer/create
 tags:
-- API
-- Credential Management API
-- CredentialsContainer
-- Method
-- Reference
-- credential management
+  - API
+  - Credential Management API
+  - CredentialsContainer
+  - Method
+  - Reference
+  - credential management
 browser-compat: api.CredentialsContainer.create
 ---
-<p>{{APIRef("Credential Management API")}}{{SeeCompatTable}}</p>
+{{APIRef("Credential Management API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>create()</code></strong> method of the
-  {{domxref("CredentialsContainer")}} interface returns a {{jsxref("Promise")}} that
-  resolves with a new {{domxref("Credential")}} instance based on the provided options, or
-  <code>null</code> if no <code>Credential</code> object can be created.</p>
+The **`create()`** method of the
+{{domxref("CredentialsContainer")}} interface returns a {{jsxref("Promise")}} that
+resolves with a new {{domxref("Credential")}} instance based on the provided options, or
+`null` if no `Credential` object can be created.
 
-<div class="note">
-  <p><strong>Note:</strong> This method is restricted to top-level contexts. Calls to it within an
-    <code>&lt;iframe&gt;</code> element will resolve without effect.</p>
-</div>
+> **Note:** This method is restricted to top-level contexts. Calls to it within an
+> `<iframe>` element will resolve without effect.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var promise = CredentialsContainer.create([options])</pre>
+```js
+var promise = CredentialsContainer.create([options])
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>options</dt>
-  <dd>An object of type {{domxref("CredentialCreationOptions")}} that contains options for
-    the requested new <code>Credentials</code> object. It must include one of the options
+- options
+
+  - : An object of type {{domxref("CredentialCreationOptions")}} that contains options for
+    the requested new `Credentials` object. It must include one of the options
     "password", "federated", or "publicKey". The options are:
-    <ul>
-      <li><code>password</code>: {{optional_inline}} Either an
-        {{domxref("HTMLFormElement")}}, or a {{domxref("PasswordCredentialData")}} object.
-        TBD
-        <ul>
-          <li><code>id</code>: (required) {{domxref("USVString")}} Inherited from
-            {{domxref("CredentialData")}}.</li>
-          <li><code>name</code>: {{optional_inline}} {{domxref("USVString")}} TBD</li>
-          <li><code>iconURL</code>: {{optional_inline}} {{domxref("USVString")}} TBD</li>
-          <li><code>password</code>: (required) {{domxref("USVString")}} TBD</li>
-        </ul>
-      </li>
-      <li><code>federated</code>: {{optional_inline}} An
-        {{domxref("FederatedCredentialInit")}} object. Contains requirements for
-        creating/obtaining federated credentials. The available options are:
-        <ul>
-          <li><code>id</code>: (required) {{domxref("USVString")}} Inherited from
-            {{domxref("CredentialData")}}.</li>
-          <li><code>name</code>: {{optional_inline}} {{domxref("USVString")}} TBD</li>
-          <li><code>iconURL</code>: {{optional_inline}} {{domxref("USVString")}} TBD</li>
-          <li><code>provider</code>: (required) {{domxref("USVString")}} TBD</li>
-          <li><code>protocol</code>: {{optional_inline}} {{domxref("USVString")}} TBD</li>
-        </ul>
-      </li>
-      <li><code>publicKey</code>: {{optional_inline}}
-        a {{domxref("PublicKeyCredentialCreationOptions")}} object that describes the
-        options for creating a <a
-          href="/en-US/docs/Web/API/Web_Authentication_API">WebAuthn</a> credential.</li>
-    </ul>
-  </dd>
-</dl>
 
-<h3 id="Returns">Returns</h3>
+    - `password`: {{optional_inline}} Either an
+      {{domxref("HTMLFormElement")}}, or a {{domxref("PasswordCredentialData")}} object.
+      TBD
 
-<p>A {{jsxref("Promise")}} that resolves with a {{domxref("Credential")}} instance, such
-  as {{domxref("PasswordCredential")}}, {{domxref("FederatedCredential")}},
-  or {{domxref("PublicKeyCredential")}}.</p>
+      - `id`: (required) {{domxref("USVString")}} Inherited from
+        {{domxref("CredentialData")}}.
+      - `name`: {{optional_inline}} {{domxref("USVString")}} TBD
+      - `iconURL`: {{optional_inline}} {{domxref("USVString")}} TBD
+      - `password`: (required) {{domxref("USVString")}} TBD
 
-<h2 id="Specifications">Specifications</h2>
+    - `federated`: {{optional_inline}} An
+      {{domxref("FederatedCredentialInit")}} object. Contains requirements for
+      creating/obtaining federated credentials. The available options are:
+
+      - `id`: (required) {{domxref("USVString")}} Inherited from
+        {{domxref("CredentialData")}}.
+      - `name`: {{optional_inline}} {{domxref("USVString")}} TBD
+      - `iconURL`: {{optional_inline}} {{domxref("USVString")}} TBD
+      - `provider`: (required) {{domxref("USVString")}} TBD
+      - `protocol`: {{optional_inline}} {{domxref("USVString")}} TBD
+
+    - `publicKey`: {{optional_inline}}
+      a {{domxref("PublicKeyCredentialCreationOptions")}} object that describes the
+      options for creating a [WebAuthn](/en-US/docs/Web/API/Web_Authentication_API) credential.
+
+### Returns
+
+A {{jsxref("Promise")}} that resolves with a {{domxref("Credential")}} instance, such
+as {{domxref("PasswordCredential")}}, {{domxref("FederatedCredential")}},
+or {{domxref("PublicKeyCredential")}}.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,50 +2,48 @@
 title: Element.getAttributeNames()
 slug: Web/API/Element/getAttributeNames
 tags:
-- API
-- Attribute
-- DOM
-- Element
-- Method
-- getAttributeNames
+  - API
+  - Attribute
+  - DOM
+  - Element
+  - Method
+  - getAttributeNames
 browser-compat: api.Element.getAttributeNames
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>getAttributeNames()</code></strong> method of the
-  {{domxref("Element")}} interface returns the attribute names of the element as an
-  {{jsxref("Array")}} of strings. If the element has no attributes it returns an empty
-  array.</p>
+The **`getAttributeNames()`** method of the
+{{domxref("Element")}} interface returns the attribute names of the element as an
+{{jsxref("Array")}} of strings. If the element has no attributes it returns an empty
+array.
 
-<p>Using <code>getAttributeNames()</code> along with
-  {{domxref("Element.getAttribute","getAttribute()")}}, is a memory-efficient and
-  performant alternative to accessing {{domxref("Element.attributes")}}.</p>
+Using `getAttributeNames()` along with
+{{domxref("Element.getAttribute","getAttribute()")}}, is a memory-efficient and
+performant alternative to accessing {{domxref("Element.attributes")}}.
 
-<p>The names returned by <strong><code>getAttributeNames()</code></strong> are <em>qualified</em> attribute names, meaning that attributes with a namespace prefix have their names returned with that namespace prefix (<em>not</em> the actual namespace), followed by a colon, followed by the attribute name (for example, <strong><code>xlink:href</code></strong>), while any attributes which have no namespace prefix have their names returned as-is (for example, <strong><code>href</code></strong>).</p>
+The names returned by **`getAttributeNames()`** are _qualified_ attribute names, meaning that attributes with a namespace prefix have their names returned with that namespace prefix (_not_ the actual namespace), followed by a colon, followed by the attribute name (for example, **`xlink:href`**), while any attributes which have no namespace prefix have their names returned as-is (for example, **`href`**).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>let attributeNames</em> = element.getAttributeNames();
-</pre>
+```js
+let attributeNames = element.getAttributeNames();
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example shows how:</p>
+The following example shows how:
 
-<ul>
-  <li>For an attribute which has a namespace prefix, <code>getAttributeNames()</code> returns that namespace prefix along with the attribute name.</li>
-  <li>For an attribute which has no namespace prefix, <code>getAttributeNames()</code> returns just the attribute name, as-is.</li>
-</ul>
+- For an attribute which has a namespace prefix, `getAttributeNames()` returns that namespace prefix along with the attribute name.
+- For an attribute which has no namespace prefix, `getAttributeNames()` returns just the attribute name, as-is.
 
-<p>It’s important to understand that:
-<ol>
-  <li>An attribute can be present in the DOM with a namespace but lacking a namespace prefix.</li>
-  <li>For an attribute in the DOM that has a namespace but lacks a namespace prefix, <code>getAttributeNames()</code> will return just the attribute name, with no indication that the attribute is in a namespace.</li>
-</ol>
+It’s important to understand that:
 
-<p>The example below includes such a “namespaced but without a namespace prefix” case.</p>
+1.  An attribute can be present in the DOM with a namespace but lacking a namespace prefix.
+2.  For an attribute in the DOM that has a namespace but lacks a namespace prefix, `getAttributeNames()` will return just the attribute name, with no indication that the attribute is in a namespace.
 
-<pre class="brush:js">
+The example below includes such a “namespaced but without a namespace prefix” case.
+
+```js
 const element = document.createElement('a')
 
 // set "href" attribute with no namespace and no namespace prefix
@@ -65,26 +63,28 @@ for (let name of element.getAttributeNames()) {
 // href https://example.com
 // xlink:href https://example.com
 // show new
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<pre class="brush:js">if (Element.prototype.getAttributeNames == undefined) {
+```js
+if (Element.prototype.getAttributeNames == undefined) {
   Element.prototype.getAttributeNames = function () {
     var attributes = this.attributes;
     var length = attributes.length;
     var result = new Array(length);
-    for (var i = 0; i &lt; length; i++) {
+    for (var i = 0; i < length; i++) {
       result[i] = attributes[i].name;
     }
     return result;
   };
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

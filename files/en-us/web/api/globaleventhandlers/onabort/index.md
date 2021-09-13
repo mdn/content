@@ -2,62 +2,59 @@
 title: GlobalEventHandlers.onabort
 slug: Web/API/GlobalEventHandlers/onabort
 tags:
-- API
-- Event Handler
-- Experimental
-- GlobalEventHandlers
-- NeedsContent
-- NeedsHelp
-- NeedsUpdate
-- Property
-- Reference
-- Window
+  - API
+  - Event Handler
+  - Experimental
+  - GlobalEventHandlers
+  - NeedsContent
+  - NeedsHelp
+  - NeedsUpdate
+  - Property
+  - Reference
+  - Window
 browser-compat: api.GlobalEventHandlers.onabort
 ---
-<div>{{ApiRef("HTML DOM")}} {{SeeCompatTable}} {{draft}}</div>
+{{ApiRef("HTML DOM")}} {{SeeCompatTable}} {{draft}}
 
-<p>The <strong><code>onabort</code></strong> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is the <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> for
-  processing {{event("abort")}} events sent to the window.</p>
+The **`onabort`** property of the
+{{domxref("GlobalEventHandlers")}} mixin is the [event handler](/en-US/docs/Web/Events/Event_handlers) for
+processing {{event("abort")}} events sent to the window.
 
-<p>While the <a
-    href="https://html.spec.whatwg.org/multipage/browsing-the-web.html#abort-a-document">standard
-    for aborting a document load</a> is defined, <a
-    href="https://github.com/whatwg/html/issues/3525">HTML issue #3525</a> suggests that
-  browsers should not currently fire the <code>abort</code> event on a <code>Window</code>
-  that would trigger <code>onabort</code> to be called.</p>
+While the [standard
+for aborting a document load](https://html.spec.whatwg.org/multipage/browsing-the-web.html#abort-a-document) is defined, [HTML issue #3525](https://github.com/whatwg/html/issues/3525) suggests that
+browsers should not currently fire the `abort` event on a `Window`
+that would trigger `onabort` to be called.
 
-<p>TODO: define what "abort" is. Closing the window via window manager? Stopping the load
-  of the page? By which means and reasons (user, network/server)? At which stages would it
-  fire / be caught? For IE, <code>onabort</code> is only available with
-  <code>&lt;img&gt;</code> tags.</p>
+TODO: define what "abort" is. Closing the window via window manager? Stopping the load
+of the page? By which means and reasons (user, network/server)? At which stages would it
+fire / be caught? For IE, `onabort` is only available with
+`<img>` tags.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>window</em>.onabort = <em>functionRef</em>;
-</pre>
+```js
+window.onabort = functionRef;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p><code>functionRef</code> is a function name or a <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function
-    expression</a>.</p>
+`functionRef` is a function name or a [function
+expression](/en-US/docs/Web/JavaScript/Reference/Operators/function).
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">window.onabort = function() {
+```js
+window.onabort = function() {
   alert('Load aborted.');
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
+{{Compat}}
 
-  <p>{{Compat}}</p>
-
-  <p>This property is not available with Firefox 2 or Safari.</p>
-</div>
+This property is not available with Firefox 2 or Safari.

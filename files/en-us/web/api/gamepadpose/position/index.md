@@ -13,47 +13,43 @@ tags:
   - WebVR
 browser-compat: api.GamepadPose.position
 ---
-<div>{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
+{{APIRef("WebVR API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>position</code></strong> read-only property of the {{domxref("GamepadPose")}} interface returns the position of the {{domxref("Gamepad")}} as a 3D vector.</p>
+The **`position`** read-only property of the {{domxref("GamepadPose")}} interface returns the position of the {{domxref("Gamepad")}} as a 3D vector.
 
-<p>The coordinate system is as follows:</p>
+The coordinate system is as follows:
 
-<ul>
- <li>Positive X is to the user’s right.</li>
- <li>Positive Y is up.</li>
- <li>Positive Z is behind the user.</li>
-</ul>
+- Positive X is to the user’s right.
+- Positive Y is up.
+- Positive Z is behind the user.
 
-<p>Positions are measured in meters from an origin point — this point is the position the sensor was first read at.</p>
+Positions are measured in meters from an origin point — this point is the position the sensor was first read at.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var myGamepadPosition = gamepadPoseInstance.position;</pre>
+```js
+var myGamepadPosition = gamepadPoseInstance.position;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{jsxref("Float32Array")}}, or <code>null</code> if the gamepad is not able to provide position data.</p>
+A {{jsxref("Float32Array")}}, or `null` if the gamepad is not able to provide position data.
 
-<div class="note">
-<p><strong>Note:</strong> User agents may provide emulated position values through certain techniques; when doing so they should still report {{domxref("GamepadPose.hasPosition")}} as false.</p>
-</div>
+> **Note:** User agents may provide emulated position values through certain techniques; when doing so they should still report {{domxref("GamepadPose.hasPosition")}} as false.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>TBD</p>
+TBD
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a></li>
- <li><a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a></li>
-</ul>
+- [WebVR API](/en-US/docs/Web/API/WebVR_API)
+- [Gamepad API](/en-US/docs/Web/API/Gamepad_API)

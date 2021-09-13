@@ -9,34 +9,30 @@ tags:
   - Reference
 browser-compat: api.InputDeviceCapabilities
 ---
-<p>{{APIRef("InputDeviceCapabilities API")}}{{SeeCompatTable}}</p>
+{{APIRef("InputDeviceCapabilities API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>InputDeviceCapabilities</code></strong> interface of the <a href="/en-US/docs/Web/API/InputDeviceCapabilities_API">Input Device Capabilities API</a> provides information about the physical device or a group of related devices responsible for generating input events. Events caused by the same physical input device get the same instance of this object, but the converse isn't true. For example, two mice with the same capabilities in a system may appear as a single <code>InputDeviceCapabilities</code> instance.</p>
+The **`InputDeviceCapabilities`** interface of the [Input Device Capabilities API](/en-US/docs/Web/API/InputDeviceCapabilities_API) provides information about the physical device or a group of related devices responsible for generating input events. Events caused by the same physical input device get the same instance of this object, but the converse isn't true. For example, two mice with the same capabilities in a system may appear as a single `InputDeviceCapabilities` instance.
 
-<p>In some instances, <code>InputDeviceCapabilities</code> represents the capabilities of logical devices rather than physical devices. This allows, for example, touchscreen keyboards and physical keyboards to be represented the same way when they produce the same input.</p>
+In some instances, `InputDeviceCapabilities` represents the capabilities of logical devices rather than physical devices. This allows, for example, touchscreen keyboards and physical keyboards to be represented the same way when they produce the same input.
 
-<h2 id="Constructors">Constructors</h2>
+## Constructors
 
-<dl>
- <dt>{{DOMxRef("InputDeviceCapabilities.InputDeviceCapabilities()")}}</dt>
- <dd>Creates an <code>InputDeviceCapabilities</code> object.</dd>
-</dl>
+- {{DOMxRef("InputDeviceCapabilities.InputDeviceCapabilities()")}}
+  - : Creates an `InputDeviceCapabilities` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{DOMxRef("InputDeviceCapabilities.firesTouchEvents")}}{{ReadOnlyInline}}</dt>
- <dd>A {{JSxRef("Boolean")}} that indicates whether the device dispatches touch events.</dd>
-</dl>
+- {{DOMxRef("InputDeviceCapabilities.firesTouchEvents")}}{{ReadOnlyInline}}
+  - : A {{JSxRef("Boolean")}} that indicates whether the device dispatches touch events.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p>None.</p>
+None.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

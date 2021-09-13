@@ -2,41 +2,42 @@
 title: WindowClient.visibilityState
 slug: Web/API/WindowClient/visibilityState
 tags:
-- API
-- Experimental
-- Property
-- Reference
-- Service Workers
-- ServiceWorker
-- WindowClient
-- visibilityState
+  - API
+  - Experimental
+  - Property
+  - Reference
+  - Service Workers
+  - ServiceWorker
+  - WindowClient
+  - visibilityState
 browser-compat: api.WindowClient.visibilityState
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p>The <strong><code>visibilityState</code></strong> read-only property of the
-  {{domxref("WindowClient")}} interface indicates the visibility of the current client.
-  This value can be one of <code>"hidden"</code>, <code>"visible"</code>, or
-  <code>"prerender"</code>.</p>
+The **`visibilityState`** read-only property of the
+{{domxref("WindowClient")}} interface indicates the visibility of the current client.
+This value can be one of `"hidden"`, `"visible"`, or
+`"prerender"`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>myVisState</em> = <em>windowClient</em>.visibilityState;</pre>
+```js
+var myVisState = windowClient.visibilityState;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} (See {{domxref("Document.visibilityState")}} for values).
-</p>
+A {{domxref("DOMString")}} (See {{domxref("Document.visibilityState")}} for values).
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">event.waitUntil(clients.matchAll({
+```js
+event.waitUntil(clients.matchAll({
     type: "window"
   }).then(function(clientList) {
-    for (let i = 0; i &lt; clientList.length; i++) {
+    for (let i = 0; i < clientList.length; i++) {
       let client = clientList[i];
-      if (client.url == '/' &amp;&amp; 'focus' in client) {
+      if (client.url == '/' && 'focus' in client) {
         if (client.visibilityState === 'hidden')
           return client.focus();
         }
@@ -47,12 +48,13 @@ browser-compat: api.WindowClient.visibilityState
       return clients.openWindow('/');
     }
   }));
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

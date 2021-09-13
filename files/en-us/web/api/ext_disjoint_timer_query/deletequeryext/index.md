@@ -9,50 +9,48 @@ tags:
   - WebGL extension
 browser-compat: api.EXT_disjoint_timer_query.deleteQueryEXT
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>EXT_disjoint_timer_query.deleteQueryEXT()</code></strong> method of
-  the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> deletes a given
-  {{domxref("WebGLQuery")}} object.</p>
+The **`EXT_disjoint_timer_query.deleteQueryEXT()`** method of
+the [WebGL API](/en-US/docs/Web/API/WebGL_API) deletes a given
+{{domxref("WebGLQuery")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <var>ext</var>.deleteQueryEXT(<var>query</var>);
-</pre>
+```js
+void ext.deleteQueryEXT(query);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>query</code></dt>
-  <dd>A {{domxref("WebGLQuery")}} object to delete.</dd>
-</dl>
+- `query`
+  - : A {{domxref("WebGLQuery")}} object to delete.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var ext = gl.getExtension('EXT_disjoint_timer_query');
+```js
+var ext = gl.getExtension('EXT_disjoint_timer_query');
 var query = ext.createQueryEXT();
 
 // ...
 
 ext.deleteQueryEXT(query);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.getExtension()")}}</li>
-  <li>{{domxref("WebGLQuery")}}</li>
-  <li>{{domxref("EXT_disjoint_timer_query")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.getExtension()")}}
+- {{domxref("WebGLQuery")}}
+- {{domxref("EXT_disjoint_timer_query")}}

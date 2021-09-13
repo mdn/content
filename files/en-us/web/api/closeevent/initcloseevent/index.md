@@ -10,65 +10,59 @@ tags:
   - Deprecated
 browser-compat: api.CloseEvent.initCloseEvent
 ---
-<p>{{APIRef("Websockets API")}}{{deprecated_header}}</p>
+{{APIRef("Websockets API")}}{{deprecated_header}}
 
-<p>The <code><strong>CloseEvent.initCloseEvent()</strong></code> method initializes the
-	value of a close event once it's been created (normally using the
-	{{domxref("Document.createEvent()")}} method).</p>
+The **`CloseEvent.initCloseEvent()`** method initializes the
+value of a close event once it's been created (normally using the
+{{domxref("Document.createEvent()")}} method).
 
-<p>Events initialized in this way must have been created with the {{domxref("Document.createEvent()") }} method.
-	This method must be called to set the event before it is dispatched, using {{ domxref("EventTarget.dispatchEvent()") }}.
-	Once dispatched, it doesn't do anything anymore.</p>
+Events initialized in this way must have been created with the {{domxref("Document.createEvent()") }} method.
+This method must be called to set the event before it is dispatched, using {{ domxref("EventTarget.dispatchEvent()") }}.
+Once dispatched, it doesn't do anything anymore.
 
-<div class="note">
-	<p><strong>Note:</strong> Do not use this method any more as it is deprecated.</p>
+> **Note:** Do not use this method any more as it is deprecated.
+>
+> Instead use specific event constructors, like {{domxref("CloseEvent.MouseEvent", "CloseEvent()")}}.
+> The page on [Creating and triggering events](/en-US/docs/Web/Events/Creating_and_triggering_events) gives more information about the way to use these.
 
-	<p>Instead use specific event constructors, like {{domxref("CloseEvent.MouseEvent", "CloseEvent()")}}.
-		The page on <a href="/en-US/docs/Web/Events/Creating_and_triggering_events">Creating and triggering events</a> gives more information about the way to use these.
-	</p>
-</div>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+event.initMouseEvent(type, canBubble, cancelable, wasClean, reasonCode, reason);
+```
 
-<pre
-	class="brush: js"><em>event</em>.initMouseEvent(<em>type</em>, <em>canBubble</em>, <em>cancelable</em>, wasClean, reasonCode, reason);</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- _`type`_
+  - : the string to set the event's {{domxref("Event.type", "type")}} to. Possible types
+    for mouse events include: `click`, `mousedown`,
+    `mouseup`, `mouseover`, `mousemove`,
+    `mouseout`.
+- _`canBubble`_
+  - : whether or not the event can bubble. Sets the value of
+    {{domxref("Event.bubbles")}}.
+- _`cancelable`_
+  - : whether or not the event's default action can be prevented. Sets the value of
+    {{domxref("Event.cancelable")}}.
+- _`wasClean`_
+  - : whether or not the connection was cleanly closed.
+- `reasonCode`
+  - : the reason of the close.
+- `reason`
+  - : a {{domxref("DOMString")}} describing the reason of the close in shuman-readable
+    way.
 
-<dl>
-	<dt><em><code>type</code></em></dt>
-	<dd>the string to set the event's {{domxref("Event.type", "type")}} to. Possible types
-		for mouse events include: <code>click</code>, <code>mousedown</code>,
-		<code>mouseup</code>, <code>mouseover</code>, <code>mousemove</code>,
-		<code>mouseout</code>.</dd>
-	<dt><em><code>canBubble</code></em></dt>
-	<dd>whether or not the event can bubble. Sets the value of
-		{{domxref("Event.bubbles")}}.</dd>
-	<dt><em><code>cancelable</code></em></dt>
-	<dd>whether or not the event's default action can be prevented. Sets the value of
-		{{domxref("Event.cancelable")}}.</dd>
-	<dt><em><code>wasClean</code></em></dt>
-	<dd>whether or not the connection was cleanly closed.</dd>
-	<dt><code><em>reasonCode</em></code></dt>
-	<dd>the reason of the close.</dd>
-	<dt><code><em>reason</em></code></dt>
-	<dd>a {{domxref("DOMString")}} describing the reason of the close in shuman-readable
-		way.</dd>
-</dl>
+## Specifications
 
-<h2 id="Specifications">Specifications</h2>
+_This is no part of any specifications, though it was in some early drafts._
 
-<p><em>This is no part of any specifications, though it was in some early drafts.</em></p>
+## Browser compatibility
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+{{Compat}}
 
-<p>{{Compat}}</p>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
-	<li>{{domxref("CloseEvent.CloseEvent()","CloseEvent()")}} constructor, the modern
-		standard way of creating a {{domxref("CloseEvent")}}</li>
-	<li>{{domxref("Event.initEvent()")}} is a simpler method serving a similar purpose. It
-		is also obsolete and shouldn't be used any more.</li>
-</ul>
+- {{domxref("CloseEvent.CloseEvent()","CloseEvent()")}} constructor, the modern
+  standard way of creating a {{domxref("CloseEvent")}}
+- {{domxref("Event.initEvent()")}} is a simpler method serving a similar purpose. It
+  is also obsolete and shouldn't be used any more.

@@ -9,66 +9,68 @@ tags:
   - message
 browser-compat: api.EventSource.message_event
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p>The <code>message</code> event of the {{domxref("EventSource")}} API is fired when data is received through an event source.</p>
+The `message` event of the {{domxref("EventSource")}} API is fired when data is received through an event source.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("MessageEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("EventSource.onmessage")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("MessageEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>{{domxref("EventSource.onmessage")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this basic example, an <code>EventSource</code> is created to receive events from the server; a page with the name <code>sse.php</code> is responsible for generating the events.</p>
+In this basic example, an `EventSource` is created to receive events from the server; a page with the name `sse.php` is responsible for generating the events.
 
-<pre class="brush: js">var evtSource = new EventSource('sse.php');
+```js
+var evtSource = new EventSource('sse.php');
 var eventList = document.querySelector('ul');
 
-evtSource.addEventListener('message', (e) =&gt; {
+evtSource.addEventListener('message', (e) => {
   var newElement = document.createElement("li");
 
   newElement.textContent = "message: " + e.data;
   eventList.appendChild(newElement);
-});</pre>
+});
+```
 
-<h3 id="onmessage_equivalent">onmessage equivalent</h3>
+### onmessage equivalent
 
-<pre class="brush: js">evtSource.onmessage = (e) =&gt; {
+```js
+evtSource.onmessage = (e) => {
   var newElement = document.createElement("li");
 
   newElement.textContent = "message: " + e.data;
   eventList.appendChild(newElement);
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events">Using server-sent events</a></li>
- <li><code><a href="/en-US/docs/Web/API/EventSource/open_event">open</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/EventSource/error_event">error</a></code></li>
-</ul>
+- [Using server-sent events](/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events)
+- [`open`](/en-US/docs/Web/API/EventSource/open_event)
+- [`error`](/en-US/docs/Web/API/EventSource/error_event)

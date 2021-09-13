@@ -2,46 +2,46 @@
 title: IDBDatabase.close()
 slug: Web/API/IDBDatabase/close
 tags:
-- API
-- Database
-- IDBDatabase
-- IndexedDB
-- Method
-- Reference
-- Storage
+  - API
+  - Database
+  - IDBDatabase
+  - IndexedDB
+  - Method
+  - Reference
+  - Storage
 browser-compat: api.IDBDatabase.close
 ---
-<p>{{ APIRef("IndexedDB") }}</p>
+{{ APIRef("IndexedDB") }}
 
-<div>
-  <p>The <strong><code>close()</code></strong> method of the {{domxref("IDBDatabase")}}
-    interface returns immediately and closes the connection in a separate thread.</p>
-</div>
+The **`close()`** method of the {{domxref("IDBDatabase")}}
+interface returns immediately and closes the connection in a separate thread.
 
-<p>The connection is not actually closed until all transactions created using this
-  connection are complete. No new transactions can be created for this connection once
-  this method is called. Methods that create transactions throw an exception if a closing
-  operation is pending.</p>
+The connection is not actually closed until all transactions created using this
+connection are complete. No new transactions can be created for this connection once
+this method is called. Methods that create transactions throw an exception if a closing
+operation is pending.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>IDBDatabase</em>.close();
-</pre>
+```js
+IDBDatabase.close();
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js;">// Let us open our database
+```js
+// Let us open our database
 var DBOpenRequest = window.indexedDB.open("toDoList", 4); // opening a database.
 
 // Create event handlers for both success and failure of
 DBOpenRequest.onerror = function(event) {
-  note.innerHTML += "&lt;li&gt;Error loading database.&lt;/li&gt;";
+  note.innerHTML += "<li>Error loading database.</li>";
 };
 
 DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += "&lt;li&gt;Database initialised.&lt;/li&gt;";
+  note.innerHTML += "<li>Database initialised.</li>";
 
   // store the result of opening the database in the db variable.
   db = DBOpenRequest.result;
@@ -49,27 +49,23 @@ DBOpenRequest.onsuccess = function(event) {
   // now let"s close the database again!
   db.close();
 };
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
-  <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
-  <li>Using transactions: {{domxref("IDBTransaction")}}</li>
-  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
-  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
-  <li>Using cursors: {{domxref("IDBCursor")}}</li>
-  <li>Reference example: <a class="external"
-      href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
-      Notifications</a> (<a class="external"
-      href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do
+  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

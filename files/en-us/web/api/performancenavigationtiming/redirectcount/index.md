@@ -2,39 +2,41 @@
 title: PerformanceNavigationTiming.redirectCount
 slug: Web/API/PerformanceNavigationTiming/redirectCount
 tags:
-- API
-- Property
-- Reference
-- Web Performance
+  - API
+  - Property
+  - Reference
+  - Web Performance
 browser-compat: api.PerformanceNavigationTiming.redirectCount
 ---
-<div>{{APIRef("Navigation Timing")}}{{SeeCompatTable}}</div>
+{{APIRef("Navigation Timing")}}{{SeeCompatTable}}
 
-<p>The <strong><code>redirectCount</code></strong> property returns a
-  {{domxref("DOMHighResTimeStamp","timestamp")}} representing the number of redirects
-  since the last non-redirect navigation under the current browsing context.</p>
+The **`redirectCount`** property returns a
+{{domxref("DOMHighResTimeStamp","timestamp")}} representing the number of redirects
+since the last non-redirect navigation under the current browsing context.
 
-<p>This property is {{readonlyInline}}.</p>
+This property is {{readonlyInline}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>perfEntry</em>.redirectCount;
-</pre>
+```js
+perfEntry.redirectCount;
+```
 
-<h3 id="Return_Value">Return Value</h3>
+### Return Value
 
-<p>A number representing the number of redirects since the last non-redirect navigation
-  under the current browsing context.</p>
+A number representing the number of redirects since the last non-redirect navigation
+under the current browsing context.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example illustrates this property's usage.</p>
+The following example illustrates this property's usage.
 
-<pre class="brush: js">function print_nav_timing_data() {
+```js
+function print_nav_timing_data() {
   // Use getEntriesByType() to just get the "navigation" events
   var perfEntries = performance.getEntriesByType("navigation");
 
-  for (var i=0; i &lt; perfEntries.length; i++) {
+  for (var i=0; i < perfEntries.length; i++) {
     console.log("= Navigation entry[" + i + "]");
     var p = perfEntries[i];
     // dom Properties
@@ -51,12 +53,12 @@ browser-compat: api.PerformanceNavigationTiming.redirectCount
     console.log("redirectCount = " + p.redirectCount);
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

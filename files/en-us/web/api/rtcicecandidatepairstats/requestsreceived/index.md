@@ -2,52 +2,51 @@
 title: RTCIceCandidatePairStats.requestsReceived
 slug: Web/API/RTCIceCandidatePairStats/requestsReceived
 tags:
-- API
-- ICE
-- Networking
-- Property
-- RTCIceCandidatePairStats
-- Reference
-- Statistics
-- Stats
-- WebRTC
-- WebRTC API
-- request
-- requestsReceived
+  - API
+  - ICE
+  - Networking
+  - Property
+  - RTCIceCandidatePairStats
+  - Reference
+  - Statistics
+  - Stats
+  - WebRTC
+  - WebRTC API
+  - request
+  - requestsReceived
 browser-compat: api.RTCIceCandidatePairStats.requestsReceived
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The {{domxref("RTCIceCandidatePairStats")}} dictionary's
-    <strong><code>requestsReceived</code></strong> property indicates the total number of
-    {{Glossary("STUN")}} connectivity check requests that have been received so far on the
-    connection described by this pairing of candidates.</p>
+The {{domxref("RTCIceCandidatePairStats")}} dictionary's
+**`requestsReceived`** property indicates the total number of
+{{Glossary("STUN")}} connectivity check requests that have been received so far on the
+connection described by this pairing of candidates.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>requestsReceived</em> = <em>rtcIceCandidatePairStats</em>.requestsReceived;</pre>
+```js
+requestsReceived = rtcIceCandidatePairStats.requestsReceived;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An integer value which specifies the number of STUN connectivity and/or consent
-  requests that have been received to date on the connection described by this pair of
-  {{Glossary("ICE")}} candidates.</p>
+An integer value which specifies the number of STUN connectivity and/or consent
+requests that have been received to date on the connection described by this pair of
+{{Glossary("ICE")}} candidates.
 
-<p>Because there's no way to tell the difference between requests made to check
-  connectivity and requests made to check consent, the returned figure includes both.</p>
+Because there's no way to tell the difference between requests made to check
+connectivity and requests made to check consent, the returned figure includes both.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The reported number of requests includes retransmissions. If a
-    request had to be repeated due to network issues, it will be counted multiple times
-    here. This differs from {{domxref("RTCIceCandidatePairStats.requestsSent",
-    "requestsSent")}}, which <em>does not</em> include retransmisions.</p>
-</div>
+> **Note:** The reported number of requests includes retransmissions. If a
+> request had to be repeated due to network issues, it will be counted multiple times
+> here. This differs from {{domxref("RTCIceCandidatePairStats.requestsSent",
+    "requestsSent")}}, which _does not_ include retransmisions.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

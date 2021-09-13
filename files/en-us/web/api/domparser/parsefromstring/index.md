@@ -7,63 +7,62 @@ tags:
   - Reference
 browser-compat: api.DOMParser.parseFromString
 ---
-<div>{{APIRef("DOMParser")}}</div>
+{{APIRef("DOMParser")}}
 
-<p>The <strong><code>parseFromString()</code></strong> method of the {{domxref("DOMParser")}} interface parses a string containing either HTML or XML, returning an {{domxref("HTMLDocument")}} or an {{domxref("XMLDocument")}}.</p>
+The **`parseFromString()`** method of the {{domxref("DOMParser")}} interface parses a string containing either HTML or XML, returning an {{domxref("HTMLDocument")}} or an {{domxref("XMLDocument")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">const <var>doc</var> = domparser.parseFromString(<var>string, <var>mimeType</var>)</var></pre>
+```js
+const doc = domparser.parseFromString(string, mimeType)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>string</var></code></dt>
-  <dd>The {{domxref("DOMString")}} to be parsed. It must contain either an
+- `string`
+  - : The {{domxref("DOMString")}} to be parsed. It must contain either an
     {{Glossary("HTML")}}, {{Glossary("xml")}}, {{Glossary("xhtml+xml")}}, or
-    {{Glossary("svg")}} document.</dd>
-  <dt><code><var>mimeType</var></code></dt>
-  <dd>
-    <p>A {{domxref("DOMString")}}. This string determines whether the XML parser or the HTML parser is used to parse the string. Valid values are:</p>
-    <ul>
-      <li><code>text/html</code></li>
-      <li><code>text/xml</code></li>
-      <li><code>application/xml</code></li>
-      <li><code>application/xhtml+xml</code></li>
-      <li><code>image/svg+xml</code></li>
-    </ul>
+    {{Glossary("svg")}} document.
+- `mimeType`
 
-    <p>A value of <code>text/html</code> will invoke the HTML parser, and the method will return an {{domxref("HTMLDocument")}}.
-      Any other valid value will invoke the XML parser, and the method will return an {{domxref("XMLDocument")}}.</p>
-      <p>Any other value will cause a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError"><code>TypeError</code></a> to be thrown.</p>
-    </dd>
-</dl>
+  - : A {{domxref("DOMString")}}. This string determines whether the XML parser or the HTML parser is used to parse the string. Valid values are:
 
-<h3>Return value</h3>
+    - `text/html`
+    - `text/xml`
+    - `application/xml`
+    - `application/xhtml+xml`
+    - `image/svg+xml`
 
-<p>An {{domxref("HTMLDocument")}} or an {{domxref("XMLDocument")}}, depending on the
-  <code>mimeType</code> argument.</p>
+    A value of `text/html` will invoke the HTML parser, and the method will return an {{domxref("HTMLDocument")}}.
+    Any other valid value will invoke the XML parser, and the method will return an {{domxref("XMLDocument")}}.
 
-<h2>Examples</h2>
+    Any other value will cause a [`TypeError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError) to be thrown.
 
-<h3>Parsing XML, SVG, and HTML</h3>
+### Return value
 
-<p>This example shows how to parse XML, SVG, and HTML. Note that a MIME type of
-<code>text/html</code> will invoke the HTML parser, and any other valid MIME type will invoke
-the XML parser.</p>
+An {{domxref("HTMLDocument")}} or an {{domxref("XMLDocument")}}, depending on the
+`mimeType` argument.
 
-<pre class="brush: js">const parser = new DOMParser();
+## Examples
 
-const xmlString = "&lt;warning&gt;Beware of the tiger&lt;/warning&gt;";
+### Parsing XML, SVG, and HTML
+
+This example shows how to parse XML, SVG, and HTML. Note that a MIME type of
+`text/html` will invoke the HTML parser, and any other valid MIME type will invoke
+the XML parser.
+
+```js
+const parser = new DOMParser();
+
+const xmlString = "<warning>Beware of the tiger</warning>";
 const doc1 = parser.parseFromString(xmlString, "application/xml");
 // XMLDocument
 
-const svgString = "&lt;circle cx=\"50\" cy=\"50\" r=\"50\"/&gt;";
+const svgString = "<circle cx=\"50\" cy=\"50\" r=\"50\"/>";
 const doc2 = parser.parseFromString(svgString, "image/svg+xml");
 // XMLDocument
 
-const htmlString = "&lt;strong&gt;Beware of the leopard&lt;/strong&gt;";
+const htmlString = "<strong>Beware of the leopard</strong>";
 const doc3 = parser.parseFromString(htmlString, "text/html");
 // HTMLDocument
 
@@ -75,32 +74,31 @@ console.log(doc2.firstChild.tagName);
 
 console.log(doc3.body.firstChild.textContent);
 // "Beware of the leopard"
-</pre>
+```
 
-<h3>Error handling</h3>
+### Error handling
 
-<p>Note that if the XML parser is used and parsing fails, the <code>DOMParser</code> throws an error:</p>
+Note that if the XML parser is used and parsing fails, the `DOMParser` throws an error:
 
-<pre class="brush: js">const parser = new DOMParser();
+```js
+const parser = new DOMParser();
 
-const xmlString = "&lt;warning&gt;Beware of the missing closing tag";
+const xmlString = "<warning>Beware of the missing closing tag";
 const doc = parser.parseFromString(xmlString, "application/xml");
 // XML Parsing Error: no root element found
-</pre>
+```
 
-<p>The parsing error may also be reported to the browser's JavaScript console.</p>
+The parsing error may also be reported to the browser's JavaScript console.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("XMLSerializer")}}</li>
-  <li>{{jsxref("JSON.parse()")}} - counterpart for {{jsxref("JSON")}} documents.</li>
-</ul>
+- {{domxref("XMLSerializer")}}
+- {{jsxref("JSON.parse()")}} - counterpart for {{jsxref("JSON")}} documents.

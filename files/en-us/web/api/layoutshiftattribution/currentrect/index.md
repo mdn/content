@@ -9,35 +9,38 @@ tags:
   - LayoutShiftAttribution
 browser-compat: api.LayoutShiftAttribution.currentRect
 ---
-<div>{{APIRef("Layout Instability API")}}</div>
+{{APIRef("Layout Instability API")}}
 
-<p>The <strong><code>currentRect</code></strong> read-only property of the {{domxref("LayoutShiftAttribution")}} interface returns a {{domxref("DOMRectReadOnly")}} object representing the position of the element before the shift.</p>
+The **`currentRect`** read-only property of the {{domxref("LayoutShiftAttribution")}} interface returns a {{domxref("DOMRectReadOnly")}} object representing the position of the element before the shift.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let currentRect = LayoutShiftAttribution.currentRect;</pre>
+```js
+let currentRect = LayoutShiftAttribution.currentRect;
+```
 
-<h3>Value</h3>
-<p>A {{domxref("DOMRectReadOnly")}} object.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("DOMRectReadOnly")}} object.
 
-<p>The following example prints the <code>currentRect</code> of the first item in {{domxref("LayoutShift.sources")}} to the console.</p>
+## Examples
 
-<pre class="brush: js">new PerformanceObserver((list) => {
+The following example prints the `currentRect` of the first item in {{domxref("LayoutShift.sources")}} to the console.
+
+```js
+new PerformanceObserver((list) => {
   for (const {sources} of list.getEntries()) {
     if (sources) {
       console.log(sources[0].currentRect);
     }
   }
-}).observe({type: 'layout-shift', buffered: true});</pre>
+}).observe({type: 'layout-shift', buffered: true});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
-
+{{Compat}}

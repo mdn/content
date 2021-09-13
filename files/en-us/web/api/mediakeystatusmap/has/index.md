@@ -2,40 +2,39 @@
 title: MediaKeyStatusMap.has()
 slug: Web/API/MediaKeyStatusMap/has
 tags:
-- API
-- EncryptedMediaExtensions
-- MediaKeyStatusMap
-- Method
-- Reference
-- has()
+  - API
+  - EncryptedMediaExtensions
+  - MediaKeyStatusMap
+  - Method
+  - Reference
+  - has()
 browser-compat: api.MediaKeyStatusMap.has
 ---
-<p>{{APIRef("EncryptedMediaExtensions API")}}{{SeeCompatTable}}</p>
+{{APIRef("EncryptedMediaExtensions API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>has</code></strong> property of the
-    {{domxref("MediaKeyStatusMap")}} interface returns a {{jsxref('Boolean')}}, asserting
-    whether a value has been associated with the given key.</p>
+The **`has`** property of the
+{{domxref("MediaKeyStatusMap")}} interface returns a {{jsxref('Boolean')}}, asserting
+whether a value has been associated with the given key.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>boolean</em> = mediaKeyStatusMap(key)</pre>
+```js
+var boolean = mediaKeyStatusMap(key)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>key</dt>
-  <dd>The key whose value you want returned</dd>
-</dl>
+- key
+  - : The key whose value you want returned
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A {{jsxref('Boolean')}}.</p>
+A {{jsxref('Boolean')}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,58 +2,62 @@
 title: History.back()
 slug: Web/API/History/back
 tags:
-- API
-- HTML DOM
-- History
-- History API
-- Method
-- Reference
-- Web
+  - API
+  - HTML DOM
+  - History
+  - History API
+  - Method
+  - Reference
+  - Web
 browser-compat: api.History.back
 ---
-<div>{{APIRef("History API")}}</div>
+{{APIRef("History API")}}
 
-<p>The <strong><code>History.back()</code></strong> method causes
-    the browser to move back one page in the session history.</p>
+The **`History.back()`** method causes
+the browser to move back one page in the session history.
 
-<p>It has the same
-  effect as calling {{domxref("History.go", "history.go(-1)")}}. If there is no previous
-  page, this method call does nothing.</p>
+It has the same
+effect as calling {{domxref("History.go", "history.go(-1)")}}. If there is no previous
+page, this method call does nothing.
 
-<p>This method is {{glossary("asynchronous")}}. Add a listener for the
-  {{event("popstate")}} event in order to determine when the navigation has completed.</p>
+This method is {{glossary("asynchronous")}}. Add a listener for the
+{{event("popstate")}} event in order to determine when the navigation has completed.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">history.back()</pre>
+```js
+history.back()
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following short example causes a button on the page to navigate back one entry in
-  the session history.</p>
+The following short example causes a button on the page to navigate back one entry in
+the session history.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;button id="go-back"&gt;Go back!&lt;/button&gt;</pre>
+```html
+<button id="go-back">Go back!</button>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">document.getElementById('go-back').addEventListener('click', () =&gt; {
+```js
+document.getElementById('go-back').addEventListener('click', () => {
   history.back();
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("History")}}</li>
-  <li><a href="/en-US/docs/Web/API/History_API/Working_with_the_History_API">Working with
-      the History API</a></li>
-</ul>
+- {{domxref("History")}}
+- [Working with
+  the History API](/en-US/docs/Web/API/History_API/Working_with_the_History_API)

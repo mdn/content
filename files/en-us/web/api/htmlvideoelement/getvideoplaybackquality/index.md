@@ -2,66 +2,66 @@
 title: HTMLVideoElement.getVideoPlaybackQuality()
 slug: Web/API/HTMLVideoElement/getVideoPlaybackQuality
 tags:
-- API
-- Experimental
-- Frames
-- HTML DOM
-- HTMLVideoElement
-- Media
-- Media Playback Quality
-- Media Playback Quality API
-- Method
-- Playback
-- Quality
-- Reference
-- Time
-- Video
-- getVideoPlaybackQuality
+  - API
+  - Experimental
+  - Frames
+  - HTML DOM
+  - HTMLVideoElement
+  - Media
+  - Media Playback Quality
+  - Media Playback Quality API
+  - Method
+  - Playback
+  - Quality
+  - Reference
+  - Time
+  - Video
+  - getVideoPlaybackQuality
 browser-compat: api.HTMLVideoElement.getVideoPlaybackQuality
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p>The <strong>{{domxref("HTMLVideoElement")}}</strong> method
-    <code><strong>getVideoPlaybackQuality()</strong></code> creates and returns a
-    {{domxref("VideoPlaybackQuality")}} object containing metrics including how many
-    frames have been lost.</p>
+The **{{domxref("HTMLVideoElement")}}** method
+**`getVideoPlaybackQuality()`** creates and returns a
+{{domxref("VideoPlaybackQuality")}} object containing metrics including how many
+frames have been lost.
 
-<p>The data returned can be used to evaluate the quality of the video stream.</p>
+The data returned can be used to evaluate the quality of the video stream.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>videoPQ</em> = <em>videoElement</em>.getVideoPlaybackQuality();</pre>
+```js
+videoPQ = videoElement.getVideoPlaybackQuality();
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("VideoPlaybackQuality")}} object providing information about the video
-  element's current playback quality.</p>
+A {{domxref("VideoPlaybackQuality")}} object providing information about the video
+element's current playback quality.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example updates an element to indicate the total number of video frames that have
-  elapsed so far in the playback process. This value includes any dropped or corrupted
-  frames, so it's not the same as "total number of frames played."</p>
+This example updates an element to indicate the total number of video frames that have
+elapsed so far in the playback process. This value includes any dropped or corrupted
+frames, so it's not the same as "total number of frames played."
 
-<pre class="brush: js">var videoElem = document.getElementById("my_vid");
+```js
+var videoElem = document.getElementById("my_vid");
 var counterElem = document.getElementById("counter");
 var quality = videoElem.getVideoPlaybackQuality();
 
 counterElem.innerText = quality.totalVideoFrames;
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{HTMLElement("video")}} element</li>
-  <li>The {{domxref("VideoPlaybackQuality")}} interface.</li>
-</ul>
+- The {{HTMLElement("video")}} element
+- The {{domxref("VideoPlaybackQuality")}} interface.

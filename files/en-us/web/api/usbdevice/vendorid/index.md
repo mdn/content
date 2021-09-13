@@ -2,33 +2,35 @@
 title: USBDevice.vendorId
 slug: Web/API/USBDevice/vendorID
 tags:
-- API
-- Property
-- Reference
-- USB
-- USBDevice
-- WebUSB
-- WebUSB API
-- vendorID
+  - API
+  - Property
+  - Reference
+  - USB
+  - USBDevice
+  - WebUSB
+  - WebUSB API
+  - vendorID
 browser-compat: api.USBDevice.vendorId
 ---
-<p>{{SeeCompatTable}}{{APIRef("WebUSB API")}}</p>
+{{SeeCompatTable}}{{APIRef("WebUSB API")}}
 
-<p>The <strong><code>vendorId</code></strong> read only property of the
-  {{domxref("USBDevice")}} interface is the official usg.org-assigned vendor ID.</p>
+The **`vendorId`** read only property of the
+{{domxref("USBDevice")}} interface is the official usg.org-assigned vendor ID.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var serialNumber = USBDevice.vendorId</pre>
+```js
+var serialNumber = USBDevice.vendorId
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>The official usg.org-assigned vendor ID.</p>
+The official usg.org-assigned vendor ID.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

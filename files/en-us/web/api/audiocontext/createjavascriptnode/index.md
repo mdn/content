@@ -10,42 +10,39 @@ tags:
   - Web
   - createJavaScriptNode
 ---
-<p>{{APIRef("Web Audio API")}}{{deprecated_header}}</p>
+{{APIRef("Web Audio API")}}{{deprecated_header}}
 
-  <p>The <code>AudioContext.createJavaScriptNode()</code> method creates a
-    {{domxref("JavaScriptNode")}} which is used for directly manipulating audio data with
-    JavaScript.</p>
+The `AudioContext.createJavaScriptNode()` method creates a
+{{domxref("JavaScriptNode")}} which is used for directly manipulating audio data with
+JavaScript.
 
-<div class="note">
-  <p><strong>Note:</strong> This method is obsolete, and has been renamed to
-    {{domxref("BaseAudioContext/createScriptProcessor", "AudioContext.createScriptProcessor()")}}. See also
-    {{domxref("ScriptProcessorNode")}}.</p>
-</div>
+> **Note:** This method is obsolete, and has been renamed to
+> {{domxref("BaseAudioContext/createScriptProcessor", "AudioContext.createScriptProcessor()")}}. See also
+> {{domxref("ScriptProcessorNode")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var jsNode = audioCtx.createJavaScriptNode(bufferSize, numInputChannels, numOutputChannels);
-</pre>
+```js
+var jsNode = audioCtx.createJavaScriptNode(bufferSize, numInputChannels, numOutputChannels);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>bufferSize</code></dt>
-  <dd>The buffer size must be in units of sample frames, i.e., one of: 256, 512, 1024,
+- `bufferSize`
+  - : The buffer size must be in units of sample frames, i.e., one of: 256, 512, 1024,
     2048, 4096, 8192, or 16384. It controls the frequency of callbacks asking for a buffer
     refill. Smaller sizes allow for lower latency and higher for better overall quality.
-  </dd>
-  <dt><code>numInputChannels</code></dt>
-  <dd>The number of input channels in the audio stream.</dd>
-  <dt><code>numOutputChannels</code></dt>
-  <dd>The number of output channels in the audio stream.</dd>
-</dl>
+- `numInputChannels`
+  - : The number of input channels in the audio stream.
+- `numOutputChannels`
+  - : The number of output channels in the audio stream.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following script illustrates the use of <code>createJavaScriptNode()</code>:</p>
+The following script illustrates the use of `createJavaScriptNode()`:
 
-<pre class="brush: js">var SineWave = function(context) {
+```js
+var SineWave = function(context) {
   var that = this;
   this.x = 0; // Initial sample number
   this.context = context;
@@ -55,7 +52,7 @@ tags:
 
 SineWave.prototype.process = function(e) {
   var data = e.outputBuffer.getChannelData(0);
-  for (var i = 0; i &lt; data.length; ++i) {
+  for (var i = 0; i < data.length; ++i) {
     data[i] = Math.sin(this.x++);
   }
 }
@@ -67,15 +64,11 @@ SineWave.prototype.play = function() {
 SineWave.prototype.pause = function() {
   this.node.disconnect();
 }
-</pre>
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a
-      href="http://0xfe.blogspot.com/2011/08/generating-tones-with-web-audio-api.html">Generating
-      Tones with the Web Audio API</a></li>
-  <li><a
-      href="http://www.smartjava.org/content/exploring-html5-web-audio-visualizing-sound">Exploring
-      the HTML5 Web Audio: visualizing sound</a></li>
-</ul>
+- [Generating
+  Tones with the Web Audio API](http://0xfe.blogspot.com/2011/08/generating-tones-with-web-audio-api.html)
+- [Exploring
+  the HTML5 Web Audio: visualizing sound](http://www.smartjava.org/content/exploring-html5-web-audio-visualizing-sound)

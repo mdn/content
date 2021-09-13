@@ -2,63 +2,63 @@
 title: MutationObserver.disconnect()
 slug: Web/API/MutationObserver/disconnect
 tags:
-- API
-- Changes
-- DOM
-- DOM Changes
-- DOM Reference
-- DOM Tree
-- Disconnect
-- Method
-- Mutation Observer
-- Mutation Observer API
-- MutationObserver
-- Observing
-- Reference
-- Watching
-- mutation
-- stop
+  - API
+  - Changes
+  - DOM
+  - DOM Changes
+  - DOM Reference
+  - DOM Tree
+  - Disconnect
+  - Method
+  - Mutation Observer
+  - Mutation Observer API
+  - MutationObserver
+  - Observing
+  - Reference
+  - Watching
+  - mutation
+  - stop
 browser-compat: api.MutationObserver.disconnect
 ---
-<div>{{APIRef("DOM WHATWG")}}</div>
+{{APIRef("DOM WHATWG")}}
 
-<p>The {{domxref("MutationObserver")}} method
-    <code><strong>disconnect()</strong></code> tells the observer to stop watching for
-    mutations.</p>
+The {{domxref("MutationObserver")}} method
+**`disconnect()`** tells the observer to stop watching for
+mutations.
 
-<p>The observer can be reused by calling its
-  {{domxref("MutationObserver.observe", "observe()")}} method again.</p>
+The observer can be reused by calling its
+{{domxref("MutationObserver.observe", "observe()")}} method again.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>mutationObserver</var>.disconnect()
-</pre>
+```js
+mutationObserver.disconnect()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>undefined</code>.</p>
+`undefined`.
 
-<div class="note">
-  <p><strong>Note:</strong> All notifications of mutations that have already been
-    <em>detected</em>, but <em>not yet reported</em> to the observer, are discarded.</p>
-</div>
+> **Note:** All notifications of mutations that have already been
+> _detected_, but _not yet reported_ to the observer, are discarded.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>If the element being observed is removed from the DOM, and then subsequently released
-  by the browser's garbage collection mechanism, the <code>MutationObserver</code> is
-  likewise deleted.</p>
+If the element being observed is removed from the DOM, and then subsequently released
+by the browser's garbage collection mechanism, the `MutationObserver` is
+likewise deleted.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example creates an observer, then disconnects from it, leaving it available for
-  possible reuse.</p>
+This example creates an observer, then disconnects from it, leaving it available for
+possible reuse.
 
-<pre class="brush: js">const targetNode = document.querySelector("#someElement");
+```js
+const targetNode = document.querySelector("#someElement");
 const observerOptions = {
   childList: true,
   attributes: true
@@ -69,12 +69,13 @@ observer.observe(targetNode, observerOptions);
 
 /* some time later... */
 
-observer.disconnect();</pre>
+observer.disconnect();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -14,36 +14,33 @@ tags:
   - submit
 browser-compat: api.SubmitEvent
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p>The <code><strong>SubmitEvent</strong></code> interface defines the object used to represent an {{Glossary("HTML")}} form's {{domxref("HTMLFormElement.submit_event", "submit")}} event. This event is fired at the {{HTMLElement("form")}} when the form's submit action is invoked.</p>
+The **`SubmitEvent`** interface defines the object used to represent an {{Glossary("HTML")}} form's {{domxref("HTMLFormElement.submit_event", "submit")}} event. This event is fired at the {{HTMLElement("form")}} when the form's submit action is invoked.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("SubmitEvent.SubmitEvent", "SubmitEvent()")}}</dt>
- <dd>Creates and returns a new <code>SubmitEvent</code> object whose {{domxref("Event.type", "type")}} and other options are configured as specified. Note that currently the only valid <code>type</code> for a <code>SubmitEvent</code> is <code>submit</code>.</dd>
-</dl>
+- {{domxref("SubmitEvent.SubmitEvent", "SubmitEvent()")}}
+  - : Creates and returns a new `SubmitEvent` object whose {{domxref("Event.type", "type")}} and other options are configured as specified. Note that currently the only valid `type` for a `SubmitEvent` is `submit`.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>In addition to the properties listed below, this interface inherits the properties of its parent interface, {{domxref("Event")}}.</em></p>
+_In addition to the properties listed below, this interface inherits the properties of its parent interface, {{domxref("Event")}}._
 
-<dl>
- <dt>{{domxref("SubmitEvent.submitter", "submitter")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("HTMLElement")}} object which identifies the button or other element which was invoked to trigger the form being submitted.</dd>
-</dl>
+- {{domxref("SubmitEvent.submitter", "submitter")}} {{ReadOnlyInline}}
+  - : An {{domxref("HTMLElement")}} object which identifies the button or other element which was invoked to trigger the form being submitted.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>While <code>SubmitEvent</code> offers no methods of its own, it inherits any specified by its parent interface, {{domxref("Event")}}.</em></p>
+_While `SubmitEvent` offers no methods of its own, it inherits any specified by its parent interface, {{domxref("Event")}}._
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this example, a shopping cart may have an assortment of different submit buttons depending on factors such as the user's settings, the shop's settings, and any minimum or maximum shopping card totals established by the payment processors. Each of the submit elements' {{domxref("Element.id", "id")}} is used to identify which payment processor the button corresponds to.</p>
+In this example, a shopping cart may have an assortment of different submit buttons depending on factors such as the user's settings, the shop's settings, and any minimum or maximum shopping card totals established by the payment processors. Each of the submit elements' {{domxref("Element.id", "id")}} is used to identify which payment processor the button corresponds to.
 
-<pre class="brush: js">let form = document.querySelector("form");
-form.addEventListener("submit", (event) =&gt; {
+```js
+let form = document.querySelector("form");
+form.addEventListener("submit", (event) => {
   let submitter = event.submitter;
   let handler = submitter.id;
 
@@ -53,15 +50,14 @@ form.addEventListener("submit", (event) =&gt; {
     showAlertMessage("An unknown or unaccepted payment type was selected. Please try again.", "OK");
   }
 });
+```
 
-</pre>
+The handler ID is obtained by using the `submit` event's {{domxref("SubmitEvent.submitter", "submitter")}} property to get the submit button, from which we then get the ID. With that in hand, we can call a `processOrder()` function to handle the order, passing along the form and the handler ID.
 
-<p>The handler ID is obtained by using the <code>submit</code> event's {{domxref("SubmitEvent.submitter", "submitter")}} property to get the submit button, from which we then get the ID. With that in hand, we can call a <code>processOrder()</code> function to handle the order, passing along the form and the handler ID.</p>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

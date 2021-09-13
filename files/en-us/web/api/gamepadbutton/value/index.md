@@ -9,36 +9,38 @@ tags:
   - Reference
 browser-compat: api.GamepadButton.value
 ---
-<p>{{APIRef("Gamepad API")}}</p>
+{{APIRef("Gamepad API")}}
 
-<p>The <code><strong>GamepadButton.value</strong></code> property of the
-	{{domxref("GamepadButton")}} interface returns a double value used to represent the
-	current state of analog buttons on many modern gamepads, such as the triggers.</p>
+The **`GamepadButton.value`** property of the
+{{domxref("GamepadButton")}} interface returns a double value used to represent the
+current state of analog buttons on many modern gamepads, such as the triggers.
 
-<p>The values are normalized to the range <code>0.0</code> — <code>1.0</code>, with
-	<code>0.0</code> representing a button that is not pressed, and 1.0 representing a
-	button that is fully pressed.</p>
+The values are normalized to the range `0.0` — `1.0`, with
+`0.0` representing a button that is not pressed, and 1.0 representing a
+button that is fully pressed.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">let gp = navigator.getGamepads()[0];
+```js
+let gp = navigator.getGamepads()[0];
 
-if(gp.buttons[0].value &gt; 0) {
+if(gp.buttons[0].value > 0) {
   // respond to analog button being pressed in
-} </pre>
+}
+```
 
-<h2 id="Value">Value</h2>
+## Value
 
-<p>A double.</p>
+A double.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<p><a href="/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API">Using the Gamepad API</a></p>
+[Using the Gamepad API](/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)

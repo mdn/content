@@ -7,49 +7,43 @@ tags:
   - Reference
 browser-compat: api.Element.beforescriptexecute_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}{{Non-standard_header}}
 
-<div>{{Non-standard_header}}</div>
+> **Warning:** This event was a proposal in an early version of the specification. Do not rely on it.
 
-<div class="warning">
-<p><strong>Warning:</strong> This event was a proposal in an early version of the specification. Do not rely on it.</p>
-</div>
+The **`beforescriptexecute`** event is fired when a script is about to be executed. Cancelling the event prevents the script from executing.
 
-<p>The <strong><code>beforescriptexecute</code></strong> event is fired when a script is about to be executed. Cancelling the event prevents the script from executing.</p>
-
-<p>It is a proprietary event specific to Gecko (Firefox).</p>
+It is a proprietary event specific to Gecko (Firefox).
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>None</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>None</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any specification.</p>
+Not part of any specification.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><code><a href="/en-US/docs/Web/API/Element/afterscriptexecute_event">afterscriptexecute</a></code> event</li>
-</ul>
+- [`afterscriptexecute`](/en-US/docs/Web/API/Element/afterscriptexecute_event) event

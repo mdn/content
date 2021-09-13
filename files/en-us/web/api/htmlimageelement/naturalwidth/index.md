@@ -2,66 +2,66 @@
 title: HTMLImageElement.naturalWidth
 slug: Web/API/HTMLImageElement/naturalWidth
 tags:
-- API
-- HTML
-- HTML DOM
-- HTMLImageElement
-- Intrinsic Width
-- Intrinsic size
-- Property
-- Reference
-- naturalWidth
-- size
-- width
+  - API
+  - HTML
+  - HTML DOM
+  - HTMLImageElement
+  - Intrinsic Width
+  - Intrinsic size
+  - Property
+  - Reference
+  - naturalWidth
+  - size
+  - width
 browser-compat: api.HTMLImageElement.naturalWidth
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p>The {{domxref("HTMLImageElement")}} interface's read-only
-    <code><strong>naturalWidth</strong></code> property returns the intrinsic (natural),
-    density-corrected width of the image in {{Glossary("CSS pixel", "CSS
-    pixels")}}.</p>
+The {{domxref("HTMLImageElement")}} interface's read-only
+**`naturalWidth`** property returns the intrinsic (natural),
+density-corrected width of the image in {{Glossary("CSS pixel", "CSS
+    pixels")}}.
 
-<p>This is the width the image is if drawn with nothing constraining
-  its width; if you neither specify a width for the image nor place the image inside a
-  container that limits or expressly specifies the image width, this is the number of CSS
-  pixels wide the image will be.</p>
+This is the width the image is if drawn with nothing constraining
+its width; if you neither specify a width for the image nor place the image inside a
+container that limits or expressly specifies the image width, this is the number of CSS
+pixels wide the image will be.
 
-<p>The corresponding {{domxref("HTMLImageElement.naturalHeight", "naturalHeight")}} method
-  returns the natural height of the image.</p>
+The corresponding {{domxref("HTMLImageElement.naturalHeight", "naturalHeight")}} method
+returns the natural height of the image.
 
-<div class="notecard note"><p><strong>Note:</strong> Most of the time the natural width is the actual width of the image sent by the server.
-  Nevertheless, browsers can modify an image before pushing it to the renderer. For example, Chrome
-  <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1187043#c7">degrades the resolution of
-  images on low-end devices</a>. In such cases, <code>naturalWidth</code> will consider the width of the image modified
-  by such browser interventions as the natural width, and returns this value.</p>
-</div>
+> **Note:** Most of the time the natural width is the actual width of the image sent by the server.
+> Nevertheless, browsers can modify an image before pushing it to the renderer. For example, Chrome
+> [degrades the resolution of
+> images on low-end devices](https://bugs.chromium.org/p/chromium/issues/detail?id=1187043#c7). In such cases, `naturalWidth` will consider the width of the image modified
+> by such browser interventions as the natural width, and returns this value.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">let <em>naturalWidth</em> = <em>htmlImageElement</em>.naturalWidth;</pre>
+```js
+let naturalWidth = htmlImageElement.naturalWidth;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An integer value indicating the intrinsic width of the image, in CSS pixels. This is
-  the width at which the image is naturally drawn when no constraint or specific value is
-  established for the image. This natural width is corrected for the pixel density of the
-  device on which it's being presented, unlike the value of
-  {{domxref("HTMLImageElement.width", "width")}}.</p>
+An integer value indicating the intrinsic width of the image, in CSS pixels. This is
+the width at which the image is naturally drawn when no constraint or specific value is
+established for the image. This natural width is corrected for the pixel density of the
+device on which it's being presented, unlike the value of
+{{domxref("HTMLImageElement.width", "width")}}.
 
-<p>If the intrinsic width is not available—either because the image does not specify an
-  intrinsic width or because the image data is not available in order to obtain this
-  information, <code>naturalWidth</code> returns 0.</p>
+If the intrinsic width is not available—either because the image does not specify an
+intrinsic width or because the image data is not available in order to obtain this
+information, `naturalWidth` returns 0.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See <a href="/en-US/docs/Web/API/HTMLImageElement/naturalHeight#example"><code>HTMLImageElement.naturalHeight</code></a> for example code that displays an image in both its natural "density-adjusted" size, and in its rendered size as altered by the page's CSS and other factors.</p>
+See [`HTMLImageElement.naturalHeight`](/en-US/docs/Web/API/HTMLImageElement/naturalHeight#example) for example code that displays an image in both its natural "density-adjusted" size, and in its rendered size as altered by the page's CSS and other factors.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

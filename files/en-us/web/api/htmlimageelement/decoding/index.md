@@ -2,57 +2,58 @@
 title: HTMLImageElement.decoding
 slug: Web/API/HTMLImageElement/decoding
 tags:
-- API
-- HTML DOM
-- HTMLImageElement
-- Property
-- Reference
-- decoding
+  - API
+  - HTML DOM
+  - HTMLImageElement
+  - Property
+  - Reference
+  - decoding
 browser-compat: api.HTMLImageElement.decoding
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <strong><code>decoding</code></strong> property of the
-  {{domxref("HTMLImageElement")}} interface represents a hint given to the browser on how
-  it should decode the image.</p>
+The **`decoding`** property of the
+{{domxref("HTMLImageElement")}} interface represents a hint given to the browser on how
+it should decode the image.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>refStr</var> = <var>imgElem</var>.decoding;
-<var>imgElem</var>.decoding = <var>refStr</var>;</pre>
+```js
+refStr = imgElem.decoding;
+imgElem.decoding = refStr;
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<p>A {{domxref("DOMString")}} representing the decoding hint. Possible values are:</p>
+A {{domxref("DOMString")}} representing the decoding hint. Possible values are:
 
-<ul>
-  <li><strong><code>sync</code></strong>: Decode the image synchronously for atomic
-    presentation with other content.</li>
-  <li><strong><code>async</code></strong>: Decode the image asynchronously to reduce delay
-    in presenting other content.</li>
-  <li><strong><code>auto</code></strong>: Default mode, which indicates no preference for
-    the decoding mode. The browser decides what is best for the user.</li>
-</ul>
+- **`sync`**: Decode the image synchronously for atomic
+  presentation with other content.
+- **`async`**: Decode the image asynchronously to reduce delay
+  in presenting other content.
+- **`auto`**: Default mode, which indicates no preference for
+  the decoding mode. The browser decides what is best for the user.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>The <code>decoding</code> property allows you to control whether or not the browser is
-  allowed to try to parallelize loading your image. If doing so would cause problems, you
-  can specify <code>sync</code> to disable asynchronous loading. This can be useful when
-  applied to {{HTMLElement("img")}} elements, but may be even more so when used for
-  offscreen image objects.</p>
+The `decoding` property allows you to control whether or not the browser is
+allowed to try to parallelize loading your image. If doing so would cause problems, you
+can specify `sync` to disable asynchronous loading. This can be useful when
+applied to {{HTMLElement("img")}} elements, but may be even more so when used for
+offscreen image objects.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js;">var img = new Image();
+```js
+var img = new Image();
 img.decoding = 'sync';
 img.src = 'img/logo.png';
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

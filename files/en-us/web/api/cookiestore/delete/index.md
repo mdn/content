@@ -9,61 +9,56 @@ tags:
   - CookieStore
 browser-compat: api.CookieStore.delete
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("Cookie Store API")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("Cookie Store API")}}
 
-<p>The <strong><code>delete()</code></strong> method of the {{domxref("CookieStore")}} interface deletes a cookie with the given name or options object. (See below.) The <code>delete()</code> method expires the cookie by changing the date to one in the past.</p>
+The **`delete()`** method of the {{domxref("CookieStore")}} interface deletes a cookie with the given name or options object. (See below.) The `delete()` method expires the cookie by changing the date to one in the past.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <var>promise</var> = cookieStore.delete(<var>name</var>);
-var <var>promise</var> = cookieStore.delete(<var>options</var>);</pre>
+    var promise = cookieStore.delete(name);
+    var promise = cookieStore.delete(options);
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>This method requires one of the following:</p>
+This method requires one of the following:
 
-<dl>
-  <dt><code>name</code></dt>
-  <dd>A {{domxref("USVString")}} with the name of a cookie.</dd>
-  <dt>options</dt>
-  <dd>An object containing:
-    <dl>
-      <dt><code>name</code></dt>
-      <dd>A {{domxref("USVString")}} with the name of a cookie.</dd>
-      <dt><code>url</code>{{Optional_Inline}}</dt>
-      <dd>A {{domxref("USVString")}} with the url of a cookie.</dd>
-      <dt><code>path</code>{{Optional_Inline}}</dt>
-      <dd>A {{domxref("USVString")}} containing a path.</dd>
-    </dl>
-  </dd>
-</dl>
+- `name`
+  - : A {{domxref("USVString")}} with the name of a cookie.
+- options
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The <code>url</code> option enables the modification of a cookie scoped under a particular URL. Service workers can obtain cookies that would be sent to any URL under their scope. From a document you may only obtain the cookies at the current URL, so the only valid URL in a document context is the document's URL.</p>
-</div>
+  - : An object containing:
 
-<h3 id="Returns">Return value</h3>
+    - `name`
+      - : A {{domxref("USVString")}} with the name of a cookie.
+    - `url`{{Optional_Inline}}
+      - : A {{domxref("USVString")}} with the url of a cookie.
+    - `path`{{Optional_Inline}}
+      - : A {{domxref("USVString")}} containing a path.
 
-<p>A {{jsxref("Promise")}} that resolves with {{jsxref("Undefined")}} when deletion completes.</p>
+> **Note:** The `url` option enables the modification of a cookie scoped under a particular URL. Service workers can obtain cookies that would be sent to any URL under their scope. From a document you may only obtain the cookies at the current URL, so the only valid URL in a document context is the document's URL.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Return value
 
-<dl>
-  <dt>{{jsxref("TypeError")}}</dt>
-  <dd>Thrown if deleting the cookie represented by the given <code>name</code> or <code>options</code> fails.</dd>
-</dl>
+A {{jsxref("Promise")}} that resolves with {{jsxref("Undefined")}} when deletion completes.
 
-<h2 id="Examples">Examples</h2>
+### Exceptions
 
-<p>In this example a cookie is deleted by passing the name to the <code>delete()</code> method.</p>
+- {{jsxref("TypeError")}}
+  - : Thrown if deleting the cookie represented by the given `name` or `options` fails.
 
-<pre class="brush: js">let result = cookieStore.delete('cookie1');
-console.log(result);</pre>
+## Examples
 
-<h2 id="Specifications">Specifications</h2>
+In this example a cookie is deleted by passing the name to the `delete()` method.
+
+```js
+let result = cookieStore.delete('cookie1');
+console.log(result);
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

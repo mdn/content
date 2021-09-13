@@ -5,54 +5,57 @@ tags:
   - DOM
   - NeedsUpdate
 ---
-<div>{{DefaultAPISidebar("DOM")}}</div>
+{{DefaultAPISidebar("DOM")}}
 
-<p>The W3C's <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html">DOM Level 1 Core</a> is an API for manipulating the DOM trees of HTML and XML documents (among other tree-like types of documents). Due to the ubiquity of the DOM, this API is supported in all major browsers, including Mozilla Firefox and Microsoft Internet Explorer, and serves as a base for scripting on the web.</p>
+The W3C's [DOM Level 1 Core](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html) is an API for manipulating the DOM trees of HTML and XML documents (among other tree-like types of documents). Due to the ubiquity of the DOM, this API is supported in all major browsers, including Mozilla Firefox and Microsoft Internet Explorer, and serves as a base for scripting on the web.
 
-<h2 id="What_is_a_content_tree.3F">What is a DOM tree?</h2>
+## What is a DOM tree?
 
-<p>A <a href="https://www.w3.org/TR/REC-DOM-Level-1/introduction.html">DOM</a> tree is a kind of <a href="https://en.wikipedia.org/wiki/Tree_structure">tree</a> whose nodes represent an HTML or XML document's contents. Each HTML or XML document has a unique DOM tree representation. For example, the following document</p>
+A [DOM](https://www.w3.org/TR/REC-DOM-Level-1/introduction.html) tree is a kind of [tree](https://en.wikipedia.org/wiki/Tree_structure) whose nodes represent an HTML or XML document's contents. Each HTML or XML document has a unique DOM tree representation. For example, the following document
 
-<pre class="brush: html">&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;My Document&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;h1&gt;Header&lt;/h1&gt;
-  &lt;p&gt;Paragraph&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+```html
+<html>
+<head>
+  <title>My Document</title>
+</head>
+<body>
+  <h1>Header</h1>
+  <p>Paragraph</p>
+</body>
+</html>
+```
 
-<p>has a DOM tree that looks like this:</p>
+has a DOM tree that looks like this:
 
-<p><img src="using_the_w3c_dom_level_1_core-doctree.jpg"></p>
+![](using_the_w3c_dom_level_1_core-doctree.jpg)
 
-<p>(Note that, although the above tree is similar to the above document's DOM tree, it's not identical, as <a href="/en-US/docs/Web/API/Document_Object_Model/Whitespace">the actual DOM tree preserves whitespace</a>.)</p>
+(Note that, although the above tree is similar to the above document's DOM tree, it's not identical, as [the actual DOM tree preserves whitespace](/en-US/docs/Web/API/Document_Object_Model/Whitespace).)
 
-<p>When a web browser parses an HTML document, it builds a DOM tree and then uses it to display the document.</p>
+When a web browser parses an HTML document, it builds a DOM tree and then uses it to display the document.
 
-<h2 id="What_does_the_DOM_Level_1_Core_let_me_do.3F">What does the DOM Level 1 Core let me do?</h2>
+## What does the DOM Level 1 Core let me do?
 
-<p>The W3C DOM Level 1 Core allows you to change a DOM tree in <em>any way you want</em>. This implies the ability to create any HTML or XML document from scratch, or to change any contents of a given HTML or XML document. The easiest way for web page authors to edit the DOM of a document is to use JavaScript to access the <code>document</code> property of the global object. This <code>document</code> object implements the <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#i-Document">Document interface</a> from the W3C's DOM Level 1 spec.</p>
+The W3C DOM Level 1 Core allows you to change a DOM tree in _any way you want_. This implies the ability to create any HTML or XML document from scratch, or to change any contents of a given HTML or XML document. The easiest way for web page authors to edit the DOM of a document is to use JavaScript to access the `document` property of the global object. This `document` object implements the [Document interface](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#i-Document) from the W3C's DOM Level 1 spec.
 
-<h2 id="A_simple_example">A simple example</h2>
+## A simple example
 
-<p>Suppose the author wants to change the header of the above document and write two paragraphs instead of one. The following script would do the job:</p>
+Suppose the author wants to change the header of the above document and write two paragraphs instead of one. The following script would do the job:
 
-<h3 id="HTML_Content">HTML Content</h3>
+### HTML Content
 
-<pre class="brush: html">&lt;body&gt;
-&lt;input type="button" value="Change this document." onclick="change()"&gt;
-&lt;h2&gt;Header&lt;/h2&gt;
-&lt;p&gt;Paragraph&lt;/p&gt;
-&lt;/body&gt;
-</pre>
+```html
+<body>
+<input type="button" value="Change this document." onclick="change()">
+<h2>Header</h2>
+<p>Paragraph</p>
+</body>
+```
 
-<h3 id="JavaScript_Content">JavaScript Content</h3>
+### JavaScript Content
 
-<pre class="brush: js">function change() {
-    // document.getElementsByTagName("H2") returns a NodeList of the &lt;h2&gt;
+```js
+function change() {
+    // document.getElementsByTagName("H2") returns a NodeList of the <h2>
     // elements in the document, and the first is number 0:
 
     var header = document.getElementsByTagName("H2").item(0);
@@ -72,21 +75,20 @@ tags:
     // and put the paragraph on the end of the document by appending it to
     // the BODY (which is the parent of para)
     para.parentNode.appendChild(newElement);
-  }</pre>
+  }
+```
 
-<p>{{ EmbedLiveSample('A_simple_example', 800, 300) }}</p>
+{{ EmbedLiveSample('A_simple_example', 800, 300) }}
 
-<p>You can see this script as <a href="/en-US/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core/using_the_w3c_dom_level_1_core-doctree.jpg">a complete example</a>.</p>
+You can see this script as [a complete example](/en-US/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core/using_the_w3c_dom_level_1_core-doctree.jpg).
 
-<h2 id="How_can_I_learn_more.3F">How can I learn more?</h2>
+## How can I learn more?
 
-<p>Now that you are familiar with the basic concepts of the DOM, you may want to learn about the <a href="/en-US/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces">DOM Level 1 fundamental methods</a>.</p>
+Now that you are familiar with the basic concepts of the DOM, you may want to learn about the [DOM Level 1 fundamental methods](/en-US/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces).
 
-<p>See also the <a href="https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html">DOM Level 1 Core specification</a> from the W3C. It's a reasonably clear spec, although it is formal. The main thing that's useful to authors is the description of the different DOM objects and all their properties and methods. Also see our <a href="/en-US/docs/Web/API/Document_Object_Model">other DOM documentation</a>.</p>
+See also the [DOM Level 1 Core specification](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html) from the W3C. It's a reasonably clear spec, although it is formal. The main thing that's useful to authors is the description of the different DOM objects and all their properties and methods. Also see our [other DOM documentation](/en-US/docs/Web/API/Document_Object_Model).
 
-<p><strong>Original Document Information</strong></p>
+**Original Document Information**
 
-<ul>
- <li>Author(s): L. David Baron &lt;dbaron at dbaron dot org&gt;</li>
- <li>Copyright Information: © 1998-2005 by individual mozilla.org contributors; content available under a <a href="https://www.mozilla.org/foundation/licensing/website-content.html">Creative Commons license</a></li>
-</ul>
+- Author(s): L. David Baron \<dbaron at dbaron dot org>
+- Copyright Information: © 1998-2005 by individual mozilla.org contributors; content available under a [Creative Commons license](https://www.mozilla.org/foundation/licensing/website-content.html)

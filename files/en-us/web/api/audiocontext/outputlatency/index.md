@@ -11,44 +11,44 @@ tags:
   - outputLatency
 browser-compat: api.AudioContext.outputLatency
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<p>The <strong><code>outputLatency</code></strong> read-only property of
-  the {{domxref("AudioContext")}} Interface provides an estimation of the output latency
-  of the current audio context.</p>
+The **`outputLatency`** read-only property of
+the {{domxref("AudioContext")}} Interface provides an estimation of the output latency
+of the current audio context.
 
-<p>This is the time, in seconds, between the browser passing an audio buffer out of an
-  audio graph over to the host system's audio subsystem to play, and the time at which the
-  first sample in the buffer is actually processed by the audio output device.</p>
+This is the time, in seconds, between the browser passing an audio buffer out of an
+audio graph over to the host system's audio subsystem to play, and the time at which the
+first sample in the buffer is actually processed by the audio output device.
 
-<p>It varies depending on the platform and the available hardware.</p>
+It varies depending on the platform and the available hardware.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>outputLatency</em> = <em>audioCtx</em>.outputLatency;
-</pre>
+```js
+var outputLatency = audioCtx.outputLatency;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A double representing the output latency in seconds.</p>
+A double representing the output latency in seconds.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">const audioCtx = new AudioContext();
-console.log(audioCtx.outputLatency);</pre>
+```js
+const audioCtx = new AudioContext();
+console.log(audioCtx.outputLatency);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
-  </li>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)

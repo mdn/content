@@ -10,45 +10,43 @@ tags:
   - Navigator
 browser-compat: api.Navigator.clearAppBadge
 ---
-<div>{{DefaultAPISidebar("Badging API")}}</div>
+{{DefaultAPISidebar("Badging API")}}
 
-<p>The <strong><code>clearAppBadge()</code></strong> method of the {{domxref("Navigator")}} interface clears a badge on the current app's icon by setting it to <code>nothing</code>. The value <code>nothing</code> indictes that no badge is currently set, and the status of the badge is <em>cleared</em>.</p>
+The **`clearAppBadge()`** method of the {{domxref("Navigator")}} interface clears a badge on the current app's icon by setting it to `nothing`. The value `nothing` indictes that no badge is currently set, and the status of the badge is _cleared_.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">let promise = Navigator.clearAppBadge();</pre>
+    let promise = Navigator.clearAppBadge();
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Returns">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.</p>
+A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt><code>NotSupportedError</code></dt>
-  <dd>The {{domxref("Navigator")}} does not have a document that this action can be acted on.</dd>
-</dl>
+- `NotSupportedError`
+  - : The {{domxref("Navigator")}} does not have a document that this action can be acted on.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Once all messages in an application have been read, call <code>clearAppBadge()</code> to clear the badge and remove the notification.</p>
+Once all messages in an application have been read, call `clearAppBadge()` to clear the badge and remove the notification.
 
-<pre class="brush: js">navigator.clearAppBadge()</pre>
+```js
+navigator.clearAppBadge()
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2>See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://web.dev/badging-api/">Badging for app icons</a></li>
-</ul>
+- [Badging for app icons](https://web.dev/badging-api/)

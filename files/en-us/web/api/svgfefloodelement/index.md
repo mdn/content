@@ -9,43 +9,39 @@ tags:
   - SVG DOM
 browser-compat: api.SVGFEFloodElement
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <strong><code>SVGFEFloodElement</code></strong> interface corresponds to the {{SVGElement("feFlood")}} element.</p>
+The **`SVGFEFloodElement`** interface corresponds to the {{SVGElement("feFlood")}} element.
 
-<p>{{InheritanceDiagram(600, 140)}}</p>
+{{InheritanceDiagram(600, 140)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}.</em></p>
+_This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
 
-<dl>
-  <dt>{{domxref("SVGFEFloodElement.height")}} {{ReadOnlyInline}}</dt>
-  <dd>An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("height")}} attribute of the given element.</dd>
-  <dt>{{domxref("SVGFEFloodElement.result")}} {{ReadOnlyInline}}</dt>
-  <dd>An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("result")}} attribute of the given element.</dd>
-  <dt>{{domxref("SVGFEFloodElement.width")}} {{ReadOnlyInline}}</dt>
-  <dd>An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("width")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGFEFloodElement.x")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("x")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGFEFloodElement.y")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("y")}} attribute of the given element.</dd>
-</dl>
+- {{domxref("SVGFEFloodElement.height")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("height")}} attribute of the given element.
+- {{domxref("SVGFEFloodElement.result")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("result")}} attribute of the given element.
+- {{domxref("SVGFEFloodElement.width")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("width")}} attribute of the given element.
+- {{domxref("SVGFEFloodElement.x")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("x")}} attribute of the given element.
+- {{domxref("SVGFEFloodElement.y")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("y")}} attribute of the given element.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface doesn't implement any specific methods, but inherits methods from its parent interface, {{domxref("SVGElement")}}.</em></p>
+_This interface doesn't implement any specific methods, but inherits methods from its parent interface, {{domxref("SVGElement")}}._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGElement("feFlood")}}</li>
-</ul>
+- {{SVGElement("feFlood")}}

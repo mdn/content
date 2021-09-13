@@ -10,32 +10,34 @@ tags:
   - NeedsUpdate
   - XML
 ---
-<p>{{draft}}</p>
+{{draft}}
 
-<p>This page describes how to use the <a href="https://www.w3.org/TR/DOM-Level-3-Core">DOM Core</a> API in JavaScript to create and modify DOM objects. It applies to all Gecko-based applications (such as Firefox) both in privileged (extensions) and unprivileged (web pages) code.</p>
+This page describes how to use the [DOM Core](https://www.w3.org/TR/DOM-Level-3-Core) API in JavaScript to create and modify DOM objects. It applies to all Gecko-based applications (such as Firefox) both in privileged (extensions) and unprivileged (web pages) code.
 
-<h3 id="Dynamically_creating_a_DOM_tree">Dynamically creating a DOM tree</h3>
+### Dynamically creating a DOM tree
 
-<p>Consider the following XML document:</p>
+Consider the following XML document:
 
-<pre class="brush: xml">&lt;?xml version="1.0"?&gt;
-&lt;people&gt;
-  &lt;person first-name="eric" middle-initial="H" last-name="jung"&gt;
-    &lt;address street="321 south st" city="denver" state="co" country="usa"/&gt;
-    &lt;address street="123 main st" city="arlington" state="ma" country="usa"/&gt;
-  &lt;/person&gt;
+```xml
+<?xml version="1.0"?>
+<people>
+  <person first-name="eric" middle-initial="H" last-name="jung">
+    <address street="321 south st" city="denver" state="co" country="usa"/>
+    <address street="123 main st" city="arlington" state="ma" country="usa"/>
+  </person>
 
-  &lt;person first-name="jed" last-name="brown"&gt;
-    &lt;address street="321 north st" city="atlanta" state="ga" country="usa"/&gt;
-    &lt;address street="123 west st" city="seattle" state="wa" country="usa"/&gt;
-    &lt;address street="321 south avenue" city="denver" state="co" country="usa"/&gt;
-  &lt;/person&gt;
-&lt;/people&gt;
-</pre>
+  <person first-name="jed" last-name="brown">
+    <address street="321 north st" city="atlanta" state="ga" country="usa"/>
+    <address street="123 west st" city="seattle" state="wa" country="usa"/>
+    <address street="321 south avenue" city="denver" state="co" country="usa"/>
+  </person>
+</people>
+```
 
-<p>The W3C DOM API, supported by Mozilla, can be used to create an in-memory representation of this document like so:</p>
+The W3C DOM API, supported by Mozilla, can be used to create an in-memory representation of this document like so:
 
-<pre class="brush: js">var doc = document.implementation.createDocument("", "", null);
+```js
+var doc = document.implementation.createDocument("", "", null);
 var peopleElem = doc.createElement("people");
 
 var personElem1 = doc.createElement("person");
@@ -85,13 +87,14 @@ personElem2.appendChild(addressElem5);
 peopleElem.appendChild(personElem1);
 peopleElem.appendChild(personElem2);
 doc.appendChild(peopleElem);
-</pre>
+```
 
-<p>See also the <a href="/en-US/docs/XUL_Tutorial/Document_Object_Model"> DOM chapter of the XUL Tutorial</a>.</p>
+See also the [DOM chapter of the XUL Tutorial](/en-US/docs/XUL_Tutorial/Document_Object_Model).
 
-<p>You can automate the creation of a DOM tree using a <a href="/en-US/docs/JXON#JXON_reverse_algorithms">JXON reverse algorithm</a> in association with the following JSON representation:</p>
+You can automate the creation of a DOM tree using a [JXON reverse algorithm](/en-US/docs/JXON#JXON_reverse_algorithms) in association with the following JSON representation:
 
-<pre class="brush: js">{
+```js
+{
   "people": {
     "person": [{
       "address": [{
@@ -130,21 +133,19 @@ doc.appendChild(peopleElem);
     }]
   }
 }
-</pre>
+```
 
-<h3 id="So_what.3F">So what?</h3>
+### So what?
 
-<p>DOM trees can be <a href="/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript"> queried using XPath expressions</a>, converted to strings or written to a local or remote files using <a href="/en-US/docs/Web/Guide/Parsing_and_serializing_XML"> XMLSerializer</a> (without having to first convert to a string), <a href="/en-US/docs/Web/API/XMLHttpRequest">POSTed to a web server</a> (via <code>XMLHttpRequest</code>), transformed using <a href="/en-US/docs/Web/XSLT">XSLT</a>, <a href="/en-US/docs/Glossary/XLink">XLink</a>, converted to a JavaScript object through a <a href="/en-US/docs/JXON">JXON algorithm</a>, etc.</p>
+DOM trees can be [queried using XPath expressions](/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript), converted to strings or written to a local or remote files using [XMLSerializer](/en-US/docs/Web/Guide/Parsing_and_serializing_XML) (without having to first convert to a string), [POSTed to a web server](/en-US/docs/Web/API/XMLHttpRequest) (via `XMLHttpRequest`), transformed using [XSLT](/en-US/docs/Web/XSLT), [XLink](/en-US/docs/Glossary/XLink), converted to a JavaScript object through a [JXON algorithm](/en-US/docs/JXON), etc.
 
-<p>You can use DOM trees to model data which isn't well-suited for RDF (or perhaps you just don't like RDF). Another application is that, since XUL is XML, the UI of your application can be dynamically manipulated, downloaded, uploaded, saved, loaded, converted, or transformed quite easily.</p>
+You can use DOM trees to model data which isn't well-suited for RDF (or perhaps you just don't like RDF). Another application is that, since XUL is XML, the UI of your application can be dynamically manipulated, downloaded, uploaded, saved, loaded, converted, or transformed quite easily.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/XML">XML</a></li>
- <li><a href="/en-US/docs/JXON">JXON</a></li>
- <li><a href="/en-US/docs/Web/XPath">XPath</a></li>
- <li><a href="/en-US/docs/E4X">E4X (ECMAScript for XML)</a></li>
- <li><a href="/en-US/docs/Web/Guide/Parsing_and_serializing_XML">Parsing and serializing XML</a></li>
- <li><a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></li>
-</ul>
+- [XML](/en-US/docs/Web/XML)
+- [JXON](/en-US/docs/JXON)
+- [XPath](/en-US/docs/Web/XPath)
+- [E4X (ECMAScript for XML)](/en-US/docs/E4X)
+- [Parsing and serializing XML](/en-US/docs/Web/Guide/Parsing_and_serializing_XML)
+- [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest)

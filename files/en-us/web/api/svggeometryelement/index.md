@@ -10,40 +10,36 @@ tags:
   - SVG DOM
 browser-compat: api.SVGGeometryElement
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <code>SVGGeometryElement</code> interface represents SVG elements whose rendering is defined by geometry with an equivalent path, and which can be filled and stroked. This includes paths and the basic shapes.</p>
+The `SVGGeometryElement` interface represents SVG elements whose rendering is defined by geometry with an equivalent path, and which can be filled and stroked. This includes paths and the basic shapes.
 
-<p>{{InheritanceDiagram(600, 140)}}</p>
+{{InheritanceDiagram(600, 140)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface also inherits properties from its parent, {{domxref("SVGGraphicsElement")}}.</em></p>
+_This interface also inherits properties from its parent, {{domxref("SVGGraphicsElement")}}._
 
-<dl>
- <dt>{{domxref("SVGGeometryElement.pathLength")}} {{readOnlyInline}}</dt>
- <dd>This property reflects the {{SVGAttr("pathLength")}} attribute.</dd>
-</dl>
+- {{domxref("SVGGeometryElement.pathLength")}} {{readOnlyInline}}
+  - : This property reflects the {{SVGAttr("pathLength")}} attribute.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface also inherits methods from its parent, {{domxref("SVGGraphicsElement")}}.</em></p>
+_This interface also inherits methods from its parent, {{domxref("SVGGraphicsElement")}}._
 
-<dl>
- <dt>{{domxref("SVGGeometryElement.isPointInFill()")}}</dt>
- <dd>Determines whether a given point is within the fill shape of an element. Normal hit testing rules apply; the value of the {{cssxref("pointer-events")}} property on the element determines whether a point is considered to be within the fill.</dd>
- <dt>{{domxref("SVGGeometryElement.isPointInStroke()")}}</dt>
- <dd>Determines whether a given point is within the stroke shape of an element. Normal hit testing rules apply; the value of the {{cssxref("pointer-events")}} property on the element determines whether a point is considered to be within the stroke.</dd>
- <dt>{{domxref("SVGGeometryElement.getTotalLength()")}}</dt>
- <dd>Returns the user agent's computed value for the total length of the path in user units.</dd>
- <dt>{{domxref("SVGGeometryElement.getPointAtLength()")}}</dt>
- <dd>Returns the point at a given distance along the path.</dd>
-</dl>
+- {{domxref("SVGGeometryElement.isPointInFill()")}}
+  - : Determines whether a given point is within the fill shape of an element. Normal hit testing rules apply; the value of the {{cssxref("pointer-events")}} property on the element determines whether a point is considered to be within the fill.
+- {{domxref("SVGGeometryElement.isPointInStroke()")}}
+  - : Determines whether a given point is within the stroke shape of an element. Normal hit testing rules apply; the value of the {{cssxref("pointer-events")}} property on the element determines whether a point is considered to be within the stroke.
+- {{domxref("SVGGeometryElement.getTotalLength()")}}
+  - : Returns the user agent's computed value for the total length of the path in user units.
+- {{domxref("SVGGeometryElement.getPointAtLength()")}}
+  - : Returns the point at a given distance along the path.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

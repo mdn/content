@@ -2,42 +2,40 @@
 title: GlobalEventHandlers.onloadedmetadata
 slug: Web/API/GlobalEventHandlers/onloadedmetadata
 tags:
-- API
-- Event Handler
-- GlobalEventHandlers
-- Property
-- Reference
+  - API
+  - Event Handler
+  - GlobalEventHandlers
+  - Property
+  - Reference
 browser-compat: api.GlobalEventHandlers.onloadedmetadata
 ---
-<div>{{ ApiRef("HTML DOM") }}</div>
+{{ ApiRef("HTML DOM") }}
 
-<p>The <strong><code>onloadedmetadata</code></strong> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is the <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> for
-  processing {{event("loadedmetadata")}} events.</p>
+The **`onloadedmetadata`** property of the
+{{domxref("GlobalEventHandlers")}} mixin is the [event handler](/en-US/docs/Web/Events/Event_handlers) for
+processing {{event("loadedmetadata")}} events.
 
-<p>The <code>loadedmetadata</code> event is fired when the metadata has been loaded.</p>
+The `loadedmetadata` event is fired when the metadata has been loaded.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em><var>element</var></em>.onloadedmetadata = <em>handlerFunction</em>;
-var <em>handlerFunction</em> = <em><var>element</var></em>.onloadedmetadata;
-</pre>
+```js
+element.onloadedmetadata = handlerFunction;
+var handlerFunction = element.onloadedmetadata;
+```
 
-<p><code>handlerFunction</code> should be either <code>null</code> or a <a
-    href="/en-US/docs/Web/JavaScript/Reference/Functions">JavaScript function</a>
-  specifying the handler for the event.</p>
+`handlerFunction` should be either `null` or a [JavaScript function](/en-US/docs/Web/JavaScript/Reference/Functions)
+specifying the handler for the event.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{event("loadedmetadata")}}</li>
-  <li><a href="/en-US/docs/Web/Guide/Events/Event_handlers">DOM event handlers</a></li>
-</ul>
+- {{event("loadedmetadata")}}
+- [DOM event handlers](/en-US/docs/Web/Guide/Events/Event_handlers)

@@ -11,65 +11,60 @@ tags:
   - Window
 browser-compat: api.Window.statusbar
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code><strong>Window.statusbar</strong></code> property returns the statusbar
-  object, whose visibility can be toggled in the window.</p>
+The **`Window.statusbar`** property returns the statusbar
+object, whose visibility can be toggled in the window.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>objRef</var> = <em>window</em>.statusbar
-</pre>
+```js
+objRef = window.statusbar
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following complete HTML example shows a way that the visible property of the
-  various "bar" objects is used, and also the change to the privileges necessary to write
-  to the visible property of any of the bars on an existing window.</p>
+The following complete HTML example shows a way that the visible property of the
+various "bar" objects is used, and also the change to the privileges necessary to write
+to the visible property of any of the bars on an existing window.
 
-<pre class="brush:html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-&lt;meta charset="UTF-8" /&gt;
-&lt;title&gt;Various DOM Tests&lt;/title&gt;
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Various DOM Tests</title>
 
-&lt;script&gt;
+<script>
 // changing bar states on the existing window
 netscape.security.PrivilegeManager.enablePrivilege("UniversalBrowserWrite");
 window.statusbar.visible=!window.statusbar.visible;
-&lt;/script&gt;
+</script>
 
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;p&gt;Various DOM Tests&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</head>
+<body>
+  <p>Various DOM Tests</p>
+</body>
+</html>
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>When you load the example page above, the browser displays the following dialog: <img
-    alt="" src="modify_any_open_window_dialog.png"></p>
+When you load the example page above, the browser displays the following dialog: ![](modify_any_open_window_dialog.png)
 
-<p>To toggle the visibility of these bars, you must either sign your scripts or enable the
-  appropriate privileges, as in the example above. Also be aware that dynamically updating
-  the visibilty of the various toolbars can change the size of the window rather
-  dramatically, and may affect the layout of your page.</p>
+To toggle the visibility of these bars, you must either sign your scripts or enable the
+appropriate privileges, as in the example above. Also be aware that dynamically updating
+the visibilty of the various toolbars can change the size of the window rather
+dramatically, and may affect the layout of your page.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Window/locationbar">window.locationbar</a>, <a
-      href="/en-US/docs/Web/API/Window/menubar">window.menubar</a>, <a
-      href="/en-US/docs/Web/API/Window/personalbar">window.personalbar</a>, <a
-      href="/en-US/docs/Web/API/Window/scrollbars">window.scrollbars</a>, <a
-      href="/en-US/docs/Web/API/Window/toolbar">window.toolbar</a></li>
-</ul>
+- [window.locationbar](/en-US/docs/Web/API/Window/locationbar), [window.menubar](/en-US/docs/Web/API/Window/menubar), [window.personalbar](/en-US/docs/Web/API/Window/personalbar), [window.scrollbars](/en-US/docs/Web/API/Window/scrollbars), [window.toolbar](/en-US/docs/Web/API/Window/toolbar)

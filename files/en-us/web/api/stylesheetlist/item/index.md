@@ -9,39 +9,41 @@ tags:
   - StyleSheetList
 browser-compat: api.StyleSheetList.item
 ---
-<div>{{APIRef("CSSOM")}}</div>
+{{APIRef("CSSOM")}}
 
-<p>The <strong><code>item()</code></strong> method of the {{domxref("StyleSheetList")}} interface returns a single {{domxref("CSSStyleSheet")}} object.</p>
+The **`item()`** method of the {{domxref("StyleSheetList")}} interface returns a single {{domxref("CSSStyleSheet")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">StyleSheetList.item(index);</pre>
+```js
+StyleSheetList.item(index);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>index</code></dt>
-  <dd>An integer which is the index of the item in the collection to be returned.</dd>
-</dl>
+- `index`
+  - : An integer which is the index of the item in the collection to be returned.
 
-<h3 id="Returns">Return value</h3>
+### Return value
 
-<p>A {{domxref("CSSStyleSheet")}} object, or <code>null</code> if one does not exist for this index.</p>
+A {{domxref("CSSStyleSheet")}} object, or `null` if one does not exist for this index.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the following example, a for loop prints each individual {{domxref("CSSStyleSheet")}} object to the console, by calling <code>item</code> with the value of <code>i</code>.</p>
+In the following example, a for loop prints each individual {{domxref("CSSStyleSheet")}} object to the console, by calling `item` with the value of `i`.
 
-<pre class="brush: js">let list = document.styleSheets;
+```js
+let list = document.styleSheets;
 
-for (let i = 0; i &lt; list.length; i++) {
+for (let i = 0; i < list.length; i++) {
   console.log(list.item(i));
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

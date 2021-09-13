@@ -2,47 +2,48 @@
 title: CanvasRenderingContext2D.beginPath()
 slug: Web/API/CanvasRenderingContext2D/beginPath
 tags:
-- API
-- Canvas
-- CanvasRenderingContext2D
-- Method
-- Reference
+  - API
+  - Canvas
+  - CanvasRenderingContext2D
+  - Method
+  - Reference
 browser-compat: api.CanvasRenderingContext2D.beginPath
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The
-  <strong><code>CanvasRenderingContext2D.beginPath()</code></strong>
-  method of the Canvas 2D API starts a new path by emptying the list of sub-paths. Call
-  this method when you want to create a new path.</p>
+The
+**`CanvasRenderingContext2D.beginPath()`**
+method of the Canvas 2D API starts a new path by emptying the list of sub-paths. Call
+this method when you want to create a new path.
 
-<div class="note">
-  <p><strong>Note:</strong> To create a new sub-path, i.e., one matching the current
-    canvas state, you can use {{domxref("CanvasRenderingContext2D.moveTo()")}}.</p>
-</div>
+> **Note:** To create a new sub-path, i.e., one matching the current
+> canvas state, you can use {{domxref("CanvasRenderingContext2D.moveTo()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <em>ctx</em>.beginPath();
-</pre>
+```js
+void ctx.beginPath();
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Creating_distinct_paths">Creating distinct paths</h3>
+### Creating distinct paths
 
-<p>This example creates two paths, each of which contains a single line.</p>
+This example creates two paths, each of which contains a single line.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<p>The <code>beginPath()</code> method is called before beginning each line, so that they
-  may be drawn with different colors.</p>
+The `beginPath()` method is called before beginning each line, so that they
+may be drawn with different colors.
 
-<pre class="brush: js;">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // First path
@@ -58,23 +59,21 @@ ctx.strokeStyle = 'green';
 ctx.moveTo(20, 20);
 ctx.lineTo(120, 120);
 ctx.stroke();
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Creating_distinct_paths', 700, 180) }}</p>
+{{ EmbedLiveSample('Creating_distinct_paths', 700, 180) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining this method: {{domxref("CanvasRenderingContext2D")}}</li>
-  <li>{{domxref("CanvasRenderingContext2D.closePath()")}}</li>
-</ul>
+- The interface defining this method: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.closePath()")}}

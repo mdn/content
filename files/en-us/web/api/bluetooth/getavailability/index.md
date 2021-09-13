@@ -2,63 +2,63 @@
 title: Bluetooth.getAvailability()
 slug: Web/API/Bluetooth/getAvailability
 tags:
-- API
-- Bluetooth
-- Reference
-- Web Bluetooth API
+  - API
+  - Bluetooth
+  - Reference
+  - Web Bluetooth API
 browser-compat: api.Bluetooth.getAvailability
 ---
-<p>{{securecontext_header}}{{SeeCompatTable}}{{APIRef("Bluetooth API")}}</p>
+{{securecontext_header}}{{SeeCompatTable}}{{APIRef("Bluetooth API")}}
 
-<p>The <strong><code>getAvailability()</code></strong> method of
-    {{DOMxRef("Bluetooth")}} interface of <a
-      href="/en-US/docs/Web/API/Web_Bluetooth_API">Web Bluetooth API</a> interface exposes
-    the Bluetooth capabilities of the current device. For a returns a
-    {{JSxRef("Boolean")}} which is <code>true</code> if the device has a Bluetooth
-    adapter and false otherwise (unless user configured {{Glossary("User Agent")}} not to
-    expose a real value).</p>
+The **`getAvailability()`** method of
+{{DOMxRef("Bluetooth")}} interface of [Web Bluetooth API](/en-US/docs/Web/API/Web_Bluetooth_API) interface exposes
+the Bluetooth capabilities of the current device. For a returns a
+{{JSxRef("Boolean")}} which is `true` if the device has a Bluetooth
+adapter and false otherwise (unless user configured {{Glossary("User Agent")}} not to
+expose a real value).
 
-<div class="notecard note">
-  <p><strong>Note:</strong> User might not allow use of Web Bluetooth API, even if
-    <code>getAvailability()</code> returned <code>true</code>
-    ({{DOMxRef("Bluetooth.requestDevice","navigator.bluetooth.requestDevice()")}} might
-    not resolve with a {{DOMxRef("BluetoothDevice")}}). Also, user can configure User
-    Agent to return a fixed value instead of a real one.</p>
-</div>
+> **Note:** User might not allow use of Web Bluetooth API, even if
+> `getAvailability()` returned `true`
+> ({{DOMxRef("Bluetooth.requestDevice","navigator.bluetooth.requestDevice()")}} might
+> not resolve with a {{DOMxRef("BluetoothDevice")}}). Also, user can configure User
+> Agent to return a fixed value instead of a real one.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>readerPromise = Bluetooth</em>.getAvailability();
-</pre>
+```js
+var readerPromise = Bluetooth.getAvailability();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{JSxRef("Promise")}} that resolves with {{JSxRef("Boolean")}}.</p>
+A {{JSxRef("Promise")}} that resolves with {{JSxRef("Boolean")}}.
 
-<h2 id="Exceptions">Exceptions</h2>
+## Exceptions
 
-<p>This method doesn't throw any exceptions.</p>
+This method doesn't throw any exceptions.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following snippet prints out a message in the console specifying whether or not
-  Bluetooth is supported:</p>
+The following snippet prints out a message in the console specifying whether or not
+Bluetooth is supported:
 
-<pre class="brush: js">navigator.bluetooth.getAvailability().then(available =&gt; {
+```js
+navigator.bluetooth.getAvailability().then(available => {
   if (available)
       console.log("This device supports Bluetooth!");
   else
       console.log("Doh! Bluetooth is not supported");
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

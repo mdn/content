@@ -2,44 +2,44 @@
 title: performance.getEntries()
 slug: Web/API/Performance/getEntries
 tags:
-- API
-- Method
-- Reference
-- Web Performance
+  - API
+  - Method
+  - Reference
+  - Web Performance
 browser-compat: api.Performance.getEntries
 ---
-<div>{{APIRef("Performance Timeline API")}}</div>
+{{APIRef("Performance Timeline API")}}
 
-<p>The <strong><code>getEntries()</code></strong> method returns a list of all
-  {{domxref("PerformanceEntry")}} objects for the page. The list's members
-  (<em>entries</em>) can be created by making performance <em>marks</em> or
-  <em>measures</em> (for example by calling the {{domxref("Performance.mark","mark()")}}
-  method) at explicit points in time. If you are only interested in performance entries of
-  certain types or that have certain names, see {{domxref("Performance.getEntriesByType",
+The **`getEntries()`** method returns a list of all
+{{domxref("PerformanceEntry")}} objects for the page. The list's members
+(_entries_) can be created by making performance _marks_ or
+_measures_ (for example by calling the {{domxref("Performance.mark","mark()")}}
+method) at explicit points in time. If you are only interested in performance entries of
+certain types or that have certain names, see {{domxref("Performance.getEntriesByType",
   "getEntriesByType()")}} and {{domxref("Performance.getEntriesByName",
-  "getEntriesByName()")}}.</p>
+  "getEntriesByName()")}}.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>General syntax:</p>
+General syntax:
 
-<pre class="brush: js"><em>entries</em> = window.performance.getEntries();
-</pre>
+```js
+entries = window.performance.getEntries();
+```
 
-<h3 id="Return_Value">Return value</h3>
+### Return value
 
-<dl>
-  <dt>entries</dt>
-  <dd>An array of {{domxref("PerformanceEntry")}} objects. The items will be in
+- entries
+  - : An array of {{domxref("PerformanceEntry")}} objects. The items will be in
     chronological order based on the entries'
-    {{domxref("PerformanceEntry.startTime","startTime")}}.</dd>
-</dl>
+    {{domxref("PerformanceEntry.startTime","startTime")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">function use_PerformanceEntry_methods() {
+```js
+function use_PerformanceEntry_methods() {
   console.log("PerformanceEntry tests ...");
 
   if (performance.mark === undefined) {
@@ -59,14 +59,14 @@ browser-compat: api.Performance.getEntries
 
   // Use getEntries() to iterate through the each entry
   let p = performance.getEntries();
-  for (var i=0; i &lt; p.length; i++) {
+  for (var i=0; i < p.length; i++) {
     console.log("Entry[" + i + "]");
     check_PerformanceEntry(p[i]);
   }
 
   // Use getEntriesByType() to get all "mark" entries
   p = performance.getEntriesByType("mark");
-  for (let i=0; i &lt; p.length; i++) {
+  for (let i=0; i < p.length; i++) {
     console.log ("Mark only entry[" + i + "]: name = " + p[i].name +
          "; startTime = " + p[i].startTime +
          "; duration  = " + p[i].duration);
@@ -74,18 +74,18 @@ browser-compat: api.Performance.getEntries
 
   // Use getEntriesByName() to get all "mark" entries named "Begin"
   p = performance.getEntriesByName("Begin", "mark");
-  for (let i=0; i &lt; p.length; i++) {
+  for (let i=0; i < p.length; i++) {
     console.log ("Mark and Begin entry[" + i + "]: name = " + p[i].name +
          "; startTime = " + p[i].startTime +
          "; duration  = " + p[i].duration);
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

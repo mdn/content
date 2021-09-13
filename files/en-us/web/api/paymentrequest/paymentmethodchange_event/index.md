@@ -11,40 +11,43 @@ tags:
   - paymentmethodchange
 browser-compat: api.PaymentRequest.paymentmethodchange_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code><strong>paymentmethodchange</strong></code> events are delivered by the <a href="/en-US/docs/Web/API/Payment_Request_API">Payment Request API</a> to a {{domxref("PaymentRequest")}} object when the user changes payment methods within a given payment handler.</p>
+**`paymentmethodchange`** events are delivered by the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) to a {{domxref("PaymentRequest")}} object when the user changes payment methods within a given payment handler.
 
-<p>For example, if the user switches from one credit card to another on their <a href="https://www.apple.com/apple-pay/">Apple Pay</a> account, a <code>paymentmethodchange</code> event is fired to let you know about the change.</p>
+For example, if the user switches from one credit card to another on their [Apple Pay](https://www.apple.com/apple-pay/) account, a `paymentmethodchange` event is fired to let you know about the change.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("PaymentMethodChangeEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("PaymentRequest.onpaymentmethodchange", "onpaymentmethodchange")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("PaymentMethodChangeEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{domxref("PaymentRequest.onpaymentmethodchange", "onpaymentmethodchange")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Let's take a look at an example. This code creates a new {{domxref("PaymentRequest")}}, adds a handler for the <code>paymentmethodchange</code> event by calling the request's {{domxref("EventTarget.addEventListener", "addEventListener()")}}, then calls {{domxref("PaymentRequest.show", "show()")}} to present the payment interface to the user.</p>
+Let's take a look at an example. This code creates a new {{domxref("PaymentRequest")}}, adds a handler for the `paymentmethodchange` event by calling the request's {{domxref("EventTarget.addEventListener", "addEventListener()")}}, then calls {{domxref("PaymentRequest.show", "show()")}} to present the payment interface to the user.
 
-<p>The code assumes the existence of a method <code>detailsForShipping()</code>, which returns an object containing the shipping options for the <code>ground</code> shipping method, in the form found in the {{domxref("PaymentShippingOption")}} dictionary. By doing so, the payment form defaults to the ground shipping method.</p>
+The code assumes the existence of a method `detailsForShipping()`, which returns an object containing the shipping options for the `ground` shipping method, in the form found in the {{domxref("PaymentShippingOption")}} dictionary. By doing so, the payment form defaults to the ground shipping method.
 
-<pre class="brush: js">const options = {
+```js
+const options = {
   requestShipping: true
 };
 
@@ -54,13 +57,14 @@ const paymentRequest = new PaymentRequest(paymentMethods,
 paymentRequest.addEventListener("paymentmethodchange", handlePaymentChange, false);
 
 paymentRequest.show()
-.then(response =&gt; response.complete("success"))
-.catch(err =&gt; console.log("Error handling payment request: " + err));
-</pre>
+.then(response => response.complete("success"))
+.catch(err => console.log("Error handling payment request: " + err));
+```
 
-<p>The event handler function itself, <code>handlePaymentChange()</code>, looks like this:</p>
+The event handler function itself, `handlePaymentChange()`, looks like this:
 
-<pre class="brush: js">handlePaymentChange = event =&gt; {
+```js
+handlePaymentChange = event => {
   const detailsUpdate = {};
 
   if (event.methodName === "https://apple.com/apple-pay") {
@@ -70,32 +74,27 @@ paymentRequest.show()
 
   event.updateWith(detailsUpdate);
 }, false);
-</pre>
+```
 
-<p>This begins by looking at the event's {{domxref("PaymentMethodChangeEvent.methodName", "methodName")}} property; if that indicates that the user is trying to use Apple Pay, we pass the {{domxref("PaymentMethodChangeEvent.methodDetails", "methodDetails")}} into a function called <code>calculateServiceFee()</code>, which we might create to take the information about the transaction, such as the underlying credit card being used to service the Apple Pay request, and compute and return an object that specifies changes to be applied to the {{domxref("PaymentRequest")}} in order to add any service fees that the payment method might require.</p>
+This begins by looking at the event's {{domxref("PaymentMethodChangeEvent.methodName", "methodName")}} property; if that indicates that the user is trying to use Apple Pay, we pass the {{domxref("PaymentMethodChangeEvent.methodDetails", "methodDetails")}} into a function called `calculateServiceFee()`, which we might create to take the information about the transaction, such as the underlying credit card being used to service the Apple Pay request, and compute and return an object that specifies changes to be applied to the {{domxref("PaymentRequest")}} in order to add any service fees that the payment method might require.
 
-<p>Before the event handler returns, it calls the event's {{domxref("PaymentMethodChangeEvent.updateWith()")}} method to integrate the changes into the request.</p>
+Before the event handler returns, it calls the event's {{domxref("PaymentMethodChangeEvent.updateWith()")}} method to integrate the changes into the request.
 
+## Related events
 
-<h2 id="Related_events">Related events</h2>
+- {{event("merchantvalidation")}}, {{event("shippingaddresschange")}}, {{event("shippingoptionchange")}}, and {{event("payerdetailchange")}}
 
-<ul>
- <li>{{event("merchantvalidation")}}, {{event("shippingaddresschange")}}, {{event("shippingoptionchange")}}, and {{event("payerdetailchange")}}</li>
-</ul>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Payment_Request_API">Payment Request API</a></li>
- <li><a href="/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API">Using the Payment Request API</a></li>
- <li>{{domxref("PaymentRequest.onpaymentmethodchange", "onpaymentmethodchange")}} event handler property</li>
- <li>Related events: {{event("merchantvalidation")}}, {{event("payerdetailchange")}}, {{event("shippingaddresschange")}}, {{event("shippingoptionchange")}}</li>
-</ul>
+- [Payment Request API](/en-US/docs/Web/API/Payment_Request_API)
+- [Using the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
+- {{domxref("PaymentRequest.onpaymentmethodchange", "onpaymentmethodchange")}} event handler property
+- Related events: {{event("merchantvalidation")}}, {{event("payerdetailchange")}}, {{event("shippingaddresschange")}}, {{event("shippingoptionchange")}}

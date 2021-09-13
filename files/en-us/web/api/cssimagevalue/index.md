@@ -11,37 +11,42 @@ tags:
   - Reference
 browser-compat: api.CSSImageValue
 ---
-<div>{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}</div>
+{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
-<p>The <strong><code>CSSImageValue</code></strong> interface of the <a href="/en-US/docs/Web/API/CSS_Object_Model#css_typed_object_model">CSS Typed Object Model API</a> represents values for properties that take an image, for example {{cssxref('background-image')}}, {{cssxref('list-style-image')}}, or {{cssxref('border-image-source')}}.</p>
+The **`CSSImageValue`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model#css_typed_object_model) represents values for properties that take an image, for example {{cssxref('background-image')}}, {{cssxref('list-style-image')}}, or {{cssxref('border-image-source')}}.
 
-<p>The CSSImageValue object represents an <code><a href="/en-US/docs/Web/CSS/image">&lt;image&gt;</a></code> that involves an URL, such as <code><a href="/en-US/docs/Web/CSS/url()">url()</a></code> or <code><a href="/en-US/docs/Web/CSS/image()">image()</a></code>, but not <code><a href="/en-US/docs/Web/CSS/linear-gradient()">linear-gradient() </a></code>or <code><a href="/en-US/docs/Web/CSS/element()">element()</a></code> .</p>
+The CSSImageValue object represents an [`<image>`](/en-US/docs/Web/CSS/image) that involves an URL, such as [`url()`](</en-US/docs/Web/CSS/url()>) or [`image()`](</en-US/docs/Web/CSS/image()>), but not [`linear-gradient() `](</en-US/docs/Web/CSS/linear-gradient()>)or [`element()`](</en-US/docs/Web/CSS/element()>) .
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p>None.</p>
+None.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Inherits methods from {{domxref('CSSStyleValue')}}.</em></p>
+_Inherits methods from {{domxref('CSSStyleValue')}}._
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>We create an element</p>
+We create an element
 
-<pre class="brush: html">&lt;button&gt;Magic Wand&lt;/button&gt;</pre>
+```html
+<button>Magic Wand</button>
+```
 
-<p>We add some CSS, including a background image requesting a binary file:</p>
+We add some CSS, including a background image requesting a binary file:
 
-<pre class="brush: css">button {
+```css
+button {
   display: inline-block;
   min-height: 100px; min-width: 100px;
   background: no-repeat 5% center url(magicwand.png) aqua;
-}</pre>
+}
+```
 
-<p>We get the element's style map. We then get() the background-image from the stylemap and stringify it:</p>
+We get the element's style map. We then get() the background-image from the stylemap and stringify it:
 
-<pre class="brush: js">// get the element
+```js
+// get the element
 const button = document.querySelector( 'button' );
 
 // Retrieve all computed styles with computedStyleMap()
@@ -50,24 +55,22 @@ const allComputedStyles = button.computedStyleMap();
 // Return the CSSImageValue Example
 console.log( allComputedStyles.get('background-image') );
 console.log( allComputedStyles.get('background-image').toString() );
-</pre>
+```
 
-<p>{{EmbedLiveSample("Examples", 120, 300)}}</p>
+{{EmbedLiveSample("Examples", 120, 300)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref('CSSKeywordValue')}}</li>
- <li>{{domxref('CSSNumericValue')}}</li>
- <li>{{domxref('CSSPositionValue')}}</li>
- <li>{{domxref('CSSTransformValue')}}</li>
- <li>{{domxref('CSSUnparsedValue')}}</li>
-</ul>
+- {{domxref('CSSKeywordValue')}}
+- {{domxref('CSSNumericValue')}}
+- {{domxref('CSSPositionValue')}}
+- {{domxref('CSSTransformValue')}}
+- {{domxref('CSSUnparsedValue')}}

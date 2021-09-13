@@ -2,75 +2,75 @@
 title: HTMLTableRowElement.insertCell()
 slug: Web/API/HTMLTableRowElement/insertCell
 tags:
-- API
-- HTML DOM
-- HTMLTableRowElement
-- Method
-- Reference
+  - API
+  - HTML DOM
+  - HTMLTableRowElement
+  - Method
+  - Reference
 browser-compat: api.HTMLTableRowElement.insertCell
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLTableRowElement.insertCell()</code></strong> method inserts a new
-  cell ({{HtmlElement("td")}}) into a table row ({{HtmlElement("tr")}}) and returns a
-  reference to the cell.</p>
+The **`HTMLTableRowElement.insertCell()`** method inserts a new
+cell ({{HtmlElement("td")}}) into a table row ({{HtmlElement("tr")}}) and returns a
+reference to the cell.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> <code>insertCell()</code> inserts the cell directly into the
-    row. The cell does not need to be appended separately
-    with {{domxref("Node.appendChild()")}} as would be the case if
-    {{domxref("Document.createElement()")}} had been used to create the new
-    <code>&lt;td&gt;</code> element.</p>
+> **Note:** `insertCell()` inserts the cell directly into the
+> row. The cell does not need to be appended separately
+> with {{domxref("Node.appendChild()")}} as would be the case if
+> {{domxref("Document.createElement()")}} had been used to create the new
+> `<td>` element.
+>
+> You can not use `insertCell()` to create a new `<th>`
+> element though.
 
-  <p>You can not use <code>insertCell()</code> to create a new <code>&lt;th&gt;</code>
-    element though.</p>
-</div>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+var newCell = HTMLTableRowElement.insertCell(index);
+```
 
-<pre class="brush: js">var <var>newCell</var> = <var>HTMLTableRowElement</var>.insertCell(<var>index</var>);
-</pre>
+{{domxref("HTMLTableRowElement")}} is a reference to an HTML {{HtmlElement("tr")}}
+element.
 
-<p>{{domxref("HTMLTableRowElement")}} is a reference to an HTML {{HtmlElement("tr")}}
-  element.</p>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `index` {{optional_inline}}
+  - : `index` is the cell index of the new cell. If `index` is
+    `-1` or equal to the number of cells, the cell is appended as the last cell
+    in the row. If `index` is greater than the number of cells, an
+    `IndexSizeError` exception will result. If `index` is omitted it
+    defaults to `-1`.
 
-<dl>
-  <dt><code>index</code> {{optional_inline}}</dt>
-  <dd><code>index</code> is the cell index of the new cell. If <code>index</code> is
-    <code>-1</code> or equal to the number of cells, the cell is appended as the last cell
-    in the row. If <code>index</code> is greater than the number of cells, an
-    <code>IndexSizeError</code> exception will result. If <code>index</code> is omitted it
-    defaults to <code>-1</code>.</dd>
-</dl>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+`newCell` is an {{domxref("HTMLTableCellElement")}} that references the new
+cell.
 
-<p><code>newCell</code> is an {{domxref("HTMLTableCellElement")}} that references the new
-  cell.</p>
+## Example
 
-<h2 id="Example">Example</h2>
+This example uses {{domxref("HTMLTableElement.insertRow()")}} to append a new row to a
+table.
 
-<p>This example uses {{domxref("HTMLTableElement.insertRow()")}} to append a new row to a
-  table.</p>
+We then use `insertCell(0)` to insert a new cell in the new row. (To be
+valid HTML, a `<tr>` must have at least one `<td>`
+element.) Finally, we add some text to the cell using
+{{domxref("Document.createTextNode()")}} and {{domxref("Node.appendChild()")}}.
 
-<p>We then use <code>insertCell(0)</code> to insert a new cell in the new row. (To be
-  valid HTML, a <code>&lt;tr&gt;</code> must have at least one <code>&lt;td&gt;</code>
-  element.) Finally, we add some text to the cell using
-  {{domxref("Document.createTextNode()")}} and {{domxref("Node.appendChild()")}}.</p>
+### HTML
 
-<h3 id="HTML">HTML</h3>
+```html
+<table id="my-table">
+  <tr><td>Row 1</td></tr>
+  <tr><td>Row 2</td></tr>
+  <tr><td>Row 3</td></tr>
+</table>
+```
 
-<pre class="brush: html">&lt;table id="my-table"&gt;
-  &lt;tr&gt;&lt;td&gt;Row 1&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;Row 2&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;Row 3&lt;/td&gt;&lt;/tr&gt;
-&lt;/table&gt;</pre>
+### JavaScript
 
-<h3 id="JavaScript">JavaScript</h3>
-
-<pre class="brush: js">function addRow(tableID) {
+```js
+function addRow(tableID) {
   // Get a reference to the table
   let tableRef = document.getElementById(tableID);
 
@@ -86,23 +86,22 @@ browser-compat: api.HTMLTableRowElement.insertCell
 }
 
 // Call addRow() with the table's ID
-addRow('my-table');</pre>
+addRow('my-table');
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("HTMLTableElement.insertRow()")}}</li>
-  <li>The HTML element representing cells: {{domxref("HTMLTableCellElement")}}</li>
-</ul>
+- {{domxref("HTMLTableElement.insertRow()")}}
+- The HTML element representing cells: {{domxref("HTMLTableCellElement")}}

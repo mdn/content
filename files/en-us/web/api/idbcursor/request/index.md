@@ -12,25 +12,28 @@ tags:
   - request
 browser-compat: api.IDBCursor.request
 ---
-<p>{{APIRef("IndexedDB")}}</p>
+{{APIRef("IndexedDB")}}
 
-<p>The <strong><code>request</code></strong> read-only property of the {{domxref("IDBCursor")}} interface returns the {{domxref("IDBRequest")}} used to obtain the cursor.</p>
+The **`request`** read-only property of the {{domxref("IDBCursor")}} interface returns the {{domxref("IDBRequest")}} used to obtain the cursor.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>IDBCursor</em>.request;</pre>
+```js
+IDBCursor.request;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("IDBRequest")}} object instance.</p>
+An {{domxref("IDBRequest")}} object instance.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>When you open a cursor, the <code>request</code> property is then available on that cursor object, to tell you what request object the cursor originated from. For example:</p>
+When you open a cursor, the `request` property is then available on that cursor object, to tell you what request object the cursor originated from. For example:
 
-<pre class="brush: js">function displayData() {
+```js
+function displayData() {
   list.textContent = '';
   const transaction = db.transaction(['rushAlbumList'], 'readonly');
   const objectStore = transaction.objectStore('rushAlbumList');
@@ -41,7 +44,7 @@ browser-compat: api.IDBCursor.request
     const cursor = event.target.result;
       if(cursor) {
         const listItem = document.createElement('li');
-        listItem.innerHTML = '&lt;strong&gt;' + cursor.value.albumTitle + '&lt;/strong&gt;, ' + cursor.value.year;
+        listItem.innerHTML = '<strong>' + cursor.value.albumTitle + '</strong>, ' + cursor.value.year;
         list.appendChild(listItem);
         console.log(cursor.request);
         cursor.continue();
@@ -49,24 +52,23 @@ browser-compat: api.IDBCursor.request
         console.log('Entries all displayed.');
       }
   };
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
- <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
- <li>Using transactions: {{domxref("IDBTransaction")}}</li>
- <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
- <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
- <li>Using cursors: {{domxref("IDBCursor")}}</li>
- <li>Reference example: <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

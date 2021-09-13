@@ -2,73 +2,70 @@
 title: CSS.supports()
 slug: Web/API/CSS/supports
 tags:
-- API
-- CSS
-- CSSOM
-- Method
-- Reference
-- supports
+  - API
+  - CSS
+  - CSSOM
+  - Method
+  - Reference
+  - supports
 browser-compat: api.CSS.supports
 ---
-<div>{{APIRef("CSSOM")}}</div>
+{{APIRef("CSSOM")}}
 
-<p>The <code><strong>CSS.supports()</strong></code> method returns a boolean value
-  indicating if the browser supports a given CSS feature, or not.</p>
+The **`CSS.supports()`** method returns a boolean value
+indicating if the browser supports a given CSS feature, or not.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">CSS.supports(<em>propertyName</em>, <em>value</em>);
-CSS.supports(<em>supportCondition</em>);
-</pre>
+```js
+CSS.supports(propertyName, value);
+CSS.supports(supportCondition);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>There are two distinct sets of parameters. The first one allows to test the support of
-  a pair <em>property-value</em>:</p>
+There are two distinct sets of parameters. The first one allows to test the support of
+a pair _property-value_:
 
-<dl>
-  <dt><code>propertyName</code></dt>
-  <dd>A {{domxref("DOMString")}} containing the name of the CSS property to check.</dd>
-  <dt><code>value</code></dt>
-  <dd>A {{domxref("DOMString")}} containing the value of the CSS property to check.</dd>
-</dl>
+- `propertyName`
+  - : A {{domxref("DOMString")}} containing the name of the CSS property to check.
+- `value`
+  - : A {{domxref("DOMString")}} containing the value of the CSS property to check.
 
-<p>The second syntax takes one parameter matching the condition of
-  {{cssxref("@supports")}}:</p>
+The second syntax takes one parameter matching the condition of
+{{cssxref("@supports")}}:
 
-<dl>
-  <dt><code>supportCondition</code></dt>
-  <dd>A {{domxref("DOMString")}} containing the condition to check.</dd>
-</dl>
+- `supportCondition`
+  - : A {{domxref("DOMString")}} containing the condition to check.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>true</code> if the browser supports the rule, otherwise <code>false</code>.</p>
+`true` if the browser supports the rule, otherwise `false`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">result = CSS.supports("text-decoration-style", "blink");
+```js
+result = CSS.supports("text-decoration-style", "blink");
 result = CSS.supports("display: flex");
 result = CSS.supports("(--foo: red)");
 
 result = CSS.supports(`(transform-style: preserve) or (-moz-transform-style: preserve) or
                        (-o-transform-style: preserve) or (-webkit-transform-style: preserve)`);
 
-// result is true or false</pre>
+// result is true or false
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{cssxref("@supports")}} at-rule that allows for the same functionality but in a
-    declarative way.</li>
-  <li>The {{domxref("CSSSupportsRule")}} CSSOM class allowing to manipulate
-    {{cssxref("@supports")}} at-rules.</li>
-</ul>
+- The {{cssxref("@supports")}} at-rule that allows for the same functionality but in a
+  declarative way.
+- The {{domxref("CSSSupportsRule")}} CSSOM class allowing to manipulate
+  {{cssxref("@supports")}} at-rules.

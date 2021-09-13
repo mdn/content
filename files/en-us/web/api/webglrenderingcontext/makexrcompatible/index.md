@@ -2,110 +2,109 @@
 title: WebGLRenderingContext.makeXRCompatible()
 slug: Web/API/WebGLRenderingContext/makeXRCompatible
 tags:
-- 3D
-- API
-- AR
-- Context
-- Mixed
-- Reality
-- Reference
-- VR
-- Virtual
-- WebGL
-- WebGL API
-- WebGLRenderingContext
-- WebXR
-- WebXR API
-- WebXR Device API
-- XR
-- XRWebGLLayer
-- augmented
-- makeXRCompatible
-- Method
+  - 3D
+  - API
+  - AR
+  - Context
+  - Mixed
+  - Reality
+  - Reference
+  - VR
+  - Virtual
+  - WebGL
+  - WebGL API
+  - WebGLRenderingContext
+  - WebXR
+  - WebXR API
+  - WebXR Device API
+  - XR
+  - XRWebGLLayer
+  - augmented
+  - makeXRCompatible
+  - Method
 browser-compat: api.WebGLRenderingContext.makeXRCompatible
 ---
-<p>{{APIRef("WebGL")}}</p>
+{{APIRef("WebGL")}}
 
-<p>The {{domxref("WebGLRenderingContext")}} method
-  <code><strong>makeXRCompatible()</strong></code> ensures that the rendering context
-  described by the <code>WebGLRenderingContext</code> is ready to render the scene for the
-  immersive <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR</a> device on which it
-  will be displayed. If necessary, the <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a>
-  layer may reconfigure the context to be ready to render to a different device than it
-  originally was.</p>
+The {{domxref("WebGLRenderingContext")}} method
+**`makeXRCompatible()`** ensures that the rendering context
+described by the `WebGLRenderingContext` is ready to render the scene for the
+immersive [WebXR](/en-US/docs/Web/API/WebXR_Device_API) device on which it
+will be displayed. If necessary, the [WebGL](/en-US/docs/Web/API/WebGL_API)
+layer may reconfigure the context to be ready to render to a different device than it
+originally was.
 
-<p>This is useful if you have an application which can start out being presented on a
-  standard 2D display but can then be transitioned to a 3D immersion system.</p>
+This is useful if you have an application which can start out being presented on a
+standard 2D display but can then be transitioned to a 3D immersion system.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">makeXRCompatible()</pre>
+```js
+makeXRCompatible()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A
-  <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>
-  which successfully resolves once the WebGL context is ready to be used for rendering <a
-    href="/en-US/docs/Web/API/WebXR_Device_API">WebXR</a> content.</p>
+A
+[`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+which successfully resolves once the WebGL context is ready to be used for rendering [WebXR](/en-US/docs/Web/API/WebXR_Device_API) content.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>This method doesn't throw traditional exceptions; instead, the promise rejects with one
-  of the following errors as the value passed into the rejection handler:</p>
+This method doesn't throw traditional exceptions; instead, the promise rejects with one
+of the following errors as the value passed into the rejection handler:
 
-<dl>
-  <dt><code>AbortError</code></dt>
-  <dd>Switching the context over to the WebXR-compatible context failed.</dd>
-  <dt><code>InvalidStateError</code></dt>
-  <dd>The WebGL context has been lost or there is no available WebXR device.</dd>
-</dl>
+- `AbortError`
+  - : Switching the context over to the WebXR-compatible context failed.
+- `InvalidStateError`
+  - : The WebGL context has been lost or there is no available WebXR device.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>Because <code>makeXRCompatible()</code> may involve replacing the underlying WebGL
-  context with a new one that uses the new rendering hardware, the existing contents of
-  the context may be lost and, therefore, would need to be re-rendered. This is why the
-  <code><a href="/en-US/docs/Web/API/HTMLCanvasElement/webglcontextlost_event">webglcontextlost</a></code>
-  and
-  <code><a href="/en-US/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event">webglcontextrestored</a></code>
-  events are used: the first gives you the opportunity to discard anything you won't need
-  anymore, while the second gives you the opportunity to load resources and prepare to
-  render the scene in its new context.</p>
+Because `makeXRCompatible()` may involve replacing the underlying WebGL
+context with a new one that uses the new rendering hardware, the existing contents of
+the context may be lost and, therefore, would need to be re-rendered. This is why the
+[`webglcontextlost`](/en-US/docs/Web/API/HTMLCanvasElement/webglcontextlost_event)
+and
+[`webglcontextrestored`](/en-US/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event)
+events are used: the first gives you the opportunity to discard anything you won't need
+anymore, while the second gives you the opportunity to load resources and prepare to
+render the scene in its new context.
 
-<p>While this method is available through the {{domxref("WebGLRenderingContext")}}
-  interface, it's actually defined by the <a
-    href="/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</a> rather than by WebGL.
-</p>
+While this method is available through the {{domxref("WebGLRenderingContext")}}
+interface, it's actually defined by the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) rather than by WebGL.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example demonstrates code logic you might find in a game that starts up using
-  WebGL to display menus and other UI, and uses WebGL to render gameplay, but has a button
-  on its main menu that offers an option to start the game in WebXR mode.</p>
+This example demonstrates code logic you might find in a game that starts up using
+WebGL to display menus and other UI, and uses WebGL to render gameplay, but has a button
+on its main menu that offers an option to start the game in WebXR mode.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<p>The HTML for the buttons looks lke this:</p>
+The HTML for the buttons looks lke this:
 
-<pre class="brush: html">&lt;button class="green button" type="button"&gt;Start Game&lt;/button&gt;
-&lt;button class="blue button use-webxr" type="button"&gt;Start Game (VR mode)&lt;/button&gt;
-</pre>
+```html
+<button class="green button" type="button">Start Game</button>
+<button class="blue button use-webxr" type="button">Start Game (VR mode)</button>
+```
 
-<p>The first button starts the game, continuing to present the game onscreen as usual. The
-  second button will be used to start the game in <code>immersive-vr</code> mode. Note the
-  inclusion of a <code>use-webxr</code> class on the VR mode button. This is important,
-  which we'll explore shortly.</p>
+The first button starts the game, continuing to present the game onscreen as usual. The
+second button will be used to start the game in `immersive-vr` mode. Note the
+inclusion of a `use-webxr` class on the VR mode button. This is important,
+which we'll explore shortly.
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<p>The code that handles starting up graphics, switching to VR mode, and so forth looks
-  like this:</p>
+The code that handles starting up graphics, switching to VR mode, and so forth looks
+like this:
 
-<pre class="brush: js">const outputCanvas = document.querySelector(".output-canvas");
+```js
+const outputCanvas = document.querySelector(".output-canvas");
 const gl = outputCanvas.getContext("webgl");
 let xrSession = null;
 let usingXR = false;
@@ -113,21 +112,21 @@ let currentScene = "scene1";
 let glStartButton;
 let xrStartButton;
 
-window.addEventListener("load", (event) =&gt; {
+window.addEventListener("load", (event) => {
   loadSceneResources(currentScene);
 
   glStartButton.addEventListener("click", handleStartButtonClick);
   xrStartButton.addEventListener("click", handleStartButtonClick);
 });
 
-outputCanvas.addEventListener("webglcontextlost", (event) =&gt; {
+outputCanvas.addEventListener("webglcontextlost", (event) => {
   /* The context has been lost but can be restored */
   event.canceled = true;
 });
 
 /* When the GL context is reconnected, reload the resources for the
    current scene. */
-outputCanvas.addEventListener("webglcontextrestored", (event) =&gt; {
+outputCanvas.addEventListener("webglcontextrestored", (event) => {
   loadSceneResources(currentScene);
 });
 
@@ -151,7 +150,7 @@ async function onStartedXRSession(xrSession) {
 }
 
 async function handleStartButtonClick(event) {
-  if (event.target.classList.contains("use-webxr") &amp;&amp; navigator.xr) {
+  if (event.target.classList.contains("use-webxr") && navigator.xr) {
     try {
       xrSession = await navigator.xr.requestSession("immersive-vr");
       usingXR = true;
@@ -169,36 +168,36 @@ function startGame() {
 
   /* and so on */
 }
-</pre>
+```
 
-<p>This works by having two buttons, one which starts the game normally and the other
-  which starts the game in VR mode. These both use the
-  <code>handleStartButtonClick()</code> function as their event handler. The function
-  determines that the button clicked was the one requesting <code>immersive-vr</code> mode
-  by checking to see if the button has the <code>use-webxr</code> class on it. If the
-  button clicked by the user has that class (and we've confirmed that WebXR is available
-  by ensuring that the {{domxref("navigator.xr")}} property exists), we use
-  {{domxref("XRSystem.requestSession", "requestSession()")}} to request a new WebXR
-  session and set the <code>usingXR</code> flag to <code>true</code>.</p>
+This works by having two buttons, one which starts the game normally and the other
+which starts the game in VR mode. These both use the
+`handleStartButtonClick()` function as their event handler. The function
+determines that the button clicked was the one requesting `immersive-vr` mode
+by checking to see if the button has the `use-webxr` class on it. If the
+button clicked by the user has that class (and we've confirmed that WebXR is available
+by ensuring that the {{domxref("navigator.xr")}} property exists), we use
+{{domxref("XRSystem.requestSession", "requestSession()")}} to request a new WebXR
+session and set the `usingXR` flag to `true`.
 
-<p>If the other button was clicked, we ensure that <code>xrSession</code> is
-  <code>NULL</code> and clear <code>usingXR</code> to <code>false</code>.</p>
+If the other button was clicked, we ensure that `xrSession` is
+`NULL` and clear `usingXR` to `false`.
 
-<p>Then the <code>startGame()</code> function is called to trigger the beginning of
-  gameplay.</p>
+Then the `startGame()` function is called to trigger the beginning of
+gameplay.
 
-<p>Handlers are provided for both
-  <code><a href="/en-US/docs/Web/API/HTMLCanvasElement/webglcontextlost_event">webglcontextlost</a></code>
-  and
-  <code><a href="/en-US/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event">webglcontextrestored</a></code>;
-  in the first case, we make sure we're aware that the state can be recovered, while in
-  the latter we actually reload the scene to ensure we have the correct resources for the
-  current screen or headset configuration.</p>
+Handlers are provided for both
+[`webglcontextlost`](/en-US/docs/Web/API/HTMLCanvasElement/webglcontextlost_event)
+and
+[`webglcontextrestored`](/en-US/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event);
+in the first case, we make sure we're aware that the state can be recovered, while in
+the latter we actually reload the scene to ensure we have the correct resources for the
+current screen or headset configuration.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

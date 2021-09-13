@@ -2,55 +2,55 @@
 title: SpeechSynthesis.getVoices()
 slug: Web/API/SpeechSynthesis/getVoices
 tags:
-- API
-- Experimental
-- Method
-- Reference
-- SpeechSynthesis
-- Web Speech API
-- getVoices
-- speech
-- synthesis
+  - API
+  - Experimental
+  - Method
+  - Reference
+  - SpeechSynthesis
+  - Web Speech API
+  - getVoices
+  - speech
+  - synthesis
 browser-compat: api.SpeechSynthesis.getVoices
 ---
-<div>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</div>
+{{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-<p>The <code><strong>getVoices()</strong></code> method of the
-  {{domxref("SpeechSynthesis")}} interface returns a list of
-  {{domxref("SpeechSynthesisVoice")}} objects representing all the available voices on the
-  current device.</p>
+The **`getVoices()`** method of the
+{{domxref("SpeechSynthesis")}} interface returns a list of
+{{domxref("SpeechSynthesisVoice")}} objects representing all the available voices on the
+current device.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">speechSynthesisInstance.getVoices();
-</pre>
+```js
+speechSynthesisInstance.getVoices();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A list (array) of {{domxref("SpeechSynthesisVoice")}} objects.</p>
+A list (array) of {{domxref("SpeechSynthesisVoice")}} objects.
 
-<div class="note">
-  <p><strong>Note:</strong> The spec wrongly lists this method as returning as a
-    <code>SpeechSynthesisVoiceList</code> object, but this was in fact removed from the
-    spec.</p>
-</div>
+> **Note:** The spec wrongly lists this method as returning as a
+> `SpeechSynthesisVoiceList` object, but this was in fact removed from the
+> spec.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">function populateVoiceList() {
+```js
+function populateVoiceList() {
   if(typeof speechSynthesis === 'undefined') {
     return;
   }
 
   var voices = speechSynthesis.getVoices();
 
-  for(var i = 0; i &lt; voices.length; i++) {
+  for(var i = 0; i < voices.length; i++) {
     var option = document.createElement('option');
     option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
 
@@ -65,27 +65,27 @@ browser-compat: api.SpeechSynthesis.getVoices
 }
 
 populateVoiceList();
-if (typeof speechSynthesis !== 'undefined' &amp;&amp; speechSynthesis.onvoiceschanged !== undefined) {
+if (typeof speechSynthesis !== 'undefined' && speechSynthesis.onvoiceschanged !== undefined) {
   speechSynthesis.onvoiceschanged = populateVoiceList;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;select id="voiceSelect"&gt;&lt;/select&gt;
-</pre>
+```html
+<select id="voiceSelect"></select>
+```
 
-<p>{{EmbedLiveSample("Example", 400, 25)}}</p>
+{{EmbedLiveSample("Example", 400, 25)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)

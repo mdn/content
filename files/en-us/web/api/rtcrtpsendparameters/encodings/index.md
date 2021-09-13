@@ -2,58 +2,59 @@
 title: RTCRtpSendParameters.encodings
 slug: Web/API/RTCRtpSendParameters/encodings
 tags:
-- API
-- Codec
-- Configuration
-- Media
-- RTCRtpSendParameters
-- RTCRtpSender
-- RTP
-- Reference
-- Settings
-- WebRTC
-- WebRTC API
-- encodings
-- parameters
-- rtc
-- sender
+  - API
+  - Codec
+  - Configuration
+  - Media
+  - RTCRtpSendParameters
+  - RTCRtpSender
+  - RTP
+  - Reference
+  - Settings
+  - WebRTC
+  - WebRTC API
+  - encodings
+  - parameters
+  - rtc
+  - sender
 browser-compat: api.RTCRtpSendParameters.encodings
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The {{domxref("RTCRtpSendParameters")}} dictionary's
-  <code><strong>encodings</strong></code> property is an
-  {{domxref("RTCRtpEncodingParameters")}} object providing configuration settings for the
-  encoder being used for the {{domxref("RTCRtpSender")}}'s {{domxref("RTCRtpSender.track",
-  "track")}}.</p>
+The {{domxref("RTCRtpSendParameters")}} dictionary's
+**`encodings`** property is an
+{{domxref("RTCRtpEncodingParameters")}} object providing configuration settings for the
+encoder being used for the {{domxref("RTCRtpSender")}}'s {{domxref("RTCRtpSender.track",
+  "track")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>sendParameters</em>.encodings = <em>encodingParameterList</em>;
+```js
+sendParameters.encodings = encodingParameterList;
 
-<em>encodingParameterList</em> = <em>sendParameters</em>.encodings;
-</pre>
+encodingParameterList = sendParameters.encodings;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An array of objects conforming to the {{domxref("RTCRtpEncodingParameters")}}
-  dictionary, each of which contains properties which provide settings and parameters that
-  describe and configure the codec used for a single destination. Each object's properties
-  are:</p>
+An array of objects conforming to the {{domxref("RTCRtpEncodingParameters")}}
+dictionary, each of which contains properties which provide settings and parameters that
+describe and configure the codec used for a single destination. Each object's properties
+are:
 
-<p>{{page("/en-US/docs/Web/API/RTCRtpEncodingParameters", "Properties")}}</p>
+{{page("/en-US/docs/Web/API/RTCRtpEncodingParameters", "Properties")}}
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>In a connection in which there's only one remote peer, the <code>encodings</code> array
-  will have just one object in it, describing the encoding to use when transmitting to
-  that peer. For each peer you add the {{domxref("RTCRtpSender")}} to, another entry is
-  added to <code>encodings</code> to describe its configuration.</p>
+In a connection in which there's only one remote peer, the `encodings` array
+will have just one object in it, describing the encoding to use when transmitting to
+that peer. For each peer you add the {{domxref("RTCRtpSender")}} to, another entry is
+added to `encodings` to describe its configuration.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -8,79 +8,73 @@ tags:
   - MIDIPort
 browser-compat: api.MIDIPort
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("Web MIDI API")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("Web MIDI API")}}
 
-<p>The <strong><code>MIDIPort</code></strong> interface of the {{domxref('Web MIDI API','','',' ')}} represents a MIDI input or output port.</p>
+The **`MIDIPort`** interface of the {{domxref('Web MIDI API','','',' ')}} represents a MIDI input or output port.
 
-<p>A <code>MIDIPort</code> instance is created when a new MIDI device is connected. Therefore it has no constructor.</p>
+A `MIDIPort` instance is created when a new MIDI device is connected. Therefore it has no constructor.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
-  <dt>{{domxref("MIDIPort.id")}}{{ReadOnlyInline}}</dt>
-  <dd>Returns a {{domxref("DOMString","string")}} containing the unique ID of the port.</dd>
-  <dt>{{domxref("MIDIPort.manufacturer")}}{{ReadOnlyInline}}</dt>
-  <dd>Returns a {{domxref("DOMString","string")}} containing the manufacturer of the port.</dd>
-  <dt>{{domxref("MIDIPort.name")}}{{ReadOnlyInline}}</dt>
-  <dd>Returns a {{domxref("DOMString","string")}} containing the system name of the port.</dd>
-  <dt>{{domxref("MIDIPort.type")}}{{ReadOnlyInline}}</dt>
-  <dd>Returns a {{domxref("DOMString","string")}} containing the type of the port, one of:
-    <dl>
-      <dt><code>"input"</code></dt>
-      <dd>The <code>MIDIPort</code> is an input port.</dd>
-      <dt><code>"output"</code></dt>
-      <dd>The <code>MIDIPort</code> is an output port.</dd>
-    </dl>
-  </dd>
-  <dt>{{domxref("MIDIPort.version")}}{{ReadOnlyInline}}</dt>
-  <dd>Returns a {{domxref("DOMString","string")}} containing the version of the port.</dd>
-  <dt>{{domxref("MIDIPort.state")}}{{ReadOnlyInline}}</dt>
-  <dd>Returns a {{domxref("DOMString","string")}} containing the state of the port, one of:
-    <dl>
-      <dt><code>"disconnected"</code></dt>
-      <dd>The device that this <code>MIDIPort</code> represents is disconnected from the system.</dd>
-      <dt><code>"connected"</code></dt>
-      <dd>The device that this <code>MIDIPort</code> represents is currently connected.</dd>
-    </dl>
-  </dd>
-  <dt>{{domxref("MIDIPort.connection")}}{{ReadOnlyInline}}</dt>
-  <dd>Returns a {{domxref("DOMString","string")}} containing the connection state of the port, one of:
-    <dl>
-      <dt><code>"open"</code></dt>
-      <dd>The device that this <code>MIDIPort</code> represents has been opened and is available.</dd>
-      <dt><code>"closed"</code></dt>
-      <dd>The device that this <code>MIDIPort</code> represents has not been opened, or has been closed.</dd>
-      <dt><code>"pending"</code></dt>
-      <dd>The device that this <code>MIDIPort</code> represents has been opened but has subsequently disconnected .</dd>
-    </dl>
-  </dd>
-</dl>
+- {{domxref("MIDIPort.id")}}{{ReadOnlyInline}}
+  - : Returns a {{domxref("DOMString","string")}} containing the unique ID of the port.
+- {{domxref("MIDIPort.manufacturer")}}{{ReadOnlyInline}}
+  - : Returns a {{domxref("DOMString","string")}} containing the manufacturer of the port.
+- {{domxref("MIDIPort.name")}}{{ReadOnlyInline}}
+  - : Returns a {{domxref("DOMString","string")}} containing the system name of the port.
+- {{domxref("MIDIPort.type")}}{{ReadOnlyInline}}
 
-<h3 id="Event_handlers">Event handlers</h3>
+  - : Returns a {{domxref("DOMString","string")}} containing the type of the port, one of:
 
-<dl>
-  <dt>{{domxref("MIDIPort.onstatechange")}}</dt>
-  <dd>Called when an existing port changes its state or connection.</dd>
-</dl>
+    - `"input"`
+      - : The `MIDIPort` is an input port.
+    - `"output"`
+      - : The `MIDIPort` is an output port.
 
-<h2 id="Methods">Methods</h2>
+- {{domxref("MIDIPort.version")}}{{ReadOnlyInline}}
+  - : Returns a {{domxref("DOMString","string")}} containing the version of the port.
+- {{domxref("MIDIPort.state")}}{{ReadOnlyInline}}
 
-<p><em>This interface also inherits methods from {{domxref("EventTarget")}}.</em></p>
+  - : Returns a {{domxref("DOMString","string")}} containing the state of the port, one of:
 
-<dl>
-  <dt>{{domxref("MIDIPort.open()")}}</dt>
-  <dd>Makes the MIDI device connected to this <code>MIDIPort</code> explicitly available, and returns a {{jsxref("Promise")}} which resolves once access to the port has been successful.</dd>
-  <dt>{{domxref("MIDIPort.close()")}}</dt>
-  <dd>Makes the MIDI device connected to this <code>MIDIPort</code> unavailable, changing the {{domxref("MIDIPort.state","state")}} from <code>"open"</code> to <code>"closed"</code>. This returns a {{jsxref("Promise")}} which resolves once the port has been closed.</dd>
-</dl>
+    - `"disconnected"`
+      - : The device that this `MIDIPort` represents is disconnected from the system.
+    - `"connected"`
+      - : The device that this `MIDIPort` represents is currently connected.
 
-<h2 id="Examples">Examples</h2>
+- {{domxref("MIDIPort.connection")}}{{ReadOnlyInline}}
 
-<h3>List ports and their information</h3>
+  - : Returns a {{domxref("DOMString","string")}} containing the connection state of the port, one of:
 
-<p>The following example lists input and output ports, and displays information about them using properties of <code>MIDIPort</code>.</p>
+    - `"open"`
+      - : The device that this `MIDIPort` represents has been opened and is available.
+    - `"closed"`
+      - : The device that this `MIDIPort` represents has not been opened, or has been closed.
+    - `"pending"`
+      - : The device that this `MIDIPort` represents has been opened but has subsequently disconnected .
 
-<pre class="brush: js">function listInputsAndOutputs( midiAccess ) {
+### Event handlers
+
+- {{domxref("MIDIPort.onstatechange")}}
+  - : Called when an existing port changes its state or connection.
+
+## Methods
+
+_This interface also inherits methods from {{domxref("EventTarget")}}._
+
+- {{domxref("MIDIPort.open()")}}
+  - : Makes the MIDI device connected to this `MIDIPort` explicitly available, and returns a {{jsxref("Promise")}} which resolves once access to the port has been successful.
+- {{domxref("MIDIPort.close()")}}
+  - : Makes the MIDI device connected to this `MIDIPort` unavailable, changing the {{domxref("MIDIPort.state","state")}} from `"open"` to `"closed"`. This returns a {{jsxref("Promise")}} which resolves once the port has been closed.
+
+## Examples
+
+### List ports and their information
+
+The following example lists input and output ports, and displays information about them using properties of `MIDIPort`.
+
+```js
+function listInputsAndOutputs( midiAccess ) {
   for (var entry of midiAccess.inputs) {
     var input = entry[1];
     console.log( "Input port [type:'" + input.type + "'] id:'" + input.id +
@@ -94,22 +88,25 @@ browser-compat: api.MIDIPort
       "' manufacturer:'" + output.manufacturer + "' name:'" + output.name +
       "' version:'" + output.version + "'" );
   }
-}</pre>
+}
+```
 
-<h3>Add available ports to a select list</h3>
+### Add available ports to a select list
 
-<p>The following example takes the list of input ports and adds them to a select list, in order that a user can choose the device they want to use.</p>
+The following example takes the list of input ports and adds them to a select list, in order that a user can choose the device they want to use.
 
-<pre class="brush: js">inputs.forEach( function( port, key ) {
+```js
+inputs.forEach( function( port, key ) {
   var opt = document.createElement("option");
   opt.text = port.name;
   document.getElementById("inputportselector").add(opt);
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

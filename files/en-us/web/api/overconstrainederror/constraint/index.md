@@ -2,38 +2,39 @@
 title: OverconstrainedError.constraint
 slug: Web/API/OverconstrainedError/constraint
 tags:
-- API
-- Audio
-- Media
-- Media Capture and Streams API
-- Media Streams API
-- OverconstrainedError
-- Property
-- Reference
-- Video
-- constraint
+  - API
+  - Audio
+  - Media
+  - Media Capture and Streams API
+  - Media Streams API
+  - OverconstrainedError
+  - Property
+  - Reference
+  - Video
+  - constraint
 browser-compat: api.OverconstrainedError.constraint
 ---
-<div>{{draft}}{{securecontext_header}}{{APIRef("Media Capture and
-  Streams")}}{{SeeCompatTable}}</div>
+{{draft}}{{securecontext_header}}{{APIRef("Media Capture and
+  Streams")}}{{SeeCompatTable}}
 
-<p>The <strong><code>constraint</code></strong> read-only property of the
-  {{domxref("OverconstrainedError")}} interface returns the constraint that was supplied
-  in the constructor, meaning the contraint that was not satisfied.</p>
+The **`constraint`** read-only property of the
+{{domxref("OverconstrainedError")}} interface returns the constraint that was supplied
+in the constructor, meaning the contraint that was not satisfied.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>constraint</var> = Overconstrainederror.constraint;</pre>
+```js
+var constraint = Overconstrainederror.constraint;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref('String')}}</p>
+A {{domxref('String')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

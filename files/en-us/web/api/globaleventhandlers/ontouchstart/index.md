@@ -2,40 +2,40 @@
 title: GlobalEventHandlers.ontouchstart
 slug: Web/API/GlobalEventHandlers/ontouchstart
 tags:
-- API
-- Event Handler
-- Experimental
-- GlobalEventHandlers
-- HTML DOM
-- Property
-- Reference
+  - API
+  - Event Handler
+  - Experimental
+  - GlobalEventHandlers
+  - HTML DOM
+  - Property
+  - Reference
 browser-compat: api.GlobalEventHandlers.ontouchstart
 ---
-<div>{{ApiRef("HTML DOM")}} {{SeeCompatTable}}</div>
+{{ApiRef("HTML DOM")}} {{SeeCompatTable}}
 
-<p>The <code><strong>ontouchstart</strong></code> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> that
-  processes {{domxref("Element/touchstart_event", "touchstart")}} events.</p>
+The **`ontouchstart`** property of the
+{{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
+processes {{domxref("Element/touchstart_event", "touchstart")}} events.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>startHandler</em> = <em>someElement</em>.ontouchstart;
-</pre>
+```js
+var startHandler = someElement.ontouchstart;
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<dl>
-  <dt><code>startHandler</code></dt>
-  <dd>The <code>touchstart</code> event handler for element <code>someElement</code>.</dd>
-</dl>
+- `startHandler`
+  - : The `touchstart` event handler for element `someElement`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example shows two ways to use <code>ontouchstart</code> to set an element's
-  <code>touchstart</code> event handler.</p>
+This example shows two ways to use `ontouchstart` to set an element's
+`touchstart` event handler.
 
-<pre class="brush: js">&lt;html&gt;
-&lt;script&gt;
+```js
+<html>
+<script>
 function startTouch(ev) {
   // Process the event
 }
@@ -43,25 +43,23 @@ function init() {
   let el = document.getElementById('target1');
   el.ontouchstart = startTouch;
 }
-&lt;/script&gt;
+</script>
 
-&lt;body onload="init();"&gt;
-  &lt;div id="target1"&gt; Touch me ... &lt;/div&gt;
-  &lt;div id="target2" ontouchstart="startTouch(event)"&gt; Touch me ... &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+<body onload="init();">
+  <div id="target1"> Touch me ... </div>
+  <div id="target2" ontouchstart="startTouch(event)"> Touch me ... </div>
+</body>
+</html>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Element/touchstart_event", "touchstart")}}</li>
-</ul>
+- {{domxref("Element/touchstart_event", "touchstart")}}

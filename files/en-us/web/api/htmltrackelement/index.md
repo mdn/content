@@ -10,95 +10,66 @@ tags:
   - Reference
 browser-compat: api.HTMLTrackElement
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p>The <strong><code>HTMLTrackElement</code></strong> interface represents an {{Glossary("HTML")}} {{HTMLElement("track")}} element within the {{Glossary("DOM")}}. This element can be used as a child of either {{HTMLElement("audio")}} or {{HTMLElement("video")}} to specify a text track containing information such as closed captions or subtitles.</p>
+The **`HTMLTrackElement`** interface represents an {{Glossary("HTML")}} {{HTMLElement("track")}} element within the {{Glossary("DOM")}}. This element can be used as a child of either {{HTMLElement("audio")}} or {{HTMLElement("video")}} to specify a text track containing information such as closed captions or subtitles.
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{domxref("HTMLElement")}}.</em></p>
+_Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLTrackElement.kind")}}</dt>
- <dd>Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("kind", "track")}} HTML attribute, indicating how the text track is meant to be used. Possible values are: <code>subtitles</code>, <code>captions</code>, <code>descriptions</code>, <code>chapters</code>, or <code>metadata</code>.</dd>
- <dt>{{domxref("HTMLTrackElement.src")}}</dt>
- <dd>Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("src", "track")}} HTML attribute, indicating the address of the text track data.</dd>
- <dt>{{domxref("HTMLTrackElement.srclang")}}</dt>
- <dd>Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("srclang", "track")}} HTML attribute, indicating the language of the text track data.</dd>
- <dt>{{domxref("HTMLTrackElement.label")}}</dt>
- <dd>Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("label", "track")}} HTML attribute, indicating a user-readable title for the track.</dd>
- <dt>{{domxref("HTMLTrackElement.default")}}</dt>
- <dd>A boolean value reflecting the {{htmlattrxref("default", "track")}} attribute, indicating that the track is to be enabled if the user's preferences do not indicate that another track would be more appropriate.</dd>
- <dt>{{domxref("HTMLTrackElement.readyState")}} {{ReadOnlyInline}}</dt>
- <dd>Returns  an <code>unsigned short</code> that show the readiness state of the track:
- <table class="standard-table">
-  <thead>
-    <tr>
-      <th>Constant</th>
-      <th>Value</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-   <tr>
-    <td><code>NONE</code></td>
-    <td>0</td>
-    <td>Indicates that the text track's cues have not been obtained.</td>
-   </tr>
-   <tr>
-    <td><code>LOADING</code></td>
-    <td>1</td>
-    <td>Indicates that the text track is loading and there have been no fatal errors encountered so far. Further cues might still be added to the track by the parser.</td>
-   </tr>
-   <tr>
-    <td><code>LOADED</code></td>
-    <td>2</td>
-    <td>Indicates that the text track has been loaded with no fatal errors.</td>
-   </tr>
-   <tr>
-    <td><code>ERROR</code></td>
-    <td>3</td>
-    <td>Indicates that the text track was enabled, but when the user agent attempted to obtain it, this failed in some way. Some or all of the cues are likely missing and will not be obtained.</td>
-   </tr>
-  </tbody>
- </table>
- </dd>
- <dt>{{domxref("HTMLTrackElement.track")}} {{ReadOnlyInline}}</dt>
- <dd>Returns {{Domxref("TextTrack")}} is the track element's text track data.</dd>
-</dl>
+- {{domxref("HTMLTrackElement.kind")}}
+  - : Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("kind", "track")}} HTML attribute, indicating how the text track is meant to be used. Possible values are: `subtitles`, `captions`, `descriptions`, `chapters`, or `metadata`.
+- {{domxref("HTMLTrackElement.src")}}
+  - : Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("src", "track")}} HTML attribute, indicating the address of the text track data.
+- {{domxref("HTMLTrackElement.srclang")}}
+  - : Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("srclang", "track")}} HTML attribute, indicating the language of the text track data.
+- {{domxref("HTMLTrackElement.label")}}
+  - : Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("label", "track")}} HTML attribute, indicating a user-readable title for the track.
+- {{domxref("HTMLTrackElement.default")}}
+  - : A boolean value reflecting the {{htmlattrxref("default", "track")}} attribute, indicating that the track is to be enabled if the user's preferences do not indicate that another track would be more appropriate.
+- {{domxref("HTMLTrackElement.readyState")}} {{ReadOnlyInline}}
 
-<h2 id="Methods">Methods</h2>
+  - : Returns  an `unsigned short` that show the readiness state of the track:
 
-<p><em>No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}.</em></p>
+    | Constant  | Value | Description                                                                                                                                                                              |
+    | --------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | `NONE`    | 0     | Indicates that the text track's cues have not been obtained.                                                                                                                             |
+    | `LOADING` | 1     | Indicates that the text track is loading and there have been no fatal errors encountered so far. Further cues might still be added to the track by the parser.                           |
+    | `LOADED`  | 2     | Indicates that the text track has been loaded with no fatal errors.                                                                                                                      |
+    | `ERROR`   | 3     | Indicates that the text track was enabled, but when the user agent attempted to obtain it, this failed in some way. Some or all of the cues are likely missing and will not be obtained. |
 
-<h2 id="Events">Events</h2>
+- {{domxref("HTMLTrackElement.track")}} {{ReadOnlyInline}}
+  - : Returns {{Domxref("TextTrack")}} is the track element's text track data.
 
-<p><em>The following events may be fired on a {{HTMLElement("track")}} element, in addition to any that may be fired at its parent, {{domxref("HTMLElement")}}.</em></p>
+## Methods
 
-<dl>
- <dt>{{domxref("HTMLTrackElement.cuechange_event", "cuechange")}}</dt>
- <dd>Sent when the underlying {{domxref("TextTrack")}} has changed the currently-presented cues. This event is always sent to the <code>TextTrack</code> but is <em>also</em> sent to the <code>HTMLTrackElement</code> if one is associated with the track.<br>
- You may also use the {{domxref("GlobalEventHandlers.oncuechange", "oncuechange")}} event handler to establish a handler for this event.</dd>
-</dl>
+_No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}._
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Events
 
-<h3 id="Loading_of_the_track's_text_resource">Loading of the track's text resource</h3>
+_The following events may be fired on a {{HTMLElement("track")}} element, in addition to any that may be fired at its parent, {{domxref("HTMLElement")}}._
 
-<p>The WebVTT or TTML data describing the actual cues for the text track isn't loaded if the track's {{domxref("TextTrack.mode", "mode")}} is initially in the <code>disabled</code> state. If you need to be able to perform any processing on the track after the <code>&lt;track&gt;</code> is set up, you should instead ensure that the track's <code>mode</code> is either <code>hidden</code> (if you don't want it to start out being presented to the user) or <code>showing</code> (to initially display the track). You can then change the mode as desired later.</p>
+- {{domxref("HTMLTrackElement.cuechange_event", "cuechange")}}
+  - : Sent when the underlying {{domxref("TextTrack")}} has changed the currently-presented cues. This event is always sent to the `TextTrack` but is _also_ sent to the `HTMLTrackElement` if one is associated with the track.
+    You may also use the {{domxref("GlobalEventHandlers.oncuechange", "oncuechange")}} event handler to establish a handler for this event.
 
-<h2 id="Specifications">Specifications</h2>
+## Usage notes
+
+### Loading of the track's text resource
+
+The WebVTT or TTML data describing the actual cues for the text track isn't loaded if the track's {{domxref("TextTrack.mode", "mode")}} is initially in the `disabled` state. If you need to be able to perform any processing on the track after the `<track>` is set up, you should instead ensure that the track's `mode` is either `hidden` (if you don't want it to start out being presented to the user) or `showing` (to initially display the track). You can then change the mode as desired later.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The HTML element implementing this interface: {{ HTMLElement("track") }}.</li>
-</ul>
+- The HTML element implementing this interface: {{ HTMLElement("track") }}.

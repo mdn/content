@@ -8,62 +8,35 @@ tags:
   - Reference
 browser-compat: api.HTMLMetaElement
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p>The <strong><code>HTMLMetaElement</code></strong> interface contains descriptive metadata about a document. It inherits all of the properties and methods described in the {{domxref("HTMLElement")}} interface.</p>
+The **`HTMLMetaElement`** interface contains descriptive metadata about a document. It inherits all of the properties and methods described in the {{domxref("HTMLElement")}} interface.
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{domxref("HTMLElement")}}.</em></p>
+_Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-<table class=" standard-table">
- <thead>
-  <tr>
-   <th scope="col">Name</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>content</code></td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>Gets or sets the value of meta-data property.</td>
-  </tr>
-  <tr>
-   <td><code>httpEquiv</code></td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>Gets or sets the name of an HTTP response header to define for a document.</td>
-  </tr>
-  <tr>
-   <td><code>name</code></td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>Gets or sets the name of a meta-data property to define for a document.</td>
-  </tr>
-  <tr>
-   <td><code>scheme</code> {{deprecated_inline}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>Gets or sets the name of a scheme used to interpret the value of a meta-data property.</td>
-  </tr>
- </tbody>
-</table>
+| Name                                  | Type                             | Description                                                                            |
+| ------------------------------------- | -------------------------------- | -------------------------------------------------------------------------------------- |
+| `content`                             | {{domxref("DOMString")}} | Gets or sets the value of meta-data property.                                          |
+| `httpEquiv`                           | {{domxref("DOMString")}} | Gets or sets the name of an HTTP response header to define for a document.             |
+| `name`                                | {{domxref("DOMString")}} | Gets or sets the name of a meta-data property to define for a document.                |
+| `scheme` {{deprecated_inline}} | {{domxref("DOMString")}} | Gets or sets the name of a scheme used to interpret the value of a meta-data property. |
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}.</em></p>
+_No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The HTML element implementing this interface: {{HTMLElement("meta")}}</li>
-</ul>
+- The HTML element implementing this interface: {{HTMLElement("meta")}}

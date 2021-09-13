@@ -8,42 +8,41 @@ tags:
   - event
 browser-compat: api.ScriptProcessorNode.audioprocess_event
 ---
-<div>{{APIRef("Web Audio API")}}{{deprecated_header}}</div>
+{{APIRef("Web Audio API")}}{{deprecated_header}}
 
-<p>The audioprocess event of the {{domxref("ScriptProcessorNode")}} interface is fired when an input buffer of a script processor is ready to be processed.</p>
+The audioprocess event of the {{domxref("ScriptProcessorNode")}} interface is fired when an input buffer of a script processor is ready to be processed.
 
-<div class="note">
-  <p><strong>Note:</strong> This feature was replaced by <a href="/en-US/docs/Web/API/AudioWorklet">AudioWorklets</a> and the {{domxref("AudioWorkletNode")}} interface.</p>
-</div>
+> **Note:** This feature was replaced by [AudioWorklets](/en-US/docs/Web/API/AudioWorklet) and the {{domxref("AudioWorkletNode")}} interface.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Default action</th>
-   <td>None</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("AudioProcessingEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("ScriptProcessorNode.onaudioprocess")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Default action</th>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("AudioProcessingEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>{{domxref("ScriptProcessorNode.onaudioprocess")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">scriptNode.addEventListener('audioprocess', function(audioProcessingEvent) {
+```js
+scriptNode.addEventListener('audioprocess', function(audioProcessingEvent) {
   // The input buffer is a song we loaded earlier
   var inputBuffer = audioProcessingEvent.inputBuffer;
 
@@ -51,12 +50,12 @@ browser-compat: api.ScriptProcessorNode.audioprocess_event
   var outputBuffer = audioProcessingEvent.outputBuffer;
 
   // Loop through the output channels (in this case there is only one)
-  for (var channel = 0; channel &lt; outputBuffer.numberOfChannels; channel++) {
+  for (var channel = 0; channel < outputBuffer.numberOfChannels; channel++) {
     var inputData = inputBuffer.getChannelData(channel);
     var outputData = outputBuffer.getChannelData(channel);
 
     // Loop through the 4096 samples
-    for (var sample = 0; sample &lt; inputBuffer.length; sample++) {
+    for (var sample = 0; sample < inputBuffer.length; sample++) {
       // make output equal to the same as the input
       outputData[sample] = inputData[sample];
 
@@ -64,27 +63,28 @@ browser-compat: api.ScriptProcessorNode.audioprocess_event
       outputData[sample] += ((Math.random() * 2) - 1) * 0.2;
     }
   }
-})</pre>
+})
+```
 
-<p>You could also set up the event handler using the {{domxref("ScriptProcessorNode.onaudioprocess")}} property:</p>
+You could also set up the event handler using the {{domxref("ScriptProcessorNode.onaudioprocess")}} property:
 
-<pre class="brush: js">scriptNode.onaudioprocess = function(audioProcessingEvent) {
+```js
+scriptNode.onaudioprocess = function(audioProcessingEvent) {
   ...
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Since the August 29 2014 <a href="https://www.w3.org/TR/webaudio/#ScriptProcessorNode">Web Audio API specification</a> publication, this feature has been deprecated. It is no longer on track to become a standard.</p>
+Since the August 29 2014 [Web Audio API specification](https://www.w3.org/TR/webaudio/#ScriptProcessorNode) publication, this feature has been deprecated. It is no longer on track to become a standard.
 
-<p>It was replaced by <a href="/en-US/docs/Web/API/AudioWorklet">AudioWorklets</a> and the {{domxref("AudioWorkletNode")}} interface.</p>
+It was replaced by [AudioWorklets](/en-US/docs/Web/API/AudioWorklet) and the {{domxref("AudioWorkletNode")}} interface.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("ScriptProcessorNode.onaudioprocess")}}</li>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a></li>
-</ul>
+- {{domxref("ScriptProcessorNode.onaudioprocess")}}
+- [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)

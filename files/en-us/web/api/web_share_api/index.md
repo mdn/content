@@ -10,50 +10,45 @@ tags:
   - Overview
   - Reference
 ---
-<div>{{DefaultAPISidebar("Web Share API")}}</div>
+{{DefaultAPISidebar("Web Share API")}}
 
-<p>The <strong>Web Share API</strong> provides a mechanism for sharing text, links, files, and other content to an arbitrary <em>share target</em> selected by the user.</p>
+The **Web Share API** provides a mechanism for sharing text, links, files, and other content to an arbitrary _share target_ selected by the user.
 
 {{securecontext_header}}
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This API is <em>not available</em> in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a> (not exposed via {{domxref("WorkerNavigator")}}).</p>
-</div>
+> **Note:** This API is _not available_ in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) (not exposed via {{domxref("WorkerNavigator")}}).
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This API should not be confused with the <a href="/en-US/docs/Web/API/Web_Share_Target_API">Web Share Target API</a>, which allows a website to specify itself as a share target.</p>
-</div>
+> **Note:** This API should not be confused with the [Web Share Target API](/en-US/docs/Web/API/Web_Share_Target_API), which allows a website to specify itself as a share target.
 
-<h2 id="concepts_and_usage">Concepts and usage</h2>
+## Concepts and usage
 
-<p>The <strong>Web Share API</strong> allows a site to share text, links, files, and other content to user-selected share targets, utilizing the sharing mechanisms of the underlying operating system.
-These share targets typically include the system clipboard, email, contacts or messaging applications, and Bluetooth or WiFi channels.</p>
+The **Web Share API** allows a site to share text, links, files, and other content to user-selected share targets, utilizing the sharing mechanisms of the underlying operating system.
+These share targets typically include the system clipboard, email, contacts or messaging applications, and Bluetooth or WiFi channels.
 
-<p>The API has just two methods.
-  The {{domxref("navigator.canShare()")}} method may be used to first validate whether some data is "sharable", prior to passing it to {{domxref("navigator.share()")}} for sending.</p>
+The API has just two methods.
+The {{domxref("navigator.canShare()")}} method may be used to first validate whether some data is "sharable", prior to passing it to {{domxref("navigator.share()")}} for sending.
 
-<p>The {{domxref("navigator.share()")}} method invokes the native sharing mechanism of the underlying operating system and passes the specified data.
-    It requires {{Glossary("transient activation")}}, and hence must be triggered off a UI event like a button click.
-    Further, the method must specify valid data that is supported for sharing by the native implementation.</p>
+The {{domxref("navigator.share()")}} method invokes the native sharing mechanism of the underlying operating system and passes the specified data.
+It requires {{Glossary("transient activation")}}, and hence must be triggered off a UI event like a button click.
+Further, the method must specify valid data that is supported for sharing by the native implementation.
 
-<p>The Web Share API is gated by the <a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy/web-share">web-share</a> permission policy.
-  If the policy is supported but has not been granted, both methods will indicate that the data is not sharable.</p>
+The Web Share API is gated by the [web-share](/en-US/docs/Web/HTTP/Headers/Feature-Policy/web-share) permission policy.
+If the policy is supported but has not been granted, both methods will indicate that the data is not sharable.
 
-<h2 id="interfaces">Interfaces</h2>
+## Interfaces
 
-<dl>
- <dt>{{domxref("navigator.canShare()")}}</dt>
- <dd>Returns a boolean indicating whether the specified data is sharable.</dd>
- <dt>{{domxref("navigator.share()")}}</dt>
- <dd>Returns a {{jsxref("Promise")}} that resolves if the passed data was successfully sent to a share target.
-   This method must be called on a button click or other user activation (requires {{Glossary("transient activation")}}).</dd>
-</dl>
+- {{domxref("navigator.canShare()")}}
+  - : Returns a boolean indicating whether the specified data is sharable.
+- {{domxref("navigator.share()")}}
+  - : Returns a {{jsxref("Promise")}} that resolves if the passed data was successfully sent to a share target.
+    This method must be called on a button click or other user activation (requires {{Glossary("transient activation")}}).
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The code below shows how you can share a link using {{domxref("navigator.share()")}}, triggered off a button click.</p>
+The code below shows how you can share a link using {{domxref("navigator.share()")}}, triggered off a button click.
 
-<pre class="brush: js;">const shareData = {
+```js
+const shareData = {
   title: 'MDN',
   text: 'Learn web development on MDN!',
   url: 'https://developer.mozilla.org'
@@ -71,22 +66,19 @@ btn.addEventListener('click', async () => {
     resultPara.textContent = 'Error: ' + err
   }
 });
-</pre>
+```
 
-<p>The above example is taken from our <a href="https://mdn.github.io/dom-examples/web-share/">Web share test</a> (<a href="https://github.com/mdn/dom-examples/blob/master/web-share/index.html">see the source code</a>). You can also see this as a live example in {{domxref("navigator.share()")}}.</p>
+The above example is taken from our [Web share test](https://mdn.github.io/dom-examples/web-share/) ([see the source code](https://github.com/mdn/dom-examples/blob/master/web-share/index.html)). You can also see this as a live example in {{domxref("navigator.share()")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications("api.Navigator.share")}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat("api.Navigator.share")}}
-
 {{Compat("api.Navigator.canShare")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://web.dev/web-share-target/">Receiving shared data with the Web Share Target API</a> (https://web.dev/)</li>
-</ul>
+- [Receiving shared data with the Web Share Target API](https://web.dev/web-share-target/) (https\://web.dev/)

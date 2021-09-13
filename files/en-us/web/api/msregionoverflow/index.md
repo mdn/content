@@ -5,34 +5,31 @@ tags:
   - Internet Explorer
   - msRegionOverflow
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>{{Non-standard_header()}}</p>
+{{Non-standard_header()}}
 
-<p>The <code><strong>msRegionOverflow</strong></code> read-only property determines if content fully fits into the region or not.</p>
+The **`msRegionOverflow`** read-only property determines if content fully fits into the region or not.
 
-<p>This proprietary property is specific to Internet Explorer.</p>
+This proprietary property is specific to Internet Explorer.
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<pre class="brush: js">string = object.msRegionOverflow
-</pre>
+```js
+string = object.msRegionOverflow
+```
 
-<h2 id="Values">Values</h2>
+## Values
 
-<p><em>Type:</em>DOMString</p>
+*Type:*DOMString
 
-<ul>
- <li><code>overflow</code>: The region element's content overflows the region's content box. Note that the region's overflow property value can be used to control the visibility of the overflowing content. This means that the region is the last one in the region chain and not able to fit the remaining content from the named flow.</li>
- <li><code>fit</code>: The region element's content fits into the region's content box. It does not overflow. If the region is the last one in the region chain, it means that the content fits without overflowing. If the region is not the last one in the region chain, that means the named flow content is further fitted in subsequent regions. In particular, in this last case, that means the region may have received no content from the named flow (for example if the region is too small to accommodate any content).</li>
- <li><code>empty</code>: The region element has no content and is empty. All content from the named flow was fitted in regions with a lower content-order value.</li>
- <li><code>undefined</code>: The element is not a region.</li>
-</ul>
+- `overflow`: The region element's content overflows the region's content box. Note that the region's overflow property value can be used to control the visibility of the overflowing content. This means that the region is the last one in the region chain and not able to fit the remaining content from the named flow.
+- `fit`: The region element's content fits into the region's content box. It does not overflow. If the region is the last one in the region chain, it means that the content fits without overflowing. If the region is not the last one in the region chain, that means the named flow content is further fitted in subsequent regions. In particular, in this last case, that means the region may have received no content from the named flow (for example if the region is too small to accommodate any content).
+- `empty`: The region element has no content and is empty. All content from the named flow was fitted in regions with a lower content-order value.
+- `undefined`: The element is not a region.
 
-<p>When the region is an actual element, msRegionOverflow provides the ability to find out if content fully fits into the region or not. However, it is only available to regions that are document elements and not to regions that are pseudo-elements.</p>
+When the region is an actual element, msRegionOverflow provides the ability to find out if content fully fits into the region or not. However, it is only available to regions that are document elements and not to regions that are pseudo-elements.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Microsoft_Extensions">Microsoft API extensions </a></li>
-</ul>
+- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_Extensions)

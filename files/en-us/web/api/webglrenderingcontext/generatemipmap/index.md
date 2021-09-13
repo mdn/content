@@ -2,75 +2,70 @@
 title: WebGLRenderingContext.generateMipmap()
 slug: Web/API/WebGLRenderingContext/generateMipmap
 tags:
-- API
-- Method
-- Reference
-- Textures
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - Textures
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.generateMipmap
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.generateMipmap()</code></strong> method of the
-  <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> generates a set of mipmaps for a
-  {{domxref("WebGLTexture")}} object.</p>
+The **`WebGLRenderingContext.generateMipmap()`** method of the
+[WebGL API](/en-US/docs/Web/API/WebGL_API) generates a set of mipmaps for a
+{{domxref("WebGLTexture")}} object.
 
-<p>Mipmaps are used to create distance with objects. A higher-resolution mipmap is used
-  for objects that are closer, and a lower-resolution mipmap is used for objects that are
-  farther away. It starts with the resolution of the texture image and halves the
-  resolution until a 1x1 dimension texture image is created.</p>
+Mipmaps are used to create distance with objects. A higher-resolution mipmap is used
+for objects that are closer, and a lower-resolution mipmap is used for objects that are
+farther away. It starts with the resolution of the texture image and halves the
+resolution until a 1x1 dimension texture image is created.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <var>gl</var>.generateMipmap(<var>target</var>);
-</pre>
+```js
+void gl.generateMipmap(target);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>target</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target) of the active texture
+- target
+
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target) of the active texture
     whose mipmaps will be generated. Possible values:
-    <ul>
-      <li><code>gl.TEXTURE_2D</code>: A two-dimensional texture.</li>
-      <li><code>gl.TEXTURE_CUBE_MAP</code>: A cube-mapped texture.</li>
-      <li>When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
-        the following values are available additionally:
-        <ul>
-          <li><code>gl.TEXTURE_3D</code>: A three-dimensional texture.</li>
-          <li><code>gl.TEXTURE_2D_ARRAY</code>: A two-dimensional array texture.</li>
-        </ul>
-      </li>
-    </ul>
-  </dd>
-</dl>
 
-<h3 id="Return_value">Return value</h3>
+    - `gl.TEXTURE_2D`: A two-dimensional texture.
+    - `gl.TEXTURE_CUBE_MAP`: A cube-mapped texture.
+    - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
+      the following values are available additionally:
 
-<p>None.</p>
+      - `gl.TEXTURE_3D`: A three-dimensional texture.
+      - `gl.TEXTURE_2D_ARRAY`: A two-dimensional array texture.
 
-<h2 id="Examples">Examples</h2>
+### Return value
 
-<pre class="brush: js">gl.generateMipmap(gl.TEXTURE_2D);
-</pre>
+None.
 
-<h2 id="Specifications">Specifications</h2>
+## Examples
+
+```js
+gl.generateMipmap(gl.TEXTURE_2D);
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.createTexture()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.bindTexture()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.getTexParameter()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.texParameter",
-    "WebGLRenderingContext.texParameterf()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.texParameter",
-    "WebGLRenderingContext.texParameteri()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.createTexture()")}}
+- {{domxref("WebGLRenderingContext.bindTexture()")}}
+- {{domxref("WebGLRenderingContext.getTexParameter()")}}
+- {{domxref("WebGLRenderingContext.texParameter",
+    "WebGLRenderingContext.texParameterf()")}}
+- {{domxref("WebGLRenderingContext.texParameter",
+    "WebGLRenderingContext.texParameteri()")}}

@@ -2,89 +2,82 @@
 title: Node.previousSibling
 slug: Web/API/Node/previousSibling
 tags:
-- API
-- DOM
-- Gecko
-- Property
+  - API
+  - DOM
+  - Gecko
+  - Property
 browser-compat: api.Node.previousSibling
 ---
-<div>
-  <div>{{APIRef("DOM")}}</div>
-</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>Node.previousSibling</strong></code> read-only property returns the
-  node immediately preceding the specified one in its parent's
-  {{domxref("Node.childNodes", "childNodes")}} list, or <code>null</code> if the specified
-  node is the first in that list.</p>
+The **`Node.previousSibling`** read-only property returns the
+node immediately preceding the specified one in its parent's
+{{domxref("Node.childNodes", "childNodes")}} list, or `null` if the specified
+node is the first in that list.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>previousNode</var> = <em>node</em>.previousSibling;
-</pre>
+```js
+previousNode = node.previousSibling;
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following examples demonstrate how <code>previousSibling</code> works with and without text nodes mixed in with elements.</p>
+The following examples demonstrate how `previousSibling` works with and without text nodes mixed in with elements.
 
-<h3>First example</h3>
+### First example
 
-<p>In this example, we have a series of <code>img</code> elements directly adjacent to each other, with no whitespace between them.</p>
+In this example, we have a series of `img` elements directly adjacent to each other, with no whitespace between them.
 
-<pre class="brush: html">&lt;img id="b0"&gt;&lt;img id="b1"&gt;&lt;img id="b2"&gt;</pre>
+```html
+<img id="b0"><img id="b1"><img id="b2">
+```
 
-<pre class="brush:js">
-document.getElementById("b1").previousSibling;    // &lt;img id="b0"&gt;
+```js
+document.getElementById("b1").previousSibling;    // <img id="b0">
 document.getElementById("b2").previousSibling.id; // "b1"
-</pre>
-<h3>Second example</h3>
+```
 
-<p>In this example, there are whitespace text nodes (line breaks) between the <code>img</code> elements.</p>
+### Second example
 
-<pre class="brush: html">
-&lt;img id="b0"&gt;
-&lt;img id="b1"&gt;
-&lt;img id="b2"&gt;
-</pre>
+In this example, there are whitespace text nodes (line breaks) between the `img` elements.
 
-<pre class="brush:js">
+```html
+<img id="b0">
+<img id="b1">
+<img id="b2">
+```
+
+```js
 document.getElementById("b1").previousSibling;                 // #text
-document.getElementById("b1").previousSibling.previousSibling; // &lt;img id="b0"&gt;
-document.getElementById("b2").previousSibling.previousSibling; // &lt;img id="b1"&gt;
+document.getElementById("b1").previousSibling.previousSibling; // <img id="b0">
+document.getElementById("b2").previousSibling.previousSibling; // <img id="b1">
 document.getElementById("b2").previousSibling;                 // #text
 document.getElementById("b2").previousSibling.id;              // undefined
-</pre>
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<div>
-  <p>Gecko-based browsers insert text nodes into a document to represent whitespace in the
-    source markup. Therefore a node obtained, for example, using <a
-      href="/en-US/docs/Web/API/Node/firstChild"
-      title="The Node.firstChild read-only property returns the node's first child in the tree, or null if the node has no children."><code>Node.firstChild</code></a>
-    or <a href="/en-US/docs/Web/API/Node/previousSibling"
-      title="The Node.previousSibling read-only property returns the node immediately preceding the specified one in its parent's childNodes list, or null if the specified node is the first in that list."><code>Node.previousSibling</code></a>
-    may refer to a whitespace text node rather than the actual element the author intended
-    to get. You can use <code><a href="/en-US/docs/Web/API/Element/previousElementSibling">previousElementSibling</a></code> to get the previous element node (skipping text nodes and any other non-element nodes).</p>
+Gecko-based browsers insert text nodes into a document to represent whitespace in the
+source markup. Therefore a node obtained, for example, using [`Node.firstChild`](/en-US/docs/Web/API/Node/firstChild "The Node.firstChild read-only property returns the node's first child in the tree, or null if the node has no children.")
+or [`Node.previousSibling`](/en-US/docs/Web/API/Node/previousSibling "The Node.previousSibling read-only property returns the node immediately preceding the specified one in its parent's childNodes list, or null if the specified node is the first in that list.")
+may refer to a whitespace text node rather than the actual element the author intended
+to get. You can use [`previousElementSibling`](/en-US/docs/Web/API/Element/previousElementSibling) to get the previous element node (skipping text nodes and any other non-element nodes).
 
-  <p>See <a href="/en-US/docs/Web/Guide/DOM/Whitespace_in_the_DOM">Whitespace in the
-      DOM</a> and <a href="https://www.w3.org/DOM/faq.html#emptytext"
-      rel="noopener">W3C DOM 3 FAQ: Why are some Text nodes empty?</a> for more
-    information.</p>
-</div>
+See [Whitespace in the
+DOM](/en-US/docs/Web/Guide/DOM/Whitespace_in_the_DOM) and [W3C DOM 3 FAQ: Why are some Text nodes empty?](https://www.w3.org/DOM/faq.html#emptytext) for more
+information.
 
-<p>To navigate the opposite way through the child nodes list use <a
-    href="/en-US/docs/Web/API/Node.nextSibling">Node.nextSibling</a>.</p>
+To navigate the opposite way through the child nodes list use [Node.nextSibling](/en-US/docs/Web/API/Node.nextSibling).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Node.nextSibling")}}</li>
-</ul>
+- {{domxref("Node.nextSibling")}}

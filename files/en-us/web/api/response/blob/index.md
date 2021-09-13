@@ -10,67 +10,67 @@ tags:
   - Response
 browser-compat: api.Response.blob
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p>The <strong><code>blob()</code></strong> method of the {{domxref("Response")}} interface takes
-  a {{domxref("Response")}} stream and reads it to completion. It returns a promise that
-  resolves with a {{domxref("Blob")}}.</p>
+The **`blob()`** method of the {{domxref("Response")}} interface takes
+a {{domxref("Response")}} stream and reads it to completion. It returns a promise that
+resolves with a {{domxref("Blob")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>response</em>.blob().then(function(<em>myBlob</em>) {
+```js
+response.blob().then(function(myBlob) {
   // do something with myBlob
-});</pre>
+});
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<div class="note"><p><strong>Note:</strong> If the {{domxref("Response")}} has a
-  {{domxref("Response.type")}} of <code>"opaque"</code>, the resulting {{domxref("Blob")}}
-  will have a {{domxref("Blob.size")}} of <code>0</code> and a {{domxref("Blob.type")}} of
-  empty string <code>""</code>, which renders it <em>useless</em> for methods like
-  {{domxref("URL.createObjectURL")}}.</p></div>
+> **Note:** If the {{domxref("Response")}} has a
+> {{domxref("Response.type")}} of `"opaque"`, the resulting {{domxref("Blob")}}
+> will have a {{domxref("Blob.size")}} of `0` and a {{domxref("Blob.type")}} of
+> empty string `""`, which renders it _useless_ for methods like
+> {{domxref("URL.createObjectURL")}}.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A promise that resolves with a {{domxref("Blob")}}.</p>
+A promise that resolves with a {{domxref("Blob")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In our <a href="https://github.com/mdn/fetch-examples/tree/master/fetch-request">fetch
-    request example</a> (run <a
-    href="https://mdn.github.io/fetch-examples/fetch-request/">fetch request live</a>), we
-  create a new request using the {{domxref("Request.Request","Request()")}} constructor,
-  then use it to fetch a JPG. When the fetch is successful, we read a {{domxref("Blob")}}
-  out of the response using <code>blob()</code>, put it into an object URL using
-  {{domxref("URL.createObjectURL")}}, and then set that URL as the source of an
-  {{htmlelement("img")}} element to display the image.</p>
+In our [fetch
+request example](https://github.com/mdn/fetch-examples/tree/master/fetch-request) (run [fetch request live](https://mdn.github.io/fetch-examples/fetch-request/)), we
+create a new request using the {{domxref("Request.Request","Request()")}} constructor,
+then use it to fetch a JPG. When the fetch is successful, we read a {{domxref("Blob")}}
+out of the response using `blob()`, put it into an object URL using
+{{domxref("URL.createObjectURL")}}, and then set that URL as the source of an
+{{htmlelement("img")}} element to display the image.
 
-<pre class="brush: js">var myImage = document.querySelector('img');
+```js
+var myImage = document.querySelector('img');
 
 var myRequest = new Request('flowers.jpg');
 
 fetch(myRequest)
-.then(response =&gt; response.blob())
+.then(response => response.blob())
 .then(function(myBlob) {
   var objectURL = URL.createObjectURL(myBlob);
   myImage.src = objectURL;
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
-  <li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a></li>
-  <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP](/en-US/docs/Web/HTTP)

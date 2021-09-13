@@ -2,77 +2,77 @@
 title: AudioTrackList.getTrackById()
 slug: Web/API/AudioTrackList/getTrackById
 tags:
-- API
-- Audio
-- AudioTrackList
-- HTML DOM
-- Media
-- Method
-- Reference
-- Track ID
-- Track List
-- Tracks
-- getTrackById
-- id
-- track
+  - API
+  - Audio
+  - AudioTrackList
+  - HTML DOM
+  - Media
+  - Method
+  - Reference
+  - Track ID
+  - Track List
+  - Tracks
+  - getTrackById
+  - id
+  - track
 browser-compat: api.AudioTrackList.getTrackById
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong>{{domxref("AudioTrackList")}}</strong> method
-    <strong><code>getTrackById()</code></strong> returns the first
-    {{domxref("AudioTrack")}} object from the track list whose {{domxref("AudioTrack.id",
+The **{{domxref("AudioTrackList")}}** method
+**`getTrackById()`** returns the first
+{{domxref("AudioTrack")}} object from the track list whose {{domxref("AudioTrack.id",
     "id")}} matches the specified string. This lets you find a specified track if
-  you know its ID string.</p>
+you know its ID string.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>theTrack</em> = <em>AudioTrackList</em>.getTrackById(<em>id</em>);</pre>
+```js
+var theTrack = AudioTrackList.getTrackById(id);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>id</code></dt>
-  <dd>A {{domxref("DOMString")}} indicating the ID of the track to locate within the track
-    list.</dd>
-</dl>
+- `id`
+  - : A {{domxref("DOMString")}} indicating the ID of the track to locate within the track
+    list.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An {{domxref("AudioTrack")}} object indicating the first track found within the
-  <code>AudioTrackList</code> whose <code>id</code> matches the specified string. If no
-  match is found, this method returns <code>null</code>.</p>
+An {{domxref("AudioTrack")}} object indicating the first track found within the
+`AudioTrackList` whose `id` matches the specified string. If no
+match is found, this method returns `null`.
 
-<p>The tracks are searched in their natural order; that is, in the order defined by the
-  media resource itself, or, if the resource doesn't define an order, the relative order
-  in which the tracks are declared by the media resource.</p>
+The tracks are searched in their natural order; that is, in the order defined by the
+media resource itself, or, if the resource doesn't define an order, the relative order
+in which the tracks are declared by the media resource.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example suggests a hypothetical game in which movies are used as cut-scenes or
-  other key set pieces within the game. Each movie has one audio track for each character,
-  as well as one for the music, sound effects, and so forth. This function allows the game
-  to disable a specific character's audio in order to adjust the movie's performance based
-  on occurrences within the game; if the character's dialog isn't relevant, it gets left
-  out. Obviously that would require some clever graphic design to make work, but... it's a
-  hypothetical game.</p>
+This example suggests a hypothetical game in which movies are used as cut-scenes or
+other key set pieces within the game. Each movie has one audio track for each character,
+as well as one for the music, sound effects, and so forth. This function allows the game
+to disable a specific character's audio in order to adjust the movie's performance based
+on occurrences within the game; if the character's dialog isn't relevant, it gets left
+out. Obviously that would require some clever graphic design to make work, but... it's a
+hypothetical game.
 
-<pre class="brush: js">function disableCharacter(videoElem, characterName) {
+```js
+function disableCharacter(videoElem, characterName) {
   videoElem.audioTracks.getTrackById(characterName).enabled = false;
 }
-</pre>
+```
 
-<p>This short function gets the {{domxref("AudioTrackList")}} containing the video's audio
-  tracks using {{domxref("HTMLMediaElement.audioTracks")}}, then calls
-  <code>getTrackById()</code> on it, specifying the character's name. The resulting
-  track's audio is then disabled by setting its {{domxref("AudioTrack.enabled",
-  "enabled")}} flag to <code>false</code>.</p>
+This short function gets the {{domxref("AudioTrackList")}} containing the video's audio
+tracks using {{domxref("HTMLMediaElement.audioTracks")}}, then calls
+`getTrackById()` on it, specifying the character's name. The resulting
+track's audio is then disabled by setting its {{domxref("AudioTrack.enabled",
+  "enabled")}} flag to `false`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

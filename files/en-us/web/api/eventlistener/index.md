@@ -9,40 +9,38 @@ tags:
   - events
 browser-compat: api.EventListener
 ---
-<div>{{APIRef("DOM Events")}}</div>
+{{APIRef("DOM Events")}}
 
-<p>The <strong><code>EventListener</code></strong> interface represents an object that can handle an event dispatched by an {{domxref("EventTarget")}} object.</p>
+The **`EventListener`** interface represents an object that can handle an event dispatched by an {{domxref("EventTarget")}} object.
 
-<div class="note">
-<p><strong>Note:</strong> Due to the need for compatibility with legacy content, <code>EventListener</code> accepts both a function and an object with a <code>handleEvent()</code> property function. This is shown in the <a href="#example">example</a> below.</p>
-</div>
+> **Note:** Due to the need for compatibility with legacy content, `EventListener` accepts both a function and an object with a `handleEvent()` property function. This is shown in the [example](#example) below.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface neither implements, nor inherits, any properties.</em></p>
+_This interface neither implements, nor inherits, any properties._
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface doesn't inherit any methods.</em></p>
+_This interface doesn't inherit any methods._
 
-<dl>
- <dt>{{domxref("EventListener.handleEvent()")}}</dt>
- <dd>A function that is called whenever an event of the specified type occurs.</dd>
-</dl>
+- {{domxref("EventListener.handleEvent()")}}
+  - : A function that is called whenever an event of the specified type occurs.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;button id="btn"&gt;Click here!&lt;/button&gt;
+```html
+<button id="btn">Click here!</button>
 
-&lt;p id="funcOutput"&gt;&lt;/p&gt;
-&lt;p id="handleEvtOutput"&gt;&lt;/p&gt;
-</pre>
+<p id="funcOutput"></p>
+<p id="handleEvtOutput"></p>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">const buttonElement = document.getElementById('btn');
+```js
+const buttonElement = document.getElementById('btn');
 const funcOutput = document.getElementById('funcOutput');
 const handleEvtOutput = document.getElementById('handleEvtOutput');
 
@@ -62,22 +60,20 @@ buttonElement.addEventListener('click', {
     handleEvtOutput.textContent = 'Element clicked through handleEvent property!';
   }
 });
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Example')}}</p>
+{{EmbedLiveSample('Example')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h3 id="See_also">See also</h3>
+### See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener</a></li>
-</ul>
+- [addEventListener](/en-US/docs/Web/API/EventTarget/addEventListener)

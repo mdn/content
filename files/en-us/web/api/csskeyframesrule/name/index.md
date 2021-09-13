@@ -10,26 +10,26 @@ tags:
   - Reference
 browser-compat: api.CSSKeyframesRule.name
 ---
-<div>{{APIRef("CSSOM") }}</div>
+{{APIRef("CSSOM") }}
 
-<p>The <strong><code>name</code></strong> property of the {{domxref("CSSKeyframeRule")}} interface gets and sets the name of the animation as used by the {{cssxref("animation-name")}} property.</p>
+The **`name`** property of the {{domxref("CSSKeyframeRule")}} interface gets and sets the name of the animation as used by the {{cssxref("animation-name")}} property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <var>name</var> = <var>CSSKeyframesRule</var>.name;
-<var>CSSKeyframesRule</var>.name = <var>name</var>;</pre>
+    var name = CSSKeyframesRule.name;
+    CSSKeyframesRule.name = name;
 
-<h3 id="value">Value</h3>
-<p>A {{domxref('CSSOMString')}}.</p>
+### Value
 
-<h2 id="Example">Example</h2>
+A {{domxref('CSSOMString')}}.
 
-<p>
-    The CSS includes a keyframes at-rule. This will be the first {{domxref("CSSRule")}} returned by <code>document.styleSheets[0].cssRules</code>.
-    <code>myRules[0]</code> returns a {{domxref("CSSKeyframesRule")}} object, with the <code>name</code> set to "slidein".
-</p>
+## Example
 
-<pre class="brush: css">@keyframes slidein {
+The CSS includes a keyframes at-rule. This will be the first {{domxref("CSSRule")}} returned by `document.styleSheets[0].cssRules`.
+`myRules[0]` returns a {{domxref("CSSKeyframesRule")}} object, with the `name` set to "slidein".
+
+```css
+@keyframes slidein {
   from {
     transform: translateX(0%);
   }
@@ -37,16 +37,19 @@ browser-compat: api.CSSKeyframesRule.name
   to {
     transform: translateX(100%);
   }
-}</pre>
+}
+```
 
-<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
+```js
+let myRules = document.styleSheets[0].cssRules;
 let keyframes = myRules[0]; // a CSSKeyframesRule
-console.log(keyframes.name); // "slidein"</pre>
+console.log(keyframes.name); // "slidein"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -11,161 +11,146 @@ tags:
   - registerProtocolHandler
 browser-compat: api.Navigator.registerProtocolHandler
 ---
-<div>{{APIRef("HTML DOM")}}{{securecontext_header}}</div>
+{{APIRef("HTML DOM")}}{{securecontext_header}}
 
-<p>The <strong>{{domxref("Navigator")}}</strong> method
-    <code><strong>registerProtocolHandler()</strong></code> lets websites register their
-    ability to open or handle particular URL schemes (aka protocols).</p>
+The **{{domxref("Navigator")}}** method
+**`registerProtocolHandler()`** lets websites register their
+ability to open or handle particular URL schemes (aka protocols).
 
-<p>For example, this API lets webmail sites open <code>mailto:</code> URLs, or <abbr
-    title="Voice over Internet Protocol, also called IP telephony">VoIP</abbr> sites open
-  <code>tel:</code> URLs.</p>
+For example, this API lets webmail sites open `mailto:` URLs, or VoIP sites open
+`tel:` URLs.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">navigator.registerProtocolHandler(<var>scheme</var>, <var>url</var>);
-</pre>
+```js
+navigator.registerProtocolHandler(scheme, url);
+```
 
-<div class="note"><p><strong>Note:</strong> The original implementation required three
-  arguments:
-  <code>navigator.registerProtocolHandler(<var>scheme</var>, <var>url, title</var>)</code>,
-  which most browsers still support (see the <a
-    href="#browser_compatibility">compatibility table below</a>). It is recommended to
-  still set the title, since browsers that support the updated spec will most likely be
-  backwards-compatible and still accept the title (but not use it).</p></div>
+> **Note:** The original implementation required three
+> arguments:
+> `navigator.registerProtocolHandler(scheme, url, title)`,
+> which most browsers still support (see the [compatibility table below](#browser_compatibility)). It is recommended to
+> still set the title, since browsers that support the updated spec will most likely be
+> backwards-compatible and still accept the title (but not use it).
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>scheme</var></code></dt>
-  <dd>A string containing the protocol the site wishes to handle. For example, you can
-    register to handle SMS text message links by passing the <code>"sms"</code> scheme.
-  </dd>
-  <dt><code><var>url</var></code></dt>
-  <dd>A string containing the URL of the handler. <strong>This URL must include
-      <code>%s</code></strong>, as a placeholder that will be replaced with the <a
-      href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent">escaped</a>
+- `scheme`
+  - : A string containing the protocol the site wishes to handle. For example, you can
+    register to handle SMS text message links by passing the `"sms"` scheme.
+- `url`
+
+  - : A string containing the URL of the handler. **This URL must include
+    `%s`**, as a placeholder that will be replaced with the [escaped](/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent)
     URL to be handled.
-    <div class="note"><p><strong>Note:</strong> The handler URL must use the
-      <code>https</code> scheme. Older browsers also supported <code>http</code>.</p></div>
-  </dd>
-  <dt><code><var>title</var></code> {{deprecated_inline}}</dt>
-  <dd>A human-readable title string for the handler. <strong>This will be displayed to the
-      user</strong>, such as prompting “Allow this site to handle [scheme] links?” or
+
+    > **Note:** The handler URL must use the
+    > `https` scheme. Older browsers also supported `http`.
+
+- `title` {{deprecated_inline}}
+
+  - : A human-readable title string for the handler. **This will be displayed to the
+    user**, such as prompting “Allow this site to handle \[scheme] links?” or
     listing registered handlers in the browser’s settings.
-    <div class="note"><p><strong>Note:</strong> The title has been removed from the spec due
-      to spoofing concerns, but some browsers <strong>still require it</strong> (check the
-      <a href="#browser_compatibility">compatibility table below</a>). It is recommended
-      to <strong>always set the title</strong>, since browsers that support the updated
-      spec most likely will be backwards-compatible and still accept the title (but not
-      use it).</p></div>
-  </dd>
-</dl>
 
-<h3 id="Exceptions">Exceptions</h3>
+    > **Note:** The title has been removed from the spec due
+    > to spoofing concerns, but some browsers **still require it** (check the
+    > [compatibility table below](#browser_compatibility)). It is recommended
+    > to **always set the title**, since browsers that support the updated
+    > spec most likely will be backwards-compatible and still accept the title (but not
+    > use it).
 
-<dl>
-  <dt>{{Exception("SecurityError")}}</dt>
-  <dd>The user agent blocked the registration. This might happen if:</dd>
-</dl>
+### Exceptions
 
-<ul>
-  <li>The registered scheme (protocol) is invalid, such as a scheme the browser handles
-    itself (<code>https:</code>, <code>about:</code>, etc.)</li>
-  <li>The handler URL’s {{Glossary("origin")}} does not match the origin of the page
-    calling this API.</li>
-  <li>The browser requires that this function is called from a secure context.</li>
-  <li>The browser requires that the handler's URL be over HTTPS.</li>
-</ul>
+- {{Exception("SecurityError")}}
+  - : The user agent blocked the registration. This might happen if:
 
-<dl>
-  <dt>{{Exception("SyntaxError")}}</dt>
-  <dd>The <code>%s</code> placeholder is missing from the handler URL.</dd>
-</dl>
+<!---->
 
-<h2 id="Permitted_schemes">Permitted schemes</h2>
+- The registered scheme (protocol) is invalid, such as a scheme the browser handles
+  itself (`https:`, `about:`, etc.)
+- The handler URL’s {{Glossary("origin")}} does not match the origin of the page
+  calling this API.
+- The browser requires that this function is called from a secure context.
+- The browser requires that the handler's URL be over HTTPS.
 
-<p>For security reasons, <code>registerProtocolHandler()</code> restricts which schemes
-  can be registered.</p>
+<!---->
 
-<p>A <strong>custom scheme</strong> may be registered as long as:</p>
+- {{Exception("SyntaxError")}}
+  - : The `%s` placeholder is missing from the handler URL.
 
-<ul>
-  <li>The custom scheme's name begins with <code>web+</code></li>
-  <li>The custom scheme's name includes at least 1 letter after the <code>web+</code>
-    prefix</li>
-  <li>The custom scheme has only lowercase ASCII letters in its name.</li>
-</ul>
+## Permitted schemes
 
-<p>For example, <code>web+burger</code>, as shown in the {{anch("Example")}} below.</p>
+For security reasons, `registerProtocolHandler()` restricts which schemes
+can be registered.
 
-<p>Otherwise, the scheme must be one of the following:</p>
+A **custom scheme** may be registered as long as:
 
-<div class="threecolumns">
-  <ul>
-    <li><code>bitcoin</code></li>
-    <li><code>geo</code></li>
-    <li><code>im</code></li>
-    <li><code>irc</code></li>
-    <li><code>ircs</code></li>
-    <li><code>magnet</code></li>
-    <li><code>mailto</code></li>
-    <li><code>matrix</code></li>
-    <li><code>mms</code></li>
-    <li><code>news</code></li>
-    <li><code>nntp</code></li>
-    <li><code>openpgp4fpr</code></li>
-    <li><code>sip</code></li>
-    <li><code>sms</code></li>
-    <li><code>smsto</code></li>
-    <li><code>ssh</code></li>
-    <li><code>tel</code></li>
-    <li><code>urn</code></li>
-    <li><code>webcal</code></li>
-    <li><code>wtai</code></li>
-    <li><code>xmpp</code></li>
-  </ul>
-</div>
+- The custom scheme's name begins with `web+`
+- The custom scheme's name includes at least 1 letter after the `web+`
+  prefix
+- The custom scheme has only lowercase ASCII letters in its name.
 
-<h2 id="Example">Example</h2>
+For example, `web+burger`, as shown in the {{anch("Example")}} below.
 
-<p>If your site is <code>burgers.example.com</code>, you can register a protocol handler
-  for it to handle <code>web+burger:</code> links, like so:</p>
+Otherwise, the scheme must be one of the following:
 
-<pre class="brush: js">navigator.registerProtocolHandler("web+burger",
+- `bitcoin`
+- `geo`
+- `im`
+- `irc`
+- `ircs`
+- `magnet`
+- `mailto`
+- `matrix`
+- `mms`
+- `news`
+- `nntp`
+- `openpgp4fpr`
+- `sip`
+- `sms`
+- `smsto`
+- `ssh`
+- `tel`
+- `urn`
+- `webcal`
+- `wtai`
+- `xmpp`
+
+## Example
+
+If your site is `burgers.example.com`, you can register a protocol handler
+for it to handle `web+burger:` links, like so:
+
+```js
+navigator.registerProtocolHandler("web+burger",
                                   "https://burgers.example.com/?burger=%s",
                                   "Burger handler"); // last title arg included for compatibility
-</pre>
+```
 
-<p>This creates a handler that lets <code>web+burger:</code> links send the user to your
-  site, inserting the accessed burger URL into the <code>%s</code> placeholder.</p>
+This creates a handler that lets `web+burger:` links send the user to your
+site, inserting the accessed burger URL into the `%s` placeholder.
 
-<p>This script must be run from the same origin as the handler URL (so any page at
-  <code>https://burgers.example.com</code>), and the handler URL must be <code>http</code>
-  or <code>https</code>.</p>
+This script must be run from the same origin as the handler URL (so any page at
+`https://burgers.example.com`), and the handler URL must be `http`
+or `https`.
 
-<p>The user will be notified that your code asked to register the protocol handler, so
-  that they can decide whether or not to allow it. See the screenshot below for an example
-  on <code>google.co.uk</code>:</p>
+The user will be notified that your code asked to register the protocol handler, so
+that they can decide whether or not to allow it. See the screenshot below for an example
+on `google.co.uk`:
 
-<p><img
-    alt="A browser notification reads “Add Burger handler (www.google.co.uk) as an application for burger links?”, and offers an “Add Application” button and a close to ignore the handler request."
-    src="protocolregister.png"></p>
+![A browser notification reads “Add Burger handler (www.google.co.uk) as an application for burger links?”, and offers an “Add Application” button and a close to ignore the handler request.](protocolregister.png)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers">Web-based protocol handlers</a>
-  </li>
-  <li><a
-      href="http://blog.mozilla.com/webdev/2010/07/26/registerprotocolhandler-enhancing-the-federated-web/">RegisterProtocolHandler
-      Enhancing the Federated Web</a> at Mozilla Webdev</li>
-</ul>
+- [Web-based protocol handlers](/en-US/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers)
+- [RegisterProtocolHandler
+  Enhancing the Federated Web](http://blog.mozilla.com/webdev/2010/07/26/registerprotocolhandler-enhancing-the-federated-web/) at Mozilla Webdev

@@ -11,299 +11,277 @@ tags:
   - Reference
   - Web
 ---
-<div>{{DefaultAPISidebar("DOM")}}</div>
+{{DefaultAPISidebar("DOM")}}
 
-<p>The <strong>Document Object Model</strong> (<strong>DOM</strong>) connects web pages to scripts or programming languages by representing the structure of a document—such as the HTML representing a web page—in memory. Usually it refers to JavaScript, even though modeling HTML, SVG, or XML documents as objects are not part of the core JavaScript language.</p>
+The **Document Object Model** (**DOM**) connects web pages to scripts or programming languages by representing the structure of a document—such as the HTML representing a web page—in memory. Usually it refers to JavaScript, even though modeling HTML, SVG, or XML documents as objects are not part of the core JavaScript language.
 
-<p>The DOM represents a document with a logical tree. Each branch of the tree ends in a node, and each node contains objects. DOM methods allow programmatic access to the tree. With them, you can change the document's structure, style, or content.</p>
+The DOM represents a document with a logical tree. Each branch of the tree ends in a node, and each node contains objects. DOM methods allow programmatic access to the tree. With them, you can change the document's structure, style, or content.
 
-<p>Nodes can also have event handlers attached to them. Once an event is triggered, the event handlers get executed.</p>
+Nodes can also have event handlers attached to them. Once an event is triggered, the event handlers get executed.
 
-<p>To learn more about what the DOM is and how it represents documents, see our article <a href="/en-US/docs/Web/API/Document_Object_Model/Introduction">Introduction to the DOM</a>.</p>
+To learn more about what the DOM is and how it represents documents, see our article [Introduction to the DOM](/en-US/docs/Web/API/Document_Object_Model/Introduction).
 
+## DOM interfaces
 
-<h2 id="DOM_interfaces">DOM interfaces</h2>
+- {{DOMxRef("Attr")}}
+- {{DOMxRef("CDATASection")}}
+- {{DOMxRef("CharacterData")}}
+- {{DOMxRef("Comment")}}
+- {{DOMxRef("CustomEvent")}}
+- {{DOMxRef("Document")}}
+- {{DOMxRef("DocumentFragment")}}
+- {{DOMxRef("DocumentType")}}
+- {{DOMxRef("DOMError")}} {{Deprecated_Inline}}
+- {{DOMxRef("DOMException")}}
+- {{DOMxRef("DOMImplementation")}}
+- {{DOMxRef("DOMString")}}
+- {{DOMxRef("DOMTimeStamp")}}
+- {{DOMxRef("DOMStringList")}}
+- {{DOMxRef("DOMTokenList")}}
+- {{DOMxRef("Element")}}
+- {{DOMxRef("Event")}}
+- {{DOMxRef("EventTarget")}}
+- {{DOMxRef("HTMLCollection")}}
+- {{DOMxRef("MutationObserver")}}
+- {{DOMxRef("MutationRecord")}}
+- {{DOMxRef("NamedNodeMap")}}
+- {{DOMxRef("Node")}}
+- {{DOMxRef("NodeFilter")}}
+- {{DOMxRef("NodeIterator")}}
+- {{DOMxRef("NodeList")}}
+- {{DOMxRef("ProcessingInstruction")}}
+- {{DOMxRef("Selection")}} {{Experimental_Inline}}
+- {{DOMxRef("Range")}}
+- {{DOMxRef("Text")}}
+- {{DOMxRef("TextDecoder")}} {{Experimental_Inline}}
+- {{DOMxRef("TextEncoder")}} {{Experimental_Inline}}
+- {{DOMxRef("TimeRanges")}}
+- {{DOMxRef("TreeWalker")}}
+- {{DOMxRef("URL")}}
+- {{DOMxRef("Window")}}
+- {{DOMxRef("Worker")}}
+- {{DOMxRef("XMLDocument")}} {{Experimental_Inline}}
 
-<ul>
- <li>{{DOMxRef("Attr")}}</li>
- <li>{{DOMxRef("CDATASection")}}</li>
- <li>{{DOMxRef("CharacterData")}}</li>
- <li>{{DOMxRef("Comment")}}</li>
- <li>{{DOMxRef("CustomEvent")}}</li>
- <li>{{DOMxRef("Document")}}</li>
- <li>{{DOMxRef("DocumentFragment")}}</li>
- <li>{{DOMxRef("DocumentType")}}</li>
- <li>{{DOMxRef("DOMError")}} {{Deprecated_Inline}}</li>
- <li>{{DOMxRef("DOMException")}}</li>
- <li>{{DOMxRef("DOMImplementation")}}</li>
- <li>{{DOMxRef("DOMString")}}</li>
- <li>{{DOMxRef("DOMTimeStamp")}}</li>
- <li>{{DOMxRef("DOMStringList")}}</li>
- <li>{{DOMxRef("DOMTokenList")}}</li>
- <li>{{DOMxRef("Element")}}</li>
- <li>{{DOMxRef("Event")}}</li>
- <li>{{DOMxRef("EventTarget")}}</li>
- <li>{{DOMxRef("HTMLCollection")}}</li>
- <li>{{DOMxRef("MutationObserver")}}</li>
- <li>{{DOMxRef("MutationRecord")}}</li>
- <li>{{DOMxRef("NamedNodeMap")}}</li>
- <li>{{DOMxRef("Node")}}</li>
- <li>{{DOMxRef("NodeFilter")}}</li>
- <li>{{DOMxRef("NodeIterator")}}</li>
- <li>{{DOMxRef("NodeList")}}</li>
- <li>{{DOMxRef("ProcessingInstruction")}}</li>
- <li>{{DOMxRef("Selection")}} {{Experimental_Inline}}</li>
- <li>{{DOMxRef("Range")}}</li>
- <li>{{DOMxRef("Text")}}</li>
- <li>{{DOMxRef("TextDecoder")}} {{Experimental_Inline}}</li>
- <li>{{DOMxRef("TextEncoder")}} {{Experimental_Inline}}</li>
- <li>{{DOMxRef("TimeRanges")}}</li>
- <li>{{DOMxRef("TreeWalker")}}</li>
- <li>{{DOMxRef("URL")}}</li>
- <li>{{DOMxRef("Window")}}</li>
- <li>{{DOMxRef("Worker")}}</li>
- <li>{{DOMxRef("XMLDocument")}} {{Experimental_Inline}}</li>
-</ul>
+### Obsolete DOM interfaces
 
-<h3 id="Obsolete_DOM_interfaces">Obsolete DOM interfaces</h3>
+The Document Object Model has been highly simplified. To achieve this, the following interfaces present in the different DOM level 3 or earlier specifications have been removed. It is uncertain whether some may be reintroduced in the future or not, but for the time being they should be considered obsolete and should be avoided:
 
-<p>The Document Object Model has been highly simplified. To achieve this, the following interfaces present in the different DOM level 3 or earlier specifications have been removed. It is uncertain whether some may be reintroduced in the future or not, but for the time being they should be considered obsolete and should be avoided:</p>
+- `DOMConfiguration`
+- `DOMErrorHandler`
+- `DOMImplementationList`
+- `DOMImplementationRegistry`
+- `DOMImplementationSource`
+- `DOMLocator`
+- `DOMObject`
+- `DOMSettableTokenList`
+- `DOMUserData`
+- `ElementTraversal`
+- `Entity`
+- `EntityReference`
+- `NameList`
+- `Notation`
+- `TypeInfo`
+- `UserDataHandler`
 
-<ul>
- <li><code>DOMConfiguration</code></li>
- <li><code>DOMErrorHandler</code></li>
- <li><code>DOMImplementationList</code></li>
- <li><code>DOMImplementationRegistry</code></li>
- <li><code>DOMImplementationSource</code></li>
- <li><code>DOMLocator</code></li>
- <li><code>DOMObject</code></li>
- <li><code>DOMSettableTokenList</code></li>
- <li><code>DOMUserData</code></li>
- <li><code>ElementTraversal</code></li>
- <li><code>Entity</code></li>
- <li><code>EntityReference</code></li>
- <li><code>NameList</code></li>
- <li><code>Notation</code></li>
- <li><code>TypeInfo</code></li>
- <li><code>UserDataHandler</code></li>
-</ul>
+## HTML DOM
 
-<h2 id="HTML_DOM">HTML DOM</h2>
+A document containing HTML is described using the {{DOMxRef("Document")}} interface, which is extended by the HTML specification to include various HTML-specific features. In particular, the {{domxref("Element")}} interface is enhanced to become {{domxref("HTMLElement")}} and various subclasses, each representing one of (or a family of closely related) elements.
 
-<p>A document containing HTML is described using the {{DOMxRef("Document")}} interface, which is extended by the HTML specification to include various HTML-specific features. In particular, the {{domxref("Element")}} interface is enhanced to become {{domxref("HTMLElement")}} and various subclasses, each representing one of (or a family of closely related) elements.</p>
+The HTML DOM API provides access to various browser features such as tabs and windows, CSS styles and stylesheets, browser history, and so forth. These interfaces are discussed further in [the HTML DOM API](/en-US/docs/Web/API/HTML_DOM_API) documentation.
 
-<p>The HTML DOM API provides access to various browser features such as tabs and windows, CSS styles and stylesheets, browser history, and so forth. These interfaces are discussed further in <a href="/en-US/docs/Web/API/HTML_DOM_API">the HTML DOM API</a> documentation.</p>
+## SVG interfaces
 
-<h2 id="SVG_interfaces">SVG interfaces</h2>
+### SVG element interfaces
 
-<h3 id="SVG_element_interfaces">SVG element interfaces</h3>
+- {{DOMxRef("SVGAElement")}}
+- {{DOMxRef("SVGAltGlyphElement")}} {{Deprecated_Inline}}
+- {{DOMxRef("SVGAltGlyphDefElement")}} {{Deprecated_Inline}}
+- {{DOMxRef("SVGAltGlyphItemElement")}} {{Deprecated_Inline}}
+- {{DOMxRef("SVGAnimationElement")}}
+- {{DOMxRef("SVGAnimateElement")}}
+- {{DOMxRef("SVGAnimateColorElement")}} {{Deprecated_Inline}}
+- {{DOMxRef("SVGAnimateMotionElement")}}
+- {{DOMxRef("SVGAnimateTransformElement")}}
+- {{DOMxRef("SVGCircleElement")}}
+- {{DOMxRef("SVGClipPathElement")}}
+- {{DOMxRef("SVGComponentTransferFunctionElement")}}
+- {{DOMxRef("SVGCursorElement")}}
+- {{DOMxRef("SVGDefsElement")}}
+- {{DOMxRef("SVGDescElement")}}
+- {{DOMxRef("SVGElement")}}
+- {{DOMxRef("SVGEllipseElement")}}
+- {{DOMxRef("SVGFEBlendElement")}}
+- {{DOMxRef("SVGFEColorMatrixElement")}}
+- {{DOMxRef("SVGFEComponentTransferElement")}}
+- {{DOMxRef("SVGFECompositeElement")}}
+- {{DOMxRef("SVGFEConvolveMatrixElement")}}
+- {{DOMxRef("SVGFEDiffuseLightingElement")}}
+- {{DOMxRef("SVGFEDisplacementMapElement")}}
+- {{DOMxRef("SVGFEDistantLightElement")}}
+- {{DOMxRef("SVGFEDropShadowElement")}}
+- {{DOMxRef("SVGFEFloodElement")}}
+- {{DOMxRef("SVGFEFuncAElement")}}
+- {{DOMxRef("SVGFEFuncBElement")}}
+- {{DOMxRef("SVGFEFuncGElement")}}
+- {{DOMxRef("SVGFEFuncRElement")}}
+- {{DOMxRef("SVGFEGaussianBlurElement")}}
+- {{DOMxRef("SVGFEImageElement")}}
+- {{DOMxRef("SVGFEMergeElement")}}
+- {{DOMxRef("SVGFEMergeNodeElement")}}
+- {{DOMxRef("SVGFEMorphologyElement")}}
+- {{DOMxRef("SVGFEOffsetElement")}}
+- {{DOMxRef("SVGFEPointLightElement")}}
+- {{DOMxRef("SVGFESpecularLightingElement")}}
+- {{DOMxRef("SVGFESpotLightElement")}}
+- {{DOMxRef("SVGFETileElement")}}
+- {{DOMxRef("SVGFETurbulenceElement")}}
+- {{DOMxRef("SVGFilterElement")}}
+- {{DOMxRef("SVGFilterPrimitiveStandardAttributes")}}
+- {{DOMxRef("SVGFontElement")}} {{Deprecated_Inline}}
+- {{DOMxRef("SVGFontFaceElement")}} {{Deprecated_Inline}}
+- {{DOMxRef("SVGFontFaceFormatElement")}} {{Deprecated_Inline}}
+- {{DOMxRef("SVGFontFaceNameElement")}} {{Deprecated_Inline}}
+- {{DOMxRef("SVGFontFaceSrcElement")}} {{Deprecated_Inline}}
+- {{DOMxRef("SVGFontFaceUriElement")}} {{Deprecated_Inline}}
+- {{DOMxRef("SVGForeignObjectElement")}}
+- {{DOMxRef("SVGGElement")}}
+- {{DOMxRef("SVGGeometryElement")}}
+- {{DOMxRef("SVGGlyphElement")}} {{Deprecated_Inline}}
+- {{DOMxRef("SVGGlyphRefElement")}} {{Deprecated_Inline}}
+- {{DOMxRef("SVGGradientElement")}}
+- {{DOMxRef("SVGGraphicsElement")}}
+- {{DOMxRef("SVGHatchElement")}} {{Experimental_Inline}}
+- {{DOMxRef("SVGHatchpathElement")}} {{Experimental_Inline}}
+- {{DOMxRef("SVGHKernElement")}} {{Deprecated_Inline}}
+- {{DOMxRef("SVGImageElement")}}
+- {{DOMxRef("SVGLinearGradientElement")}}
+- {{DOMxRef("SVGLineElement")}}
+- {{DOMxRef("SVGMarkerElement")}} {{Experimental_Inline}}
+- {{DOMxRef("SVGMaskElement")}}
+- {{DOMxRef("SVGMeshElement")}} {{Experimental_Inline}}
+- {{DOMxRef("SVGMeshGradientElement")}} {{Experimental_Inline}}
+- {{DOMxRef("SVGMeshpatchElement")}} {{Experimental_Inline}}
+- {{DOMxRef("SVGMeshrowElement")}} {{Experimental_Inline}}
+- {{DOMxRef("SVGMetadataElement")}}
+- {{DOMxRef("SVGMissingGlyphElement")}} {{Deprecated_Inline}}
+- {{DOMxRef("SVGMPathElement")}}
+- {{DOMxRef("SVGPathElement")}}
+- {{DOMxRef("SVGPatternElement")}}
+- {{DOMxRef("SVGPolylineElement")}}
+- {{DOMxRef("SVGPolygonElement")}}
+- {{DOMxRef("SVGRadialGradientElement")}}
+- {{DOMxRef("SVGRectElement")}}
+- {{DOMxRef("SVGScriptElement")}}
+- {{DOMxRef("SVGSetElement")}}
+- {{DOMxRef("SVGStopElement")}}
+- {{DOMxRef("SVGStyleElement")}}
+- {{DOMxRef("SVGSVGElement")}}
+- {{DOMxRef("SVGSwitchElement")}}
+- {{DOMxRef("SVGSymbolElement")}}
+- {{DOMxRef("SVGTextContentElement")}}
+- {{DOMxRef("SVGTextElement")}}
+- {{DOMxRef("SVGTextPathElement")}}
+- {{DOMxRef("SVGTextPositioningElement")}}
+- {{DOMxRef("SVGTitleElement")}}
+- {{DOMxRef("SVGTRefElement")}} {{Deprecated_Inline}}
+- {{DOMxRef("SVGTSpanElement")}}
+- {{DOMxRef("SVGUseElement")}}
+- {{DOMxRef("SVGViewElement")}}
+- {{DOMxRef("SVGVKernElement")}} {{Deprecated_Inline}}
 
-<ul>
- <li>{{DOMxRef("SVGAElement")}}</li>
- <li>{{DOMxRef("SVGAltGlyphElement")}} {{Deprecated_Inline}}</li>
- <li>{{DOMxRef("SVGAltGlyphDefElement")}} {{Deprecated_Inline}}</li>
- <li>{{DOMxRef("SVGAltGlyphItemElement")}} {{Deprecated_Inline}}</li>
- <li>{{DOMxRef("SVGAnimationElement")}}</li>
- <li>{{DOMxRef("SVGAnimateElement")}}</li>
- <li>{{DOMxRef("SVGAnimateColorElement")}} {{Deprecated_Inline}}</li>
- <li>{{DOMxRef("SVGAnimateMotionElement")}}</li>
- <li>{{DOMxRef("SVGAnimateTransformElement")}}</li>
- <li>{{DOMxRef("SVGCircleElement")}}</li>
- <li>{{DOMxRef("SVGClipPathElement")}}</li>
- <li>{{DOMxRef("SVGComponentTransferFunctionElement")}}</li>
- <li>{{DOMxRef("SVGCursorElement")}}</li>
- <li>{{DOMxRef("SVGDefsElement")}}</li>
- <li>{{DOMxRef("SVGDescElement")}}</li>
- <li>{{DOMxRef("SVGElement")}}</li>
- <li>{{DOMxRef("SVGEllipseElement")}}</li>
- <li>{{DOMxRef("SVGFEBlendElement")}}</li>
- <li>{{DOMxRef("SVGFEColorMatrixElement")}}</li>
- <li>{{DOMxRef("SVGFEComponentTransferElement")}}</li>
- <li>{{DOMxRef("SVGFECompositeElement")}}</li>
- <li>{{DOMxRef("SVGFEConvolveMatrixElement")}}</li>
- <li>{{DOMxRef("SVGFEDiffuseLightingElement")}}</li>
- <li>{{DOMxRef("SVGFEDisplacementMapElement")}}</li>
- <li>{{DOMxRef("SVGFEDistantLightElement")}}</li>
- <li>{{DOMxRef("SVGFEDropShadowElement")}}</li>
- <li>{{DOMxRef("SVGFEFloodElement")}}</li>
- <li>{{DOMxRef("SVGFEFuncAElement")}}</li>
- <li>{{DOMxRef("SVGFEFuncBElement")}}</li>
- <li>{{DOMxRef("SVGFEFuncGElement")}}</li>
- <li>{{DOMxRef("SVGFEFuncRElement")}}</li>
- <li>{{DOMxRef("SVGFEGaussianBlurElement")}}</li>
- <li>{{DOMxRef("SVGFEImageElement")}}</li>
- <li>{{DOMxRef("SVGFEMergeElement")}}</li>
- <li>{{DOMxRef("SVGFEMergeNodeElement")}}</li>
- <li>{{DOMxRef("SVGFEMorphologyElement")}}</li>
- <li>{{DOMxRef("SVGFEOffsetElement")}}</li>
- <li>{{DOMxRef("SVGFEPointLightElement")}}</li>
- <li>{{DOMxRef("SVGFESpecularLightingElement")}}</li>
- <li>{{DOMxRef("SVGFESpotLightElement")}}</li>
- <li>{{DOMxRef("SVGFETileElement")}}</li>
- <li>{{DOMxRef("SVGFETurbulenceElement")}}</li>
- <li>{{DOMxRef("SVGFilterElement")}}</li>
- <li>{{DOMxRef("SVGFilterPrimitiveStandardAttributes")}}</li>
- <li>{{DOMxRef("SVGFontElement")}} {{Deprecated_Inline}}</li>
- <li>{{DOMxRef("SVGFontFaceElement")}} {{Deprecated_Inline}}</li>
- <li>{{DOMxRef("SVGFontFaceFormatElement")}} {{Deprecated_Inline}}</li>
- <li>{{DOMxRef("SVGFontFaceNameElement")}} {{Deprecated_Inline}}</li>
- <li>{{DOMxRef("SVGFontFaceSrcElement")}} {{Deprecated_Inline}}</li>
- <li>{{DOMxRef("SVGFontFaceUriElement")}} {{Deprecated_Inline}}</li>
- <li>{{DOMxRef("SVGForeignObjectElement")}}</li>
- <li>{{DOMxRef("SVGGElement")}}</li>
- <li>{{DOMxRef("SVGGeometryElement")}}</li>
- <li>{{DOMxRef("SVGGlyphElement")}} {{Deprecated_Inline}}</li>
- <li>{{DOMxRef("SVGGlyphRefElement")}} {{Deprecated_Inline}}</li>
- <li>{{DOMxRef("SVGGradientElement")}}</li>
- <li>{{DOMxRef("SVGGraphicsElement")}}</li>
- <li>{{DOMxRef("SVGHatchElement")}} {{Experimental_Inline}}</li>
- <li>{{DOMxRef("SVGHatchpathElement")}} {{Experimental_Inline}}</li>
- <li>{{DOMxRef("SVGHKernElement")}} {{Deprecated_Inline}}</li>
- <li>{{DOMxRef("SVGImageElement")}}</li>
- <li>{{DOMxRef("SVGLinearGradientElement")}}</li>
- <li>{{DOMxRef("SVGLineElement")}}</li>
- <li>{{DOMxRef("SVGMarkerElement")}} {{Experimental_Inline}}</li>
- <li>{{DOMxRef("SVGMaskElement")}}</li>
- <li>{{DOMxRef("SVGMeshElement")}} {{Experimental_Inline}}</li>
- <li>{{DOMxRef("SVGMeshGradientElement")}} {{Experimental_Inline}}</li>
- <li>{{DOMxRef("SVGMeshpatchElement")}} {{Experimental_Inline}}</li>
- <li>{{DOMxRef("SVGMeshrowElement")}} {{Experimental_Inline}}</li>
- <li>{{DOMxRef("SVGMetadataElement")}}</li>
- <li>{{DOMxRef("SVGMissingGlyphElement")}} {{Deprecated_Inline}}</li>
- <li>{{DOMxRef("SVGMPathElement")}}</li>
- <li>{{DOMxRef("SVGPathElement")}}</li>
- <li>{{DOMxRef("SVGPatternElement")}}</li>
- <li>{{DOMxRef("SVGPolylineElement")}}</li>
- <li>{{DOMxRef("SVGPolygonElement")}}</li>
- <li>{{DOMxRef("SVGRadialGradientElement")}}</li>
- <li>{{DOMxRef("SVGRectElement")}}</li>
- <li>{{DOMxRef("SVGScriptElement")}}</li>
- <li>{{DOMxRef("SVGSetElement")}}</li>
- <li>{{DOMxRef("SVGStopElement")}}</li>
- <li>{{DOMxRef("SVGStyleElement")}}</li>
- <li>{{DOMxRef("SVGSVGElement")}}</li>
- <li>{{DOMxRef("SVGSwitchElement")}}</li>
- <li>{{DOMxRef("SVGSymbolElement")}}</li>
- <li>{{DOMxRef("SVGTextContentElement")}}</li>
- <li>{{DOMxRef("SVGTextElement")}}</li>
- <li>{{DOMxRef("SVGTextPathElement")}}</li>
- <li>{{DOMxRef("SVGTextPositioningElement")}}</li>
- <li>{{DOMxRef("SVGTitleElement")}}</li>
- <li>{{DOMxRef("SVGTRefElement")}} {{Deprecated_Inline}}</li>
- <li>{{DOMxRef("SVGTSpanElement")}}</li>
- <li>{{DOMxRef("SVGUseElement")}}</li>
- <li>{{DOMxRef("SVGViewElement")}}</li>
- <li>{{DOMxRef("SVGVKernElement")}} {{Deprecated_Inline}}</li>
-</ul>
+### SVG data type interfaces
 
-<h3 id="SVG_data_type_interfaces">SVG data type interfaces</h3>
+Here are the DOM APIs for data types used in the definitions of SVG properties and attributes.
 
-<p>Here are the DOM APIs for data types used in the definitions of SVG properties and attributes.</p>
+#### Static type
 
-<h4 id="Static_type">Static type</h4>
+- {{DOMxRef("SVGAngle")}}
+- {{DOMxRef("SVGColor")}} {{Deprecated_Inline}}
+- {{DOMxRef("SVGICCColor")}} {{Deprecated_Inline}}
+- {{DOMxRef("SVGElementInstance")}}
+- {{DOMxRef("SVGElementInstanceList")}}
+- {{DOMxRef("SVGLength")}}
+- {{DOMxRef("SVGLengthList")}}
+- {{DOMxRef("SVGMatrix")}} {{Deprecated_Inline}}
+- {{DOMxRef("SVGNameList")}}
+- {{DOMxRef("SVGNumber")}}
+- {{DOMxRef("SVGNumberList")}}
+- {{DOMxRef("SVGPaint")}}
+- {{DOMxRef("SVGPathSeg")}} {{Deprecated_Inline}}
+- {{DOMxRef("SVGPathSegClosePath")}} {{Deprecated_Inline}}
+- {{DOMxRef("SVGPathSegMovetoAbs")}} {{Deprecated_Inline}}
+- {{DOMxRef("SVGPathSegMovetoRel")}} {{Deprecated_Inline}}
+- {{DOMxRef("SVGPathSegLinetoAbs")}} {{Deprecated_Inline}}
+- {{DOMxRef("SVGPathSegLinetoRel")}} {{Deprecated_Inline}}
+- {{DOMxRef("SVGPathSegCurvetoCubicAbs")}} {{Deprecated_Inline}}
+- {{DOMxRef("SVGPathSegCurvetoCubicRel")}} {{Deprecated_Inline}}
+- {{DOMxRef("SVGPathSegCurvetoQuadraticAbs")}} {{Deprecated_Inline}}
+- {{DOMxRef("SVGPathSegCurvetoQuadraticRel")}} {{Deprecated_Inline}}
+- {{DOMxRef("SVGPathSegArcAbs")}} {{Deprecated_Inline}}
+- {{DOMxRef("SVGPathSegArcRel")}} {{Deprecated_Inline}}
+- {{DOMxRef("SVGPathSegLinetoHorizontalAbs")}} {{Deprecated_Inline}}
+- {{DOMxRef("SVGPathSegLinetoHorizontalRel")}} {{Deprecated_Inline}}
+- {{DOMxRef("SVGPathSegLinetoVerticalAbs")}} {{Deprecated_Inline}}
+- {{DOMxRef("SVGPathSegLinetoVerticalRel")}} {{Deprecated_Inline}}
+- {{DOMxRef("SVGPathSegCurvetoCubicSmoothAbs")}} {{Deprecated_Inline}}
+- {{DOMxRef("SVGPathSegCurvetoCubicSmoothRel")}} {{Deprecated_Inline}}
+- {{DOMxRef("SVGPathSegCurvetoQuadraticSmoothAbs")}} {{Deprecated_Inline}}
+- {{DOMxRef("SVGPathSegCurvetoQuadraticSmoothRel")}} {{Deprecated_Inline}}
+- {{DOMxRef("SVGPathSegList")}} {{Deprecated_Inline}}
+- {{DOMxRef("SVGPoint")}} {{Deprecated_Inline}}
+- {{DOMxRef("SVGPointList")}} {{Deprecated_Inline}}
+- {{DOMxRef("SVGPreserveAspectRatio")}}
+- {{DOMxRef("SVGRect")}} {{Deprecated_Inline}}
+- {{DOMxRef("SVGStringList")}}
+- {{DOMxRef("SVGTransform")}}
+- {{DOMxRef("SVGTransformList")}}
 
-<ul>
- <li>{{DOMxRef("SVGAngle")}}</li>
- <li>{{DOMxRef("SVGColor")}} {{Deprecated_Inline}}</li>
- <li>{{DOMxRef("SVGICCColor")}} {{Deprecated_Inline}}</li>
- <li>{{DOMxRef("SVGElementInstance")}}</li>
- <li>{{DOMxRef("SVGElementInstanceList")}}</li>
- <li>{{DOMxRef("SVGLength")}}</li>
- <li>{{DOMxRef("SVGLengthList")}}</li>
- <li>{{DOMxRef("SVGMatrix")}} {{Deprecated_Inline}}</li>
- <li>{{DOMxRef("SVGNameList")}}</li>
- <li>{{DOMxRef("SVGNumber")}}</li>
- <li>{{DOMxRef("SVGNumberList")}}</li>
- <li>{{DOMxRef("SVGPaint")}}</li>
- <li>{{DOMxRef("SVGPathSeg")}} {{Deprecated_Inline}}</li>
- <li>{{DOMxRef("SVGPathSegClosePath")}} {{Deprecated_Inline}}</li>
- <li>{{DOMxRef("SVGPathSegMovetoAbs")}} {{Deprecated_Inline}}</li>
- <li>{{DOMxRef("SVGPathSegMovetoRel")}} {{Deprecated_Inline}}</li>
- <li>{{DOMxRef("SVGPathSegLinetoAbs")}} {{Deprecated_Inline}}</li>
- <li>{{DOMxRef("SVGPathSegLinetoRel")}} {{Deprecated_Inline}}</li>
- <li>{{DOMxRef("SVGPathSegCurvetoCubicAbs")}} {{Deprecated_Inline}}</li>
- <li>{{DOMxRef("SVGPathSegCurvetoCubicRel")}} {{Deprecated_Inline}}</li>
- <li>{{DOMxRef("SVGPathSegCurvetoQuadraticAbs")}} {{Deprecated_Inline}}</li>
- <li>{{DOMxRef("SVGPathSegCurvetoQuadraticRel")}} {{Deprecated_Inline}}</li>
- <li>{{DOMxRef("SVGPathSegArcAbs")}} {{Deprecated_Inline}}</li>
- <li>{{DOMxRef("SVGPathSegArcRel")}} {{Deprecated_Inline}}</li>
- <li>{{DOMxRef("SVGPathSegLinetoHorizontalAbs")}} {{Deprecated_Inline}}</li>
- <li>{{DOMxRef("SVGPathSegLinetoHorizontalRel")}} {{Deprecated_Inline}}</li>
- <li>{{DOMxRef("SVGPathSegLinetoVerticalAbs")}} {{Deprecated_Inline}}</li>
- <li>{{DOMxRef("SVGPathSegLinetoVerticalRel")}} {{Deprecated_Inline}}</li>
- <li>{{DOMxRef("SVGPathSegCurvetoCubicSmoothAbs")}} {{Deprecated_Inline}}</li>
- <li>{{DOMxRef("SVGPathSegCurvetoCubicSmoothRel")}} {{Deprecated_Inline}}</li>
- <li>{{DOMxRef("SVGPathSegCurvetoQuadraticSmoothAbs")}} {{Deprecated_Inline}}</li>
- <li>{{DOMxRef("SVGPathSegCurvetoQuadraticSmoothRel")}} {{Deprecated_Inline}}</li>
- <li>{{DOMxRef("SVGPathSegList")}} {{Deprecated_Inline}}</li>
- <li>{{DOMxRef("SVGPoint")}} {{Deprecated_Inline}}</li>
- <li>{{DOMxRef("SVGPointList")}} {{Deprecated_Inline}}</li>
- <li>{{DOMxRef("SVGPreserveAspectRatio")}}</li>
- <li>{{DOMxRef("SVGRect")}} {{Deprecated_Inline}}</li>
- <li>{{DOMxRef("SVGStringList")}}</li>
- <li>{{DOMxRef("SVGTransform")}}</li>
- <li>{{DOMxRef("SVGTransformList")}}</li>
-</ul>
+#### Animated type
 
-<h4 id="Animated_type">Animated type</h4>
+- {{DOMxRef("SVGAnimatedAngle")}}
+- {{DOMxRef("SVGAnimatedBoolean")}}
+- {{DOMxRef("SVGAnimatedEnumeration")}}
+- {{DOMxRef("SVGAnimatedInteger")}}
+- {{DOMxRef("SVGAnimatedLength")}}
+- {{DOMxRef("SVGAnimatedLengthList")}}
+- {{DOMxRef("SVGAnimatedNumber")}}
+- {{DOMxRef("SVGAnimatedNumberList")}}
+- {{DOMxRef("SVGAnimatedPathData")}} {{Deprecated_Inline}}
+- {{DOMxRef("SVGAnimatedPoints")}}
+- {{DOMxRef("SVGAnimatedPreserveAspectRatio")}}
+- {{DOMxRef("SVGAnimatedRect")}}
+- {{DOMxRef("SVGAnimatedString")}}
+- {{DOMxRef("SVGAnimatedTransformList")}}
 
-<ul>
- <li>{{DOMxRef("SVGAnimatedAngle")}}</li>
- <li>{{DOMxRef("SVGAnimatedBoolean")}}</li>
- <li>{{DOMxRef("SVGAnimatedEnumeration")}}</li>
- <li>{{DOMxRef("SVGAnimatedInteger")}}</li>
- <li>{{DOMxRef("SVGAnimatedLength")}}</li>
- <li>{{DOMxRef("SVGAnimatedLengthList")}}</li>
- <li>{{DOMxRef("SVGAnimatedNumber")}}</li>
- <li>{{DOMxRef("SVGAnimatedNumberList")}}</li>
- <li>{{DOMxRef("SVGAnimatedPathData")}} {{Deprecated_Inline}}</li>
- <li>{{DOMxRef("SVGAnimatedPoints")}}</li>
- <li>{{DOMxRef("SVGAnimatedPreserveAspectRatio")}}</li>
- <li>{{DOMxRef("SVGAnimatedRect")}}</li>
- <li>{{DOMxRef("SVGAnimatedString")}}</li>
- <li>{{DOMxRef("SVGAnimatedTransformList")}}</li>
-</ul>
+### SMIL-related interfaces
 
-<h3 id="SMIL-related_interfaces">SMIL-related interfaces</h3>
+- {{DOMxRef("ElementTimeControl")}}
+- {{DOMxRef("TimeEvent")}}
 
-<ul>
- <li>{{DOMxRef("ElementTimeControl")}}</li>
- <li>{{DOMxRef("TimeEvent")}}</li>
-</ul>
+### Other SVG interfaces
 
-<h3 id="Other_SVG_interfaces">Other SVG interfaces</h3>
+- {{DOMxRef("GetSVGDocument")}}
+- {{DOMxRef("ShadowAnimation")}}
+- {{DOMxRef("SVGColorProfileRule")}} {{Deprecated_Inline}}
+- {{DOMxRef("SVGCSSRule")}} {{Deprecated_Inline}}
+- {{DOMxRef("SVGDocument")}}
+- {{DOMxRef("SVGException")}} {{Deprecated_Inline}}
+- {{DOMxRef("SVGFitToViewBox")}}
+- {{DOMxRef("SVGLocatable")}} {{Deprecated_Inline}}
+- {{DOMxRef("SVGRenderingIntent")}} {{Deprecated_Inline}}
+- {{DOMxRef("SVGUnitTypes")}}
+- {{DOMxRef("SVGUseElementShadowRoot")}}
+- {{DOMxRef("SVGViewSpec")}} {{Deprecated_Inline}}
+- {{DOMxRef("SVGZoomAndPan")}}
+- {{DOMxRef("SVGZoomEvent")}} {{Deprecated_Inline}}
 
-<ul>
- <li>{{DOMxRef("GetSVGDocument")}}</li>
- <li>{{DOMxRef("ShadowAnimation")}}</li>
- <li>{{DOMxRef("SVGColorProfileRule")}} {{Deprecated_Inline}}</li>
- <li>{{DOMxRef("SVGCSSRule")}} {{Deprecated_Inline}}</li>
- <li>{{DOMxRef("SVGDocument")}}</li>
- <li>{{DOMxRef("SVGException")}} {{Deprecated_Inline}}</li>
- <li>{{DOMxRef("SVGFitToViewBox")}}</li>
- <li>{{DOMxRef("SVGLocatable")}} {{Deprecated_Inline}}</li>
- <li>{{DOMxRef("SVGRenderingIntent")}} {{Deprecated_Inline}}</li>
- <li>{{DOMxRef("SVGUnitTypes")}}</li>
- <li>{{DOMxRef("SVGUseElementShadowRoot")}}</li>
- <li>{{DOMxRef("SVGViewSpec")}} {{Deprecated_Inline}}</li>
- <li>{{DOMxRef("SVGZoomAndPan")}}</li>
- <li>{{DOMxRef("SVGZoomEvent")}} {{Deprecated_Inline}}</li>
-</ul>
+## Specifications
 
-<h2 id="Specifications">Specifications</h2>
+| Specification                                       |
+| --------------------------------------------------- |
+| [DOM Living Standard](https://dom.spec.whatwg.org/) |
 
-<table>
-  <tr>
-    <th>Specification</th>
-  </tr>
-  <tr>
-    <td><a href="https://dom.spec.whatwg.org/">DOM Living Standard</a></td>
-  </tr>
-</table>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Document_Object_Model/Examples">DOM Examples</a></li>
- <li><a href="/en-US/docs/Web/API/CSS_Object_Model">CSS Object Model (CSSOM)</a></li>
-</ul>
+- [DOM Examples](/en-US/docs/Web/API/Document_Object_Model/Examples)
+- [CSS Object Model (CSSOM)](/en-US/docs/Web/API/CSS_Object_Model)

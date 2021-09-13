@@ -2,73 +2,70 @@
 title: Element.className
 slug: Web/API/Element/className
 tags:
-- API
-- DOM
-- Gecko
-- Property
-- Reference
+  - API
+  - DOM
+  - Gecko
+  - Property
+  - Reference
 browser-compat: api.Element.className
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>className</strong></code> property of the
-    {{domxref("Element")}} interface gets and sets the value of the <a
-      href="/en-US/docs/Web/HTML/Global_attributes/class"><code>class</code> attribute</a>
-    of the specified element.</p>
+The **`className`** property of the
+{{domxref("Element")}} interface gets and sets the value of the [`class` attribute](/en-US/docs/Web/HTML/Global_attributes/class)
+of the specified element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>var cName</var> = <var>elementNodeReference</var>.className;
-<var>elementNodeReference</var>.className = <var>cName</var>;</pre>
+```js
+var cName = elementNodeReference.className;
+elementNodeReference.className = cName;
+```
 
-<ul>
-  <li><code>cName</code> is a string variable representing the class or space-separated
-    classes of the current element.</li>
-</ul>
+- `cName` is a string variable representing the class or space-separated
+  classes of the current element.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">let el = document.getElementById('item');
+```js
+let el = document.getElementById('item');
 
 if (el.className === 'active'){
   el.className = 'inactive';
 } else {
   el.className = 'active';
-}</pre>
+}
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>The name <code>className</code> is used for this property instead of <code>class</code>
-  because of conflicts with the "class" keyword in many languages which are used to
-  manipulate the DOM.</p>
+The name `className` is used for this property instead of `class`
+because of conflicts with the "class" keyword in many languages which are used to
+manipulate the DOM.
 
-<p><code>className</code> can also be an instance of {{domxref("SVGAnimatedString")}} if
-  the <code>element</code> is an {{domxref("SVGElement")}}. It is better to get/set the
-  <code>className</code> of an element using {{domxref("Element.getAttribute")}} and
-  {{domxref("Element.setAttribute")}} if you are dealing with SVG elements. However, take
-  into account that {{domxref("Element.getAttribute")}} returns
-  <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></code>
-  instead of <code>""</code> if the <code>element</code> has an empty <a
-    href="/en-US/docs/Web/HTML/Global_attributes/class"><code>class</code> attribute</a>.
-</p>
+`className` can also be an instance of {{domxref("SVGAnimatedString")}} if
+the `element` is an {{domxref("SVGElement")}}. It is better to get/set the
+`className` of an element using {{domxref("Element.getAttribute")}} and
+{{domxref("Element.setAttribute")}} if you are dealing with SVG elements. However, take
+into account that {{domxref("Element.getAttribute")}} returns
+[`null`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/null)
+instead of `""` if the `element` has an empty [`class` attribute](/en-US/docs/Web/HTML/Global_attributes/class).
 
-<pre class="brush: js">elm.setAttribute('class', elm.getAttribute('class'))</pre>
+```js
+elm.setAttribute('class', elm.getAttribute('class'))
+```
 
-<div class="note">
-  <p><strong>Note:</strong> The <code>class</code> is an <strong>HTML Attribute</strong>, while the
-    <code>className</code> is a <strong>DOM Property</strong>.</p>
-</div>
+> **Note:** The `class` is an **HTML Attribute**, while the
+> `className` is a **DOM Property**.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("element.classList")}}</li>
-</ul>
+- {{domxref("element.classList")}}

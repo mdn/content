@@ -2,36 +2,37 @@
 title: MediaError.code
 slug: Web/API/MediaError/code
 tags:
-- API
-- Audio
-- Code
-- Errors
-- HTML DOM
-- Media
-- MediaError
-- Property
-- Read-only
-- Reference
-- Video
+  - API
+  - Audio
+  - Code
+  - Errors
+  - HTML DOM
+  - Media
+  - MediaError
+  - Property
+  - Read-only
+  - Reference
+  - Video
 browser-compat: api.MediaError.code
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The read-only property <code><strong>MediaError.code</strong></code> returns a numeric
-  value which represents the kind of error that occurred on a media element. To get a text
-  string with specific diagnostic information, see {{domxref("MediaError.message")}}.</p>
+The read-only property **`MediaError.code`** returns a numeric
+value which represents the kind of error that occurred on a media element. To get a text
+string with specific diagnostic information, see {{domxref("MediaError.message")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>myError</em> = <em>mediaError</em>.code;</pre>
+```js
+var myError = mediaError.code;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A numeric value indicating the general type of error which occurred. The possible
-  values are described below, in {{anch("Media error code constants")}}.</p>
+A numeric value indicating the general type of error which occurred. The possible
+values are described below, in {{anch("Media error code constants")}}.
 
-<h4 id="Media_error_code_constants">Media error code constants</h4>
+#### Media error code constants
 
 <table class="no-markdown">
   <thead>
@@ -45,50 +46,59 @@ browser-compat: api.MediaError.code
     <tr>
       <td><code>MEDIA_ERR_ABORTED</code></td>
       <td><code>1</code></td>
-      <td>The fetching of the associated resource was aborted by the user's request.</td>
+      <td>
+        The fetching of the associated resource was aborted by the user's
+        request.
+      </td>
     </tr>
     <tr>
       <td><code>MEDIA_ERR_NETWORK</code></td>
       <td><code>2</code></td>
-      <td>Some kind of network error occurred which prevented the media from being
-        successfully fetched, despite having previously been available.</td>
+      <td>
+        Some kind of network error occurred which prevented the media from being
+        successfully fetched, despite having previously been available.
+      </td>
     </tr>
     <tr>
       <td><code>MEDIA_ERR_DECODE</code></td>
       <td><code>3</code></td>
-      <td>Despite having previously been determined to be usable, an error occurred while
-        trying to decode the media resource, resulting in an error.</td>
+      <td>
+        Despite having previously been determined to be usable, an error
+        occurred while trying to decode the media resource, resulting in an
+        error.
+      </td>
     </tr>
     <tr>
       <td><code>MEDIA_ERR_SRC_NOT_SUPPORTED</code></td>
       <td><code>4</code></td>
-      <td>The associated resource or media provider object (such as a
-        {{domxref("MediaStream")}}) has been found to be unsuitable.</td>
+      <td>
+        The associated resource or media provider object (such as a
+        {{domxref("MediaStream")}}) has been found to be unsuitable.
+      </td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example creates a {{HTMLElement("video")}} element, establishes an error handler
-  for it, and then sets the element's {{htmlattrxref("src", "video")}} attribute to the
-  video resource to present in the element. The error handler outputs a message</p>
+This example creates a {{HTMLElement("video")}} element, establishes an error handler
+for it, and then sets the element's {{htmlattrxref("src", "video")}} attribute to the
+video resource to present in the element. The error handler outputs a message
 
-<pre class="brush: js">var obj = document.createElement('video');
+```js
+var obj = document.createElement('video');
 obj.onerror = function() {console.log("Error with media: " + obj.error.code);}
 obj.src="https://example.com/blahblah.mp4";
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining it, {{domxref("MediaError")}}.</li>
-</ul>
+- The interface defining it, {{domxref("MediaError")}}.

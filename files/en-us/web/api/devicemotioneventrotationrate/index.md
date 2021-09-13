@@ -9,25 +9,23 @@ tags:
   - Reference
 browser-compat: api.DeviceMotionEventRotationRate
 ---
-<p>{{ ApiRef("Device Orientation Events") }} {{SeeCompatTable}}</p>
+{{ ApiRef("Device Orientation Events") }} {{SeeCompatTable}}
 
-<p>A <code>DeviceMotionEventRotationRate</code> object provides information about the rate at which the device is rotating around all three axes.</p>
+A `DeviceMotionEventRotationRate` object provides information about the rate at which the device is rotating around all three axes.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{ domxref("DeviceMotionEventRotationRate.alpha") }} {{readonlyInline}}</dt>
- <dd>The amount of rotation around the Z axis, in degrees per second.</dd>
- <dt>{{ domxref("DeviceMotionEventRotationRate.beta") }} {{readonlyInline}}</dt>
- <dd>The amount of rotation around the X axis, in degrees per second.</dd>
- <dt>{{ domxref("DeviceMotionEventRotationRate.gamma") }} {{readonlyInline}}</dt>
- <dd>The amount of rotation around the Y axis, in degrees per second.</dd>
-</dl>
+- {{ domxref("DeviceMotionEventRotationRate.alpha") }} {{readonlyInline}}
+  - : The amount of rotation around the Z axis, in degrees per second.
+- {{ domxref("DeviceMotionEventRotationRate.beta") }} {{readonlyInline}}
+  - : The amount of rotation around the X axis, in degrees per second.
+- {{ domxref("DeviceMotionEventRotationRate.gamma") }} {{readonlyInline}}
+  - : The amount of rotation around the Y axis, in degrees per second.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

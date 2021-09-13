@@ -2,40 +2,42 @@
 title: CSSRotate.z
 slug: Web/API/CSSRotate/z
 tags:
-- API
-- CSS
-- CSS Typed Object Model API
-- CSSRotate
-- CSSTransformComponent
-- CSSTransformValue
-- Experimental
-- Houdini
-- Property
+  - API
+  - CSS
+  - CSS Typed Object Model API
+  - CSSRotate
+  - CSSTransformComponent
+  - CSSTransformValue
+  - Experimental
+  - Houdini
+  - Property
 browser-compat: api.CSSRotate.z
 ---
-<div>{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}</div>
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}
 
-<p>The <strong><code>z</code></strong> property of the
-  {{domxref("CSSRotate")}} interface representing the z-component of the translating
-  vector. A positive value moves the element towards the viewer, and a negative value
-  farther away.</p>
+The **`z`** property of the
+{{domxref("CSSRotate")}} interface representing the z-component of the translating
+vector. A positive value moves the element towards the viewer, and a negative value
+farther away.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>rotateZ</em> = CSSRotate.z;</pre>
+```js
+var rotateZ = CSSRotate.z;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A double integer or a {{domxref("CSSNumericValue")}}</p>
+A double integer or a {{domxref("CSSNumericValue")}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>To Do</p>
+To Do
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

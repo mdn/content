@@ -9,32 +9,36 @@ tags:
   - MIDIMessageEvent
 browser-compat: api.MIDIMessageEvent.data
 ---
-<p>{{securecontext_header}}{{APIRef("Web MIDI API")}}</p>
+{{securecontext_header}}{{APIRef("Web MIDI API")}}
 
-<p>The <strong><code>data</code></strong> read-only property of the {{domxref("MIDIMessageEvent")}} interface returns the MIDI data bytes of a single MIDI message.</p>
+The **`data`** read-only property of the {{domxref("MIDIMessageEvent")}} interface returns the MIDI data bytes of a single MIDI message.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let data = MIDIMessageEvent.data;</pre>
+```js
+let data = MIDIMessageEvent.data;
+```
 
-<h3>Value</h3>
-<p>A {{jsxref("Uint8Array")}}.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{jsxref("Uint8Array")}}.
 
-<p>In the following example {{domxref("MIDIInput.onmidimessage")}} events are listened for on all input ports. When a message is received the value of <code>data</code> is printed to the console.</p>
+## Examples
 
-<pre class="brush:js">inputs.forEach((input) => {
+In the following example {{domxref("MIDIInput.onmidimessage")}} events are listened for on all input ports. When a message is received the value of `data` is printed to the console.
+
+```js
+inputs.forEach((input) => {
   input.onmidimessage = function(message) {
     console.log(message.data);
   }
-})</pre>
+})
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
+{{Compat}}

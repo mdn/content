@@ -2,60 +2,53 @@
 title: console.profileEnd()
 slug: Web/API/console/profileEnd
 tags:
-- API
-- DOM
-- Debugging
-- Method
-- Non-standard
-- Reference
-- Web Development
-- profileEnd
-- web console
+  - API
+  - DOM
+  - Debugging
+  - Method
+  - Non-standard
+  - Reference
+  - Web Development
+  - profileEnd
+  - web console
 browser-compat: api.console.profileEnd
 ---
-<p>{{APIRef("Console API")}}{{Non-standard_header}}</p>
+{{APIRef("Console API")}}{{Non-standard_header}}
 
-<div class="notecard warning">
-  <p><strong>Warning:</strong> Calling this API immediately after console.profile() can cause it to not work. To
-    work around this, call it in a setTimeout with at least 5ms delay. See
-    {{bug(1240249)}}.</p>
-</div>
+> **Warning:** Calling this API immediately after console.profile() can cause it to not work. To
+> work around this, call it in a setTimeout with at least 5ms delay. See
+> {{bug(1240249)}}.
 
-<p>The <strong><code>console.profileEnd()</code></strong> method stops recording a profile previously started with
-  {{DOMxRef("console.profile()")}}.</p>
+The **`console.profileEnd()`** method stops recording a profile previously started with
+{{DOMxRef("console.profile()")}}.
 
-<p>You can optionally supply an argument to name the profile. Doing so enables you to stop
-  only that profile if you have multiple profiles being recorded.</p>
+You can optionally supply an argument to name the profile. Doing so enables you to stop
+only that profile if you have multiple profiles being recorded.
 
-<ul>
-  <li>if <code>console.profileEnd()</code> is passed a profile name, and it matches the
-    name of a profile being recorded, then that profile is stopped.</li>
-  <li>if <code>console.profileEnd()</code> is passed a profile name and it does not match
-    the name of a profile being recorded, no changes will be made.</li>
-  <li>if <code>console.profileEnd()</code> is not passed a profile name, the most recently
-    started profile is stopped.</li>
-</ul>
+- if `console.profileEnd()` is passed a profile name, and it matches the
+  name of a profile being recorded, then that profile is stopped.
+- if `console.profileEnd()` is passed a profile name and it does not match
+  the name of a profile being recorded, no changes will be made.
+- if `console.profileEnd()` is not passed a profile name, the most recently
+  started profile is stopped.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">console.profileEnd(<em>profileName</em>);
-</pre>
+```js
+console.profileEnd(profileName);
+```
 
-<h2 id="Parameters">Parameters</h2>
+## Parameters
 
-<dl>
-  <dt><code>profileName</code></dt>
-  <dd>The name to give the profile. This parameter is optional.</dd>
-</dl>
+- `profileName`
+  - : The name to give the profile. This parameter is optional.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{DOMxRef("console.profile()")}}</li>
-</ul>
+- {{DOMxRef("console.profile()")}}

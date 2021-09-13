@@ -9,34 +9,33 @@ tags:
   - WebGLContextEvent
 browser-compat: api.WebGLContextEvent
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong>WebContextEvent</strong> interface is part of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> and is an interface for an event that is generated in response to a status change to the WebGL rendering context.</p>
+The **WebContextEvent** interface is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and is an interface for an event that is generated in response to a status change to the WebGL rendering context.
 
-<h2 id="Inheritance">Inheritance</h2>
+## Inheritance
 
-<p><em>This interface inherits properties and methods from its parent interface, {{domxref("Event")}}.</em></p>
+_This interface inherits properties and methods from its parent interface, {{domxref("Event")}}._
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface inherits properties from its parent interface, {{domxref("Event")}}.</em></p>
+_This interface inherits properties from its parent interface, {{domxref("Event")}}._
 
-<dl>
- <dt>{{domxref("WebGLContextEvent.statusMessage")}}</dt>
- <dd>A read-only property containing additional information about the event.</dd>
-</dl>
+- {{domxref("WebGLContextEvent.statusMessage")}}
+  - : A read-only property containing additional information about the event.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface doesn't define any own methods, but inherits methods from its parent interface, {{domxref("Event")}}.</em></p>
+_This interface doesn't define any own methods, but inherits methods from its parent interface, {{domxref("Event")}}._
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>With the help of the {{domxref("WEBGL_lose_context")}} extension, you can simulate the {{Event("webglcontextlost")}} and {{Event("webglcontextrestored")}} events:</p>
+With the help of the {{domxref("WEBGL_lose_context")}} extension, you can simulate the {{Event("webglcontextlost")}} and {{Event("webglcontextrestored")}} events:
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 
 canvas.addEventListener('webglcontextlost', function(e) {
@@ -46,20 +45,18 @@ canvas.addEventListener('webglcontextlost', function(e) {
 gl.getExtension('WEBGL_lose_context').loseContext();
 
 // WebGLContextEvent event with type "webglcontextlost" is logged.
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.isContextLost()")}}</li>
- <li>{{domxref("WEBGL_lose_context")}}, {{domxref("WEBGL_lose_context.loseContext()")}}, {{domxref("WEBGL_lose_context.restoreContext()")}}</li>
- <li>Events: <a href="/en-US/docs/Web/API/HTMLCanvasElement/webglcontextlost_event">webglcontextlost</a>, <a href="/en-US/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event">webglcontextrestored</a>, <a href="/en-US/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror_event">webglcontextcreationerror</a></li>
-</ul>
+- {{domxref("WebGLRenderingContext.isContextLost()")}}
+- {{domxref("WEBGL_lose_context")}}, {{domxref("WEBGL_lose_context.loseContext()")}}, {{domxref("WEBGL_lose_context.restoreContext()")}}
+- Events: [webglcontextlost](/en-US/docs/Web/API/HTMLCanvasElement/webglcontextlost_event), [webglcontextrestored](/en-US/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event), [webglcontextcreationerror](/en-US/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror_event)

@@ -9,47 +9,47 @@ tags:
   - Reference
 browser-compat: api.CSSStyleRule
 ---
-<div>{{ APIRef("CSSOM") }}</div>
+{{ APIRef("CSSOM") }}
 
-<p>The <strong><code>CSSStyleRule</code></strong> interface represents a single CSS style rule.</p>
+The **`CSSStyleRule`** interface represents a single CSS style rule.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its ancestor {{domxref("CSSRule")}}.</em></p>
+_Inherits properties from its ancestor {{domxref("CSSRule")}}._
 
-<dl>
- <dt>{{domxref("CSSStyleRule.selectorText")}}</dt>
- <dd>Returns the textual representation of the selector for this rule, e.g. <code>"h1,h2"</code>.</dd>
- <dt>{{domxref("CSSStyleRule.style")}} {{readonlyinline}}</dt>
- <dd>Returns the {{domxref("CSSStyleDeclaration")}} object for the rule.</dd>
- <dt>{{domxref("CSSStyleRule.styleMap")}} {{readonlyinline}}</dt>
- <dd>Returns a {{domxref('StylePropertyMap')}} object which provides access to the rule's property-value pairs.</dd>
-</dl>
+- {{domxref("CSSStyleRule.selectorText")}}
+  - : Returns the textual representation of the selector for this rule, e.g. `"h1,h2"`.
+- {{domxref("CSSStyleRule.style")}} {{readonlyinline}}
+  - : Returns the {{domxref("CSSStyleDeclaration")}} object for the rule.
+- {{domxref("CSSStyleRule.styleMap")}} {{readonlyinline}}
+  - : Returns a {{domxref('StylePropertyMap')}} object which provides access to the rule's property-value pairs.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>No specific methods; inherits methods from its ancestor {{domxref("CSSRule")}}.</em></p>
+_No specific methods; inherits methods from its ancestor {{domxref("CSSRule")}}._
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>
-  The CSS includes one style rule. This will be the first {{domxref("CSSRule")}} returned by <code>document.styleSheets[0].cssRules</code>.
-  <code>myRules[0]</code> therefore returns a {{domxref("CSSStyleRule")}} object representing the rule defined for <code>h1</code>.
-</p>
+The CSS includes one style rule. This will be the first {{domxref("CSSRule")}} returned by `document.styleSheets[0].cssRules`.
+`myRules[0]` therefore returns a {{domxref("CSSStyleRule")}} object representing the rule defined for `h1`.
 
-<pre class="brush: css">h1 {
+```css
+h1 {
   color: pink;
-}</pre>
+}
+```
 
-<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0]); // a CSSStyleRule representing the h1.</pre>
+```js
+let myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0]); // a CSSStyleRule representing the h1.
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

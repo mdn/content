@@ -7,55 +7,63 @@ tags:
   - Web Speech API
 browser-compat: api.SpeechSynthesisUtterance.error_event
 ---
-<div>{{APIRef("Web Speech API")}} {{SeeCompatTable}}</div>
+{{APIRef("Web Speech API")}} {{SeeCompatTable}}
 
-<p>The <code><strong>error</strong></code> event of the <a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a> {{domxref("SpeechSynthesisUtterance")}} object is fired when an error occurs that prevents the utterance from being successfully spoken.</p>
+The **`error`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) {{domxref("SpeechSynthesisUtterance")}} object is fired when an error occurs that prevents the utterance from being successfully spoken.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("SpeechSynthesisErrorEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td><code><a href="/en-US/docs/Web/API/SpeechSynthesisUtterance/onerror">onerror</a></code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("SpeechSynthesisErrorEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/API/SpeechSynthesisUtterance/onerror"
+            >onerror</a
+          ></code
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>You can use the <code>error</code> event in an <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener</a></code> method:</p>
+You can use the `error` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
-<pre class="brush: js">utterThis.addEventListener('error', function(event) {
+```js
+utterThis.addEventListener('error', function(event) {
   console.log('An error has occurred with the speech synthesis: ' + event.error');
-});</pre>
+});
+```
 
-<p>Or use the <code><a href="/en-US/docs/Web/API/SpeechSynthesisUtterance/onerror">onerror</a></code> event handler property:</p>
+Or use the [`onerror`](/en-US/docs/Web/API/SpeechSynthesisUtterance/onerror) event handler property:
 
-<pre class="brush: js">utterThis.onerror = function(event) {
+```js
+utterThis.onerror = function(event) {
   console.log('An error has occurred with the speech synthesis: ' + event.error');
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)

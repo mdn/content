@@ -2,54 +2,54 @@
 title: SpeechGrammar()
 slug: Web/API/SpeechGrammar/SpeechGrammar
 tags:
-- API
-- Constructor
-- Experimental
-- Reference
-- SpeechGrammar
-- Web
-- Web Speech API
-- speech
+  - API
+  - Constructor
+  - Experimental
+  - Reference
+  - SpeechGrammar
+  - Web
+  - Web Speech API
+  - speech
 browser-compat: api.SpeechGrammar.SpeechGrammar
 ---
-<p>{{APIRef("Web Speech API")}}{{Non-standard_header}}</p>
+{{APIRef("Web Speech API")}}{{Non-standard_header}}
 
-<p>The <code><strong>SpeechGrammar()</strong></code> constructor of the
-	{{domxref("SpeechGrammar")}} interface creates a new <code>SpeechGrammar</code> object
-	instance.</p>
+The **`SpeechGrammar()`** constructor of the
+{{domxref("SpeechGrammar")}} interface creates a new `SpeechGrammar` object
+instance.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-	class="brush: js">var mySpeechGrammar = new SpeechGrammar();</pre>
+```js
+var mySpeechGrammar = new SpeechGrammar();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var grammar = '#JSGF V1.0; grammar colors; public &lt;color&gt; = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;'
+```js
+var grammar = '#JSGF V1.0; grammar colors; public <color> = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;'
 var recognition = new SpeechRecognition();
 var speechRecognitionList = new SpeechGrammarList();
 speechRecognitionList.addFromString(grammar, 1);
 recognition.grammars = speechRecognitionList;
 
 var newGrammar = new SpeechGrammar();
-newGrammar.src = '#JSGF V1.0; grammar names; public &lt;name&gt; = chris | kirsty | mike;'
+newGrammar.src = '#JSGF V1.0; grammar names; public <name> = chris | kirsty | mike;'
 speechRecognitionList[1] = newGrammar; // should add the new SpeechGrammar object to the list
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This API has no official W3C or WHATWG specification.</p>
+This API has no official W3C or WHATWG specification.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)

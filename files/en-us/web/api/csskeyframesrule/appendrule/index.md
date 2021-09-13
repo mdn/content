@@ -10,48 +10,49 @@ tags:
   - Reference
 browser-compat: api.CSSKeyframesRule.appendRule
 ---
-<div>{{APIRef("CSSOM") }}</div>
+{{APIRef("CSSOM") }}
 
-<p>The <strong><code>appendRule()</code></strong> method of the {{domxref("CSSKeyframeRule")}} interface appends a {{domxref("CSSKeyFrameRule")}} to the end of the rules.</p>
+The **`appendRule()`** method of the {{domxref("CSSKeyframeRule")}} interface appends a {{domxref("CSSKeyFrameRule")}} to the end of the rules.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><var>CSSKeyframesRule</var>.appendRule(<var>rule</var>);</pre>
+    CSSKeyframesRule.appendRule(rule);
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-    <dt><code>rule</code></dt>
-    <dd>A {{domxref("CSSOMString")}} containing a keyframe rule.</dd>
-</dl>
+- `rule`
+  - : A {{domxref("CSSOMString")}} containing a keyframe rule.
 
-<h3 id="value">Return value</h3>
-<p>None.</p>
+### Return value
 
-<h2 id="Example">Example</h2>
+None.
 
-<p>
-    The CSS includes a keyframes at-rule. This will be the first {{domxref("CSSRule")}} returned by <code>document.styleSheets[0].cssRules</code>.
-    <code>myRules[0]</code> returns a {{domxref("CSSKeyframesRule")}} object. Returning the <code>cssRules</code> property would return a {{domxref("CSSRuleList")}} containing one rule.
-</p>
+## Example
 
-<p>After appending another rule with <code>appendRule</code> the <code>cssRules</code> property returns a {{domxref("CSSRuleList")}} containing two rules.</p>
+The CSS includes a keyframes at-rule. This will be the first {{domxref("CSSRule")}} returned by `document.styleSheets[0].cssRules`.
+`myRules[0]` returns a {{domxref("CSSKeyframesRule")}} object. Returning the `cssRules` property would return a {{domxref("CSSRuleList")}} containing one rule.
 
-<pre class="brush: css">@keyframes slidein {
+After appending another rule with `appendRule` the `cssRules` property returns a {{domxref("CSSRuleList")}} containing two rules.
+
+```css
+@keyframes slidein {
   from {
     transform: translateX(0%);
   }
-}</pre>
+}
+```
 
-<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
+```js
+let myRules = document.styleSheets[0].cssRules;
 let keyframes = myRules[0]; // a CSSKeyframesRule
 keyframes.appendRule('to {transform: translateX(100%);}');
-console.log(keyframes.cssRules); // a CSSRuleList object with two rules</pre>
+console.log(keyframes.cssRules); // a CSSRuleList object with two rules
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

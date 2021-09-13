@@ -11,32 +11,35 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals.ariaValueText
 ---
-<div>{{DefaultAPISidebar("DOM")}}</div>
+{{DefaultAPISidebar("DOM")}}
 
-<p>The <strong><code>ariaValueText</code></strong> property of the {{domxref("ElementInternals")}} interface reflects the value of the <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuetext_attribute"><code>aria-valuetext</code></a> attribute, which defines the human readable text alternative of aria-valuenow for a range widget.</p>
+The **`ariaValueText`** property of the {{domxref("ElementInternals")}} interface reflects the value of the [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuetext_attribute) attribute, which defines the human readable text alternative of aria-valuenow for a range widget.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Setting aria attributes on <code>ElementInternals</code> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <a href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</a>.</p>
-</div>
+> **Note:** Setting aria attributes on `ElementInternals` allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the [Accessibility Object Model explainer](https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let ariaValueText = ElementInternals.ariaValueText;
-ElementInternals.ariaValueText = ariaValueText;</pre>
+```js
+let ariaValueText = ElementInternals.ariaValueText;
+ElementInternals.ariaValueText = ariaValueText;
+```
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString")}}.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("DOMString")}}.
 
-<p>In this example the value of <code>ariaValueText</code> is set to "Sunday".</p>
+## Examples
 
-<pre class="brush: js">this.internals_.ariaValueText = "Sunday";</pre>
+In this example the value of `ariaValueText` is set to "Sunday".
 
-<h2 id="Specifications">Specifications</h2>
+```js
+this.internals_.ariaValueText = "Sunday";
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

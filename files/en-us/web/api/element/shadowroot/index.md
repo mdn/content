@@ -2,49 +2,48 @@
 title: Element.shadowRoot
 slug: Web/API/Element/shadowRoot
 tags:
-- API
-- Element
-- Property
-- Reference
-- ShadowRoot
-- shadow dom
+  - API
+  - Element
+  - Property
+  - Reference
+  - ShadowRoot
+  - shadow dom
 browser-compat: api.Element.shadowRoot
 ---
-<div>{{APIRef("Shadow DOM")}}</div>
+{{APIRef("Shadow DOM")}}
 
-<p>The <code>Element.shadowRoot</code> read-only property
-    represents the shadow root hosted by the element.</p>
+The `Element.shadowRoot` read-only property
+represents the shadow root hosted by the element.
 
-<p>Use {{DOMxRef("Element.attachShadow()")}} to add a shadow root to an existing element.</p>
+Use {{DOMxRef("Element.attachShadow()")}} to add a shadow root to an existing element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>shadowroot = element</em>.shadowRoot;
-</pre>
+```js
+var shadowroot = element.shadowRoot;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{DOMxRef("ShadowRoot")}} object instance, or <code>null</code> if the associated
-  shadow root was attached with its {{DOMxRef("ShadowRoot.mode", "mode")}} set to
-  <code>closed</code>. (See {{DOMxRef("Element.attachShadow()")}} for further details).
-</p>
+A {{DOMxRef("ShadowRoot")}} object instance, or `null` if the associated
+shadow root was attached with its {{DOMxRef("ShadowRoot.mode", "mode")}} set to
+`closed`. (See {{DOMxRef("Element.attachShadow()")}} for further details).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following snippets are taken from our <a
-    href="https://github.com/mdn/web-components-examples/tree/master/life-cycle-callbacks">life-cycle-callbacks</a>
-  example (<a
-    href="https://mdn.github.io/web-components-examples/life-cycle-callbacks">see it live
-    also</a>), which creates an element that displays a square of a size and color
-  specified in the element's attributes.</p>
+The following snippets are taken from our [life-cycle-callbacks](https://github.com/mdn/web-components-examples/tree/master/life-cycle-callbacks)
+example ([see it live
+also](https://mdn.github.io/web-components-examples/life-cycle-callbacks)), which creates an element that displays a square of a size and color
+specified in the element's attributes.
 
-<p>Inside the <code>&lt;custom-square&gt;</code> element's class definition we include
-  some life cycle callbacks that make a call to an external function,
-  <code>updateStyle()</code>, which actually applies the size and color to the element.
-  You'll see that we are passing it <code>this</code> (the custom element itself) as a
-  parameter.</p>
+Inside the `<custom-square>` element's class definition we include
+some life cycle callbacks that make a call to an external function,
+`updateStyle()`, which actually applies the size and color to the element.
+You'll see that we are passing it `this` (the custom element itself) as a
+parameter.
 
-<pre class="brush: js">connectedCallback() {
+```js
+connectedCallback() {
   console.log('Custom square element added to page.');
   updateStyle(this);
 }
@@ -52,18 +51,20 @@ browser-compat: api.Element.shadowRoot
 attributeChangedCallback(name, oldValue, newValue) {
   console.log('Custom square element attributes changed.');
   updateStyle(this);
-}</pre>
+}
+```
 
-<p>In the <code>updateStyle()</code> function itself, we get a reference to the shadow DOM
-  using {{domxref("Element.shadowRoot")}}. From here we use standard DOM traversal
-  techniques to find the {{htmlelement("style")}} element inside the shadow DOM and then
-  update the CSS found inside it:</p>
+In the `updateStyle()` function itself, we get a reference to the shadow DOM
+using {{domxref("Element.shadowRoot")}}. From here we use standard DOM traversal
+techniques to find the {{htmlelement("style")}} element inside the shadow DOM and then
+update the CSS found inside it:
 
-<pre class="brush: js">function updateStyle(elem) {
+```js
+function updateStyle(elem) {
   const shadow = elem.shadowRoot;
   const childNodes = Array.from(shadow.childNodes);
 
-  childNodes.forEach(childNode =&gt; {
+  childNodes.forEach(childNode => {
     if (childNode.nodeName === 'STYLE') {
       childNode.textContent = `
         div {
@@ -74,18 +75,17 @@ attributeChangedCallback(name, oldValue, newValue) {
       `;
     }
   });
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{DOMxRef("Element.openOrClosedShadowRoot")}} {{non-standard_inline}}</li>
-</ul>
+- {{DOMxRef("Element.openOrClosedShadowRoot")}} {{non-standard_inline}}

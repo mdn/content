@@ -2,64 +2,61 @@
 title: WebGLRenderingContext.isProgram()
 slug: Web/API/WebGLRenderingContext/isProgram
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.isProgram
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.isProgram()</code></strong> method of the <a
-    href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> returns <code>true</code> if the
-  passed {{domxref("WebGLProgram")}} is valid, <code>false</code> otherwise.</p>
+The **`WebGLRenderingContext.isProgram()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) returns `true` if the
+passed {{domxref("WebGLProgram")}} is valid, `false` otherwise.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">GLboolean <var>gl</var>.isProgram(<var>program</var>);
-</pre>
+```js
+GLboolean gl.isProgram(program);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>program</dt>
-  <dd>A {{domxref("WebGLProgram")}} to check.</dd>
-</dl>
+- program
+  - : A {{domxref("WebGLProgram")}} to check.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether or not the program is valid.</p>
+A {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether or not the program is valid.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Checking_a_program">Checking a program</h3>
+### Checking a program
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 var program = gl.createProgram();
 
 // ...
 
 gl.isProgram(program);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.createProgram()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.deleteProgram()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.linkProgram()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.useProgram()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.validateProgram()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.getProgramParameter()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.getProgramInfoLog()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.createProgram()")}}
+- {{domxref("WebGLRenderingContext.deleteProgram()")}}
+- {{domxref("WebGLRenderingContext.linkProgram()")}}
+- {{domxref("WebGLRenderingContext.useProgram()")}}
+- {{domxref("WebGLRenderingContext.validateProgram()")}}
+- {{domxref("WebGLRenderingContext.getProgramParameter()")}}
+- {{domxref("WebGLRenderingContext.getProgramInfoLog()")}}

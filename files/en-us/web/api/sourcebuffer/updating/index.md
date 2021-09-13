@@ -2,50 +2,49 @@
 title: SourceBuffer.updating
 slug: Web/API/SourceBuffer/updating
 tags:
-- API
-- Audio
-- Experimental
-- MSE
-- Media Source Extensions
-- Property
-- Reference
-- SourceBuffer
-- Updating
-- Video
+  - API
+  - Audio
+  - Experimental
+  - MSE
+  - Media Source Extensions
+  - Property
+  - Reference
+  - SourceBuffer
+  - Updating
+  - Video
 browser-compat: api.SourceBuffer.updating
 ---
-<div>{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}{{draft}}</div>
+{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}{{draft}}
 
-<p>The <code><strong>updating</strong></code> read-only property of the
-  {{domxref("SourceBuffer")}} interface indicates whether the <code>SourceBuffer</code> is
-  currently being updated — i.e. whether an {{domxref("SourceBuffer.appendBuffer()")}}, 
-  {{domxref("SourceBuffer.appendStream()")}}, or {{domxref("SourceBuffer.remove()")}}
-  operation is currently in progress.</p>
+The **`updating`** read-only property of the
+{{domxref("SourceBuffer")}} interface indicates whether the `SourceBuffer` is
+currently being updated — i.e. whether an {{domxref("SourceBuffer.appendBuffer()")}}, 
+{{domxref("SourceBuffer.appendStream()")}}, or {{domxref("SourceBuffer.remove()")}}
+operation is currently in progress.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>isUpdating</em> = <em>sourceBuffer</em>.updating;
-</pre>
+```js
+var isUpdating = sourceBuffer.updating;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A boolean value.</p>
+A boolean value.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>TBD</p>
+TBD
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("MediaSource")}}</li>
-  <li>{{domxref("SourceBufferList")}}</li>
-</ul>
+- {{domxref("MediaSource")}}
+- {{domxref("SourceBufferList")}}

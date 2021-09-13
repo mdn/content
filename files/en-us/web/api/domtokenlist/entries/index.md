@@ -2,67 +2,71 @@
 title: DOMTokenList.entries()
 slug: Web/API/DOMTokenList/entries
 tags:
-- DOM
-- DOMTokenList
-- Iterable
-- Method
-- Reference
-- Web
+  - DOM
+  - DOMTokenList
+  - Iterable
+  - Method
+  - Reference
+  - Web
 browser-compat: api.DOMTokenList.entries
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>DOMTokenList.entries()</strong></code>
-    method returns an {{jsxref("Iteration_protocols",'iterator')}} allowing you to go
-    through all key/value pairs contained in this object. The values are
-    {{domxref("DOMString")}} objects, each representing a single token.</p>
+The **`DOMTokenList.entries()`**
+method returns an {{jsxref("Iteration_protocols",'iterator')}} allowing you to go
+through all key/value pairs contained in this object. The values are
+{{domxref("DOMString")}} objects, each representing a single token.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>tokenList</var>.entries();</pre>
+```js
+tokenList.entries();
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Returns an {{jsxref("Iteration_protocols","iterator")}}.</p>
+Returns an {{jsxref("Iteration_protocols","iterator")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the following example we retrieve the list of classes set on a
-  {{htmlelement("span")}} element as a <code>DOMTokenList</code> using
-  {{domxref("Element.classList")}}. We when retrieve an iterator containing the key/value
-  pairs using <code>entries()</code>, then iterate through each one using a
-  {{jsxref("Statements/for...of", "for...of")}} loop, writing them to the
-  <code>&lt;span&gt;</code>'s {{domxref("Node.textContent")}}.</p>
+In the following example we retrieve the list of classes set on a
+{{htmlelement("span")}} element as a `DOMTokenList` using
+{{domxref("Element.classList")}}. We when retrieve an iterator containing the key/value
+pairs using `entries()`, then iterate through each one using a
+{{jsxref("Statements/for...of", "for...of")}} loop, writing them to the
+`<span>`'s {{domxref("Node.textContent")}}.
 
-<p>First, the HTML:</p>
+First, the HTML:
 
-<pre class="brush: html">&lt;span class="a b c"&gt;&lt;/span&gt;</pre>
+```html
+<span class="a b c"></span>
+```
 
-<p>Now the JavaScript:</p>
+Now the JavaScript:
 
-<pre class="brush: js">let span = document.querySelector("span");
+```js
+let span = document.querySelector("span");
 let classes = span.classList;
 let iterator = classes.entries();
 
 for (let value of iterator) {
   span.textContent += value + ' ++ ';
-}</pre>
+}
+```
 
-<p>The output looks like this:</p>
+The output looks like this:
 
-<p>{{ EmbedLiveSample('Examples', '100%', 60) }}</p>
+{{ EmbedLiveSample('Examples', '100%', 60) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("DOMSettableTokenList")}} (object that extends DOMTokenList with settable
-    <em>.value</em> property)</li>
-</ul>
+- {{domxref("DOMSettableTokenList")}} (object that extends DOMTokenList with settable
+  _.value_ property)

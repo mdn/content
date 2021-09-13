@@ -11,84 +11,80 @@ tags:
   - Web Audio API
 browser-compat: api.OfflineAudioContext.OfflineAudioContext
 ---
-<div>{{APIRef("Web Audio API")}}</div>
+{{APIRef("Web Audio API")}}
 
-<p>The
-    <code><strong>OfflineAudioContext()</strong></code> constructor—part of the <a
-      href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>—creates and returns a new
-    {{domxref("OfflineAudioContext")}} object instance, which can then be used to render
-    audio to an {{domxref("AudioBuffer")}} rather than to an audio output device.</p>
+The
+**`OfflineAudioContext()`** constructor—part of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)—creates and returns a new
+{{domxref("OfflineAudioContext")}} object instance, which can then be used to render
+audio to an {{domxref("AudioBuffer")}} rather than to an audio output device.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">OfflineAudioContext(options);
-OfflineAudioContext(numberOfChannels, length, sampleRate);</pre>
+```js
+OfflineAudioContext(options);
+OfflineAudioContext(numberOfChannels, length, sampleRate);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>You can specify the parameters for the <code>OfflineAudioContext()</code> constructor
-  as either the same set of parameters as are inputs into the
-  {{domxref("BaseAudioContext.createBuffer")}} method, or by passing those parameters in an
-  <code>options</code> object. Either way, the individual parameters are the same.</p>
+You can specify the parameters for the `OfflineAudioContext()` constructor
+as either the same set of parameters as are inputs into the
+{{domxref("BaseAudioContext.createBuffer")}} method, or by passing those parameters in an
+`options` object. Either way, the individual parameters are the same.
 
-<dl>
-  <dt><code>numberOfChannels</code></dt>
-  <dd>An integer specifying the number of channels the resulting
-    {{domxref("AudioBuffer")}} should have.</dd>
-  <dt><code>length</code></dt>
-  <dd>An integer specifying the size of the buffer to create for the audio context, in
+- `numberOfChannels`
+  - : An integer specifying the number of channels the resulting
+    {{domxref("AudioBuffer")}} should have.
+- `length`
+  - : An integer specifying the size of the buffer to create for the audio context, in
     sample-frames, where one sample-frame is a unit that can contain a single sample of
     audio data for every channel in the audio data. For example, a 5-second buffer with a
-    <code>sampleRate</code> of 48000Hz would have a length of
-    <code>5 * 48000 = 240000</code> sample-frames.</dd>
-  <dt><code>sampleRate</code></dt>
-  <dd>The sample-rate of the linear audio data in sample-frames per second. All user
+    `sampleRate` of 48000Hz would have a length of
+    `5 * 48000 = 240000` sample-frames.
+- `sampleRate`
+  - : The sample-rate of the linear audio data in sample-frames per second. All user
     agents are required to support a range of 22050Hz to 96000Hz, and may support a wider
     range than that. The most commonly-used rate is 44100Hz, which is the sample rate used
-    by CD audio.</dd>
-</dl>
+    by CD audio.
 
-<p>It is important to note that, whereas you can create a new {{domxref("AudioContext")}}
-  using the {{domxref("AudioContext.AudioContext()", "new AudioContext()")}} constructor
-  with no arguments, the <code>OfflineAudioContext()</code> constructor requires three
-  arguments, since it needs to create an <code>AudioBuffer</code>. This works in exactly
-  the same way as when you create a new {{domxref("AudioBuffer")}} with the
-  {{domxref("BaseAudioContext.createBuffer")}} method. For more detail, read <a
-    href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_buffers.3a_frames.2c_samples_and_channels">Audio
-    buffers: frames, samples and channels</a> from our <a
-    href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API">Basic
-    concepts</a> guide.</p>
+It is important to note that, whereas you can create a new {{domxref("AudioContext")}}
+using the {{domxref("AudioContext.AudioContext()", "new AudioContext()")}} constructor
+with no arguments, the `OfflineAudioContext()` constructor requires three
+arguments, since it needs to create an `AudioBuffer`. This works in exactly
+the same way as when you create a new {{domxref("AudioBuffer")}} with the
+{{domxref("BaseAudioContext.createBuffer")}} method. For more detail, read [Audio
+buffers: frames, samples and channels](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_buffers.3a_frames.2c_samples_and_channels) from our [Basic
+concepts](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API) guide.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A new {{domxref("OfflineAudioContext")}} object whose associated
-  <code>AudioBuffer</code> is configured as requested.</p>
+A new {{domxref("OfflineAudioContext")}} object whose associated
+`AudioBuffer` is configured as requested.
 
-<p>Like a regular <code>AudioContext</code>, an
-  <code>OfflineAudioContext</code> can be the target of events, therefore it implements
-  the {{domxref("EventTarget")}} interface.</p>
+Like a regular `AudioContext`, an
+`OfflineAudioContext` can be the target of events, therefore it implements
+the {{domxref("EventTarget")}} interface.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">const offlineCtx = new OfflineAudioContext({
+```js
+const offlineCtx = new OfflineAudioContext({
   numberOfChannels: 2,
   length: 44100 * 40,
   sampleRate: 44100,
 });
 const source = offlineCtx.createBufferSource();
 // etc...
-</pre>
+```
 
-<p>For a full working example, see our <a class="external external-icon"
-    href="https://mdn.github.io/webaudio-examples/offline-audio-context-promise/">offline-audio-context-promise</a>
-  Github repo (see the <a class="external external-icon"
-    href="https://github.com/mdn/webaudio-examples/blob/master/offline-audio-context-promise/index.html">source
-    code</a> too.)</p>
+For a full working example, see our [offline-audio-context-promise](https://mdn.github.io/webaudio-examples/offline-audio-context-promise/)
+Github repo (see the [source
+code](https://github.com/mdn/webaudio-examples/blob/master/offline-audio-context-promise/index.html) too.)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

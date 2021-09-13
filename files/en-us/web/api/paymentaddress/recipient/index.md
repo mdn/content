@@ -2,32 +2,33 @@
 title: PaymentAddress.recipient
 slug: Web/API/PaymentAddress/recipient
 tags:
-- API
-- Payment Request
-- Payment Request API
-- PaymentRequest
-- Property
-- Reference
-- paymentAddress
+  - API
+  - Payment Request
+  - Payment Request API
+  - PaymentRequest
+  - Property
+  - Reference
+  - paymentAddress
 browser-compat: api.PaymentAddress.recipient
 ---
-<div>{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}</div>
+{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
 
-<p>The read-only <strong><code>recipient</code></strong> property of the
-  {{domxref('PaymentAddress')}} interface returns a string containing the name of the
-  recipient, purchaser, or contact person at the payment address.</p>
+The read-only **`recipient`** property of the
+{{domxref('PaymentAddress')}} interface returns a string containing the name of the
+recipient, purchaser, or contact person at the payment address.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>paymentRecipient</em> = <em>PaymentAddress</em>.recipient;</pre>
+```js
+var paymentRecipient = PaymentAddress.recipient;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} giving the name of the person receiving  or paying for the
-  purchase, or the name of a contact person in other contexts. If no name is available,
-  this string is empty.</p>
+A {{domxref("DOMString")}} giving the name of the person receiving  or paying for the
+purchase, or the name of a contact person in other contexts. If no name is available,
+this string is empty.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

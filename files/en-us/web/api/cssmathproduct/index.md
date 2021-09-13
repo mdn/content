@@ -12,32 +12,28 @@ tags:
   - Reference
 browser-compat: api.CSSMathProduct
 ---
-<div>{{draft}}{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}</div>
+{{draft}}{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>CSSMathProduct</code></strong> interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents the result obtained by calling {{domxref('CSSNumericValue.add','add()')}}, {{domxref('CSSNumericValue.sub','sub()')}}, or {{domxref('CSSNumericValue.toSum','toSum()')}} on {{domxref('CSSNumericValue')}}.  It inherits properties and methods from its parent {{domxref('CSSNumericValue')}}.</p>
+The **`CSSMathProduct`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents the result obtained by calling {{domxref('CSSNumericValue.add','add()')}}, {{domxref('CSSNumericValue.sub','sub()')}}, or {{domxref('CSSNumericValue.toSum','toSum()')}} on {{domxref('CSSNumericValue')}}.  It inherits properties and methods from its parent {{domxref('CSSNumericValue')}}.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("CSSMathProduct.CSSMathProduct()")}}</dt>
- <dd>Creates a new <code>CSSMathProduct</code> object.</dd>
-</dl>
+- {{domxref("CSSMathProduct.CSSMathProduct()")}}
+  - : Creates a new `CSSMathProduct` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref('CSSMathProduct.values')}}</dt>
- <dd>Returns a {{domxref('CSSNumericArray')}} object which contains one or more {{domxref('CSSNumericValue')}} objects.</dd>
-</dl>
+- {{domxref('CSSMathProduct.values')}}
+  - : Returns a {{domxref('CSSNumericArray')}} object which contains one or more {{domxref('CSSNumericValue')}} objects.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p>None.</p>
+None.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

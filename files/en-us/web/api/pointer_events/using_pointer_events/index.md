@@ -9,45 +9,45 @@ tags:
   - events
   - touch
 ---
-<p>{{DefaultAPISidebar("Pointer Events")}}</p>
+{{DefaultAPISidebar("Pointer Events")}}
 
-<p>This guide demonstrates how to use <a href="/en-US/docs/Web/API/Pointer_events">pointer events</a> and the HTML {{HTMLElement("canvas")}} element to build a multi-touch enabled drawing application. This example is based on the one in the <a href="/en-US/docs/Web/API/Touch_events">touch events overview</a>, except it uses the {{domxref("PointerEvent","pointer events", "", 1)}} input event model. Another difference is that because pointer events are pointer device agnostic, the application accepts coordinate-based inputs from a mouse, a pen, or a fingertip using the same code.</p>
+This guide demonstrates how to use [pointer events](/en-US/docs/Web/API/Pointer_events) and the HTML {{HTMLElement("canvas")}} element to build a multi-touch enabled drawing application. This example is based on the one in the [touch events overview](/en-US/docs/Web/API/Touch_events), except it uses the {{domxref("PointerEvent","pointer events", "", 1)}} input event model. Another difference is that because pointer events are pointer device agnostic, the application accepts coordinate-based inputs from a mouse, a pen, or a fingertip using the same code.
 
-<p>This application will only work on a browser that supports pointer events.</p>
+This application will only work on a browser that supports pointer events.
 
-<p>A live version of this application is available on <a href="https://mdn.github.io/dom-examples/pointerevents/Using_Pointer_Events.html">GitHub</a>. The <a href="https://github.com/mdn/dom-examples/blob/master/pointerevents/Using_Pointer_Events.html">source code is available on Github</a> and pull requests and bug reports are welcome.</p>
+A live version of this application is available on [GitHub](https://mdn.github.io/dom-examples/pointerevents/Using_Pointer_Events.html). The [source code is available on Github](https://github.com/mdn/dom-examples/blob/master/pointerevents/Using_Pointer_Events.html) and pull requests and bug reports are welcome.
 
-<h2 id="Definitions">Definitions</h2>
+## Definitions
 
-<dl>
- <dt>Surface</dt>
- <dd>A touch-sensitive surface. This may be a trackpad, a touch screen, or even a virtual mapping of a user's desk surface (or mousepad) with the physical screen.</dd>
- <dt>Touch point</dt>
- <dd>A point of contact with the surface. This may be a finger (or elbow, ear, nose, whatever, but typically a finger), stylus, mouse, or any other method for specifying a single point on the surface.</dd>
-</dl>
+- Surface
+  - : A touch-sensitive surface. This may be a trackpad, a touch screen, or even a virtual mapping of a user's desk surface (or mousepad) with the physical screen.
+- Touch point
+  - : A point of contact with the surface. This may be a finger (or elbow, ear, nose, whatever, but typically a finger), stylus, mouse, or any other method for specifying a single point on the surface.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<div class="note"><p><strong>Note:</strong> The text below uses the term "finger" when describing the contact with the surface, but it could, of course, also be a stylus, mouse, or other method of pointing at a location.</p></div>
+> **Note:** The text below uses the term "finger" when describing the contact with the surface, but it could, of course, also be a stylus, mouse, or other method of pointing at a location.
 
-<h3 id="Create_a_canvas">Create a canvas</h3>
+### Create a canvas
 
-<p>The {{cssxref("touch-action")}} property is set to <code>none</code> to prevent the browser from applying its default touch behavior to the application.</p>
+The {{cssxref("touch-action")}} property is set to `none` to prevent the browser from applying its default touch behavior to the application.
 
-<pre class="brush: html">&lt;canvas id="canvas" width="600" height="600" style="border:solid black 1px; touch-action:none"&gt;
+```html
+<canvas id="canvas" width="600" height="600" style="border:solid black 1px; touch-action:none">
   Your browser does not support canvas element.
-&lt;/canvas&gt;
-&lt;br&gt;
-&lt;button onclick="startup()"&gt;Initialize&lt;/button&gt;
-&lt;br&gt;
-Log: &lt;pre id="log" style="border: 1px solid #ccc;"&gt;&lt;/pre&gt;
-</pre>
+</canvas>
+<br>
+<button onclick="startup()">Initialize</button>
+<br>
+Log: <pre id="log" style="border: 1px solid #ccc;"></pre>
+```
 
-<h3 id="Setting_up_the_event_handlers">Setting up the event handlers</h3>
+### Setting up the event handlers
 
-<p>When the page loads, the <code>startup()</code> function shown below should be called by our {{HTMLElement("body")}} element's <code>onload</code> attribute (but in the example we use a button to trigger it, due to limitations of the MDN live example system).</p>
+When the page loads, the `startup()` function shown below should be called by our {{HTMLElement("body")}} element's `onload` attribute (but in the example we use a button to trigger it, due to limitations of the MDN live example system).
 
-<pre class="brush: js">function startup() {
+```js
+function startup() {
   var el = document.getElementsByTagName("canvas")[0];
   el.addEventListener("pointerdown", handleStart, false);
   el.addEventListener("pointerup", handleEnd, false);
@@ -55,20 +55,22 @@ Log: &lt;pre id="log" style="border: 1px solid #ccc;"&gt;&lt;/pre&gt;
   el.addEventListener("pointermove", handleMove, false);
   log("initialized.");
 }
-</pre>
+```
 
-<p>This sets up all the event listeners for our {{HTMLElement("canvas")}} element so we can handle the touch events as they occur.</p>
+This sets up all the event listeners for our {{HTMLElement("canvas")}} element so we can handle the touch events as they occur.
 
-<h4 id="Tracking_new_touches">Tracking new touches</h4>
+#### Tracking new touches
 
-<p>We'll keep track of the touches in-progress.</p>
+We'll keep track of the touches in-progress.
 
-<pre class="brush: js">var ongoingTouches = new Array();
-</pre>
+```js
+var ongoingTouches = new Array();
+```
 
-<p>When a {{event("pointerdown")}} event occurs, indicating that a new touch on the surface has occurred, the <code>handleStart()</code> function below is called.</p>
+When a {{event("pointerdown")}} event occurs, indicating that a new touch on the surface has occurred, the `handleStart()` function below is called.
 
-<pre class="brush: js">function handleStart(evt) {
+```js
+function handleStart(evt) {
   log("pointerdown.");
   var el = document.getElementsByTagName("canvas")[0];
   var ctx = el.getContext("2d");
@@ -82,22 +84,23 @@ Log: &lt;pre id="log" style="border: 1px solid #ccc;"&gt;&lt;/pre&gt;
   ctx.fillStyle = color;
   ctx.fill();
 }
-</pre>
+```
 
-<p>After storing some of the event's processing in the <code>ongoingTouches</code> for later processing, the start point is drawn as a small circle. We're using a 4-pixel wide line, so a 4 pixel radius circle will show up neatly.</p>
+After storing some of the event's processing in the `ongoingTouches` for later processing, the start point is drawn as a small circle. We're using a 4-pixel wide line, so a 4 pixel radius circle will show up neatly.
 
-<h4 id="Drawing_as_the_pointers_move">Drawing as the pointers move</h4>
+#### Drawing as the pointers move
 
-<p>Each time one or more pointers moves, a {{event("pointermove")}} event is delivered, resulting in our <code>handleMove()</code> function being called. Its responsibility in this example is to update the cached touch information and to draw a line from the previous position to the current position of each touch.</p>
+Each time one or more pointers moves, a {{event("pointermove")}} event is delivered, resulting in our `handleMove()` function being called. Its responsibility in this example is to update the cached touch information and to draw a line from the previous position to the current position of each touch.
 
-<pre class="brush: js">function handleMove(evt) {
+```js
+function handleMove(evt) {
   var el = document.getElementsByTagName("canvas")[0];
   var ctx = el.getContext("2d");
   var color = colorForTouch(evt);
   var idx = ongoingTouchIndexById(evt.pointerId);
 
   log("continuing touch: idx =  " + idx);
-  if (idx &gt;= 0) {
+  if (idx >= 0) {
     ctx.beginPath();
     log("ctx.moveTo(" + ongoingTouches[idx].pageX + ", " + ongoingTouches[idx].pageY + ");");
     ctx.moveTo(ongoingTouches[idx].pageX, ongoingTouches[idx].pageY);
@@ -113,26 +116,27 @@ Log: &lt;pre id="log" style="border: 1px solid #ccc;"&gt;&lt;/pre&gt;
     log("can't figure out which touch to continue: idx = " + idx);
   }
 }
-</pre>
+```
 
-<p>This function looks in our cached touch information array for the previous information about each touch to determine the starting point for each touch's new line segment to be drawn. This is done by looking at each touch's {{domxref("PointerEvent.pointerId")}} property. This property is a unique integer for each pointer event, and remains consistent for each event during the duration of each finger's contact with the surface.</p>
+This function looks in our cached touch information array for the previous information about each touch to determine the starting point for each touch's new line segment to be drawn. This is done by looking at each touch's {{domxref("PointerEvent.pointerId")}} property. This property is a unique integer for each pointer event, and remains consistent for each event during the duration of each finger's contact with the surface.
 
-<p>This lets us get the coordinates of the previous position of each touch and use the appropriate context methods to draw a line segment joining the two positions together.</p>
+This lets us get the coordinates of the previous position of each touch and use the appropriate context methods to draw a line segment joining the two positions together.
 
-<p>After drawing the line, we call <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice"><code>Array.splice()</code></a> to replace the previous information about the touch point with the current information in the <code>ongoingTouches</code> array.</p>
+After drawing the line, we call [`Array.splice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) to replace the previous information about the touch point with the current information in the `ongoingTouches` array.
 
-<h4 id="Handling_the_end_of_a_touch">Handling the end of a touch</h4>
+#### Handling the end of a touch
 
-<p>When the user lifts a finger off the surface, a {{event("pointerup")}} event is sent. We handle this event by calling the <code>handleEnd()</code> function below. Its job is to draw the last line segment for the touch that ended and remove the touch point from the ongoing touch list.</p>
+When the user lifts a finger off the surface, a {{event("pointerup")}} event is sent. We handle this event by calling the `handleEnd()` function below. Its job is to draw the last line segment for the touch that ended and remove the touch point from the ongoing touch list.
 
-<pre class="brush: js">function handleEnd(evt) {
+```js
+function handleEnd(evt) {
   log("pointerup");
   var el = document.getElementsByTagName("canvas")[0];
   var ctx = el.getContext("2d");
   var color = colorForTouch(evt);
   var idx = ongoingTouchIndexById(evt.pointerId);
 
-  if (idx &gt;= 0) {
+  if (idx >= 0) {
     ctx.lineWidth = 4;
     ctx.fillStyle = color;
     ctx.beginPath();
@@ -144,32 +148,34 @@ Log: &lt;pre id="log" style="border: 1px solid #ccc;"&gt;&lt;/pre&gt;
     log("can't figure out which touch to end");
   }
 }
-</pre>
+```
 
-<p>This is very similar to the previous function; the only real differences are that we draw a small square to mark the end and that when we call <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice"><code>Array.splice()</code></a>, we remove the old entry from the ongoing touch list, without adding in the updated information. The result is that we stop tracking that touch point.</p>
+This is very similar to the previous function; the only real differences are that we draw a small square to mark the end and that when we call [`Array.splice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice), we remove the old entry from the ongoing touch list, without adding in the updated information. The result is that we stop tracking that touch point.
 
-<h4 id="Handling_canceled_touches">Handling canceled touches</h4>
+#### Handling canceled touches
 
-<p>If the user's finger wanders into browser UI, or the touch otherwise needs to be canceled, the {{event("pointercancel")}} event is sent, and we call the <code>handleCancel()</code> function below.</p>
+If the user's finger wanders into browser UI, or the touch otherwise needs to be canceled, the {{event("pointercancel")}} event is sent, and we call the `handleCancel()` function below.
 
-<pre class="brush: js">function handleCancel(evt) {
+```js
+function handleCancel(evt) {
   log("pointercancel: id = " + evt.pointerId);
   var idx = ongoingTouchIndexById(evt.pointerId);
   ongoingTouches.splice(idx, 1);  // remove it; we're done
 }
-</pre>
+```
 
-<p>Since the idea is to immediately abort the touch, we remove it from the ongoing touch list without drawing a final line segment.</p>
+Since the idea is to immediately abort the touch, we remove it from the ongoing touch list without drawing a final line segment.
 
-<h3 id="Convenience_functions">Convenience functions</h3>
+### Convenience functions
 
-<p>This example uses two convenience functions that should be looked at briefly to help make the rest of the code more clear.</p>
+This example uses two convenience functions that should be looked at briefly to help make the rest of the code more clear.
 
-<h4 id="Selecting_a_color_for_each_touch">Selecting a color for each touch</h4>
+#### Selecting a color for each touch
 
-<p>In order to make each touch's drawing look different, the <code>colorForTouch()</code> function is used to pick a color based on the touch's unique identifier. This identifier is an opaque number, but we can at least rely on it differing between the currently-active touches.</p>
+In order to make each touch's drawing look different, the `colorForTouch()` function is used to pick a color based on the touch's unique identifier. This identifier is an opaque number, but we can at least rely on it differing between the currently-active touches.
 
-<pre class="brush: js">function colorForTouch(touch) {
+```js
+function colorForTouch(touch) {
   var r = touch.pointerId % 16;
   var g = Math.floor(touch.pointerId / 3) % 16;
   var b = Math.floor(touch.pointerId / 7) % 16;
@@ -180,25 +186,27 @@ Log: &lt;pre id="log" style="border: 1px solid #ccc;"&gt;&lt;/pre&gt;
   log("color for touch with identifier " + touch.pointerId + " = " + color);
   return color;
 }
-</pre>
+```
 
-<p>The result from this function is a string that can be used when calling {{HTMLElement("canvas")}} functions to set drawing colors. For example, for a {{domxref("PointerEvent.pointerId")}} value of 10, the resulting string is "#aaa".</p>
+The result from this function is a string that can be used when calling {{HTMLElement("canvas")}} functions to set drawing colors. For example, for a {{domxref("PointerEvent.pointerId")}} value of 10, the resulting string is "#aaa".
 
-<h4 id="Copying_a_touch_object">Copying a touch object</h4>
+#### Copying a touch object
 
-<p>Some browsers may re-use touch objects between events, so it's best to copy the bits you care about, rather than referencing the entire object.</p>
+Some browsers may re-use touch objects between events, so it's best to copy the bits you care about, rather than referencing the entire object.
 
-<pre class="brush: js">function copyTouch(touch) {
+```js
+function copyTouch(touch) {
   return { identifier: touch.pointerId, pageX: touch.clientX, pageY: touch.clientY };
 }
-</pre>
+```
 
-<h4 id="Finding_an_ongoing_touch">Finding an ongoing touch</h4>
+#### Finding an ongoing touch
 
-<p>The <code>ongoingTouchIndexById()</code> function below scans through the <code>ongoingTouches</code> array to find the touch matching the given identifier, then returns that touch's index into the array.</p>
+The `ongoingTouchIndexById()` function below scans through the `ongoingTouches` array to find the touch matching the given identifier, then returns that touch's index into the array.
 
-<pre class="brush: js">function ongoingTouchIndexById(idToFind) {
-  for (var i = 0; i &lt; ongoingTouches.length; i++) {
+```js
+function ongoingTouchIndexById(idToFind) {
+  for (var i = 0; i < ongoingTouches.length; i++) {
     var id = ongoingTouches[i].identifier;
 
     if (id == idToFind) {
@@ -207,49 +215,50 @@ Log: &lt;pre id="log" style="border: 1px solid #ccc;"&gt;&lt;/pre&gt;
   }
   return -1;    // not found
 }
-</pre>
+```
 
-<h4 id="Showing_whats_going_on">Showing what's going on</h4>
+#### Showing what's going on
 
-<pre class="brush: js">function log(msg) {
+```js
+function log(msg) {
   var p = document.getElementById('log');
   p.innerHTML = msg + "\n" + p.innerHTML;
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Pointer Events 2','#pointerevent-interface', 'PointerEvent')}}</td>
-   <td>{{Spec2('Pointer Events 2')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Pointer Events', '#pointerevent-interface', 'PointerEvent')}}</td>
-   <td>{{Spec2('Pointer Events')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName('Pointer Events 2','#pointerevent-interface', 'PointerEvent')}}
+      </td>
+      <td>{{Spec2('Pointer Events 2')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName('Pointer Events', '#pointerevent-interface', 'PointerEvent')}}
+      </td>
+      <td>{{Spec2('Pointer Events')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<h3 id="PointerEvent_interface"><code>PointerEvent</code> interface</h3>
+### `PointerEvent` interface
 
-<div>
+{{Compat("api.PointerEvent", 0)}}
 
-<p>{{Compat("api.PointerEvent", 0)}}</p>
-</div>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Pointer_events">Pointer events</a></li>
- <li><a href="/en-US/docs/Web/API/Touch_events">Touch events</a></li>
-</ul>
+- [Pointer events](/en-US/docs/Web/API/Pointer_events)
+- [Touch events](/en-US/docs/Web/API/Touch_events)

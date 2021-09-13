@@ -12,25 +12,26 @@ tags:
   - Storage
 browser-compat: api.IDBLocaleAwareKeyRange
 ---
-<div>{{non-standard_header}}{{APIRef("IndexedDB")}}{{SeeCompatTable}}</div>
+{{non-standard_header}}{{APIRef("IndexedDB")}}{{SeeCompatTable}}
 
-<p>The <strong><code>IDBLocaleAwareKeyRange</code></strong> interface of the <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a> is a Firefox-specific version of {{domxref("IDBKeyRange")}} — it functions in exactly the same fashion, and has the same properties and methods, but it is intended for use with {{domxref("IDBIndex")}} objects when the original index had a <code>locale</code> value specified upon its creation (see <a href="/en-US/docs/Web/API/IDBObjectStore/createIndex#parameters"><code>createIndex()</code>'s optionalParameters</a>) — that is, it has <a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB#locale-aware_sorting">locale aware sorting</a> enabled.</p>
+The **`IDBLocaleAwareKeyRange`** interface of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) is a Firefox-specific version of {{domxref("IDBKeyRange")}} — it functions in exactly the same fashion, and has the same properties and methods, but it is intended for use with {{domxref("IDBIndex")}} objects when the original index had a `locale` value specified upon its creation (see [`createIndex()`'s optionalParameters](/en-US/docs/Web/API/IDBObjectStore/createIndex#parameters)) — that is, it has [locale aware sorting](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB#locale-aware_sorting) enabled.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface inherits all the methods of its parent interface, {{domxref("IDBKeyRange")}}.</em></p>
+_This interface inherits all the methods of its parent interface, {{domxref("IDBKeyRange")}}._
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface inherits all the properties of its parent interface, {{domxref("IDBKeyRange")}}.</em></p>
+_This interface inherits all the properties of its parent interface, {{domxref("IDBKeyRange")}}._
 
-<p>Bear in mind however that <code>IDBLocaleAwareKeyRange</code> has its own implementation of {{domxref("IDBKeyRange.bound")}}. This is because when you use <code>bound()</code>, it checks if lower bound &lt; upper bound, and throws an exception if that’s not the case. With locale-aware indexes, the meaning of &lt; depends on the locale, so for example in Lithuanian Y is sorted between I and K. The only difference between <code>IDBKeyRange</code> and <code>IDBLocaleAwareKeyRange</code> is that the latter doesn’t do the aforementioned check.</p>
+Bear in mind however that `IDBLocaleAwareKeyRange` has its own implementation of {{domxref("IDBKeyRange.bound")}}. This is because when you use `bound()`, it checks if lower bound < upper bound, and throws an exception if that’s not the case. With locale-aware indexes, the meaning of < depends on the locale, so for example in Lithuanian Y is sorted between I and K. The only difference between `IDBKeyRange` and `IDBLocaleAwareKeyRange` is that the latter doesn’t do the aforementioned check.
 
-<p>Developers should always use <code>IDBLocaleAwareKeyRange</code> when dealing with locale-aware indexes.</p>
+Developers should always use `IDBLocaleAwareKeyRange` when dealing with locale-aware indexes.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">function displayData() {
+```js
+function displayData() {
   var keyRangeValue = IDBLocaleAwareKeyRange.bound("A", "F");
 
   var transaction = db.transaction(['fThings'], 'readonly');
@@ -41,14 +42,14 @@ browser-compat: api.IDBLocaleAwareKeyRange
     var cursor = event.target.result;
     if(cursor) {
       var tableRow = document.createElement('tr');
-      tableRow.innerHTML =   '&amp;lt;td&amp;gt;' + cursor.value.id + '&amp;lt;/td&amp;gt;'
-                           + '&amp;lt;td&amp;gt;' + cursor.value.lName + '&amp;lt;/td&amp;gt;'
-                           + '&amp;lt;td&amp;gt;' + cursor.value.fName + '&amp;lt;/td&amp;gt;'
-                           + '&amp;lt;td&amp;gt;' + cursor.value.jTitle + '&amp;lt;/td&amp;gt;'
-                           + '&amp;lt;td&amp;gt;' + cursor.value.company + '&amp;lt;/td&amp;gt;'
-                           + '&amp;lt;td&amp;gt;' + cursor.value.eMail + '&amp;lt;/td&amp;gt;'
-                           + '&amp;lt;td&amp;gt;' + cursor.value.phone + '&amp;lt;/td&amp;gt;'
-                           + '&amp;lt;td&amp;gt;' + cursor.value.age + '&amp;lt;/td&amp;gt;';
+      tableRow.innerHTML =   '&lt;td&gt;' + cursor.value.id + '&lt;/td&gt;'
+                           + '&lt;td&gt;' + cursor.value.lName + '&lt;/td&gt;'
+                           + '&lt;td&gt;' + cursor.value.fName + '&lt;/td&gt;'
+                           + '&lt;td&gt;' + cursor.value.jTitle + '&lt;/td&gt;'
+                           + '&lt;td&gt;' + cursor.value.company + '&lt;/td&gt;'
+                           + '&lt;td&gt;' + cursor.value.eMail + '&lt;/td&gt;'
+                           + '&lt;td&gt;' + cursor.value.phone + '&lt;/td&gt;'
+                           + '&lt;td&gt;' + cursor.value.age + '&lt;/td&gt;';
       tableEntry.appendChild(tableRow);
 
       cursor.continue();
@@ -56,24 +57,23 @@ browser-compat: api.IDBLocaleAwareKeyRange
       console.log('Entries all displayed.');
     }
   };
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not currently part of any specification.</p>
+Not currently part of any specification.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
- <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
- <li>Using transactions: {{domxref("IDBTransaction")}}</li>
- <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
- <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
- <li>Using cursors: {{domxref("IDBCursor")}}</li>
- <li>Reference example: <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

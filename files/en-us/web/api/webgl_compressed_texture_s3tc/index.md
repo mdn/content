@@ -8,36 +8,33 @@ tags:
   - WebGL extension
 browser-compat: api.WEBGL_compressed_texture_s3tc
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <code><strong>WEBGL_compressed_texture_s3tc</strong></code> extension is part of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> and exposes four <a href="https://en.wikipedia.org/wiki/S3_Texture_Compression">S3TC compressed texture formats</a>.</p>
+The **`WEBGL_compressed_texture_s3tc`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and exposes four [S3TC compressed texture formats](https://en.wikipedia.org/wiki/S3_Texture_Compression).
 
-<p>Compressed textures reduce the amount of memory needed to store a texture on the GPU, allowing for higher resolution textures or more of the same resolution textures.</p>
+Compressed textures reduce the amount of memory needed to store a texture on the GPU, allowing for higher resolution textures or more of the same resolution textures.
 
-<p>WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also <a href="/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</a> in the <a href="/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</a>.</p>
+WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
 
-<div class="note">
-<p><strong>Note:</strong> This extension is available to both, {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} and {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}} contexts.</p>
-</div>
+> **Note:** This extension is available to both, {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} and {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}} contexts.
 
-<h2 id="Constants">Constants</h2>
+## Constants
 
-<p>The compressed texture formats are exposed by four constants and can be used in two functions: {{domxref("WebGLRenderingContext.compressedTexImage2D", "compressedTexImage2D()")}} and {{domxref("WebGLRenderingContext.compressedTexSubImage2D", "compressedTexSubImage2D()")}}.</p>
+The compressed texture formats are exposed by four constants and can be used in two functions: {{domxref("WebGLRenderingContext.compressedTexImage2D", "compressedTexImage2D()")}} and {{domxref("WebGLRenderingContext.compressedTexSubImage2D", "compressedTexSubImage2D()")}}.
 
-<dl>
- <dt><code>ext.COMPRESSED_RGB_S3TC_DXT1_EXT</code></dt>
- <dd>A DXT1-compressed image in an RGB image format.</dd>
- <dt><code>ext.COMPRESSED_RGBA_S3TC_DXT1_EXT</code></dt>
- <dd>A DXT1-compressed image in an RGB image format with a simple on/off alpha value.</dd>
- <dt><code>ext.COMPRESSED_RGBA_S3TC_DXT3_EXT</code></dt>
- <dd>A DXT3-compressed image in an RGBA image format. Compared to a 32-bit RGBA texture, it offers 4:1 compression.</dd>
- <dt><code>ext.COMPRESSED_RGBA_S3TC_DXT5_EXT</code></dt>
- <dd>A DXT5-compressed image in an RGBA image format. It also provides a 4:1 compression, but differs to the DXT3 compression in how the alpha compression is done.</dd>
-</dl>
+- `ext.COMPRESSED_RGB_S3TC_DXT1_EXT`
+  - : A DXT1-compressed image in an RGB image format.
+- `ext.COMPRESSED_RGBA_S3TC_DXT1_EXT`
+  - : A DXT1-compressed image in an RGB image format with a simple on/off alpha value.
+- `ext.COMPRESSED_RGBA_S3TC_DXT3_EXT`
+  - : A DXT3-compressed image in an RGBA image format. Compared to a 32-bit RGBA texture, it offers 4:1 compression.
+- `ext.COMPRESSED_RGBA_S3TC_DXT5_EXT`
+  - : A DXT5-compressed image in an RGBA image format. It also provides a 4:1 compression, but differs to the DXT3 compression in how the alpha compression is done.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush:js">var ext = (
+```js
+var ext = (
   gl.getExtension('WEBGL_compressed_texture_s3tc') ||
   gl.getExtension('MOZ_WEBGL_compressed_texture_s3tc') ||
   gl.getExtension('WEBKIT_WEBGL_compressed_texture_s3tc')
@@ -49,22 +46,21 @@ gl.bindTexture(gl.TEXTURE_2D, texture);
 gl.compressedTexImage2D(gl.TEXTURE_2D, 0, ext.COMPRESSED_RGBA_S3TC_DXT5_EXT, 512, 512, 0, textureData);
 
 gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
-gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);</pre>
+gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://www.opengl.org/wiki/S3_Texture_Compression">S3 Texture Compression – OpenGL wiki</a></li>
- <li>{{domxref("WebGLRenderingContext.getExtension()")}}</li>
- <li>{{domxref("WebGLRenderingContext.compressedTexImage2D()")}}</li>
- <li>{{domxref("WebGLRenderingContext.compressedTexSubImage2D()")}}</li>
- <li>{{domxref("WebGLRenderingContext.getParameter()")}}</li>
-</ul>
+- [S3 Texture Compression – OpenGL wiki](https://www.opengl.org/wiki/S3_Texture_Compression)
+- {{domxref("WebGLRenderingContext.getExtension()")}}
+- {{domxref("WebGLRenderingContext.compressedTexImage2D()")}}
+- {{domxref("WebGLRenderingContext.compressedTexSubImage2D()")}}
+- {{domxref("WebGLRenderingContext.getParameter()")}}

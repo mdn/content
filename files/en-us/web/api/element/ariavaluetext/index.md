@@ -11,35 +11,40 @@ tags:
   - Element
 browser-compat: api.Element.ariaValueText
 ---
-<div>{{DefaultAPISidebar("DOM")}}</div>
+{{DefaultAPISidebar("DOM")}}
 
-<p>The <strong><code>ariaValueText</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuetext_attribute"><code>aria-valuetext</code></a> attribute, which defines the human readable text alternative of aria-valuenow for a range widget.</p>
+The **`ariaValueText`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuetext_attribute) attribute, which defines the human readable text alternative of aria-valuenow for a range widget.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox notranslate">var <var>ariaValueText</var> = element.ariaValueText;
-<var>element</var>.ariaValueText = <var>ariaValueText</var></pre>
+    var ariaValueText = element.ariaValueText;
+    element.ariaValueText = ariaValueText
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString")}}.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("DOMString")}}.
 
-<p>In this example the <code>aria-valuetext</code> attribute on the element with an ID of <code>slider</code> is set to "Sunday" to give a human-readable value for the range. Using <code>ariaValueText</code> we update the value to "Monday".</p>
+## Examples
 
-<pre class="brush: html">&lt;div role="slider" aria-valuenow="1"
+In this example the `aria-valuetext` attribute on the element with an ID of `slider` is set to "Sunday" to give a human-readable value for the range. Using `ariaValueText` we update the value to "Monday".
+
+```html
+<div role="slider" aria-valuenow="1"
   aria-valuemin="1" aria-valuemax="7"
-	aria-valuetext="Sunday"&gt;</pre>
+	aria-valuetext="Sunday">
+```
 
-<pre class="brush: js">let el = document.getElementById('slider');
+```js
+let el = document.getElementById('slider');
 console.log(el.ariaValueText); // Sunday
 el.ariaValueText = "Monday";
-console.log(el.ariaValueText); // Monday</pre>
+console.log(el.ariaValueText); // Monday
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

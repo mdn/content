@@ -17,50 +17,55 @@ tags:
   - Web
 browser-compat: api.Element.error_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code>error</code> event is fired on an {{domxref("Element")}} object when a resource failed to load, or can't be used. For example, if a script has an execution error or an image can't be found or is invalid.</p>
+The `error` event is fired on an {{domxref("Element")}} object when a resource failed to load, or can't be used. For example, if a script has an execution error or an image can't be found or is invalid.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("Event")}} or {{domxref("UIEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("GlobalEventHandlers/onerror", "onerror")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("Event")}} or {{domxref("UIEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{domxref("GlobalEventHandlers/onerror", "onerror")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>The event object is a {{domxref("UIEvent")}} instance if it was generated from a user interface element, or an {{domxref("Event")}} instance otherwise.</p>
+The event object is a {{domxref("UIEvent")}} instance if it was generated from a user interface element, or an {{domxref("Event")}} instance otherwise.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Live_example">Live example</h3>
+### Live example
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="controls"&gt;
-  &lt;button id="img-error" type="button"&gt;Generate image error&lt;/button&gt;
-  &lt;img class="bad-img" /&gt;
-&lt;/div&gt;
+```html
+<div class="controls">
+  <button id="img-error" type="button">Generate image error</button>
+  <img class="bad-img" />
+</div>
 
-&lt;div class="event-log"&gt;
-  &lt;label&gt;Event log:&lt;/label&gt;
-  &lt;textarea readonly class="event-log-contents" rows="8" cols="30"&gt;&lt;/textarea&gt;
-&lt;/div&gt;</pre>
+<div class="event-log">
+  <label>Event log:</label>
+  <textarea readonly class="event-log-contents" rows="8" cols="30"></textarea>
+</div>
+```
 
-<pre class="brush: css hidden">body {
+```css hidden
+body {
   display: grid;
   grid-template-areas: "control  log";
 }
@@ -93,38 +98,37 @@ img {
   width: 0;
   height: 0;
 }
-</pre>
+```
 
-<h4 id="JS">JS</h4>
+#### JS
 
-<pre class="brush: js">const log = document.querySelector('.event-log-contents');
+```js
+const log = document.querySelector('.event-log-contents');
 
 const badImg = document.querySelector('.bad-img');
-badImg.addEventListener('error', (event) =&gt; {
+badImg.addEventListener('error', (event) => {
     log.textContent = log.textContent + `${event.type}: Loading image\n`;
     console.log(event)
 });
 
 const imgError = document.querySelector('#img-error');
-imgError.addEventListener('click', () =&gt; {
+imgError.addEventListener('click', () => {
     badImg.setAttribute('src', 'i-dont-exist');
 });
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Live_example', '100%', '150px') }}</p>
+{{ EmbedLiveSample('Live_example', '100%', '150px') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>This event on <code>Window</code> targets: {{domxref("Window/error_event", "error")}} event</li>
-</ul>
+- This event on `Window` targets: {{domxref("Window/error_event", "error")}} event

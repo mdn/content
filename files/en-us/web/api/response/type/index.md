@@ -11,37 +11,36 @@ tags:
   - Type
 browser-compat: api.Response.type
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p>The <strong><code>type</code></strong> read-only property of the {{domxref("Response")}} interface contains the type of the response. It can be one of the following:</p>
+The **`type`** read-only property of the {{domxref("Response")}} interface contains the type of the response. It can be one of the following:
 
-<ul>
- <li><code>basic</code>: Normal, same origin response, with all headers exposed except “Set-Cookie” and “Set-Cookie2″.</li>
- <li><code>cors</code>: Response was received from a valid cross-origin request. <a href="https://fetch.spec.whatwg.org/#concept-filtered-response-cors">Certain headers and the body</a> may be accessed.</li>
- <li><code>error</code>: Network error. No useful information describing the error is available. The Response’s status is 0, headers are empty and immutable. This is the type for a Response obtained from <code>Response.error()</code>.</li>
- <li><code>opaque</code>: Response for “no-cors” request to cross-origin resource. <a href="https://fetch.spec.whatwg.org/#concept-filtered-response-opaque">Severely restricted</a>.</li>
- <li><code>opaqueredirect</code>: The fetch request was made with <code>redirect: "manual"</code>. The Response's status is 0, headers are empty, body is null and trailer is empty.</li>
-</ul>
+- `basic`: Normal, same origin response, with all headers exposed except “Set-Cookie” and “Set-Cookie2″.
+- `cors`: Response was received from a valid cross-origin request. [Certain headers and the body](https://fetch.spec.whatwg.org/#concept-filtered-response-cors) may be accessed.
+- `error`: Network error. No useful information describing the error is available. The Response’s status is 0, headers are empty and immutable. This is the type for a Response obtained from `Response.error()`.
+- `opaque`: Response for “no-cors” request to cross-origin resource. [Severely restricted](https://fetch.spec.whatwg.org/#concept-filtered-response-opaque).
+- `opaqueredirect`: The fetch request was made with `redirect: "manual"`. The Response's status is 0, headers are empty, body is null and trailer is empty.
 
-<div class="note">
-<p><strong>Note:</strong> An "error" Response never really gets exposed to script: such a response to a {{domxref("fetch()")}} would reject the promise.</p>
-</div>
+> **Note:** An "error" Response never really gets exposed to script: such a response to a {{domxref("fetch()")}} would reject the promise.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var myType = response.type;</pre>
+```js
+var myType = response.type;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A <code>ResponseType</code> string indicating the type of the response.</p>
+A `ResponseType` string indicating the type of the response.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In our <a href="https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-response">Fetch Response example</a> (see <a href="https://mdn.github.io/fetch-examples/fetch-response/">Fetch Response live</a>) we create a new {{domxref("Request")}} object using the {{domxref("Request.Request","Request()")}} constructor, passing it a JPG path. We then fetch this request using {{domxref("fetch()")}}, extract a blob from the response using {{domxref("Response.blob")}}, create an object URL out of it using {{domxref("URL.createObjectURL")}}, and display this in an {{htmlelement("img")}}.</p>
+In our [Fetch Response example](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-response) (see [Fetch Response live](https://mdn.github.io/fetch-examples/fetch-response/)) we create a new {{domxref("Request")}} object using the {{domxref("Request.Request","Request()")}} constructor, passing it a JPG path. We then fetch this request using {{domxref("fetch()")}}, extract a blob from the response using {{domxref("Response.blob")}}, create an object URL out of it using {{domxref("URL.createObjectURL")}}, and display this in an {{htmlelement("img")}}.
 
-<p>Note that at the top of the <code>fetch()</code> block we log the response <code>type</code> to the console.</p>
+Note that at the top of the `fetch()` block we log the response `type` to the console.
 
-<pre class="brush: js">var myImage = document.querySelector('img');
+```js
+var myImage = document.querySelector('img');
 
 var myRequest = new Request('flowers.jpg');
 
@@ -51,20 +50,19 @@ fetch(myRequest).then(function(response) {
     var objectURL = URL.createObjectURL(myBlob);
     myImage.src = objectURL;
   });
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
- <li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP](/en-US/docs/Web/HTTP)

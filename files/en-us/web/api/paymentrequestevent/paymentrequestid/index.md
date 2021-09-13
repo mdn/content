@@ -2,34 +2,35 @@
 title: PaymentRequestEvent.paymentRequestId
 slug: Web/API/PaymentRequestEvent/paymentRequestId
 tags:
-- API
-- Payment Request API
-- PaymentRequestEvent
-- Property
-- Reference
-- payment
-- paymentRequestId
+  - API
+  - Payment Request API
+  - PaymentRequestEvent
+  - Property
+  - Reference
+  - payment
+  - paymentRequestId
 browser-compat: api.PaymentRequestEvent.paymentRequestId
 ---
-<p>{{SeeCompatTable}}{{APIRef("Payment Request API")}}</p>
+{{SeeCompatTable}}{{APIRef("Payment Request API")}}
 
-<p>The <strong><code>paymentRequestId</code></strong> read-only property of the
-  {{domxref("PaymentRequestEvent")}} interface returns the ID of the
-  {{domxref("PaymentRequest")}} object.</p>
+The **`paymentRequestId`** read-only property of the
+{{domxref("PaymentRequestEvent")}} interface returns the ID of the
+{{domxref("PaymentRequest")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>id</em> = <em>paymentRequestEvent</em>.paymentRequestId</pre>
+```js
+var id = paymentRequestEvent.paymentRequestId
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A DOMString contains the ID.</p>
+A DOMString contains the ID.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

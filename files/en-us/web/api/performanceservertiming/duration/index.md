@@ -2,33 +2,32 @@
 title: PerformanceServerTiming.duration
 slug: Web/API/PerformanceServerTiming/duration
 tags:
-- API
-- Property
-- Reference
-- ServerTiming
+  - API
+  - Property
+  - Reference
+  - ServerTiming
 browser-compat: api.PerformanceServerTiming.duration
 ---
-<div>{{APIRef("Resource Timing API")}}</div>
+{{APIRef("Resource Timing API")}}
 
-<p>The <strong><code>duration</code></strong> read-only property returns a double that
-  contains the server-specified metric duration, or value <code>0.0</code>.</p>
+The **`duration`** read-only property returns a double that
+contains the server-specified metric duration, or value `0.0`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>serverTiming</em>.duration;
-</pre>
+```js
+serverTiming.duration;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("PerformanceServerTiming")}}</li>
-  <li>{{HTTPHeader("Server-Timing")}}</li>
-</ul>
+- {{domxref("PerformanceServerTiming")}}
+- {{HTTPHeader("Server-Timing")}}

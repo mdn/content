@@ -10,49 +10,45 @@ tags:
   - Navigator
 browser-compat: api.Navigator.setAppBadge
 ---
-<div>{{DefaultAPISidebar("Badging API")}}</div>
+{{DefaultAPISidebar("Badging API")}}
 
-<p>The <strong><code>setAppBadge()</code></strong> method of the {{domxref("Navigator")}} interface a badge on the icon associated with this app. If a value is passed to the method, this will be set as the value of the badge. Otherwise the badge will display as a dot, or other indicator as defined by the platform.</p>
+The **`setAppBadge()`** method of the {{domxref("Navigator")}} interface a badge on the icon associated with this app. If a value is passed to the method, this will be set as the value of the badge. Otherwise the badge will display as a dot, or other indicator as defined by the platform.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">let promise = Navigator.setAppBadge(contents);</pre>
+    let promise = Navigator.setAppBadge(contents);
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>contents</code>{{optional_inline}}</dt>
-  <dd>A {{jsxref("number")}} which will be used as the value of the badge. If <code>contents</code> is <code>0</code> then the badge will be set to <code>nothing</code>, indicating a cleared badge.</dd>
-</dl>
+- `contents`{{optional_inline}}
+  - : A {{jsxref("number")}} which will be used as the value of the badge. If `contents` is `0` then the badge will be set to `nothing`, indicating a cleared badge.
 
-<h3 id="Returns">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.</p>
+A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt><code>NotSupportedError</code></dt>
-  <dd>The {{domxref("Navigator")}} does not have a document that this action can be acted on.</dd>
-</dl>
+- `NotSupportedError`
+  - : The {{domxref("Navigator")}} does not have a document that this action can be acted on.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the example below an unread count is passed to <code>setAppBadge()</code>. The badge should then display <code>30</code>.</p>
+In the example below an unread count is passed to `setAppBadge()`. The badge should then display `30`.
 
-<pre class="brush: js">const unread = 30;
-navigator.setAppBadge(unread);</pre>
+```js
+const unread = 30;
+navigator.setAppBadge(unread);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2>See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://web.dev/badging-api/">Badging for app icons</a></li>
-</ul>
+- [Badging for app icons](https://web.dev/badging-api/)

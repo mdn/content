@@ -2,55 +2,53 @@
 title: WebGL2RenderingContext.deleteVertexArray()
 slug: Web/API/WebGL2RenderingContext/deleteVertexArray
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGL2
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGL2
 browser-compat: api.WebGL2RenderingContext.deleteVertexArray
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGL2RenderingContext.deleteVertexArray()</code></strong> method of
-  the <a href="/en-US/docs/Web/API/WebGL_API">WebGL 2 API</a> deletes a given
-  {{domxref("WebGLVertexArrayObject")}} object.</p>
+The **`WebGL2RenderingContext.deleteVertexArray()`** method of
+the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) deletes a given
+{{domxref("WebGLVertexArrayObject")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <var>gl</var>.deleteVertexArray(<var>vertexArray</var>);
-</pre>
+```js
+void gl.deleteVertexArray(vertexArray);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>vertexArray</code></dt>
-  <dd>A {{domxref("WebGLVertexArrayObject")}} (VAO) object to delete.</dd>
-</dl>
+- `vertexArray`
+  - : A {{domxref("WebGLVertexArrayObject")}} (VAO) object to delete.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var vao = gl.createVertexArray();
+```js
+var vao = gl.createVertexArray();
 gl.bindVertexArray(vao);
 
 // ...
 
 gl.deleteVertexArray(vao);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLVertexArrayObject")}}</li>
-</ul>
+- {{domxref("WebGLVertexArrayObject")}}

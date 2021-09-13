@@ -2,43 +2,45 @@
 title: ShadowRoot.activeElement
 slug: Web/API/ShadowRoot/activeElement
 tags:
-- API
-- Property
-- Reference
-- ShadowRoot
-- Web Components
-- shadow dom
+  - API
+  - Property
+  - Reference
+  - ShadowRoot
+  - Web Components
+  - shadow dom
 browser-compat: api.ShadowRoot.activeElement
 ---
-<div>{{APIRef("Shadow DOM")}}</div>
+{{APIRef("Shadow DOM")}}
 
-<p>The <strong><code>activeElement</code></strong> read-only property of the
-{{domxref("ShadowRoot")}} interface returns the element within the shadow tree that has focus.</p>
+The **`activeElement`** read-only property of the
+{{domxref("ShadowRoot")}} interface returns the element within the shadow tree that has focus.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>shadowRoot</var>.activeElement</pre>
+```js
+shadowRoot.activeElement
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>The {{domxref('Element')}} which currently has focus, or <code>null</code> if there is no focused element.</p>
+The {{domxref('Element')}} which currently has focus, or `null` if there is no focused element.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">let customElem = document.querySelector('my-shadow-dom-element');
+```js
+let customElem = document.querySelector('my-shadow-dom-element');
 let shadow = customElem.shadowRoot;
-let focusedElem = shadow.activeElement;</pre>
+let focusedElem = shadow.activeElement;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2>See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Document.activeElement")}}</li>
-</ul>
+- {{domxref("Document.activeElement")}}

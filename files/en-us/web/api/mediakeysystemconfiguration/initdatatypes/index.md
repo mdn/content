@@ -2,33 +2,34 @@
 title: MediaKeySystemConfiguration.initDataTypes
 slug: Web/API/MediaKeySystemConfiguration/initDataTypes
 tags:
-- API
-- Audio
-- EncryptedMediaExtensions
-- Media
-- MediaKeySystemConfiguration
-- NeedsExample
-- Property
-- Reference
-- Video
-- initDataTypes
+  - API
+  - Audio
+  - EncryptedMediaExtensions
+  - Media
+  - MediaKeySystemConfiguration
+  - NeedsExample
+  - Property
+  - Reference
+  - Video
+  - initDataTypes
 browser-compat: api.MediaKeySystemConfiguration.initDataTypes
 ---
-<div>{{APIRef("EncryptedMediaExtensions")}}{{SeeCompatTable}}</div>
+{{APIRef("EncryptedMediaExtensions")}}{{SeeCompatTable}}
 
-<p>The <code>MediaKeySystemConfiguration.initDataTypes</code> read-only property returns a
-  list of supported initialization data type names. An initialization data type is a
-  string indicating the format of the initialization data.</p>
+The `MediaKeySystemConfiguration.initDataTypes` read-only property returns a
+list of supported initialization data type names. An initialization data type is a
+string indicating the format of the initialization data.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>dataTypes</var>[] = <var>mediaSystemConfiguration</var>.initDataTypes;</pre>
+```js
+var dataTypes[] = mediaSystemConfiguration.initDataTypes;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

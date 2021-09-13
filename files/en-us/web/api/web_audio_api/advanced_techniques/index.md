@@ -10,120 +10,133 @@ tags:
   - Web Audio API
   - sequencer
 ---
-<div>{{DefaultAPISidebar("Web Audio API")}}</div>
+{{DefaultAPISidebar("Web Audio API")}}
 
-<p>In this tutorial, we're going to cover sound creation and modification, as well as timing and scheduling. We're going to introduce sample loading, envelopes, filters, wavetables, and frequency modulation. If you're familiar with these terms and you're looking for an introduction to their application within with the Web Audio API, you've come to the right place.</p>
+In this tutorial, we're going to cover sound creation and modification, as well as timing and scheduling. We're going to introduce sample loading, envelopes, filters, wavetables, and frequency modulation. If you're familiar with these terms and you're looking for an introduction to their application within with the Web Audio API, you've come to the right place.
 
-<h2 id="Demo">Demo</h2>
+## Demo
 
-<p>We're going to be looking at a very simple step sequencer:</p>
+We're going to be looking at a very simple step sequencer:
 
-<p><img alt="A sound sequencer application featuring play and BPM master controls, and 4 different voices with controls for each." src="sequencer.png"><br>
-  </p>
+![A sound sequencer application featuring play and BPM master controls, and 4 different voices with controls for each.](sequencer.png)
 
-<p>In practice this is easier to do with a library — the Web Audio API was built to be built upon. If you are about to embark on building something more complex, <a href="https://tonejs.github.io/">tone.js</a> would be a good place to start. However, we want to demonstrate how to build such a demo from first principles, as a learning exercise.</p>
 
-<div class="note">
-<p><strong>Note:</strong> You can find the source code on GitHub as <a href="https://github.com/mdn/webaudio-examples/tree/master/step-sequencer">step-sequencer</a>; see the <a href="https://mdn.github.io/webaudio-examples/step-sequencer/">step-sequencer running live</a> also.</p>
-</div>
 
-<p>The interface consists of master controls, which allow us to play/stop the sequencer, and adjust the BPM (beats per minute) to speed up or slow down the "music".</p>
+In practice this is easier to do with a library — the Web Audio API was built to be built upon. If you are about to embark on building something more complex, [tone.js](https://tonejs.github.io/) would be a good place to start. However, we want to demonstrate how to build such a demo from first principles, as a learning exercise.
 
-<p>There are four different sounds, or voices, which can be played. Each voice has four buttons, which represent four beats in one bar of music. When they are enabled the note will sound. When the instrument plays, it will move across this set of beats and loop the bar.</p>
+> **Note:** You can find the source code on GitHub as [step-sequencer](https://github.com/mdn/webaudio-examples/tree/master/step-sequencer); see the [step-sequencer running live](https://mdn.github.io/webaudio-examples/step-sequencer/) also.
 
-<p>Each voice also has local controls, which allow you to manipulate the effects or parameters particular to each technique we are using to create those voices. The techniques we are using are:</p>
+The interface consists of master controls, which allow us to play/stop the sequencer, and adjust the BPM (beats per minute) to speed up or slow down the "music".
+
+There are four different sounds, or voices, which can be played. Each voice has four buttons, which represent four beats in one bar of music. When they are enabled the note will sound. When the instrument plays, it will move across this set of beats and loop the bar.
+
+Each voice also has local controls, which allow you to manipulate the effects or parameters particular to each technique we are using to create those voices. The techniques we are using are:
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Name of voice</th>
-   <th scope="col">Technique</th>
-   <th scope="col">Associated Web Audio API feature</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>"Sweep"</td>
-   <td>Oscillator, periodic wave</td>
-   <td>{{domxref("OscillatorNode")}}, {{domxref("PeriodicWave")}}</td>
-  </tr>
-  <tr>
-   <td>"Pulse"</td>
-   <td>Multiple oscillators</td>
-   <td>{{domxref("OscillatorNode")}}</td>
-  </tr>
-  <tr>
-   <td>"Noise"</td>
-   <td>Random noise buffer, Biquad filter</td>
-   <td>{{domxref("AudioBuffer")}}, {{domxref("AudioBufferSourceNode")}}, {{domxref("BiquadFilterNode")}}</td>
-  </tr>
-  <tr>
-   <td>"Dial up"</td>
-   <td>Loading a sound sample to play</td>
-   <td>{{domxref("BaseAudioContext/decodeAudioData")}}, {{domxref("AudioBufferSourceNode")}}</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Name of voice</th>
+      <th scope="col">Technique</th>
+      <th scope="col">Associated Web Audio API feature</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>"Sweep"</td>
+      <td>Oscillator, periodic wave</td>
+      <td>
+        {{domxref("OscillatorNode")}},
+        {{domxref("PeriodicWave")}}
+      </td>
+    </tr>
+    <tr>
+      <td>"Pulse"</td>
+      <td>Multiple oscillators</td>
+      <td>{{domxref("OscillatorNode")}}</td>
+    </tr>
+    <tr>
+      <td>"Noise"</td>
+      <td>Random noise buffer, Biquad filter</td>
+      <td>
+        {{domxref("AudioBuffer")}},
+        {{domxref("AudioBufferSourceNode")}},
+        {{domxref("BiquadFilterNode")}}
+      </td>
+    </tr>
+    <tr>
+      <td>"Dial up"</td>
+      <td>Loading a sound sample to play</td>
+      <td>
+        {{domxref("BaseAudioContext/decodeAudioData")}},
+        {{domxref("AudioBufferSourceNode")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<div class="note">
-<p><strong>Note:</strong> This instrument was not created to sound good, it was created to provide demonstration code and represents a <em>very</em> simplified version of such an instrument. The sounds are based on a dial-up modem. If you are unaware of how one sounds you can <a href="https://soundcloud.com/john-pemberton/modem-dialup">listen to one here</a>.</p>
-</div>
+> **Note:** This instrument was not created to sound good, it was created to provide demonstration code and represents a _very_ simplified version of such an instrument. The sounds are based on a dial-up modem. If you are unaware of how one sounds you can [listen to one here](https://soundcloud.com/john-pemberton/modem-dialup).
 
-<h2 id="Creating_an_audio_context">Creating an audio context</h2>
+## Creating an audio context
 
-<p>As you should be used to by now, each Web Audio API app starts with an audio context:</p>
+As you should be used to by now, each Web Audio API app starts with an audio context:
 
-<pre class="brush: js">// for cross browser compatibility
+```js
+// for cross browser compatibility
 const AudioContext = window.AudioContext || window.webkitAudioContext;
-const audioCtx = new AudioContext();</pre>
+const audioCtx = new AudioContext();
+```
 
-<h2 id="The_sweep_—_oscillators_periodic_waves_and_envelopes">The "sweep" — oscillators, periodic waves, and envelopes</h2>
+## The "sweep" — oscillators, periodic waves, and envelopes
 
-<p>For what we will call the "sweep" sound, that first noise you hear when you dial up, we're going to create an oscillator to generate the sound.</p>
+For what we will call the "sweep" sound, that first noise you hear when you dial up, we're going to create an oscillator to generate the sound.
 
-<p>The {{domxref("OscillatorNode")}} comes with basic waveforms out of the box — sine, square, triangle or sawtooth. However, instead of using the standard waves that come by default, we're going to create our own using the {{domxref("PeriodicWave")}} interface and values set in a wavetable. We can use the {{domxref("BaseAudioContext.createPeriodicWave")}} method to use this custom wave with an oscillator.</p>
+The {{domxref("OscillatorNode")}} comes with basic waveforms out of the box — sine, square, triangle or sawtooth. However, instead of using the standard waves that come by default, we're going to create our own using the {{domxref("PeriodicWave")}} interface and values set in a wavetable. We can use the {{domxref("BaseAudioContext.createPeriodicWave")}} method to use this custom wave with an oscillator.
 
-<h3 id="The_periodic_wave">The periodic wave</h3>
+### The periodic wave
 
-<p>First of all, we'll create our periodic wave. To do so, We need to pass real and imaginary values into the {{domxref("BaseAudioContext.createPeriodicWave()")}} method.:</p>
+First of all, we'll create our periodic wave. To do so, We need to pass real and imaginary values into the {{domxref("BaseAudioContext.createPeriodicWave()")}} method.:
 
-<pre class="brush: js">const wave = audioCtx.createPeriodicWave(wavetable.real, wavetable.imag);
-</pre>
+```js
+const wave = audioCtx.createPeriodicWave(wavetable.real, wavetable.imag);
+```
 
-<div class="note">
-<p><strong>Note:</strong> In our example the wavetable is held in a separate JavaScript file (<code>wavetable.js</code>), because there are <em>so</em> many values. It is taken from a <a href="https://github.com/GoogleChromeLabs/web-audio-samples/tree/main/archive/demos/wave-tables">repository of wavetables</a>, which can be found in the <a href="https://github.com/GoogleChromeLabs/web-audio-samples/">Web Audio API examples from Google Chrome Labs</a>.</p>
-</div>
+> **Note:** In our example the wavetable is held in a separate JavaScript file (`wavetable.js`), because there are _so_ many values. It is taken from a [repository of wavetables](https://github.com/GoogleChromeLabs/web-audio-samples/tree/main/archive/demos/wave-tables), which can be found in the [Web Audio API examples from Google Chrome Labs](https://github.com/GoogleChromeLabs/web-audio-samples/).
 
-<h3 id="The_Oscillator">The Oscillator</h3>
+### The Oscillator
 
-<p>Now we can create an {{domxref("OscillatorNode")}} and set its wave to the one we've created:</p>
+Now we can create an {{domxref("OscillatorNode")}} and set its wave to the one we've created:
 
-<pre class="brush: js">function playSweep(time) {
+```js
+function playSweep(time) {
      const osc = audioCtx.createOscillator();
      osc.setPeriodicWave(wave);
      osc.frequency.value = 440;
      osc.connect(audioCtx.destination);
      osc.start(time);
      osc.stop(time + 1);
-}</pre>
+}
+```
 
-<p>We pass in a time parameter to the function here, which we'll use later to schedule the sweep.</p>
+We pass in a time parameter to the function here, which we'll use later to schedule the sweep.
 
-<h3 id="Controlling_amplitude">Controlling amplitude</h3>
+### Controlling amplitude
 
-<p>This is great, but wouldn't it be nice if we had an amplitude envelope to go with it? Let's create a simple one so we get used to the methods we need to create an envelope with the Web Audio API.</p>
+This is great, but wouldn't it be nice if we had an amplitude envelope to go with it? Let's create a simple one so we get used to the methods we need to create an envelope with the Web Audio API.
 
-<p>Let's say our envelope has attack and release. We can allow the user to control these using <a href="/en-US/docs/Web/HTML/Element/input/range">range inputs</a> on the interface:</p>
+Let's say our envelope has attack and release. We can allow the user to control these using [range inputs](/en-US/docs/Web/HTML/Element/input/range) on the interface:
 
-<pre class="brush: html">&lt;label for="attack"&gt;Attack&lt;/label&gt;
-&lt;input name="attack" id="attack" type="range" min="0" max="1" value="0.2" step="0.1" /&gt;
+```html
+<label for="attack">Attack</label>
+<input name="attack" id="attack" type="range" min="0" max="1" value="0.2" step="0.1" />
 
-&lt;label for="release"&gt;Release&lt;/label&gt;
-&lt;input name="release" id="release" type="range" min="0" max="1" value="0.5" step="0.1" /&gt;</pre>
+<label for="release">Release</label>
+<input name="release" id="release" type="range" min="0" max="1" value="0.5" step="0.1" />
+```
 
-<p>Now we can create some variables over in JavaScript and have them change when the input values are updated:</p>
+Now we can create some variables over in JavaScript and have them change when the input values are updated:
 
-<pre class="brush: js">let attackTime = 0.2;
+```js
+let attackTime = 0.2;
 const attackControl = document.querySelector('#attack');
 attackControl.addEventListener('input', function() {
     attackTime = Number(this.value);
@@ -133,17 +146,19 @@ let releaseTime = 0.5;
 const releaseControl = document.querySelector('#release');
 releaseControl.addEventListener('input', function() {
     releaseTime = Number(this.value);
-}, false);</pre>
+}, false);
+```
 
-<h3 id="The_final_playSweep_function">The final playSweep() function</h3>
+### The final playSweep() function
 
-<p>Now we can expand our <code>playSweep()</code> function. We need to add a {{domxref("GainNode")}} and connect that through our audio graph to actually apply amplitude variations to our sound. The gain node has one property: <code>gain</code>, which is of type {{domxref("AudioParam")}}.</p>
+Now we can expand our `playSweep()` function. We need to add a {{domxref("GainNode")}} and connect that through our audio graph to actually apply amplitude variations to our sound. The gain node has one property: `gain`, which is of type {{domxref("AudioParam")}}.
 
-<p>This is really useful — now we can start to harness the power of the audio param methods on the gain value. We can set a value at a certain time, or we can change it <em>over</em> time with methods such as {{domxref("AudioParam.linearRampToValueAtTime")}}.</p>
+This is really useful — now we can start to harness the power of the audio param methods on the gain value. We can set a value at a certain time, or we can change it _over_ time with methods such as {{domxref("AudioParam.linearRampToValueAtTime")}}.
 
-<p>For our attack and release, we'll use the <code>linearRampToValueAtTime</code> method as mentioned above. It takes two parameters — the value you want to set the parameter you are changing to (in this case the gain) and when you want to do this. In our case <em>when</em> is controlled by our inputs. So in the example below the gain is being increased to 1, at a linear rate, over the time the attack range input has been set to. Similarly, for our release, the gain is being set to 0, at a linear rate, over the time the release input has been set to.</p>
+For our attack and release, we'll use the `linearRampToValueAtTime` method as mentioned above. It takes two parameters — the value you want to set the parameter you are changing to (in this case the gain) and when you want to do this. In our case *when* is controlled by our inputs. So in the example below the gain is being increased to 1, at a linear rate, over the time the attack range input has been set to. Similarly, for our release, the gain is being set to 0, at a linear rate, over the time the release input has been set to.
 
-<pre class="brush: js">let sweepLength = 2;
+```js
+let sweepLength = 2;
 function playSweep(time) {
     let osc = audioCtx.createOscillator();
     osc.setPeriodicWave(wave);
@@ -160,59 +175,69 @@ function playSweep(time) {
     osc.connect(sweepEnv).connect(audioCtx.destination);
     osc.start(time);
     osc.stop(time + sweepLength);
-}</pre>
+}
+```
 
-<h2 id="The_pulse_—_low_frequency_oscillator_modulation">The "pulse" — low frequency oscillator modulation</h2>
+## The "pulse" — low frequency oscillator modulation
 
-<p>Great, now we've got our sweep! Let's move on and take a look at that nice pulse sound. We can achieve this with a basic oscillator, modulated with a second oscillator.</p>
+Great, now we've got our sweep! Let's move on and take a look at that nice pulse sound. We can achieve this with a basic oscillator, modulated with a second oscillator.
 
-<h3 id="Initial_oscillator">Initial oscillator</h3>
+### Initial oscillator
 
-<p>We'll set up our first {{domxref("OscillatorNode")}} the same way as our sweep sound, except we won't use a wavetable to set a bespoke wave — we'll just use the default <code>sine</code> wave:</p>
+We'll set up our first {{domxref("OscillatorNode")}} the same way as our sweep sound, except we won't use a wavetable to set a bespoke wave — we'll just use the default `sine` wave:
 
-<pre class="brush: js">const osc = audioCtx.createOscillator();
+```js
+const osc = audioCtx.createOscillator();
 osc.type = 'sine';
-osc.frequency.value = 880;</pre>
+osc.frequency.value = 880;
+```
 
-<p>Now we're going to create a {{domxref("GainNode")}}, as it's the <code>gain</code> value that we will oscillate with our second, low frequency oscillator:</p>
+Now we're going to create a {{domxref("GainNode")}}, as it's the `gain` value that we will oscillate with our second, low frequency oscillator:
 
-<pre class="brush: js">const amp = audioCtx.createGain();
-amp.gain.setValueAtTime(1, audioCtx.currentTime);</pre>
+```js
+const amp = audioCtx.createGain();
+amp.gain.setValueAtTime(1, audioCtx.currentTime);
+```
 
-<h3 id="Creating_the_second_low_frequency_oscillator">Creating the second, low frequency, oscillator</h3>
+### Creating the second, low frequency, oscillator
 
-<p>We'll now create a second — <code>square</code> — wave (or pulse) oscillator, to alter the amplification of our first sine wave:</p>
+We'll now create a second — `square` — wave (or pulse) oscillator, to alter the amplification of our first sine wave:
 
-<pre class="brush: js">const lfo = audioCtx.createOscillator();
+```js
+const lfo = audioCtx.createOscillator();
 lfo.type = 'square';
-lfo.frequency.value = 30;</pre>
+lfo.frequency.value = 30;
+```
 
-<h3 id="Connecting_the_graph">Connecting the graph</h3>
+### Connecting the graph
 
-<p>The key here is connecting the graph correctly, and also starting both oscillators:</p>
+The key here is connecting the graph correctly, and also starting both oscillators:
 
-<pre class="brush: js">lfo.connect(amp.gain);
+```js
+lfo.connect(amp.gain);
 osc.connect(amp).connect(audioCtx.destination);
 lfo.start();
 osc.start(time);
-osc.stop(time + pulseTime);</pre>
+osc.stop(time + pulseTime);
+```
 
-<div class="note">
-<p><strong>Note:</strong> We also don't have to use the default wave types for either of these oscillators we're creating — we could use a wavetable and the periodic wave method as we did before. There is a multitude of possibilities with just a minimum of nodes.</p>
-</div>
+> **Note:** We also don't have to use the default wave types for either of these oscillators we're creating — we could use a wavetable and the periodic wave method as we did before. There is a multitude of possibilities with just a minimum of nodes.
 
-<h3 id="Pulse_user_controls">Pulse user controls</h3>
+### Pulse user controls
 
-<p>For the UI controls, let's expose both frequencies of our oscillators, allowing them to be controlled via range inputs. One will change the tone and the other will change how the pulse modulates the first wave:</p>
+For the UI controls, let's expose both frequencies of our oscillators, allowing them to be controlled via range inputs. One will change the tone and the other will change how the pulse modulates the first wave:
 
-<pre class="brush: html">&lt;label for="hz"&gt;Hz&lt;/label&gt;
-&lt;input name="hz" id="hz" type="range" min="660" max="1320" value="880" step="1" /&gt;
-&lt;label for="lfo"&gt;LFO&lt;/label&gt;
-&lt;input name="lfo" id="lfo" type="range" min="20" max="40" value="30" step="1" /&gt;</pre>
+```html
+<label for="hz">Hz</label>
+<input name="hz" id="hz" type="range" min="660" max="1320" value="880" step="1" />
+<label for="lfo">LFO</label>
+<input name="lfo" id="lfo" type="range" min="20" max="40" value="30" step="1" />
+```
 
-<p>As before, we'll vary the parameters when the range input values are changed by the user.</p>
+As before, we'll vary the parameters when the range input values are changed by the user.
 
-<pre class="brush: js">let pulseHz = 880;
+```js
+let pulseHz = 880;
 const hzControl = document.querySelector('#hz');
 hzControl.addEventListener('input', function() {
     pulseHz = Number(this.value);
@@ -222,13 +247,15 @@ let lfoHz = 30;
 const lfoControl = document.querySelector('#lfo');
 lfoControl.addEventListener('input', function() {
     lfoHz = Number(this.value);
-}, false);</pre>
+}, false);
+```
 
-<h3 id="The_final_playPulse_function">The final playPulse() function</h3>
+### The final playPulse() function
 
-<p>Here's the entire <code>playPulse()</code> function:</p>
+Here's the entire `playPulse()` function:
 
-<pre class="brush: js">let pulseTime = 1;
+```js
+let pulseTime = 1;
 function playPulse(time) {
     let osc = audioCtx.createOscillator();
     osc.type = 'sine';
@@ -246,77 +273,86 @@ function playPulse(time) {
     lfo.start();
     osc.start(time);
     osc.stop(time + pulseTime);
-}</pre>
+}
+```
 
-<h2 id="The_noise_—_random_noise_buffer_with_biquad_filter">The "noise" — random noise buffer with biquad filter</h2>
+## The "noise" — random noise buffer with biquad filter
 
-<p>Now we need to make some noise! All modems have noise. Noise is just random numbers when it comes to audio data, so is, therefore, a relatively straightforward thing to create with code.</p>
+Now we need to make some noise! All modems have noise. Noise is just random numbers when it comes to audio data, so is, therefore, a relatively straightforward thing to create with code.
 
-<h3 id="Creating_an_audio_buffer">Creating an audio buffer</h3>
+### Creating an audio buffer
 
-<p>We need to create an empty container to put these numbers into, however, one that the Web Audio API understands. This is where {{domxref("AudioBuffer")}} objects come in. You can fetch a file and decode it into a buffer (we'll get to that later on in the tutorial), or you can create an empty buffer and fill it with your own data.</p>
+We need to create an empty container to put these numbers into, however, one that the Web Audio API understands. This is where {{domxref("AudioBuffer")}} objects come in. You can fetch a file and decode it into a buffer (we'll get to that later on in the tutorial), or you can create an empty buffer and fill it with your own data.
 
-<p>For noise, let's do the latter. We first need to calculate the size of our buffer, to create it. We can use the {{domxref("BaseAudioContext.sampleRate")}} property for this:</p>
+For noise, let's do the latter. We first need to calculate the size of our buffer, to create it. We can use the {{domxref("BaseAudioContext.sampleRate")}} property for this:
 
-<pre class="brush: js">const bufferSize = audioCtx.sampleRate * noiseLength;
-const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);</pre>
+```js
+const bufferSize = audioCtx.sampleRate * noiseLength;
+const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+```
 
-<p>Now we can fill it with random numbers between -1 and 1:</p>
+Now we can fill it with random numbers between -1 and 1:
 
-<pre class="brush: js">let data = buffer.getChannelData(0); // get data
+```js
+let data = buffer.getChannelData(0); // get data
 
 // fill the buffer with noise
-for (let i = 0; i &lt; bufferSize; i++) {
+for (let i = 0; i < bufferSize; i++) {
     data[i] = Math.random() * 2 - 1;
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Note:</strong> Why -1 to 1? When outputting sound to a file or speakers we need to have a number to represent 0db full scale — the numerical limit of the fixed point media or DAC. In floating point audio, 1 is a convenient number to map to "full scale" for mathematical operations on signals, so oscillators, noise generators and other sound sources typically output bipolar signals in the range -1 to 1. A browser will clamp values outside this range.</p>
-</div>
+> **Note:** Why -1 to 1? When outputting sound to a file or speakers we need to have a number to represent 0db full scale — the numerical limit of the fixed point media or DAC. In floating point audio, 1 is a convenient number to map to "full scale" for mathematical operations on signals, so oscillators, noise generators and other sound sources typically output bipolar signals in the range -1 to 1. A browser will clamp values outside this range.
 
-<h3 id="Creating_a_buffer_source">Creating a buffer source</h3>
+### Creating a buffer source
 
-<p>Now we have the audio buffer and have filled it with data, we need a node to add to our graph that can use the buffer as a source. We'll create a {{domxref("AudioBufferSourceNode")}} for this, and pass in the data we've created:</p>
+Now we have the audio buffer and have filled it with data, we need a node to add to our graph that can use the buffer as a source. We'll create a {{domxref("AudioBufferSourceNode")}} for this, and pass in the data we've created:
 
-<pre class="brush: js">let noise = audioCtx.createBufferSource();
-noise.buffer = buffer;</pre>
+```js
+let noise = audioCtx.createBufferSource();
+noise.buffer = buffer;
+```
 
-<p>If we connect this through our audio graph and play it —</p>
+If we connect this through our audio graph and play it —
 
-<pre class="brush: js">noise.connect(audioCtx.destination);
-noise.start();</pre>
+```js
+noise.connect(audioCtx.destination);
+noise.start();
+```
 
-<p>you'll notice that it's pretty hissy or tinny. We've created white noise, that's how it should be. Our values are running from -1 to 1, which means we have peaks of all frequencies, which in turn is actually quite dramatic and piercing. We <em>could</em> modify the function to run values from 0.5 to -0.5 or similar to take the peaks off and reduce the discomfort, however, where's the fun in that? Let's route the noise we've created through a filter.</p>
+you'll notice that it's pretty hissy or tinny. We've created white noise, that's how it should be. Our values are running from -1 to 1, which means we have peaks of all frequencies, which in turn is actually quite dramatic and piercing. We _could_ modify the function to run values from 0.5 to -0.5 or similar to take the peaks off and reduce the discomfort, however, where's the fun in that? Let's route the noise we've created through a filter.
 
-<h3 id="Adding_a_biquad_filter_to_the_mix">Adding a biquad filter to the mix</h3>
+### Adding a biquad filter to the mix
 
-<p>We want something in the range of pink or brown noise. We want to cut off those high frequencies and possibly some of the lower ones. Let's pick a bandpass biquad filter for the job.</p>
+We want something in the range of pink or brown noise. We want to cut off those high frequencies and possibly some of the lower ones. Let's pick a bandpass biquad filter for the job.
 
-<div class="note">
-<p><strong>Note:</strong> The Web Audio API comes with two types of filter nodes: {{domxref("BiquadFilterNode")}} and {{domxref("IIRFilterNode")}}. For the most part a biquad filter will be good enough — it comes with different types such as lowpass, highpass, and bandpass. If you're looking to do something more bespoke, however, the IIR filter might be a good option — see <a href="/en-US/docs/Web/API/Web_Audio_API/Using_IIR_filters">Using IIR filters</a> for more information.</p>
-</div>
+> **Note:** The Web Audio API comes with two types of filter nodes: {{domxref("BiquadFilterNode")}} and {{domxref("IIRFilterNode")}}. For the most part a biquad filter will be good enough — it comes with different types such as lowpass, highpass, and bandpass. If you're looking to do something more bespoke, however, the IIR filter might be a good option — see [Using IIR filters](/en-US/docs/Web/API/Web_Audio_API/Using_IIR_filters) for more information.
 
-<p>Wiring this up is the same as we've seen before. We create the {{domxref("BiquadFilterNode")}}, configure the properties we want for it and connect it through our graph. Different types of biquad filters have different properties — for instance setting the frequency on a bandpass type adjusts the middle frequency, however on a lowpass it would set the top frequency.</p>
+Wiring this up is the same as we've seen before. We create the {{domxref("BiquadFilterNode")}}, configure the properties we want for it and connect it through our graph. Different types of biquad filters have different properties — for instance setting the frequency on a bandpass type adjusts the middle frequency, however on a lowpass it would set the top frequency.
 
-<pre class="brush: js">let bandpass = audioCtx.createBiquadFilter();
+```js
+let bandpass = audioCtx.createBiquadFilter();
 bandpass.type = 'bandpass';
 bandpass.frequency.value = 1000;
 
 // connect our graph
-noise.connect(bandpass).connect(audioCtx.destination);</pre>
+noise.connect(bandpass).connect(audioCtx.destination);
+```
 
-<h3 id="Noise_user_controls">Noise user controls</h3>
+### Noise user controls
 
-<p>On the UI we'll expose the noise duration and the frequency we want to band, allowing the user to adjust them via range inputs and event handlers just like in previous sections:</p>
+On the UI we'll expose the noise duration and the frequency we want to band, allowing the user to adjust them via range inputs and event handlers just like in previous sections:
 
-<pre class="brush: html">&lt;label for="duration"&gt;Duration&lt;/label&gt;
-&lt;input name="duration" id="duration" type="range" min="0" max="2" value="1" step="0.1" /&gt;
+```html
+<label for="duration">Duration</label>
+<input name="duration" id="duration" type="range" min="0" max="2" value="1" step="0.1" />
 
-&lt;label for="band"&gt;Band&lt;/label&gt;
-&lt;input name="band" id="band" type="range" min="400" max="1200" value="1000" step="5" /&gt;
-</pre>
+<label for="band">Band</label>
+<input name="band" id="band" type="range" min="400" max="1200" value="1000" step="5" />
+```
 
-<pre class="brush: js">let noiseDuration = 1;
+```js
+let noiseDuration = 1;
 const durControl = document.querySelector('#duration');
 durControl.addEventListener('input', function() {
     noiseDuration = Number(this.value);
@@ -326,19 +362,21 @@ let bandHz = 1000;
 const bandControl = document.querySelector('#band');
 bandControl.addEventListener('input', function() {
     bandHz = Number(this.value);
-}, false);</pre>
+}, false);
+```
 
-<h3 id="The_final_playNoise_function">The final playNoise() function</h3>
+### The final playNoise() function
 
-<p>Here's the entire <code>playNoise()</code> function:</p>
+Here's the entire `playNoise()` function:
 
-<pre class="brush: js">function playNoise(time) {
+```js
+function playNoise(time) {
     const bufferSize = audioCtx.sampleRate * noiseDuration; // set the time of the note
     const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate); // create an empty buffer
     let data = buffer.getChannelData(0); // get data
 
     // fill the buffer with noise
-    for (let i = 0; i &lt; bufferSize; i++) {
+    for (let i = 0; i < bufferSize; i++) {
         data[i] = Math.random() * 2 - 1;
     }
 
@@ -353,119 +391,131 @@ bandControl.addEventListener('input', function() {
     // connect our graph
     noise.connect(bandpass).connect(audioCtx.destination);
     noise.start(time);
-}</pre>
+}
+```
 
-<h2 id="Dial_up_—_loading_a_sound_sample">"Dial up" — loading a sound sample</h2>
+## "Dial up" — loading a sound sample
 
-<p>It's straightforward enough to emulate phone dial (DTMF) sounds, by playing a couple of oscillators together using the methods we've already looked at, however, in this section, we'll load in a sample file instead so we can take a look at what's involved.</p>
+It's straightforward enough to emulate phone dial (DTMF) sounds, by playing a couple of oscillators together using the methods we've already looked at, however, in this section, we'll load in a sample file instead so we can take a look at what's involved.
 
-<h3 id="Loading_the_sample">Loading the sample</h3>
+### Loading the sample
 
-<p>We want to make sure our file has loaded and been decoded into a buffer before we use it, so let's create an <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/async_function">async</a></code> function to allow us to do this:</p>
+We want to make sure our file has loaded and been decoded into a buffer before we use it, so let's create an [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) function to allow us to do this:
 
-<pre class="brush: js">async function getFile(audioContext, filepath) {
+```js
+async function getFile(audioContext, filepath) {
   const response = await fetch(filepath);
   const arrayBuffer = await response.arrayBuffer();
   const audioBuffer = await audioContext.decodeAudioData(arrayBuffer);
   return audioBuffer;
-}</pre>
+}
+```
 
-<p>We can then use the <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/await">await</a></code> operator when calling this function, which ensures that we can only run subsequent code when it has finished executing.</p>
+We can then use the [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) operator when calling this function, which ensures that we can only run subsequent code when it has finished executing.
 
-<p>Let's create another <code>async</code> function to set up the sample — we can combine the two async functions in a nice promise pattern to perform further actions when this file is loaded and buffered:</p>
+Let's create another `async` function to set up the sample — we can combine the two async functions in a nice promise pattern to perform further actions when this file is loaded and buffered:
 
-<pre class="brush: js">async function setupSample() {
+```js
+async function setupSample() {
     const filePath = 'dtmf.mp3';
     const sample = await getFile(audioCtx, filePath);
     return sample;
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Note:</strong> You can easily modify the above function to take an array of files and loop over them to load more than one sample. This would be very handy for more complex instruments, or gaming.</p>
-</div>
+> **Note:** You can easily modify the above function to take an array of files and loop over them to load more than one sample. This would be very handy for more complex instruments, or gaming.
 
-<p>We can now use <code>setupSample()</code> like so:</p>
+We can now use `setupSample()` like so:
 
-<pre class="brush: js">setupSample()
-    .then((sample) =&gt; {
+```js
+setupSample()
+    .then((sample) => {
         // sample is our buffered file
         // ...
-});</pre>
+});
+```
 
-<p>When the sample is ready to play, the program sets up the UI so it is ready to go.</p>
+When the sample is ready to play, the program sets up the UI so it is ready to go.
 
-<h3 id="Playing_the_sample">Playing the sample</h3>
+### Playing the sample
 
-<p>Let's create a <code>playSample()</code> function in a similar manner to how we did with the other sounds. This time it will create an {{domxref("AudioBufferSourceNode")}}, and put the buffer data we've fetched and decoded into it, and play it:</p>
+Let's create a `playSample()` function in a similar manner to how we did with the other sounds. This time it will create an {{domxref("AudioBufferSourceNode")}}, and put the buffer data we've fetched and decoded into it, and play it:
 
-<pre class="brush: js">function playSample(audioContext, audioBuffer, time) {
+```js
+function playSample(audioContext, audioBuffer, time) {
     const sampleSource = audioContext.createBufferSource();
     sampleSource.buffer = audioBuffer;
     sampleSource.connect(audioContext.destination)
     sampleSource.start(time);
     return sampleSource;
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Note:</strong> We can call <code>stop()</code> on an {{domxref("AudioBufferSourceNode")}}, however, this will happen automatically when the sample has finished playing.</p>
-</div>
+> **Note:** We can call `stop()` on an {{domxref("AudioBufferSourceNode")}}, however, this will happen automatically when the sample has finished playing.
 
-<h3 id="Dial-up_user_controls">Dial-up user controls</h3>
+### Dial-up user controls
 
-<p>The {{domxref("AudioBufferSourceNode")}} comes with a <code><a href="/en-US/docs/Web/API/AudioBufferSourceNode/playbackRate">playbackRate</a></code> property. Let's expose that to our UI, so we can speed up and slow down our sample. We'll do that in the same sort of way as before:</p>
+The {{domxref("AudioBufferSourceNode")}} comes with a [`playbackRate`](/en-US/docs/Web/API/AudioBufferSourceNode/playbackRate) property. Let's expose that to our UI, so we can speed up and slow down our sample. We'll do that in the same sort of way as before:
 
-<pre class="brush: html">&lt;label for="rate"&gt;Rate&lt;/label&gt;
-&lt;input name="rate" id="rate" type="range" min="0.1" max="2" value="1" step="0.1" /&gt;</pre>
+```html
+<label for="rate">Rate</label>
+<input name="rate" id="rate" type="range" min="0.1" max="2" value="1" step="0.1" />
+```
 
-<pre class="brush: js">let playbackRate = 1;
+```js
+let playbackRate = 1;
 const rateControl = document.querySelector('#rate');
 rateControl.addEventListener('input', function() {
     playbackRate = Number(this.value);
-}, false);</pre>
+}, false);
+```
 
-<h3 id="The_final_playSample_function">The final playSample() function</h3>
+### The final playSample() function
 
-<p>We'll then add a line to update the <code>playbackRate</code> property to our <code>playSample()</code> function. The final version looks like this:</p>
+We'll then add a line to update the `playbackRate` property to our `playSample()` function. The final version looks like this:
 
-<pre class="brush: js">function playSample(audioContext, audioBuffer, time) {
+```js
+function playSample(audioContext, audioBuffer, time) {
     const sampleSource = audioContext.createBufferSource();
     sampleSource.buffer = audioBuffer;
     sampleSource.playbackRate.value = playbackRate;
     sampleSource.connect(audioContext.destination)
     sampleSource.start(time);
     return sampleSource;
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Note:</strong> The sound file was <a href="http://soundbible.com/1573-DTMF-Tones.html">sourced from soundbible.com</a>.</p>
-</div>
+> **Note:** The sound file was [sourced from soundbible.com](http://soundbible.com/1573-DTMF-Tones.html).
 
-<h2 id="Playing_the_audio_in_time">Playing the audio in time</h2>
+## Playing the audio in time
 
-<p>A common problem with digital audio applications is getting the sounds to play in time so that the beat remains consistent, and things do not slip out of time.</p>
+A common problem with digital audio applications is getting the sounds to play in time so that the beat remains consistent, and things do not slip out of time.
 
-<p>We could schedule our voices to play within a <code>for</code> loop, however the biggest problem with this is updating whilst it is playing, and we've already implemented UI controls to do so. Also, it would be really nice to consider an instrument-wide BPM control. The best way to get our voices to play on the beat is to create a scheduling system, whereby we look ahead at when the notes are going to play and push them into a queue. We can start them at a precise time with the currentTime property and also take into account any changes.</p>
+We could schedule our voices to play within a `for` loop, however the biggest problem with this is updating whilst it is playing, and we've already implemented UI controls to do so. Also, it would be really nice to consider an instrument-wide BPM control. The best way to get our voices to play on the beat is to create a scheduling system, whereby we look ahead at when the notes are going to play and push them into a queue. We can start them at a precise time with the currentTime property and also take into account any changes.
 
-<div class="note">
-<p><strong>Note:</strong> This is a much stripped down version of <a href="https://www.html5rocks.com/en/tutorials/audio/scheduling/">Chris Wilson's A Tale Of Two Clocks</a> article, which goes into this method in much more detail. There's no point repeating it all here, but it's highly recommended to read this article and use this method. Much of the code here is taken from his <a href="https://github.com/cwilso/metronome/blob/master/js/metronome.js">metronome example</a>, which he references in the article.</p>
-</div>
+> **Note:** This is a much stripped down version of [Chris Wilson's A Tale Of Two Clocks](https://www.html5rocks.com/en/tutorials/audio/scheduling/) article, which goes into this method in much more detail. There's no point repeating it all here, but it's highly recommended to read this article and use this method. Much of the code here is taken from his [metronome example](https://github.com/cwilso/metronome/blob/master/js/metronome.js), which he references in the article.
 
-<p>Let's start by setting up our default BPM (beats per minute), which will also be user-controllable via — you guessed it — another range input.</p>
+Let's start by setting up our default BPM (beats per minute), which will also be user-controllable via — you guessed it — another range input.
 
-<pre class="brush: js">let tempo = 60.0;
+```js
+let tempo = 60.0;
 const bpmControl = document.querySelector('#bpm');
 bpmControl.addEventListener('input', function() {
     tempo = Number(this.value);
-}, false);</pre>
+}, false);
+```
 
-<p>Then we'll create variables to define how far ahead we want to look, and how far ahead we want to schedule:</p>
+Then we'll create variables to define how far ahead we want to look, and how far ahead we want to schedule:
 
-<pre class="brush: js">const lookahead = 25.0; // How frequently to call scheduling function (in milliseconds)
-const scheduleAheadTime = 0.1; // How far ahead to schedule audio (sec)</pre>
+```js
+const lookahead = 25.0; // How frequently to call scheduling function (in milliseconds)
+const scheduleAheadTime = 0.1; // How far ahead to schedule audio (sec)
+```
 
-<p>Let's create a function that moves the note forwards by one beat, and loops back to the first when it reaches the 4th (last) one:</p>
+Let's create a function that moves the note forwards by one beat, and loops back to the first when it reaches the 4th (last) one:
 
-<pre class="brush: js">let currentNote = 0;
+```js
+let currentNote = 0;
 let nextNoteTime = 0.0; // when the next note is due.
 
 function nextNote() {
@@ -478,11 +528,13 @@ function nextNote() {
     if (currentNote === 4) {
             currentNote = 0;
     }
-}</pre>
+}
+```
 
-<p>We want to create a reference queue for the notes that are to be played, and the functionality to play them using the functions we've previously created:</p>
+We want to create a reference queue for the notes that are to be played, and the functionality to play them using the functions we've previously created:
 
-<pre class="brush: js">const notesInQueue = [];
+```js
+const notesInQueue = [];
 
 function scheduleNote(beatNumber, time) {
 
@@ -501,30 +553,34 @@ function scheduleNote(beatNumber, time) {
     if (pads[3].querySelectorAll('button')[beatNumber].getAttribute('aria-checked') === 'true') {
         playSample(audioCtx, dtmf, time);
     }
-}</pre>
+}
+```
 
-<p>Here we look at the current time and compare it to the time for the next note; when the two match it will call the previous two functions.</p>
+Here we look at the current time and compare it to the time for the next note; when the two match it will call the previous two functions.
 
-<p>{{domxref("AudioContext")}} object instances have a <code><a href="/en-US/docs/Web/API/BaseAudioContext/currentTime">currentTime</a></code> property, which allows us to retrieve the number of seconds after we first created the context. This is what we shall use for timing within our step sequencer — It's extremely accurate, returning a float value accurate to about 15 decimal places.</p>
+{{domxref("AudioContext")}} object instances have a [`currentTime`](/en-US/docs/Web/API/BaseAudioContext/currentTime) property, which allows us to retrieve the number of seconds after we first created the context. This is what we shall use for timing within our step sequencer — It's extremely accurate, returning a float value accurate to about 15 decimal places.
 
-<pre class="brush: js">function scheduler() {
+```js
+function scheduler() {
     // while there are notes that will need to play before the next interval, schedule them and advance the pointer.
-    while (nextNoteTime &lt; audioCtx.currentTime + scheduleAheadTime ) {
+    while (nextNoteTime < audioCtx.currentTime + scheduleAheadTime ) {
         scheduleNote(currentNote, nextNoteTime);
         nextNote();
     }
     timerID = window.setTimeout(scheduler, lookahead);
-}</pre>
+}
+```
 
-<p>We also need a draw function to update the UI, so we can see when the beat progresses.</p>
+We also need a draw function to update the UI, so we can see when the beat progresses.
 
-<pre class="brush: js">let lastNoteDrawn = 3;
+```js
+let lastNoteDrawn = 3;
 
 function draw() {
     let drawNote = lastNoteDrawn;
     let currentTime = audioCtx.currentTime;
 
-    while (notesInQueue.length &amp;&amp; notesInQueue[0].time &lt; currentTime) {
+    while (notesInQueue.length && notesInQueue[0].time < currentTime) {
         drawNote = notesInQueue[0].note;
         notesInQueue.splice(0,1);   // remove note from queue
     }
@@ -540,18 +596,20 @@ function draw() {
     }
     // set up to draw again
     requestAnimationFrame(draw);
-}</pre>
+}
+```
 
-<h2 id="Putting_it_all_together">Putting it all together</h2>
+## Putting it all together
 
-<p>Now all that's left to do is make sure we've loaded the sample before we are able to <em>play</em> the instrument. We'll add a loading screen that disappears when the file has been fetched and decoded, then we can allow the scheduler to start using the play button click event.</p>
+Now all that's left to do is make sure we've loaded the sample before we are able to _play_ the instrument. We'll add a loading screen that disappears when the file has been fetched and decoded, then we can allow the scheduler to start using the play button click event.
 
-<pre class="brush: js">// when the sample has loaded allow play
+```js
+// when the sample has loaded allow play
 let loadingEl = document.querySelector('.loading');
 const playButton = document.querySelector('[data-playing]');
 let isPlaying = false;
 setupSample()
-    .then((sample) =&gt; {
+    .then((sample) => {
         loadingEl.style.display = 'none'; // remove loading screen
 
         dtmf = sample; // to be used in our playSample function
@@ -579,8 +637,9 @@ setupSample()
 
             }
         })
-    });</pre>
+    });
+```
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>We've now got an instrument inside our browser! Keep playing and experimenting — you can expand on any of these techniques to create something much more elaborate.</p>
+We've now got an instrument inside our browser! Keep playing and experimenting — you can expand on any of these techniques to create something much more elaborate.

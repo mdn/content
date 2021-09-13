@@ -11,36 +11,39 @@ tags:
   - onresourcetimingbufferfull
 browser-compat: api.Performance.resourcetimingbufferfull_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code>resourcetimingbufferfull</code> event is fired when the browser's <a href="/en-US/docs/Web/API/Performance/setResourceTimingBufferSize">resource timing buffer</a> is full.</p>
+The `resourcetimingbufferfull` event is fired when the browser's [resource timing buffer](/en-US/docs/Web/API/Performance/setResourceTimingBufferSize) is full.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("Performance.onresourcetimingbufferfull", "onresourcetimingbufferfull")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{domxref("Performance.onresourcetimingbufferfull", "onresourcetimingbufferfull")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example sets a callback function on the <code>onresourcetimingbufferfull</code> property.</p>
+The following example sets a callback function on the `onresourcetimingbufferfull` property.
 
-<pre class="brush: js">function buffer_full(event) {
+```js
+function buffer_full(event) {
   console.log("WARNING: Resource Timing Buffer is FULL!");
   performance.setResourceTimingBufferSize(200);
 }
@@ -48,24 +51,24 @@ function init() {
   // Set a callback if the resource buffer becomes filled
   performance.onresourcetimingbufferfull = buffer_full;
 }
-&lt;body onload="init()"&gt;</pre>
+<body onload="init()">
+```
 
-<p>Note that you could also set up the handler using the addEventListener() function:</p>
+Note that you could also set up the handler using the addEventListener() function:
 
-<pre class="brush: js">performance.addEventListener('resourcetimingbufferfull', buffer_full);
-</pre>
+```js
+performance.addEventListener('resourcetimingbufferfull', buffer_full);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("Performance.clearResourceTimings","Performance.clearResourceTimings()")}}</li>
- <li>{{domxref("Performance.setResourceTimingBufferSize","Performance.setResourceTimingBufferSize()")}}</li>
-</ul>
+- {{domxref("Performance.clearResourceTimings","Performance.clearResourceTimings()")}}
+- {{domxref("Performance.setResourceTimingBufferSize","Performance.setResourceTimingBufferSize()")}}

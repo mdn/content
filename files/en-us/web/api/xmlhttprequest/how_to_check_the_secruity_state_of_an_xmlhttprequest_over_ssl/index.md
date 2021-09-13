@@ -3,18 +3,19 @@ title: How to check the security state of an XMLHTTPRequest over SSL
 slug: >-
   Web/API/XMLHttpRequest/How_to_check_the_secruity_state_of_an_XMLHTTPRequest_over_SSL
 ---
-<p>Here is a an example Javascript function that prints the security details of an <a href="/en-US/docs/XMLHttpRequest">XMLHTTPRequest</a> sent over SSL. The function is passed the channel property of an XMLHTTPRequest to extract the following information:</p>
-<ul>
- <li>Was the connection secure?</li>
- <li>Was the used SSL certificate valid and what are its details (owner, expiration, certificate authority, etc.)?</li>
-</ul>
-<p>Notes:</p>
-<ol>
- <li>This code requires elevated privileges to run; you can only call it from a browser extension or from a XULRunner application.</li>
- <li>The channel property becomes available only after the request is sent and the connection was established, that is, on readyState <code>LOADED, </code><code>INTERACTIVE</code> or <code>COMPLETED.</code></li>
- <li>By setting the mozBackgroundRequest property of the request object and modifying the example appropriately, you can create your own alert dialog to handle SSL exceptions in your Firefox extension or XULRunner application.</li>
-</ol>
-<pre class="brush: js">// Adapted from the patch for mozTCPSocket error reporting (bug 861196).
+Here is a an example Javascript function that prints the security details of an [XMLHTTPRequest](/en-US/docs/XMLHttpRequest) sent over SSL. The function is passed the channel property of an XMLHTTPRequest to extract the following information:
+
+- Was the connection secure?
+- Was the used SSL certificate valid and what are its details (owner, expiration, certificate authority, etc.)?
+
+Notes:
+
+1.  This code requires elevated privileges to run; you can only call it from a browser extension or from a XULRunner application.
+2.  The channel property becomes available only after the request is sent and the connection was established, that is, on readyState ` LOADED, ``INTERACTIVE` or `COMPLETED.`
+3.  By setting the mozBackgroundRequest property of the request object and modifying the example appropriately, you can create your own alert dialog to handle SSL exceptions in your Firefox extension or XULRunner application.
+
+```js
+// Adapted from the patch for mozTCPSocket error reporting (bug 861196).
 
 const {Cc,Ci} = require("chrome");
 
@@ -22,7 +23,7 @@ function createTCPErrorFromFailedXHR(xhr) {
   let status = xhr.channel.QueryInterface(Ci.nsIRequest).status;
 
   let errType;
-  if ((status &amp; 0xff0000) === 0x5a0000) { // Security module
+  if ((status & 0xff0000) === 0x5a0000) { // Security module
     const nsINSSErrorsService = Ci.nsINSSErrorsService;
     let nssErrorsService = Cc['@mozilla.org/nss_errors_service;1'].getService(nsINSSErrorsService);
     let errorClass;
@@ -43,10 +44,10 @@ function createTCPErrorFromFailedXHR(xhr) {
     }
 
     // NSS_SEC errors (happen below the base value because of negative vals)
-    if ((status &amp; 0xffff) &lt; Math.abs(nsINSSErrorsService.NSS_SEC_ERROR_BASE)) {
+    if ((status & 0xffff) < Math.abs(nsINSSErrorsService.NSS_SEC_ERROR_BASE)) {
       // The bases are actually negative, so in our positive numeric space, we
       // need to subtract the base off our value.
-      let nssErr = Math.abs(nsINSSErrorsService.NSS_SEC_ERROR_BASE) - (status &amp; 0xffff);
+      let nssErr = Math.abs(nsINSSErrorsService.NSS_SEC_ERROR_BASE) - (status & 0xffff);
 
       switch (nssErr) {
         case 11: // SEC_ERROR_EXPIRED_CERTIFICATE, sec(11)
@@ -77,7 +78,7 @@ function createTCPErrorFromFailedXHR(xhr) {
     } else {
   // Calculating the difference
 
-  let sslErr = Math.abs(nsINSSErrorsService.NSS_SSL_ERROR_BASE) - (status &amp; 0xffff);
+  let sslErr = Math.abs(nsINSSErrorsService.NSS_SSL_ERROR_BASE) - (status & 0xffff);
 
       switch (sslErr) {
         case 3: // SSL_ERROR_NO_CERTIFICATE, ssl(3)
@@ -158,13 +159,13 @@ function dumpSecurityInfo(xhr, error) {
       dump("\tSecurity state of connection: ");
 
       // Check security state flags
-      if ((secInfo.securityState &amp; Ci.nsIWebProgressListener.STATE_IS_SECURE)
+      if ((secInfo.securityState & Ci.nsIWebProgressListener.STATE_IS_SECURE)
            == Ci.nsIWebProgressListener.STATE_IS_SECURE) {
         dump("secure connection\n");
-      } else if ((secInfo.securityState &amp; Ci.nsIWebProgressListener.STATE_IS_INSECURE)
+      } else if ((secInfo.securityState & Ci.nsIWebProgressListener.STATE_IS_INSECURE)
                   == Ci.nsIWebProgressListener.STATE_IS_INSECURE) {
         dump("insecure connection\n");
-      } else if ((secInfo.securityState &amp; Ci.nsIWebProgressListener.STATE_IS_BROKEN)
+      } else if ((secInfo.securityState & Ci.nsIWebProgressListener.STATE_IS_BROKEN)
                   == Ci.nsIWebProgressListener.STATE_IS_BROKEN) {
         dump("unknown\n");
         dump("\tSecurity description: " + secInfo.shortSecurityDescription + "\n");
@@ -209,34 +210,42 @@ function test(url) {
 
   req.send();
 }
-</pre>
-<p>Then</p>
-<pre class="brush: js">test("https://addons.mozilla.org");
-</pre>
-<p>produced the following output in my console:</p>
-<pre>Connection status:
-        succeeded
-Security Info:
-        Security state: secure
-        Common name (CN) = addons.mozilla.org
-        Organisation = Mozilla Corporation
-        Issuer = VeriSign, Inc.
-        SHA1 fingerprint = F4:99:64:18:6B:7D:C8:FA:C0:0C:2E:A9:61:77:28:67:13:C4:97:7B
-        Valid from 7/14/2011 0:00:00 AM
-        Valid until 8/20/2013 23:59:59 PM
-</pre>
-<p>And here is the output of making an HTTPS request to a server that uses an expired certificate:</p>
-<pre class="brush: js">test("https://www.appliancetherapy.com/");
-</pre>
-<p>Note that the security state has become "insecure" now and there is an error name reported:</p>
-<pre>Connection status:
-        failed: SecurityExpiredCertificateError
-Security Info:
-        Security state: insecure
-        Common name (CN) = www.appliancetherapy.com
-        Organisation = Appliance Therapy Group (SELANE PRODUCTS, INC)
-        Issuer = VeriSign, Inc.
-        SHA1 fingerprint = F1:8C:38:96:0A:30:63:16:47:FA:6E:CD:7D:58:CC:AB:82:FB:A9:D0
-        Valid from 9/1/2010 0:00:00 AM
-        Valid until 9/1/2012 23:59:59 PM
-</pre>
+```
+
+Then
+
+```js
+test("https://addons.mozilla.org");
+```
+
+produced the following output in my console:
+
+    Connection status:
+            succeeded
+    Security Info:
+            Security state: secure
+            Common name (CN) = addons.mozilla.org
+            Organisation = Mozilla Corporation
+            Issuer = VeriSign, Inc.
+            SHA1 fingerprint = F4:99:64:18:6B:7D:C8:FA:C0:0C:2E:A9:61:77:28:67:13:C4:97:7B
+            Valid from 7/14/2011 0:00:00 AM
+            Valid until 8/20/2013 23:59:59 PM
+
+And here is the output of making an HTTPS request to a server that uses an expired certificate:
+
+```js
+test("https://www.appliancetherapy.com/");
+```
+
+Note that the security state has become "insecure" now and there is an error name reported:
+
+    Connection status:
+            failed: SecurityExpiredCertificateError
+    Security Info:
+            Security state: insecure
+            Common name (CN) = www.appliancetherapy.com
+            Organisation = Appliance Therapy Group (SELANE PRODUCTS, INC)
+            Issuer = VeriSign, Inc.
+            SHA1 fingerprint = F1:8C:38:96:0A:30:63:16:47:FA:6E:CD:7D:58:CC:AB:82:FB:A9:D0
+            Valid from 9/1/2010 0:00:00 AM
+            Valid until 9/1/2012 23:59:59 PM

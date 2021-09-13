@@ -11,67 +11,66 @@ browser-compat: api.InputDeviceInfo.getCapabilities
 ---
 {{DefaultAPISidebar("Media Capture and Streams")}}
 
-<p>The <strong><code>getCapabilities()</code></strong> method of the {{domxref("InputDeviceInfo")}} interface returns a <code>MediaTrackCapabilities</code> object describing the primary audio or video track of the device's {{domxref("MediaStream")}}.</p>
+The **`getCapabilities()`** method of the {{domxref("InputDeviceInfo")}} interface returns a `MediaTrackCapabilities` object describing the primary audio or video track of the device's {{domxref("MediaStream")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">InputDeviceInfo.getCapabilities();</pre>
+```js
+InputDeviceInfo.getCapabilities();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Returns">Return value</h3>
+### Return value
 
-<p>A <code>MediaTrackCapabilities</code> object containing the following members:</p>
+A `MediaTrackCapabilities` object containing the following members:
 
-<dl>
-  <dt><code>deviceId</code></dt>
-  <dd>A <a href="/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString"><code>ConstrainDOMString</code></a> object containing the device ID.</dd>
-  <dt><code>groudId</code></dt>
-  <dd>A <a href="/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString"><code>ConstrainDOMString</code></a> object containing a group ID.</dd>
-  <dt><code>autoGainControl</code>></dt>
-  <dd>A <a href="/en-US/docs/Web/API/MediaTrackConstraints#ConstrainBoolean"><code>ConstrainBoolean</code></a> object reporting if the source can do auto gain control.
-    If the feature can be controlled by a script the source will report both true and false as possible values.</dd>
-  <dt><code>channelCount</code></dt>
-  <dd>A <a href="/en-US/docs/Web/API/MediaTrackConstraints#ConstrainULong"><code>ConstrainULong</code></a> containing the channel count or range of channel counts.</dd>
-  <dt><code>echoCancellation</code></dt>
-  <dd>A <a href="/en-US/docs/Web/API/MediaTrackConstraints#ConstrainBoolean"><code>ConstrainBoolean</code></a> object reporting if the source can do echo cancellation.
-    If the feature can be controlled by a script the source will report both true and false as possible values.</dd>
-  <dt><code>latency</code></dt>
-  <dd>A <a href="/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDouble"><code>ConstrainDouble</code></a> containing the latency or range of latencies.</dd>
-  <dt><code>noiseSuppression</code></dt>
-  <dd>A <a href="/en-US/docs/Web/API/MediaTrackConstraints#ConstrainBoolean"><code>ConstrainBoolean</code></a> object reporting if the source can do noise suppression.
-    If the feature can be controlled by a script the source will report both true and false as possible values.</dd>
-  <dt><code>sampleRate</code></dt>
-  <dd>A <a href="/en-US/docs/Web/API/MediaTrackConstraints#ConstrainULong"><code>ConstrainULong</code></a> containing the sample rate or range of sample rates.</dd>
-  <dt><code>sampleSize</code></dt>
-  <dd>A <a href="/en-US/docs/Web/API/MediaTrackConstraints#ConstrainULong"><code>ConstrainULong</code></a> containing the sample size or range of sample sizes.</dd>
-  <dt><code>aspectRatio</code></dt>
-  <dd>A <a href="/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDouble"><code>ConstrainDouble</code></a> containing the video aspect ratio (width in pixels divided by height in pixels) or range of aspect ratios.</dd>
-  <dt><code>facingMode</code></dt>
-  <dd>A <a href="/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString"><code>ConstrainDOMString</code></a> object containing the camera facing mode. A camera may report multiple facings, for example "left" and "user".</dd>
-  <dt><code>frameRate</code></dt>
-  <dd>A <a href="/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDouble"><code>ConstrainDouble</code></a> containing the frame rate or range of frame rates which are acceptable.</dd>
-  <dt><code>height</code></dt>
-  <dd>A <a href="/en-US/docs/Web/API/MediaTrackConstraints#ConstrainULong"><code>ConstrainULong</code></a> containing the video height or range of heights in pixels.</dd>
-  <dt><code>width</code></dt>
-  <dd>A <a href="/en-US/docs/Web/API/MediaTrackConstraints#ConstrainULong"><code>ConstrainULong</code></a> containing the video width or range of widths in pixels.</dd>
-  <dt><code>resizeMode</code></dt>
-  <dd>A <a href="/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString"><code>ConstrainDOMString</code></a> object containing the mode or an array of modes the UA can use to derive the resolution of the video track.</dd>
-</dl>
+- `deviceId`
+  - : A [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString) object containing the device ID.
+- `groudId`
+  - : A [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString) object containing a group ID.
+- `autoGainControl`>
+  - : A [`ConstrainBoolean`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainBoolean) object reporting if the source can do auto gain control.
+    If the feature can be controlled by a script the source will report both true and false as possible values.
+- `channelCount`
+  - : A [`ConstrainULong`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainULong) containing the channel count or range of channel counts.
+- `echoCancellation`
+  - : A [`ConstrainBoolean`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainBoolean) object reporting if the source can do echo cancellation.
+    If the feature can be controlled by a script the source will report both true and false as possible values.
+- `latency`
+  - : A [`ConstrainDouble`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDouble) containing the latency or range of latencies.
+- `noiseSuppression`
+  - : A [`ConstrainBoolean`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainBoolean) object reporting if the source can do noise suppression.
+    If the feature can be controlled by a script the source will report both true and false as possible values.
+- `sampleRate`
+  - : A [`ConstrainULong`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainULong) containing the sample rate or range of sample rates.
+- `sampleSize`
+  - : A [`ConstrainULong`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainULong) containing the sample size or range of sample sizes.
+- `aspectRatio`
+  - : A [`ConstrainDouble`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDouble) containing the video aspect ratio (width in pixels divided by height in pixels) or range of aspect ratios.
+- `facingMode`
+  - : A [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString) object containing the camera facing mode. A camera may report multiple facings, for example "left" and "user".
+- `frameRate`
+  - : A [`ConstrainDouble`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDouble) containing the frame rate or range of frame rates which are acceptable.
+- `height`
+  - : A [`ConstrainULong`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainULong) containing the video height or range of heights in pixels.
+- `width`
+  - : A [`ConstrainULong`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainULong) containing the video width or range of widths in pixels.
+- `resizeMode`
+  - : A [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString) object containing the mode or an array of modes the UA can use to derive the resolution of the video track.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> If the user has not granted permission to access the input device an empty object will be returned.</p>
-</div>
+> **Note:** If the user has not granted permission to access the input device an empty object will be returned.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the following example we ask for permission to access audio and video devices with {{domxref("mediaDevices.getUserMedia()")}}, as to use <code>getCapabilities()</code> we need permission to access the devices.</p>
+In the following example we ask for permission to access audio and video devices with {{domxref("mediaDevices.getUserMedia()")}}, as to use `getCapabilities()` we need permission to access the devices.
 
-<p>If <code>device</code> is an <code>InputDeviceInfo</code> object, then <code>getCapabilities()</code> will return an object with members representing its capbilities. A video stream will not include auto properties such as <code>noiseSuppression</code>, for example.</p>
+If `device` is an `InputDeviceInfo` object, then `getCapabilities()` will return an object with members representing its capbilities. A video stream will not include auto properties such as `noiseSuppression`, for example.
 
-<pre class="brush: js">// Get permission to access audio or video devices
+```js
+// Get permission to access audio or video devices
 navigator.mediaDevices.getUserMedia({ audio: true, video: true });
 
 navigator.mediaDevices.enumerateDevices()
@@ -79,12 +78,13 @@ navigator.mediaDevices.enumerateDevices()
     devices.forEach(function(device) {
       console.log(device.getCapabilities()); // a MediaTrackCapabilities object.
     });
-  })</pre>
+  })
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

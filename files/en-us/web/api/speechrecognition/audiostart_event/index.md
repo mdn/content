@@ -10,58 +10,62 @@ tags:
   - onaudiostart
 browser-compat: api.SpeechRecognition.audiostart_event
 ---
-<div>{{APIRef("Web Speech API")}} {{SeeCompatTable}}</div>
+{{APIRef("Web Speech API")}} {{SeeCompatTable}}
 
-<p>The <code><strong>audiostart</strong></code> event of the <a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a> is fired when the user agent has started to capture audio for speech recognition.</p>
+The **`audiostart`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) is fired when the user agent has started to capture audio for speech recognition.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler</th>
-   <td>{{domxref("SpeechRecognition/onaudiostart", "onaudiostart")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler</th>
+      <td>
+        {{domxref("SpeechRecognition/onaudiostart", "onaudiostart")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>You can use the <code>audiostart</code> event in an {{domxref("SpeechRecognition/onaudiostart", "onaudiostart")}} method:</p>
+You can use the `audiostart` event in an {{domxref("SpeechRecognition/onaudiostart", "onaudiostart")}} method:
 
-<pre class="brush: js">var recognition = new webkitSpeechRecognition() || new SpeechRecognition();
+```js
+var recognition = new webkitSpeechRecognition() || new SpeechRecognition();
 
 recognition.addEventListener('audiostart', function() {
   console.log('Audio capturing started');
-});</pre>
+});
+```
 
-<p>Or use the <a href="/en-US/docs/Web/API/SpeechRecognition/onaudiostart">onaudiostart</a> event handler property:</p>
+Or use the [onaudiostart](/en-US/docs/Web/API/SpeechRecognition/onaudiostart) event handler property:
 
-<pre class="brush: js">recognition.onaudiostart = function() {
+```js
+recognition.onaudiostart = function() {
   console.log('Audio capturing started');
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
- <li>{{domxref("SpeechRecognition/onaudiostart", "onaudiostart")}} event handler property</li>
-</ul>
+- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)
+- {{domxref("SpeechRecognition/onaudiostart", "onaudiostart")}} event handler property

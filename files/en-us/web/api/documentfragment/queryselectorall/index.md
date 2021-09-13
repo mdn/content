@@ -2,54 +2,52 @@
 title: DocumentFragment.querySelectorAll()
 slug: Web/API/DocumentFragment/querySelectorAll
 tags:
-- API
-- DOM
-- DocumentFragment
-- Method
+  - API
+  - DOM
+  - DocumentFragment
+  - Method
 browser-compat: api.DocumentFragment.querySelectorAll
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<p>The <strong><code>DocumentFragment.querySelectorAll()</code></strong> method returns a
-  {{domxref("NodeList")}} of elements within the {{domxref("DocumentFragment")}} (using
-  depth-first pre-order traversal of the document's nodes) that matches the specified
-  group of selectors.</p>
+The **`DocumentFragment.querySelectorAll()`** method returns a
+{{domxref("NodeList")}} of elements within the {{domxref("DocumentFragment")}} (using
+depth-first pre-order traversal of the document's nodes) that matches the specified
+group of selectors.
 
-<p>If the selectors specified in parameter are invalid a {{domxref("DOMException")}} with
-  a <code>SYNTAX_ERR</code> value is raised.</p>
+If the selectors specified in parameter are invalid a {{domxref("DOMException")}} with
+a `SYNTAX_ERR` value is raised.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>elementList</em> = <em>documentfragment</em>.querySelectorAll(<em>selectors</em>);</pre>
+```js
+elementList = documentfragment.querySelectorAll(selectors);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><em>selectors</em></dt>
-  <dd>Is a {{domxref("DOMString")}} containing one or more CSS selectors separated by
-    commas.</dd>
-</dl>
+- _selectors_
+  - : Is a {{domxref("DOMString")}} containing one or more CSS selectors separated by
+    commas.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example returns a list of all <code>div</code> elements within the
-  <code>DocumentFragment</code> with a class of either "<code>note</code>" or
-  "<code>alert</code>":</p>
+This example returns a list of all `div` elements within the
+`DocumentFragment` with a class of either "`note`" or
+"`alert`":
 
-<pre class="brush: js">var matches = documentfrag.querySelectorAll("div.note, div.alert");
-</pre>
+```js
+var matches = documentfrag.querySelectorAll("div.note, div.alert");
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("DocumentFragment")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("DocumentFragment")}} interface it belongs to.

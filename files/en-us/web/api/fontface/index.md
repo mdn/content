@@ -11,65 +11,59 @@ tags:
   - Reference
 browser-compat: api.FontFace
 ---
-<p>{{APIRef("CSS Font Loading API")}}</p>
+{{APIRef("CSS Font Loading API")}}
 
-<p>The <code><strong>FontFace</strong></code> interface represents a single usable font face. It allows control of the source of the font face, being a URL to an external resource, or a buffer; it also allows control of when the font face is loaded and its current status.</p>
+The **`FontFace`** interface represents a single usable font face. It allows control of the source of the font face, being a URL to an external resource, or a buffer; it also allows control of when the font face is loaded and its current status.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("FontFace.FontFace", "FontFace()")}}</dt>
- <dd>Constructs and returns a new <code>FontFace</code> object, built from an external resource described by an URL or from an {{jsxref("ArrayBuffer")}}.</dd>
-</dl>
+- {{domxref("FontFace.FontFace", "FontFace()")}}
+  - : Constructs and returns a new `FontFace` object, built from an external resource described by an URL or from an {{jsxref("ArrayBuffer")}}.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("FontFace.ascentOverride")}}</dt>
- <dd>A {{domxref("CSSOMString")}} that retrieves or sets the <em>ascent metric</em> of the font. It is equivalent to the {{cssxref("@font-face/ascent-override", "ascent-override")}} descriptor.</dd>
- <dt>{{domxref("FontFace.descentOverride")}}</dt>
- <dd>A {{domxref("CSSOMString")}} that retrieves or sets the <em>descent metric</em> of the font. It is equivalent to the {{cssxref("@font-face/descent-override", "descent-override")}} descriptor.</dd>
- <dt>{{domxref("FontFace.display")}}</dt>
- <dd>A {{domxref("CSSOMString")}} that determines how a font face is displayed based on whether and when it is downloaded and ready to use.</dd>
- <dt>{{domxref("FontFace.family")}}</dt>
- <dd>A {{domxref("CSSOMString")}} that retrieves or sets the <em>family</em> of the font. It is equivalent to the {{cssxref("@font-face/font-family", "font-family")}} descriptor.</dd>
- <dt>{{domxref("FontFace.featureSettings")}}</dt>
- <dd>A {{domxref("CSSOMString")}} that retrieves or sets infrequently used font features that are not available from a font's variant properties. It is equivalent to the {{cssxref("@font-face/font-feature-settings", "font-feature-settings")}} descriptor.</dd>
- <dt>{{domxref("FontFace.lineGapOverride")}}</dt>
- <dd>A {{domxref("CSSOMString")}} that retrieves or sets the <em>line-gap metric</em> of the font. It is equivalent to the {{cssxref("@font-face/line-gap-override", "line-gap-override")}} descriptor.</dd>
- <dt>{{domxref("FontFace.loaded")}} {{readonlyinline}}</dt>
- <dd>Returns a {{jsxref("Promise")}} that resolves with the current <code>FontFace</code> object when the font specified in the object's constructor is done loading or rejects with a <code>SyntaxError</code>.</dd>
- <dt>{{domxref("FontFace.status")}} {{readonlyinline}}</dt>
- <dd>Returns an enumerated value indicating the status of the font, one of  <code>"unloaded"</code>, <code>"loading"</code>, <code>"loaded"</code>, or <code>"error"</code>.</dd>
- <dt>{{domxref("FontFace.stretch")}}</dt>
- <dd>A {{domxref("CSSOMString")}} that retrieves or sets how the font <em>stretches</em>. It is equivalent to the {{cssxref("@font-face/font-stretch", "font-stretch")}} descriptor.</dd>
- <dt>{{domxref("FontFace.style")}}</dt>
- <dd>A {{domxref("CSSOMString")}} that retrieves or sets the <em>style</em> of the font. It is equivalent to the {{cssxref("@font-face/font-style", "font-style")}} descriptor.</dd>
- <dt>{{domxref("FontFace.unicodeRange")}}</dt>
- <dd>A {{domxref("CSSOMString")}} that retrieves or sets the <em>range of unicode codepoints</em> encompassing the font. It is equivalent to the {{cssxref("@font-face/unicode-range", "unicode-range")}} descriptor.</dd>
- <dt>{{domxref("FontFace.variant")}}</dt>
- <dd>A {{domxref("CSSOMString")}} that retrieves or sets the <em>variant</em> of the font. It is equivalent to the {{cssxref("@font-face/font-variant", "font-variant")}} descriptor.</dd>
- <dt>{{domxref("FontFace.variationSettings")}}</dt>
- <dd>A {{domxref("CSSOMString")}} that retrieves or sets the <em>variation settings</em> of the font. It is equivalent to the {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}} descriptor.</dd>
- <dt>{{domxref("FontFace.weight")}}</dt>
- <dd>A {{domxref("CSSOMString")}} that contains the <em>weight</em> of the font. It is equivalent to the {{cssxref("@font-face/font-weight", "font-weight")}} descriptor.</dd>
-</dl>
+- {{domxref("FontFace.ascentOverride")}}
+  - : A {{domxref("CSSOMString")}} that retrieves or sets the _ascent metric_ of the font. It is equivalent to the {{cssxref("@font-face/ascent-override", "ascent-override")}} descriptor.
+- {{domxref("FontFace.descentOverride")}}
+  - : A {{domxref("CSSOMString")}} that retrieves or sets the _descent metric_ of the font. It is equivalent to the {{cssxref("@font-face/descent-override", "descent-override")}} descriptor.
+- {{domxref("FontFace.display")}}
+  - : A {{domxref("CSSOMString")}} that determines how a font face is displayed based on whether and when it is downloaded and ready to use.
+- {{domxref("FontFace.family")}}
+  - : A {{domxref("CSSOMString")}} that retrieves or sets the _family_ of the font. It is equivalent to the {{cssxref("@font-face/font-family", "font-family")}} descriptor.
+- {{domxref("FontFace.featureSettings")}}
+  - : A {{domxref("CSSOMString")}} that retrieves or sets infrequently used font features that are not available from a font's variant properties. It is equivalent to the {{cssxref("@font-face/font-feature-settings", "font-feature-settings")}} descriptor.
+- {{domxref("FontFace.lineGapOverride")}}
+  - : A {{domxref("CSSOMString")}} that retrieves or sets the _line-gap metric_ of the font. It is equivalent to the {{cssxref("@font-face/line-gap-override", "line-gap-override")}} descriptor.
+- {{domxref("FontFace.loaded")}} {{readonlyinline}}
+  - : Returns a {{jsxref("Promise")}} that resolves with the current `FontFace` object when the font specified in the object's constructor is done loading or rejects with a `SyntaxError`.
+- {{domxref("FontFace.status")}} {{readonlyinline}}
+  - : Returns an enumerated value indicating the status of the font, one of  `"unloaded"`, `"loading"`, `"loaded"`, or `"error"`.
+- {{domxref("FontFace.stretch")}}
+  - : A {{domxref("CSSOMString")}} that retrieves or sets how the font _stretches_. It is equivalent to the {{cssxref("@font-face/font-stretch", "font-stretch")}} descriptor.
+- {{domxref("FontFace.style")}}
+  - : A {{domxref("CSSOMString")}} that retrieves or sets the _style_ of the font. It is equivalent to the {{cssxref("@font-face/font-style", "font-style")}} descriptor.
+- {{domxref("FontFace.unicodeRange")}}
+  - : A {{domxref("CSSOMString")}} that retrieves or sets the *range of unicode codepoints* encompassing the font. It is equivalent to the {{cssxref("@font-face/unicode-range", "unicode-range")}} descriptor.
+- {{domxref("FontFace.variant")}}
+  - : A {{domxref("CSSOMString")}} that retrieves or sets the _variant_ of the font. It is equivalent to the {{cssxref("@font-face/font-variant", "font-variant")}} descriptor.
+- {{domxref("FontFace.variationSettings")}}
+  - : A {{domxref("CSSOMString")}} that retrieves or sets the _variation settings_ of the font. It is equivalent to the {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}} descriptor.
+- {{domxref("FontFace.weight")}}
+  - : A {{domxref("CSSOMString")}} that contains the _weight_ of the font. It is equivalent to the {{cssxref("@font-face/font-weight", "font-weight")}} descriptor.
 
-<dl>
- <dt>{{domxref("FontFace.load()")}}</dt>
- <dd>Loads a font based on current object's constructor-passed requirements, including a location or source buffer, and returns a {{jsxref('Promise')}} that resolves with the current FontFace object.</dd>
-</dl>
+<!---->
 
-<h2 id="Specifications">Specifications</h2>
+- {{domxref("FontFace.load()")}}
+  - : Loads a font based on current object's constructor-passed requirements, including a location or source buffer, and returns a {{jsxref('Promise')}} that resolves with the current FontFace object.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/@font-face">@font-face</a></li>
-</ul>
+- [@font-face](/en-US/docs/Web/CSS/@font-face)

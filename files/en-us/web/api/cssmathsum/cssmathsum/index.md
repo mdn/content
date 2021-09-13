@@ -2,40 +2,39 @@
 title: CSSMathSum()
 slug: Web/API/CSSMathSum/CSSMathSum
 tags:
-- API
-- CSS Typed Object Model API
-- CSSMathSum
-- CSSUnparsedValue
-- Constructor
-- Experimental
-- Houdini
-- Reference
+  - API
+  - CSS Typed Object Model API
+  - CSSMathSum
+  - CSSUnparsedValue
+  - Constructor
+  - Experimental
+  - Houdini
+  - Reference
 browser-compat: api.CSSMathSum.CSSMathSum
 ---
-<div>{{draft}}{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}</div>
+{{draft}}{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>CSSMathSum()</code></strong> constructor creates a
-  new {{domxref("CSSMathSum")}} object which creates a new {{domxref('CSSKeywordValue')}}
-  object which represents the result obtained by calling
-  {{domxref('CSSNumericValue.add','add()')}}, {{domxref('CSSNumericValue.sub','sub()')}},
-  or {{domxref('CSSNumericValue.toSum','toSum()')}} on {{domxref('CSSNumericValue')}}.</p>
+The **`CSSMathSum()`** constructor creates a
+new {{domxref("CSSMathSum")}} object which creates a new {{domxref('CSSKeywordValue')}}
+object which represents the result obtained by calling
+{{domxref('CSSNumericValue.add','add()')}}, {{domxref('CSSNumericValue.sub','sub()')}},
+or {{domxref('CSSNumericValue.toSum','toSum()')}} on {{domxref('CSSNumericValue')}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>CSSMathSum</var> = new CSSMathSum(<em>values</em>)</pre>
+```js
+var CSSMathSum = new CSSMathSum(values)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>values</dt>
-  <dd>One or more double integers or {{domxref('CSSNumericValue')}} objects.</dd>
-</dl>
+- values
+  - : One or more double integers or {{domxref('CSSNumericValue')}} objects.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

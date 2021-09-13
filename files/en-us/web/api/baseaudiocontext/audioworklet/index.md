@@ -13,39 +13,38 @@ tags:
   - Worklet
 browser-compat: api.BaseAudioContext.audioWorklet
 ---
-<p>{{ APIRef("Web Audio API") }}{{securecontext_header}}</p>
+{{ APIRef("Web Audio API") }}{{securecontext_header}}
 
-<p>The <code>audioWorklet</code> read-only property of the
-    {{domxref("BaseAudioContext")}} interface returns an instance of
-    {{domxref("AudioWorklet")}} that can be used for adding
-    {{domxref("AudioWorkletProcessor")}}-derived classes which implement custom audio
-    processing.</p>
+The `audioWorklet` read-only property of the
+{{domxref("BaseAudioContext")}} interface returns an instance of
+{{domxref("AudioWorklet")}} that can be used for adding
+{{domxref("AudioWorkletProcessor")}}-derived classes which implement custom audio
+processing.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>baseAudioContextInstance</em>.audioWorklet;
-</pre>
+```js
+baseAudioContextInstance.audioWorklet;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("AudioWorklet")}} instance.</p>
+An {{domxref("AudioWorklet")}} instance.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p><em>For a complete example demonstrating user-defined audio processing, see the
-    {{domxref("AudioWorkletNode")}} page.</em></p>
+_For a complete example demonstrating user-defined audio processing, see the
+{{domxref("AudioWorkletNode")}} page._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using Web Audio API</a></li>
-  <li>{{domxref("AudioWorkletNode")}}</li>
-</ul>
+- [Using Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- {{domxref("AudioWorkletNode")}}

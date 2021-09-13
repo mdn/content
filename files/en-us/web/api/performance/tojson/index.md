@@ -2,51 +2,48 @@
 title: performance.toJSON()
 slug: Web/API/Performance/toJSON
 tags:
-- API
-- Method
-- Performance
-- Reference
+  - API
+  - Method
+  - Performance
+  - Reference
 browser-compat: api.Performance.toJSON
 ---
-<div>{{APIRef("High Resolution Timing")}}</div>
+{{APIRef("High Resolution Timing")}}
 
-<p>The <strong><code>toJSON()</code></strong> method of the {{domxref("Performance")}}
-  interface is a standard serializer: it returns a JSON representation of the performance
-  object's properties.</p>
+The **`toJSON()`** method of the {{domxref("Performance")}}
+interface is a standard serializer: it returns a JSON representation of the performance
+object's properties.
 
-<p>{{availableinworkers}}</p>
+{{availableinworkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">myPerf = performance.toJSON()
-</pre>
+```js
+myPerf = performance.toJSON()
+```
 
-<h3 id="Arguments">Arguments</h3>
+### Arguments
 
-<dl>
-  <dt>None</dt>
-  <dd> </dd>
-</dl>
+- None
+  - :
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<dl>
-  <dt>myPerf</dt>
-  <dd>A JSON object that is the serialization of the {{domxref("Performance")}} object.
-  </dd>
-</dl>
+- myPerf
+  - : A JSON object that is the serialization of the {{domxref("Performance")}} object.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var js;
+```js
+var js;
 js = window.performance.toJSON();
 console.log("json = " + JSON.stringify(js));
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

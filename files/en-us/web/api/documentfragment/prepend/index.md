@@ -10,60 +10,54 @@ tags:
   - Reference
 browser-compat: api.DocumentFragment.prepend
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>DocumentFragment.prepend()</code></strong> method
-  inserts a set of {{domxref("Node")}} objects or {{domxref("DOMString")}} objects before
-  the first child of the document fragment. {{domxref("DOMString")}} objects
-  are inserted as equivalent {{domxref("Text")}} nodes.</p>
+The **`DocumentFragment.prepend()`** method
+inserts a set of {{domxref("Node")}} objects or {{domxref("DOMString")}} objects before
+the first child of the document fragment. {{domxref("DOMString")}} objects
+are inserted as equivalent {{domxref("Text")}} nodes.
 
-<p>This method prepends a child to a <code>DocumentFragment</code>. To prepend to an arbitrary element in the tree, see {{domxref("Element.prepend()")}}.</p>
+This method prepends a child to a `DocumentFragment`. To prepend to an arbitrary element in the tree, see {{domxref("Element.prepend()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 prepend(...nodesOrDOMStrings)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>nodesOrDOMStrings</code></dt>
-  <dd>A set of {{domxref("Node")}} or {{domxref("DOMString")}} objects to insert.</dd>
-</dl>
+- `nodesOrDOMStrings`
+  - : A set of {{domxref("Node")}} or {{domxref("DOMString")}} objects to insert.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<ul>
-  <li>{{domxref("HierarchyRequestError")}}: Node cannot be inserted at the specified point
-    in the hierarchy.</li>
-</ul>
+- {{domxref("HierarchyRequestError")}}: Node cannot be inserted at the specified point
+  in the hierarchy.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Prepending_an_element_to_a_document_fragment">Prepending an element to a document fragment</h3>
+### Prepending an element to a document fragment
 
-<pre class="brush: js">
+```js
 let fragment = new DocumentFragment();
 let div = document.createElement("div");
 let p = document.createElement("p");
 fragment.append(p);
 fragment.prepend(div);
 
-fragment.children; // HTMLCollection [&lt;div&gt;, &lt;p&gt;]
-</pre>
+fragment.children; // HTMLCollection [<div>, <p>]
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("DocumentFragment.append()")}}</li>
-  <li>{{domxref("Element.prepend()")}}</li>
-</ul>
+- {{domxref("DocumentFragment.append()")}}
+- {{domxref("Element.prepend()")}}

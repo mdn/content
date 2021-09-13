@@ -2,67 +2,64 @@
 title: WebGL2RenderingContext.getIndexedParameter()
 slug: Web/API/WebGL2RenderingContext/getIndexedParameter
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGL2
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGL2
 browser-compat: api.WebGL2RenderingContext.getIndexedParameter
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGL2RenderingContext.getIndexedParameter()</code></strong> method
-  of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL 2 API</a> returns indexed
-  information about a given <code>target</code>.</p>
+The **`WebGL2RenderingContext.getIndexedParameter()`** method
+of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) returns indexed
+information about a given `target`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">any <var>gl</var>.getIndexedParameter(<var>target</var>, <var>index</var>);</pre>
+```js
+any gl.getIndexedParameter(target, index);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>target</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the target for which to return information.
+- `target`
+
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the target for which to return information.
     Possible values:
-    <ul>
-      <li><code>gl.TRANSFORM_FEEDBACK_BUFFER_BINDING</code>: Returns a
-        {{domxref("WebGLBuffer")}}.</li>
-      <li><code>gl.TRANSFORM_FEEDBACK_BUFFER_SIZE</code>: Returns a
-        {{domxref("WebGL_API/Types", "GLsizeiptr")}}.</li>
-      <li><code>gl.TRANSFORM_FEEDBACK_BUFFER_START</code>: Returns a
-        {{domxref("WebGL_API/Types", "GLintptr")}}.</li>
-      <li><code>gl.UNIFORM_BUFFER_BINDING</code>: Returns a {{domxref("WebGLBuffer")}}.
-      </li>
-      <li><code>gl.UNIFORM_BUFFER_SIZE</code>: Returns a {{domxref("WebGL_API/Types", "GLsizeiptr")}}.</li>
-      <li><code>gl.UNIFORM_BUFFER_START</code>: Returns a {{domxref("WebGL_API/Types", "GLintptr")}}.</li>
-    </ul>
-  </dd>
-  <dt><code>index</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLuint")}} specifying the index of the <code>target</code> that is
-    queried.</dd>
-</dl>
 
-<h3 id="Return_value">Return value</h3>
+    - `gl.TRANSFORM_FEEDBACK_BUFFER_BINDING`: Returns a
+      {{domxref("WebGLBuffer")}}.
+    - `gl.TRANSFORM_FEEDBACK_BUFFER_SIZE`: Returns a
+      {{domxref("WebGL_API/Types", "GLsizeiptr")}}.
+    - `gl.TRANSFORM_FEEDBACK_BUFFER_START`: Returns a
+      {{domxref("WebGL_API/Types", "GLintptr")}}.
+    - `gl.UNIFORM_BUFFER_BINDING`: Returns a {{domxref("WebGLBuffer")}}.
+    - `gl.UNIFORM_BUFFER_SIZE`: Returns a {{domxref("WebGL_API/Types", "GLsizeiptr")}}.
+    - `gl.UNIFORM_BUFFER_START`: Returns a {{domxref("WebGL_API/Types", "GLintptr")}}.
 
-<p>Depends on the requested information (as specified with <code>target</code>).</p>
+- `index`
+  - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the index of the `target` that is
+    queried.
 
-<h2 id="Examples">Examples</h2>
+### Return value
 
-<pre class="brush: js">var binding = gl.getIndexedParameter(gl.TRANSFORM_FEEDBACK_BUFFER_BINDING, 0);
-</pre>
+Depends on the requested information (as specified with `target`).
 
-<h2 id="Specifications">Specifications</h2>
+## Examples
+
+```js
+var binding = gl.getIndexedParameter(gl.TRANSFORM_FEEDBACK_BUFFER_BINDING, 0);
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.getParameter()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.getParameter()")}}

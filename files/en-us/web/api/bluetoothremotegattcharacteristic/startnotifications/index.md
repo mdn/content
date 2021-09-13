@@ -2,38 +2,38 @@
 title: BluetoothRemoteGATTCharacteristic.startNotifications()
 slug: Web/API/BluetoothRemoteGATTCharacteristic/startNotifications
 tags:
-- API
-- Bluetooth
-- BluetoothRemoteGATTCharacteristic
-- Experimental
-- Property
-- Reference
-- Web Bluetooth API
-- startNotifications()
+  - API
+  - Bluetooth
+  - BluetoothRemoteGATTCharacteristic
+  - Experimental
+  - Property
+  - Reference
+  - Web Bluetooth API
+  - startNotifications()
 browser-compat: api.BluetoothRemoteGATTCharacteristic.startNotifications
 ---
-<p>{{SeeCompatTable}}</p>
+{{SeeCompatTable}}
 
-<p>
-  The <strong><code>BluetoothRemoteGATTCharacteristic.startNotifications()</code></strong> method
-  returns a {{jsxref("Promise")}} to the BluetoothRemoteGATTCharacteristic instance when
-  there is an active notification on it.</p>
+The **`BluetoothRemoteGATTCharacteristic.startNotifications()`** method
+returns a {{jsxref("Promise")}} to the BluetoothRemoteGATTCharacteristic instance when
+there is an active notification on it.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">BluetoothRemoteGATTCharacteristic.startNotifications().then(function(BluetoothRemoteGATTCharacteristic) { ... })</pre>
+```js
+BluetoothRemoteGATTCharacteristic.startNotifications().then(function(BluetoothRemoteGATTCharacteristic) { ... })
+```
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A {{jsxref("Promise")}} to the BluetoothRemoteGATTCharacteristic instance.</p>
+A {{jsxref("Promise")}} to the BluetoothRemoteGATTCharacteristic instance.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<div>{{APIRef("Web Bluetooth")}}</div>
+{{APIRef("Web Bluetooth")}}

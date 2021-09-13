@@ -10,59 +10,54 @@ tags:
   - TextDecoder
 browser-compat: api.TextDecoder.TextDecoder
 ---
-<p>{{APIRef("Encoding API")}}</p>
+{{APIRef("Encoding API")}}
 
-<p>The <code><strong>TextDecoder()</strong></code> constructor returns a newly created
-  {{DOMxRef("TextDecoder")}} object for the encoding specified in parameter.</p>
+The **`TextDecoder()`** constructor returns a newly created
+{{DOMxRef("TextDecoder")}} object for the encoding specified in parameter.
 
-<p>If the value for <em>utfLabel</em> is unknown, or is one of the two values leading to a
-  <code>'replacement'</code> decoding algorithm ( "<code>iso-2022-cn</code>" or
-  "<code>iso-2022-cn-ext</code>"), a {{DOMxRef("DOMException")}} with the
-  <code>"TypeError"</code> value is thrown.</p>
+If the value for _utfLabel_ is unknown, or is one of the two values leading to a
+`'replacement'` decoding algorithm ( "`iso-2022-cn`" or
+"`iso-2022-cn-ext`"), a {{DOMxRef("DOMException")}} with the
+`"TypeError"` value is thrown.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>decoder</em> = new TextDecoder(<em>utfLabel</em>, <em>options</em>);
-</pre>
+```js
+decoder = new TextDecoder(utfLabel, options);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>utfLabel</code>{{Optional_Inline}}</dt>
-  <dd>Is a {{DOMxRef("DOMString")}}, defaulting to <code>"utf-8"</code>, containing the
-    <em>label</em> of the encoder.  This may be <a href="/en-US/docs/Web/API/Encoding_API/Encodings">any valid label</a>.
-  </dd>
-  <dt><code>options</code>{{Optional_Inline}}</dt>
-  <dd>Is a <code>TextDecoderOptions</code> dictionary with the property:
-    <dl>
-      <dt><code>fatal</code></dt>
-      <dd>A <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean"
-          title="The Boolean object is an object wrapper for a boolean value."><code>Boolean</code></a>
+- `utfLabel`{{Optional_Inline}}
+  - : Is a {{DOMxRef("DOMString")}}, defaulting to `"utf-8"`, containing the
+    _label_ of the encoder. This may be [any valid label](/en-US/docs/Web/API/Encoding_API/Encodings).
+- `options`{{Optional_Inline}}
+
+  - : Is a `TextDecoderOptions` dictionary with the property:
+
+    - `fatal`
+      - : A [`Boolean`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean "The Boolean object is an object wrapper for a boolean value.")
         flag indicating if the {{DOMxRef("TextDecoder.decode()")}} method must throw a
-        {{DOMxRef("DOMException")}} with the <code>"EncodingError"</code> value when an
-        coding error is found. It defaults to <code>false</code>.</dd>
-    </dl>
-  </dd>
-</dl>
+        {{DOMxRef("DOMException")}} with the `"EncodingError"` value when an
+        coding error is found. It defaults to `false`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre
-  class="brush: js">var textDecoder1 = new TextDecoder(&quot;iso-8859-2&quot;);
+```js
+var textDecoder1 = new TextDecoder("iso-8859-2");
 var textDecoder2 = new TextDecoder();
-var textDecoder3 = new TextDecoder(&quot;csiso2022kr&quot;, {fatal: true}); // Allows EncodingError exception to be thrown.
-var textDecoder4 = new TextDecoder(&quot;iso-2022-cn&quot;); // Throw a TypeError exception.</pre>
+var textDecoder3 = new TextDecoder("csiso2022kr", {fatal: true}); // Allows EncodingError exception to be thrown.
+var textDecoder4 = new TextDecoder("iso-2022-cn"); // Throw a TypeError exception.
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{DOMxRef("TextDecoder")}} interface it belongs to.</li>
-</ul>
+- The {{DOMxRef("TextDecoder")}} interface it belongs to.

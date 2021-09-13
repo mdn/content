@@ -2,51 +2,49 @@
 title: IDBTransaction.db
 slug: Web/API/IDBTransaction/db
 tags:
-- API
-- Database
-- IDBTransaction
-- IndexedDB
-- Property
-- Reference
-- Storage
-- db
+  - API
+  - Database
+  - IDBTransaction
+  - IndexedDB
+  - Property
+  - Reference
+  - Storage
+  - db
 browser-compat: api.IDBTransaction.db
 ---
-<p>{{ APIRef("IndexedDB") }}</p>
+{{ APIRef("IndexedDB") }}
 
-<div>
-  <p>The <strong><code>db</code></strong> read-only property of the
-    {{domxref("IDBTransaction")}} interface returns the database connection with which
-    this transaction is associated.</p>
+The **`db`** read-only property of the
+{{domxref("IDBTransaction")}} interface returns the database connection with which
+this transaction is associated.
 
-  <p>{{AvailableInWorkers}}</p>
-</div>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>myDatabase</em> = <em>transaction</em>.db;</pre>
+```js
+var myDatabase = transaction.db;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("IDBDatabase")}} object.</p>
+An {{domxref("IDBDatabase")}} object.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In the following code snippet, we open a read/write transaction on our database and add
-  some data to an object store. Note also the functions attached to transaction event
-  handlers to report on the outcome of the transaction opening in the event of success or
-  failure. At the end, we return the associated database connection using <code>db</code>.
-  For a full working example, see our <a
-    href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> app (<a
-    href="https://mdn.github.io/to-do-notifications/">view
-    example live</a>.)/p>
+In the following code snippet, we open a read/write transaction on our database and add
+some data to an object store. Note also the functions attached to transaction event
+handlers to report on the outcome of the transaction opening in the event of success or
+failure. At the end, we return the associated database connection using `db`.
+For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view
+example live](https://mdn.github.io/to-do-notifications/).)/p>
 
-<pre class="brush: js">// Let us open our database
+```js
+// Let us open our database
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '&lt;li&gt;Database initialised.&lt;/li&gt;';
+  note.innerHTML += '<li>Database initialised.</li>';
 
   // store the result of opening the database in the db variable.
   // This is used a lot below
@@ -65,11 +63,11 @@ function addData() {
 
   // report on the success of opening the transaction
   transaction.oncomplete = function(event) {
-    note.innerHTML += '&lt;li&gt;Transaction completed: database modification finished.&lt;/li&gt;';
+    note.innerHTML += '<li>Transaction completed: database modification finished.</li>';
   };
 
   transaction.onerror = function(event) {
-    note.innerHTML += '&lt;li&gt;Transaction not opened due to error. Duplicate items not allowed.&lt;/li&gt;';
+    note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
   };
 
   // create an object store on the transaction
@@ -81,32 +79,29 @@ function addData() {
   objectStoreRequest.onsuccess = function(event) {
     // report the success of the request (this does not mean the item
     // has been stored successfully in the DB - for that you need transaction.onsuccess)
-    note.innerHTML += '&lt;li&gt;Request successful.&lt;/li&gt;';
+    note.innerHTML += '<li>Request successful.</li>';
   };
 
   // Return the database (IDBDatabase) connection with which this transaction is associated
   transaction.db;
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
-  <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
-  <li>Using transactions: {{domxref("IDBTransaction")}}</li>
-  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
-  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
-  <li>Using cursors: {{domxref("IDBCursor")}}</li>
-  <li>Reference example: <a class="external"
-      href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
-      Notifications</a> (<a class="external"
-      href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do
+  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

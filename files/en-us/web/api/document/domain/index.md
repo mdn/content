@@ -10,158 +10,155 @@ tags:
   - Deprecated
 browser-compat: api.Document.domain
 ---
-<div>{{ApiRef}} {{Deprecated_Header}}</div>
+{{ApiRef}} {{Deprecated_Header}}
 
-<p>The <strong><code>domain</code></strong> property of the {{domxref("Document")}}
-  interface gets/sets the domain portion of the {{glossary("origin")}} of the current
-  document, as used by the <a
-    href="/en-US/docs/Web/Security/Same-origin_policy">same-origin policy</a>.</p>
+The **`domain`** property of the {{domxref("Document")}}
+interface gets/sets the domain portion of the {{glossary("origin")}} of the current
+document, as used by the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<h3 id="Getter">Getter</h3>
+### Getter
 
-<pre
-  class="brush: js">const <var>domainString</var> = <var>document</var>.domain</pre>
+```js
+const domainString = document.domain
+```
 
-<p>The getter for this property returns the domain portion of the current document's
-  origin. In most cases, this will be the hostname portion of the document's URL. However,
-  there are some exceptions:</p>
+The getter for this property returns the domain portion of the current document's
+origin. In most cases, this will be the hostname portion of the document's URL. However,
+there are some exceptions:
 
-<ul>
-  <li>If the page has an opaque {{glossary("origin")}}, e.g. for a page with a <a
-      href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs">data URL</a>, then it will
-    return the empty string.</li>
-  <li>If the <code>document.domain</code> <a href="#setter">setter</a> has been used, then
-    it will return the value that was set.</li>
-</ul>
+- If the page has an opaque {{glossary("origin")}}, e.g. for a page with a [data URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs), then it will
+  return the empty string.
+- If the `document.domain` [setter](#setter) has been used, then
+  it will return the value that was set.
 
-<p>Usually it is better to use the {{domxref("Location.hostname")}} property instead.</p>
+Usually it is better to use the {{domxref("Location.hostname")}} property instead.
 
-<h3 id="Setter">Setter</h3>
+### Setter
 
-<pre
-  class="brush: js"><var>document</var>.domain = <var>domainString</var></pre>
+```js
+document.domain = domainString
+```
 
-<p>The setter for this property can be used to <em>change</em> a page's
-  {{glossary("origin")}}, and thus modify how certain security checks are performed. It
-  can only be set to the same or a parent domain. For example, if
-  <code>https://a.example.com</code> and <code>https://b.example.com</code> both use</p>
+The setter for this property can be used to _change_ a page's
+{{glossary("origin")}}, and thus modify how certain security checks are performed. It
+can only be set to the same or a parent domain. For example, if
+`https://a.example.com` and `https://b.example.com` both use
 
-<pre class="brush:js">document.domain = "example.com";</pre>
+```js
+document.domain = "example.com";
+```
 
-<p>then they have both modified their origin to have the same domain, and they can now
-  access each other's DOM directly—despite being cross-origin, which would normally
-  prevent such access.</p>
+then they have both modified their origin to have the same domain, and they can now
+access each other's DOM directly—despite being cross-origin, which would normally
+prevent such access.
 
-<p>Note that setting <code>document.domain</code> to its current value is not a no-op. It
-  still changes the origin. For example, if one page sets</p>
+Note that setting `document.domain` to its current value is not a no-op. It
+still changes the origin. For example, if one page sets
 
-<pre class="brush:js">document.domain = document.domain;</pre>
+```js
+document.domain = document.domain;
+```
 
-<p>then it will be counted as cross-origin from any other normally-same-origin pages that
-  have not done the same thing.</p>
+then it will be counted as cross-origin from any other normally-same-origin pages that
+have not done the same thing.
 
-<h4 id="Deprecation">Deprecation</h4>
+#### Deprecation
 
-<p>The <code>document.domain</code> setter is deprecated. It undermines the security
-  protections provided by the <a href="/en-US/docs/Web/Security/Same-origin_policy">same
-    origin policy</a>, and complicates the origin model in browsers, leading to
-  interoperability problems and security bugs.</p>
+The `document.domain` setter is deprecated. It undermines the security
+protections provided by the [same
+origin policy](/en-US/docs/Web/Security/Same-origin_policy), and complicates the origin model in browsers, leading to
+interoperability problems and security bugs.
 
-<p>Attempting to set <code>document.domain</code> is dangerous. It opens up full access to
-  a page's DOM from <em>all</em> subdomains, which is likely not be what is intended. It
-  also removes the port component from the origin, so now your page can be accessed by
-  other pages with the same IP address or same host component, even on a different port.
-</p>
+Attempting to set `document.domain` is dangerous. It opens up full access to
+a page's DOM from _all_ subdomains, which is likely not be what is intended. It
+also removes the port component from the origin, so now your page can be accessed by
+other pages with the same IP address or same host component, even on a different port.
 
-<p>This is especially insecure on shared hosting. For example, another shared hosting
-  customer is able to host a site at the same IP address but on a different port, then
-  setting <code>document.domain</code> will remove the same-origin protection that
-  normally protects you from that other customer's site accessing your site's data.</p>
+This is especially insecure on shared hosting. For example, another shared hosting
+customer is able to host a site at the same IP address but on a different port, then
+setting `document.domain` will remove the same-origin protection that
+normally protects you from that other customer's site accessing your site's data.
 
-<p>Similar problems occur with shared hosting sites that give each customer a different
-  subdomain. If a site sets <code>document.domain</code>, any other customer on a
-  different subdomain can now do the same thing, and start accessing the data of the
-  original site.</p>
+Similar problems occur with shared hosting sites that give each customer a different
+subdomain. If a site sets `document.domain`, any other customer on a
+different subdomain can now do the same thing, and start accessing the data of the
+original site.
 
-<p>Instead of using <code>document.domain</code> to facilitate cross-origin communication,
-  you should use {{domxref("Window.postMessage")}} to send an asynchronous message to the
-  other origin. This controlled access via message-passing is much more secure than the
-  blanket exposure of all data caused by <code>document.domain</code>.</p>
+Instead of using `document.domain` to facilitate cross-origin communication,
+you should use {{domxref("Window.postMessage")}} to send an asynchronous message to the
+other origin. This controlled access via message-passing is much more secure than the
+blanket exposure of all data caused by `document.domain`.
 
-<h4 id="Failures">Failures</h4>
+#### Failures
 
-<p>The setter will throw a "<code>SecurityError</code>" {{domxref("DOMException")}} in
-  several cases:</p>
+The setter will throw a "`SecurityError`" {{domxref("DOMException")}} in
+several cases:
 
-<ul>
-  <li>The {{httpheader('Feature-Policy/document-domain','document-domain')}}
-    {{HTTPHeader("Feature-Policy")}} is disabled.</li>
-  <li>The document is inside a sandboxed {{htmlelement("iframe")}}.</li>
-  <li>The document has no {{glossary("browsing context")}}.</li>
-  <li>The document's <a
-      href="https://html.spec.whatwg.org/multipage/origin.html#concept-origin-effective-domain">effective
-      domain</a> is <code>null</code>.</li>
-  <li>The given value is neither the same as the page's current hostname, nor a parent
-    domain of it.</li>
-</ul>
+- The {{httpheader('Feature-Policy/document-domain','document-domain')}}
+  {{HTTPHeader("Feature-Policy")}} is disabled.
+- The document is inside a sandboxed {{htmlelement("iframe")}}.
+- The document has no {{glossary("browsing context")}}.
+- The document's [effective
+  domain](https://html.spec.whatwg.org/multipage/origin.html#concept-origin-effective-domain) is `null`.
+- The given value is neither the same as the page's current hostname, nor a parent
+  domain of it.
 
-<p>As an example of this last failure case, trying to set <code>document.domain</code> to
-  <code>"example.org"</code> when on <code>https://example.com/</code> will throw.</p>
+As an example of this last failure case, trying to set `document.domain` to
+`"example.org"` when on `https://example.com/` will throw.
 
-<p>Additionally, as part of its deprecation, it will do nothing when combined with certain
-  modern isolation features:</p>
+Additionally, as part of its deprecation, it will do nothing when combined with certain
+modern isolation features:
 
-<ul>
-  <li>If used on a cross-origin isolated page, i.e. one that uses the appropriate values
-    for the {{httpheader("Cross-Origin-Opener-Policy")}} and
-    {{httpheader("Cross-Origin-Embedder-Policy")}} HTTP headers</li>
-  <li>If used on an origin-isolated page, i.e. one that uses the
-    {{httpheader("Origin-Isolation")}} HTTP header</li>
-</ul>
+- If used on a cross-origin isolated page, i.e. one that uses the appropriate values
+  for the {{httpheader("Cross-Origin-Opener-Policy")}} and
+  {{httpheader("Cross-Origin-Embedder-Policy")}} HTTP headers
+- If used on an origin-isolated page, i.e. one that uses the
+  {{httpheader("Origin-Isolation")}} HTTP header
 
-<p>Finally, setting <code>document.domain</code> does not change the origin used for
-  origin-checks by some Web APIs, preventing sub-domain access via this mechanism.
-  Affected APIs include (but are not limited to):
-  {{domxref("Window.localStorage")}}, {{domxref("IndexedDB_API")}}, {{domxref("BroadcastChannel")}}, {{domxref("SharedWorker")}} .
-</p>
+Finally, setting `document.domain` does not change the origin used for
+origin-checks by some Web APIs, preventing sub-domain access via this mechanism.
+Affected APIs include (but are not limited to):
+{{domxref("Window.localStorage")}}, {{domxref("IndexedDB_API")}}, {{domxref("BroadcastChannel")}}, {{domxref("SharedWorker")}} .
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Getting_the_domain">Getting the domain</h3>
+### Getting the domain
 
-<p>For code running at the URL <code>https://developer.mozilla.org/en-US/docs/Web</code>,
-  this example would set <code>currentDomain</code> to the string
-  "<code>developer.mozilla.org</code>".</p>
+For code running at the URL `https://developer.mozilla.org/en-US/docs/Web`,
+this example would set `currentDomain` to the string
+"`developer.mozilla.org`".
 
-<pre class="brush:js">const currentDomain = document.domain;</pre>
+```js
+const currentDomain = document.domain;
+```
 
-<p>Although the getter is not dangerous in the same way that the setter is, it is likely
-  simpler and more useful to use the {{domxref("Location.hostname")}} property instead.
-  Then you can avoid <code>document.domain</code> entirely:</p>
+Although the getter is not dangerous in the same way that the setter is, it is likely
+simpler and more useful to use the {{domxref("Location.hostname")}} property instead.
+Then you can avoid `document.domain` entirely:
 
-<pre class="brush:js">const currentHostname = location.hostname;</pre>
+```js
+const currentHostname = location.hostname;
+```
 
-<p>For the URL <code>https://developer.mozilla.org/en-US/docs/Web</code>,
-  <code>currentHostname</code> is also the string "<code>developer.mozilla.org</code>".
-  Other alternatives that provide slightly different information are
-  {{domxref("Location.host")}}, which includes the port, and
-  {{domxref("origin")}}, which provides the full origin.</p>
+For the URL `https://developer.mozilla.org/en-US/docs/Web`,
+`currentHostname` is also the string "`developer.mozilla.org`".
+Other alternatives that provide slightly different information are
+{{domxref("Location.host")}}, which includes the port, and
+{{domxref("origin")}}, which provides the full origin.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/Security/Same-origin_policy">Same-origin policy</a></li>
-  <li>{{domxref("Location.hostname")}}</li>
-  <li>{{domxref("Location.host")}}</li>
-  <li>{{domxref("origin")}}</li>
-</ul>
+- [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy)
+- {{domxref("Location.hostname")}}
+- {{domxref("Location.host")}}
+- {{domxref("origin")}}

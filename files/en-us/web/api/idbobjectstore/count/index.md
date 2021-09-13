@@ -12,98 +12,75 @@ tags:
   - data
 browser-compat: api.IDBObjectStore.count
 ---
-<p>{{ APIRef("IndexedDB") }}</p>
+{{ APIRef("IndexedDB") }}
 
-<div>
-  <p>The <strong><code>count()</code></strong> method of the {{domxref("IDBObjectStore")}}
-    interface returns an {{domxref("IDBRequest")}} object, and, in a separate thread,
-    returns the total number of records that match the provided key or
-    {{domxref("IDBKeyRange")}}. If no arguments are provided, it returns the total number
-    of records in the store.</p>
+The **`count()`** method of the {{domxref("IDBObjectStore")}}
+interface returns an {{domxref("IDBRequest")}} object, and, in a separate thread,
+returns the total number of records that match the provided key or
+{{domxref("IDBKeyRange")}}. If no arguments are provided, it returns the total number
+of records in the store.
 
-  <p>{{AvailableInWorkers}}</p>
-</div>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var request = ObjectStore.count();
+```js
+var request = ObjectStore.count();
 var request = ObjectStore.count(query);
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>query {{optional_inline}}</dt>
-  <dd>A key or {{domxref("IDBKeyRange")}} object that specifies a range of records you
-    want to count.</dd>
-</dl>
+- query {{optional_inline}}
+  - : A key or {{domxref("IDBKeyRange")}} object that specifies a range of records you
+    want to count.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An {{domxref("IDBRequest")}} object on which subsequent events related to this
-  operation are fired.</p>
+An {{domxref("IDBRequest")}} object on which subsequent events related to this
+operation are fired.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>This method may raise a {{domxref("DOMException")}} of one of the following types:</p>
+This method may raise a {{domxref("DOMException")}} of one of the following types:
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Exception</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>InvalidStateError</code></td>
-      <td>This {{domxref("IDBObjectStore")}} has been deleted.</td>
-    </tr>
-    <tr>
-      <td><code>TransactionInactiveError</code></td>
-      <td>This {{domxref("IDBObjectStore")}}'s transaction is inactive.</td>
-    </tr>
-    <tr>
-      <td><code>DataError</code></td>
-      <td>The specified key or key range is invalid.</td>
-    </tr>
-  </tbody>
-</table>
+| Exception                  | Description                                                              |
+| -------------------------- | ------------------------------------------------------------------------ |
+| `InvalidStateError`        | This {{domxref("IDBObjectStore")}} has been deleted.          |
+| `TransactionInactiveError` | This {{domxref("IDBObjectStore")}}'s transaction is inactive. |
+| `DataError`                | The specified key or key range is invalid.                               |
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this simple fragment we create a transaction, retrieve an object store, then count
-  the number of records in the store using <code>count()</code> — when the success handler
-  fires, we log the count value (an integer) to the console.</p>
+In this simple fragment we create a transaction, retrieve an object store, then count
+the number of records in the store using `count()` — when the success handler
+fires, we log the count value (an integer) to the console.
 
-<pre class="brush: js">var transaction = db.transaction(['fThings'], 'readonly');
+```js
+var transaction = db.transaction(['fThings'], 'readonly');
 var objectStore = transaction.objectStore('fThings');
 
 var countRequest = objectStore.count();
 countRequest.onsuccess = function() {
   console.log(countRequest.result);
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
-  <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
-  <li>Using transactions: {{domxref("IDBTransaction")}}</li>
-  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
-  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
-  <li>Using cursors: {{domxref("IDBCursor")}}</li>
-  <li>Reference example: <a class="external"
-      href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
-      Notifications</a> (<a class="external"
-      href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do
+  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

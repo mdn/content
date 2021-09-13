@@ -2,55 +2,57 @@
 title: Path2D.addPath()
 slug: Web/API/Path2D/addPath
 tags:
-- API
-- Canvas
-- Method
-- Path2D
-- Path2D.addPath
-- Reference
+  - API
+  - Canvas
+  - Method
+  - Path2D
+  - Path2D.addPath
+  - Reference
 browser-compat: api.Path2D.addPath
 ---
-<div>{{APIRef("Canvas API")}}</div>
+{{APIRef("Canvas API")}}
 
-<p>The <strong><code>Path2D.addPath()</code></strong> method
-  of the Canvas 2D API adds one {{domxref("Path2D")}} object to another
-  <code>Path2D</code> object.</p>
+The **`Path2D.addPath()`** method
+of the Canvas 2D API adds one {{domxref("Path2D")}} object to another
+`Path2D` object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <em>path</em>.addPath(<em>path</em> [, <em>transform</em>]);
-</pre>
+```js
+void path.addPath(path [, transform]);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>path</code></dt>
-  <dd>A {{domxref("Path2D")}} path to add.</dd>
-  <dt><code>transform</code> {{optional_inline}}</dt>
-  <dd>A {{domxref("DOMMatrix")}} to be used as the transformation matrix for the path that
-    is added. (Technically a <code>DOMMatrixInit</code> object).</dd>
-</dl>
+- `path`
+  - : A {{domxref("Path2D")}} path to add.
+- `transform` {{optional_inline}}
+  - : A {{domxref("DOMMatrix")}} to be used as the transformation matrix for the path that
+    is added. (Technically a `DOMMatrixInit` object).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Adding_a_path_to_an_existing_path">Adding a path to an existing path</h3>
+### Adding a path to an existing path
 
-<p>This example adds one path to another.</p>
+This example adds one path to another.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<p>First, we create two separate {{domxref("Path2D")}} objects, each of which contains a
-  rectangle made using the {{domxref("CanvasRenderingContext2D.rect()", "rect()")}}
-  method. We then create a matrix using {{Domxref("DOMMatrix.DOMMatrix", "DOMMatrix()")}}. We then add the second path to the first using
-  <code>addPath()</code>, also applying the matrix to move the second path to the right.
-  Finally, we draw the first path (which now contains both rectangles) using
-  {{domxref("CanvasRenderingContext2D.fill()", "fill()")}}.</p>
+First, we create two separate {{domxref("Path2D")}} objects, each of which contains a
+rectangle made using the {{domxref("CanvasRenderingContext2D.rect()", "rect()")}}
+method. We then create a matrix using {{Domxref("DOMMatrix.DOMMatrix", "DOMMatrix()")}}. We then add the second path to the first using
+`addPath()`, also applying the matrix to move the second path to the right.
+Finally, we draw the first path (which now contains both rectangles) using
+{{domxref("CanvasRenderingContext2D.fill()", "fill()")}}.
 
-<pre class="brush: js;">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // Create first path and add a rectangle
@@ -72,22 +74,20 @@ p1.addPath(p2, m);
 
 // Draw the first path
 ctx.fill(p1);
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Adding_a_path_to_an_existing_path', 700, 180) }}</p>
+{{ EmbedLiveSample('Adding_a_path_to_an_existing_path', 700, 180) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining this method: {{domxref("Path2D")}}</li>
-</ul>
+- The interface defining this method: {{domxref("Path2D")}}

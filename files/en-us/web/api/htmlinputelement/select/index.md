@@ -10,66 +10,69 @@ tags:
   - Reference
 browser-compat: api.HTMLInputElement.select
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p>The <strong><code>HTMLInputElement.select()</code></strong> method selects all the text
-	in a {{HTMLElement("textarea")}} element or in an {{HTMLElement("input")}} element
-	that includes a text field.</p>
+The **`HTMLInputElement.select()`** method selects all the text
+in a {{HTMLElement("textarea")}} element or in an {{HTMLElement("input")}} element
+that includes a text field.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>element</em>.select();</pre>
+```js
+element.select();
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>Click the button in this example to select all the text in the
-	<code>&lt;input&gt;</code> element.</p>
+Click the button in this example to select all the text in the
+`<input>` element.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;input type="text" id="text-box" size="20" value="Hello world!"&gt;
-&lt;button onclick="selectText()"&gt;Select text&lt;/button&gt;
-</pre>
+```html
+<input type="text" id="text-box" size="20" value="Hello world!">
+<button onclick="selectText()">Select text</button>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">function selectText() {
+```js
+function selectText() {
   const input = document.getElementById('text-box');
   input.focus();
   input.select();
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Calling <code>element.select()</code> will not necessarily focus the input, so it is
-	often used with {{domxref("HTMLElement.focus")}}.</p>
+Calling `element.select()` will not necessarily focus the input, so it is
+often used with {{domxref("HTMLElement.focus")}}.
 
-<p>In browsers where it is not supported, it is possible to replace it with a call to <a
-		href="/en-US/docs/Web/API/HTMLInputElement/setSelectionRange">HTMLInputElement.setSelectionRange()</a> with
-	parameters 0 and the input's value length:</p>
+In browsers where it is not supported, it is possible to replace it with a call to [HTMLInputElement.setSelectionRange()](/en-US/docs/Web/API/HTMLInputElement/setSelectionRange) with
+parameters 0 and the input's value length:
 
-<pre class="brush: html">&lt;input onClick="this.select();" value="Sample Text" /&gt;
-&lt;!-- equivalent to --&gt;
-&lt;input onClick="this.setSelectionRange(0, this.value.length);" value="Sample Text" /&gt;
-</pre>
+```html
+<input onClick="this.select();" value="Sample Text" />
+<!-- equivalent to -->
+<input onClick="this.setSelectionRange(0, this.value.length);" value="Sample Text" />
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{ HTMLElement("input") }}</li>
-	<li>{{ HTMLElement("textarea") }}</li>
-	<li>{{ domxref("HTMLInputElement") }}</li>
-	<li>{{ domxref("HTMLInputElement.setSelectionRange") }}</li>
-</ul>
+- {{ HTMLElement("input") }}
+- {{ HTMLElement("textarea") }}
+- {{ domxref("HTMLInputElement") }}
+- {{ domxref("HTMLInputElement.setSelectionRange") }}

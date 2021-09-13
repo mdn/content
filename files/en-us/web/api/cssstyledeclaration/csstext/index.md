@@ -8,30 +8,31 @@ tags:
   - Reference
 browser-compat: api.CSSStyleDeclaration.cssText
 ---
-<div>{{APIRef("CSSOM")}}</div>
+{{APIRef("CSSOM")}}
 
-<p>The <code><strong>cssText</strong></code> property of the {{domxref("CSSStyleDeclaration")}} interface returns or sets the text of the element's <strong>inline</strong> style declaration only.</p>
+The **`cssText`** property of the {{domxref("CSSStyleDeclaration")}} interface returns or sets the text of the element's **inline** style declaration only.
 
-<p>To be able to set a <strong>stylesheet</strong> rule dynamically, see <a href="/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information">Using dynamic styling information.</a></p>
+To be able to set a **stylesheet** rule dynamically, see [Using dynamic styling information.](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
 
-<p>Not to be confused with stylesheet style-rule {{domxref("CSSRule.cssText")}}.</p>
+Not to be confused with stylesheet style-rule {{domxref("CSSRule.cssText")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: html">&lt;span id=&quot;s1&quot; style=&quot;color: red;&quot;&gt;
+```html
+<span id="s1" style="color: red;">
   Some text
-&lt;/span&gt;
+</span>
 
-&lt;script&gt;
-  var elem = document.getElementById(&quot;s1&quot;);
-  alert(elem.style.cssText); // &quot;color: red;&quot;
-&lt;/script&gt;
-</pre>
+<script>
+  var elem = document.getElementById("s1");
+  alert(elem.style.cssText); // "color: red;"
+</script>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

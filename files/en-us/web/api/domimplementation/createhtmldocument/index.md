@@ -10,40 +10,41 @@ tags:
   - Reference
 browser-compat: api.DOMImplementation.createHTMLDocument
 ---
-<p>{{ApiRef("DOM")}}</p>
+{{ApiRef("DOM")}}
 
-<p>The
-    <strong><code>DOMImplementation.createHTMLDocument()</code></strong> method creates a
-    new HTML {{ domxref("Document") }}.</p>
+The
+**`DOMImplementation.createHTMLDocument()`** method creates a
+new HTML {{ domxref("Document") }}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">const <var>newDoc</var> = document.implementation.createHTMLDocument(<var>title</var>)</pre>
+```js
+const newDoc = document.implementation.createHTMLDocument(title)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>title</var></code>  {{optional_inline}} (except in IE)</dt>
-  <dd>A {{domxref("DOMString")}} containing the title to give the new HTML document.</dd>
-</dl>
+- `title`  {{optional_inline}} (except in IE)
+  - : A {{domxref("DOMString")}} containing the title to give the new HTML document.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example creates a new HTML document and inserts it into an {{
-  HTMLElement("iframe") }} in the current document.</p>
+This example creates a new HTML document and inserts it into an {{
+  HTMLElement("iframe") }} in the current document.
 
-<p>Here's the HTML for this example:</p>
+Here's the HTML for this example:
 
-<pre class="brush: html">&lt;body&gt;
-  &lt;p&gt;Click &lt;a href="javascript:makeDocument()"&gt;here&lt;/a&gt; to create a new document and insert it below.&lt;/p&gt;
-  &lt;iframe id="theFrame" src="about:blank" /&gt;
-&lt;/body&gt;
-</pre>
+```html
+<body>
+  <p>Click <a href="javascript:makeDocument()">here</a> to create a new document and insert it below.</p>
+  <iframe id="theFrame" src="about:blank" />
+</body>
+```
 
-<p>The JavaScript implementation of <code>makeDocument()</code> follows:</p>
+The JavaScript implementation of `makeDocument()` follows:
 
-<pre class="brush: js">function makeDocument() {
+```js
+function makeDocument() {
   let frame = document.getElementById("theFrame");
 
   let doc = document.implementation.createHTMLDocument("New Document");
@@ -64,43 +65,42 @@ browser-compat: api.DOMImplementation.createHTMLDocument
 
   destDocument.replaceChild(newNode, destDocument.documentElement);
 }
-</pre>
+```
 
-<p>The code in lines 4–12 handle creating the new HTML document and inserting some content
-  into it. Line 4 uses <code>createHTMLDocument()</code> to construct a new HTML document
-  whose {{ HTMLElement("title") }} is <code>"New Document"</code>. Lines 5 and 6 create a
-  new paragraph element with some simple content, and then lines 8–12 handle inserting the
-  new paragraph into the new document.</p>
+The code in lines 4–12 handle creating the new HTML document and inserting some content
+into it. Line 4 uses `createHTMLDocument()` to construct a new HTML document
+whose {{ HTMLElement("title") }} is `"New Document"`. Lines 5 and 6 create a
+new paragraph element with some simple content, and then lines 8–12 handle inserting the
+new paragraph into the new document.
 
-<p>Line 16 pulls the <code>contentDocument</code> of the frame; this is the document into
-  which we'll be injecting the new content. The next two lines handle importing the
-  contents of our new document into the new document's context. Finally, line 20 actually
-  replaces the contents of the frame with the new document's contents.</p>
+Line 16 pulls the `contentDocument` of the frame; this is the document into
+which we'll be injecting the new content. The next two lines handle importing the
+contents of our new document into the new document's context. Finally, line 20 actually
+replaces the contents of the frame with the new document's contents.
 
-<p><a href="https://media.prod.mdn.mozit.cloud/samples/domref/createHTMLDocument.html">View Live Examples</a></p>
+[View Live Examples](https://media.prod.mdn.mozit.cloud/samples/domref/createHTMLDocument.html)
 
-<p>The returned document is pre-constructed with the following HTML:</p>
+The returned document is pre-constructed with the following HTML:
 
-<pre class="brush: html">&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;<var>title</var>&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+```html
+<!doctype html>
+<html>
+<head>
+<title>title</title>
+</head>
+<body>
+</body>
+</html>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("DOMImplementation")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("DOMImplementation")}} interface it belongs to.

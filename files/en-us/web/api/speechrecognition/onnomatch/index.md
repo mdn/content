@@ -2,59 +2,57 @@
 title: SpeechRecognition.onnomatch
 slug: Web/API/SpeechRecognition/onnomatch
 tags:
-- API
-- Experimental
-- Property
-- Reference
-- SpeechRecognition
-- Web Speech API
-- onnomatch
-- recognition
-- speech
+  - API
+  - Experimental
+  - Property
+  - Reference
+  - SpeechRecognition
+  - Web Speech API
+  - onnomatch
+  - recognition
+  - speech
 browser-compat: api.SpeechRecognition.onnomatch
 ---
-<div>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</div>
+{{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>onnomatch</code></strong> property of the
-  {{domxref("SpeechRecognition")}} interface represents an event handler that will run
-  when the speech recognition service returns a final result with no significant
-  recognition (when the
-  <code><a href="/en-US/docs/Web/API/SpeechRecognition/nomatch_event">nomatch</a></code>
-  event fires.)</p>
+The **`onnomatch`** property of the
+{{domxref("SpeechRecognition")}} interface represents an event handler that will run
+when the speech recognition service returns a final result with no significant
+recognition (when the
+[`nomatch`](/en-US/docs/Web/API/SpeechRecognition/nomatch_event)
+event fires.)
 
-<p>This may involve some degree of recognition, which doesn't meet or exceed the
-  {{domxref("SpeechRecognitionAlternative.confidence","confidence")}} threshold.</p>
+This may involve some degree of recognition, which doesn't meet or exceed the
+{{domxref("SpeechRecognitionAlternative.confidence","confidence")}} threshold.
 
-<div class="note">
-  <p><strong>Note:</strong> The <code>onnomatch</code> handler does not yet work properly
-    in Firefox — the speech recognition system always returns a positive match, and then
-    guesses at what item in the grammar it found. This is being worked on.</p>
-</div>
+> **Note:** The `onnomatch` handler does not yet work properly
+> in Firefox — the speech recognition system always returns a positive match, and then
+> guesses at what item in the grammar it found. This is being worked on.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">mySpeechRecognition.onnomatch = function() { ... };
-</pre>
+```js
+mySpeechRecognition.onnomatch = function() { ... };
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var recognition = new SpeechRecognition();
+```js
+var recognition = new SpeechRecognition();
 
 recognition.onnomatch = function() {
   console.log('Speech not recognized');
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)

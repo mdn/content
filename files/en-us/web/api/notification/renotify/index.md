@@ -2,57 +2,58 @@
 title: Notification.renotify
 slug: Web/API/Notification/renotify
 tags:
-- API
-- Experimental
-- Notifications
-- Property
-- Reference
-- renotify
+  - API
+  - Experimental
+  - Notifications
+  - Property
+  - Reference
+  - renotify
 browser-compat: api.Notification.renotify
 ---
-<p>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</p>
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-<p>The <strong><code>renotify</code></strong> read-only property of the
-  {{domxref("Notification")}} interface specifies whether the user should be notified
-  after a new notification replaces an old one, as specified in the <code>renotify</code>
-  option of the {{domxref("Notification.Notification","Notification()")}} constructor.</p>
+The **`renotify`** read-only property of the
+{{domxref("Notification")}} interface specifies whether the user should be notified
+after a new notification replaces an old one, as specified in the `renotify`
+option of the {{domxref("Notification.Notification","Notification()")}} constructor.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>renotify</var> = <var>Notification</var>.renotify;
-</pre>
+```js
+var renotify = Notification.renotify;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A boolean value. <code>false</code> is the default; <code>true</code> makes
-  the notification renotify the user.</p>
+A boolean value. `false` is the default; `true` makes
+the notification renotify the user.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following snippet is intended to fire a notification that renotifies the user after
-  it has been replaced; a simple <code>options</code> object is created, and then the
-  notification is fired using the <code>Notification()</code> constructor.</p>
+The following snippet is intended to fire a notification that renotifies the user after
+it has been replaced; a simple `options` object is created, and then the
+notification is fired using the `Notification()` constructor.
 
-<pre class="brush: js">var options = {
+```js
+var options = {
   body: 'Do you like my body?',
   renotify: true
 }
 
 var n = new Notification('Test notification',options);
 
-console.log(n.renotify) // should log true</pre>
+console.log(n.renotify) // should log true
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using
-      the Notifications API</a></li>
-</ul>
+- [Using
+  the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)

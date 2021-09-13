@@ -2,49 +2,51 @@
 title: VideoTrack.label
 slug: Web/API/VideoTrack/label
 tags:
-- API
-- HTML DOM
-- Media
-- Property
-- Read-only
-- Reference
-- Video
-- Video Track
-- VideoTrack
-- label
-- metadata
-- track
+  - API
+  - HTML DOM
+  - Media
+  - Property
+  - Read-only
+  - Reference
+  - Video
+  - Video Track
+  - VideoTrack
+  - label
+  - metadata
+  - track
 browser-compat: api.VideoTrack.label
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The read-only <strong>{{domxref("VideoTrack")}}</strong>
-    property <code><strong>label</strong></code> returns a string specifying the video
-    track's human-readable label, if one is available; otherwise, it returns an empty
-    string.</p>
+The read-only **{{domxref("VideoTrack")}}**
+property **`label`** returns a string specifying the video
+track's human-readable label, if one is available; otherwise, it returns an empty
+string.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>videoTrackLabel</em> = <em>VideoTrack</em>.label;</pre>
+```js
+var videoTrackLabel = VideoTrack.label;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} specifying the track's human-readable label, if one is
-  available in the track metadata. Otherwise, an empty string (<code>""</code>) is
-  returned.</p>
+A {{domxref("DOMString")}} specifying the track's human-readable label, if one is
+available in the track metadata. Otherwise, an empty string (`""`) is
+returned.
 
-<p>For example, a track whose {{domxref("VideoTrack.kind", "kind")}} is
-  <code>"sign"</code> might have a <code>label</code> such as
-  <code>"A sign-language interpretation."</code>.</p>
+For example, a track whose {{domxref("VideoTrack.kind", "kind")}} is
+`"sign"` might have a `label` such as
+`"A sign-language interpretation."`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example returns an array of track kinds and labels for potential use in a user
-  interface to select video tracks for a specified media element. The list is filtered to
-  only allow certain track kinds through.</p>
+This example returns an array of track kinds and labels for potential use in a user
+interface to select video tracks for a specified media element. The list is filtered to
+only allow certain track kinds through.
 
-<pre class="brush: js">function getTrackList(el) {
+```js
+function getTrackList(el) {
   var trackList = [];
   const wantedKinds = [
     "main", "alternative", "commentary"
@@ -60,17 +62,18 @@ browser-compat: api.VideoTrack.label
     }
   });
   return trackList;
-}</pre>
+}
+```
 
-<p>The resulting <code>trackList</code> contains an array of video tracks whose
-  <code>kind</code> is one of those in the array <code>wantedKinds</code>, with each entry
-  providing the track's {{domxref("VideoTrack.id", "id")}}, {{domxref("VideoTrack.kind",
-  "kind")}}, and {{domxref("VideoTrack.label", "label")}}.</p>
+The resulting `trackList` contains an array of video tracks whose
+`kind` is one of those in the array `wantedKinds`, with each entry
+providing the track's {{domxref("VideoTrack.id", "id")}}, {{domxref("VideoTrack.kind",
+  "kind")}}, and {{domxref("VideoTrack.label", "label")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

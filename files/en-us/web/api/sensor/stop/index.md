@@ -2,41 +2,45 @@
 title: Sensor.stop()
 slug: Web/API/Sensor/stop
 tags:
-- API
-- Generic Sensor API
-- Method
-- Reference
-- Sensor
-- Sensor APIs
-- Sensors
-- stop()
+  - API
+  - Generic Sensor API
+  - Method
+  - Reference
+  - Sensor
+  - Sensor APIs
+  - Sensors
+  - stop()
 browser-compat: api.Sensor.stop
 ---
-<div>{{APIRef("Sensor API")}}</div>
+{{APIRef("Sensor API")}}
 
-<p>The <strong><code>stop</code></strong> method of the
-    {{domxref("Sensor")}} interface deactivates the current sensor.</p>
+The **`stop`** method of the
+{{domxref("Sensor")}} interface deactivates the current sensor.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">Sensor.stop()</pre>
+```js
+Sensor.stop()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{jsxref('undefined')}}</p>
+{{jsxref('undefined')}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">// TBD</pre>
+```js
+// TBD
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

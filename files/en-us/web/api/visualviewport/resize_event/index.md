@@ -9,55 +9,63 @@ tags:
   - resize
 browser-compat: api.VisualViewport.resize_event
 ---
-<div>{{APIRef("Window")}}</div>
+{{APIRef("Window")}}
 
-<p>The <strong><code>resize</code></strong> event of the <code><a href="/en-US/docs/Web/API/VisualViewport">VisualViewport</a></code> interface is fired when the visual viewport is resized.</p>
+The **`resize`** event of the [`VisualViewport`](/en-US/docs/Web/API/VisualViewport) interface is fired when the visual viewport is resized.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td><code><a href="/en-US/docs/Web/API/VisualViewport/onresize">onresize</a></code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/API/VisualViewport/onresize"
+            >onresize</a
+          ></code
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>You can use the <code>resize</code> event in an <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener</a></code> method:</p>
+You can use the `resize` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
-<pre class="brush: js">visualViewport.addEventListener('resize', function() {
+```js
+visualViewport.addEventListener('resize', function() {
   ...
-});</pre>
+});
+```
 
-<p>Or use the <code><a href="/en-US/docs/Web/API/VisualViewport/onresize">onresize</a></code> event handler property:</p>
+Or use the [`onresize`](/en-US/docs/Web/API/VisualViewport/onresize) event handler property:
 
-<pre class="brush: js">visualViewport.onresize = function() {
+```js
+visualViewport.onresize = function() {
   ...
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Visual_Viewport_API">Visual Viewport API homepage</a></li>
-</ul>
+- [Visual Viewport API homepage](/en-US/docs/Web/API/Visual_Viewport_API)

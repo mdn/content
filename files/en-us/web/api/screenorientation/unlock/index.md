@@ -2,37 +2,39 @@
 title: ScreenOrientation.unlock()
 slug: Web/API/ScreenOrientation/unlock
 tags:
-- API
-- Orientation
-- Property
-- Reference
-- Screen Orientation API
-- ScreenOrientation
-- Unlock
+  - API
+  - Orientation
+  - Property
+  - Reference
+  - Screen Orientation API
+  - ScreenOrientation
+  - Unlock
 browser-compat: api.ScreenOrientation.unlock
 ---
-<p>{{APIRef("Screen Orientation")}}{{SeeCompatTable}}</p>
+{{APIRef("Screen Orientation")}}{{SeeCompatTable}}
 
-<p>The <strong><code>unlock()</code></strong> property of the
-  {{domxref("ScreenOrientation")}} interface unlocks the orientation of the containing
-  document from its default orientation.</p>
+The **`unlock()`** property of the
+{{domxref("ScreenOrientation")}} interface unlocks the orientation of the containing
+document from its default orientation.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">screen.orientation.unlock()</pre>
+```js
+screen.orientation.unlock()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Void.</p>
+Void.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

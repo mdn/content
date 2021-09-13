@@ -2,58 +2,57 @@
 title: BasicCardRequest.supportedNetworks
 slug: Web/API/BasicCardRequest/supportedNetworks
 tags:
-- API
-- Basic Card Payment
-- BasicCardRequest
-- Experimental
-- Payment Request
-- Payment Request API
-- Property
-- Reference
-- supportedNetworks
-- Deprecated
-- Non-standard
+  - API
+  - Basic Card Payment
+  - BasicCardRequest
+  - Experimental
+  - Payment Request
+  - Payment Request API
+  - Property
+  - Reference
+  - supportedNetworks
+  - Deprecated
+  - Non-standard
 browser-compat: api.BasicCardRequest.supportedNetworks
 ---
-<p>{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}</p>
+{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
 
-<p>The <strong><code>supportedNetworks</code></strong> property of the
-  {{domxref("BasicCardRequest")}} dictionary contains an array of
-  {{domxref("DOMString")}}s representing the card networks that the retailer supports
-  (e.g. <code>amex</code>, <code>mastercard</code>).</p>
+The **`supportedNetworks`** property of the
+{{domxref("BasicCardRequest")}} dictionary contains an array of
+{{domxref("DOMString")}}s representing the card networks that the retailer supports
+(e.g. `amex`, `mastercard`).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>supportedNetworks</em> : [<em>value [,</em> <em>...</em> <em>value]</em>]</pre>
+```js
+supportedNetworks : [value [, ... value]]
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An array containing one or more {{domxref("DOMString")}}s, which describe the card
-  networks the retailer supports. Legal values are defined in the W3C's document <a
-    href="https://www.w3.org/Payments/card-network-ids">Card Network Identifiers Approved
-    for use with Payment Request API</a>, and are currently:</p>
+An array containing one or more {{domxref("DOMString")}}s, which describe the card
+networks the retailer supports. Legal values are defined in the W3C's document [Card Network Identifiers Approved
+for use with Payment Request API](https://www.w3.org/Payments/card-network-ids), and are currently:
 
-<ul>
-  <li><code>amex</code></li>
-  <li><code>cartebancaire</code></li>
-  <li><code>diners</code></li>
-  <li><code>discover</code></li>
-  <li><code>jcb</code></li>
-  <li><code>mastercard</code></li>
-  <li><code>mir</code></li>
-  <li><code>unionpay</code></li>
-  <li><code>visa</code></li>
-</ul>
+- `amex`
+- `cartebancaire`
+- `diners`
+- `discover`
+- `jcb`
+- `mastercard`
+- `mir`
+- `unionpay`
+- `visa`
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example shows a sample definition of the first parameter of the
-  {{domxref("PaymentRequest.PaymentRequest", "PaymentRequest()")}} constructor, the
-  <code>data</code> property of which contains <code>supportedNetworks</code> and
-  <code>supportedTypes</code> properties.</p>
+The following example shows a sample definition of the first parameter of the
+{{domxref("PaymentRequest.PaymentRequest", "PaymentRequest()")}} constructor, the
+`data` property of which contains `supportedNetworks` and
+`supportedTypes` properties.
 
-<pre class="brush: js">var supportedInstruments = [{
+```js
+var supportedInstruments = [{
   supportedMethods: 'basic-card',
   data: {
     supportedNetworks: ['visa', 'mastercard', 'amex', 'jcb',
@@ -67,12 +66,12 @@ var details = { ... };
 var options = { ... };
 
 var request = new PaymentRequest(supportedInstruments, details, options);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This feature is no longer part of any specification.</p>
+This feature is no longer part of any specification.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

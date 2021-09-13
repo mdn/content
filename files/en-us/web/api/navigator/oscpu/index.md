@@ -10,83 +10,52 @@ tags:
   - Reference
 browser-compat: api.Navigator.oscpu
 ---
-<p>{{ ApiRef("HTML DOM") }} {{Deprecated_Header}}</p>
+{{ ApiRef("HTML DOM") }} {{Deprecated_Header}}
 
-<p>The <code><strong>Navigator.oscpu</strong></code> property returns a string that identifies the current operating system.</p>
+The **`Navigator.oscpu`** property returns a string that identifies the current operating system.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>oscpuInfo</var> = navigator.oscpu
-</pre>
+```js
+oscpuInfo = navigator.oscpu
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} providing a string which identifies the operating system on which the browser is running.</p>
+A {{domxref("DOMString")}} providing a string which identifies the operating system on which the browser is running.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Operating system</th>
-   <th><code>oscpuInfo</code> string format</th>
-  </tr>
-  <tr>
-   <td>OS/2</td>
-   <td><code>OS/2 Warp x (either 3, 4 or 4.5)</code></td>
-  </tr>
-  <tr>
-   <td>Windows CE</td>
-   <td><code>WindowsCE x.y</code></td>
-  </tr>
-  <tr>
-   <td>Windows 64-bit (64-bit build)</td>
-   <td><code>Windows NT x.y; Win64; x64</code></td>
-  </tr>
-  <tr>
-   <td>Windows 64-bit (32-bit build)</td>
-   <td><code>Windows NT x.y; WOW64</code></td>
-  </tr>
-  <tr>
-   <td>Windows 32-bit</td>
-   <td><code>Windows NT x.y</code></td>
-  </tr>
-  <tr>
-   <td>Mac OS X (PPC build)</td>
-   <td><code>PowerPC Mac OS X version x.y</code></td>
-  </tr>
-  <tr>
-   <td>Mac OS X (i386/x64 build)</td>
-   <td><code>Intel Mac OS X</code> or <code>macOS version x.y</code></td>
-  </tr>
-  <tr>
-   <td>Linux 64-bit (32-bit build)</td>
-   <td>Output of <code>uname -s</code> followed by <code>i686 on x86_64</code></td>
-  </tr>
-  <tr>
-   <td>Linux</td>
-   <td>Output of <code>uname -sm</code></td>
-  </tr>
- </tbody>
-</table>
+| Operating system              | `oscpuInfo` string format                         |
+| ----------------------------- | ------------------------------------------------- |
+| OS/2                          | `OS/2 Warp x (either 3, 4 or 4.5)`                |
+| Windows CE                    | `WindowsCE x.y`                                   |
+| Windows 64-bit (64-bit build) | `Windows NT x.y; Win64; x64`                      |
+| Windows 64-bit (32-bit build) | `Windows NT x.y; WOW64`                           |
+| Windows 32-bit                | `Windows NT x.y`                                  |
+| Mac OS X (PPC build)          | `PowerPC Mac OS X version x.y`                    |
+| Mac OS X (i386/x64 build)     | `Intel Mac OS X` or `macOS version x.y`           |
+| Linux 64-bit (32-bit build)   | Output of `uname -s` followed by `i686 on x86_64` |
+| Linux                         | Output of `uname -sm`                             |
 
-<p>In this table <code>x.y</code> refers to the version of the operating system
+In this table `x.y` refers to the version of the operating system
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">function osInfo() {
+```js
+function osInfo() {
   alert(navigator.oscpu);
 }
 
 osInfo(); // alerts "Windows NT 6.0" for example
-</pre>
+```
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>Unless your code is privileged (chrome or at least has the UniversalBrowserRead privilege), it may get the value of the <code>general.oscpu.override</code> preference instead of the true platform.</p>
+Unless your code is privileged (chrome or at least has the UniversalBrowserRead privilege), it may get the value of the `general.oscpu.override` preference instead of the true platform.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

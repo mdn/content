@@ -14,32 +14,33 @@ tags:
   - state
 browser-compat: api.RTCIceTransport.gatheringState
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The read-only <strong>{{domxref("RTCIceTransport")}}</strong> property <strong><code>gatheringState</code></strong> returns a {{domxref("DOMString")}} that indicates the current gathering state of the ICE agent: <code>"new"</code>, <code>"gathering"</code>, or <code>"complete"</code>.</p>
+The read-only **{{domxref("RTCIceTransport")}}** property **`gatheringState`** returns a {{domxref("DOMString")}} that indicates the current gathering state of the ICE agent: `"new"`, `"gathering"`, or `"complete"`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>gatherState</em> = <em>RTCIceTransport</em>.gatheringState;</pre>
+```js
+gatherState = RTCIceTransport.gatheringState;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} that indicates the current state of the ICE agent's candidate gathering process:</p>
+A {{domxref("DOMString")}} that indicates the current state of the ICE agent's candidate gathering process:
+
 <!-- RTCIceGathererState enum-->
 
-<dl>
-  <dt><code>"new"</code></dt>
-  <dd>The {{domxref("RTCIceTransport")}} is newly created and has not yet started to gather ICE candidates.</dd>
-  <dt><code>"gathering"</code></dt>
-  <dd>The transport is in the process of gathering candidates.</dd>
-  <dt><code>"complete"</code></dt>
-  <dd>The transport has finished gathering ICE candidates and has sent the end-of-candidates indicator to the remote device. The transport won't gather any further candidates unless an <a href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart">ICE restart</a> occurs, at which point the gathering process starts over from scratch.</dd>
- </dl>
+- `"new"`
+  - : The {{domxref("RTCIceTransport")}} is newly created and has not yet started to gather ICE candidates.
+- `"gathering"`
+  - : The transport is in the process of gathering candidates.
+- `"complete"`
+  - : The transport has finished gathering ICE candidates and has sent the end-of-candidates indicator to the remote device. The transport won't gather any further candidates unless an [ICE restart](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart) occurs, at which point the gathering process starts over from scratch.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -9,52 +9,49 @@ tags:
   - Reference
 browser-compat: api.CSSStyleRule.style
 ---
-<p>{{ APIRef("CSSOM") }}</p>
+{{ APIRef("CSSOM") }}
 
-<p>The read-only <strong><code>style</code></strong> property is the {{ domxref("CSSStyleDeclaration") }} interface for the <a href="https://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#block">declaration block</a> of the {{ DOMXref("CSSStyleRule") }}.</p>
+The read-only **`style`** property is the {{ domxref("CSSStyleDeclaration") }} interface for the [declaration block](https://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#block) of the {{ DOMXref("CSSStyleRule") }}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="eval"><var>styleObj</var> = <var>cssRule</var>.style
-</pre>
+    styleObj = cssRule.style
 
-<h3>Value</h3>
+### Value
 
-<p>A {{domxref("CSSStyleDeclaration")}} object, with the following properties:</p>
+A {{domxref("CSSStyleDeclaration")}} object, with the following properties:
 
-<dl>
-  <dt>computed flag</dt>
-  <dd>Unset.</dd>
-  <dt>declarations</dt>
-  <dd>The declared declarations in the rule, in the order they were specified, shorthand properties expanded to longhands.</dd>
-  <dt>parent CSS rule</dt>
-  <dd>The context object, which is an alias for <a href="https://heycam.github.io/webidl/#this">this</a>.</dd>
-  <dt>owner node</dt>
-  <dd>Null.</dd>
-</dl>
+- computed flag
+  - : Unset.
+- declarations
+  - : The declared declarations in the rule, in the order they were specified, shorthand properties expanded to longhands.
+- parent CSS rule
+  - : The context object, which is an alias for [this](https://heycam.github.io/webidl/#this).
+- owner node
+  - : Null.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>
-  The CSS includes one style rule. This will be the first {{domxref("CSSRule")}} returned by <code>document.styleSheets[0].cssRules</code>.
-  <code>myRules[0].style</code> therefore returns a {{domxref("CSSStyleDeclaration")}} object representing the declarations defined for <code>h1</code>.
-</p>
+The CSS includes one style rule. This will be the first {{domxref("CSSRule")}} returned by `document.styleSheets[0].cssRules`.
+`myRules[0].style` therefore returns a {{domxref("CSSStyleDeclaration")}} object representing the declarations defined for `h1`.
 
-<pre class="brush: css">h1 {
+```css
+h1 {
   color: pink;
-}</pre>
+}
+```
 
-<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].style); // a CSSStyleDeclaration representing the declarations on the h1.</pre>
+```js
+let myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0].style); // a CSSStyleDeclaration representing the declarations on the h1.
+```
 
-<div class="note notecard">
-<p><strong>Note:</strong> The declaration block is that part of the style rule that appears within the braces and that actually provides the style definitions (for the selector, the part that comes before the braces).</p>
-</div>
+> **Note:** The declaration block is that part of the style rule that appears within the braces and that actually provides the style definitions (for the selector, the part that comes before the braces).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

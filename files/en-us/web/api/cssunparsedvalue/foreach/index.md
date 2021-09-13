@@ -2,72 +2,68 @@
 title: CSSUnparsedValue.forEach()
 slug: Web/API/CSSUnparsedValue/forEach
 tags:
-- API
-- CSS Typed Object Model API
-- CSSUnparsedValue
-- Constructor
-- Experimental
-- Houdini
-- Method
-- NeedsExample
-- Reference
-- forEach()
+  - API
+  - CSS Typed Object Model API
+  - CSSUnparsedValue
+  - Constructor
+  - Experimental
+  - Houdini
+  - Method
+  - NeedsExample
+  - Reference
+  - forEach()
 browser-compat: api.CSSUnparsedValue.forEach
 ---
-<div>{{draft}}{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}</div>
+{{draft}}{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
-<p>The <strong><code>CSSUnparsedValue.forEach()</code></strong> method
-  executes a provided function once for each element of the
-  {{domxref('CSSUnparsedValue')}}.</p>
+The **`CSSUnparsedValue.forEach()`** method
+executes a provided function once for each element of the
+{{domxref('CSSUnparsedValue')}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>CSSUnparsedValue</var>.forEach(function <var>callback(currentValue[, index[, array]]) {
+```js
+CSSUnparsedValue.forEach(function callback(currentValue[, index[, array]]) {
     // your iterator
-}</var>[, <var>thisArg</var>]);</pre>
+}[, thisArg]);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>callback</code></dt>
-  <dd>The function to execute for each element, taking three arguments:
-    <dl>
-      <dt><code><var>currentValue</var></code></dt>
-      <dd>The value of the current element being processed.</dd>
-      <dt><code><var>index</var></code>{{optional_inline}}</dt>
-      <dd>The index of the current element being processed.</dd>
-      <dt><code><var>array</var></code>{{optional_inline}}</dt>
-      <dd>The <code>CSSUnparsedValue</code> that <code>forEach()</code> is being called
-        on.</dd>
-    </dl>
-  </dd>
-  <dt><code><var>thisArg</var></code> {{Optional_inline}}</dt>
-  <dd>
-    <p>Value to use as <code><strong>this</strong></code> (i.e the reference
-      <code>Object</code>) when executing <code><var>callback</var></code>.</p>
-  </dd>
-</dl>
+- `callback`
 
-<h3 id="Return_value">Return value</h3>
+  - : The function to execute for each element, taking three arguments:
 
-<p>{{jsxref("undefined")}}.</p>
+    - `currentValue`
+      - : The value of the current element being processed.
+    - `index`{{optional_inline}}
+      - : The index of the current element being processed.
+    - `array`{{optional_inline}}
+      - : The `CSSUnparsedValue` that `forEach()` is being called
+        on.
 
-<h2 id="Specifications">Specifications</h2>
+- `thisArg` {{Optional_inline}}
+  - : Value to use as **`this`** (i.e the reference
+    `Object`) when executing `callback`.
+
+### Return value
+
+{{jsxref("undefined")}}.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("CSSUnparsedValue.CSSUnparsedValue()")}}</li>
-  <li>{{domxref("CSSUnparsedValue.entries")}}</li>
-  <li>{{domxref("CSSUnparsedValue.keys")}}</li>
-  <li>{{domxref("CSSUnparsedValue.length")}}</li>
-  <li>{{domxref("CSSUnparsedValue.values")}}</li>
-  <li><a href="/en-US/docs/Web/API/CSS_Typed_OM_API/Guide">Using the CSS Typed OM</a></li>
-  <li><a href="/en-US/docs/Web/API/CSS_Typed_OM_API">CSS Typed Object Model API</a></li>
-</ul>
+- {{domxref("CSSUnparsedValue.CSSUnparsedValue()")}}
+- {{domxref("CSSUnparsedValue.entries")}}
+- {{domxref("CSSUnparsedValue.keys")}}
+- {{domxref("CSSUnparsedValue.length")}}
+- {{domxref("CSSUnparsedValue.values")}}
+- [Using the CSS Typed OM](/en-US/docs/Web/API/CSS_Typed_OM_API/Guide)
+- [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)

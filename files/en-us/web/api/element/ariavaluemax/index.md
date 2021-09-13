@@ -11,35 +11,40 @@ tags:
   - Element
 browser-compat: api.Element.ariaValueMax
 ---
-<div>{{DefaultAPISidebar("DOM")}}</div>
+{{DefaultAPISidebar("DOM")}}
 
-<p>The <strong><code>ariaValueMax</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemax_attribute"><code>aria-valuemax</code></a> attribute, which defines the maximum allowed value for a range widget.</p>
+The **`ariaValueMax`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemax_attribute) attribute, which defines the maximum allowed value for a range widget.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox notranslate">var <var>ariaValueMax</var> = element.ariaValueMax;
-<var>element</var>.ariaValueMax = <var>ariaValueMax</var></pre>
+    var ariaValueMax = element.ariaValueMax;
+    element.ariaValueMax = ariaValueMax
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString")}} which contains a number.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("DOMString")}} which contains a number.
 
-<p>In this example the <code>aria-valuemax</code> attribute on the element with an ID of <code>slider</code> is set to "7". Using <code>ariaValueMax</code> we update the value to "6".</p>
+## Examples
 
-<pre class="brush: html">&lt;div role="slider" aria-valuenow="1"
+In this example the `aria-valuemax` attribute on the element with an ID of `slider` is set to "7". Using `ariaValueMax` we update the value to "6".
+
+```html
+<div role="slider" aria-valuenow="1"
   aria-valuemin="1" aria-valuemax="7"
-	aria-valuetext="Sunday"&gt;</pre>
+	aria-valuetext="Sunday">
+```
 
-<pre class="brush: js">let el = document.getElementById('slider');
+```js
+let el = document.getElementById('slider');
 console.log(el.ariaValueMax); // 7
 el.ariaValueMax = "6";
-console.log(el.ariaValueMax); // 6</pre>
+console.log(el.ariaValueMax); // 6
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -9,49 +9,51 @@ tags:
   - SVGMarkerElement
 browser-compat: api.SVGMarkerElement.markerUnits
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <strong><code>markerUnits</code></strong> read-only property of the {{domxref("SVGMarkerElement")}} interface returns an {{domxref("SVGAnimatedEnumeration")}} object. This object returns an integer which represents the keyword values that the {{SVGattr("markerUnits")}} attribute accepts.</p>
+The **`markerUnits`** read-only property of the {{domxref("SVGMarkerElement")}} interface returns an {{domxref("SVGAnimatedEnumeration")}} object. This object returns an integer which represents the keyword values that the {{SVGattr("markerUnits")}} attribute accepts.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">let markerUnits = SVGMarkerElement.markerUnits;</pre>
+    let markerUnits = SVGMarkerElement.markerUnits;
 
-<h3>Value</h3>
-<p>An {{domxref("SVGAnimatedEnumeration")}} object. The <code>baseVal</code> property of this object contains one of the following values:</p>
+### Value
 
-<dl>
-  <dt>0</dt>
-  <dd><code>SVG_MARKERUNITS_UNKNOWN</code> which means that the {{SVGattr("markerUnits")}} attribute has a value other than the two predefined keywords.</dd>
-  <dt>1</dt>
-  <dd><code>SVG_MARKERUNITS_USERSPACEONUSE</code> which means that the {{SVGattr("markerUnits")}} attribute has the keyword value <code>userSpaceOnUse</code>.</dd>
-  <dt>2</dt>
-  <dd><code>SVG_MARKERUNITS_STROKEWIDTH</code> which means that the {{SVGattr("markerUnits")}} attribute has the keyword value <code>strokeWidth</code>.</dd>
-</dl>
+An {{domxref("SVGAnimatedEnumeration")}} object. The `baseVal` property of this object contains one of the following values:
 
-<h2 id="Examples">Examples</h2>
+- 0
+  - : `SVG_MARKERUNITS_UNKNOWN` which means that the {{SVGattr("markerUnits")}} attribute has a value other than the two predefined keywords.
+- 1
+  - : `SVG_MARKERUNITS_USERSPACEONUSE` which means that the {{SVGattr("markerUnits")}} attribute has the keyword value `userSpaceOnUse`.
+- 2
+  - : `SVG_MARKERUNITS_STROKEWIDTH` which means that the {{SVGattr("markerUnits")}} attribute has the keyword value `strokeWidth`.
 
-<p>The <code>markerUnits</code> property returns an {{domxref("SVGAnimatedEnumeration")}} object that contains the value of the {{SVGattr("markerUnits")}} attribute.</p>
+## Examples
 
-<pre class="brush: html">&lt;svg id="svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;defs&gt;
-    &lt;marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
+The `markerUnits` property returns an {{domxref("SVGAnimatedEnumeration")}} object that contains the value of the {{SVGattr("markerUnits")}} attribute.
+
+```html
+<svg id="svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
         markerWidth="6" markerHeight="6"
         orient="auto-start-reverse"
-        markerUnits="strokeWidth"&gt;
-      &lt;path d="M 0 0 L 10 5 L 0 10 z" /&gt;
-    &lt;/marker&gt;
-  &lt;/defs&gt;
-&lt;/svg&gt;</pre>
+        markerUnits="strokeWidth">
+      <path d="M 0 0 L 10 5 L 0 10 z" />
+    </marker>
+  </defs>
+</svg>
+```
 
-<pre class="brush: js">let marker = document.getElementById("arrow");
-console.log(marker.markerUnits.baseVal); // 2</pre>
+```js
+let marker = document.getElementById("arrow");
+console.log(marker.markerUnits.baseVal); // 2
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
+## Browser compatibility
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<p>{{Compat}}</p>
+{{Compat}}

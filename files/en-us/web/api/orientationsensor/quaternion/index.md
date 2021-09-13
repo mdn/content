@@ -2,46 +2,48 @@
 title: OrientationSensor.quaternion
 slug: Web/API/OrientationSensor/quaternion
 tags:
-- API
-- Generic Sensor API
-- Orientation Sensor API
-- OrientationSensor
-- Property
-- Reference
-- Sensor
-- Sensor APIs
-- Sensors
+  - API
+  - Generic Sensor API
+  - Orientation Sensor API
+  - OrientationSensor
+  - Property
+  - Reference
+  - Sensor
+  - Sensor APIs
+  - Sensors
 browser-compat: api.OrientationSensor.quaternion
 ---
-<div>{{APIRef("Sensor API")}}</div>
+{{APIRef("Sensor API")}}
 
-<p>The <strong><code>quaternion</code></strong> read-only
-    property of the {{domxref("OrientationSensor")}} interface returns a four element
-    {{jsxref('Array')}} whose elements contain the components of the unit
-    {{Glossary("quaternion")}} representing the device's orientation.
-</p>
+The **`quaternion`** read-only
+property of the {{domxref("OrientationSensor")}} interface returns a four element
+{{jsxref('Array')}} whose elements contain the components of the unit
+{{Glossary("quaternion")}} representing the device's orientation.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>quaternion</var> = <var>orientationInstance</var>.quaternion</pre>
+```js
+var quaternion = orientationInstance.quaternion
+```
 
-<p>Because {{domxref('OrientationSensor')}} is a base class, <code>quaternion</code> may
-  only be read from one of its derived classes.</p>
+Because {{domxref('OrientationSensor')}} is a base class, `quaternion` may
+only be read from one of its derived classes.
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{jsxref('Array')}} whose values are the x, y, z, and w components of the quaternion
-  representing the device orientation.</p>
+An {{jsxref('Array')}} whose values are the x, y, z, and w components of the quaternion
+representing the device orientation.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">// TBD</pre>
+```js
+// TBD
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

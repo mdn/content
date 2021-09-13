@@ -2,33 +2,36 @@
 title: NDEFRecord.data
 slug: Web/API/NDEFRecord/data
 tags:
-- NDEF
-- Reference
-- Web NFC
+  - NDEF
+  - Reference
+  - Web NFC
 browser-compat: api.NDEFRecord.data
 ---
-<p>{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}</p>
+{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 
-<p>The <strong><code>data</code></strong>
-    property of the {{DOMxRef("NDEFRecord")}} interface returns a
-    {{jsxref("DataView")}} containing the raw bytes of the record's payload.</p>
+The **`data`**
+property of the {{DOMxRef("NDEFRecord")}} interface returns a
+{{jsxref("DataView")}} containing the raw bytes of the record's payload.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">NDEFRecord.data</pre>
+```js
+NDEFRecord.data
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{jsxref("DataView")}} that contains encoded payload data of the record.</p>
+A {{jsxref("DataView")}} that contains encoded payload data of the record.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example loops over the records in an {{domxref("NDEFMessage")}}
+The following example loops over the records in an {{domxref("NDEFMessage")}}
 object, which is retrieved from {{domxref("NDEFReadingEvent.message")}}. After
 selecting a record based on its {{domxref("NDEFRecord.mediaType",
-"mediaType")}}, it then decodes what's stored in the <code>data</code> property.</p>
+"mediaType")}}, it then decodes what's stored in the `data` property.
 
-<pre class="brush: js">const ndef = new NDEFReader();
+```js
+const ndef = new NDEFReader();
   await ndef.scan();
   ndef.onreading = (event) => {
     const decoder = new TextDecoder();
@@ -39,12 +42,13 @@ selecting a record based on its {{domxref("NDEFRecord.mediaType",
         console.log(`${json.name} is ${article} ${json.title}`);
       }
     }
-  };</pre>
+  };
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

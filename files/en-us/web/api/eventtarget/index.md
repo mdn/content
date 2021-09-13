@@ -9,40 +9,36 @@ tags:
   - Interface
 browser-compat: api.EventTarget
 ---
-<p>{{ApiRef("DOM Events")}}</p>
+{{ApiRef("DOM Events")}}
 
-<p><strong><code>EventTarget</code></strong> is a DOM interface implemented by objects that can receive events and may have listeners for them.</p>
+**`EventTarget`** is a DOM interface implemented by objects that can receive events and may have listeners for them.
 
-<p>{{domxref("Element")}}, {{domxref("Document")}}, and {{domxref("Window")}} are the most common event targets, but other objects can be event targets, too. For example {{domxref("XMLHttpRequest")}}, {{domxref("AudioNode")}}, {{domxref("AudioContext")}}, and others.</p>
+{{domxref("Element")}}, {{domxref("Document")}}, and {{domxref("Window")}} are the most common event targets, but other objects can be event targets, too. For example {{domxref("XMLHttpRequest")}}, {{domxref("AudioNode")}}, {{domxref("AudioContext")}}, and others.
 
-<p>Many event targets (including elements, documents, and windows) also support setting <a href="/en-US/docs/Web/Events/Event_handlers">event handlers</a> via <code>on<var>event</var></code> properties and attributes.</p>
+Many event targets (including elements, documents, and windows) also support setting [event handlers](/en-US/docs/Web/Events/Event_handlers) via `onevent` properties and attributes.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
-	<dt>{{domxref("EventTarget.EventTarget()", "EventTarget()")}}</dt>
-	<dd>Creates a new <code>EventTarget</code> object instance.</dd>
-</dl>
+- {{domxref("EventTarget.EventTarget()", "EventTarget()")}}
+  - : Creates a new `EventTarget` object instance.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
-	<dt>{{domxref("EventTarget.addEventListener()", "<var>EventTarget</var>.addEventListener()")}}</dt>
-	<dd>Registers an event handler of a specific event type on the <code><var>EventTarget</var></code>.</dd>
-	<dt>{{domxref("EventTarget.removeEventListener()", "<var>EventTarget</var>.removeEventListener()")}}</dt>
-	<dd>Removes an event listener from the <code><var>EventTarget</var></code>.</dd>
-	<dt>{{domxref("EventTarget.dispatchEvent()", "<var>EventTarget</var>.dispatchEvent()")}}</dt>
-	<dd>Dispatches an event to this <code><var>EventTarget</var></code>.</dd>
-</dl>
+- {{domxref("EventTarget.addEventListener()", "<var>EventTarget</var>.addEventListener()")}}
+  - : Registers an event handler of a specific event type on the `EventTarget`.
+- {{domxref("EventTarget.removeEventListener()", "<var>EventTarget</var>.removeEventListener()")}}
+  - : Removes an event listener from the `EventTarget`.
+- {{domxref("EventTarget.dispatchEvent()", "<var>EventTarget</var>.dispatchEvent()")}}
+  - : Dispatches an event to this `EventTarget`.
 
+## Example
 
-<h2 id="Example">Example</h2>
+### Simple implementation of EventTarget
 
-<h3 id="Simple_implementation_of_EventTarget">Simple implementation of EventTarget</h3>
-
-<pre class="brush: js">var EventTarget = function() {
+```js
+var EventTarget = function() {
   this.listeners = {};
 };
 
@@ -59,7 +55,7 @@ EventTarget.prototype.removeEventListener = function(type, callback) {
     return;
   }
   var stack = this.listeners[type];
-  for (var i = 0, l = stack.length; i &lt; l; i++) {
+  for (var i = 0, l = stack.length; i < l; i++) {
     if (stack[i] === callback){
       stack.splice(i, 1);
       return;
@@ -73,25 +69,23 @@ EventTarget.prototype.dispatchEvent = function(event) {
   }
   var stack = this.listeners[event.type].slice();
 
-  for (var i = 0, l = stack.length; i &lt; l; i++) {
+  for (var i = 0, l = stack.length; i < l; i++) {
     stack[i].call(this, event);
   }
   return !event.defaultPrevented;
 };
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><a href="/en-US/docs/Web/Events">Event reference</a> - the events available in the platform.</li>
-	<li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li>
-	<li>{{domxref("Event")}} interface</li>
-</ul>
+- [Event reference](/en-US/docs/Web/Events) - the events available in the platform.
+- [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events)
+- {{domxref("Event")}} interface

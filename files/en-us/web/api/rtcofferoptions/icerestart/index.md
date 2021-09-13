@@ -2,68 +2,67 @@
 title: RTCOfferOptions.iceRestart
 slug: Web/API/RTCOfferOptions/iceRestart
 tags:
-- Configuration
-- ICE
-- ICE Restart
-- Offer
-- Option
-- Property
-- RTCOfferOptions
-- Reference
-- SDP
-- Setting
-- WebRTC
-- WebRTC API
-- iceRestart
+  - Configuration
+  - ICE
+  - ICE Restart
+  - Offer
+  - Option
+  - Property
+  - RTCOfferOptions
+  - Reference
+  - SDP
+  - Setting
+  - WebRTC
+  - WebRTC API
+  - iceRestart
 browser-compat: api.RTCOfferOptions.iceRestart
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <code><strong>iceRestart</strong></code> property of the
-  <strong>{{domxref("RTCOfferOptions")}}</strong> dictionary is a Boolean value which,
-  when <code>true</code>, tells the {{domxref("RTCPeerConnection")}} to start ICE
-  renegotiation.</p>
+The **`iceRestart`** property of the
+**{{domxref("RTCOfferOptions")}}** dictionary is a Boolean value which,
+when `true`, tells the {{domxref("RTCPeerConnection")}} to start ICE
+renegotiation.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Rather than manually creating and submitting an offer
-    with <code>iceRestart</code> set to <code>true</code>, you should consider calling
-    the {{domxref("RTCPeerConnection")}} method {{domxref("RTCPeerConnection.restartIce",
-    "restartIce()")}} instead.</p>
-</div>
+> **Note:** Rather than manually creating and submitting an offer
+> with `iceRestart` set to `true`, you should consider calling
+> the {{domxref("RTCPeerConnection")}} method {{domxref("RTCPeerConnection.restartIce",
+    "restartIce()")}} instead.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>options</em> = {
-  iceRestart: <em>trueOrFalse</em>
+```js
+var options = {
+  iceRestart: trueOrFalse
 };
-</pre>
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A Boolean value indicating whether or not the <code>RTCPeerConnection</code> should
-  generate new values for the connection's ice-ufrag and ice-pwd values, which will
-  trigger ICE renegotiation on the next message sent to the remote peer.</p>
+A Boolean value indicating whether or not the `RTCPeerConnection` should
+generate new values for the connection's ice-ufrag and ice-pwd values, which will
+trigger ICE renegotiation on the next message sent to the remote peer.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>When the {{domxref("RTCPeerConnection")}} object's ICE connection state changes to
-  <code>failed</code>, you should try to trigger an <a
-    href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ICE_restart">ICE restart</a>.
-  You should ideally do this by calling
-  the {{domxref("RTCPeerConnection")}}'s {{domxref("RTCPeerConnection.restartIce",
-  "restartIce()")}} method, if it's available.</p>
+When the {{domxref("RTCPeerConnection")}} object's ICE connection state changes to
+`failed`, you should try to trigger an [ICE restart](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ICE_restart).
+You should ideally do this by calling
+the {{domxref("RTCPeerConnection")}}'s {{domxref("RTCPeerConnection.restartIce",
+  "restartIce()")}} method, if it's available.
 
-<p>Fundamentally, this renegotiation is triggered by generating and using new values for
-  the ICE username fragment ("ufrag")}}</p>
+Fundamentally, this renegotiation is triggered by generating and using new values for
+the ICE username fragment ("ufrag")}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example shows a handler for the {{event("iceconnectionstatechange")}} event. It
-  watches for the ICE connection state to transition to <code>"failed"</code>, which
-  indicates that an ICE restart should be tried in order to attempt to bring the
-  connection back up.</p>
+This example shows a handler for the {{event("iceconnectionstatechange")}} event. It
+watches for the ICE connection state to transition to `"failed"`, which
+indicates that an ICE restart should be tried in order to attempt to bring the
+connection back up.
 
-<pre class="brush: js">pc.oniceconnectionstatechange = function(evt) {
+```js
+pc.oniceconnectionstatechange = function(evt) {
   if (pc.iceConnectionState === "failed") {
     if (pc.restartIce) {
       pc.restartIce();
@@ -74,20 +73,20 @@ browser-compat: api.RTCOfferOptions.iceRestart
     }
   }
 }
-</pre>
+```
 
-<p>If the state changes to <code>failed</code>, this handler starts by looking to see if
-  the {{domxref("RTCPeerConnection")}} includes
-  the {{domxref("RTCPeerConnection.restartIce", "restartIce()")}} method; if it does, we
-  call that to request an ICE restart. Otherwise, we call back to the older technique: we
-  manually create a new offer with <code>iceRestart</code> set to <code>true</code>, then
-  that offer is set as the new local description for the connection. After that, the offer
-  is sent to the server by calling a custom function <code>sendOfferToServer()</code>.</p>
+If the state changes to `failed`, this handler starts by looking to see if
+the {{domxref("RTCPeerConnection")}} includes
+the {{domxref("RTCPeerConnection.restartIce", "restartIce()")}} method; if it does, we
+call that to request an ICE restart. Otherwise, we call back to the older technique: we
+manually create a new offer with `iceRestart` set to `true`, then
+that offer is set as the new local description for the connection. After that, the offer
+is sent to the server by calling a custom function `sendOfferToServer()`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

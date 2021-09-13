@@ -10,53 +10,50 @@ tags:
   - cancel
 browser-compat: api.ReadableStream.cancel
 ---
-<div>{{APIRef("Streams")}}</div>
+{{APIRef("Streams")}}
 
-<p>The <strong><code>cancel()</code></strong> method of the
-  {{domxref("ReadableStream")}} interface returns a {{jsxref("Promise")}} that
-  resolves when the stream is canceled.</p>
+The **`cancel()`** method of the
+{{domxref("ReadableStream")}} interface returns a {{jsxref("Promise")}} that
+resolves when the stream is canceled.
 
-<p>Cancel is used when you've completely finished with the stream and don't need any more
-  data from it, even if there are chunks enqueued waiting to be read. That data is lost
-  after cancel is called, and the stream is not readable any more. To read those chunks
-  still and not completely get rid of the stream, you'd use
-  {{domxref("ReadableStreamDefaultController.close()")}}.</p>
+Cancel is used when you've completely finished with the stream and don't need any more
+data from it, even if there are chunks enqueued waiting to be read. That data is lost
+after cancel is called, and the stream is not readable any more. To read those chunks
+still and not completely get rid of the stream, you'd use
+{{domxref("ReadableStreamDefaultController.close()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>promise</em> = <em>readableStream</em>.cancel(<em>reason</em>);</pre>
+```js
+var promise = readableStream.cancel(reason);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>reason {{optional_inline}}</dt>
-  <dd>A human-readable reason for the cancellation. The underlying source may or may not use it.
-  </dd>
-</dl>
+- reason {{optional_inline}}
+  - : A human-readable reason for the cancellation. The underlying source may or may not use it.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}}, which fulfills with the value given in the <code>reason</code>
-  parameter.</p>
+A {{jsxref("Promise")}}, which fulfills with the value given in the `reason`
+parameter.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>TypeError</dt>
-  <dd>The stream you are trying to cancel is not a {{domxref("ReadableStream")}}, or it is
-    locked.</dd>
-</dl>
+- TypeError
+  - : The stream you are trying to cancel is not a {{domxref("ReadableStream")}}, or it is
+    locked.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In Jake Archibald's <a href="https://jsbin.com/gameboy/edit?js,console">cancelling a
-    fetch</a> example, a stream is used to fetch the WHATWG HTML spec chunk by chunk; each
-  chunk is searched for the string "service workers". When the search terms is found,
-  <code>cancel()</code> is used to cancel the stream — the job is finished so it is no
-  longer needed.</p>
+In Jake Archibald's [cancelling a
+fetch](https://jsbin.com/gameboy/edit?js,console) example, a stream is used to fetch the WHATWG HTML spec chunk by chunk; each
+chunk is searched for the string "service workers". When the search terms is found,
+`cancel()` is used to cancel the stream — the job is finished so it is no
+longer needed.
 
-<pre class="brush: js">var searchTerm = "service workers";
+```js
+var searchTerm = "service workers";
 // Chars to show either side of the result in the match
 var contextBefore = 30;
 var contextAfter = 30;
@@ -65,7 +62,7 @@ var url = 'https://html.spec.whatwg.org/';
 
 console.log(`Searching '${url}' for '${searchTerm}'`);
 
-fetch(url).then(response =&gt; {
+fetch(url).then(response => {
   console.log('Received headers');
 
   var decoder = new TextDecoder();
@@ -88,7 +85,7 @@ fetch(url).then(response =&gt; {
 
     buffer += decoder.decode(result.value, {stream: true});
 
-    // already found match &amp; just context-gathering?
+    // already found match & just context-gathering?
     if (matchFoundAt === -1) {
       matchFoundAt = (caseInsensitive ? buffer.toLowerCase() : buffer).indexOf(toMatch);
     }
@@ -96,7 +93,7 @@ fetch(url).then(response =&gt; {
     if (matchFoundAt === -1) {
       buffer = buffer.slice(-bufferSize);
     }
-    else if (buffer.slice(matchFoundAt + toMatch.length).length &gt;= contextAfter) {
+    else if (buffer.slice(matchFoundAt + toMatch.length).length >= contextAfter) {
       console.log("Here's the match:")
       console.log(buffer.slice(
         Math.max(0, matchFoundAt - contextBefore),
@@ -113,15 +110,16 @@ fetch(url).then(response =&gt; {
     // keep reading
     return reader.read().then(process);
   });
-}).catch(err =&gt; {
+}).catch(err => {
   console.log("Something went wrong. See devtools for details. Does the response lack CORS headers?");
   throw err;
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

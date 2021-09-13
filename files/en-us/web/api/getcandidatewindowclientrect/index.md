@@ -5,4 +5,4 @@ tags:
   - Reference
   - Deprecated
 ---
-<div>{{deprecated_header}}</div>
+{{deprecated_header}}

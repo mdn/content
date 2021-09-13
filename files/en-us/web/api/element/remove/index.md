@@ -8,48 +8,52 @@ tags:
   - Method
 browser-compat: api.Element.remove
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>Element.remove()</strong></code> method removes the element from the
-  tree it belongs to.</p>
+The **`Element.remove()`** method removes the element from the
+tree it belongs to.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">remove()</pre>
+```js
+remove()
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_remove">Using <code>remove()</code></h3>
+### Using `remove()`
 
-<pre class="brush: html">&lt;div id="div-01"&gt;Here is div-01&lt;/div&gt;
-&lt;div id="div-02"&gt;Here is div-02&lt;/div&gt;
-&lt;div id="div-03"&gt;Here is div-03&lt;/div&gt;
-</pre>
+```html
+<div id="div-01">Here is div-01</div>
+<div id="div-02">Here is div-02</div>
+<div id="div-03">Here is div-03</div>
+```
 
-<pre class="brush: js">var el = document.getElementById('div-02');
+```js
+var el = document.getElementById('div-02');
 el.remove(); // Removes the div with the 'div-02' id
-</pre>
+```
 
-<h3 id="Element.remove_is_unscopable"><code>Element.remove()</code> is unscopable</h3>
+### `Element.remove()` is unscopable
 
-<p>The <code>remove()</code> method is not scoped into the <code>with</code> statement.
-  See {{jsxref("Symbol.unscopables")}} for more information.</p>
+The `remove()` method is not scoped into the `with` statement.
+See {{jsxref("Symbol.unscopables")}} for more information.
 
-<pre class="brush: js">with(node) {
+```js
+with(node) {
   remove();
 }
-// ReferenceError: remove is not defined </pre>
+// ReferenceError: remove is not defined
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://github.com/chenzhenxi/element-remove">Polyfill</a></li>
-</ul>
+- [Polyfill](https://github.com/chenzhenxi/element-remove)

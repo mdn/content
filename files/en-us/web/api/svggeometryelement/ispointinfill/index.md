@@ -2,70 +2,73 @@
 title: SVGGeometryElement.isPointInFill()
 slug: Web/API/SVGGeometryElement/isPointInFill
 tags:
-- API
-- DOM
-- Method
-- Reference
-- SVG
-- SVG DOM
+  - API
+  - DOM
+  - Method
+  - Reference
+  - SVG
+  - SVG DOM
 browser-compat: api.SVGGeometryElement.isPointInFill
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <code><strong>SVGGeometryElement.isPointInFill()</strong></code> method determines
-  whether a given point is within the fill shape of an element. Normal hit testing rules
-  apply; the value of the {{cssxref("pointer-events")}} property on the element determines
-  whether a point is considered to be within the fill. The <code>point</code> argument is
-  interpreted as a point in the local coordinate system of the element.</p>
+The **`SVGGeometryElement.isPointInFill()`** method determines
+whether a given point is within the fill shape of an element. Normal hit testing rules
+apply; the value of the {{cssxref("pointer-events")}} property on the element determines
+whether a point is considered to be within the fill. The `point` argument is
+interpreted as a point in the local coordinate system of the element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">boolean <var>someElement</var>.isPointInFill(DOMPointInit <var>point</var>);
-</pre>
+```js
+boolean someElement.isPointInFill(DOMPointInit point);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>point</dt>
-  <dd>An object interpreted as a point in the local coordinate system
-    of the element.</dd>
-</dl>
+- point
+  - : An object interpreted as a point in the local coordinate system
+    of the element.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A boolean indicating whether the given point is within the fill or not.</p>
+A boolean indicating whether the given point is within the fill or not.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<pre class="brush: html">&lt;svg viewBox="0 0 100 100" width="150" height="150"
-    xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;circle id="circle" cx="50" cy="50" r="45"
-      fill="white" stroke="black" stroke-width="10"/&gt;
+```html
+<svg viewBox="0 0 100 100" width="150" height="150"
+    xmlns="http://www.w3.org/2000/svg">
+  <circle id="circle" cx="50" cy="50" r="45"
+      fill="white" stroke="black" stroke-width="10"/>
 
-  &lt;circle cx="10" cy="10" r="5" fill="seagreen"/&gt;
-  &lt;circle cx="40" cy="30" r="5" fill="seagreen"/&gt;
-&lt;/svg&gt;</pre>
+  <circle cx="10" cy="10" r="5" fill="seagreen"/>
+  <circle cx="40" cy="30" r="5" fill="seagreen"/>
+</svg>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">var circle = document.getElementById('circle');
+```js
+var circle = document.getElementById('circle');
 
 // Point is outside
 console.log('Point at 10,10:', circle.isPointInFill(new DOMPoint(10, 10)));
 
 // Point is inside
-console.log('Point at 40,30:', circle.isPointInFill(new DOMPoint(40, 30)));</pre>
+console.log('Point at 40,30:', circle.isPointInFill(new DOMPoint(40, 30)));
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example", "150", "150")}}</p>
+{{EmbedLiveSample("Example", "150", "150")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,55 +2,55 @@
 title: ServiceWorkerContainer.startMessages()
 slug: Web/API/ServiceWorkerContainer/startMessages
 tags:
-- API
-- Experimental
-- Reference
-- Service Workers
-- ServiceWorkerContainer
-- startMessages
+  - API
+  - Experimental
+  - Reference
+  - Service Workers
+  - ServiceWorkerContainer
+  - startMessages
 browser-compat: api.ServiceWorkerContainer.startMessages
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p>The <strong><code>startMessages()</code></strong> method of
-    the {{domxref("ServiceWorkerContainer")}} interface explicitly starts the flow of
-    messages being dispatched from a service worker to pages under its control (e.g. sent
-    via {{domxref("Client.postMessage()")}}). This can be used to react to sent messages
-    earlier, even before that page's content has finished loading.</p>
+The **`startMessages()`** method of
+the {{domxref("ServiceWorkerContainer")}} interface explicitly starts the flow of
+messages being dispatched from a service worker to pages under its control (e.g. sent
+via {{domxref("Client.postMessage()")}}). This can be used to react to sent messages
+earlier, even before that page's content has finished loading.
 
-<h2 id="Explanation">Explanation</h2>
+## Explanation
 
-<p>By default, all messages sent from a page's controlling service worker to the page
-  (using {{domxref("Client.postMessage()")}}) are queued while the page is loading, and
-  get dispatched once the page's HTML document has been loaded and parsed (i.e. after the
-  {{event("DOMContentLoaded")}} event fires). It's possible to start dispatching these
-  messages earlier by calling {{domxref("ServiceWorkerContainer.startMessages()")}}, for
-  example if you've invoked a message handler using
-  {{domxref("EventTarget.addEventListener()")}} before the page has finished loading, but
-  want to start processing the messages right away.</p>
+By default, all messages sent from a page's controlling service worker to the page
+(using {{domxref("Client.postMessage()")}}) are queued while the page is loading, and
+get dispatched once the page's HTML document has been loaded and parsed (i.e. after the
+{{event("DOMContentLoaded")}} event fires). It's possible to start dispatching these
+messages earlier by calling {{domxref("ServiceWorkerContainer.startMessages()")}}, for
+example if you've invoked a message handler using
+{{domxref("EventTarget.addEventListener()")}} before the page has finished loading, but
+want to start processing the messages right away.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The messages start being sent automatically when setting the
-    handler directly using {{domxref("ServiceWorkerContainer.onmessage")}}. In this you
-    don't need <code>startMessages()</code>.</p>
-</div>
+> **Note:** The messages start being sent automatically when setting the
+> handler directly using {{domxref("ServiceWorkerContainer.onmessage")}}. In this you
+> don't need `startMessages()`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>serviceWorkerContainer</em>.startMessages();</pre>
+```js
+serviceWorkerContainer.startMessages();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>undefined</code>.</p>
+`undefined`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">if('serviceWorker' in navigator) {
+```js
+if('serviceWorker' in navigator) {
   navigator.serviceWorker
            .register('/sw.js')
            .then(function() { console.log('Service Worker Registered'); });
@@ -58,17 +58,17 @@ browser-compat: api.ServiceWorkerContainer.startMessages
 
 // ...
 
-navigator.serviceWorker.addEventListener('message', (e) =&gt; {
+navigator.serviceWorker.addEventListener('message', (e) => {
   // ...
 });
 
 navigator.serviceWorker.startMessages();
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

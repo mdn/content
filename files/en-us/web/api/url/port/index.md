@@ -2,48 +2,48 @@
 title: URL.port
 slug: Web/API/URL/port
 tags:
-- API
-- Property
-- Reference
-- URL
-- URL API
-- port
+  - API
+  - Property
+  - Reference
+  - URL
+  - URL API
+  - port
 browser-compat: api.URL.port
 ---
-<div>{{ApiRef("URL API")}}</div>
+{{ApiRef("URL API")}}
 
-<p>The <strong><code>port</code></strong> property of the {{domxref("URL")}} interface is
-  a {{domxref("USVString")}} containing the port number of the URL. If the URL does not
-  contain an explicit port number, it will be set to <code>''</code>.</p>
+The **`port`** property of the {{domxref("URL")}} interface is
+a {{domxref("USVString")}} containing the port number of the URL. If the URL does not
+contain an explicit port number, it will be set to `''`.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const <em>portNumber</em> = <em>url</em>.port
-<em>url</em>.port = <em>newPortNumber</em>
-</pre>
+```js
+const portNumber = url.port
+url.port = newPortNumber
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("USVString")}}.</p>
+A {{domxref("USVString")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">const url = new URL('https://mydomain.com:80/svn/Repos/');
+```js
+const url = new URL('https://mydomain.com:80/svn/Repos/');
 console.log(url.port); // Logs '80'
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("URL")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("URL")}} interface it belongs to.

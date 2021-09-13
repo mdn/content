@@ -2,62 +2,60 @@
 title: File()
 slug: Web/API/File/File
 tags:
-- API
-- Constructor
-- File API
-- Reference
+  - API
+  - Constructor
+  - File API
+  - Reference
 browser-compat: api.File.File
 ---
-<div>{{APIRef("File")}}</div>
+{{APIRef("File")}}
 
-<p>The <code><strong>File()</strong></code> constructor creates a new {{domxref("File")}}
-  object instance.</p>
+The **`File()`** constructor creates a new {{domxref("File")}}
+object instance.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">new File(bits, name[, options]);</pre>
+```js
+new File(bits, name[, options]);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>bits</code></dt>
-  <dd>An {{jsxref("Array")}} of {{jsxref("ArrayBuffer")}}, {{domxref("ArrayBufferView")}},
+- `bits`
+  - : An {{jsxref("Array")}} of {{jsxref("ArrayBuffer")}}, {{domxref("ArrayBufferView")}},
     {{domxref("Blob")}}, {{domxref("USVString")}} objects, or a mix of any of such
-    objects, that will be put inside the {{domxref("File")}}. <code>USVString</code>
-    objects are encoded as UTF-8.</dd>
-  <dt><code>name</code></dt>
-  <dd>A {{domxref("USVString")}} representing the file name or the path to the file.</dd>
-  <dt><code>options</code> {{optional_inline}}</dt>
-  <dd>An options object containing optional attributes for the file. Available options are
+    objects, that will be put inside the {{domxref("File")}}. `USVString`
+    objects are encoded as UTF-8.
+- `name`
+  - : A {{domxref("USVString")}} representing the file name or the path to the file.
+- `options` {{optional_inline}}
+
+  - : An options object containing optional attributes for the file. Available options are
     as follows:
-    <ul>
-      <li><code>type</code>: A {{domxref("DOMString")}} representing the MIME type of the
-        content that will be put into the file. Defaults to a value of <code>"".</code>
-      </li>
-      <li><code>lastModified</code>: A number representing the number of milliseconds
-        between the Unix time epoch and when the file was last modified. Defaults to a
-        value of {{jsxref("Date.now()")}}.</li>
-    </ul>
-  </dd>
-</dl>
 
-<h2 id="Example">Example</h2>
+    - `type`: A {{domxref("DOMString")}} representing the MIME type of the
+      content that will be put into the file. Defaults to a value of `"".`
+    - `lastModified`: A number representing the number of milliseconds
+      between the Unix time epoch and when the file was last modified. Defaults to a
+      value of {{jsxref("Date.now()")}}.
 
-<pre class="brush: js">var file = new File(["foo"], "foo.txt", {
+## Example
+
+```js
+var file = new File(["foo"], "foo.txt", {
   type: "text/plain",
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("FileReader")}}</li>
-  <li>{{domxref("Blob")}}</li>
-</ul>
+- {{domxref("FileReader")}}
+- {{domxref("Blob")}}

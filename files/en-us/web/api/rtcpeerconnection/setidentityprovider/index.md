@@ -8,54 +8,51 @@ tags:
   - WebRTC
 browser-compat: api.RTCPeerConnection.setIdentityProvider
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The <code><strong>RTCPeerConnection.setIdentityProvider()</strong></code> method sets
-  the Identity Provider (IdP) to the triplet given in parameter: its name, the protocol
-  used to communicate with it (optional) and an optional username. The IdP will be used
-  only when an assertion is needed.</p>
+The **`RTCPeerConnection.setIdentityProvider()`** method sets
+the Identity Provider (IdP) to the triplet given in parameter: its name, the protocol
+used to communicate with it (optional) and an optional username. The IdP will be used
+only when an assertion is needed.
 
-<p>If the {{domxref("RTCPeerConnection.signalingState", "signalingState")}} is set to
-  <code>"closed"</code>, an <code>InvalidStateError</code> is raised.</p>
+If the {{domxref("RTCPeerConnection.signalingState", "signalingState")}} is set to
+`"closed"`, an `InvalidStateError` is raised.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">pc.setIdentityProvider(domainname [, protocol] [, username]);
-</pre>
+```js
+pc.setIdentityProvider(domainname [, protocol] [, username]);
+```
 
-<p><em>There is no return value for this method.</em></p>
+_There is no return value for this method._
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><em>domainname</em></dt>
-  <dd>Is a {{domxref("DOMString")}} is the domain name where the IdP is.</dd>
-  <dt><em>protocol</em> {{optional_Inline}}</dt>
-  <dd>Is a {{domxref("DOMString")}} representing the protocol used to communicate with the
-    IdP. It defaults to <code>"default"</code> and is used to determine the URL where the
-    IdP is listening.</dd>
-  <dt><em>username</em> {{optional_Inline}}</dt>
-  <dd>Is a {{domxref("DOMString")}} representing the username associated with the IdP.
-  </dd>
-</dl>
+- _domainname_
+  - : Is a {{domxref("DOMString")}} is the domain name where the IdP is.
+- _protocol_ {{optional_Inline}}
+  - : Is a {{domxref("DOMString")}} representing the protocol used to communicate with the
+    IdP. It defaults to `"default"` and is used to determine the URL where the
+    IdP is listening.
+- _username_ {{optional_Inline}}
+  - : Is a {{domxref("DOMString")}} representing the username associated with the IdP.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var pc = new RTCPeerConnection();
+```js
+var pc = new RTCPeerConnection();
 
 pc.setIdentityAssertion("developer.mozilla.org");
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
-</ul>
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)

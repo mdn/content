@@ -2,34 +2,34 @@
 title: Screen.top
 slug: Web/API/Screen/top
 tags:
-- API
-- 'API:Microsoft Extensions'
-- 'API:Mozilla Extensions'
-- 'API:WebKit Extensions'
-- DOM
-- Non-standard
-- Property
-- Window
+  - API
+  - API:Microsoft Extensions
+  - API:Mozilla Extensions
+  - API:WebKit Extensions
+  - DOM
+  - Non-standard
+  - Property
+  - Window
 browser-compat: api.Screen.top
 ---
-<p>{{APIRef("CSSOM")}}{{deprecated_header}}{{Non-standard_Header}}</p>
+{{APIRef("CSSOM")}}{{deprecated_header}}{{Non-standard_Header}}
 
-<p>Returns the distance in pixels from the top side of the current screen.</p>
+Returns the distance in pixels from the top side of the current screen.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let <var>top</var> = window.screen.top;</pre>
+```js
+let top = window.screen.top;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any current specification.</p>
+Not part of any current specification.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{DOMxRef("Screen.left")}}</li>
-</ul>
+- {{DOMxRef("Screen.left")}}

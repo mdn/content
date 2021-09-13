@@ -10,39 +10,36 @@ tags:
   - upY
 browser-compat: api.AudioListener.upY
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>The <code>upY</code> read-only property of the {{ domxref("AudioListener") }} interface is an {{domxref("AudioParam")}} representing the y value of the direction vector defining the up direction the listener is pointing in.</p>
+The `upY` read-only property of the {{ domxref("AudioListener") }} interface is an {{domxref("AudioParam")}} representing the y value of the direction vector defining the up direction the listener is pointing in.
 
-<div class="note">
-<p><strong>Note:</strong> The parameter is <em>a-rate</em> when used with a {{domxref("PannerNode")}} whose {{domxref("PannerNode.panningModel", "PannerNode")}} is set to equalpower, or <em>k-rate</em> otherwise.</p>
-</div>
+> **Note:** The parameter is _a-rate_ when used with a {{domxref("PannerNode")}} whose {{domxref("PannerNode.panningModel", "PannerNode")}} is set to equalpower, or _k-rate_ otherwise.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var audioCtx = new AudioContext();
+```js
+var audioCtx = new AudioContext();
 var myListener = audioCtx.listener;
 myListener.upY.value = 0;
-</pre>
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("AudioParam")}}. Its default value is 1, and it can range between positive and negative infinity.</p>
+An {{domxref("AudioParam")}}. Its default value is 1, and it can range between positive and negative infinity.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See <a href="/en-US/docs/Web/API/BaseAudioContext/createPanner#example"><code>BaseAudioContext.createPanner()</code></a> for example code.</p>
+See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

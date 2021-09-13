@@ -2,35 +2,36 @@
 title: ServiceWorker.onstatechange
 slug: Web/API/ServiceWorker/onstatechange
 tags:
-- API
-- Property
-- Reference
-- Service Workers
-- ServiceWorker
-- onstatechange
+  - API
+  - Property
+  - Reference
+  - Service Workers
+  - ServiceWorker
+  - onstatechange
 browser-compat: api.ServiceWorker.onstatechange
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p>An {{domxref("EventListener")}} property called whenever an event of type
-  <code>statechange</code> is fired; it is basically fired anytime the
-  {{domxref("ServiceWorker.state")}} changes.</p>
+An {{domxref("EventListener")}} property called whenever an event of type
+`statechange` is fired; it is basically fired anytime the
+{{domxref("ServiceWorker.state")}} changes.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">ServiceWorker.onstatechange = function(statechangeevent) { ... }
-ServiceWorker.addEventListener('statechange', function(statechangeevent) { ... } )</pre>
+```js
+ServiceWorker.onstatechange = function(statechangeevent) { ... }
+ServiceWorker.addEventListener('statechange', function(statechangeevent) { ... } )
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This code snippet is from the <a
-    href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html">service
-    worker registration-events sample</a> (<a
-    href="https://googlechrome.github.io/samples/service-worker/registration-events/">live
-    demo</a>). The code listens for any change in the {{domxref("ServiceWorker.state")}}
-  and returns its value.</p>
+This code snippet is from the [service
+worker registration-events sample](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html) ([live
+demo](https://googlechrome.github.io/samples/service-worker/registration-events/)). The code listens for any change in the {{domxref("ServiceWorker.state")}}
+and returns its value.
 
-<pre class="brush: js">var serviceWorker;
+```js
+var serviceWorker;
 if (registration.installing) {
   serviceWorker = registration.installing;
   document.querySelector('#kind').textContent = 'installing';
@@ -47,12 +48,14 @@ if (serviceWorker) {
   serviceWorker.addEventListener('statechange', function(e) {
   logState(e.target.state);
   });
-}</pre>
+}
+```
 
-<p>Note that when <code>statechange</code> fires, the service worker's references may have
-  changed. For example:</p>
+Note that when `statechange` fires, the service worker's references may have
+changed. For example:
 
-<pre class="brush: js">navigator.serviceWorker.register(..).then(function(swr) {
+```js
+navigator.serviceWorker.register(..).then(function(swr) {
   swr.installing.state == "installing"
   swr.installing.onstatechange = function() {
     swr.installing == null;
@@ -60,12 +63,13 @@ if (serviceWorker) {
     // event gets queued, meanwhile the underlying worker may have gone into the waiting
     // state and will be immediately activated if possible.
   }
-})</pre>
+})
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

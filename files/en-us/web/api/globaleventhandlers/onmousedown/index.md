@@ -2,55 +2,56 @@
 title: GlobalEventHandlers.onmousedown
 slug: Web/API/GlobalEventHandlers/onmousedown
 tags:
-- API
-- Event Handler
-- GlobalEventHandlers
-- HTML DOM
-- Property
-- Reference
+  - API
+  - Event Handler
+  - GlobalEventHandlers
+  - HTML DOM
+  - Property
+  - Reference
 browser-compat: api.GlobalEventHandlers.onmousedown
 ---
-<div>{{ ApiRef("HTML DOM") }}</div>
+{{ ApiRef("HTML DOM") }}
 
-<p>The <strong><code>onmousedown</code></strong> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> that
-  processes {{event("mousedown")}} events.</p>
+The **`onmousedown`** property of the
+{{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
+processes {{event("mousedown")}} events.
 
-<p>The <code>mousedown</code> event fires when the user depresses the mouse button.</p>
+The `mousedown` event fires when the user depresses the mouse button.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The opposite of <code>onmousedown</code> is
-    {{domxref("GlobalEventHandlers.onmouseup", "onmouseup")}}.</p>
+> **Note:** The opposite of `onmousedown` is
+> {{domxref("GlobalEventHandlers.onmouseup", "onmouseup")}}.
+
+## Syntax
+
+```js
+target.onmousedown = functionRef;
+```
+
+### Value
+
+`functionRef` is a function name or a [function
+expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("MouseEvent")}} object as its sole
+argument.
+
+## Example
+
+This example reveals part of an image when you press and hold a mouse button. It uses
+the `onmousedown`, {{domxref("GlobalEventHandlers.onmouseup", "onmouseup")}},
+and {{domxref("GlobalEventHandlers.onmousemove", "onmousemove")}} event handlers.
+
+### HTML
+
+```html
+<div class="container">
+  <div class="view" hidden></div>
+  <img src="https://interactive-examples.mdn.mozilla.net/media/examples/gecko-320-213.jpg">
 </div>
+```
 
-<h2 id="Syntax">Syntax</h2>
+### CSS
 
-<pre class="brush: js"><em>target</em>.onmousedown = <em>functionRef</em>;
-</pre>
-
-<h3 id="Value">Value</h3>
-
-<p><code>functionRef</code> is a function name or a <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function
-    expression</a>. The function receives a {{domxref("MouseEvent")}} object as its sole
-  argument.</p>
-
-<h2 id="Example">Example</h2>
-
-<p>This example reveals part of an image when you press and hold a mouse button. It uses
-  the <code>onmousedown</code>, {{domxref("GlobalEventHandlers.onmouseup", "onmouseup")}},
-  and {{domxref("GlobalEventHandlers.onmousemove", "onmousemove")}} event handlers.</p>
-
-<h3 id="HTML">HTML</h3>
-
-<pre class="brush: html">&lt;div class="container"&gt;
-  &lt;div class="view" hidden&gt;&lt;/div&gt;
-  &lt;img src="https://interactive-examples.mdn.mozilla.net/media/examples/gecko-320-213.jpg"&gt;
-&lt;/div&gt;</pre>
-
-<h3 id="CSS">CSS</h3>
-
-<pre class="brush: css">.container {
+```css
+.container {
   width: 320px;
   height: 213px;
   background: black;
@@ -66,11 +67,13 @@ browser-compat: api.GlobalEventHandlers.onmousedown
 
 img {
   mix-blend-mode: darken;
-}</pre>
+}
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">function showView(event) {
+```js
+function showView(event) {
   view.removeAttribute('hidden');
   view.style.left = event.clientX - 50 + 'px';
   view.style.top = event.clientY - 50 + 'px';
@@ -91,22 +94,21 @@ const view = document.querySelector('.view');
 
 container.onmousedown = showView;
 container.onmousemove = moveView;
-document.onmouseup = hideView;</pre>
+document.onmouseup = hideView;
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example", 700, 300)}}</p>
+{{EmbedLiveSample("Example", 700, 300)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{event("mousedown")}} event</li>
-</ul>
+- {{event("mousedown")}} event

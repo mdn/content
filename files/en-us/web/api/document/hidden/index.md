@@ -2,55 +2,53 @@
 title: Document.hidden
 slug: Web/API/Document/hidden
 tags:
-- DOM
-- Document
-- Page Visibility API
-- Property
-- Read-only
-- Reference
-- Web
+  - DOM
+  - Document
+  - Page Visibility API
+  - Property
+  - Read-only
+  - Reference
+  - Web
 browser-compat: api.Document.hidden
 ---
-<p>{{ ApiRef("DOM") }}</p>
+{{ ApiRef("DOM") }}
 
-<p>The <code><strong>Document.hidden</strong></code> read-only property returns a Boolean
-  value indicating if the page is considered hidden or not.</p>
+The **`Document.hidden`** read-only property returns a Boolean
+value indicating if the page is considered hidden or not.
 
-<div class="note">
-  <p><strong>Note:</strong> This property is described as "historical" in the <a
-      href="https://www.w3.org/TR/page-visibility-2/">Page Visibility Level 2
-      specification</a>. Consider using the {{domxref("Document.visibilityState")}}
-    property instead.</p>
-</div>
+> **Note:** This property is described as "historical" in the [Page Visibility Level 2
+> specification](https://www.w3.org/TR/page-visibility-2/). Consider using the {{domxref("Document.visibilityState")}}
+> property instead.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>boolean</var> = document.hidden</pre>
+```js
+var boolean = document.hidden
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">document.addEventListener("visibilitychange", function() {
+```js
+document.addEventListener("visibilitychange", function() {
   console.log( document.hidden );
   // Modify behavior...
 });
-</pre>
+```
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<div class="warning">
-  <p><strong>Warning:</strong> Due to prerendering, it may happen that <code>document.hidden</code> is
-    <code>true</code>, even if the page is actually visible to the user. In such scenario
-    the page load starts with
-    <code><a href="/en-US/docs/Web/API/Document/visibilityState">document.visibilityState</a> = "prerender"</code>
-    and transitions to <code>document.visibilityState = "visible"</code> after some delay.
-    This scenario can be reproduced by opening a new browser tab in Safari, pasting a URL
-    in the URL bar, and navigating to that URL.</p>
-</div>
+> **Warning:** Due to prerendering, it may happen that `document.hidden` is
+> `true`, even if the page is actually visible to the user. In such scenario
+> the page load starts with
+> `document.visibilityState = "prerender"`
+> and transitions to `document.visibilityState = "visible"` after some delay.
+> This scenario can be reproduced by opening a new browser tab in Safari, pasting a URL
+> in the URL bar, and navigating to that URL.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

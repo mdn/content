@@ -9,37 +9,39 @@ tags:
   - TextTrackCue
 browser-compat: api.TextTrackCue.id
 ---
-<div>{{APIRef("WebVTT")}}</div>
+{{APIRef("WebVTT")}}
 
-<p>The <strong><code>id</code></strong> property of the {{domxref("TextTrackCue")}} interface returns and sets the identifier for this cue.</p>
+The **`id`** property of the {{domxref("TextTrackCue")}} interface returns and sets the identifier for this cue.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let id = TextTrackCue.id;
-TextTrackCue.id = a;</pre>
+```js
+let id = TextTrackCue.id;
+TextTrackCue.id = a;
+```
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString","string")}} containing the ID of this cue.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("DOMString","string")}} containing the ID of this cue.
 
-<p>In the following example a new {{domxref("VTTCue")}} (which inherits from <code>TextTrackCue</code>) is created. The <code>id</code> property is then set to "first", before the cue is added.</p>
+## Examples
 
-<pre class="brush: js">let video = document.querySelector('video');
+In the following example a new {{domxref("VTTCue")}} (which inherits from `TextTrackCue`) is created. The `id` property is then set to "first", before the cue is added.
+
+```js
+let video = document.querySelector('video');
 let track = video.addTextTrack("captions", "Captions", "en");
 track.mode = "showing";
 
 let cue1 = new VTTCue(0, 0.9, 'Hildy!');
 cue1.id = "first";
 track.addCue(cue1);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
-
+{{Compat}}

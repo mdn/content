@@ -10,50 +10,46 @@ tags:
   - distanceModel
 browser-compat: api.PannerNode.distanceModel
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>The <code>distanceModel</code> property of the {{ domxref("PannerNode") }} interface is an enumerated value determining which algorithm to use to reduce the volume of the audio source as it moves away from the listener.</p>
+The `distanceModel` property of the {{ domxref("PannerNode") }} interface is an enumerated value determining which algorithm to use to reduce the volume of the audio source as it moves away from the listener.
 
-<p>The possible values are:</p>
+The possible values are:
 
-<ul>
- <li><code>linear</code>: A <em>linear distance model</em> calculating the gain induced by the distance according to:<br>
-  <code>1 - rolloffFactor * (distance - refDistance) / (maxDistance - refDistance)</code></li>
- <li><code>inverse</code>: An <em>inverse distance model</em> calculating the gain induced by the distance according to:<br>
-  <code>refDistance / (refDistance + rolloffFactor * (Math.max(distance, refDistance) - refDistance))</code></li>
- <li><code>exponential</code>: An <em>exponential distance model</em> calculating the gain induced by the distance according to:<br>
-  <code>pow((Math.max(distance, refDistance) / refDistance, -rolloffFactor)</code>.</li>
-</ul>
+- `linear`: A _linear distance model_ calculating the gain induced by the distance according to:
+  `1 - rolloffFactor * (distance - refDistance) / (maxDistance - refDistance)`
+- `inverse`: An _inverse distance model_ calculating the gain induced by the distance according to:
+  `refDistance / (refDistance + rolloffFactor * (Math.max(distance, refDistance) - refDistance))`
+- `exponential`: An _exponential distance model_ calculating the gain induced by the distance according to:
+  `pow((Math.max(distance, refDistance) / refDistance, -rolloffFactor)`.
 
-<p><code>inverse</code> is the default value of <code>distanceModel</code>.</p>
-</div>
+`inverse` is the default value of `distanceModel`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var audioCtx = new AudioContext();
+```js
+var audioCtx = new AudioContext();
 var panner = audioCtx.createPanner();
-panner.distanceModel = 'inverse';</pre>
+panner.distanceModel = 'inverse';
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A enum — see <a href="https://webaudio.github.io/web-audio-api/#idl-def-DistanceModelType"><code>DistanceModelType</code></a>.</p>
+A enum — see [`DistanceModelType`](https://webaudio.github.io/web-audio-api/#idl-def-DistanceModelType).
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See <a href="/en-US/docs/Web/API/BaseAudioContext/createPanner#example"><code>BaseAudioContext.createPanner()</code></a> for example code.</p>
+See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics">Web Audio spatialisation basics</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Web Audio spatialisation basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)

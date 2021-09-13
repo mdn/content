@@ -9,49 +9,39 @@ tags:
   - Reference
 browser-compat: api.HTMLHRElement
 ---
-<div>
-<div>{{APIRef("HTML DOM")}}</div>
-</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLHRElement</code></strong> interface provides special properties (beyond those of the {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating {{HTMLElement("hr")}} elements.</p>
+The **`HTMLHRElement`** interface provides special properties (beyond those of the {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating {{HTMLElement("hr")}} elements.
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{domxref("HTMLElement")}}.</em></p>
+_Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLHRElement.align")}} {{deprecated_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}}, an enumerated attribute indicating alignment of the rule with respect to the surrounding context.</dd>
+- {{domxref("HTMLHRElement.align")}} {{deprecated_inline}}
+  - : Is a {{domxref("DOMString")}}, an enumerated attribute indicating alignment of the rule with respect to the surrounding context.
+- {{domxref("HTMLHRElement.color")}} {{deprecated_inline}}
+  - : Is a {{domxref("DOMString")}} representing the name of the color of the rule.
+- {{domxref("HTMLHRElement.noshade")}} {{deprecated_inline}}
+  - : Is a boolean value that sets the rule to have no shading.
+- {{domxref("HTMLHRElement.size")}} {{deprecated_inline}}
+  - : Is a {{domxref("DOMString")}} representing the height of the rule.
+- {{domxref("HTMLHRElement.width")}} {{deprecated_inline}}
+  - : Is a {{domxref("DOMString")}} representing the width of the rule on the page.
 
- <dt>{{domxref("HTMLHRElement.color")}} {{deprecated_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} representing the name of the color of the rule.</dd>
+## Methods
 
- <dt>{{domxref("HTMLHRElement.noshade")}} {{deprecated_inline}}</dt>
- <dd>Is a boolean value that sets the rule to have no shading.</dd>
+_No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}_.
 
- <dt>{{domxref("HTMLHRElement.size")}} {{deprecated_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} representing the height of the rule.</dd>
-
- <dt>{{domxref("HTMLHRElement.width")}} {{deprecated_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} representing the width of the rule on the page.</dd>
-</dl>
-
-<h2 id="Methods">Methods</h2>
-
-<p><em>No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}</em>.</p>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The HTML element implementing this interface: {{HTMLElement("hr")}}</li>
-</ul>
+- The HTML element implementing this interface: {{HTMLElement("hr")}}

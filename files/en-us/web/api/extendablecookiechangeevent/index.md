@@ -8,45 +8,38 @@ tags:
   - ExtendableCookieChangeEvent
 browser-compat: api.ExtendableCookieChangeEvent
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("Cookie Store")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("Cookie Store")}}
 
-<p>The <strong><code>ExtendableCookieChangeEvent</code></strong> interface of the {{domxref('Cookie Store API')}} is the event type passed to {{domxref("ServiceWorkerRegistration.oncookiechange()")}} when any cookie changes have occurred. A cookie change event consists of a cookie and a type (either "changed" or "deleted".)</p>
+The **`ExtendableCookieChangeEvent`** interface of the {{domxref('Cookie Store API')}} is the event type passed to {{domxref("ServiceWorkerRegistration.oncookiechange()")}} when any cookie changes have occurred. A cookie change event consists of a cookie and a type (either "changed" or "deleted".)
 
-<p>Cookie changes that cause the <code>ExtendableCookieChangeEvent</code> to be dispatched are:</p>
+Cookie changes that cause the `ExtendableCookieChangeEvent` to be dispatched are:
 
-<ul>
-  <li>A cookie is newly created and not immediately removed. In this case <code>type</code> is "changed".</li>
-  <li>A cookie is newly created and immediately removed. In this case <code>type</code> is "deleted"</li>
-  <li>A cookie is removed. In this case <code>type</code> is "deleted".</li>
-</ul>
+- A cookie is newly created and not immediately removed. In this case `type` is "changed".
+- A cookie is newly created and immediately removed. In this case `type` is "deleted"
+- A cookie is removed. In this case `type` is "deleted".
 
-<div class="notecard note">
-  <p><strong>Note:</strong> A cookie that is replaced due to the insertion of another cookie with the same name, domain, and path, is ignored and does not trigger a change event.</p>
-</div>
+> **Note:** A cookie that is replaced due to the insertion of another cookie with the same name, domain, and path, is ignored and does not trigger a change event.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
-  <dt>{{domxref("ExtendableCookieChangeEvent.ExtendableCookieChangeEvent()")}}</dt>
-  <dd>Creates a new <code>ExtendableCookieChangeEvent</code>.</dd>
-</dl>
+- {{domxref("ExtendableCookieChangeEvent.ExtendableCookieChangeEvent()")}}
+  - : Creates a new `ExtendableCookieChangeEvent`.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface also inherits properties from {{domxref("ExtendableEvent")}}.</em></p>
+_This interface also inherits properties from {{domxref("ExtendableEvent")}}._
 
-<dl>
-  <dt>{{domxref("ExtendableCookieChangeEvent.changed")}}{{ReadOnlyInline}}</dt>
-  <dd>Returns an array containing the changed cookies.</dd>
-  <dt>{{domxref("ExtendableCookieChangeEvent.deleted")}}{{ReadOnlyInline}}</dt>
-  <dd>Returns an array containing the deleted cookies.</dd>
-</dl>
+- {{domxref("ExtendableCookieChangeEvent.changed")}}{{ReadOnlyInline}}
+  - : Returns an array containing the changed cookies.
+- {{domxref("ExtendableCookieChangeEvent.deleted")}}{{ReadOnlyInline}}
+  - : Returns an array containing the deleted cookies.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the below example we use {{domxref("CookieStoreManager.getSubscriptions()")}} to get a list of existing subscriptions. (In service workers, a subscription is required in order to listen for events.) We unsubscribe from existing subscriptions using {{domxref("CookieStoreManager.unsubscribe()")}}, then subscribe to the cookie with a name of 'COOKIE_NAME' using {{domxref("CookieStoreManager.subscribe()")}}. If that cookie is changed, the event listener logs the event to the console. This will be an <code>ExtendableCookieChangeEvent</code> object, with the {{domxref("ExtendableCookieChangeEvent.changed","changed")}} or {{domxref("ExtendableCookieChangeEvent.deleted","deleted")}} property containing the modified cookie.</p>
+In the below example we use {{domxref("CookieStoreManager.getSubscriptions()")}} to get a list of existing subscriptions. (In service workers, a subscription is required in order to listen for events.) We unsubscribe from existing subscriptions using {{domxref("CookieStoreManager.unsubscribe()")}}, then subscribe to the cookie with a name of 'COOKIE_NAME' using {{domxref("CookieStoreManager.subscribe()")}}. If that cookie is changed, the event listener logs the event to the console. This will be an `ExtendableCookieChangeEvent` object, with the {{domxref("ExtendableCookieChangeEvent.changed","changed")}} or {{domxref("ExtendableCookieChangeEvent.deleted","deleted")}} property containing the modified cookie.
 
-<pre class="brush:js">self.addEventListener('activate', (event) => {
+```js
+self.addEventListener('activate', (event) => {
   event.waitUntil(async () => {
     const subscriptions = await self.registration.cookies.getSubscriptions();
     await self.registration.cookies.unsubscribe(subscriptions);
@@ -61,12 +54,13 @@ browser-compat: api.ExtendableCookieChangeEvent
 
 self.addEventListener('cookiechange', event => {
   console.log(event);
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

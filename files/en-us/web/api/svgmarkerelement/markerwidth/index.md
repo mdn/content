@@ -9,40 +9,43 @@ tags:
   - SVGMarkerElement
 browser-compat: api.SVGMarkerElement.markerWidth
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <strong><code>markerWidth</code></strong> read-only property of the {{domxref("SVGMarkerElement")}} interface returns an {{domxref("SVGAnimatedLength")}} object containing the width of the {{SVGElement("marker")}} viewport as defined by the {{SVGattr("markerWidth")}} attribute.</p>
+The **`markerWidth`** read-only property of the {{domxref("SVGMarkerElement")}} interface returns an {{domxref("SVGAnimatedLength")}} object containing the width of the {{SVGElement("marker")}} viewport as defined by the {{SVGattr("markerWidth")}} attribute.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">let width = SVGMarkerElement.markerWidth;</pre>
+    let width = SVGMarkerElement.markerWidth;
 
-<h3>Value</h3>
-<p>An {{domxref("SVGAnimatedLength")}} object. The <code>baseVal</code> property of this object returns an {{domxref("SVGLength")}}, the value of which returns the <code>width</code>.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+An {{domxref("SVGAnimatedLength")}} object. The `baseVal` property of this object returns an {{domxref("SVGLength")}}, the value of which returns the `width`.
 
-<p>The <code>markerWidth</code> property returns an {{domxref("SVGAnimatedLength")}} which contains an {{domxref("SVGLength")}} with the value of the {{SVGattr("markerWidth")}} attribute.</p>
+## Examples
 
-<pre class="brush: html">&lt;svg id="svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;defs&gt;
-    &lt;marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
+The `markerWidth` property returns an {{domxref("SVGAnimatedLength")}} which contains an {{domxref("SVGLength")}} with the value of the {{SVGattr("markerWidth")}} attribute.
+
+```html
+<svg id="svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
         markerWidth="6" markerHeight="6"
-        orient="auto-start-reverse"&gt;
-      &lt;path d="M 0 0 L 10 5 L 0 10 z" /&gt;
-    &lt;/marker&gt;
-  &lt;/defs&gt;
-&lt;/svg&gt;</pre>
+        orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" />
+    </marker>
+  </defs>
+</svg>
+```
 
-<pre class="brush: js">let marker = document.getElementById("arrow");
-console.log(marker.markerWidth.baseVal.value); // 6</pre>
+```js
+let marker = document.getElementById("arrow");
+console.log(marker.markerWidth.baseVal.value); // 6
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
+## Browser compatibility
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<p>{{Compat}}</p>
-
+{{Compat}}

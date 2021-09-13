@@ -11,41 +11,37 @@ tags:
   - Storage
 browser-compat: api.IDBDatabase.createObjectStore
 ---
-<p>{{ APIRef("IndexedDB") }}</p>
+{{ APIRef("IndexedDB") }}
 
-<div>
-  <p>The <strong><code>createObjectStore()</code></strong> method of the
-    {{domxref("IDBDatabase")}} interface creates and returns a new object store or index.
-  </p>
-</div>
+The **`createObjectStore()`** method of the
+{{domxref("IDBDatabase")}} interface creates and returns a new object store or index.
 
-<p>The method takes the name of the store as well as a parameter object that lets you
-  define important optional properties. You can use the property to uniquely identify
-  individual objects in the store. As the property is an identifier, it should be unique
-  to every object, and every object should have that property.</p>
+The method takes the name of the store as well as a parameter object that lets you
+define important optional properties. You can use the property to uniquely identify
+individual objects in the store. As the property is an identifier, it should be unique
+to every object, and every object should have that property.
 
-<p>This method can be called <em>only</em> within a <a
-    href="/en-US/docs/Web/API/IDBTransaction#version_change"><code>versionchange</code></a>
-  transaction.</p>
+This method can be called _only_ within a [`versionchange`](/en-US/docs/Web/API/IDBTransaction#version_change)
+transaction.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>IDBDatabase</em>.createObjectStore(<em>name</em>);
-<em>IDBDatabase</em>.createObjectStore(<em>name</em>, <em>options</em>);
-</pre>
+```js
+IDBDatabase.createObjectStore(name);
+IDBDatabase.createObjectStore(name, options);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>name</code></dt>
-  <dd>The name of the new object store to be created. Note that it is possible to create
-    an object store with an empty name.</dd>
-  <dt><code>optionalParameters</code> {{optional_inline}}</dt>
-  <dd>
-    <p>An options object whose attributes are optional parameters to the method. It
-      includes the following properties:</p>
+- `name`
+  - : The name of the new object store to be created. Note that it is possible to create
+    an object store with an empty name.
+- `optionalParameters` {{optional_inline}}
+
+  - : An options object whose attributes are optional parameters to the method. It
+    includes the following properties:
 
     <table class="no-markdown">
       <thead>
@@ -57,34 +53,42 @@ browser-compat: api.IDBDatabase.createObjectStore
       <tbody>
         <tr>
           <td><code>keyPath</code></td>
-          <td>The <a
-              href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_path">key
-              path</a> to be used by the new object store. If empty or not specified, the
-            object store is created without a key path and uses <a
-              href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#out-of-line_key">out-of-line
-              keys</a>. You can also pass in an array as a <code>keyPath</code>.</td>
+          <td>
+            The
+            <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_path"
+              >key path</a
+            >
+            to be used by the new object store. If empty or not specified, the
+            object store is created without a key path and uses
+            <a
+              href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#out-of-line_key"
+              >out-of-line keys</a
+            >. You can also pass in an array as a <code>keyPath</code>.
+          </td>
         </tr>
         <tr>
           <td><code>autoIncrement</code></td>
-          <td>If <code>true</code>, the object store has a <a
-              href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_generator">key
-              generator</a>. Defaults to <code>false</code>.</td>
+          <td>
+            If <code>true</code>, the object store has a
+            <a
+              href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_generator"
+              >key generator</a
+            >. Defaults to <code>false</code>.
+          </td>
         </tr>
       </tbody>
     </table>
 
-    <p>Unknown parameters are ignored.</p>
-  </dd>
-</dl>
+    Unknown parameters are ignored.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A new {{domxref("IDBObjectStore")}}.</p>
+A new {{domxref("IDBObjectStore")}}.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>This method may raise a {{domxref("DOMException")}} with a {{domxref("DOMError")}} of
-  one of the following types:</p>
+This method may raise a {{domxref("DOMException")}} with a {{domxref("DOMError")}} of
+one of the following types:
 
 <table class="no-markdown">
   <thead>
@@ -96,35 +100,51 @@ browser-compat: api.IDBDatabase.createObjectStore
   <tbody>
     <tr>
       <td><code>InvalidStateError</code></td>
-      <td>Occurs if the method was not called from a <code>versionchange</code>
-        transaction callback. For older WebKit browsers, you must call {{
-        APIRef("IDBVersionChangeRequest.setVersion")}} first.</td>
+      <td>
+        Occurs if the method was not called from a
+        <code>versionchange</code> transaction callback. For older WebKit
+        browsers, you must call
+        {{
+        APIRef("IDBVersionChangeRequest.setVersion")}}
+        first.
+      </td>
     </tr>
     <tr>
       <td><code>TransactionInactiveError</code></td>
-      <td>Occurs if a request is made on a source database that doesn't exist (e.g. has
-        been deleted or removed.) In Firefox previous to version 41, an
-        <code>InvalidStateError</code> was raised in this case as well, which was
-        misleading; this has now been fixed (see {{Bug("1176165")}}.)</td>
+      <td>
+        Occurs if a request is made on a source database that doesn't exist
+        (e.g. has been deleted or removed.) In Firefox previous to version 41,
+        an <code>InvalidStateError</code> was raised in this case as well, which
+        was misleading; this has now been fixed (see {{Bug("1176165")}}.)
+      </td>
     </tr>
     <tr>
       <td><code>ConstraintError</code></td>
-      <td>An object store with the given name (based on case-sensitive comparison) already
-        exists in the connected database.</td>
+      <td>
+        An object store with the given name (based on case-sensitive comparison)
+        already exists in the connected database.
+      </td>
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/API/IDBDatabaseException#non_transient_err">InvalidAccessError</a></code>
+        <code
+          ><a href="/en-US/docs/Web/API/IDBDatabaseException#non_transient_err"
+            >InvalidAccessError</a
+          ></code
+        >
       </td>
-      <td>If <code>autoIncrement</code> is set to true and <code>keyPath</code> is either
-        an empty string or an array containing an empty string.</td>
+      <td>
+        If <code>autoIncrement</code> is set to true and <code>keyPath</code> is
+        either an empty string or an array containing an empty string.
+      </td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js;">// Let us open our database
+```js
+// Let us open our database
 var request = window.indexedDB.open("toDoList", 4);
 
 // This handler is called when a new version of the database
@@ -136,7 +156,7 @@ request.onupgradeneeded = function(event) {
   var db = event.target.result;
 
   db.onerror = function(event) {
-    note.innerHTML += "&lt;li&gt;Error loading database.&lt;/li&gt;";
+    note.innerHTML += "<li>Error loading database.</li>";
   };
 
   // Create an objectStore for this database
@@ -153,29 +173,25 @@ request.onupgradeneeded = function(event) {
 
   objectStore.createIndex("notified", "notified", { unique: false });
 
-  note.innerHTML += "&lt;li&gt;Object store created.&lt;/li&gt;";
+  note.innerHTML += "<li>Object store created.</li>";
 };
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
-  <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
-  <li>Using transactions: {{domxref("IDBTransaction")}}</li>
-  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
-  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
-  <li>Using cursors: {{domxref("IDBCursor")}}</li>
-  <li>Reference example: <a class="external"
-      href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
-      Notifications</a> (<a class="external"
-      href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do
+  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

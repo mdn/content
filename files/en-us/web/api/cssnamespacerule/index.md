@@ -8,40 +8,42 @@ tags:
   - Reference
 browser-compat: api.CSSNamespaceRule
 ---
-<p>{{APIRef("CSSOM")}}</p>
+{{APIRef("CSSOM")}}
 
-<p>The <strong><code>CSSNamespaceRule</code></strong> interface describes an object representing a single CSS {{ cssxref("@namespace") }} {{cssxref("at-rule")}}.</p>
+The **`CSSNamespaceRule`** interface describes an object representing a single CSS {{ cssxref("@namespace") }} {{cssxref("at-rule")}}.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits methods from its ancestor {{domxref("CSSRule")}}.</em></p>
+_Inherits methods from its ancestor {{domxref("CSSRule")}}._
 
-<dl>
- <dt>{{domxref("CSSNamespaceRule.namespaceURI")}}</dt>
- <dd>Returns a {{ domxref("DOMString") }} containing the text of the URI of the given namespace.</dd>
- <dt>{{domxref("CSSNamespaceRule.prefix")}}</dt>
- <dd>Returns a {{ domxref("DOMString") }} with the name of the prefix associated to this namespace. If there is no such prefix, returns an empty string.</dd>
-</dl>
+- {{domxref("CSSNamespaceRule.namespaceURI")}}
+  - : Returns a {{ domxref("DOMString") }} containing the text of the URI of the given namespace.
+- {{domxref("CSSNamespaceRule.prefix")}}
+  - : Returns a {{ domxref("DOMString") }} with the name of the prefix associated to this namespace. If there is no such prefix, returns an empty string.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Inherits methods from its ancestor {{domxref("CSSRule")}}.</em></p>
+_Inherits methods from its ancestor {{domxref("CSSRule")}}._
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The stylesheet includes a namespace as the only rule. Therefore the first {{domxref("CSSRule")}} returned will be a <code>CSSNamespaceRule</code>.</p>
+The stylesheet includes a namespace as the only rule. Therefore the first {{domxref("CSSRule")}} returned will be a `CSSNamespaceRule`.
 
-<pre class="brush:css">@namespace url(http://www.w3.org/1999/xhtml);</pre>
+```css
+@namespace url(http://www.w3.org/1999/xhtml);
+```
 
-<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0]); //a CSSNamespaceRule</pre>
+```js
+let myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0]); //a CSSNamespaceRule
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

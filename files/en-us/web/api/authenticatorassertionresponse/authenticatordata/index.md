@@ -10,44 +10,42 @@ tags:
   - WebAuthn
 browser-compat: api.AuthenticatorAssertionResponse.authenticatorData
 ---
-<p>{{securecontext_header}}{{DefaultAPISidebar("Web Authentication API")}}</p>
+{{securecontext_header}}{{DefaultAPISidebar("Web Authentication API")}}
 
-<p>The <code><strong>authenticatorData</strong></code> property of the {{domxref("AuthenticatorAssertionResponse")}} interface returns an {{jsxref("ArrayBuffer")}} containing information from the authenticator such as the Relying Party ID Hash (rpIdHash), a signature counter, test of user presence, user verification flags, and any extensions processed by the authenticator.</p>
+The **`authenticatorData`** property of the {{domxref("AuthenticatorAssertionResponse")}} interface returns an {{jsxref("ArrayBuffer")}} containing information from the authenticator such as the Relying Party ID Hash (rpIdHash), a signature counter, test of user presence, user verification flags, and any extensions processed by the authenticator.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var authnrData = authenticatorAssertionResponse.authenticatorData;
-</pre>
+```js
+var authnrData = authenticatorAssertionResponse.authenticatorData;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{jsxref("ArrayBuffer")}} that has a {{jsxref("ArrayBuffer.byteLength")}} of at least 37 bytes, containing the following fields:</p>
+An {{jsxref("ArrayBuffer")}} that has a {{jsxref("ArrayBuffer.byteLength")}} of at least 37 bytes, containing the following fields:
 
-<ul>
- <li><strong>rpIdHash</strong> (32 bytes) - A SHA256 hash of the <a href="/en-US/docs/Web/API/PublicKeyCredentialRequestOptions/rpId">relying party ID</a> that was seen by the browser. The server will ensure that this hash matches a hash of its own origin in order to prevent phishing or other man-in-the-middle attacks.</li>
- <li><strong>flags</strong> (1 bytes) - A bitfield that indicates various attributes that were asserted by the authenticator. The bits are as follows, where "bit 0" is the least significant bit and all bits not specifically mentioned below are "reserved for future use":
-  <ul>
-   <li>Bit 0, User Presence (UP) - If set, authenticator validated that the user was present through some Test of User Presence (TUP), such as touching a button on the authenticator.</li>
-   <li>Bit 2, User Verification (UV) - If set, authenticator verified the actual user, through a biometric, PIN, or other authentication method.</li>
-   <li>Bit 6, Attested Credential Data (AT) - If set, attestedCredentialData will immediately follow the first 37 bytes of this authenticatorData.</li>
-   <li>Bit 7, Extension data (ED) - If set, extension data is present. Extension data will follow attestedCredentialData if it is present, or will immediately follow the first 37 bytes of the authenticatorData if no attestedCredentialData is present.</li>
-  </ul>
- </li>
- <li><strong>signCount</strong> (4 bytes) - A signature count from the authenticator. The server will use this counter to detect authenticator cloning.</li>
- <li><strong>attestedCredentialData</strong> (variable length) - The credential that was created. This is only present during a navigator.credentials.create() call. This is a sequence of bytes with the following format:
-  <ul>
-   <li><strong>AAGUID</strong> (16 bytes) - Authenticator Attestation Globally Unique Identifier, a unique number that identifies the model of the authenticator (not the specific instance of the authenticator) so that a relying party can understand the characteristics of the authenticator by looking up its metadata statement.</li>
-   <li><strong><dfn>credentialIdLength</dfn></strong> (2 bytes) - The length of the credential ID that immediately follows these bytes.</li>
-   <li><strong><dfn>credentialId</dfn></strong> (variable length) - A unique identifier for this credential so that it can be requested for future authentications. The credential is "<dfn>credentialIdLength</dfn>" bytes long.</li>
-   <li><dfn><strong>credentialPublicKey</strong> (variable length) - </dfn>A <a href="https://datatracker.ietf.org/doc/html/rfc8152">COSE</a> encoded public key. This public key will be stored on the server associated with a user's account and be used for future authentications.</li>
-  </ul>
- </li>
- <li><strong>extensions</strong> (variable length) - An optional <a href="https://datatracker.ietf.org/doc/html/rfc7049">CBOR</a> map of extensions.</li>
-</ul>
+- **rpIdHash** (32 bytes) - A SHA256 hash of the [relying party ID](/en-US/docs/Web/API/PublicKeyCredentialRequestOptions/rpId) that was seen by the browser. The server will ensure that this hash matches a hash of its own origin in order to prevent phishing or other man-in-the-middle attacks.
+- **flags** (1 bytes) - A bitfield that indicates various attributes that were asserted by the authenticator. The bits are as follows, where "bit 0" is the least significant bit and all bits not specifically mentioned below are "reserved for future use":
 
-<h2 id="Examples">Examples</h2>
+  - Bit 0, User Presence (UP) - If set, authenticator validated that the user was present through some Test of User Presence (TUP), such as touching a button on the authenticator.
+  - Bit 2, User Verification (UV) - If set, authenticator verified the actual user, through a biometric, PIN, or other authentication method.
+  - Bit 6, Attested Credential Data (AT) - If set, attestedCredentialData will immediately follow the first 37 bytes of this authenticatorData.
+  - Bit 7, Extension data (ED) - If set, extension data is present. Extension data will follow attestedCredentialData if it is present, or will immediately follow the first 37 bytes of the authenticatorData if no attestedCredentialData is present.
 
-<pre class="brush: js">var options = {
+- **signCount** (4 bytes) - A signature count from the authenticator. The server will use this counter to detect authenticator cloning.
+- **attestedCredentialData** (variable length) - The credential that was created. This is only present during a navigator.credentials.create() call. This is a sequence of bytes with the following format:
+
+  - **AAGUID** (16 bytes) - Authenticator Attestation Globally Unique Identifier, a unique number that identifies the model of the authenticator (not the specific instance of the authenticator) so that a relying party can understand the characteristics of the authenticator by looking up its metadata statement.
+  - **_credentialIdLength_** (2 bytes) - The length of the credential ID that immediately follows these bytes.
+  - **_credentialId_** (variable length) - A unique identifier for this credential so that it can be requested for future authentications. The credential is "_credentialIdLength_" bytes long.
+  - **\*credentialPublicKey** (variable length) - \*A [COSE](https://datatracker.ietf.org/doc/html/rfc8152) encoded public key. This public key will be stored on the server associated with a user's account and be used for future authentications.
+
+- **extensions** (variable length) - An optional [CBOR](https://datatracker.ietf.org/doc/html/rfc7049) map of extensions.
+
+## Examples
+
+```js
+var options = {
   challenge: new Uint8Array(26), // will be another value, provided by the relying party server
   timeout: 60000
 };
@@ -63,12 +61,12 @@ navigator.credentials.get({  publicKey: options })
 }).catch(function (err) {
    console.error(err);
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

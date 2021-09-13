@@ -2,54 +2,55 @@
 title: RTCIceCandidatePairStats.consentExpiredTimestamp
 slug: Web/API/RTCIceCandidatePairStats/consentExpiredTimestamp
 tags:
-- API
-- Binding
-- Connection
-- Connectivity
-- Consent
-- Property
-- RTCIceCandidatePairStats
-- Reference
-- STUN
-- WebRTC
-- WebRTC API
-- consentTimestampExpired
-- expiration
-- rtc
-- timeStamp
+  - API
+  - Binding
+  - Connection
+  - Connectivity
+  - Consent
+  - Property
+  - RTCIceCandidatePairStats
+  - Reference
+  - STUN
+  - WebRTC
+  - WebRTC API
+  - consentTimestampExpired
+  - expiration
+  - rtc
+  - timeStamp
 browser-compat: api.RTCIceCandidatePairStats.consentExpiredTimestamp
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The {{domxref("RTCIceCandidatePairStats")}} property
-    <strong><code>consentExpiredTimestamp</code></strong> indicates the time at which the
-    most recent {{Glossary("STUN")}} binding response expired.</p>
+The {{domxref("RTCIceCandidatePairStats")}} property
+**`consentExpiredTimestamp`** indicates the time at which the
+most recent {{Glossary("STUN")}} binding response expired.
 
-<p>This indicates when
-  the current STUN bindings — the mapping of the IP address and port configurations for
-  both peers on the {{Glossary("WebRTC")}} connection — are due to expire. If this time
-  has arrived or passed, the bindings have expired.</p>
+This indicates when
+the current STUN bindings — the mapping of the IP address and port configurations for
+both peers on the {{Glossary("WebRTC")}} connection — are due to expire. If this time
+has arrived or passed, the bindings have expired.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>consentExpiration</em> = <em>rtcIceCandidatePairStats</em>.consentExpiredTimestamp;</pre>
+```js
+consentExpiration = rtcIceCandidatePairStats.consentExpiredTimestamp;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMHighResTimeStamp")}} object that indicates the time at which the STUN
-  binding that allows the two peers described by this {{domxref("RTCIceCandidatePair")}}
-  to communicate will expire (or the time at which the binding did expire, if the time has
-  passed).</p>
+A {{domxref("DOMHighResTimeStamp")}} object that indicates the time at which the STUN
+binding that allows the two peers described by this {{domxref("RTCIceCandidatePair")}}
+to communicate will expire (or the time at which the binding did expire, if the time has
+passed).
 
-<p>This property's value is <code>undefined</code> if there have been no STUN binding
-  responses yet on the candidate pair. This is only possible if
-  {{domxref("RTCIceCandidatePeerStats.responsesReceived", "responsesReceived")}} is 0.</p>
+This property's value is `undefined` if there have been no STUN binding
+responses yet on the candidate pair. This is only possible if
+{{domxref("RTCIceCandidatePeerStats.responsesReceived", "responsesReceived")}} is 0.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

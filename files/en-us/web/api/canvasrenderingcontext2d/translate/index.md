@@ -9,53 +9,54 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.translate
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The
-  <strong><code>CanvasRenderingContext2D.translate()</code></strong>
-  method of the Canvas 2D API adds a translation transformation to the current matrix.</p>
+The
+**`CanvasRenderingContext2D.translate()`**
+method of the Canvas 2D API adds a translation transformation to the current matrix.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <em>ctx</em>.translate(<em>x</em>, <em>y</em>);
-</pre>
+```js
+void ctx.translate(x, y);
+```
 
-<p>The <code>translate()</code> method adds a translation transformation to the current
-  matrix by moving the canvas and its origin <code>x</code> units horizontally and
-  <code>y</code> units vertically on the grid.</p>
+The `translate()` method adds a translation transformation to the current
+matrix by moving the canvas and its origin `x` units horizontally and
+`y` units vertically on the grid.
 
-<p><img alt="" src="canvas_grid_translate.png"></p>
+![](canvas_grid_translate.png)
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>x</code></dt>
-  <dd>Distance to move in the horizontal direction. Positive values are to the right, and
-    negative to the left.</dd>
-  <dt><code>y</code></dt>
-  <dd>Distance to move in the vertical direction. Positive values are down, and negative
-    are up.</dd>
-</dl>
+- `x`
+  - : Distance to move in the horizontal direction. Positive values are to the right, and
+    negative to the left.
+- `y`
+  - : Distance to move in the vertical direction. Positive values are down, and negative
+    are up.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Moving_a_shape">Moving a shape</h3>
+### Moving a shape
 
-<p>This example draws a square that is moved from its default position by the
-  <code>translate()</code> method. An unmoved square of the same size is then drawn for
-  comparison.</p>
+This example draws a square that is moved from its default position by the
+`translate()` method. An unmoved square of the same size is then drawn for
+comparison.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<p>The <code>translate()</code> method translates the context by 110 horizontally and 30
-  vertically. The first square is shifted by those amounts from its default position.</p>
+The `translate()` method translates the context by 110 horizontally and 30
+vertically. The first square is shifted by those amounts from its default position.
 
-<pre class="brush: js;">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // Moved square
@@ -69,24 +70,22 @@ ctx.setTransform(1, 0, 0, 1, 0, 0);
 // Unmoved square
 ctx.fillStyle = 'gray';
 ctx.fillRect(0, 0, 80, 80);
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>The moved square is red, and the unmoved square is gray.</p>
+The moved square is red, and the unmoved square is gray.
 
-<p>{{ EmbedLiveSample('Moving_a_shape', 700, 180) }}</p>
+{{ EmbedLiveSample('Moving_a_shape', 700, 180) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining this method: {{domxref("CanvasRenderingContext2D")}}</li>
-</ul>
+- The interface defining this method: {{domxref("CanvasRenderingContext2D")}}

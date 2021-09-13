@@ -16,28 +16,26 @@ tags:
   - parameters
 browser-compat: api.RTCRtpReceiveParameters
 ---
-<p>{{DefaultAPISidebar("WebRTC")}}</p>
+{{DefaultAPISidebar("WebRTC")}}
 
-<p>The <code><strong>RTCRtpReceiveParameters</strong></code> dictionary, based upon the {{domxref("RTCRtpParameters")}} dictionary, is returned by the {{domxref("RTCRtpReceiver")}} method {{domxref("RTCRtpReceiver.getParameters", "getParameters()")}}. It describes the parameters being used by the receiver's {{Glossary("RTP")}} connection to the remote peer.</p>
+The **`RTCRtpReceiveParameters`** dictionary, based upon the {{domxref("RTCRtpParameters")}} dictionary, is returned by the {{domxref("RTCRtpReceiver")}} method {{domxref("RTCRtpReceiver.getParameters", "getParameters()")}}. It describes the parameters being used by the receiver's {{Glossary("RTP")}} connection to the remote peer.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This dictionary currently has no properties of its own; it exists for future expansion. It inherits all of the properties of its parent, {{domxref("RTCRtpParameters")}}.</em></p>
+_This dictionary currently has no properties of its own; it exists for future expansion. It inherits all of the properties of its parent, {{domxref("RTCRtpParameters")}}._
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>See <a href="/en-US/docs/Web/API/RTCRtpReceiver/getParameters#example"><code>RTCRtpReceiver.getParameters()</code></a> for example code.</p>
+See [`RTCRtpReceiver.getParameters()`](/en-US/docs/Web/API/RTCRtpReceiver/getParameters#example) for example code.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("RTCRtpSendParameters")}} and {{domxref("RTCRtpSender.setParameters()")}}</li>
-</ul>
+- {{domxref("RTCRtpSendParameters")}} and {{domxref("RTCRtpSender.setParameters()")}}

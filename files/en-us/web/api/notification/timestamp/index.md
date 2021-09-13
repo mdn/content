@@ -2,44 +2,46 @@
 title: Notification.timestamp
 slug: Web/API/Notification/timestamp
 tags:
-- API
-- Notification
-- Notifications
-- Notifications API
-- Property
-- Reference
-- timeStamp
+  - API
+  - Notification
+  - Notifications
+  - Notifications API
+  - Property
+  - Reference
+  - timeStamp
 browser-compat: api.Notification.timestamp
 ---
-<p>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</p>
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-<p>The <strong><code>timestamp</code></strong> read-only property of the
-  {{domxref("Notification")}} interface returns a {{domxref("DOMTimeStamp")}}, as
-  specified in the <code>timestamp</code> option of the
-  {{domxref("Notification.Notification","Notification()")}} constructor.</p>
+The **`timestamp`** read-only property of the
+{{domxref("Notification")}} interface returns a {{domxref("DOMTimeStamp")}}, as
+specified in the `timestamp` option of the
+{{domxref("Notification.Notification","Notification()")}} constructor.
 
-<p>The notification's timestamp can represent the time, in milliseconds since 00:00:00 UTC
-  on 1 January 1970, of the event for which the notification was created, or it can be an
-  arbitrary timestamp that you want associated with the notification. For example, a
-  timestamp for an upcoming meeting could be set in the future, whereas a timestamp for a
-  missed message could be set in the past.</p>
+The notification's timestamp can represent the time, in milliseconds since 00:00:00 UTC
+on 1 January 1970, of the event for which the notification was created, or it can be an
+arbitrary timestamp that you want associated with the notification. For example, a
+timestamp for an upcoming meeting could be set in the future, whereas a timestamp for a
+missed message could be set in the past.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>timestamp</var> = <var>Notification</var>.timestamp;</pre>
+```js
+var timestamp = Notification.timestamp;
+```
 
-<h3 id="Return_Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMTimeStamp")}}.</p>
+A {{domxref("DOMTimeStamp")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following snippet fires a notification; a simple <code>options</code> object is
-  created, then the notification is fired using the <code>Notification()</code>
-  constructor.</p>
+The following snippet fires a notification; a simple `options` object is
+created, then the notification is fired using the `Notification()`
+constructor.
 
-<pre class="brush: js">var dts = Math.floor(Date.now());
+```js
+var dts = Math.floor(Date.now());
 
 var options = {
   body: 'Do you like my body?',
@@ -48,19 +50,18 @@ var options = {
 
 var n = new Notification('Test notification',options);
 
-console.log(n.timestamp) // should log original timestamp</pre>
+console.log(n.timestamp) // should log original timestamp
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using
-      the Notifications API</a></li>
-</ul>
+- [Using
+  the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)

@@ -2,32 +2,33 @@
 title: Window.status
 slug: Web/API/Window/status
 tags:
-- API
-- HTML DOM
-- NeedsExample
-- NeedsSpecTable
-- Property
-- Reference
-- Window
+  - API
+  - HTML DOM
+  - NeedsExample
+  - NeedsSpecTable
+  - Property
+  - Reference
+  - Window
 browser-compat: api.Window.status
 ---
-<div>{{APIRef}} {{Deprecated_Header}}</div>
+{{APIRef}} {{Deprecated_Header}}
 
-<p>The <code><strong>status</strong></code> property of the
-    {{domxref("Window")}} interface was originally intended to set the text in the status
-    bar at the bottom of the browser window. However, the HTML standard now requires
-    setting <code>window.status</code> to have no effect on the text displayed in the
-    status bar.</p>
+The **`status`** property of the
+{{domxref("Window")}} interface was originally intended to set the text in the status
+bar at the bottom of the browser window. However, the HTML standard now requires
+setting `window.status` to have no effect on the text displayed in the
+status bar.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>window</em>.status = <em>string</em>; var <em>value = window</em>.status;</pre>
+```js
+window.status = string; var value = window.status;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

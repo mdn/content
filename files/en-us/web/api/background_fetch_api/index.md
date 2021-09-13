@@ -7,49 +7,50 @@ tags:
   - Reference
   - Background Fetch API
 ---
-<div>{{DefaultAPISidebar("Background Fetch API")}}</div>
+{{DefaultAPISidebar("Background Fetch API")}}
 
-<p>The <strong>Background Fetch API</strong> provides a method for managing downloads that may take a significant amount of time such as movies, audio files, and software.</p>
+The **Background Fetch API** provides a method for managing downloads that may take a significant amount of time such as movies, audio files, and software.
 
-<h2>Concepts and Usage</h2>
+## Concepts and Usage
 
-<p>When a web application requires the user to download large files, this often presents a problem in that the user needs to stay connected to the page for the download to complete. If they lose connectivity, close the tab or navigate away from the page the download stops.</p>
+When a web application requires the user to download large files, this often presents a problem in that the user needs to stay connected to the page for the download to complete. If they lose connectivity, close the tab or navigate away from the page the download stops.
 
-<p>The {{domxref("Background Sync API")}} provides a way for service workers to defer processing until a user is connected; however it can't be used for long running tasks such as downloading a large file. Background Sync requires that the service worker stays alive until the fetch is completed, and to conserve battery life and to prevent unwanted tasks happening in the background the browser will at some point terminate the task.</p>
+The {{domxref("Background Sync API")}} provides a way for service workers to defer processing until a user is connected; however it can't be used for long running tasks such as downloading a large file. Background Sync requires that the service worker stays alive until the fetch is completed, and to conserve battery life and to prevent unwanted tasks happening in the background the browser will at some point terminate the task.
 
-<p>The Background Fetch API solves this problem. It creates a way for a web developer to tell the browser to perform some fetches in the background, for example when the user clicks a button to download a video file. The browser then performs the fetches in a user-visible way, displaying progress to the user and giving them a method to cancel the download. Once the download is complete the browser then opens the service worker, at which point your application can do something with the response if required.</p>
+The Background Fetch API solves this problem. It creates a way for a web developer to tell the browser to perform some fetches in the background, for example when the user clicks a button to download a video file. The browser then performs the fetches in a user-visible way, displaying progress to the user and giving them a method to cancel the download. Once the download is complete the browser then opens the service worker, at which point your application can do something with the response if required.
 
-<p>The Background Fetch API will enable the fetch to happen if the user starts the process while offline. Once they are connected it will begin. If the user goes off line, the process pauses until the user is on again.</p>
+The Background Fetch API will enable the fetch to happen if the user starts the process while offline. Once they are connected it will begin. If the user goes off line, the process pauses until the user is on again.
 
-<h2 id="Interfaces">Interfaces</h2>
+## Interfaces
 
-<dl>
-  <dt>{{domxref("BackgroundFetchManager")}}</dt>
-  <dd>A map where the keys are background fetch IDs and the values are {{domxref("BackgroundFetchRegistration")}} objects.</dd>
-  <dt>{{domxref("BackgroundFetchRegistration")}}</dt>
-  <dd>Represents a Background Fetch.</dd>
-  <dt>{{domxref("BackgroundFetchRecord")}}</dt>
-  <dd>Represents an individual fetch request and response.</dd>
-  <dt>{{domxref("BackgroundFetchEvent")}}</dt>
-  <dd>The event type passed to <code>onbackgroundfetchabort</code> and <code>onbackgroundfetchclick</code>.</dd>
-  <dt>{{domxref("BackgroundFetchUpdateUIEvent")}}</dt>
-  <dd>The event type passed to <code>onbackgroundfetchsuccess</code> and <code>onbackgroundfetchfail</code>.</dd>
-</dl>
+- {{domxref("BackgroundFetchManager")}}
+  - : A map where the keys are background fetch IDs and the values are {{domxref("BackgroundFetchRegistration")}} objects.
+- {{domxref("BackgroundFetchRegistration")}}
+  - : Represents a Background Fetch.
+- {{domxref("BackgroundFetchRecord")}}
+  - : Represents an individual fetch request and response.
+- {{domxref("BackgroundFetchEvent")}}
+  - : The event type passed to `onbackgroundfetchabort` and `onbackgroundfetchclick`.
+- {{domxref("BackgroundFetchUpdateUIEvent")}}
+  - : The event type passed to `onbackgroundfetchsuccess` and `onbackgroundfetchfail`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Before using Background Fetch, check for browser support.</p>
+Before using Background Fetch, check for browser support.
 
-<pre class="brush:css">if (!('BackgroundFetchManager' in self)) {
+```css
+if (!('BackgroundFetchManager' in self)) {
   // Provide fallback downloading.
-}</pre>
+}
+```
 
-<p>Using Background Fetch requires a registered service worker. Then call <code>backgroundFetch.fetch()</code> to perform a fetch. This
-returns a promise that resolves with a {{domxref("BackgroundFetchRegistration")}}.</p>
+Using Background Fetch requires a registered service worker. Then call `backgroundFetch.fetch()` to perform a fetch. This
+returns a promise that resolves with a {{domxref("BackgroundFetchRegistration")}}.
 
-<p>A background fetch may fetch a number of files. In our example the fetch requests an MP3 and a JPEG. This enables a package of files that the user sees as one item (for example a podcast and artwork) to be downloaded at once.</p>
+A background fetch may fetch a number of files. In our example the fetch requests an MP3 and a JPEG. This enables a package of files that the user sees as one item (for example a podcast and artwork) to be downloaded at once.
 
-<pre class="brush:js">navigator.serviceWorker.ready.then(async (swReg) => {
+```js
+navigator.serviceWorker.ready.then(async (swReg) => {
   const bgFetch = await swReg.backgroundFetch.fetch('my-fetch', ['/ep-5.mp3', 'ep-5-artwork.jpg'], {
     title: 'Episode 5: Interesting things.',
     icons: [{
@@ -59,29 +60,18 @@ returns a promise that resolves with a {{domxref("BackgroundFetchRegistration")}
     }],
     downloadTotal: 60 * 1024 * 1024,
   });
-});</pre>
+});
+```
 
-<p>You can find a demo application which implements Background Fetch <a href="https://glitch.com/edit/#!/bgfetch-http203?path=public%2Fclient.js%3A191%3A45">here</a>.</p>
+You can find a demo application which implements Background Fetch [here](https://glitch.com/edit/#!/bgfetch-http203?path=public%2Fclient.js%3A191%3A45).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a href="https://wicg.github.io/background-fetch/">Background Fetch</a></td>
-    </tr>
-  </tbody>
-</table>
+| Specification                                                |
+| ------------------------------------------------------------ |
+| [Background Fetch](https://wicg.github.io/background-fetch/) |
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://developers.google.com/web/updates/2018/12/background-fetch">Introducing Background Fetch</a></li>
-  <li><a href="https://www.youtube.com/watch?v=cElAoxhQz6w">Background Fetch - HTTP 203</a></li>
-</ul>
-
+- [Introducing Background Fetch](https://developers.google.com/web/updates/2018/12/background-fetch)
+- [Background Fetch - HTTP 203](https://www.youtube.com/watch?v=cElAoxhQz6w)

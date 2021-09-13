@@ -2,50 +2,51 @@
 title: RTCStats.timestamp
 slug: Web/API/RTCStats/timestamp
 tags:
-- API
-- Property
-- RTCStats
-- Reference
-- Statistics
-- Stats
-- Time
-- WebRTC
-- WebRTC API
-- rtc
-- timeStamp
+  - API
+  - Property
+  - RTCStats
+  - Reference
+  - Statistics
+  - Stats
+  - Time
+  - WebRTC
+  - WebRTC API
+  - rtc
+  - timeStamp
 browser-compat: api.RTCStats.timestamp
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <code><strong>timestamp</strong></code> property of the
-    {{domxref("RTCStats")}} dictionary is a {{domxref("DOMHighResTimeStamp")}} object
-    specifying the time at which the data in the object was sampled.</p>
+The **`timestamp`** property of the
+{{domxref("RTCStats")}} dictionary is a {{domxref("DOMHighResTimeStamp")}} object
+specifying the time at which the data in the object was sampled.
 
-<p>For reports
-  related to RTCP packets, for instance, this indicates the time at which the data covered
-  by the statistics was received at the corresponding endpoint.</p>
+For reports
+related to RTCP packets, for instance, this indicates the time at which the data covered
+by the statistics was received at the corresponding endpoint.
 
-<p>The time is given in milliseconds elapsed since the UNIX epoch (the first moment of
-  January 1, 1970, UTC).</p>
+The time is given in milliseconds elapsed since the UNIX epoch (the first moment of
+January 1, 1970, UTC).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>timestamp</em> = <em>RTCStats</em>.timestamp;</pre>
+```js
+var timestamp = RTCStats.timestamp;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMHighResTimeStamp")}} value indicating the time at which the activity
-  described by the statistics in this object was recorded, in milliseconds elapsed since
-  the beginning of January 1, 1970, UTC. This should be accurate to within a few
-  milliseconds but may not be entirely pricise, either because of hardware or operating
-  system limitations or because of fingerprinting protection in the form of reduced clock
-  precision or accuracy.</p>
+A {{domxref("DOMHighResTimeStamp")}} value indicating the time at which the activity
+described by the statistics in this object was recorded, in milliseconds elapsed since
+the beginning of January 1, 1970, UTC. This should be accurate to within a few
+milliseconds but may not be entirely pricise, either because of hardware or operating
+system limitations or because of fingerprinting protection in the form of reduced clock
+precision or accuracy.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

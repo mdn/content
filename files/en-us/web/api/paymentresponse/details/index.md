@@ -13,28 +13,30 @@ tags:
   - details
 browser-compat: api.PaymentResponse.details
 ---
-<p>{{securecontext_header}}{{SeeCompatTable}}{{APIRef("Payment Request API")}}</p>
+{{securecontext_header}}{{SeeCompatTable}}{{APIRef("Payment Request API")}}
 
-<p>The <strong><code>details</code></strong> read-only property of the
-  {{domxref("PaymentResponse")}} interface returns a JSON-serializable object that
-  provides a payment method specific message used by the merchant to process the
-  transaction and determine a successful funds transfer.</p>
+The **`details`** read-only property of the
+{{domxref("PaymentResponse")}} interface returns a JSON-serializable object that
+provides a payment method specific message used by the merchant to process the
+transaction and determine a successful funds transfer.
 
-<p>This data is returned by the payment app that satisfies the payment request, and must
-  conform to the structure defined in the {{domxref("BasicCardResponse")}} dictionary.</p>
+This data is returned by the payment app that satisfies the payment request, and must
+conform to the structure defined in the {{domxref("BasicCardResponse")}} dictionary.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var detailsObject = PaymentResponse.details;</pre>
+```js
+var detailsObject = PaymentResponse.details;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example extracts the details from the {{domxref('PaymentResponse')}}
-  object to the promise returned from {{domxref('PaymentRequest.show()')}}. In a
-  real-world implementation this data would then be sent to a payment server.</p>
+The following example extracts the details from the {{domxref('PaymentResponse')}}
+object to the promise returned from {{domxref('PaymentRequest.show()')}}. In a
+real-world implementation this data would then be sent to a payment server.
 
-<pre class="brush: js">payment.show().then(paymentResponse =&gt; {
+```js
+payment.show().then(paymentResponse => {
   var paymentData = {
     // payment method string
     method: paymentResponse.methodName,
@@ -44,12 +46,13 @@ browser-compat: api.PaymentResponse.details
     address: toDict(paymentResponse.shippingAddress)
   };
   // Send information to the server
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

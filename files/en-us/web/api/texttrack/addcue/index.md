@@ -9,52 +9,48 @@ tags:
   - TextTrack
 browser-compat: api.TextTrack.addCue
 ---
-<div>{{APIRef("WebVTT")}}</div>
+{{APIRef("WebVTT")}}
 
-<p>The <strong><code>addCue()</code></strong> method of the {{domxref("TextTrack")}} interface adds a new cue to the list of cues.</p>
+The **`addCue()`** method of the {{domxref("TextTrack")}} interface adds a new cue to the list of cues.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">TextTrack.addCue(cue);</pre>
+```js
+TextTrack.addCue(cue);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>cue</code></dt>
-  <dd>A {{domxref("TextTrackCue")}}.</dd>
-</dl>
+- `cue`
+  - : A {{domxref("TextTrackCue")}}.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The {{domxref("TextTrackCue")}} interface is an abstract class used as the parent for other cue interfaces such as {{domxref("VTTCue")}}. Therefore, when adding a cue you will be using one of the cue types that inherit from <code>TextTrackCue</code>.</p>
-</div>
+> **Note:** The {{domxref("TextTrackCue")}} interface is an abstract class used as the parent for other cue interfaces such as {{domxref("VTTCue")}}. Therefore, when adding a cue you will be using one of the cue types that inherit from `TextTrackCue`.
 
-<h3 id="Returns">Return value</h3>
+### Return value
 
-<p>Undefined.</p>
+Undefined.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>{{domxref("DOMException")}} <code>InvalidStateError</code></dt>
-  <dd>Thrown if the rules for this {{domxref("TextTrackList")}} do not match those which are appropriate for the incoming {{domxref("TextTrackCue")}}.</dd>
-</dl>
+- {{domxref("DOMException")}} `InvalidStateError`
+  - : Thrown if the rules for this {{domxref("TextTrackList")}} do not match those which are appropriate for the incoming {{domxref("TextTrackCue")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the following example two cues are added to a video text track using <code>addCue()</code>.</p>
+In the following example two cues are added to a video text track using `addCue()`.
 
-<pre class="brush: js">let video = document.querySelector('video');
+```js
+let video = document.querySelector('video');
 let track = video.addTextTrack("captions", "Captions", "en");
 track.mode = "showing";
 track.addCue(new VTTCue(0, 0.9, 'Hildy!'));
 track.addCue(new VTTCue(1, 1.4, 'How are you?'));
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
+{{Compat}}

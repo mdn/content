@@ -8,52 +8,51 @@ tags:
   - Property
 browser-compat: api.Element.nextElementSibling
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>Element.nextElementSibling</strong></code> read-only
+The **`Element.nextElementSibling`** read-only
 property returns the element immediately following the specified one in its parent's
-children list, or <code>null</code> if the specified element is the last one in the list.</p>
+children list, or `null` if the specified element is the last one in the list.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 // Getter
 element = el.nextElementSibling;
 
 // No setter; read-only property
-</pre>
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: html">&lt;div id="div-01"&gt;Here is div-01&lt;/div&gt;
-&lt;div id="div-02"&gt;Here is div-02&lt;/div&gt;
+```html
+<div id="div-01">Here is div-01</div>
+<div id="div-02">Here is div-02</div>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
   let el = document.getElementById('div-01').nextElementSibling;
   console.log('Siblings of div-01:');
   while (el) {
     console.log(el.nodeName);
     el = el.nextElementSibling;
   }
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<p>This example outputs the following into the console when it loads:</p>
+This example outputs the following into the console when it loads:
 
-<pre>Siblings of div-01:
-DIV
-SCRIPT</pre>
+    Siblings of div-01:
+    DIV
+    SCRIPT
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Element.previousElementSibling")}}</li>
-</ul>
+- {{domxref("Element.previousElementSibling")}}

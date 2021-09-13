@@ -10,91 +10,68 @@ tags:
   - XMLHttpRequest
   - request
 ---
-<div>{{DefaultAPISidebar("Fetch API")}}</div>
+{{DefaultAPISidebar("Fetch API")}}
 
-<p>The Fetch API provides an interface for fetching resources (including across the network). It will seem familiar to anyone who has used {{DOMxRef("XMLHttpRequest")}}, but the new API provides a more powerful and flexible feature set.</p>
+The Fetch API provides an interface for fetching resources (including across the network). It will seem familiar to anyone who has used {{DOMxRef("XMLHttpRequest")}}, but the new API provides a more powerful and flexible feature set.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Concepts_and_usage">Concepts and usage</h2>
+## Concepts and usage
 
-<p>Fetch provides a generic definition of {{DOMxRef("Request")}} and {{DOMxRef("Response")}} objects (and other things involved with network requests). This will allow them to be used wherever they are needed in the future, whether it’s for service workers, Cache API, and other similar things that handle or modify requests and responses, or any kind of use case that might require you to generate your responses programmatically (that is, the use of computer program or personal programming instructions).</p>
+Fetch provides a generic definition of {{DOMxRef("Request")}} and {{DOMxRef("Response")}} objects (and other things involved with network requests). This will allow them to be used wherever they are needed in the future, whether it’s for service workers, Cache API, and other similar things that handle or modify requests and responses, or any kind of use case that might require you to generate your responses programmatically (that is, the use of computer program or personal programming instructions).
 
-<p>It also defines related concepts such as CORS and the HTTP Origin header semantics, supplanting their separate definitions elsewhere.</p>
+It also defines related concepts such as CORS and the HTTP Origin header semantics, supplanting their separate definitions elsewhere.
 
-<p>For making a request and fetching a resource, use the {{DOMxRef("fetch()")}} method. It is implemented in multiple interfaces, specifically {{DOMxRef("Window")}} and {{DOMxRef("WorkerGlobalScope")}}. This makes it available in pretty much any context you might want to fetch resources in.</p>
+For making a request and fetching a resource, use the {{DOMxRef("fetch()")}} method. It is implemented in multiple interfaces, specifically {{DOMxRef("Window")}} and {{DOMxRef("WorkerGlobalScope")}}. This makes it available in pretty much any context you might want to fetch resources in.
 
-<p>The <code>fetch()</code> method takes one mandatory argument, the path to the resource you want to fetch. It returns a {{JSxRef("Promise")}} that resolves to the {{DOMxRef("Response")}} to that request — as soon as the server responds with headers — <strong>even if the server response is an HTTP error status</strong>. You can also optionally pass in an <code>init</code> options object as the second argument (see {{DOMxRef("Request")}}).</p>
+The `fetch()` method takes one mandatory argument, the path to the resource you want to fetch. It returns a {{JSxRef("Promise")}} that resolves to the {{DOMxRef("Response")}} to that request — as soon as the server responds with headers — **even if the server response is an HTTP error status**. You can also optionally pass in an `init` options object as the second argument (see {{DOMxRef("Request")}}).
 
-<p>Once a {{DOMxRef("Response")}} is retrieved, there are a number of methods available to define what the body content is and how it should be handled.</p>
+Once a {{DOMxRef("Response")}} is retrieved, there are a number of methods available to define what the body content is and how it should be handled.
 
-<p>You can create a request and response directly using the {{DOMxRef("Request.Request", "Request()")}} and {{DOMxRef("Response.Response", "Response()")}} constructors, but it's uncommon to do this directly. Instead, these are more likely to be created as results of other API actions (for example, {{DOMxRef("FetchEvent.respondWith()")}} from service workers).</p>
+You can create a request and response directly using the {{DOMxRef("Request.Request", "Request()")}} and {{DOMxRef("Response.Response", "Response()")}} constructors, but it's uncommon to do this directly. Instead, these are more likely to be created as results of other API actions (for example, {{DOMxRef("FetchEvent.respondWith()")}} from service workers).
 
-<h3 id="Differences_from_jQuery">Differences from jQuery</h3>
+### Differences from jQuery
 
-<p>The <code>fetch</code> specification differs from <code>jQuery.ajax()</code> in three main ways:</p>
+The `fetch` specification differs from `jQuery.ajax()` in three main ways:
 
-<ul>
- <li>The Promise returned from <code>fetch()</code> <strong>won’t reject on HTTP error status</strong> even if the response is an HTTP <code>404</code> or <code>500</code>. Instead, it will resolve normally (with <code>ok</code> status set to <code>false</code>), and it will only reject on network failure or if anything prevented the request from completing.</li>
- <li><code>fetch()</code> <strong>won’t send cross-origin cookies</strong> unless you set the <em>credentials</em> <a href="/en-US/docs/Web/API/fetch#parameters">init option</a> (to <code>include</code>).
-  <ul>
-   <li>In <a href="https://github.com/whatwg/fetch/pull/585" rel="nofollow noopener">April 2018</a>, the spec changed the default credentials policy to <code>'same-origin'</code>. The following browsers shipped an outdated native fetch, and were updated in these versions: Firefox 61.0b13, Safari 12, Chrome 68.</li>
-   <li>If you are targeting older versions of these browsers, be sure to include <code>credentials: 'same-origin'</code> <a href="/en-US/docs/Web/API/fetch#parameters">init option</a> on all api requests that may be affected by cookies/user login state.</li>
-  </ul>
- </li>
-</ul>
+- The Promise returned from `fetch()` **won’t reject on HTTP error status** even if the response is an HTTP `404` or `500`. Instead, it will resolve normally (with `ok` status set to `false`), and it will only reject on network failure or if anything prevented the request from completing.
+- `fetch()` **won’t send cross-origin cookies** unless you set the _credentials_ [init option](/en-US/docs/Web/API/fetch#parameters) (to `include`).
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Find out more about using the Fetch API features in <a href="/en-US/docs/Web/API/Fetch_API/Using_Fetch">Using Fetch</a>, and study concepts in <a href="/en-US/docs/Web/API/Fetch_API/Basic_concepts">Fetch basic concepts</a>.</p>
-</div>
+  - In [April 2018](https://github.com/whatwg/fetch/pull/585), the spec changed the default credentials policy to `'same-origin'`. The following browsers shipped an outdated native fetch, and were updated in these versions: Firefox 61.0b13, Safari 12, Chrome 68.
+  - If you are targeting older versions of these browsers, be sure to include `credentials: 'same-origin'` [init option](/en-US/docs/Web/API/fetch#parameters) on all api requests that may be affected by cookies/user login state.
 
-<h3 id="Aborting_a_fetch">Aborting a fetch</h3>
+> **Note:** Find out more about using the Fetch API features in [Using Fetch](/en-US/docs/Web/API/Fetch_API/Using_Fetch), and study concepts in [Fetch basic concepts](/en-US/docs/Web/API/Fetch_API/Basic_concepts).
 
-<p>Browsers have started to add experimental support for the {{DOMxRef("AbortController")}} and {{DOMxRef("AbortSignal")}} interfaces (aka The Abort API), which allow operations like Fetch and XHR to be aborted if they have not already completed. See the interface pages for more details.</p>
+### Aborting a fetch
 
-<h2 id="Fetch_Interfaces">Fetch Interfaces</h2>
+Browsers have started to add experimental support for the {{DOMxRef("AbortController")}} and {{DOMxRef("AbortSignal")}} interfaces (aka The Abort API), which allow operations like Fetch and XHR to be aborted if they have not already completed. See the interface pages for more details.
 
-<dl>
- <dt>{{DOMxRef("fetch()")}}</dt>
- <dd>The <code>fetch()</code> method used to fetch a resource.</dd>
- <dt>{{DOMxRef("Headers")}}</dt>
- <dd>Represents response/request headers, allowing you to query them and take different actions depending on the results.</dd>
- <dt>{{DOMxRef("Request")}}</dt>
- <dd>Represents a resource request.</dd>
- <dt>{{DOMxRef("Response")}}</dt>
- <dd>Represents the response to a request.</dd>
-</dl>
+## Fetch Interfaces
 
-<h2 id="Specifications">Specifications</h2>
+- {{DOMxRef("fetch()")}}
+  - : The `fetch()` method used to fetch a resource.
+- {{DOMxRef("Headers")}}
+  - : Represents response/request headers, allowing you to query them and take different actions depending on the results.
+- {{DOMxRef("Request")}}
+  - : Represents a resource request.
+- {{DOMxRef("Response")}}
+  - : Represents the response to a request.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Fetch")}}</td>
-   <td>{{Spec2("Fetch")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+## Specifications
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+| Specification                | Status                   | Comment            |
+| ---------------------------- | ------------------------ | ------------------ |
+| {{SpecName("Fetch")}} | {{Spec2("Fetch")}} | Initial definition |
 
-<p>{{Compat("api.fetch")}}</p>
+## Browser compatibility
 
-<h2 id="See_also">See also</h2>
+{{Compat("api.fetch")}}
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Fetch_API/Using_Fetch">Using Fetch</a></li>
- <li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
- <li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
- <li><a href="https://github.com/github/fetch">Fetch polyfill</a></li>
- <li><a href="/en-US/docs/Web/API/Fetch_API/Basic_concepts">Fetch basic concepts</a></li>
-</ul>
+## See also
+
+- [Using Fetch](/en-US/docs/Web/API/Fetch_API/Using_Fetch)
+- [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP](/en-US/docs/Web/HTTP)
+- [Fetch polyfill](https://github.com/github/fetch)
+- [Fetch basic concepts](/en-US/docs/Web/API/Fetch_API/Basic_concepts)

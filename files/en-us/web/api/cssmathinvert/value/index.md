@@ -2,38 +2,38 @@
 title: CSSMathInvert.value
 slug: Web/API/CSSMathInvert/value
 tags:
-- API
-- CSS Typed Object Model API
-- CSSMathInvert
-- CSSNumericValue
-- Experimental
-- Houdini
-- Property
+  - API
+  - CSS Typed Object Model API
+  - CSSMathInvert
+  - CSSNumericValue
+  - Experimental
+  - Houdini
+  - Property
 browser-compat: api.CSSMathInvert.value
 ---
-<div>{{draft}}{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}</div>
+{{draft}}{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
-<p>The CSSMathInvert.value read-only property of the
-  {{domxref("CSSMathInvert")}} interface returns a {{domxref('CSSNumericValue')}} object.
-</p>
+The CSSMathInvert.value read-only property of the
+{{domxref("CSSMathInvert")}} interface returns a {{domxref('CSSNumericValue')}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>cssNumericValue</var> = CSSMathInvert.value;</pre>
+```js
+var cssNumericValue = CSSMathInvert.value;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref('CSSNumericValue')}}.</p>
+A {{domxref('CSSNumericValue')}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>To do</p>
+To do
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

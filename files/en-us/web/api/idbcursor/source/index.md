@@ -2,54 +2,55 @@
 title: IDBCursor.source
 slug: Web/API/IDBCursor/source
 tags:
-- API
-- Database
-- IDBCursor
-- IndexedDB
-- Property
-- Reference
-- Storage
-- source
+  - API
+  - Database
+  - IDBCursor
+  - IndexedDB
+  - Property
+  - Reference
+  - Storage
+  - source
 browser-compat: api.IDBCursor.source
 ---
-<p>{{APIRef("IndexedDB")}}</p>
+{{APIRef("IndexedDB")}}
 
-<div>
-  <p>The <strong><code>source</code></strong> read-only property of the
-    {{domxref("IDBCursor")}} interface returns the {{domxref("IDBObjectStore")}} or
-    {{domxref("IDBIndex")}} that the cursor is iterating over. This function never returns
-    null or throws an exception, even if the cursor is currently being iterated, has
-    iterated past its end, or its transaction is not active.</p>
+The **`source`** read-only property of the
+{{domxref("IDBCursor")}} interface returns the {{domxref("IDBObjectStore")}} or
+{{domxref("IDBIndex")}} that the cursor is iterating over. This function never returns
+null or throws an exception, even if the cursor is currently being iterated, has
+iterated past its end, or its transaction is not active.
 
-  <p>{{AvailableInWorkers}}</p>
-</div>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>source = cursor</em>.source;</pre>
+```js
+var source = cursor.source;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>The {{domxref("IDBObjectStore")}} or {{domxref("IDBIndex")}} that the cursor is
-  iterating over.</p>
+The {{domxref("IDBObjectStore")}} or {{domxref("IDBIndex")}} that the cursor is
+iterating over.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this simple fragment we create a transaction, retrieve an object store, then use a
-  cursor to iterate through all the records in the object store. Within each iteration we
-  log the source of the cursor, which will log our {{domxref("IDBobjectStore")}} object to
-  the console, something like this:</p>
+In this simple fragment we create a transaction, retrieve an object store, then use a
+cursor to iterate through all the records in the object store. Within each iteration we
+log the source of the cursor, which will log our {{domxref("IDBobjectStore")}} object to
+the console, something like this:
 
-<pre
-  class="brush: json">IDBObjectStore {autoIncrement: false, transaction: IDBTransaction, indexNames: DOMStringList, keyPath: "albumTitle", name: "rushAlbumList"…}</pre>
+```json
+IDBObjectStore {autoIncrement: false, transaction: IDBTransaction, indexNames: DOMStringList, keyPath: "albumTitle", name: "rushAlbumList"…}
+```
 
-<p>The cursor does not require us to select the data based
-    on a key; we can just grab all of it. Also note that in each iteration of the loop,
-    you can grab data from the current record under the cursor object using <code>cursor.value.foo</code>. For a complete working example, see our <a
-      href="https://github.com/mdn/indexeddb-examples/blob/master/idbcursor">IDBCursor
-      example</a> (<a href="https://mdn.github.io/indexeddb-examples/idbcursor/">view example live</a>.)</p>
+The cursor does not require us to select the data based
+on a key; we can just grab all of it. Also note that in each iteration of the loop,
+you can grab data from the current record under the cursor object using `cursor.value.foo`. For a complete working example, see our [IDBCursor
+example](https://github.com/mdn/indexeddb-examples/blob/master/idbcursor) ([view example live](https://mdn.github.io/indexeddb-examples/idbcursor/).)
 
-<pre class="brush: js">function displayData() {
+```js
+function displayData() {
   var transaction = db.transaction(['rushAlbumList'], "readonly");
   var objectStore = transaction.objectStore('rushAlbumList');
 
@@ -66,27 +67,24 @@ browser-compat: api.IDBCursor.source
       console.log('Entries all displayed.');
     }
   };
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
-  <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
-  <li>Using transactions: {{domxref("IDBTransaction")}}</li>
-  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
-  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
-  <li>Using cursors: {{domxref("IDBCursor")}}</li>
-  <li>Reference example: <a class="external"
-      href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
-      Notifications</a> (<a class="external"
-      href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do
+  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

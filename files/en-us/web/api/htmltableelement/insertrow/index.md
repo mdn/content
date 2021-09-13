@@ -2,78 +2,79 @@
 title: HTMLTableElement.insertRow()
 slug: Web/API/HTMLTableElement/insertRow
 tags:
-- API
-- HTML DOM
-- HTMLTableElement
-- Method
-- NeedsMobileBrowserCompatibility
-- Reference
+  - API
+  - HTML DOM
+  - HTMLTableElement
+  - Method
+  - NeedsMobileBrowserCompatibility
+  - Reference
 browser-compat: api.HTMLTableElement.insertRow
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLTableElement.insertRow()</code></strong> method inserts a new row
-  ({{HtmlElement("tr")}}) in a given {{HtmlElement("table")}}, and returns a reference to
-  the new row.</p>
+The **`HTMLTableElement.insertRow()`** method inserts a new row
+({{HtmlElement("tr")}}) in a given {{HtmlElement("table")}}, and returns a reference to
+the new row.
 
-<p>If a table has multiple {{HtmlElement("tbody")}} elements, by default, the new row is
-  inserted into the last <code>&lt;tbody&gt;</code>. To insert the row into a specific
-  <code>&lt;tbody&gt;</code>:</p>
+If a table has multiple {{HtmlElement("tbody")}} elements, by default, the new row is
+inserted into the last `<tbody>`. To insert the row into a specific
+`<tbody>`:
 
-<pre class="brush: js">let specific_tbody = document.getElementById(tbody_id);
-let row = specific_tbody.insertRow(index)</pre>
+```js
+let specific_tbody = document.getElementById(tbody_id);
+let row = specific_tbody.insertRow(index)
+```
 
+> **Note:** `insertRow()` inserts the row directly into the
+> table. The row does not need to be appended separately as would be the case if
+> {{domxref("Document.createElement()")}} had been used to create the new
+> `<tr>` element.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> <code>insertRow()</code> inserts the row directly into the
-    table. The row does not need to be appended separately as would be the case if
-    {{domxref("Document.createElement()")}} had been used to create the new
-    <code>&lt;tr&gt;</code> element.</p>
-</div>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+var newRow = HTMLTableElement.insertRow(index);
+```
 
-<pre
-  class="brush: js">var <em>newRow</em> = <em>HTMLTableElement</em>.insertRow(<em>index</em>);</pre>
+{{domxref("HTMLTableElement")}} is a reference to an HTML {{HtmlElement("table")}}
+element.
 
-<p>{{domxref("HTMLTableElement")}} is a reference to an HTML {{HtmlElement("table")}}
-  element.</p>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `index` {{optional_inline}}
+  - : The row index of the new row. If `index` is `-1` or equal to
+    the number of rows, the row is appended as the last row. If `index` is
+    greater than the number of rows, an `IndexSizeError` exception will result.
+    If `index` is omitted it defaults to `-1`.
 
-<dl>
-  <dt><code>index</code> {{optional_inline}}</dt>
-  <dd>The row index of the new row. If <code>index</code> is <code>-1</code> or equal to
-    the number of rows, the row is appended as the last row. If <code>index</code> is
-    greater than the number of rows, an <code>IndexSizeError</code> exception will result.
-    If <code>index</code> is omitted it defaults to <code>-1</code>.</dd>
-</dl>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+`newRow` is an {{domxref("HTMLTableRowElement")}} that references the new
+row.
 
-<p><code>newRow</code> is an {{domxref("HTMLTableRowElement")}} that references the new
-  row.</p>
+## Example
 
-<h2 id="Example">Example</h2>
+This example uses `insertRow(-1)` to append a new row to a table.
 
-<p>This example uses <code>insertRow(-1)</code> to append a new row to a table.</p>
+We then use {{domxref("HTMLTableRowElement.insertCell()")}} to insert a new cell in the
+new row. (To be valid HTML, a `<tr>` must have at least one
+`<td>` element.) Finally, we add some text to the cell using
+{{domxref("Document.createTextNode()")}} and {{domxref("Node.appendChild()")}}.
 
-<p>We then use {{domxref("HTMLTableRowElement.insertCell()")}} to insert a new cell in the
-  new row. (To be valid HTML, a <code>&lt;tr&gt;</code> must have at least one
-  <code>&lt;td&gt;</code> element.) Finally, we add some text to the cell using
-  {{domxref("Document.createTextNode()")}} and {{domxref("Node.appendChild()")}}.</p>
+### HTML
 
-<h3 id="HTML">HTML</h3>
+```html
+<table id="my-table">
+  <tr><td>Row 1</td></tr>
+  <tr><td>Row 2</td></tr>
+  <tr><td>Row 3</td></tr>
+</table>
+```
 
-<pre class="brush: html">&lt;table id="my-table"&gt;
-  &lt;tr&gt;&lt;td&gt;Row 1&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;Row 2&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;Row 3&lt;/td&gt;&lt;/tr&gt;
-&lt;/table&gt;</pre>
+### JavaScript
 
-<h3 id="JavaScript">JavaScript</h3>
-
-<pre class="brush: js">function addRow(tableID) {
+```js
+function addRow(tableID) {
   // Get a reference to the table
   let tableRef = document.getElementById(tableID);
 
@@ -89,23 +90,22 @@ let row = specific_tbody.insertRow(index)</pre>
 }
 
 // Call addRow() with the table's ID
-addRow('my-table');</pre>
+addRow('my-table');
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("HTMLTableRowElement.insertCell()")}}</li>
-  <li>The HTML element representing rows: {{domxref("HTMLTableRowElement")}}</li>
-</ul>
+- {{domxref("HTMLTableRowElement.insertCell()")}}
+- The HTML element representing rows: {{domxref("HTMLTableRowElement")}}

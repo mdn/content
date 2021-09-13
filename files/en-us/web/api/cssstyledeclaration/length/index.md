@@ -2,43 +2,44 @@
 title: CSSStyleDeclaration.length
 slug: Web/API/CSSStyleDeclaration/length
 tags:
-- API
-- CSSOM
-- Property
-- Reference
+  - API
+  - CSSOM
+  - Property
+  - Reference
 browser-compat: api.CSSStyleDeclaration.length
 ---
-<p>{{ APIRef("CSSOM") }}</p>
+{{ APIRef("CSSOM") }}
 
-<p>The read-only property returns an integer that represents the
-		number of style declarations in this CSS declaration block.</p>
+The read-only property returns an integer that represents the
+number of style declarations in this CSS declaration block.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-	class="brush: js">var <em>num</em> = <em>styles</em>.length;</pre>
+```js
+var num = styles.length;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An integer that provides the number of styles explicitly set on the parent of
-	the instance.</p>
+An integer that provides the number of styles explicitly set on the parent of
+the instance.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following gets the number of explicitly set styles on the following HTML element:
-</p>
+The following gets the number of explicitly set styles on the following HTML element:
 
-<pre
-	class="brush: html">&lt;div id="div1" style="margin: 0 10px; background-color: #CA1; font-family: monospace"&gt;&lt;/div&gt;</pre>
+```html
+<div id="div1" style="margin: 0 10px; background-color: #CA1; font-family: monospace"></div>
+```
 
-<p>JavaScript code:</p>
+JavaScript code:
 
-<pre>var myDiv = document.getElementById('div1'); var divStyle = myDiv.style; var len = divStyle.length; // 6</pre>
+    var myDiv = document.getElementById('div1'); var divStyle = myDiv.style; var len = divStyle.length; // 6
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

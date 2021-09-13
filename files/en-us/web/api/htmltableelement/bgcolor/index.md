@@ -2,54 +2,52 @@
 title: HTMLTableElement.bgColor
 slug: Web/API/HTMLTableElement/bgColor
 tags:
-- API
-- Deprecated
-- HTML DOM
-- NeedsBrowserCompatibility
-- NeedsMarkupWork
-- NeedsSpecTable
-- Property
-- Reference
+  - API
+  - Deprecated
+  - HTML DOM
+  - NeedsBrowserCompatibility
+  - NeedsMarkupWork
+  - NeedsSpecTable
+  - Property
+  - Reference
 browser-compat: api.HTMLTableElement.bgColor
 ---
-<div>{{APIRef("HTML DOM")}} {{Deprecated_Header}}</div>
+{{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
-<p>The <strong><code>HTMLTableElement.bgcolor</code></strong> property represents the
-  background color of the table.</p>
+The **`HTMLTableElement.bgcolor`** property represents the
+background color of the table.
 
-<p>The <code>bgColor</code> attribute is deprecated in HTML 4.01. The CSS
-  {{cssxref("background-color")}} property should be used instead by modifying the
-  element's <a href="/en-US/docs/DOM/style#DOM_Style_Object"><code>style</code></a> object
-  or using a style rule.</p>
+The `bgColor` attribute is deprecated in HTML 4.01. The CSS
+{{cssxref("background-color")}} property should be used instead by modifying the
+element's [`style`](/en-US/docs/DOM/style#DOM_Style_Object) object
+or using a style rule.
 
-<p>Also available on DOM <a href="/en-US/docs/DOM/table.tBodies"><code>tbody</code></a>, <a
-    href="/en-US/docs/DOM/table.rows"><code>row</code></a> and <a
-    href="/en-US/docs/DOM/table.cells"><code>cell</code></a> objects.</p>
+Also available on DOM [`tbody`](/en-US/docs/DOM/table.tBodies), [`row`](/en-US/docs/DOM/table.rows) and [`cell`](/en-US/docs/DOM/table.cells) objects.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>color</em> = <em>table</em>.bgColor
-<em>table</em>.bgColor = <em>color</em></pre>
+```js
+color = table.bgColor
+table.bgColor = color
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<ul>
-  <li><code>color</code> is a string representing a color value.</li>
-</ul>
+- `color` is a string representing a color value.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">// Set table background color to lightblue
+```js
+// Set table background color to lightblue
 var t = document.getElementById('TableA');
-t.bgColor = 'lightblue';</pre>
+t.bgColor = 'lightblue';
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<ul>
-  <li><a href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-83532985">DOM Level 2
-      HTML:<em>HTMLTableElement</em> .bgColor</a></li>
-</ul>
+- [DOM Level 2
+  HTML:_HTMLTableElement_ .bgColor](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-83532985)
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -11,50 +11,53 @@ tags:
   - Element
 browser-compat: api.Element.ariaOrientation
 ---
-<div>{{DefaultAPISidebar("DOM")}}</div>
+{{DefaultAPISidebar("DOM")}}
 
-<p>The <strong><code>ariaOrientation</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-orientation_attribute"><code>aria-orientation</code></a> attribute, which indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous.</p>
+The **`ariaOrientation`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-orientation_attribute) attribute, which indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox notranslate">var <var>ariaOrientation</var> = element.ariaOrientation;
-<var>element</var>.ariaOrientation = <var>ariaOrientation</var></pre>
+    var ariaOrientation = element.ariaOrientation;
+    element.ariaOrientation = ariaOrientation
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString")}} with one of the following values:</p>
+### Value
 
-<dl>
-  <dt><code>"horizontal"</code></dt>
-  <dd>The element is horizontal.</dd>
-  <dt><code>"vertical"</code></dt>
-  <dd>The element is vertical.</dd>
-  <dt><code>"undefined"</code></dt>
-  <dd>The element's orientation is unknown.</dd>
-</dl>
+A {{domxref("DOMString")}} with one of the following values:
 
-<h2 id="Examples">Examples</h2>
+- `"horizontal"`
+  - : The element is horizontal.
+- `"vertical"`
+  - : The element is vertical.
+- `"undefined"`
+  - : The element's orientation is unknown.
 
-<p>In this example the <code>aria-orientation</code> attribute on the element with an ID of <code>handle_zoomSlider</code> is set to "<code>vertical</code>". Using <code>ariaOrientation</code> we update the value to "<code>horizontal</code>".</p>
+## Examples
 
-<pre class="brush: html">&lt;div id="handle_zoomSlider"
+In this example the `aria-orientation` attribute on the element with an ID of `handle_zoomSlider` is set to "`vertical`". Using `ariaOrientation` we update the value to "`horizontal`".
+
+```html
+<div id="handle_zoomSlider"
   role="slider"
   aria-orientation="vertical"
   aria-valuemin="0"
   aria-valuemax="17"
-  aria-valuenow="14" 
+  aria-valuenow="14"
   tabindex="0">
-&lt;span&gt;11&lt;/span&gt;
-&lt;/div&gt;</pre>
+<span>11</span>
+</div>
+```
 
-<pre class="brush: js">let el = document.getElementById('handle_zoomSlider');
+```js
+let el = document.getElementById('handle_zoomSlider');
 console.log(el.ariaOrientation); // "vertical"
 el.ariaOrientation = "horizontal"
-console.log(el.ariaOrientation); // "horizontal"</pre>
+console.log(el.ariaOrientation); // "horizontal"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

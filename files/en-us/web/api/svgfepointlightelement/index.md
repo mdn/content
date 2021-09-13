@@ -9,39 +9,35 @@ tags:
   - SVG DOM
 browser-compat: api.SVGFEPointLightElement
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <strong><code>SVGFEPointLightElement</code></strong> interface corresponds to the {{SVGElement("fePointLight")}} element.</p>
+The **`SVGFEPointLightElement`** interface corresponds to the {{SVGElement("fePointLight")}} element.
 
-<p>{{InheritanceDiagram(600, 140)}}</p>
+{{InheritanceDiagram(600, 140)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}.</em></p>
+_This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
 
-<dl>
- <dt>{{domxref("SVGFEPointLightElement.x")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("x")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGFEPointLightElement.y")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("y")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGFEPointLightElement.z")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("z")}} attribute of the given element.</dd>
-</dl>
+- {{domxref("SVGFEPointLightElement.x")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("x")}} attribute of the given element.
+- {{domxref("SVGFEPointLightElement.y")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("y")}} attribute of the given element.
+- {{domxref("SVGFEPointLightElement.z")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("z")}} attribute of the given element.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface does not provide any specific methods, but implements those of its parent, {{domxref("SVGElement")}}.</em></p>
+_This interface does not provide any specific methods, but implements those of its parent, {{domxref("SVGElement")}}._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGElement("fePointLight")}}</li>
-</ul>
+- {{SVGElement("fePointLight")}}

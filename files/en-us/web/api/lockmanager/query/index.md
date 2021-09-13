@@ -2,56 +2,56 @@
 title: LockManager.query()
 slug: Web/API/LockManager/query
 tags:
-- API
-- Experimental
-- LockManager
-- Method
-- Reference
-- Web Locks API
-- query()
+  - API
+  - Experimental
+  - LockManager
+  - Method
+  - Reference
+  - Web Locks API
+  - query()
 browser-compat: api.LockManager.query
 ---
-<p>{{APIRef("Web Locks")}}{{SeeCompatTable}}</p>
+{{APIRef("Web Locks")}}{{SeeCompatTable}}
 
-<p>The <strong><code>query()</code></strong> method of the
-    {{domxref("LockManager")}} interface returns a {{jsxref('Promise')}} which resolves
-    with an object containing information about held and pending locks. </p>
+The **`query()`** method of the
+{{domxref("LockManager")}} interface returns a {{jsxref('Promise')}} which resolves
+with an object containing information about held and pending locks.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var promise&lt;LockManagerSnapshot&gt; = LockManager.query()</pre>
+```js
+var promise<LockManagerSnapshot> = LockManager.query()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref('Promise')}} that resolves with a <code>LockManagerSnapshot</code>
-  containing the following properties.</p>
+A {{jsxref('Promise')}} that resolves with a `LockManagerSnapshot`
+containing the following properties.
 
-<ul>
-  <li><code>held</code>: An array of {{domxref('Lock')}} objects for held locks.</li>
-  <li><code>pending</code>: An array of {{domxref('Lock')}} objects for pending lock
-    requests.</li>
-</ul>
+- `held`: An array of {{domxref('Lock')}} objects for held locks.
+- `pending`: An array of {{domxref('Lock')}} objects for pending lock
+  requests.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">const state = await navigator.locks.query();
+```js
+const state = await navigator.locks.query();
 for (const lock of state.held) {
   console.log(`held lock: name ${lock.name}, mode ${lock.mode}`);
 }
 for (const request of state.pending) {
   console.log(`requested lock: name ${request.name}, mode ${request.mode}`);
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -12,98 +12,72 @@ tags:
   - openKeyCursor
 browser-compat: api.IDBIndex.openKeyCursor
 ---
-<p>{{ APIRef("IndexedDB") }}</p>
+{{ APIRef("IndexedDB") }}
 
-<div>
-  <p>The <strong><code>openKeyCursor()</code></strong> method of the
-    {{domxref("IDBIndex")}} interface returns an {{domxref("IDBRequest")}} object, and, in
-    a separate thread, creates a cursor over the specified key range, as arranged by this
-    index.</p>
-</div>
+The **`openKeyCursor()`** method of the
+{{domxref("IDBIndex")}} interface returns an {{domxref("IDBRequest")}} object, and, in
+a separate thread, creates a cursor over the specified key range, as arranged by this
+index.
 
-<p>The method sets the position of the cursor to the appropriate key, based on the
-  specified direction.</p>
+The method sets the position of the cursor to the appropriate key, based on the
+specified direction.
 
-<p>If the key range is not specified or is null, then the range includes all the keys.</p>
+If the key range is not specified or is null, then the range includes all the keys.
 
-<div class="note">
-  <p><strong>Note:</strong> Cursors returned by <code>openKeyCursor()</code> do not
-      make the referenced value available as <a
-      href="/en-US/docs/Web/API/IDBIndex/openCursor"><code>IDBIndex.openCursor</code></a> does.
-      This makes obtaining a list of keys much more efficient.</p>
-</div>
+> **Note:** Cursors returned by `openKeyCursor()` do not
+> make the referenced value available as [`IDBIndex.openCursor`](/en-US/docs/Web/API/IDBIndex/openCursor) does.
+> This makes obtaining a list of keys much more efficient.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>request</em> = <em>myIndex</em>.openKeyCursor();
-var <em>request</em> = <em>myIndex</em>.openKeyCursor(<em>range);</em>
-var <em>request</em> = <em>myIndex</em>.openKeyCursor(<em>range</em>, <em>direction</em>);</pre>
+```js
+var request = myIndex.openKeyCursor();
+var request = myIndex.openKeyCursor(range);
+var request = myIndex.openKeyCursor(range, direction);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>range {{optional_inline}}</dt>
-  <dd>A key or {{domxref("IDBKeyRange")}} to use as the cursor's range. If nothing is
+- range {{optional_inline}}
+  - : A key or {{domxref("IDBKeyRange")}} to use as the cursor's range. If nothing is
     passed, this will default to a key range that selects all the records in this object
-    store.</dd>
-  <dt>direction {{optional_inline}}</dt>
-  <dd>The cursor's <a href="/en-US/docs/Web/API/IDBCursor#constants">direction</a>. See <a
-      href="/en-US/docs/Web/API/IDBCursor#constants">IDBCursor Constants</a> for possible
-    values.</dd>
-</dl>
+    store.
+- direction {{optional_inline}}
+  - : The cursor's [direction](/en-US/docs/Web/API/IDBCursor#constants). See [IDBCursor Constants](/en-US/docs/Web/API/IDBCursor#constants) for possible
+    values.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An {{domxref("IDBRequest")}} object on which subsequent events related to this
-  operation are fired.</p>
+An {{domxref("IDBRequest")}} object on which subsequent events related to this
+operation are fired.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>This method may raise a {{domxref("DOMException")}} of one of the following types:</p>
+This method may raise a {{domxref("DOMException")}} of one of the following types:
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Exception</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>TransactionInactiveError</code></td>
-      <td>This {{domxref("IDBIndex")}}'s transaction is inactive.</td>
-    </tr>
-    <tr>
-      <td><code>TypeError</code></td>
-      <td>The value for the direction parameter is invalid.</td>
-    </tr>
-    <tr>
-      <td><code>DataError</code></td>
-      <td>The key or key range provided contains an invalid key.</td>
-    </tr>
-    <tr>
-      <td><code>InvalidStateError</code></td>
-      <td>The {{domxref("IDBIndex")}} has been deleted or removed.</td>
-    </tr>
-  </tbody>
-</table>
+| Exception                  | Description                                                       |
+| -------------------------- | ----------------------------------------------------------------- |
+| `TransactionInactiveError` | This {{domxref("IDBIndex")}}'s transaction is inactive.  |
+| `TypeError`                | The value for the direction parameter is invalid.                 |
+| `DataError`                | The key or key range provided contains an invalid key.            |
+| `InvalidStateError`        | The {{domxref("IDBIndex")}} has been deleted or removed. |
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In the following example we open a transaction and an object store, then get the
-  index <code>lName</code> from a simple contacts database. We then open a key cursor on
-  the index using <code>openKeyCursor()</code> — this works the same as opening a cursor
-  directly on an <code>ObjectStore</code> using
-  {{domxref("IDBObjectStore.openKeyCursor")}} except that the returned records are sorted
-  based on the index, not the primary key.</p>
+In the following example we open a transaction and an object store, then get the
+index `lName` from a simple contacts database. We then open a key cursor on
+the index using `openKeyCursor()` — this works the same as opening a cursor
+directly on an `ObjectStore` using
+{{domxref("IDBObjectStore.openKeyCursor")}} except that the returned records are sorted
+based on the index, not the primary key.
 
-<p>Finally, we iterate through each record in the index, and insert the last name and the
-  corresponding primary key of the referenced record into an HTML table.</p>
+Finally, we iterate through each record in the index, and insert the last name and the
+corresponding primary key of the referenced record into an HTML table.
 
-<pre class="brush: js">function displayDataByIndex() {
+```js
+function displayDataByIndex() {
   tableEntry.innerHTML = '';
   var transaction = db.transaction(['contactsList'], 'readonly');
   var objectStore = transaction.objectStore('contactsList');
@@ -114,8 +88,8 @@ var <em>request</em> = <em>myIndex</em>.openKeyCursor(<em>range</em>, <em>direct
     var cursor = event.target.result;
     if(cursor) {
       var tableRow = document.createElement('tr');
-      tableRow.innerHTML =   '&lt;td&gt;' + cursor.key + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.primaryKey + '&lt;/td&gt;';
+      tableRow.innerHTML =   '<td>' + cursor.key + '</td>'
+                           + '<td>' + cursor.primaryKey + '</td>';
       tableEntry.appendChild(tableRow);
 
       cursor.continue();
@@ -123,27 +97,24 @@ var <em>request</em> = <em>myIndex</em>.openKeyCursor(<em>range</em>, <em>direct
       console.log('All last names displayed.');
     }
   };
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
-  <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
-  <li>Using transactions: {{domxref("IDBTransaction")}}</li>
-  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
-  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
-  <li>Using cursors: {{domxref("IDBCursor")}}</li>
-  <li>Reference example: <a class="external"
-      href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
-      Notifications</a> (<a class="external"
-      href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do
+  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

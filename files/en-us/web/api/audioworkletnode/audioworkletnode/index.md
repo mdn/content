@@ -2,102 +2,99 @@
 title: AudioWorkletNode()
 slug: Web/API/AudioWorkletNode/AudioWorkletNode
 tags:
-- API
-- AudioWorkletNode
-- Constructor
-- Reference
-- Web Audio API
+  - API
+  - AudioWorkletNode
+  - Constructor
+  - Reference
+  - Web Audio API
 browser-compat: api.AudioWorkletNode.AudioWorkletNode
 ---
-<div>{{APIRef("Web Audio API")}}</div>
+{{APIRef("Web Audio API")}}
 
-<p>The <strong><code>AudioWorkletNode()</code></strong>
-    constructor creates a new {{domxref("AudioWorkletNode")}} object, which represents an
-    {{domxref("AudioNode")}} that uses a JavaScript function to perform custom audio
-    processing.</p>
+The **`AudioWorkletNode()`**
+constructor creates a new {{domxref("AudioWorkletNode")}} object, which represents an
+{{domxref("AudioNode")}} that uses a JavaScript function to perform custom audio
+processing.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>node</em> = new AudioWorkletNode(<em>context</em>, <em>name</em>);
-var <em>node</em> = new AudioWorkletNode(<em>context</em>, <em>name</em>, <em>options</em>);
-</pre>
+```js
+var node = new AudioWorkletNode(context, name);
+var node = new AudioWorkletNode(context, name, options);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>context</code></dt>
-  <dd>The {{domxref("BaseAudioContext")}} instance this node will be associated with.</dd>
-  <dt><code>name</code></dt>
-  <dd>A string, which represents the name of the {{domxref("AudioWorkletProcessor")}} this
+- `context`
+  - : The {{domxref("BaseAudioContext")}} instance this node will be associated with.
+- `name`
+  - : A string, which represents the name of the {{domxref("AudioWorkletProcessor")}} this
     node will be based on. A processor with the provided name must first be registered
-    using the {{domxref("AudioWorkletGlobalScope.registerProcessor()")}} method.</dd>
-  <dt><code>options</code> {{optional_inline}}</dt>
-  <dd><p>An object containing zero or more of the following optional properties to configure the new node:</p> 
+    using the {{domxref("AudioWorkletGlobalScope.registerProcessor()")}} method.
+- `options` {{optional_inline}}
+
+  - : An object containing zero or more of the following optional properties to configure the new node:
+
     <!-- The specification refers to this object as: AudioWorkletNodeOptions -->
-    <div class="notecard note">
-      <p><strong>Note:</strong> The result of <a href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">the structured clone algorithm</a> 
-        applied to the object is also internally passed into the associated {{domxref("AudioWorkletProcessor.AudioWorkletProcessor", "AudioWorkletProcessor()")}} constructor 
-        — this allows custom initialization of an underlying user-defined {{domxref("AudioWorkletProcessor")}}.</p>
-    </div>
-    <dl>
-      <dt><code>numberOfInputs</code> {{optional_inline}}</dt>
-      <dd>The value to initialize the {{domxref("AudioNode.numberOfInputs", "numberOfInputs")}} property to. Defaults to 1.</dd>
-      <dt><code>numberOfOutputs</code> {{optional_inline}}</dt>
-      <dd>The value to initialize the {{domxref("AudioNode.numberOfOutputs", "numberOfOutputs")}} property to. Defaults to 1.</dd>
-      <dt><code>outputChannelCount</code> {{optional_inline}}</dt>
-      <dd>An <strong>array</strong> defining the number of channels for each output. For example, <em>outputChannelCount: [n, m]</em> specifies the number of channels in the first output to be <em>n</em> and the second output to be <em>m</em>. The array length must match <code>numberOfOutputs</code>.</dd>
-      <dt><code>parameterData</code> {{optional_inline}}</dt>
-      <dd>An object containing the initial values of custom {{domxref("AudioParam")}} objects on this node (in its {{domxref("AudioWorkletNode.parameters", "parameters")}} property), with <code>key</code> being the name of a custom parameter and <code>value</code> being its initial value.</dd>
-      <dt><code>processorOptions</code> {{optional_inline}}</dt>
-      <dd>Any additional data that can be used for custom initialization of the underlying {{domxref("AudioWorkletProcessor")}}.</dd>
-     </dl>
-  </dd>
-</dl>
 
-<h3 id="Return_value">Return value</h3>
+    > **Note:** The result of [the structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)
+    > applied to the object is also internally passed into the associated {{domxref("AudioWorkletProcessor.AudioWorkletProcessor", "AudioWorkletProcessor()")}} constructor
+    > — this allows custom initialization of an underlying user-defined {{domxref("AudioWorkletProcessor")}}.
 
-<p>The newly constructed {{domxref("AudioWorkletNode")}} instance.</p>
+    - `numberOfInputs` {{optional_inline}}
+      - : The value to initialize the {{domxref("AudioNode.numberOfInputs", "numberOfInputs")}} property to. Defaults to 1.
+    - `numberOfOutputs` {{optional_inline}}
+      - : The value to initialize the {{domxref("AudioNode.numberOfOutputs", "numberOfOutputs")}} property to. Defaults to 1.
+    - `outputChannelCount` {{optional_inline}}
+      - : An **array** defining the number of channels for each output. For example, _outputChannelCount: \[n, m]_ specifies the number of channels in the first output to be _n_ and the second output to be _m_. The array length must match `numberOfOutputs`.
+    - `parameterData` {{optional_inline}}
+      - : An object containing the initial values of custom {{domxref("AudioParam")}} objects on this node (in its {{domxref("AudioWorkletNode.parameters", "parameters")}} property), with `key` being the name of a custom parameter and `value` being its initial value.
+    - `processorOptions` {{optional_inline}}
+      - : Any additional data that can be used for custom initialization of the underlying {{domxref("AudioWorkletProcessor")}}.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Return value
 
-<dl>
-  <dt><code>NotSupportedError</code></dt>
-  <dd>The specified <code>options.outputChannelCount</code> is <code>0</code> or larger
+The newly constructed {{domxref("AudioWorkletNode")}} instance.
+
+### Exceptions
+
+- `NotSupportedError`
+
+  - : The specified `options.outputChannelCount` is `0` or larger
     than the current implementation supports.
-    <p>Both <code>options.numberOfInputs</code> and <code>options.numberOfOutputs</code> are 0.</p></dd>
-  <dt><code>IndexSizeError</code></dt>
-  <dd>The length of <code>options.outputChannelCount</code> array does not match
-    <code>options.numberOfOutputs</code>.</dd>
-</dl>
 
-<h2 id="usage_notes">Usage notes</h2>
+    Both `options.numberOfInputs` and `options.numberOfOutputs` are 0.
 
-<p>Different <code>options</code> parameter values can have the following effects.</p>
+- `IndexSizeError`
+  - : The length of `options.outputChannelCount` array does not match
+    `options.numberOfOutputs`.
 
-<p>If the number of inputs and number of outputs are both set to 0, a <code>NotSupportedError</code> will be thrown and the node construction process aborted. If the length of the <code>outputChannelCount</code> array doesn't match <code>numberOfOutputs</code>, an <code>IndexSizeError</code> will be thrown.</p>
+## Usage notes
 
-<p>If <code>outputChannelCount</code> isn't specified, and <code>numberOfInputs</code> and <code>numberOfOutputs</code> are both 1, the <code>AudioWorkletNode</code>'s initial channel count is set to 1. This has the effect of changing the output channel count to dynamically change to the computed number of channels, based on the input's channel count and the current setting of the {{domxref("AudioNode")}} property {{domxref("AudioNode.channelCountMode", "channelCountMode")}}.</p>
+Different `options` parameter values can have the following effects.
 
-<p>Otherwise, if <code>outputChannelCount</code> is provided <em>and</em> if the values of <code>numberOfInputs</code> and <code>numberOfOutputs</code> are both 1, the audio worklet node's channel count is set to the value of <code>outputChannelCount</code>. Otherwise, the channel count of each channel in the set of output channels is set to match the corresponding value in the <code>outputChannelCount</code> array.</p>
+If the number of inputs and number of outputs are both set to 0, a `NotSupportedError` will be thrown and the node construction process aborted. If the length of the `outputChannelCount` array doesn't match `numberOfOutputs`, an `IndexSizeError` will be thrown.
 
-<h2 id="Example">Example</h2>
+If `outputChannelCount` isn't specified, and `numberOfInputs` and `numberOfOutputs` are both 1, the `AudioWorkletNode`'s initial channel count is set to 1. This has the effect of changing the output channel count to dynamically change to the computed number of channels, based on the input's channel count and the current setting of the {{domxref("AudioNode")}} property {{domxref("AudioNode.channelCountMode", "channelCountMode")}}.
 
-<p><em>For a complete example demonstrating user-defined audio processing, see the
-    {{domxref("AudioWorkletNode")}} page.</em></p>
+Otherwise, if `outputChannelCount` is provided *and* if the values of `numberOfInputs` and `numberOfOutputs` are both 1, the audio worklet node's channel count is set to the value of `outputChannelCount`. Otherwise, the channel count of each channel in the set of output channels is set to match the corresponding value in the `outputChannelCount` array.
 
-<h2 id="Specifications">Specifications</h2>
+## Example
+
+_For a complete example demonstrating user-defined audio processing, see the
+{{domxref("AudioWorkletNode")}} page._
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API </a></li>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_AudioWorklet">Background audio
-      processing using AudioWorklet</a></li>
-  <li>{{domxref("AudioWorkletNode", "AudioWorkletNode")}} interface</li>
-</ul>
+- [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
+- [Background audio
+  processing using AudioWorklet](/en-US/docs/Web/API/Web_Audio_API/Using_AudioWorklet)
+- {{domxref("AudioWorkletNode", "AudioWorkletNode")}} interface

@@ -9,30 +9,33 @@ tags:
   - TransformStream
 browser-compat: api.TransformStream.readable
 ---
-<p>{{APIRef("Streams")}}</p>
+{{APIRef("Streams")}}
 
-<p>The <strong><code>readable</code></strong> read-only property of the {{domxref("TransformStream")}} interface returns the {{domxref("ReadableStream")}} instance controlled by this <code>TransformStream</code>.</p>
+The **`readable`** read-only property of the {{domxref("TransformStream")}} interface returns the {{domxref("ReadableStream")}} instance controlled by this `TransformStream`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let readable = TransformStream.readable;</pre>
+```js
+let readable = TransformStream.readable;
+```
 
-<h3>Value</h3>
-<p>A {{domxref("ReadableStream")}}.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("ReadableStream")}}.
 
-<p>The following example creates a new {{domxref("TransformStream")}} as <code>textEncoderStream</code>, and prints the value of <code>readable</code> to the console.</p>
+## Examples
 
-<pre class="brush: js">const textEncoderStream = new TransformStream();
-console.log(textEncoderStream.readable) // a ReadableStream</pre>
+The following example creates a new {{domxref("TransformStream")}} as `textEncoderStream`, and prints the value of `readable` to the console.
 
-<h2 id="Specifications">Specifications</h2>
+```js
+const textEncoderStream = new TransformStream();
+console.log(textEncoderStream.readable) // a ReadableStream
+```
 
-<p>{{Specifications}}</p>
+## Specifications
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+{{Specifications}}
 
-<p>{{Compat}}</p>
+## Browser compatibility
 
-
+{{Compat}}

@@ -12,68 +12,68 @@ tags:
   - Deprecated
 browser-compat: api.CSSPositionValue
 ---
-<div>{{deprecated_header}}{{APIRef("CSS Typed Object Model API")}}</div>
+{{deprecated_header}}{{APIRef("CSS Typed Object Model API")}}
 
-<p>The <strong><code>CSSPositionValue</code></strong> interface of the <a href="/en-US/docs/Web/API/CSS_Object_Model#css_typed_object_model">CSS Typed Object Model API</a> represents values for properties that take a position, for example {{cssxref('object-position')}}. </p>
+The **`CSSPositionValue`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model#css_typed_object_model) represents values for properties that take a position, for example {{cssxref('object-position')}}.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("CSSPositionValue.CSSPositionValue()")}}</dt>
- <dd>Creates a new <code>CSSPositionValue</code> object.</dd>
-</dl>
+- {{domxref("CSSPositionValue.CSSPositionValue()")}}
+  - : Creates a new `CSSPositionValue` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref('CSSPositionValue.x')}}</dt>
- <dd>Returns the item's position along the web page's horizontal axis.</dd>
- <dt>{{domxref('CSSPositionValue.y')}}</dt>
- <dd>Returns the item's position along the vertical axis.</dd>
-</dl>
+- {{domxref('CSSPositionValue.x')}}
+  - : Returns the item's position along the web page's horizontal axis.
+- {{domxref('CSSPositionValue.y')}}
+  - : Returns the item's position along the vertical axis.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example positions a container <code>&lt;div&gt;</code> 5 pixels from the top and 10 pixels from the left of the page. </p>
+The following example positions a container `<div>` 5 pixels from the top and 10 pixels from the left of the page.
 
-<pre class="brush: js">let replacedEl = document.getElementById( 'image' );
+```js
+let replacedEl = document.getElementById( 'image' );
 let position = new CSSPositionValue( CSS.px(35), CSS.px(40) );
 
 replacedEl.attributeStyleMap.set( 'object-position', position );
 console.log( position.x.value, position.y.value );
-console.log( replacedEl.computedStyleMap().get('object-position') );</pre>
+console.log( replacedEl.computedStyleMap().get('object-position') );
+```
 
-<p>We set the {{cssxref('object-position')}} property, then check the values returned.</p>
+We set the {{cssxref('object-position')}} property, then check the values returned.
 
-<pre class="brush: css hidden">#image {
+```css hidden
+#image {
   width: 300px;
   height: 300px;
   border: 1px solid black;
   background-color: #dededf;
   object-fit: none;
-}</pre>
+}
+```
 
-<pre class="brush: html hidden">&lt;p&gt;Check the developer tools to see the log in the console and to inspect the style attribute on the image.&lt;/p&gt;
-&lt;img id="image" src="mdn.svg" alt="MDN Logo"/&gt;</pre>
+```html hidden
+<p>Check the developer tools to see the log in the console and to inspect the style attribute on the image.</p>
+<img id="image" src="mdn.svg" alt="MDN Logo"/>
+```
 
-<p>{{EmbedLiveSample("Examples", 300, 300)}}</p>
+{{EmbedLiveSample("Examples", 300, 300)}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref('CSSImageValue')}}</li>
- <li>{{domxref('CSSKeywordValue')}}</li>
- <li>{{domxref('CSSNumericValue')}}</li>
- <li>{{domxref('CSSTransformValue')}}</li>
- <li>{{domxref('CSSUnparsedValue')}}</li>
- <li><a href="/en-US/docs/Web/API/CSS_Typed_OM_API/Guide">Using the CSS Typed OM</a></li>
- <li><a href="/en-US/docs/Web/API/CSS_Typed_OM_API">CSS Typed Object Model API</a></li>
-</ul>
+- {{domxref('CSSImageValue')}}
+- {{domxref('CSSKeywordValue')}}
+- {{domxref('CSSNumericValue')}}
+- {{domxref('CSSTransformValue')}}
+- {{domxref('CSSUnparsedValue')}}
+- [Using the CSS Typed OM](/en-US/docs/Web/API/CSS_Typed_OM_API/Guide)
+- [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)

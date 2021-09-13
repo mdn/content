@@ -9,32 +9,30 @@ tags:
   - SVG DOM
 browser-compat: api.SVGFontFaceUriElement
 ---
-<div>{{APIRef("SVG")}}{{deprecated_header}}</div>
+{{APIRef("SVG")}}{{deprecated_header}}
 
-<p>The <strong><code>SVGFontFaceUriElement</code></strong> interface corresponds to the {{SVGElement("font-face-uri")}} elements.</p>
+The **`SVGFontFaceUriElement`** interface corresponds to the {{SVGElement("font-face-uri")}} elements.
 
-<p>Object-oriented access to the attributes of the {{SVGElement("font-face-uri")}} element via the SVG DOM is not possible.</p>
+Object-oriented access to the attributes of the {{SVGElement("font-face-uri")}} element via the SVG DOM is not possible.
 
-<p>{{InheritanceDiagram(600, 140)}}</p>
+{{InheritanceDiagram(600, 140)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface has no properties but inherits properties from its parent, {{domxref("SVGElement")}}.</em></p>
+_This interface has no properties but inherits properties from its parent, {{domxref("SVGElement")}}._
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface has no methods but inherits methods from its parent, {{domxref("SVGElement")}}.</em></p>
+_This interface has no methods but inherits methods from its parent, {{domxref("SVGElement")}}._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGElement("font-face-uri")}}</li>
-</ul>
+- {{SVGElement("font-face-uri")}}

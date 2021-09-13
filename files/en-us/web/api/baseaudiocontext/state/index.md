@@ -12,52 +12,48 @@ tags:
   - state
 browser-compat: api.BaseAudioContext.state
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-  <p>The <code>state</code> read-only property of the {{ domxref("BaseAudioContext") }}
-    interface returns the current state of the <code>AudioContext</code>.</p>
-</div>
+The `state` read-only property of the {{ domxref("BaseAudioContext") }}
+interface returns the current state of the `AudioContext`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">baseAudioContext.state;</pre>
+```js
+baseAudioContext.state;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}}. Possible values are:</p>
+A {{domxref("DOMString")}}. Possible values are:
 
-<ul>
-  <li><code>suspended</code>: The audio context has been suspended (with the
-    {{domxref("AudioContext.suspend()")}} method.)</li>
-  <li><code>running</code>: The audio context is running normally.</li>
-  <li><code>closed</code>: The audio context has been closed (with the
-    {{domxref("AudioContext.close()")}} method.)</li>
-</ul>
+- `suspended`: The audio context has been suspended (with the
+  {{domxref("AudioContext.suspend()")}} method.)
+- `running`: The audio context is running normally.
+- `closed`: The audio context has been closed (with the
+  {{domxref("AudioContext.close()")}} method.)
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Handling_state_changes">Handling state changes</h3>
+### Handling state changes
 
-<p>The following snippet is taken from our <a
-    href="https://github.com/mdn/webaudio-examples">AudioContext states demo</a> (<a
-    href="https://mdn.github.io/webaudio-examples/audiocontext-states/">see it running
-    live</a>.) The {{domxref("BaseAudioContext/onstatechange", "AudioContext.onstatechange")}} handler is used to log the
-  current state to the console every time it changes.</p>
+The following snippet is taken from our [AudioContext states demo](https://github.com/mdn/webaudio-examples) ([see it running
+live](https://mdn.github.io/webaudio-examples/audiocontext-states/).) The {{domxref("BaseAudioContext/onstatechange", "AudioContext.onstatechange")}} handler is used to log the
+current state to the console every time it changes.
 
-<pre class="brush: js">audioCtx.onstatechange = function() {
+```js
+audioCtx.onstatechange = function() {
   console.log(audioCtx.state);
 }
-</pre>
+```
 
-<h3 id="Resuming_interrupted_play_states_in_iOS_Safari">Resuming interrupted play states
-  in iOS Safari</h3>
+### Resuming interrupted play states in iOS Safari
 
 In iOS Safari, when a user leaves the page (e.g. switches tabs, minimizes the browser, or
 turns off the screen)
 the audio context's state changes to "interrupted" and needs to be resumed. For example:
 
-<pre class="brush: js">
+```js
 function play() {
   if (audioCtx.state === 'interrupted') {
     audioCtx.resume().then(() => play());
@@ -65,19 +61,16 @@ function play() {
   }
   // ... rest of the play() function
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
-  </li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

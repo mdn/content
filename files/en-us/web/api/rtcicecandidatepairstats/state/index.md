@@ -19,50 +19,49 @@ tags:
   - state
 browser-compat: api.RTCIceCandidatePairStats.state
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The <code><strong>state</strong></code> property in an
-    {{domxref("RTCIceCandidatePairStats")}} object indicates the state of the check list
-    of which the candidate pair is a member.</p>
+The **`state`** property in an
+{{domxref("RTCIceCandidatePairStats")}} object indicates the state of the check list
+of which the candidate pair is a member.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>state</em> = <em>rtcIceCandidatePairStats</em>.state;</pre>
+```js
+state = rtcIceCandidatePairStats.state;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} whose value is one of those found in the
-  {{domxref("RTCStatsIceCandidatePairState")}} enumerated type.</p>
+A {{domxref("DOMString")}} whose value is one of those found in the
+{{domxref("RTCStatsIceCandidatePairState")}} enumerated type.
 
-<h2 id="ICE_check_lists">ICE check lists</h2>
+## ICE check lists
 
-<p>During ICE negotiation, the ICE layer builds up a <strong>check list</strong>, which is
-  a list of potential pairings of ICE candidates. Each pair has a state, whose value is
-  represented by <code>RTCStatsIceCandidatePairState</code>.</p>
+During ICE negotiation, the ICE layer builds up a **check list**, which is
+a list of potential pairings of ICE candidates. Each pair has a state, whose value is
+represented by `RTCStatsIceCandidatePairState`.
 
-<p><img
-    alt="A diagram showing how ICE candidate pairs change state as the check list is analyed"
-    src="ice-check-list-states.svg"></p>
+![A diagram showing how ICE candidate pairs change state as the check list is analyed](ice-check-list-states.svg)
 
-<p>When a candidate pair is added to the check list, it begins in the <code>frozen</code>
-  state. As soon as there are no checks ongoing which block the pair from being analyzed,
-  it is unfrozen and moves into the <code>waiting</code> state. This may happen
-  immediately upon being added to the check list.</p>
+When a candidate pair is added to the check list, it begins in the `frozen`
+state. As soon as there are no checks ongoing which block the pair from being analyzed,
+it is unfrozen and moves into the `waiting` state. This may happen
+immediately upon being added to the check list.
 
-<p>Each time a candidate pair is done being checked, the next-highest priority candidate
-  pair remaining on the check list moves from the <code>waiting</code> state to the
-  <code>in-progress</code> state, and its check begins. If the check fails for any reason,
-  the pair moves into its final state, <code>failed</code>. If the check succeeds, the
-  pair ends up in the <code>succeeded</code> state.</p>
+Each time a candidate pair is done being checked, the next-highest priority candidate
+pair remaining on the check list moves from the `waiting` state to the
+`in-progress` state, and its check begins. If the check fails for any reason,
+the pair moves into its final state, `failed`. If the check succeeds, the
+pair ends up in the `succeeded` state.
 
-<p>The ICE check list state for any given pair of ICE candidates can be found in the
-  corresponding the <code>state</code> property.</p>
+The ICE check list state for any given pair of ICE candidates can be found in the
+corresponding the `state` property.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -3,59 +3,56 @@ title: RTCInboundRtpStreamStats.fecPacketsReceived
 slug: Web/API/RTCInboundRtpStreamStats/fecPacketsReceived
 browser-compat: api.RTCInboundRtpStreamStats.fecPacketsReceived
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <strong><code>fecPacketsReceived</code></strong> property
-        of the {{domxref("RTCInboundRtpStreamStats")}} dictionary indicates how many
-        Forward Error Correction (FEC) packets have been received by this RTP receiver
-        from the remote peer.</p>
+The **`fecPacketsReceived`** property
+of the {{domxref("RTCInboundRtpStreamStats")}} dictionary indicates how many
+Forward Error Correction (FEC) packets have been received by this RTP receiver
+from the remote peer.
 
-<p>An FEC packet provides parity information which can
-    be used to attempt to reconstruct RTP data packets which have been corrupted in
-    transit.</p>
+An FEC packet provides parity information which can
+be used to attempt to reconstruct RTP data packets which have been corrupted in
+transit.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-    class="brush: js">var <em>fecPacketsReceived</em> = <em>rtcInboundRtpStreamStats</em>.fecPacketsReceived;</pre>
+```js
+var fecPacketsReceived = rtcInboundRtpStreamStats.fecPacketsReceived;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An unsigned integer value which indicates the total number of FEC packets which have
-    been received from the remote peer during this RTP session. Forward Error Correction
-    uses an exclusive-or method to perform parity checks on the received data.</p>
+An unsigned integer value which indicates the total number of FEC packets which have
+been received from the remote peer during this RTP session. Forward Error Correction
+uses an exclusive-or method to perform parity checks on the received data.
 
-<p>By using the FEC parity information to attempt to reconstruct damaged packets, it is
-    possible to avoid the need to retransmit damaged packets, which in turn helps to
-    reduce lag, or the need to skip damaged frames entirely.</p>
+By using the FEC parity information to attempt to reconstruct damaged packets, it is
+possible to avoid the need to retransmit damaged packets, which in turn helps to
+reduce lag, or the need to skip damaged frames entirely.
 
-<div class="notecard note">
-    <p><strong>Note:</strong> This counter may also be incremented when FEC packets arrive
-        in-band along with media content; this can happen with Opus, for example.</p>
-</div>
+> **Note:** This counter may also be incremented when FEC packets arrive
+> in-band along with media content; this can happen with Opus, for example.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>It's possible that a subset of the FEC packets which have been received were discarded
-    instead of being used. This can happen if the packets covered by the FEC packets have
-    already been received successfully or have already been reconstructed using a
-    previously-received FEC packet. This may also happen if the FEC packet arrives outside
-    the window of time in which the client will attempt to use it.</p>
+It's possible that a subset of the FEC packets which have been received were discarded
+instead of being used. This can happen if the packets covered by the FEC packets have
+already been received successfully or have already been reconstructed using a
+previously-received FEC packet. This may also happen if the FEC packet arrives outside
+the window of time in which the client will attempt to use it.
 
-<p>If you wish to know how many of the received packets were discarded, you can examine
-    the value of {{domxref("RTCInboundRtpStreamStats.fecPacketsDiscarded",
-    "fecPacketsDiscarded")}}.</p>
+If you wish to know how many of the received packets were discarded, you can examine
+the value of {{domxref("RTCInboundRtpStreamStats.fecPacketsDiscarded",
+    "fecPacketsDiscarded")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-    <li>{{RFC(5109)}} (RTP Payload Format for Generic Forward Error Correction)</li>
-</ul>
+- {{RFC(5109)}} (RTP Payload Format for Generic Forward Error Correction)

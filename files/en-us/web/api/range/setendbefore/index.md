@@ -8,43 +8,41 @@ tags:
   - Range
 browser-compat: api.Range.setEndBefore
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<p>The <code><strong>Range.setEndBefore()</strong></code> method sets the end position of
-  a <code>Range</code> relative to another {{domxref("Node")}}. The parent
-  <code>Node</code> of end of the <code>Range</code> will be the same as that for the
-  <code>referenceNode</code>.</p>
+The **`Range.setEndBefore()`** method sets the end position of
+a `Range` relative to another {{domxref("Node")}}. The parent
+`Node` of end of the `Range` will be the same as that for the
+`referenceNode`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>range</em>.setEndBefore(<em>referenceNode</em>);
-</pre>
+```js
+range.setEndBefore(referenceNode);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><em>referenceNode</em></dt>
-  <dd>The {{domxref("Node")}} to end the <code>Range</code> before.</dd>
-</dl>
+- _referenceNode_
+  - : The {{domxref("Node")}} to end the `Range` before.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">var range = document.createRange();
+```js
+var range = document.createRange();
 var referenceNode = document.getElementsByTagName("div").item(0);
 
 range.setEndBefore(referenceNode);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</a></li>
-</ul>
+- [The DOM interfaces index](/en-US/docs/Web/API/Document_Object_Model)

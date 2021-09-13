@@ -12,35 +12,32 @@ tags:
   - WindowClient
 browser-compat: api.WindowClient
 ---
-<p>{{APIRef("Service Workers API")}}</p>
+{{APIRef("Service Workers API")}}
 
-<p>The <code>WindowClient</code> interface of the <a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a> represents the scope of a service worker client that is a document in a browsing context, controlled by an active worker. The service worker client independently selects and uses a service worker for its own loading and sub-resources.</p>
+The `WindowClient` interface of the [ServiceWorker API](/en-US/docs/Web/API/ServiceWorker_API) represents the scope of a service worker client that is a document in a browsing context, controlled by an active worker. The service worker client independently selects and uses a service worker for its own loading and sub-resources.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em><code>WindowClient</code> inherits methods from its parent interface, {{domxref("Client")}}.</em></p>
+_`WindowClient` inherits methods from its parent interface, {{domxref("Client")}}._
 
-<dl>
- <dt>{{domxref("WindowClient.focus()")}}</dt>
- <dd>Gives user input focus to the current client. </dd>
- <dt>{{domxref("WindowClient.navigate()")}}</dt>
- <dd>Loads a specified URL into a controlled client page.</dd>
-</dl>
+- {{domxref("WindowClient.focus()")}}
+  - : Gives user input focus to the current client.
+- {{domxref("WindowClient.navigate()")}}
+  - : Loads a specified URL into a controlled client page.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em><code>WindowClient</code> inherits properties from its parent interface, {{domxref("Client")}}.</em></p>
+_`WindowClient` inherits properties from its parent interface, {{domxref("Client")}}._
 
-<dl>
- <dt>{{domxref("WindowClient.focused")}} {{readonlyInline}}</dt>
- <dd>A boolean that indicates whether the current client has focus.</dd>
- <dt>{{domxref("WindowClient.visibilityState")}} {{readonlyInline}}</dt>
- <dd>Indicates the visibility of the current client. This value can be one of <code>"hidden"</code>, <code>"visible"</code>, or <code>"prerender"</code>.</dd>
-</dl>
+- {{domxref("WindowClient.focused")}} {{readonlyInline}}
+  - : A boolean that indicates whether the current client has focus.
+- {{domxref("WindowClient.visibilityState")}} {{readonlyInline}}
+  - : Indicates the visibility of the current client. This value can be one of `"hidden"`, `"visible"`, or `"prerender"`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">self.addEventListener('notificationclick', function(event) {
+```js
+self.addEventListener('notificationclick', function(event) {
   console.log('On notification click: ', event.notification.tag);
   event.notification.close();
 
@@ -49,9 +46,9 @@ browser-compat: api.WindowClient
   event.waitUntil(clients.matchAll({
     type: "window"
   }).then(function(clientList) {
-    for (var i = 0; i &lt; clientList.length; i++) {
+    for (var i = 0; i < clientList.length; i++) {
       var client = clientList[i];
-      if (client.url == '/' &amp;&amp; 'focus' in client) {
+      if (client.url == '/' && 'focus' in client) {
         client.focus();
         break;
       }
@@ -59,23 +56,22 @@ browser-compat: api.WindowClient
     if (clients.openWindow)
       return clients.openWindow('/');
   }));
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Using Service Workers</a></li>
- <li><a href="https://github.com/mdn/sw-test">Service workers basic code example</a></li>
- <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a></li>
- <li><a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Using web workers</a></li>
- <li><a href="/en-US/docs/Web/API/Channel_Messaging_API">Channel Messaging API</a></li>
-</ul>
+- [Using Service Workers](/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+- [Using web workers](/en-US/docs/Web/Guide/Performance/Using_web_workers)
+- [Channel Messaging API](/en-US/docs/Web/API/Channel_Messaging_API)

@@ -2,73 +2,73 @@
 title: VideoTrackList.onchange
 slug: Web/API/VideoTrackList/onchange
 tags:
-- API
-- Adding Tracks
-- Adding Video Tracks
-- Event Handler
-- HTML DOM
-- Media
-- Property
-- Reference
-- Video
-- VideoTrackList
-- addTrack
-- onchange
-- track
+  - API
+  - Adding Tracks
+  - Adding Video Tracks
+  - Event Handler
+  - HTML DOM
+  - Media
+  - Property
+  - Reference
+  - Video
+  - VideoTrackList
+  - addTrack
+  - onchange
+  - track
 browser-compat: api.VideoTrackList.onchange
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong>{{domxref("VideoTrackList")}}</strong> property
-    <strong><code>onchange</code></strong> is an event handler which is called when the
-    {{event("change")}} event occurs, indicating that a {{domxref("VideoTrack")}} in the
-    <code>VideoTrackList</code> has been made active.</p>
+The **{{domxref("VideoTrackList")}}** property
+**`onchange`** is an event handler which is called when the
+{{event("change")}} event occurs, indicating that a {{domxref("VideoTrack")}} in the
+`VideoTrackList` has been made active.
 
-<p>The event is passed into the event handler in the form of an {{domxref("Event")}}
-  object; the event doesn't provide any additional information. To determine the new state
-  of media's tracks, you'll have to look at their {{domxref("VideoTrack.selected")}}
-  flags.</p>
+The event is passed into the event handler in the form of an {{domxref("Event")}}
+object; the event doesn't provide any additional information. To determine the new state
+of media's tracks, you'll have to look at their {{domxref("VideoTrack.selected")}}
+flags.
 
-<div class="note">
-  <p><strong>Note:</strong> You can also add a handler for the <code>change</code> event
-    using {{domxref("EventTarget.addEventListener", "addEventListener()")}}.</p>
-</div>
+> **Note:** You can also add a handler for the `change` event
+> using {{domxref("EventTarget.addEventListener", "addEventListener()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>VideoTrackList</em>.onchange = <em>eventHandler</em>;</pre>
+```js
+VideoTrackList.onchange = eventHandler;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>Set <code>onchange</code> to a function that should be called whenever a track is made
-  active.</p>
+Set `onchange` to a function that should be called whenever a track is made
+active.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This snippet establishes a handler for the {{event("change")}} event that looks at each
-  of the tracks in the list, calling a function to update the state of a user interface
-  control that indicates the current state of the track.</p>
+This snippet establishes a handler for the {{event("change")}} event that looks at each
+of the tracks in the list, calling a function to update the state of a user interface
+control that indicates the current state of the track.
 
-<pre class="brush: js">var trackList = document.querySelector("video").videoTracks;
+```js
+var trackList = document.querySelector("video").videoTracks;
 
 trackList.onchange = function(event) {
   trackList.forEach(function(track) {
     updateTrackSelectedButton(track.id, track.selected);
   });
 };
-</pre>
+```
 
-<p>The <code>updateTrackSelectedButton()</code>, in this example, should be a function
-  that finds a user interface control using the track's {{domxref("VideoTrack.id", "id")}}
-  (perhaps the app uses the track ID as the control element's ID) and the track's
-  {{domxref("VideoTrack.selected", "selected")}} flag to determine which state the control
-  should be in now.</p>
+The `updateTrackSelectedButton()`, in this example, should be a function
+that finds a user interface control using the track's {{domxref("VideoTrack.id", "id")}}
+(perhaps the app uses the track ID as the control element's ID) and the track's
+{{domxref("VideoTrack.selected", "selected")}} flag to determine which state the control
+should be in now.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

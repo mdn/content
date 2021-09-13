@@ -2,36 +2,36 @@
 title: Navigator.wakeLock
 slug: Web/API/Navigator/wakeLock
 tags:
-- API
-- Reference
-- Screen Wake Lock API
+  - API
+  - Reference
+  - Screen Wake Lock API
 browser-compat: api.Navigator.wakeLock
 ---
-<p>{{ApiRef("Screen Wake Lock API")}}{{SeeCompatTable}}{{securecontext_header}}</p>
+{{ApiRef("Screen Wake Lock API")}}{{SeeCompatTable}}{{securecontext_header}}
 
-<p>The <strong><code>wakeLock</code></strong> read-only property
-    returns a {{DOMxRef("WakeLock")}} interface which allows a document to acquire a
-    screen wake lock. While a screen wake lock is active, the user agent will try to
-    prevent the device from dimming the screen, turning it off completely, or showing a
-    screensaver.</p>
+The **`wakeLock`** read-only property
+returns a {{DOMxRef("WakeLock")}} interface which allows a document to acquire a
+screen wake lock. While a screen wake lock is active, the user agent will try to
+prevent the device from dimming the screen, turning it off completely, or showing a
+screensaver.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const wakeLock = navigator.wakeLock;</pre>
+```js
+const wakeLock = navigator.wakeLock;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{DOMxRef("WakeLock.request","WakeLock.request()")}}</li>
-  <li><a href="/en-US/docs/Web/API/Screen_Wake_Lock_API">Screen Wake Lock API</a></li>
-  <li><a href="https://web.dev/wakelock/">Blog post - Stay awake with the
-      Screen Wake Lock API</a></li>
-</ul>
+- {{DOMxRef("WakeLock.request","WakeLock.request()")}}
+- [Screen Wake Lock API](/en-US/docs/Web/API/Screen_Wake_Lock_API)
+- [Blog post - Stay awake with the
+  Screen Wake Lock API](https://web.dev/wakelock/)

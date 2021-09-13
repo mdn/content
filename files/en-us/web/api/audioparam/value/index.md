@@ -12,125 +12,122 @@ tags:
   - value
 browser-compat: api.AudioParam.value
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<p>The <a
-      href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API's</a>
-    {{domxref("AudioParam")}} interface property <code><strong>value</strong></code> gets
-    or sets the value of this {{domxref("AudioParam")}} at the current time. Initially, the value is set to {{domxref("AudioParam.defaultValue")}}.</p>
+The [Web Audio API's](/en-US/docs/Web/API/Web_Audio_API)
+{{domxref("AudioParam")}} interface property **`value`** gets
+or sets the value of this {{domxref("AudioParam")}} at the current time. Initially, the value is set to {{domxref("AudioParam.defaultValue")}}.
 
-<p>Setting <code>value</code> has the same effect as
-  calling {{domxref("AudioParam.setValueAtTime")}} with the time returned by the
-  <code>AudioContext</code>'s {{domxref("BaseAudioContext/currentTime", "currentTime")}}
-  property..</p>
+Setting `value` has the same effect as
+calling {{domxref("AudioParam.setValueAtTime")}} with the time returned by the
+`AudioContext`'s {{domxref("BaseAudioContext/currentTime", "currentTime")}}
+property..
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>curValue</em> = <em>audioParam</em>.value;
-<em>audioParam</em>.value = <em>newValue</em>;</pre>
+```js
+var curValue = audioParam.value;
+audioParam.value = newValue;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A floating-point {{jsxref("Number")}} indicating the parameter's value as of the
-  current time. This value will be between the values specified by the
-  {{domxref("AudioParam.minValue", "minValue")}} and {{domxref("AudioParam.maxValue",
-  "maxValue")}} properties.</p>
+A floating-point {{jsxref("Number")}} indicating the parameter's value as of the
+current time. This value will be between the values specified by the
+{{domxref("AudioParam.minValue", "minValue")}} and {{domxref("AudioParam.maxValue",
+  "maxValue")}} properties.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<h3 id="Value_precision_and_variation">Value precision and variation</h3>
+### Value precision and variation
 
-<p>The data type used internally to store <code>value</code> is a single-precision
-  (32-bit) floating point number, while JavaScript uses 64-bit double-precision floating
-  point numbers. As a result, the value you read from the <code>value</code> property may
-  not always exactly equal what you set it to.</p>
+The data type used internally to store `value` is a single-precision
+(32-bit) floating point number, while JavaScript uses 64-bit double-precision floating
+point numbers. As a result, the value you read from the `value` property may
+not always exactly equal what you set it to.
 
-<p>Consider this example:</p>
+Consider this example:
 
-<pre class="brush: js">const source = new AudioBufferSourceNode(...);
+```js
+const source = new AudioBufferSourceNode(...);
 const rate = 5.3;
 source.playbackRate.value = rate;
 console.log(source.playbackRate.value === rate);
-</pre>
+```
 
-<p>The log output will be <code>false</code>, because the playback rate parameter,
-  <code>rate</code>, was converted to the 32-bit floating-point number closest to 5.3,
-  which yields 5.300000190734863. One solution is to use the {{jsxref("Math.fround()")}}
-  method, which returns the single-precision value equivalent to the 64-bit JavaScript
-  value specified—when setting <code>value</code>, like this:</p>
+The log output will be `false`, because the playback rate parameter,
+`rate`, was converted to the 32-bit floating-point number closest to 5.3,
+which yields 5.300000190734863. One solution is to use the {{jsxref("Math.fround()")}}
+method, which returns the single-precision value equivalent to the 64-bit JavaScript
+value specified—when setting `value`, like this:
 
-<pre>const source = new AudioBufferSourceNode(...);
-const rate = Math.fround(5.3);
-source.playbackRate.value = rate;
-console.log(source.playbackRate.value === rate);</pre>
+    const source = new AudioBufferSourceNode(...);
+    const rate = Math.fround(5.3);
+    source.playbackRate.value = rate;
+    console.log(source.playbackRate.value === rate);
 
-<p>In this case, the log output will be <code>true</code>.</p>
+In this case, the log output will be `true`.
 
-<h3 id="Value_of_a_property_which_is_changing_over_time">Value of a property which is
-  changing over time</h3>
+### Value of a property which is changing over time
 
-<p>The <code>value</code> of an <code>AudioParam</code> can either be fixed or can vary
-  over time. This is reflected by the <code>value</code> getter, which returns the value
-  of the parameter as of the audio rendering engine's most recent <strong>render
-    quantum</strong>, or moment at which audio buffers are processed and updated. In
-  addition to processing audio buffers, each render quantum updates the <code>value</code>
-  of each <code>AudioParam</code> as needed given the current time and any established
-  time-based parameter value changes.</p>
+The `value` of an `AudioParam` can either be fixed or can vary
+over time. This is reflected by the `value` getter, which returns the value
+of the parameter as of the audio rendering engine's most recent **render
+quantum**, or moment at which audio buffers are processed and updated. In
+addition to processing audio buffers, each render quantum updates the `value`
+of each `AudioParam` as needed given the current time and any established
+time-based parameter value changes.
 
-<p>Upon first creating the parameter, its value is set to its default value, given by 
-  {{domxref("AudioParam.defaultValue")}}. This is the parameter's value at a time of 0.0
-  seconds, and will remain the parameter's value until the first render quantum in which
-  the value is altered.</p>
+Upon first creating the parameter, its value is set to its default value, given by 
+{{domxref("AudioParam.defaultValue")}}. This is the parameter's value at a time of 0.0
+seconds, and will remain the parameter's value until the first render quantum in which
+the value is altered.
 
-<p>During each render quantum, the browser does the following things related to managing
-  the value of a parameter:</p>
+During each render quantum, the browser does the following things related to managing
+the value of a parameter:
 
-<ul>
-  <li>If the <code>value</code> setter has been used, the parameter's value is changed to
-    the value given.</li>
-  <li>If the current time equals or exceeds the time specified by a previous call to
-    {{domxref("AudioParam.setValueAtTime", "setValueAtTime()")}}, the <code>value</code>
-    is changed to the value passed into <code>setValueAtTime()</code>.</li>
-  <li>If any gradiated or ramped value changing methods have been called and the current
-    time is within the time range over which the graduated change should occur, the value
-    is updated based on the appropriate algorithm. These ramped or gradiated
-    value-changing methods include {{domxref("AudioParam.linearRampToValueAtTime",
+- If the `value` setter has been used, the parameter's value is changed to
+  the value given.
+- If the current time equals or exceeds the time specified by a previous call to
+  {{domxref("AudioParam.setValueAtTime", "setValueAtTime()")}}, the `value`
+  is changed to the value passed into `setValueAtTime()`.
+- If any gradiated or ramped value changing methods have been called and the current
+  time is within the time range over which the graduated change should occur, the value
+  is updated based on the appropriate algorithm. These ramped or gradiated
+  value-changing methods include {{domxref("AudioParam.linearRampToValueAtTime",
     "linearRampToValueAtTime()")}}, {{domxref("AudioParam.setTargetAtTime",
     "setTargetAtTime()")}}, and {{domxref("AudioParam.setValueCurveAtTime",
-    "setValueCurveAtTime()")}}.</li>
-</ul>
+    "setValueCurveAtTime()")}}.
 
-<p>Thus, the <code>value</code> of a parameter is maintained to accurately reflect the
-  state of the parameter over time.</p>
+Thus, the `value` of a parameter is maintained to accurately reflect the
+state of the parameter over time.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example instantly changes the volume of a {{domxref("GainNode")}} to 40%.</p>
+This example instantly changes the volume of a {{domxref("GainNode")}} to 40%.
 
-<pre class="brush: js;">const audioCtx = new AudioContext();
+```js
+const audioCtx = new AudioContext();
 const gainNode = audioCtx.createGain();
 gainNode.gain.value = 0.4;
 //which is identical to:
-gainNode.gain.setValueAtTime(0.4, audioCtx.currentTime);</pre>
+gainNode.gain.setValueAtTime(0.4, audioCtx.currentTime);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>When changing the gain value of a {{domxref("GainNode")}}, Google Chrome prior to
-  version 64 (January 2018) would perform a smooth interpolation to prevent dezippering.
-  Starting with version 64, the value is changed instantly to bring it in line with the
-  Web Audio spec. See <a
-    href="https://www.chromestatus.com/feature/5287995770929152">Chrome Platform
-    Status</a> for details.</p>
+When changing the gain value of a {{domxref("GainNode")}}, Google Chrome prior to
+version 64 (January 2018) would perform a smooth interpolation to prevent dezippering.
+Starting with version 64, the value is changed instantly to bring it in line with the
+Web Audio spec. See [Chrome Platform
+Status](https://www.chromestatus.com/feature/5287995770929152) for details.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
-  </li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

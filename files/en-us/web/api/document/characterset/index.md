@@ -2,56 +2,51 @@
 title: Document.characterSet
 slug: Web/API/Document/characterSet
 tags:
-- API
-- DOM
-- Document
-- Property
-- Read-only
-- Reference
+  - API
+  - DOM
+  - Document
+  - Property
+  - Read-only
+  - Reference
 browser-compat: api.Document.characterSet
 ---
-<div>{{ ApiRef("DOM") }}</div>
+{{ ApiRef("DOM") }}
 
-<p>The <code><strong>Document.characterSet</strong></code>
-    read-only property returns the <a
-      href="/en-US/docs/Glossary/character_encoding">character encoding</a> of the
-    document that it's currently rendered with.</p>
+The **`Document.characterSet`**
+read-only property returns the [character encoding](/en-US/docs/Glossary/character_encoding) of the
+document that it's currently rendered with.
 
-<div class="note">
-  <p><strong>Note:</strong> A “character set” and a “character encoding” are related, but different. Despite the
-    name of this property, it returns the <em>encoding</em>.</p>
-</div>
+> **Note:** A “character set” and a “character encoding” are related, but different. Despite the
+> name of this property, it returns the _encoding_.
 
-<p>Users can override the developer-specified encoding inside the <a
-    href="/en-US/docs/Web/HTTP/Headers/Content-Type">Content-Type</a> header or inline
-  like <code>&lt;meta charset="utf-8"&gt;</code>, such as with Firefox's <kbd>View → Text
-    Encoding</kbd> menu. This override is provided to fix incorrect developer-specified
-  encodings that result in <a href="https://en.wikipedia.org/wiki/Mojibake">garbled
-    text</a>.</p>
+Users can override the developer-specified encoding inside the [Content-Type](/en-US/docs/Web/HTTP/Headers/Content-Type) header or inline
+like `<meta charset="utf-8">`, such as with Firefox's <kbd>View → Text
+Encoding</kbd> menu. This override is provided to fix incorrect developer-specified
+encodings that result in [garbled
+text](https://en.wikipedia.org/wiki/Mojibake).
 
-<div class="note">
-  <p><strong>Note:</strong> The properties <code>document.charset</code> and <code>document.inputEncoding</code>
-    are legacy aliases for <code>document.characterSet</code>. Do not use them any more.
-  </p>
-</div>
+> **Note:** The properties `document.charset` and `document.inputEncoding`
+> are legacy aliases for `document.characterSet`. Do not use them any more.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>string</em> = document.characterSet;</pre>
+```js
+var string = document.characterSet;
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: html">&lt;button onclick="console.log(document.characterSet);"&gt;
+```html
+<button onclick="console.log(document.characterSet);">
   Log character encoding
-&lt;/button&gt;
-&lt;!-- displays document's character encoding in the dev console, such as "ISO-8859-1" or "UTF-8" --&gt;
-</pre>
+</button>
+<!-- displays document's character encoding in the dev console, such as "ISO-8859-1" or "UTF-8" -->
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,52 +2,49 @@
 title: AudioWorkletProcessor.port
 slug: Web/API/AudioWorkletProcessor/port
 tags:
-- API
-- Audio
-- AudioWorkletProcessor
-- Experimental
-- Property
-- Reference
-- Web Audio API
+  - API
+  - Audio
+  - AudioWorkletProcessor
+  - Experimental
+  - Property
+  - Reference
+  - Web Audio API
 browser-compat: api.AudioWorkletProcessor.port
 ---
-<div>{{APIRef("Web Audio API")}}{{SeeCompatTable}}</div>
+{{APIRef("Web Audio API")}}{{SeeCompatTable}}
 
-<p>The read-only <strong><code>port</code></strong> property of the
-  {{domxref("AudioWorkletProcessor")}} interface returns the associated
-  {{domxref("MessagePort")}}. It can be used to communicate between the processor and the
-  {{domxref("AudioWorkletNode")}} to which it belongs.</p>
+The read-only **`port`** property of the
+{{domxref("AudioWorkletProcessor")}} interface returns the associated
+{{domxref("MessagePort")}}. It can be used to communicate between the processor and the
+{{domxref("AudioWorkletNode")}} to which it belongs.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The port at the other end of the channel is
-    available under the {{domxref("AudioWorkletNode.port", "port")}} property of the node.
-  </p>
-</div>
+> **Note:** The port at the other end of the channel is
+> available under the {{domxref("AudioWorkletNode.port", "port")}} property of the node.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>AudioWorkletProcessorInstance</em>.port;</pre>
+```js
+AudioWorkletProcessorInstance.port;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>The {{domxref("MessagePort")}} object that is connecting the <code>AudioWorkletProcessor</code> and the associated <code>AudioWorkletNode</code>.</p>
+The {{domxref("MessagePort")}} object that is connecting the `AudioWorkletProcessor` and the associated `AudioWorkletNode`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>See <a href="/en-US/docs/Web/API/AudioWorkletNode/port#examples"><code>AudioWorkletNode.port</code></a> for example code.</p>
+See [`AudioWorkletNode.port`](/en-US/docs/Web/API/AudioWorkletNode/port#examples) for example code.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a></li>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio
-      API</a></li>
-</ul>
+- [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
+- [Using the Web Audio
+  API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

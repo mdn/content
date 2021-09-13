@@ -2,33 +2,35 @@
 title: VisualViewport.offsetTop
 slug: Web/API/VisualViewport/offsetTop
 tags:
-- API
-- Property
-- Reference
-- Visual Viewport API
-- VisualViewport
-- offsetTop
-- viewport
+  - API
+  - Property
+  - Reference
+  - Visual Viewport API
+  - VisualViewport
+  - offsetTop
+  - viewport
 browser-compat: api.VisualViewport.offsetTop
 ---
-<p>{{APIRef("Visual Viewport")}}</p>
+{{APIRef("Visual Viewport")}}
 
-<p>The <strong><code>offsetTop</code></strong> read-only property of the
-  {{domxref("VisualViewport")}} interface returns the offset of the top edge of the visual
-  viewport from the top edge of the layout viewport in CSS pixels.</p>
+The **`offsetTop`** read-only property of the
+{{domxref("VisualViewport")}} interface returns the offset of the top edge of the visual
+viewport from the top edge of the layout viewport in CSS pixels.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>offsetTop</em> = VisualViewport.offsetTop</pre>
+```js
+var offsetTop = VisualViewport.offsetTop
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A double.</p>
+A double.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

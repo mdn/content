@@ -12,24 +12,26 @@ tags:
   - onblocked
 browser-compat: api.IDBOpenDBRequest.onblocked
 ---
-<p>{{ APIRef("IndexedDB") }}</p>
+{{ APIRef("IndexedDB") }}
 
-<p>The <strong><code>onblocked </code></strong>event handler of the
-  {{domxref("IDBOpenDBRequest")}} interface is the event handler for the
-  {{event("blocked")}} event. This event is triggered when the {{event("upgradeneeded")}}
-  should be triggered because of a version change but the database is still in use (that
-  is, not closed) somewhere, even after the <code>versionchange</code> event was sent.</p>
+The **`onblocked `**event handler of the
+{{domxref("IDBOpenDBRequest")}} interface is the event handler for the
+{{event("blocked")}} event. This event is triggered when the {{event("upgradeneeded")}}
+should be triggered because of a version change but the database is still in use (that
+is, not closed) somewhere, even after the `versionchange` event was sent.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>IDBOpenDBRequest</em>.onblocked = <em>function</em>(event) { ... };</pre>
+```js
+IDBOpenDBRequest.onblocked = function(event) { ... };
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var db;
+```js
+var db;
 
 // Let us open our database
 var request = indexedDB.open("toDoList", 4);
@@ -37,11 +39,11 @@ var request = indexedDB.open("toDoList", 4);
 // these two event handlers act on the database being opened
 // successfully, or not
 request.onerror = function(event) {
-  note.innerHTML += '&lt;li&gt;Error loading database.&lt;/li&gt;';
+  note.innerHTML += '<li>Error loading database.</li>';
 };
 
 request.onsuccess = function(event) {
-  note.innerHTML += '&lt;li&gt;Database initialised.&lt;/li&gt;';
+  note.innerHTML += '<li>Database initialised.</li>';
 
   // store the result of opening the database in the db variable.
   // This is used a lot below
@@ -61,7 +63,7 @@ request.onupgradeneeded = function(event) {
   var db = event.target.result;
 
   db.onerror = function(event) {
-    note.innerHTML += '&lt;li&gt;Error loading database.&lt;/li&gt;';
+    note.innerHTML += '<li>Error loading database.</li>';
   };
 
   // Create an objectStore for this database
@@ -72,27 +74,26 @@ request.onupgradeneeded = function(event) {
 
 request.onblocked = function() {
   console.log("Your database version can't be upgraded because the app is open somewhere else.");
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
-  <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
-  <li>Using transactions: {{domxref("IDBTransaction")}}</li>
-  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
-  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
-  <li>Using cursors: {{domxref("IDBCursor")}}</li>
-  <li>Reference example: <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
-      Notifications</a> (<a href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-  <li><code><a href="/en-US/docs/Web/API/IDBOpenDBRequest/blocked_event">blocked</a></code>
-    event</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do
+  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- [`blocked`](/en-US/docs/Web/API/IDBOpenDBRequest/blocked_event)
+  event

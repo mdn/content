@@ -2,54 +2,52 @@
 title: Client.postMessage()
 slug: Web/API/Client/postMessage
 tags:
-- API
-- Client
-- Experimental
-- Method
-- Reference
-- Service Workers
-- Service worker API
-- ServiceWorker
-- postMessage
+  - API
+  - Client
+  - Experimental
+  - Method
+  - Reference
+  - Service Workers
+  - Service worker API
+  - ServiceWorker
+  - postMessage
 browser-compat: api.Client.postMessage
 ---
-<p>{{APIRef("Service Worker API")}}</p>
+{{APIRef("Service Worker API")}}
 
-<p>The <strong><code>postMessage()</code></strong> method of the
-    {{domxref("Client")}} interface allows a service worker to send a message to a client
-    (a {{domxref("Window")}}, {{domxref("Worker")}}, or {{domxref("SharedWorker")}}). The
-    message is received in the "<code>message</code>" event on
-    {{domxref("ServiceWorkerContainer", "navigator.serviceWorker")}}.</p>
+The **`postMessage()`** method of the
+{{domxref("Client")}} interface allows a service worker to send a message to a client
+(a {{domxref("Window")}}, {{domxref("Worker")}}, or {{domxref("SharedWorker")}}). The
+message is received in the "`message`" event on
+{{domxref("ServiceWorkerContainer", "navigator.serviceWorker")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>client</var>.postMessage(<var>message</var>[, <var>transfer</var>]);
-<var>client</var>.postMessage(<var>message</var>[, { transfer }]);
-</pre>
+```js
+client.postMessage(message[, transfer]);
+client.postMessage(message[, { transfer }]);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>message</var></code></dt>
-  <dd>The message to send to the client. This can be any <a
-      href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">structured-clonable
-      type</a>.</dd>
-  <dt><code><var>transfer</var></code> {{optional_inline}}</dt>
-  <dd>A sequence of objects that are <a
-      href="/en-US/docs/Web/API/Transferable">transferred</a> with the message. The
+- `message`
+  - : The message to send to the client. This can be any [structured-clonable
+    type](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
+- `transfer` {{optional_inline}}
+  - : A sequence of objects that are [transferred](/en-US/docs/Web/API/Transferable) with the message. The
     ownership of these objects is given to the destination side and they are no longer
-    usable on the sending side.</dd>
-</dl>
+    usable on the sending side.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>undefined</code>.</p>
+`undefined`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Sending a message from a service worker to a client:</p>
+Sending a message from a service worker to a client:
 
-<pre class="brush: js">addEventListener('fetch', event =&gt; {
+```js
+addEventListener('fetch', event => {
   event.waitUntil(async function() {
     // Exit early if we don't have access to the client.
     // Eg, if it's cross-origin.
@@ -68,18 +66,21 @@ browser-compat: api.Client.postMessage
     });
 
   }());
-});</pre>
+});
+```
 
-<p>Receiving that message:</p>
+Receiving that message:
 
-<pre class="brush: js">navigator.serviceWorker.addEventListener('message', event =&gt; {
+```js
+navigator.serviceWorker.addEventListener('message', event => {
   console.log(event.data.msg, event.data.url);
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

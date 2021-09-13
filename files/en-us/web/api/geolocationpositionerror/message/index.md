@@ -10,33 +10,30 @@ tags:
   - message
 browser-compat: api.GeolocationPositionError.message
 ---
-<div>{{securecontext_header}}{{APIRef("Geolocation API")}}</div>
+{{securecontext_header}}{{APIRef("Geolocation API")}}
 
-<p>The <code><strong>GeolocationPositionError.message</strong></code> read-only property
-  returns a human-readable {{domxref("DOMString")}} describing the details of the error.
-</p>
+The **`GeolocationPositionError.message`** read-only property
+returns a human-readable {{domxref("DOMString")}} describing the details of the error.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>let msg</var> = <var>geolocationPositionErrorInstance</var>.message
-</pre>
+```js
+let msg = geolocationPositionErrorInstance.message
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A human-readable {{domxref("DOMString")}} describing the details of the error.</p>
+A human-readable {{domxref("DOMString")}} describing the details of the error.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API">Using the Geolocation API</a>
-  </li>
-  <li>{{domxref("GeolocationPositionError")}}</li>
-</ul>
+- [Using the Geolocation API](/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
+- {{domxref("GeolocationPositionError")}}

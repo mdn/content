@@ -16,35 +16,33 @@ tags:
   - WebRTC Device API
 browser-compat: api.RTCRtpCodecCapability
 ---
-<p>{{DefaultAPISidebar("WebRTC")}}</p>
+{{DefaultAPISidebar("WebRTC")}}
 
-<p>The <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API's</a> <code><strong>RTCRtpCodecCapability</strong></code> dictionary provides information describing the capabilities of a single <a href="/en-US/docs/Web/Media/Formats/WebRTC_codecs">media codec</a>.</p>
+The [WebRTC API's](/en-US/docs/Web/API/WebRTC_API) **`RTCRtpCodecCapability`** dictionary provides information describing the capabilities of a single [media codec](/en-US/docs/Web/Media/Formats/WebRTC_codecs).
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("RTCRtpCodecCapability.channels", "channels")}} {{optional_inline}}</dt>
- <dd>An unsigned integer value indicating the maximum number of channels supported by the codec; for example, a codec that supports only mono sound would have a value of 1; stereo codecs would have a 2, etc.</dd>
- <dt>{{domxref("RTCRtpCodecCapability.clockRate", "clockRate")}}</dt>
- <dd>An unsigned long integer specifying the codec's clock rate in Hertz (Hz). The IANA maintains a <a href="https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-1">list of codecs and their parameters</a>, including their clock rates.</dd>
- <dt>{{domxref("RTCRtpCodecCapability.mimeType", "mimeType")}}</dt>
- <dd>A {{domxref("DOMString")}} indicating the codec's MIME media type and subtype. See <a href="/en-US/docs/Web/Media/Formats/WebRTC_codecs">Codecs used by WebRTC</a> for details about potential codecs that might be referenced here.</dd>
- <dt>{{domxref("RTCRtpCodecCapability.sdpFmtpLine", "sdpFmtpLine")}} {{optional_inline}}</dt>
- <dd>A {{domxref("DOMString")}} giving the format specific parameters field from the <code>a=fmtp</code> line in the SDP which corresponds to the codec, if such a line exists. If there is no parameters field, this property is left out.</dd>
-</dl>
+- {{domxref("RTCRtpCodecCapability.channels", "channels")}} {{optional_inline}}
+  - : An unsigned integer value indicating the maximum number of channels supported by the codec; for example, a codec that supports only mono sound would have a value of 1; stereo codecs would have a 2, etc.
+- {{domxref("RTCRtpCodecCapability.clockRate", "clockRate")}}
+  - : An unsigned long integer specifying the codec's clock rate in Hertz (Hz). The IANA maintains a [list of codecs and their parameters](https://www.iana.org/assignments/rtp-parameters/rtp-parameters.xhtml#rtp-parameters-1), including their clock rates.
+- {{domxref("RTCRtpCodecCapability.mimeType", "mimeType")}}
+  - : A {{domxref("DOMString")}} indicating the codec's MIME media type and subtype. See [Codecs used by WebRTC](/en-US/docs/Web/Media/Formats/WebRTC_codecs) for details about potential codecs that might be referenced here.
+- {{domxref("RTCRtpCodecCapability.sdpFmtpLine", "sdpFmtpLine")}} {{optional_inline}}
+  - : A {{domxref("DOMString")}} giving the format specific parameters field from the `a=fmtp` line in the SDP which corresponds to the codec, if such a line exists. If there is no parameters field, this property is left out.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p><code>RTCRtpCodecCapabilities</code> describes the basic parameters for a single codec supported by the user's device. An array of objects of this type is returned in the {{domxref("RTCRtpCapabilities.codecs", "codecs")}} property of the {{domxref("RTCRtpCapabilities")}} object returned in response to a call to either of the static functions {{domxref("RTCRtpSender.getCapabilities()")}} or {{domxref("RTCRtpReceiver.getCapabilities()")}}.</p>
+`RTCRtpCodecCapabilities` describes the basic parameters for a single codec supported by the user's device. An array of objects of this type is returned in the {{domxref("RTCRtpCapabilities.codecs", "codecs")}} property of the {{domxref("RTCRtpCapabilities")}} object returned in response to a call to either of the static functions {{domxref("RTCRtpSender.getCapabilities()")}} or {{domxref("RTCRtpReceiver.getCapabilities()")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>TBD</p>
+TBD
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

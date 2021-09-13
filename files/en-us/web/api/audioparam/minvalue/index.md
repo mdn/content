@@ -2,51 +2,51 @@
 title: AudioParam.minValue
 slug: Web/API/AudioParam/minValue
 tags:
-- API
-- Audio
-- AudioParam
-- Property
-- Reference
-- Web Audio API
-- minValue
+  - API
+  - Audio
+  - AudioParam
+  - Property
+  - Reference
+  - Web Audio API
+  - minValue
 browser-compat: api.AudioParam.minValue
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<p>The <strong><code>minValue</code></strong>
-    read-only property of the {{domxref("AudioParam")}} interface represents the minimum
-    possible value for the parameter's nominal (effective) range.</p>
+The **`minValue`**
+read-only property of the {{domxref("AudioParam")}} interface represents the minimum
+possible value for the parameter's nominal (effective) range.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>minVal</em> = <em>audioParam</em>.minValue;</pre>
+```js
+var minVal = audioParam.minValue;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A floating-point {{jsxref("Number")}} indicating the minimum value permitted for the
-  parameter's nominal range.</p>
+A floating-point {{jsxref("Number")}} indicating the minimum value permitted for the
+parameter's nominal range.
 
-<p>The default value of <code>minValue</code> is the minimum negative single-precision
-  floating-point value (-340,282,346,638,528,859,811,704,183,484,516,925,440).</p>
+The default value of `minValue` is the minimum negative single-precision
+floating-point value (-340,282,346,638,528,859,811,704,183,484,516,925,440).
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js;">const audioCtx = new AudioContext();
+```js
+const audioCtx = new AudioContext();
 const gainNode = audioCtx.createGain();
 console.log(gainNode.gain.minValue); // -3.4028234663852886e38
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("AudioParam.maxValue")}}</li>
-</ul>
+- {{domxref("AudioParam.maxValue")}}

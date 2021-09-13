@@ -10,66 +10,67 @@ tags:
   - Reporting API
 browser-compat: api.Report
 ---
-<div>{{SeeCompatTable}}{{APIRef("Reporting API")}}</div>
+{{SeeCompatTable}}{{APIRef("Reporting API")}}
 
-<p>The <code>Report</code> interface of the <a href="/en-US/docs/Web/API/Reporting_API">Reporting API</a> represents a single report.</p>
+The `Report` interface of the [Reporting API](/en-US/docs/Web/API/Reporting_API) represents a single report.
 
-<p>Reports can be accessed in a number of ways:</p>
+Reports can be accessed in a number of ways:
 
-<ul>
- <li>Via the {{domxref("ReportingObserver.takeRecords()")}} method — this returns all reports in an observer's report queue, and then empties the queue.</li>
- <li>Via the <code>reports</code> parameter of the callback function passed into the <code><a href="/en-US/docs/Web/API/ReportingObserver/ReportingObserver">ReportingObserver()</a></code> constructor upon creation of a new observer instance. This contains the list of reports currently contained in the observer's report queue.</li>
- <li>By sending requests to the endpoints defined via the {{httpheader("Report-To")}} HTTP header.</li>
-</ul>
+- Via the {{domxref("ReportingObserver.takeRecords()")}} method — this returns all reports in an observer's report queue, and then empties the queue.
+- Via the `reports` parameter of the callback function passed into the [`ReportingObserver()`](/en-US/docs/Web/API/ReportingObserver/ReportingObserver) constructor upon creation of a new observer instance. This contains the list of reports currently contained in the observer's report queue.
+- By sending requests to the endpoints defined via the {{httpheader("Report-To")}} HTTP header.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("Report.body")}} {{readonlyinline}}</dt>
- <dd>The body of the report, which is a <code>ReportBody</code> object containing the detailed report information.</dd>
- <dt>{{domxref("Report.type")}} {{readonlyinline}}</dt>
- <dd>The type of report generated, e.g. <code>deprecation</code> or <code>intervention</code>.</dd>
- <dt>{{domxref("Report.url")}} {{readonlyinline}}</dt>
- <dd>The URL of the document that generated the report.</dd>
-</dl>
+- {{domxref("Report.body")}} {{readonlyinline}}
+  - : The body of the report, which is a `ReportBody` object containing the detailed report information.
+- {{domxref("Report.type")}} {{readonlyinline}}
+  - : The type of report generated, e.g. `deprecation` or `intervention`.
+- {{domxref("Report.url")}} {{readonlyinline}}
+  - : The URL of the document that generated the report.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface has no methods defined on it.</em></p>
+_This interface has no methods defined on it._
 
-<h2 id="Events">Events</h2>
+## Events
 
-<p><em>This interface has no events that fire on it.</em></p>
+_This interface has no events that fire on it._
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In our <a href="https://mdn.github.io/dom-examples/reporting-api/deprecation_report.html">deprecation_report.html</a> example, we create a simple reporting observer to observe usage of deprecated features on our web page:</p>
+In our [deprecation_report.html](https://mdn.github.io/dom-examples/reporting-api/deprecation_report.html) example, we create a simple reporting observer to observe usage of deprecated features on our web page:
 
-<pre class="brush: js">let options = {
+```js
+let options = {
   types: ['deprecation'],
   buffered: true
 }
 
 let observer = new ReportingObserver(function(reports, observer) {
-  reportBtn.onclick = () =&gt; displayReports(reports);
-}, options);</pre>
+  reportBtn.onclick = () => displayReports(reports);
+}, options);
+```
 
-<p>We then tell it to start observing reports using {{domxref("ReportingObserver.observe()")}}; this tells the observer to start collecting reports in its report queue, and runs the callback function specified inside the constructor:</p>
+We then tell it to start observing reports using {{domxref("ReportingObserver.observe()")}}; this tells the observer to start collecting reports in its report queue, and runs the callback function specified inside the constructor:
 
-<pre class="brush: js">observer.observe();</pre>
+```js
+observer.observe();
+```
 
-<p>Because of the event handler we set up inside the <code>ReportingObserver()</code> constructor, we can now click the button to display the report details.</p>
+Because of the event handler we set up inside the `ReportingObserver()` constructor, we can now click the button to display the report details.
 
-<p><img alt="image of a jolly bearded man with various stats displayed below it about a deprecated feature" src="reporting_api_example.png"></p>
+![image of a jolly bearded man with various stats displayed below it about a deprecated feature](reporting_api_example.png)
 
-<p>The report details are displayed via the <code>displayReports()</code> fuction, which takes the observer callback's <code>reports</code> parameter as its parameter:</p>
+The report details are displayed via the `displayReports()` fuction, which takes the observer callback's `reports` parameter as its parameter:
 
-<pre class="brush: js">function displayReports(reports) {
+```js
+function displayReports(reports) {
   const outputElem = document.querySelector('.output');
   const list = document.createElement('ul');
   outputElem.appendChild(list);
 
-  for(let i = 0; i &lt; reports.length; i++) {
+  for(let i = 0; i < reports.length; i++) {
     let listItem = document.createElement('li');
     let textNode = document.createTextNode('Report ' + (i + 1) + ', type: ' + reports[i].type);
     listItem.appendChild(textNode);
@@ -84,20 +85,19 @@ let observer = new ReportingObserver(function(reports, observer) {
       innerList.appendChild(innerListItem);
     }
   }
-}</pre>
+}
+```
 
-<p>The <code>reports</code> parameter contains an array of all the reports in the observer's report queue. We loop over each report using a basic <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for">for</a></code> loop, then iterate over each entry of in the report's body using a <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a></code> structure, displaying each key/value pair inside a list item.</p>
+The `reports` parameter contains an array of all the reports in the observer's report queue. We loop over each report using a basic [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for) loop, then iterate over each entry of in the report's body using a [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) structure, displaying each key/value pair inside a list item.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Reporting_API">Reporting API</a></li>
-</ul>
+- [Reporting API](/en-US/docs/Web/API/Reporting_API)

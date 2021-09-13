@@ -10,52 +10,55 @@ tags:
   - XPath
 browser-compat: api.XPathException
 ---
-<p>{{APIRef("DOM XPath")}}{{Deprecated_Header}}</p>
+{{APIRef("DOM XPath")}}{{Deprecated_Header}}
 
-<p>In the <a href="/en-US/docs/Web/XPath">DOM XPath API</a> the <code><strong>XPathException</strong></code> interface represents exception conditions that can be encountered while performing XPath operations.</p>
+In the [DOM XPath API](/en-US/docs/Web/XPath) the **`XPathException`** interface represents exception conditions that can be encountered while performing XPath operations.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("XPathException.code")}} {{readOnlyInline}}</dt>
- <dd>Returns a <code>short</code> that contains one of the {{anch("Error codes", "error code constants")}}.</dd>
-</dl>
+- {{domxref("XPathException.code")}} {{readOnlyInline}}
+  - : Returns a `short` that contains one of the {{anch("Error codes", "error code constants")}}.
 
-<h2 id="Constants">Constants</h2>
+## Constants
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Constant</th>
-   <th scope="col">Value</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>INVALID_EXPRESSION_ERR</code></td>
-   <td><code>51</code></td>
-   <td>If the expression has a syntax error or otherwise is not a legal expression according to the rules of the specific {{domxref("XPathEvaluator")}} or contains specialized extension functions or variables not supported by this implementation.</td>
-  </tr>
-  <tr>
-   <td><code>TYPE_ERR</code></td>
-   <td><code>52</code></td>
-   <td>If the expression cannot be converted to return the specified type.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Constant</th>
+      <th scope="col">Value</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>INVALID_EXPRESSION_ERR</code></td>
+      <td><code>51</code></td>
+      <td>
+        If the expression has a syntax error or otherwise is not a legal
+        expression according to the rules of the specific
+        {{domxref("XPathEvaluator")}} or contains specialized
+        extension functions or variables not supported by this implementation.
+      </td>
+    </tr>
+    <tr>
+      <td><code>TYPE_ERR</code></td>
+      <td><code>52</code></td>
+      <td>
+        If the expression cannot be converted to return the specified type.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{DOMxRef("Document.createExpression()")}}</li>
- <li>{{DOMxRef("XPathExpression")}}</li>
-</ul>
+- {{DOMxRef("Document.createExpression()")}}
+- {{DOMxRef("XPathExpression")}}

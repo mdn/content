@@ -7,15 +7,16 @@ tags:
   - WebGLShader
 browser-compat: api.WebGLShader
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong>WebGLShader</strong> is part of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> and can either be a vertex or a fragment shader. A {{domxref("WebGLProgram")}} requires both types of shaders.</p>
+The **WebGLShader** is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and can either be a vertex or a fragment shader. A {{domxref("WebGLProgram")}} requires both types of shaders.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>To create a <strong>WebGLShader</strong> use {{domxref("WebGLRenderingContext.createShader")}}, then hook up the GLSL source code using {{domxref("WebGLRenderingContext.shaderSource()")}}, and finally invoke {{domxref("WebGLRenderingContext.compileShader()")}} to finish and compile the shader. At this point the <strong>WebGLShader</strong> is still not in a usable form and must still be attached to a {{domxref("WebGLProgram")}}.</p>
+To create a **WebGLShader** use {{domxref("WebGLRenderingContext.createShader")}}, then hook up the GLSL source code using {{domxref("WebGLRenderingContext.shaderSource()")}}, and finally invoke {{domxref("WebGLRenderingContext.compileShader()")}} to finish and compile the shader. At this point the **WebGLShader** is still not in a usable form and must still be attached to a {{domxref("WebGLProgram")}}.
 
-<pre class="brush: js">function createShader (gl, sourceCode, type) {
+```js
+function createShader (gl, sourceCode, type) {
   // Compiles either a shader of type gl.VERTEX_SHADER or gl.FRAGMENT_SHADER
   var shader = gl.createShader( type );
   gl.shaderSource( shader, sourceCode );
@@ -27,17 +28,18 @@ browser-compat: api.WebGLShader
   }
   return shader;
 }
-</pre>
+```
 
-<p>See {{domxref("WebGLProgram")}} for information on attaching the shaders.</p>
+See {{domxref("WebGLProgram")}} for information on attaching the shaders.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Creating_a_vertex_shader">Creating a vertex shader</h3>
+### Creating a vertex shader
 
-<p>Note that there are many other strategies for writing and accessing shader source code strings. These example are for illustration purposes only.</p>
+Note that there are many other strategies for writing and accessing shader source code strings. These example are for illustration purposes only.
 
-<pre class="brush: js">var vertexShaderSource =
+```js
+var vertexShaderSource =
   'attribute vec4 position;\n' +
   'void main() {\n' +
   '  gl_Position = position;\n' +
@@ -45,50 +47,49 @@ browser-compat: api.WebGLShader
 
 //Use the createShader function from the example above
 var vertexShader = createShader(gl, vertexShaderSource, gl.VERTEX_SHADER)
-</pre>
+```
 
-<h3 id="Creating_a_fragment_shader">Creating a fragment shader</h3>
+### Creating a fragment shader
 
-<pre class="brush: js">var fragmentShaderSource =
+```js
+var fragmentShaderSource =
   'void main() {\n' +
   '  gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);\n' +
   '}\n';
 
 //Use the createShader function from the example above
 var fragmentShader = createShader(gl, fragmentShaderSource, gl.FRAGMENT_SHADER)
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{domxref("WebGLProgram")}}</li>
-	<li>{{domxref("WebGLRenderingContext.attachShader()")}}</li>
-	<li>{{domxref("WebGLRenderingContext.bindAttribLocation()")}}</li>
-	<li>{{domxref("WebGLRenderingContext.compileShader()")}}</li>
-	<li>{{domxref("WebGLRenderingContext.createProgram()")}}</li>
-	<li>{{domxref("WebGLRenderingContext.createShader()")}}</li>
-	<li>{{domxref("WebGLRenderingContext.deleteProgram()")}}</li>
-	<li>{{domxref("WebGLRenderingContext.deleteShader()")}}</li>
-	<li>{{domxref("WebGLRenderingContext.detachShader()")}}</li>
-	<li>{{domxref("WebGLRenderingContext.getAttachedShaders()")}}</li>
-	<li>{{domxref("WebGLRenderingContext.getProgramParameter()")}}</li>
-	<li>{{domxref("WebGLRenderingContext.getProgramInfoLog()")}}</li>
-	<li>{{domxref("WebGLRenderingContext.getShaderParameter()")}}</li>
-	<li>{{domxref("WebGLRenderingContext.getShaderPrecisionFormat()")}}</li>
-	<li>{{domxref("WebGLRenderingContext.getShaderInfoLog()")}}</li>
-	<li>{{domxref("WebGLRenderingContext.getShaderSource()")}}</li>
-	<li>{{domxref("WebGLRenderingContext.isProgram()")}}</li>
-	<li>{{domxref("WebGLRenderingContext.isShader()")}}</li>
-	<li>{{domxref("WebGLRenderingContext.linkProgram()")}}</li>
-	<li>{{domxref("WebGLRenderingContext.shaderSource()")}}</li>
-	<li>{{domxref("WebGLRenderingContext.useProgram()")}}</li>
-	<li>{{domxref("WebGLRenderingContext.validateProgram()")}}</li>
-</ul>
+- {{domxref("WebGLProgram")}}
+- {{domxref("WebGLRenderingContext.attachShader()")}}
+- {{domxref("WebGLRenderingContext.bindAttribLocation()")}}
+- {{domxref("WebGLRenderingContext.compileShader()")}}
+- {{domxref("WebGLRenderingContext.createProgram()")}}
+- {{domxref("WebGLRenderingContext.createShader()")}}
+- {{domxref("WebGLRenderingContext.deleteProgram()")}}
+- {{domxref("WebGLRenderingContext.deleteShader()")}}
+- {{domxref("WebGLRenderingContext.detachShader()")}}
+- {{domxref("WebGLRenderingContext.getAttachedShaders()")}}
+- {{domxref("WebGLRenderingContext.getProgramParameter()")}}
+- {{domxref("WebGLRenderingContext.getProgramInfoLog()")}}
+- {{domxref("WebGLRenderingContext.getShaderParameter()")}}
+- {{domxref("WebGLRenderingContext.getShaderPrecisionFormat()")}}
+- {{domxref("WebGLRenderingContext.getShaderInfoLog()")}}
+- {{domxref("WebGLRenderingContext.getShaderSource()")}}
+- {{domxref("WebGLRenderingContext.isProgram()")}}
+- {{domxref("WebGLRenderingContext.isShader()")}}
+- {{domxref("WebGLRenderingContext.linkProgram()")}}
+- {{domxref("WebGLRenderingContext.shaderSource()")}}
+- {{domxref("WebGLRenderingContext.useProgram()")}}
+- {{domxref("WebGLRenderingContext.validateProgram()")}}

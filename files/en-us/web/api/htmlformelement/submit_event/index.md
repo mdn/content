@@ -11,78 +11,78 @@ tags:
   - submit
 browser-compat: api.HTMLFormElement.submit_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <strong><code>submit</code></strong> event fires when a {{HtmlElement("form")}} is submitted.</p>
+The **`submit`** event fires when a {{HtmlElement("form")}} is submitted.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th>Bubbles</th>
-   <td>Yes (although specified as a simple event that doesn't bubble)</td>
-  </tr>
-  <tr>
-   <th>Cancelable</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th>Interface</th>
-   <td>{{DOMxRef("SubmitEvent")}}</td>
-  </tr>
-  <tr>
-   <th>Event handler property</th>
-   <td>{{domxref("GlobalEventHandlers.onsubmit")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>Bubbles</th>
+      <td>Yes (although specified as a simple event that doesn't bubble)</td>
+    </tr>
+    <tr>
+      <th>Cancelable</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Interface</th>
+      <td>{{DOMxRef("SubmitEvent")}}</td>
+    </tr>
+    <tr>
+      <th>Event handler property</th>
+      <td>{{domxref("GlobalEventHandlers.onsubmit")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>Note that the <code>submit</code> event fires on the <code>&lt;form&gt;</code> element itself, and not on any {{HtmlElement("button")}} or {{HtmlElement('input/submit', '&lt;input type="submit"&gt;')}} inside it. However, the {{domxref("SubmitEvent")}} which is sent to indicate the form's submit action has been triggered includes a {{domxref("SubmitEvent.submitter", "submitter")}} property, which is the button that was invoked to trigger the submit request.</p>
+Note that the `submit` event fires on the `<form>` element itself, and not on any {{HtmlElement("button")}} or {{HtmlElement('input/submit', '&lt;input type="submit"&gt;')}} inside it. However, the {{domxref("SubmitEvent")}} which is sent to indicate the form's submit action has been triggered includes a {{domxref("SubmitEvent.submitter", "submitter")}} property, which is the button that was invoked to trigger the submit request.
 
-<p>The <code>submit</code> event fires when the user clicks a submit button ({{HtmlElement("button")}} or {{HtmlElement('input/submit', '&lt;input type="submit"&gt;')}}) or presses <kbd>Enter</kbd> while editing a field (e.g. {{HtmlElement('input/text', '&lt;input type="text"&gt;')}}) in a form. The event is not sent to the form when calling the {{domxref("HTMLFormElement.submit()", "form.submit()")}} method directly.</p>
+The `submit` event fires when the user clicks a submit button ({{HtmlElement("button")}} or {{HtmlElement('input/submit', '&lt;input type="submit"&gt;')}}) or presses <kbd>Enter</kbd> while editing a field (e.g. {{HtmlElement('input/text', '&lt;input type="text"&gt;')}}) in a form. The event is not sent to the form when calling the {{domxref("HTMLFormElement.submit()", "form.submit()")}} method directly.
 
-<div class="notecard note">
-<p><strong>Note:</strong> Trying to submit a form that does not pass <a href="/en-US/docs/Learn/Forms/Form_validation">validation</a> triggers an {{domxref("HTMLInputElement/invalid_event", "invalid")}} event. In this case, the validation prevents form submission, and thus there is no <code>submit</code> event.</p>
-</div>
+> **Note:** Trying to submit a form that does not pass [validation](/en-US/docs/Learn/Forms/Form_validation) triggers an {{domxref("HTMLInputElement/invalid_event", "invalid")}} event. In this case, the validation prevents form submission, and thus there is no `submit` event.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example uses {{domxref("EventTarget.addEventListener()")}} to listen for form submit, and logs the current {{domxref("Event.timeStamp")}} whenever that occurs, then prevents the default action of submitting the form.</p>
+This example uses {{domxref("EventTarget.addEventListener()")}} to listen for form submit, and logs the current {{domxref("Event.timeStamp")}} whenever that occurs, then prevents the default action of submitting the form.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;form id="form"&gt;
-  &lt;label&gt;Test field: &lt;input type="text"&gt;&lt;/label&gt;
-  &lt;br&gt;&lt;br&gt;
-  &lt;button type="submit"&gt;Submit form&lt;/button&gt;
-&lt;/form&gt;
-&lt;p id="log"&gt;&lt;/p&gt;</pre>
+```html
+<form id="form">
+  <label>Test field: <input type="text"></label>
+  <br><br>
+  <button type="submit">Submit form</button>
+</form>
+<p id="log"></p>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">function logSubmit(event) {
+```js
+function logSubmit(event) {
   log.textContent = `Form Submitted! Time stamp: ${event.timeStamp}`;
   event.preventDefault();
 }
 
 const form = document.getElementById('form');
 const log = document.getElementById('log');
-form.addEventListener('submit', logSubmit);</pre>
+form.addEventListener('submit', logSubmit);
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples")}}</p>
+{{EmbedLiveSample("Examples")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>HTML {{HtmlElement("form")}} element</li>
- <li>Related event: {{domxref("HTMLInputElement/invalid_event", "invalid")}}</li>
-</ul>
+- HTML {{HtmlElement("form")}} element
+- Related event: {{domxref("HTMLInputElement/invalid_event", "invalid")}}

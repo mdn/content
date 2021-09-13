@@ -2,35 +2,37 @@
 title: CSSPseudoElement.element
 slug: Web/API/CSSPseudoElement/element
 tags:
-- API
-- CSSPseudoElement
-- Element
-- Experimental
-- Property
-- Reference
+  - API
+  - CSSPseudoElement
+  - Element
+  - Experimental
+  - Property
+  - Reference
 browser-compat: api.CSSPseudoElement.element
 ---
-<p>{{APIRef}}{{SeeCompatTable}}</p>
+{{APIRef}}{{SeeCompatTable}}
 
-<p>The <strong><code>element</code></strong> read-only property of the
-  {{DOMxRef('CSSPseudoElement')}} interface returns a reference to the originating element
-  of the pseudo-element, in other words its parent element.</p>
+The **`element`** read-only property of the
+{{DOMxRef('CSSPseudoElement')}} interface returns a reference to the originating element
+of the pseudo-element, in other words its parent element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>originatingElement</em> = <em>cssPseudoElement</em>.element;
-</pre>
+```js
+var originatingElement = cssPseudoElement.element;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{DOMxRef('Element')}} representing the pseudo-element's originating element.</p>
+An {{DOMxRef('Element')}} representing the pseudo-element's originating element.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The example below demonstrates the relationship between
-  <code>CSSPseudoElement.element</code> and {{DOMxRef('Element.pseudo()')}}:</p>
+The example below demonstrates the relationship between
+`CSSPseudoElement.element` and {{DOMxRef('Element.pseudo()')}}:
 
-<pre class="brush: js">const myElement = document.querySelector('q');
+```js
+const myElement = document.querySelector('q');
 const cssPseudoElement = myElement.pseudo('::after');
 const originatingElement = cssPseudoElement.element;
 
@@ -40,18 +42,16 @@ console.log(myElement.lastElementChild === cssPseudoElement);   // Outputs false
 console.log(myElement.lastChild === cssPseudoElement);          // Outputs false
 console.log(myElement.nextElementSibling === cssPseudoElement); // Outputs false
 console.log(myElement.nextSibling === cssPseudoElement);        // Outputs false
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{DOMxRef('Element.pseudo()')}}</li>
-</ul>
+- {{DOMxRef('Element.pseudo()')}}

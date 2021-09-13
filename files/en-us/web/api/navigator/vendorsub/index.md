@@ -2,33 +2,32 @@
 title: Navigator.vendorSub
 slug: Web/API/Navigator/vendorSub
 tags:
-- API
-- Deprecated
-- HTML DOM
-- Property
-- Read-only
+  - API
+  - Deprecated
+  - HTML DOM
+  - Property
+  - Read-only
 browser-compat: api.Navigator.vendorSub
 ---
-<div>{{ApiRef}} {{Deprecated_Header}}</div>
+{{ApiRef}} {{Deprecated_Header}}
 
-<p>The value of the <code><strong>Navigator.vendorSub</strong></code> property is always
-  the empty string, in any browser.</p>
+The value of the **`Navigator.vendorSub`** property is always
+the empty string, in any browser.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>venSub</var> = navigator.vendorSub
-</pre>
+```js
+venSub = navigator.vendorSub
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<ul>
-  <li>The empty string</li>
-</ul>
+- The empty string
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

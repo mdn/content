@@ -10,53 +10,50 @@ tags:
   - children
 browser-compat: api.Element.children
 ---
-<div>{{ APIRef("DOM") }}</div>
+{{ APIRef("DOM") }}
 
-<p>The read-only <code><strong>children</strong></code> property returns a live {{domxref("HTMLCollection")}}
-which contains all of the child {{domxref("Element", "elements")}} of the element upon which it was called.</p>
+The read-only **`children`** property returns a live {{domxref("HTMLCollection")}}
+which contains all of the child {{domxref("Element", "elements")}} of the element upon which it was called.
 
-<p><code>Element.children</code> includes only element nodes. To get all child nodes, including non-element nodes like text and comment nodes, use {{domxref("Node.childNodes")}}.</p>
+`Element.children` includes only element nodes. To get all child nodes, including non-element nodes like text and comment nodes, use {{domxref("Node.childNodes")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 // Getter
 collection = myElement.children;
 
 // No setter; read-only property
-</pre>
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An {{ domxref("HTMLCollection") }} which is a live, ordered collection of the DOM
-  elements which are children of <code><var>node</var></code>. You can access the
-  individual child nodes in the collection by using either the
-  {{domxref("HTMLCollection.item()", "item()")}} method on the collection, or by using
-  JavaScript array-style notation.</p>
+An {{ domxref("HTMLCollection") }} which is a live, ordered collection of the DOM
+elements which are children of `node`. You can access the
+individual child nodes in the collection by using either the
+{{domxref("HTMLCollection.item()", "item()")}} method on the collection, or by using
+JavaScript array-style notation.
 
-<p>If the element has no element children, then <code>children</code> is an empty list with a
-  <code>length</code> of <code>0</code>.</p>
+If the element has no element children, then `children` is an empty list with a
+`length` of `0`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">const myElement = document.getElementById('foo');
-for (let i = 0; i &lt; myElement.children.length; i++) {
+```js
+const myElement = document.getElementById('foo');
+for (let i = 0; i < myElement.children.length; i++) {
   console.log(myElement.children[i].tagName);
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>
-    {{domxref("Node.childNodes")}}
-  </li>
-</ul>
+- {{domxref("Node.childNodes")}}

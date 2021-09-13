@@ -9,29 +9,33 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals.validationMessage
 ---
-<div>{{DefaultAPISidebar("DOM")}}</div>
+{{DefaultAPISidebar("DOM")}}
 
-<p>The <strong><code>validationMessage</code></strong> read-only property of the {{domxref("ElementInternals")}} interface returns the validation message for the element.</p>
+The **`validationMessage`** read-only property of the {{domxref("ElementInternals")}} interface returns the validation message for the element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let validationMessage = ElementInternals.validationMessage;
-</pre>
+```js
+let validationMessage = ElementInternals.validationMessage;
+```
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString","string")}} containing the validation message of this element.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("DOMString","string")}} containing the validation message of this element.
 
-<p>In the following example the validation message is set with {{domxref("ElementInternals.setValidity()")}}, and then returned with <code>validationMessage</code>.</p>
+## Examples
 
-<pre class="brush: js">this.internals_.setValidity({'valueMissing':true},"my message");
-console.log(this.internals_.validationMessage); // "my message"</pre>
+In the following example the validation message is set with {{domxref("ElementInternals.setValidity()")}}, and then returned with `validationMessage`.
 
-<h2 id="Specifications">Specifications</h2>
+```js
+this.internals_.setValidity({'valueMissing':true},"my message");
+console.log(this.internals_.validationMessage); // "my message"
+```
 
-<p>{{Specifications}}</p>
+## Specifications
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+{{Specifications}}
 
-<p>{{Compat}}</p>
+## Browser compatibility
+
+{{Compat}}

@@ -2,64 +2,63 @@
 title: RTCIceCandidatePairStats.availableIncomingBitrate
 slug: Web/API/RTCIceCandidatePairStats/availableIncomingBitrate
 tags:
-- API
-- Bandwidth
-- Bit Rate
-- Bitrate
-- Candidate
-- Connection
-- Network
-- Pair
-- RTCIceCandidatePairStats
-- Reference
-- Statistics
-- Stats
-- WebRTC
-- WebRTC API
-- availableIncomingBitrate
-- priority
-- speed
+  - API
+  - Bandwidth
+  - Bit Rate
+  - Bitrate
+  - Candidate
+  - Connection
+  - Network
+  - Pair
+  - RTCIceCandidatePairStats
+  - Reference
+  - Statistics
+  - Stats
+  - WebRTC
+  - WebRTC API
+  - availableIncomingBitrate
+  - priority
+  - speed
 browser-compat: api.RTCIceCandidatePairStats.availableIncomingBitrate
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The {{domxref("RTCIceCandidatePairStats")}} property
-    <strong><code>availableIncomingBitrate</code></strong> returns a value indicative of
-    the available inbound capacity of the network connection represented by the candidate
-    pair. The higher the value, the more bandwidth you can assume is available for
-  incoming data.</p>
+The {{domxref("RTCIceCandidatePairStats")}} property
+**`availableIncomingBitrate`** returns a value indicative of
+the available inbound capacity of the network connection represented by the candidate
+pair. The higher the value, the more bandwidth you can assume is available for
+incoming data.
 
-<p>You can get the incoming outgoing bitrate from
-  {{domxref("RTCIceCandidatePairStats.availableoutgoingBitrate",
-  "availableoutgoingBitrate")}}.</p>
+You can get the incoming outgoing bitrate from
+{{domxref("RTCIceCandidatePairStats.availableoutgoingBitrate",
+  "availableoutgoingBitrate")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>availableIncomingBitrate</em> = <em>rtcIceCandidatePairStats</em>.availableIncomingBitrate;</pre>
+```js
+availableIncomingBitrate = rtcIceCandidatePairStats.availableIncomingBitrate;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A floating-point value which approximates the amount of available bandwidth for
-  incoming data on the network connection described by the
-  <code>RTCIceCandidatePair</code>. The value is reported in bits per second and is
-  computed over a 1-second interval.</p>
+A floating-point value which approximates the amount of available bandwidth for
+incoming data on the network connection described by the
+`RTCIceCandidatePair`. The value is reported in bits per second and is
+computed over a 1-second interval.
 
-<p>The value returned is calculated by adding up the available bit rate for every
-  {{Glossary("RTP")}} stream using the connection described by this candidate pair. The
-  returned value doesn't take into account overhead introduced by underlying protocols,
-  including IP, UDP, or TCP.</p>
+The value returned is calculated by adding up the available bit rate for every
+{{Glossary("RTP")}} stream using the connection described by this candidate pair. The
+returned value doesn't take into account overhead introduced by underlying protocols,
+including IP, UDP, or TCP.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The returned value is computed using a method similar—but not
-    identical—to the Transport Independent Application Specific Maximum (TIAS) described
-    in {{RFC(3890, "6.2")}}.</p>
-</div>
+> **Note:** The returned value is computed using a method similar—but not
+> identical—to the Transport Independent Application Specific Maximum (TIAS) described
+> in {{RFC(3890, "6.2")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

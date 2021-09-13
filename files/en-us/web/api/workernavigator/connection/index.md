@@ -2,39 +2,37 @@
 title: WorkerNavigator.connection
 slug: Web/API/WorkerNavigator/connection
 tags:
-- API
-- Connection
-- Experimental
-- Property
-- Reference
-- WorkerNavigator
+  - API
+  - Connection
+  - Experimental
+  - Property
+  - Reference
+  - WorkerNavigator
 browser-compat: api.WorkerNavigator.connection
 ---
-<p>{{APIRef("Network Information API")}}{{SeeCompatTable}}</p>
+{{APIRef("Network Information API")}}{{SeeCompatTable}}
 
-<p>The <code><strong>WorkerNavigator.connection</strong></code> read-only property returns
-  a {{domxref("NetworkInformation")}} object containing information about the system's
-  connection, such as the current bandwidth of the user's device or whether the connection
-  is metered. This could be used to select high definition content or low definition
-  content based on the user's connection.</p>
+The **`WorkerNavigator.connection`** read-only property returns
+a {{domxref("NetworkInformation")}} object containing information about the system's
+connection, such as the current bandwidth of the user's device or whether the connection
+is metered. This could be used to select high definition content or low definition
+content based on the user's connection.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>connectionInfo</em> = navigator.connection</pre>
+```js
+connectionInfo = navigator.connection
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Online_and_offline_events">Online and offline events</a></li>
-  <li><a href="/en-US/docs/Web/API/Network_Information_API">Network Information API</a>
-  </li>
-</ul>
+- [Online and offline events](/en-US/docs/Online_and_offline_events)
+- [Network Information API](/en-US/docs/Web/API/Network_Information_API)

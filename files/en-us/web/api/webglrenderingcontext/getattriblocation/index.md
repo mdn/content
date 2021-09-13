@@ -2,54 +2,52 @@
 title: WebGLRenderingContext.getAttribLocation()
 slug: Web/API/WebGLRenderingContext/getAttribLocation
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getAttribLocation
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.getAttribLocation()</code></strong> method of
-  the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> returns the location of an
-  attribute variable in a given {{domxref("WebGLProgram")}}.</p>
+The **`WebGLRenderingContext.getAttribLocation()`** method of
+the [WebGL API](/en-US/docs/Web/API/WebGL_API) returns the location of an
+attribute variable in a given {{domxref("WebGLProgram")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">GLint <var>gl</var>.getAttribLocation(<var>program</var>, <var>name</var>);
-</pre>
+```js
+GLint gl.getAttribLocation(program, name);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>program</dt>
-  <dd>A {{domxref("WebGLProgram")}} containing the attribute variable.</dd>
-  <dt>name</dt>
-  <dd>A {{domxref("DOMString")}} specifying the name of the attribute variable whose
-    location to get.</dd>
-</dl>
+- program
+  - : A {{domxref("WebGLProgram")}} containing the attribute variable.
+- name
+  - : A {{domxref("DOMString")}} specifying the name of the attribute variable whose
+    location to get.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("WebGL_API/Types", "GLint")}} number indicating the location of the variable name if found.
-  Returns -1 otherwise.</p>
+A {{domxref("WebGL_API/Types", "GLint")}} number indicating the location of the variable name if found.
+Returns -1 otherwise.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">gl.getAttribLocation(program, 'vColor');
-</pre>
+```js
+gl.getAttribLocation(program, 'vColor');
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.getUniformLocation()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.getUniformLocation()")}}

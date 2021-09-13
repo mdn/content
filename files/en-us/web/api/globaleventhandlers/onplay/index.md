@@ -2,60 +2,59 @@
 title: GlobalEventHandlers.onplay
 slug: Web/API/GlobalEventHandlers/onplay
 tags:
-- API
-- Event Handler
-- GlobalEventHandlers
-- Property
-- Reference
+  - API
+  - Event Handler
+  - GlobalEventHandlers
+  - Property
+  - Reference
 browser-compat: api.GlobalEventHandlers.onplay
 ---
-<div>{{ ApiRef("HTML DOM") }}</div>
+{{ ApiRef("HTML DOM") }}
 
-<p>The <code><strong>onplay</strong></code> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is the <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> for
-  processing {{event("play")}} events.</p>
+The **`onplay`** property of the
+{{domxref("GlobalEventHandlers")}} mixin is the [event handler](/en-US/docs/Web/Events/Event_handlers) for
+processing {{event("play")}} events.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em><var>element</var></em>.onplay = <em>handlerFunction</em>;
-var <em>handlerFunction</em> = <em><var>element</var></em>.onplay;
-</pre>
+```js
+element.onplay = handlerFunction;
+var handlerFunction = element.onplay;
+```
 
-<p><code>handlerFunction</code> should be either <code>null</code> or a <a
-    href="/en-US/docs/Web/JavaScript/Reference/Functions">JavaScript function</a>
-  specifying the handler for the event.</p>
+`handlerFunction` should be either `null` or a [JavaScript function](/en-US/docs/Web/JavaScript/Reference/Functions)
+specifying the handler for the event.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: html">&lt;p&gt;This example demonstrates how to assign an "onplay" event to a video element.&lt;/p&gt;
+```html
+<p>This example demonstrates how to assign an "onplay" event to a video element.</p>
 
-&lt;video controls onplay="alertPlay()"&gt;
-  &lt;source src="mov_bbb.mp4" type="video/mp4"&gt;
-  &lt;source src="mov_bbb.ogg" type="video/ogg"&gt;
+<video controls onplay="alertPlay()">
+  <source src="mov_bbb.mp4" type="video/mp4">
+  <source src="mov_bbb.ogg" type="video/ogg">
   Your browser does not support HTML5 video.
-&lt;/video&gt;
+</video>
 
-&lt;p&gt;Video courtesy of &lt;a href="http://www.bigbuckbunny.org/" target="_blank"&gt;Big Buck Bunny&lt;/a&gt;.&lt;/p&gt;
+<p>Video courtesy of <a href="http://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a>.</p>
 
-&lt;script&gt;
+<script>
 function alertPlay() {
   alert("The video has started to play.");
 }
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{event("play")}}</li>
-  <li><a href="/en-US/docs/Web/Guide/Events/Event_handlers">Information on working with
-      event handlers</a></li>
-</ul>
+- {{event("play")}}
+- [Information on working with
+  event handlers](/en-US/docs/Web/Guide/Events/Event_handlers)

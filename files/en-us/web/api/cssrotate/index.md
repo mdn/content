@@ -12,38 +12,34 @@ tags:
   - Reference
 browser-compat: api.CSSRotate
 ---
-<div>{{draft}}{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}</div>
+{{draft}}{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
-<p>The <strong><code>CSSRotate</code></strong> interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents the rotate value of the individual {{CSSXRef('transform')}} property in CSS. It inherits properties and methods from its parent {{domxref('CSSTransformValue')}}.</p>
+The **`CSSRotate`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents the rotate value of the individual {{CSSXRef('transform')}} property in CSS. It inherits properties and methods from its parent {{domxref('CSSTransformValue')}}.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("CSSRotate.CSSRotate()")}}</dt>
- <dd>Creates a new <code>CSSRotate</code> object.</dd>
-</dl>
+- {{domxref("CSSRotate.CSSRotate()")}}
+  - : Creates a new `CSSRotate` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref('CSSRotate.x','x')}}</dt>
- <dd>Returns or sets the x-axis value.</dd>
- <dt>{{domxref('CSSRotate.y','y')}}</dt>
- <dd>Returns or sets the y-axis value.</dd>
- <dt>{{domxref('CSSRotate.z','z')}}</dt>
- <dd>Returns or sets the z-axis value.</dd>
- <dt>{{domxref('CSSRotate.angle','angle')}}</dt>
- <dd>Returns or sets the angle value.</dd>
-</dl>
+- {{domxref('CSSRotate.x','x')}}
+  - : Returns or sets the x-axis value.
+- {{domxref('CSSRotate.y','y')}}
+  - : Returns or sets the y-axis value.
+- {{domxref('CSSRotate.z','z')}}
+  - : Returns or sets the z-axis value.
+- {{domxref('CSSRotate.angle','angle')}}
+  - : Returns or sets the angle value.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>To do.</p>
+To do.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

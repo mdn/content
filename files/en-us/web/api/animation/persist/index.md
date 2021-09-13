@@ -11,29 +11,32 @@ tags:
   - web animations api
 browser-compat: api.Animation.persist
 ---
-<p>{{APIRef("Web Animations")}}{{SeeCompatTable}}</p>
+{{APIRef("Web Animations")}}{{SeeCompatTable}}
 
-<p>The <code>persist()</code> method of the <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a>'s {{domxref("Animation")}} interface explicitly persists an animation, when it would otherwise be removed due to the browser's <a href="/en-US/docs/Web/API/Animation#automatically_removing_filling_animations">Automatically removing filling animations</a> behavior.</p>
+The `persist()` method of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)'s {{domxref("Animation")}} interface explicitly persists an animation, when it would otherwise be removed due to the browser's [Automatically removing filling animations](/en-US/docs/Web/API/Animation#automatically_removing_filling_animations) behavior.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>animation</em>.persist(); </pre>
+```js
+animation.persist();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In our simple <a href="https://mdn.github.io/dom-examples/web-animations-api/replace-indefinite-animations.html">replace indefinite animations demo</a>, you can see the following code:</p>
+In our simple [replace indefinite animations demo](https://mdn.github.io/dom-examples/web-animations-api/replace-indefinite-animations.html), you can see the following code:
 
-<pre class="brush: js">const divElem = document.querySelector('div');
+```js
+const divElem = document.querySelector('div');
 
-document.body.addEventListener('mousemove', evt =&gt; {
+document.body.addEventListener('mousemove', evt => {
   let anim = divElem.animate(
     { transform: `translate(${ evt.clientX}px, ${evt.clientY}px)` },
     { duration: 500, fill: 'forwards' }
@@ -48,23 +51,22 @@ document.body.addEventListener('mousemove', evt =&gt; {
   }
 
   console.log(anim.replaceState);
-});</pre>
+});
+```
 
-<p>Here we have a <code>&lt;div&gt;</code> element, and an event listener that fires the event handler code whenever the mouse moves. The event handler sets up an animation that animates the &lt;div&gt; element to the position of the mouse pointer. This could result in a huge animations list, which could create a memory leak. For this reason, modern browsers automatically remove overriding forward filling animations.</p>
+Here we have a `<div>` element, and an event listener that fires the event handler code whenever the mouse moves. The event handler sets up an animation that animates the \<div> element to the position of the mouse pointer. This could result in a huge animations list, which could create a memory leak. For this reason, modern browsers automatically remove overriding forward filling animations.
 
-<p>You can see the <code><a href="/en-US/docs/Web/API/Animation/replaceState">replaceState</a></code> of the animation being logged at the end of the handler. This will be <code>active</code> for each animation by default, or <code>persisted</code> if the <code>persist()</code> call is uncommented.</p>
+You can see the [`replaceState`](/en-US/docs/Web/API/Animation/replaceState) of the animation being logged at the end of the handler. This will be `active` for each animation by default, or `persisted` if the `persist()` call is uncommented.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
- <li>{{domxref("Animation")}} for other methods and properties you can use to control web page animation.</li>
-</ul>
+- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
+- {{domxref("Animation")}} for other methods and properties you can use to control web page animation.

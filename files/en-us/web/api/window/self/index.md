@@ -10,38 +10,38 @@ tags:
   - Window
 browser-compat: api.Window.self
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code><strong>Window.self</strong></code> read-only property returns the window itself, as a {{domxref("WindowProxy")}}. It can be used with dot notation on a <code>window</code> object (that is, <code>window.self</code>) or standalone (<code>self</code>). The advantage of the standalone notation is that a similar notation exists for non-window contexts, such as in {{domxref("Worker", "Web Workers", "", 1)}}. By using <code>self</code>, you can refer to the global scope in a way that will work not only in a window context (<code>self</code> will resolve to <code>window.self</code>) but also in a worker context (<code>self</code> will then resolve to {{domxref("WorkerGlobalScope.self")}}).</p>
+The **`Window.self`** read-only property returns the window itself, as a {{domxref("WindowProxy")}}. It can be used with dot notation on a `window` object (that is, `window.self`) or standalone (`self`). The advantage of the standalone notation is that a similar notation exists for non-window contexts, such as in {{domxref("Worker", "Web Workers", "", 1)}}. By using `self`, you can refer to the global scope in a way that will work not only in a window context (`self` will resolve to `window.self`) but also in a worker context (`self` will then resolve to {{domxref("WorkerGlobalScope.self")}}).
 
-<h2 id="Notes">Example</h2>
+## Example
 
-<p>Uses of <code>window.self</code> like the following could just as well be replaced by <code>window</code>.</p>
+Uses of `window.self` like the following could just as well be replaced by `window`.
 
-<pre class="brush:js">if (window.parent.frames[0] != window.self) {
+```js
+if (window.parent.frames[0] != window.self) {
     // this window is not the first frame in the list
 }
-</pre>
+```
 
-<p>Furthermore, when executing in the active document of a browsing context, <code>window</code> is a reference to the current global object and thus all of the following are equivalent:</p>
+Furthermore, when executing in the active document of a browsing context, `window` is a reference to the current global object and thus all of the following are equivalent:
 
-<pre class="brush:js">var w1 = window;
+```js
+var w1 = window;
 var w2 = self;
 var w3 = window.window;
 var w4 = window.self;
 // w1, w2, w3, w4 all strictly equal, but only w2 will function in workers
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Its <code>Worker</code> equivalent, {{domxref("WorkerGlobalScope.self")}}.</li>
-</ul>
+- Its `Worker` equivalent, {{domxref("WorkerGlobalScope.self")}}.

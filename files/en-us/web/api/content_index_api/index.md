@@ -10,54 +10,46 @@ tags:
   - PWA
   - content indexing
 ---
-<div>{{draft}}{{DefaultAPISidebar("Content Index API")}}</div>
+{{draft}}{{DefaultAPISidebar("Content Index API")}}
 
-<p>The Content Index API allows developers to register their offline enabled content with the browser.</p>
+The Content Index API allows developers to register their offline enabled content with the browser.
 
-<h2 id="Concepts_and_Usage">Concepts and Usage</h2>
+## Concepts and Usage
 
-<p>As it stands, offline web content is not easily discoverable by users. Content indexing allows developers to tell the browser about their specific offline content. This allows users to discover and view what is available, whilst giving developers the ability to add and manage this content. Examples could be a news website prefetching the latest articles in the background, or a content streaming app registering downloaded content.</p>
+As it stands, offline web content is not easily discoverable by users. Content indexing allows developers to tell the browser about their specific offline content. This allows users to discover and view what is available, whilst giving developers the ability to add and manage this content. Examples could be a news website prefetching the latest articles in the background, or a content streaming app registering downloaded content.
 
-<p>The Content Index API is an extension to <a href="/en-US/docs/Web/API/Service_Worker_API">service workers</a>, which allows developers to add URLs and metadata of already cached pages, under the scope of the current service worker. The browser can then use these entries to display offline reading to a user. As a developer you can also display these entries within your application.</p>
+The Content Index API is an extension to [service workers](/en-US/docs/Web/API/Service_Worker_API), which allows developers to add URLs and metadata of already cached pages, under the scope of the current service worker. The browser can then use these entries to display offline reading to a user. As a developer you can also display these entries within your application.
 
-<p>Indexed entries do not automatically expire. It's good practice to present an interface for clearing out entries, or periodically remove older entries.</p>
+Indexed entries do not automatically expire. It's good practice to present an interface for clearing out entries, or periodically remove older entries.
 
-<div class="note">
-  <p><strong>Note:</strong> The API supports indexing URLs corresponding to HTML documents. A URL for a cached media file, for example, can't be indexed directly. Instead, you need to provide a URL for a page that displays media, and which works offline.</p>
-</div>
+> **Note:** The API supports indexing URLs corresponding to HTML documents. A URL for a cached media file, for example, can't be indexed directly. Instead, you need to provide a URL for a page that displays media, and which works offline.
 
-<h2 id="Interfaces">Interfaces</h2>
+## Interfaces
 
-<dl>
-  <dt>{{domxref("ContentIndex")}}</dt>
-  <dd>The <strong><code>ContentIndex</code></strong> interface provides functionality to register content available offline.</dd>
+- {{domxref("ContentIndex")}}
+  - : The **`ContentIndex`** interface provides functionality to register content available offline.
+- {{domxref("ContentIndexEvent")}}
+  - : The **`ContentIndexEvent`** interface of the {{domxref('Content Index API')}} defines the object used to represent the {{Event('contentdelete')}} event.
 
-  <dt>{{domxref("ContentIndexEvent")}}</dt>
-  <dd>The <strong><code>ContentIndexEvent</code></strong> interface of the {{domxref('Content Index API')}} defines the object used to represent the {{Event('contentdelete')}} event.</dd>
+## Service worker additions
 
-</dl>
+The following additions to the {{domxref('ServiceWorker')}} have been specified in the Content Index API spec to provide an entry point for using content indexing.
 
-<h2 id="Service_worker_additions">Service worker additions</h2>
+- {{domxref("ServiceWorkerRegistration.index")}} {{readonlyinline}}
+  - : Returns a reference to the {{domxref("ContentIndex")}} interface for indexing cached pages.
+- {{domxref("ServiceWorkerGlobalScope.oncontentdelete")}}
+  - : An event handler fired whenever a {{Event("contentdelete")}} event occurs. This happens when content is removed by the user agent.
 
-<p>The following additions to the {{domxref('ServiceWorker')}} have been specified in the Content Index API spec to provide an entry point for using content indexing.</p>
+## Examples
 
-<dl>
-  <dt>{{domxref("ServiceWorkerRegistration.index")}} {{readonlyinline}}</dt>
-  <dd>Returns a reference to the {{domxref("ContentIndex")}} interface for indexing cached pages.</dd>
+All the following examples assume a service worker has been registered. For more information see the [Service Worker API](/en-US/docs/Web/API/Service_Worker_API).
 
-  <dt>{{domxref("ServiceWorkerGlobalScope.oncontentdelete")}}</dt>
-  <dd>An event handler fired whenever a {{Event("contentdelete")}} event occurs. This happens when content is removed by the user agent.</dd>
-</dl>
+### Feature Detection and Interface Access
 
-<h2 id="Examples">Examples</h2>
+Here we get a reference to the {{domxref('ServiceWorkerRegistration')}}, then check for the `index` property, which gives us access to the content index interface.
 
-<p>All the following examples assume a service worker has been registered. For more information see the <a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a>.</p>
-
-<h3 id="Feature_Detection_and_Interface_Access">Feature Detection and Interface Access</h3>
-
-<p>Here we get a reference to the {{domxref('ServiceWorkerRegistration')}}, then check for the <code>index</code> property, which gives us access to the content index interface.</p>
-
-<pre class="brush: js">// reference registration
+```js
+// reference registration
 const registration = await navigator.serviceWorker.ready;
 
 // feature detection
@@ -67,13 +59,14 @@ if ('index' in registration) {
   const contentIndex = registration.index;
 
 }
-</pre>
+```
 
-<h3 id="Adding_to_the_Content_Index">Adding to the Content Index</h3>
+### Adding to the Content Index
 
-<p>Here we're declaring an item in the correct format and creating an asynchronous function which uses the {{domxref('ContentIndex.add','add()')}} method to register it with the {{domxref('Content Index API','content index')}}.</p>
+Here we're declaring an item in the correct format and creating an asynchronous function which uses the {{domxref('ContentIndex.add','add()')}} method to register it with the {{domxref('Content Index API','content index')}}.
 
-<pre class="brush: js">// our content
+```js
+// our content
 const item = {
   id: 'post-1',
   url: '/posts/amet.html',
@@ -103,13 +96,14 @@ async function registerContent(data) {
     console.log('Failed to register content: ', e.message);
   }
 }
-</pre>
+```
 
-<h3 id="Retrieving_Items_Within_The_Current_Index">Retrieving Items Within The Current Index</h3>
+### Retrieving Items Within The Current Index
 
-<p>The below example shows an asynchronous function that retrieves items within the {{domxref('Content Index API','content index')}} and iterates over each entry, building a list for the interface.</p>
+The below example shows an asynchronous function that retrieves items within the {{domxref('Content Index API','content index')}} and iterates over each entry, building a list for the interface.
 
-<pre class="brush: js">async function createReadingList() {
+```js
+async function createReadingList() {
   // access our service worker registration
   const registration = await navigator.serviceWorker.ready;
 
@@ -148,13 +142,14 @@ async function registerContent(data) {
   }
 
 }
-</pre>
+```
 
-<h3 id="Unregistering_Indexed_Content">Unregistering Indexed Content</h3>
+### Unregistering Indexed Content
 
-<p>Below is an asynchronous function, that removes an item from the {{domxref('Content Index API','content index')}}.</p>
+Below is an asynchronous function, that removes an item from the {{domxref('Content Index API','content index')}}.
 
-<pre class="brush: js">async function unregisterContent(article) {
+```js
+async function unregisterContent(article) {
 
   // reference registration
   const registration = await navigator.serviceWorker.ready;
@@ -166,45 +161,45 @@ async function registerContent(data) {
   // unregister content from index
   await registration.index.delete(article.id);
 }
-</pre>
+```
 
-<p>All the above methods are available within the scope of the {{domxref('ServiceWorker','service worker')}}. They are accessible from the {{domxref('WorkerGlobalScope.self')}} property:</p>
+All the above methods are available within the scope of the {{domxref('ServiceWorker','service worker')}}. They are accessible from the {{domxref('WorkerGlobalScope.self')}} property:
 
-<pre class="brush: js">// service worker script
+```js
+// service worker script
 
 self.registration.index.add(item);
 
 self.registration.index.delete(item.id);
 
 const contentIndexItems = self.registration.index.getAll();
-</pre>
+```
 
-<h3 id="contentdelete_event">contentdelete event</h3>
+### contentdelete event
 
-<p>When an item is removed from the user agent interface, a <code>contentdelete</code> event is received by the service worker.</p>
+When an item is removed from the user agent interface, a `contentdelete` event is received by the service worker.
 
-<pre class="brush: js">self.addEventListener('contentdelete', (event) =&gt; {
+```js
+self.addEventListener('contentdelete', (event) => {
   console.log(event.id);
 
   // logs content index id, which can then be used to determine what content to delete from your cache
 
 });
-</pre>
+```
 
-<p>The {{Event('contentdelete')}} event is only fired when the deletion happens due to interaction with the browser's built-in user interface. It is not fired when the {{domxref('ContentIndex.delete')}} method is called.</p>
+The {{Event('contentdelete')}} event is only fired when the deletion happens due to interaction with the browser's built-in user interface. It is not fired when the {{domxref('ContentIndex.delete')}} method is called.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications("api.ContentIndex")}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.ContentIndex")}}</p>
+{{Compat("api.ContentIndex")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://web.dev/content-indexing-api/">An introductory article on the Content Index API</a></li>
-  <li><a href="https://contentindex.dev/">An app which uses the Content Index API to list and remove 'save for later' content</a></li>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API, along with information about Cache and CacheStorage</a></li>
-</ul>
+- [An introductory article on the Content Index API](https://web.dev/content-indexing-api/)
+- [An app which uses the Content Index API to list and remove 'save for later' content](https://contentindex.dev/)
+- [Service Worker API, along with information about Cache and CacheStorage](/en-US/docs/Web/API/Service_Worker_API)

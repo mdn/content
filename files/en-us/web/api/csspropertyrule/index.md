@@ -12,48 +12,50 @@ tags:
   - Reference
 browser-compat: api.CSSPropertyRule
 ---
-<div>{{APIRef("CSS Properties and Values API")}}</div>
+{{APIRef("CSS Properties and Values API")}}
 
-<p>The <strong><code>CSSPropertyRule</code></strong> interface of the {{domxref('CSS_Properties_and_Values_API','','',' ')}} represents a single CSS {{cssxref("@property")}} rule.</p>
+The **`CSSPropertyRule`** interface of the {{domxref('CSS_Properties_and_Values_API','','',' ')}} represents a single CSS {{cssxref("@property")}} rule.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its ancestor {{domxref("CSSRule")}}.</em></p>
+_Inherits properties from its ancestor {{domxref("CSSRule")}}._
 
-<dl>
-	<dt>{{domxref("CSSPropertyRule.inherits")}} {{readonlyinline}}</dt>
-    <dd>Returns the inherit flag of the custom property.</dd>
-    <dt>{{domxref("CSSPropertyRule.initialvalue")}} {{readonlyinline}}</dt>
-    <dd>Returns the initial value of the custom property.</dd>
-    <dt>{{domxref("CSSPropertyRule.name")}} {{readonlyinline}}</dt>
-    <dd>Returns the name of the custom property.</dd>
-    <dt>{{domxref("CSSPropertyRule.syntax")}} {{readonlyinline}}</dt>
-	<dd>Returns the literal syntax of the custom property.</dd>
-</dl>
+- {{domxref("CSSPropertyRule.inherits")}} {{readonlyinline}}
+  - : Returns the inherit flag of the custom property.
+- {{domxref("CSSPropertyRule.initialvalue")}} {{readonlyinline}}
+  - : Returns the initial value of the custom property.
+- {{domxref("CSSPropertyRule.name")}} {{readonlyinline}}
+  - : Returns the name of the custom property.
+- {{domxref("CSSPropertyRule.syntax")}} {{readonlyinline}}
+  - : Returns the literal syntax of the custom property.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>No specific methods; inherits methods from its ancestor {{domxref("CSSRule")}}.</em></p>
+_No specific methods; inherits methods from its ancestor {{domxref("CSSRule")}}._
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This stylesheet contains a single {{cssxref("@property")}} rule. The first {{domxref("CSSRule")}} returned will be a <code>CSSPropertyRule</code> with the properties and values as defined by the rule in CSS.</p>
+This stylesheet contains a single {{cssxref("@property")}} rule. The first {{domxref("CSSRule")}} returned will be a `CSSPropertyRule` with the properties and values as defined by the rule in CSS.
 
-<pre class="brush:css">@property --property-name {
-  syntax: '&lt;color&gt;';
+```css
+@property --property-name {
+  syntax: '<color>';
   inherits: false;
   initial-value: #c0ffee;
-}</pre>
+}
+```
 
-<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0]); //a CSSPropertyRule</pre>
+```js
+let myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0]); //a CSSPropertyRule
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

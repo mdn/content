@@ -8,40 +8,39 @@ tags:
   - Reference
 browser-compat: api.HTMLAnchorElement.port
 ---
-<p>{{ApiRef("HTML DOM")}}</p>
+{{ApiRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLAnchorElement.port</code></strong> property is a
-  {{domxref("USVString")}} containing the port number of the URL. If the URL does not
-  contain an explicit port number, it will be set to <code>''</code>.</p>
+The **`HTMLAnchorElement.port`** property is a
+{{domxref("USVString")}} containing the port number of the URL. If the URL does not
+contain an explicit port number, it will be set to `''`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 // Getter
-<em>string</em> = <em>anchor</em>.port;
+string = anchor.port;
 // Setter
-<em>anchor</em>.port = <em>string</em>;
-</pre>
+anchor.port = string;
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3>Getting the port from an anchor link</h3>
+### Getting the port from an anchor link
 
-<pre class="brush: js">// An &lt;a id="myAnchor" href="https://developer.mozilla.org:443/en-US/docs/HTMLAnchorElement"&gt; element is in the document
+```js
+// An <a id="myAnchor" href="https://developer.mozilla.org:443/en-US/docs/HTMLAnchorElement"> element is in the document
 const anchor = document.getElementByID("myAnchor");
 anchor.port; // returns '443'
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("HTMLAnchorElement")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("HTMLAnchorElement")}} interface it belongs to.

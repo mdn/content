@@ -10,69 +10,68 @@ tags:
   - delete
 browser-compat: api.Headers.delete
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p>The <strong><code>delete()</code></strong> method of the {{domxref("Headers")}}
-  interface deletes a header from the current <code>Headers</code> object.</p>
+The **`delete()`** method of the {{domxref("Headers")}}
+interface deletes a header from the current `Headers` object.
 
-<p>This method throws a {{jsxref("TypeError")}} for the following reasons:</p>
+This method throws a {{jsxref("TypeError")}} for the following reasons:
 
-<ul>
-  <li>The value of the name parameter is not the name of an HTTP header.</li>
-  <li>The value of {{Glossary("Guard")}} is <code>immutable</code>.</li>
-</ul>
+- The value of the name parameter is not the name of an HTTP header.
+- The value of {{Glossary("Guard")}} is `immutable`.
 
-<p>For security reasons, some headers can only be controller by the user agent. These
-  headers include the {{Glossary("Forbidden_header_name", "forbidden header names", 1)}}
-  and {{Glossary("Forbidden_response_header_name", "forbidden response header names",
-  1)}}.</p>
+For security reasons, some headers can only be controller by the user agent. These
+headers include the {{Glossary("Forbidden_header_name", "forbidden header names", 1)}}
+and {{Glossary("Forbidden_response_header_name", "forbidden response header names",
+  1)}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>myHeaders</em>.delete(<em>name</em>);</pre>
+```js
+myHeaders.delete(name);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>name</code></dt>
-  <dd>The name of the HTTP header you want to delete from the <code>Headers</code> object.
-  </dd>
-</dl>
+- `name`
+  - : The name of the HTTP header you want to delete from the `Headers` object.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>Void.</p>
+Void.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>Creating an empty <code>Headers</code> object is simple:</p>
+Creating an empty `Headers` object is simple:
 
-<pre class="brush: js">var myHeaders = new Headers(); // Currently empty</pre>
+```js
+var myHeaders = new Headers(); // Currently empty
+```
 
-<p>You could add a header to this using {{domxref("Headers.append")}}:</p>
+You could add a header to this using {{domxref("Headers.append")}}:
 
-<pre class="brush: js">myHeaders.append('Content-Type', 'image/jpeg');
+```js
+myHeaders.append('Content-Type', 'image/jpeg');
 myHeaders.get('Content-Type'); // Returns 'image/jpeg'
-</pre>
+```
 
-<p>You can then delete it again:</p>
+You can then delete it again:
 
-<pre class="brush: js">myHeaders.delete('Content-Type');
-myHeaders.get('Content-Type'); // Returns null, as it has been deleted</pre>
+```js
+myHeaders.delete('Content-Type');
+myHeaders.get('Content-Type'); // Returns null, as it has been deleted
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
-  <li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a>
-  </li>
-  <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP](/en-US/docs/Web/HTTP)

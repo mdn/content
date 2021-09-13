@@ -12,38 +12,36 @@ tags:
   - requireInteraction
 browser-compat: api.Notification.requireInteraction
 ---
-<p>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</p>
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-<p>The <strong><code>requireInteraction</code></strong> read-only property of the {{domxref("Notification")}} interface returns a boolean value indicating that a notification should remain active until the user clicks or dismisses it, rather than closing automatically.</p>
+The **`requireInteraction`** read-only property of the {{domxref("Notification")}} interface returns a boolean value indicating that a notification should remain active until the user clicks or dismisses it, rather than closing automatically.
 
-<div class="note">
-<p><strong>Note:</strong> This can be set when the notification is first created by setting the <code>requireInteraction</code> option to <code>true</code> in the options object of the {{domxref("Notification.Notification()")}} constructor.</p>
-</div>
+> **Note:** This can be set when the notification is first created by setting the `requireInteraction` option to `true` in the options object of the {{domxref("Notification.Notification()")}} constructor.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">function spawnNotification(theTitle,theBody,shouldRequireInteraction) {
+```js
+function spawnNotification(theTitle,theBody,shouldRequireInteraction) {
   var options = {
       body: theBody,
       requireInteraction: shouldRequireInteraction
   }
   var n = new Notification(theTitle,options);
-}</pre>
+}
+```
 
-<h3 id="Return_Value">Value</h3>
+### Value
 
-<p>A boolean value.</p>
+A boolean value.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</a></li>
-</ul>
+- [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)

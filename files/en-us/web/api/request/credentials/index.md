@@ -13,45 +13,45 @@ tags:
   - request
 browser-compat: api.Request.credentials
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p>The <strong><code>credentials</code></strong> read-only property of the {{domxref("Request")}} interface indicates whether the user agent should send cookies from the other domain in the case of cross-origin requests.</p>
+The **`credentials`** read-only property of the {{domxref("Request")}} interface indicates whether the user agent should send cookies from the other domain in the case of cross-origin requests.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var myCred = request.credentials;</pre>
+```js
+var myCred = request.credentials;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A <code>RequestCredentials</code> dictionary value indicating whether the user agent should send cookies from the other domain in the case of cross-origin requests. Possible values are:</p>
+A `RequestCredentials` dictionary value indicating whether the user agent should send cookies from the other domain in the case of cross-origin requests. Possible values are:
 
-<ul>
- <li><code>omit</code>: Never send or receive cookies.</li>
- <li><code>same-origin</code>: Send user credentials (cookies, basic http auth, etc..) if the URL is on the same origin as the calling script. <strong>This is the default value.</strong></li>
- <li><code>include</code>: Always send user credentials (cookies, basic http auth, etc..), even for cross-origin calls.</li>
-</ul>
+- `omit`: Never send or receive cookies.
+- `same-origin`: Send user credentials (cookies, basic http auth, etc..) if the URL is on the same origin as the calling script. **This is the default value.**
+- `include`: Always send user credentials (cookies, basic http auth, etc..), even for cross-origin calls.
 
-<p>This is similar to XHR’s <code><a href="/en-US/docs/Web/API/XMLHttpRequest/withCredentials">withCredentials</a></code> flag, but with three available values instead of two.</p>
+This is similar to XHR’s [`withCredentials`](/en-US/docs/Web/API/XMLHttpRequest/withCredentials) flag, but with three available values instead of two.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In the following snippet, we create a new request using the {{domxref("Request.Request()")}} constructor (for an image file in the same directory as the script), then save the request credentials in a variable:</p>
+In the following snippet, we create a new request using the {{domxref("Request.Request()")}} constructor (for an image file in the same directory as the script), then save the request credentials in a variable:
 
-<pre class="brush: js">var myRequest = new Request('flowers.jpg');
-var myCred = myRequest.credentials; // returns "same-origin" by default</pre>
+```js
+var myRequest = new Request('flowers.jpg');
+var myCred = myRequest.credentials; // returns "same-origin" by default
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
- <li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP](/en-US/docs/Web/HTTP)

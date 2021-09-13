@@ -11,80 +11,61 @@ tags:
   - databases
 browser-compat: api.IDBFactory.databases
 ---
-<p>{{ APIRef("IndexedDB") }}</p>
+{{ APIRef("IndexedDB") }}
 
-<p>The <strong><code>databases</code></strong> method of the {{domxref("IDBFactory")}} interface returns a list representing all the available databases, including their names and versions.</p>
+The **`databases`** method of the {{domxref("IDBFactory")}} interface returns a list representing all the available databases, including their names and versions.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This method is introduced in a draft of a specifications and browser compatibility is limited.</p>
-</div>
+> **Note:** This method is introduced in a draft of a specifications and browser compatibility is limited.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre>const promise = indexedDB.databases()</pre>
+    const promise = indexedDB.databases()
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>The method does not take in any parameters.</p>
+The method does not take in any parameters.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A promise that resolves either to an error or a list of dictionaries, each with two elements, <code>name</code> and <code>version</code>:
+A promise that resolves either to an error or a list of dictionaries, each with two elements, `name` and `version`:
 
-<dl>
-  <dt><code>name</code></dt>
-  <dd>The database name.</dd>
-  <dt><code>version</code></dt>
-  <dd>The database version.</dd>
-</dl>
-</p>
-<h3>Exceptions</h3>
+- `name`
+  - : The database name.
+- `version`
+  - : The database version.
 
-<p>This method may raise a {{domxref("DOMException")}} of the following types:</p>
+### Exceptions
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Attribute</th>
-   <th scope="col">Description</th>
-  </tr>
-  <tr>
-   <td>{{exception("SecurityError")}}</td>
-   <td>The method is called from an opaque origin.</td>
-  </tr>
-  <tr>
-   <td>Other error</td>
-   <td>Specification does not describe all possible errors.</td>
-  </tr>
- </thead>
-</table>
+This method may raise a {{domxref("DOMException")}} of the following types:
 
-<h2 id="Example">Example</h2>
+| Attribute                                | Description                                          |
+| ---------------------------------------- | ---------------------------------------------------- |
+| {{exception("SecurityError")}} | The method is called from an opaque origin.          |
+| Other error                              | Specification does not describe all possible errors. |
 
-<pre>const promise = indexedDB.databases()
-promise.then(databases =&gt; {
-  console.log(databases)
-})
-</pre>
+## Example
 
-<h2 id="Specifications">Specifications</h2>
+    const promise = indexedDB.databases()
+    promise.then(databases => {
+      console.log(databases)
+    })
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
- <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
- <li>Using transactions: {{domxref("IDBTransaction")}}</li>
- <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
- <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
- <li>Using cursors: {{domxref("IDBCursor")}}</li>
- <li>Reference example: <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

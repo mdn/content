@@ -8,58 +8,54 @@ tags:
   - TrustedTypePolicyFactory
 browser-compat: api.TrustedTypePolicyFactory
 ---
-<div>{{DefaultAPISidebar("Trusted Types API")}}</div>
+{{DefaultAPISidebar("Trusted Types API")}}
 
-<p>The <strong><code>TrustedTypePolicyFactory</code></strong> interface of the {{domxref('Trusted Types API')}} creates policies and allows the verification of Trusted Type objects against created policies.</p>
+The **`TrustedTypePolicyFactory`** interface of the {{domxref('Trusted Types API')}} creates policies and allows the verification of Trusted Type objects against created policies.
 
+## Properties
 
-<h2 id="Properties">Properties</h2>
+- {{domxref("TrustedTypePolicyFactory.emptyHTML")}}{{ReadOnlyInline}}
+  - : Returns a {{domxref("TrustedHTML")}} object containing an empty string.
+- {{domxref("TrustedTypePolicyFactory.emptyScript")}}{{ReadOnlyInline}}
+  - : Returns a {{domxref("TrustedScript")}} object containing an empty string.
+- {{domxref("TrustedTypePolicyFactory.defaultPolicy")}}{{ReadOnlyInline}}
+  - : Returns the default {{domxref("TrustedTypePolicy")}} or null if this is empty.
 
-<dl>
-  <dt>{{domxref("TrustedTypePolicyFactory.emptyHTML")}}{{ReadOnlyInline}}</dt>
-  <dd>Returns a {{domxref("TrustedHTML")}} object containing an empty string.</dd>
-  <dt>{{domxref("TrustedTypePolicyFactory.emptyScript")}}{{ReadOnlyInline}}</dt>
-  <dd>Returns a {{domxref("TrustedScript")}} object containing an empty string.</dd>
-  <dt>{{domxref("TrustedTypePolicyFactory.defaultPolicy")}}{{ReadOnlyInline}}</dt>
-  <dd>Returns the default {{domxref("TrustedTypePolicy")}} or null if this is empty.</dd>
-</dl>
+## Methods
 
-<h2 id="Methods">Methods</h2>
+- {{domxref("TrustedTypePolicyFactory.createPolicy()")}}
+  - : Creates a {{domxref("TrustedTypePolicy")}} object that implements the rules passed as `policyOptions`.
+- {{domxref("TrustedTypePolicyFactory.isHTML()")}}
+  - : When passed a value checks that it is a valid {{domxref("TrustedHTML")}} object.
+- {{domxref("TrustedTypePolicyFactory.isScript()")}}
+  - : When passed a value checks that it is a valid {{domxref("TrustedScript")}} object.
+- {{domxref("TrustedTypePolicyFactory.isScriptURL()")}}
+  - : When passed a value checks that it is a valid {{domxref("TrustedScriptURL")}} object.
+- {{domxref("TrustedTypePolicyFactory.getAttributeType()")}}
+  - : Allows web developers to check whether a Trusted Type is required for an element and attribute, and if so which one.
+- {{domxref("TrustedTypePolicyFactory.getPropertyType()")}}
+  - : Allows web developers to check whether a Trusted Type is required for a property, and if so which one.
 
-<dl>
-  <dt>{{domxref("TrustedTypePolicyFactory.createPolicy()")}}</dt>
-  <dd>Creates a {{domxref("TrustedTypePolicy")}} object that implements the rules passed as <code>policyOptions</code>.</dd>
-  <dt>{{domxref("TrustedTypePolicyFactory.isHTML()")}}</dt>
-  <dd>When passed a value checks that it is a valid {{domxref("TrustedHTML")}} object.</dd>
-  <dt>{{domxref("TrustedTypePolicyFactory.isScript()")}}</dt>
-  <dd>When passed a value checks that it is a valid {{domxref("TrustedScript")}} object.</dd>
-  <dt>{{domxref("TrustedTypePolicyFactory.isScriptURL()")}}</dt>
-  <dd>When passed a value checks that it is a valid {{domxref("TrustedScriptURL")}} object.</dd>
-  <dt>{{domxref("TrustedTypePolicyFactory.getAttributeType()")}}</dt>
-  <dd>Allows web developers to check whether a Trusted Type is required for an element and attribute, and if so which one.</dd>
-  <dt>{{domxref("TrustedTypePolicyFactory.getPropertyType()")}}</dt>
-  <dd>Allows web developers to check whether a Trusted Type is required for a property, and if so which one.</dd>
-</dl>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+The below code creates a policy with the name `"myEscapePolicy"` with a function defined for `createHTML()` which sanitizes HTML.
 
-<p>The below code creates a policy with the name <code>"myEscapePolicy"</code> with a function defined for <code>createHTML()</code> which sanitizes HTML.</p>
+We then use the policy to sanitize a string, creating a {{domxref("TrustedHTML")}} object, `escaped`. This object can be tested with {{domxref("TrustedTypePolicyFactory.isHTML","isHTML()")}} to ensure that it was created by one of our policies.
 
-<p>We then use the policy to sanitize a string, creating a {{domxref("TrustedHTML")}} object, <code>escaped</code>. This object can be tested with {{domxref("TrustedTypePolicyFactory.isHTML","isHTML()")}} to ensure that it was created by one of our policies.</p>
-
-<pre class="brush: js">const escapeHTMLPolicy = trustedTypes.createPolicy("myEscapePolicy", {
-  createHTML: (string) =&gt; string.replace(/\&gt;/g, "&lt;")
+```js
+const escapeHTMLPolicy = trustedTypes.createPolicy("myEscapePolicy", {
+  createHTML: (string) => string.replace(/\>/g, "<")
 });
 
-const escaped = escapeHTMLPolicy.createHTML("&lt;img src=x onerror=alert(1)&gt;");
+const escaped = escapeHTMLPolicy.createHTML("<img src=x onerror=alert(1)>");
 
 console.log(trustedTypes.isHTML(escaped)) // true;
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

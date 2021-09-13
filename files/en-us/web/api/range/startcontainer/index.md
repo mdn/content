@@ -8,35 +8,35 @@ tags:
   - Range
 browser-compat: api.Range.startContainer
 ---
-<p>{{ApiRef("DOM")}}</p>
+{{ApiRef("DOM")}}
 
-<p>The <code><strong>Range.startContainer</strong></code> read-only property returns the
-  {{domxref("Node")}} within which the <code>Range</code> starts. To change the start
-  position of a node, use one of the {{domxref("Range.setStart()")}} methods.</p>
+The **`Range.startContainer`** read-only property returns the
+{{domxref("Node")}} within which the `Range` starts. To change the start
+position of a node, use one of the {{domxref("Range.setStart()")}} methods.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>startRangeNode</em> = <em>range</em>.startContainer;
-</pre>
+```js
+startRangeNode = range.startContainer;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">range = document.createRange();
+```js
+range = document.createRange();
 range.setStart(startNode,startOffset);
 range.setEnd(endNode,endOffset);
 startRangeNode = range.startContainer;
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</a></li>
-</ul>
+- [The DOM interfaces index](/en-US/docs/Web/API/Document_Object_Model)

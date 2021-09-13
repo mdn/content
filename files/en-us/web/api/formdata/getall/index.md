@@ -10,57 +10,59 @@ tags:
   - XMLHttpRequest
 browser-compat: api.FormData.getAll
 ---
-<p>{{APIRef("XMLHttpRequest")}}</p>
+{{APIRef("XMLHttpRequest")}}
 
-<p>The <code><strong>getAll()</strong></code> method of the {{domxref("FormData")}} interface returns all the values associated with a given key from within a <code>FormData</code> object.</p>
+The **`getAll()`** method of the {{domxref("FormData")}} interface returns all the values associated with a given key from within a `FormData` object.
 
-<div class="note">
-<p><strong>Note:</strong> This method is available in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
-</div>
+> **Note:** This method is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">formData.getAll(name);</pre>
+```js
+formData.getAll(name);
+```
 
-<h3 id="append()_Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>name</code></dt>
- <dd>A {{domxref("USVString")}} representing the name of the key you want to retrieve.</dd>
-</dl>
+- `name`
+  - : A {{domxref("USVString")}} representing the name of the key you want to retrieve.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>An array of {{domxref("FormDataEntryValue")}}s whose key matches the value passed in the <code>name</code> parameter. If the key doesn't exist, the method returns an empty list.</p>
+An array of {{domxref("FormDataEntryValue")}}s whose key matches the value passed in the `name` parameter. If the key doesn't exist, the method returns an empty list.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following line creates an empty <code>FormData</code> object:</p>
+The following line creates an empty `FormData` object:
 
-<pre class="brush: js">var formData = new FormData();</pre>
+```js
+var formData = new FormData();
+```
 
-<p>If we add two <code>username</code> values using {{domxref("FormData.append")}}:</p>
+If we add two `username` values using {{domxref("FormData.append")}}:
 
-<pre class="brush: js">formData.append('username', 'Chris');
-formData.append('username', 'Bob');</pre>
+```js
+formData.append('username', 'Chris');
+formData.append('username', 'Bob');
+```
 
-<p>The following <code>getAll()</code> function will return both <code>username</code> values in an array:</p>
+The following `getAll()` function will return both `username` values in an array:
 
-<pre class="brush: js">formData.getAll('username'); // Returns ["Chris", "Bob"]</pre>
+```js
+formData.getAll('username'); // Returns ["Chris", "Bob"]
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("XMLHTTPRequest")}}</li>
- <li><a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest" title="Using XMLHttpRequest">Using XMLHttpRequest</a></li>
- <li><a href="/en-US/docs/Web/API/FormData/Using_FormData_Objects">Using FormData objects</a></li>
- <li>{{HTMLElement("Form")}}</li>
-</ul>
+- {{domxref("XMLHTTPRequest")}}
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest "Using XMLHttpRequest")
+- [Using FormData objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)
+- {{HTMLElement("Form")}}

@@ -9,39 +9,42 @@ tags:
   - LayoutShiftAttribution
 browser-compat: api.LayoutShiftAttribution.toJSON
 ---
-<div>{{APIRef("Layout Instability API")}}</div>
+{{APIRef("Layout Instability API")}}
 
-<p>The <strong><code>toJSON()</code></strong> method of the {{domxref("LayoutShiftAttribution")}} interface is a <em>serializer</em> that returns a JSON representation of the <code>LayoutShiftAttribution</code> object.</p>
+The **`toJSON()`** method of the {{domxref("LayoutShiftAttribution")}} interface is a _serializer_ that returns a JSON representation of the `LayoutShiftAttribution` object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">LayoutShiftAttribution.toJSON();</pre>
+```js
+LayoutShiftAttribution.toJSON();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Returns">Return value</h3>
+### Return value
 
-<p>A JSON object that is the serialization of the {{domxref("LayoutShiftAttribution")}} object.</p>
+A JSON object that is the serialization of the {{domxref("LayoutShiftAttribution")}} object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example prints a JSON representation of the first item in {{domxref("LayoutShift.sources")}} to the console.</p>
+The following example prints a JSON representation of the first item in {{domxref("LayoutShift.sources")}} to the console.
 
-<pre class="brush: js">new PerformanceObserver((list) => {
+```js
+new PerformanceObserver((list) => {
   for (const {sources} of list.getEntries()) {
     if (sources) {
       console.log(sources[0].toJSON());
     }
   }
-}).observe({type: 'layout-shift', buffered: true});</pre>
+}).observe({type: 'layout-shift', buffered: true});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
+{{Compat}}

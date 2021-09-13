@@ -5,38 +5,39 @@ tags:
   - WebGL
 browser-compat: api.HTMLCanvasElement.webglcontextrestored_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code><strong>webglcontextrestored</strong></code> event of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> is fired if the user agent restores the drawing buffer for a {{domxref("WebGLRenderingContext")}} object.</p>
+The **`webglcontextrestored`** event of the [WebGL API](/en-US/docs/Web/API/WebGL_API) is fired if the user agent restores the drawing buffer for a {{domxref("WebGLRenderingContext")}} object.
 
-<p>Once the context is restored, WebGL resources such as textures and buffers that were created before the context was lost are no longer valid. You need to reinitialize the state of your WebGL application and recreate resources.</p>
+Once the context is restored, WebGL resources such as textures and buffers that were created before the context was lost are no longer valid. You need to reinitialize the state of your WebGL application and recreate resources.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("WebGLContextEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>none</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("WebGLContextEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>none</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>With the help of the {{domxref("WEBGL_lose_context")}} extension, you can simulate the <code>webglcontextrestored</code> event:</p>
+With the help of the {{domxref("WEBGL_lose_context")}} extension, you can simulate the `webglcontextrestored` event:
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 
 canvas.addEventListener('webglcontextrestored', function(e) {
@@ -45,20 +46,19 @@ canvas.addEventListener('webglcontextrestored', function(e) {
 
 gl.getExtension('WEBGL_lose_context').restoreContext();
 
-// "webglcontextrestored" event is logged.</pre>
+// "webglcontextrestored" event is logged.
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("WebGLContextEvent")}}</li>
- <li>{{domxref("WebGLRenderingContext.isContextLost()")}}</li>
- <li>{{domxref("WEBGL_lose_context")}}, {{domxref("WEBGL_lose_context.loseContext()")}}, {{domxref("WEBGL_lose_context.restoreContext()")}}</li>
-</ul>
+- {{domxref("WebGLContextEvent")}}
+- {{domxref("WebGLRenderingContext.isContextLost()")}}
+- {{domxref("WEBGL_lose_context")}}, {{domxref("WEBGL_lose_context.loseContext()")}}, {{domxref("WEBGL_lose_context.restoreContext()")}}

@@ -2,48 +2,51 @@
 title: XMLHttpRequest.abort()
 slug: Web/API/XMLHttpRequest/abort
 tags:
-- AJAX
-- API
-- Abort XHR
-- Cancel XHR
-- HTTP
-- HttpRequest
-- Method
-- Reference
-- Stop XHR
-- XHR
-- XMLHttpRequest
-- abort
-- cancel
-- stop
+  - AJAX
+  - API
+  - Abort XHR
+  - Cancel XHR
+  - HTTP
+  - HttpRequest
+  - Method
+  - Reference
+  - Stop XHR
+  - XHR
+  - XMLHttpRequest
+  - abort
+  - cancel
+  - stop
 browser-compat: api.XMLHttpRequest.abort
 ---
-<div>{{APIRef('XMLHttpRequest')}}</div>
+{{APIRef('XMLHttpRequest')}}
 
-<p>The <code><strong>XMLHttpRequest.abort()</strong></code> method aborts the request if
-  it has already been sent. When a request is aborted, its
-  {{domxref("XMLHttpRequest.readyState", "readyState")}} is changed to
-  {{domxref("XMLHttpRequest.UNSENT")}} (0) and the request's
-  {{domxref("XMLHttpRequest.status", "status")}} code is set to 0.</p>
+The **`XMLHttpRequest.abort()`** method aborts the request if
+it has already been sent. When a request is aborted, its
+{{domxref("XMLHttpRequest.readyState", "readyState")}} is changed to
+{{domxref("XMLHttpRequest.UNSENT")}} (0) and the request's
+{{domxref("XMLHttpRequest.status", "status")}} code is set to 0.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">XMLHttpRequest.abort()</pre>
+```js
+XMLHttpRequest.abort()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>undefined</code></p>
+`undefined`
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example begins loading content from the MDN home page, then due to some condition,
-  aborts the transfer by calling <code>abort()</code>.</p>
+This example begins loading content from the MDN home page, then due to some condition,
+aborts the transfer by calling `abort()`.
 
-<pre class="brush: js">var xhr = new XMLHttpRequest(),
+```js
+var xhr = new XMLHttpRequest(),
     method = "GET",
     url = "https://developer.mozilla.org/";
 xhr.open(method, url, true);
@@ -53,19 +56,17 @@ xhr.send();
 if (OH_NOES_WE_NEED_TO_CANCEL_RIGHT_NOW_OR_ELSE) {
   xhr.abort();
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using
-      XMLHttpRequest</a></li>
-</ul>
+- [Using
+  XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)

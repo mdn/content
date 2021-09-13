@@ -9,50 +9,52 @@ tags:
   - SVGMarkerElement
 browser-compat: api.SVGMarkerElement.orientType
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <strong><code>orientType</code></strong> read-only property of the {{domxref("SVGMarkerElement")}} interface returns an {{domxref("SVGAnimatedEnumeration")}} object indicating whether the {{SVGattr("orient")}} attribute is <code>auto</code>, an angle value, or something else.</p>
+The **`orientType`** read-only property of the {{domxref("SVGMarkerElement")}} interface returns an {{domxref("SVGAnimatedEnumeration")}} object indicating whether the {{SVGattr("orient")}} attribute is `auto`, an angle value, or something else.
 
-<p>This <em>something else</em> is most likely to be the keyword <code>auto-start-reverse</code> however the spec leaves it open for this to be other values. Unsupported values will generally be thrown away by the parser, leaving the value the default of <code>auto</code>.</p>
+This _something else_ is most likely to be the keyword `auto-start-reverse` however the spec leaves it open for this to be other values. Unsupported values will generally be thrown away by the parser, leaving the value the default of `auto`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">let orientType = SVGMarkerElement.orientType;</pre>
+    let orientType = SVGMarkerElement.orientType;
 
-<h3>Value</h3>
-<p>An {{domxref("SVGAnimatedEnumeration")}} object. This contains one of the following values:</p>
+### Value
 
-<dl>
-  <dt>0</dt>
-  <dd><code>SVG_MARKER_ORIENT_UNKNOWN</code> which means that the {{SVGattr("orient")}} attribute has a value other than <code>auto</code> or an angle.</dd>
-  <dt>1</dt>
-  <dd><code>SVG_MARKERUNITS_ORIENT_AUTO</code> which means that the {{SVGattr("orient")}} attribute has the keyword value <code>auto</code>.</dd>
-  <dt>2</dt>
-  <dd><code>SVG_MARKERUNITS_ORIENT_ANGLE</code> which means that the {{SVGattr("orient")}} attribute has an {{cssxref("angle")}} or {{cssxref("number")}} value indicating the angle.</dd>
-</dl>
+An {{domxref("SVGAnimatedEnumeration")}} object. This contains one of the following values:
 
-<h2 id="Examples">Examples</h2>
+- 0
+  - : `SVG_MARKER_ORIENT_UNKNOWN` which means that the {{SVGattr("orient")}} attribute has a value other than `auto` or an angle.
+- 1
+  - : `SVG_MARKERUNITS_ORIENT_AUTO` which means that the {{SVGattr("orient")}} attribute has the keyword value `auto`.
+- 2
+  - : `SVG_MARKERUNITS_ORIENT_ANGLE` which means that the {{SVGattr("orient")}} attribute has an {{cssxref("angle")}} or {{cssxref("number")}} value indicating the angle.
 
-<p>The <code>orientType</code> property returns an {{domxref("SVGAnimatedEnumeration")}} object. As the value of the {{SVGattr("orient")}} attribute is an angle, returning the <code>SVGAnimatedEnumeration.baseVal</code> returns <code>2</code>.</p>
+## Examples
 
-<pre class="brush: html">&lt;svg id="svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;defs&gt;
-    &lt;marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
+The `orientType` property returns an {{domxref("SVGAnimatedEnumeration")}} object. As the value of the {{SVGattr("orient")}} attribute is an angle, returning the `SVGAnimatedEnumeration.baseVal` returns `2`.
+
+```html
+<svg id="svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
         markerWidth="6" markerHeight="6"
-        orient=".63deg"&gt;
-      &lt;path d="M 0 0 L 10 5 L 0 10 z" /&gt;
-    &lt;/marker&gt;
-  &lt;/defs&gt;
-&lt;/svg&gt;</pre>
+        orient=".63deg">
+      <path d="M 0 0 L 10 5 L 0 10 z" />
+    </marker>
+  </defs>
+</svg>
+```
 
-<pre class="brush: js">let marker = document.getElementById("arrow");
-console.log(marker.orientType.baseVal); // 2</pre>
+```js
+let marker = document.getElementById("arrow");
+console.log(marker.orientType.baseVal); // 2
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
+## Browser compatibility
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<p>{{Compat}}</p>
+{{Compat}}

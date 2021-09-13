@@ -11,37 +11,36 @@ tags:
   - prompt
 browser-compat: api.Window.prompt
 ---
-<div>{{ApiRef("Window")}}</div>
+{{ApiRef("Window")}}
 
-<p><code>window.prompt()</code> instructs the browser to display a dialog with an optional message prompting the user to input some text, and to wait until the user either submits the text or cancels the dialog.</p>
+`window.prompt()` instructs the browser to display a dialog with an optional message prompting the user to input some text, and to wait until the user either submits the text or cancels the dialog.
 
-<p>Under some conditions — for example, when the user switches tabs — the browser may not actually display a dialog, or may not wait for the user to submit text or to cancel the dialog.</p>
+Under some conditions — for example, when the user switches tabs — the browser may not actually display a dialog, or may not wait for the user to submit text or to cancel the dialog.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>result</em> = window.prompt(<em>message</em>, <em>default</em>);
-</pre>
+```js
+result = window.prompt(message, default);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>message</code> {{optional_inline}}</dt>
-  <dd>A string of text to display to the user. Can be omitted if there is nothing to show
-    in the prompt window.</dd>
-  <dt><code>default</code> {{optional_inline}}</dt>
-  <dd>A string containing the default value displayed in the text input field. Note that
+- `message` {{optional_inline}}
+  - : A string of text to display to the user. Can be omitted if there is nothing to show
+    in the prompt window.
+- `default` {{optional_inline}}
+  - : A string containing the default value displayed in the text input field. Note that
     in Internet Explorer 7 and 8, if you do not provide this parameter, the string
-    <code>"undefined"</code> is the default value.</dd>
-</dl>
+    `"undefined"` is the default value.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A string containing the text entered by the user, or <code>null</code>.</p>
+A string containing the text entered by the user, or `null`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre
-  class="brush: js">let sign = prompt("What's your sign?");
+```js
+let sign = prompt("What's your sign?");
 
 if (sign.toLowerCase() == "scorpio") {
   alert("Wow! I'm a Scorpio too!");
@@ -51,45 +50,44 @@ if (sign.toLowerCase() == "scorpio") {
 sign = window.prompt(); // open the blank prompt window
 sign = prompt();       //  open the blank prompt window
 sign = window.prompt('Are you feeling lucky'); // open the window with Text "Are you feeling lucky"
-sign = window.prompt('Are you feeling lucky', 'sure'); // open the window with Text "Are you feeling lucky" and default value "sure"</pre>
+sign = window.prompt('Are you feeling lucky', 'sure'); // open the window with Text "Are you feeling lucky" and default value "sure"
+```
 
-<p>When the user clicks the OK button, text entered in the input field is returned. If the
-  user clicks OK without entering any text, an empty string is returned. If the user
-  clicks the Cancel button, this function returns <code>null</code>.</p>
+When the user clicks the OK button, text entered in the input field is returned. If the
+user clicks OK without entering any text, an empty string is returned. If the user
+clicks the Cancel button, this function returns `null`.
 
-<p>The above prompt appears as follows (in Chrome on OS X):</p>
+The above prompt appears as follows (in Chrome on OS X):
 
-<p><a href="prompt.png"><img
-      alt="prompt() dialog in Chrome on OS X"
-      src="prompt.png"></a></p>
+[![prompt() dialog in Chrome on OS X](prompt.png)](prompt.png)
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>A prompt dialog contains a single-line textbox, a Cancel button, and an OK button, and
-  returns the (possibly empty) text the user entered into that textbox.</p>
+A prompt dialog contains a single-line textbox, a Cancel button, and an OK button, and
+returns the (possibly empty) text the user entered into that textbox.
 
-<p>Dialog boxes are modal windows; they
-  prevent the user from accessing the rest of the program's interface until the dialog box
-  is closed. For this reason, you should not overuse any function that creates a dialog
-  box (or modal window).</p>
+Dialog boxes are modal windows; they
+prevent the user from accessing the rest of the program's interface until the dialog box
+is closed. For this reason, you should not overuse any function that creates a dialog
+box (or modal window).
 
-<p>Please note that result is a string. That means you should sometimes cast the value
-  given by the user. For example, if their answer should be a Number, you should cast the
-  value to Number.</p>
+Please note that result is a string. That means you should sometimes cast the value
+given by the user. For example, if their answer should be a Number, you should cast the
+value to Number.
 
-<pre class="brush: js">const aNumber = Number(window.prompt("Type a number", ""));</pre>
+```js
+const aNumber = Number(window.prompt("Type a number", ""));
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("window.alert", "alert")}}</li>
-  <li>{{domxref("window.confirm", "confirm")}}</li>
-</ul>
+- {{domxref("window.alert", "alert")}}
+- {{domxref("window.confirm", "confirm")}}

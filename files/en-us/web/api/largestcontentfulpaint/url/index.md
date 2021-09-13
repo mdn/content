@@ -9,23 +9,26 @@ tags:
   - LargestContentfulPaint
 browser-compat: api.LargestContentfulPaint.url
 ---
-<div>{{DefaultAPISidebar("Largest Contentful Paint API")}}</div>
+{{DefaultAPISidebar("Largest Contentful Paint API")}}
 
-<p>The <strong><code>url</code></strong> read-only property of the {{domxref("LargestContentfulPaint")}} interface returns the request url of the element, if the element is an image.</p>
+The **`url`** read-only property of the {{domxref("LargestContentfulPaint")}} interface returns the request url of the element, if the element is an image.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let url = LargestContentfulPaint.url;
-</pre>
+```js
+let url = LargestContentfulPaint.url;
+```
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString","string")}} containing a URL.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("DOMString","string")}} containing a URL.
 
-<p>The following example gets the <code>LargestContentfulPaint</code> object and prints the value of <code>url</code> to the console.</p>
+## Examples
 
-<pre class="brush: js">try {
+The following example gets the `LargestContentfulPaint` object and prints the value of `url` to the console.
+
+```js
+try {
   let lcp;
 
   const po = new PerformanceObserver((entryList) => {
@@ -38,14 +41,13 @@ browser-compat: api.LargestContentfulPaint.url
 
 } catch (e) {
   // Do nothing if the browser doesn't support this API.
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
-
+{{Compat}}

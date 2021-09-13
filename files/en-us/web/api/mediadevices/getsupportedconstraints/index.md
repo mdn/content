@@ -2,75 +2,81 @@
 title: MediaDevices.getSupportedConstraints()
 slug: Web/API/MediaDevices/getSupportedConstraints
 tags:
-- API
-- Media
-- Media Capture and Streams API
-- Media Streams API
-- MediaDevices
-- Method
-- Reference
-- WebRTC
-- getSupportedConstraints
+  - API
+  - Media
+  - Media Capture and Streams API
+  - Media Streams API
+  - MediaDevices
+  - Method
+  - Reference
+  - WebRTC
+  - getSupportedConstraints
 browser-compat: api.MediaDevices.getSupportedConstraints
 ---
-<p>{{APIRef("Media Capture and Streams")}}</p>
+{{APIRef("Media Capture and Streams")}}
 
-<p>The
-  <strong><code>getSupportedConstraints()</code></strong>
-  method of the {{domxref("MediaDevices")}} interface returns an object based on the
-  {{domxref("MediaTrackSupportedConstraints")}} dictionary, whose member fields each
-  specify one of the constrainable properties the {{Glossary("user agent")}} understands.
-</p>
+The
+**`getSupportedConstraints()`**
+method of the {{domxref("MediaDevices")}} interface returns an object based on the
+{{domxref("MediaTrackSupportedConstraints")}} dictionary, whose member fields each
+specify one of the constrainable properties the {{Glossary("user agent")}} understands.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>supportedConstraints</em> = navigator.mediaDevices.getSupportedConstraints();</pre>
+```js
+var supportedConstraints = navigator.mediaDevices.getSupportedConstraints();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A new object based on the {{domxref("MediaTrackSupportedConstraints")}} dictionary
-  listing the constraints supported by the user agent. Because only constraints supported
-  by the user agent are included in the list, each of these Boolean properties has the
-  value <code>true</code>.</p>
+A new object based on the {{domxref("MediaTrackSupportedConstraints")}} dictionary
+listing the constraints supported by the user agent. Because only constraints supported
+by the user agent are included in the list, each of these Boolean properties has the
+value `true`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example outputs a list of the constraints supported by your browser.</p>
+This example outputs a list of the constraints supported by your browser.
 
-<pre class="brush: html hidden">&lt;p&gt;The following media constraints are supported by your browser:&lt;/p&gt;
+```html hidden
+<p>The following media constraints are supported by your browser:</p>
 
-&lt;ul id="constraintList"&gt;
-&lt;/ul&gt;</pre>
+<ul id="constraintList">
+</ul>
+```
 
-<pre class="brush: css hidden">body {
+```css hidden
+body {
   font: 15px Arial, sans-serif;
-}</pre>
+}
+```
 
-<pre class="brush: js">let constraintList = document.getElementById("constraintList");
+```js
+let constraintList = document.getElementById("constraintList");
 let supportedConstraints = navigator.mediaDevices.getSupportedConstraints();
 
 for (let constraint in supportedConstraints) {
   if (supportedConstraints.hasOwnProperty(constraint)) {
     let elem = document.createElement("li");
 
-    elem.innerHTML = "&lt;code&gt;" + constraint + "&lt;/code&gt;";
+    elem.innerHTML = "<code>" + constraint + "</code>";
     constraintList.appendChild(elem);
   }
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{ EmbedLiveSample('Example', 600, 350) }}</p>
+{{ EmbedLiveSample('Example', 600, 350) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,73 +2,72 @@
 title: Document.pictureInPictureEnabled
 slug: Web/API/Document/pictureInPictureEnabled
 tags:
-- API
-- Document
-- Picture-in-Picture
-- Picture-in-Picture API
-- Property
-- Read-only
-- Reference
-- Video
-- pip
+  - API
+  - Document
+  - Picture-in-Picture
+  - Picture-in-Picture API
+  - Property
+  - Read-only
+  - Reference
+  - Video
+  - pip
 browser-compat: api.Document.pictureInPictureEnabled
 ---
-<div>{{APIRef("Picture-in-Picture API")}}</div>
+{{APIRef("Picture-in-Picture API")}}
 
-<p>The read-only
-    <code><strong>pictureInPictureEnabled</strong></code> property of the
-    {{domxref("Document")}} interface indicates whether or not picture-in-picture mode is
-    available.</p>
+The read-only
+**`pictureInPictureEnabled`** property of the
+{{domxref("Document")}} interface indicates whether or not picture-in-picture mode is
+available.
 
-<p>Picture-in-Picture mode is available by default unless specified
-  otherwise by a <a
-    href="/en-US/docs/Web/HTTP/Headers/Feature-Policy/picture-in-picture">Feature-Policy</a>.
-</p>
+Picture-in-Picture mode is available by default unless specified
+otherwise by a [Feature-Policy](/en-US/docs/Web/HTTP/Headers/Feature-Policy/picture-in-picture).
 
-<p>Although this property is read-only, it will not throw if it is modified (even in
-  strict mode); the setter is a no-operation and will be ignored.</p>
+Although this property is read-only, it will not throw if it is modified (even in
+strict mode); the setter is a no-operation and will be ignored.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let <var>isPictureInPictureAvailable</var> = <var>document</var>.pictureInPictureEnabled;
-</pre>
+```js
+let isPictureInPictureAvailable = document.pictureInPictureEnabled;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A boolean value, which is <code>true</code> if a video can enter
-  picture-in-picture and be displayed in a floating window by calling
-  {{domxref("HTMLVideoElement.requestFullscreen()")}}. If picture-in-picture mode isn't
-  available, this value is <code>false</code>.</p>
+A boolean value, which is `true` if a video can enter
+picture-in-picture and be displayed in a floating window by calling
+{{domxref("HTMLVideoElement.requestFullscreen()")}}. If picture-in-picture mode isn't
+available, this value is `false`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this example, before attempting to enter picture-in-picture mode for a
-  {{htmlElement("video")}} element the value of <code>pictureInPictureEnabled</code> is
-  checked, in order to avoid making the call if the feature is not available.</p>
+In this example, before attempting to enter picture-in-picture mode for a
+{{htmlElement("video")}} element the value of `pictureInPictureEnabled` is
+checked, in order to avoid making the call if the feature is not available.
 
-<pre class="brush: js">function requestPictureInPicture() {
+```js
+function requestPictureInPicture() {
   if (document.pictureInPictureEnabled) {
     videoElement.requestPictureInPicture();
   } else {
     console.log('Your browser cannot use picture-in-picture right now');
   }
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}}</li>
-  <li>{{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}</li>
-  <li>{{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}</li>
-  <li>{{DOMxRef("Document.exitPictureInPicture()")}}</li>
-  <li>{{DOMxRef("Document.pictureInPictureElement")}}</li>
-  <li>{{CSSxRef(":picture-in-picture")}}</li>
-</ul>
+- {{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}}
+- {{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}
+- {{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}
+- {{DOMxRef("Document.exitPictureInPicture()")}}
+- {{DOMxRef("Document.pictureInPictureElement")}}
+- {{CSSxRef(":picture-in-picture")}}

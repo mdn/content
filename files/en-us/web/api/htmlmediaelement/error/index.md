@@ -2,58 +2,58 @@
 title: HTMLMediaElement.error
 slug: Web/API/HTMLMediaElement/error
 tags:
-- API
-- Audio
-- HTML DOM
-- HTMLMediaElement
-- Media
-- Property
-- Read-only
-- Reference
-- Video
-- Web
+  - API
+  - Audio
+  - HTML DOM
+  - HTMLMediaElement
+  - Media
+  - Property
+  - Read-only
+  - Reference
+  - Video
+  - Web
 browser-compat: api.HTMLMediaElement.error
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLMediaElement.error</code></strong> is the
-  {{domxref("MediaError")}} object for the most recent error, or <code>null</code> if
-  there has not been an error. When an {{event("error")}} event is received by the
-  element, you can determine details about what happened by examining this object.</p>
+The **`HTMLMediaElement.error`** is the
+{{domxref("MediaError")}} object for the most recent error, or `null` if
+there has not been an error. When an {{event("error")}} event is received by the
+element, you can determine details about what happened by examining this object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>myError</em> = <em>HTMLMediaElement</em>.error;</pre>
+```js
+var myError = HTMLMediaElement.error;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("MediaError")}} object describing the most recent error to occur on the
-  media element or <code>null</code> if no errors have occurred.</p>
+A {{domxref("MediaError")}} object describing the most recent error to occur on the
+media element or `null` if no errors have occurred.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example establishes a video element and adds an error handler to it; the error
-  handler logs the details to console.</p>
+This example establishes a video element and adds an error handler to it; the error
+handler logs the details to console.
 
-<pre class="brush: js">var videoElement = document.createElement('video');
+```js
+var videoElement = document.createElement('video');
 videoElement.onerror = function() {
   console.log("Error " + videoElement.error.code + "; details: " + videoElement.error.message);
 }
 videoElement.src = "https://example.com/bogusvideo.mp4";
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining it, {{domxref("HTMLMediaElement")}}.</li>
-  <li>{{HTMLElement("audio")}} and {{HTMLElement("video")}}</li>
-</ul>
+- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- {{HTMLElement("audio")}} and {{HTMLElement("video")}}

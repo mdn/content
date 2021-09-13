@@ -2,45 +2,47 @@
 title: ReadableStream.locked
 slug: Web/API/ReadableStream/locked
 tags:
-- API
-- Property
-- ReadableStream
-- Reference
-- Streams
-- locked
+  - API
+  - Property
+  - ReadableStream
+  - Reference
+  - Streams
+  - locked
 browser-compat: api.ReadableStream.locked
 ---
-<div>{{APIRef("Streams")}}</div>
+{{APIRef("Streams")}}
 
-<p>The <strong><code>locked</code></strong> read-only property of the
-  {{domxref("ReadableStream")}} interface returns whether or not the readable stream is <a
-    href="https://streams.spec.whatwg.org/#lock">locked
-    to a reader</a>.</p>
+The **`locked`** read-only property of the
+{{domxref("ReadableStream")}} interface returns whether or not the readable stream is [locked
+to a reader](https://streams.spec.whatwg.org/#lock).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var><code>var <em>locked</em> = </code>readableStream</var>.locked;</pre>
+```js
+var locked = readableStream.locked;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A boolean value indicating whether or not the readable stream is locked.</p>
+A boolean value indicating whether or not the readable stream is locked.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">const stream = new ReadableStream({
+```js
+const stream = new ReadableStream({
   ...
 });
 
 const reader = stream.getReader();
 
 stream.locked
-// should return true, as the stream has been locked to a reader</pre>
+// should return true, as the stream has been locked to a reader
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

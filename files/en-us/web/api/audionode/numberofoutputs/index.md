@@ -2,33 +2,35 @@
 title: AudioNode.numberOfOutputs
 slug: Web/API/AudioNode/numberOfOutputs
 tags:
-- API
-- AudioNode
-- Property
-- Reference
-- Web Audio API
-- numberOfOutputs
+  - API
+  - AudioNode
+  - Property
+  - Reference
+  - Web Audio API
+  - numberOfOutputs
 browser-compat: api.AudioNode.numberOfOutputs
 ---
-<div>{{APIRef("Web Audio API")}}</div>
+{{APIRef("Web Audio API")}}
 
-<p>The <code>numberOfOutputs</code> property of
-    the {{ domxref("AudioNode") }} interface returns the number of outputs coming out of
-    the node. Destination nodes — like {{domxref("AudioDestinationNode") }} — have
-  a value of 0 for this attribute.</p>
+The `numberOfOutputs` property of
+the {{ domxref("AudioNode") }} interface returns the number of outputs coming out of
+the node. Destination nodes — like {{domxref("AudioDestinationNode") }} — have
+a value of 0 for this attribute.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>numOutputs</em> = <em>audioNode</em>.numberOfOutputs;</pre>
+```js
+var numOutputs = audioNode.numberOfOutputs;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An integer ≥ 0.</p>
+An integer ≥ 0.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js;">const audioCtx = new AudioContext();
+```js
+const audioCtx = new AudioContext();
 
 const oscillator = audioCtx.createOscillator();
 const gainNode = audioCtx.createGain();
@@ -38,19 +40,17 @@ oscillator.connect(gainNode).connect(audioCtx.destination);
 console.log(oscillator.numberOfOutputs); // 1
 console.log(gainNode.numberOfOutputs); // 1
 console.log(audioCtx.destination.numberOfOutputs); // 0
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio
-      API</a></li>
-</ul>
+- [Using the Web Audio
+  API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

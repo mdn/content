@@ -11,37 +11,38 @@ tags:
   - addListener
 browser-compat: api.MediaQueryList.addListener
 ---
-<p>{{APIRef("CSSOM")}}{{Deprecated_Header}}</p>
+{{APIRef("CSSOM")}}{{Deprecated_Header}}
 
-<p>The deprecated <code><strong>addListener()</strong></code> method of the
-  {{DOMxRef("MediaQueryList")}} interface adds a listener to the
-  <code>MediaQueryListener</code> that will run a custom callback function in response to
-  the media query status changing.</p>
+The deprecated **`addListener()`** method of the
+{{DOMxRef("MediaQueryList")}} interface adds a listener to the
+`MediaQueryListener` that will run a custom callback function in response to
+the media query status changing.
 
-<p>In older browsers <code>MediaQueryList</code> did not yet inherit from {{DOMxRef("EventTarget")}},
-  so this method was provided as an alias of {{DOMxRef("EventTarget.addEventListener()")}}.
-  Use <code>addEventListener()</code> instead of <code>addListener()</code> if it is
-  available in the browsers you need to support.</p>
+In older browsers `MediaQueryList` did not yet inherit from {{DOMxRef("EventTarget")}},
+so this method was provided as an alias of {{DOMxRef("EventTarget.addEventListener()")}}.
+Use `addEventListener()` instead of `addListener()` if it is
+available in the browsers you need to support.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>MediaQueryList.addListener(func)</em></pre>
+```js
+MediaQueryList.addListener(func)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>func</dt>
-  <dd>A function or function reference representing the callback function you want to run
-    when the media query status changes.</dd>
-</dl>
+- func
+  - : A function or function reference representing the callback function you want to run
+    when the media query status changes.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Void.</p>
+Void.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var paragraph = document.querySelector('p');
+```js
+var paragraph = document.querySelector('p');
 var mediaQueryList = window.matchMedia('(max-width: 600px)');
 
 function screenTest(e) {
@@ -56,23 +57,22 @@ function screenTest(e) {
   }
 }
 
-mediaQueryList.addListener(screenTest);</pre>
+mediaQueryList.addListener(screenTest);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">Media queries</a></li>
-  <li><a href="/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries">Using media queries from
-      code</a></li>
-  <li>{{DOMxRef("window.matchMedia()")}}</li>
-  <li>{{DOMxRef("MediaQueryList")}}</li>
-  <li>{{DOMxRef("MediaQueryListEvent")}}</li>
-</ul>
+- [Media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Using media queries from
+  code](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- {{DOMxRef("window.matchMedia()")}}
+- {{DOMxRef("MediaQueryList")}}
+- {{DOMxRef("MediaQueryListEvent")}}

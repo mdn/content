@@ -9,29 +9,31 @@ tags:
   - TextDecoderStream
 browser-compat: api.TextDecoderStream.writable
 ---
-<p>{{APIRef("Encoding API")}}</p>
+{{APIRef("Encoding API")}}
 
-<p>The <strong><code>writable</code></strong> read-only property of the {{domxref("TextDecoderStream")}} interface returns a {{domxref("WritableStream")}}.</p>
+The **`writable`** read-only property of the {{domxref("TextDecoderStream")}} interface returns a {{domxref("WritableStream")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <var>writable</var> = <var>TextDecoderStream</var>.writable;</pre>
+    var writable = TextDecoderStream.writable;
 
-<h3>Value</h3>
-<p>A {{domxref("WritableStream")}}.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("WritableStream")}}.
 
-<p>Returning a {{domxref("WritableStream")}} from a <code>TextDecoderStream</code>.</p>
+## Examples
 
-<pre class="brush:js">stream = new TextDecoderStream();
-console.log(stream.writeable); //a WritableStream</pre>
+Returning a {{domxref("WritableStream")}} from a `TextDecoderStream`.
 
-<h2 id="Specifications">Specifications</h2>
+```js
+stream = new TextDecoderStream();
+console.log(stream.writeable); //a WritableStream
+```
+
+## Specifications
 
 {{Specifications}}
 
+## Browser compatibility
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<p>{{Compat}}</p>
+{{Compat}}

@@ -10,46 +10,46 @@ tags:
   - maxRetransmits
 browser-compat: api.RTCDataChannel.maxRetransmits
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The read-only <code>RTCDataChannel</code> property
-    <code><strong>maxRetransmits</strong></code> returns the maximum number of times the
-    browser should try to retransmit a message before giving up, as set when the data
-    channel was created, or <code>null</code>, which indicates that there is no
-    maximum. This can only be set when the {{domxref("RTCDataChannel")}} is created
-  by calling {{domxref("RTCPeerConnection.createDataChannel()")}}, using the
-  <code>maxRetransmits</code> field in the specified <code>options</code>.</p>
+The read-only `RTCDataChannel` property
+**`maxRetransmits`** returns the maximum number of times the
+browser should try to retransmit a message before giving up, as set when the data
+channel was created, or `null`, which indicates that there is no
+maximum. This can only be set when the {{domxref("RTCDataChannel")}} is created
+by calling {{domxref("RTCPeerConnection.createDataChannel()")}}, using the
+`maxRetransmits` field in the specified `options`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>tries</em> = <em>aDataChannel</em>.maxRetransmits;
-</pre>
+```js
+var tries = aDataChannel.maxRetransmits;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>The maximum number of times the browser will try to retransmit a message before giving
-  up, or <code>null</code> if not set when
-  {{domxref("RTCPeerConnection.createDataChannel()")}} was called. The default is
-  <code>null</code>.</p>
+The maximum number of times the browser will try to retransmit a message before giving
+up, or `null` if not set when
+{{domxref("RTCPeerConnection.createDataChannel()")}} was called. The default is
+`null`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">// TBD
-</pre>
+```js
+// TBD
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
-  <li>{{domxref("RTCDataChannel")}}</li>
-  <li>{{domxref("RTCDataChannel.maxPacketLifetime")}}</li>
-  <li>{{domxref("RTCPeerConnection.createDataChannel()")}}</li>
-</ul>
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)
+- {{domxref("RTCDataChannel")}}
+- {{domxref("RTCDataChannel.maxPacketLifetime")}}
+- {{domxref("RTCPeerConnection.createDataChannel()")}}

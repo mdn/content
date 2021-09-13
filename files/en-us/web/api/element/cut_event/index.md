@@ -11,89 +11,91 @@ tags:
   - Web
 browser-compat: api.Element.cut_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <strong><code>cut</code></strong> event is fired when the user has initiated a "cut" action through the browser's user interface.</p>
+The **`cut`** event is fired when the user has initiated a "cut" action through the browser's user interface.
 
-<p>If the user attempts a cut action on uneditable content, the <code>cut</code> event still fires but the event object contains no data.</p>
+If the user attempts a cut action on uneditable content, the `cut` event still fires but the event object contains no data.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("ClipboardEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("HTMLElement/oncut", "oncut")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("ClipboardEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>{{domxref("HTMLElement/oncut", "oncut")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>The event's default action is to copy the current selection (if any) to the system clipboard and remove it from the document.</p>
+The event's default action is to copy the current selection (if any) to the system clipboard and remove it from the document.
 
-<p>A handler for this event can <em>modify</em> the clipboard contents by calling {{domxref("DataTransfer.setData", "setData(format, data)")}} on the event's {{domxref("ClipboardEvent.clipboardData")}} property, and cancelling the default action using {{domxref("Event/preventDefault", "event.preventDefault()")}}.</p>
+A handler for this event can _modify_ the clipboard contents by calling {{domxref("DataTransfer.setData", "setData(format, data)")}} on the event's {{domxref("ClipboardEvent.clipboardData")}} property, and cancelling the default action using {{domxref("Event/preventDefault", "event.preventDefault()")}}.
 
-<p>Note though that cancelling the default action will also prevent the document from being updated. So an event handler which wants to emulate the default action for "cut" while modifying the clipboard must also manually remove the selection from the document.</p>
+Note though that cancelling the default action will also prevent the document from being updated. So an event handler which wants to emulate the default action for "cut" while modifying the clipboard must also manually remove the selection from the document.
 
-<p>The handler cannot <em>read</em> the clipboard data.</p>
+The handler cannot _read_ the clipboard data.
 
-<p>It's possible to construct and dispatch a <a href="/en-US/docs/Web/Events/Creating_and_triggering_events">synthetic</a> <code>cut</code> event, but this will not affect the system clipboard or the document's contents.</p>
+It's possible to construct and dispatch a [synthetic](/en-US/docs/Web/Events/Creating_and_triggering_events) `cut` event, but this will not affect the system clipboard or the document's contents.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Live_example">Live example</h3>
+### Live example
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="source" contenteditable="true"&gt;Try cutting text from this box...&lt;/div&gt;
-&lt;div class="target" contenteditable="true"&gt;...and pasting it into this one&lt;/div&gt;</pre>
+```html
+<div class="source" contenteditable="true">Try cutting text from this box...</div>
+<div class="target" contenteditable="true">...and pasting it into this one</div>
+```
 
-<pre class="brush: css hidden">div.source, div.target {
+```css hidden
+div.source, div.target {
     border: 1px solid gray;
     margin: .5rem;
     padding: .5rem;
     height: 1rem;
     background-color: #e9eef1;
 }
-</pre>
+```
 
-<h4 id="JS">JS</h4>
+#### JS
 
-<pre class="brush: js">const source = document.querySelector('div.source');
+```js
+const source = document.querySelector('div.source');
 
-source.addEventListener('cut', (event) =&gt; {
+source.addEventListener('cut', (event) => {
     const selection = document.getSelection();
     event.clipboardData.setData('text/plain', selection.toString().toUpperCase());
     selection.deleteFromDocument();
     event.preventDefault();
 });
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Live_example', '100%', '100px') }}</p>
+{{ EmbedLiveSample('Live_example', '100%', '100px') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Related events: {{domxref("Element/copy_event", "copy")}}, {{domxref("Element/paste_event", "paste")}}</li>
- <li>This event on {{domxref("Document")}} targets: {{domxref("Document/cut_event", "cut")}}</li>
- <li>This event on {{domxref("Window")}} targets: {{domxref("Window/copy_event", "cut")}}</li>
-</ul>
+- Related events: {{domxref("Element/copy_event", "copy")}}, {{domxref("Element/paste_event", "paste")}}
+- This event on {{domxref("Document")}} targets: {{domxref("Document/cut_event", "cut")}}
+- This event on {{domxref("Window")}} targets: {{domxref("Window/copy_event", "cut")}}

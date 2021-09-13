@@ -2,67 +2,64 @@
 title: Bluetooth.requestDevice()
 slug: Web/API/Bluetooth/requestDevice
 tags:
-- API
-- Bluetooth
-- Method
-- Reference
-- Web Bluetooth API
-- requestDevice
+  - API
+  - Bluetooth
+  - Method
+  - Reference
+  - Web Bluetooth API
+  - requestDevice
 browser-compat: api.Bluetooth.requestDevice
 ---
-<p>{{APIRef("Bluetooth API")}} {{securecontext_header}}{{SeeCompatTable}}</p>
+{{APIRef("Bluetooth API")}} {{securecontext_header}}{{SeeCompatTable}}
 
-<p>The <strong><code>Bluetooth.requestDevice()</code></strong> method of the
-  {{domxref("Bluetooth")}} interface returns a {{jsxref("Promise")}} to a
-  {{domxref("BluetoothDevice")}} object with the specified options. If there is no chooser
-  UI, this method returns the first device matching the criteria.</p>
+The **`Bluetooth.requestDevice()`** method of the
+{{domxref("Bluetooth")}} interface returns a {{jsxref("Promise")}} to a
+{{domxref("BluetoothDevice")}} object with the specified options. If there is no chooser
+UI, this method returns the first device matching the criteria.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">Bluetooth.requestDevice([options])
-  .then(function(bluetoothDevice) { ... })</pre>
+```js
+Bluetooth.requestDevice([options])
+  .then(function(bluetoothDevice) { ... })
+```
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A {{jsxref("Promise")}} to a {{domxref("BluetoothDevice")}} object.</p>
+A {{jsxref("Promise")}} to a {{domxref("BluetoothDevice")}} object.
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>options {{optional_inline}}</dt>
-  <dd>An object that sets options for the device request. The available options are:
-    <ul>
-      <li><code>filters[]</code>: An array of <code>BluetoothScanFilters</code>. This
-        filter consists of an array of  <code>BluetoothServiceUUID</code>s, a
-        <code>name</code> parameter, and a <code>namePrefix</code> parameter.</li>
-      <li><code>optionalServices[]</code>: An array of <code>BluetoothServiceUUID</code>s.
-      </li>
-      <li><code>acceptAllDevices</code>: A boolean value indicating that the
-        requesting script can accept all Bluetooth devices. The default is
-        <code>false</code>.</li>
-    </ul>
-  </dd>
-</dl>
+- options {{optional_inline}}
 
-<h2 id="Exceptions">Exceptions</h2>
+  - : An object that sets options for the device request. The available options are:
 
-<dl>
-  <dt><code>TypeError</code></dt>
-  <dd>The provided <code>options</code> do not makes sense. For example,
-    <code>options.filters</code> is present and <code>options.acceptAllDevices</code> is
-    <code>true</code>, or if <code>options.filters</code> is not present and
-    <code>options.acceptAllDevices</code> is <code>false</code>. Or
-    <code>options.filters</code> is <code>[]</code>.</dd>
-  <dt><code>NotFoundError</code></dt>
-  <dd>There is no Bluetooth device that matches the specified options.</dd>
-  <dt><code>SecurityError</code></dt>
-  <dd>This operation is not permitted in this context due to security concerns. For
-    example, it is called from insecure origin.</dd>
-</dl>
+    - `filters[]`: An array of `BluetoothScanFilters`. This
+      filter consists of an array of  `BluetoothServiceUUID`s, a
+      `name` parameter, and a `namePrefix` parameter.
+    - `optionalServices[]`: An array of `BluetoothServiceUUID`s.
+    - `acceptAllDevices`: A boolean value indicating that the
+      requesting script can accept all Bluetooth devices. The default is
+      `false`.
 
-<h2 id="Example">Example</h2>
+## Exceptions
 
-<pre class="brush: js">// Discovery options match any devices advertising:
+- `TypeError`
+  - : The provided `options` do not makes sense. For example,
+    `options.filters` is present and `options.acceptAllDevices` is
+    `true`, or if `options.filters` is not present and
+    `options.acceptAllDevices` is `false`. Or
+    `options.filters` is `[]`.
+- `NotFoundError`
+  - : There is no Bluetooth device that matches the specified options.
+- `SecurityError`
+  - : This operation is not permitted in this context due to security concerns. For
+    example, it is called from insecure origin.
+
+## Example
+
+```js
+// Discovery options match any devices advertising:
 // . The standard heart rate service.
 // . Both 16-bit service IDs 0x1802 and 0x1803.
 // . A proprietary 128-bit UUID service c48e6067-5295-48d3-8d5c-0395f61792b1.
@@ -89,16 +86,15 @@ navigator.bluetooth.requestDevice(options).then(function(device) {
 .catch(function(error) {
   console.log("Something went wrong. " + error);
 });
-</pre>
+```
 
-<p><a
-    href="https://webbluetoothcg.github.io/web-bluetooth/#example-filter-by-services">Detailed
-    examples</a> are in the specification.</p>
+[Detailed
+examples](https://webbluetoothcg.github.io/web-bluetooth/#example-filter-by-services) are in the specification.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

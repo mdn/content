@@ -16,71 +16,71 @@ tags:
   - shippingaddresschange
 browser-compat: api.PaymentRequest.shippingaddresschange_event
 ---
-<p>{{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}</p>
+{{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
 
-<p>The <strong><code>shippingaddresschange</code></strong> event is sent to the {{domxref("PaymentRequest")}} object when the user selects a shipping address or changes details of their shipping address.</p>
+The **`shippingaddresschange`** event is sent to the {{domxref("PaymentRequest")}} object when the user selects a shipping address or changes details of their shipping address.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("PaymentRequestUpdateEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("PaymentRequest.onshippingaddresschange", "onshippingaddresschange")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("PaymentRequestUpdateEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{domxref("PaymentRequest.onshippingaddresschange", "onshippingaddresschange")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>Depending on the browser, the shipping address information may be redacted for privacy reasons. That is, the {{domxref("PaymentAddress")}} which contains the shipping address may have some portions of its content altered, obscured, or left out entirely in order to prevent identifying the user without their consent (since if they choose to have you ship products to them, you'll need their address).</p>
+Depending on the browser, the shipping address information may be redacted for privacy reasons. That is, the {{domxref("PaymentAddress")}} which contains the shipping address may have some portions of its content altered, obscured, or left out entirely in order to prevent identifying the user without their consent (since if they choose to have you ship products to them, you'll need their address).
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this example, a handler for the <code>shippingaddresschange</code> event is set up to validate that the address meets requirements set by the web application.</p>
+In this example, a handler for the `shippingaddresschange` event is set up to validate that the address meets requirements set by the web application.
 
-<pre class="brush: js">const paymentRequest = new PaymentRequest(methodData, details, options);
+```js
+const paymentRequest = new PaymentRequest(methodData, details, options);
 
-paymentRequest.addEventListener("shippingaddresschange", event =&gt; {
+paymentRequest.addEventListener("shippingaddresschange", event => {
   let detailsUpdate = checkAddress(paymentRequest.shippingAddress);
   event.updateWith(detailsUpdate);
 }, false);
 
-const checkAddress = theAddress =&gt; {
+const checkAddress = theAddress => {
   let detailsUpdate = {};
 
   // Check the address, return an object with any changes or errors.
 
   return detailsUpdate;
 };
-</pre>
+```
 
-<p>You can also establish a handler for <code>shippingaddresschange</code> using the {{domxref("PaymentRequest.onshippingaddresschange", "onshippingaddresschange")}} event handler property:</p>
+You can also establish a handler for `shippingaddresschange` using the {{domxref("PaymentRequest.onshippingaddresschange", "onshippingaddresschange")}} event handler property:
 
-<pre class="brush: js">paymentRequest.onshippingaddresschange = event =&gt; {
+```js
+paymentRequest.onshippingaddresschange = event => {
   let detailsUpdate = checkAddress(paymentRequest.shippingAddress);
   event.updateWith(detailsUpdate);
-};</pre>
+};
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
+{{Compat}}
 
-<p>{{Compat}}</p>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{domxref("PaymentRequest.onshippingaddresschange", "onshippingaddresschange")}} event handler property</li>
-</ul>
-</div>
+- {{domxref("PaymentRequest.onshippingaddresschange", "onshippingaddresschange")}} event handler property

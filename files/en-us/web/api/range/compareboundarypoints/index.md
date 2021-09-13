@@ -8,69 +8,65 @@ tags:
   - Range
 browser-compat: api.Range.compareBoundaryPoints
 ---
-<p>{{ApiRef("DOM")}}</p>
+{{ApiRef("DOM")}}
 
-<p>The
-    <strong><code>Range.compareBoundaryPoints()</code></strong> method compares the
-    boundary points of the {{domxref("Range")}} with those of another range.</p>
+The
+**`Range.compareBoundaryPoints()`** method compares the
+boundary points of the {{domxref("Range")}} with those of another range.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>compare</em> = <em>range</em>.compareBoundaryPoints(<em>how</em>,<em> sourceRange</em>);
-</pre>
+```js
+compare = range.compareBoundaryPoints(how, sourceRange);
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<dl>
-  <dt><code>compare</code></dt>
-  <dd>A number, <code>-1</code>, <code>0</code>, or <code>1</code>, indicating whether the
+- `compare`
+  - : A number, `-1`, `0`, or `1`, indicating whether the
     corresponding boundary-point of the {{domxref("Range")}} is respectively before, equal
-    to, or after the corresponding boundary-point of <em>sourceRange</em>.</dd>
-</dl>
+    to, or after the corresponding boundary-point of _sourceRange_.
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>how</code></dt>
-  <dd>A constant describing the comparison method:
-    <ul>
-      <li><code>Range.END_TO_END</code> compares the end boundary-point of
-        <em>sourceRange</em> to the end boundary-point of <code>Range</code>.</li>
-      <li><code>Range.END_TO_START</code> compares the end boundary-point of
-        <em>sourceRange</em> to the start boundary-point of <code>Range</code>.</li>
-      <li><code>Range.START_TO_END</code> compares the start boundary-point of
-        <em>sourceRange</em> to the end boundary-point of <code>Range</code>.</li>
-      <li><code>Range.START_TO_START</code> compares the start boundary-point of
-        <em>sourceRange</em> to the start boundary-point of <code>Range</code>.</li>
-    </ul>
+- `how`
 
-    <p>If the value of the parameter is invalid, a {{domxref("DOMException")}} with a
-      <code>NotSupportedError</code> code is thrown.</p>
-  </dd>
-  <dt><code>sourceRange</code> </dt>
-  <dd>A {{domxref("Range")}} to compare boundary points with the range.</dd>
-</dl>
+  - : A constant describing the comparison method:
 
-<h2 id="Example">Example</h2>
+    - `Range.END_TO_END` compares the end boundary-point of
+      _sourceRange_ to the end boundary-point of `Range`.
+    - `Range.END_TO_START` compares the end boundary-point of
+      _sourceRange_ to the start boundary-point of `Range`.
+    - `Range.START_TO_END` compares the start boundary-point of
+      _sourceRange_ to the end boundary-point of `Range`.
+    - `Range.START_TO_START` compares the start boundary-point of
+      _sourceRange_ to the start boundary-point of `Range`.
 
-<pre class="brush: js">var range, sourceRange, compare;
+    If the value of the parameter is invalid, a {{domxref("DOMException")}} with a
+    `NotSupportedError` code is thrown.
+
+- `sourceRange`
+  - : A {{domxref("Range")}} to compare boundary points with the range.
+
+## Example
+
+```js
+var range, sourceRange, compare;
 range = document.createRange();
 range.selectNode(document.getElementsByTagName("div")[0]);
 sourceRange = document.createRange();
 sourceRange.selectNode(document.getElementsByTagName("div")[1]);
 compare = range.compareBoundaryPoints(Range.START_TO_END, sourceRange);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</a></li>
-</ul>
+- [The DOM interfaces index](/en-US/docs/Web/API/Document_Object_Model)

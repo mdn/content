@@ -2,41 +2,42 @@
 title: HTMLTableElement.tFoot
 slug: Web/API/HTMLTableElement/tFoot
 tags:
-- API
-- HTML DOM
-- HTMLTableElement
-- Property
-- Reference
+  - API
+  - HTML DOM
+  - HTMLTableElement
+  - Property
+  - Reference
 browser-compat: api.HTMLTableElement.tFoot
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLTableElement.tFoot</code></strong> property represents the
-  {{HTMLElement("tfoot")}} element of a {{HTMLElement("table")}}. Its value will be
-  <code>null</code> if there is no such element.</p>
+The **`HTMLTableElement.tFoot`** property represents the
+{{HTMLElement("tfoot")}} element of a {{HTMLElement("table")}}. Its value will be
+`null` if there is no such element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>HTMLTableSectionElementObject</em> = <em>table</em>.tFoot
-<em>table</em>.tFoot = <em>HTMLTableSectionElementObject</em>
-</pre>
+```js
+HTMLTableSectionElementObject = table.tFoot
+table.tFoot = HTMLTableSectionElementObject
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">if (table.tFoot == my_foot) {
+```js
+if (table.tFoot == my_foot) {
   // ...
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface implementing this property: {{domxref("HTMLTableElement")}}.</li>
-</ul>
+- The interface implementing this property: {{domxref("HTMLTableElement")}}.

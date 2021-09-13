@@ -2,64 +2,62 @@
 title: MediaTrackSettings.height
 slug: Web/API/MediaTrackSettings/height
 tags:
-- API
-- Media
-- Media Capture and Streams API
-- Media Streams API
-- MediaTrackSettings
-- Property
-- Reference
-- Settings
-- Video
-- WebRTC
-- height
+  - API
+  - Media
+  - Media Capture and Streams API
+  - Media Streams API
+  - MediaTrackSettings
+  - Property
+  - Reference
+  - Settings
+  - Video
+  - WebRTC
+  - height
 browser-compat: api.MediaTrackSettings.height
 ---
-<div>{{APIRef("Media Capture and Streams")}}</div>
+{{APIRef("Media Capture and Streams")}}
 
-<p>The {{domxref("MediaTrackSettings")}} dictionary's <code><strong>height</strong></code>
-  property is an integer indicating the number of pixels tall
-  {{domxref("MediaStreamTrack")}} is currently configured to be. This lets you determine
-  what value was selected to comply with your specified constraints for this property's
-  value as described in the {{domxref("MediaTrackConstraints.height")}} property you
-  provided when calling either {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}
-  or {{domxref("MediaStreamTrack.applyConstraints()")}}.</p>
+The {{domxref("MediaTrackSettings")}} dictionary's **`height`**
+property is an integer indicating the number of pixels tall
+{{domxref("MediaStreamTrack")}} is currently configured to be. This lets you determine
+what value was selected to comply with your specified constraints for this property's
+value as described in the {{domxref("MediaTrackConstraints.height")}} property you
+provided when calling either {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}
+or {{domxref("MediaStreamTrack.applyConstraints()")}}.
 
-<p>If needed, you can determine whether or not this constraint is supported by checking
-  the value of {{domxref("MediaTrackSupportedConstraints.height")}} as returned by a call
-  to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this is
-  unnecessary since browsers will ignore any constraints they're unfamiliar with.</p>
+If needed, you can determine whether or not this constraint is supported by checking
+the value of {{domxref("MediaTrackSupportedConstraints.height")}} as returned by a call
+to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this is
+unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>height</em> = <em>MediaTrackSettings</em>.height;
-</pre>
+```js
+var height = MediaTrackSettings.height;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An integer value indicating the height, in pixels, of the video track as currently
-  configured.</p>
+An integer value indicating the height, in pixels, of the video track as currently
+configured.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
-  Constraint exerciser")}} for an example.</p>
+See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
+  Constraint exerciser")}} for an example.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a>
-  </li>
-  <li><a href="/en-US/docs/Web/API/Media_Streams_API/Constraints">Capabilities,
-      constraints, and settings</a></li>
-  <li>{{domxref("MediaTrackConstraints.height")}}</li>
-  <li>{{domxref("MediaTrackSettings")}}</li>
-</ul>
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- [Capabilities,
+  constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- {{domxref("MediaTrackConstraints.height")}}
+- {{domxref("MediaTrackSettings")}}

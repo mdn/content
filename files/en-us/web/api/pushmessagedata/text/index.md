@@ -13,34 +13,38 @@ tags:
   - Text
 browser-compat: api.PushMessageData.text
 ---
-<p>{{APIRef("Push API")}}{{SeeCompatTable()}}</p>
+{{APIRef("Push API")}}{{SeeCompatTable()}}
 
-<p>The <code><strong>text()</strong></code>method of the {{domxref("PushMessageData")}} interface extracts push message data as a plain text string.</p>
+The **`text()`**method of the {{domxref("PushMessageData")}} interface extracts push message data as a plain text string.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var myText = pushEvent.data.text();</pre>
+```js
+var myText = pushEvent.data.text();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A {{domxref("USVString")}}.</p>
+A {{domxref("USVString")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">self.addEventListener('push', function(event) {
+```js
+self.addEventListener('push', function(event) {
   var textObj = event.data.text();
 
   // do something with your text
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

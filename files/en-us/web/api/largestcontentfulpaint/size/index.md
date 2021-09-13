@@ -9,24 +9,28 @@ tags:
   - LargestContentfulPaint
 browser-compat: api.LargestContentfulPaint.size
 ---
-<div>{{DefaultAPISidebar("Largest Contentful Paint API")}}</div>
+{{DefaultAPISidebar("Largest Contentful Paint API")}}
 
-<p>The <strong><code>size</code></strong> read-only property of the {{domxref("LargestContentfulPaint")}} interface returns the intrinsic size of the element that is the largest contentful paint.</p>
+The **`size`** read-only property of the {{domxref("LargestContentfulPaint")}} interface returns the intrinsic size of the element that is the largest contentful paint.
 
-<p>The <code>size</code> of the element is the <code>width</code> times <code>height</code> of the {{domxref("DOMRectReadOnly","rectangle")}} that this element creates on the screen.</p>
+The `size` of the element is the `width` times `height` of the {{domxref("DOMRectReadOnly","rectangle")}} that this element creates on the screen.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let size = LargestContentfulPaint.size;</pre>
+```js
+let size = LargestContentfulPaint.size;
+```
 
-<h3>Value</h3>
-<p>An integer representing the width times height of the element.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+An integer representing the width times height of the element.
 
-<p>The following example gets the <code>LargestContentfulPaint</code> object and prints the value of <code>size</code> to the console.</p>
+## Examples
 
-<pre class="brush: js">try {
+The following example gets the `LargestContentfulPaint` object and prints the value of `size` to the console.
+
+```js
+try {
   let lcp;
 
   const po = new PerformanceObserver((entryList) => {
@@ -39,13 +43,13 @@ browser-compat: api.LargestContentfulPaint.size
 
 } catch (e) {
   // Do nothing if the browser doesn't support this API.
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
+{{Compat}}

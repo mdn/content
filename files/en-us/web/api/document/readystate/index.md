@@ -8,39 +8,39 @@ tags:
   - Reference
 browser-compat: api.Document.readyState
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>Document.readyState</code></strong> property describes the loading
-  state of the {{domxref("document")}}.</p>
+The **`Document.readyState`** property describes the loading
+state of the {{domxref("document")}}.
 
-<p>When the value of this property changes, a {{event("readystatechange")}} event fires on
-  the {{domxref("document")}} object.</p>
+When the value of this property changes, a {{event("readystatechange")}} event fires on
+the {{domxref("document")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let <var>string</var> = <var>document</var>.readyState;
-</pre>
+```js
+let string = document.readyState;
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<p>The <code>readyState</code> of a document can be one of following:</p>
+The `readyState` of a document can be one of following:
 
-<dl>
-  <dt><code>loading</code></dt>
-  <dd>The {{domxref("document")}} is still loading.</dd>
-  <dt><code>interactive</code></dt>
-  <dd>The document has finished loading and the document has been parsed but sub-resources
-    such as scripts, images, stylesheets and frames are still loading.</dd>
-  <dt><code>complete</code></dt>
-  <dd>The document and all sub-resources have finished loading. The state indicates that
-    the {{event("load")}} event is about to fire.</dd>
-</dl>
+- `loading`
+  - : The {{domxref("document")}} is still loading.
+- `interactive`
+  - : The document has finished loading and the document has been parsed but sub-resources
+    such as scripts, images, stylesheets and frames are still loading.
+- `complete`
+  - : The document and all sub-resources have finished loading. The state indicates that
+    the {{event("load")}} event is about to fire.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Different_states_of_readiness">Different states of readiness</h3>
+### Different states of readiness
 
-<pre class="brush: js">switch (document.readyState) {
+```js
+switch (document.readyState) {
   case "loading":
     // The document is still loading.
     break;
@@ -48,7 +48,7 @@ browser-compat: api.Document.readyState
     // The document has finished loading. We can now access the DOM elements.
     // But sub-resources such as scripts, images, stylesheets and frames are still loading.
     const span = document.createElement("span");
-    span.textContent = "A &lt;span&gt; element.";
+    span.textContent = "A <span> element.";
     document.body.appendChild(span);
     break;
   case "complete":
@@ -56,35 +56,34 @@ browser-compat: api.Document.readyState
     console.log("The first CSS rule is: " + document.styleSheets[0].cssRules[0].cssText);
     break;
 }
-</pre>
+```
 
-<h3 id="readystatechange_as_an_alternative_to_DOMContentLoaded_event">readystatechange as
-  an alternative to DOMContentLoaded event</h3>
+### readystatechange as an alternative to DOMContentLoaded event
 
-<pre class="brush: js">// Alternative to DOMContentLoaded event
+```js
+// Alternative to DOMContentLoaded event
 document.onreadystatechange = function () {
   if (document.readyState === 'interactive') {
     initApplication();
   }
 }
-</pre>
+```
 
-<h3 id="readystatechange_as_an_alternative_to_load_event">readystatechange as an
-  alternative to load event</h3>
+### readystatechange as an alternative to load event
 
-<pre class="brush: js">// Alternative to load event
+```js
+// Alternative to load event
 document.onreadystatechange = function () {
   if (document.readyState === 'complete') {
     initApplication();
   }
-}</pre>
+}
+```
 
-<h3
-  id="readystatechange_as_event_listener_to_insert_or_modify_the_DOM_before_DOMContentLoaded">
-  readystatechange as event listener to insert or modify the DOM before DOMContentLoaded
-</h3>
+### readystatechange as event listener to insert or modify the DOM before DOMContentLoaded
 
-<pre class="brush: js">document.addEventListener('readystatechange', event =&gt; {
+```js
+document.addEventListener('readystatechange', event => {
   if (event.target.readyState === 'interactive') {
     initLoader();
   }
@@ -92,21 +91,18 @@ document.onreadystatechange = function () {
     initApp();
   }
 });
+```
 
-</pre>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{event("readystatechange")}} event</li>
-  <li>{{event("DOMContentLoaded")}} event</li>
-  <li>{{event("load")}} event</li>
-</ul>
+- {{event("readystatechange")}} event
+- {{event("DOMContentLoaded")}} event
+- {{event("load")}} event

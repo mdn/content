@@ -8,35 +8,34 @@ tags:
   - Reference
 browser-compat: api.Document.releaseCapture
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<p>The <strong><code>releaseCapture()</code></strong> method releases mouse capture if
-  it's currently enabled on an element within this document. Enabling mouse capture on an
-  element is done by calling {{domxref("element.setCapture()")}}.</p>
+The **`releaseCapture()`** method releases mouse capture if
+it's currently enabled on an element within this document. Enabling mouse capture on an
+element is done by calling {{domxref("element.setCapture()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>document</var>.releaseCapture();
-</pre>
+```js
+document.releaseCapture();
+```
 
-<p>Once mouse capture is released, mouse events will no longer all be directed to the
-  element on which capture is enabled.</p>
+Once mouse capture is released, mouse events will no longer all be directed to the
+element on which capture is enabled.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See the <a href="/en-US/docs/Web/API/Element/setCapture#example">example</a> for
-  {{domxref("element.setCapture()")}}.</p>
+See the [example](/en-US/docs/Web/API/Element/setCapture#example) for
+{{domxref("element.setCapture()")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Based on Internet Explorer's implementation.</p>
+Based on Internet Explorer's implementation.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("element.setCapture()")}}</li>
-</ul>
+- {{domxref("element.setCapture()")}}

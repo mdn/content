@@ -2,42 +2,44 @@
 title: CSSTranslate.z
 slug: Web/API/CSSTranslate/z
 tags:
-- API
-- CSS Typed Object Model API
-- CSSTransformComponent
-- CSSTransformValue
-- CSSTranslate
-- Experimental
-- Houdini
-- Property
+  - API
+  - CSS Typed Object Model API
+  - CSSTransformComponent
+  - CSSTransformValue
+  - CSSTranslate
+  - Experimental
+  - Houdini
+  - Property
 browser-compat: api.CSSTranslate.z
 ---
-<div>{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}</div>
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}
 
-<p>The <strong><code>z</code></strong> property of the
-  {{domxref("CSSTranslate")}} interface representing the z-component of the translating
-  vector. A positive value moves the element towards the viewer, and a negative value
-  farther away.</p>
+The **`z`** property of the
+{{domxref("CSSTranslate")}} interface representing the z-component of the translating
+vector. A positive value moves the element towards the viewer, and a negative value
+farther away.
 
-<p>If this value is present then the transform is a 3D transform and the <code>is2D</code>
-  property will be set to false.</p>
+If this value is present then the transform is a 3D transform and the `is2D`
+property will be set to false.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var translate<em>Z</em> = CSSTranslate.z;</pre>
+```js
+var translateZ = CSSTranslate.z;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{cssxref('length')}}.</p>
+A {{cssxref('length')}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>To Do</p>
+To Do
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

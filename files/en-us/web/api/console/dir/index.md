@@ -12,47 +12,42 @@ tags:
   - web console
 browser-compat: api.console.dir
 ---
-<p>{{APIRef("Console API")}}</p>
+{{APIRef("Console API")}}
 
-<p>The method <strong><code>console.dir()</code></strong> displays an interactive list of the properties of
-    the specified JavaScript object. The output is presented as a hierarchical
-  listing with disclosure triangles that let you see the contents of child objects.</p>
+The method **`console.dir()`** displays an interactive list of the properties of
+the specified JavaScript object. The output is presented as a hierarchical
+listing with disclosure triangles that let you see the contents of child objects.
 
-<p>In other words, <code>console.dir()</code> is the way to see all the properties of a
-  specified JavaScript object in console by which the developer can easily get the
-  properties of the object.</p>
+In other words, `console.dir()` is the way to see all the properties of a
+specified JavaScript object in console by which the developer can easily get the
+properties of the object.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<p><img alt="console-dir.png"
-    src="console-dir.png"></p>
+![console-dir.png](console-dir.png)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">console.dir(<var>object</var>);
-</pre>
+```js
+console.dir(object);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>object</var></code></dt>
-  <dd>A JavaScript object whose properties should be output.</dd>
-</dl>
+- `object`
+  - : A JavaScript object whose properties should be output.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://msdn.microsoft.com/library/gg589530">MSDN: Using
-      the F12 Tools Console to View Errors and Status</a></li>
-  <li><a
-      href="https://developers.google.com/chrome-developer-tools/docs/console-api#consoledirobject">Chrome
-      Console API reference</a></li>
-</ul>
+- [MSDN: Using
+  the F12 Tools Console to View Errors and Status](https://msdn.microsoft.com/library/gg589530)
+- [Chrome
+  Console API reference](https://developers.google.com/chrome-developer-tools/docs/console-api#consoledirobject)

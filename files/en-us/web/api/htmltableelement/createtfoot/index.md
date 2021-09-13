@@ -2,45 +2,47 @@
 title: 'HTMLTableElement: createTFoot()'
 slug: Web/API/HTMLTableElement/createTFoot
 tags:
-- API
-- HTML DOM
-- HTMLTableElement
-- Method
-- NeedsSpecTable
-- Reference
+  - API
+  - HTML DOM
+  - HTMLTableElement
+  - Method
+  - NeedsSpecTable
+  - Reference
 browser-compat: api.HTMLTableElement.createTFoot
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <code><strong>createTFoot()</strong></code> method of
-  {{domxref("HTMLTableElement")}} objects returns the {{HTMLElement("tfoot")}} element
-  associated with a given {{HtmlElement("table")}}. If no footer exists in the table, this
-  method creates it, and then returns it.</p>
+The **`createTFoot()`** method of
+{{domxref("HTMLTableElement")}} objects returns the {{HTMLElement("tfoot")}} element
+associated with a given {{HtmlElement("table")}}. If no footer exists in the table, this
+method creates it, and then returns it.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> If no footer exists, <code>createTFoot()</code> inserts a new
-    footer directly into the table. The footer does not need to be added separately as
-    would be the case if {{domxref("Document.createElement()")}} had been used to create
-    the new <code>&lt;tfoot&gt;</code> element.</p>
-</div>
+> **Note:** If no footer exists, `createTFoot()` inserts a new
+> footer directly into the table. The footer does not need to be added separately as
+> would be the case if {{domxref("Document.createElement()")}} had been used to create
+> the new `<tfoot>` element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>table</var>.createTFoot();</pre>
+```js
+table.createTFoot();
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{domxref("HTMLTableSectionElement")}}</p>
+{{domxref("HTMLTableSectionElement")}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">let myfoot = mytable.createTFoot();
-// Now this should be true: myfoot == mytable.tFoot</pre>
+```js
+let myfoot = mytable.createTFoot();
+// Now this should be true: myfoot == mytable.tFoot
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

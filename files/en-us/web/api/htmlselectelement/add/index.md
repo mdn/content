@@ -2,47 +2,45 @@
 title: HTMLSelectElement.add()
 slug: Web/API/HTMLSelectElement/add
 tags:
-- API
-- HTML DOM
-- HTMLSelectElement
-- Method
-- Reference
+  - API
+  - HTML DOM
+  - HTMLSelectElement
+  - Method
+  - Reference
 browser-compat: api.HTMLSelectElement.add
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p>The <code><strong>HTMLSelectElement.add()</strong></code> method adds an element to the
-  collection of <code>option</code> elements for this <code>select</code> element.</p>
+The **`HTMLSelectElement.add()`** method adds an element to the
+collection of `option` elements for this `select` element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>collection</var>.add(item[, before]);
-</pre>
+```js
+collection.add(item[, before]);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<ul>
-  <li><em>item</em> is an {{domxref("HTMLOptionElement")}} or
-    {{domxref("HTMLOptGroupElement")}}</li>
-  <li><em>before</em> is optional and an element of the collection, or an index of type
-    <em>long</em>, representing the <em>item</em> should be inserted before. If this
-    parameter is <code>null</code> (or the index does not exist), the new element is
-    appended to the end of the collection.</li>
-</ul>
+- _item_ is an {{domxref("HTMLOptionElement")}} or
+  {{domxref("HTMLOptGroupElement")}}
+- _before_ is optional and an element of the collection, or an index of type
+  _long_, representing the _item_ should be inserted before. If this
+  parameter is `null` (or the index does not exist), the new element is
+  appended to the end of the collection.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<ul>
-  <li>A {{domxref("DOMError")}} of the type <code>HierarchyRequestError</code> if the
-    <em>item</em> passed to the method is an ancestor of the
-    <code>{{domxref("HTMLSelectElement")}}</code>.</li>
-</ul>
+- A {{domxref("DOMError")}} of the type `HierarchyRequestError` if the
+  _item_ passed to the method is an ancestor of the
+  `{{domxref("HTMLSelectElement")}}`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Creating_Elements_from_Scratch">Creating Elements from Scratch</h3>
+### Creating Elements from Scratch
 
-<pre class="brush: js">var sel = document.createElement("select");
+```js
+var sel = document.createElement("select");
 var opt1 = document.createElement("option");
 var opt2 = document.createElement("option");
 
@@ -58,23 +56,26 @@ sel.add(opt2, null);
 /*
   Produces the following, conceptually:
 
-  &lt;select&gt;
-    &lt;option value="1"&gt;Option: Value 1&lt;/option&gt;
-    &lt;option value="2"&gt;Option: Value 2&lt;/option&gt;
-  &lt;/select&gt;
-*/</pre>
+  <select>
+    <option value="1">Option: Value 1</option>
+    <option value="2">Option: Value 2</option>
+  </select>
+*/
+```
 
-<p>The before parameter is optional. So the following is accepted.</p>
+The before parameter is optional. So the following is accepted.
 
-<pre class="brush: js">...
+```js
+...
 sel.add(opt1);
 sel.add(opt2);
 ...
-</pre>
+```
 
-<h3 id="Append_to_an_Existing_Collection">Append to an Existing Collection</h3>
+### Append to an Existing Collection
 
-<pre class="brush: js">var sel = document.getElementById("existingList");
+```js
+var sel = document.getElementById("existingList");
 
 var opt = document.createElement("option");
 opt.value = "3";
@@ -85,31 +86,33 @@ sel.add(opt, null);
 /*
   Takes the existing following select object:
 
-  &lt;select id="existingList"&gt;
-    &lt;option value="1"&gt;Option: Value 1&lt;/option&gt;
-    &lt;option value="2"&gt;Option: Value 2&lt;/option&gt;
-  &lt;/select&gt;
+  <select id="existingList">
+    <option value="1">Option: Value 1</option>
+    <option value="2">Option: Value 2</option>
+  </select>
 
   And changes it to:
 
-  &lt;select id="existingList"&gt;
-    &lt;option value="1"&gt;Option: Value 1&lt;/option&gt;
-    &lt;option value="2"&gt;Option: Value 2&lt;/option&gt;
-    &lt;option value="3"&gt;Option: Value 3&lt;/option&gt;
-  &lt;/select&gt;
+  <select id="existingList">
+    <option value="1">Option: Value 1</option>
+    <option value="2">Option: Value 2</option>
+    <option value="3">Option: Value 3</option>
+  </select>
 */
-</pre>
+```
 
-<p>The before parameter is optional. So the following is accepted.</p>
+The before parameter is optional. So the following is accepted.
 
-<pre class="brush:js">...
+```js
+...
 sel.add(opt);
 ...
-</pre>
+```
 
-<h3 id="Inserting_to_an_Existing_Collection">Inserting to an Existing Collection</h3>
+### Inserting to an Existing Collection
 
-<pre class="brush: js">var sel = document.getElementById("existingList");
+```js
+var sel = document.getElementById("existingList");
 
 var opt = document.createElement("option");
 opt.value = "3";
@@ -120,25 +123,25 @@ sel.add(opt, sel.options[1]);
 /*
   Takes the existing following select object:
 
-  &lt;select id="existingList"&gt;
-    &lt;option value="1"&gt;Option: Value 1&lt;/option&gt;
-    &lt;option value="2"&gt;Option: Value 2&lt;/option&gt;
-  &lt;/select&gt;
+  <select id="existingList">
+    <option value="1">Option: Value 1</option>
+    <option value="2">Option: Value 2</option>
+  </select>
 
   And changes it to:
 
-  &lt;select id="existingList"&gt;
-    &lt;option value="1"&gt;Option: Value 1&lt;/option&gt;
-    &lt;option value="3"&gt;Option: Value 3&lt;/option&gt;
-    &lt;option value="2"&gt;Option: Value 2&lt;/option&gt;
-  &lt;/select&gt;
+  <select id="existingList">
+    <option value="1">Option: Value 1</option>
+    <option value="3">Option: Value 3</option>
+    <option value="2">Option: Value 2</option>
+  </select>
 */
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

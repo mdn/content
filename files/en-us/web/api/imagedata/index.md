@@ -8,43 +8,37 @@ tags:
   - Images
 browser-compat: api.ImageData
 ---
-<div>{{APIRef("Canvas API")}}</div>
+{{APIRef("Canvas API")}}
 
-<p>The <code><strong>ImageData</strong></code> interface represents the underlying pixel data of an area of a {{HTMLElement("canvas")}} element.</p>
+The **`ImageData`** interface represents the underlying pixel data of an area of a {{HTMLElement("canvas")}} element.
 
-<p>It is created using the {{domxref("ImageData.ImageData", "ImageData()")}} constructor or creator methods on the {{domxref("CanvasRenderingContext2D")}} object associated with a canvas: {{domxref("CanvasRenderingContext2D.createImageData", "createImageData()")}} and {{domxref("CanvasRenderingContext2D.getImageData", "getImageData()")}}. It can also be used to set a part of the canvas by using {{domxref("CanvasRenderingContext2D.putImageData", "putImageData()")}}.</p>
+It is created using the {{domxref("ImageData.ImageData", "ImageData()")}} constructor or creator methods on the {{domxref("CanvasRenderingContext2D")}} object associated with a canvas: {{domxref("CanvasRenderingContext2D.createImageData", "createImageData()")}} and {{domxref("CanvasRenderingContext2D.getImageData", "getImageData()")}}. It can also be used to set a part of the canvas by using {{domxref("CanvasRenderingContext2D.putImageData", "putImageData()")}}.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Constructors">Constructors</h2>
+## Constructors
 
-<dl>
- <dt>{{domxref("ImageData.ImageData", "ImageData()")}} {{experimental_inline}}</dt>
- <dd>Creates an <code>ImageData</code> object from a given {{jsxref("Uint8ClampedArray")}} and the size of the image it contains. If no array is given, it creates an image of a transparent black rectangle. Note that this is the most common way to create such an object in workers as {{domxref("CanvasRenderingContext2D.createImageData", "createImageData()")}} is not available there.</dd>
-</dl>
+- {{domxref("ImageData.ImageData", "ImageData()")}} {{experimental_inline}}
+  - : Creates an `ImageData` object from a given {{jsxref("Uint8ClampedArray")}} and the size of the image it contains. If no array is given, it creates an image of a transparent black rectangle. Note that this is the most common way to create such an object in workers as {{domxref("CanvasRenderingContext2D.createImageData", "createImageData()")}} is not available there.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("ImageData.data")}} {{readonlyInline}}</dt>
- <dd>Is a {{jsxref("Uint8ClampedArray")}} representing a one-dimensional array containing the data in the RGBA order, with integer values between <code>0</code> and <code>255</code> (inclusive).</dd>
- <dt>{{domxref("ImageData.height")}} {{readonlyInline}}</dt>
- <dd>Is an <code>unsigned long</code> representing the actual height, in pixels, of the <code>ImageData</code>.</dd>
- <dt>{{domxref("ImageData.width")}} {{readonlyInline}}</dt>
- <dd>Is an <code>unsigned long</code> representing the actual width, in pixels, of the <code>ImageData</code>.</dd>
-</dl>
+- {{domxref("ImageData.data")}} {{readonlyInline}}
+  - : Is a {{jsxref("Uint8ClampedArray")}} representing a one-dimensional array containing the data in the RGBA order, with integer values between `0` and `255` (inclusive).
+- {{domxref("ImageData.height")}} {{readonlyInline}}
+  - : Is an `unsigned long` representing the actual height, in pixels, of the `ImageData`.
+- {{domxref("ImageData.width")}} {{readonlyInline}}
+  - : Is an `unsigned long` representing the actual width, in pixels, of the `ImageData`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("CanvasRenderingContext2D")}}</li>
- <li>The {{HTMLElement("canvas")}} element and its associated interface, {{domxref("HTMLCanvasElement")}}.</li>
-</ul>
+- {{domxref("CanvasRenderingContext2D")}}
+- The {{HTMLElement("canvas")}} element and its associated interface, {{domxref("HTMLCanvasElement")}}.

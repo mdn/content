@@ -8,28 +8,30 @@ tags:
   - Reference
 browser-compat: api.MediaMetadata.album
 ---
-<p>{{SeeCompatTable}}{{APIRef("Media Session API")}}</p>
+{{SeeCompatTable}}{{APIRef("Media Session API")}}
 
-<p>The <strong><code>album</code></strong> property of the
-    {{domxref("MediaMetaData")}} interface returns or sets the name of the album or
-    collection containing the media to be played.</p>
+The **`album`** property of the
+{{domxref("MediaMetaData")}} interface returns or sets the name of the album or
+collection containing the media to be played.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var album = mediaMetaData.album
-mediaMetaData.album = album</pre>
+```js
+var album = mediaMetaData.album
+mediaMetaData.album = album
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{jsxref("String")}} containing the name of the album.</p>
+A {{jsxref("String")}} containing the name of the album.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example checks for browser compatibility and sets the current metadata
-  for the media session.</p>
+The following example checks for browser compatibility and sets the current metadata
+for the media session.
 
-<pre
-  class="brush: js">if ('mediaSession' in navigator) {
+```js
+if ('mediaSession' in navigator) {
   navigator.mediaSession.metadata = new MediaMetadata({
     title: 'Unforgettable',
     artist: 'Nat King Cole',
@@ -42,12 +44,13 @@ mediaMetaData.album = album</pre>
       { src: 'https://dummyimage.com/384x384', sizes: '384x384', type: 'image/png' },
       { src: 'https://dummyimage.com/512x512', sizes: '512x512', type: 'image/png' },
     ]
-  });</pre>
+  });
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,40 +2,41 @@
 title: VisualViewport.onscroll
 slug: Web/API/VisualViewport/onscroll
 tags:
-- API
-- Event
-- Experimental
-- Reference
-- Scroll
-- Visual Viewport API
-- VisualViewport
-- onscroll
-- viewport
+  - API
+  - Event
+  - Experimental
+  - Reference
+  - Scroll
+  - Visual Viewport API
+  - VisualViewport
+  - onscroll
+  - viewport
 browser-compat: api.VisualViewport.onscroll
 ---
-<p>{{APIRef("Visual Viewport")}}{{ SeeCompatTable() }}</p>
+{{APIRef("Visual Viewport")}}{{ SeeCompatTable() }}
 
-<p>The <strong><code>onscroll</code></strong> event handler of
-  the {{domxref("VisualViewport")}} interface is called when a viewport is scrolled, i.e.
-  when the
-  <code><a href="/en-US/docs/Web/API/VisualViewport/scroll_event">scroll</a></code> event
-  is fired.</p>
+The **`onscroll`** event handler of
+the {{domxref("VisualViewport")}} interface is called when a viewport is scrolled, i.e.
+when the
+[`scroll`](/en-US/docs/Web/API/VisualViewport/scroll_event) event
+is fired.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">VisualViewport.onscroll = function(e) { ... }</pre>
+```js
+VisualViewport.onscroll = function(e) { ... }
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre>VisualViewport.onscroll = function(e) {
-  ...
-}</pre>
+    VisualViewport.onscroll = function(e) {
+      ...
+    }
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

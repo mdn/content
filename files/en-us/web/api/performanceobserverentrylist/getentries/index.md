@@ -2,70 +2,69 @@
 title: PerformanceObserverEntryList.getEntries()
 slug: Web/API/PerformanceObserverEntryList/getEntries
 tags:
-- API
-- Method
-- PerformanceObserverEntryList
-- Reference
-- Web Performance
+  - API
+  - Method
+  - PerformanceObserverEntryList
+  - Reference
+  - Web Performance
 browser-compat: api.PerformanceObserverEntryList.getEntries
 ---
-<div>{{APIRef("Performance Timeline API")}}</div>
+{{APIRef("Performance Timeline API")}}
 
-<p>The <strong><code>getEntries()</code></strong> method of the
-  {{domxref("PerformanceObserverEntryList")}} interface returns a list of explicitly
-  <em>observed</em> {{domxref("PerformanceEntry","performance entry", '', 'true')}}
-  objects for a given filter. The list's members are determined by the set of
-  {{domxref("PerformanceEntry.entryType","entry types", '', 'true')}} specified in the
-  call to the {{domxref("PerformanceObserver.observe","observe()")}} method. The list is
-  available in the observer's callback function (as the first parameter in the callback).
-</p>
+The **`getEntries()`** method of the
+{{domxref("PerformanceObserverEntryList")}} interface returns a list of explicitly
+_observed_ {{domxref("PerformanceEntry","performance entry", '', 'true')}}
+objects for a given filter. The list's members are determined by the set of
+{{domxref("PerformanceEntry.entryType","entry types", '', 'true')}} specified in the
+call to the {{domxref("PerformanceObserver.observe","observe()")}} method. The list is
+available in the observer's callback function (as the first parameter in the callback).
 
-<p>This method is exposed to {{domxref("Window")}} and {{domxref("Worker")}}
-  interfaces.</p>
+This method is exposed to {{domxref("Window")}} and {{domxref("Worker")}}
+interfaces.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>General syntax:</p>
+General syntax:
 
-<pre class="brush: js"><em>entries</em> = list.getEntries();
-<em>entries</em> = list.getEntries(<em>PerformanceEntryFilterOptions</em>);
-</pre>
+```js
+entries = list.getEntries();
+entries = list.getEntries(PerformanceEntryFilterOptions);
+```
 
-<p>Specific usage:</p>
+Specific usage:
 
-<pre class="brush: js"><em>entries</em> = list.getEntries(<em>{name: "entry_name", entryType: "mark"}</em>);
-</pre>
+```js
+entries = list.getEntries({name: "entry_name", entryType: "mark"});
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><em>PerformanceEntryFilterOptions</em></code>{{optional_inline}}</dt>
-  <dd>Is a <code>PerformanceEntryFilterOptions</code> dictionary, having the following
+- `PerformanceEntryFilterOptions`{{optional_inline}}
+
+  - : Is a `PerformanceEntryFilterOptions` dictionary, having the following
     fields:
 
-    <ul>
-      <li><code>"name"</code>, the name of a performance entry.</li>
-      <li><code>"entryType"</code>, the entry type. The valid entry types are listed in
-        the {{domxref("PerformanceEntry.entryType")}} method.</li>
-      <li><code>"initiatorType"</code>, the type of the initiating resource (for example
-        an HTML element). The values are defined by the
-        {{domxref("PerformanceResourceTiming.initiatorType")}} interface.</li>
-    </ul>
+    - `"name"`, the name of a performance entry.
+    - `"entryType"`, the entry type. The valid entry types are listed in
+      the {{domxref("PerformanceEntry.entryType")}} method.
+    - `"initiatorType"`, the type of the initiating resource (for example
+      an HTML element). The values are defined by the
+      {{domxref("PerformanceResourceTiming.initiatorType")}} interface.
+
     This parameter is currently not supported on Chrome or Opera.
-  </dd>
-</dl>
 
-<h3 id="Return_Value">Return value</h3>
+### Return value
 
-<p>A list of explicitly <em>observed</em> {{domxref("PerformanceEntry")}} objects that
-  meets the criteria of the filter. The items will be in chronological order based on the
-  entries' {{domxref("PerformanceEntry.startTime","startTime")}}. If no objects that meet
-  the filter are found, an empty list is returned. If no argument is given, all entries
-  are returned.</p>
+A list of explicitly _observed_ {{domxref("PerformanceEntry")}} objects that
+meets the criteria of the filter. The items will be in chronological order based on the
+entries' {{domxref("PerformanceEntry.startTime","startTime")}}. If no objects that meet
+the filter are found, an empty list is returned. If no argument is given, all entries
+are returned.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">function print_perf_entry(pe) {
+```js
+function print_perf_entry(pe) {
   console.log("name: "        + pe.name      +
               "; entryType: " + pe.entryType +
               "; startTime: " + pe.startTime +
@@ -78,19 +77,19 @@ var observe_all = new PerformanceObserver(function(list, obs) {
 
   // Print all entries
   perfEntries = list.getEntries();
-  for (var i=0; i &lt; perfEntries.length; i++) {
+  for (var i=0; i < perfEntries.length; i++) {
     print_perf_entry(perfEntries[i]);
   }
 
   // Print entries named "Begin" with type "mark"
   perfEntries = list.getEntriesByName("Begin", "mark");
-  for (var i=0; i &lt; perfEntries.length; i++) {
+  for (var i=0; i < perfEntries.length; i++) {
     print_perf_entry(perfEntries[i]);
   }
 
   // Print entries with type "mark"
   perfEntries = list.getEntriesByType("mark");
-  for (var i=0; i &lt; perfEntries.length; i++) {
+  for (var i=0; i < perfEntries.length; i++) {
     print_perf_entry(perfEntries[i]);
   }
 });
@@ -100,18 +99,18 @@ observe_all.observe({entryTypes: ['frame', 'mark', 'measure', 'navigation', 'res
 var observe_frame = new PerformanceObserver(function(list, obs) {
   var perfEntries = list.getEntries();
   // Should only have 'frame' entries
-  for (var i=0; i &lt; perfEntries.length; i++) {
+  for (var i=0; i < perfEntries.length; i++) {
     print_perf_entry(perfEntries[i]);
   }
 });
 // subscribe to frame event only
 observe_frame.observe({entryTypes: ['frame']});
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

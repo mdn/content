@@ -9,38 +9,43 @@ tags:
   - SVGMarkerElement
 browser-compat: api.SVGMarkerElement.orientAngle
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <strong><code>orientAngle</code></strong> read-only property of the {{domxref("SVGMarkerElement")}} interface returns an {{domxref("SVGAnimatedAngle")}} object containing the angle of the {{SVGattr("orient")}} attribute.</p>
+The **`orientAngle`** read-only property of the {{domxref("SVGMarkerElement")}} interface returns an {{domxref("SVGAnimatedAngle")}} object containing the angle of the {{SVGattr("orient")}} attribute.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">let angle = SVGMarkerElement.orientAngle;</pre>
+    let angle = SVGMarkerElement.orientAngle;
 
-<h3>Value</h3>
-<p>An {{domxref("SVGAnimatedAngle")}} object. The <code>baseVal</code> property of this object returns an {{domxref("SVGAngle")}}, the value of which returns the <code>angle</code>.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+An {{domxref("SVGAnimatedAngle")}} object. The `baseVal` property of this object returns an {{domxref("SVGAngle")}}, the value of which returns the `angle`.
 
-<p>The <code>orientAngle</code> property returns an {{domxref("SVGAnimatedAngle")}} which contains an {{domxref("SVGAngle")}} with the angle set by the {{SVGattr("orient")}} attribute as a number representing the number of degrees the marker is turned.</p>
+## Examples
 
-<pre class="brush: html">&lt;svg id="svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;defs&gt;
-    &lt;marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
+The `orientAngle` property returns an {{domxref("SVGAnimatedAngle")}} which contains an {{domxref("SVGAngle")}} with the angle set by the {{SVGattr("orient")}} attribute as a number representing the number of degrees the marker is turned.
+
+```html
+<svg id="svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
         markerWidth="6" markerHeight="6"
-        orient=".5turn"&gt;
-      &lt;path d="M 0 0 L 10 5 L 0 10 z" /&gt;
-    &lt;/marker&gt;
-  &lt;/defs&gt;
-&lt;/svg&gt;</pre>
+        orient=".5turn">
+      <path d="M 0 0 L 10 5 L 0 10 z" />
+    </marker>
+  </defs>
+</svg>
+```
 
-<pre class="brush: js">let marker = document.getElementById("arrow");
-console.log(marker.orientAngle.baseVal.value); // 180 as .5turn is 180deg.</pre>
+```js
+let marker = document.getElementById("arrow");
+console.log(marker.orientAngle.baseVal.value); // 180 as .5turn is 180deg.
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

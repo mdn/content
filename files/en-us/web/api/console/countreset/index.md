@@ -2,42 +2,42 @@
 title: console.countReset()
 slug: Web/API/console/countReset
 tags:
-- API
-- DOM
-- Debugging
-- Method
-- Reference
-- Web Development
-- console
-- web console
+  - API
+  - DOM
+  - Debugging
+  - Method
+  - Reference
+  - Web Development
+  - console
+  - web console
 browser-compat: api.console.countReset
 ---
-<div>{{APIRef("Console API")}}</div>
+{{APIRef("Console API")}}
 
-<p>The <strong><code>console.countReset()</code></strong> method resets counter used with
-  {{domxref("console.count()")}}.</p>
+The **`console.countReset()`** method resets counter used with
+{{domxref("console.count()")}}.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">console.countReset(<var>[label]</var>);
-</pre>
+```js
+console.countReset([label]);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>label</code> {{optional_inline}}</dt>
-  <dd>A {{jsxref("String")}}. If supplied, <code>countReset()</code> resets the count for
-    that label to 0. If omitted, <code>countReset()</code> resets the default counter to
-    0.</dd>
-</dl>
+- `label` {{optional_inline}}
+  - : A {{jsxref("String")}}. If supplied, `countReset()` resets the count for
+    that label to 0. If omitted, `countReset()` resets the default counter to
+    0\.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>For example, given code like this:</p>
+For example, given code like this:
 
-<pre class="brush: js">let user = "";
+```js
+let user = "";
 
 function greet() {
   console.count();
@@ -50,25 +50,26 @@ user = "alice";
 greet();
 greet();
 console.count();
-console.countReset();</pre>
+console.countReset();
+```
 
-<p>Console output will look something like this:</p>
+Console output will look something like this:
 
-<pre class="eval">"default: 1"
-"default: 2"
-"default: 3"
-"default: 4"
-"default: 0"
-</pre>
+    "default: 1"
+    "default: 2"
+    "default: 3"
+    "default: 4"
+    "default: 0"
 
-<p>Note that the call to <code>console.counterReset()</code> resets the value of the
-  default counter to zero.</p>
+Note that the call to `console.counterReset()` resets the value of the
+default counter to zero.
 
-<p>If we pass the <code>user</code> variable as the <code>label</code> argument with the
-  string "bob" to the first invocation of <code>count()</code>, and the string "alice" to
-  the second:</p>
+If we pass the `user` variable as the `label` argument with the
+string "bob" to the first invocation of `count()`, and the string "alice" to
+the second:
 
-<pre class="brush: js">let user = "";
+```js
+let user = "";
 
 function greet() {
   console.count(user);
@@ -81,23 +82,24 @@ user = "alice";
 greet();
 greet();
 console.countReset("bob");
-console.count("alice");</pre>
+console.count("alice");
+```
 
-<p>We will see output like this:</p>
+We will see output like this:
 
-<pre class="eval">"bob: 1"
-"alice: 1"
-"alice: 2"
-"bob: 0"
-"alice: 3"</pre>
+    "bob: 1"
+    "alice: 1"
+    "alice: 2"
+    "bob: 0"
+    "alice: 3"
 
-<p>Resetting the value of the counter "bob" only changes the value of that counter. The
-  value of "alice" is unchanged.</p>
+Resetting the value of the counter "bob" only changes the value of that counter. The
+value of "alice" is unchanged.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

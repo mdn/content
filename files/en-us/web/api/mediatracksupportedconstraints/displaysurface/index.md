@@ -2,56 +2,58 @@
 title: MediaTrackSupportedConstraints.displaySurface
 slug: Web/API/MediaTrackSupportedConstraints/displaySurface
 tags:
-- API
-- Capture
-- Constraints
-- Media
-- Media Capture and Streams
-- Media Capture and Streams API
-- MediaTrackSupportedConstraints
-- Property
-- Reference
-- Screen Capture
-- Screen Capture API
-- Sharing
-- Video
-- display
-- displaySurface
-- screen
+  - API
+  - Capture
+  - Constraints
+  - Media
+  - Media Capture and Streams
+  - Media Capture and Streams API
+  - MediaTrackSupportedConstraints
+  - Property
+  - Reference
+  - Screen Capture
+  - Screen Capture API
+  - Sharing
+  - Video
+  - display
+  - displaySurface
+  - screen
 browser-compat: api.MediaTrackSupportedConstraints.displaySurface
 ---
-<p>{{APIRef("Media Capture and Streams")}}</p>
+{{APIRef("Media Capture and Streams")}}
 
-<p>The {{domxref("MediaTrackSupportedConstraints")}} dictionary's
-    <strong><code>displaySurface</code></strong> property indicates whether or not the
-    {{domxref("MediaTrackConstraints.displaySurface", "displaySurface")}} constraint is
-    supported by the user agent and the device on which the content is being used.</p>
+The {{domxref("MediaTrackSupportedConstraints")}} dictionary's
+**`displaySurface`** property indicates whether or not the
+{{domxref("MediaTrackConstraints.displaySurface", "displaySurface")}} constraint is
+supported by the user agent and the device on which the content is being used.
 
-<p>The supported constraints list is obtained by calling
-  {{domxref("MediaDevices.getSupportedConstraints",
-  "navigator.mediaDevices.getSupportedConstraints()")}}.</p>
+The supported constraints list is obtained by calling
+{{domxref("MediaDevices.getSupportedConstraints",
+  "navigator.mediaDevices.getSupportedConstraints()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>isDisplaySurfaceSupported</em> = <em>supportedConstraints</em>.displaySurface;</pre>
+```js
+isDisplaySurfaceSupported = supportedConstraints.displaySurface;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A Boolean value which is <code>true</code> if the
-  {{domxref("MediaTrackConstraints.displaySurface", "displaySurface")}} constraint is
-  supported by the device and user agent.</p>
+A Boolean value which is `true` if the
+{{domxref("MediaTrackConstraints.displaySurface", "displaySurface")}} constraint is
+supported by the device and user agent.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This method sets up the constraints object specifying the options for the call to
-  {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}. It adds the
-  <code>displaySurface</code> constraint (requesting that only full-screen sharing be
-  allowed) only if it is known to be supported by the browser. Capturing is then started
-  by calling <code>getDisplayMedia()</code> and attaching the returned stream to the video
-  element referenced by the variable <code>videoElem</code>.</p>
+This method sets up the constraints object specifying the options for the call to
+{{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}. It adds the
+`displaySurface` constraint (requesting that only full-screen sharing be
+allowed) only if it is known to be supported by the browser. Capturing is then started
+by calling `getDisplayMedia()` and attaching the returned stream to the video
+element referenced by the variable `videoElem`.
 
-<pre class="brush: js">async function capture() {
+```js
+async function capture() {
   let supportedConstraints = navigator.mediaDevices.getSupportedConstraints();
   let displayMediaOptions = {
     video: {
@@ -69,26 +71,24 @@ browser-compat: api.MediaTrackSupportedConstraints.displaySurface
     /* handle the error */
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Screen_Capture_API">Screen Capture API</a></li>
-  <li><a href="/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture">Using the
-      screen capture API</a></li>
-  <li><a href="/en-US/docs/Web/API/Media_Streams_API/Constraints">Capabilities,
-      constraints, and settings</a></li>
-  <li>{{domxref("MediaDevices.getDisplayMedia()")}}</li>
-  <li>{{domxref("MediaStreamTrack.getConstraints()")}}</li>
-  <li>{{domxref("MediaStreamTrack.applyConstraints()")}}</li>
-  <li>{{domxref("MediaStreamTrack.getSettings()")}}</li>
-</ul>
+- [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API)
+- [Using the
+  screen capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
+- [Capabilities,
+  constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- {{domxref("MediaDevices.getDisplayMedia()")}}
+- {{domxref("MediaStreamTrack.getConstraints()")}}
+- {{domxref("MediaStreamTrack.applyConstraints()")}}
+- {{domxref("MediaStreamTrack.getSettings()")}}

@@ -2,89 +2,80 @@
 title: Element.getAnimations()
 slug: Web/API/Element/getAnimations
 tags:
-- API
-- Animatable
-- CSS
-- CSS Animations
-- CSS Transitions
-- Element
-- Experimental
-- Method
-- Reference
-- Transitions
-- Web Animations
-- getAnimations
-- waapi
-- web animations api
+  - API
+  - Animatable
+  - CSS
+  - CSS Animations
+  - CSS Transitions
+  - Element
+  - Experimental
+  - Method
+  - Reference
+  - Transitions
+  - Web Animations
+  - getAnimations
+  - waapi
+  - web animations api
 browser-compat: api.Element.getAnimations
 ---
-<div>{{ SeeCompatTable() }}{{APIRef("Web Animations")}}</div>
+{{ SeeCompatTable() }}{{APIRef("Web Animations")}}
 
-<p>The <code>getAnimations()</code> method of the {{domxref("Element")}} interface
-  (specified on the <code>Animatable</code> mixin) returns an array of all
-  {{domxref("Animation")}} objects affecting this element or which are scheduled to do so
-  in future. It can optionally return {{domxref("Animation")}} objects for descendant
-  elements too.</p>
+The `getAnimations()` method of the {{domxref("Element")}} interface
+(specified on the `Animatable` mixin) returns an array of all
+{{domxref("Animation")}} objects affecting this element or which are scheduled to do so
+in future. It can optionally return {{domxref("Animation")}} objects for descendant
+elements too.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This array includes <a
-      href="/en-US/docs/Web/CSS/CSS_Animations">CSS Animations</a>, <a
-      href="/en-US/docs/Web/CSS/CSS_Transitions">CSS Transitions</a>, and <a
-      href="/en-US/docs/Web/API/Web_Animations_API">Web Animations</a>.</p>
-</div>
+> **Note:** This array includes [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations), [CSS Transitions](/en-US/docs/Web/CSS/CSS_Transitions), and [Web Animations](/en-US/docs/Web/API/Web_Animations_API).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const <em>animations</em> = <em>Element</em>.getAnimations(<em>options</em>);
-</pre>
+```js
+const animations = Element.getAnimations(options);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>options {{optional_inline}}</code></dt>
-  <dd>
-    <p>An options object containing the following property:</p>
-    <dl>
-      <dt><code>subtree</code></dt>
-      <dd>A boolean value which, if <code>true</code>, causes animations that target
-        descendants of <em>Element</em> to be returned as well. This includes animations
-        that target any CSS <a
-          href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-elements</a> attached to
-        <em>Element</em> or one of its descendants. Defaults to <code>false</code>.</dd>
-    </dl>
-  </dd>
-</dl>
+- `options {{optional_inline}}`
 
-<h3 id="Return_value">Return value</h3>
+  - : An options object containing the following property:
 
-<p>An {{jsxref("Array")}} of {{domxref("Animation")}} objects, each representing an
-  animation currently targeting the {{domxref("Element")}} on which this method is called,
-  or one of its descendant elements if <code>{ subtree: true }</code> is specified.</p>
+    - `subtree`
+      - : A boolean value which, if `true`, causes animations that target
+        descendants of _Element_ to be returned as well. This includes animations
+        that target any CSS [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) attached to
+        _Element_ or one of its descendants. Defaults to `false`.
 
-<h2 id="Examples">Examples</h2>
+### Return value
 
-<p>The following code snippet will wait for all animations on <code>elem</code> and its
-  descendants to finish before removing the element from the document.</p>
+An {{jsxref("Array")}} of {{domxref("Animation")}} objects, each representing an
+animation currently targeting the {{domxref("Element")}} on which this method is called,
+or one of its descendant elements if `{ subtree: true }` is specified.
 
-<pre class="brush: js">Promise.all(
+## Examples
+
+The following code snippet will wait for all animations on `elem` and its
+descendants to finish before removing the element from the document.
+
+```js
+Promise.all(
   elem.getAnimations({ subtree: true })
-    .map(animation =&gt; animation.finished)
-).then(() =&gt; elem.remove());</pre>
+    .map(animation => animation.finished)
+).then(() => elem.remove());
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
-  <li><a href="/en-US/docs/Web/CSS/CSS_Animations">CSS Animations</a></li>
-  <li><a href="/en-US/docs/Web/CSS/CSS_Transitions">CSS Transitions</a></li>
-  <li>{{domxref("Document.getAnimations()")}} - Fetch all animations in the document</li>
-  <li>{{domxref("Animation")}}</li>
-</ul>
+- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
+- [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations)
+- [CSS Transitions](/en-US/docs/Web/CSS/CSS_Transitions)
+- {{domxref("Document.getAnimations()")}} - Fetch all animations in the document
+- {{domxref("Animation")}}

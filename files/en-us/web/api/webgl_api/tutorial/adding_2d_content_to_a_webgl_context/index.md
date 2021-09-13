@@ -13,39 +13,38 @@ tags:
   - WebGL
   - WebGL API
 ---
-<div>{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}</div>
+{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}
 
-<p>Once you've successfully <a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL">created a WebGL context</a>, you can start rendering into it. A simple thing we can do is draw a simple square untextured plane, so let's start there, by building code to draw a square plane.</p>
+Once you've successfully [created a WebGL context](/en-US/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL), you can start rendering into it. A simple thing we can do is draw a simple square untextured plane, so let's start there, by building code to draw a square plane.
 
-<p>The complete source code for this project is <a href="https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample2">available on GitHub</a>.</p>
+The complete source code for this project is [available on GitHub](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample2).
 
-<div class="notecard note">
-<p><strong>Note:</strong> This project uses the <a href="http://glmatrix.net/">glMatrix</a> library to perform its matrix operations, so you will need to include that in your project. We're loading a copy from a CDN in our HTML's {{HTMLElement("head")}}.</p>
-</div>
+> **Note:** This project uses the [glMatrix](http://glmatrix.net/) library to perform its matrix operations, so you will need to include that in your project. We're loading a copy from a CDN in our HTML's {{HTMLElement("head")}}.
 
-<h2 id="Drawing_the_scene">Drawing the scene</h2>
+## Drawing the scene
 
-<p>The most important thing to understand before we get started is that even though we're only rendering a square plane object in this example, we're still drawing in 3D space. It's just we're drawing a square and we're putting it directly in front of the camera perpendicular to the view direction. We need to define the shaders that will create the color for our simple scene as well as draw our object. These will establish how the square plane appears on the screen.</p>
+The most important thing to understand before we get started is that even though we're only rendering a square plane object in this example, we're still drawing in 3D space. It's just we're drawing a square and we're putting it directly in front of the camera perpendicular to the view direction. We need to define the shaders that will create the color for our simple scene as well as draw our object. These will establish how the square plane appears on the screen.
 
-<h3 id="The_shaders">The shaders</h3>
+### The shaders
 
-<p>A <strong>shader</strong> is a program, written using the <a href="https://www.khronos.org/registry/OpenGL/specs/es/3.2/GLSL_ES_Specification_3.20.pdf">OpenGL ES Shading Language</a> (<strong>GLSL</strong>), that takes information about the vertices that make up a shape and generates the data needed to render the pixels onto the screen: namely, the positions of the pixels and their colors.</p>
+A **shader** is a program, written using the [OpenGL ES Shading Language](https://www.khronos.org/registry/OpenGL/specs/es/3.2/GLSL_ES_Specification_3.20.pdf) (**GLSL**), that takes information about the vertices that make up a shape and generates the data needed to render the pixels onto the screen: namely, the positions of the pixels and their colors.
 
-<p>There are two shader functions run when drawing WebGL content: the <strong>vertex shader</strong> and the <strong>fragment shader</strong>. You write these in GLSL and pass the text of the code into WebGL to be compiled for execution on the GPU. Together, a set of vertex and fragment shaders is called a <strong>shader program</strong>.</p>
+There are two shader functions run when drawing WebGL content: the **vertex shader** and the **fragment shader**. You write these in GLSL and pass the text of the code into WebGL to be compiled for execution on the GPU. Together, a set of vertex and fragment shaders is called a **shader program**.
 
-<p>Let's take a quick look at the two types of shader, with the example in mind of drawing a 2D shape into the WebGL context.</p>
+Let's take a quick look at the two types of shader, with the example in mind of drawing a 2D shape into the WebGL context.
 
-<h4 id="Vertex_shader">Vertex shader</h4>
+#### Vertex shader
 
-<p>Each time a shape is rendered, the vertex shader is run for each vertex in the shape. Its job is to transform the input vertex from its original coordinate system into the <strong><a href="/en-US/docs/Web/API/WebGL_API/WebGL_model_view_projection#Clip_space">clip space</a></strong> coordinate system used by WebGL, in which each axis has a range from -1.0 to 1.0, regardless of aspect ratio, actual size, or any other factors.</p>
+Each time a shape is rendered, the vertex shader is run for each vertex in the shape. Its job is to transform the input vertex from its original coordinate system into the **[clip space](/en-US/docs/Web/API/WebGL_API/WebGL_model_view_projection#Clip_space)** coordinate system used by WebGL, in which each axis has a range from -1.0 to 1.0, regardless of aspect ratio, actual size, or any other factors.
 
-<p>The vertex shader must perform the needed transforms on the vertex's position, make any other adjustments or calculations it needs to make on a per-vertex basis, then return the transformed vertex by saving it in a special variable provided by GLSL, called <code>gl_Position</code>.</p>
+The vertex shader must perform the needed transforms on the vertex's position, make any other adjustments or calculations it needs to make on a per-vertex basis, then return the transformed vertex by saving it in a special variable provided by GLSL, called `gl_Position`.
 
-<p>The vertex shader can, as needed, also do things like determine the coordinates within the face's texture of the {{interwiki("wikipedia", "texel_(graphics)", "texel")}} to apply to the vertex, apply the normals to determine the lighting factor to apply to the vertex, and so on. This information can then be stored in <a href="/en-US/docs/Web/API/WebGL_API/Data#Varyings">varyings</a> or <a href="/en-US/docs/Web/API/WebGL_API/Data#Attributes">attributes</a> as appropriate to be shared with the fragment shader.</p>
+The vertex shader can, as needed, also do things like determine the coordinates within the face's texture of the {{interwiki("wikipedia", "texel_(graphics)", "texel")}} to apply to the vertex, apply the normals to determine the lighting factor to apply to the vertex, and so on. This information can then be stored in [varyings](/en-US/docs/Web/API/WebGL_API/Data#Varyings) or [attributes](/en-US/docs/Web/API/WebGL_API/Data#Attributes) as appropriate to be shared with the fragment shader.
 
-<p>Our vertex shader below receives vertex position values from an attribute we define called <code>aVertexPosition</code>. That position is then multiplied by two 4x4 matrices we provide called <code>uProjectionMatrix</code> and <code>uModelViewMatrix</code>; <code>gl_Position</code> is set to the result. For more info on projection and other matrixes <a href="https://webglfundamentals.org/webgl/lessons/webgl-3d-perspective.html">you might find this article useful</a>.</p>
+Our vertex shader below receives vertex position values from an attribute we define called `aVertexPosition`. That position is then multiplied by two 4x4 matrices we provide called `uProjectionMatrix` and `uModelViewMatrix`; `gl_Position` is set to the result. For more info on projection and other matrixes [you might find this article useful](https://webglfundamentals.org/webgl/lessons/webgl-3d-perspective.html).
 
-<pre class="brush: js">  // Vertex shader program
+```js
+  // Vertex shader program
 
   const vsSource = `
     attribute vec4 aVertexPosition;
@@ -57,30 +56,32 @@ tags:
       gl_Position = uProjectionMatrix * uModelViewMatrix * aVertexPosition;
     }
   `;
-</pre>
+```
 
-<p>It's worth noting that we're using a <code>vec4</code> attribute for the vertex position, which doesn't actually use a 4-component vector; that is, it could be handled as a <code>vec2</code> or <code>vec3</code> depending on the situation. But when we do our math, we will need it to be a <code>vec4</code>, so rather than convert it to a <code>vec4</code> every time we do math, we'll just use a <code>vec4</code> from the beginning. This eliminates operations from every calculation we do in our shader. Performance matters.</p>
+It's worth noting that we're using a `vec4` attribute for the vertex position, which doesn't actually use a 4-component vector; that is, it could be handled as a `vec2` or `vec3` depending on the situation. But when we do our math, we will need it to be a `vec4`, so rather than convert it to a `vec4` every time we do math, we'll just use a `vec4` from the beginning. This eliminates operations from every calculation we do in our shader. Performance matters.
 
-<p>In this example, we're not computing any lighting at all, since we haven't yet applied any to the scene. That will come later, in the example <a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL">Lighting in WebGL</a>. Note also the lack of any work with textures here; that will be added in <a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL">Using textures in WebGL</a>.</p>
+In this example, we're not computing any lighting at all, since we haven't yet applied any to the scene. That will come later, in the example [Lighting in WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL). Note also the lack of any work with textures here; that will be added in [Using textures in WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL).
 
-<h4 id="Fragment_shader">Fragment shader</h4>
+#### Fragment shader
 
-<p>The <strong>fragment shader</strong> is called once for every pixel on each shape to be drawn, after the shape's vertices have been processed by the vertex shader. Its job is to determine the color of that pixel by figuring out which texel (that is, the pixel from within the shape's texture) to apply to the pixel, getting that texel's color, then applying the appropriate lighting to the color. The color is then returned to the WebGL layer by storing it in the special variable <code>gl_FragColor</code>. That color is then drawn to the screen in the correct position for the shape's corresponding pixel.</p>
+The **fragment shader** is called once for every pixel on each shape to be drawn, after the shape's vertices have been processed by the vertex shader. Its job is to determine the color of that pixel by figuring out which texel (that is, the pixel from within the shape's texture) to apply to the pixel, getting that texel's color, then applying the appropriate lighting to the color. The color is then returned to the WebGL layer by storing it in the special variable `gl_FragColor`. That color is then drawn to the screen in the correct position for the shape's corresponding pixel.
 
-<p>In this case, we're returning white every time, since we're just drawing a white square, with no lighting in use.</p>
+In this case, we're returning white every time, since we're just drawing a white square, with no lighting in use.
 
-<pre class="brush: js">  const fsSource = `
+```js
+  const fsSource = `
     void main() {
       gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
     }
   `;
-</pre>
+```
 
-<h3 id="Initializing_the_shaders">Initializing the shaders</h3>
+### Initializing the shaders
 
-<p>Now that we've defined the two shaders we need to pass them to WebGL, compile them, and link them together. The code below creates the two shaders by calling <code>loadShader()</code>, passing the type and source for the shader. It then creates a program, attaches the shaders and links them together. If compiling or linking fails the code displays an alert.</p>
+Now that we've defined the two shaders we need to pass them to WebGL, compile them, and link them together. The code below creates the two shaders by calling `loadShader()`, passing the type and source for the shader. It then creates a program, attaches the shaders and links them together. If compiling or linking fails the code displays an alert.
 
-<pre class="brush: js">//
+```js
+//
 // Initialize a shader program, so WebGL knows how to draw our data
 //
 function initShaderProgram(gl, vsSource, fsSource) {
@@ -129,26 +130,26 @@ function loadShader(gl, type, source) {
 
   return shader;
 }
-</pre>
+```
 
-<p>The <code>loadShader()</code> function takes as input the WebGL context, the shader type, and the source code, then creates and compiles the shader as follows:</p>
+The `loadShader()` function takes as input the WebGL context, the shader type, and the source code, then creates and compiles the shader as follows:
 
-<ol>
- <li>A new shader is created by calling {{domxref("WebGLRenderingContext.createShader", "gl.createShader()")}}.</li>
- <li>The shader's source code is sent to the shader by calling {{domxref("WebGLRenderingContext.shaderSource", "gl.shaderSource()")}}.</li>
- <li>Once the shader has the source code, it's compiled using {{domxref("WebGLRenderingContext.compileShader", "gl.compileShader()")}}.</li>
- <li>To check to be sure the shader successfully compiled, the shader parameter <code>gl.COMPILE_STATUS</code> is checked. To get its value, we call {{domxref("WebGLRenderingContext.getShaderParameter", "gl.getShaderParameter()")}}, specifying the shader and the name of the parameter we want to check (<code>gl.COMPILE_STATUS</code>). If that's <code>false</code>, we know the shader failed to compile, so show an alert with log information obtained from the compiler using {{domxref("WebGLRenderingContext.getShaderInfoLog", "gl.getShaderInfoLog()")}}, then delete the shader and return <code>null</code> to indicate a failure to load the shader.</li>
- <li>If the shader was loaded and successfully compiled, the compiled shader is returned to the caller.</li>
-</ol>
+1.  A new shader is created by calling {{domxref("WebGLRenderingContext.createShader", "gl.createShader()")}}.
+2.  The shader's source code is sent to the shader by calling {{domxref("WebGLRenderingContext.shaderSource", "gl.shaderSource()")}}.
+3.  Once the shader has the source code, it's compiled using {{domxref("WebGLRenderingContext.compileShader", "gl.compileShader()")}}.
+4.  To check to be sure the shader successfully compiled, the shader parameter `gl.COMPILE_STATUS` is checked. To get its value, we call {{domxref("WebGLRenderingContext.getShaderParameter", "gl.getShaderParameter()")}}, specifying the shader and the name of the parameter we want to check (`gl.COMPILE_STATUS`). If that's `false`, we know the shader failed to compile, so show an alert with log information obtained from the compiler using {{domxref("WebGLRenderingContext.getShaderInfoLog", "gl.getShaderInfoLog()")}}, then delete the shader and return `null` to indicate a failure to load the shader.
+5.  If the shader was loaded and successfully compiled, the compiled shader is returned to the caller.
 
-<p>To use this code we call it like this</p>
+To use this code we call it like this
 
-<pre class="brush: js">  const shaderProgram = initShaderProgram(gl, vsSource, fsSource);
-</pre>
+```js
+  const shaderProgram = initShaderProgram(gl, vsSource, fsSource);
+```
 
-<p>After we've created a shader program we need to look up the locations that WebGL assigned to our inputs. In this case we have one attribute and two uniforms. Attributes receive values from buffers. Each iteration of the vertex shader receives the next value from the buffer assigned to that attribute. <a href="/en-US/docs/Web/API/WebGL_API/Data#Uniforms">Uniforms</a> are similar to JavaScript global variables. They stay the same value for all iterations of a shader. Since the attribute and uniform locations are specific to a single shader program we'll store them together to make them easy to pass around</p>
+After we've created a shader program we need to look up the locations that WebGL assigned to our inputs. In this case we have one attribute and two uniforms. Attributes receive values from buffers. Each iteration of the vertex shader receives the next value from the buffer assigned to that attribute. [Uniforms](/en-US/docs/Web/API/WebGL_API/Data#Uniforms) are similar to JavaScript global variables. They stay the same value for all iterations of a shader. Since the attribute and uniform locations are specific to a single shader program we'll store them together to make them easy to pass around
 
-<pre class="brush: js">  const programInfo = {
+```js
+  const programInfo = {
     program: shaderProgram,
     attribLocations: {
       vertexPosition: gl.getAttribLocation(shaderProgram, 'aVertexPosition'),
@@ -158,13 +159,14 @@ function loadShader(gl, type, source) {
       modelViewMatrix: gl.getUniformLocation(shaderProgram, 'uModelViewMatrix'),
     },
   };
-</pre>
+```
 
-<h2 id="Creating_the_square_plane">Creating the square plane</h2>
+## Creating the square plane
 
-<p>Before we can render our square plane, we need to create the buffer that contains its vertex positions and put the vertex positions in it. We'll do that using a function we call <code>initBuffers()</code>; as we explore more advanced WebGL concepts, this routine will be augmented to create more -- and more complex -- 3D objects.</p>
+Before we can render our square plane, we need to create the buffer that contains its vertex positions and put the vertex positions in it. We'll do that using a function we call `initBuffers()`; as we explore more advanced WebGL concepts, this routine will be augmented to create more -- and more complex -- 3D objects.
 
-<pre class="brush: js">function initBuffers(gl) {
+```js
+function initBuffers(gl) {
 
   // Create a buffer for the square's positions.
 
@@ -196,17 +198,18 @@ function loadShader(gl, type, source) {
     position: positionBuffer,
   };
 }
-</pre>
+```
 
-<p>This routine is pretty simplistic given the basic nature of the scene in this example. It starts by calling the <code>gl</code> object's {{domxref("WebGLRenderingContext.createBuffer()", "createBuffer()")}} method to obtain a buffer into which we'll store the vertex positions. This is then bound to the context by calling the {{domxref("WebGLRenderingContext.bindBuffer()", "bindBuffer()")}} method.</p>
+This routine is pretty simplistic given the basic nature of the scene in this example. It starts by calling the `gl` object's {{domxref("WebGLRenderingContext.createBuffer()", "createBuffer()")}} method to obtain a buffer into which we'll store the vertex positions. This is then bound to the context by calling the {{domxref("WebGLRenderingContext.bindBuffer()", "bindBuffer()")}} method.
 
-<p>Once that's done, we create a JavaScript array containing the position for each vertex of the square plane. This is then converted into an array of floats and passed into the <code>gl</code> object's {{domxref("WebGLRenderingContext.bufferData()", "bufferData()")}} method to establish the vertex positions for the object.</p>
+Once that's done, we create a JavaScript array containing the position for each vertex of the square plane. This is then converted into an array of floats and passed into the `gl` object's {{domxref("WebGLRenderingContext.bufferData()", "bufferData()")}} method to establish the vertex positions for the object.
 
-<h2 id="Rendering_the_scene">Rendering the scene</h2>
+## Rendering the scene
 
-<p>Once the shaders are established, the locations are looked up, and the square plane's vertex positions put in a buffer, we can actually render the scene. Since we're not animating anything in this example, our <code>drawScene()</code> function is very simple. It uses a few utility routines we'll cover shortly.</p>
+Once the shaders are established, the locations are looked up, and the square plane's vertex positions put in a buffer, we can actually render the scene. Since we're not animating anything in this example, our `drawScene()` function is very simple. It uses a few utility routines we'll cover shortly.
 
-<pre class="brush: js">function drawScene(gl, programInfo, buffers) {
+```js
+function drawScene(gl, programInfo, buffers) {
   gl.clearColor(0.0, 0.0, 0.0, 1.0);  // Clear to black, fully opaque
   gl.clearDepth(1.0);                 // Clear everything
   gl.enable(gl.DEPTH_TEST);           // Enable depth testing
@@ -290,27 +293,24 @@ function loadShader(gl, type, source) {
     gl.drawArrays(gl.TRIANGLE_STRIP, offset, vertexCount);
   }
 }
+```
 
-</pre>
+The first step is to clear the canvas to our background color; then we establish the camera's perspective. We set a field of view of 45°, with a width to height ratio that matches the display dimensions of our canvas. We also specify that we only want objects between 0.1 and 100 units from the camera to be rendered.
 
-<p>The first step is to clear the canvas to our background color; then we establish the camera's perspective. We set a field of view of 45°, with a width to height ratio that matches the display dimensions of our canvas. We also specify that we only want objects between 0.1 and 100 units from the camera to be rendered.</p>
+Then we establish the position of the square plane by loading the identity position and translating away from the camera by 6 units. After that, we bind the square's vertex buffer to the attribute the shader is using for `aVertexPosition` and we tell WebGL how to pull the data out of it. Finally we draw the object by calling the {{domxref("WebGLRenderingContext.drawArrays()", "drawArrays()")}} method.
 
-<p>Then we establish the position of the square plane by loading the identity position and translating away from the camera by 6 units. After that, we bind the square's vertex buffer to the attribute the shader is using for <code>aVertexPosition</code> and we tell WebGL how to pull the data out of it. Finally we draw the object by calling the {{domxref("WebGLRenderingContext.drawArrays()", "drawArrays()")}} method.</p>
+{{EmbedGHLiveSample('webgl-examples/tutorial/sample2/index.html', 670, 510) }}
 
-<p>{{EmbedGHLiveSample('webgl-examples/tutorial/sample2/index.html', 670, 510) }}</p>
+[View the complete code](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample2) | [Open this demo on a new page](https://mdn.github.io/webgl-examples/tutorial/sample2/)
 
-<p><a href="https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample2">View the complete code</a> | <a href="https://mdn.github.io/webgl-examples/tutorial/sample2/">Open this demo on a new page</a></p>
+## Matrix utility operations
 
-<h2 id="Matrix_utility_operations">Matrix utility operations</h2>
+Matrix operations might seem complicated but [they are actually pretty simple if you take them one step at a time](https://webglfundamentals.org/webgl/lessons/webgl-2d-matrices.html). Generally people use a matrix library rather than writing their own. In our case we're using the popular [glMatrix library](http://glmatrix.net/).
 
-<p>Matrix operations might seem complicated but <a href="https://webglfundamentals.org/webgl/lessons/webgl-2d-matrices.html">they are actually pretty simple if you take them one step at a time</a>. Generally people use a matrix library rather than writing their own. In our case we're using the popular <a href="http://glmatrix.net/">glMatrix library</a>.</p>
+### See also
 
-<h3 id="See_also">See also</h3>
+- [Matrices](https://webglfundamentals.org/webgl/lessons/webgl-2d-matrices.html) on WebGLFundamentals
+- [Matrices](http://mathworld.wolfram.com/Matrix.html) on Wolfram MathWorld
+- [Matrix](<https://en.wikipedia.org/wiki/Matrix_(mathematics)>) on Wikipedia
 
-<ul>
- <li><a href="https://webglfundamentals.org/webgl/lessons/webgl-2d-matrices.html">Matrices</a> on WebGLFundamentals</li>
- <li><a href="http://mathworld.wolfram.com/Matrix.html">Matrices</a> on Wolfram MathWorld</li>
- <li><a href="https://en.wikipedia.org/wiki/Matrix_(mathematics)">Matrix</a> on Wikipedia</li>
-</ul>
-
-<p>{{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}</p>
+{{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}

@@ -2,53 +2,50 @@
 title: WebGLRenderingContext.getVertexAttribOffset()
 slug: Web/API/WebGLRenderingContext/getVertexAttribOffset
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getVertexAttribOffset
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.getVertexAttribOffset()</code></strong> method
-  of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> returns the address of a
-  specified vertex attribute.</p>
+The **`WebGLRenderingContext.getVertexAttribOffset()`** method
+of the [WebGL API](/en-US/docs/Web/API/WebGL_API) returns the address of a
+specified vertex attribute.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">GLintptr <var>gl</var>.getVertexAttribOffset(<var>index</var>, <var>pname</var>);
-</pre>
+```js
+GLintptr gl.getVertexAttribOffset(index, pname);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>index</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLuint")}} specifying the index of the vertex attribute.</dd>
-  <dt>pname</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} which must be <code>gl.VERTEX_ATTRIB_ARRAY_POINTER</code>.
-  </dd>
-</dl>
+- index
+  - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the index of the vertex attribute.
+- pname
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} which must be `gl.VERTEX_ATTRIB_ARRAY_POINTER`.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("WebGL_API/Types", "GLintptr")}} indicating the address of the vertex attribute.</p>
+A {{domxref("WebGL_API/Types", "GLintptr")}} indicating the address of the vertex attribute.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">gl.getVertexAttribOffset(i, gl.VERTEX_ATTRIB_ARRAY_POINTER);
-</pre>
+```js
+gl.getVertexAttribOffset(i, gl.VERTEX_ATTRIB_ARRAY_POINTER);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.vertexAttribPointer()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.vertexAttribPointer()")}}

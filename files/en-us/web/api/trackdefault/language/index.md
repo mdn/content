@@ -14,32 +14,31 @@ tags:
   - Video
 browser-compat: api.TrackDefault.language
 ---
-<div>{{APIRef("Media Source Extensions")}}{{deprecated_header}}</div>
+{{APIRef("Media Source Extensions")}}{{deprecated_header}}
 
-<p>The <code><strong>language</strong></code> read-only property of the {{domxref("TrackDefault")}} interface returns a default language for an associated {{domxref("SourceBuffer")}} to use when an <a href="https://w3c.github.io/media-source/#init-segment">initialization segment</a> does not contain language information for a new track.</p>
+The **`language`** read-only property of the {{domxref("TrackDefault")}} interface returns a default language for an associated {{domxref("SourceBuffer")}} to use when an [initialization segment](https://w3c.github.io/media-source/#init-segment) does not contain language information for a new track.
 
-<p>This should be a valid language code, e.g. <code>en-US</code>.</p>
+This should be a valid language code, e.g. `en-US`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var mylanguage = TrackDefault.language;
-</pre>
+```js
+var mylanguage = TrackDefault.language;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}}.</p>
+A {{domxref("DOMString")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>TBD</p>
+TBD
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("MediaSource")}}</li>
- <li>{{domxref("SourceBuffer")}}</li>
-</ul>
+- {{domxref("MediaSource")}}
+- {{domxref("SourceBuffer")}}

@@ -13,20 +13,21 @@ tags:
   - Window
 browser-compat: api.Window.dialogArguments
 ---
-<p>{{Deprecated_Header}}{{APIRef}}</p>
+{{Deprecated_Header}}{{APIRef}}
 
-<p>The <code>dialogArguments</code> property returns the
-    parameters that were passed into the {{domxref("window.showModalDialog()")}}
-    method.</p>
+The `dialogArguments` property returns the
+parameters that were passed into the {{domxref("window.showModalDialog()")}}
+method.
 
-<p>This lets you determine what parameters were specified when the modal
-  dialog was created.</p>
+This lets you determine what parameters were specified when the modal
+dialog was created.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var>value</var> = window.dialogArguments;</pre>
+```js
+value = window.dialogArguments;
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

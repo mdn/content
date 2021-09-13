@@ -2,77 +2,78 @@
 title: HTMLImageElement.useMap
 slug: Web/API/HTMLImageElement/useMap
 tags:
-- API
-- DOM
-- HTML
-- HTML DOM
-- HTML WHATWG
-- HTMLImageElement
-- Image maps
-- Links
-- Property
-- Reference
-- interactive
-- useMap
+  - API
+  - DOM
+  - HTML
+  - HTML DOM
+  - HTML WHATWG
+  - HTMLImageElement
+  - Image maps
+  - Links
+  - Property
+  - Reference
+  - interactive
+  - useMap
 browser-compat: api.HTMLImageElement.useMap
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p>The <code><strong>useMap</strong></code> property on the
-    {{domxref("HTMLImageElement")}} interface reflects the value of the
-    {{Glossary("HTML")}} {{htmlattrxref("usemap", "img")}} attribute, which is a string
-    providing the name of the client-side image map to apply to the image.</p>
+The **`useMap`** property on the
+{{domxref("HTMLImageElement")}} interface reflects the value of the
+{{Glossary("HTML")}} {{htmlattrxref("usemap", "img")}} attribute, which is a string
+providing the name of the client-side image map to apply to the image.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>htmlImageElement</em>.useMap = <em>imageMapAnchor</em>;
-let <em>imageMapAnchor</em> = <em>htmlImageElement</em>.useMap;
-</pre>
+```js
+htmlImageElement.useMap = imageMapAnchor;
+let imageMapAnchor = htmlImageElement.useMap;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("USVString")}} providing the page-local URL (that is, a URL that begins
-  with the hash or pound symbol, "<code>#</code>") of the {{HTMLElement("map")}} element
-  which defines the image map to apply to the image.</p>
+A {{domxref("USVString")}} providing the page-local URL (that is, a URL that begins
+with the hash or pound symbol, "`#`") of the {{HTMLElement("map")}} element
+which defines the image map to apply to the image.
 
-<p>You can learn more about client-side image maps in our learning article <a
-    href="/en-US/docs/Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image">Add a hitmap on
-    top of an image</a>.</p>
+You can learn more about client-side image maps in our learning article [Add a hitmap on
+top of an image](/en-US/docs/Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image).
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>The string value of <code>useMap</code> must be a valid anchor for a
-  {{HTMLElement("map")}} element. In other words, this string should be the value of the
-  appropriate <code>&lt;map&gt;</code>'s {{htmlattrxref("name", "map")}} attribute with a
-  pound or hash symbol prepended to it.</p>
+The string value of `useMap` must be a valid anchor for a
+{{HTMLElement("map")}} element. In other words, this string should be the value of the
+appropriate `<map>`'s {{htmlattrxref("name", "map")}} attribute with a
+pound or hash symbol prepended to it.
 
-<p>Consider a <code>&lt;map&gt;</code> that looks like this:</p>
+Consider a `<map>` that looks like this:
 
-<pre class="brush: html">&lt;map name="mainmenu-map"&gt;
-  &lt;area shape="circle" coords="25, 25, 75" href="/index.html" alt="Return to home page"&gt;
-  &lt;area shape="rect" coords="25, 25, 100, 150" href="/index.html" alt="Shop"&gt;
-&lt;/map&gt;
-</pre>
+```html
+<map name="mainmenu-map">
+  <area shape="circle" coords="25, 25, 75" href="/index.html" alt="Return to home page">
+  <area shape="rect" coords="25, 25, 100, 150" href="/index.html" alt="Shop">
+</map>
+```
 
-<p>Given the image map named <code>mainmenu-map</code>, the image which uses it should
-  look something like the following:</p>
+Given the image map named `mainmenu-map`, the image which uses it should
+look something like the following:
 
-<pre
-  class="brush: html">&lt;img src="menubox.png" usemap="#mainmenu-map"&gt;</pre>
+```html
+<img src="menubox.png" usemap="#mainmenu-map">
+```
 
-<p>For additional examples (including interactive ones), see the articles about the
-  {{HTMLElement("map")}} and {{HTMLElement("area")}} elements, as well as the <a
-    href="/en-US/docs/Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image">guide to using
-    image maps</a>.</p>
+For additional examples (including interactive ones), see the articles about the
+{{HTMLElement("map")}} and {{HTMLElement("area")}} elements, as well as the [guide to using
+image maps](/en-US/docs/Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image).
 
-<h2 id="Example">Example</h2>
+## Example
 
-<div>{{EmbedInteractiveExample("pages/tabbed/area.html", "tabbed-taller")}}</div>
+{{EmbedInteractiveExample("pages/tabbed/area.html", "tabbed-taller")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

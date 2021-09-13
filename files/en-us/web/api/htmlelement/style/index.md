@@ -10,85 +10,83 @@ tags:
   - Style
 browser-compat: api.HTMLElement.style
 ---
-<div>{{APIRef("CSSOM")}}</div>
+{{APIRef("CSSOM")}}
 
-<p>The <code><strong>style</strong></code> read-only property returns the <em>inline</em> style of an element in the form of a {{domxref("CSSStyleDeclaration")}} object that contains a list of all styles properties for that element with values assigned for the attributes that are defined in the element's inline <a href="/en-US/docs/Web/HTML/Global_attributes/style"><code>style</code> attribute</a>.</p>
+The **`style`** read-only property returns the _inline_ style of an element in the form of a {{domxref("CSSStyleDeclaration")}} object that contains a list of all styles properties for that element with values assigned for the attributes that are defined in the element's inline [`style` attribute](/en-US/docs/Web/HTML/Global_attributes/style).
 
-<div class="notecard note">
-<p><strong>Note:</strong> See the <a href="/en-US/docs/Web/CSS/CSS_Properties_Reference">CSS Properties Reference</a> for a list of the CSS properties accessible via <code>style</code>. The <code>style</code> property has the same (and highest) priority in the CSS cascade as an inline style declaration set via the <code>style</code> attribute.</p>
-</div>
+> **Note:** See the [CSS Properties Reference](/en-US/docs/Web/CSS/CSS_Properties_Reference) for a list of the CSS properties accessible via `style`. The `style` property has the same (and highest) priority in the CSS cascade as an inline style declaration set via the `style` attribute.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>style</var> = <var>element</var>.style</pre>
+```js
+style = element.style
+```
 
-<h2 id="value">Value</h2>
+## Value
 
-<p>A {{domxref("CSSStyleDeclaration")}} object, with the following properties:</p>
+A {{domxref("CSSStyleDeclaration")}} object, with the following properties:
 
-<dl>
-  <dt>computed flag</dt>
-  <dd>Unset.</dd>
-  <dt>parent CSS rule</dt>
-  <dd>Null.</dd>
-  <dt>owner node</dt>
-  <dd><code>this</code></dd>
-</dl>
+- computed flag
+  - : Unset.
+- parent CSS rule
+  - : Null.
+- owner node
+  - : `this`
 
-<h2 id="Setting_styles">Setting styles</h2>
+## Setting styles
 
-<p>While this property is considered read-only, it is possible to set an inline style by assigning a string directly to the <code>style</code> property. In this case the string is forwarded to {{domxref("CSSStyleDeclaration.cssText")}}. Using <code>style</code> in this manner will completely overwrite all inline styles on the element.</p>
+While this property is considered read-only, it is possible to set an inline style by assigning a string directly to the `style` property. In this case the string is forwarded to {{domxref("CSSStyleDeclaration.cssText")}}. Using `style` in this manner will completely overwrite all inline styles on the element.
 
-<p>Therefore, to add specific styles to an element without altering other style values, it is generally preferable to set individual properties on the {{domxref("CSSStyleDeclaration")}} object. For example, <code>element.style.backgroundColor = "red"</code>.</p>
+Therefore, to add specific styles to an element without altering other style values, it is generally preferable to set individual properties on the {{domxref("CSSStyleDeclaration")}} object. For example, `element.style.backgroundColor = "red"`.
 
-<p>A style declaration is reset by setting it to <code>null</code> or an empty string, e.g., <code>elt.style.color = null</code>.</p>
+A style declaration is reset by setting it to `null` or an empty string, e.g., `elt.style.color = null`.
 
-<h3 id="Getting_style_information">Getting style information</h3>
+### Getting style information
 
-<p>The <code>style</code> property is not useful for completely learning about the styles applied on the element, since it represents only the CSS declarations set in the element's inline <code>style</code> attribute, not those that come from style rules elsewhere, such as style rules in the {{HTMLElement("head")}} section, or external style sheets. To get the values of all CSS properties for an element you should use {{domxref("Window.getComputedStyle()")}} instead.</p>
+The `style` property is not useful for completely learning about the styles applied on the element, since it represents only the CSS declarations set in the element's inline `style` attribute, not those that come from style rules elsewhere, such as style rules in the {{HTMLElement("head")}} section, or external style sheets. To get the values of all CSS properties for an element you should use {{domxref("Window.getComputedStyle()")}} instead.
 
-<p>The following code snippet demonstrates the difference between the values obtained using the element's <code>style</code> property and that obtained using the <code>getComputedStyle()</code> method:</p>
+The following code snippet demonstrates the difference between the values obtained using the element's `style` property and that obtained using the `getComputedStyle()` method:
 
-<pre class="brush: html">&lt;!DOCTYPE HTML&gt;
-&lt;html&gt;
-  &lt;body style="font-weight:bold;"&gt;
-    &lt;div style="color:red" id="myElement"&gt;..&lt;/div&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</pre>
+```html
+<!DOCTYPE HTML>
+<html>
+  <body style="font-weight:bold;">
+    <div style="color:red" id="myElement">..</div>
+  </body>
+</html>
+```
 
-<pre class="brush:js">var element = document.getElementById("myElement");
+```js
+var element = document.getElementById("myElement");
 var out = "";
 var elementStyle = element.style;
 var computedStyle = window.getComputedStyle(element, null);
 
 for (prop in elementStyle) {
   if (elementStyle.hasOwnProperty(prop)) {
-    out += "  " + prop + " = '" + elementStyle[prop] + "' &gt; '" + computedStyle[prop] + "'\n";
+    out += "  " + prop + " = '" + elementStyle[prop] + "' > '" + computedStyle[prop] + "'\n";
   }
 }
 console.log(out)
-</pre>
+```
 
-<p>The output would be something like:</p>
+The output would be something like:
 
-<pre>...
-fontWeight = '' &gt; 'bold'
-color = 'red' &gt; 'rgb(255, 0, 0)'
-...</pre>
+    ...
+    fontWeight = '' > 'bold'
+    color = 'red' > 'rgb(255, 0, 0)'
+    ...
 
-<p>Note the presence of the value <code>bold</code> for <code>font-weight</code> in the computed style and the absence of it in the element's <code>style</code> property</p>
+Note the presence of the value `bold` for `font-weight` in the computed style and the absence of it in the element's `style` property
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information">Using dynamic styling information</a></li>
-</ul>
+- [Using dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)

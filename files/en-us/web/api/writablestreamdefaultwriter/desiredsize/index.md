@@ -11,35 +11,35 @@ tags:
   - desiredSize
 browser-compat: api.WritableStreamDefaultWriter.desiredSize
 ---
-<div>{{SeeCompatTable}}{{APIRef("Streams")}}</div>
+{{SeeCompatTable}}{{APIRef("Streams")}}
 
-<p>The <strong><code>desiredSize</code></strong> read-only property of the
-  {{domxref("WritableStreamDefaultWriter")}} interface returns the desired size required
-  to fill the stream's internal queue.</p>
+The **`desiredSize`** read-only property of the
+{{domxref("WritableStreamDefaultWriter")}} interface returns the desired size required
+to fill the stream's internal queue.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var><code>var <em>desiredSize</em> = </code>writableStreamDefaultWriter</var>.desiredSize;</pre>
+```js
+var desiredSize = writableStreamDefaultWriter.desiredSize;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An integer. Note that this can be negative if the queue is over-full.</p>
+An integer. Note that this can be negative if the queue is over-full.
 
-<p>The value will be <code>null</code> if the stream cannot be successfully written to
-  (due to either being errored, or having an abort queued up), and zero if the stream is
-  closed.</p>
+The value will be `null` if the stream cannot be successfully written to
+(due to either being errored, or having an abort queued up), and zero if the stream is
+closed.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>TypeError</dt>
-  <dd>The writer’s lock is released.</dd>
-</dl>
+- TypeError
+  - : The writer’s lock is released.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js ">const writableStream = new WritableStream({
+```js
+const writableStream = new WritableStream({
   write(chunk) {
     ...
   },
@@ -58,12 +58,13 @@ const writer = writableStream.getWriter();
 ...
 
 // return stream's desired size
-let size = writer.desiredSize;</pre>
+let size = writer.desiredSize;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -11,40 +11,40 @@ tags:
   - Web MIDI API
 browser-compat: api.MIDIInput
 ---
-<div>{{APIRef("Web MIDI API")}}{{securecontext_header}}</div>
+{{APIRef("Web MIDI API")}}{{securecontext_header}}
 
-<p>The <strong><code>MIDIInput</code></strong> interface of the <a href="/en-US/docs/Web/API/Web_MIDI_API">Web MIDI API</a> receives messages from a MIDI input port.</p>
+The **`MIDIInput`** interface of the [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API) receives messages from a MIDI input port.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface doesn't implement any specific properties, but inherits properties from {{domxref("MIDIPort")}}.</em></p>
+_This interface doesn't implement any specific properties, but inherits properties from {{domxref("MIDIPort")}}._
 
-<h3 id="Event_handlers">Event handlers</h3>
+### Event handlers
 
-<dl>
-  <dt>{{domxref("MIDIInput.onmidimessage")}}</dt>
-  <dd>When the current port receives a MIDI message it triggers a call to this event handler.</dd>
-</dl>
+- {{domxref("MIDIInput.onmidimessage")}}
+  - : When the current port receives a MIDI message it triggers a call to this event handler.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface doesn't implement any specific methods, but inherits methods from {{domxref("MIDIPort")}}.</em></p>
+_This interface doesn't implement any specific methods, but inherits methods from {{domxref("MIDIPort")}}._
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the following example the name of each <code>MIDIInput</code> is printed to the console. Then, <code>onmidimessage</code> events are listened for on all input ports. When a message is received the {{domxref("MIDIMessageEvent.data")}} property is printed to the console.</p>
+In the following example the name of each `MIDIInput` is printed to the console. Then, `onmidimessage` events are listened for on all input ports. When a message is received the {{domxref("MIDIMessageEvent.data")}} property is printed to the console.
 
-<pre class="brush:js">inputs.forEach((input) => {
+```js
+inputs.forEach((input) => {
   console.log(input.name); /* inherited property from MIDIPort */
   input.onmidimessage = function(message) {
     console.log(message.data);
   }
-})</pre>
+})
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

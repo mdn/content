@@ -8,37 +8,35 @@ tags:
   - DecompressionStream
 browser-compat: api.DecompressionStream
 ---
-<div>{{DefaultAPISidebar("Compression Streams API")}}</div>
+{{DefaultAPISidebar("Compression Streams API")}}
 
-<p>The <strong><code>DecompressionStream</code></strong> interface of the {{domxref('Compression Streams API','','',' ')}} is an API for decompressing a stream of data.</p>
+The **`DecompressionStream`** interface of the {{domxref('Compression Streams API','','',' ')}} is an API for decompressing a stream of data.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
-  <dt>{{domxref("DecompressionStream.DecompressionStream()")}}</dt>
-  <dd>Creates a new <code>DecompressionStream</code></dd>
-</dl>
+- {{domxref("DecompressionStream.DecompressionStream()")}}
+  - : Creates a new `DecompressionStream`
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
-  <dt>{{domxref("DecompressionStream.readable")}}</dt>
-  <dd>Returns the {{domxref("ReadableStream")}} instance controlled by this object.</dd>
-  <dt>{{domxref("DecompressionStream.writable")}}</dt>
-  <dd>Returns the {{domxref("WritableStream")}} instance controlled by this object.</dd>
-</dl>
+- {{domxref("DecompressionStream.readable")}}
+  - : Returns the {{domxref("ReadableStream")}} instance controlled by this object.
+- {{domxref("DecompressionStream.writable")}}
+  - : Returns the {{domxref("WritableStream")}} instance controlled by this object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this example a blob is decompressed using gzip compression.</p>
+In this example a blob is decompressed using gzip compression.
 
-<pre class="brush: js">const ds = new DecompressionStream('gzip');
-const decompressedStream = blob.stream().pipeThrough(ds);</pre>
+```js
+const ds = new DecompressionStream('gzip');
+const decompressedStream = blob.stream().pipeThrough(ds);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

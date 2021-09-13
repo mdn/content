@@ -11,32 +11,31 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisUtterance.SpeechSynthesisUtterance
 ---
-<div>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</div>
+{{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-<p>The <code>SpeechSynthesisUtterance()</code> constructor of the
-  {{domxref("SpeechSynthesisUtterance")}} interface returns a new
-  <code>SpeechSynthesisUtterance</code> object instance.</p>
+The `SpeechSynthesisUtterance()` constructor of the
+{{domxref("SpeechSynthesisUtterance")}} interface returns a new
+`SpeechSynthesisUtterance` object instance.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var utterThis = new SpeechSynthesisUtterance(text);
-</pre>
+```js
+var utterThis = new SpeechSynthesisUtterance(text);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>text</dt>
-  <dd>A {{domxref("DOMString")}} containing the text that will be synthesized when the
-    utterance is spoken..</dd>
-</dl>
+- text
+  - : A {{domxref("DOMString")}} containing the text that will be synthesized when the
+    utterance is spoken..
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following snippet is excerpted from our <a
-    href="https://github.com/mdn/web-speech-api/tree/master/speak-easy-synthesis">Speech
-    synthesizer demo</a>.</p>
+The following snippet is excerpted from our [Speech
+synthesizer demo](https://github.com/mdn/web-speech-api/tree/master/speak-easy-synthesis).
 
-<pre class="brush: js">var synth = window.speechSynthesis;
+```js
+var synth = window.speechSynthesis;
 
 var inputForm = document.querySelector('form');
 var inputTxt = document.querySelector('input');
@@ -51,25 +50,24 @@ inputForm.onsubmit = function(event) {
 
   var utterThis = new SpeechSynthesisUtterance(inputTxt.value);
   var selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-  for(i = 0; i &lt; voices.length ; i++) {
+  for(i = 0; i < voices.length ; i++) {
     if(voices[i].name === selectedOption) {
       utterThis.voice = voices[i];
     }
   }
   synth.speak(utterThis);
   inputTxt.blur();
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)

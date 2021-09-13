@@ -2,62 +2,62 @@
 title: CanvasRenderingContext2D.measureText()
 slug: Web/API/CanvasRenderingContext2D/measureText
 tags:
-- API
-- Canvas
-- CanvasRenderingContext2D
-- Method
-- Reference
+  - API
+  - Canvas
+  - CanvasRenderingContext2D
+  - Method
+  - Reference
 browser-compat: api.CanvasRenderingContext2D.measureText
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The
-  <code>CanvasRenderingContext2D.measureText()</code>
-  method returns a {{domxref("TextMetrics")}} object that contains information about the
-  measured text (such as its width, for example).</p>
+The
+`CanvasRenderingContext2D.measureText()`
+method returns a {{domxref("TextMetrics")}} object that contains information about the
+measured text (such as its width, for example).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>ctx</em>.measureText(<em>text</em>);</pre>
+```js
+ctx.measureText(text);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>text</code></dt>
-  <dd>The text {{jsxref("String")}} to measure.</dd>
-</dl>
+- `text`
+  - : The text {{jsxref("String")}} to measure.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("TextMetrics")}} object.</p>
+A {{domxref("TextMetrics")}} object.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>Given this {{HTMLElement("canvas")}} element:</p>
+Given this {{HTMLElement("canvas")}} element:
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<p>... you can get a {{domxref("TextMetrics")}} object using the following code:</p>
+... you can get a {{domxref("TextMetrics")}} object using the following code:
 
-<pre class="brush: js;">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 let text = ctx.measureText('Hello world');
 console.log(text.width);  // 56;
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining this method: {{domxref("CanvasRenderingContext2D")}}</li>
-  <li>{{domxref("TextMetrics")}}</li>
-</ul>
+- The interface defining this method: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("TextMetrics")}}

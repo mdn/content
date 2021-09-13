@@ -11,30 +11,32 @@ tags:
   - onerror
 browser-compat: api.WorkerGlobalScope.onerror
 ---
-<p>{{APIRef("Web Workers API")}}</p>
+{{APIRef("Web Workers API")}}
 
-<p>The <strong><code>onerror</code></strong> property of the {{domxref("WorkerGlobalScope")}} interface represents an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> to be called when the {{event("error")}} event occurs.</p>
+The **`onerror`** property of the {{domxref("WorkerGlobalScope")}} interface represents an [event handler](/en-US/docs/Web/Events/Event_handlers) to be called when the {{event("error")}} event occurs.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre>self.onerror = function() { ... };</pre>
+    self.onerror = function() { ... };
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following code snippet shows an <code>onerror</code> handler set inside a worker:</p>
+The following code snippet shows an `onerror` handler set inside a worker:
 
-<pre class="brush: js">self.onerror = function() {
+```js
+self.onerror = function() {
   console.log('There is an error inside your worker!');
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<p>The {{domxref("WorkerGlobalScope")}} interface it belongs to.</p>
+The {{domxref("WorkerGlobalScope")}} interface it belongs to.

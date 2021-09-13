@@ -9,44 +9,42 @@ tags:
   - TrustedTypePolicy
 browser-compat: api.TrustedTypePolicy.createScript
 ---
-<div>{{DefaultAPISidebar("Trusted Types API")}}</div>
+{{DefaultAPISidebar("Trusted Types API")}}
 
-<p>The <strong><code>createScript()</code></strong> method of the {{domxref("TrustedTypePolicy")}} interface creates a {{domxref("TrustedScript")}} object using a policy created by {{domxref("TrustedTypePolicyFactory.createPolicy","TrustedTypePolicyFactory.createPolicy()")}}.</p>
+The **`createScript()`** method of the {{domxref("TrustedTypePolicy")}} interface creates a {{domxref("TrustedScript")}} object using a policy created by {{domxref("TrustedTypePolicyFactory.createPolicy","TrustedTypePolicyFactory.createPolicy()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <var>str</var> = <var>TrustedTypePolicy</var>.createScript(<var>input</var>[,<var>args</var>]);</pre>
+    var str = TrustedTypePolicy.createScript(input[,args]);
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>input</code></dt>
-  <dd>A {{domxref("DOMString")}} containing the string to be sanitized by the policy.</dd>
-  <dt><code>args</code>{{optional_inline}}</dt>
-  <dd>Additional arguments to be passed to the function represented by {{domxref("TrustedTypePolicy")}}.</dd>
-</dl>
+- `input`
+  - : A {{domxref("DOMString")}} containing the string to be sanitized by the policy.
+- `args`{{optional_inline}}
+  - : Additional arguments to be passed to the function represented by {{domxref("TrustedTypePolicy")}}.
 
-<h3 id="Returns">Return value</h3>
+### Return value
 
-<p>A {{domxref("TrustedScript")}} object.</p>
+A {{domxref("TrustedScript")}} object.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>{{jsxref("TypeError")}}</dt>
-  <dd>Thrown if {{domxref("TrustedTypePolicy")}} does not contain a function to run on the input.</dd>
-</dl>
+- {{jsxref("TypeError")}}
+  - : Thrown if {{domxref("TrustedTypePolicy")}} does not contain a function to run on the input.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the below example a string containing a potentially risky script is used as the input for <code>createScript()</code>. The policy can sanitize this script before inserting it into an injection sink that could cause it to be executed.</p>
+In the below example a string containing a potentially risky script is used as the input for `createScript()`. The policy can sanitize this script before inserting it into an injection sink that could cause it to be executed.
 
-<pre class="brush: js">const sanitized = scriptPolicy.createScript("eval('2 + 2')");</pre>
+```js
+const sanitized = scriptPolicy.createScript("eval('2 + 2')");
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -12,44 +12,43 @@ tags:
   - Overview
   - working with files
 ---
-<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}</div>
+{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
-<p>The File System Access API allows read, write and file management capabilities.</p>
+The File System Access API allows read, write and file management capabilities.
 
-<h2 id="Concepts_and_Usage">Concepts and Usage</h2>
+## Concepts and Usage
 
-<p>This API allows interaction with files on a user's local device, or on a user-accessible network file system. Core functionality of this API includes reading files, writing or saving files, and access to directory structure.</p>
+This API allows interaction with files on a user's local device, or on a user-accessible network file system. Core functionality of this API includes reading files, writing or saving files, and access to directory structure.
 
-<p>Most of the interaction with files and directories is accomplished through handles. A parent {{domxref('FileSystemHandle')}} class helps define two child classes: {{domxref('FileSystemFileHandle')}} and {{domxref('FileSystemDirectoryHandle')}}, for files and directories respectively.</p>
+Most of the interaction with files and directories is accomplished through handles. A parent {{domxref('FileSystemHandle')}} class helps define two child classes: {{domxref('FileSystemFileHandle')}} and {{domxref('FileSystemDirectoryHandle')}}, for files and directories respectively.
 
-<p>These handles represent the file or directory on the user's system. You must first gain access to them by showing the user a file or directory picker. The methods which allow this are {{domxref('window.showOpenFilePicker')}} and {{domxref('window.showDirectoryPicker')}}. Once these are called, the file picker presents itself and the user selects either a file or directory. Once this happens successfully, a handle is returned. You can also gain access to file handles via the {{domxref('DataTransferItem.getAsFileSystemHandle()')}} method of the {{domxref('HTML Drag and Drop API')}}.</p>
+These handles represent the file or directory on the user's system. You must first gain access to them by showing the user a file or directory picker. The methods which allow this are {{domxref('window.showOpenFilePicker')}} and {{domxref('window.showDirectoryPicker')}}. Once these are called, the file picker presents itself and the user selects either a file or directory. Once this happens successfully, a handle is returned. You can also gain access to file handles via the {{domxref('DataTransferItem.getAsFileSystemHandle()')}} method of the {{domxref('HTML Drag and Drop API')}}.
 
-<p>The handle provides its own functionality and there are a few differences depending on whether a file or directory was selected (see the <a href="#interfaces">interfaces</a> section for specific details). You then can access file data, or information (including children) of the directory selected.</p>
+The handle provides its own functionality and there are a few differences depending on whether a file or directory was selected (see the [interfaces](#interfaces) section for specific details). You then can access file data, or information (including children) of the directory selected.
 
-<p>There is also “save” functionality, using the {{domxref('FilesystemWritableFileStream')}} interface. Once the data you'd like to save is in a format of {{domxref('Blob')}}, {{domxref('USVString')}} or {{jsxref('ArrayBuffer', 'buffer')}}, you can open a stream and save the data to a file. This can be the existing file or a new file.</p>
+There is also “save” functionality, using the {{domxref('FilesystemWritableFileStream')}} interface. Once the data you'd like to save is in a format of {{domxref('Blob')}}, {{domxref('USVString')}} or {{jsxref('ArrayBuffer', 'buffer')}}, you can open a stream and save the data to a file. This can be the existing file or a new file.
 
-<p>This API opens up potential functionality the web has been lacking. Still, security has been of utmost concern when designing the API, and access to file/directory data is disallowed unless the user specifically permits it.</p>
+This API opens up potential functionality the web has been lacking. Still, security has been of utmost concern when designing the API, and access to file/directory data is disallowed unless the user specifically permits it.
 
-<h2 id="Interfaces">Interfaces</h2>
+## Interfaces
 
-<dl>
- <dt>{{domxref("FileSystemHandle")}}</dt>
- <dd>The <strong><code>FileSystemHandle</code></strong> interface is an object which represents an entry. Multiple handles can represent the same entry. For the most part you do not work with <code>FileSystemEntry</code> directly but rather it's child interfaces {{domxref('FileSystemFileEntry')}} and {{domxref('FileSystemDirectoryEntry')}}.</dd>
- <dt>{{domxref("FileSystemFileHandle")}}</dt>
- <dd>Provides a handle to a file system entry.</dd>
- <dt>{{domxref("FileSystemDirectoryHandle")}}</dt>
- <dd>provides a handle to a file system directory.</dd>
- <dt>{{domxref("FileSystemWritableFileStream")}}</dt>
- <dd>is a {{domxref('WritableStream')}} object with additional convenience methods, which operates on a single file on disk.</dd>
-</dl>
+- {{domxref("FileSystemHandle")}}
+  - : The **`FileSystemHandle`** interface is an object which represents an entry. Multiple handles can represent the same entry. For the most part you do not work with `FileSystemEntry` directly but rather it's child interfaces {{domxref('FileSystemFileEntry')}} and {{domxref('FileSystemDirectoryEntry')}}.
+- {{domxref("FileSystemFileHandle")}}
+  - : Provides a handle to a file system entry.
+- {{domxref("FileSystemDirectoryHandle")}}
+  - : provides a handle to a file system directory.
+- {{domxref("FileSystemWritableFileStream")}}
+  - : is a {{domxref('WritableStream')}} object with additional convenience methods, which operates on a single file on disk.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Accessing_files">Accessing files</h3>
+### Accessing files
 
-<p>The below code allows the user to choose a file from the file picker and then tests to see whether the handle returned is a file or directory</p>
+The below code allows the user to choose a file from the file picker and then tests to see whether the handle returned is a file or directory
 
-<pre class="brush: js">// store a reference to our file handle
+```js
+// store a reference to our file handle
 let fileHandle;
 
 async function getFile() {
@@ -63,11 +62,12 @@ async function getFile() {
   }
 
 }
-</pre>
+```
 
-<p>The following asynchronous function presents a file picker and once a file is chosen, uses the <code>getFile()</code> method to retrieve the contents.</p>
+The following asynchronous function presents a file picker and once a file is chosen, uses the `getFile()` method to retrieve the contents.
 
-<pre class="brush: js">const pickerOpts = {
+```js
+const pickerOpts = {
   types: [
     {
       description: 'Images',
@@ -86,20 +86,24 @@ async function getTheFile() {
 
   // get file contents
   const fileData = await fileHandle.getFile();
-}</pre>
+}
+```
 
-<h3 id="Accessing_directories">Accessing directories</h3>
+### Accessing directories
 
-<p>The following example returns a directory handle with the specified name. If the directory does not exist, it is created.</p>
+The following example returns a directory handle with the specified name. If the directory does not exist, it is created.
 
-<pre class="brush: js">const dirName = 'directoryToGetName';
+```js
+const dirName = 'directoryToGetName';
 
 // assuming we have a directory handle: 'currentDirHandle'
-const subDir = currentDirHandle.getDirectoryHandle(dirName, {create: true});</pre>
+const subDir = currentDirHandle.getDirectoryHandle(dirName, {create: true});
+```
 
-<p>The following asynchronous function uses <code>resolve()</code> to find the path to a chosen file, relative to a specified directory handle.</p>
+The following asynchronous function uses `resolve()` to find the path to a chosen file, relative to a specified directory handle.
 
-<pre class="brush: js">async function returnPathDirectories(directoryHandle) {
+```js
+async function returnPathDirectories(directoryHandle) {
 
   // Get a file handle by showing a file picker:
   const handle = await self.showOpenFilePicker();
@@ -122,15 +126,16 @@ const subDir = currentDirHandle.getDirectoryHandle(dirName, {create: true});</pr
     }
   }
 }
-</pre>
+```
 
-<h3 id="Writing_to_files">Writing to files</h3>
+### Writing to files
 
-<p>The following asynchronous function opens the save file picker, which returns a {{domxref('FileSystemFileHandle')}} once a file is selected. A writable stream is then created using the {{domxref('FileSystemFileHandle.createWritable()')}} method.</p>
+The following asynchronous function opens the save file picker, which returns a {{domxref('FileSystemFileHandle')}} once a file is selected. A writable stream is then created using the {{domxref('FileSystemFileHandle.createWritable()')}} method.
 
-<p>A user defined {{domxref('Blob')}} is then written to the stream which is subsequently closed.</p>
+A user defined {{domxref('Blob')}} is then written to the stream which is subsequently closed.
 
-<pre class="brush: js">async function saveFile() {
+```js
+async function saveFile() {
 
   // create a new handle
   const newHandle = await window.showSaveFilePicker();
@@ -144,11 +149,12 @@ const subDir = currentDirHandle.getDirectoryHandle(dirName, {create: true});</pr
   // close the file and write the contents to disk.
   await writableStream.close();
 }
-</pre>
+```
 
-<p>The following show different examples of options that can be passed into the <code>write()</code> method.</p>
+The following show different examples of options that can be passed into the `write()` method.
 
-<pre class="brush: js">// just pass in the data (no options)
+```js
+// just pass in the data (no options)
 writableStream.write(data)
 
 // writes the data to the stream from the determined position
@@ -159,31 +165,18 @@ writableStream.write({ type: "seek", position: position })
 
 // resizes the file to be size bytes long
 writableStream.write({ type: "truncate", size: size })
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('File System Access API')}}</td>
-   <td>{{Spec2('File System Access API')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                        | Status                                           | Comment             |
+| ---------------------------------------------------- | ------------------------------------------------ | ------------------- |
+| {{SpecName('File System Access API')}} | {{Spec2('File System Access API')}} | Initial definition. |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.FileSystemAccess")}}</p>
+{{Compat("api.FileSystemAccess")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://web.dev/file-system-access/">The File System Access API: simplifying access to local files</a></li>
-</ul>
+- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

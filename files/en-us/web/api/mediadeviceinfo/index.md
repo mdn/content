@@ -15,38 +15,35 @@ tags:
   - WebRTC API
 browser-compat: api.MediaDeviceInfo
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <strong><code>MediaDeviceInfo</code></strong> interface contains information that describes a single media input or output device.</p>
+The **`MediaDeviceInfo`** interface contains information that describes a single media input or output device.
 
-<p>The list of devices obtained by calling {{domxref("MediaDevices.enumerateDevices", "navigator.mediaDevices.enumerateDevices()")}} is an array of <code>MediaDeviceInfo</code> objects, one per media device.</p>
+The list of devices obtained by calling {{domxref("MediaDevices.enumerateDevices", "navigator.mediaDevices.enumerateDevices()")}} is an array of `MediaDeviceInfo` objects, one per media device.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("MediaDeviceInfo.deviceId")}}{{readonlyinline}}</dt>
- <dd>Returns a {{domxref("DOMString")}} that is an identifier for the represented device that is persisted across sessions. It is un-guessable by other applications and unique to the origin of the calling application. It is reset when the user clears cookies (for Private Browsing, a different identifier is used that is not persisted across sessions).</dd>
- <dt>{{domxref("MediaDeviceInfo.groupId")}}{{readonlyinline}}</dt>
- <dd>Returns a {{domxref("DOMString")}} that is a group identifier. Two devices have the same group identifier if they belong to the same physical device — for example a monitor with both a built-in camera and a microphone.</dd>
- <dt>{{domxref("MediaDeviceInfo.kind")}}{{readonlyinline}}</dt>
- <dd>Returns an enumerated value that is either <code>"videoinput"</code>, <code>"audioinput"</code> or <code>"audiooutput"</code>.</dd>
- <dt>{{domxref("MediaDeviceInfo.label")}}{{readonlyinline}}</dt>
- <dd>Returns a {{domxref("DOMString")}} that is a label describing this device (for example "External USB Webcam").</dd>
-</dl>
+- {{domxref("MediaDeviceInfo.deviceId")}}{{readonlyinline}}
+  - : Returns a {{domxref("DOMString")}} that is an identifier for the represented device that is persisted across sessions. It is un-guessable by other applications and unique to the origin of the calling application. It is reset when the user clears cookies (for Private Browsing, a different identifier is used that is not persisted across sessions).
+- {{domxref("MediaDeviceInfo.groupId")}}{{readonlyinline}}
+  - : Returns a {{domxref("DOMString")}} that is a group identifier. Two devices have the same group identifier if they belong to the same physical device — for example a monitor with both a built-in camera and a microphone.
+- {{domxref("MediaDeviceInfo.kind")}}{{readonlyinline}}
+  - : Returns an enumerated value that is either `"videoinput"`, `"audioinput"` or `"audiooutput"`.
+- {{domxref("MediaDeviceInfo.label")}}{{readonlyinline}}
+  - : Returns a {{domxref("DOMString")}} that is a label describing this device (for example "External USB Webcam").
 
-<div class="note">
-<p><strong>Note:</strong> For security reasons, the <code>label</code> field is always blank unless an active media stream exists <em>or</em> the user has granted persistent permission for media device access. The set of device labels could otherwise be used as part of a fingerprinting mechanism to identify a user.</p>
-</div>
+> **Note:** For security reasons, the `label` field is always blank unless an active media stream exists _or_ the user has granted persistent permission for media device access. The set of device labels could otherwise be used as part of a fingerprinting mechanism to identify a user.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p>None.</p>
+None.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>Here's an example that uses {{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}} to get a list of devices.</p>
+Here's an example that uses {{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}} to get a list of devices.
 
-<pre class="brush:js">if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
+```js
+if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
   console.log("enumerateDevices() not supported.");
   return;
 }
@@ -63,33 +60,34 @@ navigator.mediaDevices.enumerateDevices()
 .catch(function(err) {
   console.log(err.name + ": " + err.message);
 });
-</pre>
+```
 
-<p>This might produce:</p>
+This might produce:
 
-<pre class="brush: bash">videoinput: id = csO9c0YpAf274OuCPUA53CNE0YHlIr2yXCi+SqfBZZ8=
+```bash
+videoinput: id = csO9c0YpAf274OuCPUA53CNE0YHlIr2yXCi+SqfBZZ8=
 audioinput: id = RKxXByjnabbADGQNNZqLVLdmXlS0YkETYCIbg+XxnvM=
-audioinput: id = r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=</pre>
+audioinput: id = r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
+```
 
-<p>or if one or more media streams are active, or if persistent permissions have been granted:</p>
+or if one or more media streams are active, or if persistent permissions have been granted:
 
-<pre class="brush: bash">videoinput: FaceTime HD Camera (Built-in) id=csO9c0YpAf274OuCPUA53CNE0YHlIr2yXCi+SqfBZZ8=
+```bash
+videoinput: FaceTime HD Camera (Built-in) id=csO9c0YpAf274OuCPUA53CNE0YHlIr2yXCi+SqfBZZ8=
 audioinput: default (Built-in Microphone) id=RKxXByjnabbADGQNNZqLVLdmXlS0YkETYCIbg+XxnvM=
 audioinput: Built-in Microphone id=r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
- <li>{{domxref("MediaDevices.enumerateDevices", "navigator.mediaDevices.enumerateDevices()")}}</li>
- <li>{{domxref("MediaDevices.getUserMedia", "navigator.mediaDevices.getUserMedia()")}}</li>
-</ul>
+- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+- {{domxref("MediaDevices.enumerateDevices", "navigator.mediaDevices.enumerateDevices()")}}
+- {{domxref("MediaDevices.getUserMedia", "navigator.mediaDevices.getUserMedia()")}}

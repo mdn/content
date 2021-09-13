@@ -6,39 +6,36 @@ tags:
   - Web Audio API
   - panning
 ---
-<div>{{DefaultAPISidebar("Web Audio API")}}</div>
+{{DefaultAPISidebar("Web Audio API")}}
 
-<p>As if its extensive variety of sound processing (and other) options wasn't enough, the Web Audio API also includes facilities to allow you to emulate the difference in sound as a listener moves around a sound source, for example panning as you move around a sound source inside a 3D game. The official term for this is <strong>spatialization</strong>, and this article will cover the basics of how to implement such a system.</p>
+As if its extensive variety of sound processing (and other) options wasn't enough, the Web Audio API also includes facilities to allow you to emulate the difference in sound as a listener moves around a sound source, for example panning as you move around a sound source inside a 3D game. The official term for this is **spatialization**, and this article will cover the basics of how to implement such a system.
 
-<h2 id="Basics_of_spatialization">Basics of spatialization</h2>
+## Basics of spatialization
 
-<p>In Web Audio, complex 3D spatializations are created using the {{domxref("PannerNode")}}, which in layman's terms is basically a whole lotta cool maths to make audio appear in 3D space. Think sounds flying over you, creeping up behind you, moving across in front of you. That sort of thing.</p>
+In Web Audio, complex 3D spatializations are created using the {{domxref("PannerNode")}}, which in layman's terms is basically a whole lotta cool maths to make audio appear in 3D space. Think sounds flying over you, creeping up behind you, moving across in front of you. That sort of thing.
 
-<p>It's really useful for WebXR and gaming. In 3D spaces, it's the only way to achieve realistic audio. Libraries like <a href="https://threejs.org/">three.js</a> and <a href="https://aframe.io/">A-frame</a> harness its potential when dealing with sound. It's worth noting that you don't <em>have</em> to move sound within a full 3D space either — you could stick with just a 2D plane, so if you were planning a 2D game, this would still be the node you were looking for.</p>
+It's really useful for WebXR and gaming. In 3D spaces, it's the only way to achieve realistic audio. Libraries like [three.js](https://threejs.org/) and [A-frame](https://aframe.io/) harness its potential when dealing with sound. It's worth noting that you don't _have_ to move sound within a full 3D space either — you could stick with just a 2D plane, so if you were planning a 2D game, this would still be the node you were looking for.
 
-<div class="note">
-<p><strong>Note:</strong> There's also a {{domxref("StereoPannerNode")}} designed to deal with the common use case of creating simple left and right stereo panning effects. This is much simpler to use, but obviously nowhere near as versatile. If you just want a simple stereo panning effect, our <a href="https://mdn.github.io/webaudio-examples/stereo-panner-node/">StereoPannerNode example</a> (<a href="https://github.com/mdn/webaudio-examples/tree/master/stereo-panner-node">see source code</a>) should give you everything you need.</p>
-</div>
+> **Note:** There's also a {{domxref("StereoPannerNode")}} designed to deal with the common use case of creating simple left and right stereo panning effects. This is much simpler to use, but obviously nowhere near as versatile. If you just want a simple stereo panning effect, our [StereoPannerNode example](https://mdn.github.io/webaudio-examples/stereo-panner-node/) ([see source code](https://github.com/mdn/webaudio-examples/tree/master/stereo-panner-node)) should give you everything you need.
 
-<h2 id="3D_boombox_demo">3D boombox demo</h2>
+## 3D boombox demo
 
-<p>To demonstrate 3D spatialization we've created a modified version of the boombox demo we created in our basic <a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a> guide. see the <a href="https://mdn.github.io/webaudio-examples/spacialization/">3D spatialization demo live</a> (and see the <a href="https://github.com/mdn/webaudio-examples/tree/master/spacialization">source code</a> also).</p>
+To demonstrate 3D spatialization we've created a modified version of the boombox demo we created in our basic [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API) guide. see the [3D spatialization demo live](https://mdn.github.io/webaudio-examples/spacialization/) (and see the [source code](https://github.com/mdn/webaudio-examples/tree/master/spacialization) also).
 
-<p><img alt="A simple UI with a rotated boombox and controls to move it left and right and in and out, and rotate it." src="web-audio-spatialization.png"></p>
+![A simple UI with a rotated boombox and controls to move it left and right and in and out, and rotate it.](web-audio-spatialization.png)
 
-<p>The boombox sits inside a room (defined by the edges of the browser viewport), and in this demo, we can move and rotate it with the provided controls. When we move the boombox, the sound it produces changes accordingly, panning as it moves to the left or right of the room, or becoming quieter as it is moved away from the user or is rotated so the speakers are facing away from them, etc. This is done by setting the different properties of the <code>PannerNode</code> object instance in relation to that movement, to emulate spacialization.</p>
+The boombox sits inside a room (defined by the edges of the browser viewport), and in this demo, we can move and rotate it with the provided controls. When we move the boombox, the sound it produces changes accordingly, panning as it moves to the left or right of the room, or becoming quieter as it is moved away from the user or is rotated so the speakers are facing away from them, etc. This is done by setting the different properties of the `PannerNode` object instance in relation to that movement, to emulate spacialization.
 
-<div class="note">
-<p><strong>Note:</strong> The experience is much better if you use headphones, or have some kind of surround sound system to plug your computer into.</p>
-</div>
+> **Note:** The experience is much better if you use headphones, or have some kind of surround sound system to plug your computer into.
 
-<h2 id="Creating_an_audio_listener">Creating an audio listener</h2>
+## Creating an audio listener
 
-<p>So let's begin! The {{domxref("BaseAudioContext")}} (the interface the {{domxref("AudioContext")}} is extended from) has a <code><a href="/en-US/docs/Web/API/BaseAudioContext/listener">listener</a></code> property that returns an {{domxref("AudioListener")}} object. This represents the listener of the scene, usually your user. You can define where they are in space and in which direction they are facing. They remain static. The <code>pannerNode</code> can then calculate its sound position relative to the position of the listener.</p>
+So let's begin! The {{domxref("BaseAudioContext")}} (the interface the {{domxref("AudioContext")}} is extended from) has a [`listener`](/en-US/docs/Web/API/BaseAudioContext/listener) property that returns an {{domxref("AudioListener")}} object. This represents the listener of the scene, usually your user. You can define where they are in space and in which direction they are facing. They remain static. The `pannerNode` can then calculate its sound position relative to the position of the listener.
 
-<p>Let's create our context and listener and set the listener's position to emulate a person looking into our room:</p>
+Let's create our context and listener and set the listener's position to emulate a person looking into our room:
 
-<pre class="brush: js">const AudioContext = window.AudioContext || window.webkitAudioContext;
+```js
+const AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioCtx = new AudioContext();
 const listener = audioCtx.listener;
 
@@ -49,78 +46,87 @@ const posZ = 300;
 listener.positionX.value = posX;
 listener.positionY.value = posY;
 listener.positionZ.value = posZ-5;
-</pre>
+```
 
-<p>We could move the listener left or right using <code>positionX</code>, up or down using <code>positionY</code>, or in or out of the room using <code>positionZ</code>. Here we are setting the listener to be in the middle of the viewport and slightly in front of our boombox. We can also set the direction the listener is facing. The default values for these work well:</p>
+We could move the listener left or right using `positionX`, up or down using `positionY`, or in or out of the room using `positionZ`. Here we are setting the listener to be in the middle of the viewport and slightly in front of our boombox. We can also set the direction the listener is facing. The default values for these work well:
 
-<pre class="brush: js">listener.forwardX.value = 0;
+```js
+listener.forwardX.value = 0;
 listener.forwardY.value = 0;
 listener.forwardZ.value = -1;
 listener.upX.value = 0;
 listener.upY.value = 1;
 listener.upZ.value = 0;
-</pre>
+```
 
-<p>The forward properties represent the 3D coordinate position of the listener's forward direction (e.g. the direction they are facing in), while the up properties represent the 3D coordinate position of the top of the listener's head. These two together can nicely set the direction.</p>
+The forward properties represent the 3D coordinate position of the listener's forward direction (e.g. the direction they are facing in), while the up properties represent the 3D coordinate position of the top of the listener's head. These two together can nicely set the direction.
 
-<h2 id="Creating_a_panner_node">Creating a panner node</h2>
+## Creating a panner node
 
-<p>Let's create our {{domxref("PannerNode")}}. This has a whole bunch of properties associated with it. Let's take a look at each of them:</p>
+Let's create our {{domxref("PannerNode")}}. This has a whole bunch of properties associated with it. Let's take a look at each of them:
 
-<p>To start we can set the <a href="/en-US/docs/Web/API/PannerNode/panningModel"><code>panningModel</code></a>. This is the spacialization algorithm that's used to position the audio in 3D space. We can set this to:</p>
+To start we can set the [`panningModel`](/en-US/docs/Web/API/PannerNode/panningModel). This is the spacialization algorithm that's used to position the audio in 3D space. We can set this to:
 
-<p><code>equalpower</code> — The default and the general way panning is figured out</p>
+`equalpower` — The default and the general way panning is figured out
 
-<p><code>HRTF</code> — This stands for 'Head-related transfer function' and looks to take into account the human head when figuring out where the sound is.</p>
+`HRTF` — This stands for 'Head-related transfer function' and looks to take into account the human head when figuring out where the sound is.
 
-<p>Pretty clever stuff. Let's use the <code>HRTF</code> model!</p>
+Pretty clever stuff. Let's use the `HRTF` model!
 
-<pre class="brush: js">const pannerModel = 'HRTF';
-</pre>
+```js
+const pannerModel = 'HRTF';
+```
 
-<p>The <a href="/en-US/docs/Web/API/PannerNode/coneInnerAngle"><code>coneInnerAngle</code></a> and <a href="/en-US/docs/Web/API/PannerNode/coneOuterAngle"><code>coneOuterAngle</code></a> properties specify where the volume emanates from. By default, both are 360 degrees. Our boombox speakers will have smaller cones, which we can define. The inner cone is where gain (volume) is always emulated at a maximum and the outer cone is where the gain starts to drop away. The gain is reduced by the value of the <a href="/en-US/docs/Web/API/PannerNode/coneOuterGain"><code>coneOuterGain</code></a> value. Let's create constants that store the values we'll use for these parameters later on:</p>
+The [`coneInnerAngle`](/en-US/docs/Web/API/PannerNode/coneInnerAngle) and [`coneOuterAngle`](/en-US/docs/Web/API/PannerNode/coneOuterAngle) properties specify where the volume emanates from. By default, both are 360 degrees. Our boombox speakers will have smaller cones, which we can define. The inner cone is where gain (volume) is always emulated at a maximum and the outer cone is where the gain starts to drop away. The gain is reduced by the value of the [`coneOuterGain`](/en-US/docs/Web/API/PannerNode/coneOuterGain) value. Let's create constants that store the values we'll use for these parameters later on:
 
-<pre class="brush: js">const innerCone = 60;
+```js
+const innerCone = 60;
 const outerCone = 90;
 const outerGain = 0.3;
-</pre>
+```
 
-<p>The next parameter is <a href="/en-US/docs/Web/API/PannerNode/distanceModel"><code>distanceModel</code></a> — this can only be set to <code>linear</code>, <code>inverse</code>, or <code>exponential</code>. These are different algorithms, which are used to reduce the volume of the audio source as it moves away from the listener. We'll use <code>linear</code>, as it is simple:</p>
+The next parameter is [`distanceModel`](/en-US/docs/Web/API/PannerNode/distanceModel) — this can only be set to `linear`, `inverse`, or `exponential`. These are different algorithms, which are used to reduce the volume of the audio source as it moves away from the listener. We'll use `linear`, as it is simple:
 
-<pre class="brush: js">const distanceModel = 'linear';
-</pre>
+```js
+const distanceModel = 'linear';
+```
 
-<p>We can set a maximum distance (<a href="/en-US/docs/Web/API/PannerNode/maxDistance"><code>maxDistance</code></a>) between the source and the listener — the volume will not be reduced anymore if the source moves further away from this point. This can be useful, as you may find you want to emulate distance, but volume can drop out and that's actually not what you want. By default, it's 10,000 (a unitless relative value). We can keep it as this:</p>
+We can set a maximum distance ([`maxDistance`](/en-US/docs/Web/API/PannerNode/maxDistance)) between the source and the listener — the volume will not be reduced anymore if the source moves further away from this point. This can be useful, as you may find you want to emulate distance, but volume can drop out and that's actually not what you want. By default, it's 10,000 (a unitless relative value). We can keep it as this:
 
-<pre class="brush: js">const maxDistance = 10000;
-</pre>
+```js
+const maxDistance = 10000;
+```
 
-<p>There's also a reference distance (<code><a href="/en-US/docs/Web/API/PannerNode/refDistance">refDistance</a></code>), which is used by the distance models. We can keep that at the default value of <code>1</code> as well:</p>
+There's also a reference distance ([`refDistance`](/en-US/docs/Web/API/PannerNode/refDistance)), which is used by the distance models. We can keep that at the default value of `1` as well:
 
-<pre class="brush: js">const refDistance = 1;
-</pre>
+```js
+const refDistance = 1;
+```
 
-<p>Then there's the roll-off factor (<a href="/en-US/docs/Web/API/PannerNode/rolloffFactor"><code>rolloffFactor</code></a>) — how quickly does the volume reduce as the panner moves away from the listener. The default value is 1; let's make that a bit bigger to exaggerate our movements.</p>
+Then there's the roll-off factor ([`rolloffFactor`](/en-US/docs/Web/API/PannerNode/rolloffFactor)) — how quickly does the volume reduce as the panner moves away from the listener. The default value is 1; let's make that a bit bigger to exaggerate our movements.
 
-<pre class="brush: js">const rollOff = 10;
-</pre>
+```js
+const rollOff = 10;
+```
 
-<p>Now we can start setting our position and orientation of our boombox. This is a lot like how we did it with our listener. These are also the parameters we're going to change when the controls on our interface are used.</p>
+Now we can start setting our position and orientation of our boombox. This is a lot like how we did it with our listener. These are also the parameters we're going to change when the controls on our interface are used.
 
-<pre class="brush: js">const positionX = posX;
+```js
+const positionX = posX;
 const positionY = posY;
 const positionZ = posZ;
 
 const orientationX = 0.0;
 const orientationY = 0.0;
 const orientationZ = -1.0;
-</pre>
+```
 
-<p>Note the minus value on our z orientation — this sets the boombox to face us. A positive value would set the sound source facing away from us.</p>
+Note the minus value on our z orientation — this sets the boombox to face us. A positive value would set the sound source facing away from us.
 
-<p>Let's use the relevant constructor for creating our panner node and pass in all those parameters we set above:</p>
+Let's use the relevant constructor for creating our panner node and pass in all those parameters we set above:
 
-<pre class="brush: js">const panner = new PannerNode(audioCtx, {
+```js
+const panner = new PannerNode(audioCtx, {
     panningModel: pannerModel,
     distanceModel: distanceModel,
     positionX: positionX,
@@ -136,15 +142,16 @@ const orientationZ = -1.0;
     coneOuterAngle: outerCone,
     coneOuterGain: outerGain
 })
-</pre>
+```
 
-<h2 id="Moving_the_boombox">Moving the boombox</h2>
+## Moving the boombox
 
-<p>Now we're going to move our boombox around our 'room'. We've got some controls set up to do this. We can move it left and right, up and down, and back and forth; we can also rotate it. The sound direction is coming from the boombox speaker at the front, so when we rotate it, we can alter the sound's direction — i.e. make it project to the back when the boombox is rotated 180 degrees and facing away from us.</p>
+Now we're going to move our boombox around our 'room'. We've got some controls set up to do this. We can move it left and right, up and down, and back and forth; we can also rotate it. The sound direction is coming from the boombox speaker at the front, so when we rotate it, we can alter the sound's direction — i.e. make it project to the back when the boombox is rotated 180 degrees and facing away from us.
 
-<p>We need to set up a few things for the interface. First, we'll get references to the elements we want to move, then we'll store references to the values we'll change when we set up <a href="/en-US/docs/Web/CSS/CSS_Transforms">CSS transforms</a> to actually do the movement. Finally, we'll set some bounds so our boombox doesn't move too far in any direction:</p>
+We need to set up a few things for the interface. First, we'll get references to the elements we want to move, then we'll store references to the values we'll change when we set up [CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms) to actually do the movement. Finally, we'll set some bounds so our boombox doesn't move too far in any direction:
 
-<pre class="brush: js">const moveControls = document.querySelector('#move-controls').querySelectorAll('button');
+```js
+const moveControls = document.querySelector('#move-controls').querySelectorAll('button');
 const boombox = document.querySelector('.boombox-body');
 
 // the values for our css transforms
@@ -163,78 +170,83 @@ const rightBound = posX;
 const leftBound = -posX;
 const innerBound = 0.1;
 const outerBound = 1.5;
-</pre>
+```
 
-<p>Let's create a function that takes the direction we want to move as a parameter, and both modifies the CSS transform and updates the position and orientation values of our panner node properties to change the sound as appropriate.</p>
+Let's create a function that takes the direction we want to move as a parameter, and both modifies the CSS transform and updates the position and orientation values of our panner node properties to change the sound as appropriate.
 
-<p>To start with let's take a look at our left, right, up and down values as these are pretty straightforward. We'll move the boombox along these axis and update the appropriate position.</p>
+To start with let's take a look at our left, right, up and down values as these are pretty straightforward. We'll move the boombox along these axis and update the appropriate position.
 
-<pre class="brush: js">function moveBoombox(direction) {
+```js
+function moveBoombox(direction) {
     switch (direction) {
         case 'left':
-            if (transform.xAxis &gt; leftBound) {
+            if (transform.xAxis > leftBound) {
                 transform.xAxis -= 5;
                 panner.positionX.value -= 0.1;
             }
         break;
         case 'up':
-            if (transform.yAxis &gt; topBound) {
+            if (transform.yAxis > topBound) {
                 transform.yAxis -= 5;
                 panner.positionY.value -= 0.3;
             }
         break;
         case 'right':
-            if (transform.xAxis &lt; rightBound) {
+            if (transform.xAxis < rightBound) {
                 transform.xAxis += 5;
                 panner.positionX.value += 0.1;
             }
         break;
         case 'down':
-            if (transform.yAxis &lt; bottomBound) {
+            if (transform.yAxis < bottomBound) {
                 transform.yAxis += 5;
                 panner.positionY.value += 0.3;
             }
         break;
     }
 }
-</pre>
+```
 
-<p>It's a similar story for our move in and out values too:</p>
+It's a similar story for our move in and out values too:
 
-<pre class="brush: js">case 'back':
-    if (transform.zAxis &gt; innerBound) {
+```js
+case 'back':
+    if (transform.zAxis > innerBound) {
         transform.zAxis -= 0.01;
         panner.positionZ.value += 40;
     }
 break;
 case 'forward':
-    if (transform.zAxis &lt; outerBound) {
+    if (transform.zAxis < outerBound) {
         transform.zAxis += 0.01;
         panner.positionZ.value -= 40;
     }
 break;
-</pre>
+```
 
-<p>Our rotation values are a little more involved, however, as we need to move the sound <em>around</em>. Not only do we have to update two axis values (e.g. if you rotate an object around the x-axis, you update the y and z coordinates for that object), but we also need to do some more maths for this. The rotation is a circle and we need <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sin">Math.sin</a></code> and <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/cos">Math.cos</a></code> to help us draw that circle.</p>
+Our rotation values are a little more involved, however, as we need to move the sound _around_. Not only do we have to update two axis values (e.g. if you rotate an object around the x-axis, you update the y and z coordinates for that object), but we also need to do some more maths for this. The rotation is a circle and we need [`Math.sin`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sin) and [`Math.cos`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/cos) to help us draw that circle.
 
-<p>Let's set up a rotation rate, which we'll convert into a radian range value for use in <code>Math.sin</code> and <code>Math.cos</code> later, when we want to figure out the new coordinates when we're rotating our boombox:</p>
+Let's set up a rotation rate, which we'll convert into a radian range value for use in `Math.sin` and `Math.cos` later, when we want to figure out the new coordinates when we're rotating our boombox:
 
-<pre class="brush: js">// set up rotation constants
+```js
+// set up rotation constants
 const rotationRate = 60; // bigger number equals slower sound rotation
 
 const q = Math.PI/rotationRate; //rotation increment in radians
-</pre>
+```
 
-<p>We can also use this to work out degrees rotated, which will help with the CSS transforms we will have to create (note we need both an x and y-axis for the CSS transforms):</p>
+We can also use this to work out degrees rotated, which will help with the CSS transforms we will have to create (note we need both an x and y-axis for the CSS transforms):
 
-<pre class="brush: js">// get degrees for css
+```js
+// get degrees for css
 const degreesX = (q * 180)/Math.PI;
 const degreesY = (q * 180)/Math.PI;
-</pre>
+```
 
-<p>Let's take a look at our left rotation as an example. We need to change the x orientation and the z orientation of the panner coordinates, to move around the y-axis for our left rotation:</p>
+Let's take a look at our left rotation as an example. We need to change the x orientation and the z orientation of the panner coordinates, to move around the y-axis for our left rotation:
 
-<pre class="brush: js">case 'rotate-left':
+```js
+case 'rotate-left':
   transform.rotateY -= degreesY;
 
   // 'left' is rotation about y-axis with negative angle increment
@@ -246,13 +258,14 @@ const degreesY = (q * 180)/Math.PI;
   panner.orientationY.value = y;
   panner.orientationZ.value = z;
 break;
-</pre>
+```
 
-<p>This <em>is</em> a little confusing, but what we're doing is using sin and cos to help us work out the circular motion the coordinates need for the rotation of the boombox.</p>
+This _is_ a little confusing, but what we're doing is using sin and cos to help us work out the circular motion the coordinates need for the rotation of the boombox.
 
-<p>We can do this for all the axes. We just need to choose the right orientations to update and whether we want a positive or negative increment.</p>
+We can do this for all the axes. We just need to choose the right orientations to update and whether we want a positive or negative increment.
 
-<pre class="brush: js">case 'rotate-right':
+```js
+case 'rotate-right':
   transform.rotateY += degreesY;
   // 'right' is rotation about y-axis with positive angle increment
   z = panner.orientationZ.value*Math.cos(-q) - panner.orientationX.value*Math.sin(-q);
@@ -282,44 +295,45 @@ case 'rotate-down':
   panner.orientationY.value = y;
   panner.orientationZ.value = z;
 break;
-</pre>
+```
 
-<p>One last thing — we need to update the CSS and keep a reference of the last move for the mouse event. Here's the final <code>moveBoombox</code> function.</p>
+One last thing — we need to update the CSS and keep a reference of the last move for the mouse event. Here's the final `moveBoombox` function.
 
-<pre class="brush: js">function moveBoombox(direction, prevMove) {
+```js
+function moveBoombox(direction, prevMove) {
     switch (direction) {
         case 'left':
-            if (transform.xAxis &gt; leftBound) {
+            if (transform.xAxis > leftBound) {
                 transform.xAxis -= 5;
                 panner.positionX.value -= 0.1;
             }
         break;
         case 'up':
-            if (transform.yAxis &gt; topBound) {
+            if (transform.yAxis > topBound) {
                 transform.yAxis -= 5;
                 panner.positionY.value -= 0.3;
             }
         break;
         case 'right':
-            if (transform.xAxis &lt; rightBound) {
+            if (transform.xAxis < rightBound) {
                 transform.xAxis += 5;
                 panner.positionX.value += 0.1;
             }
         break;
         case 'down':
-            if (transform.yAxis &lt; bottomBound) {
+            if (transform.yAxis < bottomBound) {
                 transform.yAxis += 5;
                 panner.positionY.value += 0.3;
             }
         break;
         case 'back':
-            if (transform.zAxis &gt; innerBound) {
+            if (transform.zAxis > innerBound) {
                 transform.zAxis -= 0.01;
                 panner.positionZ.value += 40;
             }
         break;
         case 'forward':
-            if (transform.zAxis &lt; outerBound) {
+            if (transform.zAxis < outerBound) {
                 transform.zAxis += 0.01;
                 panner.positionZ.value -= 40;
             }
@@ -371,23 +385,24 @@ break;
   boombox.style.transform = 'translateX('+transform.xAxis+'px) translateY('+transform.yAxis+'px) scale('+transform.zAxis+') rotateY('+transform.rotateY+'deg) rotateX('+transform.rotateX+'deg)';
 
   const move = prevMove || {};
-  move.frameId = requestAnimationFrame(() =&gt; moveBoombox(direction, move));
+  move.frameId = requestAnimationFrame(() => moveBoombox(direction, move));
     return move;
 }
-</pre>
+```
 
-<h2 id="Wiring_up_our_controls">Wiring up our controls</h2>
+## Wiring up our controls
 
-<p>Wiring up out control buttons is comparatively simple — now we can listen for a mouse event on our controls and run this function, as well as stop it when the mouse is released:</p>
+Wiring up out control buttons is comparatively simple — now we can listen for a mouse event on our controls and run this function, as well as stop it when the mouse is released:
 
-<pre class="brush: js">// for each of our controls, move the boombox and change the position values
+```js
+// for each of our controls, move the boombox and change the position values
 moveControls.forEach(function(el) {
 
     let moving;
     el.addEventListener('mousedown', function() {
 
         let direction = this.dataset.control;
-        if (moving &amp;&amp; moving.frameId) {
+        if (moving && moving.frameId) {
             window.cancelAnimationFrame(moving.frameId);
         }
         moving = moveBoombox(direction);
@@ -395,40 +410,46 @@ moveControls.forEach(function(el) {
     }, false);
 
     window.addEventListener('mouseup', function() {
-        if (moving &amp;&amp; moving.frameId) {
+        if (moving && moving.frameId) {
             window.cancelAnimationFrame(moving.frameId);
         }
     }, false)
 
 })
-</pre>
+```
 
-<h2 id="Connecting_Our_Graph">Connecting Our Graph</h2>
+## Connecting Our Graph
 
-<p>Our HTML contains the audio element we want to be affected by the panner node.</p>
+Our HTML contains the audio element we want to be affected by the panner node.
 
-<pre class="brush: html">&lt;audio src="myCoolTrack.mp3"&gt;&lt;/audio&gt;</pre>
+```html
+<audio src="myCoolTrack.mp3"></audio>
+```
 
-<p>We need to grab the source from that element and pipe it into the Web Audio API using the {{domxref('AudioContext.createMediaElementSource')}}.</p>
+We need to grab the source from that element and pipe it into the Web Audio API using the {{domxref('AudioContext.createMediaElementSource')}}.
 
-<pre class="brush: js">// get the audio element
+```js
+// get the audio element
 const audioElement = document.querySelector('audio');
 
 // pass it into the audio context
 const track = audioContext.createMediaElementSource(audioElement);
-</pre>
+```
 
-<p>Next we have to connect our audio graph. We connect our input (the track) to our modification node (the panner) to our destination (in this case the speakers).</p>
+Next we have to connect our audio graph. We connect our input (the track) to our modification node (the panner) to our destination (in this case the speakers).
 
-<pre class="brush: js">track.connect(panner).connect(audioCtx.destination);
-</pre>
+```js
+track.connect(panner).connect(audioCtx.destination);
+```
 
-<p>Let's create a play button, that when clicked will play or pause the audio depending on the current state.</p>
+Let's create a play button, that when clicked will play or pause the audio depending on the current state.
 
-<pre class="brush: html">&lt;button data-playing="false" role="switch"&gt;Play/Pause&lt;/button&gt;
-</pre>
+```html
+<button data-playing="false" role="switch">Play/Pause</button>
+```
 
-<pre class="brush: js">// select our play button
+```js
+// select our play button
 const playButton = document.querySelector('button');
 
 playButton.addEventListener('click', function() {
@@ -448,18 +469,16 @@ this.dataset.playing = 'false';
 }
 
 }, false);
-</pre>
+```
 
-<p>For a more in depth look at playing/controlling audio and audio graphs check out <a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using The Web Audio API.</a></p>
+For a more in depth look at playing/controlling audio and audio graphs check out [Using The Web Audio API.](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>Hopefully, this article has given you an insight into how Web Audio spatialization works, and what each of the {{domxref("PannerNode")}} properties do (there are quite a few of them). The values can be hard to manipulate sometimes and depending on your use case it can take some time to get them right.</p>
+Hopefully, this article has given you an insight into how Web Audio spatialization works, and what each of the {{domxref("PannerNode")}} properties do (there are quite a few of them). The values can be hard to manipulate sometimes and depending on your use case it can take some time to get them right.
 
-<div class="note">
-<p><strong>Note:</strong> There are slight differences in the way the audio spatialization sounds across different browsers. The panner node does some very involved maths under the hood; there are a <a href="https://wpt.fyi/results/webaudio/the-audio-api/the-pannernode-interface?label=stable&amp;aligned=true">number of tests here</a> so you can keep track of the status of the inner workings of this node across different platforms.</p>
-</div>
+> **Note:** There are slight differences in the way the audio spatialization sounds across different browsers. The panner node does some very involved maths under the hood; there are a [number of tests here](https://wpt.fyi/results/webaudio/the-audio-api/the-pannernode-interface?label=stable&aligned=true) so you can keep track of the status of the inner workings of this node across different platforms.
 
-<p>Again, you can <a href="https://mdn.github.io/webaudio-examples/spacialization/">check out the final demo here</a>, and the <a href="https://github.com/mdn/webaudio-examples/tree/master/spacialization">final source code is here</a>. There is also a <a href="https://codepen.io/Rumyra/pen/MqayoK?editors=0100">Codepen demo too</a>.</p>
+Again, you can [check out the final demo here](https://mdn.github.io/webaudio-examples/spacialization/), and the [final source code is here](https://github.com/mdn/webaudio-examples/tree/master/spacialization). There is also a [Codepen demo too](https://codepen.io/Rumyra/pen/MqayoK?editors=0100).
 
-<p>If you are working with 3D games and/or WebXR it's a good idea to harness a 3D library to create such functionality, rather than trying to do this all yourself from first principles. We rolled our own in this article to give you an idea of how it works, but you'll save a lot of time by taking advantage of work others have done before you.</p>
+If you are working with 3D games and/or WebXR it's a good idea to harness a 3D library to create such functionality, rather than trying to do this all yourself from first principles. We rolled our own in this article to give you an idea of how it works, but you'll save a lot of time by taking advantage of work others have done before you.

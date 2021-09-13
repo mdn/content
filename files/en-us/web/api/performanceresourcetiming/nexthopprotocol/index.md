@@ -2,45 +2,45 @@
 title: PerformanceResourceTiming.nextHopProtocol
 slug: Web/API/PerformanceResourceTiming/nextHopProtocol
 tags:
-- API
-- Property
-- Reference
-- Resource Timing API
-- Web Performance
+  - API
+  - Property
+  - Reference
+  - Resource Timing API
+  - Web Performance
 browser-compat: api.PerformanceResourceTiming.nextHopProtocol
 ---
-<div>{{APIRef("Resource Timing API")}}</div>
+{{APIRef("Resource Timing API")}}
 
-<p>The <strong><code>nextHopProtocol</code></strong> read-only
-    property is a {{domxref("DOMString","string")}} representing the <em>network
-      protocol</em> used to fetch the resource, as identified by the <a
-      href="https://datatracker.ietf.org/doc/html/rfc7301">ALPN Protocol ID (RFC7301)</a>.</p>
+The **`nextHopProtocol`** read-only
+property is a {{domxref("DOMString","string")}} representing the _network
+protocol_ used to fetch the resource, as identified by the [ALPN Protocol ID (RFC7301)](https://datatracker.ietf.org/doc/html/rfc7301).
 
-<p>When a proxy is used, if a tunnel connection is established, this property returns the
-  ALPN Protocol ID of the tunneled protocol. Otherwise, this property returns the ALPN
-  Protocol ID of the first hop to the proxy.</p>
+When a proxy is used, if a tunnel connection is established, this property returns the
+ALPN Protocol ID of the tunneled protocol. Otherwise, this property returns the ALPN
+Protocol ID of the first hop to the proxy.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>resource</em>.nextHopProtocol;
-</pre>
+```js
+resource.nextHopProtocol;
+```
 
-<h3 id="Return_Value">Return value</h3>
+### Return value
 
-<p>A {{domxref("DOMString","string")}} representing the <em>network protocol</em> used to
-  fetch the resource, as identified by the <a
-    href="https://datatracker.ietf.org/doc/html/rfc7301">ALPN Protocol ID (RFC7301)</a>.</p>
+A {{domxref("DOMString","string")}} representing the _network protocol_ used to
+fetch the resource, as identified by the [ALPN Protocol ID (RFC7301)](https://datatracker.ietf.org/doc/html/rfc7301).
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example uses the <code>nextHopProtocol</code> property.</p>
+The following example uses the `nextHopProtocol` property.
 
-<pre class="brush: js">function print_PerformanceEntries() {
+```js
+function print_PerformanceEntries() {
   // Use getEntriesByType() to just get the "resource" events
   var p = performance.getEntriesByType("resource");
-  for (var i=0; i &lt; p.length; i++) {
+  for (var i=0; i < p.length; i++) {
     print_nextHopProtocol(p[i]);
   }
 }
@@ -51,12 +51,12 @@ function print_nextHopProtocol(perfEntry) {
   else
     console.log("nextHopProtocol = NOT supported");
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

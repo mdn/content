@@ -2,65 +2,58 @@
 title: CSSRotate()
 slug: Web/API/CSSRotate/CSSRotate
 tags:
-- API
-- CSS Types Object Model API
-- CSSRotate
-- CSSTransformComponent
-- CSSTransformValue
-- Constructor
-- Experimental
-- Houdini
+  - API
+  - CSS Types Object Model API
+  - CSSRotate
+  - CSSTransformComponent
+  - CSSTransformValue
+  - Constructor
+  - Experimental
+  - Houdini
 browser-compat: api.CSSRotate.CSSRotate
 ---
-<div>{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}</div>
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}
 
-<p>The <strong><code>CSSRotate()</code></strong> constructor creates a new
-  {{domxref("CSSRotate")}} object representing the <a
-    href="/en-US/docs/Web/CSS/transform-function/rotate()">rotate()</a> value of the
-  individual {{CSSXref('transform')}} property in CSS.</p>
+The **`CSSRotate()`** constructor creates a new
+{{domxref("CSSRotate")}} object representing the [rotate()](</en-US/docs/Web/CSS/transform-function/rotate()>) value of the
+individual {{CSSXref('transform')}} property in CSS.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>CSSRotate</var> = new CSSRotate(<em>x,y,z,angle</em>);</pre>
+```js
+var CSSRotate = new CSSRotate(x,y,z,angle);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>{{domxref('CSSRotate.x','x')}}</dt>
-  <dd>A value for the x-axis of the {{domxref('CSSRotate')}} object to be constructed.
-    This must either be a double integer or a {{domxref('CSSNumericValue')}}.</dd>
-  <dt>{{domxref('CSSRotate.y','y')}}</dt>
-  <dd>A value for the y-axis of the {{domxref('CSSRotate')}} object to be constructed.
-    This must either be a double integer or a {{domxref('CSSNumericValue')}}.</dd>
-  <dt>{{domxref('CSSRotate.z','z')}}</dt>
-  <dd>A value for the z-axis of the {{domxref('CSSRotate')}} object to be constructed.
-    This must either be a double integer or a {{domxref('CSSNumericValue')}}.</dd>
-  <dt>{{domxref('CSSRotate.angle','angle')}}</dt>
-  <dd>A value for the angle of the {{domxref('CSSRotate')}} object to be constructed. This
-    must be a {{domxref('CSSNumericValue')}}.</dd>
-</dl>
+- {{domxref('CSSRotate.x','x')}}
+  - : A value for the x-axis of the {{domxref('CSSRotate')}} object to be constructed.
+    This must either be a double integer or a {{domxref('CSSNumericValue')}}.
+- {{domxref('CSSRotate.y','y')}}
+  - : A value for the y-axis of the {{domxref('CSSRotate')}} object to be constructed.
+    This must either be a double integer or a {{domxref('CSSNumericValue')}}.
+- {{domxref('CSSRotate.z','z')}}
+  - : A value for the z-axis of the {{domxref('CSSRotate')}} object to be constructed.
+    This must either be a double integer or a {{domxref('CSSNumericValue')}}.
+- {{domxref('CSSRotate.angle','angle')}}
+  - : A value for the angle of the {{domxref('CSSRotate')}} object to be constructed. This
+    must be a {{domxref('CSSNumericValue')}}.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt><a
-      href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError"><code>TypeError</code></a>
-  </dt>
-  <dd>Raised if the value of <code>CSSRotate.angle</code> is not an <a
-      href="/en-US/docs/Web/CSS/angle">&lt;angle&gt;</a> value
-    or <code>CSSRotate.x</code>, <code>CSSRotate.y</code>, <code>CSSRotate.z</code> are
-    not <a href="/en-US/docs/Web/CSS/number">&lt;number&gt;</a> values.</dd>
-</dl>
+- [`TypeError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError)
+  - : Raised if the value of `CSSRotate.angle` is not an [\<angle>](/en-US/docs/Web/CSS/angle) value
+    or `CSSRotate.x`, `CSSRotate.y`, `CSSRotate.z` are
+    not [\<number>](/en-US/docs/Web/CSS/number) values.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>To do</p>
+To do
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

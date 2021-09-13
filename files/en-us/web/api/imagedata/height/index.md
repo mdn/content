@@ -2,43 +2,43 @@
 title: ImageData.height
 slug: Web/API/ImageData/height
 tags:
-- API
-- Canvas
-- ImageData
-- Property
-- Reference
+  - API
+  - Canvas
+  - ImageData
+  - Property
+  - Reference
 browser-compat: api.ImageData.height
 ---
-<div>{{APIRef("Canvas API")}}</div>
+{{APIRef("Canvas API")}}
 
-<p>The readonly <code><strong>ImageData.height</strong></code> property returns the number
-  of rows in the {{domxref("ImageData")}} object.</p>
+The readonly **`ImageData.height`** property returns the number
+of rows in the {{domxref("ImageData")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>imageData</em>.height
-</pre>
+```js
+imageData.height
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example creates an <code>ImageData</code> object that is 200 pixels wide and 100
-  pixels tall. Thus, the <code>height</code> property is <code>100</code>.</p>
+This example creates an `ImageData` object that is 200 pixels wide and 100
+pixels tall. Thus, the `height` property is `100`.
 
-<pre class="brush: js ">let imageData = new ImageData(200, 100);
+```js
+let imageData = new ImageData(200, 100);
 console.log(imageData.height);  // 100
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("ImageData.width")}}</li>
-  <li>{{domxref("ImageData")}}</li>
-</ul>
+- {{domxref("ImageData.width")}}
+- {{domxref("ImageData")}}

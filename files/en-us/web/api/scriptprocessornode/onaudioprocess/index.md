@@ -10,38 +10,34 @@ tags:
   - onaudioprocess
 browser-compat: api.ScriptProcessorNode.onaudioprocess
 ---
-<p>{{APIRef("Web Audio API")}}{{deprecated_header}}</p>
+{{APIRef("Web Audio API")}}{{deprecated_header}}
 
-<p>The <code>onaudioprocess</code> event handler of the {{domxref("ScriptProcessorNode")}} interface represents the <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> to be called for the <code>audioprocess</code> event that is dispatched to <code>ScriptProcessorNode</code> node types. An event of type {{domxref("AudioProcessingEvent")}} will be dispatched to the event handler.</p>
+The `onaudioprocess` event handler of the {{domxref("ScriptProcessorNode")}} interface represents the [event handler](/en-US/docs/Web/Events/Event_handlers) to be called for the `audioprocess` event that is dispatched to `ScriptProcessorNode` node types. An event of type {{domxref("AudioProcessingEvent")}} will be dispatched to the event handler.
 
-<div class="note">
-  <p><strong>Note:</strong> This feature was replaced by <a href="/en-US/docs/Web/API/AudioWorklet">AudioWorklets</a> and the {{domxref("AudioWorkletNode")}} interface.</p>
-</div>
+> **Note:** This feature was replaced by [AudioWorklets](/en-US/docs/Web/API/AudioWorklet) and the {{domxref("AudioWorkletNode")}} interface.
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: js">var audioCtx = new AudioContext();
+```js
+var audioCtx = new AudioContext();
 var scriptNode = audioCtx.createScriptProcessor(4096, 1, 1);
-scriptNode.onaudioprocess = function() { ... }</pre>
-</div>
+scriptNode.onaudioprocess = function() { ... }
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See <a href="/en-US/docs/Web/API/BaseAudioContext/createScriptProcessor#example"><code>BaseAudioContext.createScriptProcessor()</code></a> for example code.</p>
+See [`BaseAudioContext.createScriptProcessor()`](/en-US/docs/Web/API/BaseAudioContext/createScriptProcessor#example) for example code.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Since the August 29 2014 <a href="https://www.w3.org/TR/webaudio/#ScriptProcessorNode">Web Audio API specification</a> publication, this feature has been deprecated. It is no longer on track to become a standard.</p>
+Since the August 29 2014 [Web Audio API specification](https://www.w3.org/TR/webaudio/#ScriptProcessorNode) publication, this feature has been deprecated. It is no longer on track to become a standard.
 
-<p>It was replaced by <a href="/en-US/docs/Web/API/AudioWorklet">AudioWorklets</a> and the {{domxref("AudioWorkletNode")}} interface.</p>
+It was replaced by [AudioWorklets](/en-US/docs/Web/API/AudioWorklet) and the {{domxref("AudioWorkletNode")}} interface.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

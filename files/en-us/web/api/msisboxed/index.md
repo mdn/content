@@ -2,35 +2,34 @@
 title: msIsBoxed
 slug: Web/API/MsIsBoxed
 tags:
-- msIsBoxed
+  - msIsBoxed
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>{{Non-standard_header()}}</p>
+{{Non-standard_header()}}
 
-<p><code><strong>msIsBoxed</strong></code> is a property which gets or sets when the video
-  player control is in boxed (letterbox or pillarbox) mode.</p>
+**`msIsBoxed`** is a property which gets or sets when the video
+player control is in boxed (letterbox or pillarbox) mode.
 
-<p>This proprietary property is specific to Internet Explorer and Microsoft Edge.</p>
+This proprietary property is specific to Internet Explorer and Microsoft Edge.
 
-<p>Returns true if the video is in letterbox or pillarbox mode. Letterbox format displays
-  black bars on the top and bottom of a video to fill in between the wide screen format of
-  a video, and the aspect ratio of the screen. Typically the video's left and right edges
-  go to the full width of the screen. Pillarbox format displays black bars on the left and
-  right of a video to fill in the difference between a video and a wider screen. With
-  pillarbox format, the top and bottom edges of the video go to the full height of the
-  screen.</p>
+Returns true if the video is in letterbox or pillarbox mode. Letterbox format displays
+black bars on the top and bottom of a video to fill in between the wide screen format of
+a video, and the aspect ratio of the screen. Typically the video's left and right edges
+go to the full width of the screen. Pillarbox format displays black bars on the left and
+right of a video to fill in the difference between a video and a wider screen. With
+pillarbox format, the top and bottom edges of the video go to the full height of the
+screen.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 isBoxed = object.msIsBoxed
+```
 
-</pre>
+## Value
 
-<h2 id="Value">Value</h2>
+Boolean value set to _true_ activates boxed mode for the video player.
 
-<p>Boolean value set to <em>true</em> activates boxed mode for the video player.</p>
-
-<p>Boolean value set to <em>false</em> means the video player is zoomed to fill the
-  screen.</p>
+Boolean value set to _false_ means the video player is zoomed to fill the
+screen.

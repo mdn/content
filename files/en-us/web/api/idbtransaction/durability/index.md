@@ -2,52 +2,51 @@
 title: IDBTransaction.durability
 slug: Web/API/IDBTransaction/durability
 tags:
-- API
-- Property
-- Reference
-- durability
-- IDBTransaction
-- IndexedDB
-- Database
-- Storage
+  - API
+  - Property
+  - Reference
+  - durability
+  - IDBTransaction
+  - IndexedDB
+  - Database
+  - Storage
 browser-compat: api.IDBTransaction.durability
 ---
-<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("IndexedDB")}}</div>
+{{draft}}{{securecontext_header}}{{DefaultAPISidebar("IndexedDB")}}
 
-<p>The <strong><code>durability</code></strong> read-only property of the
-  {{domxref("IDBTransaction")}} interface returns the durability hint the transaction was
-  created with. This is a hint to the user agent of whether to prioritize performance or
-  durability when committing the transaction.</p>
+The **`durability`** read-only property of the
+{{domxref("IDBTransaction")}} interface returns the durability hint the transaction was
+created with. This is a hint to the user agent of whether to prioritize performance or
+durability when committing the transaction.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>transactionDurability</var> = idbTransaction.durability;</pre>
+```js
+var transactionDurability = idbTransaction.durability;
+```
 
-<h3>Value</h3>
-<p>Any of the following literal {{jsxref('String', 'strings')}}:</p>
-<ul>
-  <li><code>"strict"</code>: The user agent may consider that the transaction has
-    successfully committed only after verifying that all outstanding changes have been
-    successfully written to a persistent storage medium.</li>
-  <li><code>"relaxed"</code>: The user agent may consider that the transaction has
-    successfully committed as soon as all outstanding changes have been written to the
-    operating system, without subsequent verification.</li>
-  <li><code>"default"</code>: The user agent should use its default durability behavior
-    for the storage bucket. This is the default for transactions if not otherwise
-    specified.</li>
-</ul>
+### Value
 
-<h2 id="Examples">Examples</h2>
+Any of the following literal {{jsxref('String', 'strings')}}:
 
-<p>For a full working example, see our <a
-    href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> app (<a
-    href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</p>
+- `"strict"`: The user agent may consider that the transaction has
+  successfully committed only after verifying that all outstanding changes have been
+  successfully written to a persistent storage medium.
+- `"relaxed"`: The user agent may consider that the transaction has
+  successfully committed as soon as all outstanding changes have been written to the
+  operating system, without subsequent verification.
+- `"default"`: The user agent should use its default durability behavior
+  for the storage bucket. This is the default for transactions if not otherwise
+  specified.
 
-<h2 id="Specifications">Specifications</h2>
+## Examples
+
+For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](https://mdn.github.io/to-do-notifications/).)
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

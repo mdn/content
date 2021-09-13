@@ -8,67 +8,35 @@ tags:
   - XMLHttpRequest
 browser-compat: api.XMLHttpRequest.readyState
 ---
-<p>{{APIRef('XMLHttpRequest')}}</p>
+{{APIRef('XMLHttpRequest')}}
 
-<p>The <strong>XMLHttpRequest.readyState</strong> property returns the state an XMLHttpRequest client is in. An <abbr title="XMLHttpRequest">XHR</abbr> client exists in one of the following states:</p>
+The **XMLHttpRequest.readyState** property returns the state an XMLHttpRequest client is in. An XHR client exists in one of the following states:
 
-<table class="standard-table">
- <thead>
-   <tr>
-     <th>Value</th>
-     <th>State</th>
-     <th>Description</th>
-   </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>0</code></td>
-   <td><code>UNSENT</code></td>
-   <td>Client has been created. <code>open()</code> not called yet.</td>
-  </tr>
-  <tr>
-   <td><code>1</code></td>
-   <td><code>OPENED</code></td>
-   <td><code>open()</code> has been called.</td>
-  </tr>
-  <tr>
-   <td><code>2</code></td>
-   <td><code>HEADERS_RECEIVED</code></td>
-   <td><code>send()</code> has been called, and headers and status are available.</td>
-  </tr>
-  <tr>
-   <td><code>3</code></td>
-   <td><code>LOADING</code></td>
-   <td>Downloading; <code>responseText</code> holds partial data.</td>
-  </tr>
-  <tr>
-   <td><code>4</code></td>
-   <td><code>DONE</code></td>
-   <td>The operation is complete.</td>
-  </tr>
- </tbody>
-</table>
+| Value | State              | Description                                                     |
+| ----- | ------------------ | --------------------------------------------------------------- |
+| `0`   | `UNSENT`           | Client has been created. `open()` not called yet.               |
+| `1`   | `OPENED`           | `open()` has been called.                                       |
+| `2`   | `HEADERS_RECEIVED` | `send()` has been called, and headers and status are available. |
+| `3`   | `LOADING`          | Downloading; `responseText` holds partial data.                 |
+| `4`   | `DONE`             | The operation is complete.                                      |
 
-<dl>
- <dt>UNSENT</dt>
- <dd>The XMLHttpRequest client has been created, but the open() method hasn't been called yet.</dd>
- <dt>OPENED</dt>
- <dd>open() method has been invoked. During this state, the request headers can be set using the <a href="/en-US/docs/Web/API/XMLHttpRequest/setRequestHeader">setRequestHeader()</a> method and the <a href="/en-US/docs/Web/API/XMLHttpRequest/send">send()</a> method can be called which will initiate the fetch.</dd>
- <dt>HEADERS_RECEIVED</dt>
- <dd>send() has been called and the response headers have been received.</dd>
- <dt>LOADING</dt>
- <dd>Response's body is being received. If <code><a href="/en-US/docs/Web/API/XMLHttpRequest/responseType">responseType</a></code> is "text" or empty string, <code><a href="/en-US/docs/Web/API/XMLHttpRequest/responseText">responseText</a></code> will have the partial text response as it loads.</dd>
- <dt>DONE</dt>
- <dd>The fetch operation is complete. This could mean that either the data transfer has been completed successfully or failed.</dd>
-</dl>
+- UNSENT
+  - : The XMLHttpRequest client has been created, but the open() method hasn't been called yet.
+- OPENED
+  - : open() method has been invoked. During this state, the request headers can be set using the [setRequestHeader()](/en-US/docs/Web/API/XMLHttpRequest/setRequestHeader) method and the [send()](/en-US/docs/Web/API/XMLHttpRequest/send) method can be called which will initiate the fetch.
+- HEADERS_RECEIVED
+  - : send() has been called and the response headers have been received.
+- LOADING
+  - : Response's body is being received. If [`responseType`](/en-US/docs/Web/API/XMLHttpRequest/responseType) is "text" or empty string, [`responseText`](/en-US/docs/Web/API/XMLHttpRequest/responseText) will have the partial text response as it loads.
+- DONE
+  - : The fetch operation is complete. This could mean that either the data transfer has been completed successfully or failed.
 
-<div class="note">
-<p><strong>Note:</strong> The state names are different in versions of Internet Explorer earlier than 11. Instead of <code>UNSENT</code>, <code>OPENED</code>,<code> HEADERS_RECEIVED</code>,<code> LOADING</code> and <code>DONE</code>, the names <code>READYSTATE_UNINITIALIZED</code> (0), <code>READYSTATE_LOADING</code> (1), <code>READYSTATE_LOADED</code> (2), <code>READYSTATE_INTERACTIVE</code> (3) and <code>READYSTATE_COMPLETE</code> (4) are used.</p>
-</div>
+> **Note:** The state names are different in versions of Internet Explorer earlier than 11. Instead of `UNSENT`, `OPENED`,` HEADERS_RECEIVED`,` LOADING` and `DONE`, the names `READYSTATE_UNINITIALIZED` (0), `READYSTATE_LOADING` (1), `READYSTATE_LOADED` (2), `READYSTATE_INTERACTIVE` (3) and `READYSTATE_COMPLETE` (4) are used.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var xhr = new XMLHttpRequest();
+```js
+var xhr = new XMLHttpRequest();
 console.log('UNSENT', xhr.readyState); // readyState will be 0
 
 xhr.open('GET', '/api', true);
@@ -83,12 +51,12 @@ xhr.onload = function () {
 };
 
 xhr.send(null);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

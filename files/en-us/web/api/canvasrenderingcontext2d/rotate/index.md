@@ -9,46 +9,47 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.rotate
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The
-  <strong><code>CanvasRenderingContext2D.rotate()</code></strong>
-  method of the Canvas 2D API adds a rotation to the transformation matrix.</p>
+The
+**`CanvasRenderingContext2D.rotate()`**
+method of the Canvas 2D API adds a rotation to the transformation matrix.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <em>ctx</em>.rotate(<em>angle</em>);
-</pre>
+```js
+void ctx.rotate(angle);
+```
 
-<p><img alt="" src="canvas_grid_rotate.png"></p>
+![](canvas_grid_rotate.png)
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>angle</code></dt>
-  <dd>The rotation angle, clockwise in radians. You can use
-    <code><em>degree</em> * Math.PI / 180</code> to calculate a radian from a degree.</dd>
-</dl>
+- `angle`
+  - : The rotation angle, clockwise in radians. You can use
+    `degree * Math.PI / 180` to calculate a radian from a degree.
 
-<p>The rotation center point is always the canvas origin. To change the center point, you
-  will need to move the canvas by using the
-  {{domxref("CanvasRenderingContext2D.translate", "translate()")}} method.</p>
+The rotation center point is always the canvas origin. To change the center point, you
+will need to move the canvas by using the
+{{domxref("CanvasRenderingContext2D.translate", "translate()")}} method.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Rotating_a_shape">Rotating a shape</h3>
+### Rotating a shape
 
-<p>This example rotates a rectangle by 45°. Note that the center of rotation is the
-  top-left corner of the canvas, and not a location relative to any shape.</p>
+This example rotates a rectangle by 45°. Note that the center of rotation is the
+top-left corner of the canvas, and not a location relative to any shape.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js;">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // Point of transform origin
@@ -67,40 +68,40 @@ ctx.fillRect(100, 0, 80, 20);
 
 // Reset transformation matrix to the identity matrix
 ctx.setTransform(1, 0, 0, 1, 0, 0);
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>The center of rotation is blue. The non-rotated rectangle is gray, and the rotated rectangle is red.</p>
+The center of rotation is blue. The non-rotated rectangle is gray, and the rotated rectangle is red.
 
-<p>{{ EmbedLiveSample('Rotating_a_shape', 700, 180) }}</p>
+{{ EmbedLiveSample('Rotating_a_shape', 700, 180) }}
 
-<h3 id="Rotating_a_shape_around_its_center">Rotating a shape around its center</h3>
+### Rotating a shape around its center
 
-<p>This example rotates a shape around its center point. To do this, the following steps
-  are applied to the matrix:</p>
+This example rotates a shape around its center point. To do this, the following steps
+are applied to the matrix:
 
-<ol>
-  <li>First, {{domxref("CanvasRenderingContext2D.translate()", "translate()")}} moves the
-    matrix's origin to the shape's center.</li>
-  <li><code>rotate()</code> rotates the matrix by the desired amount.</li>
-  <li>Finally, <code>translate()</code> moves the matrix's origin back to its starting
+1.  First, {{domxref("CanvasRenderingContext2D.translate()", "translate()")}} moves the
+    matrix's origin to the shape's center.
+2.  `rotate()` rotates the matrix by the desired amount.
+3.  Finally, `translate()` moves the matrix's origin back to its starting
     point. This is done by applying the values of the shape's center coordinates in a
-    negative direction.</li>
-</ol>
+    negative direction.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<p>The shape is a rectangle with its corner at (80, 60), a width of 140, a height of 30.
-  Its horizontal center is at (80 + 140 / 2), or 150. Its vertical center is at (60 + 30 /
-  2), or 75. Thus, the center point is at (150, 75).</p>
+The shape is a rectangle with its corner at (80, 60), a width of 140, a height of 30.
+Its horizontal center is at (80 + 140 / 2), or 150. Its vertical center is at (60 + 30 /
+2\), or 75. Thus, the center point is at (150, 75).
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // Non-rotated rectangle
@@ -115,24 +116,22 @@ ctx.translate(-150, -75);
 // Rotated rectangle
 ctx.fillStyle = 'red';
 ctx.fillRect(80, 60, 140, 30);
-</pre>
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>The non-rotated rectangle is gray, and the rotated rectangle is red.</p>
+The non-rotated rectangle is gray, and the rotated rectangle is red.
 
-<p>{{ EmbedLiveSample('Rotating_a_shape_around_its_center', 700, 180) }}</p>
+{{ EmbedLiveSample('Rotating_a_shape_around_its_center', 700, 180) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining this method: {{domxref("CanvasRenderingContext2D")}}</li>
-</ul>
+- The interface defining this method: {{domxref("CanvasRenderingContext2D")}}

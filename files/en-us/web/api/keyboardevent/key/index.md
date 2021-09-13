@@ -11,76 +11,100 @@ tags:
   - UI Events
 browser-compat: api.KeyboardEvent.key
 ---
-<div>{{APIRef("DOM Events")}}</div>
+{{APIRef("DOM Events")}}
 
-<p>The {{domxref("KeyboardEvent")}} interface's <code><strong>key</strong></code> read-only property returns the value of the key pressed by the user, taking into consideration the state of modifier keys such as <kbd>Shift</kbd> as well as the keyboard locale and layout.</p>
+The {{domxref("KeyboardEvent")}} interface's **`key`** read-only property returns the value of the key pressed by the user, taking into consideration the state of modifier keys such as <kbd>Shift</kbd> as well as the keyboard locale and layout.
 
-<p>Its value is determined as follows:</p>
+Its value is determined as follows:
 
-<ul>
- <li>If the pressed key has a printed representation, the returned value is a non-empty Unicode character string containing the printable representation of the key.</li>
- <li>If the pressed key is a control or special character, the returned value is one of the <a href="/en-US/docs/Web/API/KeyboardEvent/key/Key_Values">pre-defined key values</a>.</li>
- <li>If the <code>KeyboardEvent</code> represents the press of a <a href="https://wikipedia.org/wiki/Dead_key">dead key</a>, the key value must be "<code>Dead</code>".</li>
- <li>Some specialty keyboard keys (such as the extended keys for controlling media on multimedia keyboards) don't generate key codes on Windows; instead, they trigger <code>WM_APPCOMMAND</code> events. These events get mapped to DOM keyboard events, and are listed among the "Virtual key codes" for Windows, even though they aren't actually key codes.</li>
- <li>If the key cannot be identified, the returned value is <code>Unidentified</code>.</li>
-</ul>
+- If the pressed key has a printed representation, the returned value is a non-empty Unicode character string containing the printable representation of the key.
+- If the pressed key is a control or special character, the returned value is one of the [pre-defined key values](/en-US/docs/Web/API/KeyboardEvent/key/Key_Values).
+- If the `KeyboardEvent` represents the press of a [dead key](https://wikipedia.org/wiki/Dead_key), the key value must be "`Dead`".
+- Some specialty keyboard keys (such as the extended keys for controlling media on multimedia keyboards) don't generate key codes on Windows; instead, they trigger `WM_APPCOMMAND` events. These events get mapped to DOM keyboard events, and are listed among the "Virtual key codes" for Windows, even though they aren't actually key codes.
+- If the key cannot be identified, the returned value is `Unidentified`.
 
+> **Callout:**
+>
+> [See a full list of key values](/en-US/docs/Web/API/KeyboardEvent/key/Key_Values).
 
-<div class="notecard callout">
-<p><a href="/en-US/docs/Web/API/KeyboardEvent/key/Key_Values">See a full list of key values</a>.</p>
+## KeyboardEvent sequence
+
+Every `KeyboardEvent` is fired in a pre-determined sequence. For a given key press, the sequence of `KeyboardEvent`s fired is as follows assuming that {{domxref("Event.preventDefault")}} is not called:
+
+1.  A {{domxref("Element/keydown_event", "keydown")}} event is first fired. If the key is held down further and the key produces a character key, then the event continues to be emitted in a platform implementation dependent interval and the {{domxref("KeyboardEvent.repeat")}} read only property is set to `true`.
+2.  If the key produces a character key that would result in a character being inserted into possibly an {{HTMLElement("input")}}, {{HTMLElement("textarea")}} or an element with {{domxref("HTMLElement.contentEditable")}} set to true, the {{domxref("HTMLElement/beforeinput_event", "beforeinput")}} and {{domxref("HTMLElement/input_event", "input")}} event types are fired in that order. Note that some other implementations may fire {{domxref("Element/keypress_event", "keypress")}} event if supported. The events will be fired repeatedly while the key is held down.
+3.  A {{domxref("Element/keyup_event", "keyup")}} event is fired once the key is released. This completes the process.
+
+In sequence 1 & 3, the `KeyboardEvent.key` attribute is defined and is set appropriately to a value according to the rules defined earlier.
+
+## KeyboardEvent sequence example
+
+Consider the event sequence generated when we interact with the <kbd>Shift</kbd> and the <kbd>2</kbd> key using a U.S keyboard layout as compared to when we do so using a UK keyboard layout.
+
+Try experimenting using the following two test cases:
+
+1.  Press and hold the
+
+    <kbd>Shift</kbd>
+
+    key, then press
+
+    <kbd>2</kbd>
+
+    and release it. Next, release the
+
+    <kbd>Shift</kbd>
+
+    key.
+
+2.  Press and hold the
+
+    <kbd>Shift</kbd>
+
+    key, then press and hold
+
+    <kbd>2</kbd>
+
+    . Release the
+
+    <kbd>Shift</kbd>
+
+    key. Finally, release
+
+    <kbd>2</kbd>
+
+    .
+
+### HTML
+
+```html
+<div class="fx">
+  <div>
+    <textarea rows="5" name="test-target" id="test-target"></textarea>
+    <button type="button" name="btn-reset" id="btn-reset">Reset</button>
+  </div>
+  <div class="flex">
+    <pre id="console-log"></pre>
+  </div>
 </div>
+```
 
-<h2 id="KeyboardEvent_sequence">KeyboardEvent sequence</h2>
+### CSS
 
-<p>Every <code>KeyboardEvent</code> is fired in a pre-determined sequence. For a given key press, the sequence of <code>KeyboardEvent</code>s fired is as follows assuming that {{domxref("Event.preventDefault")}} is not called:</p>
-
-<ol>
- <li>A {{domxref("Element/keydown_event", "keydown")}} event is first fired. If the key is held down further and the key produces a character key, then the event continues to be emitted in a platform implementation dependent interval and the {{domxref("KeyboardEvent.repeat")}} read only property is set to <code>true</code>.</li>
- <li>If the key produces a character key that would result in a character being inserted into possibly an {{HTMLElement("input")}}, {{HTMLElement("textarea")}} or an element with {{domxref("HTMLElement.contentEditable")}} set to true, the {{domxref("HTMLElement/beforeinput_event", "beforeinput")}} and {{domxref("HTMLElement/input_event", "input")}} event types are fired in that order. Note that some other implementations may fire {{domxref("Element/keypress_event", "keypress")}} event if supported. The events will be fired repeatedly while the key is held down.</li>
- <li>A {{domxref("Element/keyup_event", "keyup")}} event is fired once the key is released. This completes the process.</li>
-</ol>
-
-<p>In sequence 1 &amp; 3, the <code>KeyboardEvent.key</code> attribute is defined and is set appropriately to a value according to the rules defined earlier.</p>
-
-<h2 id="KeyboardEvent_sequence_example">KeyboardEvent sequence example</h2>
-
-<p>Consider the event sequence generated when we interact with the <kbd>Shift</kbd> and the <kbd>2</kbd> key using a U.S keyboard layout as compared to when we do so using a UK keyboard layout.</p>
-
-<p>Try experimenting using the following two test cases:</p>
-
-<ol>
- <li>Press and hold the <kbd>Shift</kbd> key, then press <kbd>2</kbd> and release it. Next, release the <kbd>Shift</kbd> key.</li>
- <li>Press and hold the <kbd>Shift</kbd> key, then press and hold <kbd>2</kbd>. Release the <kbd>Shift</kbd> key. Finally, release <kbd>2</kbd>.</li>
-</ol>
-
-<h3 id="HTML">HTML</h3>
-
-<pre class="brush: html">&lt;div class="fx"&gt;
-  &lt;div&gt;
-    &lt;textarea rows="5" name="test-target" id="test-target"&gt;&lt;/textarea&gt;
-    &lt;button type="button" name="btn-reset" id="btn-reset"&gt;Reset&lt;/button&gt;
-  &lt;/div&gt;
-  &lt;div class="flex"&gt;
-    &lt;pre id="console-log"&gt;&lt;/pre&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<h3 id="CSS">CSS</h3>
-
-<pre class="brush: css">.fx {
+```css
+.fx {
   -webkit-display: flex;
   display: flex;
   margin-left: -20px;
   margin-right: -20px;
 }
 
-.fx &gt; div {
+.fx > div {
   padding-left: 20px;
   padding-right: 20px;
 }
 
-.fx &gt; div:first-child {
+.fx > div:first-child {
    width: 30%;
 }
 
@@ -94,79 +118,80 @@ browser-compat: api.KeyboardEvent.key
   width: 100%;
   margin-bottom: 10px;
 }
-</pre>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">let textarea = document.getElementById('test-target'),
+```js
+let textarea = document.getElementById('test-target'),
 consoleLog = document.getElementById('console-log'),
 btnReset = document.getElementById('btn-reset');
 
 function logMessage(message) {
-  consoleLog.innerHTML += message + "&lt;br&gt;";
+  consoleLog.innerHTML += message + "<br>";
 }
 
-textarea.addEventListener('keydown', (e) =&gt; {
+textarea.addEventListener('keydown', (e) => {
   if (!e.repeat)
     logMessage(`Key "${e.key}" pressed  [event: keydown]`);
   else
     logMessage(`Key "${e.key}" repeating  [event: keydown]`);
 });
 
-textarea.addEventListener('beforeinput', (e) =&gt; {
+textarea.addEventListener('beforeinput', (e) => {
   logMessage(`Key "${e.data}" about to be input  [event: beforeinput]`);
 });
 
-textarea.addEventListener('input', (e) =&gt; {
+textarea.addEventListener('input', (e) => {
   logMessage(`Key "${e.data}" input  [event: input]`);
 });
 
-textarea.addEventListener('keyup', (e) =&gt; {
+textarea.addEventListener('keyup', (e) => {
   logMessage(`Key "${e.key}" released  [event: keyup]`);
 });
 
-btnReset.addEventListener('click', (e) =&gt; {
+btnReset.addEventListener('click', (e) => {
   let child = consoleLog.firstChild;
   while (child) {
    consoleLog.removeChild(child);
    child = consoleLog.firstChild;
   }
   textarea.value = ''
-});</pre>
+});
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('KeyboardEvent_sequence_example')}}</p>
+{{EmbedLiveSample('KeyboardEvent_sequence_example')}}
 
-<div class="notecard note">
-<p><strong>Note:</strong> On browsers that don't fully implement the {{domxref("InputEvent")}} interface which is used for the {{domxref("HTMLElement/beforeinput_event", "beforeinput")}} and {{domxref("HTMLElement/input_event", "input")}} events, you may get incorrect output on those lines of the log output.</p>
-</div>
+> **Note:** On browsers that don't fully implement the {{domxref("InputEvent")}} interface which is used for the {{domxref("HTMLElement/beforeinput_event", "beforeinput")}} and {{domxref("HTMLElement/input_event", "input")}} events, you may get incorrect output on those lines of the log output.
 
-<h3 id="Case_1">Case 1</h3>
+### Case 1
 
-<p>When the shift key is pressed, a {{domxref("Element/keydown_event", "keydown")}} event is first fired, and the <code>key</code> property value is set to the string <code>Shift</code>. As we keep holding this key, the {{domxref("Element/keydown_event", "keydown")}} event does not continue to fire repeatedly because it does not produce a character key.</p>
+When the shift key is pressed, a {{domxref("Element/keydown_event", "keydown")}} event is first fired, and the `key` property value is set to the string `Shift`. As we keep holding this key, the {{domxref("Element/keydown_event", "keydown")}} event does not continue to fire repeatedly because it does not produce a character key.
 
-<p>When <code>key 2</code> is pressed, another {{domxref("Element/keydown_event", "keydown")}} event is fired for this new key press, and the <code>key</code> property value for the event is set to the string <code>@</code> for the U.S keyboard type and <code>"</code> for the UK keyboard type, because of the active modifier <code>shift</code> key. The {{domxref("HTMLElement/beforeinput_event", "beforeinput")}} and {{domxref("HTMLElement/input_event", "input")}} events are fired next because a character key has been produced.</p>
+When `key 2` is pressed, another {{domxref("Element/keydown_event", "keydown")}} event is fired for this new key press, and the `key` property value for the event is set to the string `@` for the U.S keyboard type and `"` for the UK keyboard type, because of the active modifier `shift` key. The {{domxref("HTMLElement/beforeinput_event", "beforeinput")}} and {{domxref("HTMLElement/input_event", "input")}} events are fired next because a character key has been produced.
 
-<p>As we release the <code>key 2</code>, a {{domxref("Element/keyup_event", "keyup")}} event is fired and the <code>key</code> property will maintain the string values <code>@</code> and <code>"</code> for the different keyboard layouts respectively.</p>
+As we release the `key 2`, a {{domxref("Element/keyup_event", "keyup")}} event is fired and the `key` property will maintain the string values `@` and `"` for the different keyboard layouts respectively.
 
-<p>As we finally release the <code>shift</code> key, another {{domxref("Element/keyup_event", "keyup")}} event is fired for it, and the key attribute value remains <code>Shift</code>.</p>
+As we finally release the `shift` key, another {{domxref("Element/keyup_event", "keyup")}} event is fired for it, and the key attribute value remains `Shift`.
 
-<h3 id="Case_2">Case 2</h3>
+### Case 2
 
-<p>When the shift key is pressed, a {{domxref("Element/keydown_event", "keydown")}} event is first fired, and the <code>key</code> property value is set to be the string <code>Shift</code>. As we keep holding this key, the keydown event does not continue to fire repeatedly because it produced no character key.</p>
+When the shift key is pressed, a {{domxref("Element/keydown_event", "keydown")}} event is first fired, and the `key` property value is set to be the string `Shift`. As we keep holding this key, the keydown event does not continue to fire repeatedly because it produced no character key.
 
-<p>When <code>key 2</code> is pressed, another {{domxref("Element/keydown_event", "keydown")}} event is fired for this new key press, and the <code>key</code> property value for the event is set to be the string <code>@</code> for the U.S keyboard type and <code>"</code> for the UK keyboard type, because of the active modifier <code>shift</code> key. The {{domxref("HTMLElement/beforeinput_event", "beforeinput")}} and {{domxref("HTMLElement/input_event", "input")}} events are fired next because a character key has been produced. As we keep holding the key, the {{domxref("Element/keydown_event", "keydown")}} event continues to fire repeatedly and the {{domxref("KeyboardEvent.repeat")}} property is set to <code>true</code>. The {{domxref("HTMLElement/beforeinput_event", "beforeinput")}} and {{domxref("HTMLElement/input_event", "input")}} events are fired repeatedly as well.</p>
+When `key 2` is pressed, another {{domxref("Element/keydown_event", "keydown")}} event is fired for this new key press, and the `key` property value for the event is set to be the string `@` for the U.S keyboard type and `"` for the UK keyboard type, because of the active modifier `shift` key. The {{domxref("HTMLElement/beforeinput_event", "beforeinput")}} and {{domxref("HTMLElement/input_event", "input")}} events are fired next because a character key has been produced. As we keep holding the key, the {{domxref("Element/keydown_event", "keydown")}} event continues to fire repeatedly and the {{domxref("KeyboardEvent.repeat")}} property is set to `true`. The {{domxref("HTMLElement/beforeinput_event", "beforeinput")}} and {{domxref("HTMLElement/input_event", "input")}} events are fired repeatedly as well.
 
-<p>As we release the <code>shift</code> key, a {{domxref("Element/keyup_event", "keyup")}} event is fired for it, and the key attribute value remains <code>Shift</code>. At this point, notice that the <code>key</code> property value for the repeating keydown event of the <code>key 2</code> key press is now "2" because the modifier <code>shift</code> key is no longer active. The same goes for the {{domxref("InputEvent.data")}} property of the {{domxref("HTMLElement/beforeinput_event", "beforeinput")}} and {{domxref("HTMLElement/input_event", "input")}} events.</p>
+As we release the `shift` key, a {{domxref("Element/keyup_event", "keyup")}} event is fired for it, and the key attribute value remains `Shift`. At this point, notice that the `key` property value for the repeating keydown event of the `key 2` key press is now "2" because the modifier `shift` key is no longer active. The same goes for the {{domxref("InputEvent.data")}} property of the {{domxref("HTMLElement/beforeinput_event", "beforeinput")}} and {{domxref("HTMLElement/input_event", "input")}} events.
 
-<p>As we finally release the <code>key 2</code>, a {{domxref("Element/keyup_event", "keyup")}} event is fired but the <code>key</code> property will be set to the string value <code>2</code> for both keyboard layouts because the modifier <code>shift</code> key is no longer active.</p>
+As we finally release the `key 2`, a {{domxref("Element/keyup_event", "keyup")}} event is fired but the `key` property will be set to the string value `2` for both keyboard layouts because the modifier `shift` key is no longer active.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example uses {{domxref("EventTarget.addEventListener()")}} to listen for {{domxref("Element/keydown_event", "keydown")}} events. When they occur, the key's value is checked to see if it's one of the keys the code is interested in, and if it is, it gets processed in some way (possibly by steering a spacecraft, perhaps by changing the selected cell in a spreadsheet).</p>
+This example uses {{domxref("EventTarget.addEventListener()")}} to listen for {{domxref("Element/keydown_event", "keydown")}} events. When they occur, the key's value is checked to see if it's one of the keys the code is interested in, and if it is, it gets processed in some way (possibly by steering a spacecraft, perhaps by changing the selected cell in a spreadsheet).
 
-<pre class="brush: js">window.addEventListener("keydown", function (event) {
+```js
+window.addEventListener("keydown", function (event) {
   if (event.defaultPrevented) {
     return; // Do nothing if the event was already processed
   }
@@ -202,12 +227,12 @@ btnReset.addEventListener('click', (e) =&gt; {
   // Cancel the default action to avoid it being handled twice
   event.preventDefault();
 }, true);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

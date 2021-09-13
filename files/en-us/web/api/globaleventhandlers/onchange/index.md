@@ -2,53 +2,53 @@
 title: GlobalEventHandlers.onchange
 slug: Web/API/GlobalEventHandlers/onchange
 tags:
-- API
-- Event Handler
-- GlobalEventHandlers
-- HTML DOM
-- Property
-- Reference
+  - API
+  - Event Handler
+  - GlobalEventHandlers
+  - HTML DOM
+  - Property
+  - Reference
 browser-compat: api.GlobalEventHandlers.onchange
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p>The <strong><code>onchange</code></strong> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> for
-  processing {{event("change")}} events.</p>
+The **`onchange`** property of the
+{{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) for
+processing {{event("change")}} events.
 
-<p><code>change</code> events fire when the user commits a value change to a form control.
-  This may be done, for example, by clicking outside of the control or by using the
-  <kbd>Tab</kbd> key to switch to a different control.</p>
+`change` events fire when the user commits a value change to a form control.
+This may be done, for example, by clicking outside of the control or by using the <kbd>Tab</kbd> key to switch to a different control.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Unlike {{domxref("GlobalEventHandlers.oninput", "oninput")}},
-    the <code>onchange</code> event handler is not necessarily called for each alteration
-    to an element's <code>value</code>.</p>
-</div>
+> **Note:** Unlike {{domxref("GlobalEventHandlers.oninput", "oninput")}},
+> the `onchange` event handler is not necessarily called for each alteration
+> to an element's `value`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em><var>target</var></em>.onchange = <em>functionRef</em>;
-</pre>
+```js
+target.onchange = functionRef;
+```
 
-<p><code>functionRef</code> is a function name or a <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function
-    expression</a>. The function receives an {{domxref("Event")}} object as its sole
-  argument.</p>
+`functionRef` is a function name or a [function
+expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives an {{domxref("Event")}} object as its sole
+argument.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example logs the number of characters in an {{HtmlElement("input")}} element,
-  every time you modify its contents and then change focus away from it.</p>
+This example logs the number of characters in an {{HtmlElement("input")}} element,
+every time you modify its contents and then change focus away from it.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;input type="text" placeholder="Type something here, then click outside of the field." size="50"&gt;
-&lt;p id="log"&gt;&lt;/p&gt;</pre>
+```html
+<input type="text" placeholder="Type something here, then click outside of the field." size="50">
+<p id="log"></p>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">let input = document.querySelector('input');
+```js
+let input = document.querySelector('input');
 let log = document.getElementById('log');
 
 input.onchange = handleChange;
@@ -56,22 +56,21 @@ input.onchange = handleChange;
 function handleChange(e) {
   log.textContent = `The field's value is
       ${e.target.value.length} character(s) long.`;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{event("change")}} event</li>
-</ul>
+- {{event("change")}} event

@@ -2,73 +2,74 @@
 title: MouseEvent.metaKey
 slug: Web/API/MouseEvent/metaKey
 tags:
-- API
-- DOM
-- DOM Events
-- MouseEvent
-- Property
-- Read-only
-- Reference
+  - API
+  - DOM
+  - DOM Events
+  - MouseEvent
+  - Property
+  - Read-only
+  - Reference
 browser-compat: api.MouseEvent.metaKey
 ---
-<div>{{APIRef("DOM Events")}}</div>
+{{APIRef("DOM Events")}}
 
-<p>The <strong><code>MouseEvent.metaKey</code></strong> read-only property is a
-  boolean value that indicates whether the <kbd>meta</kbd> key was pressed or not
-  when a given mouse event occurs.</p>
+The **`MouseEvent.metaKey`** read-only property is a
+boolean value that indicates whether the <kbd>meta</kbd> key was pressed or not
+when a given mouse event occurs.
 
-<p>Be aware that many operating systems bind special functionality to the <kbd>meta</kbd>
-  key, so this property may be <code>false</code> even when the key is actually pressed.
-  On Windows, for example, this key may open the Start menu.</p>
+Be aware that many operating systems bind special functionality to the <kbd>meta</kbd>
+key, so this property may be `false` even when the key is actually pressed.
+On Windows, for example, this key may open the Start menu.
 
-<div class="note">
-  <p><strong>Note:</strong> On Macintosh keyboards, this key is the <kbd>command</kbd> key
-    (<kbd>⌘</kbd>). On Windows keyboards, this key is the Windows key (<kbd>⊞</kbd>).</p>
-</div>
+> **Note:** On Macintosh keyboards, this key is the <kbd>command</kbd> key
+> (<kbd>⌘</kbd>). On Windows keyboards, this key is the Windows key (<kbd>⊞</kbd>).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>metaKeyPressed</em> = <em>instanceOfMouseEvent</em>.metaKey
-</pre>
+```js
+var metaKeyPressed = instanceOfMouseEvent.metaKey
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A boolean value, where <code>true</code> indicates that the key is pressed, and
-  <code>false</code> indicates that the key is <em>not</em> pressed.</p>
+A boolean value, where `true` indicates that the key is pressed, and
+`false` indicates that the key is _not_ pressed.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example logs the <code>metaKey</code> property when you trigger a
-  {{Event("click")}} event.</p>
+This example logs the `metaKey` property when you trigger a
+{{Event("click")}} event.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Click anywhere to test the &lt;code&gt;metaKey&lt;/code&gt; property.&lt;/p&gt;
-&lt;p id="log"&gt;&lt;/p&gt;</pre>
+```html
+<p>Click anywhere to test the <code>metaKey</code> property.</p>
+<p id="log"></p>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">let log = document.querySelector('#log');
+```js
+let log = document.querySelector('#log');
 document.addEventListener('click', logKey);
 
 function logKey(e) {
   log.textContent = `The meta key is pressed: ${e.metaKey}`;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{ domxref("MouseEvent") }}</li>
-</ul>
+- {{ domxref("MouseEvent") }}

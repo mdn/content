@@ -11,48 +11,51 @@ tags:
   - mouse
 browser-compat: api.Element.auxclick_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code><strong>auxclick</strong></code> event is fired at an {{domxref("Element")}} when a non-primary pointing device button (any mouse button other than the primary—usually leftmost—button) has been pressed and released both within the same element.</p>
+The **`auxclick`** event is fired at an {{domxref("Element")}} when a non-primary pointing device button (any mouse button other than the primary—usually leftmost—button) has been pressed and released both within the same element.
 
-<p><code>auxclick</code> is fired after the {{event("mousedown")}} and {{event("mouseup")}} events have been fired, in that order.</p>
+`auxclick` is fired after the {{event("mousedown")}} and {{event("mouseup")}} events have been fired, in that order.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th>Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th>Cancelable</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th>Interface</th>
-   <td>{{domxref("MouseEvent")}}</td>
-  </tr>
-  <tr>
-   <th>Event handler property</th>
-   <td>{{domxref("GlobalEventHandlers.onauxclick", "onauxclick")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Cancelable</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Interface</th>
+      <td>{{domxref("MouseEvent")}}</td>
+    </tr>
+    <tr>
+      <th>Event handler property</th>
+      <td>
+        {{domxref("GlobalEventHandlers.onauxclick", "onauxclick")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Preventing_default_actions">Preventing default actions</h2>
+## Preventing default actions
 
-<p>For the vast majority of browsers that map middle click to opening a link in a new tab, including Firefox, it is possible to cancel this behavior by calling {{domxref("Event.preventDefault()", "preventDefault()")}} from within an <code>auxclick</code> event handler.</p>
+For the vast majority of browsers that map middle click to opening a link in a new tab, including Firefox, it is possible to cancel this behavior by calling {{domxref("Event.preventDefault()", "preventDefault()")}} from within an `auxclick` event handler.
 
-<p>When listening for <code>auxclick</code> events originating on elements that do not support input or navigation, you will often want to explicitly prevent other default actions mapped to the down action of the middle mouse button. On Windows this is usually autoscroll, and on macOS and Linux this is usually clipboard paste. This can be done by preventing the default behavior of the {{event("mousedown")}} or {{event("pointerdown")}} event.</p>
+When listening for `auxclick` events originating on elements that do not support input or navigation, you will often want to explicitly prevent other default actions mapped to the down action of the middle mouse button. On Windows this is usually autoscroll, and on macOS and Linux this is usually clipboard paste. This can be done by preventing the default behavior of the {{event("mousedown")}} or {{event("pointerdown")}} event.
 
-<p>Additionally, you may need to avoid opening a system context menu after a right click. Due to timing differences between operating systems, this too is not a preventable default behavior of <code>auxclick</code>. Instead, this can be done by preventing the default behavior of the {{event("contextmenu")}} event.</p>
+Additionally, you may need to avoid opening a system context menu after a right click. Due to timing differences between operating systems, this too is not a preventable default behavior of `auxclick`. Instead, this can be done by preventing the default behavior of the {{event("contextmenu")}} event.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this example we define functions for two event handlers — {{domxref("GlobalEventHandlers.onclick", "onclick")}} and {{domxref("GlobalEventHandlers.onauxclick", "onauxclick")}}. The former changes the color of the button background, while the latter changes the button foreground (text) color. You also can see the two functions in action by trying the demo out with a multi-button mouse (<a href="https://mdn.github.io/dom-examples/auxclick/">see it live on GitHub</a>; also <a href="https://github.com/mdn/dom-examples/blob/master/auxclick/index.html">see the source code</a>).</p>
+In this example we define functions for two event handlers — {{domxref("GlobalEventHandlers.onclick", "onclick")}} and {{domxref("GlobalEventHandlers.onauxclick", "onauxclick")}}. The former changes the color of the button background, while the latter changes the button foreground (text) color. You also can see the two functions in action by trying the demo out with a multi-button mouse ([see it live on GitHub](https://mdn.github.io/dom-examples/auxclick/); also [see the source code](https://github.com/mdn/dom-examples/blob/master/auxclick/index.html)).
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">let button = document.querySelector('button');
+```js
+let button = document.querySelector('button');
 let html = document.querySelector('html');
 
 function random(number) {
@@ -75,15 +78,18 @@ button.onauxclick = function(e) {
 button.oncontextmenu = function(e) {
   e.preventDefault();
 }
-</pre>
+```
 
-<p>Notice that in addition to capturing the <code>auxclick</code> event using {{domxref("GlobalEventHandlers.onauxclick", "onauxclick")}}, the {{domxref("Element.contextmenu_event", "contextmenu")}} event is also captured, and {{domxref("Event.preventDefault", "preventDefault()")}} called on that event, in order to prevent the context menu from popping up after the color change is applied.</p>
+Notice that in addition to capturing the `auxclick` event using {{domxref("GlobalEventHandlers.onauxclick", "onauxclick")}}, the {{domxref("Element.contextmenu_event", "contextmenu")}} event is also captured, and {{domxref("Event.preventDefault", "preventDefault()")}} called on that event, in order to prevent the context menu from popping up after the color change is applied.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;button&gt;&lt;h1&gt;Click me!&lt;/h1&gt;&lt;/button&gt;</pre>
+```html
+<button><h1>Click me!</h1></button>
+```
 
-<pre class="brush: css hidden">html {
+```css hidden
+html {
   height: 100%;
   overflow: hidden;
 }
@@ -107,31 +113,28 @@ button {
 
 h1 {
   letter-spacing: 0.5rem;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Examples", 640, 300)}}</p>
+{{EmbedLiveSample("Examples", 640, 300)}}
 
-<div class="note">
-<p><strong>Note:</strong> If you are using a three-button mouse, you'll notice that the <code>onauxclick</code> handler is run when any of the non-left mouse buttons are clicked (usually including any "special" buttons on gaming mice).</p>
-</div>
+> **Note:** If you are using a three-button mouse, you'll notice that the `onauxclick` handler is run when any of the non-left mouse buttons are clicked (usually including any "special" buttons on gaming mice).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li>
- <li>{{event("click")}}</li>
- <li>{{event("contextmenu")}}</li>
- <li>{{event("dblclick")}}</li>
- <li>{{event("mousedown")}}</li>
- <li>{{event("mouseup")}}</li>
- <li>{{event("pointerdown")}}</li>
- <li>{{event("pointerup")}}</li>
-</ul>
+- [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events)
+- {{event("click")}}
+- {{event("contextmenu")}}
+- {{event("dblclick")}}
+- {{event("mousedown")}}
+- {{event("mouseup")}}
+- {{event("pointerdown")}}
+- {{event("pointerup")}}

@@ -8,26 +8,29 @@ tags:
   - Reference
 browser-compat: api.Screen.availWidth
 ---
-<div>{{APIRef("CSSOM View")}}</div>
+{{APIRef("CSSOM View")}}
 
-<p>The <code><strong>Screen.availWidth</strong></code> property returns the amount of
-  horizontal space (in pixels) available to the window.</p>
+The **`Screen.availWidth`** property returns the amount of
+horizontal space (in pixels) available to the window.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var width = window.screen.availWidth</pre>
+```js
+var width = window.screen.availWidth
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">var screenAvailWidth = window.screen.availWidth;
+```js
+var screenAvailWidth = window.screen.availWidth;
 
-console.log(screenAvailWidth);</pre>
+console.log(screenAvailWidth);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

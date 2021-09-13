@@ -13,115 +13,107 @@ tags:
   - createAnswer
 browser-compat: api.RTCPeerConnection.createAnswer
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The <strong><code>createAnswer()</code></strong> method on the
-  {{domxref("RTCPeerConnection")}} interface creates an {{Glossary("SDP")}} answer to an
-  offer received from a remote peer during the offer/answer negotiation of a WebRTC
-  connection. The answer contains information about any media already attached to the
-  session, codecs and options supported by the browser, and any {{Glossary("ICE")}}
-  candidates already gathered. The answer is delivered to the returned
-  {{jsxref("Promise")}}, and should then be sent to the source of the offer to continue
-  the negotiation process.</p>
+The **`createAnswer()`** method on the
+{{domxref("RTCPeerConnection")}} interface creates an {{Glossary("SDP")}} answer to an
+offer received from a remote peer during the offer/answer negotiation of a WebRTC
+connection. The answer contains information about any media already attached to the
+session, codecs and options supported by the browser, and any {{Glossary("ICE")}}
+candidates already gathered. The answer is delivered to the returned
+{{jsxref("Promise")}}, and should then be sent to the source of the offer to continue
+the negotiation process.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>aPromise</em> = <em>RTCPeerConnection</em>.createAnswer([<em>options</em>]);
+```js
+aPromise = RTCPeerConnection.createAnswer([options]);
 
-<em>RTCPeerConnection</em>.createAnswer(<em>successCallback</em>, <em>failureCallback</em>[, <em>options</em>]); {{deprecated_inline}}</pre>
+RTCPeerConnection.createAnswer(successCallback, failureCallback[, options]); {{deprecated_inline}}
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>options</code> {{optional_inline}}</dt>
-  <dd>An object which contains options which customize the answer; this is based on the
-    {{domxref("RTCAnswerOptions")}} dictionary.</dd>
-</dl>
+- `options` {{optional_inline}}
+  - : An object which contains options which customize the answer; this is based on the
+    {{domxref("RTCAnswerOptions")}} dictionary.
 
-<h3 id="Deprecated_parameters">Deprecated parameters</h3>
+### Deprecated parameters
 
-<p>In older code and documentation, you may see a callback-based version of this function.
-  This has been deprecated and its use is <strong>strongly</strong> discouraged. You
-  should update any existing code to use the {{jsxref("Promise")}}-based version of
-  <code>createAnswer()</code> instead. The parameters for this form of
-  <code>createAnswer()</code> are described below, to aid in updating existing code. </p>
+In older code and documentation, you may see a callback-based version of this function.
+This has been deprecated and its use is **strongly** discouraged. You
+should update any existing code to use the {{jsxref("Promise")}}-based version of
+`createAnswer()` instead. The parameters for this form of
+`createAnswer()` are described below, to aid in updating existing code.
 
-<dl>
-  <dt><code>successCallback</code> {{deprecated_inline}}</dt>
-  <dd>A <a href="/en-US/docs/Glossary/Callback_function">callback function</a> which will be passed a single
-    {{domxref("RTCSessionDescription")}} object describing the newly-created answer.</dd>
-  <dt><code>failureCallback</code> {{deprecated_inline}}</dt>
-  <dd>A <a href="/en-US/docs/Glossary/Callback_function">callback function</a> which will be passed a single
+- `successCallback` {{deprecated_inline}}
+  - : A [callback function](/en-US/docs/Glossary/Callback_function) which will be passed a single
+    {{domxref("RTCSessionDescription")}} object describing the newly-created answer.
+- `failureCallback` {{deprecated_inline}}
+  - : A [callback function](/en-US/docs/Glossary/Callback_function) which will be passed a single
     {{domxref("DOMException")}} object explaining why the request to create an answer
-    failed.</dd>
-  <dt><code>options</code> {{optional_inline}}</dt>
-  <dd>An optional {{domxref("RTCOfferOptions")}} object providing options requested for
-    the answer.</dd>
-</dl>
+    failed.
+- `options` {{optional_inline}}
+  - : An optional {{domxref("RTCOfferOptions")}} object providing options requested for
+    the answer.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt><code>NotReadableError</code></dt>
-  <dd>The identity provider wasn't able to provide an identity assertion.</dd>
-  <dt><code>OperationError</code></dt>
-  <dd>Generation of the SDP failed for some reason; this is a general failure catch-all
-    exception.</dd>
-</dl>
+- `NotReadableError`
+  - : The identity provider wasn't able to provide an identity assertion.
+- `OperationError`
+  - : Generation of the SDP failed for some reason; this is a general failure catch-all
+    exception.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} whose fulfillment handler is called with an object conforming
-  to the {{domxref("RTCSessionDescriptionInit")}} dictionary which contains the SDP answer
-  to be delivered to the other peer.</p>
+A {{jsxref("Promise")}} whose fulfillment handler is called with an object conforming
+to the {{domxref("RTCSessionDescriptionInit")}} dictionary which contains the SDP answer
+to be delivered to the other peer.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>Here is a segment of code taken from the code that goes with the article <a
-    href="/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling">Signaling and video
-    calling</a>. This code comes from the handler for the message sent to carry an offer
-  to another peer across the signaling channel.</p>
+Here is a segment of code taken from the code that goes with the article [Signaling and video
+calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling). This code comes from the handler for the message sent to carry an offer
+to another peer across the signaling channel.
 
-<div class="note">
-  <p><strong>Note:</strong> Keep in mind that this is part of the signaling process, the transport layer for
-    which is an implementation detail that's entirely up to you. In this case, a <a
-      href="/en-US/docs/Web/API/WebSocket_API">WebSocket</a> connection is used to send a
-    {{Glossary("JSON")}} message with a <code>type</code> field with the value
-    "video-answer" to the other peer, carrying the answer to the device which sent the
-    offer to connect. The contents of the object being passed to the
-    <code>sendToServer()</code> function, along with everything else in the promise
-    fulfillment handler, depend entirely on your design</p>
-</div>
+> **Note:** Keep in mind that this is part of the signaling process, the transport layer for
+> which is an implementation detail that's entirely up to you. In this case, a [WebSocket](/en-US/docs/Web/API/WebSocket_API) connection is used to send a
+> {{Glossary("JSON")}} message with a `type` field with the value
+> "video-answer" to the other peer, carrying the answer to the device which sent the
+> offer to connect. The contents of the object being passed to the
+> `sendToServer()` function, along with everything else in the promise
+> fulfillment handler, depend entirely on your design
 
-<pre class="brush: js">pc.createAnswer().then(function(answer) {
+```js
+pc.createAnswer().then(function(answer) {
   return pc.setLocalDescription(answer);
 })
 .then(function() {
   // Send the answer to the remote peer through the signaling server.
 })
 .catch(handleGetUserMediaError);
-</pre>
+```
 
-<p>This asks {{domxref("RTCPeerConnection")}} to create and return a new answer. In our
-  promise handler, the returned answer is set as the description of the local end of the
-  connection by calling {{domxref("RTCPeerConnection.setLocalDescription",
-  "setLocalDescription()")}}.</p>
+This asks {{domxref("RTCPeerConnection")}} to create and return a new answer. In our
+promise handler, the returned answer is set as the description of the local end of the
+connection by calling {{domxref("RTCPeerConnection.setLocalDescription",
+  "setLocalDescription()")}}.
 
-<p>Once that succeeds, the answer is sent to the signaling server using whatever protocol
-  you see fit.</p>
+Once that succeeds, the answer is sent to the signaling server using whatever protocol
+you see fit.
 
-<p>{{jsxref("Promise.catch()")}} is used to trap and handle errors.</p>
+{{jsxref("Promise.catch()")}} is used to trap and handle errors.
 
-<p>See {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling",
+See {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling",
   "Handling the invitation")}} to see the complete code, in context, from which this
-  snippet is derived; that will help you understand the signaling process and how answers
-  work.</p>
+snippet is derived; that will help you understand the signaling process and how answers
+work.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -10,40 +10,34 @@ tags:
   - Plugins
 browser-compat: api.Plugin
 ---
-<div>{{ApiRef("HTML DOM")}}{{deprecated_header}}</div>
+{{ApiRef("HTML DOM")}}{{deprecated_header}}
 
-<p>The <code>Plugin</code> interface provides information about a browser plugin.</p>
+The `Plugin` interface provides information about a browser plugin.
 
-<div class="note">
-<p><strong>Note:</strong> Own properties of <code>Plugin</code> objects are no longer enumerable in the latest browser versions.</p>
-</div>
+> **Note:** Own properties of `Plugin` objects are no longer enumerable in the latest browser versions.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("Plugin.description")}} {{readonlyinline}}</dt>
- <dd>A human readable description of the plugin.</dd>
- <dt>{{domxref("Plugin.filename")}} {{readonlyinline}}</dt>
- <dd>The filename of the plugin file.</dd>
- <dt>{{domxref("Plugin.name")}} {{readonlyinline}}</dt>
- <dd>The name of the plugin.</dd>
- <dt>{{domxref("Plugin.version")}} {{readonlyinline}}</dt>
- <dd>The plugin's version number string.</dd>
-</dl>
+- {{domxref("Plugin.description")}} {{readonlyinline}}
+  - : A human readable description of the plugin.
+- {{domxref("Plugin.filename")}} {{readonlyinline}}
+  - : The filename of the plugin file.
+- {{domxref("Plugin.name")}} {{readonlyinline}}
+  - : The name of the plugin.
+- {{domxref("Plugin.version")}} {{readonlyinline}}
+  - : The plugin's version number string.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("Plugin.item")}}</dt>
- <dd>Returns the MIME type of a supported content type, given the index number into a list of supported types.</dd>
- <dt>{{domxref("Plugin.namedItem")}}</dt>
- <dd>Returns the MIME type of a supported item.</dd>
-</dl>
+- {{domxref("Plugin.item")}}
+  - : Returns the MIME type of a supported content type, given the index number into a list of supported types.
+- {{domxref("Plugin.namedItem")}}
+  - : Returns the MIME type of a supported item.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

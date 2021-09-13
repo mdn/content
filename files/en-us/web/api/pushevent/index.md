@@ -13,36 +13,33 @@ tags:
   - Workers
 browser-compat: api.PushEvent
 ---
-<p>{{APIRef("Push API")}}{{SeeCompatTable()}}</p>
+{{APIRef("Push API")}}{{SeeCompatTable()}}
 
-<p>The <strong><code>PushEvent</code></strong> interface of the <a href="/en-US/docs/Web/API/Push_API">Push API</a> represents a push message that has been received. This event is sent to the <a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope">global scope</a> of a {{domxref("ServiceWorker")}}. It contains the information sent from an application server to a {{domxref("PushSubscription")}}.</p>
+The **`PushEvent`** interface of the [Push API](/en-US/docs/Web/API/Push_API) represents a push message that has been received. This event is sent to the [global scope](/en-US/docs/Web/API/ServiceWorkerGlobalScope) of a {{domxref("ServiceWorker")}}. It contains the information sent from an application server to a {{domxref("PushSubscription")}}.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("PushEvent.PushEvent()")}}</dt>
- <dd>Creates a new <code>PushEvent</code> object.</dd>
-</dl>
+- {{domxref("PushEvent.PushEvent()")}}
+  - : Creates a new `PushEvent` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{domxref("ExtendableEvent")}}. Additional properties:</em></p>
+_Inherits properties from its parent, {{domxref("ExtendableEvent")}}. Additional properties:_
 
-<dl>
- <dt>{{domxref("PushEvent.data")}} {{readonlyinline}}</dt>
- <dd>Returns a reference to a {{domxref("PushMessageData")}} object containing data sent to the {{domxref("PushSubscription")}}.</dd>
-</dl>
+- {{domxref("PushEvent.data")}} {{readonlyinline}}
+  - : Returns a reference to a {{domxref("PushMessageData")}} object containing data sent to the {{domxref("PushSubscription")}}.
 
-<h2 id="methods">Methods</h2>
+## Methods
 
-<p><em>Inherits methods from its parent, {{domxref("ExtendableEvent")}}</em>.</p>
+_Inherits methods from its parent, {{domxref("ExtendableEvent")}}_.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example takes data from a <code>PushEvent</code> and displays it on all of the service worker's clients.</p>
+The following example takes data from a `PushEvent` and displays it on all of the service worker's clients.
 
-<pre class="brush: js">self.addEventListener('push', function(event) {
-  if (!(self.Notification &amp;&amp; self.Notification.permission === 'granted')) {
+```js
+self.addEventListener('push', function(event) {
+  if (!(self.Notification && self.Notification.permission === 'granted')) {
     return;
   }
 
@@ -66,19 +63,17 @@ browser-compat: api.PushEvent
     }
   });
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Push_API">Push API</a></li>
- <li><a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a></li>
-</ul>
+- [Push API](/en-US/docs/Web/API/Push_API)
+- [Service Worker API](/en-US/docs/Web/API/Service_Worker_API)

@@ -11,36 +11,34 @@ tags:
   - load
 browser-compat: api.XMLDocument.load
 ---
-<p>{{APIRef("DOM")}}{{Non-standard_Header}}{{Deprecated_Header}}</p>
+{{APIRef("DOM")}}{{Non-standard_Header}}{{Deprecated_Header}}
 
-<p><code>document.load()</code> is a part of an old version of the W3C <a href="https://www.w3.org/TR/2003/WD-DOM-Level-3-LS-20030619/load-save.html#LS-DocumentLS">DOM Level 3 Load &amp; Save module</a>. Can be used with {{DOMxRef("XMLDocument.async")}} to indicate whether the request is synchronous or asynchronous (the default). As of at least Gecko 1.9, this no longer supports cross-site loading of documents (Use {{DOMxRef("XMLHttpRequest")}} or {{DOMxRef("fetch()")}} instead).</p>
+`document.load()` is a part of an old version of the W3C [DOM Level 3 Load & Save module](https://www.w3.org/TR/2003/WD-DOM-Level-3-LS-20030619/load-save.html#LS-DocumentLS). Can be used with {{DOMxRef("XMLDocument.async")}} to indicate whether the request is synchronous or asynchronous (the default). As of at least Gecko 1.9, this no longer supports cross-site loading of documents (Use {{DOMxRef("XMLHttpRequest")}} or {{DOMxRef("fetch()")}} instead).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var xmlDoc = document.implementation.createDocument("", "test", null);
+```js
+var xmlDoc = document.implementation.createDocument("", "test", null);
 
 function documentLoaded (e) {
   alert(new XMLSerializer().serializeToString(e.target)); // Gives querydata.xml contents as string
 }
 
 xmlDoc.addEventListener("load", documentLoaded, false);
-xmlDoc.load('querydata.xml');</pre>
+xmlDoc.load('querydata.xml');
+```
 
-<p>{{Source("content/xml/tests/load/", "See also the load sample")}} in the XML tests directory. (To test this functionality, create the files on your local disk or on a webserver rather than loading the load.html file from the LXR-generated page, which will serve the text.xml file as HTML.)</p>
+{{Source("content/xml/tests/load/", "See also the load sample")}} in the XML tests directory. (To test this functionality, create the files on your local disk or on a webserver rather than loading the load.html file from the LXR-generated page, which will serve the text.xml file as HTML.)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<ul>
- <li><a href="https://www.w3.org/TR/2003/WD-DOM-Level-3-LS-20030619/load-save.html#LS-DocumentLS">Old W3C Working Draft of the DOM Level 3 Load &amp; Save module</a></li>
-</ul>
+- [Old W3C Working Draft of the DOM Level 3 Load & Save module](https://www.w3.org/TR/2003/WD-DOM-Level-3-LS-20030619/load-save.html#LS-DocumentLS)
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{DOMxRef("XMLDocument.async")}}</li>
- <li><a href="/en-US/docs/XML_in_Mozilla">XML in Mozilla</a></li>
-</ul>
+- {{DOMxRef("XMLDocument.async")}}
+- [XML in Mozilla](/en-US/docs/XML_in_Mozilla)

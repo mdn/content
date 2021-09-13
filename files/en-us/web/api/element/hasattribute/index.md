@@ -2,57 +2,58 @@
 title: Element.hasAttribute()
 slug: Web/API/Element/hasAttribute
 tags:
-- API
-- DOM
-- Element
-- Method
-- Reference
+  - API
+  - DOM
+  - Element
+  - Method
+  - Reference
 browser-compat: api.Element.hasAttribute
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>Element.hasAttribute()</code></strong> method returns a
-    <strong>Boolean</strong> value indicating whether the specified element has the
-    specified attribute or not.</p>
+The **`Element.hasAttribute()`** method returns a
+**Boolean** value indicating whether the specified element has the
+specified attribute or not.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>var <em>result</em></var> = <em><var>element</var></em>.hasAttribute(<em><var>name</var></em>);
-</pre>
+```js
+var result = element.hasAttribute(name);
+```
 
-<dl>
-    <dt><code>result</code></dt>
-    <dd>holds the return value <code>true</code> or <code>false</code>.</dd>
-    <dt><code>name</code></dt>
-    <dd>is a string representing the name of the attribute.</dd>
-</dl>
+- `result`
+  - : holds the return value `true` or `false`.
+- `name`
+  - : is a string representing the name of the attribute.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">var foo = document.getElementById("foo");
+```js
+var foo = document.getElementById("foo");
 if (foo.hasAttribute("bar")) {
     // do something
 }
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<pre class="brush:js">;(function(prototype) {
+```js
+;(function(prototype) {
     prototype.hasAttribute = prototype.hasAttribute || function(name) {
-        return !!(this.attributes[name] &amp;&amp;
+        return !!(this.attributes[name] &&
                   this.attributes[name].specified);
     }
 })(Element.prototype);
-</pre>
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<div>{{DOMAttributeMethods}}</div>
+{{DOMAttributeMethods}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

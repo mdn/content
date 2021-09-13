@@ -2,38 +2,39 @@
 title: PointerEvent.getCoalescedEvents()
 slug: Web/API/PointerEvent/getCoalescedEvents
 tags:
-- API
-- DOM
-- Method
-- Pointer Events
-- PointerEvent
-- Reference
+  - API
+  - DOM
+  - Method
+  - Pointer Events
+  - PointerEvent
+  - Reference
 browser-compat: api.PointerEvent.getCoalescedEvents
 ---
-<p>{{APIRef("Pointer Events")}}{{SeeCompatTable}}</p>
+{{APIRef("Pointer Events")}}{{SeeCompatTable}}
 
-<p>The <strong><code>getCoalescedEvents()</code></strong> method of the
-  {{domxref("PointerEvent")}} interface returns a sequence of all
-  <code>PointerEvent</code> instances that were coalesced into the dispatched
-  {{event('pointermove')}} event.</p>
+The **`getCoalescedEvents()`** method of the
+{{domxref("PointerEvent")}} interface returns a sequence of all
+`PointerEvent` instances that were coalesced into the dispatched
+{{event('pointermove')}} event.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>pointerEvents[]</em> = <em>PointerEvent</em>.getCoalescedEvents()</pre>
+```js
+var pointerEvents[] = PointerEvent.getCoalescedEvents()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A sequence of {{domxref('PointerEvent')}} instances.</p>
+A sequence of {{domxref('PointerEvent')}} instances.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

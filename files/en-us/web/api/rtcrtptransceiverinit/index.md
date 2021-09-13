@@ -13,36 +13,31 @@ tags:
   - WebRTC
 browser-compat: api.RTCRtpTransceiverInit
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <strong><code>RTCRtpTransceiverInit</code></strong> dictionary is used when calling the WebRTC function {{domxref("RTCPeerConnection.addTransceiver()")}} to provide configuration options for the new transceiver.</p>
+The **`RTCRtpTransceiverInit`** dictionary is used when calling the WebRTC function {{domxref("RTCPeerConnection.addTransceiver()")}} to provide configuration options for the new transceiver.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt><code>direction</code> {{optional_inline}}</dt>
- <dd>The new transceiver's preferred directionality. This value is used to initialize the new {{domxref("RTCRtpTransceiver")}} object's {{domxref("RTCRtpTransceiver.direction")}} property.</dd>
- <dt><code>sendEncodings</code> {{optional_inline}}</dt>
- <dd>A list of encodings to allow when sending RTP media from the {{domxref("RTCRtpSender")}}. Each entry is of type {{domxref("RTCRtpEncodingParameters")}}.</dd>
- <dt><code>streams</code> {{optional_inline}}</dt>
- <dd>A list of {{domxref("MediaStream")}} objects to add to the transceiver's{{domxref("RTCRtpReceiver")}}; when the remote peer's {{domxref("RTCPeerConnection")}}'s {{event("track")}} event occurs, these are the streams that will be specified by that event.</dd>
-</dl>
+- `direction` {{optional_inline}}
+  - : The new transceiver's preferred directionality. This value is used to initialize the new {{domxref("RTCRtpTransceiver")}} object's {{domxref("RTCRtpTransceiver.direction")}} property.
+- `sendEncodings` {{optional_inline}}
+  - : A list of encodings to allow when sending RTP media from the {{domxref("RTCRtpSender")}}. Each entry is of type {{domxref("RTCRtpEncodingParameters")}}.
+- `streams` {{optional_inline}}
+  - : A list of {{domxref("MediaStream")}} objects to add to the transceiver's{{domxref("RTCRtpReceiver")}}; when the remote peer's {{domxref("RTCPeerConnection")}}'s {{event("track")}} event occurs, these are the streams that will be specified by that event.
 
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP">Introduction to the Real-time Transport Protocol (RTP)</a></li>
- <li>{{domxref("RTCPeerConnection.addTransceiver()")}}</li>
- <li>{{domxref("RTCRtpTransceiver")}}</li>
- <li>{{domxref("RTCRtpReceiver")}} and {{domxref("RTCRtpSender")}}</li>
-</ul>
+- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+- [Introduction to the Real-time Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)
+- {{domxref("RTCPeerConnection.addTransceiver()")}}
+- {{domxref("RTCRtpTransceiver")}}
+- {{domxref("RTCRtpReceiver")}} and {{domxref("RTCRtpSender")}}

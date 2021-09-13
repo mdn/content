@@ -2,37 +2,35 @@
 title: Element.scrollLeftMax
 slug: Web/API/Element/scrollLeftMax
 tags:
-- API
-- CSSOM View
-- Element
-- Non-standard
-- Property
-- Read-only
-- Reference
+  - API
+  - CSSOM View
+  - Element
+  - Non-standard
+  - Property
+  - Read-only
+  - Reference
 browser-compat: api.Element.scrollLeftMax
 ---
-<p>{{APIRef("DOM")}}{{Non-standard_header}}</p>
+{{APIRef("DOM")}}{{Non-standard_header}}
 
-<p>The <code><strong>Element.scrollLeftMax</strong></code> read-only property returns a
-  {{jsxref("Number")}} representing the maximum left scroll offset possible for the
-  element.</p>
+The **`Element.scrollLeftMax`** read-only property returns a
+{{jsxref("Number")}} representing the maximum left scroll offset possible for the
+element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>pxl</em> = <em>element</em>.scrollLeftMax;</pre>
+```js
+var pxl = element.scrollLeftMax;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p><em>This property is not part of any specification.</em></p>
+_This property is not part of any specification._
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Element.scrollTopMax")}} giving the same information for the other axis.
-  </li>
-</ul>
+- {{domxref("Element.scrollTopMax")}} giving the same information for the other axis.

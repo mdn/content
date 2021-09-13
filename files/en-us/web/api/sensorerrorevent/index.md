@@ -13,28 +13,24 @@ tags:
   - Sensors
 browser-compat: api.SensorErrorEvent
 ---
-<div>{{APIRef("Sensor API")}}</div>
+{{APIRef("Sensor API")}}
 
-<p>The <strong><code>SensorErrorEvent</code></strong> interface of the <a href="/en-US/docs/Web/API/Sensor_APIs">Sensor APIs</a> provides information about errors thrown by a {{domxref('Sensor')}} or derivated interface.</p>
+The **`SensorErrorEvent`** interface of the [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs) provides information about errors thrown by a {{domxref('Sensor')}} or derivated interface.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("SensorErrorEvent.SensorErrorEvent", "SensorErrorEvent()")}}</dt>
- <dd>Creates a new <code>SensorErrorEvent</code> object.</dd>
-</dl>
+- {{domxref("SensorErrorEvent.SensorErrorEvent", "SensorErrorEvent()")}}
+  - : Creates a new `SensorErrorEvent` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref('SensorErrorEvent.error')}} {{readonlyinline}}</dt>
- <dd>Returns the {{domxref('DOMException')}} object passed in the event's contructor.</dd>
-</dl>
+- {{domxref('SensorErrorEvent.error')}} {{readonlyinline}}
+  - : Returns the {{domxref('DOMException')}} object passed in the event's contructor.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

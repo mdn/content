@@ -2,40 +2,42 @@
 title: CSSPerspective.length
 slug: Web/API/CSSPerspective/length
 tags:
-- API
-- CSS Typed Object Model API
-- CSSPerspective
-- CSSTransformComponent
-- CSSTransformValue
-- Experimental
-- Houdini
-- Property
+  - API
+  - CSS Typed Object Model API
+  - CSSPerspective
+  - CSSTransformComponent
+  - CSSTransformValue
+  - Experimental
+  - Houdini
+  - Property
 browser-compat: api.CSSPerspective.length
 ---
-<div>{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}</div>
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}
 
-<p>The <strong><code>length</code></strong> property of the
-  {{domxref("CSSPerspective")}} interface sets the distance from z=0.</p>
+The **`length`** property of the
+{{domxref("CSSPerspective")}} interface sets the distance from z=0.
 
-<p>It is used to apply a perspective transform to the element and its content. If the
-  value is 0 or a negative number, no perspective transform is applied.</p>
+It is used to apply a perspective transform to the element and its content. If the
+value is 0 or a negative number, no perspective transform is applied.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>length</var> = CSSPerspective.length;</pre>
+```js
+var length = CSSPerspective.length;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("CSSNumericValue")}}</p>
+A {{domxref("CSSNumericValue")}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>To Do</p>
+To Do
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

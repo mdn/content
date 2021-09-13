@@ -2,56 +2,56 @@
 title: HTMLSlotElement.assign()
 slug: Web/API/HTMLSlotElement/assign
 tags:
-- API
-- HTMLSlotElement
-- Method
-- Reference
-- Web Components
-- assign
-- shadow dom
+  - API
+  - HTMLSlotElement
+  - Method
+  - Reference
+  - Web Components
+  - assign
+  - shadow dom
 browser-compat: api.HTMLSlotElement.assign
 ---
-<div>{{APIRef("Shadow DOM API")}}</div>
+{{APIRef("Shadow DOM API")}}
 
-<p>The <strong><code>assign()</code></strong> method of the
-  {{domxref("HTMLSlotElement")}} interface sets the slot's <strong>manually assigned nodes</strong> to an ordered set of slottables. The manually assigned nodes set is initially empty until nodes are assigned using <code>assign()</code>.</p>
+The **`assign()`** method of the
+{{domxref("HTMLSlotElement")}} interface sets the slot's **manually assigned nodes** to an ordered set of slottables. The manually assigned nodes set is initially empty until nodes are assigned using `assign()`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">
-HTMLSlotElement.assign(nodes)</pre>
+```js
+HTMLSlotElement.assign(nodes)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>nodes</code></dt>
-  <dd>A set of {{domxref("Element")}} or {{domxref("Text")}} nodes.</dd>
-</dl>
+- `nodes`
+  - : A set of {{domxref("Element")}} or {{domxref("Text")}} nodes.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Undefined.</p>
+Undefined.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the below example, the <code>assign()</code> method is used to display the correct tab in a tabbed application. The function is called and passed the panel to show, which is then assigned to the slot.</p>
+In the below example, the `assign()` method is used to display the correct tab in a tabbed application. The function is called and passed the panel to show, which is then assigned to the slot.
 
-<pre class="brush: js">function UpdateDisplayTab(elem, tabIdx) {
+```js
+function UpdateDisplayTab(elem, tabIdx) {
   const shadow = elem.shadowRoot;
   const slot = shadow.querySelector("slot");
   const panels = elem.querySelectorAll('tab-panel');
-  if (panels.length && tabIdx && tabIdx &lt;= panels.length ) {
+  if (panels.length && tabIdx && tabIdx <= panels.length ) {
     slot.assign([panels[tabIdx-1]]);
   } else {
     slot.assign([]);
   }
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

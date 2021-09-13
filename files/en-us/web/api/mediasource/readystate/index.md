@@ -14,39 +14,36 @@ tags:
   - readyState
 browser-compat: api.MediaSource.readyState
 ---
-<div>{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}</div>
+{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
-<p>The <code><strong>readyState</strong></code> read-only property of the
-  {{domxref("MediaSource")}} interface returns an enum representing the state of the
-  current <code>MediaSource</code>. The three possible values are:</p>
+The **`readyState`** read-only property of the
+{{domxref("MediaSource")}} interface returns an enum representing the state of the
+current `MediaSource`. The three possible values are:
 
-<ul>
-  <li><code>closed</code>: The source is not currently attached to a media element.</li>
-  <li><code>open</code>: The source is attached to a media element and ready to receive
-    {{domxref("SourceBuffer")}} objects.</li>
-  <li><code>ended</code>: The source is attached to a media element but the stream has
-    been ended via a call to {{domxref("MediaSource.endOfStream()")}}.</li>
-</ul>
+- `closed`: The source is not currently attached to a media element.
+- `open`: The source is attached to a media element and ready to receive
+  {{domxref("SourceBuffer")}} objects.
+- `ended`: The source is attached to a media element but the stream has
+  been ended via a call to {{domxref("MediaSource.endOfStream()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>myReadyState</em> = <em>mediaSource</em>.readyState;</pre>
+```js
+var myReadyState = mediaSource.readyState;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}}.</p>
+A {{domxref("DOMString")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following snippet is from a simple example written by Nick Desaulniers (<a
-    href="https://nickdesaulniers.github.io/netfix/demo/bufferAll.html">view the full demo
-    live</a>, or <a
-    href="https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html">download
-    the source</a> for further investigation.)</p>
+The following snippet is from a simple example written by Nick Desaulniers ([view the full demo
+live](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download
+the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation.)
 
-<pre
-  class="brush: js ">if ('MediaSource' in window &amp;&amp; MediaSource.isTypeSupported(mimeCodec)) {
+```js
+if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
   var mediaSource = new MediaSource;
   //console.log(mediaSource.readyState); // closed
   video.src = URL.createObjectURL(mediaSource);
@@ -67,19 +64,18 @@ function sourceOpen (_) {
     });
     sourceBuffer.appendBuffer(buf);
   });
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("SourceBuffer")}}</li>
-  <li>{{domxref("SourceBufferList")}}</li>
-</ul>
+- {{domxref("SourceBuffer")}}
+- {{domxref("SourceBufferList")}}

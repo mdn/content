@@ -9,85 +9,79 @@ tags:
   - CookieStore
 browser-compat: api.CookieStore.set
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("Cookie Store API")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("Cookie Store API")}}
 
-<p>The <strong><code>set()</code></strong> method of the {{domxref("CookieStore")}} interface sets a cookie with the given name and value or options object. (See below.)</p>
+The **`set()`** method of the {{domxref("CookieStore")}} interface sets a cookie with the given name and value or options object. (See below.)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <var>promise</var> = cookieStore.set(<var>name</var>,<var>value</var>);
-var <var>promise</var> = cookieStore.set(<var>options</var>);</pre>
+    var promise = cookieStore.set(name,value);
+    var promise = cookieStore.set(options);
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>This method requires one of the following:</p>
+This method requires one of the following:
 
-<dl>
-  <dt><code>name</code></dt>
-  <dd>A {{domxref("USVString")}} with the name of the cookie.</dd>
-  <dt><code>value</code></dt>
-  <dd>A {{domxref("USVString")}} with the value of the cookie.</dd>
-  <dt>options</dt>
-  <dd>An object containing:
-    <dl>
-      <dt><code>name</code></dt>
-      <dd>A {{domxref("USVString")}} with the name of a cookie.</dd>
-      <dt><code>value</code></dt>
-      <dd>A {{domxref("USVString")}} with the value of the cookie.</dd>
-      <dt><code>expires</code>{{Optional_Inline}}</dt>
-      <dd>A {{domxref("DOMTimeStamp")}} containing the expiration date of the cookie.</dd>
-      <dt><code>domain</code>{{Optional_Inline}}</dt>
-      <dd>A {{domxref("USVString")}} containing the domain of the cookie.</dd>
-      <dt><code>path</code>{{Optional_Inline}}</dt>
-      <dd>A {{domxref("USVString")}} containing the path of the cookie.</dd>
-      <dt><code>sameSite</code>{{Optional_Inline}}</dt>
-      <dd>One of the following <a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite">SameSite</a> values:
-        <dl>
-          <dt><code>"strict"</code></dt>
-          <dd>Cookies will only be sent in a first-party context and not be sent along with requests initiated by third party websites.</dd>
-          <dt><code>"lax"</code></dt>
-          <dd>Cookies are not sent on normal cross-site subrequests (for example to load images or frames into a third party site), but are sent when a user is navigating to the origin site (i.e. when following a link).</dd>
-          <dt><code>"none"</code></dt>
-          <dd>Cookies will be sent in all contexts.</dd>
-        </dl>
+- `name`
+  - : A {{domxref("USVString")}} with the name of the cookie.
+- `value`
+  - : A {{domxref("USVString")}} with the value of the cookie.
+- options
 
-        <div class="notecard note">
-          <p><strong>Note:</strong> For more information on SameSite cookies see <a href="https://web.dev/samesite-cookies-explained/">SameSite cookies explained</a>.</p>
-        </div>
-      </dd>
-    </dl>
-  </dd>
-</dl>
+  - : An object containing:
 
-<h3 id="Returns">Return value</h3>
+    - `name`
+      - : A {{domxref("USVString")}} with the name of a cookie.
+    - `value`
+      - : A {{domxref("USVString")}} with the value of the cookie.
+    - `expires`{{Optional_Inline}}
+      - : A {{domxref("DOMTimeStamp")}} containing the expiration date of the cookie.
+    - `domain`{{Optional_Inline}}
+      - : A {{domxref("USVString")}} containing the domain of the cookie.
+    - `path`{{Optional_Inline}}
+      - : A {{domxref("USVString")}} containing the path of the cookie.
+    - `sameSite`{{Optional_Inline}}
 
-<p>A {{jsxref("Promise")}} that resolves with {{jsxref("Undefined")}} when setting the cookie completes.</p>
+      - : One of the following [SameSite](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) values:
 
-<h3 id="Exceptions">Exceptions</h3>
+        - `"strict"`
+          - : Cookies will only be sent in a first-party context and not be sent along with requests initiated by third party websites.
+        - `"lax"`
+          - : Cookies are not sent on normal cross-site subrequests (for example to load images or frames into a third party site), but are sent when a user is navigating to the origin site (i.e. when following a link).
+        - `"none"`
+          - : Cookies will be sent in all contexts.
 
-<dl>
-  <dt>{{jsxref("TypeError")}}</dt>
-  <dd>Thrown if setting the cookie with the given values fails.</dd>
-  <dt>{{domxref("DOMException")}} <code>SecurityError</code></dt>
-  <dd>Thrown if the origin does not {{glossary("serialize")}} to a URL.</dd>
-</dl>
+        > **Note:** For more information on SameSite cookies see [SameSite cookies explained](https://web.dev/samesite-cookies-explained/).
 
-<h2 id="Examples">Examples</h2>
+### Return value
 
-<p>The following example sets a cookie by passing an object with <code>name</code>, <code>value</code>, <code>expires</code>, and <code>domain</code>.</p>
+A {{jsxref("Promise")}} that resolves with {{jsxref("Undefined")}} when setting the cookie completes.
 
-<pre class="brush:js">const day = 24 * 60 * 60 * 1000;
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if setting the cookie with the given values fails.
+- {{domxref("DOMException")}} `SecurityError`
+  - : Thrown if the origin does not {{glossary("serialize")}} to a URL.
+
+## Examples
+
+The following example sets a cookie by passing an object with `name`, `value`, `expires`, and `domain`.
+
+```js
+const day = 24 * 60 * 60 * 1000;
 cookieStore.set({
   name: "cookie1",
   value: "cookie1-value",
   expires: Date.now() + day,
   domain: "example.com"
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

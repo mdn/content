@@ -8,52 +8,51 @@ tags:
   - abort
 browser-compat: api.IDBTransaction.abort_event
 ---
-<p>{{APIRef("IndexedDB")}}</p>
+{{APIRef("IndexedDB")}}
 
-<p>The <code>abort</code> event is fired when an <code>IndexedDB</code> transaction is aborted.</p>
+The `abort` event is fired when an `IndexedDB` transaction is aborted.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{DOMxRef("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{DOMxRef("IDBTransaction.onabort", "onabort")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{DOMxRef("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>{{DOMxRef("IDBTransaction.onabort", "onabort")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>This can happen for any of the following reasons:</p>
+This can happen for any of the following reasons:
 
-<ul>
- <li>bad requests, (for example, trying to add the same key twice, or put the same index key when the key has a uniqueness constraint),</li>
- <li>an explicit {{DOMxRef("IDBTransaction.abort", "abort()")}} call</li>
- <li>an uncaught exception in the request's success/error handler,</li>
- <li>an I/O error (an actual failure to write to disk, for example disk detached, or other OS/hardware failure)</li>
- <li>quota exceeded.</li>
-</ul>
+- bad requests, (for example, trying to add the same key twice, or put the same index key when the key has a uniqueness constraint),
+- an explicit {{DOMxRef("IDBTransaction.abort", "abort()")}} call
+- an uncaught exception in the request's success/error handler,
+- an I/O error (an actual failure to write to disk, for example disk detached, or other OS/hardware failure)
+- quota exceeded.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example opens a database (creating the database if it does not exist), then opens a transaction, adds a listener to the <code>abort</code> event, then aborts the transaction to trigger the event.</p>
+This example opens a database (creating the database if it does not exist), then opens a transaction, adds a listener to the `abort` event, then aborts the transaction to trigger the event.
 
-<pre class="brush: js;">// Open the database
+```js
+// Open the database
 const DBOpenRequest = window.indexedDB.open('toDoList', 4);
 
-DBOpenRequest.onupgradeneeded = event =&gt; {
+DBOpenRequest.onupgradeneeded = event => {
   const db = event.target.result;
 
-  db.onerror = () =&gt; {
+  db.onerror = () => {
     console.log('Error creating database');
   };
 
@@ -68,31 +67,32 @@ DBOpenRequest.onupgradeneeded = event =&gt; {
   objectStore.createIndex('year', 'year', { unique: false });
 };
 
-DBOpenRequest.onsuccess = event =&gt; {
+DBOpenRequest.onsuccess = event => {
   const db = DBOpenRequest.result;
 
   // open a read/write db transaction, ready for adding the data
   const transaction = db.transaction(['toDoList'], 'readwrite');
 
   // add a listener for `abort`
-  transaction.addEventListener('abort', () =&gt; {
+  transaction.addEventListener('abort', () => {
     console.log('Transaction was aborted');
   });
 
   // abort the transaction
   transaction.abort();
 };
-</pre>
+```
 
-<p>The same example, but assigning the event handler to the {{DOMxRef("IDBTransaction.onabort", "onabort")}} property:</p>
+The same example, but assigning the event handler to the {{DOMxRef("IDBTransaction.onabort", "onabort")}} property:
 
-<pre class="brush: js;">// Open the database
+```js
+// Open the database
 const DBOpenRequest = window.indexedDB.open('toDoList', 4);
 
-DBOpenRequest.onupgradeneeded = event =&gt; {
+DBOpenRequest.onupgradeneeded = event => {
   const db = event.target.result;
 
-  db.onerror = () =&gt; {
+  db.onerror = () => {
     console.log('Error creating database');
   };
 
@@ -107,29 +107,27 @@ DBOpenRequest.onupgradeneeded = event =&gt; {
   objectStore.createIndex('year', 'year', { unique: false });
 };
 
-DBOpenRequest.onsuccess = event =&gt; {
+DBOpenRequest.onsuccess = event => {
   const db = DBOpenRequest.result;
 
   // open a read/write db transaction, ready for adding the data
   const transaction = db.transaction(['toDoList'], 'readwrite');
 
   // add a listener for `abort`
-  transaction.onabort = (event) =&gt; {
+  transaction.onabort = (event) => {
     console.log('Transaction was aborted');
   };
 
   // abort the transaction
   transaction.abort();
 };
-</pre>
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
- <li>{{DOMxRef("IDBTransaction.onabort", "onabort")}} event handler property</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- {{DOMxRef("IDBTransaction.onabort", "onabort")}} event handler property

@@ -11,27 +11,29 @@ tags:
   - screen
 browser-compat: api.Screen.orientation
 ---
-<p>{{APIRef("Screen Orientation API")}}</p>
+{{APIRef("Screen Orientation API")}}
 
-<p>The <strong><code>orientation</code></strong> read-only property of the
-	{{DOMxRef("Screen")}} interface returns the current orientation of the screen.</p>
+The **`orientation`** read-only property of the
+{{DOMxRef("Screen")}} interface returns the current orientation of the screen.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-	class="brush: js">var <var>orientation</var> = screen.orientation;</pre>
+```js
+var orientation = screen.orientation;
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An instance of {{DOMxRef("ScreenOrientation")}} representing the orientation of the
-	screen.</p>
+An instance of {{DOMxRef("ScreenOrientation")}} representing the orientation of the
+screen.
 
-<p>Note that older, prefixed versions returned a {{DOMxRef("DOMString")}} equivalent to
-	{{DOMxRef("ScreenOrientation.type")}}.</p>
+Note that older, prefixed versions returned a {{DOMxRef("DOMString")}} equivalent to
+{{DOMxRef("ScreenOrientation.type")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js;">var orientation = (screen.orientation || {}).type || screen.mozOrientation || screen.msOrientation;
+```js
+var orientation = (screen.orientation || {}).type || screen.mozOrientation || screen.msOrientation;
 
 if (orientation === "landscape-primary") {
   console.log("That looks good.");
@@ -42,21 +44,18 @@ if (orientation === "landscape-primary") {
 } else if (orientation === undefined) {
   console.log("The orientation API isn't supported in this browser :(");
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{DOMxRef("ScreenOrientation")}}</li>
-	<li>{{DOMxRef("Screen.onorientationchange")}}</li>
-	<li><a href="/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation">Managing screen orientation</a>
-	</li>
-</ul>
+- {{DOMxRef("ScreenOrientation")}}
+- {{DOMxRef("Screen.onorientationchange")}}
+- [Managing screen orientation](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)

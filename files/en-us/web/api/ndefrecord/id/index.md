@@ -2,35 +2,37 @@
 title: NDEFRecord.id
 slug: Web/API/NDEFRecord/id
 tags:
-- NDEF
-- NDEFRecord
-- Reference
-- Web NFC
+  - NDEF
+  - NDEFRecord
+  - Reference
+  - Web NFC
 browser-compat: api.NDEFRecord.id
 ---
-<p>{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}</p>
+{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 
-<p>The <strong><code>id</code></strong> property of the
+The **`id`** property of the
 {{DOMxRef("NDEFRecord")}} interface returns the record identifier, which is an
-absolute or relative URL used to identify the record.</p>
+absolute or relative URL used to identify the record.
 
-<p>This identifier is created by the generator of the record which is solely responsible
-  for enforcing record identifier uniqueness. Web NFC does not sign the NFC content, thus
-  record consumer should not make any assumptions about integrity or authenticity of the
-  identifier or any other part of the records.</p>
+This identifier is created by the generator of the record which is solely responsible
+for enforcing record identifier uniqueness. Web NFC does not sign the NFC content, thus
+record consumer should not make any assumptions about integrity or authenticity of the
+identifier or any other part of the records.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">NDEFRecord.id</pre>
+```js
+NDEFRecord.id
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{DOMxRef("USVString")}}.</p>
+A {{DOMxRef("USVString")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

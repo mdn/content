@@ -2,88 +2,79 @@
 title: Document.adoptNode()
 slug: Web/API/Document/adoptNode
 tags:
-- API
-- DOM
-- DOM Reference
-- Method
-- NeedsExample
-- NeedsSpecTable
-- NeedsUpdate
-- Reference
+  - API
+  - DOM
+  - DOM Reference
+  - Method
+  - NeedsExample
+  - NeedsSpecTable
+  - NeedsUpdate
+  - Reference
 browser-compat: api.Document.adoptNode
 ---
-<div>{{ ApiRef("DOM") }}</div>
+{{ ApiRef("DOM") }}
 
-<p><strong><code>Document.adoptNode()</code></strong> transfers a {{Glossary("node/dom",
+**`Document.adoptNode()`** transfers a {{Glossary("node/dom",
   "node")}} from another {{domxref("Document", "document", "", "1")}} into the method's
-  document. The adopted node and its subtree is removed from its original document (if
-  any), and its {{domxref("Node.ownerDocument", "ownerDocument")}} is changed to the
-  current document. The node can then be inserted into the current document.</p>
+document. The adopted node and its subtree is removed from its original document (if
+any), and its {{domxref("Node.ownerDocument", "ownerDocument")}} is changed to the
+current document. The node can then be inserted into the current document.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const <var>importedNode</var> = document.adoptNode(<var>externalNode</var>);
-</pre>
+```js
+const importedNode = document.adoptNode(externalNode);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>externalNode</var></code></dt>
-  <dd>The node from another document to be adopted.</dd>
-</dl>
+- `externalNode`
+  - : The node from another document to be adopted.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The copied <code><var>importedNode</var></code> in the scope of the importing document.
-</p>
+The copied `importedNode` in the scope of the importing document.
 
-<p>After calling this method, <code><var>importedNode</var></code> and
-  <code><var>externalNode</var></code> are the same object.</p>
+After calling this method, `importedNode` and
+`externalNode` are the same object.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> <code><var>importedNode</var></code>'s
-    {{domxref("Node.parentNode")}} is <code>null</code>, since it has not yet been
-    inserted into the document tree!</p>
-</div>
+> **Note:** `importedNode`'s
+> {{domxref("Node.parentNode")}} is `null`, since it has not yet been
+> inserted into the document tree!
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">const iframe = document.querySelector('iframe');
+```js
+const iframe = document.querySelector('iframe');
 const iframeImages = iframe.contentDocument.querySelectorAll('img');
 const newParent = document.getElementById('images');
 
 iframeImages.forEach(function(imgEl) {
   newParent.appendChild(document.adoptNode(imgEl));
 });
-</pre>
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Before they can be inserted into the current document, nodes from external documents
-  should either be:</p>
+Before they can be inserted into the current document, nodes from external documents
+should either be:
 
-<ul>
-  <li>cloned using {{domXref("document.importNode()")}}; or</li>
-  <li>adopted using {{domXref("document.adoptNode()")}}.</li>
-</ul>
+- cloned using {{domXref("document.importNode()")}}; or
+- adopted using {{domXref("document.adoptNode()")}}.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Although Firefox doesn't currently enforce this rule,
-    we encourage you to follow this rule for improved future compatibility.</p>
-</div>
+> **Note:** Although Firefox doesn't currently enforce this rule,
+> we encourage you to follow this rule for improved future compatibility.
 
-<p>For more on the {{domXref("Node.ownerDocument")}} issues, see the W3C DOM FAQ.</p>
+For more on the {{domXref("Node.ownerDocument")}} issues, see the W3C DOM FAQ.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("document.importNode()")}}</li>
-</ul>
+- {{domxref("document.importNode()")}}

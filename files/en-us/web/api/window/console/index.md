@@ -9,44 +9,32 @@ tags:
   - Window
   - console
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <strong><code>Window.console</code></strong> property returns a reference to the {{domxref("console")}} object, which provides methods for logging information to the browser's console. These methods are intended for debugging purposes only and should not be relied on for presenting information to end users.</p>
+The **`Window.console`** property returns a reference to the {{domxref("console")}} object, which provides methods for logging information to the browser's console. These methods are intended for debugging purposes only and should not be relied on for presenting information to end users.
 
-<h2 id="Example">Examples</h2>
+## Examples
 
-<h3 id="Logging_to_console">Logging to console</h3>
+### Logging to console
 
-<p>The first example logs text to the console.</p>
+The first example logs text to the console.
 
-<pre class="brush: js">console.log("An error occurred while loading the content");
-</pre>
+```js
+console.log("An error occurred while loading the content");
+```
 
-<p>The next example logs an object to the console, with the object's fields expandable using disclosure widgets:</p>
+The next example logs an object to the console, with the object's fields expandable using disclosure widgets:
 
-<pre class="brush: js">console.dir(someObject);</pre>
+```js
+console.dir(someObject);
+```
 
-<p>See {{SectionOnPage("/en-US/docs/Web/API/console", "Usage")}} for more thorough examples.</p>
+See {{SectionOnPage("/en-US/docs/Web/API/console", "Usage")}} for more thorough examples.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Console API')}}</td>
-   <td>{{Spec2('Console API')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                        | Status                           | Comment             |
+| ------------------------------------ | -------------------------------- | ------------------- |
+| {{SpecName('Console API')}} | {{Spec2('Console API')}} | Initial definition. |
 
-<div class="note">
-<p><strong>Note:</strong> Currently there are many implementation differences among browsers, but work is being done to bring them together and make them more consistent with one another.</p>
-</div>
+> **Note:** Currently there are many implementation differences among browsers, but work is being done to bring them together and make them more consistent with one another.

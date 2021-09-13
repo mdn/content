@@ -14,37 +14,41 @@ tags:
   - x
 browser-compat: api.Accelerometer.x
 ---
-<div>{{APIRef("Sensor API")}}{{SeeCompatTable}}</div>
+{{APIRef("Sensor API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>x</code></strong> read-only property of the {{domxref("Accelerometer")}} interface returns a double precision integer containing the acceleration of the device along the its x axis.</p>
+The **`x`** read-only property of the {{domxref("Accelerometer")}} interface returns a double precision integer containing the acceleration of the device along the its x axis.
 
-<p>If a feature policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.</p>
+If a feature policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>xAcceleration</var> = <var>accelerometer</var>.x</pre>
+```js
+var xAcceleration = accelerometer.x
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{jsxref('Number')}}.</p>
+A {{jsxref('Number')}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>Acceleration is typically read in the {{domxref('Sensor.onreading')}} event callback. In the example below this occurs sixty times a second.</p>
+Acceleration is typically read in the {{domxref('Sensor.onreading')}} event callback. In the example below this occurs sixty times a second.
 
-<pre class="brush: js">let accelerometer = new Accelerometer({frequency: 60});
+```js
+let accelerometer = new Accelerometer({frequency: 60});
 
-accelerometer.addEventListener('reading', e =&gt; {
+accelerometer.addEventListener('reading', e => {
   console.log("Acceleration along the X-axis " + accelerometer.x);
   console.log("Acceleration along the Y-axis " + accelerometer.y);
   console.log("Acceleration along the Z-axis " + accelerometer.z);
 });
-accelerometer.start();</pre>
+accelerometer.start();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

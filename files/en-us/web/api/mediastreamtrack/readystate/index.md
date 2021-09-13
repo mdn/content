@@ -2,49 +2,46 @@
 title: MediaStreamTrack.readyState
 slug: Web/API/MediaStreamTrack/readyState
 tags:
-- API
-- Media Capture and Streams
-- MediaStreamTrack
-- NeedsExample
-- Property
-- Read-only
-- Reference
+  - API
+  - Media Capture and Streams
+  - MediaStreamTrack
+  - NeedsExample
+  - Property
+  - Read-only
+  - Reference
 browser-compat: api.MediaStreamTrack.readyState
 ---
-<div>{{APIRef("Media Capture and Streams")}}</div>
+{{APIRef("Media Capture and Streams")}}
 
-<p>The <code><strong>MediaStreamTrack.readyState</strong></code> read-only property
-  returns an enumerated value giving the status of the track.</p>
+The **`MediaStreamTrack.readyState`** read-only property
+returns an enumerated value giving the status of the track.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">const <em>state</em> = <em>track</em>.readyState</pre>
+```js
+const state = track.readyState
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>It takes one of the following values:</p>
+It takes one of the following values:
 
-<ul>
-  <li><code>"live"</code> which indicates that an input is connected and does its
-    best-effort in providing real-time data. In that case, the output of data can be
-    switched on or off using the {{domxref("MediaStreamTrack.enabled")}} property.</li>
-  <li><code>"ended"</code> which indicates that the input is not giving any more data and
-    will never provide new data. </li>
-</ul>
+- `"live"` which indicates that an input is connected and does its
+  best-effort in providing real-time data. In that case, the output of data can be
+  switched on or off using the {{domxref("MediaStreamTrack.enabled")}} property.
+- `"ended"` which indicates that the input is not giving any more data and
+  will never provide new data.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Media_Streams_API">Media Stream API</a></li>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
-  <li>{{domxref("MediaStreamTrack.onended")}}</li>
-</ul>
+- [Media Stream API](/en-US/docs/Web/API/Media_Streams_API)
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)
+- {{domxref("MediaStreamTrack.onended")}}

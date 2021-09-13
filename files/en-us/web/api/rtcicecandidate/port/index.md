@@ -16,56 +16,56 @@ tags:
   - port
 browser-compat: api.RTCIceCandidate.port
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <strong>{{domxref("RTCIceCandidate")}}</strong> interface's read-only <strong><code>port</code></strong> property contains the port
-    number on the device at the address given by {{domxref("RTCIceCandidate.address")}} at which the candidate's peer can be reached.</p>
+The **{{domxref("RTCIceCandidate")}}** interface's read-only **`port`** property contains the port
+number on the device at the address given by {{domxref("RTCIceCandidate.address")}} at which the candidate's peer can be reached.
 
-<p>The <code>port</code> field's value is set from the <code>candidateInfo</code> options object passed to the {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate()")}} constructor.
-  You can't specify the value of <code>port</code> directly in the options object, but its value is automatically extracted from the object's <code>candidate</code> a-line, if it's formatted properly.</p>
+The `port` field's value is set from the `candidateInfo` options object passed to the {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate()")}} constructor.
+You can't specify the value of `port` directly in the options object, but its value is automatically extracted from the object's `candidate` a-line, if it's formatted properly.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>port</em> = <em>RTCIceCandidate</em>.port;</pre>
+```js
+var port = RTCIceCandidate.port;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A 16-bit number indicating the port number on the device at the address indicated by {{domxref("RTCIceCandidate/address", "address")}} at which the candidate's peer can be reached.
-</p>
+A 16-bit number indicating the port number on the device at the address indicated by {{domxref("RTCIceCandidate/address", "address")}} at which the candidate's peer can be reached.
 
-<p><code>port</code> is initialized to <code>null</code> if it is not specified in the
-  <code>candidate</code>, or if the <code>candidate</code> string can't be parsed properly.</p>
+`port` is initialized to `null` if it is not specified in the
+`candidate`, or if the `candidate` string can't be parsed properly.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> If <code>port</code> is <code>null</code>, passing the candidate to {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}}
-    will fail, throwing an <code>OperationError</code> exception.
-    This applies only if the candidate implements <code>port</code>.</p>
-</div>
+> **Note:** If `port` is `null`, passing the candidate to {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}}
+> will fail, throwing an `OperationError` exception.
+> This applies only if the candidate implements `port`.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>Consider this {{Glossary("SDP")}} attribute line (a-line) which describes an ICE
-  candidate:</p>
+Consider this {{Glossary("SDP")}} attribute line (a-line) which describes an ICE
+candidate:
 
-<pre>a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host</pre>
+    a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
 
-<p>The port number is found in the sixth field, which is <code>"44323"</code>. In this case, the value of <code>port</code> will be 44323.</p>
+The port number is found in the sixth field, which is `"44323"`. In this case, the value of `port` will be 44323.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This code snippet fetches the IP address and port number of the candidate, storing them
-  into an object for future use.</p>
+This code snippet fetches the IP address and port number of the candidate, storing them
+into an object for future use.
 
-<pre class="brush: js">var candidateLoc = {
+```js
+var candidateLoc = {
   address: candidate.ip,
   port: candidate.port
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

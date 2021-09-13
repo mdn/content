@@ -11,34 +11,30 @@ tags:
   - dir
 browser-compat: api.Notification.dir
 ---
-<p>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</p>
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-<p>The <code>dir</code> read-only property of the {{domxref("Notification")}} interface indicates the text direction of the notification, as specified in the <code>dir</code> option of the {{domxref("Notification.Notification","Notification()")}} constructor.</p>
+The `dir` read-only property of the {{domxref("Notification")}} interface indicates the text direction of the notification, as specified in the `dir` option of the {{domxref("Notification.Notification","Notification()")}} constructor.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="eval">var <var>direction</var> = <var>Notification</var>.dir;
-</pre>
+    var direction = Notification.dir;
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} specifying the text direction. Possible values are:</p>
+A {{domxref("DOMString")}} specifying the text direction. Possible values are:
 
-<ul>
- <li><code>auto</code>: adopts the browser's language setting behavior (the default.)</li>
- <li><code>ltr</code>: left to right.</li>
- <li><code>rtl</code> : right to left.</li>
-</ul>
+- `auto`: adopts the browser's language setting behavior (the default.)
+- `ltr`: left to right.
+- `rtl` : right to left.
 
-<div class="note">
-<p><strong>Note:</strong> Most browsers seem to ignore explicit ltr and rtl settings, and just go with the browser-wide setting.</p>
-</div>
+> **Note:** Most browsers seem to ignore explicit ltr and rtl settings, and just go with the browser-wide setting.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following snippet fires a notification; a simple <code>options</code> object is created, then the notification is fired using the <code>Notification()</code> constructor.</p>
+The following snippet fires a notification; a simple `options` object is created, then the notification is fired using the `Notification()` constructor.
 
-<pre class="brush: js">var options = {
+```js
+var options = {
   body: 'Do you like my body?',
   dir: 'rtl'
 }
@@ -46,18 +42,16 @@ browser-compat: api.Notification.dir
 var n = new Notification('Test notification',options);
 
 console.log(n.dir) // should return 'rtl'
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</a></li>
-</ul>
+- [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)

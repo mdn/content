@@ -15,24 +15,26 @@ tags:
   - payment
 browser-compat: api.AddressErrors.recipient
 ---
-<div>{{APIRef("Payment Request API")}}</div>
+{{APIRef("Payment Request API")}}
 
-<p>An object based on {{domxref("AddressErrors")}} includes a <code><strong>recipient</strong></code> property when the address's {{domxref("PaymentAddress.recipient", "recipient")}} property couldn't be validated. The returned string explains the error and should offer suggestions for how to correct it.</p>
+An object based on {{domxref("AddressErrors")}} includes a **`recipient`** property when the address's {{domxref("PaymentAddress.recipient", "recipient")}} property couldn't be validated. The returned string explains the error and should offer suggestions for how to correct it.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>recipientError</em> = <em>AddressErrors</em>.recipient;</pre>
+```js
+var recipientError = AddressErrors.recipient;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>If the value specified in the {{domxref("PaymentAddress")}} object's {{domxref("PaymentAddress.recipient", "recipient")}} property could not be validated, this property contains a {{domxref("DOMString")}} offering a human-readable explanation of the validation error and offers suggestions for correcting it.</p>
+If the value specified in the {{domxref("PaymentAddress")}} object's {{domxref("PaymentAddress.recipient", "recipient")}} property could not be validated, this property contains a {{domxref("DOMString")}} offering a human-readable explanation of the validation error and offers suggestions for correcting it.
 
-<p>If the <code>recipient</code> value was validated successfully, this property is not included in the <code>AddressErrors</code> object.</p>
+If the `recipient` value was validated successfully, this property is not included in the `AddressErrors` object.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

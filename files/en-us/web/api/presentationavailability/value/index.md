@@ -3,10 +3,10 @@ title: PresentationAvailability.value
 slug: Web/API/PresentationAvailability/value
 browser-compat: api.PresentationAvailability.value
 ---
-<p>The <dfn><code>value</code></dfn> attribute <em>MUST</em> return the last value from which it was set. The value is updated by the <a href="https://www.w3.org/TR/presentation-api/#dfn-monitor-the-list-of-available-presentation-displays">monitor the list of available presentation displays</a> algorithm.</p>
+The _`value`_ attribute _MUST_ return the last value from which it was set. The value is updated by the [monitor the list of available presentation displays](https://www.w3.org/TR/presentation-api/#dfn-monitor-the-list-of-available-presentation-displays) algorithm.
 
-<p>The <dfn><code>onchange</code></dfn> attribute is an <a href="https://www.w3.org/TR/presentation-api/#dfn-event-handler">event handler</a> whose corresponding <a href="https://www.w3.org/TR/presentation-api/#dfn-event-handler-event-type">event handler event type</a> is <dfn><code>change</code></dfn>.</p>
+The _`onchange`_ attribute is an [event handler](https://www.w3.org/TR/presentation-api/#dfn-event-handler) whose corresponding [event handler event type](https://www.w3.org/TR/presentation-api/#dfn-event-handler-event-type) is _`change`_.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

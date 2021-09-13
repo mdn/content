@@ -2,54 +2,48 @@
 title: Element.id
 slug: Web/API/Element/id
 tags:
-- API
-- DOM
-- Element
-- Property
-- Reference
+  - API
+  - DOM
+  - Element
+  - Property
+  - Reference
 browser-compat: api.Element.id
 ---
-<div>{{ ApiRef("DOM") }}</div>
+{{ ApiRef("DOM") }}
 
-<p>The <strong><code>id</code></strong> property of the {{domxref("Element")}} interface
-  represents the element's identifier, reflecting the
-  <a href="/en-US/docs/Web/HTML/Global_attributes/id"><code><strong>id</strong></code></a>
-  global attribute.</p>
+The **`id`** property of the {{domxref("Element")}} interface
+represents the element's identifier, reflecting the
+[**`id`**](/en-US/docs/Web/HTML/Global_attributes/id)
+global attribute.
 
-<p>If the <code>id</code> value is not the empty string, it must be unique in a document.
-</p>
+If the `id` value is not the empty string, it must be unique in a document.
 
-<p>The <code>id</code> is often used with {{domxref("Document.getElementById()",
+The `id` is often used with {{domxref("Document.getElementById()",
   "getElementById()")}} to retrieve a particular element. Another common case is to use an
-  element's <a href="/en-US/docs/Web/CSS/ID_selectors">ID as a selector</a> when styling
-  the document with <a href="/en-US/docs/Web/CSS">CSS</a>.</p>
+element's [ID as a selector](/en-US/docs/Web/CSS/ID_selectors) when styling
+the document with [CSS](/en-US/docs/Web/CSS).
 
-<div class="note">
-  <p><strong>Note:</strong> Identifiers are case-sensitive, but you should avoid creating
-    IDs that differ only in the capitalization.</p>
-</div>
+> **Note:** Identifiers are case-sensitive, but you should avoid creating
+> IDs that differ only in the capitalization.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>idStr</em> = <em>element</em>.id; // Get the id
-<em>element</em>.id = <em>idStr</em>; // Set the id
-</pre>
+```js
+var idStr = element.id; // Get the id
+element.id = idStr; // Set the id
+```
 
-<ul>
-  <li><code>idStr</code> is the identifier of the element.</li>
-</ul>
+- `idStr` is the identifier of the element.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The DOM <a href="/en-US/docs/Web/HTML/Global_attributes/id"><strong>id</strong></a>
-    global attribute.</li>
-</ul>
+- The DOM [**id**](/en-US/docs/Web/HTML/Global_attributes/id)
+  global attribute.

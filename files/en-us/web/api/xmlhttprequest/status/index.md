@@ -12,15 +12,16 @@ tags:
   - status
 browser-compat: api.XMLHttpRequest.status
 ---
-<div>{{APIRef('XMLHttpRequest')}}</div>
+{{APIRef('XMLHttpRequest')}}
 
-<p>The read-only <code><strong>XMLHttpRequest.status</strong></code> property returns the numerical HTTP <a href="/en-US/docs/Web/HTTP/Status">status code</a> of the <code>XMLHttpRequest</code>'s response.</p>
+The read-only **`XMLHttpRequest.status`** property returns the numerical HTTP [status code](/en-US/docs/Web/HTTP/Status) of the `XMLHttpRequest`'s response.
 
-<p>Before the request completes, the value of <code>status</code> is 0. Browsers also report a status of 0 in case of <code>XMLHttpRequest</code> errors.</p>
+Before the request completes, the value of `status` is 0. Browsers also report a status of 0 in case of `XMLHttpRequest` errors.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var xhr = new XMLHttpRequest();
+```js
+var xhr = new XMLHttpRequest();
 console.log('UNSENT: ', xhr.status);
 
 xhr.open('GET', '/server');
@@ -44,19 +45,17 @@ xhr.send();
  * LOADING: 200
  * DONE: 200
  */
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>List of <a href="/en-US/docs/Web/HTTP/Response_codes">HTTP response codes</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- List of [HTTP response codes](/en-US/docs/Web/HTTP/Response_codes)
+- [HTTP](/en-US/docs/Web/HTTP)

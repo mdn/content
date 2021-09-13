@@ -2,36 +2,37 @@
 title: BluetoothRemoteGATTDescriptor.characteristic
 slug: Web/API/BluetoothRemoteGATTDescriptor/characteristic
 tags:
-- API
-- Bluetooth
-- BluetoothGattDescriptor
-- BluetoothRemoteGATTDescriptor
-- Experimental
-- Interface
-- Reference
-- Web Bluetooth API
-- characteristic
+  - API
+  - Bluetooth
+  - BluetoothGattDescriptor
+  - BluetoothRemoteGATTDescriptor
+  - Experimental
+  - Interface
+  - Reference
+  - Web Bluetooth API
+  - characteristic
 browser-compat: api.BluetoothRemoteGATTDescriptor.characteristic
 ---
-<p>{{APIRef("Web Bluetooth API")}}{{SeeCompatTable}}</p>
+{{APIRef("Web Bluetooth API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>BluetoothRemoteGATTDescriptor.characteristic</code></strong>
-  read-only property returns the {{domxref("BluetoothRemoteGATTCharacteristic")}} this
-  descriptor belongs to.</p>
+The **`BluetoothRemoteGATTDescriptor.characteristic`**
+read-only property returns the {{domxref("BluetoothRemoteGATTCharacteristic")}} this
+descriptor belongs to.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>characteristic</em> = BluetoothRemoteGATTCharacteristic.characteristic</pre>
+```js
+var characteristic = BluetoothRemoteGATTCharacteristic.characteristic
+```
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>An instance of  {{domxref("BluetoothRemoteGATTCharacteristic")}}.</p>
+An instance of  {{domxref("BluetoothRemoteGATTCharacteristic")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

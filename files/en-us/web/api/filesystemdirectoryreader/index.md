@@ -11,30 +11,26 @@ tags:
   - Reference
 browser-compat: api.FileSystemDirectoryReader
 ---
-<p>{{APIRef("File and Directory Entries API")}}</p>
+{{APIRef("File and Directory Entries API")}}
 
-<p>The <code>FileSystemDirectoryReader</code> interface of the <a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</a> lets you access the {{domxref("FileSystemFileEntry")}}-based objects (generally {{domxref("FileSystemFileEntry")}} or {{domxref("FileSystemDirectoryEntry")}}) representing each entry in a directory.</p>
+The `FileSystemDirectoryReader` interface of the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) lets you access the {{domxref("FileSystemFileEntry")}}-based objects (generally {{domxref("FileSystemFileEntry")}} or {{domxref("FileSystemDirectoryEntry")}}) representing each entry in a directory.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
-	<dt>{{domxref("FileSystemDirectoryReader.readEntries", "readEntries()")}}</dt>
-	<dd>Returns an array containing some number of the directory's entries. Each item in the array is an object based on {{domxref("FileSystemEntry")}}—typically either {{domxref("FileSystemFileEntry")}} or {{domxref("FileSystemDirectoryEntry")}}.</dd>
-</dl>
+- {{domxref("FileSystemDirectoryReader.readEntries", "readEntries()")}}
+  - : Returns an array containing some number of the directory's entries. Each item in the array is an object based on {{domxref("FileSystemEntry")}}—typically either {{domxref("FileSystemFileEntry")}} or {{domxref("FileSystemDirectoryEntry")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</a></li>
-	<li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">Introduction to the File System API</a></li>
-	<li>{{domxref("FileSystemDirectoryEntry")}}</li>
-	<li>{{domxref("FileSystem")}}</li>
-</ul>
+- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- {{domxref("FileSystemDirectoryEntry")}}
+- {{domxref("FileSystem")}}

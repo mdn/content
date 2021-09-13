@@ -13,83 +13,75 @@ tags:
   - setValueCurveAtTime
 browser-compat: api.AudioParam.setValueCurveAtTime
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<p>The
-    <strong><code>setValueCurveAtTime()</code></strong> method of the
-    {{domxref("AudioParam")}} interface schedules the parameter's value to change
-    following a curve defined by a list of values.</p>
+The
+**`setValueCurveAtTime()`** method of the
+{{domxref("AudioParam")}} interface schedules the parameter's value to change
+following a curve defined by a list of values.
 
-<p>The curve is a linear
-  interpolation between the sequence of values defined in an array of floating-point
-  values, which are scaled to fit into the given interval starting at
-  <code>startTime</code> and a specific duration.</p>
+The curve is a linear
+interpolation between the sequence of values defined in an array of floating-point
+values, which are scaled to fit into the given interval starting at
+`startTime` and a specific duration.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>paramRef</em> = <em>param</em>.setValueCurveAtTime(<em>values</em>, <em>startTime</em>, <em>duration</em>);</pre>
+```js
+var paramRef = param.setValueCurveAtTime(values, startTime, duration);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>values</code></dt>
-  <dd>An array of floating-point numbers representing the value curve the
+- `values`
+  - : An array of floating-point numbers representing the value curve the
     {{domxref("AudioParam")}} will change through along the specified
-    <code>duration</code>. Every value in the array must be a finite number; if any value
-    is <code>NaN</code>, <code>Infinity</code>, or <code>-Infinity</code>, a
-    <code>TypeError</code> exception is thrown.</dd>
-  <dt><code>startTime</code></dt>
-  <dd>A double representing the time (in seconds) after the {{ domxref("AudioContext") }}
+    `duration`. Every value in the array must be a finite number; if any value
+    is `NaN`, `Infinity`, or `-Infinity`, a
+    `TypeError` exception is thrown.
+- `startTime`
+  - : A double representing the time (in seconds) after the {{ domxref("AudioContext") }}
     was first created that the change in value will happen. If this value is lower than
-    {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}}, it is clamped to <code>currentTime</code>.
-  </dd>
-  <dt><code>duration</code></dt>
-  <dd>A double representing the total time (in seconds) over which the parameter's
-    <code>value</code> will change following the specified curve. The specified values are
-    spaced equally along this duration.</dd>
-</dl>
+    {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}}, it is clamped to `currentTime`.
+- `duration`
+  - : A double representing the total time (in seconds) over which the parameter's
+    `value` will change following the specified curve. The specified values are
+    spaced equally along this duration.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A reference to this <code>AudioParam</code> object. Some older browser implementations
-  of this interface return <code>undefined</code>.</p>
+A reference to this `AudioParam` object. Some older browser implementations
+of this interface return `undefined`.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt><code>InvalidStateError</code></dt>
-  <dd>The specified array of <code>values</code> has fewer than 2 items in it.</dd>
-  <dt><code>RangeError</code></dt>
-  <dd>The specified <code>startTime</code> is either negative or a non-finite value, or
-    <code>duration</code> is not a finite, strictly positive number.</dd>
-  <dt><code>TypeError</code></dt>
-  <dd>One or more of the values in the <code>values</code> array is non-finite. Non-finite
-    values are <code>NaN</code>, <code>Infinity</code>, and <code>-Infinity</code>.</dd>
-</dl>
+- `InvalidStateError`
+  - : The specified array of `values` has fewer than 2 items in it.
+- `RangeError`
+  - : The specified `startTime` is either negative or a non-finite value, or
+    `duration` is not a finite, strictly positive number.
+- `TypeError`
+  - : One or more of the values in the `values` array is non-finite. Non-finite
+    values are `NaN`, `Infinity`, and `-Infinity`.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>When the parameter's value finishes following the curve, its value is guaranteed to
-  match the last value in the set of values specified in the <code>values</code>
-  parameter.</p>
+When the parameter's value finishes following the curve, its value is guaranteed to
+match the last value in the set of values specified in the `values`
+parameter.
 
-<div class="note">
-  <p><strong>Note:</strong> Some early implementations of the Web Audio API did not ensure
-    this to be the case, causing unexpected results.</p>
-</div>
+> **Note:** Some early implementations of the Web Audio API did not ensure
+> this to be the case, causing unexpected results.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this example, we have a media source with a single button (see the <a
-    class="external external-icon"
-    href="https://github.com/mdn/webaudio-examples/blob/master/audio-param/index.html">webaudio-examples
-    repo</a> for the source code, or <a class="external external-icon"
-    href="https://mdn.github.io/webaudio-examples/audio-param/">view the example
-    live</a>.) When this button is pressed, <code>setValueCurveAtTime()</code> is used to
-  change the gain value between the values contained in the waveArray array:</p>
+In this example, we have a media source with a single button (see the [webaudio-examples
+repo](https://github.com/mdn/webaudio-examples/blob/master/audio-param/index.html) for the source code, or [view the example
+live](https://mdn.github.io/webaudio-examples/audio-param/).) When this button is pressed, `setValueCurveAtTime()` is used to
+change the gain value between the values contained in the waveArray array:
 
-<pre class="brush: js;">// create audio context
+```js
+// create audio context
 var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioCtx = new AudioContext();
 
@@ -131,21 +123,19 @@ waveArray[8] = 0.5;
 
 valueCurve.onclick = function() {
   gainNode.gain.setValueCurveAtTime(waveArray, audioCtx.currentTime, 2);
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>Versions before Chrome 46 use nearest neighbor instead of linear interpolation.</p>
+Versions before Chrome 46 use nearest neighbor instead of linear interpolation.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
-  </li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

@@ -8,33 +8,36 @@ tags:
   - Reference
 browser-compat: api.HTMLFormElement.reportValidity
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLFormElement.reportValidity()</code></strong> method returns
-  <code>true</code> if the element's child controls satisfy their validation constraints.
-  When <code>false</code> is returned, cancelable
-  <code><a href="/en-US/docs/Web/API/HTMLInputElement/invalid_event">invalid</a></code> events are fired for
-  each invalid child and validation problems are reported to the user.</p>
+The **`HTMLFormElement.reportValidity()`** method returns
+`true` if the element's child controls satisfy their validation constraints.
+When `false` is returned, cancelable
+[`invalid`](/en-US/docs/Web/API/HTMLInputElement/invalid_event) events are fired for
+each invalid child and validation problems are reported to the user.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>HTMLFormElement</em>.reportValidity()
-</pre>
+```js
+HTMLFormElement.reportValidity()
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>true</code> or <code>false</code></p>
+`true` or `false`
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">document.forms['myform'].addEventListener('submit', function() {
+```js
+document.forms['myform'].addEventListener('submit', function() {
   document.forms['myform'].reportValidity();
-}, false);</pre>
+}, false);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

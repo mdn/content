@@ -10,40 +10,35 @@ tags:
   - altitude
 browser-compat: api.GeolocationCoordinates.altitude
 ---
-<div>{{securecontext_header}}{{APIRef("Geolocation API")}}</div>
+{{securecontext_header}}{{APIRef("Geolocation API")}}
 
-<p>The <code><strong>GeolocationCoordinates.altitude</strong></code> read-only property is
-  a <code>double</code> representing the altitude of the position in meters above the <a
-    href="http://earth-info.nga.mil/GandG/publications/tr8350.2/wgs84fin.pdf">WGS84</a>
-  ellipsoid (which defines the nominal sea level surface). This value is <code>null</code>
-  if the implementation cannot provide this data.</p>
+The **`GeolocationCoordinates.altitude`** read-only property is
+a `double` representing the altitude of the position in meters above the [WGS84](http://earth-info.nga.mil/GandG/publications/tr8350.2/wgs84fin.pdf)
+ellipsoid (which defines the nominal sea level surface). This value is `null`
+if the implementation cannot provide this data.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">let <em>alt</em> = <em>geolocationCoordinatesInstance</em>.altitude</pre>
+```js
+let alt = geolocationCoordinatesInstance.altitude
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A <code>double</code> representing the altitude of the position in meters above the <a
-    href="http://earth-info.nga.mil/GandG/publications/tr8350.2/wgs84fin.pdf">WGS84</a>
-  ellipsoid.</p>
+A `double` representing the altitude of the position in meters above the [WGS84](http://earth-info.nga.mil/GandG/publications/tr8350.2/wgs84fin.pdf)
+ellipsoid.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API">Using the Geolocation API</a>
-  </li>
-  <li>The {{domxref("GeolocationCoordinates")}} interface it belongs to.</li>
-  <li><a
-      href="http://earth-info.nga.mil/GandG/publications/tr8350.2/wgs84fin.pdf">National
-      Imagery and Mapping Agency Technical Report 8350.2, Third Edition (WGS84)</a></li>
-</ul>
+- [Using the Geolocation API](/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
+- The {{domxref("GeolocationCoordinates")}} interface it belongs to.
+- [National
+  Imagery and Mapping Agency Technical Report 8350.2, Third Edition (WGS84)](http://earth-info.nga.mil/GandG/publications/tr8350.2/wgs84fin.pdf)

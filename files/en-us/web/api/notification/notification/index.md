@@ -10,118 +10,110 @@ tags:
   - Reference
 browser-compat: api.Notification.Notification
 ---
-<p>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</p>
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-<p>The <code><strong>Notification()</strong></code> constructor creates a new
-  {{domxref("Notification")}} object instance, which represents a user notification.</p>
+The **`Notification()`** constructor creates a new
+{{domxref("Notification")}} object instance, which represents a user notification.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>notification</var> = new Notification(<var>title</var>, <var>options</var>);</pre>
+```js
+var notification = new Notification(title, options);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>title</var></code></dt>
-  <dd>Defines a title for the notification, which is shown at the top of the notification
-    window.</dd>
-  <dt><code><var>options</var></code> {{optional_inline}}</dt>
-  <dd>An options object containing any custom settings that you want to apply to the
+- `title`
+  - : Defines a title for the notification, which is shown at the top of the notification
+    window.
+- `options` {{optional_inline}}
+
+  - : An options object containing any custom settings that you want to apply to the
     notification. The possible options are:
-    <ul>
-      <li><code>dir</code>: The direction in which to display the notification. It
-        defaults to <code>auto</code>, which just adopts the browser's language setting
-        behavior, but you can override that behavior by setting values of <code>ltr</code>
-        and <code>rtl</code> (although most browsers seem to ignore these settings.)</li>
-      <li><code>lang</code>: The notification's language, as specified using a
-        {{domxref("DOMString")}} representing a <a
-          href="https://www.rfc-editor.org/rfc/bcp/bcp47.txt">BCP 47 language tag</a>. See
-        the Sitepoint <a
-          href="https://www.sitepoint.com/web-foundations/iso-2-letter-language-codes/">ISO
-          2 letter language codes</a> page for a simple reference.</li>
-      <li><code>badge</code>: A {{domxref("USVString")}} containing the URL of the image
-        used to represent the notification when there isn't enough space to display the
-        notification itself.</li>
-      <li><code>body</code>: A {{domxref("DOMString")}} representing the body text of the
-        notification, which is displayed below the title.</li>
-      <li><code>tag</code>: A {{domxref("DOMString")}} representing an identifying tag for
-        the notification.</li>
-      <li><code>icon</code>: A {{domxref("USVString")}} containing the URL of an icon to
-        be displayed in the notification.</li>
-      <li><code>image</code>: a {{domxref("USVString")}} containing the URL of an image to
-        be displayed in the notification.</li>
-      <li><code>data</code>: Arbitrary data that you want associated with the
-        notification. This can be of any data type.</li>
-      <li><code>vibrate</code>: A <a
-          href="/en-US/docs/Web/API/Vibration_API#vibration_patterns">vibration
-          pattern</a> for the device's vibration hardware to emit with the notification.
-      </li>
-      <li><code>renotify</code>: A boolean value specifying whether the user
-        should be notified after a new notification replaces an old one. The default is
-        <code>false</code>, which means they won't be notified.</li>
-      <li><code>requireInteraction</code>: Indicates that a notification should remain
-        active until the user clicks or dismisses it, rather than closing automatically.
-        The default value is <code>false</code>.</li>
-      <li><code>actions</code>: An array of {{domxref("NotificationAction")}}s
-        representing the actions available to the user when the notification is presented.
-        These are options the user can choose among in order to act on the action within
-        the context of the notification itself. The action's name is sent to the service
-        worker notification handler to let it know the action was selected by the user.
-      </li>
-      <li><code>silent</code>: A boolean value specifying whether the
-        notification is silent (no sounds or vibrations issued), regardless of the device
-        settings. The default is <code>false</code>, which means it won't be silent.</li>
-    </ul>
-  </dd>
-</dl>
 
-<h2 id="Example">Example</h2>
+    - `dir`: The direction in which to display the notification. It
+      defaults to `auto`, which just adopts the browser's language setting
+      behavior, but you can override that behavior by setting values of `ltr`
+      and `rtl` (although most browsers seem to ignore these settings.)
+    - `lang`: The notification's language, as specified using a
+      {{domxref("DOMString")}} representing a [BCP 47 language tag](https://www.rfc-editor.org/rfc/bcp/bcp47.txt). See
+      the Sitepoint [ISO
+      2 letter language codes](https://www.sitepoint.com/web-foundations/iso-2-letter-language-codes/) page for a simple reference.
+    - `badge`: A {{domxref("USVString")}} containing the URL of the image
+      used to represent the notification when there isn't enough space to display the
+      notification itself.
+    - `body`: A {{domxref("DOMString")}} representing the body text of the
+      notification, which is displayed below the title.
+    - `tag`: A {{domxref("DOMString")}} representing an identifying tag for
+      the notification.
+    - `icon`: A {{domxref("USVString")}} containing the URL of an icon to
+      be displayed in the notification.
+    - `image`: a {{domxref("USVString")}} containing the URL of an image to
+      be displayed in the notification.
+    - `data`: Arbitrary data that you want associated with the
+      notification. This can be of any data type.
+    - `vibrate`: A [vibration
+      pattern](/en-US/docs/Web/API/Vibration_API#vibration_patterns) for the device's vibration hardware to emit with the notification.
+    - `renotify`: A boolean value specifying whether the user
+      should be notified after a new notification replaces an old one. The default is
+      `false`, which means they won't be notified.
+    - `requireInteraction`: Indicates that a notification should remain
+      active until the user clicks or dismisses it, rather than closing automatically.
+      The default value is `false`.
+    - `actions`: An array of {{domxref("NotificationAction")}}s
+      representing the actions available to the user when the notification is presented.
+      These are options the user can choose among in order to act on the action within
+      the context of the notification itself. The action's name is sent to the service
+      worker notification handler to let it know the action was selected by the user.
+    - `silent`: A boolean value specifying whether the
+      notification is silent (no sounds or vibrations issued), regardless of the device
+      settings. The default is `false`, which means it won't be silent.
 
-<p>In our
-  <code><a href="https://chrisdavidmills.github.io/emogotchi/">Emogotchi demo</a></code>
-  (<a href="https://github.com/mdn/emogotchi">see source code</a>), we run a
-  <code>spawnNotification()</code> function when we want to trigger a notification. The
-  function is passed parameters to specify the body, icon, and title we want, and then it
-  creates the necessary <code>options</code> object and triggers the notification by using
-  the <code>Notification()</code> constructor.</p>
+## Example
 
-<pre class="brush: js">function spawnNotification(body, icon, title) {
+In our
+[`Emogotchi demo`](https://chrisdavidmills.github.io/emogotchi/)
+([see source code](https://github.com/mdn/emogotchi)), we run a
+`spawnNotification()` function when we want to trigger a notification. The
+function is passed parameters to specify the body, icon, and title we want, and then it
+creates the necessary `options` object and triggers the notification by using
+the `Notification()` constructor.
+
+```js
+function spawnNotification(body, icon, title) {
   var options = {
       body: body,
       icon: icon
   }
   var notification = new Notification(title, options);
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h3 id="Chrome_notes">Chrome notes</h3>
+### Chrome notes
 
-<p>Starting in Chrome 49, notifications don't work in incognito mode.</p>
+Starting in Chrome 49, notifications don't work in incognito mode.
 
-<p>Chrome for Android will throw a <code>TypeError</code> when calling the
-  <code>Notification</code> constructor. It only supports creating
-  notifications from a service worker. See the
-  <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=481856">
-  Chromium issue tracker</a> for more details.</p>
+Chrome for Android will throw a `TypeError` when calling the
+`Notification` constructor. It only supports creating
+notifications from a service worker. See the
+[Chromium issue tracker](https://bugs.chromium.org/p/chromium/issues/detail?id=481856) for more details.
 
-<h3 id="Internet_Explorer_notes">Internet Explorer notes</h3>
+### Internet Explorer notes
 
-<p>Version 38.14352 and higher of MS Edge Notification API is supported. <a
-    href="https://en.wikipedia.org/wiki/Microsoft_Edge#Release_history">Wikipedia - MS
-    Edge</a></p>
+Version 38.14352 and higher of MS Edge Notification API is supported. [Wikipedia - MS
+Edge](https://en.wikipedia.org/wiki/Microsoft_Edge#Release_history)
 
-<p>IE 11 and lower isn't supported.</p>
+IE 11 and lower isn't supported.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using
-      the Notifications API</a></li>
-</ul>
+- [Using
+  the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)

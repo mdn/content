@@ -9,30 +9,31 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals.validity
 ---
-<div>{{DefaultAPISidebar("DOM")}}</div>
+{{DefaultAPISidebar("DOM")}}
 
-<p>The <strong><code>validity</code></strong> read-only property of the {{domxref("ElementInternals")}} interface returns a {{domxref("ValidityState")}} object which represents the different validity states the element can be in, with respect to constraint validation.</p>
+The **`validity`** read-only property of the {{domxref("ElementInternals")}} interface returns a {{domxref("ValidityState")}} object which represents the different validity states the element can be in, with respect to constraint validation.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let validity = ElementInternals.validity;
-</pre>
+```js
+let validity = ElementInternals.validity;
+```
 
-<h3>Value</h3>
-<p>A {{domxref("ValidityState")}} object.</p>
+### Value
 
-<h3>Exceptions</h3>
+A {{domxref("ValidityState")}} object.
 
-<dl>
-  <dt>{{domxref("DOMException")}} <code>NotSupportedError</code></dt>
-  <dd>Thrown if the element does not have its <code>formAssociated</code> property set to <code>true</code>.</dd>
-</dl>
+### Exceptions
 
-<h2 id="Examples">Examples</h2>
+- {{domxref("DOMException")}} `NotSupportedError`
+  - : Thrown if the element does not have its `formAssociated` property set to `true`.
 
-<p>The following example shows a custom checkbox component with <code>formAssociated</code> set to <code>true</code>, the value of <code>validity.valid</code> is logged to the console.</p>
+## Examples
 
-<pre class="brush: js">class CustomCheckbox extends HTMLElement {
+The following example shows a custom checkbox component with `formAssociated` set to `true`, the value of `validity.valid` is logged to the console.
+
+```js
+class CustomCheckbox extends HTMLElement {
   static formAssociated = true;
 
   constructor() {
@@ -46,14 +47,13 @@ browser-compat: api.ElementInternals.validity
 })();
 
 let element = document.getElementById("custom-checkbox");
-console.log(element.internals_.validity.valid);</pre>
+console.log(element.internals_.validity.valid);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
-
+{{Compat}}

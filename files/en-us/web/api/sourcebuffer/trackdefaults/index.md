@@ -2,40 +2,40 @@
 title: SourceBuffer.trackDefaults
 slug: Web/API/SourceBuffer/trackDefaults
 tags:
-- API
-- Audio
-- Experimental
-- MSE
-- Media Source Extensions
-- Property
-- Reference
-- SourceBuffer
-- Video
-- trackDefaults
+  - API
+  - Audio
+  - Experimental
+  - MSE
+  - Media Source Extensions
+  - Property
+  - Reference
+  - SourceBuffer
+  - Video
+  - trackDefaults
 browser-compat: api.SourceBuffer.trackDefaults
 ---
-<div>{{APIRef("Media Source Extensions")}}{{deprecated_header}}</div>
+{{APIRef("Media Source Extensions")}}{{deprecated_header}}
 
-<p>The <code><strong>trackDefaults</strong></code> property of the
-  {{domxref("SourceBuffer")}} interface specifies the default values to use if kind,
-  label, and/or language information is not available in the <a
-    href="https://w3c.github.io/media-source/#init-segment">initialization segment</a> of
-  the media to be appended to the <code>SourceBuffer</code>.</p>
+The **`trackDefaults`** property of the
+{{domxref("SourceBuffer")}} interface specifies the default values to use if kind,
+label, and/or language information is not available in the [initialization segment](https://w3c.github.io/media-source/#init-segment) of
+the media to be appended to the `SourceBuffer`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>myTrackDefaults</em> = <em>sourceBuffer</em>.trackDefaults;
+```js
+var myTrackDefaults = sourceBuffer.trackDefaults;
 
-<em>sourceBuffer</em>.trackDefaults = <em>myTrackDefaultList</em>;
-</pre>
+sourceBuffer.trackDefaults = myTrackDefaultList;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("TrackDefaultList")}} object.</p>
+A {{domxref("TrackDefaultList")}} object.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>The following exceptions may be thrown when setting a new value for this property.</p>
+The following exceptions may be thrown when setting a new value for this property.
 
 <table class="no-markdown">
   <thead>
@@ -47,26 +47,26 @@ browser-compat: api.SourceBuffer.trackDefaults
   <tbody>
     <tr>
       <td><code>InvalidStateError</code></td>
-      <td>One or more of the {{domxref("SourceBuffer")}} objects in
-        {{domxref("MediaSource.sourceBuffers")}} are being updated (i.e. their
-        {{domxref("SourceBuffer.updating")}} property is currently <code>true</code>), or
-        this <code>SourceBuffer</code> has been removed from the
-        {{domxref("MediaSource")}}.</td>
+      <td>
+        One or more of the {{domxref("SourceBuffer")}} objects in
+        {{domxref("MediaSource.sourceBuffers")}} are being updated
+        (i.e. their {{domxref("SourceBuffer.updating")}} property is
+        currently <code>true</code>), or this <code>SourceBuffer</code> has been
+        removed from the {{domxref("MediaSource")}}.
+      </td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>TBD</p>
+TBD
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("MediaSource")}}</li>
-  <li>{{domxref("SourceBufferList")}}</li>
-</ul>
+- {{domxref("MediaSource")}}
+- {{domxref("SourceBufferList")}}

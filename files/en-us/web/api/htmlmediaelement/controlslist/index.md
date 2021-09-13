@@ -2,44 +2,41 @@
 title: HTMLMediaElement.controlsList
 slug: Web/API/HTMLMediaElement/controlsList
 tags:
-- API
-- HTML DOM
-- HTMLMediaElement
-- Media
-- Property
-- Reference
+  - API
+  - HTML DOM
+  - HTMLMediaElement
+  - Media
+  - Property
+  - Reference
 browser-compat: api.HTMLMediaElement.controlsList
 ---
-<p>{{SeeCompatTable}}{{APIRef("HTML DOM")}}</p>
+{{SeeCompatTable}}{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>controlsList</code></strong> property of the
-  {{domxref("HTMLMediaElement")}} interface returns a DOMTokenList that helps the user
-  agent select what controls to show on the media element whenever the user agent shows
-  its own set of controls. The DOMTokenList takes one or more of three possible values:
-  <code>nodownload</code>, <code>nofullscreen</code>, and <code>noremoteplayback</code>.
-</p>
+The **`controlsList`** property of the
+{{domxref("HTMLMediaElement")}} interface returns a DOMTokenList that helps the user
+agent select what controls to show on the media element whenever the user agent shows
+its own set of controls. The DOMTokenList takes one or more of three possible values:
+`nodownload`, `nofullscreen`, and `noremoteplayback`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var domTokenList = HTMLMediaElement.controlsList;</pre>
+```js
+var domTokenList = HTMLMediaElement.controlsList;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMTokenList")}}.</p>
+A {{domxref("DOMTokenList")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a class="external-icon external"
-      href="https://googlechrome.github.io/samples/media/controlslist.html">Chrome HTMLMediaElement
-      controlsList Sample</a></li>
-</ul>
+- [Chrome HTMLMediaElement
+  controlsList Sample](https://googlechrome.github.io/samples/media/controlslist.html)

@@ -11,68 +11,64 @@ tags:
   - Web Animations
 browser-compat: api.AnimationEvent.AnimationEvent
 ---
-<p>{{APIRef("Web Animations")}}{{SeeCompatTable}}</p>
+{{APIRef("Web Animations")}}{{SeeCompatTable}}
 
-<p>The <code><strong>AnimationEvent()</strong></code> constructor returns a newly created
-  {{domxref("AnimationEvent")}}, representing an event in relation with an animation.</p>
+The **`AnimationEvent()`** constructor returns a newly created
+{{domxref("AnimationEvent")}}, representing an event in relation with an animation.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>animationEvent</em> = new AnimationEvent(<em>type</em>, {animationName: <em>aPropertyName</em>,
-                                           elapsedTime  : <em>aFloat</em>,
-                                           pseudoElement: <em>aPseudoElementName</em>});
-</pre>
+```js
+animationEvent = new AnimationEvent(type, {animationName: aPropertyName,
+                                           elapsedTime  : aFloat,
+                                           pseudoElement: aPseudoElementName});
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p><em>The <code>AnimationEvent()</code> constructor also inherits arguments from
-    {{domxref("Event.Event", "Event()")}}.</em></p>
+_The `AnimationEvent()` constructor also inherits arguments from
+{{domxref("Event.Event", "Event()")}}._
 
-<dl>
-  <dt><code>type</code></dt>
-  <dd>A {{domxref("DOMString")}} representing the name of the type of the
-    <code>AnimationEvent</code>. It is case-sensitive and can be:
-    <code>'animationstart'</code>, <code>'animationend'</code>, or
-    <code>'animationiteration'</code>.</dd>
-  <dt><code>animationName</code> {{optional_inline}}</dt>
-  <dd>A {{domxref("DOMString")}} containing the value of the {{cssxref("animation-name")}}
-    CSS property associated with the transition. It defaults to <code>""</code>.</dd>
-  <dt><code>elapsedTime</code> {{optional_inline}}</dt>
-  <dd>A <code>float</code> giving the amount of time the animation has been running, in
+- `type`
+  - : A {{domxref("DOMString")}} representing the name of the type of the
+    `AnimationEvent`. It is case-sensitive and can be:
+    `'animationstart'`, `'animationend'`, or
+    `'animationiteration'`.
+- `animationName` {{optional_inline}}
+  - : A {{domxref("DOMString")}} containing the value of the {{cssxref("animation-name")}}
+    CSS property associated with the transition. It defaults to `""`.
+- `elapsedTime` {{optional_inline}}
+  - : A `float` giving the amount of time the animation has been running, in
     seconds, when this event fired, excluding any time the animation was paused. For an
-    <code>"animationstart"</code> event, <code>elapsedTime</code> is <code>0.0</code>
+    `"animationstart"` event, `elapsedTime` is `0.0`
     unless there was a negative value for {{cssxref("animation-delay")}}, in which case
-    the event will be fired with <code>elapsedTime</code> containing
-    <code>(-1 * </code><em>delay</em><code>)</code>. It defaults to <code>0.0</code>.</dd>
-  <dt><code>pseudoElement</code> {{optional_inline}}</dt>
-  <dd>Is a {{domxref("DOMString")}}, starting with <code>"::"</code>, containing the name
-    of the <a href="/en-US/docs/Web/CSS/Pseudo-elements"
-      title="Learn more about pseudo-elements.">pseudo-element</a> the animation runs on.
+    the event will be fired with `elapsedTime` containing
+    `(-1 * `_delay_`)`. It defaults to `0.0`.
+- `pseudoElement` {{optional_inline}}
+  - : Is a {{domxref("DOMString")}}, starting with `"::"`, containing the name
+    of the [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements "Learn more about pseudo-elements.") the animation runs on.
     If the animation doesn't run on a pseudo-element but on the element itself, specify an
-    empty string: <code>""</code>. It defaults to <code>""</code>.</dd>
-</dl>
+    empty string: `""`. It defaults to `""`.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A new {{domxref("AnimationEvent")}}, initialized per any provided options.</p>
+A new {{domxref("AnimationEvent")}}, initialized per any provided options.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">Using CSS animations</a></li>
-  <li>Animation-related CSS properties and at-rules: {{cssxref("animation")}},
-    {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}},
-    {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}},
-    {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}},
-    {{cssxref("animation-play-state")}}, {{cssxref("animation-timing-function")}},
-    {{cssxref("@keyframes")}}</li>
-  <li>The {{domxref("AnimationEvent")}} interface it belongs to.</li>
-</ul>
+- [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- Animation-related CSS properties and at-rules: {{cssxref("animation")}},
+  {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}},
+  {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}},
+  {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}},
+  {{cssxref("animation-play-state")}}, {{cssxref("animation-timing-function")}},
+  {{cssxref("@keyframes")}}
+- The {{domxref("AnimationEvent")}} interface it belongs to.

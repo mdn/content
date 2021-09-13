@@ -11,67 +11,67 @@ tags:
   - set
 browser-compat: api.FormData.set
 ---
-<p>{{APIRef("XMLHttpRequest")}}</p>
+{{APIRef("XMLHttpRequest")}}
 
-<p>The <code><strong>set()</strong></code> method of the {{domxref("FormData")}} interface sets a new value for an existing key inside a <code>FormData</code> object, or adds the key/value if it does not already exist.</p>
+The **`set()`** method of the {{domxref("FormData")}} interface sets a new value for an existing key inside a `FormData` object, or adds the key/value if it does not already exist.
 
-<p>The difference between <code>set()</code> and {{domxref("FormData.append")}} is that if the specified key does already exist, <code>set()</code> will overwrite all existing values with the new one, whereas {{domxref("FormData.append")}} will append the new value onto the end of the existing set of values.</p>
+The difference between `set()` and {{domxref("FormData.append")}} is that if the specified key does already exist, `set()` will overwrite all existing values with the new one, whereas {{domxref("FormData.append")}} will append the new value onto the end of the existing set of values.
 
-<div class="note">
-<p><strong>Note:</strong> This method is available in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
-</div>
+> **Note:** This method is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>There are two versions of this method: a two and a three parameter version:</p>
+There are two versions of this method: a two and a three parameter version:
 
-<pre class="brush: js">formData.set(name, value);
-formData.set(name, value, filename);</pre>
+```js
+formData.set(name, value);
+formData.set(name, value, filename);
+```
 
-<h4 id="append_Parameters">Parameters</h4>
+#### Parameters
 
-<dl>
- <dt><code>name</code></dt>
- <dd>The name of the field whose data is contained in <code>value</code>.</dd>
- <dt><code>value</code></dt>
- <dd>The field's value. This can be a {{domxref("USVString")}} or {{domxref("Blob")}} (including subclasses such as {{domxref("File")}}). If none of these are specified the value is converted to a string.</dd>
- <dt><code>filename </code>{{optional_inline}}</dt>
- <dd>The filename reported to the server (a {{domxref("USVString")}}), when a {{domxref("Blob")}} or {{domxref("File")}} is passed as the second parameter. The default filename for {{domxref("Blob")}} objects is "blob". The default filename for {{domxref("File")}} objects is the file's filename.</dd>
-</dl>
+- `name`
+  - : The name of the field whose data is contained in `value`.
+- `value`
+  - : The field's value. This can be a {{domxref("USVString")}} or {{domxref("Blob")}} (including subclasses such as {{domxref("File")}}). If none of these are specified the value is converted to a string.
+- `filename `{{optional_inline}}
+  - : The filename reported to the server (a {{domxref("USVString")}}), when a {{domxref("Blob")}} or {{domxref("File")}} is passed as the second parameter. The default filename for {{domxref("Blob")}} objects is "blob". The default filename for {{domxref("File")}} objects is the file's filename.
 
-<div class="note">
-<p><strong>Note:</strong> If you specify a {{domxref("Blob")}} as the data to append to the <code>FormData</code> object, the filename that will be reported to the server in the "Content-Disposition" header used to vary from browser to browser.</p>
-</div>
+> **Note:** If you specify a {{domxref("Blob")}} as the data to append to the `FormData` object, the filename that will be reported to the server in the "Content-Disposition" header used to vary from browser to browser.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following line creates an empty <code>FormData</code> object:</p>
+The following line creates an empty `FormData` object:
 
-<pre class="brush: js">var formData = new FormData(); // Currently empty</pre>
+```js
+var formData = new FormData(); // Currently empty
+```
 
-<p>You can set key/value pairs on this using {{domxref("FormData.set")}}:</p>
+You can set key/value pairs on this using {{domxref("FormData.set")}}:
 
-<pre class="brush: js">formData.set('username', 'Chris');
-formData.set('userpic', myFileInput.files[0], 'chris.jpg');</pre>
+```js
+formData.set('username', 'Chris');
+formData.set('userpic', myFileInput.files[0], 'chris.jpg');
+```
 
-<p>If the sent value is different than String or Blob it will be automatically converted to String:</p>
+If the sent value is different than String or Blob it will be automatically converted to String:
 
-<pre class="brush: js">formData.set('name', 72);
-formData.get('name'); // "72"</pre>
+```js
+formData.set('name', 72);
+formData.get('name'); // "72"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("XMLHTTPRequest")}}</li>
- <li><a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest" title="Using XMLHttpRequest">Using XMLHttpRequest</a></li>
- <li><a href="/en-US/docs/Web/API/FormData/Using_FormData_Objects">Using FormData objects</a></li>
- <li>{{HTMLElement("Form")}}</li>
-</ul>
+- {{domxref("XMLHTTPRequest")}}
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest "Using XMLHttpRequest")
+- [Using FormData objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)
+- {{HTMLElement("Form")}}

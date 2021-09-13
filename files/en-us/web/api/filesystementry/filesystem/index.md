@@ -2,57 +2,56 @@
 title: FileSystemEntry.filesystem
 slug: Web/API/FileSystemEntry/filesystem
 tags:
-- API
-- File and Directory Entries API
-- FileSystemEntry
-- Files
-- Offline
-- Property
-- Reference
-- filesystem
+  - API
+  - File and Directory Entries API
+  - FileSystemEntry
+  - Files
+  - Offline
+  - Property
+  - Reference
+  - filesystem
 browser-compat: api.FileSystemEntry.filesystem
 ---
-<p>{{APIRef("File and Directory Entries API")}}</p>
+{{APIRef("File and Directory Entries API")}}
 
-<p>The read-only <strong><code>filesystem</code></strong>
-    property of the {{domxref("FileSystemEntry")}} interface contains a
-    {{domxref("FileSystem")}} object that represents the file system on which the entry
-    resides.</p>
+The read-only **`filesystem`**
+property of the {{domxref("FileSystemEntry")}} interface contains a
+{{domxref("FileSystem")}} object that represents the file system on which the entry
+resides.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>filesystem</em> = <em>FileSystemEntry</em>.filesystem;</pre>
+```js
+var filesystem = FileSystemEntry.filesystem;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("FileSystem")}} representing the file system on which the file or directory
-  described by the <code>FileSystemEntry</code> is located..</p>
+A {{domxref("FileSystem")}} representing the file system on which the file or directory
+described by the `FileSystemEntry` is located..
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example obtains a {{domxref("FileSystemDirectoryEntry")}} for the root directory
-  of the file system containing a file.</p>
+This example obtains a {{domxref("FileSystemDirectoryEntry")}} for the root directory
+of the file system containing a file.
 
-<pre class="brush: js">let rootDirEntry = fileEntry.filesystem.root;
-</pre>
+```js
+let rootDirEntry = fileEntry.filesystem.root;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory
-      Entries API</a></li>
-  <li><a
-      href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">Introduction
-      to the File System API</a></li>
-  <li>{{domxref("FileSystemEntry")}}</li>
-  <li>{{domxref("FileSystem")}}</li>
-</ul>
+- [File and Directory
+  Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction
+  to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- {{domxref("FileSystemEntry")}}
+- {{domxref("FileSystem")}}

@@ -2,33 +2,35 @@
 title: WebSocket.onmessage
 slug: Web/API/WebSocket/onmessage
 tags:
-- API
-- Property
-- Reference
-- Web API
-- WebSocket
+  - API
+  - Property
+  - Reference
+  - Web API
+  - WebSocket
 browser-compat: api.WebSocket.onmessage
 ---
-<div>{{APIRef("Web Sockets API")}}</div>
+{{APIRef("Web Sockets API")}}
 
-<p>The <strong><code>WebSocket.onmessage</code></strong> property is an
-  <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> that is called when a message is received from the server.
-  It is called with a {{domxref("MessageEvent")}}.</p>
+The **`WebSocket.onmessage`** property is an
+[event handler](/en-US/docs/Web/Events/Event_handlers) that is called when a message is received from the server.
+It is called with a {{domxref("MessageEvent")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>aWebSocket</em>.onmessage = function(event) {
+```js
+aWebSocket.onmessage = function(event) {
   console.debug("WebSocket message received:", event);
-};</pre>
+};
+```
 
-<h2 id="Value">Value</h2>
+## Value
 
-<p>An {{domxref("EventListener")}}.</p>
+An {{domxref("EventListener")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

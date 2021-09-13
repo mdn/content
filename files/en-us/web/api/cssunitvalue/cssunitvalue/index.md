@@ -2,60 +2,55 @@
 title: CSSUnitValue()
 slug: Web/API/CSSUnitValue/CSSUnitValue
 tags:
-- API
-- CSS Typed Object Model API
-- CSSUnitValue
-- Constructor
-- Experimental
-- Houdini
-- Reference
+  - API
+  - CSS Typed Object Model API
+  - CSSUnitValue
+  - Constructor
+  - Experimental
+  - Houdini
+  - Reference
 browser-compat: api.CSSUnitValue.CSSUnitValue
 ---
-<div>{{draft}}{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}</div>
+{{draft}}{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>CSSUnitValue()</code></strong> constructor creates a
-	new {{domxref("CSSUnitValue")}} object which returns a new {{domxref('CSSUnitValue')}}
-	object which represents values that contain a single unit type. For example, "42px"
-	would be represented by a <code>CSSNumericValue</code>.</p>
+The **`CSSUnitValue()`** constructor creates a
+new {{domxref("CSSUnitValue")}} object which returns a new {{domxref('CSSUnitValue')}}
+object which represents values that contain a single unit type. For example, "42px"
+would be represented by a `CSSNumericValue`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-	class="brush: js">var <var>CSSUnitValue</var> = new CSSUnitValue()</pre>
+```js
+var CSSUnitValue = new CSSUnitValue()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-	<dt>value</dt>
-	<dd>Returns a double indicating the number of units.</dd>
-	<dt>unit</dt>
-	<dd>Returns a {{jsxref('USVString')}} indicating the type of unit.</dd>
-</dl>
+- value
+  - : Returns a double indicating the number of units.
+- unit
+  - : Returns a {{jsxref('USVString')}} indicating the type of unit.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following shows a method of creating a {{domxref('CSSPositionValue')}} from
-	individual <code>CSSUnitValue</code> constructors.</p>
+The following shows a method of creating a {{domxref('CSSPositionValue')}} from
+individual `CSSUnitValue` constructors.
 
-<pre>let pos = new CSSPositionValue(
-    new CSSUnitValue(5, "px"),
-    new CSSUnitValue(10, "px"));
-</pre>
+    let pos = new CSSPositionValue(
+        new CSSUnitValue(5, "px"),
+        new CSSUnitValue(10, "px"));
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{domxref('CSSUnitValue.unit')}}</li>
-	<li>{{domxref('CSSUnitValue.value')}}</li>
-	<li><a href="/en-US/docs/Web/API/CSS_Typed_OM_API/Guide">Using the CSS Typed OM</a>
-	</li>
-	<li><a href="/en-US/docs/Web/API/CSS_Typed_OM_API">CSS Typed Object Model API</a></li>
-</ul>
+- {{domxref('CSSUnitValue.unit')}}
+- {{domxref('CSSUnitValue.value')}}
+- [Using the CSS Typed OM](/en-US/docs/Web/API/CSS_Typed_OM_API/Guide)
+- [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)

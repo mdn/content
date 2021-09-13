@@ -10,65 +10,58 @@ tags:
   - Web Audio API
 browser-compat: api.PeriodicWave.PeriodicWave
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<p>The <code><strong>PeriodicWave()</strong></code> constructor of the <a
-    href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> creates a new
-  {{domxref("PeriodicWave")}} object instance.</p>
+The **`PeriodicWave()`** constructor of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) creates a new
+{{domxref("PeriodicWave")}} object instance.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>myWave</em> = new PeriodicWave(<em>context</em>, <em>options</em>);</pre>
+```js
+var myWave = new PeriodicWave(context, options);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>context</code></dt>
-  <dd>A {{domxref("BaseAudioContext")}} representing the audio context you want the node
-    to be associated with.</dd>
-  <dt><code>options</code> {{optional_inline}}</dt>
-  <dd>A
-    <code><a href="https://webaudio.github.io/web-audio-api/#idl-def-PeriodicWaveOptions">PeriodicWaveOptions</a></code>
-    dictionary object defining the properties you want the <code>PeriodicWave</code> to
-    have (It also inherits the options defined in the <a
-      href="https://webaudio.github.io/web-audio-api/#idl-def-PeriodicWaveConstraints">PeriodicWaveConstraints</a>
+- `context`
+  - : A {{domxref("BaseAudioContext")}} representing the audio context you want the node
+    to be associated with.
+- `options` {{optional_inline}}
+
+  - : A
+    [`PeriodicWaveOptions`](https://webaudio.github.io/web-audio-api/#idl-def-PeriodicWaveOptions)
+    dictionary object defining the properties you want the `PeriodicWave` to
+    have (It also inherits the options defined in the [PeriodicWaveConstraints](https://webaudio.github.io/web-audio-api/#idl-def-PeriodicWaveConstraints)
     dictionary.):
-    <ul>
-      <li><code>real</code>: A {{jsxref("Float32Array")}} containing the cosine terms
-        that you want to use to form the wave (equivalent to the <code>real</code>
-        parameter of {{domxref("BaseAudioContext.createPeriodicWave")}}).</li>
-      <li><code>imag</code>: A {{jsxref("Float32Array")}} containing the sine terms that
-        you want to use to form the wave (equivalent to the <code>imag</code> parameter of
-        {{domxref("BaseAudioContext.createPeriodicWave")}}).</li>
-      <li><code>channelCount</code>: Represents an integer used to determine how many channels are used when <a
-        href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing">up-mixing
-        and down-mixing</a> connections to any inputs to the node. (See
+
+    - `real`: A {{jsxref("Float32Array")}} containing the cosine terms
+      that you want to use to form the wave (equivalent to the `real`
+      parameter of {{domxref("BaseAudioContext.createPeriodicWave")}}).
+    - `imag`: A {{jsxref("Float32Array")}} containing the sine terms that
+      you want to use to form the wave (equivalent to the `imag` parameter of
+      {{domxref("BaseAudioContext.createPeriodicWave")}}).
+    - `channelCount`: Represents an integer used to determine how many channels are used when [up-mixing
+      and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) connections to any inputs to the node. (See
       {{domxref("AudioNode.channelCount")}} for more information.) Its usage and precise
-      definition depend on the value of <code>channelCountMode</code>.</li>
-      <li><code>channelCountMode</code>: Represents an enumerated value describing the way channels must be matched between
-        the node's inputs and outputs. (See {{domxref("AudioNode.channelCountMode")}} for more
-        information including default values.)</li>
-      <li>
-        <code>channelInterpretation</code>: Represents an enumerated value describing the meaning of the channels. This
-        interpretation will define how audio <a
-          href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing">up-mixing
-          and down-mixing</a> will happen.<br>
-        The possible values are <code>"speakers"</code> or <code>"discrete"</code>. (See
-        {{domxref("AudioNode.channelCountMode")}} for more information including default
-        values.)
-      </li>
-    </ul>
-  </dd>
-</dl>
+      definition depend on the value of `channelCountMode`.
+    - `channelCountMode`: Represents an enumerated value describing the way channels must be matched between
+      the node's inputs and outputs. (See {{domxref("AudioNode.channelCountMode")}} for more
+      information including default values.)
+    - `channelInterpretation`: Represents an enumerated value describing the meaning of the channels. This
+      interpretation will define how audio [up-mixing
+      and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) will happen.
+      The possible values are `"speakers"` or `"discrete"`. (See
+      {{domxref("AudioNode.channelCountMode")}} for more information including default
+      values.)
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A new {{domxref("PeriodicWave")}} object instance.</p>
+A new {{domxref("PeriodicWave")}} object instance.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var real = new Float32Array(2);
+```js
+var real = new Float32Array(2);
 var imag = new Float32Array(2);
 var ac = new AudioContext();
 
@@ -83,12 +76,13 @@ var options = {
   disableNormalization : false
 }
 
-var wave = new PeriodicWave(ac, options);</pre>
+var wave = new PeriodicWave(ac, options);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,68 +2,71 @@
 title: DOMTokenList.add()
 slug: Web/API/DOMTokenList/add
 tags:
-- API
-- Add
-- DOM
-- DOMTokenList
-- Method
-- Reference
+  - API
+  - Add
+  - DOM
+  - DOMTokenList
+  - Method
+  - Reference
 browser-compat: api.DOMTokenList.add
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>add()</strong></code> method of the {{domxref("DOMTokenList")}}
-  interface adds the given <em>token</em> to the list.</p>
+The **`add()`** method of the {{domxref("DOMTokenList")}}
+interface adds the given _token_ to the list.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var>tokenList</var>.add(<var>token1</var>[, <var>token2</var>[, ...<var>tokenN</var>]]);</pre>
+```js
+tokenList.add(token1[, token2[, ...tokenN]]);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>token<em>N</em></var></code></dt>
-  <dd>A {{domxref("DOMString")}} representing the token (or tokens) to add to the
-    <code><var>tokenList</var></code>.</dd>
-</dl>
+- `tokenN`
+  - : A {{domxref("DOMString")}} representing the token (or tokens) to add to the
+    `tokenList`.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>undefined</code></p>
+`undefined`
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the following example we retrieve the list of classes set on a
-  {{htmlelement("span")}} element as a <code>DOMTokenList</code> using
-  {{domxref("Element.classList")}}. We then add a new token to the list, and write the
-  list into the <code>&lt;span&gt;</code>'s {{domxref("Node.textContent")}}.</p>
+In the following example we retrieve the list of classes set on a
+{{htmlelement("span")}} element as a `DOMTokenList` using
+{{domxref("Element.classList")}}. We then add a new token to the list, and write the
+list into the `<span>`'s {{domxref("Node.textContent")}}.
 
-<p>First, the HTML:</p>
+First, the HTML:
 
-<pre class="brush: html">&lt;span class="a b c"&gt;&lt;/span&gt;</pre>
+```html
+<span class="a b c"></span>
+```
 
-<p>Now the JavaScript:</p>
+Now the JavaScript:
 
-<pre class="brush: js">let span = document.querySelector("span");
+```js
+let span = document.querySelector("span");
 let classes = span.classList;
 classes.add("d");
 span.textContent = classes;
-</pre>
+```
 
-<p>The output looks like this:</p>
+The output looks like this:
 
-<p>{{ EmbedLiveSample('Examples', '100%', 60) }}</p>
+{{ EmbedLiveSample('Examples', '100%', 60) }}
 
-<p>You can add multiple tokens as well:</p>
+You can add multiple tokens as well:
 
-<pre class="brush: js">span.classList.add("d", "e", "f");
-</pre>
+```js
+span.classList.add("d", "e", "f");
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

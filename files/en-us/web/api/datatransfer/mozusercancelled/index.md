@@ -2,65 +2,63 @@
 title: DataTransfer.mozUserCancelled
 slug: Web/API/DataTransfer/mozUserCancelled
 tags:
-- API
-- Non-standard
-- Property
-- Reference
-- drag and drop
+  - API
+  - Non-standard
+  - Property
+  - Reference
+  - drag and drop
 browser-compat: api.DataTransfer.mozUserCancelled
 ---
-<div>{{APIRef("HTML Drag and Drop API")}}</div>
+{{APIRef("HTML Drag and Drop API")}}
 
-<p>{{ Non-standard_header() }}</p>
+{{ Non-standard_header() }}
 
-<p>The <strong><code>DataTransfer.mozUserCancelled</code></strong> property is used in the
-  {{event("dragend")}} event handler to determine if the user canceled the drag or not. If
-  the user canceled the event, the property returns <code>true</code> and returns
-  <code>false</code> otherwise. This property only applies to the {{event("dragend")}}
-  event.</p>
+The **`DataTransfer.mozUserCancelled`** property is used in the
+{{event("dragend")}} event handler to determine if the user canceled the drag or not. If
+the user canceled the event, the property returns `true` and returns
+`false` otherwise. This property only applies to the {{event("dragend")}}
+event.
 
-  <div class="notecard note">
-    <p><strong>Note:</strong> This property is Firefox-specific.</p>
-  </div>
+> **Note:** This property is Firefox-specific.
 
-<p>This property is {{readonlyInline}}.</p>
+This property is {{readonlyInline}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>dataTransfer</em>.mozUserCancelled;
-</pre>
+```js
+dataTransfer.mozUserCancelled;
+```
 
-<h3 id="Return_Value">Return value</h3>
+### Return value
 
-<p>A boolean value representing <code>true</code> if the user canceled the drag
-  event and returns <code>false</code> otherwise.</p>
+A boolean value representing `true` if the user canceled the drag
+event and returns `false` otherwise.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example shows the use of the <code>mozUserCancelled</code> property in the
-  {{event("dragend")}} event handler.</p>
+This example shows the use of the `mozUserCancelled` property in the
+{{event("dragend")}} event handler.
 
-<pre class="brush: js">function dragend_handler(event)
+```js
+function dragend_handler(event)
 {
   var dragData = event.dataTransfer;
   console.log("mozUserCancelled = " + dragData.mozUserCancelled);
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This property is not defined in any Web standard.</p>
+This property is not defined in any Web standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API">Drag and drop</a></li>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</a></li>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">Recommended Drag Types</a></li>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items">Dragging and Dropping Multiple Items</a></li>
- <li><a href="https://codepen.io/tech_query/pen/MqGgap">DataTransfer test - Paste or Drag</a></li>
-</ul>
+- [Drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
+- [Drag Operations](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+- [Recommended Drag Types](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
+- [Dragging and Dropping Multiple Items](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
+- [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)

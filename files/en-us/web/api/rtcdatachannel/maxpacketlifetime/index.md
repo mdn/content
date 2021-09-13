@@ -10,45 +10,45 @@ tags:
   - maxPacketLifeTime
 browser-compat: api.RTCDataChannel.maxPacketLifeTime
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The read-only <code>RTCDataChannel</code> property
-    <code><strong>maxPacketLifeTime</strong></code> returns the amount of time, in
-    milliseconds, the browser is allowed to take to attempt to transmit a message, as set
-    when the data channel was created, or <code>null</code>. This limits how long
-  the browser can continue to attempt to transmit and retransmit the message before giving
-  up.</p>
+The read-only `RTCDataChannel` property
+**`maxPacketLifeTime`** returns the amount of time, in
+milliseconds, the browser is allowed to take to attempt to transmit a message, as set
+when the data channel was created, or `null`. This limits how long
+the browser can continue to attempt to transmit and retransmit the message before giving
+up.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>lifetime</em> = <em>aDataChannel</em>.maxPacketLifeTime;
-</pre>
+```js
+var lifetime = aDataChannel.maxPacketLifeTime;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>The number of milliseconds over which the browser may continue to attempt to transmit
-  the message until it either succeeds or gives up. If not set when
-  {{domxref("RTCPeerConnection.createDataChannel()")}} was called to create the data
-  channel, this value is <code>null</code>.</p>
+The number of milliseconds over which the browser may continue to attempt to transmit
+the message until it either succeeds or gives up. If not set when
+{{domxref("RTCPeerConnection.createDataChannel()")}} was called to create the data
+channel, this value is `null`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">// TBD
-</pre>
+```js
+// TBD
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
-  <li>{{domxref("RTCDataChannel")}}</li>
-  <li>{{domxref("RTCDataChannel.maxRetransmits")}}</li>
-  <li>{{domxref("RTCPeerConnection.createDataChannel()")}}</li>
-</ul>
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)
+- {{domxref("RTCDataChannel")}}
+- {{domxref("RTCDataChannel.maxRetransmits")}}
+- {{domxref("RTCPeerConnection.createDataChannel()")}}

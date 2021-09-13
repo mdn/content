@@ -2,73 +2,71 @@
 title: WebGLRenderingContext.clearColor()
 slug: Web/API/WebGLRenderingContext/clearColor
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.clearColor
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.clearColor()</code></strong> method of the <a
-    href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> specifies the color values used
-  when clearing color buffers.</p>
+The **`WebGLRenderingContext.clearColor()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) specifies the color values used
+when clearing color buffers.
 
-<p>This specifies what color values to use when calling the
-  {{domxref("WebGLRenderingContext.clear", "clear()")}} method. The values are clamped
-  between 0 and 1.</p>
+This specifies what color values to use when calling the
+{{domxref("WebGLRenderingContext.clear", "clear()")}} method. The values are clamped
+between 0 and 1.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <var>gl</var>.clearColor(<var>red, green, blue, alpha</var>);
-</pre>
+```js
+void gl.clearColor(red, green, blue, alpha);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>red</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLclampf")}} specifying the red color value used when the color buffers
-    are cleared. Default value: 0.</dd>
-  <dt><code>green</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLclampf")}} specifying the green color value used when the color
-    buffers are cleared. Default value: 0.</dd>
-  <dt><code>blue</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLclampf")}} specifying the blue color value used when the color
-    buffers are cleared. Default value: 0.</dd>
-  <dt><code>alpha</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLclampf")}} specifying the alpha (transparency) value used when the
-    color buffers are cleared. Default value: 0.</dd>
-</dl>
+- `red`
+  - : A {{domxref("WebGL_API/Types", "GLclampf")}} specifying the red color value used when the color buffers
+    are cleared. Default value: 0.
+- `green`
+  - : A {{domxref("WebGL_API/Types", "GLclampf")}} specifying the green color value used when the color
+    buffers are cleared. Default value: 0.
+- `blue`
+  - : A {{domxref("WebGL_API/Types", "GLclampf")}} specifying the blue color value used when the color
+    buffers are cleared. Default value: 0.
+- `alpha`
+  - : A {{domxref("WebGL_API/Types", "GLclampf")}} specifying the alpha (transparency) value used when the
+    color buffers are cleared. Default value: 0.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">gl.clearColor(1, 0.5, 0.5, 3);
-</pre>
+```js
+gl.clearColor(1, 0.5, 0.5, 3);
+```
 
-<p>To get the current clear color, query the <code>COLOR_CLEAR_VALUE</code> constant which
-  returns a {{jsxref("Float32Array")}}.</p>
+To get the current clear color, query the `COLOR_CLEAR_VALUE` constant which
+returns a {{jsxref("Float32Array")}}.
 
-<pre class="brush: js">gl.getParameter(gl.COLOR_CLEAR_VALUE);
+```js
+gl.getParameter(gl.COLOR_CLEAR_VALUE);
 // Float32Array[1, 0.5, 0.5, 1]
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.clear()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.clearDepth()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.clearStencil()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.clear()")}}
+- {{domxref("WebGLRenderingContext.clearDepth()")}}
+- {{domxref("WebGLRenderingContext.clearStencil()")}}

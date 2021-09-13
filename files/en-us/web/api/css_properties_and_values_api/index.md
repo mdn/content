@@ -4,51 +4,49 @@ slug: Web/API/CSS_Properties_and_Values_API
 tags:
   - Houdini
 ---
-<p>{{SeeCompatTable}} The <strong>CSS Properties and Values API</strong> — part of the <a href="/en-US/docs/Web/Houdini">CSS Houdini</a> umbrella of APIs — allows developers to explicitly define their {{cssxref('--*', 'CSS custom properties')}}, allowing for property type checking, default values, and properties that do or do not inherit their value.</p>
+{{SeeCompatTable}} The **CSS Properties and Values API** — part of the [CSS Houdini](/en-US/docs/Web/Houdini) umbrella of APIs — allows developers to explicitly define their {{cssxref('--*', 'CSS custom properties')}}, allowing for property type checking, default values, and properties that do or do not inherit their value.
 
-<h2 id="Interfaces">Interfaces</h2>
+## Interfaces
 
-<dl>
-	<dt>{{domxref('CSS.registerProperty')}}</dt>
-	<dd>Defines how a browser should parse a {{cssxref('--*', 'CSS custom properties')}}. Access this interface through {{domxref('CSS.registerProperty')}} in <a href="/en-US/docs/Web/JavaScript">JavaScript</a>.</dd>
-	<dt>{{cssxref('@property')}}</dt>
-	<dd>Defines how a browser should parse a {{cssxref('--*', 'CSS custom properties')}}. Access this interface through {{cssxref('@property')}} <a href="/en-US/docs/Web/CSS/At-rule">at-rule</a> in <a href="/en-US/docs/Web/CSS">CSS</a>.</dd>
-</dl>
+- {{domxref('CSS.registerProperty')}}
+  - : Defines how a browser should parse a {{cssxref('--*', 'CSS custom properties')}}. Access this interface through {{domxref('CSS.registerProperty')}} in [JavaScript](/en-US/docs/Web/JavaScript).
+- {{cssxref('@property')}}
+  - : Defines how a browser should parse a {{cssxref('--*', 'CSS custom properties')}}. Access this interface through {{cssxref('@property')}} [at-rule](/en-US/docs/Web/CSS/At-rule) in [CSS](/en-US/docs/Web/CSS).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following uses {{domxref('CSS.registerProperty')}} in <a href="/en-US/docs/Web/JavaScript">JavaScript</a> to type a {{cssxref('--*', 'CSS custom properties')}}, <code>--my-color</code>, as a color, give it a default value, and not allow it to inherit its value:</p>
+The following uses {{domxref('CSS.registerProperty')}} in [JavaScript](/en-US/docs/Web/JavaScript) to type a {{cssxref('--*', 'CSS custom properties')}}, `--my-color`, as a color, give it a default value, and not allow it to inherit its value:
 
-<pre class="brush: js">window.CSS.registerProperty({
+```js
+window.CSS.registerProperty({
   name: '--my-color',
-  syntax: '&lt;color&gt;',
+  syntax: '<color>',
   inherits: false,
   initialValue: '#c0ffee',
 });
-</pre>
+```
 
-<p>The same registration can take place in <a href="/en-US/docs/Web/CSS">CSS</a> using the {{cssxref('@property')}} <a href="/en-US/docs/Web/CSS/At-rule">at-rule</a>:</p>
+The same registration can take place in [CSS](/en-US/docs/Web/CSS) using the {{cssxref('@property')}} [at-rule](/en-US/docs/Web/CSS/At-rule):
 
-<pre class="brush: css">@property --my-color {
-  syntax: '&lt;color&gt;';
+```css
+@property --my-color {
+  syntax: '<color>';
   inherits: false;
   initial-value: #c0ffee;
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications("api.CSS.registerProperty")}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>See individual interfaces</p>
+See individual interfaces
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><a href="/en-US/docs/Web/API/CSS_Properties_and_Values_API/guide">Using the CSS properties and values API</a></li>
-	<li><a href="/en-US/docs/Web/API/CSS_Painting_API">CSS Painting API</a></li>
-	<li><a href="/en-US/docs/Web/API/CSS_Typed_OM_API">CSS Typed Object Model</a></li>
-	<li><a href="/en-US/docs/Web/Houdini">CSS Houdini</a></li>
-</ul>
+- [Using the CSS properties and values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API/guide)
+- [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API)
+- [CSS Typed Object Model](/en-US/docs/Web/API/CSS_Typed_OM_API)
+- [CSS Houdini](/en-US/docs/Web/Houdini)

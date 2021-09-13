@@ -2,80 +2,79 @@
 title: Node.isEqualNode()
 slug: Web/API/Node/isEqualNode
 tags:
-- API
-- DOM
-- Method
-- Node
-- Reference
+  - API
+  - DOM
+  - Method
+  - Node
+  - Reference
 browser-compat: api.Node.isEqualNode
 ---
-<div>
-  <div>{{APIRef("DOM")}}</div>
-</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>Node.isEqualNode()</strong></code> method tests whether two nodes are
-  equal. Two nodes are equal when they have the same type, defining characteristics (for
-  elements, this would be their ID, number of children, and so forth), its attributes
-  match, and so on. The specific set of data points that must match varies depending on
-  the types of the nodes.</p>
+The **`Node.isEqualNode()`** method tests whether two nodes are
+equal. Two nodes are equal when they have the same type, defining characteristics (for
+elements, this would be their ID, number of children, and so forth), its attributes
+match, and so on. The specific set of data points that must match varies depending on
+the types of the nodes.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>isEqualNode</var> = <var>node</var>.isEqualNode(<var>otherNode</var>);
-</pre>
+```js
+var isEqualNode = node.isEqualNode(otherNode);
+```
 
-<ul>
-  <li><code>otherNode</code>: The {{domxref("Node")}} to compare equality with.</li>
-</ul>
+- `otherNode`: The {{domxref("Node")}} to compare equality with.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this example, we create three {{HTMLElement("div")}} blocks. The first and third
-  have the same contents and attributes, while the second is different. Then we run some
-  JavaScript to compare the nodes using <code>isEqualNode()</code> and output the results.
-</p>
+In this example, we create three {{HTMLElement("div")}} blocks. The first and third
+have the same contents and attributes, while the second is different. Then we run some
+JavaScript to compare the nodes using `isEqualNode()` and output the results.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;This is the first element.&lt;/div&gt;
-&lt;div&gt;This is the second element.&lt;/div&gt;
-&lt;div&gt;This is the first element.&lt;/div&gt;
+```html
+<div>This is the first element.</div>
+<div>This is the second element.</div>
+<div>This is the first element.</div>
 
-&lt;p id="output"&gt;&lt;/p&gt;</pre>
+<p id="output"></p>
+```
 
-<pre class="brush: css hidden">#output {
+```css hidden
+#output {
   width: 440px;
   border: 2px solid black;
   border-radius: 5px;
   padding: 10px;
   margin-top: 20px;
   display: block;
-}</pre>
+}
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre
-  class="brush: js">let output = document.getElementById("output");
+```js
+let output = document.getElementById("output");
 let divList  = document.getElementsByTagName("div");
 
-output.innerHTML += "div 0 equals div 0: " + divList[0].isEqualNode(divList[0]) + "&lt;br/&gt;";
-output.innerHTML += "div 0 equals div 1: " + divList[0].isEqualNode(divList[1]) + "&lt;br/&gt;";
-output.innerHTML += "div 0 equals div 2: " + divList[0].isEqualNode(divList[2]) + "&lt;br/&gt;";</pre>
+output.innerHTML += "div 0 equals div 0: " + divList[0].isEqualNode(divList[0]) + "<br/>";
+output.innerHTML += "div 0 equals div 1: " + divList[0].isEqualNode(divList[1]) + "<br/>";
+output.innerHTML += "div 0 equals div 2: " + divList[0].isEqualNode(divList[2]) + "<br/>";
+```
 
-<h3 id="Results">Results</h3>
+### Results
 
-<p>{{ EmbedLiveSample('Example', 480) }}</p>
+{{ EmbedLiveSample('Example', 480) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Node.isSameNode()")}}</li>
-</ul>
+- {{domxref("Node.isSameNode()")}}

@@ -2,34 +2,36 @@
 title: Notification.body
 slug: Web/API/Notification/body
 tags:
-- API
-- BODY
-- Notification
-- Notifications
-- Notifications API
-- Property
-- Reference
+  - API
+  - BODY
+  - Notification
+  - Notifications
+  - Notifications API
+  - Property
+  - Reference
 browser-compat: api.Notification.body
 ---
-<p>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</p>
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-<p>The <strong><code>body</code></strong> read-only property of the
-  {{domxref("Notification")}} interface indicates the body string of the notification, as
-  specified in the <code>body</code> option of the
-  {{domxref("Notification.Notification","Notification()")}} constructor.</p>
+The **`body`** read-only property of the
+{{domxref("Notification")}} interface indicates the body string of the notification, as
+specified in the `body` option of the
+{{domxref("Notification.Notification","Notification()")}} constructor.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>body</var> = <var>Notification</var>.body;
-</pre>
+```js
+var body = Notification.body;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}}.</p>
+A {{domxref("DOMString")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">function spawnNotification(theBody, theIcon, theTitle) {
+```js
+function spawnNotification(theBody, theIcon, theTitle) {
   var options = {
       body: theBody,
       icon: theIcon
@@ -37,19 +39,18 @@ browser-compat: api.Notification.body
   var n = new Notification(theTitle, options);
 
   console.log(n.body);
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using
-      the Notifications API</a></li>
-</ul>
+- [Using
+  the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)

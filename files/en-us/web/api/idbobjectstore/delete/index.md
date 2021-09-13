@@ -8,47 +8,44 @@ tags:
   - Reference
 browser-compat: api.IDBObjectStore.delete
 ---
-<p>{{APIRef("IndexedDB")}}</p>
+{{APIRef("IndexedDB")}}
 
-<div>
-  <p>The <strong><code>delete()</code></strong> method of the
-    {{domxref("IDBObjectStore")}} interface returns an {{domxref("IDBRequest")}} object,
-    and, in a separate thread, deletes the specified record or records.</p>
+The **`delete()`** method of the
+{{domxref("IDBObjectStore")}} interface returns an {{domxref("IDBRequest")}} object,
+and, in a separate thread, deletes the specified record or records.
 
-  <p>Either a key or an {{domxref("IDBKeyRange")}} can be passed, allowing one or multiple
-    records to be deleted from a store. To delete all records in a store, use 
-    {{domxref("IDBObjectStore.clear")}}.</p>
+Either a key or an {{domxref("IDBKeyRange")}} can be passed, allowing one or multiple
+records to be deleted from a store. To delete all records in a store, use 
+{{domxref("IDBObjectStore.clear")}}.
 
-  <p>Bear in mind that if you are using a {{domxref("IDBCursor", "IDBCursor")}}, you can use
-    the {{domxref("IDBCursor.delete()")}} method to more efficiently delete the current
-    record — without having to explicitly look up the record's key.</p>
+Bear in mind that if you are using a {{domxref("IDBCursor", "IDBCursor")}}, you can use
+the {{domxref("IDBCursor.delete()")}} method to more efficiently delete the current
+record — without having to explicitly look up the record's key.
 
-  <p>{{AvailableInWorkers}}</p>
-</div>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>request</em> = <em>objectStore</em>.delete(<em>Key</em>);
+```js
+var request = objectStore.delete(Key);
 
-var <em>request</em> = <em>objectStore</em>.delete(<em>KeyRange</em>);
-</pre>
+var request = objectStore.delete(KeyRange);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>Key</dt>
-  <dd>The key of the record to be deleted, or an {{domxref("IDBKeyRange")}} to delete all
-    records with keys in range.</dd>
-</dl>
+- Key
+  - : The key of the record to be deleted, or an {{domxref("IDBKeyRange")}} to delete all
+    records with keys in range.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An {{domxref("IDBRequest")}} object on which subsequent events related to this
-  operation are fired. The <code>request.result</code> attribute is set to undefined.</p>
+An {{domxref("IDBRequest")}} object on which subsequent events related to this
+operation are fired. The `request.result` attribute is set to undefined.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>This method may raise a {{domxref("DOMException")}} of the following types:</p>
+This method may raise a {{domxref("DOMException")}} of the following types:
 
 <table class="no-markdown">
   <thead>
@@ -72,36 +69,40 @@ var <em>request</em> = <em>objectStore</em>.delete(<em>KeyRange</em>);
     </tr>
     <tr>
       <td><code>DataError</code></td>
-      <td>The <var>key</var> is not a <a
-            href="https://dvcs.w3.org/hg/IndexedDB/raw-file/tip/Overview.html#dfn-valid-key">valid
-            key</a> or a <a
-            href="https://dvcs.w3.org/hg/IndexedDB/raw-file/tip/Overview.html#dfn-key-range">key
-            range</a>.</td>
+      <td>
+        The <var>key</var> is not a <a
+          href="https://dvcs.w3.org/hg/IndexedDB/raw-file/tip/Overview.html#dfn-valid-key"
+          >valid key</a
+        > or a <a
+          href="https://dvcs.w3.org/hg/IndexedDB/raw-file/tip/Overview.html#dfn-key-range"
+          >key range</a
+        >.
+      </td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following code snippet shows the <code>deleteItem()</code> function,
-  which is part of the To-do Notifications example app. This app stores to-do
-  list items using IndexedDB. You can
-<a href="https://github.com/mdn/to-do-notifications/">see the app's complete
-code on GitHub</a>, and
-<a href="https://mdn.github.io/to-do-notifications/">try out the app live</a>.</p>
+The following code snippet shows the `deleteItem()` function,
+which is part of the To-do Notifications example app. This app stores to-do
+list items using IndexedDB. You can
+[see the app's complete
+code on GitHub](https://github.com/mdn/to-do-notifications/), and
+[try out the app live](https://mdn.github.io/to-do-notifications/).
 
-<p>The <code>deleteItem()</code> function is called when the user clicks the
-  button to delete a to-do list item. The item key is set in the button's
-  <code>'data-task'</code> data attribute, so the function
-  knows which item to delete. The function opens a database transaction in
-  which to delete the item, supplying its key. When the transaction completes,
-  the function updates the app UI to report that the item was deleted.</p>
+The `deleteItem()` function is called when the user clicks the
+button to delete a to-do list item. The item key is set in the button's
+`'data-task'` data attribute, so the function
+knows which item to delete. The function opens a database transaction in
+which to delete the item, supplying its key. When the transaction completes,
+the function updates the app UI to report that the item was deleted.
 
-<p>Note that in this function <code>db</code> is a global variable
+Note that in this function `db` is a global variable
 referring to an {{domxref("IDBDatabase")}} object that is initialized when
-the app loads.</p>
+the app loads.
 
-<pre class="brush: js">
+```js
 function deleteItem(event) {
   // retrieve the name of the task we want to delete
   let dataTask = event.target.getAttribute('data-task');
@@ -114,28 +115,26 @@ function deleteItem(event) {
   transaction.oncomplete = function() {
     // delete the parent of the button, which is the list item, so it no longer is displayed
     event.target.parentNode.parentNode.removeChild(event.target.parentNode);
-    note.innerHTML += '&lt;li&gt;Task \"' + dataTask + '\" deleted.&lt;/li&gt;';
+    note.innerHTML += '<li>Task \"' + dataTask + '\" deleted.</li>';
   };
 };
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
-  <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
-  <li>Using transactions: {{domxref("IDBTransaction")}}</li>
-  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
-  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
-  <li>Using cursors: {{domxref("IDBCursor")}}</li>
-  <li>Reference example: <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
-      Notifications</a> (<a href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do
+  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

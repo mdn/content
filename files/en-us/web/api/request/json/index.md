@@ -10,32 +10,33 @@ tags:
   - Request
 browser-compat: api.Request.json
 ---
-<div>{{APIRef("Fetch API")}}</div>
+{{APIRef("Fetch API")}}
 
-<p>The <strong><code>json()</code></strong> method of the {{domxref("Request")}} interface
-reads the request body and returns it as a promise that resolves with the result of parsing the body text as {{JSxRef("JSON")}}.</p>
+The **`json()`** method of the {{domxref("Request")}} interface
+reads the request body and returns it as a promise that resolves with the result of parsing the body text as {{JSxRef("JSON")}}.
 
-<p>Note that despite the method being named <code>json()</code>, the result is not JSON but is instead the result of taking JSON as input and parsing it to produce a JavaScript object.</p>
+Note that despite the method being named `json()`, the result is not JSON but is instead the result of taking JSON as input and parsing it to produce a JavaScript object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">request.json().then(data =&gt; {
+```js
+request.json().then(data => {
   // do something with your data
-});</pre>
+});
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} that resolves to a JavaScript object. This object could be
-  anything that can be represented by JSON — an object, an array, a string, a number...
-</p>
+A {{jsxref("Promise")}} that resolves to a JavaScript object. This object could be
+anything that can be represented by JSON — an object, an array, a string, a number...
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">
+```js
 const obj = {hello: 'world'};
 
 const request = new Request('/myEndpoint', {
@@ -46,18 +47,16 @@ const request = new Request('/myEndpoint', {
 request.json().then(function(data) {
   // do something with the data sent in the request
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Response.json()")}}</li>
-</ul>
+- {{domxref("Response.json()")}}

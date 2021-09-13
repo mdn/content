@@ -2,35 +2,37 @@
 title: HTMLObjectElement.type
 slug: Web/API/HTMLObjectElement/type
 tags:
-- API
-- HTML DOM
-- HTMLObjectElement
-- NeedsExample
-- Property
-- Reference
-- Type
+  - API
+  - HTML DOM
+  - HTMLObjectElement
+  - NeedsExample
+  - Property
+  - Reference
+  - Type
 browser-compat: api.HTMLObjectElement.type
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>type</code></strong> property of the
-  {{domxref("HTMLObjectElement")}} interface returns a {{domxref("DOMString")}} that
-  reflects the {{htmlattrxref("type", "object")}} HTML attribute, specifying the MIME type
-  of the resource.</p>
+The **`type`** property of the
+{{domxref("HTMLObjectElement")}} interface returns a {{domxref("DOMString")}} that
+reflects the {{htmlattrxref("type", "object")}} HTML attribute, specifying the MIME type
+of the resource.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var String = HTMLObjectElement.type
-HTMLObjectElement.type = String;</pre>
+```js
+var String = HTMLObjectElement.type
+HTMLObjectElement.type = String;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref('DOMString')}}.</p>
+A {{domxref('DOMString')}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

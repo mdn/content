@@ -9,29 +9,31 @@ tags:
   - TextDecoderStream
 browser-compat: api.TextDecoderStream.encoding
 ---
-<p>{{APIRef("Encoding API")}}</p>
+{{APIRef("Encoding API")}}
 
-<p>The <strong><code>encoding</code></strong> read-only property of the {{domxref("TextDecoderStream")}} interface returns a {{DOMxRef("DOMString")}} containing the name of the encoding algorithm used by the specific encoder.</p>
+The **`encoding`** read-only property of the {{domxref("TextDecoderStream")}} interface returns a {{DOMxRef("DOMString")}} containing the name of the encoding algorithm used by the specific encoder.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <var>encoding</var> = <var>TextDecoderStream</var>.encoding;</pre>
+    var encoding = TextDecoderStream.encoding;
 
-<h3>Value</h3>
-<p>A {{DOMxRef("DOMString")}}, ASCII lowercased.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{DOMxRef("DOMString")}}, ASCII lowercased.
 
-<p>Returning the value of <code>encoding</code> from a <code>TextDecoderStream</code>.</p>
+## Examples
 
-<pre class="brush:js">stream = new TextDecoderStream();
-console.log(stream.encoding); // returns the default "utf-8"</pre>
+Returning the value of `encoding` from a `TextDecoderStream`.
 
-<h2 id="Specifications">Specifications</h2>
+```js
+stream = new TextDecoderStream();
+console.log(stream.encoding); // returns the default "utf-8"
+```
+
+## Specifications
 
 {{Specifications}}
 
+## Browser compatibility
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<p>{{Compat}}</p>
+{{Compat}}

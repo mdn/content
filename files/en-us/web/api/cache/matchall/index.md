@@ -12,83 +12,79 @@ tags:
   - matchAll
 browser-compat: api.Cache.matchAll
 ---
-<p>{{APIRef("Service Workers API")}}</p>
+{{APIRef("Service Workers API")}}
 
-<p>The <strong><code>matchAll()</code></strong> method of the {{domxref("Cache")}}
-  interface returns a {{jsxref("Promise")}} that resolves to an array of all matching
-  responses in the {{domxref("Cache")}} object.</p>
+The **`matchAll()`** method of the {{domxref("Cache")}}
+interface returns a {{jsxref("Promise")}} that resolves to an array of all matching
+responses in the {{domxref("Cache")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>cache</em>.matchAll(<em>request</em>, {<em>options</em>}).then(function(<em>response</em>) {
+```js
+cache.matchAll(request, {options}).then(function(response) {
   // do something with the response array
 });
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>request {{optional_inline}}</dt>
-  <dd>The {{domxref("Request")}} for which you are attempting to find responses in the
-    {{domxref("Cache")}}. This can be a <code>Request</code> object or a URL. If this
-    argument is omitted, you will get a copy of all responses in this cache.</dd>
-  <dt>options {{optional_inline}}</dt>
-  <dd>An options object allowing you to set specific control options for the matching
+- request {{optional_inline}}
+  - : The {{domxref("Request")}} for which you are attempting to find responses in the
+    {{domxref("Cache")}}. This can be a `Request` object or a URL. If this
+    argument is omitted, you will get a copy of all responses in this cache.
+- options {{optional_inline}}
+
+  - : An options object allowing you to set specific control options for the matching
     performed. The available options are:
-    <ul>
-      <li><code>ignoreSearch</code>: A boolean value that specifies whether the
-        matching process should ignore the query string in the url.  If set to
-        <code>true</code>, the <code>?value=bar</code> part of
-        <code>http://foo.com/?value=bar</code> would be ignored when performing a match.
-        It defaults to <code>false</code>.</li>
-      <li><code>ignoreMethod</code>: A boolean value that, when set to
-        <code>true</code>, prevents matching operations from validating the
-        {{domxref("Request")}} <code>http</code> method (normally only <code>GET</code>
-        and <code>HEAD</code> are allowed.) It defaults to <code>false</code>.</li>
-      <li><code>ignoreVary</code>: A boolean value that when set to
-        <code>true</code> tells the matching operation not to perform <code>VARY</code>
-        header matching — i.e. if the URL matches you will get a match regardless of the
-        {{domxref("Response")}} object having a <code>VARY</code> header or not. It
-        defaults to <code>false</code>.</li>
-    </ul>
-  </dd>
-</dl>
 
-<h3 id="Return_value">Return value</h3>
+    - `ignoreSearch`: A boolean value that specifies whether the
+      matching process should ignore the query string in the url.  If set to
+      `true`, the `?value=bar` part of
+      `http://foo.com/?value=bar` would be ignored when performing a match.
+      It defaults to `false`.
+    - `ignoreMethod`: A boolean value that, when set to
+      `true`, prevents matching operations from validating the
+      {{domxref("Request")}} `http` method (normally only `GET`
+      and `HEAD` are allowed.) It defaults to `false`.
+    - `ignoreVary`: A boolean value that when set to
+      `true` tells the matching operation not to perform `VARY`
+      header matching — i.e. if the URL matches you will get a match regardless of the
+      {{domxref("Response")}} object having a `VARY` header or not. It
+      defaults to `false`.
 
-<p>A {{jsxref("Promise")}} that resolves to an array of all matching responses in the
-  {{domxref("Cache")}} object.</p>
+### Return value
 
-<div class="note">
-  <p><strong>Note:</strong> {{domxref("Cache.match()")}} is basically identical to
-    <code>Cache.matchAll()</code>, except that rather than resolving with an array of all
-    matching responses, it resolves with the first matching response only (that is,
-    <code><var>response</var>[0]</code>).</p>
-</div>
+A {{jsxref("Promise")}} that resolves to an array of all matching responses in the
+{{domxref("Cache")}} object.
 
-<h2 id="Examples">Examples</h2>
+> **Note:** {{domxref("Cache.match()")}} is basically identical to
+> `Cache.matchAll()`, except that rather than resolving with an array of all
+> matching responses, it resolves with the first matching response only (that is,
+> `response[0]`).
 
-<pre class="brush: js">caches.open('v1').then(function(cache) {
+## Examples
+
+```js
+caches.open('v1').then(function(cache) {
   cache.matchAll('/images/').then(function(response) {
     response.forEach(function(element, index, array) {
       cache.delete(element);
     });
   });
-})</pre>
+})
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service
-      Workers</a></li>
-  <li>{{domxref("Cache")}}</li>
-  <li>{{domxref("caches")}}</li>
-</ul>
+- [Using Service
+  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- {{domxref("Cache")}}
+- {{domxref("caches")}}

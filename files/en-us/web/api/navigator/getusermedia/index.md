@@ -14,78 +14,78 @@ tags:
   - getusermedia
 browser-compat: api.Navigator.getUserMedia
 ---
-<div>{{APIRef("Media Capture and Streams")}}{{deprecated_header}}</div>
+{{APIRef("Media Capture and Streams")}}{{deprecated_header}}
 
-<p>The deprecated <code><strong>Navigator.getUserMedia()</strong></code> method prompts
-   the user for permission to use up to one video input device (such as a camera or shared
-   screen) and up to one audio input device (such as a microphone) as the source for a
-   {{domxref("MediaStream")}}.</p>
+The deprecated **`Navigator.getUserMedia()`** method prompts
+the user for permission to use up to one video input device (such as a camera or shared
+screen) and up to one audio input device (such as a microphone) as the source for a
+{{domxref("MediaStream")}}.
 
-<p>If permission is granted, a <code>MediaStream</code> whose video and/or audio tracks
-   come from those devices is delivered to the specified success callback. If permission
-   is denied, no compatible input devices exist, or any other error condition occurs, the
-   error callback is executed with a {{domxref("MediaStreamError")}} object describing
-   what went wrong. If the user instead doesn't make a choice at all, neither callback is
-   executed.</p>
+If permission is granted, a `MediaStream` whose video and/or audio tracks
+come from those devices is delivered to the specified success callback. If permission
+is denied, no compatible input devices exist, or any other error condition occurs, the
+error callback is executed with a {{domxref("MediaStreamError")}} object describing
+what went wrong. If the user instead doesn't make a choice at all, neither callback is
+executed.
 
-<div class="note">
-   <p><strong>Note:</strong> This is a legacy method. Please use the newer {{domxref("MediaDevices.getUserMedia",
+> **Note:** This is a legacy method. Please use the newer {{domxref("MediaDevices.getUserMedia",
       "navigator.mediaDevices.getUserMedia()")}} instead. While technically not
-      deprecated, this old callback version is marked as such, since the specification
-      strongly encourages using the newer promise returning version.</p>
-</div>
+> deprecated, this old callback version is marked as such, since the specification
+> strongly encourages using the newer promise returning version.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-   class="brush: js">navigator.getUserMedia(<var>constraints</var>, <var>successCallback</var>, <var>errorCallback</var>);</pre>
+```js
+navigator.getUserMedia(constraints, successCallback, errorCallback);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-   <dt><code><var>constraints</var></code></dt>
-   <dd>A {{domxref("MediaStreamConstraints")}} object specifying the types of media to
-      request, along with any requirements for each type. For details, see the <a
-         href="/en-US/docs/Web/API/MediaDevices/getUserMedia#parameters">constraints</a>
-      section under the modern {{domxref("MediaDevices.getUserMedia()")}} method, as well
-      as the article <a
-         href="/en-US/docs/Web/API/Media_Streams_API/Constraints">Capabilities,
-         constraints, and settings</a>.</dd>
-   <dt><code><var>successCallback</var></code></dt>
-   <dd>A function which is invoked when the request for media access is approved. The
-      function is called with one parameter: the {{domxref("MediaStream")}} object that
-      contains the media stream. Your callback can then assign the stream to the desired
-      object (such as an {{HTMLElement("audio")}} or {{HTMLElement("video")}} element), as
-      shown in the following example:
-      <pre class="brush: js">function(stream) {
-   var video = document.querySelector('video');
-   video.srcObject = stream;
-   video.onloadedmetadata = function(e) {
-      // Do something with the video here.
-   };
-}</pre>
-   </dd>
-   <dt><code><var>errorCallback</var></code></dt>
-   <dd>When the call fails, the function specified in the <code>errorCallback</code> is
-      invokedwith a {{domxref("MediaStreamError")}} object as its sole argument; this
-      object is modeled on {{domxref("DOMException")}}. See {{anch("Errors")}} below for a
-      list of the errors which can occur.</dd>
-</dl>
+- `constraints`
+  - : A {{domxref("MediaStreamConstraints")}} object specifying the types of media to
+    request, along with any requirements for each type. For details, see the [constraints](/en-US/docs/Web/API/MediaDevices/getUserMedia#parameters)
+    section under the modern {{domxref("MediaDevices.getUserMedia()")}} method, as well
+    as the article [Capabilities,
+    constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints).
+- `successCallback`
 
-<h3 id="Return_value">Return value</h3>
+  - : A function which is invoked when the request for media access is approved. The
+    function is called with one parameter: the {{domxref("MediaStream")}} object that
+    contains the media stream. Your callback can then assign the stream to the desired
+    object (such as an {{HTMLElement("audio")}} or {{HTMLElement("video")}} element), as
+    shown in the following example:
 
-<p>{{domxref("undefined")}}.</p>
+    ```js
+    function(stream) {
+       var video = document.querySelector('video');
+       video.srcObject = stream;
+       video.onloadedmetadata = function(e) {
+          // Do something with the video here.
+       };
+    }
+    ```
 
-<h2 id="Examples">Examples</h2>
+- `errorCallback`
+  - : When the call fails, the function specified in the `errorCallback` is
+    invokedwith a {{domxref("MediaStreamError")}} object as its sole argument; this
+    object is modeled on {{domxref("DOMException")}}. See {{anch("Errors")}} below for a
+    list of the errors which can occur.
 
-<h3 id="Width_and_height">Width and height</h3>
+### Return value
 
-<p>Here's an example of using <code>getUserMedia()</code>, including code to cope with
-   various browsers' prefixes. Note that this is the deprecated way of doing it: See the
-   <a href="/en-US/docs/Web/API/MediaDevices/getUserMedia#frame_rate">Examples</a> section
-   under the {{domxref("MediaDevices.getUserMedia()")}} for modern examples.</p>
+{{domxref("undefined")}}.
 
-<pre class="brush: js">navigator.getUserMedia = navigator.getUserMedia ||
+## Examples
+
+### Width and height
+
+Here's an example of using `getUserMedia()`, including code to cope with
+various browsers' prefixes. Note that this is the deprecated way of doing it: See the
+[Examples](/en-US/docs/Web/API/MediaDevices/getUserMedia#frame_rate) section
+under the {{domxref("MediaDevices.getUserMedia()")}} for modern examples.
+
+```js
+navigator.getUserMedia = navigator.getUserMedia ||
                          navigator.webkitGetUserMedia ||
                          navigator.mozGetUserMedia;
 
@@ -105,47 +105,40 @@ if (navigator.getUserMedia) {
 } else {
    console.log("getUserMedia not supported");
 }
-</pre>
+```
 
-<h2 id="Permissions">Permissions</h2>
+## Permissions
 
-<p>To use <code>getUserMedia()</code> in an installable app (for example, a <a
-      href="/en-US/docs/Web/Apps/Build/Building_apps_for_Firefox_OS/Firefox_OS_app_beginners_tutorial">Firefox
-      OS app</a>), you need to specify one or both of the following fields inside your
-   manifest file:</p>
+To use `getUserMedia()` in an installable app (for example, a [Firefox
+OS app](/en-US/docs/Web/Apps/Build/Building_apps_for_Firefox_OS/Firefox_OS_app_beginners_tutorial)), you need to specify one or both of the following fields inside your
+manifest file:
 
-<pre class="brush: js">"permissions": {
+```js
+"permissions": {
   "audio-capture": {
     "description": "Required to capture audio using getUserMedia()"
   },
   "video-capture": {
     "description": "Required to capture video using getUserMedia()"
   }
-}</pre>
+}
+```
 
-<p>See <a href="/en-US/docs/Web/Apps/Developing/App_permissions#audio-capture">permission:
-      audio-capture</a> and <a
-      href="/en-US/docs/Web/Apps/Developing/App_permissions#video-capture">permission:
-      video-capture</a> for more information.</p>
+See [permission:
+audio-capture](/en-US/docs/Web/Apps/Developing/App_permissions#audio-capture) and [permission:
+video-capture](/en-US/docs/Web/Apps/Developing/App_permissions#video-capture) for more information.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div class="warning">
-   <p><strong>Warning:</strong> New code should use {{domxref("MediaDevices.getUserMedia")}} instead.
-   </p>
-</div>
+> **Warning:** New code should use {{domxref("MediaDevices.getUserMedia")}} instead.
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-   <li>{{domxref("MediaDevices.getUserMedia()")}} that replaces this deprecated method.
-   </li>
-   <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> - the introductory page to the API</li>
-   <li><a href="/en-US/docs/Web/API/Media_Streams_API">MediaStream API</a> - the API for the
-      media stream objects</li>
-   <li><a href="/en-US/docs/Web/API/WebRTC_API/Taking_still_photos">Taking webcam photos</a> - a
-      tutorial on using <code>getUserMedia() for taking photos rather than video.</code>
-   </li>
-</ul>
+- {{domxref("MediaDevices.getUserMedia()")}} that replaces this deprecated method.
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API) - the introductory page to the API
+- [MediaStream API](/en-US/docs/Web/API/Media_Streams_API) - the API for the
+  media stream objects
+- [Taking webcam photos](/en-US/docs/Web/API/WebRTC_API/Taking_still_photos) - a
+  tutorial on using `getUserMedia() for taking photos rather than video.`

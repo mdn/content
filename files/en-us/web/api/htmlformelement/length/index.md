@@ -11,52 +11,50 @@ tags:
   - Reference
 browser-compat: api.HTMLFormElement.length
 ---
-<div>
-  <div>{{APIRef("HTML DOM")}}</div>
-</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <code><strong>HTMLFormElement.length</strong></code>
-    read-only property returns the number of controls in the {{HTMLElement("form")}}
-    element.</p>
+The **`HTMLFormElement.length`**
+read-only property returns the number of controls in the {{HTMLElement("form")}}
+element.
 
-<p>You can access the list of the form's controls using the
-  {{domxref("HTMLFormElement.elements", "elements")}} property.</p>
+You can access the list of the form's controls using the
+{{domxref("HTMLFormElement.elements", "elements")}} property.
 
-<p>This includes both elements that are descendants of the <code>&lt;form&gt;</code>
-  element as well as elements that are made members of the form using their
-  <code>form</code> property.</p>
+This includes both elements that are descendants of the `<form>`
+element as well as elements that are made members of the form using their
+`form` property.
 
-<p>
-  Elements that are considered for this property are: {{HTMLElement("button")}},
-  {{HTMLElement("fieldset")}}, {{HTMLElement("input")}} (with the exception
-  that any whose type is "image" are omitted for historical reasons),
-  {{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}},
-  and {{HTMLElement("textarea")}}.
-</p>
+Elements that are considered for this property are: {{HTMLElement("button")}},
+{{HTMLElement("fieldset")}}, {{HTMLElement("input")}} (with the exception
+that any whose type is "image" are omitted for historical reasons),
+{{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}},
+and {{HTMLElement("textarea")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>numControls</var> = <em>form</em>.length;
-</pre>
+```js
+numControls = form.length;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p><code>numControls</code> is the number of form controls within the
-  <code>&lt;form&gt;</code>. This is the same as the number of the elements in the
-  {{domxref("HTMLFormControlsCollection")}} returned by the
-  {{domxref("HTMLFormElement.elements", "elements")}} property.</p>
+`numControls` is the number of form controls within the
+`<form>`. This is the same as the number of the elements in the
+{{domxref("HTMLFormControlsCollection")}} returned by the
+{{domxref("HTMLFormElement.elements", "elements")}} property.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">if (document.getElementById('form1').length &gt; 1) {
+```js
+if (document.getElementById('form1').length > 1) {
   // more than one form control here
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

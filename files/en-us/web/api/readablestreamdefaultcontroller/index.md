@@ -10,43 +10,40 @@ tags:
   - Streams
 browser-compat: api.ReadableStreamDefaultController
 ---
-<p>{{APIRef("Streams")}}</p>
+{{APIRef("Streams")}}
 
-<p>The <strong><code>ReadableStreamDefaultController</code></strong> interface of the <a href="/en-US/docs/Web/API/Streams_API">Streams API</a> represents a controller allowing control of a {{domxref("ReadableStream")}}'s state and internal queue. Default controllers are for streams that are not byte streams. </p>
+The **`ReadableStreamDefaultController`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a controller allowing control of a {{domxref("ReadableStream")}}'s state and internal queue. Default controllers are for streams that are not byte streams.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<p>None. <code>ReadableStreamDefaultController</code> instances are created automatically during <code>ReadableStream</code> construction.</p>
+None. `ReadableStreamDefaultController` instances are created automatically during `ReadableStream` construction.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("ReadableStreamDefaultController.desiredSize")}} {{readonlyInline}}</dt>
- <dd>Returns the desired size required to fill the stream's internal queue.</dd>
-</dl>
+- {{domxref("ReadableStreamDefaultController.desiredSize")}} {{readonlyInline}}
+  - : Returns the desired size required to fill the stream's internal queue.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("ReadableStreamDefaultController.close()")}}</dt>
- <dd>Closes the associated stream.</dd>
- <dt>{{domxref("ReadableStreamDefaultController.enqueue()")}}</dt>
- <dd>Enqueues a given chunk in the associated stream.</dd>
- <dt>{{domxref("ReadableStreamDefaultController.error()")}}</dt>
- <dd>Causes any future interactions with the associated stream to error.</dd>
-</dl>
+- {{domxref("ReadableStreamDefaultController.close()")}}
+  - : Closes the associated stream.
+- {{domxref("ReadableStreamDefaultController.enqueue()")}}
+  - : Enqueues a given chunk in the associated stream.
+- {{domxref("ReadableStreamDefaultController.error()")}}
+  - : Causes any future interactions with the associated stream to error.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the following simple example, a custom <code>ReadableStream</code> is created using a constructor (see our <a href="https://mdn.github.io/dom-examples/streams/simple-random-stream/">Simple random stream example</a> for the full code). The <code>start()</code> function generates a random string of text every second and enqueues it into the stream. A <code>cancel()</code> function is also provided to stop the generation if {{domxref("ReadableStream.cancel()")}} is called for any reason.</p>
+In the following simple example, a custom `ReadableStream` is created using a constructor (see our [Simple random stream example](https://mdn.github.io/dom-examples/streams/simple-random-stream/) for the full code). The `start()` function generates a random string of text every second and enqueues it into the stream. A `cancel()` function is also provided to stop the generation if {{domxref("ReadableStream.cancel()")}} is called for any reason.
 
-<p>Note that a {{domxref("ReadableStreamDefaultController")}} object is provided as the parameter of the <code>start()</code> and <code>pull()</code> functions.</p>
+Note that a {{domxref("ReadableStreamDefaultController")}} object is provided as the parameter of the `start()` and `pull()` functions.
 
-<p>When a button is pressed, the generation is stopped, the stream is closed using {{domxref("ReadableStreamDefaultController.close()")}}, and another function is run, which reads the data back out of the stream.</p>
+When a button is pressed, the generation is stopped, the stream is closed using {{domxref("ReadableStreamDefaultController.close()")}}, and another function is run, which reads the data back out of the stream.
 
-<pre class="brush: js">const stream = new ReadableStream({
+```js
+const stream = new ReadableStream({
   start(controller) {
-    interval = setInterval(() =&gt; {
+    interval = setInterval(() => {
       let string = randomChars();
 
       // Add the string to the stream
@@ -72,12 +69,13 @@ browser-compat: api.ReadableStreamDefaultController
     // so we should stop generating strings
     clearInterval(interval);
   }
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -10,43 +10,38 @@ tags:
   - delayTime
 browser-compat: api.DelayNode.delayTime
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>The <code>delayTime</code> property of the {{ domxref("DelayNode") }} interface is an <a href="/en-US/docs/Web/API/AudioParam#a-rate">a-rate</a> {{domxref("AudioParam")}} representing the amount of delay to apply.</p>
+The `delayTime` property of the {{ domxref("DelayNode") }} interface is an [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} representing the amount of delay to apply.
 
-<p><code>delayTime</code> is expressed in seconds, its minimal value is <code>0</code>, and its maximum value is defined by the <code>maxDelayTime</code> argument of the {{domxref("BaseAudioContext.createDelay")}} method that created it.</p>
-</div>
+`delayTime` is expressed in seconds, its minimal value is `0`, and its maximum value is defined by the `maxDelayTime` argument of the {{domxref("BaseAudioContext.createDelay")}} method that created it.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var audioCtx = new AudioContext();
+```js
+var audioCtx = new AudioContext();
 var myDelay = audioCtx.createDelay(5.0);
 myDelay.delayTime.value = 3.0;
-</pre>
+```
 
-<div class="note">
-<p><strong>Note:</strong> Though the {{domxref("AudioParam")}} returned is read-only, the value it represents is not.</p>
-</div>
+> **Note:** Though the {{domxref("AudioParam")}} returned is read-only, the value it represents is not.
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("AudioParam")}}.</p>
+An {{domxref("AudioParam")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See <a href="/en-US/docs/Web/API/BaseAudioContext/createDelay#example"><code>BaseAudioContext.createDelay()</code></a> for example code.</p>
+See [`BaseAudioContext.createDelay()`](/en-US/docs/Web/API/BaseAudioContext/createDelay#example) for example code.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

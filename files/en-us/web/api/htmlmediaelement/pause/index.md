@@ -2,40 +2,41 @@
 title: HTMLMediaElement.pause()
 slug: Web/API/HTMLMediaElement/pause
 tags:
-- API
-- Audio
-- HTMLMediaElement
-- Method
-- Reference
-- Video
+  - API
+  - Audio
+  - HTMLMediaElement
+  - Method
+  - Reference
+  - Video
 browser-compat: api.HTMLMediaElement.pause
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLMediaElement.pause()</code></strong> method will pause playback
-  of the media, if the media is already in a paused state this method will have no effect.
-</p>
+The **`HTMLMediaElement.pause()`** method will pause playback
+of the media, if the media is already in a paused state this method will have no effect.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>HTMLMediaElement</em>.pause()</pre>
+```js
+HTMLMediaElement.pause()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>None.</p>
+None.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

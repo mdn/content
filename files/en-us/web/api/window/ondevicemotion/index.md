@@ -2,43 +2,41 @@
 title: Window.ondevicemotion
 slug: Web/API/Window/ondevicemotion
 tags:
-- API
-- Device Orientation
-- Event Handler
-- Mobile
-- Motion
-- Orientation
-- Property
-- Reference
+  - API
+  - Device Orientation
+  - Event Handler
+  - Mobile
+  - Motion
+  - Orientation
+  - Property
+  - Reference
 browser-compat: api.Window.ondevicemotion
 ---
-<div>{{APIRef("Device Orientation Events")}}</div>
+{{APIRef("Device Orientation Events")}}
 
-<p>An event handler for the {{domxref("Window/devicemotion_event", "devicemotion")}}
-  events sent to the window.</p>
+An event handler for the {{domxref("Window/devicemotion_event", "devicemotion")}}
+events sent to the window.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">window.ondevicemotion = <var>funcRef</var>;</pre>
+```js
+window.ondevicemotion = funcRef;
+```
 
-<p>Where <code>funcRef</code> is a reference to a function. This function receives a
-  {{DOMxRef("DeviceMotionEvent")}} object describing the motion that occurred.</p>
+Where `funcRef` is a reference to a function. This function receives a
+{{DOMxRef("DeviceMotionEvent")}} object describing the motion that occurred.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
+## Browser compatibility
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+{{Compat}}
 
-<p>{{Compat}}</p>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
-  <li>{{domxref("Window/devicemotion_event", "devicemotion")}}</li>
-  <li>{{DOMxRef("DeviceMotionEvent")}}</li>
-  <li><a href="/en-US/docs/Web/API/Detecting_device_orientation">Detecting device
-      orientation</a></li>
-</ul>
+- {{domxref("Window/devicemotion_event", "devicemotion")}}
+- {{DOMxRef("DeviceMotionEvent")}}
+- [Detecting device
+  orientation](/en-US/docs/Web/API/Detecting_device_orientation)

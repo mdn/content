@@ -12,49 +12,47 @@ tags:
   - Sensors
 browser-compat: api.Magnetometer
 ---
-<div>{{APIRef("Sensor API")}}</div>
+{{APIRef("Sensor API")}}
 
-<p>The <strong><code>Magnetometer</code></strong> interface of the <a href="/en-US/docs/Web/API/Sensor_APIs">Sensor APIs</a> provides information about the magnetic field as detected by the device's primary magnetometer sensor.</p>
+The **`Magnetometer`** interface of the [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs) provides information about the magnetic field as detected by the device's primary magnetometer sensor.
 
-<p>To use this sensor, the user must grant permission to the <code>'magnetometer'</code> device sensor through the <a href="/en-US/docs/Web/API/Permissions_API">Permissions API</a>.</p>
+To use this sensor, the user must grant permission to the `'magnetometer'` device sensor through the [Permissions API](/en-US/docs/Web/API/Permissions_API).
 
-<p>If a feature policy blocks use of a feature, it's because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.</p>
+If a feature policy blocks use of a feature, it's because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("Magnetometer.Magnetometer", "Magnetometer()")}}</dt>
- <dd>Creates a new <code>Magnetometer</code> object.</dd>
-</dl>
+- {{domxref("Magnetometer.Magnetometer", "Magnetometer()")}}
+  - : Creates a new `Magnetometer` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref('Magnetometer.x')}} {{readonlyinline}}</dt>
- <dd>Returns a double containing the magnetic field around the device's x axis.</dd>
- <dt>{{domxref('Magnetometer.y')}} {{readonlyinline}}</dt>
- <dd>Returns a double containing the magnetic field around the device's y axis.</dd>
- <dt>{{domxref('Magnetometer.z')}} {{readonlyinline}}</dt>
- <dd>Returns a double containing the magnetic field around the device's z axis.</dd>
-</dl>
+- {{domxref('Magnetometer.x')}} {{readonlyinline}}
+  - : Returns a double containing the magnetic field around the device's x axis.
+- {{domxref('Magnetometer.y')}} {{readonlyinline}}
+  - : Returns a double containing the magnetic field around the device's y axis.
+- {{domxref('Magnetometer.z')}} {{readonlyinline}}
+  - : Returns a double containing the magnetic field around the device's z axis.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The magnetometer is typically read in the {{domxref('Sensor.onreading')}} event callback. In the example below this occurs sixty times a second.</p>
+The magnetometer is typically read in the {{domxref('Sensor.onreading')}} event callback. In the example below this occurs sixty times a second.
 
-<pre class="brush: js">let magSensor = new Magnetometer({frequency: 60});
+```js
+let magSensor = new Magnetometer({frequency: 60});
 
-magSensor.addEventListener('reading', e =&gt; {
+magSensor.addEventListener('reading', e => {
   console.log("Magnetic field along the X-axis " + magSensor.x);
   console.log("Magnetic field along the Y-axis " + magSensor.y);
   console.log("Magnetic field along the Z-axis " + magSensor.z);
 });
-magSensor.start();</pre>
+magSensor.start();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

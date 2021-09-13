@@ -2,39 +2,41 @@
 title: Report.body
 slug: Web/API/Report/body
 tags:
-- API
-- BODY
-- Experimental
-- Property
-- Reference
-- Report
-- Reporting API
+  - API
+  - BODY
+  - Experimental
+  - Property
+  - Reference
+  - Report
+  - Reporting API
 browser-compat: api.Report.body
 ---
-<div>{{APIRef("Reporting API")}}{{SeeCompatTable}}</div>
+{{APIRef("Reporting API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>body</code></strong> read-only property of the {{domxref("Report")}}
-  interface returns the body of the report, which is a <code>ReportBody</code> object
-  containing the detailed report information.</p>
+The **`body`** read-only property of the {{domxref("Report")}}
+interface returns the body of the report, which is a `ReportBody` object
+containing the detailed report information.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let reportBody = reportInstance.body
-</pre>
+```js
+let reportBody = reportInstance.body
+```
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A <code>ReportBody</code> object containing the detailed report information. Depending
-  on what <code>type</code> the {{domxref("Report")}} is, the object returned will
-  actually be a
-  {{domxref("DeprecationReportBody")}}, {{domxref("InterventionReportBody")}},
-  {{domxref("CrashReportBody")}}, or {{domxref("FeaturePolicyViolationReportBody")}}.
-  These all inherit from the base <code>ReportBody</code> class — study their reference
-  pages for more information on what the particular report body types contain.</p>
+A `ReportBody` object containing the detailed report information. Depending
+on what `type` the {{domxref("Report")}} is, the object returned will
+actually be a
+{{domxref("DeprecationReportBody")}}, {{domxref("InterventionReportBody")}},
+{{domxref("CrashReportBody")}}, or {{domxref("FeaturePolicyViolationReportBody")}}.
+These all inherit from the base `ReportBody` class — study their reference
+pages for more information on what the particular report body types contain.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">let options = {
+```js
+let options = {
   types: ['deprecation'],
   buffered: true
 }
@@ -44,18 +46,16 @@ let observer = new ReportingObserver(function(reports, observer) {
   // Log the first report's report body, i.e. a DeprecationReportBody object
   console.log(firstReport.body);
 }, options);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Reporting_API">Reporting API</a></li>
-</ul>
+- [Reporting API](/en-US/docs/Web/API/Reporting_API)

@@ -11,25 +11,28 @@ tags:
   - ports
 browser-compat: api.MessageEvent.ports
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <code><strong>ports</strong></code> read-only property of the
-  {{domxref("MessageEvent")}} interface is an array of {{domxref("MessagePort")}} objects
-  representing the ports associated with the channel the message is being sent through
-  (where appropriate, e.g. in channel messaging or when sending a message to a shared
-  worker).</p>
+The **`ports`** read-only property of the
+{{domxref("MessageEvent")}} interface is an array of {{domxref("MessagePort")}} objects
+representing the ports associated with the channel the message is being sent through
+(where appropriate, e.g. in channel messaging or when sending a message to a shared
+worker).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var myPorts = messageEvent.ports;</pre>
+```js
+var myPorts = messageEvent.ports;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An array of {{domxref("MessagePort")}} objects.</p>
+An array of {{domxref("MessagePort")}} objects.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js ">onconnect = function(e) {
+```js
+onconnect = function(e) {
   var port = e.ports[0];
 
   port.addEventListener('message', function(e) {
@@ -38,19 +41,18 @@ browser-compat: api.MessageEvent.ports
   });
 
   port.start(); // Required when using addEventListener. Otherwise called implicitly by onmessage setter.
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("ExtendableMessageEvent")}} — similar to this interface but used in
-    interfaces that needs to give more flexibility to authors.</li>
-</ul>
+- {{domxref("ExtendableMessageEvent")}} — similar to this interface but used in
+  interfaces that needs to give more flexibility to authors.

@@ -10,63 +10,57 @@ tags:
   - shadow dom
 browser-compat: api.ShadowRoot
 ---
-<div>{{APIRef('Shadow DOM')}}</div>
+{{APIRef('Shadow DOM')}}
 
-<p>The <code><strong>ShadowRoot</strong></code> interface of the Shadow DOM API is the root node of a DOM subtree that is rendered separately from a document's main DOM tree.</p>
+The **`ShadowRoot`** interface of the Shadow DOM API is the root node of a DOM subtree that is rendered separately from a document's main DOM tree.
 
-<p>You can retrieve a reference to an element's shadow root using its {{domxref("Element.shadowRoot")}} property, provided it was created using {{domxref("Element.attachShadow()")}} with the <code>mode</code> option set to <code>open</code>.</p>
+You can retrieve a reference to an element's shadow root using its {{domxref("Element.shadowRoot")}} property, provided it was created using {{domxref("Element.attachShadow()")}} with the `mode` option set to `open`.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("ShadowRoot.activeElement")}} {{readonlyInline}}</dt>
- <dd>Returns the {{domxref('Element')}} within the shadow tree that has focus.</dd>
- <dt>{{domxref("ShadowRoot.delegatesFocus")}} {{readonlyinline}} {{non-standard_inline}} {{deprecated_inline}}</dt>
- <dd>Returns a boolean that indicates whether delegatesFocus was set when the shadow was attached (see {{domxref("Element.attachShadow()")}}).</dd>
- <dt>{{DOMxRef("ShadowRoot.fullscreenElement")}} {{ReadOnlyInline}}</dt>
- <dd>The element that's currently in full screen mode for this shadow tree.</dd>
- <dt>{{domxref("ShadowRoot.host")}} {{readonlyinline}}</dt>
- <dd>Returns a reference to the DOM element the <code>ShadowRoot</code> is attached to.</dd>
- <dt>{{domxref("ShadowRoot.innerHTML")}} {{non-standard_inline}}</dt>
- <dd>Sets or returns a reference to the DOM tree inside the <code>ShadowRoot</code>.</dd>
- <dt>{{domxref("ShadowRoot.mode")}} {{readonlyinline}}</dt>
- <dd>The mode of the <code>ShadowRoot</code> — either <code>open</code> or <code>closed</code>. This defines whether or not the shadow root's internal features are accessible from JavaScript.</dd>
- <dt>{{DOMxRef("ShadowRoot.pictureInPictureElement")}} {{ReadOnlyInline}}</dt>
- <dd>Returns the {{DOMxRef('Element')}} within the shadow tree that is currently being presented in picture-in-picture mode.</dd>
- <dt>{{DOMxRef("ShadowRoot.pointerLockElement")}} {{ReadOnlyInline}}</dt>
- <dd>Returns the {{DOMxRef('Element')}} set as the target for mouse events while the pointer is locked. <code>null</code> if lock is pending, pointer is unlocked, or if the target is in another tree.</dd>
- <dt>{{domxref("ShadowRoot.styleSheets")}} {{readonlyInline}}</dt>
- <dd>Returns a {{domxref('StyleSheetList')}} of {{domxref('CSSStyleSheet')}} objects for stylesheets explicitly linked into, or embedded in a shadow tree.</dd>
-</dl>
+- {{domxref("ShadowRoot.activeElement")}} {{readonlyInline}}
+  - : Returns the {{domxref('Element')}} within the shadow tree that has focus.
+- {{domxref("ShadowRoot.delegatesFocus")}} {{readonlyinline}} {{non-standard_inline}} {{deprecated_inline}}
+  - : Returns a boolean that indicates whether delegatesFocus was set when the shadow was attached (see {{domxref("Element.attachShadow()")}}).
+- {{DOMxRef("ShadowRoot.fullscreenElement")}} {{ReadOnlyInline}}
+  - : The element that's currently in full screen mode for this shadow tree.
+- {{domxref("ShadowRoot.host")}} {{readonlyinline}}
+  - : Returns a reference to the DOM element the `ShadowRoot` is attached to.
+- {{domxref("ShadowRoot.innerHTML")}} {{non-standard_inline}}
+  - : Sets or returns a reference to the DOM tree inside the `ShadowRoot`.
+- {{domxref("ShadowRoot.mode")}} {{readonlyinline}}
+  - : The mode of the `ShadowRoot` — either `open` or `closed`. This defines whether or not the shadow root's internal features are accessible from JavaScript.
+- {{DOMxRef("ShadowRoot.pictureInPictureElement")}} {{ReadOnlyInline}}
+  - : Returns the {{DOMxRef('Element')}} within the shadow tree that is currently being presented in picture-in-picture mode.
+- {{DOMxRef("ShadowRoot.pointerLockElement")}} {{ReadOnlyInline}}
+  - : Returns the {{DOMxRef('Element')}} set as the target for mouse events while the pointer is locked. `null` if lock is pending, pointer is unlocked, or if the target is in another tree.
+- {{domxref("ShadowRoot.styleSheets")}} {{readonlyInline}}
+  - : Returns a {{domxref('StyleSheetList')}} of {{domxref('CSSStyleSheet')}} objects for stylesheets explicitly linked into, or embedded in a shadow tree.
 
-<h3 id="event_handlers">Event handlers</h3>
+### Event handlers
 
-<dl>
- <dt>{{domxref("ShadowRoot.onslotchange")}}</dt>
- <dd>An <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> representing the code to be called when the {{event("slotchange")}} event is raised.</dd>
-</dl>
+- {{domxref("ShadowRoot.onslotchange")}}
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("slotchange")}} event is raised.
 
+## Methods
 
-<h2 id="Methods">Methods</h2>
+- {{DOMxRef("ShadowRoot.getAnimations()")}}
+  - : Returns an array of all {{DOMxRef("Animation")}} objects currently in effect, whose target elements are descendants of the shadow tree.
+- {{domxref("ShadowRoot.getSelection()")}}
+  - : Returns a {{domxref('Selection')}} object representing the range of text selected by the user, or the current position of the caret.
+- {{domxref("ShadowRoot.elementFromPoint()")}}
+  - : Returns the topmost element at the specified coordinates.
+- {{domxref("ShadowRoot.elementsFromPoint()")}}
+  - : Returns an array of all elements at the specified coordinates.
 
-<dl>
- <dt>{{DOMxRef("ShadowRoot.getAnimations()")}}</dt>
- <dd>Returns an array of all {{DOMxRef("Animation")}} objects currently in effect, whose target elements are descendants of the shadow tree.</dd>
- <dt>{{domxref("ShadowRoot.getSelection()")}}</dt>
- <dd>Returns a {{domxref('Selection')}} object representing the range of text selected by the user, or the current position of the caret.</dd>
- <dt>{{domxref("ShadowRoot.elementFromPoint()")}}</dt>
- <dd>Returns the topmost element at the specified coordinates.</dd>
- <dt>{{domxref("ShadowRoot.elementsFromPoint()")}}</dt>
- <dd>Returns an array of all elements at the specified coordinates.</dd>
-</dl>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+The following snippets are taken from our [life-cycle-callbacks](https://github.com/mdn/web-components-examples/tree/master/life-cycle-callbacks) example ([see it live also](https://mdn.github.io/web-components-examples/life-cycle-callbacks)), which creates an element that displays a square of a size and color specified in the element's attributes.
 
-<p>The following snippets are taken from our <a href="https://github.com/mdn/web-components-examples/tree/master/life-cycle-callbacks">life-cycle-callbacks</a> example (<a href="https://mdn.github.io/web-components-examples/life-cycle-callbacks">see it live also</a>), which creates an element that displays a square of a size and color specified in the element's attributes.</p>
+Inside the `<custom-square>` element's class definition we include some life cycle callbacks that make a call to an external function, `updateStyle()`, which actually applies the size and color to the element. You'll see that we are passing it `this` (the custom element itself) as a parameter.
 
-<p>Inside the <code>&lt;custom-square&gt;</code> element's class definition we include some life cycle callbacks that make a call to an external function, <code>updateStyle()</code>, which actually applies the size and color to the element. You'll see that we are passing it <code>this</code> (the custom element itself) as a parameter.</p>
-
-<pre class="brush: js">connectedCallback() {
+```js
+connectedCallback() {
   console.log('Custom square element added to page.');
   updateStyle(this);
 }
@@ -74,14 +68,16 @@ browser-compat: api.ShadowRoot
 attributeChangedCallback(name, oldValue, newValue) {
   console.log('Custom square element attributes changed.');
   updateStyle(this);
-}</pre>
+}
+```
 
-<p>In the <code>updateStyle()</code> function itself, we get a reference to the shadow DOM using {{domxref("Element.shadowRoot")}}. From here we use standard DOM traversal techniques to find the {{htmlelement("style")}} element inside the shadow DOM and then update the CSS found inside it:</p>
+In the `updateStyle()` function itself, we get a reference to the shadow DOM using {{domxref("Element.shadowRoot")}}. From here we use standard DOM traversal techniques to find the {{htmlelement("style")}} element inside the shadow DOM and then update the CSS found inside it:
 
-<pre class="brush: js">function updateStyle(elem) {
+```js
+function updateStyle(elem) {
   var shadow = elem.shadowRoot;
   var childNodes = shadow.childNodes;
-  for(var i = 0; i &lt; childNodes.length; i++) {
+  for(var i = 0; i < childNodes.length; i++) {
     if(childNodes[i].nodeName === 'STYLE') {
       childNodes[i].textContent =
         'div {' +
@@ -91,12 +87,13 @@ attributeChangedCallback(name, oldValue, newValue) {
         '}';
     }
   }
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

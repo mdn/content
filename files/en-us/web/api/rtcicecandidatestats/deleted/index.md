@@ -2,72 +2,71 @@
 title: RTCIceCandidateStats.deleted
 slug: Web/API/RTCIceCandidateStats/deleted
 tags:
-- API
-- Candidate
-- Property
-- RTCIceCandidateStats
-- Reference
-- WebRTC
-- WebRTC API
-- deleted
+  - API
+  - Candidate
+  - Property
+  - RTCIceCandidateStats
+  - Reference
+  - WebRTC
+  - WebRTC API
+  - deleted
 browser-compat: api.RTCIceCandidateStats.deleted
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The {{domxref("RTCIceCandidateStats")}} dictionary's
-    <code><strong>deleted</strong></code> property indicates whether or not the candidate
-    has been deleted or released.
-</p>
+The {{domxref("RTCIceCandidateStats")}} dictionary's
+**`deleted`** property indicates whether or not the candidate
+has been deleted or released.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>isDeleted</em> = <em>rtcIceCandidateStats</em>.deleted;</pre>
+```js
+isDeleted = rtcIceCandidateStats.deleted;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A Boolean value indicating whether or not the candidate has been deleted or released.
-  If this value is <code>true</code>, the candidate described by the
-  {{domxref("RTCIceCandidateStats")}} object is no longer under consideration. dThe exact
-  meaning varies depending on the type of candidate:</p>
+A Boolean value indicating whether or not the candidate has been deleted or released.
+If this value is `true`, the candidate described by the
+{{domxref("RTCIceCandidateStats")}} object is no longer under consideration. dThe exact
+meaning varies depending on the type of candidate:
 
-<dl>
-  <dt>Local candidate</dt>
-  <dd>A value of <code>true</code> means the candidate has been deleted as described by
-    {{RFC(5245, "8.3")}}.</dd>
-  <dt>Host candidate</dt>
-  <dd>A value of <code>true</code> indicates that the candidate's network resources have
+- Local candidate
+  - : A value of `true` means the candidate has been deleted as described by
+    {{RFC(5245, "8.3")}}.
+- Host candidate
+  - : A value of `true` indicates that the candidate's network resources have
     been released. This generally mean sthat any associated socket(s) have been closed and
-    released.</dd>
-  <dt>Remote (TURN) candidate</dt>
-  <dd>A value of <code>true</code> means the candidate's {{Glossary("TURN")}} allocation
-    is no longer active.</dd>
-</dl>
+    released.
+- Remote (TURN) candidate
+  - : A value of `true` means the candidate's {{Glossary("TURN")}} allocation
+    is no longer active.
 
-<p>The net result is the same; the candidate is no longer under consideration if this
-  value is <code>true</code>.</p>
+The net result is the same; the candidate is no longer under consideration if this
+value is `true`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this example, {{domxref("setInterval()")}}
-  is used to set up a function that runs periodically to display the latest statistics for
-  candidates. Only candidates which have not been deleted are included in the output.</p>
+In this example, {{domxref("setInterval()")}}
+is used to set up a function that runs periodically to display the latest statistics for
+candidates. Only candidates which have not been deleted are included in the output.
 
-<pre class="brush: js">window.setInterval(function() {
-  myPeerConnection.getStats(null).then(stats =&gt; {
+```js
+window.setInterval(function() {
+  myPeerConnection.getStats(null).then(stats => {
     let statsOutput = "";
 
-    stats.forEach(report =&gt; {
-      if ((stats.type === "local-candidate" || stats.type === "remote.candidate") &amp;&amp; !stats.deleted) {
-        statsOutput += `&lt;h2&gt;Report: ${report.type}&lt;/h3&gt;\n&lt;strong&gt;ID:&lt;/strong&gt; ${report.id}&lt;br&gt;\n` +
-                       `&lt;strong&gt;Timestamp:&lt;/strong&gt; ${report.timestamp}&lt;br&gt;\n`;
+    stats.forEach(report => {
+      if ((stats.type === "local-candidate" || stats.type === "remote.candidate") && !stats.deleted) {
+        statsOutput += `<h2>Report: ${report.type}</h3>\n<strong>ID:</strong> ${report.id}<br>\n` +
+                       `<strong>Timestamp:</strong> ${report.timestamp}<br>\n`;
 
         // Now the statistics for this report; we intentially drop the ones we
         // sorted to the top above
 
-        Object.keys(report).forEach(statName =&gt; {
-          if (statName !== "id" &amp;&amp; statName !== "timestamp" &amp;&amp; statName !== "type") {
-            statsOutput += `&lt;strong&gt;${statName}:&lt;/strong&gt; ${report[statName]}&lt;br&gt;\n`;
+        Object.keys(report).forEach(statName => {
+          if (statName !== "id" && statName !== "timestamp" && statName !== "type") {
+            statsOutput += `<strong>${statName}:</strong> ${report[statName]}<br>\n`;
           }
         });
       }
@@ -75,12 +74,13 @@ browser-compat: api.RTCIceCandidateStats.deleted
 
     document.querySelector(".stats-box").innerHTML = statsOutput;
   });
-}, 1000);</pre>
+}, 1000);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

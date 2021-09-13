@@ -10,46 +10,48 @@ tags:
   - Response
 browser-compat: api.Response.json
 ---
-<div>{{APIRef("Fetch API")}}</div>
+{{APIRef("Fetch API")}}
 
-<p>The <strong><code>json()</code></strong> method of the {{DOMxRef("Response")}} interface takes
-  a {{DOMxRef("Response")}} stream and reads it to completion. It returns a promise which
-  resolves with the result of parsing the body text as {{JSxRef("JSON")}}.</p>
+The **`json()`** method of the {{DOMxRef("Response")}} interface takes
+a {{DOMxRef("Response")}} stream and reads it to completion. It returns a promise which
+resolves with the result of parsing the body text as {{JSxRef("JSON")}}.
 
-<p>Note that despite the method being named <code>json()</code>, the result is not JSON but is instead the result of taking JSON as input and parsing it to produce a JavaScript object.</p>
+Note that despite the method being named `json()`, the result is not JSON but is instead the result of taking JSON as input and parsing it to produce a JavaScript object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>response</em>.json().then(<em>data</em> =&gt; {
+```js
+response.json().then(data => {
   // do something with your data
-});</pre>
+});
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} that resolves to a JavaScript object. This object could be
-  anything that can be represented by JSON — an object, an array, a string, a number...
-</p>
+A {{jsxref("Promise")}} that resolves to a JavaScript object. This object could be
+anything that can be represented by JSON — an object, an array, a string, a number...
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In our <a href="https://github.com/mdn/fetch-examples/tree/master/fetch-json">fetch
-    json example</a> (run <a href="https://mdn.github.io/fetch-examples/fetch-json/">fetch
-    json live</a>), we create a new request using the {{DOMxRef("Request.Request",
-  "Request()")}} constructor, then use it to fetch a <code>.json</code> file. When the
-  fetch is successful, we read and parse the data using <code>json()</code>, then read
-  values out of the resulting objects as you'd expect and insert them into list items to
-  display our product data.</p>
+In our [fetch
+json example](https://github.com/mdn/fetch-examples/tree/master/fetch-json) (run [fetch
+json live](https://mdn.github.io/fetch-examples/fetch-json/)), we create a new request using the {{DOMxRef("Request.Request",
+  "Request()")}} constructor, then use it to fetch a `.json` file. When the
+fetch is successful, we read and parse the data using `json()`, then read
+values out of the resulting objects as you'd expect and insert them into list items to
+display our product data.
 
-<pre class="brush: js">const myList = document.querySelector('ul');
+```js
+const myList = document.querySelector('ul');
 const myRequest = new Request('products.json');
 
 fetch(myRequest)
-  .then(response =&gt; response.json())
-  .then(data =&gt; {
+  .then(response => response.json())
+  .then(data => {
     for (const product of data.products) {
       let listItem = document.createElement('li');
       listItem.appendChild(
@@ -66,20 +68,19 @@ fetch(myRequest)
       myList.appendChild(listItem);
     }
   })
-  .catch(console.error);</pre>
+  .catch(console.error);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
-  <li><a href="/en-US/docs/Web/HTTP/CORS">Cross-Origin Resource Sharing (CORS)</a></li>
-  <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
+- [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP](/en-US/docs/Web/HTTP)

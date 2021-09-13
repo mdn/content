@@ -2,70 +2,67 @@
 title: HTMLSelectElement.item()
 slug: Web/API/HTMLSelectElement/item
 tags:
-- API
-- HTML DOM
-- HTMLSelectElement
-- Method
-- Reference
+  - API
+  - HTML DOM
+  - HTMLSelectElement
+  - Method
+  - Reference
 browser-compat: api.HTMLSelectElement.item
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p>The <code><strong>HTMLSelectElement.item()</strong></code> method returns the
-  {{domxref("Element")}} corresponding to the {{domxref("HTMLOptionElement")}} whose
-  position in the options list corresponds to the index given in the parameter, or
-  <code>null</code> if there are none.</p>
+The **`HTMLSelectElement.item()`** method returns the
+{{domxref("Element")}} corresponding to the {{domxref("HTMLOptionElement")}} whose
+position in the options list corresponds to the index given in the parameter, or
+`null` if there are none.
 
-<p>In JavaScript, using the array bracket syntax with an <code>unsigned long</code>, like
-  <code><em>selectElt</em>[<em>index</em>]</code> is equivalent to
-  <code><em>selectElt</em></code><code>.namedItem(<em>index</em>)</code>.</p>
+In JavaScript, using the array bracket syntax with an `unsigned long`, like
+`selectElt[index]` is equivalent to
+` selectElt``.namedItem(index) `.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>item</em> = <em>collection</em>.item(<em>index</em>);
-var <em>item </em>=<em> collection</em>[<em>index</em>];
-</pre>
+```js
+var item = collection.item(index);
+var item = collection[index];
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<ul>
-  <li><code>index</code> is an <code>unsigned long</code>.</li>
-</ul>
+- `index` is an `unsigned long`.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<ul>
-  <li><code>item</code> is a {{domxref("HTMLOptionElement")}}.</li>
-</ul>
+- `item` is a {{domxref("HTMLOptionElement")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush:html">&lt;form&gt;
-  &lt;select id="myFormControl"&gt;
-    &lt;option id="o1"&gt;Opt 1&lt;/option&gt;
-    &lt;option id="o2"&gt;Opt 2&lt;/option&gt;
-  &lt;/select&gt;
-&lt;/form&gt;
-</pre>
+```html
+<form>
+  <select id="myFormControl">
+    <option id="o1">Opt 1</option>
+    <option id="o2">Opt 2</option>
+  </select>
+</form>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush:css">// Returns the HTMLOptionElement representing #o2
+```css
+// Returns the HTMLOptionElement representing #o2
 elem1 = document.forms[0]['myFormControl'][1];
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("HTMLSelectElement")}} that implements it.</li>
-</ul>
+- {{domxref("HTMLSelectElement")}} that implements it.

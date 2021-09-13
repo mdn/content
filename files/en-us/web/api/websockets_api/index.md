@@ -14,95 +14,69 @@ tags:
   - data
   - interactive
 ---
-<p>{{DefaultAPISidebar("Websockets API")}}</p>
+{{DefaultAPISidebar("Websockets API")}}
 
-<p>The <strong>WebSocket API</strong> is an advanced technology that makes it possible to open a two-way interactive communication session between the user's browser and a server. With this API, you can send messages to a server and receive event-driven responses without having to poll the server for a reply.</p>
+The **WebSocket API** is an advanced technology that makes it possible to open a two-way interactive communication session between the user's browser and a server. With this API, you can send messages to a server and receive event-driven responses without having to poll the server for a reply.
 
-<div class="notecard note">
-<p><strong>Note:</strong> While a WebSocket connection is functionally somewhat similar to standard Unix-style sockets, they are not related.</p>
-</div>
+> **Note:** While a WebSocket connection is functionally somewhat similar to standard Unix-style sockets, they are not related.
 
-<h2 id="Interfaces">Interfaces</h2>
+## Interfaces
 
-<dl>
- <dt><a href="/en-US/docs/Web/API/WebSocket"><code>WebSocket</code></a></dt>
- <dd>The primary interface for connecting to a WebSocket server and then sending and receiving data on the connection.</dd>
- <dt><code><a href="/en-US/docs/Web/API/CloseEvent">CloseEvent</a></code></dt>
- <dd>The event sent by the WebSocket object when the connection closes.</dd>
- <dt><a href="/en-US/docs/Web/API/MessageEvent"><code>MessageEvent</code></a></dt>
- <dd>The event sent by the WebSocket object when a message is received from the server.</dd>
-</dl>
+- [`WebSocket`](/en-US/docs/Web/API/WebSocket)
+  - : The primary interface for connecting to a WebSocket server and then sending and receiving data on the connection.
+- [`CloseEvent`](/en-US/docs/Web/API/CloseEvent)
+  - : The event sent by the WebSocket object when the connection closes.
+- [`MessageEvent`](/en-US/docs/Web/API/MessageEvent)
+  - : The event sent by the WebSocket object when a message is received from the server.
 
-<h2 id="Guides">Guides</h2>
+## Guides
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications">Writing WebSocket client applications</a></li>
- <li><a href="/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers">Writing WebSocket servers</a></li>
- <li><a href="/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_server">Writing a WebSocket server in C#</a></li>
- <li><a href="/en-US/docs/Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java">Writing a WebSocket server in Java</a></li>
-</ul>
+- [Writing WebSocket client applications](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
+- [Writing WebSocket servers](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers)
+- [Writing a WebSocket server in C#](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_server)
+- [Writing a WebSocket server in Java](/en-US/docs/Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java)
 
-<h2 id="Tools">Tools</h2>
+## Tools
 
-<ul>
- <li><a href="https://www.asyncapi.com/">AsyncAPI</a>: A specification for describing event-driven architectures like WebSocket. You can use it to describe WebSocket-based APIs just as you would describe REST APIs with the OpenAPI specification. Learn <a href="https://www.asyncapi.com/blog/websocket-part1">why you should consider using AsyncAPI with WebSocket</a> and <a href="https://www.asyncapi.com/blog/websocket-part2">how to do so</a>.</li>
- <li><a href="https://hacks.mozilla.org/2017/06/introducing-humblenet-a-cross-platform-networking-library-that-works-in-the-browser/">HumbleNet</a>: A cross-platform networking library that works in the browser. It consists of a C wrapper around WebSockets and WebRTC that abstracts away cross-browser differences, facilitating the creation of multi-user networking functionality for games and other apps.</li>
- <li><a href="https://github.com/uWebSockets/uWebSockets">µWebSockets</a>: Highly scalable WebSocket server and client implementation for <a href="https://isocpp.org/">C++11</a> and <a href="https://nodejs.org">Node.js</a>.</li>
- <li><a href="https://github.com/ClusterWS/ClusterWS">ClusterWS</a>:  Lightweight, fast and powerful framework for building scalable WebSocket applications in <a href="https://nodejs.org">Node.js</a>.</li>
- <li><a href="https://github.com/ClusterWS/cWS">CWS</a>: Fast C++ WebSocket implementation for Node.js (uWebSockets v0.14 fork)</li>
- <li><a href="https://socket.io">Socket.IO</a>: A long polling/WebSocket based third party transfer protocol for <a href="https://nodejs.org">Node.js</a>.</li>
- <li><a href="https://socketcluster.io/">SocketCluster</a>: A pub/sub WebSocket framework for <a href="https://nodejs.org">Node.js</a> with a focus on scalability.</li>
- <li><a class="link-https" href="https://github.com/Worlize/WebSocket-Node">WebSocket-Node</a>: A WebSocket server API implementation for <a href="https://nodejs.org">Node.js</a>.</li>
- <li><a href="https://www.totaljs.com">Total.js</a>: Web application framework for <a href="https://www.nodejs.org">Node.js</a> (Example: <a href="https://github.com/totaljs/examples/tree/master/websocket">WebSocket chat</a>)</li>
- <li><a href="https://www.npmjs.com/package/faye-websocket">Faye</a>: A {{DOMxRef("WebSocket")}} (two-ways connections) and <a href="/en-US/docs/Web/API/EventSource">EventSource</a> (one-way connections) for <a href="https://nodejs.org">Node.js</a> Server and Client.</li>
- <li><a href="https://signalr.net/">SignalR</a>: SignalR will use WebSockets under the covers when it's available, and gracefully fallback to other techniques and technologies when it isn't, while your application code stays the same.</li>
- <li><a href="https://caddyserver.com/">Caddy</a>: A web server capable of proxying arbitrary commands (stdin/stdout) as a websocket.</li>
- <li><a href="https://github.com/websockets/ws">ws</a>: a popular WebSocket client &amp; server library for <a href="https://nodejs.org/">Node.js</a>.</li>
- <li><a href="https://github.com/bigstepinc/jsonrpc-bidirectional">jsonrpc-bidirectional</a>: Asynchronous RPC which, on a single connection, may have functions exported on the server and, and the same time, on the client (client may call server, server may also call client).</li>
- <li><a href="https://github.com/ninenines/cowboy">cowboy</a>: Cowboy is a small, fast and modern HTTP server for Erlang/OTP with WebSocket support.</li>
- <li><a href="https://websocketking.com">WebSocket King</a>: A client tool to help develop, test and work with WebSocket servers.</li>
- <li><a href="https://github.com/napengam/phpWebSocketServer">PHP WebSocket Server</a>: Server written in PHP to handle connections via websocksets wss:// or ws://and normal sockets over ssl:// ,tcp://</li>
- <li><a href="https://channels.readthedocs.io/en/stable/index.html">Channels</a>: Django library that adds support for WebSockets (and other protocols that require long running asynchronous connections).</li>
- <li><a href="https://flask-socketio.readthedocs.io/en/latest/">Flask-SocketIO</a>: gives Flask applications access to low latency bi-directional communications between the clients and the server.</li>
- <li><a href="https://pkg.go.dev/github.com/gorilla/websocket">Gorilla WebSocket</a>: Gorilla WebSocket is a <a href="https://golang.org/">Go</a> implementation of the WebSocket protocol.</li>
-</ul>
+- [AsyncAPI](https://www.asyncapi.com/): A specification for describing event-driven architectures like WebSocket. You can use it to describe WebSocket-based APIs just as you would describe REST APIs with the OpenAPI specification. Learn [why you should consider using AsyncAPI with WebSocket](https://www.asyncapi.com/blog/websocket-part1) and [how to do so](https://www.asyncapi.com/blog/websocket-part2).
+- [HumbleNet](https://hacks.mozilla.org/2017/06/introducing-humblenet-a-cross-platform-networking-library-that-works-in-the-browser/): A cross-platform networking library that works in the browser. It consists of a C wrapper around WebSockets and WebRTC that abstracts away cross-browser differences, facilitating the creation of multi-user networking functionality for games and other apps.
+- [µWebSockets](https://github.com/uWebSockets/uWebSockets): Highly scalable WebSocket server and client implementation for [C++11](https://isocpp.org/) and [Node.js](https://nodejs.org).
+- [ClusterWS](https://github.com/ClusterWS/ClusterWS):  Lightweight, fast and powerful framework for building scalable WebSocket applications in [Node.js](https://nodejs.org).
+- [CWS](https://github.com/ClusterWS/cWS): Fast C++ WebSocket implementation for Node.js (uWebSockets v0.14 fork)
+- [Socket.IO](https://socket.io): A long polling/WebSocket based third party transfer protocol for [Node.js](https://nodejs.org).
+- [SocketCluster](https://socketcluster.io/): A pub/sub WebSocket framework for [Node.js](https://nodejs.org) with a focus on scalability.
+- [WebSocket-Node](https://github.com/Worlize/WebSocket-Node): A WebSocket server API implementation for [Node.js](https://nodejs.org).
+- [Total.js](https://www.totaljs.com): Web application framework for [Node.js](https://www.nodejs.org) (Example: [WebSocket chat](https://github.com/totaljs/examples/tree/master/websocket))
+- [Faye](https://www.npmjs.com/package/faye-websocket): A {{DOMxRef("WebSocket")}} (two-ways connections) and [EventSource](/en-US/docs/Web/API/EventSource) (one-way connections) for [Node.js](https://nodejs.org) Server and Client.
+- [SignalR](https://signalr.net/): SignalR will use WebSockets under the covers when it's available, and gracefully fallback to other techniques and technologies when it isn't, while your application code stays the same.
+- [Caddy](https://caddyserver.com/): A web server capable of proxying arbitrary commands (stdin/stdout) as a websocket.
+- [ws](https://github.com/websockets/ws): a popular WebSocket client & server library for [Node.js](https://nodejs.org/).
+- [jsonrpc-bidirectional](https://github.com/bigstepinc/jsonrpc-bidirectional): Asynchronous RPC which, on a single connection, may have functions exported on the server and, and the same time, on the client (client may call server, server may also call client).
+- [cowboy](https://github.com/ninenines/cowboy): Cowboy is a small, fast and modern HTTP server for Erlang/OTP with WebSocket support.
+- [WebSocket King](https://websocketking.com): A client tool to help develop, test and work with WebSocket servers.
+- [PHP WebSocket Server](https://github.com/napengam/phpWebSocketServer): Server written in PHP to handle connections via websocksets wss\:// or ws\://and normal sockets over ssl:// ,tcp\://
+- [Channels](https://channels.readthedocs.io/en/stable/index.html): Django library that adds support for WebSockets (and other protocols that require long running asynchronous connections).
+- [Flask-SocketIO](https://flask-socketio.readthedocs.io/en/latest/): gives Flask applications access to low latency bi-directional communications between the clients and the server.
+- [Gorilla WebSocket](https://pkg.go.dev/github.com/gorilla/websocket): Gorilla WebSocket is a [Go](https://golang.org/) implementation of the WebSocket protocol.
 
-<h2 id="Related_Topics">Related Topics</h2>
+## Related Topics
 
-<ul>
- <li><a href="/en-US/docs/Web/Guide/AJAX">AJAX</a></li>
- <li><a href="/en-US/docs/Web/JavaScript">JavaScript</a></li>
-</ul>
+- [AJAX](/en-US/docs/Web/Guide/AJAX)
+- [JavaScript](/en-US/docs/Web/JavaScript)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table>
- <thead>
-  <tr>
-   <th>Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>
-     <a href="https://html.spec.whatwg.org/multipage/web-sockets.html#network">HTML Living Standard<br/>
-     # network</a>
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://datatracker.ietf.org/doc/html/rfc6455">RFC 6455, The WebSocket Protocol</a></td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                     |
+| ------------------------------------------------------------------------------------------------- |
+| [HTML Living Standard # network](https://html.spec.whatwg.org/multipage/web-sockets.html#network) |
+| [RFC 6455, The WebSocket Protocol](https://datatracker.ietf.org/doc/html/rfc6455)                 |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.WebSocket")}}</p>
+{{Compat("api.WebSocket")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://datatracker.ietf.org/doc/html/rfc6455">RFC 6455 — The WebSocket Protocol</a></li>
- <li><a href="https://www.w3.org/TR/websockets/">WebSocket API Specification</a></li>
- <li><a href="/en-US/docs/Web/API/Server-sent_events">Server-Sent Events</a></li>
-</ul>
+- [RFC 6455 — The WebSocket Protocol](https://datatracker.ietf.org/doc/html/rfc6455)
+- [WebSocket API Specification](https://www.w3.org/TR/websockets/)
+- [Server-Sent Events](/en-US/docs/Web/API/Server-sent_events)

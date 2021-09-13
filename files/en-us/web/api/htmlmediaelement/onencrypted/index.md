@@ -3,28 +3,26 @@ title: HTMLMediaElement.onencrypted
 slug: Web/API/HTMLMediaElement/onencrypted
 browser-compat: api.HTMLMediaElement.onencrypted
 ---
-<p>{{APIRef("Encrypted Media Extensions")}}{{ SeeCompatTable() }}</p>
+{{APIRef("Encrypted Media Extensions")}}{{ SeeCompatTable() }}
 
-<p>The <strong><code>onencrypted</code></strong> property of the
-        {{domxref("HTMLMediaElement")}} is an event handler, fired whenever an
-        {{Event("encrypted")}} event occurs, denoting the media is encrypted.</p>
+The **`onencrypted`** property of the
+{{domxref("HTMLMediaElement")}} is an event handler, fired whenever an
+{{Event("encrypted")}} event occurs, denoting the media is encrypted.
 
-<p>This interface inherits from the {{domxref("ExtendableEvent")}} interface.</p>
+This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 
-<p>{{InheritanceDiagram(700, 60, 20)}}</p>
+{{InheritanceDiagram(700, 60, 20)}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">HTMLMediaElement.onencrypted = function(encrypted) { ... }
-</pre>
+```js
+HTMLMediaElement.onencrypted = function(encrypted) { ... }
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
-
-    <p>{{Compat}}</p>
-</div>
+{{Compat}}

@@ -9,23 +9,25 @@ tags:
   - Tutorial
   - WebGL
 ---
-<p>{{PreviousNext("Learn/WebGL/By_example","Learn/WebGL/By_example/Clearing_with_colors")}}</p>
+{{PreviousNext("Learn/WebGL/By_example","Learn/WebGL/By_example/Clearing_with_colors")}}
 
-<p>This example demonstrates how to detect a {{Glossary("WebGL")}} rendering context and reports the result to the user.</p>
+This example demonstrates how to detect a {{Glossary("WebGL")}} rendering context and reports the result to the user.
 
-<h2 id="Feature-detecting_WebGL">Feature-detecting WebGL</h2>
+## Feature-detecting WebGL
 
-<p>{{EmbedLiveSample("Feature-detecting_WebGL",660,150)}}</p>
+{{EmbedLiveSample("Feature-detecting_WebGL",660,150)}}
 
-<p>In this first example we are going to check whether the browser supports {{Glossary("WebGL")}}. To that end we will try to obtain the {{domxref("WebGLRenderingContext","WebGL rendering context","",1)}} from a {{domxref("HTMLCanvasElement","canvas")}} element. The {{domxref("WebGLRenderingContext","WebGL rendering context", "", 1)}} is an interface, through which you can set and query the state of the graphics machine, send data to the WebGL, and execute draw commands.</p>
+In this first example we are going to check whether the browser supports {{Glossary("WebGL")}}. To that end we will try to obtain the {{domxref("WebGLRenderingContext","WebGL rendering context","",1)}} from a {{domxref("HTMLCanvasElement","canvas")}} element. The {{domxref("WebGLRenderingContext","WebGL rendering context", "", 1)}} is an interface, through which you can set and query the state of the graphics machine, send data to the WebGL, and execute draw commands.
 
-<p>Saving the state of the graphics machine within a single context interface is not unique to {{Glossary("WebGL")}}. This is also done in other graphics {{Glossary("API")}}, such as the {{domxref("CanvasRenderingContext2D","canvas 2D rendering context", "", 1)}}. However, the properties and variables you can tweak are different for each {{Glossary("API")}}.</p>
+Saving the state of the graphics machine within a single context interface is not unique to {{Glossary("WebGL")}}. This is also done in other graphics {{Glossary("API")}}, such as the {{domxref("CanvasRenderingContext2D","canvas 2D rendering context", "", 1)}}. However, the properties and variables you can tweak are different for each {{Glossary("API")}}.
 
-<pre class="brush: html">&lt;p&gt;[ Here would go the result of WebGL feature detection ]&lt;/p&gt;
-&lt;button&gt;Press here to detect WebGLRenderingContext&lt;/button&gt;
-</pre>
+```html
+<p>[ Here would go the result of WebGL feature detection ]</p>
+<button>Press here to detect WebGLRenderingContext</button>
+```
 
-<pre class="brush: css">body {
+```css
+body {
   text-align : center;
 }
 button {
@@ -34,9 +36,10 @@ button {
   margin : auto;
   padding : 0.6em;
 }
-</pre>
+```
 
-<pre class="brush: js">// Run everything inside window load event handler, to make sure
+```js
+// Run everything inside window load event handler, to make sure
 // DOM is fully loaded and styled before trying to manipulate it.
 window.addEventListener("load", function() {
   var paragraph = document.querySelector("p"),
@@ -52,7 +55,7 @@ window.addEventListener("load", function() {
     var gl = canvas.getContext("webgl")
       || canvas.getContext("experimental-webgl");
     // Report the result.
-    if (gl &amp;&amp; gl instanceof WebGLRenderingContext) {
+    if (gl && gl instanceof WebGLRenderingContext) {
       paragraph.textContent =
         "Congratulations! Your browser supports WebGL.";
     } else {
@@ -61,8 +64,8 @@ window.addEventListener("load", function() {
     }
   }
 }, false);
-</pre>
+```
 
-<p>The source code of this example is also available on <a href="https://github.com/idofilin/webgl-by-example/tree/master/detect-webgl">GitHub</a>.</p>
+The source code of this example is also available on [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/detect-webgl).
 
-<p>{{PreviousNext("Learn/WebGL/By_example","Learn/WebGL/By_example/Clearing_with_colors")}}</p>
+{{PreviousNext("Learn/WebGL/By_example","Learn/WebGL/By_example/Clearing_with_colors")}}

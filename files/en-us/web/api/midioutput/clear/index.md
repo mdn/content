@@ -9,23 +9,24 @@ tags:
   - MIDIOutput
 browser-compat: api.MIDIOutput.clear
 ---
-<div>{{securecontext_header}}{{APIRef("Web MIDI API")}}</div>
+{{securecontext_header}}{{APIRef("Web MIDI API")}}
 
-<p>The <strong><code>clear()</code></strong> method of the {{domxref("MIDIOutput")}} interface clears the queue of messages being sent to the output device.</p>
+The **`clear()`** method of the {{domxref("MIDIOutput")}} interface clears the queue of messages being sent to the output device.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">MIDIOutput.clear();</pre>
+```js
+MIDIOutput.clear();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-
-<p>{{Compat}}</p>
+{{Compat}}

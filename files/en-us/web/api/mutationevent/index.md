@@ -10,75 +10,65 @@ tags:
   - events
 browser-compat: api.MutationEvent
 ---
-<div>{{APIRef("DOM Events")}}{{Deprecated_Header}}</div>
+{{APIRef("DOM Events")}}{{Deprecated_Header}}
 
-<div class="notecard note">
-  <p><strong>Note:</strong> <a href="https://www.w3.org/TR/DOM-Level-3-Events/#events-mutationevents">Mutation Events</a> (W3C DOM Level 3 Events) have been deprecated in favor of <a href="/en-US/docs/Web/API/MutationObserver">Mutation Observers</a> (W3C DOM4).</p>
-</div>
+> **Note:** [Mutation Events](https://www.w3.org/TR/DOM-Level-3-Events/#events-mutationevents) (W3C DOM Level 3 Events) have been deprecated in favor of [Mutation Observers](/en-US/docs/Web/API/MutationObserver) (W3C DOM4).
 
-<p>The <code><strong>MutationEvent</strong></code> interface provides event properties that are specific to modifications to the Document Object Model (DOM) hierarchy and nodes.</p>
+The **`MutationEvent`** interface provides event properties that are specific to modifications to the Document Object Model (DOM) hierarchy and nodes.
 
+## Preface
 
-<h2 id="Preface">Preface</h2>
+The mutation events have been marked as deprecated in [the DOM Events specification](https://www.w3.org/TR/DOM-Level-3-Events/#events-mutationevents), as the API's design is flawed (see details in the "DOM Mutation Events Replacement: The Story So Far / Existing Points of Consensus" post to [public-webapps](https://lists.w3.org/Archives/Public/public-webapps/2011JulSep/0779.html)).
 
-<p>The mutation events have been marked as deprecated in <a href="https://www.w3.org/TR/DOM-Level-3-Events/#events-mutationevents">the DOM Events specification</a>, as the API's design is flawed (see details in the "DOM Mutation Events Replacement: The Story So Far / Existing Points of Consensus" post to <a href="https://lists.w3.org/Archives/Public/public-webapps/2011JulSep/0779.html">public-webapps</a>).</p>
+[Mutation Observers](/en-US/docs/Web/API/MutationObserver) have replaced mutation events in DOM4. They have been supported in [most popular browsers for some years](/en-US/docs/Web/API/MutationObserver#browser_compatibility).
 
-<p><a href="/en-US/docs/Web/API/MutationObserver">Mutation Observers</a> have replaced mutation events in DOM4. They have been supported in <a href="/en-US/docs/Web/API/MutationObserver#browser_compatibility">most popular browsers for some years</a>.</p>
+In addition, mutation events should be avoided because they have **performance issues** and **poor cross-browser support** (as described in the following sections).
 
-<p>In addition, mutation events should be avoided because they have <strong>performance issues</strong> and <strong>poor cross-browser support</strong> (as described in the following sections).</p>
+### Performance
 
-<h3 id="Performance">Performance</h3>
+Adding DOM mutation listeners to a document [profoundly degrades the performance](https://groups.google.com/group/mozilla.dev.platform/browse_thread/thread/2f42f1d75bb906fb?pli=1) of further DOM modifications to that document (making them 1.5 - 7 times slower!). Moreover, removing the listeners does not reverse the damage.
 
-<p>Adding DOM mutation listeners to a document <a href="https://groups.google.com/group/mozilla.dev.platform/browse_thread/thread/2f42f1d75bb906fb?pli=1" rel="external">profoundly degrades the performance</a> of further DOM modifications to that document (making them 1.5 - 7 times slower!). Moreover, removing the listeners does not reverse the damage.</p>
+The performance effect is [limited to the documents that have the mutation event listeners](https://groups.google.com/forum/#!topic/mozilla.dev.platform/UH2VqFQRTDA).
 
-<p>The performance effect is <a class="link-https" href="https://groups.google.com/forum/#!topic/mozilla.dev.platform/UH2VqFQRTDA">limited to the documents that have the mutation event listeners</a>.</p>
+### Cross-browser support
 
-<h3 id="Cross-browser_support">Cross-browser support</h3>
+These events are not implemented consistently across different browsers, for example:
 
-<p>These events are not implemented consistently across different browsers, for example:</p>
+- IE prior to version 9 didn't support the mutation events at all and does not implement some of them correctly in version 9 ([for example, DOMNodeInserted](http://help.dottoro.com/ljmcxjla.php))
+- WebKit doesn't support DOMAttrModified (see [webkit bug 8191](https://bugs.webkit.org/show_bug.cgi?id=8191) and [the workaround](https://engineering.silk.co/post/31921750832/mutation-events-what-happens))
+- "mutation name events", i.e. DOMElementNameChanged and DOMAttributeNameChanged are not supported in Firefox (as of version 11), and probably in other browsers as well.
+- ...
 
-<ul>
- <li>IE prior to version 9 didn't support the mutation events at all and does not implement some of them correctly in version 9 (<a href="http://help.dottoro.com/ljmcxjla.php">for example, DOMNodeInserted</a>)</li>
- <li>WebKit doesn't support DOMAttrModified (see <a class="link-https" href="https://bugs.webkit.org/show_bug.cgi?id=8191">webkit bug 8191</a> and <a href="https://engineering.silk.co/post/31921750832/mutation-events-what-happens">the workaround</a>)</li>
- <li>"mutation name events", i.e. DOMElementNameChanged and DOMAttributeNameChanged are not supported in Firefox (as of version 11), and probably in other browsers as well.</li>
- <li>...</li>
-</ul>
+Dottoro [documents browser support for mutation events](http://help.dottoro.com/ljfvvdnm.php#additionalEvents).
 
-<p>Dottoro <a href="http://help.dottoro.com/ljfvvdnm.php#additionalEvents">documents browser support for mutation events</a>.</p>
+## Mutation events list
 
-<h2 id="Mutation_events_list">Mutation events list</h2>
+The following is a list of all mutation events, as defined in [DOM Level 3 Events specification](https://www.w3.org/TR/DOM-Level-3-Events/#events-mutationevents):
 
-<p>The following is a list of all mutation events, as defined in <a href="https://www.w3.org/TR/DOM-Level-3-Events/#events-mutationevents">DOM Level 3 Events specification</a>:</p>
+- `DOMAttrModified`
+- `DOMAttributeNameChanged`
+- `DOMCharacterDataModified`
+- `DOMElementNameChanged`
+- `DOMNodeInserted`
+- `DOMNodeInsertedIntoDocument`
+- `DOMNodeRemoved`
+- `DOMNodeRemovedFromDocument`
+- `DOMSubtreeModified`
 
-<ul>
- <li><code>DOMAttrModified</code></li>
- <li><code>DOMAttributeNameChanged</code></li>
- <li><code>DOMCharacterDataModified</code></li>
- <li><code>DOMElementNameChanged</code></li>
- <li><code>DOMNodeInserted</code></li>
- <li><code>DOMNodeInsertedIntoDocument</code></li>
- <li><code>DOMNodeRemoved</code></li>
- <li><code>DOMNodeRemovedFromDocument</code></li>
- <li><code>DOMSubtreeModified</code></li>
-</ul>
+## Usage
 
-<h2 id="Usage">Usage</h2>
+You can register a listener for mutation events using {{DOMxRef("EventTarget.addEventListener()")}} as follows:
 
-<p>You can register a listener for mutation events using {{DOMxRef("EventTarget.addEventListener()")}} as follows:</p>
+    element.addEventListener("DOMNodeInserted", function (event) {
+      // ...
+    }, false);
 
-<pre><code>element.addEventListener("DOMNodeInserted", function (event) {</code>
-  // ...
-<code>}, false);</code>
-</pre>
+The event object is passed to the listener in a `MutationEvent` (see [its definition in the specification](https://www.w3.org/TR/DOM-Level-3-Events/#events-MutationEvent)) for most events, and {{DOMxRef("MutationNameEvent")}} for `DOMAttributeNameChanged` and `DOMElementNameChanged`.
 
-<p>The event object is passed to the listener in a <code>MutationEvent</code> (see <a href="https://www.w3.org/TR/DOM-Level-3-Events/#events-MutationEvent">its definition in the specification</a>) for most events, and {{DOMxRef("MutationNameEvent")}} for <code>DOMAttributeNameChanged</code> and <code>DOMElementNameChanged</code>.</p>
+## Browser compatibility
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+{{Compat}}
 
-<p>{{Compat}}</p>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{DOMxRef("MutationNameEvent")}}</li>
-</ul>
+- {{DOMxRef("MutationNameEvent")}}

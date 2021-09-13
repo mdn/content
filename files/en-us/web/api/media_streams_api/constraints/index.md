@@ -1,5 +1,5 @@
 ---
-title: 'Capabilities, constraints, and settings'
+title: Capabilities, constraints, and settings
 slug: Web/API/Media_Streams_API/Constraints
 tags:
   - Advanced
@@ -14,66 +14,69 @@ tags:
   - Video
   - WebRTC
 ---
-<div>{{DefaultAPISidebar("Media Capture and Streams")}}</div>
+{{DefaultAPISidebar("Media Capture and Streams")}}
 
-<p>This article discusses the twin concepts of <strong>constraints</strong> and <strong>capabilities</strong>, as well as media settings, and includes an example we call the {{anch("Example Constraint exerciser", "Constraint Exerciser")}}. The Constraint Exerciser lets you experiment with the results of different constraint sets being applied to the audio and video tracks coming from the computer's A/V input devices (such as its webcam and microphone).</p>
+This article discusses the twin concepts of **constraints** and **capabilities**, as well as media settings, and includes an example we call the {{anch("Example Constraint exerciser", "Constraint Exerciser")}}. The Constraint Exerciser lets you experiment with the results of different constraint sets being applied to the audio and video tracks coming from the computer's A/V input devices (such as its webcam and microphone).
 
-<p>Historically, writing scripts for the Web that work intimately with Web APIs has had a well-known challenge: often, your code needs to know whether or not an API exists and if so, what its limitations are on the {{Glossary("user agent")}} it's running on. Figuring this out has often been difficult, and has usually involved looking at some combination of which {{Glossary("user agent")}} (or browser) you're running on, which version it is, looking to see if certain objects exist, trying to see whether various things work or not and determining what errors occur, and so forth. The result has been a lot of very fragile code, or a reliance on libraries which figure this stuff out for you, then implement {{Glossary("polyfill", "polyfills")}} to patch the holes in the implementation on your behalf.</p>
+Historically, writing scripts for the Web that work intimately with Web APIs has had a well-known challenge: often, your code needs to know whether or not an API exists and if so, what its limitations are on the {{Glossary("user agent")}} it's running on. Figuring this out has often been difficult, and has usually involved looking at some combination of which {{Glossary("user agent")}} (or browser) you're running on, which version it is, looking to see if certain objects exist, trying to see whether various things work or not and determining what errors occur, and so forth. The result has been a lot of very fragile code, or a reliance on libraries which figure this stuff out for you, then implement {{Glossary("polyfill", "polyfills")}} to patch the holes in the implementation on your behalf.
 
-<p>Capabilities and constraints let the browser and Web site or app exchange information about what <strong>constrainable properties</strong> the browser's implementation supports and what values it supports for each one.</p>
+Capabilities and constraints let the browser and Web site or app exchange information about what **constrainable properties** the browser's implementation supports and what values it supports for each one.
 
-<h2 id="Overview">Overview</h2>
+## Overview
 
-<p>The process works like this (using {{domxref("MediaStreamTrack")}} as an example):</p>
+The process works like this (using {{domxref("MediaStreamTrack")}} as an example):
 
-<ol>
-	<li>If needed, call {{domxref("MediaDevices.getSupportedConstraints()")}} to get the list of <strong>supported constraints</strong>, which tells you what constrainable properties the browser knows about. This isn't always necessary, since any that aren't known will be ignored when you specify them—but if you have any that you can't get by without, you can start by checking to be sure they're on the list.</li>
-	<li>Once the script knows whether the property or properties it wishes to use are supported, it can then check the <strong>capabilities</strong> of the API and its implementation by examining the object returned by the track's <code>getCapabilities()</code> method; this object lists each supported constraint and the values or range of values which are supported.</li>
-	<li>Finally, the track's <code>applyConstraints()</code> method is called to configure the API as desired by specifying the values or ranges of values it wishes to use for any of the constrainable properties about which it has a preference.</li>
-	<li>The track's <code>getConstraints()</code> method returns the set of constraints passed into the most recent call to <code>applyConstraints()</code>. This may not represent the actual current state of the track, due to properties whose requested values had to be adjusted and because platform default values aren't represented. For a complete representation of the track's current configuration, use <code>getSettings()</code>.</li>
-</ol>
+1.  If needed, call {{domxref("MediaDevices.getSupportedConstraints()")}} to get the list of **supported constraints**, which tells you what constrainable properties the browser knows about. This isn't always necessary, since any that aren't known will be ignored when you specify them—but if you have any that you can't get by without, you can start by checking to be sure they're on the list.
+2.  Once the script knows whether the property or properties it wishes to use are supported, it can then check the **capabilities** of the API and its implementation by examining the object returned by the track's `getCapabilities()` method; this object lists each supported constraint and the values or range of values which are supported.
+3.  Finally, the track's `applyConstraints()` method is called to configure the API as desired by specifying the values or ranges of values it wishes to use for any of the constrainable properties about which it has a preference.
+4.  The track's `getConstraints()` method returns the set of constraints passed into the most recent call to `applyConstraints()`. This may not represent the actual current state of the track, due to properties whose requested values had to be adjusted and because platform default values aren't represented. For a complete representation of the track's current configuration, use `getSettings()`.
 
-<p>In the Media Stream API, both {{domxref("MediaStream")}} and {{domxref("MediaStreamTrack")}} have constrainable properties.</p>
+In the Media Stream API, both {{domxref("MediaStream")}} and {{domxref("MediaStreamTrack")}} have constrainable properties.
 
-<h2 id="Determining_if_a_constraint_is_supported">Determining if a constraint is supported</h2>
+## Determining if a constraint is supported
 
-<p>If you need to know whether or not a given constraint is supported by the user agent, you can find out by calling {{domxref("MediaDevices.getSupportedConstraints", "navigator.mediaDevices.getSupportedConstraints()")}} to get a list of the constrainable properties which the browser knows, like this:</p>
+If you need to know whether or not a given constraint is supported by the user agent, you can find out by calling {{domxref("MediaDevices.getSupportedConstraints", "navigator.mediaDevices.getSupportedConstraints()")}} to get a list of the constrainable properties which the browser knows, like this:
 
-<pre class="brush: js">let supported = navigator.mediaDevices.getSupportedConstraints();
+```js
+let supported = navigator.mediaDevices.getSupportedConstraints();
 
-document.getElementById("frameRateSlider").disabled = !supported["frameRate"];</pre>
+document.getElementById("frameRateSlider").disabled = !supported["frameRate"];
+```
 
-<p>In this example, the supported constraints are fetched, and a control that lets the user configure the frame rate is disabled if the <code>frameRate</code> constraint isn't supported.</p>
+In this example, the supported constraints are fetched, and a control that lets the user configure the frame rate is disabled if the `frameRate` constraint isn't supported.
 
-<h2 id="How_constraints_are_defined">How constraints are defined</h2>
+## How constraints are defined
 
-<p>A single constraint is an object whose name matches the constrainable property whose desired value or range of values is being specified. This object contains zero or more individual constraints, as well as an optional sub-object named <code>advanced</code>, which contains another set of zero or more constraints  which the user agent must satisfy if at all possible. The user agent attempts to satisfy constraints in the order specified in the constraint set.</p>
+A single constraint is an object whose name matches the constrainable property whose desired value or range of values is being specified. This object contains zero or more individual constraints, as well as an optional sub-object named `advanced`, which contains another set of zero or more constraints  which the user agent must satisfy if at all possible. The user agent attempts to satisfy constraints in the order specified in the constraint set.
 
-<p>The most important thing to understand is that most constraints aren't requirements; instead, they're requests. There are exceptions, and we'll get to those shortly.</p>
+The most important thing to understand is that most constraints aren't requirements; instead, they're requests. There are exceptions, and we'll get to those shortly.
 
-<h3 id="Requesting_a_specific_value_for_a_setting">Requesting a specific value for a setting</h3>
+### Requesting a specific value for a setting
 
-<p>Most, each constraint may be a specific value indicating a desired value for the setting. For example:</p>
+Most, each constraint may be a specific value indicating a desired value for the setting. For example:
 
-<pre class="brush: js">let constraints = {
+```js
+let constraints = {
   width: 1920,
   height: 1080,
   aspectRatio: 1.777777778
 };
 
-myTrack.applyConstraints(constraints);</pre>
+myTrack.applyConstraints(constraints);
+```
 
-<p>In this case, the constraints indicate that any values are fine for nearly all properties, but that a standard high definition (HD) video size is desired, with the standard 16:9 aspect ratio. There's no guarantee that the resulting track will match any of these, but the user agent should do its best to match as many as possible.</p>
+In this case, the constraints indicate that any values are fine for nearly all properties, but that a standard high definition (HD) video size is desired, with the standard 16:9 aspect ratio. There's no guarantee that the resulting track will match any of these, but the user agent should do its best to match as many as possible.
 
-<p>The prioritization of the properties is simple: if two properties' requested values are mutually exclusive, then the one listed first in the constraint set will be used. As an example, if the browser running the code above couldn't provide a 1920x1080 track but could do 1920x900, then that's what would be provided.</p>
+The prioritization of the properties is simple: if two properties' requested values are mutually exclusive, then the one listed first in the constraint set will be used. As an example, if the browser running the code above couldn't provide a 1920x1080 track but could do 1920x900, then that's what would be provided.
 
-<p>Simple constraints like these, specifying a single value, are always treated as non-required. The user agent will try to provide what you request but will not guarantee that what you get will match. However, if you use simple values for properties when calling {{domxref("MediaStreamTrack.applyConstraints()")}}, the request will always succeed, because these values will be considered a request, not a requirement.</p>
+Simple constraints like these, specifying a single value, are always treated as non-required. The user agent will try to provide what you request but will not guarantee that what you get will match. However, if you use simple values for properties when calling {{domxref("MediaStreamTrack.applyConstraints()")}}, the request will always succeed, because these values will be considered a request, not a requirement.
 
-<h3 id="Specifying_a_range_of_values">Specifying a range of values</h3>
+### Specifying a range of values
 
-<p>Sometimes, any value within a range is acceptable for a property's value. You can specify ranges with either or both minimum and maximum values, and you can even specify an ideal value within the range, if you choose. If you provide an ideal value, the browser will try to get as close as possible to matching that value, given the other constraints specified.</p>
+Sometimes, any value within a range is acceptable for a property's value. You can specify ranges with either or both minimum and maximum values, and you can even specify an ideal value within the range, if you choose. If you provide an ideal value, the browser will try to get as close as possible to matching that value, given the other constraints specified.
 
-<pre class="brush: js">let supports = navigator.mediaDevices.getSupportedConstraints();
+```js
+let supports = navigator.mediaDevices.getSupportedConstraints();
 
 if (!supports["width"] || !supports["height"] || !supports["frameRate"] || !supports["facingMode"]) {
   // We're missing needed properties, so handle that error.
@@ -86,37 +89,34 @@ if (!supports["width"] || !supports["height"] || !supports["frameRate"] || !supp
     facingMode: { exact: "user" }
   };
 
-  myTrack.applyConstraints(constraints).then(function() =&gt; {
+  myTrack.applyConstraints(constraints).then(function() => {
     /* do stuff if constraints applied successfully */
   }).catch(function(reason) {
     /* failed to apply constraints; reason is why */
   });
 }
-</pre>
+```
 
-<p>Here, after ensuring that the constrainable properties for which matches must be found are supported (<code>width</code>, <code>height</code>, <code>frameRate</code>, and <code>facingMode</code>), we set up constraints which request a width no smaller than 640 and no larger than 1920 (but preferably 1920), a height no smaller than 400 (but ideally 1080), an aspect ratio of 16:9 (1.777777778), and a frame rate no greater than 30 frames per second. In addition, the only acceptable input device is a camera facing the user (a "selfie cam"). If the <code>width</code>, <code>height</code>, <code>frameRate</code>, or <code>facingMode</code> constraints can't be met, the promise returned by <code>applyConstraints()</code> will be rejected.</p>
+Here, after ensuring that the constrainable properties for which matches must be found are supported (`width`, `height`, `frameRate`, and `facingMode`), we set up constraints which request a width no smaller than 640 and no larger than 1920 (but preferably 1920), a height no smaller than 400 (but ideally 1080), an aspect ratio of 16:9 (1.777777778), and a frame rate no greater than 30 frames per second. In addition, the only acceptable input device is a camera facing the user (a "selfie cam"). If the `width`, `height`, `frameRate`, or `facingMode` constraints can't be met, the promise returned by `applyConstraints()` will be rejected.
 
-<div class="note">
-<p><strong>Note:</strong> Constraints which are specified using any or all of <code>max</code>, <code>min</code>, or <code>exact</code> are always treated as mandatory. If any constraint which uses one or more of those can't be met when calling <code>applyConstraints()</code>, the promise will be rejected.</p>
-</div>
+> **Note:** Constraints which are specified using any or all of `max`, `min`, or `exact` are always treated as mandatory. If any constraint which uses one or more of those can't be met when calling `applyConstraints()`, the promise will be rejected.
 
-<h3 id="Advanced_constraints">Advanced constraints</h3>
+### Advanced constraints
 
-<p>So-called advanced constraints are created by adding an <code>advanced</code> property to the constraint set; this property's value is an array of additional constraint sets which are considered optional. There are few if any use cases for this feature, and there is some interest in removing it from the specification, so it will not be discussed here. If you wish to learn more, see <a href="https://www.w3.org/TR/mediacapture-streams/#idl-def-Constraints">section 11 of the Media Capture and Streams specification</a>, past example 2.</p>
+So-called advanced constraints are created by adding an `advanced` property to the constraint set; this property's value is an array of additional constraint sets which are considered optional. There are few if any use cases for this feature, and there is some interest in removing it from the specification, so it will not be discussed here. If you wish to learn more, see [section 11 of the Media Capture and Streams specification](https://www.w3.org/TR/mediacapture-streams/#idl-def-Constraints), past example 2.
 
-<h2 id="Checking_capabilities">Checking capabilities</h2>
+## Checking capabilities
 
-<p>You can call {{domxref("MediaStreamTrack.getCapabilities()")}} to get a list of all of the supported capabilities and the values or ranges of values which each one accepts on the current platform and user agent<em>.</em> This function returns a {{domxref("MediaTrackCapabilities")}} object which lists each constrainable property supported by the browser and a value or range of values which are supported for each one of those properties.</p>
+You can call {{domxref("MediaStreamTrack.getCapabilities()")}} to get a list of all of the supported capabilities and the values or ranges of values which each one accepts on the current platform and user agent*.* This function returns a {{domxref("MediaTrackCapabilities")}} object which lists each constrainable property supported by the browser and a value or range of values which are supported for each one of those properties.
 
-<div class="note">
-<p><strong>Note:</strong> <code>getCapabilities()</code> hasn't been implemented yet by all major browsers. For the time being, you'll have to try to get what you need, and if you can't, decide what to do at that point. See Firefox {{bug(1179084)}}, for example.</p>
-</div>
+> **Note:** `getCapabilities()` hasn't been implemented yet by all major browsers. For the time being, you'll have to try to get what you need, and if you can't, decide what to do at that point. See Firefox {{bug(1179084)}}, for example.
 
-<h2 id="Applying_constraints">Applying constraints</h2>
+## Applying constraints
 
-<p>The first and most common way to use constraints is to specify them when you call {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}:</p>
+The first and most common way to use constraints is to specify them when you call {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}:
 
-<pre class="brush: js">navigator.mediaDevices.getUserMedia({
+```js
+navigator.mediaDevices.getUserMedia({
   video: {
     width: { min: 640, ideal: 1920 },
     height: { min: 400, ideal: 1080 },
@@ -126,108 +126,114 @@ if (!supports["width"] || !supports["height"] || !supports["frameRate"] || !supp
     sampleSize: 16,
     channelCount: 2
   }
-}).then(stream =&gt; {
+}).then(stream => {
   videoElement.srcObject = stream;
 }).catch(handleError);
-</pre>
+```
 
-<p>In this example, constraints are applied at <code>getUserMedia()</code> time, asking for an ideal set of options with fallbacks for the video.</p>
+In this example, constraints are applied at `getUserMedia()` time, asking for an ideal set of options with fallbacks for the video.
 
-<div class="note">
-<p><strong>Note:</strong> You can specify one or more media input device IDs to establish restrictions on which input sources are allowed. To collect a list of the available devices, you can call {{domxref("MediaDevices.enumerateDevices", "navigator.mediaDevices.enumerateDevices()")}}, then for each device which meets the desired criteria, add its <code>deviceId</code> to the <code>MediaConstraints</code> object that eventually gets passed into <code>getUserMedia()</code>.</p>
-</div>
+> **Note:** You can specify one or more media input device IDs to establish restrictions on which input sources are allowed. To collect a list of the available devices, you can call {{domxref("MediaDevices.enumerateDevices", "navigator.mediaDevices.enumerateDevices()")}}, then for each device which meets the desired criteria, add its `deviceId` to the `MediaConstraints` object that eventually gets passed into `getUserMedia()`.
 
-<p>You can also change the constraints of an existing {{domxref("MediaStreamTrack")}} on the fly, by calling the track's {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}} method, passing into it an object representing the constraints you wish to apply to the track:</p>
+You can also change the constraints of an existing {{domxref("MediaStreamTrack")}} on the fly, by calling the track's {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}} method, passing into it an object representing the constraints you wish to apply to the track:
 
-<pre class="brush: js">videoTrack.applyConstraints({
+```js
+videoTrack.applyConstraints({
   width: 1920,
   height: 1080
 });
-</pre>
+```
 
-<p>In this snippet, the video track referenced by <code>videoTrack</code> is updated so that its resolution as closely as possible matches 1920x1080 pixels (1080p high definition).</p>
+In this snippet, the video track referenced by `videoTrack` is updated so that its resolution as closely as possible matches 1920x1080 pixels (1080p high definition).
 
-<h2 id="Retrieving_current_constraints_and_settings">Retrieving current constraints and settings</h2>
+## Retrieving current constraints and settings
 
-<p>It's important to remember the difference between <strong>constraints</strong> and <strong>settings</strong>. Constraints are a way to specify what values you need, want, and are willing to accept for the various constrainable properties (as described in the documentation for {{domxref("MediaTrackConstraints")}}), while settings are the actual values of each constrainable property at the current time.</p>
+It's important to remember the difference between **constraints** and **settings**. Constraints are a way to specify what values you need, want, and are willing to accept for the various constrainable properties (as described in the documentation for {{domxref("MediaTrackConstraints")}}), while settings are the actual values of each constrainable property at the current time.
 
-<h3 id="Getting_the_constraints_in_effect">Getting the constraints in effect</h3>
+### Getting the constraints in effect
 
-<p>If at any time you need to fetch the set of constraints that are currently applied to the media, you can get that information by calling {{domxref("MediaStreamTrack.getConstraints()")}}, as shown in the example below.</p>
+If at any time you need to fetch the set of constraints that are currently applied to the media, you can get that information by calling {{domxref("MediaStreamTrack.getConstraints()")}}, as shown in the example below.
 
-<pre class="brush: js">function switchCameras(track, camera) {
+```js
+function switchCameras(track, camera) {
   let constraints = track.getConstraints();
   constraints.facingMode = camera;
   track.applyConstraints(constraints);
-}</pre>
+}
+```
 
-<p>This function accepts a {{domxref("MediaStreamTrack")}} and a string indicating the camera facing mode to use, fetches the current constraints, sets the value of the {{domxref("MediaTrackConstraints.facingMode")}} to the specified value, then applies the updated constraint set.</p>
+This function accepts a {{domxref("MediaStreamTrack")}} and a string indicating the camera facing mode to use, fetches the current constraints, sets the value of the {{domxref("MediaTrackConstraints.facingMode")}} to the specified value, then applies the updated constraint set.
 
-<h3 id="Getting_the_current_settings_for_a_track">Getting the current settings for a track</h3>
+### Getting the current settings for a track
 
-<p>Unless you only use exact constraints (which is pretty restrictive, so be sure you mean it!), there's no guarantee exactly what you're going to actually get after the constraints are applied. The values of the constrainable properties as they actually are in the resulting media are referred to as the settings. If you need to know the true format and other properties of the media, you can obtain those settings by calling {{domxref("MediaStreamTrack.getSettings()")}}. This returns an object based on the dictionary {{domxref("MediaTrackSettings")}}. For example:</p>
+Unless you only use exact constraints (which is pretty restrictive, so be sure you mean it!), there's no guarantee exactly what you're going to actually get after the constraints are applied. The values of the constrainable properties as they actually are in the resulting media are referred to as the settings. If you need to know the true format and other properties of the media, you can obtain those settings by calling {{domxref("MediaStreamTrack.getSettings()")}}. This returns an object based on the dictionary {{domxref("MediaTrackSettings")}}. For example:
 
-<pre class="brush: js">function whichCamera(track) {
+```js
+function whichCamera(track) {
   return track.getSettings().facingMode;
-}</pre>
+}
+```
 
-<p>This function uses <code>getSettings()</code> to obtain the track's currently in-use values for the constrainable properties and returns the value of {{domxref("MediaTrackSettings.facingMode", "facingMode")}}.</p>
+This function uses `getSettings()` to obtain the track's currently in-use values for the constrainable properties and returns the value of {{domxref("MediaTrackSettings.facingMode", "facingMode")}}.
 
-<h2 id="Example_Constraint_exerciser">Example: Constraint exerciser</h2>
+## Example: Constraint exerciser
 
-<p>In this example, we create an exerciser which lets you experiment with media constraints by editing the source code describing the constraint sets for audio and video tracks. You can then apply those changes and see the result, including both what the stream looks like and what the actual media settings are set to after applying the new constraints.</p>
+In this example, we create an exerciser which lets you experiment with media constraints by editing the source code describing the constraint sets for audio and video tracks. You can then apply those changes and see the result, including both what the stream looks like and what the actual media settings are set to after applying the new constraints.
 
-<p>The HTML and CSS for this example are pretty simple, and aren't shown here. You can look at the complete example by {{LiveSampleLink("Example_Constraint_exerciser", "clicking here")}}.</p>
+The HTML and CSS for this example are pretty simple, and aren't shown here. You can look at the complete example by {{LiveSampleLink("Example_Constraint_exerciser", "clicking here")}}.
 
-<pre class="brush: html hidden">&lt;p&gt;Experiment with media constraints! Edit the constraint sets for the
+```html hidden
+<p>Experiment with media constraints! Edit the constraint sets for the
    video and audio tracks in the edit boxes on the left, then click the
    "Apply Constraints" button to try them out. The actual settings the
    browser selected and is using are shown in the boxes on the right.
-   Below all of that, you'll see the video itself.&lt;/p&gt;
-&lt;p&gt;Click the "Start" button to begin.&lt;/p&gt;
+   Below all of that, you'll see the video itself.</p>
+<p>Click the "Start" button to begin.</p>
 
-&lt;h3&gt;Constrainable properties available:&lt;/h3&gt;
-&lt;ul id="supportedConstraints"&gt;
-&lt;/ul&gt;
-&lt;div id="startButton" class="button"&gt;
+<h3>Constrainable properties available:</h3>
+<ul id="supportedConstraints">
+</ul>
+<div id="startButton" class="button">
   Start
-&lt;/div&gt;
-&lt;div class="wrapper"&gt;
-  &lt;div class="trackrow"&gt;
-    &lt;div class="leftside"&gt;
-      &lt;h3&gt;Requested video constraints:&lt;/h3&gt;
-      &lt;textarea id="videoConstraintEditor" cols=32 rows=8&gt;&lt;/textarea&gt;
-    &lt;/div&gt;
-    &lt;div class="rightside"&gt;
-      &lt;h3&gt;Actual video settings:&lt;/h3&gt;
-      &lt;textarea id="videoSettingsText" cols=32 rows=8 disabled&gt;&lt;/textarea&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="trackrow"&gt;
-    &lt;div class="leftside"&gt;
-      &lt;h3&gt;Requested audio constraints:&lt;/h3&gt;
-      &lt;textarea id="audioConstraintEditor" cols=32 rows=8&gt;&lt;/textarea&gt;
-    &lt;/div&gt;
-    &lt;div class="rightside"&gt;
-      &lt;h3&gt;Actual audio settings:&lt;/h3&gt;
-      &lt;textarea id="audioSettingsText" cols=32 rows=8 disabled&gt;&lt;/textarea&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
+</div>
+<div class="wrapper">
+  <div class="trackrow">
+    <div class="leftside">
+      <h3>Requested video constraints:</h3>
+      <textarea id="videoConstraintEditor" cols=32 rows=8></textarea>
+    </div>
+    <div class="rightside">
+      <h3>Actual video settings:</h3>
+      <textarea id="videoSettingsText" cols=32 rows=8 disabled></textarea>
+    </div>
+  </div>
+  <div class="trackrow">
+    <div class="leftside">
+      <h3>Requested audio constraints:</h3>
+      <textarea id="audioConstraintEditor" cols=32 rows=8></textarea>
+    </div>
+    <div class="rightside">
+      <h3>Actual audio settings:</h3>
+      <textarea id="audioSettingsText" cols=32 rows=8 disabled></textarea>
+    </div>
+  </div>
 
-  &lt;div class="button" id="applyButton"&gt;
+  <div class="button" id="applyButton">
     Apply Constraints
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;video id="video" autoplay&gt;&lt;/video&gt;
+  </div>
+</div>
+<video id="video" autoplay></video>
 
-&lt;div class="button" id="stopButton"&gt;
+<div class="button" id="stopButton">
   Stop Video
-&lt;/div&gt;
+</div>
 
-&lt;div id="log"&gt;
-&lt;/div&gt;</pre>
+<div id="log">
+</div>
+```
 
-<pre class="brush: css hidden">body {
+```css hidden
+body {
   font: 14px "Open Sans", "Arial", sans-serif;
 }
 
@@ -282,67 +288,72 @@ h3 {
 
 #log {
   padding-top: 10px;
-}</pre>
+}
+```
 
-<h4 id="Defaults_and_variables">Defaults and variables</h4>
+#### Defaults and variables
 
-<p>First we have the default constraint sets, as strings. These strings are presented in editable {{HTMLElement("textarea")}}s, but this is the initial configuration of the stream.</p>
+First we have the default constraint sets, as strings. These strings are presented in editable {{HTMLElement("textarea")}}s, but this is the initial configuration of the stream.
 
-<pre class="brush: js">let videoDefaultConstraintString = '{\n  "width": 320,\n  "height": 240,\n  "frameRate": 30\n}';
+```js
+let videoDefaultConstraintString = '{\n  "width": 320,\n  "height": 240,\n  "frameRate": 30\n}';
 let audioDefaultConstraintString = '{\n  "sampleSize": 16,\n  "channelCount": 2,\n  "echoCancellation": false\n}';
-</pre>
+```
 
-<p>These defaults ask for a pretty common camera configuration, but don't insist on any property being of special importance. The browser should do its best to match these settings but will settle for anything it considers a close match.</p>
+These defaults ask for a pretty common camera configuration, but don't insist on any property being of special importance. The browser should do its best to match these settings but will settle for anything it considers a close match.
 
-<p>Then we initialize the variables which will hold the {{domxref("MediaTrackConstraints")}} objects for the video and audio tracks, as well as the variables which will hold references to the video and audio tracks themselves, to <code>null</code>.</p>
+Then we initialize the variables which will hold the {{domxref("MediaTrackConstraints")}} objects for the video and audio tracks, as well as the variables which will hold references to the video and audio tracks themselves, to `null`.
 
-<pre class="brush: js">let videoConstraints = null;
+```js
+let videoConstraints = null;
 let audioConstraints = null;
 
 let audioTrack = null;
 let videoTrack = null;
-</pre>
+```
 
-<p>And we get references to all of the elements we'll need to access.</p>
+And we get references to all of the elements we'll need to access.
 
-<pre class="brush: js">let videoElement = document.getElementById("video");
+```js
+let videoElement = document.getElementById("video");
 let logElement = document.getElementById("log");
 let supportedConstraintList = document.getElementById("supportedConstraints");
 let videoConstraintEditor = document.getElementById("videoConstraintEditor");
 let audioConstraintEditor = document.getElementById("audioConstraintEditor");
 let videoSettingsText = document.getElementById("videoSettingsText");
 let audioSettingsText = document.getElementById("audioSettingsText");
-</pre>
+```
 
-<p>These elements are:</p>
+These elements are:
 
-<dl>
-	<dt><code>videoElement</code></dt>
-	<dd>The {{HTMLElement("video")}} element that will show the stream.</dd>
-	<dt><code>logElement</code></dt>
-	<dd>A {{HTMLElement("div")}} into which any error messages or other log-type output will be written.</dd>
-	<dt><code>supportedConstraintList</code></dt>
-	<dd>A {{HTMLElement("ul")}} (unordered list) into which we programmatically add the names of each of the constrainable properties supported by the user's browser.</dd>
-	<dt><code>videoConstraintEditor</code></dt>
-	<dd>A {{HTMLElement("textarea")}} element that lets the user edit the code for the video track's constraint set.</dd>
-	<dt><code>audioConstraintEditor</code></dt>
-	<dd>A {{HTMLElement("textarea")}} element that lets the user edit the code for the audio track's constraint set.</dd>
-	<dt><code>videoSettingsText</code></dt>
-	<dd>A {{HTMLElement("textarea")}} (which is always disabled) that displays the current settings for the video track's constrainable properties.</dd>
-	<dt><code>audioSettingsText</code></dt>
-	<dd>A {{HTMLElement("textarea")}} (which is always disabled) that displays the current settings for the audio track's constrainable properties.</dd>
-</dl>
+- `videoElement`
+  - : The {{HTMLElement("video")}} element that will show the stream.
+- `logElement`
+  - : A {{HTMLElement("div")}} into which any error messages or other log-type output will be written.
+- `supportedConstraintList`
+  - : A {{HTMLElement("ul")}} (unordered list) into which we programmatically add the names of each of the constrainable properties supported by the user's browser.
+- `videoConstraintEditor`
+  - : A {{HTMLElement("textarea")}} element that lets the user edit the code for the video track's constraint set.
+- `audioConstraintEditor`
+  - : A {{HTMLElement("textarea")}} element that lets the user edit the code for the audio track's constraint set.
+- `videoSettingsText`
+  - : A {{HTMLElement("textarea")}} (which is always disabled) that displays the current settings for the video track's constrainable properties.
+- `audioSettingsText`
+  - : A {{HTMLElement("textarea")}} (which is always disabled) that displays the current settings for the audio track's constrainable properties.
 
-<p>Finally, we set the current contents of the two constraint set editor elements to the defaults.</p>
+Finally, we set the current contents of the two constraint set editor elements to the defaults.
 
-<pre class="brush: js">videoConstraintEditor.value = videoDefaultConstraintString;
-audioConstraintEditor.value = audioDefaultConstraintString;</pre>
+```js
+videoConstraintEditor.value = videoDefaultConstraintString;
+audioConstraintEditor.value = audioDefaultConstraintString;
+```
 
-<h4 id="Updating_the_settings_display">Updating the settings display</h4>
+#### Updating the settings display
 
-<p>To the right of each of the constraint set editors is a second text box which we use to display the current configuration of the track's configurable properties. This display is updated by the function <code>getCurrentSettings()</code>, which gets the current settings for the audio and video tracks and inserts the corresponding code into the tracks' settings display boxes by setting their {{htmlattrxref("value", "textarea")}}.</p>
+To the right of each of the constraint set editors is a second text box which we use to display the current configuration of the track's configurable properties. This display is updated by the function `getCurrentSettings()`, which gets the current settings for the audio and video tracks and inserts the corresponding code into the tracks' settings display boxes by setting their {{htmlattrxref("value", "textarea")}}.
 
-<pre class="brush: js">function getCurrentSettings() {
+```js
+function getCurrentSettings() {
   if (videoTrack) {
     videoSettingsText.value = JSON.stringify(videoTrack.getSettings(), null, 2);
   }
@@ -350,15 +361,16 @@ audioConstraintEditor.value = audioDefaultConstraintString;</pre>
     audioSettingsText.value = JSON.stringify(audioTrack.getSettings(), null, 2);
   }
 }
-</pre>
+```
 
-<p>This gets called after the stream first starts up, as well as any time we've applied updated constraints, as you'll see below.</p>
+This gets called after the stream first starts up, as well as any time we've applied updated constraints, as you'll see below.
 
-<h4 id="Building_the_track_constraint_set_objects">Building the track constraint set objects</h4>
+#### Building the track constraint set objects
 
-<p>The <code>buildConstraints()</code> function builds the {{domxref("MediaTrackConstraints")}} objects for the audio and video tracks using the code in the two tracks' constraint set edit boxes.</p>
+The `buildConstraints()` function builds the {{domxref("MediaTrackConstraints")}} objects for the audio and video tracks using the code in the two tracks' constraint set edit boxes.
 
-<pre class="brush: js">function buildConstraints() {
+```js
+function buildConstraints() {
   try {
     videoConstraints = JSON.parse(videoConstraintEditor.value);
     audioConstraints = JSON.parse(audioConstraintEditor.value);
@@ -366,15 +378,16 @@ audioConstraintEditor.value = audioDefaultConstraintString;</pre>
     handleError(error);
   }
 }
-</pre>
+```
 
-<p>This uses {{jsxref("JSON.parse()")}} to parse the code in each editor into an object. If either call to JSON.parse() throws an exception, <code>handleError()</code> is called to output the error message to the log.</p>
+This uses {{jsxref("JSON.parse()")}} to parse the code in each editor into an object. If either call to JSON.parse() throws an exception, `handleError()` is called to output the error message to the log.
 
-<h4 id="Configuring_and_starting_the_stream">Configuring and starting the stream</h4>
+#### Configuring and starting the stream
 
-<p>The <code>startVideo()</code> method handles setting up and starting the video stream.</p>
+The `startVideo()` method handles setting up and starting the video stream.
 
-<pre class="brush: js">function startVideo() {
+```js
+function startVideo() {
   buildConstraints();
   navigator.mediaDevices.getUserMedia({
     video: videoConstraints,
@@ -398,39 +411,37 @@ audioConstraintEditor.value = audioDefaultConstraintString;</pre>
     getCurrentSettings();
   }).catch(handleError);
 }
-</pre>
+```
 
-<p>There are several steps here:</p>
+There are several steps here:
 
-<ol>
-	<li>It calls <code>buildConstraints()</code> to create the {{domxref("MediaTrackConstraints")}} objects for the two tracks from the code in the edit boxes.</li>
-	<li>It calls {{domxref("MediaDevices.getUserMedia", "navigator.mediaDevices.getUserMedia()")}}, passing in the constraints objects for the video and audio tracks. This returns a {{domxref("MediaStream")}} with the audio and video from a source matching the inputs (typically a webcam, although if you provide the right constraints you can get media from other sources).</li>
-	<li>When the stream is obtained, it's attached to the {{HTMLElement("video")}} element so that it's visible on screen, and we grab the audio track and video track into the variables <code>audioTrack</code> and <code>videoTrack</code>.</li>
-	<li>Then we set up a promise which resolves when the {{event("onloadedmetadata")}} event occurs on the video element.</li>
-	<li>When that happens, we know the video has started playing, so we call our <code>getCurrentSettings()</code> function (described above) to display the actual settings that the browser decided upon after considering our constraints and the capabilities of the hardware.</li>
-	<li>If an error occurs, we log it using the <code>handleError()</code> method that we'll look at farther down in this article.</li>
-</ol>
+1.  It calls `buildConstraints()` to create the {{domxref("MediaTrackConstraints")}} objects for the two tracks from the code in the edit boxes.
+2.  It calls {{domxref("MediaDevices.getUserMedia", "navigator.mediaDevices.getUserMedia()")}}, passing in the constraints objects for the video and audio tracks. This returns a {{domxref("MediaStream")}} with the audio and video from a source matching the inputs (typically a webcam, although if you provide the right constraints you can get media from other sources).
+3.  When the stream is obtained, it's attached to the {{HTMLElement("video")}} element so that it's visible on screen, and we grab the audio track and video track into the variables `audioTrack` and `videoTrack`.
+4.  Then we set up a promise which resolves when the {{event("onloadedmetadata")}} event occurs on the video element.
+5.  When that happens, we know the video has started playing, so we call our `getCurrentSettings()` function (described above) to display the actual settings that the browser decided upon after considering our constraints and the capabilities of the hardware.
+6.  If an error occurs, we log it using the `handleError()` method that we'll look at farther down in this article.
 
-<p>We also need to set up an event listener to watch for the "Start Video" button to be clicked:</p>
+We also need to set up an event listener to watch for the "Start Video" button to be clicked:
 
-<pre class="brush: js">document.getElementById("startButton").addEventListener("click", function() {
+```js
+document.getElementById("startButton").addEventListener("click", function() {
   startVideo();
 }, false);
-</pre>
+```
 
-<h4 id="Applying_constraint_set_updates">Applying constraint set updates</h4>
+#### Applying constraint set updates
 
-<p>Next, we set up an event listener for the "Apply Constraints" button. If it's clicked and there's not already media in use, we call <code>startVideo()</code>, and let that function handle starting the stream with the specified settings in place. Otherwise, we follow these steps to apply the updated constraints to the already-active stream:</p>
+Next, we set up an event listener for the "Apply Constraints" button. If it's clicked and there's not already media in use, we call `startVideo()`, and let that function handle starting the stream with the specified settings in place. Otherwise, we follow these steps to apply the updated constraints to the already-active stream:
 
-<ol>
-	<li><code>buildConstraints()</code> is called to construct updated {{domxref("MediaTrackConstraints")}} objects for the audio track (<code>audioConstraints</code>) and the video track (<code>videoConstraints</code>).</li>
-	<li>{{domxref("MediaStreamTrack.applyConstraints()")}} is called on the video track (if there is one) to apply the new <code>videoConstraints</code>. If this succeeds, the contents of the video track's current settings box are updated based on the result of calling its {{domxref("MediaStreamTrack.getSettings", "getSettings()")}} method.</li>
-	<li>Once that's done, <code>applyConstraints()</code> is called on the audio track (if there is one) to apply the new audio constraints. If this succeeds, the contents of the audio track's current settings box are updated based on the result of calling its {{domxref("MediaStreamTrack.getSettings", "getSettings()")}} method.</li>
-	<li>If an error occurs applying either set of constraints, <code>handleError()</code> is used to output a message into the log.</li>
-</ol>
+1.  `buildConstraints()` is called to construct updated {{domxref("MediaTrackConstraints")}} objects for the audio track (`audioConstraints`) and the video track (`videoConstraints`).
+2.  {{domxref("MediaStreamTrack.applyConstraints()")}} is called on the video track (if there is one) to apply the new `videoConstraints`. If this succeeds, the contents of the video track's current settings box are updated based on the result of calling its {{domxref("MediaStreamTrack.getSettings", "getSettings()")}} method.
+3.  Once that's done, `applyConstraints()` is called on the audio track (if there is one) to apply the new audio constraints. If this succeeds, the contents of the audio track's current settings box are updated based on the result of calling its {{domxref("MediaStreamTrack.getSettings", "getSettings()")}} method.
+4.  If an error occurs applying either set of constraints, `handleError()` is used to output a message into the log.
 
-<pre class="brush: js">document.getElementById("applyButton").addEventListener("click", function() {
-  if (!videoTrack &amp;&amp; !audioTrack) {
+```js
+document.getElementById("applyButton").addEventListener("click", function() {
+  if (!videoTrack && !audioTrack) {
     startVideo();
   } else {
     buildConstraints();
@@ -447,13 +458,14 @@ audioConstraintEditor.value = audioDefaultConstraintString;</pre>
     }
   }
 }, false);
-</pre>
+```
 
-<h4 id="Handling_the_stop_button">Handling the stop button</h4>
+#### Handling the stop button
 
-<p>Then we set up the handler for the stop button.</p>
+Then we set up the handler for the stop button.
 
-<pre class="brush: js">document.getElementById("stopButton").addEventListener("click", function() {
+```js
+document.getElementById("stopButton").addEventListener("click", function() {
   if (videoTrack) {
     videoTrack.stop();
   }
@@ -464,15 +476,16 @@ audioConstraintEditor.value = audioDefaultConstraintString;</pre>
   videoTrack = audioTrack = null;
   videoElement.srcObject = null;
 });
-</pre>
+```
 
-<p>This stops the active tracks, sets the <code>videoTrack</code> and <code>audioTrack</code> variables to <code>null</code> so we know they're gone, and removes the stream from the {{HTMLElement("video")}} element by setting {{domxref("HTMLMediaElement.srcObject")}} to <code>null</code>.</p>
+This stops the active tracks, sets the `videoTrack` and `audioTrack` variables to `null` so we know they're gone, and removes the stream from the {{HTMLElement("video")}} element by setting {{domxref("HTMLMediaElement.srcObject")}} to `null`.
 
-<h4 id="Simple_tab_support_in_the_editor">Simple tab support in the editor</h4>
+#### Simple tab support in the editor
 
-<p>This code adds simple support for tabs to the {{HTMLElement("textarea")}} elements by making the tab key insert two space characters when either constraint edit box is focused.</p>
+This code adds simple support for tabs to the {{HTMLElement("textarea")}} elements by making the tab key insert two space characters when either constraint edit box is focused.
 
-<pre class="brush: js">function keyDownHandler(event) {
+```js
+function keyDownHandler(event) {
   if (event.key == "Tab") {
     let elem = event.target;
     let str = elem.value;
@@ -488,82 +501,80 @@ audioConstraintEditor.value = audioDefaultConstraintString;</pre>
 
 videoConstraintEditor.addEventListener("keydown", keyDownHandler, false);
 audioConstraintEditor.addEventListener("keydown", keyDownHandler, false);
-</pre>
+```
 
-<h4 id="Show_constrainable_properties_the_browser_supports">Show constrainable properties the browser supports</h4>
+#### Show constrainable properties the browser supports
 
-<p>The last significant piece of the puzzle: code that displays, for the user's reference, a list of the constrainable properties which their browser supports. Each property is a link to its documentation on MDN for the user's convenience. See the {{SectionOnPage("/en-US/docs/Web/API/MediaDevices/getSupportedConstraints", "Example")}} for details on how this code works.</p>
+The last significant piece of the puzzle: code that displays, for the user's reference, a list of the constrainable properties which their browser supports. Each property is a link to its documentation on MDN for the user's convenience. See the {{SectionOnPage("/en-US/docs/Web/API/MediaDevices/getSupportedConstraints", "Example")}} for details on how this code works.
 
-<div class="note">
-<p><strong>Note:</strong> Of course, there may be non-standard properties in this list, in which case you probably will find that the documentation link doesn't help much.</p>
-</div>
+> **Note:** Of course, there may be non-standard properties in this list, in which case you probably will find that the documentation link doesn't help much.
 
-<pre class="brush: js">let supportedConstraints = navigator.mediaDevices.getSupportedConstraints();
+```js
+let supportedConstraints = navigator.mediaDevices.getSupportedConstraints();
 for (let constraint in supportedConstraints) {
   if (supportedConstraints.hasOwnProperty(constraint)) {
     let elem = document.createElement("li");
 
-    elem.innerHTML = "&lt;code&gt;&lt;a href='https://developer.mozilla.org/docs/Web/API/MediaTrackSupportedConstraints/"
-        .concat(constraint) + "' target='_blank'&gt;" + constraint + "&lt;/a&gt;&lt;/code&gt;";
+    elem.innerHTML = "<code><a href='https://developer.mozilla.org/docs/Web/API/MediaTrackSupportedConstraints/"
+        .concat(constraint) + "' target='_blank'>" + constraint + "</a></code>";
     supportedConstraintList.appendChild(elem);
   }
 }
-</pre>
+```
 
-<h4 id="Error_handling">Error handling</h4>
+#### Error handling
 
-<p>We also have some simple error handling code; <code>handleError()</code> is called to handle promises which fail, and the <code>log()</code> function appends the error message to a special logging {{HTMLElement("div")}} box under the video.</p>
+We also have some simple error handling code; `handleError()` is called to handle promises which fail, and the `log()` function appends the error message to a special logging {{HTMLElement("div")}} box under the video.
 
-<pre class="brush: js">function log(msg) {
-  logElement.innerHTML += (msg + "&lt;br&gt;");
+```js
+function log(msg) {
+  logElement.innerHTML += (msg + "<br>");
 }
 
 function handleError(reason) {
-  log("Error &lt;code&gt;" + reason.name +
-      "&lt;/code&gt; in constraint &lt;code&gt;" + reason.constraint +
-      "&lt;/code&gt;: " + reason.message);
-}</pre>
+  log("Error <code>" + reason.name +
+      "</code> in constraint <code>" + reason.constraint +
+      "</code>: " + reason.message);
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>Here you can see the complete example in action.</p>
+Here you can see the complete example in action.
 
-<p>{{EmbedLiveSample("Example_Constraint_exerciser", 650, 800, "", "", "", "microphone; camera")}}</p>
+{{EmbedLiveSample("Example_Constraint_exerciser", 650, 800, "", "", "", "microphone; camera")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-		<tr>
-			<td>{{SpecName('Media Capture', '#constrainable-interface', 'Constrainable pattern')}}</td>
-			<td>{{Spec2('Media Capture')}}</td>
-			<td>Initial definition.</td>
-		</tr>
-	</tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName('Media Capture', '#constrainable-interface', 'Constrainable pattern')}}
+      </td>
+      <td>{{Spec2('Media Capture')}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<h3 id="MediaDevices.getSupportedConstraints"><code>MediaDevices.getSupportedConstraints</code></h3>
+### `MediaDevices.getSupportedConstraints`
 
-<div>
+{{Compat("api.MediaDevices.getSupportedConstraints")}}
 
-<p>{{Compat("api.MediaDevices.getSupportedConstraints")}}</p>
-</div>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
-	<li><a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a></li>
-	<li>{{domxref("MediaTrackCapabilities")}}</li>
-	<li>{{domxref("MediaTrackConstraints")}}</li>
-	<li>{{domxref("MediaTrackSettings")}}</li>
-	<li>{{domxref("MediaDevices.getSupportedConstraints()")}}</li>
-	<li>{{domxref("MediaStreamTrack.applyConstraints()")}}</li>
-	<li>{{domxref("MediaStreamTrack.getSettings()")}}</li>
-</ul>
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- {{domxref("MediaTrackCapabilities")}}
+- {{domxref("MediaTrackConstraints")}}
+- {{domxref("MediaTrackSettings")}}
+- {{domxref("MediaDevices.getSupportedConstraints()")}}
+- {{domxref("MediaStreamTrack.applyConstraints()")}}
+- {{domxref("MediaStreamTrack.getSettings()")}}

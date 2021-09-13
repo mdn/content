@@ -9,60 +9,57 @@ tags:
   - Reference
 browser-compat: api.BatteryManager.dischargingTime
 ---
-<div>{{deprecated_header}}</div>
+{{deprecated_header}}{{APIRef("Battery API")}}
 
-<div>{{APIRef("Battery API")}}</div>
+Indicates the amount of time, in seconds, that remains until the battery is fully
+discharged.
 
-<p>Indicates the amount of time, in seconds, that remains until the battery is fully
-  discharged.</p>
+> **Note:** Even if the time returned is precise to the second, browsers round them to a higher
+> interval (typically to the closest 15 minutes) for privacy reasons.
 
-<div class="note">
-  <p><strong>Note:</strong> Even if the time returned is precise to the second, browsers round them to a higher
-    interval (typically to the closest 15 minutes) for privacy reasons.</p>
-</div>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+var time = battery.dischargingTime
+```
 
-<pre
-  class="brush: js">var <em>time</em> = battery.dischargingTime</pre>
+On return, `time` is the remaining time in seconds until the
+`battery`, which is a {{domxref("BatteryManager")}} object, is fully
+discharged and the system will suspend. This value is
+[`Infinity`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity)
+if the battery is currently charging rather than discharging, or if the system is unable
+to report the remaining discharging time.
 
-<p>On return, <code>time</code> is the remaining time in seconds until the
-  <code><em>battery</em></code>, which is a {{domxref("BatteryManager")}} object, is fully
-  discharged and the system will suspend. This value is
-  <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity">Infinity</a></code>
-  if the battery is currently charging rather than discharging, or if the system is unable
-  to report the remaining discharging time.</p>
+## Example
 
-<h2 id="Example">Example</h2>
+### HTML Content
 
-<h3 id="HTML_Content">HTML Content</h3>
+```html
+<div id="dischargingTime">(discharging time unknown)</div>
+```
 
-<pre class="brush: html">&lt;div id="dischargingTime"&gt;(discharging time unknown)&lt;/div&gt;
-</pre>
+### JavaScript Content
 
-<h3 id="JavaScript_Content">JavaScript Content</h3>
-
-<pre class="brush: js; ">navigator.getBattery().then(function(battery) {
+```js
+navigator.getBattery().then(function(battery) {
 
     var time = battery.dischargingTime;
 
     document.querySelector('#dischargingTime').textContent = battery.dischargingTime;
 });
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Example', '100%', 30) }}</p>
+{{ EmbedLiveSample('Example', '100%', 30) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("BatteryManager")}}</li>
-  <li>{{domxref("Navigator.getBattery")}}</li>
-</ul>
+- {{domxref("BatteryManager")}}
+- {{domxref("Navigator.getBattery")}}

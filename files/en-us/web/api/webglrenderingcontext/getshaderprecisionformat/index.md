@@ -2,72 +2,67 @@
 title: WebGLRenderingContext.getShaderPrecisionFormat()
 slug: Web/API/WebGLRenderingContext/getShaderPrecisionFormat
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getShaderPrecisionFormat
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The
-  <strong><code>WebGLRenderingContext.getShaderPrecisionFormat()</code></strong> method of
-  the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> returns a new
-  {{domxref("WebGLShaderPrecisionFormat")}} object describing the range and precision for
-  the specified shader numeric format.</p>
+The
+**`WebGLRenderingContext.getShaderPrecisionFormat()`** method of
+the [WebGL API](/en-US/docs/Web/API/WebGL_API) returns a new
+{{domxref("WebGLShaderPrecisionFormat")}} object describing the range and precision for
+the specified shader numeric format.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">WebGLShaderPrecisionFormat <var><em>gl</em>.</var>getShaderPrecisionFormat<var>(shaderType, precisionType);</var>
-</pre>
+```js
+WebGLShaderPrecisionFormat gl.getShaderPrecisionFormat(shaderType, precisionType);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>shaderType</code></dt>
-  <dd>Either a <code>gl.FRAGMENT_SHADER</code> or a <code>gl.VERTEX_SHADER</code>.</dd>
-  <dt><code>precisionType</code></dt>
-  <dd>A precision type value. Either <code>gl.LOW_FLOAT</code>,
-    <code>gl.MEDIUM_FLOAT</code>, <code>gl.HIGH_FLOAT</code>, <code>gl.LOW_INT</code>,
-    <code>gl.MEDIUM_INT</code>, or <code>gl.HIGH_INT</code>.</dd>
-</dl>
+- `shaderType`
+  - : Either a `gl.FRAGMENT_SHADER` or a `gl.VERTEX_SHADER`.
+- `precisionType`
+  - : A precision type value. Either `gl.LOW_FLOAT`,
+    `gl.MEDIUM_FLOAT`, `gl.HIGH_FLOAT`, `gl.LOW_INT`,
+    `gl.MEDIUM_INT`, or `gl.HIGH_INT`.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("WebGLShaderPrecisionFormat")}} object or <code>null</code>, if an error
-  occurs.</p>
+A {{domxref("WebGLShaderPrecisionFormat")}} object or `null`, if an error
+occurs.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<ul>
-  <li><code>gl.INVALID_ENUM</code> if the shader or precision types aren't recognized.
-  </li>
-  <li><code>gl.INVALID_OPERATION</code> if the shader compiler isn't supported.</li>
-</ul>
+- `gl.INVALID_ENUM` if the shader or precision types aren't recognized.
+- `gl.INVALID_OPERATION` if the shader compiler isn't supported.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following code gets the precision format of a <code>gl.VERTEX_SHADER</code> with a
-  <code>gl.MEDIUM_FLOAT</code> precision type.</p>
+The following code gets the precision format of a `gl.VERTEX_SHADER` with a
+`gl.MEDIUM_FLOAT` precision type.
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 
 gl.getShaderPrecisionFormat(gl.VERTEX_SHADER, gl.MEDIUM_FLOAT);
 // WebGLShaderPrecisionFormat { rangeMin: 127, rangeMax: 127, precision: 23 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLShaderPrecisionFormat")}}</li>
-</ul>
+- {{domxref("WebGLShaderPrecisionFormat")}}

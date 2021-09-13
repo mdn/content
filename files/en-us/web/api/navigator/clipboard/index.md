@@ -2,66 +2,69 @@
 title: Navigator.clipboard
 slug: Web/API/Navigator/clipboard
 tags:
-- API
-- Clip
-- Clipboard
-- Cut
-- Navigator
-- Pasteboard
-- Property
-- Read-only
-- Reference
-- copy
-- paste
+  - API
+  - Clip
+  - Clipboard
+  - Cut
+  - Navigator
+  - Pasteboard
+  - Property
+  - Read-only
+  - Reference
+  - copy
+  - paste
 browser-compat: api.Navigator.clipboard
 ---
-<p>The <a href="/en-US/docs/Web/API/Clipboard_API">Clipboard
-      API</a> adds to the <strong>{{domxref("Navigator")}}</strong> interface the
-    read-only <strong><code>clipboard</code></strong> property, which returns the
-    {{domxref("Clipboard")}} object used to read and write the clipboard's
-    contents.</p>
+The [Clipboard
+API](/en-US/docs/Web/API/Clipboard_API) adds to the **{{domxref("Navigator")}}** interface the
+read-only **`clipboard`** property, which returns the
+{{domxref("Clipboard")}} object used to read and write the clipboard's
+contents.
 
-<p>The Clipboard API can be used to implement cut, copy, and paste
-  features within a web application.</p>
+The Clipboard API can be used to implement cut, copy, and paste
+features within a web application.
 
-<p>Use of the asynchronous clipboard read and write methods requires that the user grant
-  the web site or app permission to access the clipboard. This permission must be obtained
-  from the <a href="/en-US/docs/Web/API/Permissions_API">Permissions API</a> using the
-  <code>"clipboard-read"</code> and/or <code>"clipboard-write"</code> permissions.</p>
+Use of the asynchronous clipboard read and write methods requires that the user grant
+the web site or app permission to access the clipboard. This permission must be obtained
+from the [Permissions API](/en-US/docs/Web/API/Permissions_API) using the
+`"clipboard-read"` and/or `"clipboard-write"` permissions.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>theClipboard</em> = navigator.clipboard;
-</pre>
+```js
+theClipboard = navigator.clipboard;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>The {{domxref("Clipboard")}} object used to access the system clipboard.</p>
+The {{domxref("Clipboard")}} object used to access the system clipboard.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following code uses <code>navigator.clipboard</code> to access the system clipboard
-  in order to read the contents of the clipboard.</p>
+The following code uses `navigator.clipboard` to access the system clipboard
+in order to read the contents of the clipboard.
 
-<pre class="brush: js">navigator.clipboard.readText().then(
-  clipText =&gt; document.querySelector(".cliptext").innerText = clipText);</pre>
+```js
+navigator.clipboard.readText().then(
+  clipText => document.querySelector(".cliptext").innerText = clipText);
+```
 
-<p>This snippet replaces the contents of the element whose class is
-  <code>"cliptext"</code> with the text contents of the clipboard. Perhaps this code is
-  being used in a browser extension that displays the current clipboard contents,
-  automatically updating periodically or when specific events fire.</p>
+This snippet replaces the contents of the element whose class is
+`"cliptext"` with the text contents of the clipboard. Perhaps this code is
+being used in a browser extension that displays the current clipboard contents,
+automatically updating periodically or when specific events fire.
 
-<p>If the clipboard is empty or doesn't contain text, the <code>"cliptext"</code>
-  element's contents are cleared. This happens because {{domxref("Clipboard.readText",
+If the clipboard is empty or doesn't contain text, the `"cliptext"`
+element's contents are cleared. This happens because {{domxref("Clipboard.readText",
   "readText()")}} returns an empty string if the clipboard is empty or doesn't contain
-  text.</p>
+text.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<div>{{APIRef("Clipboard API")}}</div>
+{{APIRef("Clipboard API")}}

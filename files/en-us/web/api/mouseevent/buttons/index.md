@@ -2,70 +2,68 @@
 title: MouseEvent.buttons
 slug: Web/API/MouseEvent/buttons
 tags:
-- API
-- DOM
-- DOM Events
-- Property
-- Read-only
-- Reference
-- UIEvent
+  - API
+  - DOM
+  - DOM Events
+  - Property
+  - Read-only
+  - Reference
+  - UIEvent
 browser-compat: api.MouseEvent.buttons
 ---
-<div>{{APIRef("DOM Events")}}</div>
+{{APIRef("DOM Events")}}
 
-<p>The <strong><code>MouseEvent.buttons</code></strong> read-only
-		property indicates which buttons are pressed on the mouse (or other input device)
-		when a mouse event is triggered.</p>
+The **`MouseEvent.buttons`** read-only
+property indicates which buttons are pressed on the mouse (or other input device)
+when a mouse event is triggered.
 
-<p>Each button that can be pressed is represented by a given number (see below). If more
-	than one button is pressed, the button values are added together to produce a new
-	number. For example, if the secondary (<code>2</code>) and auxilary (<code>4</code>)
-	buttons are pressed simultaneously, the value is <code>6</code> (i.e.,
-	<code>2 + 4</code>).</p>
+Each button that can be pressed is represented by a given number (see below). If more
+than one button is pressed, the button values are added together to produce a new
+number. For example, if the secondary (`2`) and auxilary (`4`)
+buttons are pressed simultaneously, the value is `6` (i.e.,
+`2 + 4`).
 
-<div class="note">
-	<p><strong>Note:</strong> Do not confuse this property with the
-		{{domxref("MouseEvent.button")}} property. The {{domxref("MouseEvent.buttons")}}
-		property indicates the state of buttons pressed during any kind of mouse event,
-		while the {{domxref("MouseEvent.button")}} property only guarantees the correct
-		value for mouse events caused by pressing or releasing one or multiple buttons.
-	</p>
-</div>
+> **Note:** Do not confuse this property with the
+> {{domxref("MouseEvent.button")}} property. The {{domxref("MouseEvent.buttons")}}
+> property indicates the state of buttons pressed during any kind of mouse event,
+> while the {{domxref("MouseEvent.button")}} property only guarantees the correct
+> value for mouse events caused by pressing or releasing one or multiple buttons.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>buttonsPressed</em> = <em>instanceOfMouseEvent</em>.buttons
-</pre>
+```js
+var buttonsPressed = instanceOfMouseEvent.buttons
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A number representing one or more buttons. For more than one button pressed
-	simultaneously, the values are combined (e.g., <code>3</code> is primary + secondary).
-</p>
+A number representing one or more buttons. For more than one button pressed
+simultaneously, the values are combined (e.g., `3` is primary + secondary).
 
-<ul>
-	<li><code>0 </code> : No button or un-initialized</li>
-	<li><code>1 </code> : Primary button (usually the left button)</li>
-	<li><code>2 </code> : Secondary button (usually the right button)</li>
-	<li><code>4 </code> : Auxiliary button (usually the mouse wheel button or middle
-		button)</li>
-	<li><code>8 </code> : 4th button (typically the "Browser Back" button)</li>
-	<li><code>16</code> : 5th button (typically the "Browser Forward" button)</li>
-</ul>
+- `0 `: No button or un-initialized
+- `1 `: Primary button (usually the left button)
+- `2 `: Secondary button (usually the right button)
+- `4 `: Auxiliary button (usually the mouse wheel button or middle
+  button)
+- `8 `: 4th button (typically the "Browser Back" button)
+- `16` : 5th button (typically the "Browser Forward" button)
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example logs the <code>buttons</code> property when you trigger a
-	{{Event("mousedown")}} event.</p>
+This example logs the `buttons` property when you trigger a
+{{Event("mousedown")}} event.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Click anywhere with one or more mouse buttons.&lt;/p&gt;
-&lt;pre id="log"&gt;buttons: &lt;/pre&gt;</pre>
+```html
+<p>Click anywhere with one or more mouse buttons.</p>
+<pre id="log">buttons: </pre>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">let log = document.createTextNode('?');   // let log = new Text('?');
+```js
+let log = document.createTextNode('?');   // let log = new Text('?');
 
 function logButtons(e) {
   log.data = `${e.buttons} (${e.type})`;  // log.nodeValue= `${e.buttons} (${e.type})`;
@@ -75,43 +73,40 @@ document.addEventListener('mouseup', logButtons);
 document.addEventListener('mousedown', logButtons);
 // document.addEventListener('mousemove', logButtons);
 
-document.querySelector('#log').appendChild(log)</pre>
+document.querySelector('#log').appendChild(log)
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h3 id="Firefox_notes">Firefox notes</h3>
+### Firefox notes
 
-<p>Firefox supports the <code>buttons</code> attribute on Windows, Linux (GTK), and macOS
-	with the following restrictions:</p>
+Firefox supports the `buttons` attribute on Windows, Linux (GTK), and macOS
+with the following restrictions:
 
-<ul>
-	<li>Utilities allow customization of button actions. Therefore, <em>primary</em> might
-		not be the left button on the device, <em>secondary</em> might not be the right
-		button, and so on. Moreover, the middle (wheel) button, 4th button, and 5th button
-		might not be assigned a value, even when they are pressed.</li>
-	<li>Single-button devices may emulate additional buttons with combinations of button
-		and keyboard presses.</li>
-	<li>Touch devices may emulate buttons with configurable gestures (e.g., one-finger
-		touch for <em>primary</em>, two-finger touch for <em>secondary</em>, etc.).</li>
-	<li>On Linux (GTK), the 4th button and the 5th button are not supported. In addition,
-		a {{Event("mouseup")}} event always includes the releasing button information in
-		the <code>buttons</code> value.</li>
-	<li>On Mac OS X 10.5, the <code>buttons</code> attribute always returns <code>0</code>
-		because there is no platform API for implementing this feature.</li>
-</ul>
+- Utilities allow customization of button actions. Therefore, _primary_ might
+  not be the left button on the device, _secondary_ might not be the right
+  button, and so on. Moreover, the middle (wheel) button, 4th button, and 5th button
+  might not be assigned a value, even when they are pressed.
+- Single-button devices may emulate additional buttons with combinations of button
+  and keyboard presses.
+- Touch devices may emulate buttons with configurable gestures (e.g., one-finger
+  touch for _primary_, two-finger touch for _secondary_, etc.).
+- On Linux (GTK), the 4th button and the 5th button are not supported. In addition,
+  a {{Event("mouseup")}} event always includes the releasing button information in
+  the `buttons` value.
+- On Mac OS X 10.5, the `buttons` attribute always returns `0`
+  because there is no platform API for implementing this feature.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{domxref("MouseEvent")}}</li>
-</ul>
+- {{domxref("MouseEvent")}}

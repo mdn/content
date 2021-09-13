@@ -10,73 +10,67 @@ tags:
   - Response
 browser-compat: api.Response.Response
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p>The <code><strong>Response()</strong></code> constructor creates a new
-  {{domxref("Response")}} object.</p>
+The **`Response()`** constructor creates a new
+{{domxref("Response")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>myResponse</var> = new Response(<var>body</var>, <var>init</var>);</pre>
+```js
+var myResponse = new Response(body, init);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><em>body</em> {{optional_inline}}</dt>
-  <dd>An object defining a body for the response. This can be <code>null</code> (which is
+- _body_ {{optional_inline}}
+
+  - : An object defining a body for the response. This can be `null` (which is
     the default value), or one of:
-    <ul>
-      <li>{{domxref("Blob")}}</li>
-      <li>{{domxref("BufferSource")}}</li>
-      <li>{{domxref("FormData")}}</li>
-      <li>{{domxref("ReadableStream")}}</li>
-      <li>{{domxref("URLSearchParams")}}</li>
-      <li>{{domxref("USVString")}}</li>
-    </ul>
-  </dd>
-  <dt><em>init</em> {{optional_inline}}</dt>
-  <dd>An options object containing any custom settings that you want to apply to the
+
+    - {{domxref("Blob")}}
+    - {{domxref("BufferSource")}}
+    - {{domxref("FormData")}}
+    - {{domxref("ReadableStream")}}
+    - {{domxref("URLSearchParams")}}
+    - {{domxref("USVString")}}
+
+- _init_ {{optional_inline}}
+
+  - : An options object containing any custom settings that you want to apply to the
     response, or an empty object (which is the default value). The possible options are:
-    <ul>
-      <li><code>status</code>: The status code for the response, e.g., <code>200</code>.
-      </li>
-      <li><code>statusText</code>: The status message associated with the status code,
-        e.g., <code>OK</code>.</li>
-      <li><code>headers</code>: Any headers you want to add to your response, contained
-        within a {{domxref("Headers")}} object or object literal of
-        {{jsxref("String")}} key/value pairs (see <a
-          href="/en-US/docs/Web/HTTP/Headers">HTTP headers</a> for a reference).</li>
-    </ul>
-  </dd>
-</dl>
 
-<h2 id="Examples">Examples</h2>
+    - `status`: The status code for the response, e.g., `200`.
+    - `statusText`: The status message associated with the status code,
+      e.g., `OK`.
+    - `headers`: Any headers you want to add to your response, contained
+      within a {{domxref("Headers")}} object or object literal of
+      {{jsxref("String")}} key/value pairs (see [HTTP headers](/en-US/docs/Web/HTTP/Headers) for a reference).
 
-<p>In our <a href="https://github.com/mdn/fetch-examples/tree/master/fetch-response">Fetch
-    Response example</a> (see <a
-    href="https://mdn.github.io/fetch-examples/fetch-response/">Fetch Response live</a>)
-  we create a new <code>Response</code> object using the constructor, passing it a new
-  {{domxref("Blob")}} as a body, and an init object containing a custom
-  <code>status</code> and <code>statusText</code>:</p>
+## Examples
 
-<pre class="brush: js">var myBlob = new Blob();
+In our [Fetch
+Response example](https://github.com/mdn/fetch-examples/tree/master/fetch-response) (see [Fetch Response live](https://mdn.github.io/fetch-examples/fetch-response/))
+we create a new `Response` object using the constructor, passing it a new
+{{domxref("Blob")}} as a body, and an init object containing a custom
+`status` and `statusText`:
+
+```js
+var myBlob = new Blob();
 var init = { "status" : 200 , "statusText" : "SuperSmashingGreat!" };
-var myResponse = new Response(myBlob,init);</pre>
+var myResponse = new Response(myBlob,init);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
-  <li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a>
-  </li>
-  <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP](/en-US/docs/Web/HTTP)

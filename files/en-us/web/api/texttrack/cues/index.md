@@ -9,35 +9,37 @@ tags:
   - TextTrack
 browser-compat: api.TextTrack.cues
 ---
-<div>{{APIRef("WebVTT")}}</div>
+{{APIRef("WebVTT")}}
 
-<p>The <strong><code>cues</code></strong> read-only property of the {{domxref("TextTrack")}} interface returns a {{domxref("TextTrackCueList")}} object containing all of the track's cues.</p>
+The **`cues`** read-only property of the {{domxref("TextTrack")}} interface returns a {{domxref("TextTrackCueList")}} object containing all of the track's cues.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let cues = TextTrack.cues;</pre>
+```js
+let cues = TextTrack.cues;
+```
 
-<h3>Value</h3>
-<p>A {{domxref("TextTrackCueList")}} object.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("TextTrackCueList")}} object.
 
-<p>In the following example two cues are added to a video text track using <code>addCue()</code>. The value of <code>cues</code> is printed to the console. The returned {{domxref("TextTrackCueList")}} object contains the two cues.</p>
+## Examples
 
-<pre class="brush: js">let video = document.querySelector('video');
+In the following example two cues are added to a video text track using `addCue()`. The value of `cues` is printed to the console. The returned {{domxref("TextTrackCueList")}} object contains the two cues.
+
+```js
+let video = document.querySelector('video');
 let track = video.addTextTrack("captions", "Captions", "en");
 track.mode = "showing";
 track.addCue(new VTTCue(0, 0.9, 'Hildy!'));
 track.addCue(new VTTCue(1, 1.4, 'How are you?'));
 console.log(track.cues);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-
-<p>{{Compat}}</p>
-
+{{Compat}}

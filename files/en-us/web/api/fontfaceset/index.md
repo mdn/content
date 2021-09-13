@@ -11,49 +11,43 @@ tags:
   - Reference
 browser-compat: api.FontFaceSet
 ---
-<div>{{APIRef("CSS Font Loading API")}}{{SeeCompatTable}}</div>
+{{APIRef("CSS Font Loading API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>FontFaceSet</code></strong> interface of the <a href="/en-US/docs/Web/API/CSS_Font_Loading_API">CSS Font Loading API</a> manages the loading of font-faces and querying of their download status.It is available as document.fonts.</p>
+The **`FontFaceSet`** interface of the [CSS Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API) manages the loading of font-faces and querying of their download status.It is available as document.fonts.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("FontFaceSet.status")}} {{readonlyinline}}</dt>
- <dd>Indicates the font-face's loading status. It will be one of <code>'loading'</code> or <code>'loaded'</code>.</dd>
- <dt>{{domxref("FontFaceSet.ready", "FontFaceSet.ready")}} {{readonlyinline}}</dt>
- <dd>{{jsxref("Promise")}} which resolves once font loading and layout operations have completed.</dd>
-</dl>
+- {{domxref("FontFaceSet.status")}} {{readonlyinline}}
+  - : Indicates the font-face's loading status. It will be one of `'loading'` or `'loaded'`.
+- {{domxref("FontFaceSet.ready", "FontFaceSet.ready")}} {{readonlyinline}}
+  - : {{jsxref("Promise")}} which resolves once font loading and layout operations have completed.
 
-<h3 id="Events">Events</h3>
+### Events
 
-<dl>
- <dt>{{domxref("FontFaceSet.onloading")}}</dt>
- <dd>An {{domxref("EventListener")}} called whenever an event of type {{event("loading")}} is fired, indicating a font-face set has started loading.</dd>
- <dt>{{domxref("FontFaceSet.onloadingdone")}}</dt>
- <dd>An {{domxref("EventListener")}} called whenever an event of type {{event("loadingdone")}} is fired, indicating that a font face set has finished loading.</dd>
- <dt>{{domxref("FontFaceSet.onloadingerror")}}</dt>
- <dd>An {{domxref("EventListener")}} called whenever an event of type {{event("loadingerror")}} is fired, indicating that an error occurred whilst loading a font-face set.</dd>
-</dl>
+- {{domxref("FontFaceSet.onloading")}}
+  - : An {{domxref("EventListener")}} called whenever an event of type {{event("loading")}} is fired, indicating a font-face set has started loading.
+- {{domxref("FontFaceSet.onloadingdone")}}
+  - : An {{domxref("EventListener")}} called whenever an event of type {{event("loadingdone")}} is fired, indicating that a font face set has finished loading.
+- {{domxref("FontFaceSet.onloadingerror")}}
+  - : An {{domxref("EventListener")}} called whenever an event of type {{event("loadingerror")}} is fired, indicating that an error occurred whilst loading a font-face set.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("FontFaceSet.add","FontFaceSet.add()")}}</dt>
- <dd>Adds a font to the font set.</dd>
- <dt>{{domxref("FontFaceSet.check","FontFaceSet.check()")}}</dt>
- <dd>A boolean value that indicates whether a font is loaded, but doesn't initiate a load when it isn't.</dd>
- <dt>{{domxref("FontFaceSet.clear", "FontFaceSet.clear()")}}</dt>
- <dd>Removes all manually-added fonts from the font set. <a href="https://www.w3.org/TR/css-font-loading-3/#css-connected">CSS-connected</a> fonts are unaffected.</dd>
- <dt>{{domxref("FontFaceSet.delete","FontFaceSet.delete()")}}</dt>
- <dd>Removes a manually-added font from the font set. <a href="https://www.w3.org/TR/css-font-loading-3/#css-connected">CSS-connected</a> fonts are unaffected.</dd>
- <dt>{{domxref("FontFaceSet.load","FontFaceSet.load()")}}</dt>
- <dd>Returns a {{jsxref("Promise")}} which resolves to a list of font-faces for a requested font.</dd>
-</dl>
+- {{domxref("FontFaceSet.add","FontFaceSet.add()")}}
+  - : Adds a font to the font set.
+- {{domxref("FontFaceSet.check","FontFaceSet.check()")}}
+  - : A boolean value that indicates whether a font is loaded, but doesn't initiate a load when it isn't.
+- {{domxref("FontFaceSet.clear", "FontFaceSet.clear()")}}
+  - : Removes all manually-added fonts from the font set. [CSS-connected](https://www.w3.org/TR/css-font-loading-3/#css-connected) fonts are unaffected.
+- {{domxref("FontFaceSet.delete","FontFaceSet.delete()")}}
+  - : Removes a manually-added font from the font set. [CSS-connected](https://www.w3.org/TR/css-font-loading-3/#css-connected) fonts are unaffected.
+- {{domxref("FontFaceSet.load","FontFaceSet.load()")}}
+  - : Returns a {{jsxref("Promise")}} which resolves to a list of font-faces for a requested font.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

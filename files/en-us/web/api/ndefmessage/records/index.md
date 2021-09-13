@@ -8,27 +8,28 @@ tags:
   - Property
 browser-compat: api.NDEFMessage.records
 ---
-<p>{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}</p>
+{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 
-<p>The <code>records</code> property of
-    {{DOMxRef("NDEFMessage")}} interface represents a list of {{DOMxRef("NDEFRecord")}}s
-    present in the NDEF message.</p>
+The `records` property of
+{{DOMxRef("NDEFMessage")}} interface represents a list of {{DOMxRef("NDEFRecord")}}s
+present in the NDEF message.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>recordList = NDEFMessage</em>.records;
-</pre>
+```js
+var recordList = NDEFMessage.records;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A list of {{DOMxRef("NDEFRecord")}} object that represent data recorded in the message.
-</p>
+A list of {{DOMxRef("NDEFRecord")}} object that represent data recorded in the message.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example shows how to read the contents of an NDEF message. It first sets up an event handler for {{domxref("NDEFReader.onreading")}}, which is passed an instance of {{domxref("NDEFReadingEvent")}}. An <code>NDEFMessage</code> object is returned from {{domxref("NDEFReadingEvent.message")}}. It loops through <code>message.records</code> and processes each record based on its message type. The data member is a {{jsxref("DataView")}}, which allows handling data encoded in UTF-16.</p>
+The following example shows how to read the contents of an NDEF message. It first sets up an event handler for {{domxref("NDEFReader.onreading")}}, which is passed an instance of {{domxref("NDEFReadingEvent")}}. An `NDEFMessage` object is returned from {{domxref("NDEFReadingEvent.message")}}. It loops through `message.records` and processes each record based on its message type. The data member is a {{jsxref("DataView")}}, which allows handling data encoded in UTF-16.
 
-<pre class="brush: js">ndefReaderInst.onreading = event => {
+```js
+ndefReaderInst.onreading = event => {
   const ndefMessage = event.message;
   for (const record of ndefMessage.records) {
     console.log("Record type:  " + record.recordType);
@@ -46,12 +47,12 @@ browser-compat: api.NDEFMessage.records
     };
   };
 };
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

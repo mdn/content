@@ -2,64 +2,62 @@
 title: ImageCapture.takePhoto()
 slug: Web/API/ImageCapture/takePhoto
 tags:
-- API
-- Experimental
-- Image
-- ImageCapture
-- Media
-- MediaStream Image Capture
-- Method
-- Reference
-- takePhoto
+  - API
+  - Experimental
+  - Image
+  - ImageCapture
+  - Media
+  - MediaStream Image Capture
+  - Method
+  - Reference
+  - takePhoto
 browser-compat: api.ImageCapture.takePhoto
 ---
-<div>{{APIRef("MediaStream Image")}}</div>
+{{APIRef("MediaStream Image")}}
 
-<p>The <strong><code>takePhoto()</code></strong> method of the
-    {{domxref("ImageCapture")}} interface takes a single exposure using the video capture
-    device sourcing a {{domxref("MediaStreamTrack")}} and returns a {{jsxref("Promise")}}
-    that resolves with a {{domxref("Blob")}} containing the data.</p>
+The **`takePhoto()`** method of the
+{{domxref("ImageCapture")}} interface takes a single exposure using the video capture
+device sourcing a {{domxref("MediaStreamTrack")}} and returns a {{jsxref("Promise")}}
+that resolves with a {{domxref("Blob")}} containing the data.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
-const <em>blobPromise</em> = <em>imageCaptureObj</em>.takePhoto()
-const <em>blobPromise</em> = <em>imageCaptureObj</em>.takePhoto(<em>photoSettings</em>)
-</pre>
+```js
+const blobPromise = imageCaptureObj.takePhoto()
+const blobPromise = imageCaptureObj.takePhoto(photoSettings)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>photoSettings</code> {{optional_inline}}</dt>
-  <dd>An object that sets options for the photo to be taken. The available options are:
-    <ul>
-      <li><code>fillLightMode</code>:  The flash setting of the capture device, one of
-        <code>"auto"</code>, <code>"off"</code>, or <code>"flash"</code>.</li>
-      <li><code>imageHeight</code>: The desired image height as an integer. The user agent
-        selects the closest height value to this setting if it only supports discrete
-        heights.</li>
-      <li><code>imageWidth</code>: The desired image width as an integer. The user agent
-        selects the closest width value to this setting if it only supports discrete
-        widths.</li>
-      <li><code>redEyeReduction</code>: A boolean indicating whether the red-eye reduction
-        should be used if it is available.</li>
-    </ul>
-  </dd>
-</dl>
+- `photoSettings` {{optional_inline}}
 
-<h3 id="Return_value">Return value</h3>
+  - : An object that sets options for the photo to be taken. The available options are:
 
-<p>A {{jsxref("Promise")}} that resolves with a {{domxref("Blob")}}.</p>
+    - `fillLightMode`:  The flash setting of the capture device, one of
+      `"auto"`, `"off"`, or `"flash"`.
+    - `imageHeight`: The desired image height as an integer. The user agent
+      selects the closest height value to this setting if it only supports discrete
+      heights.
+    - `imageWidth`: The desired image width as an integer. The user agent
+      selects the closest width value to this setting if it only supports discrete
+      widths.
+    - `redEyeReduction`: A boolean indicating whether the red-eye reduction
+      should be used if it is available.
 
-<h2 id="Example">Example</h2>
+### Return value
 
-<p>This example is extracted from this <a href="https://simpl.info/imagecapture/">Simple
-    Image Capture demo</a>. It shows how to use the {{jsxref("Promise")}} returned by
-  <code>takePhoto()</code> to copy the returned {{domxref("Blob")}} to an
-  {{htmlelement("img")}} element. For simplicity it does not show how to instantiate the
-  {{domxref("ImageCapture")}} object.</p>
+A {{jsxref("Promise")}} that resolves with a {{domxref("Blob")}}.
 
-<pre class="brush: js">var takePhotoButton = document.querySelector('button#takePhoto');
+## Example
+
+This example is extracted from this [Simple
+Image Capture demo](https://simpl.info/imagecapture/). It shows how to use the {{jsxref("Promise")}} returned by
+`takePhoto()` to copy the returned {{domxref("Blob")}} to an
+{{htmlelement("img")}} element. For simplicity it does not show how to instantiate the
+{{domxref("ImageCapture")}} object.
+
+```js
+var takePhotoButton = document.querySelector('button#takePhoto');
 var canvas = document.querySelector('canvas');
 
 takePhotoButton.onclick = takePhoto;
@@ -73,12 +71,12 @@ function takePhoto() {
     console.log('takePhoto() error: ', error);
   });
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

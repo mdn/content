@@ -2,64 +2,62 @@
 title: URLSearchParams.append()
 slug: Web/API/URLSearchParams/append
 tags:
-- API
-- Append
-- Method
-- URL API
-- URLSearchParams
+  - API
+  - Append
+  - Method
+  - URL API
+  - URLSearchParams
 browser-compat: api.URLSearchParams.append
 ---
-<p>{{ApiRef("URL API")}}</p>
+{{ApiRef("URL API")}}
 
-<p>The <strong><code>append()</code></strong> method of the {{domxref("URLSearchParams")}}
-  interface appends a specified key/value pair as a new search parameter.</p>
+The **`append()`** method of the {{domxref("URLSearchParams")}}
+interface appends a specified key/value pair as a new search parameter.
 
-<p>As shown in the example below, if the same key is appended multiple times it will
-  appear in the parameter string multiple times for each value.</p>
+As shown in the example below, if the same key is appended multiple times it will
+appear in the parameter string multiple times for each value.
 
-<p>{{availableinworkers}}</p>
+{{availableinworkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">URLSearchParams.append(<em>name</em>, <em>value</em>)</pre>
+```js
+URLSearchParams.append(name, value)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>name</dt>
-  <dd>The name of the parameter to append.</dd>
-  <dt>value </dt>
-  <dd>The value of the parameter to append.</dd>
-</dl>
+- name
+  - : The name of the parameter to append.
+- value
+  - : The value of the parameter to append.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Void.</p>
+Void.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">let url = new URL('https://example.com?foo=1&amp;bar=2');
+```js
+let url = new URL('https://example.com?foo=1&bar=2');
 let params = new URLSearchParams(url.search.slice(1));
 
 //Add a second foo parameter.
 params.append('foo', 4);
-//Query string is now: 'foo=1&amp;bar=2&amp;foo=4'</pre>
+//Query string is now: 'foo=1&bar=2&foo=4'
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>Other URL-related interfaces: {{domxref("URL")}},
-    {{domxref("HTMLHyperlinkElementUtils")}}.</li>
-  <li><a
-      href="https://developers.google.com/web/updates/2016/01/urlsearchparams?hl=en">Google
-      Developers: Easy URL manipulation with URLSearchParams</a></li>
-</ul>
+- Other URL-related interfaces: {{domxref("URL")}},
+  {{domxref("HTMLHyperlinkElementUtils")}}.
+- [Google
+  Developers: Easy URL manipulation with URLSearchParams](https://developers.google.com/web/updates/2016/01/urlsearchparams?hl=en)

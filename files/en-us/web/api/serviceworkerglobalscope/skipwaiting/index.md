@@ -11,29 +11,32 @@ tags:
   - skipWaiting
 browser-compat: api.ServiceWorkerGlobalScope.skipWaiting
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p>The <strong><code>ServiceWorkerGlobalScope.skipWaiting()</code></strong> method of the {{domxref("ServiceWorkerGlobalScope")}} forces the waiting service worker to become the active service worker.</p>
+The **`ServiceWorkerGlobalScope.skipWaiting()`** method of the {{domxref("ServiceWorkerGlobalScope")}} forces the waiting service worker to become the active service worker.
 
-<p>Use this method with {{domxref("Clients.claim()")}} to ensure that updates to the underlying service worker take effect immediately for both the current client and all other active clients.</p>
+Use this method with {{domxref("Clients.claim()")}} to ensure that updates to the underlying service worker take effect immediately for both the current client and all other active clients.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">ServiceWorkerGlobalScope.skipWaiting().then(function() {
+```js
+ServiceWorkerGlobalScope.skipWaiting().then(function() {
   //Do something
-});</pre>
+});
+```
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A {{jsxref("Promise")}} that immediately resolves with <code>undefined</code>.</p>
+A {{jsxref("Promise")}} that immediately resolves with `undefined`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>While <code>self.skipWaiting()</code> can be called at any point during the service worker's execution, it will only have an effect if there's a newly installed service worker that might otherwise remain in the <code>waiting</code> state. Therefore, it's common to call <code>self.skipWaiting()</code> from inside of an {{domxref("InstallEvent")}} handler.</p>
+While `self.skipWaiting()` can be called at any point during the service worker's execution, it will only have an effect if there's a newly installed service worker that might otherwise remain in the `waiting` state. Therefore, it's common to call `self.skipWaiting()` from inside of an {{domxref("InstallEvent")}} handler.
 
-<p>The following example causes a newly installed service worker to progress into the <code>activating</code> state, regardless of whether there is already an active service worker.</p>
+The following example causes a newly installed service worker to progress into the `activating` state, regardless of whether there is already an active service worker.
 
-<pre class="brush: js">self.addEventListener('install', function(event) {
+```js
+self.addEventListener('install', function(event) {
   // The promise that skipWaiting() returns can be safely ignored.
   self.skipWaiting();
 
@@ -41,23 +44,21 @@ browser-compat: api.ServiceWorkerGlobalScope.skipWaiting
   // service worker to install, potentially inside
   // of event.waitUntil();
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</a></li>
- <li><a href="https://github.com/mdn/sw-test">Service workers basic code example</a></li>
- <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
- <li>{{domxref("Clients.claim()")}}</li>
- <li>{{jsxref("Promise", "Promises")}}</li>
- <li><a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web workers</a></li>
-</ul>
+- [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- {{domxref("Clients.claim()")}}
+- {{jsxref("Promise", "Promises")}}
+- [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

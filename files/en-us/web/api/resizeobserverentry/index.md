@@ -13,38 +13,35 @@ tags:
   - observers
 browser-compat: api.ResizeObserverEntry
 ---
-<div>{{APIRef("Resize Observer API")}}</div>
+{{APIRef("Resize Observer API")}}
 
-<p>The <strong><code>ResizeObserverEntry</code></strong> interface represents the object passed to the {{domxref('ResizeObserver.ResizeObserver','ResizeObserver()')}} constructor's callback function, which allows you to access the new dimensions of the {{domxref("Element")}} or {{domxref("SVGElement")}} being observed.</p>
+The **`ResizeObserverEntry`** interface represents the object passed to the {{domxref('ResizeObserver.ResizeObserver','ResizeObserver()')}} constructor's callback function, which allows you to access the new dimensions of the {{domxref("Element")}} or {{domxref("SVGElement")}} being observed.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref('ResizeObserverEntry.borderBoxSize')}} {{readonlyinline}}</dt>
- <dd>An object containing the new border box size of the observed element when the callback is run.</dd>
- <dt>{{domxref('ResizeObserverEntry.contentBoxSize')}} {{readonlyinline}}</dt>
- <dd>An object containing the new content box size of the observed element when the callback is run.</dd>
- <dt>{{domxref('ResizeObserverEntry.devicePixelContentBoxSize')}} {{readonlyinline}}</dt>
- <dd>An object containing the new content box size in device pixels of the observed element when the callback is run.</dd>
- <dt>{{domxref('ResizeObserverEntry.contentRect')}} {{readonlyinline}}</dt>
- <dd>A {{domxref('DOMRectReadOnly')}} object containing the new size of the observed element when the callback is run. Note that this is better supported than the above two properties, but it is left over from an earlier implementation of the Resize Observer API, is still included in the spec for web compat reasons, and may be deprecated in future versions.</dd>
- <dt>{{domxref('ResizeObserverEntry.target')}} {{readonlyinline}}</dt>
- <dd>A reference to the {{domxref('Element')}} or {{domxref("SVGElement")}} being observed.</dd>
-</dl>
+- {{domxref('ResizeObserverEntry.borderBoxSize')}} {{readonlyinline}}
+  - : An object containing the new border box size of the observed element when the callback is run.
+- {{domxref('ResizeObserverEntry.contentBoxSize')}} {{readonlyinline}}
+  - : An object containing the new content box size of the observed element when the callback is run.
+- {{domxref('ResizeObserverEntry.devicePixelContentBoxSize')}} {{readonlyinline}}
+  - : An object containing the new content box size in device pixels of the observed element when the callback is run.
+- {{domxref('ResizeObserverEntry.contentRect')}} {{readonlyinline}}
+  - : A {{domxref('DOMRectReadOnly')}} object containing the new size of the observed element when the callback is run. Note that this is better supported than the above two properties, but it is left over from an earlier implementation of the Resize Observer API, is still included in the spec for web compat reasons, and may be deprecated in future versions.
+- {{domxref('ResizeObserverEntry.target')}} {{readonlyinline}}
+  - : A reference to the {{domxref('Element')}} or {{domxref("SVGElement")}} being observed.
 
-<div class="notecard note">
-<p><strong>Note:</strong> The content box is the box in which content can be placed, meaning the border box minus the padding and border width. The border box encompasses the content, padding, and border. See <a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model">The box model</a> for further explanation.</p>
-</div>
+> **Note:** The content box is the box in which content can be placed, meaning the border box minus the padding and border width. The border box encompasses the content, padding, and border. See [The box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model) for further explanation.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following snippet is taken from the <a href="https://mdn.github.io/dom-examples/resize-observer/resize-observer-text.html">resize-observer-text.html</a> (<a href="https://github.com/mdn/dom-examples/blob/master/resize-observer/resize-observer-text.html">see source</a>) example. This uses a simple feature detection test to see if the browser supports the newer <code>contentBoxSize</code> property — if so, it uses that to get the sizing data it needs. If not, it uses the older <code>contentRect</code> property.</p>
+The following snippet is taken from the [resize-observer-text.html](https://mdn.github.io/dom-examples/resize-observer/resize-observer-text.html) ([see source](https://github.com/mdn/dom-examples/blob/master/resize-observer/resize-observer-text.html)) example. This uses a simple feature detection test to see if the browser supports the newer `contentBoxSize` property — if so, it uses that to get the sizing data it needs. If not, it uses the older `contentRect` property.
 
-<pre class="brush: js">const resizeObserver = new ResizeObserver(entries =&gt; {
+```js
+const resizeObserver = new ResizeObserver(entries => {
   for (let entry of entries) {
     if(entry.contentBoxSize) {
       h1Elem.style.fontSize = Math.max(1.5, entry.contentBoxSize.inlineSize/200) + 'rem';
@@ -56,12 +53,13 @@ browser-compat: api.ResizeObserverEntry
   }
 });
 
-resizeObserver.observe(divElem);</pre>
+resizeObserver.observe(divElem);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

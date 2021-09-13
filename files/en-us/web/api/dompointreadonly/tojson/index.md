@@ -2,53 +2,55 @@
 title: DOMPointReadOnly.toJSON()
 slug: Web/API/DOMPointReadOnly/toJSON
 tags:
-- API
-- Coordinates
-- DOM
-- DOMPointReadOnly
-- Geometry
-- Geometry Interfaces
-- JSON
-- Method
-- Point
-- Reference
-- toJSON
+  - API
+  - Coordinates
+  - DOM
+  - DOMPointReadOnly
+  - Geometry
+  - Geometry Interfaces
+  - JSON
+  - Method
+  - Point
+  - Reference
+  - toJSON
 browser-compat: api.DOMPointReadOnly.toJSON
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The {{domxref("DOMPointReadOnly")}} method
-    <code>toJSON()</code> returns an object giving the
-    {{Glossary("JSON")}} form of the point object.</p>
+The {{domxref("DOMPointReadOnly")}} method
+`toJSON()` returns an object giving the
+{{Glossary("JSON")}} form of the point object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>pointJSON</em> = <em>DOMPointReadOnly</em>.toJSON();</pre>
+```js
+pointJSON = DOMPointReadOnly.toJSON();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A new object whose properties are set to the values in the
-  <code>DOMPoint</code> or <code>DOMPointReadOnly</code> on which the method was called.
-</p>
+A new object whose properties are set to the values in the
+`DOMPoint` or `DOMPointReadOnly` on which the method was called.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example creates a {{domxref("DOMPoint")}} object representing the top-left corner
-  of the current window, in screen coordinates, then converts that to JSON.</p>
+This example creates a {{domxref("DOMPoint")}} object representing the top-left corner
+of the current window, in screen coordinates, then converts that to JSON.
 
-<pre class="brush: js">var topLeft = new DOMPoint(window.screenX, window.screenY);
+```js
+var topLeft = new DOMPoint(window.screenX, window.screenY);
 
-var pointJSON = topLeft.toJSON();</pre>
+var pointJSON = topLeft.toJSON();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

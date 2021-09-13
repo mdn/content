@@ -2,82 +2,55 @@
 title: HTMLFontElement.color
 slug: Web/API/HTMLFontElement/color
 tags:
-- API
-- HTML DOM
-- HTMLFontElement
-- Property
-- Reference
-- Deprecated
+  - API
+  - HTML DOM
+  - HTMLFontElement
+  - Property
+  - Reference
+  - Deprecated
 browser-compat: api.HTMLFontElement.color
 ---
-<div>{{deprecated_header}}{{APIRef("HTML DOM")}}</div>
+{{deprecated_header}}{{APIRef("HTML DOM")}}
 
-<p>The obsolete
-    <strong><code>HTMLFontElement.color</code></strong>
-    property is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("color",
+The obsolete
+**`HTMLFontElement.color`**
+property is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("color",
     "font")}} HTML attribute, containing either a named color or a color specified in the
-    hexadecimal #RRGGBB format.</p>
+hexadecimal #RRGGBB format.
 
-<p>The format of the string must follow one of the following HTML microsyntaxes:</p>
+The format of the string must follow one of the following HTML microsyntaxes:
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Microsyntax</th>
-      <th scope="col">Description</th>
-      <th scope="col">Examples</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Valid name color string</td>
-      <td><em>nameOfColor (case insensitive)</em></td>
-      <td><code>Green</code><br>
-        <code>green</code><br>
-        <code>GREEN</code>
-      </td>
-    </tr>
-    <tr>
-      <td>Valid hex color string</td>
-      <td><em>in </em>{{cssxref("color_value", "RGB format", "#rgb")}}<em>: #RRGGBB</em>
-      </td>
-      <td><code>#008000</code></td>
-    </tr>
-    <tr>
-      <td>RGB using decimal values</td>
-      <td><em>rgb(x,x,x) (x in 0-255 range)</em></td>
-      <td>
-        <div><code>rgb(0,128,0)</code></div>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Microsyntax              | Description                                                                      | Examples                |
+| ------------------------ | -------------------------------------------------------------------------------- | ----------------------- |
+| Valid name color string  | _nameOfColor (case insensitive)_                                                 | `Green` `green` `GREEN` |
+| Valid hex color string   | _in_ {{cssxref("color_value", "RGB format", "#rgb")}}_: #RRGGBB_ | `#008000`               |
+| RGB using decimal values | _rgb(x,x,x) (x in 0-255 range)_                                                  | `rgb(0,128,0)`          |
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>colorString</em> = <em>fontObj</em>.color;
-<em>fontObj.color = colorString;</em>
-</pre>
+```js
+colorString = fontObj.color;
+fontObj.color = colorString;
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">// Assumes there is &lt;font id="f"&gt; element in the HTML
+```js
+// Assumes there is <font id="f"> element in the HTML
 
 var f = document.getElementById("f");
 f.color = "green";
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>The &lt;font&gt; tag is not supported in HTML5 and as a result neither is
-  <code>&lt;font&gt;.color</code>.</p>
+The \<font> tag is not supported in HTML5 and as a result neither is
+`<font>.color`.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("HTMLFontElement")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("HTMLFontElement")}} interface it belongs to.

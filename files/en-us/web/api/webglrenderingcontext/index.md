@@ -17,329 +17,304 @@ tags:
   - rendering
 browser-compat: api.WebGLRenderingContext
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <code><strong>WebGLRenderingContext</strong></code> interface provides an interface to the OpenGL ES 2.0 graphics rendering context for the drawing surface of an HTML {{HTMLElement("canvas")}} element.</p>
+The **`WebGLRenderingContext`** interface provides an interface to the OpenGL ES 2.0 graphics rendering context for the drawing surface of an HTML {{HTMLElement("canvas")}} element.
 
-<p>To get an access to a WebGL context for 2D and/or 3D graphics rendering, call {{domxref("HTMLCanvasElement.getContext()", "getContext()")}} on a <code>&lt;canvas&gt;</code> element, supplying "webgl" as the argument:</p>
+To get an access to a WebGL context for 2D and/or 3D graphics rendering, call {{domxref("HTMLCanvasElement.getContext()", "getContext()")}} on a `<canvas>` element, supplying "webgl" as the argument:
 
-<pre class="brush: js">var canvas = document.getElementById('myCanvas');
+```js
+var canvas = document.getElementById('myCanvas');
 var gl = canvas.getContext('webgl');
-</pre>
+```
 
-<p>Once you have the WebGL rendering context for a canvas, you can render within it. The <a href="/en-US/docs/Web/API/WebGL_API/Tutorial" title="WebGL tutorial">WebGL tutorial</a> has more information, examples, and resources on how to get started with WebGL.</p>
+Once you have the WebGL rendering context for a canvas, you can render within it. The [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial "WebGL tutorial") has more information, examples, and resources on how to get started with WebGL.
 
-<p>If you require a WebGL 2.0 context, see {{domxref("WebGL2RenderingContext")}}; this supplies access to an implementation of OpenGL ES 3.0 graphics.</p>
+If you require a WebGL 2.0 context, see {{domxref("WebGL2RenderingContext")}}; this supplies access to an implementation of OpenGL ES 3.0 graphics.
 
-<h2 id="Constants">Constants</h2>
+## Constants
 
-<p>See the <a href="/en-US/docs/Web/API/WebGL_API/Constants">WebGL constants</a> page.</p>
+See the [WebGL constants](/en-US/docs/Web/API/WebGL_API/Constants) page.
 
-<h2 id="The_WebGL_context">The WebGL context</h2>
+## The WebGL context
 
-<p>The following properties and methods provide general information and functionality to deal with the WebGL context:</p>
+The following properties and methods provide general information and functionality to deal with the WebGL context:
 
-<dl>
- <dt>{{domxref("WebGLRenderingContext.canvas")}}</dt>
- <dd>A read-only back-reference to the {{domxref("HTMLCanvasElement")}}. Might be {{jsxref("null")}} if it is not associated with a {{HTMLElement("canvas")}} element.</dd>
- <dt>{{domxref("WebGLRenderingContext.commit()")}} {{experimental_inline}}</dt>
- <dd>
- <p>Pushes frames back to the original {{domxref("HTMLCanvasElement")}}, if the context is not directly fixed to a specific canvas.</p>
- </dd>
- <dt>{{domxref("WebGLRenderingContext.drawingBufferWidth")}}</dt>
- <dd>The read-only width of the current drawing buffer. Should match the width of the canvas element associated with this context.</dd>
- <dt>{{domxref("WebGLRenderingContext.drawingBufferHeight")}}</dt>
- <dd>The read-only height of the current drawing buffer. Should match the height of the canvas element associated with this context.</dd>
- <dt>{{domxref("WebGLRenderingContext.getContextAttributes()")}}</dt>
- <dd>Returns a <code>WebGLContextAttributes</code> object that contains the actual context parameters. Might return {{jsxref("null")}}, if the context is lost.</dd>
- <dt>{{domxref("WebGLRenderingContext.isContextLost()")}}</dt>
- <dd>Returns <code>true</code> if the context is lost, otherwise returns <code>false</code>.</dd>
- <dt>{{domxref("WebGLRenderingContext.makeXRCompatible()")}}</dt>
- <dd>Ensures the context is compatible with the user's XR hardware, re-creating the context if necessary with a new configuration to do so. This can be used to start an application using standard 2D presentation, then transition to using a VR or AR mode later.</dd>
-</dl>
+- {{domxref("WebGLRenderingContext.canvas")}}
+  - : A read-only back-reference to the {{domxref("HTMLCanvasElement")}}. Might be {{jsxref("null")}} if it is not associated with a {{HTMLElement("canvas")}} element.
+- {{domxref("WebGLRenderingContext.commit()")}} {{experimental_inline}}
+  - : Pushes frames back to the original {{domxref("HTMLCanvasElement")}}, if the context is not directly fixed to a specific canvas.
+- {{domxref("WebGLRenderingContext.drawingBufferWidth")}}
+  - : The read-only width of the current drawing buffer. Should match the width of the canvas element associated with this context.
+- {{domxref("WebGLRenderingContext.drawingBufferHeight")}}
+  - : The read-only height of the current drawing buffer. Should match the height of the canvas element associated with this context.
+- {{domxref("WebGLRenderingContext.getContextAttributes()")}}
+  - : Returns a `WebGLContextAttributes` object that contains the actual context parameters. Might return {{jsxref("null")}}, if the context is lost.
+- {{domxref("WebGLRenderingContext.isContextLost()")}}
+  - : Returns `true` if the context is lost, otherwise returns `false`.
+- {{domxref("WebGLRenderingContext.makeXRCompatible()")}}
+  - : Ensures the context is compatible with the user's XR hardware, re-creating the context if necessary with a new configuration to do so. This can be used to start an application using standard 2D presentation, then transition to using a VR or AR mode later.
 
-<h2 id="Viewing_and_clipping">Viewing and clipping</h2>
+## Viewing and clipping
 
-<dl>
- <dt>{{domxref("WebGLRenderingContext.scissor()")}}</dt>
- <dd>Defines the scissor box.</dd>
- <dt>{{domxref("WebGLRenderingContext.viewport()")}}</dt>
- <dd>Sets the viewport.</dd>
-</dl>
+- {{domxref("WebGLRenderingContext.scissor()")}}
+  - : Defines the scissor box.
+- {{domxref("WebGLRenderingContext.viewport()")}}
+  - : Sets the viewport.
 
-<h2 id="State_information">State information</h2>
+## State information
 
-<dl>
- <dt>{{domxref("WebGLRenderingContext.activeTexture()")}}</dt>
- <dd>Selects the active texture unit.</dd>
- <dt>{{domxref("WebGLRenderingContext.blendColor()")}}</dt>
- <dd>Sets the source and destination blending factors.</dd>
- <dt>{{domxref("WebGLRenderingContext.blendEquation()")}}</dt>
- <dd>Sets both the RGB blend equation and alpha blend equation to a single equation.</dd>
- <dt>{{domxref("WebGLRenderingContext.blendEquationSeparate()")}}</dt>
- <dd>Sets the RGB blend equation and alpha blend equation separately.</dd>
- <dt>{{domxref("WebGLRenderingContext.blendFunc()")}}</dt>
- <dd>Defines which function is used for blending pixel arithmetic.</dd>
- <dt>{{domxref("WebGLRenderingContext.blendFuncSeparate()")}}</dt>
- <dd>Defines which function is used for blending pixel arithmetic for RGB and alpha components separately.</dd>
- <dt>{{domxref("WebGLRenderingContext.clearColor()")}}</dt>
- <dd>Specifies the color values used when clearing color buffers.</dd>
- <dt>{{domxref("WebGLRenderingContext.clearDepth()")}}</dt>
- <dd>Specifies the depth value used when clearing the depth buffer.</dd>
- <dt>{{domxref("WebGLRenderingContext.clearStencil()")}}</dt>
- <dd>Specifies the stencil value used when clearing the stencil buffer.</dd>
- <dt>{{domxref("WebGLRenderingContext.colorMask()")}}</dt>
- <dd>Sets which color components to enable or to disable when drawing or rendering to a {{domxref("WebGLFramebuffer")}}.</dd>
- <dt>{{domxref("WebGLRenderingContext.cullFace()")}}</dt>
- <dd>Specifies whether or not front- and/or back-facing polygons can be culled.</dd>
- <dt>{{domxref("WebGLRenderingContext.depthFunc()")}}</dt>
- <dd>Specifies a function that compares incoming pixel depth to the current depth buffer value.</dd>
- <dt>{{domxref("WebGLRenderingContext.depthMask()")}}</dt>
- <dd>Sets whether writing into the depth buffer is enabled or disabled.</dd>
- <dt>{{domxref("WebGLRenderingContext.depthRange()")}}</dt>
- <dd>Specifies the depth range mapping from normalized device coordinates to window or viewport coordinates.</dd>
- <dt>{{domxref("WebGLRenderingContext.disable()")}}</dt>
- <dd>Disables specific WebGL capabilities for this context.</dd>
- <dt>{{domxref("WebGLRenderingContext.enable()")}}</dt>
- <dd>Enables specific WebGL capabilities for this context.</dd>
- <dt>{{domxref("WebGLRenderingContext.frontFace()")}}</dt>
- <dd>Specifies whether polygons are front- or back-facing by setting a winding orientation.</dd>
- <dt>{{domxref("WebGLRenderingContext.getParameter()")}}</dt>
- <dd>Returns a value for the passed parameter name.</dd>
- <dt>{{domxref("WebGLRenderingContext.getError()")}}</dt>
- <dd>Returns error information.</dd>
- <dt>{{domxref("WebGLRenderingContext.hint()")}}</dt>
- <dd>Specifies hints for certain behaviors. The interpretation of these hints depend on the implementation.</dd>
- <dt>{{domxref("WebGLRenderingContext.isEnabled()")}}</dt>
- <dd>Tests whether a specific WebGL capability is enabled or not for this context.</dd>
- <dt>{{domxref("WebGLRenderingContext.lineWidth()")}}</dt>
- <dd>Sets the line width of rasterized lines.</dd>
- <dt>{{domxref("WebGLRenderingContext.pixelStorei()")}}</dt>
- <dd>Specifies the pixel storage modes</dd>
- <dt>{{domxref("WebGLRenderingContext.polygonOffset()")}}</dt>
- <dd>Specifies the scale factors and units to calculate depth values.</dd>
- <dt>{{domxref("WebGLRenderingContext.sampleCoverage()")}}</dt>
- <dd>Specifies multi-sample coverage parameters for anti-aliasing effects.</dd>
- <dt>{{domxref("WebGLRenderingContext.stencilFunc()")}}</dt>
- <dd>Sets the both front and back function and reference value for stencil testing.</dd>
- <dt>{{domxref("WebGLRenderingContext.stencilFuncSeparate()")}}</dt>
- <dd>Sets the front and/or back function and reference value for stencil testing.</dd>
- <dt>{{domxref("WebGLRenderingContext.stencilMask()")}}</dt>
- <dd>Controls enabling and disabling of both the front and back writing of individual bits in the stencil planes.</dd>
- <dt>{{domxref("WebGLRenderingContext.stencilMaskSeparate()")}}</dt>
- <dd>Controls enabling and disabling of front and/or back writing of individual bits in the stencil planes.</dd>
- <dt>{{domxref("WebGLRenderingContext.stencilOp()")}}</dt>
- <dd>Sets both the front and back-facing stencil test actions.</dd>
- <dt>{{domxref("WebGLRenderingContext.stencilOpSeparate()")}}</dt>
- <dd>Sets the front and/or back-facing stencil test actions.</dd>
-</dl>
+- {{domxref("WebGLRenderingContext.activeTexture()")}}
+  - : Selects the active texture unit.
+- {{domxref("WebGLRenderingContext.blendColor()")}}
+  - : Sets the source and destination blending factors.
+- {{domxref("WebGLRenderingContext.blendEquation()")}}
+  - : Sets both the RGB blend equation and alpha blend equation to a single equation.
+- {{domxref("WebGLRenderingContext.blendEquationSeparate()")}}
+  - : Sets the RGB blend equation and alpha blend equation separately.
+- {{domxref("WebGLRenderingContext.blendFunc()")}}
+  - : Defines which function is used for blending pixel arithmetic.
+- {{domxref("WebGLRenderingContext.blendFuncSeparate()")}}
+  - : Defines which function is used for blending pixel arithmetic for RGB and alpha components separately.
+- {{domxref("WebGLRenderingContext.clearColor()")}}
+  - : Specifies the color values used when clearing color buffers.
+- {{domxref("WebGLRenderingContext.clearDepth()")}}
+  - : Specifies the depth value used when clearing the depth buffer.
+- {{domxref("WebGLRenderingContext.clearStencil()")}}
+  - : Specifies the stencil value used when clearing the stencil buffer.
+- {{domxref("WebGLRenderingContext.colorMask()")}}
+  - : Sets which color components to enable or to disable when drawing or rendering to a {{domxref("WebGLFramebuffer")}}.
+- {{domxref("WebGLRenderingContext.cullFace()")}}
+  - : Specifies whether or not front- and/or back-facing polygons can be culled.
+- {{domxref("WebGLRenderingContext.depthFunc()")}}
+  - : Specifies a function that compares incoming pixel depth to the current depth buffer value.
+- {{domxref("WebGLRenderingContext.depthMask()")}}
+  - : Sets whether writing into the depth buffer is enabled or disabled.
+- {{domxref("WebGLRenderingContext.depthRange()")}}
+  - : Specifies the depth range mapping from normalized device coordinates to window or viewport coordinates.
+- {{domxref("WebGLRenderingContext.disable()")}}
+  - : Disables specific WebGL capabilities for this context.
+- {{domxref("WebGLRenderingContext.enable()")}}
+  - : Enables specific WebGL capabilities for this context.
+- {{domxref("WebGLRenderingContext.frontFace()")}}
+  - : Specifies whether polygons are front- or back-facing by setting a winding orientation.
+- {{domxref("WebGLRenderingContext.getParameter()")}}
+  - : Returns a value for the passed parameter name.
+- {{domxref("WebGLRenderingContext.getError()")}}
+  - : Returns error information.
+- {{domxref("WebGLRenderingContext.hint()")}}
+  - : Specifies hints for certain behaviors. The interpretation of these hints depend on the implementation.
+- {{domxref("WebGLRenderingContext.isEnabled()")}}
+  - : Tests whether a specific WebGL capability is enabled or not for this context.
+- {{domxref("WebGLRenderingContext.lineWidth()")}}
+  - : Sets the line width of rasterized lines.
+- {{domxref("WebGLRenderingContext.pixelStorei()")}}
+  - : Specifies the pixel storage modes
+- {{domxref("WebGLRenderingContext.polygonOffset()")}}
+  - : Specifies the scale factors and units to calculate depth values.
+- {{domxref("WebGLRenderingContext.sampleCoverage()")}}
+  - : Specifies multi-sample coverage parameters for anti-aliasing effects.
+- {{domxref("WebGLRenderingContext.stencilFunc()")}}
+  - : Sets the both front and back function and reference value for stencil testing.
+- {{domxref("WebGLRenderingContext.stencilFuncSeparate()")}}
+  - : Sets the front and/or back function and reference value for stencil testing.
+- {{domxref("WebGLRenderingContext.stencilMask()")}}
+  - : Controls enabling and disabling of both the front and back writing of individual bits in the stencil planes.
+- {{domxref("WebGLRenderingContext.stencilMaskSeparate()")}}
+  - : Controls enabling and disabling of front and/or back writing of individual bits in the stencil planes.
+- {{domxref("WebGLRenderingContext.stencilOp()")}}
+  - : Sets both the front and back-facing stencil test actions.
+- {{domxref("WebGLRenderingContext.stencilOpSeparate()")}}
+  - : Sets the front and/or back-facing stencil test actions.
 
-<h2 id="Buffers">Buffers</h2>
+## Buffers
 
-<dl>
- <dt>{{domxref("WebGLRenderingContext.bindBuffer()")}}</dt>
- <dd>Binds a <code>WebGLBuffer</code> object to a given target.</dd>
- <dt>{{domxref("WebGLRenderingContext.bufferData()")}}</dt>
- <dd>Updates buffer data.</dd>
- <dt>{{domxref("WebGLRenderingContext.bufferSubData()")}}</dt>
- <dd>Updates buffer data starting at a passed offset.</dd>
- <dt>{{domxref("WebGLRenderingContext.createBuffer()")}}</dt>
- <dd>Creates a <code>WebGLBuffer</code> object.</dd>
- <dt>{{domxref("WebGLRenderingContext.deleteBuffer()")}}</dt>
- <dd>Deletes a <code>WebGLBuffer</code> object.</dd>
- <dt>{{domxref("WebGLRenderingContext.getBufferParameter()")}}</dt>
- <dd>Returns information about the buffer.</dd>
- <dt>{{domxref("WebGLRenderingContext.isBuffer()")}}</dt>
- <dd>Returns a Boolean indicating if the passed buffer is valid.</dd>
-</dl>
+- {{domxref("WebGLRenderingContext.bindBuffer()")}}
+  - : Binds a `WebGLBuffer` object to a given target.
+- {{domxref("WebGLRenderingContext.bufferData()")}}
+  - : Updates buffer data.
+- {{domxref("WebGLRenderingContext.bufferSubData()")}}
+  - : Updates buffer data starting at a passed offset.
+- {{domxref("WebGLRenderingContext.createBuffer()")}}
+  - : Creates a `WebGLBuffer` object.
+- {{domxref("WebGLRenderingContext.deleteBuffer()")}}
+  - : Deletes a `WebGLBuffer` object.
+- {{domxref("WebGLRenderingContext.getBufferParameter()")}}
+  - : Returns information about the buffer.
+- {{domxref("WebGLRenderingContext.isBuffer()")}}
+  - : Returns a Boolean indicating if the passed buffer is valid.
 
-<h2 id="Framebuffers">Framebuffers</h2>
+## Framebuffers
 
-<dl>
- <dt>{{domxref("WebGLRenderingContext.bindFramebuffer()")}}</dt>
- <dd>Binds a <code>WebGLFrameBuffer</code> object to a given target.</dd>
- <dt>{{domxref("WebGLRenderingContext.checkFramebufferStatus()")}}</dt>
- <dd>Returns the status of the framebuffer.</dd>
- <dt>{{domxref("WebGLRenderingContext.createFramebuffer()")}}</dt>
- <dd>Creates a <code>WebGLFrameBuffer</code> object.</dd>
- <dt>{{domxref("WebGLRenderingContext.deleteFramebuffer()")}}</dt>
- <dd>Deletes a <code>WebGLFrameBuffer</code> object.</dd>
- <dt>{{domxref("WebGLRenderingContext.framebufferRenderbuffer()")}}</dt>
- <dd>Attaches a <code>WebGLRenderingBuffer</code> object to a <code>WebGLFrameBuffer</code> object.</dd>
- <dt>{{domxref("WebGLRenderingContext.framebufferTexture2D()")}}</dt>
- <dd>Attaches a textures image to a <code>WebGLFrameBuffer</code> object.</dd>
- <dt>{{domxref("WebGLRenderingContext.getFramebufferAttachmentParameter()")}}</dt>
- <dd>Returns information about the framebuffer.</dd>
- <dt>{{domxref("WebGLRenderingContext.isFramebuffer()")}}</dt>
- <dd>Returns a Boolean indicating if the passed <code>WebGLFrameBuffer</code> object is valid.</dd>
- <dt>{{domxref("WebGLRenderingContext.readPixels()")}}</dt>
- <dd>Reads a block of pixels from the <code>WebGLFrameBuffer</code>.</dd>
-</dl>
+- {{domxref("WebGLRenderingContext.bindFramebuffer()")}}
+  - : Binds a `WebGLFrameBuffer` object to a given target.
+- {{domxref("WebGLRenderingContext.checkFramebufferStatus()")}}
+  - : Returns the status of the framebuffer.
+- {{domxref("WebGLRenderingContext.createFramebuffer()")}}
+  - : Creates a `WebGLFrameBuffer` object.
+- {{domxref("WebGLRenderingContext.deleteFramebuffer()")}}
+  - : Deletes a `WebGLFrameBuffer` object.
+- {{domxref("WebGLRenderingContext.framebufferRenderbuffer()")}}
+  - : Attaches a `WebGLRenderingBuffer` object to a `WebGLFrameBuffer` object.
+- {{domxref("WebGLRenderingContext.framebufferTexture2D()")}}
+  - : Attaches a textures image to a `WebGLFrameBuffer` object.
+- {{domxref("WebGLRenderingContext.getFramebufferAttachmentParameter()")}}
+  - : Returns information about the framebuffer.
+- {{domxref("WebGLRenderingContext.isFramebuffer()")}}
+  - : Returns a Boolean indicating if the passed `WebGLFrameBuffer` object is valid.
+- {{domxref("WebGLRenderingContext.readPixels()")}}
+  - : Reads a block of pixels from the `WebGLFrameBuffer`.
 
-<h2 id="Renderbuffers">Renderbuffers</h2>
+## Renderbuffers
 
-<dl>
- <dt>{{domxref("WebGLRenderingContext.bindRenderbuffer()")}}</dt>
- <dd>Binds a <code>WebGLRenderBuffer</code> object to a given target.</dd>
- <dt>{{domxref("WebGLRenderingContext.createRenderbuffer()")}}</dt>
- <dd>Creates a <code>WebGLRenderBuffer</code> object.</dd>
- <dt>{{domxref("WebGLRenderingContext.deleteRenderbuffer()")}}</dt>
- <dd>Deletes a <code>WebGLRenderBuffer</code> object.</dd>
- <dt>{{domxref("WebGLRenderingContext.getRenderbufferParameter()")}}</dt>
- <dd>Returns information about the renderbuffer.</dd>
- <dt>{{domxref("WebGLRenderingContext.isRenderbuffer()")}}</dt>
- <dd>Returns a Boolean indicating if the passed <code>WebGLRenderingBuffer</code> is valid.</dd>
- <dt>{{domxref("WebGLRenderingContext.renderbufferStorage()")}}</dt>
- <dd>Creates a renderbuffer data store.</dd>
-</dl>
+- {{domxref("WebGLRenderingContext.bindRenderbuffer()")}}
+  - : Binds a `WebGLRenderBuffer` object to a given target.
+- {{domxref("WebGLRenderingContext.createRenderbuffer()")}}
+  - : Creates a `WebGLRenderBuffer` object.
+- {{domxref("WebGLRenderingContext.deleteRenderbuffer()")}}
+  - : Deletes a `WebGLRenderBuffer` object.
+- {{domxref("WebGLRenderingContext.getRenderbufferParameter()")}}
+  - : Returns information about the renderbuffer.
+- {{domxref("WebGLRenderingContext.isRenderbuffer()")}}
+  - : Returns a Boolean indicating if the passed `WebGLRenderingBuffer` is valid.
+- {{domxref("WebGLRenderingContext.renderbufferStorage()")}}
+  - : Creates a renderbuffer data store.
 
-<h2 id="Textures">Textures</h2>
+## Textures
 
-<dl>
- <dt>{{domxref("WebGLRenderingContext.bindTexture()")}}</dt>
- <dd>Binds a <code>WebGLTexture</code> object to a given target.</dd>
- <dt>{{domxref("WebGLRenderingContext.compressedTexImage2D()")}}</dt>
- <dd>Specifies a 2D texture image in a compressed format.</dd>
- <dt>{{domxref("WebGLRenderingContext.compressedTexSubImage2D()")}}</dt>
- <dd>Specifies a 2D texture sub-image in a compressed format.</dd>
- <dt>{{domxref("WebGLRenderingContext.copyTexImage2D()")}}</dt>
- <dd>Copies a 2D texture image.</dd>
- <dt>{{domxref("WebGLRenderingContext.copyTexSubImage2D()")}}</dt>
- <dd>Copies a 2D texture sub-image.</dd>
- <dt>{{domxref("WebGLRenderingContext.createTexture()")}}</dt>
- <dd>Creates a <code>WebGLTexture</code> object.</dd>
- <dt>{{domxref("WebGLRenderingContext.deleteTexture()")}}</dt>
- <dd>Deletes a <code>WebGLTexture</code> object.</dd>
- <dt>{{domxref("WebGLRenderingContext.generateMipmap()")}}</dt>
- <dd>Generates a set of mipmaps for a <code>WebGLTexture</code> object.</dd>
- <dt>{{domxref("WebGLRenderingContext.getTexParameter()")}}</dt>
- <dd>Returns information about the texture.</dd>
- <dt>{{domxref("WebGLRenderingContext.isTexture()")}}</dt>
- <dd>Returns a Boolean indicating if the passed <code>WebGLTexture</code> is valid.</dd>
- <dt>{{domxref("WebGLRenderingContext.texImage2D()")}}</dt>
- <dd>Specifies a 2D texture image.</dd>
- <dt>{{domxref("WebGLRenderingContext.texSubImage2D()")}}</dt>
- <dd>Updates a sub-rectangle of the current <code>WebGLTexture</code>.</dd>
- <dt>{{domxref("WebGLRenderingContext.texParameter", "WebGLRenderingContext.texParameterf()")}}</dt>
- <dd>Sets texture parameters.</dd>
- <dt>{{domxref("WebGLRenderingContext.texParameter", "WebGLRenderingContext.texParameteri()")}}</dt>
- <dd>Sets texture parameters.</dd>
-</dl>
+- {{domxref("WebGLRenderingContext.bindTexture()")}}
+  - : Binds a `WebGLTexture` object to a given target.
+- {{domxref("WebGLRenderingContext.compressedTexImage2D()")}}
+  - : Specifies a 2D texture image in a compressed format.
+- {{domxref("WebGLRenderingContext.compressedTexSubImage2D()")}}
+  - : Specifies a 2D texture sub-image in a compressed format.
+- {{domxref("WebGLRenderingContext.copyTexImage2D()")}}
+  - : Copies a 2D texture image.
+- {{domxref("WebGLRenderingContext.copyTexSubImage2D()")}}
+  - : Copies a 2D texture sub-image.
+- {{domxref("WebGLRenderingContext.createTexture()")}}
+  - : Creates a `WebGLTexture` object.
+- {{domxref("WebGLRenderingContext.deleteTexture()")}}
+  - : Deletes a `WebGLTexture` object.
+- {{domxref("WebGLRenderingContext.generateMipmap()")}}
+  - : Generates a set of mipmaps for a `WebGLTexture` object.
+- {{domxref("WebGLRenderingContext.getTexParameter()")}}
+  - : Returns information about the texture.
+- {{domxref("WebGLRenderingContext.isTexture()")}}
+  - : Returns a Boolean indicating if the passed `WebGLTexture` is valid.
+- {{domxref("WebGLRenderingContext.texImage2D()")}}
+  - : Specifies a 2D texture image.
+- {{domxref("WebGLRenderingContext.texSubImage2D()")}}
+  - : Updates a sub-rectangle of the current `WebGLTexture`.
+- {{domxref("WebGLRenderingContext.texParameter", "WebGLRenderingContext.texParameterf()")}}
+  - : Sets texture parameters.
+- {{domxref("WebGLRenderingContext.texParameter", "WebGLRenderingContext.texParameteri()")}}
+  - : Sets texture parameters.
 
-<h2 id="Programs_and_shaders">Programs and shaders</h2>
+## Programs and shaders
 
-<dl>
- <dt>{{domxref("WebGLRenderingContext.attachShader()")}}</dt>
- <dd>Attaches a <code>WebGLShader</code> to a <code>WebGLProgram</code>.</dd>
- <dt>{{domxref("WebGLRenderingContext.bindAttribLocation()")}}</dt>
- <dd>Binds a generic vertex index to a named attribute variable.</dd>
- <dt>{{domxref("WebGLRenderingContext.compileShader()")}}</dt>
- <dd>Compiles a <code>WebGLShader</code>.</dd>
- <dt>{{domxref("WebGLRenderingContext.createProgram()")}}</dt>
- <dd>Creates a <code>WebGLProgram</code>.</dd>
- <dt>{{domxref("WebGLRenderingContext.createShader()")}}</dt>
- <dd>Creates a <code>WebGLShader</code>.</dd>
- <dt>{{domxref("WebGLRenderingContext.deleteProgram()")}}</dt>
- <dd>Deletes a <code>WebGLProgram</code>.</dd>
- <dt>{{domxref("WebGLRenderingContext.deleteShader()")}}</dt>
- <dd>Deletes a <code>WebGLShader</code>.</dd>
- <dt>{{domxref("WebGLRenderingContext.detachShader()")}}</dt>
- <dd>Detaches a <code>WebGLShader</code>.</dd>
- <dt>{{domxref("WebGLRenderingContext.getAttachedShaders()")}}</dt>
- <dd>Returns a list of <code>WebGLShader</code> objects attached to a <code>WebGLProgram</code>.</dd>
- <dt>{{domxref("WebGLRenderingContext.getProgramParameter()")}}</dt>
- <dd>Returns information about the program.</dd>
- <dt>{{domxref("WebGLRenderingContext.getProgramInfoLog()")}}</dt>
- <dd>Returns the information log for a <code>WebGLProgram</code> object.</dd>
- <dt>{{domxref("WebGLRenderingContext.getShaderParameter()")}}</dt>
- <dd>Returns information about the shader.</dd>
- <dt>{{domxref("WebGLRenderingContext.getShaderPrecisionFormat()")}}</dt>
- <dd>Returns a <code>WebGLShaderPrecisionFormat</code> object describing the precision for the numeric format of the shader.</dd>
- <dt>{{domxref("WebGLRenderingContext.getShaderInfoLog()")}}</dt>
- <dd>Returns the information log for a <code>WebGLShader</code> object.</dd>
- <dt>{{domxref("WebGLRenderingContext.getShaderSource()")}}</dt>
- <dd>Returns the source code of a <code>WebGLShader</code> as a string.</dd>
- <dt>{{domxref("WebGLRenderingContext.isProgram()")}}</dt>
- <dd>Returns a Boolean indicating if the passed <code>WebGLProgram</code> is valid.</dd>
- <dt>{{domxref("WebGLRenderingContext.isShader()")}}</dt>
- <dd>Returns a Boolean indicating if the passed <code>WebGLShader</code> is valid.</dd>
- <dt>{{domxref("WebGLRenderingContext.linkProgram()")}}</dt>
- <dd>Links the passed <code>WebGLProgram</code> object.</dd>
- <dt>{{domxref("WebGLRenderingContext.shaderSource()")}}</dt>
- <dd>Sets the source code in a <code>WebGLShader</code>.</dd>
- <dt>{{domxref("WebGLRenderingContext.useProgram()")}}</dt>
- <dd>Uses the specified <code>WebGLProgram</code> as part the current rendering state.</dd>
- <dt>{{domxref("WebGLRenderingContext.validateProgram()")}}</dt>
- <dd>Validates a <code>WebGLProgram</code>.</dd>
-</dl>
+- {{domxref("WebGLRenderingContext.attachShader()")}}
+  - : Attaches a `WebGLShader` to a `WebGLProgram`.
+- {{domxref("WebGLRenderingContext.bindAttribLocation()")}}
+  - : Binds a generic vertex index to a named attribute variable.
+- {{domxref("WebGLRenderingContext.compileShader()")}}
+  - : Compiles a `WebGLShader`.
+- {{domxref("WebGLRenderingContext.createProgram()")}}
+  - : Creates a `WebGLProgram`.
+- {{domxref("WebGLRenderingContext.createShader()")}}
+  - : Creates a `WebGLShader`.
+- {{domxref("WebGLRenderingContext.deleteProgram()")}}
+  - : Deletes a `WebGLProgram`.
+- {{domxref("WebGLRenderingContext.deleteShader()")}}
+  - : Deletes a `WebGLShader`.
+- {{domxref("WebGLRenderingContext.detachShader()")}}
+  - : Detaches a `WebGLShader`.
+- {{domxref("WebGLRenderingContext.getAttachedShaders()")}}
+  - : Returns a list of `WebGLShader` objects attached to a `WebGLProgram`.
+- {{domxref("WebGLRenderingContext.getProgramParameter()")}}
+  - : Returns information about the program.
+- {{domxref("WebGLRenderingContext.getProgramInfoLog()")}}
+  - : Returns the information log for a `WebGLProgram` object.
+- {{domxref("WebGLRenderingContext.getShaderParameter()")}}
+  - : Returns information about the shader.
+- {{domxref("WebGLRenderingContext.getShaderPrecisionFormat()")}}
+  - : Returns a `WebGLShaderPrecisionFormat` object describing the precision for the numeric format of the shader.
+- {{domxref("WebGLRenderingContext.getShaderInfoLog()")}}
+  - : Returns the information log for a `WebGLShader` object.
+- {{domxref("WebGLRenderingContext.getShaderSource()")}}
+  - : Returns the source code of a `WebGLShader` as a string.
+- {{domxref("WebGLRenderingContext.isProgram()")}}
+  - : Returns a Boolean indicating if the passed `WebGLProgram` is valid.
+- {{domxref("WebGLRenderingContext.isShader()")}}
+  - : Returns a Boolean indicating if the passed `WebGLShader` is valid.
+- {{domxref("WebGLRenderingContext.linkProgram()")}}
+  - : Links the passed `WebGLProgram` object.
+- {{domxref("WebGLRenderingContext.shaderSource()")}}
+  - : Sets the source code in a `WebGLShader`.
+- {{domxref("WebGLRenderingContext.useProgram()")}}
+  - : Uses the specified `WebGLProgram` as part the current rendering state.
+- {{domxref("WebGLRenderingContext.validateProgram()")}}
+  - : Validates a `WebGLProgram`.
 
-<h2 id="Uniforms_and_attributes">Uniforms and attributes</h2>
+## Uniforms and attributes
 
-<dl>
- <dt>{{domxref("WebGLRenderingContext.disableVertexAttribArray()")}}</dt>
- <dd>Disables a vertex attribute array at a given position.</dd>
- <dt>{{domxref("WebGLRenderingContext.enableVertexAttribArray()")}}</dt>
- <dd>Enables a vertex attribute array at a given position.</dd>
- <dt>{{domxref("WebGLRenderingContext.getActiveAttrib()")}}</dt>
- <dd>Returns information about an active attribute variable.</dd>
- <dt>{{domxref("WebGLRenderingContext.getActiveUniform()")}}</dt>
- <dd>Returns information about an active uniform variable.</dd>
- <dt>{{domxref("WebGLRenderingContext.getAttribLocation()")}}</dt>
- <dd>Returns the location of an attribute variable.</dd>
- <dt>{{domxref("WebGLRenderingContext.getUniform()")}}</dt>
- <dd>Returns the value of a uniform variable at a given location.</dd>
- <dt>{{domxref("WebGLRenderingContext.getUniformLocation()")}}</dt>
- <dd>Returns the location of a uniform variable.</dd>
- <dt>{{domxref("WebGLRenderingContext.getVertexAttrib()")}}</dt>
- <dd>Returns information about a vertex attribute at a given position.</dd>
- <dt>{{domxref("WebGLRenderingContext.getVertexAttribOffset()")}}</dt>
- <dd>Returns the address of a given vertex attribute.</dd>
- <dt>{{domxref("WebGLRenderingContext.uniform()", "WebGLRenderingContext.uniform[1234][fi][v]()")}}</dt>
- <dd>Specifies a value for a uniform variable.</dd>
- <dt>{{domxref("WebGLRenderingContext.uniformMatrix()", "WebGLRenderingContext.uniformMatrix[234]fv()")}}</dt>
- <dd>Specifies a matrix value for a uniform variable.</dd>
- <dt>{{domxref("WebGLRenderingContext.vertexAttrib()", "WebGLRenderingContext.vertexAttrib[1234]f[v]()")}}</dt>
- <dd>Specifies a value for a generic vertex attribute.</dd>
- <dt>{{domxref("WebGLRenderingContext.vertexAttribPointer()")}}</dt>
- <dd>Specifies the data formats and locations of vertex attributes in a vertex attributes array.</dd>
-</dl>
+- {{domxref("WebGLRenderingContext.disableVertexAttribArray()")}}
+  - : Disables a vertex attribute array at a given position.
+- {{domxref("WebGLRenderingContext.enableVertexAttribArray()")}}
+  - : Enables a vertex attribute array at a given position.
+- {{domxref("WebGLRenderingContext.getActiveAttrib()")}}
+  - : Returns information about an active attribute variable.
+- {{domxref("WebGLRenderingContext.getActiveUniform()")}}
+  - : Returns information about an active uniform variable.
+- {{domxref("WebGLRenderingContext.getAttribLocation()")}}
+  - : Returns the location of an attribute variable.
+- {{domxref("WebGLRenderingContext.getUniform()")}}
+  - : Returns the value of a uniform variable at a given location.
+- {{domxref("WebGLRenderingContext.getUniformLocation()")}}
+  - : Returns the location of a uniform variable.
+- {{domxref("WebGLRenderingContext.getVertexAttrib()")}}
+  - : Returns information about a vertex attribute at a given position.
+- {{domxref("WebGLRenderingContext.getVertexAttribOffset()")}}
+  - : Returns the address of a given vertex attribute.
+- {{domxref("WebGLRenderingContext.uniform()", "WebGLRenderingContext.uniform[1234][fi][v]()")}}
+  - : Specifies a value for a uniform variable.
+- {{domxref("WebGLRenderingContext.uniformMatrix()", "WebGLRenderingContext.uniformMatrix[234]fv()")}}
+  - : Specifies a matrix value for a uniform variable.
+- {{domxref("WebGLRenderingContext.vertexAttrib()", "WebGLRenderingContext.vertexAttrib[1234]f[v]()")}}
+  - : Specifies a value for a generic vertex attribute.
+- {{domxref("WebGLRenderingContext.vertexAttribPointer()")}}
+  - : Specifies the data formats and locations of vertex attributes in a vertex attributes array.
 
-<h2 id="Drawing_buffers">Drawing buffers</h2>
+## Drawing buffers
 
-<dl>
- <dt>{{domxref("WebGLRenderingContext.clear()")}}</dt>
- <dd>Clears specified buffers to preset values.</dd>
- <dt>{{domxref("WebGLRenderingContext.drawArrays()")}}</dt>
- <dd>Renders primitives from array data.</dd>
- <dt>{{domxref("WebGLRenderingContext.drawElements()")}}</dt>
- <dd>Renders primitives from element array data.</dd>
- <dt>{{domxref("WebGLRenderingContext.finish()")}}</dt>
- <dd>Blocks execution until all previously called commands are finished.</dd>
- <dt>{{domxref("WebGLRenderingContext.flush()")}}</dt>
- <dd>Empties different buffer commands, causing all commands to be executed as quickly as possible.</dd>
-</dl>
+- {{domxref("WebGLRenderingContext.clear()")}}
+  - : Clears specified buffers to preset values.
+- {{domxref("WebGLRenderingContext.drawArrays()")}}
+  - : Renders primitives from array data.
+- {{domxref("WebGLRenderingContext.drawElements()")}}
+  - : Renders primitives from element array data.
+- {{domxref("WebGLRenderingContext.finish()")}}
+  - : Blocks execution until all previously called commands are finished.
+- {{domxref("WebGLRenderingContext.flush()")}}
+  - : Empties different buffer commands, causing all commands to be executed as quickly as possible.
 
-<h2 id="Working_with_extensions">Working with extensions</h2>
+## Working with extensions
 
-<p>These methods manage WebGL extensions:</p>
+These methods manage WebGL extensions:
 
-<dl>
- <dt>{{domxref("WebGLRenderingContext.getSupportedExtensions()")}}</dt>
- <dd>Returns an {{jsxref("Array")}} of {{domxref("DOMString")}} elements with all the supported WebGL extensions.</dd>
- <dt>{{domxref("WebGLRenderingContext.getExtension()")}}</dt>
- <dd>Returns an extension object.</dd>
-</dl>
+- {{domxref("WebGLRenderingContext.getSupportedExtensions()")}}
+  - : Returns an {{jsxref("Array")}} of {{domxref("DOMString")}} elements with all the supported WebGL extensions.
+- {{domxref("WebGLRenderingContext.getExtension()")}}
+  - : Returns an extension object.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("HTMLCanvasElement")}}</li>
-</ul>
+- {{domxref("HTMLCanvasElement")}}

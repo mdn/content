@@ -2,60 +2,59 @@
 title: CSSNumericValue.min()
 slug: Web/API/CSSNumericValue/min
 tags:
-- API
-- CSS Typed Object Model API
-- CSSNumericValue
-- Experimental
-- Houdini
-- Method
-- Reference
-- min()
+  - API
+  - CSS Typed Object Model API
+  - CSSNumericValue
+  - Experimental
+  - Houdini
+  - Method
+  - Reference
+  - min()
 browser-compat: api.CSSNumericValue.min
 ---
-<div>{{draft}}{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}</div>
+{{draft}}{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
-<p>The <strong><code>min()</code></strong> method of the
-  {{domxref("CSSNumericValue")}} interface returns the lowest value from among those
-  values passed. The passed values must be of the same type.</p>
+The **`min()`** method of the
+{{domxref("CSSNumericValue")}} interface returns the lowest value from among those
+values passed. The passed values must be of the same type.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var cssUnitValue = CSSNumericValue.min(number1 ... numbern);</pre>
+```js
+var cssUnitValue = CSSNumericValue.min(number1 ... numbern);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>number</dt>
-  <dd>Either a {{jsxref('Number')}} or a {{domxref('CSSNumericValue')}}.</dd>
-</dl>
+- number
+  - : Either a {{jsxref('Number')}} or a {{domxref('CSSNumericValue')}}.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref('CSSUnitValue')}}.</p>
+A {{domxref('CSSUnitValue')}}.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>TypeError</dt>
-  <dd>Indicates that an invalid type was passed to the method.</dd>
-</dl>
+- TypeError
+  - : Indicates that an invalid type was passed to the method.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>As stated earlier, all passed values must be of the same type and value. Some of the
-  following examples illustrate what happens when they are not.</p>
+As stated earlier, all passed values must be of the same type and value. Some of the
+following examples illustrate what happens when they are not.
 
-<pre class="brush: js">// Prints "1cm"
+```js
+// Prints "1cm"
 console.log(CSS.cm("1").min(CSS.cm("2")).toString());
 
 // Prints "max(1cm, 0.393701in)"
-console.log(CSS.cm("1").max(CSS.in("0.393701")).toString());</pre>
+console.log(CSS.cm("1").max(CSS.in("0.393701")).toString());
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

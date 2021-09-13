@@ -2,65 +2,64 @@
 title: RTCRtpEncodingParameters.maxBitrate
 slug: Web/API/RTCRtpEncodingParameters/maxBitrate
 tags:
-- API
-- BPS
-- Bandwidth
-- Bit Rate
-- Codec
-- Encoding
-- Property
-- RTCRtpEncodingParameters
-- Reference
-- Settings
-- WebRTC
-- WebRTC API
-- maxBitrate
-- parameters
+  - API
+  - BPS
+  - Bandwidth
+  - Bit Rate
+  - Codec
+  - Encoding
+  - Property
+  - RTCRtpEncodingParameters
+  - Reference
+  - Settings
+  - WebRTC
+  - WebRTC API
+  - maxBitrate
+  - parameters
 browser-compat: api.RTCRtpEncodingParameters.maxBitrate
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The {{domxref("RTCRtpEncodingParameters")}} dictionary's
-    <strong><code>maxBitrate</code></strong> property specifies the maximum number of bits
-    per second to allow a track encoded with this encoding to use.</p>
+The {{domxref("RTCRtpEncodingParameters")}} dictionary's
+**`maxBitrate`** property specifies the maximum number of bits
+per second to allow a track encoded with this encoding to use.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>rtpEncodingParameters</em>.maxBitrate = <em>maxBitsPerSecond</em>;
+```js
+rtpEncodingParameters.maxBitrate = maxBitsPerSecond;
 
-<em>rtpEncodingParameters</em> = {
-  maxBitrate: <em>maxBitsPerSecond</em>
+rtpEncodingParameters = {
+  maxBitrate: maxBitsPerSecond
 };
 
-<em>maxBitsPerSecond</em> = <em>rtpEncodingParameters</em>.maxBitrate;
-</pre>
+maxBitsPerSecond = rtpEncodingParameters.maxBitrate;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An unsigned long integer value specifying the maximum bandwidth this encoding is
-  permitted to use for a track of media it encodes in terms of bits per second. Other
-  parameters may further reduce the bandwidth used by the track; for example,
-  {{domxref("RTCRtpEncodingParameters.maxFramerate", "maxFramerate")}} will, if set low
-  enough, constrain the bandwidth as well.</p>
+An unsigned long integer value specifying the maximum bandwidth this encoding is
+permitted to use for a track of media it encodes in terms of bits per second. Other
+parameters may further reduce the bandwidth used by the track; for example,
+{{domxref("RTCRtpEncodingParameters.maxFramerate", "maxFramerate")}} will, if set low
+enough, constrain the bandwidth as well.
 
-<p>In addition, there's no guarantee that the network interface can support the specified
-  bandwidth, in which case the actual bandwidth will be lower.</p>
+In addition, there's no guarantee that the network interface can support the specified
+bandwidth, in which case the actual bandwidth will be lower.
 
-<p>This value is computed using the standard Transport Independent Application Specific
-  Maximum (TIAS) bandwidth as defined by {{RFC(3890, "", "6.2.2")}}; this is the maximum
-  bandwidth needed without considering protocol overheads from IP, TCP or UDP, and so
-  forth.</p>
+This value is computed using the standard Transport Independent Application Specific
+Maximum (TIAS) bandwidth as defined by {{RFC(3890, "", "6.2.2")}}; this is the maximum
+bandwidth needed without considering protocol overheads from IP, TCP or UDP, and so
+forth.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("RTCRtpEncodingParameters.maxFramerate")}}</li>
-</ul>
+- {{domxref("RTCRtpEncodingParameters.maxFramerate")}}

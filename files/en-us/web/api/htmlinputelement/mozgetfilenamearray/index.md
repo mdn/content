@@ -2,54 +2,52 @@
 title: HTMLInputElement.mozGetFileNameArray()
 slug: Web/API/HTMLInputElement/mozGetFileNameArray
 tags:
-- API
-- HTML DOM
-- HTMLInputElement
-- Method
-- NeedsBrowserCompatibility
-- Non-standard
-- Reference
+  - API
+  - HTML DOM
+  - HTMLInputElement
+  - Method
+  - NeedsBrowserCompatibility
+  - Non-standard
+  - Reference
 browser-compat: api.HTMLInputElement.mozGetFileNameArray
 ---
-<div>{{ APIRef("HTML DOM") }}{{Non-standard_header}}</div>
+{{ APIRef("HTML DOM") }}{{Non-standard_header}}
 
-<p>The <strong><code>HTMLInputElement.mozGetFileNameArray()</code></strong> method returns
-  an array of the names of the files that were selected by the user on an HTML
-  <code>input</code> element.</p>
+The **`HTMLInputElement.mozGetFileNameArray()`** method returns
+an array of the names of the files that were selected by the user on an HTML
+`input` element.
 
-<div class="note"><p><strong>Note:</strong> This method is Gecko-specific and is not
-  available in other browsers. Also, it throws an error if used in Web pages.</p></div>
+> **Note:** This method is Gecko-specific and is not
+> available in other browsers. Also, it throws an error if used in Web pages.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>inputElement</em>.mozGetFileNameArray(<em>aLength, aFileNames</em>);
-</pre>
+```js
+inputElement.mozGetFileNameArray(aLength, aFileNames);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>aLength</code></dt>
-  <dd>If specified, will receive the number of file names in the returned array.</dd>
-  <dt><code>aFileNames</code></dt>
-  <dd>Is an array into which the file names are placed.</dd>
-</dl>
+- `aLength`
+  - : If specified, will receive the number of file names in the returned array.
+- `aFileNames`
+  - : Is an array into which the file names are placed.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">var numFiles = 0;
+```js
+var numFiles = 0;
 var fileArray = {};
 
 inputElement.mozGetFileNameArray(numFiles, fileArray);
-</pre>
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTMLElement("input")}}</li>
-  <li>{{domxref("HTMLInputElement")}}</li>
-  <li>{{domxref("Input.mozSetFileNameArray")}}</li>
-</ul>
+- {{HTMLElement("input")}}
+- {{domxref("HTMLInputElement")}}
+- {{domxref("Input.mozSetFileNameArray")}}

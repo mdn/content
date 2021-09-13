@@ -2,30 +2,31 @@
 title: SVGGeometryElement.pathLength
 slug: Web/API/SVGGeometryElement/pathLength
 tags:
-- API
-- DOM
-- NeedsExample
-- Property
-- Reference
-- SVG
-- SVG DOM
+  - API
+  - DOM
+  - NeedsExample
+  - Property
+  - Reference
+  - SVG
+  - SVG DOM
 browser-compat: api.SVGGeometryElement.pathLength
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <code><strong>SVGGeometryElement.pathLength</strong></code> property reflects the
-  {{SVGAttr("pathLength")}} attribute and returns the total length of the path, in user
-  units.</p>
+The **`SVGGeometryElement.pathLength`** property reflects the
+{{SVGAttr("pathLength")}} attribute and returns the total length of the path, in user
+units.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>pathLength</var> = <var>someElement</var>.pathLength;
-</pre>
+```js
+var pathLength = someElement.pathLength;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

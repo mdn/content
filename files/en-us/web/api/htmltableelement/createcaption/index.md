@@ -2,65 +2,65 @@
 title: HTMLTableElement.createCaption()
 slug: Web/API/HTMLTableElement/createCaption
 tags:
-- API
-- HTML DOM
-- HTMLTableElement
-- Method
-- NeedsSpecTable
-- Reference
+  - API
+  - HTML DOM
+  - HTMLTableElement
+  - Method
+  - NeedsSpecTable
+  - Reference
 browser-compat: api.HTMLTableElement.createCaption
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <code><strong>HTMLTableElement.createCaption()</strong></code> method returns the
-	{{HtmlElement("caption")}} element associated with a given {{HtmlElement("table")}}.
-	If no <code>&lt;caption&gt;</code> element exists on the table, this method creates
-	it, and then returns it.</p>
+The **`HTMLTableElement.createCaption()`** method returns the
+{{HtmlElement("caption")}} element associated with a given {{HtmlElement("table")}}.
+If no `<caption>` element exists on the table, this method creates
+it, and then returns it.
 
-<div class="notecard note">
-	<p><strong>Note:</strong> If no caption exists, <code>createCaption()</code> inserts a
-		new caption directly into the table. The caption does not need to be added
-		separately as would be the case if {{domxref("Document.createElement()")}} had
-		been used to create the new <code>&lt;caption&gt;</code> element.</p>
-</div>
+> **Note:** If no caption exists, `createCaption()` inserts a
+> new caption directly into the table. The caption does not need to be added
+> separately as would be the case if {{domxref("Document.createElement()")}} had
+> been used to create the new `<caption>` element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-	class="brush: js"><em>HTMLTableElement</em> = <em>table</em>.createCaption();</pre>
+```js
+HTMLTableElement = table.createCaption();
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{domxref("HTMLTableCaptionElement")}}</p>
+{{domxref("HTMLTableCaptionElement")}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example uses JavaScript to add a caption to a table that initially lacks one.</p>
+This example uses JavaScript to add a caption to a table that initially lacks one.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;table&gt;
-  &lt;tr&gt;&lt;td&gt;Cell 1.1&lt;/td&gt;&lt;td&gt;Cell 1.2&lt;/td&gt;&lt;td&gt;Cell 1.3&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;Cell 2.1&lt;/td&gt;&lt;td&gt;Cell 2.2&lt;/td&gt;&lt;td&gt;Cell 2.3&lt;/td&gt;&lt;/tr&gt;
-&lt;/table&gt;</pre>
+```html
+<table>
+  <tr><td>Cell 1.1</td><td>Cell 1.2</td><td>Cell 1.3</td></tr>
+  <tr><td>Cell 2.1</td><td>Cell 2.2</td><td>Cell 2.3</td></tr>
+</table>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">let table = document.querySelector('table');
+```js
+let table = document.querySelector('table');
 let caption = table.createCaption();
-caption.textContent = 'This caption was created by JavaScript!';</pre>
+caption.textContent = 'This caption was created by JavaScript!';
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
-
-	<p>{{Compat}}</p>
-</div>
+{{Compat}}

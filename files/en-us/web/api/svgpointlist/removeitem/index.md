@@ -9,49 +9,49 @@ tags:
   - SVGPointList
 browser-compat: api.SVGPointList.removeItem
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <strong><code>removeItem()</code></strong> method of the {{domxref("SVGPointList")}} interface removes a {{domxref("SVGPoint","point")}} from the list.</p>
+The **`removeItem()`** method of the {{domxref("SVGPointList")}} interface removes a {{domxref("SVGPoint","point")}} from the list.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">SVGPointList.removeItem(index);</pre>
+```js
+SVGPointList.removeItem(index);
+```
 
-<dl>
-  <dt><code>index</code></dt>
-  <dd>The index of the item to remove.</dd>
-</dl>
+- `index`
+  - : The index of the item to remove.
 
-<h3 id="Returns">Return value</h3>
+### Return value
 
-<p>The removed {{domxref("SVGPoint")}} object.</p>
+The removed {{domxref("SVGPoint")}} object.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>{{domxref("DOMException")}} <code>NoModicationAllowedError</code></dt>
-  <dd>Thrown if the list is read-only.</dd>
-  <dt>{{domxref("DOMException")}} <code>IndexSizeError</code></dt>
-  <dd>Thrown if the index passed in is greater than the number of items in the list.</dd>
-</dl>
+- {{domxref("DOMException")}} `NoModicationAllowedError`
+  - : Thrown if the list is read-only.
+- {{domxref("DOMException")}} `IndexSizeError`
+  - : Thrown if the index passed in is greater than the number of items in the list.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example shows an SVG which contains a {{SVGElement("polyline")}} with five coordinate pairs. The item at index <code>2</code> is removed.</p>
+The following example shows an SVG which contains a {{SVGElement("polyline")}} with five coordinate pairs. The item at index `2` is removed.
 
-<pre class="brush: html">&lt;svg id="svg" viewBox="-10 -10 120 120" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;polyline id="example" stroke="black" fill="none"
-   points="50,0 21,90 98,35 2,35 79,90"/&gt;
-</svg></pre>
+```html
+<svg id="svg" viewBox="-10 -10 120 120" xmlns="http://www.w3.org/2000/svg">
+  <polyline id="example" stroke="black" fill="none"
+   points="50,0 21,90 98,35 2,35 79,90"/>
+```
 
-<pre class="brush: js">let example = document.getElementById("example");
-console.log(example.points.removeItem(2));</pre>
+```js
+let example = document.getElementById("example");
+console.log(example.points.removeItem(2));
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-
-<p>{{Compat}}</p>
+{{Compat}}

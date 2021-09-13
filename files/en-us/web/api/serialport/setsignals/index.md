@@ -9,49 +9,44 @@ tags:
   - SerialPort
 browser-compat: api.SerialPort.setSignals
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("Serial API")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("Serial API")}}
 
-<p>The <strong><code>setSignals()</code></strong> method of the {{domxref("SerialPort")}} interface sets control signals on the port and returns a {{jsxref("Promise")}} that resolves when they are set.</p>
+The **`setSignals()`** method of the {{domxref("SerialPort")}} interface sets control signals on the port and returns a {{jsxref("Promise")}} that resolves when they are set.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox notranslate">var <var>promise</var> = <var>SerialPort</var>.setSignals(<var>options</var>);</pre>
+    var promise = SerialPort.setSignals(options);
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>options</code>{{optional_inline}}</dt>
-  <dd>An object with any of the following values:
-    <dl>
-      <dt><code>clearToSend</code></dt>
-      <dd>A boolean indicating to the other end of a serial connection that is is clear to send data.</dd>
-      <dt><code>dataCarrierDetect</code></dt>
-      <dd>A boolean that toggles the control signal needed to communicate over a serial connection.</dd>
-      <dt><code>dataSetReady</code></dt>
-      <dd>A boolean indicating whether the device is ready to send and receive data.</dd>
-      <dt><code>ringIndicator</code></dt>
-      <dd>A boolean indicating whether a ring signal should be sent down the serial connection.</dd>
-    </dl>
-  </dd>
-</dl>
+- `options`{{optional_inline}}
 
-<h3 id="Returns">Return value</h3>
+  - : An object with any of the following values:
 
-<p>A {{jsxref("Promise")}}.</p>
+    - `clearToSend`
+      - : A boolean indicating to the other end of a serial connection that is is clear to send data.
+    - `dataCarrierDetect`
+      - : A boolean that toggles the control signal needed to communicate over a serial connection.
+    - `dataSetReady`
+      - : A boolean indicating whether the device is ready to send and receive data.
+    - `ringIndicator`
+      - : A boolean indicating whether a ring signal should be sent down the serial connection.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Return value
 
-<dl>
-  <dt>{{domxref("DOMException")}} <code>"InvalidStateError"</code></dt>
-  <dd>Indicates that the port is not open. Call {{domxref("SerialPort.open()")}} to avoid this error.</dd>
-  <dt>{{domxref("DOMException")}} <code>NetworkError</code></dt>
-  <dd>Indicates that one of the signals on the device could not be set.</dd>
-</dl>
+A {{jsxref("Promise")}}.
 
-<h2 id="Specifications">Specifications</h2>
+### Exceptions
+
+- {{domxref("DOMException")}} `"InvalidStateError"`
+  - : Indicates that the port is not open. Call {{domxref("SerialPort.open()")}} to avoid this error.
+- {{domxref("DOMException")}} `NetworkError`
+  - : Indicates that one of the signals on the device could not be set.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

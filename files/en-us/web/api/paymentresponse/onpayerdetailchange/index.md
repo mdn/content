@@ -2,47 +2,49 @@
 title: PaymentResponse.onpayerdetailchange
 slug: Web/API/PaymentResponse/onpayerdetailchange
 tags:
-- API
-- Event Handler
-- Payer
-- Payer Details
-- Payment Request
-- Payment Request API
-- PaymentResponse
-- Property
-- Reference
-- Web
-- onpayerdetailchange
-- payment
-- validate
+  - API
+  - Event Handler
+  - Payer
+  - Payer Details
+  - Payment Request
+  - Payment Request API
+  - PaymentResponse
+  - Property
+  - Reference
+  - Web
+  - onpayerdetailchange
+  - payment
+  - validate
 browser-compat: api.PaymentResponse.onpayerdetailchange
 ---
-<div>{{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}</div>
+{{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
 
-<p>The {{domxref("PaymentResponse")}} object's
-    <code><strong>onpayerdetailchange</strong></code> property is an event handler which
-    is called to handle the {{event("payerdetailchange")}} event, which is sent to the
-    <code>PaymentResponse</code> when the user makes changes to their personal information
-    while filling out a payment request form.</p>
+The {{domxref("PaymentResponse")}} object's
+**`onpayerdetailchange`** property is an event handler which
+is called to handle the {{event("payerdetailchange")}} event, which is sent to the
+`PaymentResponse` when the user makes changes to their personal information
+while filling out a payment request form.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>paymentResponse</em>.onpayerdetailchange = <em>eventHandlerFunction</em>;
-</pre>
+```js
+paymentResponse.onpayerdetailchange = eventHandlerFunction;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An event handler function which is called to handle the {{event("payerdetailchange")}}
-  event when the user makes changes to their personal information while editing a payment
-  request form.</p>
+An event handler function which is called to handle the {{event("payerdetailchange")}}
+event when the user makes changes to their personal information while editing a payment
+request form.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the example below, <code>onpayerdetailchange</code> is used to set up a listener for
-  the {{event("payerdetailchange")}} event in order to validate the information entered by
-  the user, requesting that any mistakes be corrected</p>
+In the example below, `onpayerdetailchange` is used to set up a listener for
+the {{event("payerdetailchange")}} event in order to validate the information entered by
+the user, requesting that any mistakes be corrected
 
-<pre class="brush: js">// Options for PaymentRequest(), indicating that shipping address,
+```js
+// Options for PaymentRequest(), indicating that shipping address,
 // payer email address, name, and phone number all be collected.
 
 const options = {
@@ -65,7 +67,7 @@ let {
 // Set up a handler for payerdetailchange events, to
 // request corrections as needed.
 
-response.onpayerdetailchange = async ev =&gt; {
+response.onpayerdetailchange = async ev => {
   const promisesToValidate = [];
   const { payerName, payerEmail, payerPhone } = response;
 
@@ -89,7 +91,7 @@ response.onpayerdetailchange = async ev =&gt; {
   // As each validation promise resolves, add the results of the
   // validation to the errors list
 
-  const errors = await Promise.all(promisesToValidate).then(results =&gt;
+  const errors = await Promise.all(promisesToValidate).then(results =>
     results.reduce((errors, result), Object.assign(errors, result))
   );
 
@@ -110,8 +112,8 @@ await response.retry({
     phone: "invalid number.",
   },
 });
-</pre>
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

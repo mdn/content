@@ -2,30 +2,33 @@
 title: NDEFRecord.mediaType
 slug: Web/API/NDEFRecord/mediaType
 tags:
-- NDEF
-- Reference
-- Web NFC
+  - NDEF
+  - Reference
+  - Web NFC
 browser-compat: api.NDEFRecord.mediaType
 ---
-<p>{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}</p>
+{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 
-<p>The <strong><code>mediaType</code></strong>
-    property of the {{DOMxRef("NDEFRecord")}} interface returns the {{Glossary("MIME type")}} of the record. This value will be <code>null</code> if <code>recordType</code> is not equal to <code>"mime"</code>.</p>
+The **`mediaType`**
+property of the {{DOMxRef("NDEFRecord")}} interface returns the {{Glossary("MIME type")}} of the record. This value will be `null` if `recordType` is not equal to `"mime"`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">NDEFRecord.mediaType</pre>
+```js
+NDEFRecord.mediaType
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{DOMxRef("USVString")}}, containing the {{Glossary("MIME type")}} of the record
-  payload.</p>
+A {{DOMxRef("USVString")}}, containing the {{Glossary("MIME type")}} of the record
+payload.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example loops over the records in an {{domxref("NDEFMessage")}} object, which is retrieved from {{domxref("NDEFReadingEvent.message")}}. It then uses the <code>mediaType</code> property to determine which of the records to parse.</p>
+The following example loops over the records in an {{domxref("NDEFMessage")}} object, which is retrieved from {{domxref("NDEFReadingEvent.message")}}. It then uses the `mediaType` property to determine which of the records to parse.
 
-<pre class="brush: js">const ndef = new NDEFReader();
+```js
+const ndef = new NDEFReader();
   await ndef.scan();
   ndef.onreading = (event) => {
     const decoder = new TextDecoder();
@@ -36,12 +39,13 @@ browser-compat: api.NDEFRecord.mediaType
         console.log(`${json.name} is ${article} ${json.title}`);
       }
     }
-  };</pre>
+  };
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

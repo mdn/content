@@ -10,28 +10,31 @@ tags:
   - Read-only
 browser-compat: api.TextEncoderStream.readable
 ---
-<p>{{APIRef("Encoding API")}}</p>
+{{APIRef("Encoding API")}}
 
-<p>The <strong><code>readable</code></strong> read-only property of the {{domxref("TextEncoderStream")}} interface returns a {{domxref("ReadableStream")}}.</p>
+The **`readable`** read-only property of the {{domxref("TextEncoderStream")}} interface returns a {{domxref("ReadableStream")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <var>readable</var> = <var>TextEncoderStream</var>.readable;</pre>
+    var readable = TextEncoderStream.readable;
 
-<h3>Value</h3>
-<p>A {{domxref("ReadableStream")}}.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("ReadableStream")}}.
 
-<p>The following example demonstrates how to return a <code>ReadableStream</code> from a <code>TextEncoderStream</code> object.</p>
+## Examples
 
-<pre class="brush:js">stream = new TextEncoderStream();
-console.log(stream.readable); //a ReadableStream</pre>
+The following example demonstrates how to return a `ReadableStream` from a `TextEncoderStream` object.
 
-<h2 id="Specifications">Specifications</h2>
+```js
+stream = new TextEncoderStream();
+console.log(stream.readable); //a ReadableStream
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

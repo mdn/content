@@ -2,31 +2,32 @@
 title: MediaKeys.createSession()
 slug: Web/API/MediaKeys/createSession
 tags:
-- API
-- EncryptedMediaExtensions
-- Experimental
-- Media
-- MediaKeys
-- Method
-- Reference
-- createSession
+  - API
+  - EncryptedMediaExtensions
+  - Experimental
+  - Media
+  - MediaKeys
+  - Method
+  - Reference
+  - createSession
 browser-compat: api.MediaKeys.createSession
 ---
-<div>{{APIRef("EncryptedMediaExtensions")}}{{SeeCompatTable}}</div>
+{{APIRef("EncryptedMediaExtensions")}}{{SeeCompatTable}}
 
-<p>The <code>MediaKeys.createSession()</code> method returns a new
-  {{domxref("MediaKeySession")}} object, which represents a context for message exchange
-  with a content decryption module (CDM).</p>
+The `MediaKeys.createSession()` method returns a new
+{{domxref("MediaKeySession")}} object, which represents a context for message exchange
+with a content decryption module (CDM).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>mediaKeySessionObject</var> = MediaKeys.createSession(<var>[MediaKeySessionType]</var>);</pre>
+```js
+var mediaKeySessionObject = MediaKeys.createSession([MediaKeySessionType]);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

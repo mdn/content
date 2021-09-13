@@ -12,88 +12,92 @@ tags:
   - pip
 browser-compat: api.HTMLVideoElement.leavepictureinpicture_event
 ---
-<p>{{APIRef("HTMLVideoElement")}}</p>
+{{APIRef("HTMLVideoElement")}}
 
-<p>The <code>leavepictureinpicture</code> event is fired when the {{DOMxRef("HTMLVideoElement")}} leaves picture-in-picture mode successfully.</p>
+The `leavepictureinpicture` event is fired when the {{DOMxRef("HTMLVideoElement")}} leaves picture-in-picture mode successfully.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{DOMxRef("PictureInPictureEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Target</th>
-   <td>{{DOMxRef("HTMLVideoElement")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Default Action</th>
-   <td>None</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("HTMLVideoElement.onleavepictureinpicture")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{DOMxRef("PictureInPictureEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Target</th>
+      <td>{{DOMxRef("HTMLVideoElement")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Default Action</th>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{domxref("HTMLVideoElement.onleavepictureinpicture")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>These examples add an event listener for the HTMLVideoElement's <code>leavepictureinpicture</code> event, then post a message when that event handler has reacted to the event firing.</p>
+These examples add an event listener for the HTMLVideoElement's `leavepictureinpicture` event, then post a message when that event handler has reacted to the event firing.
 
-<p>Using <code>addEventListener()</code>:</p>
+Using `addEventListener()`:
 
-<pre class="brush: js">const video = document.querySelector('#video');
+```js
+const video = document.querySelector('#video');
 const button = document.querySelector('#button');
 
 function onExitPip() {
-  console.log(&quot;Picture-in-Picture mode deactivated!&quot;);
+  console.log("Picture-in-Picture mode deactivated!");
 }
 
-video.addEventListener(&quot;leavepictureinpicture&quot;, onExitPip, false);
+video.addEventListener("leavepictureinpicture", onExitPip, false);
 
-button.onclick = function() =&gt; {
+button.onclick = function() => {
   if (document.pictureInPictureElement) {
     document.exitPictureInPicture();
   }
-}</pre>
+}
+```
 
-<p>Using the <code>onleavepictureinpicture</code> event handler property:</p>
+Using the `onleavepictureinpicture` event handler property:
 
-<pre class="brush: js">const video = document.querySelector('#video');
+```js
+const video = document.querySelector('#video');
 const button = document.querySelector('#button');
 
 function onExitPip() {
-  console.log(&quot;Picture-in-Picture mode deactivated!&quot;);
+  console.log("Picture-in-Picture mode deactivated!");
 }
 
 video.onleavepictureinpicture = onExitPip;
 
-button.onclick = function() =&gt; {
+button.onclick = function() => {
   if (document.pictureInPictureElement) {
     document.exitPictureInPicture();
   }
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("HTMLVideoElement")}}</li>
- <li>{{domxref("Picture-in-Picture_API")}}</li>
-</ul>
+- {{domxref("HTMLVideoElement")}}
+- {{domxref("Picture-in-Picture_API")}}

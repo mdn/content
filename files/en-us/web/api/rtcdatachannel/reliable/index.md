@@ -11,44 +11,42 @@ tags:
   - reliable
 browser-compat: api.RTCDataChannel.reliable
 ---
-<p>{{APIRef("WebRTC")}}{{deprecated_header}}</p>
+{{APIRef("WebRTC")}}{{deprecated_header}}
 
-<p>The read-only <code>RTCDataChannel</code> property
-  <code><strong>reliable</strong></code> indicates whether or not the data channel is
-  reliable.</p>
+The read-only `RTCDataChannel` property
+**`reliable`** indicates whether or not the data channel is
+reliable.
 
-<div class="warning">
-  <p><strong>Warning:</strong> This property is obsolete. Use {{domxref("RTCDataChannel.ordered")}} instead in any
-    new code, and update existing code as soon as possible.</p>
-</div>
+> **Warning:** This property is obsolete. Use {{domxref("RTCDataChannel.ordered")}} instead in any
+> new code, and update existing code as soon as possible.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>reliable</em> = <em>aDataChannel</em>.reliable;
-</pre>
+```js
+var reliable = aDataChannel.reliable;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p><code>true</code> if the {{domxref("RTCDataChannel")}}'s connection is reliable;
-  <code>false</code> if it isn't.</p>
+`true` if the {{domxref("RTCDataChannel")}}'s connection is reliable;
+`false` if it isn't.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">// TBD
-</pre>
+```js
+// TBD
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>No longer part of any specification.</p>
+No longer part of any specification.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
-  <li>{{domxref("RTCDataChannel")}}</li>
-  <li>{{domxref("RTCDataChannel.ordered")}}</li>
-</ul>
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)
+- {{domxref("RTCDataChannel")}}
+- {{domxref("RTCDataChannel.ordered")}}

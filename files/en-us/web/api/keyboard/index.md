@@ -12,46 +12,46 @@ tags:
   - keyboard
 browser-compat: api.Keyboard
 ---
-<div>{{SeeCompatTable}}{{APIRef("Keyboard API")}}</div>
+{{SeeCompatTable}}{{APIRef("Keyboard API")}}
 
-<p>The <strong><code>Keyboard</code></strong> interface of the <a href="/en-US/docs/Web/API/Keyboard_API">Keyboard API</a> provides functions that retrieve keyboard layout maps and toggle capturing of key presses from the physical keyboard.</p>
+The **`Keyboard`** interface of the [Keyboard API](/en-US/docs/Web/API/Keyboard_API) provides functions that retrieve keyboard layout maps and toggle capturing of key presses from the physical keyboard.
 
-<p>A list of valid code values is found in the <a href="https://www.w3.org/TR/uievents-code/#key-alphanumeric-writing-system">UI Events KeyboardEvent code Values</a> spec.</p>
+A list of valid code values is found in the [UI Events KeyboardEvent code Values](https://www.w3.org/TR/uievents-code/#key-alphanumeric-writing-system) spec.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p>None.</p>
+None.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref('Keyboard.getLayoutMap()')}} {{experimental_inline}}</dt>
- <dd>Returns a {{jsxref('Promise')}} that resolves with an instance of {{domxref('KeyboardLayoutMap')}} which is a map-like object with functions for retrieving the strings associated with specific physical keys.</dd>
- <dt>{{domxref('Keyboard.lock()')}} {{experimental_inline}}</dt>
- <dd>Returns a {{jsxref('Promise')}} after enabling the capture of keypresses for any or all of the keys on the physical keyboard.</dd>
- <dt>{{domxref('Keyboard.unlock()')}} {{experimental_inline}}</dt>
- <dd>Unlocks all keys captured by the <code>lock()</code> method and returns synchronously.</dd>
-</dl>
+- {{domxref('Keyboard.getLayoutMap()')}} {{experimental_inline}}
+  - : Returns a {{jsxref('Promise')}} that resolves with an instance of {{domxref('KeyboardLayoutMap')}} which is a map-like object with functions for retrieving the strings associated with specific physical keys.
+- {{domxref('Keyboard.lock()')}} {{experimental_inline}}
+  - : Returns a {{jsxref('Promise')}} after enabling the capture of keypresses for any or all of the keys on the physical keyboard.
+- {{domxref('Keyboard.unlock()')}} {{experimental_inline}}
+  - : Unlocks all keys captured by the `lock()` method and returns synchronously.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example demonstrates how to get the location- or layout-specific string associated with the key that corresponds to the 'W' key on an English QWERTY keyboard.</p>
+The following example demonstrates how to get the location- or layout-specific string associated with the key that corresponds to the 'W' key on an English QWERTY keyboard.
 
-<pre class="brush: js">if (navigator.keyboard) {
+```js
+if (navigator.keyboard) {
   var keyboard = navigator.keyboard;
   keyboard.getLayoutMap()
-  .then(keyboardLayoutMap =&gt; {
+  .then(keyboardLayoutMap => {
     var upKey = keyboardLayoutMap.get('KeyW');
     window.alert('Press ' + upKey + ' to move up.');
   });
 } else {
   // Do something else.
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

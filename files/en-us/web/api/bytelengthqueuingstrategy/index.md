@@ -10,31 +10,28 @@ tags:
   - Streams
 browser-compat: api.ByteLengthQueuingStrategy
 ---
-<p>{{SeeCompatTable}}{{APIRef("Streams")}}</p>
+{{SeeCompatTable}}{{APIRef("Streams")}}
 
-<p>The <strong><code>ByteLengthQueuingStrategy</code></strong> interface of the <a href="/en-US/docs/Web/API/Streams_API">Streams API</a> provides a built-in byte length queuing strategy that can be used when constructing streams.</p>
+The **`ByteLengthQueuingStrategy`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) provides a built-in byte length queuing strategy that can be used when constructing streams.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("ByteLengthQueuingStrategy.ByteLengthQueuingStrategy", "ByteLengthQueuingStrategy()")}}</dt>
- <dd>Creates a new <code>ByteLengthQueuingStrategy</code> object instance.</dd>
-</dl>
+- {{domxref("ByteLengthQueuingStrategy.ByteLengthQueuingStrategy", "ByteLengthQueuingStrategy()")}}
+  - : Creates a new `ByteLengthQueuingStrategy` object instance.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p>None.</p>
+None.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("ByteLengthQueuingStrategy.size()")}}</dt>
- <dd>Returns the given chunk’s <code>byteLength</code> property.</dd>
-</dl>
+- {{domxref("ByteLengthQueuingStrategy.size()")}}
+  - : Returns the given chunk’s `byteLength` property.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js ">const queueingStrategy = new ByteLengthQueuingStrategy({ highWaterMark: 1 });
+```js
+const queueingStrategy = new ByteLengthQueuingStrategy({ highWaterMark: 1 });
 
 const readableStream = new ReadableStream({
   start(controller) {
@@ -48,12 +45,13 @@ const readableStream = new ReadableStream({
   }
 }, queueingStrategy);
 
-var size = queueingStrategy.size(chunk);</pre>
+var size = queueingStrategy.size(chunk);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

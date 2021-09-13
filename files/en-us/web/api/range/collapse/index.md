@@ -8,48 +8,46 @@ tags:
   - Range
 browser-compat: api.Range.collapse
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>Range.collapse()</strong></code> method collapses the
-  {{domxref("Range")}} to one of its boundary points.</p>
+The **`Range.collapse()`** method collapses the
+{{domxref("Range")}} to one of its boundary points.
 
-<p>A collapsed {{domxref("Range")}} is empty, containing no content, specifying a
-  single-point in a DOM tree. To determine if a {{domxref("Range")}} is already collapsed,
-  see the {{domxref("Range.collapsed")}} property.</p>
+A collapsed {{domxref("Range")}} is empty, containing no content, specifying a
+single-point in a DOM tree. To determine if a {{domxref("Range")}} is already collapsed,
+see the {{domxref("Range.collapsed")}} property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>range</em>.collapse(<em>toStart</em>);
-</pre>
+```js
+range.collapse(toStart);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>toStart</code> {{optional_inline}}</dt>
-  <dd>A boolean value: <code>true</code> collapses the {{domxref("Range")}}
-    to its start, <code>false</code> to its end. If omitted, it defaults to
-    <code>false</code> {{experimental_inline}}.</dd>
-</dl>
+- `toStart` {{optional_inline}}
+  - : A boolean value: `true` collapses the {{domxref("Range")}}
+    to its start, `false` to its end. If omitted, it defaults to
+    `false` {{experimental_inline}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">var range = document.createRange();
+```js
+var range = document.createRange();
 
 referenceNode = document.getElementsByTagName("div").item(0);
 range.selectNode(referenceNode);
 range.collapse(true);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</a></li>
-</ul>
+- [The DOM interfaces index](/en-US/docs/Web/API/Document_Object_Model)

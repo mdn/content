@@ -14,55 +14,55 @@ tags:
   - negotiated
 browser-compat: api.RTCDataChannel.negotiated
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The read-only <code>RTCDataChannel</code> property
-    <code><strong>negotiated</strong></code> indicates whether the
-    {{domxref("RTCDataChannel")}}'s connection was negotiated by the Web app
-    (<code>true</code>) or by the WebRTC layer (<code>false</code>). <strong>The
-    default is <code>false</code>.</strong></p>
+The read-only `RTCDataChannel` property
+**`negotiated`** indicates whether the
+{{domxref("RTCDataChannel")}}'s connection was negotiated by the Web app
+(`true`) or by the WebRTC layer (`false`). **The
+default is `false`.**
 
-<p>See {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Using_data_channels", "Creating a
-  data channel")}} for further information about this property.</p>
+See {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Using_data_channels", "Creating a
+  data channel")}} for further information about this property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>negotiated</em> = <em>aDataChannel</em>.negotiated;
-</pre>
+```js
+var negotiated = aDataChannel.negotiated;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p><code>true</code> if the {{domxref("RTCDataChannel")}}'s connection was negotiated by
-  the Web app itself; <code>false</code> if the negotiation was handled by the WebRTC
-  layer. The default is <code>false</code>.</p>
+`true` if the {{domxref("RTCDataChannel")}}'s connection was negotiated by
+the Web app itself; `false` if the negotiation was handled by the WebRTC
+layer. The default is `false`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The code snippet below checks the value of <code>negotiated</code>; if it's
-  <code>true</code>, a function called <code>shutdownRemoteChannel()</code> is called
-  with the channel's {{domxref("RTCDataChannel.id", "id")}}; presumably this would be
-  implemented to transmit a shutdown signal to the remote peer prior to terminating the
-  connection.</p>
+The code snippet below checks the value of `negotiated`; if it's
+`true`, a function called `shutdownRemoteChannel()` is called
+with the channel's {{domxref("RTCDataChannel.id", "id")}}; presumably this would be
+implemented to transmit a shutdown signal to the remote peer prior to terminating the
+connection.
 
-<pre class="brush: js">if (dataChannel.negotiated) {
+```js
+if (dataChannel.negotiated) {
   shutdownRemoteChannel(dataChannel.id);
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API/Using_data_channels">Using WebRTC data
-      channels</a></li>
-  <li>{{domxref("RTCDataChannel")}}</li>
-  <li>{{domxref("RTCPeerConnection.createDataChannel()")}}</li>
-</ul>
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)
+- [Using WebRTC data
+  channels](/en-US/docs/Web/API/WebRTC_API/Using_data_channels)
+- {{domxref("RTCDataChannel")}}
+- {{domxref("RTCPeerConnection.createDataChannel()")}}

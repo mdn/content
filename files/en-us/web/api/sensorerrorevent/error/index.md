@@ -2,35 +2,37 @@
 title: SensorErrorEvent.error
 slug: Web/API/SensorErrorEvent/error
 tags:
-- API
-- Error
-- Generic Sensor API
-- Property
-- Reference
-- Sensor
-- Sensor APIs
-- SensorErrorEvent
-- Sensors
+  - API
+  - Error
+  - Generic Sensor API
+  - Property
+  - Reference
+  - Sensor
+  - Sensor APIs
+  - SensorErrorEvent
+  - Sensors
 browser-compat: api.SensorErrorEvent.error
 ---
-<div>{{APIRef("Sensor API")}}</div>
+{{APIRef("Sensor API")}}
 
-<p>The <strong><code>error</code></strong> read-only property of
-    the {{domxref("SensorErrorEvent")}} interface returns the {{domxref('DOMException')}}
-    object passed in the event's contructor.</p>
+The **`error`** read-only property of
+the {{domxref("SensorErrorEvent")}} interface returns the {{domxref('DOMException')}}
+object passed in the event's contructor.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var domException = sensorErrorEvent.error;</pre>
+```js
+var domException = sensorErrorEvent.error;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref('DOMException')}}.</p>
+A {{domxref('DOMException')}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

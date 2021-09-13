@@ -11,48 +11,43 @@ tags:
   - payment
 browser-compat: api.PaymentRequestEvent
 ---
-<p>{{SeeCompatTable}}{{APIRef("Payment Request API")}}</p>
+{{SeeCompatTable}}{{APIRef("Payment Request API")}}
 
-<p>The <strong><code>PaymentRequestEvent</code></strong> interface of the <a href="/en-US/docs/Web/API/Payment_Request_API">Payment Request API</a> is the object passed to a payment handler when a {{domxref("PaymentRequest")}} is made.</p>
+The **`PaymentRequestEvent`** interface of the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) is the object passed to a payment handler when a {{domxref("PaymentRequest")}} is made.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("PaymentRequestEvent.PaymentRequestEvent","PaymentRequestEvent()")}}{{experimental_inline}}</dt>
- <dd>Creates a new <code>PaymentRequestEvent</code> object.</dd>
-</dl>
+- {{domxref("PaymentRequestEvent.PaymentRequestEvent","PaymentRequestEvent()")}}{{experimental_inline}}
+  - : Creates a new `PaymentRequestEvent` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("PaymentRequestEvent.instrumentKey","instrumentKey")}}{{readonlyInline}}{{experimental_inline}}</dt>
- <dd>Returns a {{domxref("PaymentInstrument")}} object reflecting the payment instrument selected by the user or an empty string if the user has not registered or chosen a payment instrument.</dd>
- <dt>{{domxref("PaymentRequestEvent.methodData","methodData")}}{{readonlyInline}}{{experimental_inline}}</dt>
- <dd>Returns an array of {{domxref("PaymentMethodData")}} objects containing payment method identifiers for the payment methods that the web site accepts and any associated payment method specific data.</dd>
- <dt>{{domxref("PaymentRequestEvent.modifiers","modifiers")}}{{readonlyInline}}{{experimental_inline}}</dt>
- <dd>Returns an array of objects containing changes to payment details.</dd>
- <dt>{{domxref("PaymentRequestEvent.paymentRequestId","paymentRequestId")}}{{readonlyInline}}{{experimental_inline}}</dt>
- <dd>Returns the ID of the {{domxref("PaymentRequest")}} object.</dd>
- <dt>{{domxref("PaymentRequestEvent.paymentRequestOrigin","paymentRequestOrigin")}}{{readonlyInline}}{{experimental_inline}}</dt>
- <dd>Returns the origin where the {{domxref("PaymentRequest")}} object was initialized.</dd>
- <dt>{{domxref("PaymentRequestEvent.topOrigin","topOrigin")}}{{readonlyInline}}{{experimental_inline}}</dt>
- <dd>Returns the top-level origin where the {{domxref("PaymentRequest")}} object was initialized.</dd>
- <dt>{{domxref("PaymentRequestEvent.total","total")}}{{readonlyInline}}{{experimental_inline}}</dt>
- <dd>Returns the total amount being requested for payment.</dd>
-</dl>
+- {{domxref("PaymentRequestEvent.instrumentKey","instrumentKey")}}{{readonlyInline}}{{experimental_inline}}
+  - : Returns a {{domxref("PaymentInstrument")}} object reflecting the payment instrument selected by the user or an empty string if the user has not registered or chosen a payment instrument.
+- {{domxref("PaymentRequestEvent.methodData","methodData")}}{{readonlyInline}}{{experimental_inline}}
+  - : Returns an array of {{domxref("PaymentMethodData")}} objects containing payment method identifiers for the payment methods that the web site accepts and any associated payment method specific data.
+- {{domxref("PaymentRequestEvent.modifiers","modifiers")}}{{readonlyInline}}{{experimental_inline}}
+  - : Returns an array of objects containing changes to payment details.
+- {{domxref("PaymentRequestEvent.paymentRequestId","paymentRequestId")}}{{readonlyInline}}{{experimental_inline}}
+  - : Returns the ID of the {{domxref("PaymentRequest")}} object.
+- {{domxref("PaymentRequestEvent.paymentRequestOrigin","paymentRequestOrigin")}}{{readonlyInline}}{{experimental_inline}}
+  - : Returns the origin where the {{domxref("PaymentRequest")}} object was initialized.
+- {{domxref("PaymentRequestEvent.topOrigin","topOrigin")}}{{readonlyInline}}{{experimental_inline}}
+  - : Returns the top-level origin where the {{domxref("PaymentRequest")}} object was initialized.
+- {{domxref("PaymentRequestEvent.total","total")}}{{readonlyInline}}{{experimental_inline}}
+  - : Returns the total amount being requested for payment.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("PaymentRequestEvent.openWindow","openWindow()")}}{{experimental_inline}}</dt>
- <dd>Opens the specified URL in a new window, if and only if the given URL is on the same origin as the calling page. It returns a {{jsxref("Promise")}} that resolves with a reference to a {{domxref("WindowClient")}}.</dd>
- <dt>{{domxref("PaymentRequestEvent.respondWith","respondWith()")}}{{experimental_inline}}</dt>
- <dd>Prevents the default event handling and allows you to provide a {{jsxref("Promise")}} for a {{domxref("PaymentResponse")}} object yourself.</dd>
-</dl>
+- {{domxref("PaymentRequestEvent.openWindow","openWindow()")}}{{experimental_inline}}
+  - : Opens the specified URL in a new window, if and only if the given URL is on the same origin as the calling page. It returns a {{jsxref("Promise")}} that resolves with a reference to a {{domxref("WindowClient")}}.
+- {{domxref("PaymentRequestEvent.respondWith","respondWith()")}}{{experimental_inline}}
+  - : Prevents the default event handling and allows you to provide a {{jsxref("Promise")}} for a {{domxref("PaymentResponse")}} object yourself.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-<p>{{Compat}}</p>
+## Browser compatibility
+
+{{Compat}}

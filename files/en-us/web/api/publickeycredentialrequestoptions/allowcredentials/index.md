@@ -2,70 +2,64 @@
 title: PublicKeyCredentialRequestOptions.allowCredentials
 slug: Web/API/PublicKeyCredentialRequestOptions/allowCredentials
 tags:
-- API
-- Property
-- PublicKeyCredentialRequestOptions
-- Reference
-- Web Authentication API
-- WebAuthn
+  - API
+  - Property
+  - PublicKeyCredentialRequestOptions
+  - Reference
+  - Web Authentication API
+  - WebAuthn
 browser-compat: api.PublicKeyCredentialRequestOptions.allowCredentials
 ---
-<p>{{APIRef("Web Authentication API")}}{{securecontext_header}}</p>
+{{APIRef("Web Authentication API")}}{{securecontext_header}}
 
-<p><strong><code>allowCredentials</code></strong> is an optional property of the
-	{{domxref("PublicKeyCredentialRequestOptions")}} dictionary which indicates the
-	existing credentials acceptable for retrieval. This is an {{jsxref("Array")}} of
-	credential descriptors.</p>
+**`allowCredentials`** is an optional property of the
+{{domxref("PublicKeyCredentialRequestOptions")}} dictionary which indicates the
+existing credentials acceptable for retrieval. This is an {{jsxref("Array")}} of
+credential descriptors.
 
-<div class="notecard note">
-	<p><strong>Note:</strong> {{domxref("PublicKeyCredentialCreationOptions.excludeCredentials")}} may be used
-		during the creation of the credentials in order to avoid creating new credentials
-		for an existing user with existing public key credential. Contrary to
-		<code>allowCredentials</code>, it is used to <em>filter out</em> credentials.</p>
-</div>
+> **Note:** {{domxref("PublicKeyCredentialCreationOptions.excludeCredentials")}} may be used
+> during the creation of the credentials in order to avoid creating new credentials
+> for an existing user with existing public key credential. Contrary to
+> `allowCredentials`, it is used to _filter out_ credentials.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-	class="brush: js"><em>allowCredentials </em>= <em>publicKeyCredentialRequestOptions</em>.allowCredentials</pre>
+```js
+allowCredentials = publicKeyCredentialRequestOptions.allowCredentials
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{jsxref("Array")}} whose elements are objects with the following properties:</p>
+An {{jsxref("Array")}} whose elements are objects with the following properties:
 
-<dl>
-	<dt><code>type</code></dt>
-	<dd>A string describing type of public-key credential to be created. As of this
-		writing (March 2019), only <code>"public-key"</code> may be used.</dd>
-	<dt><code>id</code></dt>
-	<dd>A {{domxref("BufferSource")}} matching an existing public key credential
-		identifier ({{domxref("PublicKeyCredential.rawId")}}). This identifier is
-		generated during the creation of the <code>PublicKeyCredential</code> instance.
-	</dd>
-	<dt><code>transports</code> {{optional_inline}}</dt>
-	<dd>An {{jsxref("Array")}} of strings describing the possible transports between the
-		client and the authenticator. The value of the strings may be:
-		<ul>
-			<li><code>"usb"</code>: the authenticator can be contacted via a removable USB
-				link</li>
-			<li><code>"nfc"</code>: the authenticator may be used over <a
-					href="https://en.wikipedia.org/wiki/Near-field_communication">NFC
-					(Near Field Communication)</a></li>
-			<li><code>"ble"</code>: the authenticator may be used over <a
-					href="https://en.wikipedia.org/wiki/Bluetooth_Low_Energy">BLE
-					(Bluetooth Low Energy)</a></li>
-			<li><code>"internal"</code>: the authenticator is specifically bound to the
-				client device (cannot be removed).</li>
-		</ul>
-	</dd>
-</dl>
+- `type`
+  - : A string describing type of public-key credential to be created. As of this
+    writing (March 2019), only `"public-key"` may be used.
+- `id`
+  - : A {{domxref("BufferSource")}} matching an existing public key credential
+    identifier ({{domxref("PublicKeyCredential.rawId")}}). This identifier is
+    generated during the creation of the `PublicKeyCredential` instance.
+- `transports` {{optional_inline}}
 
-<p>If the authenticator does not contain any of these public key credentials, the client
-	will throw a {{domxref("DOMException")}} <code>"NotAllowedError"</code>.</p>
+  - : An {{jsxref("Array")}} of strings describing the possible transports between the
+    client and the authenticator. The value of the strings may be:
 
-<h2 id="Examples">Examples</h2>
+    - `"usb"`: the authenticator can be contacted via a removable USB
+      link
+    - `"nfc"`: the authenticator may be used over [NFC
+      (Near Field Communication)](https://en.wikipedia.org/wiki/Near-field_communication)
+    - `"ble"`: the authenticator may be used over [BLE
+      (Bluetooth Low Energy)](https://en.wikipedia.org/wiki/Bluetooth_Low_Energy)
+    - `"internal"`: the authenticator is specifically bound to the
+      client device (cannot be removed).
 
-<pre class="brush: js">var options = {
+If the authenticator does not contain any of these public key credentials, the client
+will throw a {{domxref("DOMException")}} `"NotAllowedError"`.
+
+## Examples
+
+```js
+var options = {
   allowCredentials: [
     {
       transports: ["usb"],
@@ -88,20 +82,18 @@ navigator.credentials.get({ "publicKey": options })
 }).catch(function (err) {
      console.error(err);
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{domxref("PublicKeyCredentialCreationOptions.excludeCredentials")}} which is used
-		to filter out existing credentials during creation and avoid creating new
-		credentials for an existing user</li>
-</ul>
+- {{domxref("PublicKeyCredentialCreationOptions.excludeCredentials")}} which is used
+  to filter out existing credentials during creation and avoid creating new
+  credentials for an existing user

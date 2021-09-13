@@ -13,29 +13,32 @@ tags:
   - WebVR
 browser-compat: api.PositionSensorVRDevice.getImmediateState
 ---
-<p>{{deprecated_header}}{{APIRef("WebVR API")}}{{SeeCompatTable}}</p>
+{{deprecated_header}}{{APIRef("WebVR API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>getImmediateState()</code></strong> method of the {{domxref("VRDisplay")}} interface returns the current instantaneous position sensor state. This is intended to only be used rarely, for certain special uses, for example sampling the immediate position of a hand orientation sensor — or at least it will be, in the future.</p>
+The **`getImmediateState()`** method of the {{domxref("VRDisplay")}} interface returns the current instantaneous position sensor state. This is intended to only be used rarely, for certain special uses, for example sampling the immediate position of a hand orientation sensor — or at least it will be, in the future.
 
-<p>For most standard uses, you'll probably want to use {{domxref("PositionSensorVRDevice.getState")}} instead.</p>
+For most standard uses, you'll probably want to use {{domxref("PositionSensorVRDevice.getState")}} instead.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var myPositionstate = PositionSensorVRDevice.getImmediateState();</pre>
+```js
+var myPositionstate = PositionSensorVRDevice.getImmediateState();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A {{domxref("VRPose")}} object.</p>
+A {{domxref("VRPose")}} object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Our <a href="https://mdn.github.io/webvr-tests/positionsensorvrdevice/">positionsensorvrdevice</a> demo uses the WebVR API to update the view of a simple {{domxref("CanvasRenderingContext2D","2D canvas")}} scene on each frame of a {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} loop. The main function that updates the view data is as follows:</p>
+Our [positionsensorvrdevice](https://mdn.github.io/webvr-tests/positionsensorvrdevice/) demo uses the WebVR API to update the view of a simple {{domxref("CanvasRenderingContext2D","2D canvas")}} scene on each frame of a {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} loop. The main function that updates the view data is as follows:
 
-<pre class="brush: js">function setView() {
+```js
+function setView() {
   var posState = gPositionSensor.getImmediateState();
   if(posState.hasPosition) {
     posPara.textContent = 'Position: x' + roundToTwo(posState.position.x) + " y"
@@ -43,7 +46,7 @@ browser-compat: api.PositionSensorVRDevice.getImmediateState
                                 + roundToTwo(posState.position.z);
     xPos = -posState.position.x * WIDTH * 2;
     yPos = posState.position.y * HEIGHT * 2;
-    if(-posState.position.z &gt; 0.01) {
+    if(-posState.position.z > 0.01) {
       zPos = -posState.position.z;
     } else {
       zPos = 0.01;
@@ -59,19 +62,18 @@ browser-compat: api.PositionSensorVRDevice.getImmediateState
     zOrient = posState.orientation.z * 180;
 
   }
-}</pre>
+}
+```
 
-<p>Here we are grabbing a {{domxref("VRPose")}} object using <code>getImmediateState()</code> and storing it in <code>posState</code> (the actual live demo uses <code>getState()</code>, but both seem to do the same thing currently.) We then check to make sure that position and orientation info is present in the current frame using {{domxref("VRPose.hasPosition")}} and {{domxref("VRPose.hasOrientation")}} (these return <code>null</code> if, for example the head mounted display is turned off or not pointing at the position sensor, which would cause an error.)</p>
+Here we are grabbing a {{domxref("VRPose")}} object using `getImmediateState()` and storing it in `posState` (the actual live demo uses `getState()`, but both seem to do the same thing currently.) We then check to make sure that position and orientation info is present in the current frame using {{domxref("VRPose.hasPosition")}} and {{domxref("VRPose.hasOrientation")}} (these return `null` if, for example the head mounted display is turned off or not pointing at the position sensor, which would cause an error.)
 
-<p>We then output the x, y and z position and orientation values for informational purposes, and use those values to update the <code>xPos</code>, <code>yPos</code>, <code>zPos, </code><code>xOrient</code>, <code>yOrient</code>, and <code>zOrient</code> variables, which are used to update the scene rendering on each frame.</p>
+We then output the x, y and z position and orientation values for informational purposes, and use those values to update the `xPos`, `yPos`, ` zPos, ``xOrient`, `yOrient`, and `zOrient` variables, which are used to update the scene rendering on each frame.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebVR_API">WebVR API homepage</a>.</li>
- <li><a href="https://mixedreality.mozilla.org/">https://mixedreality.mozilla.org/</a> — demos, downloads, and other resources from the Mozilla VR team.</li>
-</ul>
+- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API).
+- <https://mixedreality.mozilla.org/> — demos, downloads, and other resources from the Mozilla VR team.

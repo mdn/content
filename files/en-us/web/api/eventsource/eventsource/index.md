@@ -2,42 +2,41 @@
 title: EventSource()
 slug: Web/API/EventSource/EventSource
 tags:
-- API
-- Constructor
-- EventSource
-- Reference
-- Server-sent events
+  - API
+  - Constructor
+  - EventSource
+  - Reference
+  - Server-sent events
 browser-compat: api.EventSource.EventSource
 ---
-<div>{{APIRef('WebSockets API')}}</div>
+{{APIRef('WebSockets API')}}
 
-<p>The <strong><code>EventSource()</code></strong>
-  constructor returns a newly-created {{domxref("EventSource")}}, which represents a
-  remote resource.</p>
+The **`EventSource()`**
+constructor returns a newly-created {{domxref("EventSource")}}, which represents a
+remote resource.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">eventSource = new EventSource(<em>url</em>, <em>configuration</em>);</pre>
+```js
+eventSource = new EventSource(url, configuration);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>url</code></dt>
-  <dd>A {{domxref("USVString")}} that represents the location of the remote resource
-    serving the events/messages.</dd>
-  <dt><code>configuration</code> {{optional_inline}}</dt>
-  <dd>Provides options to configure the new connection. The possible entries are:
-    <ul>
-      <li><code>withCredentials</code>, defaulting to <code>false</code>, indicating if
-        CORS should be set to <code>include</code> credentials.</li>
-    </ul>
-  </dd>
-</dl>
+- `url`
+  - : A {{domxref("USVString")}} that represents the location of the remote resource
+    serving the events/messages.
+- `configuration` {{optional_inline}}
 
-<h2 id="Examples">Examples</h2>
+  - : Provides options to configure the new connection. The possible entries are:
 
-<pre class="brush: js">var evtSource = new EventSource('sse.php');
+    - `withCredentials`, defaulting to `false`, indicating if
+      CORS should be set to `include` credentials.
+
+## Examples
+
+```js
+var evtSource = new EventSource('sse.php');
 var eventList = document.querySelector('ul');
 
 evtSource.onmessage = function(e) {
@@ -45,24 +44,20 @@ evtSource.onmessage = function(e) {
 
   newElement.textContent = "message: " + e.data;
   eventList.appendChild(newElement);
-}</pre>
+}
+```
 
-<div class="note">
-  <p><strong>Note:</strong> You can find a full example on GitHub — see <a
-      href="https://github.com/mdn/dom-examples/tree/master/server-sent-events">Simple SSE
-      demo using PHP.</a></p>
-</div>
+> **Note:** You can find a full example on GitHub — see [Simple SSE
+> demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("EventSource")}}</li>
-</ul>
+- {{domxref("EventSource")}}

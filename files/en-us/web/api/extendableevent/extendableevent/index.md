@@ -2,56 +2,52 @@
 title: ExtendableEvent()
 slug: Web/API/ExtendableEvent/ExtendableEvent
 tags:
-- API
-- Constructor
-- Experimental
-- ExtendableEvent
-- Reference
-- Service Workers
-- ServiceWorker
+  - API
+  - Constructor
+  - Experimental
+  - ExtendableEvent
+  - Reference
+  - Service Workers
+  - ServiceWorker
 browser-compat: api.ExtendableEvent.ExtendableEvent
 ---
-<p>{{APIRef("Service Workers API")}}</p>
+{{APIRef("Service Workers API")}}
 
-<p>The <code><strong>ExtendableEvent()</strong></code> constructor creates a new
-  {{domxref("ExtendableEvent")}} object.</p>
+The **`ExtendableEvent()`** constructor creates a new
+{{domxref("ExtendableEvent")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>extendableEvent</em> = new ExtendableEvent(<em>type</em>, <em>init</em>);</pre>
+```js
+var extendableEvent = new ExtendableEvent(type, init);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>type</code></dt>
-  <dd>The type of the ExtendableEvent, for example {{Event("install")}},
-    {{Event("activate")}}.</dd>
-  <dt><code>init</code> {{optional_inline}}</dt>
-  <dd>An options object containing any custom settings that you want to apply to the event
+- `type`
+  - : The type of the ExtendableEvent, for example {{Event("install")}},
+    {{Event("activate")}}.
+- `init` {{optional_inline}}
+  - : An options object containing any custom settings that you want to apply to the event
     object. Currently no possible options exist inside the spec, but this has been defined
-    for forward compatibility across the different derived events.</dd>
-</dl>
+    for forward compatibility across the different derived events.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service
-      Workers</a></li>
-  <li><a class="external external-icon" href="https://github.com/mdn/sw-test">Service
-      workers basic code example</a></li>
-  <li><a class="external external-icon"
-      href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker
-      ready?</a></li>
-  <li>{{jsxref("Promise")}}</li>
-  <li><a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web
-      workers</a></li>
-</ul>
+- [Using Service
+  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Service
+  workers basic code example](https://github.com/mdn/sw-test)
+- [Is ServiceWorker
+  ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- {{jsxref("Promise")}}
+- [Using web
+  workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

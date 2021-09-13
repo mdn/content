@@ -2,39 +2,40 @@
 title: RTCRtpSender.track
 slug: Web/API/RTCRtpSender/track
 tags:
-- API
-- Audio
-- DTMF
-- Property
-- RTCRtpSender
-- Reference
-- Video
-- Web
-- WebRTC API
-- track
+  - API
+  - Audio
+  - DTMF
+  - Property
+  - RTCRtpSender
+  - Reference
+  - Video
+  - Web
+  - WebRTC API
+  - track
 browser-compat: api.RTCRtpSender.track
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The <strong><code>track</code></strong> read-only property of
-    the {{domxref("RTCRtpSender")}} interface returns the {{domxref("MediaStreamTrack")}}
-    which is being handled by the <code>RTCRtpSender</code>.</p>
+The **`track`** read-only property of
+the {{domxref("RTCRtpSender")}} interface returns the {{domxref("MediaStreamTrack")}}
+which is being handled by the `RTCRtpSender`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>mediaStreamTrack</em> = <em>rtcRtpSender</em>.track</pre>
+```js
+var mediaStreamTrack = rtcRtpSender.track
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("MediaStreamTrack")}} object representing the media associated with the
-  <code>RTCRtpSender</code>. If no track is associated with the sender, this value is
-  <code>null</code>, in which case the sender transmits nothing.</p>
+A {{domxref("MediaStreamTrack")}} object representing the media associated with the
+`RTCRtpSender`. If no track is associated with the sender, this value is
+`null`, in which case the sender transmits nothing.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

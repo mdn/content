@@ -2,39 +2,45 @@
 title: CSSNamespaceRule.namespaceURI
 slug: Web/API/CSSNamespaceRule/namespaceURI
 tags:
-- API
-- CSSNamespaceRule
-- CSSOM
-- Property
-- Reference
-- namespaceURI
+  - API
+  - CSSNamespaceRule
+  - CSSOM
+  - Property
+  - Reference
+  - namespaceURI
 browser-compat: api.CSSNamespaceRule.namespaceURI
 ---
-<p>{{ APIRef("CSSOM") }}</p>
+{{ APIRef("CSSOM") }}
 
-<p>The read-only <strong><code>namespaceURI</code></strong> property of the {{domxref("CSSNamespaceRule")}} returns a {{domxref("DOMString")}} containing the text of the URI of the given namespace.</p>
+The read-only **`namespaceURI`** property of the {{domxref("CSSNamespaceRule")}} returns a {{domxref("DOMString")}} containing the text of the URI of the given namespace.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>namespaceURI</em> = CSSNamespaceRule.namespaceURI</pre>
+```js
+var namespaceURI = CSSNamespaceRule.namespaceURI
+```
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A {{domxref("DOMString")}} containing a URI.</p>
+A {{domxref("DOMString")}} containing a URI.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The stylesheet includes a namespace as the only rule. Therefore the first {{domxref("CSSRule")}} returned will be a <code>CSSNamespaceRule</code>. The value of the <code>namespaceURI</code> property will be <code>http://www.w3.org/1999/xhtml</code>.</p>
+The stylesheet includes a namespace as the only rule. Therefore the first {{domxref("CSSRule")}} returned will be a `CSSNamespaceRule`. The value of the `namespaceURI` property will be `http://www.w3.org/1999/xhtml`.
 
-<pre class="brush:css">@namespace url(http://www.w3.org/1999/xhtml);</pre>
+```css
+@namespace url(http://www.w3.org/1999/xhtml);
+```
 
-<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].namespaceURI); //http://www.w3.org/1999/xhtml</pre>
+```js
+let myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0].namespaceURI); //http://www.w3.org/1999/xhtml
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,29 +2,28 @@
 title: msPlayToDisabled
 slug: Web/API/MsPlayToDisabled
 tags:
-- msPlayToDisabled
+  - msPlayToDisabled
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>{{Non-standard_header()}}</p>
+{{Non-standard_header()}}
 
-<p><code><strong>msPlayToDisabled</strong></code> is a read/write property which gets and
-  sets if the <em>PlayTo</em> device is enabled or disabled.</p>
+**`msPlayToDisabled`** is a read/write property which gets and
+sets if the _PlayTo_ device is enabled or disabled.
 
-<p>This proprietary property is specific to Internet Explorer and Microsoft Edge.</p>
+This proprietary property is specific to Internet Explorer and Microsoft Edge.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 ptr = object.msPlayToDisabled;
+```
 
-</pre>
+## Value
 
-<h2 id="Value">Value</h2>
+Boolean value set to _true_ indicates that the _PlayTo_ device is
+disabled.
 
-<p>Boolean value set to <em>true</em> indicates that the <em>PlayTo</em> device is
-  disabled.</p>
-
-<p>The <code>msPlayToDisabled</code> attribute extends the <code>HTMLEmbedElement</code>,
-  <code>HTMLImageElement</code>, <code>HTMLMediaElement</code>, and
-  <code>HTMLObject</code> interfaces.</p>
+The `msPlayToDisabled` attribute extends the `HTMLEmbedElement`,
+`HTMLImageElement`, `HTMLMediaElement`, and
+`HTMLObject` interfaces.

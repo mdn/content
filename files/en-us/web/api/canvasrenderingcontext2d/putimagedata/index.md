@@ -2,85 +2,80 @@
 title: CanvasRenderingContext2D.putImageData()
 slug: Web/API/CanvasRenderingContext2D/putImageData
 tags:
-- API
-- Canvas
-- CanvasRenderingContext2D
-- Method
-- Reference
+  - API
+  - Canvas
+  - CanvasRenderingContext2D
+  - Method
+  - Reference
 browser-compat: api.CanvasRenderingContext2D.putImageData
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The
-  <strong><code>CanvasRenderingContext2D.putImageData()</code></strong>
-  method of the Canvas 2D API paints data from the given {{domxref("ImageData")}} object
-  onto the canvas. If a dirty rectangle is provided, only the pixels from that rectangle
-  are painted. This method is not affected by the canvas transformation matrix.</p>
+The
+**`CanvasRenderingContext2D.putImageData()`**
+method of the Canvas 2D API paints data from the given {{domxref("ImageData")}} object
+onto the canvas. If a dirty rectangle is provided, only the pixels from that rectangle
+are painted. This method is not affected by the canvas transformation matrix.
 
-<div class="note">
-  <p><strong>Note:</strong> Image data can be retrieved from a canvas using the
-    {{domxref("CanvasRenderingContext2D.getImageData()", "getImageData()")}} method.</p>
-</div>
+> **Note:** Image data can be retrieved from a canvas using the
+> {{domxref("CanvasRenderingContext2D.getImageData()", "getImageData()")}} method.
 
-<p>You can find more information about <code>putImageData()</code> and general
-  manipulation of canvas contents in the article <a
-    href="/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">Pixel
-    manipulation with canvas</a>.</p>
+You can find more information about `putImageData()` and general
+manipulation of canvas contents in the article [Pixel
+manipulation with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <em>ctx</em>.putImageData(<em>imageData</em>, <em>dx</em>, <em>dy</em>);
-void <em>ctx</em>.putImageData(<em>imageData</em>, <em>dx</em>, <em>dy</em>, <em>dirtyX</em>, <em>dirtyY</em>, <em>dirtyWidth</em>, <em>dirtyHeight</em>);
-</pre>
+```js
+void ctx.putImageData(imageData, dx, dy);
+void ctx.putImageData(imageData, dx, dy, dirtyX, dirtyY, dirtyWidth, dirtyHeight);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>imageData</code></dt>
-  <dd>An {{domxref("ImageData")}} object containing the array of pixel values.</dd>
-  <dt><code>dx</code></dt>
-  <dd>Horizontal position (x coordinate) at which to place the image data in the
-    destination canvas.</dd>
-  <dt><code>dy</code></dt>
-  <dd>Vertical position (y coordinate) at which to place the image data in the destination
-    canvas.</dd>
-  <dt><code>dirtyX</code> {{optional_inline}}</dt>
-  <dd>Horizontal position (x coordinate) of the top-left corner from which the image data
-    will be extracted. Defaults to <code>0</code>.</dd>
-  <dt><code>dirtyY</code> {{optional_inline}}</dt>
-  <dd>Vertical position (y coordinate) of the top-left corner from which the image data
-    will be extracted. Defaults to <code>0</code>.</dd>
-  <dt><code>dirtyWidth</code> {{optional_inline}}</dt>
-  <dd>Width of the rectangle to be painted. Defaults to the width of the image data.</dd>
-  <dt><code>dirtyHeight</code> {{optional_inline}}</dt>
-  <dd>Height of the rectangle to be painted. Defaults to the height of the image data.
-  </dd>
-</dl>
+- `imageData`
+  - : An {{domxref("ImageData")}} object containing the array of pixel values.
+- `dx`
+  - : Horizontal position (x coordinate) at which to place the image data in the
+    destination canvas.
+- `dy`
+  - : Vertical position (y coordinate) at which to place the image data in the destination
+    canvas.
+- `dirtyX` {{optional_inline}}
+  - : Horizontal position (x coordinate) of the top-left corner from which the image data
+    will be extracted. Defaults to `0`.
+- `dirtyY` {{optional_inline}}
+  - : Vertical position (y coordinate) of the top-left corner from which the image data
+    will be extracted. Defaults to `0`.
+- `dirtyWidth` {{optional_inline}}
+  - : Width of the rectangle to be painted. Defaults to the width of the image data.
+- `dirtyHeight` {{optional_inline}}
+  - : Height of the rectangle to be painted. Defaults to the height of the image data.
 
-<h3 id="Errors_thrown">Errors thrown</h3>
+### Errors thrown
 
-<dl>
-  <dt><code>NotSupportedError</code></dt>
-  <dd>Thrown if any of the arguments is infinite.</dd>
-  <dt><code>InvalidStateError</code></dt>
-  <dd>Thrown if the <code>ImageData</code> object's data has been detached.</dd>
-</dl>
+- `NotSupportedError`
+  - : Thrown if any of the arguments is infinite.
+- `InvalidStateError`
+  - : Thrown if the `ImageData` object's data has been detached.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Understanding_putImageData">Understanding putImageData</h3>
+### Understanding putImageData
 
-<p>To understand what this algorithm does under the hood, here is an implementation on top
-  of {{domxref("CanvasRenderingContext2D.fillRect()")}}.</p>
+To understand what this algorithm does under the hood, here is an implementation on top
+of {{domxref("CanvasRenderingContext2D.fillRect()")}}.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 function putImageData(ctx, imageData, dx, dy,
@@ -94,8 +89,8 @@ function putImageData(ctx, imageData, dx, dy,
   dirtyHeight = dirtyHeight !== undefined? dirtyHeight: height;
   var limitBottom = dirtyY + dirtyHeight;
   var limitRight = dirtyX + dirtyWidth;
-  for (var y = dirtyY; y &lt; limitBottom; y++) {
-    for (var x = dirtyX; x &lt; limitRight; x++) {
+  for (var y = dirtyY; y < limitBottom; y++) {
+    for (var x = dirtyX; x < limitRight; x++) {
       var pos = y * width + x;
       ctx.fillStyle = 'rgba(' + data[pos*4+0]
                         + ',' + data[pos*4+1]
@@ -112,23 +107,22 @@ ctx.fillRect(0, 0, 100, 100);
 var imagedata = ctx.getImageData(0, 0, 100, 100);
 // use the putImageData function that illustrates how putImageData works
 putImageData(ctx, imagedata, 150, 0, 50, 50, 25, 25);
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Understanding_putImageData', 700, 180) }}</p>
+{{ EmbedLiveSample('Understanding_putImageData', 700, 180) }}
 
-<h3 id="Data_loss_due_to_browser_optimization">Data loss due to browser optimization</h3>
+### Data loss due to browser optimization
 
-<div class="notecard warning">
-  <p><strong>Warning:</strong> Due to the lossy nature of converting to and from premultiplied alpha color values,
-    pixels that have just been set using <code>putImageData()</code> might be returned to
-    an equivalent <code>getImageData()</code> as different values.</p>
-</div>
+> **Warning:** Due to the lossy nature of converting to and from premultiplied alpha color values,
+> pixels that have just been set using `putImageData()` might be returned to
+> an equivalent `getImageData()` as different values.
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const canvas = document.createElement("canvas");
+```js
+const canvas = document.createElement("canvas");
 canvas.width = 1;
 canvas.height = 1;
 const context = canvas.getContext("2d");
@@ -142,39 +136,35 @@ console.log("before:", pixels);
 context.putImageData(imgData, 0, 0);
 const imgData2 = context.getImageData(0, 0, canvas.width, canvas.height);
 const pixels2 = imgData2.data;
-console.log("after:", pixels2);</pre>
+console.log("after:", pixels2);
+```
 
-<p>The output might look like:</p>
+The output might look like:
 
-<pre>before: Uint8ClampedArray(4) [ 1, 127, 255, 1 ]
-after: Uint8ClampedArray(4) [ 255, 255, 255, 1 ]</pre>
+    before: Uint8ClampedArray(4) [ 1, 127, 255, 1 ]
+    after: Uint8ClampedArray(4) [ 255, 255, 255, 1 ]
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h3 id="Gecko-specific_notes">Gecko-specific notes</h3>
+### Gecko-specific notes
 
-<ul>
-  <li>Starting in Gecko 10.0 {{ geckoRelease("10.0") }}, non-finite values to any of these
-    parameters cause the call to <code>putImageData()</code> to be silently ignored,
-    rather than throwing an exception.</li>
-  <li>To comply with the specification, starting with Gecko 16.0 {{geckoRelease("16.0")}},
-    a call with an invalid number of arguments (only 3 or 7 arguments are valid), will now
-    throw an error ({{bug(762657)}}).</li>
-</ul>
+- Starting in Gecko 10.0 {{ geckoRelease("10.0") }}, non-finite values to any of these
+  parameters cause the call to `putImageData()` to be silently ignored,
+  rather than throwing an exception.
+- To comply with the specification, starting with Gecko 16.0 {{geckoRelease("16.0")}},
+  a call with an invalid number of arguments (only 3 or 7 arguments are valid), will now
+  throw an error ({{bug(762657)}}).
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining this method: {{domxref("CanvasRenderingContext2D")}}</li>
-  <li>{{domxref("ImageData")}} object</li>
-  <li>{{domxref("CanvasRenderingContext2D.getImageData()")}}</li>
-  <li><a
-      href="/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">Pixel
-      manipulation with canvas</a></li>
-</ul>
+- The interface defining this method: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("ImageData")}} object
+- {{domxref("CanvasRenderingContext2D.getImageData()")}}
+- [Pixel
+  manipulation with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)

@@ -10,28 +10,27 @@ tags:
   - Reference
 browser-compat: api.Navigator.doNotTrack
 ---
-<div>{{ApiRef("HTML DOM")}}{{Deprecated_header}}</div>
+{{ApiRef("HTML DOM")}}{{Deprecated_header}}
 
-<p>The <code><strong>Navigator.doNotTrack</strong></code> property returns the user's Do Not Track setting, which indicates whether the user is requesting web sites and advertisers to not track them.</p>
+The **`Navigator.doNotTrack`** property returns the user's Do Not Track setting, which indicates whether the user is requesting web sites and advertisers to not track them.
 
-<p>The value of the property reflects that of the {{httpheader("DNT")}} HTTP header, i.e. values of <code>"1"</code>, <code>"0"</code>, or <code>"unspecified"</code>.</p>
+The value of the property reflects that of the {{httpheader("DNT")}} HTTP header, i.e. values of `"1"`, `"0"`, or `"unspecified"`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">console.log(navigator.doNotTrack);
+```js
+console.log(navigator.doNotTrack);
 // prints "1" if DNT is enabled; "0" if the user opted-in for tracking; otherwise this is "unspecified"
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/Security/Do_not_track_field_guide">The Do Not Track field guide</a></li>
-</ul>
+- [The Do Not Track field guide](/en-US/docs/Web/Security/Do_not_track_field_guide)

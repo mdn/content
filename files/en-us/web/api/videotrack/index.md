@@ -12,59 +12,61 @@ tags:
   - track
 browser-compat: api.VideoTrack
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The {{domxref("VideoTrack")}} interface represents a single video track from a {{HTMLElement("video")}} element.</p>
+The {{domxref("VideoTrack")}} interface represents a single video track from a {{HTMLElement("video")}} element.
 
-<p>The most common use for accessing a <code>VideoTrack</code> object is to toggle its {{domxref("VideoTrack.selected", "selected")}} property in order to make it the active video track for its {{HTMLElement("video")}} element.</p>
+The most common use for accessing a `VideoTrack` object is to toggle its {{domxref("VideoTrack.selected", "selected")}} property in order to make it the active video track for its {{HTMLElement("video")}} element.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("VideoTrack.selected", "selected")}}</dt>
- <dd>A Boolean value which controls whether or not the video track is active. Only a single video track can be active at any given time, so setting this property to <code>true</code> for one track while another track is active will make that other track inactive.</dd>
- <dt>{{domxref("VideoTrack.id", "id")}} {{ReadOnlyInline}}</dt>
- <dd>A {{domxref("DOMString")}} which uniquely identifies the track within the media. This ID can be used to locate a specific track within a video track list by calling {{domxref("VideoTrackList.getTrackById()")}}. The ID can also be used as the fragment part of the URL if the media supports seeking by media fragment per the <a href="https://www.w3.org/TR/media-frags/">Media Fragments URI specification</a>.</dd>
- <dt>{{domxref("VideoTrack.kind", "kind")}} {{ReadOnlyInline}}</dt>
- <dd>A {{domxref("DOMString")}} specifying the category into which the track falls. For example, the main video track would have a <code>kind</code> of <code>"main"</code>.</dd>
- <dt>{{domxref("VideoTrack.label", "label")}} {{ReadOnlyInline}}</dt>
- <dd>A {{domxref("DOMString")}} providing a human-readable label for the track. For example, a track whose <code>kind</code> is <code>"sign"</code> might have a <code>label</code> of <code>"A sign-language interpretation"</code>. This string is empty if no label is provided.</dd>
- <dt>{{domxref("VideoTrack.language", "language")}} {{ReadOnlyInline}}</dt>
- <dd>A {{domxref("DOMString")}} specifying the video track's primary language, or an empty string if unknown. The language is specified as a BCP 47 ({{RFC(5646)}}) language code, such as <code>"en-US"</code> or <code>"pt-BR"</code>.</dd>
- <dt>{{domxref("VideoTrack.sourceBuffer", "sourceBuffer")}} {{ReadOnlyInline}}</dt>
- <dd>The {{domxref("SourceBuffer")}} that created the track. Returns null if the track was not created by a {{domxref("SourceBuffer")}} or the {{domxref("SourceBuffer")}} has been removed from the {{domxref("MediaSource.sourceBuffers")}} attribute of its parent media source.</dd>
-</dl>
+- {{domxref("VideoTrack.selected", "selected")}}
+  - : A Boolean value which controls whether or not the video track is active. Only a single video track can be active at any given time, so setting this property to `true` for one track while another track is active will make that other track inactive.
+- {{domxref("VideoTrack.id", "id")}} {{ReadOnlyInline}}
+  - : A {{domxref("DOMString")}} which uniquely identifies the track within the media. This ID can be used to locate a specific track within a video track list by calling {{domxref("VideoTrackList.getTrackById()")}}. The ID can also be used as the fragment part of the URL if the media supports seeking by media fragment per the [Media Fragments URI specification](https://www.w3.org/TR/media-frags/).
+- {{domxref("VideoTrack.kind", "kind")}} {{ReadOnlyInline}}
+  - : A {{domxref("DOMString")}} specifying the category into which the track falls. For example, the main video track would have a `kind` of `"main"`.
+- {{domxref("VideoTrack.label", "label")}} {{ReadOnlyInline}}
+  - : A {{domxref("DOMString")}} providing a human-readable label for the track. For example, a track whose `kind` is `"sign"` might have a `label` of `"A sign-language interpretation"`. This string is empty if no label is provided.
+- {{domxref("VideoTrack.language", "language")}} {{ReadOnlyInline}}
+  - : A {{domxref("DOMString")}} specifying the video track's primary language, or an empty string if unknown. The language is specified as a BCP 47 ({{RFC(5646)}}) language code, such as `"en-US"` or `"pt-BR"`.
+- {{domxref("VideoTrack.sourceBuffer", "sourceBuffer")}} {{ReadOnlyInline}}
+  - : The {{domxref("SourceBuffer")}} that created the track. Returns null if the track was not created by a {{domxref("SourceBuffer")}} or the {{domxref("SourceBuffer")}} has been removed from the {{domxref("MediaSource.sourceBuffers")}} attribute of its parent media source.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>To get a <code>VideoTrack</code> for a given media element, use the element's {{domxref("HTMLMediaElement.videoTracks", "videoTracks")}} property, which returns a {{domxref("VideoTrackList")}} object from which you can get the individual tracks contained in the media:</p>
+To get a `VideoTrack` for a given media element, use the element's {{domxref("HTMLMediaElement.videoTracks", "videoTracks")}} property, which returns a {{domxref("VideoTrackList")}} object from which you can get the individual tracks contained in the media:
 
-<pre class="brush: js">var el = document.querySelector("video");
+```js
+var el = document.querySelector("video");
 var tracks = el.videoTracks;
-</pre>
+```
 
-<p>You can then access the media's individual tracks using either array syntax or functions such as {{jsxref("Array.forEach", "forEach()")}}.</p>
+You can then access the media's individual tracks using either array syntax or functions such as {{jsxref("Array.forEach", "forEach()")}}.
 
-<p>This first example gets the first video track on the media:</p>
+This first example gets the first video track on the media:
 
-<pre class="brush: js">var firstTrack = tracks[0];</pre>
+```js
+var firstTrack = tracks[0];
+```
 
-<p>The next example scans through all of the media's video tracks, activating the first video track that is in the user's preferred language (taken from a variable <code>userLanguage</code>).</p>
+The next example scans through all of the media's video tracks, activating the first video track that is in the user's preferred language (taken from a variable `userLanguage`).
 
-<pre class="brush: js">for (var i = 0; i &lt; tracks.length; i++) {
+```js
+for (var i = 0; i < tracks.length; i++) {
   if (tracks[i].language === userLanguage) {
     tracks[i].selected = true;
     break;
   }
 });
-</pre>
+```
 
-<p>The {{domxref("VideoTrack.language", "language")}} is in standard ({{RFC(5646)}}) format. For US English, this would be <code>"en-US"</code>, for example.</p>
+The {{domxref("VideoTrack.language", "language")}} is in standard ({{RFC(5646)}}) format. For US English, this would be `"en-US"`, for example.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

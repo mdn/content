@@ -2,35 +2,37 @@
 title: HTMLObjectElement.name
 slug: Web/API/HTMLObjectElement/name
 tags:
-- API
-- HTML DOM
-- HTMLObjectElement
-- NeedsExample
-- Property
-- Reference
-- name
+  - API
+  - HTML DOM
+  - HTMLObjectElement
+  - NeedsExample
+  - Property
+  - Reference
+  - name
 browser-compat: api.HTMLObjectElement.name
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>name</code></strong> property of the
-  {{domxref("HTMLObjectElement")}} interface returns a {{domxref("DOMString")}} that
-  reflects the {{htmlattrxref("name", "object")}} HTML attribute, specifying the name of
-  the browsing context.</p>
+The **`name`** property of the
+{{domxref("HTMLObjectElement")}} interface returns a {{domxref("DOMString")}} that
+reflects the {{htmlattrxref("name", "object")}} HTML attribute, specifying the name of
+the browsing context.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var String = HTMLObjectElement.name;
-HTMLObjectElement.name = String;</pre>
+```js
+var String = HTMLObjectElement.name;
+HTMLObjectElement.name = String;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref('DOMString')}}.</p>
+A {{domxref('DOMString')}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

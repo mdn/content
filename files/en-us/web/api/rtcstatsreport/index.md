@@ -13,48 +13,46 @@ tags:
   - WebRTC
 browser-compat: api.RTCStatsReport
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>{{draft("This page is currently incomplete and under active construction. Please be aware that it's not going to answer all of your questions just yet.")}}</p>
+{{draft("This page is currently incomplete and under active construction. Please be aware that it's not going to answer all of your questions just yet.")}}
 
-<p>The <code><strong>RTCStatsReport</strong></code> interface provides a statistics report obtained by calling one of the {{domxref("RTCPeerConnection.getStats()")}}, {{domxref("RTCRtpReceiver.getStats()")}}, and {{domxref("RTCRtpSender.getStats()")}} methods.</p>
+The **`RTCStatsReport`** interface provides a statistics report obtained by calling one of the {{domxref("RTCPeerConnection.getStats()")}}, {{domxref("RTCRtpReceiver.getStats()")}}, and {{domxref("RTCRtpSender.getStats()")}} methods.
 
-<p>This statistics report contains a mapping of statistic category string names to objects containing the corresponding statistics data.</p>
+This statistics report contains a mapping of statistic category string names to objects containing the corresponding statistics data.
 
-<p>Calling <code>getStats()</code> on an {{domxref("RTCPeerConnection")}} lets you specify whether you wish to obtain statistics for outbound, inbound, or all streams on the connection. The {{domxref("RTCRtpReceiver")}} and {{domxref("RTCRtpSender")}} versions of <code>getStats()</code> specifically only return statistics available to the incoming or outgoing stream on which you call them.</p>
+Calling `getStats()` on an {{domxref("RTCPeerConnection")}} lets you specify whether you wish to obtain statistics for outbound, inbound, or all streams on the connection. The {{domxref("RTCRtpReceiver")}} and {{domxref("RTCRtpSender")}} versions of `getStats()` specifically only return statistics available to the incoming or outgoing stream on which you call them.
 
-<h2 id="The_statistics_objects">The statistics objects</h2>
+## The statistics objects
 
-<p>For each category of statistic information, there is a dictionary whose properties provide the relevant information.</p>
+For each category of statistic information, there is a dictionary whose properties provide the relevant information.
 
-<h3 id="Properties_common_to_all_statistic_categories">Properties common to all statistic categories</h3>
+### Properties common to all statistic categories
 
-<p>All WebRTC statistics objects are fundamentally based on the {{domxref("RTCStats")}} dictionary, which provides the most fundamental information: the timestamp, the statistic type string, and an ID uniquely identifying the source of the data:</p>
+All WebRTC statistics objects are fundamentally based on the {{domxref("RTCStats")}} dictionary, which provides the most fundamental information: the timestamp, the statistic type string, and an ID uniquely identifying the source of the data:
 
-<p>{{page("/en-US/docs/Web/API/RTCStats", "Properties")}}</p>
+{{page("/en-US/docs/Web/API/RTCStats", "Properties")}}
 
-<h3 id="The_statistic_categories">The statistic categories</h3>
+### The statistic categories
 
-<p>The {{domxref("RTCStats.type", "type")}} gives the name of the statistic category represented by the object, and is how you locate the specific type of data you need. The statistic category names are members of the enumerated type {{domxref("RTCStatsType")}}, as follows:</p>
+The {{domxref("RTCStats.type", "type")}} gives the name of the statistic category represented by the object, and is how you locate the specific type of data you need. The statistic category names are members of the enumerated type {{domxref("RTCStatsType")}}, as follows:
 
-<p>{{page("/en-US/docs/Web/API/RTCStatsType", "Values")}}</p>
+{{page("/en-US/docs/Web/API/RTCStatsType", "Values")}}
 
-<h2 id="Using_RTCStatsReport">Using RTCStatsReport</h2>
+## Using RTCStatsReport
 
-<p><em>... coming soon-ish ...</em></p>
+_... coming soon-ish ..._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
- <li>{{domxref("RTCPeerConnection")}}</li>
- <li>{{domxref("RTCPeerConnection.getStats()")}}, {{domxref("RTCRtpReceiver.getStats()")}}, and {{domxref("RTCRtpSender.getStats()")}}</li>
-</ul>
+- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+- {{domxref("RTCPeerConnection")}}
+- {{domxref("RTCPeerConnection.getStats()")}}, {{domxref("RTCRtpReceiver.getStats()")}}, and {{domxref("RTCRtpSender.getStats()")}}

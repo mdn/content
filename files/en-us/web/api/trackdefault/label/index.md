@@ -14,35 +14,29 @@ tags:
   - label
 browser-compat: api.TrackDefault.label
 ---
-<div>{{APIRef("Media Source Extensions")}}{{deprecated_header}}</div>
+{{APIRef("Media Source Extensions")}}{{deprecated_header}}
 
-<p>The <code><strong>label</strong></code> read-only property of the {{domxref("TrackDefault")}} interface returns the default label for an associated {{domxref("SourceBuffer")}} to use when an <a href="https://w3c.github.io/media-source/#init-segment">initialization segment</a> does not contain label information for a new track.</p>
+The **`label`** read-only property of the {{domxref("TrackDefault")}} interface returns the default label for an associated {{domxref("SourceBuffer")}} to use when an [initialization segment](https://w3c.github.io/media-source/#init-segment) does not contain label information for a new track.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var mylabel = TrackDefault.label;
-</pre>
+```js
+var mylabel = TrackDefault.label;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}}.</p>
+A {{domxref("DOMString")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>TBD</p>
+TBD
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
-<div>
+{{Compat}}
 
-<p>{{Compat}}</p>
-</div>
-</div>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{domxref("MediaSource")}}</li>
- <li>{{domxref("SourceBuffer")}}</li>
-</ul>
+- {{domxref("MediaSource")}}
+- {{domxref("SourceBuffer")}}

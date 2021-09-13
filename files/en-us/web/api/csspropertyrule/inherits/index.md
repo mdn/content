@@ -2,45 +2,50 @@
 title: CSSPropertyRule.inherits
 slug: Web/API/CSSPropertyRule/inherits
 tags:
-- API
-- CSS
-- CSS Properties and Values API
-- CSSPropertyRule
-- Experimental
-- Houdini
-- Property
-- Reference
-- Read-only
+  - API
+  - CSS
+  - CSS Properties and Values API
+  - CSSPropertyRule
+  - Experimental
+  - Houdini
+  - Property
+  - Reference
+  - Read-only
 browser-compat: api.CSSPropertyRule.inherits
 ---
-<div>{{APIRef("CSS Properties and Values API")}}</div>
+{{APIRef("CSS Properties and Values API")}}
 
-<p>The read-only <strong><code>inherits</code></strong> property of the {{domxref("CSSPropertyRule")}} interface returns the inherit flag of the custom property registration represented by the {{cssxref("@property")}} rule, a boolean describing whether or not the property inherits by default.</p>
+The read-only **`inherits`** property of the {{domxref("CSSPropertyRule")}} interface returns the inherit flag of the custom property registration represented by the {{cssxref("@property")}} rule, a boolean describing whether or not the property inherits by default.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">const <var>inherits</var> = <var>CSSPropertyRule</var>.inherits;</pre>
+    const inherits = CSSPropertyRule.inherits;
 
-<h3>Value</h3>
-<p>A boolean.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A boolean.
 
-<p>This stylesheet contains a single {{cssxref("@property")}} rule. The first {{domxref("CSSRule")}} returned will be a <code>CSSPropertyRule</code> representing this rule. The <code>inherits</code> property returns the boolean <code>false</code>, this being the value of the <code>inherits</code> property in the CSS.</p>
+## Examples
 
-<pre class="brush:css">@property --property-name {
-  syntax: '&lt;color&gt;';
+This stylesheet contains a single {{cssxref("@property")}} rule. The first {{domxref("CSSRule")}} returned will be a `CSSPropertyRule` representing this rule. The `inherits` property returns the boolean `false`, this being the value of the `inherits` property in the CSS.
+
+```css
+@property --property-name {
+  syntax: '<color>';
   inherits: false;
   initial-value: #c0ffee;
-}</pre>
+}
+```
 
-<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].inherits); //returns false</pre>
+```js
+let myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0].inherits); //returns false
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

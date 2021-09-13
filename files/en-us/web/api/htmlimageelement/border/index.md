@@ -2,77 +2,83 @@
 title: HTMLImageElement.border
 slug: Web/API/HTMLImageElement/border
 tags:
-- API
-- HTML
-- HTML DOM
-- HTMLImageElement
-- Image
-- Property
-- Reference
-- border
-- img
-- Deprecated
+  - API
+  - HTML
+  - HTML DOM
+  - HTMLImageElement
+  - Image
+  - Property
+  - Reference
+  - border
+  - img
+  - Deprecated
 browser-compat: api.HTMLImageElement.border
 ---
-<p>{{APIRef("HTML DOM")}}{{deprecated_header}}</p>
+{{APIRef("HTML DOM")}}{{deprecated_header}}
 
-<p>The obsolete {{domxref("HTMLImageElement")}}
-    property <code><strong>border</strong></code> specifies the number of pixels thick the
-    border surrounding the image should be. A value of 0, the default, indicates that no
-    border should be drawn.</p>
+The obsolete {{domxref("HTMLImageElement")}}
+property **`border`** specifies the number of pixels thick the
+border surrounding the image should be. A value of 0, the default, indicates that no
+border should be drawn.
 
-<p>You should <em>not</em> use this property! Instead, you should use CSS to style the
-  border. The {{cssxref("border")}} property or its longhand properties to not only set
-  the thickness of the border but to potentially apply a wide variety of other styling
-  options to it.</p>
+You should *not* use this property! Instead, you should use CSS to style the
+border. The {{cssxref("border")}} property or its longhand properties to not only set
+the thickness of the border but to potentially apply a wide variety of other styling
+options to it.
 
-<p>The width, specifically, is controlled using the writing-mode aware
-  {{cssxref("border-block-start-width")}}, {{cssxref("border-block-end-width")}},
-  {{cssxref("border-inline-start-width")}}, and {{cssxref("border-inline-end-width")}}
-  properties.</p>
+The width, specifically, is controlled using the writing-mode aware
+{{cssxref("border-block-start-width")}}, {{cssxref("border-block-end-width")}},
+{{cssxref("border-inline-start-width")}}, and {{cssxref("border-inline-end-width")}}
+properties.
 
-<p>For compatibility (or perhaps other) reasons, you can use the older properties instead
-  (or in addition): {{cssxref("border-top-width")}}, {{cssxref("border-right-width")}},
-  {{cssxref("border-bottom-width")}}, and {{cssxref("border-left-width")}}.</p>
+For compatibility (or perhaps other) reasons, you can use the older properties instead
+(or in addition): {{cssxref("border-top-width")}}, {{cssxref("border-right-width")}},
+{{cssxref("border-bottom-width")}}, and {{cssxref("border-left-width")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>htmlImageElement</em>.border = <em>thickness</em>;
-let <em>thickness</em> = <em>htmlImageElement</em>.border;
-</pre>
+```js
+htmlImageElement.border = thickness;
+let thickness = htmlImageElement.border;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} containing an integer value specifying the thickness of the
-  border that should surround the image, in CSS pixels. A value of <code>0</code>, or an
-  empty string, indicates that there should  be no border drawn. The default value of
-  <code>border</code> is <code>0</code></p>
+A {{domxref("DOMString")}} containing an integer value specifying the thickness of the
+border that should surround the image, in CSS pixels. A value of `0`, or an
+empty string, indicates that there should  be no border drawn. The default value of
+`border` is `0`
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>Do not use <code>border</code>. It is obsolete. Instead, use the CSS
-  {{cssxref("border")}} property and its longhand properties to establish borders around
-  images.</p>
+Do not use `border`. It is obsolete. Instead, use the CSS
+{{cssxref("border")}} property and its longhand properties to establish borders around
+images.
 
-<p>For example, if you have the following HTML:</p>
+For example, if you have the following HTML:
 
-<pre class="brush: html">&lt;img src="image.png" border="2"&gt;</pre>
+```html
+<img src="image.png" border="2">
+```
 
-<p>The following will provide the same appearance using CSS instead of this obsolete
-  property:</p>
+The following will provide the same appearance using CSS instead of this obsolete
+property:
 
-<pre class="brush: html">&lt;img src="image.png" style="border: 2px;"&gt;</pre>
+```html
+<img src="image.png" style="border: 2px;">
+```
 
-<p>You can further provide additional information to change the color and other features
-  of the border:</p>
+You can further provide additional information to change the color and other features
+of the border:
 
-<pre
-  class="brush: html">&lt;img src="image.png" style="border: dashed 2px #333388;"&gt;</pre>
+```html
+<img src="image.png" style="border: dashed 2px #333388;">
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

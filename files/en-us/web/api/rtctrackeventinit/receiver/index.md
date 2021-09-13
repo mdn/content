@@ -2,43 +2,45 @@
 title: RTCTrackEventInit.receiver
 slug: Web/API/RTCTrackEventInit/receiver
 tags:
-- API
-- Property
-- RTCTrackEventInit
-- RTP
-- Reference
-- WebRTC
-- WebRTC API
-- events
-- receiver
-- track
+  - API
+  - Property
+  - RTCTrackEventInit
+  - RTP
+  - Reference
+  - WebRTC
+  - WebRTC API
+  - events
+  - receiver
+  - track
 browser-compat: api.RTCTrackEventInit.receiver
 ---
-<div>{{APIRef("WebAPI")}}</div>
+{{APIRef("WebAPI")}}
 
-<p>The {{domxref("RTCTrackEventInit")}} dictionary's
-    <strong><code>receiver</code></strong> property specifies the
-    {{domxref("RTCRtpReceiver")}} associated with the event.</p>
+The {{domxref("RTCTrackEventInit")}} dictionary's
+**`receiver`** property specifies the
+{{domxref("RTCRtpReceiver")}} associated with the event.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>trackEventInit</em> = {
-  receiver: <em>rtpReceiver</em>,
-  track: <em>mediaStreamTrack</em>,
-  streams: [<em>videoStream</em>],
-  transceiver: <em>rtpTransceiver</em>
+```js
+var trackEventInit = {
+  receiver: rtpReceiver,
+  track: mediaStreamTrack,
+  streams: [videoStream],
+  transceiver: rtpTransceiver
 };
 
-var <em>rtpReceiver</em> = <em>trackEventInit</em>.receiver;</pre>
+var rtpReceiver = trackEventInit.receiver;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>{{page("/en-US/docs/Web/API/RTCTrackEvent/receiver", "Value")}}</p>
+{{page("/en-US/docs/Web/API/RTCTrackEvent/receiver", "Value")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

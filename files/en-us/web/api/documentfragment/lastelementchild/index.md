@@ -8,42 +8,41 @@ tags:
   - Property
 browser-compat: api.DocumentFragment.lastElementChild
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p>The <strong><code>DocumentFragment.lastElementChild</code></strong> read-only property
-returns the document fragment's last child {{domxref("Element")}}, or <code>null</code> if there
-are no child elements.</p>
+The **`DocumentFragment.lastElementChild`** read-only property
+returns the document fragment's last child {{domxref("Element")}}, or `null` if there
+are no child elements.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 // Getter
 element = fragment.lastElementChild;
 
 // No setter; read-only property
-</pre>
-<h2 id="Example">Example</h2>
+```
 
-<pre class="brush: js">
+## Example
+
+```js
 let fragment = new DocumentFragment();
 fragment.lastElementChild; // null
 
 let paragraph = document.createElement('p');
 fragment.appendChild(paragraph);
 
-fragment.lastElementChild; // &lt;p&gt;
-</pre>
+fragment.lastElementChild; // <p>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-    <li>{{domxref("Element.lastElementChild")}}</li>
-</ul>
+- {{domxref("Element.lastElementChild")}}

@@ -9,33 +9,32 @@ tags:
   - WebGL2
 browser-compat: api.WebGLSampler
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLSampler</code></strong> interface is part of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL 2</a> API and stores sampling parameters for {{domxref("WebGLTexture")}} access inside of a shader.</p>
+The **`WebGLSampler`** interface is part of the [WebGL 2](/en-US/docs/Web/API/WebGL_API) API and stores sampling parameters for {{domxref("WebGLTexture")}} access inside of a shader.
 
-<p>When working with <code>WebGLSampler</code> objects, the following methods of the {{domxref("WebGL2RenderingContext")}} are useful:</p>
+When working with `WebGLSampler` objects, the following methods of the {{domxref("WebGL2RenderingContext")}} are useful:
 
-<ul>
- <li>{{domxref("WebGL2RenderingContext.createSampler()")}}</li>
- <li>{{domxref("WebGL2RenderingContext.deleteSampler()")}}</li>
- <li>{{domxref("WebGL2RenderingContext.isSampler()")}}</li>
- <li>{{domxref("WebGL2RenderingContext.bindSampler()")}}</li>
- <li>{{domxref("WebGL2RenderingContext.getSamplerParameter()")}}</li>
-</ul>
+- {{domxref("WebGL2RenderingContext.createSampler()")}}
+- {{domxref("WebGL2RenderingContext.deleteSampler()")}}
+- {{domxref("WebGL2RenderingContext.isSampler()")}}
+- {{domxref("WebGL2RenderingContext.bindSampler()")}}
+- {{domxref("WebGL2RenderingContext.getSamplerParameter()")}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Creating_a_WebGLSampler_object">Creating a <code>WebGLSampler</code> object</h3>
+### Creating a `WebGLSampler` object
 
-<p>in this example, <code>gl</code> must be a {{domxref("WebGL2RenderingContext")}}. <code>WebGLSampler</code> objects are not available in WebGL 1.</p>
+in this example, `gl` must be a {{domxref("WebGL2RenderingContext")}}. `WebGLSampler` objects are not available in WebGL 1.
 
-<pre class="brush: js">var sampler = gl.createSampler();
-</pre>
+```js
+var sampler = gl.createSampler();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

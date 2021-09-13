@@ -9,22 +9,26 @@ tags:
   - DeprecationReportBody
 browser-compat: api.DeprecationReportBody.message
 ---
-<div>{{APIRef("Reporting API")}}</div>
+{{APIRef("Reporting API")}}
 
-<p>The <strong><code>message</code></strong> read-only property of the {{domxref("DeprecationReportBody")}} interface returns a human-readable description of the deprecation. This typically matches the message a browser will display in its DevTools console regarding a deprecated feature.</p>
+The **`message`** read-only property of the {{domxref("DeprecationReportBody")}} interface returns a human-readable description of the deprecation. This typically matches the message a browser will display in its DevTools console regarding a deprecated feature.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let message = DeprecationReportBody.message;</pre>
+```js
+let message = DeprecationReportBody.message;
+```
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString","string")}}.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("DOMString","string")}}.
 
-<p>In this example we create a new {{domxref("ReportingObserver")}} to observe deprecation reports, then print the value of <code>message</code> to the console.</p>
+## Examples
 
-<pre class="brush: js">let options = {
+In this example we create a new {{domxref("ReportingObserver")}} to observe deprecation reports, then print the value of `message` to the console.
+
+```js
+let options = {
   types: ['deprecation'],
   buffered: true
 }
@@ -33,12 +37,13 @@ let observer = new ReportingObserver(function(reports, observer) {
   let firstReport = reports[0];
   console.log(firstReport.type); // deprecation
   console.log(firstReport.body.message);
-}, options);</pre>
+}, options);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

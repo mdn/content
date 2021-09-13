@@ -11,44 +11,40 @@ tags:
   - createConvolver
 browser-compat: api.BaseAudioContext.createConvolver
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-  <p>The <code>createConvolver()</code> method of the {{ domxref("BaseAudioContext") }}
-    interface creates a {{ domxref("ConvolverNode") }}, which is commonly used to apply
-    reverb effects to your audio. See the <a
-      href="https://webaudio.github.io/web-audio-api/#background-3">spec definition of
-      Convolution</a> for more information.</p>
-</div>
+The `createConvolver()` method of the {{ domxref("BaseAudioContext") }}
+interface creates a {{ domxref("ConvolverNode") }}, which is commonly used to apply
+reverb effects to your audio. See the [spec definition of
+Convolution](https://webaudio.github.io/web-audio-api/#background-3) for more information.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The {{domxref("ConvolverNode.ConvolverNode", "ConvolverNode()")}}
-    constructor is the recommended way to create a {{domxref("ConvolverNode")}}; see
-    <a href="/en-US/docs/Web/API/AudioNode#creating_an_audionode">Creating an AudioNode</a>.</p>
-</div>
+> **Note:** The {{domxref("ConvolverNode.ConvolverNode", "ConvolverNode()")}}
+> constructor is the recommended way to create a {{domxref("ConvolverNode")}}; see
+> [Creating an AudioNode](/en-US/docs/Web/API/AudioNode#creating_an_audionode).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">baseAudioContext.createConvolver();</pre>
+```js
+baseAudioContext.createConvolver();
+```
 
-<h3 id="Description">Returns</h3>
+### Returns
 
-<p>A {{domxref("ConvolverNode")}}.</p>
+A {{domxref("ConvolverNode")}}.
 
-<h2 id="Examples">Example</h2>
+## Example
 
-<p>The following example shows basic usage of an AudioContext to create a convolver node.
-  The basic premise is that you create an AudioBuffer containing a sound sample to be used
-  as an ambience to shape the convolution (called the <em>impulse response</em>,) and
-  apply that to the convolver. The example below uses a short sample of a concert hall
-  crowd, so the reverb effect applied is really deep and echoey.</p>
+The following example shows basic usage of an AudioContext to create a convolver node.
+The basic premise is that you create an AudioBuffer containing a sound sample to be used
+as an ambience to shape the convolution (called the _impulse response_,) and
+apply that to the convolver. The example below uses a short sample of a concert hall
+crowd, so the reverb effect applied is really deep and echoey.
 
-<p>For applied examples/information, check out our <a
-    href="https://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic demo</a> (<a
-    href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js">see
-    app.js</a> for relevant code).</p>
+For applied examples/information, check out our [Voice-change-O-matic demo](https://mdn.github.io/voice-change-o-matic/) ([see
+app.js](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js) for relevant code).
 
-<pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+```js
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var convolver = audioCtx.createConvolver();
 
   ...
@@ -74,19 +70,17 @@ ajaxRequest.send();
 
   ...
 
-convolver.buffer = concertHallBuffer;</pre>
+convolver.buffer = concertHallBuffer;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
-  </li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

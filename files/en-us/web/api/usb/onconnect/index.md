@@ -2,29 +2,30 @@
 title: USB.onconnect
 slug: Web/API/USB/onconnect
 tags:
-- API
-- Method
-- Reference
-- USB
-- WebUSB
-- WebUSB API
-- onconnect
+  - API
+  - Method
+  - Reference
+  - USB
+  - WebUSB
+  - WebUSB API
+  - onconnect
 browser-compat: api.USB.onconnect
 ---
-<p>{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}</p>
+{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}
 
-<p>The <strong><code>onconnect</code></strong> property of the {{DOMxRef("USB")}}
-  interface is an event handler called whenever a paired device is connected. It is passed an instance of {{domxref("USBConnectionEvent")}}.</p>
+The **`onconnect`** property of the {{DOMxRef("USB")}}
+interface is an event handler called whenever a paired device is connected. It is passed an instance of {{domxref("USBConnectionEvent")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>USB</em>.onconnect = <em>connectFunction</em></pre>
+```js
+USB.onconnect = connectFunction
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

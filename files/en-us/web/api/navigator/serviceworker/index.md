@@ -2,55 +2,54 @@
 title: Navigator.serviceWorker
 slug: Web/API/Navigator/serviceWorker
 tags:
-- API
-- Navigator
-- Property
-- Reference
-- Service Workers
-- Service worker API
-- ServiceWorker
+  - API
+  - Navigator
+  - Property
+  - Reference
+  - Service Workers
+  - Service worker API
+  - ServiceWorker
 browser-compat: api.Navigator.serviceWorker
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p>The <code><strong>Navigator.serviceWorker</strong></code>
-    read-only property returns the {{domxref("ServiceWorkerContainer")}} object for the <a
-      href="https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window">associated
-      document</a>, which provides access to registration, removal, upgrade, and
-    communication with the {{domxref("ServiceWorker")}}.</p>
+The **`Navigator.serviceWorker`**
+read-only property returns the {{domxref("ServiceWorkerContainer")}} object for the [associated
+document](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window), which provides access to registration, removal, upgrade, and
+communication with the {{domxref("ServiceWorker")}}.
 
-<p>The feature may not be available in private mode.</p>
+The feature may not be available in private mode.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const <em>workerContainerInstance</em> = navigator.serviceWorker;
-</pre>
+```js
+const workerContainerInstance = navigator.serviceWorker;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>{{domxref("ServiceWorkerContainer")}}.</p>
+{{domxref("ServiceWorkerContainer")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This code checks if the browser supports service workers.</p>
+This code checks if the browser supports service workers.
 
-<pre class="brush: js">if ('serviceWorker' in navigator) {
+```js
+if ('serviceWorker' in navigator) {
   // Supported!
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a></li>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service
-      Workers</a></li>
-</ul>
+- [Service Worker API](/en-US/docs/Web/API/Service_Worker_API)
+- [Using Service
+  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)

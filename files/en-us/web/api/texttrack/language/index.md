@@ -9,35 +9,37 @@ tags:
   - TextTrack
 browser-compat: api.TextTrack.language
 ---
-<div>{{APIRef("WebVTT")}}</div>
+{{APIRef("WebVTT")}}
 
-<p>The <strong><code>language</code></strong> read-only property of the {{domxref("TextTrack")}} interface returns the language of the text track.</p>
+The **`language`** read-only property of the {{domxref("TextTrack")}} interface returns the language of the text track.
 
-<p>This uses the same values as the HTML {{htmlattrxref("lang")}} attribute. These values are documented in the <a href="https://datatracker.ietf.org/doc/html/bcp47">Tags for Identifying Languages</a> (BCP 47) document from the IETF.</p>
+This uses the same values as the HTML {{htmlattrxref("lang")}} attribute. These values are documented in the [Tags for Identifying Languages](https://datatracker.ietf.org/doc/html/bcp47) (BCP 47) document from the IETF.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let language = TextTrack.language;</pre>
+```js
+let language = TextTrack.language;
+```
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString","string")}} containing a language identifier. For example, <code>"en-US"</code> for United States English or <code>"pt-BR"</code> for Brazilian Portuguese.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("DOMString","string")}} containing a language identifier. For example, `"en-US"` for United States English or `"pt-BR"` for Brazilian Portuguese.
 
-<p>In the following example the value of <code>language</code> is printed to the console.</p>
+## Examples
 
-<pre class="brush: js">let video = document.querySelector('video');
+In the following example the value of `language` is printed to the console.
+
+```js
+let video = document.querySelector('video');
 let track = video.addTextTrack("captions", "Captions", "en-US");
 track.mode = "showing";
 console.log(track.language);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
-
+{{Compat}}

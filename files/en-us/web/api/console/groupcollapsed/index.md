@@ -12,37 +12,35 @@ tags:
   - web console
 browser-compat: api.console.groupCollapsed
 ---
-<div>{{APIRef("Console API")}}</div>
+{{APIRef("Console API")}}
 
-<p>The <strong><code>console.groupCollapsed()</code></strong> method creates a new inline group in the Web Console. Unlike {{domxref("console.group()")}},
-	however, the new group is created collapsed. The user will need to use the disclosure
-	button next to it to expand it, revealing the entries created in the group.</p>
+The **`console.groupCollapsed()`** method creates a new inline group in the Web Console. Unlike {{domxref("console.group()")}},
+however, the new group is created collapsed. The user will need to use the disclosure
+button next to it to expand it, revealing the entries created in the group.
 
-<p>Call {{domxref("console.groupEnd()")}} to back out to the parent group.</p>
+Call {{domxref("console.groupEnd()")}} to back out to the parent group.
 
-<p>See <a href="/en-US/docs/Web/API/console#using_groups_in_the_console">Using groups in
-		the console</a> in the {{domxref("console")}} documentation for details and
-	examples.</p>
+See [Using groups in
+the console](/en-US/docs/Web/API/console#using_groups_in_the_console) in the {{domxref("console")}} documentation for details and
+examples.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">console.groupCollapsed([label]);
-</pre>
+```js
+console.groupCollapsed([label]);
+```
 
-<h2 id="Parameters">Parameters</h2>
+## Parameters
 
-<dl>
-	<dt><code>label</code></dt>
-	<dd>Label for the group. Optional.</dd>
-</dl>
+- `label`
+  - : Label for the group. Optional.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
+{{Compat}}

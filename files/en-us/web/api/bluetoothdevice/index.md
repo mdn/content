@@ -11,39 +11,35 @@ tags:
   - Web Bluetooth API
 browser-compat: api.BluetoothDevice
 ---
-<p>{{APIRef("Bluetooth API")}}{{SeeCompatTable}}</p>
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
-<p>The BluetoothDevice interface of the <a href="/en-US/docs/Web/API/Web_Bluetooth_API">Web Bluetooth
-    API</a> represents a Bluetooth device inside a particular script execution
-  environment.</p>
+The BluetoothDevice interface of the [Web Bluetooth
+API](/en-US/docs/Web/API/Web_Bluetooth_API) represents a Bluetooth device inside a particular script execution
+environment.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
-  <dt>{{DOMxRef("BluetoothDevice.id")}} {{Experimental_Inline}}{{ReadOnlyInline}}</dt>
-  <dd>A {{DOMxRef("DOMString")}} that uniquely identifies a device.</dd>
-  <dt>{{DOMxRef("BluetoothDevice.name")}} {{Experimental_Inline}}{{ReadOnlyInline}}</dt>
-  <dd>A {{DOMxRef("DOMString")}} that provices a human-readable name for the device.</dd>
-  <dt>{{DOMxRef("BluetoothDevice.gatt")}} {{Experimental_Inline}}{{ReadOnlyInline}}</dt>
-  <dd>A reference to the device's {{DOMxRef("BluetoothRemoteGATTServer")}}.</dd>
-</dl>
+- {{DOMxRef("BluetoothDevice.id")}} {{Experimental_Inline}}{{ReadOnlyInline}}
+  - : A {{DOMxRef("DOMString")}} that uniquely identifies a device.
+- {{DOMxRef("BluetoothDevice.name")}} {{Experimental_Inline}}{{ReadOnlyInline}}
+  - : A {{DOMxRef("DOMString")}} that provices a human-readable name for the device.
+- {{DOMxRef("BluetoothDevice.gatt")}} {{Experimental_Inline}}{{ReadOnlyInline}}
+  - : A reference to the device's {{DOMxRef("BluetoothRemoteGATTServer")}}.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
-  <dt>{{DOMxRef("BluetoothDevice.watchAdvertisments()")}} {{Experimental_Inline}}</dt>
-  <dd>A {{jsxref("Promise")}} that resolves to <code>undefined</code> or is rejected with
-    an error if advetisments can’t shown for any reason.</dd>
-  <dt>{{DOMxRef("BluetoothDevice.unwatchAdvertisments()")}} {{Experimental_Inline}}</dt>
-  <dd>Stops watching for advertisments.</dd>
-</dl>
+- {{DOMxRef("BluetoothDevice.watchAdvertisments()")}} {{Experimental_Inline}}
+  - : A {{jsxref("Promise")}} that resolves to `undefined` or is rejected with
+    an error if advetisments can’t shown for any reason.
+- {{DOMxRef("BluetoothDevice.unwatchAdvertisments()")}} {{Experimental_Inline}}
+  - : Stops watching for advertisments.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

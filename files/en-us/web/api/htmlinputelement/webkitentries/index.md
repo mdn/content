@@ -2,89 +2,87 @@
 title: HTMLInputElement.webkitEntries
 slug: Web/API/HTMLInputElement/webkitEntries
 tags:
-- API
-- File System API
-- File and Directory Entries API
-- Files
-- HTML DOM
-- HTMLInputElement
-- Non-standard
-- Property
-- webkitEntries
+  - API
+  - File System API
+  - File and Directory Entries API
+  - Files
+  - HTML DOM
+  - HTMLInputElement
+  - Non-standard
+  - Property
+  - webkitEntries
 browser-compat: api.HTMLInputElement.webkitEntries
 ---
-<p>{{APIRef("File System API")}}{{SeeCompatTable}}{{Non-standard_header}}</p>
+{{APIRef("File System API")}}{{SeeCompatTable}}{{Non-standard_header}}
 
-<p>The read-only <strong><code>webkitEntries</code></strong>
-    property of the {{domxref("HTMLInputElement")}} interface contains an array of file
-    system entries (as objects based on {{domxref("FileSystemEntry")}}) representing files
-    and/or directories selected by the user using an {{HTMLElement("input")}} element of
-    type <code>file</code>, but only if that selection was made using drag-and-drop:
-    selecting a file in the dialog will leave the property empty.</p>
+The read-only **`webkitEntries`**
+property of the {{domxref("HTMLInputElement")}} interface contains an array of file
+system entries (as objects based on {{domxref("FileSystemEntry")}}) representing files
+and/or directories selected by the user using an {{HTMLElement("input")}} element of
+type `file`, but only if that selection was made using drag-and-drop:
+selecting a file in the dialog will leave the property empty.
 
-<p>The array can only contain directories if the
-  {{domxref("HTMLInputElement.webkitdirectory", "webkitdirectory")}} property is
-  <code>true</code>. This means the <code>&lt;input&gt;</code> element was configured to
-  let the user choose directories.</p>
+The array can only contain directories if the
+{{domxref("HTMLInputElement.webkitdirectory", "webkitdirectory")}} property is
+`true`. This means the `<input>` element was configured to
+let the user choose directories.
 
-<div class="note">
-  <p><strong>Note:</strong> This property is called <code>webkitEntries</code> in the specification due to its
-    origins as a Google Chrome-specific API. It's likely to be renamed someday.</p>
-</div>
+> **Note:** This property is called `webkitEntries` in the specification due to its
+> origins as a Google Chrome-specific API. It's likely to be renamed someday.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>entries</em> = <em>HTMLInputElement</em>.webkitEntries;</pre>
+```js
+var entries = HTMLInputElement.webkitEntries;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An array of objects based on {{domxref("FileSystemEntry")}}, each representing one file
-  which is selected in the {{HTMLElement("input")}} element. More specifically, files are
-  represented by {{domxref("FileSystemFileEntry")}} objects, and, if they're allowed,
-  directories are represented by {{domxref("FileSystemDirectoryEntry")}} objects.</p>
+An array of objects based on {{domxref("FileSystemEntry")}}, each representing one file
+which is selected in the {{HTMLElement("input")}} element. More specifically, files are
+represented by {{domxref("FileSystemFileEntry")}} objects, and, if they're allowed,
+directories are represented by {{domxref("FileSystemDirectoryEntry")}} objects.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example shows how to create a file selection <code>&lt;input&gt;</code> element
-  and process the selected files.</p>
+This example shows how to create a file selection `<input>` element
+and process the selected files.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;input id="files" type="file" multiple&gt;</pre>
+```html
+<input id="files" type="file" multiple>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">document.getElementById("files").addEventListener("change", function(event) {
+```js
+document.getElementById("files").addEventListener("change", function(event) {
   event.target.webkitEntries.forEach(function(entry) {
     /* do stuff with the entry */
   });
 });
-</pre>
+```
 
-<p>Each time a {{event("change")}} event occurs, this code iterates over the selected
-  files, obtaining their {{domxref("FileSystemEntry")}}-based objects and acting on them.
-</p>
+Each time a {{event("change")}} event occurs, this code iterates over the selected
+files, obtaining their {{domxref("FileSystemEntry")}}-based objects and acting on them.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<p>This API has no official W3C or WHATWG specification.</p>
+This API has no official W3C or WHATWG specification.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory
-      Entries API</a></li>
-  <li><a
-      href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">Introduction
-      to the File System API</a></li>
-  <li>{{domxref("HTMLInputElement")}}</li>
-  <li>{{domxref("FileSystemEntry")}}</li>
-  <li>{{domxref("FileSystem")}}</li>
-</ul>
+- [File and Directory
+  Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction
+  to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- {{domxref("HTMLInputElement")}}
+- {{domxref("FileSystemEntry")}}
+- {{domxref("FileSystem")}}

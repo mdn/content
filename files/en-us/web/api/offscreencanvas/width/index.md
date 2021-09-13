@@ -2,44 +2,45 @@
 title: OffscreenCanvas.width
 slug: Web/API/OffscreenCanvas/width
 tags:
-- API
-- Canvas
-- Experimental
-- OffscreenCanvas
-- Property
-- Reference
+  - API
+  - Canvas
+  - Experimental
+  - OffscreenCanvas
+  - Property
+  - Reference
 browser-compat: api.OffscreenCanvas.width
 ---
-<div>{{APIRef("Canvas API")}} {{SeeCompatTable}}</div>
+{{APIRef("Canvas API")}} {{SeeCompatTable}}
 
-<p>The <code><strong>width</strong></code> property returns and sets the width of an
-  {{domxref("OffscreenCanvas")}} object.</p>
+The **`width`** property returns and sets the width of an
+{{domxref("OffscreenCanvas")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>var <em>pxl</em> = <em>offscreen</em></var>.width;
-<em>offscreen</em>.width = <em>pxl</em>;</pre>
+```js
+var pxl = offscreen.width;
+offscreen.width = pxl;
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Creating a new offscreen canvas and returning or setting the width of the offscreen
-  canvas:</p>
+Creating a new offscreen canvas and returning or setting the width of the offscreen
+canvas:
 
-<pre class="brush: js">var offscreen = new OffscreenCanvas(256, 256);
+```js
+var offscreen = new OffscreenCanvas(256, 256);
 offscreen.width; // 256
 offscreen.width = 512;
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("OffscreenCanvas")}}, the interface this property belongs to.</li>
-</ul>
+- {{domxref("OffscreenCanvas")}}, the interface this property belongs to.

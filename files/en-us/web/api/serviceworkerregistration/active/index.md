@@ -10,55 +10,49 @@ tags:
   - active
 browser-compat: api.ServiceWorkerRegistration.active
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p>The <strong><code>active</code></strong> property of the
-  {{domxref("ServiceWorkerRegistration")}} interface returns a service worker whose
-  {{domxref("ServiceWorker.state")}} is <code>activating</code> or <code>activated</code>.
-  This property is initially set to <code>null</code>.</p>
+The **`active`** property of the
+{{domxref("ServiceWorkerRegistration")}} interface returns a service worker whose
+{{domxref("ServiceWorker.state")}} is `activating` or `activated`.
+This property is initially set to `null`.
 
-<p>An active worker controls a {{domxref("Client")}} if the client's URL
-  falls within the scope of the registration (the <code>scope</code> option set when
-  {{domxref("ServiceWorkerContainer.register")}} is first called.)</p>
+An active worker controls a {{domxref("Client")}} if the client's URL
+falls within the scope of the registration (the `scope` option set when
+{{domxref("ServiceWorkerContainer.register")}} is first called.)
 
-<div class="note">
-  <p><strong>Note:</strong> This feature is available in <a
-      href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
-</div>
+> **Note:** This feature is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
 
-<div class="note">
-  <p><strong>Note:</strong> Once an active worker is <code>activating</code>, neither a
-    runtime script error nor a force termination of the active worker prevents the active
-    worker from getting <code>activated</code>.</p>
-</div>
+> **Note:** Once an active worker is `activating`, neither a
+> runtime script error nor a force termination of the active worker prevents the active
+> worker from getting `activated`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>serviceWorker</em> = <em>serviceWorkerRegistration</em>.active;
-</pre>
+```js
+var serviceWorker = serviceWorkerRegistration.active;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("ServiceWorker")}} object's property, if it is currently in an
-  <code>activating</code> or <code>activated</code> state.</p>
+A {{domxref("ServiceWorker")}} object's property, if it is currently in an
+`activating` or `activated` state.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service
-      Workers</a></li>
-  <li><a href="https://github.com/mdn/sw-test">Service workers basic code example</a></li>
-  <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker
-      ready?</a></li>
-  <li>{{jsxref("Promise")}}</li>
-  <li><a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web
-      workers</a></li>
-</ul>
+- [Using Service
+  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Is ServiceWorker
+  ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- {{jsxref("Promise")}}
+- [Using web
+  workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

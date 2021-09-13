@@ -2,61 +2,59 @@
 title: KeyboardEvent.initKeyboardEvent()
 slug: Web/API/KeyboardEvent/initKeyboardEvent
 tags:
-- API
-- Deprecated
-- KeyboardEvent
-- Method
-- Reference
+  - API
+  - Deprecated
+  - KeyboardEvent
+  - Method
+  - Reference
 browser-compat: api.KeyboardEvent.initKeyboardEvent
 ---
-<p>{{APIRef("DOM Events")}}{{Deprecated_Header}}</p>
+{{APIRef("DOM Events")}}{{Deprecated_Header}}
 
-<p>The <code><strong>KeyboardEvent.initKeyboardEvent()</strong></code> method initializes
-  the attributes of a keyboard event object. This method was introduced in draft of DOM
-  Level 3 Events, but deprecated in newer draft. Gecko won't support this feature since
-  implementing this method as experimental broke existing web apps (see {{bug(999645)}}).
-  Web applications should use constructor instead of this if it's available.</p>
+The **`KeyboardEvent.initKeyboardEvent()`** method initializes
+the attributes of a keyboard event object. This method was introduced in draft of DOM
+Level 3 Events, but deprecated in newer draft. Gecko won't support this feature since
+implementing this method as experimental broke existing web apps (see {{bug(999645)}}).
+Web applications should use constructor instead of this if it's available.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>kbdEvent</em>.initKeyboardEvent(<em>typeArg</em>, <em>canBubbleArg</em>, <em>cancelableArg</em>,
-                           <em>viewArg</em>, <em>charArg</em>, <em>keyArg</em>,
-                           <em>locationArg</em>, <em>modifiersListArg</em>, <em>repeat</em>)
-</pre>
+```js
+kbdEvent.initKeyboardEvent(typeArg, canBubbleArg, cancelableArg,
+                           viewArg, charArg, keyArg,
+                           locationArg, modifiersListArg, repeat)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><em><code>typeArg</code></em></dt>
-  <dd>The type of keyboard event; this will be one of <code>keydown</code>,
-    <code>keypress</code>, or <code>keyup</code>.</dd>
-  <dt><em><code>canBubbleArg</code></em></dt>
-  <dd>Whether or not the event can bubble.</dd>
-  <dt><em><code>cancelableArg</code></em></dt>
-  <dd>Whether or not the event can be canceled.</dd>
-  <dt><em><code>viewArg</code></em></dt>
-  <dd>The {{domxref("WindowProxy")}} it is associated to.</dd>
-  <dt><em><code>keyArg</code></em></dt>
-  <dd>The value of the key attribute.</dd>
-  <dt><em><code>locationArg</code></em></dt>
-  <dd>The value of the location attribute.</dd>
-  <dt><em><code>ctrlKey</code></em></dt>
-  <dd>Whether the Control key modifier is active.</dd>
-  <dt><em><code>altKey</code></em></dt>
-  <dd>Whether the Alt key modifier is active.</dd>
-  <dt><em><code>shiftKey</code></em></dt>
-  <dd>Whether the Shift key modifier is active.</dd>
-  <dt><em><code>metaKey</code></em></dt>
-  <dd>Whether the Meta key modifier is active.</dd>
-</dl>
+- _`typeArg`_
+  - : The type of keyboard event; this will be one of `keydown`,
+    `keypress`, or `keyup`.
+- _`canBubbleArg`_
+  - : Whether or not the event can bubble.
+- _`cancelableArg`_
+  - : Whether or not the event can be canceled.
+- _`viewArg`_
+  - : The {{domxref("WindowProxy")}} it is associated to.
+- _`keyArg`_
+  - : The value of the key attribute.
+- _`locationArg`_
+  - : The value of the location attribute.
+- _`ctrlKey`_
+  - : Whether the Control key modifier is active.
+- _`altKey`_
+  - : Whether the Alt key modifier is active.
+- _`shiftKey`_
+  - : Whether the Shift key modifier is active.
+- _`metaKey`_
+  - : Whether the Meta key modifier is active.
 
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<p>The <code>KeyboardEvent</code> interface specification went through numerous draft versions, first under DOM Events Level 2 where it was dropped as no consensus arose, then under DOM Events Level 3. This led to the implementation of non-standard initialization methods, the early DOM Events Level 2 version, {{domxref("KeyboardEvent.initKeyEvent()")}} by Gecko browsers and the early DOM Events Level 3 version, {{domxref("KeyboardEvent.initKeyboardEvent()")}} by others. Both have been superseded by the modern usage of a constructor: {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}}.</p>
+The `KeyboardEvent` interface specification went through numerous draft versions, first under DOM Events Level 2 where it was dropped as no consensus arose, then under DOM Events Level 3. This led to the implementation of non-standard initialization methods, the early DOM Events Level 2 version, {{domxref("KeyboardEvent.initKeyEvent()")}} by Gecko browsers and the early DOM Events Level 3 version, {{domxref("KeyboardEvent.initKeyboardEvent()")}} by others. Both have been superseded by the modern usage of a constructor: {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}}.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

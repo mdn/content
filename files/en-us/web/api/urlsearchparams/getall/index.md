@@ -2,51 +2,51 @@
 title: URLSearchParams.getAll()
 slug: Web/API/URLSearchParams/getAll
 tags:
-- API
-- Method
-- URL API
-- URLSearchParams
-- getAll
+  - API
+  - Method
+  - URL API
+  - URLSearchParams
+  - getAll
 browser-compat: api.URLSearchParams.getAll
 ---
-<p>{{ApiRef("URL API")}}</p>
+{{ApiRef("URL API")}}
 
-<p>The <strong><code>getAll()</code></strong> method of the {{domxref("URLSearchParams")}}
-  interface returns all the values associated with a given search parameter as an array. 
-</p>
+The **`getAll()`** method of the {{domxref("URLSearchParams")}}
+interface returns all the values associated with a given search parameter as an array.
 
-<p>{{availableinworkers}}</p>
+{{availableinworkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">URLSearchParams.getAll(<em>name</em>)</pre>
+```js
+URLSearchParams.getAll(name)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>name</dt>
-  <dd>The name of the parameter to return.</dd>
-</dl>
+- name
+  - : The name of the parameter to return.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An array of {{domxref("USVString")}}s.</p>
+An array of {{domxref("USVString")}}s.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">let url = new URL('https://example.com?foo=1&amp;bar=2');
+```js
+let url = new URL('https://example.com?foo=1&bar=2');
 let params = new URLSearchParams(url.search.slice(1));
 
 //Add a second foo parameter.
 params.append('foo', 4);
 
 console.log(params.getAll('foo')) //Prints ["1","4"].
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -10,29 +10,29 @@ tags:
   - XMLHttpRequest API
 browser-compat: api.FormData.entries
 ---
-<p>{{APIRef("XMLHttpRequest")}}</p>
+{{APIRef("XMLHttpRequest")}}
 
-<p>The <code><strong>FormData.entries()</strong></code> method returns an
-	{{jsxref("Iteration_protocols",'iterator')}} allowing to go through all key/value
-	pairs contained in this object. The key of each pair is a {{domxref("USVString")}}
-	object; the value either a {{domxref("USVString")}}, or a {{domxref("Blob")}}.</p>
+The **`FormData.entries()`** method returns an
+{{jsxref("Iteration_protocols",'iterator')}} allowing to go through all key/value
+pairs contained in this object. The key of each pair is a {{domxref("USVString")}}
+object; the value either a {{domxref("USVString")}}, or a {{domxref("Blob")}}.
 
-<div class="note">
-	<p><strong>Note:</strong> This method is available in <a
-			href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
-</div>
+> **Note:** This method is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">formData.entries();</pre>
+```js
+formData.entries();
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Returns an {{jsxref("Iteration_protocols","iterator")}}.</p>
+Returns an {{jsxref("Iteration_protocols","iterator")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js;">// Create a test FormData object
+```js
+// Create a test FormData object
 var formData = new FormData();
 formData.append('key1', 'value1');
 formData.append('key2', 'value2');
@@ -41,28 +41,25 @@ formData.append('key2', 'value2');
 for(var pair of formData.entries()) {
    console.log(pair[0]+ ', '+ pair[1]);
 }
-</pre>
+```
 
-<p>The result is:</p>
+The result is:
 
-<pre>key1, value1
-key2, value2</pre>
+    key1, value1
+    key2, value2
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{domxref("XMLHTTPRequest")}}</li>
-	<li><a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest"
-			title="Using XMLHttpRequest">Using XMLHttpRequest</a></li>
-	<li><a href="/en-US/docs/Web/API/FormData/Using_FormData_Objects">Using
-			FormData objects</a></li>
-	<li>{{HTMLElement("Form")}}</li>
-</ul>
+- {{domxref("XMLHTTPRequest")}}
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest "Using XMLHttpRequest")
+- [Using
+  FormData objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)
+- {{HTMLElement("Form")}}

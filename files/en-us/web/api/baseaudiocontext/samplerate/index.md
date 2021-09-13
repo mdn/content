@@ -11,53 +11,48 @@ tags:
   - sampleRate
 browser-compat: api.BaseAudioContext.sampleRate
 ---
-<div>{{ APIRef("Web Audio API") }}</div>
+{{ APIRef("Web Audio API") }}
 
-<p>The <code>sampleRate</code> property of the {{
+The `sampleRate` property of the {{
     domxref("BaseAudioContext") }} interface returns a floating point number representing
-    the sample rate, in samples per second, used by all nodes in this audio
-    context. This limitation means that sample-rate converters are not supported.
-</p>
+the sample rate, in samples per second, used by all nodes in this audio
+context. This limitation means that sample-rate converters are not supported.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>baseAudioContext</em>.sampleRate;
-</pre>
+```js
+baseAudioContext.sampleRate;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A floating point number indicating the audio context's sample rate, in samples per
-  second.</p>
+A floating point number indicating the audio context's sample rate, in samples per
+second.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<div class="note">
-  <p><strong>Note:</strong> for a full Web Audio example implementation, see one of our
-    Web Audio Demos on the <a href="https://github.com/mdn/">MDN Github repo</a>, like <a
-      href="https://github.com/mdn/panner-node">panner-node</a>. Try entering
-    <code>audioCtx.sampleRate</code> into your browser console.</p>
-</div>
+> **Note:** for a full Web Audio example implementation, see one of our
+> Web Audio Demos on the [MDN Github repo](https://github.com/mdn/), like [panner-node](https://github.com/mdn/panner-node). Try entering
+> `audioCtx.sampleRate` into your browser console.
 
-<pre class="brush: js;">var AudioContext = window.AudioContext || window.webkitAudioContext;
+```js
+var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioCtx = new AudioContext();
 // Older webkit/blink browsers require a prefix
 
 ...
 
 console.log(audioCtx.sampleRate);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
-  </li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

@@ -2,54 +2,52 @@
 title: ServiceWorkerGlobalScope.onmessage
 slug: Web/API/ServiceWorkerGlobalScope/onmessage
 tags:
-- API
-- Property
-- Reference
-- Service
-- ServiceWorker
-- ServiceWorkerGlobalScope
-- Workers
-- onmessage
+  - API
+  - Property
+  - Reference
+  - Service
+  - ServiceWorker
+  - ServiceWorkerGlobalScope
+  - Workers
+  - onmessage
 browser-compat: api.ServiceWorkerGlobalScope.onmessage
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p>The <strong>onmessage</strong> property of the {{domxref("ServiceWorkerGlobalScope")}}
-  interface is an event handler fired whenever a
-  {{domxref("ServiceWorkerGlobalScope.message_event","message")}} event occurs — when
-  incoming messages are received.</p>
+The **onmessage** property of the {{domxref("ServiceWorkerGlobalScope")}}
+interface is an event handler fired whenever a
+{{domxref("ServiceWorkerGlobalScope.message_event","message")}} event occurs — when
+incoming messages are received.
 
-<div class="note">
-  <p><strong>Note:</strong> Service workers define the extendable event to allow extending
-    the lifetime of the event. For the <code>message</code> event, service workers use the
-    {{domxref("ExtendableMessageEvent")}} interface which extends the
-    {{domxref("ExtendableEvent")}} interface.</p>
-</div>
+> **Note:** Service workers define the extendable event to allow extending
+> the lifetime of the event. For the `message` event, service workers use the
+> {{domxref("ExtendableMessageEvent")}} interface which extends the
+> {{domxref("ExtendableEvent")}} interface.
 
-<div class="note">
-  <p><strong>Note:</strong> Messages received from service worker contexts (e.g. as the
-    event object of <code>onmessage</code>) are represented by {{domxref("MessageEvent")}}
-    objects in modern browsers, for consistency with other web messaging features. (They
-    used to be represented by {{domxref("ServiceWorkerMessageEvent")}} objects, which have
-    now been deprecated.)</p>
-</div>
+> **Note:** Messages received from service worker contexts (e.g. as the
+> event object of `onmessage`) are represented by {{domxref("MessageEvent")}}
+> objects in modern browsers, for consistency with other web messaging features. (They
+> used to be represented by {{domxref("ServiceWorkerMessageEvent")}} objects, which have
+> now been deprecated.)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>serviceWorkerGlobalScope</em>.onmessage = function(<em>extendableMessageEvent</em>) { ... };</pre>
+```js
+serviceWorkerGlobalScope.onmessage = function(extendableMessageEvent) { ... };
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">self.addEventListener('message', function(messageEvent) {
+```js
+self.addEventListener('message', function(messageEvent) {
   console.log('Handling message event:', messageEvent);
 })
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

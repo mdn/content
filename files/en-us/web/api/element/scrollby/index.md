@@ -2,58 +2,58 @@
 title: Element.scrollBy()
 slug: Web/API/Element/scrollBy
 tags:
-- API
-- CSSOM View
-- Element
-- Method
-- Reference
-- scrollBy
+  - API
+  - CSSOM View
+  - Element
+  - Method
+  - Reference
+  - scrollBy
 browser-compat: api.Element.scrollBy
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p>The <strong><code>scrollBy()</code></strong> method of the {{domxref("Element")}}
-  interface scrolls an element by the given amount.</p>
+The **`scrollBy()`** method of the {{domxref("Element")}}
+interface scrolls an element by the given amount.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">element.scrollBy(<var>x-coord</var>, <var>y-coord</var>);
-element.scrollBy(<var>options</var>)
-</pre>
+```js
+element.scrollBy(x-coord, y-coord);
+element.scrollBy(options)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<ul>
-  <li><code><var>x-coord</var></code> is the horizontal pixel value that you want to
-    scroll by.</li>
-  <li><code><var>y-coord</var></code> is the vertical pixel value that you want to scroll
-    by.</li>
-</ul>
+- `x-coord` is the horizontal pixel value that you want to
+  scroll by.
+- `y-coord` is the vertical pixel value that you want to scroll
+  by.
 
-<p>- or -</p>
+\- or -
 
-<ul>
-  <li><code><var>options</var></code> is a {{domxref("ScrollToOptions")}} dictionary.</li>
-</ul>
+- `options` is a {{domxref("ScrollToOptions")}} dictionary.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">// scroll an element
+```js
+// scroll an element
 element.scrollBy(300, 300);
-</pre>
+```
 
-<p>Using <code>options</code>:</p>
+Using `options`:
 
-<pre class="brush: js">element.scrollBy({
+```js
+element.scrollBy({
   top: 100,
   left: 100,
   behavior: 'smooth'
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

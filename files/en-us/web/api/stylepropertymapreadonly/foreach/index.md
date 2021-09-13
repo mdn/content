@@ -2,73 +2,72 @@
 title: StylePropertyMapReadOnly.forEach()
 slug: Web/API/StylePropertyMapReadOnly/forEach
 tags:
-- API
-- CSS Typed Object Model API
-- Experimental
-- Houdini
-- Method
-- Reference
-- StylePropertyMapReadOnly
-- forEach()
+  - API
+  - CSS Typed Object Model API
+  - Experimental
+  - Houdini
+  - Method
+  - Reference
+  - StylePropertyMapReadOnly
+  - forEach()
 browser-compat: api.StylePropertyMapReadOnly.forEach
 ---
-<p>{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}</p>
+{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>StylePropertyMapReadOnly.forEach()</code></strong> method executes a
-  provided function once for each element of {{domxref('StylePropertyMapReadOnly')}}.</p>
+The **`StylePropertyMapReadOnly.forEach()`** method executes a
+provided function once for each element of {{domxref('StylePropertyMapReadOnly')}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>StylePropertyMapReadOnly</var>.forEach(function <var>callback(currentValue[, index[, array]]) {
+```js
+StylePropertyMapReadOnly.forEach(function callback(currentValue[, index[, array]]) {
     //your code
-}</var>[, <var>thisArg</var>]);</pre>
+}[, thisArg]);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>callback</code></dt>
-  <dd>The function to execute for each element, taking three arguments:
-    <dl>
-      <dt><code>currentValue</code></dt>
-      <dd>The value of the current element being processed.</dd>
-      <dt><code>index</code>{{optional_inline}}</dt>
-      <dd>The index of the current element being processed.</dd>
-      <dt><code>array</code>{{optional_inline}}</dt>
-      <dd>The StylePropertyMapReadOnly that<code>forEach()</code> is being called on.</dd>
-    </dl>
-  </dd>
-  <dt><code>thisArg</code> {{Optional_inline}}</dt>
-  <dd>
-    <p>Value to use as <code><strong>this</strong></code> (i.e the reference
-      <code>Object</code>) when executing <code>callback</code>.</p>
-  </dd>
-</dl>
+- `callback`
 
-<h3 id="Return_value">Return value</h3>
+  - : The function to execute for each element, taking three arguments:
 
-<p>{{jsxref("undefined")}}.</p>
+    - `currentValue`
+      - : The value of the current element being processed.
+    - `index`{{optional_inline}}
+      - : The index of the current element being processed.
+    - `array`{{optional_inline}}
+      - : The StylePropertyMapReadOnly that`forEach()` is being called on.
 
-<h2 id="Example">Example</h2>
+- `thisArg` {{Optional_inline}}
+  - : Value to use as **`this`** (i.e the reference
+    `Object`) when executing `callback`.
 
-<p>Here is an example of using <code>forEach()</code> on a retrieved
-  {{domxref('Element.computedStyleMap()')}}.</p>
+### Return value
 
-<pre class="brush: js">// get a button element
+{{jsxref("undefined")}}.
+
+## Example
+
+Here is an example of using `forEach()` on a retrieved
+{{domxref('Element.computedStyleMap()')}}.
+
+```js
+// get a button element
 const buttonEl = document.querySelector('.example');
 
 // we can retrieve all computed styles with `computedStyleMap`
 const allComputedStyles = buttonEl.computedStyleMap();
 
 // forEach will allow us to run code over each prop/val pair
-allComputedStyles.forEach((elem, index, arr) =&gt; {
+allComputedStyles.forEach((elem, index, arr) => {
   // oode to run for each pair
 })
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

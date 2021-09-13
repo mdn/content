@@ -2,64 +2,60 @@
 title: DataTransferItemList.remove()
 slug: Web/API/DataTransferItemList/remove
 tags:
-- API
-- DataTransferItemList
-- HTML DOM
-- HTML Drag and Drop API
-- Method
-- Reference
-- drag and drop
-- remove
+  - API
+  - DataTransferItemList
+  - HTML DOM
+  - HTML Drag and Drop API
+  - Method
+  - Reference
+  - drag and drop
+  - remove
 browser-compat: api.DataTransferItemList.remove
 ---
-<div>{{APIRef("HTML Drag and Drop API")}}</div>
+{{APIRef("HTML Drag and Drop API")}}
 
-<div>
-  <p>The <strong><code>DataTransferItemList.remove()</code></strong> method removes the
-    {{domxref("DataTransferItem")}} at the specified index from the list. If the index is
-    less than zero or greater than one less than the length of the list, the list will not
-    be changed.</p>
-</div>
+The **`DataTransferItemList.remove()`** method removes the
+{{domxref("DataTransferItem")}} at the specified index from the list. If the index is
+less than zero or greater than one less than the length of the list, the list will not
+be changed.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>DataTransferItemList</em>.remove(index);
-</pre>
+```js
+DataTransferItemList.remove(index);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>index</code></dt>
-  <dd>The zero-based index number of the item in the drag data list to remove. If the
-    <code>index</code> doesn't correspond to an existing item in the list, the list is
-    left unchanged.</dd>
-</dl>
+- `index`
+  - : The zero-based index number of the item in the drag data list to remove. If the
+    `index` doesn't correspond to an existing item in the list, the list is
+    left unchanged.
 
-<h3 id="Return_Value">Return value</h3>
+### Return value
 
-<p>{{jsxref("undefined")}}.</p>
+{{jsxref("undefined")}}.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt><code>InvalidStateError</code></dt>
-  <dd>The drag data store is not in read/write mode, so the item can't be removed.</dd>
-</dl>
+- `InvalidStateError`
+  - : The drag data store is not in read/write mode, so the item can't be removed.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example shows the use of the <code>remove()</code> method.</p>
+This example shows the use of the `remove()` method.
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js ">function dragstart_handler(ev) {
+```js
+function dragstart_handler(ev) {
   console.log("dragStart");
   // Add this element's id to the drag payload so the drop handler will
   // know which element to add to its tree
   var dataList = ev.dataTransfer.items;
   dataList.add(ev.target.id, "text/plain");
   // Add some other items to the drag payload
-  dataList.add("&lt;p&gt;... paragraph ...&lt;/p&gt;", "text/html");
+  dataList.add("<p>... paragraph ...</p>", "text/html");
   dataList.add("http://www.example.org","text/uri-list");
 }
 
@@ -68,18 +64,18 @@ function drop_handler(ev) {
   ev.preventDefault();
   var data = event.dataTransfer.items;
   // Loop through the dropped items and log their data
-  for (var i = 0; i &lt; data.length; i++) {
-    if ((data[i].kind == 'string') &amp;&amp; (data[i].type.match('^text/plain'))) {
+  for (var i = 0; i < data.length; i++) {
+    if ((data[i].kind == 'string') && (data[i].type.match('^text/plain'))) {
       // This item is the target node
       data[i].getAsString(function (s){
         ev.target.appendChild(document.getElementById(s));
       });
-    } else if ((data[i].kind == 'string') &amp;&amp; (data[i].type.match('^text/html'))) {
+    } else if ((data[i].kind == 'string') && (data[i].type.match('^text/html'))) {
       // Drag data item is HTML
       data[i].getAsString(function (s){
         console.log("... Drop: HTML = " + s);
       });
-    } else if ((data[i].kind == 'string') &amp;&amp; (data[i].type.match('^text/uri-list'))) {
+    } else if ((data[i].kind == 'string') && (data[i].type.match('^text/uri-list'))) {
       // Drag data item is URI
       data[i].getAsString(function (s){
         console.log("... Drop: URI = " + s);
@@ -98,28 +94,29 @@ function dragover_handler(ev) {
 function dragend_handler(ev) {
   console.log("dragEnd");
   var dataList = ev.dataTransfer.items;
-  for (var i = 0; i &lt; dataList.length; i++) {
+  for (var i = 0; i < dataList.length; i++) {
     dataList.remove(i);
   }
   // Clear any remaining drag data
   dataList.clear();
 }
+```
 
-</pre>
+### HTML
 
-<h3 id="HTML">HTML</h3>
+```html
+<h1>Example uses of <code>DataTransferItemList</code> methods and property</h1>
+ <div>
+   <p id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
+     Select this element, drag it to the Drop Zone and then release the selection to move the element.</p>
+ </div>
+ <div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div>
+```
 
-<pre class="brush: html">&lt;h1&gt;Example uses of &lt;code&gt;DataTransferItemList&lt;/code&gt; methods and property&lt;/h1&gt;
- &lt;div&gt;
-   &lt;p id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true"&gt;
-     Select this element, drag it to the Drop Zone and then release the selection to move the element.&lt;/p&gt;
- &lt;/div&gt;
- &lt;div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);"&gt;Drop Zone&lt;/div&gt;
-</pre>
+### CSS
 
-<h3 id="CSS">CSS</h3>
-
-<pre class="brush: css">  div {
+```css
+  div {
     margin: 0em;
     padding: 2em;
   }
@@ -130,16 +127,15 @@ function dragend_handler(ev) {
   #target {
     border: 1px solid black;
   }
+```
 
-</pre>
+{{ EmbedLiveSample('Example', '300', '450', '', 'Web/API/DataTransferItemList/remove')
+  }}
 
-<p>{{ EmbedLiveSample('Example', '300', '450', '', 'Web/API/DataTransferItemList/remove')
-  }}</p>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

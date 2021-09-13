@@ -10,38 +10,34 @@ tags:
   - Reference
 browser-compat: api.CSSKeyframeRule.style
 ---
-<p>{{ APIRef("CSSOM") }}</p>
+{{ APIRef("CSSOM") }}
 
-<p>The read-only <strong><code>CSSKeyframeRule.style</code></strong> property is the {{ domxref("CSSStyleDeclaration") }} interface for the <a href="https://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#block">declaration block</a> of the {{ domxref("CSSKeyframeRule") }}.</p>
+The read-only **`CSSKeyframeRule.style`** property is the {{ domxref("CSSStyleDeclaration") }} interface for the [declaration block](https://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#block) of the {{ domxref("CSSKeyframeRule") }}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="eval"><var>styleObj</var> = <var>cssKeyframeRule</var>.style
-</pre>
+    styleObj = cssKeyframeRule.style
 
-<h3>Value</h3>
+### Value
 
-<p>A {{domxref("CSSStyleDeclaration")}} object, with the following properties:</p>
+A {{domxref("CSSStyleDeclaration")}} object, with the following properties:
 
-<dl>
-  <dt>computed flag</dt>
-  <dd>Unset.</dd>
-  <dt>declarations</dt>
-  <dd>The declared declarations in the rule, in the order they were specified, shorthand properties expanded to longhands.</dd>
-  <dt>parent CSS rule</dt>
-  <dd>The context object, which is an alias for <a href="https://heycam.github.io/webidl/#this">this</a>.</dd>
-  <dt>owner node</dt>
-  <dd>Null.</dd>
-</dl>
+- computed flag
+  - : Unset.
+- declarations
+  - : The declared declarations in the rule, in the order they were specified, shorthand properties expanded to longhands.
+- parent CSS rule
+  - : The context object, which is an alias for [this](https://heycam.github.io/webidl/#this).
+- owner node
+  - : Null.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>
-    The CSS includes a {{cssxref("@keyframes")}} at-rule. This will be the first {{domxref("CSSRule")}} returned by <code>document.styleSheets[0].cssRules</code>.
-    <code>myRules[0]</code> returns a {{domxref("CSSKeyframesRule")}} object, which will contain individual <code>CSSKeyFrame</code> objects for each keyframe.
-</p>
+The CSS includes a {{cssxref("@keyframes")}} at-rule. This will be the first {{domxref("CSSRule")}} returned by `document.styleSheets[0].cssRules`.
+`myRules[0]` returns a {{domxref("CSSKeyframesRule")}} object, which will contain individual `CSSKeyFrame` objects for each keyframe.
 
-<pre class="brush: css">@keyframes slidein {
+```css
+@keyframes slidein {
   from {
     transform: translateX(0%);
   }
@@ -49,16 +45,19 @@ browser-compat: api.CSSKeyframeRule.style
   to {
     transform: translateX(100%);
   }
-}</pre>
+}
+```
 
-<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
+```js
+let myRules = document.styleSheets[0].cssRules;
 let keyframes = myRules[0]; // a CSSKeyframesRule
-console.log(keyframes[0].style); // a CSSStyleDeclaration</pre>
+console.log(keyframes[0].style); // a CSSStyleDeclaration
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

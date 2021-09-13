@@ -2,50 +2,50 @@
 title: RTCIceCandidateStats.transportId
 slug: Web/API/RTCIceCandidateStats/transportId
 tags:
-- API
-- Candidate
-- Connection
-- Connectivity
-- ICE
-- Network
-- Networking
-- Property
-- RTCIceCandidateStats
-- Reference
-- Statistics
-- Stats
-- Transport
-- WebRTC
-- WebRTC API
-- id
-- rtc
-- transportID
+  - API
+  - Candidate
+  - Connection
+  - Connectivity
+  - ICE
+  - Network
+  - Networking
+  - Property
+  - RTCIceCandidateStats
+  - Reference
+  - Statistics
+  - Stats
+  - Transport
+  - WebRTC
+  - WebRTC API
+  - id
+  - rtc
+  - transportID
 browser-compat: api.RTCIceCandidateStats.transportId
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The {{domxref("RTCIceCandidateStats")}} dictionary's
-    <strong><code>transportId</code></strong> property is a string that uniquely
-    identifies the transport that produced the {{domxref("RTCTransportStats")}} from which
-    information about this candidate was taken.
-</p>
+The {{domxref("RTCIceCandidateStats")}} dictionary's
+**`transportId`** property is a string that uniquely
+identifies the transport that produced the {{domxref("RTCTransportStats")}} from which
+information about this candidate was taken.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>transportID</em> = <em>rtcIceCandidateStats</em>.transportId;</pre>
+```js
+transportID = rtcIceCandidateStats.transportId;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} whose value uniquely identifies the transport from which any
-  transport-related information accumulated in the {{domxref("RTCIceCandidateStats")}} was
-  taken. This can be used to compare candidates that would use the same transport, for
-  example.</p>
+A {{domxref("DOMString")}} whose value uniquely identifies the transport from which any
+transport-related information accumulated in the {{domxref("RTCIceCandidateStats")}} was
+taken. This can be used to compare candidates that would use the same transport, for
+example.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

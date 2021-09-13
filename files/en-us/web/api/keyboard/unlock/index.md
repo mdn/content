@@ -2,37 +2,39 @@
 title: Keyboard.unlock()
 slug: Web/API/Keyboard/unlock
 tags:
-- API
-- Keyboard API
-- Keyboard Lock
-- Method
-- Reference
-- keyboard
-- unLock
+  - API
+  - Keyboard API
+  - Keyboard Lock
+  - Method
+  - Reference
+  - keyboard
+  - unLock
 browser-compat: api.Keyboard.unlock
 ---
-<div>{{APIRef("Keyboard API")}}{{SeeCompatTable}}</div>
+{{APIRef("Keyboard API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>unlock()</code></strong> method of the
-    {{domxref("Keyboard")}} interface unlocks all keys captured by the
-    {{domxref('Keyboard.lock()')}} method and returns synchronously. </p>
+The **`unlock()`** method of the
+{{domxref("Keyboard")}} interface unlocks all keys captured by the
+{{domxref('Keyboard.lock()')}} method and returns synchronously.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">Keyboard.unlock()</pre>
+```js
+Keyboard.unlock()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{jsxref('undefined')}}</p>
+{{jsxref('undefined')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

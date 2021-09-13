@@ -2,58 +2,54 @@
 title: MediaStreamTrackEvent()
 slug: Web/API/MediaStreamTrackEvent/MediaStreamTrackEvent
 tags:
-- API
-- Constructor
-- Media Streams API
-- MediaStreamTrackEvent
-- Reference
+  - API
+  - Constructor
+  - Media Streams API
+  - MediaStreamTrackEvent
+  - Reference
 browser-compat: api.MediaStreamTrackEvent.MediaStreamTrackEvent
 ---
-<p>{{APIRef("Media Streams API")}}</p>
+{{APIRef("Media Streams API")}}
 
-<p>The <code><strong>MediaStreamTrackEvent()</strong></code> constructor returns a newly
-  created {{domxref("MediaStreamTrackEvent")}} object, which represents an event
-  announcing that a {{domxref("MediaStreamTrack")}} has been added to or removed from a
-  {{domxref("MediaStream")}}.</p>
+The **`MediaStreamTrackEvent()`** constructor returns a newly
+created {{domxref("MediaStreamTrackEvent")}} object, which represents an event
+announcing that a {{domxref("MediaStreamTrack")}} has been added to or removed from a
+{{domxref("MediaStream")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>trackEvent</em> = new MediaStreamTrackEvent(<em>type</em>, {track: <em>aMediaStreamTrack</em>});
-</pre>
+```js
+var trackEvent = new MediaStreamTrackEvent(type, {track: aMediaStreamTrack});
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p><em>The <code>MediaStreamTrackEvent()</code> constructor also inherits arguments from
-    {{domxref("Event.Event", "Event()")}}.</em></p>
+_The `MediaStreamTrackEvent()` constructor also inherits arguments from
+{{domxref("Event.Event", "Event()")}}._
 
-<dl>
-  <dt><code>type</code></dt>
-  <dd>A {{domxref("DOMString")}} representing the name of the type of the
-    <code>MediaStreamTrackEvent</code>. It is case-sensitive and can be
-    <code>"{{event("addtrack")}}"</code> or <code>"{{event("removetrack")}}"</code>.</dd>
-  <dt><code>track</code></dt>
-  <dd>A {{domxref("MediaStreamTrack")}} object representing the track which was added to
-    or removed from the stream.</dd>
-</dl>
+- `type`
+  - : A {{domxref("DOMString")}} representing the name of the type of the
+    `MediaStreamTrackEvent`. It is case-sensitive and can be
+    `"{{event("addtrack")}}"` or `"{{event("removetrack")}}"`.
+- `track`
+  - : A {{domxref("MediaStreamTrack")}} object representing the track which was added to
+    or removed from the stream.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A new {{domxref("MediaStreamTrackEvent")}}, initialized based on the provided options.
-</p>
+A new {{domxref("MediaStreamTrackEvent")}}, initialized based on the provided options.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{event("addtrack")}} and {{event("removetrack")}} events</li>
-  <li>{{domxref("MediaStreamTrack")}}</li>
-  <li>{{domxref("MediaStream")}}</li>
-  <li><a href="/en-US/docs/Web/API/Media_Streams_API">Media Streams API</a></li>
-</ul>
+- {{event("addtrack")}} and {{event("removetrack")}} events
+- {{domxref("MediaStreamTrack")}}
+- {{domxref("MediaStream")}}
+- [Media Streams API](/en-US/docs/Web/API/Media_Streams_API)

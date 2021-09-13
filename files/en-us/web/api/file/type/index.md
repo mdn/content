@@ -10,46 +10,49 @@ tags:
   - Reference
 browser-compat: api.File.type
 ---
-<div>{{APIRef("File API")}}</div>
+{{APIRef("File API")}}
 
-<p>Returns the media type (<a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME</a>) of the file represented by a {{domxref("File")}} object.</p>
+Returns the media type ([MIME](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)) of the file represented by a {{domxref("File")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var name = <var>file</var>.type;</pre>
+```js
+var name = file.type;
+```
 
-<h2 id="Value">Value</h2>
+## Value
 
-<p>A string, containing the media type(MIME) indicating the type of the file, for example "image/png" for PNG images</p>
+A string, containing the media type(MIME) indicating the type of the file, for example "image/png" for PNG images
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: html">&lt;input type="file" multiple onchange="showType(this)"&gt;
-</pre>
+```html
+<input type="file" multiple onchange="showType(this)">
+```
 
-<pre class="brush: js">function showType(fileInput) {
+```js
+function showType(fileInput) {
   var files = fileInput.files;
 
-  for (var i = 0; i &lt; files.length; i++) {
+  for (var i = 0; i < files.length; i++) {
     var name = files[i].name;
     var type = files[i].type;
     alert("Filename: " + name + " , Type: " + type);
   }
-}</pre>
+}
+```
 
-<p><strong>Note:</strong> Based on the current implementation, browsers won't actually read the bytestream of a file to determine its media type. It is assumed based on the file extension; a PNG image file renamed to .txt would give "<em>text/plain</em>" and not "<em>image/png</em>". Moreover, <code>file.type</code> is generally reliable only for common file types like images, HTML documents, audio and video. Uncommon file extensions would return an empty string. Client configuration (for instance, the Windows Registry) may result in unexpected values even for common types. <strong>Developers are advised not to rely on this property as a sole validation scheme.</strong></p>
+**Note:** Based on the current implementation, browsers won't actually read the bytestream of a file to determine its media type. It is assumed based on the file extension; a PNG image file renamed to .txt would give "_text/plain_" and not "_image/png_". Moreover, `file.type` is generally reliable only for common file types like images, HTML documents, audio and video. Uncommon file extensions would return an empty string. Client configuration (for instance, the Windows Registry) may result in unexpected values even for common types. **Developers are advised not to rely on this property as a sole validation scheme.**
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/File/Using_files_from_web_applications">Using files from web applications</a></li>
- <li>Blog Post: <a href="https://textslashplain.com/2018/07/26/be-skeptical-of-client-reported-mime-content-types/">Be skeptical of client-reported MIME types</a></li>
-</ul>
+- [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications)
+- Blog Post: [Be skeptical of client-reported MIME types](https://textslashplain.com/2018/07/26/be-skeptical-of-client-reported-mime-content-types/)

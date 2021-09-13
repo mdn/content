@@ -10,43 +10,37 @@ tags:
   - filesystem
 browser-compat: api.FileSystem
 ---
-<p>{{APIRef("File and Directory Entries API")}}</p>
+{{APIRef("File and Directory Entries API")}}
 
-<p>The File and Directory Entries API interface <strong><code>FileSystem</code></strong> is used to represent a file system. These objects can be obtained from the {{domxref("FileSystemEntry.filesystem", "filesystem")}} property on any file system entry. Some browsers offer additional APIs to create and manage file systems, such as Chrome's {{domxref("Window.requestFileSystem", "requestFileSystem()")}} method.</p>
+The File and Directory Entries API interface **`FileSystem`** is used to represent a file system. These objects can be obtained from the {{domxref("FileSystemEntry.filesystem", "filesystem")}} property on any file system entry. Some browsers offer additional APIs to create and manage file systems, such as Chrome's {{domxref("Window.requestFileSystem", "requestFileSystem()")}} method.
 
-<p>This interface will not grant you access to the users filesystem. Instead you will have a "virtual drive" within the browser sandbox. If you want to gain access to the users filesystem you need to invoke the user by eg. installing a Chrome extension. The relevant Chrome API can be found <a href="https://developer.chrome.com/apps/fileSystem">here</a>.</p>
+This interface will not grant you access to the users filesystem. Instead you will have a "virtual drive" within the browser sandbox. If you want to gain access to the users filesystem you need to invoke the user by eg. installing a Chrome extension. The relevant Chrome API can be found [here](https://developer.chrome.com/apps/fileSystem).
 
-<h2 id="Basic_concepts">Basic concepts</h2>
+## Basic concepts
 
-<p>There are two ways to get access to a <code>FileSystem</code> object:</p>
+There are two ways to get access to a `FileSystem` object:
 
-<ol>
- <li>You can directly ask for one representing a sandboxed file system created just for your web app directly by calling <code>window.requestFileSystem()</code>.  If that call is successful, it executes a callback handler, which receives as a parameter a <code>FileSystem</code> object describing the file system.</li>
- <li>You can get it from a file system entry object, through its {{domxref("FileSystemEntry.filesystem", "filesystem")}} property.</li>
-</ol>
+1.  You can directly ask for one representing a sandboxed file system created just for your web app directly by calling `window.requestFileSystem()`.  If that call is successful, it executes a callback handler, which receives as a parameter a `FileSystem` object describing the file system.
+2.  You can get it from a file system entry object, through its {{domxref("FileSystemEntry.filesystem", "filesystem")}} property.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("FileSystem.name")}} {{ReadOnlyInline}}</dt>
- <dd>A {{domxref("USVString")}} representing the file system's name. This name is unique among the entire list of exposed file systems.</dd>
- <dt>{{domxref("FileSystem.root")}} {{ReadOnlyInline}}</dt>
- <dd>A {{domxref("FileSystemDirectoryEntry")}} object which represents the file system's root directory. Through this object, you can gain access to all files and directories in the file system.</dd>
-</dl>
+- {{domxref("FileSystem.name")}} {{ReadOnlyInline}}
+  - : A {{domxref("USVString")}} representing the file system's name. This name is unique among the entire list of exposed file systems.
+- {{domxref("FileSystem.root")}} {{ReadOnlyInline}}
+  - : A {{domxref("FileSystemDirectoryEntry")}} object which represents the file system's root directory. Through this object, you can gain access to all files and directories in the file system.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</a></li>
- <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">Introduction to the File System API</a></li>
- <li>{{domxref("FileSystemEntry")}}, {{domxref("FileSystemFileEntry")}}, and {{domxref("FileSystemDirectoryEntry")}}</li>
- <li>MSDN article: <a href="https://msdn.microsoft.com/library/mt732564">WebKitFileSystem object</a></li>
-</ul>
+- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- {{domxref("FileSystemEntry")}}, {{domxref("FileSystemFileEntry")}}, and {{domxref("FileSystemDirectoryEntry")}}
+- MSDN article: [WebKitFileSystem object](https://msdn.microsoft.com/library/mt732564)

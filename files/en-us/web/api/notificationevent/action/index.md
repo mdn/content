@@ -13,17 +13,18 @@ tags:
   - action
 browser-compat: api.NotificationEvent.action
 ---
-<p>{{APIRef("Web Notifications")}}</p>
+{{APIRef("Web Notifications")}}
 
-<p>Returns the string ID of the notification button the user clicked. This value returns an empty string if the user clicked the notification somewhere other than an action button, or the notification does not have a button. The notification id is set during the creation of the Notification via the actions array attribute and can't be modified unless the notification is replaced.</p>
+Returns the string ID of the notification button the user clicked. This value returns an empty string if the user clicked the notification somewhere other than an action button, or the notification does not have a button. The notification id is set during the creation of the Notification via the actions array attribute and can't be modified unless the notification is replaced.
 
-<h2 id="Returns">Returns</h2>
+## Returns
 
-<p>A {{domxref("DOMString")}} object.</p>
+A {{domxref("DOMString")}} object.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">self.registration.showNotification("New articles available", {
+```js
+self.registration.showNotification("New articles available", {
   actions: [{action: "get", title: "Get now."}]
 });
 
@@ -34,12 +35,13 @@ self.addEventListener('notificationclick', function(event) {
   } else {
     clients.openWindow("/reader");
   }
-}, false);</pre>
+}, false);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

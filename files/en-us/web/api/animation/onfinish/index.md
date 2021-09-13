@@ -2,59 +2,58 @@
 title: Animation.onfinish
 slug: Web/API/Animation/onfinish
 tags:
-- API
-- Animation
-- Event Handler
-- Property
-- Reference
-- Web Animations
-- events
-- onfinish
-- waapi
-- web animations api
+  - API
+  - Animation
+  - Event Handler
+  - Property
+  - Reference
+  - Web Animations
+  - events
+  - onfinish
+  - waapi
+  - web animations api
 browser-compat: api.Animation.onfinish
 ---
-<p>{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}</p>
+{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}
 
-<p>The {{domxref("Animation")}} interface's <code><strong>onfinish</strong></code>
-  property (from the <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations
-    API</a>) is the event handler for the {{event("finish")}} event. This event is sent
-  when the animation finishes playing.</p>
+The {{domxref("Animation")}} interface's **`onfinish`**
+property (from the [Web Animations
+API](/en-US/docs/Web/API/Web_Animations_API)) is the event handler for the {{event("finish")}} event. This event is sent
+when the animation finishes playing.
 
-<p>The <code>finish</code> event occurs when the animation completes naturally, as well as
-  when the {{domxref("Animation.finish()")}} method is called to immediately cause the
-  animation to finish up.</p>
+The `finish` event occurs when the animation completes naturally, as well as
+when the {{domxref("Animation.finish()")}} method is called to immediately cause the
+animation to finish up.
 
-<div class="note">
-  <p><strong>Note:</strong> The <code>"paused"</code> play state supersedes the <code>"finished"</code> play
-    state; if the animation is both paused and finished, the <code>"paused"</code> state
-    is the one that will be reported. You can force the animation into the
-    <code>"finished"</code> state by setting its {{domxref("Animation.startTime",
+> **Note:** The `"paused"` play state supersedes the `"finished"` play
+> state; if the animation is both paused and finished, the `"paused"` state
+> is the one that will be reported. You can force the animation into the
+> `"finished"` state by setting its {{domxref("Animation.startTime",
     "startTime")}} to
-    <code>document.timeline.currentTime - (<em>Animation</em>.currentTime * <em>Animation</em>.playbackRate)</code>.
-  </p>
-</div>
+> `document.timeline.currentTime - (Animation.currentTime * Animation.playbackRate)`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>finishHandler</em> = <em>Animation</em>.onfinish;
+```js
+var finishHandler = Animation.onfinish;
 
-<em>Animation</em>.onfinish = <em>finishHandler</em>;</pre>
+Animation.onfinish = finishHandler;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A function to be called to handle the {{event("finish")}} event, or <code>null</code>
-  if no <code>finish</code> event handler is set.</p>
+A function to be called to handle the {{event("finish")}} event, or `null`
+if no `finish` event handler is set.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p><code>Animation.onfinish</code> is used several times in the Alice in Web Animations
-  API Land <a
-    href="http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010">Growing/Shrinking Alice
-    Game</a>. Here is one instance where we add pointer events back to an element after
-  its opacity animation has faded it in:</p>
+`Animation.onfinish` is used several times in the Alice in Web Animations
+API Land [Growing/Shrinking Alice
+Game](http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010). Here is one instance where we add pointer events back to an element after
+its opacity animation has faded it in:
 
-<pre class="brush: js">// Add an animation to the game's ending credits
+```js
+// Add an animation to the game's ending credits
 var endingUI = document.getElementById("ending-ui");
 var bringUI = endingUI.animate(keysFade, timingFade);
 
@@ -69,20 +68,18 @@ hide(endingUI);
 bringUI.onfinish = function() {
   endingUI.style.pointerEvents = 'auto';
 };
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
-  <li>{{domxref("Animation")}}</li>
-  <li>{{domxref("Animation.finish()")}}</li>
-</ul>
+- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
+- {{domxref("Animation")}}
+- {{domxref("Animation.finish()")}}

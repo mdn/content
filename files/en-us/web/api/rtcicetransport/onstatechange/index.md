@@ -2,75 +2,75 @@
 title: RTCIceTransport.onstatechange
 slug: Web/API/RTCIceTransport/onstatechange
 tags:
-- API
-- Audio
-- Change
-- Event Handler
-- Media
-- Property
-- RTCIceTransport
-- Reference
-- Video
-- WebRTC
-- WebRTC API
-- onstatechange
-- rtc
-- state
-- statechange
+  - API
+  - Audio
+  - Change
+  - Event Handler
+  - Media
+  - Property
+  - RTCIceTransport
+  - Reference
+  - Video
+  - WebRTC
+  - WebRTC API
+  - onstatechange
+  - rtc
+  - state
+  - statechange
 browser-compat: api.RTCIceTransport.onstatechange
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <code><strong>onstatechange</strong></code> event handler
-    for the {{domxref("RTCIceTransport")}} interface is a property which specifies a
-    function to serve as the <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> for the {{event("statechange")}}
-    event that is fired whenever the transport's {{domxref("RTCIceTransport.state",
-    "state")}} changes.</p>
+The **`onstatechange`** event handler
+for the {{domxref("RTCIceTransport")}} interface is a property which specifies a
+function to serve as the [event handler](/en-US/docs/Web/Events/Event_handlers) for the {{event("statechange")}}
+event that is fired whenever the transport's {{domxref("RTCIceTransport.state",
+    "state")}} changes.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>RTCIceTransport</em>.onstatechange = <em>stateChangeHandler</em>;
-</pre>
+```js
+RTCIceTransport.onstatechange = stateChangeHandler;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>Set this property to reference a function you provide that is called by the WebRTC
-  layer when the {{domxref("RTCIceTransport")}} object's
-  {{domxref("RTCIceTransport.state", "state")}} changes.</p>
+Set this property to reference a function you provide that is called by the WebRTC
+layer when the {{domxref("RTCIceTransport")}} object's
+{{domxref("RTCIceTransport.state", "state")}} changes.
 
-<p>The event handler receives as its sole input an {{domxref("Event")}} object describing
-  the {{event("statechange")}} event which occurred. To determine the new state, examine
-  the value of {{domxref("RTCIceTransport.state", "state")}}.</p>
+The event handler receives as its sole input an {{domxref("Event")}} object describing
+the {{event("statechange")}} event which occurred. To determine the new state, examine
+the value of {{domxref("RTCIceTransport.state", "state")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This snippet establishes a handler for the {{event("statechange")}} event that looks to
-  see if the transport has entered the <code>"failed"</code> state, which indicates that
-  the connection has failed with no chance of being automatically restored.</p>
+This snippet establishes a handler for the {{event("statechange")}} event that looks to
+see if the transport has entered the `"failed"` state, which indicates that
+the connection has failed with no chance of being automatically restored.
 
-<pre class="brush: js">var iceTransport = pc.getSenders()[0].transport.iceTransport;
+```js
+var iceTransport = pc.getSenders()[0].transport.iceTransport;
 
 iceTransport.onstatechange = function(event) {
   if (iceTransport.state == "failed") {
     handleFailure(pc);
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{event("statechange")}} event and its type, {{domxref("Event")}}.</li>
-  <li>The other event handlers for <code>RTCIceTransport</code>:
-    {{domxref("RTCIceTransport.ongatheringstatechange", "ongatheringstatechange")}} and
-    {{domxref("RTCIceTransport.onselectedcandidatepairchange",
-    "onselectedcandidatepairchange")}}</li>
-</ul>
+- The {{event("statechange")}} event and its type, {{domxref("Event")}}.
+- The other event handlers for `RTCIceTransport`:
+  {{domxref("RTCIceTransport.ongatheringstatechange", "ongatheringstatechange")}} and
+  {{domxref("RTCIceTransport.onselectedcandidatepairchange",
+    "onselectedcandidatepairchange")}}

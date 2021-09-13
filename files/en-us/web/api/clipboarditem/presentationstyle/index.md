@@ -2,39 +2,41 @@
 title: ClipboardItem.presentationStyle
 slug: Web/API/ClipboardItem/presentationStyle
 tags:
-- API
-- Clipboard
-- Clipboard API
-- ClipboardItem
-- Cut
-- Property
-- Read-only
-- Reference
-- presentationStyle
-- copy
-- paste
+  - API
+  - Clipboard
+  - Clipboard API
+  - ClipboardItem
+  - Cut
+  - Property
+  - Read-only
+  - Reference
+  - presentationStyle
+  - copy
+  - paste
 browser-compat: api.ClipboardItem.presentationStyle
 ---
-<div>{{DefaultAPISidebar("Clipboard API")}}</div>
+{{DefaultAPISidebar("Clipboard API")}}
 
-<p>The read-only
-    <strong><code>presentationStyle</code></strong> property of the {{domxref("ClipboardItem")}}
-    interface returns a {{jsxref("String")}} indicating how an item should be presented.</p>
+The read-only
+**`presentationStyle`** property of the {{domxref("ClipboardItem")}}
+interface returns a {{jsxref("String")}} indicating how an item should be presented.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>presentationStyle</var> = <var>clipboardItem</var>.presentationStyle;</pre>
+```js
+var presentationStyle = clipboardItem.presentationStyle;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>One of either <code>"unspecified"</code>, <code>"inline"</code> or <code>"attachment"</code>.</p>
+One of either `"unspecified"`, `"inline"` or `"attachment"`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the below example, we're returning all items on the clipboard via the {{domxref("clipboard.read()")}} method, then logging the <code>presentationStyle</code> property.</p>
+In the below example, we're returning all items on the clipboard via the {{domxref("clipboard.read()")}} method, then logging the `presentationStyle` property.
 
-<pre class="brush: js">async function getClipboardContents() {
+```js
+async function getClipboardContents() {
   try {
     const clipboardItems = await navigator.clipboard.read();
 
@@ -48,22 +50,20 @@ browser-compat: api.ClipboardItem.presentationStyle
     console.error(err.name, err.message);
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Clipboard_API">Clipboard API</a></li>
-  <li><a href="https://async-clipboard-api.glitch.me/">Async Clipboard API demo on
-      Glitch</a></li>
-  <li><a href="https://web.dev/image-support-for-async-clipboard/">Image support for Async
-      Clipboard article</a></li>
-</ul>
+- [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
+- [Async Clipboard API demo on
+  Glitch](https://async-clipboard-api.glitch.me/)
+- [Image support for Async
+  Clipboard article](https://web.dev/image-support-for-async-clipboard/)

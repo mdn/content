@@ -8,68 +8,76 @@ tags:
   - Service Workers
 browser-compat: api.ServiceWorkerContainer.message_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code><strong>message</strong></code> event is used in a page controlled by a service worker to receive messages from the service worker.</p>
+The **`message`** event is used in a page controlled by a service worker to receive messages from the service worker.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("MessageEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td><code><a href="/en-US/docs/Web/API/ServiceWorkerContainer/onmessage">onmessage</a></code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("MessageEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/API/ServiceWorkerContainer/onmessage"
+            >onmessage</a
+          ></code
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this example the service worker get the client's ID from a <a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope/onfetch"><code>fetch</code></a> event and then sends it a message using <a href="/en-US/docs/Web/API/Client/postMessage"><code>Client.postMessage</code></a>:</p>
+In this example the service worker get the client's ID from a [`fetch`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/onfetch) event and then sends it a message using [`Client.postMessage`](/en-US/docs/Web/API/Client/postMessage):
 
-<pre class="brush: js">// in the service worker
+```js
+// in the service worker
 async function messageClient(clientId) {
     const client = await clients.get(clientId);
     client.postMessage('Hi client!');
 }
 
-addEventListener('fetch', (event) =&gt; {
+addEventListener('fetch', (event) => {
     messageClient(event.clientId);
-    event.respondWith(() =&gt; {
+    event.respondWith(() => {
       // ...
     });
-});</pre>
+});
+```
 
-<p>The client can receive the message by listening to the <code>message</code> event:</p>
+The client can receive the message by listening to the `message` event:
 
-<pre class="brush: js">// in the page being controlled
-navigator.serviceWorker.addEventListener('message', (message) =&gt; {
+```js
+// in the page being controlled
+navigator.serviceWorker.addEventListener('message', (message) => {
     console.log(message);
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</a></li>
- <li><a class="external external-icon" href="https://github.com/mdn/sw-test">Service workers basic code example</a></li>
- <li><a class="external external-icon" href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
- <li><a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web workers</a></li>
-</ul>
+- [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

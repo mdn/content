@@ -12,28 +12,28 @@ tags:
   - web animations api
 browser-compat: api.Animation.finished
 ---
-<p>{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}</p>
+{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}
 
-<p>The <strong><code>Animation.finished</code></strong> read-only property of the <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> returns a {{jsxref("Promise")}} which resolves once the animation has finished playing.</p>
+The **`Animation.finished`** read-only property of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) returns a {{jsxref("Promise")}} which resolves once the animation has finished playing.
 
-<div class="note">
-<p><strong>Note:</strong> Every time the animation leaves the <code>finished</code> play state (that is, when it starts playing again), a new <code>Promise</code> is created for this property. The new <code>Promise</code> will resolve once the new animation sequence has completed.</p>
-</div>
+> **Note:** Every time the animation leaves the `finished` play state (that is, when it starts playing again), a new `Promise` is created for this property. The new `Promise` will resolve once the new animation sequence has completed.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>animationsPromise</em> = <em>Animation.</em>finished;
-</pre>
+```js
+var animationsPromise = Animation.finished;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{jsxref("Promise")}} object which will resolve once the animation has finished running.</p>
+A {{jsxref("Promise")}} object which will resolve once the animation has finished running.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following code waits until all animations running on the element <code>elem</code> have finished, then deletes the element from the DOM tree:</p>
+The following code waits until all animations running on the element `elem` have finished, then deletes the element from the DOM tree:
 
-<pre class="brush: js">Promise.all(
+```js
+Promise.all(
   elem.getAnimations().map(
     function(animation) {
       return animation.finished
@@ -43,20 +43,19 @@ browser-compat: api.Animation.finished
   function() {
     return elem.remove();
   }
-);</pre>
+);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("KeyframeEffect")}}</li>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
- <li>{{domxref("Animation")}}</li>
-</ul>
+- {{domxref("KeyframeEffect")}}
+- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
+- {{domxref("Animation")}}

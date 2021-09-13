@@ -12,20 +12,23 @@ tags:
   - customElements
 browser-compat: api.Window.customElements
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <strong><code>customElements</code></strong> read-only property of the {{domxref("Window")}} interface returns a reference to the {{domxref("CustomElementRegistry")}} object, which can be used to register new <a href="/en-US/docs/Web/Web_Components/Using_custom_elements">custom elements</a> and get information about previously registered custom elements.</p>
+The **`customElements`** read-only property of the {{domxref("Window")}} interface returns a reference to the {{domxref("CustomElementRegistry")}} object, which can be used to register new [custom elements](/en-US/docs/Web/Web_Components/Using_custom_elements) and get information about previously registered custom elements.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The most common example you'll see of this property being used is to get access to the {{domxref("CustomElementRegistry.define()")}} method to define and register a new custom element, e.g.:</p>
+The most common example you'll see of this property being used is to get access to the {{domxref("CustomElementRegistry.define()")}} method to define and register a new custom element, e.g.:
 
-<pre class="brush: js">let customElementRegistry = window.customElements;
-customElementRegistry.define('my-custom-element', MyCustomElement);</pre>
+```js
+let customElementRegistry = window.customElements;
+customElementRegistry.define('my-custom-element', MyCustomElement);
+```
 
-<p>However, it is usually shortened to something like the following:</p>
+However, it is usually shortened to something like the following:
 
-<pre class="brush: js">customElements.define('element-details',
+```js
+customElements.define('element-details',
   class extends HTMLElement {
     constructor() {
       super();
@@ -36,14 +39,15 @@ customElementRegistry.define('my-custom-element', MyCustomElement);</pre>
         .appendChild(template.cloneNode(true));
     }
   }
-);</pre>
+);
+```
 
-<p>See our <a href="https://github.com/mdn/web-components-examples/">web-components-examples</a> repo for more usage examples.</p>
+See our [web-components-examples](https://github.com/mdn/web-components-examples/) repo for more usage examples.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

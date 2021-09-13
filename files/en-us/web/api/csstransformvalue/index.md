@@ -12,66 +12,58 @@ tags:
   - Reference
 browser-compat: api.CSSTransformValue
 ---
-<div>{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{Draft}}</div>
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{Draft}}
 
-<p>The <strong><code>CSSTransformValue</code></strong> interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents <code>transform-list</code> values as used by the CSS {{CSSxref('transform')}} property.</p>
+The **`CSSTransformValue`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents `transform-list` values as used by the CSS {{CSSxref('transform')}} property.
 
-<h2 id="Interfaces_based_on_CSSTransformValue">Interfaces based on CSSTransformValue</h2>
+## Interfaces based on CSSTransformValue
 
-<p>Below is a list of interfaces based on the <code>CSSTransformValue</code> interface.</p>
+Below is a list of interfaces based on the `CSSTransformValue` interface.
 
-<ul>
-	<li>{{domxref('CSSTranslate')}}</li>
-	<li>{{domxref('CSSRotate')}}</li>
-	<li>{{domxref('CSSScale')}}</li>
-	<li>{{domxref('CSSSkew')}}</li>
-	<li>{{domxref('CSSSkewX')}}</li>
-	<li>{{domxref('CSSSkewY')}}</li>
-	<li>{{domxref('CSSPerspective')}}</li>
-	<li>{{domxref('CSSMatrixComponent')}}</li>
-</ul>
+- {{domxref('CSSTranslate')}}
+- {{domxref('CSSRotate')}}
+- {{domxref('CSSScale')}}
+- {{domxref('CSSSkew')}}
+- {{domxref('CSSSkewX')}}
+- {{domxref('CSSSkewY')}}
+- {{domxref('CSSPerspective')}}
+- {{domxref('CSSMatrixComponent')}}
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
-	<dt>{{domxref("CSSTransformValue.CSSTransformValue()")}}</dt>
-	<dd>Creates a new <code>CSSTransformValue</code> object.</dd>
-</dl>
+- {{domxref("CSSTransformValue.CSSTransformValue()")}}
+  - : Creates a new `CSSTransformValue` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
-	<dt>{{domxref("CSSTransformValue.length")}} {{ReadOnlyInline}}</dt>
-	<dd>Returns how many transform components are contained within the <code>CSSTransformValue</code>.</dd>
-	<dt>{{domxref("CSSTransformValue.is2D")}} {{ReadOnlyInline}}</dt>
-	<dd>Returns a boolean indicating whether the transform is 2D or 3D. </dd>
-</dl>
+- {{domxref("CSSTransformValue.length")}} {{ReadOnlyInline}}
+  - : Returns how many transform components are contained within the `CSSTransformValue`.
+- {{domxref("CSSTransformValue.is2D")}} {{ReadOnlyInline}}
+  - : Returns a boolean indicating whether the transform is 2D or 3D.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Inherits methods from its ancestor {{domxref('CSSStyleValue')}}.</em></p>
+_Inherits methods from its ancestor {{domxref('CSSStyleValue')}}._
 
-<dl>
-	<dt>{{domxref("CSSTransformValue.toMatrix()")}}</dt>
-	<dd>Returns a new {{domxref('DOMMatrix')}} object.</dd>
-	<dt>{{domxref('CSSUnparsedValue.entries()')}}</dt>
-	<dd>Returns an array of a given object's own enumerable property <code>[key, value]</code> pairs in the same order as that provided by a {{jsxref("Statements/for...in", "for...in")}} loop (the difference being that a for-in loop enumerates properties in the prototype chain as well).</dd>
-	<dt>{{domxref('CSSUnparsedValue.forEach()')}}</dt>
-	<dd>Executes a provided function once for each element of the <code>CSSTransformValue</code> object.</dd>
-	<dt>{{domxref('CSSUnparsedValue.keys()')}}</dt>
-	<dd>Returns a new <em>array iterator</em> object that contains the keys for each index in the <code>CSSTransformValue</code> object.</dd>
-	<dt>{{domxref('CSSUnparsedValue.values()')}}</dt>
-	<dd>Returns a new <em>array iterator</em> object that contains the values for each index in the <code>CSSTransformValue</code> object.</dd>
-</dl>
+- {{domxref("CSSTransformValue.toMatrix()")}}
+  - : Returns a new {{domxref('DOMMatrix')}} object.
+- {{domxref('CSSUnparsedValue.entries()')}}
+  - : Returns an array of a given object's own enumerable property `[key, value]` pairs in the same order as that provided by a {{jsxref("Statements/for...in", "for...in")}} loop (the difference being that a for-in loop enumerates properties in the prototype chain as well).
+- {{domxref('CSSUnparsedValue.forEach()')}}
+  - : Executes a provided function once for each element of the `CSSTransformValue` object.
+- {{domxref('CSSUnparsedValue.keys()')}}
+  - : Returns a new _array iterator_ object that contains the keys for each index in the `CSSTransformValue` object.
+- {{domxref('CSSUnparsedValue.values()')}}
+  - : Returns a new _array iterator_ object that contains the values for each index in the `CSSTransformValue` object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>To Do.</p>
+To Do.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

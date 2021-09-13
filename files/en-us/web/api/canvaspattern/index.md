@@ -8,36 +8,32 @@ tags:
   - Reference
 browser-compat: api.CanvasPattern
 ---
-<div>{{APIRef("Canvas API")}}</div>
+{{APIRef("Canvas API")}}
 
-<p>The <code><strong>CanvasPattern</strong></code> interface represents an <a href="https://en.wikipedia.org/wiki/Opaque_data_type">opaque object</a> describing a pattern, based on an image, a canvas, or a video, created by the {{domxref("CanvasRenderingContext2D.createPattern()")}} method.</p>
+The **`CanvasPattern`** interface represents an [opaque object](https://en.wikipedia.org/wiki/Opaque_data_type) describing a pattern, based on an image, a canvas, or a video, created by the {{domxref("CanvasRenderingContext2D.createPattern()")}} method.
 
-<p>It can be used as a {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} or {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}}.</p>
+It can be used as a {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} or {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}}.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>As an opaque object, this has no exposed property.</em></p>
+_As an opaque object, this has no exposed property._
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>There are no inherited method.</em></p>
+_There are no inherited method._
 
-<dl>
- <dt>{{domxref("CanvasPattern.setTransform()")}}</dt>
- <dd>Applies an {{domxref("SVGMatrix")}} or {{domxref("DOMMatrix")}} representing a linear transform to the pattern.</dd>
-</dl>
+- {{domxref("CanvasPattern.setTransform()")}}
+  - : Applies an {{domxref("SVGMatrix")}} or {{domxref("DOMMatrix")}} representing a linear transform to the pattern.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("CanvasRenderingContext2D.createPattern()")}}</li>
- <li>The {{HTMLElement("canvas")}} element and its associated interface, {{domxref("HTMLCanvasElement")}}</li>
-</ul>
+- {{domxref("CanvasRenderingContext2D.createPattern()")}}
+- The {{HTMLElement("canvas")}} element and its associated interface, {{domxref("HTMLCanvasElement")}}

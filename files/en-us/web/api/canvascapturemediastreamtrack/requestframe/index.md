@@ -13,41 +13,43 @@ tags:
   - requestFrame
 browser-compat: api.CanvasCaptureMediaStreamTrack.requestFrame
 ---
-<div>{{APIRef("Media Capture and Streams")}}</div>
+{{APIRef("Media Capture and Streams")}}
 
-<p>The {{domxref("CanvasCaptureMediaStreamTrack")}} method
-    <strong><code>requestFrame()</code></strong> requests that a frame be captured from
-    the canvas and sent to the stream.</p>
+The {{domxref("CanvasCaptureMediaStreamTrack")}} method
+**`requestFrame()`** requests that a frame be captured from
+the canvas and sent to the stream.
 
-<p>Applications that need to carefully control
-  the timing of rendering and frame capture can use <code>requestFrame()</code> to
-  directly specify when it's time to capture a frame.</p>
+Applications that need to carefully control
+the timing of rendering and frame capture can use `requestFrame()` to
+directly specify when it's time to capture a frame.
 
-<p>To prevent automatic capture of frames, so that frames are only captured when
-  <code>requestFrame()</code> is called, specify a value of 0 for the
-  {{domxref("HTMLCanvasElement.captureStream", "captureStream()")}} method when creating
-  the stream.</p>
+To prevent automatic capture of frames, so that frames are only captured when
+`requestFrame()` is called, specify a value of 0 for the
+{{domxref("HTMLCanvasElement.captureStream", "captureStream()")}} method when creating
+the stream.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>stream</var>.requestFrame();
-</pre>
+```js
+stream.requestFrame();
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>undefined</code></p>
+`undefined`
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>There is currently an issue flagged in the specification pointing out that at this
-  time, no exceptions are being thrown if the canvas isn't origin-clean. This may change
-  in the future, so it would be wise to plan ahead and watch for exceptions such as
-  <code>SecurityError</code> (although the specific error that might be thrown is not
-  mentioned in the spec, this is a likely candidate).</p>
+There is currently an issue flagged in the specification pointing out that at this
+time, no exceptions are being thrown if the canvas isn't origin-clean. This may change
+in the future, so it would be wise to plan ahead and watch for exceptions such as
+`SecurityError` (although the specific error that might be thrown is not
+mentioned in the spec, this is a likely candidate).
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">// Find the canvas element to capture
+```js
+// Find the canvas element to capture
 var canvasElt = document.getElementsByTagName("canvas")[0];
 
 // Get the stream
@@ -55,19 +57,17 @@ var stream = canvasElt.captureStream(25); // 25 FPS
 
 // Send the current state of the canvas as a frame to the stream
 stream.getVideoTracks()[0].requestFrame();
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("CanvasCaptureMediaStreamTrack")}}, the interface it belongs to.</li>
-  <li>{{HTMLElement("canvas")}}</li>
-</ul>
+- {{domxref("CanvasCaptureMediaStreamTrack")}}, the interface it belongs to.
+- {{HTMLElement("canvas")}}

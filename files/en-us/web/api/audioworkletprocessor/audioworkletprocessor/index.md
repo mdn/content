@@ -2,77 +2,76 @@
 title: AudioWorkletProcessor()
 slug: Web/API/AudioWorkletProcessor/AudioWorkletProcessor
 tags:
-- API
-- Audio
-- AudioWorkletNode
-- AudioWorkletProcessor
-- Constructor
-- Reference
-- Web Audio API
+  - API
+  - Audio
+  - AudioWorkletNode
+  - AudioWorkletProcessor
+  - Constructor
+  - Reference
+  - Web Audio API
 browser-compat: api.AudioWorkletProcessor.AudioWorkletProcessor
 ---
-<div>{{APIRef("Web Audio API")}}</div>
+{{APIRef("Web Audio API")}}
 
-<p>The <strong><code>AudioWorkletProcessor()</code></strong>
-    constructor creates a new {{domxref("AudioWorkletProcessor")}} object, which
-    represents an underlying audio processing mechanism of an
-    {{domxref("AudioWorkletNode")}}.</p>
+The **`AudioWorkletProcessor()`**
+constructor creates a new {{domxref("AudioWorkletProcessor")}} object, which
+represents an underlying audio processing mechanism of an
+{{domxref("AudioWorkletNode")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<div class="note"><p><strong>Note:</strong> The <code>AudioWorkletProcessor</code> and classes that derive from it
-  cannot be instantiated directly from a user-supplied code. Instead, they are created
-  only internally by the creation of an associated {{domxref("AudioWorkletNode")}}s.</p></div>
+> **Note:** The `AudioWorkletProcessor` and classes that derive from it
+> cannot be instantiated directly from a user-supplied code. Instead, they are created
+> only internally by the creation of an associated {{domxref("AudioWorkletNode")}}s.
 
-<pre class="brush: js">new AudioWorkletProcessor(<em>options</em>);
-</pre>
+```js
+new AudioWorkletProcessor(options);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>options</code></dt>
-  <dd>An object that is passed as <em>options</em> parameter to the
+- `options`
+
+  - : An object that is passed as _options_ parameter to the
     {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode constructor")}} and
-    passed through <a href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">the structured clone algorithm</a>.
+    passed through [the structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
     Available properties are as follows:
+
     <!-- The specification refers to this object as: AudioWorkletNodeOptions -->
-    <dl>
-      <dt><code>numberOfInputs</code> {{optional_inline}}</dt>
-      <dd>The value to initialize the {{domxref("AudioNode.numberOfInputs", "numberOfInputs")}} property to. Defaults to 1.</dd>
-      <dt><code>numberOfOutputs</code> {{optional_inline}}</dt>
-      <dd>The value to initialize the {{domxref("AudioNode.numberOfOutputs", "numberOfOutputs")}} property to. Defaults to 1.</dd>
-      <dt><code>outputChannelCount</code> {{optional_inline}}</dt>
-      <dd>An <strong>array</strong> defining the number of channels for each output. For example, <em>outputChannelCount: [n, m]</em> specifies the number of channels in the first output to be <em>n</em> and the second output to be <em>m</em>. The array length must match <code>numberOfOutputs</code>.</dd>
-      <dt><code>parameterData</code> {{optional_inline}}</dt>
-      <dd>An object containing the initial values of custom {{domxref("AudioParam")}} objects on this node (in its {{domxref("AudioWorkletNode.parameters", "parameters")}} property), with <code>key</code> being the name of a custom parameter and <code>value</code> being its initial value.</dd>
-      <dt><code>processorOptions</code> {{optional_inline}}</dt>
-      <dd>Any additional data that can be used for custom initialization of the underlying {{domxref("AudioWorkletProcessor")}}.</dd>
-    </dl>
+
+    - `numberOfInputs` {{optional_inline}}
+      - : The value to initialize the {{domxref("AudioNode.numberOfInputs", "numberOfInputs")}} property to. Defaults to 1.
+    - `numberOfOutputs` {{optional_inline}}
+      - : The value to initialize the {{domxref("AudioNode.numberOfOutputs", "numberOfOutputs")}} property to. Defaults to 1.
+    - `outputChannelCount` {{optional_inline}}
+      - : An **array** defining the number of channels for each output. For example, _outputChannelCount: \[n, m]_ specifies the number of channels in the first output to be _n_ and the second output to be _m_. The array length must match `numberOfOutputs`.
+    - `parameterData` {{optional_inline}}
+      - : An object containing the initial values of custom {{domxref("AudioParam")}} objects on this node (in its {{domxref("AudioWorkletNode.parameters", "parameters")}} property), with `key` being the name of a custom parameter and `value` being its initial value.
+    - `processorOptions` {{optional_inline}}
+      - : Any additional data that can be used for custom initialization of the underlying {{domxref("AudioWorkletProcessor")}}.
 
     Note that there are default values for the first two properties, so even if there are no
-    <em>options</em> object passed to the {{domxref("AudioWorkletNode.AudioWorkletNode",
-    "AudioWorkletNode constructor")}}, the <em>options</em> object passed by the node to
-    the <code>AudioWorkletProcessor</code> constructor will exist and at minimum have
-    <code>numberOfInputs</code> and <code>numberOfOutputs</code>.</dd>
-</dl>
+    _options_ object passed to the {{domxref("AudioWorkletNode.AudioWorkletNode",
+    "AudioWorkletNode constructor")}}, the _options_ object passed by the node to
+    the `AudioWorkletProcessor` constructor will exist and at minimum have
+    `numberOfInputs` and `numberOfOutputs`.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The newly constructed {{domxref("AudioWorkletProcessor")}} instance.</p>
+The newly constructed {{domxref("AudioWorkletProcessor")}} instance.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this example we pass custom options to the
-  {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode constructor")}} and
-  observe how a <a
-    href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">structured
-    clone</a> of them gets passed to our <code>AudioWorkletProcessor</code> constructor.
-</p>
+In this example we pass custom options to the
+{{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode constructor")}} and
+observe how a [structured
+clone](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) of them gets passed to our `AudioWorkletProcessor` constructor.
 
-<p>First, we need to define a custom {{domxref("AudioWorkletProcessor")}} and register it.
-  Note that this should be done in a separate file.</p>
+First, we need to define a custom {{domxref("AudioWorkletProcessor")}} and register it.
+Note that this should be done in a separate file.
 
-<pre class="brush: js">// test-processor.js
+```js
+// test-processor.js
 class TestProcessor extends AudioWorkletProcessor {
   constructor (options) {
     super()
@@ -85,41 +84,41 @@ class TestProcessor extends AudioWorkletProcessor {
 }
 
 registerProcessor('test-processor', TestProcessor)
-</pre>
+```
 
-<p>Next, in our main script file we'll load the processor, create an instance of
-  <code>AudioWorkletNode</code> passing it the name of the processor and <em>options</em>
-  object.</p>
+Next, in our main script file we'll load the processor, create an instance of
+`AudioWorkletNode` passing it the name of the processor and _options_
+object.
 
-<p>In the <em>options</em> object we pass <code>processorOptions</code> with a
-  {{jsxref("Map")}} instance under <code>someUsefulVariable</code> key. We don't pass
-  <code>numberOfInputs</code> and see how it gets its default value.</p>
+In the _options_ object we pass `processorOptions` with a
+{{jsxref("Map")}} instance under `someUsefulVariable` key. We don't pass
+`numberOfInputs` and see how it gets its default value.
 
-<pre class="brush: js">const audioContext = new AudioContext()
+```js
+const audioContext = new AudioContext()
 await audioContext.audioWorklet.addModule('test-processor.js')
 const testNode = new AudioWorkletNode(audioContext, 'test-processor', {
   processorOptions: {
     someUsefulVariable: new Map([[1, 'one'], [2, 'two']])
   }
 })
-</pre>
+```
 
-<p>The console output will be as follows:</p>
+The console output will be as follows:
 
-<pre class="brush: js">&gt; 1 // AudioWorkletNode options.numberOfInputs set to default
-&gt; Map(2) {1 =&gt; "one", 2 =&gt; "two"} // A cloned map under someUsefulVariable
-</pre>
+```js
+> 1 // AudioWorkletNode options.numberOfInputs set to default
+> Map(2) {1 => "one", 2 => "two"} // A cloned map under someUsefulVariable
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("AudioWorkletNode", "AudioWorkletNode")}} interface</li>
-</ul>
+- {{domxref("AudioWorkletNode", "AudioWorkletNode")}} interface

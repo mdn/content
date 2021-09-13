@@ -2,58 +2,60 @@
 title: RTCIceCandidatePair.remote
 slug: Web/API/RTCIceCandidatePair/remote
 tags:
-- API
-- Candidate
-- ICE
-- Negotiation
-- Pair
-- Property
-- RTCIceCandidatePair
-- Reference
-- Remote
-- WebRTC
-- WebRTC API
-- rtc
+  - API
+  - Candidate
+  - ICE
+  - Negotiation
+  - Pair
+  - Property
+  - RTCIceCandidatePair
+  - Reference
+  - Remote
+  - WebRTC
+  - WebRTC API
+  - rtc
 browser-compat: api.RTCIceCandidatePair.remote
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <code><strong>remote</strong></code> property of the
-    <strong>{{domxref("RTCIceCandidatePair")}}</strong> dictionary specifies the
-    {{domxref("RTCIceCandidate")}} describing the configuration of the remote end of a
-    viable WebRTC connection.</p>
+The **`remote`** property of the
+**{{domxref("RTCIceCandidatePair")}}** dictionary specifies the
+{{domxref("RTCIceCandidate")}} describing the configuration of the remote end of a
+viable WebRTC connection.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>remoteCandidate</em> = <em>RTCIceCandidatePair</em>.remote;
-</pre>
+```js
+remoteCandidate = RTCIceCandidatePair.remote;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("RTCIceCandidate")}} which describes the configuration of the remote end
-  of a viable pair of ICE candidates. The <code>RTCIceCandidatePair</code> is returned by
-  the {{domxref("RTCIceTransport")}} method
-  {{domxref("RTCIceTransport.getSelectedCandidatePair", "getSelectedCandidatePair()")}}.
-</p>
+An {{domxref("RTCIceCandidate")}} which describes the configuration of the remote end
+of a viable pair of ICE candidates. The `RTCIceCandidatePair` is returned by
+the {{domxref("RTCIceTransport")}} method
+{{domxref("RTCIceTransport.getSelectedCandidatePair", "getSelectedCandidatePair()")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This one-line example obtains the current candidate pair and then from that gets the
-  remote candidate.</p>
+This one-line example obtains the current candidate pair and then from that gets the
+remote candidate.
 
-<pre class="brush: js">var candidatePair = pc.getSenders()[0].transport.transport.getSelectedCandidatePair();
-var remoteCandidate = candidatePair.remote;</pre>
+```js
+var candidatePair = pc.getSenders()[0].transport.transport.getSelectedCandidatePair();
+var remoteCandidate = candidatePair.remote;
+```
 
-<p>The {{domxref("RTCIceTransport")}} is found by getting the list of
-  {{domxref("RTCRtpSender")}} objects for the {{domxref("RTCPeerConnection")}}
-  <code>pc</code>. In the first <code>RTCRtpSender</code>, we get the
-  {{domxref("RTCDtlsTransport")}} over which the media data is being transmitted and
-  finally, from that, the <code>RTCIceTransport</code>.</p>
+The {{domxref("RTCIceTransport")}} is found by getting the list of
+{{domxref("RTCRtpSender")}} objects for the {{domxref("RTCPeerConnection")}}
+`pc`. In the first `RTCRtpSender`, we get the
+{{domxref("RTCDtlsTransport")}} over which the media data is being transmitted and
+finally, from that, the `RTCIceTransport`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -10,66 +10,65 @@ tags:
   - XMLHttpRequest
 browser-compat: api.FormData.get
 ---
-<p>{{APIRef("XMLHttpRequest")}}</p>
+{{APIRef("XMLHttpRequest")}}
 
-<p>The <code><strong>get()</strong></code> method of the {{domxref("FormData")}} interface
-  returns the first value associated with a given key from within a <code>FormData</code>
-  object. If you expect multiple values and want all of them, use the
-  {{domxref("FormData.getAll()","getAll()")}} method instead.</p>
+The **`get()`** method of the {{domxref("FormData")}} interface
+returns the first value associated with a given key from within a `FormData`
+object. If you expect multiple values and want all of them, use the
+{{domxref("FormData.getAll()","getAll()")}} method instead.
 
-<div class="note">
-  <p><strong>Note:</strong> This method is available in <a
-      href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
-</div>
+> **Note:** This method is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">formData.get(name);</pre>
+```js
+formData.get(name);
+```
 
-<h3 id="append_Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>name</code></dt>
-  <dd>A {{domxref("USVString")}} representing the name of the key you want to retrieve.
-  </dd>
-</dl>
+- `name`
+  - : A {{domxref("USVString")}} representing the name of the key you want to retrieve.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("FormDataEntryValue")}} containing the value. If the key doesn't exist, the
-  method returns null.</p>
+A {{domxref("FormDataEntryValue")}} containing the value. If the key doesn't exist, the
+method returns null.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following line creates an empty <code>FormData</code> object:</p>
+The following line creates an empty `FormData` object:
 
-<pre class="brush: js">var formData = new FormData();</pre>
+```js
+var formData = new FormData();
+```
 
-<p>If we add two <code>username</code> values using {{domxref("FormData.append")}}:</p>
+If we add two `username` values using {{domxref("FormData.append")}}:
 
-<pre class="brush: js">formData.append('username', 'Chris');
-formData.append('username', 'Bob');</pre>
+```js
+formData.append('username', 'Chris');
+formData.append('username', 'Bob');
+```
 
-<p>The following <code>get()</code> function will only return the first
-  <code>username</code> value appended:</p>
+The following `get()` function will only return the first
+`username` value appended:
 
-<pre class="brush: js">formData.get('username'); // Returns "Chris"</pre>
+```js
+formData.get('username'); // Returns "Chris"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("XMLHTTPRequest")}}</li>
-  <li><a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest"
-      title="Using XMLHttpRequest">Using XMLHttpRequest</a></li>
-  <li><a href="/en-US/docs/Web/API/FormData/Using_FormData_Objects">Using
-      FormData objects</a></li>
-  <li>{{HTMLElement("Form")}}</li>
-</ul>
+- {{domxref("XMLHTTPRequest")}}
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest "Using XMLHttpRequest")
+- [Using
+  FormData objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)
+- {{HTMLElement("Form")}}

@@ -10,32 +10,30 @@ tags:
   - SVG DOM
 browser-compat: api.SVGTRefElement
 ---
-<div>{{APIRef("SVG")}}{{deprecated_header}}</div>
+{{APIRef("SVG")}}{{deprecated_header}}
 
-<p>The <strong><code>SVGTRefElement</code></strong> interface corresponds to the {{SVGElement("tref")}} elements.</p>
+The **`SVGTRefElement`** interface corresponds to the {{SVGElement("tref")}} elements.
 
-<p>Object-oriented access to the attributes of the {{SVGElement("tref")}} element via the SVG DOM is not possible.</p>
+Object-oriented access to the attributes of the {{SVGElement("tref")}} element via the SVG DOM is not possible.
 
-<p>{{InheritanceDiagram(600, 140)}}</p>
+{{InheritanceDiagram(600, 140)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface has no properties but inherits properties from its parent, {{domxref("</em>SVGTextPositioningElement<em>")}}.</em></p>
+_This interface has no properties but inherits properties from its parent, {{domxref("</em>SVGTextPositioningElement<em>")}}._
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface has no methods but inherits methods from its parent, {{domxref("</em>SVGTextPositioningElement<em>")}}.</em></p>
+_This interface has no methods but inherits methods from its parent, {{domxref("</em>SVGTextPositioningElement<em>")}}._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGElement("tref")}}</li>
-</ul>
+- {{SVGElement("tref")}}

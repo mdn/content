@@ -2,45 +2,46 @@
 title: RTCIceCandidateStats.lastResponseTimestamp
 slug: Web/API/RTCIceCandidatePairStats/lastResponseTimestamp
 tags:
-- API
-- Connection
-- Connectivity
-- ICE
-- Networking
-- Property
-- RTCIceCandidatePairStats
-- Reference
-- Response
-- Statistics
-- Stats
-- WebRTC
-- WebRTC API
-- lastResponseTimestamp
-- timeStamp
+  - API
+  - Connection
+  - Connectivity
+  - ICE
+  - Networking
+  - Property
+  - RTCIceCandidatePairStats
+  - Reference
+  - Response
+  - Statistics
+  - Stats
+  - WebRTC
+  - WebRTC API
+  - lastResponseTimestamp
+  - timeStamp
 browser-compat: api.RTCIceCandidatePairStats.lastResponseTimestamp
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The {{domxref("RTCIceCandidatePairStats")}} property
-    <strong><code>lastResponseTimestamp</code></strong> indicates the time at which the
-    last {{Glossary("STUN")}} response was received on the described candidate
-    pair.</p>
+The {{domxref("RTCIceCandidatePairStats")}} property
+**`lastResponseTimestamp`** indicates the time at which the
+last {{Glossary("STUN")}} response was received on the described candidate
+pair.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>lastResponseTimestamp</em> = <em>rtcIceCandidatePairStats</em>.lastResponseTimestamp;</pre>
+```js
+lastResponseTimestamp = rtcIceCandidatePairStats.lastResponseTimestamp;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMHighResTimeStamp")}} object indicating the timestamp at which the most
-  recent STUN response was received on the connection defined by the described pair of
-  candidates.</p>
+A {{domxref("DOMHighResTimeStamp")}} object indicating the timestamp at which the most
+recent STUN response was received on the connection defined by the described pair of
+candidates.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -10,54 +10,50 @@ tags:
   - WebGL extension
 browser-compat: api.ANGLE_instanced_arrays.vertexAttribDivisorANGLE
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong>ANGLE_instanced_arrays.vertexAttribDivisorANGLE()</strong> method of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a>  modifies the rate at which generic vertex attributes advance when rendering multiple instances of primitives with {{domxref("ANGLE_instanced_arrays.drawArraysInstancedANGLE()", "ext.drawArraysInstancedANGLE()")}} and {{domxref("ANGLE_instanced_arrays.drawElementsInstancedANGLE()", "ext.drawElementsInstancedANGLE()")}}.</p>
+The **ANGLE_instanced_arrays.vertexAttribDivisorANGLE()** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API)  modifies the rate at which generic vertex attributes advance when rendering multiple instances of primitives with {{domxref("ANGLE_instanced_arrays.drawArraysInstancedANGLE()", "ext.drawArraysInstancedANGLE()")}} and {{domxref("ANGLE_instanced_arrays.drawElementsInstancedANGLE()", "ext.drawElementsInstancedANGLE()")}}.
 
-<div class="note">
-<p><strong>Note:</strong> When using {{domxref("WebGL2RenderingContext", "WebGL2")}}, this method is available as {{domxref("WebGL2RenderingContext.vertexAttribDivisor()", "gl.vertexAttribDivisor()")}} by default.</p>
-</div>
+> **Note:** When using {{domxref("WebGL2RenderingContext", "WebGL2")}}, this method is available as {{domxref("WebGL2RenderingContext.vertexAttribDivisor()", "gl.vertexAttribDivisor()")}} by default.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <var>ext</var>.vertexAttribDivisorANGLE(<var>index</var>, <var>divisor</var>);
-</pre>
+```js
+void ext.vertexAttribDivisorANGLE(index, divisor);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>index</code></dt>
- <dd>A {{domxref("WebGL_API/Types", "GLuint")}} specifying the index of the generic vertex attributes.</dd>
- <dt><code>divisor</code></dt>
- <dd>A {{domxref("WebGL_API/Types", "GLuint")}} specifying the number of instances that will pass between updates of the generic attribute.</dd>
-</dl>
+- `index`
+  - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the index of the generic vertex attributes.
+- `divisor`
+  - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the number of instances that will pass between updates of the generic attribute.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var ext = gl.getExtension('ANGLE_instanced_arrays');
+```js
+var ext = gl.getExtension('ANGLE_instanced_arrays');
 ext.vertexAttribDivisorANGLE(0, 2);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("ANGLE_instanced_arrays.drawArraysInstancedANGLE()", "ext.drawArraysInstancedANGLE()")}}</li>
- <li>{{domxref("ANGLE_instanced_arrays.drawElementsInstancedANGLE()", "ext.drawElementsInstancedANGLE()")}}</li>
- <li>{{domxref("WebGLRenderingContext.drawArrays()")}}</li>
- <li>{{domxref("WebGLRenderingContext.drawElements()")}}</li>
- <li>{{domxref("WebGL2RenderingContext.drawArraysInstanced()")}}</li>
- <li>{{domxref("WebGL2RenderingContext.drawElementsInstanced()")}}</li>
- <li>{{domxref("WebGL2RenderingContext.vertexAttribDivisor()")}}</li>
-</ul>
+- {{domxref("ANGLE_instanced_arrays.drawArraysInstancedANGLE()", "ext.drawArraysInstancedANGLE()")}}
+- {{domxref("ANGLE_instanced_arrays.drawElementsInstancedANGLE()", "ext.drawElementsInstancedANGLE()")}}
+- {{domxref("WebGLRenderingContext.drawArrays()")}}
+- {{domxref("WebGLRenderingContext.drawElements()")}}
+- {{domxref("WebGL2RenderingContext.drawArraysInstanced()")}}
+- {{domxref("WebGL2RenderingContext.drawElementsInstanced()")}}
+- {{domxref("WebGL2RenderingContext.vertexAttribDivisor()")}}

@@ -2,37 +2,39 @@
 title: SyncEvent.lastChance
 slug: Web/API/SyncEvent/lastChance
 tags:
-- API
-- Background Sync
-- Experimental
-- Property
-- Reference
-- ServiceWorker
-- SyncEvent
-- lastChance
+  - API
+  - Background Sync
+  - Experimental
+  - Property
+  - Reference
+  - ServiceWorker
+  - SyncEvent
+  - lastChance
 browser-compat: api.SyncEvent.lastChance
 ---
-<p>{{SeeCompatTable}}{{APIRef("")}}</p>
+{{SeeCompatTable}}{{APIRef("")}}
 
-<p>The <strong><code>SyncEvent.lastChance</code></strong> read-only property of the
-  {{domxref("SyncEvent")}} interface returns <code>true</code> if the user agent will not
-  make further synchronization attempts after the current attempt. This is the value
-  passed in the <code>lastChance</code> parameter of the
-  {{domxref("SyncEvent.SyncEvent","SyncEvent()")}} constructor.</p>
+The **`SyncEvent.lastChance`** read-only property of the
+{{domxref("SyncEvent")}} interface returns `true` if the user agent will not
+make further synchronization attempts after the current attempt. This is the value
+passed in the `lastChance` parameter of the
+{{domxref("SyncEvent.SyncEvent","SyncEvent()")}} constructor.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>lastChance</em> = SyncEvent.lastChance</pre>
+```js
+var lastChance = SyncEvent.lastChance
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A boolean value that indicates whether the user agent will not make further
-  synchronization attempts after the current attempt.</p>
+A boolean value that indicates whether the user agent will not make further
+synchronization attempts after the current attempt.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

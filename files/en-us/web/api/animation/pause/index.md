@@ -11,37 +11,37 @@ tags:
   - web animations api
 browser-compat: api.Animation.pause
 ---
-<p>{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}</p>
+{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}
 
-<p>The <code><strong>pause()</strong></code> method of the <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a>'s {{domxref("Animation")}} interface suspends playback of the animation.</p>
+The **`pause()`** method of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)'s {{domxref("Animation")}} interface suspends playback of the animation.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">animation.pause();
-</pre>
+```js
+animation.pause();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
- <dt>InvalidStateError</dt>
- <dd>The animation's {{domxref("Animation.currentTime", "currentTime")}} is <code>unresolved</code> (for example, if it's never been played or isn't currently playing) and the end time of the animation is positive infinity.</dd>
-</dl>
+- InvalidStateError
+  - : The animation's {{domxref("Animation.currentTime", "currentTime")}} is `unresolved` (for example, if it's never been played or isn't currently playing) and the end time of the animation is positive infinity.
 
-<p>Throws an <code>InvalidStateError</code> if the animation's {{domxref("Animation.currentTime", "currentTime")}} is <code>unresolved</code> (perhaps it hasn't started playing yet) and the end time of the animation is positive infinity.</p>
+Throws an `InvalidStateError` if the animation's {{domxref("Animation.currentTime", "currentTime")}} is `unresolved` (perhaps it hasn't started playing yet) and the end time of the animation is positive infinity.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p><code>Animation.pause()</code> is used many times in the Alice in Web Animations API Land <a href="http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010">Growing/Shrinking Alice Game</a>, largely because animations created with the {{domxref("Element.animate()")}} method immediately start playing and must be paused manually if you want to avoid that:</p>
+`Animation.pause()` is used many times in the Alice in Web Animations API Land [Growing/Shrinking Alice Game](http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010), largely because animations created with the {{domxref("Element.animate()")}} method immediately start playing and must be paused manually if you want to avoid that:
 
-<pre class="brush: js">// animation of the cupcake slowly getting eaten up
+```js
+// animation of the cupcake slowly getting eaten up
 var nommingCake = document.getElementById('eat-me_sprite').animate(
 [
   { transform: 'translateY(0)' },
@@ -54,11 +54,12 @@ var nommingCake = document.getElementById('eat-me_sprite').animate(
 
 // doesn't actually need to be eaten until a click event, so pause it initially:
 nommingCake.pause();
-</pre>
+```
 
-<p>Additionally, when resetting :</p>
+Additionally, when resetting :
 
-<pre class="brush: js">// An all-purpose function to pause the animations on Alice, the cupcake, and the bottle that reads "drink me."
+```js
+// An all-purpose function to pause the animations on Alice, the cupcake, and the bottle that reads "drink me."
 var stopPlayingAlice = function() {
   aliceChange.pause();
   nommingCake.pause();
@@ -68,23 +69,21 @@ var stopPlayingAlice = function() {
 // When the user releases the cupcake or the bottle, pause the animations.
 cake.addEventListener("mouseup", stopPlayingAlice, false);
 bottle.addEventListener("mouseup", stopPlayingAlice, false);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
- <li>{{domxref("Animation")}} for other methods and properties you can use to control web page animation.</li>
- <li>{{domxref("Animation.pause()")}} to pause an animation.</li>
- <li>{{domxref("Animation.reverse()")}} to play an animation backwards.</li>
- <li>{{domxref("Animation.finish()")}} to finish an animation.</li>
- <li>{{domxref("Animation.cancel()")}} to cancel an animation.</li>
-</ul>
+- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
+- {{domxref("Animation")}} for other methods and properties you can use to control web page animation.
+- {{domxref("Animation.pause()")}} to pause an animation.
+- {{domxref("Animation.reverse()")}} to play an animation backwards.
+- {{domxref("Animation.finish()")}} to finish an animation.
+- {{domxref("Animation.cancel()")}} to cancel an animation.

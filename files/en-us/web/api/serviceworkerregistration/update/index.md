@@ -2,47 +2,46 @@
 title: ServiceWorkerRegistration.update()
 slug: Web/API/ServiceWorkerRegistration/update
 tags:
-- API
-- Method
-- Reference
-- Service Workers
-- ServiceWorkerRegistration
-- Update
+  - API
+  - Method
+  - Reference
+  - Service Workers
+  - ServiceWorkerRegistration
+  - Update
 browser-compat: api.ServiceWorkerRegistration.update
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p>The <code><strong>update()</strong></code> method of the
-  {{domxref("ServiceWorkerRegistration")}} interface attempts to update the service
-  worker. It fetches the worker's script URL, and if the new worker is not byte-by-byte
-  identical to the current worker, it installs the new worker. The fetch of the worker
-  bypasses any browser caches if the previous fetch occurred over 24 hours ago.</p>
+The **`update()`** method of the
+{{domxref("ServiceWorkerRegistration")}} interface attempts to update the service
+worker. It fetches the worker's script URL, and if the new worker is not byte-by-byte
+identical to the current worker, it installs the new worker. The fetch of the worker
+bypasses any browser caches if the previous fetch occurred over 24 hours ago.
 
-<div class="note">
-  <p><strong>Note:</strong> This feature is available in <a
-      href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
-</div>
+> **Note:** This feature is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>serviceWorkerRegistration</em>.update();</pre>
+```js
+serviceWorkerRegistration.update();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} that resolves with a {{domxref("ServiceWorkerRegistration")}}
-  object.</p>
+A {{jsxref("Promise")}} that resolves with a {{domxref("ServiceWorkerRegistration")}}
+object.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following simple example registers a service worker example then adds an event
-  handler to a button so you can explicitly update the service worker whenever desired:
-</p>
+The following simple example registers a service worker example then adds an event
+handler to a button so you can explicitly update the service worker whenever desired:
 
-<pre class="brush: js">if ('serviceWorker' in navigator) {
+```js
+if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/sw-test/sw.js', {scope: 'sw-test'}).then(function(registration) {
     // registration worked
     console.log('Registration succeeded.');
@@ -53,25 +52,24 @@ browser-compat: api.ServiceWorkerRegistration.update
     // registration failed
     console.log('Registration failed with ' + error);
   });
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service
-      Workers</a></li>
-  <li><a href="https://github.com/mdn/sw-test">Service workers basic code example</a></li>
-  <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker
-      ready?</a></li>
-  <li>{{jsxref("Promise")}}</li>
-  <li><a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web
-      workers</a></li>
-</ul>
+- [Using Service
+  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Is ServiceWorker
+  ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- {{jsxref("Promise")}}
+- [Using web
+  workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

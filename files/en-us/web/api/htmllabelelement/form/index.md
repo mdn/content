@@ -11,43 +11,40 @@ tags:
   - form
 browser-compat: api.HTMLLabelElement.form
 ---
-<div>
-  <div>{{APIRef("HTML DOM")}}</div>
-</div>
+{{APIRef("HTML DOM")}}
 
-<p>The read-only <strong><code>HTMLLabelElement.form</code></strong> property returns an
-  {{domxref("HTMLFormElement")}} object which represents the form of which the label's
-  associated control is a part, or null if there is either no associated control, or if
-  that control isn't in a form.</p>
+The read-only **`HTMLLabelElement.form`** property returns an
+{{domxref("HTMLFormElement")}} object which represents the form of which the label's
+associated control is a part, or null if there is either no associated control, or if
+that control isn't in a form.
 
-<p>This property is just a shortcut for <code>HTMLLabelElement.control.form</code>.</p>
+This property is just a shortcut for `HTMLLabelElement.control.form`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>form</em> = <em>HTMLLabelElement</em>.form
-</pre>
+```js
+form = HTMLLabelElement.form
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("HTMLFormElement")}} which represents the form with which the label's
-  {{domxref("HTMLLabelElement.control", "control")}} is associated. If
-  {{domxref("HTMLLabelElement.control", "control")}} is <code>null</code> (meaning the
-  label isn't associated with a control), or if the control isn't part of a form, this
-  property returns <code>null</code>.</p>
+An {{domxref("HTMLFormElement")}} which represents the form with which the label's
+{{domxref("HTMLLabelElement.control", "control")}} is associated. If
+{{domxref("HTMLLabelElement.control", "control")}} is `null` (meaning the
+label isn't associated with a control), or if the control isn't part of a form, this
+property returns `null`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("HTMLLabelElement")}}</li>
-  <li>{{domxref("HTMLElement")}}</li>
-  <li>{{HTMLElement("label")}}</li>
-  <li><a href="/en-US/docs/Learn/Forms">HTML forms guide</a></li>
-</ul>
+- {{domxref("HTMLLabelElement")}}
+- {{domxref("HTMLElement")}}
+- {{HTMLElement("label")}}
+- [HTML forms guide](/en-US/docs/Learn/Forms)

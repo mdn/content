@@ -17,69 +17,72 @@ tags:
   - unhandledrejection
 browser-compat: api.Window.unhandledrejection_event
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>unhandledrejection</code></strong> event is sent to the global scope of a script when a JavaScript {{jsxref("Promise")}} that has no rejection handler is rejected; typically, this is the {{domxref("window")}}, but may also be a {{domxref("Worker")}}.</p>
+The **`unhandledrejection`** event is sent to the global scope of a script when a JavaScript {{jsxref("Promise")}} that has no rejection handler is rejected; typically, this is the {{domxref("window")}}, but may also be a {{domxref("Worker")}}.
 
-<p>This is useful for debugging and for providing fallback error handling for unexpected situations.</p>
+This is useful for debugging and for providing fallback error handling for unexpected situations.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("PromiseRejectionEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("WindowEventHandlers.onunhandledrejection", "onunhandledrejection")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("PromiseRejectionEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{domxref("WindowEventHandlers.onunhandledrejection", "onunhandledrejection")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>Allowing the <code>unhandledrejection</code> event to bubble will eventually result in an error message being output to the console. You can prevent this by calling {{domxref("Event.preventDefault", "preventDefault()")}} on the {{domxref("PromiseRejectionEvent")}}; see {{anch("Preventing default handling")}} below for an example.</p>
+Allowing the `unhandledrejection` event to bubble will eventually result in an error message being output to the console. You can prevent this by calling {{domxref("Event.preventDefault", "preventDefault()")}} on the {{domxref("PromiseRejectionEvent")}}; see {{anch("Preventing default handling")}} below for an example.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Here we have a few examples showing ways you can make use of the <code>unhandledrejection</code> event. The event includes two useful pieces of information:</p>
+Here we have a few examples showing ways you can make use of the `unhandledrejection` event. The event includes two useful pieces of information:
 
-<dl>
- <dt><code>promise</code></dt>
- <dd>The actual {{jsxref("Promise")}} which was rejected with no handler available to deal with the rejection.</dd>
- <dt><code>reason</code></dt>
- <dd>The reason that would have been passed into the rejection handler if one had existed. See {{jsxref("Promise.catch", "catch()")}} for details.</dd>
-</dl>
+- `promise`
+  - : The actual {{jsxref("Promise")}} which was rejected with no handler available to deal with the rejection.
+- `reason`
+  - : The reason that would have been passed into the rejection handler if one had existed. See {{jsxref("Promise.catch", "catch()")}} for details.
 
-<h3 id="Basic_error_logging">Basic error logging</h3>
+### Basic error logging
 
-<p>This example logs information about the unhandled promise rejection to the console.</p>
+This example logs information about the unhandled promise rejection to the console.
 
-<pre class="brush: js">window.addEventListener("unhandledrejection", event =&gt; {
+```js
+window.addEventListener("unhandledrejection", event => {
   console.warn(`UNHANDLED PROMISE REJECTION: ${event.reason}`);
 });
-</pre>
+```
 
-<p>You can also use the {{domxref("WindowEventHandlers.onunhandledrejection", "onunhandledrejection")}} event handler property to set up the event listener:</p>
+You can also use the {{domxref("WindowEventHandlers.onunhandledrejection", "onunhandledrejection")}} event handler property to set up the event listener:
 
-<pre class="brush: js">window.onunhandledrejection = event =&gt; {
+```js
+window.onunhandledrejection = event => {
   console.warn(`UNHANDLED PROMISE REJECTION: ${event.reason}`);
 };
-</pre>
+```
 
-<h3 id="Preventing_default_handling">Preventing default handling</h3>
+### Preventing default handling
 
-<p>Many environments (such as {{Glossary("Node.js")}}) report unhandled promise rejections to the console by default. You can prevent that from happening by adding a handler for <code>unhandledrejection</code> events that—in addition to any other tasks you wish to perform—calls {{domxref("Event.preventDefault()", "preventDefault()")}} to cancel the event, preventing it from bubbling up to be handled by the runtime's logging code. This works because <code>unhandledrejection</code> is cancelable.</p>
+Many environments (such as {{Glossary("Node.js")}}) report unhandled promise rejections to the console by default. You can prevent that from happening by adding a handler for `unhandledrejection` events that—in addition to any other tasks you wish to perform—calls {{domxref("Event.preventDefault()", "preventDefault()")}} to cancel the event, preventing it from bubbling up to be handled by the runtime's logging code. This works because `unhandledrejection` is cancelable.
 
-<pre class="brush: js">window.addEventListener('unhandledrejection', function (event) {
+```js
+window.addEventListener('unhandledrejection', function (event) {
   // ...your code here to handle the unhandled rejection...
 
   // Prevent the default handling (such as outputting the
@@ -87,21 +90,19 @@ browser-compat: api.Window.unhandledrejection_event
 
   event.preventDefault();
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SectionOnPage("/en-US/docs/Web/JavaScript/Guide/Using_promises", "Promise rejection events")}}</li>
- <li>{{domxref("WindowEventHandlers.onunhandledrejection", "onunhandledrejection")}} event handler property </li>
- <li>{{domxref("Window/rejectionhandled_event", "rejectionhandled")}} event</li>
- <li>{{jsxref("Promise")}}</li>
-</ul>
+- {{SectionOnPage("/en-US/docs/Web/JavaScript/Guide/Using_promises", "Promise rejection events")}}
+- {{domxref("WindowEventHandlers.onunhandledrejection", "onunhandledrejection")}} event handler property
+- {{domxref("Window/rejectionhandled_event", "rejectionhandled")}} event
+- {{jsxref("Promise")}}

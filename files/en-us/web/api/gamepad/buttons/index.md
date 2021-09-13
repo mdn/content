@@ -11,44 +11,44 @@ tags:
   - Reference
 browser-compat: api.Gamepad.buttons
 ---
-<p>{{APIRef("Gamepad API")}}</p>
+{{APIRef("Gamepad API")}}
 
-<p>The <code><strong>Gamepad.buttons</strong></code> property of the {{domxref("Gamepad")
+The **`Gamepad.buttons`** property of the {{domxref("Gamepad")
   }} interface returns an array of {{domxref("gamepadButton")}} objects representing the
-  buttons present on the device.</p>
+buttons present on the device.
 
-<p>Each entry in the array is 0 if the button is not pressed, and non-zero (typically 1.0)
-  if the button is pressed. Each {{domxref("gamepadButton")}} object has two properties:
-  <code>pressed</code> and <code>value</code>:</p>
+Each entry in the array is 0 if the button is not pressed, and non-zero (typically 1.0)
+if the button is pressed. Each {{domxref("gamepadButton")}} object has two properties:
+`pressed` and `value`:
 
-<ul>
-  <li>The <code>pressed</code> property is a boolean indicating whether the button is
-    currently pressed (<code>true</code>) or unpressed (<code>false</code>).</li>
-  <li>The <code>value</code> property is a floating point value used to enable
-    representing analog buttons, such as the triggers on many modern gamepads. The values
-    are normalized to the range 0.0 – 1.0, with 0.0 representing a button that is not
-    pressed, and 1.0 representing a button that is fully pressed.</li>
-</ul>
+- The `pressed` property is a boolean indicating whether the button is
+  currently pressed (`true`) or unpressed (`false`).
+- The `value` property is a floating point value used to enable
+  representing analog buttons, such as the triggers on many modern gamepads. The values
+  are normalized to the range 0.0 – 1.0, with 0.0 representing a button that is not
+  pressed, and 1.0 representing a button that is fully pressed.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const buttons = gamepad.buttons;</pre>
+```js
+const buttons = gamepad.buttons;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following code is taken from my Gamepad API button demo (you can <a
-    href="https://chrisdavidmills.github.io/gamepad-buttons/">view the demo live</a>, and
-  <a href="https://github.com/chrisdavidmills/gamepad-buttons/tree/master">find the source
-    code</a> on Github.) Note the code fork — in Chrome
-  {{domxref("Navigator.getGamepads")}} needs a <code>webkit</code> prefix and the button
-  values are stores as an array of double values, whereas in Firefox
-  {{domxref("Navigator.getGamepads")}} doesn't need a prefix, and the button values are
-  stored as an array of {{domxref("GamepadButton")}} objects; it is the
-  {{domxref("GamepadButton.value")}} or {{domxref("GamepadButton.pressed")}} properties of
-  these we need to access, depending on what type of buttons they are. In this simple
-  example I've just allowed either.</p>
+The following code is taken from my Gamepad API button demo (you can [view the demo live](https://chrisdavidmills.github.io/gamepad-buttons/), and
+[find the source
+code](https://github.com/chrisdavidmills/gamepad-buttons/tree/master) on Github.) Note the code fork — in Chrome
+{{domxref("Navigator.getGamepads")}} needs a `webkit` prefix and the button
+values are stores as an array of double values, whereas in Firefox
+{{domxref("Navigator.getGamepads")}} doesn't need a prefix, and the button values are
+stored as an array of {{domxref("GamepadButton")}} objects; it is the
+{{domxref("GamepadButton.value")}} or {{domxref("GamepadButton.pressed")}} properties of
+these we need to access, depending on what type of buttons they are. In this simple
+example I've just allowed either.
 
-<pre class="brush: js">function gameLoop() {
+```js
+function gameLoop() {
   if(navigator.webkitGetGamepads) {
     var gp = navigator.webkitGetGamepads()[0];
 
@@ -64,13 +64,13 @@ browser-compat: api.Gamepad.buttons
   } else {
     var gp = navigator.getGamepads()[0];
 
-    if(gp.buttons[0].value &gt; 0 || gp.buttons[0].pressed == true) {
+    if(gp.buttons[0].value > 0 || gp.buttons[0].pressed == true) {
       b--;
-    } else if(gp.buttons[1].value &gt; 0 || gp.buttons[1].pressed == true) {
+    } else if(gp.buttons[1].value > 0 || gp.buttons[1].pressed == true) {
       a++;
-    } else if(gp.buttons[2].value &gt; 0 || gp.buttons[2].pressed == true) {
+    } else if(gp.buttons[2].value > 0 || gp.buttons[2].pressed == true) {
       b++;
-    } else if(gp.buttons[3].value &gt; 0 || gp.buttons[3].pressed == true) {
+    } else if(gp.buttons[3].value > 0 || gp.buttons[3].pressed == true) {
       a--;
     }
   }
@@ -79,20 +79,21 @@ browser-compat: api.Gamepad.buttons
   ball.style.top = b*2 + "px";
 
   var start = rAF(gameLoop);
-};</pre>
+};
+```
 
-<h2 id="Value">Value</h2>
+## Value
 
-<p>An array of {{domxref("gamepadButton")}} objects.</p>
+An array of {{domxref("gamepadButton")}} objects.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<p><a href="/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API">Using the Gamepad API</a></p>
+[Using the Gamepad API](/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)

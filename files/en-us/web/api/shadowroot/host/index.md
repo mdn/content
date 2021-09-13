@@ -2,43 +2,46 @@
 title: ShadowRoot.host
 slug: Web/API/ShadowRoot/host
 tags:
-- API
-- Host
-- Property
-- Reference
-- ShadowRoot
-- shadow dom
+  - API
+  - Host
+  - Property
+  - Reference
+  - ShadowRoot
+  - shadow dom
 browser-compat: api.ShadowRoot.host
 ---
-<p>{{APIRef("Shadow DOM")}}</p>
+{{APIRef("Shadow DOM")}}
 
-<p>The <strong><code>host</code></strong> read-only property of
-    the {{domxref("ShadowRoot")}} returns a reference to the DOM element the
-    <code>ShadowRoot</code> is attached to.</p>
+The **`host`** read-only property of
+the {{domxref("ShadowRoot")}} returns a reference to the DOM element the
+`ShadowRoot` is attached to.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">const someElement = <var>shadowRoot</var>.host</pre>
+```js
+const someElement = shadowRoot.host
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A  DOM {{domxref('Element')}}.</p>
+A  DOM {{domxref('Element')}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">let customElem = document.querySelector('my-shadow-dom-element');
+```js
+let customElem = document.querySelector('my-shadow-dom-element');
 let shadow = customElem.shadowRoot;
 
   ...
 
 // return the original host element some time later
-let hostElem = shadow.host;</pre>
+let hostElem = shadow.host;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

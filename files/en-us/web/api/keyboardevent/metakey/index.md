@@ -2,67 +2,63 @@
 title: KeyboardEvent.metaKey
 slug: Web/API/KeyboardEvent/metaKey
 tags:
-- API
-- DOM
-- MouseEvent
-- Property
-- Read-only
-- Reference
+  - API
+  - DOM
+  - MouseEvent
+  - Property
+  - Read-only
+  - Reference
 browser-compat: api.KeyboardEvent.metaKey
 ---
-<div>{{APIRef("DOM Events")}}</div>
+{{APIRef("DOM Events")}}
 
-<p>The <strong><code>KeyboardEvent.metaKey</code></strong> read-only property returning a
-  boolean value that indicates if the <kbd>Meta</kbd> key was pressed
-  (<code>true</code>) or not (<code>false</code>) when the event occurred. Some operating
-  systems may intercept the key so it is never detected.</p>
+The **`KeyboardEvent.metaKey`** read-only property returning a
+boolean value that indicates if the <kbd>Meta</kbd> key was pressed
+(`true`) or not (`false`) when the event occurred. Some operating
+systems may intercept the key so it is never detected.
 
-<div class="note">
-  <p><strong>Note:</strong> On Macintosh keyboards, this is the <kbd>⌘ Command</kbd> key.
-  </p>
-</div>
+> **Note:** On Macintosh keyboards, this is the <kbd>⌘ Command</kbd> key.
 
-<div class="warning">
-  <p><strong>Warning:</strong> At least as of Firefox 48, the <kbd>⊞ Windows</kbd> key is no longer considered the
-    "Meta" key. <code>KeyboardEvent.metaKey</code> is <code>false</code> when the <kbd>⊞
-      Windows</kbd> key is pressed.</p>
-</div>
+> **Warning:** At least as of Firefox 48, the <kbd>⊞ Windows</kbd> key is no longer considered the
+> "Meta" key. `KeyboardEvent.metaKey` is `false` when the <kbd>⊞
+> Windows</kbd> key is pressed.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>metaKeyPressed</em> = <em>instanceOfKeyboardEvent</em>.metaKey
-</pre>
+```js
+var metaKeyPressed = instanceOfKeyboardEvent.metaKey
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A boolean value</p>
+A boolean value
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: html">&lt;button onclick="ismetaKey(event)"&gt;Click me with the meta key&lt;/button&gt;
+```html
+<button onclick="ismetaKey(event)">Click me with the meta key</button>
 
-&lt;p id="output"&gt;&lt;/p&gt;
-</pre>
+<p id="output"></p>
+```
 
-<pre class="brush: js">function ismetaKey(e) {
+```js
+function ismetaKey(e) {
   document.querySelector("#output").textContent = "metaKey pressed? " + e.metaKey;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Example', 400, 90) }}</p>
+{{ EmbedLiveSample('Example', 400, 90) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{ domxref("KeyboardEvent") }}</li>
-</ul>
+- {{ domxref("KeyboardEvent") }}

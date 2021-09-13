@@ -11,39 +11,40 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals.ariaBusy
 ---
-<div>{{DefaultAPISidebar("DOM")}}</div>
+{{DefaultAPISidebar("DOM")}}
 
-<p>The <strong><code>ariaBusy</code></strong> property of the {{domxref("ElementInternals")}} interface reflects the value of the <code>aria-busy</code> attribute, which indicates whether an element is being modified, as assistive technologies may want to wait until the modifications are complete before exposing them to the user.</p>
+The **`ariaBusy`** property of the {{domxref("ElementInternals")}} interface reflects the value of the `aria-busy` attribute, which indicates whether an element is being modified, as assistive technologies may want to wait until the modifications are complete before exposing them to the user.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Setting aria attributes on <code>ElementInternals</code> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <a href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</a>.</p>
-</div>
+> **Note:** Setting aria attributes on `ElementInternals` allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the [Accessibility Object Model explainer](https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let ariaBusy = ElementInternals.ariaBusy;
-ElementInternals.ariaBusy = ariaBusy;</pre>
+```js
+let ariaBusy = ElementInternals.ariaBusy;
+ElementInternals.ariaBusy = ariaBusy;
+```
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString")}} with one of the following values:</p>
+### Value
 
-<dl>
-  <dt><code>"true"</code></dt>
-  <dd>There are no expected updates for the element.</dd>
-  <dt><code>"false"</code></dt>
-  <dd>The element is being updated.</dd>
-</dl>
+A {{domxref("DOMString")}} with one of the following values:
 
-<h2 id="Examples">Examples</h2>
+- `"true"`
+  - : There are no expected updates for the element.
+- `"false"`
+  - : The element is being updated.
 
-<p>In this example the value of <code>ariaBusy</code> is set to "true".</p>
+## Examples
 
-<pre class="brush: js">this.internals_.ariaBusy = "true";</pre>
+In this example the value of `ariaBusy` is set to "true".
 
-<h2 id="Specifications">Specifications</h2>
+```js
+this.internals_.ariaBusy = "true";
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

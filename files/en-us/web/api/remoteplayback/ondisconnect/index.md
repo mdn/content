@@ -9,29 +9,31 @@ tags:
   - RemotePlayback
 browser-compat: api.RemotePlayback.ondisconnect
 ---
-<div>{{DefaultAPISidebar("Remote Playback API")}}</div>
+{{DefaultAPISidebar("Remote Playback API")}}
 
-<p>The <strong><code>ondisconnect</code></strong> event handler of the {{domxref("RemotePlayback")}} interface processes the events fired when the user agent disconnects from the remote device.</p>
+The **`ondisconnect`** event handler of the {{domxref("RemotePlayback")}} interface processes the events fired when the user agent disconnects from the remote device.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">RemotePlayback.ondisconnect = function;
-RemotePlayback.addEventListener('<em>disconnect</em>', function);</pre>
+```js
+RemotePlayback.ondisconnect = function;
+RemotePlayback.addEventListener('disconnect', function);
+```
 
-<h2>Example</h2>
+## Example
 
-<p>In the following example the value of {{domxref("RemotePlayback.state")}} is printed to the console when the user agent disconnects from the remote device.</p>
+In the following example the value of {{domxref("RemotePlayback.state")}} is printed to the console when the user agent disconnects from the remote device.
 
-<pre class="brush: js">RemotePlayback.disconnect = function() {
+```js
+RemotePlayback.disconnect = function() {
   console.log(RemotePlayback.state);
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
-
+{{Compat}}

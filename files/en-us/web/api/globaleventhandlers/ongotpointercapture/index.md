@@ -2,37 +2,38 @@
 title: GlobalEventHandlers.ongotpointercapture
 slug: Web/API/GlobalEventHandlers/ongotpointercapture
 tags:
-- API
-- Event Handler
-- GlobalEventHandlers
-- HTML DOM
-- Property
-- Reference
-- events
-- ongotpointercapture
+  - API
+  - Event Handler
+  - GlobalEventHandlers
+  - HTML DOM
+  - Property
+  - Reference
+  - events
+  - ongotpointercapture
 browser-compat: api.GlobalEventHandlers.ongotpointercapture
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p>The <strong><code>ongotpointercapture</code></strong> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> that
-  processes {{event("gotpointercapture")}} events.</p>
+The **`ongotpointercapture`** property of the
+{{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
+processes {{event("gotpointercapture")}} events.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var>target</var>.ongotpointercapture = <var>functionRef</var>;</pre>
+```js
+target.ongotpointercapture = functionRef;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p><code><var>functionRef</var></code> is a function name or a <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function
-    expression</a>. The function receives a {{domxref("PointerEvent")}} object as its sole
-  argument.</p>
+`functionRef` is a function name or a [function
+expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("PointerEvent")}} object as its sole
+argument.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">function overHandler(event) {
+```js
+function overHandler(event) {
   // Determine the target event's gotpointercapture handler
   let gotCaptureHandler = event.target.ongotpointercapture;
 }
@@ -40,24 +41,21 @@ browser-compat: api.GlobalEventHandlers.ongotpointercapture
 function init() {
   let el = document.getElementById('target');
   el.ongotpointercapture = overHandler;
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>
-    <code><a href="/en-US/docs/Web/API/Document/gotpointercapture_event">Document: gotpointercapture</a></code>
-    event</li>
-  <li>
-    <code><a href="/en-US/docs/Web/API/HTMLElement/gotpointercapture_event">HTMLElement: gotpointercapture</a></code>
-    event</li>
-  <li>{{domxref("Element.setPointerCapture()")}}</li>
-</ul>
+- [`Document: gotpointercapture`](/en-US/docs/Web/API/Document/gotpointercapture_event)
+  event
+- [`HTMLElement: gotpointercapture`](/en-US/docs/Web/API/HTMLElement/gotpointercapture_event)
+  event
+- {{domxref("Element.setPointerCapture()")}}

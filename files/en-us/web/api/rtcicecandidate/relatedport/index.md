@@ -17,80 +17,81 @@ tags:
   - relatedPort
 browser-compat: api.RTCIceCandidate.relatedPort
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <strong>{{domxref("RTCIceCandidate")}}</strong> interface's read-only <strong><code>relatedPort</code></strong> property indicates the port number of reflexive or relay candidates.</p>
-    
-<p>If the candidate is a host candidate (that is, its {{domxref("RTCIceCandidate/address", "address")}} is in fact the real IP address of the remote peer), <code>relatedPort</code> is <code>null</code>.</p>
+The **{{domxref("RTCIceCandidate")}}** interface's read-only **`relatedPort`** property indicates the port number of reflexive or relay candidates.
 
-<p>The <code>relatedPort</code> field's value is set from the <code>candidateInfo</code> options object passed to the {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate()")}} constructor.
-  You can't specify the value of <code>relatedPort</code> directly in the options object, but its value is automatically extracted from the object's <code>candidate</code> a-line, if it's formatted properly (the <code>rel-port</code> field).</p>
+If the candidate is a host candidate (that is, its {{domxref("RTCIceCandidate/address", "address")}} is in fact the real IP address of the remote peer), `relatedPort` is `null`.
 
-<p>The related address ({{domxref("RTCIceCandidate.relatedAddress", "relatedAddress")}}) and port are not used at all by {{Glossary("ICE")}} itself; they are provided for
-  analysis and diagnostic purposes only, and their inclusion may be blocked by security systems, so do not rely on them having non-<code>null</code> values.</p>
+The `relatedPort` field's value is set from the `candidateInfo` options object passed to the {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate()")}} constructor.
+You can't specify the value of `relatedPort` directly in the options object, but its value is automatically extracted from the object's `candidate` a-line, if it's formatted properly (the `rel-port` field).
 
-<h2 id="Syntax">Syntax</h2>
+The related address ({{domxref("RTCIceCandidate.relatedAddress", "relatedAddress")}}) and port are not used at all by {{Glossary("ICE")}} itself; they are provided for
+analysis and diagnostic purposes only, and their inclusion may be blocked by security systems, so do not rely on them having non-`null` values.
 
-<pre class="brush: js">var <em>relPort</em> = <em>RTCIceCandidate</em>.relatedPort;</pre>
+## Syntax
 
-<h3 id="Value">Value</h3>
+```js
+var relPort = RTCIceCandidate.relatedPort;
+```
 
-<p>An unsigned 16-bit value containing the candidate's related port number, if any. For
-  both peer and server reflexive candidates, the related address and port describe the
-  base for that candidate. For relay candidates, the related address and port provide the
-  mapped address selected by the TURN server.</p>
+### Value
 
-<p>For host candidates, <code>relatedPort</code> is <code>null</code>, meaning the field is not included in the candidate's a-line.</p>
+An unsigned 16-bit value containing the candidate's related port number, if any. For
+both peer and server reflexive candidates, the related address and port describe the
+base for that candidate. For relay candidates, the related address and port provide the
+mapped address selected by the TURN server.
 
-<h2 id="Usage_notes">Usage notes</h2>
+For host candidates, `relatedPort` is `null`, meaning the field is not included in the candidate's a-line.
 
-<p>The related address and port are not used by ICE itself, and are only present for
-  diagnostic and Quality-of-Service purposes. They may in fact be omitted for security
-  reasons, but if present can be a useful tool during debugging. See the {{anch("Example",
-  "example")}}, which shows a bit of this.</p>
+## Usage notes
 
-<p>Here's an {{Glossary("SDP")}} attribute line (a-line) describing an ICE candidate
-  discovered by the STUN server:</p>
+The related address and port are not used by ICE itself, and are only present for
+diagnostic and Quality-of-Service purposes. They may in fact be omitted for security
+reasons, but if present can be a useful tool during debugging. See the {{anch("Example",
+  "example")}}, which shows a bit of this.
 
-<pre>a=candidate:4234997325 1 udp 2043278322 192.168.0.56 6502 typ srflx raddr 192.168.2.77 rport 32768 generation 0</pre>
+Here's an {{Glossary("SDP")}} attribute line (a-line) describing an ICE candidate
+discovered by the STUN server:
 
-<p>The remote port, <code>relatedPort</code>, is the number immediately following the <code>"rport"</code> label on the a-line, or 32768.</p>
+    a=candidate:4234997325 1 udp 2043278322 192.168.0.56 6502 typ srflx raddr 192.168.2.77 rport 32768 generation 0
 
-<h2 id="Example">Example</h2>
+The remote port, `relatedPort`, is the number immediately following the `"rport"` label on the a-line, or 32768.
 
-<p>In this example, the candidate's {{domxref("RTCIceCandidate.type", "type")}} is
-  checked, and then debugging output is presented, based on the candidate type, including
-  the candidate's type, address (<code>ip</code> and {{domxref("RTCIceCandidate.port",
+## Example
+
+In this example, the candidate's {{domxref("RTCIceCandidate.type", "type")}} is
+checked, and then debugging output is presented, based on the candidate type, including
+the candidate's type, address (`ip` and {{domxref("RTCIceCandidate.port",
   "port")}}), and related address ({{domxref("RTCIceCandidate.relatedAddress",
-  "relatedAddress")}} and <code>relatedPort</code>).</p>
+  "relatedAddress")}} and `relatedPort`).
 
-<pre class="brush: js">var ip = candidate.ip;
+```js
+var ip = candidate.ip;
 var port = candidate.port;
 var relIP = candidate.relatedAddress;
 var relPort = candidate.relatedPort;
 
-if (relIP &amp;&amp; relPort) {
+if (relIP && relPort) {
   console.log("Candidate type '" + type + "' -- contact address: " + ip + " " + port + ", related address: " + relIP + " " + relPort);
 } else {
   console.log("Host candidate address is " + ip + " " + port);
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API/Protocols">Introduction to WebRTC protocols</a></li>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API/Connectivity">WebRTC connectivity</a></li>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime">Lifetime of a WebRTC session</a></li>
-  <li>{{domxref("RTCIceCandidate.relatedAddress")}}</li>
-  <li>{{domxref("RTCIceCandidate.address")}} and {{domxref("RTCIceCandidate.port")}}</li>
-</ul>
+- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+- [Introduction to WebRTC protocols](/en-US/docs/Web/API/WebRTC_API/Protocols)
+- [WebRTC connectivity](/en-US/docs/Web/API/WebRTC_API/Connectivity)
+- [Lifetime of a WebRTC session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)
+- {{domxref("RTCIceCandidate.relatedAddress")}}
+- {{domxref("RTCIceCandidate.address")}} and {{domxref("RTCIceCandidate.port")}}

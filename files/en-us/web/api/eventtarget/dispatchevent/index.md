@@ -9,70 +9,65 @@ tags:
   - Method
 browser-compat: api.EventTarget.dispatchEvent
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p>Dispatches an {{domxref("Event")}} at the specified
-    {{domxref("EventTarget")}}, (synchronously) invoking the affected
-    {{domxref("EventListener")}}s in the appropriate order. The normal event processing
-    rules (including the capturing and optional bubbling phase) also apply to events
-    dispatched manually with <code>dispatchEvent()</code>.</p>
+Dispatches an {{domxref("Event")}} at the specified
+{{domxref("EventTarget")}}, (synchronously) invoking the affected
+{{domxref("EventListener")}}s in the appropriate order. The normal event processing
+rules (including the capturing and optional bubbling phase) also apply to events
+dispatched manually with `dispatchEvent()`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>cancelled</var> = !<var>target</var>.dispatchEvent(<var>event</var>)
-</pre>
+```js
+cancelled = !target.dispatchEvent(event)
+```
 
-<h3 id="Parameter">Parameter</h3>
+### Parameter
 
-<ul>
-  <li><code><var>event</var></code> is the {{domxref("Event")}} object to be dispatched.
-  </li>
-  <li><code><var>target</var></code> is used to initialize the {{domxref("Event.target")}}
-    and determine which event listeners to invoke.</li>
-</ul>
+- `event` is the {{domxref("Event")}} object to be dispatched.
+- `target` is used to initialize the {{domxref("Event.target")}}
+  and determine which event listeners to invoke.
 
-<h3 id="Return_Value">Return Value</h3>
+### Return Value
 
-<ul>
-  <li>The return value is <code>false</code> if <code><var>event</var></code> is
-    cancelable and at least one of the event handlers which received
-    <code><var>event</var></code> called {{domxref("Event.preventDefault()")}}. Otherwise
-    it returns <code>true</code>.</li>
-</ul>
+- The return value is `false` if `event` is
+  cancelable and at least one of the event handlers which received
+  `event` called {{domxref("Event.preventDefault()")}}. Otherwise
+  it returns `true`.
 
-<p>The <code>dispatchEvent()</code> method throws <code>UNSPECIFIED_EVENT_TYPE_ERR</code>
-  if the event's type was not specified by initializing the event before the method was
-  called, or if the event's type is <code>null</code> or an empty string.</p>
+The `dispatchEvent()` method throws `UNSPECIFIED_EVENT_TYPE_ERR`
+if the event's type was not specified by initializing the event before the method was
+called, or if the event's type is `null` or an empty string.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>Exceptions thrown by event handlers are reported as uncaught exceptions. The event
-  handlers run on a nested callstack; they block the caller until they complete, but
-  exceptions do not propagate to the caller.</p>
+Exceptions thrown by event handlers are reported as uncaught exceptions. The event
+handlers run on a nested callstack; they block the caller until they complete, but
+exceptions do not propagate to the caller.
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Unlike "native" events, which are fired by the DOM and invoke event handlers
-  asynchronously via the <a href="/en-US/docs/Web/JavaScript/EventLoop">event loop</a>,
-  <code>dispatchEvent()</code> invokes event handlers synchronously. All applicable event
-  handlers will execute and return before the code continues on after the call to
-  <code>dispatchEvent()</code>.</p>
+Unlike "native" events, which are fired by the DOM and invoke event handlers
+asynchronously via the [event loop](/en-US/docs/Web/JavaScript/EventLoop),
+`dispatchEvent()` invokes event handlers synchronously. All applicable event
+handlers will execute and return before the code continues on after the call to
+`dispatchEvent()`.
 
-<p><code>dispatchEvent()</code> is the last step of the create-init-dispatch process,
-  which is used for dispatching events into the implementation's event model. The event
-  can be created using <a href="/en-US/docs/Web/API/Event/Event">Event constructor</a>.
-</p>
+`dispatchEvent()` is the last step of the create-init-dispatch process,
+which is used for dispatching events into the implementation's event model. The event
+can be created using [Event constructor](/en-US/docs/Web/API/Event/Event).
 
-<p>See also the <a href="/en-US/docs/Web/API/Event">Event object reference</a>.</p>
+See also the [Event object reference](/en-US/docs/Web/API/Event).
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See <a href="/en-US/docs/Web/Events/Creating_and_triggering_events">Creating and triggering events</a>.</p>
+See [Creating and triggering events](/en-US/docs/Web/Events/Creating_and_triggering_events).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -9,35 +9,35 @@ tags:
   - contact picker
 browser-compat: api.ContactsManager
 ---
-<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Contact Picker API")}}</div>
+{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Contact Picker API")}}
 
-<p>The <strong><code>ContactsManager</code></strong> interface of the {{domxref('Contact Picker API')}} allows users to select entries from their contact list and share limited details of the selected entries with a website or application.</p>
+The **`ContactsManager`** interface of the {{domxref('Contact Picker API')}} allows users to select entries from their contact list and share limited details of the selected entries with a website or application.
 
-<p>The <code>ContactsManager</code> is available through the global {{domxref('navigator.contacts')}} property.</p>
+The `ContactsManager` is available through the global {{domxref('navigator.contacts')}} property.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref('ContactsManager.select','select()')}}</dt>
- <dd>Returns a {{jsxref('Promise')}} which, when resolved, presents the user with a contact picker which allows them to select contact(s) they wish to share.</dd>
- <dt>{{domxref('ContactsManager.getProperties()','getProperties()')}}</dt>
- <dd>Returns a {{jsxref('Promise')}} which resolves with an {{jsxref('Array')}} of {{jsxref('String','strings')}} indicating which contact properties are available.</dd>
-</dl>
+- {{domxref('ContactsManager.select','select()')}}
+  - : Returns a {{jsxref('Promise')}} which, when resolved, presents the user with a contact picker which allows them to select contact(s) they wish to share.
+- {{domxref('ContactsManager.getProperties()','getProperties()')}}
+  - : Returns a {{jsxref('Promise')}} which resolves with an {{jsxref('Array')}} of {{jsxref('String','strings')}} indicating which contact properties are available.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Feature_Detection">Feature Detection</h3>
+### Feature Detection
 
-<p>The following code checks whether the Contact Picker API is supported.</p>
+The following code checks whether the Contact Picker API is supported.
 
-<pre class="brush: js">const supported = ('contacts' in navigator &amp;&amp; 'ContactsManager' in window);
-</pre>
+```js
+const supported = ('contacts' in navigator && 'ContactsManager' in window);
+```
 
-<h3 id="Checking_for_Supported_Properties">Checking for Supported Properties</h3>
+### Checking for Supported Properties
 
-<p>The following asynchronous function uses the <code>getProperties</code> method to check for supported properties.</p>
+The following asynchronous function uses the `getProperties` method to check for supported properties.
 
-<pre class="brush: js">async function checkProperties() {
+```js
+async function checkProperties() {
   const supportedProperties = await navigator.contacts.getProperties();
   if (supportedProperties.includes('name')) {
     // run code for name support
@@ -55,15 +55,16 @@ browser-compat: api.ContactsManager
     // run code for avatar support
   }
 }
-</pre>
+```
 
-<h3 id="Selecting_Contacts">Selecting Contacts</h3>
+### Selecting Contacts
 
-<p>The following example sets an array of properties to be retrieved for each contact, as well as setting an options object to allow for multiple contacts to be selected.</p>
+The following example sets an array of properties to be retrieved for each contact, as well as setting an options object to allow for multiple contacts to be selected.
 
-<p>An asynchronous function is then defined which uses the <code>select()</code> method to present the user with a contact picker interface and handle the chosen results.</p>
+An asynchronous function is then defined which uses the `select()` method to present the user with a contact picker interface and handle the chosen results.
 
-<pre class="brush: js">const props = ['name', 'email', 'tel', 'address', 'icon'];
+```js
+const props = ['name', 'email', 'tel', 'address', 'icon'];
 const opts = {multiple: true};
 
 async function getContacts() {
@@ -73,21 +74,20 @@ async function getContacts() {
   } catch (ex) {
       // Handle any errors here.
   }
-}</pre>
+}
+```
 
-<p><code>handleResults()</code> is a developer defined function.</p>
+`handleResults()` is a developer defined function.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://web.dev/contact-picker/">A Contact Picker for the Web</a></li>
- <li><a href="https://contact-picker.glitch.me/">A Contact Picker demo on glitch</a></li>
-</ul>
+- [A Contact Picker for the Web](https://web.dev/contact-picker/)
+- [A Contact Picker demo on glitch](https://contact-picker.glitch.me/)

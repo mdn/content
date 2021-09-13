@@ -2,63 +2,57 @@
 title: PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()
 slug: Web/API/PublicKeyCredential/isUserVerifyingPlatformAuthenticatorAvailable
 tags:
-- API
-- Method
-- PublicKeyCredential
-- Reference
-- Web Authentication API
-- WebAuthn
+  - API
+  - Method
+  - PublicKeyCredential
+  - Reference
+  - Web Authentication API
+  - WebAuthn
 browser-compat: api.PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable
 ---
-<p>{{APIRef("Web Authentication API")}}{{securecontext_header}}</p>
+{{APIRef("Web Authentication API")}}{{securecontext_header}}
 
-<p><strong><code>isUserVerifyingPlatformAuthenticatorAvailable()</code></strong> is a
-  static method of the {{domxref("PublicKeyCredential")}} interface that returns a
-  {{jsxref("Promise")}} which resolves to <code>true</code> if a user-verifying platform
-  authenticator is available.</p>
+**`isUserVerifyingPlatformAuthenticatorAvailable()`** is a
+static method of the {{domxref("PublicKeyCredential")}} interface that returns a
+{{jsxref("Promise")}} which resolves to `true` if a user-verifying platform
+authenticator is available.
 
-<p>A user-verifying platform authenticator is a kind of multi-factor authenticator that is
-  part of the client device (it is generally not removable) and that involves an action
-  from the user in order to identify them. Common user-verifying platform authenticators include:</p>
+A user-verifying platform authenticator is a kind of multi-factor authenticator that is
+part of the client device (it is generally not removable) and that involves an action
+from the user in order to identify them. Common user-verifying platform authenticators include:
 
-<ul>
-  <li>Touch ID or Face ID (macOS and iOS)</li>
-  <li>Windows Hello (Windows)</li>
-  <li>Device unlock (fingerprint, face, PIN, etc.) on Android</li>
-</ul>
+- Touch ID or Face ID (macOS and iOS)
+- Windows Hello (Windows)
+- Device unlock (fingerprint, face, PIN, etc.) on Android
 
-<div class="note">
-  <p><strong>Note:</strong> This method may only be used in top-level contexts and will
-    not be available in an {{HTMLElement("iframe")}} for example.</p>
-</div>
+> **Note:** This method may only be used in top-level contexts and will
+> not be available in an {{HTMLElement("iframe")}} for example.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()</pre>
+```js
+PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} which resolves to a boolean value indicating whether or
-  a not a user-verifying platform authenticator is available.</p>
+A {{jsxref("Promise")}} which resolves to a boolean value indicating whether or
+a not a user-verifying platform authenticator is available.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This is a static method which is directly called on the
-    {{domxref("PublicKeyCredential")}} interface and not on an instance.</p>
-</div>
+> **Note:** This is a static method which is directly called on the
+> {{domxref("PublicKeyCredential")}} interface and not on an instance.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> In earlier versions of the specification, the boolean also
-    conveyed the consent of the user to disclose such an authenticator existed.</p>
-</div>
+> **Note:** In earlier versions of the specification, the boolean also
+> conveyed the consent of the user to disclose such an authenticator existed.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()
+```js
+PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()
   .then(function(available){
     if(available){
       // We can proceed with the creation of a PublicKeyCredential
@@ -71,26 +65,20 @@ browser-compat: api.PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvai
     // Something went wrong
     console.error(err);
   });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a
-      href="https://docs.microsoft.com/en-us/windows-hardware/design/device-experiences/windows-hello">Windows
-      Hello</a></li>
-  <li><a
-      href="https://docs.microsoft.com/en-us/microsoft-edge/dev-guide/windows-integration/web-authentication">Web
-      Authentication and Windows Hello - MSDN Guide</a> and especially the <a
-      href="https://docs.microsoft.com/en-us/microsoft-edge/dev-guide/windows-integration/web-authentication#special-considerations-for-windows-hello">special
-      considerations mentioning <code>isUserVerifyingPlatformAuthenticator()</code></a>
-  </li>
-</ul>
+- [Windows
+  Hello](https://docs.microsoft.com/en-us/windows-hardware/design/device-experiences/windows-hello)
+- [Web
+  Authentication and Windows Hello - MSDN Guide](https://docs.microsoft.com/en-us/microsoft-edge/dev-guide/windows-integration/web-authentication) and especially the [special
+  considerations mentioning `isUserVerifyingPlatformAuthenticator()`](https://docs.microsoft.com/en-us/microsoft-edge/dev-guide/windows-integration/web-authentication#special-considerations-for-windows-hello)

@@ -14,48 +14,45 @@ tags:
   - leftBounds
 browser-compat: api.VRLayerInit.leftBounds
 ---
-<div>{{APIRef("WebVR API")}}{{Deprecated_Header}}</div>
+{{APIRef("WebVR API")}}{{Deprecated_Header}}
 
-<p>The <code><strong>leftBounds</strong></code> property of the {{domxref("VRLayerInit")}} interface (dictionary) defines the left texture bounds of the canvas whose contents will be presented by the {{domxref("VRDisplay")}}.</p>
+The **`leftBounds`** property of the {{domxref("VRLayerInit")}} interface (dictionary) defines the left texture bounds of the canvas whose contents will be presented by the {{domxref("VRDisplay")}}.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This property was part of the old <a href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</a>. It has been superseded by the <a href="https://immersive-web.github.io/webxr/">WebXR Device API</a>.</p>
-</div>
+> **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var myVRLayerInit = { };
-myVRLayerInit.leftBounds = [0.0, 0.0, 0.5, 1.0];</pre>
+```js
+var myVRLayerInit = { };
+myVRLayerInit.leftBounds = [0.0, 0.0, 0.5, 1.0];
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An array of four floating point values, which can take values from 0.0–1.0:</p>
+An array of four floating point values, which can take values from 0.0–1.0:
 
-<ul>
- <li>The left offset of the bounds.</li>
- <li>The top offset of the bounds.</li>
- <li>The width of the bounds.</li>
- <li>The height of the bounds.</li>
-</ul>
+- The left offset of the bounds.
+- The top offset of the bounds.
+- The width of the bounds.
+- The height of the bounds.
 
-<p>If <code>leftBounds</code> is not specified in the dictionary, the default value used is <code>[0.0, 0.0, 0.5, 1.0]</code>.</p>
+If `leftBounds` is not specified in the dictionary, the default value used is `[0.0, 0.0, 0.5, 1.0]`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>See <a href="/en-US/docs/Web/API/VRLayerInit#examples"><code>VRLayerInit</code></a> for example code.</p>
+See [`VRLayerInit`](/en-US/docs/Web/API/VRLayerInit#examples) for example code.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This property was part of the old <a href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</a> that has been superseded by the <a href="https://immersive-web.github.io/webxr/">WebXR Device API</a>. It is no longer on track to becoming a standard.</p>
-<p>Until all browsers have implemented the new <a href="/en-US/docs/Web/API/WebXR_Device_API/Fundamentals">WebXR APIs</a>, it is recommended to rely on frameworks, like <a href="https://aframe.io/">A-Frame</a>, <a href="https://www.babylonjs.com/">Babylon.js</a>, or <a href="https://threejs.org/">Three.js</a>, or a <a href="https://github.com/immersive-web/webxr-polyfill">polyfill</a>, to develop WebXR applications that will work across all browsers <a href="https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/">[1]</a>.</p>
+This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) that has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/). It is no longer on track to becoming a standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals), it is recommended to rely on frameworks, like [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), or [Three.js](https://threejs.org/), or a [polyfill](https://github.com/immersive-web/webxr-polyfill), to develop WebXR applications that will work across all browsers [\[1\]](https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/).
 
-<p>{{Compat}}</p>
+## Browser compatibility
 
-<h2 id="See_also">See also</h2>
+{{Compat}}
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebVR_API">WebVR API homepage</a></li>
- <li><a href="https://mixedreality.mozilla.org/">https://mixedreality.mozilla.org/</a> — demos, downloads, and other resources from the Mozilla VR team.</li>
-</ul>
+## See also
+
+- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API)
+- <https://mixedreality.mozilla.org/> — demos, downloads, and other resources from the Mozilla VR team.

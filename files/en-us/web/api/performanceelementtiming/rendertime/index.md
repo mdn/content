@@ -9,42 +9,47 @@ tags:
   - PerformanceElementTiming
 browser-compat: api.PerformanceElementTiming.renderTime
 ---
-<div>{{DefaultAPISidebar("Element Timing")}}</div>
+{{DefaultAPISidebar("Element Timing")}}
 
-<p>The <strong><code>renderTime</code></strong> read-only property of the {{domxref("PerformanceElementTiming")}} interface returns the render time of the associated element.</p>
+The **`renderTime`** read-only property of the {{domxref("PerformanceElementTiming")}} interface returns the render time of the associated element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <var>renderTime</var> = <var>PerformanceElementTiming</var>.renderTime;</pre>
+    var renderTime = PerformanceElementTiming.renderTime;
 
-<h3>Value</h3>
-<p>A {{domxref("DOMHighResTimeStamp")}} with the render time of the element.</p>
+### Value
 
-<p>For images this will be the <strong>image rendering timestamp</strong>. This is defined as the next paint that occurs after the image becomes fully loaded. If the timing allow check fails (as defined by the <a href="/en-US/docs/Web/HTTP/Headers/Timing-Allow-Origin">Timing-allow-origin</a> header) this will return 0.</p>
+A {{domxref("DOMHighResTimeStamp")}} with the render time of the element.
 
-<p>For text nodes this will be the <strong>text rendering timestamp</strong>. This is defined as when the element becomes text painted.</p>
+For images this will be the **image rendering timestamp**. This is defined as the next paint that occurs after the image becomes fully loaded. If the timing allow check fails (as defined by the [Timing-allow-origin](/en-US/docs/Web/HTTP/Headers/Timing-Allow-Origin) header) this will return 0.
 
-<h2 id="Examples">Examples</h2>
+For text nodes this will be the **text rendering timestamp**. This is defined as when the element becomes text painted.
 
-<p>In this example calling <code>entry.renderTime</code> returns the render time of the image element.</p>
+## Examples
 
-<pre class="brush:html">&lt;img src="image.jpg" alt="a nice image" elementtiming="big-image" id="myImage"&gt;</pre>
+In this example calling `entry.renderTime` returns the render time of the image element.
 
-<pre class="brush:js">const observer = new PerformanceObserver((list) => {
+```html
+<img src="image.jpg" alt="a nice image" elementtiming="big-image" id="myImage">
+```
+
+```js
+const observer = new PerformanceObserver((list) => {
   let entries = list.getEntries().forEach(function (entry) {
     if (entry.identifier === "big-image") {
       console.log(entry.renderTime);
     }
   });
 });
-observer.observe({ entryTypes: ["element"] });</pre>
+observer.observe({ entryTypes: ["element"] });
+```
 
-<div class="notecard note"><p><strong>Note:</strong> This example uses the {{domxref("PerformanceObserver")}} interface to create a list of performance measurement events. In our case we observe the {{domxref("PerformanceEntry.entrytype")}} <code>element</code> in order to use the <code>PerformanceElementTiming</code> interface.</p></div>
+> **Note:** This example uses the {{domxref("PerformanceObserver")}} interface to create a list of performance measurement events. In our case we observe the {{domxref("PerformanceEntry.entrytype")}} `element` in order to use the `PerformanceElementTiming` interface.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

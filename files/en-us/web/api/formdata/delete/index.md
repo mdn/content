@@ -11,53 +11,52 @@ tags:
   - delete
 browser-compat: api.FormData.delete
 ---
-<p>{{APIRef("XMLHttpRequest")}}</p>
+{{APIRef("XMLHttpRequest")}}
 
-<p>The <code><strong>delete()</strong></code> method of the {{domxref("FormData")}} interface deletes a key and its value(s) from a <code>FormData</code> object.</p>
+The **`delete()`** method of the {{domxref("FormData")}} interface deletes a key and its value(s) from a `FormData` object.
 
-<div class="note">
-<p><strong>Note:</strong> This method is available in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
-</div>
+> **Note:** This method is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">formData.delete(name);</pre>
+```js
+formData.delete(name);
+```
 
-<h3 id="append()_Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-	<dt><code>name</code></dt>
-	<dd>The name of the key you want to delete.</dd>
-</dl>
+- `name`
+  - : The name of the key you want to delete.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>Void.</p>
+Void.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following line creates an empty <code>FormData</code> object and prepopulates it with key/value pairs from a form:</p>
+The following line creates an empty `FormData` object and prepopulates it with key/value pairs from a form:
 
-<pre class="brush: js">var formData = new FormData(myForm);</pre>
+```js
+var formData = new FormData(myForm);
+```
 
-<p>You can delete keys and their values using <code>delete()</code>:</p>
+You can delete keys and their values using `delete()`:
 
-<pre class="brush: js">formData.delete('username');
-</pre>
+```js
+formData.delete('username');
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{domxref("XMLHTTPRequest")}}</li>
-	<li><a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest" title="Using XMLHttpRequest">Using XMLHttpRequest</a></li>
-	<li><a href="/en-US/docs/Web/API/FormData/Using_FormData_Objects">Using FormData objects</a></li>
-	<li>{{HTMLElement("Form")}}</li>
-</ul>
+- {{domxref("XMLHTTPRequest")}}
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest "Using XMLHttpRequest")
+- [Using FormData objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)
+- {{HTMLElement("Form")}}

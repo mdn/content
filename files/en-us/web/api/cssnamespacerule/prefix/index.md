@@ -2,41 +2,47 @@
 title: CSSNamespaceRule.prefix
 slug: Web/API/CSSNamespaceRule/prefix
 tags:
-- API
-- CSSNamespaceRule
-- CSSOM
-- Property
-- Reference
-- prefix
+  - API
+  - CSSNamespaceRule
+  - CSSOM
+  - Property
+  - Reference
+  - prefix
 browser-compat: api.CSSNamespaceRule.prefix
 ---
-<p>{{ APIRef("CSSOM") }}</p>
+{{ APIRef("CSSOM") }}
 
-<p>The read-only <strong><code>prefix</code></strong> property of the {{domxref("CSSNamespaceRule")}} returns a {{domxref("DOMString")}} with the name of the prefix associated to this namespace. If there is no such prefix, it returns an empty string.</p>
+The read-only **`prefix`** property of the {{domxref("CSSNamespaceRule")}} returns a {{domxref("DOMString")}} with the name of the prefix associated to this namespace. If there is no such prefix, it returns an empty string.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>prefix</em> = CSSNamespaceRule.prefix</pre>
+```js
+var prefix = CSSNamespaceRule.prefix
+```
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A {{domxref("DOMString")}} containing the prefix associated to this namespace. If there is no prefix an empty string.</p>
+A {{domxref("DOMString")}} containing the prefix associated to this namespace. If there is no prefix an empty string.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The stylesheet includes two namespace rules. The first has no prefix the second the prefix <code>svg</code>. Two <code>CSSNamespaceRule</code> objects will be returned. The value of the <code>prefix</code> property for the first will be an empty string, for the second <code>svg</code>.</p>
+The stylesheet includes two namespace rules. The first has no prefix the second the prefix `svg`. Two `CSSNamespaceRule` objects will be returned. The value of the `prefix` property for the first will be an empty string, for the second `svg`.
 
-<pre class="brush:css">@namespace url(http://www.w3.org/1999/xhtml);
-@namespace svg url(http://www.w3.org/2000/svg);</pre>
+```css
+@namespace url(http://www.w3.org/1999/xhtml);
+@namespace svg url(http://www.w3.org/2000/svg);
+```
 
-<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
+```js
+let myRules = document.styleSheets[0].cssRules;
 console.log(myRules[0].namespaceURI); an empty string ""
-console.log(myRules[1].namespaceURI); "svg"</pre>
+console.log(myRules[1].namespaceURI); "svg"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -9,33 +9,31 @@ tags:
   - SerialPort
 browser-compat: api.SerialPort.getInfo
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("Serial API")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("Serial API")}}
 
-<p>The <strong><code>SerialPort.getInfo()</code></strong> method of the {{domxref("SerialPort")}} interface returns a {{jsxref("Promise")}} that resolves with an object containing properties of the port.</p>
+The **`SerialPort.getInfo()`** method of the {{domxref("SerialPort")}} interface returns a {{jsxref("Promise")}} that resolves with an object containing properties of the port.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox notranslate">var <var>promise</var> = <var>SerialPort</var>.getInfo();</pre>
+    var promise = SerialPort.getInfo();
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Returns">Return value</h3>
+### Return value
 
-<p>An object containing the following values.</p>
+An object containing the following values.
 
-<dl>
-  <dt><code>usbVendorId</code></dt>
-  <dd>If the port is part of a USB device, an unsigned short integer that identifies a USB device vendor, otherwise <code>undefined</code>.</dd>
-  <dt><code>usbProductId</code></dt>
-  <dd>If the port is part of a USB device, an unsigned short integer that identiffies a USB device, otherwise <code>undefined</code>.</dd>
-</dl>
+- `usbVendorId`
+  - : If the port is part of a USB device, an unsigned short integer that identifies a USB device vendor, otherwise `undefined`.
+- `usbProductId`
+  - : If the port is part of a USB device, an unsigned short integer that identiffies a USB device, otherwise `undefined`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

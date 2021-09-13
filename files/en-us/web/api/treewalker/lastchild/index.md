@@ -2,46 +2,46 @@
 title: TreeWalker.lastChild()
 slug: Web/API/TreeWalker/lastChild
 tags:
-- API
-- DOM
-- DOM Reference
-- Method
-- TreeWalker
+  - API
+  - DOM
+  - DOM Reference
+  - Method
+  - TreeWalker
 browser-compat: api.TreeWalker.lastChild
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p>The <strong><code>TreeWalker.lastChild()</code></strong> method moves the current
-  {{domxref("Node")}} to the last <em>visible</em> child of the current node, and returns
-  the found child. It also moves the current node to this child. If no such child exists,
-  returns <code>null</code> and the current node is not changed.</p>
+The **`TreeWalker.lastChild()`** method moves the current
+{{domxref("Node")}} to the last _visible_ child of the current node, and returns
+the found child. It also moves the current node to this child. If no such child exists,
+returns `null` and the current node is not changed.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>node</em> = <em>treeWalker</em>.lastChild();
-</pre>
+```js
+node = treeWalker.lastChild();
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var treeWalker = document.createTreeWalker(
+```js
+var treeWalker = document.createTreeWalker(
     document.body,
     NodeFilter.SHOW_ELEMENT,
     { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
     false
 );
 var node = treeWalker.lastChild(); // returns the last visible child of the root element
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("TreeWalker")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("TreeWalker")}} interface it belongs to.

@@ -13,48 +13,43 @@ tags:
   - touch
 browser-compat: api.TouchEvent.changedTouches
 ---
-<div>{{ APIRef("Touch Events") }}</div>
+{{ APIRef("Touch Events") }}
 
-<p>The <code><strong>changedTouches</strong></code> read-only property is a {{ domxref("TouchList") }} whose touch points ({{domxref("Touch")}} objects) varies depending on the event type, as follows:</p>
+The **`changedTouches`** read-only property is a {{ domxref("TouchList") }} whose touch points ({{domxref("Touch")}} objects) varies depending on the event type, as follows:
 
-<ul>
- <li>For the {{event("touchstart")}} event, it is a list of the touch points that became active with the current event.</li>
- <li>For the {{event("touchmove")}} event, it is a list of the touch points that have changed since the last event.</li>
- <li>For the {{event("touchend")}} event, it is a list of the touch points that have been removed from the surface (that is, the set of touch points corresponding to fingers no longer touching the surface).</li>
-</ul>
+- For the {{event("touchstart")}} event, it is a list of the touch points that became active with the current event.
+- For the {{event("touchmove")}} event, it is a list of the touch points that have changed since the last event.
+- For the {{event("touchend")}} event, it is a list of the touch points that have been removed from the surface (that is, the set of touch points corresponding to fingers no longer touching the surface).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="eval">var <em>changes</em> = <em>touchEvent</em>.changedTouches;
-</pre>
+    var changes = touchEvent.changedTouches;
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<dl>
- <dt><code>changes</code></dt>
- <dd>A {{ domxref("TouchList") }} whose {{ domxref("Touch") }} objects include all the touch points that contributed to this touch event.</dd>
-</dl>
+- `changes`
+  - : A {{ domxref("TouchList") }} whose {{ domxref("Touch") }} objects include all the touch points that contributed to this touch event.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example illustrates the {{domxref("TouchEvent")}} object's {{domxref("TouchEvent.changedTouches")}} property. The {{domxref("TouchEvent.changedTouches")}} property is a {{domxref("TouchList")}} object that contains one {{domxref("Touch")}} object for each touch point which contributed to the event.</p>
+This example illustrates the {{domxref("TouchEvent")}} object's {{domxref("TouchEvent.changedTouches")}} property. The {{domxref("TouchEvent.changedTouches")}} property is a {{domxref("TouchList")}} object that contains one {{domxref("Touch")}} object for each touch point which contributed to the event.
 
-<p>In following code snippet, the {{event("touchmove")}} event handler iterates through the <code>changedTouches</code> list and prints the identifier of each touch point that changed since the last event.</p>
+In following code snippet, the {{event("touchmove")}} event handler iterates through the `changedTouches` list and prints the identifier of each touch point that changed since the last event.
 
-<pre class="brush: js">someElement.addEventListener('touchmove', function(e) {
+```js
+someElement.addEventListener('touchmove', function(e) {
    // Iterate through the list of touch points that changed
    // since the last event and print each touch point's identifier.
-   for (var i=0; i &lt; e.changedTouches.length; i++) {
+   for (var i=0; i < e.changedTouches.length; i++) {
      console.log("changedTouches[" + i + "].identifier = " + e.changedTouches[i].identifier);
    }
 }, false);
+```
 
-</pre>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

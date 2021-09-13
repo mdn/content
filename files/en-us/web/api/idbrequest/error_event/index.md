@@ -8,42 +8,43 @@ tags:
   - Reference
 browser-compat: api.IDBRequest.error_event
 ---
-<p>{{APIRef("IndexedDB")}}</p>
+{{APIRef("IndexedDB")}}
 
-<p>The <code>error</code> handler is executed when an error caused a request to fail.</p>
+The `error` handler is executed when an error caused a request to fail.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{DOMxRef("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{DOMxRef("IDBRequest.onerror", "onerror")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{DOMxRef("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>{{DOMxRef("IDBRequest.onerror", "onerror")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example opens a database and tries to add a record, listening for the <code>error</code> event for the <code>add()</code> operation (this will occur if, for example, a record with the given <code>taskTitle</code> already exists):</p>
+This example opens a database and tries to add a record, listening for the `error` event for the `add()` operation (this will occur if, for example, a record with the given `taskTitle` already exists):
 
-<pre class="brush: js;">// Open the database
+```js
+// Open the database
 const DBOpenRequest = window.indexedDB.open('toDoList', 4);
 
-DBOpenRequest.addEventListener('upgradeneeded', event =&gt; {
+DBOpenRequest.addEventListener('upgradeneeded', event => {
   const db = event.target.result;
 
-  db.onerror = () =&gt; {
+  db.onerror = () => {
     console.log('Error creating database');
   };
 
@@ -58,7 +59,7 @@ DBOpenRequest.addEventListener('upgradeneeded', event =&gt; {
   objectStore.createIndex('year', 'year', { unique: false });
 });
 
-DBOpenRequest.addEventListener('success', event =&gt; {
+DBOpenRequest.addEventListener('success', event => {
   const db = DBOpenRequest.result;
 
   // open a read/write db transaction, ready for adding the data
@@ -67,21 +68,22 @@ DBOpenRequest.addEventListener('success', event =&gt; {
   const newItem = { taskTitle: 'my task', hours: 10, minutes: 10, day: 10, month: 'January', year: 2020 };
 
   const objectStoreRequest = objectStore.add(newItem);
-  objectStoreRequest.addEventListener('error', () =&gt; {
+  objectStoreRequest.addEventListener('error', () => {
     console.log(`Error adding new item: ${newItem.taskTitle}`);
   });
 });
-</pre>
+```
 
-<p>The same example, using the <code>onerror</code> property instead of <code>addEventListener()</code>:</p>
+The same example, using the `onerror` property instead of `addEventListener()`:
 
-<pre class="brush: js;">// Open the database
+```js
+// Open the database
 const DBOpenRequest = window.indexedDB.open('toDoList', 4);
 
-DBOpenRequest.onupgradeneeded = event =&gt; {
+DBOpenRequest.onupgradeneeded = event => {
   const db = event.target.result;
 
-  db.onerror = () =&gt; {
+  db.onerror = () => {
     console.log('Error creating database');
   };
 
@@ -96,7 +98,7 @@ DBOpenRequest.onupgradeneeded = event =&gt; {
   objectStore.createIndex('year', 'year', { unique: false });
 };
 
-DBOpenRequest.onsuccess = event =&gt; {
+DBOpenRequest.onsuccess = event => {
   const db = DBOpenRequest.result;
 
   // open a read/write db transaction, ready for adding the data
@@ -105,18 +107,17 @@ DBOpenRequest.onsuccess = event =&gt; {
   const newItem = { taskTitle: 'my task', hours: 10, minutes: 10, day: 10, month: 'January', year: 2020 };
 
   const objectStoreRequest = objectStore.add(newItem);
-  objectStoreRequest.onerror = () =&gt; {
+  objectStoreRequest.onerror = () => {
     console.log(`Error adding new item: ${newItem.taskTitle}`);
   };
-};</pre>
+};
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
- <li>{{DOMxRef("IDBRequest.onerror", "onerror")}} event handler property</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- {{DOMxRef("IDBRequest.onerror", "onerror")}} event handler property

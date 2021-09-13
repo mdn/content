@@ -9,45 +9,41 @@ tags:
   - SVG DOM
 browser-compat: api.SVGGlyphRefElement
 ---
-<div>{{APIRef("SVG")}}{{deprecated_header}}</div>
+{{APIRef("SVG")}}{{deprecated_header}}
 
-<p>The <strong><code>SVGGlyphRefElement</code></strong> interface corresponds to the {{SVGElement("glyphRef")}} elements.</p>
+The **`SVGGlyphRefElement`** interface corresponds to the {{SVGElement("glyphRef")}} elements.
 
-<p>{{InheritanceDiagram(600, 140)}}</p>
+{{InheritanceDiagram(600, 140)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface also inherits properties from its parent, {{domxref("SVGElement")}}.</em></p>
+_This interface also inherits properties from its parent, {{domxref("SVGElement")}}._
 
-<dl>
- <dt>{{domxref("SVGGlyphRefElement.glyphRef")}}</dt>
- <dd>A {{domxref("DOMString")}} corresponding to the {{SVGAttr("glyphRef")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGGlyphRefElement.format")}}</dt>
- <dd>A {{domxref("DOMString")}} corresponding to the {{SVGAttr("format")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGGlyphRefElement.x")}}</dt>
- <dd>A float corresponding to the {{SVGAttr("x")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGGlyphRefElement.y")}}</dt>
- <dd>A float corresponding to the {{SVGAttr("y")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGGlyphRefElement.dx")}}</dt>
- <dd>A float corresponding to the {{SVGAttr("dx")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGGlyphRefElement.dy")}}</dt>
- <dd>A float corresponding to the {{SVGAttr("dy")}} attribute of the given element.</dd>
-</dl>
+- {{domxref("SVGGlyphRefElement.glyphRef")}}
+  - : A {{domxref("DOMString")}} corresponding to the {{SVGAttr("glyphRef")}} attribute of the given element.
+- {{domxref("SVGGlyphRefElement.format")}}
+  - : A {{domxref("DOMString")}} corresponding to the {{SVGAttr("format")}} attribute of the given element.
+- {{domxref("SVGGlyphRefElement.x")}}
+  - : A float corresponding to the {{SVGAttr("x")}} attribute of the given element.
+- {{domxref("SVGGlyphRefElement.y")}}
+  - : A float corresponding to the {{SVGAttr("y")}} attribute of the given element.
+- {{domxref("SVGGlyphRefElement.dx")}}
+  - : A float corresponding to the {{SVGAttr("dx")}} attribute of the given element.
+- {{domxref("SVGGlyphRefElement.dy")}}
+  - : A float corresponding to the {{SVGAttr("dy")}} attribute of the given element.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface has no methods but inherits methods from its parent, {{domxref("SVGElement")}}.</em></p>
+_This interface has no methods but inherits methods from its parent, {{domxref("SVGElement")}}._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGElement("glyphRef")}}</li>
-</ul>
+- {{SVGElement("glyphRef")}}

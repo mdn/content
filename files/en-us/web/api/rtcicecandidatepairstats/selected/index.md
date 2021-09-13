@@ -3,36 +3,39 @@ title: RTCIceCandidatePairStats.selected
 slug: Web/API/RTCIceCandidatePairStats/selected
 browser-compat: api.RTCIceCandidatePairStats.selected
 ---
-<p>{{APIRef("WebRTC")}}{{non-standard_header}}</p>
+{{APIRef("WebRTC")}}{{non-standard_header}}
 
-<p>The <em>non-standard</em>, Firefox-specific {{domxref("RTCIceCandidatePairStats")}} property <code><strong>selected</strong></code> indicates whether or not the candidate pair described by the object is the one currently being used to communicate with the remote peer.</p>
+The _non-standard_, Firefox-specific {{domxref("RTCIceCandidatePairStats")}} property **`selected`** indicates whether or not the candidate pair described by the object is the one currently being used to communicate with the remote peer.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>isSelected</em> = <em>icpStats</em>.selected;</pre>
+```js
+isSelected = icpStats.selected;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A Firefox-specific Boolean value which is <code>true</code> if the candidate pair described by this object is the one currently in use.</p>
+A Firefox-specific Boolean value which is `true` if the candidate pair described by this object is the one currently in use.
 
-<p>In any other browser, you can determine the selected candidate pair by looking for a stats object of type <code>transport</code>, which is an {{domxref("RTCTransportStats")}} object. That object's {{domxref("RTCTransportStats.selectedCandidatePairId", "selectedCandidatePairId")}} property indicates whether or not the specified transport is the one being used.</p>
+In any other browser, you can determine the selected candidate pair by looking for a stats object of type `transport`, which is an {{domxref("RTCTransportStats")}} object. That object's {{domxref("RTCTransportStats.selectedCandidatePairId", "selectedCandidatePairId")}} property indicates whether or not the specified transport is the one being used.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The function shown in this example identifies the currently-selected candidate pair from a statistics report by first iterating over each report, looking for a <code>transport</code> report; when one is found, that transport's {{domxref("RTCTransportStats.selectedCandidatePairId", "selectedCandidatePairId")}} is used to get the {{domxref("RTCIceCandidatePair")}} describing the connection.</p>
+The function shown in this example identifies the currently-selected candidate pair from a statistics report by first iterating over each report, looking for a `transport` report; when one is found, that transport's {{domxref("RTCTransportStats.selectedCandidatePairId", "selectedCandidatePairId")}} is used to get the {{domxref("RTCIceCandidatePair")}} describing the connection.
 
-<p>If that fails, then the second section iterates over the reports, looking for a <code>candidate-pair</code> record whose Firefox-specific {{domxref("RTCIceCandidatePairStats.selected", "selected")}} property is <code>true</code>. This candidate pair is then returned as the currently-selected one.</p>
+If that fails, then the second section iterates over the reports, looking for a `candidate-pair` record whose Firefox-specific {{domxref("RTCIceCandidatePairStats.selected", "selected")}} property is `true`. This candidate pair is then returned as the currently-selected one.
 
-<pre class="brush: js">function getCurrentCandidatePair(statsResults) {
-  statsResults.forEach(report =&gt; {
+```js
+function getCurrentCandidatePair(statsResults) {
+  statsResults.forEach(report => {
     if (report.type === "transport") {
       currentPair = statsResults.get(report.selectedCandidatePairId);
     }
   });
 
   if (!currentPair) {
-    statsResults.forEach(report =&gt; {
-      if (report.type === "candidate-pair" &amp;&amp; report.selected) {
+    statsResults.forEach(report => {
+      if (report.type === "candidate-pair" && report.selected) {
         currentPair = report;
       }
     });
@@ -40,12 +43,12 @@ browser-compat: api.RTCIceCandidatePairStats.selected
 
   return currentPair;
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any specification. This property is unique to Firefox.</p>
+Not part of any specification. This property is unique to Firefox.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

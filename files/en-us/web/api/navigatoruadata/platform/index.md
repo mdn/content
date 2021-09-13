@@ -9,29 +9,32 @@ tags:
   - NavigatorUAData
 browser-compat: api.NavigatorUAData.platform
 ---
-<div>{{DefaultAPISidebar("")}}</div>
+{{DefaultAPISidebar("")}}
 
-<p>The <strong><code>platform</code></strong> read-only property of the {{domxref("NavigatorUAData")}} interface returns the platform brand information.</p>
+The **`platform`** read-only property of the {{domxref("NavigatorUAData")}} interface returns the platform brand information.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let platform = NavigatorUAData.platform;</pre>
+```js
+let platform = NavigatorUAData.platform;
+```
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString","string")}} containing the platform brand. For example, <code>"Windows"</code>.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("DOMString","string")}} containing the platform brand. For example, `"Windows"`.
 
-<p>The following example prints the value of <code>platform</code> to the console.</p>
+## Examples
 
-<pre class="brush:js">console.log(navigator.userAgentData.platform);</pre>
+The following example prints the value of `platform` to the console.
 
-<h2 id="Specifications">Specifications</h2>
+```js
+console.log(navigator.userAgentData.platform);
+```
 
-<p>{{Specifications}}</p>
+## Specifications
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+{{Specifications}}
 
-<p>{{Compat}}</p>
+## Browser compatibility
 
-
+{{Compat}}

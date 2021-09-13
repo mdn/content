@@ -2,57 +2,57 @@
 title: RTCOutboundRtpStreamStats.qualityLimitationReason
 slug: Web/API/RTCOutboundRtpStreamStats/qualityLimitationReason
 tags:
-- API
-- Media
-- Property
-- Quality
-- RTCOutboundRtpStreamStats
-- Reference
-- Statistics
-- Stats
-- WebRTC
-- WebRTC API
-- qualityLimitationReason
-- reason
-- stream
+  - API
+  - Media
+  - Property
+  - Quality
+  - RTCOutboundRtpStreamStats
+  - Reference
+  - Statistics
+  - Stats
+  - WebRTC
+  - WebRTC API
+  - qualityLimitationReason
+  - reason
+  - stream
 browser-compat: api.RTCOutboundRtpStreamStats.qualityLimitationReason
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <strong><code>qualityLimitationReason</code></strong>
-    property of the {{domxref("RTCOutboundRtpStreamStats")}} dictionary is a string
-    indicating the reason why the media quality in the stream is currently being reduced
-    by the codec during encoding, or <code>none</code> if no quality reduction is being
-    performed.</p>
+The **`qualityLimitationReason`**
+property of the {{domxref("RTCOutboundRtpStreamStats")}} dictionary is a string
+indicating the reason why the media quality in the stream is currently being reduced
+by the codec during encoding, or `none` if no quality reduction is being
+performed.
 
-<p>This quality reduction may include changes such as reduced frame
-  rate or resolution, or an increase in compression factor.</p>
+This quality reduction may include changes such as reduced frame
+rate or resolution, or an increase in compression factor.
 
-<p>The amount of time the encoded media has had its quality reduced in each of the
-  potential ways that can be done can be found in
-  {{domxref("RTCOutboundRtpStreamStats.qualityLimitationDurations",
-  "qualityLimitationDurations")}}.</p>
+The amount of time the encoded media has had its quality reduced in each of the
+potential ways that can be done can be found in
+{{domxref("RTCOutboundRtpStreamStats.qualityLimitationDurations",
+  "qualityLimitationDurations")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>qualityLimitationReason</em> = <em>RTCOutboundRtpStreamStats</em>.qualityLimitationReason;</pre>
+```js
+var qualityLimitationReason = RTCOutboundRtpStreamStats.qualityLimitationReason;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{jsxref("Map")}} whose keys are {{domxref("DOMString")}}s whose values come from the
-  {{domxref("RTCQualityLimitationReason")}} enumerated type, and whose values are the
-  duration of the media, in seconds, whose quality was reduced for that reason.</p>
+A {{jsxref("Map")}} whose keys are {{domxref("DOMString")}}s whose values come from the
+{{domxref("RTCQualityLimitationReason")}} enumerated type, and whose values are the
+duration of the media, in seconds, whose quality was reduced for that reason.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
 
-<p class="brush: js"> </p>
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

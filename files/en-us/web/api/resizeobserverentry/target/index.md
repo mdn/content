@@ -2,54 +2,54 @@
 title: ResizeObserverEntry.target
 slug: Web/API/ResizeObserverEntry/target
 tags:
-- API
-- Bounding Box
-- Property
-- Reference
-- Resize Observer API
-- ResizeObserver
-- ResizeObserverEntry
-- content box
-- observers
-- target
+  - API
+  - Bounding Box
+  - Property
+  - Reference
+  - Resize Observer API
+  - ResizeObserver
+  - ResizeObserverEntry
+  - content box
+  - observers
+  - target
 browser-compat: api.ResizeObserverEntry.target
 ---
-<div>{{APIRef("Resize Observer API")}}</div>
+{{APIRef("Resize Observer API")}}
 
-<p>The <strong><code>target</code></strong> read-only property of the
-  {{domxref("ResizeObserverEntry")}} interface returns a reference to the
-  {{domxref('Element')}} or {{domxref('SVGElement')}} that is being observed.</p>
+The **`target`** read-only property of the
+{{domxref("ResizeObserverEntry")}} interface returns a reference to the
+{{domxref('Element')}} or {{domxref('SVGElement')}} that is being observed.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var element = ResizeObserverEntry.target;
+```js
+var element = ResizeObserverEntry.target;
 var svgElement = ResizeObserverEntry.target;
-</pre>
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref('Element')}} or {{domxref('SVGElement')}} representing the element being
-  observed.</p>
+An {{domxref('Element')}} or {{domxref('SVGElement')}} representing the element being
+observed.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following snippet is taken from the <a
-    href="https://mdn.github.io/dom-examples/resize-observer/resize-observer-border-radius.html">resize-observer-border-radius.html</a>
-  (<a
-    href="https://github.com/mdn/dom-examples/blob/master/resize-observer/resize-observer-border-radius.html">see
-    source</a>) example. This example includes a green box, sized as a percentage of the
-  viewport size. When the viewport size is changed, the box's rounded corners change in
-  proportion to the size of the box. We could just implement this using
-  {{cssxref("border-radius")}} with a percentage, but that quickly leads to ugly-looking
-  elliptical corners; this solution gives you nice square corners that scale with the box
-  size.</p>
+The following snippet is taken from the [resize-observer-border-radius.html](https://mdn.github.io/dom-examples/resize-observer/resize-observer-border-radius.html)
+([see
+source](https://github.com/mdn/dom-examples/blob/master/resize-observer/resize-observer-border-radius.html)) example. This example includes a green box, sized as a percentage of the
+viewport size. When the viewport size is changed, the box's rounded corners change in
+proportion to the size of the box. We could just implement this using
+{{cssxref("border-radius")}} with a percentage, but that quickly leads to ugly-looking
+elliptical corners; this solution gives you nice square corners that scale with the box
+size.
 
-<p>To grab a reference to the observed element so we can update its
-  {{cssxref("border-radius")}} value after each change, we make use of the
-  <code>target</code> property of each entry —
-   <code>entry.target.style.borderRadius</code>.</p>
+To grab a reference to the observed element so we can update its
+{{cssxref("border-radius")}} value after each change, we make use of the
+`target` property of each entry —
+ `entry.target.style.borderRadius`.
 
-<pre class="brush: js">const resizeObserver = new ResizeObserver(entries =&gt; {
+```js
+const resizeObserver = new ResizeObserver(entries => {
   for (let entry of entries) {
     if(entry.contentBoxSize) {
       entry.target.style.borderRadius = Math.min(100, (entry.contentBoxSize.inlineSize/10) +
@@ -61,12 +61,13 @@ var svgElement = ResizeObserverEntry.target;
   }
 });
 
-resizeObserver.observe(document.querySelector('div'));</pre>
+resizeObserver.observe(document.querySelector('div'));
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

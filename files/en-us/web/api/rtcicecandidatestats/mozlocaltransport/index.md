@@ -2,42 +2,42 @@
 title: RTCIceCandidateStats.mozLocalTransport
 slug: Web/API/RTCIceCandidateStats/mozLocalTransport
 tags:
-- API
-- Candidate
-- ICE
-- Media
-- Non-standard
-- Deprecated
-- Property
-- Protocol
-- RTCIceCandidate
-- RTCIceCandidateStats
-- Relay
-- Statistics
-- Stats
-- Transport
-- WebRTC
-- WebRTC API
-- mozLocalTransport
+  - API
+  - Candidate
+  - ICE
+  - Media
+  - Non-standard
+  - Deprecated
+  - Property
+  - Protocol
+  - RTCIceCandidate
+  - RTCIceCandidateStats
+  - Relay
+  - Statistics
+  - Stats
+  - Transport
+  - WebRTC
+  - WebRTC API
+  - mozLocalTransport
 ---
-<div>{{APIRef("WebRTC")}}{{deprecated_header}}{{non-standard_header}}</div>
+{{APIRef("WebRTC")}}{{deprecated_header}}{{non-standard_header}}
 
-<p>The non-standard Mozilla extension to the {{domxref("RTCIceCandidateStats")}}
-  dictionary, <code><strong>mozLocalTransport</strong></code>, has been supplanted by the
-  standard {{domxref("RTCIceCandidateStats.relayProtocol", "relayProtocol")}} property.
-</p>
+The non-standard Mozilla extension to the {{domxref("RTCIceCandidateStats")}}
+dictionary, **`mozLocalTransport`**, has been supplanted by the
+standard {{domxref("RTCIceCandidateStats.relayProtocol", "relayProtocol")}} property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>Instead of using <code>mozLocalTransport</code>, you should use code like this:</p>
+Instead of using `mozLocalTransport`, you should use code like this:
 
-<pre
-  class="brush: js"><em>localTransport</em> = <em>rtcIceCandidateStats</em>.relayProtocol;</pre>
+```js
+localTransport = rtcIceCandidateStats.relayProtocol;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any specification.</p>
+Not part of any specification.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.RTCIceCandidateStats.relayProtocol")}}</p>
+{{Compat("api.RTCIceCandidateStats.relayProtocol")}}

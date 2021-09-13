@@ -12,79 +12,80 @@ tags:
   - porting
   - webkitAudioContext
 ---
+In this article, we cover the differences in Web Audio API since it was first implemented in WebKit and how to update your code to use the modern Web Audio API.
 
-<p>In this article, we cover the differences in Web Audio API since it was first implemented in WebKit and how to update your code to use the modern Web Audio API.</p>
+The Web Audio standard was first implemented in [WebKit](http://webkit.org/), and the implementation was built in parallel with the work on the [specification](https://dvcs.w3.org/hg/audio/raw-file/tip/webaudio/specification.html) of the API. As the specification evolved and changes were made to the spec, some of the old implementation pieces were not removed from the WebKit (and Blink) implementations due to backwards compatibility reasons.
 
-<p>The Web Audio standard was first implemented in <a href="http://webkit.org/">WebKit</a>, and the implementation was built in parallel with the work on the <a href="https://dvcs.w3.org/hg/audio/raw-file/tip/webaudio/specification.html">specification</a> of the API. As the specification evolved and changes were made to the spec, some of the old implementation pieces were not removed from the WebKit (and Blink) implementations due to backwards compatibility reasons.</p>
+New engines implementing the Web Audio spec (such as Gecko) will only implement the official, final version of the specification, which means that code using `webkitAudioContext` or old naming conventions in the Web Audio specification may not immediately work out of the box in a compliant Web Audio implementation.  This article attempts to summarize the areas where developers are likely to encounter these problems and provide examples on how to port such code to standards based {{domxref("AudioContext")}}, which will work across different browser engines.
 
-<p>New engines implementing the Web Audio spec (such as Gecko) will only implement the official, final version of the specification, which means that code using <code>webkitAudioContext</code> or old naming conventions in the Web Audio specification may not immediately work out of the box in a compliant Web Audio implementation.  This article attempts to summarize the areas where developers are likely to encounter these problems and provide examples on how to port such code to standards based {{domxref("AudioContext")}}, which will work across different browser engines.</p>
+> **Note:** There is a library called [webkitAudioContext monkeypatch](https://github.com/cwilso/webkitAudioContext-MonkeyPatch), which automatically fixes some of these changes to make most code targeting `webkitAudioContext` to work on the standards based `AudioContext` out of the box, but it currently doesn't handle all of the cases below.  Please consult the [README file](https://github.com/cwilso/webkitAudioContext-MonkeyPatch/blob/gh-pages/README.md) for that library to see a list of APIs that are automatically handled by it.
 
-<div class="note">
-<p><strong>Note:</strong> There is a library called <a href="https://github.com/cwilso/webkitAudioContext-MonkeyPatch">webkitAudioContext monkeypatch</a>, which automatically fixes some of these changes to make most code targeting <code>webkitAudioContext</code> to work on the standards based <code>AudioContext</code> out of the box, but it currently doesn't handle all of the cases below.  Please consult the <a href="https://github.com/cwilso/webkitAudioContext-MonkeyPatch/blob/gh-pages/README.md">README file</a> for that library to see a list of APIs that are automatically handled by it.</p>
-</div>
+## Changes to the creator methods
 
-<h2 id="Changes_to_the_creator_methods">Changes to the creator methods</h2>
+Three of the creator methods on `webkitAudioContext` have been renamed in {{domxref("AudioContext")}}.
 
-<p>Three of the creator methods on <code>webkitAudioContext</code> have been renamed in {{domxref("AudioContext")}}.</p>
+- `createGainNode()` has been renamed to {{domxref("createGain")}}.
+- `createDelayNode()` has been renamed to {{domxref("createDelay")}}.
+- `createJavaScriptNode()` has been renamed to {{domxref("createScriptProcessor")}}.
 
-<ul>
- <li><code>createGainNode()</code> has been renamed to {{domxref("createGain")}}.</li>
- <li><code>createDelayNode()</code> has been renamed to {{domxref("createDelay")}}.</li>
- <li><code>createJavaScriptNode()</code> has been renamed to {{domxref("createScriptProcessor")}}.</li>
-</ul>
+These are simple renames that were made in order to improve the consistency of these method names on {{domxref("AudioContext")}}.  If your code uses either of these names, like in the example below :
 
-<p>These are simple renames that were made in order to improve the consistency of these method names on {{domxref("AudioContext")}}.  If your code uses either of these names, like in the example below :</p>
-
-<pre class="brush: js">// Old method names
+```js
+// Old method names
 var gain = context.createGainNode();
 var delay = context.createDelayNode();
 var js = context.createJavascriptNode(1024);
-</pre>
+```
 
-<p>you can rename the methods to look like this:</p>
+you can rename the methods to look like this:
 
-<pre class="brush: js">// New method names
+```js
+// New method names
 var gain = context.createGain();
 var delay = context.createDelay();
 var js = context.createScriptProcessor(1024);
-</pre>
+```
 
-<p>The semantics of these methods remain the same in the renamed versions.</p>
+The semantics of these methods remain the same in the renamed versions.
 
-<h2 id="Changes_to_starting_and_stopping_nodes">Changes to starting and stopping nodes</h2>
+## Changes to starting and stopping nodes
 
-<p>In <code>webkitAudioContext</code>, there are two ways to start and stop {{domxref("AudioBufferSourceNode")}} and {{domxref("OscillatorNode")}}: the <code>noteOn()</code> and <code>noteOff()</code> methods, and the <code>start()</code> and <code>stop()</code> methods.  ({{domxref("AudioBufferSourceNode ")}}has yet another way of starting output: the <code>noteGrainOn()</code> method.)  The <code>noteOn()</code>/<code>noteGrainOn()</code>/<code>noteOff()</code> methods were the original way to start/stop output in these nodes, and in the newer versions of the specification, the <code>noteOn()</code> and <code>noteGrainOn()</code> methods were consolidated into a single <code>start()</code> method, and the <code>noteOff()</code> method was renamed to the <code>stop()</code> method.</p>
+In `webkitAudioContext`, there are two ways to start and stop {{domxref("AudioBufferSourceNode")}} and {{domxref("OscillatorNode")}}: the `noteOn()` and `noteOff()` methods, and the `start()` and `stop()` methods.  ({{domxref("AudioBufferSourceNode ")}}has yet another way of starting output: the `noteGrainOn()` method.)  The `noteOn()`/`noteGrainOn()`/`noteOff()` methods were the original way to start/stop output in these nodes, and in the newer versions of the specification, the `noteOn()` and `noteGrainOn()` methods were consolidated into a single `start()` method, and the `noteOff()` method was renamed to the `stop()` method.
 
-<p>In order to port your code, you can just rename the method that you're using.  For example, if you have code like the below:</p>
+In order to port your code, you can just rename the method that you're using.  For example, if you have code like the below:
 
-<pre class="brush: js">var osc = context.createOscillator();
+```js
+var osc = context.createOscillator();
 osc.noteOn(1);
 osc.noteOff(1.5);
 
 var src = context.createBufferSource();
 src.noteGrainOn(1, 0.25);
 src.noteOff(2);
-</pre>
+```
 
-<p>you can change it like this in order to port it to the standard AudioContext API:</p>
+you can change it like this in order to port it to the standard AudioContext API:
 
-<pre class="brush: js">var osc = context.createOscillator();
+```js
+var osc = context.createOscillator();
 osc.start(1);
 osc.stop(1.5);
 
 var src = context.createBufferSource();
 src.start(1, 0.25);
-src.stop(2);</pre>
+src.stop(2);
+```
 
-<h2 id="Remove_synchronous_buffer_creation">Remove synchronous buffer creation</h2>
+## Remove synchronous buffer creation
 
-<p>In the old WebKit implementation of Web Audio, there were two versions of <code>createBuffer()</code>, one which created an initially empty buffer, and one which took an existing {{jsxref("ArrayBuffer")}} containing encoded audio, decoded it and returned the result in the form of an {{domxref("AudioBuffer")}}. The latter version of <code>createBuffer()</code> was potentially expensive, because it had to decode the audio buffer synchronously, and with the buffer being arbitrarily large, it could take a lot of time for this method to complete its work, and no other part of your web page's code could execute in the mean time.</p>
+In the old WebKit implementation of Web Audio, there were two versions of `createBuffer()`, one which created an initially empty buffer, and one which took an existing {{jsxref("ArrayBuffer")}} containing encoded audio, decoded it and returned the result in the form of an {{domxref("AudioBuffer")}}. The latter version of `createBuffer()` was potentially expensive, because it had to decode the audio buffer synchronously, and with the buffer being arbitrarily large, it could take a lot of time for this method to complete its work, and no other part of your web page's code could execute in the mean time.
 
-<p>Because of these problems, this version of the <code>createBuffer()</code> method has been removed, and you should use the asynchronous <code>decodeAudioData()</code> method instead.</p>
+Because of these problems, this version of the `createBuffer()` method has been removed, and you should use the asynchronous `decodeAudioData()` method instead.
 
-<p>The example below shows old code which downloads an audio file over the network, and then decoded it using <code>createBuffer()</code>:</p>
+The example below shows old code which downloads an audio file over the network, and then decoded it using `createBuffer()`:
 
-<pre class="brush: js">var xhr = new XMLHttpRequest();
+```js
+var xhr = new XMLHttpRequest();
 xhr.open("GET", "/path/to/audio.ogg", true);
 xhr.responseType = "arraybuffer";
 xhr.send();
@@ -96,11 +97,12 @@ xhr.onload = function() {
     alert("Decoding the audio buffer failed");
   }
 };
-</pre>
+```
 
-<p>Converting this code to use <code>decodeAudioData()</code> is relatively simple, as can be seen below:</p>
+Converting this code to use `decodeAudioData()` is relatively simple, as can be seen below:
 
-<pre class="brush: js">var xhr = new XMLHttpRequest();
+```js
+var xhr = new XMLHttpRequest();
 xhr.open("GET", "/path/to/audio.ogg", true);
 xhr.responseType = "arraybuffer";
 xhr.send();
@@ -110,33 +112,37 @@ xhr.onload = function() {
   }, function onFailure() {
     alert("Decoding the audio buffer failed");
   });
-};</pre>
+};
+```
 
-<p>Note that the <code>decodeAudioData()</code> method is asynchronous, which means that it will return immediately, and then when the decoding finishes, one of the success or failure callback functions will get called depending on whether the audio decoding was successful.  This means that you may need to restructure your code to run the part which happened after the <code>createBuffer()</code> call in the success callback, as you can see in the example above.</p>
+Note that the `decodeAudioData()` method is asynchronous, which means that it will return immediately, and then when the decoding finishes, one of the success or failure callback functions will get called depending on whether the audio decoding was successful.  This means that you may need to restructure your code to run the part which happened after the `createBuffer()` call in the success callback, as you can see in the example above.
 
-<h2 id="Renaming_of_AudioParam.setTargetValueAtTime">Renaming of AudioParam.setTargetValueAtTime</h2>
+## Renaming of AudioParam.setTargetValueAtTime
 
-<p>The <code>setTargetValueAtTime()</code> method on the {{domxref("AudioParam")}} interface has been renamed to <code>setTargetAtTime()</code>.  This is also a simple rename to improve the understandability of the API, and the semantics of the method are the same.  If your code is using <code>setTargetValueAtTime()</code>, you can rename it to use <code>setTargetAtTime()</code>. For example, if we have code that looks like this:</p>
+The `setTargetValueAtTime()` method on the {{domxref("AudioParam")}} interface has been renamed to `setTargetAtTime()`.  This is also a simple rename to improve the understandability of the API, and the semantics of the method are the same.  If your code is using `setTargetValueAtTime()`, you can rename it to use `setTargetAtTime()`. For example, if we have code that looks like this:
 
-<pre class="brush: js">  var gainNode = context.createGain();
+```js
+  var gainNode = context.createGain();
   gainNode.gain.setTargetValueAtTime(0.0, 10.0, 1.0);
-</pre>
+```
 
-<p>you can rename the method, and be compliant with the standard, like so:</p>
+you can rename the method, and be compliant with the standard, like so:
 
-<pre class="brush: js">  var gainNode = context.createGain();
+```js
+  var gainNode = context.createGain();
   gainNode.gain.setTargetAtTime(0.0, 10.0, 1.0);
-</pre>
+```
 
-<h2 id="Enumerated_values_that_changed">Enumerated values that changed</h2>
+## Enumerated values that changed
 
-<p>The original <code>webkitAudioContext</code> API used C-style number based enumerated values in the API.  Those values have since been changed to use the Web IDL based enumerated values, which should be familiar because they are similar to things like the {{domxref("HTMLInputElement")}} property {{domxref("HTMLInputElement.type", "type")}}.</p>
+The original `webkitAudioContext` API used C-style number based enumerated values in the API.  Those values have since been changed to use the Web IDL based enumerated values, which should be familiar because they are similar to things like the {{domxref("HTMLInputElement")}} property {{domxref("HTMLInputElement.type", "type")}}.
 
-<h3 id="OscillatorNode.type">OscillatorNode.type</h3>
+### OscillatorNode.type
 
-<p>{{domxref("OscillatorNode")}}'s type property has been changed to use Web IDL enums.  Old code using <code>webkitAudioContext</code> can be ported to standards based {{domxref("AudioContext")}} like below:</p>
+{{domxref("OscillatorNode")}}'s type property has been changed to use Web IDL enums.  Old code using `webkitAudioContext` can be ported to standards based {{domxref("AudioContext")}} like below:
 
-<pre class="brush: js">// Old webkitAudioContext code:
+```js
+// Old webkitAudioContext code:
 var osc = context.createOscillator();
 osc.type = osc.SINE;     // sine waveform
 osc.type = osc.SQUARE;   // square waveform
@@ -153,13 +159,14 @@ osc.type = "sawtooth";   // sawtooth waveform
 osc.type = "triangle";   // triangle waveform
 osc.setPeriodicWave(table);  // Note: setWaveTable has been renamed to setPeriodicWave!
 var isCustom = (osc.type == "custom"); // isCustom will be true
-</pre>
+```
 
-<h3 id="BiquadFilterNode.type">BiquadFilterNode.type</h3>
+### BiquadFilterNode.type
 
-<p>{{domxref("BiquadFilterNode")}}'s type property has been changed to use Web IDL enums.  Old code using <code>webkitAudioContext</code> can be ported to standards based {{domxref("AudioContext")}} like below:</p>
+{{domxref("BiquadFilterNode")}}'s type property has been changed to use Web IDL enums.  Old code using `webkitAudioContext` can be ported to standards based {{domxref("AudioContext")}} like below:
 
-<pre class="brush: js">// Old webkitAudioContext code:
+```js
+// Old webkitAudioContext code:
 var filter = context.createBiquadFilter();
 filter.type = filter.LOWPASS;   // lowpass filter
 filter.type = filter.HIGHPASS;  // highpass filter
@@ -180,13 +187,14 @@ filter.type = "highshelf";      // highshelf filter
 filter.type = "peaking";        // peaking filter
 filter.type = "notch";          // notch filter
 filter.type = "allpass";        // allpass filter
-</pre>
+```
 
-<h3 id="PannerNode.panningModel">PannerNode.panningModel</h3>
+### PannerNode.panningModel
 
-<p>{{domxref("PannerNode")}}'s panningModel property has been changed to use Web IDL enums.  Old code using <code>webkitAudioContext</code> can be ported to standards based {{domxref("AudioContext")}} like below:</p>
+{{domxref("PannerNode")}}'s panningModel property has been changed to use Web IDL enums.  Old code using `webkitAudioContext` can be ported to standards based {{domxref("AudioContext")}} like below:
 
-<pre class="brush: js">// Old webkitAudioContext code:
+```js
+// Old webkitAudioContext code:
 var panner = context.createPanner();
 panner.panningModel = panner.EQUALPOWER;  // equalpower panning
 panner.panningModel = panner.HRTF;        // HRTF panning
@@ -195,13 +203,14 @@ panner.panningModel = panner.HRTF;        // HRTF panning
 var panner = context.createPanner();
 panner.panningModel = "equalpower";       // equalpower panning
 panner.panningModel = "HRTF";             // HRTF panning
-</pre>
+```
 
-<h3 id="PannerNode.distanceModel">PannerNode.distanceModel</h3>
+### PannerNode.distanceModel
 
-<p>{{domxref("PannerNode")}}'s <code>distanceModel</code> property has been changed to use Web IDL enums.  Old code using <code>webkitAudioContext</code> can be ported to standards based {{domxref("AudioContext")}} like below:</p>
+{{domxref("PannerNode")}}'s `distanceModel` property has been changed to use Web IDL enums.  Old code using `webkitAudioContext` can be ported to standards based {{domxref("AudioContext")}} like below:
 
-<pre class="brush: js">// Old webkitAudioContext code:
+```js
+// Old webkitAudioContext code:
 var panner = context.createPanner();
 panner.distanceModel = panner.LINEAR_DISTANCE;      // linear distance model
 panner.distanceModel = panner.INVERSE_DISTANCE;     // inverse distance model
@@ -212,17 +221,18 @@ var panner = context.createPanner();
 panner.distanceModel = "linear";                    // linear distance model
 panner.distanceModel = "inverse";                   // inverse distance model
 panner.distanceModel = "exponential";               // exponential distance model
-</pre>
+```
 
-<h2 id="Gain_control_moved_to_its_own_node_type">Gain control moved to its own node type</h2>
+## Gain control moved to its own node type
 
-<p>The Web Audio standard now controls all gain using the {{domxref("GainNode")}}. Instead of setting a <code>gain</code> property directly on an audio source, you connect the source to a gain node and then control the gain using that node's <code>gain</code> parameter.</p>
+The Web Audio standard now controls all gain using the {{domxref("GainNode")}}. Instead of setting a `gain` property directly on an audio source, you connect the source to a gain node and then control the gain using that node's `gain` parameter.
 
-<h3 id="AudioBufferSourceNode">AudioBufferSourceNode</h3>
+### AudioBufferSourceNode
 
-<p>The <code>gain</code> attribute of {{domxref("AudioBufferSourceNode")}} has been removed.  The same functionality can be achieved by connecting the {{domxref("AudioBufferSourceNode")}} to a gain node.  See the following example:</p>
+The `gain` attribute of {{domxref("AudioBufferSourceNode")}} has been removed.  The same functionality can be achieved by connecting the {{domxref("AudioBufferSourceNode")}} to a gain node.  See the following example:
 
-<pre class="brush: js">// Old webkitAudioContext code:
+```js
+// Old webkitAudioContext code:
 var src = context.createBufferSource();
 src.buffer = someBuffer;
 src.gain.value = 0.5;
@@ -237,13 +247,14 @@ src.connect(gain);
 gain.gain.value = 0.5;
 gain.connect(context.destination);
 src.start(0);
-</pre>
+```
 
-<h3 id="AudioBuffer">AudioBuffer</h3>
+### AudioBuffer
 
-<p>The <code>gain</code> attribute of {{domxref("AudioBuffer")}} has been removed.  The same functionality can be achieved by connecting the {{domxref("AudioBufferSourceNode")}} that owns the buffer to a gain node.  See the following example:</p>
+The `gain` attribute of {{domxref("AudioBuffer")}} has been removed.  The same functionality can be achieved by connecting the {{domxref("AudioBufferSourceNode")}} that owns the buffer to a gain node.  See the following example:
 
-<pre class="brush: js">// Old webkitAudioContext code:
+```js
+// Old webkitAudioContext code:
 var src = context.createBufferSource();
 src.buffer = someBuffer;
 src.buffer.gain = 0.5;
@@ -258,36 +269,37 @@ src.connect(gain);
 gain.gain.value = 0.5;
 gain.connect(context.destination);
 src.start(0);
-</pre>
+```
 
-<h2 id="Removal_of_AudioBufferSourceNode.looping">Removal of AudioBufferSourceNode.looping</h2>
+## Removal of AudioBufferSourceNode.looping
 
-<p>The <code>looping</code> attribute of {{domxref("AudioBufferSourceNode")}} has been removed.  This attribute was an alias of the <code>loop</code> attribute, so you can just use the <code>loop</code> attribute instead. Instead of having code like this:</p>
+The `looping` attribute of {{domxref("AudioBufferSourceNode")}} has been removed.  This attribute was an alias of the `loop` attribute, so you can just use the `loop` attribute instead. Instead of having code like this:
 
-<pre class="brush: js">var source = context.createBufferSource();
+```js
+var source = context.createBufferSource();
 source.looping = true;
-</pre>
+```
 
-<p>you can change it to respect the last version of the specification:</p>
+you can change it to respect the last version of the specification:
 
-<pre class="brush: js">var source = context.createBufferSource();
+```js
+var source = context.createBufferSource();
 source.loop = true;
-</pre>
+```
 
-<p>Note, the <code>loopStart</code> and <code>loopEnd</code> attributes are not supported in <code>webkitAudioContext</code>.</p>
+Note, the `loopStart` and `loopEnd` attributes are not supported in `webkitAudioContext`.
 
-<h2 id="Changes_to_determining_playback_state">Changes to determining playback state</h2>
+## Changes to determining playback state
 
-<p>The <code>playbackState</code> attribute of {{domxref("AudioBufferSourceNode")}} and {{domxref("OscillatorNode")}} has been removed.  Depending on why you used this attribute, you can use the following techniques to get the same information:</p>
+The `playbackState` attribute of {{domxref("AudioBufferSourceNode")}} and {{domxref("OscillatorNode")}} has been removed.  Depending on why you used this attribute, you can use the following techniques to get the same information:
 
-<ul>
- <li>If you need to compare this attribute to <code>UNSCHEDULED_STATE</code>, you can basically remember whether you've called <code>start()</code> on the node or not.</li>
- <li>If you need to compare this attribute to <code>SCHEDULED_STATE</code>, you can basically remember whether you've called <code>start()</code> on the node or not.  You can compare the value of {{domxref("AudioContext.currentTime")}} to the first argument passed to <code>start()</code> to know whether playback has started or not.</li>
- <li>If you need to compare this attribute to <code>PLAYING_STATE</code>, you can compare the value of {{domxref("AudioContext.currentTime")}} to the first argument passed to <code>start()</code> to know whether playback has started or not.</li>
- <li>If you need to know when playback of the node is finished (which is the most significant use case of <code>playbackState</code>), there is a new ended event which you can use to know when playback is finished.  Please see this code example:</li>
-</ul>
+- If you need to compare this attribute to `UNSCHEDULED_STATE`, you can basically remember whether you've called `start()` on the node or not.
+- If you need to compare this attribute to `SCHEDULED_STATE`, you can basically remember whether you've called `start()` on the node or not.  You can compare the value of {{domxref("AudioContext.currentTime")}} to the first argument passed to `start()` to know whether playback has started or not.
+- If you need to compare this attribute to `PLAYING_STATE`, you can compare the value of {{domxref("AudioContext.currentTime")}} to the first argument passed to `start()` to know whether playback has started or not.
+- If you need to know when playback of the node is finished (which is the most significant use case of `playbackState`), there is a new ended event which you can use to know when playback is finished.  Please see this code example:
 
-<pre class="brush: js">// Old webkitAudioContext code:
+```js
+// Old webkitAudioContext code:
 var src = context.createBufferSource();
 // Some time later...
 var isFinished = (src.playbackState == src.FINISHED_STATE);
@@ -299,28 +311,30 @@ function endedHandler(event) {
 }
 var isFinished = false;
 src.onended = endedHandler;
-</pre>
+```
 
-<p>The exact same changes have been applied to both {{domxref("AudioBufferSourceNode")}} and {{domxref("OscillatorNode")}}, so you can apply the same techniques to both kinds of nodes.</p>
+The exact same changes have been applied to both {{domxref("AudioBufferSourceNode")}} and {{domxref("OscillatorNode")}}, so you can apply the same techniques to both kinds of nodes.
 
-<h2 id="Removal_of_AudioContext.activeSourceCount">Removal of AudioContext.activeSourceCount</h2>
+## Removal of AudioContext.activeSourceCount
 
-<p>The <code>activeSourceCount</code> attribute has been removed from {{domxref("AudioContext")}}.  If you need to count the number of playing source nodes, you can maintain the count by handling the ended event on the source nodes, as shown above.</p>
+The `activeSourceCount` attribute has been removed from {{domxref("AudioContext")}}.  If you need to count the number of playing source nodes, you can maintain the count by handling the ended event on the source nodes, as shown above.
 
-<p>Code using the <code>activeSourceCount</code> attribute of the {{domxref("AudioContext")}}, like this snippet:</p>
+Code using the `activeSourceCount` attribute of the {{domxref("AudioContext")}}, like this snippet:
 
-<pre class="brush: js">  var src0 = context.createBufferSource();
+```js
+  var src0 = context.createBufferSource();
   var src1 = context.createBufferSource();
   // Set buffers and other parameters...
   src0.start(0);
   src1.start(0);
   // Some time later...
   console.log(context.activeSourceCount);
-</pre>
+```
 
-<p>could be rewritten like that:</p>
+could be rewritten like that:
 
-<pre class="brush: js">  // Array to track the playing source nodes:
+```js
+  // Array to track the playing source nodes:
   var sources = [];
   // When starting the source, put it at the end of the array,
   // and set a handler to make sure it gets removed when the
@@ -346,13 +360,14 @@ src.onended = endedHandler;
   startSource(src1, 0);
   // Some time later, query the number of sources...
   console.log(activeSources());
-</pre>
+```
 
-<h2 id="Renaming_of_WaveTable">Renaming of WaveTable</h2>
+## Renaming of WaveTable
 
-<p>The {{domxref("WaveTable")}} interface has been renamed to {{domxref("PeriodicWave")}}.  Here is how you can port old code using <code>WaveTable</code> to the standard AudioContext API:</p>
+The {{domxref("WaveTable")}} interface has been renamed to {{domxref("PeriodicWave")}}.  Here is how you can port old code using `WaveTable` to the standard AudioContext API:
 
-<pre class="brush: js">// Old webkitAudioContext code:
+```js
+// Old webkitAudioContext code:
 var osc = context.createOscillator();
 var table = context.createWaveTable(realArray, imaginaryArray);
 osc.setWaveTable(table);
@@ -361,22 +376,20 @@ osc.setWaveTable(table);
 var osc = context.createOscillator();
 var table = context.createPeriodicWave(realArray, imaginaryArray);
 osc.setPeriodicWave(table);
-</pre>
+```
 
-<h2 id="Removal_of_some_of_the_AudioParam_read-only_attributes">Removal of some of the AudioParam read-only attributes</h2>
+## Removal of some of the AudioParam read-only attributes
 
-<p>The following read-only attributes have been removed from AudioParam: <code>name</code>, <code>units</code>, <code>minValue</code>, and <code>maxValue</code>.  These used to be informational attributes.  Here is some information on how you can get these values if you need them:</p>
+The following read-only attributes have been removed from AudioParam: `name`, `units`, `minValue`, and `maxValue`.  These used to be informational attributes.  Here is some information on how you can get these values if you need them:
 
-<ul>
- <li>The <code>name</code> attribute is a string representing the name of the {{domxref("AudioParam")}} object.  For example, the name of {{domxref("GainNode.gain")}} is <code>"gain"</code>.  You can track where the {{domxref("AudioParam")}} object is coming from in your code if you need this information.</li>
- <li>The <code>minValue</code> and <code>maxValue</code> attributes are read-only values representing the nominal range for the {{domxref("AudioParam")}}.  For example, for {{domxref("GainNode") }}, these values are 0 and 1, respectively.  Note that these bounds are not enforced by the engine, and are merely used for informational purposes.  As an example, it's perfectly valid to set a gain value to 2, or even -1.  In order to find out these nominal values, you can consult the <a href="https://dvcs.w3.org/hg/audio/raw-file/tip/webaudio/specification.html">specification</a>.</li>
- <li>The <code>units</code> attribute as implemented in <code>webkitAudioContext</code> implementations is unused, and always returns 0.  There is no reason why you should need this attribute.</li>
-</ul>
+- The `name` attribute is a string representing the name of the {{domxref("AudioParam")}} object.  For example, the name of {{domxref("GainNode.gain")}} is `"gain"`.  You can track where the {{domxref("AudioParam")}} object is coming from in your code if you need this information.
+- The `minValue` and `maxValue` attributes are read-only values representing the nominal range for the {{domxref("AudioParam")}}.  For example, for {{domxref("GainNode") }}, these values are 0 and 1, respectively.  Note that these bounds are not enforced by the engine, and are merely used for informational purposes.  As an example, it's perfectly valid to set a gain value to 2, or even -1.  In order to find out these nominal values, you can consult the [specification](https://dvcs.w3.org/hg/audio/raw-file/tip/webaudio/specification.html).
+- The `units` attribute as implemented in `webkitAudioContext` implementations is unused, and always returns 0.  There is no reason why you should need this attribute.
 
-<h2 id="Removal_of_MediaElementAudioSourceNode.mediaElement">Removal of MediaElementAudioSourceNode.mediaElement</h2>
+## Removal of MediaElementAudioSourceNode.mediaElement
 
-<p>The <code>mediaElement</code> attribute of {{domxref("MediaElementAudioSourceNode")}} has been removed.  You can keep a reference to the media element used to create this node if you need to access it later.</p>
+The `mediaElement` attribute of {{domxref("MediaElementAudioSourceNode")}} has been removed.  You can keep a reference to the media element used to create this node if you need to access it later.
 
-<h2 id="Removal_of_MediaStreamAudioSourceNode.mediaStream">Removal of MediaStreamAudioSourceNode.mediaStream</h2>
+## Removal of MediaStreamAudioSourceNode.mediaStream
 
-<p>The <code>mediaStream</code> attribute of {{domxref("MediaStreamAudioSourceNode")}} has been removed.  You can keep a reference to the media stream used to create this node if you need to access it later.</p>
+The `mediaStream` attribute of {{domxref("MediaStreamAudioSourceNode")}} has been removed.  You can keep a reference to the media stream used to create this node if you need to access it later.

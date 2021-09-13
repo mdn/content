@@ -2,53 +2,49 @@
 title: Node.parentElement
 slug: Web/API/Node/parentElement
 tags:
-- API
-- DOM
-- JavaScript
-- NeedsBrowserCompatibility
-- Node
-- Property
+  - API
+  - DOM
+  - JavaScript
+  - NeedsBrowserCompatibility
+  - Node
+  - Property
 browser-compat: api.Node.parentElement
 ---
-<div>
-  <div>{{APIRef("DOM")}}</div>
-</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>Node.parentElement</strong></code> read-only property returns the DOM
-  node's parent {{DOMxRef("Element")}}, or <code>null</code> if the node either has no
-  parent, or its parent isn't a DOM {{DOMxRef("Element")}}.</p>
+The **`Node.parentElement`** read-only property returns the DOM
+node's parent {{DOMxRef("Element")}}, or `null` if the node either has no
+parent, or its parent isn't a DOM {{DOMxRef("Element")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>parentElement</em> = <em>node</em>.parentElement</pre>
+```js
+parentElement = node.parentElement
+```
 
-<p><code>parentElement</code> is the parent element of the current node. This is always a
-  DOM {{DOMxRef("Element")}} object, or <code>null</code>.</p>
+`parentElement` is the parent element of the current node. This is always a
+DOM {{DOMxRef("Element")}} object, or `null`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">if (node.parentElement) {
+```js
+if (node.parentElement) {
     node.parentElement.style.color = "red";
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>On some browsers, the <code>parentElement</code> property is only defined on nodes that
-  are themselves an {{DOMxRef("Element")}}. In particular, it is not defined on text
-  nodes.</p>
+On some browsers, the `parentElement` property is only defined on nodes that
+are themselves an {{DOMxRef("Element")}}. In particular, it is not defined on text
+nodes.
 
-<div>
+{{Compat}}
 
-  <p>{{Compat}}</p>
-</div>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
-  <li>{{DOMxRef("Node.parentNode")}}</li>
-</ul>
+- {{DOMxRef("Node.parentNode")}}

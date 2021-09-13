@@ -10,61 +10,57 @@ tags:
   - cancel
 browser-compat: api.ReadableStreamDefaultReader.cancel
 ---
-<div>{{APIRef("Streams")}}</div>
+{{APIRef("Streams")}}
 
-<p>The <strong><code>cancel()</code></strong> method of the
-  {{domxref("ReadableStreamDefaultReader")}} interface returns a {{jsxref("Promise")}} that resolves when the stream is canceled. Calling this method signals a loss of interest in the stream by a consumer.</p>
+The **`cancel()`** method of the
+{{domxref("ReadableStreamDefaultReader")}} interface returns a {{jsxref("Promise")}} that resolves when the stream is canceled. Calling this method signals a loss of interest in the stream by a consumer.
 
-<p>Cancel is used when you've completely finished with the stream and don't need any more
-  data from it, even if there are chunks enqueued waiting to be read. That data is lost
-  after cancel is called, and the stream is not readable any more. To read those chunks
-  still and not completely get rid of the stream, you'd use
-  {{domxref("ReadableStreamDefaultController.close()")}}.</p>
+Cancel is used when you've completely finished with the stream and don't need any more
+data from it, even if there are chunks enqueued waiting to be read. That data is lost
+after cancel is called, and the stream is not readable any more. To read those chunks
+still and not completely get rid of the stream, you'd use
+{{domxref("ReadableStreamDefaultController.close()")}}.
 
-<div class="note"><p><strong>Note:</strong> If the reader is active, the
-  <code>cancel()</code> method behaves the same as that for the associated stream
-  ({{domxref("ReadableStream.cancel()")}}).</p></div>
+> **Note:** If the reader is active, the
+> `cancel()` method behaves the same as that for the associated stream
+> ({{domxref("ReadableStream.cancel()")}}).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>promise</em> = <em>readableStreamDefaultReader</em>.cancel(<em>reason</em>);</pre>
+```js
+var promise = readableStreamDefaultReader.cancel(reason);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>reason {{optional_inline}}</dt>
-  <dd>A human-readable reason for the cancellation. This value may or may not be used.
-  </dd>
-</dl>
+- reason {{optional_inline}}
+  - : A human-readable reason for the cancellation. This value may or may not be used.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}}, which fulfills with the value given in the <code>reason</code>
-  parameter.</p>
+A {{jsxref("Promise")}}, which fulfills with the value given in the `reason`
+parameter.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>TypeError</dt>
-  <dd>The source object is not a <code>ReadableStreamDefaultReader</code>, or the stream
-    has no owner.</dd>
-</dl>
+- TypeError
+  - : The source object is not a `ReadableStreamDefaultReader`, or the stream
+    has no owner.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the following simple example, a previously-created custom
-  <code>ReadableStream</code> is read using a {{domxref("ReadableStreamDefaultReader")}}
-  created using <code>getReader()</code>. (this code is based on our <a
-    href="https://mdn.github.io/dom-examples/streams/simple-random-stream/">Simple random
-    stream example</a>). Each chunk is read sequentially and output to the UI, until the
-  stream has finished being read, at which point we return out of the recursive function
-  and print the entire stream to another part of the UI.</p>
+In the following simple example, a previously-created custom
+`ReadableStream` is read using a {{domxref("ReadableStreamDefaultReader")}}
+created using `getReader()`. (this code is based on our [Simple random
+stream example](https://mdn.github.io/dom-examples/streams/simple-random-stream/)). Each chunk is read sequentially and output to the UI, until the
+stream has finished being read, at which point we return out of the recursive function
+and print the entire stream to another part of the UI.
 
-<p>When the stream is done (<code>if (done)</code>), we run <code>reader.cancel()</code>
-  to cancel the stream, signalling that we don't need to use it any more.</p>
+When the stream is done (`if (done)`), we run `reader.cancel()`
+to cancel the stream, signalling that we don't need to use it any more.
 
-<pre class="brush: js">function fetchStream() {
+```js
+function fetchStream() {
   const reader = stream.getReader();
   let charsReceived = 0;
 
@@ -93,12 +89,13 @@ browser-compat: api.ReadableStreamDefaultReader.cancel
     // Read some more, and call this function again
     return reader.read().then(processText);
   });
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

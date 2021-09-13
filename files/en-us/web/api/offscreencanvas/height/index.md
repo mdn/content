@@ -2,44 +2,45 @@
 title: OffscreenCanvas.height
 slug: Web/API/OffscreenCanvas/height
 tags:
-- API
-- Canvas
-- Experimental
-- OffscreenCanvas
-- Property
-- Reference
+  - API
+  - Canvas
+  - Experimental
+  - OffscreenCanvas
+  - Property
+  - Reference
 browser-compat: api.OffscreenCanvas.height
 ---
-<div>{{APIRef("Canvas API")}} {{SeeCompatTable}}</div>
+{{APIRef("Canvas API")}} {{SeeCompatTable}}
 
-<p>The <code><strong>height</strong></code> property returns and sets the height of an
-  {{domxref("OffscreenCanvas")}} object.</p>
+The **`height`** property returns and sets the height of an
+{{domxref("OffscreenCanvas")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>var <em>pxl</em> = <em>offscreen</em></var>.height;
-<em>offscreen</em>.height = <em>pxl</em>;</pre>
+```js
+var pxl = offscreen.height;
+offscreen.height = pxl;
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Creating a new offscreen canvas and returning or setting the height of the offscreen
-  canvas:</p>
+Creating a new offscreen canvas and returning or setting the height of the offscreen
+canvas:
 
-<pre class="brush: js">var offscreen = new OffscreenCanvas(256, 256);
+```js
+var offscreen = new OffscreenCanvas(256, 256);
 offscreen.height; // 256
 offscreen.height = 512;
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("OffscreenCanvas")}}, the interface this property belongs to.</li>
-</ul>
+- {{domxref("OffscreenCanvas")}}, the interface this property belongs to.

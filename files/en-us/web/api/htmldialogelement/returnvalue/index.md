@@ -2,62 +2,65 @@
 title: HTMLDialogElement.returnValue
 slug: Web/API/HTMLDialogElement/returnValue
 tags:
-- API
-- Experimental
-- HTML DOM
-- HTMLDialogElement
-- Property
-- Reference
-- returnValue
+  - API
+  - Experimental
+  - HTML DOM
+  - HTMLDialogElement
+  - Property
+  - Reference
+  - returnValue
 browser-compat: api.HTMLDialogElement.returnValue
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p>{{ SeeCompatTable() }}</p>
+{{ SeeCompatTable() }}
 
-<p>The <strong><code>returnValue</code></strong> property of the
-    {{domxref("HTMLDialogElement")}} interface gets or sets the return value for the
-    <code>&lt;dialog&gt;</code>, usually to indicate which button the user pressed to
-    close it.</p>
+The **`returnValue`** property of the
+{{domxref("HTMLDialogElement")}} interface gets or sets the return value for the
+`<dialog>`, usually to indicate which button the user pressed to
+close it.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">dialogInstance.returnValue = 'myReturnValue';
-var myReturnValue = dialogInstance.returnValue;</pre>
+```js
+dialogInstance.returnValue = 'myReturnValue';
+var myReturnValue = dialogInstance.returnValue;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} representing the <code>returnValue</code> of the dialog.</p>
+A {{domxref("DOMString")}} representing the `returnValue` of the dialog.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example displays a button to open a {{htmlelement("dialog")}} containing
-  a form via the <code>showModal()</code> method. From there, either button will close the
-  dialog.</p>
+The following example displays a button to open a {{htmlelement("dialog")}} containing
+a form via the `showModal()` method. From there, either button will close the
+dialog.
 
-<pre class="brush: html">  &lt;!-- Simple pop-up dialog box containing a form --&gt;
-  &lt;dialog id="favDialog"&gt;
-    &lt;form method="dialog"&gt;
-      &lt;p&gt;&lt;label&gt;Favorite animal:
-        &lt;select name="favAnimal" required&gt;
-          &lt;option&gt;&lt;/option&gt;
-          &lt;option&gt;Brine shrimp&lt;/option&gt;
-          &lt;option&gt;Red panda&lt;/option&gt;
-          &lt;option&gt;Spider monkey&lt;/option&gt;
-        &lt;/select&gt;
-      &lt;/label&gt;&lt;/p&gt;
-      &lt;menu&gt;
-        &lt;button&gt;Cancel&lt;/button&gt;
-        &lt;button&gt;Confirm&lt;/button&gt;
-      &lt;/menu&gt;
-    &lt;/form&gt;
-  &lt;/dialog&gt;
+```html
+  <!-- Simple pop-up dialog box containing a form -->
+  <dialog id="favDialog">
+    <form method="dialog">
+      <p><label>Favorite animal:
+        <select name="favAnimal" required>
+          <option></option>
+          <option>Brine shrimp</option>
+          <option>Red panda</option>
+          <option>Spider monkey</option>
+        </select>
+      </label></p>
+      <menu>
+        <button>Cancel</button>
+        <button>Confirm</button>
+      </menu>
+    </form>
+  </dialog>
 
-  &lt;menu&gt;
-    &lt;button id="updateDetails"&gt;Update details&lt;/button&gt;
-  &lt;/menu&gt;
+  <menu>
+    <button id="updateDetails">Update details</button>
+  </menu>
 
-  &lt;script&gt;
+  <script>
     (function() {
       var updateButton = document.getElementById('updateDetails');
       var dialog = document.getElementById('favDialog');
@@ -79,32 +82,28 @@ var myReturnValue = dialogInstance.returnValue;</pre>
         }
       }
 
-      // “Update details” button opens the &lt;dialog&gt; modally
+      // “Update details” button opens the <dialog> modally
       updateButton.addEventListener('click', function() {
         dialog.showModal();
         openCheck(dialog);
         handleUserInput(dialog.returnValue);
       });
     })();
-  &lt;/script&gt;</pre>
+  </script>
+```
 
-<div class="note">
-  <p><strong>Note:</strong> You can find this example on GitHub as <a
-      href="https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html">htmldialogelement-basic</a>
-    (<a href="https://mdn.github.io/dom-examples/htmldialogelement-basic/">see it live
-      also</a>).</p>
-</div>
+> **Note:** You can find this example on GitHub as [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html)
+> ([see it live
+> also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The HTML element implementing this interface: {{ HTMLElement("dialog") }}.</li>
-</ul>
+- The HTML element implementing this interface: {{ HTMLElement("dialog") }}.

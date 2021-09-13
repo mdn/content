@@ -2,95 +2,75 @@
 title: IDBIndex.getKey()
 slug: Web/API/IDBIndex/getKey
 tags:
-- API
-- Database
-- IDBIndex
-- IndexedDB
-- Method
-- Reference
-- Storage
+  - API
+  - Database
+  - IDBIndex
+  - IndexedDB
+  - Method
+  - Reference
+  - Storage
 browser-compat: api.IDBIndex.getKey
 ---
-<p>{{ APIRef("IndexedDB") }}</p>
+{{ APIRef("IndexedDB") }}
 
-<div>
-  <p>The <strong><code>getKey()</code></strong> method of the {{domxref("IDBIndex")}}
-    interface returns an {{domxref("IDBRequest")}} object, and, in a separate thread,
-    finds either the primary key that corresponds to the given key in this index or the
-    first corresponding primary key, if <code>key</code> is set to an
-    {{domxref("IDBKeyRange")}}.</p>
-</div>
+The **`getKey()`** method of the {{domxref("IDBIndex")}}
+interface returns an {{domxref("IDBRequest")}} object, and, in a separate thread,
+finds either the primary key that corresponds to the given key in this index or the
+first corresponding primary key, if `key` is set to an
+{{domxref("IDBKeyRange")}}.
 
-<p>If a primary key is found, it is set as the <code>result</code> of the request object.
-  Note that this doesn't return the whole record as {{domxref("IDBIndex.get")}} does.</p>
+If a primary key is found, it is set as the `result` of the request object.
+Note that this doesn't return the whole record as {{domxref("IDBIndex.get")}} does.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>request</em> = <em>myIndex</em>.getKey(<em>key</em>);</pre>
+```js
+var request = myIndex.getKey(key);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>key {{optional_inline}}</dt>
-  <dd>A key or {{domxref("IDBKeyRange")}} that identifies a record to be retrieved. If
-    this value is null or missing, the browser will use an unbound key range.</dd>
-</dl>
+- key {{optional_inline}}
+  - : A key or {{domxref("IDBKeyRange")}} that identifies a record to be retrieved. If
+    this value is null or missing, the browser will use an unbound key range.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An {{domxref("IDBRequest")}} object on which subsequent events related to this
-  operation are fired.</p>
+An {{domxref("IDBRequest")}} object on which subsequent events related to this
+operation are fired.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>This method may raise a {{domxref("DOMException")}} of one of the following types:</p>
+This method may raise a {{domxref("DOMException")}} of one of the following types:
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Exception</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>TransactionInactiveError</code></td>
-      <td>This IDBIndex's transaction is inactive.</td>
-    </tr>
-    <tr>
-      <td><code>DataError</code></td>
-      <td>The key or key range provided contains an invalid key.</td>
-    </tr>
-    <tr>
-      <td><code>InvalidStateError</code></td>
-      <td>The IDBIndex has been deleted or removed.</td>
-    </tr>
-  </tbody>
-</table>
+| Exception                  | Description                                            |
+| -------------------------- | ------------------------------------------------------ |
+| `TransactionInactiveError` | This IDBIndex's transaction is inactive.               |
+| `DataError`                | The key or key range provided contains an invalid key. |
+| `InvalidStateError`        | The IDBIndex has been deleted or removed.              |
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In the following example we open a transaction and an object store, then get the
-  index <code>lName</code> from a simple contacts database. We then open a basic cursor on
-  the index using {{domxref("IDBIndex.openCursor")}} — this works the same as opening a
-  cursor directly on an <code>ObjectStore</code> using
-  {{domxref("IDBObjectStore.openCursor")}} except that the returned records are sorted
-  based on the index, not the primary key.</p>
+In the following example we open a transaction and an object store, then get the
+index `lName` from a simple contacts database. We then open a basic cursor on
+the index using {{domxref("IDBIndex.openCursor")}} — this works the same as opening a
+cursor directly on an `ObjectStore` using
+{{domxref("IDBObjectStore.openCursor")}} except that the returned records are sorted
+based on the index, not the primary key.
 
-<p><code>myIndex.getKey('Bungle')</code> is then used to retrieve the primary key of the
-  record with an <code>lName</code> of <code>Bungle</code>, and the result of that request
-  is logged to the console when its success callback returns.</p>
+`myIndex.getKey('Bungle')` is then used to retrieve the primary key of the
+record with an `lName` of `Bungle`, and the result of that request
+is logged to the console when its success callback returns.
 
-<p>Finally, we iterate through each record, and insert the data into an HTML table. For a
-  complete working example, see our <a
-    href="https://github.com/mdn/indexeddb-examples/tree/master/idbindex">IndexedDB-examples
-    demo repo</a> (<a href="https://mdn.github.io/indexeddb-examples/idbindex">View the
-    example live</a>.)</p>
+Finally, we iterate through each record, and insert the data into an HTML table. For a
+complete working example, see our [IndexedDB-examples
+demo repo](https://github.com/mdn/indexeddb-examples/tree/master/idbindex) ([View the
+example live](https://mdn.github.io/indexeddb-examples/idbindex).)
 
-<pre class="brush: js">function displayDataByIndex() {
+```js
+function displayDataByIndex() {
   tableEntry.innerHTML = '';
   var transaction = db.transaction(['contactsList'], 'readonly');
   var objectStore = transaction.objectStore('contactsList');
@@ -105,14 +85,14 @@ browser-compat: api.IDBIndex.getKey
     var cursor = event.target.result;
     if(cursor) {
       var tableRow = document.createElement('tr');
-      tableRow.innerHTML =   '&lt;td&gt;' + cursor.value.id + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.lName + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.fName + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.jTitle + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.company + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.eMail + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.phone + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.age + '&lt;/td&gt;';
+      tableRow.innerHTML =   '<td>' + cursor.value.id + '</td>'
+                           + '<td>' + cursor.value.lName + '</td>'
+                           + '<td>' + cursor.value.fName + '</td>'
+                           + '<td>' + cursor.value.jTitle + '</td>'
+                           + '<td>' + cursor.value.company + '</td>'
+                           + '<td>' + cursor.value.eMail + '</td>'
+                           + '<td>' + cursor.value.phone + '</td>'
+                           + '<td>' + cursor.value.age + '</td>';
       tableEntry.appendChild(tableRow);
 
       cursor.continue();
@@ -120,27 +100,24 @@ browser-compat: api.IDBIndex.getKey
       console.log('Entries all displayed.');
     }
   };
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
-  <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
-  <li>Using transactions: {{domxref("IDBTransaction")}}</li>
-  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
-  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
-  <li>Using cursors: {{domxref("IDBCursor")}}</li>
-  <li>Reference example: <a class="external"
-      href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
-      Notifications</a> (<a class="external"
-      href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do
+  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

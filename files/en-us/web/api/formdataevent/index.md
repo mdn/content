@@ -10,41 +10,38 @@ tags:
   - Reference
 browser-compat: api.FormDataEvent
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>FormDataEvent</code></strong> interface represents a <a href="/en-US/docs/Web/API/HTMLFormElement/formdata_event"><code>formdata</code> event</a> — such an event is fired on an {{domxref("HTMLFormElement")}} object after the entry list representing the form's data is constructed. This happens when the form is submitted, but can also be triggered by the invocation of a {{domxref("FormData.FormData", "FormData()")}} constructor.</p>
+The **`FormDataEvent`** interface represents a [`formdata` event](/en-US/docs/Web/API/HTMLFormElement/formdata_event) — such an event is fired on an {{domxref("HTMLFormElement")}} object after the entry list representing the form's data is constructed. This happens when the form is submitted, but can also be triggered by the invocation of a {{domxref("FormData.FormData", "FormData()")}} constructor.
 
-<p>This allows a {{domxref("FormData")}} object to be quickly obtained in response to a <code>formdata</code> event firing, rather than needing to put it together yourself when you wish to submit form data via a method like {{domxref("XMLHttpRequest")}} (see <a href="/en-US/docs/Web/API/FormData/Using_FormData_Objects">Using FormData objects</a>).</p>
+This allows a {{domxref("FormData")}} object to be quickly obtained in response to a `formdata` event firing, rather than needing to put it together yourself when you wish to submit form data via a method like {{domxref("XMLHttpRequest")}} (see [Using FormData objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)).
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("FormDataEvent.FormDataEvent","FormDataEvent()")}}</dt>
- <dd>Creates a new <code>FormDataEvent</code> object instance.</dd>
-</dl>
+- {{domxref("FormDataEvent.FormDataEvent","FormDataEvent()")}}
+  - : Creates a new `FormDataEvent` object instance.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent interface, {{domxref("Event")}}.</em></p>
+_Inherits properties from its parent interface, {{domxref("Event")}}._
 
-<dl>
- <dt>{{domxref("FormDataEvent.formData")}}</dt>
- <dd>Contains the {{domxref("FormData")}} object representing the data contained in the form when the event was fired.</dd>
-</dl>
+- {{domxref("FormDataEvent.formData")}}
+  - : Contains the {{domxref("FormData")}} object representing the data contained in the form when the event was fired.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Inherits methods from its parent interface, {{domxref("Event")}}.</em></p>
+_Inherits methods from its parent interface, {{domxref("Event")}}._
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">// grab reference to form
+```js
+// grab reference to form
 
 const formElem = document.querySelector('form');
 
 // submit handler
 
-formElem.addEventListener('submit', (e) =&gt; {
+formElem.addEventListener('submit', (e) => {
   // on form submission, prevent default
   e.preventDefault();
 
@@ -54,7 +51,7 @@ formElem.addEventListener('submit', (e) =&gt; {
 
 // formdata handler to retrieve data
 
-formElem.addEventListener('formdata', (e) =&gt; {
+formElem.addEventListener('formdata', (e) => {
   console.log('formdata fired');
 
   // Get the form data from the event object
@@ -67,21 +64,20 @@ formElem.addEventListener('formdata', (e) =&gt; {
   var request = new XMLHttpRequest();
   request.open("POST", "/formHandler");
   request.send(data);
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("XMLHTTPRequest")}}</li>
- <li>{{domxref("FormData")}}</li>
- <li><a href="/en-US/docs/Web/API/FormData/Using_FormData_Objects">Using FormData objects</a></li>
- <li>{{HTMLElement("Form")}}</li>
-</ul>
+- {{domxref("XMLHTTPRequest")}}
+- {{domxref("FormData")}}
+- [Using FormData objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)
+- {{HTMLElement("Form")}}

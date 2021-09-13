@@ -2,49 +2,45 @@
 title: Performance.navigation
 slug: Web/API/Performance/navigation
 tags:
-- API
-- Backwards compatibility
-- Deprecated
-- HTTP
-- Navigation Timing
-- Performance
-- Property
-- Read-only
-- legacy
+  - API
+  - Backwards compatibility
+  - Deprecated
+  - HTTP
+  - Navigation Timing
+  - Performance
+  - Property
+  - Read-only
+  - legacy
 browser-compat: api.Performance.navigation
 ---
-<p>{{APIRef("Navigation Timing")}}{{Deprecated_Header}}</p>
+{{APIRef("Navigation Timing")}}{{Deprecated_Header}}
 
-<p>The legacy
-  <strong><code>Performance.navigation</code></strong>
-  read-only property returns a {{domxref("PerformanceNavigation")}} object representing
-  the type of navigation that occurs in the given browsing context, such as the number of
-  redirections needed to fetch the resource.</p>
+The legacy
+**`Performance.navigation`**
+read-only property returns a {{domxref("PerformanceNavigation")}} object representing
+the type of navigation that occurs in the given browsing context, such as the number of
+redirections needed to fetch the resource.
 
-<p>This property is not available in workers.</p>
+This property is not available in workers.
 
-<div class="warning">
-  <p><strong>Warning:</strong> This property is deprecated in the <a href="https://w3c.github.io/navigation-timing/#obsolete">
-     Navigation Timing Level 2 specification</a>. Please use the
-     {{domxref("PerformanceNavigationTiming")}} interface instead.</p>
-</div>
+> **Warning:** This property is deprecated in the [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete). Please use the
+> {{domxref("PerformanceNavigationTiming")}} interface instead.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>navObject</em> = <em>performance</em>.navigation;</pre>
+```js
+navObject = performance.navigation;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This feature is no longer on track to become a standard, as the <a href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing specification</a> has marked it as deprecated.
-  Use the {{domxref("PerformanceNavigationTiming")}} interface instead.</p>
+This feature is no longer on track to become a standard, as the [Navigation Timing specification](https://w3c.github.io/navigation-timing/#obsolete) has marked it as deprecated.
+Use the {{domxref("PerformanceNavigationTiming")}} interface instead.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("Performance")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("Performance")}} interface it belongs to.

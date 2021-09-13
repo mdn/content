@@ -2,75 +2,71 @@
 title: FileSystemEntry.isDirectory
 slug: Web/API/FileSystemEntry/isDirectory
 tags:
-- API
-- File and Directory Entries API
-- FileSystemEntry
-- Files
-- Offline
-- Property
-- Reference
-- isDirectory
+  - API
+  - File and Directory Entries API
+  - FileSystemEntry
+  - Files
+  - Offline
+  - Property
+  - Reference
+  - isDirectory
 browser-compat: api.FileSystemEntry.isDirectory
 ---
-<p>{{APIRef("File and Directory Entries API")}}</p>
+{{APIRef("File and Directory Entries API")}}
 
-<p>The read-only <strong><code>isDirectory</code></strong>
-    property of the {{domxref("FileSystemEntry")}} interface is <code>true</code> if the
-    entry represents a directory (meaning it's a {{domxref("FileSystemDirectoryEntry")}})
-    and <code>false</code> if it's not.</p>
+The read-only **`isDirectory`**
+property of the {{domxref("FileSystemEntry")}} interface is `true` if the
+entry represents a directory (meaning it's a {{domxref("FileSystemDirectoryEntry")}})
+and `false` if it's not.
 
-<p>You can also use {{domxref("FileSystemEntry.isFile", "isFile")}} to determine if the
-  entry is a file.</p>
+You can also use {{domxref("FileSystemEntry.isFile", "isFile")}} to determine if the
+entry is a file.
 
-<div class="warning">
-  <p><strong>Warning:</strong> You should not assume that any entry which isn't a directory is a file or vice-versa.
-    There are other types of file descriptors on many operating systems. Be sure to use
-    both <code>isDirectory</code> and <code>isFile</code> as needed to ensure that the
-    entry is something you know how to work with.</p>
-</div>
+> **Warning:** You should not assume that any entry which isn't a directory is a file or vice-versa.
+> There are other types of file descriptors on many operating systems. Be sure to use
+> both `isDirectory` and `isFile` as needed to ensure that the
+> entry is something you know how to work with.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>isDirectory</em> = <em>FileSystemEntry</em>.isDirectory;</pre>
+```js
+var isDirectory = FileSystemEntry.isDirectory;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A Boolean indicating whether or not the {{domxref("FileSystemEntry")}} is a directory.
-</p>
+A Boolean indicating whether or not the {{domxref("FileSystemEntry")}} is a directory.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example shows how this property might be used to determine whether to process the
-  entry as a directory or file. If the entry is neither, an error handler is called with
-  an appropriate message.</p>
+This example shows how this property might be used to determine whether to process the
+entry as a directory or file. If the entry is neither, an error handler is called with
+an appropriate message.
 
-<pre class="brush: js">if (entry.isDirectory) {
+```js
+if (entry.isDirectory) {
   processSubdirectory(entry);
 } else if (entry.isFile) {
   processFile(entry);
 } else {
   displayErrorMessage("Unsupported file system entry specified.");
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory
-      Entries API</a></li>
-  <li><a
-      href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">Introduction
-      to the File System API</a></li>
-  <li>{{domxref("FileSystemEntry")}}</li>
-  <li>{{domxref("FileSystemEntry.isFile")}}</li>
-  <li>{{domxref("FileSystemDirectoryEntry")}}</li>
-</ul>
+- [File and Directory
+  Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction
+  to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- {{domxref("FileSystemEntry")}}
+- {{domxref("FileSystemEntry.isFile")}}
+- {{domxref("FileSystemDirectoryEntry")}}

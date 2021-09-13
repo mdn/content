@@ -9,39 +9,42 @@ tags:
   - MIDIPort
 browser-compat: api.MIDIPort.connection
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("Web MIDI API")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("Web MIDI API")}}
 
-<p>The <strong><code>connection</code></strong> property of the {{domxref("MIDIPort")}} interface returns the connection state of the port.</p>
+The **`connection`** property of the {{domxref("MIDIPort")}} interface returns the connection state of the port.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let connection = MIDIPort.connection;
-</pre>
+```js
+let connection = MIDIPort.connection;
+```
 
-<h3>Value</h3>
-<p>Returns a {{domxref("DOMString","string")}} containing the connection state of the port, one of:</p>
-<dl>
-  <dt><code>"open"</code></dt>
-  <dd>The device that this <code>MIDIPort</code> represents has been opened and is available.</dd>
-  <dt><code>"closed"</code></dt>
-  <dd>The device that this <code>MIDIPort</code> represents has not been opened, or has been closed.</dd>
-  <dt><code>"pending"</code></dt>
-  <dd>The device that this <code>MIDIPort</code> represents has been opened but has subsequently disconnected .</dd>
-</dl>
+### Value
 
-<h2 id="Examples">Examples</h2>
+Returns a {{domxref("DOMString","string")}} containing the connection state of the port, one of:
 
-<p>The following example loops through all input ports and prints the connection status of each to the console.</p>
+- `"open"`
+  - : The device that this `MIDIPort` represents has been opened and is available.
+- `"closed"`
+  - : The device that this `MIDIPort` represents has not been opened, or has been closed.
+- `"pending"`
+  - : The device that this `MIDIPort` represents has been opened but has subsequently disconnected .
 
-<pre class="brush: js">for (let entry of midiAccess.inputs) {
+## Examples
+
+The following example loops through all input ports and prints the connection status of each to the console.
+
+```js
+for (let entry of midiAccess.inputs) {
   let input = entry[1];
   console.log(input.connection);
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -10,32 +10,28 @@ tags:
   - web animations api
 browser-compat: api.AnimationEffect
 ---
-<p>{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}</p>
+{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}
 
-<p>The <code>AnimationEffect</code> interface of the <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> defines current and future <em>animation effects</em> like {{domxref("KeyframeEffect")}}, which can be passed to {{domxref("Animation")}} objects for playing, and {{domxref("KeyframeEffect")}} (which is used by <a href="/en-US/docs/Web/CSS/CSS_Animations">CSS Animations</a> and <a href="/en-US/docs/Web/CSS/CSS_Transitions">Transitions</a>).</p>
+The `AnimationEffect` interface of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) defines current and future _animation effects_ like {{domxref("KeyframeEffect")}}, which can be passed to {{domxref("Animation")}} objects for playing, and {{domxref("KeyframeEffect")}} (which is used by [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations) and [Transitions](/en-US/docs/Web/CSS/CSS_Transitions)).
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("AnimationEffect.getTiming()")}}</dt>
- <dd>Returns the {{domxref("EffectTiming")}} object associated with the animation containing all the animation's timing values.</dd>
- <dt>{{domxref("AnimationEffect.getComputedTiming()")}}</dt>
- <dd>Returns the calculated timing properties for this <code>AnimationEffect</code>.</dd>
- <dt>{{domxref("AnimationEffect.updateTiming()")}}</dt>
- <dd>Updates the specified timing properties of this <code>AnimationEffect</code>.</dd>
-</dl>
+- {{domxref("AnimationEffect.getTiming()")}}
+  - : Returns the {{domxref("EffectTiming")}} object associated with the animation containing all the animation's timing values.
+- {{domxref("AnimationEffect.getComputedTiming()")}}
+  - : Returns the calculated timing properties for this `AnimationEffect`.
+- {{domxref("AnimationEffect.updateTiming()")}}
+  - : Updates the specified timing properties of this `AnimationEffect`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
- <li>{{domxref("Animation.effect")}}</li>
-</ul>
+- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
+- {{domxref("Animation.effect")}}

@@ -2,51 +2,54 @@
 title: HTMLElement.oncut
 slug: Web/API/HTMLElement/oncut
 tags:
-- API
-- Event Handler
-- Experimental
-- HTMLElement
-- NeedsSpecTable
-- Property
-- Reference
+  - API
+  - Event Handler
+  - Experimental
+  - HTMLElement
+  - NeedsSpecTable
+  - Property
+  - Reference
 browser-compat: api.HTMLElement.oncut
 ---
-<div>{{ APIRef("HTML DOM") }} {{SeeCompatTable}}</div>
+{{ APIRef("HTML DOM") }} {{SeeCompatTable}}
 
-<p>The <code><strong>HTMLElement.oncut</strong></code> property of the
-  {{domxref("HTMLElement")}} interface is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> that processes
-  {{event("cut")}} events.</p>
+The **`HTMLElement.oncut`** property of the
+{{domxref("HTMLElement")}} interface is an [event handler](/en-US/docs/Web/Events/Event_handlers) that processes
+{{event("cut")}} events.
 
-<p>The <code>cut</code> event fires when the user attempts to cut text.</p>
+The `cut` event fires when the user attempts to cut text.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>target</em>.oncut = <em>functionRef</em>;
-</pre>
+```js
+target.oncut = functionRef;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p><code>functionRef</code> is a function name or a <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function
-    expression</a>. The function receives a {{domxref("ClipboardEvent")}} object as its
-  sole argument.</p>
+`functionRef` is a function name or a [function
+expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("ClipboardEvent")}} object as its
+sole argument.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example allows text to be copied from the {{htmlElement("textarea")}}, but doesn't
-  allow text to be cut. It also logs each copy and cut attempt.</p>
+This example allows text to be copied from the {{htmlElement("textarea")}}, but doesn't
+allow text to be cut. It also logs each copy and cut attempt.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;h3&gt;Play with this text area:&lt;/h3&gt;
-&lt;textarea id="editor" rows="3"&gt;Try copying and cutting the text in this field!&lt;/textarea&gt;
+```html
+<h3>Play with this text area:</h3>
+<textarea id="editor" rows="3">Try copying and cutting the text in this field!</textarea>
 
-&lt;h3&gt;Log:&lt;/h3&gt;
-&lt;p id="log"&gt;&lt;/p&gt;</pre>
+<h3>Log:</h3>
+<p id="log"></p>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">function logCopy(event) {
+```js
+function logCopy(event) {
   log.innerText = 'Copied!\n' + log.innerText;
 }
 
@@ -59,32 +62,29 @@ const editor = document.getElementById('editor');
 const log = document.getElementById('log');
 
 editor.oncopy = logCopy;
-editor.oncut = preventCut;</pre>
+editor.oncut = preventCut;
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example", 700, 300)}}</p>
+{{EmbedLiveSample("Example", 700, 300)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p><a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-oncut">WHATWG
-    Standard</a></p>
+[WHATWG
+Standard](https://html.spec.whatwg.org/multipage/webappapis.html#handler-oncut)
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>Since Firefox 13, the preference <code>dom.event.clipboardevents.enabled</code>
-  controls this feature. It defaults to <code>true</code> but can be disabled.</p>
+Since Firefox 13, the preference `dom.event.clipboardevents.enabled`
+controls this feature. It defaults to `true` but can be disabled.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>Clipboard API event {{event("cut")}}</li>
-  <li>Related event handlers
-    <ul>
-      <li>{{domxref("HTMLElement.oncopy")}}</li>
-      <li>{{domxref("HTMLElement.onpaste")}}</li>
-    </ul>
-  </li>
-</ul>
+- Clipboard API event {{event("cut")}}
+- Related event handlers
+
+  - {{domxref("HTMLElement.oncopy")}}
+  - {{domxref("HTMLElement.onpaste")}}

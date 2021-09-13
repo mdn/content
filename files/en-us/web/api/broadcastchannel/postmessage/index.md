@@ -2,40 +2,39 @@
 title: BroadcastChannel.postMessage()
 slug: Web/API/BroadcastChannel/postMessage
 tags:
-- API
-- Broadcast Channel API
-- BroadcastChannel
-- Experimental
-- HTML API
-- Method
-- Reference
+  - API
+  - Broadcast Channel API
+  - BroadcastChannel
+  - Experimental
+  - HTML API
+  - Method
+  - Reference
 browser-compat: api.BroadcastChannel.postMessage
 ---
-<p>{{APIRef("BroadCastChannel API")}}</p>
+{{APIRef("BroadCastChannel API")}}
 
-<p>The <strong><code>BroadcastChannel.postMessage()</code></strong> sends a message, which
-  can be of any kind of {{jsxref("Object")}}, to each listener in any {{glossary("browsing
+The **`BroadcastChannel.postMessage()`** sends a message, which
+can be of any kind of {{jsxref("Object")}}, to each listener in any {{glossary("browsing
   context")}} with the same {{glossary("origin")}}. The message is transmitted as a
-  {{event("message")}} event targeted at each <code>BroadcastChannel</code> bound to the
-  channel.</p>
+{{event("message")}} event targeted at each `BroadcastChannel` bound to the
+channel.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var str = channel.postMessage(object);
-</pre>
+```js
+var str = channel.postMessage(object);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("BroadcastChannel")}}, the interface it belongs to.</li>
-</ul>
+- {{domxref("BroadcastChannel")}}, the interface it belongs to.

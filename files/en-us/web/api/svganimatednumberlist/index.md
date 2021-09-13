@@ -9,54 +9,62 @@ tags:
   - SVG DOM
 browser-compat: api.SVGAnimatedNumberList
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<h2 id="SVG_animated_number_list_interface">SVG animated number list interface</h2>
+## SVG animated number list interface
 
-<p>The <code>SVGAnimatedNumber</code> interface is used for attributes which take a list of numbers and which can be animated.</p>
+The `SVGAnimatedNumber` interface is used for attributes which take a list of numbers and which can be animated.
 
-<h3 id="Interface_overview">Interface overview</h3>
+### Interface overview
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Also implement</th>
-   <td><em>None</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Methods</th>
-   <td><em>None</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Properties</th>
-   <td>
-    <ul>
-     <li>readonly {{ domxref("SVGNumberList") }} <code>baseVal</code></li>
-     <li>readonly {{ domxref("SVGNumberList") }} <code>animVal</code></li>
-    </ul>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">Normative document</th>
-   <td><a href="https://www.w3.org/TR/SVG11/types.html#InterfaceSVGAnimatedAngle">SVG 1.1 (2nd Edition)</a></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Also implement</th>
+      <td><em>None</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Methods</th>
+      <td><em>None</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Properties</th>
+      <td>
+        <ul>
+          <li>
+            readonly {{ domxref("SVGNumberList") }}
+            <code>baseVal</code>
+          </li>
+          <li>
+            readonly {{ domxref("SVGNumberList") }}
+            <code>animVal</code>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Normative document</th>
+      <td>
+        <a
+          href="https://www.w3.org/TR/SVG11/types.html#InterfaceSVGAnimatedAngle"
+          >SVG 1.1 (2nd Edition)</a
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("SVGAnimatedNumberList.baseVal")}} {{ReadOnlyInline}}</dt>
- <dd>Is a {{domxref("SVGNumberList")}} that represents the base value of the given attribute before applying any animations.</dd>
+- {{domxref("SVGAnimatedNumberList.baseVal")}} {{ReadOnlyInline}}
+  - : Is a {{domxref("SVGNumberList")}} that represents the base value of the given attribute before applying any animations.
+- {{domxref("SVGAnimatedNumberList.animVal")}} {{ReadOnlyInline}}
+  - : Is a read only {{ domxref("SVGNumberList") }} that represents the current animated value of the given attribute. If the given attribute is not currently being animated, then the {{ domxref("SVGNumberList") }} will have the same contents as `baseVal`. The object referenced by `animVal` will always be distinct from the one referenced by `baseVal`, even when the attribute is not animated.
 
- <dt>{{domxref("SVGAnimatedNumberList.animVal")}} {{ReadOnlyInline}}</dt>
- <dd>Is a read only {{ domxref("SVGNumberList") }} that represents the current animated value of the given attribute. If the given attribute is not currently being animated, then the {{ domxref("SVGNumberList") }} will have the same contents as <code>baseVal</code>. The object referenced by <code>animVal</code> will always be distinct from the one referenced by <code>baseVal</code>, even when the attribute is not animated.</dd>
-</dl>
+## Methods
 
-<h2 id="Methods">Methods</h2>
+The `SVGAnimatedNumberList` interface do not provide any specific methods.
 
-<p>The <code>SVGAnimatedNumberList</code> interface do not provide any specific methods.</p>
+## Browser compatibility
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<p>{{Compat}}</p>
+{{Compat}}

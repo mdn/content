@@ -13,55 +13,47 @@ tags:
   - Reference
 browser-compat: api.DOMRectReadOnly
 ---
-<p>{{APIRef("Geometry Interfaces")}}</p>
+{{APIRef("Geometry Interfaces")}}
 
-<p>The <strong><code>DOMRectReadOnly</code></strong> interface specifies the standard properties used by {{domxref("DOMRect")}} to define a rectangle whose properties are immutable.</p>
+The **`DOMRectReadOnly`** interface specifies the standard properties used by {{domxref("DOMRect")}} to define a rectangle whose properties are immutable.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("DOMRectReadOnly.DOMRectReadOnly","DOMRectReadOnly()")}}</dt>
- <dd>Defined to create a new <code>DOMRectReadOnly</code> object. Note that this constructor cannot be called by 3rd party JavaScript; doing so returns an <code>"Illegal constructor"</code> {{jsxref('TypeError')}}.</dd>
-</dl>
+- {{domxref("DOMRectReadOnly.DOMRectReadOnly","DOMRectReadOnly()")}}
+  - : Defined to create a new `DOMRectReadOnly` object. Note that this constructor cannot be called by 3rd party JavaScript; doing so returns an `"Illegal constructor"` {{jsxref('TypeError')}}.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("DOMRectReadOnly.x")}} {{readonlyInline}}</dt>
- <dd>The x coordinate of the <code>DOMRect</code>'s origin.</dd>
- <dt>{{domxref("DOMRectReadOnly.y")}} {{readonlyInline}}</dt>
- <dd>The y coordinate of the <code>DOMRect</code>'s origin.</dd>
- <dt>{{domxref("DOMRectReadOnly.width")}} {{readonlyInline}}</dt>
- <dd>The width of the <code>DOMRect</code>.</dd>
- <dt>{{domxref("DOMRectReadOnly.height")}} {{readonlyInline}}</dt>
- <dd>The height of the <code>DOMRect</code>.</dd>
- <dt>{{domxref("DOMRectReadOnly.top")}} {{readonlyInline}}</dt>
- <dd>Returns the top coordinate value of the <code>DOMRect</code> (usually the same as <code>y</code>.)</dd>
- <dt>{{domxref("DOMRectReadOnly.right")}} {{readonlyInline}}</dt>
- <dd>Returns the right coordinate value of the <code>DOMRect</code> (usually the same as <code>x + width</code>).</dd>
- <dt>{{domxref("DOMRectReadOnly.bottom")}} {{readonlyInline}}</dt>
- <dd>Returns the bottom coordinate value of the <code>DOMRect</code> (usually the same as <code>y + height</code>).</dd>
- <dt>{{domxref("DOMRectReadOnly.left")}} {{readonlyInline}}</dt>
- <dd>Returns the left coordinate value of the <code>DOMRect</code> (usually the same as <code>x</code>).</dd>
-</dl>
+- {{domxref("DOMRectReadOnly.x")}} {{readonlyInline}}
+  - : The x coordinate of the `DOMRect`'s origin.
+- {{domxref("DOMRectReadOnly.y")}} {{readonlyInline}}
+  - : The y coordinate of the `DOMRect`'s origin.
+- {{domxref("DOMRectReadOnly.width")}} {{readonlyInline}}
+  - : The width of the `DOMRect`.
+- {{domxref("DOMRectReadOnly.height")}} {{readonlyInline}}
+  - : The height of the `DOMRect`.
+- {{domxref("DOMRectReadOnly.top")}} {{readonlyInline}}
+  - : Returns the top coordinate value of the `DOMRect` (usually the same as `y`.)
+- {{domxref("DOMRectReadOnly.right")}} {{readonlyInline}}
+  - : Returns the right coordinate value of the `DOMRect` (usually the same as `x + width`).
+- {{domxref("DOMRectReadOnly.bottom")}} {{readonlyInline}}
+  - : Returns the bottom coordinate value of the `DOMRect` (usually the same as `y + height`).
+- {{domxref("DOMRectReadOnly.left")}} {{readonlyInline}}
+  - : Returns the left coordinate value of the `DOMRect` (usually the same as `x`).
 
-<h2 id="Static_methods">Static methods</h2>
+## Static methods
 
-<dl>
- <dt>{{domxref("DOMRectReadOnly.fromRect()")}}</dt>
- <dd>Creates a new <code>DOMRect</code> object with a given location and dimensions.</dd>
-</dl>
+- {{domxref("DOMRectReadOnly.fromRect()")}}
+  - : Creates a new `DOMRect` object with a given location and dimensions.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("DOMPoint")}}</li>
-</ul>
+- {{domxref("DOMPoint")}}

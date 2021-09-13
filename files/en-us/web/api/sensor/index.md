@@ -11,61 +11,53 @@ tags:
   - Sensors
 browser-compat: api.Sensor
 ---
-<div>{{APIRef("Sensor API")}}</div>
+{{APIRef("Sensor API")}}
 
-<p>The <strong><code>Sensor</code></strong> interface of the <a href="/en-US/docs/Web/API/Sensor_APIs">Sensor APIs</a> is the base class for all the other sensor interfaces. This interface cannot be used directly. Instead it provides properties, event handlers, and methods accessed by interfaces that inherit from it.</p>
+The **`Sensor`** interface of the [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs) is the base class for all the other sensor interfaces. This interface cannot be used directly. Instead it provides properties, event handlers, and methods accessed by interfaces that inherit from it.
 
-<p>If a feature policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.</p>
+If a feature policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.
 
-<h2 id="Interfaces_based_on_Sensor">Interfaces based on <code>Sensor</code></h2>
+## Interfaces based on `Sensor`
 
-<p>Below is a list of interfaces based on the <code>Sensor</code> interface.</p>
+Below is a list of interfaces based on the `Sensor` interface.
 
-<ul>
-	<li>{{domxref('Accelerometer')}}</li>
-	<li>{{domxref('AmbientLightSensor')}}</li>
-	<li>{{domxref('GravitySensor')}}</li>
-	<li>{{domxref('Gyroscope')}}</li>
-	<li>{{domxref('LinearAccelerationSensor')}}</li>
-	<li>{{domxref('Magnetometer')}}</li>
-	<li>{{domxref('OrientationSensor')}}</li>
-</ul>
+- {{domxref('Accelerometer')}}
+- {{domxref('AmbientLightSensor')}}
+- {{domxref('GravitySensor')}}
+- {{domxref('Gyroscope')}}
+- {{domxref('LinearAccelerationSensor')}}
+- {{domxref('Magnetometer')}}
+- {{domxref('OrientationSensor')}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
-	<dt>{{domxref('Sensor.activated')}} {{readonlyinline}}</dt>
-	<dd>Returns a boolean value indicating whether the sensor is active.</dd>
-	<dt>{{domxref('Sensor.hasReading')}} {{readonlyinline}}</dt>
-	<dd>Returns a boolean value indicating whether the sensor has a reading.</dd>
-	<dt>{{domxref('Sensor.timestamp')}} {{readonlyinline}}</dt>
-	<dd>Returns the time stamp of the latest sensor reading.</dd>
-</dl>
+- {{domxref('Sensor.activated')}} {{readonlyinline}}
+  - : Returns a boolean value indicating whether the sensor is active.
+- {{domxref('Sensor.hasReading')}} {{readonlyinline}}
+  - : Returns a boolean value indicating whether the sensor has a reading.
+- {{domxref('Sensor.timestamp')}} {{readonlyinline}}
+  - : Returns the time stamp of the latest sensor reading.
 
-<h3 id="Event_handlers">Event handlers</h3>
+### Event handlers
 
-<dl>
-	<dt>{{domxref('Sensor.onerror')}}</dt>
-	<dd>Called when an error occurs on one of the child interfaces of the <code>Sensor</code> interface.</dd>
-	<dt>{{domxref('Sensor.onreading')}}</dt>
-	<dd>Called when a reading is taken on one of the child interfaces of the Sensor interface.</dd>
-	<dt>{{domxref('Sensor.onactivate')}}</dt>
-	<dd>Called when one of the Sensor interface's becomes active.</dd>
-</dl>
+- {{domxref('Sensor.onerror')}}
+  - : Called when an error occurs on one of the child interfaces of the `Sensor` interface.
+- {{domxref('Sensor.onreading')}}
+  - : Called when a reading is taken on one of the child interfaces of the Sensor interface.
+- {{domxref('Sensor.onactivate')}}
+  - : Called when one of the Sensor interface's becomes active.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
-	<dt>{{domxref('Sensor.start()')}}</dt>
-	<dd>Activates one of the sensors based on <code>Sensor</code>.</dd>
-	<dt>{{domxref('Sensor.stop()')}}</dt>
-	<dd>Deactivates one of the sensors based on <code>Sensor</code>.</dd>
-</dl>
+- {{domxref('Sensor.start()')}}
+  - : Activates one of the sensors based on `Sensor`.
+- {{domxref('Sensor.stop()')}}
+  - : Deactivates one of the sensors based on `Sensor`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

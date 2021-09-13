@@ -2,52 +2,53 @@
 title: CanvasRenderingContext2D.moveTo()
 slug: Web/API/CanvasRenderingContext2D/moveTo
 tags:
-- API
-- Canvas
-- CanvasRenderingContext2D
-- Method
-- Reference
+  - API
+  - Canvas
+  - CanvasRenderingContext2D
+  - Method
+  - Reference
 browser-compat: api.CanvasRenderingContext2D.moveTo
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The
-  <strong><code>CanvasRenderingContext2D.moveTo()</code></strong>
-  method of the Canvas 2D API begins a new sub-path at the point specified by the given
-  <code>(x, y)</code> coordinates.</p>
+The
+**`CanvasRenderingContext2D.moveTo()`**
+method of the Canvas 2D API begins a new sub-path at the point specified by the given
+`(x, y)` coordinates.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <em>ctx</em>.moveTo(<em>x</em>, <em>y</em>);
-</pre>
+```js
+void ctx.moveTo(x, y);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>x</code></dt>
-  <dd>The x-axis (horizontal) coordinate of the point.</dd>
-  <dt><code>y</code></dt>
-  <dd>The y-axis (vertical) coordinate of the point.</dd>
-</dl>
+- `x`
+  - : The x-axis (horizontal) coordinate of the point.
+- `y`
+  - : The y-axis (vertical) coordinate of the point.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Creating_multiple_sub-paths">Creating multiple sub-paths</h3>
+### Creating multiple sub-paths
 
-<p>This example uses <code>moveTo()</code> to create two sub-paths within a single path.
-  Both sub-paths are then rendered with a single <code>stroke()</code> call.</p>
+This example uses `moveTo()` to create two sub-paths within a single path.
+Both sub-paths are then rendered with a single `stroke()` call.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<p>The first line begins at (50, 50) and ends at (200, 50). The second line begins at (50,
-  90) and ends at (280, 120).</p>
+The first line begins at (50, 50) and ends at (200, 50). The second line begins at (50,
+90\) and ends at (280, 120).
 
-<pre class="brush: js;">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 ctx.beginPath();
@@ -56,24 +57,22 @@ ctx.lineTo(200, 50);
 ctx.moveTo(50, 90);   // Begin second sub-path
 ctx.lineTo(280, 120);
 ctx.stroke();
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Creating_multiple_sub-paths', 700, 180) }}</p>
+{{ EmbedLiveSample('Creating_multiple_sub-paths', 700, 180) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining this method: {{domxref("CanvasRenderingContext2D")}}</li>
-  <li>{{domxref("CanvasRenderingContext2D.lineTo()")}}</li>
-  <li>{{domxref("CanvasRenderingContext2D.stroke()")}}</li>
-</ul>
+- The interface defining this method: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.lineTo()")}}
+- {{domxref("CanvasRenderingContext2D.stroke()")}}

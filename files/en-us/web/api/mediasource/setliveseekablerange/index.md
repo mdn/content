@@ -2,58 +2,59 @@
 title: MediaSource.setLiveSeekableRange()
 slug: Web/API/MediaSource/setLiveSeekableRange
 tags:
-- API
-- Audio
-- Extensions
-- Media
-- MediaSource
-- MediaSource Extensions
-- Method
-- Reference
-- Video
-- setLiveSeekableRange()
+  - API
+  - Audio
+  - Extensions
+  - Media
+  - MediaSource
+  - MediaSource Extensions
+  - Method
+  - Reference
+  - Video
+  - setLiveSeekableRange()
 browser-compat: api.MediaSource.setLiveSeekableRange
 ---
-<p>{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}</p>
+{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
-<p>The <strong><code>setLiveSeekableRange()</code></strong> method of the
-  {{domxref("MediaSource")}} interface sets the range that the user can seek to in the
-  media element.</p>
+The **`setLiveSeekableRange()`** method of the
+{{domxref("MediaSource")}} interface sets the range that the user can seek to in the
+media element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var>mediaSource</var>.setLiveSeekableRange(<var>start</var>, <var>end</var>)</pre>
+```js
+mediaSource.setLiveSeekableRange(start, end)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>start</dt>
-  <dd>The start of the seekable range to set in seconds measured from the beginning of the
+- start
+  - : The start of the seekable range to set in seconds measured from the beginning of the
     source. If the duration of the media source is positive infinity, then the
     {{domxref("TimeRanges")}} object returned by the
     {{domxref("HTMLMediaElement.seekable")}} property will have a start timestamp no
-    greater than this value.</dd>
-  <dt>end</dt>
-  <dd>The end of the seekable range to set in seconds measured from the beginning of the
+    greater than this value.
+- end
+  - : The end of the seekable range to set in seconds measured from the beginning of the
     source. If the duration of the media source is positive infinity, then the
     {{domxref("TimeRanges")}} object returned by the
     {{domxref("HTMLMediaElement.seekable")}} property will have an end timestamp no
-    less than this value.</dd>
-</dl>
+    less than this value.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{jsxref('undefined')}}</p>
+{{jsxref('undefined')}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">// TBD</pre>
+```js
+// TBD
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

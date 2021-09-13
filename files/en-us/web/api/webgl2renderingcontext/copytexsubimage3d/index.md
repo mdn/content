@@ -2,78 +2,76 @@
 title: WebGL2RenderingContext.copyTexSubImage3D()
 slug: Web/API/WebGL2RenderingContext/copyTexSubImage3D
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGL2
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGL2
 browser-compat: api.WebGL2RenderingContext.copyTexSubImage3D
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGL2RenderingContext.copyTexSubImage3D()</code></strong> method of
-  the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> copies pixels from the current
-  {{domxref("WebGLFramebuffer")}} into an existing 3D texture sub-image.</p>
+The **`WebGL2RenderingContext.copyTexSubImage3D()`** method of
+the [WebGL API](/en-US/docs/Web/API/WebGL_API) copies pixels from the current
+{{domxref("WebGLFramebuffer")}} into an existing 3D texture sub-image.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <var>gl</var>.copyTexSubImage3D(<var>target</var>, <var>level</var>, <var>xoffset</var>, <var>yoffset</var>, <var>zoffset</var>, <var>x</var>, <var>y</var>, <var>width</var>, <var>height</var>);
-</pre>
+```js
+void gl.copyTexSubImage3D(target, level, xoffset, yoffset, zoffset, x, y, width, height);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>target</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target) of the active texture.
+- `target`
+
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target) of the active texture.
     Possible values:
-    <ul>
-      <li><code>gl.TEXTURE_3D</code>: A three-dimensional texture.</li>
-      <li><code>gl.TEXTURE_2D_ARRAY</code>: A two-dimensional array texture.</li>
-    </ul>
-  </dd>
-  <dt><code>level</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLint")}} specifying the level of detail. Level 0 is the base image
-    level and level <em>n</em> is the <em>n</em>th mipmap reduction level.</dd>
-  <dt><code>xoffset</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLint")}} specifying the x offset within the texture image.</dd>
-  <dt><code>yoffset</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLint")}} specifying the y offset within the texture image.</dd>
-  <dt><code>zoffset</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLint")}} specifying the z offset within the texture image.</dd>
-  <dt><code>x</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLint")}} specifying the x coordinate of the lower left corner where to
-    start copying.</dd>
-  <dt><code>y</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLint")}} specifying the y coordinate of the lower left corner where to
-    start copying.</dd>
-  <dt><code>width</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the width of the texture.</dd>
-  <dt><code>height</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the height of the texture.</dd>
-</dl>
 
-<h3 id="Return_value">Return value</h3>
+    - `gl.TEXTURE_3D`: A three-dimensional texture.
+    - `gl.TEXTURE_2D_ARRAY`: A two-dimensional array texture.
 
-<p>None.</p>
+- `level`
+  - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the level of detail. Level 0 is the base image
+    level and level _n_ is the *n*th mipmap reduction level.
+- `xoffset`
+  - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the x offset within the texture image.
+- `yoffset`
+  - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the y offset within the texture image.
+- `zoffset`
+  - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the z offset within the texture image.
+- `x`
+  - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the x coordinate of the lower left corner where to
+    start copying.
+- `y`
+  - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the y coordinate of the lower left corner where to
+    start copying.
+- `width`
+  - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the width of the texture.
+- `height`
+  - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the height of the texture.
 
-<h2 id="Examples">Examples</h2>
+### Return value
 
-<pre class="brush: js">gl.copyTexSubImage3D(gl.TEXTURE_3D, 0, 0, 0, 0, 0, 0, 16, 16);
-</pre>
+None.
 
-<h2 id="Specifications">Specifications</h2>
+## Examples
+
+```js
+gl.copyTexSubImage3D(gl.TEXTURE_3D, 0, 0, 0, 0, 0, 0, 16, 16);
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.copyTexImage2D()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.texImage2D()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.texSubImage2D()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.compressedTexImage2D()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.copyTexImage2D()")}}
+- {{domxref("WebGLRenderingContext.texImage2D()")}}
+- {{domxref("WebGLRenderingContext.texSubImage2D()")}}
+- {{domxref("WebGLRenderingContext.compressedTexImage2D()")}}

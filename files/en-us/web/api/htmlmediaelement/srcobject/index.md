@@ -2,82 +2,84 @@
 title: HTMLMediaElement.srcObject
 slug: Web/API/HTMLMediaElement/srcObject
 tags:
-- API
-- HTML
-- HTML DOM
-- HTMLMediaElement
-- Media
-- Property
-- Reference
-- srcObject
+  - API
+  - HTML
+  - HTML DOM
+  - HTMLMediaElement
+  - Media
+  - Property
+  - Reference
+  - srcObject
 browser-compat: api.HTMLMediaElement.srcObject
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>srcObject</code></strong> property of the
-    {{domxref("HTMLMediaElement")}} interface sets or returns the object which serves as
-    the source of the media associated with the {{domxref("HTMLMediaElement")}}.</p>
+The **`srcObject`** property of the
+{{domxref("HTMLMediaElement")}} interface sets or returns the object which serves as
+the source of the media associated with the {{domxref("HTMLMediaElement")}}.
 
-<p>The object can be a {{domxref("MediaStream")}}, a {{domxref("MediaSource")}}, a
-  {{domxref("Blob")}}, or a {{domxref("File")}} (which inherits from <code>Blob</code>).
-</p>
+The object can be a {{domxref("MediaStream")}}, a {{domxref("MediaSource")}}, a
+{{domxref("Blob")}}, or a {{domxref("File")}} (which inherits from `Blob`).
 
-<div class="note">
-  <p><strong>Note:</strong> As of March 2020, only Safari supports setting objects other
-    than <code>MediaStream</code>. Until other browsers catch up, for
-    <code>MediaSource</code>, <code>Blob</code> and <code>File</code>, consider falling
-    back to creating a URL with {{domxref("URL.createObjectURL()")}} and assign it to
-    {{domxref("HTMLMediaElement.src")}}. See below for an example.</p>
-</div>
+> **Note:** As of March 2020, only Safari supports setting objects other
+> than `MediaStream`. Until other browsers catch up, for
+> `MediaSource`, `Blob` and `File`, consider falling
+> back to creating a URL with {{domxref("URL.createObjectURL()")}} and assign it to
+> {{domxref("HTMLMediaElement.src")}}. See below for an example.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>sourceObject</em> = <em>HTMLMediaElement</em>.srcObject;
+```js
+var sourceObject = HTMLMediaElement.srcObject;
 
-<em>HTMLMediaElement</em>.srcObject = <em>sourceObject</em>;
-</pre>
+HTMLMediaElement.srcObject = sourceObject;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref('MediaStream')}}, {{domxref('MediaSource')}}, {{domxref('Blob')}}, or
-  {{domxref('File')}} object (though see the compatibility table for what is actually
-  supported).</p>
+A {{domxref('MediaStream')}}, {{domxref('MediaSource')}}, {{domxref('Blob')}}, or
+{{domxref('File')}} object (though see the compatibility table for what is actually
+supported).
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>Older versions of the Media Source specification required using
-  {{domxref("URL.createObjectURL", "createObjectURL()")}} to create an object URL then
-  setting {{domxref("HTMLMediaElement.src", "src")}} to that URL. Now you can just set
-  <code>srcObject</code> to the {{domxref("MediaStream")}} directly.</p>
+Older versions of the Media Source specification required using
+{{domxref("URL.createObjectURL", "createObjectURL()")}} to create an object URL then
+setting {{domxref("HTMLMediaElement.src", "src")}} to that URL. Now you can just set
+`srcObject` to the {{domxref("MediaStream")}} directly.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_example">Basic example</h3>
+### Basic example
 
-<p>In this example, a {{domxref("MediaStream")}} from a camera is assigned to a
-  newly-created {{HTMLElement("video")}} element.</p>
+In this example, a {{domxref("MediaStream")}} from a camera is assigned to a
+newly-created {{HTMLElement("video")}} element.
 
-<pre class="brush: js">const mediaStream = await navigator.mediaDevices.getUserMedia({video: true});
+```js
+const mediaStream = await navigator.mediaDevices.getUserMedia({video: true});
 const video = document.createElement('video');
-video.srcObject = mediaStream;</pre>
+video.srcObject = mediaStream;
+```
 
-<p>In this example, a new {{domxref('MediaSource')}} is assigned to a newly-created
-  {{HTMLElement("video")}} element.</p>
+In this example, a new {{domxref('MediaSource')}} is assigned to a newly-created
+{{HTMLElement("video")}} element.
 
-<pre class="brush: js">const mediaSource = new MediaSource();
+```js
+const mediaSource = new MediaSource();
 const video = document.createElement('video');
-video.srcObject = mediaSource;</pre>
+video.srcObject = mediaSource;
+```
 
-<h3 id="Supporting_fallback_to_the_src_property">Supporting fallback to the src property
-</h3>
+### Supporting fallback to the src property
 
-<p>The examples below support older browser versions that require you to create an object
-  URL and assign it to <code>src</code> if <code>srcObject</code> isn't supported.</p>
+The examples below support older browser versions that require you to create an object
+URL and assign it to `src` if `srcObject` isn't supported.
 
-<p>First, a {{domxref("MediaStream")}} from a camera is assigned to a newly-created
-  {{HTMLElement("video")}} element, with fallback for older browsers.</p>
+First, a {{domxref("MediaStream")}} from a camera is assigned to a newly-created
+{{HTMLElement("video")}} element, with fallback for older browsers.
 
-<pre class="brush: js">const mediaStream = await navigator.mediaDevices.getUserMedia({video: true});
+```js
+const mediaStream = await navigator.mediaDevices.getUserMedia({video: true});
 const video = document.createElement('video');
 if ('srcObject' in video) {
   video.srcObject = mediaStream;
@@ -85,13 +87,14 @@ if ('srcObject' in video) {
   // Avoid using this in new browsers, as it is going away.
   video.src = URL.createObjectURL(mediaStream);
 }
-</pre>
+```
 
-<p>Second, a new {{domxref('MediaSource')}} is assigned to a newly-created
-  {{HTMLElement("video")}} element, with fallback for older browsers and browsers that
-  don't yet support assignment of {{domxref('MediaSource')}} directly.</p>
+Second, a new {{domxref('MediaSource')}} is assigned to a newly-created
+{{HTMLElement("video")}} element, with fallback for older browsers and browsers that
+don't yet support assignment of {{domxref('MediaSource')}} directly.
 
-<pre class="brush:js">const mediaSource = new MediaSource();
+```js
+const mediaSource = new MediaSource();
 const video = document.createElement('video');
 // Older browsers may not have srcObject
 if ('srcObject' in video) {
@@ -107,12 +110,12 @@ if ('srcObject' in video) {
 } else {
   video.src = URL.createObjectURL(mediaSource);
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

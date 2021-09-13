@@ -2,48 +2,36 @@
 title: LockedFile.mode
 slug: Web/API/LockedFile/mode
 tags:
-- API
-- Files
-- Non Standard
-- Property
-- Reference
-- WebAPI
+  - API
+  - Files
+  - Non Standard
+  - Property
+  - Reference
+  - WebAPI
 ---
-<p>{{APIRef("File System API")}}{{non-standard_header}}</p>
+{{APIRef("File System API")}}{{non-standard_header}}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>The <code>mode</code> property provides the read/write status of the
-  {{domxref("LockedFile")}} file.</p>
+The `mode` property provides the read/write status of the
+{{domxref("LockedFile")}} file.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var mode = <em>instanceOfLockedFile</em>.mode
-</pre>
+```js
+var mode = instanceOfLockedFile.mode
+```
 
-<h2 id="Value">Value</h2>
+## Value
 
-<p>A string, one of <code>readonly</code> or <code>readwrite</code>.</p>
+A string, one of `readonly` or `readwrite`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('FileSystem')}}</td>
-      <td>{{Spec2('FileSystem')}}</td>
-      <td>Draft Proposal.</td>
-    </tr>
-  </tbody>
-</table>
+| Specification                        | Status                           | Comment         |
+| ------------------------------------ | -------------------------------- | --------------- |
+| {{SpecName('FileSystem')}} | {{Spec2('FileSystem')}} | Draft Proposal. |
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("LockedFile")}}</li>
-</ul>
+- {{domxref("LockedFile")}}

@@ -10,50 +10,49 @@ tags:
   - Method
 browser-compat: api.FileSystemDirectoryHandle.entries
 ---
-<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
-</div>
+{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
-<p>The <strong><code>entries()</code></strong> method of the
-  {{domxref("FileSystemDirectoryHandle")}} interface returns an array of a given object's
-  own enumerable property <code>[key, value]</code> pairs, in the same order as that
-  provided by a {{jsxref('for...in')}} loop (the difference being that a for-in loop
-  enumerates properties in the prototype chain as well).</p>
+The **`entries()`** method of the
+{{domxref("FileSystemDirectoryHandle")}} interface returns an array of a given object's
+own enumerable property `[key, value]` pairs, in the same order as that
+provided by a {{jsxref('for...in')}} loop (the difference being that a for-in loop
+enumerates properties in the prototype chain as well).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"> FileSystemDirectoryHandle.entries();</pre>
+```js
+ FileSystemDirectoryHandle.entries();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None</p>
+None
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An array of the given <code>FileSystemDirectoryHandle</code> object's own enumerable
-  property <code>[key, value]</code> pairs.</p>
+An array of the given `FileSystemDirectoryHandle` object's own enumerable
+property `[key, value]` pairs.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">
+```js
 const dirHandle = await window.showDirectoryPicker()
 
 for await (const [key, value] of dirHandle.entries()) {
     console.log({ key, value })
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/File_System_Access_API">File System Access API</a></li>
-  <li><a href="https://web.dev/file-system-access/">The File System Access API:
-      simplifying access to local files</a></li>
-</ul>
+- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
+- [The File System Access API:
+  simplifying access to local files](https://web.dev/file-system-access/)

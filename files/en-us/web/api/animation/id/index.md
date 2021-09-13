@@ -10,40 +10,40 @@ tags:
   - web animations api
 browser-compat: api.Animation.id
 ---
-<p>{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}</p>
+{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}
 
-<p>The <strong><code>Animation.id</code></strong> property of the <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> returns or sets a string used to identify the animation.</p>
+The **`Animation.id`** property of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) returns or sets a string used to identify the animation.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>animationsId</em> = <em>Animation</em>.id;
+```js
+var animationsId = Animation.id;
 
-<em>Animation</em>.id = <em>newIdString</em>;
-</pre>
+Animation.id = newIdString;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} which can be used to identify the animation, or <code>null</code> if the animation has no <code>id</code>.</p>
+A {{domxref("DOMString")}} which can be used to identify the animation, or `null` if the animation has no `id`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the <a href="http://codepen.io/rachelnabors/pen/eJyWzm?editors=0010">Follow the White Rabbit example</a>, you can assign the <code>rabbitDownAnimation</code> an <code>id</code> like so:</p>
+In the [Follow the White Rabbit example](http://codepen.io/rachelnabors/pen/eJyWzm?editors=0010), you can assign the `rabbitDownAnimation` an `id` like so:
 
-<pre class="brush: js">rabbitDownAnimation.effect.<em>id</em> = "rabbitGo";
-</pre>
+```js
+rabbitDownAnimation.effect.id = "rabbitGo";
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("KeyframeEffect")}}</li>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
- <li>{{domxref("Animation")}}</li>
-</ul>
+- {{domxref("KeyframeEffect")}}
+- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
+- {{domxref("Animation")}}

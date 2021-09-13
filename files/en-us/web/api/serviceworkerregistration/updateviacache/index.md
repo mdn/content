@@ -2,40 +2,40 @@
 title: ServiceWorkerRegistration.updateViaCache
 slug: Web/API/ServiceWorkerRegistration/updateViaCache
 tags:
-- API
-- Method
-- Reference
-- Service Workers
-- ServiceWorkerRegistration
-- updateViaCache
+  - API
+  - Method
+  - Reference
+  - Service Workers
+  - ServiceWorkerRegistration
+  - updateViaCache
 browser-compat: api.ServiceWorkerRegistration.updateViaCache
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p>The <code><strong>updateViaCache()</strong></code> method of the
-  {{domxref("ServiceWorkerRegistration")}} interface updates the cache using
-  the mode specified in the call to {{domxref('ServiceWorkerContainer.register')}}.
-  Requests for `importScripts` still go via the HTTP cache. `updateViaCache` offers
-  control over this behavior.</p>
+The **`updateViaCache()`** method of the
+{{domxref("ServiceWorkerRegistration")}} interface updates the cache using
+the mode specified in the call to {{domxref('ServiceWorkerContainer.register')}}.
+Requests for \`importScripts\` still go via the HTTP cache. \`updateViaCache\` offers
+control over this behavior.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">serviceWorkerRegistration.updateViaCache;</pre>
+```js
+serviceWorkerRegistration.updateViaCache;
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p></p>
+## Example
 
-<h2 id="Example">Example</h2>
+The following example shows the use of updateViaCache().
 
-<p>The following example shows the use of updateViaCache().
-</p>
-
-<pre class="brush: js">if ('serviceWorker' in navigator) {
+```js
+if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/service-worker.js', {
     updateViaCache: 'none'
   });
@@ -43,25 +43,24 @@ browser-compat: api.ServiceWorkerRegistration.updateViaCache
   // consulted when making requests for either the top-level
   // /service-worker.js or for any imported scripted, such as
   // the hypothetical path/to/import.js.
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service
-      Workers</a></li>
-  <li><a href="https://github.com/mdn/sw-test">Service workers basic code example</a></li>
-  <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker
-      ready?</a></li>
-  <li>{{jsxref("Promise")}}</li>
-  <li><a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web
-      workers</a></li>
-</ul>
+- [Using Service
+  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Is ServiceWorker
+  ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- {{jsxref("Promise")}}
+- [Using web
+  workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

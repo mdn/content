@@ -9,31 +9,30 @@ tags:
   - Reference
 browser-compat: api.AmbientLightSensor.AmbientLightSensor
 ---
-<p>{{APIRef("Sensor API")}}{{SeeCompatTable}}</p>
+{{APIRef("Sensor API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>AmbientLightSensor()</code></strong> constructor creates a new {{domxref("AmbientLightSensor")}} object, which returns the current light level or illuminance of the ambient light around the hosting device.</p>
+The **`AmbientLightSensor()`** constructor creates a new {{domxref("AmbientLightSensor")}} object, which returns the current light level or illuminance of the ambient light around the hosting device.
 
-<p>If a feature policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.</p>
+If a feature policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var ambientLightSensor = new AmbientLightSensor(options)</pre>
+```js
+var ambientLightSensor = new AmbientLightSensor(options)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><em>options</em> {{optional_inline}}</dt>
- <dd>Currently only one option is supported:
- <ul>
-  <li><code>frequency</code>: The desired number of times per second a sample should be taken, meaning the number of times per second that {{domxref('sensor.onreading')}} will be called. A whole number or decimal may be used, the latter for frequencies less than a second. The actual reading frequency depends device hardware and consequently may be less than requested.</li>
- </ul>
- </dd>
-</dl>
+- _options_ {{optional_inline}}
 
-<h2 id="Specifications">Specifications</h2>
+  - : Currently only one option is supported:
+
+    - `frequency`: The desired number of times per second a sample should be taken, meaning the number of times per second that {{domxref('sensor.onreading')}} will be called. A whole number or decimal may be used, the latter for frequencies less than a second. The actual reading frequency depends device hardware and consequently may be less than requested.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

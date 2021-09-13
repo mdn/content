@@ -6,81 +6,68 @@ tags:
   - Overview
   - Web Performance
 ---
-<div>{{DefaultAPISidebar("Performance Timeline API")}}</div>
+{{DefaultAPISidebar("Performance Timeline API")}}
 
-<p>The <strong>Performance Timeline</strong> API defines extensions to the {{domxref("Performance")}} interface to support client-side latency measurements within applications. The extensions provide interfaces to retrieve {{domxref("PerformanceEntry","performance entry metrics", '', 'true')}} based on specific filter criteria. The standard also includes interfaces that allow an application to define <em>{{anch("Performance_Observers","performance observer", '', 'true')}}</em> callbacks that are notified when specific performance events are added to the browser's <em>performance timeline</em>.</p>
+The **Performance Timeline** API defines extensions to the {{domxref("Performance")}} interface to support client-side latency measurements within applications. The extensions provide interfaces to retrieve {{domxref("PerformanceEntry","performance entry metrics", '', 'true')}} based on specific filter criteria. The standard also includes interfaces that allow an application to define _{{anch("Performance_Observers","performance observer", '', 'true')}}_ callbacks that are notified when specific performance events are added to the browser's _performance timeline_.
 
-<p>This document provides an overview of the standard's interfaces. For more details about the interfaces, see the reference pages and <a href="/en-US/docs/Web/API/Performance_Timeline/Using_Performance_Timeline">Using Performance Timeline</a>.</p>
+This document provides an overview of the standard's interfaces. For more details about the interfaces, see the reference pages and [Using Performance Timeline](/en-US/docs/Web/API/Performance_Timeline/Using_Performance_Timeline).
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Performance_extensions">Performance extensions</h2>
+## Performance extensions
 
-<p>The Performance Timeline API extends the {{domxref("Performance")}} interface with three methods that provide different mechanisms to get a set of {{domxref("PerformanceEntry","performance records (metrics)")}}, depending on the specified filter criteria. The methods are:</p>
+The Performance Timeline API extends the {{domxref("Performance")}} interface with three methods that provide different mechanisms to get a set of {{domxref("PerformanceEntry","performance records (metrics)")}}, depending on the specified filter criteria. The methods are:
 
-<dl>
- <dt>{{domxref("Performance.getEntries","getEntries()")}}</dt>
- <dd>Returns all recorded {{domxref("PerformanceEntry","performance entries")}} or, optionally, the entries based on the specified {{domxref("PerformanceEntry.name","name")}}, {{domxref("PerformanceEntry.entryType","performance type")}} and/or the {{domxref("PerformanceResourceTiming/initiatorType","initiatorType")}} (such as an HTML element).</dd>
- <dt>{{domxref("Performance.getEntriesByName","getEntriesByName()")}}</dt>
- <dd>Returns the recorded {{domxref("PerformanceEntry","performance entries")}} based on the specified {{domxref("PerformanceEntry.name","name")}} and optionally the {{domxref("PerformanceEntry.entryType","performance type")}}.</dd>
- <dt>{{domxref("Performance.getEntriesByType","getEntriesByType()")}}</dt>
- <dd>Returns the recorded {{domxref("PerformanceEntry","performance entries")}} based on the specified {{domxref("PerformanceEntry.entryType","performance type")}}.</dd>
-</dl>
+- {{domxref("Performance.getEntries","getEntries()")}}
+  - : Returns all recorded {{domxref("PerformanceEntry","performance entries")}} or, optionally, the entries based on the specified {{domxref("PerformanceEntry.name","name")}}, {{domxref("PerformanceEntry.entryType","performance type")}} and/or the {{domxref("PerformanceResourceTiming/initiatorType","initiatorType")}} (such as an HTML element).
+- {{domxref("Performance.getEntriesByName","getEntriesByName()")}}
+  - : Returns the recorded {{domxref("PerformanceEntry","performance entries")}} based on the specified {{domxref("PerformanceEntry.name","name")}} and optionally the {{domxref("PerformanceEntry.entryType","performance type")}}.
+- {{domxref("Performance.getEntriesByType","getEntriesByType()")}}
+  - : Returns the recorded {{domxref("PerformanceEntry","performance entries")}} based on the specified {{domxref("PerformanceEntry.entryType","performance type")}}.
 
-<h2 id="PerformanceEntry_interface">PerformanceEntry interface</h2>
+## PerformanceEntry interface
 
-<p>The {{domxref("PerformanceEntry")}} interface encapsulates a single <em>performance entry</em> — that is, a single data point or metric in the <em>performance timeline</em>. This interface has the following four properties, and these properties are extended (with additional constraints) by other interfaces (such as {{domxref("PerformanceMark")}}):</p>
+The {{domxref("PerformanceEntry")}} interface encapsulates a single _performance entry_ — that is, a single data point or metric in the _performance timeline_. This interface has the following four properties, and these properties are extended (with additional constraints) by other interfaces (such as {{domxref("PerformanceMark")}}):
 
-<dl>
- <dt>{{domxref("PerformanceEntry.name","name")}}</dt>
- <dd>The name of the performance entry when the metric was created.</dd>
- <dt>{{domxref("PerformanceEntry.entryType","entryType")}}</dt>
- <dd>The type of performance metric (for example, "<code>mark</code>").</dd>
- <dt>{{domxref("PerformanceEntry.startTime","startTime")}}</dt>
- <dd>A {{domxref("DOMHighResTimeStamp","high resolution timestamp")}} representing the starting time for the performance entry.</dd>
- <dt>{{domxref("PerformanceEntry.duration","duration")}}</dt>
- <dd>A {{domxref("DOMHighResTimeStamp","high resolution timestamp", '', 'true')}} representing the time value of the duration of the performance event. (Some performance {{domxref("PerformanceEntry.entryType","entry types", '', 'true')}} have no concept of <em>duration</em> and this value is set to <code>'0'</code> for such types.)</dd>
-</dl>
+- {{domxref("PerformanceEntry.name","name")}}
+  - : The name of the performance entry when the metric was created.
+- {{domxref("PerformanceEntry.entryType","entryType")}}
+  - : The type of performance metric (for example, "`mark`").
+- {{domxref("PerformanceEntry.startTime","startTime")}}
+  - : A {{domxref("DOMHighResTimeStamp","high resolution timestamp")}} representing the starting time for the performance entry.
+- {{domxref("PerformanceEntry.duration","duration")}}
+  - : A {{domxref("DOMHighResTimeStamp","high resolution timestamp", '', 'true')}} representing the time value of the duration of the performance event. (Some performance {{domxref("PerformanceEntry.entryType","entry types", '', 'true')}} have no concept of _duration_ and this value is set to `'0'` for such types.)
 
-<p>This interface includes a {{domxref("PerformanceEntry.toJSON","toJSON()")}} method that returns the serialization of the {{domxref("PerformanceEntry")}} object. The serialization is specific to the performance entry's {{domxref("PerformanceEntry.entryType","type")}}.</p>
+This interface includes a {{domxref("PerformanceEntry.toJSON","toJSON()")}} method that returns the serialization of the {{domxref("PerformanceEntry")}} object. The serialization is specific to the performance entry's {{domxref("PerformanceEntry.entryType","type")}}.
 
-<h2 id="Performance_observers">Performance observers</h2>
+## Performance observers
 
-<p>{{SeeCompatTable}}</p>
+{{SeeCompatTable}}
 
-<p>The <em>performance observer</em> interfaces allow an application to register an <em>observer</em> for specific performance event types, and when one of those event types is recorded, the application is <em>notified</em> of the event via the observer's callback function that was specified when the observer was created.</p>
+The _performance observer_ interfaces allow an application to register an _observer_ for specific performance event types, and when one of those event types is recorded, the application is _notified_ of the event via the observer's callback function that was specified when the observer was created.
 
-<p>When the observer (callback) is invoked, the callback's parameters include a <em>{{domxref("PerformanceObserverEntryList","performance observer entry list")}}</em> that contains only <em>observed</em> {{domxref("PerformanceEntry","performance entries")}}. That is, the list contains entries only for the event types that were specified when the observer's {{domxref("PerformanceObserver.observe","observe()")}} method was invoked. The {{domxref("PerformanceObserverEntryList","performance observer entry list")}} interface has the same three <code>getEntries*()</code> methods as the {{domxref("Performance")}} interface. However, note there is one key difference with these methods; the {{domxref("PerformanceObserverEntryList","performance observer entry list")}} versions are used to retrieve <em>observed</em> performance entries within the observer callback.</p>
+When the observer (callback) is invoked, the callback's parameters include a _{{domxref("PerformanceObserverEntryList","performance observer entry list")}}_ that contains only _observed_ {{domxref("PerformanceEntry","performance entries")}}. That is, the list contains entries only for the event types that were specified when the observer's {{domxref("PerformanceObserver.observe","observe()")}} method was invoked. The {{domxref("PerformanceObserverEntryList","performance observer entry list")}} interface has the same three `getEntries*()` methods as the {{domxref("Performance")}} interface. However, note there is one key difference with these methods; the {{domxref("PerformanceObserverEntryList","performance observer entry list")}} versions are used to retrieve _observed_ performance entries within the observer callback.
 
-<p>Besides the {{domxref("PerformanceObserver","PerformanceObserver's")}} interface's {{domxref("PerformanceObserver.observe","observe()")}} method (which is used to register the {{domxref("PerformanceEntry.entryType","entry types")}} to <em>observe</em>), the {{domxref("PerformanceObserver")}} interface also has a {{domxref("PerformanceObserver.disconnect","disconnect()")}} method that stops an observer from receiving further events.</p>
+Besides the {{domxref("PerformanceObserver","PerformanceObserver's")}} interface's {{domxref("PerformanceObserver.observe","observe()")}} method (which is used to register the {{domxref("PerformanceEntry.entryType","entry types")}} to _observe_), the {{domxref("PerformanceObserver")}} interface also has a {{domxref("PerformanceObserver.disconnect","disconnect()")}} method that stops an observer from receiving further events.
 
-<p>Performance observers were added to the <code>Level 2</code> version of the standard and were not widely implemented.</p>
+Performance observers were added to the `Level 2` version of the standard and were not widely implemented.
 
-<h2>Specifications</h2>
+## Specifications
 
-<table>
-  <tr>
-    <th>Specification</th>
-  </tr>
-  <tr>
-    <td><a href="https://w3c.github.io/performance-timeline/">Performance Timeline</a></td>
-  </tr>
-</table>
+| Specification                                                       |
+| ------------------------------------------------------------------- |
+| [Performance Timeline](https://w3c.github.io/performance-timeline/) |
 
-<h2 id="Implementation_status">Implementation status</h2>
+## Implementation status
 
-<p>A summary of the interfaces' implementation status is provided below, including a link to more detailed information.</p>
+A summary of the interfaces' implementation status is provided below, including a link to more detailed information.
 
-<ul>
- <li>Performance interface extensions: As shown in the {{domxref("Performance")}} interface's <a href="/en-US/docs/Web/API/Performance#browser_compatibility">Browser Compatibility</a> table, most of these interfaces are broadly implemented by desktop browsers and have less support on mobile devices.</li>
- <li>PerformanceEntry: As shown in the {{domxref("PerformanceEntry")}} interface's <a href="/en-US/docs/Web/API/PerformanceEntry#browser_compatibility">Browser Compatibility</a> table, most of these interfaces are broadly implemented by desktop browsers and have less support on mobile devices.</li>
- <li>Performance Observers {{experimental_inline}}: As shown in the {{domxref("PerformanceObserver")}} interface's <a href="/en-US/docs/Web/API/PerformanceObserver#browser_compatibility">Browser Compatibility</a> table, this interface has no shipping implementations.</li>
-</ul>
+- Performance interface extensions: As shown in the {{domxref("Performance")}} interface's [Browser Compatibility](/en-US/docs/Web/API/Performance#browser_compatibility) table, most of these interfaces are broadly implemented by desktop browsers and have less support on mobile devices.
+- PerformanceEntry: As shown in the {{domxref("PerformanceEntry")}} interface's [Browser Compatibility](/en-US/docs/Web/API/PerformanceEntry#browser_compatibility) table, most of these interfaces are broadly implemented by desktop browsers and have less support on mobile devices.
+- Performance Observers {{experimental_inline}}: As shown in the {{domxref("PerformanceObserver")}} interface's [Browser Compatibility](/en-US/docs/Web/API/PerformanceObserver#browser_compatibility) table, this interface has no shipping implementations.
 
-<p>To test your browser's support for these interfaces, run the <code><a href="https://mdn.github.io/dom-examples/performance-apis/perf-api-support.html">perf-api-support</a></code> application.</p>
+To test your browser's support for these interfaces, run the [`perf-api-support`](https://mdn.github.io/dom-examples/performance-apis/perf-api-support.html) application.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://siusin.github.io/perf-timing-primer/">A Primer for Web Performance Timing APIs</a></li>
-</ul>
+- [A Primer for Web Performance Timing APIs](https://siusin.github.io/perf-timing-primer/)

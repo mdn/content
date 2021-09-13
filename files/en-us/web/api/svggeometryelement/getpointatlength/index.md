@@ -2,41 +2,40 @@
 title: SVGGeometryElement.getPointAtLength()
 slug: Web/API/SVGGeometryElement/getPointAtLength
 tags:
-- API
-- DOM
-- Method
-- NeedsExample
-- Reference
-- SVG
-- SVG DOM
+  - API
+  - DOM
+  - Method
+  - NeedsExample
+  - Reference
+  - SVG
+  - SVG DOM
 browser-compat: api.SVGGeometryElement.getPointAtLength
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The
-    <code><strong>SVGGeometryElement.getPointAtLength()</strong></code> method returns the
-    point at a given distance along the path.</p>
+The
+**`SVGGeometryElement.getPointAtLength()`** method returns the
+point at a given distance along the path.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">DOMPoint <var>someElement</var>.<strong>getPointAtLength(</strong>float <var>distance</var><strong>)</strong>;
-</pre>
+```js
+DOMPoint someElement.getPointAtLength(float distance);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>distance</var></code></dt>
-  <dd>A float referring to the distance along the path.</dd>
-</dl>
+- `distance`
+  - : A float referring to the distance along the path.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("DOMPoint")}} indicating the point at a given distance along the path.</p>
+A {{domxref("DOMPoint")}} indicating the point at a given distance along the path.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

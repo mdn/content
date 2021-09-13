@@ -2,35 +2,36 @@
 title: MediaSettingsRange.max
 slug: Web/API/MediaSettingsRange/max
 tags:
-- API
-- ImageCapture
-- MediaSettingsRange
-- MediaStream
-- MediaStream Image Capture API
-- Property
-- Reference
-- max
+  - API
+  - ImageCapture
+  - MediaSettingsRange
+  - MediaStream
+  - MediaStream Image Capture API
+  - Property
+  - Reference
+  - max
 browser-compat: api.MediaSettingsRange.max
 ---
-<p>{{SeeCompatTable}}{{APIRef("MediaStream Image")}}</p>
+{{SeeCompatTable}}{{APIRef("MediaStream Image")}}
 
-<p>The <strong><code>max</code></strong> read-only property of the
-	{{domxref("MediaSettingsRange")}} interface returns the maximum value of the settings
-	range.</p>
+The **`max`** read-only property of the
+{{domxref("MediaSettingsRange")}} interface returns the maximum value of the settings
+range.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-	class="brush: js">var <em>max</em> = <em>mediaSettingsRange</em>.max</pre>
+```js
+var max = mediaSettingsRange.max
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A double integer.</p>
+A double integer.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

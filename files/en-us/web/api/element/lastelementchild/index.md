@@ -8,50 +8,49 @@ tags:
   - Property
 browser-compat: api.Element.lastElementChild
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p>The <strong><code>Element.lastElementChild</code></strong> read-only property
-returns an element's last child {{domxref("Element")}}, or <code>null</code> if there
-are no child elements.</p>
+The **`Element.lastElementChild`** read-only property
+returns an element's last child {{domxref("Element")}}, or `null` if there
+are no child elements.
 
-<p><code>Element.lastElementChild</code> includes only element nodes.
-To get all child nodes, including non-element nodes like text and comment nodes, use {{domxref("Node.lastChild")}}.</p>
+`Element.lastElementChild` includes only element nodes.
+To get all child nodes, including non-element nodes like text and comment nodes, use {{domxref("Node.lastChild")}}.
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: js">
+```js
 // Getter
 element = el.lastElementChild;
 
 // No setter; read-only property
-</pre>
-<h2 id="Example">Example</h2>
+```
 
-<pre class="brush: html">&lt;ul id="list"&gt;
-  &lt;li&gt;First  (1)&lt;/li&gt;
-  &lt;li&gt;Second (2)&lt;/li&gt;
-  &lt;li&gt;Third  (3)&lt;/li&gt;
-&lt;/ul&gt;
+## Example
 
-&lt;script&gt;
+```html
+<ul id="list">
+  <li>First  (1)</li>
+  <li>Second (2)</li>
+  <li>Third  (3)</li>
+</ul>
+
+<script>
 const list = document.getElementById('list');
 console.log(list.lastElementChild.textContent);
 // logs "Third (3)"
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-    <li>{{domxref("Element.previousElementSibling")}}</li>
-    <li>{{domxref("Element.firstElementChild")}}</li>
-</ul>
+- {{domxref("Element.previousElementSibling")}}
+- {{domxref("Element.firstElementChild")}}

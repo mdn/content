@@ -10,44 +10,43 @@ tags:
   - Request
 browser-compat: api.Request.body
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p>The read-only <strong><code>body</code></strong> property of the {{domxref("Request")}}
-  interface contains a {{domxref("ReadableStream")}} with the body contents
-  that have been added to the request. Note that a request using the
-  <code>GET</code> or <code>HEAD</code> method cannot have a body
-  and <code>null</code> is return in these cases.</p>
+The read-only **`body`** property of the {{domxref("Request")}}
+interface contains a {{domxref("ReadableStream")}} with the body contents
+that have been added to the request. Note that a request using the
+`GET` or `HEAD` method cannot have a body
+and `null` is return in these cases.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">request.body</pre>
+```js
+request.body
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("ReadableStream")}} or {{jsxref("null")}}.</p>
+A {{domxref("ReadableStream")}} or {{jsxref("null")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">
+```js
 const request = new Request('/myEndpoint', {
   method: 'POST',
   body: 'Hello world'
 });
 
 request.body; // ReadableStream
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Request.bodyUsed")}}</li>
-</ul>
-
+- {{domxref("Request.bodyUsed")}}

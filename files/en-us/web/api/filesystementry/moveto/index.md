@@ -2,106 +2,99 @@
 title: FileSystemEntry.moveTo()
 slug: Web/API/FileSystemEntry/moveTo
 tags:
-- API
-- File System API
-- File and Directory Entries API
-- FileSystemEntry
-- Files
-- Method
-- Non-standard
-- Reference
-- moveTo
-- Deprecated
+  - API
+  - File System API
+  - File and Directory Entries API
+  - FileSystemEntry
+  - Files
+  - Method
+  - Non-standard
+  - Reference
+  - moveTo
+  - Deprecated
 browser-compat: api.FileSystemEntry.moveTo
 ---
-<p>{{APIRef("File System API")}}{{SeeCompatTable}}{{deprecated_header}}</p>
+{{APIRef("File System API")}}{{SeeCompatTable}}{{deprecated_header}}
 
-<p>The {{domxref("FileSystemEntry")}} interface's method
-    <strong><code>moveTo()</code></strong> moves the file
-    specified by the entry to a new location on the file system, or renames the file if
-    the destination directory is the same as the source.</p>
+The {{domxref("FileSystemEntry")}} interface's method
+**`moveTo()`** moves the file
+specified by the entry to a new location on the file system, or renames the file if
+the destination directory is the same as the source.
 
-<p>There are some typical
-  restrictions on what you can do:</p>
+There are some typical
+restrictions on what you can do:
 
-<ul>
-  <li>A directory can't be moved into itself.</li>
-  <li>An entry can't be moved into its parent directory unless you specify a new name.
-    Specifying a new name lets <code>moveTo()</code> double as a rename operation.</li>
-  <li>When moving a directory, the move is always recursive; you can't leave out
-    subfolders.</li>
-  <li>You can't move a file such that it replaces an existing directory, and you can't
-    move a directory such that it replaces an existing file. However, a file can replace a
-    file and a directory can replace a directory.</li>
-  <li>You can only overwrite a directory if it's empty.</li>
-</ul>
+- A directory can't be moved into itself.
+- An entry can't be moved into its parent directory unless you specify a new name.
+  Specifying a new name lets `moveTo()` double as a rename operation.
+- When moving a directory, the move is always recursive; you can't leave out
+  subfolders.
+- You can't move a file such that it replaces an existing directory, and you can't
+  move a directory such that it replaces an existing file. However, a file can replace a
+  file and a directory can replace a directory.
+- You can only overwrite a directory if it's empty.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>FileSystemEntry</em>.moveTo(<em>newParent</em>[, <em>newName</em>][, <em>successCallback</em>][, <em>errorCallback</em>]);</pre>
+```js
+FileSystemEntry.moveTo(newParent[, newName][, successCallback][, errorCallback]);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>newParent</code></dt>
-  <dd>A {{domxref("FileSystemDirectoryEntry")}} object specifying the destination
-    directory for the move operation.</dd>
-  <dt><code>newName</code> {{optional_inline}}</dt>
-  <dd>If this parameter is provided, the entry is renamed to have this string as its new
-    file or directory name.</dd>
-  <dt><code>successCallback</code> {{optional_inline}}</dt>
-  <dd>A function which is called when the move operation is successfully completed.
+- `newParent`
+  - : A {{domxref("FileSystemDirectoryEntry")}} object specifying the destination
+    directory for the move operation.
+- `newName` {{optional_inline}}
+  - : If this parameter is provided, the entry is renamed to have this string as its new
+    file or directory name.
+- `successCallback` {{optional_inline}}
+  - : A function which is called when the move operation is successfully completed.
     Receives a single input parameter: a {{domxref("FileSystemEntry")}} based object
-    providing the moved item's new details.</dd>
-  <dt><code>errorCallback</code> {{optional_inline}}</dt>
-  <dd>An optional callback which is executed if an error occurs while moving the items.
+    providing the moved item's new details.
+- `errorCallback` {{optional_inline}}
+  - : An optional callback which is executed if an error occurs while moving the items.
     There's a single parameter: a {{domxref("FileError")}} describing what went wrong.
-  </dd>
-</dl>
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{jsxref("undefined")}}.</p>
+{{jsxref("undefined")}}.
 
-<h3 id="Errors">Errors</h3>
+### Errors
 
-<dl>
-  <dt><code>FileError.INVALID_MODIFICATION_ERR</code></dt>
-  <dd>The requested operation involves an impossible change, such as moving a directory
+- `FileError.INVALID_MODIFICATION_ERR`
+  - : The requested operation involves an impossible change, such as moving a directory
     inside itself or one of its own child directories, or copying an item within the same
-    directory without renaming it.</dd>
-  <dt><code>FileError.QUOTA_EXCEEDED_ERR</code></dt>
-  <dd>The operation exceeded the user's storage quota, or there isn't enough storage space
-    left to complete the operation.</dd>
-</dl>
+    directory without renaming it.
+- `FileError.QUOTA_EXCEEDED_ERR`
+  - : The operation exceeded the user's storage quota, or there isn't enough storage space
+    left to complete the operation.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example shows how a temporary log file might be moved into a more permanent "log"
-  directory when it exceeds a megabyte in size.</p>
+This example shows how a temporary log file might be moved into a more permanent "log"
+directory when it exceeds a megabyte in size.
 
-<pre class="brush: js">workingDirectory.getFile("tmp/log.txt", {}, function(fileEntry) {
+```js
+workingDirectory.getFile("tmp/log.txt", {}, function(fileEntry) {
   fileEntry.getMetadata(function(metadata) {
-    if (metadata.size &gt; 1048576) {
+    if (metadata.size > 1048576) {
       workingDirectory.getDirectory("log", {}, function(dirEntry) {
         fileEntry.moveTo(dirEntry);
       }, handleError);
     }
   });
-}, handleError);</pre>
+}, handleError);
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory
-      Entries API</a></li>
-  <li><a
-      href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">Introduction
-      to the File System API</a></li>
-  <li>{{domxref("FileSystemEntry.copyTo()")}}</li>
-</ul>
+- [File and Directory
+  Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction
+  to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- {{domxref("FileSystemEntry.copyTo()")}}

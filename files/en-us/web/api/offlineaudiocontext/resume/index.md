@@ -2,50 +2,49 @@
 title: OfflineAudioContext.resume()
 slug: Web/API/OfflineAudioContext/resume
 tags:
-- API
-- Method
-- NeedsExample
-- OfflineAudioContext
-- Reference
-- Web Audio API
-- resume
+  - API
+  - Method
+  - NeedsExample
+  - OfflineAudioContext
+  - Reference
+  - Web Audio API
+  - resume
 browser-compat: api.OfflineAudioContext.resume
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>The <strong><code>resume()</code></strong> method of the
-  {{domxref("OfflineAudioContext")}} interface resumes the progression of time in an audio
-  context that has been suspended. The promise resolves immediately because the
-  <code>OfflineAudioContext</code> does not require the audio hardware. If the context is
-  not currently suspended or the rendering has not started, the promise is rejected with
-  {{exception("InvalidStateError")}}.</p>
+The **`resume()`** method of the
+{{domxref("OfflineAudioContext")}} interface resumes the progression of time in an audio
+context that has been suspended. The promise resolves immediately because the
+`OfflineAudioContext` does not require the audio hardware. If the context is
+not currently suspended or the rendering has not started, the promise is rejected with
+{{exception("InvalidStateError")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">OfflineAudioContext.resume().then(function() { ... });</pre>
+```js
+OfflineAudioContext.resume().then(function() { ... });
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A {{jsxref("Promise")}} resolving to void.</p>
+A {{jsxref("Promise")}} resolving to void.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>The promise is rejected when the following exception is encountered.</p>
+The promise is rejected when the following exception is encountered.
 
-<ul>
-  <li>{{exception("InvalidStateError")}}  if the context is not currently suspended or the
-    rendering has not started. </li>
-</ul>
+- {{exception("InvalidStateError")}}  if the context is not currently suspended or the
+  rendering has not started.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,40 +2,42 @@
 title: PushSubscription.unsubscribe()
 slug: Web/API/PushSubscription/unsubscribe
 tags:
-- API
-- Experimental
-- Method
-- Push
-- Push API
-- PushSubscription
-- Reference
-- Service Workers
-- unsubscribe
+  - API
+  - Experimental
+  - Method
+  - Push
+  - Push API
+  - PushSubscription
+  - Reference
+  - Service Workers
+  - unsubscribe
 browser-compat: api.PushSubscription.unsubscribe
 ---
-<p>{{SeeCompatTable}}{{APIRef("Push API")}}</p>
+{{SeeCompatTable}}{{APIRef("Push API")}}
 
-<p>The <code>unsubscribe()</code> method of the {{domxref("PushSubscription")}} interface
-  returns a {{jsxref("Promise")}} that resolves to a boolean value when the
-  current subscription is successfully unsubscribed.</p>
+The `unsubscribe()` method of the {{domxref("PushSubscription")}} interface
+returns a {{jsxref("Promise")}} that resolves to a boolean value when the
+current subscription is successfully unsubscribed.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">PushSubscription.unsubscribe().then(function(Boolean) { ... });</pre>
+```js
+PushSubscription.unsubscribe().then(function(Boolean) { ... });
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A {{jsxref("Promise")}} that resolves to a boolean value when the current
-  subscription is successfully unsubscribed.</p>
+A {{jsxref("Promise")}} that resolves to a boolean value when the current
+subscription is successfully unsubscribed.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">navigator.serviceWorker.ready.then(function(reg) {
+```js
+navigator.serviceWorker.ready.then(function(reg) {
   reg.pushManager.getSubscription().then(function(subscription) {
     subscription.unsubscribe().then(function(successful) {
       // You've successfully unsubscribed
@@ -43,18 +45,17 @@ browser-compat: api.PushSubscription.unsubscribe
       // Unsubscription failed
     })
   })
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("PushManager.getSubscription")}}</li>
-</ul>
+- {{domxref("PushManager.getSubscription")}}

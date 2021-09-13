@@ -2,66 +2,65 @@
 title: Metadata.size
 slug: Web/API/Metadata/size
 tags:
-- API
-- File System API
-- File and Directory Entries API
-- Files
-- Non-standard
-- Offline
-- Property
-- Reference
-- metadata
-- size
+  - API
+  - File System API
+  - File and Directory Entries API
+  - Files
+  - Non-standard
+  - Offline
+  - Property
+  - Reference
+  - metadata
+  - size
 browser-compat: api.Metadata.size
 ---
-<p>{{APIRef("File System API")}}{{Non-standard_header}}</p>
+{{APIRef("File System API")}}{{Non-standard_header}}
 
-<p>The read-only <strong><code>size</code></strong> property of
-    the {{domxref("Metadata")}} interface specifies the size, in bytes, of the referenced
-    file or other file system object on disk.</p>
+The read-only **`size`** property of
+the {{domxref("Metadata")}} interface specifies the size, in bytes, of the referenced
+file or other file system object on disk.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>size</em> = <em>Metadata</em>.size;</pre>
+```js
+var size = Metadata.size;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A number indicating the size of the file in bytes.</p>
+A number indicating the size of the file in bytes.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example checks the size of a log file and removes it if it's larger than a
-  megabyte.</p>
+This example checks the size of a log file and removes it if it's larger than a
+megabyte.
 
-<pre class="brush: js">workingDirectory.getFile("log/important.log", {}, function(fileEntry) {
+```js
+workingDirectory.getFile("log/important.log", {}, function(fileEntry) {
   fileEntry.getMetadata(function(metadata) {
-    if (metadata.size &gt; 1048576) {
+    if (metadata.size > 1048576) {
       fileEntry.remove(function() {
         /* log file removed; do something clever here */
       });
     }
   });
 }, handleError);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This API has no official W3C or WHATWG specification.</p>
+This API has no official W3C or WHATWG specification.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory
-      Entries API</a></li>
-  <li><a
-      href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">Introduction
-      to the File System API</a></li>
-  <li>{{domxref("Metadata")}}</li>
-  <li>{{domxref("FileSystemEntry.getMetadata()")}}</li>
-  <li>{{domxref("FileSystemFileEntry")}}</li>
-</ul>
+- [File and Directory
+  Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction
+  to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- {{domxref("Metadata")}}
+- {{domxref("FileSystemEntry.getMetadata()")}}
+- {{domxref("FileSystemFileEntry")}}

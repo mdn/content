@@ -2,69 +2,70 @@
 title: RTCIceCandidate.foundation
 slug: Web/API/RTCIceCandidate/foundation
 tags:
-- API
-- Candidate
-- ICE
-- Property
-- RTCIceCandidate
-- Read-only
-- Reference
-- SDP
-- Transport
-- WebRTC
-- WebRTC API
-- foundation
+  - API
+  - Candidate
+  - ICE
+  - Property
+  - RTCIceCandidate
+  - Read-only
+  - Reference
+  - SDP
+  - Transport
+  - WebRTC
+  - WebRTC API
+  - foundation
 browser-compat: api.RTCIceCandidate.foundation
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <strong>{{domxref("RTCIceCandidate")}}</strong>
-    interface's read-only <strong><code>foundation</code></strong> property is a string
-    which uniquely identifies the candidate across multiple transports.</p>
+The **{{domxref("RTCIceCandidate")}}**
+interface's read-only **`foundation`** property is a string
+which uniquely identifies the candidate across multiple transports.
 
-<p>The <code>foundation</code> can therefore be used to correlate candidates that are present on
-  multiple {{domxref("RTCIceTransport")}} objects</p>
+The `foundation` can therefore be used to correlate candidates that are present on
+multiple {{domxref("RTCIceTransport")}} objects
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>foundation</em> = <em>RTCIceCandidate</em>.foundation;</pre>
+```js
+var foundation = RTCIceCandidate.foundation;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} which uniquely identifies the candidate across all
-  <code>RTCIceTransport</code>s on which it is available.</p>
+A {{domxref("DOMString")}} which uniquely identifies the candidate across all
+`RTCIceTransport`s on which it is available.
 
-<div class="note">
-  <p><strong>Note:</strong> If <code>port</code> is <code>null</code> — and
-    <code>port</code> is supported by the {{Glossary("user agent")}} — passing the
-    candidate to {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}}
-    will fail, throwing an <code>OperationError</code> exception.</p>
-</div>
+> **Note:** If `port` is `null` — and
+> `port` is supported by the {{Glossary("user agent")}} — passing the
+> candidate to {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}}
+> will fail, throwing an `OperationError` exception.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>Consider this {{Glossary("SDP")}} attribute line (a-line) which  describes an ICE
-  candidate:</p>
+Consider this {{Glossary("SDP")}} attribute line (a-line) which  describes an ICE
+candidate:
 
-<pre>a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host</pre>
+    a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
 
-<p>The field <code>"4234997325"</code> is the foundation.</p>
+The field `"4234997325"` is the foundation.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This code snippet uses the <code>foundation</code> of two candidates to determine if
-  they're actually the same candidate.</p>
+This code snippet uses the `foundation` of two candidates to determine if
+they're actually the same candidate.
 
-<pre class="brush: js">if (candidate1.foundation == candidate2.foundation) {
+```js
+if (candidate1.foundation == candidate2.foundation) {
   /* the two candidates are the same, even if they're on
      different transports */
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

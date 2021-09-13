@@ -9,34 +9,38 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals.labels
 ---
-<div>{{DefaultAPISidebar("DOM")}}</div>
+{{DefaultAPISidebar("DOM")}}
 
-<p>The <strong><code>labels</code></strong> read-only property of the {{domxref("ElementInternals")}} interface returns the labels associated with the element.</p>
+The **`labels`** read-only property of the {{domxref("ElementInternals")}} interface returns the labels associated with the element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let labels = ElementInternals.labels;</pre>
+```js
+let labels = ElementInternals.labels;
+```
 
-<h3>Value</h3>
-<p>A {{domxref("NodeList")}} containing all of the label elements associated with this element.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("NodeList")}} containing all of the label elements associated with this element.
 
-<p>The following example shows a custom checkbox component with a {{HTMLElement("label")}} element linked to it. Printing the value of <code>labels</code> to the console returns a {{domxref("NodeList")}} with one entry, representing this label.</p>
+## Examples
 
-<pre class="brush: html">&lt;form id="myForm"&gt;&lt;custom-checkbox id="join-checkbox"&gt;&lt;/custom-checkbox&gt;
-  &lt;label for="custom-checkbox"&gt;Join newsletter&lt;/label&gt;&lt;/form&gt;</pre>
+The following example shows a custom checkbox component with a {{HTMLElement("label")}} element linked to it. Printing the value of `labels` to the console returns a {{domxref("NodeList")}} with one entry, representing this label.
 
-<pre class="brush: js">let element = document.getElementById("custom-checkbox");
-console.log(element.internals_.label);</pre>
+```html
+<form id="myForm"><custom-checkbox id="join-checkbox"></custom-checkbox>
+  <label for="custom-checkbox">Join newsletter</label></form>
+```
 
-<h2 id="Specifications">Specifications</h2>
+```js
+let element = document.getElementById("custom-checkbox");
+console.log(element.internals_.label);
+```
 
-<p>{{Specifications}}</p>
+## Specifications
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+{{Specifications}}
 
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
-
+{{Compat}}

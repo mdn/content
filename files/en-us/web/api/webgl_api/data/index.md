@@ -16,24 +16,24 @@ tags:
   - WebGL
   - WebGL API
 ---
-<div>{{WebGLSidebar}}{{draft}}</div>
+{{WebGLSidebar}}{{draft}}
 
-<p>Shader programs have access to three kinds of data storage, each of which has a specific use case. Each kind of variable is accessible by one or both types of shader program (depending on the data store type) and possibly by the site's JavaScript code, depending on the specific type of variable.</p>
+Shader programs have access to three kinds of data storage, each of which has a specific use case. Each kind of variable is accessible by one or both types of shader program (depending on the data store type) and possibly by the site's JavaScript code, depending on the specific type of variable.
 
-<h2 id="GLSL_data_types">GLSL data types</h2>
+## GLSL data types
 
-<p>&lt;&lt;document the basic types, vectors, etc; see <a href="https://www.khronos.org/opengl/wiki/Data_Type_(GLSL)">Data Type (GLSL)</a> on the Khronos WebGL wiki&gt;&gt;</p>
+<\<document the basic types, vectors, etc; see [Data Type (GLSL)](<https://www.khronos.org/opengl/wiki/Data_Type_(GLSL)>) on the Khronos WebGL wiki>>
 
-<h2 id="GLSL_variables">GLSL variables</h2>
+## GLSL variables
 
-<p>There are three kinds of "variable" or data storage available in GLSL, each of which with its own purpose and use cases: <strong>{{anch("Attributes", "attributes")}}</strong>, <strong>{{anch("Varyings", "varyings")}}</strong>, and <strong>{{anch("Uniforms", "uniforms")}}</strong>.</p>
+There are three kinds of "variable" or data storage available in GLSL, each of which with its own purpose and use cases: **{{anch("Attributes", "attributes")}}**, **{{anch("Varyings", "varyings")}}**, and **{{anch("Uniforms", "uniforms")}}**.
 
-<h3 id="Attributes">Attributes</h3>
+### Attributes
 
-<p><strong>Attributes</strong> are GLSL variables which are only available to the vertex shader (as variables) and the JavaScript code. Attributes are typically used to store color information, texture coordinates, and any other data calculated or retrieved that needs to be shared between the JavaScript code and the vertex shader.</p>
+**Attributes** are GLSL variables which are only available to the vertex shader (as variables) and the JavaScript code. Attributes are typically used to store color information, texture coordinates, and any other data calculated or retrieved that needs to be shared between the JavaScript code and the vertex shader.
 
-
-<pre class="brush: js">//init colors
+```js
+//init colors
     var vertexColors = [
         vec4( 0.0, 0.0, 0.0, 1.0 ),  // black
         vec4( 1.0, 0.0, 0.0, 1.0 ),  // red
@@ -45,10 +45,10 @@ tags:
         vec4( 0.0, 1.0, 0.0, 1.0 ),  // green
     ];
     var cBuffer = gl.createBuffer();
-</pre>
+```
 
-
-<pre class="brush: js">//continued
+```js
+//continued
 //create buffer to store colors and reference it to "vColor" which is in GLSL
     gl.bindBuffer( gl.ARRAY_BUFFER, cBuffer );
     gl.bufferData( gl.ARRAY_BUFFER, flatten(vertexColors), gl.STATIC_DRAW );
@@ -56,10 +56,10 @@ tags:
     var vColor = gl.getAttribLocation( program, "vColor" );
     gl.vertexAttribPointer( vColor, 4, gl.FLOAT, false, 0, 0 );
     gl.enableVertexAttribArray( vColor );
-</pre>
+```
 
-
-<pre class="brush: cpp">//glsl
+```cpp
+//glsl
 attribute  vec4 vColor;
 
 void main()
@@ -67,26 +67,24 @@ void main()
 
 fColor = vColor;
 }
+```
 
-</pre>
+### Varyings
 
+**Varyings** are variables that are declared by the vertex shader and used to pass data from the vertex shader to the fragment shader. This is commonly used to share a vertex's {{interwiki("wikipedia", "Normal_(geometry)", "normal vector")}} after it has been computed by the vertex shader.
 
-<h3 id="Varyings">Varyings</h3>
+<\<how to use>>
 
-<p><strong>Varyings</strong> are variables that are declared by the vertex shader and used to pass data from the vertex shader to the fragment shader. This is commonly used to share a vertex's {{interwiki("wikipedia", "Normal_(geometry)", "normal vector")}} after it has been computed by the vertex shader.</p>
+### Uniforms
 
-<p>&lt;&lt;how to use&gt;&gt;</p>
+**Uniforms** are set by the JavaScript code and are available to both the vertex and fragment shaders. They're used to provide values that will be the same for everything drawn in the frame, such as lighting positions and magnitudes, global transformation and perspective details, and so forth.
 
-<h3 id="Uniforms">Uniforms</h3>
+<\<add details>>
 
-<p><strong>Uniforms</strong> are set by the JavaScript code and are available to both the vertex and fragment shaders. They're used to provide values that will be the same for everything drawn in the frame, such as lighting positions and magnitudes, global transformation and perspective details, and so forth.</p>
+## Buffers
 
-<p>&lt;&lt;add details&gt;&gt;</p>
+<\<add information>>
 
-<h2 id="Buffers">Buffers</h2>
+## Textures
 
-<p>&lt;&lt;add information&gt;&gt;</p>
-
-<h2 id="Textures">Textures</h2>
-
-<p>&lt;&lt;add information&gt;&gt;</p>
+<\<add information>>

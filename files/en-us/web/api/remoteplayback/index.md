@@ -8,58 +8,54 @@ tags:
   - RemotePlayback
 browser-compat: api.RemotePlayback
 ---
-<div>{{DefaultAPISidebar("Remote Playback API")}}</div>
+{{DefaultAPISidebar("Remote Playback API")}}
 
-<p>The <strong><code>RemotePlayback</code></strong> interface of the {{domxref('Remote Playback API','','',' ')}} allows the page to detect availability of remote playback devices, then connect to and control playing on these devices.</p>
+The **`RemotePlayback`** interface of the {{domxref('Remote Playback API','','',' ')}} allows the page to detect availability of remote playback devices, then connect to and control playing on these devices.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
-  <dt>{{domxref("RemotePlayback.state")}}{{ReadOnlyInline}}</dt>
-  <dd>Represents the <code>RemotePlayback</code> connection's state. One of:
-    <dl>
-      <dt><code>"connecting"</code></dt>
-      <dd>The user agent is attempting to initiate remote playback with the selected device.</dd>
-      <dt><code>"connected"</code></dt>
-      <dd>The transition from local to remote playback has happened, all commands will now take place on the remote device.</dd>
-      <dt><code>"disconnected"</code></dt>
-      <dd>The remote playback has not been initiated, has failed to initiate, or has been stopped.</dd>
-    </dl>
-  </dd>
-</dl>
+- {{domxref("RemotePlayback.state")}}{{ReadOnlyInline}}
 
-<h3 id="Event_handlers">Event handlers</h3>
+  - : Represents the `RemotePlayback` connection's state. One of:
 
-<dl>
-  <dt>{{domxref("RemotePlayback.onconnecting")}}</dt>
-  <dd>Fired when the user agent initiates remote playback.</dd>
-  <dt>{{domxref("RemotePlayback.onconnect")}}</dt>
-  <dd>Fired when the user agent successfully connects to the remote device.</dd>
-  <dt>{{domxref("RemotePlayback.ondisconnect")}}</dt>
-  <dd>Fired when the user agent disconnects from the remote device.</dd>
-</dl>
+    - `"connecting"`
+      - : The user agent is attempting to initiate remote playback with the selected device.
+    - `"connected"`
+      - : The transition from local to remote playback has happened, all commands will now take place on the remote device.
+    - `"disconnected"`
+      - : The remote playback has not been initiated, has failed to initiate, or has been stopped.
 
-<h2 id="Methods">Methods</h2>
+### Event handlers
 
-<dl>
-  <dt>{{domxref("RemotePlayback.watchAvailability()")}}</dt>
-  <dd>A {{jsxref("Promise")}} that resolves with a <code>callbackId</code> of an available remote playback device.</dd>
-  <dt>{{domxref("RemotePlayback.cancelWatchAvailability()")}}</dt>
-  <dd>Cancels the request to monitor the availability of remote playback devices.</dd>
-  <dt>{{domxref("RemotePlayback.prompt()")}}</dt>
-  <dd>Prompts the user to select and give permission to connect to a remote playbabk device.</dd>
-</dl>
+- {{domxref("RemotePlayback.onconnecting")}}
+  - : Fired when the user agent initiates remote playback.
+- {{domxref("RemotePlayback.onconnect")}}
+  - : Fired when the user agent successfully connects to the remote device.
+- {{domxref("RemotePlayback.ondisconnect")}}
+  - : Fired when the user agent disconnects from the remote device.
 
-<h2 id="Examples">Examples</h2>
+## Methods
 
-<p>The following example demonstrates a player with custom controls that support remote playback. Initially the button used to select a device is hidden:</p>
+- {{domxref("RemotePlayback.watchAvailability()")}}
+  - : A {{jsxref("Promise")}} that resolves with a `callbackId` of an available remote playback device.
+- {{domxref("RemotePlayback.cancelWatchAvailability()")}}
+  - : Cancels the request to monitor the availability of remote playback devices.
+- {{domxref("RemotePlayback.prompt()")}}
+  - : Prompts the user to select and give permission to connect to a remote playbabk device.
 
-<pre class="brush: html">&lt;video id="videoElement" src="https://example.org/media.ext"&gt;
-&lt;button id="deviceBtn" style="display: none;"&gt;Pick device&lt;/button&gt;</pre>
+## Examples
 
-<p>The {{domxref("RemotePlayback.watchAvailability()")}} method is used to watch for available remote playback devices. If a device is available, use the callback to show the button.</p>
+The following example demonstrates a player with custom controls that support remote playback. Initially the button used to select a device is hidden:
 
-<pre class="brush: js">const deviceBtn = document.getElementById("deviceBtn");
+```html
+<video id="videoElement" src="https://example.org/media.ext">
+<button id="deviceBtn" style="display: none;">Pick device</button>
+```
+
+The {{domxref("RemotePlayback.watchAvailability()")}} method is used to watch for available remote playback devices. If a device is available, use the callback to show the button.
+
+```js
+const deviceBtn = document.getElementById("deviceBtn");
 const videoElem = document.getElementById("videoElement");
 
 function availabilityCallback(available) {
@@ -71,12 +67,13 @@ videoElem.remote.watchAvailability(availabilityCallback).catch(() => {
   /* If the device cannot continuously watch available,
   show the button to allow the user to try to prompt for a connection.*/
   deviceBtn.style.display = "inline";
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

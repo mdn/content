@@ -9,39 +9,36 @@ tags:
   - ScrollToOptions
 browser-compat: api.ScrollToOptions
 ---
-<div>{{ APIRef("CSSOM View") }}</div>
+{{ APIRef("CSSOM View") }}
 
-<p>The <strong><code>ScrollToOptions</code></strong> dictionary of the CSSOM View spec contains properties specifying where an element should be scrolled to, and whether the scrolling should be smooth.</p>
+The **`ScrollToOptions`** dictionary of the CSSOM View spec contains properties specifying where an element should be scrolled to, and whether the scrolling should be smooth.
 
-<p>A <code>ScrollToOptions</code> dictionary can be provided as a parameter for the following methods:</p>
+A `ScrollToOptions` dictionary can be provided as a parameter for the following methods:
 
-<ul>
- <li>{{domxref("Window.scroll()")}}</li>
- <li>{{domxref("Window.scrollBy()")}}</li>
- <li>{{domxref("Window.scrollTo()")}}</li>
- <li>{{domxref("Element.scroll()")}}</li>
- <li>{{domxref("Element.scrollBy()")}}</li>
- <li>{{domxref("Element.scrollTo()")}}</li>
-</ul>
+- {{domxref("Window.scroll()")}}
+- {{domxref("Window.scrollBy()")}}
+- {{domxref("Window.scrollTo()")}}
+- {{domxref("Element.scroll()")}}
+- {{domxref("Element.scrollBy()")}}
+- {{domxref("Element.scrollTo()")}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("ScrollToOptions.top")}}</dt>
- <dd>Specifies the number of pixels along the Y axis to scroll the window or element.</dd>
- <dt>{{domxref("ScrollToOptions.left")}}</dt>
- <dd>Specifies the number of pixels along the X axis to scroll the window or element.</dd>
- <dt>{{domxref("ScrollToOptions.behavior")}}</dt>
- <dd>Specifies whether the scrolling should animate smoothly, or happen instantly in a single jump. This is actually defined on the <code>ScrollOptions</code> dictionary, which is implemented by <code>ScrollToOptions</code>.</dd>
-</dl>
+- {{domxref("ScrollToOptions.top")}}
+  - : Specifies the number of pixels along the Y axis to scroll the window or element.
+- {{domxref("ScrollToOptions.left")}}
+  - : Specifies the number of pixels along the X axis to scroll the window or element.
+- {{domxref("ScrollToOptions.behavior")}}
+  - : Specifies whether the scrolling should animate smoothly, or happen instantly in a single jump. This is actually defined on the `ScrollOptions` dictionary, which is implemented by `ScrollToOptions`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In our <a href="https://github.com/mdn/dom-examples/tree/master/scrolltooptions">scrolltooptions example</a> (<a href="https://mdn.github.io/dom-examples/scrolltooptions/">see it live</a>) we include a form that allows the user to enter three values — two numbers representing the left and top properties (i.e. the positions to scroll to along the X and Y axes), and a checkbox indicating whether they want smooth scrolling enabled or not.</p>
+In our [scrolltooptions example](https://github.com/mdn/dom-examples/tree/master/scrolltooptions) ([see it live](https://mdn.github.io/dom-examples/scrolltooptions/)) we include a form that allows the user to enter three values — two numbers representing the left and top properties (i.e. the positions to scroll to along the X and Y axes), and a checkbox indicating whether they want smooth scrolling enabled or not.
 
-<p>When the form is submitted, an event handler is run that puts the entered values into a ScrollToOptions dictionary, and then invokes the {{domxref("Window.ScrollTo()")}} method, passing the dictionary as a parameter:</p>
+When the form is submitted, an event handler is run that puts the entered values into a ScrollToOptions dictionary, and then invokes the {{domxref("Window.ScrollTo()")}} method, passing the dictionary as a parameter:
 
-<pre class="brush: js">form.addEventListener('submit', (e) =&gt; {
+```js
+form.addEventListener('submit', (e) => {
   e.preventDefault();
   var scrollOptions = {
     left: leftInput.value,
@@ -50,15 +47,13 @@ browser-compat: api.ScrollToOptions
   }
 
   window.scrollTo(scrollOptions);
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
-
-<p>{{Compat}}</p>
-</div>
+{{Compat}}

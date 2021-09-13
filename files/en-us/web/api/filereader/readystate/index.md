@@ -9,47 +9,27 @@ tags:
   - Reference
 browser-compat: api.FileReader.readyState
 ---
-<div>{{APIRef("File API")}}</div>
+{{APIRef("File API")}}
 
-<p>The {{domxref("FileReader")}} <strong><code>readyState</code></strong> property provides the current state of the reading operation a <code>FileReader</code> is in. A <code>FileReader</code> exists in one of the following states:</p>
+The {{domxref("FileReader")}} **`readyState`** property provides the current state of the reading operation a `FileReader` is in. A `FileReader` exists in one of the following states:
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Value</th>
-   <th scope="col">State</th>
-   <th scope="col">Description</th>
-  </tr>
-  <tr>
-   <td><code>0</code></td>
-   <td><code>EMPTY</code></td>
-   <td>Reader has been created. None of the read methods called yet.</td>
-  </tr>
-  <tr>
-   <td><code>1</code></td>
-   <td><code>LOADING</code></td>
-   <td>A read method has been called.</td>
-  </tr>
-  <tr>
-   <td><code>2</code></td>
-   <td><code>DONE</code></td>
-   <td>The operation is complete.</td>
-  </tr>
- </thead>
-</table>
+| Value | State     | Description                                                   |
+| ----- | --------- | ------------------------------------------------------------- |
+| `0`   | `EMPTY`   | Reader has been created. None of the read methods called yet. |
+| `1`   | `LOADING` | A read method has been called.                                |
+| `2`   | `DONE`    | The operation is complete.                                    |
 
-<dl>
- <dt><code>EMPTY</code></dt>
- <dd>The <code>FileReader</code> has been created, but no readAs method was called yet.</dd>
- <dt><code>LOADING</code></dt>
- <dd>A readAs method was invoked. A {{domxref("File")}} or {{domxref("Blob")}} is being read, and no error has occurred yet.</dd>
- <dt><code>DONE</code></dt>
- <dd>The read operation is complete. This could mean that: the entire {{domxref("File")}} or {{domxref("Blob")}} has been read into memory, a file read error occurred, or {{domxref("FileReader.abort()", "abort()")}} was called and the read was cancelled.</dd>
-</dl>
+- `EMPTY`
+  - : The `FileReader` has been created, but no readAs method was called yet.
+- `LOADING`
+  - : A readAs method was invoked. A {{domxref("File")}} or {{domxref("Blob")}} is being read, and no error has occurred yet.
+- `DONE`
+  - : The read operation is complete. This could mean that: the entire {{domxref("File")}} or {{domxref("Blob")}} has been read into memory, a file read error occurred, or {{domxref("FileReader.abort()", "abort()")}} was called and the read was cancelled.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var reader = new FileReader();
+```js
+var reader = new FileReader();
 console.log('EMPTY', reader.readyState); // readyState will be 0
 
 reader.readAsText(blob);
@@ -58,22 +38,20 @@ console.log('LOADING', reader.readyState); // readyState will be 1
 reader.onloadend = function () {
   console.log('DONE', reader.readyState); // readyState will be 2
 };
-</pre>
+```
 
-<h2 id="Value">Value</h2>
+## Value
 
-<p>A number which is one of the three possible state constants define for the {{domxref("FileReader")}} API.</p>
+A number which is one of the three possible state constants define for the {{domxref("FileReader")}} API.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("Blob")}}</li>
-</ul>
+- {{domxref("Blob")}}

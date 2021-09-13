@@ -2,56 +2,52 @@
 title: CSSStyleValue.parseAll()
 slug: Web/API/CSSStyleValue/parseAll
 tags:
-- API
-- CSS Typed Object Model API
-- CSSStyleValue
-- Experimental
-- Houdini
-- Method
-- Reference
-- parseAll()
+  - API
+  - CSS Typed Object Model API
+  - CSSStyleValue
+  - Experimental
+  - Houdini
+  - Method
+  - Reference
+  - parseAll()
 browser-compat: api.CSSStyleValue.parseAll
 ---
-<p>{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}</p>
+{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>parseAll()</code></strong> method of the {{domxref("CSSStyleValue")}}
-	interface sets all occurrences of a specific CSS property to the specified value and
-	returns an array of {{domxref('CSSStyleValue')}} objects, each containing one of the
-	supplied values.</p>
+The **`parseAll()`** method of the {{domxref("CSSStyleValue")}}
+interface sets all occurrences of a specific CSS property to the specified value and
+returns an array of {{domxref('CSSStyleValue')}} objects, each containing one of the
+supplied values.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-	class="brush: js">CSSStyleValue.parseAll(<em>property</em>, <em>value</em>)</pre>
+```js
+CSSStyleValue.parseAll(property, value)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-	<dt>property</dt>
-	<dd>A CSS property to set.</dd>
-	<dt>cssText</dt>
-	<dd>A comma-separated string containing one or more values that apply to the provided
-		property.</dd>
-</dl>
+- property
+  - : A CSS property to set.
+- cssText
+  - : A comma-separated string containing one or more values that apply to the provided
+    property.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An array of <code>CSSStyleValue</code> objects, each containing one of the supplied
-	values.</p>
+An array of `CSSStyleValue` objects, each containing one of the supplied
+values.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{domxref("CSSStyleValue.parse()")}}</li>
-	<li><a href="/en-US/docs/Web/API/CSS_Typed_OM_API/Guide">Using the CSS Typed OM</a>
-	</li>
-	<li><a href="/en-US/docs/Web/API/CSS_Typed_OM_API">CSS Typed Object Model API</a></li>
-</ul>
+- {{domxref("CSSStyleValue.parse()")}}
+- [Using the CSS Typed OM](/en-US/docs/Web/API/CSS_Typed_OM_API/Guide)
+- [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)

@@ -7,36 +7,32 @@ tags:
   - Web NFC
 browser-compat: api.NDEFReadingEvent
 ---
-<p>{{Draft}}{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}</p>
+{{Draft}}{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 
-<p>The <code><strong>NDEFReadingEvent</strong></code> interface of the <a href="/en-US/docs/Web/API/Web_NFC_API">Web NFC API</a> represents events dispatched on new NFC readings obtained by {{DOMxRef("NDEFReader")}}.</p>
+The **`NDEFReadingEvent`** interface of the [Web NFC API](/en-US/docs/Web/API/Web_NFC_API) represents events dispatched on new NFC readings obtained by {{DOMxRef("NDEFReader")}}.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{DOMxRef("NDEFReadingEvent.NDEFReadingEvent", "NDEFReadingEvent.NDEFReadingEvent()")}}</dt>
- <dd>Creates a new <code>NDEFReadingEvent</code>.</dd>
-</dl>
+- {{DOMxRef("NDEFReadingEvent.NDEFReadingEvent", "NDEFReadingEvent.NDEFReadingEvent()")}}
+  - : Creates a new `NDEFReadingEvent`.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{DOMxRef("Event")}}</em>.</p>
+_Inherits properties from its parent, {{DOMxRef("Event")}}_.
 
-<dl>
-  <dt>{{DOMxRef("NDEFReadingEvent.message")}}{{ReadOnlyInline}}</dt>
-  <dd>Returns an {{DOMxRef("NDEFMessage")}} object containing the received message.</dd>
-  <dt>{{DOMxRef("NDEFReadingEvent.serialNumber")}}{{ReadOnlyInline}}</dt>
-  <dd>Returns the serial number of the device, which is used for anti-collision and identification, or an empty string if no serial number is available.</dd>
-</dl>
+- {{DOMxRef("NDEFReadingEvent.message")}}{{ReadOnlyInline}}
+  - : Returns an {{DOMxRef("NDEFMessage")}} object containing the received message.
+- {{DOMxRef("NDEFReadingEvent.serialNumber")}}{{ReadOnlyInline}}
+  - : Returns the serial number of the device, which is used for anti-collision and identification, or an empty string if no serial number is available.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Inherits methods from its parent, {{DOMxRef("Event")}}</em>.</p>
+_Inherits methods from its parent, {{DOMxRef("Event")}}_.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

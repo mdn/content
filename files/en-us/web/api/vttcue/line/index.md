@@ -9,23 +9,27 @@ tags:
   - VTTCue
 browser-compat: api.VTTCue.line
 ---
-<div>{{DefaultAPISidebar("")}}</div>
+{{DefaultAPISidebar("")}}
 
-<p>The <strong><code>line</code></strong> property of the {{domxref("VTTCue")}} interface represents the cue line of this WebVTT cue.</p>
+The **`line`** property of the {{domxref("VTTCue")}} interface represents the cue line of this WebVTT cue.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let line = VTTCue.line;
-  VTTCue.line = a;</pre>
+```js
+let line = VTTCue.line;
+  VTTCue.line = a;
+```
 
-<h3>Value</h3>
-<p>A number, or <code>"auto"</code> representing the cue line of this WebVTT cue.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A number, or `"auto"` representing the cue line of this WebVTT cue.
 
-<p>In the following example a new {{domxref("VTTCue")}} is created, then the value of <code>line</code> is set to <code>1</code>. The value is then printed to the console.</p>
+## Examples
 
-<pre class="brush: js">let video = document.querySelector('video');
+In the following example a new {{domxref("VTTCue")}} is created, then the value of `line` is set to `1`. The value is then printed to the console.
+
+```js
+let video = document.querySelector('video');
 let track = video.addTextTrack("captions", "Captions", "en");
 track.mode = "showing";
 
@@ -34,13 +38,12 @@ cue1.line = '1';
 console.log(cue1.line);
 
 track.addCue(cue1);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
+{{Compat}}

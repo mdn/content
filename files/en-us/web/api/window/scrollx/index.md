@@ -2,85 +2,85 @@
 title: Window.scrollX
 slug: Web/API/Window/scrollX
 tags:
-- API
-- CSSOM View
-- NeedsBrowserCompatibility
-- NeedsMarkupWork
-- NeedsMobileBrowserCompatibility
-- Property
-- Reference
+  - API
+  - CSSOM View
+  - NeedsBrowserCompatibility
+  - NeedsMarkupWork
+  - NeedsMobileBrowserCompatibility
+  - Property
+  - Reference
 browser-compat: api.Window.scrollX
 ---
-<div>{{ APIRef("CSSOM View") }}</div>
+{{ APIRef("CSSOM View") }}
 
-<p>The read-only <code><strong>scrollX</strong></code> property of the
-  {{domxref("Window")}} interface returns the number of pixels that the document is
-  currently scrolled horizontally. This value is subpixel precise in modern browsers,
-  meaning that it isn't necessarily a whole number. You can get the number of pixels the
-  document is scrolled vertically from the {{domxref("Window.scrollY", "scrollY")}}
-  property.</p>
+The read-only **`scrollX`** property of the
+{{domxref("Window")}} interface returns the number of pixels that the document is
+currently scrolled horizontally. This value is subpixel precise in modern browsers,
+meaning that it isn't necessarily a whole number. You can get the number of pixels the
+document is scrolled vertically from the {{domxref("Window.scrollY", "scrollY")}}
+property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var x = window.scrollX;</pre>
+```js
+var x = window.scrollX;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>In practice, the returned value is a double-precision floating-point value indicating
-  the number of pixels the document is currently scrolled horizontally from the origin,
-  where a positive value means the content is scrolled to the left. If the document is
-  rendered on a subpixel-precise device, then the returned value is also subpixel-precise
-  and may contain a decimal component. If the document isn't scrolled at all left or
-  right, then <code>scrollX</code> is 0.</p>
+In practice, the returned value is a double-precision floating-point value indicating
+the number of pixels the document is currently scrolled horizontally from the origin,
+where a positive value means the content is scrolled to the left. If the document is
+rendered on a subpixel-precise device, then the returned value is also subpixel-precise
+and may contain a decimal component. If the document isn't scrolled at all left or
+right, then `scrollX` is 0.
 
-<div class="note">
-  <p><strong>Note:</strong> If you need an integer value, you can use {{jsxref("Math.round()")}} to round it off.
-  </p>
-</div>
+> **Note:** If you need an integer value, you can use {{jsxref("Math.round()")}} to round it off.
 
-<p>In more technical terms, <code>scrollX</code> returns the X coordinate of the left edge
-  of the current {{Glossary("viewport")}}. If there is no viewport, the returned value is
-  0.</p>
+In more technical terms, `scrollX` returns the X coordinate of the left edge
+of the current {{Glossary("viewport")}}. If there is no viewport, the returned value is
+0\.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example checks the current horizontal scroll position of the document. If it's
-  greater than 400 pixels, the window is scrolled back to the beginning.</p>
+This example checks the current horizontal scroll position of the document. If it's
+greater than 400 pixels, the window is scrolled back to the beginning.
 
-<pre class="brush:js">if (window.scrollX &gt; 400) {
+```js
+if (window.scrollX > 400) {
   window.scroll(0,0);
-}</pre>
+}
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>The <code>pageXOffset</code> property is an alias for the <code>scrollX</code> property:</p>
+The `pageXOffset` property is an alias for the `scrollX` property:
 
-<pre>window.pageXOffset == window.scrollX; // always true</pre>
+    window.pageXOffset == window.scrollX; // always true
 
-<p>For cross-browser compatibility, use <code>window.pageXOffset</code> instead of
-  <code>window.scrollX</code>. <em>Additionally</em>, older versions of Internet Explorer
-  (&lt; 9) do not support either property and must be worked around by checking other
-  non-standard properties. A fully compatible example:</p>
+For cross-browser compatibility, use `window.pageXOffset` instead of
+`window.scrollX`. _Additionally_, older versions of Internet Explorer
+(< 9) do not support either property and must be worked around by checking other
+non-standard properties. A fully compatible example:
 
-<pre
-  class="brush:js">var x = (window.pageXOffset !== undefined)
+```js
+var x = (window.pageXOffset !== undefined)
   ? window.pageXOffset
   : (document.documentElement || document.body.parentNode || document.body).scrollLeft;
 
 var y = (window.pageYOffset !== undefined)
   ? window.pageYOffset
-  : (document.documentElement || document.body.parentNode || document.body).scrollTop;</pre>
+  : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Window.scrollY")}}</li>
-</ul>
+- {{domxref("Window.scrollY")}}

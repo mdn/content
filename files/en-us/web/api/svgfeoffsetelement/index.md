@@ -9,49 +9,45 @@ tags:
   - SVG DOM
 browser-compat: api.SVGFEOffsetElement
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <strong><code>SVGFEOffsetElement</code></strong> interface corresponds to the {{SVGElement("feOffset")}} element.</p>
+The **`SVGFEOffsetElement`** interface corresponds to the {{SVGElement("feOffset")}} element.
 
-<p>{{InheritanceDiagram(600, 140)}}</p>
+{{InheritanceDiagram(600, 140)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}.</em></p>
+_This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
 
-<dl>
- <dt>{{domxref("SVGFEOffsetElement.height")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("height")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGFEOffsetElement.in1")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("in")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGFEOffsetElement.dx")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("dx")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGFEOffsetElement.dy")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("dy")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGFEOffsetElement.result")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("result")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGFEOffsetElement.width")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("width")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGFEOffsetElement.x")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("x")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGFEOffsetElement.y")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("y")}} attribute of the given element.</dd>
-</dl>
+- {{domxref("SVGFEOffsetElement.height")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("height")}} attribute of the given element.
+- {{domxref("SVGFEOffsetElement.in1")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("in")}} attribute of the given element.
+- {{domxref("SVGFEOffsetElement.dx")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("dx")}} attribute of the given element.
+- {{domxref("SVGFEOffsetElement.dy")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("dy")}} attribute of the given element.
+- {{domxref("SVGFEOffsetElement.result")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("result")}} attribute of the given element.
+- {{domxref("SVGFEOffsetElement.width")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("width")}} attribute of the given element.
+- {{domxref("SVGFEOffsetElement.x")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("x")}} attribute of the given element.
+- {{domxref("SVGFEOffsetElement.y")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("y")}} attribute of the given element.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface does not provide any specific methods, but implements those of its parent, {{domxref("SVGElement")}}.</em></p>
+_This interface does not provide any specific methods, but implements those of its parent, {{domxref("SVGElement")}}._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGElement("feOffset")}}</li>
-</ul>
+- {{SVGElement("feOffset")}}

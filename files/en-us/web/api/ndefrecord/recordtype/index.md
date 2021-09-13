@@ -2,50 +2,50 @@
 title: NDEFRecord.recordType
 slug: Web/API/NDEFRecord/recordType
 tags:
-- NDEF
-- Reference
-- Web NFC
+  - NDEF
+  - Reference
+  - Web NFC
 browser-compat: api.NDEFRecord.recordType
 ---
-<p>{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}</p>
+{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 
-<p>The <strong><code>recordType</code></strong>
-    property of the {{DOMxRef("NDEFRecord")}} interface returns the record type of the record.</p>
+The **`recordType`**
+property of the {{DOMxRef("NDEFRecord")}} interface returns the record type of the record.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">NDEFRecord.recordType</pre>
+```js
+NDEFRecord.recordType
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{DOMxRef("USVString")}} which can be one of the following:</p>
+A {{DOMxRef("USVString")}} which can be one of the following:
 
-<dl>
-  <dt><code>"empty"</code></dt>
-  <dd>An empty NDEF record.</dd>
-  <dt><code>"text"</code></dt>
-  <dd>A text NDEF record.</dd>
-  <dt><code>"url"</code></dt>
-  <dd>A URI NDEF record.</dd>
-  <dt><code>"smart-poster"</code></dt>
-  <dd>A "smart poster" NDEF record.</dd>
-  <dt><code>"absolute-url"</code></dt>
-  <dd>An absolute URL NDEF record.</dd>
-  <dt><code>"mime"</code></dt>
-  <dd>A {{Glossary("MIME type")}} NDEF record.</dd>
-  <dt><code>"unknown"</code></dt>
-  <dd>The NDEF record type is not known.</dd>
-  <dt>local type name</dt>
-  <dd>Represents a local type name, frequently used to specify NDEF record embedded within
-    another record.</dd>
-  <dt>external type name</dt>
-  <dd>A custom string consisting of a domain name and custom type name separated by a colon (":").</dd>
-</dl>
+- `"empty"`
+  - : An empty NDEF record.
+- `"text"`
+  - : A text NDEF record.
+- `"url"`
+  - : A URI NDEF record.
+- `"smart-poster"`
+  - : A "smart poster" NDEF record.
+- `"absolute-url"`
+  - : An absolute URL NDEF record.
+- `"mime"`
+  - : A {{Glossary("MIME type")}} NDEF record.
+- `"unknown"`
+  - : The NDEF record type is not known.
+- local type name
+  - : Represents a local type name, frequently used to specify NDEF record embedded within
+    another record.
+- external type name
+  - : A custom string consisting of a domain name and custom type name separated by a colon (":").
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

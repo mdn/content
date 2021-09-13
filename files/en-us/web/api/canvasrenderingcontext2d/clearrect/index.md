@@ -9,75 +9,74 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.clearRect
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The
-  <strong><code>CanvasRenderingContext2D.clearRect()</code></strong>
-  method of the Canvas 2D API erases the pixels in a rectangular area by setting them to
-  transparent black.</p>
+The
+**`CanvasRenderingContext2D.clearRect()`**
+method of the Canvas 2D API erases the pixels in a rectangular area by setting them to
+transparent black.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Be aware that <code>clearRect()</code> may cause unintended
-    side effects if you're not <a
-      href="/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#drawing_paths">using
-      paths properly</a>. Make sure to call
-    {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} before starting to
-    draw new items after calling <code>clearRect()</code>.</p>
-</div>
+> **Note:** Be aware that `clearRect()` may cause unintended
+> side effects if you're not [using
+> paths properly](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#drawing_paths). Make sure to call
+> {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} before starting to
+> draw new items after calling `clearRect()`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <em>ctx</em>.clearRect(<em>x</em>, <em>y</em>, <em>width</em>, <em>height</em>);
-</pre>
+```js
+void ctx.clearRect(x, y, width, height);
+```
 
-<p>The <code>clearRect()</code> method sets the pixels in a rectangular area to
-  transparent black (<code>rgba(0,0,0,0)</code>). The rectangle's corner is at
-  <code>(x, y)</code>, and its size is specified by <code>width</code> and
-  <code>height</code>.</p>
+The `clearRect()` method sets the pixels in a rectangular area to
+transparent black (`rgba(0,0,0,0)`). The rectangle's corner is at
+`(x, y)`, and its size is specified by `width` and
+`height`.
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>x</code></dt>
-  <dd>The x-axis coordinate of the rectangle's starting point.</dd>
-  <dt><code>y</code></dt>
-  <dd>The y-axis coordinate of the rectangle's starting point.</dd>
-  <dt><code>width</code></dt>
-  <dd>The rectangle's width. Positive values are to the right, and negative to the left.
-  </dd>
-  <dt><code>height</code></dt>
-  <dd>The rectangle's height. Positive values are down, and negative are up.</dd>
-</dl>
+- `x`
+  - : The x-axis coordinate of the rectangle's starting point.
+- `y`
+  - : The y-axis coordinate of the rectangle's starting point.
+- `width`
+  - : The rectangle's width. Positive values are to the right, and negative to the left.
+- `height`
+  - : The rectangle's height. Positive values are down, and negative are up.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Erasing_the_whole_canvas">Erasing the whole canvas</h3>
+### Erasing the whole canvas
 
-<p>This code snippet erases the entire canvas. This is commonly required at the start of
-  each frame in an animation. The dimensions of the cleared area are set to equal the
-  {{HtmlElement("canvas")}} element's <code>width</code> and <code>height</code>
-  attributes.</p>
+This code snippet erases the entire canvas. This is commonly required at the start of
+each frame in an animation. The dimensions of the cleared area are set to equal the
+{{HtmlElement("canvas")}} element's `width` and `height`
+attributes.
 
-<pre class="brush: js;">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
-ctx.clearRect(0, 0, canvas.width, canvas.height);</pre>
+ctx.clearRect(0, 0, canvas.width, canvas.height);
+```
 
-<h3 id="Erasing_part_of_a_canvas">Erasing part of a canvas</h3>
+### Erasing part of a canvas
 
-<p>This example draws a blue triangle on top of a yellowish background. The
-  <code>clearRect()</code> method then erases part of the canvas.</p>
+This example draws a blue triangle on top of a yellowish background. The
+`clearRect()` method then erases part of the canvas.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<p>The cleared area is rectangular in shape, with its top-left corner at (10, 10). The
-  cleared area has a width of 120 and a height of 100.</p>
+The cleared area is rectangular in shape, with its top-left corner at (10, 10). The
+cleared area has a width of 120 and a height of 100.
 
-<pre class="brush: js;">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // Draw yellow background
@@ -96,24 +95,22 @@ ctx.fill();
 
 // Clear part of the canvas
 ctx.clearRect(10, 10, 120, 100);
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Erasing_part_of_a_canvas', 700, 180)}}</p>
+{{EmbedLiveSample('Erasing_part_of_a_canvas', 700, 180)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining this method: {{domxref("CanvasRenderingContext2D")}}</li>
-  <li>{{domxref("CanvasRenderingContext2D.fillRect()")}}</li>
-  <li>{{domxref("CanvasRenderingContext2D.strokeRect()")}}</li>
-</ul>
+- The interface defining this method: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.fillRect()")}}
+- {{domxref("CanvasRenderingContext2D.strokeRect()")}}

@@ -4,53 +4,51 @@ slug: Web/API/msWriteProfilerMark
 tags:
   - msWriteProfilerMark
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>{{Non-standard_header()}}</p>
+{{Non-standard_header()}}
 
-<p>The <strong><code>msWriteProfilerMark</code></strong> method writes a profiling event.</p>
+The **`msWriteProfilerMark`** method writes a profiling event.
 
-<p>This proprietary method is specific to Internet Explorer and Microsoft Edge.</p>
+This proprietary method is specific to Internet Explorer and Microsoft Edge.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"> window.msWriteProfilerMark("start-render");
-</pre>
+```js
+ window.msWriteProfilerMark("start-render");
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><em>bstrProfilerMarkName</em>[in]</dt>
- <dd>An event name. Type = <strong>String</strong>. This parameter may be null.</dd>
-</dl>
+- _bstrProfilerMarkName_\[in]
+  - : An event name. Type = **String**. This parameter may be null.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Type: <code>HRESULT</code>. If this method succeeds, it returns <code>S_OK</code>. Otherwise, it returns an <code>HRESULT</code> error code.</p>
+Type: `HRESULT`. If this method succeeds, it returns `S_OK`. Otherwise, it returns an `HRESULT` error code.
 
-<h3 id="Notes">Notes</h3>
+### Notes
 
-<p><code>msWriteProfilerMark</code> enables you to inject DOM based performance markers in addition to existing Javascript API to learn exactly when parts of the page are being rendered, building a waterfall view for every one of our impressions showing latency per object, which can be useful for more accurately debugging real users perf issues.</p>
+`msWriteProfilerMark` enables you to inject DOM based performance markers in addition to existing Javascript API to learn exactly when parts of the page are being rendered, building a waterfall view for every one of our impressions showing latency per object, which can be useful for more accurately debugging real users perf issues.
 
-<p>Internet Explorer 10. This method is also available in the Web Worker global scope.</p>
+Internet Explorer 10. This method is also available in the Web Worker global scope.
 
-<p>For Windows XP, this method sends an event to an event tracing session with <code>TraceEvent</code>; for systems after Windows XP, this method writes an event with <code>EventWrite</code>.</p>
+For Windows XP, this method sends an event to an event tracing session with `TraceEvent`; for systems after Windows XP, this method writes an event with `EventWrite`.
 
-<p>The event includes a pointer to a window object, current markup, and the event name passed as <code>bstrProfilerMarkName</code>.</p>
+The event includes a pointer to a window object, current markup, and the event name passed as `bstrProfilerMarkName`.
 
-<p>The <code>bstrProfilerMarkName </code>property has a 32-character limit when called from script.</p>
+The `bstrProfilerMarkName `property has a 32-character limit when called from script.
 
-<p>This method is useful to profile real website performance by using the operating system metrics as a baseline.</p>
+This method is useful to profile real website performance by using the operating system metrics as a baseline.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">if (msWriteProfilerMark) {
+```js
+if (msWriteProfilerMark) {
  msWriteProfilerMark("Mark1");
 }
-</pre>
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Microsoft_Extensions">Microsoft API extensions </a></li>
-</ul>
+- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_Extensions)

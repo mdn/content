@@ -9,51 +9,51 @@ tags:
   - Reference
 browser-compat: api.MathMLElement
 ---
-<div>{{APIRef("MathML")}}</div>
+{{APIRef("MathML")}}
 
-<p>The <strong><code>MathMLElement</code></strong> interface represents any <a href="/en-US/docs/Web/MathML">MathML</a> element.</p>
+The **`MathMLElement`** interface represents any [MathML](/en-US/docs/Web/MathML) element.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Also inherits properties from: {{DOMxRef("DocumentAndElementEventHandlers")}}, {{DOMxRef("Element")}}, {{DOMxRef("GlobalEventHandlers")}}</em></p>
+_Also inherits properties from: {{DOMxRef("DocumentAndElementEventHandlers")}}, {{DOMxRef("Element")}}, {{DOMxRef("GlobalEventHandlers")}}_
 
-<dl>
-  <dt>{{DOMxRef("MathMLElement.attributeStyleMap")}} {{ReadOnlyInline}}</dt>
-  <dd>A {{DOMxRef("StylePropertyMap")}} representing the declarations of the element's <code>style</code> attribute.</dd>
-  <dt>{{DOMxRef("MathMLElement.style")}}</dt>
-  <dd>A {{DOMxRef("CSSStyleDeclaration")}} representing the declarations of the element's <code>style</code> attribute.</dd>
-</dl>
+- {{DOMxRef("MathMLElement.attributeStyleMap")}} {{ReadOnlyInline}}
+  - : A {{DOMxRef("StylePropertyMap")}} representing the declarations of the element's `style` attribute.
+- {{DOMxRef("MathMLElement.style")}}
+  - : A {{DOMxRef("CSSStyleDeclaration")}} representing the declarations of the element's `style` attribute.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface has no methods, but inherits methods from: {{DOMxRef("DocumentAndElementEventHandlers")}}, {{DOMxRef("Element")}}, {{DOMxRef("GlobalEventHandlers")}}</em></p>
+_This interface has no methods, but inherits methods from: {{DOMxRef("DocumentAndElementEventHandlers")}}, {{DOMxRef("Element")}}, {{DOMxRef("GlobalEventHandlers")}}_
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="MathML">MathML</h3>
+### MathML
 
-<pre class="brush: html">&lt;math xmlns="http://www.w3.org/1998/Math/MathML"&gt;
-  &lt;msqrt&gt;
-    &lt;mi&gt;x&lt;/mi&gt;
-  &lt;/msqrt&gt;
-&lt;/math&gt;</pre>
+```html
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <msqrt>
+    <mi>x</mi>
+  </msqrt>
+</math>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">document.querySelector('msqrt').constructor.name; // MathMLElement</pre>
+```js
+document.querySelector('msqrt').constructor.name; // MathMLElement
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{DOMxRef("Element")}}</li>
- <li>{{DOMxRef("HTMLElement")}}</li>
- <li>{{DOMxRef("SVGElement")}}</li>
-</ul>
+- {{DOMxRef("Element")}}
+- {{DOMxRef("HTMLElement")}}
+- {{DOMxRef("SVGElement")}}

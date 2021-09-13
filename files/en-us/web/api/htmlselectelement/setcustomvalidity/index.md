@@ -2,44 +2,40 @@
 title: HTMLSelectElement.setCustomValidity()
 slug: Web/API/HTMLSelectElement/setCustomValidity
 tags:
-- API
-- Constrain Validation API
-- HTML DOM
-- HTMLSelectElement
-- Method
-- Reference
+  - API
+  - Constrain Validation API
+  - HTML DOM
+  - HTMLSelectElement
+  - Method
+  - Reference
 browser-compat: api.HTMLSelectElement.setCustomValidity
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p>The <code><strong>HTMLSelectElement.setCustomValidity()</strong></code> method sets the
-  custom validity message for the selection element to the specified message. Use the
-  empty string to indicate that the element does <em>not</em> have a custom validity
-  error.</p>
+The **`HTMLSelectElement.setCustomValidity()`** method sets the
+custom validity message for the selection element to the specified message. Use the
+empty string to indicate that the element does _not_ have a custom validity
+error.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>selectElt</em>.setCustomValidity(<em>string</em>);</pre>
+```js
+selectElt.setCustomValidity(string);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<ul>
-  <li><code>string</code> is the {{domxref("DOMString")}} containing the error message.
-  </li>
-</ul>
+- `string` is the {{domxref("DOMString")}} containing the error message.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">Form
-      validation.</a></li>
-</ul>
+- [Form
+  validation.](/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation)

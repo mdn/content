@@ -10,26 +10,26 @@ tags:
   - name
 browser-compat: api.DOMException.name
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p>The <strong><code>name</code></strong> read-only property of the
-  {{domxref("DOMException")}} interface returns a {{domxref("DOMString")}} that contains
-  one of the strings associated with an <a
-    href="/en-US/docs/Web/API/DOMException#error_names">error name</a>.</p>
+The **`name`** read-only property of the
+{{domxref("DOMException")}} interface returns a {{domxref("DOMString")}} that contains
+one of the strings associated with an [error name](/en-US/docs/Web/API/DOMException#error_names).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>domExceptionName</var> = <var>domExceptionInstance</var>.name;
-</pre>
+```js
+var domExceptionName = domExceptionInstance.name;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}}.</p>
+A {{domxref("DOMString")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -9,25 +9,26 @@ tags:
   - Reference
 browser-compat: api.DOMParser.DOMParser
 ---
-<p>The <strong><code>DOMParser()</code></strong> constructor creates a new <code><a href="/en-US/docs/Web/API/DOMParser">DOMParser</a></code> object.</p>
+The **`DOMParser()`** constructor creates a new [`DOMParser`](/en-US/docs/Web/API/DOMParser) object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const parser = new DOMParser();</pre>
+```js
+const parser = new DOMParser();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3>Return value</h3>
+### Return value
 
-<p>A new <code><a href="/en-US/docs/Web/API/DOMParser">DOMParser</a></code> object. This object can be used to parse the text of a document using the <code>parseFromString()</code> method.</p>
+A new [`DOMParser`](/en-US/docs/Web/API/DOMParser) object. This object can be used to parse the text of a document using the `parseFromString()` method.
 
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

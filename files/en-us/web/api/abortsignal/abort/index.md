@@ -9,35 +9,38 @@ tags:
   - abort
 browser-compat: api.AbortSignal.abort
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The static <strong><code>AbortSignal.abort()</code></strong> method returns an {{domxref("AbortSignal")}} that is already set as aborted (and which does not trigger an abort event).</p>
+The static **`AbortSignal.abort()`** method returns an {{domxref("AbortSignal")}} that is already set as aborted (and which does not trigger an abort event).
 
-<p>This is shorthand for the following code:</p>
+This is shorthand for the following code:
 
-<pre class="brush: js">const controller = new AbortController();
+```js
+const controller = new AbortController();
 controller.abort();
-return controller.signal;</pre>
+return controller.signal;
+```
 
-<p>This could, for example, be passed to a fetch method in order to run its abort logic (i.e. it may be that code is organised such that the abort logic should be run even if the intended fetch operation has not been started).</p>
+This could, for example, be passed to a fetch method in order to run its abort logic (i.e. it may be that code is organised such that the abort logic should be run even if the intended fetch operation has not been started).
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The method is similar in purpose to {{JSxRef("Promise.reject")}}</p>
-</div>
+> **Note:** The method is similar in purpose to {{JSxRef("Promise.reject")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">AbortSignal.abort();</pre>
+```js
+AbortSignal.abort();
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An <code>AbortSignal</code> instance with the {{domxref("AbortSignal.aborted")}} property set to <code>true</code>.</p>.
+An `AbortSignal` instance with the {{domxref("AbortSignal.aborted")}} property set to `true`.
 
+.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

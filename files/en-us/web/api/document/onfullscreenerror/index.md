@@ -2,66 +2,65 @@
 title: Document.onfullscreenerror
 slug: Web/API/Document/onfullscreenerror
 tags:
-- API
-- Document
-- Error
-- Event Handler
-- Full-screen
-- Fullscreen API
-- Property
-- Reference
-- fullscreen
-- onfullscreenerror
-- screen
+  - API
+  - Document
+  - Error
+  - Event Handler
+  - Full-screen
+  - Fullscreen API
+  - Property
+  - Reference
+  - fullscreen
+  - onfullscreenerror
+  - screen
 browser-compat: api.Document.onfullscreenerror
 ---
-<div>{{ApiRef("Fullscreen API")}}</div>
+{{ApiRef("Fullscreen API")}}
 
-<p>The <code><strong>Document.onfullscreenerror</strong></code>
-    property is an event handler for the {{event("fullscreenerror")}} event that is sent
-    to the  document when it fails to transition into full-screen mode after a prior call
-    to {{domxref("Element.requestFullscreen()")}}.</p>
+The **`Document.onfullscreenerror`**
+property is an event handler for the {{event("fullscreenerror")}} event that is sent
+to the  document when it fails to transition into full-screen mode after a prior call
+to {{domxref("Element.requestFullscreen()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>targetDocument</var>.onfullscreenerror = <var>fullscreenErrorHandler</var>;
-</pre>
+```js
+targetDocument.onfullscreenerror = fullscreenErrorHandler;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An event handler for the {{event("fullscreenerror")}} event.</p>
+An event handler for the {{event("fullscreenerror")}} event.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example attempts to call <code>requestFullscreen()</code> outside of an event
-  handler. Since <code>requestFullscreen()</code> can only be called in response to user
-  action, for security reasons, this will fail, causing the <code>fullscreenerror</code>
-  to be sent to the document.</p>
+This example attempts to call `requestFullscreen()` outside of an event
+handler. Since `requestFullscreen()` can only be called in response to user
+action, for security reasons, this will fail, causing the `fullscreenerror`
+to be sent to the document.
 
-<pre class="brush: js">document.onfullscreenerror = function ( event ) {
+```js
+document.onfullscreenerror = function ( event ) {
   displayWarning("Unable to switch into full-screen mode.");
 };
 
 //....
 
 document.documentElement.requestFullscreen();
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Fullscreen_API">Fullscreen API </a></li>
-  <li><a href="/en-US/docs/Web/API/Fullscreen_API/Guide">Guide to the Fullscreen API</a>
-  </li>
-  <li>{{event("fullscreenerror")}}</li>
-  <li>{{domxref("Document.onfullscreenchange")}}</li>
-  <li>{{domxref("Element.onfullscreenerror")}}</li>
-</ul>
+- [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API)
+- [Guide to the Fullscreen API](/en-US/docs/Web/API/Fullscreen_API/Guide)
+- {{event("fullscreenerror")}}
+- {{domxref("Document.onfullscreenchange")}}
+- {{domxref("Element.onfullscreenerror")}}

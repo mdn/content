@@ -2,80 +2,76 @@
 title: CSSStyleSheet.removeRule()
 slug: Web/API/CSSStyleSheet/removeRule
 tags:
-- API
-- CSS
-- CSSOM
-- CSSOM API
-- CSSStyleSheet
-- Layout
-- Method
-- Object Model
-- Reference
-- Rule
-- StyleSheet
-- delete
-- legacy
-- remove
-- removeRule
-- Deprecated
+  - API
+  - CSS
+  - CSSOM
+  - CSSOM API
+  - CSSStyleSheet
+  - Layout
+  - Method
+  - Object Model
+  - Reference
+  - Rule
+  - StyleSheet
+  - delete
+  - legacy
+  - remove
+  - removeRule
+  - Deprecated
 browser-compat: api.CSSStyleSheet.removeRule
 ---
-<p>{{APIRef("CSSOM")}}{{deprecated_header}}</p>
+{{APIRef("CSSOM")}}{{deprecated_header}}
 
-<p>The obsolete {{domxref("CSSStyleSheet")}} method
-    <code><strong>removeRule()</strong></code> removes a rule from the stylesheet
-    object. It is functionally identical to the standard, preferred method
-  {{domxref("CSSStyleSheet.deleteRule", "deleteRule()")}}.</p>
+The obsolete {{domxref("CSSStyleSheet")}} method
+**`removeRule()`** removes a rule from the stylesheet
+object. It is functionally identical to the standard, preferred method
+{{domxref("CSSStyleSheet.deleteRule", "deleteRule()")}}.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This is a <em>legacy method</em> which has been replaced by
-    the standard method {{domxref("CSSStyleSheet.deleteRule", "deleteRule()")}}. You
-    should use that instead.</p>
-</div>
+> **Note:** This is a _legacy method_ which has been replaced by
+> the standard method {{domxref("CSSStyleSheet.deleteRule", "deleteRule()")}}. You
+> should use that instead.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>cssStyleSheet</em>.removeRule(<em>index</em>)
-</pre>
+```js
+cssStyleSheet.removeRule(index)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>index</code></dt>
-  <dd>The index into the stylesheet's {{domxref("CSSRuleList")}} indicating the rule to be
-    removed.</dd>
-</dl>
+- `index`
+  - : The index into the stylesheet's {{domxref("CSSRuleList")}} indicating the rule to be
+    removed.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>undefined</code></p>
+`undefined`
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example removes the first rule from the stylesheet <code>myStyles</code>.</p>
+This example removes the first rule from the stylesheet `myStyles`.
 
-<pre class="brush:js"> myStyles.removeRule(0);
-</pre>
+```js
+ myStyles.removeRule(0);
+```
 
-<p>You can rewrite this to use the standard <code>deleteRule()</code> method very easily:
-</p>
+You can rewrite this to use the standard `deleteRule()` method very easily:
 
-<pre class="brush: js">myStyles.deleteRule(0);</pre>
+```js
+myStyles.deleteRule(0);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/CSS_Object_Model">CSS Object Model</a></li>
-  <li><a
-      href="/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information">Using
-      dynamic styling information</a></li>
-  <li>{{domxref("CSSStyleSheet.insertRule", "insertRule()")}}</li>
-</ul>
+- [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model)
+- [Using
+  dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
+- {{domxref("CSSStyleSheet.insertRule", "insertRule()")}}

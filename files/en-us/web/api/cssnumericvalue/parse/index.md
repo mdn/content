@@ -2,57 +2,56 @@
 title: CSSNumericValue.parse()
 slug: Web/API/CSSNumericValue/parse
 tags:
-- API
-- CSS Typed Object Model API
-- CSSNumericValue
-- Experimental
-- Houdini
-- Method
-- Reference
-- parse()
+  - API
+  - CSS Typed Object Model API
+  - CSSNumericValue
+  - Experimental
+  - Houdini
+  - Method
+  - Reference
+  - parse()
 browser-compat: api.CSSNumericValue.parse
 ---
-<div>{{draft}}{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}</div>
+{{draft}}{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
-<p>The <strong><code>parse()</code></strong> method of the
-  {{domxref("CSSNumericValue")}} interface converts a value string into an object whose
-  members are value and the units.</p>
+The **`parse()`** method of the
+{{domxref("CSSNumericValue")}} interface converts a value string into an object whose
+members are value and the units.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var cssNumericValue = CSSNumericValue.parse(cssText);</pre>
+```js
+var cssNumericValue = CSSNumericValue.parse(cssText);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>cssText</dt>
-  <dd>a string containing numeric and unit parts.</dd>
-</dl>
+- cssText
+  - : a string containing numeric and unit parts.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref('CSSNumericValue')}}.</p>
+A {{domxref('CSSNumericValue')}}.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>SyntaxError</dt>
-  <dd>TBD</dd>
-</dl>
+- SyntaxError
+  - : TBD
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following returns a {{domxref('CSSUnitValue')}} object with a <code>unit</code>
-  property equal to <code>"px"</code> and a <code>value</code> property equal to
-  <code>42</code>.</p>
+The following returns a {{domxref('CSSUnitValue')}} object with a `unit`
+property equal to `"px"` and a `value` property equal to
+`42`.
 
-<pre class="brush: js">let numValue = CSSNumericValue.parse("42.0px");</pre>
+```js
+let numValue = CSSNumericValue.parse("42.0px");
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

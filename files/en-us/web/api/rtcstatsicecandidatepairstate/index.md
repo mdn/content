@@ -17,33 +17,31 @@ tags:
   - state
 browser-compat: api.RTCStatsIceCandidatePairState
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The <code><strong>RTCStatsIceCandidatePairState</strong></code> enumerated type represents the set of string values which are possible for the {{domxref("RTCIceCandidatePairStats")}} object's {{domxref("RTCIceCandidatePairStats.state", "state")}} property.</p>
+The **`RTCStatsIceCandidatePairState`** enumerated type represents the set of string values which are possible for the {{domxref("RTCIceCandidatePairStats")}} object's {{domxref("RTCIceCandidatePairStats.state", "state")}} property.
 
-<p>This represents the state of this candidate pair within the {{Glossary("ICE")}} check list for the {{domxref("RTCPeerConnection")}}.</p>
+This represents the state of this candidate pair within the {{Glossary("ICE")}} check list for the {{domxref("RTCPeerConnection")}}.
 
-<p>See {{SectionOnPage("/en-US/docs/Web/API/RTCIceCandidatePairStats/state", "ICE check lists", "code")}} for further information about how ICE check lsits work.</p>
+See {{SectionOnPage("/en-US/docs/Web/API/RTCIceCandidatePairStats/state", "ICE check lists", "code")}} for further information about how ICE check lsits work.
 
-<h2 id="Values">Values</h2>
+## Values
 
-<dl>
- <dt><code>failed</code></dt>
- <dd>A check for this pair has been performed but failed. A failure can occur either because no response was received or because the response indicated that an unrecoverable error occurred.</dd>
- <dt><code>frozen</code></dt>
- <dd>No check has been performed yet for this candidate pair, and performing the check is blocked until another check is successful. Once that check has succeeded, this pair will unfreeze and move into the <code>waiting</code> state.</dd>
- <dt><code>in-progress</code></dt>
- <dd>A check has been initiated for this pair, but the check's transaction is still in progress.</dd>
- <dt><code>succeeded</code></dt>
- <dd>A check for this pair has been completed successfully.</dd>
- <dt><code>waiting</code></dt>
- <dd>This pair has not yet been checked, but the check can be performed as soon as this pair is the highest priority pair remaining in the <code>waiting</code> state.</dd>
-</dl>
+- `failed`
+  - : A check for this pair has been performed but failed. A failure can occur either because no response was received or because the response indicated that an unrecoverable error occurred.
+- `frozen`
+  - : No check has been performed yet for this candidate pair, and performing the check is blocked until another check is successful. Once that check has succeeded, this pair will unfreeze and move into the `waiting` state.
+- `in-progress`
+  - : A check has been initiated for this pair, but the check's transaction is still in progress.
+- `succeeded`
+  - : A check for this pair has been completed successfully.
+- `waiting`
+  - : This pair has not yet been checked, but the check can be performed as soon as this pair is the highest priority pair remaining in the `waiting` state.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

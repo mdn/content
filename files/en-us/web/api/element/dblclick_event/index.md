@@ -17,55 +17,62 @@ tags:
   - mouse
 browser-compat: api.Element.dblclick_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <strong><code>dblclick</code></strong> event fires when a pointing device button (such as a mouse's primary button) is double-clicked; that is, when it's rapidly clicked twice on a single element within a very short span of time.</p>
+The **`dblclick`** event fires when a pointing device button (such as a mouse's primary button) is double-clicked; that is, when it's rapidly clicked twice on a single element within a very short span of time.
 
-<p><code>dblclick</code> fires after two {{domxref("Element/click_event", "click")}} events (and by extension, after two pairs of {{domxref("Element.mousedown_event", "mousedown")}} and {{domxref("Element.mouseup_event", "mouseup")}} events).</p>
+`dblclick` fires after two {{domxref("Element/click_event", "click")}} events (and by extension, after two pairs of {{domxref("Element.mousedown_event", "mousedown")}} and {{domxref("Element.mouseup_event", "mouseup")}} events).
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("MouseEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("GlobalEventHandlers.ondblclick", "ondblclick")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("MouseEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{domxref("GlobalEventHandlers.ondblclick", "ondblclick")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example toggles the size of a card when you double click on it.</p>
+This example toggles the size of a card when you double click on it.
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">const card = document.querySelector('aside');
+```js
+const card = document.querySelector('aside');
 
 card.addEventListener('dblclick', function (e) {
   card.classList.toggle('large');
-});</pre>
+});
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;aside&gt;
-  &lt;h3&gt;My Card&lt;/h3&gt;
-  &lt;p&gt;Double click to resize this object.&lt;/p&gt;
-&lt;/aside&gt;</pre>
+```html
+<aside>
+  <h3>My Card</h3>
+  <p>Double click to resize this object.</p>
+</aside>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">aside {
+```css
+aside {
   background: #fe9;
   border-radius: 1em;
   display: inline-block;
@@ -78,29 +85,28 @@ card.addEventListener('dblclick', function (e) {
 
 .large {
   transform: scale(1.3);
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples", 700, 200)}}</p>
+{{EmbedLiveSample("Examples", 700, 200)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li>
- <li>{{domxref("Element/auxclick_event", "auxclick")}}</li>
- <li>{{domxref("Element/click_event", "click")}}</li>
- <li>{{domxref("Element/contextmenu_event", "contextmenu")}}</li>
- <li>{{domxref("Element/mousedown_event", "mousedown")}}</li>
- <li>{{domxref("Element/mouseup_event", "mouseup")}}</li>
- <li>{{domxref("HTMLElement/pointerdown_event", "pointerdown")}}</li>
- <li>{{domxref("HTMLElement/pointerup_event", "pointerup")}}</li>
-</ul>
+- [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events)
+- {{domxref("Element/auxclick_event", "auxclick")}}
+- {{domxref("Element/click_event", "click")}}
+- {{domxref("Element/contextmenu_event", "contextmenu")}}
+- {{domxref("Element/mousedown_event", "mousedown")}}
+- {{domxref("Element/mouseup_event", "mouseup")}}
+- {{domxref("HTMLElement/pointerdown_event", "pointerdown")}}
+- {{domxref("HTMLElement/pointerup_event", "pointerup")}}

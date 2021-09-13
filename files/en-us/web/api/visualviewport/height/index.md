@@ -2,33 +2,35 @@
 title: VisualViewport.height
 slug: Web/API/VisualViewport/height
 tags:
-- API
-- Property
-- Reference
-- Visual Viewport API
-- VisualViewport
-- height
-- viewport
+  - API
+  - Property
+  - Reference
+  - Visual Viewport API
+  - VisualViewport
+  - height
+  - viewport
 browser-compat: api.VisualViewport.height
 ---
-<p>{{APIRef("Visual Viewport")}}</p>
+{{APIRef("Visual Viewport")}}
 
-<p>The <strong><code>height</code></strong> read-only property of the
-  {{domxref("VisualViewport")}} interface returns the height of the visual viewport, in
-  CSS pixels.</p>
+The **`height`** read-only property of the
+{{domxref("VisualViewport")}} interface returns the height of the visual viewport, in
+CSS pixels.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>height</em> = VisualViewport.height</pre>
+```js
+var height = VisualViewport.height
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A double.</p>
+A double.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

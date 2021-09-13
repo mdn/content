@@ -8,64 +8,61 @@ tags:
   - SerialPort
 browser-compat: api.SerialPort
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("Serial API")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("Serial API")}}
 
-<h2>Description</h2>
+## Description
 
-<p>The <code>SerialPort</code> interface of the {{domxref("Web_Serial_API", "Web Serial API")}} provides access to a serial port on the host device.</p>
+The `SerialPort` interface of the {{domxref("Web_Serial_API", "Web Serial API")}} provides access to a serial port on the host device.
 
-<h2>Constructor</h2>
+## Constructor
 
-<p>Instances of this interface may be obtained by calling methods of the {{domxref("Serial")}} interface, therefore it has no constructor of its own.
+Instances of this interface may be obtained by calling methods of the {{domxref("Serial")}} interface, therefore it has no constructor of its own.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
-  <dt>{{domxref("SerialPort.readable")}}{{readonlyInline}}</dt>
-  <dd>Returns a {{domxref("ReadableStream")}} for receiving data from the device connected to the port.</dd>
-  <dt>{{domxref("SerialPort.writable")}}{{readonlyInline}}</dt>
-  <dd>Returns a {{domxref("WritableStream")}} for sending data to the device connected to the port.</dd>
-</dl>
+- {{domxref("SerialPort.readable")}}{{readonlyInline}}
+  - : Returns a {{domxref("ReadableStream")}} for receiving data from the device connected to the port.
+- {{domxref("SerialPort.writable")}}{{readonlyInline}}
+  - : Returns a {{domxref("WritableStream")}} for sending data to the device connected to the port.
 
-<h3 id="Event_handlers">Event handlers</h3>
+### Event handlers
 
-<dl>
-  <dt>{{domxref("SerialPort.onconnect")}}</dt>
-  <dd>An event handler called when the port has connected to the device.</dd>
-  <dt>{{domxref("SerialPort.ondisconnect")}}</dt>
-  <dd>An event handler called when the port has disconnected from the device.</dd>
-</dl>
+- {{domxref("SerialPort.onconnect")}}
+  - : An event handler called when the port has connected to the device.
+- {{domxref("SerialPort.ondisconnect")}}
+  - : An event handler called when the port has disconnected from the device.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
-  <dt>{{domxref("SerialPort.getInfo()")}}</dt>
-  <dd>Returns a {{jsxref("Promise")}} that resolves with an object containing properties of the port.</dd>
-  <dt>{{domxref("SerialPort.open()")}}</dt>
-  <dd>Returns a {{jsxref("Promise")}} that resolves when the port is opened. By default the port is opened with 8 data bits, 1 stop bit and no parity checking.</dd>
-  <dt>{{domxref("SerialPort.setSignals()")}}</dt>
-  <dd>Sets control signals on the port and returns a {{jsxref("Promise")}} that resolves when they are set.</dd>
-  <dt>{{domxref("SerialPort.getSignals()")}}</dt>
-  <dd>Returns a {{jsxref("Promise")}} that resolves with an object containing the current state of the port's control signals.</dd>
-  <dt>{{domxref("SerialPort.close()")}}</dt>
-  <dd>Returns a {{jsxref("Promise")}} that resolves when the port closes.</dd>
-</dl>
+- {{domxref("SerialPort.getInfo()")}}
+  - : Returns a {{jsxref("Promise")}} that resolves with an object containing properties of the port.
+- {{domxref("SerialPort.open()")}}
+  - : Returns a {{jsxref("Promise")}} that resolves when the port is opened. By default the port is opened with 8 data bits, 1 stop bit and no parity checking.
+- {{domxref("SerialPort.setSignals()")}}
+  - : Sets control signals on the port and returns a {{jsxref("Promise")}} that resolves when they are set.
+- {{domxref("SerialPort.getSignals()")}}
+  - : Returns a {{jsxref("Promise")}} that resolves with an object containing the current state of the port's control signals.
+- {{domxref("SerialPort.close()")}}
+  - : Returns a {{jsxref("Promise")}} that resolves when the port closes.
 
-<h2>Examples</h2>
+## Examples
 
-<h3>Opening a port</h3>
+### Opening a port
 
-<p>Before communicating on a serial port it must be opened. Opening the port allows the site to specify the necessary parameters that control how data is transmitted and received. Developers should check the documentation for the device they are connecting to for the appropriate parameters.</p>
+Before communicating on a serial port it must be opened. Opening the port allows the site to specify the necessary parameters that control how data is transmitted and received. Developers should check the documentation for the device they are connecting to for the appropriate parameters.
 
-<pre class="brush: js notranslate">await port.open({ baudRate: /* pick your baud rate */ });</pre>
+```js
+await port.open({ baudRate: /* pick your baud rate */ });
+```
 
-<p>Once the <code>Promise</code> returned by <code>open()</code> resolves the <code>readable</code> and <code>writable</code> attributes can be accessed to get the {{domxref("ReadableStream")}} and {{domxref("WritableStream")}} instances for receiving data from and sending data to the connected device.</p>
+Once the `Promise` returned by `open()` resolves the `readable` and `writable` attributes can be accessed to get the {{domxref("ReadableStream")}} and {{domxref("WritableStream")}} instances for receiving data from and sending data to the connected device.
 
-<h3>Reading data from a port</h3>
+### Reading data from a port
 
-<p>The following example shows how to read data from a port. The outer loop handles non-fatal errors, creating a new reader until a fatal error is encountered and <code>readable</code> becomes <code>null</code>.</p>
+The following example shows how to read data from a port. The outer loop handles non-fatal errors, creating a new reader until a fatal error is encountered and `readable` becomes `null`.
 
-<pre class="brush: js notranslate">while (port.readable) {
+```js
+while (port.readable) {
   const reader = port.readable.getReader();
   try {
     while (true) {
@@ -81,21 +78,24 @@ browser-compat: api.SerialPort
   } finally {
     reader.releaseLock();
   }
-}</pre>
+}
+```
 
-<h3>Writing data to a port</h3>
+### Writing data to a port
 
-<p>The following example shows how to write a string to a port. A {{domxref("TextEncoder")}} converts the string to a <code>Uint8Array</code> before transmission.</p>
+The following example shows how to write a string to a port. A {{domxref("TextEncoder")}} converts the string to a `Uint8Array` before transmission.
 
-<pre class="brush: js notranslate">const encoder = new TextEncoder();
+```js
+const encoder = new TextEncoder();
 const writer = port.writable.getWriter();
-await writer.write(encoder.encode(&quot;PING&quot;));
-writer.releaseLock();</pre>
+await writer.write(encoder.encode("PING"));
+writer.releaseLock();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,46 +2,43 @@
 title: Document.plugins
 slug: Web/API/Document/plugins
 tags:
-- API
-- Document
-- NeedsMarkupWork
-- Property
-- Reference
+  - API
+  - Document
+  - NeedsMarkupWork
+  - Property
+  - Reference
 browser-compat: api.Document.plugins
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>plugins</code></strong> read-only property of the
-  {{domxref("Document")}} interface returns an {{domxref("HTMLCollection")}} object
-  containing one or more {{domxref("HTMLEmbedElement")}}s representing the
-  {{HTMLElement("embed")}} elements in the current document.</p>
+The **`plugins`** read-only property of the
+{{domxref("Document")}} interface returns an {{domxref("HTMLCollection")}} object
+containing one or more {{domxref("HTMLEmbedElement")}}s representing the
+{{HTMLElement("embed")}} elements in the current document.
 
-<div class="note"><p><strong>Note:</strong> For a list of installed plugins, use <a
-    href="/en-US/docs/Web/API/Navigator/plugins">Navigator.plugins</a>
-  instead.</p></div>
+> **Note:** For a list of installed plugins, use [Navigator.plugins](/en-US/docs/Web/API/Navigator/plugins)
+> instead.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var>embedArrayObj</var> = <var>document</var>.plugins</pre>
+```js
+embedArrayObj = document.plugins
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("HTMLCollection")}}, or <code>null</code> if there are no embeds in the
-  document.</p>
+An {{domxref("HTMLCollection")}}, or `null` if there are no embeds in the
+document.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a
-      href="https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537477(v=vs.85)">MSDN
-      documentation</a></li>
-</ul>
+- [MSDN
+  documentation](<https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537477(v=vs.85)>)

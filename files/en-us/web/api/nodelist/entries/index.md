@@ -2,31 +2,34 @@
 title: NodeList.entries()
 slug: Web/API/NodeList/entries
 tags:
-- DOM
-- Iteration
-- Method
-- Node
-- NodeList
-- Polyfill
+  - DOM
+  - Iteration
+  - Method
+  - Node
+  - NodeList
+  - Polyfill
 browser-compat: api.NodeList.entries
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>NodeList.entries()</strong></code> method returns an
-  {{jsxref("Iteration_protocols",'iterator')}} allowing to go through all key/value pairs
-  contained in this object. The values are {{domxref("Node")}} objects.</p>
+The **`NodeList.entries()`** method returns an
+{{jsxref("Iteration_protocols",'iterator')}} allowing to go through all key/value pairs
+contained in this object. The values are {{domxref("Node")}} objects.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>list</em>.entries();</pre>
+```js
+list.entries();
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Returns an {{jsxref("Iteration_protocols","iterator")}}.</p>
+Returns an {{jsxref("Iteration_protocols","iterator")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js;">var node = document.createElement("div");
+```js
+var node = document.createElement("div");
 var kid1 = document.createElement("p");
 var kid2 = document.createTextNode("hey");
 var kid3 = document.createElement("span");
@@ -40,22 +43,20 @@ var list = node.childNodes;
 for(var entry of list.entries()) {
   console.log(entry);
 }
-</pre>
+```
 
-<p>results in:</p>
+results in:
 
-<pre>Array [ 0, &lt;p&gt; ]
-Array [ 1, #text "hey" ]
-Array [ 2, &lt;span&gt; ]</pre>
+    Array [ 0, <p> ]
+    Array [ 1, #text "hey" ]
+    Array [ 2, <span> ]
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>NodeList.prototype.entries</code> is available in <a href="https://github.com/zloirock/core-js#iterable-dom-collections"><code>core-js</code></a></li>
-  <li>{{domxref("Node")}}</li>
-  <li>{{domxref("NodeList")}}</li>
-</ul>
+- A polyfill of `NodeList.prototype.entries` is available in [`core-js`](https://github.com/zloirock/core-js#iterable-dom-collections)
+- {{domxref("Node")}}
+- {{domxref("NodeList")}}

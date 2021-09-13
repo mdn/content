@@ -13,83 +13,73 @@ tags:
   - Video
 browser-compat: api.MediaRecorder.MediaRecorder
 ---
-<div>{{APIRef("MediaStream Recording")}}</div>
+{{APIRef("MediaStream Recording")}}
 
-<p>The <strong><code>MediaRecorder()</code></strong> constructor
-    creates a new {{domxref("MediaRecorder")}} object that will record a specified
-    {{domxref("MediaStream")}}.</p>
+The **`MediaRecorder()`** constructor
+creates a new {{domxref("MediaRecorder")}} object that will record a specified
+{{domxref("MediaStream")}}.
 
-<p>The object can optionally be configured to record
-  using a specific media container (file type), and, further, can specify the exact codec
-  and codec configuration(s) to use by specifying <a
-    href="/en-US/docs/Web/Media/Formats/codecs_parameter">the <code>codecs</code>
-    parameter</a>.</p>
+The object can optionally be configured to record
+using a specific media container (file type), and, further, can specify the exact codec
+and codec configuration(s) to use by specifying [the `codecs`
+parameter](/en-US/docs/Web/Media/Formats/codecs_parameter).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>mediaRecorder</em> = new MediaRecorder(<em>stream</em>[, <em>options</em>]);</pre>
+```js
+var mediaRecorder = new MediaRecorder(stream[, options]);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><strong>stream</strong></code></dt>
-  <dd>The {{domxref("MediaStream")}} that will be recorded. This source media can come
+- **`stream`**
+  - : The {{domxref("MediaStream")}} that will be recorded. This source media can come
     from a stream created using {{domxref("MediaDevices.getUserMedia",
     "navigator.mediaDevices.getUserMedia()")}} or from an {{HTMLElement("audio")}},
-    {{HTMLElement("video")}} or {{HTMLElement("canvas")}} element.</dd>
-  <dt><strong><code>options</code> </strong>{{optional_inline}}</dt>
-  <dd>
-    <p>A dictionary object that can contain the following properties:</p>
+    {{HTMLElement("video")}} or {{HTMLElement("canvas")}} element.
+- **`options` **{{optional_inline}}
 
-    <ul>
-      <li><code>mimeType</code>: A MIME type specifying the format for the resulting
-        media; you may specify the container format (the browser will select its preferred
-        codecs for audio and/or video), or you may <a
-          href="/en-US/docs/Web/Media/Formats/codecs_parameter">use the
-          <code>codecs</code> parameter</a> and/or the <code>profiles</code> parameter to
-        provide detailed information about which codecs to use and how to configure them.
-        Applications can check in advance if a <code>mimeType</code> is supported by the
-        {{Glossary("user agent")}} by calling
-        {{domxref("MediaRecorder.isTypeSupported()")}}.</li>
-      <li><code>audioBitsPerSecond</code>: The chosen bitrate for the audio component of
-        the media.</li>
-      <li><code>videoBitsPerSecond</code>: The chosen bitrate for the video component of
-        the media.</li>
-      <li><code>bitsPerSecond</code>: The chosen bitrate for the audio and video
-        components of the media. This can be specified instead of the above two
-        properties. If this is specified along with one or the other of the above
-        properties, this will be used for the one that isn't specified.</li>
-    </ul>
+  - : A dictionary object that can contain the following properties:
 
-    <div class="note">
-      <p><strong>Note:</strong> If bits per second values are not specified for video and/or audio, the default
-        adopted for video is 2.5Mbps, while the audio default is adaptive, depending upon
-        the sample rate and the number of channels.</p>
-    </div>
-    <div class="notecard note">
-      <p><strong>Note:</strong> Video resolution, frame rate and similar settings are specified as constraints
-        when calling {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}},
-        not here in the MediaRecorder API.</p>
-    </div>
-  </dd>
-</dl>
+    - `mimeType`: A MIME type specifying the format for the resulting
+      media; you may specify the container format (the browser will select its preferred
+      codecs for audio and/or video), or you may [use the
+      `codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter) and/or the `profiles` parameter to
+      provide detailed information about which codecs to use and how to configure them.
+      Applications can check in advance if a `mimeType` is supported by the
+      {{Glossary("user agent")}} by calling
+      {{domxref("MediaRecorder.isTypeSupported()")}}.
+    - `audioBitsPerSecond`: The chosen bitrate for the audio component of
+      the media.
+    - `videoBitsPerSecond`: The chosen bitrate for the video component of
+      the media.
+    - `bitsPerSecond`: The chosen bitrate for the audio and video
+      components of the media. This can be specified instead of the above two
+      properties. If this is specified along with one or the other of the above
+      properties, this will be used for the one that isn't specified.
 
-<h3 id="Exceptions">Exceptions</h3>
+    > **Note:** If bits per second values are not specified for video and/or audio, the default
+    > adopted for video is 2.5Mbps, while the audio default is adaptive, depending upon
+    > the sample rate and the number of channels.
 
-<dl>
-  <dt><code>NotSupportedError</code></dt>
-  <dd>The specified MIME type is not supported by the user agent.</dd>
-</dl>
+    > **Note:** Video resolution, frame rate and similar settings are specified as constraints
+    > when calling {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}},
+    > not here in the MediaRecorder API.
 
-<h2 id="Example">Example</h2>
+### Exceptions
 
-<p>This example shows how to create a media recorder for a specified stream, whose audio
-  bit rate is set to 128 Kbit/sec and whose video bit rate is set to 2.5 Mbit/sec. The
-  recorded media data will be stored in an MP4 wrapper (so if you gather the chunks of
-  media data and save them to disk, they will be in an MP4 file).</p>
+- `NotSupportedError`
+  - : The specified MIME type is not supported by the user agent.
 
-<pre class="brush: js">...
+## Example
+
+This example shows how to create a media recorder for a specified stream, whose audio
+bit rate is set to 128 Kbit/sec and whose video bit rate is set to 2.5 Mbit/sec. The
+recorded media data will be stored in an MP4 wrapper (so if you gather the chunks of
+media data and save them to disk, they will be in an MP4 file).
+
+```js
+...
 if (navigator.mediaDevices.getUserMedia) {
   var constraints = { audio: true, video: true };
   var chunks = [];
@@ -106,26 +96,22 @@ if (navigator.mediaDevices.getUserMedia) {
 ...
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API">Using
-      the MediaRecorder API</a></li>
-  <li><a href="https://mdn.github.io/web-dictaphone/">Web Dictaphone</a>: MediaRecorder +
-    getUserMedia + Web Audio API visualization demo, by <a
-      href="https://twitter.com/chrisdavidmills">Chris Mills</a> (<a
-      href="https://github.com/mdn/web-dictaphone/">source on Github</a>.)</li>
-  <li><a href="http://simpl.info/mediarecorder/">simpl.info MediaStream Recording
-      demo</a>, by <a href="https://twitter.com/sw12">Sam Dutton</a>.</li>
-  <li>{{domxref("MediaDevices.getUserMedia")}}</li>
-</ul>
+- [Using
+  the MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
+- [Web Dictaphone](https://mdn.github.io/web-dictaphone/): MediaRecorder +
+  getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on Github](https://github.com/mdn/web-dictaphone/).)
+- [simpl.info MediaStream Recording
+  demo](http://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
+- {{domxref("MediaDevices.getUserMedia")}}

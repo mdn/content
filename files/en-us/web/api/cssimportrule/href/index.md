@@ -2,47 +2,52 @@
 title: CSSImportRule.href
 slug: Web/API/CSSImportRule/href
 tags:
-- API
-- CSSOM
-- Property
-- Reference
-- CSSImportRule
-- Read-only
+  - API
+  - CSSOM
+  - Property
+  - Reference
+  - CSSImportRule
+  - Read-only
 browser-compat: api.CSSImportRule.href
 ---
-<p>{{APIRef("CSSOM")}}</p>
+{{APIRef("CSSOM")}}
 
-<p>The read-only <strong><code>href</code></strong> property of the
-	{{domxref("CSSImportRule")}} interface returns the URL specified by the
-	{{cssxref("@import")}} <a href="/en-US/docs/Web/CSS/At-rule">at-rule</a>.</p>
+The read-only **`href`** property of the
+{{domxref("CSSImportRule")}} interface returns the URL specified by the
+{{cssxref("@import")}} [at-rule](/en-US/docs/Web/CSS/At-rule).
 
-<p>The resolved URL will be the {{HTMLAttrxRef("href","link")}} attribute of the
-	associated stylesheet.</p>
+The resolved URL will be the {{HTMLAttrxRef("href","link")}} attribute of the
+associated stylesheet.
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+var href = CSSImportRule.href;
+```
 
-<pre
-	class="brush: js">var <var>href</var> = <var>CSSImportRule</var>.href;</pre>
+### Value
 
-<h3>Value</h3>
-<p>A {{domxref("USVString")}}.</p>
+A {{domxref("USVString")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following stylesheet includes a single {{cssxref("@import")}} rule. Therefore the
-	first item in the list of CSS rules will be a <code>CSSImportRule</code>. The
-	<code>href</code> property returns the URL of the imported stylesheet.</p>
+The following stylesheet includes a single {{cssxref("@import")}} rule. Therefore the
+first item in the list of CSS rules will be a `CSSImportRule`. The
+`href` property returns the URL of the imported stylesheet.
 
-<pre class="brush:css">@import url("style.css") screen;</pre>
+```css
+@import url("style.css") screen;
+```
 
-<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].href); //returns style.css</pre>
+```js
+let myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0].href); //returns style.css
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

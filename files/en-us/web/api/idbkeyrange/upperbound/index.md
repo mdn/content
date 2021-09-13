@@ -2,83 +2,67 @@
 title: IDBKeyRange.upperBound()
 slug: Web/API/IDBKeyRange/upperBound
 tags:
-- API
-- Database
-- IDBKeyRange
-- IndexedDB
-- Method
-- Reference
-- Storage
-- upperBound
+  - API
+  - Database
+  - IDBKeyRange
+  - IndexedDB
+  - Method
+  - Reference
+  - Storage
+  - upperBound
 browser-compat: api.IDBKeyRange.upperBound
 ---
-<p>{{ APIRef("IndexedDB") }}</p>
+{{ APIRef("IndexedDB") }}
 
-<div>
-  <p>The <strong><code>upperBound()</code></strong> method of the
-    {{domxref("IDBKeyRange")}} interface creates a new upper-bound key range. By default,
-    it includes the upper endpoint value and is closed.</p>
-</div>
+The **`upperBound()`** method of the
+{{domxref("IDBKeyRange")}} interface creates a new upper-bound key range. By default,
+it includes the upper endpoint value and is closed.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var myIDBKeyRange = IDBKeyRange.upperBound(upper[, open=false])</pre>
+```js
+var myIDBKeyRange = IDBKeyRange.upperBound(upper[, open=false])
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<ul>
-  <li><em>bound</em> specifies the upper bound of the new key range.</li>
-  <li><em>open</em> indicates whether the upper bound excludes the endpoint value. The
-    default is false. {{optional_inline}}</li>
-</ul>
+- *bound* specifies the upper bound of the new key range.
+- _open_ indicates whether the upper bound excludes the endpoint value. The
+  default is false. {{optional_inline}}
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{domxref("IDBKeyRange")}}: The newly created key range.</p>
+{{domxref("IDBKeyRange")}}: The newly created key range.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>This method may raise a {{domxref("DOMException")}} of the following type:</p>
+This method may raise a {{domxref("DOMException")}} of the following type:
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Exception</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>DataError</code></td>
-      <td>The value parameter passed was not a valid key.</td>
-    </tr>
-  </tbody>
-</table>
+| Exception   | Description                                     |
+| ----------- | ----------------------------------------------- |
+| `DataError` | The value parameter passed was not a valid key. |
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example illustrates how you'd use an upper bound key range. Here we
-  declare <code>keyRangeValue = IDBKeyRange.upperBound("F");</code> — a range that
-  includes the value "F" and everything before it. We open a transaction (using
-  {{domxref("IDBTransaction")}}) and an object store, and open a Cursor with
-  {{domxref("IDBObjectStore.openCursor")}}, declaring <code>keyRangeValue</code> as its
-  optional key range value. </p>
+The following example illustrates how you'd use an upper bound key range. Here we
+declare `keyRangeValue = IDBKeyRange.upperBound("F");` — a range that
+includes the value "F" and everything before it. We open a transaction (using
+{{domxref("IDBTransaction")}}) and an object store, and open a Cursor with
+{{domxref("IDBObjectStore.openCursor")}}, declaring `keyRangeValue` as its
+optional key range value.
 
-<p>If we used <code>IDBKeyRange.upperBound("F", true);</code>, then the range excludes
-  "F"; and instead only includes the values before it.</p>
+If we used `IDBKeyRange.upperBound("F", true);`, then the range excludes
+"F"; and instead only includes the values before it.
 
-<div class="note">
-  <p><strong>Note:</strong> For a more complete example allowing you to experiment with
-    key range, have a look at our <a
-      href="https://github.com/mdn/indexeddb-examples/tree/master/idbkeyrange">IDBKeyRange-example</a> repo
-    (<a href="https://mdn.github.io/indexeddb-examples/idbkeyrange/">view the example live
-      too</a>.)</p>
-</div>
+> **Note:** For a more complete example allowing you to experiment with
+> key range, have a look at our [IDBKeyRange-example](https://github.com/mdn/indexeddb-examples/tree/master/idbkeyrange) repo
+> ([view the example live
+> too](https://mdn.github.io/indexeddb-examples/idbkeyrange/).)
 
-<pre class="brush: js">function displayData() {
+```js
+function displayData() {
   var keyRangeValue = IDBKeyRange.upperBound("F");
 
   var transaction = db.transaction(['fThings'], 'readonly');
@@ -88,7 +72,7 @@ browser-compat: api.IDBKeyRange.upperBound
     var cursor = event.target.result;
       if(cursor) {
         var listItem = document.createElement('li');
-        listItem.innerHTML = '&lt;strong&gt;' + cursor.value.fThing + '&lt;/strong&gt;, ' + cursor.value.fRating;
+        listItem.innerHTML = '<strong>' + cursor.value.fThing + '</strong>, ' + cursor.value.fRating;
         list.appendChild(listItem);
 
         cursor.continue();
@@ -96,27 +80,24 @@ browser-compat: api.IDBKeyRange.upperBound
         console.log('Entries all displayed.');
       }
     };
-  };</pre>
+  };
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
-  <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
-  <li>Using transactions: {{domxref("IDBTransaction")}}</li>
-  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
-  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
-  <li>Using cursors: {{domxref("IDBCursor")}}</li>
-  <li>Reference example: <a class="external"
-      href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
-      Notifications</a> (<a class="external"
-      href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do
+  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

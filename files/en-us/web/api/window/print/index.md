@@ -9,29 +9,26 @@ tags:
   - Window
 browser-compat: api.Window.print
 ---
-<p>{{ ApiRef() }}</p>
+{{ ApiRef() }}
 
-<p>Opens the Print Dialog to print the current document.</p>
+Opens the Print Dialog to print the current document.
 
-<p>In most browsers, this method will block while the print dialog is open. However in more recent versions of Safari, it may return immediately.</p>
+In most browsers, this method will block while the print dialog is open. However in more recent versions of Safari, it may return immediately.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="eval">window.print()
-</pre>
+    window.print()
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/Guide/Printing">Printing</a></li>
- <li>{{ domxref("window.onbeforeprint") }}</li>
- <li>{{ domxref("window.onafterprint") }}</li>
-</ul>
+- [Printing](/en-US/docs/Web/Guide/Printing)
+- {{ domxref("window.onbeforeprint") }}
+- {{ domxref("window.onafterprint") }}

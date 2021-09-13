@@ -9,35 +9,31 @@ tags:
   - Reference
 browser-compat: api.HTMLDivElement
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p>The <strong><code>HTMLDivElement</code></strong> interface provides special properties (beyond the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating {{HtmlElement("div")}} elements.</p>
+The **`HTMLDivElement`** interface provides special properties (beyond the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating {{HtmlElement("div")}} elements.
 
-<p>{{InheritanceDiagram(600,120)}}</p>
+{{InheritanceDiagram(600,120)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{domxref("HTMLElement")}}.</em></p>
+_Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLDivElement.align")}} {{deprecated_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} representing an enumerated property indicating alignment of the element's contents with respect to the surrounding context. The possible values are <code>"left"</code>, <code>"right"</code>, <code>"justify"</code>, and <code>"center"</code>.</dd>
-</dl>
+- {{domxref("HTMLDivElement.align")}} {{deprecated_inline}}
+  - : Is a {{domxref("DOMString")}} representing an enumerated property indicating alignment of the element's contents with respect to the surrounding context. The possible values are `"left"`, `"right"`, `"justify"`, and `"center"`.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}.</em></p>
+_No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The HTML element implementing this interface: {{ HTMLElement("div") }}.</li>
-</ul>
+- The HTML element implementing this interface: {{ HTMLElement("div") }}.

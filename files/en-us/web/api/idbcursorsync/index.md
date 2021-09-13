@@ -10,137 +10,170 @@ tags:
   - Deprecated
   - Reference
 ---
-<p>{{APIRef("IndexedDB")}} {{ draft() }}</p>
+{{APIRef("IndexedDB")}} {{ draft() }}
 
-<div class="warning">
-<p><strong>Warning:</strong> The synchronous version of the IndexedDB API was originally intended for use only with <a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Web Workers</a>, and was eventually removed from the spec because its need was questionable. It may however be reintroduced in the future if there is enough demand from web developers.</p>
-</div>
+> **Warning:** The synchronous version of the IndexedDB API was originally intended for use only with [Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers), and was eventually removed from the spec because its need was questionable. It may however be reintroduced in the future if there is enough demand from web developers.
 
-<p>The <code>IDBCursorSync</code> interface of the <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a> represents a <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#cursor">cursor</a> for iterating over multiple records in a database. You can have only one instance of <code>IDBCursorSync</code> representing a cursor, but you can have an unlimited number of cursors at the same time. Operations are performed on the underlying index or object store. It enables an application to synchronously process all the records in the cursor's range.</p>
+The `IDBCursorSync` interface of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) represents a [cursor](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#cursor) for iterating over multiple records in a database. You can have only one instance of `IDBCursorSync` representing a cursor, but you can have an unlimited number of cursors at the same time. Operations are performed on the underlying index or object store. It enables an application to synchronously process all the records in the cursor's range.
 
-<h2 id="Method_overview">Method overview</h2>
+## Method overview
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <td><code>bool <a href="#continue">continue</a> (in optional any key);</code></td>
-  </tr>
-  <tr>
-   <td><code>void <a href="#remove">remove</a> () raises (<a href="/en-US/docs/Web/API/IDBDatabaseException">IDBDatabaseException</a>);</code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td>
+        <code
+          >bool <a href="#continue">continue</a> (in optional any key);</code
+        >
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code
+          >void <a href="#remove">remove</a> () raises (<a
+            href="/en-US/docs/Web/API/IDBDatabaseException"
+            >IDBDatabaseException</a
+          >);</code
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Attribute</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>count</code></td>
-   <td><code>readonly unsigned long long</code></td>
-   <td>The total number of objects that share the current key.</td>
-  </tr>
-  <tr>
-   <td><code>direction</code></td>
-   <td><code>readonly unsigned short</code></td>
-   <td>The direction of traversal of the cursor. See Constants for possible values.</td>
-  </tr>
-  <tr>
-   <td><code>key</code></td>
-   <td><code>readonly any</code></td>
-   <td>The key for the record at the cursor's position.</td>
-  </tr>
-  <tr>
-   <td><code>value</code></td>
-   <td><code>any</code></td>
-   <td>
-    <p>The value for the record at the cursor's position. Setting this attribute can raise an IDBDatabaseException with the following codes:</p>
-
-    <dl>
-     <dt><code><a href="/en-US/docs/Web/API/IDBDatabaseException#data_err">DATA_ERR</a></code></dt>
-     <dd>If the underlying object store uses <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#in-line_key">in-line keys</a> and the property at the <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_path">key path</a> does not match the key in this cursor's position.</dd>
-     <dt><code><a href="/en-US/docs/Web/API/IDBDatabaseException#not_allowed_err">NOT_ALLOWED_ERR</a></code></dt>
-     <dd>If the underlying index or object store does not support updating the record because it is open in the <code><a href="/en-US/docs/Web/API/IDBObjectStoreSync#const_read_only">READ_ONLY</a></code> or <code><a href="/en-US/docs/Web/API/IDBCursorSync#const_snapshot_read">SNAPSHOT_READ</a></code> mode, or if an index record cannot be changed because the underlying index is auto-populated.</dd>
-     <dt><code><a href="/en-US/docs/Web/API/IDBDatabaseException#serial_err">SERIAL_ERR</a></code></dt>
-     <dd>If the data being stored could not be serialized by the internal structured cloning algorithm.</dd>
-    </dl>
-   </td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Attribute</th>
+      <th scope="col">Type</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>count</code></td>
+      <td><code>readonly unsigned long long</code></td>
+      <td>The total number of objects that share the current key.</td>
+    </tr>
+    <tr>
+      <td><code>direction</code></td>
+      <td><code>readonly unsigned short</code></td>
+      <td>
+        The direction of traversal of the cursor. See Constants for possible
+        values.
+      </td>
+    </tr>
+    <tr>
+      <td><code>key</code></td>
+      <td><code>readonly any</code></td>
+      <td>The key for the record at the cursor's position.</td>
+    </tr>
+    <tr>
+      <td><code>value</code></td>
+      <td><code>any</code></td>
+      <td>
+        <p>
+          The value for the record at the cursor's position. Setting this
+          attribute can raise an IDBDatabaseException with the following codes:
+        </p>
+        <dl>
+          <dt>
+            <code
+              ><a href="/en-US/docs/Web/API/IDBDatabaseException#data_err"
+                >DATA_ERR</a
+              ></code
+            >
+          </dt>
+          <dd>
+            If the underlying object store uses
+            <a
+              href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#in-line_key"
+              >in-line keys</a
+            >
+            and the property at the
+            <a
+              href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_path"
+              >key path</a
+            >
+            does not match the key in this cursor's position.
+          </dd>
+          <dt>
+            <code
+              ><a
+                href="/en-US/docs/Web/API/IDBDatabaseException#not_allowed_err"
+                >NOT_ALLOWED_ERR</a
+              ></code
+            >
+          </dt>
+          <dd>
+            If the underlying index or object store does not support updating
+            the record because it is open in the
+            <code
+              ><a href="/en-US/docs/Web/API/IDBObjectStoreSync#const_read_only"
+                >READ_ONLY</a
+              ></code
+            >
+            or
+            <code
+              ><a href="/en-US/docs/Web/API/IDBCursorSync#const_snapshot_read"
+                >SNAPSHOT_READ</a
+              ></code
+            >
+            mode, or if an index record cannot be changed because the underlying
+            index is auto-populated.
+          </dd>
+          <dt>
+            <code
+              ><a href="/en-US/docs/Web/API/IDBDatabaseException#serial_err"
+                >SERIAL_ERR</a
+              ></code
+            >
+          </dt>
+          <dd>
+            If the data being stored could not be serialized by the internal
+            structured cloning algorithm.
+          </dd>
+        </dl>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Constants">Constants</h2>
+## Constants
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Constant</th>
-   <th scope="col">Value</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>NEXT</code></td>
-   <td>0</td>
-   <td>This cursor includes duplicates, and its direction is monotonically increasing in the order of keys.</td>
-  </tr>
-  <tr>
-   <td><code>NEXT_NO_DUPLICATE</code></td>
-   <td>1</td>
-   <td>This cursor does not include duplicates, and its direction is monotonically increasing in the order of keys.</td>
-  </tr>
-  <tr>
-   <td><code>PREV</code></td>
-   <td>2</td>
-   <td>This cursor includes duplicates, and its direction is monotonically decreasing in the order of keys.</td>
-  </tr>
-  <tr>
-   <td><code>PREV_NO_DUPLICATE</code></td>
-   <td>3</td>
-   <td>This cursor does not include duplicates, and its direction is monotonically decreasing in the order of keys.</td>
-  </tr>
- </tbody>
-</table>
+| Constant            | Value | Description                                                                                                  |
+| ------------------- | ----- | ------------------------------------------------------------------------------------------------------------ |
+| `NEXT`              | 0     | This cursor includes duplicates, and its direction is monotonically increasing in the order of keys.         |
+| `NEXT_NO_DUPLICATE` | 1     | This cursor does not include duplicates, and its direction is monotonically increasing in the order of keys. |
+| `PREV`              | 2     | This cursor includes duplicates, and its direction is monotonically decreasing in the order of keys.         |
+| `PREV_NO_DUPLICATE` | 3     | This cursor does not include duplicates, and its direction is monotonically decreasing in the order of keys. |
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<h3 id="continue">continue()</h3>
+### continue()
 
-<p>Advances the cursor to the next position along its direction, to the item whose key matches the optional <code>key</code> parameter. If no key is specified, advance to the immediate next position. Returns false if the cursor has reached the end of its range; otherwise returns true.</p>
+Advances the cursor to the next position along its direction, to the item whose key matches the optional `key` parameter. If no key is specified, advance to the immediate next position. Returns false if the cursor has reached the end of its range; otherwise returns true.
 
-<pre>bool continue (
-  in optional any key
-);
-</pre>
+    bool continue (
+      in optional any key
+    );
 
-<h5 id="Parameters">Parameters</h5>
+##### Parameters
 
-<dl>
- <dt>key</dt>
- <dd>The key to which to move the cursor's position.</dd>
-</dl>
+- key
+  - : The key to which to move the cursor's position.
 
-<h3 id="remove">remove()</h3>
+### remove()
 
-<p>Deletes the record at the cursor's position, without changing the cursor's position</p>
+Deletes the record at the cursor's position, without changing the cursor's position
 
-<pre>void delete (
-) raises (DatabaseException);
-</pre>
+    void delete (
+    ) raises (DatabaseException);
 
-<h5 id="Exceptions">Exceptions</h5>
+##### Exceptions
 
-<p>This method can raise an IDBDatabaseException with the following code:</p>
+This method can raise an IDBDatabaseException with the following code:
 
-<dl>
- <dt><code><a href="/en-US/docs/Web/API/IDBDatabaseException#not_allowed_err">NOT_ALLOWED_ERR</a></code></dt>
- <dd>If the underlying index or object store does not support updating the record because it is open in the <code><a href="/en-US/docs/Web/API/IDBObjectStoreSync#const_read_only">READ_ONLY</a></code> or <code><a href="/en-US/docs/Web/API/IDBCursorSync#const_snapshot_read">SNAPSHOT_READ</a></code> mode.</dd>
-</dl>
+- [`NOT_ALLOWED_ERR`](/en-US/docs/Web/API/IDBDatabaseException#not_allowed_err)
+  - : If the underlying index or object store does not support updating the record because it is open in the [`READ_ONLY`](/en-US/docs/Web/API/IDBObjectStoreSync#const_read_only) or [`SNAPSHOT_READ`](/en-US/docs/Web/API/IDBCursorSync#const_snapshot_read) mode.

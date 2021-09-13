@@ -11,18 +11,18 @@ tags:
   - Reference
 browser-compat: api.HTMLDocument
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLDocument</code></strong> interface, which may be accessed through the <code>Window.HTMLDocument</code> property, extends the <code>Window.HTMLDocument</code> property to include methods and properties that are specific to {{Glossary("HTML")}} documents.</p>
+The **`HTMLDocument`** interface, which may be accessed through the `Window.HTMLDocument` property, extends the `Window.HTMLDocument` property to include methods and properties that are specific to {{Glossary("HTML")}} documents.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<p>For the purposes of web development, you can generally think of <code>HTMLDocument</code> as an alias for {{DOMxRef("Document")}}, upon which <code>HTMLDocument</code> is based. You can find documentation for the members of <code>HTMLDocument</code> under the {{DOMxRef("Document")}} interface.</p>
+For the purposes of web development, you can generally think of `HTMLDocument` as an alias for {{DOMxRef("Document")}}, upon which `HTMLDocument` is based. You can find documentation for the members of `HTMLDocument` under the {{DOMxRef("Document")}} interface.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

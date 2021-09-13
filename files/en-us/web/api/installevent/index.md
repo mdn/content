@@ -13,45 +13,40 @@ tags:
   - Workers
 browser-compat: api.InstallEvent
 ---
-<div>{{non-standard_header}}{{deprecated_header}}</div>
+{{non-standard_header}}{{deprecated_header}}
 
-<p>The parameter passed into the {{domxref("ServiceWorkerGlobalScope.oninstall", "oninstall")}} handler, the <code>InstallEvent</code> interface represents an install action that is dispatched on the {{domxref("ServiceWorkerGlobalScope")}} of a {{domxref("ServiceWorker")}}. As a child of {{domxref("ExtendableEvent")}}, it ensures that functional events such as {{domxref("FetchEvent")}} are not dispatched during installation. </p>
+The parameter passed into the {{domxref("ServiceWorkerGlobalScope.oninstall", "oninstall")}} handler, the `InstallEvent` interface represents an install action that is dispatched on the {{domxref("ServiceWorkerGlobalScope")}} of a {{domxref("ServiceWorker")}}. As a child of {{domxref("ExtendableEvent")}}, it ensures that functional events such as {{domxref("FetchEvent")}} are not dispatched during installation.
 
-<p>This interface inherits from the {{domxref("ExtendableEvent")}} interface.</p>
+This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 
-<p>{{InheritanceDiagram(700, 60, 20)}}</p>
+{{InheritanceDiagram(700, 60, 20)}}
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("InstallEvent.InstallEvent()")}}</dt>
- <dd>Creates a new <code>InstallEvent</code> object.</dd>
-</dl>
+- {{domxref("InstallEvent.InstallEvent()")}}
+  - : Creates a new `InstallEvent` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its ancestor, {{domxref("Event")}}</em>.</p>
+_Inherits properties from its ancestor, {{domxref("Event")}}_.
 
-<dl>
- <dt>{{domxref("InstallEvent.activeWorker")}} {{readonlyInline}}</dt>
- <dd>Returns the {{domxref("ServiceWorker")}} that is currently controlling the page.</dd>
-</dl>
+- {{domxref("InstallEvent.activeWorker")}} {{readonlyInline}}
+  - : Returns the {{domxref("ServiceWorker")}} that is currently controlling the page.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Inherits methods from its parent, {{domxref("ExtendableEvent")}}</em>.</p>
+_Inherits methods from its parent, {{domxref("ExtendableEvent")}}_.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This code snippet is from the <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js">service worker prefetch sample</a> (see <a href="https://googlechrome.github.io/samples/service-worker/prefetch/">prefetch running live</a>.) The code calls {{domxref("ExtendableEvent.waitUntil", "ExtendableEvent.waitUntil()")}} in {{domxref("ServiceWorkerGlobalScope.oninstall")}} and delays treating the {{domxref("ServiceWorkerRegistration.installing")}} worker as installed until the passed promise resolves successfully. The promise resolves when all resources have been fetched and cached, or when any exception occurs.</p>
+This code snippet is from the [service worker prefetch sample](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js) (see [prefetch running live](https://googlechrome.github.io/samples/service-worker/prefetch/).) The code calls {{domxref("ExtendableEvent.waitUntil", "ExtendableEvent.waitUntil()")}} in {{domxref("ServiceWorkerGlobalScope.oninstall")}} and delays treating the {{domxref("ServiceWorkerRegistration.installing")}} worker as installed until the passed promise resolves successfully. The promise resolves when all resources have been fetched and cached, or when any exception occurs.
 
-<p>The code snippet also shows a best practice for versioning caches used by the service worker. Although this example has only one cache, you can use this approach for multiple caches. The code maps a shorthand identifier for a cache to a specific, versioned cache name.</p>
+The code snippet also shows a best practice for versioning caches used by the service worker. Although this example has only one cache, you can use this approach for multiple caches. The code maps a shorthand identifier for a cache to a specific, versioned cache name.
 
-<div class="note">
-<p><strong>Note:</strong> Logging statements are visible in Google Chrome via the "Inspect" interface for the relevant service worker accessed via chrome://serviceworker-internals.</p>
-</div>
+> **Note:** Logging statements are visible in Google Chrome via the "Inspect" interface for the relevant service worker accessed via chrome://serviceworker-internals.
 
-<pre class="brush: js">var CACHE_VERSION = 1;
+```js
+var CACHE_VERSION = 1;
 var CURRENT_CACHES = {
   prefetch: 'prefetch-cache-v' + CACHE_VERSION
 };
@@ -76,16 +71,15 @@ console.log('Handling install event. Resources to pre-fetch:', urlsToPrefetch);
       console.error('Pre-fetching failed:', error);
     })
   );
-});</pre>
+});
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("NotificationEvent")}}</li>
- <li>{{jsxref("Promise")}}</li>
- <li><a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a></li>
-</ul>
+- {{domxref("NotificationEvent")}}
+- {{jsxref("Promise")}}
+- [Fetch API](/en-US/docs/Web/API/Fetch_API)

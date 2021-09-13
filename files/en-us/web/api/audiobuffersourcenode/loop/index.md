@@ -13,50 +13,46 @@ tags:
   - sound
 browser-compat: api.AudioBufferSourceNode.loop
 ---
-<div>{{ APIRef("Web Audio API") }}</div>
+{{ APIRef("Web Audio API") }}
 
-<div>
-  <p>The <code>loop</code> property of the {{ domxref("AudioBufferSourceNode") }}
-    interface is a Boolean indicating if the audio asset must be replayed when the end of
-    the {{domxref("AudioBuffer")}} is reached.</p>
-</div>
+The `loop` property of the {{ domxref("AudioBufferSourceNode") }}
+interface is a Boolean indicating if the audio asset must be replayed when the end of
+the {{domxref("AudioBuffer")}} is reached.
 
-<p>The <code>loop</code> property's default value is <code>false</code>.</p>
+The `loop` property's default value is `false`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>loopingEnabled</var> = <var>AudioBufferSourceNode</var>.loop;
-<var>AudioBufferSourceNode</var>.loop = true | false;
-</pre>
+```js
+var loopingEnabled = AudioBufferSourceNode.loop;
+AudioBufferSourceNode.loop = true | false;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A Boolean which is <code>true</code> if looping is enabled; otherwise, the value is
-  <code>false</code>.</p>
+A Boolean which is `true` if looping is enabled; otherwise, the value is
+`false`.
 
-<p>When looping is enabled, the sound begins playing at the time specified as the start
-  point when {{domxref("AudioBufferSourceNode.start", "start()")}} is called. When the
-  time specified by the {{domxref("AudioBufferSourceNode.loopEnd", "loopEnd")}} property
-  is reached, playback continues at the time specified by
-  {{domxref("AudioBufferSourceNode.loopStart", "loopStart")}}</p>
+When looping is enabled, the sound begins playing at the time specified as the start
+point when {{domxref("AudioBufferSourceNode.start", "start()")}} is called. When the
+time specified by the {{domxref("AudioBufferSourceNode.loopEnd", "loopEnd")}} property
+is reached, playback continues at the time specified by
+{{domxref("AudioBufferSourceNode.loopStart", "loopStart")}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this example, the {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}} function is used to
-  decode an audio track and put it into an {{domxref("AudioBufferSourceNode")}}. Buttons
-  are provided to play and stop the audio playback, and a slider control is used to change
-  the <code>playbackRate</code> property value on the fly. When the audio is played, it
-  loops.</p>
+In this example, the {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}} function is used to
+decode an audio track and put it into an {{domxref("AudioBufferSourceNode")}}. Buttons
+are provided to play and stop the audio playback, and a slider control is used to change
+the `playbackRate` property value on the fly. When the audio is played, it
+loops.
 
-<div class="note">
-  <p><strong>Note:</strong> You can <a class="external external-icon"
-      href="https://mdn.github.io/webaudio-examples/decode-audio-data/">run the full
-      example live</a> (or <a class="external external-icon"
-      href="https://github.com/mdn/webaudio-examples/blob/master/decode-audio-data/index.html">view
-      the source</a>.)</p>
-</div>
+> **Note:** You can [run the full
+> example live](https://mdn.github.io/webaudio-examples/decode-audio-data/) (or [view
+> the source](https://github.com/mdn/webaudio-examples/blob/master/decode-audio-data/index.html).)
 
-<pre class="brush: js;">function getData() {
+```js
+function getData() {
   source = audioCtx.createBufferSource();
   request = new XMLHttpRequest();
 
@@ -89,21 +85,20 @@ play.onclick = function() {
   source.start(0);
   play.setAttribute('disabled', 'disabled');
   playbackControl.removeAttribute('disabled');
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a></li>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio
-      API</a></li>
-  <li>{{domxref("AudioBufferSourceNode")}}</li>
-</ul>
+- [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
+- [Using the Web Audio
+  API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- {{domxref("AudioBufferSourceNode")}}

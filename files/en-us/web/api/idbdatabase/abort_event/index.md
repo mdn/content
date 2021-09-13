@@ -3,39 +3,44 @@ title: 'IDBDatabase: abort event'
 slug: Web/API/IDBDatabase/abort_event
 browser-compat: api.IDBDatabase.abort_event
 ---
-<div>{{ APIRef("IndexedDB") }}</div>
+{{ APIRef("IndexedDB") }}
 
-<p>The <code>abort</code> event is fired on <code>IDBDatabase</code> when a transaction is aborted and bubbles up to the connection object.</p>
+The `abort` event is fired on `IDBDatabase` when a transaction is aborted and bubbles up to the connection object.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td><code><a href="/en-US/docs/Web/API/IDBDatabase/onabort">onabort</a></code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/API/IDBDatabase/onabort">onabort</a></code
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example opens a database (creating the database if it does not exist), then opens a transaction, adds a listener to the <code>abort</code> event, then aborts the transaction to trigger the event.</p>
+This example opens a database (creating the database if it does not exist), then opens a transaction, adds a listener to the `abort` event, then aborts the transaction to trigger the event.
 
-<pre class="brush: js">// Open the database
+```js
+// Open the database
 const dBOpenRequest = window.indexedDB.open('toDoList', 4);
 
-dBOpenRequest.onupgradeneeded = (event) =&gt; {
+dBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 
   // Create an objectStore for this database
@@ -49,10 +54,10 @@ dBOpenRequest.onupgradeneeded = (event) =&gt; {
   objectStore.createIndex('year', 'year', { unique: false });
 };
 
-dBOpenRequest.onsuccess = (event) =&gt; {
+dBOpenRequest.onsuccess = (event) => {
   const db = dBOpenRequest.result;
 
-  db.addEventListener('abort', () =&gt; {
+  db.addEventListener('abort', () => {
     console.log('Transaction aborted');
   });
 
@@ -62,14 +67,15 @@ dBOpenRequest.onsuccess = (event) =&gt; {
   // abort the transaction
   transaction.abort();
 };
-</pre>
+```
 
-<p>The same example, but assigning the event handler to the <code><a href="/en-US/docs/Web/API/IDBDatabase/onabort">onabort</a></code> property:</p>
+The same example, but assigning the event handler to the [`onabort`](/en-US/docs/Web/API/IDBDatabase/onabort) property:
 
-<pre class="brush: js">// Open the database
+```js
+// Open the database
 const dBOpenRequest = window.indexedDB.open('toDoList', 4);
 
-dBOpenRequest.onupgradeneeded = (event) =&gt; {
+dBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 
   // Create an objectStore for this database
@@ -83,10 +89,10 @@ dBOpenRequest.onupgradeneeded = (event) =&gt; {
   objectStore.createIndex('year', 'year', { unique: false });
 };
 
-dBOpenRequest.onsuccess = (event) =&gt; {
+dBOpenRequest.onsuccess = (event) => {
   const db = dBOpenRequest.result;
 
-  db.onabort = () =&gt; {
+  db.onabort = () => {
     console.log('Transaction aborted');
   };
 
@@ -96,16 +102,13 @@ dBOpenRequest.onsuccess = (event) =&gt; {
   // abort the transaction
   transaction.abort();
 };
+```
 
-</pre>
+## Browser compatibility
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+{{Compat}}
 
-<p>{{Compat}}</p>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
- <li><code><a href="/en-US/docs/Web/API/IDBDatabase/onabort">onabort</a></code> event handler property</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- [`onabort`](/en-US/docs/Web/API/IDBDatabase/onabort) event handler property

@@ -2,47 +2,47 @@
 title: URL.toString()
 slug: Web/API/URL/toString
 tags:
-- API
-- Method
-- Reference
-- Stringifier
-- URL
-- URL API
+  - API
+  - Method
+  - Reference
+  - Stringifier
+  - URL
+  - URL API
 browser-compat: api.URL.toString
 ---
-<div>{{ApiRef("URL API")}}</div>
+{{ApiRef("URL API")}}
 
-<p>The <strong><code>URL.toString()</code></strong> stringifier method returns a
-  {{domxref("USVString")}} containing the whole URL. It is effectively a read-only version
-  of {{domxref("URL.href")}}.</p>
+The **`URL.toString()`** stringifier method returns a
+{{domxref("USVString")}} containing the whole URL. It is effectively a read-only version
+of {{domxref("URL.href")}}.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">const <em>href</em> = <em>url</em>.toString()</pre>
+```js
+const href = url.toString()
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("USVString")}}.</p>
+A {{domxref("USVString")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">const url = new URL("https://developer.mozilla.org/en-US/docs/Web/API/URL/toString");
+```js
+const url = new URL("https://developer.mozilla.org/en-US/docs/Web/API/URL/toString");
 url.toString(); // should return the URL as a string
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("URL")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("URL")}} interface it belongs to.

@@ -2,49 +2,47 @@
 title: ScrollToOptions.behavior
 slug: Web/API/ScrollToOptions/behavior
 tags:
-- API
-- Property
-- Reference
-- ScrollToOptions
-- behavior
+  - API
+  - Property
+  - Reference
+  - ScrollToOptions
+  - behavior
 browser-compat: api.ScrollToOptions.behavior
 ---
-<p>{{ APIRef("CSSOM View") }}</p>
+{{ APIRef("CSSOM View") }}
 
-<div>
-  <p>The <strong><code>behavior</code></strong> property of the {{
+The **`behavior`** property of the {{
     domxref("ScrollToOptions") }} dictionary specifies whether the scrolling should
-    animate smoothly, or happen instantly in a single jump.</p>
+animate smoothly, or happen instantly in a single jump.
 
-  <p>This is actually defined on the <code>ScrollOptions</code> dictionary, which is
-    implemented by <code>ScrollToOptions</code>.</p>
-</div>
+This is actually defined on the `ScrollOptions` dictionary, which is
+implemented by `ScrollToOptions`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">behavior: <em>ScrollBehavior</em></pre>
+```js
+behavior: ScrollBehavior
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An enum, the value of which can be one of the following:</p>
+An enum, the value of which can be one of the following:
 
-<ul>
-  <li><code>smooth</code>: The scrolling animates smoothly.</li>
-  <li><code>auto</code>: The scrolling happens in a single jump.</li>
-</ul>
+- `smooth`: The scrolling animates smoothly.
+- `auto`: The scrolling happens in a single jump.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>See <a href="/en-US/docs/Web/API/ScrollToOptions#examples"><code>ScrollToOptions</code></a> for an example.</p>
+See [`ScrollToOptions`](/en-US/docs/Web/API/ScrollToOptions#examples) for an example.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<p>{{domxref("ScrollToOptions")}}</p>
+{{domxref("ScrollToOptions")}}

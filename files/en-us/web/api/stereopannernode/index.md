@@ -10,73 +10,67 @@ tags:
   - Web Audio API
 browser-compat: api.StereoPannerNode
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<p>The <code>StereoPannerNode</code> interface of the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> represents a simple stereo panner node that can be used to pan an audio stream left or right. It is an {{domxref("AudioNode")}} audio-processing module that positions an incoming audio stream in a stereo image using a low-cost equal-power <a href="https://webaudio.github.io/web-audio-api/#panning-algorithm">panning algorithm</a>.</p>
+The `StereoPannerNode` interface of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) represents a simple stereo panner node that can be used to pan an audio stream left or right. It is an {{domxref("AudioNode")}} audio-processing module that positions an incoming audio stream in a stereo image using a low-cost equal-power [panning algorithm](https://webaudio.github.io/web-audio-api/#panning-algorithm).
 
-<p>The {{domxref("StereoPannerNode.pan", "pan")}} property takes a unitless value between <code>-1</code> (full left pan) and <code>1</code> (full right pan). This interface was introduced as a much simpler way to apply a simple panning effect than having to use a full {{domxref("PannerNode")}}.</p>
+The {{domxref("StereoPannerNode.pan", "pan")}} property takes a unitless value between `-1` (full left pan) and `1` (full right pan). This interface was introduced as a much simpler way to apply a simple panning effect than having to use a full {{domxref("PannerNode")}}.
 
-<p><img alt="" src="stereopannernode.png"></p>
+![](stereopannernode.png)
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Number of inputs</th>
-   <td><code>1</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Number of outputs</th>
-   <td><code>1</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Channel count mode</th>
-   <td><code>"clamped-max"</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Channel count</th>
-   <td><code>2</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Channel interpretation</th>
-   <td><code>"speakers"</code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Number of inputs</th>
+      <td><code>1</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Number of outputs</th>
+      <td><code>1</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Channel count mode</th>
+      <td><code>"clamped-max"</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Channel count</th>
+      <td><code>2</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Channel interpretation</th>
+      <td><code>"speakers"</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("StereoPannerNode.StereoPannerNode", "StereoPannerNode()")}}</dt>
- <dd>Creates a new instance of a <code>StereoPannerNode</code> object.</dd>
-</dl>
+- {{domxref("StereoPannerNode.StereoPannerNode", "StereoPannerNode()")}}
+  - : Creates a new instance of a `StereoPannerNode` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{domxref("AudioNode")}}</em>.</p>
+_Inherits properties from its parent, {{domxref("AudioNode")}}_.
 
-<dl>
- <dt>{{domxref("StereoPannerNode.pan")}} {{readonlyinline}}</dt>
- <dd>Is an <a href="/en-US/docs/Web/API/AudioParam#a-rate">a-rate</a> {{domxref("AudioParam")}} representing the amount of panning to apply.</dd>
-</dl>
+- {{domxref("StereoPannerNode.pan")}} {{readonlyinline}}
+  - : Is an [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} representing the amount of panning to apply.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>No specific method; inherits methods from its parent, {{domxref("AudioNode")}}</em>.</p>
+_No specific method; inherits methods from its parent, {{domxref("AudioNode")}}_.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See <a href="/en-US/docs/Web/API/BaseAudioContext/createStereoPanner#example"><code>BaseAudioContext.createStereoPanner()</code></a> for example code.</p>
+See [`BaseAudioContext.createStereoPanner()`](/en-US/docs/Web/API/BaseAudioContext/createStereoPanner#example) for example code.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

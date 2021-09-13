@@ -2,67 +2,66 @@
 title: DataTransfer.clearData()
 slug: Web/API/DataTransfer/clearData
 tags:
-- API
-- DataTransfer
-- HTML DOM
-- Method
-- Reference
-- clearData
-- drag and drop
+  - API
+  - DataTransfer
+  - HTML DOM
+  - Method
+  - Reference
+  - clearData
+  - drag and drop
 browser-compat: api.DataTransfer.clearData
 ---
-<div>{{APIRef("HTML Drag and Drop API")}}</div>
+{{APIRef("HTML Drag and Drop API")}}
 
-<p>The <strong><code>DataTransfer.clearData()</code></strong> method removes the drag
-  operation's {{domxref("DataTransfer","drag data")}} for the given type. If data for the
-  given type does not exist, this method does nothing.</p>
+The **`DataTransfer.clearData()`** method removes the drag
+operation's {{domxref("DataTransfer","drag data")}} for the given type. If data for the
+given type does not exist, this method does nothing.
 
-<p>If this method is called with no arguments or the format is an empty
-  {{domxref("DOMString","string")}}, the data of all types will be removed.</p>
+If this method is called with no arguments or the format is an empty
+{{domxref("DOMString","string")}}, the data of all types will be removed.
 
-<p>This method does <em>not</em> remove files from the drag operation, so it's possible
-  for there still to be an entry with the type <code>"Files"</code> left in the object's
-  {{domxref("DataTransfer.types")}} list if there are any files included in the drag.</p>
+This method does _not_ remove files from the drag operation, so it's possible
+for there still to be an entry with the type `"Files"` left in the object's
+{{domxref("DataTransfer.types")}} list if there are any files included in the drag.
 
-<div class="note">
-  <p><strong>Note:</strong> This method can only be used in the handler for the {{event("dragstart")}} event,
-    because that's the only time the drag operation's data store is writeable.</p>
-</div>
+> **Note:** This method can only be used in the handler for the {{event("dragstart")}} event,
+> because that's the only time the drag operation's data store is writeable.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>DataTransfer</var>.clearData([<em>format</em>]);
-</pre>
+```js
+DataTransfer.clearData([format]);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>format</code> {{optional_inline}}</dt>
-  <dd>A {{domxref("DOMString","string")}} which specifies the type of data to remove. If
+- `format` {{optional_inline}}
+  - : A {{domxref("DOMString","string")}} which specifies the type of data to remove. If
     this parameter is an empty string or is not provided, the data for all types is
-    removed.</dd>
-</dl>
+    removed.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example shows the use of the {{domxref("DataTransfer")}} object's
-  {{domxref("DataTransfer.getData()","getData()")}},
-  {{domxref("DataTransfer.setData()","setData()")}} and
-  {{domxref("DataTransfer.clearData()","clearData()")}} methods.</p>
+This example shows the use of the {{domxref("DataTransfer")}} object's
+{{domxref("DataTransfer.getData()","getData()")}},
+{{domxref("DataTransfer.setData()","setData()")}} and
+{{domxref("DataTransfer.clearData()","clearData()")}} methods.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;span class="tweaked" id="source" draggable="true"&gt;
+```html
+<span class="tweaked" id="source" draggable="true">
   Select this element, drag it to the Drop Zone and then release the selection to move the element.
-&lt;/span&gt;
-&lt;span class="tweaked" id="target"&gt;Drop Zone&lt;/span&gt;
-&lt;div&gt;Status: &lt;span id="status"&gt;Drag to start&lt;/span&gt;&lt;/div&gt;
-&lt;div&gt;Data is: &lt;span id="data"&gt;uninitialized&lt;/span&gt;&lt;/div&gt;
-</pre>
+</span>
+<span class="tweaked" id="target">Drop Zone</span>
+<div>Status: <span id="status">Drag to start</span></div>
+<div>Data is: <span id="data">uninitialized</span></div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">span.tweaked {
+```css
+span.tweaked {
   display: inline-block;
   margin: 1em 0;
   padding: 1em 2em;
@@ -76,11 +75,12 @@ browser-compat: api.DataTransfer.clearData
 #target {
   border: 1px solid black;
 }
-</pre>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">window.addEventListener('DOMContentLoaded', function () {
+```js
+window.addEventListener('DOMContentLoaded', function () {
   // Select HTML elements
   var draggable = document.getElementById('source');
   var dropable = document.getElementById('target');
@@ -163,24 +163,22 @@ browser-compat: api.DataTransfer.clearData
     element.textContent = "I'm in the Drop Zone!";
   }
 })
-</pre>
+```
 
-<p>{{EmbedLiveSample('Example', 300, 250)}}</p>
+{{EmbedLiveSample('Example', 300, 250)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API">Drag and drop</a></li>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</a></li>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">Recommended Drag Types</a></li>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items">Dragging and Dropping Multiple Items</a></li>
- <li><a href="https://codepen.io/tech_query/pen/MqGgap">DataTransfer test - Paste or Drag</a></li>
-</ul>
+- [Drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
+- [Drag Operations](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+- [Recommended Drag Types](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
+- [Dragging and Dropping Multiple Items](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
+- [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)

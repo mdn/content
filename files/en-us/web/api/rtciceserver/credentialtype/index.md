@@ -2,54 +2,56 @@
 title: RTCIceServer.credentialType
 slug: Web/API/RTCIceServer/credentialType
 tags:
-- Authentication
-- ICE
-- OAuth
-- Property
-- RTCIceServer
-- Reference
-- WebRTC
-- WebRTC API
-- credentialType
-- credentials
-- password
+  - Authentication
+  - ICE
+  - OAuth
+  - Property
+  - RTCIceServer
+  - Reference
+  - WebRTC
+  - WebRTC API
+  - credentialType
+  - credentials
+  - password
 browser-compat: api.RTCIceServer.credentialType
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The {{domxref("RTCIceServer")}} dictionary's
-  <strong><code>credentialType</code></strong> property is a string value from the <a
-    href="#RTCIceCredentialType_enum"><code>RTCIceCredentialType</code> enum</a> which
-  indicates what type of credential the {{domxref("RTCIceServer.credential")}} value is.
-  The default is <code>password</code>.</p>
+The {{domxref("RTCIceServer")}} dictionary's
+**`credentialType`** property is a string value from the [`RTCIceCredentialType` enum](#RTCIceCredentialType_enum) which
+indicates what type of credential the {{domxref("RTCIceServer.credential")}} value is.
+The default is `password`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>iceServer</em> = {
+```js
+var iceServer = {
                   ...
-                  credentialType = <em>newCredentialType</em>,
+                  credentialType = newCredentialType,
                   ...
                 };
 
-var <em>credentialType</em> = <em>iceServer</em>.credentialType;
+var credentialType = iceServer.credentialType;
 
-<em>iceServer</em>.credentialType = <em>newCredentialType</em>;</pre>
+iceServer.credentialType = newCredentialType;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>The permitted values are found in the {{domxref("RTCIceCredentialType")}} enumerated
-  string type:</p>
+The permitted values are found in the {{domxref("RTCIceCredentialType")}} enumerated
+string type:
 
-<p>{{page("/en-US/docs/Web/API/RTCIceCredentialType", "Values")}}</p>
+{{page("/en-US/docs/Web/API/RTCIceCredentialType", "Values")}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example creates a new {{domxref("RTCPeerConnection")}} which will use a
-  {{Glossary("TURN")}} server at <code>turnserver.example.org</code> to negotiate
-  connections. Logging into the TURN server will use the username "webrtc" and the
-  creative password "turnpassword".</p>
+This example creates a new {{domxref("RTCPeerConnection")}} which will use a
+{{Glossary("TURN")}} server at `turnserver.example.org` to negotiate
+connections. Logging into the TURN server will use the username "webrtc" and the
+creative password "turnpassword".
 
-<pre class="brush: js">myPeerConnection = new RTCPeerConnection({
+```js
+myPeerConnection = new RTCPeerConnection({
   iceServers: [
     {
       urls: "turn:turnserver.example.org",  // A TURN server
@@ -58,19 +60,18 @@ var <em>credentialType</em> = <em>iceServer</em>.credentialType;
       credentialType: "password"
     }
   ]
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("RTCIceServer")}}</li>
-  <li>{{domxref("RTCIceServer.credential")}}</li>
-</ul>
+- {{domxref("RTCIceServer")}}
+- {{domxref("RTCIceServer.credential")}}

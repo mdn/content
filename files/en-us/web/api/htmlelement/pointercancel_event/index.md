@@ -12,86 +12,89 @@ tags:
   - user input
 browser-compat: api.HTMLElement.pointercancel_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <strong><code>pointercancel</code></strong> event is fired when the browser determines that there are unlikely to be any more pointer events, or if after the {{event("pointerdown")}} event is fired, the pointer is then used to manipulate the viewport by panning, zooming, or scrolling.</p>
+The **`pointercancel`** event is fired when the browser determines that there are unlikely to be any more pointer events, or if after the {{event("pointerdown")}} event is fired, the pointer is then used to manipulate the viewport by panning, zooming, or scrolling.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("PointerEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td><code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onpointercancel">onpointercancel</a></code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("PointerEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/API/GlobalEventHandlers/onpointercancel"
+            >onpointercancel</a
+          ></code
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>Some examples of situations that will trigger a <code>pointercancel</code> event:</p>
+Some examples of situations that will trigger a `pointercancel` event:
 
-<ul>
- <li>A hardware event occurs that cancels the pointer activities. This may include, for example, the user switching applications using an application switcher interface or the "home" button on a mobile device.</li>
- <li>The device's screen orientation is changed while the pointer is active.</li>
- <li>The browser decides that the user started pointer input accidentally. This can happen if, for example, the hardware supports palm rejection to prevent a hand resting on the display while using a stylus from accidentally triggering events.</li>
- <li>The {{cssxref("touch-action")}} CSS property prevents the input from continuing.</li>
-</ul>
+- A hardware event occurs that cancels the pointer activities. This may include, for example, the user switching applications using an application switcher interface or the "home" button on a mobile device.
+- The device's screen orientation is changed while the pointer is active.
+- The browser decides that the user started pointer input accidentally. This can happen if, for example, the hardware supports palm rejection to prevent a hand resting on the display while using a stylus from accidentally triggering events.
+- The {{cssxref("touch-action")}} CSS property prevents the input from continuing.
 
-<div class="note">
-<p><strong>Note:</strong> After the <code>pointercancel</code> event is fired, the browser will also send {{event("pointerout")}} followed by {{event("pointerleave")}}.</p>
-</div>
+> **Note:** After the `pointercancel` event is fired, the browser will also send {{event("pointerout")}} followed by {{event("pointerleave")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Using <code>addEventListener()</code>:</p>
+Using `addEventListener()`:
 
-<pre class="brush: js">const para = document.querySelector('p');
+```js
+const para = document.querySelector('p');
 
-para.addEventListener('pointercancel', (event) =&gt; {
+para.addEventListener('pointercancel', (event) => {
   console.log('Pointer event cancelled');
-});</pre>
+});
+```
 
-<p>Using the <code>onpointercancel</code> event handler property:</p>
+Using the `onpointercancel` event handler property:
 
-<pre class="brush: js">const para = document.querySelector('p');
+```js
+const para = document.querySelector('p');
 
-para.onpointercancel = (event) =&gt; {
+para.onpointercancel = (event) => {
   console.log('Pointer event cancelled');
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Related events
-  <ul>
-   <li><code><a href="/en-US/docs/Web/API/HTMLElement/gotpointercapture_event">gotpointercapture</a></code></li>
-   <li><code><a href="/en-US/docs/Web/API/HTMLElement/lostpointercapture_event">lostpointercapture</a></code></li>
-   <li><code><a href="/en-US/docs/Web/API/HTMLElement/pointerover_event">pointerover</a></code></li>
-   <li><code><a href="/en-US/docs/Web/API/HTMLElement/pointerenter_event">pointerenter</a></code></li>
-   <li><code><a href="/en-US/docs/Web/API/HTMLElement/pointerdown_event">pointerdown</a></code></li>
-   <li><code><a href="/en-US/docs/Web/API/HTMLElement/pointermove_event">pointermove</a></code></li>
-   <li><code><a href="/en-US/docs/Web/API/HTMLElement/pointerup_event">pointerup</a></code></li>
-   <li><code><a href="/en-US/docs/Web/API/HTMLElement/pointerout_event">pointerout</a></code></li>
-   <li><code><a href="/en-US/docs/Web/API/HTMLElement/pointerleave_event">pointerleave</a></code></li>
-  </ul>
- </li>
- <li><code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onpointercancel">onpointercancel</a></code> event handler property</li>
- <li>This event on <code>Document</code> targets: <code><a href="/en-US/docs/Web/API/Document/pointercancel_event">pointercancel</a></code> event</li>
-</ul>
+- Related events
+
+  - [`gotpointercapture`](/en-US/docs/Web/API/HTMLElement/gotpointercapture_event)
+  - [`lostpointercapture`](/en-US/docs/Web/API/HTMLElement/lostpointercapture_event)
+  - [`pointerover`](/en-US/docs/Web/API/HTMLElement/pointerover_event)
+  - [`pointerenter`](/en-US/docs/Web/API/HTMLElement/pointerenter_event)
+  - [`pointerdown`](/en-US/docs/Web/API/HTMLElement/pointerdown_event)
+  - [`pointermove`](/en-US/docs/Web/API/HTMLElement/pointermove_event)
+  - [`pointerup`](/en-US/docs/Web/API/HTMLElement/pointerup_event)
+  - [`pointerout`](/en-US/docs/Web/API/HTMLElement/pointerout_event)
+  - [`pointerleave`](/en-US/docs/Web/API/HTMLElement/pointerleave_event)
+
+- [`onpointercancel`](/en-US/docs/Web/API/GlobalEventHandlers/onpointercancel) event handler property
+- This event on `Document` targets: [`pointercancel`](/en-US/docs/Web/API/Document/pointercancel_event) event

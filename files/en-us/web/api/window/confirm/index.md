@@ -10,63 +10,60 @@ tags:
   - confirm
 browser-compat: api.Window.confirm
 ---
-<div>{{ApiRef("Window")}}</div>
+{{ApiRef("Window")}}
 
-<p><code>window.confirm()</code> instructs the browser to display a dialog with an optional message, and to wait until the user either confirms or cancels the dialog.</p>
+`window.confirm()` instructs the browser to display a dialog with an optional message, and to wait until the user either confirms or cancels the dialog.
 
-<p>Under some conditions — for example, when the user switches tabs — the browser may not actually display a dialog, or may not wait for the user to confirm or cancel the dialog.</p>
+Under some conditions — for example, when the user switches tabs — the browser may not actually display a dialog, or may not wait for the user to confirm or cancel the dialog.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>result</em> = window.confirm(<em>message</em>);</pre>
+```js
+result = window.confirm(message);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>message</code></dt>
-  <dd>A string you want to display in the confirmation dialog.</dd>
-</dl>
+- `message`
+  - : A string you want to display in the confirmation dialog.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A boolean indicating whether OK (<code>true</code>) or Cancel (<code>false</code>) was
-  selected. If a browser is ignoring in-page dialogs, then the returned value is always
-  <code>false</code>.</p>
+A boolean indicating whether OK (`true`) or Cancel (`false`) was
+selected. If a browser is ignoring in-page dialogs, then the returned value is always
+`false`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">if (window.confirm("Do you really want to leave?")) {
+```js
+if (window.confirm("Do you really want to leave?")) {
   window.open("exit.html", "Thanks for Visiting!");
 }
-</pre>
+```
 
-<p>Produces:</p>
+Produces:
 
-<p><img alt="firefox confirm"
-    src="firefoxcomfirmdialog_zpsf00ec381.png"><br>
-   </p>
+![firefox confirm](firefoxcomfirmdialog_zpsf00ec381.png)
 
-<h2 id="Notes">Notes</h2>
 
-<p>Dialog boxes are modal windows — they
-  prevent the user from accessing the rest of the program's interface until the dialog box
-  is closed. For this reason, you should not overuse any function that creates a dialog
-  box (or modal window). Regardless, there are good reasons to <a
-    href="https://alistapart.com/article/neveruseawarning/">avoid using dialog boxes for
-    confirmation</a>.</p>
 
-<h2 id="Specifications">Specifications</h2>
+## Notes
+
+Dialog boxes are modal windows — they
+prevent the user from accessing the rest of the program's interface until the dialog box
+is closed. For this reason, you should not overuse any function that creates a dialog
+box (or modal window). Regardless, there are good reasons to [avoid using dialog boxes for
+confirmation](https://alistapart.com/article/neveruseawarning/).
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("window.alert()")}}</li>
-  <li>{{domxref("window.prompt()")}}</li>
-</ul>
+- {{domxref("window.alert()")}}
+- {{domxref("window.prompt()")}}

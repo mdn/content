@@ -2,43 +2,43 @@
 title: HTMLTableElement.border
 slug: Web/API/HTMLTableElement/border
 tags:
-- API
-- Deprecated
-- HTML DOM
-- NeedsSpecTable
-- Property
-- Reference
+  - API
+  - Deprecated
+  - HTML DOM
+  - NeedsSpecTable
+  - Property
+  - Reference
 browser-compat: api.HTMLTableElement.border
 ---
-<div>{{APIRef("HTML DOM")}}{{Deprecated_Header}}</div>
+{{APIRef("HTML DOM")}}{{Deprecated_Header}}
 
-<p>The <strong><code>HTMLTableElement.border</code></strong> property represents the
-  border width of the {{HtmlElement("table")}} element.</p>
+The **`HTMLTableElement.border`** property represents the
+border width of the {{HtmlElement("table")}} element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>HTMLTableElement</em>.border = <em>border</em>;
-var <em>border</em> = <em>HTMLTableElement</em>.border;
-</pre>
+```js
+HTMLTableElement.border = border;
+var border = HTMLTableElement.border;
+```
 
-<ul>
-  <li><code>border</code> is a string representing the width of the border in pixels.</li>
-</ul>
+- `border` is a string representing the width of the border in pixels.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">// Set the width of a table border to 2 pixels
+```js
+// Set the width of a table border to 2 pixels
 var t = document.getElementById('TableA');
-t.border = '2';</pre>
+t.border = '2';
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>W3C DOM 2 HTML Specification <a class="external"
-    href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-50969400"><em>HTMLTableElement</em>
-    .border</a>.</p>
+W3C DOM 2 HTML Specification [_HTMLTableElement_
+.border](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-50969400).
 
-<p>This attribute is deprecated in HTML 4.0.</p>
+This attribute is deprecated in HTML 4.0.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

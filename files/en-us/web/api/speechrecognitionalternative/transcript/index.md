@@ -2,43 +2,44 @@
 title: SpeechRecognitionAlternative.transcript
 slug: Web/API/SpeechRecognitionAlternative/transcript
 tags:
-- API
-- Experimental
-- Property
-- Reference
-- SpeechRecognitionAlternative
-- Web Speech API
-- recognition
-- speech
-- transcript
+  - API
+  - Experimental
+  - Property
+  - Reference
+  - SpeechRecognitionAlternative
+  - Web Speech API
+  - recognition
+  - speech
+  - transcript
 browser-compat: api.SpeechRecognitionAlternative.transcript
 ---
-<p>{{APIRef("Web Speech API")}}{{ SeeCompatTable() }}</p>
+{{APIRef("Web Speech API")}}{{ SeeCompatTable() }}
 
-<p>The <code><strong>transcript</strong></code> read-only property of the
-  {{domxref("SpeechRecognitionResult")}} interface returns a string containing the
-  transcript of the recognized word(s).</p>
+The **`transcript`** read-only property of the
+{{domxref("SpeechRecognitionResult")}} interface returns a string containing the
+transcript of the recognized word(s).
 
-<p>For continuous recognition, leading or trailing whitespace will be included where
-  necessary so that concatenation of consecutive {{domxref("SpeechRecognitionResult")}}s
-  produces a proper transcript of the session.</p>
+For continuous recognition, leading or trailing whitespace will be included where
+necessary so that concatenation of consecutive {{domxref("SpeechRecognitionResult")}}s
+produces a proper transcript of the session.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var myTranscript = speechRecognitionAlternativeInstance.transcript;</pre>
+```js
+var myTranscript = speechRecognitionAlternativeInstance.transcript;
+```
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A {{domxref("DOMString")}}.</p>
+A {{domxref("DOMString")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This code is excerpted from our <a
-    href="https://github.com/mdn/web-speech-api/blob/master/speech-color-changer/script.js">Speech
-    color changer</a> example.</p>
+This code is excerpted from our [Speech
+color changer](https://github.com/mdn/web-speech-api/blob/master/speech-color-changer/script.js) example.
 
-<pre class="brush: js">recognition.onresult = function(event) {
+```js
+recognition.onresult = function(event) {
   // The SpeechRecognitionEvent results property returns a SpeechRecognitionResultList object
   // The SpeechRecognitionResultList object contains SpeechRecognitionResult objects.
   // It has a getter so it can be accessed like an array
@@ -50,18 +51,17 @@ browser-compat: api.SpeechRecognitionAlternative.transcript
   var color = event.results[0][0].transcript;
   diagnostic.textContent = 'Result received: ' + color + '.';
   bg.style.backgroundColor = color;
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)

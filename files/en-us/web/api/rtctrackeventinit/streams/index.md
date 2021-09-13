@@ -2,47 +2,49 @@
 title: RTCTrackEventInit.streams
 slug: Web/API/RTCTrackEventInit/streams
 tags:
-- API
-- Media
-- Property
-- RTCTrackEvent
-- Reference
-- Streams
-- WebRTC
-- WebRTC API
-- events
-- track
+  - API
+  - Media
+  - Property
+  - RTCTrackEvent
+  - Reference
+  - Streams
+  - WebRTC
+  - WebRTC API
+  - events
+  - track
 browser-compat: api.RTCTrackEventInit.streams
 ---
-<div>{{APIRef("WebAPI")}}</div>
+{{APIRef("WebAPI")}}
 
-<p>The {{domxref("RTCTrackEventInit")}} dictionary's optional
-    <strong><code>streams</code></strong> property provides an array containing a
-    {{domxref("MediaStream")}} object for each of the streams associated with the event's
-    track.</p>
+The {{domxref("RTCTrackEventInit")}} dictionary's optional
+**`streams`** property provides an array containing a
+{{domxref("MediaStream")}} object for each of the streams associated with the event's
+track.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>trackEventInit</em> = {
-  receiver: <em>rtpReceiver</em>,
-  track: <em>mediaStreamTrack</em>,
-  streams: [<em>videoStream</em>],
-  transceiver: <em>rtpTransceiver</em>
+```js
+var trackEventInit = {
+  receiver: rtpReceiver,
+  track: mediaStreamTrack,
+  streams: [videoStream],
+  transceiver: rtpTransceiver
 };
 
-var <em>streamList</em> = <em>trackEventInit</em>.streams;</pre>
+var streamList = trackEventInit.streams;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An array of {{domxref("MediaStream")}} objects, one for each stream which make up the
-  track.</p>
+An array of {{domxref("MediaStream")}} objects, one for each stream which make up the
+track.
 
-<p>If <code>streams</code> is not specified, its default value is an empty array.</p>
+If `streams` is not specified, its default value is an empty array.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

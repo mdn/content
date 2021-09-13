@@ -11,94 +11,84 @@ tags:
   - request
 browser-compat: api.Request.mode
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p>The <strong><code>mode</code></strong> read-only property of the {{domxref("Request")}}
-  interface contains the mode of the request (e.g., <code>cors</code>,
-  <code>no-cors</code>, <code>same-origin</code>, <code>navigate</code> or <code>websocket</code>.) This is used
-  to determine if cross-origin requests lead to valid responses, and which properties of the response are readable.</p>
+The **`mode`** read-only property of the {{domxref("Request")}}
+interface contains the mode of the request (e.g., `cors`,
+`no-cors`, `same-origin`, `navigate` or `websocket`.) This is used
+to determine if cross-origin requests lead to valid responses, and which properties of the response are readable.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>myMode</var> = <var>request</var>.mode;</pre>
+```js
+var myMode = request.mode;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<dl>
-  <dt>A <code>RequestMode</code> value.</dt>
-  <dd>
-    <p>The associated <dfn>mode</dfn>, available values of which are:</p>
+- A `RequestMode` value.
 
-    <ul>
-      <li><code>same-origin</code> — If a request is made to another origin with this mode
-        set, the result is an error. You could use this to ensure that a request is always
-        being made to your origin.</li>
-      <li><code>no-cors</code> — Prevents the method from being anything other than
-        <code>HEAD</code>, <code>GET</code> or <code>POST</code>, and the headers from
-        being anything other than <a
-          href="https://fetch.spec.whatwg.org/#simple-header">simple headers</a>. If any
-        ServiceWorkers intercept these requests, they may not add or override any headers
-        except for those that are <a
-          href="https://fetch.spec.whatwg.org/#simple-header">simple headers</a>. In
-        addition, JavaScript may not access any properties of the resulting
-        {{domxref("Response")}}. This ensures that ServiceWorkers do not affect the
-        semantics of the Web and prevents security and privacy issues arising from leaking
-        data across domains.</li>
-      <li><code>cors</code> — Allows cross-origin requests, for example to access various
-        APIs offered by 3rd party vendors. These are expected to adhere to the <a
-          href="/en-US/docs/Web/HTTP/CORS">CORS protocol</a>. Only a <a
-          href="https://fetch.spec.whatwg.org/#concept-filtered-response-cors">limited
-          set</a> of headers are exposed in the {{domxref("Response")}}, but the body is
-        readable.</li>
-      <li><code>navigate</code> — A mode for supporting navigation. The <code>navigate</code> value is intended to be used only by HTML navigation. A navigate request is created only while navigating between documents.</li>
-      <li><code>websocket</code> — A special mode used only when establishing a <a href="/en-US/docs/Web/API/WebSockets_API">WebSocket</a> connection.</li>
-    </ul>
-  </dd>
-</dl>
+  - : The associated _mode_, available values of which are:
 
-<h4 id="Default_mode">Default mode</h4>
+    - `same-origin` — If a request is made to another origin with this mode
+      set, the result is an error. You could use this to ensure that a request is always
+      being made to your origin.
+    - `no-cors` — Prevents the method from being anything other than
+      `HEAD`, `GET` or `POST`, and the headers from
+      being anything other than [simple headers](https://fetch.spec.whatwg.org/#simple-header). If any
+      ServiceWorkers intercept these requests, they may not add or override any headers
+      except for those that are [simple headers](https://fetch.spec.whatwg.org/#simple-header). In
+      addition, JavaScript may not access any properties of the resulting
+      {{domxref("Response")}}. This ensures that ServiceWorkers do not affect the
+      semantics of the Web and prevents security and privacy issues arising from leaking
+      data across domains.
+    - `cors` — Allows cross-origin requests, for example to access various
+      APIs offered by 3rd party vendors. These are expected to adhere to the [CORS protocol](/en-US/docs/Web/HTTP/CORS). Only a [limited
+      set](https://fetch.spec.whatwg.org/#concept-filtered-response-cors) of headers are exposed in the {{domxref("Response")}}, but the body is
+      readable.
+    - `navigate` — A mode for supporting navigation. The `navigate` value is intended to be used only by HTML navigation. A navigate request is created only while navigating between documents.
+    - `websocket` — A special mode used only when establishing a [WebSocket](/en-US/docs/Web/API/WebSockets_API) connection.
 
-<p>Requests can be initiated in a variety of ways, and the mode for a request depends on
-  the particular means by which it was initiated.</p>
+#### Default mode
 
-<p>For example, when a <code>Request</code> object is created using the
-  {{domxref("Request.Request")}} constructor, the value of the <code>mode</code> property
-  for that <code>Request</code> is set to <code>cors</code>.</p>
+Requests can be initiated in a variety of ways, and the mode for a request depends on
+the particular means by which it was initiated.
 
-<p>However, for requests created other than by the {{domxref("Request.Request")}}
-  constructor, <code>no-cors</code> is typically used as the mode; for example, for
-  embedded resources where the request is initiated from markup, unless the
-  <code><a href="/en-US/docs/Web/HTML/Attributes/crossorigin">crossorigin</a></code>
-  attribute is present, the request is in most cases made using the <code>no-cors</code>
-  mode — that is, for the {{HTMLElement("link")}} or {{HTMLElement("script")}} elements
-  (except when used with modules), or {{HTMLElement("img")}}, {{HTMLElement("audio")}},
-  {{HTMLElement("video")}}, {{HTMLElement("object")}}, {{HTMLElement("embed")}}, or
-  {{HTMLElement("iframe")}} elements.</p>
+For example, when a `Request` object is created using the
+{{domxref("Request.Request")}} constructor, the value of the `mode` property
+for that `Request` is set to `cors`.
 
-<h2 id="Example">Example</h2>
+However, for requests created other than by the {{domxref("Request.Request")}}
+constructor, `no-cors` is typically used as the mode; for example, for
+embedded resources where the request is initiated from markup, unless the
+[`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin)
+attribute is present, the request is in most cases made using the `no-cors`
+mode — that is, for the {{HTMLElement("link")}} or {{HTMLElement("script")}} elements
+(except when used with modules), or {{HTMLElement("img")}}, {{HTMLElement("audio")}},
+{{HTMLElement("video")}}, {{HTMLElement("object")}}, {{HTMLElement("embed")}}, or
+{{HTMLElement("iframe")}} elements.
 
-<p>In the following snippet, we create a new request using the
-  {{domxref("Request.Request()")}} constructor (for an image file in the same directory as
-  the script), then save the request mode in a variable:</p>
+## Example
 
-<pre class="brush: js">var myRequest = new Request('flowers.jpg');
-var myMode = myRequest.mode; // returns "cors" by default</pre>
+In the following snippet, we create a new request using the
+{{domxref("Request.Request()")}} constructor (for an image file in the same directory as
+the script), then save the request mode in a variable:
 
-<h2 id="Specifications">Specifications</h2>
+```js
+var myRequest = new Request('flowers.jpg');
+var myMode = myRequest.mode; // returns "cors" by default
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
-  <li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a>
-  </li>
-  <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP](/en-US/docs/Web/HTTP)

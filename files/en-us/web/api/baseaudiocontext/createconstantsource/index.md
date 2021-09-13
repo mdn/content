@@ -2,47 +2,46 @@
 title: BaseAudioContext.createConstantSource()
 slug: Web/API/BaseAudioContext/createConstantSource
 tags:
-- API
-- Audio
-- AudioContext
-- BaseAudioContext
-- ConstantSourceNode
-- Media
-- Method
-- createConstantSource
+  - API
+  - Audio
+  - AudioContext
+  - BaseAudioContext
+  - ConstantSourceNode
+  - Media
+  - Method
+  - createConstantSource
 browser-compat: api.BaseAudioContext.createConstantSource
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<p>The <strong><code>createConstantSource()</code></strong>
-    property of the {{domxref("BaseAudioContext")}} interface creates a
-    {{domxref("ConstantSourceNode")}} object, which is an audio source that continuously
-    outputs a monaural (one-channel) sound signal whose samples all have the same
-    value.</p>
+The **`createConstantSource()`**
+property of the {{domxref("BaseAudioContext")}} interface creates a
+{{domxref("ConstantSourceNode")}} object, which is an audio source that continuously
+outputs a monaural (one-channel) sound signal whose samples all have the same
+value.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The {{domxref("ConstantSourceNode.ConstantSourceNode", "ConstantSourceNode()")}}
-    constructor is the recommended way to create a {{domxref("ConstantSourceNode")}}; see
-    <a href="/en-US/docs/Web/API/AudioNode#creating_an_audionode">Creating an AudioNode</a>.</p>
-</div>
+> **Note:** The {{domxref("ConstantSourceNode.ConstantSourceNode", "ConstantSourceNode()")}}
+> constructor is the recommended way to create a {{domxref("ConstantSourceNode")}}; see
+> [Creating an AudioNode](/en-US/docs/Web/API/AudioNode#creating_an_audionode).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var constantSourceNode = AudioContext.createConstantSource()</pre>
+```js
+var constantSourceNode = AudioContext.createConstantSource()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A {{domxref('ConstantSourceNode')}} instance.</p>
+A {{domxref('ConstantSourceNode')}} instance.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

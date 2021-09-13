@@ -11,133 +11,127 @@ tags:
   - request
 browser-compat: api.Request
 ---
-<div>{{APIRef("Fetch API")}}</div>
+{{APIRef("Fetch API")}}
 
-<p>The <strong><code>Request</code></strong> interface of the <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> represents a resource request.</p>
+The **`Request`** interface of the [Fetch API](/en-US/docs/Web/API/Fetch_API) represents a resource request.
 
-<p>You can create a new <code>Request</code> object using the {{domxref("Request.Request","Request()")}} constructor, but you are more likely to encounter a <code>Request</code> object being returned as the result of another API operation, such as a service worker {{domxref("FetchEvent.request")}}.</p>
+You can create a new `Request` object using the {{domxref("Request.Request","Request()")}} constructor, but you are more likely to encounter a `Request` object being returned as the result of another API operation, such as a service worker {{domxref("FetchEvent.request")}}.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("Request.Request","Request()")}}</dt>
- <dd>Creates a new <code>Request</code> object.</dd>
-</dl>
+- {{domxref("Request.Request","Request()")}}
+  - : Creates a new `Request` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("Request.body")}} {{readonlyInline}}</dt>
- <dd>A {{domxref("ReadableStream")}} of the body contents.</dd>
- <dt>{{domxref("Request.bodyUsed")}} {{readonlyInline}}</dt>
- <dd>Stores <code>true</code> or <code>false</code> to indicate whether or not the body has been used in a request yet.</dd>
- <dt>{{domxref("Request.cache")}} {{readonlyInline}}</dt>
- <dd>Contains the cache mode of the request (e.g., <code>default</code>, <code>reload</code>, <code>no-cache</code>).</dd>
- <dt>{{domxref("Request.credentials")}} {{readonlyInline}}</dt>
- <dd>Contains the credentials of the request (e.g., <code>omit</code>, <code>same-origin</code>, <code>include</code>). The default is <code>same-origin</code>.</dd>
- <dt>{{domxref("Request.destination")}} {{ReadOnlyInline}}</dt>
- <dd>Returns a string describing the request's destination. This is a string indicating the type of content being requested.</dd>
- <dt>{{domxref("Request.headers")}} {{readonlyInline}}</dt>
- <dd>Contains the associated {{domxref("Headers")}} object of the request.</dd>
- <dt>{{domxref("Request.integrity")}} {{readonlyInline}}</dt>
- <dd>Contains the <a href="/en-US/docs/Web/Security/Subresource_Integrity">subresource integrity</a> value of the request (e.g., <code>sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=</code>).</dd>
- <dt>{{domxref("Request.method")}} {{readonlyInline}}</dt>
- <dd>Contains the request's method (<code>GET</code>, <code>POST</code>, etc.)</dd>
- <dt>{{domxref("Request.mode")}} {{readonlyInline}}</dt>
- <dd>Contains the mode of the request (e.g., <code>cors</code>, <code>no-cors</code>, <code>same-origin</code>, <code>navigate</code>.)</dd>
- <dt>{{domxref("Request.redirect")}} {{readonlyinline}}</dt>
- <dd>Contains the mode for how redirects are handled. It may be one of <code>follow</code>, <code>error</code>, or <code>manual</code>.</dd>
- <dt>{{domxref("Request.referrer")}} {{readonlyInline}}</dt>
- <dd>Contains the referrer of the request (e.g., <code>client</code>).</dd>
- <dt>{{domxref("Request.referrerPolicy")}} {{readonlyInline}}</dt>
- <dd>Contains the referrer policy of the request (e.g., <code>no-referrer</code>).</dd>
- <dt>{{domxref("Request.url")}} {{readonlyInline}}</dt>
- <dd>Contains the URL of the request.</dd>
-</dl>
+- {{domxref("Request.body")}} {{readonlyInline}}
+  - : A {{domxref("ReadableStream")}} of the body contents.
+- {{domxref("Request.bodyUsed")}} {{readonlyInline}}
+  - : Stores `true` or `false` to indicate whether or not the body has been used in a request yet.
+- {{domxref("Request.cache")}} {{readonlyInline}}
+  - : Contains the cache mode of the request (e.g., `default`, `reload`, `no-cache`).
+- {{domxref("Request.credentials")}} {{readonlyInline}}
+  - : Contains the credentials of the request (e.g., `omit`, `same-origin`, `include`). The default is `same-origin`.
+- {{domxref("Request.destination")}} {{ReadOnlyInline}}
+  - : Returns a string describing the request's destination. This is a string indicating the type of content being requested.
+- {{domxref("Request.headers")}} {{readonlyInline}}
+  - : Contains the associated {{domxref("Headers")}} object of the request.
+- {{domxref("Request.integrity")}} {{readonlyInline}}
+  - : Contains the [subresource integrity](/en-US/docs/Web/Security/Subresource_Integrity) value of the request (e.g., `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
+- {{domxref("Request.method")}} {{readonlyInline}}
+  - : Contains the request's method (`GET`, `POST`, etc.)
+- {{domxref("Request.mode")}} {{readonlyInline}}
+  - : Contains the mode of the request (e.g., `cors`, `no-cors`, `same-origin`, `navigate`.)
+- {{domxref("Request.redirect")}} {{readonlyinline}}
+  - : Contains the mode for how redirects are handled. It may be one of `follow`, `error`, or `manual`.
+- {{domxref("Request.referrer")}} {{readonlyInline}}
+  - : Contains the referrer of the request (e.g., `client`).
+- {{domxref("Request.referrerPolicy")}} {{readonlyInline}}
+  - : Contains the referrer policy of the request (e.g., `no-referrer`).
+- {{domxref("Request.url")}} {{readonlyInline}}
+  - : Contains the URL of the request.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("Request.arrayBuffer()")}}</dt>
- <dd>Returns a promise that resolves with an {{jsxref("ArrayBuffer")}} representation of the request body.</dd>
- <dt>{{domxref("Request.blob()")}}</dt>
- <dd>Returns a promise that resolves with a {{domxref("Blob")}} representation of the request body.</dd>
- <dt>{{domxref("Request.clone()")}}</dt>
- <dd>Creates a copy of the current <code>Request</code> object.</dd>
- <dt>{{domxref("Request.formData()")}}</dt>
- <dd>Returns a promise that resolves with a {{domxref("FormData")}} representation of the request body.</dd>
- <dt>{{domxref("Request.json()")}}</dt>
- <dd>Returns a promise that resolves with the result of parsing the request body as {{JSxRef("JSON")}}.</dd>
- <dt>{{domxref("Request.text()")}}</dt>
- <dd>Returns a promise that resolves with a text representation of the request body.</dd>
-</dl>
+- {{domxref("Request.arrayBuffer()")}}
+  - : Returns a promise that resolves with an {{jsxref("ArrayBuffer")}} representation of the request body.
+- {{domxref("Request.blob()")}}
+  - : Returns a promise that resolves with a {{domxref("Blob")}} representation of the request body.
+- {{domxref("Request.clone()")}}
+  - : Creates a copy of the current `Request` object.
+- {{domxref("Request.formData()")}}
+  - : Returns a promise that resolves with a {{domxref("FormData")}} representation of the request body.
+- {{domxref("Request.json()")}}
+  - : Returns a promise that resolves with the result of parsing the request body as {{JSxRef("JSON")}}.
+- {{domxref("Request.text()")}}
+  - : Returns a promise that resolves with a text representation of the request body.
 
-<div class="note">
-<p><strong>Note:</strong> The request body functions can be run only once; subsequent calls will resolve with empty strings/ArrayBuffers.</p>
-</div>
+> **Note:** The request body functions can be run only once; subsequent calls will resolve with empty strings/ArrayBuffers.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the following snippet, we create a new request using the <code>Request()</code> constructor (for an image file in the same directory as the script), then return some property values of the request:</p>
+In the following snippet, we create a new request using the `Request()` constructor (for an image file in the same directory as the script), then return some property values of the request:
 
-<pre class="brush: js">const request = new Request('https://www.mozilla.org/favicon.ico');
+```js
+const request = new Request('https://www.mozilla.org/favicon.ico');
 
 const url = request.url;
 const method = request.method;
 const credentials = request.credentials;
-</pre>
+```
 
-<p>You could then fetch this request by passing the <code>Request</code> object in as a parameter to a {{domxref("fetch()")}} call, for example:</p>
+You could then fetch this request by passing the `Request` object in as a parameter to a {{domxref("fetch()")}} call, for example:
 
-<pre class="brush: js">fetch(request)
-  .then(response =&gt; response.blob())
-  .then(blob =&gt; {
+```js
+fetch(request)
+  .then(response => response.blob())
+  .then(blob => {
     image.src = URL.createObjectURL(blob);
-  });</pre>
+  });
+```
 
-<p>In the following snippet, we create a new request using the <code>Request()</code> constructor with some initial data and body content for an api request which need a body payload:</p>
+In the following snippet, we create a new request using the `Request()` constructor with some initial data and body content for an api request which need a body payload:
 
-<pre class="brush: js">const request = new Request('https://example.com', {method: 'POST', body: '{"foo": "bar"}'});
+```js
+const request = new Request('https://example.com', {method: 'POST', body: '{"foo": "bar"}'});
 
 const url = request.url;
 const method = request.method;
 const credentials = request.credentials;
 const bodyUsed = request.bodyUsed;
-</pre>
+```
 
-<div class="note">
-<p><strong>Note:</strong> The body type can only be a {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}} or {{domxref("ReadableStream")}} type, so for adding a JSON object to the payload you need to stringify that object.</p>
-</div>
+> **Note:** The body type can only be a {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}} or {{domxref("ReadableStream")}} type, so for adding a JSON object to the payload you need to stringify that object.
 
-<p>You could then fetch this api request by passing the <code>Request</code> object in as a parameter to a {{domxref("fetch()")}} call, for example and get the response:</p>
+You could then fetch this api request by passing the `Request` object in as a parameter to a {{domxref("fetch()")}} call, for example and get the response:
 
-<pre class="brush: js">fetch(request)
-  .then(response =&gt; {
+```js
+fetch(request)
+  .then(response => {
     if (response.status === 200) {
       return response.json();
     } else {
       throw new Error('Something went wrong on api server!');
     }
   })
-  .then(response =&gt; {
+  .then(response => {
     console.debug(response);
     // ...
-  }).catch(error =&gt; {
+  }).catch(error => {
     console.error(error);
-  });</pre>
+  });
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
- <li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP](/en-US/docs/Web/HTTP)

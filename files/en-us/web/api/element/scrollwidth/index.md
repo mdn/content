@@ -2,49 +2,49 @@
 title: Element.scrollWidth
 slug: Web/API/Element/scrollWidth
 tags:
-- API
-- CSSOM View
-- NeedsMarkupWork
-- NeedsSpecTable
-- Property
-- Reference
+  - API
+  - CSSOM View
+  - NeedsMarkupWork
+  - NeedsSpecTable
+  - Property
+  - Reference
 browser-compat: api.Element.scrollWidth
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>Element.scrollWidth</code></strong> read-only property is a
-  measurement of the width of an element's content, including content not visible on the
-  screen due to overflow.</p>
+The **`Element.scrollWidth`** read-only property is a
+measurement of the width of an element's content, including content not visible on the
+screen due to overflow.
 
-<p>The <code>scrollWidth</code> value is equal to the minimum width the element would
-  require in order to fit all the content in the viewport without using a horizontal
-  scrollbar. The width is measured in the same way as {{domxref("Element.clientWidth",
+The `scrollWidth` value is equal to the minimum width the element would
+require in order to fit all the content in the viewport without using a horizontal
+scrollbar. The width is measured in the same way as {{domxref("Element.clientWidth",
   "clientWidth")}}: it includes the element's padding, but not its border, margin or
-  vertical scrollbar (if present). It can also include the width of pseudo-elements such
-  as {{cssxref("::before")}} or {{cssxref("::after")}}. If the element's content can fit
-  without a need for horizontal scrollbar, its <code>scrollWidth</code> is equal to
-  {{domxref("Element.clientWidth", "clientWidth")}}</p>
+vertical scrollbar (if present). It can also include the width of pseudo-elements such
+as {{cssxref("::before")}} or {{cssxref("::after")}}. If the element's content can fit
+without a need for horizontal scrollbar, its `scrollWidth` is equal to
+{{domxref("Element.clientWidth", "clientWidth")}}
 
-<div class="note">
-  <p><strong>Note:</strong> This property will round the value to an integer. If you need a fractional value,
-    use {{ domxref("element.getBoundingClientRect()") }}.</p>
-</div>
+> **Note:** This property will round the value to an integer. If you need a fractional value,
+> use {{ domxref("element.getBoundingClientRect()") }}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>xScrollWidth</var> = <var>element</var>.scrollWidth;</pre>
+```js
+var xScrollWidth = element.scrollWidth;
+```
 
-<p><code><var>xScrollWidth</var></code> is the width of the content of
-  <code><var>element</var></code> in pixels.</p>
+`xScrollWidth` is the width of the content of
+`element` in pixels.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;Example&lt;/title&gt;
-    &lt;style&gt;
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Example</title>
+    <style>
       div {
         overflow: hidden;
         white-space: nowrap;
@@ -58,25 +58,25 @@ browser-compat: api.Element.scrollWidth
       button {
         margin-bottom: 2em;
       }
-    &lt;/style&gt;
-  &lt;/head&gt;
+    </style>
+  </head>
 
-  &lt;body&gt;
-    &lt;div id="aDiv"&gt;
+  <body>
+    <div id="aDiv">
       FooBar-FooBar-FooBar-FooBar
-    &lt;/div&gt;
-    &lt;button id="aButton"&gt;
+    </div>
+    <button id="aButton">
       Check for overflow
-    &lt;/button&gt;
+    </button>
 
-    &lt;div id="anotherDiv"&gt;
+    <div id="anotherDiv">
       FooBar-FooBar-FooBar-FooBar
-    &lt;/div&gt;
-    &lt;button id="anotherButton"&gt;
+    </div>
+    <button id="anotherButton">
       Check for overflow
-    &lt;/button&gt;
-  &lt;/body&gt;
-  &lt;script&gt;
+    </button>
+  </body>
+  <script>
     var buttonOne = document.getElementById('aButton'),
     buttonTwo = document.getElementById('anotherButton'),
     divOne = document.getElementById('aDiv'),
@@ -84,7 +84,7 @@ browser-compat: api.Element.scrollWidth
 
     //check to determine if an overflow is happening
     function isOverflowing(element) {
-      return (element.scrollWidth &gt; element.offsetWidth);
+      return (element.scrollWidth > element.offsetWidth);
     }
 
     function alertOverflow(element) {
@@ -102,30 +102,24 @@ browser-compat: api.Element.scrollWidth
     buttonTwo.addEventListener('click', function() {
       alertOverflow(divTwo);
     });
-  &lt;/script&gt;
-&lt;/html&gt;
-</pre>
+  </script>
+</html>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Example')}}</p>
+{{EmbedLiveSample('Example')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Element.clientWidth")}}</li>
-  <li>{{domxref("HTMLElement.offsetWidth")}}</li>
-  <li>
-    <a href="/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements">
-      Determining the dimensions of elements
-    </a>
-  </li>
-</ul>
+- {{domxref("Element.clientWidth")}}
+- {{domxref("HTMLElement.offsetWidth")}}
+- [Determining the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)

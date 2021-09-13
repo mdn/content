@@ -2,50 +2,51 @@
 title: PaymentMethodChangeEvent.methodName
 slug: Web/API/PaymentMethodChangeEvent/methodName
 tags:
-- API
-- Commerce
-- Payment Handler
-- Payment Method
-- Payment Request
-- Payment Request API
-- PaymentMethodChangeEvent
-- Property
-- Reference
-- methodName
-- payment
+  - API
+  - Commerce
+  - Payment Handler
+  - Payment Method
+  - Payment Request
+  - Payment Request API
+  - PaymentMethodChangeEvent
+  - Property
+  - Reference
+  - methodName
+  - payment
 browser-compat: api.PaymentMethodChangeEvent.methodName
 ---
-<div>{{securecontext_header}}{{APIRef("Payment Request API")}}</div>
+{{securecontext_header}}{{APIRef("Payment Request API")}}
 
-<p>The read-only <code><strong>methodName</strong></code> property of the {{domxref("PaymentMethodChangeEvent")}} interface is a string which
-    uniquely identifies the payment handler currently selected by the user. The
-  payment handler may be a payment technology, such as Apple Pay or Android Pay, and each
-  payment handler may support multiple payment methods; changes to the payment method
-  within the payment handler are described by the <code>PaymentMethodChangeEvent</code>.
-</p>
+The read-only **`methodName`** property of the {{domxref("PaymentMethodChangeEvent")}} interface is a string which
+uniquely identifies the payment handler currently selected by the user. The
+payment handler may be a payment technology, such as Apple Pay or Android Pay, and each
+payment handler may support multiple payment methods; changes to the payment method
+within the payment handler are described by the `PaymentMethodChangeEvent`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>var methodName</em> = <em>paymentMethodChangeEvent</em>.methodName;
-</pre>
+```js
+var methodName = paymentMethodChangeEvent.methodName;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} which uniquely identifies the currently-selected payment
-  handler. This may be a string chosen from the list of standardized payment method
-  identifiers, or a URL used by the payment processing service. See
-  {{SectionOnPage("/en-US/docs/Web/API/Payment_Request_API", "Payment method
-  identifiers")}} for more information.</p>
+A {{domxref("DOMString")}} which uniquely identifies the currently-selected payment
+handler. This may be a string chosen from the list of standardized payment method
+identifiers, or a URL used by the payment processing service. See
+{{SectionOnPage("/en-US/docs/Web/API/Payment_Request_API", "Payment method
+  identifiers")}} for more information.
 
-<p>The default value is the empty string, <code>""</code>.</p>
+The default value is the empty string, `""`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example uses the {{event("paymentmethodchange")}} event to watch for changes to
-  the payment method selected for Apple Pay, in order to compute a discount if the user
-  chooses to use a Visa card as their payment method.</p>
+This example uses the {{event("paymentmethodchange")}} event to watch for changes to
+the payment method selected for Apple Pay, in order to compute a discount if the user
+chooses to use a Visa card as their payment method.
 
-<pre class="brush: js">request.onpaymentmethodchange = function(ev) {
+```js
+request.onpaymentmethodchange = function(ev) {
   const { type: cardType } = ev.methodDetails;
   const newStuff = {};
   if (ev.methodName === "https://apple.com/apple-pay") {
@@ -61,12 +62,13 @@ browser-compat: api.PaymentMethodChangeEvent.methodName
   // finally...
   ev.updateWith(newStuff);
 };
-const response = await request.show();</pre>
+const response = await request.show();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

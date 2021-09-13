@@ -10,68 +10,70 @@ tags:
   - complete
 browser-compat: api.OfflineAudioContext.complete_event
 ---
-<p>{{DefaultAPISidebar("Web Audio API")}}</p>
+{{DefaultAPISidebar("Web Audio API")}}
 
-<p>The <code>complete</code> event of the {{domxref("OfflineAudioContext")}} interface is fired when the rendering of an offline audio context is complete.</p>
+The `complete` event of the {{domxref("OfflineAudioContext")}} interface is fired when the rendering of an offline audio context is complete.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Default action</th>
-   <td>None</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("OfflineAudioCompletionEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("OfflineAudioContext.oncomplete")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Default action</th>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("OfflineAudioCompletionEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>{{domxref("OfflineAudioContext.oncomplete")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>When processing is complete, you might want to use the <code>oncomplete</code> handler the prompt the user that the audio can now be played, and enable the play button:</p>
+When processing is complete, you might want to use the `oncomplete` handler the prompt the user that the audio can now be played, and enable the play button:
 
-<pre class="brush: js">let offlineAudioCtx = new OfflineAudioContext();
+```js
+let offlineAudioCtx = new OfflineAudioContext();
 
-offlineAudioCtx.addEventListener('complete', () =&gt; {
+offlineAudioCtx.addEventListener('complete', () => {
   console.log('Offline audio processing now complete');
   showModalDialog('Song processed and ready to play');
   playBtn.disabled = false;
-})</pre>
+})
+```
 
-<p>You can also set up the event handler using the {{domxref("OfflineAudioContext.oncomplete")}} property:</p>
+You can also set up the event handler using the {{domxref("OfflineAudioContext.oncomplete")}} property:
 
-<pre class="brush: js">let offlineAudioCtx = new OfflineAudioContext();
+```js
+let offlineAudioCtx = new OfflineAudioContext();
 
 offlineAudioCtx.oncomplete = function() {
   console.log('Offline audio processing now complete');
   showModalDialog('Song processed and ready to play');
   playBtn.disabled = false;
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("OfflineAudioContext.oncomplete")}}</li>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a></li>
-</ul>
+- {{domxref("OfflineAudioContext.oncomplete")}}
+- [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)

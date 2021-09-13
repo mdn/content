@@ -2,40 +2,42 @@
 title: PerformanceObserver.takeRecords()
 slug: Web/API/PerformanceObserver/takeRecords
 tags:
-- API
-- Method
-- Performance Observer API
-- PerformanceObserver
-- Reference
-- observers
-- takeRecords()
+  - API
+  - Method
+  - Performance Observer API
+  - PerformanceObserver
+  - Reference
+  - observers
+  - takeRecords()
 browser-compat: api.PerformanceObserver.takeRecords
 ---
-<div>{{APIRef("Performance Timeline API")}}</div>
+{{APIRef("Performance Timeline API")}}
 
-<p>The <strong><code>takeRecords()</code></strong> method of the
-  {{domxref('PerformanceObserver')}} interface returns the current list of
-  {{domxref("PerformanceEntry","performance entries")}} stored in the performance
-  observer, emptying it out.</p>
+The **`takeRecords()`** method of the
+{{domxref('PerformanceObserver')}} interface returns the current list of
+{{domxref("PerformanceEntry","performance entries")}} stored in the performance
+observer, emptying it out.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var performanceEntryList = <em>performanceObserver</em>.takeRecords();
-</pre>
+```js
+var performanceEntryList = performanceObserver.takeRecords();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A list of {{domxref("PerformanceEntry")}} objects.</p>
+A list of {{domxref("PerformanceEntry")}} objects.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var observer = new PerformanceObserver(function(list, obj) {
+```js
+var observer = new PerformanceObserver(function(list, obj) {
   var entries = list.getEntries();
-  for (var i=0; i &lt; entries.length; i++) {
+  for (var i=0; i < entries.length; i++) {
     // Process "mark" and "frame" events
   }
 });
@@ -44,12 +46,12 @@ var records = observer.takeRecords();
 console.log(records[0].name);
 console.log(records[0].startTime);
 console.log(records[0].duration);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

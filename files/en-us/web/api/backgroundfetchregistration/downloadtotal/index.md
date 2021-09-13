@@ -9,23 +9,24 @@ tags:
   - BackgroundFetchRegistration
 browser-compat: api.BackgroundFetchRegistration.downloadTotal
 ---
-<div>{{DefaultAPISidebar("Background Fetch API")}}</div>
+{{DefaultAPISidebar("Background Fetch API")}}
 
-<p>The <strong><code>downloadTotal</code></strong> read-only property of the {{domxref("BackgroundFetchRegistration")}} interface returns the total size in bytes of this download. This is set when the background fetch was registered, or <code>0</code> if not set.</p>
+The **`downloadTotal`** read-only property of the {{domxref("BackgroundFetchRegistration")}} interface returns the total size in bytes of this download. This is set when the background fetch was registered, or `0` if not set.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">let downloadTotal = BackgroundFetchRegistration.downloadTotal;</pre>
+    let downloadTotal = BackgroundFetchRegistration.downloadTotal;
 
-<h3>Value</h3>
-<p>A {{jsxref("number")}}.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{jsxref("number")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Examples
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

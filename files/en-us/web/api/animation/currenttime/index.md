@@ -11,39 +11,46 @@ tags:
   - web animations api
 browser-compat: api.Animation.currentTime
 ---
-<p>{{APIRef("Web Animations")}}{{SeeCompatTable}}</p>
+{{APIRef("Web Animations")}}{{SeeCompatTable}}
 
-<p>The <strong><code>Animation.currentTime</code></strong> property of the <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> returns and sets the current time value of the animation in milliseconds, whether running or paused.</p>
+The **`Animation.currentTime`** property of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) returns and sets the current time value of the animation in milliseconds, whether running or paused.
 
-<p>If the animation lacks a {{domxref("AnimationTimeline", "timeline")}}, is inactive, or hasn't been played yet, <code>currentTime</code>'s return value is <code>null</code>.</p>
+If the animation lacks a {{domxref("AnimationTimeline", "timeline")}}, is inactive, or hasn't been played yet, `currentTime`'s return value is `null`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>currentTime</em> = <em>Animation</em>.currentTime;
-<em>Animation</em>.currentTime =<em> newTime;</em></pre>
+```js
+var currentTime = Animation.currentTime;
+Animation.currentTime = newTime;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A number representing the current time in milliseconds, or <code>null</code> to deactivate the animation.</p>
+A number representing the current time in milliseconds, or `null` to deactivate the animation.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the <a href="http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010">Drink Me/Eat Me game</a>, Alice's height is animated so it can go from small to large or large to small. At the start of the game, her height is set between the two extremes by setting her animation's <code>currentTime</code> to half her <a href="/en-US/docs/Web/API/EffectTiming"><code>KeyframeEffect</code>'s duration</a>:</p>
+In the [Drink Me/Eat Me game](http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010), Alice's height is animated so it can go from small to large or large to small. At the start of the game, her height is set between the two extremes by setting her animation's `currentTime` to half her [`KeyframeEffect`'s duration](/en-US/docs/Web/API/EffectTiming):
 
-<pre class="brush: js">aliceChange<strong>.</strong>currentTime = aliceChange.effect.timing.duration / 2;</pre>
+```js
+aliceChange.currentTime = aliceChange.effect.timing.duration / 2;
+```
 
-<p>A more generic means of seeking to the 50% mark of an animation would be:</p>
+A more generic means of seeking to the 50% mark of an animation would be:
 
-<pre class="brush: js">animation.currentTime =
+```js
+animation.currentTime =
   animation.effect.getComputedTiming().delay +
-  animation.effect.getComputedTiming().activeDuration / 2;</pre>
+  animation.effect.getComputedTiming().activeDuration / 2;
+```
 
-<h2 id="Reduced_time_precision">Reduced time precision</h2>
+## Reduced time precision
 
-<p>To offer protection against timing attacks and fingerprinting, the precision of <code>animation.currentTime</code> might get rounded depending on browser settings.<br>
- In Firefox, the <code>privacy.reduceTimerPrecision</code>  preference is enabled by default and defaults to 20us in Firefox 59; in 60 it will be 2ms.</p>
+To offer protection against timing attacks and fingerprinting, the precision of `animation.currentTime` might get rounded depending on browser settings.
+In Firefox, the `privacy.reduceTimerPrecision`  preference is enabled by default and defaults to 20us in Firefox 59; in 60 it will be 2ms.
 
-<pre class="brush: js">// reduced time precision (2ms) in Firefox 60
+```js
+// reduced time precision (2ms) in Firefox 60
 animation.currentTime;
 // 23.404
 // 24.192
@@ -56,22 +63,20 @@ animation.currentTime;
 // 50.6
 // 51.7
 // ...
-</pre>
+```
 
-<p>In Firefox, you can also enabled <code>privacy.resistFingerprinting</code>, the precision will be 100ms or the value of <code>privacy.resistFingerprinting.reduceTimerPrecision.microseconds</code>, whichever is larger.</p>
+In Firefox, you can also enabled `privacy.resistFingerprinting`, the precision will be 100ms or the value of `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, whichever is larger.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("Animation")}} for other methods and properties you can use to control web page animation.</li>
- <li>{{domxref("Animation.startTime")}} for the time an animation is scheduled to start.</li>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
-</ul>
+- {{domxref("Animation")}} for other methods and properties you can use to control web page animation.
+- {{domxref("Animation.startTime")}} for the time an animation is scheduled to start.
+- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)

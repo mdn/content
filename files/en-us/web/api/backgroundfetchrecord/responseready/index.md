@@ -9,22 +9,24 @@ tags:
   - BackgroundFetchRecord
 browser-compat: api.BackgroundFetchRecord.responseReady
 ---
-<div>{{DefaultAPISidebar("Background Fetch API")}}</div>
+{{DefaultAPISidebar("Background Fetch API")}}
 
-<p>The <strong><code>responseReady</code></strong> read-only property of the {{domxref("BackgroundFetchRecord")}} interface returns a {{jsxref("Promise")}} that resolves with a {{domxref("Response")}}.</p>
+The **`responseReady`** read-only property of the {{domxref("BackgroundFetchRecord")}} interface returns a {{jsxref("Promise")}} that resolves with a {{domxref("Response")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var response = BackgroundFetchRecord.responseReady;</pre>
+    var response = BackgroundFetchRecord.responseReady;
 
-<h3>Value</h3>
-<p>A {{jsxref("Promise")}} that resolves with a {{domxref("Response")}}.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{jsxref("Promise")}} that resolves with a {{domxref("Response")}}.
 
-<p>In this example an individual <code>BackgroundFetchRecord</code> is returned using {{domxref("BackgroundFetchManager.fetch()","BackgroundFetchManager.fetch()")}}. The value of <code>responseReady</code> is returned and logged to the console.</p>
+## Examples
 
-<pre class="brush: js">bgFetch.match('/ep-5.mp3').then(async (record) => {
+In this example an individual `BackgroundFetchRecord` is returned using {{domxref("BackgroundFetchManager.fetch()","BackgroundFetchManager.fetch()")}}. The value of `responseReady` is returned and logged to the console.
+
+```js
+bgFetch.match('/ep-5.mp3').then(async (record) => {
   if (!record) {
     console.log('No record found');
     return;
@@ -32,12 +34,13 @@ browser-compat: api.BackgroundFetchRecord.responseReady
 
   const response = await record.responseReady;
   console.log(`Here's the response`, response);
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

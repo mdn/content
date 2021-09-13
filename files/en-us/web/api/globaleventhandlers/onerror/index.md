@@ -10,69 +10,70 @@ tags:
   - Reference
 browser-compat: api.GlobalEventHandlers.onerror
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p>The <code><strong>onerror</strong></code> property of the {{domxref("GlobalEventHandlers")}} mixin is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> that processes {{event("error")}} events.</p>
+The **`onerror`** property of the {{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that processes {{event("error")}} events.
 
-<p>Error events are fired at various targets for different kinds of errors:</p>
+Error events are fired at various targets for different kinds of errors:
 
-<ul>
- <li>When a <strong>JavaScript runtime error</strong> (including syntax errors and exceptions thrown within handlers) occurs, an <code><a href="/en-US/docs/Web/API/Element/error_event">error</a></code> event using interface {{domxref("ErrorEvent")}} is fired at {{domxref("window")}} and <code>window.onerror()</code> is invoked (as well as handlers attached by {{domxref("EventTarget.addEventListener")}} (not only capturing)).</li>
- <li>When a resource (such as an {{HTMLElement("img")}} or {{HTMLElement("script")}}) <strong>fails to load</strong>, an <code><a href="/en-US/docs/Web/API/Element/error_event">error</a></code> event using interface {{domxref("Event")}} is fired at the element that initiated the load, and the <code>onerror()</code> handler on the element is invoked. These error events do not bubble up to window, but can be handled with a {{domxref("EventTarget.addEventListener")}} configured with <code>useCapture</code> set to <code>true</code>.</li>
-</ul>
+- When a **JavaScript runtime error** (including syntax errors and exceptions thrown within handlers) occurs, an [`error`](/en-US/docs/Web/API/Element/error_event) event using interface {{domxref("ErrorEvent")}} is fired at {{domxref("window")}} and `window.onerror()` is invoked (as well as handlers attached by {{domxref("EventTarget.addEventListener")}} (not only capturing)).
+- When a resource (such as an {{HTMLElement("img")}} or {{HTMLElement("script")}}) **fails to load**, an [`error`](/en-US/docs/Web/API/Element/error_event) event using interface {{domxref("Event")}} is fired at the element that initiated the load, and the `onerror()` handler on the element is invoked. These error events do not bubble up to window, but can be handled with a {{domxref("EventTarget.addEventListener")}} configured with `useCapture` set to `true`.
 
-<p>Installing a global <code>error</code> event handler is useful for automated collection of error reports.</p>
+Installing a global `error` event handler is useful for automated collection of error reports.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>For historical reasons, different arguments are passed to <code>window.onerror</code> and <code>element.onerror</code> handlers (as well as on error-type {{domxref("EventTarget.addEventListener")}} handlers).</p>
+For historical reasons, different arguments are passed to `window.onerror` and `element.onerror` handlers (as well as on error-type {{domxref("EventTarget.addEventListener")}} handlers).
 
-<h3 id="window.onerror">window.onerror</h3>
+### window\.onerror
 
-<pre class="brush: js">window.onerror = function(message, source, lineno, colno, error) { ... };
-</pre>
+```js
+window.onerror = function(message, source, lineno, colno, error) { ... };
+```
 
-<p>Function parameters:</p>
+Function parameters:
 
-<ul>
- <li><code>message</code>: error message (string). Available as <code>event</code> (sic!) in HTML <code>onerror=""</code> handler.</li>
- <li><code>source</code>: URL of the script where the error was raised (string)</li>
- <li><code>lineno</code>: Line number where error was raised (number)</li>
- <li><code>colno</code>: Column number for the line where the error occurred (number)</li>
- <li><code>error</code>: <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error Object</a> (object)</li>
-</ul>
+- `message`: error message (string). Available as `event` (sic!) in HTML `onerror=""` handler.
+- `source`: URL of the script where the error was raised (string)
+- `lineno`: Line number where error was raised (number)
+- `colno`: Column number for the line where the error occurred (number)
+- `error`: [Error Object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error) (object)
 
-<p>When the function returns <code>true</code>, this prevents the firing of the default event handler.</p>
+When the function returns `true`, this prevents the firing of the default event handler.
 
-<h3 id="window.addEventListenererror">window.addEventListener('error')</h3>
+### window\.addEventListener('error')
 
-<pre class="brush: js">window.addEventListener('error', function(event) { ... })
-</pre>
+```js
+window.addEventListener('error', function(event) { ... })
+```
 
-<p><code>event</code> of type {{domxref("ErrorEvent")}} contains all the information about the event and the error.</p>
+`event` of type {{domxref("ErrorEvent")}} contains all the information about the event and the error.
 
-<h3 id="element.onerror">element.onerror</h3>
+### element.onerror
 
-<pre class="brush: js">element.onerror = function(event) { ... }
-</pre>
+```js
+element.onerror = function(event) { ... }
+```
 
-<p><code>element.onerror</code> accepts a function with a single argument of type {{domxref("Event")}}.</p>
+`element.onerror` accepts a function with a single argument of type {{domxref("Event")}}.
 
-<p>A good example for this is when you are using an image tag, and need to specify a backup image in case the one you need is not available on the server for any reason.</p>
+A good example for this is when you are using an image tag, and need to specify a backup image in case the one you need is not available on the server for any reason.
 
-<pre class="brush: html">&lt;img src=&quot;imagefound.gif&quot; onerror=&quot;this.onerror=null;this.src='imagenotfound.gif';&quot; /&gt;
-</pre>
+```html
+<img src="imagefound.gif" onerror="this.onerror=null;this.src='imagenotfound.gif';" />
+```
 
-<p>The reason we have the <code>this.onerror=null</code> in the function is that the browser will be stuck in an endless loop if the onerror image itself generates an error.</p>
+The reason we have the `this.onerror=null` in the function is that the browser will be stuck in an endless loop if the onerror image itself generates an error.
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>When an error occurs in a script, loaded from a <a href="/en-US/docs/Web/Security/Same-origin_policy">different origin</a>, the details of the error are not reported to prevent leaking information (see {{bug("363897")}}). Instead the error reported is <code><strong>"Script error."</strong></code> This behavior can be overridden in some browsers using the <code>{{htmlattrxref("crossorigin","script")}}</code> attribute on {{HTMLElement("script")}} and having the server send the appropriate <a href="/en-US/docs/Web/HTTP/CORS">CORS</a> HTTP response headers.  A workaround is to isolate "Script error." and handle it knowing that the error detail is only viewable in the browser console and not accessible via JavaScript.</p>
+When an error occurs in a script, loaded from a [different origin](/en-US/docs/Web/Security/Same-origin_policy), the details of the error are not reported to prevent leaking information (see {{bug("363897")}}). Instead the error reported is **`"Script error."`** This behavior can be overridden in some browsers using the `{{htmlattrxref("crossorigin","script")}}` attribute on {{HTMLElement("script")}} and having the server send the appropriate [CORS](/en-US/docs/Web/HTTP/CORS) HTTP response headers.  A workaround is to isolate "Script error." and handle it knowing that the error detail is only viewable in the browser console and not accessible via JavaScript.
 
-<pre class="brush: js">window.onerror = function (msg, url, lineNo, columnNo, error) {
+```js
+window.onerror = function (msg, url, lineNo, columnNo, error) {
   var string = msg.toLowerCase();
   var substring = "script error";
-  if (string.indexOf(substring) &gt; -1){
+  if (string.indexOf(substring) > -1){
     alert('Script Error: See Browser Console for Detail');
   } else {
     var message = [
@@ -87,21 +88,20 @@ browser-compat: api.GlobalEventHandlers.onerror
   }
 
   return false;
-};</pre>
+};
+```
 
-<p>When using the inline HTML markup (<code>&lt;body onerror="alert('an error occurred')"&gt;</code>), the HTML specification requires arguments passed to <code>onerror</code> to be named <code>event</code>, <code>source</code>, <code>lineno</code>, <code>colno</code>, <code>error</code>. In browsers that have not implemented this requirement, they can still be obtained via <code>arguments[0]</code> through <code>arguments[2]</code>.</p>
+When using the inline HTML markup (`<body onerror="alert('an error occurred')">`), the HTML specification requires arguments passed to `onerror` to be named `event`, `source`, `lineno`, `colno`, `error`. In browsers that have not implemented this requirement, they can still be obtained via `arguments[0]` through `arguments[2]`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://blog.sentry.io/2016/01/04/client-javascript-reporting-window-onerror">Capture and report JavaScript errors with window.onerror (blog.sentry.io, 2016)</a></li>
- <li><a href="https://danlimerick.wordpress.com/2014/01/18/how-to-catch-javascript-errors-with-window-onerror-even-on-chrome-and-firefox/">How to catch JavaScript Errors with window.onerror (even on Chrome and Firefox) (danlimerick.wordpress.com, 2014)</a></li>
-</ul>
+- [Capture and report JavaScript errors with window.onerror (blog.sentry.io, 2016)](https://blog.sentry.io/2016/01/04/client-javascript-reporting-window-onerror)
+- [How to catch JavaScript Errors with window.onerror (even on Chrome and Firefox) (danlimerick.wordpress.com, 2014)](https://danlimerick.wordpress.com/2014/01/18/how-to-catch-javascript-errors-with-window-onerror-even-on-chrome-and-firefox/)

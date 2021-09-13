@@ -2,55 +2,53 @@
 title: BroadcastChannel.onmessage
 slug: Web/API/BroadcastChannel/onmessage
 tags:
-- API
-- Broadcast Channel API
-- BroadcastChannel
-- Event Handler
-- Experimental
-- HTML API
-- Property
-- Reference
+  - API
+  - Broadcast Channel API
+  - BroadcastChannel
+  - Event Handler
+  - Experimental
+  - HTML API
+  - Property
+  - Reference
 browser-compat: api.BroadcastChannel.onmessage
 ---
-<p>{{APIRef("BroadCastChannel API")}}</p>
+{{APIRef("BroadCastChannel API")}}
 
-<p>The <code><strong>BroadcastChannel.onmessage</strong></code> event handler is a
-	property that specifies the function to execute when a {{event("message")}} event, of
-	type {{domxref("MessageEvent")}}, is received by this {{domxref("BroadcastChannel")}}.
-	Such an event is sent by the browser with a message broadcasted to the channel.</p>
+The **`BroadcastChannel.onmessage`** event handler is a
+property that specifies the function to execute when a {{event("message")}} event, of
+type {{domxref("MessageEvent")}}, is received by this {{domxref("BroadcastChannel")}}.
+Such an event is sent by the browser with a message broadcasted to the channel.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>channel</em>.onmessage = <em>function</em>;
-</pre>
+```js
+channel.onmessage = function;
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<ul>
-	<li><code>function</code> is the name of a user-defined function, without the
-		<code>()</code> suffix or any parameters, or an anonymous function declaration,
-		such as <code>function(event) {...}</code>. An event handler always has one single
-		parameter, containing the event, here of type {{domxref("MessageEvent")}}.</li>
-</ul>
+- `function` is the name of a user-defined function, without the
+  `()` suffix or any parameters, or an anonymous function declaration,
+  such as `function(event) {...}`. An event handler always has one single
+  parameter, containing the event, here of type {{domxref("MessageEvent")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">bc.onmessage = function(ev) { console.log(`message event received! '${ev.data}'`); };
-</pre>
+```js
+bc.onmessage = function(ev) { console.log(`message event received! '${ev.data}'`); };
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>Another, more heavy weight, way of communicating between browser contexts:
-		{{domxref("ServiceWorker")}}</li>
-</ul>
+- Another, more heavy weight, way of communicating between browser contexts:
+  {{domxref("ServiceWorker")}}

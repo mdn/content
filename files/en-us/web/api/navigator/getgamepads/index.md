@@ -2,50 +2,52 @@
 title: Navigator.getGamepads()
 slug: Web/API/Navigator/getGamepads
 tags:
-- API
-- Experimental
-- Gamepad API
-- Games
-- Method
-- Navigator
-- Reference
+  - API
+  - Experimental
+  - Gamepad API
+  - Games
+  - Method
+  - Navigator
+  - Reference
 browser-compat: api.Navigator.getGamepads
 ---
-<p>{{APIRef("Gamepad API")}}{{SeeCompatTable}}{{securecontext_header}}</p>
+{{APIRef("Gamepad API")}}{{SeeCompatTable}}{{securecontext_header}}
 
-<p>The <strong><code>Navigator.getGamepads()</code></strong> method returns an array of 
-  {{domxref("Gamepad")}} objects, one for each gamepad connected to the device.</p>
+The **`Navigator.getGamepads()`** method returns an array of
+{{domxref("Gamepad")}} objects, one for each gamepad connected to the device.
 
-<p>Elements in the array may be <code>null</code> if a gamepad disconnects during a
-  session, so that the remaining gamepads retain the same index.</p>
+Elements in the array may be `null` if a gamepad disconnects during a
+session, so that the remaining gamepads retain the same index.
 
-<p>Calls to this method will throw a <code>SecurityError</code> {{domxref('DOMException')}} if disallowed by the {{httpheader('Feature-Policy/gamepad','gamepad')}} <a href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a>.</p>
+Calls to this method will throw a `SecurityError` {{domxref('DOMException')}} if disallowed by the {{httpheader('Feature-Policy/gamepad','gamepad')}} [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"> var gamepads = navigator.getGamepads();</pre>
+```js
+ var gamepads = navigator.getGamepads();
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">window.addEventListener("gamepadconnected", function(e) {
+```js
+window.addEventListener("gamepadconnected", function(e) {
   var gp = navigator.getGamepads()[e.gamepad.index];
   console.log(
     "Gamepad connected at index %d: %s. %d buttons, %d axes.",
     gp.index, gp.id, gp.buttons.length, gp.axes.length
   );
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/Guide/API/Gamepad">Using the Gamepad API</a></li>
-  <li><a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a></li>
-</ul>
+- [Using the Gamepad API](/en-US/docs/Web/Guide/API/Gamepad)
+- [Gamepad API](/en-US/docs/Web/API/Gamepad_API)

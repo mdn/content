@@ -14,57 +14,53 @@ tags:
   - addAll
 browser-compat: api.Cache.addAll
 ---
-<p>{{APIRef("Service Workers API")}}</p>
+{{APIRef("Service Workers API")}}
 
-<p>The <strong><code>addAll()</code></strong> method of the
-    {{domxref("Cache")}} interface takes an array of URLs, retrieves them, and adds the
-    resulting response objects to the given cache. The request objects created during
-    retrieval become keys to the stored response operations. </p>
+The **`addAll()`** method of the
+{{domxref("Cache")}} interface takes an array of URLs, retrieves them, and adds the
+resulting response objects to the given cache. The request objects created during
+retrieval become keys to the stored response operations.
 
-<div class="note">
-  <p><strong>Note:</strong> <code>addAll()</code> will overwrite any key/value pairs
-    previously stored in the cache that match the request, but will fail if a
-    resulting <code>put()</code> operation would overwrite a previous cache entry stored
-    by the same <code>addAll()</code> method.</p>
-</div>
+> **Note:** `addAll()` will overwrite any key/value pairs
+> previously stored in the cache that match the request, but will fail if a
+> resulting `put()` operation would overwrite a previous cache entry stored
+> by the same `addAll()` method.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>cache</em>.addAll(<em>requests</em>[]).then(function() {
+```js
+cache.addAll(requests[]).then(function() {
   // requests have been added to the cache
 });
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>requests</dt>
-  <dd>An array of string URLs that you want to be fetched and added to the cache. You can
-    specify the {{domxref("Request")}} object instead of the URL.</dd>
-</dl>
+- requests
+  - : An array of string URLs that you want to be fetched and added to the cache. You can
+    specify the {{domxref("Request")}} object instead of the URL.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} that resolves with <code>undefined</code>.</p>
+A {{jsxref("Promise")}} that resolves with `undefined`.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt><code>TypeError</code></dt>
-  <dd>
-    <p>The URL scheme is not <code>http</code> or <code>https</code>.</p>
-    <p>The Response status is not in the 200 range (i.e., not a successful response.) This occurs if the request does not return successfully, but also if the request is a <em>cross-origin no-cors</em> request (in which case the reported status is always 0.)</p>
-  </dd>
-</dl>
+- `TypeError`
 
-<h2 id="Examples">Examples</h2>
+  - : The URL scheme is not `http` or `https`.
 
-<p>This code block waits for an {{domxref("InstallEvent")}} to fire, then runs
-  {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} to handle the install process for
-  the app. This consists of calling {{domxref("CacheStorage.open")}} to create a new
-  cache, then using <code>addAll()</code> to add a series of assets to it.</p>
+    The Response status is not in the 200 range (i.e., not a successful response.) This occurs if the request does not return successfully, but also if the request is a _cross-origin no-cors_ request (in which case the reported status is always 0.)
 
-<pre class="brush: js">this.addEventListener('install', function(event) {
+## Examples
+
+This code block waits for an {{domxref("InstallEvent")}} to fire, then runs
+{{domxref("ExtendableEvent.waitUntil","waitUntil()")}} to handle the install process for
+the app. This consists of calling {{domxref("CacheStorage.open")}} to create a new
+cache, then using `addAll()` to add a series of assets to it.
+
+```js
+this.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('v1').then(function(cache) {
       return cache.addAll([
@@ -82,21 +78,19 @@ browser-compat: api.Cache.addAll
     })
   );
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service
-      Workers</a></li>
-  <li>{{domxref("Cache")}}</li>
-  <li>{{domxref("caches")}}</li>
-</ul>
+- [Using Service
+  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- {{domxref("Cache")}}
+- {{domxref("caches")}}

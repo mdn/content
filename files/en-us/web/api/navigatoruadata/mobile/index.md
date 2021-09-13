@@ -9,29 +9,32 @@ tags:
   - NavigatorUAData
 browser-compat: api.NavigatorUAData.mobile
 ---
-<div>{{DefaultAPISidebar("")}}</div>
+{{DefaultAPISidebar("")}}
 
-<p>The <strong><code>mobile</code></strong> read-only property of the {{domxref("NavigatorUAData")}} interface returns a value indicating whether the device is a mobile device.</p>
+The **`mobile`** read-only property of the {{domxref("NavigatorUAData")}} interface returns a value indicating whether the device is a mobile device.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let mobile = NavigatorUAData.mobile;</pre>
+```js
+let mobile = NavigatorUAData.mobile;
+```
 
-<h3>Value</h3>
-<p>A {{jsxref("Boolean")}}, <code>true</code> if this is a mobile device.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{jsxref("Boolean")}}, `true` if this is a mobile device.
 
-<p>The following example prints the value of <code>mobile</code> to the console.</p>
+## Examples
 
-<pre class="brush:js">console.log(navigator.userAgentData.mobile);</pre>
+The following example prints the value of `mobile` to the console.
 
-<h2 id="Specifications">Specifications</h2>
+```js
+console.log(navigator.userAgentData.mobile);
+```
 
-<p>{{Specifications}}</p>
+## Specifications
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+{{Specifications}}
 
-<p>{{Compat}}</p>
+## Browser compatibility
 
-
+{{Compat}}

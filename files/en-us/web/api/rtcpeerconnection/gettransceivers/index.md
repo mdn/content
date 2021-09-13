@@ -14,52 +14,52 @@ tags:
   - getTransceivers
 browser-compat: api.RTCPeerConnection.getTransceivers
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The {{domxref("RTCPeerConnection")}} interface's
-  <code><strong>getTransceivers()</strong></code> method returns a list of the
-  {{domxref("RTCRtpTransceiver")}} objects being used to send and receive data on the
-  connection.</p>
+The {{domxref("RTCPeerConnection")}} interface's
+**`getTransceivers()`** method returns a list of the
+{{domxref("RTCRtpTransceiver")}} objects being used to send and receive data on the
+connection.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>transceiverList</em> = <em>rtcPeerConnection</em>.getTransceivers();</pre>
+```js
+transceiverList = rtcPeerConnection.getTransceivers();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An array of the {{domxref("RTCRtpTransceiver")}} objects representing the transceivers
-  handling sending and receiving all media on the <code>RTCPeerConnection</code>. The list
-  is in the order in which the transceivers were added to the connection.</p>
+An array of the {{domxref("RTCRtpTransceiver")}} objects representing the transceivers
+handling sending and receiving all media on the `RTCPeerConnection`. The list
+is in the order in which the transceivers were added to the connection.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following snippet of code stops all transceivers associated with an
-  <code>RTCPeerConnection</code>.</p>
+The following snippet of code stops all transceivers associated with an
+`RTCPeerConnection`.
 
-<pre class="brush: js">pc.getTransceivers().forEach(transceiver =&gt; {
+```js
+pc.getTransceivers().forEach(transceiver => {
   transceiver.stop();
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling">Signaling and
-      video calling</a></li>
-  <li>{{domxref("RTCPeerConnection.addTransceiver()")}}</li>
-  <li>{{jsxref("Array.forEach()")}}</li>
-</ul>
+- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+- [Signaling and
+  video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
+- {{domxref("RTCPeerConnection.addTransceiver()")}}
+- {{jsxref("Array.forEach()")}}

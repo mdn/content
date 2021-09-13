@@ -2,56 +2,55 @@
 title: WebGLRenderingContext.scissor()
 slug: Web/API/WebGLRenderingContext/scissor
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.scissor
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.scissor()</code></strong> method of the <a
-    href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> sets a scissor box, which limits
-  the drawing to a specified rectangle.</p>
+The **`WebGLRenderingContext.scissor()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) sets a scissor box, which limits
+the drawing to a specified rectangle.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var><em>void gl</em>.</var>scissor<var>(x, y, width, height);</var>
-</pre>
+```js
+void gl.scissor(x, y, width, height);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>x</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLint")}} specifying the horizontal coordinate for the lower left
-    corner of the box. Default value: 0.</dd>
-  <dt><code>y</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLint")}} specifying the vertical coordinate for the lower left corner
-    of the box. Default value: 0.</dd>
-  <dt>width</dt>
-  <dd>A non-negative {{domxref("WebGL_API/Types", "GLsizei")}} specifying the width of the scissor box.
-    Default value: width of the canvas.</dd>
-  <dt>height</dt>
-  <dd>A non-negative {{domxref("WebGL_API/Types", "GLsizei")}} specifying the height of the scissor box.
-    Default value: height of the canvas.</dd>
-</dl>
+- `x`
+  - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the horizontal coordinate for the lower left
+    corner of the box. Default value: 0.
+- `y`
+  - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the vertical coordinate for the lower left corner
+    of the box. Default value: 0.
+- width
+  - : A non-negative {{domxref("WebGL_API/Types", "GLsizei")}} specifying the width of the scissor box.
+    Default value: width of the canvas.
+- height
+  - : A non-negative {{domxref("WebGL_API/Types", "GLsizei")}} specifying the height of the scissor box.
+    Default value: height of the canvas.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>If either <em>width</em> or <em>height</em> is a negative value, a
-  <code>gl.INVALID_VALUE</code> error is thrown.</p>
+If either _width_ or _height_ is a negative value, a
+`gl.INVALID_VALUE` error is thrown.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>When the scissor test is enabled, only pixels within the scissor box can be modified by
-  drawing commands.</p>
+When the scissor test is enabled, only pixels within the scissor box can be modified by
+drawing commands.
 
-<pre class="brush: js">// turn on scissor test
+```js
+// turn on scissor test
 gl.enable(gl.SCISSOR_TEST);
 
 // set the scissor rectangle
@@ -61,27 +60,27 @@ gl.scissor(x, y, width, height);
 
 // turn off scissor test again
 gl.disable(gl.SCISSOR_TEST);
-</pre>
+```
 
-<p>To get the current scissor box dimensions, query the <code>SCISSOR_BOX</code> constant
-  which returns an {{jsxref("Int32Array")}}.</p>
+To get the current scissor box dimensions, query the `SCISSOR_BOX` constant
+which returns an {{jsxref("Int32Array")}}.
 
-<pre class="brush: js">gl.scissor(0, 0, 200, 200);
+```js
+gl.scissor(0, 0, 200, 200);
 gl.getParameter(gl.SCISSOR_BOX);
-// Int32Array[0, 0, 200, 200]</pre>
+// Int32Array[0, 0, 200, 200]
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.viewport()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.enable()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.disable()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.viewport()")}}
+- {{domxref("WebGLRenderingContext.enable()")}}
+- {{domxref("WebGLRenderingContext.disable()")}}

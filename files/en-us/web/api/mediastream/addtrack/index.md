@@ -2,54 +2,47 @@
 title: MediaStream.addTrack()
 slug: Web/API/MediaStream/addTrack
 tags:
-- API
-- Media Streams API
-- Method
-- NeedsExample
-- Reference
-- addTrack
+  - API
+  - Media Streams API
+  - Method
+  - NeedsExample
+  - Reference
+  - addTrack
 browser-compat: api.MediaStream.addTrack
 ---
-<p>{{APIRef("Media Capture and Streams")}}</p>
+{{APIRef("Media Capture and Streams")}}
 
-<p>The <strong><code>MediaStream.addTrack()</code></strong> method adds a new track to the
-  stream. The track is specified as a parameter of type {{domxref("MediaStreamTrack")}}.
-</p>
+The **`MediaStream.addTrack()`** method adds a new track to the
+stream. The track is specified as a parameter of type {{domxref("MediaStreamTrack")}}.
 
-<div class="note">
-  <p><strong>Note:</strong> If the specified track is already in the stream's track set, this method has no
-    effect.</p>
-</div>
+> **Note:** If the specified track is already in the stream's track set, this method has no
+> effect.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>stream</em>.addTrack(<em>track</em>);
-</pre>
+```js
+stream.addTrack(track);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>track</code></dt>
-  <dd>A {{domxref("MediaStreamTrack")}} to add to the stream.</dd>
-</dl>
+- `track`
+  - : A {{domxref("MediaStreamTrack")}} to add to the stream.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{jsxref("undefined")}}</p>
+{{jsxref("undefined")}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("MediaStream")}}, the interface it belongs to.</li>
-</ul>
+- {{domxref("MediaStream")}}, the interface it belongs to.

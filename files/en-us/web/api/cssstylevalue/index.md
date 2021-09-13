@@ -11,36 +11,32 @@ tags:
   - Reference
 browser-compat: api.CSSStyleValue
 ---
-<p>{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}</p>
+{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
-<p>The <strong><code>CSSStyleValue</code></strong> interface of the <a href="/en-US/docs/Web/API/CSS_Object_Model#css_typed_object_model">CSS Typed Object Model API</a> is the base class of all CSS values accessible through the Typed OM API. An instance of this class may be used anywhere a string is expected.</p>
+The **`CSSStyleValue`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model#css_typed_object_model) is the base class of all CSS values accessible through the Typed OM API. An instance of this class may be used anywhere a string is expected.
 
-<h2 id="Interfaces_based_on_CSSStyleValue">Interfaces based on CSSStyleValue</h2>
+## Interfaces based on CSSStyleValue
 
-<p>Below is a list of interfaces based on the <code>CSSStyleValue</code> interface.</p>
+Below is a list of interfaces based on the `CSSStyleValue` interface.
 
-<ul>
-	<li>{{domxref('CSSImageValue')}}</li>
-	<li>{{domxref('CSSKeywordValue')}}</li>
-	<li>{{domxref('CSSNumericValue')}}</li>
-	<li>{{domxref('CSSPositionValue')}}</li>
-	<li>{{domxref('CSSTransformValue')}}</li>
-	<li>{{domxref('CSSUnparsedValue')}}</li>
-</ul>
+- {{domxref('CSSImageValue')}}
+- {{domxref('CSSKeywordValue')}}
+- {{domxref('CSSNumericValue')}}
+- {{domxref('CSSPositionValue')}}
+- {{domxref('CSSTransformValue')}}
+- {{domxref('CSSUnparsedValue')}}
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
-	<dt>{{domxref("CSSStyleValue.parse()")}}</dt>
-	<dd>Sets a specific CSS property to the specified values and returns the first value as a {{domxref('CSSStyleValue')}} object.</dd>
-	<dt>{{domxref("CSSStyleValue.parseAll()")}}</dt>
-	<dd>Sets all occurrences of a specific CSS property to the specified valueand returns an array of {{domxref('CSSStyleValue')}} objects, each containing one of the supplied values.</dd>
-</dl>
+- {{domxref("CSSStyleValue.parse()")}}
+  - : Sets a specific CSS property to the specified values and returns the first value as a {{domxref('CSSStyleValue')}} object.
+- {{domxref("CSSStyleValue.parseAll()")}}
+  - : Sets all occurrences of a specific CSS property to the specified valueand returns an array of {{domxref('CSSStyleValue')}} objects, each containing one of the supplied values.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

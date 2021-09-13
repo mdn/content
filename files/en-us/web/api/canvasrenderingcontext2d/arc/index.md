@@ -2,92 +2,94 @@
 title: CanvasRenderingContext2D.arc()
 slug: Web/API/CanvasRenderingContext2D/arc
 tags:
-- API
-- Canvas
-- CanvasRenderingContext2D
-- Method
-- Reference
+  - API
+  - Canvas
+  - CanvasRenderingContext2D
+  - Method
+  - Reference
 browser-compat: api.CanvasRenderingContext2D.arc
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The
-    <strong><code>CanvasRenderingContext2D.arc()</code></strong>
-    method of the <a href="/en-US/docs/Web/API/CanvasRenderingContext2D">Canvas 2D API
-    </a>adds a circular arc to the current sub-path.</p>
+The
+**`CanvasRenderingContext2D.arc()`**
+method of the [Canvas 2D API
+](/en-US/docs/Web/API/CanvasRenderingContext2D)adds a circular arc to the current sub-path.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <em>ctx</em>.arc(<em>x</em>, <em>y</em>, <em>radius</em>, <em>startAngle</em>, <em>endAngle</em> [, <em>counterclockwise</em>]);
-</pre>
+```js
+void ctx.arc(x, y, radius, startAngle, endAngle [, counterclockwise]);
+```
 
-<p>The <code>arc()</code> method creates a circular arc centered at <code>(x, y)</code>
-  with a radius of <code>radius</code>. The path starts at <code>startAngle</code>, ends
-  at <code>endAngle</code>, and travels in the direction given by
-  <code>counterclockwise</code> (defaulting to clockwise).</p>
+The `arc()` method creates a circular arc centered at `(x, y)`
+with a radius of `radius`. The path starts at `startAngle`, ends
+at `endAngle`, and travels in the direction given by
+`counterclockwise` (defaulting to clockwise).
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>x</code></dt>
-  <dd>The horizontal coordinate of the arc's center.</dd>
-  <dt><code>y</code></dt>
-  <dd>The vertical coordinate of the arc's center.</dd>
-  <dt><code>radius</code></dt>
-  <dd>The arc's radius. Must be positive.</dd>
-  <dt><code>startAngle</code></dt>
-  <dd>The angle at which the arc starts in radians, measured from the positive x-axis.
-  </dd>
-  <dt><code>endAngle</code></dt>
-  <dd>The angle at which the arc ends in radians, measured from the positive x-axis.</dd>
-  <dt><code>counterclockwise</code> {{optional_inline}}</dt>
-  <dd>An optional boolean value. If <code>true</code>, draws the arc
-    counter-clockwise between the start and end angles. The default is <code>false</code>
-    (clockwise).</dd>
-</dl>
+- `x`
+  - : The horizontal coordinate of the arc's center.
+- `y`
+  - : The vertical coordinate of the arc's center.
+- `radius`
+  - : The arc's radius. Must be positive.
+- `startAngle`
+  - : The angle at which the arc starts in radians, measured from the positive x-axis.
+- `endAngle`
+  - : The angle at which the arc ends in radians, measured from the positive x-axis.
+- `counterclockwise` {{optional_inline}}
+  - : An optional boolean value. If `true`, draws the arc
+    counter-clockwise between the start and end angles. The default is `false`
+    (clockwise).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Drawing_a_full_circle">Drawing a full circle</h3>
+### Drawing a full circle
 
-<p>This example draws a complete circle with the <code>arc()</code> method.</p>
+This example draws a complete circle with the `arc()` method.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<p>The arc is given an x-coordinate of 100, a y-coordinate of 75, and a radius of 50. To
-  make a full circle, the arc begins at an angle of 0 radians (0<strong>°</strong>), and
-  ends at an angle of 2π radians (360<strong>°</strong>).</p>
+The arc is given an x-coordinate of 100, a y-coordinate of 75, and a radius of 50. To
+make a full circle, the arc begins at an angle of 0 radians (0**°**), and
+ends at an angle of 2π radians (360**°**).
 
-<pre class="brush: js;">const canvas = document.querySelector('canvas');
+```js
+const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.beginPath();
 ctx.arc(100, 75, 50, 0, 2 * Math.PI);
 ctx.stroke();
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Drawing_a_full_circle', 700, 180) }}</p>
+{{ EmbedLiveSample('Drawing_a_full_circle', 700, 180) }}
 
-<h3 id="Different_shapes_demonstrated">Different shapes demonstrated</h3>
+### Different shapes demonstrated
 
-<p>This example draws various shapes to show what is possible with <code>arc()</code>.</p>
+This example draws various shapes to show what is possible with `arc()`.
 
-<pre class="brush: html hidden">&lt;canvas width="150" height="200"&gt;&lt;/canvas&gt;
-</pre>
+```html hidden
+<canvas width="150" height="200"></canvas>
+```
 
-<pre class="brush: js">const canvas = document.querySelector('canvas');
+```js
+const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
 
 // Draw shapes
-for (let i = 0; i &lt;= 3; i++) {
-  for (let j = 0; j &lt;= 2; j++) {
+for (let i = 0; i <= 3; i++) {
+  for (let j = 0; j <= 2; j++) {
     ctx.beginPath();
     let x             = 25 + j * 50;                 // x coordinate
     let y             = 25 + i * 50;                 // y coordinate
@@ -98,31 +100,29 @@ for (let i = 0; i &lt;= 3; i++) {
 
     ctx.arc(x, y, radius, startAngle, endAngle, counterclockwise);
 
-    if (i &gt; 1) {
+    if (i > 1) {
       ctx.fill();
     } else {
       ctx.stroke();
     }
   }
-}</pre>
+}
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Different_shapes_demonstrated', 160, 210,
-  "canvas_arc.png") }}</p>
+{{ EmbedLiveSample('Different_shapes_demonstrated', 160, 210,
+  "canvas_arc.png") }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining this method: {{domxref("CanvasRenderingContext2D")}}</li>
-  <li>Use {{domxref("CanvasRenderingContext2D.ellipse()")}} to draw an elliptical arc.
-  </li>
-</ul>
+- The interface defining this method: {{domxref("CanvasRenderingContext2D")}}
+- Use {{domxref("CanvasRenderingContext2D.ellipse()")}} to draw an elliptical arc.

@@ -2,38 +2,42 @@
 title: BatteryManager.onlevelchange
 slug: Web/API/BatteryManager/onlevelchange
 tags:
-- API
-- Battery API
-- Event Handler
-- Property
-- Reference
+  - API
+  - Battery API
+  - Event Handler
+  - Property
+  - Reference
 browser-compat: api.BatteryManager.onlevelchange
 ---
-<div>{{deprecated_header}} {{APIRef("Battery API")}}</div>
+{{deprecated_header}} {{APIRef("Battery API")}}
 
-<p>The <code><strong>BatteryManager.onlevelchange</strong></code> property specifies an
-  event listener to receive {{event("levelchange")}} events. These events occur when the
-  battery {{domxref("BatteryManager.level","level")}} is updated.</p>
+The **`BatteryManager.onlevelchange`** property specifies an
+event listener to receive {{event("levelchange")}} events. These events occur when the
+battery {{domxref("BatteryManager.level","level")}} is updated.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">navigator.battery.onlevelchange = funcRef</pre>
+```js
+navigator.battery.onlevelchange = funcRef
+```
 
-<p>Where <code>battery</code> is a {{domxref("BatteryManager")}} object, and
-  <code>funcRef</code> is a function to be called when the {{event("levelchange")}} event
-  occurs.</p>
+Where `battery` is a {{domxref("BatteryManager")}} object, and
+`funcRef` is a function to be called when the {{event("levelchange")}} event
+occurs.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div id="level"&gt;(battery level unknown)&lt;/div&gt;
-&lt;div id="stateBattery"&gt;(charging state unknown)&lt;/div&gt;
-</pre>
+```html
+<div id="level">(battery level unknown)</div>
+<div id="stateBattery">(charging state unknown)</div>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js;">navigator.getBattery().then(function(battery) {
+```js
+navigator.getBattery().then(function(battery) {
   battery.onlevelchange = function(){
     document.querySelector('#level').textContent = battery.level;
 
@@ -47,21 +51,19 @@ browser-compat: api.BatteryManager.onlevelchange
     }
   };
 });
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Example', '100%', 40) }}</p>
+{{ EmbedLiveSample('Example', '100%', 40) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("BatteryManager")}}</li>
-  <li>{{domxref("Navigator.getBattery")}}</li>
-</ul>
+- {{domxref("BatteryManager")}}
+- {{domxref("Navigator.getBattery")}}

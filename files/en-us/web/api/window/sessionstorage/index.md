@@ -11,70 +11,66 @@ tags:
   - sessionStorage
 browser-compat: api.Window.sessionStorage
 ---
-<p>{{APIRef("Web Storage API")}}</p>
+{{APIRef("Web Storage API")}}
 
-<p>The read-only <strong><code>sessionStorage</code></strong>
-    property accesses a session {{DOMxRef("Storage")}} object for the current
-    {{glossary("origin")}}. <code>sessionStorage</code> is similar to
-    {{DOMxRef("Window.localStorage", "localStorage")}}; the difference is that while data
-    in <code>localStorage</code> doesn't expire, data in <code>sessionStorage</code> is
-    cleared when the <em>page session</em> ends.</p>
+The read-only **`sessionStorage`**
+property accesses a session {{DOMxRef("Storage")}} object for the current
+{{glossary("origin")}}. `sessionStorage` is similar to
+{{DOMxRef("Window.localStorage", "localStorage")}}; the difference is that while data
+in `localStorage` doesn't expire, data in `sessionStorage` is
+cleared when the _page session_ ends.
 
-<ul>
-  <li>Whenever a document is loaded in a particular tab in the browser, a unique page
-    session gets created and assigned to that particular tab. That page session is valid
-    only for that particular tab.</li>
-  <li>A page session lasts as long as the tab or the browser is open, and survives over
-    page reloads and restores.</li>
-  <li><strong>Opening a page in a new tab or window creates a new session with the value
-      of the top-level browsing context, which differs from how session cookies
-      work.</strong></li>
-  <li>Opening multiple tabs/windows with the same URL creates <code>sessionStorage</code>
-    for each tab/window.</li>
-  <li>Duplicating a tab copies the tab's <code>sessionStorage</code> into the new
-    tab.</li>
-  <li>Closing a tab/window ends the session and clears objects in
-    <code>sessionStorage</code>.</li>
-</ul>
+- Whenever a document is loaded in a particular tab in the browser, a unique page
+  session gets created and assigned to that particular tab. That page session is valid
+  only for that particular tab.
+- A page session lasts as long as the tab or the browser is open, and survives over
+  page reloads and restores.
+- **Opening a page in a new tab or window creates a new session with the value
+  of the top-level browsing context, which differs from how session cookies
+  work.**
+- Opening multiple tabs/windows with the same URL creates `sessionStorage`
+  for each tab/window.
+- Duplicating a tab copies the tab's `sessionStorage` into the new
+  tab.
+- Closing a tab/window ends the session and clears objects in
+  `sessionStorage`.
 
-<p>Data stored in <code>sessionStorage</code> <strong>is specific to the protocol of the
-    page</strong>. In particular, data stored by a script on a site accessed with HTTP
-  (e.g., <a href="https://example.com" rel="noopener">http://example.com</a>) is
-  put in a different <code>sessionStorage</code> object from the same site accessed with
-  HTTPS (e.g., <a href="https://example.com"
-    rel="noopener">https://example.com</a>).</p>
+Data stored in `sessionStorage` **is specific to the protocol of the
+page**. In particular, data stored by a script on a site accessed with HTTP
+(e.g., [http://example.com](https://example.com)) is
+put in a different `sessionStorage` object from the same site accessed with
+HTTPS (e.g., <https://example.com>).
 
-<p>The keys and the values are <em>always</em> in the UTF-16 {{domxref("DOMString")}}
-  format, which uses two bytes per character. As with objects, integer keys are
-  automatically converted to strings.</p>
+The keys and the values are _always_ in the UTF-16 {{domxref("DOMString")}}
+format, which uses two bytes per character. As with objects, integer keys are
+automatically converted to strings.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>myStorage</em> = <em>window</em>.sessionStorage;
-</pre>
+```js
+myStorage = window.sessionStorage;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{DOMxRef("Storage")}} object which can be used to access the current origin's
-  session storage space.</p>
+A {{DOMxRef("Storage")}} object which can be used to access the current origin's
+session storage space.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt><code>SecurityError</code></dt>
-  <dd>The request violates a policy decision, or the origin is not <a
-      href="/en-US/docs/Web/Security/Same-origin_policy#definition_of_an_origin">a valid
-      scheme/host/port tuple</a> (this can happen if the origin uses the
-    <code>file:</code> or <code>data:</code> scheme, for example). For example, the user
+- `SecurityError`
+  - : The request violates a policy decision, or the origin is not [a valid
+    scheme/host/port tuple](/en-US/docs/Web/Security/Same-origin_policy#definition_of_an_origin) (this can happen if the origin uses the
+    `file:` or `data:` scheme, for example). For example, the user
     may have their browser configured to deny permission to persist data for the specified
-    origin.</dd>
-</dl>
+    origin.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_usage">Basic usage</h3>
+### Basic usage
 
-<pre class="brush: js">// Save data to sessionStorage
+```js
+// Save data to sessionStorage
 sessionStorage.setItem('key', 'value');
 
 // Get saved data from sessionStorage
@@ -84,14 +80,16 @@ let data = sessionStorage.getItem('key');
 sessionStorage.removeItem('key');
 
 // Remove all saved data from sessionStorage
-sessionStorage.clear();</pre>
+sessionStorage.clear();
+```
 
-<h3 id="Saving_text_between_refreshes">Saving text between refreshes</h3>
+### Saving text between refreshes
 
-<p>The following example autosaves the contents of a text field, and if the browser is
-  refreshed, restores the text field content so that no writing is lost.</p>
+The following example autosaves the contents of a text field, and if the browser is
+refreshed, restores the text field content so that no writing is lost.
 
-<pre class="brush: js">// Get the text field that we're going to track
+```js
+// Get the text field that we're going to track
 let field = document.getElementById("field");
 
 // See if we have an autosave value
@@ -105,26 +103,22 @@ if (sessionStorage.getItem("autosave")) {
 field.addEventListener("change", function() {
   // And save the results into the session storage object
   sessionStorage.setItem("autosave", field.value);
-});</pre>
+});
+```
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Please refer to the <a
-      href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the Web
-      Storage API</a> article for a full example.</p>
-</div>
+> **Note:** Please refer to the [Using the Web
+> Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) article for a full example.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the
-      Web Storage API</a></li>
-  <li>{{DOMxRef("Window.localStorage")}}</li>
-</ul>
+- [Using the
+  Web Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+- {{DOMxRef("Window.localStorage")}}

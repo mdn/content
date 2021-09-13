@@ -2,59 +2,58 @@
 title: WebGLRenderingContext.getAttachedShaders()
 slug: Web/API/WebGLRenderingContext/getAttachedShaders
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getAttachedShaders
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.getAttachedShaders()</code></strong> method of
-  the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> returns a list of
-  {{domxref("WebGLShader")}} objects attached to a {{domxref("WebGLProgram")}}.</p>
+The **`WebGLRenderingContext.getAttachedShaders()`** method of
+the [WebGL API](/en-US/docs/Web/API/WebGL_API) returns a list of
+{{domxref("WebGLShader")}} objects attached to a {{domxref("WebGLProgram")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">sequence&lt;WebGLShader&gt; <var>gl</var>.getAttachedShaders(<var>program</var>);
-</pre>
+```js
+sequence<WebGLShader> gl.getAttachedShaders(program);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>program</dt>
-  <dd>A {{domxref("WebGLProgram")}} object to get attached shaders for.</dd>
-</dl>
+- program
+  - : A {{domxref("WebGLProgram")}} object to get attached shaders for.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An {{jsxref("Array")}} of {{domxref("WebGLShader")}} objects that are attached to the
-  given <code>WebGLProgram</code>.</p>
+An {{jsxref("Array")}} of {{domxref("WebGLShader")}} objects that are attached to the
+given `WebGLProgram`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var program = gl.createProgram();
+```js
+var program = gl.createProgram();
 
 // Attach pre-existing shaders
 gl.attachShader(program, vertexShader);
 gl.attachShader(program, fragmentShader);
 gl.linkProgram(program);
 
-gl.getAttachedShaders(program);</pre>
+gl.getAttachedShaders(program);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.createShader()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.isShader()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.deleteShader()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.createShader()")}}
+- {{domxref("WebGLRenderingContext.isShader()")}}
+- {{domxref("WebGLRenderingContext.deleteShader()")}}

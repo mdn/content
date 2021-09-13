@@ -2,42 +2,44 @@
 title: FileSystemEntry.fullPath
 slug: Web/API/FileSystemEntry/fullPath
 tags:
-- API
-- File and Directory Entries API
-- FileSystemEntry
-- Files
-- Offline
-- Property
-- Reference
-- fullPath
+  - API
+  - File and Directory Entries API
+  - FileSystemEntry
+  - Files
+  - Offline
+  - Property
+  - Reference
+  - fullPath
 browser-compat: api.FileSystemEntry.fullPath
 ---
-<p>{{APIRef("File and Directory Entries API")}}</p>
+{{APIRef("File and Directory Entries API")}}
 
-<p>The read-only <strong><code>fullPath</code></strong> property
-    of the {{domxref("FileSystemEntry")}} interface returns a {{domxref("USVString")}}
-    specifying the full, absolute path from the file system's root to the file represented
-    by the entry.</p>
+The read-only **`fullPath`** property
+of the {{domxref("FileSystemEntry")}} interface returns a {{domxref("USVString")}}
+specifying the full, absolute path from the file system's root to the file represented
+by the entry.
 
-<p>This can also be thought of as a path which is relative to the root directory, with a
-  "/" prepended to it to make it absolute.</p>
+This can also be thought of as a path which is relative to the root directory, with a
+"/" prepended to it to make it absolute.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>fullPath</em> = <em>FileSystemEntry</em>.fullPath;</pre>
+```js
+var fullPath = FileSystemEntry.fullPath;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("USVString")}} indicating the entry's full path.</p>
+A {{domxref("USVString")}} indicating the entry's full path.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example shows a function which is called with a file system; it then gets a
-  {{domxref("FileSystemFileEntry")}} for a file named <code>data.json</code> and returns
-  its full path.</p>
+This example shows a function which is called with a file system; it then gets a
+{{domxref("FileSystemFileEntry")}} for a file named `data.json` and returns
+its full path.
 
-<pre class="brush: js">function gotFileSystem(fs) {
+```js
+function gotFileSystem(fs) {
   let path = "";
 
   fs.root.getFile("data.json", { create: true, exclusive: true }, function(entry) {
@@ -46,27 +48,24 @@ browser-compat: api.FileSystemEntry.fullPath
 
   return path;
 }
-</pre>
+```
 
-<p>Obviously, this is somewhat contrived, since we know that the file's full path is
-  <code>"/data.json"</code>, having just looked it up ourselves, but the concept holds up
-  for scenarios in which you don't know it.</p>
+Obviously, this is somewhat contrived, since we know that the file's full path is
+`"/data.json"`, having just looked it up ourselves, but the concept holds up
+for scenarios in which you don't know it.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory
-      Entries API</a></li>
-  <li><a
-      href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">Introduction
-      to the File System API</a></li>
-  <li>{{domxref("FileSystemEntry")}}</li>
-</ul>
+- [File and Directory
+  Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction
+  to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- {{domxref("FileSystemEntry")}}

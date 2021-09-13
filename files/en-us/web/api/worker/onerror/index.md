@@ -12,28 +12,32 @@ tags:
   - onerror
 browser-compat: api.Worker.onerror
 ---
-<div>{{APIRef("Web Workers API")}}</div>
+{{APIRef("Web Workers API")}}
 
-<p>The <code><strong>onerror</strong></code> property of the {{domxref("Worker")}} interface represents an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a>, that is a function to be called when the {{event("error")}} event occurs.</p>
+The **`onerror`** property of the {{domxref("Worker")}} interface represents an [event handler](/en-US/docs/Web/Events/Event_handlers), that is a function to be called when the {{event("error")}} event occurs.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">myWorker.onerror = function(event) { ... };</pre>
+```js
+myWorker.onerror = function(event) { ... };
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following code snippet creates a {{domxref("Worker")}} object using the {{domxref("Worker.Worker", "Worker()")}} constructor and sets up an <code>onerror</code> handler on the resulting object:</p>
+The following code snippet creates a {{domxref("Worker")}} object using the {{domxref("Worker.Worker", "Worker()")}} constructor and sets up an `onerror` handler on the resulting object:
 
-<pre class="brush: js">var myWorker = new Worker('worker.js');
+```js
+var myWorker = new Worker('worker.js');
 
 myWorker.onerror = function(event) {
   console.log('There is an error with your worker!');
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

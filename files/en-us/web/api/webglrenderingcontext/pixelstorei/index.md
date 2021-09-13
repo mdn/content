@@ -2,40 +2,37 @@
 title: WebGLRenderingContext.pixelStorei()
 slug: Web/API/WebGLRenderingContext/pixelStorei
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.pixelStorei
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.pixelStorei()</code></strong> method of the <a
-    href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> specifies the pixel storage modes.
-</p>
+The **`WebGLRenderingContext.pixelStorei()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) specifies the pixel storage modes.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <var>gl</var>.pixelStorei(<var>pname</var>, <var>param</var>);
-</pre>
+```js
+void gl.pixelStorei(pname, param);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>pname</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying which parameter to set. See below for possible
-    values.</dd>
-  <dt>param</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLint")}} specifying a value to set the <em><code>pname</code></em>
-    parameter to. See below for possible values.</dd>
-</dl>
+- pname
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying which parameter to set. See below for possible
+    values.
+- param
+  - : A {{domxref("WebGL_API/Types", "GLint")}} specifying a value to set the _`pname`_
+    parameter to. See below for possible values.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h2 id="Pixel_storage_parameters">Pixel storage parameters</h2>
+## Pixel storage parameters
 
 <table class="no-markdown">
   <thead>
@@ -92,8 +89,8 @@ browser-compat: api.WebGLRenderingContext.pixelStorei
   </tbody>
 </table>
 
-<p>When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, the
-  following values are available additionally:</p>
+When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, the
+following values are available additionally:
 
 <table class="no-markdown">
   <thead>
@@ -117,7 +114,9 @@ browser-compat: api.WebGLRenderingContext.pixelStorei
     </tr>
     <tr>
       <td><code>gl.PACK_SKIP_PIXELS</code></td>
-      <td>Number of pixel locations skipped before the first pixel is written into memory.
+      <td>
+        Number of pixel locations skipped before the first pixel is written into
+        memory.
       </td>
       <td>{{domxref("WebGL_API/Types", "GLint")}}</td>
       <td>0</td>
@@ -126,8 +125,10 @@ browser-compat: api.WebGLRenderingContext.pixelStorei
     </tr>
     <tr>
       <td><code>gl.PACK_SKIP_ROWS</code></td>
-      <td>Number of rows of pixel locations skipped before the first pixel is written into
-        memory</td>
+      <td>
+        Number of rows of pixel locations skipped before the first pixel is
+        written into memory
+      </td>
       <td>{{domxref("WebGL_API/Types", "GLint")}}</td>
       <td>0</td>
       <td>0 to <code>Infinity</code></td>
@@ -151,7 +152,10 @@ browser-compat: api.WebGLRenderingContext.pixelStorei
     </tr>
     <tr>
       <td><code>gl.UNPACK_SKIP_PIXELS</code></td>
-      <td>Number of pixel images skipped before the first pixel is read from memory</td>
+      <td>
+        Number of pixel images skipped before the first pixel is read from
+        memory
+      </td>
       <td>{{domxref("WebGL_API/Types", "GLint")}}</td>
       <td>0</td>
       <td>0 to <code>Infinity</code></td>
@@ -159,8 +163,10 @@ browser-compat: api.WebGLRenderingContext.pixelStorei
     </tr>
     <tr>
       <td><code>gl.UNPACK_SKIP_ROWS</code></td>
-      <td>Number of rows of pixel locations skipped before the first pixel is read from
-        memory</td>
+      <td>
+        Number of rows of pixel locations skipped before the first pixel is read
+        from memory
+      </td>
       <td>{{domxref("WebGL_API/Types", "GLint")}}</td>
       <td>0</td>
       <td>0 to <code>Infinity</code></td>
@@ -168,7 +174,10 @@ browser-compat: api.WebGLRenderingContext.pixelStorei
     </tr>
     <tr>
       <td><code>gl.UNPACK_SKIP_IMAGES</code></td>
-      <td>Number of pixel images skipped before the first pixel is read from memory</td>
+      <td>
+        Number of pixel images skipped before the first pixel is read from
+        memory
+      </td>
       <td>{{domxref("WebGL_API/Types", "GLint")}}</td>
       <td>0</td>
       <td>0 to <code>Infinity</code></td>
@@ -177,38 +186,39 @@ browser-compat: api.WebGLRenderingContext.pixelStorei
   </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Setting the pixel storage mode affects the
-  {{domxref("WebGLRenderingContext.readPixels()")}} operations, as well as unpacking of
-  textures with the {{domxref("WebGLRenderingContext.texImage2D()")}} and
-  {{domxref("WebGLRenderingContext.texSubImage2D()")}} methods.<br>
-   </p>
+Setting the pixel storage mode affects the
+{{domxref("WebGLRenderingContext.readPixels()")}} operations, as well as unpacking of
+textures with the {{domxref("WebGLRenderingContext.texImage2D()")}} and
+{{domxref("WebGLRenderingContext.texSubImage2D()")}} methods.
 
-<pre class="brush: js">var tex = gl.createTexture();
+
+
+```js
+var tex = gl.createTexture();
 gl.bindTexture(gl.TEXTURE_2D, tex);
 gl.pixelStorei(gl.PACK_ALIGNMENT, 4);
-</pre>
+```
 
-<p>To check the values for packing and unpacking of pixel data, you can query the same
-  pixel storage parameters with {{domxref("WebGLRenderingContext.getParameter()")}}.</p>
+To check the values for packing and unpacking of pixel data, you can query the same
+pixel storage parameters with {{domxref("WebGLRenderingContext.getParameter()")}}.
 
-<pre class="brush: js">gl.getParameter(gl.PACK_ALIGNMENT);
+```js
+gl.getParameter(gl.PACK_ALIGNMENT);
 gl.getParameter(gl.UNPACK_ALIGNMENT);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.readPixels()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.texImage2D()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.texSubImage2D()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.readPixels()")}}
+- {{domxref("WebGLRenderingContext.texImage2D()")}}
+- {{domxref("WebGLRenderingContext.texSubImage2D()")}}

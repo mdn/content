@@ -8,37 +8,31 @@ tags:
   - Reference
 browser-compat: api.HTMLPreElement
 ---
-<div>
-<div>{{APIRef("HTML DOM")}}</div>
-</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLPreElement</code></strong> interface exposes specific properties and methods (beyond those of the {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating a block of preformatted text ({{HtmlElement("pre")}}).</p>
+The **`HTMLPreElement`** interface exposes specific properties and methods (beyond those of the {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating a block of preformatted text ({{HtmlElement("pre")}}).
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{domxref("HTMLElement")}}.</em></p>
+_Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLPreElement.width")}} {{deprecated_inline}}</dt>
- <dd>Is a <code>long</code> value reflecting the obsolete {{htmlattrxref("width", "pre")}} attribute, containing a fixed-size length for the {{HTMLElement("pre")}} element.</dd>
-</dl>
+- {{domxref("HTMLPreElement.width")}} {{deprecated_inline}}
+  - : Is a `long` value reflecting the obsolete {{htmlattrxref("width", "pre")}} attribute, containing a fixed-size length for the {{HTMLElement("pre")}} element.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>No specific method; inherits properties from its parent, {{domxref("HTMLElement")}}.</em></p>
+_No specific method; inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The HTML element implementing this interface: {{HTMLElement("pre")}}</li>
-</ul>
+- The HTML element implementing this interface: {{HTMLElement("pre")}}

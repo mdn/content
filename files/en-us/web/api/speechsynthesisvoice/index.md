@@ -12,34 +12,33 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisVoice
 ---
-<p>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</p>
+{{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>SpeechSynthesisVoice</code></strong> interface of the <a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a> represents a voice that the system supports. Every <code>SpeechSynthesisVoice</code> has its own relative speech service including information about language, name and URI.</p>
+The **`SpeechSynthesisVoice`** interface of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) represents a voice that the system supports. Every `SpeechSynthesisVoice` has its own relative speech service including information about language, name and URI.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
-	<dt>{{domxref("SpeechSynthesisVoice.default")}} {{readonlyinline}}</dt>
-	<dd>A boolean value indicating whether the voice is the default voice for the current app language (<code>true</code>), or not (<code>false</code>.)</dd>
-	<dt>{{domxref("SpeechSynthesisVoice.lang")}} {{readonlyinline}}</dt>
-	<dd>Returns a BCP 47 language tag indicating the language of the voice.</dd>
-	<dt>{{domxref("SpeechSynthesisVoice.localService")}} {{readonlyinline}}</dt>
-	<dd>A boolean value indicating whether the voice is supplied by a local speech synthesizer service (<code>true</code>), or a remote speech synthesizer service (<code>false</code>.)</dd>
-	<dt>{{domxref("SpeechSynthesisVoice.name")}} {{readonlyinline}}</dt>
-	<dd>Returns a human-readable name that represents the voice.</dd>
-	<dt>{{domxref("SpeechSynthesisVoice.voiceURI")}} {{readonlyinline}}</dt>
-	<dd>Returns the type of URI and location of the speech synthesis service for this voice.</dd>
-</dl>
+- {{domxref("SpeechSynthesisVoice.default")}} {{readonlyinline}}
+  - : A boolean value indicating whether the voice is the default voice for the current app language (`true`), or not (`false`.)
+- {{domxref("SpeechSynthesisVoice.lang")}} {{readonlyinline}}
+  - : Returns a BCP 47 language tag indicating the language of the voice.
+- {{domxref("SpeechSynthesisVoice.localService")}} {{readonlyinline}}
+  - : A boolean value indicating whether the voice is supplied by a local speech synthesizer service (`true`), or a remote speech synthesizer service (`false`.)
+- {{domxref("SpeechSynthesisVoice.name")}} {{readonlyinline}}
+  - : Returns a human-readable name that represents the voice.
+- {{domxref("SpeechSynthesisVoice.voiceURI")}} {{readonlyinline}}
+  - : Returns the type of URI and location of the speech synthesis service for this voice.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following snippet is excerpted from our <a class="external external-icon" href="https://github.com/mdn/web-speech-api/tree/master/speak-easy-synthesis">Speech synthesiser demo</a>.</p>
+The following snippet is excerpted from our [Speech synthesiser demo](https://github.com/mdn/web-speech-api/tree/master/speak-easy-synthesis).
 
-<pre class="brush: js">var synth = window.speechSynthesis;
+```js
+var synth = window.speechSynthesis;
 function populateVoiceList() {
   voices = synth.getVoices();
 
-  for(i = 0; i &lt; voices.length ; i++) {
+  for(i = 0; i < voices.length ; i++) {
     var option = document.createElement('option');
     option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
 
@@ -63,7 +62,7 @@ inputForm.onsubmit = function(event) {
 
   var utterThis = new SpeechSynthesisUtterance(inputTxt.value);
   var selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-  for(i = 0; i &lt; voices.length ; i++) {
+  for(i = 0; i < voices.length ; i++) {
     if(voices[i].name === selectedOption) {
       utterThis.voice = voices[i];
     }
@@ -79,18 +78,17 @@ inputForm.onsubmit = function(event) {
   }
 
   inputTxt.blur();
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)

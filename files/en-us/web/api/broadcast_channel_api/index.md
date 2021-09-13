@@ -8,70 +8,72 @@ tags:
   - Overview
   - Reference
 ---
-<p>{{DefaultAPISidebar("Broadcast Channel API")}}</p>
+{{DefaultAPISidebar("Broadcast Channel API")}}
 
-<p>The <strong>Broadcast Channel API</strong> allows basic communication between {{glossary("browsing context", "browsing contexts")}} (that is, <em>windows</em>, <em>tabs</em>, <em>frames</em>, or <em>iframes</em>) and workers on the same {{glossary("origin")}}.</p>
+The **Broadcast Channel API** allows basic communication between {{glossary("browsing context", "browsing contexts")}} (that is, _windows_, _tabs_, _frames_, or _iframes_) and workers on the same {{glossary("origin")}}.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<p>By creating a {{domxref("BroadcastChannel")}} object, you can receive any messages that are posted to it. You don't have to maintain a reference to the frames or workers you wish to communicate with: they can “subscribe” to a particular channel by constructing their own {{domxref("BroadcastChannel")}} with the same name, and have bi-directional communication between all of them.</p>
+By creating a {{domxref("BroadcastChannel")}} object, you can receive any messages that are posted to it. You don't have to maintain a reference to the frames or workers you wish to communicate with: they can “subscribe” to a particular channel by constructing their own {{domxref("BroadcastChannel")}} with the same name, and have bi-directional communication between all of them.
 
-<p><img alt="The principle of the Broadcast Channel API" src="broadcastchannel.png"></p>
+![The principle of the Broadcast Channel API](broadcastchannel.png)
 
-<h2 id="Broadcast_Channel_interface">Broadcast Channel interface</h2>
+## Broadcast Channel interface
 
-<h3 id="Creating_or_joining_a_channel">Creating or joining a channel</h3>
+### Creating or joining a channel
 
-<p>A client joins a broadcast channel by creating a {{domxref("BroadcastChannel")}} object. Its <a href="/en-US/docs/Web/API/BroadcastChannel/BroadcastChannel">constructor</a> takes one single parameter: the <em>name</em> of the channel. If it is the first to connect to that broadcast channel name, the underlying channel is created.</p>
+A client joins a broadcast channel by creating a {{domxref("BroadcastChannel")}} object. Its [constructor](/en-US/docs/Web/API/BroadcastChannel/BroadcastChannel) takes one single parameter: the _name_ of the channel. If it is the first to connect to that broadcast channel name, the underlying channel is created.
 
-<pre class="brush: js">// Connection to a broadcast channel
+```js
+// Connection to a broadcast channel
 const bc = new BroadcastChannel('test_channel');
-</pre>
+```
 
-<h3 id="Sending_a_message">Sending a message</h3>
+### Sending a message
 
-<p>It is enough to call the {{domxref("BroadcastChannel.postMessage", "postMessage()")}} method on the created <code>BroadcastChannel</code> object, which takes any object as an argument. An example string message:</p>
+It is enough to call the {{domxref("BroadcastChannel.postMessage", "postMessage()")}} method on the created `BroadcastChannel` object, which takes any object as an argument. An example string message:
 
-<pre class="brush: js">// Example of sending of a very simple message
+```js
+// Example of sending of a very simple message
 bc.postMessage('This is a test message.');
-</pre>
+```
 
-<p>Any kind of object can be sent, not just a {{domxref("DOMString")}}.</p>
+Any kind of object can be sent, not just a {{domxref("DOMString")}}.
 
-<p>The API doesn't associate any semantics to messages, so it is up to the code to know what kind of messages to expect and what to do with them.</p>
+The API doesn't associate any semantics to messages, so it is up to the code to know what kind of messages to expect and what to do with them.
 
-<h3 id="Receiving_a_message">Receiving a message</h3>
+### Receiving a message
 
-<p>When a message is posted, a {{event("message")}} event is dispatched to each {{domxref("BroadcastChannel")}} object connected to this channel. A function can be run for this event with the {{domxref("BroadcastChannel.onmessage", "onmessage")}} event handler:</p>
+When a message is posted, a {{event("message")}} event is dispatched to each {{domxref("BroadcastChannel")}} object connected to this channel. A function can be run for this event with the {{domxref("BroadcastChannel.onmessage", "onmessage")}} event handler:
 
-<pre class="brush: js">// A handler that only logs the event to the console:
+```js
+// A handler that only logs the event to the console:
 bc.onmessage = function (ev) { console.log(ev); }
-</pre>
+```
 
-<h3 id="Disconnecting_a_channel">Disconnecting a channel</h3>
+### Disconnecting a channel
 
-<p>To leave a channel, call the {{domxref("BroadcastChannel.close", "close()")}} method on the object. This disconnects the object from the underlying channel, allowing garbage collection.</p>
+To leave a channel, call the {{domxref("BroadcastChannel.close", "close()")}} method on the object. This disconnects the object from the underlying channel, allowing garbage collection.
 
-<pre class="brush: js">// Disconnect the channel
+```js
+// Disconnect the channel
 bc.close();
-</pre>
+```
 
-<h2 id="Conclusion">Conclusion</h2>
+## Conclusion
 
-<p>The Broadcast Channel API's self-contained interface allows cross-context communication. It can be used to detect user actions in other tabs within a same origin, like when the user logs in or out.</p>
+The Broadcast Channel API's self-contained interface allows cross-context communication. It can be used to detect user actions in other tabs within a same origin, like when the user logs in or out.
 
-<p>The messaging protocol is not defined and the different browsing contexts need to implement it themselves; there is no negotiation nor requirement from the specification.</p>
+The messaging protocol is not defined and the different browsing contexts need to implement it themselves; there is no negotiation nor requirement from the specification.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications("api.BroadcastChannel")}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.BroadcastChannel")}}</p>
+{{Compat("api.BroadcastChannel")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("BroadcastChannel")}}, the interface implementing it.</li>
-</ul>
+- {{domxref("BroadcastChannel")}}, the interface implementing it.

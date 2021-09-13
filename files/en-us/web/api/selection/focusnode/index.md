@@ -2,41 +2,40 @@
 title: Selection.focusNode
 slug: Web/API/Selection/focusNode
 tags:
-- API
-- Experimental
-- HTML Editing
-- Property
-- Read-only
-- Reference
-- Selection
+  - API
+  - Experimental
+  - HTML Editing
+  - Property
+  - Read-only
+  - Reference
+  - Selection
 browser-compat: api.Selection.focusNode
 ---
-<div>{{ ApiRef("DOM") }}{{SeeCompatTable}}</div>
+{{ ApiRef("DOM") }}{{SeeCompatTable}}
 
-<p>The <strong><code>Selection.focusNode</code></strong> read-only property returns the
-  {{domxref("Node")}} in which the selection ends.</p>
+The **`Selection.focusNode`** read-only property returns the
+{{domxref("Node")}} in which the selection ends.
 
-<p>A user may make a selection from left to right (in document order) or right to left
-  (reverse of document order). The focus is where the user ended the selection. This can
-  be visualized by holding the <kbd>Shift</kbd> key and pressing the arrow keys on your
-  keyboard to modify the current selection. The selection's focus moves, but the
-  selection's anchor, the other end of the selection, does not move.</p>
+A user may make a selection from left to right (in document order) or right to left
+(reverse of document order). The focus is where the user ended the selection. This can
+be visualized by holding the <kbd>Shift</kbd> key and pressing the arrow keys on your
+keyboard to modify the current selection. The selection's focus moves, but the
+selection's anchor, the other end of the selection, does not move.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>node</em> =<em> sel</em>.focusNode
-</pre>
+```js
+node = sel.focusNode
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Selection")}}, the interface it belongs to.</li>
-</ul>
+- {{domxref("Selection")}}, the interface it belongs to.

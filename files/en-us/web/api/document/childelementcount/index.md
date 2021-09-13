@@ -8,39 +8,38 @@ tags:
   - Reference
 browser-compat: api.Document.childElementCount
 ---
-<div>{{ APIRef("DOM") }}</div>
+{{ APIRef("DOM") }}
 
-<p>The <code><strong>Document.childElementCount</strong></code> read-only property
-returns the number of child elements of the document.</p>
+The **`Document.childElementCount`** read-only property
+returns the number of child elements of the document.
 
-<p>To get the number of children of a specific element, see {{domxref("Element.childElementCount")}}.</p>
+To get the number of children of a specific element, see {{domxref("Element.childElementCount")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>document</em>.childElementCount;
-</pre>
+```js
+document.childElementCount;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">
+```js
 document.children;
-// HTMLCollection, usually containing an &lt;html&gt; element, the document's only child
+// HTMLCollection, usually containing an <html> element, the document's only child
 
 document.childElementCount;
 // 1
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Element.childElementCount")}}</li>
-  <li>{{domxref("DocumentFragment.childElementCount")}}</li>
-</ul>
+- {{domxref("Element.childElementCount")}}
+- {{domxref("DocumentFragment.childElementCount")}}

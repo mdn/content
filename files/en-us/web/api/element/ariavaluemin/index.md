@@ -11,35 +11,40 @@ tags:
   - Element
 browser-compat: api.Element.ariaValueMin
 ---
-<div>{{DefaultAPISidebar("DOM")}}</div>
+{{DefaultAPISidebar("DOM")}}
 
-<p>The <strong><code>ariaValueMin</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemin_attribute"><code>aria-valuemin</code></a> attribute, which defines the minimum allowed value for a range widget.</p>
+The **`ariaValueMin`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemin_attribute) attribute, which defines the minimum allowed value for a range widget.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox notranslate">var <var>ariaValueMin</var> = element.ariaValueMin;
-<var>element</var>.ariaValueMin = <var>ariaValueMin</var></pre>
+    var ariaValueMin = element.ariaValueMin;
+    element.ariaValueMin = ariaValueMin
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString")}} which contains a number.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("DOMString")}} which contains a number.
 
-<p>In this example the <code>aria-valuemin</code> attribute on the element with an ID of <code>slider</code> is set to "1". Using <code>ariaValueMin</code> we update the value to "2".</p>
+## Examples
 
-<pre class="brush: html">&lt;div role="slider" aria-valuenow="1"
+In this example the `aria-valuemin` attribute on the element with an ID of `slider` is set to "1". Using `ariaValueMin` we update the value to "2".
+
+```html
+<div role="slider" aria-valuenow="1"
   aria-valuemin="1" aria-valuemax="7"
-	aria-valuetext="Sunday"&gt;</pre>
+	aria-valuetext="Sunday">
+```
 
-<pre class="brush: js">let el = document.getElementById('slider');
+```js
+let el = document.getElementById('slider');
 console.log(el.ariaValueMin); // 1
 el.ariaValueMin = "2";
-console.log(el.ariaValueMin); // 2</pre>
+console.log(el.ariaValueMin); // 2
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

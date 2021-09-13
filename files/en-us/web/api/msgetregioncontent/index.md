@@ -4,36 +4,34 @@ slug: Web/API/msGetRegionContent
 tags:
   - msGetRegionContent
 ---
-<div>{{APIRef("HTMLMediaElement")}}</div>
+{{APIRef("HTMLMediaElement")}}
 
-<p>{{Non-standard_header()}}</p>
+{{Non-standard_header()}}
 
-<p>The <code><strong>msGetRegionContent</strong></code> returns an array of Range instances corresponding to the content from the region flow that is positioned in the region.</p>
+The **`msGetRegionContent`** returns an array of Range instances corresponding to the content from the region flow that is positioned in the region.
 
-<p>This proprietary method is specific to Internet Explorer browser.</p>
+This proprietary method is specific to Internet Explorer browser.
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<pre class="brush: js">var retVal = element.msGetRegionContent();
-</pre>
+```js
+var retVal = element.msGetRegionContent();
+```
 
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+**retVal** \[out, reval]
 
-<p><strong>retVal</strong> [out, reval]</p>
+Type: _MSRangeCollection_
 
-<p>Type: <em>MSRangeCollection</em></p>
+The name of the property to enable.
 
-<p>The name of the property to enable.</p>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+Type: _Boolean_
 
-<p>Type: <em>Boolean</em></p>
+Returned ranges are sorted by document position and do not overlap. If an element is not a region, this method throws a `DOMException` with the `InvalidAccessError` error code. This is only available to regions that are document elements and not to regions that are pseudo-elements.
 
-<p>Returned ranges are sorted by document position and do not overlap. If an element is not a region, this method throws a <code>DOMException</code> with the <code>InvalidAccessError</code> error code. This is only available to regions that are document elements and not to regions that are pseudo-elements.</p>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Microsoft_Extensions">Microsoft API extensions </a></li>
-</ul>
+- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_Extensions)

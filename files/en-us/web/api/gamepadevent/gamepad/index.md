@@ -8,40 +8,44 @@ tags:
   - Reference
 browser-compat: api.GamepadEvent.gamepad
 ---
-<div>{{APIRef("Gamepad API")}}</div>
+{{APIRef("Gamepad API")}}
 
-<p>The <code><strong>GamepadEvent.gamepad</strong></code> property of the
-  <strong>{{domxref("GamepadEvent")}} interface</strong> returns a {{domxref("Gamepad")}}
-  object, providing access to the associated gamepad data for fired
-  {{event("gamepadconnected")}} and {{event("gamepaddisconnected")}} events.</p>
+The **`GamepadEvent.gamepad`** property of the
+**{{domxref("GamepadEvent")}} interface** returns a {{domxref("Gamepad")}}
+object, providing access to the associated gamepad data for fired
+{{event("gamepadconnected")}} and {{event("gamepaddisconnected")}} events.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">readonly attribute Gamepad gamepad;</pre>
+```js
+readonly attribute Gamepad gamepad;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The <code>gamepad</code> property being called on a fired
-  {{event("gamepadconnected")}} event.</p>
+The `gamepad` property being called on a fired
+{{event("gamepadconnected")}} event.
 
-<pre class="brush: js">window.addEventListener("gamepadconnected", function(e) {
+```js
+window.addEventListener("gamepadconnected", function(e) {
   console.log("Gamepad connected at index %d: %s. %d buttons, %d axes.",
   e.gamepad.index, e.gamepad.id,
   e.gamepad.buttons.length, e.gamepad.axes.length);
-});</pre>
+});
+```
 
-<h2 id="Value">Value</h2>
+## Value
 
-<p>A {{domxref("Gamepad")}} object.</p>
+A {{domxref("Gamepad")}} object.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<p><a href="/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API">Using the Gamepad API</a></p>
+[Using the Gamepad API](/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)

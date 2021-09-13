@@ -8,60 +8,59 @@ tags:
   - NDEFMessage
 browser-compat: api.NDEFMessage.NDEFMessage
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("")}}
 
-<p>The <strong><code>NDEFMessage()</code></strong> constructor creates a new {{domxref("NDEFMessage")}} object, initialized with the given NDEF records.</p>
+The **`NDEFMessage()`** constructor creates a new {{domxref("NDEFMessage")}} object, initialized with the given NDEF records.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">new NDEFMessage(records);</pre>
+```js
+new NDEFMessage(records);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
+- `records`
 
-<dl>
-  <dt><code>records</code></dt>
-  <dd>An array of objects with the following members:
-    <dl>
-      <dt><code>data</code> {{optional_inline}}</dt>
-      <dd>Contains the data to be transmitted; one of a string, a {{domxref("BufferSource")}}, or an array of nested records.</dd>
-      <dt><code>encoding</code> {{optional_inline}}</dt>
-      <dd>A string specifying the record's encoding.</dd>
-      <dt><code>id</code> {{optional_inline}}</dt>
-      <dd>A developer-defined identifier for the record.</dd>
-      <dt><code>lang</code> {{optional_inline}}</dt>
-      <dd>A valid <a href="https://www.rfc-editor.org/info/bcp47">BCP47</a> language tag.</dd>
-      <dt><code>mediaType</code> {{optional_inline}}</dt>
-      <dd>A valid <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME type</a>.</dd>
-      <dt><code>recordType</code></dt>
-      <dd>A string indicating the type of data stored in <code>data</code>. It must be one of the following values:
-        <dl>
-          <dt><code>"absolute-url"</code></dt>
-          <dt>An absolute URL to the data.</dt>
-          <dt><code>"empty"</code></dt>
-          <dd>An empty {{domxref("NDEFRecord")}}.</dd>
-          <dt><code>"mime"</code></dt>
-          <dd>A valid <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME type</a>.</dd>
-          <dt><code>"smart-poster"</code></dt>
-          <dd>A smart poster as defined by the <a href="https://w3c.github.io/web-nfc/#bib-ndef-smartposter">NDEF-SMARTPOSTER</a> specification.</dd>
-          <dt><code>"text"</code></dt>
-          <dd>Text as defined by the <a href="https://w3c.github.io/web-nfc/#bib-ndef-text">NDEF-TEXT</a> specification.</dd>
-          <dt><code>"unknown"</code></dt>
-          <dd>The record type is not known.</dd>
-          <dt><code>"URL"</code></dt>
-          <dd>A URL as defined by the <a href="https://w3c.github.io/web-nfc/#bib-ndef-uri">NDEF-URI</a> specification.</dd>
-        </dl>
-      </dd>
-    </dl>
+  - : An array of objects with the following members:
 
-  </dd>
-</dl>
+    - `data` {{optional_inline}}
+      - : Contains the data to be transmitted; one of a string, a {{domxref("BufferSource")}}, or an array of nested records.
+    - `encoding` {{optional_inline}}
+      - : A string specifying the record's encoding.
+    - `id` {{optional_inline}}
+      - : A developer-defined identifier for the record.
+    - `lang` {{optional_inline}}
+      - : A valid [BCP47](https://www.rfc-editor.org/info/bcp47) language tag.
+    - `mediaType` {{optional_inline}}
+      - : A valid [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types).
+    - `recordType`
 
-<h2 id="Specifications">Specifications</h2>
+      - : A string indicating the type of data stored in `data`. It must be one of the following values:
 
-<p>{{Specifications}}</p>
+        - `"absolute-url"`
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+          An absolute URL to the data.
 
+          `"empty"`
 
-<p>{{Compat}}</p>
+          - : An empty {{domxref("NDEFRecord")}}.
+
+        - `"mime"`
+          - : A valid [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types).
+        - `"smart-poster"`
+          - : A smart poster as defined by the [NDEF-SMARTPOSTER](https://w3c.github.io/web-nfc/#bib-ndef-smartposter) specification.
+        - `"text"`
+          - : Text as defined by the [NDEF-TEXT](https://w3c.github.io/web-nfc/#bib-ndef-text) specification.
+        - `"unknown"`
+          - : The record type is not known.
+        - `"URL"`
+          - : A URL as defined by the [NDEF-URI](https://w3c.github.io/web-nfc/#bib-ndef-uri) specification.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

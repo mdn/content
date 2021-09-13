@@ -2,33 +2,34 @@
 title: PaymentRequest.shippingType
 slug: Web/API/PaymentRequest/shippingType
 tags:
-- API
-- Experimental
-- Payment Request
-- Payment Request API
-- PaymentRequest
-- Reference
-- Secure context
-- shippingType
+  - API
+  - Experimental
+  - Payment Request
+  - Payment Request API
+  - PaymentRequest
+  - Reference
+  - Secure context
+  - shippingType
 browser-compat: api.PaymentRequest.shippingType
 ---
-<p>{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}</p>
+{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
 
-<p>The <strong><code>shippingType</code></strong> read-only property of the
-  {{domxref("PaymentRequest")}} interface returns one of <code>"shipping"</code>,
-  <code>"delivery"</code>, <code>"pickup"</code>, or <code>null</code> if one was not
-  provided by the constructor.</p>
+The **`shippingType`** read-only property of the
+{{domxref("PaymentRequest")}} interface returns one of `"shipping"`,
+`"delivery"`, `"pickup"`, or `null` if one was not
+provided by the constructor.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>shippingType</em> = <em>paymentRequest</em>.shippingType</pre>
+```js
+var shippingType = paymentRequest.shippingType
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>One of <code>"shipping"</code>, <code>"delivery"</code>, <code>"pickup"</code>, or
-  <code>null</code>.</p>
+One of `"shipping"`, `"delivery"`, `"pickup"`, or
+`null`.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

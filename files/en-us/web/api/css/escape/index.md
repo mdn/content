@@ -2,69 +2,70 @@
 title: CSS.escape()
 slug: Web/API/CSS/escape
 tags:
-- API
-- CSS
-- CSSOM
-- Method
-- Reference
-- Static
-- escape()
+  - API
+  - CSS
+  - CSSOM
+  - Method
+  - Reference
+  - Static
+  - escape()
 browser-compat: api.CSS.escape
 ---
-<p>{{APIRef("CSSOM")}}{{SeeCompatTable}}</p>
+{{APIRef("CSSOM")}}{{SeeCompatTable}}
 
-<p>The <code><strong>CSS.escape()</strong></code> static method returns a
-  {{DOMxRef("CSSOMString")}} containing the escaped string passed as parameter, mostly for
-  use as part of a CSS selector.</p>
+The **`CSS.escape()`** static method returns a
+{{DOMxRef("CSSOMString")}} containing the escaped string passed as parameter, mostly for
+use as part of a CSS selector.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>escapedStr</var> = CSS.escape(<var>str</var>);
-</pre>
+```js
+escapedStr = CSS.escape(str);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><em>str</em></dt>
-  <dd>The {{DOMxRef("CSSOMString")}} to be escaped.</dd>
-</dl>
+- _str_
+  - : The {{DOMxRef("CSSOMString")}} to be escaped.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_results">Basic results</h3>
+### Basic results
 
-<pre class="brush: js">CSS.escape(".foo#bar")        // "\.foo\#bar"
+```js
+CSS.escape(".foo#bar")        // "\.foo\#bar"
 CSS.escape("()[]{}")          // "\(\)\[\]\\{\\}"
 CSS.escape('--a')             // "--a"
 CSS.escape(0)                 // "\30 ", the Unicode code point of '0' is 30
-CSS.escape('\0')              // "\ufffd", the Unicode REPLACEMENT CHARACTER</pre>
+CSS.escape('\0')              // "\ufffd", the Unicode REPLACEMENT CHARACTER
+```
 
-<h3 id="In_context_uses">In context uses</h3>
+### In context uses
 
-<p>To escape a string for use as part of a selector, the <code>escape()</code> method can
-  be used:</p>
+To escape a string for use as part of a selector, the `escape()` method can
+be used:
 
-<pre
-  class="brush: js;">var element = document.querySelector('#' + CSS.escape(id) + ' &gt; img');</pre>
+```js
+var element = document.querySelector('#' + CSS.escape(id) + ' > img');
+```
 
-<p>The <code>escape()</code> method can also be used for escaping strings, although it
-  escapes characters that don't strictly need to be escaped:</p>
+The `escape()` method can also be used for escaping strings, although it
+escapes characters that don't strictly need to be escaped:
 
-<pre
-  class="brush: js;">var element = document.querySelector('a[href="#' + CSS.escape(fragment) + '"]');</pre>
+```js
+var element = document.querySelector('a[href="#' + CSS.escape(fragment) + '"]');
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{DOMxRef("CSS")}} interface where this static method resides.</li>
-  <li><a href="https://github.com/mathiasbynens/CSS.escape/blob/master/css.escape.js">A
-      polyfill for the CSS.escape</a></li>
-</ul>
+- The {{DOMxRef("CSS")}} interface where this static method resides.
+- [A
+  polyfill for the CSS.escape](https://github.com/mathiasbynens/CSS.escape/blob/master/css.escape.js)

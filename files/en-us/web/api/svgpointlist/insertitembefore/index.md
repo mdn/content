@@ -9,52 +9,52 @@ tags:
   - SVGPointList
 browser-compat: api.SVGPointList.insertItemBefore
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <strong><code>insertItemBefore()</code></strong> method of the {{domxref("SVGPointList")}} interface inserts a {{domxref("SVGPoint", "point")}} before another item in the list.</p>
+The **`insertItemBefore()`** method of the {{domxref("SVGPointList")}} interface inserts a {{domxref("SVGPoint", "point")}} before another item in the list.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">SVGPointList.insertItemBefore(obj,index);</pre>
+```js
+SVGPointList.insertItemBefore(obj,index);
+```
 
-<dl>
-  <dt><code>obj</code></dt>
-  <dd>An {{domxref("SVGPoint")}} object containing the coordinates of the point to be inserted.</dd>
-  <dt><code>index</code></dt>
-  <dd>The index of the item the object should be inserted before. If the index passed in is greater than the length of the list, then index will be set to the list length and the item inserted before the last item in the list.</dd>
-</dl>
+- `obj`
+  - : An {{domxref("SVGPoint")}} object containing the coordinates of the point to be inserted.
+- `index`
+  - : The index of the item the object should be inserted before. If the index passed in is greater than the length of the list, then index will be set to the list length and the item inserted before the last item in the list.
 
-<h3 id="Returns">Return value</h3>
+### Return value
 
-<p>The {{domxref("SVGPoint")}} object that was inserted.</p>
+The {{domxref("SVGPoint")}} object that was inserted.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>{{domxref("DOMException")}} <code>NoModicationAllowedError</code></dt>
-  <dd>Thrown if the list is read-only.</dd>
-</dl>
+- {{domxref("DOMException")}} `NoModicationAllowedError`
+  - : Thrown if the list is read-only.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example shows an SVG which contains a {{SVGElement("polyline")}} with five coordinate pairs. A new {{domxref("SVGPoint")}} is created, and inserted before the point at index <code>2</code>.</p>
+The following example shows an SVG which contains a {{SVGElement("polyline")}} with five coordinate pairs. A new {{domxref("SVGPoint")}} is created, and inserted before the point at index `2`.
 
-<pre class="brush: html">&lt;svg id="svg" viewBox="-10 -10 120 120" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;polyline id="example" stroke="black" fill="none"
-   points="50,0 21,90 98,35 2,35 79,90"/&gt;
-</svg></pre>
+```html
+<svg id="svg" viewBox="-10 -10 120 120" xmlns="http://www.w3.org/2000/svg">
+  <polyline id="example" stroke="black" fill="none"
+   points="50,0 21,90 98,35 2,35 79,90"/>
+```
 
-<pre class="brush: js">let example = document.getElementById("example");
+```js
+let example = document.getElementById("example");
 let svgpoint = document.getElementById("svg").createSVGPoint();
 svgpoint.y = 10;
 svgpoint.x = 10;
-console.log(example.points.insertItemBefore(svgpoint,2));</pre>
+console.log(example.points.insertItemBefore(svgpoint,2));
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-
-<p>{{Compat}}</p>
+{{Compat}}

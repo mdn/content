@@ -2,54 +2,58 @@
 title: History.forward()
 slug: Web/API/History/forward
 tags:
-- API
-- HTML DOM
-- History
-- History API
-- Method
-- Reference
+  - API
+  - HTML DOM
+  - History
+  - History API
+  - Method
+  - Reference
 browser-compat: api.History.forward
 ---
-<div>{{APIRef("History API")}}</div>
+{{APIRef("History API")}}
 
-<p>The <strong><code>History.forward()</code></strong> method causes the browser to move
-  forward one page in the session history. It has the same effect as calling
-  {{domxref("History.go", "history.go(1)")}}.</p>
+The **`History.forward()`** method causes the browser to move
+forward one page in the session history. It has the same effect as calling
+{{domxref("History.go", "history.go(1)")}}.
 
-<p>This method is {{glossary("asynchronous")}}. Add a listener for the
-  {{event("popstate")}} event in order to determine when the navigation has completed.</p>
+This method is {{glossary("asynchronous")}}. Add a listener for the
+{{event("popstate")}} event in order to determine when the navigation has completed.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">history.forward()</pre>
+```js
+history.forward()
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following examples create a button that moves forward one step in the session
-  history.</p>
+The following examples create a button that moves forward one step in the session
+history.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;button id='go-forward'&gt;Go Forward!&lt;/button&gt;</pre>
+```html
+<button id='go-forward'>Go Forward!</button>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">document.getElementById('go-forward').addEventListener('click', e =&gt; {
+```js
+document.getElementById('go-forward').addEventListener('click', e => {
   window.history.forward();
-})</pre>
+})
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("History")}}</li>
-  <li><a href="/en-US/docs/Web/API/History_API/Working_with_the_History_API">Working with
-      the History API</a></li>
-</ul>
+- {{domxref("History")}}
+- [Working with
+  the History API](/en-US/docs/Web/API/History_API/Working_with_the_History_API)

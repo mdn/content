@@ -9,41 +9,37 @@ tags:
   - Reference
 browser-compat: api.HTMLLabelElement
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p>The <strong><code>HTMLLabelElement</code></strong> interface gives access to properties specific to {{HTMLElement("label")}} elements. It inherits methods and properties from the base {{domxref("HTMLElement")}} interface.</p>
+The **`HTMLLabelElement`** interface gives access to properties specific to {{HTMLElement("label")}} elements. It inherits methods and properties from the base {{domxref("HTMLElement")}} interface.
 
-<p>{{InheritanceDiagram(600,120)}}</p>
+{{InheritanceDiagram(600,120)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{domxref("HTMLElement")}}.</em></p>
+_Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLLabelElement.control")}} {{ReadOnlyInline}}</dt>
- <dd>Is a {{domxref("HTMLElement")}} representing the control with which the label is associated.</dd>
- <dt>{{domxref("HTMLLabelElement.form")}} {{ReadOnlyInline}}</dt>
- <dd>Is a {{domxref("HTMLFormElement")}} object representing the form with which the labeled control is associated, or <code>null</code> if there is no associated control, or if that control isn't associated with a form. In other words, this is just a shortcut for <code><em>HTMLLabelElement</em>.control.form</code>.</dd>
- <dt>{{domxref("HTMLLabelElement.htmlFor")}}</dt>
- <dd>Is a string containing the ID of the labeled control. This reflects the {{htmlattrxref("for", "label")}} attribute.</dd>
-</dl>
+- {{domxref("HTMLLabelElement.control")}} {{ReadOnlyInline}}
+  - : Is a {{domxref("HTMLElement")}} representing the control with which the label is associated.
+- {{domxref("HTMLLabelElement.form")}} {{ReadOnlyInline}}
+  - : Is a {{domxref("HTMLFormElement")}} object representing the form with which the labeled control is associated, or `null` if there is no associated control, or if that control isn't associated with a form. In other words, this is just a shortcut for `HTMLLabelElement.control.form`.
+- {{domxref("HTMLLabelElement.htmlFor")}}
+  - : Is a string containing the ID of the labeled control. This reflects the {{htmlattrxref("for", "label")}} attribute.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>No specific methods; inherits methods from its parent, {{domxref("HTMLElement")}}.</em></p>
+_No specific methods; inherits methods from its parent, {{domxref("HTMLElement")}}._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The HTML element implementing this interface: {{HTMLElement("label")}}</li>
- <li>{{HTMLElement("form")}}</li>
- <li>{{domxref("HTMLFormElement")}}</li>
-</ul>
+- The HTML element implementing this interface: {{HTMLElement("label")}}
+- {{HTMLElement("form")}}
+- {{domxref("HTMLFormElement")}}

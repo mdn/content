@@ -2,39 +2,38 @@
 title: MediaKeyStatusMap.keys()
 slug: Web/API/MediaKeyStatusMap/keys
 tags:
-- API
-- EncryptedMediaExtensions
-- MediaKeyStatusMap
-- Method
-- Reference
-- keys()
+  - API
+  - EncryptedMediaExtensions
+  - MediaKeyStatusMap
+  - Method
+  - Reference
+  - keys()
 browser-compat: api.MediaKeyStatusMap.keys
 ---
-<p>{{APIRef("EncryptedMediaExtensions API")}}{{SeeCompatTable}}</p>
+{{APIRef("EncryptedMediaExtensions API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>keys</code></strong> property of the
-    {{domxref("MediaKeyStatusMap")}} interface returns a new Iterator object, containing
-    keys for each element in the status map, in insertion order.</p>
+The **`keys`** property of the
+{{domxref("MediaKeyStatusMap")}} interface returns a new Iterator object, containing
+keys for each element in the status map, in insertion order.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>iterator</em> = <em>mediaKeyStatusMap</em>.keys()</pre>
+```js
+var iterator = mediaKeyStatusMap.keys()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3>
-  Returns
-</h3>
+### Returns
 
-<p>A new iterator.</p>
+A new iterator.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

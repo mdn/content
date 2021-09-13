@@ -10,36 +10,41 @@ tags:
   - Read-only
 browser-compat: api.CSSFontFaceRule.style
 ---
-<p>{{APIRef("CSSOM")}}</p>
+{{APIRef("CSSOM")}}
 
-<p>The read-only <strong><code>style</code></strong> property of the {{domxref("CSSFontFaceRule")}} interface returns the style information from the {{cssxref("@font-face")}} <a href="/en-US/docs/Web/CSS/At-rule">at-rule</a>. This will be in the form of a {{domxref("CSSStyleDeclaration")}} object.</p>
+The read-only **`style`** property of the {{domxref("CSSFontFaceRule")}} interface returns the style information from the {{cssxref("@font-face")}} [at-rule](/en-US/docs/Web/CSS/At-rule). This will be in the form of a {{domxref("CSSStyleDeclaration")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <var>style</var> = <var>CSSFontFaceRule</var>.style;</pre>
+    var style = CSSFontFaceRule.style;
 
-<h3>Value</h3>
-<p>A {{domxref("CSSStyleDeclaration")}}.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("CSSStyleDeclaration")}}.
 
-<p>This example uses the CSS found as an example on the {{cssxref("@font-face")}} page. The first {{domxref("CSSRule")}} returned will be a <code>CSSFontFaceRule</code>. The <code>style</code> property returns a {{domxref("CSSStyleDeclaration")}} with the properties <code>fontFamily</code>, <code>fontWeight</code>, and <code>src</code> populated with the information from the rule.</p>
+## Examples
 
-<pre class="brush: css">@font-face {
+This example uses the CSS found as an example on the {{cssxref("@font-face")}} page. The first {{domxref("CSSRule")}} returned will be a `CSSFontFaceRule`. The `style` property returns a {{domxref("CSSStyleDeclaration")}} with the properties `fontFamily`, `fontWeight`, and `src` populated with the information from the rule.
+
+```css
+@font-face {
     font-family: MyHelvetica;
     src: local("Helvetica Neue Bold"),
     local("HelveticaNeue-Bold"),
     url(MgOpenModernaBold.ttf);
     font-weight: bold;
-  }</pre>
+  }
+```
 
-  <pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
-  console.log(myRules[0].style); //a CSSStyleDeclaration</pre>
+```js
+let myRules = document.styleSheets[0].cssRules;
+  console.log(myRules[0].style); //a CSSStyleDeclaration
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

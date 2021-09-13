@@ -2,38 +2,38 @@
 title: SpeechRecognition.onresult
 slug: Web/API/SpeechRecognition/onresult
 tags:
-- API
-- Experimental
-- Property
-- Reference
-- SpeechRecognition
-- Web Speech API
-- onresult
-- recognition
-- speech
+  - API
+  - Experimental
+  - Property
+  - Reference
+  - SpeechRecognition
+  - Web Speech API
+  - onresult
+  - recognition
+  - speech
 browser-compat: api.SpeechRecognition.onresult
 ---
-<div>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</div>
+{{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>onresult</code></strong> property of the
-  {{domxref("SpeechRecognition")}} interface represents an event handler that will run
-  when the speech recognition service returns a result — a word or phrase has been
-  positively recognized and this has been communicated back to the app (when the <a
-    href="/en-US/docs/Web/API/SpeechRecognition/result_event"><code>result</code>
-    event</a> fires.)</p>
+The **`onresult`** property of the
+{{domxref("SpeechRecognition")}} interface represents an event handler that will run
+when the speech recognition service returns a result — a word or phrase has been
+positively recognized and this has been communicated back to the app (when the [`result`
+event](/en-US/docs/Web/API/SpeechRecognition/result_event) fires.)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">mySpeechRecognition.onresult = function() { ... };
-</pre>
+```js
+mySpeechRecognition.onresult = function() { ... };
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This code is excerpted from our <a class="external external-icon"
-    href="https://github.com/mdn/web-speech-api/blob/master/speech-color-changer/script.js">Speech
-    color changer</a> example.</p>
+This code is excerpted from our [Speech
+color changer](https://github.com/mdn/web-speech-api/blob/master/speech-color-changer/script.js) example.
 
-<pre class="brush: js">recognition.onresult = function(event) {
+```js
+recognition.onresult = function(event) {
   // The SpeechRecognitionEvent results property returns a SpeechRecognitionResultList object
   // The SpeechRecognitionResultList object contains SpeechRecognitionResult objects.
   // It has a getter so it can be accessed like an array
@@ -46,18 +46,16 @@ browser-compat: api.SpeechRecognition.onresult
   diagnostic.textContent = 'Result received: ' + color + '.';
   bg.style.backgroundColor = color;
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)

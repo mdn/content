@@ -1,91 +1,86 @@
 ---
-title: 'WebGLRenderingContext.uniform[1234][fi][v]()'
+title: WebGLRenderingContext.uniform[1234][fi][v]()
 slug: Web/API/WebGLRenderingContext/uniform
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.uniform1f
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.uniform[1234][fi][v]()</code></strong> methods
-  of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> specify values of uniform
-  variables. All active uniform variables defined in a program object are initialized to 0
-  when the program object is linked successfully. They retain the values assigned to them
-  by a call to this method until the next successful link operation occurs on the program
-  object, when they are once again initialized to 0.</p>
+The **`WebGLRenderingContext.uniform[1234][fi][v]()`** methods
+of the [WebGL API](/en-US/docs/Web/API/WebGL_API) specify values of uniform
+variables. All active uniform variables defined in a program object are initialized to 0
+when the program object is linked successfully. They retain the values assigned to them
+by a call to this method until the next successful link operation occurs on the program
+object, when they are once again initialized to 0.
 
-<div class="note">
-  <p><strong>Note:</strong> Many of the functions described here have expanded WebGL 2 interfaces, which can be
-    found under
-    {{domxref("WebGL2RenderingContext.uniform","WebGL2RenderingContext.uniform[1234][uif][v]()")}}.
-  </p>
-</div>
+> **Note:** Many of the functions described here have expanded WebGL 2 interfaces, which can be
+> found under
+> {{domxref("WebGL2RenderingContext.uniform","WebGL2RenderingContext.uniform[1234][uif][v]()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <var>gl</var>.uniform1f(<var>location</var>, <var>v0</var>);
-void <var>gl</var>.uniform1fv(<var>location</var>, <var>value</var>);
-void <var>gl</var>.uniform1i(<var>location</var>, <var>v0</var>);
-void <var>gl</var>.uniform1iv(<var>location</var>, <var>value</var>);
+```js
+void gl.uniform1f(location, v0);
+void gl.uniform1fv(location, value);
+void gl.uniform1i(location, v0);
+void gl.uniform1iv(location, value);
 
-void <var>gl</var>.uniform2f(<var>location</var>, <var>v0</var>, <var>v1</var>);
-void <var>gl</var>.uniform2fv(<var>location</var>, <var>value</var>);
-void <var>gl</var>.uniform2i(<var>location</var>, <var>v0</var>, <var>v1</var>);
-void <var>gl</var>.uniform2iv(<var>location</var>, <var>value</var>);
+void gl.uniform2f(location, v0, v1);
+void gl.uniform2fv(location, value);
+void gl.uniform2i(location, v0, v1);
+void gl.uniform2iv(location, value);
 
-void <var>gl</var>.uniform3f(<var>location</var>, <var>v0</var>, <var>v1</var>, <var>v2</var>);
-void <var>gl</var>.uniform3fv(<var>location</var>, <var>value</var>);
-void <var>gl</var>.uniform3i(<var>location</var>, <var>v0</var>, <var>v1</var>, <var>v2</var>);
-void <var>gl</var>.uniform3iv(<var>location</var>, <var>value</var>);
+void gl.uniform3f(location, v0, v1, v2);
+void gl.uniform3fv(location, value);
+void gl.uniform3i(location, v0, v1, v2);
+void gl.uniform3iv(location, value);
 
-void <var>gl</var>.uniform4f(<var>location</var>, <var>v0</var>, <var>v1</var>, <var>v2</var>, <var>v3</var>);
-void <var>gl</var>.uniform4fv(<var>location</var>, <var>value</var>);
-void <var>gl</var>.uniform4i(<var>location</var>, <var>v0</var>, <var>v1</var>, <var>v2</var>, <var>v3</var>);
-void <var>gl</var>.uniform4iv(<var>location</var>, <var>value</var>);
-</pre>
+void gl.uniform4f(location, v0, v1, v2, v3);
+void gl.uniform4fv(location, value);
+void gl.uniform4i(location, v0, v1, v2, v3);
+void gl.uniform4iv(location, value);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>location</dt>
-  <dd>A {{domxref("WebGLUniformLocation")}} object containing the location of the uniform
-    attribute to modify.</dd>
-  <dt><code>value, v0, v1, v2, v3</code></dt>
-  <dd>A new value to be used for the uniform variable. Possible types:
-    <ul>
-      <li>A floating point {{jsxref("Number")}} for floating point values (methods with
-        "f").</li>
-      <li>A sequence of floating point numbers (for example a {{jsxref("Float32Array")}}
-        or an {{jsxref("Array")}} of numbers) for floating point vector methods (methods
-        with "fv").</li>
-      <li>An integer {{jsxref("Number")}} for integer values (methods with "i").</li>
-      <li>An {{jsxref("Int32Array")}} for integer vector methods (methods with "iv").</li>
-    </ul>
-  </dd>
-</dl>
+- location
+  - : A {{domxref("WebGLUniformLocation")}} object containing the location of the uniform
+    attribute to modify.
+- `value, v0, v1, v2, v3`
 
-<h3 id="Return_value">Return value</h3>
+  - : A new value to be used for the uniform variable. Possible types:
 
-<p>None.</p>
+    - A floating point {{jsxref("Number")}} for floating point values (methods with
+      "f").
+    - A sequence of floating point numbers (for example a {{jsxref("Float32Array")}}
+      or an {{jsxref("Array")}} of numbers) for floating point vector methods (methods
+      with "fv").
+    - An integer {{jsxref("Number")}} for integer values (methods with "i").
+    - An {{jsxref("Int32Array")}} for integer vector methods (methods with "iv").
 
-<h2 id="Examples">Examples</h2>
+### Return value
 
-<pre class="brush: js">gl.uniform1f(u_alpha, 0.8);</pre>
+None.
 
-<h2 id="Specifications">Specifications</h2>
+## Examples
+
+```js
+gl.uniform1f(u_alpha, 0.8);
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.uniformMatrix()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.uniformMatrix()")}}

@@ -12,87 +12,76 @@ tags:
   - Tables
 browser-compat: api.HTMLTableCellElement
 ---
-<div>
-<div>{{ APIRef("HTML DOM") }}</div>
-</div>
+{{ APIRef("HTML DOM") }}
 
-<p>The <strong><code>HTMLTableCellElement</code></strong> interface provides special properties and methods (beyond the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating the layout and presentation of table cells, either header or data cells, in an HTML document.</p>
+The **`HTMLTableCellElement`** interface provides special properties and methods (beyond the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating the layout and presentation of table cells, either header or data cells, in an HTML document.
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{domxref("HTMLElement")}}.</em></p>
+_Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLTableCellElement.abbr")}}</dt>
- <dd>A {{domxref("DOMString")}} which can be used on <code>&lt;th&gt;</code> elements (not on {{HTMLElement("td")}}), specifying an alternative label for the header cell. This alternate label can be used in other contexts, such as when describing the headers that apply to a data cell. This is used to offer a shorter term for use by screen readers in particular, and is a valuable accessibility tool. Usually the value of <code>abbr</code> is an abbreviation or acronym, but can be any text that's appropriate contextually.</dd>
- <dt>{{domxref("HTMLTableCellElement.cellIndex")}} {{readonlyInline}}</dt>
- <dd>A long integer representing the cell's position in the {{domxref("HTMLTableRowElement.cells", "cells")}} collection of the {{HTMLElement("tr")}} the cell is contained within. If the cell doesn't belong to a <code>&lt;tr&gt;</code>, it returns <code>-1</code>.</dd>
- <dt>{{domxref("HTMLTableCellElement.colSpan")}}</dt>
- <dd>An unsigned long integer indicating the number of columns this cell must span; this lets the cell occupy space across multiple columns of the table. It reflects the {{htmlattrxref("colspan", "td")}} attribute.</dd>
- <dt>{{domxref("HTMLTableCellElement.headers")}} {{readonlyInline}}</dt>
- <dd>Is a {{domxref("DOMSettableTokenList")}} describing a list of <code>id</code> of {{HTMLElement("th")}} elements that represents headers associated with the cell. It reflects the {{htmlattrxref("headers", "td")}} attribute.</dd>
- <dt>{{domxref("HTMLTableCellElement.rowSpan")}}</dt>
- <dd>An unsigned long integer indicating the number of rows this cell must span; this lets a cell occupy space across multiple rows of the table. It reflects the {{htmlattrxref("rowspan", "td")}} attribute.</dd>
- <dt>{{domxref("HTMLTableCellElement.scope")}}</dt>
- <dd>A {{domxref("DOMString")}} indicating the scope of a {{HTMLElement("th")}} cell. Header cells can be configured, using the <code>scope</code> property, the apply to a specified row or column, or to the not-yet-scoped cells within the current row group (that is, the same ancestor {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, or {{HTMLElement("tfoot")}} element). If no value is specified for <code>scope</code>, the header is not associated directly with cells in this way. Permitted values for <code>scope</code> are:
- <dl>
-  <dt><code>col</code></dt>
-  <dd>The header cell applies to the following cells in the same column (or columns, if <code>colspan</code> is used as well), until either the end of the column or another <code>&lt;th&gt;</code> in the column establishes a new scope.</dd>
-  <dt><code>colgroup</code></dt>
-  <dd>The header cell applies to all cells in the current column group that do not already have a scope applied to them. This value is only allowed if the cell is in a column group.</dd>
-  <dt><code>row</code></dt>
-  <dd>The header cell applies to the following cells in the same row (or rows, if <code>rowspan</code> is used as well), until either the end of the row or another <code>&lt;th&gt;</code> in the same row establishes a new scope.</dd>
-  <dt><code>rowgroup</code></dt>
-  <dd>The header cell applies to all cells in the current row group that do not already have a scope applied to them. This value is only allowed if the cell is in a row group.</dd>
-  <dt>The empty string (<code>""</code>)</dt>
-  <dd>The header cell has no predefined scope; the user agent will establish the scope based on contextual clues.</dd>
- </dl>
- </dd>
-</dl>
+- {{domxref("HTMLTableCellElement.abbr")}}
+  - : A {{domxref("DOMString")}} which can be used on `<th>` elements (not on {{HTMLElement("td")}}), specifying an alternative label for the header cell. This alternate label can be used in other contexts, such as when describing the headers that apply to a data cell. This is used to offer a shorter term for use by screen readers in particular, and is a valuable accessibility tool. Usually the value of `abbr` is an abbreviation or acronym, but can be any text that's appropriate contextually.
+- {{domxref("HTMLTableCellElement.cellIndex")}} {{readonlyInline}}
+  - : A long integer representing the cell's position in the {{domxref("HTMLTableRowElement.cells", "cells")}} collection of the {{HTMLElement("tr")}} the cell is contained within. If the cell doesn't belong to a `<tr>`, it returns `-1`.
+- {{domxref("HTMLTableCellElement.colSpan")}}
+  - : An unsigned long integer indicating the number of columns this cell must span; this lets the cell occupy space across multiple columns of the table. It reflects the {{htmlattrxref("colspan", "td")}} attribute.
+- {{domxref("HTMLTableCellElement.headers")}} {{readonlyInline}}
+  - : Is a {{domxref("DOMSettableTokenList")}} describing a list of `id` of {{HTMLElement("th")}} elements that represents headers associated with the cell. It reflects the {{htmlattrxref("headers", "td")}} attribute.
+- {{domxref("HTMLTableCellElement.rowSpan")}}
+  - : An unsigned long integer indicating the number of rows this cell must span; this lets a cell occupy space across multiple rows of the table. It reflects the {{htmlattrxref("rowspan", "td")}} attribute.
+- {{domxref("HTMLTableCellElement.scope")}}
 
-<h2 id="Methods">Methods</h2>
+  - : A {{domxref("DOMString")}} indicating the scope of a {{HTMLElement("th")}} cell. Header cells can be configured, using the `scope` property, the apply to a specified row or column, or to the not-yet-scoped cells within the current row group (that is, the same ancestor {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, or {{HTMLElement("tfoot")}} element). If no value is specified for `scope`, the header is not associated directly with cells in this way. Permitted values for `scope` are:
 
-<p><em>No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}</em>.</p>
+    - `col`
+      - : The header cell applies to the following cells in the same column (or columns, if `colspan` is used as well), until either the end of the column or another `<th>` in the column establishes a new scope.
+    - `colgroup`
+      - : The header cell applies to all cells in the current column group that do not already have a scope applied to them. This value is only allowed if the cell is in a column group.
+    - `row`
+      - : The header cell applies to the following cells in the same row (or rows, if `rowspan` is used as well), until either the end of the row or another `<th>` in the same row establishes a new scope.
+    - `rowgroup`
+      - : The header cell applies to all cells in the current row group that do not already have a scope applied to them. This value is only allowed if the cell is in a row group.
+    - The empty string (`""`)
+      - : The header cell has no predefined scope; the user agent will establish the scope based on contextual clues.
 
-<h2 id="Deprecated_properties">Deprecated properties</h2>
+## Methods
 
-<div class="notecard warning">
-<p><strong>Warning:</strong> These properties have been {{Glossary("deprecated")}} and should no longer be used. They are documented primarily to help understand older code bases.</p>
-</div>
+_No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}_.
 
-<dl>
- <dt>{{domxref("HTMLTableCellElement.align")}} {{deprecated_inline}}</dt>
- <dd>A {{domxref("DOMString")}} containing an enumerated value reflecting the {{htmlattrxref("align", "td")}} attribute. It indicates the alignment of the element's contents with respect to the surrounding context. The possible values are <code>"left"</code>, <code>"right"</code>, and <code>"center"</code>.</dd>
- <dt>{{domxref("HTMLTableCellElement.axis")}} {{deprecated_inline}}</dt>
- <dd>A {{domxref("DOMString")}} containing a name grouping cells in virtual. It reflects the obsolete {{htmlattrxref("axis", "td")}} attribute.</dd>
- <dt>{{domxref("HTMLTableCellElement.bgColor")}} {{deprecated_inline}}</dt>
- <dd>A {{domxref("DOMString")}} containing the background color of the cells. It reflects the obsolete {{htmlattrxref("bgColor", "td")}} attribute.</dd>
- <dt>{{domxref("HTMLTableCellElement.ch")}} {{deprecated_inline}}</dt>
- <dd>A {{domxref("DOMString")}} containing one single chararcter. This character is the one to align all the cell of a column on. It reflects the {{htmlattrxref("char", "td")}} and default to the decimal points associated with the language, e.g. <code>'.'</code> for English, or <code>','</code> for French. This property was optional and was not very well supported.</dd>
- <dt>{{domxref("HTMLTableCellElement.chOff")}} {{deprecated_inline}}</dt>
- <dd>A {{domxref("DOMString")}} containing a integer indicating how many characters must be left at the right (for left-to-right scripts; or at the left for right-to-left scripts) of the character defined by <code>HTMLTableCellElement.ch</code>. This property was optional and was not very well supported.</dd>
- <dt>{{domxref("HTMLTableCellElement.height")}} {{deprecated_inline}}</dt>
- <dd>A {{domxref("DOMString")}} containing a length of pixel of the hinted height of the cell. It reflects the obsolete {{htmlattrxref("height", "td")}} attribute.</dd>
- <dt>{{domxref("HTMLTableCellElement.noWrap")}} {{deprecated_inline}}</dt>
- <dd>A boolean value reflecting the {{htmlattrxref("nowrap", "td")}} attribute and indicating if cell content can be broken in several lines.</dd>
- <dt>{{domxref("HTMLTableCellElement.vAlign")}} {{deprecated_inline}}</dt>
- <dd>A {{domxref("DOMString")}} representing an enumerated value indicating how the content of the cell must be vertically aligned. It reflects the {{htmlattrxref("valign", "td")}} attribute and can have one of the following values: <code>"top"</code>, <code>"middle"</code>, <code>"bottom"</code>, or <code>"baseline"</code>. Use the CSS {{cssxref("vertical-align")}} property instead.</dd>
- <dt>{{domxref("HTMLTableCellElement.width")}} {{deprecated_inline}}</dt>
- <dd>A {{domxref("DOMString")}} specifying the number of pixels wide the cell should be drawn, if possible. This property reflects the also obsolete {{htmlattrxref("width", "td")}} attribute. Use the CSS {{cssxref("width")}} property instead.</dd>
-</dl>
+## Deprecated properties
 
-<h2 id="Specifications">Specifications</h2>
+> **Warning:** These properties have been {{Glossary("deprecated")}} and should no longer be used. They are documented primarily to help understand older code bases.
+
+- {{domxref("HTMLTableCellElement.align")}} {{deprecated_inline}}
+  - : A {{domxref("DOMString")}} containing an enumerated value reflecting the {{htmlattrxref("align", "td")}} attribute. It indicates the alignment of the element's contents with respect to the surrounding context. The possible values are `"left"`, `"right"`, and `"center"`.
+- {{domxref("HTMLTableCellElement.axis")}} {{deprecated_inline}}
+  - : A {{domxref("DOMString")}} containing a name grouping cells in virtual. It reflects the obsolete {{htmlattrxref("axis", "td")}} attribute.
+- {{domxref("HTMLTableCellElement.bgColor")}} {{deprecated_inline}}
+  - : A {{domxref("DOMString")}} containing the background color of the cells. It reflects the obsolete {{htmlattrxref("bgColor", "td")}} attribute.
+- {{domxref("HTMLTableCellElement.ch")}} {{deprecated_inline}}
+  - : A {{domxref("DOMString")}} containing one single chararcter. This character is the one to align all the cell of a column on. It reflects the {{htmlattrxref("char", "td")}} and default to the decimal points associated with the language, e.g. `'.'` for English, or `','` for French. This property was optional and was not very well supported.
+- {{domxref("HTMLTableCellElement.chOff")}} {{deprecated_inline}}
+  - : A {{domxref("DOMString")}} containing a integer indicating how many characters must be left at the right (for left-to-right scripts; or at the left for right-to-left scripts) of the character defined by `HTMLTableCellElement.ch`. This property was optional and was not very well supported.
+- {{domxref("HTMLTableCellElement.height")}} {{deprecated_inline}}
+  - : A {{domxref("DOMString")}} containing a length of pixel of the hinted height of the cell. It reflects the obsolete {{htmlattrxref("height", "td")}} attribute.
+- {{domxref("HTMLTableCellElement.noWrap")}} {{deprecated_inline}}
+  - : A boolean value reflecting the {{htmlattrxref("nowrap", "td")}} attribute and indicating if cell content can be broken in several lines.
+- {{domxref("HTMLTableCellElement.vAlign")}} {{deprecated_inline}}
+  - : A {{domxref("DOMString")}} representing an enumerated value indicating how the content of the cell must be vertically aligned. It reflects the {{htmlattrxref("valign", "td")}} attribute and can have one of the following values: `"top"`, `"middle"`, `"bottom"`, or `"baseline"`. Use the CSS {{cssxref("vertical-align")}} property instead.
+- {{domxref("HTMLTableCellElement.width")}} {{deprecated_inline}}
+  - : A {{domxref("DOMString")}} specifying the number of pixels wide the cell should be drawn, if possible. This property reflects the also obsolete {{htmlattrxref("width", "td")}} attribute. Use the CSS {{cssxref("width")}} property instead.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The HTML elements implementing this interface: {{HTMLElement("th")}} and {{HTMLElement("td")}}.</li>
-</ul>
+- The HTML elements implementing this interface: {{HTMLElement("th")}} and {{HTMLElement("td")}}.

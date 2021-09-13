@@ -2,36 +2,37 @@
 title: RTCRtpContributingSource.timestamp
 slug: Web/API/RTCRtpContributingSource/timestamp
 tags:
-- API
-- Media
-- Property
-- RTCRtpContributingSource
-- Reference
-- WebRTC
-- timeStamp
+  - API
+  - Media
+  - Property
+  - RTCRtpContributingSource
+  - Reference
+  - WebRTC
+  - timeStamp
 browser-compat: api.RTCRtpContributingSource.timestamp
 ---
-<div>{{APIRef("WebRTC API")}}</div>
+{{APIRef("WebRTC API")}}
 
-<p>The read-only <strong><code>timestamp</code></strong> property
-    of the {{domxref("RTCRtpContributingSource")}} dictionary contains a
-    {{domxref("DOMHighResTimeStamp")}} indicating the most recent time of playout of an
-    RTP packet from the source.</p>
+The read-only **`timestamp`** property
+of the {{domxref("RTCRtpContributingSource")}} dictionary contains a
+{{domxref("DOMHighResTimeStamp")}} indicating the most recent time of playout of an
+RTP packet from the source.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>domHighResTimeStamp</em> = <em>RTCRtpContributingSource</em>.timestamp</pre>
+```js
+var domHighResTimeStamp = RTCRtpContributingSource.timestamp
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMHighResTimeStamp")}} which indicates the time at which the most recent
-  RTP packet from the corresponding source was played out.</p>
+A {{domxref("DOMHighResTimeStamp")}} which indicates the time at which the most recent
+RTP packet from the corresponding source was played out.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

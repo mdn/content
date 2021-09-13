@@ -2,53 +2,51 @@
 title: Notification.tag
 slug: Web/API/Notification/tag
 tags:
-- API
-- Notification
-- Notifications
-- Notifications API
-- Property
-- Reference
-- tag
+  - API
+  - Notification
+  - Notifications
+  - Notifications API
+  - Property
+  - Reference
+  - tag
 browser-compat: api.Notification.tag
 ---
-<p>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</p>
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-<p>The <strong><code>tag</code></strong> read-only property of the
-  {{domxref("Notification")}} interface signifies an identifying tag for the notification,
-  as specified in the <code>tag</code> option of the
-  {{domxref("Notification.Notification","Notification()")}} constructor.</p>
+The **`tag`** read-only property of the
+{{domxref("Notification")}} interface signifies an identifying tag for the notification,
+as specified in the `tag` option of the
+{{domxref("Notification.Notification","Notification()")}} constructor.
 
-<p>The idea of notification tags is that more than one notification can share the same
-  tag, linking them together. One notification can then be programmatically replaced with
-  another to avoid the users' screen being filled up with a huge number of similar
-  notifications.</p>
+The idea of notification tags is that more than one notification can share the same
+tag, linking them together. One notification can then be programmatically replaced with
+another to avoid the users' screen being filled up with a huge number of similar
+notifications.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>tag</var> = <var>Notification</var>.tag;
-</pre>
+```js
+var tag = Notification.tag;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}}.</p>
+A {{domxref("DOMString")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Our <a
-    href="/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API#Dealing_with_repeated_notifications">Using
-    the Notifications API</a> article has a good example of tag usage.</p>
+Our [Using
+the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API#Dealing_with_repeated_notifications) article has a good example of tag usage.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using
-      the Notifications API</a></li>
-</ul>
+- [Using
+  the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)

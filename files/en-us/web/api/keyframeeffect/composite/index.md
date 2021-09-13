@@ -13,42 +13,40 @@ tags:
   - web animations api
 browser-compat: api.KeyframeEffect.composite
 ---
-<p>{{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}</p>
+{{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}
 
-<p>The <code><strong>composite</strong></code> property of a {{domxref("KeyframeEffect")}} resolves how an element's animation impacts its underlying property values.</p>
+The **`composite`** property of a {{domxref("KeyframeEffect")}} resolves how an element's animation impacts its underlying property values.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">// getting
+```js
+// getting
 var compositeEnumeration = keyframeEffect.composite;
 
 // setting
-keyframeEffect.composite = 'accumulate';</pre>
+keyframeEffect.composite = 'accumulate';
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>To understand these values, take the example of a <code>keyframeEffect</code> value of <code>blur(2)</code> working on an underlying property value of  <code>blur(3)</code>.</p>
+To understand these values, take the example of a `keyframeEffect` value of `blur(2)` working on an underlying property value of  `blur(3)`.
 
-<dl>
- <dt>replace</dt>
- <dd>The <code>keyframeEffect</code> <strong>overrides</strong> the underlying value it is combined with:  <code>blur(2) </code>replaces<code> blur(3)</code>.</dd>
- <dt>add</dt>
- <dd>The <code>keyframeEffect</code> is <strong>added</strong> to the underlying value with which it is combined (aka <em>additive</em>):  <code>blur(2) blur(3)</code>.</dd>
- <dt>accumulate</dt>
- <dd>The keyframeEffect is <strong>accumulated</strong> on to the underlying value:  <code>blur(5)</code>.</dd>
-</dl>
+- replace
+  - : The `keyframeEffect` **overrides** the underlying value it is combined with:  `blur(2) `replaces` blur(3)`.
+- add
+  - : The `keyframeEffect` is **added** to the underlying value with which it is combined (aka _additive_):  `blur(2) blur(3)`.
+- accumulate
+  - : The keyframeEffect is **accumulated** on to the underlying value:  `blur(5)`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
- <li>Property of {{domxref("KeyframeEffect")}} objects.</li>
-</ul>
+- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
+- Property of {{domxref("KeyframeEffect")}} objects.

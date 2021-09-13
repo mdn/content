@@ -10,27 +10,29 @@ tags:
   - mouse lock
 browser-compat: api.Document.pointerLockElement
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The read-only <strong><code>pointerLockElement</code></strong> property
-    of the {{domxref("Document")}} interface provides the
-    element set as the target for mouse events while the pointer is locked. It is
-    <code>null</code> if lock is pending, pointer is unlocked, or the target is in another
-    document.</p>
+The read-only **`pointerLockElement`** property
+of the {{domxref("Document")}} interface provides the
+element set as the target for mouse events while the pointer is locked. It is
+`null` if lock is pending, pointer is unlocked, or the target is in another
+document.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>document</var>.pointerLockElement;</pre>
+```js
+document.pointerLockElement;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("Element")}} or <code>null</code>.</p>
+An {{domxref("Element")}} or `null`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Determine if a canvas element is currently pointer locked.</p>
+Determine if a canvas element is currently pointer locked.
 
-<pre class="brush: js">
+```js
 if (document.pointerLockElement === canvasElement) {
   console.log('The pointer lock status is now locked');
   // Do something useful in response
@@ -38,20 +40,18 @@ if (document.pointerLockElement === canvasElement) {
   console.log('The pointer lock status is now unlocked');
   // Do something useful in response
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{ domxref("Document.exitPointerLock()") }}</li>
-  <li>{{ domxref("Element.requestPointerLock()") }}</li>
-  <li><a href="/en-US/docs/Web/API/Pointer_Lock_API">Pointer Lock</a></li>
-</ul>
+- {{ domxref("Document.exitPointerLock()") }}
+- {{ domxref("Element.requestPointerLock()") }}
+- [Pointer Lock](/en-US/docs/Web/API/Pointer_Lock_API)

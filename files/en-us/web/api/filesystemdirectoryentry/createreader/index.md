@@ -2,43 +2,45 @@
 title: FileSystemDirectoryEntry.createReader()
 slug: Web/API/FileSystemDirectoryEntry/createReader
 tags:
-- API
-- File and Directory Entries API
-- FileSystemDirectoryEntry
-- Files
-- Method
-- Reference
-- createReader
+  - API
+  - File and Directory Entries API
+  - FileSystemDirectoryEntry
+  - Files
+  - Method
+  - Reference
+  - createReader
 browser-compat: api.FileSystemDirectoryEntry.createReader
 ---
-<p>{{APIRef("File and Directory Entries API")}}</p>
+{{APIRef("File and Directory Entries API")}}
 
-<p>The {{domxref("FileSystemDirectoryEntry")}} interface's method
-  <strong><code>createReader()</code></strong> returns a
-  {{domxref("FileSystemDirectoryReader")}} object which can be used to read the entries in
-  the directory.</p>
+The {{domxref("FileSystemDirectoryEntry")}} interface's method
+**`createReader()`** returns a
+{{domxref("FileSystemDirectoryReader")}} object which can be used to read the entries in
+the directory.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>directoryReader</em> = <em>FileSystemDirectoryEntry</em>.createReader();</pre>
+```js
+directoryReader = FileSystemDirectoryEntry.createReader();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("FileSystemDirectoryReader")}} object which can be used to read the
-  directory's entries.</p>
+A {{domxref("FileSystemDirectoryReader")}} object which can be used to read the
+directory's entries.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example creates a method called <code>readDirectory()</code>, which fetches all of
-  the entries in the specified {{domxref("FileSystemDirectoryEntry")}} and returns them in
-  an array.</p>
+This example creates a method called `readDirectory()`, which fetches all of
+the entries in the specified {{domxref("FileSystemDirectoryEntry")}} and returns them in
+an array.
 
-<pre class="brush: js">function readDirectory(directory) {
+```js
+function readDirectory(directory) {
   let dirReader = directory.createReader();
   let entries = [];
 
@@ -55,33 +57,31 @@ browser-compat: api.FileSystemDirectoryEntry.createReader
 
   getEntries();
   return entries;
-}</pre>
+}
+```
 
-<p>This works by creating an internal function, <code>getEntries()</code>, which calls
-  itself recursively to get all the entries in the directory, concatenating each batch to
-  the array. Each iteration, {{domxref("FileSystemDirectoryReader.readEntries",
+This works by creating an internal function, `getEntries()`, which calls
+itself recursively to get all the entries in the directory, concatenating each batch to
+the array. Each iteration, {{domxref("FileSystemDirectoryReader.readEntries",
   "readEntries()")}} is called to get more entries. When it returns an empty array, the
-  end of the directory has been reached, and the recursion ends. Once control is returned
-  to <code>readDirectory()</code>, the array is returned to the caller.</p>
+end of the directory has been reached, and the recursion ends. Once control is returned
+to `readDirectory()`, the array is returned to the caller.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory
-      Entries API</a></li>
-  <li><a
-      href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">Introduction
-      to the File System API</a></li>
-  <li>{{domxref("FileSystemDirectoryReader")}}</li>
-  <li>{{domxref("FileSystemDirectoryEntry")}}</li>
-  <li>{{domxref("FileSystemFileEntry")}}</li>
-  <li>{{domxref("FileSystemEntry")}}</li>
-</ul>
+- [File and Directory
+  Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction
+  to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- {{domxref("FileSystemDirectoryReader")}}
+- {{domxref("FileSystemDirectoryEntry")}}
+- {{domxref("FileSystemFileEntry")}}
+- {{domxref("FileSystemEntry")}}

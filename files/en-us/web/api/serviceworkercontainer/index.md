@@ -13,52 +13,47 @@ tags:
   - Workers
 browser-compat: api.ServiceWorkerContainer
 ---
-<p>{{APIRef("Service Workers API")}}</p>
+{{APIRef("Service Workers API")}}
 
-<p>The <code>ServiceWorkerContainer</code> interface of the <a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a> provides an object representing the service worker as an overall unit in the network ecosystem, including facilities to register, unregister and update service workers, and access the state of service workers and their registrations.</p>
+The `ServiceWorkerContainer` interface of the [Service Worker API](/en-US/docs/Web/API/Service_Worker_API) provides an object representing the service worker as an overall unit in the network ecosystem, including facilities to register, unregister and update service workers, and access the state of service workers and their registrations.
 
-<p>Most importantly, it exposes the {{domxref("ServiceWorkerContainer.register", "ServiceWorkerContainer.register()")}} method used to register service workers, and the {{domxref("ServiceWorkerContainer.controller")}} property used to determine whether or not the current page is actively controlled.</p>
+Most importantly, it exposes the {{domxref("ServiceWorkerContainer.register", "ServiceWorkerContainer.register()")}} method used to register service workers, and the {{domxref("ServiceWorkerContainer.controller")}} property used to determine whether or not the current page is actively controlled.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("ServiceWorkerContainer.controller")}} {{readonlyinline}}</dt>
- <dd>Returns a {{domxref("ServiceWorker")}} object if its state is <code>activating</code> or <code>activated</code> (the same object returned by {{domxref("ServiceWorkerRegistration.active")}}). This property returns <code>null</code> during a force-refresh request (<em>Shift</em> + refresh) or if there is no active worker.</dd>
- <dt>{{domxref("ServiceWorkerContainer.ready")}} {{readonlyinline}}</dt>
- <dd>Provides a way of delaying code execution until a service worker is active. It returns a {{jsxref("Promise")}} that will never reject, and which waits indefinitely until the {{domxref("ServiceWorkerRegistration")}} associated with the current page has an {{domxref("ServiceWorkerRegistration.active")}} worker. Once that condition is met, it resolves with the {{domxref("ServiceWorkerRegistration")}}.</dd>
-</dl>
+- {{domxref("ServiceWorkerContainer.controller")}} {{readonlyinline}}
+  - : Returns a {{domxref("ServiceWorker")}} object if its state is `activating` or `activated` (the same object returned by {{domxref("ServiceWorkerRegistration.active")}}). This property returns `null` during a force-refresh request (_Shift_ + refresh) or if there is no active worker.
+- {{domxref("ServiceWorkerContainer.ready")}} {{readonlyinline}}
+  - : Provides a way of delaying code execution until a service worker is active. It returns a {{jsxref("Promise")}} that will never reject, and which waits indefinitely until the {{domxref("ServiceWorkerRegistration")}} associated with the current page has an {{domxref("ServiceWorkerRegistration.active")}} worker. Once that condition is met, it resolves with the {{domxref("ServiceWorkerRegistration")}}.
 
-<h2 id="Events">Events</h2>
+## Events
 
-<dl>
- <dt><code>controllerchange</code></dt>
- <dd>Occurs when the document's associated {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.active","active")}} worker.<br>
- Also available via the {{domxref("ServiceWorkerContainer.oncontrollerchange")}} property.</dd>
- <dt><code>error</code></dt>
- <dd>Fired whenever an error occurs in the associated service workers.</dd>
- <dt><code><a href="/en-US/docs/Web/API/ServiceWorkerContainer/message_event">message</a></code></dt>
- <dd>Occurs when incoming messages are received by the {{domxref("ServiceWorkerContainer")}} object (e.g. via a {{domxref("MessagePort.postMessage()")}} call.)<br>
- Also available via the {{domxref("ServiceWorkerContainer.onmessage")}} property.</dd>
-</dl>
+- `controllerchange`
+  - : Occurs when the document's associated {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.active","active")}} worker.
+    Also available via the {{domxref("ServiceWorkerContainer.oncontrollerchange")}} property.
+- `error`
+  - : Fired whenever an error occurs in the associated service workers.
+- [`message`](/en-US/docs/Web/API/ServiceWorkerContainer/message_event)
+  - : Occurs when incoming messages are received by the {{domxref("ServiceWorkerContainer")}} object (e.g. via a {{domxref("MessagePort.postMessage()")}} call.)
+    Also available via the {{domxref("ServiceWorkerContainer.onmessage")}} property.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("ServiceWorkerContainer.register", "ServiceWorkerContainer.register()")}} </dt>
- <dd>Creates or updates a {{domxref("ServiceWorkerRegistration")}} for the given <code>scriptURL</code>.</dd>
- <dt>{{domxref("ServiceWorkerContainer.getRegistration()")}}</dt>
- <dd>Gets a {{domxref("ServiceWorkerRegistration")}} object whose scope matches the provided document URL.  The method returns a {{jsxref("Promise")}} that resolves to a {{domxref("ServiceWorkerRegistration")}} or <code>undefined</code>. </dd>
- <dt>{{domxref("ServiceWorkerContainer.getRegistrations()")}}</dt>
- <dd>Returns all {{domxref("ServiceWorkerRegistration")}} objects associated with a <code>ServiceWorkerContainer</code> in an array.  The method returns a {{jsxref("Promise")}} that resolves to an array of {{domxref("ServiceWorkerRegistration")}}. </dd>
- <dt>{{domxref("ServiceWorkerContainer.startMessages()")}}</dt>
- <dd>explicitly starts the flow of messages being dispatched from a service worker to pages under its control (e.g. sent via {{domxref("Client.postMessage()")}}). This can be used to react to sent messages earlier, even before that page's content has finished loading.</dd>
-</dl>
+- {{domxref("ServiceWorkerContainer.register", "ServiceWorkerContainer.register()")}}
+  - : Creates or updates a {{domxref("ServiceWorkerRegistration")}} for the given `scriptURL`.
+- {{domxref("ServiceWorkerContainer.getRegistration()")}}
+  - : Gets a {{domxref("ServiceWorkerRegistration")}} object whose scope matches the provided document URL.  The method returns a {{jsxref("Promise")}} that resolves to a {{domxref("ServiceWorkerRegistration")}} or `undefined`.
+- {{domxref("ServiceWorkerContainer.getRegistrations()")}}
+  - : Returns all {{domxref("ServiceWorkerRegistration")}} objects associated with a `ServiceWorkerContainer` in an array.  The method returns a {{jsxref("Promise")}} that resolves to an array of {{domxref("ServiceWorkerRegistration")}}.
+- {{domxref("ServiceWorkerContainer.startMessages()")}}
+  - : explicitly starts the flow of messages being dispatched from a service worker to pages under its control (e.g. sent via {{domxref("Client.postMessage()")}}). This can be used to react to sent messages earlier, even before that page's content has finished loading.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The example below first checks to see if the browser supports service workers. If supported, the code registers the service worker and determines if the page is actively controlled by the service worker. If it isn't, it prompts the user to reload the page so the service worker can take control. The code also reports any registration failures.</p>
+The example below first checks to see if the browser supports service workers. If supported, the code registers the service worker and determines if the page is actively controlled by the service worker. If it isn't, it prompts the user to reload the page so the service worker can take control. The code also reports any registration failures.
 
-<pre class="brush: js">if ('serviceWorker' in navigator) {
+```js
+if ('serviceWorker' in navigator) {
   // Register a service worker hosted at the root of the
   // site using the default scope.
   navigator.serviceWorker.register('/sw.js').then(function(registration) {
@@ -88,22 +83,21 @@ browser-compat: api.ServiceWorkerContainer
   };
 } else {
   console.log('Service workers are not supported.');
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</a></li>
- <li><a class="external external-icon" href="https://github.com/mdn/sw-test">Service workers basic code example</a></li>
- <li><a class="external external-icon" href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
- <li>{{jsxref("Promise")}}</li>
- <li><a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web workers</a></li>
-</ul>
+- [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- {{jsxref("Promise")}}
+- [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

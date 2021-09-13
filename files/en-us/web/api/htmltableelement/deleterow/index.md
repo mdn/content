@@ -2,71 +2,74 @@
 title: HTMLTableElement.deleteRow()
 slug: Web/API/HTMLTableElement/deleteRow
 tags:
-- API
-- HTML DOM
-- HTMLTableElement
-- Method
-- NeedsSpecTable
-- Reference
+  - API
+  - HTML DOM
+  - HTMLTableElement
+  - Method
+  - NeedsSpecTable
+  - Reference
 browser-compat: api.HTMLTableElement.deleteRow
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <code><strong>HTMLTableElement.deleteRow()</strong></code> method removes a
-  specific row ({{HtmlElement("tr")}}) from a given {{HtmlElement("table")}}.</p>
+The **`HTMLTableElement.deleteRow()`** method removes a
+specific row ({{HtmlElement("tr")}}) from a given {{HtmlElement("table")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>HTMLTableElement</em>.deleteRow(<em>index</em>)</pre>
+```js
+HTMLTableElement.deleteRow(index)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>index</code></dt>
-  <dd><code>index</code> is an integer representing the row that should be deleted.<br>
-    However, the special index <code>-1</code> can be used to remove the very last row of
-    a table.</dd>
-</dl>
+- `index`
+  - : `index` is an integer representing the row that should be deleted.
+    However, the special index `-1` can be used to remove the very last row of
+    a table.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>No return value</p>
+No return value
 
-<h3 id="Errors_thrown">Errors thrown</h3>
+### Errors thrown
 
-<p>If the number of the row to delete, specified by the parameter, is greater or equal to
-  the number of available rows, or if it is negative and not equal to the special index
-  <code>-1</code>, representing the last row of the table, the exception
-  <code>INDEX_SIZE_ERR</code> is thrown.</p>
+If the number of the row to delete, specified by the parameter, is greater or equal to
+the number of available rows, or if it is negative and not equal to the special index
+`-1`, representing the last row of the table, the exception
+`INDEX_SIZE_ERR` is thrown.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example uses JavaScript to delete a table's second row.</p>
+This example uses JavaScript to delete a table's second row.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html;">&lt;table&gt;
-  &lt;tr&gt;&lt;td&gt;Cell 1.1&lt;/td&gt;&lt;td&gt;Cell 1.2&lt;/td&gt;&lt;td&gt;Cell 1.3&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;Cell 2.1&lt;/td&gt;&lt;td&gt;Cell 2.2&lt;/td&gt;&lt;td&gt;Cell 2.3&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;Cell 3.1&lt;/td&gt;&lt;td&gt;Cell 3.2&lt;/td&gt;&lt;td&gt;Cell 3.3&lt;/td&gt;&lt;/tr&gt;
-&lt;/table&gt;</pre>
+```html
+<table>
+  <tr><td>Cell 1.1</td><td>Cell 1.2</td><td>Cell 1.3</td></tr>
+  <tr><td>Cell 2.1</td><td>Cell 2.2</td><td>Cell 2.3</td></tr>
+  <tr><td>Cell 3.1</td><td>Cell 3.2</td><td>Cell 3.3</td></tr>
+</table>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js;">let table = document.querySelector('table');
+```js
+let table = document.querySelector('table');
 
 // Delete second row
-table.deleteRow(1);</pre>
+table.deleteRow(1);
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -13,39 +13,37 @@ tags:
   - touch
 browser-compat: api.TouchEvent.targetTouches
 ---
-<p>{{ APIRef("Touch Events") }}</p>
+{{ APIRef("Touch Events") }}
 
-<p>The <code><strong>targetTouches</strong></code> read-only property is a {{ domxref("TouchList") }} listing all the {{ domxref("Touch") }} objects for touch points that are still in contact with the touch surface <strong>and</strong> whose {{event("touchstart")}} event occurred inside the same target {{ domxref("element") }} as the current target element.</p>
+The **`targetTouches`** read-only property is a {{ domxref("TouchList") }} listing all the {{ domxref("Touch") }} objects for touch points that are still in contact with the touch surface **and** whose {{event("touchstart")}} event occurred inside the same target {{ domxref("element") }} as the current target element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="eval">var <em>touches</em> = <em>touchEvent</em>.targetTouches;
-</pre>
+    var touches = touchEvent.targetTouches;
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<dl>
- <dt><code>touches</code></dt>
- <dd>A {{ domxref("TouchList") }} listing all the {{ domxref("Touch") }} objects for touch points that are still in contact with the touch surface <strong>and</strong> whose <code>touchstart</code> event occurred inside the same target {{ domxref("element") }} as the current target element.</dd>
-</dl>
+- `touches`
+  - : A {{ domxref("TouchList") }} listing all the {{ domxref("Touch") }} objects for touch points that are still in contact with the touch surface **and** whose `touchstart` event occurred inside the same target {{ domxref("element") }} as the current target element.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example illustrates the {{domxref("TouchEvent")}} object's {{domxref("TouchEvent.targetTouches")}} property. The {{domxref("TouchEvent.targetTouches")}} property is a {{domxref("TouchList")}} object that includes those TPs that are currently touching the surface <em>and</em> started on the element that is the target of the current event. As such, the <code>targetTouches</code> list is a strict subset of the <code>touches</code> list.</p>
+This example illustrates the {{domxref("TouchEvent")}} object's {{domxref("TouchEvent.targetTouches")}} property. The {{domxref("TouchEvent.targetTouches")}} property is a {{domxref("TouchList")}} object that includes those TPs that are currently touching the surface _and_ started on the element that is the target of the current event. As such, the `targetTouches` list is a strict subset of the `touches` list.
 
-<p>In following code snippet, the function compares the length of the <code>touches</code> list to the length of the <code>targetTouches</code> list and returns <code>true</code> if the lengths are the same and returns <code>false</code> otherwise.</p>
+In following code snippet, the function compares the length of the `touches` list to the length of the `targetTouches` list and returns `true` if the lengths are the same and returns `false` otherwise.
 
-<pre class="brush: js">function touches_in_target(ev) {
+```js
+function touches_in_target(ev) {
   // Return true if all of the touches are within the target element;
   // otherwise return false.
   return (ev.touches.length == ev.targetTouches.length ? true : false);
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

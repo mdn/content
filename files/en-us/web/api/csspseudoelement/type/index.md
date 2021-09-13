@@ -10,54 +10,50 @@ tags:
   - Type
 browser-compat: api.CSSPseudoElement.type
 ---
-<p>{{APIRef}}{{SeeCompatTable}}</p>
+{{APIRef}}{{SeeCompatTable}}
 
-<p>The <strong><code>type</code></strong> read-only property of the
-  {{DOMxRef('CSSPseudoElement')}} interface returns the type of the pseudo-element as a
-  string, represented in the form of a <a
-    href="/en-US/docs/Web/CSS/CSS_Selectors#pseudo-elements">CSS selector</a>.</p>
+The **`type`** read-only property of the
+{{DOMxRef('CSSPseudoElement')}} interface returns the type of the pseudo-element as a
+string, represented in the form of a [CSS selector](/en-US/docs/Web/CSS/CSS_Selectors#pseudo-elements).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>typeOfPseudoElement</em> = <em>cssPseudoElement</em>.type;
-</pre>
+```js
+var typeOfPseudoElement = cssPseudoElement.type;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{DOMxRef('CSSOMString')}} containing one of the following values:</p>
+A {{DOMxRef('CSSOMString')}} containing one of the following values:
 
-<ul>
-  <li>{{CSSxRef('::before', '"::before"')}}</li>
-  <li>{{CSSxRef('::after', '"::after"')}}</li>
-  <li>{{CSSxRef('::marker', '"::marker"')}}</li>
-</ul>
+- {{CSSxRef('::before', '"::before"')}}
+- {{CSSxRef('::after', '"::after"')}}
+- {{CSSxRef('::marker', '"::marker"')}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The example below demonstrates the relationship between
-  <code>CSSPseudoElement.type</code> and {{DOMxRef('Element.pseudo()')}}:</p>
+The example below demonstrates the relationship between
+`CSSPseudoElement.type` and {{DOMxRef('Element.pseudo()')}}:
 
-<pre class="brush: js">const myElement = document.querySelector('q');
+```js
+const myElement = document.querySelector('q');
 const mySelector = '::after';
 const cssPseudoElement = myElement.pseudo(mySelector);
 const typeOfPseudoElement = cssPseudoElement.type;
 
 console.log(mySelector === typeOfPseudoElement); // Outputs true
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{DOMxRef('Element.pseudo()')}}</li>
-  <li><a
-      href="/en-US/docs/Web/CSS/Pseudo-elements#index_of_standard_pseudo-elements">Index
-      of standard pseudo-elements</a></li>
-</ul>
+- {{DOMxRef('Element.pseudo()')}}
+- [Index
+  of standard pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements#index_of_standard_pseudo-elements)

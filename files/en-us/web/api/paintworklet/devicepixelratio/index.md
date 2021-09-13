@@ -15,34 +15,34 @@ tags:
   - paintWorklet
 browser-compat: api.PaintWorkletGlobalScope.devicePixelRatio
 ---
-<p>{{draft}}{{APIRef("CSS Painting API")}}</p>
+{{draft}}{{APIRef("CSS Painting API")}}
 
-<p>The <strong><code>PaintWorkletGlobalScope.devicePixelRatio</code></strong> read-only property of the {{domxref("PaintWorklet")}} interface returns the current device's ratio of physical pixels to logical pixels.</p>
+The **`PaintWorkletGlobalScope.devicePixelRatio`** read-only property of the {{domxref("PaintWorklet")}} interface returns the current device's ratio of physical pixels to logical pixels.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var devicePixelRatio = <em>PaintWorkletGlobalScope</em>.devicePixelRatio;</pre>
+```js
+var devicePixelRatio = PaintWorkletGlobalScope.devicePixelRatio;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A double-precision integer.</p>
+A double-precision integer.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/PaintWorklet">PaintWorklet</a></li>
- <li><a href="/en-US/docs/Web/API/CSS/paintWorklet">CSS.paintWorklet</a></li>
- <li><a href="/en-US/docs/Web/API/Worklet">Worklet</a></li>
- <li><a href="/en-US/docs/Web/API/CSS_Painting_API">CSS Painting API</a></li>
- <li><a href="/en-US/docs/Web/Houdini">Houdini APIs</a></li>
- <li><a href="/en-US/docs/Web/Houdini/learn">Houdini overview</a></li>
- <li><a href="/en-US/docs/Web/API/Window/devicePixelRatio">window.devicePixelRatio</a></li>
-</ul>
+- [PaintWorklet](/en-US/docs/Web/API/PaintWorklet)
+- [CSS.paintWorklet](/en-US/docs/Web/API/CSS/paintWorklet)
+- [Worklet](/en-US/docs/Web/API/Worklet)
+- [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API)
+- [Houdini APIs](/en-US/docs/Web/Houdini)
+- [Houdini overview](/en-US/docs/Web/Houdini/learn)
+- [window.devicePixelRatio](/en-US/docs/Web/API/Window/devicePixelRatio)

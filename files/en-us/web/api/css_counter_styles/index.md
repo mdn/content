@@ -6,34 +6,25 @@ tags:
   - CSS Counter Styles
   - Overview
 ---
-<div>{{DefaultAPISidebar("CSS Counter Styles")}}{{SeeCompatTable}}</div>
+{{DefaultAPISidebar("CSS Counter Styles")}}{{SeeCompatTable}}
 
-<p>The CSS Counter Styles module allows to define custom counter styles, which can be used for CSS list-marker and generated-content counters.</p>
+The CSS Counter Styles module allows to define custom counter styles, which can be used for CSS list-marker and generated-content counters.
 
-<h2 id="Interfaces">Interfaces</h2>
+## Interfaces
 
-<dl>
- <dt>{{domxref("CSSCounterStyleRule")}}</dt>
- <dd>Represents an {{cssxref("@counter-style")}} rule.</dd>
-</dl>
+- {{domxref("CSSCounterStyleRule")}}
+  - : Represents an {{cssxref("@counter-style")}} rule.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications("api.CSSCounterStyleRule")}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
-<h3 id="CSSCounterStyleRule_interface"><code>CSSCounterStyleRule</code> interface</h3>
+### `CSSCounterStyleRule` interface
 
-<div>
+{{Compat("api.CSSCounterStyleRule")}}
 
-<p>{{Compat("api.CSSCounterStyleRule")}}</p>
-</div>
-</div>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters">Using CSS counters</a></li>
-</ul>
+- [Using CSS counters](/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters)

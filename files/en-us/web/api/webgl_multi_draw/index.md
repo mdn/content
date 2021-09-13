@@ -8,83 +8,82 @@ tags:
   - WebGL extension
 browser-compat: api.WEBGL_multi_draw
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <code><strong>WEBGL_multi_draw</strong></code> extension is part of the
-<a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> and allows to render more
+The **`WEBGL_multi_draw`** extension is part of the
+[WebGL API](/en-US/docs/Web/API/WebGL_API) and allows to render more
 than one primitive with a single function call. This can improve a WebGL application's performance
-as it reduces binding costs in the renderer and speeds up GPU thread time with uniform data.</p>
+as it reduces binding costs in the renderer and speeds up GPU thread time with uniform data.
 
-<p>When this extension is enabled:</p>
-<ul>
-  <li>New methods that handle multiple lists of arguments in one call are added
-    (see method list below).</li>
-  <li>The <code>gl_DrawID</code> built-in is added to the shading language.</li>
-</ul>
+When this extension is enabled:
 
-<div class="note">
-  <p><strong>Note:</strong> This extension is available to both,
-  {{domxref("WebGLRenderingContext", "WebGL 1", "", 1)}} and
-  {{domxref("WebGL2RenderingContext", "WebGL 2", "", 1)}} contexts.</p>
-  <p>In shader code, the directive <code>#extension GL_ANGLE_multi_draw</code>
-  needs to be called to enable the extension.</p>
-  <p>This extension enables the {{domxref("ANGLE_instanced_arrays")}} extension implicitly.</p>
-</div>
+- New methods that handle multiple lists of arguments in one call are added
+  (see method list below).
+- The `gl_DrawID` built-in is added to the shading language.
 
-<h2 id="Methods">Methods</h2>
+> **Note:** This extension is available to both,
+> {{domxref("WebGLRenderingContext", "WebGL 1", "", 1)}} and
+> {{domxref("WebGL2RenderingContext", "WebGL 2", "", 1)}} contexts.
+>
+> In shader code, the directive `#extension GL_ANGLE_multi_draw`
+> needs to be called to enable the extension.
+>
+> This extension enables the {{domxref("ANGLE_instanced_arrays")}} extension implicitly.
 
-<dl>
- <dt><a href="/en-US/docs/Web/API/WEBGL_multi_draw/multiDrawArraysWEBGL"><code>ext.multiDrawArraysWEBGL()</code></a></dt>
- <dd>Renders multiple primitives from array data (identical to multiple calls to
-   <a href="/en-US/docs/Web/API/WebGLRenderingContext/drawArrays"><code>drawArrays</code></a>).</dd>
- <dt><a href="/en-US/docs/Web/API/WEBGL_multi_draw/multiDrawElementsWEBGL"><code>ext.multiDrawElementsWEBGL()</code></a></dt>
- <dd>Renders multiple primitives from element array data (identical to multiple calls to
-   <a href="en-US/docs/Web/API/WebGLRenderingContext/drawElements"><code>drawElements</code></a>).</dd>
- <dt><a href="/en-US/docs/Web/API/WEBGL_multi_draw/multiDrawArraysInstancedWEBGL"><code>ext.multiDrawArraysInstancedWEBGL()</code></a></dt>
- <dd>Renders multiple primitives from array data (identical to multiple calls to
-   <a href="/en-US/docs/Web/API/WebGL2RenderingContext/drawArraysInstanced"><code>drawArraysInstanced</code></a>).</dd>
- <dt><a href="/en-US/docs/Web/API/WEBGL_multi_draw/multiDrawElementsInstancedWEBGL"><code>ext.multiDrawElementsInstancedWEBGL()</code></a></dt>
- <dd>Renders multiple primitives from element array data (identical to multiple calls to
-   <a href="/en-US/docs/Web/API/WebGL2RenderingContext/drawElementsInstanced"><code>drawElementsInstanced</code></a>).</dd>
-</dl>
+## Methods
 
-<h2 id="Shader_extension">Shader extension</h2>
+- [`ext.multiDrawArraysWEBGL()`](/en-US/docs/Web/API/WEBGL_multi_draw/multiDrawArraysWEBGL)
+  - : Renders multiple primitives from array data (identical to multiple calls to
+    [`drawArrays`](/en-US/docs/Web/API/WebGLRenderingContext/drawArrays)).
+- [`ext.multiDrawElementsWEBGL()`](/en-US/docs/Web/API/WEBGL_multi_draw/multiDrawElementsWEBGL)
+  - : Renders multiple primitives from element array data (identical to multiple calls to
+    [`drawElements`](en-US/docs/Web/API/WebGLRenderingContext/drawElements)).
+- [`ext.multiDrawArraysInstancedWEBGL()`](/en-US/docs/Web/API/WEBGL_multi_draw/multiDrawArraysInstancedWEBGL)
+  - : Renders multiple primitives from array data (identical to multiple calls to
+    [`drawArraysInstanced`](/en-US/docs/Web/API/WebGL2RenderingContext/drawArraysInstanced)).
+- [`ext.multiDrawElementsInstancedWEBGL()`](/en-US/docs/Web/API/WEBGL_multi_draw/multiDrawElementsInstancedWEBGL)
+  - : Renders multiple primitives from element array data (identical to multiple calls to
+    [`drawElementsInstanced`](/en-US/docs/Web/API/WebGL2RenderingContext/drawElementsInstanced)).
 
-<p>Note: Although the extension name is named <code>WEBGL_multi_draw</code>,
-the extension must be enabled with the <code>#extension GL_ANGLE_multi_draw</code>
-directive to use the extension in a shader.</p>
+## Shader extension
 
-<p>When this extension is enabled, the <code>gl_DrawID</code> built-in can be used
-in shader code. For any <code>multi*</code> draw call variant,
-the index of the draw <code>i</code> may be read by the vertex shader
-as <code>gl_DrawID</code>. For non-<code>multi*</code> calls, the value of
-<code>gl_DrawID</code> is <code>0</code>.</p>
+Note: Although the extension name is named `WEBGL_multi_draw`,
+the extension must be enabled with the `#extension GL_ANGLE_multi_draw`
+directive to use the extension in a shader.
 
-<pre class="brush: html">&lt;script type="x-shader/x-vertex"&gt;
+When this extension is enabled, the `gl_DrawID` built-in can be used
+in shader code. For any `multi*` draw call variant,
+the index of the draw `i` may be read by the vertex shader
+as `gl_DrawID`. For non-`multi*` calls, the value of
+`gl_DrawID` is `0`.
+
+```html
+<script type="x-shader/x-vertex">
 #extension GL_ANGLE_multi_draw : require
 void main() {
   gl_Position = vec4(gl_DrawID, 0, 0, 1);
 }
-&lt;/script&gt;</pre>
+</script>
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3>Enabling the extension</h3>
+### Enabling the extension
 
-<p>WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method.
-  For more information, see also <a href="/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</a>
-  in the <a href="/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</a>.</p>
+WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method.
+For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions)
+in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
 
-<pre class="brush:js">
+```js
 let ext = gl.getExtension('WEBGL_multi_draw');
-</pre>
+```
 
-<h3>Drawing multiple arrays</h3>
+### Drawing multiple arrays
 
-<p>Example calls for <a href="/en-US/docs/Web/API/WEBGL_multi_draw/multiDrawArraysWEBGL"><code>ext.multiDrawArraysWEBGL()</code></a>
-and <a href="/en-US/docs/Web/API/WEBGL_multi_draw/multiDrawArraysInstancedWEBGL"><code>ext.multiDrawArraysInstancedWEBGL()</code></a>:</p>
+Example calls for [`ext.multiDrawArraysWEBGL()`](/en-US/docs/Web/API/WEBGL_multi_draw/multiDrawArraysWEBGL)
+and [`ext.multiDrawArraysInstancedWEBGL()`](/en-US/docs/Web/API/WEBGL_multi_draw/multiDrawArraysInstancedWEBGL):
 
-<pre class="brush:js">
+```js
 // multiDrawArrays variant
 // let firsts = new Int32Array(...);
 // let counts = new Int32Array(...);
@@ -96,16 +95,17 @@ ext.multiDrawArraysWEBGL(gl.TRIANGLES, firsts, 0, counts, 0, firsts.length);
 // let instanceCounts = new Int32Array(...);
 ext.multiDrawArraysInstancedWEBGL(
   gl.TRIANGLES, firsts, 0, counts, 0, instanceCounts, 0, firsts.length);
-</pre>
+```
 
-<h3>Drawing multiple elements</h3>
+### Drawing multiple elements
 
-<p>Example calls for <a href="/en-US/docs/Web/API/WEBGL_multi_draw/multiDrawElementsWEBGL"><code>ext.multiDrawElementsWEBGL()</code></a>
-and <a href="/en-US/docs/Web/API/WEBGL_multi_draw/multiDrawElementsInstancedWEBGL"><code>ext.multiDrawElementsInstancedWEBGL()</code></a>.</p>
-<p>Assumes that the indices which have been previously uploaded to the
-<code>ELEMENT_ARRAY_BUFFER</code> are to be treated as <code>UNSIGNED_SHORT</code>.</p>
+Example calls for [`ext.multiDrawElementsWEBGL()`](/en-US/docs/Web/API/WEBGL_multi_draw/multiDrawElementsWEBGL)
+and [`ext.multiDrawElementsInstancedWEBGL()`](/en-US/docs/Web/API/WEBGL_multi_draw/multiDrawElementsInstancedWEBGL).
 
-<pre class="brush:js">
+Assumes that the indices which have been previously uploaded to the
+`ELEMENT_ARRAY_BUFFER` are to be treated as `UNSIGNED_SHORT`.
+
+```js
 // multiDrawElements variant
 // let counts = new Int32Array(...);
 // let offsets = new Int32Array(...);
@@ -121,23 +121,21 @@ ext.multiDrawElementsInstancedWEBGL(
     gl.TRIANGLES, counts, 0, gl.UNSIGNED_SHORT, offsets, 0, instanceCounts, 0,
     counts.length);
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.drawArrays()")}}</li>
- <li>{{domxref("WebGLRenderingContext.drawElements()")}}</li>
- <li>{{domxref("ANGLE_instanced_arrays.drawArraysInstancedANGLE()")}} or
-     in WebGL 2: {{domxref("WebGL2RenderingContext.drawArraysInstanced()")}}</li>
- <li>{{domxref("ANGLE_instanced_arrays.drawElementsInstancedANGLE()")}} or
-     in WebGL 2: {{domxref("WebGL2RenderingContext.drawElementsInstanced()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.drawArrays()")}}
+- {{domxref("WebGLRenderingContext.drawElements()")}}
+- {{domxref("ANGLE_instanced_arrays.drawArraysInstancedANGLE()")}} or
+  in WebGL 2: {{domxref("WebGL2RenderingContext.drawArraysInstanced()")}}
+- {{domxref("ANGLE_instanced_arrays.drawElementsInstancedANGLE()")}} or
+  in WebGL 2: {{domxref("WebGL2RenderingContext.drawElementsInstanced()")}}

@@ -10,30 +10,29 @@ tags:
   - detune
 browser-compat: api.OscillatorNode.detune
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>The <code>detune</code> property of the {{ domxref("OscillatorNode") }} interface is an <a href="/en-US/docs/Web/API/AudioParam#a-rate">a-rate</a> {{domxref("AudioParam")}} representing detuning of oscillation in <a href="https://en.wikipedia.org/wiki/Cent_%28music%29">cents</a>.</p>
-</div>
+The `detune` property of the {{ domxref("OscillatorNode") }} interface is an [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} representing detuning of oscillation in [cents](https://en.wikipedia.org/wiki/Cent_%28music%29).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var oscillator = audioCtx.createOscillator();
-oscillator.detune.setValueAtTime(100, audioCtx.currentTime); // value in cents</pre>
+```js
+var oscillator = audioCtx.createOscillator();
+oscillator.detune.setValueAtTime(100, audioCtx.currentTime); // value in cents
+```
 
-<div class="note">
-<p><strong>Note:</strong> though the <code>AudioParam</code> returned is read-only, the value it represents is not.</p>
-</div>
+> **Note:** though the `AudioParam` returned is read-only, the value it represents is not.
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An <a href="/en-US/docs/Web/API/AudioParam#a-rate">a-rate</a> {{domxref("AudioParam")}}.</p>
+An [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example shows basic usage of an {{ domxref("AudioContext") }} to create an oscillator node. For applied examples/information, check out our <a href="https://mdn.github.io/violent-theremin/">Violent Theremin demo</a> (<a href="https://github.com/mdn/violent-theremin/blob/gh-pages/scripts/app.js">see app.js</a> for relevant code).</p>
+The following example shows basic usage of an {{ domxref("AudioContext") }} to create an oscillator node. For applied examples/information, check out our [Violent Theremin demo](https://mdn.github.io/violent-theremin/) ([see app.js](https://github.com/mdn/violent-theremin/blob/gh-pages/scripts/app.js) for relevant code).
 
-<pre class="brush: js;">// create web audio api context
+```js
+// create web audio api context
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
 // create Oscillator node
@@ -42,18 +41,17 @@ var oscillator = audioCtx.createOscillator();
 oscillator.type = 'square';
 oscillator.frequency.setValueAtTime(440, audioCtx.currentTime); // value in hertz
 oscillator.detune.setValueAtTime(100, audioCtx.currentTime); // value in cents
-oscillator.start();</pre>
+oscillator.start();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

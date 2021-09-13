@@ -9,15 +9,13 @@ tags:
   - Non-standard
   - Reference
 ---
-<div>{{APIRef("Web Audio API")}}{{Non-standard_header}}{{Deprecated_header}}</div>
+{{APIRef("Web Audio API")}}{{Non-standard_header}}{{Deprecated_header}}
 
-<p>The non-standard, obsolete, <code><strong>NotifyAudioAvailableEvent</strong></code> interface defines the event sent to audio elements  when the audio buffer is full.</p>
+The non-standard, obsolete, **`NotifyAudioAvailableEvent`** interface defines the event sent to audio elements  when the audio buffer is full.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt><code>frameBuffer</code> {{ReadOnlyInline}}</dt>
- <dd>A {{jsxref("Float32Array")}} containing the raw 32-bit floating-point audio data obtained from decoding the audio (e.g., the raw data being sent to the audio hardware vs. encoded audio). The data is a series of audio samples, each sample containing one 32-bit value per audio channel. All audio frames are normalized to contain 1024 samples by default, but could be any length between 512 and 16384 samples if the user has set a different length using the <code><strong>mozFrameBufferLength</strong></code> attribute.</dd>
- <dt><code>time</code></dt>
- <dd>A floating-point value indicating the time in seconds at which the first sample in the <code>frameBuffer</code> occurs, relative to the start of the audio track.</dd>
-</dl>
+- `frameBuffer` {{ReadOnlyInline}}
+  - : A {{jsxref("Float32Array")}} containing the raw 32-bit floating-point audio data obtained from decoding the audio (e.g., the raw data being sent to the audio hardware vs. encoded audio). The data is a series of audio samples, each sample containing one 32-bit value per audio channel. All audio frames are normalized to contain 1024 samples by default, but could be any length between 512 and 16384 samples if the user has set a different length using the **`mozFrameBufferLength`** attribute.
+- `time`
+  - : A floating-point value indicating the time in seconds at which the first sample in the `frameBuffer` occurs, relative to the start of the audio track.

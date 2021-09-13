@@ -9,40 +9,45 @@ tags:
   - PerformanceElementTiming
 browser-compat: api.PerformanceElementTiming.intersectionRect
 ---
-<div>{{DefaultAPISidebar("Element Timing")}}</div>
+{{DefaultAPISidebar("Element Timing")}}
 
-<p>The <strong><code>intersectionRect</code></strong> read-only property of the {{domxref("PerformanceElementTiming")}} interface returns the rectangle of the element within the viewport.</p>
+The **`intersectionRect`** read-only property of the {{domxref("PerformanceElementTiming")}} interface returns the rectangle of the element within the viewport.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <var>rect</var> = <var>PerformanceElementTiming</var>.intersectionRect;</pre>
+    var rect = PerformanceElementTiming.intersectionRect;
 
-<h3>Value</h3>
-<p>A {{domxref("DOMRectReadOnly")}} which is the rectangle of the element within the viewport.</p>
+### Value
 
-<p>For display images this is the display rectangle of the image within the viewport. For text this is the display rectangle of the node in the viewport. This being the smallest rectangle that contains the union of all text nodes that belong to the element.</p>
+A {{domxref("DOMRectReadOnly")}} which is the rectangle of the element within the viewport.
 
-<h2 id="Examples">Examples</h2>
+For display images this is the display rectangle of the image within the viewport. For text this is the display rectangle of the node in the viewport. This being the smallest rectangle that contains the union of all text nodes that belong to the element.
 
-<p>In this example calling <code>entry.intersectionRect</code> returns a {{domxref("DOMRectReadOnly")}} object with the display rectangle of the image.</p>
+## Examples
 
-<pre class="brush:html">&lt;img src="image.jpg" alt="a nice image" elementtiming="big-image" id="myImage"&gt;</pre>
+In this example calling `entry.intersectionRect` returns a {{domxref("DOMRectReadOnly")}} object with the display rectangle of the image.
 
-<pre class="brush:js">const observer = new PerformanceObserver((list) => {
+```html
+<img src="image.jpg" alt="a nice image" elementtiming="big-image" id="myImage">
+```
+
+```js
+const observer = new PerformanceObserver((list) => {
   let entries = list.getEntries().forEach(function (entry) {
     if (entry.identifier === "big-image") {
       console.log(entry.intersectionRect);
     }
   });
 });
-observer.observe({ entryTypes: ["element"] });</pre>
+observer.observe({ entryTypes: ["element"] });
+```
 
-<div class="notecard note"><p><strong>Note:</strong> This example uses the {{domxref("PerformanceObserver")}} interface to create a list of performance measurement events. In our case we observe the {{domxref("PerformanceEntry.entrytype")}} <code>element</code> in order to use the <code>PerformanceElementTiming</code> interface.</p></div>
+> **Note:** This example uses the {{domxref("PerformanceObserver")}} interface to create a list of performance measurement events. In our case we observe the {{domxref("PerformanceEntry.entrytype")}} `element` in order to use the `PerformanceElementTiming` interface.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

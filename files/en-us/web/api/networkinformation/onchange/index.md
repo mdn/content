@@ -2,29 +2,31 @@
 title: NetworkInformation.onchange
 slug: Web/API/NetworkInformation/onchange
 tags:
-- API
-- Event Handler
-- Experimental
-- Network Information API
-- NetworkInformation
-- Property
-- Reference
+  - API
+  - Event Handler
+  - Experimental
+  - Network Information API
+  - NetworkInformation
+  - Property
+  - Reference
 browser-compat: api.NetworkInformation.onchange
 ---
-<p>{{apiref("Network Information API")}}{{SeeCompatTable}}</p>
+{{apiref("Network Information API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>NetworkInformation.onchange</code></strong> event handler contains
-  the code that is fired when connection information changes, and the {{event("change")}}
-  is received by the {{domxref("NetworkInformation")}} object.</p>
+The **`NetworkInformation.onchange`** event handler contains
+the code that is fired when connection information changes, and the {{event("change")}}
+is received by the {{domxref("NetworkInformation")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>netInfo</em>.onchange = function() { ... }
-</pre>
+```js
+netInfo.onchange = function() { ... }
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">// Get the connection type.
+```js
+// Get the connection type.
 var type = navigator.connection.type;
 
 function changeHandler(e) {
@@ -34,12 +36,13 @@ function changeHandler(e) {
 // Register for event changes:
 navigator.connection.onchange = changeHandler;
 
-// Another way: navigator.connection.addEventListener('change', changeHandler);</pre>
+// Another way: navigator.connection.addEventListener('change', changeHandler);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

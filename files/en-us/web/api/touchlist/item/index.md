@@ -2,49 +2,47 @@
 title: TouchList.item()
 slug: Web/API/TouchList/item
 tags:
-- API
-- DOM
-- DOM Reference
-- Method
-- Mobile
-- Reference
-- TouchList
-- touch
+  - API
+  - DOM
+  - DOM Reference
+  - Method
+  - Mobile
+  - Reference
+  - TouchList
+  - touch
 browser-compat: api.TouchList.item
 ---
-<p>{{ APIRef("Touch Events") }}</p>
+{{ APIRef("Touch Events") }}
 
-<p>The <code><strong>item()</strong></code> method returns the {{ domxref("Touch") }}
-  object at the specified index in the {{ domxref("TouchList") }}.</p>
+The **`item()`** method returns the {{ domxref("Touch") }}
+object at the specified index in the {{ domxref("TouchList") }}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>touchPoint</em> = <em>touchList</em>.item(<em>index</em>);
-</pre>
+```js
+var touchPoint = touchList.item(index);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>index</code></dt>
-  <dd>The index of the {{ domxref("Touch") }} object to retrieve. The index is a number in
-    the range of 0 to one less than the length of the {{ domxref("TouchList") }}.</dd>
-</dl>
+- `index`
+  - : The index of the {{ domxref("Touch") }} object to retrieve. The index is a number in
+    the range of 0 to one less than the length of the {{ domxref("TouchList") }}.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<dl>
-  <dt><code>touchPoint</code></dt>
-  <dd>The requested {{ domxref("Touch") }} object from the {{ domxref("TouchList") }}.
-    Returns <code>null</code> if the index is not less than the length of the list.</dd>
-</dl>
+- `touchPoint`
+  - : The requested {{ domxref("Touch") }} object from the {{ domxref("TouchList") }}.
+    Returns `null` if the index is not less than the length of the list.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This code example illustrates the use of the {{domxref("TouchList")}} interface's
-  {{domxref("TouchList.item()","item")}} method and the
-  {{domxref("TouchList.length","length")}} property.</p>
+This code example illustrates the use of the {{domxref("TouchList")}} interface's
+{{domxref("TouchList.item()","item")}} method and the
+{{domxref("TouchList.length","length")}} property.
 
-<pre class="brush: js">target = document.getElementById("target");
+```js
+target = document.getElementById("target");
 
 target.addEventListener('touchstart', function(ev) {
 
@@ -53,18 +51,17 @@ target.addEventListener('touchstart', function(ev) {
   // otherwise set touch to the first item in the touches list
   var touch;
 
-  if (ev.targetTouches.length &gt;= 1)
+  if (ev.targetTouches.length >= 1)
      touch = ev.targetTouches.item(0);
   else
      touch = ev.touches.item(0);
 }, false);
+```
 
-</pre>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

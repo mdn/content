@@ -3,29 +3,27 @@ title: HTMLMediaElement.onwaitingforkey
 slug: Web/API/HTMLMediaElement/onwaitingforkey
 browser-compat: api.HTMLMediaElement.onwaitingforkey
 ---
-<p>{{APIRef("Encrypted Media Extensions")}}{{ SeeCompatTable() }}</p>
+{{APIRef("Encrypted Media Extensions")}}{{ SeeCompatTable() }}
 
-<p>The <strong><code>onwaitingforkey</code></strong> property of
-        the {{domxref("HTMLMediaElement")}} is an event handler, fired when a
-        {{Event("waitingforkey")}} event  occurs, when playback is blocked while waiting
-        for an encryption key.</p>
+The **`onwaitingforkey`** property of
+the {{domxref("HTMLMediaElement")}} is an event handler, fired when a
+{{Event("waitingforkey")}} event  occurs, when playback is blocked while waiting
+for an encryption key.
 
-<p>This interface inherits from the {{domxref("ExtendableEvent")}} interface.</p>
+This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 
-<p>{{InheritanceDiagram(700, 60, 20)}}</p>
+{{InheritanceDiagram(700, 60, 20)}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">HTMLMediaElement.onwaitingforkey = function(waitingforkey) { ... }
-</pre>
+```js
+HTMLMediaElement.onwaitingforkey = function(waitingforkey) { ... }
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
-
-    <p>{{Compat}}</p>
-</div>
+{{Compat}}

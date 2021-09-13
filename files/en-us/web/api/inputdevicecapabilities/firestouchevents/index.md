@@ -5,37 +5,40 @@ tags:
   - needsTags
 browser-compat: api.InputDeviceCapabilities.firesTouchEvents
 ---
-<p>{{SeeCompatTable}}{{APIRef()}}</p>
+{{SeeCompatTable}}{{APIRef()}}
 
-<p>The <strong><code>InputDeviceCapabilities.firesTouchEvents</code></strong> read-only
-	property returns a boolean value that indicates whether the device dispatches
-	touch events.</p>
+The **`InputDeviceCapabilities.firesTouchEvents`** read-only
+property returns a boolean value that indicates whether the device dispatches
+touch events.
 
-<p>You can use this property to detect mouse events that represent an action that may
-	already have been handled by touch event handlers. This doesn't necessarily mean the
-	device is a touch screen. For example, stylus and mouse devices typically generate
-	touch events on mobile browsers.</p>
+You can use this property to detect mouse events that represent an action that may
+already have been handled by touch event handlers. This doesn't necessarily mean the
+device is a touch screen. For example, stylus and mouse devices typically generate
+touch events on mobile browsers.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-	class="brush: js">var boolean = InputDeviceCapabilities.firesTouchEvents</pre>
+```js
+var boolean = InputDeviceCapabilities.firesTouchEvents
+```
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A {{jsxref('Boolean')}}</p>
+A {{jsxref('Boolean')}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">myButton.addEventListener('mousedown', function(e) {
+```js
+myButton.addEventListener('mousedown', function(e) {
   if (!e.sourceCapabilities.firesTouchEvents)
     myButton.classList.add("pressed");
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -10,64 +10,68 @@ tags:
   - transitionrun
 browser-compat: api.Document.transitionrun_event
 ---
-<div>{{APIRef}}{{SeeCompatTable}}</div>
+{{APIRef}}{{SeeCompatTable}}
 
-<p>The <strong><code>transitionrun</code></strong> event is fired when a <a href="/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">CSS transition</a> is first created, i.e. before any {{cssxref("transition-delay")}} has begun.</p>
+The **`transitionrun`** event is fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) is first created, i.e. before any {{cssxref("transition-delay")}} has begun.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("TransitionEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("GlobalEventHandlers/ontransitionrun", "ontransitionrun")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("TransitionEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{domxref("GlobalEventHandlers/ontransitionrun", "ontransitionrun")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>The original target for this event is the {{domxref("Element")}} that had the transition applied. You can listen for this event on the {{domxref("Document")}} interface to handle it in the capture or bubbling phases. For full details on this event please see the page on <a href="/en-US/docs/Web/API/HTMLElement/transitionrun_event">HTMLElement: transitionrun</a>.</p>
+The original target for this event is the {{domxref("Element")}} that had the transition applied. You can listen for this event on the {{domxref("Document")}} interface to handle it in the capture or bubbling phases. For full details on this event please see the page on [HTMLElement: transitionrun](/en-US/docs/Web/API/HTMLElement/transitionrun_event).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This code adds a listener to the <code>transitionrun</code> event:</p>
+This code adds a listener to the `transitionrun` event:
 
-<pre class="brush: js">document.addEventListener('transitionrun', () =&gt; {
+```js
+document.addEventListener('transitionrun', () => {
   console.log('Transition is running but hasn't necessarily started transitioning yet');
-});</pre>
+});
+```
 
-<p>The same, but using the {{domxref("GlobalEventHandlers/ontransitionrun", "ontransitionrun")}} property instead of <code>addEventListener()</code>:</p>
+The same, but using the {{domxref("GlobalEventHandlers/ontransitionrun", "ontransitionrun")}} property instead of `addEventListener()`:
 
-<pre class="brush: js">document.ontransitionrun = () =&gt; {
+```js
+document.ontransitionrun = () => {
   console.log('Transition started running');
-};</pre>
+};
+```
 
-<p><a href="/en-US/docs/Web/API/HTMLElement/transitionrun_event#live_example">See a live example of this event.</a></p>
+[See a live example of this event.](/en-US/docs/Web/API/HTMLElement/transitionrun_event#live_example)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The {{domxref("GlobalEventHandlers.ontransitionrun")}} event handler</li>
- <li>The {{domxref("TransitionEvent")}} interface</li>
- <li>CSS properties: {{cssxref("transition")}}, {{cssxref("transition-delay")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-property")}}, {{cssxref("transition-timing-function")}}</li>
- <li>Related events: {{domxref("Document/transitionend_event", "transitionend")}}, {{domxref("Document/transitionstart_event", "transitionstart")}}, {{domxref("Document/transitioncancel_event", "transitioncancel")}}</li>
- <li>This event on {{domxref("HTMLElement")}} targets: {{domxref("HTMLElement/transitionrun_event", "transitionrun")}}</li>
- <li>This event on {{domxref("Window")}} targets: {{domxref("Window/transitionrun_event", "transitionrun")}}</li>
-</ul>
+- The {{domxref("GlobalEventHandlers.ontransitionrun")}} event handler
+- The {{domxref("TransitionEvent")}} interface
+- CSS properties: {{cssxref("transition")}}, {{cssxref("transition-delay")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-property")}}, {{cssxref("transition-timing-function")}}
+- Related events: {{domxref("Document/transitionend_event", "transitionend")}}, {{domxref("Document/transitionstart_event", "transitionstart")}}, {{domxref("Document/transitioncancel_event", "transitioncancel")}}
+- This event on {{domxref("HTMLElement")}} targets: {{domxref("HTMLElement/transitionrun_event", "transitionrun")}}
+- This event on {{domxref("Window")}} targets: {{domxref("Window/transitionrun_event", "transitionrun")}}

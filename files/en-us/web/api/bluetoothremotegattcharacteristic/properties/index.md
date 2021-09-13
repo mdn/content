@@ -2,37 +2,38 @@
 title: BluetoothRemoteGATTCharacteristic.properties
 slug: Web/API/BluetoothRemoteGATTCharacteristic/properties
 tags:
-- API
-- Bluetooth
-- BluetoothRemoteGATTCharacteristic
-- Experimental
-- Property
-- Reference
-- Web Bluetooth API
-- properties
+  - API
+  - Bluetooth
+  - BluetoothRemoteGATTCharacteristic
+  - Experimental
+  - Property
+  - Reference
+  - Web Bluetooth API
+  - properties
 browser-compat: api.BluetoothRemoteGATTCharacteristic.properties
 ---
-<p>{{SeeCompatTable}}</p>
+{{SeeCompatTable}}
 
-<p>The <strong><code>BluetoothRemoteGATTCharacteristic.properties</code></strong>
-  read-only property returns a {{domxref('BluetoothCharacteristicProperties')}} instance
-  containing the properties of this characteristic.</p>
+The **`BluetoothRemoteGATTCharacteristic.properties`**
+read-only property returns a {{domxref('BluetoothCharacteristicProperties')}} instance
+containing the properties of this characteristic.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>properties</em> = BluetoothRemoteGATTCharacteristic.properties</pre>
+```js
+var properties = BluetoothRemoteGATTCharacteristic.properties
+```
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>The properties of this characteristic.</p>
+The properties of this characteristic.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<div>{{APIRef("Web Bluetooth")}}</div>
+{{APIRef("Web Bluetooth")}}

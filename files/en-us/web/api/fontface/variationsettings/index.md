@@ -2,36 +2,38 @@
 title: FontFace.variationSettings
 slug: Web/API/FontFace/variationSettings
 tags:
-- API
-- CSS Font Loading API
-- CSSOM
-- FontFace
-- Fonts
-- Property
-- Reference
-- variationSettings
+  - API
+  - CSS Font Loading API
+  - CSSOM
+  - FontFace
+  - Fonts
+  - Property
+  - Reference
+  - variationSettings
 browser-compat: api.FontFace.variationSettings
 ---
-<div>{{APIRef("CSS Font Loading API")}}</div>
+{{APIRef("CSS Font Loading API")}}
 
-<p>The <strong><code>variationSettings</code></strong> property of the
-  {{domxref("FontFace")}} interface retrieves or sets low-level OpenType or TrueType font variations.
-  It is equivalent to the
-  {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}} descriptor.</p>
+The **`variationSettings`** property of the
+{{domxref("FontFace")}} interface retrieves or sets low-level OpenType or TrueType font variations.
+It is equivalent to the
+{{cssxref("@font-face/font-variation-settings", "font-variation-settings")}} descriptor.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let variationSettingDescriptor = FontFace.variationSettings;
-FontFace.variationSettings = variationSettingDescriptor;</pre>
+```js
+let variationSettingDescriptor = FontFace.variationSettings;
+FontFace.variationSettings = variationSettingDescriptor;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref('CSSOMString')}} containing a descriptor.</p>
+A {{domxref('CSSOMString')}} containing a descriptor.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

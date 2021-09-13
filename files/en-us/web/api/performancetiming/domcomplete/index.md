@@ -2,48 +2,45 @@
 title: PerformanceTiming.domComplete
 slug: Web/API/PerformanceTiming/domComplete
 tags:
-- API
-- Backwards compatibility
-- Deprecated
-- HTML
-- Navigation Timing
-- PerformanceTiming
-- Property
-- Read-only
-- legacy
+  - API
+  - Backwards compatibility
+  - Deprecated
+  - HTML
+  - Navigation Timing
+  - PerformanceTiming
+  - Property
+  - Read-only
+  - legacy
 browser-compat: api.PerformanceTiming.domComplete
 ---
-<p>{{APIRef("Navigation Timing")}}{{Deprecated_Header}}</p>
+{{APIRef("Navigation Timing")}}{{Deprecated_Header}}
 
-<div class="notecard warning">
-  <p><strong>Warning:</strong> This interface of this property is deprecated in the <a href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 specification</a>. Please use the {{domxref("PerformanceNavigationTiming")}}
-    interface instead.</p>
-</div>
+> **Warning:** This interface of this property is deprecated in the [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete). Please use the {{domxref("PerformanceNavigationTiming")}}
+> interface instead.
 
-<p>The legacy
-  <strong><code>PerformanceTiming.domComplete</code></strong>
-  read-only property returns an <code>unsigned long long</code> representing the moment,
-  in milliseconds since the UNIX epoch, when the parser finished its work on the main
-  document, that is when its {{domxref("Document.readyState")}} changes to
-  <code>'complete'</code> and the corresponding {{event("readystatechange")}} event is
-  thrown.</p>
+The legacy
+**`PerformanceTiming.domComplete`**
+read-only property returns an `unsigned long long` representing the moment,
+in milliseconds since the UNIX epoch, when the parser finished its work on the main
+document, that is when its {{domxref("Document.readyState")}} changes to
+`'complete'` and the corresponding {{event("readystatechange")}} event is
+thrown.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>time</em> = <em>performanceTiming</em>.domComplete;</pre>
+```js
+time = performanceTiming.domComplete;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This feature is no longer on track to become a standard, as the <a href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing specification</a> has marked it as deprecated.
-  Use the {{domxref("PerformanceNavigationTiming")}} interface instead.</p>
+This feature is no longer on track to become a standard, as the [Navigation Timing specification](https://w3c.github.io/navigation-timing/#obsolete) has marked it as deprecated.
+Use the {{domxref("PerformanceNavigationTiming")}} interface instead.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("PerformanceTiming")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("PerformanceTiming")}} interface it belongs to.

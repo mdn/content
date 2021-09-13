@@ -9,66 +9,65 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.lineJoin
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The
-  <strong><code>CanvasRenderingContext2D.lineJoin</code></strong>
-  property of the Canvas 2D API determines the shape used to join two line segments where
-  they meet.</p>
+The
+**`CanvasRenderingContext2D.lineJoin`**
+property of the Canvas 2D API determines the shape used to join two line segments where
+they meet.
 
-<p>This property has no effect wherever two connected segments have the same direction,
-  because no joining area will be added in this case. Degenerate segments with a length of
-  zero (i.e., with all endpoints and control points at the exact same position) are also
-  ignored.</p>
+This property has no effect wherever two connected segments have the same direction,
+because no joining area will be added in this case. Degenerate segments with a length of
+zero (i.e., with all endpoints and control points at the exact same position) are also
+ignored.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Lines can be drawn with the
-    {{domxref("CanvasRenderingContext2D.stroke()",
+> **Note:** Lines can be drawn with the
+> {{domxref("CanvasRenderingContext2D.stroke()",
     "stroke()")}}, {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}},
-    and {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}} methods.</p>
-</div>
+> and {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}} methods.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>ctx</em>.lineJoin = "bevel" || "round" || "miter";
-</pre>
+```js
+ctx.lineJoin = "bevel" || "round" || "miter";
+```
 
-<h3 id="Options">Options</h3>
+### Options
 
-<p>There are three possible values for this property: <code>"round"</code>,
-  <code>"bevel"</code>, and <code>"miter"</code>. The default is <code>"miter"</code>.</p>
+There are three possible values for this property: `"round"`,
+`"bevel"`, and `"miter"`. The default is `"miter"`.
 
-<p><img alt="" src="canvas_linejoin.png"></p>
+![](canvas_linejoin.png)
 
-<dl>
-  <dt><code>"round"</code></dt>
-  <dd>Rounds off the corners of a shape by filling an additional sector of disc centered
+- `"round"`
+  - : Rounds off the corners of a shape by filling an additional sector of disc centered
     at the common endpoint of connected segments. The radius for these rounded corners is
-    equal to the line width.</dd>
-  <dt><code>"bevel"</code></dt>
-  <dd>Fills an additional triangular area between the common endpoint of connected
-    segments, and the separate outside rectangular corners of each segment.</dd>
-  <dt><code>"miter"</code></dt>
-  <dd>Connected segments are joined by extending their outside edges to connect at a
+    equal to the line width.
+- `"bevel"`
+  - : Fills an additional triangular area between the common endpoint of connected
+    segments, and the separate outside rectangular corners of each segment.
+- `"miter"`
+  - : Connected segments are joined by extending their outside edges to connect at a
     single point, with the effect of filling an additional lozenge-shaped area. This
     setting is affected by the {{domxref("CanvasRenderingContext2D.miterLimit",
-    "miterLimit")}} property. Default value.</dd>
-</dl>
+    "miterLimit")}} property. Default value.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Changing_the_joins_in_a_path">Changing the joins in a path</h3>
+### Changing the joins in a path
 
-<p>This example applies rounded line joins to a path.</p>
+This example applies rounded line joins to a path.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js;">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.lineWidth = 20;
@@ -79,24 +78,27 @@ ctx.lineTo(190, 100);
 ctx.lineTo(280, 20);
 ctx.lineTo(280, 150);
 ctx.stroke();
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Changing_the_joins_in_a_path', 700, 180) }}</p>
+{{ EmbedLiveSample('Changing_the_joins_in_a_path', 700, 180) }}
 
-<h3 id="Comparison_of_line_joins">Comparison of line joins</h3>
+### Comparison of line joins
 
-<p>The example below draws three different paths, demonstrating each of the three
-  <code>lineJoin</code> options.</p>
+The example below draws three different paths, demonstrating each of the three
+`lineJoin` options.
 
-<pre class="brush: html hidden">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+```html hidden
+<canvas id="canvas" width="150" height="150"></canvas>
+```
 
-<pre class="brush: js">var ctx = document.getElementById('canvas').getContext('2d');
+```js
+var ctx = document.getElementById('canvas').getContext('2d');
 var lineJoin = ['round', 'bevel', 'miter'];
 ctx.lineWidth = 10;
 
-for (let i = 0; i &lt; lineJoin.length; i++) {
+for (let i = 0; i < lineJoin.length; i++) {
   ctx.lineJoin = lineJoin[i];
   ctx.beginPath();
   ctx.moveTo(-5, 5 + i * 40);
@@ -106,32 +108,27 @@ for (let i = 0; i &lt; lineJoin.length; i++) {
   ctx.lineTo(155, 5 + i * 40);
   ctx.stroke();
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample("Comparison_of_line_joins", "180", "180",
-  "canvas_linejoin.png")}}</p>
+{{EmbedLiveSample("Comparison_of_line_joins", "180", "180",
+  "canvas_linejoin.png")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h3 id="WebKitBlink-specific_notes">WebKit/Blink-specific notes</h3>
+### WebKit/Blink-specific notes
 
-<ul>
-  <li>In WebKit- and Blink-based Browsers, a non-standard and deprecated method
-    <code>ctx.setLineJoin()</code> is implemented in addition to this property.</li>
-</ul>
+- In WebKit- and Blink-based Browsers, a non-standard and deprecated method
+  `ctx.setLineJoin()` is implemented in addition to this property.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining this property: {{domxref("CanvasRenderingContext2D")}}</li>
-  <li>{{domxref("CanvasRenderingContext2D.lineCap")}}</li>
-  <li>{{domxref("CanvasRenderingContext2D.lineWidth")}}</li>
-  <li><a
-      href="/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Applying styles and color</a></li>
-</ul>
+- The interface defining this property: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.lineCap")}}
+- {{domxref("CanvasRenderingContext2D.lineWidth")}}
+- [Applying styles and color](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)

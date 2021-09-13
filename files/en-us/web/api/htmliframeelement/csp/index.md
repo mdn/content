@@ -11,25 +11,27 @@ tags:
   - Reference
 browser-compat: api.HTMLIFrameElement.csp
 ---
-<p>{{SeeCompatTable}}{{APIRef("HTML DOM")}}</p>
+{{SeeCompatTable}}{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>csp</code></strong> property of the {{domxref("HTMLIFrameElement")}}
-  interface specifies the <a href="/en-US/docs/Web/HTTP/CSP">Content Security Policy</a> that an
-  embedded document must agree to enforce upon itself.</p>
+The **`csp`** property of the {{domxref("HTMLIFrameElement")}}
+interface specifies the [Content Security Policy](/en-US/docs/Web/HTTP/CSP) that an
+embedded document must agree to enforce upon itself.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>csp</em> = HTMLIFrameElement.csp
-HTMLIFrameElement.csp = <em>csp</em></pre>
+```js
+var csp = HTMLIFrameElement.csp
+HTMLIFrameElement.csp = csp
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A content security policy.</p>
+A content security policy.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,31 +2,32 @@
 title: MediaKeySystemConfiguration.distinctiveIdentifier
 slug: Web/API/MediaKeySystemConfiguration/distinctiveIdentifier
 tags:
-- API
-- EncryptedMediaExtensions
-- Media
-- MediaKeySystemConfiguration
-- NeedsExample
-- Property
-- Reference
-- Video
-- distinctiveIdentifier
+  - API
+  - EncryptedMediaExtensions
+  - Media
+  - MediaKeySystemConfiguration
+  - NeedsExample
+  - Property
+  - Reference
+  - Video
+  - distinctiveIdentifier
 browser-compat: api.MediaKeySystemConfiguration.distinctiveIdentifier
 ---
-<div>{{APIRef("EncryptedMediaExtensions")}}{{SeeCompatTable}}</div>
+{{APIRef("EncryptedMediaExtensions")}}{{SeeCompatTable}}
 
-<p>The <code>MediaKeySystemConfiguration.distinctiveIdentifier</code> read-only property
-  indicates whether a persistent distinctive identifier is required.</p>
+The `MediaKeySystemConfiguration.distinctiveIdentifier` read-only property
+indicates whether a persistent distinctive identifier is required.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>distinctiveIdentifier</var> = <var>mediaSystemConfiguration</var>.distinctiveIdentifier;</pre>
+```js
+var distinctiveIdentifier = mediaSystemConfiguration.distinctiveIdentifier;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

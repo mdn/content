@@ -2,47 +2,48 @@
 title: URL.toJSON()
 slug: Web/API/URL/toJSON
 tags:
-- API
-- Method
-- Reference
-- URL
-- URL API
-- Polyfill
+  - API
+  - Method
+  - Reference
+  - URL
+  - URL API
+  - Polyfill
 browser-compat: api.URL.toJSON
 ---
-<div>{{APIRef("URL API")}}</div>
+{{APIRef("URL API")}}
 
-<p>The <strong><code>toJSON()</code></strong> method of the {{domxref("URL")}} interface
-	returns a {{domxref("USVString")}} containing a serialized version of the URL,
-	although in practice it seems to have the same effect as
-	{{domxref("URL.toString()")}}.</p>
+The **`toJSON()`** method of the {{domxref("URL")}} interface
+returns a {{domxref("USVString")}} containing a serialized version of the URL,
+although in practice it seems to have the same effect as
+{{domxref("URL.toString()")}}.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-	class="brush: js">const <em>href</em> = <em>url</em>.toJSON()</pre>
+```js
+const href = url.toJSON()
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("USVString")}}.</p>
+A {{domxref("USVString")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">const url = new URL("https://developer.mozilla.org/en-US/docs/Web/API/URL/toString");
-url.toJSON(); // should return the URL as a string</pre>
+```js
+const url = new URL("https://developer.mozilla.org/en-US/docs/Web/API/URL/toString");
+url.toJSON(); // should return the URL as a string
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>A polyfill of <code>URL.prototype.toJSON</code> is available in <a href="https://github.com/zloirock/core-js#url-and-urlsearchparams"><code>core-js</code></a></li>
-</ul>
+- A polyfill of `URL.prototype.toJSON` is available in [`core-js`](https://github.com/zloirock/core-js#url-and-urlsearchparams)

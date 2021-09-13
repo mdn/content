@@ -2,25 +2,26 @@
 title: SyncEvent.registration
 slug: Web/API/SyncEvent/registration
 tags:
-- DOM
-- Junk
-- Property
+  - DOM
+  - Junk
+  - Property
 browser-compat: api.SyncEvent.registration
 ---
-<p>{{Non-standard_header}}{{APIRef("Service Workers API")}}</p>
+{{Non-standard_header}}{{APIRef("Service Workers API")}}
 
-<p>The registration read-only property of the {{domxref("SyncEvent")}} interface returns a
-  reference to a {{domxref("SyncRegistration")}} object.</p>
+The registration read-only property of the {{domxref("SyncEvent")}} interface returns a
+reference to a {{domxref("SyncRegistration")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>syncReg</em> = SyncEvent.registration</pre>
+```js
+var syncReg = SyncEvent.registration
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("SyncRegistration")}} object</p>
+A {{domxref("SyncRegistration")}} object
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

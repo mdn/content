@@ -11,44 +11,45 @@ tags:
   - Element
 browser-compat: api.Element.ariaPlaceholder
 ---
-<div>{{DefaultAPISidebar("DOM")}}</div>
+{{DefaultAPISidebar("DOM")}}
 
-<p>The <strong><code>ariaPlaceholder</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <code>aria-placeholder</code> attribute, which defines a short hint intended to aid the user with data entry when the control has no value.</p>
+The **`ariaPlaceholder`** property of the {{domxref("Element")}} interface reflects the value of the `aria-placeholder` attribute, which defines a short hint intended to aid the user with data entry when the control has no value.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Where possible use an HTML {{htmlelement("input")}} element with <code>type="text"</code> or a {{htmlelement("textarea")}} as these have built in semantics and do not require ARIA attributes.</p>
-</div>
+> **Note:** Where possible use an HTML {{htmlelement("input")}} element with `type="text"` or a {{htmlelement("textarea")}} as these have built in semantics and do not require ARIA attributes.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox notranslate">var <var>ariaPlaceholder</var> = element.ariaPlaceholder;
-<var>element</var>.ariaPlaceholder = <var>ariaPlaceholder</var></pre>
+    var ariaPlaceholder = element.ariaPlaceholder;
+    element.ariaPlaceholder = ariaPlaceholder
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString")}}.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("DOMString")}}.
 
-<p>In this example the <code>aria-placeholder</code> attribute on the element with an ID of <code>txtBoxInput</code> has been set to a string. Using <code>ariaPlaceholder</code> we update the string to another value.</p>
+## Examples
 
-<pre class="brush: html">&lt;div id="txtboxLabel"&gt;Enter your five-digit zipcode&lt;/div&gt;
-&lt;div role="textbox" id="txtBoxInput" contenteditable="true" aria-placeholder="5-digit zipcode" aria-labelledby="txtboxLabel"&gt;&lt;/div&gt;</pre>
+In this example the `aria-placeholder` attribute on the element with an ID of `txtBoxInput` has been set to a string. Using `ariaPlaceholder` we update the string to another value.
 
-<pre class="brush: js">let el = document.getElementById('txtBoxInput');
+```html
+<div id="txtboxLabel">Enter your five-digit zipcode</div>
+<div role="textbox" id="txtBoxInput" contenteditable="true" aria-placeholder="5-digit zipcode" aria-labelledby="txtboxLabel"></div>
+```
+
+```js
+let el = document.getElementById('txtBoxInput');
 console.log(el.ariaPlaceholder); // "5-digit zipcode"
 el.ariaPlaceholder = "12345"
-console.log(el.ariaPlaceholder); // "12345"</pre>
+console.log(el.ariaPlaceholder); // "12345"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role">ARIA: textbox role</a></li>
-</ul>
+- [ARIA: textbox role](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role)

@@ -2,62 +2,39 @@
 title: Building an Internet-Connected Phone with PeerJS
 slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs
 ---
-<p>{{WebRTCSidebar}}</p>
+{{WebRTCSidebar}}
 
-<p>{{NextMenu("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Setup")}}</p>
+{{NextMenu("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Setup")}}
 
-<p>One of WebRTC's main issues is that it is pretty complicated to use and develop with — handling the signalling service and knowing when to call the right endpoint can get confusing. But there is some good news; <a href="https://peerjs.com/">PeerJS</a> is a WebRTC framework that abstracts away all of the ice and signalling logic so that you can focus on the functionality of your application. There are two parts to PeerJS, the client-side framework and the server.
+One of WebRTC's main issues is that it is pretty complicated to use and develop with — handling the signalling service and knowing when to call the right endpoint can get confusing. But there is some good news; [PeerJS](https://peerjs.com/) is a WebRTC framework that abstracts away all of the ice and signalling logic so that you can focus on the functionality of your application. There are two parts to PeerJS, the client-side framework and the server.
 
-<p>In this series of articles we will create a simple phone application using PeerJS. We’ll be using both the server and the client-side framework, but most of our work will be involved with handling the client-side code.</p>
+In this series of articles we will create a simple phone application using PeerJS. We’ll be using both the server and the client-side framework, but most of our work will be involved with handling the client-side code.
 
-<h3 id="Prerequisites">Prerequisites</h3>
+### Prerequisites
 
-<p>This is an intermediate level tutorial; before attempting it you should already be comfortable with:</p>
+This is an intermediate level tutorial; before attempting it you should already be comfortable with:
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript">Vanilla JavaScript</a></li>
- <li><a href="https://nodejs.org/en/docs/">Node</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs">Express</a></li>
- <li><a href="/en-US/docs/Web/HTML">HTML</a></li>
-</ul>
+- [Vanilla JavaScript](/en-US/docs/Web/JavaScript)
+- [Node](https://nodejs.org/en/docs/)
+- [Express](/en-US/docs/Learn/Server-side/Express_Nodejs)
+- [HTML](/en-US/docs/Web/HTML)
 
-<p>Before you get started, you'll want to make sure you've <a href="https://nodejs.org/en/download/">installed node</a> and <a href="https://classic.yarnpkg.com/en/docs/install" rel="noopener nofollow">Yarn</a> (the instructions in later articles assume Yarn, but you can feel free to use <a href="https://docs.npmjs.com/getting-started/">npm</a> or annother manager if you'd prefer).</p>
+Before you get started, you'll want to make sure you've [installed node](https://nodejs.org/en/download/) and [Yarn](https://classic.yarnpkg.com/en/docs/install) (the instructions in later articles assume Yarn, but you can feel free to use [npm](https://docs.npmjs.com/getting-started/) or annother manager if you'd prefer).
 
-<div class="note notecard">
-  <p><strong>Note:</strong> If you learn better by following step-by-step code, we've also provided this <a href="https://github.com/SamsungInternet/WebPhone/tree/master/tutorial">tutorial in code</a>, which you can use instead.</p>
-</div>
+> **Note:** If you learn better by following step-by-step code, we've also provided this [tutorial in code](https://github.com/SamsungInternet/WebPhone/tree/master/tutorial), which you can use instead.
 
-  <h3>Table of Contents</h3>
-  <ol>
-    <li>
-      <a href="Build_a_phone_with_peerjs/Setup">Setup</a>
-    </li>
-    <li>
-      <a href="Build_a_phone_with_peerjs/Connect_peers">Connect Peers</a>
-      <ol>
-        <li>
-          <a href="Build_a_phone_with_peerjs/Connect_peers/Get_microphone_permission">Get Microphone Permission</a>
-        </li>
-        <li>
-          <a href="Build_a_phone_with_peerjs/Connect_peers/Show_hide_html">Showing and hiding HTML</a>
-        </li>
-        <li>
-          <a href="Build_a_phone_with_peerjs/Connect_peers/Create_a_peer_connection">Create a Peer Connection</a>
-        </li>
-        <li>
-          <a href="Build_a_phone_with_peerjs/Connect_peers/Creating_a_call">Creating a Call</a>
-        </li>
-        <li>
-          <a href="Build_a_phone_with_peerjs/Connect_peers/Answer_a_call">Answer a Call</a>
-        </li>
-        <li>
-          <a href="Build_a_phone_with_peerjs/Connect_peers/End_a_call">End a Call</a>
-        </li>
-      </ol>
-    </li>
-    <li>
-      <a href="Build_a_phone_with_peerjs/Deployment_and_further_reading">Deployment and Further Reading</a>
-    </li>
-  </ol>
+### Table of Contents
 
-<p>{{NextMenu("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Setup")}}</p>
+1.  [Setup](Build_a_phone_with_peerjs/Setup)
+2.  [Connect Peers](Build_a_phone_with_peerjs/Connect_peers)
+
+    1.  [Get Microphone Permission](Build_a_phone_with_peerjs/Connect_peers/Get_microphone_permission)
+    2.  [Showing and hiding HTML](Build_a_phone_with_peerjs/Connect_peers/Show_hide_html)
+    3.  [Create a Peer Connection](Build_a_phone_with_peerjs/Connect_peers/Create_a_peer_connection)
+    4.  [Creating a Call](Build_a_phone_with_peerjs/Connect_peers/Creating_a_call)
+    5.  [Answer a Call](Build_a_phone_with_peerjs/Connect_peers/Answer_a_call)
+    6.  [End a Call](Build_a_phone_with_peerjs/Connect_peers/End_a_call)
+
+3.  [Deployment and Further Reading](Build_a_phone_with_peerjs/Deployment_and_further_reading)
+
+{{NextMenu("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Setup")}}

@@ -4,49 +4,31 @@ slug: Web/API/msCaching
 tags:
   - msCaching
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>{{Non-standard_header()}}</p>
+{{Non-standard_header()}}
 
-<p>The <strong><code>msCaching</code></strong> read/write property specifies whether stream data downloaded using <a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a>is cached to disk or not.</p>
+The **`msCaching`** read/write property specifies whether stream data downloaded using [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest)is cached to disk or not.
 
-<p>This proprietary method is specific to Internet Explorer and Microsoft Edge.</p>
+This proprietary method is specific to Internet Explorer and Microsoft Edge.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"> cacheState = object.msCaching
-</pre>
+```js
+ cacheState = object.msCaching
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<p>Type: DOMString</p>
+Type: DOMString
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Property value</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>auto</code></td>
-   <td>Disables caching for stream or ms-stream data.</td>
-  </tr>
-  <tr>
-   <td><code>enabled</code></td>
-   <td>Enables caching for stream or ms-stream data.</td>
-  </tr>
-  <tr>
-   <td><code>disabled</code></td>
-   <td>Disables caching for any data.</td>
-  </tr>
- </tbody>
-</table>
+| Property value | Description                                    |
+| -------------- | ---------------------------------------------- |
+| `auto`         | Disables caching for stream or ms-stream data. |
+| `enabled`      | Enables caching for stream or ms-stream data.  |
+| `disabled`     | Disables caching for any data.                 |
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/msCachingEnabled">msCachingEnabled </a></li>
- <li><a href="/en-US/docs/Web/API/Microsoft_Extensions">Microsoft API extensions </a></li>
-</ul>
+- [msCachingEnabled](/en-US/docs/Web/API/msCachingEnabled)
+- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_Extensions)

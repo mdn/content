@@ -13,47 +13,41 @@ tags:
   - track
 browser-compat: api.MediaStreamTrackEvent
 ---
-<div>{{APIRef("Media Streams API")}}</div>
+{{APIRef("Media Streams API")}}
 
-<p>The <strong><code>MediaStreamTrackEvent</code></strong> interface represents events which indicate that a {{domxref("MediaStream")}} has had tracks added to or removed from the stream through calls to <a href="/en-US/docs/Web/API/Media_Streams_API">Media Stream API</a> methods. These events are sent to the stream when these changes occur.</p>
+The **`MediaStreamTrackEvent`** interface represents events which indicate that a {{domxref("MediaStream")}} has had tracks added to or removed from the stream through calls to [Media Stream API](/en-US/docs/Web/API/Media_Streams_API) methods. These events are sent to the stream when these changes occur.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<p>The events based on this interface are {{event("addtrack")}} and {{event("removetrack")}}</p>
+The events based on this interface are {{event("addtrack")}} and {{event("removetrack")}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Also inherits properties from its parent interface, {{domxref("Event")}}.</em></p>
+_Also inherits properties from its parent interface, {{domxref("Event")}}._
 
-<dl>
- <dt><code>track</code> {{ReadOnlyInline}}</dt>
- <dd>A {{domxref("MediaStreamTrack")}} object representing the track which was added to the stream.</dd>
-</dl>
+- `track` {{ReadOnlyInline}}
+  - : A {{domxref("MediaStreamTrack")}} object representing the track which was added to the stream.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("MediaStreamTrackEvent.MediaStreamTrackEvent", "MediaStreamTrackEvent()")}}</dt>
- <dd>Constructs a new <code>MediaStreamTrackEvent</code> with the specified configuration.</dd>
-</dl>
+- {{domxref("MediaStreamTrackEvent.MediaStreamTrackEvent", "MediaStreamTrackEvent()")}}
+  - : Constructs a new `MediaStreamTrackEvent` with the specified configuration.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Also inherits methods from its parent {{domxref("Event")}}.</em></p>
+_Also inherits methods from its parent {{domxref("Event")}}._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{event("addtrack")}} and {{event("removetrack")}} events</li>
- <li>{{domxref("MediaStream")}}: {{domxref("MediaStream.onaddtrack", "onaddtrack")}} and {{domxref("MediaStream.onremovetrack", "onremovetrack")}}</li>
- <li>{{domxref("MediaStreamTrack")}}</li>
- <li><a href="/en-US/docs/Web/API/Media_Streams_API">Media Streams API</a></li>
-</ul>
+- {{event("addtrack")}} and {{event("removetrack")}} events
+- {{domxref("MediaStream")}}: {{domxref("MediaStream.onaddtrack", "onaddtrack")}} and {{domxref("MediaStream.onremovetrack", "onremovetrack")}}
+- {{domxref("MediaStreamTrack")}}
+- [Media Streams API](/en-US/docs/Web/API/Media_Streams_API)

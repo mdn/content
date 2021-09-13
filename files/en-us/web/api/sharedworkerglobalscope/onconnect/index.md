@@ -10,21 +10,24 @@ tags:
   - onconnect
 browser-compat: api.SharedWorkerGlobalScope.onconnect
 ---
-<p>{{APIRef("Web Workers API")}}</p>
+{{APIRef("Web Workers API")}}
 
-<p>The <code><strong>onconnect</strong></code> property of the {{domxref("SharedWorkerGlobalScope")}} interface is an event handler representing the code to be called when the {{event("connect")}} event is raised — that is, when a {{domxref("MessagePort")}} connection is opened between the associated {{domxref("SharedWorker")}} and the main thread.</p>
+The **`onconnect`** property of the {{domxref("SharedWorkerGlobalScope")}} interface is an event handler representing the code to be called when the {{event("connect")}} event is raised — that is, when a {{domxref("MessagePort")}} connection is opened between the associated {{domxref("SharedWorker")}} and the main thread.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">onconnect = function() { ... };</pre>
+```js
+onconnect = function() { ... };
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example shows a shared worker file — when a connection to the worker occurs from a main thread via a {{domxref("MessagePort")}}, the <code>onconnect</code> event handler fires. The event object is a {{domxref("MessageEvent")}}.</p>
+This example shows a shared worker file — when a connection to the worker occurs from a main thread via a {{domxref("MessagePort")}}, the `onconnect` event handler fires. The event object is a {{domxref("MessageEvent")}}.
 
-<p>The connecting port can be referenced through the event object's <code>ports</code> parameter; this reference can have an <code>onmessage</code> handler attached to it to handle messages coming in through the port, and its <code>postMessage()</code> method can be used to send messages back to the main thread using the worker.</p>
+The connecting port can be referenced through the event object's `ports` parameter; this reference can have an `onmessage` handler attached to it to handle messages coming in through the port, and its `postMessage()` method can be used to send messages back to the main thread using the worker.
 
-<pre class="brush: js">onconnect = function(e) {
+```js
+onconnect = function(e) {
     var port = e.ports[0];
 
     port.onmessage = function(e) {
@@ -33,24 +36,21 @@ browser-compat: api.SharedWorkerGlobalScope.onconnect
     }
 
     port.start();
-}</pre>
+}
+```
 
-<p>For a complete running example, see our <a class="external-icon external" href="https://github.com/mdn/simple-shared-worker">Basic shared worker example</a> (<a class="external-icon external" href="https://mdn.github.io/simple-shared-worker/">run shared worker</a>.)</p>
+For a complete running example, see our [Basic shared worker example](https://github.com/mdn/simple-shared-worker) ([run shared worker](https://mdn.github.io/simple-shared-worker/).)
 
-<div class="notecard note">
-<p><strong>Note:</strong> The <code>data</code> property of the event object used to be <code>null</code> in Firefox. As of version 65 it is now initialized to an empty string, as per spec ({{bug(1508824)}}).</p>
-</div>
+> **Note:** The `data` property of the event object used to be `null` in Firefox. As of version 65 it is now initialized to an empty string, as per spec ({{bug(1508824)}}).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("SharedWorkerGlobalScope")}}</li>
-</ul>
+- {{domxref("SharedWorkerGlobalScope")}}

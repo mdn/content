@@ -11,32 +11,32 @@ tags:
   - web animations api
 browser-compat: api.Animation.replaceState
 ---
-<p>{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}</p>
+{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}
 
-<p>The read-only <strong><code>Animation.replaceState</code></strong> property of the <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> returns the <a href="https://drafts.csswg.org/web-animations-1/#animation-replace-state">replace state</a> of the animation. This will be <code>active</code> if the animation has been removed, or <code>persisted</code> if {{domxref("Animation.persist()")}} has been invoked on it.</p>
+The read-only **`Animation.replaceState`** property of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) returns the [replace state](https://drafts.csswg.org/web-animations-1/#animation-replace-state) of the animation. This will be `active` if the animation has been removed, or `persisted` if {{domxref("Animation.persist()")}} has been invoked on it.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let <em>myReplaceState</em> = <em>Animation</em>.replaceState;
-</pre>
+```js
+let myReplaceState = Animation.replaceState;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A string that represents the replace state of the animation. The value can be one of:</p>
+A string that represents the replace state of the animation. The value can be one of:
 
-<ul>
- <li><code>active</code>: The initial value of the animation's replace state; when the animation has been removed by the browser's <a href="/en-US/docs/Web/API/Animation#automatically_removing_filling_animations">Automatically removing filling animations</a> behavior.</li>
- <li><code>persisted</code>: The animation has been explicitly persisted by invoking {{domxref("Animation.persist()")}} on it.</li>
- <li><code>removed</code>: The animation has been explicitly removed.</li>
-</ul>
+- `active`: The initial value of the animation's replace state; when the animation has been removed by the browser's [Automatically removing filling animations](/en-US/docs/Web/API/Animation#automatically_removing_filling_animations) behavior.
+- `persisted`: The animation has been explicitly persisted by invoking {{domxref("Animation.persist()")}} on it.
+- `removed`: The animation has been explicitly removed.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In our simple <a href="https://mdn.github.io/dom-examples/web-animations-api/replace-indefinite-animations.html">replace indefinite animations demo</a>, you can see the following code:</p>
+In our simple [replace indefinite animations demo](https://mdn.github.io/dom-examples/web-animations-api/replace-indefinite-animations.html), you can see the following code:
 
-<pre class="brush: js">const divElem = document.querySelector('div');
+```js
+const divElem = document.querySelector('div');
 
-document.body.addEventListener('mousemove', evt =&gt; {
+document.body.addEventListener('mousemove', evt => {
   let anim = divElem.animate(
     { transform: `translate(${ evt.clientX}px, ${evt.clientY}px)` },
     { duration: 500, fill: 'forwards' }
@@ -51,23 +51,22 @@ document.body.addEventListener('mousemove', evt =&gt; {
   }
 
   console.log(anim.replaceState);
-});</pre>
+});
+```
 
-<p>Here we have a <code>&lt;div&gt;</code> element, and an event listener that fires the event handler code whenever the mouse moves. The event handler sets up an animation that animates the &lt;div&gt; element to the position of the mouse pointer. This could result in a huge animations list, which could create a memory leak. For this reason, modern browsers automatically remove overriding forward filling animations.</p>
+Here we have a `<div>` element, and an event listener that fires the event handler code whenever the mouse moves. The event handler sets up an animation that animates the \<div> element to the position of the mouse pointer. This could result in a huge animations list, which could create a memory leak. For this reason, modern browsers automatically remove overriding forward filling animations.
 
-<p>You can see the <code>replaceState</code> of the animation being logged at the end of the handler. This will be <code>active</code> for each animation by default, or <code>persisted</code> if the <code>persist()</code> call is uncommented.</p>
+You can see the `replaceState` of the animation being logged at the end of the handler. This will be `active` for each animation by default, or `persisted` if the `persist()` call is uncommented.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
- <li>{{domxref("Animation")}}</li>
-</ul>
+- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
+- {{domxref("Animation")}}

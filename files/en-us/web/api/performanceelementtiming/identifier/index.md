@@ -9,38 +9,43 @@ tags:
   - PerformanceElementTiming
 browser-compat: api.PerformanceElementTiming.identifier
 ---
-<div>{{DefaultAPISidebar("Element Timing")}}</div>
+{{DefaultAPISidebar("Element Timing")}}
 
-<p>The <strong><code>identifier</code></strong> read-only property of the {{domxref("PerformanceElementTiming")}} interface returns the value of the <code><a href="/en-US/docs/Web/HTML/Attributes/elementtiming">elementtiming</a></code> attribute on the element.</p>
+The **`identifier`** read-only property of the {{domxref("PerformanceElementTiming")}} interface returns the value of the [`elementtiming`](/en-US/docs/Web/HTML/Attributes/elementtiming) attribute on the element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <var>identifier</var> = <var>PerformanceElementTiming</var>.identifier;</pre>
+    var identifier = PerformanceElementTiming.identifier;
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString")}}.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("DOMString")}}.
 
-<p>In this example the value of <code><a href="/en-US/docs/Web/HTML/Attributes/elementtiming">elementtiming</a></code> is <code>big-image</code>. Calling <code>entry.indentifier</code> therefore returns the string <code>big-image</code>.</p>
+## Examples
 
-<pre class="brush:html">&lt;img src="image.jpg" alt="a nice image" elementtiming="big-image" id="myImage"&gt;</pre>
+In this example the value of [`elementtiming`](/en-US/docs/Web/HTML/Attributes/elementtiming) is `big-image`. Calling `entry.indentifier` therefore returns the string `big-image`.
 
-<pre class="brush:js">const observer = new PerformanceObserver((list) => {
+```html
+<img src="image.jpg" alt="a nice image" elementtiming="big-image" id="myImage">
+```
+
+```js
+const observer = new PerformanceObserver((list) => {
   let entries = list.getEntries().forEach(function (entry) {
     if (entry.identifier === "big-image") {
       console.log(entry.naturalWidth);
     }
   });
 });
-observer.observe({ entryTypes: ["element"] });</pre>
+observer.observe({ entryTypes: ["element"] });
+```
 
-<div class="notecard note"><p><strong>Note:</strong> This example uses the {{domxref("PerformanceObserver")}} interface to create a list of performance measurement events. In our case we observe the {{domxref("PerformanceEntry.entrytype")}} <code>element</code> in order to use the <code>PerformanceElementTiming</code> interface.</p></div>
+> **Note:** This example uses the {{domxref("PerformanceObserver")}} interface to create a list of performance measurement events. In our case we observe the {{domxref("PerformanceEntry.entrytype")}} `element` in order to use the `PerformanceElementTiming` interface.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

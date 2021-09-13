@@ -11,65 +11,62 @@ tags:
   - Storage
 browser-compat: api.IDBIndex
 ---
-<p>{{APIRef("IndexedDB")}}</p>
+{{APIRef("IndexedDB")}}
 
-<p><code>IDBIndex</code> interface of the <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a> provides asynchronous access to an <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#index">index</a> in a database. An index is a kind of object store for looking up records in another object store, called the referenced object store. You use this interface to retrieve data.</p>
+`IDBIndex` interface of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) provides asynchronous access to an [index](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#index) in a database. An index is a kind of object store for looking up records in another object store, called the referenced object store. You use this interface to retrieve data.
 
-<p>You can retrieve records in an object store through the primary key or by using an index. An index lets you look up records in an object store using properties of the values in the object stores records other than the primary key</p>
+You can retrieve records in an object store through the primary key or by using an index. An index lets you look up records in an object store using properties of the values in the object stores records other than the primary key
 
-<p>The index is a persistent key-value storage where the value part of its records is the key part of a record in the referenced object store. The records in an index are automatically populated whenever records in the referenced object store are inserted, updated, or deleted. Each record in an index can point to only one record in its referenced object store, but several indexes can reference the same object store. When the object store changes, all indexes that refers to the object store are automatically updated.</p>
+The index is a persistent key-value storage where the value part of its records is the key part of a record in the referenced object store. The records in an index are automatically populated whenever records in the referenced object store are inserted, updated, or deleted. Each record in an index can point to only one record in its referenced object store, but several indexes can reference the same object store. When the object store changes, all indexes that refers to the object store are automatically updated.
 
-<p>You can grab a set of keys within a range. To learn more, see {{domxref("IDBKeyRange")}}.</p>
+You can grab a set of keys within a range. To learn more, see {{domxref("IDBKeyRange")}}.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("IDBIndex.isAutoLocale")}} {{readonlyInline}} {{ Non-Standard_inline() }}</dt>
- <dd>Returns a boolean value indicating whether the index had a <code>locale</code> value of <code>auto</code> specified upon its creation (see <a href="/en-US/docs/Web/API/IDBObjectStore/createIndex#parameters"><code>createIndex()</code>'s optionalParameters</a>.)</dd>
- <dt>{{domxref("IDBIndex.locale")}} {{readonlyInline}} {{ Non-Standard_inline() }}</dt>
- <dd>Returns the locale of the index (for example <code>en-US</code>, or <code>pl</code>) if it had a <code>locale</code> value specified upon its creation (see <a href="/en-US/docs/Web/API/IDBObjectStore/createIndex#parameters"><code>createIndex()</code>'s optionalParameters</a>.)</dd>
- <dt>{{domxref("IDBIndex.name")}}</dt>
- <dd>The name of this index.</dd>
- <dt>{{domxref("IDBIndex.objectStore")}} {{readonlyInline}}</dt>
- <dd>The name of the object store referenced by this index.</dd>
- <dt>{{domxref("IDBIndex.keyPath")}} {{readonlyInline}}</dt>
- <dd>The <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_path">key path</a> of this index. If null, this index is not auto-populated.</dd>
- <dt>{{domxref("IDBIndex.multiEntry")}} {{readonlyInline}}</dt>
- <dd>Affects how the index behaves when the result of evaluating the index's key path yields an array. If <code>true</code>, there is one record in the index for each item in an array of keys. If <code>false</code>, then there is one record for each key that is an array.</dd>
- <dt>{{domxref("IDBIndex.unique")}} {{readonlyInline}}</dt>
- <dd>If <code>true</code>, this index does not allow duplicate values for a key.</dd>
-</dl>
+- {{domxref("IDBIndex.isAutoLocale")}} {{readonlyInline}} {{ Non-Standard_inline() }}
+  - : Returns a boolean value indicating whether the index had a `locale` value of `auto` specified upon its creation (see [`createIndex()`'s optionalParameters](/en-US/docs/Web/API/IDBObjectStore/createIndex#parameters).)
+- {{domxref("IDBIndex.locale")}} {{readonlyInline}} {{ Non-Standard_inline() }}
+  - : Returns the locale of the index (for example `en-US`, or `pl`) if it had a `locale` value specified upon its creation (see [`createIndex()`'s optionalParameters](/en-US/docs/Web/API/IDBObjectStore/createIndex#parameters).)
+- {{domxref("IDBIndex.name")}}
+  - : The name of this index.
+- {{domxref("IDBIndex.objectStore")}} {{readonlyInline}}
+  - : The name of the object store referenced by this index.
+- {{domxref("IDBIndex.keyPath")}} {{readonlyInline}}
+  - : The [key path](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_path) of this index. If null, this index is not auto-populated.
+- {{domxref("IDBIndex.multiEntry")}} {{readonlyInline}}
+  - : Affects how the index behaves when the result of evaluating the index's key path yields an array. If `true`, there is one record in the index for each item in an array of keys. If `false`, then there is one record for each key that is an array.
+- {{domxref("IDBIndex.unique")}} {{readonlyInline}}
+  - : If `true`, this index does not allow duplicate values for a key.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p>Inherits from: <a href="/en-US/docs/Web/API/EventTarget">EventTarget</a></p>
+Inherits from: [EventTarget](/en-US/docs/Web/API/EventTarget)
 
-<dl>
- <dt>{{domxref("IDBIndex.count()")}}</dt>
- <dd>Returns an {{domxref("IDBRequest")}} object, and in a separate thread, returns the number of records within a key range.</dd>
- <dt>{{domxref("IDBIndex.get()")}}</dt>
- <dd>Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, finds either the value in the referenced object store that corresponds to the given key or the first corresponding value, if <code>key</code> is an {{domxref("IDBKeyRange")}}.</dd>
- <dt>{{domxref("IDBIndex.getKey()")}}</dt>
- <dd>Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, finds either the given key or the primary key, if <code>key</code> is an {{domxref("IDBKeyRange")}}.</dd>
- <dt>{{domxref("IDBIndex.getAll()")}}</dt>
- <dd>Returns an {{domxref("IDBRequest")}} object, in a separate thread, finds all matching values in the referenced object store that correspond to the given key or are in range, if <code>key</code> is an {{domxref("IDBKeyRange")}}.</dd>
- <dt>{{domxref("IDBIndex.getAllKeys()")}}</dt>
- <dd>Returns an {{domxref("IDBRequest")}} object, in a separate thread, finds all matching keys in the referenced object store that correspond to the given key or are in range, if <code>key</code> is an {{domxref("IDBKeyRange")}}.</dd>
- <dt>{{domxref("IDBIndex.openCursor()")}}</dt>
- <dd>Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#cursor">cursor</a> over the specified key range.</dd>
- <dt>{{domxref("IDBIndex.openKeyCursor()")}}</dt>
- <dd>Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a cursor over the specified key range, as arranged by this index.</dd>
-</dl>
+- {{domxref("IDBIndex.count()")}}
+  - : Returns an {{domxref("IDBRequest")}} object, and in a separate thread, returns the number of records within a key range.
+- {{domxref("IDBIndex.get()")}}
+  - : Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, finds either the value in the referenced object store that corresponds to the given key or the first corresponding value, if `key` is an {{domxref("IDBKeyRange")}}.
+- {{domxref("IDBIndex.getKey()")}}
+  - : Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, finds either the given key or the primary key, if `key` is an {{domxref("IDBKeyRange")}}.
+- {{domxref("IDBIndex.getAll()")}}
+  - : Returns an {{domxref("IDBRequest")}} object, in a separate thread, finds all matching values in the referenced object store that correspond to the given key or are in range, if `key` is an {{domxref("IDBKeyRange")}}.
+- {{domxref("IDBIndex.getAllKeys()")}}
+  - : Returns an {{domxref("IDBRequest")}} object, in a separate thread, finds all matching keys in the referenced object store that correspond to the given key or are in range, if `key` is an {{domxref("IDBKeyRange")}}.
+- {{domxref("IDBIndex.openCursor()")}}
+  - : Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a [cursor](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#cursor) over the specified key range.
+- {{domxref("IDBIndex.openKeyCursor()")}}
+  - : Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a cursor over the specified key range, as arranged by this index.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In the following example we open a transaction and an object store, then get the index <code>lName</code> from a simple contacts database. We then open a basic cursor on the index using {{domxref("IDBIndex.openCursor")}} — this works the same as opening a cursor directly on an <code>ObjectStore</code> using {{domxref("IDBObjectStore.openCursor")}} except that the returned records are sorted based on the index, not the primary key.</p>
+In the following example we open a transaction and an object store, then get the index `lName` from a simple contacts database. We then open a basic cursor on the index using {{domxref("IDBIndex.openCursor")}} — this works the same as opening a cursor directly on an `ObjectStore` using {{domxref("IDBObjectStore.openCursor")}} except that the returned records are sorted based on the index, not the primary key.
 
-<p>Finally, we iterate through each record, and insert the data into an HTML table. For a complete working example, see our <a href="https://github.com/mdn/indexeddb-examples/tree/master/idbindex">IndexedDB-examples demo repo</a> (<a href="https://mdn.github.io/indexeddb-examples/idbindex">View the example live</a>.)</p>
+Finally, we iterate through each record, and insert the data into an HTML table. For a complete working example, see our [IndexedDB-examples demo repo](https://github.com/mdn/indexeddb-examples/tree/master/idbindex) ([View the example live](https://mdn.github.io/indexeddb-examples/idbindex).)
 
-<pre class="brush: js">function displayDataByIndex() {
+```js
+function displayDataByIndex() {
   tableEntry.innerHTML = '';
   var transaction = db.transaction(['contactsList'], 'readonly');
   var objectStore = transaction.objectStore('contactsList');
@@ -79,14 +76,14 @@ browser-compat: api.IDBIndex
     var cursor = event.target.result;
     if(cursor) {
       var tableRow = document.createElement('tr');
-      tableRow.innerHTML =   '&lt;td&gt;' + cursor.value.id + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.lName + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.fName + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.jTitle + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.company + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.eMail + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.phone + '&lt;/td&gt;'
-                           + '&lt;td&gt;' + cursor.value.age + '&lt;/td&gt;';
+      tableRow.innerHTML =   '<td>' + cursor.value.id + '</td>'
+                           + '<td>' + cursor.value.lName + '</td>'
+                           + '<td>' + cursor.value.fName + '</td>'
+                           + '<td>' + cursor.value.jTitle + '</td>'
+                           + '<td>' + cursor.value.company + '</td>'
+                           + '<td>' + cursor.value.eMail + '</td>'
+                           + '<td>' + cursor.value.phone + '</td>'
+                           + '<td>' + cursor.value.age + '</td>';
       tableEntry.appendChild(tableRow);
 
       cursor.continue();
@@ -94,24 +91,23 @@ browser-compat: api.IDBIndex
       console.log('Entries all displayed.');
     }
   };
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
- <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
- <li>Using transactions: {{domxref("IDBTransaction")}}</li>
- <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
- <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
- <li>Using cursors: {{domxref("IDBCursor")}}</li>
- <li>Reference example: <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

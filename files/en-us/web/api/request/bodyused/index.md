@@ -10,23 +10,25 @@ tags:
   - Request
 browser-compat: api.Request.bodyUsed
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p>The read-only <strong><code>bodyUsed</code></strong> property of the
-  {{domxref("Request")}} interface is a boolean value that indicates
-  whether the request body has been read yet.</p>
+The read-only **`bodyUsed`** property of the
+{{domxref("Request")}} interface is a boolean value that indicates
+whether the request body has been read yet.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">request.bodyUsed;</pre>
+```js
+request.bodyUsed;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A boolean value.</p>
+A boolean value.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">
+```js
 const request = new Request('/myEndpoint', {
   method: 'POST',
   body: 'Hello world'
@@ -37,18 +39,16 @@ request.bodyUsed; // false
 request.text().then(function(bodyAsText) {
   console.log(request.bodyUsed); // true
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Request.body")}}</li>
-</ul>
+- {{domxref("Request.body")}}

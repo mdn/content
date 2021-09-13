@@ -8,37 +8,33 @@ tags:
   - Reference
 browser-compat: api.HTMLBaseElement
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLBaseElement</code></strong> interface contains the base URI for a document. This object inherits all of the properties and methods as described in the {{domxref("HTMLElement")}} interface.</p>
+The **`HTMLBaseElement`** interface contains the base URI for a document. This object inherits all of the properties and methods as described in the {{domxref("HTMLElement")}} interface.
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{domxref("HTMLElement")}}.</em></p>
+_Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLBaseElement.href")}}</dt>
- <dd>Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("href", "base")}} HTML attribute, containing a base URL for relative URLs in the document.</dd>
- <dt>{{domxref("HTMLBaseElement.target")}}</dt>
- <dd>Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("target", "base")}} HTML attribute, containing a default target browsing context or frame for elements that do not have a target reference specified.</dd>
-</dl>
+- {{domxref("HTMLBaseElement.href")}}
+  - : Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("href", "base")}} HTML attribute, containing a base URL for relative URLs in the document.
+- {{domxref("HTMLBaseElement.target")}}
+  - : Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("target", "base")}} HTML attribute, containing a default target browsing context or frame for elements that do not have a target reference specified.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>No specific method; inherits attributes from its parent, {{domxref("HTMLElement")}}.</em></p>
+_No specific method; inherits attributes from its parent, {{domxref("HTMLElement")}}._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>HTML element implementing this interface: {{ HTMLElement("base") }}</li>
-</ul>
+- HTML element implementing this interface: {{ HTMLElement("base") }}

@@ -2,51 +2,49 @@
 title: FileSystemFlags.exclusive
 slug: Web/API/FileSystemFlags/exclusive
 tags:
-- API
-- File and Directory Entries API
-- FileSystemFlags
-- Files
-- Offline
-- Property
-- Reference
-- exclusive
+  - API
+  - File and Directory Entries API
+  - FileSystemFlags
+  - Files
+  - Offline
+  - Property
+  - Reference
+  - exclusive
 browser-compat: api.FileSystemFlags.exclusive
 ---
-<div>{{APIRef("File and Directory Entries API")}}</div>
+{{APIRef("File and Directory Entries API")}}
 
-<p>The <strong><code>exclusive</code></strong> property on the
-  {{domxref("FileSystemFlags")}} dictionary is used in tandem with the create property to
-  determine whether or not it's acceptable to require that the file not already exist when
-  the reference to it is created by calling
-  {{domxref("FileSystemDirectoryEntry.getFile()")}} or
-  {{domxref("FileSystemDirectoryEntry.getDirectory()")}}.</p>
+The **`exclusive`** property on the
+{{domxref("FileSystemFlags")}} dictionary is used in tandem with the create property to
+determine whether or not it's acceptable to require that the file not already exist when
+the reference to it is created by calling
+{{domxref("FileSystemDirectoryEntry.getFile()")}} or
+{{domxref("FileSystemDirectoryEntry.getDirectory()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>fileSystemFlags</em>.exclusive = <em>booleanValue</em>
-</pre>
+```js
+fileSystemFlags.exclusive = booleanValue
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<p>{{page("/en-US/docs/Web/API/FileSystemFlags", "Values and results")}}</p>
+{{page("/en-US/docs/Web/API/FileSystemFlags", "Values and results")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory
-      Entries API</a></li>
-  <li><a
-      href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">Introduction
-      to the File System API</a></li>
-  <li>{{domxref("FileSystemFlags")}}</li>
-  <li>{{domxref("FileSystemDirectoryEntry.getFile()")}} and
-    {{domxref("FileSystemDirectoryEntry.getDirectory()")}}</li>
-</ul>
+- [File and Directory
+  Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction
+  to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- {{domxref("FileSystemFlags")}}
+- {{domxref("FileSystemDirectoryEntry.getFile()")}} and
+  {{domxref("FileSystemDirectoryEntry.getDirectory()")}}

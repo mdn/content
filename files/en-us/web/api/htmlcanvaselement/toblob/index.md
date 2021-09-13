@@ -2,68 +2,66 @@
 title: HTMLCanvasElement.toBlob()
 slug: Web/API/HTMLCanvasElement/toBlob
 tags:
-- API
-- Canvas
-- HTMLCanvasElement
-- Method
-- Reference
+  - API
+  - Canvas
+  - HTMLCanvasElement
+  - Method
+  - Reference
 browser-compat: api.HTMLCanvasElement.toBlob
 ---
-<div>{{APIRef("Canvas API")}}</div>
+{{APIRef("Canvas API")}}
 
-<p>The <strong><code>HTMLCanvasElement.toBlob()</code></strong> method creates a
-  {{domxref("Blob")}} object representing the image contained in the canvas; this file may
-  be cached on the disk or stored in memory at the discretion of the user agent.
+The **`HTMLCanvasElement.toBlob()`** method creates a
+{{domxref("Blob")}} object representing the image contained in the canvas; this file may
+be cached on the disk or stored in memory at the discretion of the user agent.
 
-  <p>The created image is in a resolution of 96dpi.</p>
+The created image is in a resolution of 96dpi.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>canvas</var>.toBlob(<var>callback</var>, <var>type</var>, <var>quality</var>);
-</pre>
+```js
+canvas.toBlob(callback, type, quality);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>callback</code></dt>
-  <dd>A callback function with the resulting {{domxref("Blob")}} object as a single
-    argument.</dd>
-  <dt><code>type</code> {{optional_inline}}</dt>
-  <dd>A {{domxref("DOMString")}} indicating the image format. The default type is
-    <code>image/png</code>; that type is also used if the given type isn't supported.</dd>
-  <dt><code>quality</code> {{optional_inline}}</dt>
-  <dd>A {{jsxref("Number")}} between <code>0</code> and <code>1</code>, indicating image
-    quality if the requested type is <code>image/jpeg </code>or <code>image/webp</code>.
+- `callback`
+  - : A callback function with the resulting {{domxref("Blob")}} object as a single
+    argument.
+- `type` {{optional_inline}}
+  - : A {{domxref("DOMString")}} indicating the image format. The default type is
+    `image/png`; that type is also used if the given type isn't supported.
+- `quality` {{optional_inline}}
+
+  - : A {{jsxref("Number")}} between `0` and `1`, indicating image
+    quality if the requested type is `image/jpeg `or `image/webp`.
     If this argument is anything else, the default values 0.92 and 0.80 are used for
     image/jpeg and image/webp respectively. Other arguments are ignored.
-    <p>This argument is used when creating images using lossy compression (such as <code>image/jpeg</code>), to specify the quality of the output.</p>
-    </dd>
-</dl>
 
-<h3 id="Return_value">Return value</h3>
+    This argument is used when creating images using lossy compression (such as `image/jpeg`), to specify the quality of the output.
 
-<p>None.</p>
+### Return value
 
-<h3 id="Exceptions">Exceptions</h3>
+None.
 
-<dl>
-  <dt><code>SecurityError</code></dt>
-  <dd>The canvas's bitmap is not origin clean; at least some of its contents come from
-    secure</dd>
-</dl>
+### Exceptions
 
-<h2 id="Examples">Examples</h2>
+- `SecurityError`
+  - : The canvas's bitmap is not origin clean; at least some of its contents come from
+    secure
 
-<h3 id="Getting_a_file_representing_the_canvas">Getting a file representing the canvas
-</h3>
+## Examples
 
-<p>Once you have drawn content into a canvas, you can convert it into a file of any
-  supported image format. The code snippet below, for example, takes the image in the
-  {{HTMLElement("canvas")}} element whose ID is "canvas", obtains a copy of it as a PNG
-  image, then appends a new {{HTMLElement("img")}} element to the document, whose source
-  image is the one created using the canvas.</p>
+### Getting a file representing the canvas
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+Once you have drawn content into a canvas, you can convert it into a file of any
+supported image format. The code snippet below, for example, takes the image in the
+{{HTMLElement("canvas")}} element whose ID is "canvas", obtains a copy of it as a PNG
+image, then appends a new {{HTMLElement("img")}} element to the document, whose source
+image is the one created using the canvas.
+
+```js
+var canvas = document.getElementById('canvas');
 
 canvas.toBlob(function(blob) {
   var newImg = document.createElement('img'),
@@ -77,24 +75,25 @@ canvas.toBlob(function(blob) {
   newImg.src = url;
   document.body.appendChild(newImg);
 });
-</pre>
+```
 
-<p>Note that here we're creating a PNG image; if you add a second parameter to the
-  <code>toBlob()</code> call, you can specify the image type. For example, to get the
-  image in JPEG format:</p>
+Note that here we're creating a PNG image; if you add a second parameter to the
+`toBlob()` call, you can specify the image type. For example, to get the
+image in JPEG format:
 
-<pre
-  class="brush: js"> canvas.toBlob(function(blob){...}, 'image/jpeg', 0.95); // JPEG at 95% quality</pre>
+```js
+ canvas.toBlob(function(blob){...}, 'image/jpeg', 0.95); // JPEG at 95% quality
+```
 
-<h3 id="A_way_to_convert_a_canvas_to_an_ico_Mozilla_only">A way to convert a canvas to an
-  ico (Mozilla only)</h3>
+### A way to convert a canvas to an ico (Mozilla only)
 
-<p>This uses <code>-moz-parse</code> to convert the canvas to ico. Windows XP doesn't
-  support converting from PNG to ico, so it uses bmp instead. A download link is created
-  by setting the download attribute. The value of the download attribute is the name it
-  will use as the file name.</p>
+This uses `-moz-parse` to convert the canvas to ico. Windows XP doesn't
+support converting from PNG to ico, so it uses bmp instead. A download link is created
+by setting the download attribute. The value of the download attribute is the name it
+will use as the file name.
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var d = canvas.width;
 ctx = canvas.getContext('2d');
 ctx.beginPath();
@@ -116,17 +115,16 @@ function blobCallback(iconName) {
   }
 }
 canvas.toBlob(blobCallback('passThisString'), 'image/vnd.microsoft.icon',
-              '-moz-parse-options:format=bmp;bpp=32');</pre>
+              '-moz-parse-options:format=bmp;bpp=32');
+```
 
-<h3 id="Save_toBlob_to_disk_with_OS.File_chromeadd-on_context_only">Save toBlob to disk
-  with OS.File (chrome/add-on context only)</h3>
+### Save toBlob to disk with OS.File (chrome/add-on context only)
 
-<div class="note">
-  <p><strong>Note:</strong> This technique saves it to the desktop and is only useful in Firefox chrome context
-    or add-on code, as OS APIs are not present on web sites.</p>
-</div>
+> **Note:** This technique saves it to the desktop and is only useful in Firefox chrome context
+> or add-on code, as OS APIs are not present on web sites.
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var d = canvas.width;
 ctx = canvas.getContext('2d');
 ctx.beginPath();
@@ -161,19 +159,18 @@ function blobCallback(iconName) {
 }
 
 canvas.toBlob(blobCallback('passThisString'), 'image/vnd.microsoft.icon',
-              '-moz-parse-options:format=bmp;bpp=32');</pre>
+              '-moz-parse-options:format=bmp;bpp=32');
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining it, {{domxref("HTMLCanvasElement")}}.</li>
-  <li>{{domxref("Blob")}}</li>
-</ul>
+- The interface defining it, {{domxref("HTMLCanvasElement")}}.
+- {{domxref("Blob")}}

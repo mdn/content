@@ -2,47 +2,48 @@
 title: RTCIceCandidatePairStats.bytesSent
 slug: Web/API/RTCIceCandidatePairStats/bytesSent
 tags:
-- API
-- Candidate
-- Candidate Pair
-- ICE
-- Pair
-- RTCIceCandidatePairStats
-- Sent
-- Statistics
-- Stats
-- Transmitted
-- WebRTC
-- WebRTC API
-- bytesSent
-- rtc
+  - API
+  - Candidate
+  - Candidate Pair
+  - ICE
+  - Pair
+  - RTCIceCandidatePairStats
+  - Sent
+  - Statistics
+  - Stats
+  - Transmitted
+  - WebRTC
+  - WebRTC API
+  - bytesSent
+  - rtc
 browser-compat: api.RTCIceCandidatePairStats.bytesSent
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The {{domxref("RTCIceCandidatePairStats")}} property
-    <strong><code>bytesSent</code></strong> indicates the total number of payload
-    bytes—that is, bytes which aren't overhead such as headers or padding—that hve been
-    sent so far on the connection described by the candidate pair.</p>
+The {{domxref("RTCIceCandidatePairStats")}} property
+**`bytesSent`** indicates the total number of payload
+bytes—that is, bytes which aren't overhead such as headers or padding—that hve been
+sent so far on the connection described by the candidate pair.
 
-<p>The {{domxref("RTCIceCandidatePairStats.bytesReceived", "bytesReceived")}} property
-  reports the number of bytes received so far on the described connection.</p>
+The {{domxref("RTCIceCandidatePairStats.bytesReceived", "bytesReceived")}} property
+reports the number of bytes received so far on the described connection.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>sent</em> = <em>rtcIceCandidatePairStats</em>.bytesSent;</pre>
+```js
+sent = rtcIceCandidatePairStats.bytesSent;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An integer value indicating the total number of bytes sent so far on the connection
-  described by this candidate pair. Only data bytes are counted; overhead such as padding,
-  headers, and the like are not included in this count.</p>
+An integer value indicating the total number of bytes sent so far on the connection
+described by this candidate pair. Only data bytes are counted; overhead such as padding,
+headers, and the like are not included in this count.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

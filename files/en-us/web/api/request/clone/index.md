@@ -11,45 +11,47 @@ tags:
   - request
 browser-compat: api.Request.clone
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p>The <strong><code>clone()</code></strong> method of the {{domxref("Request")}} interface creates a copy of the current <code>Request</code> object.</p>
+The **`clone()`** method of the {{domxref("Request")}} interface creates a copy of the current `Request` object.
 
-<p><code>clone()</code> throws a {{jsxref("TypeError")}} if the request body has already been used. In fact, the main reason <code>clone()</code> exists is to allow multiple uses of body objects (when they are one-use only.)</p>
+`clone()` throws a {{jsxref("TypeError")}} if the request body has already been used. In fact, the main reason `clone()` exists is to allow multiple uses of body objects (when they are one-use only.)
 
-<p>If intend to modify the request, you may prefer the {{domxref("Request")}} constructor.</p>
+If intend to modify the request, you may prefer the {{domxref("Request")}} constructor.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var newRequest = request.clone();</pre>
+```js
+var newRequest = request.clone();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("Request")}} object, which is an exact copy of the <code>Request</code> that <code>clone()</code> was called on.</p>
+A {{domxref("Request")}} object, which is an exact copy of the `Request` that `clone()` was called on.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In the following snippet, we create a new request using the <code>{{domxref("Request.Request()")}}</code> constructor (for an image file in the same directory as the script), then clone the request.</p>
+In the following snippet, we create a new request using the `{{domxref("Request.Request()")}}` constructor (for an image file in the same directory as the script), then clone the request.
 
-<pre class="brush: js">var myRequest = new Request('flowers.jpg');
-var newRequest = myRequest.clone(); // a copy of the request is now stored in newRequest</pre>
+```js
+var myRequest = new Request('flowers.jpg');
+var newRequest = myRequest.clone(); // a copy of the request is now stored in newRequest
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
- <li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP](/en-US/docs/Web/HTTP)

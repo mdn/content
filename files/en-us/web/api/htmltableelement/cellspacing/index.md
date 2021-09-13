@@ -2,54 +2,51 @@
 title: HTMLTableElement.cellSpacing
 slug: Web/API/HTMLTableElement/cellSpacing
 tags:
-- API
-- HTML DOM
-- HTMLTableElement
-- NeedsSpecTable
-- Property
-- Reference
-- cellSpacing
-- Deprecated
+  - API
+  - HTML DOM
+  - HTMLTableElement
+  - NeedsSpecTable
+  - Property
+  - Reference
+  - cellSpacing
+  - Deprecated
 browser-compat: api.HTMLTableElement.cellSpacing
 ---
-<div>
-  <div>
-    <div>{{APIRef("HTML DOM")}}{{deprecated_header}}</div>
-  </div>
-</div>
+{{APIRef("HTML DOM")}}{{deprecated_header}}
 
-<p>While you should instead use the CSS
-    {{cssxref("border-spacing")}} property, the obsolete {{domxref("HTMLTableElement")}}
-    interface's <code><strong>cellSpacing</strong></code> property represents the spacing
-    around the individual {{HTMLElement("th")}} and {{HTMLElement("td")}} elements
-    representing a table's cells. Any two cells are separated by the sum of the
-  <code>cellSpacing</code> of each of the two cells.</p>
+While you should instead use the CSS
+{{cssxref("border-spacing")}} property, the obsolete {{domxref("HTMLTableElement")}}
+interface's **`cellSpacing`** property represents the spacing
+around the individual {{HTMLElement("th")}} and {{HTMLElement("td")}} elements
+representing a table's cells. Any two cells are separated by the sum of the
+`cellSpacing` of each of the two cells.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>HTMLTableElement</em>.cellSpacing = <em>spacing</em>;
-var <em>spacing</em> = <em>HTMLTableElement</em>.cellSpacing;</pre>
+```js
+HTMLTableElement.cellSpacing = spacing;
+var spacing = HTMLTableElement.cellSpacing;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} which is either a number of pixels (such as
-  <code>"10"</code>) or a percentage value (like <code>"10%"</code>).</p>
+A {{domxref("DOMString")}} which is either a number of pixels (such as
+`"10"`) or a percentage value (like `"10%"`).
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example sets cell spacing for a given table to 10 pixels.</p>
+This example sets cell spacing for a given table to 10 pixels.
 
-<pre class="brush:js">var t = document.getElementById('TableA');
-t.cellSpacing = "10";</pre>
+```js
+var t = document.getElementById('TableA');
+t.cellSpacing = "10";
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<ul>
-  <li>W3C DOM 2 HTML Specification <a class="external"
-      href="https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-68907883"><em>HTMLTableElement</em>
-      .cellSpacing</a>.</li>
-</ul>
+- W3C DOM 2 HTML Specification [_HTMLTableElement_
+  .cellSpacing](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-68907883).
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

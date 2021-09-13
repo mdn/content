@@ -10,82 +10,79 @@ tags:
   - availHeight
 browser-compat: api.Screen.availHeight
 ---
-<p>{{APIRef("CSSOM")}}</p>
+{{APIRef("CSSOM")}}
 
-<p>The read-only {{DOMxRef("Screen")}} interface's
-  <code><strong>availHeight</strong></code> property returns the height, in CSS pixels, of
-  the space available for Web content on the screen. Since {{DOMxRef("Screen")}} is
-  exposed on the {{DOMxRef("Window")}} interface's {{DOMxRef("Window.screen",
-  "window.screen")}} property, you access <code>availHeight</code> using
-  <code>window.screen.availHeight</code>.</p>
+The read-only {{DOMxRef("Screen")}} interface's
+**`availHeight`** property returns the height, in CSS pixels, of
+the space available for Web content on the screen. Since {{DOMxRef("Screen")}} is
+exposed on the {{DOMxRef("Window")}} interface's {{DOMxRef("Window.screen",
+  "window.screen")}} property, you access `availHeight` using
+`window.screen.availHeight`.
 
-<p>You can similarly use {{DOMxRef("Screen.availWidth")}} to get the number of pixels
-  which are horizontally available to the browser for its use.</p>
+You can similarly use {{DOMxRef("Screen.availWidth")}} to get the number of pixels
+which are horizontally available to the browser for its use.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let <var>availHeight</var> = <var>window</var>.screen.availHeight;
-</pre>
+```js
+let availHeight = window.screen.availHeight;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A numeric value indicating the number of CSS pixels tall the screen's available space
-  is. This can be no larger than the value of {{DOMxRef("Screen.height",
+A numeric value indicating the number of CSS pixels tall the screen's available space
+is. This can be no larger than the value of {{DOMxRef("Screen.height",
   "window.screen.height")}}, and will be less if the device or user agent reserves any
-  vertical space for itself.</p>
+vertical space for itself.
 
-<p>For instance, on a Mac whose Dock is located at the bottom of screen (which is the
-  default), the value of <code>availHeight</code> is approximately the value of
-  <code>height</code> (the total height of the screen in CSS pixels) minus the heights of
-  the Dock and menu bar, as seen in the diagram below.</p>
+For instance, on a Mac whose Dock is located at the bottom of screen (which is the
+default), the value of `availHeight` is approximately the value of
+`height` (the total height of the screen in CSS pixels) minus the heights of
+the Dock and menu bar, as seen in the diagram below.
 
-<p><a href="availheight-diagram.svg"><img
-      alt="Diagram showing how Screen.availHeight relates to Screen.height and the screen's contents"
-      src="availheight-diagram.svg"></a></p>
+[![Diagram showing how Screen.availHeight relates to Screen.height and the screen's contents](availheight-diagram.svg)](availheight-diagram.svg)
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>If your web application needs to open a new window, such as a tool palette which can
-  contain multiple panels, and wants to position it so that it occupies the entire
-  vertical space available, you can do so using code similar to what's seen here.</p>
+If your web application needs to open a new window, such as a tool palette which can
+contain multiple panels, and wants to position it so that it occupies the entire
+vertical space available, you can do so using code similar to what's seen here.
 
-<p>In the main window, when it's time to open the panels, code like the following is used.
-</p>
+In the main window, when it's time to open the panels, code like the following is used.
 
-<pre
-  class="brush: html;">let paletteWindow = window.open("panels.html", "Panels", "left=0, top=0, width=200");</pre>
+```html
+let paletteWindow = window.open("panels.html", "Panels", "left=0, top=0, width=200");
+```
 
-<p>The Panels window's HTML, in <code>panels.html</code>, has JavaScript code of its own,
-  which is executed as soon as the window is created. It doesn't even need to wait for any
-  particular event (or any event at all). That code handles resizing the window based on
-  the available space:</p>
+The Panels window's HTML, in `panels.html`, has JavaScript code of its own,
+which is executed as soon as the window is created. It doesn't even need to wait for any
+particular event (or any event at all). That code handles resizing the window based on
+the available space:
 
-<pre class="brush: js;">window.outerHeight = window.screen.availHeight;</pre>
+```js
+window.outerHeight = window.screen.availHeight;
+```
 
-<p>The result is something similar to the below. Note the Panels window filling all
-  available vertical space at the left of the screen.</p>
+The result is something similar to the below. Note the Panels window filling all
+available vertical space at the left of the screen.
 
-<p><a href="screen-availheight.png"><img
-      alt="Screenshot of the example for Screen.availHeight"
-      src="screen-availheight.png"></a></p>
+[![Screenshot of the example for Screen.availHeight](screen-availheight.png)](screen-availheight.png)
 
-<p>On a Windows system, this would function similarly, by opening the window and sizing it
-  vertically so it uses all available vertical space, leaving room for the taskbar and any
-  other interface elements that reserve space.</p>
+On a Windows system, this would function similarly, by opening the window and sizing it
+vertically so it uses all available vertical space, leaving room for the taskbar and any
+other interface elements that reserve space.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{DOMxRef("Window")}}</li>
-  <li>{{DOMxRef("Screen")}}</li>
-  <li>{{DOMxRef("Screen.availWidth")}}</li>
-  <li>{{DOMxRef("Window.height")}}</li>
-</ul>
+- {{DOMxRef("Window")}}
+- {{DOMxRef("Screen")}}
+- {{DOMxRef("Screen.availWidth")}}
+- {{DOMxRef("Window.height")}}

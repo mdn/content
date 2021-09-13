@@ -2,73 +2,73 @@
 title: PointerEvent.isPrimary
 slug: Web/API/PointerEvent/isPrimary
 tags:
-- API
-- DOM
-- Interface
-- PointerEvent
-- Property
-- Reference
+  - API
+  - DOM
+  - Interface
+  - PointerEvent
+  - Property
+  - Reference
 browser-compat: api.PointerEvent.isPrimary
 ---
-<div>{{ APIRef("Pointer Events") }}</div>
+{{ APIRef("Pointer Events") }}
 
-<p>The <strong><code>isPrimary</code></strong> read-only property of the
-  {{domxref("PointerEvent")}} interface indicates whether or not the pointer device that
-  created the event is the <em>primary</em> pointer. It returns <code>true</code> if the
-  pointer that caused the event to be fired is the primary one and returns
-  <code>false</code> otherwise.</p>
+The **`isPrimary`** read-only property of the
+{{domxref("PointerEvent")}} interface indicates whether or not the pointer device that
+created the event is the _primary_ pointer. It returns `true` if the
+pointer that caused the event to be fired is the primary one and returns
+`false` otherwise.
 
-<p>In a multi-pointer scenario (such as a touch screen that supports more than one touch
-  point), this property is used to identify a <em>master pointer</em> among the set of
-  active pointers for each pointer type. Only a primary pointer will produce
-  <em>compatibility mouse events</em>. Authors who desire only single-pointer interaction
-  can achieve that by ignoring non-primary pointers.</p>
+In a multi-pointer scenario (such as a touch screen that supports more than one touch
+point), this property is used to identify a _master pointer_ among the set of
+active pointers for each pointer type. Only a primary pointer will produce
+_compatibility mouse events_. Authors who desire only single-pointer interaction
+can achieve that by ignoring non-primary pointers.
 
-<p>A pointer is considered primary if the pointer represents a mouse device. A pointer
-  representing pen input is considered the primary pen input if its
-  {{event("pointerdown")}} event was dispatched when no other active pointers representing
-  pen input existed. A pointer representing touch input is considered the primary touch
-  input if its {{event("pointerdown")}} event was dispatched when no other active pointers
-  representing touch input existed.</p>
+A pointer is considered primary if the pointer represents a mouse device. A pointer
+representing pen input is considered the primary pen input if its
+{{event("pointerdown")}} event was dispatched when no other active pointers representing
+pen input existed. A pointer representing touch input is considered the primary touch
+input if its {{event("pointerdown")}} event was dispatched when no other active pointers
+representing touch input existed.
 
-<p>When two or more pointer device types are being used concurrently, multiple pointers
-  (one for each {{domxref("PointerEvent.pointerType", "pointerType")}}) are considered
-  primary. For example, a touch contact and a mouse cursor moved simultaneously will
-  produce pointers that are both considered primary. If there are multiple primary
-  pointers, these pointers will all produce <em>compatibility mouse events</em> (see
-  {{domxref("Pointer_events")}} for more information about pointer, mouse and touch
-  interaction).</p>
+When two or more pointer device types are being used concurrently, multiple pointers
+(one for each {{domxref("PointerEvent.pointerType", "pointerType")}}) are considered
+primary. For example, a touch contact and a mouse cursor moved simultaneously will
+produce pointers that are both considered primary. If there are multiple primary
+pointers, these pointers will all produce _compatibility mouse events_ (see
+{{domxref("Pointer_events")}} for more information about pointer, mouse and touch
+interaction).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>isPrimary</em> = <em>pointerEvent</em>.isPrimary;
-</pre>
+```js
+var isPrimary = pointerEvent.isPrimary;
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<dl>
-  <dt><code>isPrimary</code></dt>
-  <dd>Returns <code>true</code> if the pointer for this event is the primary pointer and
-    returns <code>false</code> otherwise.</dd>
-</dl>
+- `isPrimary`
+  - : Returns `true` if the pointer for this event is the primary pointer and
+    returns `false` otherwise.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example illustrates using the value of <code>isPrimary</code> to call the
-  appropriate processing function.</p>
+This example illustrates using the value of `isPrimary` to call the
+appropriate processing function.
 
-<pre class="brush: js">target.addEventListener('pointerdown', function(event) {
+```js
+target.addEventListener('pointerdown', function(event) {
   if (event.isPrimary)
     process_primary_pointer(event);
   else
     process_secondary_pointer(event);
 }, false);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

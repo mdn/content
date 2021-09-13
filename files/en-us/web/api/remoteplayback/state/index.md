@@ -9,38 +9,41 @@ tags:
   - RemotePlayback
 browser-compat: api.RemotePlayback.state
 ---
-<div>{{DefaultAPISidebar("Remote Playback API")}}</div>
+{{DefaultAPISidebar("Remote Playback API")}}
 
-<p>The <strong><code>state</code></strong> read-only property of the {{domxref("RemotePlayback")}} interface returns the current state of the <code>RemotePlayback</code> connection.</p>
+The **`state`** read-only property of the {{domxref("RemotePlayback")}} interface returns the current state of the `RemotePlayback` connection.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let state = RemotePlayback.state;</pre>
+```js
+let state = RemotePlayback.state;
+```
 
-<h3>Value</h3>
-<p>One of:</p>
-<dl>
-  <dt><code>"connecting"</code></dt>
-  <dd>The user agent is attempting to initiate remote playback with the selected device.</dd>
-  <dt><code>"connected"</code></dt>
-  <dd>The transition from local to remote playback has happened. All commands will now take place on the remote device.</dd>
-  <dt><code>"disconnected"</code></dt>
-  <dd>The remote playback has not been initiated, has failed to initiate, or has been stopped.</dd>
-</dl>
+### Value
 
-<h2 id="Examples">Examples</h2>
+One of:
 
-<p>In the following example the value of {{domxref("RemotePlayback.state")}} is printed to the console when the user agent successfully connects.</p>
+- `"connecting"`
+  - : The user agent is attempting to initiate remote playback with the selected device.
+- `"connected"`
+  - : The transition from local to remote playback has happened. All commands will now take place on the remote device.
+- `"disconnected"`
+  - : The remote playback has not been initiated, has failed to initiate, or has been stopped.
 
-<pre class="brush: js">RemotePlayback.onconnect = function() {
+## Examples
+
+In the following example the value of {{domxref("RemotePlayback.state")}} is printed to the console when the user agent successfully connects.
+
+```js
+RemotePlayback.onconnect = function() {
   console.log(RemotePlayback.state);
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
+{{Compat}}

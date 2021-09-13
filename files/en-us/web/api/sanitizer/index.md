@@ -7,42 +7,39 @@ tags:
   - sanitize
 browser-compat: api.Sanitizer
 ---
-<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("HTML Sanitizer API")}}</div>
+{{draft}}{{securecontext_header}}{{DefaultAPISidebar("HTML Sanitizer API")}}
 
-<p>The <strong><code>Sanitizer</code></strong> interface of the {{domxref('HTML Sanitizer API')}} allows developers to take untrusted strings of HTML, and sanitize them for safe insertion into a document’s DOM.</p>
+The **`Sanitizer`** interface of the {{domxref('HTML Sanitizer API')}} allows developers to take untrusted strings of HTML, and sanitize them for safe insertion into a document’s DOM.
 
-<h2 id="Constructors">Constructors</h2>
+## Constructors
 
-<dl>
- <dt>{{domxref('Sanitizer.Sanitizer')}}</dt>
- <dd>Creates and returns a <code>Sanitizer</code> object.</dd>
-</dl>
+- {{domxref('Sanitizer.Sanitizer')}}
+  - : Creates and returns a `Sanitizer` object.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref('Sanitizer.sanitizeToString()')}}</dt>
- <dd>Returns a sanitized {{jsxref('String')}} from an input, removing any offending elements or attributes.</dd>
- <dt>{{domxref('Sanitizer.sanitize()')}}</dt>
- <dd>Returns a sanitized {{domxref('DocumentFragment')}} from an input, removing any offending elements or attributes.</dd>
-</dl>
+- {{domxref('Sanitizer.sanitizeToString()')}}
+  - : Returns a sanitized {{jsxref('String')}} from an input, removing any offending elements or attributes.
+- {{domxref('Sanitizer.sanitize()')}}
+  - : Returns a sanitized {{domxref('DocumentFragment')}} from an input, removing any offending elements or attributes.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example shows the result of sanitizing a string using the {{domxref('Sanitizer.sanitizeToString()')}} method. Disallowed <code>script</code> and <code>blink</code> elements are removed from the input.</p>
+This example shows the result of sanitizing a string using the {{domxref('Sanitizer.sanitizeToString()')}} method. Disallowed `script` and `blink` elements are removed from the input.
 
-<pre class="brush: js">// our input string to clean
-const stringToClean = 'Some text &lt;b&gt;&lt;i&gt;with&lt;/i&gt;&lt;/b&gt; &lt;blink&gt;tags&lt;/blink&gt;, including a rogue script &lt;script&gt;alert(1)&lt;/script&gt; def.';
+```js
+// our input string to clean
+const stringToClean = 'Some text <b><i>with</i></b> <blink>tags</blink>, including a rogue script <script>alert(1)</script> def.';
 
 const result = new Sanitizer().sanitizeToString(stringToClean);
 console.log(result);
-// Logs: "Some text &lt;b&gt;&lt;i&gt;with&lt;/i&gt;&lt;/b&gt; &lt;blink&gt;tags&lt;/blink&gt;, including a rogue script def."
-</pre>
+// Logs: "Some text <b><i>with</i></b> <blink>tags</blink>, including a rogue script def."
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

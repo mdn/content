@@ -9,43 +9,43 @@ tags:
   - SVG
 browser-compat: api.SVGAElement.target
 ---
-<p>{{APIRef("SVGAElement")}}</p>
+{{APIRef("SVGAElement")}}
 
-<p>{{SeeCompatTable}}</p>
+{{SeeCompatTable}}
 
-<p>The <code><strong>SVGAElement.target</strong></code> read-only property of {{domxref("SVGAElement")}} returns an {{domxref("SVGAnimatedString")}} object that specifies the portion of a target window, frame, pane into which a document is to be opened when a link is activated.</p>
+The **`SVGAElement.target`** read-only property of {{domxref("SVGAElement")}} returns an {{domxref("SVGAnimatedString")}} object that specifies the portion of a target window, frame, pane into which a document is to be opened when a link is activated.
 
-<p>This property is used when there are multiple possible targets for the ending resource, like when the parent document is a mlti-frame HTML or XHTML document.</p>
+This property is used when there are multiple possible targets for the ending resource, like when the parent document is a mlti-frame HTML or XHTML document.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre><code><em>myLink</em>.target = '<em>value</em>';</code></pre>
+    myLink.target = 'value';
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("SVGAnimatedString")}} indicating the ending resource target that opens the document when the link is activated.</p>
+An {{domxref("SVGAnimatedString")}} indicating the ending resource target that opens the document when the link is activated.
 
-<p>Sample values can be found <a href="https://www.w3.org/TR/2011/REC-SVG11-20110816/linking.html#AElementTargetAttribute">here</a></p>
+Sample values can be found [here](https://www.w3.org/TR/2011/REC-SVG11-20110816/linking.html#AElementTargetAttribute)
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The code is taken from the <a href="/en-US/docs/Web/API/SVGAElement#Example">"SVGAElement example code"</a></p>
+The code is taken from the ["SVGAElement example code"](/en-US/docs/Web/API/SVGAElement#Example)
 
-<pre class="brush: js">...
+```js
+...
 var linkRef = document.querySelector('a');
 linkRef.target ='_blank';
-...</pre>
+...
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{ SVGAttr("target") }}</li>
-</ul>
+- {{ SVGAttr("target") }}

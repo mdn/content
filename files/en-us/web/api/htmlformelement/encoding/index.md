@@ -11,10 +11,10 @@ tags:
   - Reference
 browser-compat: api.HTMLFormElement.encoding
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLFormElement.encoding</code></strong> property is an alternative name for the {{domxref("HTMLFormElement.enctype","enctype")}} element on the DOM {{domxref("HTMLFormElement")}} object.</p>
+The **`HTMLFormElement.encoding`** property is an alternative name for the {{domxref("HTMLFormElement.enctype","enctype")}} element on the DOM {{domxref("HTMLFormElement")}} object.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

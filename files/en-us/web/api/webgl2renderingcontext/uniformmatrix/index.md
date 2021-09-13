@@ -1,29 +1,28 @@
 ---
-title: 'WebGL2RenderingContext.uniformMatrix[234]x[234]fv()'
+title: WebGL2RenderingContext.uniformMatrix[234]x[234]fv()
 slug: Web/API/WebGL2RenderingContext/uniformMatrix
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGL2
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGL2
 browser-compat: api.WebGL2RenderingContext.uniformMatrix2fv
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGL2RenderingContext.uniformMatrix[234]x[234]fv()</code></strong>
-  methods of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL 2 API</a> specify matrix
-  values for uniform variables.</p>
+The **`WebGL2RenderingContext.uniformMatrix[234]x[234]fv()`**
+methods of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) specify matrix
+values for uniform variables.
 
-<div class="note">
-  <p><strong>Note:</strong> There are no <code>2x2</code>, <code>3x3</code>, and <code>4x4</code> versions of
-    this method. They are abbreviated in <code>2</code>, <code>3</code>, and
-    <code>4</code>, respectively. See the syntax below.</p>
-</div>
+> **Note:** There are no `2x2`, `3x3`, and `4x4` versions of
+> this method. They are abbreviated in `2`, `3`, and
+> `4`, respectively. See the syntax below.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void gl.uniformMatrix2fv(location, transpose, data, optional srcOffset, optional srcLength);
+```js
+void gl.uniformMatrix2fv(location, transpose, data, optional srcOffset, optional srcLength);
 void gl.uniformMatrix3x2fv(location, transpose, data, optional srcOffset, optional srcLength);
 void gl.uniformMatrix4x2fv(location, transpose, data, optional srcOffset, optional srcLength);
 void gl.uniformMatrix2x3fv(location, transpose, data, optional srcOffset, optional srcLength);
@@ -32,39 +31,37 @@ void gl.uniformMatrix4x3fv(location, transpose, data, optional srcOffset, option
 void gl.uniformMatrix2x4fv(location, transpose, data, optional srcOffset, optional srcLength);
 void gl.uniformMatrix3x4fv(location, transpose, data, optional srcOffset, optional srcLength);
 void gl.uniformMatrix4fv(location, transpose, data, optional srcOffset, optional srcLength);
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>location</dt>
-  <dd>A {{domxref("WebGLUniformLocation")}} object containing the location of the uniform
-    attribute to modify.</dd>
-  <dt>transpose</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLboolean")}} specifying whether to transpose the matrix. Must be
-    <code>false</code>.</dd>
-  <dt>data</dt>
-  <dd>A {{jsxref("Float32Array")}} of float values.</dd>
-</dl>
+- location
+  - : A {{domxref("WebGLUniformLocation")}} object containing the location of the uniform
+    attribute to modify.
+- transpose
+  - : A {{domxref("WebGL_API/Types", "GLboolean")}} specifying whether to transpose the matrix. Must be
+    `false`.
+- data
+  - : A {{jsxref("Float32Array")}} of float values.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">gl.uniformMatrix2x3fv(loc, false, [1, 2, 3, 4, 5, 6]);</pre>
+```js
+gl.uniformMatrix2x3fv(loc, false, [1, 2, 3, 4, 5, 6]);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.uniformMatrix()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.uniformMatrix()")}}

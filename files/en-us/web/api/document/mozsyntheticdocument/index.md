@@ -2,43 +2,45 @@
 title: Document.mozSyntheticDocument
 slug: Web/API/Document/mozSyntheticDocument
 tags:
-- API
-- DOM
-- Non-standard
-- Property
-- Reference
+  - API
+  - DOM
+  - Non-standard
+  - Property
+  - Reference
 browser-compat: api.Document.mozSyntheticDocument
 ---
-<p>{{ ApiRef("DOM") }}{{ non-standard_header() }}</p>
+{{ ApiRef("DOM") }}{{ non-standard_header() }}
 
-<p>The <code><strong>Document.mozSyntheticDocument</strong></code> property indicates
-  whether or not the document is a synthetic one; that is, a document representing a
-  standalone image, video, audio, or the like.</p>
+The **`Document.mozSyntheticDocument`** property indicates
+whether or not the document is a synthetic one; that is, a document representing a
+standalone image, video, audio, or the like.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>isSynthetic</em> = <em>document</em>.mozSyntheticDocument;
-</pre>
+```js
+var isSynthetic = document.mozSyntheticDocument;
+```
 
-<p>On return, <code>isSynthetic</code> is <code>true</code> if the document is a synthetic
-  one; otherwise it's <code>false</code>.</p>
+On return, `isSynthetic` is `true` if the document is a synthetic
+one; otherwise it's `false`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This can be useful if you have a contextual menu item you only want to display for
-  synthetic documents (or, conversely, for documents that aren't synthetic).</p>
+This can be useful if you have a contextual menu item you only want to display for
+synthetic documents (or, conversely, for documents that aren't synthetic).
 
-<pre class="brush: js">var isSynthetic = document.mozSyntheticDocument;
+```js
+var isSynthetic = document.mozSyntheticDocument;
 
 if (isSynthetic) {
   /* insert your menu item here */
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any specification.</p>
+Not part of any specification.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -13,60 +13,59 @@ tags:
   - img
 browser-compat: api.HTMLImageElement.Image
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>Image()</code></strong>
-    constructor creates a new {{DOMxRef("HTMLImageElement")}} instance. It is functionally
-    equivalent to {{DOMxRef("Document.createElement()",
-    "document.createElement('img')")}}.</p>
+The **`Image()`**
+constructor creates a new {{DOMxRef("HTMLImageElement")}} instance. It is functionally
+equivalent to {{DOMxRef("Document.createElement()",
+    "document.createElement('img')")}}.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This function should not be confused with the CSS <a
-      href="/en-US/docs/Web/CSS/image/image()"><code>image()</code></a> function.</p>
-</div>
+> **Note:** This function should not be confused with the CSS [`image()`](</en-US/docs/Web/CSS/image/image()>) function.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>htmlImageElement</var> = new Image(<em>width</em>, <em>height</em>);</pre>
+```js
+var htmlImageElement = new Image(width, height);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>width</code></dt>
-  <dd>The width of the image (i.e., the value for the {{HTMLAttrxRef("width", "img")}}
-    attribute).</dd>
-  <dt><code>height</code></dt>
-  <dd>The height of the image (i.e., the value for the {{HTMLAttrxRef("height", "img")}}
-    attribute).</dd>
-</dl>
+- `width`
+  - : The width of the image (i.e., the value for the {{HTMLAttrxRef("width", "img")}}
+    attribute).
+- `height`
+  - : The height of the image (i.e., the value for the {{HTMLAttrxRef("height", "img")}}
+    attribute).
 
-<h2 id="Usage_note">Usage note</h2>
+## Usage note
 
-<p>The entire bitmap is loaded regardless of the sizes specified in the constructor. The
-  size specified in the constructor is reflected through the properties
-  {{DOMxRef("HTMLImageElement.width")}} and {{DOMxRef("HTMLImageElement.height")}} of the
-  resulting instance. The intrinsic width and height of the image in CSS pixels are
-  reflected through the properties {{DOMxRef("HTMLImageElement.naturalWidth")}} and
-  {{DOMxRef("HTMLImageElement.naturalHeight")}}. If no size is specified in the
-  constructor both pairs of properties have the same values.</p>
+The entire bitmap is loaded regardless of the sizes specified in the constructor. The
+size specified in the constructor is reflected through the properties
+{{DOMxRef("HTMLImageElement.width")}} and {{DOMxRef("HTMLImageElement.height")}} of the
+resulting instance. The intrinsic width and height of the image in CSS pixels are
+reflected through the properties {{DOMxRef("HTMLImageElement.naturalWidth")}} and
+{{DOMxRef("HTMLImageElement.naturalHeight")}}. If no size is specified in the
+constructor both pairs of properties have the same values.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var myImage = new Image(100, 200);
+```js
+var myImage = new Image(100, 200);
 myImage.src = 'picture.jpg';
-document.body.appendChild(myImage);</pre>
+document.body.appendChild(myImage);
+```
 
-<p>This would be the equivalent of defining the following HTML tag inside the
-  {{HTMLElement("body")}}:</p>
+This would be the equivalent of defining the following HTML tag inside the
+{{HTMLElement("body")}}:
 
-<pre class="brush: html">&lt;img width="100" height="200" src="picture.jpg"&gt;
-</pre>
+```html
+<img width="100" height="200" src="picture.jpg">
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

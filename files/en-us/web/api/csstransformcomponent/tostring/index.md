@@ -2,44 +2,44 @@
 title: CSSTransformComponent.toString()
 slug: Web/API/CSSTransformComponent/toString
 tags:
-- API
-- CSS
-- CSS Typed Object Model
-- CSSTransformComponent
-- Experimental
-- Houdini
-- Method
-- Reference
+  - API
+  - CSS
+  - CSS Typed Object Model
+  - CSSTransformComponent
+  - Experimental
+  - Houdini
+  - Method
+  - Reference
 browser-compat: api.CSSTransformComponent.toString
 ---
-<div>{{APIRef("CSS Typed OM")}}</div>
+{{APIRef("CSS Typed OM")}}
 
-<p>The <strong><code>toString()</code></strong> method of the {{domxref("CSSTransformComponent")}} interface is a stringifier returning a <a href="/en-US/docs/Web/CSS/CSS_Transforms">CSS Transforms</a> function.</p>
+The **`toString()`** method of the {{domxref("CSSTransformComponent")}} interface is a stringifier returning a [CSS Transforms](/en-US/docs/Web/CSS/CSS_Transforms) function.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>transformString</var> = CSSTransformComponent.toString();</pre>
+```js
+var transformString = CSSTransformComponent.toString();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None</p>
+None
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
+A {{domxref("DOMString")}} in the form of a CSS {{cssxref("transform-function","Transforms function")}}.
 
-<p>A {{domxref("DOMString")}} in the form of a CSS {{cssxref("transform-function","Transforms function")}}. </p>
+This will use the value of `is2D` to return either a 2D or 3D transform. For example if the component represents {{domxref("CSSRotate")}} and `is2D` is false then the string returned will be in the form of the CSS transformation [`rotate3D()`](</en-US/docs/Web/CSS/transform-function/rotate3d()>) function. If true the string returned will be in the form of the 2-dimensional [`rotate3D()`](</en-US/docs/Web/CSS/transform-function/rotate()>) function.
 
-<p>This will use the value of <code>is2D</code> to return either a 2D or 3D transform. For example if the component represents {{domxref("CSSRotate")}} and <code>is2D</code> is false then the string returned will be in the form of the CSS transformation <code><a href="/en-US/docs/Web/CSS/transform-function/rotate3d()">rotate3D()</a></code> function. If true the string returned will be in the form of the 2-dimensional <code><a href="/en-US/docs/Web/CSS/transform-function/rotate()">rotate3D()</a></code> function.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+To Do
 
-<p>To Do</p>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

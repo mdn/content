@@ -2,65 +2,68 @@
 title: RadioNodeList.value
 slug: Web/API/RadioNodeList/value
 tags:
-- HTML DOM
-- Property
-- RadioNodeList
-- Reference
+  - HTML DOM
+  - Property
+  - RadioNodeList
+  - Reference
 browser-compat: api.RadioNodeList.value
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p>If the underlying element collection contains radio buttons, the
-  <strong><code>RadioNodeList.value</code></strong> property represents the checked radio
-  button. On retrieving the <code>value</code> property, the <code>value</code> of the
-  currently <code>checked</code> radio button is returned as a string. If the collection
-  does not contain any radio buttons or none of the radio buttons in the collection is in
-  <code>checked</code> state, the empty string is returned. On setting the
-  <code>value</code> property, the first radio button input element whose
-  <code>value</code> property is equal to the new value will be set to
-  <code>checked</code>.</p>
+If the underlying element collection contains radio buttons, the
+**`RadioNodeList.value`** property represents the checked radio
+button. On retrieving the `value` property, the `value` of the
+currently `checked` radio button is returned as a string. If the collection
+does not contain any radio buttons or none of the radio buttons in the collection is in
+`checked` state, the empty string is returned. On setting the
+`value` property, the first radio button input element whose
+`value` property is equal to the new value will be set to
+`checked`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>value</em> = <em>radioNodeList</em>.value;
-<em>radioNodeList</em>.value = <em>string</em>;
-</pre>
+```js
+value = radioNodeList.value;
+radioNodeList.value = string;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;label&gt;&lt;input type="radio" name="color" value="blue"&gt;Blue&lt;/label&gt;
-  &lt;label&gt;&lt;input type="radio" name="color" value="red"&gt;Red&lt;/label&gt;
-&lt;/form&gt;</pre>
+```html
+<form>
+  <label><input type="radio" name="color" value="blue">Blue</label>
+  <label><input type="radio" name="color" value="red">Red</label>
+</form>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">// Get the form
+```js
+// Get the form
 const form = document.forms[0];
 
 // Get the form's radio buttons
 const radios = form.elements['color'];
 
 // Choose the "red" option
-radios.value = 'red';</pre>
+radios.value = 'red';
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{HTMLElement("form")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}
-    elements.</li>
-</ul>
+- The {{HTMLElement("form")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}
+  elements.

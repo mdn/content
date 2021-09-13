@@ -11,47 +11,46 @@ tags:
   - Reference
 browser-compat: api.DOMRect.DOMRect
 ---
-<p>{{APIRef("DOM")}}{{ SeeCompatTable() }}</p>
+{{APIRef("DOM")}}{{ SeeCompatTable() }}
 
-<p>The <strong><code>DOMRect()</code></strong> constructor creates a new {{domxref("DOMRect")}} object.</p>
+The **`DOMRect()`** constructor creates a new {{domxref("DOMRect")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var myDOMRect = new DOMRect(x, y, width, height);</pre>
+```js
+var myDOMRect = new DOMRect(x, y, width, height);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt>x</dt>
- <dd>The <code>x</code> coordinate of the <code>DOMRect</code>'s origin.</dd>
- <dt>y</dt>
- <dd>The <code>y</code> coordinate of the <code>DOMRect</code>'s origin.</dd>
- <dt>width</dt>
- <dd>The width of the <code>DOMRect</code>.</dd>
- <dt>height</dt>
- <dd>The height of the <code>DOMRect</code>.</dd>
-</dl>
+- x
+  - : The `x` coordinate of the `DOMRect`'s origin.
+- y
+  - : The `y` coordinate of the `DOMRect`'s origin.
+- width
+  - : The width of the `DOMRect`.
+- height
+  - : The height of the `DOMRect`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>To create a new <code>DOMRect</code>, you could run a line of code like so:</p>
+To create a new `DOMRect`, you could run a line of code like so:
 
-<pre class="brush: js">myDOMRect = new DOMRect(0,0,100,100);
+```js
+myDOMRect = new DOMRect(0,0,100,100);
 // running 'myDOMRect' in the console would then return
 // DOMRect { x: 0, y: 0, width: 100, height: 100, top: 0, right: 100, bottom: 100, left: 0 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("DOMPoint")}}</li>
- <li>{{domxref("DOMRect")}}</li>
-</ul>
+- {{domxref("DOMPoint")}}
+- {{domxref("DOMRect")}}

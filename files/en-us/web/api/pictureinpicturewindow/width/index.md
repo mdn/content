@@ -2,41 +2,41 @@
 title: PictureInPictureWindow.width
 slug: Web/API/PictureInPictureWindow/width
 tags:
-- API
-- Interface
-- Media
-- Picture-in-Picture
-- Picture-in-Picture API
-- Video
-- pip
+  - API
+  - Interface
+  - Media
+  - Picture-in-Picture
+  - Picture-in-Picture API
+  - Video
+  - pip
 browser-compat: api.PictureInPictureWindow.width
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The read-only {{domxref("PictureInPictureWindow")}} property
-    <code><strong>width</strong></code> returns the width of the floating video window in
-    pixels.</p>
+The read-only {{domxref("PictureInPictureWindow")}} property
+**`width`** returns the width of the floating video window in
+pixels.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let width = pictureInPictureWindow.width;</pre>
+```js
+let width = pictureInPictureWindow.width;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An integer value indicating the width of the floating video window in pixels. This
-  property is read-only, and has no default value.</p>
+An integer value indicating the width of the floating video window in pixels. This
+property is read-only, and has no default value.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Picture-in-Picture_API">Picture-in-Picture API</a></li>
-  <li>{{DOMxRef("PictureInPictureWindow.height")}}</li>
-</ul>
+- [Picture-in-Picture API](/en-US/docs/Web/API/Picture-in-Picture_API)
+- {{DOMxRef("PictureInPictureWindow.height")}}

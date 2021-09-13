@@ -12,32 +12,28 @@ tags:
   - Interface
 browser-compat: api.CSSPerspective
 ---
-<div>{{draft}}{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}</div>
+{{draft}}{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
-<p>The <strong><code>CSSPerspective</code></strong> interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents the <a href="/en-US/docs/Web/CSS/transform-function/perspective()">perspective()</a> value of the individual {{CSSXRef('transform')}} property in CSS.  It inherits properties and methods from its parent {{domxref('CSSTransformValue')}}. </p>
+The **`CSSPerspective`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents the [perspective()](</en-US/docs/Web/CSS/transform-function/perspective()>) value of the individual {{CSSXRef('transform')}} property in CSS.  It inherits properties and methods from its parent {{domxref('CSSTransformValue')}}.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("CSSPerspective.CSSPerspective()")}}</dt>
- <dd>Creates a new <code>CSSPerspective</code> object.</dd>
-</dl>
+- {{domxref("CSSPerspective.CSSPerspective()")}}
+  - : Creates a new `CSSPerspective` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref('CSSPerspective.length','length')}}</dt>
- <dd>Returns or sets the distance from z=0.</dd>
-</dl>
+- {{domxref('CSSPerspective.length','length')}}
+  - : Returns or sets the distance from z=0.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>To do</p>
+To do
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

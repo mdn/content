@@ -2,70 +2,68 @@
 title: URLSearchParams.set()
 slug: Web/API/URLSearchParams/set
 tags:
-- API
-- Method
-- URL API
-- URLSearchParams
-- set
+  - API
+  - Method
+  - URL API
+  - URLSearchParams
+  - set
 browser-compat: api.URLSearchParams.set
 ---
-<p>{{ApiRef("URL API")}}</p>
+{{ApiRef("URL API")}}
 
-<p>The <strong><code>set()</code></strong> method of the {{domxref("URLSearchParams")}}
-	interface sets the value associated with a given search parameter to the given value.
-	If there were several matching values, this method deletes the others. If the search
-	parameter doesn't exist, this method creates it.</p>
+The **`set()`** method of the {{domxref("URLSearchParams")}}
+interface sets the value associated with a given search parameter to the given value.
+If there were several matching values, this method deletes the others. If the search
+parameter doesn't exist, this method creates it.
 
-<p>{{availableinworkers}}</p>
+{{availableinworkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-	class="brush: js">URLSearchParams.set(<var>name</var>, <var>value</var>)</pre>
+```js
+URLSearchParams.set(name, value)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-	<dt><code><var>name</var></code></dt>
-	<dd>The name of the parameter to set.</dd>
-	<dt><code><var>value</var></code></dt>
-	<dd>The value of the parameter to set.</dd>
-</dl>
+- `name`
+  - : The name of the parameter to set.
+- `value`
+  - : The value of the parameter to set.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Void.</p>
+Void.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Let's start with a simple example:</p>
+Let's start with a simple example:
 
-<pre class="brush: js">let url = new URL('https://example.com?foo=1&amp;bar=2');
+```js
+let url = new URL('https://example.com?foo=1&bar=2');
 let params = new URLSearchParams(url.search);
 
 //Add a third parameter.
 params.set('baz', 3);
-params.toString(); // "foo=1&amp;bar=2&amp;baz=3"
+params.toString(); // "foo=1&bar=2&baz=3"
+```
 
-</pre>
+Below is a real-life example demonstrating how to create a {{domxref("URL")}} and set
+some search parameters.
 
-<p>Below is a real-life example demonstrating how to create a {{domxref("URL")}} and set
-	some search parameters.</p>
+You can copy and paste the example in a code environment like Codepen, JSFiddle, or the
+[multi-line
+JavaScript interpreter in Firefox](/en-US/docs/Tools/Web_Console/The_command_line_interpreter).
 
-<p>You can copy and paste the example in a code environment like Codepen, JSFiddle, or the
-	<a href="/en-US/docs/Tools/Web_Console/The_command_line_interpreter">multi-line
-		JavaScript interpreter in Firefox</a>.</p>
+- line #41: Comment out this line to stop dumping the search parameters to the
+  console (`debug()`).
+- line #43: Dumps the generated object and its string representation to the console
+  (`info()`).
+- line #44: Tries to automatically open a new window/tab with the generated URL
+  (when uncommented).
 
-<ul>
-	<li>line #41: Comment out this line to stop dumping the search parameters to the
-		console (<code>debug()</code>).</li>
-	<li>line #43: Dumps the generated object and its string representation to the console
-		(<code>info()</code>).</li>
-	<li>line #44: Tries to automatically open a new window/tab with the generated URL
-		(when uncommented).</li>
-</ul>
-
-<pre class="brush: js">'use strict'
+```js
+'use strict'
 
 function genURL(rExp, aText, bDebug=false){
 	let theURL
@@ -109,15 +107,12 @@ var url = genURL(
 )
 console.info( url, url.toString() )
 // window.open( url, 'regex_site' )
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
-
-	<p>{{Compat}}</p>
-</div>
+{{Compat}}

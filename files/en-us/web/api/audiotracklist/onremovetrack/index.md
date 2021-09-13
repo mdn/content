@@ -2,67 +2,67 @@
 title: AudioTrackList.onremovetrack
 slug: Web/API/AudioTrackList/onremovetrack
 tags:
-- API
-- Audio
-- AudioTrackList
-- Event Handler
-- HTML DOM
-- Media
-- Property
-- Reference
-- Removing Audio Tracks
-- Removing Tracks
-- onremovetrack
-- remove
-- removeTrack
-- track
+  - API
+  - Audio
+  - AudioTrackList
+  - Event Handler
+  - HTML DOM
+  - Media
+  - Property
+  - Reference
+  - Removing Audio Tracks
+  - Removing Tracks
+  - onremovetrack
+  - remove
+  - removeTrack
+  - track
 browser-compat: api.AudioTrackList.onremovetrack
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong>{{domxref("AudioTrackList")}}</strong>
-    <strong><code>onremovetrack</code></strong> event handler is called when the
-    {{event("removetrack")}} event occurs, indicating that an audio track has been removed
-    from the media element, and therefore also from the
-    <code>AudioTrackList</code>.</p>
+The **{{domxref("AudioTrackList")}}**
+**`onremovetrack`** event handler is called when the
+{{event("removetrack")}} event occurs, indicating that an audio track has been removed
+from the media element, and therefore also from the
+`AudioTrackList`.
 
-<p>The event is passed into the event handler in the form of a {{domxref("TrackEvent")}}
-  object, whose {{domxref("TrackEvent.track", "track")}} property identifies the track
-  that was removed from the media element's <code>AudioTrackList</code>.</p>
+The event is passed into the event handler in the form of a {{domxref("TrackEvent")}}
+object, whose {{domxref("TrackEvent.track", "track")}} property identifies the track
+that was removed from the media element's `AudioTrackList`.
 
-<div class="note">
-  <p><strong>Note:</strong> You can also add a handler for the <code>removetrack</code>
-    event using {{domxref("EventTarget.addEventListener", "addEventListener()")}}.</p>
-</div>
+> **Note:** You can also add a handler for the `removetrack`
+> event using {{domxref("EventTarget.addEventListener", "addEventListener()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>AudioTrackList</em>.onremovetrack = <em>eventHandler</em>;</pre>
+```js
+AudioTrackList.onremovetrack = eventHandler;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>Set <code>onremovetrack</code> to a function that accepts as input a
-  {{domxref("TrackEvent")}} object which indicates in its {{domxref("TrackEvent.track",
-  "track")}} property which audio track has been removed from the media element.</p>
+Set `onremovetrack` to a function that accepts as input a
+{{domxref("TrackEvent")}} object which indicates in its {{domxref("TrackEvent.track",
+  "track")}} property which audio track has been removed from the media element.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This simple example just fetches the current number of audio tracks in the media
-  element whenever a track is removed from the media element.</p>
+This simple example just fetches the current number of audio tracks in the media
+element whenever a track is removed from the media element.
 
-<pre class="brush: js">document.querySelector("my-video").audioTracks.onremovetrack = function(event) {
+```js
+document.querySelector("my-video").audioTracks.onremovetrack = function(event) {
   myTrackCount = document.querySelector("my-video").audioTracks.length;
 };
-</pre>
+```
 
-<p>The current number of audio tracks remaining in the media element is obtained from
-  <code>AudioTrackList</code> property {{domxref("AudioTrackList.length", "length")}}.</p>
+The current number of audio tracks remaining in the media element is obtained from
+`AudioTrackList` property {{domxref("AudioTrackList.length", "length")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

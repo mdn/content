@@ -2,64 +2,63 @@
 title: WebGLRenderingContext.deleteProgram()
 slug: Web/API/WebGLRenderingContext/deleteProgram
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.deleteProgram
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.deleteProgram()</code></strong> method of the
-  <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> deletes a given
-  {{domxref("WebGLProgram")}} object. This method has no effect if the program has already
-  been deleted.</p>
+The **`WebGLRenderingContext.deleteProgram()`** method of the
+[WebGL API](/en-US/docs/Web/API/WebGL_API) deletes a given
+{{domxref("WebGLProgram")}} object. This method has no effect if the program has already
+been deleted.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <var>gl</var>.deleteProgram(<var>program</var>);
-</pre>
+```js
+void gl.deleteProgram(program);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>program</code></dt>
-  <dd>A {{domxref("WebGLProgram")}} object to delete.</dd>
-</dl>
+- `program`
+  - : A {{domxref("WebGLProgram")}} object to delete.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Deleting_a_program">Deleting a program</h3>
+### Deleting a program
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 var program = gl.createProgram();
 
 // ...
 
-gl.deleteProgram(program);</pre>
+gl.deleteProgram(program);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.createProgram()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.isProgram()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.linkProgram()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.useProgram()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.validateProgram()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.getProgramParameter()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.getProgramInfoLog()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.createProgram()")}}
+- {{domxref("WebGLRenderingContext.isProgram()")}}
+- {{domxref("WebGLRenderingContext.linkProgram()")}}
+- {{domxref("WebGLRenderingContext.useProgram()")}}
+- {{domxref("WebGLRenderingContext.validateProgram()")}}
+- {{domxref("WebGLRenderingContext.getProgramParameter()")}}
+- {{domxref("WebGLRenderingContext.getProgramInfoLog()")}}

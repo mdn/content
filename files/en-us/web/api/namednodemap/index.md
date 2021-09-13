@@ -8,56 +8,48 @@ tags:
   - Reference
 browser-compat: api.NamedNodeMap
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>NamedNodeMap</strong></code> interface represents a collection of {{domxref("Attr")}} objects. Objects inside a <code>NamedNodeMap</code> are not in any particular order, unlike {{domxref("NodeList")}}, although they may be accessed by an index as in an array.</p>
+The **`NamedNodeMap`** interface represents a collection of {{domxref("Attr")}} objects. Objects inside a `NamedNodeMap` are not in any particular order, unlike {{domxref("NodeList")}}, although they may be accessed by an index as in an array.
 
-<p>A <code>NamedNodeMap</code> object is <em>live</em> and will thus be auto-updated if changes are made to its contents internally or elsewhere.</p>
+A `NamedNodeMap` object is _live_ and will thus be auto-updated if changes are made to its contents internally or elsewhere.
 
-<div class="note">
-<p><strong>Note:</strong> Although called <code>NamedNodeMap</code>, this interface doesn't deal with {{domxref("Node")}} objects but with {{domxref("Attr")}} objects, which were originally a specialized class of {{domxref("Node")}}, and still are in some implementations.</p>
-</div>
+> **Note:** Although called `NamedNodeMap`, this interface doesn't deal with {{domxref("Node")}} objects but with {{domxref("Attr")}} objects, which were originally a specialized class of {{domxref("Node")}}, and still are in some implementations.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface doesn't inherit any property.</em></p>
+_This interface doesn't inherit any property._
 
-<dl>
- <dt>{{domxref("NamedNodeMap.length")}} {{ReadOnlyInline}}</dt>
- <dd>Returns the amount of objects in the map.</dd>
-</dl>
+- {{domxref("NamedNodeMap.length")}} {{ReadOnlyInline}}
+  - : Returns the amount of objects in the map.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface doesn't inherit any method.</em></p>
+_This interface doesn't inherit any method._
 
-<dl>
- <dt>{{domxref("NamedNodeMap.getNamedItem()")}}</dt>
- <dd>Returns a {{domxref("Attr")}}, corresponding to the given name.</dd>
- <dt>{{domxref("NamedNodeMap.setNamedItem()")}}</dt>
- <dd>Replaces, or adds, the {{domxref("Attr")}} identified in the map by the given name.</dd>
- <dt>{{domxref("NamedNodeMap.removeNamedItem()")}}</dt>
- <dd>Removes the {{domxref("Attr")}} identified by the given map.</dd>
- <dt>{{domxref("NamedNodeMap.item()")}}</dt>
- <dd>Returns the {{domxref("Attr")}} at the given index, or <code>null</code> if the index is higher or equal to the number of nodes.</dd>
- <dt>{{domxref("NamedNodeMap.getNamedItemNS()")}}</dt>
- <dd>Returns a {{domxref("Attr")}} identified by a namespace and related local name.</dd>
- <dt>{{domxref("NamedNodeMap.setNamedItemNS()")}}</dt>
- <dd>Replaces, or adds, the {{domxref("Attr")}} identified in the map by the given namespace and related local name.</dd>
- <dt>{{domxref("NamedNodeMap.removeNamedItemNS()")}}</dt>
- <dd>Removes the {{domxref("Attr")}} identified by the given namespace and related local name.</dd>
-</dl>
+- {{domxref("NamedNodeMap.getNamedItem()")}}
+  - : Returns a {{domxref("Attr")}}, corresponding to the given name.
+- {{domxref("NamedNodeMap.setNamedItem()")}}
+  - : Replaces, or adds, the {{domxref("Attr")}} identified in the map by the given name.
+- {{domxref("NamedNodeMap.removeNamedItem()")}}
+  - : Removes the {{domxref("Attr")}} identified by the given map.
+- {{domxref("NamedNodeMap.item()")}}
+  - : Returns the {{domxref("Attr")}} at the given index, or `null` if the index is higher or equal to the number of nodes.
+- {{domxref("NamedNodeMap.getNamedItemNS()")}}
+  - : Returns a {{domxref("Attr")}} identified by a namespace and related local name.
+- {{domxref("NamedNodeMap.setNamedItemNS()")}}
+  - : Replaces, or adds, the {{domxref("Attr")}} identified in the map by the given namespace and related local name.
+- {{domxref("NamedNodeMap.removeNamedItemNS()")}}
+  - : Removes the {{domxref("Attr")}} identified by the given namespace and related local name.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("Element.attributes")}}</li>
-</ul>
+- {{domxref("Element.attributes")}}

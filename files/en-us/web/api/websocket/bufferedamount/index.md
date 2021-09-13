@@ -2,34 +2,35 @@
 title: WebSocket.bufferedAmount
 slug: Web/API/WebSocket/bufferedAmount
 tags:
-- API
-- Property
-- Reference
-- Web API
-- WebSocket
+  - API
+  - Property
+  - Reference
+  - Web API
+  - WebSocket
 browser-compat: api.WebSocket.bufferedAmount
 ---
-<p>{{APIRef("Web Sockets API")}}</p>
+{{APIRef("Web Sockets API")}}
 
-<p>The <strong><code>WebSocket.bufferedAmount</code></strong> read-only property returns
-  the number of bytes of data that have been queued using calls to {{manch("send")}} but
-  not yet transmitted to the network. This value resets to zero once all queued data has
-  been sent. This value does not reset to zero when the connection is closed; if you keep
-  calling {{manch("send")}}, this will continue to climb.</p>
+The **`WebSocket.bufferedAmount`** read-only property returns
+the number of bytes of data that have been queued using calls to {{manch("send")}} but
+not yet transmitted to the network. This value resets to zero once all queued data has
+been sent. This value does not reset to zero when the connection is closed; if you keep
+calling {{manch("send")}}, this will continue to climb.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>var bufferedAmount</em> = aWebSocket.bufferedAmount;</pre>
+```js
+var bufferedAmount = aWebSocket.bufferedAmount;
+```
 
-<h2 id="Value">Value</h2>
+## Value
 
-<p>An <code>unsigned long</code>.</p>
+An `unsigned long`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

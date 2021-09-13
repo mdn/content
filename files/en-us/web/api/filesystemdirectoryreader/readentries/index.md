@@ -2,71 +2,68 @@
 title: FileSystemDirectoryReader.readEntries()
 slug: Web/API/FileSystemDirectoryReader/readEntries
 tags:
-- API
-- File and Directory Entries API
-- FileSystemDirectoryReader
-- Files
-- Interface
-- Method
-- Reference
-- readEntries
+  - API
+  - File and Directory Entries API
+  - FileSystemDirectoryReader
+  - Files
+  - Interface
+  - Method
+  - Reference
+  - readEntries
 browser-compat: api.FileSystemDirectoryReader.readEntries
 ---
-<div>{{APIRef("File and Directory Entries API")}}</div>
+{{APIRef("File and Directory Entries API")}}
 
-<p>The {{domxref("FileSystemDirectoryReader")}} interface's <strong><code>readEntries()</code></strong> method retrieves the directory entries
-    within the directory being read and delivers them in an array to a provided callback function.</p>
+The {{domxref("FileSystemDirectoryReader")}} interface's **`readEntries()`** method retrieves the directory entries
+within the directory being read and delivers them in an array to a provided callback function.
 
-<p>The objects in the array are all based upon {{domxref("FileSystemEntry")}}.
-  Generally, they are either {{domxref("FileSystemFileEntry")}} objects, which represent standard files, or {{domxref("FileSystemDirectoryEntry")}} objects, which represent directories.</p>
+The objects in the array are all based upon {{domxref("FileSystemEntry")}}.
+Generally, they are either {{domxref("FileSystemFileEntry")}} objects, which represent standard files, or {{domxref("FileSystemDirectoryEntry")}} objects, which represent directories.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">readEntries(<em>successCallback</em>);
-readEntries(<em>successCallback</em>, <em>errorCallback</em>);
-</pre>
+```js
+readEntries(successCallback);
+readEntries(successCallback, errorCallback);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>successCallback</code></dt>
-  <dd>A function which is called when the directory's contents have been retrieved. The
+- `successCallback`
+  - : A function which is called when the directory's contents have been retrieved. The
     function receives a single input parameter: an array of file system entry objects,
     each based on {{domxref("FileSystemEntry")}}. Generally, they are either
     {{domxref("FileSystemFileEntry")}} objects, which represent standard files, or
     {{domxref("FileSystemDirectoryEntry")}} objects, which represent directories. If there
-    are no files left, or you've already called <code>readEntries()</code> on this
-    {{domxref("FileSystemDirectoryReader")}}, the array is empty.</dd>
-  <dt><code>errorCallback</code> {{optional_inline}}</dt>
-  <dd>A callback function which is called if an error occurs while reading from the
+    are no files left, or you've already called `readEntries()` on this
+    {{domxref("FileSystemDirectoryReader")}}, the array is empty.
+- `errorCallback` {{optional_inline}}
+  - : A callback function which is called if an error occurs while reading from the
     directory. It receives one input parameter: a {{domxref("DOMException")}} object
-    describing the error which occurred.</dd>
-</dl>
+    describing the error which occurred.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{jsxref("undefined")}}</p>
+{{jsxref("undefined")}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See <a href="/en-US/docs/Web/API/DataTransferItem/webkitGetAsEntry#example"><code>DataTransferItem.webkitGetAsEntry()</code></a> for example code that uses this method.</p>
+See [`DataTransferItem.webkitGetAsEntry()`](/en-US/docs/Web/API/DataTransferItem/webkitGetAsEntry#example) for example code that uses this method.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>On Chrome 77, <code>readEntries()</code> will only return the first 100 <code>FileSystemEntry</code> instances. In order to obtain all of the
-  instances, <code>readEntries()</code> must be called multiple times.</p>
+On Chrome 77, `readEntries()` will only return the first 100 `FileSystemEntry` instances. In order to obtain all of the
+instances, `readEntries()` must be called multiple times.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</a></li>
-  <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">Introduction to the File System API</a></li>
-  <li>{{domxref("FileSystemDirectoryEntry")}}</li>
-  <li>{{domxref("FileSystem")}}</li>
-</ul>
+- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- {{domxref("FileSystemDirectoryEntry")}}
+- {{domxref("FileSystem")}}

@@ -2,49 +2,52 @@
 title: CanvasRenderingContext2D.closePath()
 slug: Web/API/CanvasRenderingContext2D/closePath
 tags:
-- API
-- Canvas
-- CanvasRenderingContext2D
-- Method
-- Reference
+  - API
+  - Canvas
+  - CanvasRenderingContext2D
+  - Method
+  - Reference
 browser-compat: api.CanvasRenderingContext2D.closePath
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The
-  <strong><code>CanvasRenderingContext2D.closePath()</code></strong>
-  method of the Canvas 2D API attempts to add a straight line from the current point to
-  the start of the current sub-path. If the shape has already been closed or has only one
-  point, this function does nothing.</p>
+The
+**`CanvasRenderingContext2D.closePath()`**
+method of the Canvas 2D API attempts to add a straight line from the current point to
+the start of the current sub-path. If the shape has already been closed or has only one
+point, this function does nothing.
 
-<p>This method doesn't draw anything to the canvas directly. You can render the path using
-  the {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}} or
-  {{domxref("CanvasRenderingContext2D.fill()", "fill()")}} methods.</p>
+This method doesn't draw anything to the canvas directly. You can render the path using
+the {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}} or
+{{domxref("CanvasRenderingContext2D.fill()", "fill()")}} methods.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <em>ctx</em>.closePath();
-</pre>
+```js
+void ctx.closePath();
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Closing_a_triangle">Closing a triangle</h3>
+### Closing a triangle
 
-<p>This example creates the first two (diagonal) sides of a triangle using the
-  <code>lineTo()</code> method. After that, the triangle's base is created with the
-  <code>closePath()</code> method, which automatically connects the shape's first and last
-  points.</p>
+This example creates the first two (diagonal) sides of a triangle using the
+`lineTo()` method. After that, the triangle's base is created with the
+`closePath()` method, which automatically connects the shape's first and last
+points.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<p>The triangle's corners are at (20, 140), (120, 10), and (220, 140).</p>
+The triangle's corners are at (20, 140), (120, 10), and (220, 140).
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.beginPath();
@@ -53,31 +56,31 @@ ctx.lineTo(120, 10);   // Line to top corner
 ctx.lineTo(220, 140);  // Line to bottom-right corner
 ctx.closePath();       // Line to bottom-left corner
 ctx.stroke();
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Closing_a_triangle', 700, 180) }}</p>
+{{ EmbedLiveSample('Closing_a_triangle', 700, 180) }}
 
-<h3 id="Closing_just_one_sub-path">Closing just one sub-path</h3>
+### Closing just one sub-path
 
-<p>This example draws a smiley face consisting of three disconnected sub-paths.</p>
+This example draws a smiley face consisting of three disconnected sub-paths.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Although <code>closePath()</code> is called after all the arcs have been
-    created, only the last arc (sub-path) gets closed.</p>
-</div>
+> **Note:** Although `closePath()` is called after all the arcs have been
+> created, only the last arc (sub-path) gets closed.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<p>The first two arcs create the face's eyes. The last arc creates the mouth.</p>
+The first two arcs create the face's eyes. The last arc creates the mouth.
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.beginPath();
@@ -89,23 +92,21 @@ ctx.arc(150, 80, 65, 0, Math.PI);
 ctx.closePath();
 ctx.lineWidth = 6;
 ctx.stroke();
-</pre>
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Closing_just_one_sub-path', 700, 180) }}</p>
+{{ EmbedLiveSample('Closing_just_one_sub-path', 700, 180) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining this method: {{domxref("CanvasRenderingContext2D")}}</li>
-  <li>{{domxref("CanvasRenderingContext2D.beginPath()")}}</li>
-</ul>
+- The interface defining this method: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.beginPath()")}}

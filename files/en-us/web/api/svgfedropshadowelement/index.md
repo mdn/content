@@ -9,58 +9,52 @@ tags:
   - SVG DOM
 browser-compat: api.SVGFEDropShadowElement
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <strong><code>SVGFEDropShadowElement</code></strong> interface corresponds to the {{SVGElement("feDropShadow")}} element.</p>
+The **`SVGFEDropShadowElement`** interface corresponds to the {{SVGElement("feDropShadow")}} element.
 
-<p>{{InheritanceDiagram(600, 140)}}</p>
+{{InheritanceDiagram(600, 140)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}.</em></p>
+_This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
 
-<dl>
-  <dt>{{domxref("SVGFEDropShadowElement.dx")}} {{ReadOnlyInline}}</dt>
-  <dd>An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("dx")}} attribute of the given element.</dd>
-  <dt>{{domxref("SVGFEDropShadowElement.dy")}} {{ReadOnlyInline}}</dt>
-  <dd>An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("dy")}} attribute of the given element.</dd>
-  <dt>{{domxref("SVGFEDropShadowElement.height")}} {{ReadOnlyInline}}</dt>
-  <dd>An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("height")}} attribute of the given element.</dd>
-  <dt>{{domxref("SVGFEDropShadowElement.in1")}} {{ReadOnlyInline}}</dt>
-  <dd>An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("in")}} attribute of the given element.</dd>
-  <dt>{{domxref("SVGFEDropShadowElement.result")}} {{ReadOnlyInline}}</dt>
-  <dd>An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("result")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGFEDropShadowElement.stdDeviationX")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedNumber")}} corresponding to the (possibly automatically computed) X component of the {{SVGAttr("stdDeviationX")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGFEDropShadowElement.stdDeviationY")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedNumber")}} corresponding to the (possibly automatically computed) Y component of the {{SVGAttr("stdDeviationY")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGFEDropShadowElement.width")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("width")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGFEDropShadowElement.x")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("x")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGFEDropShadowElement.y")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("y")}} attribute of the given element.</dd>
-</dl>
+- {{domxref("SVGFEDropShadowElement.dx")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("dx")}} attribute of the given element.
+- {{domxref("SVGFEDropShadowElement.dy")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("dy")}} attribute of the given element.
+- {{domxref("SVGFEDropShadowElement.height")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("height")}} attribute of the given element.
+- {{domxref("SVGFEDropShadowElement.in1")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("in")}} attribute of the given element.
+- {{domxref("SVGFEDropShadowElement.result")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("result")}} attribute of the given element.
+- {{domxref("SVGFEDropShadowElement.stdDeviationX")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedNumber")}} corresponding to the (possibly automatically computed) X component of the {{SVGAttr("stdDeviationX")}} attribute of the given element.
+- {{domxref("SVGFEDropShadowElement.stdDeviationY")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedNumber")}} corresponding to the (possibly automatically computed) Y component of the {{SVGAttr("stdDeviationY")}} attribute of the given element.
+- {{domxref("SVGFEDropShadowElement.width")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("width")}} attribute of the given element.
+- {{domxref("SVGFEDropShadowElement.x")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("x")}} attribute of the given element.
+- {{domxref("SVGFEDropShadowElement.y")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("y")}} attribute of the given element.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface also inherits methods of its parent, {{domxref("SVGElement")}}.</em></p>
+_This interface also inherits methods of its parent, {{domxref("SVGElement")}}._
 
-<dl>
- <dt>{{domxref("SVGFEDropShadowElement.setStdDeviation()")}}</dt>
- <dd>Sets the values for the <code>stdDeviation</code> attribute.</dd>
-</dl>
+- {{domxref("SVGFEDropShadowElement.setStdDeviation()")}}
+  - : Sets the values for the `stdDeviation` attribute.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGElement("feDropShadow")}}</li>
-</ul>
+- {{SVGElement("feDropShadow")}}

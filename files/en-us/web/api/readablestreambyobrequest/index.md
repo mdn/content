@@ -11,40 +11,36 @@ tags:
   - Steams
 browser-compat: api.ReadableStreamBYOBRequest
 ---
-<p>{{APIRef("Streams")}}{{SeeCompatTable}}{{draft}}</p>
+{{APIRef("Streams")}}{{SeeCompatTable}}{{draft}}
 
-<p>The <code><strong>ReadableStreamBYOBRequest</strong></code> interface of the <a href="/en-US/docs/Web/API/Streams_API">Streams API</a> represents a pull request into a {{domxref("ReadableByteStreamController")}} view.</p>
+The **`ReadableStreamBYOBRequest`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a pull request into a {{domxref("ReadableByteStreamController")}} view.
 
-<p>A view, as mentioned below, refers to a typed array representing the destination region to which the associated <code>ReadableByteStreamController</code> controller can write generated data.</p>
+A view, as mentioned below, refers to a typed array representing the destination region to which the associated `ReadableByteStreamController` controller can write generated data.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<p>None. <code>ReadableStreamBYOBRequest</code> instance is created automatically by <code>ReadableByteStreamController</code> as needed.</p>
+None. `ReadableStreamBYOBRequest` instance is created automatically by `ReadableByteStreamController` as needed.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("ReadableStreamBYOBRequest.view")}} {{readonlyInline}}</dt>
- <dd>Returns the current view.</dd>
-</dl>
+- {{domxref("ReadableStreamBYOBRequest.view")}} {{readonlyInline}}
+  - : Returns the current view.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("ReadableStreamBYOBRequest.respond()")}}</dt>
- <dd>xxx</dd>
- <dt>{{domxref("ReadableStreamBYOBRequest.respondWithNewView()")}}</dt>
- <dd>xxx</dd>
-</dl>
+- {{domxref("ReadableStreamBYOBRequest.respond()")}}
+  - : xxx
+- {{domxref("ReadableStreamBYOBRequest.respondWithNewView()")}}
+  - : xxx
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>TBD.</p>
+TBD.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

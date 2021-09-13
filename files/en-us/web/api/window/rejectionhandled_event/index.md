@@ -17,55 +17,56 @@ tags:
   - rejectionhandled
 browser-compat: api.Window.rejectionhandled_event
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>rejectionhandled</code></strong> event is sent to the script's global scope (usually {{domxref("window")}} but also {{domxref("Worker")}}) whenever a JavaScript {{jsxref("Promise")}} is rejected but after the promise rejection has been handled.</p>
+The **`rejectionhandled`** event is sent to the script's global scope (usually {{domxref("window")}} but also {{domxref("Worker")}}) whenever a JavaScript {{jsxref("Promise")}} is rejected but after the promise rejection has been handled.
 
-<p>This can be used in debugging and for general application resiliency, in tandem with the {{domxref("Window.unhandledrejection_event", "unhandledrejection")}} event, which is sent when a promise is rejected but there is no handler for the rejection.</p>
+This can be used in debugging and for general application resiliency, in tandem with the {{domxref("Window.unhandledrejection_event", "unhandledrejection")}} event, which is sent when a promise is rejected but there is no handler for the rejection.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("PromiseRejectionEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("WindowEventHandlers.onrejectionhandled", "onrejectionhandled")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("PromiseRejectionEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{domxref("WindowEventHandlers.onrejectionhandled", "onrejectionhandled")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>You can use the <code>rejectionhandled</code> event to log promises that get rejected to the console, along with the reasons why they were rejected:</p>
+You can use the `rejectionhandled` event to log promises that get rejected to the console, along with the reasons why they were rejected:
 
-<pre class="brush: js">window.addEventListener("rejectionhandled", event =&gt; {
+```js
+window.addEventListener("rejectionhandled", event => {
   console.log("Promise rejected; reason: " + event.reason);
 }, false);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SectionOnPage("/en-US/docs/Web/JavaScript/Guide/Using_promises", "Promise rejection events")}}</li>
- <li>{{domxref("PromiseRejectionEvent")}}</li>
- <li>{{jsxref("Promise")}}</li>
- <li>{{domxref("Window/unhandledrejection_event", "unhandledrejection")}}</li>
-</ul>
+- {{SectionOnPage("/en-US/docs/Web/JavaScript/Guide/Using_promises", "Promise rejection events")}}
+- {{domxref("PromiseRejectionEvent")}}
+- {{jsxref("Promise")}}
+- {{domxref("Window/unhandledrejection_event", "unhandledrejection")}}

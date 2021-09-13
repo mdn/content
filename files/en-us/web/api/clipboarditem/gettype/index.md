@@ -2,54 +2,52 @@
 title: ClipboardItem.getType()
 slug: Web/API/ClipboardItem/getType
 tags:
-- Clipboard
-- Clipboard API
-- ClipboardItem
-- Cut
-- Method
-- copy
-- getTypes
-- paste
+  - Clipboard
+  - Clipboard API
+  - ClipboardItem
+  - Cut
+  - Method
+  - copy
+  - getTypes
+  - paste
 browser-compat: api.ClipboardItem.getType
 ---
-<div>{{DefaultAPISidebar("Clipboard API")}}</div>
+{{DefaultAPISidebar("Clipboard API")}}
 
-<p>The <strong><code>getType()</code></strong> method of the {{domxref("ClipboardItem")}} interface returns a {{jsxref("Promise")}} that resolves with a {{domxref("Blob")}} of the requested  {{Glossary("MIME type")}} or an error if the MIME type is not found.</p>
+The **`getType()`** method of the {{domxref("ClipboardItem")}} interface returns a {{jsxref("Promise")}} that resolves with a {{domxref("Blob")}} of the requested  {{Glossary("MIME type")}} or an error if the MIME type is not found.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>blob</var> = <var>clipboardItem</var>.getType(type);</pre>
+```js
+var blob = clipboardItem.getType(type);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>type</code></dt>
-  <dd>A valid {{Glossary("MIME type")}}.</dd>
-</dl>
+- `type`
+  - : A valid {{Glossary("MIME type")}}.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} that resolves with a {{domxref("Blob")}} object.</p>
+A {{jsxref("Promise")}} that resolves with a {{domxref("Blob")}} object.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt><code>DOMException</code></dt>
-  <dd>The <code>type</code> does not match a known {{Glossary("MIME type")}}.</dd>
-  <dt><code>TypeError</code></dt>
-  <dd>No parameter is specified or the <code>type</code> is not that of the
-    {{domxref("ClipboardItem")}}.</dd>
-</dl>
+- `DOMException`
+  - : The `type` does not match a known {{Glossary("MIME type")}}.
+- `TypeError`
+  - : No parameter is specified or the `type` is not that of the
+    {{domxref("ClipboardItem")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the following example, we're returning all items on the clipboard via the
-  {{domxref("clipboard.read()")}} method. Then utilizing the
-  {{domxref("ClipboardItem.types")}} property to set the <code>getType()</code> argument
-  and return the corresponding blob object.</p>
+In the following example, we're returning all items on the clipboard via the
+{{domxref("clipboard.read()")}} method. Then utilizing the
+{{domxref("ClipboardItem.types")}} property to set the `getType()` argument
+and return the corresponding blob object.
 
-<pre class="brush: js">async function getClipboardContents() {
+```js
+async function getClipboardContents() {
   try {
     const clipboardItems = await navigator.clipboard.read();
 
@@ -66,22 +64,20 @@ browser-compat: api.ClipboardItem.getType
     console.error(err.name, err.message);
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Clipboard_API">Clipboard API</a></li>
-  <li><a href="https://async-clipboard-api.glitch.me/">Async Clipboard API demo on
-      Glitch</a></li>
-  <li><a href="https://web.dev/image-support-for-async-clipboard/">Image support for Async
-      Clipboard article</a></li>
-</ul>
+- [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
+- [Async Clipboard API demo on
+  Glitch](https://async-clipboard-api.glitch.me/)
+- [Image support for Async
+  Clipboard article](https://web.dev/image-support-for-async-clipboard/)

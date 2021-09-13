@@ -2,71 +2,71 @@
 title: VideoPlaybackQuality.corruptedVideoFrames
 slug: Web/API/VideoPlaybackQuality/corruptedVideoFrames
 tags:
-- API
-- Corruption
-- Data Loss
-- Experimental
-- Frames
-- Media
-- Media Playback Quality
-- Media Playback Quality API
-- Playback
-- Property
-- Quality
-- Reference
-- Video
-- VideoPlaybackQuality
-- corruptedVideoFrames
+  - API
+  - Corruption
+  - Data Loss
+  - Experimental
+  - Frames
+  - Media
+  - Media Playback Quality
+  - Media Playback Quality API
+  - Playback
+  - Property
+  - Quality
+  - Reference
+  - Video
+  - VideoPlaybackQuality
+  - corruptedVideoFrames
 browser-compat: api.VideoPlaybackQuality.corruptedVideoFrames
 ---
-<p>{{APIRef("HTML DOM")}}{{deprecated_header}}</p>
+{{APIRef("HTML DOM")}}{{deprecated_header}}
 
-<p>The {{domxref("VideoPlaybackQuality")}} interface's read-only
-    <code><strong>corruptedVideoFrames</strong></code> property the number of corrupted
-    video frames that have been received since the {{HTMLElement("video")}} element was
-    last loaded or reloaded.</p>
+The {{domxref("VideoPlaybackQuality")}} interface's read-only
+**`corruptedVideoFrames`** property the number of corrupted
+video frames that have been received since the {{HTMLElement("video")}} element was
+last loaded or reloaded.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>corruptFrameFount</em> = <em>videoPlaybackQuality</em>.corruptedVideoFrames;</pre>
+```js
+corruptFrameFount = videoPlaybackQuality.corruptedVideoFrames;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>The number of corrupted video frames that have been received since the
-  {{HTMLElement("video")}} element was last loaded or reloaded.</p>
+The number of corrupted video frames that have been received since the
+{{HTMLElement("video")}} element was last loaded or reloaded.
 
-<p>It is up to the {{Glossary("user agent")}} to determine whether or not to display a
-  corrupted video frame. If a corrupted frame is dropped, then both
-  <code>corruptedVideoFrames</code> and
-  {{domxref("VideoPlaybackQuality.droppedVideoFrames", "droppedVideoFrames")}} are
-  incremented.</p>
+It is up to the {{Glossary("user agent")}} to determine whether or not to display a
+corrupted video frame. If a corrupted frame is dropped, then both
+`corruptedVideoFrames` and
+{{domxref("VideoPlaybackQuality.droppedVideoFrames", "droppedVideoFrames")}} are
+incremented.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example determines the percentage of frames which have been corrupted, and if the
-  value is greater than 5%, calls a funciton called <code>downgradeVideo()</code> that
-  would be implemented to switch to a different video that might tax the network less.</p>
+This example determines the percentage of frames which have been corrupted, and if the
+value is greater than 5%, calls a funciton called `downgradeVideo()` that
+would be implemented to switch to a different video that might tax the network less.
 
-<pre class="brush: js">var videoElem = document.getElementById("my_vid");
+```js
+var videoElem = document.getElementById("my_vid");
 var quality = videoElem.getVideoPlaybackQuality();
 
-if (quality.corruptedVideoFrames/quality.totalVideoFrames &gt; 0.05) {
+if (quality.corruptedVideoFrames/quality.totalVideoFrames > 0.05) {
   downgradeVideo(videoElem);
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("HTMLVideoElement.getVideoPlaybackQuality()")}} method for
-    constructing and returning this interface</li>
-</ul>
+- The {{domxref("HTMLVideoElement.getVideoPlaybackQuality()")}} method for
+  constructing and returning this interface

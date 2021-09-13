@@ -2,40 +2,41 @@
 title: HTMLTemplateElement.content
 slug: Web/API/HTMLTemplateElement/content
 tags:
-- API
-- HTML DOM
-- HTMLTemplateElement
-- Property
-- Reference
-- Web Components
+  - API
+  - HTML DOM
+  - HTMLTemplateElement
+  - Property
+  - Reference
+  - Web Components
 browser-compat: api.HTMLTemplateElement.content
 ---
-<div>{{APIRef("Web Components")}}</div>
+{{APIRef("Web Components")}}
 
-<p>The <code><strong>HTMLTemplateElement.content</strong></code> property returns a
-  <code>&lt;template&gt;</code> element's template contents (a
-  {{domxref("DocumentFragment")}}).</p>
+The **`HTMLTemplateElement.content`** property returns a
+`<template>` element's template contents (a
+{{domxref("DocumentFragment")}}).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>documentFragment</var> = <var>templateElement</var>.content</pre>
+```js
+var documentFragment = templateElement.content
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var templateElement = document.querySelector("#foo");
-var documentFragment = templateElement.content.cloneNode(true);</pre>
+```js
+var templateElement = document.querySelector("#foo");
+var documentFragment = templateElement.content.cloneNode(true);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("HTMLTemplateElement")}}</li>
-</ul>
+- {{domxref("HTMLTemplateElement")}}

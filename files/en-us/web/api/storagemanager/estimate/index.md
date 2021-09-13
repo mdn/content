@@ -14,73 +14,71 @@ tags:
   - estimate
 browser-compat: api.StorageManager.estimate
 ---
-<p>{{securecontext_header}}{{APIRef("Storage")}}</p>
+{{securecontext_header}}{{APIRef("Storage")}}
 
-<p>The <strong><code>estimate()</code></strong> method of the {{domxref("StorageManager")}} interface asks the Storage Manager for how much storage the current <a href="/en-US/docs/Glossary/Same-origin_policy">origin</a> takes up (<code>usage</code>), and how much space is available (<code>quota</code>).</p>
+The **`estimate()`** method of the {{domxref("StorageManager")}} interface asks the Storage Manager for how much storage the current [origin](/en-US/docs/Glossary/Same-origin_policy) takes up (`usage`), and how much space is available (`quota`).
 
-<p>This method operates asynchronously, so it returns a {{jsxref("Promise")}} which resolves once the information is available. The promise's fulfillment handler is called with a {{domxref("StorageEstimate")}} containing the usage and quota data.</p>
+This method operates asynchronously, so it returns a {{jsxref("Promise")}} which resolves once the information is available. The promise's fulfillment handler is called with a {{domxref("StorageEstimate")}} containing the usage and quota data.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const <var>estimatePromise</var> = <var>StorageManager</var>.estimate();</pre>
+```js
+const estimatePromise = StorageManager.estimate();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref('Promise')}} that resolves to an object which conforms to the {{domxref('StorageEstimate')}} dictionary. This dictionary contains estimates of how much space is available to the origin in {{domxref("StorageEstimate.quota")}}, as well as how much is currently used in {{domxref("StorageEstimate.usage")}}.</p>
+A {{jsxref('Promise')}} that resolves to an object which conforms to the {{domxref('StorageEstimate')}} dictionary. This dictionary contains estimates of how much space is available to the origin in {{domxref("StorageEstimate.quota")}}, as well as how much is currently used in {{domxref("StorageEstimate.usage")}}.
 
-<div class="notecard note">
-<p><strong>Note:</strong> The returned values are not exact: between compression, deduplication, and obfuscation for security reasons, they will be imprecise.</p>
-</div>
+> **Note:** The returned values are not exact: between compression, deduplication, and obfuscation for security reasons, they will be imprecise.
 
-<p>You may find that the <code>quota</code> varies from origin to origin. This variance is based on factors such as:</p>
+You may find that the `quota` varies from origin to origin. This variance is based on factors such as:
 
-<ul>
- <li>How often the user visits</li>
- <li>Public site popularity data</li>
- <li>User engagement signals like bookmarking, adding to homescreen, or accepting push notifications</li>
-</ul>
+- How often the user visits
+- Public site popularity data
+- User engagement signals like bookmarking, adding to homescreen, or accepting push notifications
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this example, we obtain the usage estimates and present the percentage of storage capacity currently used to the user.</p>
+In this example, we obtain the usage estimates and present the percentage of storage capacity currently used to the user.
 
-<h3 id="HTML_content">HTML content</h3>
+### HTML content
 
-<pre class="brush: html">&lt;label&gt;
-  You’re currently using about &lt;output id="percent"&gt;
-  &lt;/output&gt;% of your available storage.
-&lt;/label&gt;
-</pre>
+```html
+<label>
+  You’re currently using about <output id="percent">
+  </output>% of your available storage.
+</label>
+```
 
-<h3 id="JavaScript_content">JavaScript content</h3>
+### JavaScript content
 
-<pre class="brush: js">navigator.storage.estimate().then(function(estimate) {
+```js
+navigator.storage.estimate().then(function(estimate) {
   document.getElementById("percent").value =
       (estimate.usage / estimate.quota * 100).toFixed(2);
 });
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{ EmbedLiveSample('Example', 600, 40) }}</p>
+{{ EmbedLiveSample('Example', 600, 40) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Storage API</li>
- <li>{{domxref("Storage")}}, the object returned by {{domxref("Window.localStorage")}}</li>
- <li>{{domxref("StorageManager")}}</li>
- <li>{{domxref("navigator.storage")}}</li>
-</ul>
+- Storage API
+- {{domxref("Storage")}}, the object returned by {{domxref("Window.localStorage")}}
+- {{domxref("StorageManager")}}
+- {{domxref("navigator.storage")}}

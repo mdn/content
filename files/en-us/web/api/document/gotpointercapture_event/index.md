@@ -10,82 +10,84 @@ tags:
   - gotpointercapture
 browser-compat: api.Document.gotpointercapture_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <strong><code>gotpointercapture</code></strong> event is fired when an element captures a pointer using {{domxref("Element.setPointerCapture", "setPointerCapture()")}}.</p>
+The **`gotpointercapture`** event is fired when an element captures a pointer using {{domxref("Element.setPointerCapture", "setPointerCapture()")}}.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("PointerEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("GlobalEventHandlers/ongotpointercapture", "ongotpointercapture")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("PointerEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{domxref("GlobalEventHandlers/ongotpointercapture", "ongotpointercapture")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example gets a <code>&lt;p&gt;</code> element and listens for the <code>gotpointercapture</code> event. It then calls <code>setPointerCapture()</code> on the element on a <code>pointerdown</code> event, which will trigger <code>gotpointercapture</code>.</p>
+This example gets a `<p>` element and listens for the `gotpointercapture` event. It then calls `setPointerCapture()` on the element on a `pointerdown` event, which will trigger `gotpointercapture`.
 
-<pre class="brush: js">const para = document.querySelector('p');
+```js
+const para = document.querySelector('p');
 
-document.addEventListener('gotpointercapture', () =&gt; {
+document.addEventListener('gotpointercapture', () => {
   console.log('I\'ve been captured!')
 });
 
-para.addEventListener('pointerdown', (event) =&gt; {
+para.addEventListener('pointerdown', (event) => {
   para.setPointerCapture(event.pointerId);
 });
-</pre>
+```
 
-<p>The same example, using the <code>ongotpointercapture</code> event handler property:</p>
+The same example, using the `ongotpointercapture` event handler property:
 
-<pre class="brush: js">const para = document.querySelector('p');
+```js
+const para = document.querySelector('p');
 
-document.ongotpointercapture = () =&gt; {
+document.ongotpointercapture = () => {
   console.log('I\'ve been captured!')
 };
 
-para.addEventListener('pointerdown', (event) =&gt; {
+para.addEventListener('pointerdown', (event) => {
   para.setPointerCapture(event.pointerId);
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Related events
-  <ul>
-   <li>{{domxref("Document/lostpointercapture_event", "lostpointercapture")}}</li>
-   <li>{{domxref("Document/pointerover_event", "pointerover")}}</li>
-   <li>{{domxref("Document/pointerenter_event", "pointerenter")}}</li>
-   <li>{{domxref("Document/pointerdown_event", "pointerdown")}}</li>
-   <li>{{domxref("Document/pointermove_event", "pointermove")}}</li>
-   <li>{{domxref("Document/pointerup_event", "pointerup")}}</li>
-   <li>{{domxref("Document/pointercancel_event", "pointercancel")}}</li>
-   <li>{{domxref("Document/pointerout_event", "pointerout")}}</li>
-   <li>{{domxref("Document/pointerleave_event", "pointerleave")}}</li>
-  </ul>
- </li>
- <li>{{domxref("GlobalEventHandlers/ongotpointercapture", "ongotpointercapture")}} event handler property</li>
- <li>This event on <code>HTMLElement</code> targets: {{domxref("HTMLElement/gotpointercapture_event", "gotpointercapture")}} event</li>
-</ul>
+- Related events
+
+  - {{domxref("Document/lostpointercapture_event", "lostpointercapture")}}
+  - {{domxref("Document/pointerover_event", "pointerover")}}
+  - {{domxref("Document/pointerenter_event", "pointerenter")}}
+  - {{domxref("Document/pointerdown_event", "pointerdown")}}
+  - {{domxref("Document/pointermove_event", "pointermove")}}
+  - {{domxref("Document/pointerup_event", "pointerup")}}
+  - {{domxref("Document/pointercancel_event", "pointercancel")}}
+  - {{domxref("Document/pointerout_event", "pointerout")}}
+  - {{domxref("Document/pointerleave_event", "pointerleave")}}
+
+- {{domxref("GlobalEventHandlers/ongotpointercapture", "ongotpointercapture")}} event handler property
+- This event on `HTMLElement` targets: {{domxref("HTMLElement/gotpointercapture_event", "gotpointercapture")}} event

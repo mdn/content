@@ -2,41 +2,40 @@
 title: WindowEventHandlers.onmessageerror
 slug: Web/API/WindowEventHandlers/onmessageerror
 tags:
-- API
-- Event Handler
-- HTML-DOM
-- Property
-- Reference
-- Window
-- onmessageerror
+  - API
+  - Event Handler
+  - HTML-DOM
+  - Property
+  - Reference
+  - Window
+  - onmessageerror
 browser-compat: api.WindowEventHandlers.onmessageerror
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <code><strong>onmessageerror</strong></code> event handler
-    of the {{domxref("WindowEventHandlers")}} interface is an
-    {{domxref("EventListener")}}, called whenever an {{domxref("MessageEvent")}} of type
-    <code>messageerror</code> is fired on a window—that is, when it receives a message
-    that cannot be {{glossary("Deserialization", "deserialized")}}.</p>
+The **`onmessageerror`** event handler
+of the {{domxref("WindowEventHandlers")}} interface is an
+{{domxref("EventListener")}}, called whenever an {{domxref("MessageEvent")}} of type
+`messageerror` is fired on a window—that is, when it receives a message
+that cannot be {{glossary("Deserialization", "deserialized")}}.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>window</em>.onmessageerror = function() { ... };</pre>
+```js
+window.onmessageerror = function() { ... };
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging">Using
-      channel messaging</a></li>
-</ul>
+- [Using
+  channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)

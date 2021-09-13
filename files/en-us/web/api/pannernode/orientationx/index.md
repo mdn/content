@@ -9,69 +9,66 @@ tags:
   - orientationX
 browser-compat: api.PannerNode.orientationX
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-
-<p>The <strong><code>orientationX</code></strong> property of the {{
+The **`orientationX`** property of the {{
     domxref("PannerNode") }} interface indicates the X (horizontal) component of the
-    direction in which the audio source is facing, in a 3D Cartesian coordinate space.</p>
+direction in which the audio source is facing, in a 3D Cartesian coordinate space.
 
-<p>The complete vector is defined by the position of the audio source, given as
-    ({{domxref("PannerNode.positionX", "positionX")}}, {{domxref("PannerNode.positionY",
+The complete vector is defined by the position of the audio source, given as
+({{domxref("PannerNode.positionX", "positionX")}}, {{domxref("PannerNode.positionY",
     "positionY")}}, {{domxref("PannerNode.positionZ", "positionZ")}}), and the orientation
-    of the audio source (that is, the direction in which it's facing), given as
-    ({{domxref("PannerNode.orientationX", "orientationX")}},
-    {{domxref("PannerNode.orientationY", "orientationY")}},
-    {{domxref("PannerNode.orientationZ", "orientationZ")}}).</p>
+of the audio source (that is, the direction in which it's facing), given as
+({{domxref("PannerNode.orientationX", "orientationX")}},
+{{domxref("PannerNode.orientationY", "orientationY")}},
+{{domxref("PannerNode.orientationZ", "orientationZ")}}).
 
-<p>Depending on the directionality of the sound (as specified using the attributes
-    {{domxref("PannerNode.coneInnerAngle", "coneInnerAngle")}},
-    {{domxref("PannerNode.coneOuterAngle", "coneOuterAngle")}}, and
-    {{domxref("PannerNode.coneOuterGain", "coneOuterGain")}}), the orientation of the
-    sound may alter the perceived volume of the sound as it's being played. If the sound
-    is pointing toward the listener, it will be louder than if the sound is pointed away
-    from the listener.</p>
+Depending on the directionality of the sound (as specified using the attributes
+{{domxref("PannerNode.coneInnerAngle", "coneInnerAngle")}},
+{{domxref("PannerNode.coneOuterAngle", "coneOuterAngle")}}, and
+{{domxref("PannerNode.coneOuterGain", "coneOuterGain")}}), the orientation of the
+sound may alter the perceived volume of the sound as it's being played. If the sound
+is pointing toward the listener, it will be louder than if the sound is pointed away
+from the listener.
 
-<p>The {{domxref("AudioParam")}} contained by this property is read only; however, you
-    can still change the value of the parameter by assigning a new value to its
-    {{domxref("AudioParam.value")}} property.</p>
+The {{domxref("AudioParam")}} contained by this property is read only; however, you
+can still change the value of the parameter by assigning a new value to its
+{{domxref("AudioParam.value")}} property.
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+var orientationX = PannerNode.orientationX;
 
-<pre class="brush: js">var <em>orientationX</em> = <em>PannerNode</em>.orientationX;
+PannerNode.orientationX.value = newOrientationX;
+```
 
-<em>PannerNode</em>.orientationX.value = <em>newOrientationX</em>;
-</pre>
+### Value
 
-<h3 id="Value">Value</h3>
+An {{domxref("AudioParam")}} whose `value` is the X component of the
+direction in which the audio source is facing, in 3D Cartesian coordinate space.
 
-<p>An {{domxref("AudioParam")}} whose <code>value</code> is the X component of the
-  direction in which the audio source is facing, in 3D Cartesian coordinate space.</p>
+## Example
 
-<h2 id="Example">Example</h2>
-
-<p>In this example, we'll demonstrate how changing the orientation parameters of a {{
+In this example, we'll demonstrate how changing the orientation parameters of a {{
   domxref("PannerNode") }} in combination with {{domxref("PannerNode.coneInnerAngle",
   "coneInnerAngle")}} and {{domxref("PannerNode.coneOuterAngle",
   "coneOuterAngle")}} affects volume. To help us visualise how the orientation vector
-  affects, we can use the <a
-    href="https://en.wikipedia.org/wiki/Right-hand_rule">Right-hand rule</a>:</p>
+affects, we can use the [Right-hand rule](https://en.wikipedia.org/wiki/Right-hand_rule):
 
-<p><img
-    alt="This chart visualises how the PannerNode orientation vectors affect the direction of the sound cone."
-    src="pannernode-orientation.png"></p>
+![This chart visualises how the PannerNode orientation vectors affect the direction of the sound cone.](pannernode-orientation.png)
 
-<p>First, let's start by writing a utility function to figure out our <em>orientation vector.</em>
-  The X and Z components are always at a 90° to each other, so we can
-  use the sine and cosine functions, which are offset by the same amount in radians.
-  However, normally this would mean the {{ domxref("PannerNode") }} points to
-  the <strong>left</strong> of the listener at 0° rotation – since <code>x = cos(0) = 1</code> and <code>z = sin(0) = 0</code>.
-  It's more useful to offset the angle by -90°, which means the {{domxref("PannerNode")}} will point <strong>directly at the listener</strong> at 0° rotation.</p>
+First, let's start by writing a utility function to figure out our _orientation vector._
+The X and Z components are always at a 90° to each other, so we can
+use the sine and cosine functions, which are offset by the same amount in radians.
+However, normally this would mean the {{ domxref("PannerNode") }} points to
+the **left** of the listener at 0° rotation – since `x = cos(0) = 1` and `z = sin(0) = 0`.
+It's more useful to offset the angle by -90°, which means the {{domxref("PannerNode")}} will point **directly at the listener** at 0° rotation.
 
-<pre class="brush: js">// this utility converts amount of rotation around the Y axis
+```js
+// this utility converts amount of rotation around the Y axis
 // (i.e. rotation in the 'horizontal plane') to an orientation vector
-const yRotationToVector = degrees =&gt; {
+const yRotationToVector = degrees => {
   // convert degrees to radians and offset the angle so 0 points towards the listener
   const radians = (degrees - 90) * (Math.PI / 180);
   // using cosine and sine here ensures the output values are always normalized
@@ -82,23 +79,26 @@ const yRotationToVector = degrees =&gt; {
   // we hard-code the Y component to 0, as Y is the axis of rotation
   return [x, 0, z];
 };
-</pre>
+```
 
-<p>Now we can create our {{ domxref("AudioContext") }}, an oscillator and a {{
-  domxref("PannerNode") }}:</p>
+Now we can create our {{ domxref("AudioContext") }}, an oscillator and a {{
+  domxref("PannerNode") }}:
 
-<pre class="brush: js">const context = new AudioContext();
+```js
+const context = new AudioContext();
 
 const osc = new OscillatorNode(context);
 osc.type = 'sawtooth';
 
 const panner = new PannerNode(context);
-panner.panningModel = 'HRTF';</pre>
+panner.panningModel = 'HRTF';
+```
 
-<p>Next, we set up the <em>cone</em> of our spatialised sound, determining the area in
-  which it can be heard:</p>
+Next, we set up the *cone* of our spatialised sound, determining the area in
+which it can be heard:
 
-<pre class="brush: js">// this value determines the size of the area in which the sound volume is constant
+```js
+// this value determines the size of the area in which the sound volume is constant
 // if coneInnerAngle == 30, it means that when the sound is rotated
 // by at most 15 (30/2) degrees either direction, the volume won't change
 panner.coneInnerAngle = 30;
@@ -113,12 +113,14 @@ panner.coneOuterAngle = 45;
 panner.coneOuterGain = 0;
 // increase the Z position to ensure the cone has an effect
 // (otherwise the sound is located at the same position as the listener)
-panner.positionZ.setValueAtTime(1, context.currentTime);</pre>
+panner.positionZ.setValueAtTime(1, context.currentTime);
+```
 
-<p>Having set up the {{ domxref("PannerNode") }}, we can now schedule some updates to its
-  Y-axis rotation:</p>
+Having set up the {{ domxref("PannerNode") }}, we can now schedule some updates to its
+Y-axis rotation:
 
-<pre class="brush: js">// calculate the vector for no rotation
+```js
+// calculate the vector for no rotation
 // this means the sound will play at full volume
 const [x1, y1, z1] = yRotationToVector(0);
 // schedule the no-rotation vector immediately
@@ -132,30 +134,29 @@ panner.orientationZ.setValueAtTime(z1, context.currentTime);
 const [x2, y2, z2] = yRotationToVector(-22.4);
 panner.orientationX.setValueAtTime(x2, context.currentTime + 2);
 panner.orientationY.setValueAtTime(y2, context.currentTime + 2);
-panner.orientationZ.setValueAtTime(z2, context.currentTime + 2);</pre>
+panner.orientationZ.setValueAtTime(z2, context.currentTime + 2);
+```
 
-<p>Finally, let's connect all our nodes and start the oscillator! </p>
+Finally, let's connect all our nodes and start the oscillator!
 
-<pre class="brush: js">osc.connect(panner)
+```js
+osc.connect(panner)
    .connect(context.destination);
 
 osc.start(0);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
-  </li>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics">Web
-      Audio spatialisation basics</a></li>
-  <li>{{domxref("PannerNode")}}</li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Web
+  Audio spatialisation basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
+- {{domxref("PannerNode")}}

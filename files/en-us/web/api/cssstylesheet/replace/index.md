@@ -9,59 +9,55 @@ tags:
   - CSSStyleSheet
 browser-compat: api.CSSStyleSheet.replace
 ---
-<div>{{APIRef("CSSOM")}}</div>
+{{APIRef("CSSOM")}}
 
-<p>The <strong><code>replace()</code></strong> method of the {{domxref("CSSStyleSheet")}} interface asynchronously replaces the content of the stylesheet with the content passed into it. The method returns a promise that resolves with a <code>CSSStyleSheet</code> object.</p>
+The **`replace()`** method of the {{domxref("CSSStyleSheet")}} interface asynchronously replaces the content of the stylesheet with the content passed into it. The method returns a promise that resolves with a `CSSStyleSheet` object.
 
-<p>The <code>replace()</code> and {{domxref("CSSStyleSheet.replaceSync()")}} methods can only be used on a stylesheet created with the {{domxref("CSSStyleSheet.CSSStyleSheet()","CSSStyleSheet()")}} constructor.</p>
+The `replace()` and {{domxref("CSSStyleSheet.replaceSync()")}} methods can only be used on a stylesheet created with the {{domxref("CSSStyleSheet.CSSStyleSheet()","CSSStyleSheet()")}} constructor.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">CSSStyleSheet.replace(text);</pre>
+```js
+CSSStyleSheet.replace(text);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>text</code></dt>
-  <dd>A {{domxref("USVString","string")}} containing the style rules to replace the content of the stylesheet. If the string does not contain a parseable list of rules, then the value will be set to an empty string.</dd>
-</dl>
+- `text`
+  - : A {{domxref("USVString","string")}} containing the style rules to replace the content of the stylesheet. If the string does not contain a parseable list of rules, then the value will be set to an empty string.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> If any of the rules passed in <code>text</code> are an external stylesheet imported with the {{cssxref("@import")}} rule, those rules will be removed, and a warning printed to the console.</p>
-</div>
+> **Note:** If any of the rules passed in `text` are an external stylesheet imported with the {{cssxref("@import")}} rule, those rules will be removed, and a warning printed to the console.
 
-<h3 id="Returns">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} that resolves with a {{domxref("CSSStyleSheet")}}.</p>
+A {{jsxref("Promise")}} that resolves with a {{domxref("CSSStyleSheet")}}.
 
+### Exceptions
 
-<h3 id="Exceptions">Exceptions</h3>
+- {{domxref("DOMException")}} `NotAllowedError`
+  - : Thrown if the stylesheet was not created using the {{domxref("CSSStyleSheet.CSSStyleSheet()","CSSStyleSheet()")}} constructor.
+- {{domxref("DOMException")}} `NotAllowedError`
+  - : If the stylesheet is flagged as unmodifiable.
 
-<dl>
-  <dt>{{domxref("DOMException")}} <code>NotAllowedError</code></dt>
-  <dd>Thrown if the stylesheet was not created using the {{domxref("CSSStyleSheet.CSSStyleSheet()","CSSStyleSheet()")}} constructor.</dd>
-  <dt>{{domxref("DOMException")}} <code>NotAllowedError</code></dt>
-  <dd>If the stylesheet is flagged as unmodifiable.</dd>
-</dl>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+In the following example a new stylesheet is created and two CSS rules are added using `replace()`. The first rule is then printed to the console, which will return: `body { font-size: 1.4em };`
 
-<p>In the following example a new stylesheet is created and two CSS rules are added using <code>replace()</code>. The first rule is then printed to the console, which will return: <code>body { font-size: 1.4em };</code></p>
-
-<pre class="brush: js">let stylesheet = new CSSStyleSheet();
+```js
+let stylesheet = new CSSStyleSheet();
 
 stylesheet.replace('body { font-size: 1.4em };p { color: red; }')
   .then(() => {   console.log(stylesheet.cssRules[0].cssText);
 })
 .catch(err => {
   console.error('Failed to replace styles:', err);
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
+{{Compat}}

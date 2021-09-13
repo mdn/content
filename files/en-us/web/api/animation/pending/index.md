@@ -11,30 +11,29 @@ tags:
   - web animations api
 browser-compat: api.Animation.pending
 ---
-<p>{{APIRef("Web Animations")}}{{SeeCompatTable}}</p>
+{{APIRef("Web Animations")}}{{SeeCompatTable}}
 
-<p>The read-only <strong><code>Animation.pending</code></strong> property of the <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> indicates whether the animation is currently waiting for an asynchronous operation such as initiating playback or pausing a running animation.</p>
+The read-only **`Animation.pending`** property of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) indicates whether the animation is currently waiting for an asynchronous operation such as initiating playback or pausing a running animation.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>pending</em> = <em>Animation</em>.pending;
-</pre>
+```js
+var pending = Animation.pending;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p><code><strong>true</strong></code> if the animation is pending, <code><strong>false</strong></code> otherwise.</p>
+**`true`** if the animation is pending, **`false`** otherwise.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("Animation")}} for other methods and properties you can use to control web page animation.</li>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
-</ul>
+- {{domxref("Animation")}} for other methods and properties you can use to control web page animation.
+- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)

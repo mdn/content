@@ -2,49 +2,50 @@
 title: RTCIceCandidatePairStats.readable
 slug: Web/API/RTCIceCandidatePairStats/readable
 tags:
-- API
-- Candidate
-- ICE
-- Deprecated
-- Property
-- RTCIceCandidatePairStats
-- Reference
-- Statistics
-- Stats
-- WebRTC
-- WebRTC API
-- readable
+  - API
+  - Candidate
+  - ICE
+  - Deprecated
+  - Property
+  - RTCIceCandidatePairStats
+  - Reference
+  - Statistics
+  - Stats
+  - WebRTC
+  - WebRTC API
+  - readable
 browser-compat: api.RTCIceCandidatePairStats.readable
 ---
-<p>{{APIRef("WebRTC")}}{{deprecated_header}}</p>
+{{APIRef("WebRTC")}}{{deprecated_header}}
 
-<p>The <em>obsolete</em> {{domxref("RTCIceCandidatePairStats")}}
-    property <strong><code>readable</code></strong> reports whether or not the connection
-    described by the candidate pair has received at least one valid incoming ICE
-    request.</p>
+The _obsolete_ {{domxref("RTCIceCandidatePairStats")}}
+property **`readable`** reports whether or not the connection
+described by the candidate pair has received at least one valid incoming ICE
+request.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>isReadable</em> = <em>rtcIceCandidatePairStats</em>.readable;</pre>
+```js
+isReadable = rtcIceCandidatePairStats.readable;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A Boolean value which is <code>true</code> if the connection described by this
-  candidate pair has received at least one valid ICE request, and is therefore ready to be
-  read from.</p>
+A Boolean value which is `true` if the connection described by this
+candidate pair has received at least one valid ICE request, and is therefore ready to be
+read from.
 
-<div class="note">
-  <p><strong>Note:</strong> This property was removed from the specification in early 2017
-    because you can determine whether or not the connection is readable by checking to see
-    if {{domxref("RTCIceCandidatePairStats.requestsReceived", "requestsReceived")}} is
-    greater than 0:</p>
+> **Note:** This property was removed from the specification in early 2017
+> because you can determine whether or not the connection is readable by checking to see
+> if {{domxref("RTCIceCandidatePairStats.requestsReceived", "requestsReceived")}} is
+> greater than 0:
+>
+> ```js
+> if (icpStats.requestsReceived > 0) {
+>   /* at least one ICE request has been received */
+> }
+> ```
 
-  <pre class="brush: js">if (icpStats.requestsReceived &gt; 0) {
-  /* at least one ICE request has been received */
-}</pre>
-</div>
+## Browser compatibility
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<p>{{Compat}}</p>
+{{Compat}}

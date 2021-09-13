@@ -10,26 +10,29 @@ tags:
   - TextDecoderStream
 browser-compat: api.TextDecoderStream.ignoreBOM
 ---
-<p>{{APIRef("Encoding API")}}</p>
+{{APIRef("Encoding API")}}
 
-<p>The <strong><code>ignoreBOM</code></strong> read-only property of the {{domxref("TextDecoderStream")}} interface returns a {{jsxref("boolean")}} indicating if the byte order mark (BOM) is to be ignored.</p>
+The **`ignoreBOM`** read-only property of the {{domxref("TextDecoderStream")}} interface returns a {{jsxref("boolean")}} indicating if the byte order mark (BOM) is to be ignored.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <var>ignoreBOM</var> = <var>TextDecoderStream</var>.ignoreBOM;</pre>
+    var ignoreBOM = TextDecoderStream.ignoreBOM;
 
-<h3>Value</h3>
-<p>A {{jsxref("boolean")}}, initially <code>false</code> </p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{jsxref("boolean")}}, initially `false`
 
-<pre class="brush:js">stream = new TextDecoderStream();
-console.log(stream.ignoreBOM); // returns false</pre>
+## Examples
 
-<h2 id="Specifications">Specifications</h2>
+```js
+stream = new TextDecoderStream();
+console.log(stream.ignoreBOM); // returns false
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -3,39 +3,37 @@ title: HTMLMediaElement.disableRemotePlayback
 slug: Web/API/HTMLMediaElement/disableRemotePlayback
 browser-compat: api.HTMLMediaElement.disableRemotePlayback
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLMediaElement.disableRemotePlayback</code></strong> property
-    determines whether the media element is allowed to have a remote playback UI. </p>
+The **`HTMLMediaElement.disableRemotePlayback`** property
+determines whether the media element is allowed to have a remote playback UI.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-    class="brush: js">var <em>remotePlaybackDisabled</em> = <em>element</em>.disableRemotePlayback; </pre>
+```js
+var remotePlaybackDisabled = element.disableRemotePlayback;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A boolean value indicating whether the media element may have a remote playback
-    UI.  (false means "not disabled", which means "enabled")</p>
+A boolean value indicating whether the media element may have a remote playback
+UI.  (false means "not disabled", which means "enabled")
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var obj = document.createElement('audio');
-obj.disableRemotePlayback = true;</pre>
+```js
+var obj = document.createElement('audio');
+obj.disableRemotePlayback = true;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
+{{Compat}}
 
-    <p>{{Compat}}</p>
-</div>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
-    <li>The interface defining it, {{domxref("HTMLMediaElement")}}.</li>
-</ul>
+- The interface defining it, {{domxref("HTMLMediaElement")}}.

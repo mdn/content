@@ -2,37 +2,38 @@
 title: SVGImageElement.width
 slug: Web/API/SVGImageElement/width
 tags:
-- API
-- Image
-- NeedsExample
-- Property
-- Reference
-- SVG
-- SVG DOM
-- SVGImageElement
-- width
+  - API
+  - Image
+  - NeedsExample
+  - Property
+  - Reference
+  - SVG
+  - SVG DOM
+  - SVGImageElement
+  - width
 browser-compat: api.SVGImageElement.width
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <strong><code>width</code></strong> read-only property of the
-  {{domxref("SVGImageElement")}} interface returns an {{domxref("SVGAnimatedLength")}}
-  corresponding to the {{SVGAttr("width")}} attribute of the given {{SVGElement("image")}}
-  element.</p>
+The **`width`** read-only property of the
+{{domxref("SVGImageElement")}} interface returns an {{domxref("SVGAnimatedLength")}}
+corresponding to the {{SVGAttr("width")}} attribute of the given {{SVGElement("image")}}
+element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var width = <em>svgImageElement</em>.width;</pre>
+```js
+var width = svgImageElement.width;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("SVGAnimatedLength")}}.</p>
+An {{domxref("SVGAnimatedLength")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

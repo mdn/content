@@ -10,41 +10,45 @@ tags:
   - Reference
 browser-compat: api.Element.attributes
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p>The <strong><code>Element.attributes</code></strong> property returns a live collection
-  of all attribute nodes registered to the specified node. It is a
-  {{domxref("NamedNodeMap")}}, not an <code>Array</code>, so it has no {{jsxref("Array")}}
-  methods and the {{domxref("Attr")}} nodes' indexes may differ among browsers. To be more
-  specific, <code>attributes</code> is a key/value pair of strings that represents any
-  information regarding that attribute.</p>
+The **`Element.attributes`** property returns a live collection
+of all attribute nodes registered to the specified node. It is a
+{{domxref("NamedNodeMap")}}, not an `Array`, so it has no {{jsxref("Array")}}
+methods and the {{domxref("Attr")}} nodes' indexes may differ among browsers. To be more
+specific, `attributes` is a key/value pair of strings that represents any
+information regarding that attribute.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>attr</em> =<em> element</em>.attributes;
-</pre>
+```js
+var attr = element.attributes;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="Basic_examples">Basic examples</h3>
+### Basic examples
 
-<pre class="brush: js">// Get the first &lt;p&gt; element in the document
+```js
+// Get the first <p> element in the document
 var para = document.getElementsByTagName("p")[0];
-var atts = para.attributes;</pre>
+var atts = para.attributes;
+```
 
-<h3 id="Enumerating_elements_attributes">Enumerating elements attributes</h3>
+### Enumerating elements attributes
 
-<p>Numerical indexing is useful for going through all of an element's attributes.<br>
-  The following example runs through the attribute nodes for the element in the document
-  with id "paragraph", and prints each attribute's value.</p>
+Numerical indexing is useful for going through all of an element's attributes.
+The following example runs through the attribute nodes for the element in the document
+with id "paragraph", and prints each attribute's value.
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
+```html
+<!DOCTYPE html>
 
-&lt;html&gt;
+<html>
 
- &lt;head&gt;
-  &lt;title&gt;Attributes example&lt;/title&gt;
-  &lt;script type="text/javascript"&gt;
+ <head>
+  <title>Attributes example</title>
+  <script type="text/javascript">
    function listAttributes() {
      var paragraph = document.getElementById("paragraph");
      var result = document.getElementById("result");
@@ -53,41 +57,39 @@ var atts = para.attributes;</pre>
      if (paragraph.hasAttributes()) {
        var attrs = paragraph.attributes;
        var output = "";
-       for(var i = attrs.length - 1; i &gt;= 0; i--) {
-         output += attrs[i].name + "-&gt;" + attrs[i].value;
+       for(var i = attrs.length - 1; i >= 0; i--) {
+         output += attrs[i].name + "->" + attrs[i].value;
        }
        result.value = output;
      } else {
        result.value = "No attributes to show";
      }
    }
-  &lt;/script&gt;
- &lt;/head&gt;
+  </script>
+ </head>
 
-&lt;body&gt;
- &lt;p id="paragraph" style="color: green;"&gt;Sample Paragraph&lt;/p&gt;
- &lt;form action=""&gt;
-  &lt;p&gt;
-    &lt;input type="button" value="Show first attribute name and value"
-      onclick="listAttributes();"&gt;
-    &lt;input id="result" type="text" value=""&gt;
-  &lt;/p&gt;
- &lt;/form&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+<body>
+ <p id="paragraph" style="color: green;">Sample Paragraph</p>
+ <form action="">
+  <p>
+    <input type="button" value="Show first attribute name and value"
+      onclick="listAttributes();">
+    <input id="result" type="text" value="">
+  </p>
+ </form>
+</body>
+</html>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("NamedNodeMap")}}, the interface of the returned object</li>
-  <li>Cross-browser compatibility considerations: on <a class="external"
-      href="https://www.quirksmode.org/dom/w3c_core.html#attributes">quirksmode</a></li>
-</ul>
+- {{domxref("NamedNodeMap")}}, the interface of the returned object
+- Cross-browser compatibility considerations: on [quirksmode](https://www.quirksmode.org/dom/w3c_core.html#attributes)

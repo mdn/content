@@ -2,36 +2,36 @@
 title: HTMLIFrameElement.featurePolicy
 slug: Web/API/HTMLIFrameElement/featurePolicy
 tags:
-- API
-- Feature Policy
-- Feature-Policy
-- HTMLIFrameElement
-- Policy
-- Property
+  - API
+  - Feature Policy
+  - Feature-Policy
+  - HTMLIFrameElement
+  - Policy
+  - Property
 browser-compat: api.HTMLIFrameElement.featurePolicy
 ---
-<div>{{APIRef("Feature Policy API")}}{{SeeCompatTable}}</div>
+{{APIRef("Feature Policy API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>featurePolicy</code></strong> read-only
-    property of the {{DOMxRef("HTMLIFrameElement")}} interface returns the
-    {{DOMxRef("FeaturePolicy")}} interface which provides a simple API for introspecting
-    the feature policies applied to a specific frame.</p>
+The **`featurePolicy`** read-only
+property of the {{DOMxRef("HTMLIFrameElement")}} interface returns the
+{{DOMxRef("FeaturePolicy")}} interface which provides a simple API for introspecting
+the feature policies applied to a specific frame.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var policy = <em>HTMLIFrameElement</em>.featurePolicy</pre>
+```js
+var policy = HTMLIFrameElement.featurePolicy
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A <a href="/en-US/docs/Web/API/FeaturePolicy"
-    title="Note: This interface is called Policy in Firefox."><code>FeaturePolicy</code></a> object
-  that can be used to inspect the Feature Policy settings applied to the frame.</p>
+A [`FeaturePolicy`](/en-US/docs/Web/API/FeaturePolicy "Note: This interface is called Policy in Firefox.") object
+that can be used to inspect the Feature Policy settings applied to the frame.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

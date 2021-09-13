@@ -2,78 +2,76 @@
 title: DataTransfer.mozClearDataAt()
 slug: Web/API/DataTransfer/mozClearDataAt
 tags:
-- API
-- Method
-- Non-standard
-- Reference
-- drag and drop
-- Deprecated
+  - API
+  - Method
+  - Non-standard
+  - Reference
+  - drag and drop
+  - Deprecated
 browser-compat: api.DataTransfer.mozClearDataAt
 ---
-<div>{{APIRef("HTML Drag and Drop API")}}</div>
+{{APIRef("HTML Drag and Drop API")}}
 
-<p>{{ Non-standard_header() }}{{deprecated_header}}</p>
+{{ Non-standard_header() }}{{deprecated_header}}
 
-<p>The <strong><code>DataTransfer.mozClearDataAt()</code></strong> method removes the data
-  associated with the given format for an item at the specified index. The index must be
-  in the range from zero to the number of items minus one.</p>
+The **`DataTransfer.mozClearDataAt()`** method removes the data
+associated with the given format for an item at the specified index. The index must be
+in the range from zero to the number of items minus one.
 
-<p>If the <code>format</code> argument is not provided, then the data associated with all
-  formats is removed. If the format is not found, then this method has no effect. If the
-  last format for the item is removed, the entire item is removed, reducing
-  {{domxref("DataTransfer.mozItemCount","mozItemCount")}} by one.</p>
+If the `format` argument is not provided, then the data associated with all
+formats is removed. If the format is not found, then this method has no effect. If the
+last format for the item is removed, the entire item is removed, reducing
+{{domxref("DataTransfer.mozItemCount","mozItemCount")}} by one.
 
-<p>Removing the last format for a particular index removes that item
-  entirely, shifting the remaining items down and changing their indices.</p>
+Removing the last format for a particular index removes that item
+entirely, shifting the remaining items down and changing their indices.
 
-<div class="note"><p><strong>Note:</strong> This method is Gecko-specific.</p></div>
+> **Note:** This method is Gecko-specific.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <em>dataTransfer</em>.mozClearDataAt([type], index);
-</pre>
+```js
+void dataTransfer.mozClearDataAt([type], index);
+```
 
-<h3 id="Arguments">Arguments</h3>
+### Arguments
 
-<dl>
-  <dt><em>type</em></dt>
-  <dd>A {{domxref("DOMString","string")}} representing the type of the drag data to remove
-    from the {{domxref("DataTransfer","drag data object")}}.</dd>
-  <dt><em>index</em></dt>
-  <dd>A <code>unsigned long</code> representing the index of the data to remove.</dd>
-</dl>
+- _type_
+  - : A {{domxref("DOMString","string")}} representing the type of the drag data to remove
+    from the {{domxref("DataTransfer","drag data object")}}.
+- _index_
+  - : A `unsigned long` representing the index of the data to remove.
 
-<h3 id="Return_Value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example shows the use of the <code>mozClearDataAt()</code> method in a
-  {{event("dragend")}} event handler.</p>
+This example shows the use of the `mozClearDataAt()` method in a
+{{event("dragend")}} event handler.
 
-<pre class="brush: js">function dragend_handler(event)
+```js
+function dragend_handler(event)
 {
   var dt = event.dataTransfer;
   // Remove a text/html item
   dt.mozClearDataAt("text/html", 1);
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This method is not defined in any Web standard.</p>
+This method is not defined in any Web standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API">Drag and drop</a></li>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</a></li>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">Recommended Drag Types</a></li>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items">Dragging and Dropping Multiple Items</a></li>
- <li><a href="https://codepen.io/tech_query/pen/MqGgap">DataTransfer test - Paste or Drag</a></li>
-</ul>
+- [Drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
+- [Drag Operations](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+- [Recommended Drag Types](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
+- [Dragging and Dropping Multiple Items](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
+- [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)

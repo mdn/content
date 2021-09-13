@@ -9,27 +9,27 @@ tags:
   - WorkerLocation
 browser-compat: api.WorkerLocation.toString
 ---
-<p>{{ApiRef("WorkerLocation")}}</p>
+{{ApiRef("WorkerLocation")}}
 
-<p>The <code><strong>toString()</code></strong> stringifier method of a {{domxref("WorkerLocation")}} object returns a {{domxref("USVString")}} containing the serialized {{domxref("URL")}} for the worker’s location. It is a synonym for {{domxref("WorkerLocation.href")}}.</p>
+The **`toString()`** stringifier method of a {{domxref("WorkerLocation")}} object returns a {{domxref("USVString")}} containing the serialized {{domxref("URL")}} for the worker’s location. It is a synonym for {{domxref("WorkerLocation.href")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>string</em> = <em>location</em>.toString();</pre>
+```js
+string = location.toString();
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">// In a Web worker, on the page https://developer.mozilla.org/en-US/docs/Web
+```js
+// In a Web worker, on the page https://developer.mozilla.org/en-US/docs/Web
 var result = location.toString(); // Returns 'https://developer.mozilla.org/en-US/docs/Web'
-</pre>
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("WorkerLocation")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("WorkerLocation")}} interface it belongs to.

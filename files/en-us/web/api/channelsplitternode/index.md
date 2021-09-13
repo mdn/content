@@ -12,68 +12,71 @@ tags:
   - Web Audio API
 browser-compat: api.ChannelSplitterNode
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<p>The <code>ChannelSplitterNode</code> interface, often used in conjunction with its opposite, {{domxref("ChannelMergerNode")}}, separates the different channels of an audio source into a set of mono outputs. This is useful for accessing each channel separately, e.g. for performing channel mixing where gain must be separately controlled on each channel.</p>
+The `ChannelSplitterNode` interface, often used in conjunction with its opposite, {{domxref("ChannelMergerNode")}}, separates the different channels of an audio source into a set of mono outputs. This is useful for accessing each channel separately, e.g. for performing channel mixing where gain must be separately controlled on each channel.
 
-<p><img alt="" src="webaudiosplitter.png"></p>
+![](webaudiosplitter.png)
 
-<p>If your <code>ChannelSplitterNode</code> always has one single input, the amount of outputs is defined by a parameter on its constructor and the call to {{domxref("BaseAudioContext/createChannelSplitter", "AudioContext.createChannelSplitter()")}}. In the case that no value is given, it will default to <code>6</code>. If there are fewer channels in the input than there are outputs, supernumerary outputs are silent.</p>
+If your `ChannelSplitterNode` always has one single input, the amount of outputs is defined by a parameter on its constructor and the call to {{domxref("BaseAudioContext/createChannelSplitter", "AudioContext.createChannelSplitter()")}}. In the case that no value is given, it will default to `6`. If there are fewer channels in the input than there are outputs, supernumerary outputs are silent.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Number of inputs</th>
-   <td><code>1</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Number of outputs</th>
-   <td>variable; default to <code>6</code>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Channel count mode</th>
-   <td><code>"explicit</code>" Older implementations, as per earlier versions of the spec use <code>"max"</code>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Channel count</th>
-   <td>Fixed to the number of outputs. Older implementations, as per earlier versions of the spec use <code>2 </code>(not used in the default count mode).</td>
-  </tr>
-  <tr>
-   <th scope="row">Channel interpretation</th>
-   <td><code>"discrete"</code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Number of inputs</th>
+      <td><code>1</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Number of outputs</th>
+      <td>variable; default to <code>6</code>.</td>
+    </tr>
+    <tr>
+      <th scope="row">Channel count mode</th>
+      <td>
+        <code>"explicit</code>" Older implementations, as per earlier versions
+        of the spec use <code>"max"</code>.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Channel count</th>
+      <td>
+        Fixed to the number of outputs. Older implementations, as per earlier
+        versions of the spec use <code>2 </code>(not used in the default count
+        mode).
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Channel interpretation</th>
+      <td><code>"discrete"</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("ChannelSplitterNode.ChannelSplitterNode()","ChannelSplitterNode()")}}</dt>
- <dd>Creates a new <code>ChannelSplitterNode</code> object instance.</dd>
-</dl>
+- {{domxref("ChannelSplitterNode.ChannelSplitterNode()","ChannelSplitterNode()")}}
+  - : Creates a new `ChannelSplitterNode` object instance.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>No specific property; inherits properties from its parent, {{domxref("AudioNode")}}</em>.</p>
+_No specific property; inherits properties from its parent, {{domxref("AudioNode")}}_.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>No specific method; inherits methods from its parent, {{domxref("AudioNode")}}</em>.</p>
+_No specific method; inherits methods from its parent, {{domxref("AudioNode")}}_.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See <a href="/en-US/docs/Web/API/BaseAudioContext/createChannelSplitter#example"><code>BaseAudioContext.createChannelSplitter()</code></a> for example code.</p>
+See [`BaseAudioContext.createChannelSplitter()`](/en-US/docs/Web/API/BaseAudioContext/createChannelSplitter#example) for example code.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

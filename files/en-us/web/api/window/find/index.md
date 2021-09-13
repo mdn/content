@@ -2,82 +2,83 @@
 title: Window.find()
 slug: Web/API/Window/find
 tags:
-- API
-- HTML DOM
-- Method
-- NeedsCompatTable
-- NeedsContent
-- Non-standard
-- Reference
-- Window
-- find
+  - API
+  - HTML DOM
+  - Method
+  - NeedsCompatTable
+  - NeedsContent
+  - Non-standard
+  - Reference
+  - Window
+  - find
 browser-compat: api.Window.find
 ---
-<div>{{ApiRef}}{{Non-standard_Header}}</div>
+{{ApiRef}}{{Non-standard_Header}}
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Support for <code>Window.find()</code> might change in future
-    versions of Gecko. See {{Bug("672395")}}.</p>
-</div>
+> **Note:** Support for `Window.find()` might change in future
+> versions of Gecko. See {{Bug("672395")}}.
 
-<p>The <code><strong>Window.find()</strong></code> method finds a string in a window sequentially.</p>
+The **`Window.find()`** method finds a string in a window sequentially.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>window</em>.find(<em>aString</em>, <em>aCaseSensitive</em>, <em>aBackwards</em>, <em>aWrapAround</em>,
-            <em>aWholeWord</em>, <em>aSearchInFrames</em>, <em>aShowDialog</em>);</pre>
+```js
+window.find(aString, aCaseSensitive, aBackwards, aWrapAround,
+            aWholeWord, aSearchInFrames, aShowDialog);
+```
 
-<dl>
-  <dt><code>aString</code></dt>
-  <dd>The text string for which to search.</dd>
-  <dt><code>aCaseSensitive</code></dt>
-  <dd>A boolean value. If <code>true</code>, specifies a case-sensitive search.</dd>
-  <dt><code>aBackwards</code></dt>
-  <dd>A boolean value. If <code>true</code>, specifies a backward search.</dd>
-  <dt><code>aWrapAround</code></dt>
-  <dd>A boolean value. If <code>true</code>, specifies a wrap around search.</dd>
-  <dt><code>aWholeWord</code> {{Unimplemented_Inline}}</dt>
-  <dd>A boolean value. If <code>true</code>, specifies a whole word search. This is
-    not implemented; see {{bug(481513)}}.</dd>
-  <dt><code>aSearchInFrames</code></dt>
-  <dd>A boolean value. If <code>true</code>, specifies a search in frames.</dd>
-</dl>
+- `aString`
+  - : The text string for which to search.
+- `aCaseSensitive`
+  - : A boolean value. If `true`, specifies a case-sensitive search.
+- `aBackwards`
+  - : A boolean value. If `true`, specifies a backward search.
+- `aWrapAround`
+  - : A boolean value. If `true`, specifies a wrap around search.
+- `aWholeWord` {{Unimplemented_Inline}}
+  - : A boolean value. If `true`, specifies a whole word search. This is
+    not implemented; see {{bug(481513)}}.
+- `aSearchInFrames`
+  - : A boolean value. If `true`, specifies a search in frames.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p><code>true</code> if the string is found; otherwise, <code>false</code>.</p>
+`true` if the string is found; otherwise, `false`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">function findString(text) {
+```js
+function findString(text) {
   document.querySelector("#output").textContent="String found? " + window.find(text);
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Apples, Bananas, and Oranges.&lt;/p&gt;
-&lt;button type="button" onClick='findString("Apples")'&gt;Search for Apples&lt;/button&gt;
-&lt;button type="button" onClick='findString("Bananas")'&gt;Search for Bananas&lt;/button&gt;
-&lt;button type="button" onClick='findString("Orange")'&gt;Search for Orange&lt;/button&gt;
+```html
+<p>Apples, Bananas, and Oranges.</p>
+<button type="button" onClick='findString("Apples")'>Search for Apples</button>
+<button type="button" onClick='findString("Bananas")'>Search for Bananas</button>
+<button type="button" onClick='findString("Orange")'>Search for Orange</button>
 
-&lt;p id="output"&gt;&lt;/p&gt;
-</pre>
+<p id="output"></p>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>In some browsers, <code>Window.find()</code> selects (highlights) the found content on
-  the site.</p>
+In some browsers, `Window.find()` selects (highlights) the found content on
+the site.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This is not part of any specification.</p>
+This is not part of any specification.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

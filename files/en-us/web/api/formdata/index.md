@@ -9,61 +9,53 @@ tags:
   - XMLHttpRequest
 browser-compat: api.FormData
 ---
-<p>{{APIRef("XMLHttpRequest")}}</p>
+{{APIRef("XMLHttpRequest")}}
 
-<p>The <strong><code>FormData</code></strong> interface provides a way to easily construct a set of key/value pairs representing form fields and their values, which can then be easily sent using the {{domxref("XMLHttpRequest.send()")}} method. It uses the same format a form would use if the encoding type were set to <code>"multipart/form-data"</code>.</p>
+The **`FormData`** interface provides a way to easily construct a set of key/value pairs representing form fields and their values, which can then be easily sent using the {{domxref("XMLHttpRequest.send()")}} method. It uses the same format a form would use if the encoding type were set to `"multipart/form-data"`.
 
-<p>You can also pass it directly to the {{domxref("URLSearchParams")}} constructor if you want to generate query parameters in the way a {{HTMLElement("form")}} would do if it were using simple <code>GET</code> submission.</p>
+You can also pass it directly to the {{domxref("URLSearchParams")}} constructor if you want to generate query parameters in the way a {{HTMLElement("form")}} would do if it were using simple `GET` submission.
 
-<p>An object implementing <code>FormData</code> can directly be used in a {{jsxref("Statements/for...of", "for...of")}} structure, instead of {{domxref('FormData.entries()', 'entries()')}}: <code>for (var p of myFormData)</code> is equivalent to <code>for (var p of myFormData.entries())</code>.</p>
+An object implementing `FormData` can directly be used in a {{jsxref("Statements/for...of", "for...of")}} structure, instead of {{domxref('FormData.entries()', 'entries()')}}: `for (var p of myFormData)` is equivalent to `for (var p of myFormData.entries())`.
 
-<div class="note">
-<p><strong>Note:</strong> This feature is available in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
-</div>
+> **Note:** This feature is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("FormData.FormData","FormData()")}}</dt>
- <dd>Creates a new <code>FormData</code> object.</dd>
-</dl>
+- {{domxref("FormData.FormData","FormData()")}}
+  - : Creates a new `FormData` object.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("FormData.append()")}}</dt>
- <dd>Appends a new value onto an existing key inside a <code>FormData</code> object, or adds the key if it does not already exist.</dd>
- <dt>{{domxref("FormData.delete()")}}</dt>
- <dd>Deletes a key/value pair from a <code>FormData</code> object.</dd>
- <dt>{{domxref("FormData.entries()")}}</dt>
- <dd>Returns an {{jsxref("Iteration_protocols","iterator")}} allowing to go through all key/value pairs contained in this object.</dd>
- <dt>{{domxref("FormData.get()")}}</dt>
- <dd>Returns the first value associated with a given key from within a <code>FormData</code> object.</dd>
- <dt>{{domxref("FormData.getAll()")}}</dt>
- <dd>Returns an array of all the values associated with a given key from within a <code>FormData</code>.</dd>
- <dt>{{domxref("FormData.has()")}}</dt>
- <dd>Returns a boolean stating whether a <code>FormData</code> object contains a certain key.</dd>
- <dt>{{domxref("FormData.keys()")}}</dt>
- <dd>Returns an {{jsxref("Iteration_protocols", "iterator")}} allowing to go through all keys of the key/value pairs contained in this object.</dd>
- <dt>{{domxref("FormData.set()")}}</dt>
- <dd>Sets a new value for an existing key inside a <code>FormData</code> object, or adds the key/value if it does not already exist.</dd>
- <dt>{{domxref("FormData.values()")}}</dt>
- <dd>Returns an {{jsxref("Iteration_protocols", "iterator")}} allowing to go through all values  contained in this object.</dd>
-</dl>
+- {{domxref("FormData.append()")}}
+  - : Appends a new value onto an existing key inside a `FormData` object, or adds the key if it does not already exist.
+- {{domxref("FormData.delete()")}}
+  - : Deletes a key/value pair from a `FormData` object.
+- {{domxref("FormData.entries()")}}
+  - : Returns an {{jsxref("Iteration_protocols","iterator")}} allowing to go through all key/value pairs contained in this object.
+- {{domxref("FormData.get()")}}
+  - : Returns the first value associated with a given key from within a `FormData` object.
+- {{domxref("FormData.getAll()")}}
+  - : Returns an array of all the values associated with a given key from within a `FormData`.
+- {{domxref("FormData.has()")}}
+  - : Returns a boolean stating whether a `FormData` object contains a certain key.
+- {{domxref("FormData.keys()")}}
+  - : Returns an {{jsxref("Iteration_protocols", "iterator")}} allowing to go through all keys of the key/value pairs contained in this object.
+- {{domxref("FormData.set()")}}
+  - : Sets a new value for an existing key inside a `FormData` object, or adds the key/value if it does not already exist.
+- {{domxref("FormData.values()")}}
+  - : Returns an {{jsxref("Iteration_protocols", "iterator")}} allowing to go through all values  contained in this object.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("XMLHTTPRequest")}}</li>
- <li><a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a></li>
- <li><a href="/en-US/docs/Web/API/FormData/Using_FormData_Objects">Using FormData objects</a></li>
- <li>{{HTMLElement("Form")}}</li>
-</ul>
+- {{domxref("XMLHTTPRequest")}}
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using FormData objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)
+- {{HTMLElement("Form")}}

@@ -2,59 +2,60 @@
 title: Notification.silent
 slug: Web/API/Notification/silent
 tags:
-- API
-- Notification
-- Notifications
-- Notifications API
-- Property
-- Reference
-- silent
+  - API
+  - Notification
+  - Notifications
+  - Notifications API
+  - Property
+  - Reference
+  - silent
 browser-compat: api.Notification.silent
 ---
-<p>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</p>
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-<p>The <strong><code>silent</code></strong> read-only property of the
-  {{domxref("Notification")}} interface specifies whether the notification should be
-  silent, i.e., no sounds or vibrations should be issued, regardless of the device
-  settings. This is specified in the <code>silent</code> option of the
-  {{domxref("Notification.Notification","Notification()")}} constructor.</p>
+The **`silent`** read-only property of the
+{{domxref("Notification")}} interface specifies whether the notification should be
+silent, i.e., no sounds or vibrations should be issued, regardless of the device
+settings. This is specified in the `silent` option of the
+{{domxref("Notification.Notification","Notification()")}} constructor.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>silent</var> = <var>Notification</var>.silent;
-</pre>
+```js
+var silent = Notification.silent;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A boolean value. <code>false</code> is the default; <code>true</code> makes
-  the notification silent.</p>
+A boolean value. `false` is the default; `true` makes
+the notification silent.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following snippet is intended to fire a silent notification; a simple
-  <code>options</code> object is created, and then the notification is fired using the
-  {{DOMxRef("Notification.Notification","Notification()")}} constructor.</p>
+The following snippet is intended to fire a silent notification; a simple
+`options` object is created, and then the notification is fired using the
+{{DOMxRef("Notification.Notification","Notification()")}} constructor.
 
-<pre class="brush: js">var options = {
+```js
+var options = {
   body: 'Do you like my body?',
   silent: true
 }
 
 var n = new Notification('Test notification', options);
 
-console.log(n.silent) // should log true</pre>
+console.log(n.silent) // should log true
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using
-      the Notifications API</a></li>
-</ul>
+- [Using
+  the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)

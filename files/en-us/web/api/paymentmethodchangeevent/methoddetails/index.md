@@ -2,48 +2,50 @@
 title: PaymentMethodChangeEvent.methodDetails
 slug: Web/API/PaymentMethodChangeEvent/methodDetails
 tags:
-- API
-- Commerce
-- Payment Method
-- Payment Request
-- Payment Request API
-- PaymentMethodChangeEvent
-- Property
-- Reference
-- methodDetails
-- payment
-- paymentmethodchange
+  - API
+  - Commerce
+  - Payment Method
+  - Payment Request
+  - Payment Request API
+  - PaymentMethodChangeEvent
+  - Property
+  - Reference
+  - methodDetails
+  - payment
+  - paymentmethodchange
 browser-compat: api.PaymentMethodChangeEvent.methodDetails
 ---
-<div>{{securecontext_header}}{{APIRef("Payment Request API")}}</div>
+{{securecontext_header}}{{APIRef("Payment Request API")}}
 
-<p>The read-only <code><strong>methodDetails</strong></code> property of the {{domxref("PaymentMethodChangeEvent")}} interface is an object
-    containing any data the payment handler may provide to describe the change the user
-    has made to their payment method. The value is <code>null</code> if no details
-  are available.</p>
+The read-only **`methodDetails`** property of the {{domxref("PaymentMethodChangeEvent")}} interface is an object
+containing any data the payment handler may provide to describe the change the user
+has made to their payment method. The value is `null` if no details
+are available.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>details</em> = <em>paymentMethodChangeEvent</em>.methodName;
-</pre>
+```js
+details = paymentMethodChangeEvent.methodName;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An object containing any data needed to describe the changes made to the payment
-  method. The contents vary depending on the actual payment method chosen, so you will
-  need to refer to the {{domxref("PaymentMethodChangeEvent.methodName", "methodName")}}
-  property first, then inerpret the <code>methodDetails</code> after that.</p>
+An object containing any data needed to describe the changes made to the payment
+method. The contents vary depending on the actual payment method chosen, so you will
+need to refer to the {{domxref("PaymentMethodChangeEvent.methodName", "methodName")}}
+property first, then inerpret the `methodDetails` after that.
 
-<p>The default value is <code>null</code>, indicating that no additional details are
-  available.</p>
+The default value is `null`, indicating that no additional details are
+available.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example uses the {{event("paymentmethodchange")}} event to watch for changes to
-  the payment method selected for Apple Pay, in order to compute a discount if the user
-  chooses to use a Visa card as their payment method.</p>
+This example uses the {{event("paymentmethodchange")}} event to watch for changes to
+the payment method selected for Apple Pay, in order to compute a discount if the user
+chooses to use a Visa card as their payment method.
 
-<pre class="brush: js">request.onpaymentmethodchange = function(ev) {
+```js
+request.onpaymentmethodchange = function(ev) {
   const { type: cardType } = ev.methodDetails;
   const newStuff = {};
   if (ev.methodName === "https://apple.com/apple-pay") {
@@ -59,17 +61,18 @@ browser-compat: api.PaymentMethodChangeEvent.methodDetails
   // finally...
   ev.updateWith(newStuff);
 };
-const response = await request.show();</pre>
+const response = await request.show();
+```
 
-<p>Note that the <code>methodDetails</code> property is being used by the
-  <code>calculateDiscount()</code> function to compute any payment discount, then
-  {{domxref("PaymentRequestUpdateEvent.updateWith", "updateWith()")}} is called to update
-  the event with the computed update.</p>
+Note that the `methodDetails` property is being used by the
+`calculateDiscount()` function to compute any payment discount, then
+{{domxref("PaymentRequestUpdateEvent.updateWith", "updateWith()")}} is called to update
+the event with the computed update.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

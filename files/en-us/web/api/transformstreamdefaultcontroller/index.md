@@ -8,35 +8,32 @@ tags:
   - TransformStreamDefaultController
 browser-compat: api.TransformStreamDefaultController
 ---
-<div>{{DefaultAPISidebar("Streams API")}}</div>
+{{DefaultAPISidebar("Streams API")}}
 
-<p>The <strong><code>TransformStreamDefaultController</code></strong> interface of the {{domxref('Streams API','','',' ')}} provides methods to manipulate the associated {{domxref("ReadableStream")}} and {{domxref("WritableStream")}}.</p>
+The **`TransformStreamDefaultController`** interface of the {{domxref('Streams API','','',' ')}} provides methods to manipulate the associated {{domxref("ReadableStream")}} and {{domxref("WritableStream")}}.
 
-<p>When constructing a {{domxref("TransformStream")}}, the <code>TransformStreamDefaultController</code> is created. It therefore has no constructor. The way to get an instance of <code>TransformStreamDefaultController</code> is via the callback methods of {{domxref("TransformStream.TransformStream()")}}.</p>
+When constructing a {{domxref("TransformStream")}}, the `TransformStreamDefaultController` is created. It therefore has no constructor. The way to get an instance of `TransformStreamDefaultController` is via the callback methods of {{domxref("TransformStream.TransformStream()")}}.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
-  <dt>{{domxref("TransformStreamDefaultController.desiredSize")}}{{readonlyinline}}</dt>
-  <dd>Returns the desired size to fill the readable side of the stream's internal queue.</dd>
-</dl>
+- {{domxref("TransformStreamDefaultController.desiredSize")}}{{readonlyinline}}
+  - : Returns the desired size to fill the readable side of the stream's internal queue.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
-  <dt>{{domxref("TransformStreamDefaultController.enqueue()")}}</dt>
-  <dd>Enqueues a chunk (single piece of data) in the readable side of the stream.</dd>
-  <dt>{{domxref("TransformStreamDefaultController.error()")}}</dt>
-  <dd>Errors both the readable and writable side of the transform stream.</dd>
-  <dt>{{domxref("TransformStreamDefaultController.terminate()")}}</dt>
-  <dd>Closes the readable side and errors the writable side of the stream.</dd>
-</dl>
+- {{domxref("TransformStreamDefaultController.enqueue()")}}
+  - : Enqueues a chunk (single piece of data) in the readable side of the stream.
+- {{domxref("TransformStreamDefaultController.error()")}}
+  - : Errors both the readable and writable side of the transform stream.
+- {{domxref("TransformStreamDefaultController.terminate()")}}
+  - : Closes the readable side and errors the writable side of the stream.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the following example, a transform stream passes through all chunks it receives as {{jsxref("Uint8Array")}} values, using the {{domxref("TransformStreamDefaultController.error()","error()")}} and {{domxref("TransformStreamDefaultController.enqueue()","enqueue()")}} methods.</p>
+In the following example, a transform stream passes through all chunks it receives as {{jsxref("Uint8Array")}} values, using the {{domxref("TransformStreamDefaultController.error()","error()")}} and {{domxref("TransformStreamDefaultController.enqueue()","enqueue()")}} methods.
 
-<pre class="brush: js">const transformContent = {
+```js
+const transformContent = {
   start() {}, // required.
   async transform(chunk, controller) {
     chunk = await chunk
@@ -46,9 +43,9 @@ browser-compat: api.TransformStreamDefaultController
         if (chunk === null) controller.terminate()
         else if (ArrayBuffer.isView(chunk))
           controller.enqueue(new Uint8Array(chunk.buffer, chunk.byteOffset, chunk.byteLength))
-        else if (Array.isArray(chunk) &amp;&amp; chunk.every(value =&gt; typeof value === 'number'))
+        else if (Array.isArray(chunk) && chunk.every(value => typeof value === 'number'))
           controller.enqueue(new Uint8Array(chunk))
-        else if ('function' === typeof chunk.valueOf &amp;&amp; chunk.valueOf() !== chunk)
+        else if ('function' === typeof chunk.valueOf && chunk.valueOf() !== chunk)
           this.transform(chunk.valueOf(), controller) // hack
         else if ('toJSON' in chunk) this.transform(JSON.stringify(chunk), controller)
         break
@@ -70,12 +67,12 @@ class AnyToU8Stream extends TransformStream {
     super({...transformContent, textencoder: new TextEncoder()})
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

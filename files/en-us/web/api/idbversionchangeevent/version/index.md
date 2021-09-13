@@ -10,46 +10,39 @@ tags:
   - Reference
 browser-compat: api.IDBVersionChangeEvent.version
 ---
-<p>{{ APIRef("IndexedDB") }} {{Deprecated_Header}}</p>
+{{ APIRef("IndexedDB") }} {{Deprecated_Header}}
 
-<div class="notecard warning">
-  <p><strong>Warning:</strong> While this property is still implemented in older browsers,
-    the latest specification replaces it with the <code>oldVersion</code> and
-    <code>newVersion</code> attributes. See the compatibility table to know what browsers
-    support them.</p>
-</div>
+> **Warning:** While this property is still implemented in older browsers,
+> the latest specification replaces it with the `oldVersion` and
+> `newVersion` attributes. See the compatibility table to know what browsers
+> support them.
 
-<p>The <strong><code>version</code></strong> property of the
-  {{domxref("IDBVersionChangeEvent")}} interface returns The new version of the database
-  in a <a
-    href="/en-US/docs/Web/API/IDBTransaction#version_change">versionchange</a> transaction.
-</p>
+The **`version`** property of the
+{{domxref("IDBVersionChangeEvent")}} interface returns The new version of the database
+in a [versionchange](/en-US/docs/Web/API/IDBTransaction#version_change) transaction.
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+const version = iDBVersionChangeEvent.version;
+```
 
-<pre class="brush: js">const version = iDBVersionChangeEvent.version;</pre>
+## Value
 
-<h2 id="Value">Value</h2>
+A [64-bit
+integer](</en-US/docs/NSPR_API_Reference/Long_Long_(64-bit)_Integers>).
 
-<p>A <a href="/en-US/docs/NSPR_API_Reference/Long_Long_(64-bit)_Integers">64-bit
-    integer</a>.</p>
+## Browser compatibility
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+{{Compat}}
 
-<p>{{Compat}}</p>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
-  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
-  <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
-  <li>Using transactions: {{domxref("IDBTransaction")}}</li>
-  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
-  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
-  <li>Using cursors: {{domxref("IDBCursor")}}</li>
-  <li>Reference example: <a class="external"
-      href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
-      Notifications</a> (<a class="external"
-      href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do
+  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

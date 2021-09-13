@@ -10,27 +10,29 @@ tags:
   - Read-only
 browser-compat: api.FileSystemHandle.name
 ---
-<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
-</div>
+{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
-<p>The <strong><code>name</code></strong> read-only property of the
-  {{domxref("FileSystemHandle")}} interface returns the name of the entry represented by
-  handle.</p>
+The **`name`** read-only property of the
+{{domxref("FileSystemHandle")}} interface returns the name of the entry represented by
+handle.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>String</var> = FileSystemHandle.name;</pre>
+```js
+var String = FileSystemHandle.name;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>{{domxref('USVString')}}</p>
+{{domxref('USVString')}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following function allows the user to choose a file from the file picker and
-  retrieve the <code>name</code> property.</p>
+The following function allows the user to choose a file from the file picker and
+retrieve the `name` property.
 
-<pre class="brush: js">// store a reference to our file handle
+```js
+// store a reference to our file handle
 let fileHandle;
 
 async function getFile() {
@@ -40,20 +42,18 @@ async function getFile() {
   const fileName = fileHandle.name;
 
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/File_System_Access_API">File System Access API</a></li>
-  <li><a href="https://web.dev/file-system-access/">The File System Access API:
-      simplifying access to local files</a></li>
-</ul>
+- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
+- [The File System Access API:
+  simplifying access to local files](https://web.dev/file-system-access/)

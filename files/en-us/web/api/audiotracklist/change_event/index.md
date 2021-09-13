@@ -9,75 +9,78 @@ tags:
   - HTML API
 browser-compat: api.AudioTrackList.change_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code>change</code> event is fired when an audio track is enabled or disabled, for example by changing the track's <code><a href="/en-US/docs/Web/API/AudioTrack/enabled">enabled</a></code> property.</p>
+The `change` event is fired when an audio track is enabled or disabled, for example by changing the track's [`enabled`](/en-US/docs/Web/API/AudioTrack/enabled) property.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("AudioTrackList/onchange", "onchange")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{domxref("AudioTrackList/onchange", "onchange")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Using <code>addEventListener()</code>:</p>
+Using `addEventListener()`:
 
-<pre class="brush: js">const videoElement = document.querySelector('video');
-videoElement.audioTracks.addEventListener('change', (event) =&gt; {
+```js
+const videoElement = document.querySelector('video');
+videoElement.audioTracks.addEventListener('change', (event) => {
     console.log(`'${event.type}' event fired`);
 });
 
 // changing the value of `enabled` will trigger the `change` event
 const toggleTrackButton = document.querySelector('.toggle-track');
-toggleTrackButton.addEventListener('click', () =&gt; {
+toggleTrackButton.addEventListener('click', () => {
   const track = videoElement.audioTracks[0];
   track.enabled = !track.enabled;
 });
-</pre>
+```
 
-<p>Using the <code>onchange</code> event handler property:</p>
+Using the `onchange` event handler property:
 
-<pre class="brush: js">const videoElement = document.querySelector('video');
-videoElement.audioTracks.onchange = (event) =&gt; {
+```js
+const videoElement = document.querySelector('video');
+videoElement.audioTracks.onchange = (event) => {
     console.log(`'${event.type}' event fired`);
 };
 
 // changing the value of `enabled` will trigger the `change` event
 const toggleTrackButton = document.querySelector('.toggle-track');
-toggleTrackButton.addEventListener('click', () =&gt; {
+toggleTrackButton.addEventListener('click', () => {
   const track = videoElement.audioTracks[0];
   track.enabled = !track.enabled;
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Related events: <code><a href="/en-US/docs/Web/API/AudioTrackList/addtrack_event">addtrack</a></code>, <code><a href="/en-US/docs/Web/API/AudioTrackList/removetrack_event">removetrack</a></code></li>
- <li>This event on <code><a href="/en-US/docs/Web/API/VideoTrackList">VideoTrackList</a></code> targets: <code><a href="/en-US/docs/Web/API/VideoTrackList/change_event">change</a></code></li>
- <li><a href="/en-US/docs/Web/API/Media_Streams_API">Media Streams API</a></li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
-</ul>
+- Related events: [`addtrack`](/en-US/docs/Web/API/AudioTrackList/addtrack_event), [`removetrack`](/en-US/docs/Web/API/AudioTrackList/removetrack_event)
+- This event on [`VideoTrackList`](/en-US/docs/Web/API/VideoTrackList) targets: [`change`](/en-US/docs/Web/API/VideoTrackList/change_event)
+- [Media Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)

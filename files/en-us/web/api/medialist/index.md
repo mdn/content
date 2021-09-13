@@ -9,46 +9,42 @@ tags:
   - Reference
 browser-compat: api.MediaList
 ---
-<div>{{APIRef("CSSOM")}}</div>
+{{APIRef("CSSOM")}}
 
-<p>The <code><strong>MediaList</strong></code> interface represents the media queries of a stylesheet, e.g. those set using a {{htmlelement("link")}} element's <code>media</code> attribute.</p>
+The **`MediaList`** interface represents the media queries of a stylesheet, e.g. those set using a {{htmlelement("link")}} element's `media` attribute.
 
-<div class="notecard note">
-<p><strong>Note:</strong> <code>MediaList</code> is a live list; updating the list using properties or methods listed below will immediately update the behavior of the document.</p>
-</div>
+> **Note:** `MediaList` is a live list; updating the list using properties or methods listed below will immediately update the behavior of the document.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("MediaList.mediaText")}}</dt>
- <dd>A stringifier that returns a {{domxref("DOMString")}} representing the <code>MediaList</code> as text, and also allows you to set a new <code>MediaList</code>.</dd>
- <dt>{{domxref("MediaList.length")}} {{readonlyInline}}</dt>
- <dd>Returns the number of media queries in the <code>MediaList</code>.</dd>
-</dl>
+- {{domxref("MediaList.mediaText")}}
+  - : A stringifier that returns a {{domxref("DOMString")}} representing the `MediaList` as text, and also allows you to set a new `MediaList`.
+- {{domxref("MediaList.length")}} {{readonlyInline}}
+  - : Returns the number of media queries in the `MediaList`.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("MediaList.appendMedium()")}}</dt>
- <dd>Adds a media query to the <code>MediaList</code>.</dd>
- <dt>{{domxref("MediaList.deleteMedium()")}}</dt>
- <dd>Removes a media query from the <code>MediaList</code>.</dd>
- <dt>{{domxref("MediaList.item()")}}</dt>
- <dd>A getter that returns a {{domxref("CSSOMString")}} representing a media query as text, given the media query's index value inside the <code>MediaList</code>.</dd>
-</dl>
+- {{domxref("MediaList.appendMedium()")}}
+  - : Adds a media query to the `MediaList`.
+- {{domxref("MediaList.deleteMedium()")}}
+  - : Removes a media query from the `MediaList`.
+- {{domxref("MediaList.item()")}}
+  - : A getter that returns a {{domxref("CSSOMString")}} representing a media query as text, given the media query's index value inside the `MediaList`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following would log to the console a textual representation of the <code>MediaList</code> of the first stylesheet applied to the current document.</p>
+The following would log to the console a textual representation of the `MediaList` of the first stylesheet applied to the current document.
 
-<pre class="brush: css">const stylesheets = document.styleSheets;
+```css
+const stylesheets = document.styleSheets;
 let stylesheet = stylesheets[0];
-console.log(stylesheet.media.mediaText);</pre>
+console.log(stylesheet.media.mediaText);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,41 +2,42 @@
 title: PaymentRequestUpdateEvent()
 slug: Web/API/PaymentRequestUpdateEvent/PaymentRequestUpdateEvent
 tags:
-- API
-- Constructor
-- Experimental
-- Payment Request
-- Payment Request API
-- PaymentRequestUpdateEvent
-- Reference
-- Secure context
+  - API
+  - Constructor
+  - Experimental
+  - Payment Request
+  - Payment Request API
+  - PaymentRequestUpdateEvent
+  - Reference
+  - Secure context
 browser-compat: api.PaymentRequestUpdateEvent.PaymentRequestUpdateEvent
 ---
-<p>{{APIRef("Payment Request API")}}{{securecontext_header}}</p>
+{{APIRef("Payment Request API")}}{{securecontext_header}}
 
-<p>The <strong><code>PaymentRequestUpdateEvent()</code></strong> constructor creates a new
-  {{domxref("PaymentRequestUpdateEvent")}} object which enables a web page to update the
-  details of a {{domxref("PaymentRequest")}} in response to a user action. Actual updates
-  are made by passing options to the
-  {{domxref('PaymentRequestUpdateEvent.updateWith','updateWith()')}} method.</p>
+The **`PaymentRequestUpdateEvent()`** constructor creates a new
+{{domxref("PaymentRequestUpdateEvent")}} object which enables a web page to update the
+details of a {{domxref("PaymentRequest")}} in response to a user action. Actual updates
+are made by passing options to the
+{{domxref('PaymentRequestUpdateEvent.updateWith','updateWith()')}} method.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>paymentRequestUpdateEvent</em> = new PaymentRequestUpdateEvent()</pre>
+```js
+var paymentRequestUpdateEvent = new PaymentRequestUpdateEvent()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A new <code>PaymentRequestUpdateEvent</code></p>
+A new `PaymentRequestUpdateEvent`
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

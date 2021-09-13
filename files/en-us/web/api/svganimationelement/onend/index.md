@@ -2,32 +2,32 @@
 title: SVGAnimationElement.onend
 slug: Web/API/SVGAnimationElement/onend
 tags:
-- API
-- DOM
-- Experimental
-- NeedsExample
-- Property
-- Reference
-- SVG
-- SVG DOM
+  - API
+  - DOM
+  - Experimental
+  - NeedsExample
+  - Property
+  - Reference
+  - SVG
+  - SVG DOM
 browser-compat: api.SVGAnimationElement.onend
 ---
-<div>{{APIRef("SVG")}}{{SeeCompatTable}}</div>
+{{APIRef("SVG")}}{{SeeCompatTable}}
 
-<p>The <code><strong>SVGAnimationElement.onend</strong></code> property refers to the
-  event handler for the
-  <code><a href="/en-US/docs/Web/API/SVGAnimationElement/endEvent_event">endEvent</a></code>.
-</p>
+The **`SVGAnimationElement.onend`** property refers to the
+event handler for the
+[`endEvent`](/en-US/docs/Web/API/SVGAnimationElement/endEvent_event).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>endEventHandler</var> = <var>someElement</var>.onend;
-</pre>
+```js
+var endEventHandler = someElement.onend;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

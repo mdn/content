@@ -2,67 +2,62 @@
 title: RTCRtpStreamStats.sliCount
 slug: Web/API/RTCRtpStreamStats/sliCount
 tags:
-- API
-- Media
-- Packet
-- Property
-- RTCRtpStream
-- RTP
-- Reference
-- Reliability
-- SLI
-- Slice Loss Indication
-- Transmisison
-- WebRTC
-- WebRTC API
-- compression
-- rtc
-- sliCount
-- slice
+  - API
+  - Media
+  - Packet
+  - Property
+  - RTCRtpStream
+  - RTP
+  - Reference
+  - Reliability
+  - SLI
+  - Slice Loss Indication
+  - Transmisison
+  - WebRTC
+  - WebRTC API
+  - compression
+  - rtc
+  - sliCount
+  - slice
 browser-compat: api.RTCRtpStreamStats.sliCount
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <strong><code>sliCount</code></strong> property of the
-    {{domxref("RTCRtpStreamStats")}} dictionary indicates how many <strong>Slice Loss
-      Indication</strong> (<strong>SLI</strong>) packets were received by the
-    sender.</p>
+The **`sliCount`** property of the
+{{domxref("RTCRtpStreamStats")}} dictionary indicates how many **Slice Loss
+Indication** (**SLI**) packets were received by the
+sender.
 
-<p>An SLI packet is used by a decoder to let the encoder know that it's
-  detected corruption of one or more consecutive macroblocks in the received media.</p>
+An SLI packet is used by a decoder to let the encoder know that it's
+detected corruption of one or more consecutive macroblocks in the received media.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>sliCount</em> = <em>RTCRtpStreamStats</em>.sliCount;</pre>
+```js
+var sliCount = RTCRtpStreamStats.sliCount;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An unsigned long integer indicating the number of SLI packets the sender received from
-  the receiver due to lost runs of macroblocks. A high value of <code>sliCount</code> may
-  be an indication of an unreliable network.</p>
+An unsigned long integer indicating the number of SLI packets the sender received from
+the receiver due to lost runs of macroblocks. A high value of `sliCount` may
+be an indication of an unreliable network.
 
-<p>For technical details, see {{RFC(4585, "6.3.2")}}.</p>
+For technical details, see {{RFC(4585, "6.3.2")}}.
 
-<div class="note">
-  <p><strong>Note:</strong> This value is sent by the sender to the receiver and is only
-    present for video media.</p>
-</div>
+> **Note:** This value is sent by the sender to the receiver and is only
+> present for video media.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{RFC(4585, "6.3.2")}}: Definition of "Slice Loss Indication" in the document
-    <em>Extended RTP Profile for Real-time Transport Control Protocol (RTCP)-Based
-      Feedback (RTP/AVPF)</em>.
-
-  </li>
-</ul>
+- {{RFC(4585, "6.3.2")}}: Definition of "Slice Loss Indication" in the document
+  _Extended RTP Profile for Real-time Transport Control Protocol (RTCP)-Based
+  Feedback (RTP/AVPF)_.

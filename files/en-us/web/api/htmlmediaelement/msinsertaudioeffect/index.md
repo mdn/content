@@ -9,39 +9,35 @@ tags:
   - Reference
   - msInsertAudioEffect
 ---
-<div>{{APIRef("HTML DOM")}}{{Non-standard_Header}}</div>
+{{APIRef("HTML DOM")}}{{Non-standard_Header}}
 
-<p>The <strong><code>HTMLMediaElement.msInsertAudioEffect()</code></strong> method inserts
-  the specified audio effect into the media pipeline.</p>
+The **`HTMLMediaElement.msInsertAudioEffect()`** method inserts
+the specified audio effect into the media pipeline.
 
-<p>This proprietary method is specific to Internet Explorer and Microsoft Edge.</p>
+This proprietary method is specific to Internet Explorer and Microsoft Edge.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>HTMLMediaElement</em>.msInsertAudioEffect(<em>activatableClassId</em>: {{DOMxRef("DOMString")}}, <em>effectRequired</em>: {{JSxRef("Boolean", "boolean")}}, <em>config</em>);
-</pre>
+```js
+HTMLMediaElement.msInsertAudioEffect(activatableClassId: {{DOMxRef("DOMString")}}, effectRequired: {{JSxRef("Boolean", "boolean")}}, config);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>activatableClassId</dt>
-  <dd>A {{DOMxRef("DOMString")}} defining the audio effects class.</dd>
-  <dt>effectRequired</dt>
-  <dd>A {{JSxRef("Boolean")}} which if set to <em>true</em> requires an audio effect to be
-    defined.</dd>
-  <dt>config{{Optional_Inline}}</dt>
-  <dd>An optional {{JSxRef("Object")}} to help with defining any additional configuration
-    needed.</dd>
-</dl>
+- activatableClassId
+  - : A {{DOMxRef("DOMString")}} defining the audio effects class.
+- effectRequired
+  - : A {{JSxRef("Boolean")}} which if set to _true_ requires an audio effect to be
+    defined.
+- config{{Optional_Inline}}
+  - : An optional {{JSxRef("Object")}} to help with defining any additional configuration
+    needed.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>This method does not return a value.</p>
+This method does not return a value.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{DOMxRef("HTMLMediaElement")}}</li>
-  <li><a href="/en-US/docs/Web/API/Microsoft_Extensions">Microsoft API extensions </a>
-  </li>
-</ul>
+- {{DOMxRef("HTMLMediaElement")}}
+- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_Extensions)

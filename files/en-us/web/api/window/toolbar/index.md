@@ -2,46 +2,49 @@
 title: Window.toolbar
 slug: Web/API/Window/toolbar
 tags:
-- API
-- HTML DOM
-- NeedsExample
-- NeedsMarkupWork
-- Property
-- Reference
-- Window
+  - API
+  - HTML DOM
+  - NeedsExample
+  - NeedsMarkupWork
+  - Property
+  - Reference
+  - Window
 browser-compat: api.Window.toolbar
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code><strong>Window.toolbar</strong></code> property returns the toolbar object,
-  which can be used to check the browser toolbar visibility.</p>
+The **`Window.toolbar`** property returns the toolbar object,
+which can be used to check the browser toolbar visibility.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>objRef</em> = <em>window</em>.toolbar</pre>
+```js
+objRef = window.toolbar
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following complete HTML example demonstrates how the <code>visible</code> property
-  of the <code>toolbar</code> object is used.</p>
+The following complete HTML example demonstrates how the `visible` property
+of the `toolbar` object is used.
 
-<pre class="brush:html">&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;Various DOM Tests&lt;/title&gt;
-  &lt;script&gt;
+```html
+<html>
+<head>
+  <title>Various DOM Tests</title>
+  <script>
     var visible = window.toolbar.visible;
-  &lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;p&gt;Various DOM Tests&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+  </script>
+</head>
+<body>
+  <p>Various DOM Tests</p>
+</body>
+</html>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

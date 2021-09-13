@@ -2,59 +2,58 @@
 title: CanvasRenderingContext2D.shadowOffsetY
 slug: Web/API/CanvasRenderingContext2D/shadowOffsetY
 tags:
-- API
-- Canvas
-- CanvasRenderingContext2D
-- Property
-- Reference
+  - API
+  - Canvas
+  - CanvasRenderingContext2D
+  - Property
+  - Reference
 browser-compat: api.CanvasRenderingContext2D.shadowOffsetY
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The
-  <strong><code>CanvasRenderingContext2D.shadowOffsetY</code></strong>
-  property of the Canvas 2D API specifies the distance that shadows will be offset
-  vertically.</p>
+The
+**`CanvasRenderingContext2D.shadowOffsetY`**
+property of the Canvas 2D API specifies the distance that shadows will be offset
+vertically.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Shadows are only drawn if the
-    {{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor")}} property is set to
-    a non-transparent value. One of the {{domxref("CanvasRenderingContext2D.shadowBlur",
+> **Note:** Shadows are only drawn if the
+> {{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor")}} property is set to
+> a non-transparent value. One of the {{domxref("CanvasRenderingContext2D.shadowBlur",
     "shadowBlur")}}, {{domxref("CanvasRenderingContext2D.shadowOffsetX",
-    "shadowOffsetX")}}, or <code>shadowOffsetY</code> properties must be non-zero, as
-    well.</p>
-</div>
+    "shadowOffsetX")}}, or `shadowOffsetY` properties must be non-zero, as
+> well.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>ctx</em>.shadowOffsetY = <em>offset</em>;
-</pre>
+```js
+ctx.shadowOffsetY = offset;
+```
 
-<dl>
-  <dt><code>offset</code></dt>
-  <dd>A float specifying the distance that shadows will be offset vertically. Positive
-    values are down, and negative are up. The default value is <code>0</code> (no vertical
-    offset). {{jsxref("Infinity")}} and {{jsxref("NaN")}} values are ignored.</dd>
-</dl>
+- `offset`
+  - : A float specifying the distance that shadows will be offset vertically. Positive
+    values are down, and negative are up. The default value is `0` (no vertical
+    offset). {{jsxref("Infinity")}} and {{jsxref("NaN")}} values are ignored.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Moving_a_shadow_vertically">Moving a shadow vertically</h3>
+### Moving a shadow vertically
 
-<p>This example adds a blurred shadow to a rectangle. The
-  {{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor")}} property sets its
-  color, <code>shadowOffsetY</code> sets its offset 25 units towards the bottom, and
-  {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}} gives it a blur level
-  of 10.</p>
+This example adds a blurred shadow to a rectangle. The
+{{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor")}} property sets its
+color, `shadowOffsetY` sets its offset 25 units towards the bottom, and
+{{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}} gives it a blur level
+of 10.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js;">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // Shadow
@@ -65,25 +64,23 @@ ctx.shadowBlur = 10;
 // Rectangle
 ctx.fillStyle = 'blue';
 ctx.fillRect(20, 20, 150, 80);
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Moving_a_shadow_vertically', 700, 180) }}</p>
+{{ EmbedLiveSample('Moving_a_shadow_vertically', 700, 180) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining this property: {{domxref("CanvasRenderingContext2D")}}</li>
-  <li>{{domxref("CanvasRenderingContext2D.shadowOffsetX")}}</li>
-  <li>{{domxref("CanvasRenderingContext2D.shadowColor")}}</li>
-  <li>{{domxref("CanvasRenderingContext2D.shadowBlur")}}</li>
-</ul>
+- The interface defining this property: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.shadowOffsetX")}}
+- {{domxref("CanvasRenderingContext2D.shadowColor")}}
+- {{domxref("CanvasRenderingContext2D.shadowBlur")}}

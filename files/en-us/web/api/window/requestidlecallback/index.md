@@ -2,85 +2,80 @@
 title: window.requestIdleCallback()
 slug: Web/API/Window/requestIdleCallback
 tags:
-- API
-- HTML DOM
-- JavaScript timers
-- Method
-- Reference
-- Window
-- requestIdleCallback
-- polyfill
+  - API
+  - HTML DOM
+  - JavaScript timers
+  - Method
+  - Reference
+  - Window
+  - requestIdleCallback
+  - polyfill
 browser-compat: api.Window.requestIdleCallback
 ---
-<div>{{APIRef("HTML DOM")}}{{SeeCompatTable}}</div>
+{{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
-<p>The <code><strong>window.requestIdleCallback()</strong></code> method queues a function
-  to be called during a browser's idle periods. This enables developers to perform
-  background and low priority work on the main event loop, without impacting
-  latency-critical events such as animation and input response. Functions are generally
-  called in first-in-first-out order; however, callbacks which have a <code>timeout</code>
-  specified may be called out-of-order if necessary in order to run them before the
-  timeout elapses.</p>
+The **`window.requestIdleCallback()`** method queues a function
+to be called during a browser's idle periods. This enables developers to perform
+background and low priority work on the main event loop, without impacting
+latency-critical events such as animation and input response. Functions are generally
+called in first-in-first-out order; however, callbacks which have a `timeout`
+specified may be called out-of-order if necessary in order to run them before the
+timeout elapses.
 
-<p>You can call <code>requestIdleCallback()</code> within an idle callback function to
-  schedule another callback to take place no sooner than the next pass through the event
-  loop.</p>
+You can call `requestIdleCallback()` within an idle callback function to
+schedule another callback to take place no sooner than the next pass through the event
+loop.
 
-<div class="note"><p><strong>Note:</strong> A <code>timeout</code> option is strongly recommended for required work,
-  as otherwise it's possible multiple seconds will elapse before the callback is fired.</p>
-</div>
+> **Note:** A `timeout` option is strongly recommended for required work,
+> as otherwise it's possible multiple seconds will elapse before the callback is fired.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">window.requestIdleCallback(callback);
-window.requestIdleCallback(callback, options);</pre>
+```js
+window.requestIdleCallback(callback);
+window.requestIdleCallback(callback, options);
+```
 
-<h3 id="Returns">Return value</h3>
+### Return value
 
-<p>An ID which can be used to cancel the callback by passing it into the
-  {{domxref("window.cancelIdleCallback()")}} method.</p>
+An ID which can be used to cancel the callback by passing it into the
+{{domxref("window.cancelIdleCallback()")}} method.
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>callback</code></dt>
-  <dd>A reference to a function that should be called in the near future, when the event
+- `callback`
+  - : A reference to a function that should be called in the near future, when the event
     loop is idle. The callback function is passed an {{domxref("IdleDeadline")}} object
     describing the amount of time available and whether or not the callback has been run
-    because the timeout period expired.</dd>
-  <dt><code>options</code> {{optional_inline}}</dt>
-  <dd>Contains optional configuration parameters. Currently only one property is defined:
-    <ul>
-      <li><code>timeout</code>: If <code>timeout</code> is specified and has a positive
-        value, and the callback has not already been called by the time <em>timeout</em>
-        milliseconds have passed, a task to execute the callback is queued in the event loop,
-        even if doing so risks causing a negative performance impact.</li>
-    </ul>
-  </dd>
-</dl>
+    because the timeout period expired.
+- `options` {{optional_inline}}
 
-<h2 id="Example">Example</h2>
+  - : Contains optional configuration parameters. Currently only one property is defined:
 
-<p>See our <a href="/en-US/docs/Web/API/Background_Tasks_API#example">complete example</a>
-  in the article <a href="/en-US/docs/Web/API/Background_Tasks_API">Cooperative Scheduling
-    of Background Tasks API</a>.</p>
+    - `timeout`: If `timeout` is specified and has a positive
+      value, and the callback has not already been called by the time _timeout_
+      milliseconds have passed, a task to execute the callback is queued in the event loop,
+      even if doing so risks causing a negative performance impact.
 
-<h2 id="Specifications">Specifications</h2>
+## Example
+
+See our [complete example](/en-US/docs/Web/API/Background_Tasks_API#example)
+in the article [Cooperative Scheduling
+of Background Tasks API](/en-US/docs/Web/API/Background_Tasks_API).
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("window.cancelIdleCallback()")}}</li>
-  <li>{{domxref("IdleDeadline")}}</li>
-  <li>{{domxref("setTimeout()")}}</li>
-  <li>{{domxref("setInterval()")}}</li>
-  <li>{{domxref("window.requestAnimationFrame")}}</li>
-  <li><a href="https://github.com/behnammodi/polyfill/blob/master/window.polyfill.js">A polyfill</a></li>
-</ul>
+- {{domxref("window.cancelIdleCallback()")}}
+- {{domxref("IdleDeadline")}}
+- {{domxref("setTimeout()")}}
+- {{domxref("setInterval()")}}
+- {{domxref("window.requestAnimationFrame")}}
+- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/window.polyfill.js)

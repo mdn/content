@@ -2,50 +2,51 @@
 title: Navigator.productSub
 slug: Web/API/Navigator/productSub
 tags:
-- API
-- Deprecated
-- HTML DOM
-- Navigator
-- Property
-- Read-only
+  - API
+  - Deprecated
+  - HTML DOM
+  - Navigator
+  - Property
+  - Read-only
 browser-compat: api.Navigator.productSub
 ---
-<div>{{ ApiRef("HTML DOM") }} {{Deprecated_Header}}</div>
+{{ ApiRef("HTML DOM") }} {{Deprecated_Header}}
 
-<p>The <code><strong>Navigator.productSub</strong></code> read-only property returns the
-  build number of the current browser.</p>
+The **`Navigator.productSub`** read-only property returns the
+build number of the current browser.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>prodSub</em> = navigator.productSub</pre>
+```js
+prodSub = navigator.productSub
+```
 
-<ul>
-  <li><code>prodSub</code> is a string.</li>
-</ul>
+- `prodSub` is a string.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">&lt;script&gt;
+```js
+<script>
 function prodsub() {
   var dt = document.getElementById("d").childNodes[0];
   dt.data = navigator.productSub;
 }
-&lt;/script&gt;
+</script>
 
-&lt;button onclick="prodsub();"&gt;productSub&lt;/button&gt;
-// returns: 20010725</pre>
+<button onclick="prodsub();">productSub</button>
+// returns: 20010725
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>On IE, this property returns undefined.</p>
+On IE, this property returns undefined.
 
-<p>On Apple Safari and Google Chrome this property always returns <code>20030107</code>.
-</p>
+On Apple Safari and Google Chrome this property always returns `20030107`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

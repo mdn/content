@@ -9,74 +9,70 @@ tags:
   - BackgroundFetchUpdateUIEvent
 browser-compat: api.BackgroundFetchUpdateUIEvent.updateUI
 ---
-<div>{{DefaultAPISidebar("Background Fetch API")}}</div>
+{{DefaultAPISidebar("Background Fetch API")}}
 
-<p>The <strong><code>updateUI()</code></strong> method of the {{domxref("BackgroundFetchUpdateUIEvent")}} interface updates the title and icon in the user interface to show the status of a background fetch.</p>
+The **`updateUI()`** method of the {{domxref("BackgroundFetchUpdateUIEvent")}} interface updates the title and icon in the user interface to show the status of a background fetch.
 
-<p>This method may only be run once, to notify the user on a failed or a successful fetch.</p>
+This method may only be run once, to notify the user on a failed or a successful fetch.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">let updateUI = BackgroundFetchUpdateUIEvent.updateUI(options);</pre>
+    let updateUI = BackgroundFetchUpdateUIEvent.updateUI(options);
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>options</code>{{optional_inline}}</dt>
-  <dd>An object containing any of the following:
-    <dl>
-      <dt><code>icons</code>{{optional_inline}}</dt>
-      <dd>A list of one or more image resources, containing icons for use in the user interface. An image resource is an object containing:
-        <dl>
-          <dt><code>src</code></dt>
-          <dd>A {{domxref("DOMString","string")}} which is a URL of an image.</dd>
-          <dt><code>sizes</code>{{optional_inline}}</dt>
-          <dd>A {{domxref("DOMString","string")}} which is equivalent to a {{htmlelement("link")}} <code>sizes</code> attribute.</dd>
-          <dt><code>type</code>{{optional_inline}}</dt>
-          <dd>A {{domxref("DOMString","string")}} containing an image MIME type.</dd>
-          <dt><code>label</code>{{optional_inline}}</dt>
-          <dd>A {{domxref("DOMString","string")}} providing a name for the associated image.</dd>
-        </dl>
-      </dd>
-      <dt><code>title</code>{{optional_inline}}</dt>
-      <dd>A {{domxref("DOMString", "string")}} containing text to update the title of the user interface.</dd>
-    </dl>
-  </dd>
-</dl>
+- `options`{{optional_inline}}
 
-<h3 id="Returns">Return value</h3>
+  - : An object containing any of the following:
 
-<p>A {{jsxref("Promise")}}.</p>
+    - `icons`{{optional_inline}}
 
-<h3 id="Exceptions">Exceptions</h3>
+      - : A list of one or more image resources, containing icons for use in the user interface. An image resource is an object containing:
 
-<dl>
-  <dt>A {{domxref("DOMException")}} <code>InvalidStateError</code></dt>
-  <dd>Thrown if any of the following are true:
-    <ul>
-      <li>The {{domxref("Event.isTrusted","isTrusted")}} property is <code>false</code>.</li>
-      <li>The {{domxref("BackgroundFetchUpdateUIEvent")}} UI updated flag is already set, indicating that the <code>updateUI()</code> method has already been called.</li>
-      <li>The {{domxref("BackgroundFetchUpdateUIEvent")}} is not active.</li>
-    </ul>
-  </dd>
-</dl>
+        - `src`
+          - : A {{domxref("DOMString","string")}} which is a URL of an image.
+        - `sizes`{{optional_inline}}
+          - : A {{domxref("DOMString","string")}} which is equivalent to a {{htmlelement("link")}} `sizes` attribute.
+        - `type`{{optional_inline}}
+          - : A {{domxref("DOMString","string")}} containing an image MIME type.
+        - `label`{{optional_inline}}
+          - : A {{domxref("DOMString","string")}} providing a name for the associated image.
 
-<h2 id="Examples">Examples</h2>
+    - `title`{{optional_inline}}
+      - : A {{domxref("DOMString", "string")}} containing text to update the title of the user interface.
 
-<p>The following example demonstrates updating the UI with a title and image icon on a successful fetch.</p>
+### Return value
 
-<pre class="brush: js">addEventListener('backgroundfetchsuccess', (event) => {
+A {{jsxref("Promise")}}.
+
+### Exceptions
+
+- A {{domxref("DOMException")}} `InvalidStateError`
+
+  - : Thrown if any of the following are true:
+
+    - The {{domxref("Event.isTrusted","isTrusted")}} property is `false`.
+    - The {{domxref("BackgroundFetchUpdateUIEvent")}} UI updated flag is already set, indicating that the `updateUI()` method has already been called.
+    - The {{domxref("BackgroundFetchUpdateUIEvent")}} is not active.
+
+## Examples
+
+The following example demonstrates updating the UI with a title and image icon on a successful fetch.
+
+```js
+addEventListener('backgroundfetchsuccess', (event) => {
     event.updateUI({ title: 'Episode 5 ready to listen!', 'icon: {
       src: "path/to/success.ico",
       sizes: "16x16 32x32 64x64",
     }' });
   }());
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

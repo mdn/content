@@ -8,44 +8,44 @@ tags:
   - WebRTC
 browser-compat: api.RTCPeerConnection.getIdentityAssertion
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The <code><strong>RTCPeerConnection.getIdentityAssertion()</strong></code> method
-  initiates the gathering of an identity assertion. This has an effect only if the
-  {{domxref("RTCPeerConnection.signalingState", "signalingState")}} is not
-  <code>"closed"</code>.</p>
+The **`RTCPeerConnection.getIdentityAssertion()`** method
+initiates the gathering of an identity assertion. This has an effect only if the
+{{domxref("RTCPeerConnection.signalingState", "signalingState")}} is not
+`"closed"`.
 
-<p>The method returns a JavaScript {{jsxref("Promise")}} which resolves to an
-  identity assertion encoded as a {{domxref("DOMString")}}.
+The method returns a JavaScript {{jsxref("Promise")}} which resolves to an
+identity assertion encoded as a {{domxref("DOMString")}}.
 
-<p>It is not expected for the application dealing with the <code>RTCPeerConnection</code>:
-  this is automatically done; an explicit call only allows to anticipate the need.</p>
+It is not expected for the application dealing with the `RTCPeerConnection`:
+this is automatically done; an explicit call only allows to anticipate the need.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">pc.getIdentityAssertion();
-</pre>
+```js
+pc.getIdentityAssertion();
+```
 
-<p><em>There is neither parameter nor return value for this method.</em></p>
+_There is neither parameter nor return value for this method._
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var pc = new RTCPeerConnection();
+```js
+var pc = new RTCPeerConnection();
 
 pc.setIdentityProvider("developer.mozilla.org");
 var assertion = await pc.getIdentityAssertion();
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
-</ul>
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)

@@ -9,50 +9,54 @@ tags:
   - Reference
 browser-compat: api.CSSConditionRule.conditionText
 ---
-<p>{{ APIRef("CSSOM") }}</p>
+{{ APIRef("CSSOM") }}
 
-<p>The <strong><code>conditionText</code></strong> property of
-    the {{domxref("CSSConditionRule")}} interface returns or sets the text of the CSS
-    rule.</p>
+The **`conditionText`** property of
+the {{domxref("CSSConditionRule")}} interface returns or sets the text of the CSS
+rule.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>text</var> = <var>CSSConditionRule</var>.conditionText
-<var>cssConditionRule</var>.conditionText = <var>text</var></pre>
+```js
+var text = CSSConditionRule.conditionText
+cssConditionRule.conditionText = text
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref('CSSOMString')}}.</p>
+A {{domxref('CSSOMString')}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example demonstrates getting and setting the value of
-  <code>conditionText</code> on a {{domxref("CSSMediaRule")}} which implements the
-  {{domxref("CSSConditionRule")}} interface.</p>
+The following example demonstrates getting and setting the value of
+`conditionText` on a {{domxref("CSSMediaRule")}} which implements the
+{{domxref("CSSConditionRule")}} interface.
 
-<pre class="brush: css">@media (min-width: 500px) {
+```css
+@media (min-width: 500px) {
   body {
     color: blue;
   }
-}</pre>
+}
+```
 
-<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
+```js
+let myRules = document.styleSheets[0].cssRules;
 let text = myRules[0].conditionText;
 console.log(text); // "(min-width: 500px)"
 text = "(min-width: 400px)";
-console.log(text);  // "(min-width: 400px)"</pre>
+console.log(text);  // "(min-width: 400px)"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information">Using dynamic styling
-      information</a></li>
-</ul>
+- [Using dynamic styling
+  information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)

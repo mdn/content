@@ -2,52 +2,50 @@
 title: GlobalEventHandlers.oncuechange
 slug: Web/API/GlobalEventHandlers/oncuechange
 tags:
-- API
-- Event Handler
-- GlobalEventHandlers
-- Property
-- Reference
-- TextTrack
-- WebVTT
-- text track
-- track
-- vtt
+  - API
+  - Event Handler
+  - GlobalEventHandlers
+  - Property
+  - Reference
+  - TextTrack
+  - WebVTT
+  - text track
+  - track
+  - vtt
 browser-compat: api.GlobalEventHandlers.oncuechange
 ---
-<div>{{ ApiRef("HTML DOM") }}</div>
+{{ ApiRef("HTML DOM") }}
 
-<p>The <strong><code>oncuechange</code></strong> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is the <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> for
-  processing {{event("cuechange")}} events.</p>
+The **`oncuechange`** property of the
+{{domxref("GlobalEventHandlers")}} mixin is the [event handler](/en-US/docs/Web/Events/Event_handlers) for
+processing {{event("cuechange")}} events.
 
-<p>The <code>cuechange</code> event fires when a {{domxref("TextTrack")}} has changed the
-  currently displaying cues. The event is sent to both the <code>TextTrack</code> and to
-  the {{HTMLElement("track")}} element the track is being presented by, if any; in the
-  latter case, its handler is on an {{domxref("HTMLTrackElement")}} object.</p>
+The `cuechange` event fires when a {{domxref("TextTrack")}} has changed the
+currently displaying cues. The event is sent to both the `TextTrack` and to
+the {{HTMLElement("track")}} element the track is being presented by, if any; in the
+latter case, its handler is on an {{domxref("HTMLTrackElement")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em><var>element</var></em>.oncuechange = <em>handlerFunction</em>;
-var <em>handlerFunction</em> = <em><var>element</var></em>.oncuechange;
-</pre>
+```js
+element.oncuechange = handlerFunction;
+var handlerFunction = element.oncuechange;
+```
 
-<p><code>handlerFunction</code> is either <code>null</code> or a <a
-    href="/en-US/docs/Web/JavaScript/Reference/Functions">JavaScript function</a>
-  specifying the handler for the event.</p>
+`handlerFunction` is either `null` or a [JavaScript function](/en-US/docs/Web/JavaScript/Reference/Functions)
+specifying the handler for the event.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebVTT_API">Web Video Tracks Format (VTT)</a></li>
-  <li>{{event("cuechange")}}</li>
-  <li>{{HTMLElement("track")}}</li>
-  <li><a href="/en-US/docs/Web/Guide/Events/Event_handlers">DOM event handlers</a></li>
-</ul>
+- [Web Video Tracks Format (VTT)](/en-US/docs/Web/API/WebVTT_API)
+- {{event("cuechange")}}
+- {{HTMLElement("track")}}
+- [DOM event handlers](/en-US/docs/Web/Guide/Events/Event_handlers)

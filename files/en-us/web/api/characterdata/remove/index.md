@@ -8,40 +8,41 @@ tags:
   - Method
 browser-compat: api.CharacterData.remove
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>CharacterData.remove()</strong></code> method removes text.</p>
+The **`CharacterData.remove()`** method removes text.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">remove()</pre>
+```js
+remove()
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_remove">Using <code>remove()</code></h3>
+### Using `remove()`
 
-<pre class="brush: html">
-&lt;p id="myText"&gt;Some text&lt;/p&gt;
-</pre>
+```html
+<p id="myText">Some text</p>
+```
 
-<pre class="brush: js">let text = document.getElementById('myText').firstChild;
+```js
+let text = document.getElementById('myText').firstChild;
 text.remove(); // Removes the text
-</pre>
+```
 
-<pre class="brush: html">
-&lt;p id="myText"&gt;&lt;/p&gt;
-</pre>
+```html
+<p id="myText"></p>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Element.remove()")}}</li>
-</ul>
+- {{domxref("Element.remove()")}}

@@ -3,19 +3,21 @@ title: ServiceWorkerGlobalScope.onsync
 slug: Web/API/ServiceWorkerGlobalScope/onsync
 browser-compat: api.ServiceWorkerGlobalScope.onsync
 ---
-<p>{{APIRef("")}}</p>
+{{APIRef("")}}
 
-<p>The <strong><code>ServiceWorkerGlobalScope.onsync</code></strong> event of the {{domxref("ServiceWorkerGlobalScope")}} interface is fired whenever a <code><a href="/en-US/docs/Web/Events/SyncEvent">SyncEvent</a></code> event occurs. This is triggered when a call to <a href="/en-US/docs/Web/API/SyncManager/register" title="The register method of the SyncManager interface returns a Promise that resolves to a SyncRegistration instance."><code>SyncManager.register</code></a> is made from a service worker client page. The attempt to sync is made either immediately if the network is available or as soon as the network becomes available.</p>
+The **`ServiceWorkerGlobalScope.onsync`** event of the {{domxref("ServiceWorkerGlobalScope")}} interface is fired whenever a [`SyncEvent`](/en-US/docs/Web/Events/SyncEvent) event occurs. This is triggered when a call to [`SyncManager.register`](/en-US/docs/Web/API/SyncManager/register "The register method of the SyncManager interface returns a Promise that resolves to a SyncRegistration instance.") is made from a service worker client page. The attempt to sync is made either immediately if the network is available or as soon as the network becomes available.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">ServiceWorkerGlobalScope.onsync = function(SyncEvent) { ... }
-self.addEventListener('sync', function(SyncEvent) { ... })</pre>
+```js
+ServiceWorkerGlobalScope.onsync = function(SyncEvent) { ... }
+self.addEventListener('sync', function(SyncEvent) { ... })
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

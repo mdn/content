@@ -8,49 +8,48 @@ tags:
   - TrustedHTML
 browser-compat: api.TrustedHTML
 ---
-<div>{{DefaultAPISidebar("Trusted Types API")}}</div>
+{{DefaultAPISidebar("Trusted Types API")}}
 
-<p>The <strong><code>TrustedHTML</code></strong> interface of the {{domxref('Trusted Types API')}} represents a string that a developer can insert into an <a href="/en-US/docs/Web/API/Trusted_Types_API#injection_sinks">injection sink</a> that will render it as HTML. These objects are created via {{domxref("TrustedTypePolicy.createHTML", "TrustedTypePolicy.createHTML()")}} and therefore have no constructor.</p>
+The **`TrustedHTML`** interface of the {{domxref('Trusted Types API')}} represents a string that a developer can insert into an [injection sink](/en-US/docs/Web/API/Trusted_Types_API#injection_sinks) that will render it as HTML. These objects are created via {{domxref("TrustedTypePolicy.createHTML", "TrustedTypePolicy.createHTML()")}} and therefore have no constructor.
 
-<p>The value of a <strong>TrustedHTML</strong> object is set when the object is created and cannot be changed by JavaScript as there is no setter exposed.</p>
+The value of a **TrustedHTML** object is set when the object is created and cannot be changed by JavaScript as there is no setter exposed.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
-  <dt>{{domxref("TrustedHTML.toJSON()")}}</dt>
-  <dd>Returns a JSON representation of the stored data.</dd>
-  <dt>{{domxref("TrustedHTML.toString()")}}</dt>
-  <dd>A {{domxref("DOMString","string")}} containing the sanitized HTML.</dd>
-</dl>
+- {{domxref("TrustedHTML.toJSON()")}}
+  - : Returns a JSON representation of the stored data.
+- {{domxref("TrustedHTML.toString()")}}
+  - : A {{domxref("DOMString","string")}} containing the sanitized HTML.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the below example we create a policy that will create {{domxref("TrustedHTML")}} objects using {{domxref("TrustedTypePolicyFactory.createPolicy()")}}. We can then use {{domxref("TrustedTypePolicy.createHTML")}} to create a sanitized HTML string to be inserted into the document.</p>
+In the below example we create a policy that will create {{domxref("TrustedHTML")}} objects using {{domxref("TrustedTypePolicyFactory.createPolicy()")}}. We can then use {{domxref("TrustedTypePolicy.createHTML")}} to create a sanitized HTML string to be inserted into the document.
 
-<p>The sanitized value can then be used with {{domxref("Element.innerHTML")}} to ensure that no new HTML elements can be injected.</p>
+The sanitized value can then be used with {{domxref("Element.innerHTML")}} to ensure that no new HTML elements can be injected.
 
-<pre class="brush: html">&lt;div id="myDiv"&gt;&lt;/div&gt;</pre>
+```html
+<div id="myDiv"></div>
+```
 
-<pre class="brush: js">const escapeHTMLPolicy = trustedTypes.createPolicy("myEscapePolicy", {
-  createHTML: (string) =&gt; string.replace(/\&gt;/g, "&lt;")
+```js
+const escapeHTMLPolicy = trustedTypes.createPolicy("myEscapePolicy", {
+  createHTML: (string) => string.replace(/\>/g, "<")
 });
 
 let el = document.getElementById("myDiv");
-const escaped = escapeHTMLPolicy.createHTML("&lt;img src=x onerror=alert(1)&gt;");
+const escaped = escapeHTMLPolicy.createHTML("<img src=x onerror=alert(1)>");
 console.log(escaped instanceof TrustedHTML); // true
 el.innerHTML = escaped;
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://web.dev/trusted-types/">Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types</a></li>
-</ul>
+- [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/trusted-types/)

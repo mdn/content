@@ -2,111 +2,109 @@
 title: WebGLRenderingContext.stencilFuncSeparate()
 slug: Web/API/WebGLRenderingContext/stencilFuncSeparate
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.stencilFuncSeparate
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.stencilFuncSeparate()</code></strong> method of
-  the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> sets the front and/or back
-  function and reference value for stencil testing.</p>
+The **`WebGLRenderingContext.stencilFuncSeparate()`** method of
+the [WebGL API](/en-US/docs/Web/API/WebGL_API) sets the front and/or back
+function and reference value for stencil testing.
 
-<p>Stencilling enables and disables drawing on a per-pixel basis. It is typically used in
-  multipass rendering to achieve special effects.</p>
+Stencilling enables and disables drawing on a per-pixel basis. It is typically used in
+multipass rendering to achieve special effects.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <var>gl</var>.stencilFuncSeparate(<var>face</var>, <var>func</var>, <var>ref</var>, <var>mask</var>);
-</pre>
+```js
+void gl.stencilFuncSeparate(face, func, ref, mask);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>face</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying whether the front and/or back stencil state is
+- face
+
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying whether the front and/or back stencil state is
     updated. The possible values are:
-    <ul>
-      <li><code>gl.FRONT</code></li>
-      <li><code>gl.BACK</code></li>
-      <li><code>gl.FRONT_AND_BACK</code></li>
-    </ul>
-  </dd>
-  <dt><code>func</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the test function. The default function is
-    <code>gl.ALWAYS</code>. The possible values are:
-    <ul>
-      <li><code>gl.NEVER</code>: Never pass.</li>
-      <li><code>gl.LESS</code>: Pass if
-        <code>(ref &amp; mask) &lt; (stencil &amp; mask)</code>.</li>
-      <li><code>gl.EQUAL</code>: Pass if
-        <code>(ref &amp; mask) = (stencil &amp; mask)</code>.</li>
-      <li><code>gl.LEQUAL</code>: Pass if
-        <code>(ref &amp; mask) &lt;= (stencil &amp; mask)</code>.</li>
-      <li><code>gl.GREATER</code>: Pass if
-        <code>(ref &amp; mask) &gt; (stencil &amp; mask)</code>.</li>
-      <li><code>gl.NOTEQUAL</code>: Pass if
-        <code>(ref &amp; mask) != (stencil &amp; mask)</code>.</li>
-      <li><code>gl.GEQUAL</code>: Pass if
-        <code>(ref &amp; mask) &gt;= (stencil &amp; mask)</code>.</li>
-      <li><code>gl.ALWAYS</code>: Always pass.</li>
-    </ul>
-  </dd>
-  <dt><code>ref</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLint")}} specifying the reference value for the stencil test. This
+
+    - `gl.FRONT`
+    - `gl.BACK`
+    - `gl.FRONT_AND_BACK`
+
+- `func`
+
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the test function. The default function is
+    `gl.ALWAYS`. The possible values are:
+
+    - `gl.NEVER`: Never pass.
+    - `gl.LESS`: Pass if
+      `(ref & mask) < (stencil & mask)`.
+    - `gl.EQUAL`: Pass if
+      `(ref & mask) = (stencil & mask)`.
+    - `gl.LEQUAL`: Pass if
+      `(ref & mask) <= (stencil & mask)`.
+    - `gl.GREATER`: Pass if
+      `(ref & mask) > (stencil & mask)`.
+    - `gl.NOTEQUAL`: Pass if
+      `(ref & mask) != (stencil & mask)`.
+    - `gl.GEQUAL`: Pass if
+      `(ref & mask) >= (stencil & mask)`.
+    - `gl.ALWAYS`: Always pass.
+
+- `ref`
+  - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the reference value for the stencil test. This
     value is clamped to the range 0 to 2^n - 1 where n is the number of bitplanes
-    in the stencil buffer. The default value is 0.</dd>
-  <dt><code>mask</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLuint")}} specifying a bit-wise mask that is used to AND the reference
+    in the stencil buffer. The default value is 0.
+- `mask`
+  - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying a bit-wise mask that is used to AND the reference
     value and the stored stencil value when the test is done. The default value is all 1.
-  </dd>
-</dl>
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The stencil testing is disabled by default. To enable or disable stencil testing, use
-  the {{domxref("WebGLRenderingContext.enable", "enable()")}} and
-  {{domxref("WebGLRenderingContext.disable", "disable()")}} methods with the argument
-  <code>gl.STENCIL_TEST</code>.</p>
+The stencil testing is disabled by default. To enable or disable stencil testing, use
+the {{domxref("WebGLRenderingContext.enable", "enable()")}} and
+{{domxref("WebGLRenderingContext.disable", "disable()")}} methods with the argument
+`gl.STENCIL_TEST`.
 
-<pre class="brush: js">gl.enable(gl.STENCIL_TEST);
+```js
+gl.enable(gl.STENCIL_TEST);
 gl.stencilFuncSeparate(gl.FRONT, gl.LESS, 0.2, 1110011);
-</pre>
+```
 
-<p>To get the current stencil function, reference value, or other stencil information,
-  query the following constants with {{domxref("WebGLRenderingContext.getParameter",
-  "getParameter()")}}.</p>
+To get the current stencil function, reference value, or other stencil information,
+query the following constants with {{domxref("WebGLRenderingContext.getParameter",
+  "getParameter()")}}.
 
-<pre class="brush: js">gl.getParameter(gl.STENCIL_FUNC);
+```js
+gl.getParameter(gl.STENCIL_FUNC);
 gl.getParameter(gl.STENCIL_VALUE_MASK);
 gl.getParameter(gl.STENCIL_REF);
 gl.getParameter(gl.STENCIL_BACK_FUNC);
 gl.getParameter(gl.STENCIL_BACK_VALUE_MASK);
 gl.getParameter(gl.STENCIL_BACK_REF);
 gl.getParameter(gl.STENCIL_BITS);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.stencilFunc()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.stencilMask()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.stencilMaskSeparate()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.stencilOp()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.stencilOpSeparate()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.stencilFunc()")}}
+- {{domxref("WebGLRenderingContext.stencilMask()")}}
+- {{domxref("WebGLRenderingContext.stencilMaskSeparate()")}}
+- {{domxref("WebGLRenderingContext.stencilOp()")}}
+- {{domxref("WebGLRenderingContext.stencilOpSeparate()")}}

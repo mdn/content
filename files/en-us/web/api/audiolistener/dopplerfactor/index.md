@@ -15,33 +15,32 @@ tags:
   - effects
 browser-compat: api.AudioListener.dopplerFactor
 ---
-<div>{{ APIRef("Web Audio API") }}{{deprecated_header}}</div>
+{{ APIRef("Web Audio API") }}{{deprecated_header}}
 
-<p>The deprecated <code>dopplerFactor</code> property of the {{ domxref("AudioListener") }} interface is a double value representing the amount of pitch shift to use when rendering a <a href="https://en.wikipedia.org/wiki/Doppler_effect">doppler effect</a>.</p>
+The deprecated `dopplerFactor` property of the {{ domxref("AudioListener") }} interface is a double value representing the amount of pitch shift to use when rendering a [doppler effect](https://en.wikipedia.org/wiki/Doppler_effect).
 
-<p>The <code>dopplerFactor</code> property's default value is <code>1</code>, which is a sensible default for most situations.</p>
+The `dopplerFactor` property's default value is `1`, which is a sensible default for most situations.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var audioCtx = new AudioContext();
+```js
+var audioCtx = new AudioContext();
 var myListener = audioCtx.listener;
 myListener.dopplerFactor = 1;
-</pre>
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A double indicating the doppler effect's pitch shift value. The value is 1 by default.</p>
+A double indicating the doppler effect's pitch shift value. The value is 1 by default.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See <a href="/en-US/docs/Web/API/BaseAudioContext/createPanner#example"><code>BaseAudioContext.createPanner()</code></a> for example code.</p>
+See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

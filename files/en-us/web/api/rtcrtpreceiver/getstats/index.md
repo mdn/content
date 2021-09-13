@@ -14,53 +14,53 @@ tags:
   - getStats
 browser-compat: api.RTCRtpReceiver.getStats
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The {{domxref("RTCRtpReceiver")}} method <code><strong>getStats()</strong></code>
-  asynchronously requests an {{domxref("RTCStatsReport")}} object which provides
-  statistics about incoming traffic on the owning {{domxref("RTCPeerConnection")}},
-  returning a {{jsxref("Promise")}} whose fulfillment handler will be called once the
-  results are available.</p>
+The {{domxref("RTCRtpReceiver")}} method **`getStats()`**
+asynchronously requests an {{domxref("RTCStatsReport")}} object which provides
+statistics about incoming traffic on the owning {{domxref("RTCPeerConnection")}},
+returning a {{jsxref("Promise")}} whose fulfillment handler will be called once the
+results are available.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>promise</em> = <em>RTCRtpReceiver</em>.getStats();
-</pre>
+```js
+var promise = RTCRtpReceiver.getStats();
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A JavaScript {{jsxref("Promise")}} which is fulfilled once the statistics are
-  available. The promise's fulfillment handler receives as a parameter a
-  {{domxref("RTCStatsReport")}} object containing the collected statistics.</p>
+A JavaScript {{jsxref("Promise")}} which is fulfilled once the statistics are
+available. The promise's fulfillment handler receives as a parameter a
+{{domxref("RTCStatsReport")}} object containing the collected statistics.
 
-<p>The returned statistics include those from all streams which are coming in through the
-  <code>RTCRtpReceiver</code>, as well as any of their dependencies.</p>
+The returned statistics include those from all streams which are coming in through the
+`RTCRtpReceiver`, as well as any of their dependencies.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This simple example obtains the statistics for an <code>RTCRtpReceiver</code> and
-  updates an element's {{domxref("HTMLElement/innerText", "innerText")}} to display the number of
-  packets lost.</p>
+This simple example obtains the statistics for an `RTCRtpReceiver` and
+updates an element's {{domxref("HTMLElement/innerText", "innerText")}} to display the number of
+packets lost.
 
-<pre class="brush: js">receiver.getStats().then(function(stats) {
+```js
+receiver.getStats().then(function(stats) {
   document.getElementById("lostpackets").innerText =
           stats.packetsLost;
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
-  <li>{{domxref("RTCStatsReport")}}</li>
-  <li>{{domxref("RTCRtpSender.getStats()")}}</li>
-  <li>{{domxref("RTCPeerConnection.getStats()")}}</li>
-</ul>
+- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+- {{domxref("RTCStatsReport")}}
+- {{domxref("RTCRtpSender.getStats()")}}
+- {{domxref("RTCPeerConnection.getStats()")}}

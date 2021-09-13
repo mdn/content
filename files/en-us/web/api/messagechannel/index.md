@@ -10,39 +10,34 @@ tags:
   - web messaging
 browser-compat: api.MessageChannel
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>MessageChannel</code></strong> interface of the <a href="/en-US/docs/Web/API/Channel_Messaging_API">Channel Messaging API</a> allows us to create a new message channel and send data through it via its two {{domxref("MessagePort")}} properties.</p>
+The **`MessageChannel`** interface of the [Channel Messaging API](/en-US/docs/Web/API/Channel_Messaging_API) allows us to create a new message channel and send data through it via its two {{domxref("MessagePort")}} properties.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
-	<dt>{{domxref("MessageChannel.port1")}} {{readonlyInline}}</dt>
-	<dd>Returns port1 of the channel.</dd>
-	<dt>{{domxref("MessageChannel.port2")}} {{readonlyInline}}</dt>
-	<dd>Returns port2 of the channel.</dd>
-</dl>
+- {{domxref("MessageChannel.port1")}} {{readonlyInline}}
+  - : Returns port1 of the channel.
+- {{domxref("MessageChannel.port2")}} {{readonlyInline}}
+  - : Returns port2 of the channel.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
-	<dt>{{domxref("MessageChannel.MessageChannel", "MessageChannel()")}}</dt>
-	<dd>
-	<p>Returns a new <code>MessageChannel</code> object with two new {{domxref("MessagePort")}} objects.</p>
-	</dd>
-</dl>
+- {{domxref("MessageChannel.MessageChannel", "MessageChannel()")}}
+  - : Returns a new `MessageChannel` object with two new {{domxref("MessagePort")}} objects.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In the following example, you can see a new channel being created using the {{domxref("MessageChannel()", "MessageChannel.MessageChannel")}} constructor.</p>
+In the following example, you can see a new channel being created using the {{domxref("MessageChannel()", "MessageChannel.MessageChannel")}} constructor.
 
-<p>When the IFrame has loaded, we register an <code>onmessage</code> handler for  {{domxref("MessageChannel.port1")}} and transfer {{domxref("MessageChannel.port2")}} to the IFrame using the {{domxref("window.postMessage")}} method along with a message.</p>
+When the IFrame has loaded, we register an `onmessage` handler for  {{domxref("MessageChannel.port1")}} and transfer {{domxref("MessageChannel.port2")}} to the IFrame using the {{domxref("window.postMessage")}} method along with a message.
 
-<p>When a message is received back from the IFrame, the <code>onMessage</code> function outputs the message to a paragraph.</p>
+When a message is received back from the IFrame, the `onMessage` function outputs the message to a paragraph.
 
-<pre class="brush: js">var channel = new MessageChannel();
+```js
+var channel = new MessageChannel();
 var output = document.querySelector('.output');
 var iframe = document.querySelector('iframe');
 
@@ -61,20 +56,18 @@ function onLoad() {
 function onMessage(e) {
   output.innerHTML = e.data;
 }
-</pre>
+```
 
-<p>For a full working example, see our <a href="https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic">channel messaging basic demo</a> on Github (<a href="https://mdn.github.io/dom-examples/channel-messaging-basic/">run it live too</a>).</p>
+For a full working example, see our [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic) on Github ([run it live too](https://mdn.github.io/dom-examples/channel-messaging-basic/)).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><a href="/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging">Using channel messaging</a></li>
-</ul>
+- [Using channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)

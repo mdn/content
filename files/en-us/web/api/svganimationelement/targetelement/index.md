@@ -2,31 +2,32 @@
 title: SVGAnimationElement.targetElement
 slug: Web/API/SVGAnimationElement/targetElement
 tags:
-- API
-- DOM
-- NeedsExample
-- Property
-- Reference
-- SVG
-- SVG DOM
+  - API
+  - DOM
+  - NeedsExample
+  - Property
+  - Reference
+  - SVG
+  - SVG DOM
 browser-compat: api.SVGAnimationElement.targetElement
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <code><strong>SVGAnimationElement.targetElement</strong></code> property refers to
-  the element which is being animated. If no target element is being animated (for
-  example, because the {{SVGAttr("href")}} attribute specifies an unknown element), the
-  value returned is <code>null</code>.</p>
+The **`SVGAnimationElement.targetElement`** property refers to
+the element which is being animated. If no target element is being animated (for
+example, because the {{SVGAttr("href")}} attribute specifies an unknown element), the
+value returned is `null`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>targetElement</var> = <var>someElement</var>.targetElement;
-</pre>
+```js
+var targetElement = someElement.targetElement;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -11,67 +11,60 @@ tags:
   - StaticRange
 browser-compat: api.StaticRange.StaticRange
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>StaticRange()</code></strong> constructor
-    creates a new {{domxref("StaticRange")}} object representing a span of content within
-    the DOM.</p>
+The **`StaticRange()`** constructor
+creates a new {{domxref("StaticRange")}} object representing a span of content within
+the DOM.
 
-<p>This constructor includes properties identifying the standard and end positions of
-  the range as well as a Boolean indicating whether or not the range is
-  <strong>collapsed</strong> (that is, empty).</p>
+This constructor includes properties identifying the standard and end positions of
+the range as well as a Boolean indicating whether or not the range is
+**collapsed** (that is, empty).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>staticRange</em> = new StaticRange(<em>rangeSpec</em>)</pre>
+```js
+var staticRange = new StaticRange(rangeSpec)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>rangeSpec</code></dt>
-  <dd>
-    <p>The required <code>rangeSpec</code> parameter is an object 
-      containing the four following properties:</p>
+- `rangeSpec`
 
-    <dl>
-      <dt><code>startContainer</code></dt>
-      <dd>The {{domxref("Node")}} in which the starting point of the range is located.
-      </dd>
-      <dt><code>startOffset</code></dt>
-      <dd>The offset into the starting node at which the first character of the range is
-        found.</dd>
-      <dt><code>endContainer</code></dt>
-      <dd>The <code>Node</code> in which the end point of the range is located.</dd>
-      <dt><code>endOffset</code></dt>
-      <dd>The offset into the node indicated by <code>endOffset</code> at which the last
-        character in the range is located.</dd>
-    </dl>
-  </dd>
-</dl>
+  - : The required `rangeSpec` parameter is an object
+    containing the four following properties:
 
-<h3 id="Return_value">Return value</h3>
+    - `startContainer`
+      - : The {{domxref("Node")}} in which the starting point of the range is located.
+    - `startOffset`
+      - : The offset into the starting node at which the first character of the range is
+        found.
+    - `endContainer`
+      - : The `Node` in which the end point of the range is located.
+    - `endOffset`
+      - : The offset into the node indicated by `endOffset` at which the last
+        character in the range is located.
 
-<p>A new <code>StaticRange</code> object initialized with the values given in
-  the <code>rangeSpec</code> object.</p>
+### Return value
 
-<h3 id="Exceptions">Exceptions</h3>
+A new `StaticRange` object initialized with the values given in
+the `rangeSpec` object.
 
-<dl>
-  <dt><code>InvalidNodeTypeError</code></dt>
-  <dd>A {{domxref("DOMException")}} fired if either or both of the
-    <code>startContainer</code> and/or <code>endContainer</code> are a type of node which
+### Exceptions
+
+- `InvalidNodeTypeError`
+  - : A {{domxref("DOMException")}} fired if either or both of the
+    `startContainer` and/or `endContainer` are a type of node which
     you can't include in a range. Those node types
-    are <code>Node.DOCUMENT_TYPE_NODE</code> (representing the {{domxref("DocumentType")}}
-    node derived from the {{Glossary("Doctype", "DTD")}} identified using the <code>doctype</code>
+    are `Node.DOCUMENT_TYPE_NODE` (representing the {{domxref("DocumentType")}}
+    node derived from the {{Glossary("Doctype", "DTD")}} identified using the `doctype`
     preamble in the HTML, for example) and the {{domxref("Attr")}} node describing an
-    attribute of an element on the DOM..</dd>
-</dl>
+    attribute of an element on the DOM..
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

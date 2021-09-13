@@ -2,59 +2,57 @@
 title: WebGLRenderingContext.isFramebuffer()
 slug: Web/API/WebGLRenderingContext/isFramebuffer
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.isFramebuffer
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.isFramebuffer()</code></strong> method of the
-  <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> returns <code>true</code> if the
-  passed {{domxref("WebGLFramebuffer")}} is valid and <code>false</code> otherwise.</p>
+The **`WebGLRenderingContext.isFramebuffer()`** method of the
+[WebGL API](/en-US/docs/Web/API/WebGL_API) returns `true` if the
+passed {{domxref("WebGLFramebuffer")}} is valid and `false` otherwise.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">GLboolean <var>gl</var>.isFramebuffer(<var>framebuffer</var>);
-</pre>
+```js
+GLboolean gl.isFramebuffer(framebuffer);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>framebuffer</dt>
-  <dd>A {{domxref("WebGLFramebuffer")}} to check.</dd>
-</dl>
+- framebuffer
+  - : A {{domxref("WebGLFramebuffer")}} to check.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether or not the frame buffer is valid.</p>
+A {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether or not the frame buffer is valid.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Checking_a_frame_buffer">Checking a frame buffer</h3>
+### Checking a frame buffer
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 var framebuffer = gl.createFramebuffer();
 
 gl.isFramebuffer(framebuffer);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.bindFramebuffer()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.createFramebuffer()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.deleteFramebuffer()")}}</li>
-  <li>Other buffers: {{domxref("WebGLBuffer")}}, {{domxref("WebGLRenderbuffer")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.bindFramebuffer()")}}
+- {{domxref("WebGLRenderingContext.createFramebuffer()")}}
+- {{domxref("WebGLRenderingContext.deleteFramebuffer()")}}
+- Other buffers: {{domxref("WebGLBuffer")}}, {{domxref("WebGLRenderbuffer")}}

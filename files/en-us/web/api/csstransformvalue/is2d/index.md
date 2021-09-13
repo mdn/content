@@ -2,43 +2,44 @@
 title: CSSTransformValue.is2D
 slug: Web/API/CSSTransformValue/is2D
 tags:
-- API
-- CSS
-- CSS Typed Object Model API
-- CSSTransformValue
-- Experimental
-- Houdini
-- Property
-- is2D
+  - API
+  - CSS
+  - CSS Typed Object Model API
+  - CSSTransformValue
+  - Experimental
+  - Houdini
+  - Property
+  - is2D
 browser-compat: api.CSSTransformValue.is2D
 ---
-<div>{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{Draft}}</div>
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{Draft}}
 
-<p>The read-only <strong><code>is2D</code></strong> property of the
-  {{domxref("CSSTransformValue")}} interface returns whether the transform is 2D or 3D.
-</p>
+The read-only **`is2D`** property of the
+{{domxref("CSSTransformValue")}} interface returns whether the transform is 2D or 3D.
 
-<p>In the case of the <code>CSSTransformValue</code> this property returns
-  true unless any of the individual functions return false for <code>Is2D</code>, in which
-  case it returns false.</p>
+In the case of the `CSSTransformValue` this property returns
+true unless any of the individual functions return false for `Is2D`, in which
+case it returns false.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>is2D</var> = CSSTransformValue.is2D;</pre>
+```js
+var is2D = CSSTransformValue.is2D;
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A boolean. True indicates that the transform is a 2D transform, false that it is a 3D
-  transform.</p>
+A boolean. True indicates that the transform is a 2D transform, false that it is a 3D
+transform.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>To Do</p>
+To Do
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -10,29 +10,28 @@ tags:
   - Reference
 browser-compat: api.Navigator.taintEnabled
 ---
-<div>{{APIRef("HTML DOM")}} {{deprecated_header}}</div>
+{{APIRef("HTML DOM")}} {{deprecated_header}}
 
-<p>The <strong><code>Navigator.taintEnabled()</code></strong> method always returns
-  <code>false</code>.</p>
+The **`Navigator.taintEnabled()`** method always returns
+`false`.
 
-<p>Tainting was a security method used by JavaScript 1.2. It has long been removed; this
-  method only stays for maintaining compatibility with very old scripts.</p>
+Tainting was a security method used by JavaScript 1.2. It has long been removed; this
+method only stays for maintaining compatibility with very old scripts.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>result</var> = window.navigator.taintEnabled()
-</pre>
+```js
+result = window.navigator.taintEnabled()
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Navigator")}}</li>
-</ul>
+- {{domxref("Navigator")}}

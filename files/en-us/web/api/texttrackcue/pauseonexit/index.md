@@ -9,27 +9,27 @@ tags:
   - TextTrackCue
 browser-compat: api.TextTrackCue.pauseOnExit
 ---
-<div>{{APIRef("WebVTT")}}</div>
+{{APIRef("WebVTT")}}
 
-<p>The <strong><code>pauseOnExit</code></strong> property of the {{domxref("TextTrackCue")}} interface returns or sets the flag indicating whether playback of the media should pause when the end of the range to which this cue applies is reached.</p>
+The **`pauseOnExit`** property of the {{domxref("TextTrackCue")}} interface returns or sets the flag indicating whether playback of the media should pause when the end of the range to which this cue applies is reached.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let pauseOnExit = TextTrackCue.pauseOnExit;
+```js
+let pauseOnExit = TextTrackCue.pauseOnExit;
 TextTrackCue.pauseOnExit = true;
-</pre>
+```
 
-<h3>Value</h3>
-<p>A {{jsxref("Boolean")}}, true if the media will pause.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{jsxref("Boolean")}}, true if the media will pause.
 
-<h2 id="Specifications">Specifications</h2>
+## Examples
 
-<p>{{Specifications}}</p>
+## Specifications
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+{{Specifications}}
 
-<p>{{Compat}}</p>
+## Browser compatibility
 
-
+{{Compat}}

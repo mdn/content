@@ -2,54 +2,42 @@
 title: LockedFile.location
 slug: Web/API/LockedFile/location
 tags:
-- API
-- Files
-- Non Standard
-- Property
-- Reference
-- WebAPI
+  - API
+  - Files
+  - Non Standard
+  - Property
+  - Reference
+  - WebAPI
 ---
-<p>{{APIRef("File System API")}}{{non-standard_header}}</p>
+{{APIRef("File System API")}}{{non-standard_header}}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>The <code>location</code> property is a zero-based index representing the position of
-  the read/write pointer within the file. Its value indicates at which bytes within the
-  file any write or read operation will start.</p>
+The `location` property is a zero-based index representing the position of
+the read/write pointer within the file. Its value indicates at which bytes within the
+file any write or read operation will start.
 
-<p>This value is changed automatically after every read and write operation. The special
-  value <code>null</code> means end-of-file.</p>
+This value is changed automatically after every read and write operation. The special
+value `null` means end-of-file.
 
-<p>This property can be changed at will.</p>
+This property can be changed at will.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var location = <em>instanceOfLockedFile</em>.location
-</pre>
+```js
+var location = instanceOfLockedFile.location
+```
 
-<h2 id="Value">Value</h2>
+## Value
 
-<p>A number.</p>
+A number.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('FileSystem')}}</td>
-      <td>{{Spec2('FileSystem')}}</td>
-      <td>Draft Proposal.</td>
-    </tr>
-  </tbody>
-</table>
+| Specification                        | Status                           | Comment         |
+| ------------------------------------ | -------------------------------- | --------------- |
+| {{SpecName('FileSystem')}} | {{Spec2('FileSystem')}} | Draft Proposal. |
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("LockedFile")}}</li>
-</ul>
+- {{domxref("LockedFile")}}

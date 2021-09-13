@@ -2,34 +2,36 @@
 title: WritableStreamDefaultWriter.closed
 slug: Web/API/WritableStreamDefaultWriter/closed
 tags:
-- API
-- Experimental
-- Property
-- Reference
-- Streams
-- WritableStreamDefaultWriter
-- closed
+  - API
+  - Experimental
+  - Property
+  - Reference
+  - Streams
+  - WritableStreamDefaultWriter
+  - closed
 browser-compat: api.WritableStreamDefaultWriter.closed
 ---
-<div>{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}</div>
+{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}
 
-<p>The <strong><code>closed</code></strong> read-only property of the
-  {{domxref("WritableStreamDefaultWriter")}} interface returns a promise that fulfills if
-  the stream becomes closed or the writer's lock is released, or rejects if the stream
-  errors.</p>
+The **`closed`** read-only property of the
+{{domxref("WritableStreamDefaultWriter")}} interface returns a promise that fulfills if
+the stream becomes closed or the writer's lock is released, or rejects if the stream
+errors.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var><code>var <em>closed</em> = </code>writableStreamDefaultWriter</var>.closed;</pre>
+```js
+var closed = writableStreamDefaultWriter.closed;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{jsxref("Promise")}}.</p>
+A {{jsxref("Promise")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">const writableStream = new WritableStream({
+```js
+const writableStream = new WritableStream({
   start(controller) {
   },
   write(chunk, controller) {
@@ -50,14 +52,15 @@ const writer = writableStream.getWriter();
 ..
 
 // check if the stream is closed
-writer.closed.then(() =&gt; {
+writer.closed.then(() => {
   console.log('writer closed');
-})</pre>
+})
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

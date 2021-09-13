@@ -12,108 +12,77 @@ tags:
   - cmp
 browser-compat: api.IDBFactory.cmp
 ---
-<p>{{ APIRef("IndexedDB") }}</p>
+{{ APIRef("IndexedDB") }}
 
-<div>
-  <p>The <strong><code>cmp()</code></strong> method of the {{domxref("IDBFactory")}}
-    interface compares two values as keys to determine equality and ordering for IndexedDB
-    operations, such as storing and iterating.</p>
+The **`cmp()`** method of the {{domxref("IDBFactory")}}
+interface compares two values as keys to determine equality and ordering for IndexedDB
+operations, such as storing and iterating.
 
-  <p>{{AvailableInWorkers}}</p>
-</div>
+{{AvailableInWorkers}}
 
-<div class="note">
-  <p><strong>Note:</strong> Do not use this method for comparing arbitrary JavaScript
-    values, because many JavaScript values are either not valid IndexedDB keys (booleans
-    and objects, for example) or are treated as equivalent IndexedDB keys (for example,
-    since IndexedDB ignores arrays with non-numeric properties and treats them as empty
-    arrays, so any non-numeric arrays are treated as equivalent). This throws an exception
-    if either of the values is not a valid key.</p>
-</div>
+> **Note:** Do not use this method for comparing arbitrary JavaScript
+> values, because many JavaScript values are either not valid IndexedDB keys (booleans
+> and objects, for example) or are treated as equivalent IndexedDB keys (for example,
+> since IndexedDB ignores arrays with non-numeric properties and treats them as empty
+> arrays, so any non-numeric arrays are treated as equivalent). This throws an exception
+> if either of the values is not a valid key.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>result</em> = <em>indexedDB</em>.cmp(first, second);</pre>
+```js
+var result = indexedDB.cmp(first, second);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>first</dt>
-  <dd>The first key to compare.</dd>
-  <dt>second</dt>
-  <dd>The second key to compare.</dd>
-</dl>
+- first
+  - : The first key to compare.
+- second
+  - : The second key to compare.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An integer that indicates the result of the comparison; the table below lists the
-  possible values and their meanings:</p>
+An integer that indicates the result of the comparison; the table below lists the
+possible values and their meanings:
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Returned value</th>
-      <th scope="col">Description</th>
-    </tr>
-    <tr>
-      <td>-1</td>
-      <td>1st key is less than the 2nd key</td>
-    </tr>
-    <tr>
-      <td>0</td>
-      <td>1st key is equal to the 2nd key</td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>1st key is greater than the 2nd key</td>
-    </tr>
-  </tbody>
-</table>
+| Returned value | Description                         |
+| -------------- | ----------------------------------- |
+| -1             | 1st key is less than the 2nd key    |
+| 0              | 1st key is equal to the 2nd key     |
+| 1              | 1st key is greater than the 2nd key |
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>This method may raise a {{domxref("DOMException")}} of the following types:</p>
+This method may raise a {{domxref("DOMException")}} of the following types:
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Attribute</th>
-      <th scope="col">Description</th>
-    </tr>
-    <tr>
-      <td><a href="/en-US/docs/Web/API/DOMError"><code>DataError</code></a></td>
-      <td>One of the supplied keys was not a valid key.</td>
-    </tr>
-  </thead>
-</table>
+| Attribute                                   | Description                                   |
+| ------------------------------------------- | --------------------------------------------- |
+| [`DataError`](/en-US/docs/Web/API/DOMError) | One of the supplied keys was not a valid key. |
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js;">var a = 1;
+```js
+var a = 1;
 var b = 2;
 var result = window.indexedDB.cmp(a, b);
-console.log( "Comparison results: " + result );</pre>
+console.log( "Comparison results: " + result );
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
-  <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
-  <li>Using transactions: {{domxref("IDBTransaction")}}</li>
-  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
-  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
-  <li>Using cursors: {{domxref("IDBCursor")}}</li>
-  <li>Reference example: <a class="external"
-      href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
-      Notifications</a> (<a class="external"
-      href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do
+  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

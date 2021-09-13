@@ -13,19 +13,20 @@ tags:
   - Reference
 browser-compat: api.FileSystemDirectoryEntry
 ---
-<div>{{APIRef("File and Directory Entries API")}}</div>
+{{APIRef("File and Directory Entries API")}}
 
-<p>The <strong><code>FileSystemDirectoryEntry</code></strong> interface of the <a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</a> represents a directory in a file system. It provides methods which make it possible to access and manipulate the files in a directory, as well as to access the entries within the directory.</p>
+The **`FileSystemDirectoryEntry`** interface of the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) represents a directory in a file system. It provides methods which make it possible to access and manipulate the files in a directory, as well as to access the entries within the directory.
 
-<h2 id="basic_concepts">Basic concepts</h2>
+## Basic concepts
 
-<p>You can create a new directory by calling {{domxref("FileSystemDirectoryEntry.getDirectory", "getDirectory()")}}. If you want to create subdirectories, create each child directory in sequence. If you try creating a directory using a full path that includes parent directories that do not exist yet, an error is returned. So create the hierarchy by recursively adding a new path after creating the parent directory.</p>
+You can create a new directory by calling {{domxref("FileSystemDirectoryEntry.getDirectory", "getDirectory()")}}. If you want to create subdirectories, create each child directory in sequence. If you try creating a directory using a full path that includes parent directories that do not exist yet, an error is returned. So create the hierarchy by recursively adding a new path after creating the parent directory.
 
-<h3 id="example">Example</h3>
+### Example
 
-<p>In the following code snippet, we create a directory called "Documents."</p>
+In the following code snippet, we create a directory called "Documents."
 
-<pre class="brush: js">// Taking care of the browser-specific prefixes.
+```js
+// Taking care of the browser-specific prefixes.
 window.requestFileSystem = window.requestFileSystem || window.webkitRequestFileSystem;
 window.directoryEntry = window.directoryEntry || window.webkitDirectoryEntry;
 
@@ -43,39 +44,36 @@ function onFs(fs){
   }
 
 // Opening a file system with temporary storage
-window.requestFileSystem(TEMPORARY, 1024*1024 /*1MB*/, onFs, onError);</pre>
+window.requestFileSystem(TEMPORARY, 1024*1024 /*1MB*/, onFs, onError);
+```
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface has no properties of its own, but inherits properties from its parent interface, {{domxref("FileSystemEntry")}}.</em></p>
+_This interface has no properties of its own, but inherits properties from its parent interface, {{domxref("FileSystemEntry")}}._
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface inherits methods from its parent interface, {{domxref("FileSystemEntry")}}.</em></p>
+_This interface inherits methods from its parent interface, {{domxref("FileSystemEntry")}}._
 
-<dl>
- <dt>{{domxref("FileSystemDirectoryEntry.createReader", "createReader()")}}</dt>
- <dd>Creates a {{domxref("FileSystemDirectoryReader")}} object which can be used to read the entries in this directory.</dd>
- <dt>{{domxref("FileSystemDirectoryEntry.getDirectory", "getDirectory()")}}</dt>
- <dd>Returns a {{domxref("FileSystemDirectoryEntry")}} object representing a directory located at a given path, relative to the directory on which the method is called.</dd>
- <dt>{{domxref("FileSystemDirectoryEntry.getFile", "getFile()")}}</dt>
- <dd>Returns a {{domxref("FileSystemFileEntry")}} object representing a file located within the directory's hierarchy, given a path relative to the directory on which the method is called.</dd>
-</dl>
+- {{domxref("FileSystemDirectoryEntry.createReader", "createReader()")}}
+  - : Creates a {{domxref("FileSystemDirectoryReader")}} object which can be used to read the entries in this directory.
+- {{domxref("FileSystemDirectoryEntry.getDirectory", "getDirectory()")}}
+  - : Returns a {{domxref("FileSystemDirectoryEntry")}} object representing a directory located at a given path, relative to the directory on which the method is called.
+- {{domxref("FileSystemDirectoryEntry.getFile", "getFile()")}}
+  - : Returns a {{domxref("FileSystemFileEntry")}} object representing a file located within the directory's hierarchy, given a path relative to the directory on which the method is called.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</a></li>
- <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">Introduction to the File System API</a></li>
- <li>{{domxref("FileSystemDirectoryReader")}}</li>
- <li>{{domxref("FileSystemEntry")}}</li>
- <li>{{domxref("FileSystemFileEntry")}}</li>
-</ul>
+- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- {{domxref("FileSystemDirectoryReader")}}
+- {{domxref("FileSystemEntry")}}
+- {{domxref("FileSystemFileEntry")}}

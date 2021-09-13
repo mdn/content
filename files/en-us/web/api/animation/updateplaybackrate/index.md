@@ -2,90 +2,85 @@
 title: Animation.updatePlaybackRate()
 slug: Web/API/Animation/updatePlaybackRate
 tags:
-- API
-- Animation
-- Experimental
-- Interface
-- Method
-- Reference
-- Web Animations
-- playbackRate
-- updatePlaybackRate
-- waapi
-- web animations api
+  - API
+  - Animation
+  - Experimental
+  - Interface
+  - Method
+  - Reference
+  - Web Animations
+  - playbackRate
+  - updatePlaybackRate
+  - waapi
+  - web animations api
 browser-compat: api.Animation.updatePlaybackRate
 ---
-<p>{{APIRef("Web Animations")}}{{SeeCompatTable}}</p>
+{{APIRef("Web Animations")}}{{SeeCompatTable}}
 
-<div>
-  <p>The
-      <strong><code>updatePlaybackRate()</code> </strong>method of the <a
-        href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a>'s
-      {{domxref("Animation")}} Interface sets the speed of an animation after first
-      synchronizing its playback position.</p>
+The
+**`updatePlaybackRate()` **method of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)'s
+{{domxref("Animation")}} Interface sets the speed of an animation after first
+synchronizing its playback position.
 
-  <p>In some cases, an animation may run on a separate thread or process and will continue
-    updating even while long-running JavaScript delays the main thread. In such a case,
-    setting the {{domxref("Animation.playbackRate", "playbackRate")}} on the animation
-    directly may cause the animation's playback position to jump since its playback
-    position on the main thread may have drifted from the playback position where it is
-    currently running.</p>
+In some cases, an animation may run on a separate thread or process and will continue
+updating even while long-running JavaScript delays the main thread. In such a case,
+setting the {{domxref("Animation.playbackRate", "playbackRate")}} on the animation
+directly may cause the animation's playback position to jump since its playback
+position on the main thread may have drifted from the playback position where it is
+currently running.
 
-  <p><code>updatePlaybackRate()</code> is an asynchronous method that sets the speed of an
-    animation after synchronizing with its current playback position, ensuring that the
-    resulting change in speed does not produce a sharp jump. After calling
-    <code>updatePlaybackRate()</code> the animation's {{domxref("Animation.playbackRate",
-    "playbackRate")}} is <em>not</em> immediately updated. It will be updated once the
-    animation's {{domxref("Animation.ready", "ready")}} promise is resolved.</p>
-</div>
+`updatePlaybackRate()` is an asynchronous method that sets the speed of an
+animation after synchronizing with its current playback position, ensuring that the
+resulting change in speed does not produce a sharp jump. After calling
+`updatePlaybackRate()` the animation's {{domxref("Animation.playbackRate",
+    "playbackRate")}} is _not_ immediately updated. It will be updated once the
+animation's {{domxref("Animation.ready", "ready")}} promise is resolved.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>Animation</em>.updatePlaybackRate(2); </pre>
+```js
+Animation.updatePlaybackRate(2);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>playbackRate</dt>
-  <dd>The new speed to set. This may be a positive number (to speed up or slow down
-      the animation), a negative number (to make it play backwards), or zero (to
-      effectively pause the animation).</span></dd>
-</dl>
+- playbackRate
+  - : The new speed to set. This may be a positive number (to speed up or slow down
+    the animation), a negative number (to make it play backwards), or zero (to
+    effectively pause the animation).
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>A speed selector component would benefit from smooth updating of
-  <code>updatePlaybackRate()</code>, as demonstrated below:</p>
+A speed selector component would benefit from smooth updating of
+`updatePlaybackRate()`, as demonstrated below:
 
-<pre class="brush: js">speedSelector.addEventListener('input', evt =&gt; {
+```js
+speedSelector.addEventListener('input', evt => {
   cartoon.updatePlaybackRate(parseFloat(evt.target.value));
-  cartoon.ready.then(() =&gt; {
+  cartoon.ready.then(() => {
     console.log(`Playback rate set to ${cartoon.playbackRate}`);
   });
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
-  <li>{{domxref("Animation.playbackRate")}} — read back the current playback rate or set
-    it in a synchronous manner.</li>
-  <li>{{domxref("Animation.reverse()")}} — invert the playback rate and restart playback
-    if necessary.</li>
-  <li>{{domxref("Animation")}} — contains other methods and properties you can use to
-    control web page animation.</li>
-</ul>
+- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
+- {{domxref("Animation.playbackRate")}} — read back the current playback rate or set
+  it in a synchronous manner.
+- {{domxref("Animation.reverse()")}} — invert the playback rate and restart playback
+  if necessary.
+- {{domxref("Animation")}} — contains other methods and properties you can use to
+  control web page animation.

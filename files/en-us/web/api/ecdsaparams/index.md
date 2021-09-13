@@ -8,58 +8,53 @@ tags:
   - Reference
   - Web Crypto API
 ---
-<div>{{ APIRef("Web Crypto API") }}</div>
+{{ APIRef("Web Crypto API") }}
 
-<p>The <code><strong>EcdsaParams</strong></code> dictionary of the <a href="/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API </a>represents the object that should be passed as the <code>algorithm</code> parameter into {{domxref("SubtleCrypto.sign()")}} or {{domxref("SubtleCrypto.verify()")}} when using the <a href="/en-US/docs/Web/API/SubtleCrypto/sign#ecdsa">ECDSA</a> algorithm.</p>
+The **`EcdsaParams`** dictionary of the [Web Crypto API ](/en-US/docs/Web/API/Web_Crypto_API)represents the object that should be passed as the `algorithm` parameter into {{domxref("SubtleCrypto.sign()")}} or {{domxref("SubtleCrypto.verify()")}} when using the [ECDSA](/en-US/docs/Web/API/SubtleCrypto/sign#ecdsa) algorithm.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt><code>name</code></dt>
- <dd>A {{domxref("DOMString")}}. This should be set to <code>ECDSA</code>.</dd>
- <dt><code>hash</code></dt>
- <dd>A {{domxref("DOMString")}}. An identifier for the <a href="/en-US/docs/Web/API/SubtleCrypto/digest">digest algorithm</a> to use. This should be one of the following:
- <ul>
-  <li><code>SHA-256</code>: selects the <a href="/en-US/docs/Web/API/SubtleCrypto/digest#sha-256">SHA-256</a> algorithm.</li>
-  <li><code>SHA-384</code>: selects the <a href="/en-US/docs/Web/API/SubtleCrypto/digest#sha-384">SHA-384</a> algorithm.</li>
-  <li><code>SHA-512</code>: selects the <a href="/en-US/docs/Web/API/SubtleCrypto/digest#sha-512">SHA-512</a> algorithm.</li>
- </ul>
+- `name`
+  - : A {{domxref("DOMString")}}. This should be set to `ECDSA`.
+- `hash`
 
- <div class="notecard warning">
- <p><strong>Warning:</strong> <code>SHA-1</code> is also supported here but the <a href="/en-US/docs/Web/API/SubtleCrypto/digest#sha-1">SHA-1</a> algorithm is considered vulnerable and should no longer be used.</p>
- </div>
- </dd>
-</dl>
+  - : A {{domxref("DOMString")}}. An identifier for the [digest algorithm](/en-US/docs/Web/API/SubtleCrypto/digest) to use. This should be one of the following:
 
-<h2 id="Examples">Examples</h2>
+    - `SHA-256`: selects the [SHA-256](/en-US/docs/Web/API/SubtleCrypto/digest#sha-256) algorithm.
+    - `SHA-384`: selects the [SHA-384](/en-US/docs/Web/API/SubtleCrypto/digest#sha-384) algorithm.
+    - `SHA-512`: selects the [SHA-512](/en-US/docs/Web/API/SubtleCrypto/digest#sha-512) algorithm.
 
-<p>See the examples for {{domxref("SubtleCrypto.sign()")}} or {{domxref("SubtleCrypto.verify()")}}.</p>
+    > **Warning:** `SHA-1` is also supported here but the [SHA-1](/en-US/docs/Web/API/SubtleCrypto/digest#sha-1) algorithm is considered vulnerable and should no longer be used.
 
-<h2 id="Specifications">Specifications</h2>
+## Examples
+
+See the examples for {{domxref("SubtleCrypto.sign()")}} or {{domxref("SubtleCrypto.verify()")}}.
+
+## Specifications
 
 <table class="no-markdown">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{ SpecName('Web Crypto API', '#dfn-EcdsaParams', 'SubtleCrypto.EcdsaParams') }}</td>
-   <td>{{ Spec2('Web Crypto API') }}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>
+        {{ SpecName('Web Crypto API', '#dfn-EcdsaParams', 'SubtleCrypto.EcdsaParams') }}
+      </td>
+      <td>{{ Spec2('Web Crypto API') }}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>Browsers that support the "ECDSA" algorithm for the {{domxref("SubtleCrypto.sign()")}} and {{domxref("SubtleCrypto.verify()")}} methods will support this type.</p>
+Browsers that support the "ECDSA" algorithm for the {{domxref("SubtleCrypto.sign()")}} and {{domxref("SubtleCrypto.verify()")}} methods will support this type.
 
-<p>{{Compat("api.SubtleCrypto.sign")}}</p>
+{{Compat("api.SubtleCrypto.sign")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("SubtleCrypto.sign()")}} and {{domxref("SubtleCrypto.verify()")}}.</li>
-</ul>
+- {{domxref("SubtleCrypto.sign()")}} and {{domxref("SubtleCrypto.verify()")}}.

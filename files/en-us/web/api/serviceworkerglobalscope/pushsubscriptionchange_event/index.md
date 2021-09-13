@@ -13,50 +13,51 @@ tags:
   - Subscription
 browser-compat: api.ServiceWorkerGlobalScope.pushsubscriptionchange_event
 ---
-<div>{{APIRef("Push API")}}</div>
+{{APIRef("Push API")}}
 
-<p>The <strong><code>pushsubscriptionchange</code></strong> event is sent to the <a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope">global scope</a> of a {{domxref("ServiceWorker")}} to indicate a change in push subscription that was triggered outside the application's control.</p>
+The **`pushsubscriptionchange`** event is sent to the [global scope](/en-US/docs/Web/API/ServiceWorkerGlobalScope) of a {{domxref("ServiceWorker")}} to indicate a change in push subscription that was triggered outside the application's control.
 
-<p>This may occur if the subscription was refreshed by the browser, but it may also happen if the subscription has been revoked or lost.</p>
+This may occur if the subscription was refreshed by the browser, but it may also happen if the subscription has been revoked or lost.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("PushSubscriptionChangeEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("ServiceWorkerGlobalScope.onpushsubscriptionchange", "onpushsubscriptionchange")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("PushSubscriptionChangeEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{domxref("ServiceWorkerGlobalScope.onpushsubscriptionchange", "onpushsubscriptionchange")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>Although examples demonstrating how to share subscription related information with the application server tend to use {{domxref("fetch()")}}, this is not necessarily the best choice for real-world use, since it will not work if the app is offline, for example.</p>
+Although examples demonstrating how to share subscription related information with the application server tend to use {{domxref("fetch()")}}, this is not necessarily the best choice for real-world use, since it will not work if the app is offline, for example.
 
-<p>Consider using another method to synchronize subscription information between your service worker and the app server, or make sure your code using <code>fetch()</code> is robust enough to handle cases where attempts to exchange data fail.</p>
+Consider using another method to synchronize subscription information between your service worker and the app server, or make sure your code using `fetch()` is robust enough to handle cases where attempts to exchange data fail.
 
-<div class="notecard note">
-<p><strong>Note:</strong> In earlier drafts of the specification, this event was defined to be sent when a {{domxref("PushSubscription")}} has expired.</p>
-</div>
+> **Note:** In earlier drafts of the specification, this event was defined to be sent when a {{domxref("PushSubscription")}} has expired.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example, run in the context of a service worker, listens for a <code>pushsubscriptionchange</code> event and re-subscribes to the lapsed subscription.</p>
+This example, run in the context of a service worker, listens for a `pushsubscriptionchange` event and re-subscribes to the lapsed subscription.
 
-<pre class="brush: js">self.addEventListener("pushsubscriptionchange", event =&gt; {
+```js
+self.addEventListener("pushsubscriptionchange", event => {
   event.waitUntil(swRegistration.pushManager.subscribe(event.oldSubscription.options)
-    .then(subscription =&gt; {
+    .then(subscription => {
       return fetch("register", {
         method: "post",
         headers: {
@@ -68,30 +69,31 @@ browser-compat: api.ServiceWorkerGlobalScope.pushsubscriptionchange_event
       });
     })
   );
-}, false);</pre>
+}, false);
+```
 
-<p>When a <code>pushsubscriptionchange</code> event arrives, indicating that the subscription has expired, we resubscribe by calling the push manager's {{domxref("PushManager.subscribe", "subscribe()")}} method. When the returned promise is resolved, we receive the new subscription. This is delivered to the app server using a {{domxref("fetch()")}} call to post a {{Glossary("JSON")}} formatted rendition of the subscription's {{domxref("PushSubscription.endpoint", "endpoint")}} to the app server.</p>
+When a `pushsubscriptionchange` event arrives, indicating that the subscription has expired, we resubscribe by calling the push manager's {{domxref("PushManager.subscribe", "subscribe()")}} method. When the returned promise is resolved, we receive the new subscription. This is delivered to the app server using a {{domxref("fetch()")}} call to post a {{Glossary("JSON")}} formatted rendition of the subscription's {{domxref("PushSubscription.endpoint", "endpoint")}} to the app server.
 
-<p>You can also use the {{domxref("ServiceWorkerGlobalScope.onpushsubscriptionchange", "onpushsubscriptionchange")}} event handler property to set up the event handler:</p>
+You can also use the {{domxref("ServiceWorkerGlobalScope.onpushsubscriptionchange", "onpushsubscriptionchange")}} event handler property to set up the event handler:
 
-<pre class="brush: js">self.onpushsubscriptionchange = event =&gt; {
+```js
+self.onpushsubscriptionchange = event => {
   event.waitUntil(swRegistration.pushManager.subscribe(event.oldSubscription.options)
-    .then(subscription =&gt; {
+    .then(subscription => {
       /* ... */
     )
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Push_API">Using the Push API</a></li>
- <li>{{domxref("ServiceWorkerGlobalScope.onpushsubscriptionchange", "onpushsubscriptionchange")}} event handler property</li>
-</ul>
+- [Using the Push API](/en-US/docs/Web/API/Push_API)
+- {{domxref("ServiceWorkerGlobalScope.onpushsubscriptionchange", "onpushsubscriptionchange")}} event handler property

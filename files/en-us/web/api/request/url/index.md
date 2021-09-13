@@ -11,43 +11,42 @@ tags:
   - request
 browser-compat: api.Request.url
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p>The <strong><code>url</code></strong> read-only property of the {{domxref("Request")}}
-  interface contains the URL of the request.</p>
+The **`url`** read-only property of the {{domxref("Request")}}
+interface contains the URL of the request.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>myURL</var> = <var>request</var>.url;</pre>
+```js
+var myURL = request.url;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("USVString")}} indicating the url of the request.</p>
+A {{domxref("USVString")}} indicating the url of the request.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In the following snippet, we create a new request using the
-  {{domxref("Request.Request()")}} constructor (for an image file in the same directory as
-  the script), then save the url of the request in a variable:</p>
+In the following snippet, we create a new request using the
+{{domxref("Request.Request()")}} constructor (for an image file in the same directory as
+the script), then save the url of the request in a variable:
 
-<pre
-  class="brush: js">var myRequest = new Request('flowers.jpg');
-var myURL = myRequest.url; // "https://mdn.github.io/fetch-examples/fetch-request/flowers.jpg"</pre>
+```js
+var myRequest = new Request('flowers.jpg');
+var myURL = myRequest.url; // "https://mdn.github.io/fetch-examples/fetch-request/flowers.jpg"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
-  <li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a>
-  </li>
-  <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP](/en-US/docs/Web/HTTP)

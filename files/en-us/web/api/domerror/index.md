@@ -10,122 +10,47 @@ tags:
   - Reference
 browser-compat: api.DOMError
 ---
-<p>{{ APIRef("DOM") }}{{deprecated_header}}</p>
+{{ APIRef("DOM") }}{{deprecated_header}}
 
-<p>The <strong><code>DOMError</code></strong> interface describes an error object that contains an error name.</p>
+The **`DOMError`** interface describes an error object that contains an error name.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
-	<dt>{{domxref("DOMError.name")}} {{readOnlyInline}}</dt>
-	<dd>Returns a {{ domxref("DOMString") }} representing one of the error type names (see below).</dd>
-	<dt>{{domxref("DOMError.message")}} {{readOnlyInline}}</dt>
-	<dd>Returns a {{ domxref("DOMString") }} representing a message or description associated with the given error type name.</dd>
-</dl>
+- {{domxref("DOMError.name")}} {{readOnlyInline}}
+  - : Returns a {{ domxref("DOMString") }} representing one of the error type names (see below).
+- {{domxref("DOMError.message")}} {{readOnlyInline}}
+  - : Returns a {{ domxref("DOMString") }} representing a message or description associated with the given error type name.
 
-<h2 id="Error_types">Error types</h2>
+## Error types
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Type</th>
-			<th scope="col">Description</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td><code>IndexSizeError</code></td>
-			<td>The index is not in the allowed range (e.g. thrown in a {{ domxref("range") }} object).</td>
-		</tr>
-		<tr>
-			<td><code>HierarchyRequestError</code></td>
-			<td>The node tree hierarchy is not correct.</td>
-		</tr>
-		<tr>
-			<td><code>WrongDocumentError</code></td>
-			<td>The object is in the wrong {{ domxref("document") }}.</td>
-		</tr>
-		<tr>
-			<td><code>InvalidCharacterError</code></td>
-			<td>The string contains invalid characters.</td>
-		</tr>
-		<tr>
-			<td><code>NoModificationAllowedError</code></td>
-			<td>The object can not be modified.</td>
-		</tr>
-		<tr>
-			<td><code>NotFoundError</code></td>
-			<td>The object can not be found here.</td>
-		</tr>
-		<tr>
-			<td><code>NotSupportedError</code></td>
-			<td>The operation is not supported</td>
-		</tr>
-		<tr>
-			<td><code>InvalidStateError</code></td>
-			<td>The object is in an invalid state.</td>
-		</tr>
-		<tr>
-			<td><code>SyntaxError</code></td>
-			<td>The string did not match the expected pattern.</td>
-		</tr>
-		<tr>
-			<td><code>InvalidModificationError</code></td>
-			<td>The object can not be modified in this way.</td>
-		</tr>
-		<tr>
-			<td><code>NamespaceError</code></td>
-			<td>The operation is not allowed by Namespaces in XML</td>
-		</tr>
-		<tr>
-			<td><code>InvalidAccessError</code></td>
-			<td>The object does not support the operation or argument.</td>
-		</tr>
-		<tr>
-			<td><code>TypeMismatchError</code></td>
-			<td>The type of the object does not match the expected type.</td>
-		</tr>
-		<tr>
-			<td><code>SecurityError</code></td>
-			<td>The operation is insecure.</td>
-		</tr>
-		<tr>
-			<td><code>NetworkError</code></td>
-			<td>A network error occurred.</td>
-		</tr>
-		<tr>
-			<td><code>AbortError</code></td>
-			<td>The operation was aborted.</td>
-		</tr>
-		<tr>
-			<td><code>URLMismatchError</code></td>
-			<td>The given URL does not match another URL.</td>
-		</tr>
-		<tr>
-			<td><code>QuotaExceededError</code></td>
-			<td>The quota has been exceeded.</td>
-		</tr>
-		<tr>
-			<td><code>TimeoutError</code></td>
-			<td>The operation timed out.</td>
-		</tr>
-		<tr>
-			<td><code>InvalidNodeTypeError</code></td>
-			<td>The node is incorrect or has an incorrect ancestor for this operation.</td>
-		</tr>
-		<tr>
-			<td><code>DataCloneError</code></td>
-			<td>The object can not be cloned.</td>
-		</tr>
-	</tbody>
-</table>
+| Type                         | Description                                                                                   |
+| ---------------------------- | --------------------------------------------------------------------------------------------- |
+| `IndexSizeError`             | The index is not in the allowed range (e.g. thrown in a {{ domxref("range") }} object). |
+| `HierarchyRequestError`      | The node tree hierarchy is not correct.                                                       |
+| `WrongDocumentError`         | The object is in the wrong {{ domxref("document") }}.                                  |
+| `InvalidCharacterError`      | The string contains invalid characters.                                                       |
+| `NoModificationAllowedError` | The object can not be modified.                                                               |
+| `NotFoundError`              | The object can not be found here.                                                             |
+| `NotSupportedError`          | The operation is not supported                                                                |
+| `InvalidStateError`          | The object is in an invalid state.                                                            |
+| `SyntaxError`                | The string did not match the expected pattern.                                                |
+| `InvalidModificationError`   | The object can not be modified in this way.                                                   |
+| `NamespaceError`             | The operation is not allowed by Namespaces in XML                                             |
+| `InvalidAccessError`         | The object does not support the operation or argument.                                        |
+| `TypeMismatchError`          | The type of the object does not match the expected type.                                      |
+| `SecurityError`              | The operation is insecure.                                                                    |
+| `NetworkError`               | A network error occurred.                                                                     |
+| `AbortError`                 | The operation was aborted.                                                                    |
+| `URLMismatchError`           | The given URL does not match another URL.                                                     |
+| `QuotaExceededError`         | The quota has been exceeded.                                                                  |
+| `TimeoutError`               | The operation timed out.                                                                      |
+| `InvalidNodeTypeError`       | The node is incorrect or has an incorrect ancestor for this operation.                        |
+| `DataCloneError`             | The object can not be cloned.                                                                 |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{ domxref("DOMException") }}</li>
-</ul>
+- {{ domxref("DOMException") }}

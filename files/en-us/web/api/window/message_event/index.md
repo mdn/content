@@ -5,66 +5,76 @@ tags:
   - Event
 browser-compat: api.Window.message_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code>message</code> event is fired on a {{domxref('Window')}} object when the window receives a message, for example from a call to <code><a href="/en-US/docs/Web/API/Window/postMessage">Window.postMessage()</a></code> from another browsing context.</p>
+The `message` event is fired on a {{domxref('Window')}} object when the window receives a message, for example from a call to [`Window.postMessage()`](/en-US/docs/Web/API/Window/postMessage) from another browsing context.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("MessageEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td><code><a href="/en-US/docs/Web/API/WindowEventHandlers/onmessage">onmessage</a></code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("MessageEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/API/WindowEventHandlers/onmessage"
+            >onmessage</a
+          ></code
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Suppose a script sends a message to a different browsing context, such as another <code><a href="/en-US/docs/Web/HTML/Element/iframe">&lt;iframe&gt;</a></code>, using code like this:</p>
+Suppose a script sends a message to a different browsing context, such as another [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe), using code like this:
 
-<pre class="brush: js">const targetFrame = window.top.frames[1];
+```js
+const targetFrame = window.top.frames[1];
 const targetOrigin = 'https://example.org';
 const windowMessageButton = document.querySelector('#window-message');
 
-windowMessageButton.addEventListener('click', () =&gt; {
+windowMessageButton.addEventListener('click', () => {
     targetFrame.postMessage('hello there', targetOrigin);
-});</pre>
+});
+```
 
-<p>The receiver can listen for the message using <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> with code like this:</p>
+The receiver can listen for the message using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) with code like this:
 
-<pre class="brush: js">window.addEventListener('message', (event) =&gt; {
+```js
+window.addEventListener('message', (event) => {
     console.log(`Received message: ${event.data}`);
-});</pre>
+});
+```
 
-<p>Alternatively the listener could use the <code><a href="/en-US/docs/Web/API/WindowEventHandlers/onmessage">onmessage</a></code> event handler property:</p>
+Alternatively the listener could use the [`onmessage`](/en-US/docs/Web/API/WindowEventHandlers/onmessage) event handler property:
 
-<pre class="brush: js">window.onmessage = (event) =&gt; {
+```js
+window.onmessage = (event) => {
     console.log(`Received message: ${event.data}`);
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Related events: <code><a href="/en-US/docs/Web/API/Window/messageerror_event">messageerror</a></code>.</li>
- <li><code><a href="/en-US/docs/Web/API/Window/postMessage">Window.postMessage()</a></code>.</li>
-</ul>
+- Related events: [`messageerror`](/en-US/docs/Web/API/Window/messageerror_event).
+- [`Window.postMessage()`](/en-US/docs/Web/API/Window/postMessage).

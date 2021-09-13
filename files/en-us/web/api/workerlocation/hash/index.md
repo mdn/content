@@ -9,29 +9,31 @@ tags:
   - WorkerLocation
 browser-compat: api.WorkerLocation.hash
 ---
-<p>{{ApiRef("WorkerLocation")}}</p>
+{{ApiRef("WorkerLocation")}}
 
-<p>The <strong><code>hash</code></strong> property of a {{domxref("WorkerLocation")}} object returns the {{domxref("URL.hash", "hash")}} part of the worker’s location.</p>
+The **`hash`** property of a {{domxref("WorkerLocation")}} object returns the {{domxref("URL.hash", "hash")}} part of the worker’s location.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>string</em> = <em>location</em>.hash;</pre>
+```js
+string = location.hash;
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">// In a Web worker, on the page https://developer.mozilla.org/en-US/docs/Web/API/WorkerLocation/hash#examples
-var result = location.hash; // Returns '#examples'</pre>
+```js
+// In a Web worker, on the page https://developer.mozilla.org/en-US/docs/Web/API/WorkerLocation/hash#examples
+var result = location.hash; // Returns '#examples'
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>The {{domxref("WorkerLocation")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("WorkerLocation")}} interface it belongs to.

@@ -2,42 +2,45 @@
 title: FederatedCredential.protocol
 slug: Web/API/FederatedCredential/protocol
 tags:
-- API
-- Credential Management API
-- Experimental
-- FederatedCredential
-- NeedsExample
-- Property
-- Reference
-- credential management
+  - API
+  - Credential Management API
+  - Experimental
+  - FederatedCredential
+  - NeedsExample
+  - Property
+  - Reference
+  - credential management
 browser-compat: api.FederatedCredential.protocol
 ---
-<div>{{SeeCompatTable}}{{APIRef("Credential Management API")}}{{securecontext_header}}</div>
+{{SeeCompatTable}}{{APIRef("Credential Management API")}}{{securecontext_header}}
 
-<p>The <strong><code>protocol</code></strong> property of the
-  {{domxref("FederatedCredential")}} interface returns a read-only
-  {{domxref("DOMString")}} containing a credential's federated identity protocol. If this
-  property is {{jsxref("null")}}, the protocol may be inferred from the
-  {{domxref("FederatedCredential.provider")}} property.</p>
+The **`protocol`** property of the
+{{domxref("FederatedCredential")}} interface returns a read-only
+{{domxref("DOMString")}} containing a credential's federated identity protocol. If this
+property is {{jsxref("null")}}, the protocol may be inferred from the
+{{domxref("FederatedCredential.provider")}} property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var protocol = FederatedCredential.protocol</pre>
+```js
+var protocol = FederatedCredential.protocol
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} containing a credential's federated identity protocol (e.g.
-  <code>openidconnect</code>).</p>
+A {{domxref("DOMString")}} containing a credential's federated identity protocol (e.g.
+`openidconnect`).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">// TBD</pre>
+```js
+// TBD
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

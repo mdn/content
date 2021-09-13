@@ -8,37 +8,31 @@ tags:
   - Reference
 browser-compat: api.HTMLParagraphElement
 ---
-<div>
-<div>{{ APIRef("HTML DOM") }}</div>
-</div>
+{{ APIRef("HTML DOM") }}
 
-<p>The <strong><code>HTMLParagraphElement</code></strong> interface provides special properties (beyond those of the regular {{domxref("HTMLElement")}} object interface it inherits) for manipulating {{HTMLElement("p")}} elements.</p>
+The **`HTMLParagraphElement`** interface provides special properties (beyond those of the regular {{domxref("HTMLElement")}} object interface it inherits) for manipulating {{HTMLElement("p")}} elements.
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{domxref("HTMLElement")}}.</em></p>
+_Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLParagraphElement.align")}} {{deprecated_inline}}</dt>
- <dd>A {{domxref("DOMString")}} representing an enumerated property indicating alignment of the element's contents with respect to the surrounding context. The possible values are <code>"left"</code>, <code>"right"</code>, <code>"justify"</code>, and <code>"center"</code>.</dd>
-</dl>
+- {{domxref("HTMLParagraphElement.align")}} {{deprecated_inline}}
+  - : A {{domxref("DOMString")}} representing an enumerated property indicating alignment of the element's contents with respect to the surrounding context. The possible values are `"left"`, `"right"`, `"justify"`, and `"center"`.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>No specific methods, inherits methods from its parent, {{domxref("HTMLElement")}}.</em></p>
+_No specific methods, inherits methods from its parent, {{domxref("HTMLElement")}}._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The HTML element implementing this interface: {{ HTMLElement("p") }}.</li>
-</ul>
+- The HTML element implementing this interface: {{ HTMLElement("p") }}.

@@ -8,39 +8,35 @@ tags:
   - Reference
 browser-compat: api.DOMImplementation
 ---
-<p>{{ ApiRef("DOM") }}</p>
+{{ ApiRef("DOM") }}
 
-<p>The <code><strong>DOMImplementation</strong></code> interface represents an object providing methods which are not dependent on any particular document. Such an object is returned by the {{domxref("Document.implementation")}} property.</p>
+The **`DOMImplementation`** interface represents an object providing methods which are not dependent on any particular document. Such an object is returned by the {{domxref("Document.implementation")}} property.
 
-<h2 id="Property">Property</h2>
+## Property
 
-<p><em>This interface has no specific property and doesn't inherit any.</em></p>
+_This interface has no specific property and doesn't inherit any._
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>No inherited method.</em></p>
+_No inherited method._
 
-<dl>
- <dt>{{domxref("DOMImplementation.createDocument()")}}</dt>
- <dd>Creates and returns an {{domxref("XMLDocument")}}.</dd>
- <dt>{{domxref("DOMImplementation.createDocumentType()")}}</dt>
- <dd>Creates and returns a {{domxref("DocumentType")}}.</dd>
- <dt>{{domxref("DOMImplementation.createHTMLDocument()")}}</dt>
- <dd>Creates and returns an HTML {{domxref("Document")}}.</dd>
- <dt>{{domxref("DOMImplementation.hasFeature()")}}</dt>
- <dd>Returns a boolean value indicating if a given feature is supported or not. This function is unreliable and kept for compatibility purpose alone: except for SVG-related queries, it always returns <code>true</code>. Old browsers are very inconsistent in their behavior.</dd>
-</dl>
+- {{domxref("DOMImplementation.createDocument()")}}
+  - : Creates and returns an {{domxref("XMLDocument")}}.
+- {{domxref("DOMImplementation.createDocumentType()")}}
+  - : Creates and returns a {{domxref("DocumentType")}}.
+- {{domxref("DOMImplementation.createHTMLDocument()")}}
+  - : Creates and returns an HTML {{domxref("Document")}}.
+- {{domxref("DOMImplementation.hasFeature()")}}
+  - : Returns a boolean value indicating if a given feature is supported or not. This function is unreliable and kept for compatibility purpose alone: except for SVG-related queries, it always returns `true`. Old browsers are very inconsistent in their behavior.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index.</a></li>
-</ul>
+- [The DOM interfaces index.](/en-US/docs/Web/API/Document_Object_Model)

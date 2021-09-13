@@ -14,52 +14,50 @@ tags:
   - close
 browser-compat: api.RTCDataChannel.close
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The <code><strong>RTCDataChannel.close()</strong></code> method closes the
-  {{domxref("RTCDataChannel")}}. Either peer is permitted to call this method to initiate
-  closure of the channel.</p>
+The **`RTCDataChannel.close()`** method closes the
+{{domxref("RTCDataChannel")}}. Either peer is permitted to call this method to initiate
+closure of the channel.
 
-<p>Closure of the data channel is not instantaneous. Most of the process of closing the
-  connection is handled asynchronously; you can detect when the channel has finished
-  closing by watching for a {{DOMxRef("RTCDataChannel.close_event", "close")}} event on the data channel.</p>
+Closure of the data channel is not instantaneous. Most of the process of closing the
+connection is handled asynchronously; you can detect when the channel has finished
+closing by watching for a {{DOMxRef("RTCDataChannel.close_event", "close")}} event on the data channel.
 
-<p>The sequence of events which occurs in response to this method being called:</p>
+The sequence of events which occurs in response to this method being called:
 
-<ol>
-  <li>{{domxref("RTCDataChannel.readyState")}} is set to <code>closing</code>.</li>
-  <li>A background task is established to handle the remainder of the steps below, and
-    <code>close()</code> returns to the caller.</li>
-  <li>The transport layer deals with any buffered messages; the protocol layer decides
-    whether to send them or discard them.</li>
-  <li>The underlying data transport is closed.</li>
-  <li>The {{domxref("RTCDataChannel.readyState")}} property is set to
-    <code>closed</code>.</li>
-  <li>
-    If the transport was closed with an error,
-    the <code>RTCDataChannel</code> is sent
+1.  {{domxref("RTCDataChannel.readyState")}} is set to `closing`.
+2.  A background task is established to handle the remainder of the steps below, and
+    `close()` returns to the caller.
+3.  The transport layer deals with any buffered messages; the protocol layer decides
+    whether to send them or discard them.
+4.  The underlying data transport is closed.
+5.  The {{domxref("RTCDataChannel.readyState")}} property is set to
+    `closed`.
+6.  If the transport was closed with an error,
+    the `RTCDataChannel` is sent
     an {{DOMxRef("RTCDataChannel.error_event", "error")}} event
-    with its {{DOMxRef("DOMException.name", "name")}} set to <code>NetworkError</code>.
-  </li>
-  <li>A {{domxref("RTCDataChannel.close_event", "close")}} event is sent to the channel.</li>
-</ol>
+    with its {{DOMxRef("DOMException.name", "name")}} set to `NetworkError`.
+7.  A {{domxref("RTCDataChannel.close_event", "close")}} event is sent to the channel.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>RTCDataChannel</em>.close();
-</pre>
+```js
+RTCDataChannel.close();
+```
 
-<h2 id="Parameters">Parameters</h2>
+## Parameters
 
-<p>None.</p>
+None.
 
-<h2 id="Return_value">Return value</h2>
+## Return value
 
-<p><code>undefined</code>.</p>
+`undefined`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var pc = new RTCPeerConnection();
+```js
+var pc = new RTCPeerConnection();
 var dc = pc.createDataChannel("my channel");
 
 dc.onmessage = function (event) {
@@ -76,21 +74,19 @@ dc.onclose = function (
 };
 
 // Now negotiate the connection and so forth...
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
-  <li>{{domxref("RTCDataChannel")}}</li>
-  <li>{{domxref("RTCDataChannel.readyState")}}</li>
-  <li>{{DOMxRef("RTCDataChannel.close_event", "close")}} event</li>
-</ul>
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)
+- {{domxref("RTCDataChannel")}}
+- {{domxref("RTCDataChannel.readyState")}}
+- {{DOMxRef("RTCDataChannel.close_event", "close")}} event

@@ -11,50 +11,51 @@ tags:
   - Property
 browser-compat: api.RTCPeerConnection.onicecandidateerror
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The <code><strong>RTCPeerConnection.onicecandidateerror</strong></code> property is an
-	<a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> which specifies a function which is called to handle the
-	{{DOMxRef("RTCPeerConnection/icecandidateerror_event", "icecandidateerror")}} event when it occurs on an
-	{{domxref("RTCPeerConnection")}} instance. This event is fired when an error occurs
-	during the {{Glossary("ICE")}} candidate gathering process.</p>
+The **`RTCPeerConnection.onicecandidateerror`** property is an
+[event handler](/en-US/docs/Web/Events/Event_handlers) which specifies a function which is called to handle the
+{{DOMxRef("RTCPeerConnection/icecandidateerror_event", "icecandidateerror")}} event when it occurs on an
+{{domxref("RTCPeerConnection")}} instance. This event is fired when an error occurs
+during the {{Glossary("ICE")}} candidate gathering process.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>RTCPeerConnection</em>.onicecandidateerror = <em>eventHandler</em>;
-</pre>
+```js
+RTCPeerConnection.onicecandidateerror = eventHandler;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>This should be set to a function you provide which is passed a single parameter: an
-	{{domxref("RTCPeerConnectionIceErrorEvent")}} object describing the
-	{{DOMxRef("RTCPeerConnection/icecandidateerror_event", "icecandidateerror")}} event. The event offers properties describing the error
-	to help you handle it appropriately.</p>
+This should be set to a function you provide which is passed a single parameter: an
+{{domxref("RTCPeerConnectionIceErrorEvent")}} object describing the
+{{DOMxRef("RTCPeerConnection/icecandidateerror_event", "icecandidateerror")}} event. The event offers properties describing the error
+to help you handle it appropriately.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">pc.onicecandidateerror = function(event) {
-  if (event.errorCode &gt;= 300 &amp;&amp; event.errorCode &lt;= 699) {
+```js
+pc.onicecandidateerror = function(event) {
+  if (event.errorCode >= 300 && event.errorCode <= 699) {
     // STUN errors are in the range 300-699. See {{RFC(5389, "", 15.6)}}
     // for a list of codes. TURN adds a few more error codes; see
     // {{RFC(5766, "", 15)}} for details.
-  } else if (event.errorCode &gt;= 700 &amp;&amp; event.errorCode &lt;= 799) {
+  } else if (event.errorCode >= 700 && event.errorCode <= 799) {
     // Server could not be reached; a specific error number is
     // provided but these are not yet specified.
   }
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>The {{DOMxRef("RTCPeerConnection/icecandidateerror_event", "icecandidateerror")}} event and its type,
-		{{domxref("RTCPeerConnectionIceErrorEvent")}}.</li>
-</ul>
+- The {{DOMxRef("RTCPeerConnection/icecandidateerror_event", "icecandidateerror")}} event and its type,
+  {{domxref("RTCPeerConnectionIceErrorEvent")}}.

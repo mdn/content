@@ -2,43 +2,43 @@
 title: GlobalEventHandlers.onpointermove
 slug: Web/API/GlobalEventHandlers/onpointermove
 tags:
-- API
-- Event Handler
-- GlobalEventHandlers
-- HTML DOM
-- PointerEvent
-- Property
-- Reference
+  - API
+  - Event Handler
+  - GlobalEventHandlers
+  - HTML DOM
+  - PointerEvent
+  - Property
+  - Reference
 browser-compat: api.GlobalEventHandlers.onpointermove
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p>The <strong><code>onpointermove</code></strong> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> that
-  processes {{event("pointermove")}} events.</p>
+The **`onpointermove`** property of the
+{{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
+processes {{event("pointermove")}} events.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>targetElement</var>.onpointermove = <var>moveHandler</var>;
+```js
+targetElement.onpointermove = moveHandler;
 
-var <var>moveHandler</var> = <var>targetElement</var>.onpointermove;
-</pre>
+var moveHandler = targetElement.onpointermove;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<dl>
-  <dt><code><var>moveHandler</var></code></dt>
-  <dd>The <code>pointermove</code> event handler for element
-    <code><var>targetElement</var></code>.</dd>
-</dl>
+- `moveHandler`
+  - : The `pointermove` event handler for element
+    `targetElement`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example shows two ways to use <code>onpointermove</code> to set an element's
-  <code>pointermove</code> event handler.</p>
+This example shows two ways to use `onpointermove` to set an element's
+`pointermove` event handler.
 
-<pre class="brush: js">&lt;html&gt;
-&lt;script&gt;
+```js
+<html>
+<script>
 function moveHandler(ev) {
   // Process the pointermove event
 }
@@ -46,30 +46,26 @@ function init() {
   let el=document.getElementById('target1');
   el.onpointermove = moveHandler;
 }
-&lt;/script&gt;
+</script>
 
-&lt;body onload="init();"&gt;
-  &lt;div id="target1"&gt; Touch me ... &lt;/div&gt;
-  &lt;div id="target2" onpointermove="moveHandler(event)"&gt; Touch me ... &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+<body onload="init();">
+  <div id="target1"> Touch me ... </div>
+  <div id="target2" onpointermove="moveHandler(event)"> Touch me ... </div>
+</body>
+</html>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>
-    <code><a href="/en-US/docs/Web/API/Document/pointermove_event">Document: pointermove</a></code>
-    event</li>
-  <li>
-    <code><a href="/en-US/docs/Web/API/HTMLElement/pointermove_event">HTMLElement: pointermove</a></code>
-    event</li>
-</ul>
+- [`Document: pointermove`](/en-US/docs/Web/API/Document/pointermove_event)
+  event
+- [`HTMLElement: pointermove`](/en-US/docs/Web/API/HTMLElement/pointermove_event)
+  event

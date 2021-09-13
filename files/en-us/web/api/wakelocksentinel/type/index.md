@@ -2,55 +2,55 @@
 title: WakeLockSentinel.type
 slug: Web/API/WakeLockSentinel/type
 tags:
-- Property
-- Read-only
-- Screen Wake Lock API
-- Wake Lock
-- WakeLockSentinel
-- screen
+  - Property
+  - Read-only
+  - Screen Wake Lock API
+  - Wake Lock
+  - WakeLockSentinel
+  - screen
 browser-compat: api.WakeLockSentinel.type
 ---
-<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Screen Wake Lock API")}}</div>
+{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Screen Wake Lock API")}}
 
-<p>The read-only <strong><code>type</code></strong> property of the
-	{{domxref("WakeLockSentinel")}} interface returns a {{jsxref("String")}}
-	representation of the currently acquired {{domxref("WakeLockSentinel")}} type.</p>
+The read-only **`type`** property of the
+{{domxref("WakeLockSentinel")}} interface returns a {{jsxref("String")}}
+representation of the currently acquired {{domxref("WakeLockSentinel")}} type.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>type</var> = <em>sentinel</em>.type;</pre>
+```js
+var type = sentinel.type;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{jsxref("String")}} representation of the currently acquired wake lock type.</p>
+A {{jsxref("String")}} representation of the currently acquired wake lock type.
 
-<dl>
-	<dt><em>type</em> {{ReadOnlyInline}}</dt>
-	<dd>Return values are:
-		<ul>
-			<li><code>'screen'</code>: A screen wake lock. Prevents devices from dimming
-				or locking the screen.</li>
-		</ul>
-	</dd>
-</dl>
+- _type_ {{ReadOnlyInline}}
 
-<h2 id="Examples">Examples</h2>
+  - : Return values are:
 
-<p>This example shows an asynchronous function that acquires a
-	{{domxref("WakeLockSentinel")}}, then logs the type to the console.</p>
+    - `'screen'`: A screen wake lock. Prevents devices from dimming
+      or locking the screen.
 
-<pre class="brush: js">const requestWakeLock = async () =&gt; {
+## Examples
+
+This example shows an asynchronous function that acquires a
+{{domxref("WakeLockSentinel")}}, then logs the type to the console.
+
+```js
+const requestWakeLock = async () => {
   wakeLock = await navigator.wakeLock.request('screen');
   console.log(wakeLock.type); // logs 'screen'
 };
 
 requestWakeLock();
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

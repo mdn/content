@@ -2,42 +2,40 @@
 title: SyncEvent()
 slug: Web/API/SyncEvent/SyncEvent
 tags:
-- API
-- Background Sync
-- Constructor
-- Experimental
-- Reference
-- ServiceWorker
-- SyncEvent
+  - API
+  - Background Sync
+  - Constructor
+  - Experimental
+  - Reference
+  - ServiceWorker
+  - SyncEvent
 browser-compat: api.SyncEvent.SyncEvent
 ---
-<p>{{APIRef("Service Workers API")}}{{Non-standard_header}}</p>
+{{APIRef("Service Workers API")}}{{Non-standard_header}}
 
-<p>The <strong><code>SyncEvent()</code></strong> constructor creates a new
-  {{domxref("SyncEvent")}} object.</p>
+The **`SyncEvent()`** constructor creates a new
+{{domxref("SyncEvent")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var mySyncEvent = new SyncEvent(type, init)</pre>
+```js
+var mySyncEvent = new SyncEvent(type, init)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><em>type</em></dt>
-  <dd>The type of the Event.</dd>
-  <dt><em>init</em> {{optional_inline}}</dt>
-  <dd>An options object containing any custom settings that you want to apply to the event
+- _type_
+  - : The type of the Event.
+- _init_ {{optional_inline}}
+
+  - : An options object containing any custom settings that you want to apply to the event
     object. Options are as follows:
-    <ul>
-      <li><code>tag</code>: A developer-defined unique identifier for
-        this <code>SyncEvent</code>.</li>
-      <li><code>lastChance</code>: A boolean value indicating that the user agent
-        will not make further synchronization attempts after the current attempt.</li>
-    </ul>
-  </dd>
-</dl>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+    - `tag`: A developer-defined unique identifier for
+      this `SyncEvent`.
+    - `lastChance`: A boolean value indicating that the user agent
+      will not make further synchronization attempts after the current attempt.
 
-<p>{{Compat}}</p>
+## Browser compatibility
+
+{{Compat}}

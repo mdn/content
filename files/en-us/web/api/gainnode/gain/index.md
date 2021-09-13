@@ -10,41 +10,36 @@ tags:
   - Web Audio API
 browser-compat: api.GainNode.gain
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>The <code>gain</code> property of the {{ domxref("GainNode") }} interface is an <a href="/en-US/docs/Web/API/AudioParam#a-rate">a-rate</a> {{domxref("AudioParam")}} representing the amount of gain to apply.</p>
-</div>
+The `gain` property of the {{ domxref("GainNode") }} interface is an [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} representing the amount of gain to apply.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var audioCtx = new AudioContext();
+```js
+var audioCtx = new AudioContext();
 var gainNode = audioCtx.createGain();
 gainNode.gain.value = 0.5;
-</pre>
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("AudioParam")}}.</p>
+An {{domxref("AudioParam")}}.
 
-<div class="notecard note">
-<p><strong>Note:</strong> Though the <code>AudioParam</code> returned is read-only, the value it represents is not.</p>
-</div>
+> **Note:** Though the `AudioParam` returned is read-only, the value it represents is not.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See <a href="/en-US/docs/Web/API/BaseAudioContext/createGain#example"><code>BaseAudioContext.createGain()</code></a> for example code showing how to use an <code>AudioContext</code> to create a <code>GainNode</code>, which is then used to mute and unmute the audio by changing the gain property value.</p>
+See [`BaseAudioContext.createGain()`](/en-US/docs/Web/API/BaseAudioContext/createGain#example) for example code showing how to use an `AudioContext` to create a `GainNode`, which is then used to mute and unmute the audio by changing the gain property value.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

@@ -13,107 +13,111 @@ tags:
   - id
 browser-compat: api.Document.getElementById
 ---
-<div>{{ ApiRef("DOM") }}</div>
+{{ ApiRef("DOM") }}
 
-<p>The {{domxref("Document")}} method <code><strong>getElementById()</strong></code> returns an {{domxref("Element")}} object representing the element whose {{domxref("Element.id", "id")}} property matches the specified string. Since element IDs are required to be unique if specified, they're a useful way to get access to a specific element quickly.</p>
+The {{domxref("Document")}} method **`getElementById()`** returns an {{domxref("Element")}} object representing the element whose {{domxref("Element.id", "id")}} property matches the specified string. Since element IDs are required to be unique if specified, they're a useful way to get access to a specific element quickly.
 
-<p>If you need to get access to an element which doesn't have an ID, you can use {{domxref("Document.querySelector", "querySelector()")}} to find the element using any {{Glossary("CSS selector", "selector")}}.</p>
+If you need to get access to an element which doesn't have an ID, you can use {{domxref("Document.querySelector", "querySelector()")}} to find the element using any {{Glossary("CSS selector", "selector")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>element</var> = <var>document</var>.getElementById(<var>id</var>);
-</pre>
+```js
+var element = document.getElementById(id);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code><var>id</var></code></dt>
- <dd>The ID of the element to locate. The ID is case-sensitive string which is unique within the document; only one element may have any given ID.</dd>
-</dl>
+- `id`
+  - : The ID of the element to locate. The ID is case-sensitive string which is unique within the document; only one element may have any given ID.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An {{domxref("Element")}} object describing the DOM element object matching the specified ID, or <code>null</code> if no matching element was found in the document.</p>
+An {{domxref("Element")}} object describing the DOM element object matching the specified ID, or `null` if no matching element was found in the document.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;getElementById example&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;p id="para"&gt;Some text here&lt;/p&gt;
-  &lt;button onclick="changeColor('blue');"&gt;blue&lt;/button&gt;
-  &lt;button onclick="changeColor('red');"&gt;red&lt;/button&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+```html
+<html>
+<head>
+  <title>getElementById example</title>
+</head>
+<body>
+  <p id="para">Some text here</p>
+  <button onclick="changeColor('blue');">blue</button>
+  <button onclick="changeColor('red');">red</button>
+</body>
+</html>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">function changeColor(newColor) {
+```js
+function changeColor(newColor) {
   var elem = document.getElementById('para');
   elem.style.color = newColor;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{ EmbedLiveSample('Example', 250, 100) }}</p>
+{{ EmbedLiveSample('Example', 250, 100) }}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>The capitalization of <code>"Id"</code> in the name of this method <em>must</em> be correct for the code to function; <code>getElementByID()</code> is <em>not</em> valid and will not work, however natural it may seem.</p>
+The capitalization of `"Id"` in the name of this method _must_ be correct for the code to function; `getElementByID()` is _not_ valid and will not work, however natural it may seem.
 
-<p>Unlike some other element-lookup methods such as {{domxref("Document.querySelector()")}} and {{domxref("Document.querySelectorAll()")}}, <code>getElementById()</code> is only available as a method of the global <code>document</code> object, and <em>not</em> available as a method on all element objects in the DOM. Because ID values must be unique throughout the entire document, there is no need for "local" versions of the function.</p>
+Unlike some other element-lookup methods such as {{domxref("Document.querySelector()")}} and {{domxref("Document.querySelectorAll()")}}, `getElementById()` is only available as a method of the global `document` object, and _not_ available as a method on all element objects in the DOM. Because ID values must be unique throughout the entire document, there is no need for "local" versions of the function.
 
-<h2 id="Example_2">Example</h2>
+## Example
 
-<pre class="brush: html">&lt;!doctype html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;Document&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;div id="parent-id"&gt;
-        &lt;p&gt;hello word1&lt;/p&gt;
-        &lt;p id="test1"&gt;hello word2&lt;/p&gt;
-        &lt;p&gt;hello word3&lt;/p&gt;
-        &lt;p&gt;hello word4&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;script&gt;
+```html
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="parent-id">
+        <p>hello word1</p>
+        <p id="test1">hello word2</p>
+        <p>hello word3</p>
+        <p>hello word4</p>
+    </div>
+    <script>
         var parentDOM = document.getElementById('parent-id');
         var test1 = parentDOM.getElementById('test1');
         //throw error
         //Uncaught TypeError: parentDOM.getElementById is not a function
-    &lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+    </script>
+</body>
+</html>
+```
 
-<p>If there is no element with the given <code>id</code>, this function returns <code>null</code>. Note that the <code>id</code> parameter is case-sensitive, so <code>document.getElementById("<strong>M</strong>ain")</code> will return <code>null</code> instead of the element <code>&lt;div id="<strong>m</strong>ain"&gt;</code> because "M" and "m" are different for the purposes of this method.</p>
+If there is no element with the given `id`, this function returns `null`. Note that the `id` parameter is case-sensitive, so `document.getElementById("Main")` will return `null` instead of the element `<div id="main">` because "M" and "m" are different for the purposes of this method.
 
-<p><strong>Elements not in the document</strong> are not searched by <code>getElementById()</code>. When creating an element and assigning it an ID, you have to insert the element into the document tree with {{domxref("Node.insertBefore()")}} or a similar method before you can access it with <code>getElementById()</code>:</p>
+**Elements not in the document** are not searched by `getElementById()`. When creating an element and assigning it an ID, you have to insert the element into the document tree with {{domxref("Node.insertBefore()")}} or a similar method before you can access it with `getElementById()`:
 
-<pre class="brush: js">var element = document.createElement('div');
+```js
+var element = document.createElement('div');
 element.id = 'testqq';
 var el = document.getElementById('testqq'); // el will be null!
-</pre>
+```
 
-<p><strong>Non-HTML documents</strong>. The DOM implementation must have information that says which attributes are of type ID. Attributes with the name "id" are not of type ID unless so defined in the document's DTD. The <code>id</code> attribute is defined to be of ID type in the common cases of <a href="/en-US/docs/Glossary/XHTML">XHTML</a>, XUL, and other. Implementations that do not know whether attributes are of type ID or not are expected to return <code>null</code>.</p>
+**Non-HTML documents**. The DOM implementation must have information that says which attributes are of type ID. Attributes with the name "id" are not of type ID unless so defined in the document's DTD. The `id` attribute is defined to be of ID type in the common cases of [XHTML](/en-US/docs/Glossary/XHTML), XUL, and other. Implementations that do not know whether attributes are of type ID or not are expected to return `null`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("Document")}} reference for other methods and properties you can use to get references to elements in the document.</li>
- <li>{{domxref("Document.querySelector()")}} for selectors via queries like <code>'div.myclass'</code></li>
- <li><a href="https://www.w3.org/TR/xml-id/">xml:id</a> - has a utility method for allowing <code>getElementById()</code> to obtain 'xml:id' in XML documents (such as returned by Ajax calls)</li>
-</ul>
+- {{domxref("Document")}} reference for other methods and properties you can use to get references to elements in the document.
+- {{domxref("Document.querySelector()")}} for selectors via queries like `'div.myclass'`
+- [xml:id](https://www.w3.org/TR/xml-id/) - has a utility method for allowing `getElementById()` to obtain 'xml:id' in XML documents (such as returned by Ajax calls)

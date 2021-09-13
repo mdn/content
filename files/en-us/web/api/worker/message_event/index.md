@@ -5,66 +5,74 @@ tags:
   - Event
 browser-compat: api.Worker.message_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code>message</code> event is fired on a {{domxref('Worker')}} object when the worker's parent receives a message from its worker (i.e. when the worker sends a message using <code><a href="/en-US/docs/Web/API/DedicatedWorkerGlobalScope/postMessage">DedicatedWorkerGlobalScope.postMessage()</a></code>).</p>
+The `message` event is fired on a {{domxref('Worker')}} object when the worker's parent receives a message from its worker (i.e. when the worker sends a message using [`DedicatedWorkerGlobalScope.postMessage()`](/en-US/docs/Web/API/DedicatedWorkerGlobalScope/postMessage)).
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("MessageEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td><code><a href="/en-US/docs/Web/API/Worker/onmessage">onmessage</a></code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("MessageEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/API/Worker/onmessage">onmessage</a></code
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This code creates a new worker and listens to messages from it using <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code>:</p>
+This code creates a new worker and listens to messages from it using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener):
 
-<pre class="brush: js">const worker = new Worker("static/scripts/worker.js");
+```js
+const worker = new Worker("static/scripts/worker.js");
 
-worker.addEventListener('message', (event) =&gt; {
+worker.addEventListener('message', (event) => {
     console.log(`Received message from worker: ${event.data}`)
-});</pre>
+});
+```
 
-<p>Alternatively, it could listen using the <code><a href="/en-US/docs/Web/API/Worker/onmessage">onmessage</a></code> event handler property:</p>
+Alternatively, it could listen using the [`onmessage`](/en-US/docs/Web/API/Worker/onmessage) event handler property:
 
-<pre class="brush: js">const worker = new Worker("static/scripts/worker.js");
+```js
+const worker = new Worker("static/scripts/worker.js");
 
-worker.onmessage = (event) =&gt; {
+worker.onmessage = (event) => {
     console.log(`Received message from worker: ${event.data}`)
-};</pre>
+};
+```
 
-<p>The worker posts messages using <code><a href="/en-US/docs/Web/API/DedicatedWorkerGlobalScope/postMessage">self.postMessage()</a></code>:</p>
+The worker posts messages using [`self.postMessage()`](/en-US/docs/Web/API/DedicatedWorkerGlobalScope/postMessage):
 
-<pre class="brush: js">// static/scripts/worker.js
+```js
+// static/scripts/worker.js
 
-self.postMessage('I\'m alive!');</pre>
+self.postMessage('I\'m alive!');
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Related events: <code><a href="/docs/Web/API/Worker/messageerror_event">messageerror</a></code>.</li>
- <li><code><a href="/en-US/docs/Web/API/DedicatedWorkerGlobalScope/postMessage">DedicatedWorkerGlobalScope.postMessage()</a></code>.</li>
-</ul>
+- Related events: [`messageerror`](/docs/Web/API/Worker/messageerror_event).
+- [`DedicatedWorkerGlobalScope.postMessage()`](/en-US/docs/Web/API/DedicatedWorkerGlobalScope/postMessage).

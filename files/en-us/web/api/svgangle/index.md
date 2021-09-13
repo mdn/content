@@ -8,86 +8,76 @@ tags:
   - SVG DOM
 browser-compat: api.SVGAngle
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <code>SVGAngle</code> interface is used to represent a value that can be an {{cssxref("&lt;angle&gt;")}} or {{cssxref("&lt;number&gt;")}} value. An <code>SVGAngle</code> reflected through the {{SVGAttr("animVal")}} attribute is always read only.</p>
+The `SVGAngle` interface is used to represent a value that can be an {{cssxref("&lt;angle&gt;")}} or {{cssxref("&lt;number&gt;")}} value. An `SVGAngle` reflected through the {{SVGAttr("animVal")}} attribute is always read only.
 
-<p>An <code>SVGAngle</code> object can be designated as read only, which means that attempts to modify the object will result in an exception being thrown.</p>
+An `SVGAngle` object can be designated as read only, which means that attempts to modify the object will result in an exception being thrown.
 
-<p>An <code>SVGAngle</code> object can be associated with a particular element. The associated element is used to determine which element's content attribute to update if the object reflects an attribute. Unless otherwise described, an <code>SVGAngle</code> object is not associated with any element.</p>
+An `SVGAngle` object can be associated with a particular element. The associated element is used to determine which element's content attribute to update if the object reflects an attribute. Unless otherwise described, an `SVGAngle` object is not associated with any element.
 
-<p>Every <code>SVGAngle</code> object operates in one of two modes:</p>
+Every `SVGAngle` object operates in one of two modes:
 
-<ol>
- <li><strong><em>Reflect the base value</em></strong> of a reflected animatable attribute (being exposed through the {{SVGAttr("baseVal")}} member of an {{domxref("SVGAnimatedAngle")}}),</li>
- <li><strong><em>Be detached</em>,</strong> which is the case for <code>SVGAngle</code> objects created with {{domxref("SVGSVGElement.createSVGAngle()")}}.</li>
-</ol>
+1.  **_Reflect the base value_** of a reflected animatable attribute (being exposed through the {{SVGAttr("baseVal")}} member of an {{domxref("SVGAnimatedAngle")}}),
+2.  **_Be detached_,** which is the case for `SVGAngle` objects created with {{domxref("SVGSVGElement.createSVGAngle()")}}.
 
-<h2 id="Constants">Constants</h2>
+## Constants
 
-<dl>
- <dt><code>SVG_ANGLETYPE_UNKNOWN</code></dt>
- <dd>Some unknown type of value.</dd>
- <dt><code>SVG_ANGLETYPE_UNSPECIFIED</code></dt>
- <dd>A unitless {{cssxref("&lt;number&gt;")}} interpreted as a value in degrees.</dd>
- <dt><code>SVG_ANGLETYPE_DEG</code></dt>
- <dd>An {{cssxref("&lt;angle&gt;")}} with a <code>deg</code> unit.</dd>
- <dt><code>SVG_ANGLETYPE_RAD</code></dt>
- <dd>An {{cssxref("&lt;angle&gt;")}} with a <code>rad</code> unit.</dd>
- <dt><code>SVG_ANGLETYPE_GRAD</code></dt>
- <dd>An {{cssxref("&lt;angle&gt;")}} with a <code>grad</code> unit.</dd>
-</dl>
+- `SVG_ANGLETYPE_UNKNOWN`
+  - : Some unknown type of value.
+- `SVG_ANGLETYPE_UNSPECIFIED`
+  - : A unitless {{cssxref("&lt;number&gt;")}} interpreted as a value in degrees.
+- `SVG_ANGLETYPE_DEG`
+  - : An {{cssxref("&lt;angle&gt;")}} with a `deg` unit.
+- `SVG_ANGLETYPE_RAD`
+  - : An {{cssxref("&lt;angle&gt;")}} with a `rad` unit.
+- `SVG_ANGLETYPE_GRAD`
+  - : An {{cssxref("&lt;angle&gt;")}} with a `grad` unit.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt><code>unitType</code></dt>
- <dd>The type of the value as specified by one of the <code>SVG_ANGLETYPE_*</code> constants defined on this interface.</dd>
- <dt><code>value</code></dt>
- <dd>
- <p>The value as a floating point value, in user units. Setting this attribute will cause <code>valueInSpecifiedUnits</code> and <code>valueAsString</code> to be updated automatically to reflect this setting.</p>
+- `unitType`
+  - : The type of the value as specified by one of the `SVG_ANGLETYPE_*` constants defined on this interface.
+- `value`
 
- <p><strong>Exceptions on setting:</strong> A {{domxref("DOMException")}} with code <code>NO_MODIFICATION_ALLOWED_ERR</code> is raised when the length corresponds to a read-only attribute, or when the object itself is read-only.</p>
- </dd>
- <dt><code>valueInSpecifiedUnits</code></dt>
- <dd>
- <p>The value as a floating point value, in the units expressed by <code>unitType</code>. Setting this attribute will cause <code>value</code> and <code>valueAsString</code> to be updated automatically to reflect this setting.</p>
+  - : The value as a floating point value, in user units. Setting this attribute will cause `valueInSpecifiedUnits` and `valueAsString` to be updated automatically to reflect this setting.
 
- <p><strong>Exceptions on setting:</strong> A {{domxref("DOMException")}} with code <code>NO_MODIFICATION_ALLOWED_ERR</code> is raised when the length corresponds to a read-only attribute, or when the object itself is read-only.</p>
- </dd>
- <dt><code>valueAsString</code></dt>
- <dd>
- <p>The value as a {{domxref("DOMString")}} value, in the units expressed by <code>unitType</code>. Setting this attribute will cause <code>value</code>, <code>valueInSpecifiedUnits</code>, and <code>unitType</code> to be updated automatically to reflect this setting.</p>
+    **Exceptions on setting:** A {{domxref("DOMException")}} with code `NO_MODIFICATION_ALLOWED_ERR` is raised when the length corresponds to a read-only attribute, or when the object itself is read-only.
 
- <p><strong>Exceptions on setting: </strong></p>
+- `valueInSpecifiedUnits`
 
- <p>A {{domxref("DOMException")}} with code <code>SYNTAX_ERR</code> is raised if the assigned string cannot be parsed as a valid {{cssxref("&lt;angle&gt;")}}.</p>
+  - : The value as a floating point value, in the units expressed by `unitType`. Setting this attribute will cause `value` and `valueAsString` to be updated automatically to reflect this setting.
 
- <p>A {{domxref("DOMException")}} with code <code>NO_MODIFICATION_ALLOWED_ERR</code> is raised when the length corresponds to a read-only attribute, or when the object itself is read-only.</p>
- </dd>
-</dl>
+    **Exceptions on setting:** A {{domxref("DOMException")}} with code `NO_MODIFICATION_ALLOWED_ERR` is raised when the length corresponds to a read-only attribute, or when the object itself is read-only.
 
-<h2 id="Methods">Methods</h2>
+- `valueAsString`
 
-<dl>
- <dt><code>newValueSpecifiedUnits</code></dt>
- <dd>
-   <p>Reset the value as a number with an associated unitType, thereby replacing the values for all of the attributes on the object.</p>
+  - : The value as a {{domxref("DOMString")}} value, in the units expressed by `unitType`. Setting this attribute will cause `value`, `valueInSpecifiedUnits`, and `unitType` to be updated automatically to reflect this setting.
 
-   <p><strong>Exceptions:</strong></p>
-   <ul>
-     <li>A {{domxref("DOMException")}} with code <code>NOT_SUPPORTED_ERR</code> is raised if <code>unitType</code> is <code>SVG_ANGLETYPE_UNKNOWN</code> or not a valid unit type constant (one of the other <code>SVG_ANGLETYPE_*</code> constants defined on this interface).</li>
-     <li>A {{domxref("DOMException")}} with code <code>NO_MODIFICATION_ALLOWED_ERR</code> is raised when the length corresponds to a read only attribute or when the object itself is read only.</li>
-   </ul>
- </dd>
- <dt><code>convertToSpecifiedUnits</code></dt>
- <dd>Preserve the same underlying stored value, but reset the stored unit identifier to the given <code><em>unitType</em></code>. Object attributes <code>unitType</code>, <code>valueInSpecifiedUnits</code>, and <code>valueAsString</code> might be modified as a result of this method.</dd>
-</dl>
+    **Exceptions on setting:**
 
-<h2 id="Specifications">Specifications</h2>
+    A {{domxref("DOMException")}} with code `SYNTAX_ERR` is raised if the assigned string cannot be parsed as a valid {{cssxref("&lt;angle&gt;")}}.
+
+    A {{domxref("DOMException")}} with code `NO_MODIFICATION_ALLOWED_ERR` is raised when the length corresponds to a read-only attribute, or when the object itself is read-only.
+
+## Methods
+
+- `newValueSpecifiedUnits`
+
+  - : Reset the value as a number with an associated unitType, thereby replacing the values for all of the attributes on the object.
+
+    **Exceptions:**
+
+    - A {{domxref("DOMException")}} with code `NOT_SUPPORTED_ERR` is raised if `unitType` is `SVG_ANGLETYPE_UNKNOWN` or not a valid unit type constant (one of the other `SVG_ANGLETYPE_*` constants defined on this interface).
+    - A {{domxref("DOMException")}} with code `NO_MODIFICATION_ALLOWED_ERR` is raised when the length corresponds to a read only attribute or when the object itself is read only.
+
+- `convertToSpecifiedUnits`
+  - : Preserve the same underlying stored value, but reset the stored unit identifier to the given `unitType`. Object attributes `unitType`, `valueInSpecifiedUnits`, and `valueAsString` might be modified as a result of this method.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

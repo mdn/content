@@ -2,73 +2,74 @@
 title: MouseEvent.altKey
 slug: Web/API/MouseEvent/altKey
 tags:
-- API
-- DOM
-- DOM Events
-- MouseEvent
-- Property
-- Read-only
-- Reference
+  - API
+  - DOM
+  - DOM Events
+  - MouseEvent
+  - Property
+  - Read-only
+  - Reference
 browser-compat: api.MouseEvent.altKey
 ---
-<div>{{APIRef("DOM Events")}}</div>
+{{APIRef("DOM Events")}}
 
-<p>The <strong><code>MouseEvent.altKey</code></strong> read-only property is a
-  boolean value that indicates whether the <kbd>alt</kbd> key was pressed or not
-  when a given mouse event occurs.</p>
+The **`MouseEvent.altKey`** read-only property is a
+boolean value that indicates whether the <kbd>alt</kbd> key was pressed or not
+when a given mouse event occurs.
 
-<p>Be aware that the browser can't always detect the <kbd>alt</kbd> key on some operating
-  systems. On some Linux variants, for example, a left mouse click combined with
-  the <kbd>alt</kbd> key is used to move or resize windows.</p>
+Be aware that the browser can't always detect the <kbd>alt</kbd> key on some operating
+systems. On some Linux variants, for example, a left mouse click combined with
+the <kbd>alt</kbd> key is used to move or resize windows.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> On Macintosh keyboards, this key is also known as
-    the <kbd>option</kbd> key.</p>
-</div>
+> **Note:** On Macintosh keyboards, this key is also known as
+> the <kbd>option</kbd> key.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>altKeyPressed</em> = <em>instanceOfMouseEvent</em>.altKey
-</pre>
+```js
+var altKeyPressed = instanceOfMouseEvent.altKey
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A boolean value, where <code>true</code> indicates that the key is pressed, and
-  <code>false</code> indicates that the key is <em>not</em> pressed.</p>
+A boolean value, where `true` indicates that the key is pressed, and
+`false` indicates that the key is _not_ pressed.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example logs the <code>altKey</code> property when you trigger a
-  {{Event("click")}} event.</p>
+This example logs the `altKey` property when you trigger a
+{{Event("click")}} event.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Click anywhere to test the &lt;code&gt;altKey&lt;/code&gt; property.&lt;/p&gt;
-&lt;p id="log"&gt;&lt;/p&gt;</pre>
+```html
+<p>Click anywhere to test the <code>altKey</code> property.</p>
+<p id="log"></p>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">let log = document.querySelector('#log');
+```js
+let log = document.querySelector('#log');
 document.addEventListener('click', logKey);
 
 function logKey(e) {
   log.textContent = `The alt key is pressed: ${e.altKey}`;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{ domxref("MouseEvent") }}</li>
-</ul>
+- {{ domxref("MouseEvent") }}

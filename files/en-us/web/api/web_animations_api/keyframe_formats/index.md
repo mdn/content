@@ -12,152 +12,143 @@ tags:
   - waapi
   - web animations api
 ---
-<p>{{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}</p>
+{{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}
 
-<p>{{domxref("Element.animate()")}}, {{domxref("KeyframeEffect.KeyframeEffect()")}}, and {{domxref("KeyframeEffect.setKeyframes()")}} all accept objects formatted to represent a set of keyframes. There are several options to this format, which are explained below.</p>
+{{domxref("Element.animate()")}}, {{domxref("KeyframeEffect.KeyframeEffect()")}}, and {{domxref("KeyframeEffect.setKeyframes()")}} all accept objects formatted to represent a set of keyframes. There are several options to this format, which are explained below.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>There are two different ways to format keyframes:</p>
+There are two different ways to format keyframes:
 
-<ol>
- <li>
-  <p>An <code>array</code> of objects (keyframes) consisting of properties and values to iterate over. This is the canonical format returned by the {{domxref("KeyframeEffect.getKeyframes()", "getKeyframes()")}} method.</p>
+1.  An `array` of objects (keyframes) consisting of properties and values to iterate over. This is the canonical format returned by the {{domxref("KeyframeEffect.getKeyframes()", "getKeyframes()")}} method.
 
-  <pre class="brush: js"><em>element</em>.animate(<strong>[
-  { // from
-    opacity: 0,
-    color: "#fff"
-  },
-  { // to
-    opacity: 1,
-    color: "#000"
-  }
-]</strong>, 2000);</pre>
+    ```js
+    element.animate([
+      { // from
+        opacity: 0,
+        color: "#fff"
+      },
+      { // to
+        opacity: 1,
+        color: "#000"
+      }
+    ], 2000);
+    ```
 
-  <p>Offsets for each keyframe can be specified by providing an <code>offset</code> value.</p>
+    Offsets for each keyframe can be specified by providing an `offset` value.
 
-  <pre class="brush: js"><em>element</em>.animate(<strong>[ { opacity: 1 },
-                  { opacity: 0.1, offset: 0.7 },
-                  { opacity: 0 } ]</strong>,
-                2000);
-</pre>
+    ```js
+    element.animate([ { opacity: 1 },
+                      { opacity: 0.1, offset: 0.7 },
+                      { opacity: 0 } ],
+                    2000);
+    ```
 
-  <div class="note">
-  <p><strong>Note:</strong> <code>offset</code> values, if provided, must be between 0.0 and 1.0 (inclusive) and arranged in ascending order.</p>
-  </div>
+    > **Note:** `offset` values, if provided, must be between 0.0 and 1.0 (inclusive) and arranged in ascending order.
 
-  <p>It is not necessary to specify an offset for every keyframe. Keyframes without a specified offset will be evenly spaced between adjacent keyframes.</p>
+    It is not necessary to specify an offset for every keyframe. Keyframes without a specified offset will be evenly spaced between adjacent keyframes.
 
-  <p>The easing to apply between keyframes can be specified by providing an <code>easing</code> value as illustrated below.</p>
+    The easing to apply between keyframes can be specified by providing an `easing` value as illustrated below.
 
-  <pre class="brush: js"><em>element</em>.animate(<strong>[ { opacity: 1, easing: 'ease-out' },
-                  { opacity: 0.1, easing: 'ease-in' },
-                  { opacity: 0 } ]</strong>,
-                2000);
-</pre>
+    ```js
+    element.animate([ { opacity: 1, easing: 'ease-out' },
+                      { opacity: 0.1, easing: 'ease-in' },
+                      { opacity: 0 } ],
+                    2000);
+    ```
 
-  <p>In this example, the specified easing only applies from the keyframe where it is specified until the next keyframe. Any <code>easing</code> value specified on the <code>options</code> argument, however, applies across a single iteration of the animation — for the entire duration.</p>
- </li>
- <li>
-  <p>An <code>object</code> containing key-value pairs consisting of the property to animate and an <code>array</code> of values to iterate over.</p>
+    In this example, the specified easing only applies from the keyframe where it is specified until the next keyframe. Any `easing` value specified on the `options` argument, however, applies across a single iteration of the animation — for the entire duration.
 
-  <pre class="brush: js"><em>element.</em>animate(<strong>{
-  opacity: [ 0, 1 ],          // [ from, to ]
-  color:   [ "#fff", "#000" ] // [ from, to ]
-}</strong>, 2000);
-</pre>
+2.  An `object` containing key-value pairs consisting of the property to animate and an `array` of values to iterate over.
 
-  <p>Using this format, the number of elements in each array does not need to be equal. The provided values will be spaced out independently.</p>
+    ```js
+    element.animate({
+      opacity: [ 0, 1 ],          // [ from, to ]
+      color:   [ "#fff", "#000" ] // [ from, to ]
+    }, 2000);
+    ```
 
-  <pre class="brush: js"><em>element.</em>animate(<strong>{
-  opacity: [ 0, 1 ], // offset: 0, 1
-  backgroundColor: [ "red", "yellow", "green" ], // offset: 0, 0.5, 1
-}</strong>, 2000);
-</pre>
+    Using this format, the number of elements in each array does not need to be equal. The provided values will be spaced out independently.
 
-  <p>The special keys <code>offset</code>, <code>easing</code>, and <code>composite</code> (described below) may be specified alongside the property values.</p>
+    ```js
+    element.animate({
+      opacity: [ 0, 1 ], // offset: 0, 1
+      backgroundColor: [ "red", "yellow", "green" ], // offset: 0, 0.5, 1
+    }, 2000);
+    ```
 
-  <pre class="brush: js"><em>element.</em>animate(<strong>{
-  opacity: [ 0, 0.9, 1 ],
-  offset: [ 0, 0.8 ], // Shorthand for [ 0, 0.8, 1 ]
-  easing: [ 'ease-in', 'ease-out' ],
-}</strong>, 2000);
-</pre>
+    The special keys `offset`, `easing`, and `composite` (described below) may be specified alongside the property values.
 
-  <p>After generating a suitable set of keyframes from the property value lists, each supplied offset is applied to the corresponding keyframe. If there are insufficient values, or if the list contains <code>null</code> values, the keyframes without specified offsets will be evenly spaced as with the array format described above.</p>
+    ```js
+    element.animate({
+      opacity: [ 0, 0.9, 1 ],
+      offset: [ 0, 0.8 ], // Shorthand for [ 0, 0.8, 1 ]
+      easing: [ 'ease-in', 'ease-out' ],
+    }, 2000);
+    ```
 
-  <p>If there are too few <code>easing</code> or <code>composite</code> values, the corresponding list will be repeated as needed.</p>
- </li>
-</ol>
+    After generating a suitable set of keyframes from the property value lists, each supplied offset is applied to the corresponding keyframe. If there are insufficient values, or if the list contains `null` values, the keyframes without specified offsets will be evenly spaced as with the array format described above.
 
-<h3 id="Implicit_tofrom_keyframes">Implicit to/from keyframes</h3>
+    If there are too few `easing` or `composite` values, the corresponding list will be repeated as needed.
 
-<p>In newer browser versions, you are able to set a beginning or end state for an animation only (i.e. a single keyframe), and the browser will infer the other end of the animation if it is able to. For example, consider <a href="https://mdn.github.io/dom-examples/web-animations-api/implicit-keyframes.html">this simple animation</a> — the Keyframe object looks like so:</p>
+### Implicit to/from keyframes
 
-<pre class="brush: js">let rotate360 = [
+In newer browser versions, you are able to set a beginning or end state for an animation only (i.e. a single keyframe), and the browser will infer the other end of the animation if it is able to. For example, consider [this simple animation](https://mdn.github.io/dom-examples/web-animations-api/implicit-keyframes.html) — the Keyframe object looks like so:
+
+```js
+let rotate360 = [
   { transform: 'rotate(360deg)' }
-];</pre>
+];
+```
 
-<p>We have only specified the end state of the animation, and the beginning state is implied.</p>
+We have only specified the end state of the animation, and the beginning state is implied.
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<p>Keyframes may specify property-value pairs for any of the {{cssxref("CSS_animated_properties", "animatable CSS properties")}}. The property names are specified using camel-case so for example {{cssxref("background-color")}} becomes <code>backgroundColor</code> and {{cssxref("background-position-x")}} becomes <code>backgroundPositionX</code>. Shorthand values such as {{cssxref("margin")}} are also permitted.</p>
+Keyframes may specify property-value pairs for any of the {{cssxref("CSS_animated_properties", "animatable CSS properties")}}. The property names are specified using camel-case so for example {{cssxref("background-color")}} becomes `backgroundColor` and {{cssxref("background-position-x")}} becomes `backgroundPositionX`. Shorthand values such as {{cssxref("margin")}} are also permitted.
 
-<p>Two exceptional CSS properties are:</p>
+Two exceptional CSS properties are:
 
-<ul>
- <li>{{cssxref("float")}}, which must be written as <code>cssFloat</code> since "float" is a reserved word in JavaScript. It's just for reference here, this will have no effect on animation since "float" is not an animatable CSS property.</li>
- <li>{{cssxref("offset")}}, which must be written as <code>cssOffset</code> since "offset" represents the keyframe offset as described below.</li>
-</ul>
+- {{cssxref("float")}}, which must be written as `cssFloat` since "float" is a reserved word in JavaScript. It's just for reference here, this will have no effect on animation since "float" is not an animatable CSS property.
+- {{cssxref("offset")}}, which must be written as `cssOffset` since "offset" represents the keyframe offset as described below.
 
-<p>The following special attributes may also be specified:</p>
+The following special attributes may also be specified:
 
-<dl>
- <dt>offset</dt>
- <dd>
- <p>The offset of the keyframe specified as a number between <code>0.0</code> and <code>1.0</code> inclusive or <code>null</code>. This is equivalent to specifying start and end states in percentages in CSS stylesheets using <code>@keyframes</code>. If this value is <code>null</code> or missing, the keyframe will be evenly spaced between adjacent keyframes.</p>
- </dd>
- <dt>easing</dt>
- <dd>
- <p>The <a href="/en-US/docs/Web/CSS/easing-function">timing function</a> used from this keyframe until the next keyframe in the series.</p>
- </dd>
- <dt>composite</dt>
- <dd>
- <p>The {{domxref("KeyframeEffect.composite")}} operation used to combine the values specified in this keyframe with the underlying value. This will be <code>auto</code> if the composite operation specified on the effect is being used.</p>
- </dd>
-</dl>
+- offset
+  - : The offset of the keyframe specified as a number between `0.0` and `1.0` inclusive or `null`. This is equivalent to specifying start and end states in percentages in CSS stylesheets using `@keyframes`. If this value is `null` or missing, the keyframe will be evenly spaced between adjacent keyframes.
+- easing
+  - : The [timing function](/en-US/docs/Web/CSS/easing-function) used from this keyframe until the next keyframe in the series.
+- composite
+  - : The {{domxref("KeyframeEffect.composite")}} operation used to combine the values specified in this keyframe with the underlying value. This will be `auto` if the composite operation specified on the effect is being used.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Web Animations", "#processing-a-keyframes-argument", "Keyframe object formats")}}</td>
-   <td>{{Spec2('Web Animations')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("Web Animations", "#processing-a-keyframes-argument", "Keyframe object formats")}}
+      </td>
+      <td>{{Spec2('Web Animations')}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<h3 id="Element.animate"><code>Element.animate</code></h3>
+### `Element.animate`
 
-<p>{{Compat("api.Element.animate")}}</p>
+{{Compat("api.Element.animate")}}
 
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
- <li>{{domxref("Element.animate()")}}</li>
- <li>{{domxref("KeyframeEffect.KeyframeEffect()")}}</li>
- <li>{{domxref("KeyframeEffect.setKeyframes()")}}</li>
-</ul>
+- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
+- {{domxref("Element.animate()")}}
+- {{domxref("KeyframeEffect.KeyframeEffect()")}}
+- {{domxref("KeyframeEffect.setKeyframes()")}}

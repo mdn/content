@@ -11,19 +11,18 @@ tags:
   - XMLHttpRequest Status
 browser-compat: api.XMLHttpRequest.statusText
 ---
-<div>{{APIRef('XMLHttpRequest')}}</div>
+{{APIRef('XMLHttpRequest')}}
 
-<p>The read-only <code><strong>XMLHttpRequest.statusText</strong></code> property returns a <a href="/en-US/docs/Web/API/DOMString" title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String."><code>DOMString</code></a> containing the response's status message as returned by the HTTP server. Unlike <a href="/en-US/docs/Web/API/XMLHTTPRequest/status" title="The XMLHttpRequest.status property returns an unsigned short with the status of the response of the request. These are the standard HTTP status codes. For example, status is 200 denotes a successful request. Before the request is complete, the value of status will be 0."><code>XMLHTTPRequest.status</code></a> which indicates a numerical status code, this property contains the <em>text</em> of the response status, such as "OK" or "Not Found". If the request's <code><a href="/en-US/docs/Web/API/XMLHttpRequest/readyState">readyState</a></code> is in <code>UNSENT</code> or <code>OPENED</code> state, the value of <code>statusText</code> will be an empty string.</p>
+The read-only **`XMLHttpRequest.statusText`** property returns a [`DOMString`](/en-US/docs/Web/API/DOMString "DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String.") containing the response's status message as returned by the HTTP server. Unlike [`XMLHTTPRequest.status`](/en-US/docs/Web/API/XMLHTTPRequest/status "The XMLHttpRequest.status property returns an unsigned short with the status of the response of the request. These are the standard HTTP status codes. For example, status is 200 denotes a successful request. Before the request is complete, the value of status will be 0.") which indicates a numerical status code, this property contains the _text_ of the response status, such as "OK" or "Not Found". If the request's [`readyState`](/en-US/docs/Web/API/XMLHttpRequest/readyState) is in `UNSENT` or `OPENED` state, the value of `statusText` will be an empty string.
 
-<p>If the server response doesn't explicitly specify a status text, <code>statusText</code> will assume the default value "OK".</p>
+If the server response doesn't explicitly specify a status text, `statusText` will assume the default value "OK".
 
-<div class="notecard note">
-<p><strong>Note:</strong> Responses over an HTTP/2 connection will always have a empty string as status message as HTTP/2 does not support them.</p>
-</div>
+> **Note:** Responses over an HTTP/2 connection will always have a empty string as status message as HTTP/2 does not support them.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var xhr = new XMLHttpRequest();
+```js
+var xhr = new XMLHttpRequest();
 console.log('0 UNSENT', xhr.statusText);
 
 xhr.open('GET', '/server', true);
@@ -47,20 +46,18 @@ xhr.send(null);
  * 3 LOADING OK
  * 4 DONE OK
  */
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>List of <a href="/en-US/docs/Web/HTTP/Response_codes">HTTP response codes</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
- <li><a href="https://fetch.spec.whatwg.org/#concept-response-status-message">WHATWG Fetch Living Standard</a></li>
-</ul>
+- List of [HTTP response codes](/en-US/docs/Web/HTTP/Response_codes)
+- [HTTP](/en-US/docs/Web/HTTP)
+- [WHATWG Fetch Living Standard](https://fetch.spec.whatwg.org/#concept-response-status-message)

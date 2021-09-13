@@ -2,35 +2,36 @@
 title: MediaSettingsRange.step
 slug: Web/API/MediaSettingsRange/step
 tags:
-- API
-- ImageCapture
-- MediaSettingsRange
-- MediaStream
-- MediaStream Image Capture API
-- Property
-- Reference
-- step
+  - API
+  - ImageCapture
+  - MediaSettingsRange
+  - MediaStream
+  - MediaStream Image Capture API
+  - Property
+  - Reference
+  - step
 browser-compat: api.MediaSettingsRange.step
 ---
-<p>{{SeeCompatTable}}{{APIRef("MediaStream Image")}}</p>
+{{SeeCompatTable}}{{APIRef("MediaStream Image")}}
 
-<p>The <strong><code>step</code></strong> read-only property of
-		the {{domxref("MediaSettingsRange")}} interface returns the minimum difference
-		between consecutive values of the settings range.</p>
+The **`step`** read-only property of
+the {{domxref("MediaSettingsRange")}} interface returns the minimum difference
+between consecutive values of the settings range.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-	class="brush: js">var <em>step</em> = <em>mediaSettingsRange</em>.step</pre>
+```js
+var step = mediaSettingsRange.step
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A double integer.</p>
+A double integer.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

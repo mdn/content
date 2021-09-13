@@ -2,61 +2,62 @@
 title: ContentIndexEvent.id
 slug: Web/API/ContentIndexEvent/id
 tags:
-- Content
-- Content Index API
-- Index
-- PWA
-- Property
-- content indexing
-- events
+  - Content
+  - Content Index API
+  - Index
+  - PWA
+  - Property
+  - content indexing
+  - events
 browser-compat: api.ContentIndexEvent.id
 ---
-<div>{{draft}}{{DefaultAPISidebar("Content Index API")}}</div>
+{{draft}}{{DefaultAPISidebar("Content Index API")}}
 
-<p>The read-only <strong><code>id</code></strong> property of the
-  {{domxref("ContentIndexEvent")}} interface is a {{jsxref('String')}} which identifies
-  the deleted content index via it's <code>id</code>.</p>
+The read-only **`id`** property of the
+{{domxref("ContentIndexEvent")}} interface is a {{jsxref('String')}} which identifies
+the deleted content index via it's `id`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>id</var> = ContentIndexEvent.id;</pre>
+```js
+var id = ContentIndexEvent.id;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{jsxref("String")}} representation of the deleted content index id.</p>
+A {{jsxref("String")}} representation of the deleted content index id.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example listens for the {{domxref('ContentIndexEvent', 'contentdelete')}} event
-  and logs the removed content index id.</p>
+This example listens for the {{domxref('ContentIndexEvent', 'contentdelete')}} event
+and logs the removed content index id.
 
-<p>The {{domxref('ContentIndexEvent')}} is only available to the
-  {{domxref('ServiceWorkerGlobalScope','global scope')}} of a
-  {{domxref('ServiceWorker')}}.</p>
+The {{domxref('ContentIndexEvent')}} is only available to the
+{{domxref('ServiceWorkerGlobalScope','global scope')}} of a
+{{domxref('ServiceWorker')}}.
 
-<pre class="brush: js">self.addEventListener('contentdelete', (event) =&gt; {
+```js
+self.addEventListener('contentdelete', (event) => {
   console.log(event.id);
 
   // logs content index id, which can then be used to determine what content to delete from your cache
 
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://web.dev/content-indexing-api/">An introductory article on the
-      Content Index API</a></li>
-  <li><a href="https://contentindex.dev/">An app which uses the Content Index API to list
-      and remove 'save for later' content</a></li>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API, along with
-      information about Cache and CacheStorage</a></li>
-</ul>
+- [An introductory article on the
+  Content Index API](https://web.dev/content-indexing-api/)
+- [An app which uses the Content Index API to list
+  and remove 'save for later' content](https://contentindex.dev/)
+- [Service Worker API, along with
+  information about Cache and CacheStorage](/en-US/docs/Web/API/Service_Worker_API)

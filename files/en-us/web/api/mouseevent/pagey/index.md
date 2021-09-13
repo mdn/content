@@ -2,42 +2,42 @@
 title: MouseEvent.pageY
 slug: Web/API/MouseEvent/pageY
 tags:
-- API
-- DOM
-- Property
-- Read-only
-- Reference
+  - API
+  - DOM
+  - Property
+  - Read-only
+  - Reference
 browser-compat: api.MouseEvent.pageY
 ---
-<div>{{APIRef("DOM Events")}}</div>
+{{APIRef("DOM Events")}}
 
-<p>The <code><strong>pageY</strong></code> read-only property of the
-  {{domxref("MouseEvent")}} interface returns the Y (vertical) coordinate in pixels of the
-  event relative to the whole document. This property takes into account any vertical
-  scrolling of the page.</p>
+The **`pageY`** read-only property of the
+{{domxref("MouseEvent")}} interface returns the Y (vertical) coordinate in pixels of the
+event relative to the whole document. This property takes into account any vertical
+scrolling of the page.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>pos</em> = <em>event</em>.pageY;</pre>
+```js
+var pos = event.pageY;
+```
 
-<p>Originally, this property was defined as a <code>long</code> integer. The CSSOM View
-  Module redefined it as a <code>double</code> float. See the Browser compatibility
-  section for details.</p>
+Originally, this property was defined as a `long` integer. The CSSOM View
+Module redefined it as a `double` float. See the Browser compatibility
+section for details.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre><em>var pageY</em> = <em>event</em>.pageY;</pre>
+    var pageY = event.pageY;
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("MouseEvent.pageX")}}</li>
-</ul>
+- {{domxref("MouseEvent.pageX")}}

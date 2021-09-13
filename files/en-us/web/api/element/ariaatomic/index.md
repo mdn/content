@@ -11,39 +11,43 @@ tags:
   - Element
 browser-compat: api.Element.ariaAtomic
 ---
-<div>{{DefaultAPISidebar("DOM")}}</div>
+{{DefaultAPISidebar("DOM")}}
 
-<p>The <strong><code>ariaAtomic</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <code>aria-atomic</code> attribute, which indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the {{domxref("aria-relevant")}} attribute.</p>
+The **`ariaAtomic`** property of the {{domxref("Element")}} interface reflects the value of the `aria-atomic` attribute, which indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the {{domxref("aria-relevant")}} attribute.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox notranslate">var <var>ariaAtomic</var> = element.ariaAtomic;
-<var>element</var>.ariaAtomic = <var>ariaAtomic</var></pre>
+    var ariaAtomic = element.ariaAtomic;
+    element.ariaAtomic = ariaAtomic
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString")}} with one of the following values:</p>
-<dl>
-  <dt><code>"false"</code></dt>
-  <dd>Assistive technologies will present only the changed node or nodes.</dd>
-  <dt><code>"true"</code></dt>
-  <dd>Assistive technologies will present the entire changed region as a whole, including the author-defined label if one exists.</dd>
-</dl>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("DOMString")}} with one of the following values:
 
-<p>In this example the <code>aria-atomic</code> attribute on the element with an ID of <code>"clock"</code> is set to "true". Using <code>ariaAtomic</code> we update the value to "false".</p>
+- `"false"`
+  - : Assistive technologies will present only the changed node or nodes.
+- `"true"`
+  - : Assistive technologies will present the entire changed region as a whole, including the author-defined label if one exists.
 
-<pre class="brush: html">&lt;div id="clock" role="timer" aria-live="polite" aria-atomic="true"&gt;&lt;/div&gt;</pre>
+## Examples
 
-<pre class="brush: js">let el = document.getElementById('clock');
+In this example the `aria-atomic` attribute on the element with an ID of `"clock"` is set to "true". Using `ariaAtomic` we update the value to "false".
+
+```html
+<div id="clock" role="timer" aria-live="polite" aria-atomic="true"></div>
+```
+
+```js
+let el = document.getElementById('clock');
 console.log(el.ariaAtomic); // true
 el.ariaAtomic = "false"
-console.log(el.ariaAtomic); // false</pre>
+console.log(el.ariaAtomic); // false
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

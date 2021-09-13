@@ -10,70 +10,71 @@ tags:
   - web console
 browser-compat: api.console.timeLog
 ---
-<div>{{APIRef("Console API")}}</div>
+{{APIRef("Console API")}}
 
-<p>The <strong><code>console.timeLog()</code></strong> method logs the current value of a timer that was previously started by calling
-  {{domxref("console.time()")}} to the console.</p>
+The **`console.timeLog()`** method logs the current value of a timer that was previously started by calling
+{{domxref("console.time()")}} to the console.
 
-<p>See <a href="/en-US/docs/Web/API/console#timers">Timers</a> in the documentation for
-  details and examples.</p>
+See [Timers](/en-US/docs/Web/API/console#timers) in the documentation for
+details and examples.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">console.timeLog(<em>label</em>);</pre>
+```js
+console.timeLog(label);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>label</code></dt>
-  <dd>The name of the timer to log to the console.</dd>
-</dl>
+- `label`
+  - : The name of the timer to log to the console.
 
-<h3 id="Return">Return</h3>
+### Return
 
-<p>If no label parameter included:</p>
+If no label parameter included:
 
-<pre>default: 1042ms</pre>
+    default: 1042ms
 
-<p>If an existing <code>label</code> is included:</p>
+If an existing `label` is included:
 
-<pre>timer name: 1242ms</pre>
+    timer name: 1242ms
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>If there is no running timer, <code>timeLog()</code> returns the warning:</p>
+If there is no running timer, `timeLog()` returns the warning:
 
-<pre>Timer “default” doesn’t exist.</pre>
+    Timer “default” doesn’t exist.
 
-<p>If a label parameter is included, but there is no corresponding timer:</p>
+If a label parameter is included, but there is no corresponding timer:
 
-<pre> Timer “timer name” doesn’t exist. </pre>
+     Timer “timer name” doesn’t exist.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">console.time("answer time");
+```js
+console.time("answer time");
 alert("Click to continue");
 console.timeLog("answer time");
 alert("Do a bunch of other stuff...");
 console.timeEnd("answer time");
-</pre>
+```
 
-<p>The output from the example above shows the time taken by the user to dismiss the first
-  alert box, followed by the time it took for the user to dismiss the second alert:</p>
+The output from the example above shows the time taken by the user to dismiss the first
+alert box, followed by the time it took for the user to dismiss the second alert:
 
-<p><img src="timer_output.png"></p>
+![](timer_output.png)
 
-<p>Notice that the timer's name is displayed when the timer value is logged using
-  <code>timeLog()</code> and again when it's stopped. In addition, the call to timeEnd()
-  has the additional information, "timer ended" to make it obvious that the timer is no
-  longer tracking time.</p>
+Notice that the timer's name is displayed when the timer value is logged using
+`timeLog()` and again when it's stopped. In addition, the call to timeEnd()
+has the additional information, "timer ended" to make it obvious that the timer is no
+longer tracking time.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

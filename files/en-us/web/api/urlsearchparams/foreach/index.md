@@ -2,73 +2,72 @@
 title: URLSearchParams.forEach()
 slug: Web/API/URLSearchParams/forEach
 tags:
-- API
-- Method
-- Reference
-- URLSearchParams
-- forEach
+  - API
+  - Method
+  - Reference
+  - URLSearchParams
+  - forEach
 browser-compat: api.URLSearchParams.forEach
 ---
-<div>{{APIRef("URL API")}}</div>
+{{APIRef("URL API")}}
 
-<p>The <code><strong>forEach()</strong></code> method of the
-  {{domxref("URLSearchParams")}} interface allows iteration through all values contained
-  in this object via a callback function.</p>
+The **`forEach()`** method of the
+{{domxref("URLSearchParams")}} interface allows iteration through all values contained
+in this object via a callback function.
 
-<p>{{availableinworkers}}</p>
+{{availableinworkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">searchParams.forEach(callback);</pre>
+```js
+searchParams.forEach(callback);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>callback</code></dt>
-    <dd>
-      <p>Function to execute on each element, which is passed the following arguments:</p>
-      <dl>
-        <dt><code>value</code></dt>
-        <dd><p>The value of the current entry being processed in the <code>URLSearchParams</code> object.</p></dd>
-        <dt><code>key</code></dt>
-        <dd><p>The key of the current entry being processed in the <code>URLSearchParams</code> object.</p></dd>
-        <dt><code>searchParams</code></dt>
-        <dd><p>The <code>URLSearchParams</code> object the <code>forEach()</code> was called upon.</p></dd>
-      </dl>
-    </dd>
-  <dt><code>thisArg</code> {{optional_inline}}</dt>
-    <dd><p>Value to use as <code>this</code> when executing <code>callback</code>.</p></dd>
-</dl>
+- `callback`
 
-<h3 id="Return_value">Return value</h3>
+  - : Function to execute on each element, which is passed the following arguments:
 
-<p>Void.</p>
+    - `value`
+      - : The value of the current entry being processed in the `URLSearchParams` object.
+    - `key`
+      - : The key of the current entry being processed in the `URLSearchParams` object.
+    - `searchParams`
+      - : The `URLSearchParams` object the `forEach()` was called upon.
 
-<h2 id="Examples">Examples</h2>
+- `thisArg` {{optional_inline}}
+  - : Value to use as `this` when executing `callback`.
 
-<pre class="brush: js;">// Create a test URLSearchParams object
-var searchParams = new URLSearchParams("key1=value1&amp;key2=value2");
+### Return value
+
+Void.
+
+## Examples
+
+```js
+// Create a test URLSearchParams object
+var searchParams = new URLSearchParams("key1=value1&key2=value2");
 
 // Log the values
 searchParams.forEach(function(value, key) {
   console.log(value, key);
-});</pre>
+});
+```
 
-<p>The result is:</p>
+The result is:
 
-<pre>value1 key1
-value2 key2</pre>
+    value1 key1
+    value2 key2
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("URL")}} interface.</li>
-</ul>
+- The {{domxref("URL")}} interface.

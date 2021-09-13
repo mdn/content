@@ -7,53 +7,50 @@ tags:
   - WebGL
 browser-compat: api.WebGLTexture
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong>WebGLTexture</strong> interface is part of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> and represents an opaque texture object providing storage and state for texturing operations.</p>
+The **WebGLTexture** interface is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and represents an opaque texture object providing storage and state for texturing operations.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code>WebGLTexture</code> object does not define any methods or properties of its own and its content is not directly accessible. When working with <code>WebGLTexture</code> objects, the following methods of the {{domxref("WebGLRenderingContext")}} are useful:</p>
+The `WebGLTexture` object does not define any methods or properties of its own and its content is not directly accessible. When working with `WebGLTexture` objects, the following methods of the {{domxref("WebGLRenderingContext")}} are useful:
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.bindTexture()")}}</li>
- <li>{{domxref("WebGLRenderingContext.createTexture()")}}</li>
- <li>{{domxref("WebGLRenderingContext.deleteTexture()")}}</li>
- <li>{{domxref("WebGLRenderingContext.isTexture()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.bindTexture()")}}
+- {{domxref("WebGLRenderingContext.createTexture()")}}
+- {{domxref("WebGLRenderingContext.deleteTexture()")}}
+- {{domxref("WebGLRenderingContext.isTexture()")}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Creating_a_texture">Creating a texture</h3>
+### Creating a texture
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 var texture = gl.createTexture();
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.bindTexture()")}}</li>
- <li>{{domxref("WebGLRenderingContext.createTexture()")}}</li>
- <li>{{domxref("WebGLRenderingContext.deleteTexture()")}}</li>
- <li>{{domxref("WebGLRenderingContext.isTexture()")}}</li>
- <li>{{domxref("WebGLRenderingContext.compressedTexImage2D()")}}</li>
- <li>{{domxref("WebGLRenderingContext.compressedTexSubImage2D()")}}</li>
- <li>{{domxref("WebGLRenderingContext.copyTexImage2D()")}}</li>
- <li>{{domxref("WebGLRenderingContext.copyTexSubImage2D()")}}</li>
- <li>{{domxref("WebGLRenderingContext.generateMipmap()")}}</li>
- <li>{{domxref("WebGLRenderingContext.getTexParameter()")}}</li>
- <li>{{domxref("WebGLRenderingContext.texImage2D()")}}</li>
- <li>{{domxref("WebGLRenderingContext.texSubImage2D()")}}</li>
- <li>{{domxref("WebGLRenderingContext/texParameter", "WebGLRenderingContext.texParameterf()")}}</li>
- <li>{{domxref("WebGLRenderingContext/texParameter", "WebGLRenderingContext.texParameteri()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.bindTexture()")}}
+- {{domxref("WebGLRenderingContext.createTexture()")}}
+- {{domxref("WebGLRenderingContext.deleteTexture()")}}
+- {{domxref("WebGLRenderingContext.isTexture()")}}
+- {{domxref("WebGLRenderingContext.compressedTexImage2D()")}}
+- {{domxref("WebGLRenderingContext.compressedTexSubImage2D()")}}
+- {{domxref("WebGLRenderingContext.copyTexImage2D()")}}
+- {{domxref("WebGLRenderingContext.copyTexSubImage2D()")}}
+- {{domxref("WebGLRenderingContext.generateMipmap()")}}
+- {{domxref("WebGLRenderingContext.getTexParameter()")}}
+- {{domxref("WebGLRenderingContext.texImage2D()")}}
+- {{domxref("WebGLRenderingContext.texSubImage2D()")}}
+- {{domxref("WebGLRenderingContext/texParameter", "WebGLRenderingContext.texParameterf()")}}
+- {{domxref("WebGLRenderingContext/texParameter", "WebGLRenderingContext.texParameteri()")}}

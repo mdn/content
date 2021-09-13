@@ -12,141 +12,105 @@ tags:
   - matrix
 browser-compat: api.DOMMatrix
 ---
-<p>{{APIRef("Geometry Interfaces")}}</p>
+{{APIRef("Geometry Interfaces")}}
 
-<p>The <code><strong>DOMMatrix</strong></code> interface represents 4×4 matrices, suitable for 2D and 3D operations including rotation and translation. It is a mutable version of the {{domxref("DOMMatrixReadOnly")}} interface.</p>
+The **`DOMMatrix`** interface represents 4×4 matrices, suitable for 2D and 3D operations including rotation and translation. It is a mutable version of the {{domxref("DOMMatrixReadOnly")}} interface.
 
-<p><code><strong>WebKitCSSMatrix</strong></code> is an alias to <code><strong>DOMMatrix</strong></code>.</p>
+**`WebKitCSSMatrix`** is an alias to **`DOMMatrix`**.
 
-<p>This interface should be available inside <a href="/en-US/docs/Web/API/Web_Workers_API">web workers</a>, though some implementations don't allow it yet.</p>
+This interface should be available inside [web workers](/en-US/docs/Web/API/Web_Workers_API), though some implementations don't allow it yet.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("DOMMatrix.DOMMatrix","DOMMatrix()")}}</dt>
- <dd>Creates and returns a new <code>DOMMatrix</code> object.</dd>
-</dl>
+- {{domxref("DOMMatrix.DOMMatrix","DOMMatrix()")}}
+  - : Creates and returns a new `DOMMatrix` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface inherits properties from {{domxref("DOMMatrixReadOnly")}}, though some of these properties are altered to be mutable.</em></p>
+_This interface inherits properties from {{domxref("DOMMatrixReadOnly")}}, though some of these properties are altered to be mutable._
 
-<dl>
- <dt><code>is2D</code> {{ReadOnlyInline}}</dt>
- <dd>A Boolean flag whose value is <code>true</code> if the matrix was initialized as a 2D matrix. If <code>false</code>, the matrix is 3D.</dd>
- <dt><code>isIdentity</code> {{ReadOnlyInline}}</dt>
- <dd>A Boolean whose value is <code>true</code> if the matrix is the {{interwiki("wikipedia", "identity matrix")}}. The identity matrix is one in which every value is <code>0</code> <em>except</em> those on the main diagonal from top-left to bottom-right corner (in other words, where the offsets in each direction are equal).</dd>
- <dt><code>m11</code>, <code>m12</code>, <code>m13</code>, <code>m14</code>, <code>m21</code>, <code>m22</code>, <code>m23</code>, <code>m24</code>, <code>m31</code>, <code>m32</code>, <code>m33</code>, <code>m34</code>, <code>m41</code>, <code>m42</code>, <code>m43</code>, <code>m44</code></dt>
- <dd>Double-precision floating-point values representing each component of a 4×4 matrix, where <code>m11</code> through <code>m14</code> are the first column, <code>m21</code> through <code>m24</code> are the second column, and so forth.</dd>
- <dt><code>a</code>, <code>b</code>, <code>c</code>, <code>d</code>, <code>e</code>, <code>f</code></dt>
- <dd>
- <p>Double-precision floating-point values representing the components of a 4×4 matrix which are required in order to perform 2D rotations and translations. These are aliases for specific components of a 4×4 matrix, as shown below.</p>
+- `is2D` {{ReadOnlyInline}}
+  - : A Boolean flag whose value is `true` if the matrix was initialized as a 2D matrix. If `false`, the matrix is 3D.
+- `isIdentity` {{ReadOnlyInline}}
+  - : A Boolean whose value is `true` if the matrix is the {{interwiki("wikipedia", "identity matrix")}}. The identity matrix is one in which every value is `0` _except_ those on the main diagonal from top-left to bottom-right corner (in other words, where the offsets in each direction are equal).
+- `m11`, `m12`, `m13`, `m14`, `m21`, `m22`, `m23`, `m24`, `m31`, `m32`, `m33`, `m34`, `m41`, `m42`, `m43`, `m44`
+  - : Double-precision floating-point values representing each component of a 4×4 matrix, where `m11` through `m14` are the first column, `m21` through `m24` are the second column, and so forth.
+- `a`, `b`, `c`, `d`, `e`, `f`
 
- <table class="standard-table">
-  <thead>
-   <tr>
-    <th scope="col"><code>2D</code></th>
-    <th scope="col"><code>3D equivalent</code></th>
-   </tr>
-  </thead>
-  <tbody>
-   <tr>
-    <td><code>a</code></td>
-    <td><code>m11</code></td>
-   </tr>
-   <tr>
-    <td><code>b</code></td>
-    <td><code>m12</code></td>
-   </tr>
-   <tr>
-    <td><code>c</code></td>
-    <td><code>m21</code></td>
-   </tr>
-   <tr>
-    <td><code>d</code></td>
-    <td><code>m22</code></td>
-   </tr>
-   <tr>
-    <td><code>e</code></td>
-    <td><code>m41</code></td>
-   </tr>
-   <tr>
-    <td><code>f</code></td>
-    <td><code>m42</code></td>
-   </tr>
-  </tbody>
- </table>
- </dd>
-</dl>
+  - : Double-precision floating-point values representing the components of a 4×4 matrix which are required in order to perform 2D rotations and translations. These are aliases for specific components of a 4×4 matrix, as shown below.
 
-<h2 id="Methods">Methods</h2>
+    | `2D` | `3D equivalent` |
+    | ---- | --------------- |
+    | `a`  | `m11`           |
+    | `b`  | `m12`           |
+    | `c`  | `m21`           |
+    | `d`  | `m22`           |
+    | `e`  | `m41`           |
+    | `f`  | `m42`           |
 
-<p><em>This interface includes the following methods, as well as the methods it inherits from {{domxref("DOMMatrixReadOnly")}}.</em></p>
+## Methods
 
-<dl>
- <dt>{{domxref("DOMMatrix.invertSelf()")}}</dt>
- <dd>Modifies the matrix by inverting it. If the matrix can't be inverted, its components are all set to <code>NaN</code>, and {{domxref("DOMMatrix.is2D", "is2D")}} returns <code>false</code>.</dd>
- <dt>{{domxref("DOMMatrix.multiplySelf()")}}</dt>
- <dd>Modifies the matrix by post-multiplying it with the specified <code>DOMMatrix</code>. This is equivalent to the dot product <code>A⋅B</code>, where matrix <code>A</code> is the source matrix and <code>B</code> is the matrix given as an input to the method. Returns itself.</dd>
- <dt>{{domxref("DOMMatrix.preMultiplySelf()")}}</dt>
- <dd>Modifies the matrix by pre-multiplying it with the specified <code>DOMMatrix</code>. This is equivalent to the dot product <code>B⋅A</code>, where matrix <code>A</code> is the source matrix and <code>B</code> is the matrix given as an input to the method. Returns itself.</dd>
- <dt>{{domxref("DOMMatrix.translateSelf()")}}</dt>
- <dd>Modifies the matrix by applying the specified vector. The default vector is <code>[0, 0, 0]</code>. Returns itself.</dd>
- <dt>{{domxref("DOMMatrix.scaleNonUniformSelf()")}} {{deprecated_inline}}</dt>
- <dd>Modifies the matrix by applying the specified scaling on the X, Y, and Z axes, centered at the given origin. By default, the Y and Z axes' scaling factors are both <code>1</code>, but the scaling factor for X must be specified. The default origin is <code>(0, 0, 0)</code>. Returns itself.</dd>
- <dt>{{domxref("DOMMatrix.scaleSelf()")}}</dt>
- <dd>Modifies the matrix by applying the specified scaling factors, with the center located at the specified origin. Also returns itself. By default, the scaling factor is <code>1</code> for all three axes, and the origin is <code>(0, 0, 0)</code>. Returns itself.</dd>
- <dt>{{domxref("DOMMatrix.scale3dSelf()")}}</dt>
- <dd>Modifies the matrix by applying the specified scaling factor to all three axes, centered on the given origin. Returns itself.</dd>
- <dt>{{domxref("DOMMatrix.rotateSelf()")}}</dt>
- <dd>Modifies the matrix by rotating itself around each axis by the specified number of degrees. Returns itself.</dd>
- <dt>{{domxref("DOMMatrix.rotateAxisAngleSelf()")}}</dt>
- <dd>Modifies the matrix by rotating it by the specified angle around the given vector. Returns itself.</dd>
- <dt>{{domxref("DOMMatrix.rotateFromVectorSelf()")}}</dt>
- <dd>Modifies the matrix by rotating it by the angle between the specified vector and <code>(1, 0)</code>. Returns itself.</dd>
- <dt>{{domxref("DOMMatrix.setMatrixValue()")}}</dt>
- <dd>Replaces the contents of the matrix with the matrix described by the specified transform or transforms. Returns itself.</dd>
- <dt>{{domxref("DOMMatrix.skewXSelf()")}}</dt>
- <dd>Modifies the matrix by applying the specified skew transformation along the X-axis. Returns itself.</dd>
- <dt>{{domxref("DOMMatrix.skewYSelf()")}}</dt>
- <dd>Modifies the matrix by applying the specified skew transformation along the Y-axis. Returns itself.</dd>
-</dl>
+_This interface includes the following methods, as well as the methods it inherits from {{domxref("DOMMatrixReadOnly")}}._
 
-<h2 id="Static_methods">Static methods</h2>
+- {{domxref("DOMMatrix.invertSelf()")}}
+  - : Modifies the matrix by inverting it. If the matrix can't be inverted, its components are all set to `NaN`, and {{domxref("DOMMatrix.is2D", "is2D")}} returns `false`.
+- {{domxref("DOMMatrix.multiplySelf()")}}
+  - : Modifies the matrix by post-multiplying it with the specified `DOMMatrix`. This is equivalent to the dot product `A⋅B`, where matrix `A` is the source matrix and `B` is the matrix given as an input to the method. Returns itself.
+- {{domxref("DOMMatrix.preMultiplySelf()")}}
+  - : Modifies the matrix by pre-multiplying it with the specified `DOMMatrix`. This is equivalent to the dot product `B⋅A`, where matrix `A` is the source matrix and `B` is the matrix given as an input to the method. Returns itself.
+- {{domxref("DOMMatrix.translateSelf()")}}
+  - : Modifies the matrix by applying the specified vector. The default vector is `[0, 0, 0]`. Returns itself.
+- {{domxref("DOMMatrix.scaleNonUniformSelf()")}} {{deprecated_inline}}
+  - : Modifies the matrix by applying the specified scaling on the X, Y, and Z axes, centered at the given origin. By default, the Y and Z axes' scaling factors are both `1`, but the scaling factor for X must be specified. The default origin is `(0, 0, 0)`. Returns itself.
+- {{domxref("DOMMatrix.scaleSelf()")}}
+  - : Modifies the matrix by applying the specified scaling factors, with the center located at the specified origin. Also returns itself. By default, the scaling factor is `1` for all three axes, and the origin is `(0, 0, 0)`. Returns itself.
+- {{domxref("DOMMatrix.scale3dSelf()")}}
+  - : Modifies the matrix by applying the specified scaling factor to all three axes, centered on the given origin. Returns itself.
+- {{domxref("DOMMatrix.rotateSelf()")}}
+  - : Modifies the matrix by rotating itself around each axis by the specified number of degrees. Returns itself.
+- {{domxref("DOMMatrix.rotateAxisAngleSelf()")}}
+  - : Modifies the matrix by rotating it by the specified angle around the given vector. Returns itself.
+- {{domxref("DOMMatrix.rotateFromVectorSelf()")}}
+  - : Modifies the matrix by rotating it by the angle between the specified vector and `(1, 0)`. Returns itself.
+- {{domxref("DOMMatrix.setMatrixValue()")}}
+  - : Replaces the contents of the matrix with the matrix described by the specified transform or transforms. Returns itself.
+- {{domxref("DOMMatrix.skewXSelf()")}}
+  - : Modifies the matrix by applying the specified skew transformation along the X-axis. Returns itself.
+- {{domxref("DOMMatrix.skewYSelf()")}}
+  - : Modifies the matrix by applying the specified skew transformation along the Y-axis. Returns itself.
 
-<p><em>This interface inherits methods from {{domxref("DOMMatrixReadOnly")}}.</em></p>
+## Static methods
 
-<dl>
- <dt>{{domxref("DOMMatrix.fromFloat32Array", "fromFloat32Array()")}}</dt>
- <dd>Creates a new mutable <code>DOMMatrix</code> object given an array of single-precision (32-bit) floating-point values. If the array has six values, the result is a 2D matrix; if the array has 16 values, the result is a 3D matrix. Otherwise, a <code>TypeError</code> exception is thrown.</dd>
- <dt>{{domxref("DOMMatrix.fromFloat64Array", "fromFloat64Array()")}}</dt>
- <dd>Creates a new mutable <code>DOMMatrix</code> object given an array of double-precision (64-bit) floating-point values. If the array has six values, the result is a 2D matrix; if the array has 16 values, the result is a 3D matrix. Otherwise, a <code>TypeError</code> exception is thrown.</dd>
- <dt>{{domxref("DOMMatrix.fromMatrix", "fromMatrix()")}}</dt>
- <dd>Creates a new mutable <code>DOMMatrix</code> object given an existing matrix or a {{domxref("DOMMatrixInit")}} dictionary which provides the values for its properties.</dd>
-</dl>
+_This interface inherits methods from {{domxref("DOMMatrixReadOnly")}}._
 
-<h2 id="Usage_notes">Usage notes</h2>
+- {{domxref("DOMMatrix.fromFloat32Array", "fromFloat32Array()")}}
+  - : Creates a new mutable `DOMMatrix` object given an array of single-precision (32-bit) floating-point values. If the array has six values, the result is a 2D matrix; if the array has 16 values, the result is a 3D matrix. Otherwise, a `TypeError` exception is thrown.
+- {{domxref("DOMMatrix.fromFloat64Array", "fromFloat64Array()")}}
+  - : Creates a new mutable `DOMMatrix` object given an array of double-precision (64-bit) floating-point values. If the array has six values, the result is a 2D matrix; if the array has 16 values, the result is a 3D matrix. Otherwise, a `TypeError` exception is thrown.
+- {{domxref("DOMMatrix.fromMatrix", "fromMatrix()")}}
+  - : Creates a new mutable `DOMMatrix` object given an existing matrix or a {{domxref("DOMMatrixInit")}} dictionary which provides the values for its properties.
 
-<p>The matrix defined by the <code>DOMMatrix</code> interface is comprised of four rows of four columns each. While it's beyond the scope of this article to explain the mathematics involved, this 4×4 size is enough to describe any transformation you might apply to either 2D or 3D geometries.</p>
+## Usage notes
 
-<p>Here are The positions of the 16 elements (m_11 through m_44) which comprise the 4×4 abstract matrix:</p>
-<p><math display="block"><semantics><mrow><mo>[</mo><mtable rowspacing="0.5ex"><mtr><mtd><msub><mi>m</mi><mn>11</mn></msub></mtd><mtd><msub><mi>m</mi><mn>21</mn></msub></mtd><mtd><msub><mi>m</mi><mn>31</mn></msub></mtd><mtd><msub><mi>m</mi><mn>41</mn></msub></mtd></mtr><mtr><mtd><msub><mi>m</mi><mn>12</mn></msub></mtd><mtd><msub><mi>m</mi><mn>22</mn></msub></mtd><mtd><msub><mi>m</mi><mn>32</mn></msub></mtd><mtd><msub><mi>m</mi><mn>42</mn></msub></mtd></mtr><mtr><mtd><msub><mi>m</mi><mn>13</mn></msub></mtd><mtd><msub><mi>m</mi><mn>23</mn></msub></mtd><mtd><msub><mi>m</mi><mn>33</mn></msub></mtd><mtd><msub><mi>m</mi><mn>43</mn></msub></mtd></mtr><mtr><mtd><msub><mi>m</mi><mn>14</mn></msub></mtd><mtd><msub><mi>m</mi><mn>24</mn></msub></mtd><mtd><msub><mi>m</mi><mn>34</mn></msub></mtd><mtd><msub><mi>m</mi><mn>44</mn></msub></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="TeX">\left [ \begin{matrix} m_{11} &amp; m_{21} &amp; m_{31} &amp; m_{41} \\ m_{12} &amp; m_{22} &amp; m_{32} &amp; m_{42} \\ m_{13} &amp; m_{23} &amp; m_{33} &amp; m_{43} \\ m_{14} &amp; m_{24} &amp; m_{34} &amp; m_{44} \end{matrix} \right ]</annotation></semantics></math></p>
+The matrix defined by the `DOMMatrix` interface is comprised of four rows of four columns each. While it's beyond the scope of this article to explain the mathematics involved, this 4×4 size is enough to describe any transformation you might apply to either 2D or 3D geometries.
 
-<p>The <code>DOMMatrix</code> interface is designed with the intent that it will be used for all matrices within markup, supplanting the {{domxref("SVGMatrix")}} and <code>CSSMatrix</code> interfaces.</p>
+Here are The positions of the 16 elements (m_11 through m_44) which comprise the 4×4 abstract matrix:
 
-<h2 id="Specifications">Specifications</h2>
+<math display="block"><semantics><mrow><mo>[</mo><mtable rowspacing="0.5ex"><mtr><mtd><msub><mi>m</mi><mn>11</mn></msub></mtd><mtd><msub><mi>m</mi><mn>21</mn></msub></mtd><mtd><msub><mi>m</mi><mn>31</mn></msub></mtd><mtd><msub><mi>m</mi><mn>41</mn></msub></mtd></mtr><mtr><mtd><msub><mi>m</mi><mn>12</mn></msub></mtd><mtd><msub><mi>m</mi><mn>22</mn></msub></mtd><mtd><msub><mi>m</mi><mn>32</mn></msub></mtd><mtd><msub><mi>m</mi><mn>42</mn></msub></mtd></mtr><mtr><mtd><msub><mi>m</mi><mn>13</mn></msub></mtd><mtd><msub><mi>m</mi><mn>23</mn></msub></mtd><mtd><msub><mi>m</mi><mn>33</mn></msub></mtd><mtd><msub><mi>m</mi><mn>43</mn></msub></mtd></mtr><mtr><mtd><msub><mi>m</mi><mn>14</mn></msub></mtd><mtd><msub><mi>m</mi><mn>24</mn></msub></mtd><mtd><msub><mi>m</mi><mn>34</mn></msub></mtd><mtd><msub><mi>m</mi><mn>44</mn></msub></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="TeX">\left [ \begin{matrix} m_{11} &#x26; m_{21} &#x26; m_{31} &#x26; m_{41} \\ m_{12} &#x26; m_{22} &#x26; m_{32} &#x26; m_{42} \\ m_{13} &#x26; m_{23} &#x26; m_{33} &#x26; m_{43} \\ m_{14} &#x26; m_{24} &#x26; m_{34} &#x26; m_{44} \end{matrix} \right ]</annotation></semantics></math>
+
+The `DOMMatrix` interface is designed with the intent that it will be used for all matrices within markup, supplanting the {{domxref("SVGMatrix")}} and `CSSMatrix` interfaces.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{Compat("api.WebKitCSSMatrix")}}</p>
+{{Compat("api.WebKitCSSMatrix")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Its non-modifiable counterpart, {{domxref("DOMMatrixReadOnly")}}</li>
- <li>{{domxref("SVGMatrix")}}, the SVG matrix intended to be superseded by {{domxref("DOMMatrix")}}</li>
-</ul>
+- Its non-modifiable counterpart, {{domxref("DOMMatrixReadOnly")}}
+- {{domxref("SVGMatrix")}}, the SVG matrix intended to be superseded by {{domxref("DOMMatrix")}}

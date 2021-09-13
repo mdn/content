@@ -12,25 +12,23 @@ tags:
   - Video
 browser-compat: api.MediaCapabilitiesInfo
 ---
-<p>{{APIRef("Media Capabilities API")}}</p>
+{{APIRef("Media Capabilities API")}}
 
-<p>The <code><strong>MediaCapabilitiesInfo</strong></code> dictionary of the <a href="/en-US/docs/Web/API/Media_Capabilities_API">Media Capabilities API</a> is made available when the promise returned by the {{domxref("MediaCapabilities.encodingInfo()")}} or {{domxref("MediaCapabilities.decodingInfo()")}} methods of the {{domxref("MediaCapabilities")}} interface fulfills, providing information as to whether the media type is supported, and whether encoding or decoding such media would be smooth and power efficient.</p>
+The **`MediaCapabilitiesInfo`** dictionary of the [Media Capabilities API](/en-US/docs/Web/API/Media_Capabilities_API) is made available when the promise returned by the {{domxref("MediaCapabilities.encodingInfo()")}} or {{domxref("MediaCapabilities.decodingInfo()")}} methods of the {{domxref("MediaCapabilities")}} interface fulfills, providing information as to whether the media type is supported, and whether encoding or decoding such media would be smooth and power efficient.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p>The <code>MediaCapabilitiesInfo</code> dictionary contains three Boolean attributes:</p>
+The `MediaCapabilitiesInfo` dictionary contains three Boolean attributes:
 
-<ul>
- <li><code>supported</code>: Given the properties defined in the {{domxref("MediaConfiguration")}}, can the specified piece of media content be encoded (if {{domxref("MediaEncodingConfiguration")}} is set) or decode (if {{domxref("MediaDecodingConfiguration")}} is set) at all? If yes, <code>supported</code> is <em>true</em>. Otherwise, it is <em>false</em>.</li>
- <li><code>smooth</code>: Given the properties defined in the {{domxref("MediaConfiguration")}}, will the playback of the specified piece of media be high quality? Will it be smooth?  If <code>supported</code> is <code>true</code>, and playback will be smooth, <code>smooth</code> is <em>true</em>, Otherwise, is it <em>false.</em></li>
- <li><code>powerEfficient</code>: Given the properties defined in the {{domxref("MediaConfiguration")}}, will the playback of the specified piece of media be power efficient? If <code>supported</code> is <code>true</code>, and playback will be power efficient, <code>powerEfficient</code> is <em>true</em>, Otherwise, is it <em>false.</em></li>
-</ul>
+- `supported`: Given the properties defined in the {{domxref("MediaConfiguration")}}, can the specified piece of media content be encoded (if {{domxref("MediaEncodingConfiguration")}} is set) or decode (if {{domxref("MediaDecodingConfiguration")}} is set) at all? If yes, `supported` is _true_. Otherwise, it is _false_.
+- `smooth`: Given the properties defined in the {{domxref("MediaConfiguration")}}, will the playback of the specified piece of media be high quality? Will it be smooth?  If `supported` is `true`, and playback will be smooth, `smooth` is _true_, Otherwise, is it _false._
+- `powerEfficient`: Given the properties defined in the {{domxref("MediaConfiguration")}}, will the playback of the specified piece of media be power efficient? If `supported` is `true`, and playback will be power efficient, `powerEfficient` is _true_, Otherwise, is it _false._
 
-<p>Browsers will report a supported media configuration as <code>smooth</code> and <code>powerEfficient</code> until stats on this device have been recorded. All supported audio codecs are reported to be power efficient.</p>
+Browsers will report a supported media configuration as `smooth` and `powerEfficient` until stats on this device have been recorded. All supported audio codecs are reported to be power efficient.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">
+```js
 const mediaConfig = {
     type : 'file',
     audio : {
@@ -42,25 +40,24 @@ const mediaConfig = {
 };
 
 // check support and performance
-navigator.mediaCapabilities.decodingInfo(mediaConfig).then(result =&gt; { // result contains the media capabilities information
+navigator.mediaCapabilities.decodingInfo(mediaConfig).then(result => { // result contains the media capabilities information
     console.log('This configuration is ' +
         (result.supported ? '' : 'not ') + 'supported, ' +             // Can the media, as configured, be decoded by the user agent
         (result.smooth ? '' : 'not ') + 'smooth, and ' +               // is it smooth?
         (result.powerEfficient ? '' : 'not ') + 'power efficient.')    // is it power efficient?
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("MediaConfiguration")}}</li>
- <li>{{domxref("MediaCapabilities.encodingInfo()")}}</li>
- <li>{{domxref("MediaCapabilities.decodingInfo()")}}</li>
-</ul>
+- {{domxref("MediaConfiguration")}}
+- {{domxref("MediaCapabilities.encodingInfo()")}}
+- {{domxref("MediaCapabilities.decodingInfo()")}}

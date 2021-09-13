@@ -2,106 +2,102 @@
 title: Crypto.getRandomValues()
 slug: Web/API/Crypto/getRandomValues
 tags:
-- API
-- Crypto
-- Cryptography
-- Encryption
-- Integers
-- Method
-- Numbers
-- Pseudorandom
-- Pseudorandom Numbers
-- Random Numbers
-- Reference
-- Web Crypto API
-- getRandomValues
+  - API
+  - Crypto
+  - Cryptography
+  - Encryption
+  - Integers
+  - Method
+  - Numbers
+  - Pseudorandom
+  - Pseudorandom Numbers
+  - Random Numbers
+  - Reference
+  - Web Crypto API
+  - getRandomValues
 browser-compat: api.Crypto.getRandomValues
 ---
-<p>{{APIRef("Web Crypto API")}}</p>
+{{APIRef("Web Crypto API")}}
 
-<p>The <code><strong>Crypto.getRandomValues()</strong></code> method lets you get
-  cryptographically strong random values. The array given as the parameter is filled with
-  random numbers (random in its cryptographic meaning).</p>
+The **`Crypto.getRandomValues()`** method lets you get
+cryptographically strong random values. The array given as the parameter is filled with
+random numbers (random in its cryptographic meaning).
 
-<p>To guarantee enough performance, implementations are not using a truly random number
-  generator, but they are using a pseudo-random number generator <em>seeded</em> with a
-  value with enough entropy. The pseudo-random number generator algorithm (PRNG) may vary
-  across {{Glossary("user agent", "user agents")}}, but is suitable for cryptographic
-  purposes. Implementations are required to use a seed with enough entropy, like a
-  system-level entropy source.</p>
+To guarantee enough performance, implementations are not using a truly random number
+generator, but they are using a pseudo-random number generator _seeded_ with a
+value with enough entropy. The pseudo-random number generator algorithm (PRNG) may vary
+across {{Glossary("user agent", "user agents")}}, but is suitable for cryptographic
+purposes. Implementations are required to use a seed with enough entropy, like a
+system-level entropy source.
 
-<p><code>getRandomValues()</code> is the only member of the <code>Crypto</code> interface
-  which can be used from an insecure context.</p>
+`getRandomValues()` is the only member of the `Crypto` interface
+which can be used from an insecure context.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var>typedArray</var> = <var>cryptoObj</var>.getRandomValues(<var>typedArray</var>);</pre>
+```js
+typedArray = cryptoObj.getRandomValues(typedArray);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>typedArray</var></code></dt>
-  <dd>An integer-based {{jsxref("TypedArray")}}, that is an {{jsxref("Int8Array")}}, a
+- `typedArray`
+  - : An integer-based {{jsxref("TypedArray")}}, that is an {{jsxref("Int8Array")}}, a
     {{jsxref("Uint8Array")}}, an {{jsxref("Int16Array")}}, a {{jsxref("Uint16Array")}}, an
     {{jsxref("Int32Array")}}, or a {{jsxref("Uint32Array")}}. All elements in the array
-    are overwritten with random numbers.</dd>
-</dl>
+    are overwritten with random numbers.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The same array passed as <code><var>typedArray</var></code> but with its contents
-  replaced with the newly generated random numbers. Note that
-  <code><var>typedArray</var></code> is modified in-place, and no copy is made.</p>
+The same array passed as `typedArray` but with its contents
+replaced with the newly generated random numbers. Note that
+`typedArray` is modified in-place, and no copy is made.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>This method can throw an exception under error conditions.</p>
+This method can throw an exception under error conditions.
 
-<dl>
-  <dt>{{domxref("DOMException")}} (name: {{exception("QuotaExceededError")}})</dt>
-  <dd>The requested length exceeds 65,536 bytes.</dd>
-</dl>
+- {{domxref("DOMException")}} (name: {{exception("QuotaExceededError")}})
+  - : The requested length exceeds 65,536 bytes.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>Don't use <code>getRandomValues()</code> to generate encryption keys. Instead, use the
-  {{domxref("SubtleCrypto.generateKey", "generateKey()")}} method. There are a few reasons
-  for this; for example, <code>getRandomValues()</code> is not guaranteed to be running in
-  a secure context.</p>
+Don't use `getRandomValues()` to generate encryption keys. Instead, use the
+{{domxref("SubtleCrypto.generateKey", "generateKey()")}} method. There are a few reasons
+for this; for example, `getRandomValues()` is not guaranteed to be running in
+a secure context.
 
-<p>There is no minimum degree of entropy mandated by the Web Cryptography specification.
-  User agents are instead urged to provide the best entropy they can when generating
-  random numbers, using a well-defined, efficient pseudorandom number generator built into
-  the user agent itself, but seeded with values taken from an external source of
-  pseudorandom numbers, such as a platform-specific random number function, the Unix
-  <code>/dev/urandom</code> device, or other source of random or pseudorandom data.</p>
+There is no minimum degree of entropy mandated by the Web Cryptography specification.
+User agents are instead urged to provide the best entropy they can when generating
+random numbers, using a well-defined, efficient pseudorandom number generator built into
+the user agent itself, but seeded with values taken from an external source of
+pseudorandom numbers, such as a platform-specific random number function, the Unix
+`/dev/urandom` device, or other source of random or pseudorandom data.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">/* Assuming that window.crypto.getRandomValues is available */
+```js
+/* Assuming that window.crypto.getRandomValues is available */
 
 var array = new Uint32Array(10);
 window.crypto.getRandomValues(array);
 
 console.log("Your lucky numbers:");
-for (var i = 0; i &lt; array.length; i++) {
+for (var i = 0; i < array.length; i++) {
   console.log(array[i]);
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API</a></li>
-  <li>{{ domxref("Window.crypto") }} to get a {{domxref("Crypto")}} object.</li>
-  <li>{{jsxref("Math.random")}}, a non-cryptographic source of random numbers.</li>
-</ul>
+- [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API)
+- {{ domxref("Window.crypto") }} to get a {{domxref("Crypto")}} object.
+- {{jsxref("Math.random")}}, a non-cryptographic source of random numbers.

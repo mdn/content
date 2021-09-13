@@ -13,34 +13,30 @@ tags:
   - Window
 browser-compat: api.Window.pkcs11
 ---
-<p>{{APIRef()}}{{deprecated_header}}</p>
+{{APIRef()}}{{deprecated_header}}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>Returns the <code>pkcs11</code> object, which is used to install drivers and other software associated with the <a href="/en-US/docs/Pkcs11_protocol">pkcs11 protocol</a>. If <code>pkcs11</code> isn't supported, this property returns <code>null</code>.</p>
+Returns the `pkcs11` object, which is used to install drivers and other software associated with the [pkcs11 protocol](/en-US/docs/Pkcs11_protocol). If `pkcs11` isn't supported, this property returns `null`.
 
-<div class="note">
-<p><strong>Note:</strong> This property has been returned <code>null</code> since Gecko 1.9.0.14 (Firefox 3.0.14) and <strong>removed</strong> in Gecko 29.0 {{geckoRelease(29)}}) for security reasons. For more information on installing PKCS11 modules, see <a href="/en-US/docs/PKCS11_Module_Installation">installing PKCS11 modules</a>. See {{ Bug(326628) }} for details on why the property was removed.</p>
-</div>
+> **Note:** This property has been returned `null` since Gecko 1.9.0.14 (Firefox 3.0.14) and **removed** in Gecko 29.0 {{geckoRelease(29)}}) for security reasons. For more information on installing PKCS11 modules, see [installing PKCS11 modules](/en-US/docs/PKCS11_Module_Installation). See {{ Bug(326628) }} for details on why the property was removed.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="eval"><em>objRef</em> = window.pkcs11
-</pre>
+    objRef = window.pkcs11
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre> window.pkcs11.addModule(sMod, secPath, 0, 0);
-</pre>
+     window.pkcs11.addModule(sMod, secPath, 0, 0);
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>See {{interface("nsIDOMPkcs11")}} for more information about how to manipulate <code>pkcs11</code> objects.</p>
+See {{interface("nsIDOMPkcs11")}} for more information about how to manipulate `pkcs11` objects.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of specification.</p>
+Not part of specification.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

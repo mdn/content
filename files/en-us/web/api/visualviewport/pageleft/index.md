@@ -2,33 +2,35 @@
 title: VisualViewport.pageLeft
 slug: Web/API/VisualViewport/pageLeft
 tags:
-- API
-- Property
-- Reference
-- Visual Viewport API
-- VisualViewport
-- pageLeft
-- viewport
+  - API
+  - Property
+  - Reference
+  - Visual Viewport API
+  - VisualViewport
+  - pageLeft
+  - viewport
 browser-compat: api.VisualViewport.pageLeft
 ---
-<p>{{APIRef("Visual Viewport")}}</p>
+{{APIRef("Visual Viewport")}}
 
-<p>The <strong><code>pageLeft</code></strong> read-only property of the
-  {{domxref("VisualViewport")}} interface returns the x coordinate of the left edge of the
-  visual viewport relative to the initial containing block origin, in CSS pixels.</p>
+The **`pageLeft`** read-only property of the
+{{domxref("VisualViewport")}} interface returns the x coordinate of the left edge of the
+visual viewport relative to the initial containing block origin, in CSS pixels.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>pageLeft</em> = VisualViewport.pageLeft</pre>
+```js
+var pageLeft = VisualViewport.pageLeft
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A double.</p>
+A double.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

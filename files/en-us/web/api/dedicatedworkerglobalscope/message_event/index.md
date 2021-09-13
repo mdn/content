@@ -5,68 +5,78 @@ tags:
   - Event
 browser-compat: api.DedicatedWorkerGlobalScope.message_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code>message</code> event is fired on a {{domxref('DedicatedWorkerGlobalScope')}} object when the worker receives a message from its parent (i.e. when the parent sends a message using <code><a href="/en-US/docs/Web/API/Worker/postMessage">Worker.postMessage()</a></code>).</p>
+The `message` event is fired on a {{domxref('DedicatedWorkerGlobalScope')}} object when the worker receives a message from its parent (i.e. when the parent sends a message using [`Worker.postMessage()`](/en-US/docs/Web/API/Worker/postMessage)).
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("MessageEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td><code><a href="/en-US/docs/Web/API/DedicatedWorkerGlobalScope/onmessage">onmessage</a></code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("MessageEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/API/DedicatedWorkerGlobalScope/onmessage"
+            >onmessage</a
+          ></code
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This code creates a new worker and sends it a message using <code><a href="/en-US/docs/Web/API/Worker/postMessage">Worker.postMessage()</a></code>:</p>
+This code creates a new worker and sends it a message using [`Worker.postMessage()`](/en-US/docs/Web/API/Worker/postMessage):
 
-<pre class="brush: js">const worker = new Worker("static/scripts/worker.js");
+```js
+const worker = new Worker("static/scripts/worker.js");
 
-worker.addEventListener('message', (event) =&gt; {
+worker.addEventListener('message', (event) => {
     console.log(`Received message from worker: ${event.data}`)
-});</pre>
+});
+```
 
-<p>The worker can listen for this message using <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code>:</p>
+The worker can listen for this message using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener):
 
-<pre class="brush: js">// inside static/scripts/worker.js
+```js
+// inside static/scripts/worker.js
 
-self.addEventListener('message', (event) =&gt; {
+self.addEventListener('message', (event) => {
     console.log(`Received message from parent: ${event.data}`);
-});</pre>
+});
+```
 
-<p>Alternatively, it could listen using the <code><a href="/en-US/docs/Web/API/DedicatedWorkerGlobalScope/onmessage">onmessage</a></code> event handler property:</p>
+Alternatively, it could listen using the [`onmessage`](/en-US/docs/Web/API/DedicatedWorkerGlobalScope/onmessage) event handler property:
 
-<pre class="brush: js">// static/scripts/worker.js
+```js
+// static/scripts/worker.js
 
-self.onmessage = (event) =&gt; {
+self.onmessage = (event) => {
     console.log(`Received message from parent: ${event.data}`);
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Related events: <code><a href="/en-US/docs/Web/API/DedicatedWorkerGlobalScope/messageerror_event">messageerror</a></code>.</li>
- <li><code><a href="/en-US/docs/Web/API/Worker/postMessage">Worker.postMessage()</a></code>.</li>
-</ul>
+- Related events: [`messageerror`](/en-US/docs/Web/API/DedicatedWorkerGlobalScope/messageerror_event).
+- [`Worker.postMessage()`](/en-US/docs/Web/API/Worker/postMessage).

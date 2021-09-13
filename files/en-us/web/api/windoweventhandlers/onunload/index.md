@@ -2,62 +2,57 @@
 title: WindowEventHandlers.onunload
 slug: Web/API/WindowEventHandlers/onunload
 tags:
-- API
-- Event Handler
-- MakeBrowserAgnostic
-- Property
-- Reference
-- WindowEventHandlers
+  - API
+  - Event Handler
+  - MakeBrowserAgnostic
+  - Property
+  - Reference
+  - WindowEventHandlers
 browser-compat: api.WindowEventHandlers.onunload
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>onunload</code></strong> property of the
-  {{domxref("WindowEventHandlers")}} mixin is the <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> for
-  processing {{Event("unload")}} events. These events fire when the window is unloading
-  its content and resources. The resource removal is processed <em>after</em> the
-  <code>unload</code> event occurs.</p>
+The **`onunload`** property of the
+{{domxref("WindowEventHandlers")}} mixin is the [event handler](/en-US/docs/Web/Events/Event_handlers) for
+processing {{Event("unload")}} events. These events fire when the window is unloading
+its content and resources. The resource removal is processed _after_ the
+`unload` event occurs.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Browsers equipped with pop-up blockers will ignore all
-    {{domxref("Window.open()")}} method calls in <code>onunload</code> event handler
-    functions.</p>
-</div>
+> **Note:** Browsers equipped with pop-up blockers will ignore all
+> {{domxref("Window.open()")}} method calls in `onunload` event handler
+> functions.
 
-<div class="notecard warning">
-  <p><strong>Warning:</strong> The <code>onunload</code> (and the
-    <code><a href="/en-US/docs/Web/API/Window/unload_event">unload</a></code> event
-    itself) are not the right features to use with
-    <code><a href="/en-US/docs/Web/API/Navigator/sendBeacon">sendBeacon()</a></code>.
-    Instead for
-    <code><a href="/en-US/docs/Web/API/Navigator/sendBeacon">sendBeacon()</a>,</code> use
-    the
-    <code><a href="/en-US/docs/Web/API/Document/visibilitychange_event">visibilitychange</a></code> and
-    <code><a href="/en-US/docs/Web/API/Window/pagehide_event">pagehide</a></code> events.
-    See discussion comments in the blog post <a
-      href="https://volument.com/blog/sendbeacon-is-broken#comments">Beacon API is
-      broken</a>.</p>
-</div>
+> **Warning:** The `onunload` (and the
+> [`unload`](/en-US/docs/Web/API/Window/unload_event) event
+> itself) are not the right features to use with
+> [`sendBeacon()`](/en-US/docs/Web/API/Navigator/sendBeacon).
+> Instead for
+> `sendBeacon(),` use
+> the
+> [`visibilitychange`](/en-US/docs/Web/API/Document/visibilitychange_event) and
+> [`pagehide`](/en-US/docs/Web/API/Window/pagehide_event) events.
+> See discussion comments in the blog post [Beacon API is
+> broken](https://volument.com/blog/sendbeacon-is-broken#comments).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">window.addEventListener("unload", function(event) { ... });
+```js
+window.addEventListener("unload", function(event) { ... });
 window.onunload = function(event) { ... };
-</pre>
+```
 
-<p>Typically, it is better to use {{domxref("EventTarget.addEventListener",
+Typically, it is better to use {{domxref("EventTarget.addEventListener",
   "window.addEventListener()")}} and the {{event("unload")}} event, instead of
-  <code>onunload</code>.</p>
+`onunload`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>In Firefox 1.5, using this event handler in your page prevents the browser from caching
-  the page in the in-memory bfcache. See <a
-    href="/en-US/Firefox/Releases/1.5/Using_Firefox_1.5_caching">Using Firefox 1.5
-    caching</a> for details.</p>
+In Firefox 1.5, using this event handler in your page prevents the browser from caching
+the page in the in-memory bfcache. See [Using Firefox 1.5
+caching](/en-US/Firefox/Releases/1.5/Using_Firefox_1.5_caching) for details.

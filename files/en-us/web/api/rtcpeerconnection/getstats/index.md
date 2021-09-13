@@ -18,121 +18,118 @@ tags:
   - rtc
 browser-compat: api.RTCPeerConnection.getStats
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The {{domxref("RTCPeerConnection")}} method
-    <code><strong>getStats()</strong></code> returns a promise which resolves with data
-    providing statistics about either the overall connection or about the specified
-    {{domxref("MediaStreamTrack")}}.</p>
+The {{domxref("RTCPeerConnection")}} method
+**`getStats()`** returns a promise which resolves with data
+providing statistics about either the overall connection or about the specified
+{{domxref("MediaStreamTrack")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>promise</em> = <em>rtcPeerConnection</em>.getStats(<em>selector</em>)
-</pre>
+```js
+promise = rtcPeerConnection.getStats(selector)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>selector</code> {{optional_inline}}</dt>
-  <dd>A {{domxref("MediaStreamTrack")}} for which to gather statistics. If this is
-    <code>null</code> (the default value), statistics will be gathered for the entire
-    {{domxref("RTCPeerConnection")}}.</dd>
-</dl>
+- `selector` {{optional_inline}}
+  - : A {{domxref("MediaStreamTrack")}} for which to gather statistics. If this is
+    `null` (the default value), statistics will be gathered for the entire
+    {{domxref("RTCPeerConnection")}}.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} which resolves with an {{domxref("RTCStatsReport")}} object
-  providing connection statistics. The contents of the report depend on the
-  <code>selector</code> as well as other details of the connection.</p>
+A {{jsxref("Promise")}} which resolves with an {{domxref("RTCStatsReport")}} object
+providing connection statistics. The contents of the report depend on the
+`selector` as well as other details of the connection.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>This method does not throw exceptions; instead, it rejects the returned promise with
-  one of the following errors:</p>
+This method does not throw exceptions; instead, it rejects the returned promise with
+one of the following errors:
 
-<dl>
-  <dt><code>InvalidAccessError</code></dt>
-  <dd>There is no {{domxref("RTCRtpSender")}} or {{domxref("RTCRtpReceiver")}} whose
-    <code>track</code> matches the specified <code>selector</code>, or
-    <code>selector</code> matches more than one sender or receiver.</dd>
-</dl>
+- `InvalidAccessError`
+  - : There is no {{domxref("RTCRtpSender")}} or {{domxref("RTCRtpReceiver")}} whose
+    `track` matches the specified `selector`, or
+    `selector` matches more than one sender or receiver.
 
-<h3 id="Obsolete_syntax">Obsolete syntax</h3>
+### Obsolete syntax
 
-<p>Previously, <code>getStats()</code> used success and failure callbacks to report the
-  results to you, instead of using a promise.</p>
+Previously, `getStats()` used success and failure callbacks to report the
+results to you, instead of using a promise.
 
-<p>This version of <code>getStats()</code> is obsolete; in addition, the data it returns
-  is entirely different from the current specification, and the form of that data was
-  never documented. This form of <code>getStats()</code> has been or will soon be removed
-  from most browsers; you <em>should not use it, and should update existing code to use
-    the new promise-based version</em>. Check the {{anch("Browser compatibility")}} table
-  to verify the state of this method.</p>
+This version of `getStats()` is obsolete; in addition, the data it returns
+is entirely different from the current specification, and the form of that data was
+never documented. This form of `getStats()` has been or will soon be removed
+from most browsers; you _should not use it, and should update existing code to use
+the new promise-based version_. Check the {{anch("Browser compatibility")}} table
+to verify the state of this method.
 
-<pre
-  class="brush: js"><em>promise</em> = <em>rtcPeerConnection</em>.getStats(<em>selector</em>, <em>successCallback</em>, <em>failureCallback</em>) {{deprecated_inline}}</pre>
+```js
+promise = rtcPeerConnection.getStats(selector, successCallback, failureCallback) {{deprecated_inline}}
+```
 
-<h4 id="Parameters_2">Parameters</h4>
+#### Parameters
 
-<dl>
-  <dt><code>selector</code> {{optional_inline}}</dt>
-  <dd>A {{domxref("MediaStreamTrack")}} for which to gather statistics. If this is
-    <code>null</code> (the default value), statistics will be gathered for the entire
-    {{domxref("RTCPeerConnection")}}.</dd>
-  <dt><code>successCallback</code></dt>
-  <dd>A callback function to call when the stats have been retrieved. The function
+- `selector` {{optional_inline}}
+  - : A {{domxref("MediaStreamTrack")}} for which to gather statistics. If this is
+    `null` (the default value), statistics will be gathered for the entire
+    {{domxref("RTCPeerConnection")}}.
+- `successCallback`
+  - : A callback function to call when the stats have been retrieved. The function
     receives as input a single parameter: an {{domxref("RTCStatsReport")}} with the
-    collected statistics. No output is expected from the function.</dd>
-  <dt><code>failureCallback</code></dt>
-  <dd>A function to call when an error occurs while attempting to collect statistics. The
+    collected statistics. No output is expected from the function.
+- `failureCallback`
+  - : A function to call when an error occurs while attempting to collect statistics. The
     callback receives as input the exception (a {{domxref("DOMException")}} object
     describing the error which occurred. No return value is expected from the callback.
-  </dd>
-</dl>
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example creates a periodic function using
-  {{domxref("setInterval()")}} that collects
-  statistics for an {{domxref("RTCPeerConnection")}} every second, generating an
-  HTML-formatted report and inserting it into a specific element in the DOM.</p>
+This example creates a periodic function using
+{{domxref("setInterval()")}} that collects
+statistics for an {{domxref("RTCPeerConnection")}} every second, generating an
+HTML-formatted report and inserting it into a specific element in the DOM.
 
-<pre class="brush: js">window.setInterval(function() {
-  myPeerConnection.getStats(null).then(stats =&gt; {
+```js
+window.setInterval(function() {
+  myPeerConnection.getStats(null).then(stats => {
     let statsOutput = "";
 
-    stats.forEach(report =&gt; {
-      statsOutput += `&lt;h2&gt;Report: ${report.type}&lt;/h2&gt;\n&lt;strong&gt;ID:&lt;/strong&gt; ${report.id}&lt;br&gt;\n` +
-                     `&lt;strong&gt;Timestamp:&lt;/strong&gt; ${report.timestamp}&lt;br&gt;\n`;
+    stats.forEach(report => {
+      statsOutput += `<h2>Report: ${report.type}</h2>\n<strong>ID:</strong> ${report.id}<br>\n` +
+                     `<strong>Timestamp:</strong> ${report.timestamp}<br>\n`;
 
       // Now the statistics for this report; we intentially drop the ones we
       // sorted to the top above
 
-      Object.keys(report).forEach(statName =&gt; {
-        if (statName !== "id" &amp;&amp; statName !== "timestamp" &amp;&amp; statName !== "type") {
-          statsOutput += `&lt;strong&gt;${statName}:&lt;/strong&gt; ${report[statName]}&lt;br&gt;\n`;
+      Object.keys(report).forEach(statName => {
+        if (statName !== "id" && statName !== "timestamp" && statName !== "type") {
+          statsOutput += `<strong>${statName}:</strong> ${report[statName]}<br>\n`;
         }
       });
     });
 
     document.querySelector(".stats-box").innerHTML = statsOutput;
   });
-}, 1000);</pre>
+}, 1000);
+```
 
-<p>This works by calling <code>getStats()</code>, then, when the promise is resolved,
-  iterates over the {{domxref("RTCStats")}} objects on the returned
-  {{domxref("RTCStatsReport")}}. A section is created for each report with a header and
-  all of the statistics below, with the type, ID, and timestamp handled specially to place
-  them at the top of the list.</p>
+This works by calling `getStats()`, then, when the promise is resolved,
+iterates over the {{domxref("RTCStats")}} objects on the returned
+{{domxref("RTCStatsReport")}}. A section is created for each report with a header and
+all of the statistics below, with the type, ID, and timestamp handled specially to place
+them at the top of the list.
 
-<p>Once the <a href="/en-US/docs/Web/HTML">HTML</a> for the report is generated, it is
-  injected into the element whose class is <code>"stats-box"</code> by setting its
-  {{domxref("Element.innerHTML", "innerHTML")}} property.</p>
+Once the [HTML](/en-US/docs/Web/HTML) for the report is generated, it is
+injected into the element whose class is `"stats-box"` by setting its
+{{domxref("Element.innerHTML", "innerHTML")}} property.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

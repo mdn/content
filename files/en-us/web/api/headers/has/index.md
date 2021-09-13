@@ -10,59 +10,60 @@ tags:
   - has
 browser-compat: api.Headers.has
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p>The <strong><code>has()</code></strong> method of the {{domxref("Headers")}} interface
-	returns a boolean stating whether a <code>Headers</code> object contains a certain
-	header.</p>
+The **`has()`** method of the {{domxref("Headers")}} interface
+returns a boolean stating whether a `Headers` object contains a certain
+header.
 
-<p>For security reasons, some headers can only be controlled by the user agent. These
-	headers include the {{Glossary("Forbidden_header_name", "forbidden header names", 1)}}
-	and {{Glossary("Forbidden_response_header_name", "forbidden response header names",
-	1)}}.</p>
+For security reasons, some headers can only be controlled by the user agent. These
+headers include the {{Glossary("Forbidden_header_name", "forbidden header names", 1)}}
+and {{Glossary("Forbidden_response_header_name", "forbidden response header names",
+	1)}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>myHeaders</em>.has(<em>name</em>);</pre>
+```js
+myHeaders.has(name);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-	<dt><code>name</code></dt>
-	<dd>The name of the HTTP header you want to test for. If the given name is not a valid
-		HTTP header name, this method throws a {{jsxref("TypeError")}}.</dd>
-</dl>
+- `name`
+  - : The name of the HTTP header you want to test for. If the given name is not a valid
+    HTTP header name, this method throws a {{jsxref("TypeError")}}.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A boolean value.</p>
+A boolean value.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>Creating an empty <code>Headers</code> object is simple:</p>
+Creating an empty `Headers` object is simple:
 
-<pre class="brush: js">var myHeaders = new Headers(); // Currently empty</pre>
+```js
+var myHeaders = new Headers(); // Currently empty
+```
 
-<p>You could add a header to this using {{domxref("Headers.append")}}, then test for the
-	existence of it using <code>has()</code>:</p>
+You could add a header to this using {{domxref("Headers.append")}}, then test for the
+existence of it using `has()`:
 
-<pre class="brush: js">myHeaders.append('Content-Type', 'image/jpeg');
+```js
+myHeaders.append('Content-Type', 'image/jpeg');
 myHeaders.has('Content-Type'); // Returns true
 myHeaders.has('Accept-Encoding'); // Returns false
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
-	<li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a></li>
-	<li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP](/en-US/docs/Web/HTTP)

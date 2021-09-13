@@ -2,50 +2,50 @@
 title: WebGL2RenderingContext.createSampler()
 slug: Web/API/WebGL2RenderingContext/createSampler
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGL2
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGL2
 browser-compat: api.WebGL2RenderingContext.createSampler
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <code><strong>WebGL2RenderingContext.createSampler()</strong></code> method of the
-  <a href="/en-US/docs/Web/API/WebGL_API">WebGL 2 API</a> creates and initializes
-  {{domxref("WebGLSampler")}} objects.</p>
+The **`WebGL2RenderingContext.createSampler()`** method of the
+[WebGL 2 API](/en-US/docs/Web/API/WebGL_API) creates and initializes
+{{domxref("WebGLSampler")}} objects.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">WebGLSampler <var>gl</var>.createSampler();
-</pre>
+```js
+WebGLSampler gl.createSampler();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("WebGLSampler")}} object.</p>
+A {{domxref("WebGLSampler")}} object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p><code>gl</code> must be a {{domxref("WebGL2RenderingContext")}}.
-  <code>WebGLSampler</code> objects are not available in WebGL 1.</p>
+`gl` must be a {{domxref("WebGL2RenderingContext")}}.
+`WebGLSampler` objects are not available in WebGL 1.
 
-<pre class="brush: js">var sampler = gl.createSampler();
-</pre>
+```js
+var sampler = gl.createSampler();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLSampler")}}</li>
-</ul>
+- {{domxref("WebGLSampler")}}

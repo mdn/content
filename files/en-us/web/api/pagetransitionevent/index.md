@@ -8,34 +8,35 @@ tags:
   - Reference
 browser-compat: api.PageTransitionEvent
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>PageTransitionEvent</code></strong> event object is available inside handler functions for the <code><a href="/en-US/docs/Web/API/Window/pageshow_event">pageshow</a></code> and <code><a href="/en-US/docs/Web/API/Window/pagehide_event">pagehide</a></code> events, fired when a document is being loaded or unloaded.</p>
+The **`PageTransitionEvent`** event object is available inside handler functions for the [`pageshow`](/en-US/docs/Web/API/Window/pageshow_event) and [`pagehide`](/en-US/docs/Web/API/Window/pagehide_event) events, fired when a document is being loaded or unloaded.
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface also inherits properties from its parent, {{domxref("Event")}}.</em></p>
+_This interface also inherits properties from its parent, {{domxref("Event")}}._
 
-<dl>
- <dt>{{domxref("PageTransitionEvent.persisted")}} {{readonlyInline}}</dt>
- <dd>Indicates if the document is loading from a cache.</dd>
-</dl>
+- {{domxref("PageTransitionEvent.persisted")}} {{readonlyInline}}
+  - : Indicates if the document is loading from a cache.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;body&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+```html
+<!DOCTYPE html>
+<html>
+<body>
+</body>
+</html>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">window.addEventListener('pageshow', myFunction);
+```js
+window.addEventListener('pageshow', myFunction);
 
 function myFunction(event) {
   if (event.persisted) {
@@ -44,19 +45,17 @@ function myFunction(event) {
     alert("The page was NOT cached by the browser");
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Window/pageshow_event"><code>pageshow</code> event</a></li>
- <li><a href="/en-US/docs/Web/API/Window/pagehide_event"><code>pagehide</code> event</a></li>
-</ul>
+- [`pageshow` event](/en-US/docs/Web/API/Window/pageshow_event)
+- [`pagehide` event](/en-US/docs/Web/API/Window/pagehide_event)

@@ -9,47 +9,32 @@ tags:
   - Non-standard
   - Reference
 ---
-<p>{{APIRef("File System API")}} {{non-standard_header}}</p>
+{{APIRef("File System API")}} {{non-standard_header}}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>The <code>FileRequest</code> interface extends the {{domxref("DOMRequest")}} interface to provide some extra properties necessary for the {{domxref("LockedFile")}} objects.</p>
+The `FileRequest` interface extends the {{domxref("DOMRequest")}} interface to provide some extra properties necessary for the {{domxref("LockedFile")}} objects.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em><code>FileRequest</code> also inherits properties from the <a href="/en-US/docs/Web/API/DOMRequest#properties"><code>DOMRequest</code></a> interface</em>.</p>
+_`FileRequest` also inherits properties from the [`DOMRequest`](/en-US/docs/Web/API/DOMRequest#properties) interface_.
 
-<dl>
- <dt>{{domxref("FileRequest.lockedFile")}} {{readonlyinline}}</dt>
- <dd>The {{domxref("LockedFile")}} object from which the request was started.</dd>
- <dt>{{domxref("FileRequest.onprogress")}}</dt>
- <dd>A callback handler called repeatedly while the operation represented by the <code>FileRequest</code> is in progress.</dd>
-</dl>
+- {{domxref("FileRequest.lockedFile")}} {{readonlyinline}}
+  - : The {{domxref("LockedFile")}} object from which the request was started.
+- {{domxref("FileRequest.onprogress")}}
+  - : A callback handler called repeatedly while the operation represented by the `FileRequest` is in progress.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p>None.</p>
+None.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('FileSystem')}}</td>
-   <td>{{Spec2('FileSystem')}}</td>
-   <td>Draft proposal.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                        | Status                           | Comment         |
+| ------------------------------------ | -------------------------------- | --------------- |
+| {{SpecName('FileSystem')}} | {{Spec2('FileSystem')}} | Draft proposal. |
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("IDBMutableFile")}}</li>
- <li>{{domxref("LockedFile")}}</li>
-</ul>
+- {{domxref("IDBMutableFile")}}
+- {{domxref("LockedFile")}}

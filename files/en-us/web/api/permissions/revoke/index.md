@@ -2,91 +2,82 @@
 title: Permissions.revoke()
 slug: Web/API/Permissions/revoke
 tags:
-- API
-- Experimental
-- Method
-- Permissions
-- Permissions API
-- Reference
-- revoke
+  - API
+  - Experimental
+  - Method
+  - Permissions
+  - Permissions API
+  - Reference
+  - revoke
 browser-compat: api.Permissions.revoke
 ---
-<p>{{APIRef("Permissions API")}}{{deprecated_header}}</p>
+{{APIRef("Permissions API")}}{{deprecated_header}}
 
-<p>The <strong><code>Permissions.revoke()</code></strong> method of the
-  {{domxref("Permissions")}} interface reverts a currently set permission back to its
-  default state, which is usually <code>prompt</code>.</p>
+The **`Permissions.revoke()`** method of the
+{{domxref("Permissions")}} interface reverts a currently set permission back to its
+default state, which is usually `prompt`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>This method is called on the global {{domxref("Permissions")}} object
-  {{domxref("navigator.permissions")}}.</p>
+This method is called on the global {{domxref("Permissions")}} object
+{{domxref("navigator.permissions")}}.
 
-<pre class="brush: js">var <em>revokePromise</em> = navigator.permissions.revoke(<em>descriptor</em>);
-</pre>
+```js
+var revokePromise = navigator.permissions.revoke(descriptor);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>descriptor</code></dt>
-  <dd>An object based on the <code>PermissionDescriptor</code> dictionary that sets
+- `descriptor`
+
+  - : An object based on the `PermissionDescriptor` dictionary that sets
     options for the operation consisting of a comma-separated list of name-value pairs.
     The available options are:
-    <ul>
-      <li><code>name</code>: The name of the API whose permissions you want to query.
-        Valid values are <code>'geolocation'</code>, <code>'midi'</code>,
-        <code>'notifications'</code>, and <code>'push'</code>.</li>
-      <li><code>userVisibleOnly</code>: (Push only, not supported in Firefox — see the
-        {{anch("Browser compatibility")}} section below) Indicates whether you want to
-        show a notification for every message or be able to send silent push
-        notifications. The default is <code>false</code>.</li>
-      <li><code>sysex</code>: (MIDI only) Indicates whether you need and/or receive system
-        exclusive messages. The default is <code>false</code>.</li>
-    </ul>
-  </dd>
-</dl>
 
-<div class="note">
-  <p><strong>Note:</strong> As of Firefox 44, the permissions for <a
-      href="/en-US/docs/Web/API/Notifications_API">Notifications</a> and <a
-      href="/en-US/docs/Web/API/Push_API">Push</a> have been merged. If permission is
-    granted (e.g. by the user, in the relevant permissions dialog),
-    <code>navigator.permissions.query()</code> will return <code>true</code> for both
-    <code>notifications</code> and <code>push</code>.</p>
-</div>
+    - `name`: The name of the API whose permissions you want to query.
+      Valid values are `'geolocation'`, `'midi'`,
+      `'notifications'`, and `'push'`.
+    - `userVisibleOnly`: (Push only, not supported in Firefox — see the
+      {{anch("Browser compatibility")}} section below) Indicates whether you want to
+      show a notification for every message or be able to send silent push
+      notifications. The default is `false`.
+    - `sysex`: (MIDI only) Indicates whether you need and/or receive system
+      exclusive messages. The default is `false`.
 
-<div class="note">
-  <p><strong>Note:</strong> The <code>persistent-storage</code> permission allows an
-    origin to use a persistent box (i.e <a
-      href="https://storage.spec.whatwg.org/#persistence">persistent storage</a>) for its
-    storage, as per the <a href="https://storage.spec.whatwg.org/">Storage API</a>.</p>
-</div>
+> **Note:** As of Firefox 44, the permissions for [Notifications](/en-US/docs/Web/API/Notifications_API) and [Push](/en-US/docs/Web/API/Push_API) have been merged. If permission is
+> granted (e.g. by the user, in the relevant permissions dialog),
+> `navigator.permissions.query()` will return `true` for both
+> `notifications` and `push`.
 
-<h3 id="Returns">Returns</h3>
+> **Note:** The `persistent-storage` permission allows an
+> origin to use a persistent box (i.e [persistent storage](https://storage.spec.whatwg.org/#persistence)) for its
+> storage, as per the [Storage API](https://storage.spec.whatwg.org/).
 
-<p>A {{jsxref("Promise")}} that calls its fulfillment handler with a
-  {{domxref("PermissionStatus")}} object indicating the result of the request.</p>
+### Returns
 
-<h3 id="Exceptions">Exceptions</h3>
+A {{jsxref("Promise")}} that calls its fulfillment handler with a
+{{domxref("PermissionStatus")}} object indicating the result of the request.
 
-<dl>
-  <dt><code>TypeError</code></dt>
-  <dd>Retrieving the <code>PermissionDescriptor</code> information failed in some way, or
-    the permission doesn't exist or is currently unsupported (e.g. <code>midi</code>, or
-    <code>push</code> with <code>userVisibleOnly</code>).</dd>
-</dl>
+### Exceptions
 
-<h2 id="Example">Example</h2>
+- `TypeError`
+  - : Retrieving the `PermissionDescriptor` information failed in some way, or
+    the permission doesn't exist or is currently unsupported (e.g. `midi`, or
+    `push` with `userVisibleOnly`).
 
-<p>This function can be used by an app to request that its own Geolocation API permission
-  be revoked.</p>
+## Example
 
-<pre class="brush: js">function revokePermission() {
+This function can be used by an app to request that its own Geolocation API permission
+be revoked.
+
+```js
+function revokePermission() {
   navigator.permissions.revoke({name:'geolocation'}).then(function(result) {
     report(result.state);
   });
-}</pre>
+}
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

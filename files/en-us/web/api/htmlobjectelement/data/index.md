@@ -2,36 +2,37 @@
 title: HTMLObjectElement.data
 slug: Web/API/HTMLObjectElement/data
 tags:
-- API
-- HTML DOM
-- HTMLObjectElement
-- NeedsExample
-- Property
-- Reference
-- data
+  - API
+  - HTML DOM
+  - HTMLObjectElement
+  - NeedsExample
+  - Property
+  - Reference
+  - data
 browser-compat: api.HTMLObjectElement.data
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>data</code></strong> property of the
-  {{domxref("HTMLObjectElement")}} interface returns a {{domxref("DOMString")}} that
-  reflects the {{htmlattrxref("data", "object")}} HTML attribute, specifying the address
-  of a resource's data.</p>
+The **`data`** property of the
+{{domxref("HTMLObjectElement")}} interface returns a {{domxref("DOMString")}} that
+reflects the {{htmlattrxref("data", "object")}} HTML attribute, specifying the address
+of a resource's data.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var data = HTMLObjectElement.data;
+```js
+var data = HTMLObjectElement.data;
 HTMLObjectElement.data;
-</pre>
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref('DOMString')}}.</p>
+A {{domxref('DOMString')}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,59 +2,56 @@
 title: WebGLRenderingContext.isShader()
 slug: Web/API/WebGLRenderingContext/isShader
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.isShader
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.isShader()</code></strong> method of the <a
-    href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> returns <code>true</code> if the
-  passed {{domxref("WebGLShader")}} is valid, <code>false</code> otherwise.</p>
+The **`WebGLRenderingContext.isShader()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) returns `true` if the
+passed {{domxref("WebGLShader")}} is valid, `false` otherwise.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">GLboolean <var>gl</var>.isShader(<var>shader</var>);
-</pre>
+```js
+GLboolean gl.isShader(shader);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>shader</dt>
-  <dd>A {{domxref("WebGLShader")}} to check.</dd>
-</dl>
+- shader
+  - : A {{domxref("WebGLShader")}} to check.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether or not the shader is valid.</p>
+A {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether or not the shader is valid.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Checking_a_shader">Checking a shader</h3>
+### Checking a shader
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 var shader = gl.createShader(gl.VERTEX_SHADER);
 
 // ...
 
 gl.isShader(shader);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.createShader()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.deleteShader()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.createShader()")}}
+- {{domxref("WebGLRenderingContext.deleteShader()")}}

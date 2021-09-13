@@ -9,35 +9,35 @@ tags:
   - CookieStoreManager
 browser-compat: api.CookieStoreManager.getSubscriptions
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("Cookie Store")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("Cookie Store")}}
 
-<p>The <strong><code>getSubscriptions()</code></strong> method of the {{domxref("CookieStoreManager")}} interface returns a list of all the cookie change subscriptions for this {{domxref("ServiceWorkerRegistration")}}.</p>
+The **`getSubscriptions()`** method of the {{domxref("CookieStoreManager")}} interface returns a list of all the cookie change subscriptions for this {{domxref("ServiceWorkerRegistration")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox notranslate">let promise = registration.cookies.getSubscriptions();</pre>
+    let promise = registration.cookies.getSubscriptions();
 
-<h3 id="Returns">Return value</h3>
+### Return value
 
-<p>A {{jsxref("promise")}} that resolves with a list of objects, each containing:</p>
+A {{jsxref("promise")}} that resolves with a list of objects, each containing:
 
-<dl>
-  <dt><code>name</code></dt>
-  <dd>A {{domxref("USVString")}} with the name of a cookie.</dd>
-  <dt><code>url</code></dt>
-  <dd>A {{domxref("USVString")}} with the url of the scope used to subscribe to the cookie(s).</dd>
-</dl>
+- `name`
+  - : A {{domxref("USVString")}} with the name of a cookie.
+- `url`
+  - : A {{domxref("USVString")}} with the url of the scope used to subscribe to the cookie(s).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>If the {{domxref("ServiceWorkerRegistration")}} represented by <code>registration</code> has subscribed to any cookie change events <code>subscriptions</code> will resolve to a list of objects containing the name and url of those cookies.</p>
+If the {{domxref("ServiceWorkerRegistration")}} represented by `registration` has subscribed to any cookie change events `subscriptions` will resolve to a list of objects containing the name and url of those cookies.
 
-<pre class="brush: js">const subscriptions = await registration.cookies.getSubscriptions();</pre>
+```js
+const subscriptions = await registration.cookies.getSubscriptions();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

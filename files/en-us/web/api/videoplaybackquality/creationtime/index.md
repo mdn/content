@@ -2,65 +2,65 @@
 title: VideoPlaybackQuality.creationTime
 slug: Web/API/VideoPlaybackQuality/creationTime
 tags:
-- API
-- Experimental
-- Media
-- Media Playback Quality
-- Media Playback Quality API
-- Property
-- Quality
-- Reference
-- Video
-- VideoPlaybackQuality
-- creationTime
+  - API
+  - Experimental
+  - Media
+  - Media Playback Quality
+  - Media Playback Quality API
+  - Property
+  - Quality
+  - Reference
+  - Video
+  - VideoPlaybackQuality
+  - creationTime
 browser-compat: api.VideoPlaybackQuality.creationTime
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p>The read-only <strong><code>creationTime</code></strong> property on the
-	{{domxref("VideoPlaybackQuality")}} interface reports the number of milliseconds since
-	the browsing context was created this quality sample was recorded.</p>
+The read-only **`creationTime`** property on the
+{{domxref("VideoPlaybackQuality")}} interface reports the number of milliseconds since
+the browsing context was created this quality sample was recorded.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-	class="brush: js"><em>value</em> = <em>videoPlaybackQuality</em>.creationTime;</pre>
+```js
+value = videoPlaybackQuality.creationTime;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMHighResTimeStamp")}} object which indicates the number of milliseconds
-	that elapased between the time the browsing context was created and the time at which
-	this sample of the video quality was obtained.</p>
+A {{domxref("DOMHighResTimeStamp")}} object which indicates the number of milliseconds
+that elapased between the time the browsing context was created and the time at which
+this sample of the video quality was obtained.
 
-<p>For details on how the time is determined, see {{domxref("Performance.now()")}}.</p>
+For details on how the time is determined, see {{domxref("Performance.now()")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example calls <code>getVideoPlaybackQuality()</code> to obtain a
-	{{domxref("VideoPlaybackQuality")}} object, then determines what percentage of frames
-	have been lost by either corruption or being dropped. If that exceeds 10% (0.1), a
-	function called <code>lostFramesThresholdExceeded()</code> is called to, perhaps,
-	update a quality indicator to show an increase in frame loss.</p>
+This example calls `getVideoPlaybackQuality()` to obtain a
+{{domxref("VideoPlaybackQuality")}} object, then determines what percentage of frames
+have been lost by either corruption or being dropped. If that exceeds 10% (0.1), a
+function called `lostFramesThresholdExceeded()` is called to, perhaps,
+update a quality indicator to show an increase in frame loss.
 
-<pre class="brush: js">var videoElem = document.getElementById("my_vid");
+```js
+var videoElem = document.getElementById("my_vid");
 var quality = videoElem.getVideoPlaybackQuality();
 
-if ((quality.corruptedVideoFrames + quality.droppedVideoFrames)/quality.totalVideoFrames &gt; 0.1) {
+if ((quality.corruptedVideoFrames + quality.droppedVideoFrames)/quality.totalVideoFrames > 0.1) {
   lostFramesThresholdExceeded();
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>The {{domxref("HTMLVideoElement.getVideoPlaybackQuality()")}} method, which
-		returns <code>VideoPlaybackQuality</code> objects</li>
-</ul>
+- The {{domxref("HTMLVideoElement.getVideoPlaybackQuality()")}} method, which
+  returns `VideoPlaybackQuality` objects

@@ -2,46 +2,44 @@
 title: IDBVersionChangeEvent.newVersion
 slug: Web/API/IDBVersionChangeEvent/newVersion
 tags:
-- API
-- Database
-- IDBVersionChangeEvent
-- IndexedDB
-- Property
-- Reference
-- Storage
-- newVersion
+  - API
+  - Database
+  - IDBVersionChangeEvent
+  - IndexedDB
+  - Property
+  - Reference
+  - Storage
+  - newVersion
 browser-compat: api.IDBVersionChangeEvent.newVersion
 ---
-<p>{{ APIRef("IndexedDB") }}</p>
+{{ APIRef("IndexedDB") }}
 
-<div>
-  <p>The <strong><code>newVersion</code></strong> read-only property of the
-    {{domxref("IDBVersionChangeEvent")}} interface returns the new version number of the
-    database.</p>
+The **`newVersion`** read-only property of the
+{{domxref("IDBVersionChangeEvent")}} interface returns the new version number of the
+database.
 
-  <p>{{AvailableInWorkers}}</p>
-</div>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var newVersion = IDBVersionChangeEvent.newVersion</pre>
+```js
+var newVersion = IDBVersionChangeEvent.newVersion
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A <a href="/en-US/docs/NSPR_API_Reference/Long_Long_(64-bit)_Integers">64-bit
-    integer</a>.</p>
+A [64-bit
+integer](</en-US/docs/NSPR_API_Reference/Long_Long_(64-bit)_Integers>).
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In the following code snippet, we make a request to open a database, and include
-  handlers for the success and error cases. These events are fired via the custom
-  <code>IDBVersionChangeEvent</code> interface. For a full working example, see our <a
-    href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
-    Notifications</a> app (<a class="external"
-    href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</p>
+In the following code snippet, we make a request to open a database, and include
+handlers for the success and error cases. These events are fired via the custom
+`IDBVersionChangeEvent` interface. For a full working example, see our [To-do
+Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) app ([view example live](https://mdn.github.io/to-do-notifications/).)
 
-<pre class="brush:js">var note = document.querySelector("ul");
+```js
+var note = document.querySelector("ul");
 
 // In the following line, you should include the prefixes of
 // implementations you want to test.
@@ -58,37 +56,33 @@ var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // these two event handlers act on the database being opened
 DBOpenRequest.onerror = function(event) {
-  note.innerHTML += '&lt;li&gt;Error loading database.&lt;/li&gt;';
+  note.innerHTML += '<li>Error loading database.</li>';
 };
 
 DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '&lt;li&gt;Database initialised.&lt;/li&gt;';
+  note.innerHTML += '<li>Database initialised.</li>';
 
   // store the result of opening the database in the db variable.
   // This is used a lot later on, for opening transactions and suchlike.
   db = DBOpenRequest.result;
 };
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
-  <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
-  <li>Using transactions: {{domxref("IDBTransaction")}}</li>
-  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
-  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
-  <li>Using cursors: {{domxref("IDBCursor")}}</li>
-  <li>Reference example: <a class="external"
-      href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
-      Notifications</a> (<a class="external"
-      href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do
+  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

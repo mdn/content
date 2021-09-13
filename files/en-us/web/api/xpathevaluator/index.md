@@ -13,57 +13,55 @@ tags:
   - XPathEvaluator
 browser-compat: api.XPathEvaluator
 ---
-<p>{{APIRef("DOM XPath")}}</p>
+{{APIRef("DOM XPath")}}
 
-<p>The <code>XPathEvaluator</code> interface allows to compile and evaluate {{Glossary("XPath")}} expressions.</p>
+The `XPathEvaluator` interface allows to compile and evaluate {{Glossary("XPath")}} expressions.
 
-<p>It is implemented by the {{domxref("Document")}} interface.</p>
+It is implemented by the {{domxref("Document")}} interface.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{DOMxRef("XPathEvaluator.createExpression()")}}</dt>
- <dd>Creates a parsed XPath expression with resolved namespaces.</dd>
- <dt>{{DOMxRef("XPathEvaluator.createNSResolver()")}}</dt>
- <dd>Adapts any DOM node to resolve namespaces allowing the XPath expression to be evaluated relative to the context of the node where it appeared within the document.</dd>
- <dt>{{DOMxRef("XPathEvaluator.evaluate()")}}</dt>
- <dd>Evaluates an XPath expression string and returns a result of the specified type if possible.</dd>
-</dl>
+- {{DOMxRef("XPathEvaluator.createExpression()")}}
+  - : Creates a parsed XPath expression with resolved namespaces.
+- {{DOMxRef("XPathEvaluator.createNSResolver()")}}
+  - : Adapts any DOM node to resolve namespaces allowing the XPath expression to be evaluated relative to the context of the node where it appeared within the document.
+- {{DOMxRef("XPathEvaluator.evaluate()")}}
+  - : Evaluates an XPath expression string and returns a result of the specified type if possible.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example shows the use of the <code>XPathEvaluator</code> interface.</p>
+The following example shows the use of the `XPathEvaluator` interface.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;XPath example&lt;/div&gt;
-&lt;div&gt;Number of &amp;lt;div&amp;gt;s: &lt;output&gt;&lt;/output&gt;&lt;/div&gt;
-</pre>
+```html
+<div>XPath example</div>
+<div>Number of &lt;div&gt;s: <output></output></div>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">var xpath = "//div";
+```js
+var xpath = "//div";
 var evaluator = new XPathEvaluator();
 var expression = evaluator.createExpression("//div");
 var result = expression.evaluate(document, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE);
 document.querySelector("output").textContent = result.snapshotLength;
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Example', 400, 70)}}</p>
+{{EmbedLiveSample('Example', 400, 70)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("document.createExpression()")}}</li>
- <li>{{domxref("XPathExpression")}}</li>
-</ul>
+- {{domxref("document.createExpression()")}}
+- {{domxref("XPathExpression")}}

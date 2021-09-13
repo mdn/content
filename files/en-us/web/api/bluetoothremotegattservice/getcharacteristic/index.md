@@ -12,38 +12,36 @@ tags:
   - getCharacteristic()
 browser-compat: api.BluetoothRemoteGATTService.getCharacteristic
 ---
-<p>{{SeeCompatTable}}</p>
+{{SeeCompatTable}}
 
-<p>The <strong><code>BluetoothGATTService.getCharacteristic()</code></strong> method
-  returns a {{jsxref("Promise")}} to an instance of
-  {{domxref("BluetoothRemoteGATTCharacteristic")}} for a given universally unique identifier
-  (UUID). </p>
+The **`BluetoothGATTService.getCharacteristic()`** method
+returns a {{jsxref("Promise")}} to an instance of
+{{domxref("BluetoothRemoteGATTCharacteristic")}} for a given universally unique identifier
+(UUID).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">bluetoothGATTServiceInstance.getCharacteristic(characteristic).then(function(BluetoothGATTCharacteristic) { ... } )</pre>
+```js
+bluetoothGATTServiceInstance.getCharacteristic(characteristic).then(function(BluetoothGATTCharacteristic) { ... } )
+```
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A {{jsxref("Promise")}} to an instance of {{domxref("BluetoothRemoteGATTCharacteristic")}}
-</p>
+A {{jsxref("Promise")}} to an instance of {{domxref("BluetoothRemoteGATTCharacteristic")}}
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>characteristic</dt>
-  <dd>The UUID of a characteristic, for
-    example <code>'00002a37-0000-1000-8000-00805f9b34fb'</code> for the Heart Rate
-    Measurement characteristic.</dd>
-</dl>
+- characteristic
+  - : The UUID of a characteristic, for
+    example `'00002a37-0000-1000-8000-00805f9b34fb'` for the Heart Rate
+    Measurement characteristic.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<div>{{APIRef("Web Bluetooth")}}</div>
+{{APIRef("Web Bluetooth")}}

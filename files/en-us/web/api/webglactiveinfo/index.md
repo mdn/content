@@ -7,47 +7,42 @@ tags:
   - WebGL
 browser-compat: api.WebGLActiveInfo
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong>WebGLActiveInfo</strong> interface is part of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> and represents the information returned by calling the {{domxref("WebGLRenderingContext.getActiveAttrib()")}} and {{domxref("WebGLRenderingContext.getActiveUniform()")}} methods.</p>
+The **WebGLActiveInfo** interface is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and represents the information returned by calling the {{domxref("WebGLRenderingContext.getActiveAttrib()")}} and {{domxref("WebGLRenderingContext.getActiveUniform()")}} methods.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("WebGLActiveInfo.name")}}</dt>
- <dd>The read-only name of the requested variable.</dd>
- <dt>{{domxref("WebGLActiveInfo.size")}}</dt>
- <dd>The read-only size of the requested variable.</dd>
- <dt>{{domxref("WebGLActiveInfo.type")}}</dt>
- <dd>The read-only type of the requested variable.</dd>
-</dl>
+- {{domxref("WebGLActiveInfo.name")}}
+  - : The read-only name of the requested variable.
+- {{domxref("WebGLActiveInfo.size")}}
+  - : The read-only size of the requested variable.
+- {{domxref("WebGLActiveInfo.type")}}
+  - : The read-only type of the requested variable.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>A <code>WebGLActiveInfo</code> object is returned by:</p>
+A `WebGLActiveInfo` object is returned by:
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.getActiveAttrib()")}}</li>
- <li>{{domxref("WebGLRenderingContext.getActiveUniform()")}} or</li>
- <li>{{domxref("WebGL2RenderingContext.getTransformFeedbackVarying()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.getActiveAttrib()")}}
+- {{domxref("WebGLRenderingContext.getActiveUniform()")}} or
+- {{domxref("WebGL2RenderingContext.getTransformFeedbackVarying()")}}
 
-<pre class="brush: js">WebGLActiveInfo? getActiveAttrib(WebGLProgram? program, GLuint index);
+```js
+WebGLActiveInfo? getActiveAttrib(WebGLProgram? program, GLuint index);
 WebGLActiveInfo? getActiveUniform(WebGLProgram? program, GLuint index);
 WebGLActiveInfo? getTransformFeedbackVarying(WebGLProgram? program, GLuint index)
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.getActiveAttrib()")}}</li>
- <li>{{domxref("WebGLRenderingContext.getActiveUniform()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.getActiveAttrib()")}}
+- {{domxref("WebGLRenderingContext.getActiveUniform()")}}

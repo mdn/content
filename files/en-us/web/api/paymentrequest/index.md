@@ -15,62 +15,54 @@ tags:
   - Secure context
 browser-compat: api.PaymentRequest
 ---
-<div>{{securecontext_header}}{{APIRef("Payment Request API")}}</div>
+{{securecontext_header}}{{APIRef("Payment Request API")}}
 
-<p>The <a href="/en-US/docs/Web/API/Payment_Request_API">Payment Request API's</a> <strong><code>PaymentRequest</code></strong> interface is the primary access point into the API, and lets web content and apps accept payments from the end user on behalf of the operator of the site or the publisher of the app.</p>
+The [Payment Request API's](/en-US/docs/Web/API/Payment_Request_API) **`PaymentRequest`** interface is the primary access point into the API, and lets web content and apps accept payments from the end user on behalf of the operator of the site or the publisher of the app.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref('PaymentRequest.PaymentRequest()','PaymentRequest()')}} {{securecontext_inline}}</dt>
- <dd>Creates a new <code>PaymentRequest</code> object.</dd>
-</dl>
+- {{domxref('PaymentRequest.PaymentRequest()','PaymentRequest()')}} {{securecontext_inline}}
+  - : Creates a new `PaymentRequest` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref('PaymentRequest.id')}} {{readonlyinline}}{{securecontext_inline}}</dt>
- <dd>An unique identifier for a particular <code>PaymentRequest</code>, which can be set via <code>details.id</code>. When none is set, it defaults to a UUID.</dd>
- <dt>{{domxref('PaymentRequest.shippingAddress')}} {{readonlyinline}} {{securecontext_inline}}{{deprecated_inline}}</dt>
- <dd>If requested via payment options, returns the shipping address chosen by the user for the purposes of calculating shipping. This property is only populated if the constructor is called with the <code>requestShipping</code> flag set to true. Additionally, in some browsers, the parts of the address will be redacted for privacy until the user indicates they are ready to complete the transaction (i.e., they hit "Pay").</dd>
- <dt>{{domxref('PaymentRequest.shippingOption')}} {{readonlyinline}} {{securecontext_inline}}{{deprecated_inline}}</dt>
- <dd>Returns the identifier of the selected shipping option. This property is only populated if the constructor is called with the <code>requestShipping</code> flag set to true.</dd>
- <dt>{{domxref('PaymentRequest.shippingType')}} {{readonlyinline}} {{securecontext_inline}}{{deprecated_inline}}</dt>
- <dd>Returns the type of shipping used to fulfill the transaction. This will be one of <code>shipping</code>, <code>delivery</code>, <code>pickup</code>, or <code>null</code> if a value was not provided in the constructor.</dd>
-</dl>
+- {{domxref('PaymentRequest.id')}} {{readonlyinline}}{{securecontext_inline}}
+  - : An unique identifier for a particular `PaymentRequest`, which can be set via `details.id`. When none is set, it defaults to a UUID.
+- {{domxref('PaymentRequest.shippingAddress')}} {{readonlyinline}} {{securecontext_inline}}{{deprecated_inline}}
+  - : If requested via payment options, returns the shipping address chosen by the user for the purposes of calculating shipping. This property is only populated if the constructor is called with the `requestShipping` flag set to true. Additionally, in some browsers, the parts of the address will be redacted for privacy until the user indicates they are ready to complete the transaction (i.e., they hit "Pay").
+- {{domxref('PaymentRequest.shippingOption')}} {{readonlyinline}} {{securecontext_inline}}{{deprecated_inline}}
+  - : Returns the identifier of the selected shipping option. This property is only populated if the constructor is called with the `requestShipping` flag set to true.
+- {{domxref('PaymentRequest.shippingType')}} {{readonlyinline}} {{securecontext_inline}}{{deprecated_inline}}
+  - : Returns the type of shipping used to fulfill the transaction. This will be one of `shipping`, `delivery`, `pickup`, or `null` if a value was not provided in the constructor.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref('PaymentRequest.canMakePayment()')}} {{securecontext_inline}}</dt>
- <dd>Indicates whether the <code>PaymentRequest</code> object can make a payment before calling <code>show()</code>.</dd>
- <dt>{{domxref('PaymentRequest.show()')}} {{securecontext_inline}}</dt>
- <dd>Causes the user agent to begin the user interaction for the payment request.</dd>
- <dt>{{domxref('PaymentRequest.abort()')}} {{securecontext_inline}}</dt>
- <dd>Causes the user agent to end the payment request and to remove any user interface that might be shown.</dd>
-</dl>
+- {{domxref('PaymentRequest.canMakePayment()')}} {{securecontext_inline}}
+  - : Indicates whether the `PaymentRequest` object can make a payment before calling `show()`.
+- {{domxref('PaymentRequest.show()')}} {{securecontext_inline}}
+  - : Causes the user agent to begin the user interaction for the payment request.
+- {{domxref('PaymentRequest.abort()')}} {{securecontext_inline}}
+  - : Causes the user agent to end the payment request and to remove any user interface that might be shown.
 
-<h2 id="Events">Events</h2>
+## Events
 
-<dl>
- <dt>{{domxref("PaymentRequest.merchantvalidation_event", "merchantvalidation")}} {{securecontext_inline}}</dt>
- <dd>With some payment handlers (e.g., Apple Pay), this event handler is called to handle the {{event("merchantvalidation")}} event, which is dispatched when the user agent requires that the merchant validate that the merchant or vendor requesting payment is legitimate.<br>
- Also available using the {{domxref("PaymentRequest.onmerchantvalidation", "onmerchantvalidation")}} event handler property.</dd>
- <dt>{{domxref("PaymentRequest.paymentmethodchange_event", "paymentmethodchange")}} {{securecontext_inline}}</dt>
- <dd>With some payment handlers (e.g., Apple Pay), dispatched whenever the user changes payment instrument, like switching from a credit card to a debit card.<br>
- Also available using the {{domxref("PaymentRequest.onpaymentmethodchange", "onpaymentmethodchange")}} event handler property.</dd>
- <dt>{{domxref("PaymentRequest.shippingaddresschange_event", "shippingaddresschange")}} {{securecontext_inline}}{{deprecated_inline}}</dt>
- <dd>Dispatched whenever the user changes their shipping address.<br>
- Also available using the {{domxref("PaymentRequest.onshippingaddresschange", "onshippingaddresschange")}} event handler property.</dd>
- <dt>{{domxref("PaymentRequest.shippingoptionchange_event", "shippingoptionchange")}} {{securecontext_inline}}{{deprecated_inline}}</dt>
- <dd>Dispatched whenever the user changes a shipping option.<br>
- Also available using the {{domxref("PaymentRequest.onshippingoptionchange", "onshippingoptionchange")}} event handler property.</dd>
-</dl>
+- {{domxref("PaymentRequest.merchantvalidation_event", "merchantvalidation")}} {{securecontext_inline}}
+  - : With some payment handlers (e.g., Apple Pay), this event handler is called to handle the {{event("merchantvalidation")}} event, which is dispatched when the user agent requires that the merchant validate that the merchant or vendor requesting payment is legitimate.
+    Also available using the {{domxref("PaymentRequest.onmerchantvalidation", "onmerchantvalidation")}} event handler property.
+- {{domxref("PaymentRequest.paymentmethodchange_event", "paymentmethodchange")}} {{securecontext_inline}}
+  - : With some payment handlers (e.g., Apple Pay), dispatched whenever the user changes payment instrument, like switching from a credit card to a debit card.
+    Also available using the {{domxref("PaymentRequest.onpaymentmethodchange", "onpaymentmethodchange")}} event handler property.
+- {{domxref("PaymentRequest.shippingaddresschange_event", "shippingaddresschange")}} {{securecontext_inline}}{{deprecated_inline}}
+  - : Dispatched whenever the user changes their shipping address.
+    Also available using the {{domxref("PaymentRequest.onshippingaddresschange", "onshippingaddresschange")}} event handler property.
+- {{domxref("PaymentRequest.shippingoptionchange_event", "shippingoptionchange")}} {{securecontext_inline}}{{deprecated_inline}}
+  - : Dispatched whenever the user changes a shipping option.
+    Also available using the {{domxref("PaymentRequest.onshippingoptionchange", "onshippingoptionchange")}} event handler property.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

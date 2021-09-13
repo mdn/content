@@ -11,93 +11,78 @@ tags:
   - speech
   - synthesis
 ---
-<div>{{DefaultAPISidebar("Web Speech API")}}{{SeeCompatTable}}</div>
+{{DefaultAPISidebar("Web Speech API")}}{{SeeCompatTable}}
 
-<p>The <strong>Web Speech API</strong> enables you to incorporate voice data into web apps. The Web Speech API has two parts: <code>SpeechSynthesis</code> (Text-to-Speech), and <code>SpeechRecognition</code> (Asynchronous Speech Recognition.)</p>
+The **Web Speech API** enables you to incorporate voice data into web apps. The Web Speech API has two parts: `SpeechSynthesis` (Text-to-Speech), and `SpeechRecognition` (Asynchronous Speech Recognition.)
 
-<h2 id="Web_Speech_Concepts_and_Usage">Web Speech Concepts and Usage</h2>
+## Web Speech Concepts and Usage
 
-<p>The Web Speech API makes web apps able to handle voice data. There are two components to this API:</p>
+The Web Speech API makes web apps able to handle voice data. There are two components to this API:
 
-<ul>
- <li>Speech recognition is accessed via the {{domxref("SpeechRecognition")}} interface, which provides the ability to recognize voice context from an audio input (normally via the device's default speech recognition service) and respond appropriately. Generally you'll use the interface's constructor to create a new {{domxref("SpeechRecognition")}} object, which has a number of event handlers available for detecting when speech is input through the device's microphone. The {{domxref("SpeechGrammar")}} interface represents a container for a particular set of grammar that your app should recognize. Grammar is defined using <a href="https://www.w3.org/TR/jsgf/">JSpeech Grammar Format</a> (<strong>JSGF</strong>.)</li>
- <li>Speech synthesis is accessed via the {{domxref("SpeechSynthesis")}} interface, a text-to-speech component that allows programs to read out their text content (normally via the device's default speech synthesiser.) Different voice types are represented by {{domxref("SpeechSynthesisVoice")}} objects, and different parts of text that you want to be spoken are represented by {{domxref("SpeechSynthesisUtterance")}} objects. You can get these spoken by passing them to the {{domxref("SpeechSynthesis.speak()")}} method.</li>
-</ul>
+- Speech recognition is accessed via the {{domxref("SpeechRecognition")}} interface, which provides the ability to recognize voice context from an audio input (normally via the device's default speech recognition service) and respond appropriately. Generally you'll use the interface's constructor to create a new {{domxref("SpeechRecognition")}} object, which has a number of event handlers available for detecting when speech is input through the device's microphone. The {{domxref("SpeechGrammar")}} interface represents a container for a particular set of grammar that your app should recognize. Grammar is defined using [JSpeech Grammar Format](https://www.w3.org/TR/jsgf/) (**JSGF**.)
+- Speech synthesis is accessed via the {{domxref("SpeechSynthesis")}} interface, a text-to-speech component that allows programs to read out their text content (normally via the device's default speech synthesiser.) Different voice types are represented by {{domxref("SpeechSynthesisVoice")}} objects, and different parts of text that you want to be spoken are represented by {{domxref("SpeechSynthesisUtterance")}} objects. You can get these spoken by passing them to the {{domxref("SpeechSynthesis.speak()")}} method.
 
-<p>For more details on using these features, see <a href="/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API">Using the Web Speech API</a>.</p>
+For more details on using these features, see [Using the Web Speech API](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API).
 
-<h2 id="Web_Speech_API_Interfaces">Web Speech API Interfaces</h2>
+## Web Speech API Interfaces
 
-<h3 id="Speech_recognition">Speech recognition</h3>
+### Speech recognition
 
-<dl>
- <dt>{{domxref("SpeechRecognition")}}</dt>
- <dd>The controller interface for the recognition service; this also handles the {{domxref("SpeechRecognitionEvent")}} sent from the recognition service.</dd>
- <dt>{{domxref("SpeechRecognitionAlternative")}}</dt>
- <dd>Represents a single word that has been recognized by the speech recognition service.</dd>
- <dt>{{domxref("SpeechRecognitionError")}}</dt>
- <dd>Represents error messages from the recognition service.</dd>
- <dt>{{domxref("SpeechRecognitionEvent")}}</dt>
- <dd>The event object for the {{event("result")}} and {{event("nomatch")}} events, and contains all the data associated with an interim or final speech recognition result.</dd>
- <dt>{{domxref("SpeechGrammar")}}</dt>
- <dd>The words or patterns of words that we want the recognition service to recognize.</dd>
- <dt>{{domxref("SpeechGrammarList")}}</dt>
- <dd>Represents a list of {{domxref("SpeechGrammar")}} objects.</dd>
- <dt>{{domxref("SpeechRecognitionResult")}}</dt>
- <dd>Represents a single recognition match, which may contain multiple {{domxref("SpeechRecognitionAlternative")}} objects.</dd>
- <dt>{{domxref("SpeechRecognitionResultList")}}</dt>
- <dd>Represents a list of {{domxref("SpeechRecognitionResult")}} objects, or a single one if results are being captured in {{domxref("SpeechRecognition.continuous","continuous")}} mode.</dd>
-</dl>
+- {{domxref("SpeechRecognition")}}
+  - : The controller interface for the recognition service; this also handles the {{domxref("SpeechRecognitionEvent")}} sent from the recognition service.
+- {{domxref("SpeechRecognitionAlternative")}}
+  - : Represents a single word that has been recognized by the speech recognition service.
+- {{domxref("SpeechRecognitionError")}}
+  - : Represents error messages from the recognition service.
+- {{domxref("SpeechRecognitionEvent")}}
+  - : The event object for the {{event("result")}} and {{event("nomatch")}} events, and contains all the data associated with an interim or final speech recognition result.
+- {{domxref("SpeechGrammar")}}
+  - : The words or patterns of words that we want the recognition service to recognize.
+- {{domxref("SpeechGrammarList")}}
+  - : Represents a list of {{domxref("SpeechGrammar")}} objects.
+- {{domxref("SpeechRecognitionResult")}}
+  - : Represents a single recognition match, which may contain multiple {{domxref("SpeechRecognitionAlternative")}} objects.
+- {{domxref("SpeechRecognitionResultList")}}
+  - : Represents a list of {{domxref("SpeechRecognitionResult")}} objects, or a single one if results are being captured in {{domxref("SpeechRecognition.continuous","continuous")}} mode.
 
-<h3 id="Speech_synthesis">Speech synthesis</h3>
+### Speech synthesis
 
-<dl>
- <dt>{{domxref("SpeechSynthesis")}}</dt>
- <dd>The controller interface for the speech service; this can be used to retrieve information about the synthesis voices available on the device, start and pause speech, and other commands besides.</dd>
- <dt>{{domxref("SpeechSynthesisErrorEvent")}}</dt>
- <dd>Contains information about any errors that occur while processing {{domxref("SpeechSynthesisUtterance")}} objects in the speech service.</dd>
- <dt>{{domxref("SpeechSynthesisEvent")}}</dt>
- <dd>Contains information about the current state of {{domxref("SpeechSynthesisUtterance")}} objects that have been processed in the speech service.</dd>
- <dt>{{domxref("SpeechSynthesisUtterance")}}</dt>
- <dd>Represents a speech request. It contains the content the speech service should read and information about how to read it (e.g. language, pitch and volume.)</dd>
- <dt>{{domxref("SpeechSynthesisVoice")}}</dt>
- <dd>Represents a voice that the system supports. Every <code>SpeechSynthesisVoice</code> has its own relative speech service including information about language, name and URI.</dd>
- <dt>{{domxref("Window.speechSynthesis")}}</dt>
- <dd>Specced out as part of a <code>[NoInterfaceObject]</code> interface called <code>SpeechSynthesisGetter</code>, and Implemented by the <code>Window</code> object, the <code>speechSynthesis</code> property provides access to the {{domxref("SpeechSynthesis")}} controller, and therefore the entry point to speech synthesis functionality.</dd>
-</dl>
+- {{domxref("SpeechSynthesis")}}
+  - : The controller interface for the speech service; this can be used to retrieve information about the synthesis voices available on the device, start and pause speech, and other commands besides.
+- {{domxref("SpeechSynthesisErrorEvent")}}
+  - : Contains information about any errors that occur while processing {{domxref("SpeechSynthesisUtterance")}} objects in the speech service.
+- {{domxref("SpeechSynthesisEvent")}}
+  - : Contains information about the current state of {{domxref("SpeechSynthesisUtterance")}} objects that have been processed in the speech service.
+- {{domxref("SpeechSynthesisUtterance")}}
+  - : Represents a speech request. It contains the content the speech service should read and information about how to read it (e.g. language, pitch and volume.)
+- {{domxref("SpeechSynthesisVoice")}}
+  - : Represents a voice that the system supports. Every `SpeechSynthesisVoice` has its own relative speech service including information about language, name and URI.
+- {{domxref("Window.speechSynthesis")}}
+  - : Specced out as part of a `[NoInterfaceObject]` interface called `SpeechSynthesisGetter`, and Implemented by the `Window` object, the `speechSynthesis` property provides access to the {{domxref("SpeechSynthesis")}} controller, and therefore the entry point to speech synthesis functionality.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The <a href="https://github.com/mdn/web-speech-api/">Web Speech API repo</a> on GitHub contains demos to illustrate speech recognition and synthesis.</p>
+The [Web Speech API repo](https://github.com/mdn/web-speech-api/) on GitHub contains demos to illustrate speech recognition and synthesis.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table>
- <tbody>
-  <tr>
-   <th>Specification</th>
-  </tr>
-  <tr>
-   <td><a href="">Web Speech APII</a></td>
-  </tr>
- </tbody>
-</table>
+| Specification       |
+| ------------------- |
+| [Web Speech APII]() |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<h3 id="SpeechRecognition"><code>SpeechRecognition</code></h3>
+### `SpeechRecognition`
 
-<p>{{Compat("api.SpeechRecognition", 0)}}</p>
+{{Compat("api.SpeechRecognition", 0)}}
 
-<h3 id="SpeechSynthesis"><code>SpeechSynthesis</code></h3>
+### `SpeechSynthesis`
 
-<p>{{Compat("api.SpeechSynthesis", 0)}}</p>
+{{Compat("api.SpeechSynthesis", 0)}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API">Using the Web Speech API</a></li>
- <li><a href="https://www.sitepoint.com/talking-web-pages-and-the-speech-synthesis-api/">SitePoint article</a></li>
- <li><a href="http://updates.html5rocks.com/2014/01/Web-apps-that-talk---Introduction-to-the-Speech-Synthesis-API">HTML5Rocks article</a></li>
- <li><a href="https://aurelio.audero.it/demo/speech-synthesis-api-demo.html">Demo</a> [aurelio.audero.it]</li>
-</ul>
+- [Using the Web Speech API](/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API)
+- [SitePoint article](https://www.sitepoint.com/talking-web-pages-and-the-speech-synthesis-api/)
+- [HTML5Rocks article](http://updates.html5rocks.com/2014/01/Web-apps-that-talk---Introduction-to-the-Speech-Synthesis-API)
+- [Demo](https://aurelio.audero.it/demo/speech-synthesis-api-demo.html) \[aurelio.audero.it]

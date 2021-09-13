@@ -9,36 +9,32 @@ tags:
   - Secure context
 browser-compat: api.GeolocationPosition
 ---
-<div>{{securecontext_header}}{{APIRef("Geolocation API")}}</div>
+{{securecontext_header}}{{APIRef("Geolocation API")}}
 
-<p>The <strong><code>GeolocationPosition</code></strong> interface represents the position of the concerned device at a given time. The position, represented by a {{domxref("GeolocationCoordinates")}} object, comprehends the 2D position of the device, on a spheroid representing the Earth, but also its altitude and its speed.</p>
+The **`GeolocationPosition`** interface represents the position of the concerned device at a given time. The position, represented by a {{domxref("GeolocationCoordinates")}} object, comprehends the 2D position of the device, on a spheroid representing the Earth, but also its altitude and its speed.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>The <code>GeolocationPosition</code> interface doesn't inherit any properties.</em></p>
+_The `GeolocationPosition` interface doesn't inherit any properties._
 
-<dl>
- <dt>{{domxref("GeolocationPosition.coords")}} {{readonlyInline}} {{securecontext_inline}}</dt>
- <dd>Returns a {{domxref("GeolocationCoordinates")}} object defining the current location.</dd>
- <dt>{{domxref("GeolocationPosition.timestamp")}} {{readonlyInline}} {{securecontext_inline}}</dt>
- <dd>Returns a {{domxref("DOMTimeStamp")}} representing the time at which the location was retrieved.</dd>
-</dl>
+- {{domxref("GeolocationPosition.coords")}} {{readonlyInline}} {{securecontext_inline}}
+  - : Returns a {{domxref("GeolocationCoordinates")}} object defining the current location.
+- {{domxref("GeolocationPosition.timestamp")}} {{readonlyInline}} {{securecontext_inline}}
+  - : Returns a {{domxref("DOMTimeStamp")}} representing the time at which the location was retrieved.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>The <code>GeolocationPosition</code> interface neither implements, nor inherits any methods.</em></p>
+_The `GeolocationPosition` interface neither implements, nor inherits any methods._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API">Using the Geolocation API</a></li>
- <li>{{domxref("Geolocation")}}</li>
-</ul>
+- [Using the Geolocation API](/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
+- {{domxref("Geolocation")}}

@@ -2,59 +2,58 @@
 title: WebGLRenderingContext.getSupportedExtensions()
 slug: Web/API/WebGLRenderingContext/getSupportedExtensions
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getSupportedExtensions
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <code><strong>WebGLRenderingContext.getSupportedExtensions()</strong></code> method
-  returns a list of all the supported <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a>
-  extensions.</p>
+The **`WebGLRenderingContext.getSupportedExtensions()`** method
+returns a list of all the supported [WebGL](/en-US/docs/Web/API/WebGL_API)
+extensions.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var><em>gl</em></var>.getSupportedExtensions();</pre>
+```js
+gl.getSupportedExtensions();
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An {{jsxref("Array")}} of strings with all the supported WebGL extensions.</p>
+An {{jsxref("Array")}} of strings with all the supported WebGL extensions.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 gl = canvas.getContext('webgl');
 
 var extensions = gl.getSupportedExtensions();
 // Array [ 'ANGLE_instanced_arrays', 'EXT_blend_minmax', ... ]
-</pre>
+```
 
-<p>See also the {{domxref("WebGLRenderingContext.getExtension()")}} method to get a
-  specific extension object.</p>
+See also the {{domxref("WebGLRenderingContext.getExtension()")}} method to get a
+specific extension object.
 
-<h2 id="WebGL_extensions">WebGL extensions</h2>
+## WebGL extensions
 
-<p>Extensions for the WebGL API are registered in the <a
-    href="https://www.khronos.org/registry/webgl/extensions/">WebGL Extension
-    Registry</a>. The current extensions are:</p>
+Extensions for the WebGL API are registered in the [WebGL Extension
+Registry](https://www.khronos.org/registry/webgl/extensions/). The current extensions are:
 
-<p>{{page("en-US/docs/Web/API/WebGL_API", "Extensions")}}</p>
+{{page("en-US/docs/Web/API/WebGL_API", "Extensions")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.getExtension()")}}</li>
-  <li><a href="http://webglreport.com">webglreport.com</a></li>
-</ul>
+- {{domxref("WebGLRenderingContext.getExtension()")}}
+- [webglreport.com](http://webglreport.com)

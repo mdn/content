@@ -9,45 +9,44 @@ tags:
   - Intermediate
   - Tutorial
 ---
-<div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}</div>
+{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}
 
-<p>In all of our <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Transformations">previous examples</a>, shapes were always drawn one on top of the other. This is more than adequate for most situations, but it limits the order in which composite shapes are built. We can, however, change this behavior by setting the <code>globalCompositeOperation</code> property. In addition, the <code>clip</code> property allows us to hide unwanted parts of shapes.</p>
+In all of our [previous examples](/en-US/docs/Web/API/Canvas_API/Tutorial/Transformations), shapes were always drawn one on top of the other. This is more than adequate for most situations, but it limits the order in which composite shapes are built. We can, however, change this behavior by setting the `globalCompositeOperation` property. In addition, the `clip` property allows us to hide unwanted parts of shapes.
 
-<h2 id="globalCompositeOperation"><code>globalCompositeOperation</code></h2>
+## `globalCompositeOperation`
 
-<p>We can not only draw new shapes behind existing shapes but we can also use it to mask off certain areas, clear sections from the canvas (not limited to rectangles like the {{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}} method does) and more.</p>
+We can not only draw new shapes behind existing shapes but we can also use it to mask off certain areas, clear sections from the canvas (not limited to rectangles like the {{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}} method does) and more.
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.globalCompositeOperation", "globalCompositeOperation = type")}}</dt>
- <dd>This sets the type of compositing operation to apply when drawing new shapes, where type is a string identifying which of the twelve compositing operations to use.</dd>
-</dl>
+- {{domxref("CanvasRenderingContext2D.globalCompositeOperation", "globalCompositeOperation = type")}}
+  - : This sets the type of compositing operation to apply when drawing new shapes, where type is a string identifying which of the twelve compositing operations to use.
 
-<p>See <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing/Example">compositing examples</a> for the code of the following examples.</p>
+See [compositing examples](/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing/Example) for the code of the following examples.
 
-<p>{{EmbedLiveSample("Compositing_example", 750, 6750, "" ,"Web/API/Canvas_API/Tutorial/Compositing/Example")}}</p>
+{{EmbedLiveSample("Compositing_example", 750, 6750, "" ,"Web/API/Canvas_API/Tutorial/Compositing/Example")}}
 
-<h2 id="Clipping_paths">Clipping paths</h2>
+## Clipping paths
 
-<p>A clipping path is like a normal canvas shape but it acts as a mask to hide unwanted parts of shapes. This is visualized in the image on the right. The red star shape is our clipping path. Everything that falls outside of this path won't get drawn on the canvas.</p>
-<img alt="" src="canvas_clipping_path.png">
-<p>If we compare clipping paths to the <code>globalCompositeOperation</code> property we've seen above, we see two compositing modes that achieve more or less the same effect in <code>source-in</code> and <code>source-atop</code>. The most important differences between the two are that clipping paths are never actually drawn to the canvas and the clipping path is never affected by adding new shapes. This makes clipping paths ideal for drawing multiple shapes in a restricted area.</p>
+A clipping path is like a normal canvas shape but it acts as a mask to hide unwanted parts of shapes. This is visualized in the image on the right. The red star shape is our clipping path. Everything that falls outside of this path won't get drawn on the canvas.
 
-<p>In the chapter about <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes">drawing shapes</a> I only mentioned the <code>stroke()</code> and <code>fill()</code> methods, but there's a third method we can use with paths, called <code>clip()</code>.</p>
+![](canvas_clipping_path.png)
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.clip", "clip()")}}</dt>
- <dd>Turns the path currently being built into the current clipping path.</dd>
-</dl>
+If we compare clipping paths to the `globalCompositeOperation` property we've seen above, we see two compositing modes that achieve more or less the same effect in `source-in` and `source-atop`. The most important differences between the two are that clipping paths are never actually drawn to the canvas and the clipping path is never affected by adding new shapes. This makes clipping paths ideal for drawing multiple shapes in a restricted area.
 
-<p>You use <code>clip()</code> instead of <code>closePath()</code> to close a path and turn it into a clipping path instead of stroking or filling the path.</p>
+In the chapter about [drawing shapes](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) I only mentioned the `stroke()` and `fill()` methods, but there's a third method we can use with paths, called `clip()`.
 
-<p>By default the {{HTMLElement("canvas")}} element has a clipping path that's the exact same size as the canvas itself. In other words, no clipping occurs.</p>
+- {{domxref("CanvasRenderingContext2D.clip", "clip()")}}
+  - : Turns the path currently being built into the current clipping path.
 
-<h3 id="A_clip_example">A <code>clip</code> example</h3>
+You use `clip()` instead of `closePath()` to close a path and turn it into a clipping path instead of stroking or filling the path.
 
-<p>In this example, we'll use a circular clipping path to restrict the drawing of a set of random stars to a particular region.</p>
+By default the {{HTMLElement("canvas")}} element has a clipping path that's the exact same size as the canvas itself. In other words, no clipping occurs.
 
-<pre class="brush: js;">function draw() {
+### A `clip` example
+
+In this example, we'll use a circular clipping path to restrict the drawing of a set of random stars to a particular region.
+
+```js
+function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   ctx.fillRect(0, 0, 150, 150);
   ctx.translate(75, 75);
@@ -66,7 +65,7 @@ tags:
   ctx.fillRect(-75, -75, 150, 150);
 
   // draw stars
-  for (var j = 1; j &lt; 50; j++) {
+  for (var j = 1; j < 50; j++) {
     ctx.save();
     ctx.fillStyle = '#fff';
     ctx.translate(75 - Math.floor(Math.random() * 150),
@@ -81,7 +80,7 @@ function drawStar(ctx, r) {
   ctx.save();
   ctx.beginPath();
   ctx.moveTo(r, 0);
-  for (var i = 0; i &lt; 9; i++) {
+  for (var i = 0; i < 9; i++) {
     ctx.rotate(Math.PI / 5);
     if (i % 2 === 0) {
       ctx.lineTo((r / 0.525731) * 0.200811, 0);
@@ -93,16 +92,20 @@ function drawStar(ctx, r) {
   ctx.fill();
   ctx.restore();
 }
-</pre>
+```
 
-<pre class="brush: html hidden">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+```html hidden
+<canvas id="canvas" width="150" height="150"></canvas>
+```
 
-<pre class="brush: js hidden">draw();</pre>
+```js hidden
+draw();
+```
 
-<p>In the first few lines of code, we draw a black rectangle the size of the canvas as a backdrop, then translate the origin to the center. Next, we create the circular clipping path by drawing an arc and calling <code>clip()</code>. Clipping paths are also part of the canvas save state. If we wanted to keep the original clipping path we could have saved the canvas state before creating the new one.</p>
+In the first few lines of code, we draw a black rectangle the size of the canvas as a backdrop, then translate the origin to the center. Next, we create the circular clipping path by drawing an arc and calling `clip()`. Clipping paths are also part of the canvas save state. If we wanted to keep the original clipping path we could have saved the canvas state before creating the new one.
 
-<p>Everything that's drawn after creating the clipping path will only appear inside that path. You can see this clearly in the linear gradient that's drawn next. After this a set of 50 randomly positioned and scaled stars is drawn, using the custom <code>drawStar()</code> function. Again the stars only appear inside the defined clipping path.</p>
+Everything that's drawn after creating the clipping path will only appear inside that path. You can see this clearly in the linear gradient that's drawn next. After this a set of 50 randomly positioned and scaled stars is drawn, using the custom `drawStar()` function. Again the stars only appear inside the defined clipping path.
 
-<p>{{EmbedLiveSample("A_clip_example", "180", "180", "canvas_clip.png")}}</p>
+{{EmbedLiveSample("A_clip_example", "180", "180", "canvas_clip.png")}}
 
-<p>{{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}</p>
+{{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}

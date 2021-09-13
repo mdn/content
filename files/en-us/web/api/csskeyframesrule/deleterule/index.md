@@ -10,41 +10,38 @@ tags:
   - Reference
 browser-compat: api.CSSKeyframesRule.deleteRule
 ---
-<div>{{APIRef("CSSOM") }}</div>
+{{APIRef("CSSOM") }}
 
-<p>The <strong><code>deleteRule()</code></strong> method of the {{domxref("CSSKeyframeRule")}} interface deletes the {{domxref("CSSKeyFrameRule")}} that matches the specified keyframe selector.</p>
+The **`deleteRule()`** method of the {{domxref("CSSKeyframeRule")}} interface deletes the {{domxref("CSSKeyFrameRule")}} that matches the specified keyframe selector.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><var>CSSKeyframesRule</var>.deleteRule(<var>select</var>);</pre>
+    CSSKeyframesRule.deleteRule(select);
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>select</code></dt>
-    <dd><p>A {{domxref("CSSOMString")}} which contains the keyframe selector of the rule to be deleted, which must be:</p>
-      <ul>
-        <li>a comma-separated list of percentage values between 0% and 100%;</li>
-        <li>or, the keywords <code>from</code> or <code>to</code></li>
-      </ul>
+- `select`
 
-      <p>Note that the number and order of the values in the specified keyframe selector must match those of the targeted keyframe rule(s). White-space is disregarded.</p>
-    </dd>
-</dl>
+  - : A {{domxref("CSSOMString")}} which contains the keyframe selector of the rule to be deleted, which must be:
 
-<h3 id="value">Return value</h3>
-<p>None.</p>
+    - a comma-separated list of percentage values between 0% and 100%;
+    - or, the keywords `from` or `to`
 
-<h2 id="Example">Example</h2>
+    Note that the number and order of the values in the specified keyframe selector must match those of the targeted keyframe rule(s). White-space is disregarded.
 
-<p>
-    The CSS includes a keyframes at-rule. This will be the first {{domxref("CSSRule")}} returned by <code>document.styleSheets[0].cssRules</code>.
-    <code>myRules[0]</code> returns a {{domxref("CSSKeyframesRule")}} object. Returning the <code>cssRules</code> property would return a {{domxref("CSSRuleList")}} containing two rules.
-</p>
+### Return value
 
-<p>After deleting a rule with <code>deleteRule()</code> the <code>cssRules</code> property returns a {{domxref("CSSRuleList")}} containing one rule.</p>
+None.
 
-<pre class="brush: css">@keyframes slidein {
+## Example
+
+The CSS includes a keyframes at-rule. This will be the first {{domxref("CSSRule")}} returned by `document.styleSheets[0].cssRules`.
+`myRules[0]` returns a {{domxref("CSSKeyframesRule")}} object. Returning the `cssRules` property would return a {{domxref("CSSRuleList")}} containing two rules.
+
+After deleting a rule with `deleteRule()` the `cssRules` property returns a {{domxref("CSSRuleList")}} containing one rule.
+
+```css
+@keyframes slidein {
   from {
     transform: translateX(0%);
   }
@@ -52,17 +49,20 @@ browser-compat: api.CSSKeyframesRule.deleteRule
   to {
     transform: translateX(100%);
   }
-}</pre>
+}
+```
 
-<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
+```js
+let myRules = document.styleSheets[0].cssRules;
 let keyframes = myRules[0]; // a CSSKeyframesRule
 keyframes.deleteRule('to');
-console.log(keyframes.cssRules); // a CSSRuleList object with one rule</pre>
+console.log(keyframes.cssRules); // a CSSRuleList object with one rule
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -8,43 +8,39 @@ tags:
   - WebGL2
 browser-compat: api.WebGLVertexArrayObject
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLVertexArrayObject</code></strong> interface is part of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL 2 API</a>, represents vertex array objects (VAOs) pointing to vertex array data, and provides names for different sets of vertex data.</p>
+The **`WebGLVertexArrayObject`** interface is part of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API), represents vertex array objects (VAOs) pointing to vertex array data, and provides names for different sets of vertex data.
 
-<p>When working with <code>WebGLVertexArrayObject</code> objects, the following methods are useful:</p>
+When working with `WebGLVertexArrayObject` objects, the following methods are useful:
 
-<ul>
- <li>{{domxref("WebGL2RenderingContext.createVertexArray()")}}</li>
- <li>{{domxref("WebGL2RenderingContext.deleteVertexArray()")}}</li>
- <li>{{domxref("WebGL2RenderingContext.isVertexArray()")}}</li>
- <li>{{domxref("WebGL2RenderingContext.bindVertexArray()")}}</li>
-</ul>
+- {{domxref("WebGL2RenderingContext.createVertexArray()")}}
+- {{domxref("WebGL2RenderingContext.deleteVertexArray()")}}
+- {{domxref("WebGL2RenderingContext.isVertexArray()")}}
+- {{domxref("WebGL2RenderingContext.bindVertexArray()")}}
 
-<div class="note">
-<p><strong>Note:</strong> The {{domxref("OES_vertex_array_object")}} extension allows you to use vertex array objects in a WebGL 1 context.</p>
-</div>
+> **Note:** The {{domxref("OES_vertex_array_object")}} extension allows you to use vertex array objects in a WebGL 1 context.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var vao = gl.createVertexArray();
+```js
+var vao = gl.createVertexArray();
 gl.bindVertexArray(vao);
 
 // ...
 // calls to bindBuffer or vertexAttribPointer
 // which will be "recorded" in the VAO
-// ...</pre>
+// ...
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("OES_vertex_array_object")}}</li>
-</ul>
+- {{domxref("OES_vertex_array_object")}}

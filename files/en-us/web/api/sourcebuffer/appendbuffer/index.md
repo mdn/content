@@ -2,63 +2,60 @@
 title: SourceBuffer.appendBuffer()
 slug: Web/API/SourceBuffer/appendBuffer
 tags:
-- API
-- Audio
-- Experimental
-- MSE
-- Media
-- Media Source Extensions
-- Method
-- Reference
-- SourceBuffer
-- Video
-- appendBuffer
+  - API
+  - Audio
+  - Experimental
+  - MSE
+  - Media
+  - Media Source Extensions
+  - Method
+  - Reference
+  - SourceBuffer
+  - Video
+  - appendBuffer
 browser-compat: api.SourceBuffer.appendBuffer
 ---
-<div>{{draft}}{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}</div>
+{{draft}}{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
-<p>The <code><strong>appendBuffer()</strong></code> method of the
-  {{domxref("SourceBuffer")}} interface appends media segment data from an
-  {{jsxref("ArrayBuffer")}} or <code>ArrayBufferView</code> object to the
-  <code>SourceBuffer</code>.</p>
+The **`appendBuffer()`** method of the
+{{domxref("SourceBuffer")}} interface appends media segment data from an
+{{jsxref("ArrayBuffer")}} or `ArrayBufferView` object to the
+`SourceBuffer`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>sourceBuffer</em>.appendBuffer(<em>source</em>);
-</pre>
+```js
+sourceBuffer.appendBuffer(source);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>source</code></dt>
-  <dd>A {{domxref("BufferSource")}} (that is, either an {{domxref("ArrayBufferView")}} or
+- `source`
+  - : A {{domxref("BufferSource")}} (that is, either an {{domxref("ArrayBufferView")}} or
     {{jsxref("ArrayBuffer")}}) which contains the media segment data you want to add to
-    the <code>SourceBuffer</code>.</dd>
-</dl>
+    the `SourceBuffer`.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{jsxref('undefined')}}.</p>
+{{jsxref('undefined')}}.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>None.</p>
+None.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>TBD.</p>
+TBD.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("MediaSource")}}</li>
-  <li>{{domxref("SourceBufferList")}}</li>
-</ul>
+- {{domxref("MediaSource")}}
+- {{domxref("SourceBufferList")}}

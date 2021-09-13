@@ -11,98 +11,61 @@ tags:
   - Reference
 browser-compat: api.MouseScrollEvent
 ---
-<div>{{APIRef("DOM Events")}}{{ non-standard_header() }}{{deprecated_header}}</div>
+{{APIRef("DOM Events")}}{{ non-standard_header() }}{{deprecated_header}}
 
-<p>The <strong><code>MouseScrollEvent</code></strong> interface represents events that occur due to the user moving a mouse wheel or similar input device.</p>
+The **`MouseScrollEvent`** interface represents events that occur due to the user moving a mouse wheel or similar input device.
 
-<div class="warning">
-<p><strong>Warning:</strong> Do not use this interface for wheel events.</p>
+> **Warning:** Do not use this interface for wheel events.
+>
+> Like {{domxref("MouseWheelEvent")}}, this interface is non-standard and deprecated. It was used in Gecko-based browsers only. Instead use the standard _{{domxref("WheelEvent")}}._
 
-<p>Like {{domxref("MouseWheelEvent")}}, this interface is non-standard and deprecated. It was used in Gecko-based browsers only. Instead use the standard <em>{{domxref("WheelEvent")}}.</em></p>
-</div>
+## Method overview
 
-<h2 id="Method_overview">Method overview</h2>
+    void initMouseScrollEvent(
+      in DOMString typeArg,
+      in boolean canBubbleArg,
+      in boolean cancelableArg,
+      in nsIDOMAbstractView viewArg,
+      in long detailArg,
+      in long screenXArg,
+      in long screenYArg,
+      in long clientXArg,
+      in long clientYArg,
+      in boolean ctrlKeyArg,
+      in boolean altKeyArg,
+      in boolean shiftKeyArg,
+      in boolean metaKeyArg,
+      in unsigned short buttonArg,
+      in nsIDOMEventTarget relatedTargetArg,
+      in long axis);
 
-<pre>void initMouseScrollEvent(
-  in DOMString typeArg,
-  in boolean canBubbleArg,
-  in boolean cancelableArg,
-  in nsIDOMAbstractView viewArg,
-  in long detailArg,
-  in long screenXArg,
-  in long screenYArg,
-  in long clientXArg,
-  in long clientYArg,
-  in boolean ctrlKeyArg,
-  in boolean altKeyArg,
-  in boolean shiftKeyArg,
-  in boolean metaKeyArg,
-  in unsigned short buttonArg,
-  in nsIDOMEventTarget relatedTargetArg,
-  in long axis);
-</pre>
+## Attributes
 
-<h2 id="Attributes">Attributes</h2>
+| Attribute                       | Type   | Description                 |
+| ------------------------------- | ------ | --------------------------- |
+| `axis` {{ReadOnlyInline}} | `long` | Indicates scroll direction. |
 
-<table class="standard-table">
- <thead>
-   <tr>
-     <th>Attribute</th>
-     <th>Type</th>
-     <th>Description</th>
-   </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>axis</code> {{ReadOnlyInline}}</td>
-   <td><code>long</code></td>
-   <td>Indicates scroll direction.</td>
-  </tr>
- </tbody>
-</table>
+## Constants
 
-<h2 id="Constants">Constants</h2>
+### Delta modes
 
-<h3 id="Delta_modes">Delta modes</h3>
+| Constant          | Value  | Description                                        |
+| ----------------- | ------ | -------------------------------------------------- |
+| `HORIZONTAL_AXIS` | `0x01` | The event is caused by horizontal wheel operation. |
+| `VERTICAL_AXIS`   | `0x02` | The event is caused by vertical wheel operation.   |
 
-<table class="standard-table">
- <thead>
-   <tr>
-     <th>Constant</th>
-     <th>Value</th>
-     <th>Description</th>
-   </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>HORIZONTAL_AXIS</code></td>
-   <td><code>0x01</code></td>
-   <td>The event is caused by horizontal wheel operation.</td>
-  </tr>
-  <tr>
-   <td><code>VERTICAL_AXIS</code></td>
-   <td><code>0x02</code></td>
-   <td>The event is caused by vertical wheel operation.</td>
-  </tr>
- </tbody>
-</table>
+## Methods
 
-<h2 id="Methods">Methods</h2>
+- `initMouseScrollEvent()`
+  - : See [nsIDOMMouseScrollEvent::initMouseScrollEvent()](/en-US/docs/XPCOM_Interface_Reference/nsIDOMMouseScrollEvent#initMouseScrollEvent%28%29).
 
-<dl>
- <dt><code>initMouseScrollEvent()</code></dt>
- <dd>See <a href="/en-US/docs/XPCOM_Interface_Reference/nsIDOMMouseScrollEvent#initMouseScrollEvent%28%29">nsIDOMMouseScrollEvent::initMouseScrollEvent()</a>.</dd>
-</dl>
+## Browser compatibility
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+{{Compat}}
 
-<p>{{Compat}}</p>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><code>DOMMouseScroll</code></li>
- <li><code>MozMousePixelScroll</code></li>
- <li>Non-gecko browsers' legacy mouse wheel event object: {{ domxref("MouseWheelEvent") }}</li>
- <li>Standardized mouse wheel event object: {{ domxref("WheelEvent") }}</li>
-</ul>
+- `DOMMouseScroll`
+- `MozMousePixelScroll`
+- Non-gecko browsers' legacy mouse wheel event object: {{ domxref("MouseWheelEvent") }}
+- Standardized mouse wheel event object: {{ domxref("WheelEvent") }}

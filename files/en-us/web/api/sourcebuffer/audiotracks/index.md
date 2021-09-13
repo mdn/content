@@ -2,47 +2,46 @@
 title: SourceBuffer.audioTracks
 slug: Web/API/SourceBuffer/audioTracks
 tags:
-- API
-- Audio
-- Experimental
-- MSE
-- Media Source Extensions
-- Property
-- Reference
-- SourceBuffer
-- audiotracks
+  - API
+  - Audio
+  - Experimental
+  - MSE
+  - Media Source Extensions
+  - Property
+  - Reference
+  - SourceBuffer
+  - audiotracks
 browser-compat: api.SourceBuffer.audioTracks
 ---
-<div>{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}{{draft}}</div>
+{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}{{draft}}
 
-<p>The <code><strong>audioTracks</strong></code> read-only property of the
-  {{domxref("SourceBuffer")}} interface returns a list of the audio tracks currently
-  contained inside the <code>SourceBuffer</code>.</p>
+The **`audioTracks`** read-only property of the
+{{domxref("SourceBuffer")}} interface returns a list of the audio tracks currently
+contained inside the `SourceBuffer`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>myAudioTracks</em> = <em>sourceBuffer</em>.audioTracks;
-</pre>
+```js
+var myAudioTracks = sourceBuffer.audioTracks;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("AudioTrackList")}} object.</p>
+An {{domxref("AudioTrackList")}} object.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>TBD</p>
+TBD
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("MediaSource")}}</li>
-  <li>{{domxref("SourceBufferList")}}</li>
-</ul>
+- {{domxref("MediaSource")}}
+- {{domxref("SourceBufferList")}}

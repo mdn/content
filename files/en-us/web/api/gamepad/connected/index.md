@@ -11,36 +11,40 @@ tags:
   - Reference
 browser-compat: api.Gamepad.connected
 ---
-<p>{{APIRef("Gamepad API")}}</p>
+{{APIRef("Gamepad API")}}
 
-<p>The <code><strong>Gamepad.connected</strong></code> property of the
-	{{domxref("Gamepad") }} interface returns a boolean indicating whether the gamepad is
-	still connected to the system.</p>
+The **`Gamepad.connected`** property of the
+{{domxref("Gamepad") }} interface returns a boolean indicating whether the gamepad is
+still connected to the system.
 
-<p>If the gamepad is connected, the value is <code>true</code>; if not, it is
-	<code>false</code>.</p>
+If the gamepad is connected, the value is `true`; if not, it is
+`false`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const connected = gamepad.connected;</pre>
+```js
+const connected = gamepad.connected;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var gp = navigator.getGamepads()[0];
-console.log(gp.connected);</pre>
+```js
+var gp = navigator.getGamepads()[0];
+console.log(gp.connected);
+```
 
-<h2 id="Value">Value</h2>
+## Value
 
-<p>A boolean value.</p>
+A boolean value.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<p><a href="/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API">Using the Gamepad API</a></p>
+[Using the Gamepad API](/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)

@@ -8,91 +8,81 @@ tags:
   - Reference
 browser-compat: api.HTMLTableElement
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLTableElement</code></strong> interface provides special properties and methods (beyond the regular {{DOMxRef("HTMLElement")}} object interface it also has available to it by inheritance) for manipulating the layout and presentation of tables in an HTML document.</p>
+The **`HTMLTableElement`** interface provides special properties and methods (beyond the regular {{DOMxRef("HTMLElement")}} object interface it also has available to it by inheritance) for manipulating the layout and presentation of tables in an HTML document.
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{DOMxRef("HTMLElement")}}.</em></p>
+_Inherits properties from its parent, {{DOMxRef("HTMLElement")}}._
 
-<dl>
- <dt>{{DOMxRef("HTMLTableElement.caption")}}</dt>
- <dd>Is a {{DOMxRef("HTMLTableCaptionElement")}} representing the first {{HTMLElement("caption")}} that is a child of the element, or <code>null</code> if none is found. When set, if the object doesn't represent a <code>&lt;caption&gt;</code>, a {{DOMxRef("DOMException")}} with the <code>HierarchyRequestError</code> name is thrown. If a correct object is given, it is inserted in the tree as the first child of this element and the first <code>&lt;caption&gt;</code> that is a child of this element is removed from the tree, if any.</dd>
- <dt>{{DOMxRef("HTMLTableElement.tHead")}}</dt>
- <dd>Is a {{DOMxRef("HTMLTableSectionElement")}} representing the first {{HTMLElement("thead")}} that is a child of the element, or <code>null</code> if none is found. When set, if the object doesn't represent a <code>&lt;thead&gt;</code>, a {{DOMxRef("DOMException")}} with the <code>HierarchyRequestError</code> name is thrown. If a correct object is given, it is inserted in the tree immediately before the first element that is neither a {{HTMLElement("caption")}}, nor a {{HTMLElement("colgroup")}}, or as the last child if there is no such element, and the first <code>&lt;thead&gt;</code> that is a child of this element is removed from the tree, if any.</dd>
- <dt>{{DOMxRef("HTMLTableElement.tFoot")}}</dt>
- <dd>Is a {{DOMxRef("HTMLTableSectionElement")}} representing the first {{HTMLElement("tfoot")}} that is a child of the element, or <code>null</code> if none is found. When set, if the object doesn't represent a <code>&lt;tfoot&gt;</code>, a {{DOMxRef("DOMException")}} with the <code>HierarchyRequestError</code> name is thrown. If a correct object is given, it is inserted in the tree immediately before the first element that is neither a {{HTMLElement("caption")}}, a {{HTMLElement("colgroup")}}, nor a {{HTMLElement("thead")}}, or as the last child if there is no such element, and the first <code>&lt;tfoot&gt;</code> that is a child of this element is removed from the tree, if any.</dd>
- <dt>{{DOMxRef("HTMLTableElement.rows")}}{{ReadOnlyInline}}</dt>
- <dd>Returns a live {{DOMxRef("HTMLCollection")}} containing all the rows of the element, that is all {{HTMLElement("tr")}} that are a child of the element, or a child of one of its {{HTMLElement("thead")}}, {{HTMLElement("tbody")}} and {{HTMLElement("tfoot")}} children. The rows members of a <code>&lt;thead&gt;</code> appear first, in tree order, and those members of a <code>&lt;tbody&gt;</code> last, also in tree order. The <code>HTMLCollection</code> is live and is automatically updated when the <code>HTMLTableElement</code> changes.</dd>
- <dt>{{DOMxRef("HTMLTableElement.tBodies")}}{{ReadOnlyInline}}</dt>
- <dd>Returns a live {{DOMxRef("HTMLCollection")}} containing all the {{HTMLElement("tbody")}} of the element. The <code>HTMLCollection</code> is live and is automatically updated when the <code>HTMLTableElement</code> changes.</dd>
-</dl>
+- {{DOMxRef("HTMLTableElement.caption")}}
+  - : Is a {{DOMxRef("HTMLTableCaptionElement")}} representing the first {{HTMLElement("caption")}} that is a child of the element, or `null` if none is found. When set, if the object doesn't represent a `<caption>`, a {{DOMxRef("DOMException")}} with the `HierarchyRequestError` name is thrown. If a correct object is given, it is inserted in the tree as the first child of this element and the first `<caption>` that is a child of this element is removed from the tree, if any.
+- {{DOMxRef("HTMLTableElement.tHead")}}
+  - : Is a {{DOMxRef("HTMLTableSectionElement")}} representing the first {{HTMLElement("thead")}} that is a child of the element, or `null` if none is found. When set, if the object doesn't represent a `<thead>`, a {{DOMxRef("DOMException")}} with the `HierarchyRequestError` name is thrown. If a correct object is given, it is inserted in the tree immediately before the first element that is neither a {{HTMLElement("caption")}}, nor a {{HTMLElement("colgroup")}}, or as the last child if there is no such element, and the first `<thead>` that is a child of this element is removed from the tree, if any.
+- {{DOMxRef("HTMLTableElement.tFoot")}}
+  - : Is a {{DOMxRef("HTMLTableSectionElement")}} representing the first {{HTMLElement("tfoot")}} that is a child of the element, or `null` if none is found. When set, if the object doesn't represent a `<tfoot>`, a {{DOMxRef("DOMException")}} with the `HierarchyRequestError` name is thrown. If a correct object is given, it is inserted in the tree immediately before the first element that is neither a {{HTMLElement("caption")}}, a {{HTMLElement("colgroup")}}, nor a {{HTMLElement("thead")}}, or as the last child if there is no such element, and the first `<tfoot>` that is a child of this element is removed from the tree, if any.
+- {{DOMxRef("HTMLTableElement.rows")}}{{ReadOnlyInline}}
+  - : Returns a live {{DOMxRef("HTMLCollection")}} containing all the rows of the element, that is all {{HTMLElement("tr")}} that are a child of the element, or a child of one of its {{HTMLElement("thead")}}, {{HTMLElement("tbody")}} and {{HTMLElement("tfoot")}} children. The rows members of a `<thead>` appear first, in tree order, and those members of a `<tbody>` last, also in tree order. The `HTMLCollection` is live and is automatically updated when the `HTMLTableElement` changes.
+- {{DOMxRef("HTMLTableElement.tBodies")}}{{ReadOnlyInline}}
+  - : Returns a live {{DOMxRef("HTMLCollection")}} containing all the {{HTMLElement("tbody")}} of the element. The `HTMLCollection` is live and is automatically updated when the `HTMLTableElement` changes.
 
-<h3 id="Obsolete_Properties">Obsolete Properties</h3>
+### Obsolete Properties
 
-<div class="notecard warning">
-<p><strong>Warning:</strong> The following properties are obsolete.  You should avoid using them.</p>
-</div>
+> **Warning:** The following properties are obsolete.  You should avoid using them.
 
-<dl>
- <dt>{{DOMxRef("HTMLTableElement.align")}} {{deprecated_inline}}</dt>
- <dd>Is a {{DOMxRef("DOMString")}} containing an enumerated value reflecting the {{HTMLAttrxRef("align", "table")}} attribute. It indicates the alignment of the element's contents with respect to the surrounding context. The possible values are <code>"left"</code>, <code>"right"</code>, and <code>"center"</code>.</dd>
- <dt>{{DOMxRef("HTMLTableElement.bgColor")}} {{deprecated_inline}}</dt>
- <dd>Is a {{DOMxRef("DOMString")}} containing the background color of the cells. It reflects the obsolete {{HTMLAttrxRef("bgColor", "table")}} attribute.</dd>
- <dt>{{DOMxRef("HTMLTableElement.border")}} {{deprecated_inline}}</dt>
- <dd>Is a {{DOMxRef("DOMString")}} containing the width in pixels of the border of the table. It reflects the obsolete {{HTMLAttrxRef("border", "table")}} attribute.</dd>
- <dt>{{DOMxRef("HTMLTableElement.cellPadding")}} {{deprecated_inline}}</dt>
- <dd>Is a {{DOMxRef("DOMString")}} containing the width in pixels of the horizontal and vertical sapce between cell content and cell borders. It reflects the obsolete {{HTMLAttrxRef("cellpadding", "table")}} attribute.</dd>
- <dt>{{DOMxRef("HTMLTableElement.cellSpacing")}} {{deprecated_inline}}</dt>
- <dd>Is a {{DOMxRef("DOMString")}} containing the width in pixels of the horizontal and vertical separation between cells. It reflects the obsolete {{HTMLAttrxRef("cellspacing", "table")}} attribute.</dd>
- <dt>{{DOMxRef("HTMLTableElement.frame")}} {{deprecated_inline}}</dt>
- <dd>Is a {{DOMxRef("DOMString")}} containing the type of the external borders of the table. It reflects the obsolete {{HTMLAttrxRef("frame", "table")}} attribute and can take one of the following values: <code>"void"</code>, <code>"above"</code>, <code>"below"</code>, <code>"hsides"</code>, <code>"vsides"</code>, <code>"lhs"</code>, <code>"rhs"</code>, <code>"box"</code>, or <code>"border"</code>.</dd>
- <dt>{{DOMxRef("HTMLTableElement.rules")}} {{deprecated_inline}}</dt>
- <dd>Is a {{DOMxRef("DOMString")}} containing the type of the internal borders of the table. It reflects the obsolete {{HTMLAttrxRef("rules", "table")}} attribute and can take one of the following values: <code>"none"</code>, <code>"groups"</code>, <code>"rows"</code>, <code>"cols"</code>, or <code>"all"</code>.</dd>
- <dt>{{DOMxRef("HTMLTableElement.summary")}} {{deprecated_inline}}</dt>
- <dd>Is a {{DOMxRef("DOMString")}} containing a description of the purpose or the structure of the table. It reflects the obsolete {{HTMLAttrxRef("summary", "table")}} attribute.</dd>
- <dt>{{DOMxRef("HTMLTableElement.width")}} {{deprecated_inline}}</dt>
- <dd>Is a {{DOMxRef("DOMString")}} containing the length in pixels or in percentage of the desired width fo the entire table. It reflects the obsolete {{HTMLAttrxRef("width", "table")}} attribute.</dd>
-</dl>
+- {{DOMxRef("HTMLTableElement.align")}} {{deprecated_inline}}
+  - : Is a {{DOMxRef("DOMString")}} containing an enumerated value reflecting the {{HTMLAttrxRef("align", "table")}} attribute. It indicates the alignment of the element's contents with respect to the surrounding context. The possible values are `"left"`, `"right"`, and `"center"`.
+- {{DOMxRef("HTMLTableElement.bgColor")}} {{deprecated_inline}}
+  - : Is a {{DOMxRef("DOMString")}} containing the background color of the cells. It reflects the obsolete {{HTMLAttrxRef("bgColor", "table")}} attribute.
+- {{DOMxRef("HTMLTableElement.border")}} {{deprecated_inline}}
+  - : Is a {{DOMxRef("DOMString")}} containing the width in pixels of the border of the table. It reflects the obsolete {{HTMLAttrxRef("border", "table")}} attribute.
+- {{DOMxRef("HTMLTableElement.cellPadding")}} {{deprecated_inline}}
+  - : Is a {{DOMxRef("DOMString")}} containing the width in pixels of the horizontal and vertical sapce between cell content and cell borders. It reflects the obsolete {{HTMLAttrxRef("cellpadding", "table")}} attribute.
+- {{DOMxRef("HTMLTableElement.cellSpacing")}} {{deprecated_inline}}
+  - : Is a {{DOMxRef("DOMString")}} containing the width in pixels of the horizontal and vertical separation between cells. It reflects the obsolete {{HTMLAttrxRef("cellspacing", "table")}} attribute.
+- {{DOMxRef("HTMLTableElement.frame")}} {{deprecated_inline}}
+  - : Is a {{DOMxRef("DOMString")}} containing the type of the external borders of the table. It reflects the obsolete {{HTMLAttrxRef("frame", "table")}} attribute and can take one of the following values: `"void"`, `"above"`, `"below"`, `"hsides"`, `"vsides"`, `"lhs"`, `"rhs"`, `"box"`, or `"border"`.
+- {{DOMxRef("HTMLTableElement.rules")}} {{deprecated_inline}}
+  - : Is a {{DOMxRef("DOMString")}} containing the type of the internal borders of the table. It reflects the obsolete {{HTMLAttrxRef("rules", "table")}} attribute and can take one of the following values: `"none"`, `"groups"`, `"rows"`, `"cols"`, or `"all"`.
+- {{DOMxRef("HTMLTableElement.summary")}} {{deprecated_inline}}
+  - : Is a {{DOMxRef("DOMString")}} containing a description of the purpose or the structure of the table. It reflects the obsolete {{HTMLAttrxRef("summary", "table")}} attribute.
+- {{DOMxRef("HTMLTableElement.width")}} {{deprecated_inline}}
+  - : Is a {{DOMxRef("DOMString")}} containing the length in pixels or in percentage of the desired width fo the entire table. It reflects the obsolete {{HTMLAttrxRef("width", "table")}} attribute.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Inherits methods from its parent, {{DOMxRef("HTMLElement")}}</em>.</p>
+_Inherits methods from its parent, {{DOMxRef("HTMLElement")}}_.
 
-<dl>
- <dt>{{DOMxRef("HTMLTableElement.createTHead()")}}</dt>
- <dd>Returns an {{DOMxRef("HTMLTableSectionElement")}} representing the first {{HTMLElement("thead")}} that is a child of the element. If none is found, a new one is created and inserted in the tree immediately before the first element that is neither a {{HTMLElement("caption")}}, nor a {{HTMLElement("colgroup")}}, or as the last child if there is no such element.</dd>
- <dt>{{DOMxRef("HTMLTableElement.deleteTHead()")}}</dt>
- <dd>Removes the first {{HTMLElement("thead")}} that is a child of the element.</dd>
- <dt>{{DOMxRef("HTMLTableElement.createTFoot()")}}</dt>
- <dd>Returns an {{DOMxRef("HTMLTableSectionElement")}} representing the first {{HTMLElement("tfoot")}} that is a child of the element. If none is found, a new one is created and inserted in the tree as the last child.</dd>
- <dt>{{DOMxRef("HTMLTableElement.deleteTFoot()")}}</dt>
- <dd>Removes the first {{HTMLElement("tfoot")}} that is a child of the element.</dd>
- <dt>{{DOMxRef("HTMLTableElement.createTBody()")}}</dt>
- <dd>Returns a {{DOMxRef("HTMLTableSectionElement")}} representing a new {{HTMLElement("tbody")}} that is a child of the element. It is inserted in the tree after the last element that is a {{HTMLElement("tbody")}}, or as the last child if there is no such element.</dd>
- <dt>{{DOMxRef("HTMLTableElement.createCaption()")}}</dt>
- <dd>Returns an {{DOMxRef("HTMLElement")}} representing the first {{HTMLElement("caption")}} that is a child of the element. If none is found, a new one is created and inserted in the tree as the first child of the {{HTMLElement("table")}} element.</dd>
- <dt>{{DOMxRef("HTMLTableElement.deleteCaption()")}}</dt>
- <dd>Removes the first {{HTMLElement("caption")}} that is a child of the element.</dd>
- <dt>{{DOMxRef("HTMLTableElement.insertRow()")}}</dt>
- <dd>Returns an {{DOMxRef("HTMLTableRowElement")}} representing a new row of the table. It inserts it in the rows collection immediately before the {{HTMLElement("tr")}} element at the given <code>index</code> position. If necessary a {{HTMLElement("tbody")}} is created. If the <code>index</code> is <code>-1</code>, the new row is appended to the collection. If the <code>index</code> is smaller than <code>-1</code> or greater than the number of rows in the collection, a {{DOMxRef("DOMException")}} with the value <code>IndexSizeError</code> is raised.</dd>
- <dt>{{DOMxRef("HTMLTableElement.deleteRow()")}}</dt>
- <dd>Removes the row corresponding to the <code>index</code> given in parameter. If the <code>index</code> value is <code>-1</code> the last row is removed; if it smaller than <code>-1</code> or greater than the amount of rows in the collection, a {{DOMxRef("DOMException")}} with the value <code>IndexSizeError</code> is raised.</dd>
-</dl>
+- {{DOMxRef("HTMLTableElement.createTHead()")}}
+  - : Returns an {{DOMxRef("HTMLTableSectionElement")}} representing the first {{HTMLElement("thead")}} that is a child of the element. If none is found, a new one is created and inserted in the tree immediately before the first element that is neither a {{HTMLElement("caption")}}, nor a {{HTMLElement("colgroup")}}, or as the last child if there is no such element.
+- {{DOMxRef("HTMLTableElement.deleteTHead()")}}
+  - : Removes the first {{HTMLElement("thead")}} that is a child of the element.
+- {{DOMxRef("HTMLTableElement.createTFoot()")}}
+  - : Returns an {{DOMxRef("HTMLTableSectionElement")}} representing the first {{HTMLElement("tfoot")}} that is a child of the element. If none is found, a new one is created and inserted in the tree as the last child.
+- {{DOMxRef("HTMLTableElement.deleteTFoot()")}}
+  - : Removes the first {{HTMLElement("tfoot")}} that is a child of the element.
+- {{DOMxRef("HTMLTableElement.createTBody()")}}
+  - : Returns a {{DOMxRef("HTMLTableSectionElement")}} representing a new {{HTMLElement("tbody")}} that is a child of the element. It is inserted in the tree after the last element that is a {{HTMLElement("tbody")}}, or as the last child if there is no such element.
+- {{DOMxRef("HTMLTableElement.createCaption()")}}
+  - : Returns an {{DOMxRef("HTMLElement")}} representing the first {{HTMLElement("caption")}} that is a child of the element. If none is found, a new one is created and inserted in the tree as the first child of the {{HTMLElement("table")}} element.
+- {{DOMxRef("HTMLTableElement.deleteCaption()")}}
+  - : Removes the first {{HTMLElement("caption")}} that is a child of the element.
+- {{DOMxRef("HTMLTableElement.insertRow()")}}
+  - : Returns an {{DOMxRef("HTMLTableRowElement")}} representing a new row of the table. It inserts it in the rows collection immediately before the {{HTMLElement("tr")}} element at the given `index` position. If necessary a {{HTMLElement("tbody")}} is created. If the `index` is `-1`, the new row is appended to the collection. If the `index` is smaller than `-1` or greater than the number of rows in the collection, a {{DOMxRef("DOMException")}} with the value `IndexSizeError` is raised.
+- {{DOMxRef("HTMLTableElement.deleteRow()")}}
+  - : Removes the row corresponding to the `index` given in parameter. If the `index` value is `-1` the last row is removed; if it smaller than `-1` or greater than the amount of rows in the collection, a {{DOMxRef("DOMException")}} with the value `IndexSizeError` is raised.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The HTML element implementing this interface: {{HTMLElement("table")}}.</li>
-</ul>
+- The HTML element implementing this interface: {{HTMLElement("table")}}.

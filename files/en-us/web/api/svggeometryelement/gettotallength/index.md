@@ -2,33 +2,34 @@
 title: SVGGeometryElement.getTotalLength()
 slug: Web/API/SVGGeometryElement/getTotalLength
 tags:
-- API
-- DOM
-- Method
-- NeedsExample
-- Reference
-- SVG
-- SVG DOM
+  - API
+  - DOM
+  - Method
+  - NeedsExample
+  - Reference
+  - SVG
+  - SVG DOM
 browser-compat: api.SVGGeometryElement.getTotalLength
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <code><strong>SVGGeometryElement.getTotalLength()</strong></code> method returns
-  the user agent's computed value for the total length of the path in user units.</p>
+The **`SVGGeometryElement.getTotalLength()`** method returns
+the user agent's computed value for the total length of the path in user units.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">float <var>someElement</var>.getTotalLength();
-</pre>
+```js
+float someElement.getTotalLength();
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A float indicating the total length of the path in user units.</p>
+A float indicating the total length of the path in user units.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

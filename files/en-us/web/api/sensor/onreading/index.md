@@ -2,36 +2,38 @@
 title: Sensor.onreading
 slug: Web/API/Sensor/onreading
 tags:
-- API
-- EventHandler
-- Generic Sensor API
-- Property
-- Reference
-- Sensor
-- Sensor APIs
-- Sensors
-- onreading
-- reading
+  - API
+  - EventHandler
+  - Generic Sensor API
+  - Property
+  - Reference
+  - Sensor
+  - Sensor APIs
+  - Sensors
+  - onreading
+  - reading
 browser-compat: api.Sensor.onreading
 ---
-<div>{{APIRef("Sensor API")}}</div>
+{{APIRef("Sensor API")}}
 
-<p>The <strong><code>onreading</code></strong>
-    <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> is called when a reading is taken on one of the child
-    interfaces of the {{domxref("Sensor")}} interface.</p>
+The **`onreading`**
+[event handler](/en-US/docs/Web/Events/Event_handlers) is called when a reading is taken on one of the child
+interfaces of the {{domxref("Sensor")}} interface.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">sensorInstance.onreading = function
-  sensorInstance.addEventListener('reading', function() { ... })</pre>
+```js
+sensorInstance.onreading = function
+  sensorInstance.addEventListener('reading', function() { ... })
+```
 
-<p>Because {{domxref('Sensor')}} is a base class, <code>onreading</code> may only be used
-  on one of its derived classes.</p>
+Because {{domxref('Sensor')}} is a base class, `onreading` may only be used
+on one of its derived classes.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

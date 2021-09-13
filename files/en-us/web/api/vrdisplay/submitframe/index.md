@@ -13,32 +13,32 @@ tags:
   - submitFrame()
 browser-compat: api.VRDisplay.submitFrame
 ---
-<div>{{APIRef("WebVR API")}}{{Deprecated_Header}}</div>
+{{APIRef("WebVR API")}}{{Deprecated_Header}}
 
-<p>The <code><strong>submitFrame()</strong></code> method of the {{domxref("VRDisplay")}} interface captures the current state of the {{domxref("VRLayerInit")}} currently being presented and displays it on the <code>VRDisplay</code>.</p>
+The **`submitFrame()`** method of the {{domxref("VRDisplay")}} interface captures the current state of the {{domxref("VRLayerInit")}} currently being presented and displays it on the `VRDisplay`.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This method was part of the old <a href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</a>. It has been superseded by the <a href="https://immersive-web.github.io/webxr/">WebXR Device API</a>.</p>
-</div>
+> **Note:** This method was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-<p>The frame should subsequently be rendered using the {{domxref("VRPose")}} and matrices provided by the last call to {{domxref("getFrameData()")}}.</p>
+The frame should subsequently be rendered using the {{domxref("VRPose")}} and matrices provided by the last call to {{domxref("getFrameData()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">vrDisplayInstance.submitFrame();
-</pre>
+```js
+vrDisplayInstance.submitFrame();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Void.</p>
+Void.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var frameData = new VRFrameData();
+```js
+var frameData = new VRFrameData();
 var vrDisplay;
 
 navigator.getVRDisplays().then(function(displays) {
@@ -95,24 +95,22 @@ function drawVRScene() {
 
   // WebVR: Indicate that we are ready to present the rendered frame to the VR display
   vrDisplay.submitFrame();
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Note:</strong> You can see this complete code at <a href="https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js">raw-webgl-example</a>.</p>
-</div>
+> **Note:** You can see this complete code at [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This method was part of the old <a href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</a> that has been superseded by the <a href="https://immersive-web.github.io/webxr/">WebXR Device API</a>. It is no longer on track to becoming a standard.</p>
-<p>Until all browsers have implemented the new <a href="/en-US/docs/Web/API/WebXR_Device_API/Fundamentals">WebXR APIs</a>, it is recommended to rely on frameworks, like <a href="https://aframe.io/">A-Frame</a>, <a href="https://www.babylonjs.com/">Babylon.js</a>, or <a href="https://threejs.org/">Three.js</a>, or a <a href="https://github.com/immersive-web/webxr-polyfill">polyfill</a>, to develop WebXR applications that will work across all browsers <a href="https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/">[1]</a>.</p>
+This method was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) that has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/). It is no longer on track to becoming a standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals), it is recommended to rely on frameworks, like [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), or [Three.js](https://threejs.org/), or a [polyfill](https://github.com/immersive-web/webxr-polyfill), to develop WebXR applications that will work across all browsers [\[1\]](https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/).
 
-<p>{{Compat}}</p>
+## Browser compatibility
 
-<h2 id="See_also">See also</h2>
+{{Compat}}
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebVR_API">WebVR API homepage</a></li>
- <li><a href="https://mixedreality.mozilla.org/">https://mixedreality.mozilla.org/</a> — demos, downloads, and other resources from the Mozilla VR team.</li>
-</ul>
+## See also
+
+- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API)
+- <https://mixedreality.mozilla.org/> — demos, downloads, and other resources from the Mozilla VR team.

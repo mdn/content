@@ -2,137 +2,129 @@
 title: WebGLRenderingContext.renderbufferStorage()
 slug: Web/API/WebGLRenderingContext/renderbufferStorage
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.renderbufferStorage
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.renderbufferStorage()</code></strong> method of
-  the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> creates and initializes a
-  renderbuffer object's data store.</p>
+The **`WebGLRenderingContext.renderbufferStorage()`** method of
+the [WebGL API](/en-US/docs/Web/API/WebGL_API) creates and initializes a
+renderbuffer object's data store.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <var>gl</var>.renderbufferStorage(<var>target</var>, <var>internalFormat</var>, <var>width</var>, <var>height</var>);
-</pre>
+```js
+void gl.renderbufferStorage(target, internalFormat, width, height);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>target</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the target renderbuffer object. Possible values:
-    <ul>
-      <li><code>gl.RENDERBUFFER</code>: Buffer data storage for single images in a
-        renderable internal format.</li>
-    </ul>
-  </dd>
-  <dt>internalFormat</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the internal format of the renderbuffer. Possible
+- target
+
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the target renderbuffer object. Possible values:
+
+    - `gl.RENDERBUFFER`: Buffer data storage for single images in a
+      renderable internal format.
+
+- internalFormat
+
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the internal format of the renderbuffer. Possible
     values:
-    <ul>
-      <li><code>gl.RGBA4</code>: 4 red bits, 4 green bits, 4 blue bits 4 alpha bits.</li>
-      <li><code>gl.RGB565</code>: 5 red bits, 6 green bits, 5 blue bits.</li>
-      <li><code>gl.RGB5_A1</code>: 5 red bits, 5 green bits, 5 blue bits, 1 alpha bit.
-      </li>
-      <li><code>gl.DEPTH_COMPONENT16</code>: 16 depth bits.</li>
-      <li><code>gl.STENCIL_INDEX8</code>: 8 stencil bits.</li>
-      <li><code>gl.DEPTH_STENCIL</code></li>
-      <li>When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
-        the following values are available additionally:
-        <ul>
-          <li><code>gl.R8</code></li>
-          <li><code>gl.R8UI</code></li>
-          <li><code>gl.R8I</code></li>
-          <li><code>gl.R16UI</code></li>
-          <li><code>gl.R16I</code></li>
-          <li><code>gl.R32UI</code></li>
-          <li><code>gl.R32I</code></li>
-          <li><code>gl.RG8</code></li>
-          <li><code>gl.RG8UI</code></li>
-          <li><code>gl.RG8I</code></li>
-          <li><code>gl.RG16UI</code></li>
-          <li><code>gl.RG16I</code></li>
-          <li><code>gl.RG32UI</code></li>
-          <li><code>gl.RG32I</code></li>
-          <li><code>gl.RGB8</code></li>
-          <li><code>gl.RGBA8</code></li>
-          <li><code>gl.SRGB8_ALPHA8</code> (also available as an extension for WebGL 1,
-            see below)</li>
-          <li><code>gl.RGB10_A2</code></li>
-          <li><code>gl.RGBA8UI</code></li>
-          <li><code>gl.RGBA8I</code></li>
-          <li><code>gl.RGB10_A2UI</code></li>
-          <li><code>gl.RGBA16UI</code></li>
-          <li><code>gl.RGBA16I</code></li>
-          <li><code>gl.RGBA32I</code></li>
-          <li><code>gl.RGBA32UI</code></li>
-          <li><code>gl.DEPTH_COMPONENT24</code></li>
-          <li><code>gl.DEPTH_COMPONENT32F</code></li>
-          <li><code>gl.DEPTH24_STENCIL8</code></li>
-          <li><code>gl.DEPTH32F_STENCIL8</code></li>
-        </ul>
-      </li>
-      <li>When using the {{domxref("WEBGL_color_buffer_float")}} extension:
-        <ul>
-          <li><code>ext.RGBA32F_EXT</code>: RGBA 32-bit floating-point type.</li>
-          <li><code>ext.RGB32F_EXT</code>: RGB 32-bit floating-point type.</li>
-        </ul>
-      </li>
-      <li>When using the {{domxref("EXT_sRGB")}} extension:
-        <ul>
-          <li><code>ext.SRGB8_ALPHA8_EXT</code>: 8-bit sRGB and alpha.</li>
-        </ul>
-      </li>
-      <li>When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}} and
-        the {{domxref("EXT_color_buffer_float")}} extension:
-        <ul>
-          <li><code>gl.R16F</code></li>
-          <li><code>gl.RG16F</code></li>
-          <li><code>gl.RGBA16F</code></li>
-          <li><code>gl.R32F</code></li>
-          <li><code>gl.RG32F</code></li>
-          <li><code>gl.RGBA32F</code></li>
-          <li><code>gl.R11F_G11F_B10F</code></li>
-        </ul>
-      </li>
-    </ul>
-  </dd>
-  <dt>width</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the width of the renderbuffer in pixels.</dd>
-  <dt>height</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the height of the renderbuffer in pixels.</dd>
-</dl>
 
-<h3 id="Return_value">Return value</h3>
+    - `gl.RGBA4`: 4 red bits, 4 green bits, 4 blue bits 4 alpha bits.
+    - `gl.RGB565`: 5 red bits, 6 green bits, 5 blue bits.
+    - `gl.RGB5_A1`: 5 red bits, 5 green bits, 5 blue bits, 1 alpha bit.
+    - `gl.DEPTH_COMPONENT16`: 16 depth bits.
+    - `gl.STENCIL_INDEX8`: 8 stencil bits.
+    - `gl.DEPTH_STENCIL`
+    - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
+      the following values are available additionally:
 
-<p>None.</p>
+      - `gl.R8`
+      - `gl.R8UI`
+      - `gl.R8I`
+      - `gl.R16UI`
+      - `gl.R16I`
+      - `gl.R32UI`
+      - `gl.R32I`
+      - `gl.RG8`
+      - `gl.RG8UI`
+      - `gl.RG8I`
+      - `gl.RG16UI`
+      - `gl.RG16I`
+      - `gl.RG32UI`
+      - `gl.RG32I`
+      - `gl.RGB8`
+      - `gl.RGBA8`
+      - `gl.SRGB8_ALPHA8` (also available as an extension for WebGL 1,
+        see below)
+      - `gl.RGB10_A2`
+      - `gl.RGBA8UI`
+      - `gl.RGBA8I`
+      - `gl.RGB10_A2UI`
+      - `gl.RGBA16UI`
+      - `gl.RGBA16I`
+      - `gl.RGBA32I`
+      - `gl.RGBA32UI`
+      - `gl.DEPTH_COMPONENT24`
+      - `gl.DEPTH_COMPONENT32F`
+      - `gl.DEPTH24_STENCIL8`
+      - `gl.DEPTH32F_STENCIL8`
 
-<h2 id="Examples">Examples</h2>
+    - When using the {{domxref("WEBGL_color_buffer_float")}} extension:
 
-<pre class="brush: js">gl.renderbufferStorage(gl.RENDERBUFFER, gl.RGBA4, 256, 256);
-</pre>
+      - `ext.RGBA32F_EXT`: RGBA 32-bit floating-point type.
+      - `ext.RGB32F_EXT`: RGB 32-bit floating-point type.
 
-<h2 id="Specifications">Specifications</h2>
+    - When using the {{domxref("EXT_sRGB")}} extension:
+
+      - `ext.SRGB8_ALPHA8_EXT`: 8-bit sRGB and alpha.
+
+    - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}} and
+      the {{domxref("EXT_color_buffer_float")}} extension:
+
+      - `gl.R16F`
+      - `gl.RG16F`
+      - `gl.RGBA16F`
+      - `gl.R32F`
+      - `gl.RG32F`
+      - `gl.RGBA32F`
+      - `gl.R11F_G11F_B10F`
+
+- width
+  - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the width of the renderbuffer in pixels.
+- height
+  - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the height of the renderbuffer in pixels.
+
+### Return value
+
+None.
+
+## Examples
+
+```js
+gl.renderbufferStorage(gl.RENDERBUFFER, gl.RGBA4, 256, 256);
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.bindRenderbuffer()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.createRenderbuffer()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.deleteRenderbuffer()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.getRenderbufferParameter()")}}</li>
-  <li>{{domxref("WEBGL_color_buffer_float")}}</li>
-  <li>{{domxref("EXT_sRGB")}}</li>
-  <li>{{domxref("EXT_color_buffer_float")}}</li>
-  <li>{{domxref("EXT_texture_norm16")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.bindRenderbuffer()")}}
+- {{domxref("WebGLRenderingContext.createRenderbuffer()")}}
+- {{domxref("WebGLRenderingContext.deleteRenderbuffer()")}}
+- {{domxref("WebGLRenderingContext.getRenderbufferParameter()")}}
+- {{domxref("WEBGL_color_buffer_float")}}
+- {{domxref("EXT_sRGB")}}
+- {{domxref("EXT_color_buffer_float")}}
+- {{domxref("EXT_texture_norm16")}}

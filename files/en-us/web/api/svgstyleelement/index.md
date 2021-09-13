@@ -9,41 +9,44 @@ tags:
   - SVG DOM
 browser-compat: api.SVGStyleElement
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<h2 id="SVG_style_interface">SVG style interface</h2>
+## SVG style interface
 
-<p>The <strong><code>SVGStyleElement</code></strong> interface corresponds to the SVG {{SVGElement("style")}} element.</p>
+The **`SVGStyleElement`** interface corresponds to the SVG {{SVGElement("style")}} element.
 
-<p>{{InheritanceDiagram(600, 140)}}</p>
+{{InheritanceDiagram(600, 140)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}.</em></p>
+_This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
 
-<dl>
- <dt>{{domxref("SVGStyleElement.type")}}</dt>
- <dd>A {{domxref("DOMString")}} corresponding to the {{SVGAttr("type")}} attribute of the given element.
- <p>SVG 1.1 defined that a {{domxref("DOMException")}} is raised with code <code>NO_MODIFICATION_ALLOWED_ERR</code> on an attempt to change the value of a read-only attribute. This restriction was removed in SVG 2.</p>
- </dd>
- <dt>{{domxref("SVGStyleElement.media")}}</dt>
- <dd>A {{domxref("DOMString")}} corresponding to the {{SVGAttr("media")}} attribute of the given element.
- <p>SVG 1.1 defined that a {{domxref("DOMException")}} is raised with code <code>NO_MODIFICATION_ALLOWED_ERR</code> on an attempt to change the value of a read-only attribute. This restriction was removed in SVG 2.</p>
- </dd>
- <dt>{{domxref("SVGStyleElement.title")}}</dt>
- <dd>A {{domxref("DOMString")}} corresponding to the {{SVGAttr("title")}} attribute of the given element.
- <p>SVG 1.1 defined that a {{domxref("DOMException")}} is raised with code <code>NO_MODIFICATION_ALLOWED_ERR</code> on an attempt to change the value of a read-only attribute. This restriction was removed in SVG 2.</p>
- </dd>
-</dl>
+- {{domxref("SVGStyleElement.type")}}
 
-<h2 id="Methods">Methods</h2>
+  - : A {{domxref("DOMString")}} corresponding to the {{SVGAttr("type")}} attribute of the given element.
 
-<p><em>This interface doesn't implement any specific methods, but inherits methods from its parent interface, {{domxref("SVGElement")}}.</em></p>
+    SVG 1.1 defined that a {{domxref("DOMException")}} is raised with code `NO_MODIFICATION_ALLOWED_ERR` on an attempt to change the value of a read-only attribute. This restriction was removed in SVG 2.
 
-<h2 id="Specifications">Specifications</h2>
+- {{domxref("SVGStyleElement.media")}}
+
+  - : A {{domxref("DOMString")}} corresponding to the {{SVGAttr("media")}} attribute of the given element.
+
+    SVG 1.1 defined that a {{domxref("DOMException")}} is raised with code `NO_MODIFICATION_ALLOWED_ERR` on an attempt to change the value of a read-only attribute. This restriction was removed in SVG 2.
+
+- {{domxref("SVGStyleElement.title")}}
+
+  - : A {{domxref("DOMString")}} corresponding to the {{SVGAttr("title")}} attribute of the given element.
+
+    SVG 1.1 defined that a {{domxref("DOMException")}} is raised with code `NO_MODIFICATION_ALLOWED_ERR` on an attempt to change the value of a read-only attribute. This restriction was removed in SVG 2.
+
+## Methods
+
+_This interface doesn't implement any specific methods, but inherits methods from its parent interface, {{domxref("SVGElement")}}._
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

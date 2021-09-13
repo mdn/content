@@ -14,40 +14,38 @@ tags:
   - events
 browser-compat: api.RTCTrackEvent.transceiver
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The WebRTC API interface {{domxref("RTCTrackEvent")}}'s
-    read-only <code><strong>transceiver</strong></code> property indicates the
-    {{domxref("RTCRtpTransceiver")}} affiliated with the event's
-    {{domxref("RTCTrackEvent.track", "track")}}.</p>
+The WebRTC API interface {{domxref("RTCTrackEvent")}}'s
+read-only **`transceiver`** property indicates the
+{{domxref("RTCRtpTransceiver")}} affiliated with the event's
+{{domxref("RTCTrackEvent.track", "track")}}.
 
-<p>The transceiver pairs the track's
-  {{domxref("RTCTrackEvent.receiver", "receiver")}} with an {{domxref("RTCRtpSender")}}.
-</p>
+The transceiver pairs the track's
+{{domxref("RTCTrackEvent.receiver", "receiver")}} with an {{domxref("RTCRtpSender")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>rtpTransceiver</em> = <em>trackEvent</em>.transceiver;</pre>
+```js
+var rtpTransceiver = trackEvent.transceiver;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>The {{domxref("RTCRtpTransceiver")}} which pairs the <code>receiver</code> with a
-  sender and other properties which establish a single bidirectional {{Glossary("RTP", "SRTP")}}
-  stream for use by the {{domxref("RTCTrackEvent.track", "track")}} associated with the
-  <code>RTCTrackEvent</code>.</p>
+The {{domxref("RTCRtpTransceiver")}} which pairs the `receiver` with a
+sender and other properties which establish a single bidirectional {{Glossary("RTP", "SRTP")}}
+stream for use by the {{domxref("RTCTrackEvent.track", "track")}} associated with the
+`RTCTrackEvent`.
 
-<div class="note">
-  <p><strong>Note:</strong> The {{domxref("RTCRtpReceiver")}} referred to by this
-    <code>RTCRtpReceiver</code>'s {{domxref("RTCRtpTransceiver.receiver", "receiver")}}
-    property will always be the same as the {{domxref("RTCTrackEvent")}}'s
-    {{domxref("RTCTrackEvent.receiver", "receiver")}} property.</p>
-</div>
+> **Note:** The {{domxref("RTCRtpReceiver")}} referred to by this
+> `RTCRtpReceiver`'s {{domxref("RTCRtpTransceiver.receiver", "receiver")}}
+> property will always be the same as the {{domxref("RTCTrackEvent")}}'s
+> {{domxref("RTCTrackEvent.receiver", "receiver")}} property.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

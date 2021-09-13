@@ -2,59 +2,56 @@
 title: NodeList.prototype.forEach()
 slug: Web/API/NodeList/forEach
 tags:
-- DOM
-- Iterable
-- Method
-- NodeList
-- Reference
-- Web
-- Polyfill
+  - DOM
+  - Iterable
+  - Method
+  - NodeList
+  - Reference
+  - Web
+  - Polyfill
 browser-compat: api.NodeList.forEach
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>forEach()</code></strong> method of the {{domxref("NodeList")}}
-  interface calls the callback given in parameter once for each value pair in the list, in
-  insertion order.</p>
+The **`forEach()`** method of the {{domxref("NodeList")}}
+interface calls the callback given in parameter once for each value pair in the list, in
+insertion order.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>someNodeList</var>.forEach(<var>callback</var>[, <var>thisArg</var>]);
-</pre>
+```js
+someNodeList.forEach(callback[, thisArg]);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>callback</var></code></dt>
-  <dd>
-    <p>A function to execute on each element of <code><var>someNodeList</var></code>. It
-      accepts 3 parameters:</p>
+- `callback`
 
-    <dl>
-      <dt><code><var>currentValue</var></code></dt>
-      <dd>The current element being processed in <code><var>someNodeList</var></code>.
-      </dd>
-      <dt><code><var>currentIndex</var></code> {{Optional_inline}}</dt>
-      <dd>The index of the <code><var>currentValue</var></code> being processed in
-        <code><var>someNodeList</var></code>.</dd>
-      <dt><code><var>listObj</var></code> {{Optional_inline}}</dt>
-      <dd>The <code><var>someNodeList</var></code> that <code>forEach()</code> is being
-        applied to.</dd>
-    </dl>
-  </dd>
-  <dt><code><var>thisArg</var></code> {{Optional_inline}}</dt>
-  <dd>Value to use as
-    <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code>
-    when executing <code><var>callback</var></code>.</dd>
-</dl>
+  - : A function to execute on each element of `someNodeList`. It
+    accepts 3 parameters:
 
-<h3 id="Return_value">Return value</h3>
+    - `currentValue`
+      - : The current element being processed in `someNodeList`.
+    - `currentIndex` {{Optional_inline}}
+      - : The index of the `currentValue` being processed in
+        `someNodeList`.
+    - `listObj` {{Optional_inline}}
+      - : The `someNodeList` that `forEach()` is being
+        applied to.
 
-<p>{{jsxref('undefined')}}.</p>
+- `thisArg` {{Optional_inline}}
+  - : Value to use as
+    [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this)
+    when executing `callback`.
 
-<h2 id="Example">Example</h2>
+### Return value
 
-<pre class="brush: js;">let node = document.createElement("div");
+{{jsxref('undefined')}}.
+
+## Example
+
+```js
+let node = document.createElement("div");
 let kid1 = document.createElement("p");
 let kid2 = document.createTextNode("hey");
 let kid3 = document.createElement("span");
@@ -70,49 +67,52 @@ list.forEach(
     console.log(currentValue + ', ' + currentIndex + ', ' + this);
   },
   'myThisArg'
-);</pre>
+);
+```
 
-<p>The above code results in the following:</p>
+The above code results in the following:
 
-<pre>[object HTMLParagraphElement], 0, myThisArg
-[object Text], 1, myThisArg
-[object HTMLSpanElement], 2, myThisArg</pre>
+    [object HTMLParagraphElement], 0, myThisArg
+    [object Text], 1, myThisArg
+    [object HTMLSpanElement], 2, myThisArg
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>This {{Glossary("Polyfill","polyfill")}} adds compatibility to all Browsers supporting
-  <a href="https://caniuse.com/#search=es5">ES5</a>:</p>
+This {{Glossary("Polyfill","polyfill")}} adds compatibility to all Browsers supporting
+[ES5](https://caniuse.com/#search=es5):
 
-<pre class="brush: js">if (window.NodeList &amp;&amp; !NodeList.prototype.forEach) {
+```js
+if (window.NodeList && !NodeList.prototype.forEach) {
     NodeList.prototype.forEach = function (callback, thisArg) {
         thisArg = thisArg || window;
-        for (var i = 0; i &lt; this.length; i++) {
+        for (var i = 0; i < this.length; i++) {
             callback.call(thisArg, this[i], i, this);
         }
     };
-}</pre>
+}
+```
 
-<p>OR</p>
+OR
 
-<pre class="brush: js">if (window.NodeList &amp;&amp; !NodeList.prototype.forEach) {
+```js
+if (window.NodeList && !NodeList.prototype.forEach) {
    NodeList.prototype.forEach = Array.prototype.forEach;
-}</pre>
+}
+```
 
-<p>The above behavior is how many browsers actually implement
-  <code>NodeList.prototype.forEach()</code> (Chrome, for example).</p>
+The above behavior is how many browsers actually implement
+`NodeList.prototype.forEach()` (Chrome, for example).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>NodeList.prototype.forEach</code> is available in <a href="https://github.com/zloirock/core-js#iterable-dom-collections"><code>core-js</code></a></li>
-  <li>{{domxref("Node")}}</li>
-  <li>{{domxref("NodeList")}}</li>
-</ul>
+- A polyfill of `NodeList.prototype.forEach` is available in [`core-js`](https://github.com/zloirock/core-js#iterable-dom-collections)
+- {{domxref("Node")}}
+- {{domxref("NodeList")}}

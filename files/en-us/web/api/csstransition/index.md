@@ -9,34 +9,33 @@ tags:
   - Reference
 browser-compat: api.CSSTransition
 ---
-<div>{{APIRef("Web Animations API")}}{{SeeCompatTable}}</div>
+{{APIRef("Web Animations API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>CSSTransition</code></strong> interface of the {{domxref('Web Animations API','','',' ')}} represents an {{domxref("Animation")}} object used for a <a href="/en-US/docs/Web/CSS/CSS_Transitions">CSS Transition</a>.</p>
+The **`CSSTransition`** interface of the {{domxref('Web Animations API','','',' ')}} represents an {{domxref("Animation")}} object used for a [CSS Transition](/en-US/docs/Web/CSS/CSS_Transitions).
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p>Inherits methods from its ancestor {{domxref("Animation")}} and adds {{domxref("transitionProperty")}}.</p>
+Inherits methods from its ancestor {{domxref("Animation")}} and adds {{domxref("transitionProperty")}}.
 
-<dl>
-    <dt>{{domxref("CSSTransition.transitionProperty")}}{{readonlyinline}}</dt>
-    <dd>Returns the transition CSS property name as a {{domxref("CSSOMString")}}.</dd>
-</dl>
+- {{domxref("CSSTransition.transitionProperty")}}{{readonlyinline}}
+  - : Returns the transition CSS property name as a {{domxref("CSSOMString")}}.
 
-<h3 id="Event_handlers">Event handlers</h3>
+### Event handlers
 
-<p>No specific event handlers; inherits methods from its ancestor {{domxref("Animation")}}.</p>
+No specific event handlers; inherits methods from its ancestor {{domxref("Animation")}}.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p>No specific methods; inherits methods from its ancestor {{domxref("Animation")}}.</p>
+No specific methods; inherits methods from its ancestor {{domxref("Animation")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3>Inspecting the returned CSSTransition</h3>
+### Inspecting the returned CSSTransition
 
-<p>The transition in the following example changes the width of the box on hover. Calling {{domxref("Element.getAnimations()")}} returns an array of all {{domxref("Animation")}} objects. In our case this returns a <code>CSSTransition</code> object, representing the animation created.</p>
+The transition in the following example changes the width of the box on hover. Calling {{domxref("Element.getAnimations()")}} returns an array of all {{domxref("Animation")}} objects. In our case this returns a `CSSTransition` object, representing the animation created.
 
-<pre class="brush: css">.box {
+```css
+.box {
   background-color: #165baa;
   color: #fff;
   width: 100px;
@@ -46,18 +45,21 @@ browser-compat: api.CSSTransition
 
 .box:hover {
   width: 200px;
-}</pre>
+}
+```
 
-<pre class="brush: js">const item = document.querySelector(".box");
+```js
+const item = document.querySelector(".box");
 item.addEventListener('transitionrun', () => {
   let animations = document.querySelector(".box").getAnimations();
   console.log(animations[0]);
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

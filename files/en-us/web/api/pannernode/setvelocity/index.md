@@ -13,53 +13,51 @@ tags:
   - setVelocity
 browser-compat: api.PannerNode.setVelocity
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>{{deprecated_header}}</p>
+{{deprecated_header}}
 
-<p>The <code>setVelocity()</code> method of the {{ domxref("PannerNode") }} Interface defines the velocity vector of the audio source — how fast it is moving and in what direction.</p>
+The `setVelocity()` method of the {{ domxref("PannerNode") }} Interface defines the velocity vector of the audio source — how fast it is moving and in what direction.
 
-<p>This method was removed from the specification because of gaps in its design and implementation problems.</p>
+This method was removed from the specification because of gaps in its design and implementation problems.
 
-<p>The velocity relative to the listener is used to control the pitch change needed to conform with the <a href="https://en.wikipedia.org/wiki/Doppler_effect">Doppler effect</a> due to the relative speed.</p>
+The velocity relative to the listener is used to control the pitch change needed to conform with the [Doppler effect](https://en.wikipedia.org/wiki/Doppler_effect) due to the relative speed.
 
-<p>As the vector controls both the direction of travel and its velocity, the three parameters <code>x</code>, <code>y</code> and <code>z</code> are expressed in <em>meters per second<code>.</code></em> The default value of the velocity vector is <code>(0,</code> <code>0,</code> <code>0)</code>.</p>
+As the vector controls both the direction of travel and its velocity, the three parameters `x`, `y` and `z` are expressed in _meters per second`.`_ The default value of the velocity vector is `(0,` `0,` `0)`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var audioCtx = new AudioContext();
+```js
+var audioCtx = new AudioContext();
 var panner = audioCtx.createPanner();
-panner.setVelocity(0,0,17);</pre>
+panner.setVelocity(0,0,17);
+```
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>Void.</p>
+Void.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See <a href="/en-US/docs/Web/API/BaseAudioContext/createPanner#example"><code>BaseAudioContext.createPanner()</code></a> for example code.</p>
+See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
 
-<h2 id="Parameters">Parameters</h2>
+## Parameters
 
-<dl>
- <dt><code>x</code></dt>
- <dd>The x value of the panner's velocity vector.</dd>
- <dt><code>y</code></dt>
- <dd>The y value of the panner's velocity vector.</dd>
- <dt><code>z</code></dt>
- <dd>The z value of the panner's velocity vector.</dd>
-</dl>
+- `x`
+  - : The x value of the panner's velocity vector.
+- `y`
+  - : The y value of the panner's velocity vector.
+- `z`
+  - : The z value of the panner's velocity vector.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

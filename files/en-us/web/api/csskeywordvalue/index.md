@@ -11,61 +11,61 @@ tags:
   - Reference
 browser-compat: api.CSSKeywordValue
 ---
-<div>{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}</div>
+{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
-<p>The <strong><code>CSSKeywordValue</code></strong> interface of the <a href="/en-US/docs/Web/API/CSS_Object_Model#css_typed_object_model">CSS Typed Object Model API</a> creates an object to represent CSS keywords and other identifiers.</p>
+The **`CSSKeywordValue`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model#css_typed_object_model) creates an object to represent CSS keywords and other identifiers.
 
-<p>The interface instance name is a stringifier meaning that when used anywhere a string is expected it will return the value of <code>CSSKeyword.value</code>.</p>
+The interface instance name is a stringifier meaning that when used anywhere a string is expected it will return the value of `CSSKeyword.value`.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("CSSKeywordValue.CSSKeywordValue()")}}</dt>
- <dd>Creates a new <code>CSSKeywordValue</code> object.</dd>
-</dl>
+- {{domxref("CSSKeywordValue.CSSKeywordValue()")}}
+  - : Creates a new `CSSKeywordValue` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref('CSSKeywordValue.value')}}</dt>
- <dd>Returns or sets the value of the <code>CSSKeywordValue</code>.</dd>
-</dl>
+- {{domxref('CSSKeywordValue.value')}}
+  - : Returns or sets the value of the `CSSKeywordValue`.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Inherits methods from {{domxref('CSSStyleValue')}}.</em></p>
+_Inherits methods from {{domxref('CSSStyleValue')}}._
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example resets the CSS {{cssxref('display')}} property to its defaults, setting the inline <code><a href="/en-US/docs/Web/HTML/Global_attributes/style">style</a></code> attribute to <code>style="display: initial"</code> if viewed in the <a href="/en-US/docs/Tools/Page_Inspector/How_to/Select_an_element">developer tools inspector</a>.</p>
+The following example resets the CSS {{cssxref('display')}} property to its defaults, setting the inline [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute to `style="display: initial"` if viewed in the [developer tools inspector](/en-US/docs/Tools/Page_Inspector/How_to/Select_an_element).
 
-<pre class="brush: css hidden">#myElement {
+```css hidden
+#myElement {
   display: flex;
-}</pre>
+}
+```
 
-<pre class="brush: html hidden">&lt;div id="myElement"&gt;Check the developer tools to see the log in the console and to inspect the style attribute on this div.&lt;/div&gt;</pre>
+```html hidden
+<div id="myElement">Check the developer tools to see the log in the console and to inspect the style attribute on this div.</div>
+```
 
-<pre class="brush: js">let myElement = document.getElementById('myElement').attributeStyleMap;
+```js
+let myElement = document.getElementById('myElement').attributeStyleMap;
     myElement.set('display', new CSSKeywordValue('initial'));
 
-console.log( myElement.get('display').value);  // 'initial'</pre>
+console.log( myElement.get('display').value);  // 'initial'
+```
 
-<p>{{EmbedLiveSample("Examples", 120, 120)}}</p>
+{{EmbedLiveSample("Examples", 120, 120)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref('CSSImageValue')}}</li>
- <li>{{domxref('CSSNumericValue')}}</li>
- <li>{{domxref('CSSPositionValue')}}</li>
- <li>{{domxref('CSSTransformValue')}}</li>
- <li>{{domxref('CSSUnparsedValue')}}</li>
-</ul>
+- {{domxref('CSSImageValue')}}
+- {{domxref('CSSNumericValue')}}
+- {{domxref('CSSPositionValue')}}
+- {{domxref('CSSTransformValue')}}
+- {{domxref('CSSUnparsedValue')}}

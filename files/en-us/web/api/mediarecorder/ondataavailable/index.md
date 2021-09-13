@@ -2,64 +2,63 @@
 title: MediaRecorder.ondataavailable
 slug: Web/API/MediaRecorder/ondataavailable
 tags:
-- API
-- Audio
-- Media Capture
-- Media Recorder API
-- MediaRecorder
-- MediaStream Recording API
-- Property
-- Reference
-- Video
-- ondataavailable
+  - API
+  - Audio
+  - Media Capture
+  - Media Recorder API
+  - MediaRecorder
+  - MediaStream Recording API
+  - Property
+  - Reference
+  - Video
+  - ondataavailable
 browser-compat: api.MediaRecorder.ondataavailable
 ---
-<p>{{APIRef("MediaStream Recording")}}</p>
+{{APIRef("MediaStream Recording")}}
 
-<p>The <strong><code>MediaRecorder.ondataavailable </code></strong>event handler (part of
-  the <a href="/en-US/docs/Web/API/MediaStream_Recording_API">MediaStream Recording
-    API</a>) handles the {{event("dataavailable")}} event, letting you run code in
-  response to {{domxref("Blob")}} data being made available for use.</p>
+The **`MediaRecorder.ondataavailable `**event handler (part of
+the [MediaStream Recording
+API](/en-US/docs/Web/API/MediaStream_Recording_API)) handles the {{event("dataavailable")}} event, letting you run code in
+response to {{domxref("Blob")}} data being made available for use.
 
-<p>The <code>dataavailable</code> event is fired when the MediaRecorder delivers media
-  data to your application for its use. The data is provided in a {{domxref("Blob")}}
-  object that contains the data. This occurs in four situations:</p>
+The `dataavailable` event is fired when the MediaRecorder delivers media
+data to your application for its use. The data is provided in a {{domxref("Blob")}}
+object that contains the data. This occurs in four situations:
 
-<ul>
-  <li>When the media stream ends, any media data not already delivered to your
-    <code>ondataavailable</code> handler is passed in a single {{domxref("Blob")}}.</li>
-  <li>When {{domxref("MediaRecorder.stop()")}} is called, all media data which has been
-    captured since recording began or the last time a <code>dataavailable</code> event
-    occurred is delivered in a {{domxref("Blob")}}; after this, capturing ends.</li>
-  <li>When {{domxref("MediaRecorder.requestData()")}} is called, all media data which has
-    been captured since recording began or the last time a <code>dataavailable</code>
-    event occurred is delivered; then a new <code>Blob</code> is created and media capture
-    continues into that blob.</li>
-  <li>If a <code>timeslice</code> property was passed into the
-    {{domxref("MediaRecorder.start()")}} method that started media capture, a
-    <code>dataavailable</code> event is fired every <code>timeslice</code> milliseconds.
-    That means that each blob will have a specific time duration (except the last blob,
-    which might be shorter, since it would be whatever is left over since the last event).
-    So if the method call looked like this — <code>recorder.start(1000);</code> — the
-    <code>dataavailable</code> event would fire after each second of media capture, and
-    our event handler would be called every second with a blob of media data that's one
-    second long. You can use <code>timeslice</code> alongside
-    {{domxref("MediaRecorder.stop()")}} and {{domxref("MediaRecorder.requestData()")}} to
-    produce multiple same-length blobs plus other shorter blobs as well.</li>
-</ul>
+- When the media stream ends, any media data not already delivered to your
+  `ondataavailable` handler is passed in a single {{domxref("Blob")}}.
+- When {{domxref("MediaRecorder.stop()")}} is called, all media data which has been
+  captured since recording began or the last time a `dataavailable` event
+  occurred is delivered in a {{domxref("Blob")}}; after this, capturing ends.
+- When {{domxref("MediaRecorder.requestData()")}} is called, all media data which has
+  been captured since recording began or the last time a `dataavailable`
+  event occurred is delivered; then a new `Blob` is created and media capture
+  continues into that blob.
+- If a `timeslice` property was passed into the
+  {{domxref("MediaRecorder.start()")}} method that started media capture, a
+  `dataavailable` event is fired every `timeslice` milliseconds.
+  That means that each blob will have a specific time duration (except the last blob,
+  which might be shorter, since it would be whatever is left over since the last event).
+  So if the method call looked like this — `recorder.start(1000);` — the
+  `dataavailable` event would fire after each second of media capture, and
+  our event handler would be called every second with a blob of media data that's one
+  second long. You can use `timeslice` alongside
+  {{domxref("MediaRecorder.stop()")}} and {{domxref("MediaRecorder.requestData()")}} to
+  produce multiple same-length blobs plus other shorter blobs as well.
 
-<div class="note">
-  <p><strong>Note:</strong> The {{domxref("Blob")}} containing the media data is available in the
-    {{event("dataavailable")}} event's <code>data</code> property.</p>
-</div>
+> **Note:** The {{domxref("Blob")}} containing the media data is available in the
+> {{event("dataavailable")}} event's `data` property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">mediaRecorder.ondataavailable = functionRef;</pre>
+```js
+mediaRecorder.ondataavailable = functionRef;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">...
+```js
+...
   var chunks = [];
 
   mediaRecorder.onstop = function(e) {
@@ -78,26 +77,22 @@ browser-compat: api.MediaRecorder.ondataavailable
   }
 
 ...
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/MediaStream_Recording_API">Using the MediaStream
-      Recording API</a></li>
-  <li><a href="https://mdn.github.io/web-dictaphone/">Web Dictaphone</a>: MediaRecorder +
-    getUserMedia + Web Audio API visualization demo, by <a
-      href="https://twitter.com/chrisdavidmills">Chris Mills</a> (<a
-      href="https://github.com/mdn/web-dictaphone/">source on Github</a>.)</li>
-  <li><a href="http://simpl.info/mediarecorder/">simpl.info MediaStream Recording
-      demo</a>, by <a href="https://twitter.com/sw12">Sam Dutton</a>.</li>
-  <li>{{domxref("Navigator.getUserMedia")}}</li>
-</ul>
+- [Using the MediaStream
+  Recording API](/en-US/docs/Web/API/MediaStream_Recording_API)
+- [Web Dictaphone](https://mdn.github.io/web-dictaphone/): MediaRecorder +
+  getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on Github](https://github.com/mdn/web-dictaphone/).)
+- [simpl.info MediaStream Recording
+  demo](http://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
+- {{domxref("Navigator.getUserMedia")}}

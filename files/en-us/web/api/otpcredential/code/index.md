@@ -9,23 +9,26 @@ tags:
   - OTPCredential
 browser-compat: api.OTPCredential.code
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("WebOTP API")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("WebOTP API")}}
 
-<p>The <strong><code>code</code></strong> property of the {{domxref("OTPCredential")}} interface returns the one-time password.</p>
+The **`code`** property of the {{domxref("OTPCredential")}} interface returns the one-time password.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let code = OTPCredential.code;
-</pre>
+```js
+let code = OTPCredential.code;
+```
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString","string")}} containing the one-time password.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("DOMString","string")}} containing the one-time password.
 
-<p>The below code uses the value of <code>code</code> to complete an input form element. <a href="https://glitch.com/edit/#!/web-otp?path=views%2Findex.html%3A55%3A8">See this code as part of a simple demo</a>.</p>
+## Examples
 
-<pre class="brush: js">navigator.credentials.get({
+The below code uses the value of `code` to complete an input form element. [See this code as part of a simple demo](https://glitch.com/edit/#!/web-otp?path=views%2Findex.html%3A55%3A8).
+
+```js
+navigator.credentials.get({
   otp: { transport:['sms'] },
   signal: ac.signal
 }).then(otp => {
@@ -33,14 +36,13 @@ browser-compat: api.OTPCredential.code
   if (form) form.submit();
 }).catch(err => {
   console.log(err);
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
-
+{{Compat}}

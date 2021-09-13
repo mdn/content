@@ -9,86 +9,77 @@ tags:
   - Reference
 browser-compat: api.CSSStyleSheet.insertRule
 ---
-<div>{{APIRef("CSSOM")}}</div>
+{{APIRef("CSSOM")}}
 
-<p>The <strong><code>CSSStyleSheet.insertRule()</code></strong>
-    method inserts a new <a href="/en-US/docs/Web/API/CSSRule">CSS rule</a> into the <a
-      href="/en-US/docs/Web/API/CSSStyleSheet">current style sheet</a>, with some <a
-      href="#restrictions">restrictions</a>.</p>
+The **`CSSStyleSheet.insertRule()`**
+method inserts a new [CSS rule](/en-US/docs/Web/API/CSSRule) into the [current style sheet](/en-US/docs/Web/API/CSSStyleSheet), with some [restrictions](#restrictions).
 
-<div class="note">
-  <p><strong>Note:</strong> Although <code>insertRule()</code> is exclusively a method of
-    {{domxref("CSSStyleSheet")}}, it actually inserts the rule into
-    <code>{{domxref("CSSStyleSheet", "", "", "1")}}.cssRules</code> — its internal
-    {{domxref("CSSRuleList")}}.</p>
-</div>
+> **Note:** Although `insertRule()` is exclusively a method of
+> {{domxref("CSSStyleSheet")}}, it actually inserts the rule into
+> `{{domxref("CSSStyleSheet", "", "", "1")}}.cssRules` — its internal
+> {{domxref("CSSRuleList")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var>stylesheet</var>.insertRule(<var>rule</var> [, <var>index</var>])</pre>
+```js
+stylesheet.insertRule(rule [, index])
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>rule</code></dt>
-  <dd>
-    <p>A {{domxref("DOMString")}} containing the rule to be inserted. What the inserted
-      rule must contain depends on its type:</p>
+- `rule`
 
-    <ul>
-      <li><strong>For <a
-            href="/en-US/docs/Web/CSS/Syntax#css_statements">rule-sets</a></strong>, both
-        a <a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors">selector</a> and a
-        style declaration.</li>
-      <li><strong>For <a href="/en-US/docs/Web/CSS/At-rule">at-rules</a></strong>, both an
-        at-identifier and the rule content.</li>
-    </ul>
-  </dd>
-  <dt><code>index</code> {{optional_inline}}</dt>
-  <dd>A positive integer less than or equal to <code>stylesheet.cssRules.length</code>,
+  - : A {{domxref("DOMString")}} containing the rule to be inserted. What the inserted
+    rule must contain depends on its type:
+
+    - **For [rule-sets](/en-US/docs/Web/CSS/Syntax#css_statements)**, both
+      a [selector](/en-US/docs/Learn/CSS/Building_blocks/Selectors) and a
+      style declaration.
+    - **For [at-rules](/en-US/docs/Web/CSS/At-rule)**, both an
+      at-identifier and the rule content.
+
+- `index` {{optional_inline}}
+  - : A positive integer less than or equal to `stylesheet.cssRules.length`,
     representing the newly inserted rule's position in
-    <code>{{domxref("CSSStyleSheet", "", "", "1")}}.cssRules</code>. The default is
-    <code>0</code>. (In older implementations, this was required. See <a
-      href="#browser_compatibility">Browser compatibility</a> for details.)</dd>
-</dl>
+    `{{domxref("CSSStyleSheet", "", "", "1")}}.cssRules`. The default is
+    `0`. (In older implementations, this was required. See [Browser compatibility](#browser_compatibility) for details.)
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The newly inserted rule's index within the stylesheet's rule-list.</p>
+The newly inserted rule's index within the stylesheet's rule-list.
 
-<h3 id="Restrictions">Restrictions</h3>
+### Restrictions
 
-<p>CSS has some intuitive and not-so-intuitive restrictions affecting where rules can be
-  inserted. Violating them will likely raise a {{domxref("DOMException")}}.</p>
+CSS has some intuitive and not-so-intuitive restrictions affecting where rules can be
+inserted. Violating them will likely raise a {{domxref("DOMException")}}.
 
-<ul>
-  <li>If <code>index</code> &gt;
-    <code>{{domxref("CSSRuleList", "", "", "1")}}.length</code>, the method aborts with an
-    <code>IndexSizeError</code>.</li>
-  <li>If <code>rule</code> cannot be inserted at <code>index</code> <code>0</code> due to
-    some CSS constraint, the method aborts with a <code>HierarchyRequestError</code>.</li>
-  <li>If more than one rule is given in the <code>rule</code> parameter, the method aborts
-    with a <code>SyntaxError</code>.</li>
-  <li>If trying to insert an {{cssxref("@import")}} at-rule after a style rule, the method
-    aborts with a <code>HierarchyRequestError</code>.</li>
-  <li>If <code>rule</code> is {{cssxref("@namespace")}} and the rule-list has more than
-    just <code>@import</code> at-rules and/or <code>@namespace</code> at-rules, the method
-    aborts with an <code>InvalidStateError</code>.</li>
-</ul>
+- If `index` >
+  `{{domxref("CSSRuleList", "", "", "1")}}.length`, the method aborts with an
+  `IndexSizeError`.
+- If `rule` cannot be inserted at `index` `0` due to
+  some CSS constraint, the method aborts with a `HierarchyRequestError`.
+- If more than one rule is given in the `rule` parameter, the method aborts
+  with a `SyntaxError`.
+- If trying to insert an {{cssxref("@import")}} at-rule after a style rule, the method
+  aborts with a `HierarchyRequestError`.
+- If `rule` is {{cssxref("@namespace")}} and the rule-list has more than
+  just `@import` at-rules and/or `@namespace` at-rules, the method
+  aborts with an `InvalidStateError`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Inserting_a_new_rule">Inserting a new rule</h3>
+### Inserting a new rule
 
-<p>This snippet pushes a new rule onto the top of my stylesheet.</p>
+This snippet pushes a new rule onto the top of my stylesheet.
 
-<pre class="brush: js">myStyle.insertRule('#blanc { color: white }', 0);
-</pre>
+```js
+myStyle.insertRule('#blanc { color: white }', 0);
+```
 
-<h3 id="Function_to_add_a_stylesheet_rule">Function to add a stylesheet rule</h3>
+### Function to add a stylesheet rule
 
-<pre class="brush: js">/**
+```js
+/**
  * Add a stylesheet rule to the document (it may be better practice
  * to dynamically change classes, so style information can be kept in
  * genuine stylesheets and avoid adding extra elements to the DOM).
@@ -110,13 +101,13 @@ addStylesheetRules([
 function addStylesheetRules (rules) {
   var styleEl = document.createElement('style');
 
-  // Append &lt;style&gt; element to &lt;head&gt;
+  // Append <style> element to <head>
   document.head.appendChild(styleEl);
 
   // Grab style element's sheet
   var styleSheet = styleEl.sheet;
 
-  for (var i = 0; i &lt; rules.length; i++) {
+  for (var i = 0; i < rules.length; i++) {
     var j = 1,
         rule = rules[i],
         selector = rule[0],
@@ -127,7 +118,7 @@ function addStylesheetRules (rules) {
       j = 0;
     }
 
-    for (var pl = rule.length; j &lt; pl; j++) {
+    for (var pl = rule.length; j < pl; j++) {
       var prop = rule[j];
       propStr += prop[0] + ': ' + prop[1] + (prop[2] ? ' !important' : '') + ';\n';
     }
@@ -135,16 +126,18 @@ function addStylesheetRules (rules) {
     // Insert CSS Rule
     styleSheet.insertRule(selector + '{' + propStr + '}', styleSheet.cssRules.length);
   }
-}</pre>
+}
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>The below polyfill will correct the input of the arguments of <code>insertRule()</code>
-  to standardize them in Internet Explorer 5–8. It supplements <code>insertRule()</code>
-  with a function that separates the selector from the rules before sending the arguments
-  to the default native <code>insertRule()</code>.</p>
+The below polyfill will correct the input of the arguments of `insertRule()`
+to standardize them in Internet Explorer 5–8. It supplements `insertRule()`
+with a function that separates the selector from the rules before sending the arguments
+to the default native `insertRule()`.
 
-<pre class="brush: js">(function(Sheet_proto){
+```js
+(function(Sheet_proto){
   var originalInsertRule = Sheet_proto.insertRule;
 
   if (originalInsertRule.length === 2){ // 2 mandatory arguments: (selector, rules)
@@ -152,13 +145,13 @@ function addStylesheetRules (rules) {
       // First, separate the selector from the rule
       a: for (var i=0, Len=selectorAndRule.length, isEscaped=0, newCharCode=0; i !== Len; ++i) {
         newCharCode = selectorAndRule.charCodeAt(i);
-        if (!isEscaped &amp;&amp; (newCharCode === 123)) { // 123 = "{".charCodeAt(0)
+        if (!isEscaped && (newCharCode === 123)) { // 123 = "{".charCodeAt(0)
           // Secondly, find the last closing bracket
           var openBracketPos = i, closeBracketPos = -1;
 
           for (; i !== Len; ++i) {
             newCharCode = selectorAndRule.charCodeAt(i);
-            if (!isEscaped &amp;&amp; (newCharCode === 125)) { // 125 = "}".charCodeAt(0)
+            if (!isEscaped && (newCharCode === 125)) { // 125 = "}".charCodeAt(0)
               closeBracketPos = i;
             }
             isEscaped ^= newCharCode===92?1:isEscaped; // 92 = "\\".charCodeAt(0)
@@ -183,36 +176,33 @@ function addStylesheetRules (rules) {
     };
   }
 })(CSSStyleSheet.prototype);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h3 id="Legacy_browser_support">Legacy browser support</h3>
+### Legacy browser support
 
-<p>To support Internet Explorer 8 and below, use:
-  <code>addRule(selector, rule [, index]);</code>. Example:
-  <code>addRule('pre', 'font: 14px verdana'); // add rule at end</code></p>
+To support Internet Explorer 8 and below, use:
+`addRule(selector, rule [, index]);`. Example:
+`addRule('pre', 'font: 14px verdana'); // add rule at end`
 
-<p>Also note the non-standard
-  <code><a href="http://www.quirksmode.org/dom/w3c_css.html#change">removeRule()</a></code>
-  and
-  <code><a href="http://www.quirksmode.org/dom/w3c_css.html#access">.rules</a></code>
-  instead of {{domxref("CSSStyleSheet.deleteRule","deleteRule()")}} and
-  {{domxref("CSSStyleSheet",".cssRules")}}, respectively.</p>
+Also note the non-standard
+[`removeRule()`](http://www.quirksmode.org/dom/w3c_css.html#change)
+and
+[`.rules`](http://www.quirksmode.org/dom/w3c_css.html#access)
+instead of {{domxref("CSSStyleSheet.deleteRule","deleteRule()")}} and
+{{domxref("CSSStyleSheet",".cssRules")}}, respectively.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("CSSStyleSheet.deleteRule")}}</li>
-  <li><a class="external"
-      href="http://www-archive.mozilla.org/docs/web-developer/css1technote/css1tojs.html#priority">Cross-Browser
-      CSS-rules ordering (CSS1)</a></li>
-  <li><a href="http://www.quirksmode.org/dom/w3c_css.html">Quirksmode -
-      CSS</a></li>
-</ul>
+- {{domxref("CSSStyleSheet.deleteRule")}}
+- [Cross-Browser
+  CSS-rules ordering (CSS1)](http://www-archive.mozilla.org/docs/web-developer/css1technote/css1tojs.html#priority)
+- [Quirksmode -
+  CSS](http://www.quirksmode.org/dom/w3c_css.html)

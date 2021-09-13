@@ -14,23 +14,24 @@ tags:
   - startContainer
 browser-compat: api.AbstractRange.startContainer
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>The read-only <strong><code>startContainer</code></strong> property of the {{domxref("AbstractRange")}} interface returns the start {{domxref("Node")}} for the range.</p>
+The read-only **`startContainer`** property of the {{domxref("AbstractRange")}} interface returns the start {{domxref("Node")}} for the range.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>startNode</em> = <em>range</em>.startContainer
-</pre>
+```js
+var startNode = range.startContainer
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>The DOM {{domxref("Node")}} inside which the start position of the range is found.</p>
+The DOM {{domxref("Node")}} inside which the start position of the range is found.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

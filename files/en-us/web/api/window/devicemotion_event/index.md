@@ -8,34 +8,35 @@ tags:
   - events
 browser-compat: api.Window.devicemotion_event
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p>The <code>devicemotion</code> event is fired at a regular interval and indicates the amount of physical force of acceleration the device is receiving at that time. It also provides information about the rate of rotation, if available.</p>
+The `devicemotion` event is fired at a regular interval and indicates the amount of physical force of acceleration the device is receiving at that time. It also provides information about the rate of rotation, if available.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("DeviceMotionEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("Window.ondevicemotion")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("DeviceMotionEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>{{domxref("Window.ondevicemotion")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">function handleMotionEvent(event) {
+```js
+function handleMotionEvent(event) {
 
     var x = event.accelerationIncludingGravity.x;
     var y = event.accelerationIncludingGravity.y;
@@ -45,19 +46,17 @@ browser-compat: api.Window.devicemotion_event
 }
 
 window.addEventListener("devicemotion", handleMotionEvent, true);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("Window/deviceorientation_event", "deviceorientation")}}</li>
- <li><a href="https://www.w3.org/TR/orientation-event/#devicemotion">DeviceOrientation Event</a></li>
-</ul>
+- {{domxref("Window/deviceorientation_event", "deviceorientation")}}
+- [DeviceOrientation Event](https://www.w3.org/TR/orientation-event/#devicemotion)

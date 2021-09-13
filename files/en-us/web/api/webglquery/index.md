@@ -9,43 +9,40 @@ tags:
   - WebGL2
 browser-compat: api.WebGLQuery
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLQuery</code></strong> interface is part of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL 2</a> API and provides ways to asynchronously query for information. By default, occlusion queries and primitive queries are available.</p>
+The **`WebGLQuery`** interface is part of the [WebGL 2](/en-US/docs/Web/API/WebGL_API) API and provides ways to asynchronously query for information. By default, occlusion queries and primitive queries are available.
 
-<p>Another kind of queries are disjoint timer queries, which allow you to measure performance and profiling of your GPU. Disjoint timer queries are available with the {{domxref("EXT_disjoint_timer_query")}} extension only.</p>
+Another kind of queries are disjoint timer queries, which allow you to measure performance and profiling of your GPU. Disjoint timer queries are available with the {{domxref("EXT_disjoint_timer_query")}} extension only.
 
-<p>When working with <code>WebGLQuery</code> objects, the following methods of the {{domxref("WebGL2RenderingContext")}} are useful:</p>
+When working with `WebGLQuery` objects, the following methods of the {{domxref("WebGL2RenderingContext")}} are useful:
 
-<ul>
- <li>{{domxref("WebGL2RenderingContext.createQuery()")}}</li>
- <li>{{domxref("WebGL2RenderingContext.deleteQuery()")}}</li>
- <li>{{domxref("WebGL2RenderingContext.isQuery()")}}</li>
- <li>{{domxref("WebGL2RenderingContext.beginQuery()")}}</li>
- <li>{{domxref("WebGL2RenderingContext.endQuery()")}}</li>
- <li>{{domxref("WebGL2RenderingContext.getQuery()")}}</li>
- <li>{{domxref("WebGL2RenderingContext.getQueryParameter()")}}</li>
-</ul>
+- {{domxref("WebGL2RenderingContext.createQuery()")}}
+- {{domxref("WebGL2RenderingContext.deleteQuery()")}}
+- {{domxref("WebGL2RenderingContext.isQuery()")}}
+- {{domxref("WebGL2RenderingContext.beginQuery()")}}
+- {{domxref("WebGL2RenderingContext.endQuery()")}}
+- {{domxref("WebGL2RenderingContext.getQuery()")}}
+- {{domxref("WebGL2RenderingContext.getQueryParameter()")}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Creating_a_WebGLQuery_object">Creating a <code>WebGLQuery</code> object</h3>
+### Creating a `WebGLQuery` object
 
-<p>in this example, <code>gl</code> must be a {{domxref("WebGL2RenderingContext")}}. <code>WebGLQuery</code> objects are not available in WebGL 1.</p>
+in this example, `gl` must be a {{domxref("WebGL2RenderingContext")}}. `WebGLQuery` objects are not available in WebGL 1.
 
-<pre class="brush: js">var query = gl.createQuery();
-</pre>
+```js
+var query = gl.createQuery();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("EXT_disjoint_timer_query")}}</li>
-</ul>
+- {{domxref("EXT_disjoint_timer_query")}}

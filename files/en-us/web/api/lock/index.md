@@ -10,35 +10,35 @@ tags:
   - lock
 browser-compat: api.Lock
 ---
-<div>{{SeeCompatTable}}{{APIRef("Web Locks")}}</div>
+{{SeeCompatTable}}{{APIRef("Web Locks")}}
 
-<p>The <strong><code>Lock</code></strong> interface of the <a href="/en-US/docs/Web/API/Web_Locks_API">Web Locks API</a> provides the name and mode of a previously requested lock, which is received in the callback to {{domxref('LockManager.request','LockManager.request()')}}.</p>
+The **`Lock`** interface of the [Web Locks API](/en-US/docs/Web/API/Web_Locks_API) provides the name and mode of a previously requested lock, which is received in the callback to {{domxref('LockManager.request','LockManager.request()')}}.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref('Lock.mode')}} {{readonlyinline}}</dt>
- <dd>Returns the access mode passed to {{domxref('LockManager.request()')}} when the lock was requested. The mode is either <code>"exclusive"</code> (the default) or <code>"shared"</code>.</dd>
- <dt>{{domxref('Lock.name')}} {{readonlyinline}}</dt>
- <dd>Returns the name passed to {{domxref('LockManager.request()')}} when the lock was requested.</dd>
-</dl>
+- {{domxref('Lock.mode')}} {{readonlyinline}}
+  - : Returns the access mode passed to {{domxref('LockManager.request()')}} when the lock was requested. The mode is either `"exclusive"` (the default) or `"shared"`.
+- {{domxref('Lock.name')}} {{readonlyinline}}
+  - : Returns the name passed to {{domxref('LockManager.request()')}} when the lock was requested.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following examples show how the mode and name properties are passed in the call to {{domxref('LockManager.request()')}}. <code>LockManager</code> is the object returned by {{domxref('navigator.locks')}}.</p>
+The following examples show how the mode and name properties are passed in the call to {{domxref('LockManager.request()')}}. `LockManager` is the object returned by {{domxref('navigator.locks')}}.
 
-<pre class="brush: js">navigator.locks.request("net_db_sync", show_lock_properties);
+```js
+navigator.locks.request("net_db_sync", show_lock_properties);
 navigator.locks.request("another_lock", {mode: "shared"}, show_lock_properties);
 
 function show_lock_properties(lock) {
   console.log(`The lock name is: ${lock.name}`);
   console.log(`The lock mode is: ${lock.mode}`);
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,55 +2,56 @@
 title: AudioWorkletNode.parameters
 slug: Web/API/AudioWorkletNode/parameters
 tags:
-- API
-- Audio
-- AudioParam
-- AudioWorkletNode
-- Property
-- Reference
-- Web Audio API
-
+  - API
+  - Audio
+  - AudioParam
+  - AudioWorkletNode
+  - Property
+  - Reference
+  - Web Audio API
 browser-compat: api.AudioWorkletNode.parameters
 ---
-<div>{{APIRef("Web Audio API")}}</div>
+{{APIRef("Web Audio API")}}
 
-<p>The read-only <strong><code>parameters</code></strong> property of the
-  {{domxref("AudioWorkletNode")}} interface returns the associated
-  {{domxref("AudioParamMap")}} — that is, a <code>Map</code>-like collection of
-  {{domxref("AudioParam")}} objects. They are instantiated during creation of the
-  underlying {{domxref("AudioWorkletProcessor")}} according to its
-  {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} static
-  getter.</p>
+The read-only **`parameters`** property of the
+{{domxref("AudioWorkletNode")}} interface returns the associated
+{{domxref("AudioParamMap")}} — that is, a `Map`-like collection of
+{{domxref("AudioParam")}} objects. They are instantiated during creation of the
+underlying {{domxref("AudioWorkletProcessor")}} according to its
+{{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} static
+getter.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>audioWorkletNodeInstance</em>.parameters</pre>
+```js
+audioWorkletNodeInstance.parameters
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>The {{domxref("AudioParamMap")}} object containing {{domxref("AudioParam")}} instances.
-  They can be automated in the same way as with default <code>AudioNode</code>s, and their
-  calculated values can be used in the {{domxref("AudioWorkletProcessor.process",
-  "process")}} method of your {{domxref("AudioWorkletProcessor")}}.</p>
+The {{domxref("AudioParamMap")}} object containing {{domxref("AudioParam")}} instances.
+They can be automated in the same way as with default `AudioNode`s, and their
+calculated values can be used in the {{domxref("AudioWorkletProcessor.process",
+  "process")}} method of your {{domxref("AudioWorkletProcessor")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>To demonstrate creation and usage of custom <code>AudioParam</code>s, we'll expand the
-  example from {{domxref("AudioWorkletNode")}} page. There we've created a simple node
-  which outputs white noise. Here, additionally, we'll create a custom gain parameter, so
-  we can directly change volume of the output (although you could use
-  {{domxref("GainNode")}} to achieve this as well).</p>
+To demonstrate creation and usage of custom `AudioParam`s, we'll expand the
+example from {{domxref("AudioWorkletNode")}} page. There we've created a simple node
+which outputs white noise. Here, additionally, we'll create a custom gain parameter, so
+we can directly change volume of the output (although you could use
+{{domxref("GainNode")}} to achieve this as well).
 
-<p>First, we need to define a custom <code>AudioWorkletProcessor</code>, and register it.
-  Note that this should be done in a separate file.</p>
+First, we need to define a custom `AudioWorkletProcessor`, and register it.
+Note that this should be done in a separate file.
 
-<p>We expand the processor by adding a static
-  {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}}
-  getter. It will be used internally by the <code>AudioWorkletNode</code> constructor to
-  populate its <code>parameters</code> with instantiated <code>AudioParam</code> objects.
-</p>
+We expand the processor by adding a static
+{{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}}
+getter. It will be used internally by the `AudioWorkletNode` constructor to
+populate its `parameters` with instantiated `AudioParam` objects.
 
-<pre class="brush: js">// white-noise-processor.js
+```js
+// white-noise-processor.js
 class WhiteNoiseProcessor extends AudioWorkletProcessor {
   static get parameterDescriptors () {
     return [{
@@ -64,10 +65,10 @@ class WhiteNoiseProcessor extends AudioWorkletProcessor {
 
   process (inputs, outputs, parameters) {
     const output = outputs[0]
-    output.forEach(channel =&gt; {
-      for (let i = 0; i &lt; channel.length; i++) {
+    output.forEach(channel => {
+      for (let i = 0; i < channel.length; i++) {
         channel[i] = (Math.random() * 2 - 1) *
-          (parameters['customGain'].length &gt; 1 ? parameters['customGain'][i] : parameters['customGain'][0])
+          (parameters['customGain'].length > 1 ? parameters['customGain'][i] : parameters['customGain'][0])
         // note: a parameter contains an array of 128 values (one value for each of 128 samples),
         // however it may contain a single value which is to be used for all 128 samples
         // if no automation is scheduled for the moment.
@@ -78,37 +79,37 @@ class WhiteNoiseProcessor extends AudioWorkletProcessor {
 }
 
 registerProcessor('white-noise-processor', WhiteNoiseProcessor)
-</pre>
+```
 
-<p>Next, in our main scripts file we'll load the processor, create an instance of
-  <code>AudioWorkletNode</code> passing it the name of the processor, and connect the node
-  to an audio graph.</p>
+Next, in our main scripts file we'll load the processor, create an instance of
+`AudioWorkletNode` passing it the name of the processor, and connect the node
+to an audio graph.
 
-<pre class="brush: js">const audioContext = new AudioContext()
+```js
+const audioContext = new AudioContext()
 await audioContext.audioWorklet.addModule('white-noise-processor.js')
 const whiteNoiseNode = new AudioWorkletNode(audioContext, 'white-noise-processor')
 whiteNoiseNode.connect(audioContext.destination)
-</pre>
+```
 
-<p>Now we can change the gain on the node like this:</p>
+Now we can change the gain on the node like this:
 
-<pre class="brush: js">const gainParam = whiteNoiseNode.parameters.get('customGain')
+```js
+const gainParam = whiteNoiseNode.parameters.get('customGain')
 gainParam.setValueAtTime(0, audioContext.currentTime)
 gainParam.linearRampToValueAtTime(0.5, audioContext.currentTime + 0.5)
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a></li>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio
-      API</a></li>
-</ul>
+- [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
+- [Using the Web Audio
+  API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

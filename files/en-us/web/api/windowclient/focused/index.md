@@ -2,34 +2,36 @@
 title: WindowClient.focused
 slug: Web/API/WindowClient/focused
 tags:
-- API
-- Experimental
-- Property
-- Reference
-- Service Workers
-- ServiceWorker
-- WindowClient
-- focused
+  - API
+  - Experimental
+  - Property
+  - Reference
+  - Service Workers
+  - ServiceWorker
+  - WindowClient
+  - focused
 browser-compat: api.WindowClient.focused
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p>The <strong><code>focused</code></strong> read-only property of the
-  {{domxref("WindowClient")}} interface is a boolean value that indicates whether
-  the current client has focus.</p>
+The **`focused`** read-only property of the
+{{domxref("WindowClient")}} interface is a boolean value that indicates whether
+the current client has focus.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>myFocused</em> = <em>windowClient</em>.focused;</pre>
+```js
+var myFocused = windowClient.focused;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A boolean value.</p>
+A boolean value.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">self.addEventListener('notificationclick', function(event) {
+```js
+self.addEventListener('notificationclick', function(event) {
   console.log('On notification click: ', event.notification.tag);
   event.notification.close();
 
@@ -38,9 +40,9 @@ browser-compat: api.WindowClient.focused
   event.waitUntil(clients.matchAll({
     type: "window"
   }).then(function(clientList) {
-    for (var i = 0; i &lt; clientList.length; i++) {
+    for (var i = 0; i < clientList.length; i++) {
       var client = clientList[i];
-      if (client.url == '/' &amp;&amp; 'focus' in client) {
+      if (client.url == '/' && 'focus' in client) {
         if(!client.focused)
           return client.focus();
         }
@@ -49,12 +51,13 @@ browser-compat: api.WindowClient.focused
     if (clients.openWindow)
       return clients.openWindow('/');
   }));
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

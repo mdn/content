@@ -2,134 +2,112 @@
 title: WEBGL_multi_draw.multiDrawElementsWEBGL()
 slug: Web/API/WEBGL_multi_draw/multiDrawElementsWEBGL
 tags:
-- Method
-- Reference
-- WebGL
-- WebGL extension
+  - Method
+  - Reference
+  - WebGL
+  - WebGL extension
 browser-compat: api.WEBGL_multi_draw.multiDrawElementsWEBGL
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <code><strong>WEBGL_multi_draw.multiDrawElementsWEBGL()</strong></code> method of
-  the
-  <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> renders multiple primitives from
-  array data. It is
-  identical to multiple calls to the
-  <a
-    href="/en-US/docs/Web/API/WebGLRenderingContext/drawElements"><code>gl.drawElements()</code></a>
-  method.
-</p>
+The **`WEBGL_multi_draw.multiDrawElementsWEBGL()`** method of
+the
+[WebGL API](/en-US/docs/Web/API/WebGL_API) renders multiple primitives from
+array data. It is
+identical to multiple calls to the
+[`gl.drawElements()`](/en-US/docs/Web/API/WebGLRenderingContext/drawElements)
+method.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <var>ext</var>.multiDrawElementsWEBGL(<var>mode</var>,
-    <var>countsList</var>, <var>countsOffset</var>,
-    <var>type</var>,
-    <var>firstsList</var>, <var>firstsOffset</var>,
-    <var>drawCount</var>);
-</pre>
+```js
+void ext.multiDrawElementsWEBGL(mode,
+    countsList, countsOffset,
+    type,
+    firstsList, firstsOffset,
+    drawCount);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>mode</code></dt>
-  <dd>A <a href="/en-US/docs/Web/API/WebGL_API/Types"><code>GLenum</code></a>
+- `mode`
+
+  - : A [`GLenum`](/en-US/docs/Web/API/WebGL_API/Types)
     specifying the type primitive to render. Possible values are:
-    <ul>
-      <li><code>gl.POINTS</code>: Draws a single dot.</li>
-      <li><code>gl.LINE_STRIP</code>: Draws a straight line to the next vertex.</li>
-      <li><code>gl.LINE_LOOP</code>: Draws a straight line to the next vertex, and
-        connects the
-        last vertex back to the first.</li>
-      <li><code>gl.LINES</code>: Draws a line between a pair of vertices.</li>
-      <li>
-        <code><a href="https://en.wikipedia.org/wiki/Triangle_strip">gl.TRIANGLE_STRIP</a></code>
-      </li>
-      <li>
-        <code><a href="https://en.wikipedia.org/wiki/Triangle_fan">gl.TRIANGLE_FAN</a></code>
-      </li>
-      <li><code>gl.TRIANGLES</code>: Draws a triangle for a group of three vertices.</li>
-    </ul>
-  </dd>
-  <dt><code>countsList</code></dt>
-  <dd>An <a
-      href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array"><code>Int32Array</code></a>
-    or <a
-      href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"><code>Array</code></a>
-    (of <a href="/en-US/docs/Web/API/WebGL_API/Types"><code>GLint</code></a>)
-    specifying a list of numbers of indices to be rendered.</dd>
-  <dt><code>countsOffset</code></dt>
-  <dd>A <a href="/en-US/docs/Web/API/WebGL_API/Types"><code>GLUint</code></a>
-    defining the starting point into the <code>countsList</code> array.</dd>
-  <dt>type</dt>
-  <dd>A <a href="/en-US/docs/Web/API/WebGL_API/Types"><code>GLenum</code></a> specifying
+
+    - `gl.POINTS`: Draws a single dot.
+    - `gl.LINE_STRIP`: Draws a straight line to the next vertex.
+    - `gl.LINE_LOOP`: Draws a straight line to the next vertex, and
+      connects the
+      last vertex back to the first.
+    - `gl.LINES`: Draws a line between a pair of vertices.
+    - [`gl.TRIANGLE_STRIP`](https://en.wikipedia.org/wiki/Triangle_strip)
+    - [`gl.TRIANGLE_FAN`](https://en.wikipedia.org/wiki/Triangle_fan)
+    - `gl.TRIANGLES`: Draws a triangle for a group of three vertices.
+
+- `countsList`
+  - : An [`Int32Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array)
+    or [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+    (of [`GLint`](/en-US/docs/Web/API/WebGL_API/Types))
+    specifying a list of numbers of indices to be rendered.
+- `countsOffset`
+  - : A [`GLUint`](/en-US/docs/Web/API/WebGL_API/Types)
+    defining the starting point into the `countsList` array.
+- type
+
+  - : A [`GLenum`](/en-US/docs/Web/API/WebGL_API/Types) specifying
     the type of the values in the element array buffer. Possible values are:
-    <ul>
-      <li><code>gl.UNSIGNED_BYTE</code></li>
-      <li><code>gl.UNSIGNED_SHORT</code></li>
-      <li>When using the <a
-          href="/en-US/docs/Web/API/OES_element_index_uint"><code>OES_element_index_uint</code></a>
-        extension:
-        <ul>
-          <li><code>gl.UNSIGNED_INT</code></li>
-        </ul>
-      </li>
-    </ul>
-  </dd>
-  <dt><code>offsetsList</code></dt>
-  <dd>An <a
-      href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array"><code>Int32Array</code></a>
-    or <a
-      href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"><code>Array</code></a>
-    (of <a href="/en-US/docs/Web/API/WebGL_API/Types"><code>GLsizei</code></a>)
-    specifying a list of starting indices for the arrays of vector points.</dd>
-  <dt><code>offsetsOffset</code></dt>
-  <dd>A <a href="/en-US/docs/Web/API/WebGL_API/Types"><code>GLuint</code></a>
-    defining the starting point into the <code>offsetsList</code> array.</dd>
-  <dt><code>drawCount</code></dt>
-  <dd>A <a href="/en-US/docs/Web/API/WebGL_API/Types"><code>GLsizei</code></a>
-    specifying the number of instances of the range of elements to execute.</dd>
-</dl>
 
-<h3 id="Return_value">Return value</h3>
+    - `gl.UNSIGNED_BYTE`
+    - `gl.UNSIGNED_SHORT`
+    - When using the [`OES_element_index_uint`](/en-US/docs/Web/API/OES_element_index_uint)
+      extension:
 
-<p>None.</p>
+      - `gl.UNSIGNED_INT`
 
-<h3 id="Exceptions">Exceptions</h3>
+- `offsetsList`
+  - : An [`Int32Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array)
+    or [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+    (of [`GLsizei`](/en-US/docs/Web/API/WebGL_API/Types))
+    specifying a list of starting indices for the arrays of vector points.
+- `offsetsOffset`
+  - : A [`GLuint`](/en-US/docs/Web/API/WebGL_API/Types)
+    defining the starting point into the `offsetsList` array.
+- `drawCount`
+  - : A [`GLsizei`](/en-US/docs/Web/API/WebGL_API/Types)
+    specifying the number of instances of the range of elements to execute.
 
-<ul>
-  <li>If <code>mode</code> is not one of the accepted values, a
-    <code>gl.INVALID_ENUM</code> error is thrown.</li>
-  <li>If <code>drawCount</code> or items in <code>countsList</code> or
-    <code>offsetsList</code> are negative,
-    a <code>gl.INVALID_VALUE</code> error is thrown.</li>
-</ul>
+### Return value
 
-<h2 id="Examples">Examples</h2>
+None.
 
-<pre class="brush: js">
+### Exceptions
+
+- If `mode` is not one of the accepted values, a
+  `gl.INVALID_ENUM` error is thrown.
+- If `drawCount` or items in `countsList` or
+  `offsetsList` are negative,
+  a `gl.INVALID_VALUE` error is thrown.
+
+## Examples
+
+```js
 // let counts = new Int32Array(...);
 // let offsets = new Int32Array(...);
 ext.multiDrawElementsWEBGL(
     gl.TRIANGLES, counts, 0, gl.UNSIGNED_SHORT, offsets, 0, counts.length);
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a
-      href="/en-US/docs/Web/API/WebGLRenderingContext/drawElements"><code>WebGLRenderingContext.drawElements()</code></a>
-  </li>
-  <li><a
-      href="/en-US/docs/Web/API/WebGL2RenderingContext/drawElementsInstanced"><code>WebGL2RenderingContext.drawElementsInstanced()</code></a>
-  </li>
-</ul>
+- [`WebGLRenderingContext.drawElements()`](/en-US/docs/Web/API/WebGLRenderingContext/drawElements)
+- [`WebGL2RenderingContext.drawElementsInstanced()`](/en-US/docs/Web/API/WebGL2RenderingContext/drawElementsInstanced)

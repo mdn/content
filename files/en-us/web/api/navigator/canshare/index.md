@@ -2,75 +2,73 @@
 title: Navigator.canShare()
 slug: Web/API/Navigator/canShare
 tags:
-- API
-- Method
-- Navigator
-- Reference
-- Share
+  - API
+  - Method
+  - Navigator
+  - Reference
+  - Share
 browser-compat: api.Navigator.canShare
 ---
-<div>{{APIRef("Web Share API")}}{{securecontext_header}}</div>
+{{APIRef("Web Share API")}}{{securecontext_header}}
 
-<p>The <strong><code>Navigator.canShare()</code></strong> method of the <a href="/en-US/docs/Web/API/Web_Share_API">Web Share API</a> returns <code>true</code> if the equivalent call to {{domxref("navigator.share()")}} would succeed.</p>
+The **`Navigator.canShare()`** method of the [Web Share API](/en-US/docs/Web/API/Web_Share_API) returns `true` if the equivalent call to {{domxref("navigator.share()")}} would succeed.
 
-<p>The method returns <code>false</code> if the data cannot be <em>validated</em>. Reasons the data might be invalid include:</p>
+The method returns `false` if the data cannot be _validated_. Reasons the data might be invalid include:
 
-<ul>
-  <li>The <code>data</code> parameter has been omitted or only contains properties with unknown values. Note that any properties that are not recognized by the user agent are ignored.</li>
-  <li>A URL is badly formatted.</li>
-  <li>Files are specified but the implementation does not support file sharing.</li>
-  <li>Sharing the specified data would be considered a "hostile share" by the user-agent.</li>
-</ul>
+- The `data` parameter has been omitted or only contains properties with unknown values. Note that any properties that are not recognized by the user agent are ignored.
+- A URL is badly formatted.
+- Files are specified but the implementation does not support file sharing.
+- Sharing the specified data would be considered a "hostile share" by the user-agent.
 
-<p>The Web Share API is gated by the <a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy/web-share">web-share</a> permission policy.
-    The <strong><code>canShare()</code></strong> method will return <code>false</code> if the permission is supported but has not been granted.</p>
+The Web Share API is gated by the [web-share](/en-US/docs/Web/HTTP/Headers/Feature-Policy/web-share) permission policy.
+The **`canShare()`** method will return `false` if the permission is supported but has not been granted.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">navigator.canShare()
-navigator.canShare(data)</pre>
+```js
+navigator.canShare()
+navigator.canShare(data)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>data</code> {{optional_inline}}</dt>
-  <dd><p>An object defining the share data to test.
-    Typically, an object with the same properties is passed to {{domxref("navigator.share()")}} if this call returns <code>true</code>.</p>
+- `data` {{optional_inline}}
 
-  <p>Properties that are unknown to the user agent are ignored; share data is only assessed on properties understood by the user agent.
-    All properties are optional but at least one known data property must be specified or the method will return <code>false</code>.</p>
+  - : An object defining the share data to test.
+    Typically, an object with the same properties is passed to {{domxref("navigator.share()")}} if this call returns `true`.
 
-  <p>Possible values are:</p>
-    <ul>
-      <li><code>url</code>: A {{domxref("USVString")}} representing a URL to be shared.</li>
-      <li><code>text</code>: A {{domxref("USVString")}} representing text to be shared.</li>
-      <li><code>title</code>: A {{domxref("USVString")}} representing the title to be shared.</li>
-      <li><code>files</code>: An array of {{domxref("File")}} objects representing files to be shared.</li>
-    </ul>
-  </dd>
-</dl>
+    Properties that are unknown to the user agent are ignored; share data is only assessed on properties understood by the user agent.
+    All properties are optional but at least one known data property must be specified or the method will return `false`.
 
+    Possible values are:
 
-<h3 id="Return_value">Return value</h3>
+    - `url`: A {{domxref("USVString")}} representing a URL to be shared.
+    - `text`: A {{domxref("USVString")}} representing text to be shared.
+    - `title`: A {{domxref("USVString")}} representing the title to be shared.
+    - `files`: An array of {{domxref("File")}} objects representing files to be shared.
 
-<p>Returns <code>true</code> if the specified <code>data</code> can be shared with {{domxref("Navigator.share()")}}, otherwise <code>false</code>.</p>
+### Return value
 
+Returns `true` if the specified `data` can be shared with {{domxref("Navigator.share()")}}, otherwise `false`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Sending_the_MDN_URL">Sending the MDN URL</h3>
+### Sending the MDN URL
 
-<p>The example uses <code>navigator.canShare()</code> to check whether <code>navigator.share()</code> can share the specified data.</p>
+The example uses `navigator.canShare()` to check whether `navigator.share()` can share the specified data.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<p>The HTML just creates a paragraph in which to display the result of the test.</p>
+The HTML just creates a paragraph in which to display the result of the test.
 
-<pre class="brush: html">&lt;p class="result"&gt;&lt;/p&gt;</pre>
+```html
+<p class="result"></p>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">let shareData = {
+```js
+let shareData = {
   title: 'MDN',
   text: 'Learn web development on MDN!',
   url: 'https://developer.mozilla.org',
@@ -86,23 +84,23 @@ else if (navigator.canShare(shareData)) {
 } else {
   resultPara.textContent = 'Specified data cannot be shared.';
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>The box below should state whether <code>navigator.canShare()</code> is supported on this browser, and if so, whether or not we can use <code>navigator.share()</code> to share the specified data:</p>
+The box below should state whether `navigator.canShare()` is supported on this browser, and if so, whether or not we can use `navigator.share()` to share the specified data:
 
-<p>{{EmbedLiveSample('Sending_the_MDN_URL')}}</p>
+{{EmbedLiveSample('Sending_the_MDN_URL')}}
 
+### Feature checking example
 
-<h3>Feature checking example</h3>
+This method feature tests whether a particular data property is valid and shareable.
+If used with a single `data` property it will return `true` only if that property is valid and can be shared on the platform.
 
-<p>This method feature tests whether a particular data property is valid and shareable.
-  If used with a single <code>data</code> property it will return <code>true</code> only if that property is valid and can be shared on the platform.</p>
+The code below demonstrates verifying that a data property is supported.
 
-<p>The code below demonstrates verifying that a data property is supported.</p>
-
-<pre class="brush: js">// Feature that may not be supported
+```js
+// Feature that may not be supported
 let testShare = { someNewProperty: 'Data to share' }
 
 // Complex data that uses new key
@@ -119,19 +117,16 @@ if (navigator.canShare(testShare)) {
 } else {
   // Handle case that new data property can't be shared.
 }
-</pre>
+```
 
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("navigator.share()")}}</li>
-</ul>
+- {{domxref("navigator.share()")}}

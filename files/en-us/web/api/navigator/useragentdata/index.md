@@ -2,42 +2,44 @@
 title: Navigator.userAgentData
 slug: Web/API/Navigator/userAgentData
 tags:
-- API
-- Navigator
-- Property
-- Reference
-- NavigatorUAData
+  - API
+  - Navigator
+  - Property
+  - Reference
+  - NavigatorUAData
 browser-compat: api.Navigator.userAgentData
 ---
-<div>{{APIRef("User-Agent Client Hints API")}}</div>
+{{APIRef("User-Agent Client Hints API")}}
 
-<p>The <code><strong>userAgentData</strong></code> read-only property of the {{domxref("Navigator")}} interface returns a {{domxref("NavigatorUAData")}} object
-which can be used to access the {{domxref("User-Agent Client Hints API")}}.</p>
+The **`userAgentData`** read-only property of the {{domxref("Navigator")}} interface returns a {{domxref("NavigatorUAData")}} object
+which can be used to access the {{domxref("User-Agent Client Hints API")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let userAgentData = navigator.userAgentData</pre>
+```js
+let userAgentData = navigator.userAgentData
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("NavigatorUAData")}} object.</p>
+A {{domxref("NavigatorUAData")}} object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example prints the value of {{domxref("NavigatorUAData.brands")}} to the console.</p>
+The following example prints the value of {{domxref("NavigatorUAData.brands")}} to the console.
 
-<pre class="brush:js">console.log(navigator.userAgentData.brands);</pre>
+```js
+console.log(navigator.userAgentData.brands);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://web.dev/user-agent-client-hints/">Improving user privacy and developer experience with User-Agent Client Hints</a></li>
-</ul>
+- [Improving user privacy and developer experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints/)

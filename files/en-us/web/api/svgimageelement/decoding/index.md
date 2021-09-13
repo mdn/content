@@ -2,58 +2,56 @@
 title: SVGImageElement.decoding
 slug: Web/API/SVGImageElement/decoding
 tags:
-- API
-- Image
-- Property
-- Reference
-- SVG
-- SVG DOM
-- SVGImageElement
-- decoding
+  - API
+  - Image
+  - Property
+  - Reference
+  - SVG
+  - SVG DOM
+  - SVGImageElement
+  - decoding
 browser-compat: api.SVGImageElement.decoding
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <strong><code>decoding</code></strong> property of the
-  {{domxref("SVGImageElement")}} interface represents a hint given to the browser on how
-  it should decode the image.</p>
+The **`decoding`** property of the
+{{domxref("SVGImageElement")}} interface represents a hint given to the browser on how
+it should decode the image.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var refStr = SVGImageElement.decoding
-SVGImageElement.decoding = refStr;</pre>
+```js
+var refStr = SVGImageElement.decoding
+SVGImageElement.decoding = refStr;
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<p>A {{domxref("DOMString")}} representing the decoding hint. Possible values are:</p>
+A {{domxref("DOMString")}} representing the decoding hint. Possible values are:
 
-<ul>
-  <li><strong><code>sync</code></strong>: Decode the image synchronously for atomic
-    presentation with other content.</li>
-  <li><strong><code>async</code></strong>: Decode the image asynchronously to reduce delay
-    in presenting other content.</li>
-  <li><strong><code>auto</code></strong>: Default mode, which indicates no preference for
-    the decoding mode. The browser decides what is best for the user.</li>
-</ul>
+- **`sync`**: Decode the image synchronously for atomic
+  presentation with other content.
+- **`async`**: Decode the image asynchronously to reduce delay
+  in presenting other content.
+- **`auto`**: Default mode, which indicates no preference for
+  the decoding mode. The browser decides what is best for the user.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js;">var img = new Image();
+```js
+var img = new Image();
 img.decoding = 'sync';
 img.src = 'img/logo.svg';
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/HTML/Element/img">&lt;img&gt;: The Image Embed element</a>
-  </li>
-</ul>
+- [\<img>: The Image Embed element](/en-US/docs/Web/HTML/Element/img)

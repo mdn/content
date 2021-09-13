@@ -12,36 +12,32 @@ tags:
   - Reference
 browser-compat: api.DeviceOrientationEvent.gamma
 ---
-<p>{{ apiref("Device Orientation Events") }}</p>
+{{ apiref("Device Orientation Events") }}
 
-<p>Returns the rotation of the device around the Y axis; that is, the number of degrees,
-  ranged between <code>-90</code> and <code>90</code>, by which the device is tilted left
-  or right. See <a href="/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained"
-    title="Orientation and motion data explained">Orientation and motion data
-    explained</a> for details.</p>
+Returns the rotation of the device around the Y axis; that is, the number of degrees,
+ranged between `-90` and `90`, by which the device is tilted left
+or right. See [Orientation and motion data
+explained](/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained "Orientation and motion data explained") for details.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var gamma = <em>orientationEvent</em>.gamma;
-</pre>
+```js
+var gamma = orientationEvent.gamma;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{ domxref("DeviceOrientationEvent") }}</li>
-  <li><a href="/en-US/docs/Web/API/Detecting_device_orientation"
-      title="Detecting device orientation">Detecting device orientation</a></li>
-  <li><a href="/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained"
-      title="Orientation and motion data explained">Orientation and motion data
-      explained</a></li>
-  <li>{{ domxref("window.ondeviceorientation") }}</li>
-  <li>{{ event("deviceorientation") }}</li>
-</ul>
+- {{ domxref("DeviceOrientationEvent") }}
+- [Detecting device orientation](/en-US/docs/Web/API/Detecting_device_orientation "Detecting device orientation")
+- [Orientation and motion data
+  explained](/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained "Orientation and motion data explained")
+- {{ domxref("window.ondeviceorientation") }}
+- {{ event("deviceorientation") }}

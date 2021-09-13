@@ -2,47 +2,44 @@
 title: HTMLMediaElement.setMediaKeys()
 slug: Web/API/HTMLMediaElement/setMediaKeys
 tags:
-- API
-- Audio
-- EncryptedMediaExtensions
-- Experimental
-- HTMLMediaElement
-- Media
-- Method
-- Reference
-- Video
+  - API
+  - Audio
+  - EncryptedMediaExtensions
+  - Experimental
+  - HTMLMediaElement
+  - Media
+  - Method
+  - Reference
+  - Video
 browser-compat: api.HTMLMediaElement.setMediaKeys
 ---
-<p>{{APIRef("HTML DOM")}}{{SeeCompatTable}}</p>
+{{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
-<p>The <strong><code>setMediaKeys()</code></strong> property of the
-  {{domxref("HTMLMediaElement")}} interface returns a {{jsxref("Promise")}} that resolves
-  to the passed {{domxref("MediaKeys")}}, which are those used to decrypt media during
-  playback.</p>
+The **`setMediaKeys()`** property of the
+{{domxref("HTMLMediaElement")}} interface returns a {{jsxref("Promise")}} that resolves
+to the passed {{domxref("MediaKeys")}}, which are those used to decrypt media during
+playback.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var Promise = HTMLMediaElement.<em>setMediaKeys</em>(<em>mediaKeys</em>);</pre>
+```js
+var Promise = HTMLMediaElement.setMediaKeys(mediaKeys);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>mediaKeys</dt>
-  <dd>A reference to a {{domxref("MediaKeys")}} object that the
+- mediaKeys
+  - : A reference to a {{domxref("MediaKeys")}} object that the
     {{domxref("HTMLMediaElement")}} can use for decryption of media data during playback.
-  </dd>
-</dl>
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A {{jsxref("Promise")}} that resolves to the passed instance of <code>MediaKeys</code>.
-</p>
+A {{jsxref("Promise")}} that resolves to the passed instance of `MediaKeys`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

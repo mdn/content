@@ -2,42 +2,43 @@
 title: BluetoothRemoteGATTServer.connect()
 slug: Web/API/BluetoothRemoteGATTServer/connect
 tags:
-- API
-- Bluetooth
-- BluetoothRemoteGATTServer
-- Experimental
-- Method
-- Reference
-- Web Bluetooth API
-- connect()
+  - API
+  - Bluetooth
+  - BluetoothRemoteGATTServer
+  - Experimental
+  - Method
+  - Reference
+  - Web Bluetooth API
+  - connect()
 browser-compat: api.BluetoothRemoteGATTServer.connect
 ---
-<p>{{SeeCompatTable}}</p>
+{{SeeCompatTable}}
 
-<p>The
-    <strong><code>BluetoothRemoteGATTServer.connect()</code></strong> method causes the
-    script execution environment to connect to <code>this.device</code>.</p>
+The
+**`BluetoothRemoteGATTServer.connect()`** method causes the
+script execution environment to connect to `this.device`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">BluetoothRemoteGATTServer.connect()
-  .then(function(bluetoothRemoteGATTServer) { ... })</pre>
+```js
+BluetoothRemoteGATTServer.connect()
+  .then(function(bluetoothRemoteGATTServer) { ... })
+```
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A {{jsxref("Promise")}} that resolves to a {{domxref("BluetoothRemoteGATTServer")}}.
-</p>
+A {{jsxref("Promise")}} that resolves to a {{domxref("BluetoothRemoteGATTServer")}}.
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<div>{{APIRef("Web Bluetooth")}}</div>
+{{APIRef("Web Bluetooth")}}

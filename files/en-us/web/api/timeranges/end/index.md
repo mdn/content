@@ -2,43 +2,41 @@
 title: TimeRanges.end()
 slug: Web/API/TimeRanges/end
 tags:
-- API
-- HTML DOM
-- Media
-- Method
-- NeedsBrowserCompatibility
-- Reference
-- TimeRanges
+  - API
+  - HTML DOM
+  - Media
+  - Method
+  - NeedsBrowserCompatibility
+  - Reference
+  - TimeRanges
 browser-compat: api.TimeRanges.end
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>Returns the time offset at which a specified time range ends.</p>
+Returns the time offset at which a specified time range ends.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>endTime</em> = TimeRanges.end(index)
-</pre>
+```js
+endTime = TimeRanges.end(index)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<ul>
-  <li><code>index</code> is the range number to return the ending time for.</li>
-</ul>
+- `index` is the range number to return the ending time for.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>INDEX_SIZE_ERR</dt>
-  <dd>A <code>DOMException</code> thrown if the specified index doesn't correspond to an
-    existing range.</dd>
-</dl>
+- INDEX_SIZE_ERR
+  - : A `DOMException` thrown if the specified index doesn't correspond to an
+    existing range.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>Given a video element with the ID "myVideo":</p>
+Given a video element with the ID "myVideo":
 
-<pre class="brush: js">var v = document.getElementById("myVideo");
+```js
+var v = document.getElementById("myVideo");
 
 var buf = v.buffered;
 
@@ -46,20 +44,20 @@ var numRanges = buf.length;
 
 if (buf.length == 1) {
   // only one range
-  if (buf.start(0) == 0 &amp;&amp; buf.end(0) == v.duration) {
+  if (buf.start(0) == 0 && buf.end(0) == v.duration) {
     // The one range starts at the beginning and ends at
     // the end of the video, so the whole thing is loaded
   }
 }
-</pre>
+```
 
-<p>This example looks at the time ranges and looks to see if the entire video has been
-  loaded.</p>
+This example looks at the time ranges and looks to see if the entire video has been
+loaded.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -10,45 +10,46 @@ tags:
   - createMediaStreamDestination
 browser-compat: api.AudioContext.createMediaStreamDestination
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>The <code>createMediaStreamDestination()</code> method of the {{ domxref("AudioContext") }} Interface is used to create a new {{domxref("MediaStreamAudioDestinationNode")}} object associated with a <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> {{domxref("MediaStream")}} representing an audio stream, which may be stored in a local file or sent to another computer.</p>
-</div>
+The `createMediaStreamDestination()` method of the {{ domxref("AudioContext") }} Interface is used to create a new {{domxref("MediaStreamAudioDestinationNode")}} object associated with a [WebRTC](/en-US/docs/Web/API/WebRTC_API) {{domxref("MediaStream")}} representing an audio stream, which may be stored in a local file or sent to another computer.
 
-<p>The {{domxref("MediaStream")}} is created when the node is created and is accessible via the {{domxref("MediaStreamAudioDestinationNode")}}'s <code>stream</code> attribute. This stream can be used in a similar way as a <code>MediaStream</code> obtained via {{domxref("navigator.getUserMedia") }} — it can, for example, be sent to a remote peer using the <code>RTCPeerConnection</code> <code>addStream()</code> method.</p>
+The {{domxref("MediaStream")}} is created when the node is created and is accessible via the {{domxref("MediaStreamAudioDestinationNode")}}'s `stream` attribute. This stream can be used in a similar way as a `MediaStream` obtained via {{domxref("navigator.getUserMedia") }} — it can, for example, be sent to a remote peer using the `RTCPeerConnection` `addStream()` method.
 
-<p>For more details about media stream destination nodes, check out the {{domxref("MediaStreamAudioDestinationNode")}} reference page.</p>
+For more details about media stream destination nodes, check out the {{domxref("MediaStreamAudioDestinationNode")}} reference page.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var audioCtx = new AudioContext();
-var destination = audioCtx.createMediaStreamDestination();</pre>
+```js
+var audioCtx = new AudioContext();
+var destination = audioCtx.createMediaStreamDestination();
+```
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A {{domxref("MediaStreamAudioDestinationNode")}}.</p>
+A {{domxref("MediaStreamAudioDestinationNode")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the following simple example, we create a {{domxref("MediaStreamAudioDestinationNode")}}, an {{ domxref("OscillatorNode") }} and a {{ domxref("MediaRecorder") }} (the example will therefore only work in Firefox and Chrome at this time.) The <code>MediaRecorder</code> is set up to record information from the <code>MediaStreamDestinationNode</code>.</p>
+In the following simple example, we create a {{domxref("MediaStreamAudioDestinationNode")}}, an {{ domxref("OscillatorNode") }} and a {{ domxref("MediaRecorder") }} (the example will therefore only work in Firefox and Chrome at this time.) The `MediaRecorder` is set up to record information from the `MediaStreamDestinationNode`.
 
-<p>When the button is clicked, the oscillator starts, and the <code>MediaRecorder</code> is started. When the button is stopped, the oscillator and<code> MediaRecorder</code> both stop. Stopping the <code>MediaRecorder</code> causes the <code>dataavailable</code> event to fire, and the event data is pushed into the <code>chunks</code> array. After that, the <code>stop</code> event fires, a new <code>blob</code> is made of type opus — which contains the data in the <code>chunks</code> array, and a new window (tab) is then opened that points to a URL created from the blob.</p>
+When the button is clicked, the oscillator starts, and the `MediaRecorder` is started. When the button is stopped, the oscillator and` MediaRecorder` both stop. Stopping the `MediaRecorder` causes the `dataavailable` event to fire, and the event data is pushed into the `chunks` array. After that, the `stop` event fires, a new `blob` is made of type opus — which contains the data in the `chunks` array, and a new window (tab) is then opened that points to a URL created from the blob.
 
-<p>From here, you can play and save the opus file.</p>
+From here, you can play and save the opus file.
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;createMediaStreamDestination() demo&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;createMediaStreamDestination() demo&lt;/h1&gt;
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>createMediaStreamDestination() demo</title>
+  </head>
+  <body>
+    <h1>createMediaStreamDestination() demo</h1>
 
-    &lt;p&gt;Encoding a pure sine wave to an Opus file &lt;/p&gt;
-    &lt;button&gt;Make sine wave&lt;/button&gt;
-    &lt;audio controls&gt;&lt;/audio&gt;
-    &lt;script&gt;
+    <p>Encoding a pure sine wave to an Opus file </p>
+    <button>Make sine wave</button>
+    <audio controls></audio>
+    <script>
      var b = document.querySelector("button");
      var clicked = false;
      var chunks = [];
@@ -81,24 +82,21 @@ var destination = audioCtx.createMediaStreamDestination();</pre>
        var blob = new Blob(chunks, { 'type' : 'audio/ogg; codecs=opus' });
        document.querySelector("audio").src = URL.createObjectURL(blob);
      };
-    &lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
+    </script>
+  </body>
+</html>
+```
 
-<div class="note">
-<p><strong>Note:</strong> You can <a href="https://mdn.github.io/webaudio-examples/create-media-stream-destination/index.html">view this example live</a>, or <a href="https://github.com/mdn/webaudio-examples/blob/master/create-media-stream-destination/index.html">study the source code</a>, on Github.</p>
-</div>
+> **Note:** You can [view this example live](https://mdn.github.io/webaudio-examples/create-media-stream-destination/index.html), or [study the source code](https://github.com/mdn/webaudio-examples/blob/master/create-media-stream-destination/index.html), on Github.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

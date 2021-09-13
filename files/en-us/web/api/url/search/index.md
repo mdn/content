@@ -2,51 +2,51 @@
 title: URL.search
 slug: Web/API/URL/search
 tags:
-- API
-- Property
-- Reference
-- URL
-- URL API
+  - API
+  - Property
+  - Reference
+  - URL
+  - URL API
 browser-compat: api.URL.search
 ---
-<div>{{ApiRef("URL API")}}</div>
+{{ApiRef("URL API")}}
 
-<p>The <strong><code>search</code></strong> property of the {{domxref("URL")}} interface
-  is a search string, also called a <em>query string</em>, that is a
-  {{domxref("USVString")}} containing a <code>'?'</code> followed by the parameters of the
-  URL.</p>
+The **`search`** property of the {{domxref("URL")}} interface
+is a search string, also called a _query string_, that is a
+{{domxref("USVString")}} containing a `'?'` followed by the parameters of the
+URL.
 
-<p>Modern browsers provide the {{domxref("URL.searchParams")}} property to make it easy to
-  parse out the parameters from the query string.</p>
+Modern browsers provide the {{domxref("URL.searchParams")}} property to make it easy to
+parse out the parameters from the query string.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const <em>searchParams</em> = <em>object</em>.search
-<em>url</em>.search = <em>newSearchParams</em>
-</pre>
+```js
+const searchParams = object.search
+url.search = newSearchParams
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("USVString")}}.</p>
+A {{domxref("USVString")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">const url = new URL('https://developer.mozilla.org/en-US/docs/Web/API/URL/search?q=123');
+```js
+const url = new URL('https://developer.mozilla.org/en-US/docs/Web/API/URL/search?q=123');
 console.log(url.search); // Logs "?q=123"
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("URL")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("URL")}} interface it belongs to.

@@ -13,29 +13,31 @@ tags:
   - artwork
 browser-compat: api.MediaMetadata.artwork
 ---
-<p>{{SeeCompatTable}}{{APIRef("Media Session API")}}</p>
+{{SeeCompatTable}}{{APIRef("Media Session API")}}
 
-<p>The <strong><code>artwork</code></strong> property of the
-    {{domxref("MediaMetaData")}} interface returns or sets an array of
-    {{domxref("MediaImage")}} objects representing images associated with playing
-    media.</p>
+The **`artwork`** property of the
+{{domxref("MediaMetaData")}} interface returns or sets an array of
+{{domxref("MediaImage")}} objects representing images associated with playing
+media.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var artwork[] = mediaMetadata.artwork
-mediaMetadata.artwork = artwork[]</pre>
+```js
+var artwork[] = mediaMetadata.artwork
+mediaMetadata.artwork = artwork[]
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{jsxref("Array")}} of {{domxref("MediaImage")}} objects.</p>
+An {{jsxref("Array")}} of {{domxref("MediaImage")}} objects.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example checks for browser compatibility and sets the current metadata
-  for the media session.</p>
+The following example checks for browser compatibility and sets the current metadata
+for the media session.
 
-<pre
-  class="brush: js">if ('mediaSession' in navigator) {
+```js
+if ('mediaSession' in navigator) {
   navigator.mediaSession.metadata = new MediaMetadata({
     title: 'Unforgettable',
     artist: 'Nat King Cole',
@@ -48,21 +50,17 @@ mediaMetadata.artwork = artwork[]</pre>
       { src: 'https://dummyimage.com/384x384', sizes: '384x384', type: 'image/png' },
       { src: 'https://dummyimage.com/512x512', sizes: '512x512', type: 'image/png' },
     ]
-  });</pre>
+  });
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
+{{Compat}}
 
-  <p>{{Compat}}</p>
+## See also
 
-  <h2 id="See_also">See also</h2>
-
-  <ul>
-    <li>{{domxref("MediaImage")}}</li>
-  </ul>
-</div>
+- {{domxref("MediaImage")}}

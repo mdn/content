@@ -2,52 +2,49 @@
 title: ReadableStreamBYOBRequest.respond()
 slug: Web/API/ReadableStreamBYOBRequest/respond
 tags:
-- API
-- Experimental
-- Method
-- ReadableStreamBYOBRequest
-- Reference
-- Streams
-- respond
+  - API
+  - Experimental
+  - Method
+  - ReadableStreamBYOBRequest
+  - Reference
+  - Streams
+  - respond
 browser-compat: api.ReadableStreamBYOBRequest.respond
 ---
-<div>{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}</div>
+{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}
 
-<p>The <strong><code>error()</code></strong> method of the
-  {{domxref("ReadableStreamBYOBRequest")}} interface xxx</p>
+The **`error()`** method of the
+{{domxref("ReadableStreamBYOBRequest")}} interface xxx
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">readableStreamBYOBRequestInstance.respond(<em>bytesWritten</em>);</pre>
+```js
+readableStreamBYOBRequestInstance.respond(bytesWritten);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><em>bytesWritten</em></dt>
-  <dd>xxx</dd>
-</dl>
+- _bytesWritten_
+  - : xxx
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Void.</p>
+Void.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>TypeError</dt>
-  <dd>The source object is not a <code>ReadableStreamBYOBRequest</code>, or there is no
-    associated controller, or the associated internal array buffer is detached.</dd>
-</dl>
+- TypeError
+  - : The source object is not a `ReadableStreamBYOBRequest`, or there is no
+    associated controller, or the associated internal array buffer is detached.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>TBD.</p>
+TBD.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

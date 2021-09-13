@@ -2,54 +2,48 @@
 title: CSSPerspective()
 slug: Web/API/CSSPerspective/CSSPerspective
 tags:
-- API
-- CSS Typed Object Model API
-- CSSPerspective
-- CSSTransformComponent
-- CSSTransformValue
-- Constructor
-- Experimental
-- Houdini
+  - API
+  - CSS Typed Object Model API
+  - CSSPerspective
+  - CSSTransformComponent
+  - CSSTransformValue
+  - Constructor
+  - Experimental
+  - Houdini
 browser-compat: api.CSSPerspective.CSSPerspective
 ---
-<div>{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}</div>
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}
 
-<p>The <strong><code>CSSPerspective()</code></strong> constructor creates
-  a new {{domxref("CSSPerspective")}} object representing the <a
-    href="/en-US/docs/Web/CSS/transform-function/perspective()">perspective()</a> value of
-  the individual {{CSSXref('transform')}} property in CSS.</p>
+The **`CSSPerspective()`** constructor creates
+a new {{domxref("CSSPerspective")}} object representing the [perspective()](</en-US/docs/Web/CSS/transform-function/perspective()>) value of
+the individual {{CSSXref('transform')}} property in CSS.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>CSSPerspective</var> = new CSSPerspective(<em>length</em>);</pre>
+```js
+var CSSPerspective = new CSSPerspective(length);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>{{domxref('CSSPerspective.length','length')}}</dt>
-  <dd>A value for the distance from z=0 of the {{domxref('CSSPerspective')}} object to be
-    constructed. This must be a {{cssxref('length')}}.</dd>
-</dl>
+- {{domxref('CSSPerspective.length','length')}}
+  - : A value for the distance from z=0 of the {{domxref('CSSPerspective')}} object to be
+    constructed. This must be a {{cssxref('length')}}.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt><a
-      href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError"><code>TypeError</code></a>
-  </dt>
-  <dd>Raised if the value of <code>CSSPerspective.length</code> exists but is not a
-    {{cssxref('length')}}.</dd>
-</dl>
+- [`TypeError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError)
+  - : Raised if the value of `CSSPerspective.length` exists but is not a
+    {{cssxref('length')}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>To do</p>
+To do
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -9,28 +9,31 @@ tags:
   - CompressionStream
 browser-compat: api.CompressionStream.writable
 ---
-<div>{{DefaultAPISidebar("Compression Streams API")}}</div>
+{{DefaultAPISidebar("Compression Streams API")}}
 
-<p>The <strong><code>writable</code></strong> read-only property of the {{domxref("CompressionStream")}} interface returns a {{domxref("WritableStream")}}.</p>
+The **`writable`** read-only property of the {{domxref("CompressionStream")}} interface returns a {{domxref("WritableStream")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">let writableStream = CompressionStream.writable;</pre>
+    let writableStream = CompressionStream.writable;
 
-<h3>Value</h3>
-<p>A {{domxref("WritableStream")}}.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("WritableStream")}}.
 
-<p>The following example returns a {{domxref("WritableStream")}} from a <code>CompressionStream</code>.</p>
+## Examples
 
-<pre class="brush:js">let stream = new CompressionStream('gzip');
-console.log(stream.writeable); //a WritableStream</pre>
+The following example returns a {{domxref("WritableStream")}} from a `CompressionStream`.
 
-<h2 id="Specifications">Specifications</h2>
+```js
+let stream = new CompressionStream('gzip');
+console.log(stream.writeable); //a WritableStream
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

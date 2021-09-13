@@ -12,34 +12,36 @@ tags:
   - onshippingoptionchange
 browser-compat: api.PaymentRequest.onshippingoptionchange
 ---
-<p>{{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}</p>
+{{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
 
-<p>The <strong><code>onshippingoptionchange</code></strong> event of the
-  {{domxref("PaymentRequest")}} interface is fired whenever the user changes a shipping
-  option. </p>
+The **`onshippingoptionchange`** event of the
+{{domxref("PaymentRequest")}} interface is fired whenever the user changes a shipping
+option.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">PaymentRequest.addEventListener('shippingoptionchange', shippingOptionChangeEvent =&gt; { ... });
+```js
+PaymentRequest.addEventListener('shippingoptionchange', shippingOptionChangeEvent => { ... });
 
-PaymentRequest.onshippingoptionchange = function(shippingOptionChangeEvent) { ... };</pre>
+PaymentRequest.onshippingoptionchange = function(shippingOptionChangeEvent) { ... };
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The <code>shippingoptionchange</code> event is triggered by a user-agent controlled
-  interaction. If the option stored by the user agent changes at any time during a payment
-  process, the event is triggered. To make sure an updated option is included when sending
-  payment information to the server, you should add event listeners for a
-  {{domxref('PaymentRequest')}} object after instantiation, but before the call
-  to <code>show()</code>.</p>
+The `shippingoptionchange` event is triggered by a user-agent controlled
+interaction. If the option stored by the user agent changes at any time during a payment
+process, the event is triggered. To make sure an updated option is included when sending
+payment information to the server, you should add event listeners for a
+{{domxref('PaymentRequest')}} object after instantiation, but before the call
+to `show()`.
 
-<pre class="brush: js">// Initialization of PaymentRequest arguments are excerpted for clarity.
+```js
+// Initialization of PaymentRequest arguments are excerpted for clarity.
 var request = new PaymentRequest(supportedInstruments, details, options);
 
 // When user selects a shipping address
-request.addEventListener('shippingaddresschange', e =&gt; {
-  e.updateWith(((details, addr) =&gt; {
+request.addEventListener('shippingaddresschange', e => {
+  e.updateWith(((details, addr) => {
     var shippingOption = {
       id: '',
       label: '',
@@ -76,8 +78,8 @@ request.addEventListener('shippingaddresschange', e =&gt; {
     return Promise.resolve(details);
   })(details, request.shippingAddress));
 });
-</pre>
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

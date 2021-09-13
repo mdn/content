@@ -2,53 +2,50 @@
 title: CSSTransformValue()
 slug: Web/API/CSSTransformValue/CSSTransformValue
 tags:
-- API
-- CSS
-- CSS Typed Object Model API
-- CSSTransformValue
-- Constructor
-- Experimental
-- Houdini
-- Reference
+  - API
+  - CSS
+  - CSS Typed Object Model API
+  - CSSTransformValue
+  - Constructor
+  - Experimental
+  - Houdini
+  - Reference
 browser-compat: api.CSSTransformValue.CSSTransformValue
 ---
-<div>{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{Draft}}</div>
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{Draft}}
 
-<p>The <strong><code>CSSTransformValue()</code></strong> constructor
-  creates a new {{domxref("CSSTransformValue")}} object which represents a list of
-  individual transform objects.</p>
+The **`CSSTransformValue()`** constructor
+creates a new {{domxref("CSSTransformValue")}} object which represents a list of
+individual transform objects.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>CSSTransformValue</var> = new CSSTransformValue(transforms);</pre>
+```js
+var CSSTransformValue = new CSSTransformValue(transforms);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>transforms</dt>
-  <dd>A list of {{domxref("CSSTransformComponent")}} objects to iterate over.</dd>
-</dl>
+- transforms
+  - : A list of {{domxref("CSSTransformComponent")}} objects to iterate over.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A new {{domxref("CSSTransformValue")}}.</p>
+A new {{domxref("CSSTransformValue")}}.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>{{jsxref("TypeError")}}</dt>
-  <dd>Raised if transforms is empty.</dd>
-</dl>
+- {{jsxref("TypeError")}}
+  - : Raised if transforms is empty.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>To do</p>
+To do
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

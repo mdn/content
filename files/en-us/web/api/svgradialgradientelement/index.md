@@ -8,37 +8,35 @@ tags:
   - SVG DOM
 browser-compat: api.SVGRadialGradientElement
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <strong><code>SVGRadialGradientElement</code></strong> interface corresponds to the {{SVGElement("RadialGradient")}} element.</p>
+The **`SVGRadialGradientElement`** interface corresponds to the {{SVGElement("RadialGradient")}} element.
 
-<p>{{InheritanceDiagram(600, 140)}}</p>
+{{InheritanceDiagram(600, 140)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface also inherits properties from its parent, {{domxref("SVGGradientElement")}}.</em></p>
+_This interface also inherits properties from its parent, {{domxref("SVGGradientElement")}}._
 
-<dl>
- <dt>{{domxref("SVGRadialGradientElement.cx")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("cx")}} attribute of the given {{SVGElement("RadialGradient")}} element.</dd>
- <dt>{{domxref("SVGRadialGradientElement.cx")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("cy")}} attribute of the given {{SVGElement("RadialGradient")}} element.</dd>
- <dt>{{domxref("SVGRadialGradientElement.r")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("r")}} attribute of the given {{SVGElement("RadialGradient")}} element.</dd>
- <dt>{{domxref("SVGRadialGradientElement.fx")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("fx")}} attribute of the given {{SVGElement("RadialGradient")}} element.</dd>
- <dt>{{domxref("SVGRadialGradientElement.fy")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("fy")}} attribute of the given {{SVGElement("RadialGradient")}} element.</dd>
-</dl>
+- {{domxref("SVGRadialGradientElement.cx")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("cx")}} attribute of the given {{SVGElement("RadialGradient")}} element.
+- {{domxref("SVGRadialGradientElement.cx")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("cy")}} attribute of the given {{SVGElement("RadialGradient")}} element.
+- {{domxref("SVGRadialGradientElement.r")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("r")}} attribute of the given {{SVGElement("RadialGradient")}} element.
+- {{domxref("SVGRadialGradientElement.fx")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("fx")}} attribute of the given {{SVGElement("RadialGradient")}} element.
+- {{domxref("SVGRadialGradientElement.fy")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("fy")}} attribute of the given {{SVGElement("RadialGradient")}} element.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface doesn't implement any specific methods, but inherits methods from its parent interface, {{domxref("SVGGradientElement")}}.</em></p>
+_This interface doesn't implement any specific methods, but inherits methods from its parent interface, {{domxref("SVGGradientElement")}}._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

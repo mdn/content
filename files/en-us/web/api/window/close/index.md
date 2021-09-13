@@ -2,43 +2,44 @@
 title: Window.close()
 slug: Web/API/Window/close
 tags:
-- API
-- Gecko
-- HTML DOM
-- Method
-- Reference
-- Window
+  - API
+  - Gecko
+  - HTML DOM
+  - Method
+  - Reference
+  - Window
 browser-compat: api.Window.close
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code><strong>Window.close()</strong></code> method closes the current window, or
-  the window on which it was called.</p>
+The **`Window.close()`** method closes the current window, or
+the window on which it was called.
 
-<p>This method can only be called on windows that were opened by a script using the
-  {{domxref("Window.open()")}} method. If the window was not opened by a script, an error
-  similar to this one appears in the console:
-  <code>Scripts may not close windows that were not opened by script.</code></p>
+This method can only be called on windows that were opened by a script using the
+{{domxref("Window.open()")}} method. If the window was not opened by a script, an error
+similar to this one appears in the console:
+`Scripts may not close windows that were not opened by script.`
 
-<p>Note also that <code>close()</code> has no effect when called on {{domxref("Window")}}
-  objects returned by
-  <code><a href="/en-US/docs/Web/API/HTMLIFrameElement/contentWindow">HTMLIFrameElement.contentWindow</a></code>.
-</p>
+Note also that `close()` has no effect when called on {{domxref("Window")}}
+objects returned by
+[`HTMLIFrameElement.contentWindow`](/en-US/docs/Web/API/HTMLIFrameElement/contentWindow).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">window.close();</pre>
+```js
+window.close();
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Closing_a_window_opened_with_window.open">Closing a window opened with
-  <code>window.open()</code></h3>
+### Closing a window opened with `window.open()`
 
-<p>This example shows a method which opens a window and a second one which closes the
-  window; this demonstrates how to use <code>Window.close()</code> to close a window
-  opened by calling {{domxref("window.open()")}}.</p>
+This example shows a method which opens a window and a second one which closes the
+window; this demonstrates how to use `Window.close()` to close a window
+opened by calling {{domxref("window.open()")}}.
 
-<pre class="brush: js">//Global var to store a reference to the opened window
+```js
+//Global var to store a reference to the opened window
 var openedWindow;
 
 function openWindow() {
@@ -48,12 +49,12 @@ function openWindow() {
 function closeOpenedWindow() {
   openedWindow.close();
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

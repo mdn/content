@@ -9,39 +9,43 @@ tags:
   - CSSCounterStyleRule
 browser-compat: api.CSSCounterStyleRule.name
 ---
-<div>{{DefaultAPISidebar("CSS Counter Styles")}}</div>
+{{DefaultAPISidebar("CSS Counter Styles")}}
 
-<p>The <strong><code>name</code></strong> property of the {{domxref("CSSCounterStyleRule")}} interface gets and sets the {{CSSxRef("&lt;custom-ident&gt;")}} defined as the <code>name</code> for the associated rule.</p>
+The **`name`** property of the {{domxref("CSSCounterStyleRule")}} interface gets and sets the {{CSSxRef("&lt;custom-ident&gt;")}} defined as the `name` for the associated rule.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let name = CSSCounterStyleRule.name;
+```js
+let name = CSSCounterStyleRule.name;
 CSSCounterStyleRule.name = a;
-</pre>
+```
 
-<h3>Value</h3>
-<p>A {{domxref("CSSOMString")}}</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("CSSOMString")}}
 
-<p>The following example shows a {{cssxref("@counter-style")}} rule. In JavaScript, <code>myRules[0]</code> is this <code>@counter-style</code> rule, returning <code>name</code> gives us the custom ident "box-corner".</p>
+## Examples
 
-<pre class="brush: css">@counter-style box-corner {
+The following example shows a {{cssxref("@counter-style")}} rule. In JavaScript, `myRules[0]` is this `@counter-style` rule, returning `name` gives us the custom ident "box-corner".
+
+```css
+@counter-style box-corner {
   system: fixed;
   symbols: ◰ ◳ ◲ ◱;
   suffix: ': ';
   fallback: disc;
-}</pre>
+}
+```
 
-<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].name); // "box-corner" </pre>
+```js
+let myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0].name); // "box-corner"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
-
+{{Compat}}

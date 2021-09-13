@@ -11,48 +11,49 @@ tags:
   - Element
 browser-compat: api.Element.ariaSelected
 ---
-<div>{{DefaultAPISidebar("DOM")}}</div>
+{{DefaultAPISidebar("DOM")}}
 
-<p>The <strong><code>ariaSelected</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <code>aria-selected</code> attribute, which indicates the current "selected" state of elements that have a selected state.</p>
+The **`ariaSelected`** property of the {{domxref("Element")}} interface reflects the value of the `aria-selected` attribute, which indicates the current "selected" state of elements that have a selected state.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox notranslate">var <var>ariaSelected</var> = element.ariaSelected;
-<var>element</var>.ariaSelected = <var>ariaSelected</var></pre>
+    var ariaSelected = element.ariaSelected;
+    element.ariaSelected = ariaSelected
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString")}} with one of the following values:</p>
+### Value
 
-<dl>
-  <dt><code>"true"</code></dt>
-  <dd>The item is selected.</dd>
-  <dt><code>"false"</code></dt>
-  <dd>The item is not selected.</dd>
-  <dt><code>"undefined"</code></dt>
-  <dd>The item is not</dd>
-</dl>
+A {{domxref("DOMString")}} with one of the following values:
 
-<h2 id="Examples">Examples</h2>
+- `"true"`
+  - : The item is selected.
+- `"false"`
+  - : The item is not selected.
+- `"undefined"`
+  - : The item is not
 
-<p>In this example the <code>aria-selected</code> attribute on the element with an ID of <code>tab-id</code> is set to "true". Using <code>ariaSelected</code> we update the value to "false".</p>
+## Examples
 
-<pre class="brush: html">&lt;button role="tab" aria-selected="true" aria-controls="tabpanel-id" id="tab-id"&gt;Tab label&lt;/button&gt;</pre>
+In this example the `aria-selected` attribute on the element with an ID of `tab-id` is set to "true". Using `ariaSelected` we update the value to "false".
 
-<pre class="brush: js">let el = document.getElementById('tab-id');
+```html
+<button role="tab" aria-selected="true" aria-controls="tabpanel-id" id="tab-id">Tab label</button>
+```
+
+```js
+let el = document.getElementById('tab-id');
 console.log(el.ariaSelected); // true
 el.ariaSelected = "false";
-console.log(el.ariaSelected); // false</pre>
+console.log(el.ariaSelected); // false
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_Role">ARIA: tab role</a></li>
-</ul>
+- [ARIA: tab role](/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_Role)

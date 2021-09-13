@@ -12,83 +12,78 @@ tags:
   - register
 browser-compat: api.ServiceWorkerContainer.register
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p>The <strong><code>register()</code></strong> method of the
-    {{domxref("ServiceWorkerContainer")}} interface creates or updates a
-    {{domxref("ServiceWorkerRegistration")}} for the given <code>scriptURL</code>.</p>
+The **`register()`** method of the
+{{domxref("ServiceWorkerContainer")}} interface creates or updates a
+{{domxref("ServiceWorkerRegistration")}} for the given `scriptURL`.
 
-<p>If successful, a service worker registration ties the provided script URL to a
-  <em>scope</em>, which is subsequently used for navigation matching. You can call this
-  method unconditionally from the controlled page. I.e., you don't need to first check
-  whether there's an active registration.</p>
+If successful, a service worker registration ties the provided script URL to a
+_scope_, which is subsequently used for navigation matching. You can call this
+method unconditionally from the controlled page. I.e., you don't need to first check
+whether there's an active registration.
 
-<p>There is frequent confusion surrounding the meaning and use of <em>scope</em>. Since a
-  service worker can't have a scope broader than its own location, only use the
-  <code>scope</code> option when you need a scope that is narrower than the default.</p>
+There is frequent confusion surrounding the meaning and use of _scope_. Since a
+service worker can't have a scope broader than its own location, only use the
+`scope` option when you need a scope that is narrower than the default.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>serviceWorkerContainer</em>.register(<em>scriptURL</em>, <em>options</em>)
-  .then(function(<em>serviceWorkerRegistration</em>) { ... });</pre>
+```js
+serviceWorkerContainer.register(scriptURL, options)
+  .then(function(serviceWorkerRegistration) { ... });
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>scriptURL</code></dt>
-  <dd>The URL of the service worker script. The registered service worker file needs to
-    have a valid <a
-      href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#javascript_types">JavaScript
-      MIME type</a>.</dd>
-  <dt><code>options</code> {{optional_inline}}</dt>
-  <dd>An object containing registration options. Currently available options are:
-    <ul>
-      <li><code>scope</code>: A {{domxref("USVString")}} representing a URL that defines a
-        service worker's registration scope; that is, what range of URLs a service worker
-        can control. This is usually a relative URL. It is relative to the base URL of the
-        application. By default, the <code>scope</code> value for a service worker
-        registration is set to the directory where the service worker script is located.
-        See the <a href="#examples">Examples</a> section for more information on how it
-        works.</li>
-      <li><code>type</code>: A {{domxref("DOMString")}}
-        specifying the type of worker to create. Valid values are:
-        <ul>
-          <li><code>'classic'</code>: The loaded service worker is in a standard script. This is the default.</li>
-          <li><code>module</code>: The loaded service worker is in an
-          <a href="/en-US/docs/Web/JavaScript/Guide/Modules">ES module</a>
-          and the import statement is available on
-            worker contexts.
-          </li>
-        </ul>
-      </li>
-      <li><code>updateViaCache</code>: A string indicating how much of a service worker's resources will be updated when a call is made to {{domxref('ServiceWorkerRegistration.updateViaCache')}}. Valid values are:
-      <ul>
-        <li><code>'all'</code>: The service worker script and all of its imports will be updated.</li>
-        <li><code>'imports'</code>: Only imports referenced by the service worker script will be updated. This is the default.</li>
-        <li><code>'none'</code>: Neither the service worker, nor its imports will be updated.</li>
-      </ul>
-      </li>
-    </ul>
-  </dd>
-</dl>
+- `scriptURL`
+  - : The URL of the service worker script. The registered service worker file needs to
+    have a valid [JavaScript
+    MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#javascript_types).
+- `options` {{optional_inline}}
 
-<h3 id="Return_value">Return value</h3>
+  - : An object containing registration options. Currently available options are:
 
-<p>A {{jsxref("Promise")}} that resolves with a {{domxref("ServiceWorkerRegistration")}}
-  object.</p>
+    - `scope`: A {{domxref("USVString")}} representing a URL that defines a
+      service worker's registration scope; that is, what range of URLs a service worker
+      can control. This is usually a relative URL. It is relative to the base URL of the
+      application. By default, the `scope` value for a service worker
+      registration is set to the directory where the service worker script is located.
+      See the [Examples](#examples) section for more information on how it
+      works.
+    - `type`: A {{domxref("DOMString")}}
+      specifying the type of worker to create. Valid values are:
 
-<h2 id="Examples">Examples</h2>
+      - `'classic'`: The loaded service worker is in a standard script. This is the default.
+      - `module`: The loaded service worker is in an
+        [ES module](/en-US/docs/Web/JavaScript/Guide/Modules)
+        and the import statement is available on
+        worker contexts.
 
-<p>The examples described here should be taken together to get a better understanding of
-  how service workers scope applies to a page.</p>
+    - `updateViaCache`: A string indicating how much of a service worker's resources will be updated when a call is made to {{domxref('ServiceWorkerRegistration.updateViaCache')}}. Valid values are:
 
-<p>The following example uses the default value of <code>scope</code> (by omitting it).
-  The service worker code in this case, if
-  included in <code>example.com/index.html</code>, will
-  control <code>example.com/index.html</code>, as well as pages underneath it, like
-  <code>example.com/product/description.html</code>.</p>
+      - `'all'`: The service worker script and all of its imports will be updated.
+      - `'imports'`: Only imports referenced by the service worker script will be updated. This is the default.
+      - `'none'`: Neither the service worker, nor its imports will be updated.
 
-<pre class="brush: js">if ('serviceWorker' in navigator) {
+### Return value
+
+A {{jsxref("Promise")}} that resolves with a {{domxref("ServiceWorkerRegistration")}}
+object.
+
+## Examples
+
+The examples described here should be taken together to get a better understanding of
+how service workers scope applies to a page.
+
+The following example uses the default value of `scope` (by omitting it).
+The service worker code in this case, if
+included in `example.com/index.html`, will
+control `example.com/index.html`, as well as pages underneath it, like
+`example.com/product/description.html`.
+
+```js
+if ('serviceWorker' in navigator) {
   // Register a service worker hosted at the root of the
   // site using the default scope.
   navigator.serviceWorker.register('/sw.js').then(function(registration) {
@@ -98,18 +93,20 @@ browser-compat: api.ServiceWorkerContainer.register
   });
 } else {
   console.log('Service workers are not supported.');
-}</pre>
+}
+```
 
-<p>The following code, if included in <code>example.com/index.html</code>, at the root of
-  a site, would apply to exactly the same pages as the example above. Remember the scope,
-  when included, uses the page's location as its base.</p>
+The following code, if included in `example.com/index.html`, at the root of
+a site, would apply to exactly the same pages as the example above. Remember the scope,
+when included, uses the page's location as its base.
 
-<p>Alternatively, if this code were included in a page at
-  <code>example.com/product/description.html</code>, with the Javascript file residing
-  at <code>example.com/product/sw.js</code>, then the service worker would only apply to
-  resources under <code>example.com/product</code>.</p>
+Alternatively, if this code were included in a page at
+`example.com/product/description.html`, with the Javascript file residing
+at `example.com/product/sw.js`, then the service worker would only apply to
+resources under `example.com/product`.
 
-<pre class="brush: js">if ('serviceWorker' in navigator) {
+```js
+if ('serviceWorker' in navigator) {
   // declaring scope manually
   navigator.serviceWorker.register('/sw.js', {scope: './'}).then(function(registration) {
     console.log('Service worker registration succeeded:', registration);
@@ -119,16 +116,17 @@ browser-compat: api.ServiceWorkerContainer.register
 } else {
   console.log('Service workers are not supported.');
 }
-</pre>
+```
 
-<p>There is frequent confusion surrounding the meaning and use of <em>scope</em>. Since a
-  service worker can't have a scope broader than its own location, only use the
-  <code>scope</code> option when you need a scope that is narrower than the default.</p>
+There is frequent confusion surrounding the meaning and use of _scope_. Since a
+service worker can't have a scope broader than its own location, only use the
+`scope` option when you need a scope that is narrower than the default.
 
-<p>The following code, if included in <code>example.com/index.html</code>, at the root of
-  a site, would only apply to resources under <code>example.com/product</code>.</p>
+The following code, if included in `example.com/index.html`, at the root of
+a site, would only apply to resources under `example.com/product`.
 
-<pre class="brush: js">if ('serviceWorker' in navigator) {
+```js
+if ('serviceWorker' in navigator) {
   // declaring scope manually
   navigator.serviceWorker.register('/sw.js', {scope: '/product/'}).then(function(registration) {
     console.log('Service worker registration succeeded:', registration);
@@ -137,17 +135,17 @@ browser-compat: api.ServiceWorkerContainer.register
   });
 } else {
   console.log('Service workers are not supported.');
-}</pre>
+}
+```
 
-<p>However, Servers can remove this restriction by setting a <a
-    href="https://w3c.github.io/ServiceWorker/#service-worker-allowed">Service-Worker-Allowed</a> header on the service
-  worker script, and then you can specify a max scope for that service worker above the
-  service worker's location.</p>
+However, Servers can remove this restriction by setting a [Service-Worker-Allowed](https://w3c.github.io/ServiceWorker/#service-worker-allowed) header on the service
+worker script, and then you can specify a max scope for that service worker above the
+service worker's location.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -8,35 +8,33 @@ tags:
   - SVG DOM
 browser-compat: api.SVGRect
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <strong><code>SVGRect</code></strong> represents a rectangle. Rectangles consist of an <code>x</code> and <code>y</code> coordinate pair identifying a minimum <code>x</code> value, a minimum <code>y</code> value, and a <code>width</code> and <code>height</code>, which are constrained to be non-negative.</p>
+The **`SVGRect`** represents a rectangle. Rectangles consist of an `x` and `y` coordinate pair identifying a minimum `x` value, a minimum `y` value, and a `width` and `height`, which are constrained to be non-negative.
 
-<p>An <strong><code>SVGRect</code></strong> object can be designated as read only, which means that attempts to modify the object will result in an exception being thrown.</p>
+An **`SVGRect`** object can be designated as read only, which means that attempts to modify the object will result in an exception being thrown.
 
-<p>{{InheritanceDiagram(600, 140)}}</p>
+{{InheritanceDiagram(600, 140)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("SVGRect.x")}}</dt>
- <dd>The exact effect of this coordinate depends on each element. If the attribute is not specified, the effect is as if a value of <code>0</code> were specified.</dd>
- <dt>{{domxref("SVGRect.y")}}</dt>
- <dd>The exact effect of this coordinate depends on each element. If the attribute is not specified, the effect is as if a value of <code>0</code> were specified.</dd>
- <dt>{{domxref("SVGRect.width")}}</dt>
- <dd>This represents the width of the rectangle. A value that is negative results to an error. A value of <code>0</code> disables rendering of the element</dd>
- <dt>{{SVGAttr("SVGRect.height")}}</dt>
- <dd>This represents the height of the rectangle. A value that is negative results to an error. A value of <code>0</code> disables rendering of the element.</dd>
-</dl>
+- {{domxref("SVGRect.x")}}
+  - : The exact effect of this coordinate depends on each element. If the attribute is not specified, the effect is as if a value of `0` were specified.
+- {{domxref("SVGRect.y")}}
+  - : The exact effect of this coordinate depends on each element. If the attribute is not specified, the effect is as if a value of `0` were specified.
+- {{domxref("SVGRect.width")}}
+  - : This represents the width of the rectangle. A value that is negative results to an error. A value of `0` disables rendering of the element
+- {{SVGAttr("SVGRect.height")}}
+  - : This represents the height of the rectangle. A value that is negative results to an error. A value of `0` disables rendering of the element.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface also inherits properties from its parent, {{domxref("DOMRectReadOnly")}}.</em></p>
+_This interface also inherits properties from its parent, {{domxref("DOMRectReadOnly")}}._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

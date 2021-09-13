@@ -9,26 +9,26 @@ tags:
   - message
 browser-compat: api.DOMException.message
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p>The <strong><code>message</code></strong> read-only property of the
-  {{domxref("DOMException")}} interface returns a {{ domxref("DOMString") }} representing
-  a message or description associated with the given <a
-    href="/en-US/docs/Web/API/DOMException#error_names">error name</a>.</p>
+The **`message`** read-only property of the
+{{domxref("DOMException")}} interface returns a {{ domxref("DOMString") }} representing
+a message or description associated with the given [error name](/en-US/docs/Web/API/DOMException#error_names).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var domExceptionMessage = domExceptionInstance.message;
-</pre>
+```js
+var domExceptionMessage = domExceptionInstance.message;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}}.</p>
+A {{domxref("DOMString")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

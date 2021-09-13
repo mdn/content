@@ -11,33 +11,30 @@ tags:
   - whenDefined
 browser-compat: api.CustomElementRegistry.whenDefined
 ---
-<p>{{APIRef("CustomElementRegistry")}}</p>
+{{APIRef("CustomElementRegistry")}}
 
-<p>The <code><strong>whenDefined()</strong></code> method of the
-    {{domxref("CustomElementRegistry")}} interface returns a {{jsxref("Promise")}} that
-    resolves when the named element is defined.</p>
+The **`whenDefined()`** method of the
+{{domxref("CustomElementRegistry")}} interface returns a {{jsxref("Promise")}} that
+resolves when the named element is defined.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">customElements.whenDefined(<em>name</em>): Promise&lt;CustomElementConstructor&gt;;</pre>
+```js
+customElements.whenDefined(name): Promise<CustomElementConstructor>;
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>name</dt>
-  <dd>Custom element name.</dd>
-</dl>
+- name
+  - : Custom element name.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} that will be fulfilled with the <a
-    href="/en-US/docs/Web/API/Window/customElements">custom element</a>'s constructor when a <a
-    href="/en-US/docs/Web/API/Window/customElements">custom element</a> becomes defined with the
-  given name. (If such a <a href="/en-US/docs/Web/API/Window/customElements">custom element</a> is already defined, the
-  returned promise will be immediately fulfilled.)</p>
+A {{jsxref("Promise")}} that will be fulfilled with the [custom element](/en-US/docs/Web/API/Window/customElements)'s constructor when a [custom element](/en-US/docs/Web/API/Window/customElements) becomes defined with the
+given name. (If such a [custom element](/en-US/docs/Web/API/Window/customElements) is already defined, the
+returned promise will be immediately fulfilled.)
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
 <table class="no-markdown">
   <thead>
@@ -49,32 +46,36 @@ browser-compat: api.CustomElementRegistry.whenDefined
   <tbody>
     <tr>
       <td><code>SyntaxError</code></td>
-      <td>If the provided name is not a <a
-          href="https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name">valid
-          custom element name</a>, the promise rejects with a <code>SyntaxError</code>.
+      <td>
+        If the provided name is not a
+        <a
+          href="https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name"
+          >valid custom element name</a
+        >, the promise rejects with a <code>SyntaxError</code>.
       </td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example uses <code>whenDefined()</code> to detect when the custom elements that
-  make up a menu are defined. The menu displays placeholder content until the actual menu
-  content is ready to display.</p>
+This example uses `whenDefined()` to detect when the custom elements that
+make up a menu are defined. The menu displays placeholder content until the actual menu
+content is ready to display.
 
-<pre class="brush: html">&lt;nav id="menu-container"&gt;
-  &lt;div class="menu-placeholder"&gt;Loading...&lt;/div&gt;
-  &lt;nav-menu&gt;
-    &lt;menu-item&gt;Item 1&lt;/menu-item&gt;
-    &lt;menu-item&gt;Item 2&lt;/menu-item&gt;
+```html
+<nav id="menu-container">
+  <div class="menu-placeholder">Loading...</div>
+  <nav-menu>
+    <menu-item>Item 1</menu-item>
+    <menu-item>Item 2</menu-item>
      ...
-    &lt;menu-item&gt;Item N&lt;/menu-item&gt;
-  &lt;/nav-menu&gt;
-&lt;/nav&gt;
-</pre>
+    <menu-item>Item N</menu-item>
+  </nav-menu>
+</nav>
+```
 
-<pre class="brush: js">
+```js
 const container = document.getElementById('menu-container');
 const placeholder = container.querySelector('.menu-placeholder');
 // Fetch all the children of menu that are not yet defined.
@@ -82,7 +83,7 @@ const undefinedElements = container.querySelectorAll(':not(:defined)');
 
 async function removePlaceholder(){
   const promises = [...undefinedElements].map(
-    button =&gt; customElements.whenDefined(button.localName)
+    button => customElements.whenDefined(button.localName)
   );
 
   // Wait for all the children to be upgraded
@@ -92,12 +93,12 @@ async function removePlaceholder(){
 }
 
 removePlaceholder();
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

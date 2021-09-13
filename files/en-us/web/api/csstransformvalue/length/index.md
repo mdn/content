@@ -2,38 +2,40 @@
 title: CSSTransformValue.length
 slug: Web/API/CSSTransformValue/length
 tags:
-- API
-- CSS T
-- CSS Typed Object Model API
-- Experimental
-- Houdini
-- Property
-- Reference
-- length
+  - API
+  - CSS T
+  - CSS Typed Object Model API
+  - Experimental
+  - Houdini
+  - Property
+  - Reference
+  - length
 browser-compat: api.CSSTransformValue.length
 ---
-<div>{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{Draft}}</div>
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{Draft}}
 
-<p>The read-only <strong><code>length</code></strong> property of the
-  {{domxref("CSSTransformValue")}} interface returns the number of transform components in
-  the list.</p>
+The read-only **`length`** property of the
+{{domxref("CSSTransformValue")}} interface returns the number of transform components in
+the list.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>length</var> = CSSTransformValue.length;</pre>
+```js
+var length = CSSTransformValue.length;
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An integer representing the number of transform components in the list.</p>
+An integer representing the number of transform components in the list.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>To Do</p>
+To Do
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

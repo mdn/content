@@ -2,53 +2,54 @@
 title: Storage.clear()
 slug: Web/API/Storage/clear
 tags:
-- API
-- Method
-- Reference
-- Storage
-- Web Storage
+  - API
+  - Method
+  - Reference
+  - Storage
+  - Web Storage
 browser-compat: api.Storage.clear
 ---
-<p>{{APIRef("Web Storage API")}}</p>
+{{APIRef("Web Storage API")}}
 
-<p>The <strong><code>clear()</code></strong> method of the {{domxref("Storage")}}
-  interface clears all keys stored in a given <code>Storage</code> object.</p>
+The **`clear()`** method of the {{domxref("Storage")}}
+interface clears all keys stored in a given `Storage` object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>storage</var>.clear();</pre>
+```js
+storage.clear();
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{jsxref("undefined")}}.</p>
+{{jsxref("undefined")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following function creates three data entries in local storage, and then deletes
-  them by using <code>clear()</code>.</p>
+The following function creates three data entries in local storage, and then deletes
+them by using `clear()`.
 
-<pre class="brush: js">function populateStorage() {
+```js
+function populateStorage() {
   localStorage.setItem('bgcolor', 'red');
   localStorage.setItem('font', 'Helvetica');
   localStorage.setItem('image', 'miGato.png');
 
   localStorage.clear();
-}</pre>
+}
+```
 
-<div class="note">
-  <p><strong>Note:</strong> For a real world example, see our <a
-      href="https://mdn.github.io/dom-examples/web-storage/">Web Storage Demo</a>.</p>
-</div>
+> **Note:** For a real world example, see our [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<p><a href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the Web
-    Storage API</a></p>
+[Using the Web
+Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)

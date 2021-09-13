@@ -2,65 +2,64 @@
 title: IntersectionObserver.root
 slug: Web/API/IntersectionObserver/root
 tags:
-- API
-- Intersection Observer
-- Intersection Observer API
-- IntersectionObserver
-- Property
-- Reference
-- root
+  - API
+  - Intersection Observer
+  - Intersection Observer API
+  - IntersectionObserver
+  - Property
+  - Reference
+  - root
 browser-compat: api.IntersectionObserver.root
 ---
-<div>{{APIRef("Intersection Observer API")}}</div>
+{{APIRef("Intersection Observer API")}}
 
-<p>The {{domxref("IntersectionObserver")}} interface's read-only
-    <strong><code>root</code></strong> property identifies the {{domxref("Element")}} or
-    {{domxref("Document")}} whose bounds are treated as the {{Glossary("bounding box")}}
-    of the {{Glossary("viewport")}} for the element which is the observer's target.</p>
+The {{domxref("IntersectionObserver")}} interface's read-only
+**`root`** property identifies the {{domxref("Element")}} or
+{{domxref("Document")}} whose bounds are treated as the {{Glossary("bounding box")}}
+of the {{Glossary("viewport")}} for the element which is the observer's target.
 
-<p>If the <code>root</code> is <code>null</code>, then the bounds of the actual document
-  viewport are used.</p>
+If the `root` is `null`, then the bounds of the actual document
+viewport are used.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var><code>var <em>root</em> = </code>intersectionObserver</var>.root;
-</pre>
+```js
+var root = intersectionObserver.root;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("Element")}} or {{domxref("Document")}} object whose bounding box is used
-  as the bounds of the viewport for the purposes of determining how much of the target
-  element is visible. The intersection of this bounding rectangle, offset by any margins
-  specified in the options passed to the
-  {{domxref("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}}
-  constructor, the target element's bounds, minus the bounds of every element or other
-  object which overlaps the target element, is considered to be the visible area of the
-  target element.</p>
+A {{domxref("Element")}} or {{domxref("Document")}} object whose bounding box is used
+as the bounds of the viewport for the purposes of determining how much of the target
+element is visible. The intersection of this bounding rectangle, offset by any margins
+specified in the options passed to the
+{{domxref("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}}
+constructor, the target element's bounds, minus the bounds of every element or other
+object which overlaps the target element, is considered to be the visible area of the
+target element.
 
-<p>If <code>root</code> is <code>null</code>, then the owning document is used as the
-  root, and the bounds its viewport (that is, the visible area of the document) are used
-  as the root bounds.</p>
+If `root` is `null`, then the owning document is used as the
+root, and the bounds its viewport (that is, the visible area of the document) are used
+as the root bounds.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example sets the {{cssxref("border")}} of the intersection observer's root element
-  to be a 2-pixel medium green line.</p>
+This example sets the {{cssxref("border")}} of the intersection observer's root element
+to be a 2-pixel medium green line.
 
-<pre class="brush: js">observer.root.style.border = "2px solid #44aa44";
-</pre>
+```js
+observer.root.style.border = "2px solid #44aa44";
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a
-      href="/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility">Timing
-      element visibility with the Intersection Observer API</a></li>
-</ul>
+- [Timing
+  element visibility with the Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility)

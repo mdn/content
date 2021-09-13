@@ -8,55 +8,56 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceEntry.startTime
 ---
-<div>{{APIRef("Performance Timeline API")}}</div>
+{{APIRef("Performance Timeline API")}}
 
-<p>The <strong><code>startTime</code></strong> property returns the first recorded
-  {{domxref("DOMHighResTimeStamp","timestamp")}} of the
-  {{domxref("PerformanceEntry","performance entry")}}.</p>
+The **`startTime`** property returns the first recorded
+{{domxref("DOMHighResTimeStamp","timestamp")}} of the
+{{domxref("PerformanceEntry","performance entry")}}.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<p>The value returned by this property depends on the performance entry's
-  {{domxref("PerformanceEntry.entryType","type")}}:</p>
+The value returned by this property depends on the performance entry's
+{{domxref("PerformanceEntry.entryType","type")}}:
 
-<ul>
-  <li>"<code>frame</code>" - returns the {{domxref("DOMHighResTimeStamp","timestamp")}}
-    when the frame was started.</li>
-  <li>"<code>mark</code>" - returns the {{domxref("DOMHighResTimeStamp","timestamp")}}
-    when the mark was created by a call to
-    {{domxref("Performance.mark","performance.mark()")}}.</li>
-  <li>"<code>measure</code>" - returns the {{domxref("DOMHighResTimeStamp","timestamp")}}
-    when the measure was created by a call to
-    {{domxref("Performance.measure","performance.measure()")}}.</li>
-  <li>"<code>navigation</code>" - returns the
-    {{domxref("DOMHighResTimeStamp","timestamp")}} with a value of "<code>0</code>".</li>
-  <li>"<code>resource</code>" - returns the {{domxref("DOMHighResTimeStamp","timestamp")}}
-    immediately before the browser {{domxref("PerformanceResourceTiming/fetchStart","starts
-    fetching the resource")}}.</li>
-</ul>
+- "`frame`" - returns the {{domxref("DOMHighResTimeStamp","timestamp")}}
+  when the frame was started.
+- "`mark`" - returns the {{domxref("DOMHighResTimeStamp","timestamp")}}
+  when the mark was created by a call to
+  {{domxref("Performance.mark","performance.mark()")}}.
+- "`measure`" - returns the {{domxref("DOMHighResTimeStamp","timestamp")}}
+  when the measure was created by a call to
+  {{domxref("Performance.measure","performance.measure()")}}.
+- "`navigation`" - returns the
+  {{domxref("DOMHighResTimeStamp","timestamp")}} with a value of "`0`".
+- "`resource`" - returns the {{domxref("DOMHighResTimeStamp","timestamp")}}
+  immediately before the browser {{domxref("PerformanceResourceTiming/fetchStart","starts
+    fetching the resource")}}.
 
-<p>This property is {{readonlyInline}}.</p>
+This property is {{readonlyInline}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>entry</em>.startTime;</pre>
+```js
+entry.startTime;
+```
 
-<h3 id="Return_Value">Return value</h3>
+### Return value
 
-<p>A {{domxref("DOMHighResTimeStamp")}} representing the first timestamp when the
-  {{domxref("PerformanceEntry","performance entry")}} was created.</p>
+A {{domxref("DOMHighResTimeStamp")}} representing the first timestamp when the
+{{domxref("PerformanceEntry","performance entry")}} was created.
 
-<p>Note: if the performance entry has an
-  {{domxref("PerformanceEntry.entryType","entryType")}} of "<code>resource</code>" (i.e.
-  the entry is a {{domxref("PerformanceResourceTiming")}} object), this property returns
-  the {{domxref("PerformanceResourceTiming.fetchStart")}}
-  {{domxref("DOMHighResTimeStamp","timestamp")}}.</p>
+Note: if the performance entry has an
+{{domxref("PerformanceEntry.entryType","entryType")}} of "`resource`" (i.e.
+the entry is a {{domxref("PerformanceResourceTiming")}} object), this property returns
+the {{domxref("PerformanceResourceTiming.fetchStart")}}
+{{domxref("DOMHighResTimeStamp","timestamp")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example shows the use of the <code>startTime</code> property.</p>
+The following example shows the use of the `startTime` property.
 
-<pre class="brush: js">function run_PerformanceEntry() {
+```js
+function run_PerformanceEntry() {
   log("PerformanceEntry support ...");
 
   if (performance.mark === undefined) {
@@ -71,7 +72,7 @@ browser-compat: api.PerformanceEntry.startTime
 
   // Use getEntries() to iterate through the each entry
   var p = performance.getEntries();
-  for (var i=0; i &lt; p.length; i++) {
+  for (var i=0; i < p.length; i++) {
     log("Entry[" + i + "]");
     check_PerformanceEntry(p[i]);
   }
@@ -80,7 +81,7 @@ function check_PerformanceEntry(obj) {
   var properties = ["name", "entryType", "startTime", "duration"];
   var methods = ["toJSON"];
 
-  for (var i=0; i &lt; properties.length; i++) {
+  for (var i=0; i < properties.length; i++) {
     // check each property
     var supported = properties[i] in obj;
     if (supported)
@@ -88,7 +89,7 @@ function check_PerformanceEntry(obj) {
     else
       log("..." + properties[i] + " = Not supported");
   }
-  for (var i=0; i &lt; methods.length; i++) {
+  for (var i=0; i < methods.length; i++) {
     // check each method
     var supported = typeof obj[methods[i]] == "function";
     if (supported) {
@@ -99,12 +100,12 @@ function check_PerformanceEntry(obj) {
     }
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

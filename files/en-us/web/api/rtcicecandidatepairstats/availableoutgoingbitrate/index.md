@@ -2,73 +2,69 @@
 title: RTCIceCandidatePairStats.availableOutgoingBitrate
 slug: Web/API/RTCIceCandidatePairStats/availableOutgoingBitrate
 tags:
-- API
-- Bandwidth
-- Bit Rate
-- Bitrate
-- Candidate
-- Connection
-- ICE
-- Network
-- Pair
-- Property
-- RTCIceCandidatePairStats
-- Reference
-- Statistics
-- Stats
-- WebRTC
-- WebRTC API
+  - API
+  - Bandwidth
+  - Bit Rate
+  - Bitrate
+  - Candidate
+  - Connection
+  - ICE
+  - Network
+  - Pair
+  - Property
+  - RTCIceCandidatePairStats
+  - Reference
+  - Statistics
+  - Stats
+  - WebRTC
+  - WebRTC API
 browser-compat: api.RTCIceCandidatePairStats.availableOutgoingBitrate
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The {{domxref("RTCIceCandidatePairStats")}} property
-    <strong><code>availableOutgoingBitrate</code></strong> returns a value indicative of
-    the available outbound capacity of the network connection represented by the candidate
-    pair. The higher the value, the more bandwidth you can assume is available for
-  outgoing data.</p>
+The {{domxref("RTCIceCandidatePairStats")}} property
+**`availableOutgoingBitrate`** returns a value indicative of
+the available outbound capacity of the network connection represented by the candidate
+pair. The higher the value, the more bandwidth you can assume is available for
+outgoing data.
 
-<p>You can get the incoming available bitrate from
-  {{domxref("RTCIceCandidatePairStats.availableIncomingBitrate",
-  "availableIncomingBitrate")}}.</p>
+You can get the incoming available bitrate from
+{{domxref("RTCIceCandidatePairStats.availableIncomingBitrate",
+  "availableIncomingBitrate")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>availableOutgoingBitrate</em> = <em>rtcIceCandidatePairStats</em>.availableOutgoingBitrate;</pre>
+```js
+availableOutgoingBitrate = rtcIceCandidatePairStats.availableOutgoingBitrate;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A floating-point value which approximates the amount of available bandwidth for
-  outgoing data on the network connection described by the
-  <code>RTCIceCandidatePair</code>. The value is reported in bits per second and is
-  computed over a 1-second interval.</p>
+A floating-point value which approximates the amount of available bandwidth for
+outgoing data on the network connection described by the
+`RTCIceCandidatePair`. The value is reported in bits per second and is
+computed over a 1-second interval.
 
-<p>The returned value is <code>undefined</code> in each of the following situations:</p>
+The returned value is `undefined` in each of the following situations:
 
-<ul>
-  <li>The underlying implementation doesn't support computing a sender-side estimate of
-    the outgoing bit rate.</li>
-  <li>The {{domxref("RTCIceCandidatePair")}} described by this object has never been used.
-  </li>
-  <li>The candidate pair was once in use, but no longer is.</li>
-</ul>
+- The underlying implementation doesn't support computing a sender-side estimate of
+  the outgoing bit rate.
+- The {{domxref("RTCIceCandidatePair")}} described by this object has never been used.
+- The candidate pair was once in use, but no longer is.
 
-<p>The value returned is calculated by adding up the available bit rate for every
-  {{Glossary("RTP")}} stream using the connection described by this candidate pair. The
-  returned value doesn't take into account overhead introduced by underlying protocols,
-  including IP, UDP, or TCP.</p>
+The value returned is calculated by adding up the available bit rate for every
+{{Glossary("RTP")}} stream using the connection described by this candidate pair. The
+returned value doesn't take into account overhead introduced by underlying protocols,
+including IP, UDP, or TCP.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The returned value is computed using a method similar—but not
-    identical—to the Transport Independent Application Specific Maximum (TIAS) described
-    in {{RFC(3890, "6.2")}}.</p>
-</div>
+> **Note:** The returned value is computed using a method similar—but not
+> identical—to the Transport Independent Application Specific Maximum (TIAS) described
+> in {{RFC(3890, "6.2")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

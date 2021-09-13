@@ -2,57 +2,59 @@
 title: HTMLTableElement.tBodies
 slug: Web/API/HTMLTableElement/tBodies
 tags:
-- API
-- HTML DOM
-- HTMLTableElement
-- Property
-- Read-only
-- Reference
+  - API
+  - HTML DOM
+  - HTMLTableElement
+  - Property
+  - Read-only
+  - Reference
 browser-compat: api.HTMLTableElement.tBodies
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <code><strong>HTMLTableElement.tBodies</strong></code> read-only property returns a
-  live {{domxref("HTMLCollection")}} of the bodies in a {{htmlElement("table")}}.</p>
+The **`HTMLTableElement.tBodies`** read-only property returns a
+live {{domxref("HTMLCollection")}} of the bodies in a {{htmlElement("table")}}.
 
-<p>Although the property is read-only, the returned object is live and allows the
-  modification of its content.</p>
+Although the property is read-only, the returned object is live and allows the
+modification of its content.
 
-<p>The collection returned includes implicit {{HTMLElement("tbody")}} elements. For
-  example:</p>
+The collection returned includes implicit {{HTMLElement("tbody")}} elements. For
+example:
 
-<pre class="brush:html">&lt;table&gt;
-  &lt;tr&gt;
-    &lt;td&gt;cell one&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;
-</pre>
+```html
+<table>
+  <tr>
+    <td>cell one</td>
+  </tr>
+</table>
+```
 
-<p>The HTML DOM generated from the above HTML will have a {{HTMLElement("tbody")}} element
-  even though the tags are not included in the source HTML.</p>
+The HTML DOM generated from the above HTML will have a {{HTMLElement("tbody")}} element
+even though the tags are not included in the source HTML.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>HTMLCollectionObject</em> = <em>table</em>.tBodies</pre>
+```js
+HTMLCollectionObject = table.tBodies
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This snippet gets the number of bodies in a table.</p>
+This snippet gets the number of bodies in a table.
 
-<pre class="brush: js">mytable.tBodies.length;</pre>
+```js
+mytable.tBodies.length;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("HTMLCollection")}}</li>
-  <li>{{HTMLElement("tbody")}}</li>
-</ul>
+- {{domxref("HTMLCollection")}}
+- {{HTMLElement("tbody")}}

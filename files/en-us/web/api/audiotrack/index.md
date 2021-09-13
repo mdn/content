@@ -12,64 +12,66 @@ tags:
   - track
 browser-compat: api.AudioTrack
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>AudioTrack</code></strong> interface represents a single audio track from one of the HTML media elements, {{HTMLElement("audio")}} or {{HTMLElement("video")}}.</p>
+The **`AudioTrack`** interface represents a single audio track from one of the HTML media elements, {{HTMLElement("audio")}} or {{HTMLElement("video")}}.
 
-<p>The most common use for accessing an <code>AudioTrack</code> object is to toggle its {{domxref("AudioTrack.enabled", "enabled")}} property in order to mute and unmute the track.</p>
+The most common use for accessing an `AudioTrack` object is to toggle its {{domxref("AudioTrack.enabled", "enabled")}} property in order to mute and unmute the track.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("AudioTrack.enabled", "enabled")}}</dt>
- <dd>A Boolean value which controls whether or not the audio track's sound is enabled. Setting this value to <code>false</code> mutes the track's audio.</dd>
- <dt>{{domxref("AudioTrack.id", "id")}} {{ReadOnlyInline}}</dt>
- <dd>A {{domxref("DOMString")}} which uniquely identifies the track within the media. This ID can be used to locate a specific track within an audio track list by calling {{domxref("AudioTrackList.getTrackById()")}}. The ID can also be used as the fragment part of the URL if the media supports seeking by media fragment per the <a href="https://www.w3.org/TR/media-frags/">Media Fragments URI specification</a>.</dd>
- <dt>{{domxref("AudioTrack.kind", "kind")}} {{ReadOnlyInline}}</dt>
- <dd>A {{domxref("DOMString")}} specifying the category into which the track falls. For example, the main audio track would have a <code>kind</code> of <code>"main"</code>.</dd>
- <dt>{{domxref("AudioTrack.label", "label")}} {{ReadOnlyInline}}</dt>
- <dd>A {{domxref("DOMString")}} providing a human-readable label for the track. For example, an audio commentary track for a movie might have a <code>label</code> of <code>"Commentary with director John Q. Public and actors John Doe and Jane Eod."</code> This string is empty if no label is provided.</dd>
- <dt>{{domxref("AudioTrack.language", "language")}} {{ReadOnlyInline}}</dt>
- <dd>A {{domxref("DOMString")}} specifying the audio track's primary language, or an empty string if unknown. The language is specified as a BCP 47 ({{RFC(5646)}}) language code, such as <code>"en-US"</code> or <code>"pt-BR"</code>.</dd>
- <dt>{{domxref("AudioTrack.sourceBuffer", "sourceBuffer")}} {{ReadOnlyInline}}</dt>
- <dd>The {{domxref("SourceBuffer")}} that created the track. Returns null if the track was not created by a {{domxref("SourceBuffer")}} or the {{domxref("SourceBuffer")}} has been removed from the {{domxref("MediaSource.sourceBuffers")}} attribute of its parent media source.</dd>
-</dl>
+- {{domxref("AudioTrack.enabled", "enabled")}}
+  - : A Boolean value which controls whether or not the audio track's sound is enabled. Setting this value to `false` mutes the track's audio.
+- {{domxref("AudioTrack.id", "id")}} {{ReadOnlyInline}}
+  - : A {{domxref("DOMString")}} which uniquely identifies the track within the media. This ID can be used to locate a specific track within an audio track list by calling {{domxref("AudioTrackList.getTrackById()")}}. The ID can also be used as the fragment part of the URL if the media supports seeking by media fragment per the [Media Fragments URI specification](https://www.w3.org/TR/media-frags/).
+- {{domxref("AudioTrack.kind", "kind")}} {{ReadOnlyInline}}
+  - : A {{domxref("DOMString")}} specifying the category into which the track falls. For example, the main audio track would have a `kind` of `"main"`.
+- {{domxref("AudioTrack.label", "label")}} {{ReadOnlyInline}}
+  - : A {{domxref("DOMString")}} providing a human-readable label for the track. For example, an audio commentary track for a movie might have a `label` of `"Commentary with director John Q. Public and actors John Doe and Jane Eod."` This string is empty if no label is provided.
+- {{domxref("AudioTrack.language", "language")}} {{ReadOnlyInline}}
+  - : A {{domxref("DOMString")}} specifying the audio track's primary language, or an empty string if unknown. The language is specified as a BCP 47 ({{RFC(5646)}}) language code, such as `"en-US"` or `"pt-BR"`.
+- {{domxref("AudioTrack.sourceBuffer", "sourceBuffer")}} {{ReadOnlyInline}}
+  - : The {{domxref("SourceBuffer")}} that created the track. Returns null if the track was not created by a {{domxref("SourceBuffer")}} or the {{domxref("SourceBuffer")}} has been removed from the {{domxref("MediaSource.sourceBuffers")}} attribute of its parent media source.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>To get an <code>AudioTrack</code> for a given media element, use the element's {{domxref("HTMLMediaElement.audioTracks", "audioTracks")}} property, which returns an {{domxref("AudioTrackList")}} object from which you can get the individual tracks contained in the media:</p>
+To get an `AudioTrack` for a given media element, use the element's {{domxref("HTMLMediaElement.audioTracks", "audioTracks")}} property, which returns an {{domxref("AudioTrackList")}} object from which you can get the individual tracks contained in the media:
 
-<pre class="brush: js">var el = document.querySelector("video");
+```js
+var el = document.querySelector("video");
 var tracks = el.audioTracks;
-</pre>
+```
 
-<p>You can then access the media's individual tracks using either array syntax or functions such as {{jsxref("Array.forEach", "forEach()")}}.</p>
+You can then access the media's individual tracks using either array syntax or functions such as {{jsxref("Array.forEach", "forEach()")}}.
 
-<p>This first example gets the first audio track on the media:</p>
+This first example gets the first audio track on the media:
 
-<pre class="brush: js">var firstTrack = tracks[0];</pre>
+```js
+var firstTrack = tracks[0];
+```
 
-<p>The next example scans through all of the media's audio tracks, enabling any that are in the user's preferred language (taken from a variable <code>userLanguage</code>) and disabling any others.</p>
+The next example scans through all of the media's audio tracks, enabling any that are in the user's preferred language (taken from a variable `userLanguage`) and disabling any others.
 
-<pre class="brush: js">tracks.forEach(function(track) {
+```js
+tracks.forEach(function(track) {
   if (track.language === userLanguage) {
     track.enabled = true;
   } else {
     track.enabled = false;
   }
 });
-</pre>
+```
 
-<p>The {{domxref("AudioTrack.language", "language")}} is in standard ({{RFC(5646)}}) format. For US English, this would be <code>"en-US"</code>, for example.</p>
+The {{domxref("AudioTrack.language", "language")}} is in standard ({{RFC(5646)}}) format. For US English, this would be `"en-US"`, for example.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See <a href="/en-US/docs/Web/API/AudioTrack/label#example"><code>AudioTrack.label</code></a> for a simple example that shows how to get a array of track kinds and labels for a specified media element, filtered by kind.</p>
+See [`AudioTrack.label`](/en-US/docs/Web/API/AudioTrack/label#example) for a simple example that shows how to get a array of track kinds and labels for a specified media element, filtered by kind.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

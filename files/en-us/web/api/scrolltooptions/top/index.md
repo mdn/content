@@ -2,44 +2,41 @@
 title: ScrollToOptions.top
 slug: Web/API/ScrollToOptions/top
 tags:
-- API
-- Property
-- Reference
-- ScrollToOptions
-- top
+  - API
+  - Property
+  - Reference
+  - ScrollToOptions
+  - top
 browser-compat: api.ScrollToOptions.top
 ---
-<p>{{ APIRef("CSSOM View") }}</p>
+{{ APIRef("CSSOM View") }}
 
-<div>
-	<p>The <strong><code>top</code></strong> property of the {{ domxref("ScrollToOptions")
+The **`top`** property of the {{ domxref("ScrollToOptions")
 		}} dictionary specifies the number of pixels along the Y axis to scroll the window
-		or element.</p>
-</div>
+or element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">top: <em>double</em></pre>
+```js
+top: double
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A double.</p>
+A double.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>See <a href="/en-US/docs/Web/API/ScrollToOptions#examples"><code>ScrollToOptions</code></a> for an example.</p>
+See [`ScrollToOptions`](/en-US/docs/Web/API/ScrollToOptions#examples) for an example.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
+{{Compat}}
 
-	<p>{{Compat}}</p>
-</div>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<p>{{domxref("ScrollToOptions")}}</p>
+{{domxref("ScrollToOptions")}}

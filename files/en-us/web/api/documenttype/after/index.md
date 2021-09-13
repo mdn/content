@@ -9,58 +9,51 @@ tags:
   - Reference
 browser-compat: api.DocumentType.after
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>DocumentType.after()</strong></code> method inserts a set of
-  {{domxref("Node")}} or {{domxref("DOMString")}} objects in the children list of the
-  <code>DocumentType</code>'s parent, just after the <code>DocumentType</code>.
-  {{domxref("DOMString")}} objects are inserted as equivalent {{domxref("Text")}} nodes.
-</p>
+The **`DocumentType.after()`** method inserts a set of
+{{domxref("Node")}} or {{domxref("DOMString")}} objects in the children list of the
+`DocumentType`'s parent, just after the `DocumentType`.
+{{domxref("DOMString")}} objects are inserted as equivalent {{domxref("Text")}} nodes.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 after(... nodes)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>nodes</code></dt>
-  <dd>A set of {{domxref("Node")}} or {{domxref("DOMString")}} objects to insert.</dd>
-</dl>
+- `nodes`
+  - : A set of {{domxref("Node")}} or {{domxref("DOMString")}} objects to insert.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<ul>
-  <li>{{domxref("HierarchyRequestError")}}: Node cannot be inserted at the specified point
-    in the hierarchy.</li>
-</ul>
+- {{domxref("HierarchyRequestError")}}: Node cannot be inserted at the specified point
+  in the hierarchy.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3></h3>
+###
 
-<pre class="brush: js">
+```js
 let docType = document.implementation.createDocumentType("html", "", "");
 let myDoc = document.implementation.createDocument("", "", docType);
 
 docType.after(document.createElement('html'));
 
 myDoc.childNodes;
-// NodeList [&lt;!DOCTYPE html&gt;, &lt;html&gt;]
-</pre>
+// NodeList [<!DOCTYPE html>, <html>]
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("DocumentType.before()")}}</li>
-</ul>
+- {{domxref("DocumentType.before()")}}

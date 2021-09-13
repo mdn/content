@@ -8,63 +8,69 @@ tags:
   - change event
 browser-compat: api.TextTrackList.change_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code>change</code> event is fired when a text track is made active or inactive, or a {{domxref('textTrackList')}} is otherwise changed.</p>
+The `change` event is fired when a text track is made active or inactive, or a {{domxref('textTrackList')}} is otherwise changed.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td><code><a href="/en-US/docs/Web/API/TextTrackList/onchange">onchange</a></code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/API/TextTrackList/onchange"
+            >onchange</a
+          ></code
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Using <code>addEventListener()</code>:</p>
+Using `addEventListener()`:
 
-<pre class="brush: js">const mediaElement = document.querySelectorAll('video, audio')[0];
-mediaElement.textTracks.addEventListener('change', (event) =&gt; {
+```js
+const mediaElement = document.querySelectorAll('video, audio')[0];
+mediaElement.textTracks.addEventListener('change', (event) => {
     console.log(`'${event.type}' event fired`);
 });
-</pre>
+```
 
-<p>Using the <code>onchange</code> event handler property:</p>
+Using the `onchange` event handler property:
 
-<pre class="brush: js">const mediaElement = document.querySelector('video, audio');
-mediaElement.textTracks.onchange = (event) =&gt; {
+```js
+const mediaElement = document.querySelector('video, audio');
+mediaElement.textTracks.onchange = (event) => {
     console.log(`'${event.type}' event fired`);
 };
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Related events: <code><a href="/en-US/docs/Web/API/VideoTrackList/addtrack_event">addtrack</a></code>, <code><a href="/en-US/docs/Web/API/VideoTrackList/removetrack_event">removetrack</a></code></li>
- <li>This event on <code><a href="/en-US/docs/Web/API/VideoTrackList">VideoTrackList</a></code> targets: <code><a href="/en-US/docs/Web/API/VideoTrackList/change_event">change</a></code></li>
- <li>This event on <code><a href="/en-US/docs/Web/API/AudioTrackList">AudioTrackList</a></code> targets: <code><a href="/en-US/docs/Web/API/AudioTrackList/change_event">change</a></code></li>
- <li><a href="/en-US/docs/Web/API/Media_Streams_API">Media Streams API</a></li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
-</ul>
+- Related events: [`addtrack`](/en-US/docs/Web/API/VideoTrackList/addtrack_event), [`removetrack`](/en-US/docs/Web/API/VideoTrackList/removetrack_event)
+- This event on [`VideoTrackList`](/en-US/docs/Web/API/VideoTrackList) targets: [`change`](/en-US/docs/Web/API/VideoTrackList/change_event)
+- This event on [`AudioTrackList`](/en-US/docs/Web/API/AudioTrackList) targets: [`change`](/en-US/docs/Web/API/AudioTrackList/change_event)
+- [Media Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)

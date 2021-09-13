@@ -9,38 +9,39 @@ tags:
   - TextTrackCue
 browser-compat: api.TextTrackCue.startTime
 ---
-<div>{{APIRef("WebVTT")}}</div>
+{{APIRef("WebVTT")}}
 
-<p>The <strong><code>startTime</code></strong> property of the {{domxref("TextTrackCue")}} interface returns and sets the start time of the cue.</p>
+The **`startTime`** property of the {{domxref("TextTrackCue")}} interface returns and sets the start time of the cue.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let startTime = TextTrackCue.startTime;
+```js
+let startTime = TextTrackCue.startTime;
 TextTrackCue.startTime = 1;
-</pre>
+```
 
-<h3>Value</h3>
-<p>An integer representing the start time, in seconds.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+An integer representing the start time, in seconds.
 
-<p>In the following example a new {{domxref("VTTCue")}} (which inherits from <code>TextTrackCue</code>) is created starting at 0.1 second and ending at 0.9 seconds. The <code>startTime</code> property is then printed to the console.</p>
+## Examples
 
-<pre class="brush: js">let video = document.querySelector('video');
+In the following example a new {{domxref("VTTCue")}} (which inherits from `TextTrackCue`) is created starting at 0.1 second and ending at 0.9 seconds. The `startTime` property is then printed to the console.
+
+```js
+let video = document.querySelector('video');
 let track = video.addTextTrack("captions", "Captions", "en");
 track.mode = "showing";
 
 let cue1 = new VTTCue(0.1, 0.9, 'Hildy!');
 console.log(cue1.startTime); // 0.1
 track.addCue(cue1);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
-
+{{Compat}}

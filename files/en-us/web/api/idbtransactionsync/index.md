@@ -9,120 +9,145 @@ tags:
   - Deprecated
   - Reference
 ---
-<p>{{APIRef("IndexedDB")}}{{ draft() }}</p>
+{{APIRef("IndexedDB")}}{{ draft() }}
 
-<div class="warning">
-<p><strong>Warning:</strong> The synchronous version of the IndexedDB API was originally intended for use only with <a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Web Workers</a>, and was eventually removed from the spec because its need was questionable. It may however be reintroduced in the future if there is enough demand from web developers.</p>
-</div>
+> **Warning:** The synchronous version of the IndexedDB API was originally intended for use only with [Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers), and was eventually removed from the spec because its need was questionable. It may however be reintroduced in the future if there is enough demand from web developers.
 
-<p>The <code>IDBTransactionSync</code> interface of the <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a> provides a synchronous <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#transaction">transaction</a> on a database. When an application creates an IDBTransactionSync object, it blocks until the browser is able to reserve the require database objects.</p>
+The `IDBTransactionSync` interface of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) provides a synchronous [transaction](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#transaction) on a database. When an application creates an IDBTransactionSync object, it blocks until the browser is able to reserve the require database objects.
 
-<h2 id="Method_overview">Method overview</h2>
+## Method overview
 
 <table class="no-markdown">
- <tbody>
-  <tr>
-   <td><code>void <a href="#abort">abort</a>() raises (<a href="/en-US/docs/Web/API/IDBDatabaseException">IDBDatabaseException</a>); </code></td>
-  </tr>
-  <tr>
-   <td><code>void <a href="#commit">commit</a>() raises (<a href="/en-US/docs/Web/API/IDBDatabaseException">IDBDatabaseException</a>);</code></td>
-  </tr>
-  <tr>
-   <td><code><a href="/en-US/docs/Web/API/IDBObjectStoreSync">IDBObjectStoreSync</a> <a href="#objectstore">objectStore</a>(in DOMString name) raises (<a href="/en-US/docs/Web/API/IDBDatabaseException">IDBDatabaseException</a>);</code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td>
+        <code
+          >void <a href="#abort">abort</a>() raises (<a
+            href="/en-US/docs/Web/API/IDBDatabaseException"
+            >IDBDatabaseException</a
+          >);</code
+        >
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code
+          >void <a href="#commit">commit</a>() raises (<a
+            href="/en-US/docs/Web/API/IDBDatabaseException"
+            >IDBDatabaseException</a
+          >);</code
+        >
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/API/IDBObjectStoreSync"
+            >IDBObjectStoreSync</a
+          >
+          <a href="#objectstore">objectStore</a>(in DOMString name) raises (<a
+            href="/en-US/docs/Web/API/IDBDatabaseException"
+            >IDBDatabaseException</a
+          >);</code
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Attribute</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>db</code></td>
-   <td><code><a href="/en-US/docs/Web/API/IDBDatabaseSync">IDBDatabaseSync</a></code></td>
-   <td>The <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#database_connection">database connection</a> that this transaction is associated with.</td>
-  </tr>
-  <tr>
-   <td><code>static</code></td>
-   <td><code>boolean</code></td>
-   <td>If true, this transaction is static; if false, this transaction is dynamic.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Attribute</th>
+      <th scope="col">Type</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>db</code></td>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/API/IDBDatabaseSync"
+            >IDBDatabaseSync</a
+          ></code
+        >
+      </td>
+      <td>
+        The
+        <a
+          href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#database_connection"
+          >database connection</a
+        >
+        that this transaction is associated with.
+      </td>
+    </tr>
+    <tr>
+      <td><code>static</code></td>
+      <td><code>boolean</code></td>
+      <td>
+        If true, this transaction is static; if false, this transaction is
+        dynamic.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<h3 id="abort">abort()</h3>
+### abort()
 
-<p>Call this method to signal a need to cancel the effects of the operations performed by this transaction. When this method is called, the browser ignores all the changes performed to the objects of this database since this transaction was created.</p>
+Call this method to signal a need to cancel the effects of the operations performed by this transaction. When this method is called, the browser ignores all the changes performed to the objects of this database since this transaction was created.
 
-<pre>void abort(
-) raises (IDBDatabaseException);
-</pre>
+    void abort(
+    ) raises (IDBDatabaseException);
 
-<h5 id="Exceptions">Exceptions</h5>
+##### Exceptions
 
-<p>This method can raise an IDBDatabaseException with the following code:</p>
+This method can raise an IDBDatabaseException with the following code:
 
-<dl>
- <dt><code><a href="/en-US/docs/Web/API/IDBDatabaseException#non_transient_err">NON_TRANSIENT_ERR</a></code></dt>
- <dd>If this transaction has already been committed or aborted.</dd>
-</dl>
+- [`NON_TRANSIENT_ERR`](/en-US/docs/Web/API/IDBDatabaseException#non_transient_err)
+  - : If this transaction has already been committed or aborted.
 
-<h3 id="commit">commit()</h3>
+### commit()
 
-<p>Call this method to signal that the transaction has completed normally and satisfactorily. When this method is called, the browser durably stores all the changes performed to the objects of the database since this transaction was created.</p>
+Call this method to signal that the transaction has completed normally and satisfactorily. When this method is called, the browser durably stores all the changes performed to the objects of the database since this transaction was created.
 
-<pre>void commit(
-) raises (IDBDatabaseException);
-</pre>
+    void commit(
+    ) raises (IDBDatabaseException);
 
-<h5 id="Exceptions_2">Exceptions</h5>
+##### Exceptions
 
-<p>This method can raise an IDBDatabaseException with the following codes:</p>
+This method can raise an IDBDatabaseException with the following codes:
 
-<dl>
- <dt><code><a href="/en-US/docs/Web/API/IDBDatabaseException#non_transient_err">NON_TRANSIENT_ERR</a></code></dt>
- <dd>If this transaction has already been committed or aborted.</dd>
- <dt><code><a href="/en-US/docs/Web/API/IDBDatabaseException#recoverable_err">RECOVERABLE_ERR</a></code></dt>
- <dd>If this transaction's scope is dynamic, and the browser cannot commit all of the changes due to another transaction.</dd>
-</dl>
+- [`NON_TRANSIENT_ERR`](/en-US/docs/Web/API/IDBDatabaseException#non_transient_err)
+  - : If this transaction has already been committed or aborted.
+- [`RECOVERABLE_ERR`](/en-US/docs/Web/API/IDBDatabaseException#recoverable_err)
+  - : If this transaction's scope is dynamic, and the browser cannot commit all of the changes due to another transaction.
 
-<h3 id="objectStore()">objectStore()</h3>
+### objectStore()
 
-<p>Returns an <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#object_store">object store</a> that has already been added to the scope of this transaction.</p>
+Returns an [object store](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#object_store) that has already been added to the scope of this transaction.
 
-<pre><code>IDBObjectStoreSync objectStore(
-  in DOMString name
-) raises (IDBDatabaseException);</code>
-</pre>
+    IDBObjectStoreSync objectStore(
+      in DOMString name
+    ) raises (IDBDatabaseException);
 
-<h5 id="Parameters">Parameters</h5>
+##### Parameters
 
-<dl>
- <dt>name</dt>
- <dd>The name of the requested object store.</dd>
-</dl>
+- name
+  - : The name of the requested object store.
 
-<h5 id="Returns">Returns</h5>
+##### Returns
 
-<dl>
- <dt><code><a href="/IDBObjectStoreSync">IDBObjectStoreSync</a></code></dt>
- <dd>An object for accessing the requested object store.</dd>
-</dl>
+- [`IDBObjectStoreSync`](/IDBObjectStoreSync)
+  - : An object for accessing the requested object store.
 
-<h5 id="Exceptions_3">Exceptions</h5>
+##### Exceptions
 
-<p>The method can raise an IDBDatabaseException with the following code:</p>
+The method can raise an IDBDatabaseException with the following code:
 
-<dl>
- <dt><code><a href="/en-US/docs/Web/API/IDBDatabaseException#not_found_err">NOT_FOUND_ERR</a></code></dt>
- <dd>If the requested object store is not in this transaction's scope.</dd>
-</dl>
+- [`NOT_FOUND_ERR`](/en-US/docs/Web/API/IDBDatabaseException#not_found_err)
+  - : If the requested object store is not in this transaction's scope.

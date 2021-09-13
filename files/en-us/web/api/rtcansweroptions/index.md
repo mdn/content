@@ -15,24 +15,22 @@ tags:
   - rtc
 browser-compat: api.RTCAnswerOptions
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <code><strong>RTCAnswerOptions</strong></code> dictionary is used to provide optional settings when creating an {{Glossary("SDP")}} answer using {{domxref("RTCPeerConnection.createOffer()")}} after receiving an offer from a remote peer.</p>
+The **`RTCAnswerOptions`** dictionary is used to provide optional settings when creating an {{Glossary("SDP")}} answer using {{domxref("RTCPeerConnection.createOffer()")}} after receiving an offer from a remote peer.
 
-<p>The <code>createOffer()</code> method's <code>options</code> parameter is of this type.</p>
+The `createOffer()` method's `options` parameter is of this type.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This dictionary inherits properties from the {{domxref("RTCOfferAnswerOptions")}} dictionary, on which it's based.</em></p>
+_This dictionary inherits properties from the {{domxref("RTCOfferAnswerOptions")}} dictionary, on which it's based._
 
-<div class="note">
-<p><strong>Note:</strong> At this time, <code>RTCAnswerOptions</code> does not have any additional properties defined beyond those included in {{domxref("RTCOfferAnswerOptions")}}. However, this is likely to change in the future, so the type has been defined in preparation for that eventuality.</p>
-</div>
+> **Note:** At this time, `RTCAnswerOptions` does not have any additional properties defined beyond those included in {{domxref("RTCOfferAnswerOptions")}}. However, this is likely to change in the future, so the type has been defined in preparation for that eventuality.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

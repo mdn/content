@@ -2,38 +2,40 @@
 title: USBDevice.close()
 slug: Web/API/USBDevice/close
 tags:
-- API
-- Method
-- Reference
-- USB
-- USBDevice
-- WebUSB
-- WebUSB API
-- close
+  - API
+  - Method
+  - Reference
+  - USB
+  - USBDevice
+  - WebUSB
+  - WebUSB API
+  - close
 browser-compat: api.USBDevice.close
 ---
-<p>{{APIRef("WebUSB API")}}{{SeeCompatTable}}</p>
+{{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>close()</code></strong> method of the {{domxref("USBDevice")}}
-  interface returns a {{jsxref("promise")}} that resolves when all open interfaces are
-  released and the device session has ended.</p>
+The **`close()`** method of the {{domxref("USBDevice")}}
+interface returns a {{jsxref("promise")}} that resolves when all open interfaces are
+released and the device session has ended.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var promise = USBDevice.close()</pre>
+```js
+var promise = USBDevice.close()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("promise")}}.</p>
+A {{jsxref("promise")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

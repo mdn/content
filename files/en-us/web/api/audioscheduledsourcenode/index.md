@@ -12,52 +12,44 @@ tags:
   - sound
 browser-compat: api.AudioScheduledSourceNode
 ---
-<div>{{APIRef("Web Audio API")}}</div>
+{{APIRef("Web Audio API")}}
 
-<p>The <code>AudioScheduledSourceNode</code> interface—part of the Web Audio API—is a parent interface for several types of audio source node interfaces which share the ability to be started and stopped, optionally at specified times. Specifically, this interface defines the {{domxref("AudioScheduledSourceNode.start", "start()")}} and {{domxref("AudioScheduledSourceNode.stop", "stop()")}} methods, as well as the {{domxref("AudioScheduledSourceNode.onended", "onended")}} event handler.</p>
+The `AudioScheduledSourceNode` interface—part of the Web Audio API—is a parent interface for several types of audio source node interfaces which share the ability to be started and stopped, optionally at specified times. Specifically, this interface defines the {{domxref("AudioScheduledSourceNode.start", "start()")}} and {{domxref("AudioScheduledSourceNode.stop", "stop()")}} methods, as well as the {{domxref("AudioScheduledSourceNode.onended", "onended")}} event handler.
 
-<div class="note">
-<p><strong>Note:</strong> You can't create an <code>AudioScheduledSourceNode</code> object directly. Instead, use the interface which extends it, such as {{domxref("AudioBufferSourceNode")}}, {{domxref("OscillatorNode")}}, and {{domxref("ConstantSourceNode")}}.</p>
-</div>
+> **Note:** You can't create an `AudioScheduledSourceNode` object directly. Instead, use the interface which extends it, such as {{domxref("AudioBufferSourceNode")}}, {{domxref("OscillatorNode")}}, and {{domxref("ConstantSourceNode")}}.
 
-<p>Unless stated otherwise, nodes based upon <code>AudioScheduledSourceNode</code> output silence when not playing (that is, before <code>start()</code> is called and after <code>stop()</code> is called). Silence is represented, as always, by a stream of samples with the value zero (0).</p>
+Unless stated otherwise, nodes based upon `AudioScheduledSourceNode` output silence when not playing (that is, before `start()` is called and after `stop()` is called). Silence is represented, as always, by a stream of samples with the value zero (0).
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent interface, {{domxref("AudioNode")}}.</em></p>
+_Inherits properties from its parent interface, {{domxref("AudioNode")}}._
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Inherits methods from its parent interface, {{domxref("AudioNode")}}, and adds the following methods:</em></p>
+_Inherits methods from its parent interface, {{domxref("AudioNode")}}, and adds the following methods:_
 
-<dl>
- <dt>{{domxref("AudioScheduledSourceNode.start", "start()")}}</dt>
- <dd>Schedules the node to begin playing the constant sound at the specified time. If no time is specified, the node begins playing immediately.</dd>
- <dt>{{domxref("AudioScheduledSourceNode.stop", "stop()")}}</dt>
- <dd>Schedules the node to stop playing at the specified time. If no time is specified, the node stops playing at once.</dd>
-</dl>
+- {{domxref("AudioScheduledSourceNode.start", "start()")}}
+  - : Schedules the node to begin playing the constant sound at the specified time. If no time is specified, the node begins playing immediately.
+- {{domxref("AudioScheduledSourceNode.stop", "stop()")}}
+  - : Schedules the node to stop playing at the specified time. If no time is specified, the node stops playing at once.
 
-<h2 id="Events">Events</h2>
+## Events
 
-<p>Listen to these events using <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> or by assigning an event listener to the <code>on<em>eventname</em></code> property of this interface:</p>
+Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface:
 
-<dl>
- <dt><code><a href="/en-US/docs/Web/API/AudioScheduledSourceNode/ended_event">ended</a></code></dt>
- <dd>Fired when the source node has stopped playing, either because it's reached a predetermined stop time, the full duration of the audio has been performed, or because the entire buffer has been played.<br>
- Also available using the <code><a href="/en-US/docs/Web/API/AudioScheduledSourceNode/onended">onended</a></code> event handler property.</dd>
-</dl>
+- [`ended`](/en-US/docs/Web/API/AudioScheduledSourceNode/ended_event)
+  - : Fired when the source node has stopped playing, either because it's reached a predetermined stop time, the full duration of the audio has been performed, or because the entire buffer has been played.
+    Also available using the [`onended`](/en-US/docs/Web/API/AudioScheduledSourceNode/onended) event handler property.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
- <li>{{domxref("AudioNode")}}</li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- {{domxref("AudioNode")}}

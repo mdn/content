@@ -2,85 +2,81 @@
 title: RTCRtpTransceiver.direction
 slug: Web/API/RTCRtpTransceiver/direction
 tags:
-- API
-- Media
-- Property
-- RTCRtpTransceiver
-- RTP
-- Reference
-- Transceiver
-- Transceiver Direction
-- WebRTC
-- direction
+  - API
+  - Media
+  - Property
+  - RTCRtpTransceiver
+  - RTP
+  - Reference
+  - Transceiver
+  - Transceiver Direction
+  - WebRTC
+  - direction
 browser-compat: api.RTCRtpTransceiver.direction
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The {{domxref("RTCRtpTransceiver")}} property
-    <code><strong>direction</strong></code> is a string which indicates the transceiver's
-    preferred directionality.</p>
+The {{domxref("RTCRtpTransceiver")}} property
+**`direction`** is a string which indicates the transceiver's
+preferred directionality.
 
-<p>Its value must be one of the strings defined by the
-  {{domxref("RTCRtpTransceiverDirection")}} enumeration.</p>
+Its value must be one of the strings defined by the
+{{domxref("RTCRtpTransceiverDirection")}} enumeration.
 
-<p>The transceiver's <em>current</em> direction is indicated by the
-  {{domxref("RTCRtpTransceiver.currentDirection", "currentDirection")}} property.</p>
+The transceiver's _current_ direction is indicated by the
+{{domxref("RTCRtpTransceiver.currentDirection", "currentDirection")}} property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>direction</em> = <em>RTCRtpTransceiver</em>.direction</pre>
+```js
+var direction = RTCRtpTransceiver.direction
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} whose value is one of the strings which are a member of the
-  <code>RTCRtpTransceiverDirection</code> enumerated type, indicating the transceiver's
-  preferred direction. {{page("/en-US/docs/Web/API/RTCRtpTransceiverDirection",
-  "Values")}}</p>
+A {{domxref("DOMString")}} whose value is one of the strings which are a member of the
+`RTCRtpTransceiverDirection` enumerated type, indicating the transceiver's
+preferred direction. {{page("/en-US/docs/Web/API/RTCRtpTransceiverDirection",
+  "Values")}}
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>When setting the value of <code>direction</code>, the following exceptions can occur:
-</p>
+When setting the value of `direction`, the following exceptions can occur:
 
-<dl>
-  <dt><code>InvalidStateError</code></dt>
-  <dd>Either the receiver's {{domxref("RTCPeerConnection")}} is closed or the
-    {{domxref("RTCRtpReceiver")}} is stopped.</dd>
-</dl>
+- `InvalidStateError`
+  - : Either the receiver's {{domxref("RTCPeerConnection")}} is closed or the
+    {{domxref("RTCRtpReceiver")}} is stopped.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<h3 id="Setting_the_direction">Setting the direction</h3>
+### Setting the direction
 
-<p>When you change the value of <code>direction</code>, an <code>InvalidStateError</code>
-  exception will occur if the connection is closed or the receiver is stopped.</p>
+When you change the value of `direction`, an `InvalidStateError`
+exception will occur if the connection is closed or the receiver is stopped.
 
-<p>If the new value of <code>direction</code> is in fact different from the existing
-  value, renegotiation of the connection is required, so a {{event("negotiationneeded")}}
-  event is sent to the {{domxref("RTCPeerConnection")}}.</p>
+If the new value of `direction` is in fact different from the existing
+value, renegotiation of the connection is required, so a {{event("negotiationneeded")}}
+event is sent to the {{domxref("RTCPeerConnection")}}.
 
-<h3 id="Effect_on_offers_and_answers">Effect on offers and answers</h3>
+### Effect on offers and answers
 
-<p>The value of <code>direction</code> is used by
-  {{domxref("RTCPeerConnection.createOffer()")}} or
-  {{domxref("RTCPeerConnection.createAnswer()")}} in order to generate the SDP generated
-  by each of those methods. The SDP contains an a-line which specifies the directionality.
-  For example, if the <code>direction</code> is specified as <code>"sendrecv"</code>, the
-  corresponding SDP a-line is:</p>
+The value of `direction` is used by
+{{domxref("RTCPeerConnection.createOffer()")}} or
+{{domxref("RTCPeerConnection.createAnswer()")}} in order to generate the SDP generated
+by each of those methods. The SDP contains an a-line which specifies the directionality.
+For example, if the `direction` is specified as `"sendrecv"`, the
+corresponding SDP a-line is:
 
-<pre>a=sendrecv</pre>
+    a=sendrecv
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("RTCRtpTransceiver.currentDirection")}}</li>
-</ul>
+- {{domxref("RTCRtpTransceiver.currentDirection")}}

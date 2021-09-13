@@ -2,64 +2,67 @@
 title: XPathResult.snapshotLength
 slug: Web/API/XPathResult/snapshotLength
 tags:
-- API
-- DOM XPath API
-- Property
-- Reference
-- XPath
-- XPathResult
+  - API
+  - DOM XPath API
+  - Property
+  - Reference
+  - XPath
+  - XPathResult
 browser-compat: api.XPathResult.snapshotLength
 ---
-<div>{{APIRef("DOM XPath")}}</div>
+{{APIRef("DOM XPath")}}
 
-<p>The read-only <strong><code>snapshotLength</code></strong> property of the
-  {{domxref("XPathResult")}} interface represents the number of nodes in the result
-  snapshot.</p>
+The read-only **`snapshotLength`** property of the
+{{domxref("XPathResult")}} interface represents the number of nodes in the result
+snapshot.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>snapshotLength</var> = <var>result</var>.snapshotLength;
-</pre>
+```js
+var snapshotLength = result.snapshotLength;
+```
 
-<h3 id="Return_Value">Return value</h3>
+### Return value
 
-<p>An integer value representing the number of nodes in the result snapshot.</p>
+An integer value representing the number of nodes in the result snapshot.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<h4 id="TYPE_ERR">TYPE_ERR</h4>
+#### TYPE_ERR
 
-<p>In case {{domxref("XPathResult.resultType")}} is not
-  <code>UNORDERED_NODE_SNAPSHOT_TYPE</code> or <code>ORDERED_NODE_SNAPSHOT_TYPE</code>, an
-  {{domxref("XPathException")}} of type <code>TYPE_ERR</code> is thrown.</p>
+In case {{domxref("XPathResult.resultType")}} is not
+`UNORDERED_NODE_SNAPSHOT_TYPE` or `ORDERED_NODE_SNAPSHOT_TYPE`, an
+{{domxref("XPathException")}} of type `TYPE_ERR` is thrown.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example shows the use of the <code>snapshotLength</code> property.</p>
+The following example shows the use of the `snapshotLength` property.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;XPath example&lt;/div&gt;
-&lt;div&gt;Number of matched nodes: &lt;output&gt;&lt;/output&gt;&lt;/div&gt;
-</pre>
+```html
+<div>XPath example</div>
+<div>Number of matched nodes: <output></output></div>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">var xpath = "//div";
+```js
+var xpath = "//div";
 var result = document.evaluate(xpath, document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
 document.querySelector("output").textContent = result.snapshotLength;
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Example', 400, 70)}}</p>
+{{EmbedLiveSample('Example', 400, 70)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

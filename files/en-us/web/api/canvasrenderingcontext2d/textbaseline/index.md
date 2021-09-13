@@ -2,65 +2,65 @@
 title: CanvasRenderingContext2D.textBaseline
 slug: Web/API/CanvasRenderingContext2D/textBaseline
 tags:
-- API
-- Canvas
-- CanvasRenderingContext2D
-- Property
-- Reference
+  - API
+  - Canvas
+  - CanvasRenderingContext2D
+  - Property
+  - Reference
 browser-compat: api.CanvasRenderingContext2D.textBaseline
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The
-  <strong><code>CanvasRenderingContext2D.textBaseline</code></strong>
-  property of the Canvas 2D API specifies the current text baseline used when drawing
-  text.</p>
+The
+**`CanvasRenderingContext2D.textBaseline`**
+property of the Canvas 2D API specifies the current text baseline used when drawing
+text.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>ctx</em>.textBaseline = "top" || "hanging" || "middle" || "alphabetic" || "ideographic" || "bottom";
-</pre>
+```js
+ctx.textBaseline = "top" || "hanging" || "middle" || "alphabetic" || "ideographic" || "bottom";
+```
 
-<h3 id="Options">Options</h3>
+### Options
 
-<p>Possible values:</p>
+Possible values:
 
-<dl>
-  <dt><code>"top"</code></dt>
-  <dd>The text baseline is the top of the em square.</dd>
-  <dt><code>"hanging"</code></dt>
-  <dd>The text baseline is the hanging baseline. (Used by Tibetan and other Indic
-    scripts.)</dd>
-  <dt><code>"middle"</code></dt>
-  <dd>The text baseline is the middle of the em square.</dd>
-  <dt><code>"alphabetic"</code></dt>
-  <dd>The text baseline is the normal alphabetic baseline. Default value.</dd>
-  <dt><code>"ideographic"</code></dt>
-  <dd>The text baseline is the ideographic baseline; this is the bottom of the body of the
+- `"top"`
+  - : The text baseline is the top of the em square.
+- `"hanging"`
+  - : The text baseline is the hanging baseline. (Used by Tibetan and other Indic
+    scripts.)
+- `"middle"`
+  - : The text baseline is the middle of the em square.
+- `"alphabetic"`
+  - : The text baseline is the normal alphabetic baseline. Default value.
+- `"ideographic"`
+  - : The text baseline is the ideographic baseline; this is the bottom of the body of the
     characters, if the main body of characters protrudes beneath the alphabetic baseline.
-    (Used by Chinese, Japanese, and Korean scripts.)</dd>
-  <dt><code>"bottom"</code></dt>
-  <dd>The text baseline is the bottom of the bounding box. This differs from the
+    (Used by Chinese, Japanese, and Korean scripts.)
+- `"bottom"`
+  - : The text baseline is the bottom of the bounding box. This differs from the
     ideographic baseline in that the ideographic baseline doesn't consider descenders.
-  </dd>
-</dl>
 
-<p>The default value is <code>"alphabetic"</code>.</p>
+The default value is `"alphabetic"`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Comparison_of_property_values">Comparison of property values</h3>
+### Comparison of property values
 
-<p>This example demonstrates the various <code>textBaseline</code> property values.</p>
+This example demonstrates the various `textBaseline` property values.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas" width="550" height="500"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas" width="550" height="500"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 const baselines = ['top', 'hanging', 'middle', 'alphabetic', 'ideographic', 'bottom'];
@@ -76,22 +76,20 @@ baselines.forEach(function (baseline, index) {
   ctx.stroke();
   ctx.fillText('Abcdefghijklmnop (' + baseline + ')', 0, y);
 });
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Comparison_of_property_values', 700, 550) }}</p>
+{{ EmbedLiveSample('Comparison_of_property_values', 700, 550) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining this property: {{domxref("CanvasRenderingContext2D")}}</li>
-</ul>
+- The interface defining this property: {{domxref("CanvasRenderingContext2D")}}

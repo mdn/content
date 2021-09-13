@@ -8,61 +8,56 @@ tags:
   - WebGL extension
 browser-compat: api.WEBGL_compressed_texture_pvrtc
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <code><strong>WEBGL_compressed_texture_pvrtc</strong></code> extension is part of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> and exposes four <a href="https://en.wikipedia.org/wiki/PVRTC">PVRTC compressed texture formats</a>.</p>
+The **`WEBGL_compressed_texture_pvrtc`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and exposes four [PVRTC compressed texture formats](https://en.wikipedia.org/wiki/PVRTC).
 
-<p>Compressed textures reduce the amount of memory needed to store a texture on the GPU, allowing for higher resolution textures or more of the same resolution textures.</p>
+Compressed textures reduce the amount of memory needed to store a texture on the GPU, allowing for higher resolution textures or more of the same resolution textures.
 
-<p>WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also <a href="/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</a> in the <a href="/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</a>.</p>
+WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
 
-<div class="note">
-<p><strong>Note:</strong> PVRTC is typically only available on mobile devices with PowerVR chipsets. It is used in all generations of the iPhone, iPod Touch and iPad and supported on certain Android devices that use a PowerVR GPU.</p>
+> **Note:** PVRTC is typically only available on mobile devices with PowerVR chipsets. It is used in all generations of the iPhone, iPod Touch and iPad and supported on certain Android devices that use a PowerVR GPU.
+>
+> This extension is available to both, {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} and {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}} contexts.
+>
+> **Note**: On iOS devices, this extension is named `WEBKIT_WEBGL_compressed_texture_pvrtc`.
 
-<p>This extension is available to both, {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} and {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}} contexts.</p>
+## Constants
 
-<p><strong>Note</strong>: On iOS devices, this extension is named <code>WEBKIT_WEBGL_compressed_texture_pvrtc</code>.</p>
-</div>
+The compressed texture formats are exposed by four constants and can be used in two functions: {{domxref("WebGLRenderingContext.compressedTexImage2D", "compressedTexImage2D()")}} (where the `height` and `width` parameters must be powers of 2) and {{domxref("WebGLRenderingContext.compressedTexSubImage2D", "compressedTexSubImage2D()")}} (where the height and width parameters must equal the current values of the existing texture and the `xoffset` and `yoffset` parameters must be 0).
 
-<h2 id="Constants">Constants</h2>
+- `ext.COMPRESSED_RGB_PVRTC_4BPPV1_IMG`
+  - : RGB compression in 4-bit mode. One block for each 4×4 pixels.
+- `ext.COMPRESSED_RGBA_PVRTC_4BPPV1_IMG`
+  - : RGBA compression in 4-bit mode. One block for each 4×4 pixels.
+- `ext.COMPRESSED_RGB_PVRTC_2BPPV1_IMG`
+  - : RGB compression in 2-bit mode. One block for each 8×4 pixels.
+- `ext.COMPRESSED_RGBA_PVRTC_2BPPV1_IMG`
+  - : RGBA compression in 2-bit mode. One block for each 8×4 pixels.
 
-<p>The compressed texture formats are exposed by four constants and can be used in two functions: {{domxref("WebGLRenderingContext.compressedTexImage2D", "compressedTexImage2D()")}} (where the <code>height</code> and <code>width</code> parameters must be powers of 2) and {{domxref("WebGLRenderingContext.compressedTexSubImage2D", "compressedTexSubImage2D()")}} (where the height and width parameters must equal the current values of the existing texture and the <code>xoffset</code> and <code>yoffset</code> parameters must be 0).</p>
+## Examples
 
-<dl>
- <dt><code>ext.COMPRESSED_RGB_PVRTC_4BPPV1_IMG</code></dt>
- <dd>RGB compression in 4-bit mode. One block for each 4×4 pixels.</dd>
- <dt><code>ext.COMPRESSED_RGBA_PVRTC_4BPPV1_IMG</code></dt>
- <dd>RGBA compression in 4-bit mode. One block for each 4×4 pixels.</dd>
- <dt><code>ext.COMPRESSED_RGB_PVRTC_2BPPV1_IMG</code></dt>
- <dd>RGB compression in 2-bit mode. One block for each 8×4 pixels.</dd>
- <dt><code>ext.COMPRESSED_RGBA_PVRTC_2BPPV1_IMG</code></dt>
- <dd>RGBA compression in 2-bit mode. One block for each 8×4 pixels.</dd>
-</dl>
-
-<h2 id="Examples">Examples</h2>
-
-<pre class="brush:js">var ext = gl.getExtension('WEBGL_compressed_texture_pvrtc');
+```js
+var ext = gl.getExtension('WEBGL_compressed_texture_pvrtc');
 
 var texture = gl.createTexture();
 gl.bindTexture(gl.TEXTURE_2D, texture);
 
 gl.compressedTexImage2D(gl.TEXTURE_2D, 0, ext.COMPRESSED_RGB_PVRTC_4BPPV1_IMG, 512, 512, 0, textureData);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://en.wikipedia.org/wiki/PVRTC">PVRTC Texture Compression – Wikipedia</a></li>
- <li>{{domxref("WebGLRenderingContext.getExtension()")}}</li>
- <li>{{domxref("WebGLRenderingContext.compressedTexImage2D()")}}</li>
- <li>{{domxref("WebGLRenderingContext.compressedTexSubImage2D()")}}</li>
- <li>{{domxref("WebGLRenderingContext.getParameter()")}}</li>
-</ul>
+- [PVRTC Texture Compression – Wikipedia](https://en.wikipedia.org/wiki/PVRTC)
+- {{domxref("WebGLRenderingContext.getExtension()")}}
+- {{domxref("WebGLRenderingContext.compressedTexImage2D()")}}
+- {{domxref("WebGLRenderingContext.compressedTexSubImage2D()")}}
+- {{domxref("WebGLRenderingContext.getParameter()")}}

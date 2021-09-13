@@ -13,51 +13,44 @@ tags:
   - Storage
 browser-compat: api.IDBVersionChangeEvent
 ---
-<p>{{APIRef("IndexedDB")}}</p>
+{{APIRef("IndexedDB")}}
 
-<p>The <strong><code>IDBVersionChangeEvent</code></strong> interface of the <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a> indicates that the version of the database has changed, as the result of an {{domxref("IDBOpenDBRequest.onupgradeneeded")}} event handler function.</p>
+The **`IDBVersionChangeEvent`** interface of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) indicates that the version of the database has changed, as the result of an {{domxref("IDBOpenDBRequest.onupgradeneeded")}} event handler function.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Constructor">Constructor</h2>
-<dl>
-  <dt>{{domxref("IDBVersionChangeEvent.IDBVersionChangeEvent", "IDBVersionChangeEvent()")}}</dt>
-  <dd>Creates and returns a new <code>IDBVersionChangeEvent</code> object which is used to represent when a version of the database has changed.</dd>
-</dl>
+## Constructor
 
-<h2 id="Properties">Properties</h2>
+- {{domxref("IDBVersionChangeEvent.IDBVersionChangeEvent", "IDBVersionChangeEvent()")}}
+  - : Creates and returns a new `IDBVersionChangeEvent` object which is used to represent when a version of the database has changed.
 
-<p><em>Also inherits properties from its parent, {{domxref("Event")}} interface.</em></p>
+## Properties
 
-<dl>
- <dt>{{ domxref("IDBVersionChangeEvent.oldVersion") }} {{readonlyInline}}</dt>
- <dd>Returns the old version of the database.</dd>
- <dt>{{ domxref("IDBVersionChangeEvent.newVersion") }} {{readonlyInline}}</dt>
- <dd>Returns the new version of the database.</dd>
-</dl>
+_Also inherits properties from its parent, {{domxref("Event")}} interface._
 
-<h3 id="Deprecated_properties">Deprecated properties</h3>
+- {{ domxref("IDBVersionChangeEvent.oldVersion") }} {{readonlyInline}}
+  - : Returns the old version of the database.
+- {{ domxref("IDBVersionChangeEvent.newVersion") }} {{readonlyInline}}
+  - : Returns the new version of the database.
 
-<dl>
- <dt>{{ domxref("IDBVersionChangeEvent.version") }} {{readonlyInline}} {{deprecated_inline}}</dt>
- <dd>
- <p>The new version of the database in a {{event("versionchange")}} transaction.</p>
+### Deprecated properties
 
- <div class="warning">
- <p><strong>Warning:</strong> While this property is still implemented in older browsers, the latest specification replaces it with the <code>oldVersion</code> and <code>newVersion</code> attributes. See the compatibility table to know what browsers support them.</p>
- </div>
- </dd>
-</dl>
+- {{ domxref("IDBVersionChangeEvent.version") }} {{readonlyInline}} {{deprecated_inline}}
 
-<h3 id="Methods">Methods</h3>
+  - : The new version of the database in a {{event("versionchange")}} transaction.
 
-<p><em>No specific method, but inherits properties from its parent, {{domxref("Event")}} interface.</em></p>
+    > **Warning:** While this property is still implemented in older browsers, the latest specification replaces it with the `oldVersion` and `newVersion` attributes. See the compatibility table to know what browsers support them.
 
-<h2 id="Example">Example</h2>
+### Methods
 
-<p>In the following code snippet, we make a request to open a database, and include handlers for the success and error cases. Upon a version change (after an <code>upgradedneeded</code> event), the <code>success</code> event will implement the <code>IDBVersionChangeEvent</code> interface. For a full working example, see our <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> app (<a href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</p>
+_No specific method, but inherits properties from its parent, {{domxref("Event")}} interface._
 
-<pre class="brush:js">var note = document.querySelector("ul");
+## Example
+
+In the following code snippet, we make a request to open a database, and include handlers for the success and error cases. Upon a version change (after an `upgradedneeded` event), the `success` event will implement the `IDBVersionChangeEvent` interface. For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) app ([view example live](https://mdn.github.io/to-do-notifications/).)
+
+```js
+var note = document.querySelector("ul");
 
 // In the following line, you should include the prefixes of implementations you want to test.
 window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
@@ -72,34 +65,32 @@ var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // these two event handlers act on the database being opened successfully, or not
 DBOpenRequest.onerror = function(event) {
-  note.innerHTML += '&lt;li&gt;Error loading database.&lt;/li&gt;';
+  note.innerHTML += '<li>Error loading database.</li>';
 };
 
 DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '&lt;li&gt;Database initialised.&lt;/li&gt;';
+  note.innerHTML += '<li>Database initialised.</li>';
 
   // store the result of opening the database in the db variable. This is used a lot later on, for opening transactions and suchlike.
   db = DBOpenRequest.result;
 };
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
- <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
- <li>Using transactions: {{domxref("IDBTransaction")}}</li>
- <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
- <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
- <li>Using cursors: {{domxref("IDBCursor")}}</li>
- <li><a href="/en-US/docs/Web/API/IDBDatabase/onversionchange">IDBDatabase.onversionchange</a></li>
- <li>Reference example: <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- [IDBDatabase.onversionchange](/en-US/docs/Web/API/IDBDatabase/onversionchange)
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

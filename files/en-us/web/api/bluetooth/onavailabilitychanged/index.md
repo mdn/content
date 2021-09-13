@@ -2,39 +2,38 @@
 title: Bluetooth.onavailabilitychanged
 slug: Web/API/Bluetooth/onavailabilitychanged
 tags:
-- API
-- Bluetooth
-- Web Bluetooth API
+  - API
+  - Bluetooth
+  - Web Bluetooth API
 browser-compat: api.Bluetooth.onavailabilitychanged
 ---
-<p>{{APIRef("Bluetooth API")}}{{securecontext_header}}{{SeeCompatTable}}</p>
+{{APIRef("Bluetooth API")}}{{securecontext_header}}{{SeeCompatTable}}
 
-<p>The <strong><code>onavailabilitychanged</code></strong>
-    property of the {{DOMxRef("Bluetooth")}} interface is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a>
-    that processes <code>availabilitychanged</code> events that fire when the Bluetooth
-    system as a whole becomes available or unavailable to the {{Glossary("User
-    Agent")}}.</p>
+The **`onavailabilitychanged`**
+property of the {{DOMxRef("Bluetooth")}} interface is an [event handler](/en-US/docs/Web/Events/Event_handlers)
+that processes `availabilitychanged` events that fire when the Bluetooth
+system as a whole becomes available or unavailable to the {{Glossary("User
+    Agent")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>Bluetooth</em>.onavailabilitychanged = <em>functionRef</em>;
-</pre>
+```js
+Bluetooth.onavailabilitychanged = functionRef;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p><code>functionRef</code> is the handler function to be called when the Bluetooth
-  <code>availabilitychanged</code> event fires.</p>
+`functionRef` is the handler function to be called when the Bluetooth
+`availabilitychanged` event fires.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{DOMxRef("Bluetooth.getAvailability")}}</li>
-</ul>
+- {{DOMxRef("Bluetooth.getAvailability")}}

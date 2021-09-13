@@ -2,35 +2,36 @@
 title: PaymentResponse.requestId
 slug: Web/API/PaymentResponse/requestId
 tags:
-- API
-- Experimental
-- Payment Request
-- Payment Request API
-- PaymentResponse
-- Property
-- Secure context
-- requestId
+  - API
+  - Experimental
+  - Payment Request
+  - Payment Request API
+  - PaymentResponse
+  - Property
+  - Secure context
+  - requestId
 browser-compat: api.PaymentResponse.requestId
 ---
-<p>{{SeeCompatTable}}{{APIRef("Payment Request API")}}</p>
+{{SeeCompatTable}}{{APIRef("Payment Request API")}}
 
-<p>The <strong><code>requestId</code></strong> read-only property of the
-  {{domxref("PaymentResponse")}} interface rreturns the free-form identifier supplied by
-  the <code>PaymentResponse()</code> constructor by details.id.</p>
+The **`requestId`** read-only property of the
+{{domxref("PaymentResponse")}} interface rreturns the free-form identifier supplied by
+the `PaymentResponse()` constructor by details.id.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>id</em> = <em>paymentRequest</em>.id</pre>
+```js
+var id = paymentRequest.id
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref('DOMString')}}.</p>
+A {{domxref('DOMString')}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

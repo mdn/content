@@ -10,35 +10,34 @@ tags:
   - Reference
 browser-compat: api.Range.getClientRects
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<p>The <strong><code>Range.getClientRects()</code></strong> method returns a list of {{
-  domxref("DOMRect") }} objects representing the area of the screen occupied by the <a
-    href="/en-US/docs/Web/API/Range">range</a>. This is created by aggregating the results of calls to
-  {{ domxref("Element.getClientRects()") }} for all the elements in the range.</p>
+The **`Range.getClientRects()`** method returns a list of {{
+  domxref("DOMRect") }} objects representing the area of the screen occupied by the [range](/en-US/docs/Web/API/Range). This is created by aggregating the results of calls to
+{{ domxref("Element.getClientRects()") }} for all the elements in the range.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>rectList</em> = <em>range</em>.getClientRects()
-</pre>
+```js
+rectList = range.getClientRects()
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">range = document.createRange();
+```js
+range = document.createRange();
 range.selectNode(document.getElementsByTagName("div").item(0));
 rectList = range.getClientRects();
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Range")}}</li>
-</ul>
+- {{domxref("Range")}}

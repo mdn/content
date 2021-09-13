@@ -17,116 +17,118 @@ tags:
   - x
 browser-compat: api.HTMLImageElement.x
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The read-only {{domxref("HTMLImageElement")}} property
-    <code><strong>x</strong></code> indicates the x-coordinate of the 
-    {{HTMLElement("img")}} element's left border edge relative to the root element's
-    origin.</p>
+The read-only {{domxref("HTMLImageElement")}} property
+**`x`** indicates the x-coordinate of the 
+{{HTMLElement("img")}} element's left border edge relative to the root element's
+origin.
 
-<p>The <code>x</code> and {{domxref("HTMLImageElement.y", "y")}} properties are only valid
-  for an image if its {{cssxref("display")}} property has the computed value
-  <code>table-column</code> or <code>table-column-group</code>. In other words: it has
-  either of those values set explicitly on it, or it has inherited it from a containing
-  element, or by being located within a column described by either {{HTMLElement("col")}}
-  or {{HTMLElement("colgroup")}}.</p>
+The `x` and {{domxref("HTMLImageElement.y", "y")}} properties are only valid
+for an image if its {{cssxref("display")}} property has the computed value
+`table-column` or `table-column-group`. In other words: it has
+either of those values set explicitly on it, or it has inherited it from a containing
+element, or by being located within a column described by either {{HTMLElement("col")}}
+or {{HTMLElement("colgroup")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">let <em>imageX</em> = <em>htmlImageElement</em>.x;</pre>
+```js
+let imageX = htmlImageElement.x;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An integer value indicating the distance in pixels from the left edge of the element's
-  nearest root element and the left edge of the {{HTMLElement("img")}} element's border
-  box. The nearest root element is the outermost {{HTMLElement("html")}} element that
-  contains the image. If the image is in an {{HTMLElement("iframe")}}, its <code>x</code>
-  is relative to that frame.</p>
+An integer value indicating the distance in pixels from the left edge of the element's
+nearest root element and the left edge of the {{HTMLElement("img")}} element's border
+box. The nearest root element is the outermost {{HTMLElement("html")}} element that
+contains the image. If the image is in an {{HTMLElement("iframe")}}, its `x`
+is relative to that frame.
 
-<p>In the diagram below, the left border edge is the left edge of the blue padding area.
-  So the value returned by <code>x</code> would be the distance from that point to the
-  left edge of the content area.</p>
+In the diagram below, the left border edge is the left edge of the blue padding area.
+So the value returned by `x` would be the distance from that point to the
+left edge of the content area.
 
-<p><img
-    alt="Diagram showing the relationships between the various boxes associated with an element"
-    src="boxmodel-3.png"></p>
+![Diagram showing the relationships between the various boxes associated with an element](boxmodel-3.png)
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The <code>x</code> property is only valid if the computed
-    value of the image's {{cssxref("display")}} property is either
-    <code>table-column</code> or <code>table-column-group</code>; in other words, either
-    of those are set directly on the {{HTMLElement("img")}} or they're inherited from a
-    containing element or by being located within a column described by either
-    {{HTMLElement("col")}} or {{HTMLElement("colgroup")}}.</p>
-</div>
+> **Note:** The `x` property is only valid if the computed
+> value of the image's {{cssxref("display")}} property is either
+> `table-column` or `table-column-group`; in other words, either
+> of those are set directly on the {{HTMLElement("img")}} or they're inherited from a
+> containing element or by being located within a column described by either
+> {{HTMLElement("col")}} or {{HTMLElement("colgroup")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The example below demonstrates the use of the <code>HTMLImageElement</code> properties
-  {{domxref("HTMLImageElement.x", "x")}} and {{domxref("HTMLImageElement.y", "y")}}.</p>
+The example below demonstrates the use of the `HTMLImageElement` properties
+{{domxref("HTMLImageElement.x", "x")}} and {{domxref("HTMLImageElement.y", "y")}}.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<p>In this example, we see a table showing information about users of a web site,
-  including their user ID, their full name, and their avatar image.</p>
+In this example, we see a table showing information about users of a web site,
+including their user ID, their full name, and their avatar image.
 
-<pre class="brush: html">&lt;table id="userinfo"&gt;
-  &lt;colgroup&gt;
-    &lt;col span="2" class="group1"&gt;
-    &lt;col&gt;
-  &lt;/colgroup&gt;
-  &lt;tr&gt;
-    &lt;th&gt;UserID&lt;/th&gt;
-    &lt;th&gt;Name&lt;/th&gt;
-    &lt;th&gt;Avatar&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;12345678&lt;/td&gt;
-    &lt;td&gt;Johnny Rocket&lt;/td&gt;
-    &lt;td&gt;&lt;img src="https://interactive-examples.mdn.mozilla.net/media/examples/grapefruit-slice-332-332.jpg"&lt;/td&gt;
-  &lt;/th&gt;
-&lt;/table&gt;
-&lt;pre id="log"&gt;
-&lt;/pre&gt;</pre>
+```html
+<table id="userinfo">
+  <colgroup>
+    <col span="2" class="group1">
+    <col>
+  </colgroup>
+  <tr>
+    <th>UserID</th>
+    <th>Name</th>
+    <th>Avatar</th>
+  </tr>
+  <tr>
+    <td>12345678</td>
+    <td>Johnny Rocket</td>
+    <td><img src="https://interactive-examples.mdn.mozilla.net/media/examples/grapefruit-slice-332-332.jpg"</td>
+  </th>
+</table>
+<pre id="log">
+</pre>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<p>The JavaScript code that fetches the image from the table and looks up its
-  <code>x</code> and <code>y</code> values is below.</p>
+The JavaScript code that fetches the image from the table and looks up its
+`x` and `y` values is below.
 
-<pre class="brush: js">let logBox = document.querySelector("pre");
+```js
+let logBox = document.querySelector("pre");
 let tbl = document.getElementById("userinfo")
 
-let log = msg =&gt; {
-  logBox.innerHTML += `${msg}&lt;br&gt;`;
+let log = msg => {
+  logBox.innerHTML += `${msg}<br>`;
 }
 
 let cell = tbl.rows[1].cells[2];
 let image = cell.querySelector("img");
 
 log(`Image's global X: ${image.x}`);
-log(`Image's global Y: ${image.y}`);</pre>
+log(`Image's global Y: ${image.y}`);
+```
 
-<p>This uses the {{HTMLElement("table")}}'s {{domxref("HTMLTableElement.rows", "rows")}}
-  property to get a list of the rows in the table, from which it looks up row 1 (which,
-  being a zero-based index, means the second row from the top). Then it looks at that
-  {{HTMLElement("tr")}} (table row) element's {{domxref("HTMLTableRowElement.cells",
+This uses the {{HTMLElement("table")}}'s {{domxref("HTMLTableElement.rows", "rows")}}
+property to get a list of the rows in the table, from which it looks up row 1 (which,
+being a zero-based index, means the second row from the top). Then it looks at that
+{{HTMLElement("tr")}} (table row) element's {{domxref("HTMLTableRowElement.cells",
   "cells")}} property to get a list of the cells in that row. The third cell is taken from
-  that row (once again, specifying 2 as the zero-based offset).</p>
+that row (once again, specifying 2 as the zero-based offset).
 
-<p>From there, we can get the <code>&lt;img&gt;</code> element itself from the cell by
-  calling {{domxref("Element.querySelector", "querySelector()")}} on the
-  {{domxref("HTMLTableCellElement")}} representing that cell.</p>
+From there, we can get the `<img>` element itself from the cell by
+calling {{domxref("Element.querySelector", "querySelector()")}} on the
+{{domxref("HTMLTableCellElement")}} representing that cell.
 
-<p>Finally, we can look up and display the values of the <code>HTMLImageElement</code>'s
-  <code>x</code> and <code>y</code> properties.</p>
+Finally, we can look up and display the values of the `HTMLImageElement`'s
+`x` and `y` properties.
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<p>The CSS defining the appearance of the table:</p>
+The CSS defining the appearance of the table:
 
-<pre class="brush: css">.group1 {
+```css
+.group1 {
   background-color: #d7d9f2;
 }
 
@@ -141,20 +143,21 @@ td, th {
   padding: 10px 14px;
 }
 
-td &gt; img {
+td > img {
   max-width: 4em;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>The resulting table looks like this:</p>
+The resulting table looks like this:
 
-<p>{{EmbedLiveSample("Example", 600, 200)}}</p>
+{{EmbedLiveSample("Example", 600, 200)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

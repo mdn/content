@@ -2,47 +2,46 @@
 title: EventSource.onopen
 slug: Web/API/EventSource/onopen
 tags:
-- API
-- Event Handler
-- EventSource
-- Property
-- Reference
-- Server-sent events
-- onopen
+  - API
+  - Event Handler
+  - EventSource
+  - Property
+  - Reference
+  - Server-sent events
+  - onopen
 browser-compat: api.EventSource.onopen
 ---
-<div>{{APIRef('Server Sent Events')}}</div>
+{{APIRef('Server Sent Events')}}
 
-<p>The <code><strong>onopen</strong></code> property of the {{domxref("EventSource")}}
-  interface is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> called when an {{event("open")}} event is
-  received, that is when the connection was just opened.</p>
+The **`onopen`** property of the {{domxref("EventSource")}}
+interface is an [event handler](/en-US/docs/Web/Events/Event_handlers) called when an {{event("open")}} event is
+received, that is when the connection was just opened.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">eventSource.onopen = function</pre>
+```js
+eventSource.onopen = function
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">evtSource.onopen = function() {
+```js
+evtSource.onopen = function() {
   console.log("Connection to server opened.");
-};</pre>
+};
+```
 
-<div class="note">
-  <p><strong>Note:</strong> You can find a full example on GitHub — see <a
-      href="https://github.com/mdn/dom-examples/tree/master/server-sent-events">Simple SSE
-      demo using PHP.</a></p>
-</div>
+> **Note:** You can find a full example on GitHub — see [Simple SSE
+> demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("EventSource")}}</li>
-</ul>
+- {{domxref("EventSource")}}

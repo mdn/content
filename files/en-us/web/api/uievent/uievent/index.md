@@ -2,60 +2,52 @@
 title: UIEvent()
 slug: Web/API/UIEvent/UIEvent
 tags:
-- API
-- Constructor
-- Reference
-- UIEvent
+  - API
+  - Constructor
+  - Reference
+  - UIEvent
 browser-compat: api.UIEvent.UIEvent
 ---
-<div>{{APIRef("DOM Events")}}</div>
+{{APIRef("DOM Events")}}
 
-<p>The <strong><code>UIEvent()</code></strong> constructor creates a new
-  {{domxref("UIEvent")}}.</p>
+The **`UIEvent()`** constructor creates a new
+{{domxref("UIEvent")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>event</em> = new UIEvent(<em>typeArg</em> [, <em>UIEventInit</em>])</pre>
+```js
+event = new UIEvent(typeArg [, UIEventInit])
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-  <dt><code>typeArg</code></dt>
-  <dd>Is a {{domxref("DOMString")}} representing the name of the event.</dd>
-  <dt><code>UIEventInit</code> {{optional_inline}}</dt>
-  <dd>Is a <code>UIEventInit</code> dictionary, having the following fields:
+- `typeArg`
+  - : Is a {{domxref("DOMString")}} representing the name of the event.
+- `UIEventInit` {{optional_inline}}
 
-    <ul>
-      <li><strong><code>detail</code></strong>: optional and defaulting to <code>0</code>,
-        of type <code>long</code>, that is a event-dependant value associated with the
-        event. {{domxref("UIEvent.detail")}} lists the semantic for standard events.</li>
-      <li><strong><code>view</code></strong>: optional and defaulting to
-        <code>null</code>, of type {{domxref("WindowProxy")}}, that is the
-        {{domxref("Window")}} associated with the event .</li>
-      <li><strong><code>sourceCapabilities</code></strong>: {{non-standard_inline}} An
-        instance of the {{domxref("InputDeviceCapabilities")}} interface which provides
-        information about the physical device responsible for generating a touch event.
-      </li>
-    </ul>
+  - : Is a `UIEventInit` dictionary, having the following fields:
 
-    <div class="note">
-      <p><strong>Note:</strong> The <code>UIEventInit</code> dictionary also accepts fields from the
-        {{domxref("Event.Event", "EventInit")}} dictionary.</p>
-    </div>
-  </dd>
-</dl>
+    - **`detail`**: optional and defaulting to `0`,
+      of type `long`, that is a event-dependant value associated with the
+      event. {{domxref("UIEvent.detail")}} lists the semantic for standard events.
+    - **`view`**: optional and defaulting to
+      `null`, of type {{domxref("WindowProxy")}}, that is the
+      {{domxref("Window")}} associated with the event .
+    - **`sourceCapabilities`**: {{non-standard_inline}} An
+      instance of the {{domxref("InputDeviceCapabilities")}} interface which provides
+      information about the physical device responsible for generating a touch event.
 
-<h2 id="Specifications">Specifications</h2>
+    > **Note:** The `UIEventInit` dictionary also accepts fields from the
+    > {{domxref("Event.Event", "EventInit")}} dictionary.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("UIEvent")}}, the interface of the objects it constructs.</li>
-</ul>
+- {{domxref("UIEvent")}}, the interface of the objects it constructs.

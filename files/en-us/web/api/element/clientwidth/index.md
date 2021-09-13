@@ -2,62 +2,57 @@
 title: Element.clientWidth
 slug: Web/API/Element/clientWidth
 tags:
-- API
-- CSSOM View
-- NeedsMarkupWork
-- Property
-- Reference
+  - API
+  - CSSOM View
+  - NeedsMarkupWork
+  - Property
+  - Reference
 browser-compat: api.Element.clientWidth
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>Element.clientWidth</strong></code> property is zero for inline
-  elements and elements with no CSS; otherwise, it's the inner width of an element in
-  pixels. It includes padding but excludes borders, margins, and vertical scrollbars (if
-  present).</p>
+The **`Element.clientWidth`** property is zero for inline
+elements and elements with no CSS; otherwise, it's the inner width of an element in
+pixels. It includes padding but excludes borders, margins, and vertical scrollbars (if
+present).
 
-<p>When <code>clientWidth</code> is used on the root element (the
-  <code>&lt;html&gt;</code> element), (or on <code>&lt;body&gt;</code> if the document is
-  in quirks mode), the viewport's width (excluding any scrollbar) is returned. <a
-    href="https://www.w3.org/TR/2016/WD-cssom-view-1-20160317/#dom-element-clientwidth">This
-    is a special case of <code>clientWidth</code></a>.</p>
+When `clientWidth` is used on the root element (the
+`<html>` element), (or on `<body>` if the document is
+in quirks mode), the viewport's width (excluding any scrollbar) is returned. [This
+is a special case of `clientWidth`](https://www.w3.org/TR/2016/WD-cssom-view-1-20160317/#dom-element-clientwidth).
 
-<div class="note">
-  <p><strong>Note:</strong> This property will round the value to an integer. If you need
-    a fractional value, use {{ domxref("element.getBoundingClientRect()") }}.</p>
-</div>
+> **Note:** This property will round the value to an integer. If you need
+> a fractional value, use {{ domxref("element.getBoundingClientRect()") }}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>intElemClientWidth</var> = <var>element</var>.clientWidth;</pre>
+```js
+var intElemClientWidth = element.clientWidth;
+```
 
-<p><code><var>intElemClientWidth</var></code> is an integer corresponding to the
-  <code>clientWidth</code> of <code><var>element</var></code> in pixels. The
-  <code>clientWidth</code> property is read–only.</p>
+`intElemClientWidth` is an integer corresponding to the
+`clientWidth` of `element` in pixels. The
+`clientWidth` property is read–only.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p><img src="dimensions-client.png"></p>
+![](dimensions-client.png)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h3 id="Notes">Notes</h3>
+### Notes
 
-<p><code>clientWidth</code> was first introduced in the MS IE DHTML object model.</p>
+`clientWidth` was first introduced in the MS IE DHTML object model.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("HTMLElement.offsetWidth")}}</li>
-  <li>{{domxref("Element.scrollWidth")}}</li>
-  <li><a
-      href="/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements">Determining
-      the dimensions of elements</a></li>
-</ul>
+- {{domxref("HTMLElement.offsetWidth")}}
+- {{domxref("Element.scrollWidth")}}
+- [Determining
+  the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)

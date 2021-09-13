@@ -2,81 +2,82 @@
 title: Node.childNodes
 slug: Web/API/Node/childNodes
 tags:
-- API
-- DOM
-- DOM Reference
-- Property
-- Reference
+  - API
+  - DOM
+  - DOM Reference
+  - Property
+  - Reference
 browser-compat: api.Node.childNodes
 ---
-<div>
-  <div>{{APIRef("DOM")}}</div>
-</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>Node.childNodes</strong></code> read-only property returns a live
-  {{domxref("NodeList")}} of child {{domxref("Node","nodes")}} of the given element where
-  the first child node is assigned index 0. Child nodes include elements, text and
-  comments.</p>
+The **`Node.childNodes`** read-only property returns a live
+{{domxref("NodeList")}} of child {{domxref("Node","nodes")}} of the given element where
+the first child node is assigned index 0. Child nodes include elements, text and
+comments.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let <var>nodeList</var> = <var>elementNodeReference</var>.childNodes;
-</pre>
+```js
+let nodeList = elementNodeReference.childNodes;
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Simple_usage">Simple usage</h3>
+### Simple usage
 
-<pre class="brush:js">// parg is an object reference to a &lt;p&gt; element
+```js
+// parg is an object reference to a <p> element
 
 // First check that the element has child nodes
 if (parg.hasChildNodes()) {
   let children = parg.childNodes;
 
-  for (let i = 0; i &lt; children.length; i++) {
+  for (let i = 0; i < children.length; i++) {
     // do something with each child as children[i]
     // NOTE: List is live! Adding or removing children will change the list's `length`
   }
-}</pre>
+}
+```
 
-<h3 id="Remove_all_children_from_a_node">Remove all children from a node</h3>
+### Remove all children from a node
 
-<pre class="brush:js">// This is one way to remove all children from a node
+```js
+// This is one way to remove all children from a node
 // box is an object reference to an element
 
 while (box.firstChild) {
     //The list is LIVE so it will re-index each call
     box.removeChild(box.firstChild);
-}</pre>
+}
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>The items in the collection of nodes are objects, not strings. To get data from node
-  objects, use their properties. (For example, to get the name of the first
-  childNode: <code><var>elementNodeReference</var>.childNodes[0].nodeName</code>.)</p>
+The items in the collection of nodes are objects, not strings. To get data from node
+objects, use their properties. (For example, to get the name of the first
+childNode: `elementNodeReference.childNodes[0].nodeName`.)
 
-<p>The <code>document</code> object itself has 2 children: the Doctype declaration and the
-  root element, typically referred to as <code>documentElement</code>. (In (X)HTML
-  documents this is the <code>HTML</code> element.)</p>
+The `document` object itself has 2 children: the Doctype declaration and the
+root element, typically referred to as `documentElement`. (In (X)HTML
+documents this is the `HTML` element.)
 
-<p><code>childNodes</code> includes <em>all</em> child nodes—including non-element nodes
-  like text and comment nodes. To get a collection of only elements, use
-  {{domxref("Element.children")}} instead.</p>
+`childNodes` includes _all_ child nodes—including non-element nodes
+like text and comment nodes. To get a collection of only elements, use
+{{domxref("Element.children")}} instead.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Node.firstChild")}}</li>
-  <li>{{domxref("Node.lastChild")}}</li>
-  <li>{{domxref("Node.nextSibling")}}</li>
-  <li>{{domxref("Node.previousSibling")}}</li>
-  <li>{{domxref("Element.children")}}</li>
-</ul>
+- {{domxref("Node.firstChild")}}
+- {{domxref("Node.lastChild")}}
+- {{domxref("Node.nextSibling")}}
+- {{domxref("Node.previousSibling")}}
+- {{domxref("Element.children")}}

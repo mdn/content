@@ -2,47 +2,48 @@
 title: USBDevice.configuration
 slug: Web/API/USBDevice/configuration
 tags:
-- API
-- Configuration
-- Property
-- Reference
-- USB
-- USBDevice
-- WebUSB
-- WebUSB API
+  - API
+  - Configuration
+  - Property
+  - Reference
+  - USB
+  - USBDevice
+  - WebUSB
+  - WebUSB API
 browser-compat: api.USBDevice.configuration
 ---
-<p>{{SeeCompatTable}}{{APIRef("WebUSB API")}}</p>
+{{SeeCompatTable}}{{APIRef("WebUSB API")}}
 
-<p>The <strong><code>configuration</code></strong> read only property of the
-  {{domxref("USBDevice")}} interface returns a {{domxref("USBConfiguration")}} object for
-  the currently selected interface for a paired USB device.</p>
+The **`configuration`** read only property of the
+{{domxref("USBDevice")}} interface returns a {{domxref("USBConfiguration")}} object for
+the currently selected interface for a paired USB device.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var USBConfiguration = USBDevice.configuration</pre>
+```js
+var USBConfiguration = USBDevice.configuration
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("USBConfiguration")}} object.</p>
+A {{domxref("USBConfiguration")}} object.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example uses this property to test for the existence of a
-  USBConfiguration property to select a configuration before claiming an interface.</p>
+The following example uses this property to test for the existence of a
+USBConfiguration property to select a configuration before claiming an interface.
 
-<pre>async function connectDevice(usbDevice) {
-  await usbDevice.open();
-  if (usbDevice.configuration === null)
-    await usbDevice.selectConfiguration(1);
-  await usbDevice.claimInterface(0);
-}</pre>
+    async function connectDevice(usbDevice) {
+      await usbDevice.open();
+      if (usbDevice.configuration === null)
+        await usbDevice.selectConfiguration(1);
+      await usbDevice.claimInterface(0);
+    }
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

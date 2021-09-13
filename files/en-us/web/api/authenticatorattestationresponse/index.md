@@ -11,35 +11,30 @@ tags:
   - WebAuthn
 browser-compat: api.AuthenticatorAttestationResponse
 ---
-<div>{{APIRef("Web Authentication API")}}{{securecontext_header}}</div>
+{{APIRef("Web Authentication API")}}{{securecontext_header}}
 
-<p>The <strong><code>AuthenticatorAttestationResponse</code></strong> interface of the <a href="/en-US/docs/Web/API/Web_Authentication_API">Web Authentication API</a> is returned by {{domxref('CredentialsContainer.create()')}} when a {{domxref('PublicKeyCredential')}} is passed, and provides a cryptographic root of trust for the new key pair that has been generated. This response should be sent to the relying party's server to complete the creation of the credential.</p>
+The **`AuthenticatorAttestationResponse`** interface of the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) is returned by {{domxref('CredentialsContainer.create()')}} when a {{domxref('PublicKeyCredential')}} is passed, and provides a cryptographic root of trust for the new key pair that has been generated. This response should be sent to the relying party's server to complete the creation of the credential.
 
-<p>This interface inherites from {{domxref("AuthenticatorResponse")}}.</p>
+This interface inherites from {{domxref("AuthenticatorResponse")}}.
 
-<div class="note">
-<p><strong>Note:</strong> This interface is restricted to top-level contexts. Use from within an {{HTMLElement("iframe")}} element will not have any effect.</p>
-</div>
+> **Note:** This interface is restricted to top-level contexts. Use from within an {{HTMLElement("iframe")}} element will not have any effect.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt><code>AuthenticatorAttestationResponse.clientDataJSON</code> {{securecontext_inline}}{{readonlyinline}}</dt>
- <dd>Client data for the authentication, such as origin and challenge. The {{domxref("AuthenticatorResponse.clientDataJSON","clientDataJSON")}} property is inherited from the {{domxref("AuthenticatorResponse")}}.</dd>
- <dt>{{domxref("AuthenticatorAttestationResponse.attestationObject")}} {{securecontext_inline}}{{readonlyinline}}</dt>
- <dd>An {{jsxref("ArrayBuffer")}} containing authenticator data and an attestation statement for a newly-created key pair.</dd>
-</dl>
+- `AuthenticatorAttestationResponse.clientDataJSON` {{securecontext_inline}}{{readonlyinline}}
+  - : Client data for the authentication, such as origin and challenge. The {{domxref("AuthenticatorResponse.clientDataJSON","clientDataJSON")}} property is inherited from the {{domxref("AuthenticatorResponse")}}.
+- {{domxref("AuthenticatorAttestationResponse.attestationObject")}} {{securecontext_inline}}{{readonlyinline}}
+  - : An {{jsxref("ArrayBuffer")}} containing authenticator data and an attestation statement for a newly-created key pair.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("AuthenticatorAttestationResponse.getTransports()")}}{{securecontext_inline}}</dt>
- <dd>Returns an {{jsxref("Array")}} of strings describing which transport methods (e.g. <code>usb</code>, <code>nfc</code>) are believed to be supported with the authenticator. The array may be empty if the information is not available.</dd>
-</dl>
+- {{domxref("AuthenticatorAttestationResponse.getTransports()")}}{{securecontext_inline}}
+  - : Returns an {{jsxref("Array")}} of strings describing which transport methods (e.g. `usb`, `nfc`) are believed to be supported with the authenticator. The array may be empty if the information is not available.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var publicKey = {
+```js
+var publicKey = {
   challenge: /* from the server */,
   rp: {
     name: "Example CORP",
@@ -65,19 +60,18 @@ navigator.credentials.create({ publicKey })
     // (sending it back to the relying party server maybe?)
   }).catch(function (err) {
      console.error(err);
-  });</pre>
+  });
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("AuthenticatorAssertionResponse")}}: the interface for the type of response given when retrieving an existing credential</li>
- <li>{{domxref("AuthenticatorResponse")}}: the parent interface</li>
-</ul>
+- {{domxref("AuthenticatorAssertionResponse")}}: the interface for the type of response given when retrieving an existing credential
+- {{domxref("AuthenticatorResponse")}}: the parent interface

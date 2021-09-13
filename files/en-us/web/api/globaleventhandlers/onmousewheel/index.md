@@ -5,38 +5,35 @@ tags:
   - Deprecated
 browser-compat: api.GlobalEventHandlers.onmousewheel
 ---
-<p>{{ ApiRef("HTML DOM") }}{{Deprecated_Header}}{{ Non-standard_header() }}</p>
+{{ ApiRef("HTML DOM") }}{{Deprecated_Header}}{{ Non-standard_header() }}
 
-<p>The <strong>onmousewheel</strong> property sets and returns the <a
-        href="/en-US/docs/Web/Guide/Events/Event_handlers">event handler</a> for the
-    {{event("mousewheel")}} event.</p>
+The **onmousewheel** property sets and returns the [event handler](/en-US/docs/Web/Guide/Events/Event_handlers) for the
+{{event("mousewheel")}} event.
 
-<p>Instead of using this event, use the standard {{event("wheel")}} event.</p>
+Instead of using this event, use the standard {{event("wheel")}} event.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em><var>element</var></em>.onmousewheel = <em>handlerFunction</em>;
-var <em>handlerFunction</em> = <em><var>element</var></em>.onmousewheel;
-</pre>
+```js
+element.onmousewheel = handlerFunction;
+var handlerFunction = element.onmousewheel;
+```
 
-<p><code><em>handlerFunction</em></code> should be either <code>null</code> or a <a
-        href="/en-US/docs/Web/JavaScript/Reference/Functions">JavaScript function</a>
-    specifying the handler for the event.</p>
+`handlerFunction` should be either `null` or a [JavaScript function](/en-US/docs/Web/JavaScript/Reference/Functions)
+specifying the handler for the event.
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>See the <a href="/en-US/docs/Web/Guide/Events/Event_handlers">DOM event handlers</a>
-    page for information on working with <code>on...</code> handlers.</p>
+See the [DOM event handlers](/en-US/docs/Web/Guide/Events/Event_handlers)
+page for information on working with `on...` handlers.
 
-<p>The <code>mousewheel</code> event is fired asynchronously when a mouse wheel or similar
-    device is operated. It's represented by the <a
-        href="/en-US/docs/Web/API/MouseWheelEvent"
-        title="The MouseWheelEvent interface represents events that occur due to the user turning a mouse wheel."><code>MouseWheelEvent</code></a>
-    interface.</p>
+The `mousewheel` event is fired asynchronously when a mouse wheel or similar
+device is operated. It's represented by the [`MouseWheelEvent`](/en-US/docs/Web/API/MouseWheelEvent "The MouseWheelEvent interface represents events that occur due to the user turning a mouse wheel.")
+interface.
 
-<p>See the {{event("mousewheel")}} event documentation for more information about the
-    event.</p>
+See the {{event("mousewheel")}} event documentation for more information about the
+event.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

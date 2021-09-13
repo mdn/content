@@ -8,32 +8,30 @@ tags:
   - BackgroundFetchEvent
 browser-compat: api.BackgroundFetchEvent.BackgroundFetchEvent
 ---
-<div>{{DefaultAPISidebar("null")}}</div>
+{{DefaultAPISidebar("null")}}
 
-<p>The <strong><code>BackgroundFetchEvent()</code></strong> constructor creates a new {{domxref("BackgroundFetchEvent")}} object. This constructor is not typically used as the browser creates these objects itself and provides them to background fetch event callbacks.</p>
+The **`BackgroundFetchEvent()`** constructor creates a new {{domxref("BackgroundFetchEvent")}} object. This constructor is not typically used as the browser creates these objects itself and provides them to background fetch event callbacks.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">let BackgroundFetchEvent = new BackgroundFetchEvent(type, BackgroundFetchEventInit);</pre>
+    let BackgroundFetchEvent = new BackgroundFetchEvent(type, BackgroundFetchEventInit);
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>type</code></dt>
-  <dd>A {{domxref("DOMString","string")}} representing the name of the event. One of:
-    <ul>
-      <li><code>onbackgroundfetchabort</code></li>
-      <li><code>onbackgroundfetchclick</code></li>
-    </ul>
-  </dd>
-  <dt><code>BackgroundFetchEventInit</code></dt>
-  <dd>A {{domxref("BackgroundFetchRegistration")}}.</dd>
-</dl>
+- `type`
 
-<h2 id="Specifications">Specifications</h2>
+  - : A {{domxref("DOMString","string")}} representing the name of the event. One of:
+
+    - `onbackgroundfetchabort`
+    - `onbackgroundfetchclick`
+
+- `BackgroundFetchEventInit`
+  - : A {{domxref("BackgroundFetchRegistration")}}.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

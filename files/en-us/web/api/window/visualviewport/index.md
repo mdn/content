@@ -2,28 +2,28 @@
 title: Window.visualViewport
 slug: Web/API/Window/visualViewport
 tags:
-- API
-- Property
-- Reference
-- Visual Viewport API
-- VisualViewport
-- Window
+  - API
+  - Property
+  - Reference
+  - Visual Viewport API
+  - VisualViewport
+  - Window
 browser-compat: api.Window.visualViewport
 ---
-<p>{{APIRef("Visual Viewport")}}</p>
+{{APIRef("Visual Viewport")}}
 
-<p>The <strong><code>visualViewport</code></strong> read-only property of the
-  {{domxref("Window")}} interface returns a {{domxref("VisualViewport")}} object
-  representing the visual viewport for a given window.</p>
+The **`visualViewport`** read-only property of the
+{{domxref("Window")}} interface returns a {{domxref("VisualViewport")}} object
+representing the visual viewport for a given window.
 
-<h2 id="Value">Value</h2>
+## Value
 
-<p>A {{domxref("VisualViewport")}} object.</p>
+A {{domxref("VisualViewport")}} object.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

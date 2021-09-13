@@ -2,34 +2,33 @@
 title: msRealTime
 slug: Web/API/MsRealTime
 tags:
-- msRealTime
+  - msRealTime
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>{{Non-standard_header()}}</p>
+{{Non-standard_header()}}
 
-<p><code><strong>msRealTime</strong></code> is a read/write property which specifies
-  whether or not to enable low-latency playback on the media element.</p>
+**`msRealTime`** is a read/write property which specifies
+whether or not to enable low-latency playback on the media element.
 
-<p>This proprietary property is specific to Internet Explorer and Microsoft Edge.</p>
+This proprietary property is specific to Internet Explorer and Microsoft Edge.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 ptr = object.msRealTime;
+```
 
-</pre>
+## Value
 
-<h2 id="Value">Value</h2>
+Boolean value set to _true_ indicates that low-latency playback will be enabled
+on the media element. Low-latency playback is useful in communication and some gaming
+scenarios, but is more demanding on power consumption and less reliable for smooth media
+playback.
 
-<p>Boolean value set to <em>true</em> indicates that low-latency playback will be enabled
-  on the media element. Low-latency playback is useful in communication and some gaming
-  scenarios, but is more demanding on power consumption and less reliable for smooth media
-  playback.</p>
+You must set the `msRealTime` before setting the `src` property
+in code.
 
-<p>You must set the <code>msRealTime</code> before setting the <code>src</code> property
-  in code.</p>
-
-<p><code>msRealTime</code> should not be used in non-real-time or non-communication
-  scenarios, such as audio and/or video playback, as this can affects playback startup
-  latency of audio and video playback.</p>
+`msRealTime` should not be used in non-real-time or non-communication
+scenarios, such as audio and/or video playback, as this can affects playback startup
+latency of audio and video playback.

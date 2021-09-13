@@ -2,70 +2,69 @@
 title: MediaStream.onaddtrack
 slug: Web/API/MediaStream/onaddtrack
 tags:
-- API
-- Event Handler
-- Media Streams API
-- MediaStream
-- Property
-- Reference
+  - API
+  - Event Handler
+  - Media Streams API
+  - MediaStream
+  - Property
+  - Reference
 browser-compat: api.MediaStream.onaddtrack
 ---
-<p>{{APIRef("Media Streams API")}}</p>
+{{APIRef("Media Streams API")}}
 
-<p>The <strong><code>MediaStream.onaddtrack</code></strong>
-    property is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> which specifies a function to be called
-    when the {{event("addtrack")}} event occurs on a {{domxref("MediaStream")}} instance.
-    This happens when a new track of any kind is added to the media stream.</p>
+The **`MediaStream.onaddtrack`**
+property is an [event handler](/en-US/docs/Web/Events/Event_handlers) which specifies a function to be called
+when the {{event("addtrack")}} event occurs on a {{domxref("MediaStream")}} instance.
+This happens when a new track of any kind is added to the media stream.
 
-<p>This
-  event is fired when the browser adds a track to the stream (such as when a
-  {{domxref("RTCPeerConnection")}} is renegotiated or a stream being captured using
-  {{domxref("HTMLMediaElement.captureStream()")}} gets a new set of tracks because the
-  media element being captured loaded a new source.</p>
+This
+event is fired when the browser adds a track to the stream (such as when a
+{{domxref("RTCPeerConnection")}} is renegotiated or a stream being captured using
+{{domxref("HTMLMediaElement.captureStream()")}} gets a new set of tracks because the
+media element being captured loaded a new source.
 
-<p>The <code>addtrack</code> event does <em>not</em> get fired when JavaScript code
-  explicitly adds tracks to the stream (by calling {{domxref("MediaStream.addTrack",
-  "addTrack()")}}).</p>
+The `addtrack` event does _not_ get fired when JavaScript code
+explicitly adds tracks to the stream (by calling {{domxref("MediaStream.addTrack",
+  "addTrack()")}}).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>MediaStream</em>.onaddtrack = <em>eventHandler</em>;
-</pre>
+```js
+MediaStream.onaddtrack = eventHandler;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>This should be set to a function which you provide that accepts as input a
-  {{domxref("MediaStreamTrackEvent")}} object representing the {{event("addtrack")}} event
-  which has occurred. The {{domxref("MediaStreamTrack")}} representing the track which was
-  added is specified in the event's {{domxref("MediaStreamTrackEvent.track", "track")}}
-  property.</p>
+This should be set to a function which you provide that accepts as input a
+{{domxref("MediaStreamTrackEvent")}} object representing the {{event("addtrack")}} event
+which has occurred. The {{domxref("MediaStreamTrack")}} representing the track which was
+added is specified in the event's {{domxref("MediaStreamTrackEvent.track", "track")}}
+property.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example adds a listener which, when a new track is added to the stream, appends a
-  new item to a list of tracks; the new item shows the track's <code>kind</code>
-  (<code>"audio"</code> or <code>"video"</code>) and <code>label</code>.</p>
+This example adds a listener which, when a new track is added to the stream, appends a
+new item to a list of tracks; the new item shows the track's `kind`
+(`"audio"` or `"video"`) and `label`.
 
-<pre class="brush: js">stream.onaddtrack = function(event) {
+```js
+stream.onaddtrack = function(event) {
   let trackList = document.getElementById("tracks");
   let label = document.createElement("li");
 
   label.innerHTML = event.track.kind + ": " + event.track.label;
   trackList.appendChild(label);
 };
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{event("addtrack")}} event and its type, {{domxref("MediaStreamTrackEvent")}}.
-  </li>
-</ul>
+- The {{event("addtrack")}} event and its type, {{domxref("MediaStreamTrackEvent")}}.

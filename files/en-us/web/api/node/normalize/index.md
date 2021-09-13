@@ -10,18 +10,20 @@ tags:
   - Reference
 browser-compat: api.Node.normalize
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>Node.normalize()</strong></code> method puts the specified node and all of its sub-tree into a "normalized" form. In a normalized sub-tree, no text nodes in the sub-tree are empty and there are no adjacent text nodes.</p>
+The **`Node.normalize()`** method puts the specified node and all of its sub-tree into a "normalized" form. In a normalized sub-tree, no text nodes in the sub-tree are empty and there are no adjacent text nodes.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>element</em>.normalize();
-</pre>
+```js
+element.normalize();
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">let wrapper = document.createElement("div");
+```js
+let wrapper = document.createElement("div");
 
 wrapper.appendChild( document.createTextNode("Part 1 ") );
 wrapper.appendChild( document.createTextNode("Part 2 ") );
@@ -33,18 +35,17 @@ wrapper.appendChild( document.createTextNode("Part 2 ") );
 wrapper.normalize();
 
 // Now, wrapper.childNodes.length === 1
-// wrapper.childNodes[0].textContent === "Part 1 Part 2 "</pre>
+// wrapper.childNodes[0].textContent === "Part 1 Part 2 "
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("Text.splitText()")}}</li>
-</ul>
+- {{domxref("Text.splitText()")}}

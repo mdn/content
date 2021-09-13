@@ -2,47 +2,46 @@
 title: CustomElementRegistry.upgrade()
 slug: Web/API/CustomElementRegistry/upgrade
 tags:
-- API
-- CustomElementRegistry
-- Method
-- Reference
-- Upgrade
-- Web Components
-- custom elements
+  - API
+  - CustomElementRegistry
+  - Method
+  - Reference
+  - Upgrade
+  - Web Components
+  - custom elements
 browser-compat: api.CustomElementRegistry.upgrade
 ---
-<p>{{APIRef("CustomElementRegistry")}}</p>
+{{APIRef("CustomElementRegistry")}}
 
-<p>The <code><strong>upgrade()</strong></code> method of the
-  {{domxref("CustomElementRegistry")}} interface upgrades all shadow-containing custom
-  elements in a {{domxref("Node")}} subtree, even before they are connected to the main
-  document.</p>
+The **`upgrade()`** method of the
+{{domxref("CustomElementRegistry")}} interface upgrades all shadow-containing custom
+elements in a {{domxref("Node")}} subtree, even before they are connected to the main
+document.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">customElements.upgrade(<em>root</em>);
-</pre>
+```js
+customElements.upgrade(root);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>root</code></dt>
-  <dd>A {{domxref("Node")}} instance with shadow-containing descendant elements that are
+- `root`
+  - : A {{domxref("Node")}} instance with shadow-containing descendant elements that are
     to be upgraded. If there are no descendant elements that can be upgraded, no error is
-    thrown.</dd>
-</dl>
+    thrown.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Void.</p>
+Void.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Taken from the <a
-    href="https://html.spec.whatwg.org/multipage/custom-elements.html#dom-customelementregistry-upgrade">HTML
-    spec</a>:</p>
+Taken from the [HTML
+spec](https://html.spec.whatwg.org/multipage/custom-elements.html#dom-customelementregistry-upgrade):
 
-<pre class="brush: js">const el = document.createElement("spider-man");
+```js
+const el = document.createElement("spider-man");
 
 class SpiderMan extends HTMLElement {}
 customElements.define("spider-man", SpiderMan);
@@ -51,12 +50,12 @@ console.assert(!(el instanceof SpiderMan)); // not yet upgraded
 
 customElements.upgrade(el);
 console.assert(el instanceof SpiderMan);    // upgraded!
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

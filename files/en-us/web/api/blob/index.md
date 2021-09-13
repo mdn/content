@@ -11,78 +11,77 @@ tags:
   - data
 browser-compat: api.Blob
 ---
-<div>{{APIRef("File API")}}</div>
+{{APIRef("File API")}}
 
-<p>The <strong><code>Blob</code></strong> object represents a blob, which is a file-like object of immutable, raw data; they can be read as text or binary data, or converted into a {{DOMxRef("ReadableStream")}} so its methods can be used for processing the data.</p>
+The **`Blob`** object represents a blob, which is a file-like object of immutable, raw data; they can be read as text or binary data, or converted into a {{DOMxRef("ReadableStream")}} so its methods can be used for processing the data.
 
-<p>Blobs can represent data that isn't necessarily in a JavaScript-native format. The {{DOMxRef("File")}} interface is based on <code>Blob</code>, inheriting blob functionality and expanding it to support files on the user's system.</p>
+Blobs can represent data that isn't necessarily in a JavaScript-native format. The {{DOMxRef("File")}} interface is based on `Blob`, inheriting blob functionality and expanding it to support files on the user's system.
 
-<h2 id="Using_blobs">Using blobs</h2>
+## Using blobs
 
-<p>To construct a <code>Blob</code> from other non-blob objects and data, use the {{DOMxRef("Blob.Blob", "Blob()")}} constructor. To create a blob that contains a subset of another blob's data, use the {{DOMxRef("Blob.slice()", "slice()")}} method. To obtain a <code>Blob</code> object for a file on the user's file system, see the {{DOMxRef("File")}} documentation.</p>
+To construct a `Blob` from other non-blob objects and data, use the {{DOMxRef("Blob.Blob", "Blob()")}} constructor. To create a blob that contains a subset of another blob's data, use the {{DOMxRef("Blob.slice()", "slice()")}} method. To obtain a `Blob` object for a file on the user's file system, see the {{DOMxRef("File")}} documentation.
 
-<p>The APIs accepting <code>Blob</code> objects are also listed in the {{DOMxRef("File")}} documentation.</p>
+The APIs accepting `Blob` objects are also listed in the {{DOMxRef("File")}} documentation.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{DOMxRef("Blob.Blob", "Blob()")}}</dt>
- <dd>Returns a newly created <code>Blob</code> object which contains a concatenation of all of the data in the array passed into the constructor.</dd>
-</dl>
+- {{DOMxRef("Blob.Blob", "Blob()")}}
+  - : Returns a newly created `Blob` object which contains a concatenation of all of the data in the array passed into the constructor.
 
-<h2 id="Instance_properties">Instance properties</h2>
+## Instance properties
 
-<dl>
- <dt>{{DOMxRef("Blob.prototype.size")}} {{readonlyinline}}</dt>
- <dd>The size, in bytes, of the data contained in the <code>Blob</code> object.</dd>
- <dt>{{DOMxRef("Blob.prototype.type")}} {{readonlyinline}}</dt>
- <dd>A string indicating the MIME type of the data contained in the <code>Blob</code>. If the type is unknown, this string is empty.</dd>
-</dl>
+- {{DOMxRef("Blob.prototype.size")}} {{readonlyinline}}
+  - : The size, in bytes, of the data contained in the `Blob` object.
+- {{DOMxRef("Blob.prototype.type")}} {{readonlyinline}}
+  - : A string indicating the MIME type of the data contained in the `Blob`. If the type is unknown, this string is empty.
 
-<h2 id="Instance_methods">Instance methods</h2>
+## Instance methods
 
-<dl>
- <dt>{{DOMxRef("Blob.prototype.arrayBuffer()")}}</dt>
- <dd>Returns a promise that resolves with an {{jsxref("ArrayBuffer")}} containing the entire contents of the <code>Blob</code> as binary data.</dd>
- <dt>{{DOMxRef("Blob.prototype.slice()")}}</dt>
- <dd>Returns a new <code>Blob</code> object containing the data in the specified range of bytes of the blob on which it's called.</dd>
- <dt>{{DOMxRef("Blob.prototype.stream()")}}</dt>
- <dd>Returns a {{DOMxRef("ReadableStream")}} that can be used to read the contents of the <code>Blob</code>.</dd>
- <dt>{{DOMxRef("Blob.prototype.text()")}}</dt>
- <dd>Returns a promise that resolves with a {{DOMxRef("USVString")}} containing the entire contents of the <code>Blob</code> interpreted as UTF-8 text.</dd>
-</dl>
+- {{DOMxRef("Blob.prototype.arrayBuffer()")}}
+  - : Returns a promise that resolves with an {{jsxref("ArrayBuffer")}} containing the entire contents of the `Blob` as binary data.
+- {{DOMxRef("Blob.prototype.slice()")}}
+  - : Returns a new `Blob` object containing the data in the specified range of bytes of the blob on which it's called.
+- {{DOMxRef("Blob.prototype.stream()")}}
+  - : Returns a {{DOMxRef("ReadableStream")}} that can be used to read the contents of the `Blob`.
+- {{DOMxRef("Blob.prototype.text()")}}
+  - : Returns a promise that resolves with a {{DOMxRef("USVString")}} containing the entire contents of the `Blob` interpreted as UTF-8 text.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Creating_a_blob">Creating a blob</h3>
+### Creating a blob
 
-<p>The {{DOMxRef("Blob.Blob", "Blob()")}} constructor can create blobs from other objects. For example, to construct a blob from a JSON string:</p>
+The {{DOMxRef("Blob.Blob", "Blob()")}} constructor can create blobs from other objects. For example, to construct a blob from a JSON string:
 
-<pre class="brush: js">const obj = {hello: 'world'};
-const blob = new Blob([JSON.stringify(obj, null, 2)], {type : 'application/json'});</pre>
+```js
+const obj = {hello: 'world'};
+const blob = new Blob([JSON.stringify(obj, null, 2)], {type : 'application/json'});
+```
 
-<h3 id="Creating_a_URL_representing_the_contents_of_a_typed_array">Creating a URL representing the contents of a typed array</h3>
+### Creating a URL representing the contents of a typed array
 
-<p>The following code creates a JavaScript <a href="/en-US/docs/Web/JavaScript/Typed_arrays">typed array</a> and creates a new <code>Blob</code> containing the typed array's data. It then calls {{DOMxRef("URL.createObjectURL()")}} to convert the blob into a {{glossary("URL")}}.</p>
+The following code creates a JavaScript [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) and creates a new `Blob` containing the typed array's data. It then calls {{DOMxRef("URL.createObjectURL()")}} to convert the blob into a {{glossary("URL")}}.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;This example creates a typed array containing the ASCII codes
+```html
+<p>This example creates a typed array containing the ASCII codes
    for the space character through the letter Z, then converts it
    to an object URL. A link to open that object URL is created.
-   Click the link to see the decoded object URL.&lt;/p&gt;</pre>
+   Click the link to see the decoded object URL.</p>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<p>The main piece of this code for example purposes is the <code>typedArrayToURL()</code> function, which creates a <code>Blob</code> from the given typed array and returns an object URL for it. Having converted the data into an object URL, it can be used in a number of ways, including as the value of the {{HTMLElement("img")}} element's {{htmlattrxref("src", "img")}} attribute (assuming the data contains an image, of course).</p>
+The main piece of this code for example purposes is the `typedArrayToURL()` function, which creates a `Blob` from the given typed array and returns an object URL for it. Having converted the data into an object URL, it can be used in a number of ways, including as the value of the {{HTMLElement("img")}} element's {{htmlattrxref("src", "img")}} attribute (assuming the data contains an image, of course).
 
-<pre class="brush: js">function typedArrayToURL(typedArray, mimeType) {
+```js
+function typedArrayToURL(typedArray, mimeType) {
   return URL.createObjectURL(new Blob([typedArray.buffer], {type: mimeType}))
 }
 
 const bytes = new Uint8Array(59);
 
-for(let i = 0; i &lt; 59; i++) {
+for(let i = 0; i < 59; i++) {
   bytes[i] = 32 + i;
 }
 
@@ -92,49 +91,53 @@ const link = document.createElement('a');
 link.href = url;
 link.innerText = 'Open the array URL';
 
-document.body.appendChild(link);</pre>
+document.body.appendChild(link);
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>Click the link in the example to see the browser decode the object URL.</p>
+Click the link in the example to see the browser decode the object URL.
 
-<p>{{EmbedLiveSample("Creating_a_URL_representing_the_contents_of_a_typed_array", 600, 200)}}</p>
+{{EmbedLiveSample("Creating_a_URL_representing_the_contents_of_a_typed_array", 600, 200)}}
 
-<h3 id="Extracting_data_from_a_blob">Extracting data from a blob</h3>
+### Extracting data from a blob
 
-<p>One way to read content from a <code>Blob</code> is to use a {{DOMxRef("FileReader")}}. The following code reads the content of a <code>Blob</code> as a typed array:</p>
+One way to read content from a `Blob` is to use a {{DOMxRef("FileReader")}}. The following code reads the content of a `Blob` as a typed array:
 
-<pre class="brush: js">const reader = new FileReader();
-reader.addEventListener('loadend', () =&gt; {
+```js
+const reader = new FileReader();
+reader.addEventListener('loadend', () => {
    // reader.result contains the contents of blob as a typed array
 });
-reader.readAsArrayBuffer(blob);</pre>
+reader.readAsArrayBuffer(blob);
+```
 
-<p>Another way to read content from a <code>Blob</code> is to use a {{domxref("Response")}}. The following code reads the content of a <code>Blob</code> as text:</p>
+Another way to read content from a `Blob` is to use a {{domxref("Response")}}. The following code reads the content of a `Blob` as text:
 
-<pre class="brush: js">const text = await (new Response(blob)).text();
-</pre>
+```js
+const text = await (new Response(blob)).text();
+```
 
-<p>Or by using {{DOMxRef("Blob.prototype.text()")}}:</p>
+Or by using {{DOMxRef("Blob.prototype.text()")}}:
 
-<pre class="brush: js">const text = await blob.text();</pre>
+```js
+const text = await blob.text();
+```
 
-<p>By using other methods of <code>FileReader</code>, it is possible to read the contents of a Blob as a string or a data URL.</p>
+By using other methods of `FileReader`, it is possible to read the contents of a Blob as a string or a data URL.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{DOMxRef("BlobBuilder")}}</li>
- <li>{{DOMxRef("FileReader")}}</li>
- <li>{{DOMxRef("File")}}</li>
- <li>{{DOMxRef("URL.createObjectURL")}}</li>
- <li><a href="/en-US/docs/Web/API/File/Using_files_from_web_applications">Using files from web applications</a></li>
-</ul>
+- {{DOMxRef("BlobBuilder")}}
+- {{DOMxRef("FileReader")}}
+- {{DOMxRef("File")}}
+- {{DOMxRef("URL.createObjectURL")}}
+- [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications)

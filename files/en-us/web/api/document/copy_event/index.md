@@ -11,51 +11,51 @@ tags:
   - copy
 browser-compat: api.Document.copy_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <strong><code>copy</code></strong> event fires when the user initiates a copy action through the browser's user interface.</p>
+The **`copy`** event fires when the user initiates a copy action through the browser's user interface.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("ClipboardEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("HTMLElement/oncopy", "oncopy")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("ClipboardEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>{{domxref("HTMLElement/oncopy", "oncopy")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>The original target for this event is the {{domxref("Element")}} that was the intended target of the copy action. You can listen for this event on the {{domxref("Document")}} interface to handle it in the capture or bubbling phases. For full details on this event please see the page on the <a href="/en-US/docs/Web/API/Element/copy_event">Element: copy event</a>.</p>
+The original target for this event is the {{domxref("Element")}} that was the intended target of the copy action. You can listen for this event on the {{domxref("Document")}} interface to handle it in the capture or bubbling phases. For full details on this event please see the page on the [Element: copy event](/en-US/docs/Web/API/Element/copy_event).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">document.addEventListener('copy', (event) =&gt; {
+```js
+document.addEventListener('copy', (event) => {
     console.log('copy action initiated')
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Related events: {{domxref("Document/cut_event", "cut")}}, {{domxref("Document/paste_event", "paste")}}</li>
- <li>This event on {{domxref("Element")}} targets: {{domxref("Element/copy_event", "copy")}}</li>
- <li>This event on {{domxref("Window")}} targets: {{domxref("Window/copy_event", "copy")}}</li>
-</ul>
+- Related events: {{domxref("Document/cut_event", "cut")}}, {{domxref("Document/paste_event", "paste")}}
+- This event on {{domxref("Element")}} targets: {{domxref("Element/copy_event", "copy")}}
+- This event on {{domxref("Window")}} targets: {{domxref("Window/copy_event", "copy")}}

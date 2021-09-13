@@ -2,62 +2,66 @@
 title: GlobalEventHandlers.onmousemove
 slug: Web/API/GlobalEventHandlers/onmousemove
 tags:
-- API
-- Event Handler
-- GlobalEventHandlers
-- HTML DOM
-- Property
-- Reference
+  - API
+  - Event Handler
+  - GlobalEventHandlers
+  - HTML DOM
+  - Property
+  - Reference
 browser-compat: api.GlobalEventHandlers.onmousemove
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p>The <code><strong>onmousemove</strong></code> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> that
-  processes {{event("mousemove")}} events.</p>
+The **`onmousemove`** property of the
+{{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
+processes {{event("mousemove")}} events.
 
-<p>The <code>mousemove</code> event fires when the user moves the mouse.</p>
+The `mousemove` event fires when the user moves the mouse.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>target</em>.onmousemove = <em>functionRef</em>;
-</pre>
+```js
+target.onmousemove = functionRef;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p><code>functionRef</code> is a function name or a <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function
-    expression</a>. The function receives a {{domxref("MouseEvent")}} object as its sole
-  argument.</p>
+`functionRef` is a function name or a [function
+expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("MouseEvent")}} object as its sole
+argument.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Tooltips">Tooltips</h3>
+### Tooltips
 
-<p>This example creates link tooltips that follow your mouse. It uses the
-  <code>onmousemove</code>, {{domxref("GlobalEventHandlers.onmouseover", "onmouseover")}},
-  and {{domxref("GlobalEventHandlers.onmouseout", "onmouseout")}} event handlers.</p>
+This example creates link tooltips that follow your mouse. It uses the
+`onmousemove`, {{domxref("GlobalEventHandlers.onmouseover", "onmouseover")}},
+and {{domxref("GlobalEventHandlers.onmouseout", "onmouseout")}} event handlers.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre
-  class="brush: html">&lt;p&gt;&lt;a href="#" data-tooltip="First link"&gt;See a tooltip here &amp;hellip;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="#" data-tooltip="Second link"&gt;&amp;hellip; or here!&lt;/a&gt;&lt;/p&gt;</pre>
+```html
+<p><a href="#" data-tooltip="First link">See a tooltip here &hellip;</a></p>
+<p><a href="#" data-tooltip="Second link">&hellip; or here!</a></p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.tooltip {
+```css
+.tooltip {
   position: absolute;
   z-index: 9999;
   padding: 6px;
   background: #ffd;
   border: 1px #886 solid;
   border-radius: 5px;
-}</pre>
+}
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const tooltip = new (function() {
+```js
+const tooltip = new (function() {
   const node = document.createElement('div');
   node.className = 'tooltip';
   node.setAttribute('hidden', '');
@@ -80,33 +84,31 @@ browser-compat: api.GlobalEventHandlers.onmousemove
 
 const links = document.querySelectorAll('a');
 
-links.forEach(link =&gt; {
+links.forEach(link => {
   link.onmouseover = tooltip.show;
   link.onmousemove = tooltip.follow;
   link.onmouseout = tooltip.hide;
-});</pre>
+});
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Tooltips")}}</p>
+{{EmbedLiveSample("Tooltips")}}
 
-<h3 id="Draggable_elements">Draggable elements</h3>
+### Draggable elements
 
-<p>We also have an example available showing the use of the <code>onmousemove</code> event
-  handler with draggable objects — <a
-    href="https://mdn.mozillademos.org/files/5031/draggable_elements.html">view the
-    example in action</a>.</p>
+We also have an example available showing the use of the `onmousemove` event
+handler with draggable objects — [view the
+example in action](https://mdn.mozillademos.org/files/5031/draggable_elements.html).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{event("mousemove")}} event</li>
-</ul>
+- {{event("mousemove")}} event

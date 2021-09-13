@@ -7,46 +7,41 @@ tags:
   - Web NFC
 browser-compat: api.NDEFReader
 ---
-<p>{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}</p>
+{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 
-<p>The <strong><code>NDEFReader</code></strong> interface of the <a href="/en-US/docs/Web/API/Web_NFC_API">Web NFC API</a> is used to read from and write data to compatible NFC devices, e.g. NFC tags supporting NDEF, when these devices are within the reader's magnetic induction field.</p>
+The **`NDEFReader`** interface of the [Web NFC API](/en-US/docs/Web/API/Web_NFC_API) is used to read from and write data to compatible NFC devices, e.g. NFC tags supporting NDEF, when these devices are within the reader's magnetic induction field.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{DOMxRef("NDEFReader.NDEFReader", "NDEFReader()")}} {{Experimental_Inline}}</dt>
- <dd>Returns a new <code>NDEFReader</code> object.</dd>
-</dl>
+- {{DOMxRef("NDEFReader.NDEFReader", "NDEFReader()")}} {{Experimental_Inline}}
+  - : Returns a new `NDEFReader` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{DOMxRef("EventTarget")}}.</em></p>
+_Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
 
-<dl>
- <dt>{{DOMxRef("NDEFReader.onreading")}} {{Experimental_Inline}}</dt>
- <dd>An <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> called when the <code>reading</code> event is raised.</dd>
- <dt>{{DOMxRef("NDEFReader.onreadingerror")}} {{Experimental_Inline}}</dt>
- <dd>An <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> called when when the <code>readingerror</code> event is raised. This occurs when a tag is in proximity of a reading device, but cannot be read.</dd>
-</dl>
+- {{DOMxRef("NDEFReader.onreading")}} {{Experimental_Inline}}
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called when the `reading` event is raised.
+- {{DOMxRef("NDEFReader.onreadingerror")}} {{Experimental_Inline}}
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called when when the `readingerror` event is raised. This occurs when a tag is in proximity of a reading device, but cannot be read.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>The <code>NDEFReader</code> interface inherits the methods of {{domxref("EventTarget")}}, its parent interface.</em></p>
+_The `NDEFReader` interface inherits the methods of {{domxref("EventTarget")}}, its parent interface._
 
-<dl>
- <dt>{{DOMxRef("NDEFReader.scan", "NDEFReader.scan()")}} {{Experimental_Inline}}</dt>
- <dd>Activates a reading device and returns a {{jsxref("Promise")}} that either resolves when an NFC tag is read or rejects if a hardware or permission error is encountered. This method triggers a permission prompt if the "nfc" permission has not been previously granted.</dd>
- <dt>{{DOMxRef("NDEFReader.write", "NDEFReader.write()")}} {{Experimental_Inline}}</dt>
- <dd>Attempts to write an NDEF message to a tag and returns a {{jsxref("Promise")}} that either resolves when a message has been written to the tag or rejects if a hardware or permission error is encountered. This method triggers a permission prompt if the "nfc" permission has not been previously granted.</dd>
-</dl>
+- {{DOMxRef("NDEFReader.scan", "NDEFReader.scan()")}} {{Experimental_Inline}}
+  - : Activates a reading device and returns a {{jsxref("Promise")}} that either resolves when an NFC tag is read or rejects if a hardware or permission error is encountered. This method triggers a permission prompt if the "nfc" permission has not been previously granted.
+- {{DOMxRef("NDEFReader.write", "NDEFReader.write()")}} {{Experimental_Inline}}
+  - : Attempts to write an NDEF message to a tag and returns a {{jsxref("Promise")}} that either resolves when a message has been written to the tag or rejects if a hardware or permission error is encountered. This method triggers a permission prompt if the "nfc" permission has not been previously granted.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3>Handling initial reads while writing</h3>
+### Handling initial reads while writing
 
-<p>The example below shows how to coordinate between a common reading handler and one used specifically for a single write. In order to write, a tag needs to be found and read. This gives you the ability to check whether it is actually a tag that you want to write to. That's why it's recommended that you call <code>write()</code> from a reading event.</p>
+The example below shows how to coordinate between a common reading handler and one used specifically for a single write. In order to write, a tag needs to be found and read. This gives you the ability to check whether it is actually a tag that you want to write to. That's why it's recommended that you call `write()` from a reading event.
 
-<pre class="brush: js">const ndef = new NDEFReader();
+```js
+const ndef = new NDEFReader();
 let ignoreRead = false;
 
 ndef.onreading = (event) => {
@@ -73,12 +68,13 @@ try {
   console.log("We wrote to a tag!")
 } catch(err) {
   console.error("Something went wrong", err);
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -3,27 +3,28 @@ title: PaymentRequestEvent.methodData
 slug: Web/API/PaymentRequestEvent/methodData
 browser-compat: api.PaymentRequestEvent.methodData
 ---
-<p>{{SeeCompatTable}}{{APIRef("Payment Request API")}}</p>
+{{SeeCompatTable}}{{APIRef("Payment Request API")}}
 
-<p>The <strong><code>methodData</code></strong> read-only property of the
-    {{domxref("PaymentRequestEvent")}} interface returns an array of
-    {{domxref("PaymentMethodData")}} objects containing payment method identifiers for the
-    payment methods that the web site accepts and any associated payment method specific
-    data.</p>
+The **`methodData`** read-only property of the
+{{domxref("PaymentRequestEvent")}} interface returns an array of
+{{domxref("PaymentMethodData")}} objects containing payment method identifiers for the
+payment methods that the web site accepts and any associated payment method specific
+data.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-    class="brush: js">var <em>methodData</em>[] = <em>paymentRequestEvent</em>.methodData</pre>
+```js
+var methodData[] = paymentRequestEvent.methodData
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An array of {{domxref("PaymentMethodData")}} objects.</p>
+An array of {{domxref("PaymentMethodData")}} objects.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,62 +2,48 @@
 title: LockedFile.readAsArrayBuffer()
 slug: Web/API/LockedFile/readAsArrayBuffer
 tags:
-- API
-- Files
-- Method
-- Non Standard
-- Reference
-- WebAPI
+  - API
+  - Files
+  - Method
+  - Non Standard
+  - Reference
+  - WebAPI
 ---
-<p>{{APIRef("File System API")}}{{non-standard_header}}</p>
+{{APIRef("File System API")}}{{non-standard_header}}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>The <code>readAsArrayBuffer</code> method is used to read the content of the
-  {{domxref("LockedFile")}} object and provide the result of that reading as an
-  {{jsxref("ArrayBuffer")}}. In many ways, it performs like the
-  {{domxref("FileReader.readAsArrayBuffer()")}} method.</p>
+The `readAsArrayBuffer` method is used to read the content of the
+{{domxref("LockedFile")}} object and provide the result of that reading as an
+{{jsxref("ArrayBuffer")}}. In many ways, it performs like the
+{{domxref("FileReader.readAsArrayBuffer()")}} method.
 
-<p>The reading operation starts at the position given by the
-  {{domxref("LockedFile.location")}} property.</p>
+The reading operation starts at the position given by the
+{{domxref("LockedFile.location")}} property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var request = <em>instanceOfLockedFile</em>.readAsArrayBuffer(size);</pre>
+```js
+var request = instanceOfLockedFile.readAsArrayBuffer(size);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>size</code></dt>
-  <dd>A number representing the number of bytes to read in the file.</dd>
-</dl>
+- `size`
+  - : A number representing the number of bytes to read in the file.
 
-<h3 id="Return">Return</h3>
+### Return
 
-<p>A {{domxref("FileRequest")}} object to handle the success or failure of the operation.
-  In case of success, the request's <code>result</code> is an {{jsxref("ArrayBuffer")}}
-  representing the data that have been read.</p>
+A {{domxref("FileRequest")}} object to handle the success or failure of the operation.
+In case of success, the request's `result` is an {{jsxref("ArrayBuffer")}}
+representing the data that have been read.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('FileSystem')}}</td>
-      <td>{{Spec2('FileSystem')}}</td>
-      <td>Draft proposal</td>
-    </tr>
-  </tbody>
-</table>
+| Specification                        | Status                           | Comment        |
+| ------------------------------------ | -------------------------------- | -------------- |
+| {{SpecName('FileSystem')}} | {{Spec2('FileSystem')}} | Draft proposal |
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("LockedFile")}}</li>
-</ul>
+- {{domxref("LockedFile")}}

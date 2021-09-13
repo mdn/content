@@ -2,56 +2,61 @@
 title: DOMTokenList.length
 slug: Web/API/DOMTokenList/length
 tags:
-- API
-- DOM
-- DOMTokenList
-- Property
-- Reference
-- length
+  - API
+  - DOM
+  - DOMTokenList
+  - Property
+  - Reference
+  - length
 browser-compat: api.DOMTokenList.length
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>length</code></strong> read-only property of the
-  {{domxref("DOMTokenList")}} interface is an <code>integer</code> representing the number
-  of objects stored in the object.</p>
+The **`length`** read-only property of the
+{{domxref("DOMTokenList")}} interface is an `integer` representing the number
+of objects stored in the object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>tokenList</var>.length;</pre>
+```js
+tokenList.length;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An <code>integer</code>.</p>
+An `integer`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the following example we retrieve the list of classes set on a
-  {{htmlelement("span")}} element as a <code>DOMTokenList</code> using
-  {{domxref("Element.classList")}}, then write the length of the list to the
-  <code>&lt;span&gt;</code>'s {{domxref("Node.textContent")}}.</p>
+In the following example we retrieve the list of classes set on a
+{{htmlelement("span")}} element as a `DOMTokenList` using
+{{domxref("Element.classList")}}, then write the length of the list to the
+`<span>`'s {{domxref("Node.textContent")}}.
 
-<p>First, the HTML:</p>
+First, the HTML:
 
-<pre class="brush: html">&lt;span class="a b c"&gt;&lt;/span&gt;</pre>
+```html
+<span class="a b c"></span>
+```
 
-<p>Now the JavaScript:</p>
+Now the JavaScript:
 
-<pre class="brush: js">let span = document.querySelector("span");
+```js
+let span = document.querySelector("span");
 let classes = span.classList;
 let length = classes.length;
 
 span.textContent = `classList length = ${length}`;
-</pre>
+```
 
-<p>The output looks like this:</p>
+The output looks like this:
 
-<p>{{ EmbedLiveSample('Examples', '100%', 60) }}</p>
+{{ EmbedLiveSample('Examples', '100%', 60) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

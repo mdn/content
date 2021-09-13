@@ -2,30 +2,32 @@
 title: TimeRanges.length
 slug: Web/API/TimeRanges/length
 tags:
-- API
-- HTML DOM
-- Media
-- Property
-- Read-only
-- Reference
-- TimeRanges
+  - API
+  - HTML DOM
+  - Media
+  - Property
+  - Read-only
+  - Reference
+  - TimeRanges
 browser-compat: api.TimeRanges.length
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>TimeRanges.length</code></strong> read-only property returns the
-  number of ranges in the object.</p>
+The **`TimeRanges.length`** read-only property returns the
+number of ranges in the object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>length</em> = <em>TimeRanges</em>.length;
-</pre>
+```js
+length = TimeRanges.length;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>Given a video element with the ID "myVideo":</p>
+Given a video element with the ID "myVideo":
 
-<pre class="brush: js">var v = document.GetElementById("myVideo");
+```js
+var v = document.GetElementById("myVideo");
 
 var buf = v.buffered;
 
@@ -33,20 +35,20 @@ var numRanges = buf.length;
 
 if (buf.length == 1) {
   // Only one range
-  if (buf.start(0) == 0 &amp;&amp; buf.end(0) == v.duration) {
+  if (buf.start(0) == 0 && buf.end(0) == v.duration) {
     // The one range starts at the beginning and ends at
     // the end of the video, so the whole thing is loaded
   }
 }
-</pre>
+```
 
-<p>This example looks at the time ranges and looks to see if the entire video has been
-  loaded.</p>
+This example looks at the time ranges and looks to see if the entire video has been
+loaded.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

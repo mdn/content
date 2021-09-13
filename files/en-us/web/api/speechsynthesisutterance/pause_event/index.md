@@ -7,55 +7,63 @@ tags:
   - Web Speech API
 browser-compat: api.SpeechSynthesisUtterance.pause_event
 ---
-<div>{{APIRef("Web Speech API")}} {{SeeCompatTable}}</div>
+{{APIRef("Web Speech API")}} {{SeeCompatTable}}
 
-<p>The <code><strong>pause</strong></code> event of the <a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a> {{domxref("SpeechSynthesisUtterance")}} object is fired when the utterance is paused part way through.</p>
+The **`pause`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) {{domxref("SpeechSynthesisUtterance")}} object is fired when the utterance is paused part way through.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("SpeechSynthesisEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td><code><a href="/en-US/docs/Web/API/SpeechSynthesisUtterance/onpause">onpause</a></code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("SpeechSynthesisEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/API/SpeechSynthesisUtterance/onpause"
+            >onpause</a
+          ></code
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>You can use the <code>pause</code> event in an <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener</a></code> method:</p>
+You can use the `pause` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
-<pre class="brush: js">utterThis.addEventListener('pause', function(event) {
+```js
+utterThis.addEventListener('pause', function(event) {
   console.log('Speech paused after ' + event.elapsedTime + ' seconds.');
-});</pre>
+});
+```
 
-<p>Or use the <code><a href="/en-US/docs/Web/API/SpeechSynthesisUtterance/onpause">onpause</a></code> event handler property:</p>
+Or use the [`onpause`](/en-US/docs/Web/API/SpeechSynthesisUtterance/onpause) event handler property:
 
-<pre class="brush: js">utterThis.onpause = function(event) {
+```js
+utterThis.onpause = function(event) {
   console.log('Speech paused after ' + event.elapsedTime + ' seconds.');
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)

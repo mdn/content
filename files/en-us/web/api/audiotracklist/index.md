@@ -14,84 +14,79 @@ tags:
   - list
 browser-compat: api.AudioTrackList
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>AudioTrackList</code></strong> interface is used to represent a list of the audio tracks contained within a given HTML media element, with each track represented by a separate {{domxref("AudioTrack")}} object in the list.</p>
+The **`AudioTrackList`** interface is used to represent a list of the audio tracks contained within a given HTML media element, with each track represented by a separate {{domxref("AudioTrack")}} object in the list.
 
-<p>Retrieve an instance of this object with {{domxref('HTMLMediaElement.audioTracks')}}. The individual tracks can be accessed using array syntax.</p>
+Retrieve an instance of this object with {{domxref('HTMLMediaElement.audioTracks')}}. The individual tracks can be accessed using array syntax.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface also inherits properties from its parent interface, {{domxref("EventTarget")}}.</em></p>
+_This interface also inherits properties from its parent interface, {{domxref("EventTarget")}}._
 
-<dl>
- <dt>{{domxref("AudioTrackList.length", "length")}} {{ReadOnlyInline}}</dt>
- <dd>The number of tracks in the list.</dd>
-</dl>
+- {{domxref("AudioTrackList.length", "length")}} {{ReadOnlyInline}}
+  - : The number of tracks in the list.
 
-<h2 id="Event_handlers">Event handlers</h2>
+## Event handlers
 
-<dl>
- <dt>{{domxref("AudioTrackList.onaddtrack", "onaddtrack")}}</dt>
- <dd>An event handler to be called when the {{event("addtrack")}} event is fired, indicating that a new audio track has been added to the media element.</dd>
- <dt>{{domxref("AudioTrackList.onchange", "onchange")}}</dt>
- <dd>An event handler to be called when the {{event("change")}} event occurs. This occurs when one or more tracks have been enabled or disabled by their {{domxref("AudioTrack.enabled", "enabled")}} flag being changed.</dd>
- <dt>{{domxref("AudioTrackList.onremovetrack", "onremovetrack")}}</dt>
- <dd>An event handler to call when the {{event("removetrack")}} event is sent, indicating that an audio track has been removed from the media element.</dd>
-</dl>
+- {{domxref("AudioTrackList.onaddtrack", "onaddtrack")}}
+  - : An event handler to be called when the {{event("addtrack")}} event is fired, indicating that a new audio track has been added to the media element.
+- {{domxref("AudioTrackList.onchange", "onchange")}}
+  - : An event handler to be called when the {{event("change")}} event occurs. This occurs when one or more tracks have been enabled or disabled by their {{domxref("AudioTrack.enabled", "enabled")}} flag being changed.
+- {{domxref("AudioTrackList.onremovetrack", "onremovetrack")}}
+  - : An event handler to call when the {{event("removetrack")}} event is sent, indicating that an audio track has been removed from the media element.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface also inherits methods from its parent interface, {{domxref("EventTarget")}}.</em></p>
+_This interface also inherits methods from its parent interface, {{domxref("EventTarget")}}._
 
-<dl>
- <dt>{{domxref("AudioTrackList.getTrackById", "getTrackById()")}}</dt>
- <dd>Returns the {{domxref("AudioTrack")}} found within the <code>AudioTrackList</code> whose {{domxref("AudioTrack.id", "id")}} matches the specified string. If no match is found, <code>null</code> is returned.</dd>
-</dl>
+- {{domxref("AudioTrackList.getTrackById", "getTrackById()")}}
+  - : Returns the {{domxref("AudioTrack")}} found within the `AudioTrackList` whose {{domxref("AudioTrack.id", "id")}} matches the specified string. If no match is found, `null` is returned.
 
-<h2 id="Events">Events</h2>
+## Events
 
-<dl>
- <dt><code><a href="/en-US/docs/Web/API/AudioTrackList/addtrack_event">addtrack</a></code></dt>
- <dd>Fired when a new audio track has been added to the media element.<br>
- Also available via the <code><a href="/en-US/docs/Web/API/AudioTrackList/onaddtrack">onaddtrack</a></code> property.</dd>
- <dt><code><a href="/en-US/docs/Web/API/AudioTrackList/change_event">change</a></code></dt>
- <dd>Fired when a track has been enabled or disabled.<br>
- Also available via the <code><a href="/en-US/docs/Web/API/AudioTrackList/onchange">onchange</a></code> property.</dd>
- <dt><code><a href="/en-US/docs/Web/API/AudioTrackList/removetrack_event">removetrack</a></code></dt>
- <dd>Fired when a new audio track has been removed from the media element.<br>
- Also available via the <code><a href="/en-US/docs/Web/API/AudioTrackList/onremovetrack">onremovetrack</a></code> property.</dd>
-</dl>
+- [`addtrack`](/en-US/docs/Web/API/AudioTrackList/addtrack_event)
+  - : Fired when a new audio track has been added to the media element.
+    Also available via the [`onaddtrack`](/en-US/docs/Web/API/AudioTrackList/onaddtrack) property.
+- [`change`](/en-US/docs/Web/API/AudioTrackList/change_event)
+  - : Fired when a track has been enabled or disabled.
+    Also available via the [`onchange`](/en-US/docs/Web/API/AudioTrackList/onchange) property.
+- [`removetrack`](/en-US/docs/Web/API/AudioTrackList/removetrack_event)
+  - : Fired when a new audio track has been removed from the media element.
+    Also available via the [`onremovetrack`](/en-US/docs/Web/API/AudioTrackList/onremovetrack) property.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>In addition to being able to obtain direct access to the audio tracks present on a media element, <code>AudioTrackList</code> lets you set event handlers on the {{event("addtrack")}} and {{event("removetrack")}} events, so that you can detect when tracks are added to or removed from the media element's stream. See {{domxref("AudioTrackList.onaddtrack", "onaddtrack")}} and {{domxref("AudioTrackList.onremovetrack", "onremovetrack")}} for details and examples.</p>
+In addition to being able to obtain direct access to the audio tracks present on a media element, `AudioTrackList` lets you set event handlers on the {{event("addtrack")}} and {{event("removetrack")}} events, so that you can detect when tracks are added to or removed from the media element's stream. See {{domxref("AudioTrackList.onaddtrack", "onaddtrack")}} and {{domxref("AudioTrackList.onremovetrack", "onremovetrack")}} for details and examples.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Getting_a_media_elements_audio_track_list">Getting a media element's audio track list</h3>
+### Getting a media element's audio track list
 
-<p>To get a media element's {{domxref("AudioTrackList")}}, use its {{domxref("HTMLMediaElement.audioTracks", "audioTracks")}} property.</p>
+To get a media element's {{domxref("AudioTrackList")}}, use its {{domxref("HTMLMediaElement.audioTracks", "audioTracks")}} property.
 
-<pre class="brush: js">var audioTracks = document.querySelector("video").audioTracks;</pre>
+```js
+var audioTracks = document.querySelector("video").audioTracks;
+```
 
-<h3 id="Monitoring_track_count_changes">Monitoring track count changes</h3>
+### Monitoring track count changes
 
-<p>In this example, we have an app that displays information about the number of channels available. To keep it up to date, handlers for the {{event("addtrack")}} and {{event("removetrack")}} events are set up.</p>
+In this example, we have an app that displays information about the number of channels available. To keep it up to date, handlers for the {{event("addtrack")}} and {{event("removetrack")}} events are set up.
 
-<pre class="brush: js">audioTracks.onaddtrack = updateTrackCount;
+```js
+audioTracks.onaddtrack = updateTrackCount;
 audioTracks.onremovetrack = updateTrackCount;
 
 function updateTrackCount(event) {
   trackCount = audioTracks.length;
   drawTrackCountIndicator(trackCount);
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -9,40 +9,34 @@ tags:
   - XMLDocument
 browser-compat: api.XMLDocument
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>The <strong>XMLDocument</strong> interface represents an XML document. It inherits from the generic {{DOMxRef("Document")}} and does not add any specific methods or properties to it: nevertheless, several algorithms behave differently with the two types of documents.</p>
+The **XMLDocument** interface represents an XML document. It inherits from the generic {{DOMxRef("Document")}} and does not add any specific methods or properties to it: nevertheless, several algorithms behave differently with the two types of documents.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Property">Property</h2>
+## Property
 
-<p><em>Also inherits properties from: {{DOMxRef("Document")}}</em></p>
+_Also inherits properties from: {{DOMxRef("Document")}}_
 
-<dl>
- <dt>{{DOMxRef("XMLDocument.async")}} {{Non-standard_Inline}} {{Deprecated_Inline}}</dt>
- <dd>Used with {{DOMxRef("XMLDocument.load()")}} to indicate an asynchronous request.</dd>
-</dl>
+- {{DOMxRef("XMLDocument.async")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+  - : Used with {{DOMxRef("XMLDocument.load()")}} to indicate an asynchronous request.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Also inherits methods from: {{DOMxRef("Document")}}</em></p>
+_Also inherits methods from: {{DOMxRef("Document")}}_
 
-<dl>
- <dt>{{DOMxRef("XMLDocument.load()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}</dt>
- <dd>Loads an XML document.</dd>
-</dl>
+- {{DOMxRef("XMLDocument.load()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+  - : Loads an XML document.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index.</a></li>
-</ul>
+- [The DOM interfaces index.](/en-US/docs/DOM/DOM_Reference)

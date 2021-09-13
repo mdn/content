@@ -2,55 +2,54 @@
 title: WEBGL_compressed_texture_astc.getSupportedProfiles()
 slug: Web/API/WEBGL_compressed_texture_astc/getSupportedProfiles
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGL extension
-- WebGL extensions
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGL extension
+  - WebGL extensions
 browser-compat: api.WEBGL_compressed_texture_astc.getSupportedProfiles
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WEBGL_compressed_texture_astc.getSupportedProfiles()</code></strong>
-  method returns an array of strings containing the names of the ASTC profiles supported
-  by the implementation.</p>
+The **`WEBGL_compressed_texture_astc.getSupportedProfiles()`**
+method returns an array of strings containing the names of the ASTC profiles supported
+by the implementation.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">sequence&lt;DOMString&gt; <var>ext</var>.getSupportedProfiles();
-</pre>
+```js
+sequence<DOMString> ext.getSupportedProfiles();
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An {{jsxref("Array")}} of {{domxref("DOMString")}} elements indicating which ASTC
-  profiles are supported by the implementation. Currently, this can be:</p>
+An {{jsxref("Array")}} of {{domxref("DOMString")}} elements indicating which ASTC
+profiles are supported by the implementation. Currently, this can be:
 
-<ul>
-  <li>"ldr": Low Dynamic Range.</li>
-  <li>"hdr": High Dynamic Range.</li>
-</ul>
+- "ldr": Low Dynamic Range.
+- "hdr": High Dynamic Range.
 
-<p>Dynamic range refers to ratio between the brightest and darkest parts of the scene. Low
-  dynamic ranges are for example JPEG format images which won't exceed 255:1, or CRT
-  monitors which won't exceed 100:1. An HDR image stores pixel values that span the whole
-  tonal range of real-world scenes (100,000:1).</p>
+Dynamic range refers to ratio between the brightest and darkest parts of the scene. Low
+dynamic ranges are for example JPEG format images which won't exceed 255:1, or CRT
+monitors which won't exceed 100:1. An HDR image stores pixel values that span the whole
+tonal range of real-world scenes (100,000:1).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var ext = gl.getExtension('WEBGL_compressed_texture_astc');
-ext.getSupportedProfiles(); // ["ldr"]</pre>
+```js
+var ext = gl.getExtension('WEBGL_compressed_texture_astc');
+ext.getSupportedProfiles(); // ["ldr"]
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WEBGL_compressed_texture_astc")}}</li>
-</ul>
+- {{domxref("WEBGL_compressed_texture_astc")}}

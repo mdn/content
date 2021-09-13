@@ -2,50 +2,45 @@
 title: CSSMathInvert()
 slug: Web/API/CSSMathInvert/CSSMathInvert
 tags:
-- API
-- CSS Typed Object Model API
-- CSSMathInvert
-- CSSNumericValue
-- Constructor
-- Experimental
-- Houdini
+  - API
+  - CSS Typed Object Model API
+  - CSSMathInvert
+  - CSSNumericValue
+  - Constructor
+  - Experimental
+  - Houdini
 browser-compat: api.CSSMathInvert.CSSMathInvert
 ---
-<div>{{draft}}{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}</div>
+{{draft}}{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
-<p>The <strong><code>CSSMathInvert()</code></strong> constructor creates a
-  new {{domxref("CSSMathInvert")}} object which represents a CSS
-  {{CSSXref('calc()','calc()')}} used as <code>calc(1 / value)</code></p>
+The **`CSSMathInvert()`** constructor creates a
+new {{domxref("CSSMathInvert")}} object which represents a CSS
+{{CSSXref('calc()','calc()')}} used as `calc(1 / value)`
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>CSSMathInvert</var> = new CSSMathInvert(<em>arg</em>);</pre>
+```js
+var CSSMathInvert = new CSSMathInvert(arg);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>arg</dt>
-  <dd>A {{domxref('CSSNumericValue')}}.</dd>
-</dl>
+- arg
+  - : A {{domxref('CSSNumericValue')}}.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt><a
-      href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError"><code>RangeError</code></a>
-  </dt>
-  <dd>Raised if the arg is 0 or -0.</dd>
-</dl>
+- [`RangeError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError)
+  - : Raised if the arg is 0 or -0.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>To do</p>
+To do
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

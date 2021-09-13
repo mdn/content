@@ -9,41 +9,37 @@ tags:
   - SVG DOM
 browser-compat: api.SVGForeignObjectElement
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <strong><code>SVGForeignObjectElement</code></strong> interface provides access to the properties of {{SVGElement("foreignObject")}} elements, as well as methods to manipulate them.</p>
+The **`SVGForeignObjectElement`** interface provides access to the properties of {{SVGElement("foreignObject")}} elements, as well as methods to manipulate them.
 
-<p>{{InheritanceDiagram(600, 140)}}</p>
+{{InheritanceDiagram(600, 140)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface also inherits properties from its parent, {{domxref("SVGGraphicsElement")}}.</em></p>
+_This interface also inherits properties from its parent, {{domxref("SVGGraphicsElement")}}._
 
-<dl>
- <dt>{{domxref("SVGForeignObjectElement.x")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("x")}} attribute of the given {{SVGElement("foreignObject")}} element.</dd>
- <dt>{{domxref("SVGForeignObjectElement.y")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("x")}} attribute of the given {{SVGElement("foreignObject")}} element.</dd>
- <dt>{{domxref("SVGForeignObjectElement.width")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("width")}} attribute of the given {{SVGElement("foreignObject")}} element.</dd>
- <dt>{{domxref("SVGForeignObjectElement.height")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("height")}} attribute of the given {{SVGElement("foreignObject")}} element.</dd>
-</dl>
+- {{domxref("SVGForeignObjectElement.x")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("x")}} attribute of the given {{SVGElement("foreignObject")}} element.
+- {{domxref("SVGForeignObjectElement.y")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("x")}} attribute of the given {{SVGElement("foreignObject")}} element.
+- {{domxref("SVGForeignObjectElement.width")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("width")}} attribute of the given {{SVGElement("foreignObject")}} element.
+- {{domxref("SVGForeignObjectElement.height")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("height")}} attribute of the given {{SVGElement("foreignObject")}} element.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface has no methods but inherits methods from its parent, {{domxref("SVGGraphicsElement")}}.</em></p>
+_This interface has no methods but inherits methods from its parent, {{domxref("SVGGraphicsElement")}}._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGElement("foreignObject")}}</li>
-</ul>
+- {{SVGElement("foreignObject")}}

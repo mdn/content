@@ -2,104 +2,94 @@
 title: WebGLRenderingContext.getBufferParameter()
 slug: Web/API/WebGLRenderingContext/getBufferParameter
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getBufferParameter
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.getBufferParameter()</code></strong> method of
-  the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> returns information about the
-  buffer.</p>
+The **`WebGLRenderingContext.getBufferParameter()`** method of
+the [WebGL API](/en-US/docs/Web/API/WebGL_API) returns information about the
+buffer.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">any <var>gl</var>.getBufferParameter(<var>target</var>, <var>pname</var>);
-</pre>
+```js
+any gl.getBufferParameter(target, pname);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>target</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the target buffer object. Possible values:
-    <ul>
-      <li><code>gl.ARRAY_BUFFER</code>: Buffer containing vertex attributes, such as
-        vertex coordinates, texture coordinate data, or vertex color data.</li>
-      <li><code>gl.ELEMENT_ARRAY_BUFFER</code>: Buffer used for element indices.</li>
-      <li>When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
-        the following values are available additionally:
-        <ul>
-          <li><code>gl.COPY_READ_BUFFER</code>: Buffer for copying from one buffer object
-            to another.</li>
-          <li><code>gl.COPY_WRITE_BUFFER</code>: Buffer for copying from one buffer object
-            to another.</li>
-          <li><code>gl.TRANSFORM_FEEDBACK_BUFFER</code>: Buffer for transform feedback
-            operations.</li>
-          <li><code>gl.UNIFORM_BUFFER</code>: Buffer used for storing uniform blocks.</li>
-          <li><code>gl.PIXEL_PACK_BUFFER</code>: Buffer used for pixel transfer
-            operations.</li>
-          <li><code>gl.PIXEL_UNPACK_BUFFER</code>: Buffer used for pixel transfer
-            operations.</li>
-        </ul>
-      </li>
-    </ul>
-  </dd>
-  <dt>pname</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying information to query. Possible values:
-    <ul>
-      <li><code>gl.BUFFER_SIZE</code>: Returns a {{domxref("WebGL_API/Types", "GLint")}} indicating the size
-        of the buffer in bytes.</li>
-      <li><code>gl.BUFFER_USAGE</code>: Returns a {{domxref("WebGL_API/Types", "GLenum")}} indicating the
-        usage pattern of the buffer. This is either:
-        <ul>
-          <li><code>gl.STATIC_DRAW</code>,</li>
-          <li><code>gl.DYNAMIC_DRAW</code>,</li>
-          <li><code>gl.STREAM_DRAW</code>.</li>
-          <li>When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "",
+- target
+
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the target buffer object. Possible values:
+
+    - `gl.ARRAY_BUFFER`: Buffer containing vertex attributes, such as
+      vertex coordinates, texture coordinate data, or vertex color data.
+    - `gl.ELEMENT_ARRAY_BUFFER`: Buffer used for element indices.
+    - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
+      the following values are available additionally:
+
+      - `gl.COPY_READ_BUFFER`: Buffer for copying from one buffer object
+        to another.
+      - `gl.COPY_WRITE_BUFFER`: Buffer for copying from one buffer object
+        to another.
+      - `gl.TRANSFORM_FEEDBACK_BUFFER`: Buffer for transform feedback
+        operations.
+      - `gl.UNIFORM_BUFFER`: Buffer used for storing uniform blocks.
+      - `gl.PIXEL_PACK_BUFFER`: Buffer used for pixel transfer
+        operations.
+      - `gl.PIXEL_UNPACK_BUFFER`: Buffer used for pixel transfer
+        operations.
+
+- pname
+
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying information to query. Possible values:
+
+    - `gl.BUFFER_SIZE`: Returns a {{domxref("WebGL_API/Types", "GLint")}} indicating the size
+      of the buffer in bytes.
+    - `gl.BUFFER_USAGE`: Returns a {{domxref("WebGL_API/Types", "GLenum")}} indicating the
+      usage pattern of the buffer. This is either:
+
+      - `gl.STATIC_DRAW`,
+      - `gl.DYNAMIC_DRAW`,
+      - `gl.STREAM_DRAW`.
+      - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "",
             1)}}, the following values are available additionally:
-            <ul>
-              <li><code>gl.STATIC_READ</code>,</li>
-              <li><code>gl.DYNAMIC_READ,</code></li>
-              <li><code>gl.STREAM_READ</code>,</li>
-              <li><code>gl.STATIC_COPY</code>,</li>
-              <li><code>gl.DYNAMIC_COPY,</code></li>
-              <li><code>gl.STREAM_COPY</code>.</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </dd>
-</dl>
 
-<h3 id="Return_value">Return value</h3>
+        - `gl.STATIC_READ`,
+        - `gl.DYNAMIC_READ,`
+        - `gl.STREAM_READ`,
+        - `gl.STATIC_COPY`,
+        - `gl.DYNAMIC_COPY,`
+        - `gl.STREAM_COPY`.
 
-<p>Depends on the requested information (as specified with <code>pname</code>). Either a
-  {{domxref("WebGL_API/Types", "GLint")}} or a {{domxref("WebGL_API/Types", "GLenum")}}.</p>
+### Return value
 
-<h2 id="Examples">Examples</h2>
+Depends on the requested information (as specified with `pname`). Either a
+{{domxref("WebGL_API/Types", "GLint")}} or a {{domxref("WebGL_API/Types", "GLenum")}}.
 
-<pre class="brush: js">gl.getBufferParameter(gl.ARRAY_BUFFER, gl.BUFFER_SIZE);
-</pre>
+## Examples
 
-<h2 id="Specifications">Specifications</h2>
+```js
+gl.getBufferParameter(gl.ARRAY_BUFFER, gl.BUFFER_SIZE);
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.bindBuffer()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.createBuffer()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.deleteBuffer()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.bufferData()")}}</li>
-  <li>Other buffers: {{domxref("WebGLFramebuffer")}}, {{domxref("WebGLRenderbuffer")}}
-  </li>
-</ul>
+- {{domxref("WebGLRenderingContext.bindBuffer()")}}
+- {{domxref("WebGLRenderingContext.createBuffer()")}}
+- {{domxref("WebGLRenderingContext.deleteBuffer()")}}
+- {{domxref("WebGLRenderingContext.bufferData()")}}
+- Other buffers: {{domxref("WebGLFramebuffer")}}, {{domxref("WebGLRenderbuffer")}}

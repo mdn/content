@@ -11,31 +11,32 @@ tags:
   - Reference
 browser-compat: api.MouseEvent.region
 ---
-<div>{{APIRef("DOM Events")}}</div>
+{{APIRef("DOM Events")}}
 
-<p>The <strong><code>MouseEvent.region</code></strong> read-only property returns the id
-  of the <a href="/en-US/docs/Web/API/CanvasRenderingContext2D/addHitRegion">canvas hit
-    region</a> affected by the event. If no hit region is affected, <code>null</code> is
-  returned.</p>
+The **`MouseEvent.region`** read-only property returns the id
+of the [canvas hit
+region](/en-US/docs/Web/API/CanvasRenderingContext2D/addHitRegion) affected by the event. If no hit region is affected, `null` is
+returned.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>hitRegion</em> = <em>instanceOfMouseEvent</em>.region
-</pre>
+```js
+var hitRegion = instanceOfMouseEvent.region
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("DOMString")}} representing the id of the hit region.</p>
+A {{domxref("DOMString")}} representing the id of the hit region.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>Example of using the <code>event.region</code> combined with
-  <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D">CanvasRenderingContext2D</a>.<a href="/en-US/docs/Web/API/CanvasRenderingContext2D/addHitRegion">addHitRegion()</a></code> method.
-</p>
+Example of using the `event.region` combined with
+`CanvasRenderingContext2D.addHitRegion()` method.
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
+```html
+<canvas id="canvas"></canvas>
 
-&lt;script&gt;
+<script>
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
@@ -49,16 +50,14 @@ canvas.addEventListener("mousemove", function(event){
     console.log("hit region: " + event.region);
   }
 });
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("MouseEvent")}}</li>
-  <li>{{domxref("CanvasRenderingContext2D.addHitRegion()")}}</li>
-</ul>
+- {{domxref("MouseEvent")}}
+- {{domxref("CanvasRenderingContext2D.addHitRegion()")}}

@@ -2,44 +2,46 @@
 title: Document.createRange()
 slug: Web/API/Document/createRange
 tags:
-- API
-- DOM
-- DOM Reference
-- Document
-- DocumentRange.createRange
-- Method
-- Range
+  - API
+  - DOM
+  - DOM Reference
+  - Document
+  - DocumentRange.createRange
+  - Method
+  - Range
 browser-compat: api.Document.createRange
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>Document.createRange()</strong></code> method returns a new
-  {{domxref("Range")}} object.</p>
+The **`Document.createRange()`** method returns a new
+{{domxref("Range")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>range</var> = document.createRange();
-</pre>
+```js
+range = document.createRange();
+```
 
-<p><var>range</var> is the created {{domxref("Range")}} object.</p>
+_range_ is the created {{domxref("Range")}} object.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">let range = document.createRange();
+```js
+let range = document.createRange();
 
 range.setStart(startNode, startOffset);
 range.setEnd(endNode, endOffset);
-</pre>
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Once a <code>Range</code> is created, you need to set its boundary points before you
-  can make use of most of its methods.</p>
+Once a `Range` is created, you need to set its boundary points before you
+can make use of most of its methods.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}

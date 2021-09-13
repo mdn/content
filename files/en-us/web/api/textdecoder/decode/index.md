@@ -9,73 +9,71 @@ tags:
   - TextDecoder
 browser-compat: api.TextDecoder.decode
 ---
-<div>{{APIRef("Encoding API")}}{{SeeCompatTable}}</div>
+{{APIRef("Encoding API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>TextDecoder.prototype.decode()</code></strong> method returns a
-  {{DOMxRef("DOMString")}} containing the text, given in parameters, decoded with the
-  specific method for that <code>TextDecoder</code> object.</p>
+The **`TextDecoder.prototype.decode()`** method returns a
+{{DOMxRef("DOMString")}} containing the text, given in parameters, decoded with the
+specific method for that `TextDecoder` object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>b1</em> = <em>decoder</em>.decode(<em>buffer</em>, <em>options</em>);
-<em>b2</em> = <em>decoder</em>.decode(<em>buffer</em>);
-<em>b3</em> = <em>decoder<code>.decode();</code></em>
-</pre>
+```js
+b1 = decoder.decode(buffer, options);
+b2 = decoder.decode(buffer);
+b3 = decoder.decode();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>buffer</code> {{Optional_Inline}}</dt>
-  <dd>Is either an
-    <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></code>
-    or an <a
-      href="/en-US/docs/Web/API/ArrayBufferView"><code>ArrayBufferView</code></a>
-    containing the text to decode.</dd>
-  <dt><code>options</code> {{Optional_Inline}}</dt>
-  <dd>Is a <code>TextDecodeOptions</code> dictionary with the property:
-    <dl>
-      <dt><code>stream</code></dt>
-      <dd>A boolean flag indicating that additional data will follow in
+- `buffer` {{Optional_Inline}}
+  - : Is either an
+    [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
+    or an [`ArrayBufferView`](/en-US/docs/Web/API/ArrayBufferView)
+    containing the text to decode.
+- `options` {{Optional_Inline}}
+
+  - : Is a `TextDecodeOptions` dictionary with the property:
+
+    - `stream`
+      - : A boolean flag indicating that additional data will follow in
         subsequent calls to decode(). Set to true if processing the data in chunks, and
         false for the final chunk or if the data is not chunked. It defaults to false.
-      </dd>
-    </dl>
-  </dd>
-</dl>
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example encodes and decodes the euro symbol, €.</p>
+This example encodes and decodes the euro symbol, €.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Encoded value: &lt;span id="encoded-value"&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Decoded value: &lt;span id="decoded-value"&gt;&lt;/span&gt;&lt;/p&gt;</pre>
+```html
+<p>Encoded value: <span id="encoded-value"></span></p>
+<p>Decoded value: <span id="decoded-value"></span></p>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">const encoder = new TextEncoder();
+```js
+const encoder = new TextEncoder();
 const array = encoder.encode('€'); // Uint8Array(3) [226, 130, 172]
 document.getElementById('encoded-value').textContent = array;
 
 const decoder = new TextDecoder();
 const str = decoder.decode(array); // String "€"
-document.getElementById('decoded-value').textContent = str;</pre>
+document.getElementById('decoded-value').textContent = str;
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{DOMxRef("TextDecoder")}} interface it belongs to.</li>
-</ul>
+- The {{DOMxRef("TextDecoder")}} interface it belongs to.

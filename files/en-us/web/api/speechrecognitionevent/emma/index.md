@@ -2,75 +2,77 @@
 title: SpeechRecognitionEvent.emma
 slug: Web/API/SpeechRecognitionEvent/emma
 tags:
-- API
-- Experimental
-- Property
-- Reference
-- SpeechRecognitionEvent
-- Web Speech API
-- emma
-- recognition
-- speech
+  - API
+  - Experimental
+  - Property
+  - Reference
+  - SpeechRecognitionEvent
+  - Web Speech API
+  - emma
+  - recognition
+  - speech
 browser-compat: api.SpeechRecognitionEvent.emma
 ---
-<div>{{APIRef("Web Speech API")}}{{deprecated_header}}</div>
+{{APIRef("Web Speech API")}}{{deprecated_header}}
 
-<p>The <strong><code>emma</code></strong> read-only property of the
-  {{domxref("SpeechRecognitionEvent")}} interface returns an Extensible
-    MultiModal Annotation markup language (EMMA) — XML — representation of the
-    result.</p>
+The **`emma`** read-only property of the
+{{domxref("SpeechRecognitionEvent")}} interface returns an Extensible
+MultiModal Annotation markup language (EMMA) — XML — representation of the
+result.
 
-<div class="note">
-  <p><strong>Note:</strong> EMMA is defined in the specification <a
-      href="https://www.w3.org/TR/emma/">EMMA: Extensible MultiModal Annotation markup
-      language</a>. You can see muliple EMMA examples in the spec.</p>
-</div>
+> **Note:** EMMA is defined in the specification [EMMA: Extensible MultiModal Annotation markup
+> language](https://www.w3.org/TR/emma/). You can see muliple EMMA examples in the spec.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var myEmma = event.emma;
-</pre>
+```js
+var myEmma = event.emma;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A valid XML document. The exact contents can vary across user agents and recognition
-  engines, but all supporting implementations will expose a valid XML document complete
-  with an EMMA namespace. If the speech recognition system does not supply EMMA data then
-  the user agent will return <code>null</code>.</p>
+A valid XML document. The exact contents can vary across user agents and recognition
+engines, but all supporting implementations will expose a valid XML document complete
+with an EMMA namespace. If the speech recognition system does not supply EMMA data then
+the user agent will return `null`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">recognition.onresult = function(event) {
+```js
+recognition.onresult = function(event) {
   var color = event.results[0][0].transcript;
   diagnostic.textContent = 'Result received: ' + color + '.';
   bg.style.backgroundColor = color;
   console.log(event.emma);
-}</pre>
+}
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h3 id="Firefox_OS_permissions">Firefox OS permissions</h3>
+### Firefox OS permissions
 
-<p>To use speech recognition in an app, you need to specify the following permissions in
-  your <a href="/en-US/docs/Web/Apps/Build/Manifest">manifest</a>:</p>
+To use speech recognition in an app, you need to specify the following permissions in
+your [manifest](/en-US/docs/Web/Apps/Build/Manifest):
 
-<pre class="brush: json">"permissions": {
+```json
+"permissions": {
   "audio-capture" : {
     "description" : "Audio capture"
   },
   "speech-recognition" : {
     "description" : "Speech recognition"
   }
-}</pre>
+}
+```
 
-<p>You also need a privileged app, so you need to include this as well:</p>
+You also need a privileged app, so you need to include this as well:
 
-<pre class="brush: json">  "type": "privileged"</pre>
+```json
+  "type": "privileged"
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)

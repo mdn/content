@@ -3,9 +3,10 @@ title: FileReader.onerror
 slug: Web/API/FileReader/onerror
 browser-compat: api.FileReader.onerror
 ---
-<p>The <a href="/en-US/docs/Web/API/FileReader">FileReader</a> onerror handler receives an Event object, not an Error object, as a parameter, but an error can be accessed from the FileReader object, as <code><a href="/en-US/docs/Web/API/FileReader/error">instanceOfFileReader.error</a></code></p>
+The [FileReader](/en-US/docs/Web/API/FileReader) onerror handler receives an Event object, not an Error object, as a parameter, but an error can be accessed from the FileReader object, as [`instanceOfFileReader.error`](/en-US/docs/Web/API/FileReader/error)
 
-<pre class="brush: js">// Callback from a &lt;input type="file" onchange="onChange(event)"&gt;
+```js
+// Callback from a <input type="file" onchange="onChange(event)">
 function onChange(event) {
   var file = event.target.files[0];
   var reader = new FileReader();
@@ -15,8 +16,8 @@ function onChange(event) {
 
   reader.readAsText(file);
 }
-</pre>
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

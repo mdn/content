@@ -2,38 +2,38 @@
 title: window.cancelAnimationFrame()
 slug: Web/API/Window/cancelAnimationFrame
 tags:
-- API
-- Animation
-- DOM
-- Experimental
-- Method
-- Reference
-- Window
-- Polyfill
+  - API
+  - Animation
+  - DOM
+  - Experimental
+  - Method
+  - Reference
+  - Window
+  - Polyfill
 browser-compat: api.Window.cancelAnimationFrame
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code><strong>window.cancelAnimationFrame()</strong></code> method cancels an
-  animation frame request previously scheduled through a call to
-  {{domxref("window.requestAnimationFrame()")}}.</p>
+The **`window.cancelAnimationFrame()`** method cancels an
+animation frame request previously scheduled through a call to
+{{domxref("window.requestAnimationFrame()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">window.cancelAnimationFrame(<em>requestID</em>);
-</pre>
+```js
+window.cancelAnimationFrame(requestID);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>requestID</code></dt>
-  <dd>The ID value returned by the call to {{domxref("window.requestAnimationFrame()")}}
-    that requested the callback.</dd>
-</dl>
+- `requestID`
+  - : The ID value returned by the call to {{domxref("window.requestAnimationFrame()")}}
+    that requested the callback.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+```js
+var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
                             window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
 
 var cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame;
@@ -45,7 +45,7 @@ var myReq;
 function step(timestamp) {
   var progress = timestamp - start;
   d.style.left = Math.min(progress / 10, 200) + 'px';
-  if (progress &lt; 2000) {
+  if (progress < 2000) {
     // it's important to update the requestId each time you're calling requestAnimationFrame
     myReq = requestAnimationFrame(step);
   }
@@ -53,20 +53,18 @@ function step(timestamp) {
 myReq = requestAnimationFrame(step);
 // the cancelation uses the last requestId
 cancelAnimationFrame(myReq);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("window.mozAnimationStartTime")}}</li>
-  <li>{{domxref("window.requestAnimationFrame()")}}</li>
-  <li><a href="https://github.com/behnammodi/polyfill/blob/master/window.polyfill.js">A polyfill</a></li>
-</ul>
+- {{domxref("window.mozAnimationStartTime")}}
+- {{domxref("window.requestAnimationFrame()")}}
+- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/window.polyfill.js)

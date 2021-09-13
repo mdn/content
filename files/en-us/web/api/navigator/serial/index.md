@@ -9,39 +9,40 @@ tags:
   - Navigator
 browser-compat: api.Navigator.serial
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>serial</code></strong> read-only property of the {{domxref("Navigator")}} interface returns a {{domxref("Serial")}} object which represents the entry point into the {{domxref("Web Serial API")}}.</p>
+The **`serial`** read-only property of the {{domxref("Navigator")}} interface returns a {{domxref("Serial")}} object which represents the entry point into the {{domxref("Web Serial API")}}.
 
-<p>When getting, the same instance of the {{domxref("Serial")}} object will always be returned.</p>
+When getting, the same instance of the {{domxref("Serial")}} object will always be returned.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <var>serialObj</var> = navigator.serial;</pre>
+    var serialObj = navigator.serial;
 
-<h3>Value</h3>
-<p>A {{domxref("Serial")}} object.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("Serial")}} object.
 
-<p>The following example uses the <code>getPorts()</code> method to initialize a list of available ports.</p>
+## Examples
 
-<pre class="brush: js notranslate">navigator.serial.getPorts()
+The following example uses the `getPorts()` method to initialize a list of available ports.
+
+```js
+navigator.serial.getPorts()
 .then((ports) => {
   // Initialize the list of available ports with `ports` on page load.
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://web.dev/serial/">Read from and write to a serial port</a></li>
-  <li><a href="https://codelabs.developers.google.com/codelabs/web-serial#0">Getting started with the web serial API</a></li>
-</ul>
+- [Read from and write to a serial port](https://web.dev/serial/)
+- [Getting started with the web serial API](https://codelabs.developers.google.com/codelabs/web-serial#0)

@@ -11,31 +11,30 @@ tags:
   - destination
 browser-compat: api.BaseAudioContext.destination
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>The <code>destination</code> property of the {{ domxref("BaseAudioContext") }}
-  interface returns an {{ domxref("AudioDestinationNode") }} representing the final
-  destination of all audio in the context. It often represents an actual audio-rendering
-  device such as your device's speakers.</p>
+The `destination` property of the {{ domxref("BaseAudioContext") }}
+interface returns an {{ domxref("AudioDestinationNode") }} representing the final
+destination of all audio in the context. It often represents an actual audio-rendering
+device such as your device's speakers.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">baseAudioContext.destination;
-</pre>
+```js
+baseAudioContext.destination;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{ domxref("AudioDestinationNode") }}.</p>
+An {{ domxref("AudioDestinationNode") }}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<div class="note">
-  <p><strong>Note:</strong> for a full example implementation, see one of our Web Audio
-    Demos on the <a href="https://github.com/mdn/">MDN Github repo</a>, like <a
-      href="https://github.com/mdn/voice-change-o-matic">voice-change-o-matic</a>.</p>
-</div>
+> **Note:** for a full example implementation, see one of our Web Audio
+> Demos on the [MDN Github repo](https://github.com/mdn/), like [voice-change-o-matic](https://github.com/mdn/voice-change-o-matic).
 
-<pre class="brush: js;">var AudioContext = window.AudioContext || window.webkitAudioContext;
+```js
+var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioCtx = new AudioContext();
 // Older webkit/blink browsers require a prefix
 
@@ -44,19 +43,16 @@ var gainNode = audioCtx.createGain();
 
 oscillatorNode.connect(gainNode);
 gainNode.connect(audioCtx.destination);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
-  </li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

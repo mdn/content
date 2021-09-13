@@ -9,33 +9,36 @@ tags:
   - MIDIAccess
 browser-compat: api.MIDIAccess.onstatechange
 ---
-<div>{{securecontext_header}}{{APIRef("Web MIDI API")}}</div>
+{{securecontext_header}}{{APIRef("Web MIDI API")}}
 
-<p>The <strong><code>onstatechange</code></strong> {{event("Event_handlers", "Event Handler")}} of the {{domxref("MIDIAccess")}} interface processes statechange events.</p>
+The **`onstatechange`** {{event("Event_handlers", "Event Handler")}} of the {{domxref("MIDIAccess")}} interface processes statechange events.
 
-<p>The event fires when a new MIDI port is added or when an existing port changes state.</p>
+The event fires when a new MIDI port is added or when an existing port changes state.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">MIDIAccess.onstatechange = function;
-MIDIAccess.addEventListener('statechange', function);</pre>
+```js
+MIDIAccess.onstatechange = function;
+MIDIAccess.addEventListener('statechange', function);
+```
 
-<h2>Example</h2>
+## Example
 
-<p>The {{domxref("Navigator.requestMIDIAccess()")}} method returns a promise that resolves with a {{domxref("MIDIAccess")}} object. When a port changes state, information about that port is printed to the console.</p>
+The {{domxref("Navigator.requestMIDIAccess()")}} method returns a promise that resolves with a {{domxref("MIDIAccess")}} object. When a port changes state, information about that port is printed to the console.
 
-<pre class="brush: js">navigator.requestMIDIAccess()
+```js
+navigator.requestMIDIAccess()
   .then(function(access) {
      access.onstatechange = function(e) {
        console.log(e.port.name, e.port.manufacturer, e.port.state);
      };
-  });</pre>
+  });
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
+{{Compat}}

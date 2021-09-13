@@ -12,48 +12,50 @@ tags:
   - drag and drop
 browser-compat: api.DataTransferItem.type
 ---
-<div>{{APIRef("HTML Drag and Drop API")}}</div>
+{{APIRef("HTML Drag and Drop API")}}
 
-<p>The read-only <strong><code>DataTransferItem.type</code></strong> property returns the
-  type (format) of the {{domxref("DataTransferItem")}} object representing the drag data
-  item. The <code>type</code> is a Unicode string generally given by a MIME type, although
-  a MIME type is not required.</p>
+The read-only **`DataTransferItem.type`** property returns the
+type (format) of the {{domxref("DataTransferItem")}} object representing the drag data
+item. The `type` is a Unicode string generally given by a MIME type, although
+a MIME type is not required.
 
-<p>Some example types are: <code>text/plain</code> and <code>text/html</code>.</p>
+Some example types are: `text/plain` and `text/html`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>dataItem</em>.type;
-</pre>
+```js
+dataItem.type;
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("DOMString")}} representing the drag data item's type.</p>
+A {{domxref("DOMString")}} representing the drag data item's type.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example shows the use of the <code>type</code> property.</p>
+This example shows the use of the `type` property.
 
-<pre class="brush: js">function drop_handler(ev) {
+```js
+function drop_handler(ev) {
  console.log("Drop");
  ev.preventDefault();
  var data = ev.dataTransfer.items;
- for (var i = 0; i &lt; data.length; i += 1) {
-   if ((data[i].kind == 'string') &amp;&amp;
+ for (var i = 0; i < data.length; i += 1) {
+   if ((data[i].kind == 'string') &&
        (data[i].type.match('^text/plain'))) {
      // This item is the target node
      data[i].getAsString(function (s){
        ev.target.appendChild(document.getElementById(s));
      });
-   } else if ((data[i].kind == 'string') &amp;&amp;
+   } else if ((data[i].kind == 'string') &&
               (data[i].type.match('^text/html'))) {
      // Drag data item is HTML
      console.log("... Drop: HTML");
-   } else if ((data[i].kind == 'string') &amp;&amp;
+   } else if ((data[i].kind == 'string') &&
               (data[i].type.match('^text/uri-list'))) {
      // Drag data item is URI
      console.log("... Drop: URI");
-   } else if ((data[i].kind == 'file') &amp;&amp;
+   } else if ((data[i].kind == 'file') &&
               (data[i].type.match('^image/'))) {
      // Drag data item is an image file
      var f = data[i].getAsFile();
@@ -61,21 +63,18 @@ browser-compat: api.DataTransferItem.type
    }
  }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("DataTransfer.type()")}}</li>
-  <li><a
-      href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types">Incomplete
-      list of MIME types</a></li>
-</ul>
+- {{domxref("DataTransfer.type()")}}
+- [Incomplete
+  list of MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)

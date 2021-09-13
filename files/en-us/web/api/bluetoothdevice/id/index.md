@@ -2,33 +2,34 @@
 title: BluetoothDevice.id
 slug: Web/API/BluetoothDevice/id
 tags:
-- API
-- BluetoothDevice
-- Experimental
-- Property
-- Reference
-- Web Bluetooth API
-- id
+  - API
+  - BluetoothDevice
+  - Experimental
+  - Property
+  - Reference
+  - Web Bluetooth API
+  - id
 browser-compat: api.BluetoothDevice.id
 ---
-<div>{{APIRef("Bluetooth API")}}{{SeeCompatTable}}</div>
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>BluetoothDevice.id</code></strong> read-only property returns a
-  {{DOMxRef("DOMString")}} that uniquely identifies a device.</p>
+The **`BluetoothDevice.id`** read-only property returns a
+{{DOMxRef("DOMString")}} that uniquely identifies a device.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var id = <em>instanceOfBluetoothDevice</em>.id</pre>
+```js
+var id = instanceOfBluetoothDevice.id
+```
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A {{DOMxRef("DOMString")}}.</p>
+A {{DOMxRef("DOMString")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

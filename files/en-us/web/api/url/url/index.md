@@ -2,104 +2,87 @@
 title: URL()
 slug: Web/API/URL/URL
 tags:
-- API
-- Constructor
-- Reference
-- URL
-- URL API
-- Polyfill
+  - API
+  - Constructor
+  - Reference
+  - URL
+  - URL API
+  - Polyfill
 browser-compat: api.URL.URL
 ---
-<div>{{APIRef("URL API")}}</div>
+{{APIRef("URL API")}}
 
-<p>The <code><strong>URL()</strong></code> constructor returns a newly created
-	{{domxref("URL")}} object representing the URL defined by the parameters.</p>
+The **`URL()`** constructor returns a newly created
+{{domxref("URL")}} object representing the URL defined by the parameters.
 
-<p>If the given base URL or the resulting URL are not valid URLs, the JavaScript
-	{{jsxref("TypeError")}} exception is thrown.</p>
+If the given base URL or the resulting URL are not valid URLs, the JavaScript
+{{jsxref("TypeError")}} exception is thrown.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const <var>url</var> = new URL(<var>url</var> [, <var>base</var>])
-</pre>
+```js
+const url = new URL(url [, base])
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-	<dt><code><var>url</var></code></dt>
-	<dd>A {{domxref("USVString")}} or any other object with a <a href="/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file#stringifiers">stringifier</a> — including, for example, an {{htmlelement("a")}} or {{htmlelement("area")}} element — that represents an absolute or relative URL.
-		If <code><var>url</var></code> is a relative URL, <code><var>base</var></code> is
-		required, and will be used as the base URL. If <code><var>url</var></code> is an
-		absolute URL, a given <code><var>base</var></code> will be ignored.</dd>
-	<dt><code><var>base</var></code> {{optional_inline}}</dt>
-	<dd>A {{domxref("USVString")}} representing the base URL to use in cases where
-		<code><var>url</var></code> is a relative URL. If not specified, it defaults to
-		<code>undefined</code>.</dd>
-</dl>
+- `url`
+  - : A {{domxref("USVString")}} or any other object with a [stringifier](/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file#stringifiers) — including, for example, an {{htmlelement("a")}} or {{htmlelement("area")}} element — that represents an absolute or relative URL.
+    If `url` is a relative URL, `base` is
+    required, and will be used as the base URL. If `url` is an
+    absolute URL, a given `base` will be ignored.
+- `base` {{optional_inline}}
+  - : A {{domxref("USVString")}} representing the base URL to use in cases where
+    `url` is a relative URL. If not specified, it defaults to
+    `undefined`.
 
-<div class="note">
-	<p><strong>Note:</strong> The <code>url</code> and <code>base</code> arguments will
-		each be stringified from whatever value you pass, just like with other Web APIs
-		that accept {{domxref("USVString")}}. In particular, you can use an existing
-		{{domxref("URL")}} object for either argument, and it will stringify to the
-		object's {{domxref("URL.href", "href")}} property.</p>
-</div>
+> **Note:** The `url` and `base` arguments will
+> each be stringified from whatever value you pass, just like with other Web APIs
+> that accept {{domxref("USVString")}}. In particular, you can use an existing
+> {{domxref("URL")}} object for either argument, and it will stringify to the
+> object's {{domxref("URL.href", "href")}} property.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Exception</th>
-			<th scope="col">Explanation</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{jsxref("TypeError")}}</td>
-			<td><code><var>url</var></code> (in the case of absolute URLs) or
-				<code><var>base</var></code> + <code><var>url</var></code> (in the case of
-				relative URLs) is not a valid URL.</td>
-		</tr>
-	</tbody>
-</table>
+| Exception                        | Explanation                                                                                               |
+| -------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| {{jsxref("TypeError")}} | `url` (in the case of absolute URLs) or `base` + `url` (in the case of relative URLs) is not a valid URL. |
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">// Base urls
+```js
+// Base urls
 let m = 'https://developer.mozilla.org';
-let a = new URL("/", m);                                // =&gt; 'https://developer.mozilla.org/'
-let b = new URL(m);                                     // =&gt; 'https://developer.mozilla.org/'
+let a = new URL("/", m);                                // => 'https://developer.mozilla.org/'
+let b = new URL(m);                                     // => 'https://developer.mozilla.org/'
 
-        new URL('en-US/docs', b);                      // =&gt; 'https://developer.mozilla.org/en-US/docs'
-let d = new URL('/en-US/docs', b);                     // =&gt; 'https://developer.mozilla.org/en-US/docs'
-        new URL('/en-US/docs', d);                     // =&gt; 'https://developer.mozilla.org/en-US/docs'
-        new URL('/en-US/docs', a);                     // =&gt; 'https://developer.mozilla.org/en-US/docs'
+        new URL('en-US/docs', b);                      // => 'https://developer.mozilla.org/en-US/docs'
+let d = new URL('/en-US/docs', b);                     // => 'https://developer.mozilla.org/en-US/docs'
+        new URL('/en-US/docs', d);                     // => 'https://developer.mozilla.org/en-US/docs'
+        new URL('/en-US/docs', a);                     // => 'https://developer.mozilla.org/en-US/docs'
 
         new URL('/en-US/docs', "https://developer.mozilla.org/fr-FR/toto");
-                                                       // =&gt; 'https://developer.mozilla.org/en-US/docs'
+                                                       // => 'https://developer.mozilla.org/en-US/docs'
 
         new URL('/en-US/docs', '');                    // Raises a TypeError exception as '' is not a valid URL
         new URL('/en-US/docs');                        // Raises a TypeError exception as '/en-US/docs' is not a valid URL
-        new URL('http://www.example.com', );           // =&gt; 'http://www.example.com/'
-        new URL('http://www.example.com', b);          // =&gt; 'http://www.example.com/'
+        new URL('http://www.example.com', );           // => 'http://www.example.com/'
+        new URL('http://www.example.com', b);          // => 'http://www.example.com/'
 
-        new URL("//foo.com", "https://example.com")    // =&gt; 'https://foo.com' (see relative URLs)
-</pre>
+        new URL("//foo.com", "https://example.com")    // => 'https://foo.com' (see relative URLs)
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>A polyfill of <code>URL</code> is available in <a href="https://github.com/zloirock/core-js#url-and-urlsearchparams"><code>core-js</code></a></li>
-	<li>The interface it belongs to: {{domxref("URL")}}.</li>
-</ul>
+- A polyfill of `URL` is available in [`core-js`](https://github.com/zloirock/core-js#url-and-urlsearchparams)
+- The interface it belongs to: {{domxref("URL")}}.

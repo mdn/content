@@ -2,69 +2,67 @@
 title: HTMLSlotElement.assignedNodes()
 slug: Web/API/HTMLSlotElement/assignedNodes
 tags:
-- API
-- HTMLSlotElement
-- Method
-- Reference
-- assignedNodes
-- shadow dom
+  - API
+  - HTMLSlotElement
+  - Method
+  - Reference
+  - assignedNodes
+  - shadow dom
 browser-compat: api.HTMLSlotElement.assignedNodes
 ---
-<div>{{APIRef("Shadow DOM API")}}</div>
+{{APIRef("Shadow DOM API")}}
 
-<p>The <strong><code>assignedNodes()</code></strong> method of the
-  {{domxref("HTMLSlotElement")}} interface returns a sequence of the nodes assigned to
-  this slot, and if the <code>flatten</code> option is set to <code>true</code>, the
-  assigned nodes of any other slots that are descendants of this slot. If no assigned
-  nodes are found, it returns the slot's fallback content.</p>
+The **`assignedNodes()`** method of the
+{{domxref("HTMLSlotElement")}} interface returns a sequence of the nodes assigned to
+this slot, and if the `flatten` option is set to `true`, the
+assigned nodes of any other slots that are descendants of this slot. If no assigned
+nodes are found, it returns the slot's fallback content.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">
+```js
 HTMLSlotElement.assignedNodes()
-HTMLSlotElement.assignedNodes(options)</pre>
+HTMLSlotElement.assignedNodes(options)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>options</code> {{optional_inline}}</dt>
-  <dd>An object that sets options for the nodes to be returned. The available options are:
-    <dl>
-      <dt><code>flatten</code></dt>
-      <dd>A {{jsxref('Boolean')}} indicating whether to return the assigned nodes of any available child <code>&lt;slot&gt;</code> elements (<code>true</code>) or not (<code>false</code>). Defaults to <code>false</code>.</dd>
-    </dl>
-  </dd>
-</dl>
+- `options` {{optional_inline}}
 
-<h3 id="Return_value">Return value</h3>
+  - : An object that sets options for the nodes to be returned. The available options are:
 
-<p>An array of nodes.</p>
+    - `flatten`
+      - : A {{jsxref('Boolean')}} indicating whether to return the assigned nodes of any available child `<slot>` elements (`true`) or not (`false`). Defaults to `false`.
 
-<h2 id="Examples">Examples</h2>
+### Return value
 
-<p>The following snippet is taken from our <a
-    href="https://github.com/mdn/web-components-examples/tree/master/slotchange">slotchange
-    example</a> (<a href="https://mdn.github.io/web-components-examples/slotchange/">see
-    it live also</a>).</p>
+An array of nodes.
 
-<pre class="brush: js">let slots = this.shadowRoot.querySelectorAll('slot');
+## Examples
+
+The following snippet is taken from our [slotchange
+example](https://github.com/mdn/web-components-examples/tree/master/slotchange) ([see
+it live also](https://mdn.github.io/web-components-examples/slotchange/)).
+
+```js
+let slots = this.shadowRoot.querySelectorAll('slot');
 slots[1].addEventListener('slotchange', function(e) {
   let nodes = slots[1].assignedNodes();
   console.log('Element in Slot "' + slots[1].name + '" changed to "' + nodes[0].outerHTML + '".');
-});</pre>
+});
+```
 
-<p>Here we grab references to all the slots, then add a slotchange event listener to the
-  2nd slot in the template — which is the one that keeps having its contents changed in
-  the example.</p>
+Here we grab references to all the slots, then add a slotchange event listener to the
+2nd slot in the template — which is the one that keeps having its contents changed in
+the example.
 
-<p>Every time the element inserted in the slot changes, we log a report to the console
-  saying which slot has changed, and what the new node inside the slot is.</p>
+Every time the element inserted in the slot changes, we log a report to the console
+saying which slot has changed, and what the new node inside the slot is.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

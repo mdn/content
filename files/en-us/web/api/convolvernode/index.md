@@ -9,70 +9,63 @@ tags:
   - Web Audio API
 browser-compat: api.ConvolverNode
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<p>The <code>ConvolverNode</code> interface is an {{domxref("AudioNode")}} that performs a Linear Convolution on a given {{domxref("AudioBuffer")}}, often used to achieve a reverb effect. A <code>ConvolverNode</code> always has exactly one input and one output.</p>
+The `ConvolverNode` interface is an {{domxref("AudioNode")}} that performs a Linear Convolution on a given {{domxref("AudioBuffer")}}, often used to achieve a reverb effect. A `ConvolverNode` always has exactly one input and one output.
 
-<div class="note">
-<p><strong>Note:</strong> For more information on the theory behind Linear Convolution, see the <a href="https://en.wikipedia.org/wiki/Convolution">Convolution article on Wikipedia</a>.</p>
-</div>
+> **Note:** For more information on the theory behind Linear Convolution, see the [Convolution article on Wikipedia](https://en.wikipedia.org/wiki/Convolution).
 
 <table class="properties">
-	<tbody>
-		<tr>
-			<th scope="row">Number of inputs</th>
-			<td><code>1</code></td>
-		</tr>
-		<tr>
-			<th scope="row">Number of outputs</th>
-			<td><code>1</code></td>
-		</tr>
-		<tr>
-			<th scope="row">Channel count mode</th>
-			<td><code>"clamped-max"</code></td>
-		</tr>
-		<tr>
-			<th scope="row">Channel count</th>
-			<td><code>1</code>, <code>2</code>, or <code>4</code></td>
-		</tr>
-		<tr>
-			<th scope="row">Channel interpretation</th>
-			<td><code>"speakers"</code></td>
-		</tr>
-	</tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Number of inputs</th>
+      <td><code>1</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Number of outputs</th>
+      <td><code>1</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Channel count mode</th>
+      <td><code>"clamped-max"</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Channel count</th>
+      <td><code>1</code>, <code>2</code>, or <code>4</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Channel interpretation</th>
+      <td><code>"speakers"</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
-	<dt>{{domxref("ConvolverNode.ConvolverNode()", "ConvolverNode()")}}</dt>
-	<dd>Creates a new <code>ConvolverNode</code> object instance.</dd>
-</dl>
+- {{domxref("ConvolverNode.ConvolverNode()", "ConvolverNode()")}}
+  - : Creates a new `ConvolverNode` object instance.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{domxref("AudioNode")}}</em>.</p>
+_Inherits properties from its parent, {{domxref("AudioNode")}}_.
 
-<dl>
-	<dt>{{domxref("ConvolverNode.buffer")}}</dt>
-	<dd>A mono, stereo, or 4-channel <em>{{domxref("AudioBuffer")}}</em> containing the (possibly multichannel) impulse response used by the <code>ConvolverNode</code> to create the reverb effect.</dd>
-	<dt>{{domxref("ConvolverNode.normalize")}}</dt>
-	<dd>A boolean that controls whether the impulse response from the buffer will be scaled by an equal-power normalization when the <code>buffer</code> attribute is set, or not.</dd>
-</dl>
+- {{domxref("ConvolverNode.buffer")}}
+  - : A mono, stereo, or 4-channel _{{domxref("AudioBuffer")}}_ containing the (possibly multichannel) impulse response used by the `ConvolverNode` to create the reverb effect.
+- {{domxref("ConvolverNode.normalize")}}
+  - : A boolean that controls whether the impulse response from the buffer will be scaled by an equal-power normalization when the `buffer` attribute is set, or not.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>No specific method; inherits methods from its parent, {{domxref("AudioNode")}}</em>.</p>
+_No specific method; inherits methods from its parent, {{domxref("AudioNode")}}_.
 
-<h2 id="ConvolverNode_Example">ConvolverNode Example</h2>
+## ConvolverNode Example
 
-<p>The following example shows basic usage of an AudioContext to create a convolver node.</p>
+The following example shows basic usage of an AudioContext to create a convolver node.
 
-<div class="note">
-<p><strong>Note:</strong> You will need to find an impulse response to complete the example below. See this <a href="https://codepen.io/DonKarlssonSan/pen/doVKRE">Codepen</a> for an applied example.</p>
-</div>
+> **Note:** You will need to find an impulse response to complete the example below. See this [Codepen](https://codepen.io/DonKarlssonSan/pen/doVKRE) for an applied example.
 
-<pre class="brush: js">let audioCtx = new window.AudioContext();
+```js
+let audioCtx = new window.AudioContext();
 
 async function createReverb() {
     let convolver = audioCtx.createConvolver();
@@ -89,21 +82,19 @@ async function createReverb() {
 
 let reverb = await createReverb();
 
-// someOtherAudioNode -&gt; reverb -&gt; destination
+// someOtherAudioNode -> reverb -> destination
 someOtherAudioNode.connect(reverb);
 reverb.connect(audioCtx.destination);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

@@ -2,69 +2,64 @@
 title: ReadableStream.getReader()
 slug: Web/API/ReadableStream/getReader
 tags:
-- API
-- Method
-- ReadableStream
-- Reference
-- Streams
-- getReader
+  - API
+  - Method
+  - ReadableStream
+  - Reference
+  - Streams
+  - getReader
 browser-compat: api.ReadableStream.getReader
 ---
-<div>{{APIRef("Streams")}}</div>
+{{APIRef("Streams")}}
 
-<p>The <strong><code>getReader()</code></strong> method of the
-  {{domxref("ReadableStream")}} interface creates a reader and locks the stream to it.
-  While the stream is locked, no other reader can be acquired until this one is released.
-</p>
+The **`getReader()`** method of the
+{{domxref("ReadableStream")}} interface creates a reader and locks the stream to it.
+While the stream is locked, no other reader can be acquired until this one is released.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>reader</em> = <em>readableStream</em>.getReader(<em>{mode}</em>);</pre>
+```js
+var reader = readableStream.getReader({mode});
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>{mode} {{optional_inline}}</dt>
-  <dd>An object containing a property <code>mode</code>, specifying the type of reader to
+- {mode} {{optional_inline}}
+
+  - : An object containing a property `mode`, specifying the type of reader to
     create.  Values can be:
-    <ul>
-      <li><code>"byob"</code>, which results in a {{domxref("ReadableStreamBYOBReader")}}
-        being created that can read readable byte streams (i.e. can handle "bring your own
-        buffer" reading).</li>
-      <li><code>undefined</code> (or not specified at all — this is the default), which
-        results in a {{domxref("ReadableStreamDefaultReader")}} being created that can
-        read individual chunks from a stream.</li>
-    </ul>
-  </dd>
-</dl>
 
-<h3 id="Return_value">Return value</h3>
+    - `"byob"`, which results in a {{domxref("ReadableStreamBYOBReader")}}
+      being created that can read readable byte streams (i.e. can handle "bring your own
+      buffer" reading).
+    - `undefined` (or not specified at all — this is the default), which
+      results in a {{domxref("ReadableStreamDefaultReader")}} being created that can
+      read individual chunks from a stream.
 
-<p>A {{domxref("ReadableStreamDefaultReader")}} or {{domxref("ReadableStreamBYOBReader")}}
-  object instance, depending on the <code>mode</code> value.</p>
+### Return value
 
-<h3 id="Exceptions">Exceptions</h3>
+A {{domxref("ReadableStreamDefaultReader")}} or {{domxref("ReadableStreamBYOBReader")}}
+object instance, depending on the `mode` value.
 
-<dl>
-  <dt>RangeError</dt>
-  <dd>The provided mode value is not <code>"byob"</code> or <code>undefined</code>.</dd>
-  <dt>TypeError</dt>
-  <dd>The stream you are trying to create a reader for is not a
-    {{domxref("ReadableStream")}}.</dd>
-</dl>
+### Exceptions
 
-<h2 id="Examples">Examples</h2>
+- RangeError
+  - : The provided mode value is not `"byob"` or `undefined`.
+- TypeError
+  - : The stream you are trying to create a reader for is not a
+    {{domxref("ReadableStream")}}.
 
-<p>In the following simple example, a previously-created custom
-  <code>ReadableStream</code> is read using a {{domxref("ReadableStreamDefaultReader")}}
-  created using <code>getReader()</code>. (see our <a
-    href="https://mdn.github.io/dom-examples/streams/simple-random-stream/">Simple random
-    stream example</a> for the full code). Each chunk is read sequentially and output to
-  the UI, until the stream has finished being read, at which point we return out of the
-  recursive function and print the entire stream to another part of the UI.</p>
+## Examples
 
-<pre class="brush: js">function fetchStream() {
+In the following simple example, a previously-created custom
+`ReadableStream` is read using a {{domxref("ReadableStreamDefaultReader")}}
+created using `getReader()`. (see our [Simple random
+stream example](https://mdn.github.io/dom-examples/streams/simple-random-stream/) for the full code). Each chunk is read sequentially and output to
+the UI, until the stream has finished being read, at which point we return out of the
+recursive function and print the entire stream to another part of the UI.
+
+```js
+function fetchStream() {
   const reader = stream.getReader();
   let charsReceived = 0;
 
@@ -92,12 +87,13 @@ browser-compat: api.ReadableStream.getReader
     // Read some more, and call this function again
     return reader.read().then(processText);
   });
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

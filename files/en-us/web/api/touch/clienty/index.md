@@ -2,46 +2,49 @@
 title: Touch.clientY
 slug: Web/API/Touch/clientY
 tags:
-- API
-- DOM
-- Property
-- Read-only
-- Reference
-- touch
+  - API
+  - DOM
+  - Property
+  - Read-only
+  - Reference
+  - touch
 browser-compat: api.Touch.clientY
 ---
-<p>{{ APIRef("Touch Events") }}</p>
+{{ APIRef("Touch Events") }}
 
-<p>The <strong><code>Touch.clientY</code></strong> read-only property returns the Y
-  coordinate of the touch point relative to the browser's viewport, not including any
-  scroll offset.</p>
+The **`Touch.clientY`** read-only property returns the Y
+coordinate of the touch point relative to the browser's viewport, not including any
+scroll offset.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>touchItem</var>.clientY;</pre>
+```js
+touchItem.clientY;
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code>long</code> value representing the Y coordinate of the touch point relative to
-  the viewport, not including any scroll offset.</p>
+A `long` value representing the Y coordinate of the touch point relative to
+the viewport, not including any scroll offset.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example illustrates using the {{domxref("Touch")}} object's
-  {{domxref("Touch.clientX")}} and {{domxref("Touch.clientY")}} properties. The
-  {{domxref("Touch.clientX")}} property is the horizontal coordinate of a touch point
-  relative to the browser's viewport excluding any scroll offset. The
-  {{domxref("Touch.clientY")}} property is the vertical coordinate of the touch point
-  relative to the browser's viewport excluding any scroll offset .</p>
+This example illustrates using the {{domxref("Touch")}} object's
+{{domxref("Touch.clientX")}} and {{domxref("Touch.clientY")}} properties. The
+{{domxref("Touch.clientX")}} property is the horizontal coordinate of a touch point
+relative to the browser's viewport excluding any scroll offset. The
+{{domxref("Touch.clientY")}} property is the vertical coordinate of the touch point
+relative to the browser's viewport excluding any scroll offset .
 
-<p>In this example, we assume the user initiates a touch on an element with an id of
-  <code>source</code>, moves within the element or out of the element and then releases
-  contact with the surface. When the {{domxref("Element/touchend_event", "touchend")}}
-  event handler is invoked, the changes in the {{domxref("Touch.clientX")}} and
-  {{domxref("Touch.clientY")}} coordinates, from the starting touch point to the ending
-  touch point, are calculated.</p>
+In this example, we assume the user initiates a touch on an element with an id of
+`source`, moves within the element or out of the element and then releases
+contact with the surface. When the {{domxref("Element/touchend_event", "touchend")}}
+event handler is invoked, the changes in the {{domxref("Touch.clientX")}} and
+{{domxref("Touch.clientY")}} coordinates, from the starting touch point to the ending
+touch point, are calculated.
 
-<pre class="brush: js">// Register touchstart and touchend listeners for element 'source'
+```js
+// Register touchstart and touchend listeners for element 'source'
 var src = document.getElementById("source");
 var clientX, clientY;
 
@@ -61,12 +64,13 @@ src.addEventListener('touchend', function(e) {
   deltaY = e.changedTouches[0].clientY - clientY;
 
   // Process the data ...
-}, false);</pre>
+}, false);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

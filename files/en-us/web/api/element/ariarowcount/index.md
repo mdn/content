@@ -11,63 +11,66 @@ tags:
   - Element
 browser-compat: api.Element.ariaRowCount
 ---
-<div>{{DefaultAPISidebar("DOM")}}</div>
+{{DefaultAPISidebar("DOM")}}
 
-<p>The <strong><code>ariaRowCount</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <code>aria-rowcount</code> attribute, which defines the total number of rows in a table, grid, or treegrid.</p>
+The **`ariaRowCount`** property of the {{domxref("Element")}} interface reflects the value of the `aria-rowcount` attribute, which defines the total number of rows in a table, grid, or treegrid.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox notranslate">var <var>ariaRowCount</var> = element.ariaRowCount;
-<var>element</var>.ariaRowCount = <var>ariaRowCount</var></pre>
+    var ariaRowCount = element.ariaRowCount;
+    element.ariaRowCount = ariaRowCount
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString")}} which contains an integer.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("DOMString")}} which contains an integer.
 
-<p>In this example the <code>aria-rowcount</code> attribute on the element with an ID of <code>semantic-table</code> is set to "100", representing the total number of rows in the table, rather than the currently visible rows. Using <code>ariaRowCount</code> we update the value to "101".</p>
+## Examples
 
-<pre class="brush: html">&lt;table id="semantic-table" role="table" aria-label="Semantic Elements" aria-describedby="semantic_elements_table_desc" aria-rowcount="100"&gt;
-  &lt;caption id="semantic_elements_table_desc"&gt;Semantic Elements to use instead of ARIA's roles&lt;/caption&gt;
-  &lt;thead role="rowgroup"&gt;
-    &lt;tr role="row"&gt;
-      &lt;th role="columnheader" aria-sort="none" aria-rowindex="1"&gt;ARIA Role&lt;/th&gt;
-      &lt;th role="columnheader" aria-sort="none" aria-rowindex="1"&gt;Semantic Element&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody role="rowgroup"&gt;
-    &lt;tr role="row"&gt;
-      &lt;td role="cell" aria-rowindex="11"&gt;header&lt;/td&gt;
-      &lt;td role="cell" aria-rowindex="11"&gt;h1&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr role="row"&gt;
-      &lt;td role="cell" aria-rowindex="16"&gt;header&lt;/td&gt;
-      &lt;td role="cell" aria-rowindex="16"&gt;h6&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr role="row"&gt;
-      &lt;td role="cell" aria-rowindex="18"&gt;rowgroup&lt;/td&gt;
-      &lt;td role="cell" aria-rowindex="18"&gt;thead&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr role="row"&gt;
-      &lt;td role="cell" aria-rowindex="24"&gt;term&lt;/td&gt;
-      &lt;td role="cell" aria-rowindex="24"&gt;dt&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;</pre>
+In this example the `aria-rowcount` attribute on the element with an ID of `semantic-table` is set to "100", representing the total number of rows in the table, rather than the currently visible rows. Using `ariaRowCount` we update the value to "101".
 
-<pre class="brush: js">let el = document.getElementById('semantic-table');
+```html
+<table id="semantic-table" role="table" aria-label="Semantic Elements" aria-describedby="semantic_elements_table_desc" aria-rowcount="100">
+  <caption id="semantic_elements_table_desc">Semantic Elements to use instead of ARIA's roles</caption>
+  <thead role="rowgroup">
+    <tr role="row">
+      <th role="columnheader" aria-sort="none" aria-rowindex="1">ARIA Role</th>
+      <th role="columnheader" aria-sort="none" aria-rowindex="1">Semantic Element</th>
+    </tr>
+  </thead>
+  <tbody role="rowgroup">
+    <tr role="row">
+      <td role="cell" aria-rowindex="11">header</td>
+      <td role="cell" aria-rowindex="11">h1</td>
+    </tr>
+    <tr role="row">
+      <td role="cell" aria-rowindex="16">header</td>
+      <td role="cell" aria-rowindex="16">h6</td>
+    </tr>
+    <tr role="row">
+      <td role="cell" aria-rowindex="18">rowgroup</td>
+      <td role="cell" aria-rowindex="18">thead</td>
+    </tr>
+    <tr role="row">
+      <td role="cell" aria-rowindex="24">term</td>
+      <td role="cell" aria-rowindex="24">dt</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+```js
+let el = document.getElementById('semantic-table');
 console.log(el.ariaRowCount); // 100
 el.ariaRowCount = "101"
-console.log(el.ariaRowCount); // 101</pre>
+console.log(el.ariaRowCount); // 101
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<ul>
-  <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role">ARIA: table role</a></li>
-</ul>
+- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role)

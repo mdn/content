@@ -11,56 +11,58 @@ tags:
   - Web Performance
 browser-compat: api.PerformancePaintTiming
 ---
-<p>{{APIRef("Performance Timeline API")}}</p>
+{{APIRef("Performance Timeline API")}}
 
-<p>The <strong><code>PerformancePaintTiming</code></strong> interface of the <a href="/en-US/docs/Web/API/Paint_Timing_API">Paint Timing API</a> provides timing information about "paint" (also called "render") operations during web page construction. "Paint" refers to conversion of the render tree to on-screen pixels.</p>
+The **`PerformancePaintTiming`** interface of the [Paint Timing API](/en-US/docs/Web/API/Paint_Timing_API) provides timing information about "paint" (also called "render") operations during web page construction. "Paint" refers to conversion of the render tree to on-screen pixels.
 
-<p>An application can register a {{domxref("PerformanceObserver")}} for "<code>paint</code>" {{domxref("PerformanceEntry","performance entry types")}} and the observer can retrieve the times that paint events occur. Use this information to help identify areas that take too long to provide a good user experience.</p>
+An application can register a {{domxref("PerformanceObserver")}} for "`paint`" {{domxref("PerformanceEntry","performance entry types")}} and the observer can retrieve the times that paint events occur. Use this information to help identify areas that take too long to provide a good user experience.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p>This interface has no properties but it extends the following {{domxref("PerformanceEntry")}} properties (for "<code>paint</code>" {{domxref ("PerformanceEntry.entryType","performance entry types")}}) by qualifying and constraining the properties as follows:</p>
+This interface has no properties but it extends the following {{domxref("PerformanceEntry")}} properties (for "`paint`" {{domxref ("PerformanceEntry.entryType","performance entry types")}}) by qualifying and constraining the properties as follows:
 
-<dl>
- <dt>{{domxref("PerformanceEntry.entryType")}}</dt>
- <dd>Returns "<code>paint</code>".</dd>
- <dt>{{domxref("PerformanceEntry.name")}}</dt>
- <dd>Returns either <code>"first-paint"</code> or <code>"first-contentful-paint"</code>.</dd>
- <dt>{{domxref("PerformanceEntry.startTime")}}</dt>
- <dd>Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} when the paint occurred.</dd>
- <dt>{{domxref("PerformanceEntry.duration")}}</dt>
- <dd>Returns 0.</dd>
-</dl>
+- {{domxref("PerformanceEntry.entryType")}}
+  - : Returns "`paint`".
+- {{domxref("PerformanceEntry.name")}}
+  - : Returns either `"first-paint"` or `"first-contentful-paint"`.
+- {{domxref("PerformanceEntry.startTime")}}
+  - : Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} when the paint occurred.
+- {{domxref("PerformanceEntry.duration")}}
+  - : Returns 0.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p>This interface has no methods.</p>
+This interface has no methods.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">function showPaintTimings() {
+```js
+function showPaintTimings() {
   if (window.performance) {
     let performance = window.performance;
     let performanceEntries = performance.getEntriesByType('paint');
-    performanceEntries.forEach( (performanceEntry, i, entries) =&gt; {
+    performanceEntries.forEach( (performanceEntry, i, entries) => {
       console.log("The time to " + performanceEntry.name + " was " + performanceEntry.startTime + " milliseconds.");
     });
   } else {
     console.log('Performance timing isn\'t supported.');
   }
-}</pre>
+}
+```
 
-<p>The code above produces console output something like the following:</p>
+The code above produces console output something like the following:
 
-<pre class="brush: bash">The time to first-paint was 2785.915 milliseconds.
-The time to first-contentful-paint was 2787.460 milliseconds.</pre>
+```bash
+The time to first-paint was 2785.915 milliseconds.
+The time to first-contentful-paint was 2787.460 milliseconds.
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

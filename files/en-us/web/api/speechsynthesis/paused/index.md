@@ -2,58 +2,58 @@
 title: SpeechSynthesis.paused
 slug: Web/API/SpeechSynthesis/paused
 tags:
-- API
-- Experimental
-- Property
-- Reference
-- SpeechSynthesis
-- Web Speech API
-- paused
-- speech
-- synthesis
+  - API
+  - Experimental
+  - Property
+  - Reference
+  - SpeechSynthesis
+  - Web Speech API
+  - paused
+  - speech
+  - synthesis
 browser-compat: api.SpeechSynthesis.paused
 ---
-<div>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</div>
+{{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>paused</code></strong> read-only property of the
-  {{domxref("SpeechSynthesis")}} interface is a boolean value that returns
-  <code>true</code> if the <code>SpeechSynthesis</code> object is in a paused state, or
-  <code>false</code> if not.</p>
+The **`paused`** read-only property of the
+{{domxref("SpeechSynthesis")}} interface is a boolean value that returns
+`true` if the `SpeechSynthesis` object is in a paused state, or
+`false` if not.
 
-<p>It can be set to {{domxref("SpeechSynthesis.pause()", "paused")}} even if nothing is
-	currently being spoken through it. If
-	{{domxref("SpeechSynthesisUtterance","utterances")}} are then added to the utterance
-	queue, they will not be spoken until the <code>SpeechSynthesis</code> object is
-	unpaused, using {{domxref("SpeechSynthesis.resume()")}}.</p>
+It can be set to {{domxref("SpeechSynthesis.pause()", "paused")}} even if nothing is
+currently being spoken through it. If
+{{domxref("SpeechSynthesisUtterance","utterances")}} are then added to the utterance
+queue, they will not be spoken until the `SpeechSynthesis` object is
+unpaused, using {{domxref("SpeechSynthesis.resume()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var amIPaused = speechSynthesisInstance.paused;
-</pre>
+```js
+var amIPaused = speechSynthesisInstance.paused;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A boolean value.</p>
+A boolean value.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var synth = window.speechSynthesis;
+```js
+var synth = window.speechSynthesis;
 
 synth.pause();
 
 var amIPaused = synth.paused; // will return true
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)

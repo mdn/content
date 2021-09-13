@@ -2,38 +2,41 @@
 title: BasicCardResponse.cardNumber
 slug: Web/API/BasicCardResponse/cardNumber
 tags:
-- API
-- Basic Card Request
-- BasicCardResponse
-- Experimental
-- Payment Request
-- Payment Request API
-- Property
-- Reference
-- cardNumber
-- Deprecated
-- Non-standard
+  - API
+  - Basic Card Request
+  - BasicCardResponse
+  - Experimental
+  - Payment Request
+  - Payment Request API
+  - Property
+  - Reference
+  - cardNumber
+  - Deprecated
+  - Non-standard
 browser-compat: api.BasicCardResponse.cardNumber
 ---
-<p>{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}</p>
+{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
 
-<p>The <strong><code>cardNumber</code></strong> property of the
-  {{domxref("BasicCardResponse")}} dictionary contains the number of the card used to make
-  the payment.</p>
+The **`cardNumber`** property of the
+{{domxref("BasicCardResponse")}} dictionary contains the number of the card used to make
+the payment.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>"cardNumber"</em> : "number"</pre>
+```js
+"cardNumber" : "number"
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} representing the credit card number.</p>
+A {{domxref("DOMString")}} representing the credit card number.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>Let's look at a sample payment request:</p>
+Let's look at a sample payment request:
 
-<pre class="brush: js">var request = new PaymentRequest(supportedInstruments, details, options);
+```js
+var request = new PaymentRequest(supportedInstruments, details, options);
 
 // Call show() to trigger the browser's payment flow.
 request.show().then(function(instrumentResponse) {
@@ -42,16 +45,18 @@ request.show().then(function(instrumentResponse) {
 })
 .catch(function(err) {
   // Do something with the error from request.show().
-});</pre>
+});
+```
 
-<p>Once the payment flow has been triggered using {{domxref("PaymentRequest.show()")}} and
-  the promise resolves successfully, the {{domxref("PaymentResponse")}} object available
-  inside the fulfilled promise (<code>instrumentResponse</code> above) will have a
-  {{domxref("details","PaymentResponse.details")}} property that will contain response
-  details. This has to conform to the structure defined by the
-  <code>BasicCardResponse</code> dictionary, and may look something like this:</p>
+Once the payment flow has been triggered using {{domxref("PaymentRequest.show()")}} and
+the promise resolves successfully, the {{domxref("PaymentResponse")}} object available
+inside the fulfilled promise (`instrumentResponse` above) will have a
+{{domxref("details","PaymentResponse.details")}} property that will contain response
+details. This has to conform to the structure defined by the
+`BasicCardResponse` dictionary, and may look something like this:
 
-<pre class="brush: js">{
+```js
+{
   "cardNumber' : '9999999999999999",
   "cardholderName' : 'Mr. Dick Straw",
   "cardSecurityCode" : "999",
@@ -59,14 +64,15 @@ request.show().then(function(instrumentResponse) {
   "expiryYear" : "2021",
   "billingAddress" : {
     "country" : "GB",
-    // etc. billing address is a <a href="/en-US/docs/Web/API/PaymentAddress">PaymentAddress</a> object
+    // etc. billing address is a PaymentAddress object
   }
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This feature is no longer part of any specification.</p>
+This feature is no longer part of any specification.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

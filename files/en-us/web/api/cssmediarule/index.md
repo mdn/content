@@ -8,45 +8,45 @@ tags:
   - Reference
 browser-compat: api.CSSMediaRule
 ---
-<div>{{ APIRef("CSSOM") }}</div>
+{{ APIRef("CSSOM") }}
 
-<p>The <strong><code>CSSMediaRule</code></strong> interface represents a single CSS {{cssxref("@media")}} rule.</p>
+The **`CSSMediaRule`** interface represents a single CSS {{cssxref("@media")}} rule.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its ancestors {{domxref("CSSConditionRule")}}, {{domxref("CSSGroupingRule")}}, and {{domxref("CSSRule")}}.</em></p>
+_Inherits properties from its ancestors {{domxref("CSSConditionRule")}}, {{domxref("CSSGroupingRule")}}, and {{domxref("CSSRule")}}._
 
-<dl>
- <dt>{{domxref("CSSMediaRule.media")}} {{readonlyinline}}</dt>
- <dd>Returns a {{domxref("MediaList")}} representing the intended destination medium for style information.</dd>
-</dl>
+- {{domxref("CSSMediaRule.media")}} {{readonlyinline}}
+  - : Returns a {{domxref("MediaList")}} representing the intended destination medium for style information.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>No specific methods; inherits methods from its ancestors {{domxref("CSSConditionRule")}}, {{domxref("CSSGroupingRule")}}, and {{domxref("CSSRule")}}.</em></p>
+_No specific methods; inherits methods from its ancestors {{domxref("CSSConditionRule")}}, {{domxref("CSSGroupingRule")}}, and {{domxref("CSSRule")}}._
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>
-  The CSS includes a media query with one style rule. This will be the first CSSRule returned by <code>document.styleSheets[0].cssRules</code>.
-  <code>myRules[0]</code> therefore returns a {{domxref("CSSMediaRule")}} object.
-</p>
+The CSS includes a media query with one style rule. This will be the first CSSRule returned by `document.styleSheets[0].cssRules`.
+`myRules[0]` therefore returns a {{domxref("CSSMediaRule")}} object.
 
-<pre class="brush: css">@media (min-width: 500px) {
+```css
+@media (min-width: 500px) {
   body {
     color: blue;
   }
-}</pre>
+}
+```
 
-<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0]); // a CSSMediaRule representing the media query.</pre>
+```js
+let myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0]); // a CSSMediaRule representing the media query.
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

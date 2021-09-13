@@ -2,53 +2,57 @@
 title: USB.getDevices()
 slug: Web/API/USB/getDevices
 tags:
-- API
-- Method
-- Reference
-- USB
-- WebUSB
-- WebUSB API
-- getDevices()
+  - API
+  - Method
+  - Reference
+  - USB
+  - WebUSB
+  - WebUSB API
+  - getDevices()
 browser-compat: api.USB.getDevices
 ---
-<p>{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}</p>
+{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}
 
-<p>The <strong><code>getDevices</code></strong> method of the {{DOMxRef("USB")}} interface
-  returns a {{JSxRef("Promise")}} that resolves with an array of {{DOMxRef("USBDevice")}}
-  objects for paired attached devices. For information on pairing devices, see
-  {{DOMxRef("USB.requestDevice()")}}.</p>
+The **`getDevices`** method of the {{DOMxRef("USB")}} interface
+returns a {{JSxRef("Promise")}} that resolves with an array of {{DOMxRef("USBDevice")}}
+objects for paired attached devices. For information on pairing devices, see
+{{DOMxRef("USB.requestDevice()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>USB</em>.getDevices()</pre>
+```js
+USB.getDevices()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{JSxRef("Promise")}} that resolves with an array of {{DOMxRef("USBDevice")}}
-  objects.</p>
+A {{JSxRef("Promise")}} that resolves with an array of {{DOMxRef("USBDevice")}}
+objects.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example logs the product name and serial number of paired devices to the
-  console. For information on pairing devices, see
-  {{DOMxRef("USB.requestDevice","USB.requestDevice()")}}.</p>
+The following example logs the product name and serial number of paired devices to the
+console. For information on pairing devices, see
+{{DOMxRef("USB.requestDevice","USB.requestDevice()")}}.
 
-<pre class="brush: js">navigator.usb.getDevices()
-.then(devices =&gt; {
+```js
+navigator.usb.getDevices()
+.then(devices => {
   console.log("Total devices: " + devices.length);
-  devices.forEach(device =&gt; {
+  devices.forEach(device => {
     console.log("Product name: " + device.productName + ", serial number " + device.serialNumber);
   });
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

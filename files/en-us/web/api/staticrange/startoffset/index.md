@@ -2,38 +2,39 @@
 title: StaticRange.startOffset
 slug: Web/API/StaticRange/startOffset
 tags:
-- API
-- DOM
-- DOM API
-- Property
-- Read-only
-- Reference
-- Static Range API
-- StaticRange
-- startContainer
+  - API
+  - DOM
+  - DOM API
+  - Property
+  - Read-only
+  - Reference
+  - Static Range API
+  - StaticRange
+  - startContainer
 browser-compat: api.StaticRange.startOffset
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>The read-only <strong><code>startOffset</code></strong>
-    property of the {{domxref("StaticRange")}} interface returns the offset into the start
-    node of the range's start position.</p>
+The read-only **`startOffset`**
+property of the {{domxref("StaticRange")}} interface returns the offset into the start
+node of the range's start position.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>var startOffset = staticRange.startOffset</em>
-</pre>
+```js
+var startOffset = staticRange.startOffset
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An integer value indicating the number of characters into the {{domxref("Node")}}
-  indicated by {{domxref("StaticRange.startContainer", "startContainer")}} at which the
-  first character of the range is located.</p>
+An integer value indicating the number of characters into the {{domxref("Node")}}
+indicated by {{domxref("StaticRange.startContainer", "startContainer")}} at which the
+first character of the range is located.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

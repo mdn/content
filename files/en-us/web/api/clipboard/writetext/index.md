@@ -2,74 +2,71 @@
 title: Clipboard.writeText()
 slug: Web/API/Clipboard/writeText
 tags:
-- API
-- Clip
-- Clipboard
-- Clipboard API
-- Cut
-- Method
-- Pasteboard
-- Reference
-- Scrap
-- copy
-- paste
-- writeText
+  - API
+  - Clip
+  - Clipboard
+  - Clipboard API
+  - Cut
+  - Method
+  - Pasteboard
+  - Reference
+  - Scrap
+  - copy
+  - paste
+  - writeText
 browser-compat: api.Clipboard.writeText
 ---
-<div>{{APIRef("Clipboard API")}}</div>
+{{APIRef("Clipboard API")}}
 
-<p>The {{domxref("Clipboard")}} interface's <strong><code>writeText()</code></strong>
-  property writes the specified text string to the system clipboard. Text may be read back
-  using either {{domxref("Clipboard.read", "read()")}} or {{domxref("Clipboard.readText",
-  "readText()")}}.</p>
+The {{domxref("Clipboard")}} interface's **`writeText()`**
+property writes the specified text string to the system clipboard. Text may be read back
+using either {{domxref("Clipboard.read", "read()")}} or {{domxref("Clipboard.readText",
+  "readText()")}}.
 
-<p>The <code>"clipboard-write"</code> permission of the <a
-    href="/en-US/docs/Web/API/Permissions_API">Permissions API</a>, is granted
-  automatically to pages when they are in the active tab.</p>
+The `"clipboard-write"` permission of the [Permissions API](/en-US/docs/Web/API/Permissions_API), is granted
+automatically to pages when they are in the active tab.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>promise</em> = navigator.clipboard.writeText(<em>newClipText</em>)</pre>
+```js
+var promise = navigator.clipboard.writeText(newClipText)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>newClipText</code></dt>
-  <dd>The {{domxref("DOMString")}} to be written to the clipboard.</dd>
-</dl>
+- `newClipText`
+  - : The {{domxref("DOMString")}} to be written to the clipboard.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} which is resolved once the clipboard's contents have been
-  updated. The promise is rejected if the caller does not have permission to write to the
-  clipboard.</p>
+A {{jsxref("Promise")}} which is resolved once the clipboard's contents have been
+updated. The promise is rejected if the caller does not have permission to write to the
+clipboard.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example sets the clipboard's contents to the string "&lt;empty clipboard&gt;".</p>
+This example sets the clipboard's contents to the string "\<empty clipboard>".
 
-<pre class="brush: js">navigator.clipboard.writeText("&lt;empty clipboard&gt;").then(function() {
+```js
+navigator.clipboard.writeText("<empty clipboard>").then(function() {
   /* clipboard successfully set */
 }, function() {
   /* clipboard write failed */
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Clipboard_API">Clipboard API</a></li>
-  <li><a href="https://async-clipboard-api.glitch.me/">Async Clipboard API demo on
-      Glitch</a></li>
-  <li><a href="https://web.dev/image-support-for-async-clipboard/">Image support for Async
-      Clipboard article</a></li>
-</ul>
+- [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
+- [Async Clipboard API demo on
+  Glitch](https://async-clipboard-api.glitch.me/)
+- [Image support for Async
+  Clipboard article](https://web.dev/image-support-for-async-clipboard/)

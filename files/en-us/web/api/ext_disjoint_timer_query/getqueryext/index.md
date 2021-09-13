@@ -9,63 +9,59 @@ tags:
   - WebGL extension
 browser-compat: api.EXT_disjoint_timer_query.getQueryEXT
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>EXT_disjoint_timer_query.getQueryEXT()</code></strong> method of the
-  <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> returns information about a query
-  target.</p>
+The **`EXT_disjoint_timer_query.getQueryEXT()`** method of the
+[WebGL API](/en-US/docs/Web/API/WebGL_API) returns information about a query
+target.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">any <var>ext</var>.getQueryEXT(<var>target</var>, <var>pname</var>);
-</pre>
+```js
+any ext.getQueryEXT(target, pname);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>target</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the target of the time query. Must be
-    <code>ext.TIMESTAMP_EXT</code> or <code>ext.TIME_ELAPSED_EXT</code>.</dd>
-  <dt><code>pname</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying which information to return. Must be
-    <code>ext.CURRENT_QUERY_EXT</code> or <code>ext.QUERY_COUNTER_BITS_EXT</code>.</dd>
-</dl>
+- target
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the target of the time query. Must be
+    `ext.TIMESTAMP_EXT` or `ext.TIME_ELAPSED_EXT`.
+- `pname`
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying which information to return. Must be
+    `ext.CURRENT_QUERY_EXT` or `ext.QUERY_COUNTER_BITS_EXT`.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Depends on <code>pname</code>:</p>
+Depends on `pname`:
 
-<ul>
-  <li>If <code>pname</code> is <code>ext.CURRENT_QUERY_EXT</code>: A
-    {{domxref("WebGLQuery")}} object, which is the currently active query for the
-    given target.</li>
-  <li>If <code>pname</code> is <code>ext.QUERY_COUNTER_BITS_EXT</code>: A
-    {{domxref("WebGL_API/Types", "GLint")}} indicating the number of bits used to hold the query result for
-    the given target.</li>
-</ul>
+- If `pname` is `ext.CURRENT_QUERY_EXT`: A
+  {{domxref("WebGLQuery")}} object, which is the currently active query for the
+  given target.
+- If `pname` is `ext.QUERY_COUNTER_BITS_EXT`: A
+  {{domxref("WebGL_API/Types", "GLint")}} indicating the number of bits used to hold the query result for
+  the given target.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var ext = gl.getExtension('EXT_disjoint_timer_query');
+```js
+var ext = gl.getExtension('EXT_disjoint_timer_query');
 var startQuery = ext.createQueryEXT();
 ext.queryCounterEXT(startQuery, ext.TIMESTAMP_EXT);
 
 var currentQuery = ext.getQueryEXT(ext.TIMESTAMP_EXT,
                                    ext.CURRENT_QUERY_EXT);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.getExtension()")}}</li>
-  <li>{{domxref("WebGLQuery")}}</li>
-  <li>{{domxref("EXT_disjoint_timer_query")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.getExtension()")}}
+- {{domxref("WebGLQuery")}}
+- {{domxref("EXT_disjoint_timer_query")}}

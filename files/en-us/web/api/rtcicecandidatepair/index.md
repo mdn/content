@@ -15,27 +15,25 @@ tags:
   - WebRTC API
 browser-compat: api.RTCIceCandidatePair
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <code><strong>RTCIceCandidatePair</strong></code> dictionary describes a pair of ICE candidates which together comprise a description of a viable connection between two WebRTC endpoints. It is used as the return value from {{domxref("RTCIceTransport.getSelectedCandidatePair()")}} to identify the currently-selected candidate pair identified by the ICE agent.</p>
+The **`RTCIceCandidatePair`** dictionary describes a pair of ICE candidates which together comprise a description of a viable connection between two WebRTC endpoints. It is used as the return value from {{domxref("RTCIceTransport.getSelectedCandidatePair()")}} to identify the currently-selected candidate pair identified by the ICE agent.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("RTCIceCandidatePair.local", "local")}}</dt>
- <dd>An {{domxref("RTCIceCandidate")}} describing the configuration of the local end of the connection.</dd>
- <dt>{{domxref("RTCIceCandidatePair.remote", "remote")}}</dt>
- <dd>The <code><strong>RTCIceCandidate</strong></code> describing the configuration of the remote end of the connection.</dd>
-</dl>
+- {{domxref("RTCIceCandidatePair.local", "local")}}
+  - : An {{domxref("RTCIceCandidate")}} describing the configuration of the local end of the connection.
+- {{domxref("RTCIceCandidatePair.remote", "remote")}}
+  - : The **`RTCIceCandidate`** describing the configuration of the remote end of the connection.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>See <a href="/en-US/docs/Web/API/RTCIceTransport/onselectedcandidatepairchange#example"><code>RTCIceTransport.onselectedcandidatepairchange</code></a> for example code.</p>
+See [`RTCIceTransport.onselectedcandidatepairchange`](/en-US/docs/Web/API/RTCIceTransport/onselectedcandidatepairchange#example) for example code.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

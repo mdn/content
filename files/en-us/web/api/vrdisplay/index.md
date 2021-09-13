@@ -14,97 +14,89 @@ tags:
   - WebVR
 browser-compat: api.VRDisplay
 ---
-<div>{{APIRef("WebVR API")}}{{Deprecated_Header}}</div>
+{{APIRef("WebVR API")}}{{Deprecated_Header}}
 
-<p>The <strong><code>VRDisplay</code></strong> interface of the <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a> represents any VR device supported by this API. It includes generic information such as device IDs and descriptions, as well as methods for starting to present a VR scene, retrieving eye parameters and display capabilities, and other important functionality.</p>
+The **`VRDisplay`** interface of the [WebVR API](/en-US/docs/Web/API/WebVR_API) represents any VR device supported by this API. It includes generic information such as device IDs and descriptions, as well as methods for starting to present a VR scene, retrieving eye parameters and display capabilities, and other important functionality.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This interface was part of the old <a href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</a>. It has been superseded by the <a href="https://immersive-web.github.io/webxr/">WebXR Device API</a>.</p>
-</div>
+> **Note:** This interface was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-<p>An array of all connected VR Devices can be returned by invoking the {{domxref("Navigator.getVRDisplays()")}} method.</p>
+An array of all connected VR Devices can be returned by invoking the {{domxref("Navigator.getVRDisplays()")}} method.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("VRDisplay.capabilities")}} {{readonlyInline}}{{deprecated_inline}}</dt>
- <dd>Returns a {{domxref("VRDisplayCapabilities")}} object that indicates the various capabilities of the <code>VRDisplay</code>.</dd>
- <dt>{{domxref("VRDisplay.depthFar")}} {{deprecated_inline}}</dt>
- <dd>Gets and sets the z-depth defining the far plane of the <a href="https://en.wikipedia.org/wiki/Viewing_frustum">eye view frustum</a>, i.e. the furthest viewable boundary of the scene.</dd>
- <dt>{{domxref("VRDisplay.depthNear")}} {{deprecated_inline}}</dt>
- <dd>Gets and sets the z-depth defining the near plane of the <a href="https://en.wikipedia.org/wiki/Viewing_frustum">eye view frustum</a>, i.e. the nearest viewable boundary of the scene.</dd>
- <dt>{{domxref("VRDisplay.displayId")}} {{readonlyInline}} {{deprecated_inline}}</dt>
- <dd>Returns an identifier for this particular VRDisplay, which is also used as an association point in the <a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a> (see {{domxref("Gamepad.displayId")}}).</dd>
- <dt>{{domxref("VRDisplay.displayName")}} {{readonlyInline}} {{deprecated_inline}}</dt>
- <dd>Returns a human-readable name to identify the <code>VRDisplay</code>.</dd>
- <dt>{{domxref("VRDisplay.hardwareUnitId")}} {{deprecated_inline}}</dt>
- <dd>Returns a {{domxref("DOMString")}} defining the shared ID of the display, and any other devices that are part of that hardware set (e.g. controllers). This is no longer needed, and has been removed from the spec. Displays now use {{domxref("VRDisplay.displayId")}}, and corresponsing controllers will now return the same ID under {{domxref("Gamepad.displayId")}}.</dd>
- <dt>{{domxref("VRDisplay.isConnected")}} {{readonlyInline}} {{deprecated_inline}}</dt>
- <dd>Returns a boolean value indicating whether the <code>VRDisplay</code> is connected to the computer.</dd>
- <dt>{{domxref("VRDisplay.isPresenting")}} {{readonlyInline}} {{deprecated_inline}}</dt>
- <dd>Returns a boolean value indicating whether the <code>VRDisplay</code> is currently having content presented through it.</dd>
- <dt>{{domxref("VRDisplay.stageParameters")}} {{readonlyInline}} {{deprecated_inline}}</dt>
- <dd>Returns a {{domxref("VRStageParameters")}} object containing room-scale parameters, if the <code>VRDisplay</code> is capable of supporting room-scale experiences.</dd>
-</dl>
+- {{domxref("VRDisplay.capabilities")}} {{readonlyInline}}{{deprecated_inline}}
+  - : Returns a {{domxref("VRDisplayCapabilities")}} object that indicates the various capabilities of the `VRDisplay`.
+- {{domxref("VRDisplay.depthFar")}} {{deprecated_inline}}
+  - : Gets and sets the z-depth defining the far plane of the [eye view frustum](https://en.wikipedia.org/wiki/Viewing_frustum), i.e. the furthest viewable boundary of the scene.
+- {{domxref("VRDisplay.depthNear")}} {{deprecated_inline}}
+  - : Gets and sets the z-depth defining the near plane of the [eye view frustum](https://en.wikipedia.org/wiki/Viewing_frustum), i.e. the nearest viewable boundary of the scene.
+- {{domxref("VRDisplay.displayId")}} {{readonlyInline}} {{deprecated_inline}}
+  - : Returns an identifier for this particular VRDisplay, which is also used as an association point in the [Gamepad API](/en-US/docs/Web/API/Gamepad_API) (see {{domxref("Gamepad.displayId")}}).
+- {{domxref("VRDisplay.displayName")}} {{readonlyInline}} {{deprecated_inline}}
+  - : Returns a human-readable name to identify the `VRDisplay`.
+- {{domxref("VRDisplay.hardwareUnitId")}} {{deprecated_inline}}
+  - : Returns a {{domxref("DOMString")}} defining the shared ID of the display, and any other devices that are part of that hardware set (e.g. controllers). This is no longer needed, and has been removed from the spec. Displays now use {{domxref("VRDisplay.displayId")}}, and corresponsing controllers will now return the same ID under {{domxref("Gamepad.displayId")}}.
+- {{domxref("VRDisplay.isConnected")}} {{readonlyInline}} {{deprecated_inline}}
+  - : Returns a boolean value indicating whether the `VRDisplay` is connected to the computer.
+- {{domxref("VRDisplay.isPresenting")}} {{readonlyInline}} {{deprecated_inline}}
+  - : Returns a boolean value indicating whether the `VRDisplay` is currently having content presented through it.
+- {{domxref("VRDisplay.stageParameters")}} {{readonlyInline}} {{deprecated_inline}}
+  - : Returns a {{domxref("VRStageParameters")}} object containing room-scale parameters, if the `VRDisplay` is capable of supporting room-scale experiences.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("VRDisplay.getEyeParameters()")}} {{deprecated_inline}}</dt>
- <dd>Returns the {{domxref("VREyeParameters")}} object containing the eye parameters for the specified eye.</dd>
- <dt>{{domxref("VRDisplay.getFrameData()")}} {{deprecated_inline}}</dt>
- <dd>Accepts a {{domxref("VRFrameData")}} object and populates it with the information required to render the current frame.</dd>
- <dt>{{domxref("VRDisplay.getImmediatePose()")}} {{deprecated_inline}}</dt>
- <dd>Returns a {{domxref("VRPose")}} object defining the current pose of the <code>VRDisplay</code>, with no prediction applied. This is no longer needed, and has been removed from the spec.</dd>
- <dt>{{domxref("VRDisplay.getLayers()")}} {{deprecated_inline}}</dt>
- <dd>Returns the layers currently being presented by the <code>VRDisplay</code>.</dd>
- <dt>{{domxref("VRDisplay.getPose()")}} {{deprecated_inline}}</dt>
- <dd>Returns a {{domxref("VRPose")}} object defining the future predicted pose of the <code>VRDisplay</code> as it will be when the current frame is actually presented. <strong>This method is deprecated — instead, you should use {{domxref("VRDisplay.getFrameData()")}}, which also provides a {{domxref("VRPose")}} object.</strong></dd>
- <dt>{{domxref("VRDisplay.resetPose()")}} {{deprecated_inline}}</dt>
- <dd>Resets the pose for this <code>VRDisplay</code>, treating its current {{domxref("VRPose.position")}} and {{domxref("VRPose.orientation")}} as the "origin/zero" values.</dd>
- <dt>{{domxref("VRDisplay.cancelAnimationFrame()")}} {{deprecated_inline}}</dt>
- <dd>A special implementation of {{domxref("Window.cancelAnimationFrame")}} that allows callbacks registered with {{domxref("VRDisplay.requestAnimationFrame()")}} to be unregistered.</dd>
- <dt>{{domxref("VRDisplay.requestAnimationFrame()")}} {{deprecated_inline}}</dt>
- <dd>A special implementation of {{domxref("Window.requestAnimationFrame")}} containing a callback function that will be called every time a new frame of the <code>VRDisplay</code> presentation is rendered.</dd>
- <dt>{{domxref("VRDisplay.requestPresent()")}} {{deprecated_inline}}</dt>
- <dd>Starts the <code>VRDisplay</code> presenting a scene.</dd>
- <dt>{{domxref("VRDisplay.exitPresent()")}} {{deprecated_inline}}</dt>
- <dd>Stops the <code>VRDisplay</code> presenting a scene.</dd>
- <dt>{{domxref("VRDisplay.submitFrame()")}} {{deprecated_inline}}</dt>
- <dd>Captures the current state of the {{domxref("VRLayerInit")}} currently being presented and displays it on the <code>VRDisplay</code>.</dd>
-</dl>
+- {{domxref("VRDisplay.getEyeParameters()")}} {{deprecated_inline}}
+  - : Returns the {{domxref("VREyeParameters")}} object containing the eye parameters for the specified eye.
+- {{domxref("VRDisplay.getFrameData()")}} {{deprecated_inline}}
+  - : Accepts a {{domxref("VRFrameData")}} object and populates it with the information required to render the current frame.
+- {{domxref("VRDisplay.getImmediatePose()")}} {{deprecated_inline}}
+  - : Returns a {{domxref("VRPose")}} object defining the current pose of the `VRDisplay`, with no prediction applied. This is no longer needed, and has been removed from the spec.
+- {{domxref("VRDisplay.getLayers()")}} {{deprecated_inline}}
+  - : Returns the layers currently being presented by the `VRDisplay`.
+- {{domxref("VRDisplay.getPose()")}} {{deprecated_inline}}
+  - : Returns a {{domxref("VRPose")}} object defining the future predicted pose of the `VRDisplay` as it will be when the current frame is actually presented. **This method is deprecated — instead, you should use {{domxref("VRDisplay.getFrameData()")}}, which also provides a {{domxref("VRPose")}} object.**
+- {{domxref("VRDisplay.resetPose()")}} {{deprecated_inline}}
+  - : Resets the pose for this `VRDisplay`, treating its current {{domxref("VRPose.position")}} and {{domxref("VRPose.orientation")}} as the "origin/zero" values.
+- {{domxref("VRDisplay.cancelAnimationFrame()")}} {{deprecated_inline}}
+  - : A special implementation of {{domxref("Window.cancelAnimationFrame")}} that allows callbacks registered with {{domxref("VRDisplay.requestAnimationFrame()")}} to be unregistered.
+- {{domxref("VRDisplay.requestAnimationFrame()")}} {{deprecated_inline}}
+  - : A special implementation of {{domxref("Window.requestAnimationFrame")}} containing a callback function that will be called every time a new frame of the `VRDisplay` presentation is rendered.
+- {{domxref("VRDisplay.requestPresent()")}} {{deprecated_inline}}
+  - : Starts the `VRDisplay` presenting a scene.
+- {{domxref("VRDisplay.exitPresent()")}} {{deprecated_inline}}
+  - : Stops the `VRDisplay` presenting a scene.
+- {{domxref("VRDisplay.submitFrame()")}} {{deprecated_inline}}
+  - : Captures the current state of the {{domxref("VRLayerInit")}} currently being presented and displays it on the `VRDisplay`.
 
+## Examples
 
-<h2 id="Examples">Examples</h2>
-
-<pre class="brush: js">if(navigator.getVRDisplays) {
+```js
+if(navigator.getVRDisplays) {
   console.log('WebVR 1.1 supported');
   // Then get the displays attached to the computer
   navigator.getVRDisplays().then(function(displays) {
     // If a display is available, use it to present the scene
-    if(displays.length &gt; 0) {
+    if(displays.length > 0) {
       vrDisplay = displays[0];
       // Now we have our VRDisplay object and can do what we want with it
     }
   });
-}</pre>
+}
+```
 
-<div class="notecard note">
-<p><strong>Note:</strong> You can see this complete code at <a href="https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js">raw-webgl-example</a>.</p>
-</div>
+> **Note:** You can see this complete code at [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This interface was part of the old <a href="https://immersive-web.github.io/webvr/spec/1.1/#interface-vrdisplay">WebVR API</a> that has been superseded by the <a href="https://immersive-web.github.io/webxr/">WebXR Device API</a>. It is no longer on track to becoming a standard.</p>
-<p>Until all browsers have implemented the new <a href="/en-US/docs/Web/API/WebXR_Device_API/Fundamentals">WebXR APIs</a>, it is recommended to rely on frameworks, like <a href="https://aframe.io/">A-Frame</a>, <a href="https://www.babylonjs.com/">Babylon.js</a>, or <a href="https://threejs.org/">Three.js</a>, or a <a href="https://github.com/immersive-web/webxr-polyfill">polyfill</a>, to develop WebXR applications that will work across all browsers <a href="https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/">[1]</a>.</p>
+This interface was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/#interface-vrdisplay) that has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/). It is no longer on track to becoming a standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals), it is recommended to rely on frameworks, like [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), or [Three.js](https://threejs.org/), or a [polyfill](https://github.com/immersive-web/webxr-polyfill), to develop WebXR applications that will work across all browsers [\[1\]](https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/).
 
-<p>{{Compat}}</p>
+## Browser compatibility
 
-<h2 id="See_also">See also</h2>
+{{Compat}}
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebVR_API">WebVR API homepage</a></li>
- <li><a href="https://mixedreality.mozilla.org/">https://mixedreality.mozilla.org/</a> — demos, downloads, and other resources from the Mozilla VR team.</li>
-</ul>
+## See also
+
+- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API)
+- <https://mixedreality.mozilla.org/> — demos, downloads, and other resources from the Mozilla VR team.

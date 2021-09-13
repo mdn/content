@@ -7,55 +7,63 @@ tags:
   - Web Speech API
 browser-compat: api.SpeechSynthesisUtterance.end_event
 ---
-<div>{{APIRef("Web Speech API")}} {{SeeCompatTable}}</div>
+{{APIRef("Web Speech API")}} {{SeeCompatTable}}
 
-<p>The <code><strong>end</strong></code> event of the <a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a> {{domxref("SpeechSynthesisUtterance")}} object is fired when the utterance has finished being spoken.</p>
+The **`end`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) {{domxref("SpeechSynthesisUtterance")}} object is fired when the utterance has finished being spoken.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("SpeechSynthesisEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td><code><a href="/en-US/docs/Web/API/SpeechSynthesisUtterance/onend">onend</a></code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("SpeechSynthesisEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/API/SpeechSynthesisUtterance/onend"
+            >onend</a
+          ></code
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>You can use the <code>end</code> event in an <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener</a></code> method:</p>
+You can use the `end` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
-<pre class="brush: js">utterThis.addEventListener('end', function(event) {
+```js
+utterThis.addEventListener('end', function(event) {
   console.log('Utterance has finished being spoken after ' + event.elapsedTime + ' seconds.');
-});</pre>
+});
+```
 
-<p>Or use the <code><a href="/en-US/docs/Web/API/SpeechSynthesisUtterance/onend">onend</a></code> event handler property:</p>
+Or use the [`onend`](/en-US/docs/Web/API/SpeechSynthesisUtterance/onend) event handler property:
 
-<pre class="brush: js">utterThis.onend = function(event) {
+```js
+utterThis.onend = function(event) {
   console.log('Utterance has finished being spoken after ' + event.elapsedTime + ' seconds.');
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)

@@ -2,77 +2,70 @@
 title: PaymentMethodChangeEvent
 slug: Web/API/PaymentMethodChangeEvent/PaymentMethodChangeEvent
 tags:
-- API
-- Commerce
-- Interface
-- Payment Method
-- Payment Request API
-- PaymentMethodChangeEvent
-- Reference
-- payment
+  - API
+  - Commerce
+  - Interface
+  - Payment Method
+  - Payment Request API
+  - PaymentMethodChangeEvent
+  - Reference
+  - payment
 browser-compat: api.PaymentMethodChangeEvent.PaymentMethodChangeEvent
 ---
-<p>{{securecontext_header}}{{APIRef("Payment Request API")}}</p>
+{{securecontext_header}}{{APIRef("Payment Request API")}}
 
-<p>The <strong><code>PaymentMethodChangeEvent()</code></strong>
-    constructor creates a new {{domxref("PaymentMethodChangeEvent")}} object providing
-    details about a {{event("paymentmethodchange")}} event.</p>
+The **`PaymentMethodChangeEvent()`**
+constructor creates a new {{domxref("PaymentMethodChangeEvent")}} object providing
+details about a {{event("paymentmethodchange")}} event.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>paymentMethodChangeEvent</em> = new PaymentMethodChangeEvent(<em>type</em>, <em>options</em>);
-</pre>
+```js
+paymentMethodChangeEvent = new PaymentMethodChangeEvent(type, options);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>type</code></dt>
-  <dd>A {{domxref("DOMString")}} which must contain the string
-    <code>paymentmethodchange</code>, the name of the only type of event which uses the
-    <code>PaymentMethodChangeEvent</code> interface.</dd>
-  <dt><code>options</code> {{optional_inline}}</dt>
-  <dd>
-    <p>An optional {{domxref("PaymentMethodChangeEventInit")}} dictionary which may
-      contain zero or more of the following properties:</p>
+- `type`
+  - : A {{domxref("DOMString")}} which must contain the string
+    `paymentmethodchange`, the name of the only type of event which uses the
+    `PaymentMethodChangeEvent` interface.
+- `options` {{optional_inline}}
 
-    <dl>
-      <dt><code>methodName</code> {{optional_inline}}</dt>
-      <dd>A {{domxref("DOMString")}} containing the payment method identifier for the
-        payment handler being used. This is an empty string by default.</dd>
-      <dt><code>methodDetails</code> {{optional_inline}}</dt>
-      <dd>An object providing payment method-specific information describing the changes
-        made to the payment, or <code>null</code> if there is no additional information
-        available or required. This is <code>null</code> by default.</dd>
-    </dl>
-  </dd>
-</dl>
+  - : An optional {{domxref("PaymentMethodChangeEventInit")}} dictionary which may
+    contain zero or more of the following properties:
 
-<h3 id="Return_value">Return value</h3>
+    - `methodName` {{optional_inline}}
+      - : A {{domxref("DOMString")}} containing the payment method identifier for the
+        payment handler being used. This is an empty string by default.
+    - `methodDetails` {{optional_inline}}
+      - : An object providing payment method-specific information describing the changes
+        made to the payment, or `null` if there is no additional information
+        available or required. This is `null` by default.
 
-<p>A newly-created {{domxref("PaymentMethodChangeEvent")}} object describing a change to
-  the options specified for the payment method given in the <code>methodName</code>
-  property.</p>
+### Return value
 
-<p>The type of the <code>methodDetails</code> property depends on the payment method. For
-  example, if <code>methodName</code> is <code>basic-card</code>, indicating that the
-  basic card payment method is being used for validation, the <code>methodDetails</code>
-  field must be a {{domxref("BasicCardChangeDetails")}} object.</p>
+A newly-created {{domxref("PaymentMethodChangeEvent")}} object describing a change to
+the options specified for the payment method given in the `methodName`
+property.
 
-<h2 id="Specifications">Specifications</h2>
+The type of the `methodDetails` property depends on the payment method. For
+example, if `methodName` is `basic-card`, indicating that the
+basic card payment method is being used for validation, the `methodDetails`
+field must be a {{domxref("BasicCardChangeDetails")}} object.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Payment_Request_API">Payment Request API</a></li>
-  <li><a
-      href="/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API">Using
-      the Payment Request API</a></li>
-  <li><a href="/en-US/docs/Web/API/Payment_Request_API/Concepts">Payment processing
-      concepts</a></li>
-</ul>
+- [Payment Request API](/en-US/docs/Web/API/Payment_Request_API)
+- [Using
+  the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
+- [Payment processing
+  concepts](/en-US/docs/Web/API/Payment_Request_API/Concepts)

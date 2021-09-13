@@ -11,73 +11,68 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceEventTiming
 ---
-<p>The <code>PerformanceEventTiming</code> interface of the Event Timing API provides timing information for the event types listed below.</p>
+The `PerformanceEventTiming` interface of the Event Timing API provides timing information for the event types listed below.
 
-<ul>
- <li>{{event("auxclick")}}</li>
- <li>{{event("beforeinput")}}</li>
- <li>{{event("click")}}</li>
- <li>{{event("compositionend")}}</li>
- <li>{{event("compositionstart")}}</li>
- <li>{{event("compositionupdate")}}</li>
- <li>{{event("contextmenu")}}</li>
- <li>{{event("dblclick")}}</li>
- <li>{{event("dragend")}}</li>
- <li>{{event("dragenter")}}</li>
- <li>{{event("dragleave")}}</li>
- <li>{{event("dragover")}}</li>
- <li>{{event("dragstart")}}</li>
- <li>{{event("drop")}}</li>
- <li>{{event("input")}}</li>
- <li>{{event("keydown")}}</li>
- <li>{{event("keypress")}}</li>
- <li>{{event("keyup")}}</li>
- <li>{{event("mousedown")}}</li>
- <li>{{event("mouseenter")}}</li>
- <li>{{event("mouseleave")}}</li>
- <li>{{event("mouseout")}}</li>
- <li>{{event("mouseover")}}</li>
- <li>{{event("mouseup")}}</li>
- <li>{{event("pointerover")}}</li>
- <li>{{event("pointerenter")}}</li>
- <li>{{event("pointerdown")}}</li>
- <li>{{event("pointerup")}}</li>
- <li>{{event("pointercancel")}}</li>
- <li>{{event("pointerout")}}</li>
- <li>{{event("pointerleave")}}</li>
- <li>{{event("gotpointercapture")}}</li>
- <li>{{event("lostpointercapture")}}</li>
- <li>{{event("touchstart")}}</li>
- <li>{{event("touchend")}}</li>
- <li>{{event("touchcancel")}}</li>
-</ul>
+- {{event("auxclick")}}
+- {{event("beforeinput")}}
+- {{event("click")}}
+- {{event("compositionend")}}
+- {{event("compositionstart")}}
+- {{event("compositionupdate")}}
+- {{event("contextmenu")}}
+- {{event("dblclick")}}
+- {{event("dragend")}}
+- {{event("dragenter")}}
+- {{event("dragleave")}}
+- {{event("dragover")}}
+- {{event("dragstart")}}
+- {{event("drop")}}
+- {{event("input")}}
+- {{event("keydown")}}
+- {{event("keypress")}}
+- {{event("keyup")}}
+- {{event("mousedown")}}
+- {{event("mouseenter")}}
+- {{event("mouseleave")}}
+- {{event("mouseout")}}
+- {{event("mouseover")}}
+- {{event("mouseup")}}
+- {{event("pointerover")}}
+- {{event("pointerenter")}}
+- {{event("pointerdown")}}
+- {{event("pointerup")}}
+- {{event("pointercancel")}}
+- {{event("pointerout")}}
+- {{event("pointerleave")}}
+- {{event("gotpointercapture")}}
+- {{event("lostpointercapture")}}
+- {{event("touchstart")}}
+- {{event("touchend")}}
+- {{event("touchcancel")}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt><strong><code>{{domxref("PerformanceEventTiming.processingStart")}}</code></strong></dt>
- <dd>Returns the time at which event dispatch started.</dd>
- <dt><strong><code>{{domxref("PerformanceEventTiming.processingEnd")}}</code></strong></dt>
- <dd>Returns the time at which the event dispatch ended.</dd>
- <dt><strong><code>{{domxref("PerformanceEventTiming.cancelable")}}</code></strong></dt>
- <dd>Returns the associated event's cancelable attribute.</dd>
- <dt><strong><code>{{domxref("PerformanceEventTiming.target")}}</code></strong></dt>
- <dd>Returns the associated event's last target, if it is not removed.</dd>
-</dl>
+- **`{{domxref("PerformanceEventTiming.processingStart")}}`**
+  - : Returns the time at which event dispatch started.
+- **`{{domxref("PerformanceEventTiming.processingEnd")}}`**
+  - : Returns the time at which the event dispatch ended.
+- **`{{domxref("PerformanceEventTiming.cancelable")}}`**
+  - : Returns the associated event's cancelable attribute.
+- **`{{domxref("PerformanceEventTiming.target")}}`**
+  - : Returns the associated event's last target, if it is not removed.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt><strong><code>{{domxref("PerformanceEventTiming.toJSON()")}}</code></strong></dt>
- <dd>Converts the PerformanceEventTiming object to JSON.</dd>
-</dl>
+- **`{{domxref("PerformanceEventTiming.toJSON()")}}`**
+  - : Converts the PerformanceEventTiming object to JSON.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example shows how to use the API for all events:</p>
+The following example shows how to use the API for all events:
 
-<pre class="brush: js">const observer = new PerformanceObserver(function(list) {
-    const perfEntries = list.getEntries().forEach(entry =&gt; {
+```js
+const observer = new PerformanceObserver(function(list) {
+    const perfEntries = list.getEntries().forEach(entry => {
         // Full duration
         const inputDuration = entry.duration;
         // Input delay (before processing event)
@@ -88,16 +83,17 @@ browser-compat: api.PerformanceEventTiming
 });
 // Register observer for event.
 observer.observe({entryTypes: ["event"]});
-</pre>
+```
 
-<p>We can also directly query the <a href="https://web.dev/fid">first input delay</a>. The first input delay or FID, measures the time from when a user first interacts with a page (i.e. when they click a link or tap on a button) to the time when the browser is actually able to begin processing event handlers in response to that interaction.</p>
+We can also directly query the [first input delay](https://web.dev/fid). The first input delay or FID, measures the time from when a user first interacts with a page (i.e. when they click a link or tap on a button) to the time when the browser is actually able to begin processing event handlers in response to that interaction.
 
-<pre class="brush: js">// Keep track of whether (and when) the page was first hidden, see:
+```js
+// Keep track of whether (and when) the page was first hidden, see:
 // https://github.com/w3c/page-visibility/issues/29
-// NOTE: ideally this check would be performed in the document &lt;head&gt;
+// NOTE: ideally this check would be performed in the document <head>
 // to avoid cases where the visibility state changes before this code runs.
 let firstHiddenTime = document.visibilityState === 'hidden' ? 0 : Infinity;
-document.addEventListener('visibilitychange', (event) =&gt; {
+document.addEventListener('visibilitychange', (event) => {
   firstHiddenTime = Math.min(firstHiddenTime, event.timeStamp);
 }, {once: true});
 
@@ -106,7 +102,7 @@ document.addEventListener('visibilitychange', (event) =&gt; {
 function sendToAnalytics(data) {
   const body = JSON.stringify(data);
   // Use `navigator.sendBeacon()` if available, falling back to `fetch()`.
-  (navigator.sendBeacon &amp;&amp; navigator.sendBeacon('/analytics', body)) ||
+  (navigator.sendBeacon && navigator.sendBeacon('/analytics', body)) ||
       fetch('/analytics', {body, method: 'POST', keepalive: true});
 }
 
@@ -118,7 +114,7 @@ try {
     // Only report FID if the page wasn't hidden prior to
     // the entry being dispatched. This typically happens when a
     // page is loaded in a background tab.
-    if (entry.startTime &lt; firstHiddenTime) {
+    if (entry.startTime < firstHiddenTime) {
       const fid = entry.processingStart - entry.startTime;
 
       // Report the FID value to an analytics endpoint.
@@ -127,7 +123,7 @@ try {
   }
 
   // Create a PerformanceObserver that calls `onFirstInputEntry` for each entry.
-  const po = new PerformanceObserver((entryList) =&gt; {
+  const po = new PerformanceObserver((entryList) => {
     entryList.getEntries().forEach(onFirstInputEntry);
   });
 
@@ -140,12 +136,12 @@ try {
 } catch (e) {
   // Do nothing if the browser doesn't support this API.
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

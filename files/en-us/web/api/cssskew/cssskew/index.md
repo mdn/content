@@ -2,46 +2,45 @@
 title: CSSSkew()
 slug: Web/API/CSSSkew/CSSSkew
 tags:
-- API
-- CSS
-- CSS Typed Object Model API
-- CSSSkew
-- CSSTransformComponent
-- CSSTransformValue
-- Constructor
-- Experimental
-- Houdini
+  - API
+  - CSS
+  - CSS Typed Object Model API
+  - CSSSkew
+  - CSSTransformComponent
+  - CSSTransformValue
+  - Constructor
+  - Experimental
+  - Houdini
 browser-compat: api.CSSSkew.CSSSkew
 ---
-<div>{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}</div>
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}
 
-<p>The <strong><code>CSSSkew()</code></strong> constructor creates a new
-	{{domxref("CSSSkew")}} object which represents the
-	<code><a href="/en-US/docs/Web/CSS/transform-function/skew()">skew()</a></code> value
-	of the individual {{CSSXRef('transform')}} property in CSS.</p>
+The **`CSSSkew()`** constructor creates a new
+{{domxref("CSSSkew")}} object which represents the
+[`skew()`](</en-US/docs/Web/CSS/transform-function/skew()>) value
+of the individual {{CSSXRef('transform')}} property in CSS.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-	class="brush: js">var <var>CSSSkew</var> = new CSSSkew(<em>ax</em>, <em>ay</em>);</pre>
+```js
+var CSSSkew = new CSSSkew(ax, ay);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-	<dt>{{domxref('CSSSkew.ax','ax')}}</dt>
-	<dd>A value for the <code>ax</code> (x-axis) angle of the {{domxref('CSSSkew')}} object to be constructed. This must be a {{domxref('CSSNumericValue')}}.</dd>
-	<dt>{{domxref('CSSSkew.ay','ay')}}</dt>
-	<dd>A value for the <code>ay</code> (y-axis) angle of the {{domxref('CSSSkew')}} object to be constructed. This must be a {{domxref('CSSNumericValue')}}.</dd>
-</dl>
+- {{domxref('CSSSkew.ax','ax')}}
+  - : A value for the `ax` (x-axis) angle of the {{domxref('CSSSkew')}} object to be constructed. This must be a {{domxref('CSSNumericValue')}}.
+- {{domxref('CSSSkew.ay','ay')}}
+  - : A value for the `ay` (y-axis) angle of the {{domxref('CSSSkew')}} object to be constructed. This must be a {{domxref('CSSNumericValue')}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>To do</p>
+To do
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

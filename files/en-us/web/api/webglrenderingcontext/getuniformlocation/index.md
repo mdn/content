@@ -2,127 +2,114 @@
 title: WebGLRenderingContext.getUniformLocation()
 slug: Web/API/WebGLRenderingContext/getUniformLocation
 tags:
-- API
-- Method
-- Reference
-- Uniform Variables
-- Uniforms
-- Variables
-- Variables in WebGL
-- WebGL
-- WebGLRenderingContext
-- getUniformLocation
+  - API
+  - Method
+  - Reference
+  - Uniform Variables
+  - Uniforms
+  - Variables
+  - Variables in WebGL
+  - WebGL
+  - WebGLRenderingContext
+  - getUniformLocation
 browser-compat: api.WebGLRenderingContext.getUniformLocation
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>Part of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL
-            API</a>, the {{domxref("WebGLRenderingContext")}} method
-        <strong><code>getUniformLocation()</code></strong> returns the location of a
-        specific <strong>uniform</strong> variable which is part of a given
-        {{domxref("WebGLProgram")}}.</p>
+Part of the [WebGL
+API](/en-US/docs/Web/API/WebGL_API), the {{domxref("WebGLRenderingContext")}} method
+**`getUniformLocation()`** returns the location of a
+specific **uniform** variable which is part of a given
+{{domxref("WebGLProgram")}}.
 
-<p>The uniform variable is returned as a
-    {{domxref("WebGLUniformLocation")}} object, which is an opaque identifier used to
-    specify where in the GPU's memory that uniform variable is located.</p>
+The uniform variable is returned as a
+{{domxref("WebGLUniformLocation")}} object, which is an opaque identifier used to
+specify where in the GPU's memory that uniform variable is located.
 
-<p>Once you have the uniform's location, you can access the uniform itself using one of
-    the other uniform access methods, passing in the uniform location as one of the
-    inputs:</p>
+Once you have the uniform's location, you can access the uniform itself using one of
+the other uniform access methods, passing in the uniform location as one of the
+inputs:
 
-<dl>
-    <dt>{{domxref("WebGLRenderingContext.getUniform", "getUniform()")}}</dt>
-    <dd>Returns the value of the uniform at the given location.</dd>
-    <dt>{{domxref("WebGLRenderingContext.uniform", "uniform[1234][fi][v]()")}}</dt>
-    <dd>Sets the uniform's value to the specified value, which may be a single floating
-        point or integer number, or a 2-4 component vector specified either as a list of
-        values or as a {{jsxref("Float32Array")}} or {{jsxref("Int32Array")}}.</dd>
-    <dt>{{domxref("WebGLRenderingContext.uniformMatrix", "uniformMatrix[234][fv]()")}}
-    </dt>
-    <dd>Sets the uniform's value to the specified matrix, possibly with transposition. The
-        value is represented as a sequence of <code>GLfloat</code> values or as a
-        <code>Float32Array</code>.</dd>
-</dl>
+- {{domxref("WebGLRenderingContext.getUniform", "getUniform()")}}
+  - : Returns the value of the uniform at the given location.
+- {{domxref("WebGLRenderingContext.uniform", "uniform[1234][fi][v]()")}}
+  - : Sets the uniform's value to the specified value, which may be a single floating
+    point or integer number, or a 2-4 component vector specified either as a list of
+    values or as a {{jsxref("Float32Array")}} or {{jsxref("Int32Array")}}.
+- {{domxref("WebGLRenderingContext.uniformMatrix", "uniformMatrix[234][fv]()")}}
+  - : Sets the uniform's value to the specified matrix, possibly with transposition. The
+    value is represented as a sequence of `GLfloat` values or as a
+    `Float32Array`.
 
-<p>The uniform itself is declared in the shader program using GLSL.</p>
+The uniform itself is declared in the shader program using GLSL.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>WebGLUniformLocation</em> = <em>WebGLRenderingContext</em>.getUniformLocation(<em>program</em>, <em>name</em>);
-</pre>
+```js
+WebGLUniformLocation = WebGLRenderingContext.getUniformLocation(program, name);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-    <dt><code>program</code></dt>
-    <dd>The {{domxref("WebGLProgram")}} in which to locate the specified uniform variable.
-    </dd>
-    <dt><code>name</code></dt>
-    <dd>A {{domxref("DOMString")}} specifying the name of the uniform variable whose
-        location is to be returned. The name can't have any whitespace in it, and you
-        can't use this function to get the location of any uniforms starting with the
-        reserved string <code>"gl_"</code>, since those are internal to the WebGL
-        layer.<br>
-        <br>
-        The possible values correspond to the uniform names returned by
-        {{domxref("WebGLRenderingContext.getActiveUniform()", "getActiveUniform")}}; see
-        that function for specifics on how declared uniforms map to uniform location
-        names.<br>
-        <br>
-        Additionally, for uniforms declared as arrays, the following names are also
-        valid:<br>
+- `program`
+  - : The {{domxref("WebGLProgram")}} in which to locate the specified uniform variable.
+- `name`
 
-        <ul>
-            <li>The uniform name without the <code>[0]</code> suffix. E.g. the location
-                returned for <code>arrayUniform</code> is equivalent to the one for
-                <code>arrayUniform[0]</code>.</li>
-            <li>The uniform name indexed with an integer. E.g. the location returned for
-                <code>arrayUniform[2]</code> would point directly to the third entry of
-                the <code>arrayUniform</code> uniform.</li>
-        </ul>
-    </dd>
-</dl>
+  - : A {{domxref("DOMString")}} specifying the name of the uniform variable whose
+    location is to be returned. The name can't have any whitespace in it, and you
+    can't use this function to get the location of any uniforms starting with the
+    reserved string `"gl_"`, since those are internal to the WebGL
+    layer.
 
-<h3 id="Return_value">Return value</h3>
+    The possible values correspond to the uniform names returned by
+    {{domxref("WebGLRenderingContext.getActiveUniform()", "getActiveUniform")}}; see
+    that function for specifics on how declared uniforms map to uniform location
+    names.
 
-<p>A {{domxref("WebGLUniformLocation")}} value indicating the location of the named
-    variable, if it exists. If the specified variable doesn't exist, {{jsxref("null")}} is
-    returned instead.</p>
+    Additionally, for uniforms declared as arrays, the following names are also
+    valid:
 
-<p>The <code>WebGLUniformLocation</code> is an opaque value used to uniquely identify the
-    location in the GPU's memory at which the uniform variable is located. With this value
-    in hand, you can call other WebGL methods to access the value of the uniform variable.
-</p>
+    - The uniform name without the `[0]` suffix. E.g. the location
+      returned for `arrayUniform` is equivalent to the one for
+      `arrayUniform[0]`.
+    - The uniform name indexed with an integer. E.g. the location returned for
+      `arrayUniform[2]` would point directly to the third entry of
+      the `arrayUniform` uniform.
 
-<div class="note">
-    <p><strong>Note:</strong> The <code>WebGLUniformLocation</code> type is compatible with the
-        <code>GLint</code> type when specifying the index or location of a uniform
-        attribute.</p>
-</div>
+### Return value
 
-<h3 id="Errors">Errors</h3>
+A {{domxref("WebGLUniformLocation")}} value indicating the location of the named
+variable, if it exists. If the specified variable doesn't exist, {{jsxref("null")}} is
+returned instead.
 
-<p>The following errors may occur; to check for errors after
-    <code>getUniformLocation()</code> returns, call
-    {{domxref("WebGLRenderingContext.getError", "getError()")}}.</p>
+The `WebGLUniformLocation` is an opaque value used to uniquely identify the
+location in the GPU's memory at which the uniform variable is located. With this value
+in hand, you can call other WebGL methods to access the value of the uniform variable.
 
-<dl>
-    <dt><code>GL_INVALID_VALUE</code></dt>
-    <dd>The <code>program</code> parameter is not a value or object generated by WebGL.
-    </dd>
-    <dt><code>GL_INVALID_OPERATION</code></dt>
-    <dd>The <code>program</code> parameter doesn't correspond to a GLSL program generated
-        by WebGL, or the specified program hasn't been linked successfully.</dd>
-</dl>
+> **Note:** The `WebGLUniformLocation` type is compatible with the
+> `GLint` type when specifying the index or location of a uniform
+> attribute.
 
-<h2 id="Example">Example</h2>
+### Errors
 
-<p>In this example, taken from the <code>animateScene()</code> method in the article <a
-        href="/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example#Drawing_and_animating_the_scene">A
-        basic 2D WebGL animation example</a>, obtains the locations of three uniforms from
-    the shading program, then sets the value of each of the three uniforms.</p>
+The following errors may occur; to check for errors after
+`getUniformLocation()` returns, call
+{{domxref("WebGLRenderingContext.getError", "getError()")}}.
 
-<pre class="brush: js">gl.useProgram(shaderProgram);
+- `GL_INVALID_VALUE`
+  - : The `program` parameter is not a value or object generated by WebGL.
+- `GL_INVALID_OPERATION`
+  - : The `program` parameter doesn't correspond to a GLSL program generated
+    by WebGL, or the specified program hasn't been linked successfully.
+
+## Example
+
+In this example, taken from the `animateScene()` method in the article [A
+basic 2D WebGL animation example](/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example#Drawing_and_animating_the_scene), obtains the locations of three uniforms from
+the shading program, then sets the value of each of the three uniforms.
+
+```js
+gl.useProgram(shaderProgram);
 
 uScalingFactor =
     gl.getUniformLocation(shaderProgram, "uScalingFactor");
@@ -133,50 +120,43 @@ uRotationVector =
 
 gl.uniform2fv(uScalingFactor, currentScale);
 gl.uniform2fv(uRotationVector, currentRotation);
-gl.uniform4fv(uGlobalColor, [0.1, 0.7, 0.2, 1.0]);</pre>
+gl.uniform4fv(uGlobalColor, [0.1, 0.7, 0.2, 1.0]);
+```
 
-<div class="notecard note">
-    <p><strong>Note:</strong> This code snippet is taken from <a
-        href="/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example#Drawing_and_animating_the_scene">the
-        function <code>animateScene()</code></a> in "A basic 2D WebGL animation example."
-    See that article for the full sample and to see the resulting animation in action.</p>
-</div>
+> **Note:** This code snippet is taken from [the
+> function `animateScene()`](/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example#Drawing_and_animating_the_scene) in "A basic 2D WebGL animation example."
+> See that article for the full sample and to see the resulting animation in action.
 
-<p>After setting the current shading program to <code>shaderProgram</code>, this code
-    fetches the three uniforms <code>"uScalingFactor"</code>, <code>"uGlobalColor"</code>,
-    and <code>"uRotationVector"</code>, calling <code>getUniformLocation()</code> once for
-    each uniform.</p>
+After setting the current shading program to `shaderProgram`, this code
+fetches the three uniforms `"uScalingFactor"`, `"uGlobalColor"`,
+and `"uRotationVector"`, calling `getUniformLocation()` once for
+each uniform.
 
-<p>Then the three uniforms' values are set:</p>
+Then the three uniforms' values are set:
 
-<ul>
-    <li>The <code>uScalingFactor</code> uniform — a 2-component vertex — receives the
-        horizontal and vertical scaling factors from the variable
-        <code>currentScale</code>.</li>
-    <li>The uniform <code>uRotationVector</code> is set to the contents of the variable
-        <code>currentRotation</code>. This, too, is a 2-component vertex.</li>
-    <li>Finally, the uniform <code>uGlobalColor</code> is set to the color
-        <code>[0.1, 0.7, 0.2, 1.0]</code>, the components in this 4-component vector
-        represent the values of red, green, blue, and alpha, respectively.</li>
-</ul>
+- The `uScalingFactor` uniform — a 2-component vertex — receives the
+  horizontal and vertical scaling factors from the variable
+  `currentScale`.
+- The uniform `uRotationVector` is set to the contents of the variable
+  `currentRotation`. This, too, is a 2-component vertex.
+- Finally, the uniform `uGlobalColor` is set to the color
+  `[0.1, 0.7, 0.2, 1.0]`, the components in this 4-component vector
+  represent the values of red, green, blue, and alpha, respectively.
 
-<p>Having done this, the next time the shading functions are called, their own variables
-    named <code>uScalingFactor</code>, <code>uGlobalColor</code>, and
-    <code>uRotationVector</code> will all have the values provided by the JavaScript code.
-</p>
+Having done this, the next time the shading functions are called, their own variables
+named `uScalingFactor`, `uGlobalColor`, and
+`uRotationVector` will all have the values provided by the JavaScript code.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-    <li>{{domxref("WebGLRenderingContext.getAttribLocation()")}}</li>
-    <li>{{domxref("WebGLRenderingContext.getActiveUniform()")}}</li>
-    <li>{{domxref("WebGLUniformLocation")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.getAttribLocation()")}}
+- {{domxref("WebGLRenderingContext.getActiveUniform()")}}
+- {{domxref("WebGLUniformLocation")}}

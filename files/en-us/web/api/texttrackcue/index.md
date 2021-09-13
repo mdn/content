@@ -18,40 +18,36 @@ tags:
   - vtt
 browser-compat: api.TextTrackCue
 ---
-<div>{{APIRef("WebVTT")}}</div>
+{{APIRef("WebVTT")}}
 
-<p><code><strong>TextTrackCue</strong></code> is an abstract class which is used as the basis for the various derived cue types, such as {{domxref("VTTCue")}}; you will instead work with those derived types. These cues represent strings of text presented for some duration of time during the performance of a {{domxref("TextTrack")}}. The cue includes the start time (the time at which the text will be displayed) and the end time (the time at which it will be removed from the display), as well as other information.</p>
+**`TextTrackCue`** is an abstract class which is used as the basis for the various derived cue types, such as {{domxref("VTTCue")}}; you will instead work with those derived types. These cues represent strings of text presented for some duration of time during the performance of a {{domxref("TextTrack")}}. The cue includes the start time (the time at which the text will be displayed) and the end time (the time at which it will be removed from the display), as well as other information.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface also inherits properties from {{domxref("EventTarget")}}.</em></p>
+_This interface also inherits properties from {{domxref("EventTarget")}}._
 
-<dl>
- <dt>{{domxref("TextTrackCue.track")}}{{readOnlyInline}}</dt>
- <dd>The {{domxref("TextTrack")}} that this cue belongs to, or <code>null</code> if it doesn't belong to any.</dd>
- <dt>{{domxref("TextTrackCue.id")}}</dt>
- <dd>A {{domxref("DOMString")}} that identifies the cue.</dd>
- <dt>{{domxref("TextTrackCue.startTime")}}</dt>
- <dd>A <code>double</code> that represents the video time that the cue will start being displayed, in seconds.</dd>
- <dt>{{domxref("TextTrackCue.endTime")}}</dt>
- <dd>A <code>double</code> that represents the video time that the cue will stop being displayed, in seconds.</dd>
- <dt>{{domxref("TextTrackCue.pauseOnExit")}}</dt>
- <dd>A <code>boolean</code> for whether the video will pause when this cue stops being displayed.</dd>
-</dl>
+- {{domxref("TextTrackCue.track")}}{{readOnlyInline}}
+  - : The {{domxref("TextTrack")}} that this cue belongs to, or `null` if it doesn't belong to any.
+- {{domxref("TextTrackCue.id")}}
+  - : A {{domxref("DOMString")}} that identifies the cue.
+- {{domxref("TextTrackCue.startTime")}}
+  - : A `double` that represents the video time that the cue will start being displayed, in seconds.
+- {{domxref("TextTrackCue.endTime")}}
+  - : A `double` that represents the video time that the cue will stop being displayed, in seconds.
+- {{domxref("TextTrackCue.pauseOnExit")}}
+  - : A `boolean` for whether the video will pause when this cue stops being displayed.
 
-<h2 id="Event_handlers">Event handlers</h2>
+## Event handlers
 
-<dl>
- <dt>{{domxref("TextTrackCue.onenter")}}</dt>
- <dd>The event handler fired when a cue becomes active.</dd>
- <dt>{{domxref("TextTrackCue.onexit")}}</dt>
- <dd>The event handler fired when the cue has stopped being active.</dd>
-</dl>
+- {{domxref("TextTrackCue.onenter")}}
+  - : The event handler fired when a cue becomes active.
+- {{domxref("TextTrackCue.onexit")}}
+  - : The event handler fired when the cue has stopped being active.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

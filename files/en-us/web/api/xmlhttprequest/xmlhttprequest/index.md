@@ -2,85 +2,77 @@
 title: XMLHttpRequest()
 slug: Web/API/XMLHttpRequest/XMLHttpRequest
 tags:
- - API
- - Constructor
- - Creating an XMLHttpRequest
- - Fetching Data
- - Loading Data
- - Reading Data
- - Reference
- - Server Access
- - XHR
- - XMLHttpRequest
+  - API
+  - Constructor
+  - Creating an XMLHttpRequest
+  - Fetching Data
+  - Loading Data
+  - Reading Data
+  - Reference
+  - Server Access
+  - XHR
+  - XMLHttpRequest
 browser-compat: api.XMLHttpRequest.XMLHttpRequest
 ---
-<div>{{APIRef('XMLHttpRequest')}}</div>
+{{APIRef('XMLHttpRequest')}}
 
-<p>The <code><strong>XMLHttpRequest()</strong></code> constructor
-    creates a new {{domxref("XMLHttpRequest")}}.</p>
+The **`XMLHttpRequest()`** constructor
+creates a new {{domxref("XMLHttpRequest")}}.
 
-<p>For details about how to use <code>XMLHttpRequest</code>, see <a
-    href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using
-    XMLHttpRequest</a>.</p>
+For details about how to use `XMLHttpRequest`, see [Using
+XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const <var>request</var> = new XMLHttpRequest();
-</pre>
+```js
+const request = new XMLHttpRequest();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A new {{domxref("XMLHttpRequest")}} object. The object must be prepared by at least
-  calling {{domxref("XMLHttpRequest.open", "open()")}} to initialize it before calling
-  {{domxref("XMLHttpRequest.send", "send()")}} to send the request to the server.</p>
+A new {{domxref("XMLHttpRequest")}} object. The object must be prepared by at least
+calling {{domxref("XMLHttpRequest.open", "open()")}} to initialize it before calling
+{{domxref("XMLHttpRequest.send", "send()")}} to send the request to the server.
 
-<h2 id="Non-standard_Firefox_syntax">Non-standard Firefox syntax</h2>
+## Non-standard Firefox syntax
 
-<p>Firefox 16 added a non-standard parameter to the constructor that can enable anonymous
-  mode (see {{Bug("692677")}}). Setting the <code>mozAnon</code> flag to <code>true</code>
-  effectively resembles the <a
-    href="https://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#dom-anonxmlhttprequest"
-    title="see AnonXMLHttpRequest in the XMLHttpRequest specification"><code>AnonXMLHttpRequest()</code></a>
-  constructor described in older versions of the XMLHttpRequest specification.</p>
+Firefox 16 added a non-standard parameter to the constructor that can enable anonymous
+mode (see {{Bug("692677")}}). Setting the `mozAnon` flag to `true`
+effectively resembles the [`AnonXMLHttpRequest()`](https://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#dom-anonxmlhttprequest "see AnonXMLHttpRequest in the XMLHttpRequest specification")
+constructor described in older versions of the XMLHttpRequest specification.
 
-<pre
-  class="brush: js">const <var>request</var> = new XMLHttpRequest(<var>paramsDictionary</var>);</pre>
+```js
+const request = new XMLHttpRequest(paramsDictionary);
+```
 
-<h3 id="Parameters_(non-standard)">Parameters (non-standard)</h3>
+### Parameters (non-standard)
 
-<dl>
-  <dt><code>objParameters</code></dt>
-  <dd>One flag you can set:
-    <dl>
-      <dt><code>mozAnon</code></dt>
-      <dd>Boolean: Setting this flag to <code>true</code> will cause the browser not to
-        expose the {{Glossary("origin")}} and <a
-          href="https://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#user-credentials"
-          title="Definition of “User credentials” in the XMLHttpRequest specification.">user
-          credentials</a> when fetching resources. Most important, this means that
+- `objParameters`
+
+  - : One flag you can set:
+
+    - `mozAnon`
+      - : Boolean: Setting this flag to `true` will cause the browser not to
+        expose the {{Glossary("origin")}} and [user
+        credentials](https://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#user-credentials "Definition of “User credentials” in the XMLHttpRequest specification.") when fetching resources. Most important, this means that
         {{Glossary("Cookie", "cookies")}} will not be sent unless explicitly added using
-        setRequestHeader.</dd>
-    </dl>
-  </dd>
-</dl>
+        setRequestHeader.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
 {{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using
-      XMLHttpRequest</a></li>
-  <li><a href="/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest">HTML in
-      XMLHttpRequest</a></li>
-</ul>
+- [Using
+  XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [HTML in
+  XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)

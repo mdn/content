@@ -8,42 +8,41 @@ tags:
   - Range
 browser-compat: api.Range.selectNode
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<p>The <strong><code>Range.selectNode()</code></strong> method sets the
-  {{domxref("Range")}} to contain the {{domxref("Node")}} and its contents. The parent
-  {{domxref("Node")}} of the start and end of the {{domxref("Range")}} will be the same as
-  the parent of the <em>referenceNode</em>.</p>
+The **`Range.selectNode()`** method sets the
+{{domxref("Range")}} to contain the {{domxref("Node")}} and its contents. The parent
+{{domxref("Node")}} of the start and end of the {{domxref("Range")}} will be the same as
+the parent of the _referenceNode_.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>range</em>.selectNode(<em>referenceNode</em>);
-</pre>
+```js
+range.selectNode(referenceNode);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><em>referenceNode</em></dt>
-  <dd>The {{domxref("Node")}} to select within a {{domxref("Range")}}.</dd>
-</dl>
+- _referenceNode_
+  - : The {{domxref("Node")}} to select within a {{domxref("Range")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">let range = document.createRange();
+```js
+let range = document.createRange();
 let referenceNode = document.getElementsByTagName('div').item(0);
 
-range.selectNode(referenceNode);</pre>
+range.selectNode(referenceNode);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</a></li>
-</ul>
+- [The DOM interfaces index](/en-US/docs/Web/API/Document_Object_Model)

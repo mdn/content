@@ -2,78 +2,77 @@
 title: USB.requestDevice()
 slug: Web/API/USB/requestDevice
 tags:
-- API
-- Method
-- Reference
-- USB
-- WebUSB
-- WebUSB API
-- getDevices()
+  - API
+  - Method
+  - Reference
+  - USB
+  - WebUSB
+  - WebUSB API
+  - getDevices()
 browser-compat: api.USB.requestDevice
 ---
-<p>{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}</p>
+{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}
 
-<p>The <strong><code>requestDevice()</code></strong> method of the {{domxref("USB")}}
-  interface returns a {{jsxref("Promise")}} that resolves with an instance of
-  {{domxref("USBDevice")}} if the specified device is found. Calling this function
-  triggers the user agent's pairing flow.</p>
+The **`requestDevice()`** method of the {{domxref("USB")}}
+interface returns a {{jsxref("Promise")}} that resolves with an instance of
+{{domxref("USBDevice")}} if the specified device is found. Calling this function
+triggers the user agent's pairing flow.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>USB</em>.requestDevice([<em>filters</em>])</pre>
+```js
+USB.requestDevice([filters])
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>filters</dt>
-  <dd>An array of filter objects for possible devices you would like to pair. Each filter
+- filters
+
+  - : An array of filter objects for possible devices you would like to pair. Each filter
     object can have the following properties:
-    <ul>
-      <li><code>vendorId</code></li>
-      <li><code>productId</code></li>
-      <li><code>classCode</code></li>
-      <li><code>subclassCode</code></li>
-      <li><code>protocolCode</code></li>
-      <li><code>serialNumber</code></li>
-    </ul>
-  </dd>
-</dl>
 
-<h3 id="Return_value">Return value</h3>
+    - `vendorId`
+    - `productId`
+    - `classCode`
+    - `subclassCode`
+    - `protocolCode`
+    - `serialNumber`
 
-<p>A {{JSxRef("Promise")}} that resolves with an instance of {{DOMxRef("USBDevice")}}.</p>
+### Return value
 
-<h2 id="Example">Example</h2>
+A {{JSxRef("Promise")}} that resolves with an instance of {{DOMxRef("USBDevice")}}.
 
-<p>The following example looks for one of two USB devices. Notice that two product IDs are
-  specified. Both are passed to <code>requestDevice()</code>. This triggers a user-agent
-  flow that prompts the user to select a device for pairing. Only the selected device is
-  passed to <code>then()</code>.</p>
+## Example
 
-<p>The number of filters does not specifiy the number of devices shown by the user agent.
-  For example, if only a USB device with product ID <code>0xa800</code> is found, then
-  only one device will be listed by the user agent. On the other hand if the user agent
-  finds two of the first listed device and one of the second, then all three devices will
-  be listed.</p>
+The following example looks for one of two USB devices. Notice that two product IDs are
+specified. Both are passed to `requestDevice()`. This triggers a user-agent
+flow that prompts the user to select a device for pairing. Only the selected device is
+passed to `then()`.
 
-<pre class="brush: js">const filters = [
+The number of filters does not specifiy the number of devices shown by the user agent.
+For example, if only a USB device with product ID `0xa800` is found, then
+only one device will be listed by the user agent. On the other hand if the user agent
+finds two of the first listed device and one of the second, then all three devices will
+be listed.
+
+```js
+const filters = [
         {vendorId: 0x1209, productId: 0xa800},
         {vendorId: 0x1209, productId: 0xa850}
       ];
 navigator.usb.requestDevice({filters: filters})
-.then(usbDevice =&gt; {
+.then(usbDevice => {
   console.log("Product name: " + usbDevice.productName);
 })
-.catch(e =&gt; {
+.catch(e => {
   console.log("There is no device. " + e);
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

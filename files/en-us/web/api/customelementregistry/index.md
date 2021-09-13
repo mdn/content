@@ -11,28 +11,27 @@ tags:
   - custom elements
 browser-compat: api.CustomElementRegistry
 ---
-<div>{{DefaultAPISidebar("Web Components")}}</div>
+{{DefaultAPISidebar("Web Components")}}
 
-<p>The <strong><code>CustomElementRegistry</code></strong> interface provides methods for registering custom elements and querying registered elements. To get an instance of it, use the {{domxref("window.customElements")}} property.</p>
+The **`CustomElementRegistry`** interface provides methods for registering custom elements and querying registered elements. To get an instance of it, use the {{domxref("window.customElements")}} property.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("CustomElementRegistry.define()")}}</dt>
- <dd>Defines a new <a href="/en-US/docs/Web/Web_Components/Using_custom_elements">custom element</a>.</dd>
- <dt>{{domxref("CustomElementRegistry.get()")}}</dt>
- <dd>Returns the constructor for the named custom element, or {{jsxref("undefined")}} if the custom element is not defined.</dd>
- <dt>{{domxref("CustomElementRegistry.upgrade()")}}</dt>
- <dd>Upgrades a custom element directly, even before it is connected to its shadow root.</dd>
- <dt>{{domxref("CustomElementRegistry.whenDefined()")}}</dt>
- <dd>Returns an empty {{jsxref("Promise", "promise")}} that resolves when a custom element becomes defined with the given name. If such a custom element is already defined, the returned promise is immediately fulfilled.</dd>
-</dl>
+- {{domxref("CustomElementRegistry.define()")}}
+  - : Defines a new [custom element](/en-US/docs/Web/Web_Components/Using_custom_elements).
+- {{domxref("CustomElementRegistry.get()")}}
+  - : Returns the constructor for the named custom element, or {{jsxref("undefined")}} if the custom element is not defined.
+- {{domxref("CustomElementRegistry.upgrade()")}}
+  - : Upgrades a custom element directly, even before it is connected to its shadow root.
+- {{domxref("CustomElementRegistry.whenDefined()")}}
+  - : Returns an empty {{jsxref("Promise", "promise")}} that resolves when a custom element becomes defined with the given name. If such a custom element is already defined, the returned promise is immediately fulfilled.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following code is taken from our <a href="https://github.com/mdn/web-components-examples/tree/master/word-count-web-component">word-count-web-component</a> example (<a href="https://mdn.github.io/web-components-examples/word-count-web-component/">see it live also</a>). Note how we use the {{domxref("CustomElementRegistry.define()")}} method to define the custom element after creating its class.</p>
+The following code is taken from our [word-count-web-component](https://github.com/mdn/web-components-examples/tree/master/word-count-web-component) example ([see it live also](https://mdn.github.io/web-components-examples/word-count-web-component/)). Note how we use the {{domxref("CustomElementRegistry.define()")}} method to define the custom element after creating its class.
 
-<pre class="brush: js">// Create a class for the element
+```js
+// Create a class for the element
 class WordCount extends HTMLParagraphElement {
   constructor() {
     // Always call super first in constructor
@@ -68,16 +67,15 @@ class WordCount extends HTMLParagraphElement {
 }
 
 // Define the new element
-customElements.define('word-count', WordCount, { extends: 'p' });</pre>
+customElements.define('word-count', WordCount, { extends: 'p' });
+```
 
-<div class="note">
-<p><strong>Note:</strong> The <code>CustomElementRegistry</code> is available through the {{domxref("Window.customElements")}} property.</p>
-</div>
+> **Note:** The `CustomElementRegistry` is available through the {{domxref("Window.customElements")}} property.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

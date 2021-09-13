@@ -2,49 +2,47 @@
 title: RTCInboundRtpStreamStats.packetsFailedDecryption
 slug: Web/API/RTCInboundRtpStreamStats/packetsFailedDecryption
 tags:
-- API
-- Decryption
-- Packets
-- Property
-- RTCInboundRtpStreamStats
-- RTP
-- Reference
-- Statistics
-- Stats
-- WebRTC
-- WebRTC API
-- packetsFailedDecryption
-- stream
+  - API
+  - Decryption
+  - Packets
+  - Property
+  - RTCInboundRtpStreamStats
+  - RTP
+  - Reference
+  - Statistics
+  - Stats
+  - WebRTC
+  - WebRTC API
+  - packetsFailedDecryption
+  - stream
 browser-compat: api.RTCInboundRtpStreamStats.packetsFailedDecryption
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <strong><code>packetsFailedDecryption</code></strong>
-    property of the {{domxref("RTCInboundRtpStreamStats")}} dictionary indicates the total
-    number of {{Glossary("RTP")}} packets which failed to be decrypted successfully after
-    being received by the local end of the connection during this session.</p>
+The **`packetsFailedDecryption`**
+property of the {{domxref("RTCInboundRtpStreamStats")}} dictionary indicates the total
+number of {{Glossary("RTP")}} packets which failed to be decrypted successfully after
+being received by the local end of the connection during this session.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>packetsFailedDecryption</em> = <em>rtcInboundRtpStreamStats</em>.packetsFailedDecryption;</pre>
+```js
+var packetsFailedDecryption = rtcInboundRtpStreamStats.packetsFailedDecryption;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An integer value which indicates how many packets the local end of the RTP connection
-  could not be successfully decrypted.</p>
+An integer value which indicates how many packets the local end of the RTP connection
+could not be successfully decrypted.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{RFC(3711, "3.3")}}: Description of the decryption process for secure RTP packets
-  </li>
-</ul>
+- {{RFC(3711, "3.3")}}: Description of the decryption process for secure RTP packets

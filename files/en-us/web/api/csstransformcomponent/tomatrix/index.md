@@ -2,55 +2,54 @@
 title: CSSTransformComponent.toMatrix()
 slug: Web/API/CSSTransformComponent/toMatrix
 tags:
-- API
-- CSS Typed Object Model API
-- CSSTransformComponent
-- Experimental
-- Houdini
-- Method
-- Reference
-- toMatrix
+  - API
+  - CSS Typed Object Model API
+  - CSSTransformComponent
+  - Experimental
+  - Houdini
+  - Method
+  - Reference
+  - toMatrix
 browser-compat: api.CSSTransformComponent.toMatrix
 ---
-<div>{{APIRef("CSS Typed OM")}}</div>
+{{APIRef("CSS Typed OM")}}
 
-<p>The <strong><code>toMatrix()</code></strong> method of the
-  {{domxref("CSSTransformComponent")}} interface returns a {{domxref('DOMMatrix')}}
-  object.</p>
+The **`toMatrix()`** method of the
+{{domxref("CSSTransformComponent")}} interface returns a {{domxref('DOMMatrix')}}
+object.
 
-<p>All transform functions can be represented mathematically as a 4x4 transformation matrix. This is explained in detail in <a href="https://dev.opera.com/articles/understanding-the-css-transforms-matrix/">Understanding the CSS Transforms matrix</a>.</p>
+All transform functions can be represented mathematically as a 4x4 transformation matrix. This is explained in detail in [Understanding the CSS Transforms matrix](https://dev.opera.com/articles/understanding-the-css-transforms-matrix/).
 
-<div class="note notecard"><p><strong>Note:</strong> The <code>is2D</code> property affects what transform, and therefore type of matrix that will be returned. CSS 2D and 3D transforms are different for legacy reasons. A brief explanation of 2D vs. 3D transforms can be found in <a href="/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms">Using CSS transforms</a>.</p></div>
+> **Note:** The `is2D` property affects what transform, and therefore type of matrix that will be returned. CSS 2D and 3D transforms are different for legacy reasons. A brief explanation of 2D vs. 3D transforms can be found in [Using CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>matrix</var> = CSSTransformComponent.toMatrix();</pre>
+```js
+var matrix = CSSTransformComponent.toMatrix();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None</p>
+None
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref('DOMMatrix')}} object</p>
+A {{domxref('DOMMatrix')}} object
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>{{jsxref("TypeError")}}</dt>
-  <dd>Raised if any lengths involved in generating the matrix are not compatible units
-    with px (such as relative lengths or percentages).</dd>
-</dl>
+- {{jsxref("TypeError")}}
+  - : Raised if any lengths involved in generating the matrix are not compatible units
+    with px (such as relative lengths or percentages).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>To Do</p>
+To Do
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -12,6 +12,6 @@ tags:
   - mozSystem
   - origin
 ---
-<div>{{draft}}{{APIRef('XMLHttpRequest')}}</div>
+{{draft}}{{APIRef('XMLHttpRequest')}}
 
-<p><strong><code>mozSystem</code></strong> is a boolean. If true, the same origin policy is not enforced on the request.</p>
+**`mozSystem`** is a boolean. If true, the same origin policy is not enforced on the request.

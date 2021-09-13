@@ -2,66 +2,67 @@
 title: CanvasRenderingContext2D.textAlign
 slug: Web/API/CanvasRenderingContext2D/textAlign
 tags:
-- API
-- Canvas
-- CanvasRenderingContext2D
-- Property
-- Reference
+  - API
+  - Canvas
+  - CanvasRenderingContext2D
+  - Property
+  - Reference
 browser-compat: api.CanvasRenderingContext2D.textAlign
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The
-  <strong><code>CanvasRenderingContext2D.textAlign</code></strong>
-  property of the Canvas 2D API specifies the current text alignment used when drawing
-  text.</p>
+The
+**`CanvasRenderingContext2D.textAlign`**
+property of the Canvas 2D API specifies the current text alignment used when drawing
+text.
 
-<p>The alignment is relative to the <code>x</code> value of the
-  {{domxref("CanvasRenderingContext2D.fillText", "fillText()")}} method. For example, if
-  <code>textAlign</code> is <code>"center"</code>, then the text's left edge will be at
-  <code>x - (textWidth / 2)</code>.</p>
+The alignment is relative to the `x` value of the
+{{domxref("CanvasRenderingContext2D.fillText", "fillText()")}} method. For example, if
+`textAlign` is `"center"`, then the text's left edge will be at
+`x - (textWidth / 2)`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>ctx</em>.textAlign = "left" || "right" || "center" || "start" || "end";
-</pre>
+```js
+ctx.textAlign = "left" || "right" || "center" || "start" || "end";
+```
 
-<h3 id="Options">Options</h3>
+### Options
 
-<p>Possible values:</p>
+Possible values:
 
-<dl>
-  <dt><code>"left"</code></dt>
-  <dd>The text is left-aligned.</dd>
-  <dt><code>"right"</code></dt>
-  <dd>The text is right-aligned.</dd>
-  <dt><code>"center"</code></dt>
-  <dd>The text is centered.</dd>
-  <dt><code>"start"</code></dt>
-  <dd>The text is aligned at the normal start of the line (left-aligned for left-to-right
-    locales, right-aligned for right-to-left locales).</dd>
-  <dt><code>"end"</code></dt>
-  <dd>The text is aligned at the normal end of the line (right-aligned for left-to-right
-    locales, left-aligned for right-to-left locales).</dd>
-</dl>
+- `"left"`
+  - : The text is left-aligned.
+- `"right"`
+  - : The text is right-aligned.
+- `"center"`
+  - : The text is centered.
+- `"start"`
+  - : The text is aligned at the normal start of the line (left-aligned for left-to-right
+    locales, right-aligned for right-to-left locales).
+- `"end"`
+  - : The text is aligned at the normal end of the line (right-aligned for left-to-right
+    locales, left-aligned for right-to-left locales).
 
-<p>The default value is <code>"start"</code>.</p>
+The default value is `"start"`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="General_text_alignment">General text alignment</h3>
+### General text alignment
 
-<p>This example demonstrates the three "physical" values of the <code>textAlign</code>
-  property: <code>"left"</code>, <code>"center"</code>, and <code>"right"</code>.</p>
+This example demonstrates the three "physical" values of the `textAlign`
+property: `"left"`, `"center"`, and `"right"`.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js;">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 canvas.width = 350;
 const ctx = canvas.getContext('2d');
 const x = canvas.width / 2;
@@ -81,28 +82,30 @@ ctx.fillText('center-aligned', x, 85);
 
 ctx.textAlign = 'right';
 ctx.fillText('right-aligned', x, 130);
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('General_text_alignment', 700, 180) }}</p>
+{{ EmbedLiveSample('General_text_alignment', 700, 180) }}
 
-<h3 id="Direction-dependent_text_alignment">Direction-dependent text alignment</h3>
+### Direction-dependent text alignment
 
-<p>This example demonstrates the two direction-dependent values of the
-  <code>textAlign</code> property: <code>"start"</code> and <code>"end"</code>. Note that
-  the {{domxref("CanvasRenderingContext2D.direction", "direction")}} property is manually
-  specified as <code>"ltr"</code>, although this is also the default for English-language
-  text.</p>
+This example demonstrates the two direction-dependent values of the
+`textAlign` property: `"start"` and `"end"`. Note that
+the {{domxref("CanvasRenderingContext2D.direction", "direction")}} property is manually
+specified as `"ltr"`, although this is also the default for English-language
+text.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js;">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.font = '30px serif';
@@ -113,22 +116,20 @@ ctx.fillText('Start-aligned', 0, 50);
 
 ctx.textAlign = 'end';
 ctx.fillText('End-aligned', canvas.width, 120);
-</pre>
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Direction-dependent_text_alignment', 700, 180) }}</p>
+{{ EmbedLiveSample('Direction-dependent_text_alignment', 700, 180) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining this property: {{domxref("CanvasRenderingContext2D")}}</li>
-</ul>
+- The interface defining this property: {{domxref("CanvasRenderingContext2D")}}

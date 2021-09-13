@@ -2,38 +2,40 @@
 title: CSSTranslate.y
 slug: Web/API/CSSTranslate/y
 tags:
-- API
-- CSS Typed Object Model API
-- CSSTransformComponent
-- CSSTransformValue
-- CSSTranslate
-- Experimental
-- Houdini
-- Property
+  - API
+  - CSS Typed Object Model API
+  - CSSTransformComponent
+  - CSSTransformValue
+  - CSSTranslate
+  - Experimental
+  - Houdini
+  - Property
 browser-compat: api.CSSTranslate.y
 ---
-<div>{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}</div>
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}
 
-<p>The <strong><code>y</code></strong> property of the
-	{{domxref("CSSTranslate")}} interface gets and sets the ordinate or y-axis of the
-	translating vector.</p>
+The **`y`** property of the
+{{domxref("CSSTranslate")}} interface gets and sets the ordinate or y-axis of the
+translating vector.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>translateY</em> = CSSTranslate.y;</pre>
+```js
+var translateY = CSSTranslate.y;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{cssxref('length-percentage')}}</p>
+A {{cssxref('length-percentage')}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>To Do</p>
+To Do
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

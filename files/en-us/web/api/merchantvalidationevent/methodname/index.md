@@ -2,53 +2,51 @@
 title: MerchantValidationEvent.methodName
 slug: Web/API/MerchantValidationEvent/methodName
 tags:
-- API
-- Commerce
-- Identifier
-- Merchant
-- MerchantValidationEvent
-- NeedsExample
-- Payment Method
-- Payment Method Identifier
-- Payment Request
-- Payment Request API
-- Property
-- Reference
-- Validation
-- methodName
-- payment
+  - API
+  - Commerce
+  - Identifier
+  - Merchant
+  - MerchantValidationEvent
+  - NeedsExample
+  - Payment Method
+  - Payment Method Identifier
+  - Payment Request
+  - Payment Request API
+  - Property
+  - Reference
+  - Validation
+  - methodName
+  - payment
 browser-compat: api.MerchantValidationEvent.methodName
 ---
-<p>{{deprecated_header}}{{non-standard_header}}{{securecontext_header}}</p>
+{{deprecated_header}}{{non-standard_header}}{{securecontext_header}}
 
-<p>The {{domxref("MerchantValidationEvent")}} property
-    <code><strong>methodName</strong></code> is a read-only value which returns a string
-    indicating the payment method identifier which represents the payment handler that
-    requires merchant validation.</p>
+The {{domxref("MerchantValidationEvent")}} property
+**`methodName`** is a read-only value which returns a string
+indicating the payment method identifier which represents the payment handler that
+requires merchant validation.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>methodID</em> = <em>merchantValidationEvent</em>.methodName;</pre>
+```js
+methodID = merchantValidationEvent.methodName;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A read-only {{domxref("DOMString")}} which uniquely identifies the payment handler
-  which is requesting merchant validation. See
-  {{SectionOnPage("/en-US/docs/Web/API/Payment_Request_API/Concepts", "Merchant
-  validation")}} for more information on the process.</p>
+A read-only {{domxref("DOMString")}} which uniquely identifies the payment handler
+which is requesting merchant validation. See
+{{SectionOnPage("/en-US/docs/Web/API/Payment_Request_API/Concepts", "Merchant
+  validation")}} for more information on the process.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Payment_Request_API">Payment Request API</a></li>
-  <li><a
-      href="/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API">Using
-      the Payment Request API</a></li>
-  <li><a href="/en-US/docs/Web/API/Payment_Request_API/Concepts">Payment processing
-      concepts</a></li>
-</ul>
+- [Payment Request API](/en-US/docs/Web/API/Payment_Request_API)
+- [Using
+  the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
+- [Payment processing
+  concepts](/en-US/docs/Web/API/Payment_Request_API/Concepts)

@@ -2,53 +2,50 @@
 title: Document.createTouchList()
 slug: Web/API/Document/createTouchList
 tags:
-- API
-- Deprecated
-- Document
-- HTML DOM
-- Method
-- Mobile
-- createTouchList
-- touch
+  - API
+  - Deprecated
+  - Document
+  - HTML DOM
+  - Method
+  - Mobile
+  - createTouchList
+  - touch
 browser-compat: api.Document.createTouchList
 ---
-<div>{{APIRef("DOM")}}{{Deprecated_Header}}</div>
+{{APIRef("DOM")}}{{Deprecated_Header}}
 
-<p>The <strong><code>Document.createTouchList()</code></strong> method creates and returns a new {{DOMxRef("TouchList")}} object.</p>
+The **`Document.createTouchList()`** method creates and returns a new {{DOMxRef("TouchList")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>list</var> = document.createTouchList([<var>touch1 [, touch2 [, ...]]]</var>);
-</pre>
+```js
+var list = document.createTouchList([touch1 [, touch2 [, ...]]]);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>touches</var></code></dt>
-  <dd>Zero or more {{DOMxRef("Touch")}} objects. <strong>Note:</strong> Firefox also
-    accepts an <a
-      href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a> of
-    {{DOMxRef("Touch")}} objects.</dd>
-</dl>
+- `touches`
+  - : Zero or more {{DOMxRef("Touch")}} objects. **Note:** Firefox also
+    accepts an [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of
+    {{DOMxRef("Touch")}} objects.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<dl>
-  <dt><code><var>list</var></code></dt>
-  <dd>A {{DOMxRef("TouchList")}} object containing the {{DOMxRef("Touch")}} objects
-    specified by the <code>touches</code> parameter.</dd>
-</dl>
+- `list`
+  - : A {{DOMxRef("TouchList")}} object containing the {{DOMxRef("Touch")}} objects
+    specified by the `touches` parameter.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example illustrates using the {{DOMxRef("Document.createTouchList()")}} method to
-  create {{DOMxRef("TouchList")}} objects.</p>
+This example illustrates using the {{DOMxRef("Document.createTouchList()")}} method to
+create {{DOMxRef("TouchList")}} objects.
 
-<p>In following code snippet, some {{DOMxRef("Touch")}} objects are created for the
-  <code>target</code> element and those touch points are then used to create some
-  {{DOMxRef("TouchList")}} objects.</p>
+In following code snippet, some {{DOMxRef("Touch")}} objects are created for the
+`target` element and those touch points are then used to create some
+{{DOMxRef("TouchList")}} objects.
 
-<pre class="brush: js">var target = document.getElementById("target");
+```js
+var target = document.getElementById("target");
 
 // Create some touch points
 var touch1 = document.createTouch(window, target, 1, 15, 20, 35, 40);
@@ -62,22 +59,20 @@ var list1 = document.createTouchList(touch1);
 
 // Create a list with two Touch objects
 var list2 = document.createTouchList(touch1, touch2);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This feature is not part of any current specification. It is no longer on track to become a standard.</p>
+This feature is not part of any current specification. It is no longer on track to become a standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Touch_events">Touch events</a></li>
-  <li>{{DOMxRef("Touch")}}</li>
-  <li>{{DOMxRef("TouchEvent")}}</li>
-  <li>{{DOMxRef("TouchList")}}</li>
-  <li>{{DOMxRef("Document.createTouch()")}}</li>
-</ul>
+- [Touch events](/en-US/docs/Web/API/Touch_events)
+- {{DOMxRef("Touch")}}
+- {{DOMxRef("TouchEvent")}}
+- {{DOMxRef("TouchList")}}
+- {{DOMxRef("Document.createTouch()")}}

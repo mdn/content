@@ -12,47 +12,41 @@ tags:
   - Window
   - forward
 ---
-<div>{{APIRef}}{{Non-standard_header}} {{deprecated_header}}</div>
+{{APIRef}}{{Non-standard_header}} {{deprecated_header}}
 
-<p>Moves the window one document forward in history. This was a Firefox-specific method and was removed in Firefox 31.</p>
+Moves the window one document forward in history. This was a Firefox-specific method and was removed in Firefox 31.
 
-<div class="notecard note">
-<p><strong>Note:</strong> Use the standard {{domxref("History.forward", "window.history.forward()")}} method instead.</p>
-</div>
+> **Note:** Use the standard {{domxref("History.forward", "window.history.forward()")}} method instead.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="eval">window.forward();
-</pre>
-
-<h3 id="Parameters">Parameters</h3>
-
-<p>None</p>
-
-<h3 id="Return_value">Return value</h3>
-
-<p><code>undefined</code>.</p>
-
-<h2 id="Example">Example</h2>
-
-<pre class="eval">function goForward() {
-  if (canGoForward) {
     window.forward();
-  }
-}
-</pre>
 
-<h2 id="Specifications">Specifications</h2>
+### Parameters
 
-<p>This is not part of any specification.</p>
+None
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+### Return value
 
-<p>This non-standard method was only implemented in Firefox, and was removed in Firefox 31.</p>
+`undefined`.
 
-<h2 id="See_also">See also</h2>
+## Example
 
-<ul>
- <li>{{domxref("History.back()")}}</li>
- <li>{{domxref("History.forward()")}}</li>
-</ul>
+    function goForward() {
+      if (canGoForward) {
+        window.forward();
+      }
+    }
+
+## Specifications
+
+This is not part of any specification.
+
+## Browser compatibility
+
+This non-standard method was only implemented in Firefox, and was removed in Firefox 31.
+
+## See also
+
+- {{domxref("History.back()")}}
+- {{domxref("History.forward()")}}

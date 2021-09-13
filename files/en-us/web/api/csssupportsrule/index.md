@@ -2,52 +2,52 @@
 title: CSSSupportsRule
 slug: Web/API/CSSSupportsRule
 tags:
-- API
-- CSSOM
-- Interface
-- Reference
+  - API
+  - CSSOM
+  - Interface
+  - Reference
 browser-compat: api.CSSSupportsRule
 ---
-<p>{{APIRef("CSSOM")}}</p>
+{{APIRef("CSSOM")}}
 
-<p>The <strong><code>CSSSupportsRule</code></strong> interface represents a single CSS {{cssxref("@supports")}} {{cssxref("at-rule")}}.</p>
+The **`CSSSupportsRule`** interface represents a single CSS {{cssxref("@supports")}} {{cssxref("at-rule")}}.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its ancestors {{domxref("CSSConditionRule")}}, {{domxref("CSSGroupingRule")}}, and {{domxref("CSSRule")}}.</em></p>
+_Inherits properties from its ancestors {{domxref("CSSConditionRule")}}, {{domxref("CSSGroupingRule")}}, and {{domxref("CSSRule")}}._
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Inherits methods from its ancestors {{domxref("CSSConditionRule")}}, {{domxref("CSSGroupingRule")}}, and {{domxref("CSSRule")}}.</em></p>
+_Inherits methods from its ancestors {{domxref("CSSConditionRule")}}, {{domxref("CSSGroupingRule")}}, and {{domxref("CSSRule")}}._
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>
-  The CSS includes a CSS feature query using the {{cssxref("@supports")}} {{cssxref("at-rule")}}, containing one style rule. This will be the first CSSRule returned by <code>document.styleSheets[0].cssRules</code>.
-  <code>myRules[0]</code> therefore returns a {{domxref("CSSSupportsRule")}} object.
-</p>
+The CSS includes a CSS feature query using the {{cssxref("@supports")}} {{cssxref("at-rule")}}, containing one style rule. This will be the first CSSRule returned by `document.styleSheets[0].cssRules`.
+`myRules[0]` therefore returns a {{domxref("CSSSupportsRule")}} object.
 
-<pre class="brush: css">@supports (display: grid) {
+```css
+@supports (display: grid) {
   body {
     color: blue;
   }
-}</pre>
+}
+```
 
-<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0]); // a CSSSupportsRule representing the feature query.</pre>
+```js
+let myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0]); // a CSSSupportsRule representing the feature query.
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{cssxref("@supports")}}</li>
-</ul>
+- {{cssxref("@supports")}}

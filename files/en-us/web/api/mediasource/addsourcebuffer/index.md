@@ -14,69 +14,63 @@ tags:
   - addSourceBuffer
 browser-compat: api.MediaSource.addSourceBuffer
 ---
-<div>{{APIRef("Media Source Extensions")}}</div>
+{{APIRef("Media Source Extensions")}}
 
-<p>The <code><strong>addSourceBuffer()</strong></code> method of the
-  {{domxref("MediaSource")}} interface creates a new {{domxref("SourceBuffer")}} of the
-  given {{Glossary("MIME type")}} and adds it to the <code>MediaSource</code>'s
-  {{domxref("MediaSource.sourceBuffers", "sourceBuffers")}} list. The new
-  <code>SourceBuffer</code> is also returned.</p>
+The **`addSourceBuffer()`** method of the
+{{domxref("MediaSource")}} interface creates a new {{domxref("SourceBuffer")}} of the
+given {{Glossary("MIME type")}} and adds it to the `MediaSource`'s
+{{domxref("MediaSource.sourceBuffers", "sourceBuffers")}} list. The new
+`SourceBuffer` is also returned.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>sourceBuffer</em> = <em>mediaSource</em>.addSourceBuffer(<em>mimeType</em>);</pre>
+```js
+var sourceBuffer = mediaSource.addSourceBuffer(mimeType);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>mimeType</code></dt>
-  <dd>A {{domxref("DOMString")}} specifying the MIME type of the
-    {{domxref("SourceBuffer")}} to create and add to the {{domxref("MediaSource")}}.</dd>
-</dl>
+- `mimeType`
+  - : A {{domxref("DOMString")}} specifying the MIME type of the
+    {{domxref("SourceBuffer")}} to create and add to the {{domxref("MediaSource")}}.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("SourceBuffer")}} object representing the new source buffer that has been
-  created and added to the media source.</p>
+A {{domxref("SourceBuffer")}} object representing the new source buffer that has been
+created and added to the media source.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt><code>InvalidAccessError</code></dt>
-  <dd>The value specified for <code>mimeType</code> is an empty string rather than a valid
-    MIME type.</dd>
-  <dt><code>InvalidStateError</code></dt>
-  <dd>The {{domxref("MediaSource")}} is not in the <code>"open"</code>
-    {{domxref("MediaSource.readyState", "readyState")}}.</dd>
-  <dt><code>NotSupportedError</code></dt>
-  <dd>The specified <code>mimeType</code> isn't supported by the {{Glossary("user
+- `InvalidAccessError`
+  - : The value specified for `mimeType` is an empty string rather than a valid
+    MIME type.
+- `InvalidStateError`
+  - : The {{domxref("MediaSource")}} is not in the `"open"`
+    {{domxref("MediaSource.readyState", "readyState")}}.
+- `NotSupportedError`
+  - : The specified `mimeType` isn't supported by the {{Glossary("user
     agent")}}, or is not compatible with the MIME types of other
     {{domxref("SourceBuffer")}} objects that are already included in the media source's
-    {{domxref("MediaSource.sourceBuffers", "sourceBuffers")}} list.</dd>
-  <dt><code>QuotaExceededError</code></dt>
-  <dd>The user agent can't handle any more <code>SourceBuffer</code> objects, or creating
-    a new <code>SourceBuffer</code> using the given <code>mimeType</code> would result in
-    an <a
-      href="https://w3c.github.io/media-source/#sourcebuffer-configuration">unsupported
-      configuration of <code>SourceBuffer</code>s</a>.</dd>
-</dl>
+    {{domxref("MediaSource.sourceBuffers", "sourceBuffers")}} list.
+- `QuotaExceededError`
+  - : The user agent can't handle any more `SourceBuffer` objects, or creating
+    a new `SourceBuffer` using the given `mimeType` would result in
+    an [unsupported
+    configuration of `SourceBuffer`s](https://w3c.github.io/media-source/#sourcebuffer-configuration).
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following snippet is from a simple example written by Nick Desaulniers (<a
-    href="https://nickdesaulniers.github.io/netfix/demo/bufferAll.html">view the full demo
-    live</a>, or <a
-    href="https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html">download
-    the source</a> for further investigation.)</p>
+The following snippet is from a simple example written by Nick Desaulniers ([view the full demo
+live](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download
+the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for further investigation.)
 
-<pre
-  class="brush: js ">var assetURL = 'frag_bunny.mp4';
+```js
+var assetURL = 'frag_bunny.mp4';
 // Need to be specific for Blink regarding codecs
 // ./mp4info frag_bunny.mp4 | grep Codec
-var mimeCodec = 'video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;';
+var mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
 
-if ('MediaSource' in window &amp;&amp; MediaSource.isTypeSupported(mimeCodec)) {
+if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
   var mediaSource = new MediaSource;
   //console.log(mediaSource.readyState); // closed
   video.src = URL.createObjectURL(mediaSource);
@@ -97,19 +91,18 @@ function sourceOpen (_) {
     });
     sourceBuffer.appendBuffer(buf);
   });
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("SourceBuffer")}}</li>
-  <li>{{domxref("SourceBufferList")}}</li>
-</ul>
+- {{domxref("SourceBuffer")}}
+- {{domxref("SourceBufferList")}}

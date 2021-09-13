@@ -2,64 +2,57 @@
 title: Window.moveTo()
 slug: Web/API/Window/moveTo
 tags:
-- API
-- CSSOM View
-- Method
-- Reference
-- Window
+  - API
+  - CSSOM View
+  - Method
+  - Reference
+  - Window
 browser-compat: api.Window.moveTo
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code><strong>moveTo()</strong></code> method of the {{domxref("Window")}}
-  interface moves the current window to the specified coordinates.</p>
+The **`moveTo()`** method of the {{domxref("Window")}}
+interface moves the current window to the specified coordinates.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This function moves the window to an absolute location. In
-    contrast, {{domxref("window.moveBy()")}} moves the window relative to its current
-    location.</p>
-</div>
+> **Note:** This function moves the window to an absolute location. In
+> contrast, {{domxref("window.moveBy()")}} moves the window relative to its current
+> location.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">window.moveTo(<var>x</var>, <var>y</var>)
-</pre>
+```js
+window.moveTo(x, y)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<ul>
-  <li><code>x</code> is the horizontal coordinate to be moved to.</li>
-  <li><code>y</code> is the vertical coordinate to be moved to.</li>
-</ul>
+- `x` is the horizontal coordinate to be moved to.
+- `y` is the vertical coordinate to be moved to.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example moves the window to the top-left corner of the screen.</p>
+This example moves the window to the top-left corner of the screen.
 
-<pre class="brush:js">function origin() {
+```js
+function origin() {
   window.moveTo(0, 0);
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>As of Firefox 7, websites can no longer move a browser window <a class="link-https"
-    href="https://bugzilla.mozilla.org/show_bug.cgi?id=565541#c24">in the following
-    cases</a>:</p>
+As of Firefox 7, websites can no longer move a browser window [in the following
+cases](https://bugzilla.mozilla.org/show_bug.cgi?id=565541#c24):
 
-<ol>
-  <li>You can't move a window or tab that wasn’t created by {{domxref("Window.open()")}}.
-  </li>
-  <li>You can't move a window or tab when it’s in a window with more than one tab.</li>
-</ol>
+1.  You can't move a window or tab that wasn’t created by {{domxref("Window.open()")}}.
+2.  You can't move a window or tab when it’s in a window with more than one tab.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Window.moveBy()")}}</li>
-</ul>
+- {{domxref("Window.moveBy()")}}

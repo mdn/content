@@ -12,63 +12,58 @@ tags:
   - sound
 browser-compat: api.AudioContext.getOutputTimestamp
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<p>The
-    <strong><code>getOutputTimestamp()</code></strong> property of the
-    {{domxref("AudioContext")}} interface returns a new <code>AudioTimestamp</code> object
-    containing two audio timestamp values relating to the current audio context.</p>
+The
+**`getOutputTimestamp()`** property of the
+{{domxref("AudioContext")}} interface returns a new `AudioTimestamp` object
+containing two audio timestamp values relating to the current audio context.
 
-<p>The two values are as follows:</p>
+The two values are as follows:
 
-<ul>
-  <li><code>AudioTimestamp.contextTime</code>: The time of the sample frame currently
-    being rendered by the audio output device (i.e., output audio stream position), in the
-    same units and origin as the context's {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}}.
-    Basically, this is the time after the audio context was first created.</li>
-  <li><code>AudioTimestamp.performanceTime</code>: An estimation of the moment when the
-    sample frame corresponding to the stored <code>contextTime</code> value was rendered
-    by the audio output device, in the same units and origin as
-    {{domxref("performance.now()")}}. This is the time after the document containing the
-    audio context was first rendered.</li>
-</ul>
+- `AudioTimestamp.contextTime`: The time of the sample frame currently
+  being rendered by the audio output device (i.e., output audio stream position), in the
+  same units and origin as the context's {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}}.
+  Basically, this is the time after the audio context was first created.
+- `AudioTimestamp.performanceTime`: An estimation of the moment when the
+  sample frame corresponding to the stored `contextTime` value was rendered
+  by the audio output device, in the same units and origin as
+  {{domxref("performance.now()")}}. This is the time after the document containing the
+  audio context was first rendered.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var timestamp = context.getOutputTimestamp()</pre>
+```js
+var timestamp = context.getOutputTimestamp()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>An <code>AudioTimestamp</code> object, which has the following properties.</p>
+An `AudioTimestamp` object, which has the following properties.
 
-<ul>
-  <li><code>contextTime</code>: A point in the time coordinate system of the
-    {{domxref("BaseAudioContext/currentTime","currentTime")}} for the
-    <code>BaseAudioContext</code>; the time after the audio context was first created.
-  </li>
-  <li><code>performanceTime</code>: A point in the time coordinate system of a
-    <code>Performance</code> interface; the time after the document containing the audio
-    context was first rendered</li>
-</ul>
+- `contextTime`: A point in the time coordinate system of the
+  {{domxref("BaseAudioContext/currentTime","currentTime")}} for the
+  `BaseAudioContext`; the time after the audio context was first created.
+- `performanceTime`: A point in the time coordinate system of a
+  `Performance` interface; the time after the document containing the audio
+  context was first rendered
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the following code we start to play an audio file after a play button is clicked,
-  and start off a <code>requestAnimationFrame</code> loop running, which constantly
-  outputs the <code>contextTime</code> and <code>performanceTime</code>.</p>
+In the following code we start to play an audio file after a play button is clicked,
+and start off a `requestAnimationFrame` loop running, which constantly
+outputs the `contextTime` and `performanceTime`.
 
-<p>You can see full code of this <a
-    href="https://github.com/mdn/webaudio-examples/blob/master/output-timestamp/index.html">example
-    at output-timestamp</a> (<a
-    href="https://mdn.github.io/webaudio-examples/output-timestamp/">see it live
-    also</a>).</p>
+You can see full code of this [example
+at output-timestamp](https://github.com/mdn/webaudio-examples/blob/master/output-timestamp/index.html) ([see it live
+also](https://mdn.github.io/webaudio-examples/output-timestamp/)).
 
-<pre class="brush: js">play.addEventListener('click', () =&gt; {
+```js
+play.addEventListener('click', () => {
   if(!audioCtx) {
     audioCtx = new window.AudioContext();
   }
@@ -80,7 +75,7 @@ browser-compat: api.AudioContext.getOutputTimestamp
   rAF = requestAnimationFrame(outputTimestamps);
 });
 
-stop.addEventListener('click', () =&gt; {
+stop.addEventListener('click', () => {
   source.stop(0);
   play.removeAttribute('disabled');
   cancelAnimationFrame(rAF);
@@ -92,12 +87,13 @@ function outputTimestamps() {
   let ts = audioCtx.getOutputTimestamp()
   console.log('Context time: ' + ts.contextTime + ' | Performance time: ' + ts.performanceTime);
   rAF = requestAnimationFrame(outputTimestamps);
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

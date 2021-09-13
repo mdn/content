@@ -2,52 +2,51 @@
 title: RTCDTMFSender.ontonechange
 slug: Web/API/RTCDTMFSender/ontonechange
 tags:
-- DTMF
-- Event Handler
-- Property
-- RTCDTMFSender
-- Reference
-- Touch-tone
-- WebRTC
-- WebRTC API
-- ontonechange
+  - DTMF
+  - Event Handler
+  - Property
+  - RTCDTMFSender
+  - Reference
+  - Touch-tone
+  - WebRTC
+  - WebRTC API
+  - ontonechange
 browser-compat: api.RTCDTMFSender.ontonechange
 ---
-<div>{{ APIRef("WebRTC") }}{{draft}}</div>
+{{ APIRef("WebRTC") }}{{draft}}
 
-<p>The <strong><code>ontonechange</code></strong> property of the {{
+The **`ontonechange`** property of the {{
   domxref("RTCDTMFSender") }} interface is used to set the event handler for the
-  {{event("tonechange")}} event, which is sent to the <code>RTCDTMFSender</code> each time
-  a tone begins or ends. The event handler receives as input a single parameter of type
-  {{domxref("RTCDTMFToneChangeEvent")}}, which describes the change.</p>
+{{event("tonechange")}} event, which is sent to the `RTCDTMFSender` each time
+a tone begins or ends. The event handler receives as input a single parameter of type
+{{domxref("RTCDTMFToneChangeEvent")}}, which describes the change.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>RTCDTMFSender</em>.ontonechange = <em>toneChangeHandlerFunction</em>;</pre>
+```js
+RTCDTMFSender.ontonechange = toneChangeHandlerFunction;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A function which is called when a {{event("tonechange")}} event is sent to the
-  <code>RTCDTMFSender</code>, indicating that a DTMF tone has either started playing, or
-  if all tones have finished playing.</p>
+A function which is called when a {{event("tonechange")}} event is sent to the
+`RTCDTMFSender`, indicating that a DTMF tone has either started playing, or
+if all tones have finished playing.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>tbd</p>
+tbd
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API/Using_DTMF">Using DTMF with WebRTC</a></li>
-  <li>{{domxref("RTCDTMFSender")}}</li>
-</ul>
+- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+- [Using DTMF with WebRTC](/en-US/docs/Web/API/WebRTC_API/Using_DTMF)
+- {{domxref("RTCDTMFSender")}}

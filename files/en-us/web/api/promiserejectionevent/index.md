@@ -12,67 +12,61 @@ tags:
   - events
 browser-compat: api.PromiseRejectionEvent
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>PromiseRejectionEvent</code></strong> interface represents events which are sent to the global script context when JavaScript {{jsxref("Promise")}}s are rejected. These events are particularly useful for telemetry and debugging purposes.</p>
+The **`PromiseRejectionEvent`** interface represents events which are sent to the global script context when JavaScript {{jsxref("Promise")}}s are rejected. These events are particularly useful for telemetry and debugging purposes.
 
-<p>For details on promise rejection events, see {{SectionOnPage("/en-US/docs/Web/JavaScript/Guide/Using_promises", "Promise rejection events")}}.</p>
+For details on promise rejection events, see {{SectionOnPage("/en-US/docs/Web/JavaScript/Guide/Using_promises", "Promise rejection events")}}.
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("PromiseRejectionEvent.PromiseRejectionEvent", "PromiseRejectionEvent()")}}</dt>
- <dd>Creates a <code>PromiseRejectionEvent</code> event, given the type of event (<code><a href="/en-US/docs/Web/API/Window/unhandledrejection_event">unhandledrejection</a></code> or <code><a href="/en-US/docs/Web/API/Window/rejectionhandled_event">rejectionhandled</a></code>) and other details.</dd>
-</dl>
+- {{domxref("PromiseRejectionEvent.PromiseRejectionEvent", "PromiseRejectionEvent()")}}
+  - : Creates a `PromiseRejectionEvent` event, given the type of event ([`unhandledrejection`](/en-US/docs/Web/API/Window/unhandledrejection_event) or [`rejectionhandled`](/en-US/docs/Web/API/Window/rejectionhandled_event)) and other details.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Also inherits properties from its parent {{domxref("Event")}}</em>.</p>
+_Also inherits properties from its parent {{domxref("Event")}}_.
 
-<dl>
- <dt>{{domxref("PromiseRejectionEvent.promise")}} {{readonlyInline}}</dt>
- <dd>The JavaScript {{jsxref("Promise")}} that was rejected.</dd>
- <dt>{{domxref("PromiseRejectionEvent.reason")}} {{readOnlyInline}}</dt>
- <dd>A value or {{jsxref("Object")}} indicating why the promise was rejected, as passed to {{jsxref("Promise.reject()")}}.</dd>
-</dl>
+- {{domxref("PromiseRejectionEvent.promise")}} {{readonlyInline}}
+  - : The JavaScript {{jsxref("Promise")}} that was rejected.
+- {{domxref("PromiseRejectionEvent.reason")}} {{readOnlyInline}}
+  - : A value or {{jsxref("Object")}} indicating why the promise was rejected, as passed to {{jsxref("Promise.reject()")}}.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface has no unique methods; inherits methods from its parent {{domxref("Event")}}</em>.</p>
+_This interface has no unique methods; inherits methods from its parent {{domxref("Event")}}_.
 
-<h2 id="Events">Events</h2>
+## Events
 
-<dl>
- <dt>{{Event("rejectionhandled")}}</dt>
- <dd>Fired when a JavaScript {{jsxref("Promise")}} is rejected, and after the rejection is handled by the promise's rejection handling code.</dd>
- <dt>{{Event("unhandledrejection")}}</dt>
- <dd>Fired when a JavaScript {{jsxref("Promise")}} is rejected but there is no rejection handler to deal with the rejection.</dd>
-</dl>
+- {{Event("rejectionhandled")}}
+  - : Fired when a JavaScript {{jsxref("Promise")}} is rejected, and after the rejection is handled by the promise's rejection handling code.
+- {{Event("unhandledrejection")}}
+  - : Fired when a JavaScript {{jsxref("Promise")}} is rejected but there is no rejection handler to deal with the rejection.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This simple example catches unhandled promise rejections and logs them for debugging purposes.</p>
+This simple example catches unhandled promise rejections and logs them for debugging purposes.
 
-<pre class="brush: js">window.onunhandledrejection = function(e) {
+```js
+window.onunhandledrejection = function(e) {
   console.log(e.reason);
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Archive/Add-ons/Techniques/Promises">Promises</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Using_promises">Using promises</a></li>
- <li>{{jsxref("Promise")}}</li>
- <li>{{domxref("WindowEventHandlers.onrejectionhandled")}}</li>
- <li>{{domxref("WindowEventHandlers.onunhandledrejection")}}</li>
-</ul>
+- [Promises](/en-US/docs/Archive/Add-ons/Techniques/Promises)
+- [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises)
+- {{jsxref("Promise")}}
+- {{domxref("WindowEventHandlers.onrejectionhandled")}}
+- {{domxref("WindowEventHandlers.onunhandledrejection")}}

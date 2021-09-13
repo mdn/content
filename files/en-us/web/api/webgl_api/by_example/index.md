@@ -8,61 +8,55 @@ tags:
   - Learn
   - WebGL
 ---
-<p>{{Next("Learn/WebGL/By_example/Detect_WebGL")}}</p>
+{{Next("Learn/WebGL/By_example/Detect_WebGL")}}
 
-<p><em>WebGL by example</em> is a series of live samples with short explanations that showcase WebGL concepts and capabilities.</p>
+_WebGL by example_ is a series of live samples with short explanations that showcase WebGL concepts and capabilities.
 
-<p>The examples are sorted according to topic and level of difficulty, covering the WebGL rendering context, shader programming, textures, geometry, user interaction, and more.</p>
+The examples are sorted according to topic and level of difficulty, covering the WebGL rendering context, shader programming, textures, geometry, user interaction, and more.
 
-<h2 id="Examples_by_topic">Examples by topic</h2>
+## Examples by topic
 
-<p>The examples are sorted in order of increasing difficulty. But rather than just presenting them in a single long list, they are additionally divided into topics. Sometimes we revisit a topic several times, such as when needing to discuss it initially at a basic level, and later at intermediate and advanced levels.</p>
+The examples are sorted in order of increasing difficulty. But rather than just presenting them in a single long list, they are additionally divided into topics. Sometimes we revisit a topic several times, such as when needing to discuss it initially at a basic level, and later at intermediate and advanced levels.
 
-<p>Instead of trying to juggle shaders, geometry, and working with {{Glossary("GPU")}} memory, already in the first program, the examples here explore WebGL in an incremental way. We believe that it leads to a more effective learning experience and ultimately a deeper understanding of the underlying concepts.</p>
+Instead of trying to juggle shaders, geometry, and working with {{Glossary("GPU")}} memory, already in the first program, the examples here explore WebGL in an incremental way. We believe that it leads to a more effective learning experience and ultimately a deeper understanding of the underlying concepts.
 
-<p>Explanations about the examples are found in both the main text and in comments within the code. You should read all comments, because more advanced examples could not repeat comments about parts of the code that were previously explained.</p>
+Explanations about the examples are found in both the main text and in comments within the code. You should read all comments, because more advanced examples could not repeat comments about parts of the code that were previously explained.
 
-<h3 id="Getting_to_know_the_rendering_context">Getting to know the rendering context</h3>
+### Getting to know the rendering context
 
-<dl>
- <dt><a href="/en-US/docs/Learn/WebGL/By_example/Detect_WebGL">Detect WebGL</a></dt>
- <dd>This example demonstrates how to detect a {{Glossary("WebGL")}} rendering context and reports the result to the user.</dd>
- <dt><a href="/en-US/docs/Learn/WebGL/By_example/Clearing_with_colors">Clearing with colors</a></dt>
- <dd>How to clear the rendering context with a solid color.</dd>
- <dt><a href="/en-US/docs/Learn/WebGL/By_example/Clearing_by_clicking">Clearing by clicking</a></dt>
- <dd>How to combine user interaction with graphics operations. Clearing the rendering context with a random color when the user clicks.</dd>
- <dt><a href="/en-US/docs/Learn/WebGL/By_example/Simple_color_animation">Simple color animation</a></dt>
- <dd>A very basic color animation, done by clearing the {{Glossary("WebGL")}} drawing buffer with a different random color every second.</dd>
- <dt><a href="/en-US/docs/Learn/WebGL/By_example/Color_masking">Color masking</a></dt>
- <dd>Modifying random colors by applying color masking and thus limiting the range of displayed colors to specific shades.</dd>
- <dt><a href="/en-US/docs/Learn/WebGL/By_example/Basic_scissoring">Basic scissoring</a></dt>
- <dd>How to draw simple rectangles and squares with scissoring operations.</dd>
- <dt><a href="/en-US/docs/Learn/WebGL/By_example/Canvas_size_and_WebGL">Canvas size and WebGL</a></dt>
- <dd>The example explores the effect of setting (or not setting) the canvas size to its element size in {{Glossary("CSS")}} pixels, as it appears in the browser window.</dd>
- <dt><a href="/en-US/docs/Learn/WebGL/By_example/Boilerplate_1">Boilerplate 1</a></dt>
- <dd>The example describes repeated pieces of code that will be hidden from now on, as well as defining a JavaScript utility function to make WebGL initialization easier.</dd>
- <dt><a href="/en-US/docs/Learn/WebGL/By_example/Scissor_animation">Scissor animation</a></dt>
- <dd>Some animation fun with scissoring and clearing operations.</dd>
- <dt><a href="/en-US/docs/Learn/WebGL/By_example/Raining_rectangles">Raining rectangles</a></dt>
- <dd>A simple game that demonstrates clearing with solid colors, scissoring, animation, and user interaction.</dd>
-</dl>
+- [Detect WebGL](/en-US/docs/Learn/WebGL/By_example/Detect_WebGL)
+  - : This example demonstrates how to detect a {{Glossary("WebGL")}} rendering context and reports the result to the user.
+- [Clearing with colors](/en-US/docs/Learn/WebGL/By_example/Clearing_with_colors)
+  - : How to clear the rendering context with a solid color.
+- [Clearing by clicking](/en-US/docs/Learn/WebGL/By_example/Clearing_by_clicking)
+  - : How to combine user interaction with graphics operations. Clearing the rendering context with a random color when the user clicks.
+- [Simple color animation](/en-US/docs/Learn/WebGL/By_example/Simple_color_animation)
+  - : A very basic color animation, done by clearing the {{Glossary("WebGL")}} drawing buffer with a different random color every second.
+- [Color masking](/en-US/docs/Learn/WebGL/By_example/Color_masking)
+  - : Modifying random colors by applying color masking and thus limiting the range of displayed colors to specific shades.
+- [Basic scissoring](/en-US/docs/Learn/WebGL/By_example/Basic_scissoring)
+  - : How to draw simple rectangles and squares with scissoring operations.
+- [Canvas size and WebGL](/en-US/docs/Learn/WebGL/By_example/Canvas_size_and_WebGL)
+  - : The example explores the effect of setting (or not setting) the canvas size to its element size in {{Glossary("CSS")}} pixels, as it appears in the browser window.
+- [Boilerplate 1](/en-US/docs/Learn/WebGL/By_example/Boilerplate_1)
+  - : The example describes repeated pieces of code that will be hidden from now on, as well as defining a JavaScript utility function to make WebGL initialization easier.
+- [Scissor animation](/en-US/docs/Learn/WebGL/By_example/Scissor_animation)
+  - : Some animation fun with scissoring and clearing operations.
+- [Raining rectangles](/en-US/docs/Learn/WebGL/By_example/Raining_rectangles)
+  - : A simple game that demonstrates clearing with solid colors, scissoring, animation, and user interaction.
 
-<h3 id="Shader_programming_basics">Shader programming basics</h3>
+### Shader programming basics
 
-<dl>
- <dt><a href="/en-US/docs/Learn/WebGL/By_example/Hello_GLSL">Hello GLSL</a></dt>
- <dd>A very basic shader program that draws a solid color square.</dd>
- <dt><a href="/en-US/docs/Learn/WebGL/By_example/Hello_vertex_attributes">Hello vertex attributes</a></dt>
- <dd>Combining shader programming and user interaction through vertex attributes.</dd>
- <dt><a href="/en-US/docs/Learn/WebGL/By_example/Textures_from_code">Textures from code</a></dt>
- <dd>A simple demonstration of procedural texturing with fragment shaders.</dd>
-</dl>
+- [Hello GLSL](/en-US/docs/Learn/WebGL/By_example/Hello_GLSL)
+  - : A very basic shader program that draws a solid color square.
+- [Hello vertex attributes](/en-US/docs/Learn/WebGL/By_example/Hello_vertex_attributes)
+  - : Combining shader programming and user interaction through vertex attributes.
+- [Textures from code](/en-US/docs/Learn/WebGL/By_example/Textures_from_code)
+  - : A simple demonstration of procedural texturing with fragment shaders.
 
-<h3 id="Miscellaneous_advanced_examples">Miscellaneous advanced examples</h3>
+### Miscellaneous advanced examples
 
-<dl>
- <dt><a href="/en-US/docs/Learn/WebGL/By_example/Video_textures">Video textures</a></dt>
- <dd>This example demonstrates how to use video files as textures.</dd>
-</dl>
+- [Video textures](/en-US/docs/Learn/WebGL/By_example/Video_textures)
+  - : This example demonstrates how to use video files as textures.
 
-<p>{{Next("Learn/WebGL/By_example/Detect_WebGL")}}</p>
+{{Next("Learn/WebGL/By_example/Detect_WebGL")}}

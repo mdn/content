@@ -8,43 +8,37 @@ tags:
   - Reference
 browser-compat: api.HTMLParamElement
 ---
-<div>
-<div>{{ APIRef("HTML DOM") }}</div>
-</div>
+{{ APIRef("HTML DOM") }}
 
-<p>The <strong><code>HTMLParamElement</code></strong> interface provides special properties (beyond those of the regular {{domxref("HTMLElement")}} object interface it inherits) for manipulating {{HTMLElement("param")}} elements, representing a pair of a key and a value that acts as a parameter for an {{HTMLElement("object")}} element.</p>
+The **`HTMLParamElement`** interface provides special properties (beyond those of the regular {{domxref("HTMLElement")}} object interface it inherits) for manipulating {{HTMLElement("param")}} elements, representing a pair of a key and a value that acts as a parameter for an {{HTMLElement("object")}} element.
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{domxref("HTMLElement")}}.</em></p>
+_Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLParamElement.name")}}</dt>
- <dd>Is a {{domxref("DOMString")}} representing the name of the parameter. It reflects the {{htmlattrxref("name", "param")}} attribute.</dd>
- <dt>{{domxref("HTMLParamElement.value")}}</dt>
- <dd>Is a {{domxref("DOMString")}} representing the value associated to the parameter. It reflects the {{htmlattrxref("value", "param")}} attribute.</dd>
- <dt>{{domxref("HTMLParamElement.type")}} {{deprecated_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} containing the type of the parameter when <code>valueType</code> has the <code>"ref"</code> value. It reflects the {{htmlattrxref("type", "param")}} attribute.</dd>
- <dt>{{domxref("HTMLParamElement.valueType")}} {{deprecated_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} containing the type of the <code>value</code>. It reflects the {{htmlattrxref("<code>valuetype</code>", "param")}} attribute and has one of the values: <code>"data"</code>, <code>"ref"</code>, or <code>"object"</code>.</dd>
-</dl>
+- {{domxref("HTMLParamElement.name")}}
+  - : Is a {{domxref("DOMString")}} representing the name of the parameter. It reflects the {{htmlattrxref("name", "param")}} attribute.
+- {{domxref("HTMLParamElement.value")}}
+  - : Is a {{domxref("DOMString")}} representing the value associated to the parameter. It reflects the {{htmlattrxref("value", "param")}} attribute.
+- {{domxref("HTMLParamElement.type")}} {{deprecated_inline}}
+  - : Is a {{domxref("DOMString")}} containing the type of the parameter when `valueType` has the `"ref"` value. It reflects the {{htmlattrxref("type", "param")}} attribute.
+- {{domxref("HTMLParamElement.valueType")}} {{deprecated_inline}}
+  - : Is a {{domxref("DOMString")}} containing the type of the `value`. It reflects the {{htmlattrxref("<code>valuetype</code>", "param")}} attribute and has one of the values: `"data"`, `"ref"`, or `"object"`.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>No specific methods, inherits methods from its parent, {{domxref("HTMLElement")}}.</em></p>
+_No specific methods, inherits methods from its parent, {{domxref("HTMLElement")}}._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The HTML element implementing this interface: {{ HTMLElement("param") }}.</li>
-</ul>
+- The HTML element implementing this interface: {{ HTMLElement("param") }}.

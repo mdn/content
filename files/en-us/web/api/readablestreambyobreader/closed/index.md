@@ -11,31 +11,32 @@ tags:
   - closed
 browser-compat: api.ReadableStreamBYOBReader.closed
 ---
-<div>{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}</div>
+{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}
 
-<p>The <strong><code>closed</code></strong> read-only property
-  of the {{domxref("ReadableStreamBYOBReader")}} interface returns a
-  {{jsxref("Promise")}} that fulfills when the stream closes or the reader's lock
-  is released, or rejects if the stream throws an error. This property enables you
-  to write code that responds to an end to the streaming process.</p>
+The **`closed`** read-only property
+of the {{domxref("ReadableStreamBYOBReader")}} interface returns a
+{{jsxref("Promise")}} that fulfills when the stream closes or the reader's lock
+is released, or rejects if the stream throws an error. This property enables you
+to write code that responds to an end to the streaming process.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var><code>var <em>closed</em> = </code>readableStreamBYOBReader</var>.closed;</pre>
+```js
+var closed = readableStreamBYOBReader.closed;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{jsxref("Promise")}}.</p>
+A {{jsxref("Promise")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>TBD.</p>
+TBD.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

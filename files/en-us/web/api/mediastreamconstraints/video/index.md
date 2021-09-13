@@ -2,70 +2,70 @@
 title: MediaStreamConstraints.video
 slug: Web/API/MediaStreamConstraints/video
 tags:
-- API
-- Audio
-- Constraints
-- Dictionary
-- Interface
-- Media
-- Media Capture and Streams API
-- Media Streams API
-- MediaStreamConstraints
-- Reference
-- Video
-- getusermedia
+  - API
+  - Audio
+  - Constraints
+  - Dictionary
+  - Interface
+  - Media
+  - Media Capture and Streams API
+  - Media Streams API
+  - MediaStreamConstraints
+  - Reference
+  - Video
+  - getusermedia
 browser-compat: api.MediaStreamConstraints.video
 ---
-<div>{{APIRef("Media Capture and Streams")}}</div>
+{{APIRef("Media Capture and Streams")}}
 
-<p>The {{domxref("MediaStreamConstraints")}} dictionary's
-  <strong><code>video</code></strong> property is used to indicate what kind of video
-  track, if any, should be included in the {{domxref("MediaStream")}} returned by a call
-  to {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}.</p>
+The {{domxref("MediaStreamConstraints")}} dictionary's
+**`video`** property is used to indicate what kind of video
+track, if any, should be included in the {{domxref("MediaStream")}} returned by a call
+to {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}.
 
-<p>To learn more about how constraints work, see <a
-    href="/en-US/docs/Web/API/Media_Streams_API/Constraints">Capabilities, constraints,
-    and settings</a>.</p>
+To learn more about how constraints work, see [Capabilities, constraints,
+and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>videoConstraints</em> = true | false | <em>MediaTrackConstraints</em>;
-</pre>
+```js
+var videoConstraints = true | false | MediaTrackConstraints;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>The value of the <code>video</code> property can be specified as either of two types:
-</p>
+The value of the `video` property can be specified as either of two types:
 
-<dl>
-  <dt>A boolean value</dt>
-  <dd>If specified, it indicates whether or not a video track should be
-    included in the returned stream; if it's <code>true</code>, a video track is included;
+- A boolean value
+  - : If specified, it indicates whether or not a video track should be
+    included in the returned stream; if it's `true`, a video track is included;
     if no video source is available or if permission is not given to use the video source,
-    the call to <code>getUserMedia()</code> will fail. If <code>false</code>, no video
-    track is included.</dd>
-  <dt>{{domxref("MediaTrackConstraints")}}</dt>
-  <dd>A constraints dictionary detailing the preferable and/or required values or ranges
+    the call to `getUserMedia()` will fail. If `false`, no video
+    track is included.
+- {{domxref("MediaTrackConstraints")}}
+  - : A constraints dictionary detailing the preferable and/or required values or ranges
     of values for the track's constrainable properties. If you specify constraints, a
-    video track meeting these constraints is required.</dd>
-</dl>
+    video track meeting these constraints is required.
 
-<h2 id="Example">Examples</h2>
+## Examples
 
-<h3 id="Using_a_Boolean_value">Using a Boolean value</h3>
+### Using a Boolean value
 
-<p>In this example, we provide a simple value of <code>true</code> for the
-  <code>video</code> property. This tells <code>getUserMedia()</code> that we require a
-  video track, but we don't care about any specifics beyond that.</p>
+In this example, we provide a simple value of `true` for the
+`video` property. This tells `getUserMedia()` that we require a
+video track, but we don't care about any specifics beyond that.
 
-<pre class="brush: html hidden">&lt;p&gt;Click the start button below to begin the demonstration.&lt;/p&gt;
-&lt;div id="startButton" class="button"&gt;
+```html hidden
+<p>Click the start button below to begin the demonstration.</p>
+<div id="startButton" class="button">
   Start
-&lt;/div&gt;
-&lt;video id="video" width="160" height="120" autoplay&gt;&lt;/video&gt;&lt;br&gt;
-&lt;div id="log"&gt;&lt;/div&gt;</pre>
+</div>
+<video id="video" width="160" height="120" autoplay></video><br>
+<div id="log"></div>
+```
 
-<pre class="brush: css hidden">body {
+```css hidden
+body {
   font: 14px "Open Sans", "Arial", sans-serif;
 }
 
@@ -84,45 +84,52 @@ video {
   padding-bottom: 4px;
   color: white;
   background-color: darkgreen;
-}</pre>
+}
+```
 
-<pre class="brush: js hidden">let videoElement = document.getElementById("video");
+```js hidden
+let videoElement = document.getElementById("video");
 let logElement = document.getElementById("log");
 
 function log(msg) {
- logElement.innerHTML += msg + "&lt;br&gt;";
+ logElement.innerHTML += msg + "<br>";
 }
-</pre>
+```
 
-<pre class="brush: js">document.getElementById("startButton").addEventListener("click", function() {
+```js
+document.getElementById("startButton").addEventListener("click", function() {
   navigator.mediaDevices.getUserMedia({
       video: true
-  }).then(stream =&gt; videoElement.srcObject = stream)
-    .catch(err =&gt; log(err.name + ": " + err.message));
-}, false);</pre>
+  }).then(stream => videoElement.srcObject = stream)
+    .catch(err => log(err.name + ": " + err.message));
+}, false);
+```
 
-<p>Here we see an event handler for a {{domxref("click")}} event which uses
-  {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} to obtain a video-only stream
-  with no specific constraints, then attaches the resulting stream to a
-  {{HTMLElement("video")}} element once the stream is returned.</p>
+Here we see an event handler for a {{domxref("click")}} event which uses
+{{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} to obtain a video-only stream
+with no specific constraints, then attaches the resulting stream to a
+{{HTMLElement("video")}} element once the stream is returned.
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Using_a_Boolean_value', 600, 280, "", "", "", "camera") }}</p>
+{{ EmbedLiveSample('Using_a_Boolean_value', 600, 280, "", "", "", "camera") }}
 
-<h3 id="Using_a_MediaTrackConstraints_object">Using a MediaTrackConstraints object</h3>
+### Using a MediaTrackConstraints object
 
-<p>Now let's look at a similar example that uses a set of constraints based on the
-  {{domxref("MediaTrackConstraints")}} dictionary:</p>
+Now let's look at a similar example that uses a set of constraints based on the
+{{domxref("MediaTrackConstraints")}} dictionary:
 
-<pre class="brush: html hidden">&lt;p&gt;Click the start button below to begin the demonstration.&lt;/p&gt;
-&lt;div id="startButton" class="button"&gt;
+```html hidden
+<p>Click the start button below to begin the demonstration.</p>
+<div id="startButton" class="button">
   Start
-&lt;/div&gt;
-&lt;video id="video" width="160" height="120" autoplay&gt;&lt;/video&gt;&lt;br&gt;
-&lt;div id="log"&gt;&lt;/div&gt;</pre>
+</div>
+<video id="video" width="160" height="120" autoplay></video><br>
+<div id="log"></div>
+```
 
-<pre class="brush: css hidden">body {
+```css hidden
+body {
   font: 14px "Open Sans", "Arial", sans-serif;
 }
 
@@ -141,57 +148,58 @@ video {
   padding-bottom: 4px;
   color: white;
   background-color: darkgreen;
-}</pre>
+}
+```
 
-<pre class="brush: js hidden">let videoElement = document.getElementById("video");
+```js hidden
+let videoElement = document.getElementById("video");
 let logElement = document.getElementById("log");
 
 function log(msg) {
- logElement.innerHTML += msg + "&lt;br&gt;";
+ logElement.innerHTML += msg + "<br>";
 }
-</pre>
+```
 
-<pre class="brush: js">document.getElementById("startButton").addEventListener("click", function() {
+```js
+document.getElementById("startButton").addEventListener("click", function() {
   navigator.mediaDevices.getUserMedia({
       video: {
         width: 160,
         height: 120,
         frameRate: 15
       }
-  }).then(stream =&gt; videoElement.srcObject = stream)
-    .catch(err =&gt; log(err.name + ": " + err.message));
-}, false);</pre>
+  }).then(stream => videoElement.srcObject = stream)
+    .catch(err => log(err.name + ": " + err.message));
+}, false);
+```
 
-<p>Here we see an event handler for a {{domxref("click")}} event which calls
-  {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}, specifying a set of video
-  constraints that indicate a preference for a video track whose dimensions are as close
-  as possible to 160x120 pixels, and whose frame rate is as close to 15 frames per second
-  as possible. As long as a video input device is available and the user allows it to be
-  used, a video track will be included in the resulting stream, and it will match the
-  specified constraints as well as possible.</p>
+Here we see an event handler for a {{domxref("click")}} event which calls
+{{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}, specifying a set of video
+constraints that indicate a preference for a video track whose dimensions are as close
+as possible to 160x120 pixels, and whose frame rate is as close to 15 frames per second
+as possible. As long as a video input device is available and the user allows it to be
+used, a video track will be included in the resulting stream, and it will match the
+specified constraints as well as possible.
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Using_a_MediaTrackConstraints_object', 600, 280, "", "", "",
-  "camera") }}</p>
+{{ EmbedLiveSample('Using_a_MediaTrackConstraints_object', 600, 280, "", "", "",
+  "camera") }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a>
-  </li>
-  <li><a href="/en-US/docs/Web/API/Media_Streams_API/Constraints">Capabilities,
-      constraints, and settings</a></li>
-  <li>{{domxref("MediaDevices.getUserMedia()")}}</li>
-  <li>{{domxref("MediaDevices.getSupportedConstraints()")}}</li>
-  <li>{{domxref("MediaTrackSupportedConstraints")}}</li>
-  <li>{{domxref("MediaTrackConstraints")}}</li>
-</ul>
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- [Capabilities,
+  constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- {{domxref("MediaDevices.getUserMedia()")}}
+- {{domxref("MediaDevices.getSupportedConstraints()")}}
+- {{domxref("MediaTrackSupportedConstraints")}}
+- {{domxref("MediaTrackConstraints")}}

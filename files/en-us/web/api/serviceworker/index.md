@@ -11,43 +11,38 @@ tags:
   - Workers
 browser-compat: api.ServiceWorker
 ---
-<div>{{securecontext_header}}</div>
+{{securecontext_header}}{{APIRef("Service Workers API")}}
 
-<div>{{APIRef("Service Workers API")}}</div>
+The **`ServiceWorker`** interface of the [Service Worker API](/en-US/docs/Web/API/Service_Worker_API) provides a reference to a service worker. Multiple {{glossary("browsing context", "browsing contexts")}} (e.g. pages, workers, etc.) can be associated with the same service worker, each through a unique `ServiceWorker` object.
 
-<p>The <strong><code>ServiceWorker</code></strong> interface of the <a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a> provides a reference to a service worker. Multiple {{glossary("browsing context", "browsing contexts")}} (e.g. pages, workers, etc.) can be associated with the same service worker, each through a unique <code>ServiceWorker</code> object.</p>
+A `ServiceWorker` object is available in the {{domxref("ServiceWorkerRegistration.active")}} property, and the {{domxref("ServiceWorkerContainer.controller")}} property — this is a service worker that has been activated and is controlling the page (the service worker has been successfully registered, and the controlled page has been reloaded.)
 
-<p>A <code>ServiceWorker</code> object is available in the {{domxref("ServiceWorkerRegistration.active")}} property, and the {{domxref("ServiceWorkerContainer.controller")}} property — this is a service worker that has been activated and is controlling the page (the service worker has been successfully registered, and the controlled page has been reloaded.)</p>
+The `ServiceWorker` interface is dispatched a set of lifecycle events — `install` and `activate` — and functional events including `fetch`. A `ServiceWorker` object has an associated {{domxref("ServiceWorker.state")}}, related to its lifecycle.
 
-<p>The <code>ServiceWorker</code> interface is dispatched a set of lifecycle events — <code>install</code> and <code>activate</code> — and functional events including <code>fetch</code>. A <code>ServiceWorker</code> object has an associated {{domxref("ServiceWorker.state")}}, related to its lifecycle.</p>
+## Properties
 
-<h2 id="Properties">Properties</h2>
+_The `ServiceWorker` interface inherits properties from its parent, {{domxref("EventTarget")}}._
 
-<p><em>The <code>ServiceWorker</code> interface inherits properties from its parent, {{domxref("EventTarget")}}.</em></p>
+- {{domxref("ServiceWorker.scriptURL")}} {{readonlyinline}}
+  - : Returns the `ServiceWorker` serialized script URL defined as part of {{domxref("ServiceWorkerRegistration")}}. The URL must be on the same origin as the document that registers the `ServiceWorker`.
+- {{domxref("ServiceWorker.state")}} {{readonlyinline}}
+  - : Returns the state of the service worker. It returns one of the following values: `installing`, `installed,` `activating`, `activated`, or `redundant`.
 
-<dl>
- <dt>{{domxref("ServiceWorker.scriptURL")}} {{readonlyinline}}</dt>
- <dd>Returns the <code>ServiceWorker</code> serialized script URL defined as part of {{domxref("ServiceWorkerRegistration")}}. The URL must be on the same origin as the document that registers the <code>ServiceWorker</code>.</dd>
- <dt>{{domxref("ServiceWorker.state")}} {{readonlyinline}}</dt>
- <dd>Returns the state of the service worker. It returns one of the following values: <code>installing</code>, <code>installed,</code> <code>activating</code>, <code>activated</code>, or <code>redundant</code>.</dd>
-</dl>
+### Event handlers
 
-<h3 id="Event_handlers">Event handlers</h3>
+- {{domxref("ServiceWorker.onstatechange")}} {{readonlyinline}}
+  - : An {{domxref("EventListener")}} property called whenever an event of type `statechange` is fired; it is basically fired anytime the {{domxref("ServiceWorker.state")}} changes.
 
-<dl>
- <dt>{{domxref("ServiceWorker.onstatechange")}} {{readonlyinline}}</dt>
- <dd>An {{domxref("EventListener")}} property called whenever an event of type <code>statechange</code> is fired; it is basically fired anytime the {{domxref("ServiceWorker.state")}} changes.</dd>
-</dl>
+## Methods
 
-<h2 id="Methods">Methods</h2>
+_The `ServiceWorker` interface inherits methods from its parent, {{domxref("EventTarget")}}._
 
-<p><em>The <code>ServiceWorker</code> interface inherits methods from its parent, {{domxref("EventTarget")}}.</em></p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+This code snippet is from the [service worker registration-events sample](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html) ([live demo](https://googlechrome.github.io/samples/service-worker/registration-events/)). The code listens for any change in the {{domxref("ServiceWorker.state")}} and returns its value.
 
-<p>This code snippet is from the <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html">service worker registration-events sample</a> (<a href="https://googlechrome.github.io/samples/service-worker/registration-events/">live demo</a>). The code listens for any change in the {{domxref("ServiceWorker.state")}} and returns its value.</p>
-
-<pre class="brush: js">if ('serviceWorker' in navigator) {
+```js
+if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('service-worker.js', {
         scope: './'
     }).then(function (registration) {
@@ -75,23 +70,22 @@ browser-compat: api.ServiceWorker
 } else {
     // The current browser doesn't support service workers.
     // Perhaps it is too old or we are not in a Secure Context.
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://serviceworke.rs">ServiceWorker Cookbook</a></li>
- <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</a></li>
- <li><a href="https://github.com/mdn/sw-test">Service worker basic code example</a></li>
- <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
- <li>{{jsxref("Promise")}}</li>
- <li><a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web workers</a></li>
-</ul>
+- [ServiceWorker Cookbook](https://serviceworke.rs)
+- [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Service worker basic code example](https://github.com/mdn/sw-test)
+- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- {{jsxref("Promise")}}
+- [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

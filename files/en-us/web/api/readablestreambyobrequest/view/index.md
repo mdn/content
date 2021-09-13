@@ -2,38 +2,39 @@
 title: ReadableStreamBYOBRequest.view
 slug: Web/API/ReadableStreamBYOBRequest/view
 tags:
-- API
-- Experimental
-- Property
-- ReadableStreamBYOBRequest
-- Reference
-- Streams
-- View
+  - API
+  - Experimental
+  - Property
+  - ReadableStreamBYOBRequest
+  - Reference
+  - Streams
+  - View
 browser-compat: api.ReadableStreamBYOBRequest.view
 ---
-<div>{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}</div>
+{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}
 
-<p>The <strong><code>view</code></strong> getter property of the
-  {{domxref("ReadableStreamBYOBRequest")}} interface returns the current view.</p>
+The **`view`** getter property of the
+{{domxref("ReadableStreamBYOBRequest")}} interface returns the current view.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var><code>var view = </code>readableStreamBYOBRequestInstance</var>.view;</pre>
+```js
+var view = readableStreamBYOBRequestInstance.view;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A <a href="/en-US/docs/Web/JavaScript/Typed_arrays">typed array</a> representing the
-  destination region to which the controller can write generated data.</p>
+A [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) representing the
+destination region to which the controller can write generated data.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>TBD.</p>
+TBD.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

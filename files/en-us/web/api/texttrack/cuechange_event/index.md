@@ -12,79 +12,83 @@ tags:
   - track
 browser-compat: api.TextTrack.cuechange_event
 ---
-<div>{{APIRef("WebVTT")}}</div>
+{{APIRef("WebVTT")}}
 
-<p>The <strong><code>cuechange</code></strong> event fires when a {{domxref("TextTrack")}} has changed the currently displaying cues. The event is fired on both the <code>TextTrack</code> and the {{domxref("HTMLTrackElement")}} in which it's being presented, if any.</p>
+The **`cuechange`** event fires when a {{domxref("TextTrack")}} has changed the currently displaying cues. The event is fired on both the `TextTrack` and the {{domxref("HTMLTrackElement")}} in which it's being presented, if any.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("GlobalEventHandlers.oncuechange")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>{{domxref("GlobalEventHandlers.oncuechange")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="On_the_TextTrack">On the TextTrack</h3>
+### On the TextTrack
 
-<p>You can set up a listener for the <code>cuechange</code> event on a <code>TextTrack</code> using the {{domxref("EventTarget.addEventListener", "addEventListener()")}} method:</p>
+You can set up a listener for the `cuechange` event on a `TextTrack` using the {{domxref("EventTarget.addEventListener", "addEventListener()")}} method:
 
-<pre class="brush: js">track.addEventListener('cuechange', function () {
+```js
+track.addEventListener('cuechange', function () {
   let cues = track.activeCues;  // array of current cues
 });
-</pre>
+```
 
-<p>Or you can just set the {{domxref("GlobalEventHandlers.oncuechange", "oncuechange")}} event handler property:</p>
+Or you can just set the {{domxref("GlobalEventHandlers.oncuechange", "oncuechange")}} event handler property:
 
-<pre class="brush: js">track.oncuechange = function () {
+```js
+track.oncuechange = function () {
   let cues = track.activeCues; // array of current cues
-}</pre>
+}
+```
 
-<h3 id="On_the_track_element">On the track element</h3>
+### On the track element
 
-<p>The underlying {{domxref("TextTrack")}}, indicated by the {{domxref("HTMLTrackElement.track", "track")}} property, receives a {{domxref("TextTrack.cuechange_event", "cuechange")}} event every time the currently-presented cue is changed. This happens even if the track isn't associated with a media element.</p>
+The underlying {{domxref("TextTrack")}}, indicated by the {{domxref("HTMLTrackElement.track", "track")}} property, receives a {{domxref("TextTrack.cuechange_event", "cuechange")}} event every time the currently-presented cue is changed. This happens even if the track isn't associated with a media element.
 
-<p>If the track <em>is</em> associated with a media element, using the {{HTMLElement("track")}} element as a child of the {{HTMLElement("audio")}} or {{HTMLElement("video")}} element, the <code>cuechange</code> event is also sent to the {{domxref("HTMLTrackElement")}}.</p>
+If the track _is_ associated with a media element, using the {{HTMLElement("track")}} element as a child of the {{HTMLElement("audio")}} or {{HTMLElement("video")}} element, the `cuechange` event is also sent to the {{domxref("HTMLTrackElement")}}.
 
-<pre class="brush: js">let textTrackElem = document.getElementById("texttrack");
+```js
+let textTrackElem = document.getElementById("texttrack");
 
-textTrackElem.addEventListener("cuechange", (event) =&gt; {
+textTrackElem.addEventListener("cuechange", (event) => {
   let cues = event.target.track.activeCues;
 });
-</pre>
+```
 
-<p>In addition, you can use the <code>oncuechange</code> event handler:</p>
+In addition, you can use the `oncuechange` event handler:
 
-<pre class="brush: js">let textTrackElem = document.getElementById("texttrack");
+```js
+let textTrackElem = document.getElementById("texttrack");
 
-textTrackElem.oncuechange = (event) =&gt; {
+textTrackElem.oncuechange = (event) => {
   let cues = event.target.track.activeCues;
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{glossary("WebVTT")}}</li>
-</ul>
+- {{glossary("WebVTT")}}

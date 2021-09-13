@@ -9,106 +9,84 @@ tags:
   - connectionState
 browser-compat: api.RTCPeerConnection.connectionState
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>
-  The read-only <strong><code>connectionState</code></strong> property
-  of the {{domxref("RTCPeerConnection")}} interface
-  indicates the current state of the peer connection
-  by returning one of the following string values:
-  <code>new</code>, <code>connecting</code>, <code>connected</code>, <code>disconnected</code>,
-  <code>failed</code>, or <code>closed</code>.
-</p>
+The read-only **`connectionState`** property
+of the {{domxref("RTCPeerConnection")}} interface
+indicates the current state of the peer connection
+by returning one of the following string values:
+`new`, `connecting`, `connected`, `disconnected`,
+`failed`, or `closed`.
 
-<p>This state essentially represents the aggregate state of all ICE transports
-  (which are of type {{domxref("RTCIceTransport")}} or {{domxref("RTCDtlsTransport")}})
-  being used by the connection.</p>
-</p>
+This state essentially represents the aggregate state of all ICE transports
+(which are of type {{domxref("RTCIceTransport")}} or {{domxref("RTCDtlsTransport")}})
+being used by the connection.
 
-<p>
-  When this property's value changes,
-  a {{domxref("RTCPeerconnection.connectionstatechange_event", "connectionstatechange")}} event
-  is sent to the {{domxref("RTCPeerConnection")}} instance.
-</p>
+When this property's value changes,
+a {{domxref("RTCPeerconnection.connectionstatechange_event", "connectionstatechange")}} event
+is sent to the {{domxref("RTCPeerConnection")}} instance.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>connectionState</em> = <em>RTCPeerConnection</em>.connectionState;</pre>
+```js
+var connectionState = RTCPeerConnection.connectionState;
+```
 
-<h2 id="Value">Value</h2>
+## Value
 
-<p>A string representing the current state of the connection, that is one of the following litterals:</p>
+A string representing the current state of the connection, that is one of the following litterals:
 
-  <dl>
-    <dt><code>new</code></dt>
-    <dd>
-      At least one of the connection's {{Glossary("ICE")}} transports
-      ({{domxref("RTCIceTransport")}} or {{domxref("RTCDtlsTransport")}} objects)
-      is in the <code>new</code> state,
-      and none of them are in one of the following states:
-      <code>connecting</code>, <code>checking</code>, <code>failed</code>, <code>disconnected</code>,
-       or all of the connection's transports are in the <code>closed</code> state.
-    </d>
+- `new`
+  - : At least one of the connection's {{Glossary("ICE")}} transports
+    ({{domxref("RTCIceTransport")}} or {{domxref("RTCDtlsTransport")}} objects)
+    is in the `new` state,
+    and none of them are in one of the following states:
+    `connecting`, `checking`, `failed`, `disconnected`,
+    or all of the connection's transports are in the `closed` state.
+- `connecting`
+  - : One or more of the {{Glossary("ICE")}} transports are currently in the process of establishing a connection;
+    that is, their {{DOMxRef("RTCPeerConnection.iceConnectionState", "iceConnectionState")}} is
+    either `checking` or `connected`,
+    and no transports are in the `failed` state.
+- `connected`
+  - : Every {{Glossary("ICE")}} transport used by the connection
+    is either in use
+    (state `connected` or `completed`)
+    or is closed (state `closed`);
+    in addition, at least one transport is either `connected` or `completed`.
+- `disconnected`
+  - : At least one of the {{Glossary("ICE")}} transports for the connection
+    is in the `disconnected` state
+    and none of the other transports are in the state
+    `failed`, `connecting`, or `checking`.
+- `failed`
+  - : One or more of the {{Glossary("ICE")}} transports on the connection
+    is in the `failed` state.
+- `closed`
+  - : The {{DOMxRef("RTCPeerConnection")}} is closed.
 
-    <dt><code>connecting</code></dt>
-    <dd>
-      One or more of the {{Glossary("ICE")}} transports are currently in the process of establishing a connection;
-      that is, their {{DOMxRef("RTCPeerConnection.iceConnectionState", "iceConnectionState")}} is
-      either <code>checking</code> or <code>connected</code>,
-      and no transports are in the <code>failed</code> state.
-    </dd>
+## Example
 
-    <dt><code>connected</code></dt>
-    <dd>
-      Every {{Glossary("ICE")}} transport used by the connection
-      is either in use
-      (state <code>connected</code> or <code>completed</code>)
-      or is closed (state <code>closed</code>);
-      in addition, at least one transport is either <code>connected</code> or <code>completed</code>.
-    </dd>
-
-    <dt><code>disconnected</code></dt>
-    <dd>
-      At least one of the {{Glossary("ICE")}} transports for the connection
-      is in the <code>disconnected</code> state
-      and none of the other transports are in the state
-      <code>failed</code>, <code>connecting</code>, or <code>checking</code>.
-    </dd>
-
-    <dt><code>failed</code></dt>
-    <dd>
-      One or more of the {{Glossary("ICE")}} transports on the connection
-      is in the <code>failed</code> state.
-    </dd>
-
-    <dt><code>closed</code></dt>
-    <dd>
-      The {{DOMxRef("RTCPeerConnection")}} is closed.
-    </dd>
-  </dl>
-
-<h2 id="Example">Example</h2>
-
-<pre class="brush: js">var pc = new RTCPeerConnection(configuration);
+```js
+var pc = new RTCPeerConnection(configuration);
 
 /* ... */
 
-var connectionState = pc.connectionState;</pre>
+var connectionState = pc.connectionState;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime">Lifetime of a WebRTC
-      session</a></li>
-  <li>{{domxref("RTCPeerConnection")}}</li>
-  <li>{{domxref("RTCPeerconnection.connectionstatechange_event", "connectionstatechange")}}</li>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
-</ul>
+- [Lifetime of a WebRTC
+  session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)
+- {{domxref("RTCPeerConnection")}}
+- {{domxref("RTCPeerconnection.connectionstatechange_event", "connectionstatechange")}}
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)

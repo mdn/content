@@ -18,65 +18,55 @@ tags:
   - WebRTC Device API
 browser-compat: api.RTCRtpSender
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <strong><code>RTCRtpSender</code></strong> interface provides the ability to control and obtain details about how a particular {{domxref("MediaStreamTrack")}} is encoded and sent to a remote peer.</p>
+The **`RTCRtpSender`** interface provides the ability to control and obtain details about how a particular {{domxref("MediaStreamTrack")}} is encoded and sent to a remote peer.
 
-<p>With it, you can configure the encoding used for the corresponding track, get information about the device's media capabilities, and so forth. You can also obtain access to an {{domxref("RTCDTMFSender")}} which can be used to send {{Glossary("DTMF")}} codes (to simulate the user pressing buttons on a telephone's dial pad) to the remote peer.</p>
+With it, you can configure the encoding used for the corresponding track, get information about the device's media capabilities, and so forth. You can also obtain access to an {{domxref("RTCDTMFSender")}} which can be used to send {{Glossary("DTMF")}} codes (to simulate the user pressing buttons on a telephone's dial pad) to the remote peer.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("RTCRtpSender.dtmf")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("RTCDTMFSender")}} which can be used to send {{Glossary("DTMF")}} tones using <code>telephone-event</code> payloads on the {{Glossary("RTP")}} session represented by the <code>RTCRtpSender</code> object. If <code>null</code>, the track and/or the connection doesn't support DTMF. Only audio tracks can support DTMF.</dd>
- <dt>{{domxref("RTCRtpSender.track")}} {{ReadOnlyInline}}</dt>
- <dd>The {{domxref("MediaStreamTrack")}} which is being handled by the <code>RTCRtpSender</code>. If <code>track</code> is <code>null</code>, the <code>RTCRtpSender</code> doesn't transmit anything.</dd>
- <dt>{{domxref("RTCRtpSender.transport")}} {{ReadOnlyInline}}</dt>
- <dd>The {{domxref("RTCDtlsTransport")}} over which the sender is exchanging the RTP and RTCP packets used to manage transmission of media and control data. This value is <code>null</code> until the transport is established. When bundling is in use, more than transceiver may be sharing the same transport object.</dd>
-</dl>
+- {{domxref("RTCRtpSender.dtmf")}} {{ReadOnlyInline}}
+  - : An {{domxref("RTCDTMFSender")}} which can be used to send {{Glossary("DTMF")}} tones using `telephone-event` payloads on the {{Glossary("RTP")}} session represented by the `RTCRtpSender` object. If `null`, the track and/or the connection doesn't support DTMF. Only audio tracks can support DTMF.
+- {{domxref("RTCRtpSender.track")}} {{ReadOnlyInline}}
+  - : The {{domxref("MediaStreamTrack")}} which is being handled by the `RTCRtpSender`. If `track` is `null`, the `RTCRtpSender` doesn't transmit anything.
+- {{domxref("RTCRtpSender.transport")}} {{ReadOnlyInline}}
+  - : The {{domxref("RTCDtlsTransport")}} over which the sender is exchanging the RTP and RTCP packets used to manage transmission of media and control data. This value is `null` until the transport is established. When bundling is in use, more than transceiver may be sharing the same transport object.
 
-<h3 id="Obsolete_properties">Obsolete properties</h3>
+### Obsolete properties
 
-<dl>
- <dt><code>rtcpTransport</code> {{deprecated_inline}}</dt>
- <dd>This property has been removed; the RTP and RTCP transports have been combined into a single transport. Use the {{domxref("RTCRtpSender.transport", "transport")}} property instead.</dd>
-</dl>
+- `rtcpTransport` {{deprecated_inline}}
+  - : This property has been removed; the RTP and RTCP transports have been combined into a single transport. Use the {{domxref("RTCRtpSender.transport", "transport")}} property instead.
 
-<h2 id="methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("RTCRtpSender.getParameters()")}}</dt>
- <dd>Returns a {{domxref("RTCRtpParameters")}} object describing the current configuration for the encoding and transmission of media on the <code>track</code>.</dd>
- <dt>{{domxref("RTCRtpSender.getStats()")}}</dt>
- <dd>Returns a {{jsxref("Promise")}} which is fulfilled with a {{domxref("RTCStatsReport")}} which provides statistics data for all outbound streams being sent using this <code>RTCRtpSender</code>.</dd>
- <dt>{{domxref("RTCRtpSender.setParameters()")}}</dt>
- <dd>Applies changes to parameters which configure how the <code>track</code> is encoded and transmitted to the remote peer.</dd>
- <dt>{{domxref("RTCRtpSender.setStreams()")}}</dt>
- <dd>Sets the {{domxref("MediaStream")}}(s) associated with the {{domxref("RTCRtpSender.track", "track")}} being transmitted by this sender.</dd>
- <dt>{{domxref("RTCRtpSender.replaceTrack()")}}</dt>
- <dd>Attempts to replace the track currently being sent by the <code>RTCRtpSender</code> with another track, without performing renegotiation. This method can be used, for example, to toggle between the front- and rear-facing cameras on a device.</dd>
-</dl>
+- {{domxref("RTCRtpSender.getParameters()")}}
+  - : Returns a {{domxref("RTCRtpParameters")}} object describing the current configuration for the encoding and transmission of media on the `track`.
+- {{domxref("RTCRtpSender.getStats()")}}
+  - : Returns a {{jsxref("Promise")}} which is fulfilled with a {{domxref("RTCStatsReport")}} which provides statistics data for all outbound streams being sent using this `RTCRtpSender`.
+- {{domxref("RTCRtpSender.setParameters()")}}
+  - : Applies changes to parameters which configure how the `track` is encoded and transmitted to the remote peer.
+- {{domxref("RTCRtpSender.setStreams()")}}
+  - : Sets the {{domxref("MediaStream")}}(s) associated with the {{domxref("RTCRtpSender.track", "track")}} being transmitted by this sender.
+- {{domxref("RTCRtpSender.replaceTrack()")}}
+  - : Attempts to replace the track currently being sent by the `RTCRtpSender` with another track, without performing renegotiation. This method can be used, for example, to toggle between the front- and rear-facing cameras on a device.
 
-<h2 id="Static_methods">Static methods</h2>
+## Static methods
 
-<dl>
- <dt>{{domxref("RTCRtpSender.getCapabilities()")}}</dt>
- <dd>Returns an {{domxref("RTCRtpCapabilities")}} object describing the system's capabilities for sending a specified kind of media data.</dd>
-</dl>
+- {{domxref("RTCRtpSender.getCapabilities()")}}
+  - : Returns an {{domxref("RTCRtpCapabilities")}} object describing the system's capabilities for sending a specified kind of media data.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>WebRTC API</li>
- <li>{{domxref("RTCPeerConnection.addTrack()")}}</li>
- <li>{{domxref("RTCPeerConnection.getSenders()")}}</li>
- <li>{{domxref("RTCRtpReceiver")}}</li>
-</ul>
+- WebRTC API
+- {{domxref("RTCPeerConnection.addTrack()")}}
+- {{domxref("RTCPeerConnection.getSenders()")}}
+- {{domxref("RTCRtpReceiver")}}

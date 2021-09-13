@@ -10,68 +10,63 @@ tags:
   - WritableStream
 browser-compat: api.WritableStream
 ---
-<p>{{SeeCompatTable}}{{APIRef("Streams")}}</p>
+{{SeeCompatTable}}{{APIRef("Streams")}}
 
-<p>The <strong><code>WritableStream</code></strong> interface of the <a href="/en-US/docs/Web/API/Streams_API">Streams API</a> provides a standard abstraction for writing streaming data to a destination, known as a sink. This object comes with built-in backpressure and queuing.</p>
+The **`WritableStream`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) provides a standard abstraction for writing streaming data to a destination, known as a sink. This object comes with built-in backpressure and queuing.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("WritableStream.WritableStream", "WritableStream()")}}</dt>
- <dd>Creates a new <code>WritableStream</code> object.</dd>
-</dl>
+- {{domxref("WritableStream.WritableStream", "WritableStream()")}}
+  - : Creates a new `WritableStream` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("WritableStream.locked")}} {{readonlyinline}}</dt>
- <dd>A boolean indicating whether the <code>WritableStream</code> is locked to a writer. </dd>
-</dl>
+- {{domxref("WritableStream.locked")}} {{readonlyinline}}
+  - : A boolean indicating whether the `WritableStream` is locked to a writer.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("WritableStream.abort()")}}</dt>
- <dd>Aborts the stream, signaling that the producer can no longer successfully write to the stream and it is to be immediately moved to an error state, with any queued writes discarded.</dd>
- <dt>{{domxref("WritableStream.close()")}}</dt>
- <dd>Closes the stream.</dd>
- <dt>{{domxref("WritableStream.getWriter()")}}</dt>
- <dd>Returns a new instance of {{domxref("WritableStreamDefaultWriter")}} and locks the stream to that instance. While the stream is locked, no other writer can be acquired until this one is released. </dd>
-</dl>
+- {{domxref("WritableStream.abort()")}}
+  - : Aborts the stream, signaling that the producer can no longer successfully write to the stream and it is to be immediately moved to an error state, with any queued writes discarded.
+- {{domxref("WritableStream.close()")}}
+  - : Closes the stream.
+- {{domxref("WritableStream.getWriter()")}}
+  - : Returns a new instance of {{domxref("WritableStreamDefaultWriter")}} and locks the stream to that instance. While the stream is locked, no other writer can be acquired until this one is released.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example illustrates several features of this interface.  It shows the creation of the <code>WritableStream</code> with a custom sink and an API-supplied queueing strategy. It then calls a function called <code>sendMessage()</code>, passing the newly created stream and a string. Inside this function it calls the stream's <code>getWriter()</code> method, which returns an instance of {{domxref("WritableStreamDefaultWriter")}}. A <code>forEach()</code> call is used to write each chunk of the string to the stream. Finally, <code>write()</code> and <code>close()</code> return promises that are processed to deal with success or failure of chunks and streams.</p>
+The following example illustrates several features of this interface.  It shows the creation of the `WritableStream` with a custom sink and an API-supplied queueing strategy. It then calls a function called `sendMessage()`, passing the newly created stream and a string. Inside this function it calls the stream's `getWriter()` method, which returns an instance of {{domxref("WritableStreamDefaultWriter")}}. A `forEach()` call is used to write each chunk of the string to the stream. Finally, `write()` and `close()` return promises that are processed to deal with success or failure of chunks and streams.
 
-<pre class="brush: js">const list = document.querySelector('ul');
+```js
+const list = document.querySelector('ul');
 
 function sendMessage(message, writableStream) {
   // defaultWriter is of type WritableStreamDefaultWriter
   const defaultWriter = writableStream.getWriter();
   const encoder = new TextEncoder();
   const encoded = encoder.encode(message, { stream: true });
-  encoded.forEach((chunk) =&gt; {
+  encoded.forEach((chunk) => {
     defaultWriter.ready
-      .then(() =&gt; {
+      .then(() => {
         return defaultWriter.write(chunk);
       })
-      .then(() =&gt; {
+      .then(() => {
         console.log("Chunk written to sink.");
       })
-      .catch((err) =&gt; {
+      .catch((err) => {
         console.log("Chunk error:", err);
       });
   });
   // Call ready again to ensure that all chunks are written
   //   before closing the writer.
   defaultWriter.ready
-    .then(() =&gt; {
+    .then(() => {
       defaultWriter.close();
     })
-    .then(() =&gt; {
+    .then(() => {
       console.log("All chunks written");
     })
-    .catch((err) =&gt; {
+    .catch((err) => {
       console.log("Stream error:", err);
     });
 }
@@ -82,7 +77,7 @@ let result = "";
 const writableStream = new WritableStream({
   // Implement the sink
   write(chunk) {
-    return new Promise((resolve, reject) =&gt; {
+    return new Promise((resolve, reject) => {
       var buffer = new ArrayBuffer(2);
       var view = new Uint16Array(buffer);
       view[0] = chunk;
@@ -104,30 +99,27 @@ const writableStream = new WritableStream({
   }
 }, queuingStrategy);
 
-sendMessage("Hello, world.", writableStream);</pre>
+sendMessage("Hello, world.", writableStream);
+```
 
-<p>You can find the full code in our <a href="https://mdn.github.io/dom-examples/streams/simple-writer/">Simple writer example</a>.</p>
+You can find the full code in our [Simple writer example](https://mdn.github.io/dom-examples/streams/simple-writer/).
 
-<h3 id="Backpressure">Backpressure</h3>
+### Backpressure
 
-<p>Because of how backpressure is supported in the API, its implementation in code may be less than obvious. To see how backpressure is implemented look for three things.</p>
+Because of how backpressure is supported in the API, its implementation in code may be less than obvious. To see how backpressure is implemented look for three things.
 
-<ul>
- <li>The <code>highWaterMark</code> property, which is set when creating the counting strategy (line 35), sets the maximum amount of data that the <code>WritableStream</code> instance will handle in a single <code>write()</code> operation. In this example, it's the maximum amount of data that can be sent to <code>defaultWriter.write()</code> (line 11).</li>
- <li>The <code>defaultWriter.ready</code> property returns a promise that resolves when the sink (the first property of the <code>WritableStream</code> constructor) is done writing data. The data source can either write more data (line 9) or call <code>close()</code> (line 24). Calling close() too early can prevent data from being written. This is why the example calls <code>defaultWriter.ready</code> twice (lines 9 and 22). </li>
- <li>The {{jsxref("Promise")}} returned by the sink's <code>write()</code> method (line 40) tells the <code>WritableStream</code> and its writer when to resolve <code>defaultWriter.ready</code>.</li>
-</ul>
+- The `highWaterMark` property, which is set when creating the counting strategy (line 35), sets the maximum amount of data that the `WritableStream` instance will handle in a single `write()` operation. In this example, it's the maximum amount of data that can be sent to `defaultWriter.write()` (line 11).
+- The `defaultWriter.ready` property returns a promise that resolves when the sink (the first property of the `WritableStream` constructor) is done writing data. The data source can either write more data (line 9) or call `close()` (line 24). Calling close() too early can prevent data from being written. This is why the example calls `defaultWriter.ready` twice (lines 9 and 22).
+- The {{jsxref("Promise")}} returned by the sink's `write()` method (line 40) tells the `WritableStream` and its writer when to resolve `defaultWriter.ready`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://whatwg-stream-visualizer.glitch.me/">WHATWG Stream Visualiser</a>, for a basic visualisation of readable, writable, and transform streams.</li>
-</ul>
+- [WHATWG Stream Visualiser](https://whatwg-stream-visualizer.glitch.me/), for a basic visualisation of readable, writable, and transform streams.

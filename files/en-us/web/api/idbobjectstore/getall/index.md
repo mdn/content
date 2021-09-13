@@ -2,119 +2,89 @@
 title: IDBObjectStore.getAll()
 slug: Web/API/IDBObjectStore/getAll
 tags:
-- API
-- Database
-- IDBObjectStore
-- IndexedDB
-- Method
-- Reference
-- Storage
-- getAll
+  - API
+  - Database
+  - IDBObjectStore
+  - IndexedDB
+  - Method
+  - Reference
+  - Storage
+  - getAll
 browser-compat: api.IDBObjectStore.getAll
 ---
-<p>{{ APIRef("IndexedDB") }}</p>
+{{ APIRef("IndexedDB") }}
 
-<div>
-  <p>The <strong><code>getAll()</code></strong> method of the
-    {{domxref("IDBObjectStore")}} interface returns an {{domxref("IDBRequest")}} object
-    containing all objects in the object store matching the specified parameter or all
-    objects in the store if no parameters are given.</p>
-</div>
+The **`getAll()`** method of the
+{{domxref("IDBObjectStore")}} interface returns an {{domxref("IDBRequest")}} object
+containing all objects in the object store matching the specified parameter or all
+objects in the store if no parameters are given.
 
-<p>If a value is successfully found, then a structured clone of it is created and set as
-  the result of the request object.</p>
+If a value is successfully found, then a structured clone of it is created and set as
+the result of the request object.
 
-<p>This method produces the same result for:</p>
+This method produces the same result for:
 
-<ul>
-  <li>a record that doesn't exist in the database</li>
-  <li>a record that has an undefined value</li>
-</ul>
+- a record that doesn't exist in the database
+- a record that has an undefined value
 
-<p>To tell these situations apart, you either call</p>
+To tell these situations apart, you either call
 
-<ol>
-  <li>the {{domxref("IDBObjectStore.openCursor","openCursor()")}} method with the same
+1.  the {{domxref("IDBObjectStore.openCursor","openCursor()")}} method with the same
     key. That method provides a cursor if the record exists, and no cursor if it does not.
-  </li>
-  <li>the {{domxref("IDBObjectStore.count","count()")}} method with the same key, which
-    will return 1 if the row exists and 0 if it doesn't.</li>
-</ol>
+2.  the {{domxref("IDBObjectStore.count","count()")}} method with the same key, which
+    will return 1 if the row exists and 0 if it doesn't.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var request = <em>objectStore</em>.getAll<em>(</em>);
-var request = <em>objectStore</em>.getAll(<em>query</em>);
-var request = <em>objectStore</em>.getAll(<em>query</em>, <em>count</em>);</pre>
+```js
+var request = objectStore.getAll();
+var request = objectStore.getAll(query);
+var request = objectStore.getAll(query, count);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><em>query</em> {{optional_inline}}</dt>
-  <dd>A key or {{domxref("IDBKeyRange")}} to be queried. If nothing is passed, this will
-    default to a key range that selects all the records in this object store.</dd>
-  <dt><em>count</em> {{optional_inline}}</dt>
-  <dd>Specifies the number of values to return if more than one is found. If it is lower
-    than <code>0</code> or greater than <code>2^32 - 1</code> a
-    {{jsxref("TypeError")}} exception will be thrown.</dd>
-</dl>
+- *query* {{optional_inline}}
+  - : A key or {{domxref("IDBKeyRange")}} to be queried. If nothing is passed, this will
+    default to a key range that selects all the records in this object store.
+- *count* {{optional_inline}}
+  - : Specifies the number of values to return if more than one is found. If it is lower
+    than `0` or greater than `2^32 - 1` a
+    {{jsxref("TypeError")}} exception will be thrown.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An {{domxref("IDBRequest")}} object on which subsequent events related to this
-  operation are fired.</p>
+An {{domxref("IDBRequest")}} object on which subsequent events related to this
+operation are fired.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>This method may raise a {{domxref("DOMException")}} of one of the following types:</p>
+This method may raise a {{domxref("DOMException")}} of one of the following types:
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Exception</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>TransactionInactiveError</code></td>
-      <td>This {{domxref("IDBObjectStore")}}'s transaction is inactive.</td>
-    </tr>
-    <tr>
-      <td><code>DataError</code></td>
-      <td>The key or key range provided contains an invalid key or is null.</td>
-    </tr>
-    <tr>
-      <td><code>InvalidStateError</code></td>
-      <td>The {{domxref("IDBObjectStore")}} has been deleted or removed.<br>
-         </td>
-    </tr>
-  </tbody>
-</table>
+| Exception                  | Description                                                                 |
+| -------------------------- | --------------------------------------------------------------------------- |
+| `TransactionInactiveError` | This {{domxref("IDBObjectStore")}}'s transaction is inactive.    |
+| `DataError`                | The key or key range provided contains an invalid key or is null.           |
+| `InvalidStateError`        | The {{domxref("IDBObjectStore")}} has been deleted or removed.   |
 
-<p>A {{jsxref("TypeError")}} exception is thrown if the <code>count</code> parameter is
-  not between <code>0</code> and <code>2^32 - 1</code> included.</p>
+A {{jsxref("TypeError")}} exception is thrown if the `count` parameter is
+not between `0` and `2^32 - 1` included.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
-  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
-  <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
-  <li>Using transactions: {{domxref("IDBTransaction")}}</li>
-  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
-  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
-  <li>Using cursors: {{domxref("IDBCursor")}}</li>
-  <li>Reference example: <a class="external"
-      href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
-      Notifications</a> (<a class="external"
-      href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do
+  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

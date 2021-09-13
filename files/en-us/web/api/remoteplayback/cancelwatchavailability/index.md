@@ -9,55 +9,55 @@ tags:
   - RemotePlayback
 browser-compat: api.RemotePlayback.cancelWatchAvailability
 ---
-<div>{{DefaultAPISidebar("Remote Playback API")}}</div>
+{{DefaultAPISidebar("Remote Playback API")}}
 
-<p>The <strong><code>cancelWatchAvailability()</code></strong> method of the {{domxref("RemotePlayback")}} interface cancels the request to watch for one or all available devices.</p>
+The **`cancelWatchAvailability()`** method of the {{domxref("RemotePlayback")}} interface cancels the request to watch for one or all available devices.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">RemotePlayback.cancelWatchAvailability();
-RemotePlayback.cancelWatchAvailability(id);</pre>
+```js
+RemotePlayback.cancelWatchAvailability();
+RemotePlayback.cancelWatchAvailability(id);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>id</code>{{Optional_Inline}}</dt>
-  <dd><p>The <code>callbackId</code> of a particular remote playback device.</p>
-    <p>If a <code>callbackId</code> of a specific device is passed in, then that device will be removed from the list of watched devices. Otherwise, the whole list will be cleared.</p></dd>
-</dl>
+- `id`{{Optional_Inline}}
 
-<h3 id="Returns">Return value</h3>
+  - : The `callbackId` of a particular remote playback device.
 
-<p>A {{jsxref("Promise")}} that resolves with <code>undefined</code>.</p>
+    If a `callbackId` of a specific device is passed in, then that device will be removed from the list of watched devices. Otherwise, the whole list will be cleared.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Return value
 
-<dl>
-  <dt>{{domxref("DOMException")}} <code>InvalidStateError</code></dt>
-  <dd>Thrown if {{domxref("HTMLMediaElement.disableRemotePlayback","disableRemotePlayback")}} is <code>true</code> for the media element.</dd>
-  <dt>{{domxref("DOMException")}} <code>NotFoundError</code></dt>
-  <dd>Thrown if an <code>id</code> is passed but it does not match any available <code>callbackId</code>.</dd>
-</dl>
+A {{jsxref("Promise")}} that resolves with `undefined`.
 
-<h2 id="Examples">Examples</h2>
+### Exceptions
 
-<p>Once a remote playback device has been identified and is connected, the monitoring of available devices can be stopped using <code>cancelWatchAvailability().</code></p>
+- {{domxref("DOMException")}} `InvalidStateError`
+  - : Thrown if {{domxref("HTMLMediaElement.disableRemotePlayback","disableRemotePlayback")}} is `true` for the media element.
+- {{domxref("DOMException")}} `NotFoundError`
+  - : Thrown if an `id` is passed but it does not match any available `callbackId`.
 
-<pre class="brush: js">function switchToRemoteUI() {
+## Examples
+
+Once a remote playback device has been identified and is connected, the monitoring of available devices can be stopped using `cancelWatchAvailability().`
+
+```js
+function switchToRemoteUI() {
   // Indicate that the state is 'connecting' or 'connected' to the user.
   // For example, hide the video element as only controls are needed.
   videoElem.style.display = "none";
 
   // Stop monitoring the availability of remote playback devices.
   videoElem.remote.cancelWatchAvailability();
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
-
+{{Compat}}

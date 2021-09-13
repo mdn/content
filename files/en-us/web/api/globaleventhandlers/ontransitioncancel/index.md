@@ -12,75 +12,73 @@ tags:
   - ontransitioncancel
 browser-compat: api.GlobalEventHandlers.ontransitioncancel
 ---
-<div>{{APIRef("CSS3 Transitions")}}</div>
+{{APIRef("CSS3 Transitions")}}
 
-<p>The <strong><code>ontransitioncancel</code></strong> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> that
-  processes {{event("transitioncancel")}} events.</p>
+The **`ontransitioncancel`** property of the
+{{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
+processes {{event("transitioncancel")}} events.
 
-<p>The <code>transitioncancel</code> event is sent when a <a
-    href="/en-US/docs/Web/CSS/CSS_Transitions">CSS transition</a> is cancelled. The
-  transition is cancelled when:</p>
+The `transitioncancel` event is sent when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions) is cancelled. The
+transition is cancelled when:
 
-<ul>
-  <li>The value of the {{cssxref("transition-property")}} property that applies to the
-    target is changed</li>
-  <li>The {{cssxref("display")}} property is set to <code>"none"</code>.</li>
-  <li>The transition is stopped before it has run to completion, e.g. by moving the mouse
-    off a hover-transitioning element.</li>
-</ul>
+- The value of the {{cssxref("transition-property")}} property that applies to the
+  target is changed
+- The {{cssxref("display")}} property is set to `"none"`.
+- The transition is stopped before it has run to completion, e.g. by moving the mouse
+  off a hover-transitioning element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>transitionCancelHandler</var> = <var>target</var>.ontransitioncancel;
+```js
+var transitionCancelHandler = target.ontransitioncancel;
 
-<var>target</var>.ontransitioncancel = <var>{{jsxref("Function")}}</var>
-</pre>
+target.ontransitioncancel = {{jsxref("Function")}}
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{jsxref("Function")}} to be called when a {{event("transitioncancel")}} event occurs
-  indicating that a CSS transition has been cancelled on the
-  <code><var>target</var></code>, where the target object is an HTML element
-  ({{domxref("HTMLElement")}}), document ({{domxref("Document")}}), or window
-  ({{domxref("Window")}}). The function receives as input a single parameter: a
-  {{domxref("TransitionEvent")}} object describing the event which occurred; the event's
-  {{domxref("TransitionEvent.elapsedTime")}} property's value should be the same as the
-  value of {{cssxref("transition-duration")}}.</p>
+A {{jsxref("Function")}} to be called when a {{event("transitioncancel")}} event occurs
+indicating that a CSS transition has been cancelled on the
+`target`, where the target object is an HTML element
+({{domxref("HTMLElement")}}), document ({{domxref("Document")}}), or window
+({{domxref("Window")}}). The function receives as input a single parameter: a
+{{domxref("TransitionEvent")}} object describing the event which occurred; the event's
+{{domxref("TransitionEvent.elapsedTime")}} property's value should be the same as the
+value of {{cssxref("transition-duration")}}.
 
-<div class="note">
-  <p><strong>Note:</strong> <code>elapsedTime</code> does not include time prior to the
-    transition effect beginning; that means that the value of
-    {{cssxref("transition-delay")}} doesn't affect the value of <code>elapsedTime</code>,
-    which is zero until the delay period ends and the animation begins.</p>
-</div>
+> **Note:** `elapsedTime` does not include time prior to the
+> transition effect beginning; that means that the value of
+> {{cssxref("transition-delay")}} doesn't affect the value of `elapsedTime`,
+> which is zero until the delay period ends and the animation begins.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this example, we use the {{event("transitionrun")}} and {{event("transitionend")}}
-  events to detect when the transition begins and ends, to cause a text update to occur
-  during the transition. This could also be used to trigger animations or other effects,
-  to allow chaining of reactions.</p>
+In this example, we use the {{event("transitionrun")}} and {{event("transitionend")}}
+events to detect when the transition begins and ends, to cause a text update to occur
+during the transition. This could also be used to trigger animations or other effects,
+to allow chaining of reactions.
 
-<p>In addition, we also use a {{event("click")}} event to make the box disappear
-  (<code>display: none;</code>), showing how it triggers the {{event("transitioncancel")}}
-  event to fire.</p>
+In addition, we also use a {{event("click")}} event to make the box disappear
+(`display: none;`), showing how it triggers the {{event("transitioncancel")}}
+event to fire.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<p>This creates a {{HTMLElement("div")}} which we'll style with CSS below to make into a
-  box that resizes and changes color and such.</p>
+This creates a {{HTMLElement("div")}} which we'll style with CSS below to make into a
+box that resizes and changes color and such.
 
-<pre class="brush: html;">&lt;div class="box"&gt;&lt;/div&gt;
-</pre>
+```html
+<div class="box"></div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<p>The CSS below styles the box and applies a transition effect which makes the box's
-  color and size change, and causes the box to rotate, while the mouse cursor hovers over
-  it.</p>
+The CSS below styles the box and applies a transition effect which makes the box's
+color and size change, and causes the box to rotate, while the mouse cursor hovers over
+it.
 
-<pre class="brush: css">.box {
+```css
+.box {
   margin-left: 70px;
   margin-top: 30px;
   border-style: solid;
@@ -104,19 +102,20 @@ browser-compat: api.GlobalEventHandlers.ontransitioncancel
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-</pre>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<p>Next, we need to establish our event handlers to change the text content of the box
-  when the transition begins and ends.</p>
+Next, we need to establish our event handlers to change the text content of the box
+when the transition begins and ends.
 
-<pre class="brush: js">let box = document.querySelector(&quot;.box&quot;);
+```js
+let box = document.querySelector(".box");
 box.ontransitionrun = function(event) {
-  box.textContent = &quot;Zooming...&quot;;
+  box.textContent = "Zooming...";
 }
 box.ontransitionend = function(event) {
-  box.textContent = &quot;Done!&quot;;
+  box.textContent = "Done!";
 }
 
 box.onclick = function() {
@@ -129,32 +128,30 @@ box.onclick = function() {
 
 box.ontransitioncancel = function(event) {
   console.log('transitioncancel fired after ' + event.elapsedTime + ' seconds.');
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>The resulting content looks like this:</p>
+The resulting content looks like this:
 
-<p>{{EmbedLiveSample('Example', 600, 280)}}</p>
+{{EmbedLiveSample('Example', 600, 280)}}
 
-<p>Notice what happens when you hover your mouse cursor over the box, then move it away.
-</p>
+Notice what happens when you hover your mouse cursor over the box, then move it away.
 
-<p>Also note the log that appears in the JavaScript console when you click the box, or
-  move the cursor away before the transition has run to completion.</p>
+Also note the log that appears in the JavaScript console when you click the box, or
+move the cursor away before the transition has run to completion.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{event("transitioncancel")}} event this event handler is triggered by</li>
-  <li>{{domxref("TransitionEvent")}}</li>
-  <li>The {{event("transitionrun")}} event, which occurs when the transition begins</li>
-</ul>
+- The {{event("transitioncancel")}} event this event handler is triggered by
+- {{domxref("TransitionEvent")}}
+- The {{event("transitionrun")}} event, which occurs when the transition begins

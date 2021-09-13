@@ -2,57 +2,56 @@
 title: CSSNumericValue.toSum()
 slug: Web/API/CSSNumericValue/toSum
 tags:
-- API
-- CSS Typed Object Model API
-- CSSNumericValue
-- Experimental
-- Houdini
-- Method
-- Reference
-- toSum()
+  - API
+  - CSS Typed Object Model API
+  - CSSNumericValue
+  - Experimental
+  - Houdini
+  - Method
+  - Reference
+  - toSum()
 browser-compat: api.CSSNumericValue.toSum
 ---
-<div>{{draft}}{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}</div>
+{{draft}}{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
-<p>The <strong><code>toSum()</code></strong> method of the
-  {{domxref("CSSNumericValue")}} interface converts the object's value to a
-  {{domxref("CSSMathSum")}} object to values of the specified unit.</p>
+The **`toSum()`** method of the
+{{domxref("CSSNumericValue")}} interface converts the object's value to a
+{{domxref("CSSMathSum")}} object to values of the specified unit.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var cssMathSum = CSSNumericValue.toSum(units);</pre>
+```js
+var cssMathSum = CSSNumericValue.toSum(units);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>units</dt>
-  <dd>The units to convert to.</dd>
-</dl>
+- units
+  - : The units to convert to.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref('CSSNumericValue')}}.</p>
+A {{domxref('CSSNumericValue')}}.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>SyntaxError</dt>
-  <dd>undefined</dd>
-  <dt>TypeError</dt>
-  <dd>Indicates that an invalid type was passed to the method.</dd>
-</dl>
+- SyntaxError
+  - : undefined
+- TypeError
+  - : Indicates that an invalid type was passed to the method.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">let v = CSS.px("23").add(CSS.percent("4")).add(CSS.cm("3")).add(CSS.in("9"));
-v.toString() // =&gt; "calc(23px + 4% + 3cm + 9in)"
-v.toSum("px", "percent").toString() // =&gt; "calc(1000.39px + 4%)"</pre>
+```js
+let v = CSS.px("23").add(CSS.percent("4")).add(CSS.cm("3")).add(CSS.in("9"));
+v.toString() // => "calc(23px + 4% + 3cm + 9in)"
+v.toSum("px", "percent").toString() // => "calc(1000.39px + 4%)"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

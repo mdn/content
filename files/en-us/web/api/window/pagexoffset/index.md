@@ -12,20 +12,18 @@ tags:
   - scrolling
 browser-compat: api.Window.pageXOffset
 ---
-<div>{{ APIRef("CSSOM View") }}</div>
+{{ APIRef("CSSOM View") }}
 
-<p>The read-only {{domxref("Window")}} property <strong><code>pageXOffset</code></strong> is an alias for <a href="/en-US/docs/Web/API/Window/scrollX"><code>scrollX</code></a>.</p>
+The read-only {{domxref("Window")}} property **`pageXOffset`** is an alias for [`scrollX`](/en-US/docs/Web/API/Window/scrollX).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("Window.pageYOffset", "pageYOffset")}}</li>
-</ul>
+- {{domxref("Window.pageYOffset", "pageYOffset")}}

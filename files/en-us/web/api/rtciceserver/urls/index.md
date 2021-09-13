@@ -2,68 +2,72 @@
 title: RTCIceServers.urls
 slug: Web/API/RTCIceServer/urls
 tags:
-- Experimental
-- Property
-- RTCIceServer
-- Reference
-- WebRTC
-- urls
+  - Experimental
+  - Property
+  - RTCIceServer
+  - Reference
+  - WebRTC
+  - urls
 browser-compat: api.RTCIceServer.urls
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>{{draft("I'm experimenting with structure for pages documenting members of
-  dictionaries. Please contact ~~sheppy with any feedback.")}}</p>
+{{draft("I'm experimenting with structure for pages documenting members of
+  dictionaries. Please contact ~~sheppy with any feedback.")}}
 
-<p>{{SeeCompatTable}}</p>
+{{SeeCompatTable}}
 
-<p>The {{domxref("RTCIceServer")}} dictionary's <strong><code>urls</code></strong>
-  property specifies the URL or URLs of the servers to be used for ICE negotiations. These
-  are typically STUN and/or TURN servers.</p>
+The {{domxref("RTCIceServer")}} dictionary's **`urls`**
+property specifies the URL or URLs of the servers to be used for ICE negotiations. These
+are typically STUN and/or TURN servers.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var iceServer = {
-                  urls = <em>iceServerUrl</em> | [ <em>url1</em>, ..., <em>urlN</em> ],
+```js
+var iceServer = {
+                  urls = iceServerUrl | [ url1, ..., urlN ],
                   username: "webrtc", // optional
                   credential: "turnpassword" // optional
                 };
 
-iceServers.push(iceServer);</pre>
+iceServers.push(iceServer);
+```
 
-<p>The value of this property may be specified as a single URL or as an array of multiple
-  URLs.</p>
+The value of this property may be specified as a single URL or as an array of multiple
+URLs.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Let's look a few examples of varying complexity.</p>
+Let's look a few examples of varying complexity.
 
-<h3 id="A_single_ICE_server">A single ICE server</h3>
+### A single ICE server
 
-<p>This example creates a new {{domxref("RTCPeerConnection")}} which will use a
-  {{Glossary("STUN")}} server at <code>stunserver.example.org</code> to negotiate
-  connections.</p>
+This example creates a new {{domxref("RTCPeerConnection")}} which will use a
+{{Glossary("STUN")}} server at `stunserver.example.org` to negotiate
+connections.
 
-<pre class="brush: js">myPeerConnection = new RTCPeerConnection({
+```js
+myPeerConnection = new RTCPeerConnection({
   iceServers: [
     {
       urls: "stun:stunserver.example.org"
     }
   ]
-});</pre>
+});
+```
 
-<p>Notice that only the <code>urls</code> property is provided; the STUN server doesn't
-  require authentication, so this is all that's needed.</p>
+Notice that only the `urls` property is provided; the STUN server doesn't
+require authentication, so this is all that's needed.
 
-<h3 id="A_single_ICE_server_with_authentication">A single ICE server with authentication
-</h3>
+### A single ICE server with authentication
 
-<p>The second example creates a new {{domxref("RTCPeerConnection")}} which will use a
-  {{Glossary("TURN")}} server at <code>turnserver.example.org</code> to negotiate
-  connections. Logging into the TURN server will use the username "webrtc" and the
-  creative password "turnpassword".</p>
+The second example creates a new {{domxref("RTCPeerConnection")}} which will use a
+{{Glossary("TURN")}} server at `turnserver.example.org` to negotiate
+connections. Logging into the TURN server will use the username "webrtc" and the
+creative password "turnpassword".
 
-<pre class="brush: js">myPeerConnection = new RTCPeerConnection({
+```js
+myPeerConnection = new RTCPeerConnection({
   iceServers: [
     {
       urls: "turn:turnserver.example.org",
@@ -71,22 +75,21 @@ iceServers.push(iceServer);</pre>
       credential: "turnpassword"
     }
   ]
-});</pre>
+});
+```
 
-<h3 id="A_single_ICE_server_with_multiple_URLs">A single ICE server with multiple URLs
-</h3>
+### A single ICE server with multiple URLs
 
-<p>The next example creates a new {{domxref("RTCPeerConnection")}} which will use a single
-  {{Glossary("TURN")}} server which has multiple URLs. This is useful if the server is,
-  for example, available both on "turn" and "turns" schemes, or if there's a fallback
-  address available for the server.</p>
+The next example creates a new {{domxref("RTCPeerConnection")}} which will use a single
+{{Glossary("TURN")}} server which has multiple URLs. This is useful if the server is,
+for example, available both on "turn" and "turns" schemes, or if there's a fallback
+address available for the server.
 
-<div class="note">
-  <p><strong>Note:</strong> Keep in mind that ICE will try all the URLs you list here, so the more you include,
-    the longer connections will take to establish.</p>
-</div>
+> **Note:** Keep in mind that ICE will try all the URLs you list here, so the more you include,
+> the longer connections will take to establish.
 
-<pre class="brush: js">myPeerConnection = new RTCPeerConnection({
+```js
+myPeerConnection = new RTCPeerConnection({
   iceServers: [
     {
       urls: ["turns:turnserver.example.org", "turn:turnserver.example.org"],
@@ -94,15 +97,17 @@ iceServers.push(iceServer);</pre>
       credential: "turnpassword"
     }
   ]
-});</pre>
+});
+```
 
-<h3 id="Multiple_ICE_servers">Multiple ICE servers</h3>
+### Multiple ICE servers
 
-<p>Finally, this example creates a new {{domxref("RTCPeerConnection")}} which will use one
-  of two servers for ICE negotiation. Each server can have one or more URLs, as
-  demonstrated above.</p>
+Finally, this example creates a new {{domxref("RTCPeerConnection")}} which will use one
+of two servers for ICE negotiation. Each server can have one or more URLs, as
+demonstrated above.
 
-<pre class="brush: js">myPeerConnection = new RTCPeerConnection({
+```js
+myPeerConnection = new RTCPeerConnection({
   iceServers: [
     {
       urls: ["turns:turnserver.example.org", "turn:turnserver.example.org"],
@@ -113,22 +118,21 @@ iceServers.push(iceServer);</pre>
       urls: "stun: stunserver.example.org"
     }
   ]
-});</pre>
+});
+```
 
-<p>Two ICE servers are provided. One is a TURN server which can be accessed both over TURN
-  and TURNS. The other is a STUN server. Any number of servers could be listed of any
-  combination of types.</p>
+Two ICE servers are provided. One is a TURN server which can be accessed both over TURN
+and TURNS. The other is a STUN server. Any number of servers could be listed of any
+combination of types.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("RTCIceServer")}}</li>
-</ul>
+- {{domxref("RTCIceServer")}}

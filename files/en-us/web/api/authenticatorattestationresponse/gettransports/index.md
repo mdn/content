@@ -2,66 +2,60 @@
 title: AuthenticatorAttestationResponse.getTransports()
 slug: Web/API/AuthenticatorAttestationResponse/getTransports
 tags:
-- API
-- AuthenticatorAttestationResponse
-- Method
-- Reference
-- Web Authentication API
-- WebAuthn
+  - API
+  - AuthenticatorAttestationResponse
+  - Method
+  - Reference
+  - Web Authentication API
+  - WebAuthn
 browser-compat: api.AuthenticatorAttestationResponse.getTransports
 ---
-<p>{{APIRef("Web Authentication API")}}{{securecontext_header}}</p>
+{{APIRef("Web Authentication API")}}{{securecontext_header}}
 
-<p><strong><code>getTransports()</code></strong> is a method of the
-  {{domxref("AuthenticatorAttestationResponse")}} interface that returns an
-  {{jsxref("Array")}} containing strings describing the different transports which may be
-  used by the authenticator.</p>
+**`getTransports()`** is a method of the
+{{domxref("AuthenticatorAttestationResponse")}} interface that returns an
+{{jsxref("Array")}} containing strings describing the different transports which may be
+used by the authenticator.
 
-<p>Such transports may be USB, NFC, BLE or internal (applicable when the authenticator is
-  not removable from the device).</p>
+Such transports may be USB, NFC, BLE or internal (applicable when the authenticator is
+not removable from the device).
 
-<div class="notecard note">
-  <p><strong>Note:</strong> An <code>AuthenticatorAttestationResponse</code> instance is
-    available on {{domxref("PublicKeyCredential.response")}} after calling
-    {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}}.</p>
-</div>
+> **Note:** An `AuthenticatorAttestationResponse` instance is
+> available on {{domxref("PublicKeyCredential.response")}} after calling
+> {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}}.
 
-<div class="note">
-  <p><strong>Note:</strong> This method may only be used in top-level contexts and will
-    not be available in an {{HTMLElement("iframe")}} for example.</p>
-</div>
+> **Note:** This method may only be used in top-level contexts and will
+> not be available in an {{HTMLElement("iframe")}} for example.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">arrTransports = authenticatorAttestationResponse.getTransports()</pre>
+```js
+arrTransports = authenticatorAttestationResponse.getTransports()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An {{jsxref("Array")}} containing the different transports supported by the
-  authenticator or nothing if this information is not available.of the processing of the
-  different extensions by the client. The elements of this array are supposed to be in
-  lexicographical order. Their values may be :</p>
+An {{jsxref("Array")}} containing the different transports supported by the
+authenticator or nothing if this information is not available.of the processing of the
+different extensions by the client. The elements of this array are supposed to be in
+lexicographical order. Their values may be :
 
-<ul>
-  <li><code>"usb"</code>: the authenticator can be contacted via a removable USB link</li>
-  <li><code>"nfc"</code>: the authenticator may be used over <a
-      href="https://en.wikipedia.org/wiki/Near-field_communication">NFC (Near Field
-      Communication)</a></li>
-  <li><code>"ble"</code>: the authenticator may be used over <a
-      href="https://en.wikipedia.org/wiki/Bluetooth_Low_Energy">BLE (Bluetooth Low
-      Energy)</a></li>
-  <li><code>"internal"</code>: the authenticator is specifically bound to the client
-    device (cannot be removed).</li>
-</ul>
+- `"usb"`: the authenticator can be contacted via a removable USB link
+- `"nfc"`: the authenticator may be used over [NFC (Near Field
+  Communication)](https://en.wikipedia.org/wiki/Near-field_communication)
+- `"ble"`: the authenticator may be used over [BLE (Bluetooth Low
+  Energy)](https://en.wikipedia.org/wiki/Bluetooth_Low_Energy)
+- `"internal"`: the authenticator is specifically bound to the client
+  device (cannot be removed).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var publicKey = {
+```js
+var publicKey = {
   challenge: /* from the server */,
   rp: {
     name: "Example CORP",
@@ -86,12 +80,13 @@ navigator.credentials.create({ publicKey })
     console.table(transports); // may be something like ["internal", "nfc", "usb"]
   }).catch(function (err) {
      console.error(err);
-  });</pre>
+  });
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

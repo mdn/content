@@ -9,72 +9,68 @@ tags:
   - bufferedAmountLowThreshold
 browser-compat: api.RTCDataChannel.bufferedAmountLowThreshold
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The <code>RTCDataChannel</code> property
-    <code><strong>bufferedAmountLowThreshold</strong></code> is used to specify the number
-    of bytes of buffered outgoing data that is considered "low." The default value is
-    0. hen the number of buffered outgoing bytes, as indicated by the
-  {{domxref("RTCDataChannel.bufferedAmount", "bufferedAmount")}} property, falls to or
-  below this value, a {{DOMxRef("RTCDataChannel.bufferedamountlow_event", "bufferedamountlow")}} event is fired. This event may be
-  used, for example, to implement code which queues more messages to be sent whenever
-  there's room to buffer them. Listeners may be added with
-  {{domxref("RTCDataChannel.onbufferedamountlow", "onbufferedamountlow")}} or
-  {{domxref("EventTarget.addEventListener", "addEventListener()")}}.</p>
+The `RTCDataChannel` property
+**`bufferedAmountLowThreshold`** is used to specify the number
+of bytes of buffered outgoing data that is considered "low." The default value is
+0\. hen the number of buffered outgoing bytes, as indicated by the
+{{domxref("RTCDataChannel.bufferedAmount", "bufferedAmount")}} property, falls to or
+below this value, a {{DOMxRef("RTCDataChannel.bufferedamountlow_event", "bufferedamountlow")}} event is fired. This event may be
+used, for example, to implement code which queues more messages to be sent whenever
+there's room to buffer them. Listeners may be added with
+{{domxref("RTCDataChannel.onbufferedamountlow", "onbufferedamountlow")}} or
+{{domxref("EventTarget.addEventListener", "addEventListener()")}}.
 
-<p>The user agent may implement the process of actually sending data in any way it
-  chooses; this may be done periodically during the event loop or truly asynchronously. As
-  messages are actually sent, this value is reduced accordingly.</p>
+The user agent may implement the process of actually sending data in any way it
+chooses; this may be done periodically during the event loop or truly asynchronously. As
+messages are actually sent, this value is reduced accordingly.
 
-<div class="note">
-  <p><strong>Note:</strong> <code>bufferedamountlow </code>events are not fired after the data channel is closed.
-  </p>
-</div>
+> **Note:** `bufferedamountlow `events are not fired after the data channel is closed.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>threshold</em> = <em>aDataChannel</em>.bufferedAmountLowThreshold;
+```js
+var threshold = aDataChannel.bufferedAmountLowThreshold;
 
-<em>aDataChannel</em>.bufferedAmountLowThreshold = <em>threshold</em>;
-</pre>
+aDataChannel.bufferedAmountLowThreshold = threshold;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>The number of queued outgoing data bytes below which the buffer is considered to be
-  "low."</p>
+The number of queued outgoing data bytes below which the buffer is considered to be
+"low."
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this snippet of code, <code>bufferedAmountLowThreshold</code> is set to 64kB, and a
-  handler for the {{DOMxRef("RTCDataChannel.bufferedamountlow_event", "bufferedamountlow")}} event is established by setting the
-  {{domxref("RTCDataChannel.onbufferedamountlow")}} property to a function which should
-  send more data into the buffer by calling {{domxref("RTCDataChannel.send", "send()")}}.
-</p>
+In this snippet of code, `bufferedAmountLowThreshold` is set to 64kB, and a
+handler for the {{DOMxRef("RTCDataChannel.bufferedamountlow_event", "bufferedamountlow")}} event is established by setting the
+{{domxref("RTCDataChannel.onbufferedamountlow")}} property to a function which should
+send more data into the buffer by calling {{domxref("RTCDataChannel.send", "send()")}}.
 
-<pre class="brush: js">var dc = peerConnection.createDataChannel(&quot;File Transfer&quot;);
+```js
+var dc = peerConnection.createDataChannel("File Transfer");
 dc.bufferedAmountLowThreshold = 65535;
 
 dc.onbufferedamountlow = function() {
   /* use send() to queue more data to be sent */
 };
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API/Using_data_channels">Using WebRTC data
-      channels</a></li>
-  <li>{{domxref("RTCDataChannel")}}</li>
-  <li>{{domxref("RTCDataChannel.bufferedAmount")}}</li>
-  <li>{{DOMxRef("RTCDataChannel.bufferedamountlow_event", "bufferedamountlow")}} event</li>
-  <li>{{domxref("RTCDataChannel.onbufferedamountlow")}}</li>
-</ul>
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)
+- [Using WebRTC data
+  channels](/en-US/docs/Web/API/WebRTC_API/Using_data_channels)
+- {{domxref("RTCDataChannel")}}
+- {{domxref("RTCDataChannel.bufferedAmount")}}
+- {{DOMxRef("RTCDataChannel.bufferedamountlow_event", "bufferedamountlow")}} event
+- {{domxref("RTCDataChannel.onbufferedamountlow")}}

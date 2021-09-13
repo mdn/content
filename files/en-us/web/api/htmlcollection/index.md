@@ -10,43 +10,41 @@ tags:
   - Reference
 browser-compat: api.HTMLCollection
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>HTMLCollection</code></strong> interface represents a generic collection (array-like object similar to {{jsxref("Functions/arguments", "arguments")}}) of elements (in document order) and offers methods and properties for selecting from the list.</p>
+The **`HTMLCollection`** interface represents a generic collection (array-like object similar to {{jsxref("Functions/arguments", "arguments")}}) of elements (in document order) and offers methods and properties for selecting from the list.
 
-<div class="note"><p><strong>Note:</strong> This interface is called <code>HTMLCollection</code> for historical reasons (before the modern DOM, collections implementing this interface could only have HTML elements as their items).</p></div>
+> **Note:** This interface is called `HTMLCollection` for historical reasons (before the modern DOM, collections implementing this interface could only have HTML elements as their items).
 
-<p>An <code>HTMLCollection</code> in the HTML DOM is live; it is automatically updated when the underlying document is changed. For this reason it is a good idea to make a copy (eg. using {{jsxref("Array/from", "Array.from")}}) to iterate over if adding, moving, or removing nodes.</p>
+An `HTMLCollection` in the HTML DOM is live; it is automatically updated when the underlying document is changed. For this reason it is a good idea to make a copy (eg. using {{jsxref("Array/from", "Array.from")}}) to iterate over if adding, moving, or removing nodes.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("HTMLCollection.length")}} {{readonlyInline}}</dt>
- <dd>Returns the number of items in the collection.</dd>
-</dl>
+- {{domxref("HTMLCollection.length")}} {{readonlyInline}}
+  - : Returns the number of items in the collection.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("HTMLCollection.item()")}}</dt>
- <dd>
-   <p>Returns the specific node at the given zero-based <code>index</code> into the list. Returns <code>null</code> if the <code>index</code> is out of range.</p>
-   <p>An alternative to accessing <code>collection[<var>i</var>]</code> (which instead returns  <code>undefined</code> when <code><var>i</var></code> is out-of-bounds). This is mostly useful for non-JavaScript DOM implementations.</p>
- </dd>
- <dt>{{domxref("HTMLCollection.namedItem()")}}</dt>
- <dd>
-   <p>Returns the specific node whose ID or, as a fallback, name matches the string specified by <code>name</code>. Matching by name is only done as a last resort, only in HTML, and only if the referenced element supports the <code>name</code> attribute. Returns <code>null</code> if no node exists by the given name.</p>
-   <p>An alternative to accessing <code>collection[<var>name</var>]</code> (which instead returns <code>undefined</code> when <code><var>name</var></code> does not exist). This is mostly useful for non-JavaScript DOM implementations.</p>
- </dd>
-</dl>
+- {{domxref("HTMLCollection.item()")}}
 
-<h2 id="Usage_in_JavaScript">Usage in JavaScript</h2>
+  - : Returns the specific node at the given zero-based `index` into the list. Returns `null` if the `index` is out of range.
 
-<p><code>HTMLCollection</code> also exposes its members directly as properties by both name and index. HTML IDs may contain <code>:</code> and <code>.</code> as valid characters, which would necessitate using bracket notation for property access. Currently <code>HTMLCollections</code> does not recognize purely numeric IDs, which would cause conflict with the array-style access, though HTML5 does permit these.</p>
+    An alternative to accessing `collection[i]` (which instead returns  `undefined` when `i` is out-of-bounds). This is mostly useful for non-JavaScript DOM implementations.
 
-<p>For example, assuming there is one <code>&lt;form&gt;</code> element in the document and its <code>id</code> is <code>myForm</code>:</p>
+- {{domxref("HTMLCollection.namedItem()")}}
 
-<pre class="brush:js">var elem1, elem2;
+  - : Returns the specific node whose ID or, as a fallback, name matches the string specified by `name`. Matching by name is only done as a last resort, only in HTML, and only if the referenced element supports the `name` attribute. Returns `null` if no node exists by the given name.
+
+    An alternative to accessing `collection[name]` (which instead returns `undefined` when `name` does not exist). This is mostly useful for non-JavaScript DOM implementations.
+
+## Usage in JavaScript
+
+`HTMLCollection` also exposes its members directly as properties by both name and index. HTML IDs may contain `:` and `.` as valid characters, which would necessitate using bracket notation for property access. Currently `HTMLCollections` does not recognize purely numeric IDs, which would cause conflict with the array-style access, though HTML5 does permit these.
+
+For example, assuming there is one `<form>` element in the document and its `id` is `myForm`:
+
+```js
+var elem1, elem2;
 
 // document.forms is an HTMLCollection
 
@@ -60,19 +58,18 @@ elem2 = document.forms.namedItem("myForm");
 
 alert(elem1 === elem2); // shows: "true"
 
-elem1 = document.forms["named.item.with.periods"];</pre>
+elem1 = document.forms["named.item.with.periods"];
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("NodeList")}}</li>
- <li>{{domxref("HTMLFormControlsCollection")}}, {{domxref("HTMLOptionsCollection")}}</li>
-</ul>
+- {{domxref("NodeList")}}
+- {{domxref("HTMLFormControlsCollection")}}, {{domxref("HTMLOptionsCollection")}}

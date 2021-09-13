@@ -9,39 +9,35 @@ tags:
   - Reference
 browser-compat: api.Element.after
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>Element.after()</strong></code> method inserts a set of
-  {{domxref("Node")}} or {{domxref("DOMString")}} objects in the children list of the
-  <code>Element</code>'s parent, just after the <code>Element</code>.
-  {{domxref("DOMString")}} objects are inserted as equivalent {{domxref("Text")}} nodes.
-</p>
+The **`Element.after()`** method inserts a set of
+{{domxref("Node")}} or {{domxref("DOMString")}} objects in the children list of the
+`Element`'s parent, just after the `Element`.
+{{domxref("DOMString")}} objects are inserted as equivalent {{domxref("Text")}} nodes.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 after(... nodes)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>nodes</code></dt>
-  <dd>A set of {{domxref("Node")}} or {{domxref("DOMString")}} objects to insert.</dd>
-</dl>
+- `nodes`
+  - : A set of {{domxref("Node")}} or {{domxref("DOMString")}} objects to insert.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<ul>
-  <li>{{domxref("HierarchyRequestError")}}: Node cannot be inserted at the specified point
-    in the hierarchy.</li>
-</ul>
+- {{domxref("HierarchyRequestError")}}: Node cannot be inserted at the specified point
+  in the hierarchy.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Inserting_an_element">Inserting an element</h3>
+### Inserting an element
 
-<pre class="brush: js">let container = document.createElement("div");
+```js
+let container = document.createElement("div");
 let p = document.createElement("p");
 container.appendChild(p);
 let span = document.createElement("span");
@@ -49,23 +45,26 @@ let span = document.createElement("span");
 p.after(span);
 
 console.log(container.outerHTML);
-// "&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;"
-</pre>
+// "<div><p></p><span></span></div>"
+```
 
-<h3 id="Inserting_text">Inserting text</h3>
+### Inserting text
 
-<pre class="brush: js">let container = document.createElement("div");
+```js
+let container = document.createElement("div");
 let p = document.createElement("p");
 container.appendChild(p);
 
 p.after("Text");
 
 console.log(container.outerHTML);
-// "&lt;div&gt;&lt;p&gt;&lt;/p&gt;Text&lt;/div&gt;"</pre>
+// "<div><p></p>Text</div>"
+```
 
-<h3 id="Inserting_an_element_and_text">Inserting an element and text</h3>
+### Inserting an element and text
 
-<pre class="brush: js">let container = document.createElement("div");
+```js
+let container = document.createElement("div");
 let p = document.createElement("p");
 container.appendChild(p);
 let span = document.createElement("span");
@@ -73,22 +72,21 @@ let span = document.createElement("span");
 p.after(span, "Text");
 
 console.log(container.outerHTML);
-// "&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;span&gt;&lt;/span&gt;Text&lt;/div&gt;"</pre>
+// "<div><p></p><span></span>Text</div>"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Element.before()")}}</li>
-  <li>{{domxref("Element.append()")}}</li>
-  <li>{{domxref("Node.appendChild()")}}</li>
-  <li>{{domxref("Element.insertAdjacentElement()")}}</li>
-  <li>{{domxref("NodeList")}}</li>
-</ul>
+- {{domxref("Element.before()")}}
+- {{domxref("Element.append()")}}
+- {{domxref("Node.appendChild()")}}
+- {{domxref("Element.insertAdjacentElement()")}}
+- {{domxref("NodeList")}}

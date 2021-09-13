@@ -2,49 +2,55 @@
 title: HTMLTableElement.deleteTFoot()
 slug: Web/API/HTMLTableElement/deleteTFoot
 tags:
-- API
-- HTML DOM
-- HTMLTableElement
-- Method
-- NeedsSpecTable
-- Reference
+  - API
+  - HTML DOM
+  - HTMLTableElement
+  - Method
+  - NeedsSpecTable
+  - Reference
 browser-compat: api.HTMLTableElement.deleteTFoot
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <code><strong>HTMLTableElement.deleteTFoot()</strong></code> method removes the
-  {{HTMLElement("tfoot")}} element from a given {{HtmlElement("table")}}.</p>
+The **`HTMLTableElement.deleteTFoot()`** method removes the
+{{HTMLElement("tfoot")}} element from a given {{HtmlElement("table")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>HTMLTableElement</em>.deleteTFoot();</pre>
+```js
+HTMLTableElement.deleteTFoot();
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example uses JavaScript to delete a table's footer.</p>
+This example uses JavaScript to delete a table's footer.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html;">&lt;table&gt;
-  &lt;thead&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Score&lt;/th&gt;&lt;/thead&gt;
-  &lt;tr&gt;&lt;td&gt;Bob&lt;/td&gt;&lt;td&gt;541&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;Jim&lt;/td&gt;&lt;td&gt;225&lt;/td&gt;&lt;/tr&gt;
-  &lt;tfoot&gt;&lt;th&gt;Average&lt;/th&gt;&lt;td&gt;383&lt;/td&gt;&lt;/tfoot&gt;
-&lt;/table&gt;</pre>
+```html
+<table>
+  <thead><th>Name</th><th>Score</th></thead>
+  <tr><td>Bob</td><td>541</td></tr>
+  <tr><td>Jim</td><td>225</td></tr>
+  <tfoot><th>Average</th><td>383</td></tfoot>
+</table>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js;">let table = document.querySelector('table');
-table.deleteTFoot();</pre>
+```js
+let table = document.querySelector('table');
+table.deleteTFoot();
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

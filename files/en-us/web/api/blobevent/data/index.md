@@ -2,36 +2,35 @@
 title: BlobEvent.data
 slug: Web/API/BlobEvent/data
 tags:
-- API
-- BlobEvent
-- DOM
-- DOM Reference
-- Experimental
-- Media Stream Recording
-- Property
-- Reference
+  - API
+  - BlobEvent
+  - DOM
+  - DOM Reference
+  - Experimental
+  - Media Stream Recording
+  - Property
+  - Reference
 browser-compat: api.BlobEvent.data
 ---
-<p>{{ apiref("Media Capture and Streams") }} {{ SeeCompatTable() }}</p>
+{{ apiref("Media Capture and Streams") }} {{ SeeCompatTable() }}
 
-<p>The <code><strong>BlobEvent.data</strong></code> read-only property represents a
-  {{domxref("Blob")}} associated with the event.</p>
+The **`BlobEvent.data`** read-only property represents a
+{{domxref("Blob")}} associated with the event.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>associatedBlob</em> = <em>BlobEvent</em>.data</pre>
+```js
+associatedBlob = BlobEvent.data
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("BlobEvent")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("BlobEvent")}} interface it belongs to.

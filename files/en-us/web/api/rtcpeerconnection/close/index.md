@@ -9,35 +9,37 @@ tags:
   - close
 browser-compat: api.RTCPeerConnection.close
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The <code><strong>RTCPeerConnection.close()</strong></code> method closes the current
-	peer connection.</p>
+The **`RTCPeerConnection.close()`** method closes the current
+peer connection.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>peerConnection</em>.close();
-</pre>
+```js
+peerConnection.close();
+```
 
-<p><em>This method has no parameters, and returns nothing.</em></p>
+_This method has no parameters, and returns nothing._
 
-<p>Calling this method terminates the RTCPeerConnection's ICE agent, ending any ongoing
-	ICE processing and any active streams. This also releases any resources in use by the
-	ICE agent, including TURN permissions. All {{domxref("RTCRtpSender")}} objects are
-	considered to be stopped once this returns (they may still be in the process of
-	stopping, but for all intents and purposes, they're stopped).</p>
+Calling this method terminates the RTCPeerConnection's ICE agent, ending any ongoing
+ICE processing and any active streams. This also releases any resources in use by the
+ICE agent, including TURN permissions. All {{domxref("RTCRtpSender")}} objects are
+considered to be stopped once this returns (they may still be in the process of
+stopping, but for all intents and purposes, they're stopped).
 
-<p>Once this method returns, the signaling state as returned by
-	{{domxref("RTCPeerConnection.signalingState")}} is <code>closed</code>.</p>
+Once this method returns, the signaling state as returned by
+{{domxref("RTCPeerConnection.signalingState")}} is `closed`.
 
-<p>Make sure that you <code>delete</code> all references to the previous
-	{{domxref("RTCPeerConnection")}} before attempting to create a new one that connects
-	to the same remote peer, as not doing so might result in some errors depending on the
-	browser.</p>
+Make sure that you `delete` all references to the previous
+{{domxref("RTCPeerConnection")}} before attempting to create a new one that connects
+to the same remote peer, as not doing so might result in some errors depending on the
+browser.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var pc = new RTCPeerConnection();
+```js
+var pc = new RTCPeerConnection();
 var dc = pc.createDataChannel("my channel");
 
 dc.onmessage = function (event) {
@@ -51,20 +53,19 @@ dc.onopen = function () {
 
 dc.onclose = function () {
   console.log("datachannel close");
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
-	<li>{{domxref("RTCPeerConnection")}}</li>
-	<li>{{domxref("RTCPeerConnection.signalingState")}}</li>
-</ul>
+- [WebRTC](/en-US/docs/Web/Guide/API/WebRTC)
+- {{domxref("RTCPeerConnection")}}
+- {{domxref("RTCPeerConnection.signalingState")}}

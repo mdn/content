@@ -2,45 +2,46 @@
 title: Node.contains()
 slug: Web/API/Node/contains
 tags:
-- API
-- DOM
-- Method
-- Node
+  - API
+  - DOM
+  - Method
+  - Node
 browser-compat: api.Node.contains
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>Node.contains()</code></strong> method returns a
-  boolean value indicating whether a node is a descendant of a given node,
-  i.e. the node itself, one of its direct children ({{domxref("Node.childNodes",
-  "childNodes")}}), one of the children's direct children, and so on.</p>
+The **`Node.contains()`** method returns a
+boolean value indicating whether a node is a descendant of a given node,
+i.e. the node itself, one of its direct children ({{domxref("Node.childNodes",
+  "childNodes")}}), one of the children's direct children, and so on.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">node.contains( otherNode )
-</pre>
+```js
+node.contains( otherNode )
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This function checks to see if an element is in the page's body. As
-  <code>contains</code> is inclusive and determining if the body contains itself isn't the
-  intention of <code>isInPage</code> this case explicitly returns <code>false</code>.</p>
+This function checks to see if an element is in the page's body. As
+`contains` is inclusive and determining if the body contains itself isn't the
+intention of `isInPage` this case explicitly returns `false`.
 
-<pre class="brush:js">function isInPage(node) {
+```js
+function isInPage(node) {
   return (node === document.body) ? false : document.body.contains(node);
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Node.compareDocumentPosition")}}</li>
-  <li>{{domxref("Node.hasChildNodes")}}</li>
-</ul>
+- {{domxref("Node.compareDocumentPosition")}}
+- {{domxref("Node.hasChildNodes")}}

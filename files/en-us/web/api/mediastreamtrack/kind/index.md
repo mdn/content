@@ -11,36 +11,34 @@ tags:
   - WebRTC
 browser-compat: api.MediaStreamTrack.kind
 ---
-<div>{{APIRef("Media Capture and Streams")}}</div>
+{{APIRef("Media Capture and Streams")}}
 
-<p>The <code><strong>MediaStreamTrack.kind</strong></code>
-    read-only property returns a {{domxref("DOMString")}} set to <code>"audio"</code> if
-    the track is an audio track and to <code>"video"</code>, if it is a video
-    track. It doesn't change if the track is deassociated from its source.</p>
+The **`MediaStreamTrack.kind`**
+read-only property returns a {{domxref("DOMString")}} set to `"audio"` if
+the track is an audio track and to `"video"`, if it is a video
+track. It doesn't change if the track is deassociated from its source.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const <em>type</em> = <em>track</em>.kind</pre>
+```js
+const type = track.kind
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>The possible values are a {{domxref("DOMString")}} with on of the following values:</p>
+The possible values are a {{domxref("DOMString")}} with on of the following values:
 
-<ul>
-  <li><code>"audio"</code>: the track is an audio track.</li>
-  <li><code>"video"</code>: the track is a video track.</li>
-</ul>
+- `"audio"`: the track is an audio track.
+- `"video"`: the track is a video track.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
-</ul>
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)

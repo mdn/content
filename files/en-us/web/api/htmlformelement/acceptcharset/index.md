@@ -11,28 +11,30 @@ tags:
   - Reference
 browser-compat: api.HTMLFormElement.acceptCharset
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <code><strong>HTMLFormElement.acceptCharset</strong></code> property represents a
-  list of the supported <a href="/en-US/docs/Glossary/character_encoding">character
-    encodings</a> for the given {{htmlelement("form")}} element. This list can be
-  comma-separated or space-separated.</p>
+The **`HTMLFormElement.acceptCharset`** property represents a
+list of the supported [character
+encodings](/en-US/docs/Glossary/character_encoding) for the given {{htmlelement("form")}} element. This list can be
+comma-separated or space-separated.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var string = form.acceptCharset;
+```js
+var string = form.acceptCharset;
 form.acceptCharset = string;
-</pre>
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">inputs = document.forms['myform'].acceptCharset;
-</pre>
+```js
+inputs = document.forms['myform'].acceptCharset;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

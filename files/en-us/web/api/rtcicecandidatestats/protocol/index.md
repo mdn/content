@@ -17,32 +17,31 @@ tags:
   - WebRTC API
 browser-compat: api.RTCIceCandidateStats.protocol
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The {{domxref("RTCIceCandidateStats")}} dictionary's
-  <code><strong>protocol</strong></code>  property specifies the protocol the specified
-  candidate would use for communication with the remote peer.</p>
+The {{domxref("RTCIceCandidateStats")}} dictionary's
+**`protocol`**  property specifies the protocol the specified
+candidate would use for communication with the remote peer.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>protocol</em> = <em>rtcIceCandidateStats</em>.protocol;</pre>
+```js
+protocol = rtcIceCandidateStats.protocol;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>The value is one of the following string:</p>
+The value is one of the following string:
 
-<dl>
-    <dt><code>tcp</code></dt>
-    <dd>The candidate, if selected, would use {{Glossary("TCP")}} as the transport protocol for its data. The {{domxref("RTCIceCandidate.tcpType", "tcpType")}} property provides additional information about the kind of TCP candidate represented by the object.</dd>
-    <dt><code>udp</code></dt>
-    <dd>The candidate will use the {{Glossary("UDP")}} transport protocol for its data. This is the preferred protocol for media interactions because of its better performance profile.</dd>
-</dl>
+- `tcp`
+  - : The candidate, if selected, would use {{Glossary("TCP")}} as the transport protocol for its data. The {{domxref("RTCIceCandidate.tcpType", "tcpType")}} property provides additional information about the kind of TCP candidate represented by the object.
+- `udp`
+  - : The candidate will use the {{Glossary("UDP")}} transport protocol for its data. This is the preferred protocol for media interactions because of its better performance profile.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

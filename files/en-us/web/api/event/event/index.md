@@ -2,71 +2,65 @@
 title: Event()
 slug: Web/API/Event/Event
 tags:
-- API
-- Constructor
-- DOM
-- Event
-- Reference
+  - API
+  - Constructor
+  - DOM
+  - Event
+  - Reference
 browser-compat: api.Event.Event
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>Event()</strong></code> constructor creates
-    a new {{domxref("Event")}}.</p>
+The **`Event()`** constructor creates
+a new {{domxref("Event")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">new Event(<var>typeArg</var>[, <var>eventInit</var>]);</pre>
+```js
+new Event(typeArg[, eventInit]);
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-  <dt><code><var>typeArg</var></code></dt>
-  <dd>This is a {{domxref("DOMString")}} representing the name of the event.</dd>
-  <dt><code><var>eventInit</var></code> {{optional_inline}}</dt>
-  <dd>
-    <p>This is an <code>EventInit</code> dictionary, having the following optional fields:
-    </p>
+- `typeArg`
+  - : This is a {{domxref("DOMString")}} representing the name of the event.
+- `eventInit` {{optional_inline}}
 
-    <dl>
-      <dt><code>bubbles</code> {{optional_inline}}</dt>
-      <dd>A boolean value indicating whether the event bubbles. The default is
-        <code>false</code>.</dd>
-      <dt><code>cancelable</code> {{optional_inline}}</dt>
-      <dd>A boolean value indicating whether the event can be cancelled. The
-        default is <code>false</code>.</dd>
-      <dt><code>composed</code> {{optional_inline}}</dt>
-      <dd>A boolean value indicating whether the event will trigger listeners
+  - : This is an `EventInit` dictionary, having the following optional fields:
+
+    - `bubbles` {{optional_inline}}
+      - : A boolean value indicating whether the event bubbles. The default is
+        `false`.
+    - `cancelable` {{optional_inline}}
+      - : A boolean value indicating whether the event can be cancelled. The
+        default is `false`.
+    - `composed` {{optional_inline}}
+      - : A boolean value indicating whether the event will trigger listeners
         outside of a shadow root (see {{domxref("Event.composed")}} for more details). The
-        default is <code>false</code>.</dd>
-    </dl>
-  </dd>
-</dl>
+        default is `false`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">// create a look event that bubbles up and cannot be canceled
+```js
+// create a look event that bubbles up and cannot be canceled
 
 const evt = new Event("look", {"bubbles":true, "cancelable":false});
 document.dispatchEvent(evt);
 
 // event can be dispatched from any element, not only the document
 myDiv.dispatchEvent(evt);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Event")}}</li>
-  <li>{{domxref("EventTarget.dispatchEvent()")}}</li>
-  <li><a href="/en-US/docs/Web/Events/Creating_and_triggering_events">Creating and triggering events</a></li>
-</ul>
+- {{domxref("Event")}}
+- {{domxref("EventTarget.dispatchEvent()")}}
+- [Creating and triggering events](/en-US/docs/Web/Events/Creating_and_triggering_events)

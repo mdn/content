@@ -2,53 +2,53 @@
 title: CanvasRenderingContext2D.lineWidth
 slug: Web/API/CanvasRenderingContext2D/lineWidth
 tags:
-- API
-- Canvas
-- CanvasRenderingContext2D
-- Property
-- Reference
+  - API
+  - Canvas
+  - CanvasRenderingContext2D
+  - Property
+  - Reference
 browser-compat: api.CanvasRenderingContext2D.lineWidth
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The
-  <strong><code>CanvasRenderingContext2D.lineWidth</code></strong>
-  property of the Canvas 2D API sets the thickness of lines.</p>
+The
+**`CanvasRenderingContext2D.lineWidth`**
+property of the Canvas 2D API sets the thickness of lines.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Lines can be drawn with the
-    {{domxref("CanvasRenderingContext2D.stroke()",
+> **Note:** Lines can be drawn with the
+> {{domxref("CanvasRenderingContext2D.stroke()",
     "stroke()")}}, {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}},
-    and {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}} methods.</p>
-</div>
+> and {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}} methods.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>ctx</em>.lineWidth = <em>value</em>;</pre>
+```js
+ctx.lineWidth = value;
+```
 
-<h3 id="Options">Options</h3>
+### Options
 
-<dl>
-  <dt><code>value</code></dt>
-  <dd>A number specifying the line width, in coordinate space units. Zero, negative,
+- `value`
+  - : A number specifying the line width, in coordinate space units. Zero, negative,
     {{jsxref("Infinity")}}, and {{jsxref("NaN")}} values are ignored. This value is
-    <code>1.0</code> by default.</dd>
-</dl>
+    `1.0` by default.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Changing_line_width">Changing line width</h3>
+### Changing line width
 
-<p>This example draws a line and a rectangle, using a line width of 15 units.</p>
+This example draws a line and a rectangle, using a line width of 15 units.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js;">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.lineWidth = 15;
@@ -58,49 +58,41 @@ ctx.moveTo(20, 20);
 ctx.lineTo(130, 130);
 ctx.rect(40, 40, 70, 70);
 ctx.stroke();
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Changing_line_width', 700, 180) }}</p>
+{{ EmbedLiveSample('Changing_line_width', 700, 180) }}
 
-<h3 id="More_examples">More examples</h3>
+### More examples
 
-<p>For more examples and explanation about this property, see <a
-    href="/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Applying
-    styles and color</a> in the <a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas
-    Tutorial</a>.</p>
+For more examples and explanation about this property, see [Applying
+styles and color](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) in the [Canvas
+Tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h3 id="WebKitBlink-specific_notes">WebKit/Blink-specific notes</h3>
+### WebKit/Blink-specific notes
 
-<ul>
-  <li>In WebKit- and Blink-based Browsers, a non-standard and deprecated method
-    <code>ctx.setLineWidth()</code> is implemented in addition to this property.</li>
-</ul>
+- In WebKit- and Blink-based Browsers, a non-standard and deprecated method
+  `ctx.setLineWidth()` is implemented in addition to this property.
 
-<h3 id="Gecko-specific_notes">Gecko-specific notes</h3>
+### Gecko-specific notes
 
-<ul>
-  <li>Starting Gecko 2.0 {{geckoRelease("2.0")}}, setting <code>lineWidth</code> to a
-    negative value no longer throws an exception; instead, it properly ignores
-    non-positive values.</li>
-</ul>
+- Starting Gecko 2.0 {{geckoRelease("2.0")}}, setting `lineWidth` to a
+  negative value no longer throws an exception; instead, it properly ignores
+  non-positive values.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining this property: {{domxref("CanvasRenderingContext2D")}}</li>
-  <li>{{domxref("CanvasRenderingContext2D.lineCap")}}</li>
-  <li>{{domxref("CanvasRenderingContext2D.lineJoin")}}</li>
-  <li><a
-      href="/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Applying
-      styles and color</a></li>
-</ul>
+- The interface defining this property: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.lineCap")}}
+- {{domxref("CanvasRenderingContext2D.lineJoin")}}
+- [Applying
+  styles and color](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)

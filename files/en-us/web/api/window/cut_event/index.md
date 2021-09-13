@@ -11,51 +11,51 @@ tags:
   - Window
 browser-compat: api.Window.cut_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <strong><code>cut</code></strong> event is fired when the user has initiated a "cut" action through the browser's user interface.</p>
+The **`cut`** event is fired when the user has initiated a "cut" action through the browser's user interface.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("ClipboardEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("HTMLElement/oncut", "oncut")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("ClipboardEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>{{domxref("HTMLElement/oncut", "oncut")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>The original target for this event is the {{domxref("Element")}} that was the intended target of the cut action. You can listen for this event on the {{domxref("Window")}} interface to handle it in the capture or bubbling phases. For full details on this event please see the page on the <a href="/en-US/docs/Web/API/Element/cut_event">Element: cut event</a>.</p>
+The original target for this event is the {{domxref("Element")}} that was the intended target of the cut action. You can listen for this event on the {{domxref("Window")}} interface to handle it in the capture or bubbling phases. For full details on this event please see the page on the [Element: cut event](/en-US/docs/Web/API/Element/cut_event).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">window.addEventListener('cut', (event) =&gt; {
+```js
+window.addEventListener('cut', (event) => {
     console.log('cut action initiated')
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Related events: {{domxref("Window/copy_event", "copy")}}, {{domxref("Window/paste_event", "paste")}}</li>
- <li>This event on {{domxref("Element")}} targets: {{domxref("Element/cut_event", "cut")}}</li>
- <li>This event on {{domxref("Document")}} targets: {{domxref("Document/cut_event", "cut")}}</li>
-</ul>
+- Related events: {{domxref("Window/copy_event", "copy")}}, {{domxref("Window/paste_event", "paste")}}
+- This event on {{domxref("Element")}} targets: {{domxref("Element/cut_event", "cut")}}
+- This event on {{domxref("Document")}} targets: {{domxref("Document/cut_event", "cut")}}

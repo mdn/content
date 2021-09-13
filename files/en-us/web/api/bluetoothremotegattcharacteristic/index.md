@@ -11,48 +11,44 @@ tags:
   - Web Bluetooth API
 browser-compat: api.BluetoothRemoteGATTCharacteristic
 ---
-<div>{{APIRef("Bluetooth API")}}{{SeeCompatTable}}</div>
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
-<p>The <code>BluetoothRemoteGattCharacteristic</code> interface of the <a href="/en-US/docs/Web/API/Web_Bluetooth_API">Web Bluetooth API</a> represents a GATT Characteristic, which is a basic data element that provides further information about a peripheral’s service.</p>
+The `BluetoothRemoteGattCharacteristic` interface of the [Web Bluetooth API](/en-US/docs/Web/API/Web_Bluetooth_API) represents a GATT Characteristic, which is a basic data element that provides further information about a peripheral’s service.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{DOMxRef("BluetoothRemoteGATTCharacteristic.service")}}{{ReadOnlyInline}}</dt>
- <dd>Returns the {{DOMxRef("BluetoothRemoteGATTService")}} this characteristic belongs to.</dd>
- <dt>{{DOMxRef("BluetoothRemoteGATTCharacteristic.uuid")}}{{ReadOnlyInline}}</dt>
- <dd>Returns a {{DOMxRef("DOMString")}} containing the UUID of the characteristic, for example <code>'00002a37-0000-1000-8000-00805f9b34fb'</code> for the Heart Rate Measurement characteristic.</dd>
- <dt>{{DOMxRef("BluetoothRemoteGATTCharacteristic.properties")}}{{ReadOnlyInline}}</dt>
- <dd>Returns the properties of this characteristic.</dd>
- <dt>{{DOMxRef("BluetoothRemoteGATTCharacteristic.value")}}{{ReadOnlyInline}}</dt>
- <dd>The currently cached characteristic value. This value gets updated when the value of the characteristic is read or updated via a notification or indication.</dd>
-</dl>
+- {{DOMxRef("BluetoothRemoteGATTCharacteristic.service")}}{{ReadOnlyInline}}
+  - : Returns the {{DOMxRef("BluetoothRemoteGATTService")}} this characteristic belongs to.
+- {{DOMxRef("BluetoothRemoteGATTCharacteristic.uuid")}}{{ReadOnlyInline}}
+  - : Returns a {{DOMxRef("DOMString")}} containing the UUID of the characteristic, for example `'00002a37-0000-1000-8000-00805f9b34fb'` for the Heart Rate Measurement characteristic.
+- {{DOMxRef("BluetoothRemoteGATTCharacteristic.properties")}}{{ReadOnlyInline}}
+  - : Returns the properties of this characteristic.
+- {{DOMxRef("BluetoothRemoteGATTCharacteristic.value")}}{{ReadOnlyInline}}
+  - : The currently cached characteristic value. This value gets updated when the value of the characteristic is read or updated via a notification or indication.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{DOMxRef("BluetoothRemoteGATTCharacteristic.getDescriptor()")}}</dt>
- <dd>Returns a {{JSxRef("Promise")}} that resolves to the first {{DOMxRef("BluetoothRemoteGATTDescriptor")}} for a given descriptor UUID.</dd>
- <dt>{{DOMxRef("BluetoothRemoteGATTCharacteristic.getDescriptors()")}}</dt>
- <dd>Returns a {{JSxRef("Promise")}} that resolves to an {{JSxRef("Array")}} of all {{DOMxRef("BluetoothRemoteGATTDescriptor")}} objects for a given descriptor UUID.</dd>
- <dt>{{DOMxRef("BluetoothRemoteGATTCharacteristic.readValue()")}}</dt>
- <dd>Returns a {{JSxRef("Promise")}} that resolves to an {{JSxRef("ArrayBuffer")}} holding a duplicate of the <code>value</code> property if it is available and supported. Otherwise it throws an error.</dd>
- <dt>{{DOMxRef("BluetoothRemoteGATTCharacteristic.writeValue()", "BluetoothRemoteGATTCharacteristic.writeValue(<var>value</var>)")}}</dt>
- <dd>Sets the <code>value</code> property to the bytes contained in a given {{JSxRef("ArrayBuffer")}}, calls <a href="https://webbluetoothcg.github.io/web-bluetooth/#writecharacteristicvalue"><code>WriteCharacteristicValue</code>(<var>this</var>=<code>this</code>, <var>value=value</var>, <var>response</var>=<code>"optional"</code>)</a>, and returns the resulting {{JSxRef("Promise")}}.</dd>
- <dt>{{DOMxRef("BluetoothRemoteGATTCharacteristic.writeValueWithResponse()", "BluetoothRemoteGATTCharacteristic.writeValueWithResponse(<var>value</var>)")}}</dt>
- <dd>Sets the <code>value</code> property to the bytes contained in a given {{JSxRef("ArrayBuffer")}}, calls <a href="https://webbluetoothcg.github.io/web-bluetooth/#writecharacteristicvalue"><code>WriteCharacteristicValue</code>(<var>this</var>=<code>this</code>, <var>value=value</var>, <var>response</var>=<code>"required"</code>)</a>, and returns the resulting {{JSxRef("Promise")}}.</dd>
- <dt>{{DOMxRef("BluetoothRemoteGATTCharacteristic.writeValueWithoutResponse()", "BluetoothRemoteGATTCharacteristic.writeValueWithoutResponse(<var>value</var>)")}}</dt>
- <dd>Sets the <code>value</code> property to the bytes contained in a given {{JSxRef("ArrayBuffer")}}, calls <a href="https://webbluetoothcg.github.io/web-bluetooth/#writecharacteristicvalue"><code>WriteCharacteristicValue</code>(<var>this</var>=<code>this</code>, <var>value=value</var>, <var>response</var>=<code>"never"</code>)</a>, and returns the resulting {{JSxRef("Promise")}}.</dd>
- <dt>{{DOMxRef("BluetoothRemoteGATTCharacteristic.startNotifications()")}}</dt>
- <dd>Returns a {{JSxRef("Promise")}} when <code>navigator.bluetooth</code> is added to the active notification context.</dd>
- <dt>{{DOMxRef("BluetoothRemoteGATTCharacteristic.stopNotifications()")}}</dt>
- <dd>Returns a {{JSxRef("Promise")}} when <code>navigator.bluetooth</code> is removed from the active notification context.</dd>
-</dl>
+- {{DOMxRef("BluetoothRemoteGATTCharacteristic.getDescriptor()")}}
+  - : Returns a {{JSxRef("Promise")}} that resolves to the first {{DOMxRef("BluetoothRemoteGATTDescriptor")}} for a given descriptor UUID.
+- {{DOMxRef("BluetoothRemoteGATTCharacteristic.getDescriptors()")}}
+  - : Returns a {{JSxRef("Promise")}} that resolves to an {{JSxRef("Array")}} of all {{DOMxRef("BluetoothRemoteGATTDescriptor")}} objects for a given descriptor UUID.
+- {{DOMxRef("BluetoothRemoteGATTCharacteristic.readValue()")}}
+  - : Returns a {{JSxRef("Promise")}} that resolves to an {{JSxRef("ArrayBuffer")}} holding a duplicate of the `value` property if it is available and supported. Otherwise it throws an error.
+- {{DOMxRef("BluetoothRemoteGATTCharacteristic.writeValue()", "BluetoothRemoteGATTCharacteristic.writeValue(<var>value</var>)")}}
+  - : Sets the `value` property to the bytes contained in a given {{JSxRef("ArrayBuffer")}}, calls [`WriteCharacteristicValue`(_this_=`this`, _value=value_, _response_=`"optional"`)](https://webbluetoothcg.github.io/web-bluetooth/#writecharacteristicvalue), and returns the resulting {{JSxRef("Promise")}}.
+- {{DOMxRef("BluetoothRemoteGATTCharacteristic.writeValueWithResponse()", "BluetoothRemoteGATTCharacteristic.writeValueWithResponse(<var>value</var>)")}}
+  - : Sets the `value` property to the bytes contained in a given {{JSxRef("ArrayBuffer")}}, calls [`WriteCharacteristicValue`(_this_=`this`, _value=value_, _response_=`"required"`)](https://webbluetoothcg.github.io/web-bluetooth/#writecharacteristicvalue), and returns the resulting {{JSxRef("Promise")}}.
+- {{DOMxRef("BluetoothRemoteGATTCharacteristic.writeValueWithoutResponse()", "BluetoothRemoteGATTCharacteristic.writeValueWithoutResponse(<var>value</var>)")}}
+  - : Sets the `value` property to the bytes contained in a given {{JSxRef("ArrayBuffer")}}, calls [`WriteCharacteristicValue`(_this_=`this`, _value=value_, _response_=`"never"`)](https://webbluetoothcg.github.io/web-bluetooth/#writecharacteristicvalue), and returns the resulting {{JSxRef("Promise")}}.
+- {{DOMxRef("BluetoothRemoteGATTCharacteristic.startNotifications()")}}
+  - : Returns a {{JSxRef("Promise")}} when `navigator.bluetooth` is added to the active notification context.
+- {{DOMxRef("BluetoothRemoteGATTCharacteristic.stopNotifications()")}}
+  - : Returns a {{JSxRef("Promise")}} when `navigator.bluetooth` is removed from the active notification context.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -11,82 +11,78 @@ tags:
   - sound
 browser-compat: api.AudioContext
 ---
-<div>{{APIRef("Web Audio API")}}</div>
+{{APIRef("Web Audio API")}}
 
-<p>The <code>AudioContext</code> interface represents an audio-processing graph built from audio modules linked together, each represented by an {{domxref("AudioNode")}}.</p>
+The `AudioContext` interface represents an audio-processing graph built from audio modules linked together, each represented by an {{domxref("AudioNode")}}.
 
-<p>An audio context controls both the creation of the nodes it contains and the execution of the audio processing, or decoding. You need to create an <code>AudioContext</code> before you do anything else, as everything happens inside a context. It's recommended to create one AudioContext and reuse it instead of initializing a new one each time, and it's OK to use a single <code>AudioContext</code> for several different audio sources and pipeline concurrently.</p>
+An audio context controls both the creation of the nodes it contains and the execution of the audio processing, or decoding. You need to create an `AudioContext` before you do anything else, as everything happens inside a context. It's recommended to create one AudioContext and reuse it instead of initializing a new one each time, and it's OK to use a single `AudioContext` for several different audio sources and pipeline concurrently.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("AudioContext.AudioContext", "AudioContext()")}}</dt>
- <dd>Creates and returns a new <code>AudioContext</code> object.</dd>
-</dl>
+- {{domxref("AudioContext.AudioContext", "AudioContext()")}}
+  - : Creates and returns a new `AudioContext` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Also inherits properties from its parent interface, {{domxref("BaseAudioContext")}}.</em></p>
+_Also inherits properties from its parent interface, {{domxref("BaseAudioContext")}}._
 
-<dl>
- <dt>{{domxref("AudioContext.baseLatency")}} {{readonlyinline}} {{experimental_inline}}</dt>
- <dd>Returns the number of seconds of processing latency incurred by the {{domxref("AudioContext")}} passing the audio from the {{domxref("AudioDestinationNode")}} to the audio subsystem.</dd>
- <dt>{{domxref("AudioContext.outputLatency")}} {{readonlyinline}} {{experimental_inline}}</dt>
- <dd>Returns an estimation of the output latency of the current audio context.</dd>
-</dl>
+- {{domxref("AudioContext.baseLatency")}} {{readonlyinline}} {{experimental_inline}}
+  - : Returns the number of seconds of processing latency incurred by the {{domxref("AudioContext")}} passing the audio from the {{domxref("AudioDestinationNode")}} to the audio subsystem.
+- {{domxref("AudioContext.outputLatency")}} {{readonlyinline}} {{experimental_inline}}
+  - : Returns an estimation of the output latency of the current audio context.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Also inherits methods from its parent interface, {{domxref("BaseAudioContext")}}.</em></p>
+_Also inherits methods from its parent interface, {{domxref("BaseAudioContext")}}._
 
-<dl>
- <dt>{{domxref("AudioContext.close()")}}</dt>
- <dd>Closes the audio context, releasing any system audio resources that it uses.</dd>
- <dt>{{domxref("AudioContext.createMediaElementSource()")}}</dt>
- <dd>Creates a {{domxref("MediaElementAudioSourceNode")}} associated with an {{domxref("HTMLMediaElement")}}. This can be used to play and manipulate audio from {{HTMLElement("video")}} or {{HTMLElement("audio")}} elements.</dd>
- <dt>{{domxref("AudioContext.createMediaStreamSource()")}}</dt>
- <dd>Creates a {{domxref("MediaStreamAudioSourceNode")}} associated with a {{domxref("MediaStream")}} representing an audio stream which may come from the local computer microphone or other sources.</dd>
- <dt>{{domxref("AudioContext.createMediaStreamDestination()")}}</dt>
- <dd>Creates a {{domxref("MediaStreamAudioDestinationNode")}} associated with a {{domxref("MediaStream")}} representing an audio stream which may be stored in a local file or sent to another computer.</dd>
- <dt>{{domxref("AudioContext.createMediaStreamTrackSource()")}}</dt>
- <dd>Creates a {{domxref("MediaStreamTrackAudioSourceNode")}} associated with a {{domxref("MediaStream")}} representing an media stream track.</dd>
- <dt>{{domxref("AudioContext.getOutputTimestamp()")}}</dt>
- <dd>Returns a new <code>AudioTimestamp</code> object containing two audio timestamp values relating to the current audio context.</dd>
- <dt>{{domxref("AudioContext.resume()")}}</dt>
- <dd>Resumes the progression of time in an audio context that has previously been suspended/paused.</dd>
- <dt>{{domxref("AudioContext.suspend()")}}</dt>
- <dd>Suspends the progression of time in the audio context, temporarily halting audio hardware access and reducing CPU/battery usage in the process.</dd>
-</dl>
+- {{domxref("AudioContext.close()")}}
+  - : Closes the audio context, releasing any system audio resources that it uses.
+- {{domxref("AudioContext.createMediaElementSource()")}}
+  - : Creates a {{domxref("MediaElementAudioSourceNode")}} associated with an {{domxref("HTMLMediaElement")}}. This can be used to play and manipulate audio from {{HTMLElement("video")}} or {{HTMLElement("audio")}} elements.
+- {{domxref("AudioContext.createMediaStreamSource()")}}
+  - : Creates a {{domxref("MediaStreamAudioSourceNode")}} associated with a {{domxref("MediaStream")}} representing an audio stream which may come from the local computer microphone or other sources.
+- {{domxref("AudioContext.createMediaStreamDestination()")}}
+  - : Creates a {{domxref("MediaStreamAudioDestinationNode")}} associated with a {{domxref("MediaStream")}} representing an audio stream which may be stored in a local file or sent to another computer.
+- {{domxref("AudioContext.createMediaStreamTrackSource()")}}
+  - : Creates a {{domxref("MediaStreamTrackAudioSourceNode")}} associated with a {{domxref("MediaStream")}} representing an media stream track.
+- {{domxref("AudioContext.getOutputTimestamp()")}}
+  - : Returns a new `AudioTimestamp` object containing two audio timestamp values relating to the current audio context.
+- {{domxref("AudioContext.resume()")}}
+  - : Resumes the progression of time in an audio context that has previously been suspended/paused.
+- {{domxref("AudioContext.suspend()")}}
+  - : Suspends the progression of time in the audio context, temporarily halting audio hardware access and reducing CPU/battery usage in the process.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Basic audio context declaration:</p>
+Basic audio context declaration:
 
-<pre class="brush: js">var audioCtx = new AudioContext();</pre>
+```js
+var audioCtx = new AudioContext();
+```
 
-<p>Cross browser variant:</p>
+Cross browser variant:
 
-<pre class="brush: js">var AudioContext = window.AudioContext || window.webkitAudioContext;
+```js
+var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioCtx = new AudioContext();
 
 var oscillatorNode = audioCtx.createOscillator();
 var gainNode = audioCtx.createGain();
 var finish = audioCtx.destination;
-// etc.</pre>
+// etc.
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
- <li>{{domxref("OfflineAudioContext")}}</li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- {{domxref("OfflineAudioContext")}}

@@ -2,72 +2,73 @@
 title: GlobalEventHandlers.onselect
 slug: Web/API/GlobalEventHandlers/onselect
 tags:
-- API
-- Event Handler
-- GlobalEventHandlers
-- HTML DOM
-- Property
-- Reference
+  - API
+  - Event Handler
+  - GlobalEventHandlers
+  - HTML DOM
+  - Property
+  - Reference
 browser-compat: api.GlobalEventHandlers.onselect
 ---
-<div>{{ ApiRef("HTML DOM") }}</div>
+{{ ApiRef("HTML DOM") }}
 
-<p>The <strong><code>onselect</code></strong> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> that
-  processes <a href="/en-US/docs/Web/API/Element/select_event"><code>select</code>
-    events</a>.</p>
+The **`onselect`** property of the
+{{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
+processes [`select`
+events](/en-US/docs/Web/API/Element/select_event).
 
-<p>The <code>select</code> event only fires after text inside an
-  <code>{{HtmlElement('input/text', '&lt;input type="text"&gt;')}}</code> or
-  {{HtmlElement("textarea")}} is selected.</p>
+The `select` event only fires after text inside an
+`{{HtmlElement('input/text', '&lt;input type="text"&gt;')}}` or
+{{HtmlElement("textarea")}} is selected.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>target</em>.onselect = <em>functionRef</em>;
-</pre>
+```js
+target.onselect = functionRef;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p><code>functionRef</code> is a function name or a <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function
-    expression</a>. The function receives a {{domxref("UIEvent")}} object as its sole
-  argument.</p>
+`functionRef` is a function name or a [function
+expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("UIEvent")}} object as its sole
+argument.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example logs the text you select inside a {{HtmlElement("textarea")}} element.</p>
+This example logs the text you select inside a {{HtmlElement("textarea")}} element.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;textarea&gt;Try selecting some text in this element.&lt;/textarea&gt;
-&lt;p id="log"&gt;&lt;/p&gt;</pre>
+```html
+<textarea>Try selecting some text in this element.</textarea>
+<p id="log"></p>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">function logSelection(event) {
+```js
+function logSelection(event) {
   const log = document.getElementById('log');
   const selection = event.target.value.substring(event.target.selectionStart, event.target.selectionEnd);
   log.textContent = `You selected: ${selection}`;
 }
 
 const textarea = document.querySelector('textarea');
-textarea.onselect = logSelection;</pre>
+textarea.onselect = logSelection;
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples")}}</p>
+{{EmbedLiveSample("Examples")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Element/select_event"><code>select</code> event</a>
-  </li>
-</ul>
+- [`select` event](/en-US/docs/Web/API/Element/select_event)

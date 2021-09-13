@@ -8,70 +8,75 @@ tags:
   - History
   - History API
 ---
-<div>{{DefaultAPISidebar("History API")}}</div>
+{{DefaultAPISidebar("History API")}}
 
-<p>The DOM {{DOMxRef("Window")}} object provides access to the browser's session history (not to be confused for <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history">WebExtensions history</a>) through the {{DOMxRef("Window.history","history")}} object. It exposes useful methods and properties that let you navigate back and forth through the user's history, and manipulate the contents of the history stack.</p>
+The DOM {{DOMxRef("Window")}} object provides access to the browser's session history (not to be confused for [WebExtensions history](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history)) through the {{DOMxRef("Window.history","history")}} object. It exposes useful methods and properties that let you navigate back and forth through the user's history, and manipulate the contents of the history stack.
 
-<h2 id="Concepts_and_usage">Concepts and usage</h2>
+## Concepts and usage
 
-<p>Moving backward and forward through the user's history is done using the {{DOMxRef("History.back","back()")}}, {{DOMxRef("History.forward","forward()")}}, and {{DOMxRef("History.go","go()")}} methods.</p>
+Moving backward and forward through the user's history is done using the {{DOMxRef("History.back","back()")}}, {{DOMxRef("History.forward","forward()")}}, and {{DOMxRef("History.go","go()")}} methods.
 
-<h3 id="Moving_forward_and_backward">Moving forward and backward</h3>
+### Moving forward and backward
 
-<p>To move backward through history:</p>
+To move backward through history:
 
-<pre class="brush: js">window.history.back()
-</pre>
+```js
+window.history.back()
+```
 
-<p>This acts exactly as if the user clicked on the <kbd><strong>Back</strong></kbd> button in their browser toolbar.</p>
+This acts exactly as if the user clicked on the <kbd><strong>Back</strong></kbd> button in their browser toolbar.
 
-<p>Similarly, you can move forward (as if the user clicked the <kbd><strong>Forward</strong></kbd> button), like this:</p>
+Similarly, you can move forward (as if the user clicked the <kbd><strong>Forward</strong></kbd> button), like this:
 
-<pre class="brush: js">window.history.forward()
-</pre>
+```js
+window.history.forward()
+```
 
-<h3 id="Moving_to_a_specific_point_in_history">Moving to a specific point in history</h3>
+### Moving to a specific point in history
 
-<p>You can use the {{DOMxRef("History.go","go()")}} method to load a specific page from session history, identified by its relative position to the current page. (The current page's relative position is <code>0</code>.)</p>
+You can use the {{DOMxRef("History.go","go()")}} method to load a specific page from session history, identified by its relative position to the current page. (The current page's relative position is `0`.)
 
-<p>To move back one page (the equivalent of calling {{DOMxRef("History.back","back()")}}):</p>
+To move back one page (the equivalent of calling {{DOMxRef("History.back","back()")}}):
 
-<pre class="brush: js">window.history.go(-1)
-</pre>
+```js
+window.history.go(-1)
+```
 
-<p>To move forward a page, just like calling {{DOMxRef("History.forward","forward()")}}:</p>
+To move forward a page, just like calling {{DOMxRef("History.forward","forward()")}}:
 
-<pre class="brush: js">window.history.go(1)
-</pre>
+```js
+window.history.go(1)
+```
 
-<p>Similarly, you can move forward 2 pages by passing <code>2</code>, and so forth.</p>
+Similarly, you can move forward 2 pages by passing `2`, and so forth.
 
-<p>Another use for the <code>go()</code> method is to refresh the current page by either passing <code>0</code>, or by invoking it without an argument:</p>
+Another use for the `go()` method is to refresh the current page by either passing `0`, or by invoking it without an argument:
 
-<pre class="brush: js">// The following statements
+```js
+// The following statements
 // both have the effect of
 // refreshing the page
 window.history.go(0)
 window.history.go()
-</pre>
+```
 
-<p>You can determine the number of pages in the history stack by looking at the value of the <code>length</code> property:</p>
+You can determine the number of pages in the history stack by looking at the value of the `length` property:
 
-<pre class="brush: js">let numberOfEntries = window.history.length
-</pre>
+```js
+let numberOfEntries = window.history.length
+```
 
-<h2 id="Interfaces">Interfaces</h2>
+## Interfaces
 
-<dl>
- <dt>{{domxref("History")}}</dt>
- <dd>Allows manipulation of the browser <em>session history</em> (that is, the pages visited in the tab or frame that the current page is loaded in).</dd>
-</dl>
+- {{domxref("History")}}
+  - : Allows manipulation of the browser _session history_ (that is, the pages visited in the tab or frame that the current page is loaded in).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example assigns a listener to the <code>onpopstate</code> property. And then illustrates some of the methods of the history object to add, replace, and move within the browser history for the current tab.</p>
+The following example assigns a listener to the `onpopstate` property. And then illustrates some of the methods of the history object to add, replace, and move within the browser history for the current tab.
 
-<pre class="brush:js">window.onpopstate = function(event) {
+```js
+window.onpopstate = function(event) {
   alert(`location: ${document.location}, state: ${JSON.stringify(event.state)}`)
 }
 
@@ -80,47 +85,48 @@ history.pushState({page: 2}, "title 2", "?page=2")
 history.replaceState({page: 3}, "title 3", "?page=3")
 history.back() // alerts "location: http://example.com/example.html?page=1, state: {"page":1}"
 history.back() // alerts "location: http://example.com/example.html, state: null"
-history.go(2)  // alerts "location: http://example.com/example.html?page=3, state: {"page":3}"</pre>
+history.go(2)  // alerts "location: http://example.com/example.html?page=3, state: {"page":3}"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "browsers.html#history", "History")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>No change from {{SpecName("HTML5 W3C")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5 W3C", "browsers.html#history", "History")}}</td>
-   <td>{{Spec2("HTML5 W3C")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("HTML WHATWG", "browsers.html#history", "History")}}
+      </td>
+      <td>{{Spec2("HTML WHATWG")}}</td>
+      <td>No change from {{SpecName("HTML5 W3C")}}.</td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("HTML5 W3C", "browsers.html#history", "History")}}
+      </td>
+      <td>{{Spec2("HTML5 W3C")}}</td>
+      <td>Initial definition.</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.History")}}</p>
+{{Compat("api.History")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<h3 id="References">References</h3>
+### References
 
-<ul>
- <li>{{ domxref("window.history") }}</li>
- <li>{{ domxref("WindowEventHandlers.onpopstate") }}</li>
-</ul>
+- {{ domxref("window.history") }}
+- {{ domxref("WindowEventHandlers.onpopstate") }}
 
-<h3 id="Guides">Guides</h3>
+### Guides
 
-<ul>
- <li><a href="/en-US/docs/Web/API/History_API/Working_with_the_History_API">Working with the History API</a></li>
-</ul>
+- [Working with the History API](/en-US/docs/Web/API/History_API/Working_with_the_History_API)

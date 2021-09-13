@@ -10,63 +10,53 @@ tags:
   - Reference
 browser-compat: api.TransitionEvent
 ---
-<div>{{APIRef("CSSOM")}} {{SeeCompatTable}}</div>
+{{APIRef("CSSOM")}} {{SeeCompatTable}}
 
-<p>The <code><strong>TransitionEvent</strong></code> interface represents events providing information related to <a href="/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">transitions</a>.</p>
+The **`TransitionEvent`** interface represents events providing information related to [transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions).
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("TransitionEvent.TransitionEvent", "TransitionEvent()")}}</dt>
- <dd>Creates a <code>TransitionEvent</code> event with the given parameters.</dd>
-</dl>
+- {{domxref("TransitionEvent.TransitionEvent", "TransitionEvent()")}}
+  - : Creates a `TransitionEvent` event with the given parameters.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Also inherits properties from its parent {{domxref("Event")}}</em>.</p>
+_Also inherits properties from its parent {{domxref("Event")}}_.
 
-<dl>
- <dt>{{domxref("TransitionEvent.propertyName")}} {{readonlyInline}}</dt>
- <dd>Is a {{domxref("DOMString")}} containing the name CSS property associated with the transition.</dd>
- <dt>{{domxref("TransitionEvent.elapsedTime")}} {{readonlyInline}}</dt>
- <dd>Is a <code>float</code> giving the amount of time the transition has been running, in seconds, when this event fired. This value is not affected by the {{cssxref("transition-delay")}} property.</dd>
- <dt>{{domxref("TransitionEvent.pseudoElement")}} {{readonlyInline}}</dt>
- <dd>Is a {{domxref("DOMString")}}, starting with <code>::</code>, containing the name of the <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a> the animation runs on. If the transition doesn't run on a pseudo-element but on the element, an empty string: <code>''</code>.</dd>
-</dl>
+- {{domxref("TransitionEvent.propertyName")}} {{readonlyInline}}
+  - : Is a {{domxref("DOMString")}} containing the name CSS property associated with the transition.
+- {{domxref("TransitionEvent.elapsedTime")}} {{readonlyInline}}
+  - : Is a `float` giving the amount of time the transition has been running, in seconds, when this event fired. This value is not affected by the {{cssxref("transition-delay")}} property.
+- {{domxref("TransitionEvent.pseudoElement")}} {{readonlyInline}}
+  - : Is a {{domxref("DOMString")}}, starting with `::`, containing the name of the [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) the animation runs on. If the transition doesn't run on a pseudo-element but on the element, an empty string: `''`.
 
-<h2 id="Types_of_TransitionEvent">Types of <code>TransitionEvent</code></h2>
+## Types of `TransitionEvent`
 
-<dl>
- <dt>{{domxref("HTMLElement.transitioncancel_event", "transitioncancel")}}</dt>
- <dd>An {{domxref("Event")}} fired when a <a href="/en-US/docs/Web/CSS/CSS_Transitions">CSS transition</a> has been cancelled.</dd>
- <dt>{{domxref("HTMLElement.transitionend_event", "transitionend")}}</dt>
- <dd>An {{domxref("Event")}} fired when a <a href="/en-US/docs/Web/CSS/CSS_Transitions">CSS transition</a> has finished playing.</dd>
- <dt>{{domxref("HTMLElement.transitionrun_event", "transitionrun")}}</dt>
- <dd>An {{domxref("Event")}} fired when a <a href="/en-US/docs/Web/CSS/CSS_Transitions">CSS transition</a> is created, when it is added to a set of running transitions, though not nessarilty started</dd>
- <dt>{{domxref("HTMLElement.transitionstart_event", "transitionstart")}}</dt>
- <dd>An {{domxref("Event")}} fired when a <a href="/en-US/docs/Web/CSS/CSS_Transitions">CSS transition</a> has started transitioning.</dd>
-</dl>
+- {{domxref("HTMLElement.transitioncancel_event", "transitioncancel")}}
+  - : An {{domxref("Event")}} fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions) has been cancelled.
+- {{domxref("HTMLElement.transitionend_event", "transitionend")}}
+  - : An {{domxref("Event")}} fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions) has finished playing.
+- {{domxref("HTMLElement.transitionrun_event", "transitionrun")}}
+  - : An {{domxref("Event")}} fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions) is created, when it is added to a set of running transitions, though not nessarilty started
+- {{domxref("HTMLElement.transitionstart_event", "transitionstart")}}
+  - : An {{domxref("Event")}} fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions) has started transitioning.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Also inherits properties from its parent {{domxref("Event")}}</em>.</p>
+_Also inherits properties from its parent {{domxref("Event")}}_.
 
-<dl>
- <dt>{{domxref("TransitionEvent.initTransitionEvent()")}} {{non-standard_inline}}{{deprecated_inline}}</dt>
- <dd>Initializes a <code>TransitionEvent</code> created using the deprecated {{domxref("Document.createEvent()", "Document.createEvent(\"TransitionEvent\")")}} method.</dd>
-</dl>
+- {{domxref("TransitionEvent.initTransitionEvent()")}} {{non-standard_inline}}{{deprecated_inline}}
+  - : Initializes a `TransitionEvent` created using the deprecated {{domxref("Document.createEvent()", "Document.createEvent(\"TransitionEvent\")")}} method.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">Using CSS transitions</a></li>
- <li>CSS properties: {{cssxref("transition")}}, {{cssxref("transition-delay")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-property")}}, {{cssxref("transition-timing-function")}}.</li>
-</ul>
+- [Using CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- CSS properties: {{cssxref("transition")}}, {{cssxref("transition-delay")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-property")}}, {{cssxref("transition-timing-function")}}.

@@ -18,74 +18,77 @@ tags:
   - mouse
 browser-compat: api.Element.contextmenu_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <strong><code>contextmenu</code></strong> event fires when the user attempts to open a context menu. This event is typically triggered by clicking the right mouse button, or by pressing the context menu key.</p>
+The **`contextmenu`** event fires when the user attempts to open a context menu. This event is typically triggered by clicking the right mouse button, or by pressing the context menu key.
 
-<p>In the latter case, the context menu is displayed at the bottom left of the focused element, unless the element is a tree, in which case the context menu is displayed at the bottom left of the current row.</p>
+In the latter case, the context menu is displayed at the bottom left of the focused element, unless the element is a tree, in which case the context menu is displayed at the bottom left of the current row.
 
-<p>Any right-click event that is not disabled (by calling the event's {{domxref("Event.preventDefault", "preventDefault()")}} method) will result in a <code>contextmenu</code> event being fired at the targeted element.</p>
+Any right-click event that is not disabled (by calling the event's {{domxref("Event.preventDefault", "preventDefault()")}} method) will result in a `contextmenu` event being fired at the targeted element.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th>Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th>Cancelable</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th>Interface</th>
-   <td>{{DOMxRef("MouseEvent")}}</td>
-  </tr>
-  <tr>
-   <th>Event handler property</th>
-   <td>{{domxref("GlobalEventHandlers.oncontextmenu", "oncontextmenu")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Cancelable</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Interface</th>
+      <td>{{DOMxRef("MouseEvent")}}</td>
+    </tr>
+    <tr>
+      <th>Event handler property</th>
+      <td>
+        {{domxref("GlobalEventHandlers.oncontextmenu", "oncontextmenu")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this example, the default action of the <code>contextmenu</code> event is canceled using <code>preventDefault()</code> when the <code>contextmenu</code> event is fired at the first paragraph. As a result, the first paragraph will do nothing when right-clicked, while the second paragraph will show the standard context menu offered by your browser.</p>
+In this example, the default action of the `contextmenu` event is canceled using `preventDefault()` when the `contextmenu` event is fired at the first paragraph. As a result, the first paragraph will do nothing when right-clicked, while the second paragraph will show the standard context menu offered by your browser.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p id="noContextMenu"&gt;The context menu has been disabled on this paragraph.&lt;/p&gt;
-&lt;p&gt;But it has not been disabled on this one.&lt;/p&gt;</pre>
+```html
+<p id="noContextMenu">The context menu has been disabled on this paragraph.</p>
+<p>But it has not been disabled on this one.</p>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">const noContext = document.getElementById('noContextMenu');
+```js
+const noContext = document.getElementById('noContextMenu');
 
-noContext.addEventListener('contextmenu', e =&gt; {
+noContext.addEventListener('contextmenu', e => {
   e.preventDefault();
 });
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Examples")}}</p>
+{{EmbedLiveSample("Examples")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li>
- <li>{{event("auxclick")}}</li>
- <li>{{event("click")}}</li>
- <li>{{event("dblclick")}}</li>
- <li>{{event("mousedown")}}</li>
- <li>{{event("mouseup")}}</li>
- <li>{{event("pointerdown")}}</li>
- <li>{{event("pointerup")}}</li>
-</ul>
+- [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events)
+- {{event("auxclick")}}
+- {{event("click")}}
+- {{event("dblclick")}}
+- {{event("mousedown")}}
+- {{event("mouseup")}}
+- {{event("pointerdown")}}
+- {{event("pointerup")}}

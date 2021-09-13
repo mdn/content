@@ -11,44 +11,40 @@ tags:
   - speedOfSound
 browser-compat: api.AudioListener.speedOfSound
 ---
-<div>{{ APIRef("Web Audio API") }}{{deprecated_header}}</div>
+{{ APIRef("Web Audio API") }}{{deprecated_header}}
 
-<p>The <strong><code>speedOfSound</code></strong> property of the {{
+The **`speedOfSound`** property of the {{
   domxref("AudioListener") }} interface is a double value representing the speed of sound,
-  in <em>meters per second</em>.</p>
+in _meters per second_.
 
-<p>The <code>speedOfSound</code> property's default value is <code>343.3</code> m/s and is
-  used to calculate the <a href="https://en.wikipedia.org/wiki/Doppler_effect">doppler
-    shift</a> appropriate for the speed the panner is travelling at (as defined by
-  {{domxref("PannerNode.setVelocity")}}.)</p>
+The `speedOfSound` property's default value is `343.3` m/s and is
+used to calculate the [doppler
+shift](https://en.wikipedia.org/wiki/Doppler_effect) appropriate for the speed the panner is travelling at (as defined by
+{{domxref("PannerNode.setVelocity")}}.)
 
-<div class="note">
-  <p><strong>Note:</strong> Bear in mind that no propagation delay is automatically
-    applied to a sound far from the listener.</p>
-</div>
+> **Note:** Bear in mind that no propagation delay is automatically
+> applied to a sound far from the listener.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>audioCtx</em> = new AudioContext();
-var <em>myListener</em> = <em>audioCtx</em>.listener;
-<em>myListener</em>.speedOfSound = 343.3;
-</pre>
+```js
+var audioCtx = new AudioContext();
+var myListener = audioCtx.listener;
+myListener.speedOfSound = 343.3;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A double.</p>
+A double.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See <a href="/en-US/docs/Web/API/BaseAudioContext/createPanner#example"><code>BaseAudioContext.createPanner()</code></a> for example code.</p>
+See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
-  </li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

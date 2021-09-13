@@ -7,34 +7,35 @@ tags:
   - Intermediate
   - Tutorial
 ---
-<div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}</div>
+{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}
 
-<p>Until now we haven't looked at the actual pixels of our canvas. With the <code>ImageData</code> object you can directly read and write a data array to manipulate pixel data. We will also look into how image smoothing (anti-aliasing) can be controlled and how to save images from your canvas.</p>
+Until now we haven't looked at the actual pixels of our canvas. With the `ImageData` object you can directly read and write a data array to manipulate pixel data. We will also look into how image smoothing (anti-aliasing) can be controlled and how to save images from your canvas.
 
-<h2 id="The_ImageData_object">The ImageData object</h2>
+## The ImageData object
 
-<p>The {{domxref("ImageData")}} object represents the underlying pixel data of an area of a canvas object. It contains the following read-only attributes:</p>
+The {{domxref("ImageData")}} object represents the underlying pixel data of an area of a canvas object. It contains the following read-only attributes:
 
-<dl>
- <dt><code>width</code></dt>
- <dd>The width of the image in pixels.</dd>
- <dt><code>height</code></dt>
- <dd>The height of the image in pixels.</dd>
- <dt><code>data</code></dt>
- <dd>A {{jsxref("Uint8ClampedArray")}} representing a one-dimensional array containing the data in the RGBA order, with integer values between <code>0</code> and <code>255</code> (included).</dd>
-</dl>
+- `width`
+  - : The width of the image in pixels.
+- `height`
+  - : The height of the image in pixels.
+- `data`
+  - : A {{jsxref("Uint8ClampedArray")}} representing a one-dimensional array containing the data in the RGBA order, with integer values between `0` and `255` (included).
 
-<p>The <code>data</code> property returns a {{jsxref("Uint8ClampedArray")}} which can be accessed to look at the raw pixel data; each pixel is represented by four one-byte values (red, green, blue, and alpha, in that order; that is, "RGBA" format). Each color component is represented by an integer between 0 and 255. Each component is assigned a consecutive index within the array, with the top left pixel's red component being at index 0 within the array. Pixels then proceed from left to right, then downward, throughout the array.</p>
+The `data` property returns a {{jsxref("Uint8ClampedArray")}} which can be accessed to look at the raw pixel data; each pixel is represented by four one-byte values (red, green, blue, and alpha, in that order; that is, "RGBA" format). Each color component is represented by an integer between 0 and 255. Each component is assigned a consecutive index within the array, with the top left pixel's red component being at index 0 within the array. Pixels then proceed from left to right, then downward, throughout the array.
 
-<p>The {{jsxref("Uint8ClampedArray")}} contains <code>height</code> × <code>width</code> × 4 bytes of data, with index values ranging from 0 to (<code>height</code>×<code>width</code>×4)-1.</p>
+The {{jsxref("Uint8ClampedArray")}} contains `height` × `width` × 4 bytes of data, with index values ranging from 0 to (`height`×`width`×4)-1.
 
-<p>For example, to read the blue component's value from the pixel at column 200, row 50 in the image, you would do the following:</p>
+For example, to read the blue component's value from the pixel at column 200, row 50 in the image, you would do the following:
 
-<pre class="brush: js">blueComponent = imageData.data[((50 * (imageData.width * 4)) + (200 * 4)) + 2];</pre>
+```js
+blueComponent = imageData.data[((50 * (imageData.width * 4)) + (200 * 4)) + 2];
+```
 
-<p>If given a set of coordinates (X and Y), you may end up doing something like this:</p>
+If given a set of coordinates (X and Y), you may end up doing something like this:
 
-<pre class="brush: js">var xCoord = 50;
+```js
+var xCoord = 50;
 var yCoord = 100;
 var canvasWidth = 1024;
 
@@ -54,15 +55,16 @@ var redForCoord = imageData.data[redIndex];
 var greenForCoord = imageData.data[greenIndex];
 var blueForCoord = imageData.data[blueIndex];
 var alphaForCoord = imageData.data[alphaIndex];
-</pre>
+```
 
-<p>Or, if ES2015 is appropriate:</p>
+Or, if ES2015 is appropriate:
 
-<pre class="brush: js">const xCoord = 50;
+```js
+const xCoord = 50;
 const yCoord = 100;
 const canvasWidth = 1024;
 
-const getColorIndicesForCoord = (x, y, width) =&gt; {
+const getColorIndicesForCoord = (x, y, width) => {
   const red = y * (width * 4) + x * 4;
   return [red, red + 1, red + 2, red + 3];
 };
@@ -70,44 +72,50 @@ const getColorIndicesForCoord = (x, y, width) =&gt; {
 const colorIndices = getColorIndicesForCoord(xCoord, yCoord, canvasWidth);
 
 const [redIndex, greenIndex, blueIndex, alphaIndex] = colorIndices;
-</pre>
+```
 
-<p>You may also access the size of the pixel array in bytes by reading the <code>Uint8ClampedArray.length</code> attribute:</p>
+You may also access the size of the pixel array in bytes by reading the `Uint8ClampedArray.length` attribute:
 
-<pre class="brush: js">var numBytes = imageData.data.length;
-</pre>
+```js
+var numBytes = imageData.data.length;
+```
 
-<h2 id="Creating_an_ImageData_object">Creating an ImageData object</h2>
+## Creating an ImageData object
 
-<p>To create a new, blank <code>ImageData</code> object, you should use the {{domxref("CanvasRenderingContext2D.createImageData", "createImageData()")}} method. There are two versions of the <code>createImageData()</code> method:</p>
+To create a new, blank `ImageData` object, you should use the {{domxref("CanvasRenderingContext2D.createImageData", "createImageData()")}} method. There are two versions of the `createImageData()` method:
 
-<pre class="brush: js">var myImageData = ctx.createImageData(width, height);</pre>
+```js
+var myImageData = ctx.createImageData(width, height);
+```
 
-<p>This creates a new <code>ImageData</code> object with the specified dimensions. All pixels are preset to transparent black (all zeroes i.e rgba(0,0,0,0)).</p>
+This creates a new `ImageData` object with the specified dimensions. All pixels are preset to transparent black (all zeroes i.e rgba(0,0,0,0)).
 
-<p>You can also create a new <code>ImageData</code> object with the same dimensions as the object specified by <code>anotherImageData</code>. The new object's pixels are all preset to transparent black. <strong>This does not copy the image data!</strong></p>
+You can also create a new `ImageData` object with the same dimensions as the object specified by `anotherImageData`. The new object's pixels are all preset to transparent black. **This does not copy the image data!**
 
-<pre class="brush: js">var myImageData = ctx.createImageData(anotherImageData);</pre>
+```js
+var myImageData = ctx.createImageData(anotherImageData);
+```
 
-<h2 id="Getting_the_pixel_data_for_a_context">Getting the pixel data for a context</h2>
+## Getting the pixel data for a context
 
-<p>To obtain an <code>ImageData</code> object containing a copy of the pixel data for a canvas context, you can use the <code>getImageData()</code> method:</p>
+To obtain an `ImageData` object containing a copy of the pixel data for a canvas context, you can use the `getImageData()` method:
 
-<pre class="brush: js">var myImageData = ctx.getImageData(left, top, width, height);</pre>
+```js
+var myImageData = ctx.getImageData(left, top, width, height);
+```
 
-<p>This method returns an <code>ImageData</code> object representing the pixel data for the area of the canvas whose corners are represented by the points (<code>left</code>,<code>top</code>), (<code>left+width</code>, <code>top</code>), (<code>left</code>, <code>top+height</code>), and (<code>left+width</code>, <code>top+height</code>). The coordinates are specified in canvas coordinate space units.</p>
+This method returns an `ImageData` object representing the pixel data for the area of the canvas whose corners are represented by the points (`left`,`top`), (`left+width`, `top`), (`left`, `top+height`), and (`left+width`, `top+height`). The coordinates are specified in canvas coordinate space units.
 
-<div class="note">
-<p><strong>Note:</strong> Any pixels outside the canvas are returned as transparent black in the resulting <code>ImageData</code> object.</p>
-</div>
+> **Note:** Any pixels outside the canvas are returned as transparent black in the resulting `ImageData` object.
 
-<p>This method is also demonstrated in the article <a href="/en-US/docs/Web/API/Canvas_API/Manipulating_video_using_canvas">Manipulating video using canvas</a>.</p>
+This method is also demonstrated in the article [Manipulating video using canvas](/en-US/docs/Web/API/Canvas_API/Manipulating_video_using_canvas).
 
-<h3 id="A_color_picker">A color picker</h3>
+### A color picker
 
-<p>In this example we are using the <a href="/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData"><code>getImageData()</code> </a>method to display the color under the mouse cursor. For this, we need the current position of the mouse with <code>layerX</code> and <code>layerY</code>, then we look up the pixel data on that position in the pixel array that <code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData">getImageData()</a></code> provides us. Finally, we use the array data to set a background color and a text in the <code>&lt;div&gt;</code> to display the color. Clicking on the image will do the same operation but remember what the selected color was.</p>
+In this example we are using the [`getImageData()` ](/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData)method to display the color under the mouse cursor. For this, we need the current position of the mouse with `layerX` and `layerY`, then we look up the pixel data on that position in the pixel array that [`getImageData()`](/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData) provides us. Finally, we use the array data to set a background color and a text in the `<div>` to display the color. Clicking on the image will do the same operation but remember what the selected color was.
 
-<pre class="brush: js">var img = new Image();
+```js
+var img = new Image();
 img.crossOrigin = 'anonymous';
 img.src = './assets/rhino.jpg';
 var canvas = document.getElementById('canvas');
@@ -138,33 +146,36 @@ canvas.addEventListener('mousemove', function(event) {
 canvas.addEventListener('click', function(event) {
     pick(event, selectedColor);
 });
-</pre>
+```
 
-<p>The code's usage is demonstrated in the following live example:</p>
+The code's usage is demonstrated in the following live example:
 
-<p>{{EmbedGHLiveSample("dom-examples/canvas/pixel-manipulation/color-picker.html", '100%', 300)}}</p>
+{{EmbedGHLiveSample("dom-examples/canvas/pixel-manipulation/color-picker.html", '100%', 300)}}
 
-<p>Also see the source code — <a href="https://github.com/mdn/dom-examples/blob/master/canvas/pixel-manipulation/color-picker.html">HTML</a>, <a href="https://github.com/mdn/dom-examples/blob/master/canvas/pixel-manipulation/color-picker.js">JavaScript</a>.</p>
+Also see the source code — [HTML](https://github.com/mdn/dom-examples/blob/master/canvas/pixel-manipulation/color-picker.html), [JavaScript](https://github.com/mdn/dom-examples/blob/master/canvas/pixel-manipulation/color-picker.js).
 
-<h2 id="Painting_pixel_data_into_a_context">Painting pixel data into a context</h2>
+## Painting pixel data into a context
 
-<p>You can use the<a href="/en-US/docs/Web/API/CanvasRenderingContext2D/putImageData"> putImageData() </a>method to paint pixel data into a context:</p>
+You can use the[ putImageData() ](/en-US/docs/Web/API/CanvasRenderingContext2D/putImageData)method to paint pixel data into a context:
 
-<pre class="brush: js">ctx.putImageData(myImageData, dx, dy);
-</pre>
+```js
+ctx.putImageData(myImageData, dx, dy);
+```
 
-<p>The <code>dx</code> and <code>dy</code> parameters indicate the device coordinates within the context at which to paint the top left corner of the pixel data you wish to draw.</p>
+The `dx` and `dy` parameters indicate the device coordinates within the context at which to paint the top left corner of the pixel data you wish to draw.
 
-<p>For example, to paint the entire image represented by <code>myImageData</code> to the top left corner of the context, you can do the following:</p>
+For example, to paint the entire image represented by `myImageData` to the top left corner of the context, you can do the following:
 
-<pre class="brush: js">ctx.putImageData(myImageData, 0, 0);
-</pre>
+```js
+ctx.putImageData(myImageData, 0, 0);
+```
 
-<h3 id="Grayscaling_and_inverting_colors">Grayscaling and inverting colors</h3>
+### Grayscaling and inverting colors
 
-<p>In this example we iterate over all pixels to change their values, then we put the modified pixel array back to the canvas using <a href="/en-US/docs/Web/API/CanvasRenderingContext2D/putImageData">putImageData()</a>. The invert function subtracts each color from the max value 255. The grayscale function uses the average of red, green and blue. You can also use a weighted average, given by the formula <code>x = 0.299r + 0.587g + 0.114b</code>, for example. See <a href="https://en.wikipedia.org/wiki/Grayscale">Grayscale</a> on Wikipedia for more information.</p>
+In this example we iterate over all pixels to change their values, then we put the modified pixel array back to the canvas using [putImageData()](/en-US/docs/Web/API/CanvasRenderingContext2D/putImageData). The invert function subtracts each color from the max value 255. The grayscale function uses the average of red, green and blue. You can also use a weighted average, given by the formula `x = 0.299r + 0.587g + 0.114b`, for example. See [Grayscale](https://en.wikipedia.org/wiki/Grayscale) on Wikipedia for more information.
 
-<pre class="brush: js">var img = new Image();
+```js
+var img = new Image();
 img.crossOrigin = 'anonymous';
 img.src = './assets/rhino.jpg';
 
@@ -183,7 +194,7 @@ var invert = function() {
     ctx.drawImage(img, 0, 0);
     const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
     const data = imageData.data;
-    for (var i = 0; i &lt; data.length; i += 4) {
+    for (var i = 0; i < data.length; i += 4) {
         data[i]     = 255 - data[i];     // red
         data[i + 1] = 255 - data[i + 1]; // green
         data[i + 2] = 255 - data[i + 2]; // blue
@@ -195,7 +206,7 @@ var grayscale = function() {
     ctx.drawImage(img, 0, 0);
     const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
     const data = imageData.data;
-    for (var i = 0; i &lt; data.length; i += 4) {
+    for (var i = 0; i < data.length; i += 4) {
         var avg = (data[i] + data[i + 1] + data[i + 2]) / 3;
         data[i]     = avg; // red
         data[i + 1] = avg; // green
@@ -217,28 +228,31 @@ for (const input of inputs) {
         }
     });
 }
-</pre>
+```
 
-<p>The code's usage is demonstrated in the following live example:</p>
+The code's usage is demonstrated in the following live example:
 
-<p>{{EmbedGHLiveSample("dom-examples/canvas/pixel-manipulation/color-manipulation.html", '100%', 300)}}</p>
+{{EmbedGHLiveSample("dom-examples/canvas/pixel-manipulation/color-manipulation.html", '100%', 300)}}
 
-<p>Also see the source code — <a href="https://github.com/mdn/dom-examples/blob/master/canvas/pixel-manipulation/color-manipulation.html">HTML</a>, <a href="https://github.com/mdn/dom-examples/blob/master/canvas/pixel-manipulation/color-manipulation.js">JavaScript</a>.</p>
+Also see the source code — [HTML](https://github.com/mdn/dom-examples/blob/master/canvas/pixel-manipulation/color-manipulation.html), [JavaScript](https://github.com/mdn/dom-examples/blob/master/canvas/pixel-manipulation/color-manipulation.js).
 
-<h2 id="Zooming_and_anti-aliasing">Zooming and anti-aliasing</h2>
+## Zooming and anti-aliasing
 
-<p>With the help of the {{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}} method, a second canvas and the {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}} property, we are able to zoom into our picture and see the details. A third canvas without {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}} is also drawn onto to be able to have a side by side comparison </p>
+With the help of the {{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}} method, a second canvas and the {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}} property, we are able to zoom into our picture and see the details. A third canvas without {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}} is also drawn onto to be able to have a side by side comparison
 
-<p>We get the position of the mouse and crop an image of 5 pixels left and above to 5 pixels right and below. Then we copy that one over to another canvas and resize the image to the size we want it to. In the zoom canvas we resize a 10×10 pixel crop of the original canvas to 200×200.</p>
+We get the position of the mouse and crop an image of 5 pixels left and above to 5 pixels right and below. Then we copy that one over to another canvas and resize the image to the size we want it to. In the zoom canvas we resize a 10×10 pixel crop of the original canvas to 200×200.
 
-<pre class="brush: js">zoomctx.drawImage(canvas,
+```js
+zoomctx.drawImage(canvas,
                   Math.min(Math.max(0, x - 5), img.width - 10),
                   Math.min(Math.max(0, y - 5), img.height - 10),
-                  10, 10, 0, 0, 200, 200);</pre>
+                  10, 10, 0, 0, 200, 200);
+```
 
-<p>Zoom example:</p>
+Zoom example:
 
-<pre class="brush: js">var img = new Image();
+```js
+var img = new Image();
 img.crossOrigin = 'anonymous';
 img.src = './assets/rhino.jpg';
 img.onload = function() {
@@ -277,42 +291,37 @@ function draw(img) {
     zoom(smoothedZoomCtx, x, y);
     zoom(pixelatedZoomCtx, x, y);
   });
-}</pre>
+}
+```
 
-<p>The code's usage is demonstrated in the following live example:</p>
+The code's usage is demonstrated in the following live example:
 
-<p>{{EmbedGHLiveSample("dom-examples/canvas/pixel-manipulation/image-smoothing.html", '100%', 300)}}</p>
+{{EmbedGHLiveSample("dom-examples/canvas/pixel-manipulation/image-smoothing.html", '100%', 300)}}
 
-<p>Also see the source code — <a href="https://github.com/mdn/dom-examples/blob/master/canvas/pixel-manipulation/image-smoothing.html">HTML</a>, <a href="https://github.com/mdn/dom-examples/blob/master/canvas/pixel-manipulation/image-smoothing.js">JavaScript</a>.</p>
+Also see the source code — [HTML](https://github.com/mdn/dom-examples/blob/master/canvas/pixel-manipulation/image-smoothing.html), [JavaScript](https://github.com/mdn/dom-examples/blob/master/canvas/pixel-manipulation/image-smoothing.js).
 
-<h2 id="Saving_images">Saving images</h2>
+## Saving images
 
-<p>The {{domxref("HTMLCanvasElement")}} provides a <code>toDataURL()</code> method, which is useful when saving images. It returns a <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs">data URI</a> containing a representation of the image in the format specified by the <code>type</code> parameter (defaults to <a class="external external-icon" href="https://en.wikipedia.org/wiki/Portable_Network_Graphics">PNG</a>). The returned image is in a resolution of 96 dpi.</p>
+The {{domxref("HTMLCanvasElement")}} provides a `toDataURL()` method, which is useful when saving images. It returns a [data URI](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) containing a representation of the image in the format specified by the `type` parameter (defaults to [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics)). The returned image is in a resolution of 96 dpi.
 
-<p><strong>Note:</strong> Be aware that if the canvas contains any pixels that were obtained from another {{Glossary("origin")}} without using CORS, the canvas is <strong>tainted</strong> and its contents can no longer be read and saved. See {{SectionOnPage("/en-US/docs/Web/HTML/CORS_enabled_image", "Security and tainted canvases")}}</p>
+**Note:** Be aware that if the canvas contains any pixels that were obtained from another {{Glossary("origin")}} without using CORS, the canvas is **tainted** and its contents can no longer be read and saved. See {{SectionOnPage("/en-US/docs/Web/HTML/CORS_enabled_image", "Security and tainted canvases")}}
 
-<dl>
- <dt>{{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/png')")}}</dt>
- <dd>Default setting. Creates a PNG image.</dd>
- <dt>{{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/jpeg', quality)")}}</dt>
- <dd>Creates a JPG image. Optionally, you can provide a quality in the range from 0 to 1, with one being the best quality and with 0 almost not recognizable but small in file size.</dd>
-</dl>
+- {{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/png')")}}
+  - : Default setting. Creates a PNG image.
+- {{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/jpeg', quality)")}}
+  - : Creates a JPG image. Optionally, you can provide a quality in the range from 0 to 1, with one being the best quality and with 0 almost not recognizable but small in file size.
 
-<p>Once you have generated a data URI from you canvas, you are able to use it as the source of any {{HTMLElement("image")}} or put it into a hyper link with a <a href="/en-US/docs/Web/HTML/Element/a#attr-download">download attribute</a> to save it to disc, for example.</p>
+Once you have generated a data URI from you canvas, you are able to use it as the source of any {{HTMLElement("image")}} or put it into a hyper link with a [download attribute](/en-US/docs/Web/HTML/Element/a#attr-download) to save it to disc, for example.
 
-<p>You can also create a {{domxref("Blob")}} from the canvas.</p>
+You can also create a {{domxref("Blob")}} from the canvas.
 
-<dl>
- <dt>{{domxref("HTMLCanvasElement.toBlob", "canvas.toBlob(<em>callback</em>, <em>type</em>, <em>encoderOptions</em>)")}}</dt>
- <dd>Creates a <code>Blob</code> object representing the image contained in the canvas.</dd>
-</dl>
+- {{domxref("HTMLCanvasElement.toBlob", "canvas.toBlob(<em>callback</em>, <em>type</em>, <em>encoderOptions</em>)")}}
+  - : Creates a `Blob` object representing the image contained in the canvas.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("ImageData")}}</li>
- <li><a href="/en-US/docs/Web/API/Canvas_API/Manipulating_video_using_canvas">Manipulating video using canvas</a></li>
- <li><a href="https://codepo8.github.io/canvas-images-and-pixels/">Canvas, images and pixels – by Christian Heilmann</a></li>
-</ul>
+- {{domxref("ImageData")}}
+- [Manipulating video using canvas](/en-US/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
+- [Canvas, images and pixels – by Christian Heilmann](https://codepo8.github.io/canvas-images-and-pixels/)
 
-<p>{{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}</p>
+{{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}

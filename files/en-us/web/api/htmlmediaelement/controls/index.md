@@ -2,45 +2,46 @@
 title: HTMLMediaElement.controls
 slug: Web/API/HTMLMediaElement/controls
 tags:
-- API
-- HTML DOM
-- HTMLMediaElement
-- Property
-- Web
+  - API
+  - HTML DOM
+  - HTMLMediaElement
+  - Property
+  - Web
 browser-compat: api.HTMLMediaElement.controls
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLMediaElement.controls</code></strong> property reflects the
-  {{htmlattrxref("controls", "video")}} HTML attribute, which controls whether user
-  interface controls for playing the media item will be displayed.</p>
+The **`HTMLMediaElement.controls`** property reflects the
+{{htmlattrxref("controls", "video")}} HTML attribute, which controls whether user
+interface controls for playing the media item will be displayed.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>ctrls</em> = <em>video</em>.controls;
-<em>audio</em>.controls = true;</pre>
+```js
+var ctrls = video.controls;
+audio.controls = true;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A boolean value. A value of <code>true</code> means controls will be
-  displayed.</p>
+A boolean value. A value of `true` means controls will be
+displayed.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var obj = document.createElement('video');
+```js
+var obj = document.createElement('video');
 obj.controls = true;
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining it, {{domxref("HTMLMediaElement")}}.</li>
-</ul>
+- The interface defining it, {{domxref("HTMLMediaElement")}}.

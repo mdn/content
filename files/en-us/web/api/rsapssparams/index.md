@@ -8,56 +8,55 @@ tags:
   - RsaPssParams
   - Web Crypto API
 ---
-<div>{{ APIRef("Web Crypto API") }}</div>
+{{ APIRef("Web Crypto API") }}
 
-<p>The <strong><code>RsaPssParams</code></strong> dictionary of the <a href="/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API </a>represents the object that should be passed as the <code>algorithm</code> parameter into {{domxref("SubtleCrypto.sign()")}} or {{domxref("SubtleCrypto.verify()")}}, when using the <a href="/en-US/docs/Web/API/SubtleCrypto/sign#rsa-pss">RSA-PSS</a> algorithm.</p>
+The **`RsaPssParams`** dictionary of the [Web Crypto API ](/en-US/docs/Web/API/Web_Crypto_API)represents the object that should be passed as the `algorithm` parameter into {{domxref("SubtleCrypto.sign()")}} or {{domxref("SubtleCrypto.verify()")}}, when using the [RSA-PSS](/en-US/docs/Web/API/SubtleCrypto/sign#rsa-pss) algorithm.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt><code>name</code></dt>
- <dd>A {{domxref("DOMString")}}. This should be set to <code>RSA-PSS</code>.</dd>
- <dt><code>saltLength</code></dt>
- <dd>
- <p>A <code>long</code> integer representing the length of the random salt to use, in bytes.</p>
+- `name`
+  - : A {{domxref("DOMString")}}. This should be set to `RSA-PSS`.
+- `saltLength`
 
- <p><a href="https://datatracker.ietf.org/doc/html/rfc3447">RFC 3447</a> says that "Typical salt lengths" are either 0 or the length of the output of the <a href="/en-US/docs/Web/API/SubtleCrypto#digest_algorithms">digest algorithm</a> that was selected when this key was <a href="/en-US/docs/Web/API/SubtleCrypto/generateKey">generated</a>. For example, if you use <a href="/en-US/docs/Web/API/SubtleCrypto#sha-256">SHA-256</a> as the digest algorithm, this could be 32.</p>
+  - : A `long` integer representing the length of the random salt to use, in bytes.
 
- <p>The maximum size of <code>saltLength</code> is given by:</p>
+    [RFC 3447](https://datatracker.ietf.org/doc/html/rfc3447) says that "Typical salt lengths" are either 0 or the length of the output of the [digest algorithm](/en-US/docs/Web/API/SubtleCrypto#digest_algorithms) that was selected when this key was [generated](/en-US/docs/Web/API/SubtleCrypto/generateKey). For example, if you use [SHA-256](/en-US/docs/Web/API/SubtleCrypto#sha-256) as the digest algorithm, this could be 32.
 
- <pre class="brush: js no-line-numbers">Math.ceil((keySizeInBits - 1)/8) - digestSizeInBytes - 2</pre>
+    The maximum size of `saltLength` is given by:
 
- <p>So for a key length of 2048 bits and a digest output size of 32 bytes, the maximum size would be 222.</p>
- </dd>
-</dl>
+    ```js
+    Math.ceil((keySizeInBits - 1)/8) - digestSizeInBytes - 2
+    ```
 
-<h2 id="Examples">Examples</h2>
+    So for a key length of 2048 bits and a digest output size of 32 bytes, the maximum size would be 222.
 
-<p>See the examples for {{domxref("SubtleCrypto.sign()")}} and {{domxref("SubtleCrypto.verify()")}}.</p>
+## Examples
 
-<h2 id="Specifications">Specifications</h2>
+See the examples for {{domxref("SubtleCrypto.sign()")}} and {{domxref("SubtleCrypto.verify()")}}.
+
+## Specifications
 
 <table class="no-markdown">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{ SpecName('Web Crypto API', '#dfn-RsaPssParams', 'SubtleCrypto.RsaPssParams') }}</td>
-   <td>{{ Spec2('Web Crypto API') }}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>
+        {{ SpecName('Web Crypto API', '#dfn-RsaPssParams', 'SubtleCrypto.RsaPssParams') }}
+      </td>
+      <td>{{ Spec2('Web Crypto API') }}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>Browsers that support the "RSA-PSS" algorithm for the {{domxref("SubtleCrypto.sign()")}} and {{domxref("SubtleCrypto.verify()")}} methods will support this type.</p>
+Browsers that support the "RSA-PSS" algorithm for the {{domxref("SubtleCrypto.sign()")}} and {{domxref("SubtleCrypto.verify()")}} methods will support this type.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://datatracker.ietf.org/doc/html/rfc3447#section-8.1">RFC 3447: RSASSA-PSS</a></li>
-</ul>
+- [RFC 3447: RSASSA-PSS](https://datatracker.ietf.org/doc/html/rfc3447#section-8.1)

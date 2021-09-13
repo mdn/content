@@ -16,30 +16,30 @@ tags:
   - source
 browser-compat: api.TrackDefaultList.length
 ---
-<div>{{APIRef("Media Source Extensions")}}{{deprecated_header}}</div>
+{{APIRef("Media Source Extensions")}}{{deprecated_header}}
 
-<p>The <code><strong>length</strong></code> read-only property of the {{domxref("TrackDefaultList")}} interface returns the number of {{domxref("TrackDefault")}} objects in the list.</p>
+The **`length`** read-only property of the {{domxref("TrackDefaultList")}} interface returns the number of {{domxref("TrackDefault")}} objects in the list.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var myListLength = TrackDefaultList.length;</pre>
+```js
+var myListLength = TrackDefaultList.length;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An unsigned long number.</p>
+An unsigned long number.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>TBD</p>
+TBD
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("MediaSource")}}</li>
- <li>{{domxref("SourceBuffer")}}</li>
- <li>{{domxref("TrackDefaultList")}}</li>
-</ul>
+- {{domxref("MediaSource")}}
+- {{domxref("SourceBuffer")}}
+- {{domxref("TrackDefaultList")}}

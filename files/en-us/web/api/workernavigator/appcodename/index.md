@@ -10,36 +10,34 @@ tags:
   - Reference
 browser-compat: api.WorkerNavigator.appCodeName
 ---
-<div>{{APIRef("HTML DOM")}} {{Deprecated_Header}}</div>
+{{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
-<p>The value of the <strong><code>WorkerNavigator.appCodeName</code></strong> property is
-  always "<code>Mozilla</code>", in any browser. This property is kept only for
-  compatibility purposes.</p>
+The value of the **`WorkerNavigator.appCodeName`** property is
+always "`Mozilla`", in any browser. This property is kept only for
+compatibility purposes.
 
-<div class="note"><p><strong>Note:</strong> Do not rely on this property to return a real
-  product name. All browsers return "<code>Mozilla</code>" as the value of this property.
-</p></div>
+> **Note:** Do not rely on this property to return a real
+> product name. All browsers return "`Mozilla`" as the value of this property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>codeName</em> = navigator.appCodeName
-</pre>
+```js
+codeName = navigator.appCodeName
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>The string "<code>Mozilla</code>".</p>
+The string "`Mozilla`".
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WorkerNavigator.appName")}}</li>
-  <li>{{domxref("WorkerNavigator.product")}}</li>
-</ul>
+- {{domxref("WorkerNavigator.appName")}}
+- {{domxref("WorkerNavigator.product")}}

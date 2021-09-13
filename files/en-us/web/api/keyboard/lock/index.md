@@ -2,65 +2,67 @@
 title: Keyboard.lock()
 slug: Web/API/Keyboard/lock
 tags:
-- API
-- Keyboard API
-- Keyboard Lock
-- Method
-- Reference
-- keyboard
-- lock()
+  - API
+  - Keyboard API
+  - Keyboard Lock
+  - Method
+  - Reference
+  - keyboard
+  - lock()
 browser-compat: api.Keyboard.lock
 ---
-<div>{{APIRef("Keyboard Map API")}}{{SeeCompatTable}}</div>
+{{APIRef("Keyboard Map API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>lock()</code></strong> method of the
-    {{domxref("Keyboard")}} interface returns a {{jsxref('Promise')}} after enabling the
-    capture of keypresses for any or all of the keys on the physical keyboard. This method
-    can only capture keys that are granted access by the underlying operating
-    system.</p>
+The **`lock()`** method of the
+{{domxref("Keyboard")}} interface returns a {{jsxref('Promise')}} after enabling the
+capture of keypresses for any or all of the keys on the physical keyboard. This method
+can only capture keys that are granted access by the underlying operating
+system.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>promise</var> = Keyboard.lock([<em>keyCodes</em>[]])</pre>
+```js
+var promise = Keyboard.lock([keyCodes[]])
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>keyCodes</code> {{optional_inline}}</dt>
-  <dd>An {{jsxref('Array')}} of one or more key codes to lock. If no keycodes are provided
-    all keys will be locked. A list of valid code values is found in the <a
-      href="https://www.w3.org/TR/uievents-code/#key-alphanumeric-writing-system">UI
-      Events KeyboardEvent code Values</a> spec.</dd>
-</dl>
+- `keyCodes` {{optional_inline}}
+  - : An {{jsxref('Array')}} of one or more key codes to lock. If no keycodes are provided
+    all keys will be locked. A list of valid code values is found in the [UI
+    Events KeyboardEvent code Values](https://www.w3.org/TR/uievents-code/#key-alphanumeric-writing-system) spec.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref('Promise')}}.</p>
+A {{jsxref('Promise')}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Capturing_all_keys">Capturing all keys</h3>
+### Capturing all keys
 
-<p>The following example captures all keypresses.</p>
+The following example captures all keypresses.
 
-<pre class="brush: js">navigator.keyboard.lock();</pre>
+```js
+navigator.keyboard.lock();
+```
 
-<h3 id="Capturing_specific_keys">Capturing specific keys</h3>
+### Capturing specific keys
 
-<p>The following example captures the "W", "A", "S", and "D" keys. It captures these keys
-  regardless of which modifiers are used with the key press. Assuming a standard US QWERTY
-  layout, registering <code>"KeyW"</code> ensures that "W", Shift+"W", Control+"W",
-  Control+Shift+"W", and all other key modifier combinations with "W" are sent to the app.
-  The same applies to for <code>"KeyA"</code>, <code>"KeyS"</code> and
-  <code>"KeyD"</code>.</p>
+The following example captures the "W", "A", "S", and "D" keys. It captures these keys
+regardless of which modifiers are used with the key press. Assuming a standard US QWERTY
+layout, registering `"KeyW"` ensures that "W", Shift+"W", Control+"W",
+Control+Shift+"W", and all other key modifier combinations with "W" are sent to the app.
+The same applies to for `"KeyA"`, `"KeyS"` and
+`"KeyD"`.
 
-<pre class="brush: js">navigator.keyboard.lock(["KeyW", "KeyA", "KeyS", "KeyD"]);</pre>
+```js
+navigator.keyboard.lock(["KeyW", "KeyA", "KeyS", "KeyD"]);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

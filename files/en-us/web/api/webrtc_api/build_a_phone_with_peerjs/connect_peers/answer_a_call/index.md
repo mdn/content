@@ -2,68 +2,55 @@
 title: Answering a Call
 slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Answer_a_call
 ---
-<p>{{WebRTCSidebar}}</p>
+{{WebRTCSidebar}}
 
-<p>{{PreviousMenuNext("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Creating_a_call", "Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/End_a_call")}}</p>
+{{PreviousMenuNext("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Creating_a_call", "Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/End_a_call")}}
 
-<p>Now our users can make a call, but they can't answer one. Let's add the next piece of the puzzle so that users can answer calls made to them.</p>
+Now our users can make a call, but they can't answer one. Let's add the next piece of the puzzle so that users can answer calls made to them.
 
-<ol>
-  <li>
-    <p>The peerJS framework makes the <code>.on('call')</code> event available to use so let’s use it here. Add this to the bottom of <code>script.js</code>:</p>
+1.  The peerJS framework makes the `.on('call')` event available to use so let’s use it here. Add this to the bottom of `script.js`:
 
-<pre class="brush: js">peer.on('call', function(call) {
-    const answerCall = confirm("Do you want to answer?")
-});</pre>
+    ```js
+    peer.on('call', function(call) {
+        const answerCall = confirm("Do you want to answer?")
+    });
+    ```
 
-    <p>First, we prompt the user to answer with a confirm prompt. This will show a window on the screen (as shown in the image) from which the user can select "OK" or "Cancel" — this maps to a returned boolean value. When you press "Call" in your browser, the following prompt should appear:</p>
+    First, we prompt the user to answer with a confirm prompt. This will show a window on the screen (as shown in the image) from which the user can select "OK" or "Cancel" — this maps to a returned boolean value. When you press "Call" in your browser, the following prompt should appear:
 
-    <p><img alt='A browser prompt that asks "Do you want to answer?" with two options: "Cancel" and "Ok"' src="1hfnup1p6aedvfbarro6ajq.png"></p>
+    ![A browser prompt that asks "Do you want to answer?" with two options: "Cancel" and "Ok"](1hfnup1p6aedvfbarro6ajq.png)
 
-    <div class="notecard warning">
-      <p><strong>Warning:</strong> Since we’re using a <code>confirm</code> prompt to ask the user if they want to answer the call, it's important that the browser and tab that's being called is "active", which means the window shouldn't be minimized, and the tab should be on screen and have the mouse's focus somewhere inside it. Ideally, in a production version of this app you'd create your own modal window in HTML which wouldn't have these limitations.</p>
-    </div>
-  </li>
-  <li>
-    <p>Let's flesh out this event listener. Update it as follows:</p>
+    > **Warning:** Since we’re using a `confirm` prompt to ask the user if they want to answer the call, it's important that the browser and tab that's being called is "active", which means the window shouldn't be minimized, and the tab should be on screen and have the mouse's focus somewhere inside it. Ideally, in a production version of this app you'd create your own modal window in HTML which wouldn't have these limitations.
 
-<pre class="brush: js">peer.on('call', function(call) {
-   const answerCall = confirm("Do you want to answer?")
+2.  Let's flesh out this event listener. Update it as follows:
 
-   if(answerCall){
-      call.answer(window.localStream) // A
-      showConnectedContent(); // B
-      call.on('stream', function(stream) { // C
-         window.remoteAudio.srcObject = stream;
-         window.remoteAudio.autoplay = true;
-         window.peerStream = stream;
-      });
-   } else {
-      console.log("call denied"); // D
-   }
-});</pre>
+    ```js
+    peer.on('call', function(call) {
+       const answerCall = confirm("Do you want to answer?")
 
-    <p>Let's walk through the most important parts of this code:</p>
-    <ul>
-      <li>
-        <p><code>call.answer(window.localStream)</code>: if <code>answerCall</code> is <code>true</code>, you'll want to call peerJS’s <code>answer()</code> function on the call to create an answer, passing it the local stream.</p>
-      </li>
-      <li>
-        <p><code>showCallContent</code>: Similar to what you did in the call button event listener, you want to ensure the person being called sees the correct HTML content.</p>
-      </li>
-      <li>
-        <p>Everything in the <code>call.on('stream', function(){...}</code> block is exactly the same as it is in call button’s event listener. The reason you need to add it here too is so that the browser is also updated for the person answering the call.</p>
-      </li>
-      <li>
-        <p>If the person denies the call, we’re just going to log a message to the console.</p>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <p>The code you have now is enough for you to create a call and answer it. Refresh your browsers and test it out. You’ll want to make sure that both browsers have the console open or else you won’t get the prompt to answer the call. Click call, submit the peer ID for the other browser and then answer the call. The final page should look like this:</p>
+       if(answerCall){
+          call.answer(window.localStream) // A
+          showConnectedContent(); // B
+          call.on('stream', function(stream) { // C
+             window.remoteAudio.srcObject = stream;
+             window.remoteAudio.autoplay = true;
+             window.peerStream = stream;
+          });
+       } else {
+          console.log("call denied"); // D
+       }
+    });
+    ```
 
-    <p><img alt="Two screens side by side both have a cream background with the words 'phone a friend' in bold, dark green font as the heading. 'You're connected.' is immediately below that and 'please use headphones!' and 'You're automatically muted, please unmute yourself!' below that. Following on, a big dark red button with 'Hang up' written in the same cream color of the background." src="1kbts6k_efhtujwuundg2cq.png"></p>
-  </li>
-</ol>
+    Let's walk through the most important parts of this code:
 
-<p>{{PreviousMenuNext("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Creating_a_call", "Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/End_a_call")}}</p>
+    - `call.answer(window.localStream)`: if `answerCall` is `true`, you'll want to call peerJS’s `answer()` function on the call to create an answer, passing it the local stream.
+    - `showCallContent`: Similar to what you did in the call button event listener, you want to ensure the person being called sees the correct HTML content.
+    - Everything in the `call.on('stream', function(){...}` block is exactly the same as it is in call button’s event listener. The reason you need to add it here too is so that the browser is also updated for the person answering the call.
+    - If the person denies the call, we’re just going to log a message to the console.
+
+3.  The code you have now is enough for you to create a call and answer it. Refresh your browsers and test it out. You’ll want to make sure that both browsers have the console open or else you won’t get the prompt to answer the call. Click call, submit the peer ID for the other browser and then answer the call. The final page should look like this:
+
+    ![Two screens side by side both have a cream background with the words 'phone a friend' in bold, dark green font as the heading. 'You're connected.' is immediately below that and 'please use headphones!' and 'You're automatically muted, please unmute yourself!' below that. Following on, a big dark red button with 'Hang up' written in the same cream color of the background.](1kbts6k_efhtujwuundg2cq.png)
+
+{{PreviousMenuNext("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Creating_a_call", "Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/End_a_call")}}

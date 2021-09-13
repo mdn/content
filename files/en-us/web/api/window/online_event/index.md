@@ -9,56 +9,57 @@ tags:
   - Window
 browser-compat: api.Window.online_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <strong><code>online</code></strong> event of the {{domxref("Window")}} interface is fired when the browser has gained access to the network and the value of {{domxref("Navigator.onLine")}} switches to <code>true</code>.</p>
+The **`online`** event of the {{domxref("Window")}} interface is fired when the browser has gained access to the network and the value of {{domxref("Navigator.onLine")}} switches to `true`.
 
-<div class="note"><p><strong>Note:</strong> This event shouldn't be used to determine the availability of a particular website. Network problems or firewalls might still prevent the website from being reached.</p></div>
+> **Note:** This event shouldn't be used to determine the availability of a particular website. Network problems or firewalls might still prevent the website from being reached.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("GlobalEventHandlers.ononline", "ononline")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{domxref("GlobalEventHandlers.ononline", "ononline")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">// addEventListener version
-window.addEventListener('online', (event) =&gt; {
+```js
+// addEventListener version
+window.addEventListener('online', (event) => {
     console.log("You are now connected to the network.");
 });
 
 // ononline version
-window.ononline = (event) =&gt; {
+window.ononline = (event) => {
   console.log("You are now connected to the network.");
 };
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Window/offline_event"><code>offline</code></a></li>
-</ul>
+- [`offline`](/en-US/docs/Web/API/Window/offline_event)

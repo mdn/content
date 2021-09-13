@@ -2,68 +2,64 @@
 title: RTCPeerConnectionIceEvent()
 slug: Web/API/RTCPeerConnectionIceEvent/RTCPeerConnectionIceEvent
 tags:
-- API
-- Constructor
-- Experimental
-- RTCPeerConnectionIceEvent
-- Reference
-- WebRTC
+  - API
+  - Constructor
+  - Experimental
+  - RTCPeerConnectionIceEvent
+  - Reference
+  - WebRTC
 browser-compat: api.RTCPeerConnectionIceEvent.RTCPeerConnectionIceEvent
 ---
-<p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
+{{APIRef("WebRTC")}}{{SeeCompatTable}}
 
-<p>The <code><strong>RTCPeerConnectionIceEvent()</strong></code> constructor creates a new
-  {{domxref("RTCPeerConnectionIceEvent")}}.</p>
+The **`RTCPeerConnectionIceEvent()`** constructor creates a new
+{{domxref("RTCPeerConnectionIceEvent")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"> var event = new RTCPeerConnectionIceEvent(<em>type</em>, <em>options</em>);</pre>
+```js
+ var event = new RTCPeerConnectionIceEvent(type, options);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>type</code></dt>
-  <dd>Is a {{domxref("DOMString")}} containing the name of the event, like
-    <code>"icecandidate"</code>.</dd>
-  <dt><code>options</code></dt>
-  <dd>A dictionary of type <code>RTCPeerConnectionInit</code>, which may contain one or
+- `type`
+  - : Is a {{domxref("DOMString")}} containing the name of the event, like
+    `"icecandidate"`.
+- `options`
+
+  - : A dictionary of type `RTCPeerConnectionInit`, which may contain one or
     more of the following fields:
-    <ul>
-      <li><code>"candidate"</code> (optional, default is <code>null</code>): A
-        {{domxref("RTCIceCandidate")}} representing the ICE candidate being concerned by
-        the event.  If <code>null</code>, the event indicates the end of candidate
-        gathering.</li>
-      <li><code>"url"</code> (optional, default is <code>null</code>): The URL of the STUN
-        or TURN server which was used to gather the candidate. If the candidate was not
-        gathered by a {{Glossary("STUN")}} or {{Glossary("TURN")}} server, this value must
-        be <code>null</code>.</li>
-      <li><code>"bubbles"</code> (optional, default is <code>false</code>): Inherited from
-        <code>EventInit()</code>, this Boolean option indicates whether or not the event
-        must bubble.</li>
-      <li><code>"cancelable"</code> (optional, default is <code>false</code>, inherited
-        from <code>EventInit()</code>, this Boolean indicates whether or not the event can
-        be canceled.</li>
-    </ul>
-  </dd>
-</dl>
 
-<h3 id="Return_value">Return value</h3>
+    - `"candidate"` (optional, default is `null`): A
+      {{domxref("RTCIceCandidate")}} representing the ICE candidate being concerned by
+      the event.  If `null`, the event indicates the end of candidate
+      gathering.
+    - `"url"` (optional, default is `null`): The URL of the STUN
+      or TURN server which was used to gather the candidate. If the candidate was not
+      gathered by a {{Glossary("STUN")}} or {{Glossary("TURN")}} server, this value must
+      be `null`.
+    - `"bubbles"` (optional, default is `false`): Inherited from
+      `EventInit()`, this Boolean option indicates whether or not the event
+      must bubble.
+    - `"cancelable"` (optional, default is `false`, inherited
+      from `EventInit()`, this Boolean indicates whether or not the event can
+      be canceled.
 
-<p>A newly-created {{domxref("RTCPeerConnectionIceEvent")}}, configured as specified in
-  the provided options.</p>
+### Return value
 
-<h2 id="Specifications">Specifications</h2>
+A newly-created {{domxref("RTCPeerConnectionIceEvent")}}, configured as specified in
+the provided options.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
-  <li>Its usual target: {{domxref("RTCPeerConnection")}}.</li>
-</ul>
+- [WebRTC](/en-US/docs/Web/Guide/API/WebRTC)
+- Its usual target: {{domxref("RTCPeerConnection")}}.

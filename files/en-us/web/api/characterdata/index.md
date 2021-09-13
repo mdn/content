@@ -8,64 +8,58 @@ tags:
   - Node
 browser-compat: api.CharacterData
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>CharacterData</strong></code> abstract interface represents a {{domxref("Node")}} object that contains characters. This is an abstract interface, meaning there aren't any objects of type <code>CharacterData</code>: it is implemented by other interfaces like {{domxref("Text")}}, {{domxref("Comment")}}, or {{domxref("ProcessingInstruction")}}, which aren't abstract.</p>
+The **`CharacterData`** abstract interface represents a {{domxref("Node")}} object that contains characters. This is an abstract interface, meaning there aren't any objects of type `CharacterData`: it is implemented by other interfaces like {{domxref("Text")}}, {{domxref("Comment")}}, or {{domxref("ProcessingInstruction")}}, which aren't abstract.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em><code>CharacterData</code> inherits properties from its parent, {{domxref("Node")}}.</em></p>
+_`CharacterData` inherits properties from its parent, {{domxref("Node")}}._
 
-<dl>
- <dt>{{domxref("CharacterData.data")}}</dt>
- <dd>Is a {{domxref("DOMString")}} representing the textual data contained in this object.</dd>
- <dt>{{domxref("CharacterData.length")}} {{readonlyInline}}</dt>
- <dd>Returns an <code>unsigned long</code> representing the size of the string contained in <code>CharacterData.data</code>.</dd>
- <dt>{{domxref("Element.nextElementSibling")}} {{readonlyInline}}</dt>
- <dd>Returns the {{domxref("Element")}} immediately following the specified one in its parent's children list, or <code>null</code> if the specified element is the last one in the list.</dd>
- <dt>{{domxref("Element.previousElementSibling")}} {{readonlyInline}}</dt>
- <dd>Returns the {{domxref("Element")}} immediately prior to the specified one in its parent's children list, or <code>null</code> if the specified element is the first one in the list.</dd>
-</dl>
+- {{domxref("CharacterData.data")}}
+  - : Is a {{domxref("DOMString")}} representing the textual data contained in this object.
+- {{domxref("CharacterData.length")}} {{readonlyInline}}
+  - : Returns an `unsigned long` representing the size of the string contained in `CharacterData.data`.
+- {{domxref("Element.nextElementSibling")}} {{readonlyInline}}
+  - : Returns the {{domxref("Element")}} immediately following the specified one in its parent's children list, or `null` if the specified element is the last one in the list.
+- {{domxref("Element.previousElementSibling")}} {{readonlyInline}}
+  - : Returns the {{domxref("Element")}} immediately prior to the specified one in its parent's children list, or `null` if the specified element is the first one in the list.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em><code>CharacterData</code> inherits methods from its parent, {{domxref("Node")}}.</em></p>
+_`CharacterData` inherits methods from its parent, {{domxref("Node")}}._
 
-<dl>
- <dt>{{domxref("CharacterData.after()")}}</dt>
- <dd>Inserts a set of {{domxref("Node")}} or {{domxref("DOMString")}} objects in the children list of the
-  <code>CharacterData</code>'s parent, just after the <code>CharacterData</code> object.</dd>
- <dt>{{domxref("CharacterData.appendData()")}}</dt>
- <dd>Appends the given {{domxref("DOMString")}} to the <code>CharacterData.data</code> string; when this method returns, <code>data</code> contains the concatenated {{domxref("DOMString")}}.</dd>
- <dt>{{domxref("CharacterData.before()")}}</dt>
- <dd>Inserts a set of {{domxref("Node")}} or {{domxref("DOMString")}} objects in the children list of the
-  <code>CharacterData</code>'s parent, just before the <code>CharacterData</code> object.</dd>
- <dt>{{domxref("CharacterData.deleteData()")}}</dt>
- <dd>Removes the specified amount of characters, starting at the specified offset, from the <code>CharacterData.data</code> string; when this method returns, <code>data</code> contains the shortened {{domxref("DOMString")}}.</dd>
- <dt>{{domxref("CharacterData.insertData()")}}</dt>
- <dd>Inserts the specified characters, at the specified offset, in the <code>CharacterData.data</code> string; when this method returns, <code>data</code> contains the modified {{domxref("DOMString")}}.</dd>
- <dt>{{domxref("CharacterData.remove()")}}</dt>
- <dd>Removes the object from its parent children list.</dd>
- <dt>{{domxref("CharacterData.replaceData()")}}</dt>
- <dd>Replaces the specified amount of characters, starting at the specified offset, with the specified {{domxref("DOMString")}}; when this method returns, <code>data</code> contains the modified {{domxref("DOMString")}}.</dd>
- <dt>{{DOMxRef("CharacterData.replaceWith()")}}</dt>
- <dd>Replaces the characters in the children list of its parent with a set of {{domxref("Node")}} or {{domxref("DOMString")}} objects.</dd>
- <dt>{{domxref("CharacterData.substringData()")}}</dt>
- <dd>Returns a {{domxref("DOMString")}} containing the part of <code>CharacterData.data</code> of the specified length and starting at the specified offset.</dd>
-</dl>
+- {{domxref("CharacterData.after()")}}
+  - : Inserts a set of {{domxref("Node")}} or {{domxref("DOMString")}} objects in the children list of the
+    `CharacterData`'s parent, just after the `CharacterData` object.
+- {{domxref("CharacterData.appendData()")}}
+  - : Appends the given {{domxref("DOMString")}} to the `CharacterData.data` string; when this method returns, `data` contains the concatenated {{domxref("DOMString")}}.
+- {{domxref("CharacterData.before()")}}
+  - : Inserts a set of {{domxref("Node")}} or {{domxref("DOMString")}} objects in the children list of the
+    `CharacterData`'s parent, just before the `CharacterData` object.
+- {{domxref("CharacterData.deleteData()")}}
+  - : Removes the specified amount of characters, starting at the specified offset, from the `CharacterData.data` string; when this method returns, `data` contains the shortened {{domxref("DOMString")}}.
+- {{domxref("CharacterData.insertData()")}}
+  - : Inserts the specified characters, at the specified offset, in the `CharacterData.data` string; when this method returns, `data` contains the modified {{domxref("DOMString")}}.
+- {{domxref("CharacterData.remove()")}}
+  - : Removes the object from its parent children list.
+- {{domxref("CharacterData.replaceData()")}}
+  - : Replaces the specified amount of characters, starting at the specified offset, with the specified {{domxref("DOMString")}}; when this method returns, `data` contains the modified {{domxref("DOMString")}}.
+- {{DOMxRef("CharacterData.replaceWith()")}}
+  - : Replaces the characters in the children list of its parent with a set of {{domxref("Node")}} or {{domxref("DOMString")}} objects.
+- {{domxref("CharacterData.substringData()")}}
+  - : Returns a {{domxref("DOMString")}} containing the part of `CharacterData.data` of the specified length and starting at the specified offset.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</a>.</li>
-</ul>
+- [The DOM interfaces index](/en-US/docs/Web/API/Document_Object_Model).

@@ -10,48 +10,48 @@ tags:
   - importScripts
 browser-compat: api.WorkerGlobalScope.importScripts
 ---
-<p>{{APIRef("Web Workers API")}}</p>
+{{APIRef("Web Workers API")}}
 
-<p>The <code><strong>importScripts()</strong></code> method of the {{domxref("WorkerGlobalScope")}} interface synchronously imports one or more scripts into the worker's scope.</p>
+The **`importScripts()`** method of the {{domxref("WorkerGlobalScope")}} interface synchronously imports one or more scripts into the worker's scope.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">self.importScripts('foo.js');
-self.importScripts('foo.js', 'bar.js', ...);</pre>
+```js
+self.importScripts('foo.js');
+self.importScripts('foo.js', 'bar.js', ...);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>A comma-separated list of {{domxref("DOMString")}} objects representing the scripts to be imported. These paths are relative to <em>html document base URL</em>.</p>
+A comma-separated list of {{domxref("DOMString")}} objects representing the scripts to be imported. These paths are relative to _html document base URL_.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><em>None.</em></p>
+_None._
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
- <dt><code>NetworkError</code></dt>
- <dd>Imported scripts were not served with a valid JavaScript MIME type (i.e. <code>text/javascript</code>).</dd>
-</dl>
+- `NetworkError`
+  - : Imported scripts were not served with a valid JavaScript MIME type (i.e. `text/javascript`).
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>If you had some functionality written in a separate script called <code>foo.js</code> that you wanted to use inside worker.js, you could import it using the following line:</p>
+If you had some functionality written in a separate script called `foo.js` that you wanted to use inside worker.js, you could import it using the following line:
 
-<pre class="brush: js">importScripts('foo.js');</pre>
+```js
+importScripts('foo.js');
+```
 
-<p><code>importScripts()</code> and <code>self.importScripts()</code> are effectively equivalent — both represent <code>importScripts()</code> being called from inside the worker's inner scope.</p>
+`importScripts()` and `self.importScripts()` are effectively equivalent — both represent `importScripts()` being called from inside the worker's inner scope.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("WorkerGlobalScope")}}</li>
-</ul>
+- {{domxref("WorkerGlobalScope")}}

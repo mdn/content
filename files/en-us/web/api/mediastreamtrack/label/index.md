@@ -11,32 +11,31 @@ tags:
   - WebRTC
 browser-compat: api.MediaStreamTrack.label
 ---
-<div>{{APIRef("Media Capture and Streams")}}</div>
+{{APIRef("Media Capture and Streams")}}
 
-<p>The <code><strong>MediaStreamTrack.label</strong></code>
-    read-only property returns a {{domxref("DOMString")}} containing a {{glossary("user
+The **`MediaStreamTrack.label`**
+read-only property returns a {{domxref("DOMString")}} containing a {{glossary("user
     agent")}}-assigned label that identifies the track source, as in
-    <code>"internal microphone"</code>.</p>
+`"internal microphone"`.
 
-<p>The string may be left empty and is empty
-  as long as no source has been connected. When the track is deassociated from its source,
-  the label is not changed.</p>
+The string may be left empty and is empty
+as long as no source has been connected. When the track is deassociated from its source,
+the label is not changed.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">const <em>label</em> = <em>track</em>.label</pre>
+```js
+const label = track.label
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
-</ul>
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)

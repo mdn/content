@@ -12,28 +12,32 @@ tags:
   - onchange
 browser-compat: api.PermissionStatus.onchange
 ---
-<p>{{APIRef("Permissions API")}}{{SeeCompatTable}}</p>
+{{APIRef("Permissions API")}}{{SeeCompatTable}}
 
-<p>The <code><strong>onchange</strong></code> event handler of the {{domxref("PermissionStatus")}} interface is called whenever the {{domxref("PermissionStatus.state")}} property changes.</p>
+The **`onchange`** event handler of the {{domxref("PermissionStatus")}} interface is called whenever the {{domxref("PermissionStatus.state")}} property changes.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">PermissionStatus.onchange = function() { ... }
-PermissionStatus.addEventListener('change', function() { ... })</pre>
+```js
+PermissionStatus.onchange = function() { ... }
+PermissionStatus.addEventListener('change', function() { ... })
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">navigator.permissions.query({name:'geolocation'}).then(function(permissionStatus) {
+```js
+navigator.permissions.query({name:'geolocation'}).then(function(permissionStatus) {
   console.log('geolocation permission state is ', permissionStatus.state);
   permissionStatus.onchange = function() {
     console.log('geolocation permission state has changed to ', this.state);
   };
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

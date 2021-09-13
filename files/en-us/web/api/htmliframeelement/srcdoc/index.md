@@ -3,20 +3,22 @@ title: HTMLIFrameElement.srcdoc
 slug: Web/API/HTMLIFrameElement/srcdoc
 browser-compat: api.HTMLIFrameElement.srcdoc
 ---
-<div>{{APIRef('HTMLIFrameElement')}}</div>
+{{APIRef('HTMLIFrameElement')}}
 
-<p>The <strong><code>srcdoc</code></strong> property of the {{domxref("HTMLIFrameElement")}} specifies the content of the page.</p>
+The **`srcdoc`** property of the {{domxref("HTMLIFrameElement")}} specifies the content of the page.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var iframe = document.createElement("iframe");
-iframe.srcdoc = `&lt;!DOCTYPE html&gt;&lt;p&gt;Hello World!&lt;/p&gt;`;
-document.body.appendChild(iframe);</pre>
+```js
+var iframe = document.createElement("iframe");
+iframe.srcdoc = `<!DOCTYPE html><p>Hello World!</p>`;
+document.body.appendChild(iframe);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

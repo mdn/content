@@ -2,35 +2,36 @@
 title: USBDevice.deviceVersionSubminor
 slug: Web/API/USBDevice/deviceVersionSubminor
 tags:
-- API
-- Property
-- Reference
-- USB
-- USBDevice
-- WebUSB
-- WebUSB API
-- deviceVersionSubminor
+  - API
+  - Property
+  - Reference
+  - USB
+  - USBDevice
+  - WebUSB
+  - WebUSB API
+  - deviceVersionSubminor
 browser-compat: api.USBDevice.deviceVersionSubminor
 ---
-<p>{{SeeCompatTable}}{{APIRef("WebUSB API")}}</p>
+{{SeeCompatTable}}{{APIRef("WebUSB API")}}
 
-<p>The <strong><code>deviceVersionSubminor</code></strong> read only property of the
-  {{domxref("USBDevice")}} interface the patch version number of the device in a semantic
-  versioning scheme.</p>
+The **`deviceVersionSubminor`** read only property of the
+{{domxref("USBDevice")}} interface the patch version number of the device in a semantic
+versioning scheme.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var serialNumber = USBDevice.deviceVersionSubminor</pre>
+```js
+var serialNumber = USBDevice.deviceVersionSubminor
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A number.</p>
+A number.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

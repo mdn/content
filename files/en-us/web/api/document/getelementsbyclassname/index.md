@@ -2,145 +2,156 @@
 title: Document.getElementsByClassName()
 slug: Web/API/Document/getElementsByClassName
 tags:
-- API
-- DOM
-- DOM Element Methods
-- Gecko
-- HTML5
-- Method
-- Reference
+  - API
+  - DOM
+  - DOM Element Methods
+  - Gecko
+  - HTML5
+  - Method
+  - Reference
 browser-compat: api.Document.getElementsByClassName
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>getElementsByClassName</code></strong> method of
-  {{domxref("Document")}} interface returns an array-like object
-    of all child elements which have all of the given class name(s).<p>
+The **`getElementsByClassName`** method of
+{{domxref("Document")}} interface returns an array-like object
+of all child elements which have all of the given class name(s).
 
-<p>When called on
-  the {{domxref("document")}} object, the complete document is searched, including the
-  root node. You may also call {{domxref("Element.getElementsByClassName",
+When called on
+the {{domxref("document")}} object, the complete document is searched, including the
+root node. You may also call {{domxref("Element.getElementsByClassName",
   "getElementsByClassName()")}} on any element; it will return only elements which are
-  descendants of the specified root element with the given class name(s).</p>
+descendants of the specified root element with the given class name(s).
 
-<div class="notecard warning">
-  <p><strong>Warning:</strong> This is a live {{domxref("HTMLCollection")}}. Changes in the DOM will
-    reflect in the array as the changes occur. If an element selected by this array no
-    longer qualifies for the selector, it will automatically be removed. Be aware of this
-    for iteration purposes.</p>
-</div>
+> **Warning:** This is a live {{domxref("HTMLCollection")}}. Changes in the DOM will
+> reflect in the array as the changes occur. If an element selected by this array no
+> longer qualifies for the selector, it will automatically be removed. Be aware of this
+> for iteration purposes.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>elements</var> = document.getElementsByClassName(<var>names</var>); // or:
-var <var>elements</var> = <var>rootElement</var>.getElementsByClassName(<var>names</var>);</pre>
+```js
+var elements = document.getElementsByClassName(names); // or:
+var elements = rootElement.getElementsByClassName(names);
+```
 
-<ul>
-  <li><var>elements</var> is a live {{domxref("HTMLCollection")}} of found elements.</li>
-  <li><var>names</var> is a string representing the class name(s) to match; multiple class
-    names are separated by whitespace</li>
-  <li>{{domxref("Element.getElementsByClassName", "getElementsByClassName")}} can be
-    called on any element, not only on the {{domxref("document")}}. The element on which
-    it is called will be used as the root of the search.</li>
-</ul>
+- _elements_ is a live {{domxref("HTMLCollection")}} of found elements.
+- _names_ is a string representing the class name(s) to match; multiple class
+  names are separated by whitespace
+- {{domxref("Element.getElementsByClassName", "getElementsByClassName")}} can be
+  called on any element, not only on the {{domxref("document")}}. The element on which
+  it is called will be used as the root of the search.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Get all elements that have a class of 'test':</p>
+Get all elements that have a class of 'test':
 
-<pre class="brush: js">document.getElementsByClassName('test')</pre>
+```js
+document.getElementsByClassName('test')
+```
 
-<p>Get all elements that have both the 'red' and 'test' classes:</p>
+Get all elements that have both the 'red' and 'test' classes:
 
-<pre class="brush: js">document.getElementsByClassName('red test')</pre>
+```js
+document.getElementsByClassName('red test')
+```
 
-<p>Get all elements that have a class of 'test', inside of an element that has the ID of
-  'main':</p>
+Get all elements that have a class of 'test', inside of an element that has the ID of
+'main':
 
-<pre
-  class="brush: js">document.getElementById('main').getElementsByClassName('test')</pre>
+```js
+document.getElementById('main').getElementsByClassName('test')
+```
 
-<p>Get the first element with a class of 'test', or <code>undefined</code> if there is no
-  matching element:</p>
+Get the first element with a class of 'test', or `undefined` if there is no
+matching element:
 
-<pre class="brush: js">document.getElementsByClassName('test')[0]</pre>
+```js
+document.getElementsByClassName('test')[0]
+```
 
-<p>We can also use methods of Array.prototype on any {{domxref("HTMLCollection")}} by
-  passing the <code>HTMLCollection</code> as the method's <var>this</var> value. Here
-  we'll find all div elements that have a class of 'test':</p>
+We can also use methods of Array.prototype on any {{domxref("HTMLCollection")}} by
+passing the `HTMLCollection` as the method's _this_ value. Here
+we'll find all div elements that have a class of 'test':
 
-<pre class="brush: js">var testElements = document.getElementsByClassName('test');
+```js
+var testElements = document.getElementsByClassName('test');
 var testDivs = Array.prototype.filter.call(testElements, function(testElement){
   return testElement.nodeName === 'DIV';
-});</pre>
+});
+```
 
-<h3 id="Get_the_first_element_whose_class_is_test">Get the first element whose class is
-  'test'</h3>
+### Get the first element whose class is 'test'
 
-<p>This is the most commonly used method of operation.</p>
+This is the most commonly used method of operation.
 
-<pre class="brush: html">&lt;html&gt;
-&lt;body&gt;
-    &lt;div id="parent-id"&gt;
-        &lt;p&gt;hello world 1&lt;/p&gt;
-        &lt;p class="test"&gt;hello world 2&lt;/p&gt;
-        &lt;p&gt;hello world 3&lt;/p&gt;
-        &lt;p&gt;hello world 4&lt;/p&gt;
-    &lt;/div&gt;
+```html
+<html>
+<body>
+    <div id="parent-id">
+        <p>hello world 1</p>
+        <p class="test">hello world 2</p>
+        <p>hello world 3</p>
+        <p>hello world 4</p>
+    </div>
 
-    &lt;script&gt;
+    <script>
         var parentDOM = document.getElementById("parent-id");
 
         var test = parentDOM.getElementsByClassName("test"); // a list of matching elements, *not* the element itself
         console.log(test); //HTMLCollection[1]
 
         var testTarget = parentDOM.getElementsByClassName("test")[0]; // the first element, as we wanted
-        console.log(testTarget); //&lt;p class="test"&gt;hello world 2&lt;/p&gt;
-    &lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+        console.log(testTarget); //<p class="test">hello world 2</p>
+    </script>
+</body>
+</html>
+```
 
-<h3 id="Multiple_Classes_Example">Multiple Classes Example</h3>
+### Multiple Classes Example
 
-<p><code>document.getElementsByClassName</code> works very similarly to
-  <code>document.querySelector</code> and <code>document.querySelectorAll</code>. Only
-  elements with ALL of the classNames specified are selected.</p>
+`document.getElementsByClassName` works very similarly to
+`document.querySelector` and `document.querySelectorAll`. Only
+elements with ALL of the classNames specified are selected.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;span class="orange fruit"&gt;Orange Fruit&lt;/span&gt;
-&lt;span class="orange juice"&gt;Orange Juice&lt;/span&gt;
-&lt;span class="apple juice"&gt;Apple Juice&lt;/span&gt;
-&lt;span class="foo bar"&gt;Something Random&lt;/span&gt;
-&lt;textarea id="resultArea" style="width:98%;height:7em"&gt;&lt;/textarea&gt;</pre>
+```html
+<span class="orange fruit">Orange Fruit</span>
+<span class="orange juice">Orange Juice</span>
+<span class="apple juice">Apple Juice</span>
+<span class="foo bar">Something Random</span>
+<textarea id="resultArea" style="width:98%;height:7em"></textarea>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">// getElementsByClassName only selects elements that have both given classes
+```js
+// getElementsByClassName only selects elements that have both given classes
 var allOrangeJuiceByClass = document.getElementsByClassName('orange juice');
 var result = "document.getElementsByClassName('orange juice')";
-for (var i=0, len=allOrangeJuiceByClass.length|0; i&lt;len; i=i+1|0) {
+for (var i=0, len=allOrangeJuiceByClass.length|0; i<len; i=i+1|0) {
     result += "\n  " + allOrangeJuiceByClass[i].textContent;
 }
 
 // querySelector only selects full complete matches
 var allOrangeJuiceQuery = document.querySelectorAll('.orange.juice');
 result += "\n\ndocument.querySelectorAll('.orange.juice')";
-for (var i=0, len=allOrangeJuiceQuery.length|0; i&lt;len; i=i+1|0) {
+for (var i=0, len=allOrangeJuiceQuery.length|0; i<len; i=i+1|0) {
     result += "\n  " + allOrangeJuiceQuery[i].textContent;
 }
 
-document.getElementById("resultArea").value = result;</pre>
+document.getElementById("resultArea").value = result;
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Multiple_Classes_Example', '100%', 200)}}</p>
+{{EmbedLiveSample('Multiple_Classes_Example', '100%', 200)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

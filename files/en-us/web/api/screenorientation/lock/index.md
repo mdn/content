@@ -2,54 +2,51 @@
 title: ScreenOrientation.lock()
 slug: Web/API/ScreenOrientation/lock
 tags:
-- API
-- Orientation
-- Property
-- Reference
-- Screen Orientation API
-- ScreenOrientation
-- lock
+  - API
+  - Orientation
+  - Property
+  - Reference
+  - Screen Orientation API
+  - ScreenOrientation
+  - lock
 browser-compat: api.ScreenOrientation.lock
 ---
-<div>{{APIRef("Screen Orientation")}}</div>
+{{APIRef("Screen Orientation")}}
 
-<p>The <strong><code>lock()</code></strong> property of the
-	{{domxref("ScreenOrientation")}} interface locks the orientation of the containing
-	document to its default orientation.</p>
+The **`lock()`** property of the
+{{domxref("ScreenOrientation")}} interface locks the orientation of the containing
+document to its default orientation.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">screen.orientation.lock(orientation)</pre>
+```js
+screen.orientation.lock(orientation)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-	<dt>orientation</dt>
-	<dd>An orientation lock type. One of the following:</dd>
-</dl>
+- orientation
+  - : An orientation lock type. One of the following:
 
-<ul>
-	<li><code>"any"</code></li>
-	<li><code>"natural"</code></li>
-	<li><code>"landscape"</code></li>
-	<li><code>"portrait"</code></li>
-	<li><code>"portrait-primary"</code></li>
-	<li><code>"portrait-secondary"</code></li>
-	<li><code>"landscape-primary"</code></li>
-	<li><code>"landscape-secondary"</code></li>
-</ul>
+<!---->
 
-<h3 id="Return_value">Return value</h3>
+- `"any"`
+- `"natural"`
+- `"landscape"`
+- `"portrait"`
+- `"portrait-primary"`
+- `"portrait-secondary"`
+- `"landscape-primary"`
+- `"landscape-secondary"`
 
-<p>A {{jsxref("Promise")}}.</p>
+### Return value
 
-<h2 id="Specifications">Specifications</h2>
+A {{jsxref("Promise")}}.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
-
-	<p>{{Compat}}</p>
-</div>
+{{Compat}}

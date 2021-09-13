@@ -2,42 +2,44 @@
 title: StyleSheet.disabled
 slug: Web/API/StyleSheet/disabled
 tags:
-- API
-- CSS
-- CSSOM
-- Disabled
-- Property
-- Reference
+  - API
+  - CSS
+  - CSSOM
+  - Disabled
+  - Property
+  - Reference
 browser-compat: api.StyleSheet.disabled
 ---
-<div>{{APIRef("CSSOM")}}</div>
+{{APIRef("CSSOM")}}
 
-<p>The <code><strong>disabled</strong></code> property of the
-  {{domxref("StyleSheet")}} interface determines whether the style sheet is prevented from
-  applying to the document.</p>
+The **`disabled`** property of the
+{{domxref("StyleSheet")}} interface determines whether the style sheet is prevented from
+applying to the document.
 
-<p>A style sheet may be disabled by manually setting this property to <code>true</code> or
-  if it's an inactive <a href="/en-US/docs/Web/CSS/Alternative_style_sheets">alternative
-    style sheet</a>. Note that <code>disabled == false</code> does not guarantee the style
-  sheet is applied (it could be removed from the document, for instance).</p>
+A style sheet may be disabled by manually setting this property to `true` or
+if it's an inactive [alternative
+style sheet](/en-US/docs/Web/CSS/Alternative_style_sheets). Note that `disabled == false` does not guarantee the style
+sheet is applied (it could be removed from the document, for instance).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>bool</em> = stylesheet.disabled
-</pre>
+```js
+bool = stylesheet.disabled
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">// If the stylesheet is disabled...
+```js
+// If the stylesheet is disabled...
 if (stylesheet.disabled) {
   // ... apply styles in-line.
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

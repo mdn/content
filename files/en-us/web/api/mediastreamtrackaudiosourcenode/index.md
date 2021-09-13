@@ -3,63 +3,64 @@ title: MediaStreamTrackAudioSourceNode
 slug: Web/API/MediaStreamTrackAudioSourceNode
 browser-compat: api.MediaStreamTrackAudioSourceNode
 ---
-<div>{{APIRef("Web Audio API")}}</div>
+{{APIRef("Web Audio API")}}
 
-<p>The <strong><code>MediaStreamTrackAudioSourceNode</code></strong> interface is a type of {{domxref("AudioNode")}} which represents a source of audio data taken from a specific {{domxref("MediaStreamTrack")}} obtained through the <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> or <a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams</a> APIs.</p>
+The **`MediaStreamTrackAudioSourceNode`** interface is a type of {{domxref("AudioNode")}} which represents a source of audio data taken from a specific {{domxref("MediaStreamTrack")}} obtained through the [WebRTC](/en-US/docs/Web/API/WebRTC_API) or [Media Capture and Streams](/en-US/docs/Web/API/Media_Streams_API) APIs.
 
-<p>The audio itself might be input from a microphone or other audio sampling device, or might be received through a {{domxref("RTCPeerConnection")}}, among other posible options.</p>
+The audio itself might be input from a microphone or other audio sampling device, or might be received through a {{domxref("RTCPeerConnection")}}, among other posible options.
 
-<p>A <code>MediaStreamTrackAudioSourceNode</code> has no inputs and exactly one output, and is created using the {{domxref("AudioContext.createMediaStreamTrackSource()")}} method. This interface is similar to {{domxref("MediaStreamAudioSourceNode")}}, except it lets you specifically state the track to use, rather than assuming the first audio track on a stream.</p>
+A `MediaStreamTrackAudioSourceNode` has no inputs and exactly one output, and is created using the {{domxref("AudioContext.createMediaStreamTrackSource()")}} method. This interface is similar to {{domxref("MediaStreamAudioSourceNode")}}, except it lets you specifically state the track to use, rather than assuming the first audio track on a stream.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Number of inputs</th>
-   <td><code>0</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Number of outputs</th>
-   <td><code>1</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Channel count</th>
-   <td>defined by the first audio {{domxref("MediaStreamTrack")}} passed to the {{domxref("AudioContext.createMediaStreamTrackSource()")}} method that created it.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Number of inputs</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Number of outputs</th>
+      <td><code>1</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Channel count</th>
+      <td>
+        defined by the first audio {{domxref("MediaStreamTrack")}}
+        passed to the
+        {{domxref("AudioContext.createMediaStreamTrackSource()")}}
+        method that created it.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("MediaStreamTrackAudioSourceNode.MediaStreamTrackAudioSourceNode", "new MediaStreamTrackAudioSourceNode()")}}</dt>
- <dd>Creates a new <code>MediaStreamTrackAudioSourceNode</code> object instance with the specified options.</dd>
-</dl>
+- {{domxref("MediaStreamTrackAudioSourceNode.MediaStreamTrackAudioSourceNode", "new MediaStreamTrackAudioSourceNode()")}}
+  - : Creates a new `MediaStreamTrackAudioSourceNode` object instance with the specified options.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>The <code>MediaStreamTrackAudioSourceNode</code> interface has no properties of its own; however, it inherits the properties of its parent, {{domxref("AudioNode")}}.</em></p>
+_The `MediaStreamTrackAudioSourceNode` interface has no properties of its own; however, it inherits the properties of its parent, {{domxref("AudioNode")}}._
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Inherits methods from its parent, {{domxref("AudioNode")}}</em>.</p>
+_Inherits methods from its parent, {{domxref("AudioNode")}}_.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See <a href="/en-US/docs/Web/API/AudioContext/createMediaStreamSource#example"><code>AudioContext.createMediaStreamSource()</code></a> for example code that uses this object.</p>
+See [`AudioContext.createMediaStreamSource()`](/en-US/docs/Web/API/AudioContext/createMediaStreamSource#example) for example code that uses this object.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
- <li><a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams API (Media Streams)</a></li>
- <li>{{domxref("MediaStreamAudioSourceNode")}}</li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+- [Media Capture and Streams API (Media Streams)](/en-US/docs/Web/API/Media_Streams_API)
+- {{domxref("MediaStreamAudioSourceNode")}}

@@ -2,83 +2,82 @@
 title: CSS.registerProperty()
 slug: Web/API/CSS/RegisterProperty
 tags:
-- CSS
-- Houdini
-- Reference
+  - CSS
+  - Houdini
+  - Reference
 browser-compat: api.CSS.registerProperty
 ---
-<div>{{SeeCompatTable}}</div>
+{{SeeCompatTable}}
 
-<p>The <code><strong>CSS.registerProperty()</strong></code> method registers
-  {{cssxref('--*', 'custom properties')}}, allowing for property type checking, default
-  values, and properties that do or do not inherit their value.</p>
+The **`CSS.registerProperty()`** method registers
+{{cssxref('--*', 'custom properties')}}, allowing for property type checking, default
+values, and properties that do or do not inherit their value.
 
-<p>Registering a custom property allows you to tell the browser how the custom property
-  should behave; what are allowed types, whether the custom property inherits its value,
-  and what the default value of the custom property is.</p>
+Registering a custom property allows you to tell the browser how the custom property
+should behave; what are allowed types, whether the custom property inherits its value,
+and what the default value of the custom property is.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">CSS.registerProperty(<em>PropertyDefinition</em>);</pre>
+```js
+CSS.registerProperty(PropertyDefinition);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>A <code>PropertyDefinition</code> dictionary object, which can contain the following
-  members:</p>
+A `PropertyDefinition` dictionary object, which can contain the following
+members:
 
-<dl>
-  <dt><code>name</code></dt>
-  <dd>A <code><a href="/en-US/docs/Web/API/DOMString">DOMString</a></code> indicating the
-    name of the property being defined.</dd>
-  <dt><code>syntax</code> {{optional_inline}}</dt>
-  <dd>A <code><a href="/en-US/docs/Web/API/DOMString">DOMString</a></code> representing
-    the expected syntax of the defined property. Defaults to <code>"*"</code>.</dd>
-  <dt><code>inherits</code></dt>
-  <dd>A boolean value defining whether the defined property should be inherited
-    (<code>true</code>), or not (<code>false</code>). Defaults to <code>false</code>.</dd>
-  <dt><code>initialValue</code> {{optional_inline}}</dt>
-  <dd>A <code><a href="/en-US/docs/Web/API/DOMString">DOMString</a></code> representing
-    the initial value of the defined property.</dd>
-</dl>
+- `name`
+  - : A [`DOMString`](/en-US/docs/Web/API/DOMString) indicating the
+    name of the property being defined.
+- `syntax` {{optional_inline}}
+  - : A [`DOMString`](/en-US/docs/Web/API/DOMString) representing
+    the expected syntax of the defined property. Defaults to `"*"`.
+- `inherits`
+  - : A boolean value defining whether the defined property should be inherited
+    (`true`), or not (`false`). Defaults to `false`.
+- `initialValue` {{optional_inline}}
+  - : A [`DOMString`](/en-US/docs/Web/API/DOMString) representing
+    the initial value of the defined property.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>undefined</code>.</p>
+`undefined`.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt><code>InvalidModificationError</code></dt>
-  <dd>The given <code>name</code> has already been registered.</dd>
-  <dt><code>SyntaxError</code></dt>
-  <dd>The given <code>name</code> isn't a valid custom property name (starts with two
-    dashes, e.g. <code>--foo</code>).</dd>
-  <dt><code>TypeError</code></dt>
-  <dd>The required <code>name</code> and/or <code>inherits</code> dictionary members were
-    not provided.</dd>
-</dl>
+- `InvalidModificationError`
+  - : The given `name` has already been registered.
+- `SyntaxError`
+  - : The given `name` isn't a valid custom property name (starts with two
+    dashes, e.g. `--foo`).
+- `TypeError`
+  - : The required `name` and/or `inherits` dictionary members were
+    not provided.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following will register a {{cssxref('--*', 'custom property')}},
-  <code>--my-color</code>, using <code>registerProperty()</code>, as a color, give it a
-  default value, and have it not inherit its value:</p>
+The following will register a {{cssxref('--*', 'custom property')}},
+`--my-color`, using `registerProperty()`, as a color, give it a
+default value, and have it not inherit its value:
 
-<pre class="brush: js">window.CSS.registerProperty({
+```js
+window.CSS.registerProperty({
   name: '--my-color',
-  syntax: '&lt;color&gt;',
+  syntax: '<color>',
   inherits: false,
   initialValue: '#c0ffee',
 });
-</pre>
+```
 
-<p>In this example, the custom property <code>--my-color</code> has been registered using
-  the syntax <code>&lt;color&gt;</code> . We can now use that property to transition a
-  gradient on hover or focus. Notice that with the registered property the transition
-  works, but that it doesn't with the unregistered property!</p>
+In this example, the custom property `--my-color` has been registered using
+the syntax `<color>` . We can now use that property to transition a
+gradient on hover or focus. Notice that with the registered property the transition
+works, but that it doesn't with the unregistered property!
 
-<pre class="brush: css">.registered {
+```css
+.registered {
   --my-color: #c0ffee;
   background-image: linear-gradient(to right, #fff, var(--my-color));
   transition: --my-color 1s ease-in-out;
@@ -101,31 +100,31 @@ browser-compat: api.CSS.registerProperty
 }
 button {
   font-size: 3vw;
-}</pre>
+}
+```
 
-<p>We can add these styles to some buttons:</p>
+We can add these styles to some buttons:
 
-<pre class="brush: html">&lt;button class="registered"&gt;Background Registered&lt;/button&gt;
-&lt;button class="unregistered"&gt;Background Not Registered&lt;/button&gt;
-</pre>
+```html
+<button class="registered">Background Registered</button>
+<button class="unregistered">Background Not Registered</button>
+```
 
-<p>{{EmbedLiveSample("Examples", 320, 320)}}</p>
+{{EmbedLiveSample("Examples", 320, 320)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/CSS_Properties_and_Values_API/guide">Using the CSS
-      properties and values API</a></li>
-  <li>{{DOMxRef("CSS")}}</li>
-  <li>{{DOMxRef("CSS.supports()")}}</li>
-  <li>{{DOMxRef("CSS.escape()")}}</li>
-  <li>{{DOMxRef("CSS.factory_functions", 'CSS factory functions')}}</li>
-</ul>
+- [Using the CSS
+  properties and values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API/guide)
+- {{DOMxRef("CSS")}}
+- {{DOMxRef("CSS.supports()")}}
+- {{DOMxRef("CSS.escape()")}}
+- {{DOMxRef("CSS.factory_functions", 'CSS factory functions')}}

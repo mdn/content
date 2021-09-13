@@ -9,48 +9,47 @@ tags:
   - TrustedTypePolicyFactory
 browser-compat: api.TrustedTypePolicyFactory.getAttributeType
 ---
-<div>{{DefaultAPISidebar("Trusted Types API")}}</div>
+{{DefaultAPISidebar("Trusted Types API")}}
 
-<p>The <strong><code>getAttributeType()</code></strong> method of the {{domxref("TrustedTypePolicyFactory")}} interface allows web developers to check if a Trusted Type is required for an element, and if so which Trusted Type is used.</p>
+The **`getAttributeType()`** method of the {{domxref("TrustedTypePolicyFactory")}} interface allows web developers to check if a Trusted Type is required for an element, and if so which Trusted Type is used.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <var>attributeType</var> = <var>TrustedTypePolicyFactory</var>.getAttributeType(<var>tagName</var>,<var>attribute</var>[,<var>elementNs</var>,<var>attrNs</var>]);</pre>
+    var attributeType = TrustedTypePolicyFactory.getAttributeType(tagName,attribute[,elementNs,attrNs]);
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>tagName</code></dt>
-  <dd>A {{domxref("DOMString","string")}} containing the name of an HTML tag.</dd>
-  <dt><code>attribute</code></dt>
-  <dd>A {{domxref("DOMString","string")}} containing an attribute.</dd>
-  <dt><code>elementNs</code>{{optional_inline}}</dt>
-  <dd>A {{domxref("DOMString","string")}} containing a namespace, if empty defaults to the HTML namespace.</dd>
-  <dt><code>attrNs</code>{{optional_inline}}</dt>
-  <dd>A {{domxref("DOMString","string")}} containing a namespace, if empty defaults to null.</dd>
-</dl>
+- `tagName`
+  - : A {{domxref("DOMString","string")}} containing the name of an HTML tag.
+- `attribute`
+  - : A {{domxref("DOMString","string")}} containing an attribute.
+- `elementNs`{{optional_inline}}
+  - : A {{domxref("DOMString","string")}} containing a namespace, if empty defaults to the HTML namespace.
+- `attrNs`{{optional_inline}}
+  - : A {{domxref("DOMString","string")}} containing a namespace, if empty defaults to null.
 
-<h3 id="Returns">Return value</h3>
+### Return value
 
-<p>A {{domxref("DOMString","string")}} with one of:</p>
-<ul>
-  <li><code>"TrustedHTML"</code></li>
-  <li><code>"TrustedScript"</code></li>
-  <li><code>"TrustedScriptURL"</code></li>
-</ul>
+A {{domxref("DOMString","string")}} with one of:
 
-<p>Or, null.</p>
+- `"TrustedHTML"`
+- `"TrustedScript"`
+- `"TrustedScriptURL"`
 
-<h2 id="Examples">Examples</h2>
+Or, null.
 
-<p>In this example, passing the {{htmlelement("script")}} element and {{htmlattrxref("src")}} attribute to <code>getAttributeType</code> returns "TrustedScriptURL".</p>
+## Examples
 
-<pre class="brush: js">console.log(trustedTypes.getAttributeType('script', 'src')); // "TrustedScriptURL"</pre>
+In this example, passing the {{htmlelement("script")}} element and {{htmlattrxref("src")}} attribute to `getAttributeType` returns "TrustedScriptURL".
 
-<h2 id="Specifications">Specifications</h2>
+```js
+console.log(trustedTypes.getAttributeType('script', 'src')); // "TrustedScriptURL"
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

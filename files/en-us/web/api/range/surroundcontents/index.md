@@ -8,63 +8,63 @@ tags:
   - Range
 browser-compat: api.Range.surroundContents
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<p>The <strong><code>Range.surroundContents()</code></strong> method moves content of the
-  {{ domxref("Range") }} into a new node, placing the new node at the start of the
-  specified range.</p>
+The **`Range.surroundContents()`** method moves content of the
+{{ domxref("Range") }} into a new node, placing the new node at the start of the
+specified range.
 
-<p>This method is nearly equivalent to
-  <code>newNode.appendChild(<a href="/en-US/docs/Web/API/Range/extractContents">range.extractContents()</a>); <a href="/en-US/docs/Web/API/Range/insertNode">range.insertNode</a>(newNode)</code>.
-  After surrounding, the boundary points of the <code>range</code> include
-  <code>newNode</code>.</p>
+This method is nearly equivalent to
+`newNode.appendChild(range.extractContents()); range.insertNode(newNode)`.
+After surrounding, the boundary points of the `range` include
+`newNode`.
 
-<p>An exception will be thrown, however, if the {{ domxref("Range") }} splits a non-{{
+An exception will be thrown, however, if the {{ domxref("Range") }} splits a non-{{
   domxref("Text") }} node with only one of its boundary points. That is, unlike the
-  alternative above, if there are partially selected nodes, they will not be cloned and
-  instead the operation will fail.</p>
+alternative above, if there are partially selected nodes, they will not be cloned and
+instead the operation will fail.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>range</em>.surroundContents(<em>newParent</em>);
-</pre>
+```js
+range.surroundContents(newParent);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>newParent</code></dt>
-  <dd>A {{ domxref("Node") }} with which to surround the contents.</dd>
-</dl>
+- `newParent`
+  - : A {{ domxref("Node") }} with which to surround the contents.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre
-  class="brush: html">&lt;span class="header-text"&gt;Put this in a headline&lt;/span&gt;</pre>
+```html
+<span class="header-text">Put this in a headline</span>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">const range = document.createRange();
+```js
+const range = document.createRange();
 const newParent = document.createElement('h1');
 
 range.selectNode(document.querySelector('.header-text'));
-range.surroundContents(newParent);</pre>
+range.surroundContents(newParent);
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</a></li>
-</ul>
+- [The DOM interfaces index](/en-US/docs/Web/API/Document_Object_Model)

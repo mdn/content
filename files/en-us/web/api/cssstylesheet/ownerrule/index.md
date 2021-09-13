@@ -2,79 +2,80 @@
 title: CSSStyleSheet.ownerRule
 slug: Web/API/CSSStyleSheet/ownerRule
 tags:
-- '@import'
-- API
-- CSS
-- CSSOM
-- CSSOM API
-- CSSStyleSheet
-- Layout
-- Object Model
-- Property
-- Read-only
-- Reference
-- StyleSheet
-- import
-- ownerRule
+  - '@import'
+  - API
+  - CSS
+  - CSSOM
+  - CSSOM API
+  - CSSStyleSheet
+  - Layout
+  - Object Model
+  - Property
+  - Read-only
+  - Reference
+  - StyleSheet
+  - import
+  - ownerRule
 browser-compat: api.CSSStyleSheet.ownerRule
 ---
-<p>{{APIRef("CSSOM")}}</p>
+{{APIRef("CSSOM")}}
 
-<p>The read-only {{domxref("CSSStyleSheet")}} property
-    <code><strong>ownerRule</strong></code> returns the {{domxref("CSSImportRule")}}
-    corresponding to the {{cssxref("@import")}} at-rule which imported the stylesheet into
-    the document. If the stylesheet wasn't imported into the document using
-  <code>@import</code>, the returned value is <code>null</code>.</p>
+The read-only {{domxref("CSSStyleSheet")}} property
+**`ownerRule`** returns the {{domxref("CSSImportRule")}}
+corresponding to the {{cssxref("@import")}} at-rule which imported the stylesheet into
+the document. If the stylesheet wasn't imported into the document using
+`@import`, the returned value is `null`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>ownerRule</em> = <em>cssStyleSheet</em>.ownerRule;</pre>
+```js
+var ownerRule = cssStyleSheet.ownerRule;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("CSSImportRule")}} corresponding to the {{cssxref("@import")}} rule which
-  imported the stylesheet into the document. If the stylesheet wasn't imported into the
-  document using <code>@import</code>, the returned value is <code>null</code>.</p>
+A {{domxref("CSSImportRule")}} corresponding to the {{cssxref("@import")}} rule which
+imported the stylesheet into the document. If the stylesheet wasn't imported into the
+document using `@import`, the returned value is `null`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This snippet of code looks for rules which were not imported into the document using an
-  <code>@import</code> at-rule.</p>
+This snippet of code looks for rules which were not imported into the document using an
+`@import` at-rule.
 
-<pre class="brush: js">let ruleList = document.styleSheets[0].cssRules;
+```js
+let ruleList = document.styleSheets[0].cssRules;
 
 for (let rule of ruleList) {
   if (!rule.ownerRule) {
     /* rule is not imported */
   }
 }
-</pre>
+```
 
-<p>This snipped obtains a reference to the stylesheet associated with the
-  <code>@import</code> and processes it in some manner:</p>
+This snipped obtains a reference to the stylesheet associated with the
+`@import` and processes it in some manner:
 
-<pre class="brush: js">let ruleList = document.styleSheets[0].cssRules;
+```js
+let ruleList = document.styleSheets[0].cssRules;
 
 for (let rule of ruleList) {
   if (rule.ownerRule) {
     checkStylesheet(rule.ownerRule.styleSheet);
   }
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/CSS_Object_Model">CSS Object Model</a></li>
-  <li><a
-      href="/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information">Using
-      dynamic styling information</a></li>
-</ul>
+- [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model)
+- [Using
+  dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)

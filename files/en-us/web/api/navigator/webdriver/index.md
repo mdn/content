@@ -2,48 +2,47 @@
 title: Navigator.webdriver
 slug: Web/API/Navigator/webdriver
 tags:
-- API
-- Navigator
-- Property
-- Reference
-- WebDriver
-- weblock
+  - API
+  - Navigator
+  - Property
+  - Reference
+  - WebDriver
+  - weblock
 browser-compat: api.Navigator.webdriver
 ---
-<div>{{SeeCompatTable}}{{APIRef("WebDriver")}}</div>
+{{SeeCompatTable}}{{APIRef("WebDriver")}}
 
-<p>The <strong><code>webdriver</code></strong> read-only property
-    of the {{domxref("navigator")}} interface indicates whether the user agent is
-    controlled by automation. </p>
+The **`webdriver`** read-only property
+of the {{domxref("navigator")}} interface indicates whether the user agent is
+controlled by automation.
 
-<p>It defines a standard way for co-operating user agents to inform the document that it
-  is controlled by <a href="/en-US/docs/Web/WebDriver">WebDriver</a>, for example, so that
-  alternate code paths can be triggered during automation.</p>
+It defines a standard way for co-operating user agents to inform the document that it
+is controlled by [WebDriver](/en-US/docs/Web/WebDriver), for example, so that
+alternate code paths can be triggered during automation.
 
-<p>The <code>navigator.</code><code>webdriver</code> property is true when in:</p>
+The ` navigator.``webdriver ` property is true when in:
 
-<dl>
-  <dt>Chrome</dt>
-  <dd>The <code>--enable-automation</code> or the <code>--headless</code> flag or the
-    <code>--remote-debugging-port</code> is used.</dd>
-  <dt>Firefox</dt>
-  <dd>The <code>marionette.enabled</code> preference or <code>--marionette</code> flag is
-    passed.</dd>
-</dl>
+- Chrome
+  - : The `--enable-automation` or the `--headless` flag or the
+    `--remote-debugging-port` is used.
+- Firefox
+  - : The `marionette.enabled` preference or `--marionette` flag is
+    passed.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>isAutomated</var> = navigator.webdriver</pre>
+```js
+var isAutomated = navigator.webdriver
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{JSxRef("Boolean")}}</p>
+A {{JSxRef("Boolean")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}

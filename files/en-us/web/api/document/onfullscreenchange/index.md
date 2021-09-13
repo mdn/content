@@ -2,67 +2,66 @@
 title: Document.onfullscreenchange
 slug: Web/API/Document/onfullscreenchange
 tags:
-- API
-- Document
-- Event Handler
-- Fullscreen API
-- Property
-- Reference
-- fullscreen
-- onfullscreenchange
+  - API
+  - Document
+  - Event Handler
+  - Fullscreen API
+  - Property
+  - Reference
+  - fullscreen
+  - onfullscreenchange
 browser-compat: api.Document.onfullscreenchange
 ---
-<div>{{APIRef("Fullscreen API")}}</div>
+{{APIRef("Fullscreen API")}}
 
-<p>The {{domxref("Document")}} interface's
-    <code><strong>onfullscreenchange</strong></code> property is an event handler for the
-    {{event("fullscreenchange")}} event that is fired immediately before a document
-    transitions into or out of full-screen mode.</p>
+The {{domxref("Document")}} interface's
+**`onfullscreenchange`** property is an event handler for the
+{{event("fullscreenchange")}} event that is fired immediately before a document
+transitions into or out of full-screen mode.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>targetDocument</var>.onfullscreenchange = <var>fullscreenChangeHandler</var>;
-</pre>
+```js
+targetDocument.onfullscreenchange = fullscreenChangeHandler;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An event handler which is invoked whenever the document receives a
-  {{event("fullscreenchange")}} event, indicating that the document is transitioning into
-  or out of full-screen mode.</p>
+An event handler which is invoked whenever the document receives a
+{{event("fullscreenchange")}} event, indicating that the document is transitioning into
+or out of full-screen mode.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>The <code>fullscreenchange</code> event does not directly specify whether the
-  transition is into or out of full-screen mode, so your event handler should look at the
-  value of {{domxref("Document.fullscreenElement")}}. If it's <code>null</code>, the event
-  indicates a transition <em>out</em> of full-screen mode. Otherwise, the specified
-  element is about to take over the screen.</p>
+The `fullscreenchange` event does not directly specify whether the
+transition is into or out of full-screen mode, so your event handler should look at the
+value of {{domxref("Document.fullscreenElement")}}. If it's `null`, the event
+indicates a transition _out_ of full-screen mode. Otherwise, the specified
+element is about to take over the screen.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">document.onfullscreenchange = function ( event ) {
+```js
+document.onfullscreenchange = function ( event ) {
   console.log("FULL SCREEN CHANGE")
 };
 document.documentElement.onclick = function () {
   // requestFullscreen() must be in an event handler or it will fail
   document.documentElement.requestFullscreen();
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Fullscreen_API">Fullscreen API</a></li>
-  <li><a href="/en-US/docs/Web/API/Fullscreen_API/Guide">Guide to the Fullscreen API</a>
-  </li>
-  <li>{{event("fullscreenchange")}}</li>
-  <li>{{domxref("Document.onfullscreenerror")}}</li>
-</ul>
+- [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API)
+- [Guide to the Fullscreen API](/en-US/docs/Web/API/Fullscreen_API/Guide)
+- {{event("fullscreenchange")}}
+- {{domxref("Document.onfullscreenerror")}}

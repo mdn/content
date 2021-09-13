@@ -2,49 +2,49 @@
 title: Element.prefix
 slug: Web/API/Element/prefix
 tags:
-- API
-- DOM
-- NeedsBrowserCompatibility
-- NeedsMobileBrowserCompatibility
-- Property
-- Reference
+  - API
+  - DOM
+  - NeedsBrowserCompatibility
+  - NeedsMobileBrowserCompatibility
+  - Property
+  - Reference
 browser-compat: api.Element.prefix
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>Element.prefix</strong></code> read-only property returns the
-  namespace prefix of the specified element, or <code>null</code> if no prefix is
-  specified.</p>
+The **`Element.prefix`** read-only property returns the
+namespace prefix of the specified element, or `null` if no prefix is
+specified.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>string</var> = <var>element</var>.prefix
-</pre>
+```js
+string = element.prefix
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following logs "x" to the console.</p>
+The following logs "x" to the console.
 
-<pre class="brush:xml">&lt;x:div onclick="console.log(this.prefix)"/&gt;
-</pre>
+```xml
+<x:div onclick="console.log(this.prefix)"/>
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>This will only work when a namespace-aware parser is used, i.e. when a document is
-  served with an XML MIME type. This will not work for HTML documents.</p>
+This will only work when a namespace-aware parser is used, i.e. when a document is
+served with an XML MIME type. This will not work for HTML documents.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Element.namespaceURI")}}</li>
-  <li>{{domxref("Element.localName")}}</li>
-  <li>{{domxref("Attr.prefix")}}</li>
-</ul>
+- {{domxref("Element.namespaceURI")}}
+- {{domxref("Element.localName")}}
+- {{domxref("Attr.prefix")}}

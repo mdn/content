@@ -2,50 +2,50 @@
 title: ServiceWorkerRegistration.unregister()
 slug: Web/API/ServiceWorkerRegistration/unregister
 tags:
-- API
-- Method
-- Reference
-- Service Workers
-- ServiceWorkerRegistration
-- unregister
+  - API
+  - Method
+  - Reference
+  - Service Workers
+  - ServiceWorkerRegistration
+  - unregister
 browser-compat: api.ServiceWorkerRegistration.unregister
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p>The <code><strong>unregister()</strong></code> method of the
-  {{domxref("ServiceWorkerRegistration")}} interface unregisters the service worker
-  registration and returns a {{jsxref("Promise")}}. The promise will resolve to
-  <code>false</code> if no registration was found, otherwise it resolves to
-  <code>true</code> irrespective of whether unregistration happened or not (it may not
-  unregister if someone else just called {{domxref("ServiceWorkerContainer.register()")}}
-  with the same scope.) The service worker will finish any ongoing operations before it is
-  unregistered.</p>
+The **`unregister()`** method of the
+{{domxref("ServiceWorkerRegistration")}} interface unregisters the service worker
+registration and returns a {{jsxref("Promise")}}. The promise will resolve to
+`false` if no registration was found, otherwise it resolves to
+`true` irrespective of whether unregistration happened or not (it may not
+unregister if someone else just called {{domxref("ServiceWorkerContainer.register()")}}
+with the same scope.) The service worker will finish any ongoing operations before it is
+unregistered.
 
-<div class="note">
-  <p><strong>Note:</strong> This feature is available in <a
-      href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
-</div>
+> **Note:** This feature is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>serviceWorkerRegistration</em>.unregister().then(function(<em>boolean</em>) {
-});</pre>
+```js
+serviceWorkerRegistration.unregister().then(function(boolean) {
+});
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{jsxref("Promise")}} resolves with a boolean indicating whether the service worker has
-  unregistered or not.</p>
+{{jsxref("Promise")}} resolves with a boolean indicating whether the service worker has
+unregistered or not.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following simple example registers a service worker example, but then immediately
-  unregisters it again:</p>
+The following simple example registers a service worker example, but then immediately
+unregisters it again:
 
-<pre class="brush: js">if ('serviceWorker' in navigator) {
+```js
+if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/sw-test/sw.js', {scope: 'sw-test'}).then(function(registration) {
     // registration worked
     console.log('Registration succeeded.');
@@ -56,25 +56,24 @@ browser-compat: api.ServiceWorkerRegistration.unregister
     // registration failed
     console.log('Registration failed with ' + error);
   });
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service
-      Workers</a></li>
-  <li><a href="https://github.com/mdn/sw-test">Service workers basic code example</a></li>
-  <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker
-      ready?</a></li>
-  <li>{{jsxref("Promise")}}</li>
-  <li><a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web
-      workers</a></li>
-</ul>
+- [Using Service
+  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Is ServiceWorker
+  ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- {{jsxref("Promise")}}
+- [Using web
+  workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

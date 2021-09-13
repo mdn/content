@@ -9,14 +9,14 @@ tags:
   - Reference
 browser-compat: api.ImageBitmap.width
 ---
-<div>{{APIRef("Canvas API")}}</div>
+{{APIRef("Canvas API")}}
 
-<p>The read-only <code><strong>ImageBitmap.width</strong></code> property returns the {{domxref("ImageBitmap")}} object's width in CSS pixels.</p>
+The read-only **`ImageBitmap.width`** property returns the {{domxref("ImageBitmap")}} object's width in CSS pixels.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

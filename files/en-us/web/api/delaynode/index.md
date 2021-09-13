@@ -10,75 +10,69 @@ tags:
   - Web Audio API
 browser-compat: api.DelayNode
 ---
-<div>{{APIRef("Web Audio API")}}</div>
+{{APIRef("Web Audio API")}}
 
-<p>The <strong><code>DelayNode</code></strong> interface represents a <a href="https://en.wikipedia.org/wiki/Digital_delay_line" title="Wikipedia: Digital delay line">delay-line</a>; an {{domxref("AudioNode")}} audio-processing module that causes a delay between the arrival of an input data and its propagation to the output.</p>
+The **`DelayNode`** interface represents a [delay-line](https://en.wikipedia.org/wiki/Digital_delay_line "Wikipedia: Digital delay line"); an {{domxref("AudioNode")}} audio-processing module that causes a delay between the arrival of an input data and its propagation to the output.
 
-<p>A <code>DelayNode</code> always has exactly one input and one output, both with the same amount of channels.</p>
+A `DelayNode` always has exactly one input and one output, both with the same amount of channels.
 
-<p><img alt="The DelayNode acts as a delay-line, here with a value of 1s." src="webaudiodelaynode.png"></p>
+![The DelayNode acts as a delay-line, here with a value of 1s.](webaudiodelaynode.png)
 
-<p>When creating a graph that has a cycle, it is mandatory to have at least one <code>DelayNode</code> in the cycle, or the nodes taking part in the cycle will be muted.</p>
+When creating a graph that has a cycle, it is mandatory to have at least one `DelayNode` in the cycle, or the nodes taking part in the cycle will be muted.
 
 <table class="properties">
-	<tbody>
-		<tr>
-			<th scope="row">Number of inputs</th>
-			<td><code>1</code></td>
-		</tr>
-		<tr>
-			<th scope="row">Number of outputs</th>
-			<td><code>1</code></td>
-		</tr>
-		<tr>
-			<th scope="row">Channel count mode</th>
-			<td><code>"max"</code></td>
-		</tr>
-		<tr>
-			<th scope="row">Channel count</th>
-			<td><code>2</code> (not used in the default count mode)</td>
-		</tr>
-		<tr>
-			<th scope="row">Channel interpretation</th>
-			<td><code>"speakers"</code></td>
-		</tr>
-	</tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Number of inputs</th>
+      <td><code>1</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Number of outputs</th>
+      <td><code>1</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Channel count mode</th>
+      <td><code>"max"</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Channel count</th>
+      <td><code>2</code> (not used in the default count mode)</td>
+    </tr>
+    <tr>
+      <th scope="row">Channel interpretation</th>
+      <td><code>"speakers"</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
-	<dt>{{domxref("DelayNode.DelayNode", "DelayNode()")}}</dt>
-	<dd>Creates a new instance of an DelayNode object instance. As an alternative, you can use the {{domxref("BaseAudioContext.createDelay()")}} factory method; see <a href="/en-US/docs/Web/API/AudioNode#creating_an_audionode">Creating an AudioNode</a>.</dd>
-</dl>
+- {{domxref("DelayNode.DelayNode", "DelayNode()")}}
+  - : Creates a new instance of an DelayNode object instance. As an alternative, you can use the {{domxref("BaseAudioContext.createDelay()")}} factory method; see [Creating an AudioNode](/en-US/docs/Web/API/AudioNode#creating_an_audionode).
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{domxref("AudioNode")}}.</em></p>
+_Inherits properties from its parent, {{domxref("AudioNode")}}._
 
-<dl>
-	<dt>{{domxref("DelayNode.delayTime")}} {{readonlyInline}}</dt>
-	<dd>Is an <a href="/en-US/docs/Web/API/AudioParam#a-rate">a-rate</a> {{domxref("AudioParam")}} representing the amount of delay to apply, specified in seconds.</dd>
-</dl>
+- {{domxref("DelayNode.delayTime")}} {{readonlyInline}}
+  - : Is an [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} representing the amount of delay to apply, specified in seconds.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>No specific methods; inherits methods from its parent, {{domxref("AudioNode")}}.</em></p>
+_No specific methods; inherits methods from its parent, {{domxref("AudioNode")}}._
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See <a href="/en-US/docs/Web/API/BaseAudioContext/createDelay#example"><code>BaseAudioContext.createDelay()</code></a> for example code.</p>
+See [`BaseAudioContext.createDelay()`](/en-US/docs/Web/API/BaseAudioContext/createDelay#example) for example code.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

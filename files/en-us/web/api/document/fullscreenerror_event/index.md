@@ -11,58 +11,60 @@ tags:
   - fullscreenerror
 browser-compat: api.Document.fullscreenerror_event
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p>The <code>fullscreenerror</code> event is fired when the browser cannot switch to full-screen mode.</p>
+The `fullscreenerror` event is fired when the browser cannot switch to full-screen mode.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("Document.onfullscreenerror", "onfullscreenerror")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{domxref("Document.onfullscreenerror", "onfullscreenerror")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>As with the <a href="/en-US/docs/Web/API/Document/fullscreenchange_event"><code>fullscreenchange</code> event</a>, two <code>fullscreenerror</code> events are fired; the first is sent to the {{domxref("Element")}} which failed to change modes, and the second is sent to the {{domxref("Document")}} which owns that element.</p>
+As with the [`fullscreenchange` event](/en-US/docs/Web/API/Document/fullscreenchange_event), two `fullscreenerror` events are fired; the first is sent to the {{domxref("Element")}} which failed to change modes, and the second is sent to the {{domxref("Document")}} which owns that element.
 
-<p>For some reasons that switching into full-screen mode might fail, see <a href="/en-US/docs/Web/API/Fullscreen_API/Guide">the guide to the Fullscreen API</a>.</p>
+For some reasons that switching into full-screen mode might fail, see [the guide to the Fullscreen API](/en-US/docs/Web/API/Fullscreen_API/Guide).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">const requestor = document.querySelector('div');
+```js
+const requestor = document.querySelector('div');
 
-document.addEventListener('fullscreenerror', (event) =&gt; {
+document.addEventListener('fullscreenerror', (event) => {
   console.error('an error occurred changing into fullscreen');
   console.log(event);
 });
 
-requestor.requestFullscreen();</pre>
+requestor.requestFullscreen();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><code><a href="/en-US/docs/Web/API/Document/fullscreenchange_event">fullscreenchange</a></code></li>
- <li><a href="/en-US/docs/Web/API/Fullscreen_API">Fullscreen API</a></li>
- <li><a href="/en-US/docs/Web/API/Fullscreen_API/Guide">Guide to the Fullscreen API</a></li>
-</ul>
+- [`fullscreenchange`](/en-US/docs/Web/API/Document/fullscreenchange_event)
+- [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API)
+- [Guide to the Fullscreen API](/en-US/docs/Web/API/Fullscreen_API/Guide)

@@ -2,41 +2,42 @@
 title: WebGLRenderingContext.getShaderInfoLog()
 slug: Web/API/WebGLRenderingContext/getShaderInfoLog
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getShaderInfoLog
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong>WebGLRenderingContext.getShaderInfoLog</strong> returns the information log
-  for the specified {{domxref("WebGLShader")}} object. It contains warnings, debugging and
-  compile information.</p>
+The **WebGLRenderingContext.getShaderInfoLog** returns the information log
+for the specified {{domxref("WebGLShader")}} object. It contains warnings, debugging and
+compile information.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">gl.getShaderInfoLog(shader);</pre>
+```js
+gl.getShaderInfoLog(shader);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>shader</dt>
-  <dd>A {{domxref("WebGLShader")}} to query.</dd>
-</dl>
+- shader
+  - : A {{domxref("WebGLShader")}} to query.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("DOMString")}} that contains diagnostic messages, warning messages, and
-  other information about the last compile operation. When a {{domxref("WebGLShader")}}
-  object is initially created, its information log will be a string of length 0.</p>
+A {{domxref("DOMString")}} that contains diagnostic messages, warning messages, and
+other information about the last compile operation. When a {{domxref("WebGLShader")}}
+object is initially created, its information log will be a string of length 0.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Checking_compilation_messages">Checking compilation messages</h3>
+### Checking compilation messages
 
-<pre class="brush: js">/* load shader source code. */
+```js
+/* load shader source code. */
 gl.shaderSource(shader, shaderCode);
 
 /* compile shader source code. */
@@ -44,24 +45,22 @@ gl.compileShader(shader);
 
 var message = gl.getShaderInfoLog(shader);
 
-if (message.length &gt; 0) {
+if (message.length > 0) {
   /* message may be an error or a warning */
   throw message;
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.getShaderParameter()")}} – used with
-    <code>gl.COMPILE_STATUS</code> to check for a failed compile.</li>
-  <li>{{domxref("WebGLRenderingContext.getError()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.getShaderParameter()")}} – used with
+  `gl.COMPILE_STATUS` to check for a failed compile.
+- {{domxref("WebGLRenderingContext.getError()")}}

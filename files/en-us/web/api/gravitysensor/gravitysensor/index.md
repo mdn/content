@@ -2,61 +2,56 @@
 title: GravitySensor()
 slug: Web/API/GravitySensor/GravitySensor
 tags:
-- API
-- Accelerometer
-- Constructor
-- Generic Sensor API
-- GravitySensor
-- Reference
-- Sensor
-- Sensor APIs
-- Sensors
+  - API
+  - Accelerometer
+  - Constructor
+  - Generic Sensor API
+  - GravitySensor
+  - Reference
+  - Sensor
+  - Sensor APIs
+  - Sensors
 browser-compat: api.GravitySensor.GravitySensor
 ---
-<div>{{APIRef("Sensor API")}}</div>
+{{APIRef("Sensor API")}}
 
-<p>The <strong><code>GravitySensor()</code></strong>
-    constructor creates a new {{domxref("GravitySensor")}} object which
-    provides on each reading the gravity applied to the device along all three axes.</p>
+The **`GravitySensor()`**
+constructor creates a new {{domxref("GravitySensor")}} object which
+provides on each reading the gravity applied to the device along all three axes.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">let <var>gravitySensor</var> = new GravitySensor([<em>options</em>])
-</pre>
+```js
+let gravitySensor = new GravitySensor([options])
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><em>options</em> {{optional_inline}}</dt>
-  <dd>Options are as follows:
-    <ul>
-      <li><code>frequency</code>: The desired number of times per second a sample should
-        be taken, meaning the number of times per second that
-        {{domxref('sensor.onreading')}} will be called. A whole number or decimal may be
-        used, the latter for frequencies less than a second. The actual reading frequency
-        depends on device hardware and consequently may be less than requested. The default
-        frequency is the one defined by the underlying platform.</li>
-      <li><code>referenceFrame</code>: The local coordinate system representing
-        the reference frame. It can be either  <code>'device'</code> or
-        <code>'screen'</code>. The default is <code>'device'</code>.</li>
-    </ul>
-  </dd>
-</dl>
+- _options_ {{optional_inline}}
 
-<h3 id="Exceptions">Exceptions</h3>
+  - : Options are as follows:
 
-<dl>
-  <dt>SecurityError</dt>
-  <dd>Use of this feature was blocked by a feature policy. If a feature policy blocks use of a feature,
+    - `frequency`: The desired number of times per second a sample should
+      be taken, meaning the number of times per second that
+      {{domxref('sensor.onreading')}} will be called. A whole number or decimal may be
+      used, the latter for frequencies less than a second. The actual reading frequency
+      depends on device hardware and consequently may be less than requested. The default
+      frequency is the one defined by the underlying platform.
+    - `referenceFrame`: The local coordinate system representing
+      the reference frame. It can be either `'device'` or
+      `'screen'`. The default is `'device'`.
+
+### Exceptions
+
+- SecurityError
+  - : Use of this feature was blocked by a feature policy. If a feature policy blocks use of a feature,
     it is because your code is inconsistent with the policies set on your server.
-    This is not something that would ever be shown to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.</dd>
-</dl>
+    This is not something that would ever be shown to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

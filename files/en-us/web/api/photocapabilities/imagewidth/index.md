@@ -2,36 +2,37 @@
 title: PhotoCapabilities.imageWidth
 slug: Web/API/PhotoCapabilities/imageWidth
 tags:
-- API
-- Experimental
-- Image
-- Image Capture
-- Media
-- MediaStream Image Capture API
-- PhotoCapabilities
-- Property
-- Reference
+  - API
+  - Experimental
+  - Image
+  - Image Capture
+  - Media
+  - MediaStream Image Capture API
+  - PhotoCapabilities
+  - Property
+  - Reference
 browser-compat: api.PhotoCapabilities.imageWidth
 ---
-<p>{{SeeCompatTable}}{{APIRef("MediaStream Image")}}</p>
+{{SeeCompatTable}}{{APIRef("MediaStream Image")}}
 
-<p>The <strong><code>imageWidth</code></strong> read-only property of the
-  {{domxref("PhotoCapabilities")}} interface returns a {{domxref("MediaSettingsRange")}}
-  object indicating the image width range supported by the user agent.</p>
+The **`imageWidth`** read-only property of the
+{{domxref("PhotoCapabilities")}} interface returns a {{domxref("MediaSettingsRange")}}
+object indicating the image width range supported by the user agent.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>mediaSettingsRange</em> = <em>photoCapabilities</em>.imageWidth</pre>
+```js
+var mediaSettingsRange = photoCapabilities.imageWidth
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("MediaSettingsRange")}} is an object.</p>
+A {{domxref("MediaSettingsRange")}} is an object.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,64 +2,67 @@
 title: PaymentRequest.onmerchantvalidation
 slug: Web/API/PaymentRequest/onmerchantvalidation
 tags:
-- API
-- Commerce
-- Event Handler
-- Payment Method
-- Payment Request API
-- PaymentRequest
-- Property
-- Reference
-- onmerchantvalidation
-- payment
+  - API
+  - Commerce
+  - Event Handler
+  - Payment Method
+  - Payment Request API
+  - PaymentRequest
+  - Property
+  - Reference
+  - onmerchantvalidation
+  - payment
 browser-compat: api.PaymentRequest.onmerchantvalidation
 ---
-<p>{{deprecated_header}}{{non-standard_header}}{{securecontext_header}}</p>
+{{deprecated_header}}{{non-standard_header}}{{securecontext_header}}
 
-<p>The {{domxref("PaymentRequest")}} event handler
-    <code><strong>onmerchantvalidation</strong></code> is invoked when the
-    {{event("merchantvalidation")}} is fired, indicating that the payment handler
-  (e.g., Apple Pay) requires the merchant to validate themselves.</p>
+The {{domxref("PaymentRequest")}} event handler
+**`onmerchantvalidation`** is invoked when the
+{{event("merchantvalidation")}} is fired, indicating that the payment handler
+(e.g., Apple Pay) requires the merchant to validate themselves.
 
-<p>This is usually the
-  first event to be fired, and the user won't be able to proceed with a payment until the
-  merchant validate themselves.</p>
+This is usually the
+first event to be fired, and the user won't be able to proceed with a payment until the
+merchant validate themselves.
 
-<p>This event is not be fired by all payment handlers. In particular, it's used by Apple
-  Pay.</p>
+This event is not be fired by all payment handlers. In particular, it's used by Apple
+Pay.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>paymentRequest</em>.onmerchantvalidation = <em>eventHandlerFunction</em>;</pre>
+```js
+paymentRequest.onmerchantvalidation = eventHandlerFunction;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An event handler function which is to be called whenever the
-  {{event("merchantvalidation")}} event is fired at the {{domxref("PaymentRequest")}},
-  indicating that the payment handler requires the merchant to validate themselves as
-  allowed to use this payment handler.</p>
+An event handler function which is to be called whenever the
+{{event("merchantvalidation")}} event is fired at the {{domxref("PaymentRequest")}},
+indicating that the payment handler requires the merchant to validate themselves as
+allowed to use this payment handler.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>An example merchant validation handler for the {{domxref("PaymentRequest")}} object
-  <code>request</code> looks like this:</p>
+An example merchant validation handler for the {{domxref("PaymentRequest")}} object
+`request` looks like this:
 
-<pre class="brush: js">request.onmerchantvalidation = ev =&gt; {
-  ev.complete(async () =&gt; {
+```js
+request.onmerchantvalidation = ev => {
+  ev.complete(async () => {
     const merchantServerUrl = window.location.origin +
         '/validation?url=' + encodeURIComponent(ev.validationURL);
     // get validation data, and complete validation;
-    return await fetch(merchantServerUrl).then(r =&gt; r.text());
+    return await fetch(merchantServerUrl).then(r => r.text());
   })
 };
 
-const response = await request.show();</pre>
+const response = await request.show();
+```
 
-<p>For more information, see
-  {{SectionOnPage("/en-US/docs/Web/API/Payment_Request_API/Concepts", "Merchant
-  Validation")}}.</p>
+For more information, see
+{{SectionOnPage("/en-US/docs/Web/API/Payment_Request_API/Concepts", "Merchant
+  Validation")}}.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -8,76 +8,69 @@ tags:
   - WebGL extension
 browser-compat: api.WEBGL_compressed_texture_etc
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <code><strong>WEBGL_compressed_texture_etc</strong></code> extension is part of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> and exposes 10 <a href="https://en.wikipedia.org/wiki/Ericsson_Texture_Compression">ETC/EAC compressed texture formats</a>.</p>
+The **`WEBGL_compressed_texture_etc`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and exposes 10 [ETC/EAC compressed texture formats](https://en.wikipedia.org/wiki/Ericsson_Texture_Compression).
 
-<p>Compressed textures reduce the amount of memory needed to store a texture on the GPU, allowing for higher resolution textures or more of the same resolution textures.</p>
+Compressed textures reduce the amount of memory needed to store a texture on the GPU, allowing for higher resolution textures or more of the same resolution textures.
 
-<p>WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also <a href="/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</a> in the <a href="/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</a>.</p>
+WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
 
-<div class="note">
-<p><strong>Note:</strong> This extension is available to both, {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} and {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}} contexts.</p>
-</div>
+> **Note:** This extension is available to both, {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} and {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}} contexts.
 
-<h2 id="Constants">Constants</h2>
+## Constants
 
-<p>The compressed texture formats are exposed by 10 constants and can be used in two functions: {{domxref("WebGLRenderingContext.compressedTexImage2D", "compressedTexImage2D()")}} and {{domxref("WebGLRenderingContext.compressedTexSubImage2D", "compressedTexSubImage2D()")}}.</p>
+The compressed texture formats are exposed by 10 constants and can be used in two functions: {{domxref("WebGLRenderingContext.compressedTexImage2D", "compressedTexImage2D()")}} and {{domxref("WebGLRenderingContext.compressedTexSubImage2D", "compressedTexSubImage2D()")}}.
 
-<dl>
- <dt><code>ext.COMPRESSED_R11_EAC</code></dt>
- <dd>One-channel (red) unsigned format compression.</dd>
- <dt><code>ext.COMPRESSED_SIGNED_R11_EAC</code></dt>
- <dd>One-channel (red) signed format compression.</dd>
- <dt><code>ext.COMPRESSED_RG11_EAC</code></dt>
- <dd>Two-channel (red and green) unsigned format compression.</dd>
- <dt><code>ext.COMPRESSED_SIGNED_RG11_EAC</code></dt>
- <dd>Two-channel (red and green) signed format compression.</dd>
- <dt><code>ext.COMPRESSED_RGB8_ETC2</code></dt>
- <dd>Compresses RGB8 data with no alpha channel.</dd>
- <dt><code>ext.COMPRESSED_RGBA8_ETC2_EAC</code></dt>
- <dd>Compresses RGBA8 data. The RGB part is encoded the same as <code>RGB_ETC2</code>, but the alpha part is encoded separately.</dd>
- <dt><code>ext.COMPRESSED_SRGB8_ETC2</code></dt>
- <dd>Compresses sRGB8 data with no alpha channel.</dd>
- <dt><code>ext.COMPRESSED_SRGB8_ALPHA8_ETC2_EAC</code></dt>
- <dd>Compresses sRGBA8 data. The sRGB part is encoded the same as <code>SRGB_ETC2</code>, but the alpha part is encoded separately.</dd>
- <dt><code>ext.COMPRESSED_RGB8_PUNCHTHROUGH_ALPHA1_ETC2</code></dt>
- <dd>Similar to <code>RGB8_ETC</code>, but with ability to punch through the alpha channel, which means to make it completely opaque or transparent.</dd>
- <dt><code>ext.COMPRESSED_SRGB8_PUNCHTHROUGH_ALPHA1_ETC2</code></dt>
- <dd>Similar to <code>SRGB8_ETC</code>, but with ability to punch through the alpha channel, which means to make it completely opaque or transparent.</dd>
-</dl>
+- `ext.COMPRESSED_R11_EAC`
+  - : One-channel (red) unsigned format compression.
+- `ext.COMPRESSED_SIGNED_R11_EAC`
+  - : One-channel (red) signed format compression.
+- `ext.COMPRESSED_RG11_EAC`
+  - : Two-channel (red and green) unsigned format compression.
+- `ext.COMPRESSED_SIGNED_RG11_EAC`
+  - : Two-channel (red and green) signed format compression.
+- `ext.COMPRESSED_RGB8_ETC2`
+  - : Compresses RGB8 data with no alpha channel.
+- `ext.COMPRESSED_RGBA8_ETC2_EAC`
+  - : Compresses RGBA8 data. The RGB part is encoded the same as `RGB_ETC2`, but the alpha part is encoded separately.
+- `ext.COMPRESSED_SRGB8_ETC2`
+  - : Compresses sRGB8 data with no alpha channel.
+- `ext.COMPRESSED_SRGB8_ALPHA8_ETC2_EAC`
+  - : Compresses sRGBA8 data. The sRGB part is encoded the same as `SRGB_ETC2`, but the alpha part is encoded separately.
+- `ext.COMPRESSED_RGB8_PUNCHTHROUGH_ALPHA1_ETC2`
+  - : Similar to `RGB8_ETC`, but with ability to punch through the alpha channel, which means to make it completely opaque or transparent.
+- `ext.COMPRESSED_SRGB8_PUNCHTHROUGH_ALPHA1_ETC2`
+  - : Similar to `SRGB8_ETC`, but with ability to punch through the alpha channel, which means to make it completely opaque or transparent.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush:js">var ext = gl.getExtension('WEBGL_compressed_texture_etc');
+```js
+var ext = gl.getExtension('WEBGL_compressed_texture_etc');
 
 var texture = gl.createTexture();
 gl.bindTexture(gl.TEXTURE_2D, texture);
 
 gl.compressedTexImage2D(gl.TEXTURE_2D, 0, ext.COMPRESSED_RGBA8_ETC2_EAC, 512, 512, 0, textureData);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Compatibility_notes">Compatibility notes</h2>
+## Compatibility notes
 
-<ul>
- <li>This extension was named <code>WEBGL_compressed_texture_es3</code> from Firefox 46 to Firefox 51 and used to be available on the WebGL 2 context by default – this is not the case anymore. You have to enable it on both, WebGL 1 and WebGL 2 contexts, in order to use it.</li>
-</ul>
+- This extension was named `WEBGL_compressed_texture_es3` from Firefox 46 to Firefox 51 and used to be available on the WebGL 2 context by default – this is not the case anymore. You have to enable it on both, WebGL 1 and WebGL 2 contexts, in order to use it.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://en.wikipedia.org/wiki/Ericsson_Texture_Compression">Ericsson Texture Compression – Wikipedia</a></li>
- <li>{{domxref("WEBGL_compressed_texture_etc1")}} (ETC1)</li>
- <li>{{domxref("WebGLRenderingContext.getExtension()")}}</li>
- <li>{{domxref("WebGLRenderingContext.compressedTexImage2D()")}}</li>
- <li>{{domxref("WebGLRenderingContext.compressedTexSubImage2D()")}}</li>
- <li>{{domxref("WebGLRenderingContext.getParameter()")}}</li>
-</ul>
+- [Ericsson Texture Compression – Wikipedia](https://en.wikipedia.org/wiki/Ericsson_Texture_Compression)
+- {{domxref("WEBGL_compressed_texture_etc1")}} (ETC1)
+- {{domxref("WebGLRenderingContext.getExtension()")}}
+- {{domxref("WebGLRenderingContext.compressedTexImage2D()")}}
+- {{domxref("WebGLRenderingContext.compressedTexSubImage2D()")}}
+- {{domxref("WebGLRenderingContext.getParameter()")}}

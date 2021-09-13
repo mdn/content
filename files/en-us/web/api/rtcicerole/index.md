@@ -19,25 +19,23 @@ tags:
   - rtc
 browser-compat: api.RTCIceRole
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <strong><code>RTCIceRole</code></strong> enumerated type lists the string values that identify whether a connection's ICE agent is serving as the controlling agent or the controlled agent, as indicated by {{domxref("RTCIceTransport.role")}}.</p>
+The **`RTCIceRole`** enumerated type lists the string values that identify whether a connection's ICE agent is serving as the controlling agent or the controlled agent, as indicated by {{domxref("RTCIceTransport.role")}}.
 
-<p>You can learn more about ICE roles in {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Choosing a candidate pair")}}.</p>
+You can learn more about ICE roles in {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Choosing a candidate pair")}}.
 
-<h2 id="Values">Values</h2>
+## Values
 
-<dl>
- <dt><code>"controlling"</code></dt>
- <dd>The {{domxref("RTCIceTransport")}} object is serving as the controlling agent.</dd>
- <dt><code>"controlled"</code></dt>
- <dd>The transport is the controlled agent.</dd>
-</dl>
+- `"controlling"`
+  - : The {{domxref("RTCIceTransport")}} object is serving as the controlling agent.
+- `"controlled"`
+  - : The transport is the controlled agent.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

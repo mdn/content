@@ -10,25 +10,23 @@ tags:
   - Reference
 browser-compat: api.DeviceMotionEventAcceleration
 ---
-<div>{{ ApiRef("Device Orientation Events") }}{{SeeCompatTable}}</div>
+{{ ApiRef("Device Orientation Events") }}{{SeeCompatTable}}
 
-<p>A <strong><code>DeviceMotionEventAcceleration</code></strong> object provides information about the amount of acceleration the device is experiencing along all three axes.</p>
+A **`DeviceMotionEventAcceleration`** object provides information about the amount of acceleration the device is experiencing along all three axes.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("DeviceMotionEventAcceleration.x")}} {{readonlyInline}}</dt>
- <dd>The amount of acceleration along the X axis. <strong>Read only.</strong></dd>
- <dt>{{domxref("DeviceMotionEventAcceleration.y")}} {{readonlyInline}}</dt>
- <dd>The amount of acceleration along the Y axis. <strong>Read only.</strong></dd>
- <dt>{{domxref("DeviceMotionEventAcceleration.z")}} {{readonlyInline}}</dt>
- <dd>The amount of acceleration along the Z axis. <strong>Read only.</strong></dd>
-</dl>
+- {{domxref("DeviceMotionEventAcceleration.x")}} {{readonlyInline}}
+  - : The amount of acceleration along the X axis. **Read only.**
+- {{domxref("DeviceMotionEventAcceleration.y")}} {{readonlyInline}}
+  - : The amount of acceleration along the Y axis. **Read only.**
+- {{domxref("DeviceMotionEventAcceleration.z")}} {{readonlyInline}}
+  - : The amount of acceleration along the Z axis. **Read only.**
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

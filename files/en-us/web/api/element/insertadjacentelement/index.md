@@ -2,90 +2,76 @@
 title: Element.insertAdjacentElement()
 slug: Web/API/Element/insertAdjacentElement
 tags:
-- API
-- DOM
-- Element
-- Gecko
-- Method
-- Reference
-- insertAdjacentElement
+  - API
+  - DOM
+  - Element
+  - Gecko
+  - Method
+  - Reference
+  - insertAdjacentElement
 browser-compat: api.Element.insertAdjacentElement
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>insertAdjacentElement()</code></strong> method of the
-  {{domxref("Element")}} interface inserts a given element node at a given position
-  relative to the element it is invoked upon.</p>
+The **`insertAdjacentElement()`** method of the
+{{domxref("Element")}} interface inserts a given element node at a given position
+relative to the element it is invoked upon.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>targetElement</em>.insertAdjacentElement(<em>position</em>, <em>element</em>);</pre>
+```js
+targetElement.insertAdjacentElement(position, element);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>position</code></dt>
-  <dd>A {{domxref("DOMString")}} representing the position relative to the
-    <code>targetElement</code>; must match (case-insensitively) one of the following
+- `position`
+
+  - : A {{domxref("DOMString")}} representing the position relative to the
+    `targetElement`; must match (case-insensitively) one of the following
     strings:
-    <ul>
-      <li><code>'beforebegin'</code>: Before the
-        <code>targetElement</code> itself.</li>
-      <li><code>'afterbegin'</code>: Just inside the
-        <code>targetElement</code>, before its first child.</li>
-      <li><code>'beforeend'</code>: Just inside the
-        <code>targetElement</code>, after its last child.</li>
-      <li><code>'afterend'</code>: After the
-        <code>targetElement</code> itself.</li>
-    </ul>
-  </dd>
-  <dt><code>element</code></dt>
-  <dd>The element to be inserted into the tree.</dd>
-</dl>
 
-<h3 id="Return_value">Return value</h3>
+    - `'beforebegin'`: Before the
+      `targetElement` itself.
+    - `'afterbegin'`: Just inside the
+      `targetElement`, before its first child.
+    - `'beforeend'`: Just inside the
+      `targetElement`, after its last child.
+    - `'afterend'`: After the
+      `targetElement` itself.
 
-<p>The element that was inserted, or <code>null</code>, if the insertion failed.</p>
+- `element`
+  - : The element to be inserted into the tree.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Return value
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Exception</th>
-      <th scope="col">Explanation</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>SyntaxError</code></td>
-      <td>The <code>position</code> specified is not a recognized value.</td>
-    </tr>
-    <tr>
-      <td><code>TypeError</code></td>
-      <td>The <code>element</code> specified is not a valid element.</td>
-    </tr>
-  </tbody>
-</table>
+The element that was inserted, or `null`, if the insertion failed.
 
-<h3 id="Visualization_of_position_names">Visualization of position names</h3>
+### Exceptions
 
-<pre>&lt;!-- <strong><code>beforebegin</code></strong> --&gt;
-<code>&lt;p&gt;</code>
-  &lt;!-- <strong><code>afterbegin</code></strong> --&gt;
-  foo
-  &lt;!-- <strong><code>beforeend</code></strong> --&gt;
-<code>&lt;/p&gt;</code>
-&lt;!-- <strong><code>afterend</code></strong> --&gt;</pre>
+| Exception     | Explanation                                         |
+| ------------- | --------------------------------------------------- |
+| `SyntaxError` | The `position` specified is not a recognized value. |
+| `TypeError`   | The `element` specified is not a valid element.     |
 
-<div class="note"><p><strong>Note:</strong> The <code>beforebegin</code> and
-  <code>afterend</code> positions work only if the node is in a tree and has an element
-  parent.</p></div>
+### Visualization of position names
 
-<h2 id="Example">Example</h2>
+    <!-- beforebegin -->
+    <p>
+      <!-- afterbegin -->
+      foo
+      <!-- beforeend -->
+    </p>
+    <!-- afterend -->
 
-<pre class="brush: js">beforeBtn.addEventListener('click', function() {
+> **Note:** The `beforebegin` and
+> `afterend` positions work only if the node is in a tree and has an element
+> parent.
+
+## Example
+
+```js
+beforeBtn.addEventListener('click', function() {
   var tempDiv = document.createElement('div');
   tempDiv.style.backgroundColor = randomColor();
   if (activeElem) {
@@ -101,31 +87,28 @@ afterBtn.addEventListener('click', function() {
     activeElem.insertAdjacentElement('afterend', tempDiv);
   }
   setListener(tempDiv);
-});</pre>
+});
+```
 
-<p>Have a look at our <a
-    href="https://mdn.github.io/dom-examples/insert-adjacent/insertAdjacentElement.html">insertAdjacentElement.html</a>
-  demo on GitHub (see the <a
-    href="https://github.com/mdn/dom-examples/blob/master/insert-adjacent/insertAdjacentElement.html">source
-    code</a> too.) Here, we have a sequence of {{htmlelement("div")}} elements inside a
-  container. When one is clicked, it becomes selected and you can then press the
-  <em>Insert before</em> and <em>Insert after</em> buttons to insert new divs before or
-  after the selected element using <code>insertAdjacentElement()</code>.</p>
+Have a look at our [insertAdjacentElement.html](https://mdn.github.io/dom-examples/insert-adjacent/insertAdjacentElement.html)
+demo on GitHub (see the [source
+code](https://github.com/mdn/dom-examples/blob/master/insert-adjacent/insertAdjacentElement.html) too.) Here, we have a sequence of {{htmlelement("div")}} elements inside a
+container. When one is clicked, it becomes selected and you can then press the
+_Insert before_ and _Insert after_ buttons to insert new divs before or
+after the selected element using `insertAdjacentElement()`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Element.insertAdjacentHTML()")}}</li>
-  <li>{{domxref("Element.insertAdjacentText()")}}</li>
-  <li>{{domxref("Node.insertBefore()")}} (similar to <code>beforebegin</code>, with
-    different arguments)</li>
-  <li>{{domxref("Node.appendChild()")}} (same effect as <code>beforeend</code>)</li>
-</ul>
+- {{domxref("Element.insertAdjacentHTML()")}}
+- {{domxref("Element.insertAdjacentText()")}}
+- {{domxref("Node.insertBefore()")}} (similar to `beforebegin`, with
+  different arguments)
+- {{domxref("Node.appendChild()")}} (same effect as `beforeend`)

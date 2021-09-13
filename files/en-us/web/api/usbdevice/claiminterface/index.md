@@ -2,55 +2,54 @@
 title: USBDevice.claimInterface()
 slug: Web/API/USBDevice/claimInterface
 tags:
-- API
-- Method
-- Reference
-- USB
-- USBDevice
-- WebUSB
-- WebUSB API
-- claimInterface
+  - API
+  - Method
+  - Reference
+  - USB
+  - USBDevice
+  - WebUSB
+  - WebUSB API
+  - claimInterface
 browser-compat: api.USBDevice.claimInterface
 ---
-<p>{{APIRef("WebUSB API")}}{{SeeCompatTable}}</p>
+{{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>claimInterface()</code></strong> method of the
-  {{domxref("USBDevice")}} interface returns a {{jsxref("promise")}} that resolves when
-  the requested interface is claimed for exclusive access.</p>
+The **`claimInterface()`** method of the
+{{domxref("USBDevice")}} interface returns a {{jsxref("promise")}} that resolves when
+the requested interface is claimed for exclusive access.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var promise = USBDevice.claimInterface(<em>interfaceNumber</em>)</pre>
+```js
+var promise = USBDevice.claimInterface(interfaceNumber)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>interfaceNumber</dt>
-  <dd>The index of one of the interfaces supported by the device. Interfaces are
-    device-specific.</dd>
-</dl>
+- interfaceNumber
+  - : The index of one of the interfaces supported by the device. Interfaces are
+    device-specific.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("promise")}}.</p>
+A {{jsxref("promise")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example shows <code>claimInterface()</code> in the context of connecting
-  to a USB device.</p>
+The following example shows `claimInterface()` in the context of connecting
+to a USB device.
 
-<pre>async function connectDevice(usbDevice) {
-  await usbDevice.open();
-  if (usbDevice.configuration === null)
-    await usbDevice.selectConfiguration(1);
-  await usbDevice.claimInterface(0);
-}</pre>
+    async function connectDevice(usbDevice) {
+      await usbDevice.open();
+      if (usbDevice.configuration === null)
+        await usbDevice.selectConfiguration(1);
+      await usbDevice.claimInterface(0);
+    }
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -9,35 +9,38 @@ tags:
   - LayoutShiftAttribution
 browser-compat: api.LayoutShiftAttribution.node
 ---
-<div>{{APIRef("Layout Instability API")}}</div>
+{{APIRef("Layout Instability API")}}
 
-<p>The <strong><code>node</code></strong> read-only property of the {{domxref("LayoutShiftAttribution")}} interface returns a {{domxref("node")}} representing the object that has shifted.</p>
+The **`node`** read-only property of the {{domxref("LayoutShiftAttribution")}} interface returns a {{domxref("node")}} representing the object that has shifted.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let node = LayoutShiftAttribution.node;</pre>
+```js
+let node = LayoutShiftAttribution.node;
+```
 
-<h3>Value</h3>
-<p>A {{domxref("node")}}.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("node")}}.
 
-<p>The following example prints the <code>node</code> of the first item in {{domxref("LayoutShift.sources")}} to the console.</p>
+## Examples
 
-<pre class="brush: js">new PerformanceObserver((list) => {
+The following example prints the `node` of the first item in {{domxref("LayoutShift.sources")}} to the console.
+
+```js
+new PerformanceObserver((list) => {
   for (const {sources} of list.getEntries()) {
     if (sources) {
       console.log(sources[0].node);
     }
   }
-}).observe({type: 'layout-shift', buffered: true});</pre>
+}).observe({type: 'layout-shift', buffered: true});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
-
+{{Compat}}

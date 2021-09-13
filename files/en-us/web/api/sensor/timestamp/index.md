@@ -2,37 +2,39 @@
 title: Sensor.timestamp
 slug: Web/API/Sensor/timestamp
 tags:
-- API
-- Generic Sensor API
-- Property
-- Reference
-- Sensor
-- Sensor APIs
-- Sensors
-- timeStamp
+  - API
+  - Generic Sensor API
+  - Property
+  - Reference
+  - Sensor
+  - Sensor APIs
+  - Sensors
+  - timeStamp
 browser-compat: api.Sensor.timestamp
 ---
-<div>{{APIRef("Sensor API")}}</div>
+{{APIRef("Sensor API")}}
 
-<p>The <strong><code>timestamp</code></strong> read-only property
-    of the {{domxref("Sensor")}} interface returns the time stamp of the latest sensor
-    reading.</p>
+The **`timestamp`** read-only property
+of the {{domxref("Sensor")}} interface returns the time stamp of the latest sensor
+reading.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var timestamp = sensorInstance.timestamp</pre>
+```js
+var timestamp = sensorInstance.timestamp
+```
 
-<p>Because {{domxref('Sensor')}} is a base class, <code>timestamp</code> may only be read
-  from one of its derived classes.</p>
+Because {{domxref('Sensor')}} is a base class, `timestamp` may only be read
+from one of its derived classes.
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMHighResTimeStamp")}}.</p>
+A {{domxref("DOMHighResTimeStamp")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

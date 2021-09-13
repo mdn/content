@@ -2,66 +2,60 @@
 title: PushManager.subscribe()
 slug: Web/API/PushManager/subscribe
 tags:
-- API
-- Experimental
-- Method
-- PushManager
-- Reference
-- WebAPI
-- subscribe
+  - API
+  - Experimental
+  - Method
+  - PushManager
+  - Reference
+  - WebAPI
+  - subscribe
 browser-compat: api.PushManager.subscribe
 ---
-<p>{{SeeCompatTable}}{{ApiRef("Push API")}}</p>
+{{SeeCompatTable}}{{ApiRef("Push API")}}
 
-<p>The <strong><code>subscribe()</code></strong> method of the {{domxref("PushManager")}}
-  interface subscribes to a push service.</p>
+The **`subscribe()`** method of the {{domxref("PushManager")}}
+interface subscribes to a push service.
 
-<p>It returns a {{jsxref("Promise")}} that resolves to a {{domxref("PushSubscription")}}
-  object containing details of a push subscription. A new push subscription is created if
-  the current service worker does not have an existing subscription.</p>
+It returns a {{jsxref("Promise")}} that resolves to a {{domxref("PushSubscription")}}
+object containing details of a push subscription. A new push subscription is created if
+the current service worker does not have an existing subscription.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">PushManager.subscribe(<em>options</em>).then(function(<em>pushSubscription</em>) { ... } );</pre>
+```js
+PushManager.subscribe(options).then(function(pushSubscription) { ... } );
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>options</code> {{optional_inline}}</dt>
-  <dd>An object containing optional configuration parameters. It can have the following
+- `options` {{optional_inline}}
+
+  - : An object containing optional configuration parameters. It can have the following
     properties:
-    <ul>
-      <li><code>userVisibleOnly</code>: A boolean indicating that the returned push
-        subscription will only be used for messages whose effect is made visible to the
-        user.</li>
-      <li><code>applicationServerKey</code>: A Base64-encoded {{domxref("DOMString")}} or
-        {{jsxref("ArrayBuffer")}} containing an <a
-          href="https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm">ECDSA</a>
-        P-256 public key that the push server will use to authenticate your application
-        server. If specified, all messages from your application server must use the <a
-          href="https://datatracker.ietf.org/doc/html/rfc8292">VAPID</a> authentication scheme, and
-        include a JWT signed with the corresponding private key. This key <em><strong>IS
-            NOT</strong></em> the same ECDH key that you use to encrypt the data. For more
-        information, see "<a
-          href="https://blog.mozilla.org/services/2016/04/04/using-vapid-with-webpush/">Using
-          VAPID with WebPush</a>".</li>
-    </ul>
 
-    <div class="note">
-      <p><strong>Note:</strong> This parameter is required in some browsers like
-          Chrome and Edge.</p>
-    </div>
-  </dd>
-</dl>
+    - `userVisibleOnly`: A boolean indicating that the returned push
+      subscription will only be used for messages whose effect is made visible to the
+      user.
+    - `applicationServerKey`: A Base64-encoded {{domxref("DOMString")}} or
+      {{jsxref("ArrayBuffer")}} containing an [ECDSA](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm)
+      P-256 public key that the push server will use to authenticate your application
+      server. If specified, all messages from your application server must use the [VAPID](https://datatracker.ietf.org/doc/html/rfc8292) authentication scheme, and
+      include a JWT signed with the corresponding private key. This key **_IS
+      NOT_** the same ECDH key that you use to encrypt the data. For more
+      information, see "[Using
+      VAPID with WebPush](https://blog.mozilla.org/services/2016/04/04/using-vapid-with-webpush/)".
 
-<h3 id="Returns">Returns</h3>
+    > **Note:** This parameter is required in some browsers like
+    > Chrome and Edge.
 
-<p>A {{jsxref("Promise")}} that resolves to a {{domxref("PushSubscription")}} object.</p>
+### Returns
 
-<h2 id="Example">Example</h2>
+A {{jsxref("Promise")}} that resolves to a {{domxref("PushSubscription")}} object.
 
-<pre class="brush: js">this.onpush = function(event) {
+## Example
+
+```js
+this.onpush = function(event) {
   console.log(event.data);
   // From here we can write the data to IndexedDB, send it to any open
   // windows, display a notification, etc.
@@ -90,29 +84,32 @@ navigator.serviceWorker.ready.then(
         console.log(error);
       }
     );
-  });</pre>
+  });
+```
 
-<h3 id="Responding_to_user_gestures">Responding to user gestures</h3>
+### Responding to user gestures
 
-<p><code>subscribe()</code> calls should be done in response to a user gesture, such as
-  clicking a button, for example:</p>
+`subscribe()` calls should be done in response to a user gesture, such as
+clicking a button, for example:
 
-<pre class="brush: js">btn.addEventListener('click', function() {
+```js
+btn.addEventListener('click', function() {
   serviceWorkerRegistration.pushManager.subscribe(options)
   .then(function(pushSubscription) {
     // handle subscription
   });
-})</pre>
+})
+```
 
-<p>This is not only best practice — you should not be spamming users with notifications
-  they didn't agree to — but going forward browsers will explicitly disallow notifications
-  not triggered in response to a user gesture. Firefox is already doing this from version
-  72, for example.</p>
+This is not only best practice — you should not be spamming users with notifications
+they didn't agree to — but going forward browsers will explicitly disallow notifications
+not triggered in response to a user gesture. Firefox is already doing this from version
+72, for example.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

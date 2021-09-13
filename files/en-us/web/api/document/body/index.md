@@ -2,27 +2,30 @@
 title: Document.body
 slug: Web/API/Document/body
 tags:
-- API
-- Document
-- HTML DOM
-- Property
-- Reference
+  - API
+  - Document
+  - HTML DOM
+  - Property
+  - Reference
 browser-compat: api.Document.body
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>Document.body</code></strong> property represents the
-  {{HTMLElement("body")}} or {{HTMLElement("frameset")}} node of the current document, or
-  <code>null</code> if no such element exists.</p>
+The **`Document.body`** property represents the
+{{HTMLElement("body")}} or {{HTMLElement("frameset")}} node of the current document, or
+`null` if no such element exists.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const <var>objRef</var> = document.body
-document.body = <var>objRef</var></pre>
+```js
+const objRef = document.body
+document.body = objRef
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">// Given this HTML: &lt;body id="oldBodyElement"&gt;&lt;/body&gt;
+```js
+// Given this HTML: <body id="oldBodyElement"></body>
 alert(document.body.id); // "oldBodyElement"
 
 const aNewBodyElement = document.createElement("body");
@@ -30,29 +33,27 @@ const aNewBodyElement = document.createElement("body");
 aNewBodyElement.id = "newBodyElement";
 document.body = aNewBodyElement;
 alert(document.body.id); // "newBodyElement"
-</pre>
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p><code>document.body</code> is the element that contains the content for the document.
-  In documents with <code>&lt;body&gt;</code> contents, returns the
-  <code>&lt;body&gt;</code> element, and in frameset documents, this returns the outermost
-  <code>&lt;frameset&gt;</code> element.</p>
+`document.body` is the element that contains the content for the document.
+In documents with `<body>` contents, returns the
+`<body>` element, and in frameset documents, this returns the outermost
+`<frameset>` element.
 
-<p>Though the <code>body</code> property is settable, setting a new body on a document
-  will effectively remove all the current children of the existing
-  <code>&lt;body&gt;</code> element.</p>
+Though the `body` property is settable, setting a new body on a document
+will effectively remove all the current children of the existing
+`<body>` element.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("document.head")}}</li>
-</ul>
+- {{domxref("document.head")}}

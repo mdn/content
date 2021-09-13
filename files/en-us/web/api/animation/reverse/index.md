@@ -13,59 +13,62 @@ tags:
   - web animations api
 browser-compat: api.Animation.reverse
 ---
-<div>{{APIRef("Web Animations")}}{{SeeCompatTable}}</div>
+{{APIRef("Web Animations")}}{{SeeCompatTable}}
 
-<p>The <strong><code>Animation.reverse()</code></strong> method of the {{ domxref("Animation") }} Interface reverses the playback direction, meaning the animation ends at its beginning. If called on an unplayed animation, the whole animation is played backwards. If called on a paused animation, the animation will continue in reverse. </p>
+The **`Animation.reverse()`** method of the {{ domxref("Animation") }} Interface reverses the playback direction, meaning the animation ends at its beginning. If called on an unplayed animation, the whole animation is played backwards. If called on a paused animation, the animation will continue in reverse.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">animation.reverse();
-</pre>
+```js
+animation.reverse();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{jsxref("undefined")}}</p>
+{{jsxref("undefined")}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In the <a href="http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010">Growing/Shrinking Alice Game</a> example, clicking or tapping the bottle causes Alice's growing animation (<code>aliceChange</code>) to play backwards, causing her to get smaller. It is done by setting <code>aliceChange</code>'s {{ domxref("Animation.playbackRate") }} to <code>-1</code> like so:</p>
+In the [Growing/Shrinking Alice Game](http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010) example, clicking or tapping the bottle causes Alice's growing animation (`aliceChange`) to play backwards, causing her to get smaller. It is done by setting `aliceChange`'s {{ domxref("Animation.playbackRate") }} to `-1` like so:
 
-<pre class="brush: js">var shrinkAlice = function() {
+```js
+var shrinkAlice = function() {
   // play Alice's animation in reverse
   aliceChange.playbackRate = -1;
   aliceChange.play();
 
   // play the bottle's animation
   drinking.play()
-}</pre>
+}
+```
 
-<p>But it could also have been done by calling <code>reverse()</code> on <code>aliceChange</code> like so:</p>
+But it could also have been done by calling `reverse()` on `aliceChange` like so:
 
-<pre class="brush: js">var shrinkAlice = function() {
+```js
+var shrinkAlice = function() {
   // play Alice's animation in reverse
   aliceChange.reverse();
 
   // play the bottle's animation
   drinking.play()
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
- <li>{{domxref("Animation")}} for other methods and properties you can use to control web page animation.</li>
- <li>{{domxref("Animation.pause()")}} to pause an animation.</li>
- <li>{{domxref("Animation.play()")}} to move an animation forward. </li>
-</ul>
+- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
+- {{domxref("Animation")}} for other methods and properties you can use to control web page animation.
+- {{domxref("Animation.pause()")}} to pause an animation.
+- {{domxref("Animation.play()")}} to move an animation forward.

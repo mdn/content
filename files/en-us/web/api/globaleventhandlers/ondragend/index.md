@@ -2,39 +2,39 @@
 title: GlobalEventHandlers.ondragend
 slug: Web/API/GlobalEventHandlers/ondragend
 tags:
-- API
-- HTML DOM
-- Reference
-- drag and drop
+  - API
+  - HTML DOM
+  - Reference
+  - drag and drop
 browser-compat: api.GlobalEventHandlers.ondragend
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p>A {{domxref("GlobalEventHandlers","global event handler")}} for the
-  {{event("dragend")}} event.</p>
+A {{domxref("GlobalEventHandlers","global event handler")}} for the
+{{event("dragend")}} event.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>dragendHandler</var> = <var>targetElement</var>.ondragend;
-</pre>
+```js
+var dragendHandler = targetElement.ondragend;
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<dl>
-  <dt><code>dragendHandler</code></dt>
-  <dd>The <em>dragend</em> event handler for element <code>targetElement</code>.</dd>
-</dl>
+- `dragendHandler`
+  - : The _dragend_ event handler for element `targetElement`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example shows two ways to use the {{domxref("GlobalEventHandlers","ondragend")}}
-  attribute handler to set an element's {{event("dragend")}} event handler.</p>
+This example shows two ways to use the {{domxref("GlobalEventHandlers","ondragend")}}
+attribute handler to set an element's {{event("dragend")}} event handler.
 
-<pre class="brush: js">&lt;!DOCTYPE html&gt;
-&lt;html lang=en&gt;
-&lt;title&gt;Examples of using the Drag and Drop Global Event Attribute&lt;/title&gt;
-&lt;meta content="width=device-width"&gt;
-&lt;style&gt;
+```js
+<!DOCTYPE html>
+<html lang=en>
+<title>Examples of using the Drag and Drop Global Event Attribute</title>
+<meta content="width=device-width">
+<style>
   div {
     margin: 0em;
     padding: 2em;
@@ -46,9 +46,9 @@ browser-compat: api.GlobalEventHandlers.ondragend
   #target {
     border: 1px solid black;
   }
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;script&gt;
+</style>
+</head>
+<script>
 function dragstart_handler(ev) {
  console.log("dragStart");
  // Change the source element's background color to signify drag has started
@@ -98,28 +98,26 @@ function init() {
  el.ondragleave = dragleave_handler;
  el.ondragend = dragend_handler;
 }
-&lt;/script&gt;
-&lt;body onload="init();"&gt;
-&lt;h1&gt;Examples of &lt;code&gt;ondragenter&lt;/code&gt;, &lt;code&gt;ondragleave&lt;/code&gt;, &lt;code&gt;ondragend&lt;/code&gt;&lt;/h1&gt;
- &lt;div&gt;
-   &lt;p id="source" ondragstart="dragstart_handler(event);" draggable="true"&gt;
-     Select this element, drag it to the Drop Zone and then release the selection to move the element.&lt;/p&gt;
- &lt;/div&gt;
- &lt;div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);"&gt;Drop Zone&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</script>
+<body onload="init();">
+<h1>Examples of <code>ondragenter</code>, <code>ondragleave</code>, <code>ondragend</code></h1>
+ <div>
+   <p id="source" ondragstart="dragstart_handler(event);" draggable="true">
+     Select this element, drag it to the Drop Zone and then release the selection to move the element.</p>
+ </div>
+ <div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div>
+</body>
+</html>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{event("dragend")}}</li>
-</ul>
+- {{event("dragend")}}

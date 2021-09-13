@@ -14,129 +14,126 @@ tags:
   - generateCertificate
 browser-compat: api.RTCPeerConnection.generateCertificate
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The static <strong><code>RTCPeerConnection.generateCertificate()</code></strong>
-  function creates an X.509 certificate and corresponding private key, returning a promise
-  that resolves with the new {{domxref("RTCCertificate")}} once it's generated.</p>
+The static **`RTCPeerConnection.generateCertificate()`**
+function creates an X.509 certificate and corresponding private key, returning a promise
+that resolves with the new {{domxref("RTCCertificate")}} once it's generated.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">let <em>certPromise</em> = RTCPeerConnection.generateCertificate(<em>keygenAlgorithm</em>)</pre>
+```js
+let certPromise = RTCPeerConnection.generateCertificate(keygenAlgorithm)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>keygenAlgorithm</code></dt>
-  <dd>A <a href="/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API</a>
+- `keygenAlgorithm`
+  - : A [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API)
     {{domxref("AlgorithmIdentifier")}} string or an {{domxref("Algorithm")}} -subclassed
-    object specifying an algorithm to use when creating the certificate's key.</dd>
-</dl>
+    object specifying an algorithm to use when creating the certificate's key.
 
-<div class="note">
-  <p><strong>Note:</strong> <code>RTCPeerConnection.generateCertificate()</code> is a static method, so it is
-    always called on the <code>RTCPeerConnection</code> interface itself, not an instance
-    thereof.</p>
-</div>
+> **Note:** `RTCPeerConnection.generateCertificate()` is a static method, so it is
+> always called on the `RTCPeerConnection` interface itself, not an instance
+> thereof.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A promise which resolves to a new {{domxref("RTCCertificate")}} object containing a new
-  key based on the specified options.</p>
+A promise which resolves to a new {{domxref("RTCCertificate")}} object containing a new
+key based on the specified options.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt><code>NotSupportedError</code></dt>
-  <dd>The normalized form of <code>keygenAlgorithm</code> specifies an algorithm or
+- `NotSupportedError`
+  - : The normalized form of `keygenAlgorithm` specifies an algorithm or
     algorithm settings that the browser doesn't support, or which it does not allow for
-    use with an {{domxref("RTCPeerConnection")}}.</dd>
-</dl>
+    use with an {{domxref("RTCPeerConnection")}}.
 
-<p>Other errors may occur; for example, if the specified <code>keygenAlgorithm</code>
-  can't be successfully converted into an {{domxref("RTCCertificateExpiration")}}
-  dictionary, the error that occurs during that conversion will be thrown.</p>
+Other errors may occur; for example, if the specified `keygenAlgorithm`
+can't be successfully converted into an {{domxref("RTCCertificateExpiration")}}
+dictionary, the error that occurs during that conversion will be thrown.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>If a string is specified, it must be a <a href="/en-US/docs/Web/API/Web_Crypto_API">Web
-    Crypto API</a>-compatible algorithm name string. Alternatively, you can provide
-  specific details for the algorithm's configuration by providing an object based on one
-  of the Web Crypto API's {{domxref("Algorithm")}} class's subclasses.</p>
+If a string is specified, it must be a [Web
+Crypto API](/en-US/docs/Web/API/Web_Crypto_API)-compatible algorithm name string. Alternatively, you can provide
+specific details for the algorithm's configuration by providing an object based on one
+of the Web Crypto API's {{domxref("Algorithm")}} class's subclasses.
 
-<h3 id="Standard_configurations">Standard configurations</h3>
+### Standard configurations
 
-<p>All browsers are required to support the following two configurations. It's entirely
-  possible that a browser's <em>default</em> settings may be different, but these are
-  always supported.</p>
+All browsers are required to support the following two configurations. It's entirely
+possible that a browser's *default* settings may be different, but these are
+always supported.
 
-<h4 id="RSASSA-PKCS1-v1_5">RSASSA-PKCS1-v1_5</h4>
+#### RSASSA-PKCS1-v1_5
 
-<pre class="brush: js">let stdRSACertificate = {
+```js
+let stdRSACertificate = {
   name: "RSASSA-PKCS1-v1_5",
   modulusLength: 2048,
   publicExponent: new Uint8Array([1, 0, 1]),
   hash: "SHA-256"
 };
-</pre>
+```
 
-<h4 id="ECDSA">ECDSA</h4>
+#### ECDSA
 
-<pre class="brush: js">let stdECDSACertificate = {
+```js
+let stdECDSACertificate = {
   name: "ECDSA",
   namedCurve: "P-256"
 };
-</pre>
+```
 
-<h3 id="Certificate_expiration_time">Certificate expiration time</h3>
+### Certificate expiration time
 
-<p>By default the new certificate is configured with <code>expires</code> set to a
-  {{domxref("DOMTimeStamp")}} value of 2592000000, or 30 days. The expiration time cannot
-  exceed 31536000000, or 365 days. It's also useful to note that browsers may further
-  restrict the expiration time of certificates if they choose.</p>
+By default the new certificate is configured with `expires` set to a
+{{domxref("DOMTimeStamp")}} value of 2592000000, or 30 days. The expiration time cannot
+exceed 31536000000, or 365 days. It's also useful to note that browsers may further
+restrict the expiration time of certificates if they choose.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Specifying_algorithm_details">Specifying algorithm details</h3>
+### Specifying algorithm details
 
-<p>This example requests a new RSASSA-PKCS1-v1_5 certificate using a SHA-256 hash and a
-  modulus length of 2048.</p>
+This example requests a new RSASSA-PKCS1-v1_5 certificate using a SHA-256 hash and a
+modulus length of 2048.
 
-<pre class="brush: js">RTCPeerConnection.generateCertificate({
+```js
+RTCPeerConnection.generateCertificate({
     name: 'RSASSA-PKCS1-v1_5',
     hash: 'SHA-256',
     modulusLength: 2048,
     publicExponent: new Uint8Array([1, 0, 1])
 }).then(function(cert) {
   var pc = new RTCPeerConnection({certificates: [cert]});
-});</pre>
+});
+```
 
-<h3 id="Specifying_an_algorithm_by_name">Specifying an algorithm by name</h3>
+### Specifying an algorithm by name
 
-<p>The example below specifies a string requesting an <a
-    href="https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm">ECDSA</a>
-  certificate.</p>
+The example below specifies a string requesting an [ECDSA](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm)
+certificate.
 
-<pre class="brush: js">RTCPeerConnection.generateCertificate("ECDSA");
-</pre>
+```js
+RTCPeerConnection.generateCertificate("ECDSA");
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
-  <li><a href="/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API</a></li>
-  <li><a href="/en-US/docs/Learn/Server-side/First_steps/Website_security">Web site
-      security</a></li>
-  <li><a href="/en-US/docs/Web/Security">Web security</a></li>
-  <li>{{Glossary("Symmetric-key cryptography")}}</li>
-  <li><code><a href="/en-US/docs/Web/API/Window/crypto">Window.crypto</a></code></li>
-</ul>
+- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+- [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API)
+- [Web site
+  security](/en-US/docs/Learn/Server-side/First_steps/Website_security)
+- [Web security](/en-US/docs/Web/Security)
+- {{Glossary("Symmetric-key cryptography")}}
+- [`Window.crypto`](/en-US/docs/Web/API/Window/crypto)

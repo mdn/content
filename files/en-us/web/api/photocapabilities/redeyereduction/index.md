@@ -2,47 +2,46 @@
 title: PhotoCapabilities.redEyeReduction
 slug: Web/API/PhotoCapabilities/redEyeReduction
 tags:
-- API
-- Experimental
-- Image
-- Image Capture
-- Media
-- MediaStream Image Capture API
-- PhotoCapabilities
-- Property
-- Read-only
-- Reference
+  - API
+  - Experimental
+  - Image
+  - Image Capture
+  - Media
+  - MediaStream Image Capture API
+  - PhotoCapabilities
+  - Property
+  - Read-only
+  - Reference
 browser-compat: api.PhotoCapabilities.redEyeReduction
 ---
-<div>{{APIRef("MediaStream Image")}}</div>
+{{APIRef("MediaStream Image")}}
 
-<p>The <strong><code>redEyeReduction</code></strong> read-only property of the
-  {{domxref("PhotoCapabilities")}} interface returns an enum indicating the red-eye
-  reduction capability of the source.</p>
+The **`redEyeReduction`** read-only property of the
+{{domxref("PhotoCapabilities")}} interface returns an enum indicating the red-eye
+reduction capability of the source.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">const <em>redEyeReduction</em> = <em>photoCapabilities</em>.redEyeReduction</pre>
+```js
+const redEyeReduction = photoCapabilities.redEyeReduction
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>One of <code>"never"</code>, <code>"always"</code>, or <code>"controllable"</code>.</p>
+One of `"never"`, `"always"`, or `"controllable"`.
 
-<dl>
-  <dt><code>never</code></dt>
-  <dd>Red-eye reduction is not available.</dd>
-  <dt><code>always</code></dt>
-  <dd>Red-eye reduction is available in the source and it is always turned on.</dd>
-  <dt><code>controllable</code></dt>
-  <dd>Red-eye reduction is available in the source and it is configurable via the
-    {{domxref("PhotoSettings")}} object.</dd>
-</dl>
+- `never`
+  - : Red-eye reduction is not available.
+- `always`
+  - : Red-eye reduction is available in the source and it is always turned on.
+- `controllable`
+  - : Red-eye reduction is available in the source and it is configurable via the
+    {{domxref("PhotoSettings")}} object.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,52 +2,53 @@
 title: WebGLRenderingContext.drawingBufferWidth
 slug: Web/API/WebGLRenderingContext/drawingBufferWidth
 tags:
-- API
-- Property
-- Read-only
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Property
+  - Read-only
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.drawingBufferWidth
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The read-only <code><strong>WebGLRenderingContext.drawingBufferWidth</strong></code>
-  property represents the actual width of the current drawing buffer. It should match the
-  <code>width</code> attribute of the {{HTMLElement("canvas")}} element associated with
-  this context, but might differ if the implementation is not able to provide the
-  requested width.</p>
+The read-only **`WebGLRenderingContext.drawingBufferWidth`**
+property represents the actual width of the current drawing buffer. It should match the
+`width` attribute of the {{HTMLElement("canvas")}} element associated with
+this context, but might differ if the implementation is not able to provide the
+requested width.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var><em>gl</em></var>.drawingBufferWidth;</pre>
+```js
+gl.drawingBufferWidth;
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Given this {{HTMLElement("canvas")}} element:</p>
+Given this {{HTMLElement("canvas")}} element:
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<p>You can get the width of the drawing buffer with the following lines:</p>
+You can get the width of the drawing buffer with the following lines:
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 gl.drawingBufferWidth; // 300
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.drawingBufferHeight")}}</li>
-  <li>{{domxref("WebGLRenderingContext.viewport()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.drawingBufferHeight")}}
+- {{domxref("WebGLRenderingContext.viewport()")}}

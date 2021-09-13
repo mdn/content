@@ -2,56 +2,52 @@
 title: CustomElementRegistry.define()
 slug: Web/API/CustomElementRegistry/define
 tags:
-- API
-- CustomElementRegistry
-- Method
-- Reference
-- Web Components
-- custom elements
-- define
+  - API
+  - CustomElementRegistry
+  - Method
+  - Reference
+  - Web Components
+  - custom elements
+  - define
 browser-compat: api.CustomElementRegistry.define
 ---
-<p>{{APIRef("CustomElementRegistry")}}</p>
+{{APIRef("CustomElementRegistry")}}
 
-<p>The <code><strong>define()</strong></code> method of the
-  {{domxref("CustomElementRegistry")}} interface defines a new custom element.</p>
+The **`define()`** method of the
+{{domxref("CustomElementRegistry")}} interface defines a new custom element.
 
-<p>There are two types of custom elements you can create:</p>
+There are two types of custom elements you can create:
 
-<ul>
-  <li><strong>Autonomous custom element</strong>: Standalone elements; they don't inherit
-    from built-in HTML elements.</li>
-  <li><strong>Customized built-in element</strong>: These elements inherit from — and
-    extend — built-in HTML elements.</li>
-</ul>
+- **Autonomous custom element**: Standalone elements; they don't inherit
+  from built-in HTML elements.
+- **Customized built-in element**: These elements inherit from — and
+  extend — built-in HTML elements.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">customElements.define(<em>name</em>, <em>constructor</em>, <em>options</em>);
-</pre>
+```js
+customElements.define(name, constructor, options);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>name</dt>
-  <dd>Name for the new custom element. Note that custom element names must contain a
-    hyphen.</dd>
-  <dt>constructor</dt>
-  <dd>Constructor for the new custom element.</dd>
-  <dt>options {{optional_inline}}</dt>
-  <dd>Object that controls how the element is defined. One option is currently supported:
-    <ul>
-      <li><code>extends</code>: String specifying the name of a built-in element to
-        extend. Used to create a <em>customized built-in element</em>.</li>
-    </ul>
-  </dd>
-</dl>
+- name
+  - : Name for the new custom element. Note that custom element names must contain a
+    hyphen.
+- constructor
+  - : Constructor for the new custom element.
+- options {{optional_inline}}
 
-<h3 id="Return_value">Return value</h3>
+  - : Object that controls how the element is defined. One option is currently supported:
 
-<p>Void.</p>
+    - `extends`: String specifying the name of a built-in element to
+      extend. Used to create a _customized built-in element_.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Return value
+
+Void.
+
+### Exceptions
 
 <table class="no-markdown">
   <thead>
@@ -63,18 +59,26 @@ browser-compat: api.CustomElementRegistry.define
   <tbody>
     <tr>
       <td><code>NotSupportedError</code></td>
-      <td>The {{domxref("CustomElementRegistry")}} already contains an entry with the same
-        name or the same constructor (or is otherwise already defined), or
-        <code>extends</code> is specified and it is a <a
-          href="https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name">valid
-          custom element name</a>, or <code>extends</code> is specified but the element it
-        is trying to extend is an unknown element.</td>
+      <td>
+        The {{domxref("CustomElementRegistry")}} already contains an
+        entry with the same name or the same constructor (or is otherwise
+        already defined), or <code>extends</code> is specified and it is a
+        <a
+          href="https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name"
+          >valid custom element name</a
+        >, or <code>extends</code> is specified but the element it is trying to
+        extend is an unknown element.
+      </td>
     </tr>
     <tr>
       <td><code>SyntaxError</code></td>
-      <td>The provided name is not a <a
-          href="https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name">valid
-          custom element name</a>.</td>
+      <td>
+        The provided name is not a
+        <a
+          href="https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name"
+          >valid custom element name</a
+        >.
+      </td>
     </tr>
     <tr>
       <td><code>TypeError</code></td>
@@ -83,23 +87,20 @@ browser-compat: api.CustomElementRegistry.define
   </tbody>
 </table>
 
-<div class="note">
-  <p><strong>Note:</strong> You'll often get <code>NotSupportedError</code>s thrown that
-    seem like <code>define()</code> is failing, but instead it is likely a problem with
-    {{domxref("Element.attachShadow()")}}.</p>
-</div>
+> **Note:** You'll often get `NotSupportedError`s thrown that
+> seem like `define()` is failing, but instead it is likely a problem with
+> {{domxref("Element.attachShadow()")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Autonomous_custom_element">Autonomous custom element</h3>
+### Autonomous custom element
 
-<p>The following code is taken from our <a
-    href="https://github.com/mdn/web-components-examples/tree/master/popup-info-box-web-component">popup-info-box-web-component</a>
-  example (<a
-    href="https://mdn.github.io/web-components-examples/popup-info-box-web-component/">see
-    it live also</a>).</p>
+The following code is taken from our [popup-info-box-web-component](https://github.com/mdn/web-components-examples/tree/master/popup-info-box-web-component)
+example ([see
+it live also](https://mdn.github.io/web-components-examples/popup-info-box-web-component/)).
 
-<pre class="brush: js">// Create a class for the element
+```js
+// Create a class for the element
 class PopUpInfo extends HTMLElement {
   constructor() {
     // Always call super first in constructor
@@ -174,26 +175,25 @@ class PopUpInfo extends HTMLElement {
 
 // Define the new element
 customElements.define('popup-info', PopUpInfo);
-</pre>
+```
 
-<pre class="brush: html">&lt;popup-info img="img/alt.png" text="Your card validation code (CVC) is an extra
+```html
+<popup-info img="img/alt.png" text="Your card validation code (CVC) is an extra
                                     security feature — it is the last 3 or 4
-                                    numbers on the back of your card."&gt;</pre>
+                                    numbers on the back of your card.">
+```
 
-<div class="note">
-  <p><strong>Note:</strong> Constructors for autonomous custom elements must extend
-    {{domxref("HTMLElement")}}.</p>
-</div>
+> **Note:** Constructors for autonomous custom elements must extend
+> {{domxref("HTMLElement")}}.
 
-<h3 id="Customized_built-in_element">Customized built-in element</h3>
+### Customized built-in element
 
-<p>The following code is taken from our <a
-    href="https://github.com/mdn/web-components-examples/tree/master/word-count-web-component">word-count-web-component</a>
-  example (<a
-    href="https://mdn.github.io/web-components-examples/word-count-web-component/">see it
-    live also</a>).</p>
+The following code is taken from our [word-count-web-component](https://github.com/mdn/web-components-examples/tree/master/word-count-web-component)
+example ([see it
+live also](https://mdn.github.io/web-components-examples/word-count-web-component/)).
 
-<pre class="brush: js">// Create a class for the element
+```js
+// Create a class for the element
 class WordCount extends HTMLParagraphElement {
   constructor() {
     // Always call super first in constructor
@@ -229,15 +229,19 @@ class WordCount extends HTMLParagraphElement {
 }
 
 // Define the new element
-customElements.define('word-count', WordCount, { extends: 'p' });</pre>
+customElements.define('word-count', WordCount, { extends: 'p' });
+```
 
-<pre class="brush: html">&lt;p is="word-count"&gt;&lt;/p&gt;</pre>
+```html
+<p is="word-count"></p>
+```
 
-<h3>Creating an element which disables the ability to attach a shadow root</h3>
+### Creating an element which disables the ability to attach a shadow root
 
-<p>If the class used for the element contains the static property <code>disabledFeatures</code> returning the string `shadow` this will cause {{domxref("Element.attachShadow()")}} to return a {{domxref("DOMException")}} <code>NotSupportedError</code>.</p>
+If the class used for the element contains the static property `disabledFeatures` returning the string \`shadow\` this will cause {{domxref("Element.attachShadow()")}} to return a {{domxref("DOMException")}} `NotSupportedError`.
 
-<pre class="brush: js">class PopUpInfo extends HTMLElement {
+```js
+class PopUpInfo extends HTMLElement {
   static get disabledFeatures() { return ['shadow']; }
 
   constructor() {
@@ -247,12 +251,13 @@ customElements.define('word-count', WordCount, { extends: 'p' });</pre>
     // this will cause an error to be thrown when the element is defined.
   }
 }
-  </pre>
 
-<h2 id="Specifications">Specifications</h2>
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

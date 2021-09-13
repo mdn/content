@@ -2,54 +2,53 @@
 title: Document.fonts
 slug: Web/API/Document/fonts
 tags:
-- API
-- DOM
-- Font Loading API
-- FontFace
-- FontFaceSet
-- Fonts
-- font
+  - API
+  - DOM
+  - Font Loading API
+  - FontFace
+  - FontFaceSet
+  - Fonts
+  - font
 browser-compat: api.Document.fonts
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>fonts</code></strong> property of the
-    {{domxref("Document")}} interface returns the {{domxref("FontFaceSet")}} interface of
-    the document.</p>
+The **`fonts`** property of the
+{{domxref("Document")}} interface returns the {{domxref("FontFaceSet")}} interface of
+the document.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">let <var>fontFaceSet</var> = <var>document</var>.fonts;</pre>
+```js
+let fontFaceSet = document.fonts;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>The returned value is the {{domxref("FontFaceSet")}} interface of the document. The
-  <code>FontFaceSet</code> interface is useful for loading new fonts, checking the status
-  of previously loaded fonts etc.</p>
+The returned value is the {{domxref("FontFaceSet")}} interface of the document. The
+`FontFaceSet` interface is useful for loading new fonts, checking the status
+of previously loaded fonts etc.
 
-<h2 id="Example">Examples</h2>
+## Examples
 
-<h3 id="Doing_operation_after_all_fonts_are_loaded">Doing operation after all fonts are
-  loaded</h3>
+### Doing operation after all fonts are loaded
 
-<pre class="brush: js">document.fonts.ready.then(function() {
+```js
+document.fonts.ready.then(function() {
   // Any operation that needs to be done only after all the fonts
   // have finished loading can go here.
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("FontFaceSet")}} interface</li>
-  <li>{{domxref("FontFace")}}</li>
-</ul>
+- {{domxref("FontFaceSet")}} interface
+- {{domxref("FontFace")}}

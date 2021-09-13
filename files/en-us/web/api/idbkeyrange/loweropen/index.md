@@ -2,77 +2,58 @@
 title: IDBKeyRange.lowerOpen
 slug: Web/API/IDBKeyRange/lowerOpen
 tags:
-- API
-- Database
-- IDBKeyRange
-- IndexedDB
-- Property
-- Reference
-- Storage
-- lowerOpen
+  - API
+  - Database
+  - IDBKeyRange
+  - IndexedDB
+  - Property
+  - Reference
+  - Storage
+  - lowerOpen
 browser-compat: api.IDBKeyRange.lowerOpen
 ---
-<p>{{ APIRef("IndexedDB") }}</p>
+{{ APIRef("IndexedDB") }}
 
-<div>
-  <p>The <strong><code>lowerOpen</code></strong> read-only property of the
-    {{domxref("IDBKeyRange")}} interface returns a boolean indicating whether the
-    lower-bound value is included in the key range.</p>
+The **`lowerOpen`** read-only property of the
+{{domxref("IDBKeyRange")}} interface returns a boolean indicating whether the
+lower-bound value is included in the key range.
 
-  <p>{{AvailableInWorkers}}</p>
-</div>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var lowerOpen = myKeyRange.lowerOpen</pre>
+```js
+var lowerOpen = myKeyRange.lowerOpen
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A boolean value:</p>
+A boolean value:
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Value</th>
-      <th scope="col">Indication</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>true</code></td>
-      <td>The lower-bound value is not included in the key range.</td>
-    </tr>
-    <tr>
-      <td><code>false</code></td>
-      <td>The lower-bound value is included in the key range.<br>
-         </td>
-    </tr>
-  </tbody>
-</table>
+| Value   | Indication                                              |
+| ------- | ------------------------------------------------------- |
+| `true`  | The lower-bound value is not included in the key range. |
+| `false` | The lower-bound value is included in the key range.     |
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example illustrates how you'd use a key range. Here we
-  declare <code>keyRangeValue = IDBKeyRange.upperBound("F", "W", true, true);</code> — a
-  range that includes everything between "F" and "W" but not including them — since both
-  the upper and lower bounds have been declared as open (<code>true</code>). We open a
-  transaction (using {{domxref("IDBTransaction")}}) and an object store, and open a Cursor
-  with {{domxref("IDBObjectStore.openCursor")}}, declaring <code>keyRangeValue</code> as
-  its optional key range value.</p>
+The following example illustrates how you'd use a key range. Here we
+declare `keyRangeValue = IDBKeyRange.upperBound("F", "W", true, true);` — a
+range that includes everything between "F" and "W" but not including them — since both
+the upper and lower bounds have been declared as open (`true`). We open a
+transaction (using {{domxref("IDBTransaction")}}) and an object store, and open a Cursor
+with {{domxref("IDBObjectStore.openCursor")}}, declaring `keyRangeValue` as
+its optional key range value.
 
-<p>After declaring the key range, we log its <code>lowerOpen</code> property value to the
-  console, which should appear as "true": the lower bound is open, so won't be included in
-  the range.</p>
+After declaring the key range, we log its `lowerOpen` property value to the
+console, which should appear as "true": the lower bound is open, so won't be included in
+the range.
 
-<div class="note">
-  <p><strong>Note:</strong> For a more complete example allowing you to experiment with
-    key range, have a look at our <a
-      href="https://github.com/mdn/IDBKeyRange-example">IDBKeyRange-example</a> repo (<a
-      href="https://mdn.github.io/IDBKeyRange-example/">view the example live too</a>.)
-  </p>
-</div>
+> **Note:** For a more complete example allowing you to experiment with
+> key range, have a look at our [IDBKeyRange-example](https://github.com/mdn/IDBKeyRange-example) repo ([view the example live too](https://mdn.github.io/IDBKeyRange-example/).)
 
-<pre class="brush: js">function displayData() {
+```js
+function displayData() {
   var keyRangeValue = IDBKeyRange.bound("F", "W", true, true);
   console.log(keyRangeValue.lowerOpen);
 
@@ -83,7 +64,7 @@ browser-compat: api.IDBKeyRange.lowerOpen
     var cursor = event.target.result;
       if(cursor) {
         var listItem = document.createElement('li');
-        listItem.innerHTML = '&lt;strong&gt;' + cursor.value.fThing + '&lt;/strong&gt;, ' + cursor.value.fRating;
+        listItem.innerHTML = '<strong>' + cursor.value.fThing + '</strong>, ' + cursor.value.fRating;
         list.appendChild(listItem);
 
         cursor.continue();
@@ -91,27 +72,24 @@ browser-compat: api.IDBKeyRange.lowerOpen
         console.log('Entries all displayed.');
       }
     };
-  };</pre>
+  };
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
-  <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
-  <li>Using transactions: {{domxref("IDBTransaction")}}</li>
-  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
-  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
-  <li>Using cursors: {{domxref("IDBCursor")}}</li>
-  <li>Reference example: <a class="external"
-      href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
-      Notifications</a> (<a class="external"
-      href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do
+  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

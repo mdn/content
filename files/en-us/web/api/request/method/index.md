@@ -10,43 +10,43 @@ tags:
   - request
 browser-compat: api.Request.method
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p>The <strong><code>method</code></strong> read-only property of the
-  {{domxref("Request")}} interface contains the request's method (<code>GET</code>,
-  <code>POST</code>, etc.)</p>
+The **`method`** read-only property of the
+{{domxref("Request")}} interface contains the request's method (`GET`,
+`POST`, etc.)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>myMethod</var> = <var>request</var>.method;</pre>
+```js
+var myMethod = request.method;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{jsxref("String")}} indicating the method of the request.</p>
+A {{jsxref("String")}} indicating the method of the request.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In the following snippet, we create a new request using the
-  {{domxref("Request.Request()")}} constructor (for an image file in the same directory as
-  the script), then save the method of the request in a variable:</p>
+In the following snippet, we create a new request using the
+{{domxref("Request.Request()")}} constructor (for an image file in the same directory as
+the script), then save the method of the request in a variable:
 
-<pre class="brush: js">var myRequest = new Request('flowers.jpg');
-var myMethod = myRequest.method; // GET</pre>
+```js
+var myRequest = new Request('flowers.jpg');
+var myMethod = myRequest.method; // GET
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
-  <li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a>
-  </li>
-  <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP](/en-US/docs/Web/HTTP)

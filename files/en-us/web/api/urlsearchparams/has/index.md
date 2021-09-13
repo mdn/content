@@ -2,49 +2,49 @@
 title: URLSearchParams.has()
 slug: Web/API/URLSearchParams/has
 tags:
-- API
-- Method
-- URL API
-- URLSearchParams
-- has
+  - API
+  - Method
+  - URL API
+  - URLSearchParams
+  - has
 browser-compat: api.URLSearchParams.has
 ---
-<p>{{ApiRef("URL API")}}</p>
+{{ApiRef("URL API")}}
 
-<p>The <strong><code>has()</code></strong> method of the {{domxref("URLSearchParams")}}
-  interface returns a boolean value that indicates whether a parameter with the
-  specified name exists.</p>
+The **`has()`** method of the {{domxref("URLSearchParams")}}
+interface returns a boolean value that indicates whether a parameter with the
+specified name exists.
 
-<p>{{availableinworkers}}</p>
+{{availableinworkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>hasName</em> = URLSearchParams.has(<em>name</em>)</pre>
+```js
+var hasName = URLSearchParams.has(name)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>name</dt>
-  <dd>The name of the parameter to find.</dd>
-</dl>
+- name
+  - : The name of the parameter to find.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A boolean value.</p>
+A boolean value.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">let url = new URL('https://example.com?foo=1&amp;bar=2');
+```js
+let url = new URL('https://example.com?foo=1&bar=2');
 let params = new URLSearchParams(url.search.slice(1));
 
 params.has('bar') === true; //true
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

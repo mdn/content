@@ -17,74 +17,74 @@ tags:
   - rtc
 browser-compat: api.RTCPeerConnection.datachannel_event
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>A <strong><code>datachannel</code></strong> event is sent to an {{domxref("RTCPeerConnection")}} instance when an {{domxref("RTCDataChannel")}} has been added to the connection, as a result of the remote peer calling {{domxref("RTCPeerConnection.createDataChannel()")}}.</p>
+A **`datachannel`** event is sent to an {{domxref("RTCPeerConnection")}} instance when an {{domxref("RTCDataChannel")}} has been added to the connection, as a result of the remote peer calling {{domxref("RTCPeerConnection.createDataChannel()")}}.
 
-<div class="note">
-<p><strong>Note:</strong> This event is <em>not</em> dispatched when the local end of the connection creates the channel.</p>
-</div>
+> **Note:** This event is _not_ dispatched when the local end of the connection creates the channel.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{DOMxRef("RTCDataChannelEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{DOMxRef("RTCPeerConnection.ondatachannel", "ondatachannel")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{DOMxRef("RTCDataChannelEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{DOMxRef("RTCPeerConnection.ondatachannel", "ondatachannel")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example sets up a function that handles <code>datachannel</code> events by gathering the information needed to communicate with the newly added {{domxref("RTCDataChannel")}} and by adding event handlers for the events that occur on that channel.</p>
+This example sets up a function that handles `datachannel` events by gathering the information needed to communicate with the newly added {{domxref("RTCDataChannel")}} and by adding event handlers for the events that occur on that channel.
 
-<pre class="brush: js">pc.addEventListener("datachannel", ev =&gt; {
+```js
+pc.addEventListener("datachannel", ev => {
   receiveChannel = ev.channel;
   receiveChannel.onmessage = myHandleMessage;
   receiveChannel.onopen = myHandleOpen;
   receiveChannel.onclose = myHandleClose;
 }, false);
-</pre>
+```
 
-<p><code>receiveChannel</code> is set to the value of the event's {{domxref("RTCDataChannelEvent.channel", "channel")}} property, which specifies the <code>RTCDataChannel</code> object representing the data channel linking the remote peer to the local one.</p>
+`receiveChannel` is set to the value of the event's {{domxref("RTCDataChannelEvent.channel", "channel")}} property, which specifies the `RTCDataChannel` object representing the data channel linking the remote peer to the local one.
 
-<p>This same code can also instead use the {{domxref("RTCPeerConnection")}} interface's {{domxref("RTCPeerConnection.ondatachannel", "ondatachannel")}} event handler property, like this:</p>
+This same code can also instead use the {{domxref("RTCPeerConnection")}} interface's {{domxref("RTCPeerConnection.ondatachannel", "ondatachannel")}} event handler property, like this:
 
-<pre class="brush: js">pc.ondatachannel = ev =&gt; {
+```js
+pc.ondatachannel = ev => {
   receiveChannel = ev.channel;
   receiveChannel.onmessage = myHandleMessage;
   receiveChannel.onopen = myHandleOpen;
   receiveChannel.onclose = myHandleClose;
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API/Using_data_channels">Using WebRTC data channels</a></li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample">A simple RTCDataChannel sample</a></li>
- <li>{{domxref("RTCDataChannelEvent")}}</li>
- <li>{{domxref("RTCPeerConnection.ondatachannel")}}</li>
- <li>{{domxref("RTCPeerConnection.createDataChannel()")}}</li>
-</ul>
+- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+- [Using WebRTC data channels](/en-US/docs/Web/API/WebRTC_API/Using_data_channels)
+- [A simple RTCDataChannel sample](/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample)
+- {{domxref("RTCDataChannelEvent")}}
+- {{domxref("RTCPeerConnection.ondatachannel")}}
+- {{domxref("RTCPeerConnection.createDataChannel()")}}

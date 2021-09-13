@@ -2,47 +2,46 @@
 title: KeyboardLayoutMap.has()
 slug: Web/API/KeyboardLayoutMap/has
 tags:
-- API
-- Experimental
-- Keyboard API
-- Keyboard Map
-- KeyboardLayoutMap
-- Method
-- Reference
-- has()
-- keyboard
+  - API
+  - Experimental
+  - Keyboard API
+  - Keyboard Map
+  - KeyboardLayoutMap
+  - Method
+  - Reference
+  - has()
+  - keyboard
 browser-compat: api.KeyboardLayoutMap.has
 ---
-<div>{{APIRef("Keyboard API")}}{{SeeCompatTable}}</div>
+{{APIRef("Keyboard API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>has()</code></strong> method of the
-    {{domxref('KeyboardLayoutMap')}} interface returns a boolean indicating whether the
-    object has an element with the specified key.</p>
+The **`has()`** method of the
+{{domxref('KeyboardLayoutMap')}} interface returns a boolean indicating whether the
+object has an element with the specified key.
 
-<p>A list of valid keys is found in
-  the <a href="https://www.w3.org/TR/uievents-code/#key-alphanumeric-writing-system">UI
-    Events KeyboardEvent code Values</a> spec.</p>
+A list of valid keys is found in
+the [UI
+Events KeyboardEvent code Values](https://www.w3.org/TR/uievents-code/#key-alphanumeric-writing-system) spec.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>aBoolean</var> = <var>KeyboardLayoutMap</var>.has(<var>key</var>)</pre>
+```js
+var aBoolean = KeyboardLayoutMap.has(key)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>key</dt>
-  <dd>The key of an element to search for in the map.</dd>
-</dl>
+- key
+  - : The key of an element to search for in the map.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref('Boolean')}} indicating whether the specified key was found.</p>
+A {{jsxref('Boolean')}} indicating whether the specified key was found.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

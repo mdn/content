@@ -7,58 +7,64 @@ tags:
   - Web Speech API
 browser-compat: api.SpeechRecognition.end_event
 ---
-<div>{{APIRef("Web Speech API")}} {{SeeCompatTable}}</div>
+{{APIRef("Web Speech API")}} {{SeeCompatTable}}
 
-<p>The <code><strong>end</strong></code> event of the <a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a> {{domxref("SpeechRecognition")}} object is fired when the speech recognition service has disconnected.</p>
+The **`end`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) {{domxref("SpeechRecognition")}} object is fired when the speech recognition service has disconnected.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td><code><a href="/en-US/docs/Web/API/SpeechRecognition/onend">onend</a></code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/API/SpeechRecognition/onend">onend</a></code
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>You can use the <code>end</code> event in an <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener</a></code> method:</p>
+You can use the `end` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
-<pre class="brush: js">var recognition = new webkitSpeechRecognition() || new SpeechRecognition();
+```js
+var recognition = new webkitSpeechRecognition() || new SpeechRecognition();
 
 recognition.addEventListener('end', function() {
   console.log('Speech recognition service disconnected');
-});</pre>
+});
+```
 
-<p>Or use the <code><a href="/en-US/docs/Web/API/SpeechRecognition/onend">onend</a></code> event handler property:</p>
+Or use the [`onend`](/en-US/docs/Web/API/SpeechRecognition/onend) event handler property:
 
-<pre class="brush: js">recognition.onend = function() {
+```js
+recognition.onend = function() {
   console.log('Speech recognition service disconnected');
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
- <li><code><a href="/en-US/docs/Web/API/SpeechRecognition/onend">onend</a></code></li>
-</ul>
+- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)
+- [`onend`](/en-US/docs/Web/API/SpeechRecognition/onend)

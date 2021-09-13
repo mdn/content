@@ -2,55 +2,57 @@
 title: Element.onfullscreenchange
 slug: Web/API/Element/onfullscreenchange
 tags:
-- API
-- Element
-- Event Handler
-- Full
-- Full-screen
-- Fullscreen API
-- Property
-- Reference
-- fullscreen
-- onfullscreenchange
-- screen
+  - API
+  - Element
+  - Event Handler
+  - Full
+  - Full-screen
+  - Fullscreen API
+  - Property
+  - Reference
+  - fullscreen
+  - onfullscreenchange
+  - screen
 browser-compat: api.Element.onfullscreenchange
 ---
-<div>{{ApiRef("Fullscreen API")}}</div>
+{{ApiRef("Fullscreen API")}}
 
-<p>The {{domxref("Element")}} interface's
-    <code><strong>onfullscreenchange</strong></code> property is an event handler for the
-    {{event("fullscreenchange")}} event that is fired when the element has transitioned
-    into or out of full-screen mode.</p>
+The {{domxref("Element")}} interface's
+**`onfullscreenchange`** property is an event handler for the
+{{event("fullscreenchange")}} event that is fired when the element has transitioned
+into or out of full-screen mode.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>targetDocument</em>.onfullscreenchange = <em>fullscreenChangeHandler</em>;
-</pre>
+```js
+targetDocument.onfullscreenchange = fullscreenChangeHandler;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An event handler for the {{event("fullscreenchange")}} event, indicating that the
-  element has changed in or out of full-screen mode.</p>
+An event handler for the {{event("fullscreenchange")}} event, indicating that the
+element has changed in or out of full-screen mode.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example establishes a <code>fullscreenchange</code> event handler,
-  <code>handleFullscreenChange()</code>. This function determines which element it was
-  called on by checking the value of {{domxref("event.target")}}, then compares the
-  document's {{domxref("Document.fullscreenElement", "fullscreenElement")}} value to the
-  element to see if they're the same node.</p>
+This example establishes a `fullscreenchange` event handler,
+`handleFullscreenChange()`. This function determines which element it was
+called on by checking the value of {{domxref("event.target")}}, then compares the
+document's {{domxref("Document.fullscreenElement", "fullscreenElement")}} value to the
+element to see if they're the same node.
 
-<p>This gives us a value, <code>isFullscreen</code>, which we pass into a function called
-  <code>adjustMyControls()</code>, which we imagine to be a function that makes
-  adjustments to the app's user interface to present itself optimally when it's in
-  full-screen mode versus being displayed in a window.</p>
+This gives us a value, `isFullscreen`, which we pass into a function called
+`adjustMyControls()`, which we imagine to be a function that makes
+adjustments to the app's user interface to present itself optimally when it's in
+full-screen mode versus being displayed in a window.
 
-<pre class="brush: js">function toggleFullscreen() {
+```js
+function toggleFullscreen() {
   let elem = document.querySelector("video");
 
   elem.onfullscreenchange = handleFullscreenChange;
   if (!document.fullscreenElement) {
-    elem.requestFullscreen().then({}).catch(err =&gt; {
+    elem.requestFullscreen().then({}).catch(err => {
       alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
     });
   } else {
@@ -64,24 +66,21 @@ function handleFullscreenChange(event) {
 
   adjustMyControls(isFullscreen);
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Fullscreen_API">Fullscreen API </a></li>
-  <li><a href="/en-US/docs/Web/API/Fullscreen_API/Guide">Guide to the Fullscreen API</a>
-  </li>
-  <li>{{event("fullscreenchange")}}</li>
-  <li>{{domxref("Element.onfullscreenerror")}}</li>
-  <li>The {{domxref("Document")}} equivalent: {{domxref("Document.onfullscreenchange",
-    "onfullscreenchange")}}.</li>
-</ul>
+- [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API)
+- [Guide to the Fullscreen API](/en-US/docs/Web/API/Fullscreen_API/Guide)
+- {{event("fullscreenchange")}}
+- {{domxref("Element.onfullscreenerror")}}
+- The {{domxref("Document")}} equivalent: {{domxref("Document.onfullscreenchange",
+    "onfullscreenchange")}}.

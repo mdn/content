@@ -13,55 +13,50 @@ tags:
   - Web Periodic Background Synchronization API
   - periodic
 ---
-<p>{{securecontext_header}}</p>
+{{securecontext_header}}
 
-<div>{{DefaultAPISidebar("Periodic Background Sync")}}</div>
+{{DefaultAPISidebar("Periodic Background Sync")}}
 
-<p>The Web Periodic Background Synchronization API provides a way to register tasks to be run in a {{domxref('Service Worker API','service worker')}} at periodic intervals with network connectivity. These tasks are referred to as periodic background sync requests.</p>
+The Web Periodic Background Synchronization API provides a way to register tasks to be run in a {{domxref('Service Worker API','service worker')}} at periodic intervals with network connectivity. These tasks are referred to as periodic background sync requests.
 
-<h2 id="Web_Periodic_Background_Synchronization_Concepts_and_Usage">Web Periodic Background Synchronization Concepts and Usage</h2>
+## Web Periodic Background Synchronization Concepts and Usage
 
-<p>The Periodic Background Sync API allows web applications to alert their service worker to make any updates, at a periodic time interval. Uses may include fetching latest content whilst a device is connected to wifi, or allowing background updates to an application.</p>
+The Periodic Background Sync API allows web applications to alert their service worker to make any updates, at a periodic time interval. Uses may include fetching latest content whilst a device is connected to wifi, or allowing background updates to an application.
 
-<p>The minimum time interval is set when the API is invoked; however the user agent might also take into account other factors which affect when the service worker receives the event. For instance previous website engagement, or connection to a known network.</p>
+The minimum time interval is set when the API is invoked; however the user agent might also take into account other factors which affect when the service worker receives the event. For instance previous website engagement, or connection to a known network.
 
-<p>The {{domxref('PeriodicSyncManager')}} interface is available through {{domxref('ServiceWorkerRegistration.periodicSync')}}. A unique tag identifier is set to 'name' the sync event, which can then be listened for within the {{domxref('ServiceWorker')}} script. Once the event is received you can then run any functionality available, such as updating caches or fetching new resources.</p>
+The {{domxref('PeriodicSyncManager')}} interface is available through {{domxref('ServiceWorkerRegistration.periodicSync')}}. A unique tag identifier is set to 'name' the sync event, which can then be listened for within the {{domxref('ServiceWorker')}} script. Once the event is received you can then run any functionality available, such as updating caches or fetching new resources.
 
-<p>As this API relies on service workers, functionality provided by this API is only available in a secure context.</p>
+As this API relies on service workers, functionality provided by this API is only available in a secure context.
 
-<div class="note">
-<p><strong>Note:</strong> At the time of writing, the Web Periodic Background Synchronization API is only available through an installed <a href="/en-US/docs/Web/Progressive_web_apps">Progressive Web App</a></p>
-</div>
+> **Note:** At the time of writing, the Web Periodic Background Synchronization API is only available through an installed [Progressive Web App](/en-US/docs/Web/Progressive_web_apps)
 
-<h2 id="Web_Periodic_Background_Synchronization_Interfaces">Web Periodic Background Synchronization Interfaces</h2>
+## Web Periodic Background Synchronization Interfaces
 
-<dl>
- <dt>{{domxref('PeriodicSyncManager')}}</dt>
- <dd>Registers tasks to be run in a service worker at periodic intervals with network connectivity. These tasks are referred to as periodic background sync requests.</dd>
- <dt>{{domxref('PeriodicSyncEvent')}}</dt>
- <dd>Represents a synchronization event, sent to the {{domxref('ServiceWorkerGlobalScope', 'global scope')}} of a {{domxref('ServiceWorker')}}. It provides a way to run tasks in the service worker with network connectivity.</dd>
-</dl>
+- {{domxref('PeriodicSyncManager')}}
+  - : Registers tasks to be run in a service worker at periodic intervals with network connectivity. These tasks are referred to as periodic background sync requests.
+- {{domxref('PeriodicSyncEvent')}}
+  - : Represents a synchronization event, sent to the {{domxref('ServiceWorkerGlobalScope', 'global scope')}} of a {{domxref('ServiceWorker')}}. It provides a way to run tasks in the service worker with network connectivity.
 
-<h2 id="Service_Worker_Additions">Service Worker Additions</h2>
+## Service Worker Additions
 
-<p>The following additions to the {{domxref('Service Worker API')}} are specified in the Periodic Background Sync specification to provide an entry point for using Periodic Background Sync.</p>
+The following additions to the {{domxref('Service Worker API')}} are specified in the Periodic Background Sync specification to provide an entry point for using Periodic Background Sync.
 
-<dl>
- <dt>{{domxref("ServiceWorkerRegistration.periodicSync")}} {{readonlyinline}}</dt>
- <dd>Returns a reference to the {{domxref("PeriodicSyncManager")}} interface for registering tasks to run at specific intervals.</dd>
- <dt>{{domxref("ServiceWorkerGlobalScope.onperiodicsync")}}</dt>
- <dd>An event handler fired whenever a {{Event("periodicsync")}} event occurs. This happens at timed intervals, that are specified when registering a {{domxref('PeriodicSyncManager')}}.</dd>
-</dl>
+- {{domxref("ServiceWorkerRegistration.periodicSync")}} {{readonlyinline}}
+  - : Returns a reference to the {{domxref("PeriodicSyncManager")}} interface for registering tasks to run at specific intervals.
+- {{domxref("ServiceWorkerGlobalScope.onperiodicsync")}}
+  - : An event handler fired whenever a {{Event("periodicsync")}} event occurs. This happens at timed intervals, that are specified when registering a {{domxref('PeriodicSyncManager')}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following examples show how to use the interface.</p>
+The following examples show how to use the interface.
 
-<h3 id="Requesting_a_Periodic_Background_Sync">Requesting a Periodic Background Sync</h3>
+### Requesting a Periodic Background Sync
 
-<p>The following asynchronous function registers a periodic background sync at a minimum interval of one day from a browsing context:</p>
+The following asynchronous function registers a periodic background sync at a minimum interval of one day from a browsing context:
 
-<pre class="brush: js">async function registerPeriodicNewsCheck() {
+```js
+async function registerPeriodicNewsCheck() {
   const registration = await navigator.serviceWorker.ready;
   try {
     await registration.periodicSync.register('get-latest-news', {
@@ -71,59 +66,54 @@ tags:
     console.log('Periodic Sync could not be registered!');
   }
 }
-</pre>
+```
 
-<h3 id="Verifying_a_Background_Periodic_Sync_by_Tag">Verifying a Background Periodic Sync by Tag</h3>
+### Verifying a Background Periodic Sync by Tag
 
-<p>This code checks to see if a Periodic Background Sync task with a given tag is registered.</p>
+This code checks to see if a Periodic Background Sync task with a given tag is registered.
 
-<pre class="brush: js">navigator.serviceWorker.ready.then(registration =&gt; {
-  registration.periodicSync.getTags().then(tags =&gt; {
+```js
+navigator.serviceWorker.ready.then(registration => {
+  registration.periodicSync.getTags().then(tags => {
     if (tags.includes('get-latest-news'))
       skipDownloadingLatestNewsOnPageLoad();
   });
 });
-</pre>
+```
 
-<h3 id="Removing_a_Periodic_Background_Sync_Task">Removing a Periodic Background Sync Task</h3>
+### Removing a Periodic Background Sync Task
 
-<p>The following code removes a Periodic Background Sync task to stop articles syncing in the background.</p>
+The following code removes a Periodic Background Sync task to stop articles syncing in the background.
 
-<pre class="brush: js">navigator.serviceWorker.ready.then(registration =&gt; {
+```js
+navigator.serviceWorker.ready.then(registration => {
   registration.periodicSync.unregister('get-latest-news');
 });
-</pre>
+```
 
-<h3 id="Listening_for_a_Periodic_Background_Sync_within_a_Service_Worker">Listening for a Periodic Background Sync within a Service Worker</h3>
+### Listening for a Periodic Background Sync within a Service Worker
 
-<p>The following example shows how to respond to a periodic sync event in the service worker.</p>
+The following example shows how to respond to a periodic sync event in the service worker.
 
-<pre class="brush: js">self.addEventListener('periodicsync', event =&gt; {
+```js
+self.addEventListener('periodicsync', event => {
   if (event.tag == 'get-latest-news') {
     event.waitUntil(fetchAndCacheLatestNews());
   }
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table>
-  <tr>
-   <th>Specification</th>
-  </tr>
-  <tr>
-   <td><a href="https://wicg.github.io/periodic-background-sync/">Web Periodic Background Syncronization</a></td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                              |
+| ------------------------------------------------------------------------------------------ |
+| [Web Periodic Background Syncronization](https://wicg.github.io/periodic-background-sync/) |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.PeriodicSyncManager")}}</p>
+{{Compat("api.PeriodicSyncManager")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://web.dev/periodic-background-sync/">An article on using Periodic Background Sync</a></li>
- <li><a href="https://webplatformapis.com/periodic_sync/periodicSync_improved.html">A Periodic Background Sync demo app</a></li>
-</ul>
+- [An article on using Periodic Background Sync](https://web.dev/periodic-background-sync/)
+- [A Periodic Background Sync demo app](https://webplatformapis.com/periodic_sync/periodicSync_improved.html)

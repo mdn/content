@@ -2,77 +2,75 @@
 title: SourceBuffer.removeAsync()
 slug: Web/API/SourceBuffer/removeAsync
 tags:
-- API
-- Audio
-- MSE
-- Media
-- Media Source Extensions
-- Method
-- Experimental
-- Non-standard
-- Reference
-- SourceBuffer
-- Video
-- removeAsync
+  - API
+  - Audio
+  - MSE
+  - Media
+  - Media Source Extensions
+  - Method
+  - Experimental
+  - Non-standard
+  - Reference
+  - SourceBuffer
+  - Video
+  - removeAsync
 browser-compat: api.SourceBuffer.removeAsync
 ---
-<div>{{APIRef("Media Source Extensions")}}{{non-standard_header}}{{SeeCompatTable}}</div>
+{{APIRef("Media Source Extensions")}}{{non-standard_header}}{{SeeCompatTable}}
 
-<p>The <code><strong>removeAsync()</strong></code> method of the
-    {{domxref("SourceBuffer")}} interface starts the process of asynchronously removing
-    from the <code>SourceBuffer</code> media segments found within a specific time
-    range. A {{jsxref("Promise")}} is returned, which is fulfilled when the buffers
-  in the specified time range have been removed.</p>
+The **`removeAsync()`** method of the
+{{domxref("SourceBuffer")}} interface starts the process of asynchronously removing
+from the `SourceBuffer` media segments found within a specific time
+range. A {{jsxref("Promise")}} is returned, which is fulfilled when the buffers
+in the specified time range have been removed.
 
-<p>This method can only be called when {{domxref("SourceBuffer.updating", "updating")}} is
-  <code>false</code>. If that's not the case, call {{domxref("SourceBuffer.abort",
-  "abort()")}} instead.</p>
+This method can only be called when {{domxref("SourceBuffer.updating", "updating")}} is
+`false`. If that's not the case, call {{domxref("SourceBuffer.abort",
+  "abort()")}} instead.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>removePromise</em> = <em>sourceBuffer</em>.removeAsync(<em>start</em>, <em>end</em>);</pre>
+```js
+removePromise = sourceBuffer.removeAsync(start, end);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>start</code></dt>
-  <dd>A double representing the start of the time range, in seconds.</dd>
-  <dt><code>end</code></dt>
-  <dd>A double representing the end of the time range, in seconds.</dd>
-</dl>
+- `start`
+  - : A double representing the start of the time range, in seconds.
+- `end`
+  - : A double representing the end of the time range, in seconds.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} whose fulfillment handler is executed once the buffers in the
-  specified time range have been removed from the <code>SourceBuffer</code>.</p>
+A {{jsxref("Promise")}} whose fulfillment handler is executed once the buffers in the
+specified time range have been removed from the `SourceBuffer`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example establishes an asynchronous function, <code>emptySourceBuffer()</code>,
-  which clears the contents of the specified <code>SourceBuffer</code>.</p>
+This example establishes an asynchronous function, `emptySourceBuffer()`,
+which clears the contents of the specified `SourceBuffer`.
 
-<pre class="brush: js">async function emptySourceBuffer(msBuffer) {
+```js
+async function emptySourceBuffer(msBuffer) {
   await msBuffer.removeAsync(0, Infinity).catch(function(e) {
     handleException(e);
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This feature is not part of any specification. It is not on track to become a standard.</p>
+This feature is not part of any specification. It is not on track to become a standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Media_Source_Extensions_API">Media Source Extensions
-      API</a></li>
-  <li>{{domxref("SourceBuffer.remove()")}}</li>
-  <li>{{domxref("MediaSource")}}</li>
-  <li>{{domxref("SourceBufferList")}}</li>
-</ul>
+- [Media Source Extensions
+  API](/en-US/docs/Web/API/Media_Source_Extensions_API)
+- {{domxref("SourceBuffer.remove()")}}
+- {{domxref("MediaSource")}}
+- {{domxref("SourceBufferList")}}

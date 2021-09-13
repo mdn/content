@@ -9,29 +9,32 @@ tags:
   - BarProp
 browser-compat: api.BarProp.visible
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>visible</code></strong> read-only property of the {{domxref("BarProp")}} interface returns <code>true</code> if the user interface element it represents is visible.</p>
+The **`visible`** read-only property of the {{domxref("BarProp")}} interface returns `true` if the user interface element it represents is visible.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let visible = BarProp.visible;</pre>
+```js
+let visible = BarProp.visible;
+```
 
-<h3>Value</h3>
-<p>A {{jsxref("Boolean")}}, which is true if the bar represented by the used interface element is visible.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{jsxref("Boolean")}}, which is true if the bar represented by the used interface element is visible.
 
-<p>The following example prints <code>true</code> to the console if the location bar is visible, <code>false</code> if it is not.</p>
+## Examples
 
-<pre class="brush: js">console.log(window.locationbar.visible);</pre>
+The following example prints `true` to the console if the location bar is visible, `false` if it is not.
 
-<h2 id="Specifications">Specifications</h2>
+```js
+console.log(window.locationbar.visible);
+```
 
-<p>{{Specifications}}</p>
+## Specifications
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+{{Specifications}}
 
-<p>{{Compat}}</p>
+## Browser compatibility
 
-
+{{Compat}}

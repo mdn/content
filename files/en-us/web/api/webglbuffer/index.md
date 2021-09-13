@@ -7,44 +7,41 @@ tags:
   - WebGL
 browser-compat: api.WebGLBuffer
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong>WebGLBuffer</strong> interface is part of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> and represents an opaque buffer object storing data such as vertices or colors.</p>
+The **WebGLBuffer** interface is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and represents an opaque buffer object storing data such as vertices or colors.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code>WebGLBuffer</code> object does not define any methods or properties of its own and its content is not directly accessible. When working with <code>WebGLBuffer</code> objects, the following methods of the {{domxref("WebGLRenderingContext")}} are useful:</p>
+The `WebGLBuffer` object does not define any methods or properties of its own and its content is not directly accessible. When working with `WebGLBuffer` objects, the following methods of the {{domxref("WebGLRenderingContext")}} are useful:
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.bindBuffer()")}}</li>
- <li>{{domxref("WebGLRenderingContext.createBuffer()")}}</li>
- <li>{{domxref("WebGLRenderingContext.deleteBuffer()")}}</li>
- <li>{{domxref("WebGLRenderingContext.isBuffer()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.bindBuffer()")}}
+- {{domxref("WebGLRenderingContext.createBuffer()")}}
+- {{domxref("WebGLRenderingContext.deleteBuffer()")}}
+- {{domxref("WebGLRenderingContext.isBuffer()")}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Creating_a_buffer">Creating a buffer</h3>
+### Creating a buffer
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 var buffer = gl.createBuffer();
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.bindBuffer()")}}</li>
- <li>{{domxref("WebGLRenderingContext.createBuffer()")}}</li>
- <li>{{domxref("WebGLRenderingContext.deleteBuffer()")}}</li>
- <li>{{domxref("WebGLRenderingContext.isBuffer()")}}</li>
- <li>Other buffers: {{domxref("WebGLFramebuffer")}}, {{domxref("WebGLRenderbuffer")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.bindBuffer()")}}
+- {{domxref("WebGLRenderingContext.createBuffer()")}}
+- {{domxref("WebGLRenderingContext.deleteBuffer()")}}
+- {{domxref("WebGLRenderingContext.isBuffer()")}}
+- Other buffers: {{domxref("WebGLFramebuffer")}}, {{domxref("WebGLRenderbuffer")}}

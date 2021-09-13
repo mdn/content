@@ -12,39 +12,37 @@ tags:
   - ongamepaddisconnected
 browser-compat: api.Window.ongamepaddisconnected
 ---
-<div>{{DefaultAPISidebar("Gamepad API")}}{{SeeCompatTable}}</div>
+{{DefaultAPISidebar("Gamepad API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>ongamepaddisconnected</code></strong> property of the
-  {{domxref("Window")}} interface represents an event handler that will run when a gamepad
-  is disconnected (when the {{event('gamepaddisconnected')}} event fires).</p>
+The **`ongamepaddisconnected`** property of the
+{{domxref("Window")}} interface represents an event handler that will run when a gamepad
+is disconnected (when the {{event('gamepaddisconnected')}} event fires).
 
-<p>The event object is of type {{domxref("GamepadEvent")}}.</p>
+The event object is of type {{domxref("GamepadEvent")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">window.ongamepaddisconnected = function() { ... };
-</pre>
+```js
+window.ongamepaddisconnected = function() { ... };
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre
-  class="brush:js; ">window.ongamepaddisconnected = function() {
+```js
+window.ongamepaddisconnected = function() {
   // A gamepad has been disconnected
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://hacks.mozilla.org/2013/12/the-gamepad-api/"
-      rel="nofollow">The Gamepad API</a> by Ted Mielczarek and Robert Nyman</li>
-  <li><a href="https://luser.github.io/gamepadtest/">Simple API demo page</a> (<a
-      href="https://github.com/luser/gamepadtest">source</a>)</li>
-</ul>
+- [The Gamepad API](https://hacks.mozilla.org/2013/12/the-gamepad-api/) by Ted Mielczarek and Robert Nyman
+- [Simple API demo page](https://luser.github.io/gamepadtest/) ([source](https://github.com/luser/gamepadtest))

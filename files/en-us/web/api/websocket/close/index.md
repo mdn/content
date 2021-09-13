@@ -9,51 +9,55 @@ tags:
   - WebSocket
 browser-compat: api.WebSocket.close
 ---
-<p>{{APIRef("Web Sockets API")}}
+{{APIRef("Web Sockets API")}}
 
-</p>
-<p>The <strong><code>WebSocket.close()</code></strong> method closes the
-  {{domxref("WebSocket")}} connection or connection attempt, if any. If the connection is
-  already <code>CLOSED</code>, this method does nothing.</p>
+The **`WebSocket.close()`** method closes the
+{{domxref("WebSocket")}} connection or connection attempt, if any. If the connection is
+already `CLOSED`, this method does nothing.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">WebSocket.close();</pre>
-<pre class="brush: js">WebSocket.close(code);</pre>
-<pre class="brush: js">WebSocket.close(reason);</pre>
-<pre class="brush: js">WebSocket.close(code, reason);</pre>
+```js
+WebSocket.close();
+```
 
-<h3 id="Parameters">Parameters</h3>
+```js
+WebSocket.close(code);
+```
 
-<dl>
-  <dt><code>code</code> {{optional_inline}}</dt>
-  <dd>A numeric value indicating the status code explaining why the connection is being
+```js
+WebSocket.close(reason);
+```
+
+```js
+WebSocket.close(code, reason);
+```
+
+### Parameters
+
+- `code` {{optional_inline}}
+  - : A numeric value indicating the status code explaining why the connection is being
     closed. If this parameter is not specified, a default value of 1005 is assumed. See
-    the <a href="/en-US/docs/Web/API/CloseEvent#status_codes">list of status codes</a> of
-    {{domxref("CloseEvent")}} for permitted values.</dd>
-  <dt><code>reason</code> {{optional_inline}}</dt>
-  <dd>A human-readable string explaining why the connection is closing. This string must
-    be no longer than 123 bytes of UTF-8 text (<strong>not</strong> characters).</dd>
-</dl>
+    the [list of status codes](/en-US/docs/Web/API/CloseEvent#status_codes) of
+    {{domxref("CloseEvent")}} for permitted values.
+- `reason` {{optional_inline}}
+  - : A human-readable string explaining why the connection is closing. This string must
+    be no longer than 123 bytes of UTF-8 text (**not** characters).
 
-<h3 id="Exceptions_thrown">Exceptions thrown</h3>
+### Exceptions thrown
 
-<dl>
-  <dt><code>INVALID_ACCESS_ERR</code></dt>
-  <dd>An invalid <code>code</code> was specified.</dd>
-  <dt><code>SYNTAX_ERR</code></dt>
-  <dd>The <code>reason</code> string is too long or contains unpaired surrogates.</dd>
-</dl>
+- `INVALID_ACCESS_ERR`
+  - : An invalid `code` was specified.
+- `SYNTAX_ERR`
+  - : The `reason` string is too long or contains unpaired surrogates.
 
-<div class="note">
-  <p><strong>Note:</strong> In Gecko, this method didn't support any parameters prior to
-    Gecko 8.0 {{geckoRelease("8.0")}}.</p>
-</div>
+> **Note:** In Gecko, this method didn't support any parameters prior to
+> Gecko 8.0 {{geckoRelease("8.0")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

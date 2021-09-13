@@ -12,111 +12,106 @@ tags:
   - sound
 browser-compat: api.BaseAudioContext
 ---
-<div>{{APIRef("Web Audio API")}}</div>
+{{APIRef("Web Audio API")}}
 
-<p>The <code>BaseAudioContext</code> interface of the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> acts as a base definition for online and offline audio-processing graphs, as represented by {{domxref("AudioContext")}} and {{domxref("OfflineAudioContext")}} respectively. You wouldn't use <code>BaseAudioContext</code> directly — you'd use its features via one of these two inheriting interfaces.</p>
+The `BaseAudioContext` interface of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) acts as a base definition for online and offline audio-processing graphs, as represented by {{domxref("AudioContext")}} and {{domxref("OfflineAudioContext")}} respectively. You wouldn't use `BaseAudioContext` directly — you'd use its features via one of these two inheriting interfaces.
 
-<p>A <code>BaseAudioContext</code> can be a target of events, therefore it implements the {{domxref("EventTarget")}} interface.</p>
+A `BaseAudioContext` can be a target of events, therefore it implements the {{domxref("EventTarget")}} interface.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("BaseAudioContext.audioWorklet")}} {{experimental_inline}} {{readonlyInline}} {{securecontext_inline}}</dt>
- <dd>Returns the {{domxref("AudioWorklet")}} object, which can be used to create and manage {{domxref("AudioNode")}}s in which JavaScript code implementing the {{domxref("AudioWorkletProcessor")}} interface are run in the background to process audio data.</dd>
- <dt>{{domxref("BaseAudioContext.currentTime")}} {{readonlyInline}}</dt>
- <dd>Returns a double representing an ever-increasing hardware time in seconds used for scheduling. It starts at <code>0</code>.</dd>
- <dt>{{domxref("BaseAudioContext.destination")}} {{readonlyInline}}</dt>
- <dd>Returns an {{domxref("AudioDestinationNode")}} representing the final destination of all audio in the context. It can be thought of as the audio-rendering device.</dd>
- <dt>{{domxref("BaseAudioContext.listener")}} {{readonlyInline}}</dt>
- <dd>Returns the {{domxref("AudioListener")}} object, used for 3D spatialization.</dd>
- <dt>{{domxref("BaseAudioContext.sampleRate")}} {{readonlyInline}}</dt>
- <dd>Returns a float representing the sample rate (in samples per second) used by all nodes in this context. The sample-rate of an {{domxref("AudioContext")}} cannot be changed.</dd>
- <dt>{{domxref("BaseAudioContext.state")}} {{readonlyInline}}</dt>
- <dd>Returns the current state of the <code>AudioContext</code>.</dd>
-</dl>
+- {{domxref("BaseAudioContext.audioWorklet")}} {{experimental_inline}} {{readonlyInline}} {{securecontext_inline}}
+  - : Returns the {{domxref("AudioWorklet")}} object, which can be used to create and manage {{domxref("AudioNode")}}s in which JavaScript code implementing the {{domxref("AudioWorkletProcessor")}} interface are run in the background to process audio data.
+- {{domxref("BaseAudioContext.currentTime")}} {{readonlyInline}}
+  - : Returns a double representing an ever-increasing hardware time in seconds used for scheduling. It starts at `0`.
+- {{domxref("BaseAudioContext.destination")}} {{readonlyInline}}
+  - : Returns an {{domxref("AudioDestinationNode")}} representing the final destination of all audio in the context. It can be thought of as the audio-rendering device.
+- {{domxref("BaseAudioContext.listener")}} {{readonlyInline}}
+  - : Returns the {{domxref("AudioListener")}} object, used for 3D spatialization.
+- {{domxref("BaseAudioContext.sampleRate")}} {{readonlyInline}}
+  - : Returns a float representing the sample rate (in samples per second) used by all nodes in this context. The sample-rate of an {{domxref("AudioContext")}} cannot be changed.
+- {{domxref("BaseAudioContext.state")}} {{readonlyInline}}
+  - : Returns the current state of the `AudioContext`.
 
-<h3 id="Event_handlers">Event handlers</h3>
+### Event handlers
 
-<dl>
- <dt>{{domxref("BaseAudioContext.onstatechange")}}</dt>
- <dd>An event handler that runs when an event of type {{event("statechange")}} has fired. This occurs when the <code>AudioContext</code>'s state changes, due to the calling of one of the state change methods ({{domxref("AudioContext.suspend")}}, {{domxref("AudioContext.resume")}}, or {{domxref("AudioContext.close")}}).</dd>
-</dl>
+- {{domxref("BaseAudioContext.onstatechange")}}
+  - : An event handler that runs when an event of type {{event("statechange")}} has fired. This occurs when the `AudioContext`'s state changes, due to the calling of one of the state change methods ({{domxref("AudioContext.suspend")}}, {{domxref("AudioContext.resume")}}, or {{domxref("AudioContext.close")}}).
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Also implements methods from the interface </em>{{domxref("EventTarget")}}.</p>
+_Also implements methods from the interface_ {{domxref("EventTarget")}}.
 
-<dl>
- <dt>{{domxref("BaseAudioContext.createAnalyser()")}}</dt>
- <dd>Creates an {{domxref("AnalyserNode")}}, which can be used to expose audio time and frequency data and for example to create data visualisations.</dd>
- <dt>{{domxref("BaseAudioContext.createBiquadFilter()")}}</dt>
- <dd>Creates a {{domxref("BiquadFilterNode")}}, which represents a second order filter configurable as several different common filter types: high-pass, low-pass, band-pass, etc</dd>
- <dt>{{domxref("BaseAudioContext.createBuffer()")}}</dt>
- <dd>Creates a new, empty {{ domxref("AudioBuffer") }} object, which can then be populated by data and played via an {{ domxref("AudioBufferSourceNode") }}.</dd>
- <dt>{{domxref("BaseAudioContext.createBufferSource()")}}</dt>
- <dd>Creates an {{domxref("AudioBufferSourceNode")}}, which can be used to play and manipulate audio data contained within an {{ domxref("AudioBuffer") }} object. {{ domxref("AudioBuffer") }}s are created using {{domxref("BaseAudioContext/createBuffer", "AudioContext.createBuffer()")}} or returned by {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}} when it successfully decodes an audio track.</dd>
- <dt>{{domxref("BaseAudioContext.createConstantSource()")}}</dt>
- <dd>Creates a {{domxref("ConstantSourceNode")}} object, which is an audio source that continuously outputs a monaural (one-channel) sound signal whose samples all have the same value.</dd>
- <dt>{{domxref("BaseAudioContext.createChannelMerger()")}}</dt>
- <dd>Creates a {{domxref("ChannelMergerNode")}}, which is used to combine channels from multiple audio streams into a single audio stream.</dd>
- <dt>{{domxref("BaseAudioContext.createChannelSplitter()")}}</dt>
- <dd>Creates a {{domxref("ChannelSplitterNode")}}, which is used to access the individual channels of an audio stream and process them separately.</dd>
- <dt>{{domxref("BaseAudioContext.createConvolver()")}}</dt>
- <dd>Creates a {{domxref("ConvolverNode")}}, which can be used to apply convolution effects to your audio graph, for example a reverberation effect.</dd>
- <dt>{{domxref("BaseAudioContext.createDelay()")}}</dt>
- <dd>Creates a {{domxref("DelayNode")}}, which is used to delay the incoming audio signal by a certain amount. This node is also useful to create feedback loops in a Web Audio API graph.</dd>
- <dt>{{domxref("BaseAudioContext.createDynamicsCompressor()")}}</dt>
- <dd>Creates a {{domxref("DynamicsCompressorNode")}}, which can be used to apply acoustic compression to an audio signal.</dd>
- <dt>{{domxref("BaseAudioContext.createGain()")}}</dt>
- <dd>Creates a {{domxref("GainNode")}}, which can be used to control the overall volume of the audio graph.</dd>
- <dt>{{domxref("BaseAudioContext.createIIRFilter()")}}</dt>
- <dd>Creates an {{domxref("IIRFilterNode")}}, which represents a second order filter configurable as several different common filter types.</dd>
- <dt>{{domxref("BaseAudioContext.createOscillator()")}}</dt>
- <dd>Creates an {{domxref("OscillatorNode")}}, a source representing a periodic waveform. It basically generates a tone.</dd>
- <dt>{{domxref("BaseAudioContext.createPanner()")}}</dt>
- <dd>Creates a {{domxref("PannerNode")}}, which is used to spatialise an incoming audio stream in 3D space.</dd>
- <dt>{{domxref("BaseAudioContext.createPeriodicWave()")}}</dt>
- <dd>Creates a {{domxref("PeriodicWave")}}, used to define a periodic waveform that can be used to determine the output of an {{ domxref("OscillatorNode") }}.</dd>
- <dt>{{domxref("BaseAudioContext.createScriptProcessor()")}} {{deprecated_inline}}</dt>
- <dd>Creates a {{domxref("ScriptProcessorNode")}}, which can be used for direct audio processing via JavaScript.</dd>
- <dt>{{domxref("BaseAudioContext.createStereoPanner()")}}</dt>
- <dd>Creates a {{domxref("StereoPannerNode")}}, which can be used to apply stereo panning to an audio source.</dd>
- <dt>{{domxref("BaseAudioContext.createWaveShaper()")}}</dt>
- <dd>Creates a {{domxref("WaveShaperNode")}}, which is used to implement non-linear distortion effects.</dd>
- <dt>{{domxref("BaseAudioContext.decodeAudioData()")}}</dt>
- <dd>Asynchronously decodes audio file data contained in an {{jsxref("ArrayBuffer")}}. In this case, the <code>ArrayBuffer</code> is usually loaded from an {{domxref("XMLHttpRequest")}}'s <code>response</code> attribute after setting the <code>responseType</code> to <code>arraybuffer</code>. This method only works on complete files, not fragments of audio files.</dd>
-</dl>
+- {{domxref("BaseAudioContext.createAnalyser()")}}
+  - : Creates an {{domxref("AnalyserNode")}}, which can be used to expose audio time and frequency data and for example to create data visualisations.
+- {{domxref("BaseAudioContext.createBiquadFilter()")}}
+  - : Creates a {{domxref("BiquadFilterNode")}}, which represents a second order filter configurable as several different common filter types: high-pass, low-pass, band-pass, etc
+- {{domxref("BaseAudioContext.createBuffer()")}}
+  - : Creates a new, empty {{ domxref("AudioBuffer") }} object, which can then be populated by data and played via an {{ domxref("AudioBufferSourceNode") }}.
+- {{domxref("BaseAudioContext.createBufferSource()")}}
+  - : Creates an {{domxref("AudioBufferSourceNode")}}, which can be used to play and manipulate audio data contained within an {{ domxref("AudioBuffer") }} object. {{ domxref("AudioBuffer") }}s are created using {{domxref("BaseAudioContext/createBuffer", "AudioContext.createBuffer()")}} or returned by {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}} when it successfully decodes an audio track.
+- {{domxref("BaseAudioContext.createConstantSource()")}}
+  - : Creates a {{domxref("ConstantSourceNode")}} object, which is an audio source that continuously outputs a monaural (one-channel) sound signal whose samples all have the same value.
+- {{domxref("BaseAudioContext.createChannelMerger()")}}
+  - : Creates a {{domxref("ChannelMergerNode")}}, which is used to combine channels from multiple audio streams into a single audio stream.
+- {{domxref("BaseAudioContext.createChannelSplitter()")}}
+  - : Creates a {{domxref("ChannelSplitterNode")}}, which is used to access the individual channels of an audio stream and process them separately.
+- {{domxref("BaseAudioContext.createConvolver()")}}
+  - : Creates a {{domxref("ConvolverNode")}}, which can be used to apply convolution effects to your audio graph, for example a reverberation effect.
+- {{domxref("BaseAudioContext.createDelay()")}}
+  - : Creates a {{domxref("DelayNode")}}, which is used to delay the incoming audio signal by a certain amount. This node is also useful to create feedback loops in a Web Audio API graph.
+- {{domxref("BaseAudioContext.createDynamicsCompressor()")}}
+  - : Creates a {{domxref("DynamicsCompressorNode")}}, which can be used to apply acoustic compression to an audio signal.
+- {{domxref("BaseAudioContext.createGain()")}}
+  - : Creates a {{domxref("GainNode")}}, which can be used to control the overall volume of the audio graph.
+- {{domxref("BaseAudioContext.createIIRFilter()")}}
+  - : Creates an {{domxref("IIRFilterNode")}}, which represents a second order filter configurable as several different common filter types.
+- {{domxref("BaseAudioContext.createOscillator()")}}
+  - : Creates an {{domxref("OscillatorNode")}}, a source representing a periodic waveform. It basically generates a tone.
+- {{domxref("BaseAudioContext.createPanner()")}}
+  - : Creates a {{domxref("PannerNode")}}, which is used to spatialise an incoming audio stream in 3D space.
+- {{domxref("BaseAudioContext.createPeriodicWave()")}}
+  - : Creates a {{domxref("PeriodicWave")}}, used to define a periodic waveform that can be used to determine the output of an {{ domxref("OscillatorNode") }}.
+- {{domxref("BaseAudioContext.createScriptProcessor()")}} {{deprecated_inline}}
+  - : Creates a {{domxref("ScriptProcessorNode")}}, which can be used for direct audio processing via JavaScript.
+- {{domxref("BaseAudioContext.createStereoPanner()")}}
+  - : Creates a {{domxref("StereoPannerNode")}}, which can be used to apply stereo panning to an audio source.
+- {{domxref("BaseAudioContext.createWaveShaper()")}}
+  - : Creates a {{domxref("WaveShaperNode")}}, which is used to implement non-linear distortion effects.
+- {{domxref("BaseAudioContext.decodeAudioData()")}}
+  - : Asynchronously decodes audio file data contained in an {{jsxref("ArrayBuffer")}}. In this case, the `ArrayBuffer` is usually loaded from an {{domxref("XMLHttpRequest")}}'s `response` attribute after setting the `responseType` to `arraybuffer`. This method only works on complete files, not fragments of audio files.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Basic audio context declaration:</p>
+Basic audio context declaration:
 
-<pre class="brush: js">const audioContext = new AudioContext();</pre>
+```js
+const audioContext = new AudioContext();
+```
 
-<p>Cross browser variant:</p>
+Cross browser variant:
 
-<pre class="brush: js">const AudioContext = window.AudioContext || window.webkitAudioContext;
+```js
+const AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioContext = new AudioContext();
 
 const oscillatorNode = audioContext.createOscillator();
 const gainNode = audioContext.createGain();
 const finish = audioContext.destination;
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
- <li>{{domxref("AudioContext")}}</li>
- <li>{{domxref("OfflineAudioContext")}}</li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- {{domxref("AudioContext")}}
+- {{domxref("OfflineAudioContext")}}

@@ -14,26 +14,24 @@ tags:
   - web animations api
 browser-compat: api.AnimationPlaybackEvent.timelineTime
 ---
-<p>{{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}</p>
+{{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}
 
-<p>The <strong><code>timelineTime</code></strong> read-only property of the <code>{{domxref("AnimationPlaybackEvent")}}</code> interface represents the time value of the animation's {{domxref("AnimationTimeline", "timeline")}} at the moment the event is queued. This will be unresolved if the animation was not associated with a timeline at the time the event was generated or if the associated timeline was inactive.</p>
+The **`timelineTime`** read-only property of the `{{domxref("AnimationPlaybackEvent")}}` interface represents the time value of the animation's {{domxref("AnimationTimeline", "timeline")}} at the moment the event is queued. This will be unresolved if the animation was not associated with a timeline at the time the event was generated or if the associated timeline was inactive.
 
-<h2 id="Value">Value</h2>
+## Value
 
-<p>A number representing the current time in milliseconds, or <code>null</code>.</p>
+A number representing the current time in milliseconds, or `null`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
- <li>{{domxref("AnimationPlayBackEvent")}}</li>
- <li>{{domxref("AnimationTimeline")}}</li>
-</ul>
+- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
+- {{domxref("AnimationPlayBackEvent")}}
+- {{domxref("AnimationTimeline")}}

@@ -2,49 +2,50 @@
 title: Window.parent
 slug: Web/API/Window/parent
 tags:
-- API
-- HTML DOM
-- NeedsSpecTable
-- Property
-- Reference
-- Window
+  - API
+  - HTML DOM
+  - NeedsSpecTable
+  - Property
+  - Reference
+  - Window
 browser-compat: api.Window.parent
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code><strong>Window.parent</strong></code> property is a reference to the parent
-  of the current window or subframe.</p>
+The **`Window.parent`** property is a reference to the parent
+of the current window or subframe.
 
-<p>If a window does not have a parent, its <code>parent</code> property is a reference to
-  itself.</p>
+If a window does not have a parent, its `parent` property is a reference to
+itself.
 
-<p>When a window is loaded in an {{htmlelement("iframe")}}, {{htmlelement("object")}}, or
-  {{htmlelement("frame")}}, its parent is the window with the element embedding the
-  window.</p>
+When a window is loaded in an {{htmlelement("iframe")}}, {{htmlelement("object")}}, or
+{{htmlelement("frame")}}, its parent is the window with the element embedding the
+window.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>parentWindow</em> = window.parent;
-</pre>
+```js
+var parentWindow = window.parent;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">if (window.parent != window.top) {
+```js
+if (window.parent != window.top) {
   // We're deeper than one down
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("window.frameElement")}} returns the specific element (such as
-    <code>&lt;iframe&gt;</code>) the <code>window</code> is embedded into.</li>
-  <li>{{domxref("window.top")}} returns a reference to the top-level window.</li>
-</ul>
+- {{domxref("window.frameElement")}} returns the specific element (such as
+  `<iframe>`) the `window` is embedded into.
+- {{domxref("window.top")}} returns a reference to the top-level window.

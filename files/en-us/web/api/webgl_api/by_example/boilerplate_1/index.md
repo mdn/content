@@ -8,31 +8,33 @@ tags:
   - Tutorial
   - WebGL
 ---
-<p>{{PreviousNext("Learn/WebGL/By_example/Canvas_size_and_WebGL","Learn/WebGL/By_example/Scissor_animation")}}</p>
+{{PreviousNext("Learn/WebGL/By_example/Canvas_size_and_WebGL","Learn/WebGL/By_example/Scissor_animation")}}
 
-<p>This example describes repeated pieces of code that will be hidden from now on, as well as defining a JavaScript utility function to make WebGL initialization easier.</p>
+This example describes repeated pieces of code that will be hidden from now on, as well as defining a JavaScript utility function to make WebGL initialization easier.
 
-<h2 id="Boilerplate_code_for_setting_up_WebGL_rendering_context">Boilerplate code for setting up WebGL rendering context</h2>
+## Boilerplate code for setting up WebGL rendering context
 
-<p>By now you are quite used to seeing the same pieces of {{Glossary("HTML")}}, {{Glossary("CSS")}}, and {{Glossary("JavaScript")}} repeated again and again. So we are going to hide them from now on. This would allow us to focus on the interesting pieces of code that are most relevant for learning {{Glossary("WebGL")}}.</p>
+By now you are quite used to seeing the same pieces of {{Glossary("HTML")}}, {{Glossary("CSS")}}, and {{Glossary("JavaScript")}} repeated again and again. So we are going to hide them from now on. This would allow us to focus on the interesting pieces of code that are most relevant for learning {{Glossary("WebGL")}}.
 
-<p>Specifically, the HTML has a {{HTMLElement("p")}} element that contains some descriptive text about the page and may also hold error messages; a {{HTMLElement("canvas")}} element; and optionally a {{HTMLElement("button")}}. The CSS contains rules for <code>body</code>, <code>canvas</code>, and <code>button</code>. Any additional non-trivial CSS and HTML will be displayed on the pages of specific examples.</p>
+Specifically, the HTML has a {{HTMLElement("p")}} element that contains some descriptive text about the page and may also hold error messages; a {{HTMLElement("canvas")}} element; and optionally a {{HTMLElement("button")}}. The CSS contains rules for `body`, `canvas`, and `button`. Any additional non-trivial CSS and HTML will be displayed on the pages of specific examples.
 
-<p>In following examples, we will use a JavaScript helper function, <code>getRenderingContext()</code>, to initialize the {{domxref("WebGLRenderingContext","WebGL rendering context", "", 1)}}. By now, you should be able to understand what the function does. Basically, it gets the WebGL rendering context from the canvas element, initializes the drawing buffer, clears it black, and returns the initialized context. In case of error, it displays an error message and returns {{jsxref("null")}}.</p>
+In following examples, we will use a JavaScript helper function, `getRenderingContext()`, to initialize the {{domxref("WebGLRenderingContext","WebGL rendering context", "", 1)}}. By now, you should be able to understand what the function does. Basically, it gets the WebGL rendering context from the canvas element, initializes the drawing buffer, clears it black, and returns the initialized context. In case of error, it displays an error message and returns {{jsxref("null")}}.
 
-<p>Finally, all JavaScript code will run within an immediate function, which is a common JavaScript technique (see {{Glossary("Function")}}). The function declaration and invocation will also be hidden.</p>
+Finally, all JavaScript code will run within an immediate function, which is a common JavaScript technique (see {{Glossary("Function")}}). The function declaration and invocation will also be hidden.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;[ Some descriptive text about the example. ]&lt;/p&gt;
-&lt;button&gt;[ Optional button element. ]&lt;/button&gt;
-&lt;canvas&gt;Your browser does not seem to support
-    HTML5 canvas.&lt;/canvas&gt;
-</pre>
+```html
+<p>[ Some descriptive text about the example. ]</p>
+<button>[ Optional button element. ]</button>
+<canvas>Your browser does not seem to support
+    HTML5 canvas.</canvas>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">body {
+```css
+body {
   text-align : center;
 }
 canvas {
@@ -50,11 +52,12 @@ button {
   margin : auto;
   padding : 0.6em;
 }
-</pre>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">function getRenderingContext() {
+```js
+function getRenderingContext() {
   var canvas = document.querySelector("canvas");
   canvas.width = canvas.clientWidth;
   canvas.height = canvas.clientHeight;
@@ -72,9 +75,8 @@ button {
   gl.clear(gl.COLOR_BUFFER_BIT);
   return gl;
 }
-</pre>
+```
 
-<p>The source code of this example is also available on <a href="https://github.com/idofilin/webgl-by-example/tree/master/boilerplate-1">GitHub</a>.</p>
+The source code of this example is also available on [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/boilerplate-1).
 
-
-<p>{{PreviousNext("Learn/WebGL/By_example/Canvas_size_and_WebGL","Learn/WebGL/By_example/Scissor_animation")}}</p>
+{{PreviousNext("Learn/WebGL/By_example/Canvas_size_and_WebGL","Learn/WebGL/By_example/Scissor_animation")}}

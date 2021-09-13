@@ -9,42 +9,42 @@ tags:
   - Web Audio API
 browser-compat: api.AnalyserNode.getByteFrequencyData
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>The <strong><code>getByteFrequencyData()</code></strong> method of the {{ domxref("AnalyserNode") }} interface copies the current frequency data into a {{jsxref("Uint8Array")}} (unsigned byte array) passed into it.</p>
+The **`getByteFrequencyData()`** method of the {{ domxref("AnalyserNode") }} interface copies the current frequency data into a {{jsxref("Uint8Array")}} (unsigned byte array) passed into it.
 
-<p>The frequency data is composed of integers on a scale from 0 to 255.</p>
+The frequency data is composed of integers on a scale from 0 to 255.
 
-<p>Each item in the array represents the decibel value for a specific frequency. The frequencies are spread linearly from 0 to 1/2 of the sample rate. For example, for <code>48000</code> sample rate, the last item of the array will represent the decibel value for <code>24000</code> Hz.</p>
+Each item in the array represents the decibel value for a specific frequency. The frequencies are spread linearly from 0 to 1/2 of the sample rate. For example, for `48000` sample rate, the last item of the array will represent the decibel value for `24000` Hz.
 
-<p>If the array has fewer elements than the {{domxref("AnalyserNode.frequencyBinCount")}}, excess elements are dropped. If it has more elements than needed, excess elements are ignored.</p>
+If the array has fewer elements than the {{domxref("AnalyserNode.frequencyBinCount")}}, excess elements are dropped. If it has more elements than needed, excess elements are ignored.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var audioCtx = new AudioContext();
+```js
+var audioCtx = new AudioContext();
 var analyser = audioCtx.createAnalyser();
 var dataArray = new Uint8Array(analyser.frequencyBinCount); // Uint8Array should be the same length as the frequencyBinCount
 
-void <em>analyser</em>.getByteFrequencyData(dataArray); // fill the Uint8Array with data returned from getByteFrequencyData()
-</pre>
+void analyser.getByteFrequencyData(dataArray); // fill the Uint8Array with data returned from getByteFrequencyData()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>array</code></dt>
- <dd>The {{jsxref("Uint8Array")}} that the frequency domain data will be copied to. For any sample which is silent, the value is <code>-<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity">Infinity</a></code>.<br>
- If the array has fewer elements than the {{domxref("AnalyserNode.frequencyBinCount")}}, excess elements are dropped. If it has more elements than needed, excess elements are ignored.</dd>
-</dl>
+- `array`
+  - : The {{jsxref("Uint8Array")}} that the frequency domain data will be copied to. For any sample which is silent, the value is `-Infinity`.
+    If the array has fewer elements than the {{domxref("AnalyserNode.frequencyBinCount")}}, excess elements are dropped. If it has more elements than needed, excess elements are ignored.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example shows basic usage of an {{domxref("AudioContext")}} to create an <code>AnalyserNode</code>, then {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} and {{htmlelement("canvas")}} to collect frequency data repeatedly and draw a "winamp bargraph style" output of the current audio input. For more examples/information, check out our <a href="https://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a> demo (see <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205">app.js lines 128–205</a> for relevant code).</p>
+The following example shows basic usage of an {{domxref("AudioContext")}} to create an `AnalyserNode`, then {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} and {{htmlelement("canvas")}} to collect frequency data repeatedly and draw a "winamp bargraph style" output of the current audio input. For more examples/information, check out our [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) demo (see [app.js lines 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205) for relevant code).
 
-<pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+```js
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var analyser = audioCtx.createAnalyser();
 
   ...
@@ -68,7 +68,7 @@ function draw() {
   var barHeight;
   var x = 0;
 
-  for(var i = 0; i &lt; bufferLength; i++) {
+  for(var i = 0; i < bufferLength; i++) {
     barHeight = dataArray[i];
 
     canvasCtx.fillStyle = 'rgb(' + (barHeight+100) + ',50,50)';
@@ -78,25 +78,22 @@ function draw() {
   }
 };
 
-draw();</pre>
+draw();
+```
 
-<h2 id="Parameters_2">Parameters</h2>
+## Parameters
 
-<dl>
- <dt>array</dt>
- <dd>The {{jsxref("Uint8Array")}} that the frequency domain data will be copied to.</dd>
-</dl>
+- array
+  - : The {{jsxref("Uint8Array")}} that the frequency domain data will be copied to.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

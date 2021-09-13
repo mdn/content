@@ -13,42 +13,36 @@ tags:
   - Video
 browser-compat: api.TrackDefault
 ---
-<p>{{APIRef("Media Source Extensions")}}{{deprecated_header}}</p>
+{{APIRef("Media Source Extensions")}}{{deprecated_header}}
 
-<p>The <strong><code>TrackDefault</code></strong> interface provides a {{domxref("SourceBuffer")}} with kind, label, and language information for tracks that do not contain this information in the <a href="https://w3c.github.io/media-source/#init-segment">initialization segments</a> of a media chunk.</p>
+The **`TrackDefault`** interface provides a {{domxref("SourceBuffer")}} with kind, label, and language information for tracks that do not contain this information in the [initialization segments](https://w3c.github.io/media-source/#init-segment) of a media chunk.
 
-<p>A <code>TrackDefault</code> object is provided to a <code>SourceBuffer</code> object by setting its {{domxref("SourceBuffer.trackDefaults")}} property.</p>
+A `TrackDefault` object is provided to a `SourceBuffer` object by setting its {{domxref("SourceBuffer.trackDefaults")}} property.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("TrackDefault.TrackDefault", "TrackDefault()")}}</dt>
- <dd>Constructs and returns a new <code>TrackDefault</code> object.</dd>
-</dl>
+- {{domxref("TrackDefault.TrackDefault", "TrackDefault()")}}
+  - : Constructs and returns a new `TrackDefault` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("TrackDefault.type")}} {{readonlyInline}}</dt>
- <dd>Returns the type of track that this {{domxref("SourceBuffer")}}'s media segment data relates to (i.e. audio, video, or text track.)</dd>
- <dt>{{domxref("TrackDefault.byteStreamTrackID")}} {{readonlyInline}}</dt>
- <dd>Returns the ID of the specific track that the {{domxref("SourceBuffer")}} should apply to.</dd>
- <dt>{{domxref("TrackDefault.language")}} {{readonlyInline}}</dt>
- <dd>Returns the default language to use when an <a href="https://w3c.github.io/media-source/#init-segment">initialization segment</a> does not contain language information for a new track.</dd>
- <dt>{{domxref("TrackDefault.label")}} {{readonlyInline}}</dt>
- <dd>Returns the default label to use when an <a href="https://w3c.github.io/media-source/#init-segment">initialization segment</a> does not contain label information for a new track.</dd>
- <dt>{{domxref("TrackDefault.kinds")}} {{readonlyInline}}</dt>
- <dd>Returns the default kinds used when an <a href="https://w3c.github.io/media-source/#init-segment">initialization segment</a> does not contain kind information for a new track.</dd>
-</dl>
+- {{domxref("TrackDefault.type")}} {{readonlyInline}}
+  - : Returns the type of track that this {{domxref("SourceBuffer")}}'s media segment data relates to (i.e. audio, video, or text track.)
+- {{domxref("TrackDefault.byteStreamTrackID")}} {{readonlyInline}}
+  - : Returns the ID of the specific track that the {{domxref("SourceBuffer")}} should apply to.
+- {{domxref("TrackDefault.language")}} {{readonlyInline}}
+  - : Returns the default language to use when an [initialization segment](https://w3c.github.io/media-source/#init-segment) does not contain language information for a new track.
+- {{domxref("TrackDefault.label")}} {{readonlyInline}}
+  - : Returns the default label to use when an [initialization segment](https://w3c.github.io/media-source/#init-segment) does not contain label information for a new track.
+- {{domxref("TrackDefault.kinds")}} {{readonlyInline}}
+  - : Returns the default kinds used when an [initialization segment](https://w3c.github.io/media-source/#init-segment) does not contain kind information for a new track.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("MediaSource")}}</li>
- <li>{{domxref("SourceBuffer")}}</li>
- <li>{{domxref("TrackDefaultList")}}</li>
-</ul>
+- {{domxref("MediaSource")}}
+- {{domxref("SourceBuffer")}}
+- {{domxref("TrackDefaultList")}}

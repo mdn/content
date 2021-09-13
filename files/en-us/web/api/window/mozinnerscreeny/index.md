@@ -12,47 +12,39 @@ tags:
   - Window
 browser-compat: api.Window.mozInnerScreenY
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>Gets the Y coordinate of the top-left corner of the window's viewport, in screen
-  coordinates.</p>
+Gets the Y coordinate of the top-left corner of the window's viewport, in screen
+coordinates.
 
-<div class="note"><p><strong>Note:</strong> This coordinate is reported in CSS pixels, not in
-  hardware pixels. That means it can be affected by the zoom level; to compute the actual
-  number of physical screen pixels, you should use the<a
-    href="/en-US/docs/XPCOM_Interface_Reference/nsIDOMWindowUtils">
-    <code>nsIDOMWindowUtils.screenPixelsPerCSSPixel</code></a> property.</p></div>
+> **Note:** This coordinate is reported in CSS pixels, not in
+> hardware pixels. That means it can be affected by the zoom level; to compute the actual
+> number of physical screen pixels, you should use the[ > `nsIDOMWindowUtils.screenPixelsPerCSSPixel`](/en-US/docs/XPCOM_Interface_Reference/nsIDOMWindowUtils) property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var>screenY</var> = window.mozInnerScreenY;</pre>
+```js
+screenY = window.mozInnerScreenY;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<ul>
-  <li><var>screenY</var> stores the <code>window.mozInnerScreenY</code> property value.
-  </li>
-  <li>The <code>window.mozInnerScreenY</code> property is a floating point, read-only
-    value; it has no default value.</li>
-</ul>
+- _screenY_ stores the `window.mozInnerScreenY` property value.
+- The `window.mozInnerScreenY` property is a floating point, read-only
+  value; it has no default value.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any <abbr title="World Wide Web Consortium">W3C</abbr> technical
-  specification or recommendation.</p>
+Not part of any W3C technical
+specification or recommendation.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("window.mozInnerScreenX")}}</li>
-  <li><a
-      href="/en-US/docs/XPCOM_Interface_Reference/nsIDOMWindowUtils"><code>nsIDOMWindowUtils.screenPixelsPerCSSPixel</code></a>
-  </li>
-</ul>
+- {{domxref("window.mozInnerScreenX")}}
+- [`nsIDOMWindowUtils.screenPixelsPerCSSPixel`](/en-US/docs/XPCOM_Interface_Reference/nsIDOMWindowUtils)

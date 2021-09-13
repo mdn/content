@@ -2,67 +2,65 @@
 title: Node.getRootNode()
 slug: Web/API/Node/getRootNode
 tags:
-- API
-- DOM
-- Method
-- Node
-- Reference
-- getRootNode
+  - API
+  - DOM
+  - Method
+  - Node
+  - Reference
+  - getRootNode
 browser-compat: api.Node.getRootNode
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>getRootNode()</code></strong> method of the {{domxref("Node")}}
-  interface returns the context object's root, which optionally includes the shadow root
-  if it is available.</p>
+The **`getRootNode()`** method of the {{domxref("Node")}}
+interface returns the context object's root, which optionally includes the shadow root
+if it is available.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>root</em> = <em>node</em>.getRootNode(<em>options</em>);</pre>
+```js
+var root = node.getRootNode(options);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>options</code> {{optional_inline}}</dt>
-  <dd>An object that sets options for getting the root node. The available options are:
-    <ul>
-      <li><code>composed</code>: A {{jsxref('Boolean')}} that indicates whether the shadow
-        root should be returned (<code>false</code>, the default), or a root node beyond
-        shadow root (<code>true</code>).</li>
-    </ul>
-  </dd>
-</dl>
+- `options` {{optional_inline}}
 
-<h3 id="Returns">Returns</h3>
+  - : An object that sets options for getting the root node. The available options are:
 
-<p>An object inheriting from {{domxref('Node')}}. This will differ in exact form depending
-  on where you called <code>getRootNode()</code>; for example:</p>
+    - `composed`: A {{jsxref('Boolean')}} that indicates whether the shadow
+      root should be returned (`false`, the default), or a root node beyond
+      shadow root (`true`).
 
-<ul>
-  <li>Calling it on an element inside a standard web page will return an
-    {{domxref("HTMLDocument")}} object representing the entire page.</li>
-  <li>Calling it on an element inside a shadow DOM will return the associated
-    {{domxref("ShadowRoot")}}.</li>
-</ul>
+### Returns
 
-<h2 id="Examples">Examples</h2>
+An object inheriting from {{domxref('Node')}}. This will differ in exact form depending
+on where you called `getRootNode()`; for example:
 
-<p>The first simple example returns a reference to the HTML/document node:</p>
+- Calling it on an element inside a standard web page will return an
+  {{domxref("HTMLDocument")}} object representing the entire page.
+- Calling it on an element inside a shadow DOM will return the associated
+  {{domxref("ShadowRoot")}}.
 
-<pre class="brush: js">rootNode = node.getRootNode();</pre>
+## Examples
 
-<p>This more complex example shows the difference between returning a normal root, and a
-  root including the shadow root. (See the <a
-    href="https://github.com/jserz/js_piece/blob/master/DOM/Node/getRootNode()/demo/getRootNode.html">full
-    source code</a>):</p>
+The first simple example returns a reference to the HTML/document node:
 
-<pre class="brush: html">&lt;!-- source: https://github.com/jserz/js_piece/blob/master/DOM/Node/getRootNode()/demo/getRootNode.html --&gt;
-&lt;div class="js-parent"&gt;
-  &lt;div class="js-child"&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="js-shadowHost"&gt;&lt;/div&gt;
-&lt;script&gt;
+```js
+rootNode = node.getRootNode();
+```
+
+This more complex example shows the difference between returning a normal root, and a
+root including the shadow root. (See the [full
+source code](<https://github.com/jserz/js_piece/blob/master/DOM/Node/getRootNode()/demo/getRootNode.html>)):
+
+```html
+<!-- source: https://github.com/jserz/js_piece/blob/master/DOM/Node/getRootNode()/demo/getRootNode.html -->
+<div class="js-parent">
+  <div class="js-child"></div>
+</div>
+<div class="js-shadowHost"></div>
+<script>
   // works on Chrome 54+, Opera 41+
 
   var parent = document.querySelector('.js-parent'),
@@ -74,20 +72,21 @@ browser-compat: api.Node.getRootNode
 
   // create a ShadowRoot
   var shadowRoot = shadowHost.attachShadow({mode:'open'});
-  shadowRoot.innerHTML = '&lt;style&gt;div{background:#2bb8aa;}&lt;/style&gt;'
-      + '&lt;div class="js-shadowChild"&gt;content&lt;/div&gt;';
+  shadowRoot.innerHTML = '<style>div{background:#2bb8aa;}</style>'
+      + '<div class="js-shadowChild">content</div>';
   var shadowChild = shadowRoot.querySelector('.js-shadowChild');
 
   // The default value of composed is false
   console.log(shadowChild.getRootNode() === shadowRoot); // true
   console.log(shadowChild.getRootNode({composed:false}) === shadowRoot); // true
   console.log(shadowChild.getRootNode({composed:true}).nodeName); // #document
-&lt;/script&gt;</pre>
+</script>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

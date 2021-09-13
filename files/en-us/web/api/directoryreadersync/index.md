@@ -6,29 +6,28 @@ tags:
   - Reference
 browser-compat: api.DirectoryReaderSync
 ---
-<p>{{APIRef("File System API")}}{{Non-standard_header}}</p>
+{{APIRef("File System API")}}{{Non-standard_header}}
 
-<p>The <code>DirectoryReaderSync</code> interface of the <a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">File System API</a> lets you read the entries in a directory.</p>
+The `DirectoryReaderSync` interface of the [File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction) lets you read the entries in a directory.
 
-<div class="note">
-<p><strong>Note:</strong> This interface has been abandoned: it was on a standard track and it proves not a good idea. Do not use it anymore.</p>
-</div>
+> **Note:** This interface has been abandoned: it was on a standard track and it proves not a good idea. Do not use it anymore.
 
-<h2 id="About_this_document">About this document</h2>
+## About this document
 
-<p>This document was last updated on March 2, 2012 and follows the <a href="https://www.w3.org/TR/file-system-api/">W3C Specifications (Working Draft)</a> drafted on April 19, 2011.</p>
+This document was last updated on March 2, 2012 and follows the [W3C Specifications (Working Draft)](https://www.w3.org/TR/file-system-api/) drafted on April 19, 2011.
 
-<p>This specification is pretty much abandoned, having failed to reach any substantial traction.</p>
+This specification is pretty much abandoned, having failed to reach any substantial traction.
 
-<h2 id="basic_concepts">Basic concepts</h2>
+## Basic concepts
 
-<p>Before you call the only method in this interface, <a href="/#readEntries()" title="#readEntries()"><code>readEntries()</code></a>, create the <a href="/en-US/docs/Web/API/DirectoryEntrySync"><code>DirectoryEntrySync</code></a> object. But DirectoryEntrySync (as well as <a href="/en-US/docs/Web/API/FileEntrySync">FileEntrySync</a>) is not a data type that you can pass between a calling app and Web Worker thread. It's not a big deal, because you don't really need to have the main app and the worker thread see the same JavaScript object; you just need them to access the same files. You can do that by passing a list of  <code>filesystem:</code> URLs—which are just strings—instead of a list of entries. You can also use the <code>filesystem:</code> URL to look up the entry with <a href="/en-US/docs/Web/API/LocalFileSystem#resolvelocalfilesystemurl()"><code>resolveLocalFileSystemURL()</code></a>. That gets you back to a DirectoryEntrySync (as well as FileEntrySync) object.</p>
+Before you call the only method in this interface, [`readEntries()`](</#readEntries()> "#readEntries()"), create the [`DirectoryEntrySync`](/en-US/docs/Web/API/DirectoryEntrySync) object. But DirectoryEntrySync (as well as [FileEntrySync](/en-US/docs/Web/API/FileEntrySync)) is not a data type that you can pass between a calling app and Web Worker thread. It's not a big deal, because you don't really need to have the main app and the worker thread see the same JavaScript object; you just need them to access the same files. You can do that by passing a list of  `filesystem:` URLs—which are just strings—instead of a list of entries. You can also use the `filesystem:` URL to look up the entry with [`resolveLocalFileSystemURL()`](</en-US/docs/Web/API/LocalFileSystem#resolvelocalfilesystemurl()>). That gets you back to a DirectoryEntrySync (as well as FileEntrySync) object.
 
-<h4 id="example">Example</h4>
+#### Example
 
-<p>In the following code snippet from <a href="http://www.html5rocks.com/en/tutorials/file/filesystem/">HTML5Rocks</a>, we create Web Workers and pass data from it to the main app.</p>
+In the following code snippet from [HTML5Rocks](http://www.html5rocks.com/en/tutorials/file/filesystem/), we create Web Workers and pass data from it to the main app.
 
-<pre class="brush: js">// Taking care of the browser-specific prefixes.
+```js
+// Taking care of the browser-specific prefixes.
   window.resolveLocalFileSystemURL = window.resolveLocalFileSystemURL ||
                                      window.webkitResolveLocalFileSystemURL;
 
@@ -45,11 +44,12 @@ browser-compat: api.DirectoryReaderSync
   };
 
   worker.postMessage({'cmd': 'list'});
-</pre>
+```
 
-<p>The following is Worker.js code that gets the contents of the directory.</p>
+The following is Worker.js code that gets the contents of the directory.
 
-<pre class="brush: js">// Taking care of the browser-specific prefixes.
+```js
+// Taking care of the browser-specific prefixes.
 self.requestFileSystemSync = self.webkitRequestFileSystemSync ||
                              self.requestFileSystemSync;
 
@@ -93,68 +93,57 @@ self.onmessage = function(e) {
     onError(e);
   }
 };
-</pre>
+```
 
-<h2 id="Method_overview">Method overview</h2>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td><code>EntrySync <a href="#createreader" title="#readEntries">readEntries</a> () raises (<a href="/en-US/docs/Web/API/FileException">FileException</a>);</code></td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Method">Method</h2>
-
-<h3 id="readEntries">readEntries()</h3>
-
-<p>Returns a lost of entries from a specific directory. Call this method until an empty array is returned.</p>
-
-<pre>EntrySync readEntries (
-) raises (<a href="/en-US/docs/Web/API/FileException">FileException</a>);</pre>
-
-<h5 id="Returns">Returns</h5>
-
-<h5 id="Parameter">Parameter</h5>
-
-<p>None</p>
-
-<h5 id="Exceptions">Exceptions</h5>
-
-<p>This method can raise a <a href="/en-US/docs/Web/API/FileException">FileException</a> with the following codes:</p>
+## Method overview
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Exception</th>
-   <th scope="col">Description</th>
-  </tr>
-  <tr>
-   <td><code>NOT_FOUND_ERR</code></td>
-   <td>The directory does not exist.</td>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>INVALID_STATE_ERR</code></td>
-   <td>The directory has been modified since the first call to readEntries was processed.</td>
-  </tr>
-  <tr>
-   <td><code>SECURITY_ERR</code></td>
-   <td>The browser determined that it was not safe to look up the metadata.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td>
+        <code
+          >EntrySync
+          <a href="#createreader" title="#readEntries">readEntries</a> () raises
+          (<a href="/en-US/docs/Web/API/FileException">FileException</a>);</code
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Method
 
-<p>{{Compat}}</p>
+### readEntries()
 
-<h2 id="See_also">See also</h2>
+Returns a lost of entries from a specific directory. Call this method until an empty array is returned.
 
-<p>Specification: {{ spec("http://dev.w3.org/2009/dap/file-system/pub/FileSystem/", "File API: Directories and System Specification", "WD") }}</p>
+    EntrySync readEntries (
+    ) raises (FileException);
 
-<p>Reference: <a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">File System API</a></p>
+##### Returns
 
-<p>Introduction: <a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">Basic Concepts About the File System API</a></p>
+##### Parameter
+
+None
+
+##### Exceptions
+
+This method can raise a [FileException](/en-US/docs/Web/API/FileException) with the following codes:
+
+| Exception           | Description                                                                        |
+| ------------------- | ---------------------------------------------------------------------------------- |
+| `NOT_FOUND_ERR`     | The directory does not exist.                                                      |
+| `INVALID_STATE_ERR` | The directory has been modified since the first call to readEntries was processed. |
+| `SECURITY_ERR`      | The browser determined that it was not safe to look up the metadata.               |
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+Specification: {{ spec("http://dev.w3.org/2009/dap/file-system/pub/FileSystem/", "File API: Directories and System Specification", "WD") }}
+
+Reference: [File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+
+Introduction: [Basic Concepts About the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)

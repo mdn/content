@@ -2,110 +2,105 @@
 title: WebGL2RenderingContext.texStorage2D()
 slug: Web/API/WebGL2RenderingContext/texStorage2D
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGL2
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGL2
 browser-compat: api.WebGL2RenderingContext.texStorage2D
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGL2RenderingContext.texStorage2D()</code></strong> method of the
-  <a href="/en-US/docs/Web/API/WebGL_API">WebGL API </a>specifies all levels of
-  two-dimensional texture storage.</p>
+The **`WebGL2RenderingContext.texStorage2D()`** method of the
+[WebGL API ](/en-US/docs/Web/API/WebGL_API)specifies all levels of
+two-dimensional texture storage.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <var>gl</var>.texStorage2D(<var>target</var>, <var>levels</var>, <var>internalformat</var>, <var>width</var>, <var>height</var>);
-</pre>
+```js
+void gl.texStorage2D(target, levels, internalformat, width, height);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>target</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target) of the active texture.
+- `target`
+
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target) of the active texture.
     Possible values:
-    <ul>
-      <li><code>gl.TEXTURE_2D</code>: A two-dimensional texture.</li>
-      <li><code>gl.TEXTURE_CUBE_MAP</code>: A cube-mapped texture.</li>
-    </ul>
-  </dd>
-  <dt><code>levels</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLint")}} specifying the number of texture levels.</dd>
-  <dt><code>internalformat</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the texture store format. Possible values:
-    <ul>
-      <li><code>gl.R8</code></li>
-      <li><code>gl.R16F</code></li>
-      <li><code>gl.R32F</code></li>
-      <li><code>gl.R8UI</code></li>
-      <li><code>gl.RG8</code></li>
-      <li><code>gl.RG16F</code></li>
-      <li><code>gl.RG32F</code></li>
-      <li><code>gl.RG8UI</code></li>
-      <li><code>gl.RGB8</code></li>
-      <li><code>gl.SRGB8</code></li>
-      <li><code>gl.RGB565</code></li>
-      <li><code>gl.R11F_G11F_B10F</code></li>
-      <li><code>gl.RGB9_E5</code></li>
-      <li><code>gl.RGB16F</code></li>
-      <li><code>gl.RGB32F</code></li>
-      <li><code>gl.RGB8UI</code></li>
-      <li><code>gl.RGBA8</code></li>
-      <li><code>gl.SRGB8_APLHA8</code></li>
-      <li><code>gl.RGB5_A1</code></li>
-      <li><code>gl.RGBA4</code></li>
-      <li><code>gl.RGBA16F</code></li>
-      <li><code>gl.RGBA32F</code></li>
-      <li><code>gl.RGBA8UI</code></li>
-    </ul>
 
-    <p>Unlike OpenGL 3.0, WebGL 2 <strong>doesn't support</strong> the following ETC2 and
-      EAC compressed texture formats (see <a
-        href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#5.37">section
-        5.37</a> in the WebGL 2 spec). You might be able to enable them via the
-      {{domxref("WEBGL_compressed_texture_etc")}} extension, though.</p>
+    - `gl.TEXTURE_2D`: A two-dimensional texture.
+    - `gl.TEXTURE_CUBE_MAP`: A cube-mapped texture.
 
-    <ul>
-      <li><code>gl.COMPRESSED_R11_EAC</code></li>
-      <li><code>gl.COMPRESSED_SIGNED_R11_EAC</code></li>
-      <li><code>gl.COMPRESSED_RG11_EAC</code></li>
-      <li><code>gl.COMPRESSED_SIGNED_RG11_EAC</code></li>
-      <li><code>gl.COMPRESSED_RGB8_ETC2</code></li>
-      <li><code>gl.COMPRESSED_RGBA8_ETC2_EAC</code></li>
-      <li><code>gl.COMPRESSED_SRGB8_ETC2</code></li>
-      <li><code>gl.COMPRESSED_SRGB8_ALPHA8_ETC2_EAC</code></li>
-      <li><code>gl.COMPRESSED_RGB8_PUNCHTHROUGH_ALPHA1_ETC2</code></li>
-      <li><code>gl.COMPRESSED_SRGB8_PUNCHTHROUGH_ALPHA1_ETC2</code></li>
-    </ul>
-  </dd>
-  <dt><code>width</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the width of the texture.</dd>
-  <dt><code>height</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the height of the texture.</dd>
-</dl>
+- `levels`
+  - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the number of texture levels.
+- `internalformat`
 
-<h3 id="Return_value">Return value</h3>
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the texture store format. Possible values:
 
-<p>None.</p>
+    - `gl.R8`
+    - `gl.R16F`
+    - `gl.R32F`
+    - `gl.R8UI`
+    - `gl.RG8`
+    - `gl.RG16F`
+    - `gl.RG32F`
+    - `gl.RG8UI`
+    - `gl.RGB8`
+    - `gl.SRGB8`
+    - `gl.RGB565`
+    - `gl.R11F_G11F_B10F`
+    - `gl.RGB9_E5`
+    - `gl.RGB16F`
+    - `gl.RGB32F`
+    - `gl.RGB8UI`
+    - `gl.RGBA8`
+    - `gl.SRGB8_APLHA8`
+    - `gl.RGB5_A1`
+    - `gl.RGBA4`
+    - `gl.RGBA16F`
+    - `gl.RGBA32F`
+    - `gl.RGBA8UI`
 
-<h2 id="Examples">Examples</h2>
+    Unlike OpenGL 3.0, WebGL 2 **doesn't support** the following ETC2 and
+    EAC compressed texture formats (see [section
+    5.37](https://www.khronos.org/registry/webgl/specs/latest/2.0/#5.37) in the WebGL 2 spec). You might be able to enable them via the
+    {{domxref("WEBGL_compressed_texture_etc")}} extension, though.
 
-<pre class="brush: js">gl.texStorage2D(gl.TEXTURE_2D, 1, gl.RGB8, 256, 256);
-</pre>
+    - `gl.COMPRESSED_R11_EAC`
+    - `gl.COMPRESSED_SIGNED_R11_EAC`
+    - `gl.COMPRESSED_RG11_EAC`
+    - `gl.COMPRESSED_SIGNED_RG11_EAC`
+    - `gl.COMPRESSED_RGB8_ETC2`
+    - `gl.COMPRESSED_RGBA8_ETC2_EAC`
+    - `gl.COMPRESSED_SRGB8_ETC2`
+    - `gl.COMPRESSED_SRGB8_ALPHA8_ETC2_EAC`
+    - `gl.COMPRESSED_RGB8_PUNCHTHROUGH_ALPHA1_ETC2`
+    - `gl.COMPRESSED_SRGB8_PUNCHTHROUGH_ALPHA1_ETC2`
 
-<h2 id="Specifications">Specifications</h2>
+- `width`
+  - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the width of the texture.
+- `height`
+  - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the height of the texture.
+
+### Return value
+
+None.
+
+## Examples
+
+```js
+gl.texStorage2D(gl.TEXTURE_2D, 1, gl.RGB8, 256, 256);
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGL2RenderingContext.texStorage3D()")}}</li>
-  <li>{{domxref("WEBGL_compressed_texture_etc")}}</li>
-</ul>
+- {{domxref("WebGL2RenderingContext.texStorage3D()")}}
+- {{domxref("WEBGL_compressed_texture_etc")}}

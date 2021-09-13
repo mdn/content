@@ -14,73 +14,66 @@ tags:
   - retry
 browser-compat: api.PaymentResponse.retry
 ---
-<p>{{securecontext_header}}{{APIRef("Payment Request API")}}</p>
+{{securecontext_header}}{{APIRef("Payment Request API")}}
 
-<p>The {{domxref("PaymentResponse")}} interface's
-    <code><strong>retry()</strong></code> method makes it possible to ask the user to
-    retry a payment after an error occurs during processing.</p>
+The {{domxref("PaymentResponse")}} interface's
+**`retry()`** method makes it possible to ask the user to
+retry a payment after an error occurs during processing.
 
-<p>This lets your app
-  gracefully deal with situations such as invalid shipping addresses or declined credit
-  cards.</p>
+This lets your app
+gracefully deal with situations such as invalid shipping addresses or declined credit
+cards.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>retryPromise</em> = <em>paymentRequest</em>.retry(<em>errorFields</em>);
-</pre>
+```js
+retryPromise = paymentRequest.retry(errorFields);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>errorFields</code></dt>
-  <dd>
-    <p>A {{domxref("PaymentValidationErrors")}} object, with the following properties:</p>
+- `errorFields`
 
-    <p>{{page("/en-US/docs/Web/API/PaymentValidationErrors", "Properties")}}</p>
-  </dd>
-</dl>
+  - : A {{domxref("PaymentValidationErrors")}} object, with the following properties:
 
-<h3 id="Return_value">Return value</h3>
+    {{page("/en-US/docs/Web/API/PaymentValidationErrors", "Properties")}}
 
-<p>A {{jsxref("Promise")}} which is resolved when the payment is successfully completed.
-  The promise is rejected with an appropriate exception value if the payment fails again.
-</p>
+### Return value
 
-<p>Typically you will use this by calling {{domxref("PaymentRequest.show", "show()")}},
-  then entering a loop or recursive function that checks the
-  {{domxref("PaymentResponse")}} for errors or other reasons to retry the payment request.
-  If a retry is needed, the loop calls <code>retry()</code>, then loops back to check the
-  response when it comes in. The loop exits only when the user either cancels the payment
-  request or the request is successful.</p>
+A {{jsxref("Promise")}} which is resolved when the payment is successfully completed.
+The promise is rejected with an appropriate exception value if the payment fails again.
 
-<p>See the {{anch("Examples", "example")}} below for a thorough example, but the basic
-  concept, in outline form, is:</p>
+Typically you will use this by calling {{domxref("PaymentRequest.show", "show()")}},
+then entering a loop or recursive function that checks the
+{{domxref("PaymentResponse")}} for errors or other reasons to retry the payment request.
+If a retry is needed, the loop calls `retry()`, then loops back to check the
+response when it comes in. The loop exits only when the user either cancels the payment
+request or the request is successful.
 
-<ol>
-  <li>Create a new {{domxref("PaymentRequest")}}
-    (<code>new </code>{{domxref("PaymentRequest.PaymentRequest", "PaymentRequest()")}})
-  </li>
-  <li>Display the payment request ({{domxref("PaymentRequest.show()")}}</li>
-  <li>If <code>show()</code> resolves, the returned {{domxref("PaymentResponse")}}
+See the {{anch("Examples", "example")}} below for a thorough example, but the basic
+concept, in outline form, is:
+
+1.  Create a new {{domxref("PaymentRequest")}}
+    (`new `{{domxref("PaymentRequest.PaymentRequest", "PaymentRequest()")}})
+2.  Display the payment request ({{domxref("PaymentRequest.show()")}}
+3.  If `show()` resolves, the returned {{domxref("PaymentResponse")}}
     describes the requested payment and the options chosen by the user. Continue by...
-    <ol>
-      <li>Validate the returned response; if there are any fields whose values are not
+
+    1.  Validate the returned response; if there are any fields whose values are not
         acceptable, call the response's {{domxref("PaymentResponse.complete",
-        "complete()")}} method with a value of <code>"fail"</code> to indicate failure.
-      </li>
-      <li>If the response's data is valid and acceptable, call
-        <code>complete("success")</code> to finalize the payment and proces it.</li>
-    </ol>
-  </li>
-  <li>If <code>show()</code> is rejected, the payment request failed, usually because
+        "complete()")}} method with a value of `"fail"` to indicate failure.
+    2.  If the response's data is valid and acceptable, call
+        `complete("success")` to finalize the payment and proces it.
+
+4.  If `show()` is rejected, the payment request failed, usually because
     either there's already one being processed, because the {{Glossary("user agent")}}
     doesn't support any of the specified payment methods, or because of a security issue.
-    See the <a href="/en-US/docs/Web/API/PaymentRequest/show#exceptions">list of
-      exceptions</a> for <code>show()</code> for further details. Call
-    <code>complete("fail")</code> to close the payment request.</li>
-</ol>
+    See the [list of
+    exceptions](/en-US/docs/Web/API/PaymentRequest/show#exceptions) for `show()` for further details. Call
+    `complete("fail")` to close the payment request.
 
-<pre class="brush: js">async function handlePayment() {
+```js
+async function handlePayment() {
   const payRequest = new PaymentRequest(methodData, details, options);
 
   try {
@@ -96,11 +89,12 @@ browser-compat: api.PaymentResponse.retry
     /* handle the exception */
   }
 }
-</pre>
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">async function doPaymentRequest() {
+```js
+async function doPaymentRequest() {
   const request = new PaymentRequest(methodData, details, options);
   const response = await request.show();
   await recursiveValidate(request, response);
@@ -129,7 +123,7 @@ async function recursiveValidate(request, response) {
 }
 
 function fixField(requestOrResponse, event, validator) {
-  return new Promise(resolve =&gt; {
+  return new Promise(resolve => {
     // Browser keeps calling this until promise resolves.
     requestOrResponse.addEventListener(event, async function listener(ev) {
       const promiseToValidate = validator(requestOrResponse);
@@ -144,18 +138,16 @@ function fixField(requestOrResponse, event, validator) {
 }
 
 doPaymentRequest();
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("PaymentResponse")}} interface.</li>
-</ul>
+- {{domxref("PaymentResponse")}} interface.

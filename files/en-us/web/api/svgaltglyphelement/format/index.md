@@ -3,97 +3,55 @@ title: SVGAltGlyphElement.format
 slug: Web/API/SVGAltGlyphElement/format
 browser-compat: api.SVGAltGlyphElement.format
 ---
-<p>{{APIRef("SVGAltGlyphElement")}}</p>
+{{APIRef("SVGAltGlyphElement")}}
 
-<p>{{Deprecated_header}}</p>
+{{Deprecated_header}}
 
-<p>The <strong><code>SVGAltGlyphElement.format</code></strong> property is a
-    {{domxref("DOMString")}} that defines the format of the given font. It has the same
-    meaning as the 'format' property of {{domxref("SVGGlyphRefElement")}} property. If the
-    font is in one of the formats listed in <a
-        href="https://www.w3.org/TR/2008/REC-CSS2-20080411/fonts.html#referencing">CSS2([CSS2],
-        section15.3.5)</a>, then its value is the corresponding &lt;string&gt; parameter
-    of the font.</p>
+The **`SVGAltGlyphElement.format`** property is a
+{{domxref("DOMString")}} that defines the format of the given font. It has the same
+meaning as the 'format' property of {{domxref("SVGGlyphRefElement")}} property. If the
+font is in one of the formats listed in [CSS2(\[CSS2\],
+section15.3.5)](https://www.w3.org/TR/2008/REC-CSS2-20080411/fonts.html#referencing), then its value is the corresponding \<string> parameter
+of the font.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">string = <em>myGlyph</em>.format;
- <em>myGlyph</em>.format = string;
-</pre>
+```js
+string = myGlyph.format;
+ myGlyph.format = string;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>The format values listed below are taken from <a
-        href="https://www.w3.org/TR/2008/REC-CSS2-20080411/fonts.html#referencing">CSS2([CSS2],
-        section15.3.5)</a>.</p>
+The format values listed below are taken from [CSS2(\[CSS2\],
+section15.3.5)](https://www.w3.org/TR/2008/REC-CSS2-20080411/fonts.html#referencing).
 
-<table>
-    <thead>
-        <tr>
-            <th scope="col">String</th>
-            <th scope="col">Font Format</th>
-            <th scope="col">Examples of common extensions</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>truedoc-pfr</td>
-            <td>TrueDoc™ Portable Font Resource</td>
-            <td>.pfr</td>
-        </tr>
-        <tr>
-            <td>embedded-opentype</td>
-            <td>Embedded OpenType</td>
-            <td>.eot</td>
-        </tr>
-        <tr>
-            <td>type-1</td>
-            <td>PostScript™ Type 1</td>
-            <td>.pfb, .pfa</td>
-        </tr>
-        <tr>
-            <td>truetype</td>
-            <td>TrueType</td>
-            <td>.ttf</td>
-        </tr>
-        <tr>
-            <td>opentype</td>
-            <td>OpenType, including TrueType Open</td>
-            <td>.ttf</td>
-        </tr>
-        <tr>
-            <td>truetype-gx</td>
-            <td>TrueType with GX extensions</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>speedo</td>
-            <td>Speedo</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>intellifont</td>
-            <td>Intellifont</td>
-            <td>-</td>
-        </tr>
-    </tbody>
-</table>
+| String            | Font Format                       | Examples of common extensions |
+| ----------------- | --------------------------------- | ----------------------------- |
+| truedoc-pfr       | TrueDoc™ Portable Font Resource   | .pfr                          |
+| embedded-opentype | Embedded OpenType                 | .eot                          |
+| type-1            | PostScript™ Type 1                | .pfb, .pfa                    |
+| truetype          | TrueType                          | .ttf                          |
+| opentype          | OpenType, including TrueType Open | .ttf                          |
+| truetype-gx       | TrueType with GX extensions       | -                             |
+| speedo            | Speedo                            | -                             |
+| intellifont       | Intellifont                       | -                             |
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">myGlyph.format = &quot;truedoc-pfr&quot;;</pre>
+```js
+myGlyph.format = "truedoc-pfr";
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-    <li>{{domxref("SVGAltGlyphElement")}}</li>
-    <li>{{domxref("SVGGlyphRefElement")}}</li>
-</ul>
+- {{domxref("SVGAltGlyphElement")}}
+- {{domxref("SVGGlyphRefElement")}}

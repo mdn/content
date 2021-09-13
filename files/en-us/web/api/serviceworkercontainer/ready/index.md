@@ -2,38 +2,40 @@
 title: ServiceWorkerContainer.ready
 slug: Web/API/ServiceWorkerContainer/ready
 tags:
-- API
-- Property
-- Reference
-- Service worker API
-- ServiceWorker
-- ServiceWorkerContainer
+  - API
+  - Property
+  - Reference
+  - Service worker API
+  - ServiceWorker
+  - ServiceWorkerContainer
 browser-compat: api.ServiceWorkerContainer.ready
 ---
-<p>{{APIRef("Service Workers API")}}</p>
+{{APIRef("Service Workers API")}}
 
-<p>The <strong><code>ready</code></strong> read-only property of
-    the {{domxref("ServiceWorkerContainer")}} interface provides a way of delaying code
-    execution until a service worker is active. It returns a {{jsxref("Promise")}} that
-    will never reject, and which waits indefinitely until
-    the {{domxref("ServiceWorkerRegistration")}} associated with the current page has
-    an {{domxref("ServiceWorkerRegistration.active","active")}} worker. Once that
-    condition is met, it resolves with
-    the {{domxref("ServiceWorkerRegistration")}}.</p>
+The **`ready`** read-only property of
+the {{domxref("ServiceWorkerContainer")}} interface provides a way of delaying code
+execution until a service worker is active. It returns a {{jsxref("Promise")}} that
+will never reject, and which waits indefinitely until
+the {{domxref("ServiceWorkerRegistration")}} associated with the current page has
+an {{domxref("ServiceWorkerRegistration.active","active")}} worker. Once that
+condition is met, it resolves with
+the {{domxref("ServiceWorkerRegistration")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">navigator.serviceWorker.ready.then(function(<em>serviceWorkerRegistration</em>) { ... });</pre>
+```js
+navigator.serviceWorker.ready.then(function(serviceWorkerRegistration) { ... });
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{jsxref("Promise")}} that will never reject, and which may eventually resolve with a
-  {{domxref("ServiceWorkerRegistration")}}.</p>
+A {{jsxref("Promise")}} that will never reject, and which may eventually resolve with a
+{{domxref("ServiceWorkerRegistration")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">if ('serviceWorker' in navigator) {
+```js
+if ('serviceWorker' in navigator) {
   navigator.serviceWorker.ready
   .then(function(registration) {
     console.log('A service worker is active:', registration.active);
@@ -44,12 +46,12 @@ browser-compat: api.ServiceWorkerContainer.ready
 } else {
   console.log('Service workers are not supported.');
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

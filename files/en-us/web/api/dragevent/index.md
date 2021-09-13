@@ -8,84 +8,74 @@ tags:
   - drag and drop
 browser-compat: api.DragEvent
 ---
-<div>{{APIRef("HTML Drag and Drop API")}}</div>
+{{APIRef("HTML Drag and Drop API")}}
 
-<p>The <strong><code>DragEvent</code></strong> interface is a {{domxref("Event","DOM event")}} that represents a drag and drop interaction. The user initiates a drag by placing a pointer device (such as a mouse) on the touch surface and then dragging the pointer to a new location (such as another DOM element). Applications are free to interpret a drag and drop interaction in an application-specific way.</p>
+The **`DragEvent`** interface is a {{domxref("Event","DOM event")}} that represents a drag and drop interaction. The user initiates a drag by placing a pointer device (such as a mouse) on the touch surface and then dragging the pointer to a new location (such as another DOM element). Applications are free to interpret a drag and drop interaction in an application-specific way.
 
-<p>This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref("Event")}}.</p>
+This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref("Event")}}.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref('DragEvent.dataTransfer')}} {{readonlyInline}}</dt>
- <dd>The data that is transferred during a drag and drop interaction.</dd>
-</dl>
+- {{domxref('DragEvent.dataTransfer')}} {{readonlyInline}}
+  - : The data that is transferred during a drag and drop interaction.
 
-<h2 id="Constructors">Constructors</h2>
+## Constructors
 
-<p>Although this interface has a constructor, it is not possible to create a useful DataTransfer object from script, since {{domxref("DataTransfer")}} objects have a processing and security model that is coordinated by the browser during drag-and-drops.</p>
+Although this interface has a constructor, it is not possible to create a useful DataTransfer object from script, since {{domxref("DataTransfer")}} objects have a processing and security model that is coordinated by the browser during drag-and-drops.
 
-<dl>
- <dt>{{domxref("DragEvent.DragEvent", "DragEvent()")}}</dt>
- <dd>Creates a synthetic and untrusted DragEvent.</dd>
-</dl>
+- {{domxref("DragEvent.DragEvent", "DragEvent()")}}
+  - : Creates a synthetic and untrusted DragEvent.
 
-<h2 id="Event_types">Event types</h2>
+## Event types
 
-<dl>
- <dt>{{event('drag')}}</dt>
- <dd>This event is fired when an element or text selection is being dragged.</dd>
- <dt>{{event('dragend')}}</dt>
- <dd>This event is fired when a drag operation is being ended (by releasing a mouse button or hitting the escape key).</dd>
- <dt>{{event('dragenter')}}</dt>
- <dd>This event is fired when a dragged element or text selection enters a valid drop target.</dd>
- <dt>{{event('dragleave')}}</dt>
- <dd>This event is fired when a dragged element or text selection leaves a valid drop target.</dd>
- <dt>{{event('dragover')}}</dt>
- <dd>This event is fired continuously when an element or text selection is being dragged and the mouse pointer is over a valid drop target (every 50 ms WHEN mouse is not moving ELSE much faster between 5 ms (slow movement) and 1ms (fast movement) approximately. This firing pattern is different than {{Event("mouseover")}} ).</dd>
- <dt>{{event('dragstart')}}</dt>
- <dd>This event is fired when the user starts dragging an element or text selection.</dd>
- <dt>{{event('drop')}}</dt>
- <dd>This event is fired when an element or text selection is dropped on a valid drop target.</dd>
-</dl>
+- {{event('drag')}}
+  - : This event is fired when an element or text selection is being dragged.
+- {{event('dragend')}}
+  - : This event is fired when a drag operation is being ended (by releasing a mouse button or hitting the escape key).
+- {{event('dragenter')}}
+  - : This event is fired when a dragged element or text selection enters a valid drop target.
+- {{event('dragleave')}}
+  - : This event is fired when a dragged element or text selection leaves a valid drop target.
+- {{event('dragover')}}
+  - : This event is fired continuously when an element or text selection is being dragged and the mouse pointer is over a valid drop target (every 50 ms WHEN mouse is not moving ELSE much faster between 5 ms (slow movement) and 1ms (fast movement) approximately. This firing pattern is different than {{Event("mouseover")}} ).
+- {{event('dragstart')}}
+  - : This event is fired when the user starts dragging an element or text selection.
+- {{event('drop')}}
+  - : This event is fired when an element or text selection is dropped on a valid drop target.
 
-<h2 id="GlobalEventHandlers">GlobalEventHandlers</h2>
+## GlobalEventHandlers
 
-<dl>
- <dt>{{domxref('GlobalEventHandlers.ondrag')}}</dt>
- <dd>A {{domxref('GlobalEventHandlers','global event handler')}} for the {{event('drag')}} event.</dd>
- <dt>{{domxref('GlobalEventHandlers.ondragend')}}</dt>
- <dd>A {{domxref('GlobalEventHandlers','global event handler')}} for the {{event('dragend')}} event.</dd>
- <dt>{{domxref('GlobalEventHandlers.ondragenter')}}</dt>
- <dd>A {{domxref('GlobalEventHandlers','global event handler')}} for the {{event('dragenter')}} event.</dd>
- <dt>{{domxref('GlobalEventHandlers.ondragleave')}}</dt>
- <dd>A {{domxref('GlobalEventHandlers','global event handler')}} for the {{event('dragleave')}} event.</dd>
- <dt>{{domxref('GlobalEventHandlers.ondragover')}}</dt>
- <dd>A {{domxref('GlobalEventHandlers','global event handler')}} for the {{event('dragover')}} event.</dd>
- <dt>{{domxref('GlobalEventHandlers.ondragstart')}}</dt>
- <dd>A {{domxref('GlobalEventHandlers','global event handler')}} for the {{event('dragstart')}} event.</dd>
- <dt>{{domxref('GlobalEventHandlers.ondrop')}}</dt>
- <dd>A {{domxref('GlobalEventHandlers','global event handler')}} for the {{event('drop')}} event.</dd>
-</dl>
+- {{domxref('GlobalEventHandlers.ondrag')}}
+  - : A {{domxref('GlobalEventHandlers','global event handler')}} for the {{event('drag')}} event.
+- {{domxref('GlobalEventHandlers.ondragend')}}
+  - : A {{domxref('GlobalEventHandlers','global event handler')}} for the {{event('dragend')}} event.
+- {{domxref('GlobalEventHandlers.ondragenter')}}
+  - : A {{domxref('GlobalEventHandlers','global event handler')}} for the {{event('dragenter')}} event.
+- {{domxref('GlobalEventHandlers.ondragleave')}}
+  - : A {{domxref('GlobalEventHandlers','global event handler')}} for the {{event('dragleave')}} event.
+- {{domxref('GlobalEventHandlers.ondragover')}}
+  - : A {{domxref('GlobalEventHandlers','global event handler')}} for the {{event('dragover')}} event.
+- {{domxref('GlobalEventHandlers.ondragstart')}}
+  - : A {{domxref('GlobalEventHandlers','global event handler')}} for the {{event('dragstart')}} event.
+- {{domxref('GlobalEventHandlers.ondrop')}}
+  - : A {{domxref('GlobalEventHandlers','global event handler')}} for the {{event('drop')}} event.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>An Example of each property, constructor, event type and global event handlers is included in their respective reference page.</p>
+An Example of each property, constructor, event type and global event handlers is included in their respective reference page.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API">Drag and drop</a></li>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</a></li>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">Recommended Drag Types</a></li>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items">Dragging and Dropping Multiple Items</a></li>
- <li><a href="https://codepen.io/tech_query/pen/MqGgap">DataTransfer test - Paste or Drag</a></li>
-</ul>
+- [Drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
+- [Drag Operations](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+- [Recommended Drag Types](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
+- [Dragging and Dropping Multiple Items](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
+- [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)

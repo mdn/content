@@ -2,37 +2,39 @@
 title: MediaKeyStatusMap.entries()
 slug: Web/API/MediaKeyStatusMap/entries
 tags:
-- API
-- EncryptedMediaExtensions
-- MediaKeyStatusMap
-- Method
-- Reference
-- entries()
+  - API
+  - EncryptedMediaExtensions
+  - MediaKeyStatusMap
+  - Method
+  - Reference
+  - entries()
 browser-compat: api.MediaKeyStatusMap.entries
 ---
-<p>{{APIRef("EncryptedMediaExtensions API")}}{{SeeCompatTable}}</p>
+{{APIRef("EncryptedMediaExtensions API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>entries()</code></strong> read-only property
-    of the {{domxref("MediaKeyStatusMap")}} interface returns a new Iterator object,
-    containing an array of [key, value] pairs for each element in the status map, in
-    insertion order.</p>
+The **`entries()`** read-only property
+of the {{domxref("MediaKeyStatusMap")}} interface returns a new Iterator object,
+containing an array of \[key, value] pairs for each element in the status map, in
+insertion order.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">// TBD</pre>
+```js
+// TBD
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

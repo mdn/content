@@ -13,61 +13,57 @@ tags:
   - Video
 browser-compat: api.SourceBufferList
 ---
-<p>{{draft}}{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}</p>
+{{draft}}{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
-<p>The <strong><code>SourceBufferList</code></strong> interface represents a simple container list for multiple {{domxref("SourceBuffer")}} objects.</p>
+The **`SourceBufferList`** interface represents a simple container list for multiple {{domxref("SourceBuffer")}} objects.
 
-<p>The source buffer list containing the <code>SourceBuffer</code>s appended to a particular <code>MediaSource</code> can be retrieved using the {{domxref("MediaSource.sourceBuffers")}} property.</p>
+The source buffer list containing the `SourceBuffer`s appended to a particular `MediaSource` can be retrieved using the {{domxref("MediaSource.sourceBuffers")}} property.
 
-<p>The individual source buffers can be accessed using the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#accessing_array_elements">array operator</a> <code>[]</code>.</p>
+The individual source buffers can be accessed using the [array operator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#accessing_array_elements) `[]`.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("SourceBufferList.length")}} {{readonlyInline}}</dt>
- <dd>Returns the number of {{domxref("SourceBuffer")}} objects in the list.</dd>
-</dl>
+- {{domxref("SourceBufferList.length")}} {{readonlyInline}}
+  - : Returns the number of {{domxref("SourceBuffer")}} objects in the list.
 
-<h3 id="Event_handlers">Event handlers</h3>
+### Event handlers
 
-<dl>
- <dt>{{domxref("SourceBufferList.onaddsourcebuffer")}}</dt>
- <dd>The event handler for the <code>addsourcebuffer</code> event.</dd>
- <dt>{{domxref("SourceBufferList.onremovesourcebuffer")}}</dt>
- <dd>The event handler for the <code>removesourcebuffer</code> event.</dd>
-</dl>
+- {{domxref("SourceBufferList.onaddsourcebuffer")}}
+  - : The event handler for the `addsourcebuffer` event.
+- {{domxref("SourceBufferList.onremovesourcebuffer")}}
+  - : The event handler for the `removesourcebuffer` event.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Inherits methods from its parent interface, {{domxref("EventTarget")}}.</em></p>
+_Inherits methods from its parent interface, {{domxref("EventTarget")}}._
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example shows how to access the active source buffers of the {{domxref("MediaSource")}} connected to an already playing {{domxref("HTMLVideoElement")}}.
+This example shows how to access the active source buffers of the {{domxref("MediaSource")}} connected to an already playing {{domxref("HTMLVideoElement")}}.
 
-<pre class="brush: js">// Video is an already playing video using a MediaSource srcObject
+```js
+// Video is an already playing video using a MediaSource srcObject
 var video = document.querySelector('video');
 var mediaSource = video.srcObject;
 var sourceBufferList = mediaSource.activeSourceBuffers;
-for (var i = 0; i &lt; sourceBufferList.length; i++) {
+for (var i = 0; i < sourceBufferList.length; i++) {
   var sourceBuffer = sourceBufferList[i];
   // Do something with each SourceBuffer, such as call abort()
   sourceBuffer.abort();
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("MediaSource")}}</li>
- <li>{{domxref("SourceBuffer")}}</li>
-</ul>
+- {{domxref("MediaSource")}}
+- {{domxref("SourceBuffer")}}

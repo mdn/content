@@ -2,57 +2,54 @@
 title: IDBKeyRange.bound()
 slug: Web/API/IDBKeyRange/bound
 tags:
-- API
-- Database
-- IDBKeyRange
-- IndexedDB
-- Method
-- Reference
-- Storage
-- bound
+  - API
+  - Database
+  - IDBKeyRange
+  - IndexedDB
+  - Method
+  - Reference
+  - Storage
+  - bound
 browser-compat: api.IDBKeyRange.bound
 ---
-<p>{{ APIRef("IndexedDB") }}</p>
+{{ APIRef("IndexedDB") }}
 
-<div>
-  <p>The <strong><code>bound()</code></strong> method of the {{domxref("IDBKeyRange")}}
-    interface creates a new key range with the specified upper and lower bounds. The
-    bounds can be open (that is, the bounds exclude the endpoint values) or closed (that
-    is, the bounds include the endpoint values). By default, the bounds are closed.</p>
-</div>
+The **`bound()`** method of the {{domxref("IDBKeyRange")}}
+interface creates a new key range with the specified upper and lower bounds. The
+bounds can be open (that is, the bounds exclude the endpoint values) or closed (that
+is, the bounds include the endpoint values). By default, the bounds are closed.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>myIDBKeyRange</em> = <em>IDBKeyRange</em>.bound(<em>lower</em>, <em>upper</em>);
-var <em>myIDBKeyRange</em> = <em>IDBKeyRange</em>.bound(<em>lower</em>, <em>upper</em>, <em>lowerOpen</em>);
-var <em>myIDBKeyRange</em> = <em>IDBKeyRange</em>.bound(<em>lower</em>, <em>upper</em>, <em>lowerOpen</em>, <em>upperOpen</em>);
-</pre>
+```js
+var myIDBKeyRange = IDBKeyRange.bound(lower, upper);
+var myIDBKeyRange = IDBKeyRange.bound(lower, upper, lowerOpen);
+var myIDBKeyRange = IDBKeyRange.bound(lower, upper, lowerOpen, upperOpen);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>lower </dt>
-  <dd>specifies the lower bound of the new key range. </dd>
-  <dt>upper </dt>
-  <dd>specifies the upper bound of the new key range.</dd>
-  <dt>lowerOpen {{optional_inline}}</dt>
-  <dd>indicates whether the lower bound excludes the endpoint value. The default is
-    false. </dd>
-  <dt>upperOpen {{optional_inline}}</dt>
-  <dd>Indicates whether the upper bound excludes the endpoint value. The default is
-    false. </dd>
-</dl>
+- lower
+  - : specifies the lower bound of the new key range.
+- upper
+  - : specifies the upper bound of the new key range.
+- lowerOpen {{optional_inline}}
+  - : indicates whether the lower bound excludes the endpoint value. The default is
+    false.
+- upperOpen {{optional_inline}}
+  - : Indicates whether the upper bound excludes the endpoint value. The default is
+    false.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{domxref("IDBKeyRange")}}: The newly created key range.</p>
+{{domxref("IDBKeyRange")}}: The newly created key range.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>This method may raise a {{domxref("DOMException")}} of
-    the following type:</p>
+This method may raise a {{domxref("DOMException")}} of
+the following type:
 
 <table class="standard-table">
   <thead>
@@ -66,39 +63,37 @@ var <em>myIDBKeyRange</em> = <em>IDBKeyRange</em>.bound(<em>lower</em>, <em>uppe
       <td><code>DataError</code></td>
       <td>
         <p>The following conditions raise an exception:</p>
-
         <ul>
           <li>The lower or upper parameters were not passed a valid key.</li>
           <li>The lower key is greater than the upper key.</li>
-          <li>The lower key and upper key match and either of the bounds are open.</li>
+          <li>
+            The lower key and upper key match and either of the bounds are open.
+          </li>
         </ul>
       </td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example illustrates how you'd use a bound key range. Here we declare
-  a <code>keyRangeValue = IDBKeyRange.bound("A", "F");</code> — a range between values of
-  "A" and "F". We open a transaction (using {{domxref("IDBTransaction")}}) and an object
-  store, and open a Cursor with {{domxref("IDBObjectStore.openCursor")}},
-  declaring <code>keyRangeValue</code> as its optional key range value. This means that
-  the cursor will only retrieve records with keys inside that range. This range includes
-  the values "A" and "F", as we haven't declared that they should be open  bounds. If we
-  used <code>IDBKeyRange.bound("A", "F", true, true);</code>, then the range would not
-  include <code>"A"</code> and <code>"F"</code>, only the values between them.</p>
+The following example illustrates how you'd use a bound key range. Here we declare
+a `keyRangeValue = IDBKeyRange.bound("A", "F");` — a range between values of
+"A" and "F". We open a transaction (using {{domxref("IDBTransaction")}}) and an object
+store, and open a Cursor with {{domxref("IDBObjectStore.openCursor")}},
+declaring `keyRangeValue` as its optional key range value. This means that
+the cursor will only retrieve records with keys inside that range. This range includes
+the values "A" and "F", as we haven't declared that they should be open  bounds. If we
+used `IDBKeyRange.bound("A", "F", true, true);`, then the range would not
+include `"A"` and `"F"`, only the values between them.
 
-<div class="note">
-  <p><strong>Note:</strong> For a more complete example allowing you to experiment with
-    key range, have a look at the idbkeyrange directory <a
-      href="https://github.com/mdn/indexeddb-examples/tree/master/idbkeyrange">in the
-      indexeddb-examples</a> repo (<a
-      href="https://mdn.github.io/indexeddb-examples/idbkeyrange/">view the example live
-      too</a>.)</p>
-</div>
+> **Note:** For a more complete example allowing you to experiment with
+> key range, have a look at the idbkeyrange directory [in the
+> indexeddb-examples](https://github.com/mdn/indexeddb-examples/tree/master/idbkeyrange) repo ([view the example live
+> too](https://mdn.github.io/indexeddb-examples/idbkeyrange/).)
 
-<pre class="brush: js">function displayData() {
+```js
+function displayData() {
   var keyRangeValue = IDBKeyRange.bound("A", "F");
 
   var transaction = db.transaction(['fThings'], 'readonly');
@@ -108,7 +103,7 @@ var <em>myIDBKeyRange</em> = <em>IDBKeyRange</em>.bound(<em>lower</em>, <em>uppe
     var cursor = event.target.result;
       if(cursor) {
         var listItem = document.createElement('li');
-        listItem.innerHTML = '&lt;strong&gt;' + cursor.value.fThing + '&lt;/strong&gt;, ' + cursor.value.fRating;
+        listItem.innerHTML = '<strong>' + cursor.value.fThing + '</strong>, ' + cursor.value.fRating;
         list.appendChild(listItem);
 
         cursor.continue();
@@ -116,27 +111,24 @@ var <em>myIDBKeyRange</em> = <em>IDBKeyRange</em>.bound(<em>lower</em>, <em>uppe
         console.log('Entries all displayed.');
       }
     };
-  };</pre>
+  };
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
-  <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
-  <li>Using transactions: {{domxref("IDBTransaction")}}</li>
-  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
-  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
-  <li>Using cursors: {{domxref("IDBCursor")}}</li>
-  <li>Reference example: <a class="external"
-      href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
-      Notifications</a> (<a class="external"
-      href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do
+  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

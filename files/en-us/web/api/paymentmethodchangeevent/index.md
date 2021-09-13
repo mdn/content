@@ -13,36 +13,32 @@ tags:
   - payment
 browser-compat: api.PaymentMethodChangeEvent
 ---
-<div>{{securecontext_header}}{{APIRef("Payment Request API")}}</div>
+{{securecontext_header}}{{APIRef("Payment Request API")}}
 
-<p>The <strong><code>PaymentMethodChangeEvent</code></strong> interface of the <a href="/en-US/docs/Web/API/Payment_Request_API">Payment Request API</a> describes the {{domxref("PaymentRequest/paymentmethodchange_event", "paymentmethodchange")}} event which is fired by some payment handlers when the user switches payment instruments (e.g., a user selects a "store" card to make a purchase while using Apple Pay).</p>
+The **`PaymentMethodChangeEvent`** interface of the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) describes the {{domxref("PaymentRequest/paymentmethodchange_event", "paymentmethodchange")}} event which is fired by some payment handlers when the user switches payment instruments (e.g., a user selects a "store" card to make a purchase while using Apple Pay).
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("PaymentMethodChangeEvent.PaymentMethodChangeEvent", "PaymentMethodChangeEvent()")}}</dt>
- <dd>Creates and returns a new <code>PaymentMethodChangeEvent</code> object, optionally initialized with values taken from a given {{domxref("PaymentMethodChangeEventInit")}} dictionary.</dd>
-</dl>
+- {{domxref("PaymentMethodChangeEvent.PaymentMethodChangeEvent", "PaymentMethodChangeEvent()")}}
+  - : Creates and returns a new `PaymentMethodChangeEvent` object, optionally initialized with values taken from a given {{domxref("PaymentMethodChangeEventInit")}} dictionary.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>In addition to the properties below, this interface includes properties inherited from {{domxref("PaymentRequestUpdateEvent")}}.</em></p>
+_In addition to the properties below, this interface includes properties inherited from {{domxref("PaymentRequestUpdateEvent")}}._
 
-<dl>
- <dt>{{domxref("PaymentMethodChangeEvent.methodDetails", "methodDetails")}} {{ReadOnlyInline}} {{securecontext_inline}}</dt>
- <dd>An object containing payment method-specific data useful when handling a payment method change. If no such information is available, this value is <code>null</code>.</dd>
- <dt>{{domxref("PaymentMethodChangeEvent.methodName", "methodName")}} {{ReadOnlyInline}} {{securecontext_inline}}</dt>
- <dd>A {{domxref("DOMString")}} containing the payment method identifier, a string which uniquely identifies a particular payment method. This identifier is usually a URL used during the payment process, but may be a standardized non-URL string as well, such as <code>basic-card</code>. The default value is the empty string, <code>""</code>.</dd>
-</dl>
+- {{domxref("PaymentMethodChangeEvent.methodDetails", "methodDetails")}} {{ReadOnlyInline}} {{securecontext_inline}}
+  - : An object containing payment method-specific data useful when handling a payment method change. If no such information is available, this value is `null`.
+- {{domxref("PaymentMethodChangeEvent.methodName", "methodName")}} {{ReadOnlyInline}} {{securecontext_inline}}
+  - : A {{domxref("DOMString")}} containing the payment method identifier, a string which uniquely identifies a particular payment method. This identifier is usually a URL used during the payment process, but may be a standardized non-URL string as well, such as `basic-card`. The default value is the empty string, `""`.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface includes methods inherited from {{domxref("PaymentRequestUpdateEvent")}}.</em></p>
+_This interface includes methods inherited from {{domxref("PaymentRequestUpdateEvent")}}._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

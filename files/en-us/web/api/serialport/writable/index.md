@@ -9,30 +9,33 @@ tags:
   - SerialPort
 browser-compat: api.SerialPort.writable
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("Serial API")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("Serial API")}}
 
-<p>The <strong><code>writable</code></strong> read-only property of the {{domxref("SerialPort")}} interface returns a {{domxref("WritableStream")}} for sending data to the device connected to the port. Chunks written to this stream must be instances of {{domxref("BufferSource")}} (for example, an {{jsxref("ArrayBuffer")}} or {{domxref("ArrayBufferView")}} such as {{jsxref("Uint8Array")}}). This property is non-null as long as the port is open and has not encountered a fatal error.</p>
+The **`writable`** read-only property of the {{domxref("SerialPort")}} interface returns a {{domxref("WritableStream")}} for sending data to the device connected to the port. Chunks written to this stream must be instances of {{domxref("BufferSource")}} (for example, an {{jsxref("ArrayBuffer")}} or {{domxref("ArrayBufferView")}} such as {{jsxref("Uint8Array")}}). This property is non-null as long as the port is open and has not encountered a fatal error.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox notranslate">var <var>writableStream</var> = <var>SerialPort</var>.writable;</pre>
+    var writableStream = SerialPort.writable;
 
-<h3>Value</h3>
-<p>A {{domxref("WritableStream")}}</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("WritableStream")}}
 
-<p>The following example shows how to write a string to a port. A {{domxref("TextEncoder")}} converts the string to a <code>Uint8Array</code> before transmission.</p>
+## Examples
 
-<pre class="brush: js notranslate">const encoder = new TextEncoder();
+The following example shows how to write a string to a port. A {{domxref("TextEncoder")}} converts the string to a `Uint8Array` before transmission.
+
+```js
+const encoder = new TextEncoder();
 const writer = port.writable.getWriter();
-await writer.write(encoder.encode(&quot;PING&quot;));
-writer.releaseLock();</pre>
+await writer.write(encoder.encode("PING"));
+writer.releaseLock();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

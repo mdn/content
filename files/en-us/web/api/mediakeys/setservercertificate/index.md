@@ -2,33 +2,31 @@
 title: MediaKeys.setServerCertificate()
 slug: Web/API/MediaKeys/setServerCertificate
 tags:
-- API
-- EncryptedMediaExtensions
-- Experimental
-- Media
-- MediaKeys
-- Method
-- Reference
-- setServerCertificate
+  - API
+  - EncryptedMediaExtensions
+  - Experimental
+  - Media
+  - MediaKeys
+  - Method
+  - Reference
+  - setServerCertificate
 browser-compat: api.MediaKeys.setServerCertificate
 ---
-<div>{{APIRef("EncryptedMediaExtensions")}}{{SeeCompatTable}}</div>
+{{APIRef("EncryptedMediaExtensions")}}{{SeeCompatTable}}
 
-<p>The <code><strong>MediaKeys.setServerCertificate()</strong></code> method provides a
-	server certificate to be used to encrypt messages to the license server.</p>
+The **`MediaKeys.setServerCertificate()`** method provides a
+server certificate to be used to encrypt messages to the license server.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-	class="brush: js">MediaKeys.setServerCertificate(serverCertificate).then(function() { ... });</pre>
+```js
+MediaKeys.setServerCertificate(serverCertificate).then(function() { ... });
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
-
-	<p>{{Compat}}</p>
-</div>
+{{Compat}}

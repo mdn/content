@@ -13,19 +13,20 @@ tags:
   - payerPhone
 browser-compat: api.PaymentResponse.payerPhone
 ---
-<p>{{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}</p>
+{{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
 
-<p>The <code>payerPhone</code> read-only property of the {{domxref("PaymentResponse")}}
-  interface returns the phone number supplied by the user. This option is only present
-  when the <code>requestPayerPhone</code> option is set to <code>true</code> in the
-  {{domxref('PaymentOptions')}} object passed to the
-  {{domxref('PaymentRequest.PaymentRequest','PaymentRequest')}} constructor.</p>
+The `payerPhone` read-only property of the {{domxref("PaymentResponse")}}
+interface returns the phone number supplied by the user. This option is only present
+when the `requestPayerPhone` option is set to `true` in the
+{{domxref('PaymentOptions')}} object passed to the
+{{domxref('PaymentRequest.PaymentRequest','PaymentRequest')}} constructor.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var payerPhone = PaymentResponse.payerPhone;</pre>
+```js
+var payerPhone = PaymentResponse.payerPhone;
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

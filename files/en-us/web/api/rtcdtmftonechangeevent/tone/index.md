@@ -2,56 +2,57 @@
 title: RTCDTMFToneChangeEvent.tone
 slug: Web/API/RTCDTMFToneChangeEvent/tone
 tags:
-- Media
-- Property
-- RTCDTMFToneChangeEvent
-- Reference
-- Touch-
-- WebRTC
-- WebRTC API
-- tone
+  - Media
+  - Property
+  - RTCDTMFToneChangeEvent
+  - Reference
+  - Touch-
+  - WebRTC
+  - WebRTC API
+  - tone
 browser-compat: api.RTCDTMFToneChangeEvent.tone
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The read-only property <strong><code>RTCDTMFToneChangeEvent.tone</code></strong>
-  returns the DTMF character which has just begun to play, or an empty string
-  (<code>""</code>). if all queued tones have finished playing (that is,
-  {{domxref("RTCDTMFSender.toneBuffer")}} is empty).</p>
+The read-only property **`RTCDTMFToneChangeEvent.tone`**
+returns the DTMF character which has just begun to play, or an empty string
+(`""`). if all queued tones have finished playing (that is,
+{{domxref("RTCDTMFSender.toneBuffer")}} is empty).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"> var <em>tone</em> = <em>dtmfToneChangeEvent</em>.tone;</pre>
+```js
+ var tone = dtmfToneChangeEvent.tone;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example establishes a handler for the {{event("tonechange")}} event which updates
-  an element to display the currently playing tone in its content, or, if all tones have
-  played, the string "&lt;none&gt;".</p>
+This example establishes a handler for the {{event("tonechange")}} event which updates
+an element to display the currently playing tone in its content, or, if all tones have
+played, the string "\<none>".
 
-<pre class="brush: js">dtmfSender.ontonechange = function( ev ) {
+```js
+dtmfSender.ontonechange = function( ev ) {
   let tone = ev.tone;
   if (tone === "") {
-    tone = "&amp;lt;none&amp;gt;"
+    tone = "&lt;none&gt;"
   }
 
   document.getElementById("playingTone").innerText = tone;
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API/Using_DTMF">Using DTMF with WebRTC</a></li>
-  <li>{{event("toneevent")}}</li>
-  <li>{{domxref("RTCDTMFToneChangeEvent")}}</li>
-</ul>
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)
+- [Using DTMF with WebRTC](/en-US/docs/Web/API/WebRTC_API/Using_DTMF)
+- {{event("toneevent")}}
+- {{domxref("RTCDTMFToneChangeEvent")}}

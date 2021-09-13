@@ -8,58 +8,51 @@ tags:
   - WebGL extension
 browser-compat: api.EXT_color_buffer_half_float
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <code><strong>EXT_color_buffer_half_float</strong></code> extension is part of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> and adds the ability to render to 16-bit floating-point color buffers.</p>
+The **`EXT_color_buffer_half_float`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and adds the ability to render to 16-bit floating-point color buffers.
 
-<p>WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also <a href="/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</a> in the <a href="/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</a>.</p>
+WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
 
-<div class="note">
-<p><strong>Note:</strong> This extension is available to both, {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} and {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}} contexts. On WebGL 2, it's an alternative to using the {{domxref("EXT_color_buffer_float")}} extension on platforms that support 16-bit floating point render targets but not 32-bit floating point render targets.</p>
+> **Note:** This extension is available to both, {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} and {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}} contexts. On WebGL 2, it's an alternative to using the {{domxref("EXT_color_buffer_float")}} extension on platforms that support 16-bit floating point render targets but not 32-bit floating point render targets.
+>
+> The {{domxref("OES_texture_half_float")}} extension implicitly enables this extension.
 
-<p>The {{domxref("OES_texture_half_float")}} extension implicitly enables this extension.</p>
-</div>
+## Constants
 
-<h2 id="Constants">Constants</h2>
+- `ext.RGBA16F_EXT`
+  - : RGBA 16-bit floating-point color-renderable format.
+- `ext.RGB16F_EXT`
+  - : RGB 16-bit floating-point color-renderable format.
+- `ext.FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE_EXT`
+  - : ?
+- `ext.UNSIGNED_NORMALIZED_EXT`
+  - : ?
 
-<dl>
- <dt><code>ext.RGBA16F_EXT</code></dt>
- <dd>RGBA 16-bit floating-point color-renderable format.</dd>
- <dt><code>ext.RGB16F_EXT</code></dt>
- <dd>RGB 16-bit floating-point color-renderable format.</dd>
- <dt><code>ext.FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE_EXT</code></dt>
- <dd>?</dd>
- <dt><code>ext.UNSIGNED_NORMALIZED_EXT</code></dt>
- <dd>?</dd>
-</dl>
+## Extended methods
 
-<h2 id="Extended_methods">Extended methods</h2>
+This extension extends {{domxref("WebGLRenderingContext.renderbufferStorage()")}}:
 
-<p>This extension extends {{domxref("WebGLRenderingContext.renderbufferStorage()")}}:</p>
+- The `internalformat` parameter now accepts `ext.RGBA16F_EXT` and `ext.RGBA16F_EXT`.
 
-<ul>
- <li>The <code>internalformat</code> parameter now accepts <code>ext.RGBA16F_EXT</code> and <code>ext.RGBA16F_EXT</code>.</li>
-</ul>
+## Examples
 
-<h2 id="Examples">Examples</h2>
-
-<pre class="brush:js">var ext = gl.getExtension('EXT_color_buffer_half_float');
+```js
+var ext = gl.getExtension('EXT_color_buffer_half_float');
 
 gl.renderbufferStorage(gl.RENDERBUFFER, ext.RBGA16F_EXT, 256, 256);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.getExtension()")}}</li>
- <li>{{domxref("WebGLRenderingContext.renderbufferStorage()")}}</li>
- <li>{{domxref("OES_texture_half_float")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.getExtension()")}}
+- {{domxref("WebGLRenderingContext.renderbufferStorage()")}}
+- {{domxref("OES_texture_half_float")}}

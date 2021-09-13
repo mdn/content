@@ -2,105 +2,104 @@
 title: SecurityPolicyViolationEvent()
 slug: Web/API/SecurityPolicyViolationEvent/SecurityPolicyViolationEvent
 tags:
-- API
-- CSP
-- Constructor
-- Experimental
-- HTTP
-- Reference
-- Security
-- SecurityPolicyViolationEvent
+  - API
+  - CSP
+  - Constructor
+  - Experimental
+  - HTTP
+  - Reference
+  - Security
+  - SecurityPolicyViolationEvent
 browser-compat: api.SecurityPolicyViolationEvent.SecurityPolicyViolationEvent
 ---
-<div>{{APIRef("{{HTTPSidebar}}")}}{{ SeeCompatTable() }}</div>
+{{APIRef("{{HTTPSidebar}}")}}{{ SeeCompatTable() }}
 
-<p>The <code><strong>SecurityPolicyViolationEvent</strong></code> constructor creates a
-  new <code>SecurityPolicyViolationEvent</code> object instance.</p>
+The **`SecurityPolicyViolationEvent`** constructor creates a
+new `SecurityPolicyViolationEvent` object instance.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">new SecurityPolicyViolationEvent(type);
-new SecurityPolicyViolationEvent(type, init);</pre>
+```js
+new SecurityPolicyViolationEvent(type);
+new SecurityPolicyViolationEvent(type, init);
+```
 
-<h3 id="Properties">Properties</h3>
+### Properties
 
-<dl>
-  <dt>type</dt>
-  <dd>A {{domxref("DOMString")}} representing the type of security policy violation that
-    occurred.</dd>
-  <dt>init {{optional_inline}}</dt>
-  <dd>An object containing information about the properties of the
-    <code>SecurityPolicyViolationEvent</code> to be constructed. This can include the
+- type
+  - : A {{domxref("DOMString")}} representing the type of security policy violation that
+    occurred.
+- init {{optional_inline}}
+
+  - : An object containing information about the properties of the
+    `SecurityPolicyViolationEvent` to be constructed. This can include the
     following properties, but bear in mind that if you do include an
-    <code>eventInitDict</code>, certain properties must be included (marked below with
-    <strong>required</strong>):
-    <ul>
-      <li><code>blockedURI</code>: The
-        {{domxref("SecurityPolicyViolationEvent.blockedURI","blockedURI")}} of the
-        <code>SecurityPolicyViolationEvent</code>. If not included, the default value is
-        <code>""</code>.</li>
-      <li><code>columnNumber</code>: The
-        {{domxref("SecurityPolicyViolationEvent.columnNumber","columnNumber")}} of the
-        <code>SecurityPolicyViolationEvent</code>. If not included, the default value is
-        <code>0</code>.</li>
-      <li><code>disposition</code>: The
-        {{domxref("SecurityPolicyViolationEvent.disposition","disposition")}} of the
-        <code>SecurityPolicyViolationEvent</code> (<strong>required</strong>).</li>
-      <li><code>documentURI</code>: The
-        {{domxref("SecurityPolicyViolationEvent.documentURI","documentURI")}} of the
-        <code>SecurityPolicyViolationEvent</code> (<strong>required</strong>).</li>
-      <li><code>effectiveDirective</code>: The
-        {{domxref("SecurityPolicyViolationEvent.effectiveDirective","effectiveDirective")}}
-        of the <code>SecurityPolicyViolationEvent</code> (<strong>required</strong>).</li>
-      <li><code>lineNumber</code>: The
-        {{domxref("SecurityPolicyViolationEvent.lineNumber","lineNumber")}} of the
-        <code>SecurityPolicyViolationEvent</code>. If not included, the default value is
-        <code>0</code>.</li>
-      <li><code>originalPolicy</code>: The
-        {{domxref("SecurityPolicyViolationEvent.originalPolicy","originalPolicy")}} of the
-        <code>SecurityPolicyViolationEvent</code> (<strong>required</strong>).</li>
-      <li><code>referrer</code>: The
-        {{domxref("SecurityPolicyViolationEvent.referrer","referrer")}} of the
-        <code>SecurityPolicyViolationEvent</code>. If not included, the default value is
-        <code>""</code>.</li>
-      <li><code>sample</code>: The
-        {{domxref("SecurityPolicyViolationEvent.sample","sample")}} of the
-        <code>SecurityPolicyViolationEvent</code>. If not included, the default value is
-        <code>""</code>.</li>
-      <li><code>sourceFile</code>: The
-        {{domxref("SecurityPolicyViolationEvent.sourceFile","sourceFile")}} of the
-        <code>SecurityPolicyViolationEvent</code>. If not included, the default value is
-        <code>""</code>.</li>
-      <li><code>statusCode</code>: The
-        {{domxref("SecurityPolicyViolationEvent.statusCode","statusCode")}} of the
-        <code>SecurityPolicyViolationEvent</code> (<strong>required</strong>).</li>
-      <li><code>violatedDirective</code>: The
-        {{domxref("SecurityPolicyViolationEvent.violatedDirective","violatedDirective")}}
-        of the <code>SecurityPolicyViolationEvent</code> (<strong>required</strong>).</li>
-    </ul>
-  </dd>
-</dl>
+    `eventInitDict`, certain properties must be included (marked below with
+    **required**):
 
-<h3 id="Return_value">Return value</h3>
+    - `blockedURI`: The
+      {{domxref("SecurityPolicyViolationEvent.blockedURI","blockedURI")}} of the
+      `SecurityPolicyViolationEvent`. If not included, the default value is
+      `""`.
+    - `columnNumber`: The
+      {{domxref("SecurityPolicyViolationEvent.columnNumber","columnNumber")}} of the
+      `SecurityPolicyViolationEvent`. If not included, the default value is
+      `0`.
+    - `disposition`: The
+      {{domxref("SecurityPolicyViolationEvent.disposition","disposition")}} of the
+      `SecurityPolicyViolationEvent` (**required**).
+    - `documentURI`: The
+      {{domxref("SecurityPolicyViolationEvent.documentURI","documentURI")}} of the
+      `SecurityPolicyViolationEvent` (**required**).
+    - `effectiveDirective`: The
+      {{domxref("SecurityPolicyViolationEvent.effectiveDirective","effectiveDirective")}}
+      of the `SecurityPolicyViolationEvent` (**required**).
+    - `lineNumber`: The
+      {{domxref("SecurityPolicyViolationEvent.lineNumber","lineNumber")}} of the
+      `SecurityPolicyViolationEvent`. If not included, the default value is
+      `0`.
+    - `originalPolicy`: The
+      {{domxref("SecurityPolicyViolationEvent.originalPolicy","originalPolicy")}} of the
+      `SecurityPolicyViolationEvent` (**required**).
+    - `referrer`: The
+      {{domxref("SecurityPolicyViolationEvent.referrer","referrer")}} of the
+      `SecurityPolicyViolationEvent`. If not included, the default value is
+      `""`.
+    - `sample`: The
+      {{domxref("SecurityPolicyViolationEvent.sample","sample")}} of the
+      `SecurityPolicyViolationEvent`. If not included, the default value is
+      `""`.
+    - `sourceFile`: The
+      {{domxref("SecurityPolicyViolationEvent.sourceFile","sourceFile")}} of the
+      `SecurityPolicyViolationEvent`. If not included, the default value is
+      `""`.
+    - `statusCode`: The
+      {{domxref("SecurityPolicyViolationEvent.statusCode","statusCode")}} of the
+      `SecurityPolicyViolationEvent` (**required**).
+    - `violatedDirective`: The
+      {{domxref("SecurityPolicyViolationEvent.violatedDirective","violatedDirective")}}
+      of the `SecurityPolicyViolationEvent` (**required**).
 
-<p>A <code>SecurityPolicyViolationEvent</code> object instance.</p>
+### Return value
 
-<h2 id="Example">Example</h2>
+A `SecurityPolicyViolationEvent` object instance.
 
-<pre class="brush: js">let SPVEvt = new SecurityPolicyViolationEvent('foo', {
+## Example
+
+```js
+let SPVEvt = new SecurityPolicyViolationEvent('foo', {
   ...
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/HTTP/CSP">Content Security Policy (CSP)</a></li>
-</ul>
+- [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP)

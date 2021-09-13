@@ -10,65 +10,63 @@ tags:
   - Reference
 browser-compat: api.Element.scrollTop
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>Element.scrollTop</strong></code> property gets or sets the number of pixels that an element's content is scrolled vertically.</p>
+The **`Element.scrollTop`** property gets or sets the number of pixels that an element's content is scrolled vertically.
 
-<p>An element's <code>scrollTop</code> value is a measurement of the distance from the element's top to its topmost <em>visible</em> content. When an element's content does not generate a vertical scrollbar, then its <code>scrollTop</code> value is <code>0</code>.</p>
+An element's `scrollTop` value is a measurement of the distance from the element's top to its topmost _visible_ content. When an element's content does not generate a vertical scrollbar, then its `scrollTop` value is `0`.
 
-<p>When <code>scrollTop</code> is used on the root element (the <code>&lt;html&gt;</code> element), the <code>scrollY</code> of the window is returned. <a href="https://www.w3.org/TR/2016/WD-cssom-view-1-20160317/#dom-element-scrolltop">This is a special case of <code>scrollTop</code></a>.</p>
+When `scrollTop` is used on the root element (the `<html>` element), the `scrollY` of the window is returned. [This is a special case of `scrollTop`](https://www.w3.org/TR/2016/WD-cssom-view-1-20160317/#dom-element-scrolltop).
 
-<div class="warning">
-<p><strong>Warning:</strong> On systems using display scaling, <code>scrollTop</code> may give you a decimal value.</p>
-</div>
+> **Warning:** On systems using display scaling, `scrollTop` may give you a decimal value.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">// Get the number of pixels scrolled.
-var <var>intElemScrollTop</var> = someElement.scrollTop;
-</pre>
+```js
+// Get the number of pixels scrolled.
+var intElemScrollTop = someElement.scrollTop;
+```
 
-<p>After running this code, <code><var>intElemScrollTop</var></code> is an integer corresponding to the number of pixels that the {{domxref("element")}}'s content has been scrolled upwards.</p>
+After running this code, `intElemScrollTop` is an integer corresponding to the number of pixels that the {{domxref("element")}}'s content has been scrolled upwards.
 
-<pre class="brush: js">// Set the number of pixels scrolled.
-<var>element</var>.scrollTop = <var>intValue</var>;
-</pre>
+```js
+// Set the number of pixels scrolled.
+element.scrollTop = intValue;
+```
 
-<p><code>scrollTop</code> can be set to any integer value, with certain caveats:</p>
+`scrollTop` can be set to any integer value, with certain caveats:
 
-<ul>
- <li>If the element can't be scrolled (e.g. it has no overflow or if the element has a property of "<strong>non-scrollable</strong>"), <code>scrollTop</code> is <code>0</code>.</li>
- <li><code>scrollTop</code> doesn't respond to negative values; instead, it sets itself back to <code>0</code>.</li>
- <li>If set to a value greater than the maximum available for the element, <code>scrollTop</code> settles itself to the maximum value.</li>
-</ul>
+- If the element can't be scrolled (e.g. it has no overflow or if the element has a property of "**non-scrollable**"), `scrollTop` is `0`.
+- `scrollTop` doesn't respond to negative values; instead, it sets itself back to `0`.
+- If set to a value greater than the maximum available for the element, `scrollTop` settles itself to the maximum value.
 
-<h2>Examples</h2>
+## Examples
 
-<h3>Scrolling an element</h3>
+### Scrolling an element
 
-<p>In this example, try scrolling the inner container with the dashed border, and see how the value of <code>scrollTop</code> changes.</p>
+In this example, try scrolling the inner container with the dashed border, and see how the value of `scrollTop` changes.
 
-<h4>HTML</h4>
+#### HTML
 
-<pre class="brush: html">
+```html
 
-&lt;div id="container"&gt;
-  &lt;div id="scroller"&gt;
-      &lt;p&gt;Far out in the uncharted backwaters of the unfashionable end
+<div id="container">
+  <div id="scroller">
+      <p>Far out in the uncharted backwaters of the unfashionable end
       of the western spiral arm of the Galaxy lies a small unregarded
       yellow sun. Orbiting this at a distance of roughly ninety-two million
       miles is an utterly insignificant little blue green planet whose
       ape-descended life forms are so amazingly primitive that they still
-      think digital watches are a pretty neat idea.&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
+      think digital watches are a pretty neat idea.</p>
+  </div>
+</div>
 
-&lt;div id="output"&gt;scrollTop: 0&lt;/div&gt;
-</pre>
+<div id="output">scrollTop: 0</div>
+```
 
-<h4>CSS</h4>
+#### CSS
 
-<pre class="brush: css">
+```css
 #scroller {
   overflow: scroll;
   height: 150px;
@@ -79,35 +77,33 @@ var <var>intElemScrollTop</var> = someElement.scrollTop;
 #output {
   padding: 1rem 0;
 }
-</pre>
+```
 
-<h4>JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">
+```js
 const scroller = document.querySelector("#scroller");
 const output = document.querySelector("#output");
 
 scroller.addEventListener("scroll", event => {
   output.textContent = `scrollTop: ${scroller.scrollTop}`;
 });
-</pre>
+```
 
-<h4>Result</h4>
+#### Result
 
 {{EmbedLiveSample("Scrolling_an_element", 400, 250)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://msdn.microsoft.com/en-us/library/hh781509(v=vs.85).aspx" title="MSDN Measuring Element Dimension and Location">MSDN's Measuring Element Dimension and Location</a></li>
- <li>{{domxref("Element.scrollLeft")}}</li>
- <li>{{domxref("Element.scrollTo()")}}</li>
-</ul>
+- [MSDN's Measuring Element Dimension and Location](<https://msdn.microsoft.com/en-us/library/hh781509(v=vs.85).aspx> "MSDN Measuring Element Dimension and Location")
+- {{domxref("Element.scrollLeft")}}
+- {{domxref("Element.scrollTo()")}}

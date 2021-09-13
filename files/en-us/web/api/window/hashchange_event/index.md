@@ -9,60 +9,64 @@ tags:
   - Window
 browser-compat: api.Window.hashchange_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <strong><code>hashchange</code></strong> event is fired when the fragment identifier of the URL has changed (the part of the URL beginning with and following the <code>#</code> symbol).</p>
+The **`hashchange`** event is fired when the fragment identifier of the URL has changed (the part of the URL beginning with and following the `#` symbol).
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("HashChangeEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler</th>
-   <td>{{domxref("WindowEventHandlers/onhashchange", "onhashchange")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("HashChangeEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler</th>
+      <td>
+        {{domxref("WindowEventHandlers/onhashchange", "onhashchange")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>You can use the <code>hashchange</code> event in an {{domxref("EventTarget/addEventListener", "addEventListener")}} method:</p>
+You can use the `hashchange` event in an {{domxref("EventTarget/addEventListener", "addEventListener")}} method:
 
-<pre class="brush:js">window.addEventListener('hashchange', function() {
+```js
+window.addEventListener('hashchange', function() {
   console.log('The hash has changed!')
-}, false);</pre>
+}, false);
+```
 
-<p>Or use the <code>onhashchange</code> event handler property:</p>
+Or use the `onhashchange` event handler property:
 
-<pre class="brush: js">function locationHashChanged() {
+```js
+function locationHashChanged() {
   if (location.hash === '#cool-feature') {
     console.log("You're visiting a cool feature!");
   }
 }
 
-window.onhashchange = locationHashChanged;</pre>
+window.onhashchange = locationHashChanged;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("Window/popstate_event", "popstate")}}</li>
- <li>{{domxref("WindowEventHandlers.onhashchange")}}</li>
-</ul>
+- {{domxref("Window/popstate_event", "popstate")}}
+- {{domxref("WindowEventHandlers.onhashchange")}}

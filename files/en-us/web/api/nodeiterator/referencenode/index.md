@@ -2,45 +2,45 @@
 title: NodeIterator.referenceNode
 slug: Web/API/NodeIterator/referenceNode
 tags:
-- API
-- DOM
-- Experimental
-- NodeIterator
-- Property
+  - API
+  - DOM
+  - Experimental
+  - NodeIterator
+  - Property
 browser-compat: api.NodeIterator.referenceNode
 ---
-<p>{{APIRef("DOM")}}{{ SeeCompatTable }}</p>
+{{APIRef("DOM")}}{{ SeeCompatTable }}
 
-<p>The <strong><code>NodeIterator.referenceNode</code></strong> read-only returns the
-	{{domxref("Node")}} to which the iterator is anchored; as new nodes are inserted, the
-	iterator remains anchored to the reference node as specified by this property.</p>
+The **`NodeIterator.referenceNode`** read-only returns the
+{{domxref("Node")}} to which the iterator is anchored; as new nodes are inserted, the
+iterator remains anchored to the reference node as specified by this property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>node</em> = <em>nodeIterator</em>.referenceNode;
-</pre>
+```js
+node = nodeIterator.referenceNode;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var nodeIterator = document.createNodeIterator(
+```js
+var nodeIterator = document.createNodeIterator(
     document.body,
     NodeFilter.SHOW_ELEMENT,
     { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
     false
 );
 node = nodeIterator.referenceNode;
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>The interface it belongs to: {{domxref("NodeIterator")}}</li>
-</ul>
+- The interface it belongs to: {{domxref("NodeIterator")}}

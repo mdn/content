@@ -10,44 +10,47 @@ tags:
   - Response
 browser-compat: api.Response.bodyUsed
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p>The <strong><code>bodyUsed</code></strong> read-only property of the
-  {{domxref("Response")}} interface is a boolean value that indicates whether the
-  body has been read yet.</p>
+The **`bodyUsed`** read-only property of the
+{{domxref("Response")}} interface is a boolean value that indicates whether the
+body has been read yet.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">response.bodyUsed;</pre>
+```js
+response.bodyUsed;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A boolean value.</p>
+A boolean value.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In our <a href="https://github.com/mdn/fetch-examples/tree/master/fetch-request">fetch
-    request example</a> (run <a
-    href="https://mdn.github.io/fetch-examples/fetch-request/">fetch request live</a>), we
-  create a new request using the {{domxref("Request.Request","Request()")}} constructor,
-  then use it to fetch a JPG. When the fetch is successful, we read a {{domxref("Blob")}}
-  out of the response using <code>blob()</code>, put it into an object URL using
-  {{domxref("URL.createObjectURL")}}, and then set that URL as the source of an
-  {{htmlelement("img")}} element to display the image.</p>
+In our [fetch
+request example](https://github.com/mdn/fetch-examples/tree/master/fetch-request) (run [fetch request live](https://mdn.github.io/fetch-examples/fetch-request/)), we
+create a new request using the {{domxref("Request.Request","Request()")}} constructor,
+then use it to fetch a JPG. When the fetch is successful, we read a {{domxref("Blob")}}
+out of the response using `blob()`, put it into an object URL using
+{{domxref("URL.createObjectURL")}}, and then set that URL as the source of an
+{{htmlelement("img")}} element to display the image.
 
-<p>Notice that we log <code>response.bodyUsed</code> to the console once
-  before the <code>response.blob()</code> call and once after. This returns
-  <code>false</code> before and <code>true</code> afterwards, as at that point the body
-  has been read.</p>
+Notice that we log `response.bodyUsed` to the console once
+before the `response.blob()` call and once after. This returns
+`false` before and `true` afterwards, as at that point the body
+has been read.
 
-<h3 id="HTML_Content">HTML Content</h3>
+### HTML Content
 
-<pre class="brush: html">&lt;img class="my-image" src="https://wikipedia.org/static/images/project-logos/frwiki-1.5x.png"&gt;
-</pre>
+```html
+<img class="my-image" src="https://wikipedia.org/static/images/project-logos/frwiki-1.5x.png">
+```
 
-<h3 id="JS_Content">JS Content</h3>
+### JS Content
 
-<pre class="brush: js">var myImage = document.querySelector('.my-image');
+```js
+var myImage = document.querySelector('.my-image');
 fetch('https://upload.wikimedia.org/wikipedia/commons/7/77/Delete_key1.jpg').then(function(response) {
     console.log(response.bodyUsed);
     var res = response.blob();
@@ -56,22 +59,21 @@ fetch('https://upload.wikimedia.org/wikipedia/commons/7/77/Delete_key1.jpg').the
 }).then(function(response) {
     var objectURL = URL.createObjectURL(response);
     myImage.src = objectURL;
-});</pre>
+});
+```
 
-<p>{{ EmbedLiveSample('Example', '100%', '250px') }}</p>
+{{ EmbedLiveSample('Example', '100%', '250px') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
-  <li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a></li>
-  <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP](/en-US/docs/Web/HTTP)

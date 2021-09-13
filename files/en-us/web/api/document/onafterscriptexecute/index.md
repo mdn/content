@@ -9,46 +9,44 @@ tags:
   - Reference
 browser-compat: api.Document.onafterscriptexecute
 ---
-<div>{{ApiRef("DOM")}}{{non-standard_header}}</div>
+{{ApiRef("DOM")}}{{non-standard_header}}
 
-<p>The <strong><code>Document.onafterscriptexecute</code></strong> property references a
-  function that fires when a static {{HTMLElement("script")}} element finishes executing
-  its script. It does not fire if the element is added dynamically, such as with
-  {{domxref("Node.appendChild()", "appendChild()")}}.</p>
+The **`Document.onafterscriptexecute`** property references a
+function that fires when a static {{HTMLElement("script")}} element finishes executing
+its script. It does not fire if the element is added dynamically, such as with
+{{domxref("Node.appendChild()", "appendChild()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>document</var>.onafterscriptexecute = <var>funcRef</var>;
-</pre>
+```js
+document.onafterscriptexecute = funcRef;
+```
 
-<p><var>funcRef</var> is a function reference, called when the event is fired. The event's
-  <code>target</code> attribute is set to the {{HTMLElement("script")}} element that just
-  finished executing.</p>
+_funcRef_ is a function reference, called when the event is fired. The event's
+`target` attribute is set to the {{HTMLElement("script")}} element that just
+finished executing.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">function finished(e) {
+```js
+function finished(e) {
   logMessage(`Finished script with ID: ${e.target.id}`);
 }
 
 document.addEventListener('afterscriptexecute', finished, true);
-</pre>
+```
 
-<p><a href="https://media.prod.mdn.mozit.cloud/samples/html/currentScript.html">View Live Example</a></p>
+[View Live Example](https://media.prod.mdn.mozit.cloud/samples/html/currentScript.html)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<ul>
- <li><a href="https://www.whatwg.org/specs/web-apps/current-work/#the-script-element">HTML5</a></li>
-</ul>
+- [HTML5](https://www.whatwg.org/specs/web-apps/current-work/#the-script-element)
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Document.onbeforescriptexecute")}}</li>
-  <li>{{domxref("Document.currentScript")}}</li>
-</ul>
+- {{domxref("Document.onbeforescriptexecute")}}
+- {{domxref("Document.currentScript")}}

@@ -2,65 +2,64 @@
 title: Event.returnValue
 slug: Web/API/Event/returnValue
 tags:
-- API
-- DOM
-- Event
-- Property
-- Reference
-- action
-- default
-- returnValue
-- Deprecated
+  - API
+  - DOM
+  - Event
+  - Property
+  - Reference
+  - action
+  - default
+  - returnValue
+  - Deprecated
 browser-compat: api.Event.returnValue
 ---
-<div>{{APIRef("DOM Events")}}{{Deprecated_Header}}</div>
+{{APIRef("DOM Events")}}{{Deprecated_Header}}
 
-<p>The {{domxref("Event")}} property
-    <code><strong>returnValue</strong></code> indicates whether the default action for
-    this event has been prevented or not.</p>
+The {{domxref("Event")}} property
+**`returnValue`** indicates whether the default action for
+this event has been prevented or not.
 
-<p>It is set to <code>true</code> by
-  default, allowing the default action to occur. Setting this property to
-  <code>false</code> prevents the default action.</p>
+It is set to `true` by
+default, allowing the default action to occur. Setting this property to
+`false` prevents the default action.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> While <code>returnValue</code> has been adopted into the DOM
-    standard, it is present primarily to support existing code. You should use
-    {{DOMxRef("Event.preventDefault", "preventDefault()")}}, and
-    {{domxref("Event.defaultPrevented", "defaultPrevented")}} instead of this historical
-    property.</p>
-</div>
+> **Note:** While `returnValue` has been adopted into the DOM
+> standard, it is present primarily to support existing code. You should use
+> {{DOMxRef("Event.preventDefault", "preventDefault()")}}, and
+> {{domxref("Event.defaultPrevented", "defaultPrevented")}} instead of this historical
+> property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>event</em>.returnValue = <em>bool;</em>
+```js
+event.returnValue = bool;
 
-var <em>bool</em> = <em>event</em>.returnValue;
-</pre>
+var bool = event.returnValue;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A boolean value which is <code>true</code> if the event has not been
-  canceled; otherwise, if the event has been canceled or the default has been prevented,
-  the value is <code>false</code>.</p>
+A boolean value which is `true` if the event has not been
+canceled; otherwise, if the event has been canceled or the default has been prevented,
+the value is `false`.
 
-<p>The value returned by <code>returnValue</code> is the opposite of the value returned by
-  {{domxref("Event.defaultPrevented", "defaultPrevented")}}.</p>
+The value returned by `returnValue` is the opposite of the value returned by
+{{domxref("Event.defaultPrevented", "defaultPrevented")}}.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p><code>returnValue</code> was introduced into the DOM by Internet Explorer 6, and due to
-  that browser's ubiquity became so commonly used that other browsers eventually
-  implemented it as well. It has been adopted into the DOM specification, primarily to
-  ensure that existing web content continues to function going forward.</p>
+`returnValue` was introduced into the DOM by Internet Explorer 6, and due to
+that browser's ubiquity became so commonly used that other browsers eventually
+implemented it as well. It has been adopted into the DOM specification, primarily to
+ensure that existing web content continues to function going forward.
 
-<p>New projects should generally avoid using <code>returnValue</code>, although they may
-  if they choose to do so.</p>
+New projects should generally avoid using `returnValue`, although they may
+if they choose to do so.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

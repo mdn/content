@@ -2,44 +2,43 @@
 title: CSSSkewX()
 slug: Web/API/CSSSkewX/CSSSkewX
 tags:
-- API
-- CSS Typed Object Model API
-- CSSSkewX
-- CSSTransformComponent
-- CSSTransformValue
-- Constructor
-- Experimental
-- Houdini
+  - API
+  - CSS Typed Object Model API
+  - CSSSkewX
+  - CSSTransformComponent
+  - CSSTransformValue
+  - Constructor
+  - Experimental
+  - Houdini
 browser-compat: api.CSSSkewX.CSSSkewX
 ---
-<div>{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}</div>
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}
 
-<p>The <strong><code>CSSSkewX()</code></strong> constructor creates a new
-	{{domxref("CSSSkewX")}} object which represents the
-	<code><a href="/en-US/docs/Web/CSS/transform-function/skewX()">skewX()</a></code>
-	value of the individual {{CSSXRef('transform')}} property in CSS.</p>
+The **`CSSSkewX()`** constructor creates a new
+{{domxref("CSSSkewX")}} object which represents the
+[`skewX()`](</en-US/docs/Web/CSS/transform-function/skewX()>)
+value of the individual {{CSSXRef('transform')}} property in CSS.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-	class="brush: js">var <var>CSSSkewX</var> = new CSSSkewX(<em>ax</em>);</pre>
+```js
+var CSSSkewX = new CSSSkewX(ax);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-	<dt>{{domxref('CSSSkewx.ax','ax')}}</dt>
-	<dd>A value for the <code>ax</code> angle of the {{domxref('CSSSkewX')}} object to be
-		constructed. This must be a {{domxref('CSSNumericValue')}}.</dd>
-</dl>
+- {{domxref('CSSSkewx.ax','ax')}}
+  - : A value for the `ax` angle of the {{domxref('CSSSkewX')}} object to be
+    constructed. This must be a {{domxref('CSSNumericValue')}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>To do</p>
+To do
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,63 +2,58 @@
 title: CustomEvent.initCustomEvent()
 slug: Web/API/CustomEvent/initCustomEvent
 tags:
-- API
-- CustomEvent
-- DOM
-- Deprecated
-- Method
-- Reference
+  - API
+  - CustomEvent
+  - DOM
+  - Deprecated
+  - Method
+  - Reference
 browser-compat: api.CustomEvent.initCustomEvent
 ---
-<p>{{APIRef("DOM")}}{{Deprecated_header}}</p>
+{{APIRef("DOM")}}{{Deprecated_header}}
 
-<p>The <code><strong>CustomEvent.initCustomEvent()</strong></code> method initializes a
-  <code>CustomEvent</code> object. If the event has already been dispatched, this method
-  does nothing.</p>
+The **`CustomEvent.initCustomEvent()`** method initializes a
+`CustomEvent` object. If the event has already been dispatched, this method
+does nothing.
 
-<p>Events initialized in this way must have been created with the {{
+Events initialized in this way must have been created with the {{
   domxref("Document.createEvent()") }} method. This method must be called to set the event
-  before it is dispatched, using {{ domxref("EventTarget.dispatchEvent()") }}. Once
-  dispatched, it doesn't do anything anymore.</p>
+before it is dispatched, using {{ domxref("EventTarget.dispatchEvent()") }}. Once
+dispatched, it doesn't do anything anymore.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> <strong>Do not use this method anymore, as it is deprecated.</strong></p>
+> **Note:** **Do not use this method anymore, as it is deprecated.**
+>
+> Rather than using the feature, instead use specific event constructors, like {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}.
+> The page on [Creating and triggering events](/en-US/docs/Web/Events/Creating_and_triggering_events) gives more information about the way to use those.
 
-  <p>Rather than using the feature, instead use specific event constructors, like {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}.
-	The page on <a href="/en-US/docs/Web/Events/Creating_and_triggering_events">Creating and triggering events</a> gives more information about the way to use those.</p>
-</div>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+event.initCustomEvent(type, canBubble, cancelable, detail);
+```
 
-<pre class="brush: js"><em>event</em>.initCustomEvent(<em>type</em>, <em>canBubble</em>, <em>cancelable</em>, <em>detail</em>);
-</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `type`
+  - : Is a {{domxref("DOMString")}} containing the name of the event.
+- _`canBubble`_
+  - : Is a boolean value indicating whether the event bubbles up through the DOM
+    or not.
+- `cancelable`
+  - : Is a boolean value indicating whether the event is cancelable.
+- _`detail`_
+  - : The data passed when initializing the event.
 
-<dl>
-  <dt><code><em>type</em></code></dt>
-  <dd>Is a {{domxref("DOMString")}} containing the name of the event.</dd>
-  <dt><em><code>canBubble</code></em></dt>
-  <dd>Is a boolean value indicating whether the event bubbles up through the DOM
-    or not.</dd>
-  <dt><code><em>cancelable</em></code></dt>
-  <dd>Is a boolean value indicating whether the event is cancelable.</dd>
-  <dt><em><code>detail</code></em></dt>
-  <dd>The data passed when initializing the event.</dd>
-</dl>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("CustomEvent")}}</li>
-  <li>The constructor to use instead of this deprecated method:
-    {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}.</li>
-</ul>
+- {{domxref("CustomEvent")}}
+- The constructor to use instead of this deprecated method:
+  {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}.

@@ -2,44 +2,41 @@
 title: USBConfiguration()
 slug: Web/API/USBConfiguration/USBConfiguration
 tags:
-- API
-- Constructor
-- Experimental
-- NeedsE
-- Reference
-- USB
-- USBConfiguration
-- WebUSB
-- WebUSB API
+  - API
+  - Constructor
+  - Experimental
+  - NeedsE
+  - Reference
+  - USB
+  - USBConfiguration
+  - WebUSB
+  - WebUSB API
 browser-compat: api.USBConfiguration.USBConfiguration
 ---
-<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("WebUSB API")}}</div>
+{{draft}}{{securecontext_header}}{{DefaultAPISidebar("WebUSB API")}}
 
-<p>The <strong><code>USBConfiguration()</code></strong> constructor
-  creates a new {{domxref("USBConfiguration")}} object which contains information about
-  the configuration on the provided USBDevice with the given configuration value.</p>
+The **`USBConfiguration()`** constructor
+creates a new {{domxref("USBConfiguration")}} object which contains information about
+the configuration on the provided USBDevice with the given configuration value.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>USBConfiguration</var> = new USBConfiguration(<var>device</var>, <var>configurationValue</var>)</pre>
+```js
+var USBConfiguration = new USBConfiguration(device, configurationValue)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>device</dt>
-  <dd>Specifies the {{domxref('USBDevice')}} you want to configure.</dd>
-  <dt>configurationValue</dt>
-  <dd>Specifies the <a
-      href="https://www.beyondlogic.org/usbnutshell/usb5.shtml#ConfigurationDescriptors">configuration
-      descriptor</a> you want to read. This is an unsigned integer in the range 0 to 255.
-  </dd>
-</dl>
+- device
+  - : Specifies the {{domxref('USBDevice')}} you want to configure.
+- configurationValue
+  - : Specifies the [configuration
+    descriptor](https://www.beyondlogic.org/usbnutshell/usb5.shtml#ConfigurationDescriptors) you want to read. This is an unsigned integer in the range 0 to 255.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

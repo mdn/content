@@ -2,37 +2,40 @@
 title: CSSGroupingRule.cssRules
 slug: Web/API/CSSGroupingRule/cssRules
 tags:
-- API
-- CSSOM
-- CSSGroupingRule
-- Property
-- Reference
+  - API
+  - CSSOM
+  - CSSGroupingRule
+  - Property
+  - Reference
 browser-compat: api.CSSGroupingRule.cssRules
 ---
-<p>{{ APIRef("CSSOM") }}</p>
+{{ APIRef("CSSOM") }}
 
-<p>The <strong><code>cssRules</code></strong> property of the
-  {{domxref("CSSGroupingRule")}} interface returns a {{domxref("CSSRuleList")}} containing
-  a collection of {{domxref("CSSRule")}} objects.</p>
+The **`cssRules`** property of the
+{{domxref("CSSGroupingRule")}} interface returns a {{domxref("CSSRuleList")}} containing
+a collection of {{domxref("CSSRule")}} objects.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let cssRules = cssGroupingRule.cssRules;</pre>
+```js
+let cssRules = cssGroupingRule.cssRules;
+```
 
+### Value
 
-<h3>Value</h3>
-<p>a {{domxref("CSSRuleList")}}.</p>
+a {{domxref("CSSRuleList")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
+```js
+let myRules = document.styleSheets[0].cssRules;
 console.log(myRules);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,55 +2,56 @@
 title: RTCRtpStreamStats.kind
 slug: Web/API/RTCRtpStreamStats/kind
 tags:
-- API
-- Audio
-- Media
-- Property
-- RTCRtpStreamStats
-- RTP
-- Reference
-- Statistics
-- Stats
-- Video
-- WebRTC
-- WebRTC API
-- kind
-- rtc
+  - API
+  - Audio
+  - Media
+  - Property
+  - RTCRtpStreamStats
+  - RTP
+  - Reference
+  - Statistics
+  - Stats
+  - Video
+  - WebRTC
+  - WebRTC API
+  - kind
+  - rtc
 browser-compat: api.RTCRtpStreamStats.kind
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <code><strong>kind</strong></code> property of the
-    {{domxref("RTCRtpStreamStats")}} dictionary is a string indicating whether the
-    described {{Glossary("RTP")}} stream contains audio or video media.</p>
+The **`kind`** property of the
+{{domxref("RTCRtpStreamStats")}} dictionary is a string indicating whether the
+described {{Glossary("RTP")}} stream contains audio or video media.
 
-<p>Its value
-  is always either <code>"audio"</code> or <code>"video"</code>.</p>
+Its value
+is always either `"audio"` or `"video"`.
 
-<p>This property was previously called <code>mediaType</code>. The name was changed in the
-  specification in February, 2018. See {{anch("Browser compatibility")}} below to
-  determine how this affects the browsers you're targeting.</p>
+This property was previously called `mediaType`. The name was changed in the
+specification in February, 2018. See {{anch("Browser compatibility")}} below to
+determine how this affects the browsers you're targeting.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>mediaKind</em> = <em>RTCRtpStreamStats</em>.kind;</pre>
+```js
+mediaKind = RTCRtpStreamStats.kind;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} whose value is <code>"audio"</code> if the track whose
-  statistics are given by the <code>RTCRtpStreamStats</code> object contains audio, or
-  <code>"video"</code> if the track contains video media.</p>
+A {{domxref("DOMString")}} whose value is `"audio"` if the track whose
+statistics are given by the `RTCRtpStreamStats` object contains audio, or
+`"video"` if the track contains video media.
 
-<p>This string will always be the same as the one provided by the associated
-  {{domxref("MediaStreamTrack")}} object's {{domxref("MediaStreamTrack.kind", "kind")}}
-  property. It will also match the statistics object's {{domxref("RTCCodecStats.codec")}}
-  property's media type.</p>
+This string will always be the same as the one provided by the associated
+{{domxref("MediaStreamTrack")}} object's {{domxref("MediaStreamTrack.kind", "kind")}}
+property. It will also match the statistics object's {{domxref("RTCCodecStats.codec")}}
+property's media type.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

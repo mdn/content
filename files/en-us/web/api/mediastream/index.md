@@ -10,116 +10,104 @@ tags:
   - WebRTC
 browser-compat: api.MediaStream
 ---
-<div>{{APIRef("Media Capture and Streams")}}</div>
+{{APIRef("Media Capture and Streams")}}
 
-<p>The <strong><code>MediaStream</code></strong> interface represents a stream of media content. A stream consists of several <strong>tracks</strong>, such as video or audio tracks. Each track is specified as an instance of {{domxref("MediaStreamTrack")}}.</p>
+The **`MediaStream`** interface represents a stream of media content. A stream consists of several **tracks**, such as video or audio tracks. Each track is specified as an instance of {{domxref("MediaStreamTrack")}}.
 
-<p>You can obtain a <code>MediaStream</code> object either by using the constructor or by calling functions such as {{domxref("MediaDevices.getUserMedia()")}}, {{domxref("MediaDevices.getDisplayMedia()")}}, or {{domxref("HTMLCanvasElement.captureStream()")}}.</p>
+You can obtain a `MediaStream` object either by using the constructor or by calling functions such as {{domxref("MediaDevices.getUserMedia()")}}, {{domxref("MediaDevices.getDisplayMedia()")}}, or {{domxref("HTMLCanvasElement.captureStream()")}}.
 
-<p>Some user agents subclass this interface to provide more precise information or functionality, like in {{domxref("CanvasCaptureMediaStreamTrack")}}.</p>
+Some user agents subclass this interface to provide more precise information or functionality, like in {{domxref("CanvasCaptureMediaStreamTrack")}}.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("MediaStream.MediaStream", "MediaStream()")}}</dt>
- <dd>Creates and returns a new MediaStream object. You can create an empty stream, a stream which is based upon an existing stream, or a stream that contains a specified list of tracks (specified as an array of {{domxref("MediaStreamTrack")}} objects).</dd>
-</dl>
+- {{domxref("MediaStream.MediaStream", "MediaStream()")}}
+  - : Creates and returns a new MediaStream object. You can create an empty stream, a stream which is based upon an existing stream, or a stream that contains a specified list of tracks (specified as an array of {{domxref("MediaStreamTrack")}} objects).
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface inherits properties from its parent, {{domxref("EventTarget")}}.</em></p>
+_This interface inherits properties from its parent, {{domxref("EventTarget")}}._
 
-<dl>
- <dt>{{domxref("MediaStream.active")}} {{readonlyinline}}</dt>
- <dd>A Boolean value that returns <code>true</code> if the <code>MediaStream</code> is active, or <code>false</code> otherwise.</dd>
- <dt>{{domxref("MediaStream.ended")}} {{readonlyInline}} {{deprecated_inline}}</dt>
- <dd>A Boolean value set to <code>true</code> if the end of the stream has been reached. This has been removed from the specification; you should instead check the value of {{domxref("MediaStreamTrack.readyState")}} to see if its value is <code>ended</code> for the track or tracks you want to ensure have finished playing.</dd>
-</dl>
+- {{domxref("MediaStream.active")}} {{readonlyinline}}
+  - : A Boolean value that returns `true` if the `MediaStream` is active, or `false` otherwise.
+- {{domxref("MediaStream.ended")}} {{readonlyInline}} {{deprecated_inline}}
+  - : A Boolean value set to `true` if the end of the stream has been reached. This has been removed from the specification; you should instead check the value of {{domxref("MediaStreamTrack.readyState")}} to see if its value is `ended` for the track or tracks you want to ensure have finished playing.
 
-<dl>
- <dt>{{domxref("MediaStream.id")}} {{readonlyInline}}</dt>
- <dd>A {{domxref("DOMString")}} containing 36 characters denoting a universally unique identifier (UUID) for the object.</dd>
-</dl>
+<!---->
 
-<h3 id="Event_handlers">Event handlers</h3>
+- {{domxref("MediaStream.id")}} {{readonlyInline}}
+  - : A {{domxref("DOMString")}} containing 36 characters denoting a universally unique identifier (UUID) for the object.
 
-<dl>
- <dt>{{domxref("MediaStream.onaddtrack")}}</dt>
- <dd>An <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> containing the action to perform when an {{event("addtrack")}} event is fired when a new {{domxref("MediaStreamTrack")}} object is added.</dd>
- <dt>{{domxref("MediaStream.onremovetrack")}}</dt>
- <dd>An <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> containing the action to perform when a {{event("removetrack")}} event is fired when a {{domxref("MediaStreamTrack")}} object is removed from it.</dd>
-</dl>
+### Event handlers
 
-<h2 id="Methods">Methods</h2>
+- {{domxref("MediaStream.onaddtrack")}}
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) containing the action to perform when an {{event("addtrack")}} event is fired when a new {{domxref("MediaStreamTrack")}} object is added.
+- {{domxref("MediaStream.onremovetrack")}}
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) containing the action to perform when a {{event("removetrack")}} event is fired when a {{domxref("MediaStreamTrack")}} object is removed from it.
 
-<p><em>This interface inherits methods from its parent, {{domxref("EventTarget")}}.</em></p>
+## Methods
 
-<dl>
- <dt>{{domxref("MediaStream.addTrack()")}}</dt>
- <dd>Stores a copy of the {{domxref("MediaStreamTrack")}} given as argument. If the track has already been added to the <code>MediaStream</code> object, nothing happens.</dd>
-</dl>
+_This interface inherits methods from its parent, {{domxref("EventTarget")}}._
 
-<dl>
- <dt>{{domxref("MediaStream.clone()")}}</dt>
- <dd>Returns a clone of the <code>MediaStream</code> object. The clone will, however, have a unique value for {{domxref("MediaStream.id", "id")}}.</dd>
-</dl>
+- {{domxref("MediaStream.addTrack()")}}
+  - : Stores a copy of the {{domxref("MediaStreamTrack")}} given as argument. If the track has already been added to the `MediaStream` object, nothing happens.
 
-<dl>
- <dt>{{domxref("MediaStream.getAudioTracks()")}}</dt>
- <dd>Returns a list of the {{domxref("MediaStreamTrack")}} objects stored in the <code>MediaStream</code> object that have their <code>kind</code> attribute set to <code>audio</code>. The order is not defined, and may not only vary from one browser to another, but also from one call to another.</dd>
-</dl>
+<!---->
 
-<dl>
- <dt>{{domxref("MediaStream.getTrackById()")}}</dt>
- <dd>Returns the track whose ID corresponds to the one given in parameters, <code>trackid</code>. If no parameter is given, or if no track with that ID does exist, it returns <code>null</code>. If several tracks have the same ID, it returns the first one.</dd>
- <dt>{{domxref("MediaStream.getTracks()")}}</dt>
- <dd>Returns a list of all {{domxref("MediaStreamTrack")}} objects stored in the <code>MediaStream</code> object, regardless of the value of the <code>kind</code> attribute. The order is not defined, and may not only vary from one browser to another, but also from one call to another.</dd>
-</dl>
+- {{domxref("MediaStream.clone()")}}
+  - : Returns a clone of the `MediaStream` object. The clone will, however, have a unique value for {{domxref("MediaStream.id", "id")}}.
 
-<dl>
- <dt>{{domxref("MediaStream.getVideoTracks()")}}</dt>
- <dd>Returns a list of the {{domxref("MediaStreamTrack")}} objects stored in the <code>MediaStream</code> object that have their <code>kind</code> attribute set to <code>"video"</code>. The order is not defined, and may not only vary from one browser to another, but also from one call to another.</dd>
-</dl>
+<!---->
 
-<dl>
- <dt>{{domxref("MediaStream.removeTrack()")}}</dt>
- <dd>Removes the {{domxref("MediaStreamTrack")}} given as argument. If the track is not part of the <code>MediaStream</code> object, nothing happens.</dd>
-</dl>
+- {{domxref("MediaStream.getAudioTracks()")}}
+  - : Returns a list of the {{domxref("MediaStreamTrack")}} objects stored in the `MediaStream` object that have their `kind` attribute set to `audio`. The order is not defined, and may not only vary from one browser to another, but also from one call to another.
 
-<h2 id="Events">Events</h2>
+<!---->
 
-<dl>
- <dt>{{domxref("MediaStream/addtrack_event", "addtrack")}}</dt>
- <dd>Fired when a new {{domxref("MediaStreamTrack")}} object is added.<br>
- Also available via the {{domxref("MediaStream/onaddtrack", "onaddtrack")}} property.</dd>
- <dt>{{domxref("MediaStream/removetrack_event", "removetrack")}}</dt>
- <dd>Fired when a {{domxref("MediaStreamTrack")}} object has been removed.<br>
- Also available via the {{domxref("MediaStream/onremovetrack", "onremovetrack")}} property.</dd>
-</dl>
+- {{domxref("MediaStream.getTrackById()")}}
+  - : Returns the track whose ID corresponds to the one given in parameters, `trackid`. If no parameter is given, or if no track with that ID does exist, it returns `null`. If several tracks have the same ID, it returns the first one.
+- {{domxref("MediaStream.getTracks()")}}
+  - : Returns a list of all {{domxref("MediaStreamTrack")}} objects stored in the `MediaStream` object, regardless of the value of the `kind` attribute. The order is not defined, and may not only vary from one browser to another, but also from one call to another.
 
-<dl>
- <dt>{{domxref("MediaStream/active_event", "active")}}</dt>
- <dd>Fired when the MediaStream is activated.</dd>
-</dl>
+<!---->
 
-<dl>
- <dt>{{domxref("MediaStream/inactive_event", "inactive")}}</dt>
- <dd>Fired when the MediaStream is inactivated.</dd>
-</dl>
+- {{domxref("MediaStream.getVideoTracks()")}}
+  - : Returns a list of the {{domxref("MediaStreamTrack")}} objects stored in the `MediaStream` object that have their `kind` attribute set to `"video"`. The order is not defined, and may not only vary from one browser to another, but also from one call to another.
 
-<h2 id="Specifications">Specifications</h2>
+<!---->
+
+- {{domxref("MediaStream.removeTrack()")}}
+  - : Removes the {{domxref("MediaStreamTrack")}} given as argument. If the track is not part of the `MediaStream` object, nothing happens.
+
+## Events
+
+- {{domxref("MediaStream/addtrack_event", "addtrack")}}
+  - : Fired when a new {{domxref("MediaStreamTrack")}} object is added.
+    Also available via the {{domxref("MediaStream/onaddtrack", "onaddtrack")}} property.
+- {{domxref("MediaStream/removetrack_event", "removetrack")}}
+  - : Fired when a {{domxref("MediaStreamTrack")}} object has been removed.
+    Also available via the {{domxref("MediaStream/onremovetrack", "onremovetrack")}} property.
+
+<!---->
+
+- {{domxref("MediaStream/active_event", "active")}}
+  - : Fired when the MediaStream is activated.
+
+<!---->
+
+- {{domxref("MediaStream/inactive_event", "inactive")}}
+  - : Fired when the MediaStream is inactivated.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API">Using the MediaStream Recording API</a></li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a></li>
- <li>{{domxref("MediaStreamTrack")}}</li>
-</ul>
+- [Using the MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
+- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+- [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
+- {{domxref("MediaStreamTrack")}}

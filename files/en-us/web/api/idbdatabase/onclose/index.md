@@ -2,57 +2,56 @@
 title: IDBDatabase.onclose
 slug: Web/API/IDBDatabase/onclose
 tags:
-- API
-- Event Handler
-- IDBDatabase
-- IndexedDB
-- Property
-- Reference
-- onclose
+  - API
+  - Event Handler
+  - IDBDatabase
+  - IndexedDB
+  - Property
+  - Reference
+  - onclose
 browser-compat: api.IDBDatabase.onclose
 ---
-<p>{{ APIRef("IndexedDB") }}</p>
+{{ APIRef("IndexedDB") }}
 
-<div>
-  <p>The <strong><code>onclose</code></strong> event handler of the
-    {{domxref("IDBDatabase")}} interface handles the {{event("close")}} event, which is
-    fired when the database is unexpectedly closed. This can happen, for example, when the
-    application is shut down or access to the disk the database is stored on is lost while
-    the database is open.</p>
+The **`onclose`** event handler of the
+{{domxref("IDBDatabase")}} interface handles the {{event("close")}} event, which is
+fired when the database is unexpectedly closed. This can happen, for example, when the
+application is shut down or access to the disk the database is stored on is lost while
+the database is open.
 
-  <p>The {{event("close")}} event is fired after all transactions have been aborted and
-    the connection has been closed.</p>
+The {{event("close")}} event is fired after all transactions have been aborted and
+the connection has been closed.
 
-  <p>{{AvailableInWorkers}}</p>
-</div>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>IDBDatabase</em>.onclose = <em>function</em>(event) { ... };</pre>
+```js
+IDBDatabase.onclose = function(event) { ... };
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A function which is called when the {{event("close")}} event is fired.</p>
+A function which is called when the {{event("close")}} event is fired.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">db.onclose = function(event) {
+```js
+db.onclose = function(event) {
   myAppShowAlert('The database "' + db.name + '" has unexpectedly closed.');
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
-  <li>{{domxref("IDBDatabase")}}</li>
-  <li><a href="/en-US/docs/Web/API/IDBDatabase/close_event">close</a> event</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- {{domxref("IDBDatabase")}}
+- [close](/en-US/docs/Web/API/IDBDatabase/close_event) event

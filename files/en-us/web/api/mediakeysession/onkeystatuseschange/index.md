@@ -3,22 +3,22 @@ title: MediaKeySession.onkeystatuseschange
 slug: Web/API/MediaKeySession/onkeystatuseschange
 browser-compat: api.MediaKeySession.onkeystatuseschange
 ---
-<p>{{APIRef("Encrypted Media Extensions")}}</p>
+{{APIRef("Encrypted Media Extensions")}}
 
-<p>The <strong><code>onkeystatuseschange</code></strong> property of the {{domxref("MediaKeySession")}} is an event handler, fired whenever a {{Event("keystatuschange")}} event ocurrs, denoting there has been a change in the keys or their statuses within a session.</p>
+The **`onkeystatuseschange`** property of the {{domxref("MediaKeySession")}} is an event handler, fired whenever a {{Event("keystatuschange")}} event ocurrs, denoting there has been a change in the keys or their statuses within a session.
 
-<p>This interface inherits from the {{domxref("ExtendableEvent")}} interface.</p>
+This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 
-<p>{{InheritanceDiagram(700, 60, 20)}}</p>
+{{InheritanceDiagram(700, 60, 20)}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre>MediaKeySession.onkeystatuseschange = function(keystatuschange) { ... }</pre>
+    MediaKeySession.onkeystatuseschange = function(keystatuschange) { ... }
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

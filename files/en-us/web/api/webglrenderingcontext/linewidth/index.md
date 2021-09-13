@@ -2,72 +2,70 @@
 title: WebGLRenderingContext.lineWidth()
 slug: Web/API/WebGLRenderingContext/lineWidth
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.lineWidth
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.lineWidth()</code></strong> method of the <a
-    href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> sets the line width of rasterized
-  lines.</p>
+The **`WebGLRenderingContext.lineWidth()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) sets the line width of rasterized
+lines.
 
-<div class="warning">
-  <p><strong>Warning:</strong> The webgl spec, based on the OpenGL ES 2.0/3.0 specs points out that the minimum and
-    maximum width for a line is implementation defined. The maximum minimum width is
-    allowed to be 1.0. The minimum maximum width is also allowed to be 1.0. Because of
-    these implementation defined limits it is not recommended to use line widths other
-    than 1.0 since there is no guarantee any user's browser will display any other width.
-  </p>
+> **Warning:** The webgl spec, based on the OpenGL ES 2.0/3.0 specs points out that the minimum and
+> maximum width for a line is implementation defined. The maximum minimum width is
+> allowed to be 1.0. The minimum maximum width is also allowed to be 1.0. Because of
+> these implementation defined limits it is not recommended to use line widths other
+> than 1.0 since there is no guarantee any user's browser will display any other width.
+>
+> As of January 2017 most implementations of WebGL only support a minimum of 1 and a
+> maximum of 1 as the technology they are based on has these same limits.
 
-  <p>As of January 2017 most implementations of WebGL only support a minimum of 1 and a
-    maximum of 1 as the technology they are based on has these same limits.</p>
-</div>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+void gl.lineWidth(width);
+```
 
-<pre class="brush: js">void <var>gl</var>.lineWidth(<var>width</var>);
-</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- width
+  - : A {{domxref("WebGL_API/Types", "GLfloat")}} specifying the width of rasterized lines. Default value: 1.
 
-<dl>
-  <dt>width</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLfloat")}} specifying the width of rasterized lines. Default value: 1.
-  </dd>
-</dl>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+None.
 
-<p>None.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+Setting the line width:
 
-<p>Setting the line width:</p>
+```js
+gl.lineWidth(5);
+```
 
-<pre class="brush: js">gl.lineWidth(5);</pre>
+Getting the line width:
 
-<p>Getting the line width:</p>
+```js
+gl.getParameter(gl.LINE_WIDTH);
+```
 
-<pre class="brush: js">gl.getParameter(gl.LINE_WIDTH);</pre>
+Getting the range of available widths. Returns a {{jsxref("Float32Array")}}.
 
-<p>Getting the range of available widths. Returns a {{jsxref("Float32Array")}}.</p>
+```js
+gl.getParameter(gl.ALIASED_LINE_WIDTH_RANGE);
+```
 
-<pre class="brush: js">gl.getParameter(gl.ALIASED_LINE_WIDTH_RANGE);</pre>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext")}}

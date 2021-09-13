@@ -8,89 +8,87 @@ tags:
   - Workers
   - basics
 ---
-<p>{{ServiceWorkerSidebar}}</p>
+{{ServiceWorkerSidebar}}
 
-<p>This article provides information on getting started with service workers, including basic architecture, registering a service worker, the install and activation process for a new service worker, updating your service worker, cache control and custom responses, all in the context of a simple app with offline functionality. </p>
+This article provides information on getting started with service workers, including basic architecture, registering a service worker, the install and activation process for a new service worker, updating your service worker, cache control and custom responses, all in the context of a simple app with offline functionality.
 
-<h2 id="The_premise_of_service_workers">The premise of service workers</h2>
+## The premise of service workers
 
-<p>One overriding problem that web users have suffered with for years is loss of connectivity. The best web app in the world will provide a terrible user experience if you can’t download it. There have been various attempts to create technologies to solve this problem, and some of the issues have been solved. But the overriding problem is that there still isn’t a good overall control mechanism for asset caching and custom network requests.<br>
- <br>
- The previous attempt — <a href="/en-US/docs/Web/HTML/Using_the_application_cache">AppCache</a> — seemed to be a good idea because it allowed you to specify assets to cache really easily. However, it made many assumptions about what you were trying to do and then broke horribly when your app didn’t follow those assumptions exactly. Read Jake Archibald's (unfortunately-titled but well-written) <a href="https://alistapart.com/article/application-cache-is-a-douchebag">Application Cache is a Douchebag</a> for more details.</p>
+One overriding problem that web users have suffered with for years is loss of connectivity. The best web app in the world will provide a terrible user experience if you can’t download it. There have been various attempts to create technologies to solve this problem, and some of the issues have been solved. But the overriding problem is that there still isn’t a good overall control mechanism for asset caching and custom network requests.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> From Firefox 84, AppCache has been removed ({{bug("1619673")}}). It is also planned for removal in Chomium 90, and is deprecated in Safari.</p>
-</div>
+The previous attempt — [AppCache](/en-US/docs/Web/HTML/Using_the_application_cache) — seemed to be a good idea because it allowed you to specify assets to cache really easily. However, it made many assumptions about what you were trying to do and then broke horribly when your app didn’t follow those assumptions exactly. Read Jake Archibald's (unfortunately-titled but well-written) [Application Cache is a Douchebag](https://alistapart.com/article/application-cache-is-a-douchebag) for more details.
 
-<p>Service workers should finally fix these issues. Service worker syntax is more complex than that of AppCache, but the trade off is that you can use JavaScript to control your AppCache-implied behaviors with a fine degree of granularity, allowing you to handle this problem and many more. Using a Service worker you can easily set an app up to use cached assets first, thus providing a default experience even when offline, before then getting more data from the network (commonly known as <a href="http://offlinefirst.org/">Offline First</a>). This is already available with native apps, which is one of the main reasons native apps are often chosen over web apps.</p>
+> **Note:** From Firefox 84, AppCache has been removed ({{bug("1619673")}}). It is also planned for removal in Chomium 90, and is deprecated in Safari.
 
-<h2 id="Setting_up_to_play_with_service_workers">Setting up to play with service workers</h2>
+Service workers should finally fix these issues. Service worker syntax is more complex than that of AppCache, but the trade off is that you can use JavaScript to control your AppCache-implied behaviors with a fine degree of granularity, allowing you to handle this problem and many more. Using a Service worker you can easily set an app up to use cached assets first, thus providing a default experience even when offline, before then getting more data from the network (commonly known as [Offline First](http://offlinefirst.org/)). This is already available with native apps, which is one of the main reasons native apps are often chosen over web apps.
 
-<p>These days, service workers are enabled by default in all modern browsers. To run code using service workers, you’ll need to serve your code via HTTPS — Service workers are restricted to running across HTTPS for security reasons. GitHub is therefore a good place to host experiments, as it supports HTTPS. In order to facilitate local development, <code>localhost</code> is considered a secure origin by browsers as well.</p>
+## Setting up to play with service workers
 
-<h2 id="Basic_architecture">Basic architecture</h2>
+These days, service workers are enabled by default in all modern browsers. To run code using service workers, you’ll need to serve your code via HTTPS — Service workers are restricted to running across HTTPS for security reasons. GitHub is therefore a good place to host experiments, as it supports HTTPS. In order to facilitate local development, `localhost` is considered a secure origin by browsers as well.
 
-<p>With service workers, the following steps are generally observed for basic set up:</p>
+## Basic architecture
 
-<ol>
- <li>The service worker URL is fetched and registered via {{domxref("serviceWorkerContainer.register()")}}.</li>
- <li>If successful, the service worker is executed in a {{domxref("ServiceWorkerGlobalScope") }}; this is basically a special kind of worker context, running off the main script execution thread, with no DOM access.</li>
- <li>The service worker is now ready to process events.</li>
- <li>Installation of the worker is attempted when service worker-controlled pages are accessed subsequently. An Install event is always the first one sent to a service worker (this can be used to start the process of populating an IndexedDB, and caching site assets). This is really the same kind of procedure as installing a native or Firefox OS app — making everything available for use offline.</li>
- <li>When the <code>oninstall</code> handler completes, the service worker is considered installed.</li>
- <li>Next is activation. When the service worker is installed, it then receives an activate event. The primary use of <code>onactivate</code> is for cleanup of resources used in previous versions of a Service worker script.</li>
- <li>The Service worker will now control pages, but only those opened after the <code>register()</code> is successful. i.e. a document starts life with or without a Service worker and maintains that for its lifetime. So documents will have to be reloaded to actually be controlled.</li>
-</ol>
+With service workers, the following steps are generally observed for basic set up:
 
-<p><img alt="" src="sw-lifecycle.png"></p>
+1.  The service worker URL is fetched and registered via {{domxref("serviceWorkerContainer.register()")}}.
+2.  If successful, the service worker is executed in a {{domxref("ServiceWorkerGlobalScope") }}; this is basically a special kind of worker context, running off the main script execution thread, with no DOM access.
+3.  The service worker is now ready to process events.
+4.  Installation of the worker is attempted when service worker-controlled pages are accessed subsequently. An Install event is always the first one sent to a service worker (this can be used to start the process of populating an IndexedDB, and caching site assets). This is really the same kind of procedure as installing a native or Firefox OS app — making everything available for use offline.
+5.  When the `oninstall` handler completes, the service worker is considered installed.
+6.  Next is activation. When the service worker is installed, it then receives an activate event. The primary use of `onactivate` is for cleanup of resources used in previous versions of a Service worker script.
+7.  The Service worker will now control pages, but only those opened after the `register()` is successful. i.e. a document starts life with or without a Service worker and maintains that for its lifetime. So documents will have to be reloaded to actually be controlled.
 
-<p>The below graphic shows a summary of the available service worker events:</p>
+![](sw-lifecycle.png)
 
-<p><img alt="install, activate, message, fetch, sync, push" src="sw-events.png"></p>
+The below graphic shows a summary of the available service worker events:
 
-<h3 id="Promises">Promises</h3>
+![install, activate, message, fetch, sync, push](sw-events.png)
 
-<p><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a> are a great mechanism for running async operations, with success dependant on one another. This is central to the way service workers work.<br>
- <br>
- Promises can do a variety of things, but all you need to know for now is that if something returns a promise, you can attach <code>.then()</code> to the end and include callbacks inside it for success cases, or you can insert <code>.catch()</code> on the end if you want to include a failure callback.</p>
+### Promises
 
-<p>Let’s compare a traditional synchronous callback structure to its asynchronous promise equivalent.</p>
+[Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) are a great mechanism for running async operations, with success dependant on one another. This is central to the way service workers work.
 
-<h4 id="sync">sync</h4>
+Promises can do a variety of things, but all you need to know for now is that if something returns a promise, you can attach `.then()` to the end and include callbacks inside it for success cases, or you can insert `.catch()` on the end if you want to include a failure callback.
 
-<pre class="brush: js">try {
+Let’s compare a traditional synchronous callback structure to its asynchronous promise equivalent.
+
+#### sync
+
+```js
+try {
   const value = myFunction();
   console.log(value);
 } catch(err) {
   console.log(err);
-}</pre>
+}
+```
 
-<h4 id="async">async</h4>
+#### async
 
-<pre class="brush: js">myFunction().then((value) =&gt; {
+```js
+myFunction().then((value) => {
   console.log(value);
-}).catch((err) =&gt; {
+}).catch((err) => {
   console.log(err);
-});</pre>
+});
+```
 
-<p>In the first example, we have to wait for <code>myFunction()</code> to run and return <code>value</code> before any more of the code can execute. In the second example, <code>myFunction()</code> returns a promise for <code>value</code>, then the rest of the code can carry on running. When the promise resolves, the code inside <code>then</code> will be run, asynchronously.<br>
- <br>
- Now for a real example — what if we wanted to load images dynamically, but we wanted to make sure the images were loaded before we tried to display them? This is a standard thing to do, but it can be a bit of a pain. We can use <code>.onload</code> to only display the image after it’s loaded, but what about events that start happening before we start listening to them? We could try to work around this using <code>.complete</code>, but it’s still not foolproof, and what about multiple images? And, ummm, it’s still synchronous, so blocks the main thread.<br>
- <br>
- Instead, we could build our own promise to handle this kind of case. (See our <a href="https://github.com/mdn/js-examples/tree/master/promises-test">Promises test</a> example for the source code, or <a href="https://mdn.github.io/js-examples/promises-test/">look at it running live</a>.)</p>
+In the first example, we have to wait for `myFunction()` to run and return `value` before any more of the code can execute. In the second example, `myFunction()` returns a promise for `value`, then the rest of the code can carry on running. When the promise resolves, the code inside `then` will be run, asynchronously.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> A real service worker implementation would use caching and onfetch rather than the XMLHttpRequest API. Those features are not used here so that you can focus on understanding Promises.</p>
-</div>
+Now for a real example — what if we wanted to load images dynamically, but we wanted to make sure the images were loaded before we tried to display them? This is a standard thing to do, but it can be a bit of a pain. We can use `.onload` to only display the image after it’s loaded, but what about events that start happening before we start listening to them? We could try to work around this using `.complete`, but it’s still not foolproof, and what about multiple images? And, ummm, it’s still synchronous, so blocks the main thread.
 
+Instead, we could build our own promise to handle this kind of case. (See our [Promises test](https://github.com/mdn/js-examples/tree/master/promises-test) example for the source code, or [look at it running live](https://mdn.github.io/js-examples/promises-test/).)
 
-<pre class="brush: js">const imgLoad = (url) =&gt; {
-  return new Promise((resolve, reject) =&gt; {
+> **Note:** A real service worker implementation would use caching and onfetch rather than the XMLHttpRequest API. Those features are not used here so that you can focus on understanding Promises.
+
+```js
+const imgLoad = (url) => {
+  return new Promise((resolve, reject) => {
     var request = new XMLHttpRequest();
     request.open('GET', url);
     request.responseType = 'blob';
 
-    request.onload = () =&gt; {
+    request.onload = () => {
       if (request.status == 200) {
         resolve(request.response);
       } else {
@@ -98,130 +96,119 @@ tags:
       }
     };
 
-    request.onerror = () =&gt; {
+    request.onerror = () => {
       reject(Error('There was a network error.'));
     };
 
     request.send();
   });
-}</pre>
+}
+```
 
-<p>We return a new promise using the <code>Promise()</code> constructor, which takes as an argument a callback function with <code>resolve</code> and <code>reject</code> parameters. Somewhere in the function, we need to define what happens for the promise to resolve successfully or be rejected — in this case return a 200 OK status or not — and then call <code>resolve</code> on success, or <code>reject</code> on failure. The rest of the contents of this function is fairly standard XHR stuff, so we won’t worry about that for now.</p>
+We return a new promise using the `Promise()` constructor, which takes as an argument a callback function with `resolve` and `reject` parameters. Somewhere in the function, we need to define what happens for the promise to resolve successfully or be rejected — in this case return a 200 OK status or not — and then call `resolve` on success, or `reject` on failure. The rest of the contents of this function is fairly standard XHR stuff, so we won’t worry about that for now.
 
-<p>When we come to call the <code>imgLoad()</code> function, we call it with the url to the image we want to load, as we might expect, but the rest of the code is a little different:</p>
+When we come to call the `imgLoad()` function, we call it with the url to the image we want to load, as we might expect, but the rest of the code is a little different:
 
-<pre class="brush: js">let body = document.querySelector('body');
+```js
+let body = document.querySelector('body');
 let myImage = new Image();
 
-imgLoad('myLittleVader.jpg').then((response) =&gt; {
+imgLoad('myLittleVader.jpg').then((response) => {
   var imageURL = window.URL.createObjectURL(response);
   myImage.src = imageURL;
   body.appendChild(myImage);
-}, (Error) =&gt; {
+}, (Error) => {
   console.log(Error);
-});</pre>
+});
+```
 
-<p>On to the end of the function call, we chain the promise <code>then()</code> method, which contains two functions — the first one is executed when the promise successfully resolves, and the second is called when the promise is rejected. In the resolved case, we display the image inside <code>myImage</code> and append it to the body (its argument is the <code>request.response</code> contained inside the promise’s <code>resolve</code> method); in the rejected case we return an error to the console.</p>
+On to the end of the function call, we chain the promise `then()` method, which contains two functions — the first one is executed when the promise successfully resolves, and the second is called when the promise is rejected. In the resolved case, we display the image inside `myImage` and append it to the body (its argument is the `request.response` contained inside the promise’s `resolve` method); in the rejected case we return an error to the console.
 
-<p>This all happens asynchronously.</p>
+This all happens asynchronously.
 
-<div class="note">
-<p><strong>Note:</strong> You can also chain promise calls together, for example:<br>
- <code>myPromise().then(success, failure).then(success).catch(failure);</code></p>
-</div>
+> **Note:** You can also chain promise calls together, for example:
+> `myPromise().then(success, failure).then(success).catch(failure);`
 
-<div class="note">
-<p><strong>Note:</strong> You can find a lot more out about promises by reading Jake Archibald’s excellent <a href="https://www.html5rocks.com/en/tutorials/es6/promises/">JavaScript Promises: there and back again</a>.</p>
-</div>
+> **Note:** You can find a lot more out about promises by reading Jake Archibald’s excellent [JavaScript Promises: there and back again](https://www.html5rocks.com/en/tutorials/es6/promises/).
 
-<h2 id="Service_workers_demo">Service workers demo</h2>
+## Service workers demo
 
-<p>To demonstrate just the very basics of registering and installing a service worker, we have created a simple demo called <a href="https://github.com/mdn/sw-test">sw-test</a>, which is a simple Star wars Lego image gallery. It uses a promise-powered function to read image data from a JSON object and load the images using Ajax, before displaying the images in a line down the page. We’ve kept things static and simple for now. It also registers, installs, and activates a service worker, and when more of the spec is supported by browsers it will cache all the files required so it will work offline!</p>
+To demonstrate just the very basics of registering and installing a service worker, we have created a simple demo called [sw-test](https://github.com/mdn/sw-test), which is a simple Star wars Lego image gallery. It uses a promise-powered function to read image data from a JSON object and load the images using Ajax, before displaying the images in a line down the page. We’ve kept things static and simple for now. It also registers, installs, and activates a service worker, and when more of the spec is supported by browsers it will cache all the files required so it will work offline!
 
-<p><img alt="" src="demo-screenshot.png"><br>
- <br>
- <br>
- You can see the <a href="https://github.com/mdn/sw-test/">source code on GitHub</a>, and <a href="https://mdn.github.io/sw-test/">view the example live</a>. The one bit we’ll call out here is the promise (see <a href="https://github.com/mdn/sw-test/blob/gh-pages/app.js#L22-L47">app.js lines 22-47</a>), which is a modified version of what you read about above, in the <a href="https://mdn.github.io/js-examples/promises-test/">Promises test demo</a>. It is different in the following ways:</p>
+![](demo-screenshot.png)
 
-<ol>
- <li>In the original, we only passed in a URL to an image we wanted to load. In this version, we pass in a JSON fragment containing all the data for a single image (see what they look like in <a href="https://github.com/mdn/sw-test/blob/gh-pages/image-list.js">image-list.js</a>). This is because all the data for each promise resolve has to be passed in with the promise, as it is asynchronous. If you just passed in the url, and then tried to access the other items in the JSON separately when the <code>for()</code> loop is being iterated through later on, it wouldn’t work, as the promise wouldn’t resolve at the same time as the iterations are being done (that is a synchronous process.)</li>
- <li>We actually resolve the promise with an array, as we want to make the loaded image blob available to the resolving function later on in the code, but also the image name, credits and alt text (see <a href="https://github.com/mdn/sw-test/blob/gh-pages/app.js#L31-L34">app.js lines 31-34</a>). Promises will only resolve with a single argument, so if you want to resolve with multiple values, you need to use an array/object.</li>
- <li>To access the resolved promise values, we then access this function as you’d then expect (see <a href="https://github.com/mdn/sw-test/blob/gh-pages/app.js#L60-L64">app.js lines 60-64</a>). This may seem a bit odd at first, but this is the way promises work.</li>
-</ol>
+You can see the [source code on GitHub](https://github.com/mdn/sw-test/), and [view the example live](https://mdn.github.io/sw-test/). The one bit we’ll call out here is the promise (see [app.js lines 22-47](https://github.com/mdn/sw-test/blob/gh-pages/app.js#L22-L47)), which is a modified version of what you read about above, in the [Promises test demo](https://mdn.github.io/js-examples/promises-test/). It is different in the following ways:
 
-<h2 id="Enter_service_workers">Enter service workers</h2>
+1.  In the original, we only passed in a URL to an image we wanted to load. In this version, we pass in a JSON fragment containing all the data for a single image (see what they look like in [image-list.js](https://github.com/mdn/sw-test/blob/gh-pages/image-list.js)). This is because all the data for each promise resolve has to be passed in with the promise, as it is asynchronous. If you just passed in the url, and then tried to access the other items in the JSON separately when the `for()` loop is being iterated through later on, it wouldn’t work, as the promise wouldn’t resolve at the same time as the iterations are being done (that is a synchronous process.)
+2.  We actually resolve the promise with an array, as we want to make the loaded image blob available to the resolving function later on in the code, but also the image name, credits and alt text (see [app.js lines 31-34](https://github.com/mdn/sw-test/blob/gh-pages/app.js#L31-L34)). Promises will only resolve with a single argument, so if you want to resolve with multiple values, you need to use an array/object.
+3.  To access the resolved promise values, we then access this function as you’d then expect (see [app.js lines 60-64](https://github.com/mdn/sw-test/blob/gh-pages/app.js#L60-L64)). This may seem a bit odd at first, but this is the way promises work.
 
-<p><strong>NOTE</strong> : We're using the <a href="http://es6-features.org/" rel="noopener">es6</a> <strong>arrow functions</strong> syntax in the Service Worker Implementation</p>
+## Enter service workers
 
-<p>Now let’s get on to service workers!</p>
+**NOTE** : We're using the [es6](http://es6-features.org/) **arrow functions** syntax in the Service Worker Implementation
 
-<h3 id="Registering_your_worker">Registering your worker</h3>
+Now let’s get on to service workers!
 
-<p>The first block of code in our app’s JavaScript file — <code>app.js</code> — is as follows. This is our entry point into using service workers.</p>
+### Registering your worker
 
-<pre class="brush: js">if ('serviceWorker' in navigator) {
+The first block of code in our app’s JavaScript file — `app.js` — is as follows. This is our entry point into using service workers.
+
+```js
+if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('./sw-test/sw.js', {scope: './sw-test/'})
-  .then((reg) =&gt; {
+  .then((reg) => {
     // registration worked
     console.log('Registration succeeded. Scope is ' + reg.scope);
-  }).catch((error) =&gt; {
+  }).catch((error) => {
     // registration failed
     console.log('Registration failed with ' + error);
   });
-}</pre>
+}
+```
 
-<ol>
- <li>The outer block performs a feature detection test to make sure service workers are supported before trying to register one.</li>
- <li>Next, we use the {{domxref("ServiceWorkerContainer.register()") }} function to register the service worker for this site, which is just a JavaScript file residing inside our app (note this is the file's URL relative to the origin, not the JS file that references it.)</li>
- <li>The <code>scope</code> parameter is optional, and can be used to specify the subset of your content that you want the service worker to control. In this case, we have specified '<code>/sw-test/'</code>, which means all content under the app's origin. If you leave it out, it will default to this value anyway, but we specified it here for illustration purposes.</li>
- <li>The <code>.then()</code> promise function is used to chain a success case onto our promise structure.  When the promise resolves successfully, the code inside it executes.</li>
- <li>Finally, we chain a <code>.catch()</code> function onto the end that will run if the promise is rejected.</li>
-</ol>
+1.  The outer block performs a feature detection test to make sure service workers are supported before trying to register one.
+2.  Next, we use the {{domxref("ServiceWorkerContainer.register()") }} function to register the service worker for this site, which is just a JavaScript file residing inside our app (note this is the file's URL relative to the origin, not the JS file that references it.)
+3.  The `scope` parameter is optional, and can be used to specify the subset of your content that you want the service worker to control. In this case, we have specified '`/sw-test/'`, which means all content under the app's origin. If you leave it out, it will default to this value anyway, but we specified it here for illustration purposes.
+4.  The `.then()` promise function is used to chain a success case onto our promise structure.  When the promise resolves successfully, the code inside it executes.
+5.  Finally, we chain a `.catch()` function onto the end that will run if the promise is rejected.
 
-<p>This registers a service worker, which runs in a worker context, and therefore has no DOM access. You then run code in the service worker outside of your normal pages to control their loading.<br>
- <br>
- A single service worker can control many pages. Each time a page within your scope is loaded, the service worker is installed against that page and operates on it. Bear in mind therefore that you need to be careful with global variables in the service worker script: each page doesn’t get its own unique worker.</p>
+This registers a service worker, which runs in a worker context, and therefore has no DOM access. You then run code in the service worker outside of your normal pages to control their loading.
 
-<div class="note">
-<p><strong>Note:</strong> Your service worker functions like a proxy server, allowing you to modify requests and responses, replace them with items from its own cache, and more.</p>
-</div>
+A single service worker can control many pages. Each time a page within your scope is loaded, the service worker is installed against that page and operates on it. Bear in mind therefore that you need to be careful with global variables in the service worker script: each page doesn’t get its own unique worker.
 
-<div class="note">
-<p><strong>Note:</strong> One great thing about service workers is that if you use feature detection like we’ve shown above, browsers that don’t support service workers can just use your app online in the normal expected fashion. Furthermore, if you use AppCache and SW on a page, browsers that don’t support SW but do support AppCache will use that, and browsers that support both will ignore the AppCache and let SW take over.</p>
-</div>
+> **Note:** Your service worker functions like a proxy server, allowing you to modify requests and responses, replace them with items from its own cache, and more.
 
-<h4 id="Why_is_my_service_worker_failing_to_register">Why is my service worker failing to register?</h4>
+> **Note:** One great thing about service workers is that if you use feature detection like we’ve shown above, browsers that don’t support service workers can just use your app online in the normal expected fashion. Furthermore, if you use AppCache and SW on a page, browsers that don’t support SW but do support AppCache will use that, and browsers that support both will ignore the AppCache and let SW take over.
 
-<p>This could be for the following reasons:</p>
+#### Why is my service worker failing to register?
 
-<ol>
- <li>You are not running your application through HTTPS.</li>
- <li>The path to your service worker file is not written correctly — it needs to be written relative to the origin, not your app’s root directory. In our example, the worker is at <code>https://mdn.github.io/sw-test/sw.js</code>, and the app’s root is <code>https://mdn.github.io/sw-test/</code>. But the path needs to be written as <code>/sw-test/sw.js</code>, not <code>/sw.js</code>.</li>
- <li>It is also not allowed to point to a service worker of a different origin than that of your app.</li>
-</ol>
+This could be for the following reasons:
 
-<p><img alt="" src="important-notes.png"></p>
+1.  You are not running your application through HTTPS.
+2.  The path to your service worker file is not written correctly — it needs to be written relative to the origin, not your app’s root directory. In our example, the worker is at `https://mdn.github.io/sw-test/sw.js`, and the app’s root is `https://mdn.github.io/sw-test/`. But the path needs to be written as `/sw-test/sw.js`, not `/sw.js`.
+3.  It is also not allowed to point to a service worker of a different origin than that of your app.
 
-<p>Also note:</p>
+![](important-notes.png)
 
-<ul>
- <li>The service worker will only catch requests from clients under the service worker's scope.</li>
- <li>The max scope for a service worker is the location of the worker.</li>
- <li>If your service worker is active on a client being served with the <code>Service-Worker-Allowed</code> header, you can specify a list of max scopes for that worker.</li>
- <li>In Firefox, Service Worker APIs are hidden and cannot be used when the user is in <a href="https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history">private browsing mode</a>.</li>
-</ul>
+Also note:
 
-<h3 id="Install_and_activate_populating_your_cache">Install and activate: populating your cache</h3>
+- The service worker will only catch requests from clients under the service worker's scope.
+- The max scope for a service worker is the location of the worker.
+- If your service worker is active on a client being served with the `Service-Worker-Allowed` header, you can specify a list of max scopes for that worker.
+- In Firefox, Service Worker APIs are hidden and cannot be used when the user is in [private browsing mode](https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history).
 
-<p>After your service worker is registered, the browser will attempt to install then activate the service worker for your page/site.<br>
- <br>
- The install event is fired when an install is successfully completed. The install event is generally used to populate your browser’s offline caching capabilities with the assets you need to run your app offline. To do this, we use Service Worker’s storage API — {{domxref("cache")}} — a global object on the service worker that allows us to store assets delivered by responses, and keyed by their requests. This API works in a similar way to the browser’s standard cache, but it is specific to your domain. It persists until you tell it not to — again, you have full control.</p>
+### Install and activate: populating your cache
 
-<p>Let’s start this section by looking at a code sample — this is the <a href="https://github.com/mdn/sw-test/blob/gh-pages/sw.js#L1-L18">first block you’ll find in our service worker</a>:</p>
+After your service worker is registered, the browser will attempt to install then activate the service worker for your page/site.
 
-<pre class="brush: js">self.addEventListener('install', (event) =&gt; {
+The install event is fired when an install is successfully completed. The install event is generally used to populate your browser’s offline caching capabilities with the assets you need to run your app offline. To do this, we use Service Worker’s storage API — {{domxref("cache")}} — a global object on the service worker that allows us to store assets delivered by responses, and keyed by their requests. This API works in a similar way to the browser’s standard cache, but it is specific to your domain. It persists until you tell it not to — again, you have full control.
+
+Let’s start this section by looking at a code sample — this is the [first block you’ll find in our service worker](https://github.com/mdn/sw-test/blob/gh-pages/sw.js#L1-L18):
+
+```js
+self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open('v1').then((cache) =&gt; {
+    caches.open('v1').then((cache) => {
       return cache.addAll([
         './sw-test/',
         './sw-test/index.html',
@@ -236,149 +223,157 @@ imgLoad('myLittleVader.jpg').then((response) =&gt; {
       ]);
     })
   );
-});</pre>
+});
+```
 
-<ol>
- <li>Here we add an <code>install</code> event listener to the service worker (hence <code>self</code>), and then chain a {{domxref("ExtendableEvent.waitUntil()") }} method onto the event — this ensures that the service worker will not install until the code inside <code>waitUntil()</code> has successfully occurred.</li>
- <li>Inside <code>waitUntil()</code> we use the <a href="/en-US/docs/Web/API/CacheStorage/open"><code>caches.open()</code></a> method to create a new cache called <code>v1</code>, which will be version 1 of our site resources cache. This returns a promise for a created cache; once resolved, we then call a function that calls <code>addAll()</code> on the created cache, which for its parameter takes an array of origin-relative URLs to all the resources you want to cache.</li>
- <li>If the promise is rejected, the install fails, and the worker won’t do anything. This is ok, as you can fix your code and then try again the next time registration occurs.</li>
- <li>After a successful installation, the service worker activates. This doesn’t have much of a distinct use the first time your service worker is installed/activated, but it means more when the service worker is updated (see the {{anch("Updating your service worker") }} section later on.)</li>
-</ol>
+1.  Here we add an `install` event listener to the service worker (hence `self`), and then chain a {{domxref("ExtendableEvent.waitUntil()") }} method onto the event — this ensures that the service worker will not install until the code inside `waitUntil()` has successfully occurred.
+2.  Inside `waitUntil()` we use the [`caches.open()`](/en-US/docs/Web/API/CacheStorage/open) method to create a new cache called `v1`, which will be version 1 of our site resources cache. This returns a promise for a created cache; once resolved, we then call a function that calls `addAll()` on the created cache, which for its parameter takes an array of origin-relative URLs to all the resources you want to cache.
+3.  If the promise is rejected, the install fails, and the worker won’t do anything. This is ok, as you can fix your code and then try again the next time registration occurs.
+4.  After a successful installation, the service worker activates. This doesn’t have much of a distinct use the first time your service worker is installed/activated, but it means more when the service worker is updated (see the {{anch("Updating your service worker") }} section later on.)
 
-<div class="note">
-<p><strong>Note:</strong> <a href="/en-US/docs/Web/API/Web_Storage_API">localStorage</a> works in a similar way to service worker cache, but it is synchronous, so not allowed in service workers.</p>
-</div>
+> **Note:** [localStorage](/en-US/docs/Web/API/Web_Storage_API) works in a similar way to service worker cache, but it is synchronous, so not allowed in service workers.
 
-<div class="note">
-<p><strong>Note:</strong> <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a> can be used inside a service worker for data storage if you require it.</p>
-</div>
+> **Note:** [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) can be used inside a service worker for data storage if you require it.
 
-<h3 id="Custom_responses_to_requests">Custom responses to requests</h3>
+### Custom responses to requests
 
-<p>Now you’ve got your site assets cached, you need to tell service workers to do something with the cached content. This is easily done with the <code>fetch</code> event.</p>
+Now you’ve got your site assets cached, you need to tell service workers to do something with the cached content. This is easily done with the `fetch` event.
 
-<p><img alt="" src="sw-fetch.png"></p>
+![](sw-fetch.png)
 
-<p>A <code>fetch</code> event fires every time any resource controlled by a service worker is fetched, which includes the documents inside the specified scope, and any resources referenced in those documents (for example if <code>index.html</code> makes a cross origin request to embed an image, that still goes through its service worker.)</p>
+A `fetch` event fires every time any resource controlled by a service worker is fetched, which includes the documents inside the specified scope, and any resources referenced in those documents (for example if `index.html` makes a cross origin request to embed an image, that still goes through its service worker.)
 
-<p>You can attach a <code>fetch</code> event listener to the service worker, then call the <code>respondWith()</code> method on the event to hijack our HTTP responses and update them with your own magic.</p>
+You can attach a `fetch` event listener to the service worker, then call the `respondWith()` method on the event to hijack our HTTP responses and update them with your own magic.
 
-<pre class="brush: js">self.addEventListener('fetch', (event) =&gt; {
+```js
+self.addEventListener('fetch', (event) => {
   event.respondWith(
     // magic goes here
   );
-});</pre>
+});
+```
 
-<p>We could start by responding with the resource whose url matches that of the network request, in each case:</p>
+We could start by responding with the resource whose url matches that of the network request, in each case:
 
-<pre class="brush: js">self.addEventListener('fetch', (event) =&gt; {
+```js
+self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request)
   );
-});</pre>
+});
+```
 
-<p><code>caches.match(event.request)</code> allows us to match each resource requested from the network with the equivalent resource available in the cache, if there is a matching one available. The matching is done via URL and various headers, just like with normal HTTP requests.</p>
+`caches.match(event.request)` allows us to match each resource requested from the network with the equivalent resource available in the cache, if there is a matching one available. The matching is done via URL and various headers, just like with normal HTTP requests.
 
-<p>Let’s look at a few other options we have when defining our magic (see our <a href="/en-US/docs/Web/API/Fetch_API">Fetch API documentation</a> for more information about {{domxref("Request")}} and {{domxref("Response")}} objects.)</p>
+Let’s look at a few other options we have when defining our magic (see our [Fetch API documentation](/en-US/docs/Web/API/Fetch_API) for more information about {{domxref("Request")}} and {{domxref("Response")}} objects.)
 
-<ol>
- <li>
-  <p>The <code>{{domxref("Response.Response","Response()")}}</code> constructor allows you to create a custom response. In this case, we are just returning a simple text string:</p>
+1.  The `{{domxref("Response.Response","Response()")}}` constructor allows you to create a custom response. In this case, we are just returning a simple text string:
 
-  <pre class="brush: js">new Response('Hello from your friendly neighborhood service worker!');</pre>
- </li>
- <li>
-  <p>This more complex <code>Response</code> below shows that you can optionally pass a set of headers in with your response, emulating standard HTTP response headers. Here we are just telling the browser what the content type of our synthetic response is:</p>
+    ```js
+    new Response('Hello from your friendly neighborhood service worker!');
+    ```
 
-  <pre class="brush: js">new Response('&lt;p&gt;Hello from your friendly neighborhood service worker!&lt;/p&gt;', {
-  headers: { 'Content-Type': 'text/html' }
-});</pre>
- </li>
- <li>
-  <p>If a match wasn’t found in the cache, you could tell the browser to {{domxref("fetch()")}} the default network request for that resource, to get the new resource from the network if it is available:</p>
+2.  This more complex `Response` below shows that you can optionally pass a set of headers in with your response, emulating standard HTTP response headers. Here we are just telling the browser what the content type of our synthetic response is:
 
-  <pre class="brush: js">fetch(event.request);</pre>
- </li>
- <li>
-  <p>If a match wasn’t found in the cache, and the network isn’t available, you could just match the request with some kind of default fallback page as a response using {{domxref("CacheStorage.match","match()")}}, like this:</p>
+    ```js
+    new Response('<p>Hello from your friendly neighborhood service worker!</p>', {
+      headers: { 'Content-Type': 'text/html' }
+    });
+    ```
 
-  <pre class="brush: js">caches.match('./fallback.html');</pre>
- </li>
- <li>
-  <p>You can retrieve a lot of information about each request by calling parameters of the {{domxref("Request")}} object returned by the {{domxref("FetchEvent")}}:</p>
+3.  If a match wasn’t found in the cache, you could tell the browser to {{domxref("fetch()")}} the default network request for that resource, to get the new resource from the network if it is available:
 
-  <pre class="brush: js">event.request.url
-event.request.method
-event.request.headers
-event.request.body</pre>
- </li>
-</ol>
+    ```js
+    fetch(event.request);
+    ```
 
-<h2 id="Recovering_failed_requests">Recovering failed requests</h2>
+4.  If a match wasn’t found in the cache, and the network isn’t available, you could just match the request with some kind of default fallback page as a response using {{domxref("CacheStorage.match","match()")}}, like this:
 
-<p>So <code>caches.match(event.request)</code> is great when there is a match in the service worker cache, but what about cases when there isn’t a match? If we didn’t provide any kind of failure handling, our promise would resolve with <code>undefined</code> and we wouldn't get anything returned.</p>
+    ```js
+    caches.match('./fallback.html');
+    ```
 
-<p>Fortunately, service workers’ promise-based structure makes it trivial to provide further options towards success. We could do this:</p>
+5.  You can retrieve a lot of information about each request by calling parameters of the {{domxref("Request")}} object returned by the {{domxref("FetchEvent")}}:
 
-<pre class="brush: js">self.addEventListener('fetch', (event) =&gt; {
+    ```js
+    event.request.url
+    event.request.method
+    event.request.headers
+    event.request.body
+    ```
+
+## Recovering failed requests
+
+So `caches.match(event.request)` is great when there is a match in the service worker cache, but what about cases when there isn’t a match? If we didn’t provide any kind of failure handling, our promise would resolve with `undefined` and we wouldn't get anything returned.
+
+Fortunately, service workers’ promise-based structure makes it trivial to provide further options towards success. We could do this:
+
+```js
+self.addEventListener('fetch', (event) => {
   event.respondWith(
-    caches.match(event.request).then((response) =&gt; {
+    caches.match(event.request).then((response) => {
       return response || fetch(event.request);
     })
   );
-});</pre>
+});
+```
 
-<p>If the resources aren't in the cache, they are requested from the network.</p>
+If the resources aren't in the cache, they are requested from the network.
 
-<p>If we were being really clever, we would not only request the resource from the network; we would also save it into the cache so that later requests for that resource could be retrieved offline too! This would mean that if extra images were added to the Star Wars gallery, our app could automatically grab them and cache them. The following would do the trick:</p>
+If we were being really clever, we would not only request the resource from the network; we would also save it into the cache so that later requests for that resource could be retrieved offline too! This would mean that if extra images were added to the Star Wars gallery, our app could automatically grab them and cache them. The following would do the trick:
 
-<pre class="brush: js">self.addEventListener('fetch', (event) =&gt; {
+```js
+self.addEventListener('fetch', (event) => {
   event.respondWith(
-    caches.match(event.request).then((resp) =&gt; {
-      return resp || fetch(event.request).then((response) =&gt; {
-        return caches.open('v1').then((cache) =&gt; {
+    caches.match(event.request).then((resp) => {
+      return resp || fetch(event.request).then((response) => {
+        return caches.open('v1').then((cache) => {
           cache.put(event.request, response.clone());
           return response;
         });
       });
     })
   );
-});</pre>
+});
+```
 
-<p>Here we return the default network request with <code>return fetch(event.request)</code>, which returns a promise. When this promise is resolved, we respond by running a function that grabs our cache using <code>caches.open('v1')</code>; this also returns a promise. When that promise resolves, <code>cache.put()</code> is used to add the resource to the cache. The resource is grabbed from <code>event.request</code>, and the response is then cloned with <code>response.clone()</code> and added to the cache. The clone is put in the cache, and the original response is returned to the browser to be given to the page that called it.</p>
+Here we return the default network request with `return fetch(event.request)`, which returns a promise. When this promise is resolved, we respond by running a function that grabs our cache using `caches.open('v1')`; this also returns a promise. When that promise resolves, `cache.put()` is used to add the resource to the cache. The resource is grabbed from `event.request`, and the response is then cloned with `response.clone()` and added to the cache. The clone is put in the cache, and the original response is returned to the browser to be given to the page that called it.
 
-<p>Cloning the response is necessary because request and response streams can only be read once.  In order to return the response to the browser and put it in the cache we have to clone it. So the original gets returned to the browser and the clone gets sent to the cache.  They are each read once.</p>
+Cloning the response is necessary because request and response streams can only be read once.  In order to return the response to the browser and put it in the cache we have to clone it. So the original gets returned to the browser and the clone gets sent to the cache.  They are each read once.
 
-<p>The only trouble we have now is that if the request doesn’t match anything in the cache, and the network is not available, our request will still fail. Let’s provide a default fallback so that whatever happens, the user will at least get something:</p>
+The only trouble we have now is that if the request doesn’t match anything in the cache, and the network is not available, our request will still fail. Let’s provide a default fallback so that whatever happens, the user will at least get something:
 
-<pre class="brush: js">self.addEventListener('fetch', (event) =&gt; {
+```js
+self.addEventListener('fetch', (event) => {
   event.respondWith(
-    caches.match(event.request).then((resp) =&gt; {
-      return resp || fetch(event.request).then((response) =&gt; {
+    caches.match(event.request).then((resp) => {
+      return resp || fetch(event.request).then((response) => {
         let responseClone = response.clone();
-        caches.open('v1').then((cache) =&gt; {
+        caches.open('v1').then((cache) => {
           cache.put(event.request, responseClone);
         });
 
         return response;
-      }).catch(() =&gt; {
+      }).catch(() => {
         return caches.match('./sw-test/gallery/myLittleVader.jpg');
       })
     });
   );
-});</pre>
+});
+```
 
-<p>We have opted for this fallback image because the only updates that are likely to fail are new images, as everything else is depended on for installation in the <code>install</code> event listener we saw earlier.</p>
+We have opted for this fallback image because the only updates that are likely to fail are new images, as everything else is depended on for installation in the `install` event listener we saw earlier.
 
-<h2 id="Updating_your_service_worker">Updating your service worker</h2>
+## Updating your service worker
 
-<p>If your service worker has previously been installed, but then a new version of the worker is available on refresh or page load, the new version is installed in the background, but not yet activated. It is only activated when there are no longer any pages loaded that are still using the old service worker. As soon as there are no more such pages still loaded, the new service worker activates.</p>
+If your service worker has previously been installed, but then a new version of the worker is available on refresh or page load, the new version is installed in the background, but not yet activated. It is only activated when there are no longer any pages loaded that are still using the old service worker. As soon as there are no more such pages still loaded, the new service worker activates.
 
-<p>You’ll want to update your <code>install</code> event listener in the new service worker to something like this (notice the new version number):</p>
+You’ll want to update your `install` event listener in the new service worker to something like this (notice the new version number):
 
-<pre class="brush: js">self.addEventListener('install', (event) =&gt; {
+```js
+self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open('v2').then((cache) =&gt; {
+    caches.open('v2').then((cache) => {
       return cache.addAll([
         './sw-test/',
         './sw-test/index.html',
@@ -392,55 +387,52 @@ event.request.body</pre>
       ]);
     })
   );
-});</pre>
+});
+```
 
-<p>While this happens, the previous version is still responsible for fetches. The new version is installing in the background. We are calling the new cache <code>v2</code>, so the previous <code>v1</code> cache isn't disturbed.</p>
+While this happens, the previous version is still responsible for fetches. The new version is installing in the background. We are calling the new cache `v2`, so the previous `v1` cache isn't disturbed.
 
-<p>When no pages are using the current version, the new worker activates and becomes responsible for fetches.</p>
+When no pages are using the current version, the new worker activates and becomes responsible for fetches.
 
-<h3 id="Deleting_old_caches">Deleting old caches</h3>
+### Deleting old caches
 
-<p>You also get an <code>activate</code> event. This is a generally used to do stuff that would have broken the previous version while it was still running, for example getting rid of old caches. This is also useful for removing data that is no longer needed to avoid filling up too much disk space — each browser has a hard limit on the amount of cache storage that a given service worker can use. The browser does its best to manage disk space, but it may delete the Cache storage for an origin.  The browser will generally delete all of the data for an origin or none of the data for an origin.</p>
+You also get an `activate` event. This is a generally used to do stuff that would have broken the previous version while it was still running, for example getting rid of old caches. This is also useful for removing data that is no longer needed to avoid filling up too much disk space — each browser has a hard limit on the amount of cache storage that a given service worker can use. The browser does its best to manage disk space, but it may delete the Cache storage for an origin.  The browser will generally delete all of the data for an origin or none of the data for an origin.
 
-<p>Promises passed into <code>waitUntil()</code> will block other events until completion, so you can rest assured that your clean-up operation will have completed by the time you get your first <code>fetch</code> event on the new service worker.</p>
+Promises passed into `waitUntil()` will block other events until completion, so you can rest assured that your clean-up operation will have completed by the time you get your first `fetch` event on the new service worker.
 
-<pre class="brush: js">self.addEventListener('activate', (event) =&gt; {
+```js
+self.addEventListener('activate', (event) => {
   var cacheKeeplist = ['v2'];
 
   event.waitUntil(
-    caches.keys().then((keyList) =&gt; {
-      return Promise.all(keyList.map((key) =&gt; {
+    caches.keys().then((keyList) => {
+      return Promise.all(keyList.map((key) => {
         if (cacheKeeplist.indexOf(key) === -1) {
           return caches.delete(key);
         }
       }));
     })
   );
-});</pre>
+});
+```
 
-<h2 id="Developer_tools">Developer tools</h2>
+## Developer tools
 
-<p>Chrome has <code>chrome://inspect/#service-workers</code>, which shows current service worker activity and storage on a device, and <code>chrome://serviceworker-internals</code>, which shows more detail and allows you to start/stop/debug the worker process. In the future they will have throttling/offline modes to simulate bad or non-existent connections, which will be a really good thing.</p>
+Chrome has `chrome://inspect/#service-workers`, which shows current service worker activity and storage on a device, and `chrome://serviceworker-internals`, which shows more detail and allows you to start/stop/debug the worker process. In the future they will have throttling/offline modes to simulate bad or non-existent connections, which will be a really good thing.
 
-<p>Firefox has also started to implement some useful tools related to service workers:</p>
+Firefox has also started to implement some useful tools related to service workers:
 
-<ul>
- <li>You can navigate to <code><a href="/en-US/docs/Tools/about:debugging">about:debugging</a></code> to see what SWs are registered and update/remove them.</li>
- <li>When testing you can get around the HTTPS restriction by checking the "Enable Service Workers over HTTP (when toolbox is open)" option in the <a href="/en-US/docs/Tools/Settings">Firefox Developer Tools settings</a>.</li>
- <li>The "Forget" button, available in Firefox's customization options, can be used to clear service workers and their caches ({{bug(1252998)}}).</li>
-</ul>
+- You can navigate to [`about:debugging`](/en-US/docs/Tools/about:debugging) to see what SWs are registered and update/remove them.
+- When testing you can get around the HTTPS restriction by checking the "Enable Service Workers over HTTP (when toolbox is open)" option in the [Firefox Developer Tools settings](/en-US/docs/Tools/Settings).
+- The "Forget" button, available in Firefox's customization options, can be used to clear service workers and their caches ({{bug(1252998)}}).
 
-<div class="note">
-<p><strong>Note:</strong> You may serve your app from <code>http://localhost</code> (e.g. using <code>me@localhost:/my/app$ <strong>python -m SimpleHTTPServer</strong></code>) for local development. See <a href="https://www.w3.org/TR/service-workers/#security-considerations">Security considerations</a></p>
-</div>
+> **Note:** You may serve your app from `http://localhost` (e.g. using `me@localhost:/my/app$ python -m SimpleHTTPServer`) for local development. See [Security considerations](https://www.w3.org/TR/service-workers/#security-considerations)
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="http://blog.88mph.io/2017/07/28/understanding-service-workers/">Understanding Service Workers</a></li>
- <li><a href="https://serviceworke.rs/">The Service Worker Cookbook</a></li>
- <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
- <li>Download the <a href="sw101.png">Service Workers 101 cheatsheet</a>.</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a></li>
- <li><a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web workers</a></li>
-</ul>
+- [Understanding Service Workers](http://blog.88mph.io/2017/07/28/understanding-service-workers/)
+- [The Service Worker Cookbook](https://serviceworke.rs/)
+- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- Download the [Service Workers 101 cheatsheet](sw101.png).
+- [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+- [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

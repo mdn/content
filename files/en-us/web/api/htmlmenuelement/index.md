@@ -10,58 +10,47 @@ tags:
   - Reference
 browser-compat: api.HTMLMenuElement
 ---
-<p>{{APIRef("HTML DOM")}}{{SeeCompatTable}}</p>
+{{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
-<p>The <strong><code>HTMLMenuElement</code></strong> interface provides special properties (beyond those defined on the regular {{DOMxRef("HTMLElement")}} interface it also has available to it by inheritance) for manipulating {{HTMLElement("menu")}} elements.</p>
+The **`HTMLMenuElement`** interface provides special properties (beyond those defined on the regular {{DOMxRef("HTMLElement")}} interface it also has available to it by inheritance) for manipulating {{HTMLElement("menu")}} elements.
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Constructor">Constructor</h2>
-<dl>
-  <dt>{{DOMxRef("HTMLMenuElement.HTMLMenuElement", "HTMLMenuElement()")}}</dt>
-  <dd>Returns a newly constructed <code>HTMLMenuElement</code>.</dd>
-</dl>
+## Constructor
 
-<h2 id="Properties">Properties</h2>
+- {{DOMxRef("HTMLMenuElement.HTMLMenuElement", "HTMLMenuElement()")}}
+  - : Returns a newly constructed `HTMLMenuElement`.
 
-<p><em>Inherits properties from its parent, {{domxref("HTMLElement")}}, and its ancestors.</em></p>
-<dl>
-  <dt><code>compact</code> {{deprecated_inline}}</dt>
-  <dd>
-    A Boolean value determining if the menu displays in a compact way.
-  </dd>
-  <dt><code>type</code> {{deprecated_inline}}</dt>
-  <dd>
-    Returns <code>context</code> if the menu is a context menu.
+## Properties
+
+_Inherits properties from its parent, {{domxref("HTMLElement")}}, and its ancestors._
+
+- `compact` {{deprecated_inline}}
+  - : A Boolean value determining if the menu displays in a compact way.
+- `type` {{deprecated_inline}}
+  - : Returns `context` if the menu is a context menu.
     This use of the {{HTMLElement("menu")}} element has never been implemented widely
     and is now deprecated.
-  </dd>
-  <dt><code>label</code> {{deprecated_inline}}</dt>
-  <dd>
-    A string associating the menu with a name,
+- `label` {{deprecated_inline}}
+  - : A string associating the menu with a name,
     displayed when the menu is used as a context menu.
     This use of the {{HTMLElement("menu")}} element has never been implemented widely
     and is now deprecated.
-  </dd>
 
-</dl>
+## Methods
 
-<h2 id="Methods">Methods</h2>
+_Inherits methods from its parent, {{domxref("HTMLElement")}}, and its ancestors._
 
-<p><em>Inherits methods from its parent, {{domxref("HTMLElement")}}, and its ancestors.</em></p>
+_`HTMLMenuElement` doesn't implement specific methods._
 
-<p><em><code>HTMLMenuElement</code> doesn't implement specific methods.</em></p>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{DOMxRef("HTMLMenuItemElement")}}</li>
-</ul>
+- {{DOMxRef("HTMLMenuItemElement")}}

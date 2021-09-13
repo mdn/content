@@ -10,58 +10,52 @@ tags:
   - clearInterval
 browser-compat: api.clearInterval
 ---
-<div>
-  <div>{{APIRef("HTML DOM")}}</div>
-</div>
+{{APIRef("HTML DOM")}}
 
-<p>The global <strong><code>clearInterval()</code></strong> method cancels a timed, repeating action which
-  was previously established by a call to {{domxref("setInterval", "setInterval()")}}.</p>
+The global **`clearInterval()`** method cancels a timed, repeating action which
+was previously established by a call to {{domxref("setInterval", "setInterval()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">clearInterval(<var>intervalID</var>)
-</pre>
+```js
+clearInterval(intervalID)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>intervalID</code></dt>
-  <dd>The identifier of the repeated action you want to cancel. This ID was returned by
-    the corresponding call to <code>setInterval()</code>.</dd>
-</dl>
+- `intervalID`
+  - : The identifier of the repeated action you want to cancel. This ID was returned by
+    the corresponding call to `setInterval()`.
 
-<p>It's worth noting that the pool of IDs used by
-  {{domxref("setInterval", "setInterval()")}} and
-  {{domxref("setTimeout", "setTimeout()")}} are shared, which
-  means you can technically use <code>clearInterval()</code> and
-  {{domxref("clearTimeout", "clearTimeout()")}} interchangeably.
-  However, for clarity, you should avoid doing so.</p>
+It's worth noting that the pool of IDs used by
+{{domxref("setInterval", "setInterval()")}} and
+{{domxref("setTimeout", "setTimeout()")}} are shared, which
+means you can technically use `clearInterval()` and
+{{domxref("clearTimeout", "clearTimeout()")}} interchangeably.
+However, for clarity, you should avoid doing so.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{jsxref("undefined")}}</p>
+{{jsxref("undefined")}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See the <a
-    href="/en-US/docs/Web/API/setInterval#Examples"><code>setInterval()</code>
-    examples</a>.</p>
+See the [`setInterval()`
+examples](/en-US/docs/Web/API/setInterval#Examples).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/JavaScript/Timers">JavaScript timers</a></li>
-  <li>{{domxref("setTimeout")}}</li>
-  <li>{{domxref("setInterval")}}</li>
-  <li>{{domxref("clearTimeout")}}</li>
-  <li>{{domxref("Window.requestAnimationFrame")}}</li>
-  <li><a href="/en-US/docs/JavaScript/Timers/Daemons"><em>Daemons</em> management</a></li>
-</ul>
+- [JavaScript timers](/en-US/docs/JavaScript/Timers)
+- {{domxref("setTimeout")}}
+- {{domxref("setInterval")}}
+- {{domxref("clearTimeout")}}
+- {{domxref("Window.requestAnimationFrame")}}
+- [_Daemons_ management](/en-US/docs/JavaScript/Timers/Daemons)

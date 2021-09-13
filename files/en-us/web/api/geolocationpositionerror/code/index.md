@@ -10,20 +10,21 @@ tags:
   - Secure context
 browser-compat: api.GeolocationPositionError.code
 ---
-<div>{{securecontext_header}}{{APIRef("Geolocation API")}}</div>
+{{securecontext_header}}{{APIRef("Geolocation API")}}
 
-<p>The <code><strong>GeolocationPositionError.code</strong></code> read-only property is
-  an <code>unsigned short</code> representing the error code.</p>
+The **`GeolocationPositionError.code`** read-only property is
+an `unsigned short` representing the error code.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>let typeErr</var> = <var>geolocationPositionErrorInstance</var>.code
-</pre>
+```js
+let typeErr = geolocationPositionErrorInstance.code
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An <code>unsigned short</code> representing the error code. The following values are
-  possible:</p>
+An `unsigned short` representing the error code. The following values are
+possible:
 
 <table class="no-markdown">
   <thead>
@@ -37,36 +38,40 @@ browser-compat: api.GeolocationPositionError.code
     <tr>
       <td><code>1</code></td>
       <td><code>PERMISSION_DENIED</code></td>
-      <td>The acquisition of the geolocation information failed because the page didn't
-        have the permission to do it.</td>
+      <td>
+        The acquisition of the geolocation information failed because the page
+        didn't have the permission to do it.
+      </td>
     </tr>
     <tr>
       <td><code>2</code></td>
       <td><code>POSITION_UNAVAILABLE</code></td>
-      <td>The acquisition of the geolocation failed because one or several internal
-        sources of position returned an internal error.</td>
+      <td>
+        The acquisition of the geolocation failed because one or several
+        internal sources of position returned an internal error.
+      </td>
     </tr>
     <tr>
       <td><code>3</code></td>
       <td><code>TIMEOUT</code></td>
-      <td>The time allowed to acquire the geolocation, defined by
-        {{domxref("PositionOptions.timeout")}} information that was reached before the
-        information was obtained.</td>
+      <td>
+        The time allowed to acquire the geolocation, defined by
+        {{domxref("PositionOptions.timeout")}} information that
+        was reached before the information was obtained.
+      </td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API">Using geolocation</a></li>
-  <li>{{domxref("GeolocationPositionError")}}</li>
-</ul>
+- [Using geolocation](/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
+- {{domxref("GeolocationPositionError")}}

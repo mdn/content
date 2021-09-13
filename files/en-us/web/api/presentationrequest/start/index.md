@@ -2,41 +2,41 @@
 title: PresentationRequest.start()
 slug: Web/API/PresentationRequest/start
 tags:
-- Experimental
-- Method
-- Presentation API
-- PresentationRequest
-- Reference
-- start()
+  - Experimental
+  - Method
+  - Presentation API
+  - PresentationRequest
+  - Reference
+  - start()
 browser-compat: api.PresentationRequest.start
 ---
-<p>{{APIRef("Presentation API")}}{{SeeCompatTable}}</p>
+{{APIRef("Presentation API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>start()</code></strong> property of the
-    {{domxref("PresentationRequest")}} interface returns a {{jsxref("Promise")}} that
-    resolves with a {{domxref("PresentationConnection")}} after the user agent prompts the
-    user to select a display and grant permission to use that display.</p>
+The **`start()`** property of the
+{{domxref("PresentationRequest")}} interface returns a {{jsxref("Promise")}} that
+resolves with a {{domxref("PresentationConnection")}} after the user agent prompts the
+user to select a display and grant permission to use that display.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>promise</em> = <em>presentationRequest</em>.start()
+```js
+var promise = presentationRequest.start()
 promise.then(function(PresentationConnection) { ... })
-       .catch(function(error) { ...})</pre>
+       .catch(function(error) { ...})
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">
-  Return value
-</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} that resolves with a {{domxref("PresentationConnection")}}.</p>
+A {{jsxref("Promise")}} that resolves with a {{domxref("PresentationConnection")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,35 +2,37 @@
 title: WebSocket.onopen
 slug: Web/API/WebSocket/onopen
 tags:
-- API
-- Property
-- Reference
-- Web API
-- WebSocket
+  - API
+  - Property
+  - Reference
+  - Web API
+  - WebSocket
 browser-compat: api.WebSocket.onopen
 ---
-<div>{{APIRef("Web Sockets API")}}</div>
+{{APIRef("Web Sockets API")}}
 
-<p>The <strong><code>WebSocket.onopen</code></strong> property is an
-  <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> that is called when the {{domxref("WebSocket")}}
-  connection's {{domxref("WebSocket.readyState","readyState")}} changes to
-  {{domxref("WebSocket.readyState","1")}}; this indicates that the connection is ready to
-  send and receive data. It is called with an {{domxref("Event")}}.</p>
+The **`WebSocket.onopen`** property is an
+[event handler](/en-US/docs/Web/Events/Event_handlers) that is called when the {{domxref("WebSocket")}}
+connection's {{domxref("WebSocket.readyState","readyState")}} changes to
+{{domxref("WebSocket.readyState","1")}}; this indicates that the connection is ready to
+send and receive data. It is called with an {{domxref("Event")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>aWebSocket</em>.onopen = function(event) {
+```js
+aWebSocket.onopen = function(event) {
   console.log("WebSocket is open now.");
-};</pre>
+};
+```
 
-<h2 id="Value">Value</h2>
+## Value
 
-<p>An {{domxref("EventListener")}}.</p>
+An {{domxref("EventListener")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,132 +2,124 @@
 title: CanvasRenderingContext2D.getImageData()
 slug: Web/API/CanvasRenderingContext2D/getImageData
 tags:
-- API
-- Canvas
-- Canvas API
-- CanvasRenderingContext2D
-- Cut
-- Graphics
-- Image
-- ImageData
-- Method
-- Reference
-- copy
-- getImageData
-- img
+  - API
+  - Canvas
+  - Canvas API
+  - CanvasRenderingContext2D
+  - Cut
+  - Graphics
+  - Image
+  - ImageData
+  - Method
+  - Reference
+  - copy
+  - getImageData
+  - img
 browser-compat: api.CanvasRenderingContext2D.getImageData
 ---
-<div>{{APIRef("Canvas API")}}</div>
+{{APIRef("Canvas API")}}
 
-<p>The {{domxref("CanvasRenderingContext2D")}} method
-    <code><strong>getImageData()</strong></code> of the Canvas 2D API returns an
-    {{domxref("ImageData")}} object representing the underlying pixel data for a specified
-    portion of the canvas.</p>
+The {{domxref("CanvasRenderingContext2D")}} method
+**`getImageData()`** of the Canvas 2D API returns an
+{{domxref("ImageData")}} object representing the underlying pixel data for a specified
+portion of the canvas.
 
-<p>This method is not affected by the canvas's transformation matrix. If the specified
-  rectangle extends outside the bounds of the canvas, the pixels outside the canvas are
-  transparent black in the returned <code>ImageData</code> object.</p>
+This method is not affected by the canvas's transformation matrix. If the specified
+rectangle extends outside the bounds of the canvas, the pixels outside the canvas are
+transparent black in the returned `ImageData` object.
 
-<div class="note">
-  <p><strong>Note:</strong> Image data can be painted onto a canvas using the
-    {{domxref("CanvasRenderingContext2D.putImageData()", "putImageData()")}} method.</p>
-</div>
+> **Note:** Image data can be painted onto a canvas using the
+> {{domxref("CanvasRenderingContext2D.putImageData()", "putImageData()")}} method.
 
-<p>You can find more information about <code>getImageData()</code> and general
-  manipulation of canvas contents in <a
-    href="/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">Pixel
-    manipulation with canvas</a>.</p>
+You can find more information about `getImageData()` and general
+manipulation of canvas contents in [Pixel
+manipulation with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>ctx</em>.getImageData(<em>sx</em>, <em>sy</em>, <em>sw</em>, <em>sh</em>);
-</pre>
+```js
+ctx.getImageData(sx, sy, sw, sh);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>sx</code></dt>
-  <dd>The x-axis coordinate of the top-left corner of the rectangle from which the
-    <code>ImageData</code> will be extracted.</dd>
-  <dt><code>sy</code></dt>
-  <dd>The y-axis coordinate of the top-left corner of the rectangle from which the
-    <code>ImageData</code> will be extracted.</dd>
-  <dt><code>sw</code></dt>
-  <dd>The width of the rectangle from which the <code>ImageData</code> will be extracted.
-    Positive values are to the right, and negative to the left.</dd>
-  <dt><code>sh</code></dt>
-  <dd>The height of the rectangle from which the <code>ImageData</code> will be extracted.
-    Positive values are down, and negative are up.</dd>
-</dl>
+- `sx`
+  - : The x-axis coordinate of the top-left corner of the rectangle from which the
+    `ImageData` will be extracted.
+- `sy`
+  - : The y-axis coordinate of the top-left corner of the rectangle from which the
+    `ImageData` will be extracted.
+- `sw`
+  - : The width of the rectangle from which the `ImageData` will be extracted.
+    Positive values are to the right, and negative to the left.
+- `sh`
+  - : The height of the rectangle from which the `ImageData` will be extracted.
+    Positive values are down, and negative are up.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An {{domxref("ImageData")}} object containing the image data for the rectangle of the
-  canvas specified. The coordinates of the rectangle's top-left corner are
-  <code>(sx, sy)</code>, while the coordinates of the bottom corner are
-  <code>(sx + sw, sy + sh)</code>.</p>
+An {{domxref("ImageData")}} object containing the image data for the rectangle of the
+canvas specified. The coordinates of the rectangle's top-left corner are
+`(sx, sy)`, while the coordinates of the bottom corner are
+`(sx + sw, sy + sh)`.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt><code>IndexSizeError</code></dt>
-  <dd>Thrown if either <code>sw</code> or <code>sh</code> are zero.</dd>
-  <dt><code>SecurityError</code></dt>
-  <dd>The canvas contains or may contain pixels which were loaded from an origin other
+- `IndexSizeError`
+  - : Thrown if either `sw` or `sh` are zero.
+- `SecurityError`
+  - : The canvas contains or may contain pixels which were loaded from an origin other
     than the one from which the document itself was loaded. To avoid
-    <code>SecurityError</code> being thrown in this situation, configure CORS to allow the
-    source image to be used in this way. See <a
-      href="/en-US/docs/Web/HTML/CORS_enabled_image">Allowing cross-origin use of images
-      and canvas</a>.</dd>
-</dl>
+    `SecurityError` being thrown in this situation, configure CORS to allow the
+    source image to be used in this way. See [Allowing cross-origin use of images
+    and canvas](/en-US/docs/Web/HTML/CORS_enabled_image).
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="Getting_image_data_from_a_canvas">Getting image data from a canvas</h3>
+### Getting image data from a canvas
 
-<p>This example draws a rectangle, and then uses <code>getImageData()</code> to grab a
-  portion of the canvas.</p>
+This example draws a rectangle, and then uses `getImageData()` to grab a
+portion of the canvas.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<p>The object retrieved by <code>getImageData()</code> has a width of 200 and a height of
-  100, for a total of 20,000 pixels. Of those pixels, most are either transparent or taken
-  from off the canvas; only 5,000 of them are opaque black (the color of the drawn
-  rectangle).</p>
+The object retrieved by `getImageData()` has a width of 200 and a height of
+100, for a total of 20,000 pixels. Of those pixels, most are either transparent or taken
+from off the canvas; only 5,000 of them are opaque black (the color of the drawn
+rectangle).
 
-<pre class="brush: js;">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 ctx.rect(10, 10, 100, 100);
 ctx.fill();
 
 let imageData = ctx.getImageData(60, 60, 200, 100);
 ctx.putImageData(imageData, 150, 10);
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Getting_image_data_from_a_canvas", 700, 180)}}</p>
+{{EmbedLiveSample("Getting_image_data_from_a_canvas", 700, 180)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining this method: {{domxref("CanvasRenderingContext2D")}}</li>
-  <li>{{domxref("ImageData")}} object</li>
-  <li>{{domxref("CanvasRenderingContext2D.putImageData()")}}</li>
-  <li><a
-      href="/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">Pixel
-      manipulation with canvas</a></li>
-</ul>
+- The interface defining this method: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("ImageData")}} object
+- {{domxref("CanvasRenderingContext2D.putImageData()")}}
+- [Pixel
+  manipulation with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)

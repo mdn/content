@@ -2,56 +2,55 @@
 title: CSSNumericValue.to()
 slug: Web/API/CSSNumericValue/to
 tags:
-- API
-- CSS Typed Object Model API
-- CSSNumericValue
-- Experimental
-- Houdini
-- Method
-- Reference
-- to()
+  - API
+  - CSS Typed Object Model API
+  - CSSNumericValue
+  - Experimental
+  - Houdini
+  - Method
+  - Reference
+  - to()
 browser-compat: api.CSSNumericValue.to
 ---
-<div>{{draft}}{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}</div>
+{{draft}}{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
-<p>The <strong><code>to()</code></strong> method of the
-  {{domxref("CSSNumericValue")}} interface converts a numeric value from one unit to
-  another.</p>
+The **`to()`** method of the
+{{domxref("CSSNumericValue")}} interface converts a numeric value from one unit to
+another.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var cssUnitValue = CSSNumericValue.to(unit);</pre>
+```js
+var cssUnitValue = CSSNumericValue.to(unit);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>unit</dt>
-  <dd>The unit to which you want to convert.</dd>
-</dl>
+- unit
+  - : The unit to which you want to convert.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref('CSSMathSum')}}.</p>
+A {{domxref('CSSMathSum')}}.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>SyntaxError</dt>
-  <dd>Indicates that an invalid type was passed to the method.</dd>
-  <dt>TypeError</dt>
-  <dd>Indicates that the passed values cannot be summed.</dd>
-</dl>
+- SyntaxError
+  - : Indicates that an invalid type was passed to the method.
+- TypeError
+  - : Indicates that the passed values cannot be summed.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">// Prints "0.608542cm"
-console.log(CSS.px("23").to("cm").toString());</pre>
+```js
+// Prints "0.608542cm"
+console.log(CSS.px("23").to("cm").toString());
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

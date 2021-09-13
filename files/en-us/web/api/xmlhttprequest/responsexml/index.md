@@ -2,69 +2,66 @@
 title: XMLHttpRequest.responseXML
 slug: Web/API/XMLHttpRequest/responseXML
 tags:
-- AJAX
-- API
-- Fetching XML
-- Loading XML
-- Property
-- Read-only
-- Reading XML
-- Reference
-- Transfer
-- XML
-- XMLHttpRequest
-- download
-- responseXML
-- upload
+  - AJAX
+  - API
+  - Fetching XML
+  - Loading XML
+  - Property
+  - Read-only
+  - Reading XML
+  - Reference
+  - Transfer
+  - XML
+  - XMLHttpRequest
+  - download
+  - responseXML
+  - upload
 browser-compat: api.XMLHttpRequest.responseXML
 ---
-<div>{{APIRef('XMLHttpRequest')}}</div>
+{{APIRef('XMLHttpRequest')}}
 
-<p>The <strong><code>XMLHttpRequest.responseXML</code></strong> read-only property returns
-  a {{domxref("Document")}} containing the HTML or XML retrieved by the request; or
-  <code>null</code> if the request was unsuccessful, has not yet been sent, or if the data
-  can't be parsed as XML or HTML.</p>
+The **`XMLHttpRequest.responseXML`** read-only property returns
+a {{domxref("Document")}} containing the HTML or XML retrieved by the request; or
+`null` if the request was unsuccessful, has not yet been sent, or if the data
+can't be parsed as XML or HTML.
 
-<div class="note">
-  <p><strong>Note:</strong> The name <code>responseXML</code> is an artifact of this
-    property's history; it works for both HTML and XML.</p>
-</div>
+> **Note:** The name `responseXML` is an artifact of this
+> property's history; it works for both HTML and XML.
 
-<p>Usually, the response is parsed as "<code>text/xml</code>". If the
-  {{domxref("XMLHttpRequest.responseType", "responseType")}} is set to
-  "<code>document</code>" and the request was made asynchronously, instead the response is
-  parsed as "<code>text/html</code>". <code>responseXML</code> is <code>null</code> for
-  any other types of data, as well as for <a
-    href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs"><code>data:</code> URLs</a>.</p>
+Usually, the response is parsed as "`text/xml`". If the
+{{domxref("XMLHttpRequest.responseType", "responseType")}} is set to
+"`document`" and the request was made asynchronously, instead the response is
+parsed as "`text/html`". `responseXML` is `null` for
+any other types of data, as well as for [`data:` URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs).
 
-<p>If the server doesn't specify the {{HTTPHeader("Content-Type")}} as
-  "<code>text/xml</code>" or "<code>application/xml</code>", you can use
-  {{domxref("XMLHttpRequest.overrideMimeType()")}} to parse it as XML anyway.</p>
+If the server doesn't specify the {{HTTPHeader("Content-Type")}} as
+"`text/xml`" or "`application/xml`", you can use
+{{domxref("XMLHttpRequest.overrideMimeType()")}} to parse it as XML anyway.
 
-<p>This property isn't available to workers.</p>
+This property isn't available to workers.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>data</var> = <var>XMLHttpRequest</var>.responseXML;
-</pre>
+```js
+var data = XMLHttpRequest.responseXML;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("Document")}} from parsing the XML or HTML received using
-  {{domxref("XMLHttpRequest")}}, or <code>null</code> if no data was received or if the
-  data is not XML/HTML.</p>
+A {{domxref("Document")}} from parsing the XML or HTML received using
+{{domxref("XMLHttpRequest")}}, or `null` if no data was received or if the
+data is not XML/HTML.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt><code>InvalidStateError</code></dt>
-  <dd>The {{domxref("XMLHttpRequest.responseType", "responseType")}} isn't either
-    "<code>document</code>" or an empty string.</dd>
-</dl>
+- `InvalidStateError`
+  - : The {{domxref("XMLHttpRequest.responseType", "responseType")}} isn't either
+    "`document`" or an empty string.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var xhr = new XMLHttpRequest;
+```js
+var xhr = new XMLHttpRequest;
 xhr.open('GET', '/server');
 
 // If specified, responseType must be empty string or "document"
@@ -74,30 +71,29 @@ xhr.responseType = 'document';
 xhr.overrideMimeType('text/xml');
 
 xhr.onload = function () {
-  if (xhr.readyState === xhr.DONE &amp;&amp; xhr.status === 200) {
+  if (xhr.readyState === xhr.DONE && xhr.status === 200) {
     console.log(xhr.response, xhr.responseXML);
   }
 };
 
-xhr.send();</pre>
+xhr.send();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("XMLHttpRequest")}}</li>
-  <li>{{domxref("XMLHttpRequest.response")}}</li>
-  <li>{{domxref("XMLHttpRequest.responseType")}}</li>
-  <li><a href="/en-US/docs/Web/Guide/Parsing_and_serializing_XML">Parsing and serializing
-      XML</a></li>
-  <li>Parsing XML into a DOM tree: {{domxref("DOMParser")}}</li>
-  <li>Serializing a DOM tree into XML: {{domxref("XMLSerializer")}} (specifically, the
-    {{domxref("XMLSerializer.serializeToString", "serializeToString()")}} method)</li>
-</ul>
+- {{domxref("XMLHttpRequest")}}
+- {{domxref("XMLHttpRequest.response")}}
+- {{domxref("XMLHttpRequest.responseType")}}
+- [Parsing and serializing
+  XML](/en-US/docs/Web/Guide/Parsing_and_serializing_XML)
+- Parsing XML into a DOM tree: {{domxref("DOMParser")}}
+- Serializing a DOM tree into XML: {{domxref("XMLSerializer")}} (specifically, the
+  {{domxref("XMLSerializer.serializeToString", "serializeToString()")}} method)

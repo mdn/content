@@ -13,36 +13,31 @@ tags:
   - WebVR
 browser-compat: api.VREyeParameters
 ---
-<div>{{APIRef("WebVR API")}}{{Deprecated_Header}}</div>
+{{APIRef("WebVR API")}}{{Deprecated_Header}}
 
-<p>The <strong><code>VREyeParameters</code></strong> interface of the <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a> represents all the information required to correctly render a scene for a given eye, including field of view information.</p>
+The **`VREyeParameters`** interface of the [WebVR API](/en-US/docs/Web/API/WebVR_API) represents all the information required to correctly render a scene for a given eye, including field of view information.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This interface was part of the old <a href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</a>. It has been superseded by the <a href="https://immersive-web.github.io/webxr/">WebXR Device API</a>.</p>
-</div>
+> **Note:** This interface was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-<p>This interface is accessible through the {{domxref("VRDisplay.getEyeParameters()")}} method.</p>
+This interface is accessible through the {{domxref("VRDisplay.getEyeParameters()")}} method.
 
-<div class="notecard warning">
-<p><strong>Warning:</strong> The values in this interface should not be used to compute view or projection matrices. In order to ensure the widest possible hardware compatibility use the matrices provided by {{domxref("VRFrameData")}}.</p>
-</div>
+> **Warning:** The values in this interface should not be used to compute view or projection matrices. In order to ensure the widest possible hardware compatibility use the matrices provided by {{domxref("VRFrameData")}}.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
-	<dt>{{domxref("VREyeParameters.offset")}} {{deprecated_inline}} {{readonlyInline}}</dt>
-	<dd><dfn>Represents the o</dfn>ffset from the center point between the user's eyes to the center of the eye, measured in meters.</dd>
-	<dt>{{domxref("VREyeParameters.fieldOfView")}}  {{deprecated_inline}} {{readonlyInline}}</dt>
-	<dd><dfn>Describes t</dfn>he current field of view for the eye, which can vary as the user adjusts their interpupillary distance (IPD).</dd>
-	<dt>{{domxref("VREyeParameters.renderWidth")}} {{deprecated_inline}} {{readonlyInline}}</dt>
-	<dd>Describes the recommended render target width of each eye viewport, in pixels.</dd>
-	<dt>{{domxref("VREyeParameters.renderHeight")}} {{deprecated_inline}} {{readonlyInline}}</dt>
-	<dd>Describes the recommended render target height of each eye viewport, in pixels.</dd>
-</dl>
+- {{domxref("VREyeParameters.offset")}} {{deprecated_inline}} {{readonlyInline}}
+  - : *Represents the o*ffset from the center point between the user's eyes to the center of the eye, measured in meters.
+- {{domxref("VREyeParameters.fieldOfView")}}  {{deprecated_inline}} {{readonlyInline}}
+  - : *Describes t*he current field of view for the eye, which can vary as the user adjusts their interpupillary distance (IPD).
+- {{domxref("VREyeParameters.renderWidth")}} {{deprecated_inline}} {{readonlyInline}}
+  - : Describes the recommended render target width of each eye viewport, in pixels.
+- {{domxref("VREyeParameters.renderHeight")}} {{deprecated_inline}} {{readonlyInline}}
+  - : Describes the recommended render target height of each eye viewport, in pixels.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">navigator.getVRDisplays().then(function(displays) {
+```js
+navigator.getVRDisplays().then(function(displays) {
   // If a display is available, use it to present the scene
   vrDisplay = displays[0];
   console.log('Display found');
@@ -63,20 +58,20 @@ browser-compat: api.VREyeParameters
       drawVRScene();
     });
   });
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This interface was part of the old <a href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</a> that has been superseded by the <a href="https://immersive-web.github.io/webxr/">WebXR Device API</a>. It is no longer on track to becoming a standard.</p>
-<p>Until all browsers have implemented the new <a href="/en-US/docs/Web/API/WebXR_Device_API/Fundamentals">WebXR APIs</a>, it is recommended to rely on frameworks, like <a href="https://aframe.io/">A-Frame</a>, <a href="https://www.babylonjs.com/">Babylon.js</a>, or <a href="https://threejs.org/">Three.js</a>, or a <a href="https://github.com/immersive-web/webxr-polyfill">polyfill</a>, to develop WebXR applications that will work across all browsers <a href="https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/">[1]</a>.</p>
+This interface was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) that has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/). It is no longer on track to becoming a standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals), it is recommended to rely on frameworks, like [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), or [Three.js](https://threejs.org/), or a [polyfill](https://github.com/immersive-web/webxr-polyfill), to develop WebXR applications that will work across all browsers [\[1\]](https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/).
 
-<p>{{Compat}}</p>
+## Browser compatibility
 
-<h2 id="See_also">See also</h2>
+{{Compat}}
 
-<ul>
-	<li><a href="/en-US/docs/Web/API/WebVR_API">WebVR API homepage</a></li>
-	<li><a href="https://mixedreality.mozilla.org/">https://mixedreality.mozilla.org/</a> — demos, downloads, and other resources from the Mozilla VR team.</li>
-</ul>
+## See also
+
+- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API)
+- <https://mixedreality.mozilla.org/> — demos, downloads, and other resources from the Mozilla VR team.

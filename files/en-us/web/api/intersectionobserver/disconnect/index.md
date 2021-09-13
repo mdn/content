@@ -2,45 +2,44 @@
 title: IntersectionObserver.disconnect()
 slug: Web/API/IntersectionObserver/disconnect
 tags:
-- API
-- Disconnect
-- Intersection Observer
-- Intersection Observer API
-- IntersectionObserver
-- Method
-- Reference
+  - API
+  - Disconnect
+  - Intersection Observer
+  - Intersection Observer API
+  - IntersectionObserver
+  - Method
+  - Reference
 browser-compat: api.IntersectionObserver.disconnect
 ---
-<div>{{APIRef("Intersection Observer API")}}</div>
+{{APIRef("Intersection Observer API")}}
 
-<p>The {{domxref("IntersectionObserver")}} method
-    <code><strong>disconnect()</strong></code> stops watching all of its target elements
-    for visibility changes.</p>
+The {{domxref("IntersectionObserver")}} method
+**`disconnect()`** stops watching all of its target elements
+for visibility changes.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>intersectionObserver</em>.disconnect();</pre>
+```js
+intersectionObserver.disconnect();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>undefined</code>.</p>
+`undefined`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("IntersectionObserver.observe", "observe()")}}</li>
-  <li>{{domxref("IntersectionObserver.unobserve", "unobserve()")}}</li>
-</ul>
+- {{domxref("IntersectionObserver.observe", "observe()")}}
+- {{domxref("IntersectionObserver.unobserve", "unobserve()")}}

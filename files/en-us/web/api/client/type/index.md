@@ -2,38 +2,37 @@
 title: Client.type
 slug: Web/API/Client/type
 tags:
-- API
-- Client
-- Property
-- Reference
-- Service Workers
-- Type
+  - API
+  - Client
+  - Property
+  - Reference
+  - Service Workers
+  - Type
 browser-compat: api.Client.type
 ---
-<p>{{APIRef("Service Workers API")}}</p>
+{{APIRef("Service Workers API")}}
 
-<p>The <code><strong>type</strong></code> read-only property of the {{domxref("Client")}}
-  interface indicates the type of client the service worker is controlling.</p>
+The **`type`** read-only property of the {{domxref("Client")}}
+interface indicates the type of client the service worker is controlling.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>myClientType</em> = <em>client</em>.type;</pre>
+```js
+var myClientType = client.type;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A string, representing the client type. The value can be one of</p>
+A string, representing the client type. The value can be one of
 
-<ul>
-  <li><code>"window"</code></li>
-  <li><code>"worker"</code></li>
-  <li><code>"sharedworker"</code></li>
-</ul>
+- `"window"`
+- `"worker"`
+- `"sharedworker"`
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre
-  class="brush: js">// service worker client (e.g. a document)
+```js
+// service worker client (e.g. a document)
 function sendMessage(message) {
   return new Promise(function(resolve, reject) {
     // note that this is the ServiceWorker.postMessage version
@@ -50,12 +49,13 @@ self.addEventListener("message", function(e) {
   e.source.postMessage("Hello! Your message was: " + e.data);
   // Let's also post the type value back to the client
   e.source.postMessage(e.source.type);
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

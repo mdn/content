@@ -2,40 +2,41 @@
 title: RTCIceCandidateStats.port
 slug: Web/API/RTCIceCandidateStats/port
 tags:
-- API
-- Candidate
-- Connection
-- ICE
-- Networking
-- Property
-- RTCIceCandidateStats
-- Reference
-- Statistics
-- Stats
-- WebRTC
-- WebRTC API
-- port
+  - API
+  - Candidate
+  - Connection
+  - ICE
+  - Networking
+  - Property
+  - RTCIceCandidateStats
+  - Reference
+  - Statistics
+  - Stats
+  - WebRTC
+  - WebRTC API
+  - port
 browser-compat: api.RTCIceCandidateStats.port
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The {{domxref("RTCIceCandidateStats")}} dictionary's <code><strong>port</strong></code>
-  property specifies the network port used by the candidate.</p>
+The {{domxref("RTCIceCandidateStats")}} dictionary's **`port`**
+property specifies the network port used by the candidate.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>candidatePort</em> = <em>rtcIceCandidateStats</em>.port;</pre>
+```js
+candidatePort = rtcIceCandidateStats.port;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An integer value indicating the network port used by the {{domxref("RTCIceCandidate")}}
-  described by the <code>RTCIceCandidateStats</code> object.</p>
+An integer value indicating the network port used by the {{domxref("RTCIceCandidate")}}
+described by the `RTCIceCandidateStats` object.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

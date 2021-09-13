@@ -2,100 +2,70 @@
 title: KeyboardEvent()
 slug: Web/API/KeyboardEvent/KeyboardEvent
 tags:
-- API
-- Constructor
-- DOM
-- KeyboardEvent
-- Reference
+  - API
+  - Constructor
+  - DOM
+  - KeyboardEvent
+  - Reference
 browser-compat: api.KeyboardEvent.KeyboardEvent
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p>The <strong><code>KeyboardEvent()</code></strong> constructor creates a new
-	{{domxref("KeyboardEvent")}}.</p>
+The **`KeyboardEvent()`** constructor creates a new
+{{domxref("KeyboardEvent")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-	class="brush: js"> <em>event</em> = new KeyboardEvent(<em>typeArg</em>, <em>KeyboardEventInit</em>);</pre>
+```js
+ event = new KeyboardEvent(typeArg, KeyboardEventInit);
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-	<dt><em>typeArg</em></dt>
-	<dd>Is a {{domxref("DOMString")}} representing the name of the event.</dd>
-	<dt><em>KeyboardEventInit</em>{{optional_inline}}</dt>
-	<dd>Is a <code>KeyboardEventInit</code> dictionary, having the following fields:
+- _typeArg_
+  - : Is a {{domxref("DOMString")}} representing the name of the event.
+- _KeyboardEventInit_{{optional_inline}}
 
-		<ul>
-			<li>
-        <code>"key"</code>, optional {{domxref("DOMString")}}, defaulting to <code>""</code>,
-        that sets the value of {{domxref("KeyboardEvent.key")}}.
-      </li>
-			<li>
-        <code>"code"</code>, optional {{domxref("DOMString")}}, defaulting to <code>""</code>,
-        that sets the value of {{domxref("KeyboardEvent.code")}}.
-      </li>
-			<li>
-        <code>"location"</code>, optional <code>unsigned long</code>, defaulting to <code>0</code>,
-        that sets the value of {{domxref("KeyboardEvent.location")}}.
-      </li>
-			<li>
-        <code>"ctrlKey"</code>, optional boolean value, defaulting to <code>false</code>,
-        that sets the value of {{domxref("KeyboardEvent.ctrlKey")}}.
-      </li>
-			<li>
-        <code>"shiftKey"</code>, optional boolean value, defaulting to <code>false</code>,
-        that sets the value of {{domxref("KeyboardEvent.shiftKey")}}.
-      </li>
-			<li>
-        <code>"altKey"</code>, optional boolean value, defaulting to <code>false</code>,
-        that sets the value of {{domxref("KeyboardEvent.altKey")}}.
-      </li>
-			<li>
-        <code>"metaKey"</code>, optional boolean value, defaulting to <code>false</code>,
-        that sets the value of {{domxref("KeyboardEvent.metaKey")}}.<
-          /li>
-			<li>
-        <code>"repeat"</code>, optional boolean value, defaulting to <code>false</code>,
-        that sets the value of {{domxref("KeyboardEvent.repeat")}}.
-      </li>
-			<li>
-        <code>"isComposing"</code>, optional boolean value, defaulting to <code>false</code>,
-        that sets the value of {{domxref("KeyboardEvent.isComposing")}}.
-      </li>
-			<li>
-        <code>"charCode"</code>, optional <code>unsigned long</code>, defaulting to <code>0</code>,
-        that sets the value of the deprecated {{domxref("KeyboardEvent.charCode")}}.
-      </li>
-			<li>
-        <code>"keyCode"</code>, optional <code>unsigned long</code>, defaulting to <code>0</code>,
-        that sets the value of the deprecated {{domxref("KeyboardEvent.keyCode")}}.
-      </li>
-			<li>
-        <code>"which"</code>, optional <code>unsigned long</code>, defaulting to <code>0</code>,
-        that sets the value of the deprecated {{domxref("KeyboardEvent.which")}}.
-      </li>
-		</ul>
+  - : Is a `KeyboardEventInit` dictionary, having the following fields:
 
-		<div class="note">
-			<p><strong>Note:</strong> The <code>KeyboardEventInit</code> dictionary also accepts fields from
-					the {{domxref("UIEvent.UIEvent", "UIEventInit")}} and
-					{{domxref("Event.Event", "EventInit")}} dictionaries.</p>
-		</div>
-	</dd>
-</dl>
+    - `"key"`, optional {{domxref("DOMString")}}, defaulting to `""`,
+      that sets the value of {{domxref("KeyboardEvent.key")}}.
+    - `"code"`, optional {{domxref("DOMString")}}, defaulting to `""`,
+      that sets the value of {{domxref("KeyboardEvent.code")}}.
+    - `"location"`, optional `unsigned long`, defaulting to `0`,
+      that sets the value of {{domxref("KeyboardEvent.location")}}.
+    - `"ctrlKey"`, optional boolean value, defaulting to `false`,
+      that sets the value of {{domxref("KeyboardEvent.ctrlKey")}}.
+    - `"shiftKey"`, optional boolean value, defaulting to `false`,
+      that sets the value of {{domxref("KeyboardEvent.shiftKey")}}.
+    - `"altKey"`, optional boolean value, defaulting to `false`,
+      that sets the value of {{domxref("KeyboardEvent.altKey")}}.
+    - `"metaKey"`, optional boolean value, defaulting to `false`,
+      that sets the value of {{domxref("KeyboardEvent.metaKey")}}.<
+      /li>
+    - `"repeat"`, optional boolean value, defaulting to `false`,
+      that sets the value of {{domxref("KeyboardEvent.repeat")}}.
+    - `"isComposing"`, optional boolean value, defaulting to `false`,
+      that sets the value of {{domxref("KeyboardEvent.isComposing")}}.
+    - `"charCode"`, optional `unsigned long`, defaulting to `0`,
+      that sets the value of the deprecated {{domxref("KeyboardEvent.charCode")}}.
+    - `"keyCode"`, optional `unsigned long`, defaulting to `0`,
+      that sets the value of the deprecated {{domxref("KeyboardEvent.keyCode")}}.
+    - `"which"`, optional `unsigned long`, defaulting to `0`,
+      that sets the value of the deprecated {{domxref("KeyboardEvent.which")}}.
 
-<h2 id="Specifications">Specifications</h2>
+    > **Note:** The `KeyboardEventInit` dictionary also accepts fields from
+    > the {{domxref("UIEvent.UIEvent", "UIEventInit")}} and
+    > {{domxref("Event.Event", "EventInit")}} dictionaries.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{domxref("KeyboardEvent")}}, the interface of the objects it constructs.</li>
-</ul>
+- {{domxref("KeyboardEvent")}}, the interface of the objects it constructs.

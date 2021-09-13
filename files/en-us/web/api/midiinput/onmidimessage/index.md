@@ -9,31 +9,35 @@ tags:
   - MIDIInput
 browser-compat: api.MIDIInput.onmidimessage
 ---
-<div>{{APIRef("Web MIDI API")}}{{securecontext_header}}</div>
+{{APIRef("Web MIDI API")}}{{securecontext_header}}
 
-<p>The <strong><code>onmidimessage</code></strong> {{event("Event_handlers", "event handler")}} of the {{domxref("MIDIInput")}} interface processes <code>midimessage</code> events.</p>
+The **`onmidimessage`** {{event("Event_handlers", "event handler")}} of the {{domxref("MIDIInput")}} interface processes `midimessage` events.
 
-<p> The event fires when the MIDI port corresponding to this {{domxref("MIDIInput")}} finishes receiving one or more MIDI messages. An instance of {{domxref("MIDIMessageEvent")}} containing the message that was received is passed to this event handler.</p>
+The event fires when the MIDI port corresponding to this {{domxref("MIDIInput")}} finishes receiving one or more MIDI messages. An instance of {{domxref("MIDIMessageEvent")}} containing the message that was received is passed to this event handler.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">MIDIInput.onmidimessage = function;
-MIDIInput.addEventListener('midimessage', function);</pre>
+```js
+MIDIInput.onmidimessage = function;
+MIDIInput.addEventListener('midimessage', function);
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the following example <code>onmidimessage</code> events are listened for on all input ports. When a message is received the {{domxref("MIDIMessageEvent.data")}} property is printed to the console.</p>
+In the following example `onmidimessage` events are listened for on all input ports. When a message is received the {{domxref("MIDIMessageEvent.data")}} property is printed to the console.
 
-<pre class="brush:js">inputs.forEach((input) => {
+```js
+inputs.forEach((input) => {
   input.onmidimessage = function(message) {
     console.log(message.data);
   }
-})</pre>
+})
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

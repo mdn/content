@@ -10,72 +10,81 @@ tags:
   - events
 browser-compat: api.SVGAnimationElement.repeatEvent_event
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <code>repeatEvent</code> event of the {{domxref("SVGAnimationElement")}} interface is fired when the element's local timeline repeats. It will be fired each time the element repeats, after the first iteration.</p>
+The `repeatEvent` event of the {{domxref("SVGAnimationElement")}} interface is fired when the element's local timeline repeats. It will be fired each time the element repeats, after the first iteration.
 
-<div class="notecard note">
-<p><strong>Note:</strong> Associated with the <code>repeatEvent</code> event is an integer that indicates which repeat iteration is beginning; this can be found in the <code>detail</code> property of the event object. The value is a 0-based integer, but the repeat event is not raised for the first iteration and so the observed values will be &gt;= 1. This is supported in Firefox, but not in Chrome.</p>
-</div>
+> **Note:** Associated with the `repeatEvent` event is an integer that indicates which repeat iteration is beginning; this can be found in the `detail` property of the event object. The value is a 0-based integer, but the repeat event is not raised for the first iteration and so the observed values will be >= 1. This is supported in Firefox, but not in Chrome.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("TimeEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td><code><a href="/en-US/docs/Web/API/SVGAnimationElement/onrepeat">onrepeat</a></code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("TimeEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/API/SVGAnimationElement/onrepeat"
+            >onrepeat</a
+          ></code
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Animated_circle">Animated circle</h3>
+### Animated circle
 
-<pre class="brush: html">&lt;svg xmlns="http://www.w3.org/2000/svg" width="300px" height="100px"&gt;
-  &lt;title&gt;SVG SMIL Animate with Path&lt;/title&gt;
-  &lt;circle cx="0" cy="50" r="50" fill="blue" stroke="black" stroke-width="1"&gt;
-    &lt;animateMotion
+```html
+<svg xmlns="http://www.w3.org/2000/svg" width="300px" height="100px">
+  <title>SVG SMIL Animate with Path</title>
+  <circle cx="0" cy="50" r="50" fill="blue" stroke="black" stroke-width="1">
+    <animateMotion
        path="M 0 0 H 300 Z"
-       dur="5s" repeatCount="indefinite" /&gt;
-  &lt;/circle&gt;
-&lt;/svg&gt;
+       dur="5s" repeatCount="indefinite" />
+  </circle>
+</svg>
 
-&lt;hr&gt;
+<hr>
 
-&lt;ul&gt;
+<ul>
 
-&lt;/ul&gt;</pre>
+</ul>
+```
 
-<pre class="brush: css">ul {
+```css
+ul {
   height: 100px;
   border: 1px solid #ddd;
   overflow-y: scroll;
   padding: 10px 30px;
-}</pre>
+}
+```
 
-<pre class="brush: js">let svgElem = document.querySelector('svg');
+```js
+let svgElem = document.querySelector('svg');
 let animateElem = document.querySelector('animateMotion');
 let list = document.querySelector('ul');
 
-animateElem.addEventListener('beginEvent', () =&gt; {
+animateElem.addEventListener('beginEvent', () => {
   let listItem = document.createElement('li');
   listItem.textContent = 'beginEvent fired';
   list.appendChild(listItem);
 })
 
-animateElem.addEventListener('repeatEvent', (e) =&gt; {
+animateElem.addEventListener('repeatEvent', (e) => {
   let listItem = document.createElement('li');
   let msg = 'repeatEvent fired';
   if(e.detail) {
@@ -84,30 +93,30 @@ animateElem.addEventListener('repeatEvent', (e) =&gt; {
   listItem.textContent = msg;
   list.appendChild(listItem);
 })
-</pre>
+```
 
-<p>{{EmbedLiveSample('Animated_circle', '100%', '270')}}</p>
+{{EmbedLiveSample('Animated_circle', '100%', '270')}}
 
-<h3 id="Event_handler_property_equivalent">Event handler property equivalent</h3>
+### Event handler property equivalent
 
-<p>Note that you can also create an event listener for the <code>repeat</code> event using the <code><a href="/en-US/docs/Web/API/SVGAnimationElement/onrepeat">onrepeat</a></code> event handler property:</p>
+Note that you can also create an event listener for the `repeat` event using the [`onrepeat`](/en-US/docs/Web/API/SVGAnimationElement/onrepeat) event handler property:
 
-<pre class="brush: js">animateElem.onrepeat = () =&gt; {
+```js
+animateElem.onrepeat = () => {
   console.log('repeatEvent fired');
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/SVG/SVG_animation_with_SMIL">SVG animation with SMIL</a></li>
- <li>{{event("beginEvent")}}</li>
- <li>{{event("endEvent")}}</li>
-</ul>
+- [SVG animation with SMIL](/en-US/docs/SVG/SVG_animation_with_SMIL)
+- {{event("beginEvent")}}
+- {{event("endEvent")}}

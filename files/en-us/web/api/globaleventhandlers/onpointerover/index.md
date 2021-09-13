@@ -2,43 +2,43 @@
 title: GlobalEventHandlers.onpointerover
 slug: Web/API/GlobalEventHandlers/onpointerover
 tags:
-- API
-- Event Handler
-- GlobalEventHandlers
-- HTML DOM
-- PointerEvent
-- Property
-- Reference
+  - API
+  - Event Handler
+  - GlobalEventHandlers
+  - HTML DOM
+  - PointerEvent
+  - Property
+  - Reference
 browser-compat: api.GlobalEventHandlers.onpointerover
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p>The <strong><code>onpointerover</code></strong> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> that
-  processes {{event("pointerover")}} events.</p>
+The **`onpointerover`** property of the
+{{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
+processes {{event("pointerover")}} events.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>targetElement</var>.onpointerover = <var>overHandler</var>;
+```js
+targetElement.onpointerover = overHandler;
 
-var <var>overHandler</var> = <var>targetElement</var>.onpointerover;
-</pre>
+var overHandler = targetElement.onpointerover;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<dl>
-  <dt><code><var>overHandler</var></code></dt>
-  <dd>The <code>pointerover</code> event handler for element
-    <code><var>targetElement</var></code>.</dd>
-</dl>
+- `overHandler`
+  - : The `pointerover` event handler for element
+    `targetElement`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example shows two ways to use <code>onpointerover</code> to set an element's
-  <code>pointerover</code> event handler.</p>
+This example shows two ways to use `onpointerover` to set an element's
+`pointerover` event handler.
 
-<pre class="brush: js">&lt;html&gt;
-&lt;script&gt;
+```js
+<html>
+<script>
 function overHandler(ev) {
   // Process the pointerover event
 }
@@ -46,30 +46,26 @@ function init() {
   let el = document.getElementById('target1');
   el.onpointerover = overHandler;
 }
-&lt;/script&gt;
+</script>
 
-&lt;body onload="init();"&gt;
-  &lt;div id="target1"&gt; Touch me ... &lt;/div&gt;
-  &lt;div id="target2" onpointerover="overHandler(event)"&gt; Touch me ... &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+<body onload="init();">
+  <div id="target1"> Touch me ... </div>
+  <div id="target2" onpointerover="overHandler(event)"> Touch me ... </div>
+</body>
+</html>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>
-    <code><a href="/en-US/docs/Web/API/Document/pointerover_event">Document: pointerover</a></code>
-    event</li>
-  <li>
-    <code><a href="/en-US/docs/Web/API/HTMLElement/pointerover_event">HTMLElement: pointerover</a></code>
-    event</li>
-</ul>
+- [`Document: pointerover`](/en-US/docs/Web/API/Document/pointerover_event)
+  event
+- [`HTMLElement: pointerover`](/en-US/docs/Web/API/HTMLElement/pointerover_event)
+  event

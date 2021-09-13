@@ -2,48 +2,46 @@
 title: EventSource.onerror
 slug: Web/API/EventSource/onerror
 tags:
-- API
-- Event Handler
-- EventSource
-- Property
-- Reference
-- Server-sent events
-- onerror
+  - API
+  - Event Handler
+  - EventSource
+  - Property
+  - Reference
+  - Server-sent events
+  - onerror
 browser-compat: api.EventSource.onerror
 ---
-<div>{{APIRef('WebSockets API')}}</div>
+{{APIRef('WebSockets API')}}
 
+The **`onerror`** property of the {{domxref("EventSource")}}
+interface is an [event handler](/en-US/docs/Web/Events/Event_handlers) called when an error occurs and the
+{{event("error")}} event is dispatched on an `EventSource` object.
 
-<p>The <code><strong>onerror</strong></code> property of the {{domxref("EventSource")}}
-  interface is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> called when an error occurs and the
-  {{event("error")}} event is dispatched on an <code>EventSource</code> object.</p>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+eventSource.onerror = function
+```
 
-<pre class="brush: js">eventSource.onerror = function</pre>
+## Examples
 
-<h2 id="Examples">Examples</h2>
-
-<pre class="brush: js">evtSource.onerror = function() {
+```js
+evtSource.onerror = function() {
   console.log("EventSource failed.");
-};</pre>
+};
+```
 
-<div class="note">
-  <p><strong>Note:</strong> You can find a full example on GitHub — see <a
-      href="https://github.com/mdn/dom-examples/tree/master/server-sent-events">Simple SSE
-      demo using PHP.</a></p>
-</div>
+> **Note:** You can find a full example on GitHub — see [Simple SSE
+> demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("EventSource")}}</li>
-</ul>
+- {{domxref("EventSource")}}

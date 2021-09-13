@@ -11,33 +11,38 @@ tags:
   - Reference
 browser-compat: api.Range.Range
 ---
-<div>{{ APIRef("DOM") }} {{SeeCompatTable}}</div>
+{{ APIRef("DOM") }} {{SeeCompatTable}}
 
-<p>The <code><strong>Range()</strong></code> constructor returns a newly created
-  {{domxref("Range")}} object whose start and end is the global {{domxref("Document")}}
-  object.</p>
+The **`Range()`** constructor returns a newly created
+{{domxref("Range")}} object whose start and end is the global {{domxref("Document")}}
+object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>range</em> = new Range()</pre>
+```js
+range = new Range()
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this example we create a new range with the <code>Range()</code> constructor, and
-  set its beginning and end positions using the {{domxref("Range.setStartBefore()")}} and
-  {{domxref("Range.setEndAfter()")}} methods. We then select the range using
-  {{domxref("window.getSelection()")}} and {{domxref("Selection.addRange()")}}.</p>
+In this example we create a new range with the `Range()` constructor, and
+set its beginning and end positions using the {{domxref("Range.setStartBefore()")}} and
+{{domxref("Range.setEndAfter()")}} methods. We then select the range using
+{{domxref("window.getSelection()")}} and {{domxref("Selection.addRange()")}}.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;First paragraph.&lt;/p&gt;
-&lt;p&gt;Second paragraph.&lt;/p&gt;
-&lt;p&gt;Third paragraph.&lt;/p&gt;
-&lt;p&gt;Fourth paragraph.&lt;/p&gt;</pre>
+```html
+<p>First paragraph.</p>
+<p>Second paragraph.</p>
+<p>Third paragraph.</p>
+<p>Fourth paragraph.</p>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">const paragraphs = document.querySelectorAll('p');
+```js
+const paragraphs = document.querySelectorAll('p');
 
 // Create new range
 const range = new Range();
@@ -52,23 +57,22 @@ range.setEndAfter(paragraphs[2]);
 const selection = window.getSelection();
 
 // Add range to window selection
-selection.addRange(range);</pre>
+selection.addRange(range);
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</a></li>
-  <li>{{domxref("Document.createRange()")}}</li>
-</ul>
+- [The DOM interfaces index](/en-US/docs/Web/API/Document_Object_Model)
+- {{domxref("Document.createRange()")}}

@@ -18,66 +18,66 @@ tags:
   - Experimental
 browser-compat: api.RTCDataChannel.closing_event
 ---
-<div>{{APIRef("WebRTC")}}{{SeeCompatTable}}</div>
+{{APIRef("WebRTC")}}{{SeeCompatTable}}
 
-<p>The <code><strong>closing</strong></code> event is sent to an {{domxref("RTCDataChannel")}} just before the channel begins the process of shutting down its underlying data transport.</p>
+The **`closing`** event is sent to an {{domxref("RTCDataChannel")}} just before the channel begins the process of shutting down its underlying data transport.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{DOMxRef("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{DOMxRef("RTCDataChannel.onclosing")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{DOMxRef("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>{{DOMxRef("RTCDataChannel.onclosing")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>While the <code>closing</code> event is sent to the channel just before beginning to close the channel's data transport, the {{domxref("RTCDataChannel.close_event", "close")}} event is sent once the closing process is complete.</p>
+While the `closing` event is sent to the channel just before beginning to close the channel's data transport, the {{domxref("RTCDataChannel.close_event", "close")}} event is sent once the closing process is complete.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example updates a connection status interface when the <code>closing</code> event arrives.</p>
+This example updates a connection status interface when the `closing` event arrives.
 
-<p>First, an example using {{domxref("EventTarget.addEventListener", "addEventListener()")}}:</p>
+First, an example using {{domxref("EventTarget.addEventListener", "addEventListener()")}}:
 
-<pre class="brush: js">dataChannel.addEventListener("closing", ev =&gt; {
+```js
+dataChannel.addEventListener("closing", ev => {
   myConnectionStatus.icon = closingIcon;
   myConnectionStatus.text = "Connection closing";
 });
-</pre>
+```
 
-<p>You can also set the {{domxref("RTCDataChannel.onclosing", "onclosing")}} event handler property directly:</p>
+You can also set the {{domxref("RTCDataChannel.onclosing", "onclosing")}} event handler property directly:
 
-<pre class="brush: js">pc.onclosing = ev =&gt; {
+```js
+pc.onclosing = ev => {
  myConnectionStatus.icon = closingIcon;
  myConnectionStatus.text = "Connection closing";
 };
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling">Signaling and video calling</a></li>
-</ul>
+- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+- [Signaling and video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling)

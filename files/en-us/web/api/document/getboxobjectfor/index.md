@@ -2,33 +2,33 @@
 title: Document.getBoxObjectFor()
 slug: Web/API/Document/getBoxObjectFor
 tags:
-- API
-- DOM
-- Method
-- Reference
-- Deprecated
+  - API
+  - DOM
+  - Method
+  - Reference
+  - Deprecated
 browser-compat: api.Document.getBoxObjectFor
 ---
-<div>{{ApiRef("DOM")}} {{deprecated_header}}</div>
+{{ApiRef("DOM")}} {{deprecated_header}}
 
-<p>Returns a <code>boxObject</code> (x, y, width, height) for a specified element.</p>
+Returns a `boxObject` (x, y, width, height) for a specified element.
 
-<div class="note"><p><strong>Note:</strong> This method is obsolete. You should use the
-  {{domxref("element.getBoundingClientRect()")}} method instead.</p></div>
+> **Note:** This method is obsolete. You should use the
+> {{domxref("element.getBoundingClientRect()")}} method instead.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>boxObject</var> = <var>document</var>.getBoxObjectFor(<var>element</var>);
-</pre>
+```js
+boxObject = document.getBoxObjectFor(element);
+```
 
-<ul>
-  <li><var>boxObject</var> is an {{interface("nsIBoxObject")}}.</li>
-  <li><var>element</var> is a {{domxref("element","DOMElement")}}.</li>
-</ul>
+- _boxObject_ is an {{interface("nsIBoxObject")}}.
+- _element_ is a {{domxref("element","DOMElement")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">var myDiv = document.getElementById("myDiv"),
+```js
+var myDiv = document.getElementById("myDiv"),
     boxObj = document.getBoxObjectFor (myDiv);
 
 alert (
@@ -36,14 +36,13 @@ alert (
   ", y:" + boxObj.y +
   ", Width:" + boxObj.width +
   ", Height:" + boxObj.height
-);</pre>
+);
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Specified in <a
-    href="http://mxr.mozilla.org/mozilla-central/source/dom/interfaces/xul/nsIDOMXULDocument.idl">nsIXULDocument.idl</a>
-</p>
+Specified in [nsIXULDocument.idl](http://mxr.mozilla.org/mozilla-central/source/dom/interfaces/xul/nsIDOMXULDocument.idl)
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

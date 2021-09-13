@@ -11,64 +11,72 @@ tags:
   - events
 browser-compat: api.TextTrackList.addTrack_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code>addtrack</code> event is fired when a track is added to a <code><a href="/en-US/docs/Web/API/TextTrackList">TextTrackList</a></code>.</p>
+The `addtrack` event is fired when a track is added to a [`TextTrackList`](/en-US/docs/Web/API/TextTrackList).
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("TrackEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td><code><a href="/en-US/docs/Web/API/TextTrackList/onaddtrack">onaddtrack</a></code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("TrackEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/API/TextTrackList/onaddtrack"
+            >onaddtrack</a
+          ></code
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Using <code>addEventListener()</code>:</p>
+Using `addEventListener()`:
 
-<pre class="brush: js">const mediaElement = document.querySelector('video, audio');
+```js
+const mediaElement = document.querySelector('video, audio');
 
-mediaElement.textTracks.addEventListener('addtrack', (event) =&gt; {
+mediaElement.textTracks.addEventListener('addtrack', (event) => {
   console.log(`Text track: ${event.track.label} added`);
-});</pre>
+});
+```
 
-<p>Using the <code>onaddtrack</code> event handler property:</p>
+Using the `onaddtrack` event handler property:
 
-<pre class="brush: js">const mediaElement = document.querySelector('video, audio');
+```js
+const mediaElement = document.querySelector('video, audio');
 
-mediaElement.textTracks.onaddtrack = (event) =&gt; {
+mediaElement.textTracks.onaddtrack = (event) => {
   console.log(`Text track: ${event.track.label} added`);
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Related events: <code><a href="/en-US/docs/Web/API/VideoTrackList/removetrack_event">removetrack</a></code>, <code><a href="/en-US/docs/Web/API/VideoTrackList/change_event">change</a></code></li>
- <li>This event on <code><a href="/en-US/docs/Web/API/VideoTrackList">VideoTrackList</a></code> targets: <code><a href="/en-US/docs/Web/API/VideoTrackList/addtrack_event">addtrack</a></code></li>
- <li>This event on <code><a href="/en-US/docs/Web/API/AudioTrackList">AudioTrackList</a></code> targets: <code><a href="/en-US/docs/Web/API/AudioTrackList/addtrack_event">addtrack</a></code></li>
- <li>This event on <code><a href="/en-US/docs/Web/API/MediaStream">MediaStream</a></code> targets: <code><a href="/en-US/docs/Web/API/MediaStream/addtrack_event">addtrack</a></code></li>
- <li><a href="/en-US/docs/Web/API/Media_Streams_API">Media Streams API</a></li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
-</ul>
+- Related events: [`removetrack`](/en-US/docs/Web/API/VideoTrackList/removetrack_event), [`change`](/en-US/docs/Web/API/VideoTrackList/change_event)
+- This event on [`VideoTrackList`](/en-US/docs/Web/API/VideoTrackList) targets: [`addtrack`](/en-US/docs/Web/API/VideoTrackList/addtrack_event)
+- This event on [`AudioTrackList`](/en-US/docs/Web/API/AudioTrackList) targets: [`addtrack`](/en-US/docs/Web/API/AudioTrackList/addtrack_event)
+- This event on [`MediaStream`](/en-US/docs/Web/API/MediaStream) targets: [`addtrack`](/en-US/docs/Web/API/MediaStream/addtrack_event)
+- [Media Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)

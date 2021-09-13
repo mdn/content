@@ -12,31 +12,28 @@ tags:
   - updateCommands
 browser-compat: api.Window.updateCommands
 ---
-<p>{{ ApiRef() }}{{Non-standard_header}}</p>
+{{ ApiRef() }}{{Non-standard_header}}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>Updates the state of commands of the current chrome window (UI).</p>
+Updates the state of commands of the current chrome window (UI).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="eval">window.updateCommands("sCommandName")
-</pre>
+    window.updateCommands("sCommandName")
 
-<h2 id="Parameters">Parameters</h2>
+## Parameters
 
-<ul>
- <li><code>sCommandName</code> is a particular string which describes what kind of update event this is (e.g. whether we are in bold right now).</li>
-</ul>
+- `sCommandName` is a particular string which describes what kind of update event this is (e.g. whether we are in bold right now).
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>This enables or disables items (setting or clearing the "disabled" attribute on the command node as appropriate), or ensures that the command state reflects the state of the selection by setting current state information in the "state" attribute of the XUL command nodes.</p>
+This enables or disables items (setting or clearing the "disabled" attribute on the command node as appropriate), or ensures that the command state reflects the state of the selection by setting current state information in the "state" attribute of the XUL command nodes.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>DOM Level 0. Not part of specification.</p>
+DOM Level 0. Not part of specification.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

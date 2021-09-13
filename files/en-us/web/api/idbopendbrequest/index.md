@@ -12,53 +12,52 @@ tags:
   - Storage
 browser-compat: api.IDBOpenDBRequest
 ---
-<p>{{APIRef("IndexedDB")}}</p>
+{{APIRef("IndexedDB")}}
 
-<div>
-<p>The <strong><code>IDBOpenDBRequest</code></strong> interface of the IndexedDB API provides access to the results of requests to open or delete databases (performed using {{domxref("IDBFactory.open")}} and {{domxref("IDBFactory.deleteDatabase")}}), using specific event handler attributes.</p>
-</div>
+The **`IDBOpenDBRequest`** interface of the IndexedDB API provides access to the results of requests to open or delete databases (performed using {{domxref("IDBFactory.open")}} and {{domxref("IDBFactory.deleteDatabase")}}), using specific event handler attributes.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Also inherits methods from its parents {{domxref("IDBRequest")}} and {{domxref("EventTarget")}}</em>.</p>
+_Also inherits methods from its parents {{domxref("IDBRequest")}} and {{domxref("EventTarget")}}_.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>No methods, but inherits methods from its parents {{domxref("IDBRequest")}} and {{domxref("EventTarget")}}.</em></p>
+_No methods, but inherits methods from its parents {{domxref("IDBRequest")}} and {{domxref("EventTarget")}}._
 
-<h2 id="Events">Events</h2>
+## Events
 
-<p><em>Events defined on parent interfaces, {{DOMxRef("IDBRequest")}} and {{DOMxRef("EventTarget")}}, can also be dispatched on <code>IDBOpenDBRequest</code> objects.</em></p>
-<p>Listen to these generic and specific events using <code>addEventListener()</code> or by assigning an event listener to the <code>on<em>eventname</em></code> property of this interface. </p>
-<p>Events specific to this interface are:</p>
+_Events defined on parent interfaces, {{DOMxRef("IDBRequest")}} and {{DOMxRef("EventTarget")}}, can also be dispatched on `IDBOpenDBRequest` objects._
 
-<dl>
- <dt><a href="/en-US/docs/Web/API/IDBOpenDBRequest/blocked_event"><code>blocked</code></a></dt>
- <dd>Fired when an open connection to a database is blocking a <code>versionchange</code> transaction on the same database. Also available via the <code><a href="/en-US/docs/Web/API/IDBOpenDBRequest/onblocked">onblocked</a></code> property.</dd>
- <dt><a href="/en-US/docs/Web/API/IDBOpenDBRequest/upgradeneeded_event"><code>upgradeneeded</code></a></dt>
- <dd>Fired when an attempt was made to open a database with a version number higher than its current version. Also available via the <code><a href="/en-US/docs/Web/API/IDBOpenDBRequest/onupgradeneeded">onupgradeneeded</a></code> property.</dd>
-</dl>
+Listen to these generic and specific events using `addEventListener()` or by assigning an event listener to the `oneventname` property of this interface.
 
-<h2 id="Example">Example</h2>
+Events specific to this interface are:
 
-<p>In the following example you can see the onupgradeneeded handler being used to update the database structure if a database with a higher version number is loaded. For a full working example, see our <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> app (<a href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</p>
+- [`blocked`](/en-US/docs/Web/API/IDBOpenDBRequest/blocked_event)
+  - : Fired when an open connection to a database is blocking a `versionchange` transaction on the same database. Also available via the [`onblocked`](/en-US/docs/Web/API/IDBOpenDBRequest/onblocked) property.
+- [`upgradeneeded`](/en-US/docs/Web/API/IDBOpenDBRequest/upgradeneeded_event)
+  - : Fired when an attempt was made to open a database with a version number higher than its current version. Also available via the [`onupgradeneeded`](/en-US/docs/Web/API/IDBOpenDBRequest/onupgradeneeded) property.
 
-<pre class="brush: js;">var db;
+## Example
+
+In the following example you can see the onupgradeneeded handler being used to update the database structure if a database with a higher version number is loaded. For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) app ([view example live](https://mdn.github.io/to-do-notifications/).)
+
+```js
+var db;
 
 // Let us open our database
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // these event handlers act on the database being opened.
 DBOpenRequest.onerror = function(event) {
-  note.innerHTML += '&lt;li&gt;Error loading database.&lt;/li&gt;';
+  note.innerHTML += '<li>Error loading database.</li>';
 };
 
 DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '&lt;li&gt;Database initialised.&lt;/li&gt;';
+  note.innerHTML += '<li>Database initialised.</li>';
 
   // store the result of opening the database in the db
   // variable. This is used a lot below
@@ -78,7 +77,7 @@ DBOpenRequest.onupgradeneeded = function(event) {
   var db = this.result;
 
   db.onerror = function(event) {
-    note.innerHTML += '&lt;li&gt;Error loading database.&lt;/li&gt;';
+    note.innerHTML += '<li>Error loading database.</li>';
   };
 
   // Create an objectStore for this database
@@ -92,24 +91,23 @@ DBOpenRequest.onupgradeneeded = function(event) {
   objectStore.createIndex("month", "month", { unique: false });
   objectStore.createIndex("year", "year", { unique: false });
   objectStore.createIndex("notified", "notified", { unique: false });
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
- <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
- <li>Using transactions: {{domxref("IDBTransaction")}}</li>
- <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
- <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
- <li>Using cursors: {{domxref("IDBCursor")}}</li>
- <li>Reference example: <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

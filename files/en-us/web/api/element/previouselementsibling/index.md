@@ -10,60 +10,58 @@ tags:
   - Reference
 browser-compat: api.Element.previousElementSibling
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>Element.previousElementSibling</strong></code>
+The **`Element.previousElementSibling`**
 read-only property returns the {{domxref("Element")}} immediately prior to the specified
-one in its parent's children list, or <code>null</code> if the specified element is the first one in the list.</p>
+one in its parent's children list, or `null` if the specified element is the first one in the list.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 // Getter
 element = el.previousElementSibling;
 
 // No setter; read-only property
-</pre>
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: html">&lt;div id="div-01"&gt;Here is div-01&lt;/div&gt;
-&lt;div id="div-02"&gt;Here is div-02&lt;/div&gt;
-&lt;li&gt;This is a list item&lt;/li&gt;
-&lt;li&gt;This is another list item&lt;/li&gt;
-&lt;div id="div-03"&gt;Here is div-03&lt;/div&gt;
+```html
+<div id="div-01">Here is div-01</div>
+<div id="div-02">Here is div-02</div>
+<li>This is a list item</li>
+<li>This is another list item</li>
+<div id="div-03">Here is div-03</div>
 
-&lt;script&gt;
+<script>
   let el = document.getElementById('div-03').previousElementSibling;
-  document.write('&lt;p&gt;Siblings of div-03&lt;/p&gt;&lt;ol&gt;');
+  document.write('<p>Siblings of div-03</p><ol>');
   while (el) {
-    document.write('&lt;li&gt;' + el.nodeName + '&lt;/li&gt;');
+    document.write('<li>' + el.nodeName + '</li>');
     el = el.previousElementSibling;
   }
-  document.write('&lt;/ol&gt;');
-&lt;/script&gt;
-</pre>
+  document.write('</ol>');
+</script>
+```
 
-<p>This example outputs the following into the page when it loads:</p>
+This example outputs the following into the page when it loads:
 
-<pre>Siblings of div-03
+    Siblings of div-03
 
-   1. LI
-   2. LI
-   3. DIV
-   4. DIV
-</pre>
+       1. LI
+       2. LI
+       3. DIV
+       4. DIV
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Element.nextElementSibling")}}</li>
-</ul>
+- {{domxref("Element.nextElementSibling")}}

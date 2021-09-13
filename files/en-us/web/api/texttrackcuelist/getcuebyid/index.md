@@ -11,49 +11,48 @@ tags:
   - Media
 browser-compat: api.TextTrackCueList.getCueById
 ---
-<div>{{APIRef("WebVTT")}}</div>
+{{APIRef("WebVTT")}}
 
-<p>The <strong><code>getCueById()</code></strong> method of the {{domxref("TextTrackCueList")}} interface returns the first {{domxref("VTTCue")}} in the list represented by the <code>TextTrackCueList</code> object whose identifier matches the value of <code>id</code>.</p>
+The **`getCueById()`** method of the {{domxref("TextTrackCueList")}} interface returns the first {{domxref("VTTCue")}} in the list represented by the `TextTrackCueList` object whose identifier matches the value of `id`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <var>cue</var> = <var>TextTrackCueList</var>.getCueById(<var>id</var>);</pre>
+    var cue = TextTrackCueList.getCueById(id);
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>id</dt>
-  <dd>A {{domxref("DOMString")}} which is an identifier for the cue.</dd>
-</dl>
+- id
+  - : A {{domxref("DOMString")}} which is an identifier for the cue.
 
-<h3 id="Returns">Return value</h3>
+### Return value
 
-<p>A {{domxref("VTTCue")}} object.</p>
+A {{domxref("VTTCue")}} object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The {{domxref("TextTrack.cues")}} property returns a {{domxref("TextTrackCueList")}} containing the current cues for that particular track. Calling <code>cues.getCueById("second")</code> returns the {{domxref("VTTCue")}} with an ID of "second".</p>
+The {{domxref("TextTrack.cues")}} property returns a {{domxref("TextTrackCueList")}} containing the current cues for that particular track. Calling `cues.getCueById("second")` returns the {{domxref("VTTCue")}} with an ID of "second".
 
-<pre>WEBVTT
+    WEBVTT
 
-first
-00:00:00.000 --> 00:00:00.999  line:80%
-Hildy!
+    first
+    00:00:00.000 --> 00:00:00.999  line:80%
+    Hildy!
 
-second
-00:00:01.000 --> 00:00:01.499 line:80%
-How are you?
-</pre>
+    second
+    00:00:01.000 --> 00:00:01.499 line:80%
+    How are you?
 
-<pre class="brush: js">let video = document.getElementById("video");
+```js
+let video = document.getElementById("video");
 video.onplay = function () {
   console.log(video.textTracks[0].cues.getCueById("second")) // a VTTCue object;
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

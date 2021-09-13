@@ -9,36 +9,38 @@ tags:
   - HIDConnectionEvent
 browser-compat: api.HIDConnectionEvent.device
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}
 
-<p>The <strong><code>device</code></strong> read-only property of the {{domxref("HIDConnectionEvent")}} interface returns the {{domxref("HIDDevice")}} associated with this connection event.</p>
+The **`device`** read-only property of the {{domxref("HIDConnectionEvent")}} interface returns the {{domxref("HIDDevice")}} associated with this connection event.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let device = HIDConnectionEvent.device;</pre>
+```js
+let device = HIDConnectionEvent.device;
+```
 
-<h3>Value</h3>
+### Value
 
-<p>A {{domxref("HIDDevice")}}.</p>
+A {{domxref("HIDDevice")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example registers event listeners for <code>connect</code> and <code>disconnect</code> events, then prints the {{domxref("HIDDevice.productName")}} to the console.</p>
+The following example registers event listeners for `connect` and `disconnect` events, then prints the {{domxref("HIDDevice.productName")}} to the console.
 
-<pre class="brush: js">navigator.hid.addEventListener('connect', ({device}) => {
+```js
+navigator.hid.addEventListener('connect', ({device}) => {
   console.log(`HID connected: ${device.productName}`);
 });
 
 navigator.hid.addEventListener('disconnect', ({device}) => {
   console.log(`HID disconnected: ${device.productName}`);
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
-
+{{Compat}}

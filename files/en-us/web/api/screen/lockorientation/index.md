@@ -11,129 +11,118 @@ tags:
   - screen
 browser-compat: api.Screen.lockOrientation
 ---
-<p>{{APIRef("Screen Orientation API")}}{{Deprecated_Header}}</p>
+{{APIRef("Screen Orientation API")}}{{Deprecated_Header}}
 
-<p>The <strong><code>lockOrientation()</code></strong> method of the {{DOMxRef("Screen")}}
-  interface locks the screen into a specified orientation.</p>
+The **`lockOrientation()`** method of the {{DOMxRef("Screen")}}
+interface locks the screen into a specified orientation.
 
-<div class="notecard warning">
-  <p><strong>Warning:</strong> This feature is deprecated and should be avoided. Use the {{DOMxRef("ScreenOrientation.lock()")}} method instead.</p>
-</div>
+> **Warning:** This feature is deprecated and should be avoided. Use the {{DOMxRef("ScreenOrientation.lock()")}} method instead.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This method only works for installed Web apps or for Web pages
-    in <a href="/en-US/docs/Web/API/Fullscreen_API">full-screen mode</a>.
-  </p>
-</div>
+> **Note:** This method only works for installed Web apps or for Web pages
+> in [full-screen mode](/en-US/docs/Web/API/Fullscreen_API).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var>lockAllowed</var> = window.screen.lockOrientation(<var>orientation</var>);</pre>
+```js
+lockAllowed = window.screen.lockOrientation(orientation);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>orientation</var></code></dt>
-  <dd>The orientation into which to lock the screen. This is either a string or an array
+- `orientation`
+  - : The orientation into which to lock the screen. This is either a string or an array
     of strings. Passing several strings lets the screen rotate only in the selected
-    orientations.</dd>
-</dl>
+    orientations.
 
-<p>The following strings represent the possible orientation requirements you may specify:
-</p>
+The following strings represent the possible orientation requirements you may specify:
 
-<dl>
-  <dt><code>portrait-primary</code></dt>
-  <dd>It represents the orientation of the screen when it is in its primary portrait mode.
+- `portrait-primary`
+  - : It represents the orientation of the screen when it is in its primary portrait mode.
     A screen is considered in its primary portrait mode if the device is held in its
     normal position and that position is in portrait, or if the normal position of the
     device is in landscape and the device held turned by 90° clockwise. The normal
-    position is device dependant.</dd>
-  <dt><code>portrait-secondary</code></dt>
-  <dd>It represents the orientation of the screen when it is in its secondary portrait
+    position is device dependant.
+- `portrait-secondary`
+  - : It represents the orientation of the screen when it is in its secondary portrait
     mode. A screen is considered in its secondary portrait mode if the device is held 180°
     from its normal position and that position is in portrait, or if the normal position
     of the device is in landscape and the device held is turned by 90° counterclockwise. The
-    normal position is device dependant.</dd>
-  <dt><code>landscape-primary</code></dt>
-  <dd>It represents the orientation of the screen when it is in its primary landscape
+    normal position is device dependant.
+- `landscape-primary`
+  - : It represents the orientation of the screen when it is in its primary landscape
     mode. A screen is considered in its primary landscape mode if the device is held in
     its normal position and that position is in landscape, or if the normal position of
     the device is in portrait and the device held is turned by 90° clockwise. The normal
-    position is device dependant.</dd>
-  <dt><code>landscape-secondary</code></dt>
-  <dd>It represents the orientation of the screen when it is in its secondary landscape
+    position is device dependant.
+- `landscape-secondary`
+  - : It represents the orientation of the screen when it is in its secondary landscape
     mode. A screen is considered in its secondary landscape mode if the device held is
     180° from its normal position and that position is in landscape, or if the normal
     position of the device is in portrait and the device held is turned by 90°
-    counterclockwise. The normal position is device dependant.</dd>
-  <dt><code>portrait</code></dt>
-  <dd>It represents both <code>portrait-primary</code> and
-    <code>portrait-secondary</code>.</dd>
-  <dt><code>landscape</code></dt>
-  <dd>It represents both <code>landscape-primary</code> and
-    <code>landscape-secondary</code>.</dd>
-  <dt><code>default</code></dt>
-  <dd>It represents either <code>portrait-primary </code>and
-    <code>landscape-primary</code> depends on natural orientation of devices. For example,
-    if the panel resolution is 1280*800, <code>default</code> will make it landscape, if
-    the resolution is 800*1280, <code>default</code> will make it to portrait.</dd>
-</dl>
+    counterclockwise. The normal position is device dependant.
+- `portrait`
+  - : It represents both `portrait-primary` and
+    `portrait-secondary`.
+- `landscape`
+  - : It represents both `landscape-primary` and
+    `landscape-secondary`.
+- `default`
+  - : It represents either `portrait-primary `and
+    `landscape-primary` depends on natural orientation of devices. For example,
+    if the panel resolution is 1280\*800, `default` will make it landscape, if
+    the resolution is 800\*1280, `default` will make it to portrait.
 
-<div class="note">
-  <p><strong>Note:</strong> It's possible to set several locks at the same time. So, if
-    the lock is set for only one orientation, the screen orientation will never change
-    until the screen orientation is unlocked. Otherwise, the screen orientation will
-    change from an orientation to another as long as the orientations are amongst the
-    orientations the device has been locked to.</p>
-</div>
+> **Note:** It's possible to set several locks at the same time. So, if
+> the lock is set for only one orientation, the screen orientation will never change
+> until the screen orientation is unlocked. Otherwise, the screen orientation will
+> change from an orientation to another as long as the orientations are amongst the
+> orientations the device has been locked to.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Returns <code>true</code> if the orientation was authorized to be locked or
-  <code>false</code> if the orientation locking was denied. Note that the return value
-  doesn't indicate that the screen orientation is indeed locked: there may be a delay.</p>
+Returns `true` if the orientation was authorized to be locked or
+`false` if the orientation locking was denied. Note that the return value
+doesn't indicate that the screen orientation is indeed locked: there may be a delay.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Usage_with_a_DOMString_argument">Usage with a <code>DOMString</code> argument</h3>
+### Usage with a `DOMString` argument
 
-<pre class="brush: js;">screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
+```js
+screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
 
 if (screen.lockOrientationUniversal("landscape-primary")) {
   // Orientation was locked
 } else {
   // Orientation lock failed
 }
-</pre>
+```
 
-<h3 id="Usage_with_an_Array_argument">Usage with an <code>Array</code> argument</h3>
+### Usage with an `Array` argument
 
-<pre class="brush: js;">screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
+```js
+screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
 
 if (screen.lockOrientationUniversal(["landscape-primary", "landscape-secondary"])) {
   // Orientation was locked
 } else {
   // Orientation lock failed
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This feature is not part of any specification. It is no longer on track to becoming a standard.</p>
+This feature is not part of any specification. It is no longer on track to becoming a standard.
 
-<p>Use {{domxref("ScreenOrientation.lock()")}} instead.</p>
+Use {{domxref("ScreenOrientation.lock()")}} instead.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{DOMxRef("Screen.orientation")}}</li>
-  <li>{{DOMxRef("Screen.unlockOrientation()")}}</li>
-  <li>{{DOMxRef("Screen.onorientationchange")}}</li>
-  <li><a href="/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation">Managing screen orientation</a>
-  </li>
-</ul>
+- {{DOMxRef("Screen.orientation")}}
+- {{DOMxRef("Screen.unlockOrientation()")}}
+- {{DOMxRef("Screen.onorientationchange")}}
+- [Managing screen orientation](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)

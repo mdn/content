@@ -2,49 +2,48 @@
 title: RTCRtpStreamStats.trackId
 slug: Web/API/RTCRtpStreamStats/trackId
 tags:
-- API
-- Property
-- RTCRtpStreamStats
-- RTP
-- Reference
-- Statistics
-- Stats
-- WebRTC
-- WebRTC API
-- id
-- rtc
-- track
-- trackId
+  - API
+  - Property
+  - RTCRtpStreamStats
+  - RTP
+  - Reference
+  - Statistics
+  - Stats
+  - WebRTC
+  - WebRTC API
+  - id
+  - rtc
+  - track
+  - trackId
 browser-compat: api.RTCRtpStreamStats.trackId
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The {{domxref("RTCRtpStreamStats")}} dictionary's
-    <strong><code>trackId</code></strong> property is a string which uniquely identifies
-    the {{domxref("RTCMediaStreamTrackStats")}} object which contains the track statistics
-    for the {{domxref("MediaStreamTrack")}} for which statistics are provided in this
-    object.</p>
+The {{domxref("RTCRtpStreamStats")}} dictionary's
+**`trackId`** property is a string which uniquely identifies
+the {{domxref("RTCMediaStreamTrackStats")}} object which contains the track statistics
+for the {{domxref("MediaStreamTrack")}} for which statistics are provided in this
+object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>trackID</em> = <em>RTCRtpStreamStats</em>.trackId;</pre>
+```js
+var trackID = RTCRtpStreamStats.trackId;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} which uniquely identifies the
-  {{domxref("RTCMediaStreamTrackStats")}} object that provides statistics for the track
-  for which statistics are being collected by this {{domxref("RTCStatsReport")}}.</p>
+A {{domxref("DOMString")}} which uniquely identifies the
+{{domxref("RTCMediaStreamTrackStats")}} object that provides statistics for the track
+for which statistics are being collected by this {{domxref("RTCStatsReport")}}.
 
-<div class="note">
-  <p><strong>Note:</strong> This value is <em>not</em> the same as the value of
-    {{domxref("MediaStramTrack.id")}}.</p>
-</div>
+> **Note:** This value is _not_ the same as the value of
+> {{domxref("MediaStramTrack.id")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

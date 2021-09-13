@@ -19,51 +19,44 @@ tags:
   - Non-standard
 browser-compat: api.BasicCardRequest
 ---
-<p>{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}</p>
+{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
 
-<p>The <strong><code>BasicCardRequest</code></strong> dictionary is a JavaScript object-structure that can be used in the <a href="/en-US/docs/Web/API/Payment_Request_API">Payment Request API</a>. The properties of <code>BasicCardRequest</code> are defined in the {{anch("Specifications", "Basic Card Payment spec")}}).</p>
+The **`BasicCardRequest`** dictionary is a JavaScript object-structure that can be used in the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API). The properties of `BasicCardRequest` are defined in the {{anch("Specifications", "Basic Card Payment spec")}}).
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
-	<dt>{{domxref('BasicCardRequest.supportedNetworks')}} {{optional_inline}} {{securecontext_inline}}</dt>
-	<dd>An optional array of {{domxref("DOMString")}}s representing the card networks that the retailer supports (e.g. "<code>amex"</code>, "<code>mastercard"</code>); see {{anch("Card network identifiers")}} for a complete list. If the property is missing, it implies that all networks are supported.</dd>
-</dl>
+- {{domxref('BasicCardRequest.supportedNetworks')}} {{optional_inline}} {{securecontext_inline}}
+  - : An optional array of {{domxref("DOMString")}}s representing the card networks that the retailer supports (e.g. "`amex"`, "`mastercard"`); see {{anch("Card network identifiers")}} for a complete list. If the property is missing, it implies that all networks are supported.
 
-<h3 id="Obsolete_properties">Obsolete properties</h3>
+### Obsolete properties
 
-<p>These properties have been removed from the Payment Method: Basic Card specification and should no longer be used.</p>
+These properties have been removed from the Payment Method: Basic Card specification and should no longer be used.
 
-<dl>
-	<dt>{{domxref('BasicCardRequest.supportedTypes')}} {{deprecated_inline}} {{optional_inline}} {{securecontext_inline}}</dt>
-	<dd>This obsolete property was used to provide an optional array of {{domxref("DOMString")}}s representing the card types that the retailer supports (e.g. <code>credit</code>, <code>debit</code>, <code>prepaid</code>). If the property is missing, it implies that all the card types are supported. Instead of using this property, it is up to the server to check support for the card given the information coded into the account number.</dd>
-</dl>
+- {{domxref('BasicCardRequest.supportedTypes')}} {{deprecated_inline}} {{optional_inline}} {{securecontext_inline}}
+  - : This obsolete property was used to provide an optional array of {{domxref("DOMString")}}s representing the card types that the retailer supports (e.g. `credit`, `debit`, `prepaid`). If the property is missing, it implies that all the card types are supported. Instead of using this property, it is up to the server to check support for the card given the information coded into the account number.
 
-<h2 id="Card_network_identifiers">Card network identifiers</h2>
+## Card network identifiers
 
-<p>The W3C maintains an official list of <a href="https://www.w3.org/Payments/card-network-ids">approved card network identifier strings</a>, which may be used in the {{domxref("BasicCardRequest.supportedNetworks", "supportedNetworks")}} list. Those are:</p>
+The W3C maintains an official list of [approved card network identifier strings](https://www.w3.org/Payments/card-network-ids), which may be used in the {{domxref("BasicCardRequest.supportedNetworks", "supportedNetworks")}} list. Those are:
 
-<div class="twocolumns">
-<ul>
-	<li><code>amex</code></li>
-	<li><code>cartebancaire</code></li>
-	<li><code>diners</code></li>
-	<li><code>discover</code></li>
-	<li><code>jcb</code></li>
-	<li><code>mastercard</code></li>
-	<li><code>mir</code></li>
-	<li><code>unionpay</code></li>
-	<li><code>visa</code></li>
-</ul>
-</div>
+- `amex`
+- `cartebancaire`
+- `diners`
+- `discover`
+- `jcb`
+- `mastercard`
+- `mir`
+- `unionpay`
+- `visa`
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the following example, the {{domxref("PaymentRequest.PaymentRequest","PaymentRequest()")}} constructor is used to create a new payment request, which takes three objects as parameters — one containing details of the payment methods that can be used for the payment, one containing details of the actual order (such as items bought and shipping options), and an optional object that describes what data is needed to fullfil the payment (e.g., a shipping address).</p>
+In the following example, the {{domxref("PaymentRequest.PaymentRequest","PaymentRequest()")}} constructor is used to create a new payment request, which takes three objects as parameters — one containing details of the payment methods that can be used for the payment, one containing details of the actual order (such as items bought and shipping options), and an optional object that describes what data is needed to fullfil the payment (e.g., a shipping address).
 
-<p>The first of these three (<code>supportedInstruments</code> in the example below) contains a <code>data</code> property that has to conform to the structure defined by the <code>BasicCardRequest</code> dictionary. </p>
+The first of these three (`supportedInstruments` in the example below) contains a `data` property that has to conform to the structure defined by the `BasicCardRequest` dictionary.
 
-<pre class="brush: js">var supportedInstruments = [{
+```js
+var supportedInstruments = [{
   supportedMethods: 'basic-card',
   data: {
     supportedNetworks: ['visa', 'mastercard', 'amex', 'jcb',
@@ -103,11 +96,13 @@ try {
   });
 } catch (e) {
   // Catch any other errors.
-}</pre>
+}
+```
 
-<p>Once the payment flow has been triggered using {{domxref("PaymentRequest.show()")}} and the promise resolves successfully, the {{domxref("PaymentResponse")}} object available inside the fulfilled promise (<code>instrumentResponse</code> above) will have a {{domxref("PaymentResponse.details", "details")}} property that will contain response details. This has to conform to the structure defined by the {{domxref("BasicCardResponse")}} dictionary, and may look something like this:</p>
+Once the payment flow has been triggered using {{domxref("PaymentRequest.show()")}} and the promise resolves successfully, the {{domxref("PaymentResponse")}} object available inside the fulfilled promise (`instrumentResponse` above) will have a {{domxref("PaymentResponse.details", "details")}} property that will contain response details. This has to conform to the structure defined by the {{domxref("BasicCardResponse")}} dictionary, and may look something like this:
 
-<pre class="brush: js">{
+```js
+{
   "cardNumber' : '9999999999999999",
   "cardholderName' : 'Mr Dick Straw",
   "cardSecurityCode" : "999",
@@ -115,14 +110,15 @@ try {
   "expiryYear" : "2021",
   "billingAddress" : {
     "country" : "GB",
-    // etc. billing address is a <a href="/en-US/docs/Web/API/PaymentAddress">PaymentAddress</a> object
+    // etc. billing address is a PaymentAddress object
   }
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This feature is no longer part of any specification.</p>
+This feature is no longer part of any specification.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

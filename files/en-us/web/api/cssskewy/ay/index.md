@@ -2,38 +2,40 @@
 title: CSSSkewY.ay
 slug: Web/API/CSSSkewY/ay
 tags:
-- API
-- CSS Typed Object Model API
-- CSSSkewY
-- CSSTransformComponent
-- CSSTransformValue
-- Experimental
-- Houdini
-- Property
+  - API
+  - CSS Typed Object Model API
+  - CSSSkewY
+  - CSSTransformComponent
+  - CSSTransformValue
+  - Experimental
+  - Houdini
+  - Property
 browser-compat: api.CSSSkewY.ay
 ---
-<div>{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}</div>
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}
 
-<p>The <strong><code>ay</code></strong> property of the
-	{{domxref("CSSSkewY")}} interface gets and sets the angle used to distort the element
-	along the y-axis (or ordinate).</p>
+The **`ay`** property of the
+{{domxref("CSSSkewY")}} interface gets and sets the angle used to distort the element
+along the y-axis (or ordinate).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>skeway</var> = CSSSkewY.ay;</pre>
+```js
+var skeway = CSSSkewY.ay;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("CSSNumericValue")}}.</p>
+A {{domxref("CSSNumericValue")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>To do</p>
+To do
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

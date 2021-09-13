@@ -9,27 +9,30 @@ tags:
   - BackgroundFetchRegistration
 browser-compat: api.BackgroundFetchRegistration.id
 ---
-<div>{{DefaultAPISidebar("Background Fetch API")}}</div>
+{{DefaultAPISidebar("Background Fetch API")}}
 
-<p>The <strong><code>id</code></strong> read-only property of the {{domxref("BackgroundFetchRegistration")}} interface returns a copy of the background fetch's <code>ID</code>.</p>
+The **`id`** read-only property of the {{domxref("BackgroundFetchRegistration")}} interface returns a copy of the background fetch's `ID`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">let id = BackgroundFetchRegistration.id;</pre>
+    let id = BackgroundFetchRegistration.id;
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString","string")}}.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("DOMString","string")}}.
 
-<p>Logging the {{domxref("BackgroundFetchRegistration.id")}} to the console returns the <code>ID</code> set when registering the fetch. In this case, <code>"my-fetch"</code>.</p>
+## Examples
 
-<pre class="brush: js">console.log(bgFetch.id); // "my-fetch"</pre>
+Logging the {{domxref("BackgroundFetchRegistration.id")}} to the console returns the `ID` set when registering the fetch. In this case, `"my-fetch"`.
 
-<h2 id="Specifications">Specifications</h2>
+```js
+console.log(bgFetch.id); // "my-fetch"
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

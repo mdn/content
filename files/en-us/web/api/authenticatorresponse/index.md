@@ -11,35 +11,32 @@ tags:
   - WebAuthn
 browser-compat: api.AuthenticatorResponse
 ---
-<div>{{APIRef("Web Authentication API")}}{{securecontext_header}}</div>
+{{APIRef("Web Authentication API")}}{{securecontext_header}}
 
-<p>The <code><strong>AuthenticatorResponse</strong></code> interface of the <a href="/en-US/docs/Web/API/Web_Authentication_API">Web Authentication API</a> is the base interface for interfaces that provide a cryptographic root of trust for a key pair. The child interfaces include information from the browser such as the challenge origin and either may be returned from {{domxref("PublicKeyCredential.response")}}.</p>
+The **`AuthenticatorResponse`** interface of the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) is the base interface for interfaces that provide a cryptographic root of trust for a key pair. The child interfaces include information from the browser such as the challenge origin and either may be returned from {{domxref("PublicKeyCredential.response")}}.
 
-<h2 id="Interfaces_based_on_AuthenticatorResponse">Interfaces based on AuthenticatorResponse</h2>
+## Interfaces based on AuthenticatorResponse
 
-<p>Below is a list of interfaces based on the AuthenticatorResponse interface.</p>
+Below is a list of interfaces based on the AuthenticatorResponse interface.
 
-<ul>
- <li>{{domxref("AuthenticatorAssertionResponse")}}</li>
- <li>{{domxref("AuthenticatorAttestationResponse")}}</li>
-</ul>
+- {{domxref("AuthenticatorAssertionResponse")}}
+- {{domxref("AuthenticatorAttestationResponse")}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("AuthenticatorResponse.clientDataJSON")}}</dt>
- <dd>A <a href="/en-US/docs/Learn/JavaScript/Objects/JSON">JSON</a> string in an {{jsxref("ArrayBuffer")}}, representing the client data that was passed to {{domxref("CredentialsContainer.create()")}} or {{domxref("CredentialsContainer.get()")}}.</dd>
-</dl>
+- {{domxref("AuthenticatorResponse.clientDataJSON")}}
+  - : A [JSON](/en-US/docs/Learn/JavaScript/Objects/JSON) string in an {{jsxref("ArrayBuffer")}}, representing the client data that was passed to {{domxref("CredentialsContainer.create()")}} or {{domxref("CredentialsContainer.get()")}}.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Getting_an_AuthenticatorAssertionResponse">Getting an AuthenticatorAssertionResponse</h3>
+### Getting an AuthenticatorAssertionResponse
 
-<pre class="brush: js">var options = {
+```js
+var options = {
   challenge: new Uint8Array([/* bytes sent from the server */])
 };
 
@@ -51,12 +48,12 @@ navigator.credentials.get({ "publicKey": options })
 }).catch(function (err) {
      console.error(err);
 });
+```
 
-</pre>
+### Getting an AuthenticatorAttestationResponse
 
-<h3 id="Getting_an_AuthenticatorAttestationResponse">Getting an AuthenticatorAttestationResponse</h3>
-
-<pre class="brush: js">var publicKey = {
+```js
+var publicKey = {
   challenge: /* from the server */,
   rp: {
     name: "Example CORP",
@@ -80,20 +77,19 @@ navigator.credentials.create({ publicKey })
     var attestationResponse = newCredentialInfo.response;
   }).catch(function (err) {
      console.error(err);
-  });</pre>
+  });
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("AuthenticatorAttestationResponse")}}</li>
- <li>{{domxref("AuthenticatorAssertionResponse")}}</li>
- <li>{{domxref("PublicKeyCredential.response")}}</li>
-</ul>
+- {{domxref("AuthenticatorAttestationResponse")}}
+- {{domxref("AuthenticatorAssertionResponse")}}
+- {{domxref("PublicKeyCredential.response")}}

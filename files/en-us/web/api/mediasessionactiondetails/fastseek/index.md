@@ -2,59 +2,58 @@
 title: MediaSessionActionDetails.fastSeek
 slug: Web/API/MediaSessionActionDetails/fastSeek
 tags:
-- API
-- Audio
-- Media
-- Media Session API
-- MediaSessionActionDetails
-- Property
-- Reference
-- Scrub
-- Video
-- action
-- fastSeek
-- seek
+  - API
+  - Audio
+  - Media
+  - Media Session API
+  - MediaSessionActionDetails
+  - Property
+  - Reference
+  - Scrub
+  - Video
+  - action
+  - fastSeek
+  - seek
 browser-compat: api.MediaSessionActionDetails.fastSeek
 ---
-<p>{{APIRef("Media Session API")}}</p>
+{{APIRef("Media Session API")}}
 
-<p>The Boolean property <code><strong>fastSeek</strong></code> in the
-  {{domxref("MediaSessionActionDetails")}} dictionary is an optional value which, when
-  specified and <code>true</code>, indicates that the requested
-  <code><a href="/en-US/docs/Web/API/MediaSessionActionDetails#seekto">seekto</a></code>
-  operation is part of an ongoing series of <code>seekto</code> operations. Your handler
-  should take steps to return as quickly as possible by skipping any steps of its
-  operation which are only necessary when the seek operation is complete.</p>
+The Boolean property **`fastSeek`** in the
+{{domxref("MediaSessionActionDetails")}} dictionary is an optional value which, when
+specified and `true`, indicates that the requested
+[`seekto`](/en-US/docs/Web/API/MediaSessionActionDetails#seekto)
+operation is part of an ongoing series of `seekto` operations. Your handler
+should take steps to return as quickly as possible by skipping any steps of its
+operation which are only necessary when the seek operation is complete.
 
-<p>Once <code>fastSeek</code> is <code>false</code> or not present, the repeating series
-  of <code>seekto</code> actions is complete and you can finalize the state of your web
-  app or content.</p>
+Once `fastSeek` is `false` or not present, the repeating series
+of `seekto` actions is complete and you can finalize the state of your web
+app or content.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let <em>mediaSessionActionDetails</em> = { fastSeek: <em>shouldFastSeek</em> };
+```js
+let mediaSessionActionDetails = { fastSeek: shouldFastSeek };
 
-let <em>shouldFastSeek</em> = <em>mediaSessionActionDetails</em>.fastSeek;
-</pre>
+let shouldFastSeek = mediaSessionActionDetails.fastSeek;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A Boolean which is <code>true</code> if the action is part of an ongoing series of seek
-  actions which should be treated as part of an overall seek operation. If the value
-  is <code>false</code> or this property isn't present, the seek is final.</p>
+A Boolean which is `true` if the action is part of an ongoing series of seek
+actions which should be treated as part of an overall seek operation. If the value
+is `false` or this property isn't present, the seek is final.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Media_Session_API">Media Session API</a></li>
-  <li>Refer to the {{domxref("MediaSession")}} method
-    {{domxref("MediaSession.setActionHandler", "setActionHandler()")}}</li>
-</ul>
+- [Media Session API](/en-US/docs/Web/API/Media_Session_API)
+- Refer to the {{domxref("MediaSession")}} method
+  {{domxref("MediaSession.setActionHandler", "setActionHandler()")}}

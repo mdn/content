@@ -11,83 +11,79 @@ tags:
   - pipeTo
 browser-compat: api.ReadableStream.pipeTo
 ---
-<div>{{SeeCompatTable}}{{APIRef("Streams")}}</div>
+{{SeeCompatTable}}{{APIRef("Streams")}}
 
-<p>The <strong><code>pipeTo()</code></strong> method of the
-  {{domxref("ReadableStream")}} interface pipes the current <code>ReadableStream</code> to
-  a given {{domxref("WritableStream")}} and returns a {{jsxref("Promise")}} that fulfills when the
-  piping process completes successfully, or rejects if any errors were encountered.</p>
+The **`pipeTo()`** method of the
+{{domxref("ReadableStream")}} interface pipes the current `ReadableStream` to
+a given {{domxref("WritableStream")}} and returns a {{jsxref("Promise")}} that fulfills when the
+piping process completes successfully, or rejects if any errors were encountered.
 
-<p>Piping a stream will generally lock it for the duration of the pipe, preventing other
-  readers from locking it.</p>
+Piping a stream will generally lock it for the duration of the pipe, preventing other
+readers from locking it.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>promise</em> = <em>readableStream</em>.pipeTo(<em>destination</em>[, <em>options</em>]);</pre>
+```js
+var promise = readableStream.pipeTo(destination[, options]);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>destination</dt>
-  <dd>A {{domxref("WritableStream")}} that acts as the final destination for the
-    {{domxref("ReadableStream")}}.</dd>
-  <dt>options {{optional_inline}}</dt>
-  <dd>The options that should be used when piping to the <code>writable</code> stream.
+- destination
+  - : A {{domxref("WritableStream")}} that acts as the final destination for the
+    {{domxref("ReadableStream")}}.
+- options {{optional_inline}}
+
+  - : The options that should be used when piping to the `writable` stream.
     Available options are:
-    <ol>
-      <li><code>preventClose</code>: If this is set to <code>true</code>, the source
-        <code>ReadableStream</code> closing will no longer cause the destination
-        <code>WritableStream</code> to be closed. The method will return a fulfilled
+
+    1.  `preventClose`: If this is set to `true`, the source
+        `ReadableStream` closing will no longer cause the destination
+        `WritableStream` to be closed. The method will return a fulfilled
         promise once this process completes, unless an error is encountered while closing
-        the destination in which case it will be rejected with that error.</li>
-      <li><code>preventAbort</code>: If this is set to <code>true</code>, errors in the
-        source <code>ReadableStream</code> will no longer abort the destination
-        <code>WritableStream</code>. The method will return a promise rejected with the
+        the destination in which case it will be rejected with that error.
+    2.  `preventAbort`: If this is set to `true`, errors in the
+        source `ReadableStream` will no longer abort the destination
+        `WritableStream`. The method will return a promise rejected with the
         source’s error, or with any error that occurs during aborting the destination.
-      </li>
-      <li><code>preventCancel</code>: If this is set to <code>true</code>, errors in the
-        destination <code>WritableStream</code> will no longer cancel the source
-        <code>ReadableStream</code>. In this case the method will return a promise
+    3.  `preventCancel`: If this is set to `true`, errors in the
+        destination `WritableStream` will no longer cancel the source
+        `ReadableStream`. In this case the method will return a promise
         rejected with the source’s error, or with any error that occurs during canceling
         the source. In addition, if the destination writable stream starts out closed or
         closing, the source readable stream will no longer be canceled. In this case the
         method will return a promise rejected with an error indicating piping to a closed
-        stream failed, or with any error that occurs during canceling the source.</li>
-      <li><code>signal</code>: If set to an
-        <code><a href="/en-US/docs/Web/API/AbortSignal">AbortSignal</a></code> object,
+        stream failed, or with any error that occurs during canceling the source.
+    4.  `signal`: If set to an
+        [`AbortSignal`](/en-US/docs/Web/API/AbortSignal) object,
         ongoing pipe operations can then be aborted via the corresponding
-        <code><a href="/en-US/docs/Web/API/AbortController">AbortController</a></code>.
-      </li>
-    </ol>
-  </dd>
-</dl>
+        [`AbortController`](/en-US/docs/Web/API/AbortController).
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} that resolves when the piping process has completed.</p>
+A {{jsxref("Promise")}} that resolves when the piping process has completed.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>TypeError</dt>
-  <dd>The <code>writableStream</code> and/or <code>readableStream</code> objects are not a
-    writable stream/readable stream, or one or both of the streams are locked.</dd>
-</dl>
+- TypeError
+  - : The `writableStream` and/or `readableStream` objects are not a
+    writable stream/readable stream, or one or both of the streams are locked.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">// Fetch the original image
+```js
+// Fetch the original image
 fetch('png-logo.png')
 // Retrieve its body as ReadableStream
-.then(response =&gt; response.body)
-.then(body =&gt; body.pipeThrough(new PNGTransformStream()))
-.then(rs =&gt; rs.pipeTo(new FinalDestinationStream()))</pre>
+.then(response => response.body)
+.then(body => body.pipeThrough(new PNGTransformStream()))
+.then(rs => rs.pipeTo(new FinalDestinationStream()))
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

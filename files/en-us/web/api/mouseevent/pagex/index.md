@@ -15,90 +15,94 @@ tags:
   - pageX
 browser-compat: api.MouseEvent.pageX
 ---
-<div>{{APIRef("CSSOM View")}}</div>
+{{APIRef("CSSOM View")}}
 
-<p>The <code><strong>pageX</strong></code> read-only property of
-    the {{domxref("MouseEvent")}} interface returns the X (horizontal) coordinate (in
-    pixels) at which the mouse was clicked, relative to the left edge of the entire
-    document. This includes any portion of the document not currently visible.</p>
+The **`pageX`** read-only property of
+the {{domxref("MouseEvent")}} interface returns the X (horizontal) coordinate (in
+pixels) at which the mouse was clicked, relative to the left edge of the entire
+document. This includes any portion of the document not currently visible.
 
-<p>Being based on the edge of the document as it is, this property takes into account any
-  horizontal scrolling of the page. For example, if the page is scrolled such that 200
-  pixels of the left side of the document are scrolled out of view, and the mouse is
-  clicked 100 pixels inward from the left edge of the view, the value returned by
-  <code>pageX</code> will be 300.</p>
+Being based on the edge of the document as it is, this property takes into account any
+horizontal scrolling of the page. For example, if the page is scrolled such that 200
+pixels of the left side of the document are scrolled out of view, and the mouse is
+clicked 100 pixels inward from the left edge of the view, the value returned by
+`pageX` will be 300.
 
-<p>Originally, this property was defined as a <code>long</code> integer. The <a
-    href="/en-US/docs/Web/CSS/CSSOM_View">CSSOM View Module</a> redefined it as a
-  <code>double</code> float. See the {{anch("Browser compatibility")}} section for
-  details.</p>
+Originally, this property was defined as a `long` integer. The [CSSOM View Module](/en-US/docs/Web/CSS/CSSOM_View) redefined it as a
+`double` float. See the {{anch("Browser compatibility")}} section for
+details.
 
-<p>See {{SectionOnPage("/en-US/docs/Web/CSS/CSSOM_View/Coordinate_systems", "Page")}} for
-  some additional information about coordinates specified in this fashion.</p>
+See {{SectionOnPage("/en-US/docs/Web/CSS/CSSOM_View/Coordinate_systems", "Page")}} for
+some additional information about coordinates specified in this fashion.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>pageX</em> = <em>MouseEvent</em>.pageX;</pre>
+```js
+var pageX = MouseEvent.pageX;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A floating-point number of pixels from the left edge of the <em>document</em> at which
-  the mouse was clicked, regardless of any scrolling or viewport positioning that may be
-  in effect.</p>
+A floating-point number of pixels from the left edge of the _document_ at which
+the mouse was clicked, regardless of any scrolling or viewport positioning that may be
+in effect.
 
-<p>This property was originally specified in the Touch Events specification as a long
-  integer, but was redefined in the CSSOM View Module to be a double-precision
-  floating-point number to allow for subpixel precision. Even though numeric types both
-  are represented by <code>Number</code> in JavaScript, they may be handled differently
-  internally in the browser's code, resulting in potential behavior differences. See
-  {{anch("Browser compatibility")}} to learn which browsers have been updated to use the
-  revised data type.</p>
+This property was originally specified in the Touch Events specification as a long
+integer, but was redefined in the CSSOM View Module to be a double-precision
+floating-point number to allow for subpixel precision. Even though numeric types both
+are represented by `Number` in JavaScript, they may be handled differently
+internally in the browser's code, resulting in potential behavior differences. See
+{{anch("Browser compatibility")}} to learn which browsers have been updated to use the
+revised data type.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3>Showing the mouse position relative to page origin</h3>
+### Showing the mouse position relative to page origin
 
-<p>Let's take a look at a simple example that shows you the mouse's position relative to
-  the page's origin. Since this example is presented in an {{HTMLElement("iframe")}}, that
-  top-left corner is the top-left corner of the frame, not the browser window.</p>
+Let's take a look at a simple example that shows you the mouse's position relative to
+the page's origin. Since this example is presented in an {{HTMLElement("iframe")}}, that
+top-left corner is the top-left corner of the frame, not the browser window.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="box"&gt;
-  &lt;p&gt;
+```html
+<div class="box">
+  <p>
     Move the mouse around in this box to watch its coordinates change.
-  &lt;/p&gt;
-  &lt;p&gt;
-    &lt;code&gt;pageX&lt;/code&gt;: &lt;span id="x"&gt;n/a&lt;/span&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-    &lt;code&gt;pageY&lt;/code&gt;: &lt;span id="y"&gt;n/a&lt;/span&gt;
-  &lt;/p&gt;
-&lt;/div&gt;</pre>
+  </p>
+  <p>
+    <code>pageX</code>: <span id="x">n/a</span>
+  </p>
+  <p>
+    <code>pageY</code>: <span id="y">n/a</span>
+  </p>
+</div>
+```
 
-<p>The HTML is simple; the box we'll be watching for mouse events on is given the class
-  <code>"box"</code>. It has two <code>&lt;span&gt;</code> elements, one with the ID
-  <code>"x"</code> and one with the ID <code>"y"</code>. Those will be updated each time
-  an event occurs to contain the latest mouse coordinates relative to the page.</p>
+The HTML is simple; the box we'll be watching for mouse events on is given the class
+`"box"`. It has two `<span>` elements, one with the ID
+`"x"` and one with the ID `"y"`. Those will be updated each time
+an event occurs to contain the latest mouse coordinates relative to the page.
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<p>The CSS used for this example is shown below.</p>
+The CSS used for this example is shown below.
 
-<pre class="brush: css">.box {
+```css
+.box {
   width: 400px;
   height: 250px;
   border: 2px solid darkblue;
   background-color: blue;
   color: white;
   font: 16px "Zilla", "Open Sans", "Helvetica", "Arial", sans-serif;
-}</pre>
+}
+```
 
+#### JavaScript
 
-<h4 id="JavaScript">JavaScript</h4>
-
-<pre class="brush: js">var box = document.querySelector(".box");
+```js
+var box = document.querySelector(".box");
 var pageX = document.getElementById("x");
 var pageY = document.getElementById("y");
 
@@ -109,43 +113,41 @@ function updateDisplay(event) {
 
 box.addEventListener("mousemove", updateDisplay, false);
 box.addEventListener("mouseenter", updateDisplay, false);
-box.addEventListener("mouseleave", updateDisplay, false);</pre>
+box.addEventListener("mouseleave", updateDisplay, false);
+```
 
-<p>The JavaScript code uses {{domxref("EventTarget.addEventListener",
-  "addEventListener()")}} to register the function <code>updateDisplay()</code> as the
-  event handler for the {{event("mousemove")}}, {{event("mouseenter")}}, and
-  {{event("mouseleave")}} events.</p>
+The JavaScript code uses {{domxref("EventTarget.addEventListener",
+  "addEventListener()")}} to register the function `updateDisplay()` as the
+event handler for the {{event("mousemove")}}, {{event("mouseenter")}}, and
+{{event("mouseleave")}} events.
 
-<p><code>updateDisplay()</code> replaces the contents of the {{HTMLElement("span")}}
-  elements meant to contain the X and Y coordinates with the values of <code>pageX</code>
-  and {{domxref("MouseEvent.pageY", "pageY")}}.</p>
+`updateDisplay()` replaces the contents of the {{HTMLElement("span")}}
+elements meant to contain the X and Y coordinates with the values of `pageX`
+and {{domxref("MouseEvent.pageY", "pageY")}}.
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>Try this out here:</p>
+Try this out here:
 
-<p>{{EmbedLiveSample("Showing_the_mouse_position_relative_to_page_origin", 500, 300)}}</p>
+{{EmbedLiveSample("Showing_the_mouse_position_relative_to_page_origin", 500, 300)}}
 
-<h3 id="More_examples">More examples</h3>
+### More examples
 
-<p>You can also see an example that demonstrates <a
-    href="/en-US/docs/Web/CSS/CSSOM_View/Coordinate_systems#example">how to access the
-    mouse position</a> information in every available coordinate system.</p>
+You can also see an example that demonstrates [how to access the
+mouse position](/en-US/docs/Web/CSS/CSSOM_View/Coordinate_systems#example) information in every available coordinate system.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<p>Prior to being added to the CSSOM View specification, <code>pageX</code> and
-  <code>pageY</code> were available on the {{domxref("UIEvent")}} interface in a limited
-  subset of browsers for a short time.</p>
+Prior to being added to the CSSOM View specification, `pageX` and
+`pageY` were available on the {{domxref("UIEvent")}} interface in a limited
+subset of browsers for a short time.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("MouseEvent.pageY")}}</li>
-</ul>
+- {{domxref("MouseEvent.pageY")}}

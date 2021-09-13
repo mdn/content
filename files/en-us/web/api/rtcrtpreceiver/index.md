@@ -12,59 +12,49 @@ tags:
   - WebRTC Statistics API
 browser-compat: api.RTCRtpReceiver
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <strong><code>RTCRtpReceiver</code></strong> interface of the <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a> manages the reception and decoding of data for a {{domxref("MediaStreamTrack")}} on an {{domxref("RTCPeerConnection")}}.</p>
+The **`RTCRtpReceiver`** interface of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) manages the reception and decoding of data for a {{domxref("MediaStreamTrack")}} on an {{domxref("RTCPeerConnection")}}.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("RTCRtpReceiver.track")}} {{readonlyinline}}</dt>
- <dd>Returns the {{domxref("MediaStreamTrack")}} associated with the current <code>RTCRtpReceiver</code> instance. </dd>
- <dt>{{domxref("RTCRtpReceiver.transport")}} {{readonlyinline}}</dt>
- <dd>Returns the {{domxref("RTCDtlsTransport")}} instance over which the media for the receiver's track is received.</dd>
-</dl>
+- {{domxref("RTCRtpReceiver.track")}} {{readonlyinline}}
+  - : Returns the {{domxref("MediaStreamTrack")}} associated with the current `RTCRtpReceiver` instance.
+- {{domxref("RTCRtpReceiver.transport")}} {{readonlyinline}}
+  - : Returns the {{domxref("RTCDtlsTransport")}} instance over which the media for the receiver's track is received.
 
-<h3 id="Obsolete_properties">Obsolete properties</h3>
+### Obsolete properties
 
-<dl>
- <dt><code>rtcpTransport</code> {{deprecated_inline}}</dt>
- <dd>This property has been removed; the RTP and RTCP transports have been combined into a single transport. Use the {{domxref("RTCRtpReceiver.transport", "transport")}} property instead.</dd>
-</dl>
+- `rtcpTransport` {{deprecated_inline}}
+  - : This property has been removed; the RTP and RTCP transports have been combined into a single transport. Use the {{domxref("RTCRtpReceiver.transport", "transport")}} property instead.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("RTCRtpReceiver.getContributingSources()")}}</dt>
- <dd>Returns an array of {{domxref("RTCRtpContributingSource")}} instances for each unique CSRC (contributing source) identifier received by the current <code>RTCRtpReceiver</code> in the last ten seconds.</dd>
- <dt>{{domxref("RTCRtpReceiver.getParameters()")}} </dt>
- <dd>Returns an <code>RTCRtpParameters</code> object which contains information about how the RTC data is to be decoded.</dd>
- <dt>{{domxref("RTCRtpReceiver.getStats()")}}</dt>
- <dd>Returns a {{jsxref("Promise")}} whose fulfillment handler receives a {{domxref("RTCStatsReport")}} which contains statistics about the incoming streams and their dependencies.</dd>
- <dt>{{domxref("RTCRtpReceiver.getSynchronizationSources()")}} </dt>
- <dd>Returns an array including one {{domxref("RTCRtpSynchronizationSource")}} instance for each unique SSRC (synchronization source) identifier received by the current <code>RTCRtpReceiver</code> in the last ten seconds.</dd>
-</dl>
+- {{domxref("RTCRtpReceiver.getContributingSources()")}}
+  - : Returns an array of {{domxref("RTCRtpContributingSource")}} instances for each unique CSRC (contributing source) identifier received by the current `RTCRtpReceiver` in the last ten seconds.
+- {{domxref("RTCRtpReceiver.getParameters()")}}
+  - : Returns an `RTCRtpParameters` object which contains information about how the RTC data is to be decoded.
+- {{domxref("RTCRtpReceiver.getStats()")}}
+  - : Returns a {{jsxref("Promise")}} whose fulfillment handler receives a {{domxref("RTCStatsReport")}} which contains statistics about the incoming streams and their dependencies.
+- {{domxref("RTCRtpReceiver.getSynchronizationSources()")}}
+  - : Returns an array including one {{domxref("RTCRtpSynchronizationSource")}} instance for each unique SSRC (synchronization source) identifier received by the current `RTCRtpReceiver` in the last ten seconds.
 
-<h2 id="Static_methods">Static methods</h2>
+## Static methods
 
-<dl>
- <dt>{{domxref("RTCRtpReceiver.getCapabilities()")}}</dt>
- <dd>Returns the most optimistic view of the capabilities of the system for receiving media of the given kind.</dd>
-</dl>
+- {{domxref("RTCRtpReceiver.getCapabilities()")}}
+  - : Returns the most optimistic view of the capabilities of the system for receiving media of the given kind.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
- <li>{{domxref("RTCStatsReport")}}</li>
- <li>{{domxref("RTCRtpSender")}}</li>
- <li>{{domxref("RTCPeerConnection.getStats()")}}</li>
-</ul>
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)
+- {{domxref("RTCStatsReport")}}
+- {{domxref("RTCRtpSender")}}
+- {{domxref("RTCPeerConnection.getStats()")}}

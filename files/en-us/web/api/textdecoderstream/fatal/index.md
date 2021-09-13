@@ -9,28 +9,31 @@ tags:
   - TextDecoderStream
 browser-compat: api.TextDecoderStream.fatal
 ---
-<p>{{APIRef("Encoding API")}}</p>
+{{APIRef("Encoding API")}}
 
-<p>The <strong><code>fatal</code></strong> read-only property of the {{domxref("TextDecoderStream")}} interface is a {{jsxref("boolean")}} indicating if the error mode of the <code>TextDecoderStream</code> object is set to <code>fatal</code>.</p>
+The **`fatal`** read-only property of the {{domxref("TextDecoderStream")}} interface is a {{jsxref("boolean")}} indicating if the error mode of the `TextDecoderStream` object is set to `fatal`.
 
-<p>The two possible values of error mode are <code>fatal</code> or <code>replacement</code>, the default being <code>replacement</code> which pushes a replacement character <code>U+FFFD</code> (�) to the output.</p>
+The two possible values of error mode are `fatal` or `replacement`, the default being `replacement` which pushes a replacement character `U+FFFD` (�) to the output.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <var>fatal</var> = <var>TextDecoderStream</var>.fatal;</pre>
+    var fatal = TextDecoderStream.fatal;
 
-<h3>Value</h3>
-<p>A {{jsxref("boolean")}} which will return <code>true</code> if the error mode is set to <code>fatal</code>. Otherwise it returns <code>false</code>.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{jsxref("boolean")}} which will return `true` if the error mode is set to `fatal`. Otherwise it returns `false`.
 
-<pre class="brush:js">stream = new TextDecoderStream();
-console.log(stream.fatal); // returns false</pre>
+## Examples
 
-<h2 id="Specifications">Specifications</h2>
+```js
+stream = new TextDecoderStream();
+console.log(stream.fatal); // returns false
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

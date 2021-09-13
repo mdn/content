@@ -10,33 +10,35 @@ tags:
   - onmessage
 browser-compat: api.RTCDataChannel.onmessage
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The <code><strong>RTCDataChannel.onmessage</strong></code> property stores an
-  <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> which specifies a function to be called when the
-  {{DOMxRef("RTCDataChannel.message_event", "message")}} event is fired on the channel. This event is represented by the
-  {{domxref("MessageEvent")}} interface. This event is sent to the channel when a message
-  is received from the other peer.</p>
+The **`RTCDataChannel.onmessage`** property stores an
+[event handler](/en-US/docs/Web/Events/Event_handlers) which specifies a function to be called when the
+{{DOMxRef("RTCDataChannel.message_event", "message")}} event is fired on the channel. This event is represented by the
+{{domxref("MessageEvent")}} interface. This event is sent to the channel when a message
+is received from the other peer.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>RTCDataChannel</em>.onmessage = <em>function</em>;</pre>
+```js
+RTCDataChannel.onmessage = function;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A function which the browser will call to handle the {{DOMxRef("RTCDataChannel.message_event", "message")}} event. The
-  function receives as its sole input parameter a {{domxref("MessageEvent")}} object
-  describing the event.</p>
+A function which the browser will call to handle the {{DOMxRef("RTCDataChannel.message_event", "message")}} event. The
+function receives as its sole input parameter a {{domxref("MessageEvent")}} object
+describing the event.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This code snippet creates a peer connection, adds a data channel to it, and starts
-  creating new {{HTMLElement("p")}} (paragraph) elements each time a message arrives, with
-  the message's contents displayed inside it. The new elements are then attached to the
-  end of the document.</p>
+This code snippet creates a peer connection, adds a data channel to it, and starts
+creating new {{HTMLElement("p")}} (paragraph) elements each time a message arrives, with
+the message's contents displayed inside it. The new elements are then attached to the
+end of the document.
 
-<pre class="brush: js">let pc = new RTCPeerConnection();
+```js
+let pc = new RTCPeerConnection();
 let dc = pc.createDataChannel();
 
 dc.onmessage = function(event) {
@@ -46,21 +48,19 @@ dc.onmessage = function(event) {
   el.appendChild(txtNode);
   receiveBox.appendChild(el);
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
-  <li>{{domxref("RTCPeerConnection")}}</li>
-  <li>{{domxref("RTCDataChannel")}}</li>
-  <li>The {{DOMxRef("RTCDataChannel.message_event", "message")}} event and its type, {{domxref("MessageEvent")}}.</li>
-</ul>
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)
+- {{domxref("RTCPeerConnection")}}
+- {{domxref("RTCDataChannel")}}
+- The {{DOMxRef("RTCDataChannel.message_event", "message")}} event and its type, {{domxref("MessageEvent")}}.

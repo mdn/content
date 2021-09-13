@@ -10,40 +10,37 @@ tags:
   - heading
 browser-compat: api.GeolocationCoordinates.heading
 ---
-<div>{{securecontext_header}}{{APIRef("Geolocation API")}}</div>
+{{securecontext_header}}{{APIRef("Geolocation API")}}
 
-<p>The <code><strong>GeolocationCoordinates.heading</strong></code> read-only property is
-  a <code>double</code> representing the direction in which the device is traveling. This
-  value, specified in degrees, indicates how far off from heading due north the device is.
-  <code>Zero</code> degrees represents true north, and the direction is determined
-  clockwise (which means that east is <code>90</code> degrees and west is <code>270</code>
-  degrees). If {{domxref("GeolocationCoordinates.speed")}} is <code>0</code>,
-  <code>heading</code> is
-  <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN">NaN</a></code>. If
-  the device is not able to provide heading information, this value is <code>null</code>.
-</p>
+The **`GeolocationCoordinates.heading`** read-only property is
+a `double` representing the direction in which the device is traveling. This
+value, specified in degrees, indicates how far off from heading due north the device is.
+`Zero` degrees represents true north, and the direction is determined
+clockwise (which means that east is `90` degrees and west is `270`
+degrees). If {{domxref("GeolocationCoordinates.speed")}} is `0`,
+`heading` is
+[`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN). If
+the device is not able to provide heading information, this value is `null`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>let heading</var> = <var>geolocationCoordinatesInstance</var>.heading
-</pre>
+```js
+let heading = geolocationCoordinatesInstance.heading
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A <code>double</code> representing the direction in which the device is traveling.</p>
+A `double` representing the direction in which the device is traveling.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API">Using the Geolocation API</a>
-  </li>
-  <li>{{domxref("GeolocationCoordinates")}}</li>
-</ul>
+- [Using the Geolocation API](/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
+- {{domxref("GeolocationCoordinates")}}

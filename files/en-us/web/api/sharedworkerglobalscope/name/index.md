@@ -2,54 +2,57 @@
 title: SharedWorkerGlobalScope.name
 slug: Web/API/SharedWorkerGlobalScope/name
 tags:
-- API
-- Property
-- Reference
-- SharedWorkerGlobalScope
-- Web Workers
-- name
+  - API
+  - Property
+  - Reference
+  - SharedWorkerGlobalScope
+  - Web Workers
+  - name
 browser-compat: api.SharedWorkerGlobalScope.name
 ---
-<div>{{APIRef("Web Workers API")}}</div>
+{{APIRef("Web Workers API")}}
 
-<p>The <code><strong>name</strong></code> read-only property of the
-  {{domxref("SharedWorkerGlobalScope")}} interface returns the name that the
-  {{domxref("SharedWorker")}} was (optionally) given when it was created. This is the name
-  that the {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} constructor can pass
-  to get a reference to the {{domxref("SharedWorkerGlobalScope")}}.</p>
+The **`name`** read-only property of the
+{{domxref("SharedWorkerGlobalScope")}} interface returns the name that the
+{{domxref("SharedWorker")}} was (optionally) given when it was created. This is the name
+that the {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} constructor can pass
+to get a reference to the {{domxref("SharedWorkerGlobalScope")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var nameObj = self.name;</pre>
+```js
+var nameObj = self.name;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}}.</p>
+A {{domxref("DOMString")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>If a shared worker is created using a constructor with a <code>name</code> option:</p>
+If a shared worker is created using a constructor with a `name` option:
 
-<pre
-  class="brush: js">var myWorker = new SharedWorker("worker.js", { name : "mySharedWorker" });</pre>
+```js
+var myWorker = new SharedWorker("worker.js", { name : "mySharedWorker" });
+```
 
-<p>the {{domxref("SharedWorkerGlobalScope")}} will now have a name of "mySharedWorker",
-  returnable by running</p>
+the {{domxref("SharedWorkerGlobalScope")}} will now have a name of "mySharedWorker",
+returnable by running
 
-<pre class="brush: js">self.name</pre>
+```js
+self.name
+```
 
-<p>from inside the shared worker.</p>
+from inside the shared worker.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("SharedWorkerGlobalScope")}}</li>
-</ul>
+- {{domxref("SharedWorkerGlobalScope")}}

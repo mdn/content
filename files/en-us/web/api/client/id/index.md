@@ -13,23 +13,26 @@ tags:
   - id
 browser-compat: api.Client.id
 ---
-<p>{{APIRef("Service Workers API")}}</p>
+{{APIRef("Service Workers API")}}
 
-<p>The <code><strong>id</strong></code> read-only property of the {{domxref("Client")}} interface returns the universally unique identifier of the {{domxref("Client")}} object.</p>
+The **`id`** read-only property of the {{domxref("Client")}} interface returns the universally unique identifier of the {{domxref("Client")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>clientId</em> = <em>client</em>.id;</pre>
+```js
+var clientId = client.id;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">TBD
-</pre>
+```js
+TBD
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -10,32 +10,28 @@ tags:
   - WebRTC
 browser-compat: api.MediaStreamTrack.onoverconstrained
 ---
-<div>{{ APIRef("Media Capture and Streams") }}{{deprecated_header}}</div>
+{{ APIRef("Media Capture and Streams") }}{{deprecated_header}}
 
-<p>The <code><strong>MediaStreamTrack.onoverconstrained</strong></code> event handler is a property called when the {{event("overconstrained")}} event is received. Such an event is sent when the track is again able to send data.</p>
+The **`MediaStreamTrack.onoverconstrained`** event handler is a property called when the {{event("overconstrained")}} event is received. Such an event is sent when the track is again able to send data.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="eval"><em>track</em>.onoverconstrained = <em>function</em>;
-</pre>
+    track.onoverconstrained = function;
 
-<h3 id="Values">Values</h3>
+### Values
 
-<ul>
- <li><code>function</code> is the name of a user-defined function, without the <code>()</code> suffix or any parameters, or an anonymous function declaration, such as <code>function(event) {...}</code>. An event handler always has one single parameter, containing the event, here of type {{domxref("MediaStreamErrorEvent")}}.</li>
-</ul>
+- `function` is the name of a user-defined function, without the `()` suffix or any parameters, or an anonymous function declaration, such as `function(event) {...}`. An event handler always has one single parameter, containing the event, here of type {{domxref("MediaStreamErrorEvent")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">dc.onoverconstrained = function() { alert("overconstrained event detected!"); };
-</pre>
+```js
+dc.onoverconstrained = function() { alert("overconstrained event detected!"); };
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The {{event("overconstrained")}} event and its type, {{domxref("MediaStreamErrorEvent")}}.</li>
-</ul>
+- The {{event("overconstrained")}} event and its type, {{domxref("MediaStreamErrorEvent")}}.

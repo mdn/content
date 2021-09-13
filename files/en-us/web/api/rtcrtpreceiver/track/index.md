@@ -2,37 +2,38 @@
 title: RTCRtpReceiver.track
 slug: Web/API/RTCRtpReceiver/track
 tags:
-- API
-- Audio
-- Media
-- Property
-- RTCRtpReceiver
-- Reference
-- Video
-- WebRTC
-- WebRTC API
-- track
+  - API
+  - Audio
+  - Media
+  - Property
+  - RTCRtpReceiver
+  - Reference
+  - Video
+  - WebRTC
+  - WebRTC API
+  - track
 browser-compat: api.RTCRtpReceiver.track
 ---
-<p>{{APIRef("WebRTC API")}}</p>
+{{APIRef("WebRTC API")}}
 
-<p>The <strong><code>track</code></strong> read-only property of the
-  {{domxref("RTCRtpReceiver")}} interface returns the {{domxref("MediaStreamTrack")}}
-  associated with the current {{domxref("RTCRtpReceiver")}} instance.</p>
+The **`track`** read-only property of the
+{{domxref("RTCRtpReceiver")}} interface returns the {{domxref("MediaStreamTrack")}}
+associated with the current {{domxref("RTCRtpReceiver")}} instance.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>mediaStreamTrack</em> = <em>rtcRtpReceiver</em>.track</pre>
+```js
+var mediaStreamTrack = rtcRtpReceiver.track
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("MediaStreamTrack")}} instance.</p>
+A {{domxref("MediaStreamTrack")}} instance.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

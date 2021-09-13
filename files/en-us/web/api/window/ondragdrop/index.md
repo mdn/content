@@ -9,37 +9,36 @@ tags:
   - Window
   - ondragdrop
 ---
-<p>{{ APIRef() }}{{deprecated_header}}{{non-standard_header}}</p>
+{{ APIRef() }}{{deprecated_header}}{{non-standard_header}}
 
-<div class="warning">
-<p><strong>Warning:</strong> Removed in Firefox 50, and never implemented in any other browser. Use the modern standard <a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API">HTML5 drag and drop</a> feature instead.</p>
-</div>
+> **Warning:** Removed in Firefox 50, and never implemented in any other browser. Use the modern standard [HTML5 drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) feature instead.
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>An event handler for drag and drop events sent to the window.</p>
+An event handler for drag and drop events sent to the window.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">window.ondragdrop = funcRef;</pre>
+```js
+window.ondragdrop = funcRef;
+```
 
-<dl>
- <dt>funcRef </dt>
- <dd>The event handler function to be registered.</dd>
-</dl>
+- funcRef
+  - : The event handler function to be registered.
 
-<p>The <code>window.ondragdrop</code> property and the <code>ondragdrop</code> attribute are not implemented in <a href="/en-US/Gecko">Gecko</a> ({{ Bug(112288) }}), you have to use <code>addEventListener</code>. See <a href="/en-US/docs/DOM/element.addEventListener">addEventListener</a> for details.</p>
+The `window.ondragdrop` property and the `ondragdrop` attribute are not implemented in [Gecko](/en-US/Gecko) ({{ Bug(112288) }}), you have to use `addEventListener`. See [addEventListener](/en-US/docs/DOM/element.addEventListener) for details.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="Fire_an_alert_on_dragdrop">Fire an alert on dragdrop</h3>
+### Fire an alert on dragdrop
 
-<p>In this example, an event listener is added to the window (the event target). If, from an external source, a tab, a link, marked text or a file is dragged and dropped onto this window, the alert is fired. Note how <code>event.stopPropagation();</code> prevents the browser from loading the dropped tab, link or file.</p>
+In this example, an event listener is added to the window (the event target). If, from an external source, a tab, a link, marked text or a file is dragged and dropped onto this window, the alert is fired. Note how `event.stopPropagation();` prevents the browser from loading the dropped tab, link or file.
 
-<pre class="brush: html">&lt;html&gt;
-&lt;head&gt;&lt;title&gt;dragdroptest&lt;/title&gt;
+```html
+<html>
+<head><title>dragdroptest</title>
 
-&lt;script type="text/javascript"&gt;
+<script type="text/javascript">
 
 window.addEventListener("dragdrop", testfunc, false);
 
@@ -47,15 +46,15 @@ function testfunc(event) {
     alert("dragdrop!");
     event.stopPropagation();
 }
-&lt;/script&gt;
+</script>
 
-&lt;/head&gt;
-&lt;body&gt;
+</head>
+<body>
 I am bodytext
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</body>
+</html>
+```
 
-<h2 id="Specification">Specification</h2>
+## Specification
 
-<p>Not part of specification.</p>
+Not part of specification.

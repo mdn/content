@@ -2,65 +2,65 @@
 title: Window.alert()
 slug: Web/API/Window/alert
 tags:
-- API
-- HTML DOM
-- Method
-- Reference
-- Window
-- alert
+  - API
+  - HTML DOM
+  - Method
+  - Reference
+  - Window
+  - alert
 browser-compat: api.Window.alert
 ---
-<p>{{ APIRef }}</p>
+{{ APIRef }}
 
-<p><code>window.alert()</code> instructs the browser to display a dialog with an optional message, and to wait until the user dismisses the dialog.</p>
+`window.alert()` instructs the browser to display a dialog with an optional message, and to wait until the user dismisses the dialog.
 
-<p>Under some conditions — for example, when the user switches tabs — the browser may not actually display a dialog, or may not wait for the user to dismiss the dialog.</p>
+Under some conditions — for example, when the user switches tabs — the browser may not actually display a dialog, or may not wait for the user to dismiss the dialog.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">window.alert(<em>message</em>);</pre>
+```js
+window.alert(message);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>message</code> {{optional_inline}}</dt>
-  <dd>A string you want to display in the alert dialog, or, alternatively, an object that
-    is converted into a string and displayed.</dd>
-</dl>
+- `message` {{optional_inline}}
+  - : A string you want to display in the alert dialog, or, alternatively, an object that
+    is converted into a string and displayed.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">window.alert("Hello world!");
-alert("Hello world!");</pre>
+```js
+window.alert("Hello world!");
+alert("Hello world!");
+```
 
-<p>Both produce:</p>
+Both produce:
 
-<p><img src="alerthelloworld.png"></p>
+![](alerthelloworld.png)
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>The alert dialog should be used for messages which do not require any response on the
-  part of the user, other than the acknowledgement of the message.</p>
+The alert dialog should be used for messages which do not require any response on the
+part of the user, other than the acknowledgement of the message.
 
-<p>Dialog boxes are modal windows - they
-  prevent the user from accessing the rest of the program's interface until the dialog box
-  is closed. For this reason, you should not overuse any function that creates a dialog
-  box (or modal window).</p>
+Dialog boxes are modal windows - they
+prevent the user from accessing the rest of the program's interface until the dialog box
+is closed. For this reason, you should not overuse any function that creates a dialog
+box (or modal window).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("window.confirm","confirm")}}</li>
-  <li>{{domxref("window.prompt","prompt")}}</li>
-  <li>For <a href="/en-US/docs/Glossary/Chrome">Mozilla Chrome</a> see
-    {{ifmethod("nsIPromptService","alert")}} and
-    {{ifmethod("nsIPromptService","alertCheck")}}</li>
-</ul>
+- {{domxref("window.confirm","confirm")}}
+- {{domxref("window.prompt","prompt")}}
+- For [Mozilla Chrome](/en-US/docs/Glossary/Chrome) see
+  {{ifmethod("nsIPromptService","alert")}} and
+  {{ifmethod("nsIPromptService","alertCheck")}}

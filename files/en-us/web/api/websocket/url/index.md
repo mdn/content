@@ -2,33 +2,32 @@
 title: WebSocket.url
 slug: Web/API/WebSocket/url
 tags:
-- API
-- Property
-- Reference
-- Web API
-- WebSocket
+  - API
+  - Property
+  - Reference
+  - Web API
+  - WebSocket
 browser-compat: api.WebSocket.url
 ---
-<p>{{APIRef("Web Sockets API")}}</p>
+{{APIRef("Web Sockets API")}}
 
-<p>The <strong><code>WebSocket.url</code></strong> read-only property returns the absolute
-  URL of the {{domxref("WebSocket")}} as resolved by the constructor.</p>
+The **`WebSocket.url`** read-only property returns the absolute
+URL of the {{domxref("WebSocket")}} as resolved by the constructor.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>var url</em> = aWebSocket.url;</pre>
+```js
+var url = aWebSocket.url;
+```
 
+## Value
 
-<h2 id="Value">Value</h2>
+A [`DOMString`](/en-US/docs/Web/API/DOMString "DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String.").
 
-<p>A <a href="/en-US/docs/Web/API/DOMString"
-    title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String."><code>DOMString</code></a>.
-</p>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

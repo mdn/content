@@ -11,45 +11,45 @@ tags:
   - Deprecated
 browser-compat: api.Document.selectedStyleSheetSet
 ---
-<div>{{APIRef("DOM")}}{{deprecated_header}}</div>
+{{APIRef("DOM")}}{{deprecated_header}}
 
-<p>The <strong><code>selectedStyleSheetSet</code></strong> property indicates the name of the style sheet set that's currently in use.</p>
+The **`selectedStyleSheetSet`** property indicates the name of the style sheet set that's currently in use.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>currentStyleSheetSet</var> = <var>document</var>.selectedStyleSheetSet;
+```js
+currentStyleSheetSet = document.selectedStyleSheetSet;
 
-<var>document</var>.selectedStyleSheet = <var>newStyleSheetSet</var>;
-</pre>
+document.selectedStyleSheet = newStyleSheetSet;
+```
 
-<p>On return, <code>currentStyleSheetSet</code> indicates the name of the style sheet set
-  currently in use. You can also set the current style sheet set using this property.</p>
+On return, `currentStyleSheetSet` indicates the name of the style sheet set
+currently in use. You can also set the current style sheet set using this property.
 
-<p>Setting the value of this property is equivalent to calling
-  {{domxref("document.enableStyleSheetsForSet()")}} with the value of
-  <code>currentStyleSheetSet</code>, then setting the value of
-  <code>lastStyleSheetSet</code> to that value as well.</p>
+Setting the value of this property is equivalent to calling
+{{domxref("document.enableStyleSheetsForSet()")}} with the value of
+`currentStyleSheetSet`, then setting the value of
+`lastStyleSheetSet` to that value as well.
 
-<div class="note"><p><strong>Note:</strong> This attribute's value is live; directly changing
-  the <code>disabled</code> attribute on style sheets will affect the value of this
-  attribute.</p></div>
+> **Note:** This attribute's value is live; directly changing
+> the `disabled` attribute on style sheets will affect the value of this
+> attribute.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">console.log('Current style sheet set: ' + document.selectedStyleSheetSet);
+```js
+console.log('Current style sheet set: ' + document.selectedStyleSheetSet);
 
 document.selectedStyleSheetSet = 'Some other style sheet';
-</pre>
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("document.lastStyleSheetSet")}}</li>
-  <li>{{domxref("document.preferredStyleSheetSet")}}</li>
-  <li>{{domxref("document.styleSheetSets")}}</li>
-  <li>{{domxref("document.enableStyleSheetsForSet()")}}</li>
-</ul>
+- {{domxref("document.lastStyleSheetSet")}}
+- {{domxref("document.preferredStyleSheetSet")}}
+- {{domxref("document.styleSheetSets")}}
+- {{domxref("document.enableStyleSheetsForSet()")}}

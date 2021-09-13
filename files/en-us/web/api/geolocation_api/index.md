@@ -7,77 +7,67 @@ tags:
   - Intermediate
   - Overview
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("Geolocation API")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("Geolocation API")}}
 
-<p>The <strong>Geolocation API</strong> allows the user to provide their location to web applications if they so desire. For privacy reasons, the user is asked for permission to report location information.</p>
+The **Geolocation API** allows the user to provide their location to web applications if they so desire. For privacy reasons, the user is asked for permission to report location information.
 
-<p>WebExtensions that wish to use the <code>Geolocation</code> object must add the <code>"geolocation"</code> permission to their manifest. The user's operating system will prompt the user to allow location access the first time it is requested.</p>
+WebExtensions that wish to use the `Geolocation` object must add the `"geolocation"` permission to their manifest. The user's operating system will prompt the user to allow location access the first time it is requested.
 
-<h2 id="Concepts_and_usage">Concepts and usage</h2>
+## Concepts and usage
 
-<p>You will often want to retrieve a user's location information in your web app, for example to plot their location on a map, or display personalized information relevant to their location.</p>
+You will often want to retrieve a user's location information in your web app, for example to plot their location on a map, or display personalized information relevant to their location.
 
-<p>The Geolocation API is accessed via a call to {{domxref("Navigator.geolocation", "navigator.geolocation")}}; this will cause the user's browser to ask them for permission to access their location data. If they accept, then the browser will use the best available functionality on the device to access this information (for example, GPS).</p>
+The Geolocation API is accessed via a call to {{domxref("Navigator.geolocation", "navigator.geolocation")}}; this will cause the user's browser to ask them for permission to access their location data. If they accept, then the browser will use the best available functionality on the device to access this information (for example, GPS).
 
-<p>The developer can now access this location information in a couple of different ways:</p>
+The developer can now access this location information in a couple of different ways:
 
-<ul>
- <li>{{domxref("Geolocation.getCurrentPosition()")}}: Retrieves the device's current location.</li>
- <li>{{domxref("Geolocation.watchPosition()")}}: Registers a handler function that will be called automatically each time the position of the device changes, returning the updated location.</li>
-</ul>
+- {{domxref("Geolocation.getCurrentPosition()")}}: Retrieves the device's current location.
+- {{domxref("Geolocation.watchPosition()")}}: Registers a handler function that will be called automatically each time the position of the device changes, returning the updated location.
 
-<p>In both cases, the method call takes up to three arguments:</p>
+In both cases, the method call takes up to three arguments:
 
-<ul>
- <li>A mandatory success callback: If the location retrieval is successful, the callback executes with a {{domxref("GeolocationPosition")}} object as its only parameter, providing access to the location data.</li>
- <li>An optional error callback: If the location retrieval is unsuccessful, the callback executes with a {{domxref("GeolocationPositionError")}} object as its only parameter, providing access information on what went wrong.</li>
- <li>An optional {{domxref("PositionOptions")}} object, which provides options for retrieval of the position data.</li>
-</ul>
+- A mandatory success callback: If the location retrieval is successful, the callback executes with a {{domxref("GeolocationPosition")}} object as its only parameter, providing access to the location data.
+- An optional error callback: If the location retrieval is unsuccessful, the callback executes with a {{domxref("GeolocationPositionError")}} object as its only parameter, providing access information on what went wrong.
+- An optional {{domxref("PositionOptions")}} object, which provides options for retrieval of the position data.
 
-<p>For further information on Geolocation usage, read <a href="/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API">Using the Geolocation API</a>.</p>
+For further information on Geolocation usage, read [Using the Geolocation API](/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API).
 
-<h2 id="Interfaces">Interfaces</h2>
+## Interfaces
 
-<dl>
- <dt>{{domxref("Geolocation")}}</dt>
- <dd>The main class of this API — contains methods to retrieve the user's current position, watch for changes in their position, and clear a previously-set watch.</dd>
- <dt>{{domxref("GeolocationPosition")}}</dt>
- <dd>Represents the position of a user. A <code>GeolocationPosition</code> instance is returned by a successful call to one of the methods contained inside {{domxref("Geolocation")}}, inside a success callback, and contains a timestamp plus a {{domxref("GeolocationCoordinates")}} object instance.</dd>
- <dt>{{domxref("GeolocationCoordinates")}}</dt>
- <dd>Represents the coordinates of a user's position; a <code>GeolocationCoordinates</code> instance contains latitude, longitude, and other important related information.</dd>
- <dt>{{domxref("GeolocationPositionError")}}</dt>
- <dd>A <code>GeolocationPositionError</code> is returned by an unsuccessful call to one of the methods contained inside {{domxref("Geolocation")}}, inside an error callback, and contains an error code and message.</dd>
- <dt>{{domxref("Navigator.geolocation")}}</dt>
- <dd>The entry point into the API. Returns a {{domxref("Geolocation")}} object instance, from which all other functionality can be accessed.</dd>
-</dl>
+- {{domxref("Geolocation")}}
+  - : The main class of this API — contains methods to retrieve the user's current position, watch for changes in their position, and clear a previously-set watch.
+- {{domxref("GeolocationPosition")}}
+  - : Represents the position of a user. A `GeolocationPosition` instance is returned by a successful call to one of the methods contained inside {{domxref("Geolocation")}}, inside a success callback, and contains a timestamp plus a {{domxref("GeolocationCoordinates")}} object instance.
+- {{domxref("GeolocationCoordinates")}}
+  - : Represents the coordinates of a user's position; a `GeolocationCoordinates` instance contains latitude, longitude, and other important related information.
+- {{domxref("GeolocationPositionError")}}
+  - : A `GeolocationPositionError` is returned by an unsuccessful call to one of the methods contained inside {{domxref("Geolocation")}}, inside an error callback, and contains an error code and message.
+- {{domxref("Navigator.geolocation")}}
+  - : The entry point into the API. Returns a {{domxref("Geolocation")}} object instance, from which all other functionality can be accessed.
 
-<h2 id="Dictionaries">Dictionaries</h2>
+## Dictionaries
 
-<dl>
- <dt>{{domxref("PositionOptions")}}</dt>
- <dd>Represents an object containing options to pass in as a parameter of {{domxref("Geolocation.getCurrentPosition()")}} and {{domxref("Geolocation.watchPosition()")}}.</dd>
-</dl>
+- {{domxref("PositionOptions")}}
+  - : Represents an object containing options to pass in as a parameter of {{domxref("Geolocation.getCurrentPosition()")}} and {{domxref("Geolocation.watchPosition()")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>See <a href="/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API#examples">Using the Geolocation API</a> for example code.</p>
+See [Using the Geolocation API](/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API#examples) for example code.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications("api.Geolocation")}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.Geolocation")}}</p>
+{{Compat("api.Geolocation")}}
 
-<h3 id="Availability">Availability</h3>
+### Availability
 
-<p>As WiFi-based locationing is often provided by Google, the vanilla Geolocation API may be unavailable in China. You may use local third-party providers such as <a href="https://lbsyun.baidu.com/index.php?title=jspopular/guide/geolocation">Baidu</a>, <a href="https://lbs.amap.com/api/javascript-api/guide/services/geolocation#geolocation">Autonavi</a>, or <a href="https://lbs.qq.com/tool/component-geolocation.html">Tencent</a>. These services use the user's IP address and/or a local app to provide enhanced positioning.</p>
+As WiFi-based locationing is often provided by Google, the vanilla Geolocation API may be unavailable in China. You may use local third-party providers such as [Baidu](https://lbsyun.baidu.com/index.php?title=jspopular/guide/geolocation), [Autonavi](https://lbs.amap.com/api/javascript-api/guide/services/geolocation#geolocation), or [Tencent](https://lbs.qq.com/tool/component-geolocation.html). These services use the user's IP address and/or a local app to provide enhanced positioning.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API">Using the Geolocation API</a></li>
- <li><a href="https://www.w3.org/TR/geolocation-API/" rel="external">Geolocation API on w3.org</a></li>
- <li><a href="https://hacks.mozilla.org/2013/10/who-moved-my-geolocation/">Who moved my geolocation?</a> (Hacks blog)</li>
-</ul>
+- [Using the Geolocation API](/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
+- [Geolocation API on w3.org](https://www.w3.org/TR/geolocation-API/)
+- [Who moved my geolocation?](https://hacks.mozilla.org/2013/10/who-moved-my-geolocation/) (Hacks blog)

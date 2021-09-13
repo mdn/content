@@ -2,54 +2,55 @@
 title: Notification.onclick
 slug: Web/API/Notification/onclick
 tags:
-- API
-- Notification
-- Notifications
-- Notifications API
-- Property
-- Reference
-- onclick
+  - API
+  - Notification
+  - Notifications
+  - Notifications API
+  - Property
+  - Reference
+  - onclick
 browser-compat: api.Notification.onclick
 ---
-<p>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</p>
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-<p>The <strong><code>onclick</code></strong> property of the {{domxref("Notification")}}
-  interface specifies an event listener to receive {{event("click")}} events. These events
-  occur when the user clicks on a displayed {{domxref("Notification")}}.</p>
+The **`onclick`** property of the {{domxref("Notification")}}
+interface specifies an event listener to receive {{event("click")}} events. These events
+occur when the user clicks on a displayed {{domxref("Notification")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>Notification</var>.onclick = function(event) { ... };
-</pre>
+```js
+Notification.onclick = function(event) { ... };
+```
 
-<p>The default behavior is to move the focus to the viewport of the notification's related
-  <a href="https://html.spec.whatwg.org/multipage/browsers.html#browsing-context">browsing
-    context</a>. If you don't want that behavior, call {{domxref("Event/preventDefault",
-  "preventDefault()")}} on the event object.</p>
+The default behavior is to move the focus to the viewport of the notification's related
+[browsing
+context](https://html.spec.whatwg.org/multipage/browsers.html#browsing-context). If you don't want that behavior, call {{domxref("Event/preventDefault",
+  "preventDefault()")}} on the event object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the following example, we use an onclick handler to open a webpage in a new tab
-  (specified by the inclusion of the <code>'_blank'</code> parameter) once a notification
-  is clicked:</p>
+In the following example, we use an onclick handler to open a webpage in a new tab
+(specified by the inclusion of the `'_blank'` parameter) once a notification
+is clicked:
 
-<pre class="brush: js">notification.onclick = function(event) {
+```js
+notification.onclick = function(event) {
   event.preventDefault(); // prevent the browser from focusing the Notification's tab
   window.open('http://www.mozilla.org', '_blank');
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Notification")}}</li>
-  <li><a href="/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using
-      the Notifications API</a></li>
-</ul>
+- {{domxref("Notification")}}
+- [Using
+  the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)

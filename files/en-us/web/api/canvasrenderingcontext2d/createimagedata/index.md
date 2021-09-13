@@ -2,101 +2,100 @@
 title: CanvasRenderingContext2D.createImageData()
 slug: Web/API/CanvasRenderingContext2D/createImageData
 tags:
-- API
-- Canvas
-- CanvasRenderingContext2D
-- Method
-- Reference
+  - API
+  - Canvas
+  - CanvasRenderingContext2D
+  - Method
+  - Reference
 browser-compat: api.CanvasRenderingContext2D.createImageData
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code><strong>CanvasRenderingContext2D.createImageData()</strong></code> method of
-  the Canvas 2D API creates a new, blank {{domxref("ImageData")}} object with the
-  specified dimensions. All of the pixels in the new object are transparent black.</p>
+The **`CanvasRenderingContext2D.createImageData()`** method of
+the Canvas 2D API creates a new, blank {{domxref("ImageData")}} object with the
+specified dimensions. All of the pixels in the new object are transparent black.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">ImageData <em>ctx</em>.createImageData(<em>width</em>, <em>height</em>);
-ImageData <em>ctx</em>.createImageData(<em>imagedata</em>);
-</pre>
+```js
+ImageData ctx.createImageData(width, height);
+ImageData ctx.createImageData(imagedata);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>width</code></dt>
-  <dd>The width to give the new <code>ImageData</code> object. A negative value flips the
-    rectangle around the vertical axis.</dd>
-  <dt><code>height</code></dt>
-  <dd>The height to give the new <code>ImageData</code> object. A negative value flips the
-    rectangle around the horizontal axis.</dd>
-  <dt><code>imagedata</code></dt>
-  <dd>An existing <code>ImageData</code> object from which to copy the width and height.
-    The image itself is <strong>not</strong> copied.</dd>
-</dl>
+- `width`
+  - : The width to give the new `ImageData` object. A negative value flips the
+    rectangle around the vertical axis.
+- `height`
+  - : The height to give the new `ImageData` object. A negative value flips the
+    rectangle around the horizontal axis.
+- `imagedata`
+  - : An existing `ImageData` object from which to copy the width and height.
+    The image itself is **not** copied.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A new {{domxref("ImageData")}} object with the specified width and height. The new
-  object is filled with transparent black pixels.</p>
+A new {{domxref("ImageData")}} object with the specified width and height. The new
+object is filled with transparent black pixels.
 
-<h3 id="Errors_thrown">Errors thrown</h3>
+### Errors thrown
 
-<dl>
-  <dt><code>IndexSizeError</code></dt>
-  <dd>Thrown if either of the <code>width</code> or <code>height</code> arguments is zero.
-  </dd>
-</dl>
+- `IndexSizeError`
+  - : Thrown if either of the `width` or `height` arguments is zero.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Creating_a_blank_ImageData_object">Creating a blank ImageData object</h3>
+### Creating a blank ImageData object
 
-<p>This snippet creates a blank <code>ImageData</code> object using the
-  <code>createImageData()</code> method.</p>
+This snippet creates a blank `ImageData` object using the
+`createImageData()` method.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<p>The generated object is 100 pixels wide and 50 pixels tall, making 5,000 pixels in all.
-  Each pixel within an <code>ImageData</code> object consists of four array values, so the
-  object's {{domxref("ImageData.data", "data")}} property has  a length of 4 × 5,000, or
-  20,000.</p>
+The generated object is 100 pixels wide and 50 pixels tall, making 5,000 pixels in all.
+Each pixel within an `ImageData` object consists of four array values, so the
+object's {{domxref("ImageData.data", "data")}} property has  a length of 4 × 5,000, or
+20,000.
 
-<pre class="brush: js;">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 const imageData = ctx.createImageData(100, 50);
 console.log(imageData);
 // ImageData { width: 100, height: 50, data: Uint8ClampedArray[20000] }
-</pre>
+```
 
-<h3 id="Filling_a_blank_ImageData_object">Filling a blank ImageData object</h3>
+### Filling a blank ImageData object
 
-<p>This example creates and fills a new <code>ImageData</code> object with purple pixels.
-</p>
+This example creates and fills a new `ImageData` object with purple pixels.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<p>Since each pixel consists of four values, the <code>for</code> loop iterates by
-  multiples of four. The array values associated with each pixel are R (red), G (green), B
-  (blue), and A (alpha), in that order.</p>
+Since each pixel consists of four values, the `for` loop iterates by
+multiples of four. The array values associated with each pixel are R (red), G (green), B
+(blue), and A (alpha), in that order.
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const imageData = ctx.createImageData(100, 100);
 
 // Iterate through every pixel
-for (let i = 0; i &lt; imageData.data.length; i += 4) {
+for (let i = 0; i < imageData.data.length; i += 4) {
   // Modify pixel data
   imageData.data[i + 0] = 190;  // R value
   imageData.data[i + 1] = 0;    // G value
@@ -105,48 +104,41 @@ for (let i = 0; i &lt; imageData.data.length; i += 4) {
 }
 
 // Draw image data to the canvas
-ctx.putImageData(imageData, 20, 20);</pre>
+ctx.putImageData(imageData, 20, 20);
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Filling_a_blank_ImageData_object", 700, 180)}}</p>
+{{EmbedLiveSample("Filling_a_blank_ImageData_object", 700, 180)}}
 
-<h3 id="More_examples">More examples</h3>
+### More examples
 
-<p>For more examples using <code>createImageData()</code> and the <code>ImageData</code>
-  object, see <a
-    href="/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">Pixel
-    manipulation with canvas</a> and {{domxref("ImageData.data")}}.</p>
+For more examples using `createImageData()` and the `ImageData`
+object, see [Pixel
+manipulation with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas) and {{domxref("ImageData.data")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h3 id="Gecko-specific_notes">Gecko-specific notes</h3>
+### Gecko-specific notes
 
-<ul>
-  <li>Starting with {{geckoRelease("5.0")}}:
-    <ul>
-      <li><code>createImageData()</code> now correctly returns at least one pixel's worth
-        of image data if a rectangle smaller than one pixel is specified.</li>
-      <li>Specifying non-finite values when calling <code>createImageData()</code> now
-        properly throws a <code>NOT_SUPPORTED_ERR</code> exception.</li>
-      <li><code>createImageData()</code> now handles negative arguments in accordance with
-        the specification, by flipping the rectangle around the appropriate axis.</li>
-    </ul>
-  </li>
-</ul>
+- Starting with {{geckoRelease("5.0")}}:
 
-<h2 id="See_also">See also</h2>
+  - `createImageData()` now correctly returns at least one pixel's worth
+    of image data if a rectangle smaller than one pixel is specified.
+  - Specifying non-finite values when calling `createImageData()` now
+    properly throws a `NOT_SUPPORTED_ERR` exception.
+  - `createImageData()` now handles negative arguments in accordance with
+    the specification, by flipping the rectangle around the appropriate axis.
 
-<ul>
-  <li>The interface defining this method: {{domxref("CanvasRenderingContext2D")}}</li>
-  <li>{{domxref("ImageData")}}</li>
-  <li><a
-      href="/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">Pixel
-      manipulation with canvas</a></li>
-</ul>
+## See also
+
+- The interface defining this method: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("ImageData")}}
+- [Pixel
+  manipulation with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)

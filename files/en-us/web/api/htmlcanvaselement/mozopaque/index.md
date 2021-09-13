@@ -2,68 +2,66 @@
 title: HTMLCanvasElement.mozOpaque
 slug: Web/API/HTMLCanvasElement/mozOpaque
 tags:
-- API
-- Canvas
-- Deprecated
-- HTMLCanvasElement
-- Non-standard
-- Property
-- Reference
+  - API
+  - Canvas
+  - Deprecated
+  - HTMLCanvasElement
+  - Non-standard
+  - Property
+  - Reference
 browser-compat: api.HTMLCanvasElement.mozOpaque
 ---
-<div>{{APIRef("Canvas API")}}{{deprecated_header}}{{non-standard_header}}</div>
+{{APIRef("Canvas API")}}{{deprecated_header}}{{non-standard_header}}
 
-<p>The non-standard <strong><code>HTMLCanvasElement.mozOpaque</code></strong> property is
-  a boolean value reflecting the {{htmlattrxref("moz-opaque", "canvas")}} HTML
-  attribute of the {{HTMLElement("canvas")}} element. It lets the canvas know whether or
-  not translucency will be a factor. If the canvas knows there's no translucency, painting
-  performance can be optimized.</p>
+The non-standard **`HTMLCanvasElement.mozOpaque`** property is
+a boolean value reflecting the {{htmlattrxref("moz-opaque", "canvas")}} HTML
+attribute of the {{HTMLElement("canvas")}} element. It lets the canvas know whether or
+not translucency will be a factor. If the canvas knows there's no translucency, painting
+performance can be optimized.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This has been standardized as setting the <code>alpha</code> option to
-  <code>false</code> when creating a drawing context with
-  {{domxref("HTMLCanvasElement.getContext()")}}. Use of <code>mozOpaque</code> should be
-  avoided. Firefox will stop supporting it in the future.</p>
-</div>
+> **Note:** This has been standardized as setting the `alpha` option to
+> `false` when creating a drawing context with
+> {{domxref("HTMLCanvasElement.getContext()")}}. Use of `mozOpaque` should be
+> avoided. Firefox will stop supporting it in the future.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>opaque</em> = <em>canvas</em>.mozOpaque;
-<em>canvas</em>.mozOpaque = true;
-</pre>
+```js
+var opaque = canvas.mozOpaque;
+canvas.mozOpaque = true;
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Given this {{HTMLElement("canvas")}} element:</p>
+Given this {{HTMLElement("canvas")}} element:
 
-<pre class="brush: html">&lt;canvas id="canvas" width="300" height="300" moz-opaque&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas" width="300" height="300" moz-opaque></canvas>
+```
 
-<p>You can get or set the <code>mozOpaque</code> property. For example, you could
-  conditionally set it to <code>true</code> if <code>mimeType == 'image/jpeg'</code>, or
-  similar, to gain performance in your application when translucency is not needed.</p>
+You can get or set the `mozOpaque` property. For example, you could
+conditionally set it to `true` if `mimeType == 'image/jpeg'`, or
+similar, to gain performance in your application when translucency is not needed.
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 console.log(canvas.mozOpaque); // true
 // deactivate it
 canvas.mozOpaque = false;
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any standard.</p>
+Not part of any standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining it, {{domxref("HTMLCanvasElement")}}.</li>
-  <li>The {{htmlattrxref("moz-opaque", "canvas")}} HTML attribute of the
-    {{HTMLElement("canvas")}} element.</li>
-  <li><a
-      href="https://hacks.mozilla.org/2013/05/optimizing-your-javascript-game-for-firefox-os/">Optimizing
-      your JavaScript game for Firefox OS</a></li>
-</ul>
+- The interface defining it, {{domxref("HTMLCanvasElement")}}.
+- The {{htmlattrxref("moz-opaque", "canvas")}} HTML attribute of the
+  {{HTMLElement("canvas")}} element.
+- [Optimizing
+  your JavaScript game for Firefox OS](https://hacks.mozilla.org/2013/05/optimizing-your-javascript-game-for-firefox-os/)

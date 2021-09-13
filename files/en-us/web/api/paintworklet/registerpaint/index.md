@@ -14,56 +14,55 @@ tags:
   - registerPaint
 browser-compat: api.PaintWorkletGlobalScope.registerPaint
 ---
-<div>{{draft}}{{APIRef("CSS Painting API")}}</div>
+{{draft}}{{APIRef("CSS Painting API")}}
 
-<p>The
-  <strong><code>PaintWorkletGlobalScope.registerPaint()</code></strong> method of the
-  {{domxref("PaintWorklet")}} interface registers a class programmatically generate an
-  image where a CSS property expects a file.</p>
+The
+**`PaintWorkletGlobalScope.registerPaint()`** method of the
+{{domxref("PaintWorklet")}} interface registers a class programmatically generate an
+image where a CSS property expects a file.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">registerPaint(name, class);</pre>
+```js
+registerPaint(name, class);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>name</dt>
-  <dd>The name of the worklet class to register.</dd>
-  <dt>class</dt>
-  <dd>A reference to the class that implements the worklet.</dd>
-</dl>
+- name
+  - : The name of the worklet class to register.
+- class
+  - : A reference to the class that implements the worklet.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{jsxref('undefined')}}</p>
+{{jsxref('undefined')}}
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>TypeError</dt>
-  <dd>Thrown when one of the arguments is invalid or missing.</dd>
-  <dt>InvalidModificationError</dt>
-  <dd>Thrown when the a worklet already exists with the specified name.</dd>
-</dl>
+- TypeError
+  - : Thrown when one of the arguments is invalid or missing.
+- InvalidModificationError
+  - : Thrown when the a worklet already exists with the specified name.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following shows registering an example worklet module. This should be in a separate
-  js file. Note that <code>registerPaint()</code> is called without a reference to
-  <code>PaintWorkletGlobalScope</code>. The file itself is loaded
-  through <code>CSS.paintWorklet.addModule()</code> (documented here on the parent class
-  of PaintWorklet, at {{domxref('Worklet.addModule()')}}.</p>
+The following shows registering an example worklet module. This should be in a separate
+js file. Note that `registerPaint()` is called without a reference to
+`PaintWorkletGlobalScope`. The file itself is loaded
+through `CSS.paintWorklet.addModule()` (documented here on the parent class
+of PaintWorklet, at {{domxref('Worklet.addModule()')}}.
 
-<pre class="brush: js">/* checkboardWorklet.js */
+```js
+/* checkboardWorklet.js */
 
 class CheckerboardPainter {
   paint(ctx, geom, properties) {
     // Use `ctx` as if it was a normal canvas
     const colors = ['red', 'green', 'blue'];
     const size = 32;
-    for(let y = 0; y &lt; geom.height/size; y++) {
-      for(let x = 0; x &lt; geom.width/size; x++) {
+    for(let y = 0; y < geom.height/size; y++) {
+      for(let x = 0; x < geom.width/size; x++) {
         const color = colors[(x + y) % colors.length];
         ctx.beginPath();
         ctx.fillStyle = color;
@@ -75,35 +74,38 @@ class CheckerboardPainter {
 }
 
 // Register our class under a specific name
-registerPaint('checkerboard', CheckerboardPainter);</pre>
+registerPaint('checkerboard', CheckerboardPainter);
+```
 
-<p>The first step in using a paintworket is defining the paint worklet using the
-  <code>registerPaint()</code> function, as done above. To use it, you register it with
-  the <code>CSS.paintWorklet.addModule()</code> method:</p>
+The first step in using a paintworket is defining the paint worklet using the
+`registerPaint()` function, as done above. To use it, you register it with
+the `CSS.paintWorklet.addModule()` method:
 
-<pre class="brush: html">&lt;script&gt;
+```html
+<script>
    CSS.paintWorklet.addModule('checkboardWorklet.js');
-&lt;/script&gt;</pre>
+</script>
+```
 
-<p>You can then use the <code>{{cssxref('paint()', 'paint()')}}</code> CSS function in your
-  CSS anywhere an <code>{{cssxref('&lt;image&gt;')}}</code> value is valid.</p>
+You can then use the `{{cssxref('paint()', 'paint()')}}` CSS function in your
+CSS anywhere an `{{cssxref('&lt;image&gt;')}}` value is valid.
 
-<pre class="brush: css">li {
+```css
+li {
    background-image: paint(checkerboard);
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/CSS_Painting_API">CSS Painting API</a></li>
-  <li><a href="/en-US/docs/Web/Houdini">Houdini APIs</a></li>
-  <li><a href="/en-US/docs/Web/Houdini/learn">Houdini overview</a></li>
-</ul>
+- [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API)
+- [Houdini APIs](/en-US/docs/Web/Houdini)
+- [Houdini overview](/en-US/docs/Web/Houdini/learn)

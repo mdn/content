@@ -11,38 +11,39 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals.ariaColSpan
 ---
-<div>{{DefaultAPISidebar("DOM")}}</div>
+{{DefaultAPISidebar("DOM")}}
 
-<p>The <strong><code>ariaColSpan</code></strong> property of the {{domxref("ElementInternals")}} interface reflects the value of the <code>aria-colspan</code> attribute, which defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid.</p>
+The **`ariaColSpan`** property of the {{domxref("ElementInternals")}} interface reflects the value of the `aria-colspan` attribute, which defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Setting aria attributes on <code>ElementInternals</code> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <a href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</a>.</p>
-</div>
+> **Note:** Setting aria attributes on `ElementInternals` allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the [Accessibility Object Model explainer](https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let ariaColSpan = ElementInternals.ariaColSpan;
-ElementInternals.ariaColSpan = ariaColSpan;</pre>
+```js
+let ariaColSpan = ElementInternals.ariaColSpan;
+ElementInternals.ariaColSpan = ariaColSpan;
+```
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString")}} which contains an integer.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("DOMString")}} which contains an integer.
 
-<p>In this example the value of <code>ariaColspan</code> is set to "2".</p>
+## Examples
 
-<pre class="brush: js">this.internals_.ariaColspan = "2";</pre>
+In this example the value of `ariaColspan` is set to "2".
 
-<h2 id="Specifications">Specifications</h2>
+```js
+this.internals_.ariaColspan = "2";
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role">ARIA: table role</a></li>
-</ul>
+- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role)

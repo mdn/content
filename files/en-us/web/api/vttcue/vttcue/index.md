@@ -2,61 +2,62 @@
 title: VTTCue()
 slug: Web/API/VTTCue/VTTCue
 tags:
-- API
-- Accessibility
-- Constructor
-- Reference
-- VTTCue
-- WebVTT
-- WebVTT API
-- a11y
-- captions
-- vtt
+  - API
+  - Accessibility
+  - Constructor
+  - Reference
+  - VTTCue
+  - WebVTT
+  - WebVTT API
+  - a11y
+  - captions
+  - vtt
 browser-compat: api.VTTCue.VTTCue
 ---
-<p>{{APIRef("WebVTT")}}</p>
+{{APIRef("WebVTT")}}
 
-<p>The <code><strong>VTTCue()</strong></code> constructor creates and returns a new
-  {{domxref("VTTCue")}} object.</p>
+The **`VTTCue()`** constructor creates and returns a new
+{{domxref("VTTCue")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">new VTTCue(startTime, endTime, text);</pre>
+```js
+new VTTCue(startTime, endTime, text);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>startTime</code></dt>
-  <dd>This is a <code>double</code> representing the initial text track cue start time.
+- `startTime`
+  - : This is a `double` representing the initial text track cue start time.
     This is the time, given in seconds and fractions of a second, denoting the beginning
     of the range of the media data to which this cue applies. For example, if a cue is to
     be visible from 50 seconds to a one minute, five and a half seconds in the media's
-    playback, <code>startTime</code> will be 50.0.</dd>
-  <dt><code>endTime</code></dt>
-  <dd>This is a <code>double</code> representing the ending time for this text track cue.
+    playback, `startTime` will be 50.0.
+- `endTime`
+  - : This is a `double` representing the ending time for this text track cue.
     This is the time at which the cue should stop being presented to the user, given in
     seconds and fractions thereof. Given the example cue mentioned under
-    <code>startTime</code>, the value of <code>endTime</code> would be 65.5.</dd>
-  <dt><code>text</code></dt>
-  <dd>A {{domxref("DOMString")}} providing the text that will be shown during the time
-    span indicated by <code>startTime</code> and <code>endTime</code>.</dd>
-</dl>
+    `startTime`, the value of `endTime` would be 65.5.
+- `text`
+  - : A {{domxref("DOMString")}} providing the text that will be shown during the time
+    span indicated by `startTime` and `endTime`.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A new {{domxref("VTTCue")}} object representing a cue which will be presented during
-  the time span given.</p>
+A new {{domxref("VTTCue")}} object representing a cue which will be presented during
+the time span given.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js ">// Create a cue that is shown from 2 to 3 seconds and uses the given text.
-let cue = new VTTCue(2, 3, 'Cool text to be displayed');</pre>
+```js
+// Create a cue that is shown from 2 to 3 seconds and uses the given text.
+let cue = new VTTCue(2, 3, 'Cool text to be displayed');
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

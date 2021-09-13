@@ -14,57 +14,55 @@ tags:
   - populateMatrix()
 browser-compat: api.OrientationSensor.populateMatrix
 ---
-<div>{{APIRef("Sensor API")}}</div>
+{{APIRef("Sensor API")}}
 
-<p>he <strong><code>populateMatrix</code></strong> method of the
-    {{domxref("OrientationSensor")}} interface populates the given target matrix with the
-    rotation matrix based on the latest sensor reading. The rotation matrix is shown
-    below. </span></p>
+he **`populateMatrix`** method of the
+{{domxref("OrientationSensor")}} interface populates the given target matrix with the
+rotation matrix based on the latest sensor reading. The rotation matrix is shown
+below.
 
-<p><img alt="The formulas used to convert the sensor's quaternion to the provided matrix."
-    src="quaternion_to_rotation_matrix.png"></p>
+![The formulas used to convert the sensor's quaternion to the provided matrix.](quaternion_to_rotation_matrix.png)
 
-<p>where:</p>
+where:
 
-<ul>
-  <li>W = cos(θ/2)</li>
-  <li>X = Vx * sin(θ/2)</li>
-  <li>Y = Vy * sin(θ/2)</li>
-  <li>Z = Vz * sin(θ/2)</li>
-</ul>
+- W = cos(θ/2)
+- X = Vx \* sin(θ/2)
+- Y = Vy \* sin(θ/2)
+- Z = Vz \* sin(θ/2)
 
-<p>If a feature policy blocks use of a feature it is because your code is inconsistent
-  with the policies set on your server. This is not something that would ever be shown to
-  a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation
-  instructions.</p>
+If a feature policy blocks use of a feature it is because your code is inconsistent
+with the policies set on your server. This is not something that would ever be shown to
+a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation
+instructions.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var>orientationInstance</var>.populateMatrix(targetMatrix)</pre>
+```js
+orientationInstance.populateMatrix(targetMatrix)
+```
 
-<p>Because {{domxref('OrientationSensor')}} is a base class, <code>populateMatrix</code>
-  may only be read from one of its derived classes.</p>
+Because {{domxref('OrientationSensor')}} is a base class, `populateMatrix`
+may only be read from one of its derived classes.
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><em>targetMatrix</em></dt>
-  <dd>TBD</dd>
-</dl>
+- _targetMatrix_
+  - : TBD
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{jsxref('undefined')}}</p>
+{{jsxref('undefined')}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">// TBD</pre>
+```js
+// TBD
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

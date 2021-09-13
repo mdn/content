@@ -2,146 +2,134 @@
 title: WebGLRenderingContext.readPixels()
 slug: Web/API/WebGLRenderingContext/readPixels
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.readPixels
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.readPixels()</code></strong> method of the <a
-    href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> reads a block of pixels from a
-  specified rectangle of the current color framebuffer into an
-  {{domxref("ArrayBufferView")}} object.</p>
+The **`WebGLRenderingContext.readPixels()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) reads a block of pixels from a
+specified rectangle of the current color framebuffer into an
+{{domxref("ArrayBufferView")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">// WebGL1:
+```js
+// WebGL1:
 void gl.readPixels(x, y, width, height, format, type, pixels);
 
 // WebGL2:
 void gl.readPixels(x, y, width, height, format, type, GLintptr offset);
 void gl.readPixels(x, y, width, height, format, type, ArrayBufferView pixels, GLuint dstOffset);
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>x</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLint")}} specifying the first horizontal pixel that is read from the
-    lower left corner of a rectangular block of pixels.</dd>
-  <dt>y</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLint")}} specifying the first vertical pixel that is read from the
-    lower left corner of a rectangular block of pixels.</dd>
-  <dt>width</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the width of the rectangle.</dd>
-  <dt>height</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the height of the rectangle.</dd>
-  <dt>format</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the format of the pixel data. Possible values:
-    <ul>
-      <li><code>gl.ALPHA</code>: Discards the red, green and blue components and reads the
-        alpha component.</li>
-      <li><code>gl.RGB</code>: Discards the alpha components and reads the red, green and
-        blue components.</li>
-      <li><code>gl.RGBA</code>: Red, green, blue and alpha components are read from the
-        color buffer.</li>
-    </ul>
+- x
+  - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the first horizontal pixel that is read from the
+    lower left corner of a rectangular block of pixels.
+- y
+  - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the first vertical pixel that is read from the
+    lower left corner of a rectangular block of pixels.
+- width
+  - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the width of the rectangle.
+- height
+  - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the height of the rectangle.
+- format
 
-    <p>WebGL2 adds</p>
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the format of the pixel data. Possible values:
 
-    <ul>
-      <li><code>gl.RED</code></li>
-      <li><code>gl.RG</code></li>
-      <li><code>gl.RED_INTEGER</code></li>
-      <li><code>gl.RG_INTEGER</code></li>
-      <li><code>gl.RGB_INTEGER</code></li>
-      <li><code>gl.RGBA_INTEGER</code></li>
-    </ul>
-  </dd>
-  <dt>type</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the data type of the pixel data. Possible values:
-    <ul>
-      <li><code>gl.UNSIGNED_BYTE</code></li>
-      <li><code>gl.UNSIGNED_SHORT_5_6_5</code></li>
-      <li><code>gl.UNSIGNED_SHORT_4_4_4_4</code></li>
-      <li><code>gl.UNSIGNED_SHORT_5_5_5_1</code></li>
-      <li><code>gl.FLOAT</code></li>
-    </ul>
+    - `gl.ALPHA`: Discards the red, green and blue components and reads the
+      alpha component.
+    - `gl.RGB`: Discards the alpha components and reads the red, green and
+      blue components.
+    - `gl.RGBA`: Red, green, blue and alpha components are read from the
+      color buffer.
 
-    <p>WebGL2 adds</p>
+    WebGL2 adds
 
-    <ul>
-      <li><code>gl.BYTE</code></li>
-      <li><code>gl.UNSIGNED_INT_2_10_10_10_REV</code></li>
-      <li><code>gl.HALF_FLOAT</code></li>
-      <li><code>gl.SHORT</code></li>
-      <li><code>gl.UNSIGNED_SHORT</code></li>
-      <li><code>gl.INT</code></li>
-      <li><code>gl.UNSIGNED_INT</code></li>
-      <li><code>gl.UNSIGNED_INT_10F_11F_11F_REV</code></li>
-      <li><code>gl.UNSIGNED_INT_5_9_9_9_REV</code></li>
-    </ul>
-  </dd>
-  <dt>pixels</dt>
-  <dd>An {{domxref("ArrayBufferView")}} object to read data into. The array type must
-    match the type of the <code>type</code> parameter.
-    <ul>
-      <li>{{jsxref("Uint8Array")}} for <code>gl.UNSIGNED_BYTE</code>.</li>
-      <li>{{jsxref("Uint16Array")}} for <code>gl.UNSIGNED_SHORT_5_6_5</code>,
-        <code>gl.UNSIGNED_SHORT_4_4_4_4</code>, or <code>gl.UNSIGNED_SHORT_5_5_5_1</code>.
-      </li>
-      <li>{{jsxref("Float32Array")}} for <code>gl.FLOAT</code>.</li>
-    </ul>
-  </dd>
-  <dt><code>dstOffset</code> {{optional_inline}}</dt>
-  <dd>Offset. Defaults to 0.</dd>
-</dl>
+    - `gl.RED`
+    - `gl.RG`
+    - `gl.RED_INTEGER`
+    - `gl.RG_INTEGER`
+    - `gl.RGB_INTEGER`
+    - `gl.RGBA_INTEGER`
 
-<h3 id="Return_value">Return value</h3>
+- type
 
-<p>None.</p>
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the data type of the pixel data. Possible values:
 
-<h3 id="Exceptions">Exceptions</h3>
+    - `gl.UNSIGNED_BYTE`
+    - `gl.UNSIGNED_SHORT_5_6_5`
+    - `gl.UNSIGNED_SHORT_4_4_4_4`
+    - `gl.UNSIGNED_SHORT_5_5_5_1`
+    - `gl.FLOAT`
 
-<ul>
-  <li>A <code>gl.INVALID_ENUM</code> error is thrown if <code>format</code> or
-    <code>type</code> is not an accepted value.</li>
-  <li>A <code>gl.INVALID_OPERATION</code> error is thrown if
-    <ul>
-      <li><code>type</code> is <code>gl.UNSIGNED_SHORT_5_6_5</code> and
-        <code>format</code> is not <code>gl.RGB</code>.</li>
-      <li><code>type</code> is <code>gl.UNSIGNED_SHORT_4_4_4_4</code> and
-        <code>format</code> is not <code>gl.RGB</code>A.</li>
-      <li><code>type</code> does not match the typed array type of <code>pixels</code>.
-      </li>
-    </ul>
-  </li>
-  <li>A <code>gl.INVALID_FRAMEBUFFER_OPERATION</code> error is thrown if the currently
-    bound framebuffer is not framebuffer complete.</li>
-</ul>
+    WebGL2 adds
 
-<h2 id="Examples">Examples</h2>
+    - `gl.BYTE`
+    - `gl.UNSIGNED_INT_2_10_10_10_REV`
+    - `gl.HALF_FLOAT`
+    - `gl.SHORT`
+    - `gl.UNSIGNED_SHORT`
+    - `gl.INT`
+    - `gl.UNSIGNED_INT`
+    - `gl.UNSIGNED_INT_10F_11F_11F_REV`
+    - `gl.UNSIGNED_INT_5_9_9_9_REV`
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+- pixels
+
+  - : An {{domxref("ArrayBufferView")}} object to read data into. The array type must
+    match the type of the `type` parameter.
+
+    - {{jsxref("Uint8Array")}} for `gl.UNSIGNED_BYTE`.
+    - {{jsxref("Uint16Array")}} for `gl.UNSIGNED_SHORT_5_6_5`,
+      `gl.UNSIGNED_SHORT_4_4_4_4`, or `gl.UNSIGNED_SHORT_5_5_5_1`.
+    - {{jsxref("Float32Array")}} for `gl.FLOAT`.
+
+- `dstOffset` {{optional_inline}}
+  - : Offset. Defaults to 0.
+
+### Return value
+
+None.
+
+### Exceptions
+
+- A `gl.INVALID_ENUM` error is thrown if `format` or
+  `type` is not an accepted value.
+- A `gl.INVALID_OPERATION` error is thrown if
+
+  - `type` is `gl.UNSIGNED_SHORT_5_6_5` and
+    `format` is not `gl.RGB`.
+  - `type` is `gl.UNSIGNED_SHORT_4_4_4_4` and
+    `format` is not `gl.RGB`A.
+  - `type` does not match the typed array type of `pixels`.
+
+- A `gl.INVALID_FRAMEBUFFER_OPERATION` error is thrown if the currently
+  bound framebuffer is not framebuffer complete.
+
+## Examples
+
+```js
+var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 var pixels = new Uint8Array(gl.drawingBufferWidth * gl.drawingBufferHeight * 4);
 gl.readPixels(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight, gl.RGBA, gl.UNSIGNED_BYTE, pixels);
 console.log(pixels); // Uint8Array
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays">Typed Arrays</a></li>
-</ul>
+- [Typed Arrays](/en-US/docs/Web/JavaScript/Typed_arrays)

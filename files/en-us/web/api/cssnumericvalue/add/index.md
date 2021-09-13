@@ -2,55 +2,54 @@
 title: CSSNumericValue.add()
 slug: Web/API/CSSNumericValue/add
 tags:
-- API
-- CSS Typed Object Model API
-- CSSNumericValue
-- Experimental
-- Houdini
-- Method
-- Reference
-- add()
+  - API
+  - CSS Typed Object Model API
+  - CSSNumericValue
+  - Experimental
+  - Houdini
+  - Method
+  - Reference
+  - add()
 browser-compat: api.CSSNumericValue.add
 ---
-<div>{{draft}}{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}</div>
+{{draft}}{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
-<p>The <strong><code>add()</code></strong> method of the
-  {{domxref("CSSNumericValue")}} interface adds a supplied number to the
-  <code>CSSNumericValue</code>.</p>
+The **`add()`** method of the
+{{domxref("CSSNumericValue")}} interface adds a supplied number to the
+`CSSNumericValue`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var cssMathSum = CSSNumericValue.add(double | CSSNumericValue);</pre>
+```js
+var cssMathSum = CSSNumericValue.add(double | CSSNumericValue);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>number</dt>
-  <dd>either a {{jsxref('Number')}} or a {{domxref('CSSNumericValue')}}.</dd>
-</dl>
+- number
+  - : either a {{jsxref('Number')}} or a {{domxref('CSSNumericValue')}}.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref('CSSMathSum')}}</p>
+A {{domxref('CSSMathSum')}}
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>TypeError</dt>
-  <dd>Indicates that an invalid type was passed to the method.</dd>
-</dl>
+- TypeError
+  - : Indicates that an invalid type was passed to the method.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">let mathSum = CSS.px("23").add(CSS.percent("4")).add(CSS.cm("3")).add(CSS.in("9"));
+```js
+let mathSum = CSS.px("23").add(CSS.percent("4")).add(CSS.cm("3")).add(CSS.in("9"));
 // Prints "calc(23px + 4% + 3cm + 9in)"
-console.log(mathSum.toString());</pre>
+console.log(mathSum.toString());
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

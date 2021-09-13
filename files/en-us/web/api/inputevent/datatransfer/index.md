@@ -2,68 +2,72 @@
 title: InputEvent.dataTransfer
 slug: Web/API/InputEvent/dataTransfer
 tags:
-- API
-- DOM Events
-- DataTransfer
-- Experimental
-- Input
-- InputEvent
-- Property
-- Reference
-- events
+  - API
+  - DOM Events
+  - DataTransfer
+  - Experimental
+  - Input
+  - InputEvent
+  - Property
+  - Reference
+  - events
 browser-compat: api.InputEvent.dataTransfer
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p>The <strong><code>dataTransfer</code></strong> read-only property of the
-  {{domxref("InputEvent")}} interface returns a {{domxref("DataTransfer")}} object
-  containing information about richtext or plaintext data being added to or removed from
-  editable content.</p>
+The **`dataTransfer`** read-only property of the
+{{domxref("InputEvent")}} interface returns a {{domxref("DataTransfer")}} object
+containing information about richtext or plaintext data being added to or removed from
+editable content.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>dataTransfer</em> = <em>inputEvent</em>.dataTransfer</pre>
+```js
+var dataTransfer = inputEvent.dataTransfer
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DataTransfer")}} object.</p>
+A {{domxref("DataTransfer")}} object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the following simple example we've set up an event listener on the <a
-    href="/en-US/docs/Web/API/HTMLElement/input_event">input</a> event so that when any
-  content is pasted into the contenteditable {{htmlelement("p")}} element, its HTML source
-  is retrieved via the
-  <code><a href="/en-US/docs/Web/API/DataTransfer/getData">InputEvent.dataTransfer.getData()</a></code>
-  method and reported in the paragraph below the input.</p>
+In the following simple example we've set up an event listener on the [input](/en-US/docs/Web/API/HTMLElement/input_event) event so that when any
+content is pasted into the contenteditable {{htmlelement("p")}} element, its HTML source
+is retrieved via the
+[`InputEvent.dataTransfer.getData()`](/en-US/docs/Web/API/DataTransfer/getData)
+method and reported in the paragraph below the input.
 
-<p>Try copying and pasting some of the content provided to see the effects.</p>
+Try copying and pasting some of the content provided to see the effects.
 
-<pre class="brush: html">&lt;p&gt;&lt;span style="font-weight: bold; color: blue"&gt;Whoa, bold blue text!&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style="font-style: italic; color: red"&gt;Exciting: italic red text!&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Boring normal text ;-(&lt;/p&gt;
+```html
+<p><span style="font-weight: bold; color: blue">Whoa, bold blue text!</span></p>
+<p><span style="font-style: italic; color: red">Exciting: italic red text!</span></p>
+<p>Boring normal text ;-(</p>
 
-&lt;hr&gt;
+<hr>
 
-&lt;p contenteditable="true"&gt;Go on, try pasting some content into this editable paragraph and see what happens!&lt;/p&gt;
+<p contenteditable="true">Go on, try pasting some content into this editable paragraph and see what happens!</p>
 
-&lt;p class="result"&gt;&lt;/p&gt;</pre>
+<p class="result"></p>
+```
 
-<pre class="brush: js">var editable = document.querySelector('p[contenteditable]');
+```js
+var editable = document.querySelector('p[contenteditable]');
 var result = document.querySelector('.result')
 var dataTransferObj;
 
-editable.addEventListener('input', (e) =&gt; {
+editable.addEventListener('input', (e) => {
   result.textContent = e.dataTransfer.getData('text/html');
-});</pre>
+});
+```
 
-<p>{{EmbedLiveSample('Examples', '100%', 250)}}</p>
+{{EmbedLiveSample('Examples', '100%', 250)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

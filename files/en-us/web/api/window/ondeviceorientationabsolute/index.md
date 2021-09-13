@@ -2,40 +2,38 @@
 title: Window.ondeviceorientationabsolute
 slug: Web/API/Window/ondeviceorientationabsolute
 tags:
-- API
-- Device Orientation
-- Mobile
-- Orientation
-- Property
+  - API
+  - Device Orientation
+  - Mobile
+  - Orientation
+  - Property
 browser-compat: api.Window.ondeviceorientationabsolute
 ---
-<p>{{ ApiRef() }}{{Non-standard_header}}</p>
+{{ ApiRef() }}{{Non-standard_header}}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>An event handler for the {{ event("deviceorientationabsolute") }} event
-  containing information about an absolute device orientation change.</p>
+An event handler for the {{ event("deviceorientationabsolute") }} event
+containing information about an absolute device orientation change.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">window.ondeviceorientationabsolute = function(event) { ... };
+```js
+window.ondeviceorientationabsolute = function(event) { ... };
 window.addEventListener('deviceorientationabsolute', function(event) { ... });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This event handler is not currently part of any specification.</p>
+This event handler is not currently part of any specification.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{ event("deviceorientation") }}</li>
-  <li>{{ domxref("DeviceOrientationEvent") }}</li>
-  <li>{{domxref("Window.ondeviceorientation","ondeviceorientation")}}</li>
-  <li><a href="/en-US/docs/Detecting_device_orientation"
-      title="Detecting device orientation">Detecting device orientation</a></li>
-</ul>
+- {{ event("deviceorientation") }}
+- {{ domxref("DeviceOrientationEvent") }}
+- {{domxref("Window.ondeviceorientation","ondeviceorientation")}}
+- [Detecting device orientation](/en-US/docs/Detecting_device_orientation "Detecting device orientation")

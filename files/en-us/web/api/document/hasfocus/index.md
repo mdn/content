@@ -9,45 +9,45 @@ tags:
   - Reference
 browser-compat: api.Document.hasFocus
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code><strong>hasFocus()</strong></code> method of the {{domxref("Document")}}
-  interface returns a boolean value indicating whether the document or any
-  element inside the document has focus. This method can be used to determine whether the
-  active element in a document has focus.</p>
+The **`hasFocus()`** method of the {{domxref("Document")}}
+interface returns a boolean value indicating whether the document or any
+element inside the document has focus. This method can be used to determine whether the
+active element in a document has focus.
 
-<div class="note">
-  <p><strong>Note:</strong> When viewing a document, an element with focus is always the <a
-      href="/en-US/docs/Web/API/Document/activeElement">active element</a> in
-    the document, but an active element does not necessarily have focus. For example, an
-    active element within a popup window that is not the foreground doesn't have focus.
-  </p>
-</div>
+> **Note:** When viewing a document, an element with focus is always the [active element](/en-US/docs/Web/API/Document/activeElement) in
+> the document, but an active element does not necessarily have focus. For example, an
+> active element within a popup window that is not the foreground doesn't have focus.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>focused</var> = <var>document</var>.hasFocus();</pre>
+```js
+var focused = document.hasFocus();
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>false</code> if the active element in the document has no focus;
-  <code>true</code> if the active element in the document has focus.</p>
+`false` if the active element in the document has no focus;
+`true` if the active element in the document has focus.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example checks whether the document has focus every 300 milliseconds. To test the
-  functionality of <code>hasFocus()</code>, click on the button to open a new window, and
-  try switching between the two pages.</p>
+This example checks whether the document has focus every 300 milliseconds. To test the
+functionality of `hasFocus()`, click on the button to open a new window, and
+try switching between the two pages.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p id="log"&gt;Awaiting focus check.&lt;/p&gt;
-&lt;button onclick="openWindow()"&gt;Open a new window&lt;/button&gt;</pre>
+```html
+<p id="log">Awaiting focus check.</p>
+<button onclick="openWindow()">Open a new window</button>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">function checkPageFocus() {
+```js
+function checkPageFocus() {
   let body = document.querySelector('body');
   let log = document.getElementById('log');
 
@@ -66,23 +66,22 @@ function openWindow() {
 }
 
 // Check page focus every 300 milliseconds
-setInterval(checkPageFocus, 300);</pre>
+setInterval(checkPageFocus, 300);
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Page_Visibility_API">Using
-      the Page Visibility API</a></li>
-</ul>
+- [Using
+  the Page Visibility API](/en-US/docs/Web/API/Page_Visibility_API)

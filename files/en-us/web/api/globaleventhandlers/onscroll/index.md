@@ -2,98 +2,98 @@
 title: GlobalEventHandlers.onscroll
 slug: Web/API/GlobalEventHandlers/onscroll
 tags:
-- API
-- Event Handler
-- GlobalEventHandlers
-- HTML DOM
-- Property
-- Reference
+  - API
+  - Event Handler
+  - GlobalEventHandlers
+  - HTML DOM
+  - Property
+  - Reference
 browser-compat: api.GlobalEventHandlers.onscroll
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p>The <strong><code>onscroll</code></strong> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> that
-  processes <code>scroll</code> events.</p>
+The **`onscroll`** property of the
+{{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
+processes `scroll` events.
 
-<p>The <code>scroll</code> event fires when the document view or an element has been
-  scrolled, whether by the user, a <a href="/en-US/docs/Web/API">Web API</a>, or the
-  {{glossary("user agent")}}.</p>
+The `scroll` event fires when the document view or an element has been
+scrolled, whether by the user, a [Web API](/en-US/docs/Web/API), or the
+{{glossary("user agent")}}.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Don't confuse <code>onscroll</code> with
-    {{domxref("GlobalEventHandlers.onwheel", "onwheel")}}!</p>
+> **Note:** Don't confuse `onscroll` with
+> {{domxref("GlobalEventHandlers.onwheel", "onwheel")}}!
+>
+> `onwheel` handles general wheel rotation, while `onscroll`
+> handles scrolling of an object's content.
 
-  <p><code>onwheel</code> handles general wheel rotation, while <code>onscroll</code>
-    handles scrolling of an object's content.</p>
-</div>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+target.onscroll = functionRef
+```
 
-<pre class="brush: js"><var>target</var>.onscroll = <var>functionRef</var>
-</pre>
+### Value
 
-<h3 id="Value">Value</h3>
+- `functionRef`
+  - : A function name, or a [function
+    expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("UIEvent")}} object as its sole
+    argument.
 
-<dl>
-  <dt><code><var>functionRef</var></code></dt>
-  <dd>A function name, or a <a
-      href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function
-      expression</a>. The function receives a {{domxref("UIEvent")}} object as its sole
-    argument.</dd>
-</dl>
+Only one `onscroll` handler can be assigned to an object at a time.
 
-<p>Only one <code>onscroll</code> handler can be assigned to an object at a time.</p>
+For greater flexibility, you can pass a {{event("scroll")}} event to the
+{{domxref("EventTarget.addEventListener()")}} method instead.
 
-<p>For greater flexibility, you can pass a {{event("scroll")}} event to the
-  {{domxref("EventTarget.addEventListener()")}} method instead.</p>
+## Example
 
-<h2 id="Example">Example</h2>
+This example monitors scrolling on a {{HtmlElement("textarea")}}, and logs the
+element's vertical scroll position accordingly.
 
-<p>This example monitors scrolling on a {{HtmlElement("textarea")}}, and logs the
-  element's vertical scroll position accordingly.</p>
+### HTML
 
-<h3 id="HTML">HTML</h3>
+```html
+<textarea>1 2 3 4 5 6 7 8 9</textarea>
+<p id="log"></p>
+```
 
-<pre class="brush: html">&lt;textarea&gt;1 2 3 4 5 6 7 8 9&lt;/textarea&gt;
-&lt;p id="log"&gt;&lt;/p&gt;</pre>
+### CSS
 
-<h3 id="CSS">CSS</h3>
-
-<pre class="brush: css">textarea {
+```css
+textarea {
   width: 4rem;
   height: 8rem;
   font-size: 3rem;
-}</pre>
+}
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">const textarea = document.querySelector('textarea');
+```js
+const textarea = document.querySelector('textarea');
 const log = document.getElementById('log');
 
 textarea.onscroll = logScroll;
 
 function logScroll(e) {
   log.textContent = `Scroll position: ${e.target.scrollTop}`;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example", 700, 200)}}</p>
+{{EmbedLiveSample("Example", 700, 200)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Document/scroll_event">Document: <code>scroll</code>
-      event</a></li>
-  <li><a href="/en-US/docs/Web/API/Element/scroll_event">Element: <code>scroll</code>
-      event</a></li>
-</ul>
+- [Document: `scroll`
+  event](/en-US/docs/Web/API/Document/scroll_event)
+- [Element: `scroll`
+  event](/en-US/docs/Web/API/Element/scroll_event)

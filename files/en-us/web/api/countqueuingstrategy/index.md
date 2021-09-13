@@ -10,31 +10,28 @@ tags:
   - Streams
 browser-compat: api.CountQueuingStrategy
 ---
-<p>{{SeeCompatTable}}{{APIRef("Streams")}}</p>
+{{SeeCompatTable}}{{APIRef("Streams")}}
 
-<p>The <strong><code>CountQueuingStrategy</code></strong> interface of the <a href="/en-US/docs/Web/API/Streams_API">Streams API</a> provides a built-in chunk counting queuing strategy that can be used when constructing streams.</p>
+The **`CountQueuingStrategy`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) provides a built-in chunk counting queuing strategy that can be used when constructing streams.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("CountQueuingStrategy.CountQueuingStrategy", "CountQueuingStrategy()")}}</dt>
- <dd>Creates a new <code>CountQueuingStrategy</code> object instance.</dd>
-</dl>
+- {{domxref("CountQueuingStrategy.CountQueuingStrategy", "CountQueuingStrategy()")}}
+  - : Creates a new `CountQueuingStrategy` object instance.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p>None.</p>
+None.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("CountQueuingStrategy.size()")}}</dt>
- <dd>Returns <code>1</code>.</dd>
-</dl>
+- {{domxref("CountQueuingStrategy.size()")}}
+  - : Returns `1`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js ">const queueingStrategy = new CountQueuingStrategy({ highWaterMark: 1 });
+```js
+const queueingStrategy = new CountQueuingStrategy({ highWaterMark: 1 });
 
 const writableStream = new WritableStream({
   // Implement the sink
@@ -50,12 +47,12 @@ const writableStream = new WritableStream({
 }, queueingStrategy);
 
 var size = queueingStrategy.size();
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

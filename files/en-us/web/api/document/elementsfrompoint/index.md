@@ -9,73 +9,73 @@ tags:
   - elementsFromPoint
 browser-compat: api.Document.elementsFromPoint
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>elementsFromPoint()</code></strong> method
-    of the {{domxref("Document")}} interface returns an array of all elements
-    at the specified coordinates (relative to the viewport).</p>
+The **`elementsFromPoint()`** method
+of the {{domxref("Document")}} interface returns an array of all elements
+at the specified coordinates (relative to the viewport).
 
-<p>It operates in a similar way to the {{domxref("Document.elementFromPoint",
-  "elementFromPoint()")}} method.</p>
+It operates in a similar way to the {{domxref("Document.elementFromPoint",
+  "elementFromPoint()")}} method.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">elementsFromPoint(x, y);</pre>
+```js
+elementsFromPoint(x, y);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>x</var></code></dt>
-  <dd>The horizontal coordinate of a point.</dd>
-  <dt><code><var>y</var></code></dt>
-  <dd>The vertical coordinate of a point.</dd>
-</dl>
+- `x`
+  - : The horizontal coordinate of a point.
+- `y`
+  - : The vertical coordinate of a point.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An array of {{domxref('element')}} objects.</p>
+An array of {{domxref('element')}} objects.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p&gt;Some text&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;Elements at point 30, 20:&lt;/p&gt;
-&lt;div id="output"&gt;&lt;/div&gt;
-</pre>
+```html
+<div>
+  <p>Some text</p>
+</div>
+<p>Elements at point 30, 20:</p>
+<div id="output"></div>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js;">let output = document.getElementById("output");
+```js
+let output = document.getElementById("output");
 if (document.elementsFromPoint) {
   let elements = document.elementsFromPoint(30, 20);
-  for (var i = 0; i &lt; elements.length; i++) {
+  for (var i = 0; i < elements.length; i++) {
     output.textContent += elements[i].localName;
-    if (i &lt; elements.length - 1) {
-      output.textContent += " &lt; ";
+    if (i < elements.length - 1) {
+      output.textContent += " < ";
     }
   }
 } else {
-  output.innerHTML = "&lt;span style=\"color: red;\"&gt;" +
-     "Browser does not support &lt;code&gt;document.elementsFromPoint()&lt;/code&gt;" +
-     "&lt;/span&gt;";
-}</pre>
+  output.innerHTML = "<span style=\"color: red;\">" +
+     "Browser does not support <code>document.elementsFromPoint()</code>" +
+     "</span>";
+}
+```
 
-<p>{{EmbedLiveSample('Example', '420', '120')}}</p>
+{{EmbedLiveSample('Example', '420', '120')}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{DOMxRef("Document.elementFromPoint()")}}</li>
-</ul>
+- {{DOMxRef("Document.elementFromPoint()")}}

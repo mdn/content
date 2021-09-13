@@ -2,109 +2,105 @@
 title: IntersectionObserver()
 slug: Web/API/IntersectionObserver/IntersectionObserver
 tags:
-- API
-- Constructor
-- Intersection Observer API
-- IntersectionObserver
-- Reference
-- Visibility
-- Visible
+  - API
+  - Constructor
+  - Intersection Observer API
+  - IntersectionObserver
+  - Reference
+  - Visibility
+  - Visible
 browser-compat: api.IntersectionObserver.IntersectionObserver
 ---
-<div>{{APIRef("Intersection Observer API")}}</div>
+{{APIRef("Intersection Observer API")}}
 
-<p>The <strong><code>IntersectionObserver()</code></strong>
-    constructor creates and returns a new {{domxref("IntersectionObserver")}}
-    object.</p>
+The **`IntersectionObserver()`**
+constructor creates and returns a new {{domxref("IntersectionObserver")}}
+object.
 
-<p>The <code>rootMargin</code>, if specified, is checked to ensure it's
-  syntactically correct, the thresholds are checked to ensure that they're all in the
-  range 0.0 and 1.0 inclusive, and the threshold list is sorted in ascending numeric
-  order. if the threshold list is empty, it's set to the array [0.0].</p>
+The `rootMargin`, if specified, is checked to ensure it's
+syntactically correct, the thresholds are checked to ensure that they're all in the
+range 0.0 and 1.0 inclusive, and the threshold list is sorted in ascending numeric
+order. if the threshold list is empty, it's set to the array \[0.0].
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>observer</em> = new IntersectionObserver(<em>callback</em>[, <em>options</em>]);</pre>
+```js
+var observer = new IntersectionObserver(callback[, options]);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>callback</code></dt>
-  <dd>A function which is called when the percentage of the target element is visible
+- `callback`
+
+  - : A function which is called when the percentage of the target element is visible
     crosses a threshold. The callback receives as input two parameters:
-    <dl>
-      <dt><code>entries</code></dt>
-      <dd>An array of {{domxref("IntersectionObserverEntry")}} objects, each representing
+
+    - `entries`
+      - : An array of {{domxref("IntersectionObserverEntry")}} objects, each representing
         one threshold which was crossed, either becoming more or less visible than the
-        percentage specified by that threshold.</dd>
-      <dt><code>observer</code></dt>
-      <dd>The {{domxref("IntersectionObserver")}} for which the callback is being invoked.
-      </dd>
-    </dl>
-  </dd>
-  <dt><code>options</code> {{optional_inline}}</dt>
-  <dd>An optional object which customizes the observer. If <code>options</code> isn't
+        percentage specified by that threshold.
+    - `observer`
+      - : The {{domxref("IntersectionObserver")}} for which the callback is being invoked.
+
+- `options` {{optional_inline}}
+
+  - : An optional object which customizes the observer. If `options` isn't
     specified, the observer uses the document's viewport as the root, with no margin, and
     a 0% threshold (meaning that even a one-pixel change is enough to trigger a callback).
     You can provide any combination of the following options:
-    <dl>
-      <dt><code>root</code></dt>
-      <dd>An {{domxref("Element")}} or {{domxref("Document")}} object which is an ancestor
+
+    - `root`
+      - : An {{domxref("Element")}} or {{domxref("Document")}} object which is an ancestor
         of the intended target, whose bounding rectangle will be considered the viewport.
-        Any part of the target not visible in the visible area of the <code>root</code> is
-        not considered visible.</dd>
-      <dt><code>rootMargin</code></dt>
-      <dd>A string which specifies a set of offsets to add to the root's
+        Any part of the target not visible in the visible area of the `root` is
+        not considered visible.
+    - `rootMargin`
+      - : A string which specifies a set of offsets to add to the root's
         {{Glossary('bounding_box')}} when calculating intersections, effectively shrinking
         or growing the root for calculation purposes. The syntax is approximately the same
         as that for the CSS {{cssxref("margin")}} property; see
         {{SectionOnPage("/en-US/docs/Web/API/Intersection_Observer_API", "The root element
         and root margin")}} for more information on how the margin works and the syntax.
-        The default is "0px 0px 0px 0px".</dd>
-      <dt><code>threshold</code></dt>
-      <dd>Either a single number or an array of numbers between 0.0 and 1.0, specifying a
+        The default is "0px 0px 0px 0px".
+    - `threshold`
+      - : Either a single number or an array of numbers between 0.0 and 1.0, specifying a
         ratio of intersection area to total bounding box area for the observed target. A
         value of 0.0 means that even a single visible pixel counts as the target being
         visible. 1.0 means that the entire target element is visible. See
         {{SectionOnPage("/en-US/docs/Web/API/Intersection_Observer_API", "Thresholds")}}
         for a more in-depth description of how thresholds are used. The default is a
-        threshold of 0.0.</dd>
-    </dl>
-  </dd>
-</dl>
+        threshold of 0.0.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A new {{domxref("IntersectionObserver")}} which can be used to watch for the visibility
-  of a target element within the specified <code>root</code> crossing through any of the
-  specified visibility <code>threshold</code>s. Call its
-  {{domxref("IntersectionObserver.observe", "observe()")}} method to begin watching for
-  the visibility changes on a given target.</p>
+A new {{domxref("IntersectionObserver")}} which can be used to watch for the visibility
+of a target element within the specified `root` crossing through any of the
+specified visibility `threshold`s. Call its
+{{domxref("IntersectionObserver.observe", "observe()")}} method to begin watching for
+the visibility changes on a given target.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt><code>SyntaxError</code></dt>
-  <dd>The specified <code>rootMargin</code> is invalid.</dd>
-  <dt><code>RangeError</code></dt>
-  <dd>One or more of the values in <code>threshold</code> is outside the range 0.0 to 1.0.
-  </dd>
-</dl>
+- `SyntaxError`
+  - : The specified `rootMargin` is invalid.
+- `RangeError`
+  - : One or more of the values in `threshold` is outside the range 0.0 to 1.0.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example creates a new intersection observer which calls the function
-  <code>myObserverCallback</code> every time the visible area of the element being
-  observed changes by at least 10%.</p>
+This example creates a new intersection observer which calls the function
+`myObserverCallback` every time the visible area of the element being
+observed changes by at least 10%.
 
-<pre class="brush: js">let observer = new IntersectionObserver(myObserverCallback,
-                   {threshold: 0.1});</pre>
+```js
+let observer = new IntersectionObserver(myObserverCallback,
+                   {threshold: 0.1});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

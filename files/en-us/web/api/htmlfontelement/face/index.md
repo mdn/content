@@ -2,73 +2,57 @@
 title: HTMLFontElement.face
 slug: Web/API/HTMLFontElement/face
 tags:
-- API
-- HTML DOM
-- HTMLFontElement
-- Property
-- Reference
-- Deprecated
+  - API
+  - HTML DOM
+  - HTMLFontElement
+  - Property
+  - Reference
+  - Deprecated
 browser-compat: api.HTMLFontElement.face
 ---
-<div>{{deprecated_header}}</div>
+{{deprecated_header}}{{ APIRef("HTML DOM") }}
 
-
-<div>{{ APIRef("HTML DOM") }}</div>
-
-<p>The obsolete
-    <strong><code>HTMLFontElement.face</code></strong>
-    property is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("face",
+The obsolete
+**`HTMLFontElement.face`**
+property is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("face",
     "font") }} HTML attribute, containing a comma-separated list of one or more font
-    names.</p>
+names.
 
-<p>The document text, in the default style, is rendered as the first font face that the
-  client's browser supports. If no font listed is installed on the local system, the
-  browser typically defaults to the proportional or fixed-width font for that system.</p>
+The document text, in the default style, is rendered as the first font face that the
+client's browser supports. If no font listed is installed on the local system, the
+browser typically defaults to the proportional or fixed-width font for that system.
 
-<p>The format of the string must follow one of the following HTML microsyntax:</p>
+The format of the string must follow one of the following HTML microsyntax:
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Microsyntax</th>
-      <th scope="col">Description</th>
-      <th scope="col">Examples</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>List of one or more valid font family names</td>
-      <td><em>A list of font names, that have to be present on the local system</em></td>
-      <td><code>courier,verdana</code></td>
-    </tr>
-  </tbody>
-</table>
+| Microsyntax                                 | Description                                                         | Examples          |
+| ------------------------------------------- | ------------------------------------------------------------------- | ----------------- |
+| List of one or more valid font family names | _A list of font names, that have to be present on the local system_ | `courier,verdana` |
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>faceString</em> = <em>fontObj</em>.face;
-<em><code>fontObj.face = faceString;</code></em>
-</pre>
+```js
+faceString = fontObj.face;
+fontObj.face = faceString;
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">// Assumes there is &lt;font id="f"&gt; element in the HTML
+```js
+// Assumes there is <font id="f"> element in the HTML
 
 var f = document.getElementById("f");
 f.face = "arial";
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>The &lt;font&gt; tag is not supported in HTML5 and as a result neither is
-  <code>&lt;font&gt;.face </code>.</p>
+The \<font> tag is not supported in HTML5 and as a result neither is
+`<font>.face `.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("HTMLFontElement")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("HTMLFontElement")}} interface it belongs to.

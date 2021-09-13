@@ -15,51 +15,40 @@ tags:
   - source
 browser-compat: api.TrackDefaultList
 ---
-<p>{{APIRef("Media Source Extensions")}}{{deprecated_header}}</p>
+{{APIRef("Media Source Extensions")}}{{deprecated_header}}
 
-<p>The <strong><code>TrackDefaultList</code></strong> interface represents a simple container list for multiple {{domxref("TrackDefault")}} objects.</p>
+The **`TrackDefaultList`** interface represents a simple container list for multiple {{domxref("TrackDefault")}} objects.
 
-<p>The <code>TrackDefaultList</code> associated with a particular <code>SourceBuffer</code> can be retrieved using the {{domxref("SourceBuffer.trackDefaults")}} property.</p>
+The `TrackDefaultList` associated with a particular `SourceBuffer` can be retrieved using the {{domxref("SourceBuffer.trackDefaults")}} property.
 
-<p>The individual <code>TrackDefault</code> objects can be accessed using the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#accessing_array_elements">array operator</a> <code>[]</code>.</p>
+The individual `TrackDefault` objects can be accessed using the [array operator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#accessing_array_elements) `[]`.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("TrackDefaultList.TrackDefaultList", "TrackDefaultList()")}}</dt>
- <dd>Constructs and returns a new <code>TrackDefaultList</code> object.</dd>
-</dl>
+- {{domxref("TrackDefaultList.TrackDefaultList", "TrackDefaultList()")}}
+  - : Constructs and returns a new `TrackDefaultList` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent interface, {{domxref("EventTarget")}}.</em></p>
+_Inherits properties from its parent interface, {{domxref("EventTarget")}}._
 
-<dl>
- <dt>{{domxref("TrackDefaultList.length")}} {{readonlyInline}}</dt>
- <dd>Returns the number of {{domxref("TrackDefault")}} objects in the list.</dd>
-</dl>
+- {{domxref("TrackDefaultList.length")}} {{readonlyInline}}
+  - : Returns the number of {{domxref("TrackDefault")}} objects in the list.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Inherits properties from its parent interface, {{domxref("EventTarget")}}.</em></p>
+_Inherits properties from its parent interface, {{domxref("EventTarget")}}._
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>TBD.</p>
+TBD.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
-<div>
+{{Compat}}
 
-<p>{{Compat}}</p>
-</div>
-</div>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{domxref("MediaSource")}}</li>
- <li>{{domxref("SourceBuffer")}}</li>
- <li>{{domxref("TrackDefaultList")}}</li>
-</ul>
+- {{domxref("MediaSource")}}
+- {{domxref("SourceBuffer")}}
+- {{domxref("TrackDefaultList")}}

@@ -9,33 +9,37 @@ tags:
   - CookieStore
 browser-compat: api.CookieStore.onchange
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("Cookie Store API")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("Cookie Store API")}}
 
-<p>The <strong><code>onchange</code></strong> EventHandler of the {{domxref("CookieStore")}} interface fires when a change is made to any cookie.</p>
+The **`onchange`** EventHandler of the {{domxref("CookieStore")}} interface fires when a change is made to any cookie.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">CookieStore.onchange = function() { ... }
-CookieStore.addEventListener('change', function() { ... })</pre>
+    CookieStore.onchange = function() { ... }
+    CookieStore.addEventListener('change', function() { ... })
 
-<h2>Examples</h2>
+## Examples
 
-<p>In this example we listen for changes using the <code>onchange</code> event handler.</p>
+In this example we listen for changes using the `onchange` event handler.
 
-<pre class="brush: js">cookieStore.onchange = function() {
+```js
+cookieStore.onchange = function() {
     console.log('1 change event');
-};</pre>
+};
+```
 
-<p>In this example we listen for changes using {{domxref("EventTarget.addEventListener","addEventListener()")}}.</p>
+In this example we listen for changes using {{domxref("EventTarget.addEventListener","addEventListener()")}}.
 
-<pre class="brush: js">cookieStore.addEventListener('change', (event) => {
+```js
+cookieStore.addEventListener('change', (event) => {
   console.log('1 change event');
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

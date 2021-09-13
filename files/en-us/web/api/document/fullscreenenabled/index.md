@@ -2,76 +2,76 @@
 title: Document.fullscreenEnabled
 slug: Web/API/Document/fullscreenEnabled
 tags:
-- API
-- Document
-- Full-screen
-- Fullscreen API
-- Property
-- Read-only
-- Reference
-- fullscreen
-- fullscreenEnabled
-- screen
+  - API
+  - Document
+  - Full-screen
+  - Fullscreen API
+  - Property
+  - Read-only
+  - Reference
+  - fullscreen
+  - fullscreenEnabled
+  - screen
 browser-compat: api.Document.fullscreenEnabled
 ---
-<div>{{APIRef("Fullscreen API")}}</div>
+{{APIRef("Fullscreen API")}}
 
-<p>The read-only <code><strong>fullscreenEnabled</strong></code>
-    property on the {{domxref("Document")}} interface indicates whether or not full-screen
-    mode is available.</p>
+The read-only **`fullscreenEnabled`**
+property on the {{domxref("Document")}} interface indicates whether or not full-screen
+mode is available.
 
-<p>Full-screen mode is available only for a page that has no
-  windowed plug-ins in any of its documents, and if all {{HTMLElement("iframe")}} elements
-  which contain the document have their {{HTMLAttrXRef("allowfullscreen", "iframe")}}
-  attribute set.</p>
+Full-screen mode is available only for a page that has no
+windowed plug-ins in any of its documents, and if all {{HTMLElement("iframe")}} elements
+which contain the document have their {{HTMLAttrXRef("allowfullscreen", "iframe")}}
+attribute set.
 
-<p>Although this property is read-only, it will not throw if it is modified (even in
-  strict mode); the setter is a no-operation and it will be ignored.</p>
+Although this property is read-only, it will not throw if it is modified (even in
+strict mode); the setter is a no-operation and it will be ignored.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>isFullscreenAvailable</var> = <var>document</var>.fullscreenEnabled;
-</pre>
+```js
+var isFullscreenAvailable = document.fullscreenEnabled;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A boolean value which is <code>true</code> if the document and the
-  elements within can be placed into full-screen mode by calling
-  {{domxref("Element.requestFullscreen()")}}. If full-screen mode isn't available, this
-  value is <code>false</code>.</p>
+A boolean value which is `true` if the document and the
+elements within can be placed into full-screen mode by calling
+{{domxref("Element.requestFullscreen()")}}. If full-screen mode isn't available, this
+value is `false`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this example, before attempting to request full-screen mode for a
-  {{htmlElement("video")}} element, the value of <code>fullscreenEnabled</code> is
-  checked, in order to avoid making the attempt when not available.</p>
+In this example, before attempting to request full-screen mode for a
+{{htmlElement("video")}} element, the value of `fullscreenEnabled` is
+checked, in order to avoid making the attempt when not available.
 
-<pre class="brush: js">function requestFullScreen() {
+```js
+function requestFullScreen() {
   if (document.fullscreenEnabled) {
     videoElement.requestFullScreen();
   } else {
     console.log('Your browser cannot use fullscreen right now');
   }
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Fullscreen_API">Fullscreen API </a></li>
-  <li><a href="/en-US/docs/Web/API/Fullscreen_API/Guide">Guide to the Fullscreen API</a>
-  </li>
-  <li>{{domxref("Element.requestFullscreen()")}}</li>
-  <li>{{domxref("Document.exitFullscreen()")}}</li>
-  <li>{{domxref("Document.fullscreenElement")}}</li>
-  <li>{{cssxref(":fullscreen") }} and {{cssxref("::backdrop")}}</li>
-  <li>The {{HTMLElement("iframe")}} {{HTMLAttrXRef("allowfullscreen", "iframe")}}
-    attribute</li>
-</ul>
+- [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API)
+- [Guide to the Fullscreen API](/en-US/docs/Web/API/Fullscreen_API/Guide)
+- {{domxref("Element.requestFullscreen()")}}
+- {{domxref("Document.exitFullscreen()")}}
+- {{domxref("Document.fullscreenElement")}}
+- {{cssxref(":fullscreen") }} and {{cssxref("::backdrop")}}
+- The {{HTMLElement("iframe")}} {{HTMLAttrXRef("allowfullscreen", "iframe")}}
+  attribute

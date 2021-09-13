@@ -8,40 +8,34 @@ tags:
   - Reference
 browser-compat: api.CSSGroupingRule
 ---
-<p>{{ APIRef("CSSOM") }}</p>
+{{ APIRef("CSSOM") }}
 
-<p>The <strong><code>CSSGroupingRule</code></strong> interface of the {{domxref("CSS Object Model")}} represents any CSS {{CSSXref("at-rule")}} that contains other rules nested within it.</p>
+The **`CSSGroupingRule`** interface of the {{domxref("CSS Object Model")}} represents any CSS {{CSSXref("at-rule")}} that contains other rules nested within it.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface also inherits properties from {{domxref("CSSRule")}}.</em></p>
+_This interface also inherits properties from {{domxref("CSSRule")}}._
 
-<dl>
- <dt>{{domxref("CSSGroupingRule.cssRules")}}{{readonlyinline}}</dt>
- <dd>Returns a {{domxref("CSSRuleList")}} of the CSS rules in the media rule.</dd>
-</dl>
+- {{domxref("CSSGroupingRule.cssRules")}}{{readonlyinline}}
+  - : Returns a {{domxref("CSSRuleList")}} of the CSS rules in the media rule.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface also inherits methods from {{domxref("CSSRule")}}.</em></p>
+_This interface also inherits methods from {{domxref("CSSRule")}}._
 
-<dl>
- <dt>{{domxref("CSSGroupingRule.deleteRule")}}</dt>
- <dd>Deletes a rule from the style sheet.</dd>
- <dt>{{domxref("CSSGroupingRule.insertRule")}}</dt>
- <dd>Inserts a new style rule into the current style sheet.</dd>
-</dl>
+- {{domxref("CSSGroupingRule.deleteRule")}}
+  - : Deletes a rule from the style sheet.
+- {{domxref("CSSGroupingRule.insertRule")}}
+  - : Inserts a new style rule into the current style sheet.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information">Using dynamic styling information</a></li>
-</ul>
+- [Using dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)

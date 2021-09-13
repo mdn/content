@@ -2,43 +2,47 @@
 title: GlobalEventHandlers.onloadstart
 slug: Web/API/GlobalEventHandlers/onloadstart
 tags:
-- API
-- Event Handler
-- GlobalEventHandlers
-- HTML DOM
-- Property
-- Reference
-- Web
-- events
-- onloadstart
+  - API
+  - Event Handler
+  - GlobalEventHandlers
+  - HTML DOM
+  - Property
+  - Reference
+  - Web
+  - events
+  - onloadstart
 browser-compat: api.GlobalEventHandlers.onloadstart
 ---
-<div>{{ApiRef}}</div>
+{{ApiRef}}
 
-<p>The <strong><code>onloadstart</code></strong> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> representing
-  the code to be called when the {{event("loadstart")}} event is raised (when progress has
-  begun on the loading of a resource.)</p>
+The **`onloadstart`** property of the
+{{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing
+the code to be called when the {{event("loadstart")}} event is raised (when progress has
+begun on the loading of a resource.)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>img</var>.onloadstart = <var>funcRef</var>;
-</pre>
+```js
+img.onloadstart = funcRef;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p><code>funcRef</code> is the handler function to be called when the resource's
-  <code>loadstart</code> event fires.</p>
+`funcRef` is the handler function to be called when the resource's
+`loadstart` event fires.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="HTML_content">HTML content</h3>
+### HTML content
 
-<pre class="brush: html">&lt;img src="myImage.jpg"&gt;</pre>
+```html
+<img src="myImage.jpg">
+```
 
-<h3 id="JavaScript_content">JavaScript content</h3>
+### JavaScript content
 
-<pre class="brush: js">// 'loadstart' fires first, then 'load', then 'loadend'
+```js
+// 'loadstart' fires first, then 'load', then 'loadend'
 
 image.addEventListener('load', function(e) {
   console.log('Image loaded');
@@ -50,12 +54,13 @@ image.addEventListener('loadstart', function(e) {
 
 image.addEventListener('loadend', function(e) {
   console.log('Image load finished');
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

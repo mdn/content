@@ -2,53 +2,51 @@
 title: IDBRequest.source
 slug: Web/API/IDBRequest/source
 tags:
-- API
-- Database
-- IDBRequest
-- IndexedDB
-- Property
-- Reference
-- Storage
-- source
+  - API
+  - Database
+  - IDBRequest
+  - IndexedDB
+  - Property
+  - Reference
+  - Storage
+  - source
 browser-compat: api.IDBRequest.source
 ---
-<p>{{ APIRef("IndexedDB") }}</p>
+{{ APIRef("IndexedDB") }}
 
-<div>
-  <p>The <strong><code>source</code></strong> read-only property of the
-    {{domxref("IDBRequest")}} interface returns the source of the request, such as an
-    Index or an object store. If no source exists (such as when calling
-    {{domxref("indexedDB.open")}}), it returns null.</p>
+The **`source`** read-only property of the
+{{domxref("IDBRequest")}} interface returns the source of the request, such as an
+Index or an object store. If no source exists (such as when calling
+{{domxref("indexedDB.open")}}), it returns null.
 
-  <p>{{AvailableInWorkers}}</p>
-</div>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>IDBIndex</em> = <em>request</em>.source;
-var <em>IDBCursor</em> = <em>request</em>.source;
-var <em>IDBObjectStore</em> = <em>request</em>.source;
-</pre>
+```js
+var IDBIndex = request.source;
+var IDBCursor = request.source;
+var IDBObjectStore = request.source;
+```
 
-<h2 id="Value">Value</h2>
+## Value
 
-<p>An object representing the source of the request, such as an {{domxref("IDBIndex")}},
-  {{domxref("IDBObjectStore")}} or {{domxref("IDBCursor")}}.</p>
+An object representing the source of the request, such as an {{domxref("IDBIndex")}},
+{{domxref("IDBObjectStore")}} or {{domxref("IDBCursor")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example requests a given record title, <code>onsuccess</code> gets the
-  associated record from the {{domxref("IDBObjectStore")}} (made available
-  as <code>objectStoreTitleRequest.result</code>), updates
-    one property of the record, and then puts the updated record back into the object
-    store in another request. The source of the 2nd request is logged to the developer
-    console. For a full working example, see our <a
-    href="https://github.com/mdn/to-do-notifications/">To-do
-    Notifications</a> app (<a
-    href="https://mdn.github.io/to-do-notifications/">view
-    example live</a>.)</p>
+The following example requests a given record title, `onsuccess` gets the
+associated record from the {{domxref("IDBObjectStore")}} (made available
+as `objectStoreTitleRequest.result`), updates
+one property of the record, and then puts the updated record back into the object
+store in another request. The source of the 2nd request is logged to the developer
+console. For a full working example, see our [To-do
+Notifications](https://github.com/mdn/to-do-notifications/) app ([view
+example live](https://mdn.github.io/to-do-notifications/).)
 
-<pre class="brush: js;">var title = "Walk dog";
+```js
+var title = "Walk dog";
 
 // Open up a transaction as usual
 var objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
@@ -73,28 +71,23 @@ objectStoreTitleRequest.onsuccess = function() {
   // function again to update the display
   updateTitleRequest.onsuccess = function() { displayData(); };
 };
+```
 
-</pre>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
-  <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
-  <li>Using transactions: {{domxref("IDBTransaction")}}</li>
-  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
-  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
-  <li>Using cursors: {{domxref("IDBCursor")}}</li>
-  <li>Reference example: <a class="external"
-      href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
-      Notifications</a> (<a class="external"
-      href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do
+  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

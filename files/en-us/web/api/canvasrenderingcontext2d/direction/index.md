@@ -2,80 +2,77 @@
 title: CanvasRenderingContext2D.direction
 slug: Web/API/CanvasRenderingContext2D/direction
 tags:
-- API
-- Canvas
-- CanvasRenderingContext2D
-- Experimental
-- Property
-- Reference
+  - API
+  - Canvas
+  - CanvasRenderingContext2D
+  - Experimental
+  - Property
+  - Reference
 browser-compat: api.CanvasRenderingContext2D.direction
 ---
-<div>{{APIRef}} {{SeeCompatTable}}</div>
+{{APIRef}} {{SeeCompatTable}}
 
-<p>The
-  <strong><code>CanvasRenderingContext2D.direction</code></strong>
-  property of the Canvas 2D API specifies the current text direction used to draw text.
-</p>
+The
+**`CanvasRenderingContext2D.direction`**
+property of the Canvas 2D API specifies the current text direction used to draw text.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>ctx</em>.direction = "ltr" || "rtl" || "inherit";
-</pre>
+```js
+ctx.direction = "ltr" || "rtl" || "inherit";
+```
 
-<h3 id="Options">Options</h3>
+### Options
 
-<p>Possible values:</p>
+Possible values:
 
-<dl>
-  <dt><code>"ltr"</code></dt>
-  <dd>The text direction is left-to-right.</dd>
-  <dt><code>"rtl"</code></dt>
-  <dd>The text direction is right-to-left.</dd>
-  <dt><code>"inherit"</code></dt>
-  <dd>The text direction is inherited from the {{HTMLElement("canvas")}} element or the
-    {{domxref("Document")}} as appropriate. Default value.</dd>
-</dl>
+- `"ltr"`
+  - : The text direction is left-to-right.
+- `"rtl"`
+  - : The text direction is right-to-left.
+- `"inherit"`
+  - : The text direction is inherited from the {{HTMLElement("canvas")}} element or the
+    {{domxref("Document")}} as appropriate. Default value.
 
-<p>The default value is <code>"inherit"</code>.</p>
+The default value is `"inherit"`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Changing_text_direction">Changing text direction</h3>
+### Changing text direction
 
-<p>This example draws two pieces of text. The first one is left-to-right, and the second
-  is right-to-left. Note that "Hi!" in <code>ltr</code> becomes "!Hi" in <code>rtl</code>.
-</p>
+This example draws two pieces of text. The first one is left-to-right, and the second
+is right-to-left. Note that "Hi!" in `ltr` becomes "!Hi" in `rtl`.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js;">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 ctx.font = '48px serif';
 ctx.fillText('Hi!', 150, 50);
 ctx.direction = 'rtl';
 ctx.fillText('Hi!', 150, 130);
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Changing_text_direction', 700, 180) }}</p>
+{{ EmbedLiveSample('Changing_text_direction', 700, 180) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining this property: {{domxref("CanvasRenderingContext2D")}}</li>
-</ul>
+- The interface defining this property: {{domxref("CanvasRenderingContext2D")}}

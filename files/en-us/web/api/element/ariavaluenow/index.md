@@ -11,35 +11,40 @@ tags:
   - Element
 browser-compat: api.Element.ariaValueNow
 ---
-<div>{{DefaultAPISidebar("DOM")}}</div>
+{{DefaultAPISidebar("DOM")}}
 
-<p>The <strong><code>ariaValueNow</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuenow_attribute"><code>aria-valuenow</code></a> attribute, which defines the current value for a range widget.</p>
+The **`ariaValueNow`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuenow_attribute) attribute, which defines the current value for a range widget.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox notranslate">var <var>ariaValueNow</var> = element.ariaValueNow;
-<var>element</var>.ariaValueNow = <var>ariaValueNow</var></pre>
+    var ariaValueNow = element.ariaValueNow;
+    element.ariaValueNow = ariaValueNow
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString")}} which contains a number.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("DOMString")}} which contains a number.
 
-<p>In this example the <code>aria-valuenow</code> attribute on the element with an ID of <code>slider</code> is set to "1". Using <code>ariaValueNow</code> we update the value to "2".</p>
+## Examples
 
-<pre class="brush: html">&lt;div role="slider" aria-valuenow="1"
+In this example the `aria-valuenow` attribute on the element with an ID of `slider` is set to "1". Using `ariaValueNow` we update the value to "2".
+
+```html
+<div role="slider" aria-valuenow="1"
   aria-valuemin="1" aria-valuemax="7"
-	aria-valuetext="Sunday"&gt;</pre>
+	aria-valuetext="Sunday">
+```
 
-<pre class="brush: js">let el = document.getElementById('slider');
+```js
+let el = document.getElementById('slider');
 console.log(el.ariaValueNow); // 1
 el.ariaValueNow = "2";
-console.log(el.ariaValueNow); // 2</pre>
+console.log(el.ariaValueNow); // 2
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -17,43 +17,44 @@ tags:
   - state
 browser-compat: api.RTCPeerConnection.icegatheringstatechange_event
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <strong><code>icegatheringstatechange</code></strong> event is sent to the {{domxref("RTCPeerConnection.onicegatheringstatechange", "onicegatheringstatechange")}} event handler on an {{domxref("RTCPeerConnection")}} when the state of the {{Glossary("ICE")}} candidate gathering process changes.
-  This signifies that the value of the connection's {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} property has changed.</p>
+The **`icegatheringstatechange`** event is sent to the {{domxref("RTCPeerConnection.onicegatheringstatechange", "onicegatheringstatechange")}} event handler on an {{domxref("RTCPeerConnection")}} when the state of the {{Glossary("ICE")}} candidate gathering process changes.
+This signifies that the value of the connection's {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} property has changed.
 
-<p>When ICE firststarts to gather connection candidates, the value changes from <code>new</code> to <code>gathering</code> to indicate that the process of collecting candidate configurations for the connection has begun. When the value changes to <code>complete</code>, all of the transports that make up the <code>RTCPeerConnection</code> have finished gathering ICE candidates.</p>
+When ICE firststarts to gather connection candidates, the value changes from `new` to `gathering` to indicate that the process of collecting candidate configurations for the connection has begun. When the value changes to `complete`, all of the transports that make up the `RTCPeerConnection` have finished gathering ICE candidates.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler</th>
-   <td>{{domxref("RTCPeerConnection.onicegatheringstatechange", "onicegatheringstatechange")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler</th>
+      <td>
+        {{domxref("RTCPeerConnection.onicegatheringstatechange", "onicegatheringstatechange")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<div class="notecard note">
-<p><strong>Note:</strong> While you can determine that ICE candidate gathering is complete by watching for <code>icegatheringstatechange</code> events and checking for the value of {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} to become <code>complete</code>, you can also have your handler for the {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} event look to see if its {{domxref("RTCPeerConnectionIceEvent.candidate", "candidate")}} property is <code>null</code>. This also indicates that collection of candidates is finished.</p>
-</div>
+> **Note:** While you can determine that ICE candidate gathering is complete by watching for `icegatheringstatechange` events and checking for the value of {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} to become `complete`, you can also have your handler for the {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} event look to see if its {{domxref("RTCPeerConnectionIceEvent.candidate", "candidate")}} property is `null`. This also indicates that collection of candidates is finished.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example creates a handler for <code>icegatheringstatechange</code> events.</p>
+This example creates a handler for `icegatheringstatechange` events.
 
-<pre class="brush: js">pc.onicegatheringstatechange = ev =&gt; {
+```js
+pc.onicegatheringstatechange = ev => {
   let connection = ev.target;
 
   switch(connection.iceGatheringState) {
@@ -65,11 +66,12 @@ browser-compat: api.RTCPeerConnection.icegatheringstatechange_event
       break;
   }
 }
-</pre>
+```
 
-<p>Likewise, you can use {{domxref("EventTarget.addEventListener", "addEventListener()")}} to add a listener for <code>icegatheringstatechange</code> events:</p>
+Likewise, you can use {{domxref("EventTarget.addEventListener", "addEventListener()")}} to add a listener for `icegatheringstatechange` events:
 
-<pre class="brush: js">pc.addEventListener("icegatheringstatechange", ev =&gt; {
+```js
+pc.addEventListener("icegatheringstatechange", ev => {
   let connection = ev.target;
 
   switch(connection.iceGatheringState) {
@@ -80,21 +82,20 @@ browser-compat: api.RTCPeerConnection.icegatheringstatechange_event
       /* collection of candidates is finished */
       break;
   }
-}, false);</pre>
+}, false);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling">Signaling and video calling</a></li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API/Connectivity">WebRTC connectivity</a></li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime">Lifetime of a WebRTC session</a></li>
-</ul>
+- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+- [Signaling and video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
+- [WebRTC connectivity](/en-US/docs/Web/API/WebRTC_API/Connectivity)
+- [Lifetime of a WebRTC session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)

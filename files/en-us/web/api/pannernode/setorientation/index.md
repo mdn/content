@@ -10,51 +10,47 @@ tags:
   - setOrientation
 browser-compat: api.PannerNode.setOrientation
 ---
-<p>{{ APIRef("Web Audio API") }} {{Deprecated_Header}}</p>
+{{ APIRef("Web Audio API") }} {{Deprecated_Header}}
 
-<div>
-<p>The <code>setOrientation()</code> method of the {{ domxref("PannerNode") }} Interface defines the direction the audio source is playing in.</p>
+The `setOrientation()` method of the {{ domxref("PannerNode") }} Interface defines the direction the audio source is playing in.
 
-<p>This can have a big effect if the sound is very directional — controlled by the three cone-related attributes {{domxref("PannerNode.coneInnerAngle")}}, {{domxref("PannerNode.coneOuterAngle")}}, and {{domxref("PannerNode.coneOuterGain")}}. In such a case, a sound pointing away from the listener can be very quiet or even silent.</p>
+This can have a big effect if the sound is very directional — controlled by the three cone-related attributes {{domxref("PannerNode.coneInnerAngle")}}, {{domxref("PannerNode.coneOuterAngle")}}, and {{domxref("PannerNode.coneOuterGain")}}. In such a case, a sound pointing away from the listener can be very quiet or even silent.
 
-<p>The three parameters <code>x</code>, <code>y</code> and <code>z</code> are unitless and describe a direction vector in 3D space using the right-hand Cartesian coordinate system. The default value of the direction vector is <code>(1,</code> <code>0,</code> <code>0)</code>.</p>
-</div>
+The three parameters `x`, `y` and `z` are unitless and describe a direction vector in 3D space using the right-hand Cartesian coordinate system. The default value of the direction vector is `(1,` `0,` `0)`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var audioCtx = new AudioContext();
+```js
+var audioCtx = new AudioContext();
 var panner = audioCtx.createPanner();
-panner.setOrientation(1,0,0);</pre>
+panner.setOrientation(1,0,0);
+```
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>Void.</p>
+Void.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See <a href="/en-US/docs/Web/API/BaseAudioContext/createPanner#example"><code>BaseAudioContext.createPanner()</code></a> for example code.</p>
+See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
 
-<h2 id="Parameters">Parameters</h2>
+## Parameters
 
-<dl>
- <dt>x</dt>
- <dd>The x value of the panner's direction vector in 3D space.</dd>
- <dt>y</dt>
- <dd>The y value of the panner's direction vector in 3D space.</dd>
- <dt>z</dt>
- <dd>The z value of the panner's direction vector in 3D space.</dd>
-</dl>
+- x
+  - : The x value of the panner's direction vector in 3D space.
+- y
+  - : The y value of the panner's direction vector in 3D space.
+- z
+  - : The z value of the panner's direction vector in 3D space.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

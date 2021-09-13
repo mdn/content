@@ -8,36 +8,34 @@ tags:
   - CompressionStream
 browser-compat: api.CompressionStream
 ---
-<div>{{DefaultAPISidebar("Compression Streams API")}}</div>
+{{DefaultAPISidebar("Compression Streams API")}}
 
-<p>The <strong><code>CompressionStream</code></strong> interface of the {{domxref('Compression Streams API','','',' ')}} is an API for compressing a stream of data.</p>
+The **`CompressionStream`** interface of the {{domxref('Compression Streams API','','',' ')}} is an API for compressing a stream of data.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
-  <dt>{{domxref("CompressionStream.CompressionStream()")}}</dt>
-  <dd>Creates a new <code>CompressionStream</code></dd>
-</dl>
+- {{domxref("CompressionStream.CompressionStream()")}}
+  - : Creates a new `CompressionStream`
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
-  <dt>{{domxref("CompressionStream.readable")}}</dt>
-  <dd>Returns the {{domxref("ReadableStream")}} instance controlled by this object.</dd>
-  <dt>{{domxref("CompressionStream.writable")}}</dt>
-  <dd>Returns the {{domxref("WritableStream")}} instance controlled by this object.</dd>
-</dl>
+- {{domxref("CompressionStream.readable")}}
+  - : Returns the {{domxref("ReadableStream")}} instance controlled by this object.
+- {{domxref("CompressionStream.writable")}}
+  - : Returns the {{domxref("WritableStream")}} instance controlled by this object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this example a stream is compressed using gzip compression.</p>
+In this example a stream is compressed using gzip compression.
 
-<pre class="brush: js">const compressedReadableStream = inputReadableStream.pipeThrough(new CompressionStream('gzip'));</pre>
+```js
+const compressedReadableStream = inputReadableStream.pipeThrough(new CompressionStream('gzip'));
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

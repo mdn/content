@@ -11,32 +11,35 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals.ariaPosInSet
 ---
-<div>{{DefaultAPISidebar("DOM")}}</div>
+{{DefaultAPISidebar("DOM")}}
 
-<p>The <strong><code>ariaPosInSet</code></strong> property of the {{domxref("ElementInternals")}} interface reflects the value of the <code>aria-posinset</code> attribute, which defines an element's number or position in the current set of listitems or treeitems.</p>
+The **`ariaPosInSet`** property of the {{domxref("ElementInternals")}} interface reflects the value of the `aria-posinset` attribute, which defines an element's number or position in the current set of listitems or treeitems.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Setting aria attributes on <code>ElementInternals</code> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <a href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</a>.</p>
-</div>
+> **Note:** Setting aria attributes on `ElementInternals` allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the [Accessibility Object Model explainer](https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let ariaPosInSet = ElementInternals.ariaPosInSet;
-ElementInternals.ariaPosInSet = ariaPosInSet;</pre>
+```js
+let ariaPosInSet = ElementInternals.ariaPosInSet;
+ElementInternals.ariaPosInSet = ariaPosInSet;
+```
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString")}} containing an integer.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("DOMString")}} containing an integer.
 
-<p>In this example the value of <code>ariaPosInSet</code> is set to "2".</p>
+## Examples
 
-<pre class="brush: js">this.internals_.ariaPosInSet = "2";</pre>
+In this example the value of `ariaPosInSet` is set to "2".
 
-<h2 id="Specifications">Specifications</h2>
+```js
+this.internals_.ariaPosInSet = "2";
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,62 +2,57 @@
 title: RTCIceCandidateStats.relayProtocol
 slug: Web/API/RTCIceCandidateStats/relayProtocol
 tags:
-- API
-- Candidate
-- ICE
-- Media
-- Property
-- Protocol
-- RTCIceCandidate
-- RTCIceCandidateStats
-- Statistics
-- Stats
-- WebRTC
-- WebRTC API
-- relayProtocol
-- rtc
+  - API
+  - Candidate
+  - ICE
+  - Media
+  - Property
+  - Protocol
+  - RTCIceCandidate
+  - RTCIceCandidateStats
+  - Statistics
+  - Stats
+  - WebRTC
+  - WebRTC API
+  - relayProtocol
+  - rtc
 browser-compat: api.RTCIceCandidateStats.relayProtocol
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The {{domxref("RTCIceCandidateStats")}} dictionary's
-    <code><strong>relayProtocol</strong></code> property specifies the protocol being used
-    by a local {{Glossary("ICE")}} candidate to communicate with the {{Glossary("TURN")}}
-    server.</p>
+The {{domxref("RTCIceCandidateStats")}} dictionary's
+**`relayProtocol`** property specifies the protocol being used
+by a local {{Glossary("ICE")}} candidate to communicate with the {{Glossary("TURN")}}
+server.
 
-<p>The ICE protocl being used by the candidate otherwise can be obtained from the
-  {{domxref("RTCIceCandidateStats.protocol", "protocol")}} property.</p>
+The ICE protocl being used by the candidate otherwise can be obtained from the
+{{domxref("RTCIceCandidateStats.protocol", "protocol")}} property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>relayProtocol</em> = <em>rtcIceCandidateStats</em>.relayProtocol;</pre>
+```js
+relayProtocol = rtcIceCandidateStats.relayProtocol;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} identifying the protocol being used by the endpoint to
-  communicate with the TURN server. The possible values are:</p>
+A {{domxref("DOMString")}} identifying the protocol being used by the endpoint to
+communicate with the TURN server. The possible values are:
 
-<dl>
-  <dt><code>tcp</code></dt>
-  <dd>TCP (Transport Control Protocol) is being used to communicate with the TURN server.
-  </dd>
-  <dt><code>tls</code></dt>
-  <dd>TLS (Transport Layer Security) is being used to communicate with the TURN server.
-  </dd>
-  <dt><code>udp</code></dt>
-  <dd>UDP (User Datagram Protocol) is being used to communicate with the TURN server.</dd>
-</dl>
+- `tcp`
+  - : TCP (Transport Control Protocol) is being used to communicate with the TURN server.
+- `tls`
+  - : TLS (Transport Layer Security) is being used to communicate with the TURN server.
+- `udp`
+  - : UDP (User Datagram Protocol) is being used to communicate with the TURN server.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This property is only present on
-    {{domxref("RTCIceCandidateStats")}} objects that represent local candidates.</p>
-</div>
+> **Note:** This property is only present on
+> {{domxref("RTCIceCandidateStats")}} objects that represent local candidates.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

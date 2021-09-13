@@ -10,35 +10,35 @@ tags:
   - WebRTC
 browser-compat: api.RTCDataChannel.protocol
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The read-only <code>RTCDataChannel</code> property
-  <code><strong>protocol</strong></code> returns a string containing the
-  name of the subprotocol in use. If no protocol was specified when the data channel was
-  created, then this property's value is the empty string (<code>""</code>).</p>
+The read-only `RTCDataChannel` property
+**`protocol`** returns a string containing the
+name of the subprotocol in use. If no protocol was specified when the data channel was
+created, then this property's value is the empty string (`""`).
 
-<div class="note">
-  <p><strong>Note:</strong> The permitted values of this property are defined by the Web site or app using the
-    data channel.</p>
-</div>
+> **Note:** The permitted values of this property are defined by the Web site or app using the
+> data channel.
 
-<p>The ability for each channel to have a defined subprotocol lets your app, for example,
-  use JSON objects as messages on one channel while another channel is plaintext and
-  another is raw binary or even some other format.</p>
+The ability for each channel to have a defined subprotocol lets your app, for example,
+use JSON objects as messages on one channel while another channel is plaintext and
+another is raw binary or even some other format.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>subProtocol</em> = <em>aDataChannel</em>.protocol;
-</pre>
+```js
+var subProtocol = aDataChannel.protocol;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A string identifying the app-defined subprotocol being used for exchanging data on the
-  channel. If none has been established, this is an empty string ("").</p>
+A string identifying the app-defined subprotocol being used for exchanging data on the
+channel. If none has been established, this is an empty string ("").
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var pc = new RTCPeerConnection();
+```js
+var pc = new RTCPeerConnection();
 var dc = pc.createDataChannel("my channel", {
            protocol: "json"
 });
@@ -52,20 +52,19 @@ function handleChannelMessage(dataChannel, msg) {
       /* process raw binary data */
       break;
   }
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
-  <li>{{domxref("RTCDataChannel")}}</li>
-  <li>{{domxref("RTCPeerConnection.createDataChannel()")}}</li>
-</ul>
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)
+- {{domxref("RTCDataChannel")}}
+- {{domxref("RTCPeerConnection.createDataChannel()")}}

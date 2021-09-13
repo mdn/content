@@ -9,31 +9,30 @@ tags:
   - mouse lock
 browser-compat: api.Document.exitPointerLock
 ---
-<div>{{APIRef("DOM")}} {{SeeCompatTable}}</div>
+{{APIRef("DOM")}} {{SeeCompatTable}}
 
-<p>The <strong><code>exitPointerLock()</code></strong> method asynchronously releases a
-  pointer lock previously requested through {{domxref("Element.requestPointerLock")}}.</p>
+The **`exitPointerLock()`** method asynchronously releases a
+pointer lock previously requested through {{domxref("Element.requestPointerLock")}}.
 
-<p>To track the success or failure of the request, it is necessary to listen for the
-  {{event("pointerlockchange")}} and {{event("pointerlockerror")}} events.</p>
+To track the success or failure of the request, it is necessary to listen for the
+{{event("pointerlockchange")}} and {{event("pointerlockerror")}} events.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">document.exitPointerLock();
-</pre>
+```js
+document.exitPointerLock();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{ domxref("Document.pointerLockElement") }}</li>
-  <li>{{ domxref("Element.requestPointerLock()") }}</li>
-  <li><a href="/en-US/docs/Web/API/Pointer_Lock_API">Pointer Lock</a></li>
-</ul>
+- {{ domxref("Document.pointerLockElement") }}
+- {{ domxref("Element.requestPointerLock()") }}
+- [Pointer Lock](/en-US/docs/Web/API/Pointer_Lock_API)

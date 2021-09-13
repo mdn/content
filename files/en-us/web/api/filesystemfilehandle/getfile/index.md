@@ -11,62 +11,60 @@ tags:
   - working with files
 browser-compat: api.FileSystemFileHandle.getFile
 ---
-<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
-</div>
+{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
-<p>The <strong><code>getFile()</code></strong> method of the
-  {{domxref("FileSystemFileHandle")}} interface returns a {{domxref('File','file
-  object')}} representing the state on disk of the entry represented by the handle.</p>
+The **`getFile()`** method of the
+{{domxref("FileSystemFileHandle")}} interface returns a {{domxref('File','file
+  object')}} representing the state on disk of the entry represented by the handle.
 
-<p>If the file on disk changes or is removed after this method is called, the returned
-  {{domxref('File','file object')}} will likely be no longer readable.</p>
+If the file on disk changes or is removed after this method is called, the returned
+{{domxref('File','file object')}} will likely be no longer readable.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>File</var> = FileSystemFileHandle.getFile();</pre>
+```js
+var File = FileSystemFileHandle.getFile();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref('File','File object')}}.</p>
+A {{domxref('File','File object')}}.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>NotAllowedError</dt>
-  <dd>Thrown if the {{domxref('PermissionStatus.state')}} is not <code>granted</code> in
-    read mode.</dd>
-</dl>
+- NotAllowedError
+  - : Thrown if the {{domxref('PermissionStatus.state')}} is not `granted` in
+    read mode.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following asynchronous function presents a file picker and once a file is chosen,
-  uses the <code>getFile()</code> method to retrieve the contents.</p>
+The following asynchronous function presents a file picker and once a file is chosen,
+uses the `getFile()` method to retrieve the contents.
 
-<pre class="brush: js">async function getTheFile() {
+```js
+async function getTheFile() {
   // open file picker
   [fileHandle] = await window.showOpenFilePicker(pickerOpts);
 
   // get file contents
   const fileData = await fileHandle.getFile();
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/File_System_Access_API">File System Access API</a></li>
-  <li><a href="https://web.dev/file-system-access/">The File System Access API:
-      simplifying access to local files</a></li>
-</ul>
+- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
+- [The File System Access API:
+  simplifying access to local files](https://web.dev/file-system-access/)

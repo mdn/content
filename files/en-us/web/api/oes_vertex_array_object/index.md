@@ -8,51 +8,38 @@ tags:
   - WebGL extension
 browser-compat: api.OES_vertex_array_object
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong>OES_vertex_array_object</strong> extension is part of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> and provides vertex array objects (VAOs) which encapsulate vertex array states. These objects keep pointers to vertex data and provide names for different sets of vertex data.</p>
+The **OES_vertex_array_object** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and provides vertex array objects (VAOs) which encapsulate vertex array states. These objects keep pointers to vertex data and provide names for different sets of vertex data.
 
-<p>WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also <a href="/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</a> in the <a href="/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</a>.</p>
+WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
 
-<div class="note">
-<p><strong>Note:</strong> This extension is only available to {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} contexts. In {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}}, the functionality of this extension is available on the WebGL2 context by default and the constants and methods are available without the "<code>OES</code>" suffix.</p>
-</div>
+> **Note:** This extension is only available to {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} contexts. In {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}}, the functionality of this extension is available on the WebGL2 context by default and the constants and methods are available without the "`OES`" suffix.
 
-<h2 id="Constants">Constants</h2>
+## Constants
 
-<p>This extension exposes one new constant, which can be used in the {{domxref("WebGLRenderingContext.getParameter()", "gl.getParameter()")}} method:</p>
+This extension exposes one new constant, which can be used in the {{domxref("WebGLRenderingContext.getParameter()", "gl.getParameter()")}} method:
 
-<dl>
-	<dt><code>ext.VERTEX_ARRAY_BINDING_OES</code></dt>
-	<dd>Returns a {{domxref("WebGLVertexArrayObject")}} object when used in the {{domxref("WebGLRenderingContext.getParameter()", "gl.getParameter()")}} method as the <code>pname</code> parameter.</dd>
-</dl>
+- `ext.VERTEX_ARRAY_BINDING_OES`
+  - : Returns a {{domxref("WebGLVertexArrayObject")}} object when used in the {{domxref("WebGLRenderingContext.getParameter()", "gl.getParameter()")}} method as the `pname` parameter.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p>This extension exposes four new methods.</p>
+This extension exposes four new methods.
 
-<dl>
-	<dt>{{domxref("OES_vertex_array_object.createVertexArrayOES()", "ext.createVertexArrayOES()")}}</dt>
-	<dd>
-	<p>Creates a new {{domxref("WebGLVertexArrayObject")}}.</p>
-	</dd>
-	<dt>{{domxref("OES_vertex_array_object.deleteVertexArrayOES()", "ext.deleteVertexArrayOES()")}}</dt>
-	<dd>
-	<p>Deletes a given {{domxref("WebGLVertexArrayObject")}}.</p>
-	</dd>
-	<dt>{{domxref("OES_vertex_array_object.isVertexArrayOES()", "ext.isVertexArrayOES()")}}</dt>
-	<dd>
-	<p>Returns <code>true</code> if a given object is a {{domxref("WebGLVertexArrayObject")}}.</p>
-	</dd>
-	<dt>{{domxref("OES_vertex_array_object.bindVertexArrayOES()", "ext.bindVertexArrayOES()")}}</dt>
-	<dd>
-	<p>Binds a given {{domxref("WebGLVertexArrayObject")}} to the buffer.</p>
-	</dd>
-</dl>
+- {{domxref("OES_vertex_array_object.createVertexArrayOES()", "ext.createVertexArrayOES()")}}
+  - : Creates a new {{domxref("WebGLVertexArrayObject")}}.
+- {{domxref("OES_vertex_array_object.deleteVertexArrayOES()", "ext.deleteVertexArrayOES()")}}
+  - : Deletes a given {{domxref("WebGLVertexArrayObject")}}.
+- {{domxref("OES_vertex_array_object.isVertexArrayOES()", "ext.isVertexArrayOES()")}}
+  - : Returns `true` if a given object is a {{domxref("WebGLVertexArrayObject")}}.
+- {{domxref("OES_vertex_array_object.bindVertexArrayOES()", "ext.bindVertexArrayOES()")}}
+  - : Binds a given {{domxref("WebGLVertexArrayObject")}} to the buffer.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var oes_vao_ext = gl.getExtension('OES_vertex_array_object');
+```js
+var oes_vao_ext = gl.getExtension('OES_vertex_array_object');
 var vao = oes_vao_ext.createVertexArrayOES();
 oes_vao_ext.bindVertexArrayOES(vao);
 
@@ -60,27 +47,23 @@ oes_vao_ext.bindVertexArrayOES(vao);
 // calls to bindBuffer or vertexAttribPointer
 // which will be "recorded" in the VAO
 // ...
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{domxref("WebGLRenderingContext.getExtension()")}}</li>
-	<li>{{domxref("WebGLRenderingContext.vertexAttribPointer()")}}</li>
-	<li>WebGL2 equivalent methods:
-	<ul>
-		<li>{{domxref("WebGL2RenderingContext.createVertexArray()")}}</li>
-		<li>{{domxref("WebGL2RenderingContext.deleteVertexArray()")}}</li>
-		<li>{{domxref("WebGL2RenderingContext.isVertexArray()")}}</li>
-		<li>{{domxref("WebGL2RenderingContext.bindVertexArray()")}}</li>
-	</ul>
-	</li>
-</ul>
+- {{domxref("WebGLRenderingContext.getExtension()")}}
+- {{domxref("WebGLRenderingContext.vertexAttribPointer()")}}
+- WebGL2 equivalent methods:
+
+  - {{domxref("WebGL2RenderingContext.createVertexArray()")}}
+  - {{domxref("WebGL2RenderingContext.deleteVertexArray()")}}
+  - {{domxref("WebGL2RenderingContext.isVertexArray()")}}
+  - {{domxref("WebGL2RenderingContext.bindVertexArray()")}}

@@ -2,82 +2,73 @@
 title: WebGL2RenderingContext.drawArraysInstanced()
 slug: Web/API/WebGL2RenderingContext/drawArraysInstanced
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGL2
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGL2
 browser-compat: api.WebGL2RenderingContext.drawArraysInstanced
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGL2RenderingContext.drawArraysInstanced()</code></strong> method
-  of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL 2 API</a> renders primitives from
-  array data like the {{domxref("WebGLRenderingContext.drawArrays()", "gl.drawArrays()")}}
-  method. In addition, it can execute multiple instances of the range of elements.</p>
+The **`WebGL2RenderingContext.drawArraysInstanced()`** method
+of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) renders primitives from
+array data like the {{domxref("WebGLRenderingContext.drawArrays()", "gl.drawArrays()")}}
+method. In addition, it can execute multiple instances of the range of elements.
 
-<div class="note">
-  <p><strong>Note:</strong> When using {{domxref("WebGLRenderingContext", "WebGL 1", "",
+> **Note:** When using {{domxref("WebGLRenderingContext", "WebGL 1", "",
     1)}}, the {{domxref("ANGLE_instanced_arrays")}} extension can provide this method,
-    too.</p>
-</div>
+> too.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">void <var>gl</var>.drawArraysInstanced(<var>mode</var>, <var>first</var>, <var>count</var>, <var>instanceCount</var>);</pre>
+```js
+void gl.drawArraysInstanced(mode, first, count, instanceCount);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>mode</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the type primitive to render. Possible values
+- `mode`
+
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the type primitive to render. Possible values
     are:
-    <ul>
-      <li><code>gl.POINTS</code>: Draws a single dot.</li>
-      <li><code>gl.LINE_STRIP</code>: Draws a straight line to the next vertex.</li>
-      <li><code>gl.LINE_LOOP</code>: Draws a straight line to the next vertex, and
-        connects the last vertex back to the first.</li>
-      <li><code>gl.LINES</code>: Draws a line between a pair of vertices.</li>
-      <li>
-        <code><a href="https://en.wikipedia.org/wiki/Triangle_strip">gl.TRIANGLE_STRIP</a></code>
-      </li>
-      <li>
-        <code><a href="https://en.wikipedia.org/wiki/Triangle_fan">gl.TRIANGLE_FAN</a></code>
-      </li>
-      <li><code>gl.TRIANGLES</code>: Draws a triangle for a group of three vertices.</li>
-    </ul>
-  </dd>
-  <dt>first</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLint")}} specifying the starting index in the array of vector points.
-  </dd>
-  <dt>count</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the number of indices to be rendered.</dd>
-  <dt>instanceCount</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the number of instances of the range of elements
-    to execute.</dd>
-</dl>
 
-<h3 id="Return_value">Return value</h3>
+    - `gl.POINTS`: Draws a single dot.
+    - `gl.LINE_STRIP`: Draws a straight line to the next vertex.
+    - `gl.LINE_LOOP`: Draws a straight line to the next vertex, and
+      connects the last vertex back to the first.
+    - `gl.LINES`: Draws a line between a pair of vertices.
+    - [`gl.TRIANGLE_STRIP`](https://en.wikipedia.org/wiki/Triangle_strip)
+    - [`gl.TRIANGLE_FAN`](https://en.wikipedia.org/wiki/Triangle_fan)
+    - `gl.TRIANGLES`: Draws a triangle for a group of three vertices.
 
-<p>None.</p>
+- first
+  - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the starting index in the array of vector points.
+- count
+  - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the number of indices to be rendered.
+- instanceCount
+  - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the number of instances of the range of elements
+    to execute.
 
-<h2 id="Examples">Examples</h2>
+### Return value
 
-<pre class="brush: js">gl.drawArraysInstanced(gl.POINTS, 0, 8, 4);
-</pre>
+None.
 
-<h2 id="Specifications">Specifications</h2>
+## Examples
+
+```js
+gl.drawArraysInstanced(gl.POINTS, 0, 8, 4);
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("ANGLE_instanced_arrays.drawArraysInstancedANGLE()")}}</li>
-  <li>{{domxref("WEBGL_multi_draw.multiDrawArraysInstancedWEBGL()")}}</li>
-</ul>
+- {{domxref("ANGLE_instanced_arrays.drawArraysInstancedANGLE()")}}
+- {{domxref("WEBGL_multi_draw.multiDrawArraysInstancedWEBGL()")}}

@@ -17,47 +17,43 @@ tags:
   - Deprecated
 browser-compat: api.RTCPeerConnection.removestream_event
 ---
-<p>{{APIRef("WebRTC")}}{{deprecated_header}}</p>
+{{APIRef("WebRTC")}}{{deprecated_header}}
 
-<p>The obsolete <code><strong>removestream</strong></code> event was sent to an {{domxref("RTCPeerConnection")}} to inform it that a {{domxref("MediaStream")}} had been removed from the connection.
-  You can use the <code>RTCPeerConnection</code> interface's {{domxref("RTCPeerConnection.onremovestream", "onremovestream")}} property to set a handler for this event.</p>
+The obsolete **`removestream`** event was sent to an {{domxref("RTCPeerConnection")}} to inform it that a {{domxref("MediaStream")}} had been removed from the connection.
+You can use the `RTCPeerConnection` interface's {{domxref("RTCPeerConnection.onremovestream", "onremovestream")}} property to set a handler for this event.
 
-<p>This is the counterpart to the {{domxref("RTCPeerConnection.addstream_event", "addstream")}} event, which is also obsolete.</p>
+This is the counterpart to the {{domxref("RTCPeerConnection.addstream_event", "addstream")}} event, which is also obsolete.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{DOMxRef("MediaStreamEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{DOMxRef("RTCPeerConnection.onremovestream")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{DOMxRef("MediaStreamEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>{{DOMxRef("RTCPeerConnection.onremovestream")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<div class="notecard warning">
-<p><strong>Warning:</strong> This event has been removed from the WebRTC specification in favor of the existing {{DOMxRef("RTCPeerConnection/removetrack_event", "removetrack")}} event on the remote {{domxref("MediaStream")}} and the corresponding {{domxref("MediaStream.onremovetrack")}} event handler property of the remote {{domxref("MediaStream")}}. The {{domxref("RTCPeerConnection")}} API is now track-based, so having zero tracks in the remote stream is equivalent to the remote stream being removed, which caused a <code>removestream</code> event.</p>
-</div>
+> **Warning:** This event has been removed from the WebRTC specification in favor of the existing {{DOMxRef("RTCPeerConnection/removetrack_event", "removetrack")}} event on the remote {{domxref("MediaStream")}} and the corresponding {{domxref("MediaStream.onremovetrack")}} event handler property of the remote {{domxref("MediaStream")}}. The {{domxref("RTCPeerConnection")}} API is now track-based, so having zero tracks in the remote stream is equivalent to the remote stream being removed, which caused a `removestream` event.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
- <li>{{domxref("RTCPeerConnection.removeStream()")}}</li>
- <li>{{domxref("MediaStream.onremovetrack")}}</li>
- <li>{{domxref("MediaStream.removetrack_event", "removetrack")}}</li>
-</ul>
+- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+- {{domxref("RTCPeerConnection.removeStream()")}}
+- {{domxref("MediaStream.onremovetrack")}}
+- {{domxref("MediaStream.removetrack_event", "removetrack")}}

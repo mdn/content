@@ -15,43 +15,43 @@ tags:
   - getVRDisplays()
 browser-compat: api.Navigator.getVRDisplays
 ---
-<div>{{DefaultAPISidebar("WebVR API")}}{{deprecated_header}}</div>
+{{DefaultAPISidebar("WebVR API")}}{{deprecated_header}}
 
-<p>The <strong><code>getVRDisplays()</code></strong> method of the
-  {{domxref("Navigator")}} interface returns a promise that resolves to an array of
-  {{domxref("VRDisplay")}} objects representing any available VR displays connected to the
-  computer.</p>
+The **`getVRDisplays()`** method of the
+{{domxref("Navigator")}} interface returns a promise that resolves to an array of
+{{domxref("VRDisplay")}} objects representing any available VR displays connected to the
+computer.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">navigator.getVRDisplays().then(function(displays) {
+```js
+navigator.getVRDisplays().then(function(displays) {
   // Do something with the available VR displays
-});</pre>
+});
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A promise that resolves to an array of {{domxref("VRDisplay")}} objects.</p>
+A promise that resolves to an array of {{domxref("VRDisplay")}} objects.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>See <a href="/en-US/docs/Web/API/VRDisplay#examples"><code>VRDisplay</code></a> for example code.</p>
+See [`VRDisplay`](/en-US/docs/Web/API/VRDisplay#examples) for example code.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebVR_API">WebVR API homepage</a></li>
-  <li><a href="https://mixedreality.mozilla.org/">https://mixedreality.mozilla.org/</a> —
-    demos, downloads, and other resources from the Mozilla VR team.</li>
-</ul>
+- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API)
+- <https://mixedreality.mozilla.org/> —
+  demos, downloads, and other resources from the Mozilla VR team.

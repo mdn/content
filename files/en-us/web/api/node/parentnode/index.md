@@ -2,61 +2,59 @@
 title: Node.parentNode
 slug: Web/API/Node/parentNode
 tags:
-- API
-- DOM
-- Gecko
-- Property
+  - API
+  - DOM
+  - Gecko
+  - Property
 browser-compat: api.Node.parentNode
 ---
-<div>
-  <div>{{APIRef("DOM")}}</div>
-</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>Node.parentNode</strong></code> read-only property returns the parent
-  of the specified node in the DOM tree.</p>
+The **`Node.parentNode`** read-only property returns the parent
+of the specified node in the DOM tree.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>parentNode</em> = <em>node</em>.parentNode
-</pre>
+```js
+parentNode = node.parentNode
+```
 
-<p><code>parentNode</code> is the parent of the current node. The parent of an element is
-  an <code>Element</code> node, a <code>Document</code> node, or a
-  <code>DocumentFragment</code> node.</p>
+`parentNode` is the parent of the current node. The parent of an element is
+an `Element` node, a `Document` node, or a
+`DocumentFragment` node.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">if (node.parentNode) {
+```js
+if (node.parentNode) {
   // remove a node from the tree, unless
   // it's not in the tree already
   node.parentNode.removeChild(node);
-}</pre>
+}
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p><code>Document</code> and <code>DocumentFragment</code> <a
-    href="/en-US/docs/DOM/Node.nodeType">nodes</a> can never have a parent, so
-  <code>parentNode</code> will always return <code>null</code>.</p>
+`Document` and `DocumentFragment` [nodes](/en-US/docs/DOM/Node.nodeType) can never have a parent, so
+`parentNode` will always return `null`.
 
-<p>It also returns <code>null</code> if the node has just been created and is not yet
-  attached to the tree.</p>
+It also returns `null` if the node has just been created and is not yet
+attached to the tree.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{Domxref("Node.firstChild")}}</li>
-  <li>{{Domxref("Node.lastChild")}}</li>
-  <li>{{Domxref("Node.childNodes")}}</li>
-  <li>{{Domxref("Node.nextSibling")}}</li>
-  <li>{{Domxref("Node.parentElement")}}</li>
-  <li>{{Domxref("Node.previousSibling")}}</li>
-  <li>{{Domxref("Node.removeChild")}}</li>
-</ul>
+- {{Domxref("Node.firstChild")}}
+- {{Domxref("Node.lastChild")}}
+- {{Domxref("Node.childNodes")}}
+- {{Domxref("Node.nextSibling")}}
+- {{Domxref("Node.parentElement")}}
+- {{Domxref("Node.previousSibling")}}
+- {{Domxref("Node.removeChild")}}

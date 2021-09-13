@@ -8,46 +8,44 @@ tags:
   - Reference
 browser-compat: api.HTMLSourceElement
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLSourceElement</code></strong> interface provides special properties (beyond the regular {{domxref("HTMLElement")}} object interface it also has available to it by inheritance) for manipulating {{htmlelement("source")}} elements.</p>
+The **`HTMLSourceElement`** interface provides special properties (beyond the regular {{domxref("HTMLElement")}} object interface it also has available to it by inheritance) for manipulating {{htmlelement("source")}} elements.
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{domxref("HTMLElement")}}.</em></p>
+_Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLSourceElement.media")}}</dt>
- <dd>Is a {{domxref("DOMString")}} reflecting the {{ htmlattrxref("media", "source") }} HTML attribute, containing the intended type of the media resource.</dd>
- <dt>{{domxref("HTMLSourceElement.sizes")}} {{experimental_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} representing image sizes between breakpoints</dd>
- <dt>{{domxref("HTMLSourceElement.src")}}</dt>
- <dd>Is a {{domxref("DOMString")}} reflecting the {{ htmlattrxref("src", "source") }} HTML attribute, containing the URL for the media resource. The {{domxref("HTMLSourceElement.src")}} property has a meaning only when the associated {{HTMLElement("source")}} element is nested in a media element that is a {{htmlelement("video")}} or an {{htmlelement("audio")}} element. It has no meaning and is ignored when it is nested in a {{HTMLElement("picture")}} element.
- <div class="note"><p><strong>Note:</strong> If the <code>src</code> property is updated (along with any siblings), the parent {{domxref("HTMLMediaElement")}}'s <code>load</code> method should be called when done, since <code>&lt;source&gt;</code> elements are not re-scanned automatically.</p></div>
- </dd>
- <dt>{{domxref("HTMLSourceElement.srcset")}} {{experimental_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} reflecting the {{ htmlattrxref("srcset", "source") }} HTML attribute, containing a list of candidate images, separated by a comma (<code>',', U+002C COMMA</code>). A candidate image is a URL followed by a <code>'w'</code> with the width of the images, or an <code>'x'</code> followed by the pixel density.</dd>
- <dt>{{domxref("HTMLSourceElement.type")}}</dt>
- <dd>Is a {{domxref("DOMString")}} reflecting the {{ htmlattrxref("type", "source") }} HTML attribute, containing the type of the media resource.</dd>
-</dl>
+- {{domxref("HTMLSourceElement.media")}}
+  - : Is a {{domxref("DOMString")}} reflecting the {{ htmlattrxref("media", "source") }} HTML attribute, containing the intended type of the media resource.
+- {{domxref("HTMLSourceElement.sizes")}} {{experimental_inline}}
+  - : Is a {{domxref("DOMString")}} representing image sizes between breakpoints
+- {{domxref("HTMLSourceElement.src")}}
 
-<h2 id="Methods">Methods</h2>
+  - : Is a {{domxref("DOMString")}} reflecting the {{ htmlattrxref("src", "source") }} HTML attribute, containing the URL for the media resource. The {{domxref("HTMLSourceElement.src")}} property has a meaning only when the associated {{HTMLElement("source")}} element is nested in a media element that is a {{htmlelement("video")}} or an {{htmlelement("audio")}} element. It has no meaning and is ignored when it is nested in a {{HTMLElement("picture")}} element.
 
-<p><em>No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}.</em></p>
+    > **Note:** If the `src` property is updated (along with any siblings), the parent {{domxref("HTMLMediaElement")}}'s `load` method should be called when done, since `<source>` elements are not re-scanned automatically.
 
-<h2 id="Specifications">Specifications</h2>
+- {{domxref("HTMLSourceElement.srcset")}} {{experimental_inline}}
+  - : Is a {{domxref("DOMString")}} reflecting the {{ htmlattrxref("srcset", "source") }} HTML attribute, containing a list of candidate images, separated by a comma (`',', U+002C COMMA`). A candidate image is a URL followed by a `'w'` with the width of the images, or an `'x'` followed by the pixel density.
+- {{domxref("HTMLSourceElement.type")}}
+  - : Is a {{domxref("DOMString")}} reflecting the {{ htmlattrxref("type", "source") }} HTML attribute, containing the type of the media resource.
+
+## Methods
+
+_No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}._
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The HTML element implementing this interface: {{ HTMLElement("source") }}.</li>
- <li>The HTML DOM APIs of the elements that can contain a {{HTMLElement("source")}} element: {{domxref("HTMLVideoElement")}}, {{domxref("HTMLAudioElement")}}, {{domxref("HTMLPictureElement")}}.</li>
-</ul>
+- The HTML element implementing this interface: {{ HTMLElement("source") }}.
+- The HTML DOM APIs of the elements that can contain a {{HTMLElement("source")}} element: {{domxref("HTMLVideoElement")}}, {{domxref("HTMLAudioElement")}}, {{domxref("HTMLPictureElement")}}.

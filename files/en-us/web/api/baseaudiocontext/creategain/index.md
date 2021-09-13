@@ -14,46 +14,47 @@ tags:
   - sound
 browser-compat: api.BaseAudioContext.createGain
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>The <code>createGain()</code> method of the {{ domxref("BaseAudioContext") }}
-  interface creates a {{ domxref("GainNode") }}, which can be used to control the
-  overall gain (or volume) of the audio graph.</p>
+The `createGain()` method of the {{ domxref("BaseAudioContext") }}
+interface creates a {{ domxref("GainNode") }}, which can be used to control the
+overall gain (or volume) of the audio graph.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The {{domxref("GainNode.GainNode", "GainNode()")}}
-    constructor is the recommended way to create a {{domxref("GainNode")}}; see
-    <a href="/en-US/docs/Web/API/AudioNode#creating_an_audionode">Creating an AudioNode</a>.</p>
+> **Note:** The {{domxref("GainNode.GainNode", "GainNode()")}}
+> constructor is the recommended way to create a {{domxref("GainNode")}}; see
+> [Creating an AudioNode](/en-US/docs/Web/API/AudioNode#creating_an_audionode).
+
+## Syntax
+
+```js
+var gainNode = AudioContext.createGain();
+```
+
+### Return value
+
+A {{domxref("GainNode")}} which takes as input one or more audio sources and outputs
+audio whose volume has been adjusted in gain (volume) to a level specified by the node's
+{{domxref("GainNode.gain")}} [a-rate](/en-US/docs/Web/API/AudioParam#a-rate)
+parameter.
+
+## Example
+
+The following example shows basic usage of an {{domxref("AudioContext")}} to create a
+`GainNode`, which is then used to mute and unmute the audio when a Mute
+button is clicked by changing the `gain` property value.
+
+The below snippet wouldn't work as is — for a complete working example, check out our
+[Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) demo ([view
+source](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js).)
+
+```html
+<div>
+  <button class="mute">Mute button</button>
 </div>
+```
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre
-  class="brush: js">var <em>gainNode</em> = <em>AudioContext</em>.createGain();</pre>
-
-<h3 id="Description">Return value</h3>
-
-<p>A {{domxref("GainNode")}} which takes as input one or more audio sources and outputs
-  audio whose volume has been adjusted in gain (volume) to a level specified by the node's
-  {{domxref("GainNode.gain")}} <a href="/en-US/docs/Web/API/AudioParam#a-rate">a-rate</a>
-  parameter.</p>
-
-<h2 id="Example">Example</h2>
-
-<p>The following example shows basic usage of an {{domxref("AudioContext")}} to create a
-  <code>GainNode</code>, which is then used to mute and unmute the audio when a Mute
-  button is clicked by changing the <code>gain</code> property value.</p>
-
-<p>The below snippet wouldn't work as is — for a complete working example, check out our
-  <a href="https://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a> demo (<a
-    href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js">view
-    source</a>.)</p>
-
-<pre class="brush: html">&lt;div&gt;
-  &lt;button class="mute"&gt;Mute button&lt;/button&gt;
-&lt;/div&gt;</pre>
-
-<pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+```js
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var gainNode = audioCtx.createGain();
 var mute = document.querySelector('.mute');
 var source;
@@ -99,19 +100,17 @@ function voiceMute() {
     mute.id = "";
     mute.textContent = "Mute";
   }
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
-  </li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

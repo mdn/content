@@ -2,37 +2,39 @@
 title: SpeechSynthesis.speaking
 slug: Web/API/SpeechSynthesis/speaking
 tags:
-- API
-- Experimental
-- Property
-- Reference
-- SpeechSynthesis
-- Web Speech API
-- speaking
-- speech
-- synthesis
+  - API
+  - Experimental
+  - Property
+  - Reference
+  - SpeechSynthesis
+  - Web Speech API
+  - speaking
+  - speech
+  - synthesis
 browser-compat: api.SpeechSynthesis.speaking
 ---
-<div>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</div>
+{{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>speaking</code></strong> read-only property of the
-  {{domxref("SpeechSynthesis")}} interface is a boolean value that returns
-  <code>true</code> if an utterance is currently in the process of being spoken — even
-  if <code>SpeechSynthesis</code> is in a
-  {{domxref("SpeechSynthesis/pause()","paused")}} state.</p>
+The **`speaking`** read-only property of the
+{{domxref("SpeechSynthesis")}} interface is a boolean value that returns
+`true` if an utterance is currently in the process of being spoken — even
+if `SpeechSynthesis` is in a
+{{domxref("SpeechSynthesis/pause()","paused")}} state.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var amISpeaking = speechSynthesisInstance.speaking;
-</pre>
+```js
+var amISpeaking = speechSynthesisInstance.speaking;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A boolean value.</p>
+A boolean value.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var synth = window.speechSynthesis;
+```js
+var synth = window.speechSynthesis;
 
 var utterance1 = new SpeechSynthesisUtterance('How about we say this now? This is quite a long sentence to say.');
 var utterance2 = new SpeechSynthesisUtterance('We should say another sentence too, just to be on the safe side.');
@@ -41,18 +43,16 @@ synth.speak(utterance1);
 synth.speak(utterance2);
 
 var amISpeaking = synth.speaking; // will return true if utterance 1 or utterance 2 are currently being spoken
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)

@@ -8,62 +8,66 @@ tags:
   - Reference
 browser-compat: api.Element.paste_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <strong><code>paste</code></strong> event is fired when the user has initiated a "paste" action through the browser's user interface.</p>
+The **`paste`** event is fired when the user has initiated a "paste" action through the browser's user interface.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("ClipboardEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("HTMLElement/onpaste", "onpaste")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("ClipboardEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>{{domxref("HTMLElement/onpaste", "onpaste")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>If the cursor is in an editable context (for example, in a {{HTMLElement("textarea")}} or an element with <code><a href="/en-US/docs/Web/HTML/Global_attributes/contenteditable">contenteditable</a></code> attribute set to <code>true</code>) then the default action is to insert the contents of the clipboard into the document at the cursor position.</p>
+If the cursor is in an editable context (for example, in a {{HTMLElement("textarea")}} or an element with [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute set to `true`) then the default action is to insert the contents of the clipboard into the document at the cursor position.
 
-<p>A handler for this event can access the clipboard contents by calling {{domxref("DataTransfer/getData", "getData()")}} on the event's <code>clipboardData</code> property.</p>
+A handler for this event can access the clipboard contents by calling {{domxref("DataTransfer/getData", "getData()")}} on the event's `clipboardData` property.
 
-<p>To override the default behavior (for example to insert some different data or a transformation of the clipboard contents) an event handler must cancel the default action using {{domxref("Event/preventDefault", "event.preventDefault()")}}, and then insert its desired data manually.</p>
+To override the default behavior (for example to insert some different data or a transformation of the clipboard contents) an event handler must cancel the default action using {{domxref("Event/preventDefault", "event.preventDefault()")}}, and then insert its desired data manually.
 
-<p>It's possible to construct and dispatch a <a href="/en-US/docs/Web/Events/Creating_and_triggering_events">synthetic</a> <code>paste</code> event, but this will not affect the document's contents.</p>
+It's possible to construct and dispatch a [synthetic](/en-US/docs/Web/Events/Creating_and_triggering_events) `paste` event, but this will not affect the document's contents.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Live_example">Live example</h3>
+### Live example
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="source" contenteditable="true"&gt;Try copying text from this box...&lt;/div&gt;
-&lt;div class="target" contenteditable="true"&gt;...and pasting it into this one&lt;/div&gt;</pre>
+```html
+<div class="source" contenteditable="true">Try copying text from this box...</div>
+<div class="target" contenteditable="true">...and pasting it into this one</div>
+```
 
-<pre class="brush: css hidden">div.source, div.target {
+```css hidden
+div.source, div.target {
     border: 1px solid gray;
     margin: .5rem;
     padding: .5rem;
     height: 1rem;
     background-color: #e9eef1;
 }
-</pre>
+```
 
-<h4 id="JS">JS</h4>
+#### JS
 
-<pre class="brush: js">const target = document.querySelector('div.target');
+```js
+const target = document.querySelector('div.target');
 
-target.addEventListener('paste', (event) =&gt; {
+target.addEventListener('paste', (event) => {
     let paste = (event.clipboardData || window.clipboardData).getData('text');
     paste = paste.toUpperCase();
 
@@ -74,24 +78,22 @@ target.addEventListener('paste', (event) =&gt; {
 
     event.preventDefault();
 });
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Live_example', '100%', '100px') }}</p>
+{{ EmbedLiveSample('Live_example', '100%', '100px') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Related events: {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/copy_event", "copy")}}</li>
- <li>This event on {{domxref("Document")}} targets: {{domxref("Document/paste_event", "paste")}}</li>
- <li>This event on {{domxref("Window")}} targets: {{domxref("Window/paste_event", "paste")}}</li>
-</ul>
+- Related events: {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/copy_event", "copy")}}
+- This event on {{domxref("Document")}} targets: {{domxref("Document/paste_event", "paste")}}
+- This event on {{domxref("Window")}} targets: {{domxref("Window/paste_event", "paste")}}

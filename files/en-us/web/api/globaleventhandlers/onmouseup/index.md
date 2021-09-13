@@ -2,55 +2,56 @@
 title: GlobalEventHandlers.onmouseup
 slug: Web/API/GlobalEventHandlers/onmouseup
 tags:
-- API
-- Event Handler
-- GlobalEventHandlers
-- HTML DOM
-- Property
-- Reference
+  - API
+  - Event Handler
+  - GlobalEventHandlers
+  - HTML DOM
+  - Property
+  - Reference
 browser-compat: api.GlobalEventHandlers.onmouseup
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p>The <code><strong>onmouseup</strong></code> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> that
-  processes {{event("mouseup")}} events.</p>
+The **`onmouseup`** property of the
+{{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
+processes {{event("mouseup")}} events.
 
-<p>The <code>mouseup</code> event fires when the user releases the mouse button.</p>
+The `mouseup` event fires when the user releases the mouse button.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The opposite of <code>onmouseup</code> is
-    {{domxref("GlobalEventHandlers.onmousedown", "onmousedown")}}.</p>
+> **Note:** The opposite of `onmouseup` is
+> {{domxref("GlobalEventHandlers.onmousedown", "onmousedown")}}.
+
+## Syntax
+
+```js
+target.onmouseup = functionRef;
+```
+
+### Value
+
+`functionRef` is a function name or a [function
+expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("MouseEvent")}} object as its sole
+argument.
+
+## Example
+
+In this example, a piece of "toast" hides when you click down with the mouse, and
+reappears when you release. It uses the {{domxref("GlobalEventHandlers.onmousedown",
+  "onmousedown")}} and `onmouseup` event handlers.
+
+### HTML
+
+```html
+<div class="container">
+  <div class="toaster"></div>
+  <div class="toast">Hello world!</div>
 </div>
+```
 
-<h2 id="Syntax">Syntax</h2>
+### CSS
 
-<pre
-  class="brush: js"><em>target</em>.onmouseup = <var>functionRef</var>;</pre>
-
-<h3 id="Value">Value</h3>
-
-<p><code>functionRef</code> is a function name or a <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function
-    expression</a>. The function receives a {{domxref("MouseEvent")}} object as its sole
-  argument.</p>
-
-<h2 id="Example">Example</h2>
-
-<p>In this example, a piece of "toast" hides when you click down with the mouse, and
-  reappears when you release. It uses the {{domxref("GlobalEventHandlers.onmousedown",
-  "onmousedown")}} and <code>onmouseup</code> event handlers.</p>
-
-<h3 id="HTML">HTML</h3>
-
-<pre class="brush: html">&lt;div class="container"&gt;
-  &lt;div class="toaster"&gt;&lt;/div&gt;
-  &lt;div class="toast"&gt;Hello world!&lt;/div&gt;
-&lt;/div&gt;</pre>
-
-<h3 id="CSS">CSS</h3>
-
-<pre class="brush: css">.container {
+```css
+.container {
   position: absolute;
   left: 50%;
   bottom: 20px;
@@ -80,11 +81,13 @@ browser-compat: api.GlobalEventHandlers.onmouseup
 
 .depressed {
   transform: translate(-50%, -50%);
-}</pre>
+}
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">function depress() {
+```js
+function depress() {
   toast.classList.add('depressed');
 }
 
@@ -96,22 +99,21 @@ const toaster = document.querySelector('.toaster');
 const toast = document.querySelector('.toast');
 
 toaster.onmousedown = depress;
-document.onmouseup = release;</pre>
+document.onmouseup = release;
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example", 700, 200)}}</p>
+{{EmbedLiveSample("Example", 700, 200)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{event("mouseup")}} event</li>
-</ul>
+- {{event("mouseup")}} event

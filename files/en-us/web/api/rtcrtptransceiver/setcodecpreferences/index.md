@@ -2,114 +2,108 @@
 title: RTCRtpTransceiver.setCodecPreferences()
 slug: Web/API/RTCRtpTransceiver/setCodecPreferences
 tags:
-- API
-- Codec
-- Codec Configuration
-- Codec Parameters
-- Codec Preferences
-- Media
-- Method
-- RTCRtpTransceiver
-- Reference
-- Settings
-- WebRTC
-- setCodecPreferences
+  - API
+  - Codec
+  - Codec Configuration
+  - Codec Parameters
+  - Codec Preferences
+  - Media
+  - Method
+  - RTCRtpTransceiver
+  - Reference
+  - Settings
+  - WebRTC
+  - setCodecPreferences
 browser-compat: api.RTCRtpTransceiver.setCodecPreferences
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The {{domxref("RTCRtpTransceiver")}} method
-    <strong><code>setCodecPreferences()</code></strong> configures the transceiver's
-    codecs given a list of {{domxref("RTCRtpCodecCapability")}} objects specifying the new
-    preferences for each {{Glossary("codec")}}.</p>
+The {{domxref("RTCRtpTransceiver")}} method
+**`setCodecPreferences()`** configures the transceiver's
+codecs given a list of {{domxref("RTCRtpCodecCapability")}} objects specifying the new
+preferences for each {{Glossary("codec")}}.
 
-<p>The specified set of codecs and
-  configurations will be used for all future connections including this transceiver until
-  this method is called again.</p>
+The specified set of codecs and
+configurations will be used for all future connections including this transceiver until
+this method is called again.
 
-<p>When preparing to open an {{domxref("RTCPeerConnection")}}, you can change the codec
-  parameters from the {{Glossary("user agent", "user agent's")}} default configuration by
-  calling <code>setCodecParameters()</code> <em>before</em> calling either
-  {{domxref("RTCPeerConnection.createOffer()")}} or
-  {{domxref("RTCPeerConnection.createAnswer", "createAnswer()")}}.</p>
+When preparing to open an {{domxref("RTCPeerConnection")}}, you can change the codec
+parameters from the {{Glossary("user agent", "user agent's")}} default configuration by
+calling `setCodecParameters()` _before_ calling either
+{{domxref("RTCPeerConnection.createOffer()")}} or
+{{domxref("RTCPeerConnection.createAnswer", "createAnswer()")}}.
 
-<p>A guide to codecs supported by WebRTC—and each codec's positive and negative
-  characteristics—can be found in <a
-    href="/en-US/docs/Web/Media/Formats/WebRTC_codecs">Codecs used by WebRTC</a>.</p>
+A guide to codecs supported by WebRTC—and each codec's positive and negative
+characteristics—can be found in [Codecs used by WebRTC](/en-US/docs/Web/Media/Formats/WebRTC_codecs).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>rtcRtpTransceiver</em>.setCodecPreferences(<em>codecs</em>)</pre>
+```js
+rtcRtpTransceiver.setCodecPreferences(codecs)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>codecs</code></dt>
-  <dd>
-    <p>An array of {{domxref("RTCRtpCodecCapability")}} objects, in order of preference,
-      each providing the parameters for one of the transceiver's supported codecs. If
-      <code>codecs</code> is empty, the codec configurations are all returned to the user
-      agent's defaults.</p>
+- `codecs`
 
-    <div class="note"><p><strong>Note:</strong> Any codecs not included in
-      <code>codecs</code> will not be considered during the process of negotiating a
-      connection. This lets you prevent the use of codecs you don't wish to use.</p></div>
-  </dd>
-</dl>
+  - : An array of {{domxref("RTCRtpCodecCapability")}} objects, in order of preference,
+    each providing the parameters for one of the transceiver's supported codecs. If
+    `codecs` is empty, the codec configurations are all returned to the user
+    agent's defaults.
 
-<h3 id="Return_value">Return value</h3>
+    > **Note:** Any codecs not included in
+    > `codecs` will not be considered during the process of negotiating a
+    > connection. This lets you prevent the use of codecs you don't wish to use.
 
-<p><code>undefined</code></p>
+### Return value
 
-<h3 id="Exceptions">Exceptions</h3>
+`undefined`
 
-<dl>
-  <dt><code>InvalidAccessError</code></dt>
-  <dd>The <code>codecs</code> list includes one or more codecs which are not supported by
-    the transceiver.</dd>
-</dl>
+### Exceptions
 
-<h2 id="Usage_notes">Usage notes</h2>
+- `InvalidAccessError`
+  - : The `codecs` list includes one or more codecs which are not supported by
+    the transceiver.
 
-<h3 id="Getting_a_list_of_supported_codecs">Getting a list of supported codecs</h3>
+## Usage notes
 
-<p>You can only include in the <code>codecs</code> list codecs which the transceiver
-  actually supports. That means that either the associated {{domxref("RTCRtpSender")}} or
-  the {{domxref("RTCRtpReceiver")}} needs to support every codec in the list. If any
-  unsupported codecs are listed, the browser will throw an <code>InvalidAccessError</code>
-  exception when you call this method.</p>
+### Getting a list of supported codecs
 
-<p>A good approach to setting codec preferences is to first get the list of codecs that
-  are actually supported, then modify that list to match what you want. Pass the altered
-  list into <code>setCodecPreferences()</code> to specify your preferences.</p>
+You can only include in the `codecs` list codecs which the transceiver
+actually supports. That means that either the associated {{domxref("RTCRtpSender")}} or
+the {{domxref("RTCRtpReceiver")}} needs to support every codec in the list. If any
+unsupported codecs are listed, the browser will throw an `InvalidAccessError`
+exception when you call this method.
 
-<p>To determine which codecs are supported by the transceiver, call the sender's
-  {{domxref("RTCRtpSender.getCapabilities", "getCapabilities()")}} and the receiver's
-  {{domxref("RTCRtpReceiver.getCapabilities", "getCapabilities()")}} methods and get the
-  {{domxref("RTCRtpCapabilities.codecs", "codecs")}} list from the results of each.</p>
+A good approach to setting codec preferences is to first get the list of codecs that
+are actually supported, then modify that list to match what you want. Pass the altered
+list into `setCodecPreferences()` to specify your preferences.
 
-<p>The following code snippet demonstrates how to get both the list of codecs supported by
-  the transceiver's {{domxref("RTCRtpSender")}} and {{domxref("RTCRtpReceiver")}}.</p>
+To determine which codecs are supported by the transceiver, call the sender's
+{{domxref("RTCRtpSender.getCapabilities", "getCapabilities()")}} and the receiver's
+{{domxref("RTCRtpReceiver.getCapabilities", "getCapabilities()")}} methods and get the
+{{domxref("RTCRtpCapabilities.codecs", "codecs")}} list from the results of each.
 
-<pre class="brush: js">var availSendCodecs = transceiver.sender.getCapabilities("video").codecs;
+The following code snippet demonstrates how to get both the list of codecs supported by
+the transceiver's {{domxref("RTCRtpSender")}} and {{domxref("RTCRtpReceiver")}}.
+
+```js
+var availSendCodecs = transceiver.sender.getCapabilities("video").codecs;
 var availReceiveCodecs = transceiver.receiver.getCapabilities("video").codecs;
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
-  <li><a href="/en-US/docs/Web/Media/Formats/WebRTC_codecs">Codecs used by WebRTC</a></li>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP">Introduction to the Real-time
-      Transport Protocol (RTP)</a></li>
-  <li><a href="/en-US/docs/Web/Media">Web media technologies</a></li>
-</ul>
+- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+- [Codecs used by WebRTC](/en-US/docs/Web/Media/Formats/WebRTC_codecs)
+- [Introduction to the Real-time
+  Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)
+- [Web media technologies](/en-US/docs/Web/Media)

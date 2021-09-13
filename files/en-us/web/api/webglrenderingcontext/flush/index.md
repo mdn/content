@@ -2,42 +2,40 @@
 title: WebGLRenderingContext.flush()
 slug: Web/API/WebGLRenderingContext/flush
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.flush
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.flush()</code></strong> method of the <a
-    href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> empties different buffer commands,
-  causing all commands to be executed as quickly as possible.</p>
+The **`WebGLRenderingContext.flush()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) empties different buffer commands,
+causing all commands to be executed as quickly as possible.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <var>gl</var>.flush();
-</pre>
+```js
+void gl.flush();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.finish()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.finish()")}}

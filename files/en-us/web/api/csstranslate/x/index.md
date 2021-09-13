@@ -2,38 +2,40 @@
 title: CSSTranslate.x
 slug: Web/API/CSSTranslate/x
 tags:
-- API
-- CSS Typed Object Model API
-- CSSTransformComponent
-- CSSTransformValue
-- CSSTranslate
-- Experimental
-- Houdini
-- Property
+  - API
+  - CSS Typed Object Model API
+  - CSSTransformComponent
+  - CSSTransformValue
+  - CSSTranslate
+  - Experimental
+  - Houdini
+  - Property
 browser-compat: api.CSSTranslate.x
 ---
-<div>{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}</div>
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}
 
-<p>The <strong><code>x</code></strong> property of the
-  {{domxref("CSSTranslate")}} interface gets and sets the abscissa or x-axis of the
-  translating vector.</p>
+The **`x`** property of the
+{{domxref("CSSTranslate")}} interface gets and sets the abscissa or x-axis of the
+translating vector.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var translate<em>X</em> = CSSTranslate.x;</pre>
+```js
+var translateX = CSSTranslate.x;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{cssxref('length-percentage')}}</p>
+A {{cssxref('length-percentage')}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>To Do</p>
+To Do
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

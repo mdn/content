@@ -2,62 +2,61 @@
 title: WebGLRenderingContext.deleteTexture()
 slug: Web/API/WebGLRenderingContext/deleteTexture
 tags:
-- API
-- Method
-- Reference
-- Textures
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - Textures
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.deleteTexture
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.deleteTexture()</code></strong> method of the
-  <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> deletes a given
-  {{domxref("WebGLTexture")}} object. This method has no effect if the texture has already
-  been deleted.</p>
+The **`WebGLRenderingContext.deleteTexture()`** method of the
+[WebGL API](/en-US/docs/Web/API/WebGL_API) deletes a given
+{{domxref("WebGLTexture")}} object. This method has no effect if the texture has already
+been deleted.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <var>gl</var>.deleteTexture(<var>texture</var>);
-</pre>
+```js
+void gl.deleteTexture(texture);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>texture</dt>
-  <dd>A {{domxref("WebGLTexture")}} object to delete.</dd>
-</dl>
+- texture
+  - : A {{domxref("WebGLTexture")}} object to delete.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Deleting_a_texture">Deleting a texture</h3>
+### Deleting a texture
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 var texture = gl.createTexture();
 
 // ...
 
-gl.deleteTexture(texture);</pre>
+gl.deleteTexture(texture);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.bindTexture()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.createTexture()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.isTexture()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.texImage2D()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.bindTexture()")}}
+- {{domxref("WebGLRenderingContext.createTexture()")}}
+- {{domxref("WebGLRenderingContext.isTexture()")}}
+- {{domxref("WebGLRenderingContext.texImage2D()")}}

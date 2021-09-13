@@ -2,55 +2,57 @@
 title: PaymentRequest.onpaymentmethodchange
 slug: Web/API/PaymentRequest/onpaymentmethodchange
 tags:
-- API
-- Commerce
-- Event Handler
-- Payment Method
-- PaymentRequest
-- Property
-- Reference
-- onpaymentmethodchange
-- payment
+  - API
+  - Commerce
+  - Event Handler
+  - Payment Method
+  - PaymentRequest
+  - Property
+  - Reference
+  - onpaymentmethodchange
+  - payment
 browser-compat: api.PaymentRequest.onpaymentmethodchange
 ---
-<p>{{securecontext_header}}{{APIRef("Payment Request API")}}</p>
+{{securecontext_header}}{{APIRef("Payment Request API")}}
 
-<p>The {{domxref("PaymentRequest")}} event handler
-    <code><strong>onpaymentmethodchange</strong></code> is invoked when the
-    {{event("paymentmethodchange")}} is fired, indicating that the user has changed
-  payment methods within a given payment handler.</p>
+The {{domxref("PaymentRequest")}} event handler
+**`onpaymentmethodchange`** is invoked when the
+{{event("paymentmethodchange")}} is fired, indicating that the user has changed
+payment methods within a given payment handler.
 
-<p>For example, when using Apple Pay, the
-  user can swipe to select different credit cards, debit cards, and so forth. Each time
-  the user does so, this event is fired.</p>
+For example, when using Apple Pay, the
+user can swipe to select different credit cards, debit cards, and so forth. Each time
+the user does so, this event is fired.
 
-<p>This event may not be fired by all payment handlers.</p>
+This event may not be fired by all payment handlers.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">PaymentRequest.addEventListener('paymentmethodchange', paymentMethodChangeEvent =&gt; { ... });
+```js
+PaymentRequest.addEventListener('paymentmethodchange', paymentMethodChangeEvent => { ... });
 
-PaymentRequest.onpaymentmethodchange = function(paymentMethodChangeEvent) { ... };</pre>
+PaymentRequest.onpaymentmethodchange = function(paymentMethodChangeEvent) { ... };
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An event handler function which is to be called whenever the
-  {{event("paymentmethodchange")}} event is fired at the {{domxref("PaymentRequest")}},
-  indicating that the user has changed payment methods within the same payment handler.
-</p>
+An event handler function which is to be called whenever the
+{{event("paymentmethodchange")}} event is fired at the {{domxref("PaymentRequest")}},
+indicating that the user has changed payment methods within the same payment handler.
 
-<p>The {{event("paymentmethodchange")}} event is triggered by a user-agent controlled
-  interaction (i.e., the end-user switches from a debit to a credit card in the payment
-  UI). To make sure you receive the event, you should add event listeners to
-  {{domxref('PaymentRequest')}} object after instantiation, but before you call
-  <code>show()</code>.</p>
+The {{event("paymentmethodchange")}} event is triggered by a user-agent controlled
+interaction (i.e., the end-user switches from a debit to a credit card in the payment
+UI). To make sure you receive the event, you should add event listeners to
+{{domxref('PaymentRequest')}} object after instantiation, but before you call
+`show()`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>An example payment method change handler is shown below; this example handles changes
-  made to the payment method when using Apple Pay, specifically:</p>
+An example payment method change handler is shown below; this example handles changes
+made to the payment method when using Apple Pay, specifically:
 
-<pre class="brush: js">request.onpaymentmethodchange = ev =&gt; {
+```js
+request.onpaymentmethodchange = ev => {
   const { type: cardType } = ev.methodDetails;
   const newStuff = {};
   if (ev.methodName === "https://apple.com/apple-pay") {
@@ -66,12 +68,13 @@ PaymentRequest.onpaymentmethodchange = function(paymentMethodChangeEvent) { ... 
   // finally...
   ev.updateWith(newStuff);
 };
-const response = await request.show();</pre>
+const response = await request.show();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -11,37 +11,40 @@ tags:
   - Element
 browser-compat: api.Element.ariaRoleDescription
 ---
-<div>{{DefaultAPISidebar("DOM")}}</div>
+{{DefaultAPISidebar("DOM")}}
 
-<p>The <strong><code>ariaRoleDescription</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <code>aria-roledescription</code> attribute, which defines a human-readable, author-localized description for the role of an element.</p>
+The **`ariaRoleDescription`** property of the {{domxref("Element")}} interface reflects the value of the `aria-roledescription` attribute, which defines a human-readable, author-localized description for the role of an element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox notranslate">var <var>ariaRoleDescription</var> = element.ariaRoleDescription;
-<var>element</var>.ariaRoleDescription = <var>ariaRoleDescription</var></pre>
+    var ariaRoleDescription = element.ariaRoleDescription;
+    element.ariaRoleDescription = ariaRoleDescription
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString")}}.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("DOMString")}}.
 
-<p>In this example the <code>aria-roledescription</code> attribute on the element with an ID of <code>myApplication</code> has been set. Using <code>ariaRoleDescription</code> we can update the value.</p>
+## Examples
 
-<pre class="brush: html">&lt;div id="myApplication" role="application" aria-roledescription="a description of this widget"&gt;...&lt;/div&gt;</pre>
+In this example the `aria-roledescription` attribute on the element with an ID of `myApplication` has been set. Using `ariaRoleDescription` we can update the value.
 
-<pre class="brush: js">let el = document.getElementById('myApplication');
+```html
+<div id="myApplication" role="application" aria-roledescription="a description of this widget">...</div>
+```
+
+```js
+let el = document.getElementById('myApplication');
 console.log(el.ariaRoleDescription); // "a description of this widget"
 el.ariaRoleDescription = "an updated description of this widget"
-console.log(el.ariaRoleDescription); // "an updated description of this widget"</pre>
+console.log(el.ariaRoleDescription); // "an updated description of this widget"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<ul>
-  <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Application_Role">ARIA: application role</a></li>
-</ul>
+- [ARIA: application role](/en-US/docs/Web/Accessibility/ARIA/Roles/Application_Role)

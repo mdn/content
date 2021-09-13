@@ -12,48 +12,48 @@ tags:
   - put
 browser-compat: api.IDBObjectStore.put
 ---
-<p>{{ APIRef("IndexedDB") }}</p>
+{{ APIRef("IndexedDB") }}
 
-<p>The <strong><code>put()</code></strong> method of the {{domxref("IDBObjectStore")}} interface updates a given record in a database, or inserts a new record if the given item does not already exist.</p>
+The **`put()`** method of the {{domxref("IDBObjectStore")}} interface updates a given record in a database, or inserts a new record if the given item does not already exist.
 
-<p>It returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a <a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone">structured clone</a> of the value and stores the cloned value in the object store. This is for adding new records, or updating existing records in an object store when the transaction's mode is <code>readwrite</code>. If the record is successfully stored, then a success event is fired on the returned request object with the <code>result</code> set to the key for the stored record, and the <code>transaction</code> set to the transaction in which this object store is opened.</p>
+It returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a [structured clone](https://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone) of the value and stores the cloned value in the object store. This is for adding new records, or updating existing records in an object store when the transaction's mode is `readwrite`. If the record is successfully stored, then a success event is fired on the returned request object with the `result` set to the key for the stored record, and the `transaction` set to the transaction in which this object store is opened.
 
-<p>The put method is an <em>update or insert</em> method.
-  See the {{domxref("IDBObjectStore.add")}} method for an <em>insert only</em> method.</p>
+The put method is an _update or insert_ method.
+See the {{domxref("IDBObjectStore.add")}} method for an _insert only_ method.
 
-<p>Bear in mind that if you have a {{domxref("IDBCursor","IDBCursor")}} to the record you
-  want to update, updating it with {{domxref("IDBCursor.update()")}} is preferable to
-  using {{domxref("IDBObjectStore.put()")}}. Doing so makes it clear that an existing
-  record will be updated, instead of a new record being inserted.</p>
+Bear in mind that if you have a {{domxref("IDBCursor","IDBCursor")}} to the record you
+want to update, updating it with {{domxref("IDBCursor.update()")}} is preferable to
+using {{domxref("IDBObjectStore.put()")}}. Doing so makes it clear that an existing
+record will be updated, instead of a new record being inserted.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let <em>request</em> = <em>objectStore</em>.put(<em>item</em>);
-let <em>request</em> = <em>objectStore</em>.put(<em>item</em>, <em>key</em>);</pre>
+```js
+let request = objectStore.put(item);
+let request = objectStore.put(item, key);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>item</dt>
-  <dd>The item you wish to update (or insert).</dd>
-  <dt>key {{optional_inline}}</dt>
-  <dd>The primary key of the record you want to update (e.g. from
+- item
+  - : The item you wish to update (or insert).
+- key {{optional_inline}}
+  - : The primary key of the record you want to update (e.g. from
     {{domxref("IDBCursor.primaryKey")}}). This is only needed for object stores that have
-    an <code>autoIncrement</code> primary key, therefore the key is not in a field on the
-    record object. In such cases, calling <code>put(item)</code> will always insert a new
-    record, because it doesn't know what existing record you might want to modify.</dd>
-</dl>
+    an `autoIncrement` primary key, therefore the key is not in a field on the
+    record object. In such cases, calling `put(item)` will always insert a new
+    record, because it doesn't know what existing record you might want to modify.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An {{domxref("IDBRequest")}} object on which subsequent events related to this
-  operation are fired.</p>
+An {{domxref("IDBRequest")}} object on which subsequent events related to this
+operation are fired.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>This method may raise a {{domxref("DOMException")}} of one of the following types:</p>
+This method may raise a {{domxref("DOMException")}} of one of the following types:
 
 <table class="standard-table">
   <thead>
@@ -65,65 +65,81 @@ let <em>request</em> = <em>objectStore</em>.put(<em>item</em>, <em>key</em>);</p
   <tbody>
     <tr>
       <td><code>ReadOnlyError</code></td>
-      <td>The transaction associated with this operation is in read-only <a
-          href="/en-US/docs/Web/API/IDBTransaction#mode_constants">mode</a>.</td>
+      <td>
+        The transaction associated with this operation is in read-only <a
+          href="/en-US/docs/Web/API/IDBTransaction#mode_constants"
+          >mode</a
+        >.
+      </td>
     </tr>
     <tr>
       <td><code>TransactionInactiveError</code></td>
-      <td>This {{domxref("IDBObjectStore")}}'s transaction is inactive.</td>
+      <td>
+        This {{domxref("IDBObjectStore")}}'s transaction is inactive.
+      </td>
     </tr>
     <tr>
       <td><code>DataError</code></td>
       <td>
         <p>Any of the following conditions apply:</p>
-
         <ul>
-          <li>The object store uses in-line keys or has a key generator, and a key
-            parameter was provided.</li>
-          <li>The object store uses out-of-line keys and has no key generator, and no key
-            parameter was provided.</li>
-          <li>The object store uses in-line keys but no key generator, and the object
-            store's key path does not yield a valid key.</li>
-          <li>The key parameter was provided but does not contain a valid key.</li>
+          <li>
+            The object store uses in-line keys or has a key generator, and a key
+            parameter was provided.
+          </li>
+          <li>
+            The object store uses out-of-line keys and has no key generator, and
+            no key parameter was provided.
+          </li>
+          <li>
+            The object store uses in-line keys but no key generator, and the
+            object store's key path does not yield a valid key.
+          </li>
+          <li>
+            The key parameter was provided but does not contain a valid key.
+          </li>
         </ul>
       </td>
     </tr>
     <tr>
       <td><code>InvalidStateError</code></td>
-      <td>The {{domxref("IDBObjectStore")}} has been deleted or removed.</td>
+      <td>
+        The {{domxref("IDBObjectStore")}} has been deleted or
+        removed.
+      </td>
     </tr>
     <tr>
       <td><code>DataCloneError</code></td>
-      <td>The data being stored could not be cloned by the internal structured cloning
-        algorithm.<br>
-         </td>
+      <td>
+        The data being stored could not be cloned by the internal structured
+        cloning algorithm.<br /> 
+      </td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Parameters_2">Parameters</h2>
+## Parameters
 
-<dl>
-  <dt>value</dt>
-  <dd>The value to be stored.</dd>
-  <dt>key</dt>
-  <dd>The key to use to identify the record. If unspecified, it results to null. If the
+- value
+  - : The value to be stored.
+- key
+  - : The key to use to identify the record. If unspecified, it results to null. If the
     object store has a key generator (e.g. autoincrement) the key of the object must be
-    passed in to update the object.</dd>
-</dl>
+    passed in to update the object.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example requests a given record title; when that request is successful
-  the <code>onsuccess</code> function gets the associated record from the
-  {{domxref("IDBObjectStore")}} (made available
-  as <code>objectStoreTitleRequest.result</code>), updates
-    one property of the record, and then puts the updated record back into the object
-    store in another request with <code>put()</code>. For a full working example, see
-    our <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> app
-    (<a href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</p>
+The following example requests a given record title; when that request is successful
+the `onsuccess` function gets the associated record from the
+{{domxref("IDBObjectStore")}} (made available
+as `objectStoreTitleRequest.result`), updates
+one property of the record, and then puts the updated record back into the object
+store in another request with `put()`. For a full working example, see
+our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app
+([view example live](https://mdn.github.io/to-do-notifications/).)
 
-<pre class="brush: js">const title = "Walk dog";
+```js
+const title = "Walk dog";
 
 // Open up a transaction as usual
 const objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
@@ -131,7 +147,7 @@ const objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoL
 // Get the to-do list object that has this title as it's title
 const objectStoreTitleRequest = objectStore.get(title);
 
-objectStoreTitleRequest.onsuccess = () =&gt; {
+objectStoreTitleRequest.onsuccess = () => {
   // Grab the data object returned as the result
   const data = objectStoreTitleRequest.result;
 
@@ -145,30 +161,27 @@ objectStoreTitleRequest.onsuccess = () =&gt; {
   console.log("The transaction that originated this request is " + updateTitleRequest.transaction);
 
   // When this new request succeeds, run the displayData() function again to update the display
-  updateTitleRequest.onsuccess = () =&gt; {
+  updateTitleRequest.onsuccess = () => {
     displayData();
   };
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
-  <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
-  <li>Using transactions: {{domxref("IDBTransaction")}}</li>
-  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
-  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
-  <li>Using cursors: {{domxref("IDBCursor")}}</li>
-  <li>Reference example: <a class="external"
-      href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
-      Notifications</a> (<a class="external"
-      href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do
+  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

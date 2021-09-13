@@ -2,110 +2,114 @@
 title: GlobalEventHandlers.onclick
 slug: Web/API/GlobalEventHandlers/onclick
 tags:
-- API
-- Event Handler
-- GlobalEventHandlers
-- HTML DOM
-- Property
-- Reference
+  - API
+  - Event Handler
+  - GlobalEventHandlers
+  - HTML DOM
+  - Property
+  - Reference
 browser-compat: api.GlobalEventHandlers.onclick
 ---
-<p>{{ ApiRef("HTML DOM") }}</p>
+{{ ApiRef("HTML DOM") }}
 
-<p>The <code><strong>onclick</strong></code> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is the <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> for
-  processing {{domxref("Element/click_event", "click")}} events on a given element.</p>
+The **`onclick`** property of the
+{{domxref("GlobalEventHandlers")}} mixin is the [event handler](/en-US/docs/Web/Events/Event_handlers) for
+processing {{domxref("Element/click_event", "click")}} events on a given element.
 
-<p>The <code>click</code> event is raised when the user clicks on an element. It fires
-  after the {{domxref("Element/mousedown_event", "mousedown")}} and
-  {{domxref("Element/mouseup_event", "mouseup")}} events, in that order.</p>
+The `click` event is raised when the user clicks on an element. It fires
+after the {{domxref("Element/mousedown_event", "mousedown")}} and
+{{domxref("Element/mouseup_event", "mouseup")}} events, in that order.
 
-<div class="note"><p><strong>Note:</strong> When using the <code>click</code> event to
-  trigger an action, also consider adding this same action to the
-  {{domxref("Element/keydown_event", "keydown")}} event, to allow the use of that same
-  action by people who don't use a mouse or a touch screen.</p></div>
+> **Note:** When using the `click` event to
+> trigger an action, also consider adding this same action to the
+> {{domxref("Element/keydown_event", "keydown")}} event, to allow the use of that same
+> action by people who don't use a mouse or a touch screen.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>target</var>.onclick = <var>functionRef</var>;
-</pre>
+```js
+target.onclick = functionRef;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p><code><var>functionRef</var></code> is a function name or a <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function
-    expression</a>. The function receives a {{domxref("MouseEvent")}} object as its sole
-  argument. Within the function, {{jsxref("Operators/this", "this")}} will be the object
-  that <code>onclick</code> was bound to (which will also match
-  <code>event.currentTarget</code>)</p>
+`functionRef` is a function name or a [function
+expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("MouseEvent")}} object as its sole
+argument. Within the function, {{jsxref("Operators/this", "this")}} will be the object
+that `onclick` was bound to (which will also match
+`event.currentTarget`)
 
-<p>Only one <code>onclick</code> handler can be assigned to an object at a time. You may
-  prefer to use the {{domxref("EventTarget.addEventListener()")}} method instead, since
-  it's more flexible.</p>
+Only one `onclick` handler can be assigned to an object at a time. You may
+prefer to use the {{domxref("EventTarget.addEventListener()")}} method instead, since
+it's more flexible.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Detecting_clicks">Detecting clicks</h3>
+### Detecting clicks
 
-<p>This example changes the color of an element when it's clicked upon.</p>
+This example changes the color of an element when it's clicked upon.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush:html">&lt;div id="demo"&gt;Click here&lt;/div&gt;</pre>
+```html
+<div id="demo">Click here</div>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">document.getElementById('demo').onclick = function changeContent() {
+```js
+document.getElementById('demo').onclick = function changeContent() {
 
    document.getElementById('demo').textContent = "Help me";
    document.getElementById('demo').style = "Color: red";
 
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Detecting_clicks")}}</p>
+{{EmbedLiveSample("Detecting_clicks")}}
 
-<h3 id="Getting_the_coordinates_of_clicks">Getting the coordinates of clicks</h3>
+### Getting the coordinates of clicks
 
-<p>This example displays the coordinates at which the most recent mouse button click
-  occurred.</p>
+This example displays the coordinates at which the most recent mouse button click
+occurred.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush:html">&lt;p&gt;Click anywhere in this example.&lt;/p&gt;
-&lt;p id="log"&gt;&lt;/p&gt;</pre>
+```html
+<p>Click anywhere in this example.</p>
+<p id="log"></p>
+```
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">let log = document.getElementById('log');
+```js
+let log = document.getElementById('log');
 
 document.onclick = inputChange;
 
 function inputChange(e) {
   log.textContent = `Position: (${e.clientX}, ${e.clientY})`;
-}</pre>
+}
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Getting_the_coordinates_of_clicks")}}</p>
+{{EmbedLiveSample("Getting_the_coordinates_of_clicks")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Element/click_event", "click")}} event</li>
-  <li>Related event handlers
-    <ul>
-      <li>{{domxref("GlobalEventHandlers.onauxclick")}}</li>
-      <li>{{domxref("GlobalEventHandlers.ondblclick")}}</li>
-    </ul>
-  </li>
-</ul>
+- {{domxref("Element/click_event", "click")}} event
+- Related event handlers
+
+  - {{domxref("GlobalEventHandlers.onauxclick")}}
+  - {{domxref("GlobalEventHandlers.ondblclick")}}

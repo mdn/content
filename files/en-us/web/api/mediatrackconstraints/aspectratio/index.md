@@ -2,75 +2,73 @@
 title: MediaTrackConstraints.aspectRatio
 slug: Web/API/MediaTrackConstraints/aspectRatio
 tags:
-- API
-- Constraints
-- Media
-- Media Capture and Streams API
-- Media Streams API
-- MediaTrackConstraints
-- Property
-- Reference
-- WebRTC
-- aspectRatio
-- getusermedia
+  - API
+  - Constraints
+  - Media
+  - Media Capture and Streams API
+  - Media Streams API
+  - MediaTrackConstraints
+  - Property
+  - Reference
+  - WebRTC
+  - aspectRatio
+  - getusermedia
 browser-compat: api.MediaTrackConstraints.aspectRatio
 ---
-<div>{{APIRef("Media Capture and Streams")}}</div>
+{{APIRef("Media Capture and Streams")}}
 
-<p>The {{domxref("MediaTrackConstraints")}} dictionary's
-  <code><strong>aspectRatio</strong></code> property is a <a href="/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDouble"><code>ConstrainDouble</code></a>
-  describing the requested or mandatory constraints placed upon the value of the
-  {{domxref("MediaTrackSettings.aspectRatio", "aspectRatio")}} constrainable property.</p>
+The {{domxref("MediaTrackConstraints")}} dictionary's
+**`aspectRatio`** property is a [`ConstrainDouble`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDouble)
+describing the requested or mandatory constraints placed upon the value of the
+{{domxref("MediaTrackSettings.aspectRatio", "aspectRatio")}} constrainable property.
 
-<p>If needed, you can determine whether or not this constraint is supported by checking
-  the value of {{domxref("MediaTrackSupportedConstraints.aspectRatio")}} as returned by a
-  call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this
-  is unnecessary since browsers will ignore any constraints they're unfamiliar with.</p>
+If needed, you can determine whether or not this constraint is supported by checking
+the value of {{domxref("MediaTrackSupportedConstraints.aspectRatio")}} as returned by a
+call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this
+is unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>constraintsObject</em> = { aspectRatio: <em>constraint</em> };
+```js
+var constraintsObject = { aspectRatio: constraint };
 
-<em>constraintsObject</em>.aspectRatio = <em>constraint</em>;
-</pre>
+constraintsObject.aspectRatio = constraint;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A <a href="/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDouble"><code>ConstrainDouble</code></a> describing the acceptable or required value(s) for a
-  video track's aspect ratio. The value is the width divided by the height and is rounded
-  to ten decimal places. For example, the standard high-definition video aspect ratio of
-  16:9 can be computed as 1920/1080, or 1.7777777778.</p>
+A [`ConstrainDouble`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDouble) describing the acceptable or required value(s) for a
+video track's aspect ratio. The value is the width divided by the height and is rounded
+to ten decimal places. For example, the standard high-definition video aspect ratio of
+16:9 can be computed as 1920/1080, or 1.7777777778.
 
-<p>If this value is a number, the user agent will attempt to obtain media whose aspect
-  ratio is as close as possible to this number given the capabilities of the hardware and
-  the other constraints specified. Otherwise, the value of this
-  <a href="/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDouble"><code>ConstrainDouble</code></a> will guide the user agent in its efforts to provide an
-  exact match to the required aspect ratio (if <code>exact</code> is specified or both
-  <code>min</code> and <code>max</code> are provided and have the same value) or to a
-  best-possible value.</p>
+If this value is a number, the user agent will attempt to obtain media whose aspect
+ratio is as close as possible to this number given the capabilities of the hardware and
+the other constraints specified. Otherwise, the value of this
+[`ConstrainDouble`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDouble) will guide the user agent in its efforts to provide an
+exact match to the required aspect ratio (if `exact` is specified or both
+`min` and `max` are provided and have the same value) or to a
+best-possible value.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
-  Constraint exerciser")}} for an example.</p>
+See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
+  Constraint exerciser")}} for an example.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a>
-  </li>
-  <li><a href="/en-US/docs/Web/API/Media_Streams_API/Constraints">Capabilities,
-      constraints, and settings</a></li>
-  <li>{{domxref("MediaTrackConstraints")}}</li>
-  <li>{{domxref("MediaDevices.getSupportedConstraints()")}}</li>
-  <li>{{domxref("MediaTrackSupportedConstraints")}}</li>
-  <li>{{domxref("MediaStreamTrack")}}</li>
-</ul>
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- [Capabilities,
+  constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- {{domxref("MediaTrackConstraints")}}
+- {{domxref("MediaDevices.getSupportedConstraints()")}}
+- {{domxref("MediaTrackSupportedConstraints")}}
+- {{domxref("MediaStreamTrack")}}

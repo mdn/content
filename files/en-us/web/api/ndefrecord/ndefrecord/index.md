@@ -2,72 +2,71 @@
 title: NDEFRecord()
 slug: Web/API/NDEFRecord/NDEFRecord
 tags:
-- NDEF
-- Reference
-- Web NFC
+  - NDEF
+  - Reference
+  - Web NFC
 browser-compat: api.NDEFRecord.NDEFRecord
 ---
-<p>{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}</p>
+{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 
-<p>The <strong><code>NDEFRecord()</code></strong>
-    constructor of the <a href="/en-US/docs/Web/API/WebNFC_API">Web NFC API</a> returns a
-    newly constructed {{DOMxRef("NDEFRecord")}} object that represents data that can be
-    read from, or written to, compatible NFC devices; e.g. NFC tags supporting NDEF.
-</p>
+The **`NDEFRecord()`**
+constructor of the [Web NFC API](/en-US/docs/Web/API/WebNFC_API) returns a
+newly constructed {{DOMxRef("NDEFRecord")}} object that represents data that can be
+read from, or written to, compatible NFC devices; e.g. NFC tags supporting NDEF.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">writer = new NDEFRecord(options);
-</pre>
+```js
+writer = new NDEFRecord(options);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>options</code></dt>
-  <dd>An object with the following properties:
-    <dl>
-      <dt><code>data</code> {{optional_inline}}</dt>
-      <dd>Contains the data to be transmitted; one of a string, a {{domxref("BufferSource")}}, or an array of nested records.</dd>
-      <dt><code>encoding</code> {{optional_inline}}</dt>
-      <dd>A string specifying the record's encoding.</dd>
-      <dt><code>id</code> {{optional_inline}}</dt>
-      <dd>A developer-defined identifier for the record.</dd>
-      <dt><code>lang</code> {{optional_inline}}</dt>
-      <dd>A valid <a href="https://www.rfc-editor.org/info/bcp47">BCP47</a> language tag.</dd>
-      <dt><code>mediaType</code> {{optional_inline}}</dt>
-      <dd>A valid <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME type</a>.</dd>
-      <dt><code>recordType</code></dt>
-      <dd>A string indicating the type of data stored in <code>data</code>. It must be one of the following values:
-        <dl>
-          <dt><code>"absolute-url"</code></dt>
-          <dt>An absolute URL to the data.</dt>
-          <dt><code>"empty"</code></dt>
-          <dd>An empty {{domxref("NDEFRecord")}}.</dd>
-          <dt><code>"mime"</code></dt>
-          <dd>A valid <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME type</a>.</dd>
-          <dt><code>"smart-poster"</code></dt>
-          <dd>A smart poster as defined by the <a href="https://w3c.github.io/web-nfc/#bib-ndef-smartposter">NDEF-SMARTPOSTER</a> specification.</dd>
-          <dt><code>"text"</code></dt>
-          <dd>Text as defined by the <a href="https://w3c.github.io/web-nfc/#bib-ndef-text">NDEF-TEXT</a> specification.</dd>
-          <dt><code>"unknown"</code></dt>
-          <dd>The record type is not known.</dd>
-          <dt><code>"URL"</code></dt>
-          <dd>A URL as defined by the <a href="https://w3c.github.io/web-nfc/#bib-ndef-uri">NDEF-URI</a> specification.</dd>
-        </dl>
-      </dd>
-    </dl>
+- `options`
 
-  </dd>
-</dl>
+  - : An object with the following properties:
 
-<h3 id="Return_value">Return value</h3>
+    - `data` {{optional_inline}}
+      - : Contains the data to be transmitted; one of a string, a {{domxref("BufferSource")}}, or an array of nested records.
+    - `encoding` {{optional_inline}}
+      - : A string specifying the record's encoding.
+    - `id` {{optional_inline}}
+      - : A developer-defined identifier for the record.
+    - `lang` {{optional_inline}}
+      - : A valid [BCP47](https://www.rfc-editor.org/info/bcp47) language tag.
+    - `mediaType` {{optional_inline}}
+      - : A valid [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types).
+    - `recordType`
 
-<p>A new {{DOMxRef("NDEFRecord")}}.</p>
+      - : A string indicating the type of data stored in `data`. It must be one of the following values:
 
-<h2 id="Specifications">Specifications</h2>
+        - `"absolute-url"`
+
+          An absolute URL to the data.
+
+          `"empty"`
+
+          - : An empty {{domxref("NDEFRecord")}}.
+
+        - `"mime"`
+          - : A valid [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types).
+        - `"smart-poster"`
+          - : A smart poster as defined by the [NDEF-SMARTPOSTER](https://w3c.github.io/web-nfc/#bib-ndef-smartposter) specification.
+        - `"text"`
+          - : Text as defined by the [NDEF-TEXT](https://w3c.github.io/web-nfc/#bib-ndef-text) specification.
+        - `"unknown"`
+          - : The record type is not known.
+        - `"URL"`
+          - : A URL as defined by the [NDEF-URI](https://w3c.github.io/web-nfc/#bib-ndef-uri) specification.
+
+### Return value
+
+A new {{DOMxRef("NDEFRecord")}}.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

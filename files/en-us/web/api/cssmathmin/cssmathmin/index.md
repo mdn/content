@@ -2,51 +2,46 @@
 title: CSSMathMin()
 slug: Web/API/CSSMathMin/CSSMathMin
 tags:
-- API
-- CSS Typed Object Model API
-- CSSMathMin
-- CSSNumericValue
-- Constructor
-- Experimental
-- Houdini
+  - API
+  - CSS Typed Object Model API
+  - CSSMathMin
+  - CSSNumericValue
+  - Constructor
+  - Experimental
+  - Houdini
 browser-compat: api.CSSMathMin.CSSMathMin
 ---
-<div>{{draft}}{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}</div>
+{{draft}}{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
-<p>The <strong><code>CSSMathMin()</code></strong> constructor creates a
-  new {{domxref("CSSMathMin")}} object which represents the CSS
-  {{CSSXref('min()','min()')}} function.</p>
+The **`CSSMathMin()`** constructor creates a
+new {{domxref("CSSMathMin")}} object which represents the CSS
+{{CSSXref('min()','min()')}} function.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>CSSMathMin</var> = new CSSMathMin(<em>args</em>);</pre>
+```js
+var CSSMathMin = new CSSMathMin(args);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>args</dt>
-  <dd>A list of values for the {{domxref('CSSMathProduct')}} object to be either a double
-    integer or a {{domxref('CSSNumericValue')}}.</dd>
-</dl>
+- args
+  - : A list of values for the {{domxref('CSSMathProduct')}} object to be either a double
+    integer or a {{domxref('CSSNumericValue')}}.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt><a
-      href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError"><code>TypeError</code></a>
-  </dt>
-  <dd>Thrown if there is a <em>failure</em> when adding all of the values in args.</dd>
-</dl>
+- [`TypeError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError)
+  - : Thrown if there is a _failure_ when adding all of the values in args.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>To do</p>
+To do
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

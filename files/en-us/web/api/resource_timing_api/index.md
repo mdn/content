@@ -11,81 +11,72 @@ tags:
   - Timing
   - Web Performance
 ---
-<div>{{DefaultAPISidebar("Resource Timing API")}}</div>
+{{DefaultAPISidebar("Resource Timing API")}}
 
-<p>The <strong><code>Resource Timing</code></strong> interfaces enable retrieving and analyzing detailed network timing data regarding the loading of an application's <em>resource(s)</em>. An application can use the timing metrics to determine, for example, the length of time it takes to load a specific resource, such as an {{domxref("XMLHttpRequest")}}, {{SVGElement("SVG","SVG element")}}, image, or script.</p>
+The **`Resource Timing`** interfaces enable retrieving and analyzing detailed network timing data regarding the loading of an application's _resource(s)_. An application can use the timing metrics to determine, for example, the length of time it takes to load a specific resource, such as an {{domxref("XMLHttpRequest")}}, {{SVGElement("SVG","SVG element")}}, image, or script.
 
-<p>The interface's properties create a <em>resource loading timeline</em> with {{domxref("DOMHighResTimeStamp","high-resolution timestamps", "", 1)}} for network events such as redirect start and end times, DNS lookup start and end times, request start, response start and end times, etc. The interface also includes other properties that provide data about the size of the fetched resource as well as the <em>type</em> of resource that initiated the fetch.</p>
+The interface's properties create a _resource loading timeline_ with {{domxref("DOMHighResTimeStamp","high-resolution timestamps", "", 1)}} for network events such as redirect start and end times, DNS lookup start and end times, request start, response start and end times, etc. The interface also includes other properties that provide data about the size of the fetched resource as well as the _type_ of resource that initiated the fetch.
 
-<p>This document provides an overview of the <code>Resource Timing</code> interfaces. For more details about the interfaces including examples see each interface's reference page, <a href="/en-US/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API">Using the Resource Timing API</a>, and the references in the {{anch("See also")}} section. For a graphical representation of the resource timing processing model see the <a href="https://w3c.github.io/resource-timing/#process">resource timing phases</a> figure.</p>
+This document provides an overview of the `Resource Timing` interfaces. For more details about the interfaces including examples see each interface's reference page, [Using the Resource Timing API](/en-US/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API), and the references in the {{anch("See also")}} section. For a graphical representation of the resource timing processing model see the [resource timing phases](https://w3c.github.io/resource-timing/#process) figure.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<p>The <code>PerformanceResourceTiming</code> interface extends the {{domxref("PerformanceEntry")}} for {{domxref("PerformanceEntry","performance entries", "", 1)}} which have an {{domxref("PerformanceEntry.entryType","entryType")}} of "<code>resource</code>".</p>
+The `PerformanceResourceTiming` interface extends the {{domxref("PerformanceEntry")}} for {{domxref("PerformanceEntry","performance entries", "", 1)}} which have an {{domxref("PerformanceEntry.entryType","entryType")}} of "`resource`".
 
-<h2 id="High-resolution_timestamps">High-resolution timestamps</h2>
+## High-resolution timestamps
 
-<p>Several of the <code>Resource Timing</code> properties return <em>high-resolution timestamps</em>. These timestamps have a <code>{{domxref("DOMHighResTimeStamp")}}</code> type and as its name implies, they represent a high-resolution point in time. This type is a <code>double</code> and its value is a discrete point in time or the difference in time between two discrete points in time.</p>
+Several of the `Resource Timing` properties return _high-resolution timestamps_. These timestamps have a `{{domxref("DOMHighResTimeStamp")}}` type and as its name implies, they represent a high-resolution point in time. This type is a `double` and its value is a discrete point in time or the difference in time between two discrete points in time.
 
-<p>The unit of <code>DOMHighResTimeStamp</code> is milliseconds and should be accurate to 5 µs (microseconds). However, If the browser is unable to provide a time value accurate to 5 µs (because, for example, due to hardware or software constraints), the browser can represent a the value as a time in milliseconds accurate to a millisecond.</p>
+The unit of `DOMHighResTimeStamp` is milliseconds and should be accurate to 5 µs (microseconds). However, If the browser is unable to provide a time value accurate to 5 µs (because, for example, due to hardware or software constraints), the browser can represent a the value as a time in milliseconds accurate to a millisecond.
 
-<h2 id="Resource_loading_timestamps">Resource loading timestamps</h2>
+## Resource loading timestamps
 
-<p>An application can get timestamps for the various stages used to load a resource. The first property in the processing model is {{domxref("PerformanceEntry.startTime","startTime")}} which returns the timestamp immediately before the resource loading process begins. The {{domxref("PerformanceResourceTiming.fetchStart","fetchStart")}} timestamps follows and redirect processing (if applicable) and precedes DNS lookup. The next stages are {{domxref('PerformanceResourceTiming.connectStart','connectStart')}} and {{domxref('PerformanceResourceTiming.connectEnd','connectEnd')}} which are the timestamps immediately before and after connecting to the server, respectively. The last three timestamps are, in order: {{domxref('PerformanceResourceTiming.requestStart','requestStart')}} - the timestamp before the browser starts requesting the resource from the server; {{domxref('PerformanceResourceTiming.responseStart','responseStart')}} - the timestamp after the browser receives the first byte of the response from the server; and {{domxref('PerformanceResourceTiming.responseEnd','responseEnd')}} - the timestamp after the browser receives the last byte of the resource. If the resource is loaded via a secure connection a {{domxref('PerformanceResourceTiming.secureConnectionStart','secureConnectionStart')}} timestamp will be available between the connection start and end events.</p>
+An application can get timestamps for the various stages used to load a resource. The first property in the processing model is {{domxref("PerformanceEntry.startTime","startTime")}} which returns the timestamp immediately before the resource loading process begins. The {{domxref("PerformanceResourceTiming.fetchStart","fetchStart")}} timestamps follows and redirect processing (if applicable) and precedes DNS lookup. The next stages are {{domxref('PerformanceResourceTiming.connectStart','connectStart')}} and {{domxref('PerformanceResourceTiming.connectEnd','connectEnd')}} which are the timestamps immediately before and after connecting to the server, respectively. The last three timestamps are, in order: {{domxref('PerformanceResourceTiming.requestStart','requestStart')}} - the timestamp before the browser starts requesting the resource from the server; {{domxref('PerformanceResourceTiming.responseStart','responseStart')}} - the timestamp after the browser receives the first byte of the response from the server; and {{domxref('PerformanceResourceTiming.responseEnd','responseEnd')}} - the timestamp after the browser receives the last byte of the resource. If the resource is loaded via a secure connection a {{domxref('PerformanceResourceTiming.secureConnectionStart','secureConnectionStart')}} timestamp will be available between the connection start and end events.
 
-<div class="note">
-<p><strong>Note:</strong> When {{Glossary("CORS")}} is in effect, many of these values are returned as zero unless the server's access policy permits these values to be shared. This requires the server providing the resource to send the <code>Timing-Allow-Origin</code> HTTP response header with a value specifying the origin or origins which are allowed to get the restricted timestamp values.</p>
+> **Note:** When {{Glossary("CORS")}} is in effect, many of these values are returned as zero unless the server's access policy permits these values to be shared. This requires the server providing the resource to send the `Timing-Allow-Origin` HTTP response header with a value specifying the origin or origins which are allowed to get the restricted timestamp values.
+>
+> The properties which are returned as 0 by default when loading a resource from a domain other than the one of the web page itself: `redirectStart`, `redirectEnd`, `domainLookupStart`, `domainLookupEnd`, `connectStart`, `connectEnd`, `secureConnectionStart`, `requestStart`, and `responseStart`.
 
-<p>The properties which are returned as 0 by default when loading a resource from a domain other than the one of the web page itself: <code>redirectStart</code>, <code>redirectEnd</code>, <code>domainLookupStart</code>, <code>domainLookupEnd</code>, <code>connectStart</code>, <code>connectEnd</code>, <code>secureConnectionStart</code>, <code>requestStart</code>, and <code>responseStart</code>.</p>
-</div>
+The `{{domxref("PerformanceResourceTiming")}}` interface also includes several network timing properties. The {{domxref("PerformanceResourceTiming.redirectStart","redirectStart")}} and {{domxref("PerformanceResourceTiming.redirectEnd","redirectEnd")}} properties return {{domxref("DOMHighResTimeStamp","timestamps")}} for redirect start and end times, respectively. Likewise, the {{domxref("PerformanceResourceTiming.domainLookupStart","domainLookupStart")}} and {{domxref("PerformanceResourceTiming.domainLookupEnd","domainLookupEnd")}} properties return {{domxref("DOMHighResTimeStamp","timestamps")}} for DNS lookup start and end times, respectively.
 
-<p>The <code>{{domxref("PerformanceResourceTiming")}}</code> interface also includes several network timing properties. The {{domxref("PerformanceResourceTiming.redirectStart","redirectStart")}} and {{domxref("PerformanceResourceTiming.redirectEnd","redirectEnd")}} properties return {{domxref("DOMHighResTimeStamp","timestamps")}} for redirect start and end times, respectively. Likewise, the {{domxref("PerformanceResourceTiming.domainLookupStart","domainLookupStart")}} and {{domxref("PerformanceResourceTiming.domainLookupEnd","domainLookupEnd")}} properties return {{domxref("DOMHighResTimeStamp","timestamps")}} for DNS lookup start and end times, respectively.</p>
+_This would be a nice place to have a diagram showing the relationships between these segments of the resource loading time._
 
-<p><em>This would be a nice place to have a diagram showing the relationships between these segments of the resource loading time.</em></p>
+## Resource size
 
-<h2 id="Resource_size">Resource size</h2>
+The {{domxref("PerformanceResourceTiming")}} interface has three properties that can be used to obtain size data about a resource. The {{domxref('PerformanceResourceTiming.transferSize','transferSize')}} property returns the size (in octets) of the fetched resource including the response header fields plus the response payload body.
 
-<p>The {{domxref("PerformanceResourceTiming")}} interface has three properties that can be used to obtain size data about a resource. The {{domxref('PerformanceResourceTiming.transferSize','transferSize')}} property returns the size (in octets) of the fetched resource including the response header fields plus the response payload body.</p>
+The {{domxref('PerformanceResourceTiming.encodedBodySize','encodedBodySize')}} property returns the size (in octets) received from the fetch (HTTP or cache), of the _payload body_, **before** removing any applied content-codings. {{domxref('PerformanceResourceTiming.decodedBodySize','decodedBodySize')}} returns the size (in octets) received from the fetch (HTTP or cache) of the _message body_, **after** removing any applied content-codings.
 
-<p>The {{domxref('PerformanceResourceTiming.encodedBodySize','encodedBodySize')}} property returns the size (in octets) received from the fetch (HTTP or cache), of the <em>payload body</em>, <strong>before</strong> removing any applied content-codings. {{domxref('PerformanceResourceTiming.decodedBodySize','decodedBodySize')}} returns the size (in octets) received from the fetch (HTTP or cache) of the <em>message body</em>, <strong>after</strong> removing any applied content-codings.</p>
+## Other properties
 
-<h2 id="Other_properties">Other properties</h2>
+The {{domxref('PerformanceResourceTiming.nextHopProtocol','nextHopProtocol')}} property returns the _network protocol_ used to fetch the resource.
 
-<p>The {{domxref('PerformanceResourceTiming.nextHopProtocol','nextHopProtocol')}} property returns the <em>network protocol</em> used to fetch the resource.</p>
+The {{domxref('PerformanceResourceTiming.initiatorType','initiatorType')}} property returns the _type_ of resource that initiated the performance entry such as "`css`" for a CSS resource, "`xmlhttprequest`" for an XMLHttpRequest and "`img`" for an image (such as a JPEG).
 
-<p>The {{domxref('PerformanceResourceTiming.initiatorType','initiatorType')}} property returns the <em>type</em> of resource that initiated the performance entry such as "<code>css</code>" for a CSS resource, "<code>xmlhttprequest</code>" for an XMLHttpRequest and "<code>img</code>" for an image (such as a JPEG).</p>
+If the current context is a {{domxref("Worker","worker")}}, the {{domxref('PerformanceResourceTiming.workerStart','workerStart')}} property can be used to obtain a {{domxref("DOMHighResTimeStamp")}} when the worker was started.
 
-<p>If the current context is a {{domxref("Worker","worker")}}, the {{domxref('PerformanceResourceTiming.workerStart','workerStart')}} property can be used to obtain a {{domxref("DOMHighResTimeStamp")}} when the worker was started.</p>
+## Methods
 
-<h2 id="Methods">Methods</h2>
+The Resource Timing API includes two methods that extend the {{domxref("Performance")}} interface. The {{domxref("Performance.clearResourceTimings","clearResourceTimings()")}} method removes all "`resource`" type performance entries from the browser's _resource_ performance entry buffer. The {{domxref("Performance.setResourceTimingBufferSize","setResourceTimingBufferSize()")}} method sets the resource performance entry buffer size to the specified number of resource {{domxref("PerformanceEntry","performance entries")}}.
 
-<p>The Resource Timing API includes two methods that extend the {{domxref("Performance")}} interface. The {{domxref("Performance.clearResourceTimings","clearResourceTimings()")}} method removes all "<code>resource</code>" type performance entries from the browser's <em>resource</em> performance entry buffer. The {{domxref("Performance.setResourceTimingBufferSize","setResourceTimingBufferSize()")}} method sets the resource performance entry buffer size to the specified number of resource {{domxref("PerformanceEntry","performance entries")}}.</p>
+The {{domxref("PerformanceResourceTiming")}} interface's {{domxref("PerformanceResourceTiming.toJSON","toJSON()")}} method returns a JSON serialization of a "`resource`" type {{domxref("PerformanceEntry","performance entry")}}.
 
-<p>The {{domxref("PerformanceResourceTiming")}} interface's {{domxref("PerformanceResourceTiming.toJSON","toJSON()")}} method returns a JSON serialization of a "<code>resource</code>" type {{domxref("PerformanceEntry","performance entry")}}.</p>
+## Specifications
 
-<h2>Specifications</h2>
+| Specification                                             |
+| --------------------------------------------------------- |
+| [Resource Timing](https://w3c.github.io/resource-timing/) |
 
-<table>
-  <tr>
-    <th>Specification</th>
-  </tr>
-  <tr>
-    <td><a href="https://w3c.github.io/resource-timing/">Resource Timing</a></td>
-  </tr>
-</table>
+## Implementation status
 
-<h2 id="Implementation_status">Implementation status</h2>
+As shown in the {{domxref("PerformanceResourceTiming")}} interface's [Browser Compatibility](/en-US/docs/Web/API/PerformanceResourceTiming#browser_compatibility) table, most of these interfaces are broadly implemented by desktop browsers. However, note that some properties have little to no implementation so see each property's "Browser compatibility" section for more specific interoperability data.
 
-<p>As shown in the {{domxref("PerformanceResourceTiming")}} interface's <a href="/en-US/docs/Web/API/PerformanceResourceTiming#browser_compatibility">Browser Compatibility</a> table, most of these interfaces are broadly implemented by desktop browsers. However, note that some properties have little to no implementation so see each property's "Browser compatibility" section for more specific interoperability data.</p>
+To test your browser's support for these interfaces, run the [`perf-api-support`](https://mdn.github.io/dom-examples/performance-apis/perf-api-support.html) application.
 
-<p>To test your browser's support for these interfaces, run the <code><a href="https://mdn.github.io/dom-examples/performance-apis/perf-api-support.html">perf-api-support</a></code> application.</p>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="https://w3c.github.io/resource-timing/">Resource Timing Standard</a>; W3C Editor's Draft</li>
- <li><a href="https://caniuse.com/#search=resource-timing">CanIUse data</a></li>
- <li><a href="https://www.stevesouders.com/blog/2014/08/21/resource-timing-practical-tips/">Resource Timing practical tips</a>; Steve Souders; 2014 August 21</li>
- <li><a href="https://googledevelopers.blogspot.ca/2013/12/measuring-network-performance-with.html">Measuring network performance with Resource Timing API</a>; Ilya Grigorik; 2013 December 11</li>
- <li><a href="https://siusin.github.io/perf-timing-primer/">A Primer for Web Performance Timing APIs</a>; Xiaoqian Wu; W3C Editor's Draft</li>
-</ul>
+- [Resource Timing Standard](https://w3c.github.io/resource-timing/); W3C Editor's Draft
+- [CanIUse data](https://caniuse.com/#search=resource-timing)
+- [Resource Timing practical tips](https://www.stevesouders.com/blog/2014/08/21/resource-timing-practical-tips/); Steve Souders; 2014 August 21
+- [Measuring network performance with Resource Timing API](https://googledevelopers.blogspot.ca/2013/12/measuring-network-performance-with.html); Ilya Grigorik; 2013 December 11
+- [A Primer for Web Performance Timing APIs](https://siusin.github.io/perf-timing-primer/); Xiaoqian Wu; W3C Editor's Draft

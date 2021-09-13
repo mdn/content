@@ -11,56 +11,55 @@ tags:
   - Polyfill
 browser-compat: api.URLSearchParams
 ---
-<div>{{ApiRef("URL API")}}</div>
+{{ApiRef("URL API")}}
 
-<p>The <strong><code>URLSearchParams</code></strong> interface defines utility methods to work with the query string of a URL.</p>
+The **`URLSearchParams`** interface defines utility methods to work with the query string of a URL.
 
-<p>An object implementing <code>URLSearchParams</code> can directly be used in a {{jsxref("Statements/for...of", "for...of")}} structure, for example the following two lines are equivalent:</p>
+An object implementing `URLSearchParams` can directly be used in a {{jsxref("Statements/for...of", "for...of")}} structure, for example the following two lines are equivalent:
 
-<pre class="brush: js">for (const [key, value] of mySearchParams) {}
-for (const [key, value] of mySearchParams.entries()) {}</pre>
+```js
+for (const [key, value] of mySearchParams) {}
+for (const [key, value] of mySearchParams.entries()) {}
+```
 
-<p>{{availableinworkers}}</p>
+{{availableinworkers}}
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("URLSearchParams.URLSearchParams", 'URLSearchParams()')}}</dt>
- <dd>Returns a <code>URLSearchParams</code> object instance.</dd>
-</dl>
+- {{domxref("URLSearchParams.URLSearchParams", 'URLSearchParams()')}}
+  - : Returns a `URLSearchParams` object instance.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("URLSearchParams.append()")}}</dt>
- <dd>Appends a specified key/value pair as a new search parameter.</dd>
- <dt>{{domxref("URLSearchParams.delete()")}}</dt>
- <dd>Deletes the given search parameter, and its associated value, from the list of all search parameters.</dd>
- <dt>{{domxref("URLSearchParams.entries()")}}</dt>
- <dd>Returns an {{jsxref("Iteration_protocols","iterator")}} allowing iteration through all key/value pairs contained in this object.</dd>
- <dt>{{domxref("URLSearchParams.forEach()")}}</dt>
- <dd>Allows iteration through all values contained in this object via a callback function.</dd>
- <dt>{{domxref("URLSearchParams.get()")}}</dt>
- <dd>Returns the first value associated with the given search parameter.</dd>
- <dt>{{domxref("URLSearchParams.getAll()")}}</dt>
- <dd>Returns all the values associated with a given search parameter.</dd>
- <dt>{{domxref("URLSearchParams.has()")}}</dt>
- <dd>Returns a boolean value indicating if such a given parameter exists.</dd>
- <dt>{{domxref("URLSearchParams.keys()")}}</dt>
- <dd>Returns an {{jsxref("Iteration_protocols", "iterator")}} allowing iteration through all keys of the key/value pairs contained in this object.</dd>
- <dt>{{domxref("URLSearchParams.set()")}}</dt>
- <dd>Sets the value associated with a given search parameter to the given value. If there are several values, the others are deleted.</dd>
- <dt>{{domxref("URLSearchParams.sort()")}}</dt>
- <dd>Sorts all key/value pairs, if any, by their keys.</dd>
- <dt>{{domxref("URLSearchParams.toString()")}}</dt>
- <dd>Returns a string containing a query string suitable for use in a URL.</dd>
- <dt>{{domxref("URLSearchParams.values()")}}</dt>
- <dd>Returns an {{jsxref("Iteration_protocols", "iterator")}} allowing iteration through all values of the key/value pairs contained in this object.</dd>
-</dl>
+- {{domxref("URLSearchParams.append()")}}
+  - : Appends a specified key/value pair as a new search parameter.
+- {{domxref("URLSearchParams.delete()")}}
+  - : Deletes the given search parameter, and its associated value, from the list of all search parameters.
+- {{domxref("URLSearchParams.entries()")}}
+  - : Returns an {{jsxref("Iteration_protocols","iterator")}} allowing iteration through all key/value pairs contained in this object.
+- {{domxref("URLSearchParams.forEach()")}}
+  - : Allows iteration through all values contained in this object via a callback function.
+- {{domxref("URLSearchParams.get()")}}
+  - : Returns the first value associated with the given search parameter.
+- {{domxref("URLSearchParams.getAll()")}}
+  - : Returns all the values associated with a given search parameter.
+- {{domxref("URLSearchParams.has()")}}
+  - : Returns a boolean value indicating if such a given parameter exists.
+- {{domxref("URLSearchParams.keys()")}}
+  - : Returns an {{jsxref("Iteration_protocols", "iterator")}} allowing iteration through all keys of the key/value pairs contained in this object.
+- {{domxref("URLSearchParams.set()")}}
+  - : Sets the value associated with a given search parameter to the given value. If there are several values, the others are deleted.
+- {{domxref("URLSearchParams.sort()")}}
+  - : Sorts all key/value pairs, if any, by their keys.
+- {{domxref("URLSearchParams.toString()")}}
+  - : Returns a string containing a query string suitable for use in a URL.
+- {{domxref("URLSearchParams.values()")}}
+  - : Returns an {{jsxref("Iteration_protocols", "iterator")}} allowing iteration through all values of the key/value pairs contained in this object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">const paramsString = 'q=URLUtils.searchParams&amp;topic=api';
+```js
+const paramsString = 'q=URLUtils.searchParams&topic=api';
 let searchParams = new URLSearchParams(paramsString);
 
 //Iterate the search parameters.
@@ -73,36 +72,38 @@ searchParams.get('topic') === "api";     // true
 searchParams.getAll('topic');            // ["api"]
 searchParams.get('foo') === null;        // true
 searchParams.append('topic', 'webdev');
-searchParams.toString();                 // "q=URLUtils.searchParams&amp;topic=api&amp;topic=webdev"
+searchParams.toString();                 // "q=URLUtils.searchParams&topic=api&topic=webdev"
 searchParams.set('topic', 'More webdev');
-searchParams.toString();                 // "q=URLUtils.searchParams&amp;topic=More+webdev"
+searchParams.toString();                 // "q=URLUtils.searchParams&topic=More+webdev"
 searchParams.delete('topic');
 searchParams.toString();                 // "q=URLUtils.searchParams"
-</pre>
+```
 
-<pre class="brush: js">// Search parameters can also be an object
+```js
+// Search parameters can also be an object
 let paramsObj = {foo: 'bar', baz: 'bar'};
 let searchParams = new URLSearchParams(paramsObj);
 
 searchParams.toString();                 // "foo=bar&baz=bar"
 searchParams.has('foo');                 // true
 searchParams.get('foo');                 // bar
-</pre>
+```
 
-<pre class="brush: js">
+```js
 // Having duplicate parameters only returns the first value
 let paramStr = 'foo=bar&foo=baz';
 let searchParams = new URLSearchParams(paramStr);
 
 searchParams.toString();                 // "foo=bar&foo=baz"
 searchParams.has('foo');                 // true
-</pre>
+```
 
-<h3 id="Gotchas">Gotchas</h3>
+### Gotchas
 
-<p>The <code>URLSearchParams</code> constructor does <em>not</em> parse full URLs. However, it will strip an initial leading <code>?</code> off of a string, if present.</p>
+The `URLSearchParams` constructor does _not_ parse full URLs. However, it will strip an initial leading `?` off of a string, if present.
 
-<pre class="brush: js">const paramsString1 = 'http://example.com/search?query=%40';
+```js
+const paramsString1 = 'http://example.com/search?query=%40';
 const searchParams1 = new URLSearchParams(paramsString1);
 
 searchParams1.has('query'); // false
@@ -129,20 +130,18 @@ getBin.replace(/ /g, '+'); // "E+AXQB+A" is one solution
 // or use set to add the parameter, but this increases the query string length
 searchParams.set('bin2', base64) // "q=foo&bin=E+AXQB+A&bin2=E%2BAXQB%2BA" encodes + as %2B
 searchParams.get('bin2'); // "E+AXQB+A"
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>A polyfill of <code>URLSearchParams</code> is available in <a href="https://github.com/zloirock/core-js#url-and-urlsearchparams"><code>core-js</code></a></li>
- <li>The {{domxref("URL")}} interface.</li>
- <li><a href="https://developers.google.com/web/updates/2016/01/urlsearchparams?hl=en">Google Developers: Easy URL manipulation with URLSearchParams</a></li>
-</ul>
+- A polyfill of `URLSearchParams` is available in [`core-js`](https://github.com/zloirock/core-js#url-and-urlsearchparams)
+- The {{domxref("URL")}} interface.
+- [Google Developers: Easy URL manipulation with URLSearchParams](https://developers.google.com/web/updates/2016/01/urlsearchparams?hl=en)

@@ -10,48 +10,46 @@ tags:
   - knee
 browser-compat: api.DynamicsCompressorNode.knee
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>The <code>knee</code> property of the {{ domxref("DynamicsCompressorNode") }} interface is a <a href="/en-US/docs/Web/API/AudioParam#k-rate">k-rate</a> {{domxref("AudioParam")}} containing a decibel value representing the range above the threshold where the curve smoothly transitions to the compressed portion.</p>
+The `knee` property of the {{ domxref("DynamicsCompressorNode") }} interface is a [k-rate](/en-US/docs/Web/API/AudioParam#k-rate) {{domxref("AudioParam")}} containing a decibel value representing the range above the threshold where the curve smoothly transitions to the compressed portion.
 
-<p>The <code>knee</code> property's default value is <code>30</code> and it can be set between <code>0</code> and <code>40</code>.</p>
+The `knee` property's default value is `30` and it can be set between `0` and `40`.
 
-<p><img alt="Describes the effect of a knee, showing two curves one for a hard knee, the other for a soft knee." src="webaudioknee.png"></p>
-</div>
+![Describes the effect of a knee, showing two curves one for a hard knee, the other for a soft knee.](webaudioknee.png)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var audioCtx = new AudioContext();
+```js
+var audioCtx = new AudioContext();
 var compressor = audioCtx.createDynamicsCompressor();
-compressor.knee.value = 40;</pre>
+compressor.knee.value = 40;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("AudioParam")}}.</p>
+An {{domxref("AudioParam")}}.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Though the {{domxref("AudioParam")}} returned is read-only, the value it represents is not.</p>
-</div>
+> **Note:** Though the {{domxref("AudioParam")}} returned is read-only, the value it represents is not.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var audioCtx = new AudioContext();
+```js
+var audioCtx = new AudioContext();
 var compressor = audioCtx.createDynamicsCompressor();
-compressor.knee.value = 40;</pre>
+compressor.knee.value = 40;
+```
 
-<p>See <a href="/en-US/docs/Web/API/BaseAudioContext/createDynamicsCompressor#example"><code>BaseAudioContext.createDynamicsCompressor()</code></a> for more complete example code.</p>
+See [`BaseAudioContext.createDynamicsCompressor()`](/en-US/docs/Web/API/BaseAudioContext/createDynamicsCompressor#example) for more complete example code.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

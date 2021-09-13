@@ -2,70 +2,70 @@
 title: MediaStream.onremovetrack
 slug: Web/API/MediaStream/onremovetrack
 tags:
-- API
-- Event Handler
-- Media Streams API
-- MediaStream
-- Property
-- Reference
-- onremovetrack
+  - API
+  - Event Handler
+  - Media Streams API
+  - MediaStream
+  - Property
+  - Reference
+  - onremovetrack
 browser-compat: api.MediaStream.onremovetrack
 ---
-<p>{{APIRef("Media Streams API")}}</p>
+{{APIRef("Media Streams API")}}
 
-<p>The <strong><code>MediaStream.onremovetrack</code></strong>
-    property is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> which specifies a function to be called
-    when the {{event("removetrack")}} event occurs on a {{domxref("MediaStream")}}
-    instance. This happens when a track of any kind is removed from the media
-    stream.</p>
+The **`MediaStream.onremovetrack`**
+property is an [event handler](/en-US/docs/Web/Events/Event_handlers) which specifies a function to be called
+when the {{event("removetrack")}} event occurs on a {{domxref("MediaStream")}}
+instance. This happens when a track of any kind is removed from the media
+stream.
 
-<p>This event is fired when the browser removes a track from the stream
-  (such as when a {{domxref("RTCPeerConnection")}} is renegotiated or a stream being
-  captured using {{domxref("HTMLMediaElement.captureStream()")}} gets a new set of tracks
-  because the media element being captured loaded a new source.</p>
+This event is fired when the browser removes a track from the stream
+(such as when a {{domxref("RTCPeerConnection")}} is renegotiated or a stream being
+captured using {{domxref("HTMLMediaElement.captureStream()")}} gets a new set of tracks
+because the media element being captured loaded a new source.
 
-<p>The <code>removetrack</code> event does <em>not</em> get fired when JavaScript code
-  explicitly removes tracks from the stream (by calling
-  {{domxref("MediaStream.removeTrack", "removeTrack()")}}).</p>
+The `removetrack` event does _not_ get fired when JavaScript code
+explicitly removes tracks from the stream (by calling
+{{domxref("MediaStream.removeTrack", "removeTrack()")}}).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>MediaStream</em>.onremovetrack = <em>eventHandler</em>;
-</pre>
+```js
+MediaStream.onremovetrack = eventHandler;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>This should be set to a function which you provide that accepts as input a
-  {{domxref("MediaStreamTrackEvent")}} object representing the {{event("removetrack")}}
-  event which has occurred. The {{domxref("MediaStreamTrack")}} representing the track
-  which was removed is specified in the event's {{domxref("MediaStreamTrackEvent.track",
-  "track")}} property.</p>
+This should be set to a function which you provide that accepts as input a
+{{domxref("MediaStreamTrackEvent")}} object representing the {{event("removetrack")}}
+event which has occurred. The {{domxref("MediaStreamTrack")}} representing the track
+which was removed is specified in the event's {{domxref("MediaStreamTrackEvent.track",
+  "track")}} property.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example adds a listener which, when a track is removed from the stream, logs the
-  track that was removed.</p>
+This example adds a listener which, when a track is removed from the stream, logs the
+track that was removed.
 
-<pre class="brush: js">stream.onremovetrack = function(event) {
+```js
+stream.onremovetrack = function(event) {
   let trackList = document.getElementById("tracks");
   let label = document.createElement("li");
 
   label.textContent = `Removed: ${event.track.kind}: ${event.track.label}`;
   trackList.appendChild(label);
 };
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{event("removetrack")}} event and its type,
-    {{domxref("MediaStreamTrackEvent")}}.</li>
-</ul>
+- The {{event("removetrack")}} event and its type,
+  {{domxref("MediaStreamTrackEvent")}}.

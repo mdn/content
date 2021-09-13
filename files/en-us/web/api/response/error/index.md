@@ -11,55 +11,47 @@ tags:
   - Response
 browser-compat: api.Response.error
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p>The <strong><code>error()</code></strong> method of the {{domxref("Response")}}
-  interface returns a new <code>Response</code> object associated with a network error.
-</p>
+The **`error()`** method of the {{domxref("Response")}}
+interface returns a new `Response` object associated with a network error.
 
-<div class="note">
-  <p><strong>Note:</strong> This is mainly relevant to <a
-      href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorkers</a>; the error method is
-    used to return an error if you so wish it. An error response has its
-    {{domxref("Response.type","type")}} set to <code>error</code>.</p>
-</div>
+> **Note:** This is mainly relevant to [ServiceWorkers](/en-US/docs/Web/API/Service_Worker_API); the error method is
+> used to return an error if you so wish it. An error response has its
+> {{domxref("Response.type","type")}} set to `error`.
 
-<div class="note">
-  <p><strong>Note:</strong> An "error" <code>Response</code> never really gets exposed to
-    script: such a response to a {{domxref("fetch()")}} would reject
-    the promise.</p>
-</div>
+> **Note:** An "error" `Response` never really gets exposed to
+> script: such a response to a {{domxref("fetch()")}} would reject
+> the promise.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>errorResponse</em> = Response.error();</pre>
+```js
+var errorResponse = Response.error();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("Response")}} object.</p>
+A {{domxref("Response")}} object.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>TBD (does not yet appear to be supported anywhere).</p>
+TBD (does not yet appear to be supported anywhere).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
-  <li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a>
-  </li>
-  <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP](/en-US/docs/Web/HTTP)

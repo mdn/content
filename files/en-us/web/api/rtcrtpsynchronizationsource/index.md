@@ -13,31 +13,27 @@ tags:
   - WebRTC
 browser-compat: api.RTCRtpSynchronizationSource
 ---
-<div>{{APIRef("WebRTC API")}}</div>
+{{APIRef("WebRTC API")}}
 
-<p>The <strong><code>RTCRtpSynchronizationSource</code></strong> dictionary of the <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a> is used by {{domxref("RTCRtpReceiver.getSynchronizationSources", "getSynchronizationSources()")}} to describe a particular synchronization source (SSRC).</p>
+The **`RTCRtpSynchronizationSource`** dictionary of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) is used by {{domxref("RTCRtpReceiver.getSynchronizationSources", "getSynchronizationSources()")}} to describe a particular synchronization source (SSRC).
 
-<p>A synchronization source is a single source that shares timing and sequence number space. Since <code>RTCRtpSynchronizationSource</code> implements {{domxref("RTCRtpContributingSource")}}, its properties are also available.</p>
+A synchronization source is a single source that shares timing and sequence number space. Since `RTCRtpSynchronizationSource` implements {{domxref("RTCRtpContributingSource")}}, its properties are also available.
 
-<p>The information provided is based on the last ten seconds of media received.</p>
+The information provided is based on the last ten seconds of media received.
 
-<div class="note">
-<p><strong>Note:</strong> While the published specification describes this as an interface, it has since been changed to a dictionary in follow-up drafts.</p>
-</div>
+> **Note:** While the published specification describes this as an interface, it has since been changed to a dictionary in follow-up drafts.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Also implements the properties of {{domxref("RTCRtpContributingSource")}}.</em></p>
+_Also implements the properties of {{domxref("RTCRtpContributingSource")}}._
 
-<dl>
- <dt>{{domxref("RTCRtpSynchronizationSource.voiceActivityFlag", "voiceActivityFlag")}} {{optional_inline}}</dt>
- <dd>A Boolean value indicating whether or not voice activity is included in the last RTP packet played from the source. If the peer has indicated that it's not supporting voice activity detection, this field is not provided.</dd>
-</dl>
+- {{domxref("RTCRtpSynchronizationSource.voiceActivityFlag", "voiceActivityFlag")}} {{optional_inline}}
+  - : A Boolean value indicating whether or not voice activity is included in the last RTP packet played from the source. If the peer has indicated that it's not supporting voice activity detection, this field is not provided.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

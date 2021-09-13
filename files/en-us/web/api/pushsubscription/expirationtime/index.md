@@ -2,36 +2,37 @@
 title: PushSubscription.expirationTime
 slug: Web/API/PushSubscription/expirationTime
 tags:
-- API
-- Experimental
-- Property
-- Push API
-- PushManager
-- PushSubscription
-- Reference
-- Service Worker
+  - API
+  - Experimental
+  - Property
+  - Push API
+  - PushManager
+  - PushSubscription
+  - Reference
+  - Service Worker
 browser-compat: api.PushSubscription.expirationTime
 ---
-<p>{{SeeCompatTable}}{{APIRef("Push API")}}</p>
+{{SeeCompatTable}}{{APIRef("Push API")}}
 
-<p>The <strong><code>expirationTime</code></strong> read-only property of the
-  {{domxref("PushSubscription")}} interface returns a {{domxref("DOMHighResTimeStamp")}}
-  of the subscription expiration time associated with the push subscription, if there is
-  one, or null otherwise.</p>
+The **`expirationTime`** read-only property of the
+{{domxref("PushSubscription")}} interface returns a {{domxref("DOMHighResTimeStamp")}}
+of the subscription expiration time associated with the push subscription, if there is
+one, or null otherwise.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>expirationTime</em> = <em>pushSubscription.expirationTime</em></pre>
+```js
+var expirationTime = pushSubscription.expirationTime
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMHighResTimeStamp")}}.</p>
+A {{domxref("DOMHighResTimeStamp")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

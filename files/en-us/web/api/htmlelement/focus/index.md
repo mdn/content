@@ -13,130 +13,127 @@ tags:
   - activate
 browser-compat: api.HTMLElement.focus
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p>The <strong><code>HTMLElement.focus()</code></strong> method
-		sets focus on the specified element, if it can be focused. The focused element is
-		the element which will receive keyboard and similar events by default.</p>
+The **`HTMLElement.focus()`** method
+sets focus on the specified element, if it can be focused. The focused element is
+the element which will receive keyboard and similar events by default.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>element</em>.focus(<em>options</em>);</pre>
+```js
+element.focus(options);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-	<dt><code>options</code> {{optional_inline}}</dt>
-	<dd>
-    <p>An optional object providing options to control aspects of the focusing process.
-		This object may contain the following property:</p>
-		<dl>
-			<dt><code>preventScroll</code> {{optional_inline}}</dt>
-			<dd>A Boolean value indicating whether or not the browser should scroll the
-				document to bring the newly-focused element into view. A value of
-				<code>false</code> for <code>preventScroll</code> (the default) means that
-				the browser will scroll the element into view after focusing it. If
-				<code>preventScroll</code> is set to <code>true</code>, no scrolling will
-				occur.</dd>
-		</dl>
-	</dd>
-</dl>
+- `options` {{optional_inline}}
 
-<h2 id="Examples">Examples</h2>
+  - : An optional object providing options to control aspects of the focusing process.
+    This object may contain the following property:
 
-<h3 id="Focus_on_a_text_field">Focus on a text field</h3>
+    - `preventScroll` {{optional_inline}}
+      - : A Boolean value indicating whether or not the browser should scroll the
+        document to bring the newly-focused element into view. A value of
+        `false` for `preventScroll` (the default) means that
+        the browser will scroll the element into view after focusing it. If
+        `preventScroll` is set to `true`, no scrolling will
+        occur.
 
-<h4 id="JavaScript">JavaScript</h4>
+## Examples
 
-<pre class="brush: js">focusMethod = function getFocus() {
+### Focus on a text field
+
+#### JavaScript
+
+```js
+focusMethod = function getFocus() {
   document.getElementById("myTextField").focus();
-}</pre>
+}
+```
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;input type="text" id="myTextField" value="Text field."&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;button type="button" onclick="focusMethod()"&gt;Click me to focus on the text field!&lt;/button&gt;
-</pre>
+```html
+<input type="text" id="myTextField" value="Text field.">
+<p></p>
+<button type="button" onclick="focusMethod()">Click me to focus on the text field!</button>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Focus_on_a_text_field') }}</p>
+{{ EmbedLiveSample('Focus_on_a_text_field') }}
 
-<h3 id="Focus_on_a_button">Focus on a button</h3>
+### Focus on a button
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">focusMethod = function getFocus() {
+```js
+focusMethod = function getFocus() {
   document.getElementById("myButton").focus();
 }
-</pre>
+```
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;button type="button" id="myButton"&gt;Click Me!&lt;/button&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;button type="button" onclick="focusMethod()"&gt;Click me to focus on the button!&lt;/button&gt;
-</pre>
+```html
+<button type="button" id="myButton">Click Me!</button>
+<p></p>
+<button type="button" onclick="focusMethod()">Click me to focus on the button!</button>
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Focus_on_a_button') }}</p>
+{{ EmbedLiveSample('Focus_on_a_button') }}
 
-<h3 id="Focus_with_focusOption">Focus with focusOption</h3>
+### Focus with focusOption
 
-<h4 id="JavaScript_3">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">focusScrollMethod = function getFocus() {
+```js
+focusScrollMethod = function getFocus() {
   document.getElementById("myButton").focus({preventScroll:false});
 }
 focusNoScrollMethod = function getFocusWithoutScrolling() {
   document.getElementById("myButton").focus({preventScroll:true});
 }
+```
 
-</pre>
+#### HTML
 
-<h4 id="HTML_3">HTML</h4>
+```html
+<button type="button" onclick="focusScrollMethod()">Click me to focus on the button!</button>
+<button type="button" onclick="focusNoScrollMethod()">Click me to focus on the button without scrolling!</button>
 
-<pre class="brush: html">&lt;button type="button" onclick="focusScrollMethod()"&gt;Click me to focus on the button!&lt;/button&gt;
-&lt;button type="button" onclick="focusNoScrollMethod()"&gt;Click me to focus on the button without scrolling!&lt;/button&gt;
+<div id="container" style="height: 1000px; width: 1000px;">
+<button type="button" id="myButton" style="margin-top: 500px;">Click Me!</button>
+</div>
+```
 
-&lt;div id="container" style="height: 1000px; width: 1000px;"&gt;
-&lt;button type="button" id="myButton" style="margin-top: 500px;"&gt;Click Me!&lt;/button&gt;
-&lt;/div&gt;
+#### Result
 
-</pre>
+{{ EmbedLiveSample('Focus_with_focusOption') }}
 
-<h4 id="Result_3">Result</h4>
-
-<p>{{ EmbedLiveSample('Focus_with_focusOption') }}</p>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<ul>
-	<li>If you call <code>HTMLElement.focus()</code> from a mousedown event handler, you
-		must call <code>event.preventDefault()</code> to keep the focus from leaving the
-		<code>HTMLElement</code></li>
-	<li>
-		<p>Behavior of the focus in relation to different HTML features like
-			{{HTMLAttrxRef("tabindex")}} or {{Glossary("shadow tree","shadow dom", 1)}},
-			which previously remained under-specified, were recently updated (as October
-			of 2019). Checkout <a href="https://blog.whatwg.org/focusing-on-focus">WHATWG
-				blog</a> for more info.</p>
-	</li>
-</ul>
+- If you call `HTMLElement.focus()` from a mousedown event handler, you
+  must call `event.preventDefault()` to keep the focus from leaving the
+  `HTMLElement`
+- Behavior of the focus in relation to different HTML features like
+  {{HTMLAttrxRef("tabindex")}} or {{Glossary("shadow tree","shadow dom", 1)}},
+  which previously remained under-specified, were recently updated (as October
+  of 2019). Checkout [WHATWG
+  blog](https://blog.whatwg.org/focusing-on-focus) for more info.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{domxref("HTMLElement.blur")}} to remove the focus from an element.</li>
-	<li>{{domxref("document.activeElement")}} to know which is the currently focused element.</li>
-</ul>
+- {{domxref("HTMLElement.blur")}} to remove the focus from an element.
+- {{domxref("document.activeElement")}} to know which is the currently focused element.

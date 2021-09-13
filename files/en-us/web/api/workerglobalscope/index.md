@@ -9,134 +9,118 @@ tags:
   - Workers
 browser-compat: api.WorkerGlobalScope
 ---
-<p>{{APIRef("Web Workers API")}}</p>
+{{APIRef("Web Workers API")}}
 
-<p>The <code><strong>WorkerGlobalScope</strong></code> interface of the <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers API</a> is an interface representing the scope of any worker. Workers have no browsing context; this scope contains the information usually conveyed by {{domxref("Window")}} objects — in this case event handlers, the console or the associated {{domxref("WorkerNavigator")}} object. Each <code>WorkerGlobalScope</code> has its own event loop.</p>
+The **`WorkerGlobalScope`** interface of the [Web Workers API](/en-US/docs/Web/API/Web_Workers_API) is an interface representing the scope of any worker. Workers have no browsing context; this scope contains the information usually conveyed by {{domxref("Window")}} objects — in this case event handlers, the console or the associated {{domxref("WorkerNavigator")}} object. Each `WorkerGlobalScope` has its own event loop.
 
-<p>This interface is usually specialized by each worker type: {{domxref("DedicatedWorkerGlobalScope")}} for dedicated workers, {{domxref("SharedWorkerGlobalScope")}} for shared workers, and {{domxref("ServiceWorkerGlobalScope")}} for <a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker</a>. The <code>self</code> property returns the specialized scope for each context.</p>
+This interface is usually specialized by each worker type: {{domxref("DedicatedWorkerGlobalScope")}} for dedicated workers, {{domxref("SharedWorkerGlobalScope")}} for shared workers, and {{domxref("ServiceWorkerGlobalScope")}} for [ServiceWorker](/en-US/docs/Web/API/Service_Worker_API). The `self` property returns the specialized scope for each context.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface inherits properties from the {{domxref("EventTarget")}} interface and <code>WindowOrWorkerGlobalScope</code> and {{domxref("WindowEventHandlers")}} mixins.</em></p>
+_This interface inherits properties from the {{domxref("EventTarget")}} interface and `WindowOrWorkerGlobalScope` and {{domxref("WindowEventHandlers")}} mixins._
 
-<h3 id="Standard_properties">Standard properties</h3>
+### Standard properties
 
-<dl>
- <dt>{{domxref("WorkerGlobalScope.navigator")}} {{readOnlyinline}}</dt>
- <dd>Returns the {{domxref("WorkerNavigator")}} associated with the worker. It is a specific navigator object, mostly a subset of the {{domxref("Navigator")}} for browsing scopes, but adapted to workers.</dd>
- <dt>{{domxref("WorkerGlobalScope.self")}} {{readOnlyinline}}</dt>
- <dd>Returns a reference to the <code>WorkerGlobalScope</code> itself. Most of the time it is a specific scope like {{domxref("DedicatedWorkerGlobalScope")}},  {{domxref("SharedWorkerGlobalScope")}} or {{domxref("ServiceWorkerGlobalScope")}}.</dd>
- <dt>{{domxref("WorkerGlobalScope.location")}} {{readOnlyinline}}</dt>
- <dd>Returns the {{domxref("WorkerLocation")}} associated with the worker. It is a specific location object, mostly a subset of the {{domxref("Location")}} for browsing scopes, but adapted to workers.</dd>
-</dl>
+- {{domxref("WorkerGlobalScope.navigator")}} {{readOnlyinline}}
+  - : Returns the {{domxref("WorkerNavigator")}} associated with the worker. It is a specific navigator object, mostly a subset of the {{domxref("Navigator")}} for browsing scopes, but adapted to workers.
+- {{domxref("WorkerGlobalScope.self")}} {{readOnlyinline}}
+  - : Returns a reference to the `WorkerGlobalScope` itself. Most of the time it is a specific scope like {{domxref("DedicatedWorkerGlobalScope")}},  {{domxref("SharedWorkerGlobalScope")}} or {{domxref("ServiceWorkerGlobalScope")}}.
+- {{domxref("WorkerGlobalScope.location")}} {{readOnlyinline}}
+  - : Returns the {{domxref("WorkerLocation")}} associated with the worker. It is a specific location object, mostly a subset of the {{domxref("Location")}} for browsing scopes, but adapted to workers.
 
-<h3 id="Non-standard_properties">Non-standard properties</h3>
+### Non-standard properties
 
-<dl>
- <dt>{{domxref("WorkerGlobalScope.performance")}} {{readOnlyinline}} {{Non-standard_inline}}</dt>
- <dd>Returns the {{domxref("Performance")}} associated with the worker. It is a regular performance object, except that only a subset of its property and methods are available to workers.</dd>
- <dt>{{domxref("WorkerGlobalScope.console")}} {{readOnlyinline}} {{Non-standard_inline}}</dt>
- <dd>Returns the {{domxref("console")}} associated with the worker.</dd>
-</dl>
+- {{domxref("WorkerGlobalScope.performance")}} {{readOnlyinline}} {{Non-standard_inline}}
+  - : Returns the {{domxref("Performance")}} associated with the worker. It is a regular performance object, except that only a subset of its property and methods are available to workers.
+- {{domxref("WorkerGlobalScope.console")}} {{readOnlyinline}} {{Non-standard_inline}}
+  - : Returns the {{domxref("console")}} associated with the worker.
 
-<h3 id="Properties_implemented_from_elsewhere">Properties implemented from elsewhere</h3>
+### Properties implemented from elsewhere
 
-<dl>
- <dt>{{domxref("caches")}} {{readOnlyinline}}</dt>
- <dd>Returns the {{domxref("CacheStorage")}} object associated with the current context. This object enables functionality such as storing assets for offline use, and generating custom responses to requests.</dd>
- <dt>{{domxref("indexedDB")}} {{readonlyInline}}</dt>
- <dd>Provides a mechanism for applications to asynchronously access capabilities of indexed databases; returns an {{domxref("IDBFactory")}} object.</dd>
- <dt>{{domxref("isSecureContext")}} {{readOnlyinline}}</dt>
- <dd>Returns a boolean indicating whether the current context is secure (<code>true</code>) or not (<code>false</code>).</dd>
- <dt>{{domxref("origin")}} {{readOnlyinline}}</dt>
- <dd>Returns the global object's origin, serialized as a string. (This does not yet appear to be implemented in any browser.)</dd>
-</dl>
+- {{domxref("caches")}} {{readOnlyinline}}
+  - : Returns the {{domxref("CacheStorage")}} object associated with the current context. This object enables functionality such as storing assets for offline use, and generating custom responses to requests.
+- {{domxref("indexedDB")}} {{readonlyInline}}
+  - : Provides a mechanism for applications to asynchronously access capabilities of indexed databases; returns an {{domxref("IDBFactory")}} object.
+- {{domxref("isSecureContext")}} {{readOnlyinline}}
+  - : Returns a boolean indicating whether the current context is secure (`true`) or not (`false`).
+- {{domxref("origin")}} {{readOnlyinline}}
+  - : Returns the global object's origin, serialized as a string. (This does not yet appear to be implemented in any browser.)
 
-<h2 id="Events">Events</h2>
+## Events
 
-<dl>
- <dt><code>error</code></dt>
- <dd>Fired when an error occurred.<br>
- Also available via the {{domxref("WorkerGlobalScope.onerror")}} property.</dd>
- <dt><code>offline</code></dt>
- <dd>Fired when the browser has lost access to the network and the value of <code>navigator.onLine</code> switched to <code>false</code>.<br>
- Also available via the {{domxref("WorkerGlobalScope.onoffline")}} property.</dd>
- <dt><code>online</code></dt>
- <dd>Fired when the browser has gained access to the network and the value of <code>navigator.onLine</code> switched to <code>true</code>.<br>
- Also available via the {{domxref("WorkerGlobalScope.ononline")}} property.</dd>
- <dt><code><a href="/en-US/docs/Web/API/WorkerGlobalScope/languagechange_event">languagechange</a></code></dt>
- <dd>Fired at the global/worker scope object when the user's preferred languages change.<br>
- Also available via the {{domxref("WorkerGlobalScope.onlanguagechange")}} property.</dd>
- <dt><code>rejectionhandled</code> {{non-standard_inline}}</dt>
- <dd>An event handler for handled <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="The Promise object is used for deferred and asynchronous computations. A Promise represents an operation that hasn't completed yet, but is expected in the future."><code>Promise</code></a> rejection events.<br>
- Also available via the {{domxref("WorkerGlobalScope.onrejectionhandled")}} property.</dd>
- <dt><code>unhandledrejection</code> {{non-standard_inline}}</dt>
- <dd>An event handler for unhandled <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="The Promise object is used for deferred and asynchronous computations. A Promise represents an operation that hasn't completed yet, but is expected in the future."><code>Promise</code></a> rejection events.<br>
- Also available via the {{domxref("WorkerGlobalScope.onunhandledrejection")}} property.</dd>
-</dl>
+- `error`
+  - : Fired when an error occurred.
+    Also available via the {{domxref("WorkerGlobalScope.onerror")}} property.
+- `offline`
+  - : Fired when the browser has lost access to the network and the value of `navigator.onLine` switched to `false`.
+    Also available via the {{domxref("WorkerGlobalScope.onoffline")}} property.
+- `online`
+  - : Fired when the browser has gained access to the network and the value of `navigator.onLine` switched to `true`.
+    Also available via the {{domxref("WorkerGlobalScope.ononline")}} property.
+- [`languagechange`](/en-US/docs/Web/API/WorkerGlobalScope/languagechange_event)
+  - : Fired at the global/worker scope object when the user's preferred languages change.
+    Also available via the {{domxref("WorkerGlobalScope.onlanguagechange")}} property.
+- `rejectionhandled` {{non-standard_inline}}
+  - : An event handler for handled [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise "The Promise object is used for deferred and asynchronous computations. A Promise represents an operation that hasn't completed yet, but is expected in the future.") rejection events.
+    Also available via the {{domxref("WorkerGlobalScope.onrejectionhandled")}} property.
+- `unhandledrejection` {{non-standard_inline}}
+  - : An event handler for unhandled [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise "The Promise object is used for deferred and asynchronous computations. A Promise represents an operation that hasn't completed yet, but is expected in the future.") rejection events.
+    Also available via the {{domxref("WorkerGlobalScope.onunhandledrejection")}} property.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface inherits methods from the {{domxref("EventTarget")}} interface and <code>WindowOrWorkerGlobalScope</code> and {{domxref("WindowEventHandlers")}} mixins.</em></p>
+_This interface inherits methods from the {{domxref("EventTarget")}} interface and `WindowOrWorkerGlobalScope` and {{domxref("WindowEventHandlers")}} mixins._
 
-<h3 id="Standard_methods">Standard methods</h3>
+### Standard methods
 
-<dl>
- <dt>{{domxref("WorkerGlobalScope.importScripts()")}}</dt>
- <dd>Imports one or more scripts into the worker's scope. You can specify as many as you'd like, separated by commas. For example:<code> importScripts('foo.js', 'bar.js');</code></dd>
-</dl>
+- {{domxref("WorkerGlobalScope.importScripts()")}}
+  - : Imports one or more scripts into the worker's scope. You can specify as many as you'd like, separated by commas. For example:` importScripts('foo.js', 'bar.js');`
 
-<h3 id="Non-standard_methods">Non-standard methods</h3>
+### Non-standard methods
 
-<dl>
- <dt>{{domxref("WorkerGlobalScope.dump()")}} {{deprecated_inline}} {{non-standard_inline}}</dt>
- <dd>Allows you to write a message to stdout — i.e. in your terminal. This is the same as Firefox's {{domxref("window.dump")}}, but for workers.</dd>
-</dl>
+- {{domxref("WorkerGlobalScope.dump()")}} {{deprecated_inline}} {{non-standard_inline}}
+  - : Allows you to write a message to stdout — i.e. in your terminal. This is the same as Firefox's {{domxref("window.dump")}}, but for workers.
 
-<h3 id="Methods_implemented_from_elsewhere">Methods implemented from elsewhere</h3>
+### Methods implemented from elsewhere
 
-<dl>
- <dt>{{domxref("atob", "atob()")}}</dt>
- <dd>Decodes a string of data which has been encoded using base-64 encoding.</dd>
- <dt>{{domxref("btoa", "btoa()")}}</dt>
- <dd>Creates a base-64 encoded ASCII string from a string of binary data.</dd>
- <dt>{{domxref("clearInterval()")}}</dt>
- <dd>Cancels the repeated execution set using {{domxref("setInterval()")}}.</dd>
- <dt>{{domxref("clearTimeout()")}}</dt>
- <dd>Cancels the delayed execution set using {{domxref("setTimeout()")}}.</dd>
- <dt>{{domxref("createImageBitmap()")}}</dt>
- <dd>Accepts a variety of different image sources, and returns a {{jsxref("Promise")}} which resolves to an {{domxref("ImageBitmap")}}. Optionally the source is cropped to the rectangle of pixels originating at <em>(sx, sy)</em> with width sw, and height sh.</dd>
- <dt>{{domxref("fetch()")}}</dt>
- <dd>Starts the process of fetching a resource from the network.</dd>
- <dt>{{domxref("setInterval()")}}</dt>
- <dd>Schedules a function to execute every time a given number of milliseconds elapses.</dd>
- <dt>{{domxref("setTimeout()")}}</dt>
- <dd>Schedules a function to execute in a given amount of time.</dd>
-</dl>
+- {{domxref("atob", "atob()")}}
+  - : Decodes a string of data which has been encoded using base-64 encoding.
+- {{domxref("btoa", "btoa()")}}
+  - : Creates a base-64 encoded ASCII string from a string of binary data.
+- {{domxref("clearInterval()")}}
+  - : Cancels the repeated execution set using {{domxref("setInterval()")}}.
+- {{domxref("clearTimeout()")}}
+  - : Cancels the delayed execution set using {{domxref("setTimeout()")}}.
+- {{domxref("createImageBitmap()")}}
+  - : Accepts a variety of different image sources, and returns a {{jsxref("Promise")}} which resolves to an {{domxref("ImageBitmap")}}. Optionally the source is cropped to the rectangle of pixels originating at _(sx, sy)_ with width sw, and height sh.
+- {{domxref("fetch()")}}
+  - : Starts the process of fetching a resource from the network.
+- {{domxref("setInterval()")}}
+  - : Schedules a function to execute every time a given number of milliseconds elapses.
+- {{domxref("setTimeout()")}}
+  - : Schedules a function to execute in a given amount of time.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>You won't access <code>WorkerGlobalScope</code> directly in your code; however, its properties and methods are inherited by more specific global scopes such as {{domxref("DedicatedWorkerGlobalScope")}} and {{domxref("SharedWorkerGlobalScope")}}. For example, you could import another script into the worker and print out the contents of the worker scope's <code>navigator</code> object using the following two lines:</p>
+You won't access `WorkerGlobalScope` directly in your code; however, its properties and methods are inherited by more specific global scopes such as {{domxref("DedicatedWorkerGlobalScope")}} and {{domxref("SharedWorkerGlobalScope")}}. For example, you could import another script into the worker and print out the contents of the worker scope's `navigator` object using the following two lines:
 
-<pre class="brush: js">importScripts('foo.js');
-console.log(navigator);</pre>
+```js
+importScripts('foo.js');
+console.log(navigator);
+```
 
-<div class="note">
-<p><strong>Note:</strong> Since the global scope of the worker script is effectively the global scope of the worker you are running ({{domxref("DedicatedWorkerGlobalScope")}} or whatever) and all worker global scopes inherit methods, properties, etc. from <code>WorkerGlobalScope</code>, you can run lines such as those above without specifying a parent object.</p>
-</div>
+> **Note:** Since the global scope of the worker script is effectively the global scope of the worker you are running ({{domxref("DedicatedWorkerGlobalScope")}} or whatever) and all worker global scopes inherit methods, properties, etc. from `WorkerGlobalScope`, you can run lines such as those above without specifying a parent object.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Other global object interface: {{domxref("Window")}}, {{domxref("DedicatedWorkerGlobalScope")}}, {{domxref("SharedWorkerGlobalScope")}}, , {{domxref("ServiceWorkerGlobalScope")}}</li>
- <li>Other Worker-related interfaces: {{domxref("Worker")}}, {{domxref("WorkerLocation")}}, {{domxref("WorkerGlobalScope")}}, and {{domxref("ServiceWorkerGlobalScope")}}.</li>
- <li><a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web workers.</a></li>
-</ul>
+- Other global object interface: {{domxref("Window")}}, {{domxref("DedicatedWorkerGlobalScope")}}, {{domxref("SharedWorkerGlobalScope")}}, , {{domxref("ServiceWorkerGlobalScope")}}
+- Other Worker-related interfaces: {{domxref("Worker")}}, {{domxref("WorkerLocation")}}, {{domxref("WorkerGlobalScope")}}, and {{domxref("ServiceWorkerGlobalScope")}}.
+- [Using web workers.](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

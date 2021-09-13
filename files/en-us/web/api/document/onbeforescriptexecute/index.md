@@ -10,45 +10,43 @@ tags:
   - element.onbeforescriptexecute
 browser-compat: api.Document.onbeforescriptexecute
 ---
-<div>{{ApiRef("DOM")}} {{non-standard_header }}</div>
+{{ApiRef("DOM")}} {{non-standard_header }}
 
-<p>Fired when the code in a {{HTMLElement("script")}} element declared in an HTML
-  document is about to start executing. Does not fire if the element is added dynamically,
-  eg with appendChild().</p>
+Fired when the code in a {{HTMLElement("script")}} element declared in an HTML
+document is about to start executing. Does not fire if the element is added dynamically,
+eg with appendChild().
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>document.onbeforescriptexecute = funcRef;</em>
-</pre>
+```js
+document.onbeforescriptexecute = funcRef;
+```
 
-<p><em>funcRef</em> is a function reference, called when the event is fired. The event's
-  <code>target</code> attribute is set to the script {{domxref("Element")}} that is about
-  to be executed.</p>
+_funcRef_ is a function reference, called when the event is fired. The event's
+`target` attribute is set to the script {{domxref("Element")}} that is about
+to be executed.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">function starting(e) {
+```js
+function starting(e) {
   logMessage("Starting script with ID: " + e.target.id);
 }
 
 document.addEventListener("beforescriptexecute", starting, true);
-</pre>
+```
 
-<p><a href="https://media.prod.mdn.mozit.cloud/samples/html/currentScript.html">View Live Examples</a></p>
+[View Live Examples](https://media.prod.mdn.mozit.cloud/samples/html/currentScript.html)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<ul>
- <li><a href="https://www.whatwg.org/specs/web-apps/current-work/#the-script-element">HTML5</a></li>
-</ul>
+- [HTML5](https://www.whatwg.org/specs/web-apps/current-work/#the-script-element)
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Document.onafterscriptexecute")}}</li>
-  <li>{{domxref("Document.currentScript")}}</li>
-</ul>
+- {{domxref("Document.onafterscriptexecute")}}
+- {{domxref("Document.currentScript")}}

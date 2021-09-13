@@ -2,34 +2,35 @@
 title: Document.rootElement
 slug: Web/API/Document/rootElement
 tags:
-- API
-- DOM
-- Deprecated
-- Document
-- Property
-- Reference
-- SVG
-- root
+  - API
+  - DOM
+  - Deprecated
+  - Document
+  - Property
+  - Reference
+  - SVG
+  - root
 ---
-<div>{{ApiRef("DOM")}}{{Deprecated_header}}</div>
+{{ApiRef("DOM")}}{{Deprecated_header}}
 
-<p><strong><code>Document.rootElement</code></strong> returns the {{domxref("Element")}}
-  that is the root element of the {{domxref("document")}} if it is an
-  {{SVGElement("svg")}} element, otherwise <code>null</code>. It is deprecated in favor of
-  {{domxref("Document.documentElement")}}, which returns the root element for all
-  documents.</p>
+**`Document.rootElement`** returns the {{domxref("Element")}}
+that is the root element of the {{domxref("document")}} if it is an
+{{SVGElement("svg")}} element, otherwise `null`. It is deprecated in favor of
+{{domxref("Document.documentElement")}}, which returns the root element for all
+documents.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const <var>element</var> = document.rootElement
-</pre>
+```js
+const element = document.rootElement
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>If the document is a non-empty SVG document, then the <code>rootElement</code> will be
-  an {{domxref("SVGSVGElement")}}, identical to the <code>documentElement</code>.</p>
+If the document is a non-empty SVG document, then the `rootElement` will be
+an {{domxref("SVGSVGElement")}}, identical to the `documentElement`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
   <thead>

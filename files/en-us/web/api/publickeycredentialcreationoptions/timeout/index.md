@@ -2,43 +2,43 @@
 title: PublicKeyCredentialCreationOptions.timeout
 slug: Web/API/PublicKeyCredentialCreationOptions/timeout
 tags:
-- API
-- Property
-- PublicKeyCredentialCreationOptions
-- Reference
-- Web Authentication API
-- WebAuthn
+  - API
+  - Property
+  - PublicKeyCredentialCreationOptions
+  - Reference
+  - Web Authentication API
+  - WebAuthn
 browser-compat: api.PublicKeyCredentialCreationOptions.timeout
 ---
-<p>{{APIRef("Web Authentication API")}}{{securecontext_header}}</p>
+{{APIRef("Web Authentication API")}}{{securecontext_header}}
 
-<p>The <strong><code>timeout</code></strong> property, of the
-  {{domxref("PublicKeyCredentialCreationOptions")}} dictionary, represents an hint, given
-  in milliseconds, for the time the script is willing to wait for the completion of the
-  creation operation.</p>
+The **`timeout`** property, of the
+{{domxref("PublicKeyCredentialCreationOptions")}} dictionary, represents an hint, given
+in milliseconds, for the time the script is willing to wait for the completion of the
+creation operation.
 
-<p>This property is optional and merely is a <em>hint</em> which may be overridden by the
-  browser.</p>
+This property is optional and merely is a _hint_ which may be overridden by the
+browser.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> An analogous option exists for the fetching operation
-    ({{domxref("CredentialsContainer.get","navigators.credentials.get()")}}), see
-    {{domxref("PublicKeyCredentialRequestOptions.timeout")}}.</p>
-</div>
+> **Note:** An analogous option exists for the fetching operation
+> ({{domxref("CredentialsContainer.get","navigators.credentials.get()")}}), see
+> {{domxref("PublicKeyCredentialRequestOptions.timeout")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>timeout </em>= <em>publicKeyCredentialCreationOptions</em>.timeout</pre>
+```js
+timeout = publicKeyCredentialCreationOptions.timeout
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A numerical hint, expressed in milliseconds, giving the time to wait for the creation
-  operation to complete.</p>
+A numerical hint, expressed in milliseconds, giving the time to wait for the creation
+operation to complete.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var publicKey = {
+```js
+var publicKey = {
   timeout: 60000, // Accepting to wait for a minute before giving up.
   challenge: new Uint8Array(26) /* this actually is given from the server */,
   rp: {
@@ -65,19 +65,18 @@ navigator.credentials.create({ publicKey })
     // of the credential
   }).catch(function (err) {
      console.error(err);
-  });</pre>
+  });
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("PublicKeyCredentialRequestOptions.timeout")}}, the analogous option
-    property used when fetching a credential.</li>
-</ul>
+- {{domxref("PublicKeyCredentialRequestOptions.timeout")}}, the analogous option
+  property used when fetching a credential.

@@ -2,59 +2,57 @@
 title: HTMLCanvasElement.captureStream()
 slug: Web/API/HTMLCanvasElement/captureStream
 tags:
-- Canvas
-- Experimental
-- Frame Capture
-- HTMLCanvasElement
-- Interface
-- Media
-- Media Capture DOM Elements
-- Method
-- Reference
-- Web
-- captureStream
+  - Canvas
+  - Experimental
+  - Frame Capture
+  - HTMLCanvasElement
+  - Interface
+  - Media
+  - Media Capture DOM Elements
+  - Method
+  - Reference
+  - Web
+  - captureStream
 browser-compat: api.HTMLCanvasElement.captureStream
 ---
-<div>{{APIRef("Media Capture and Streams")}}</div>
+{{APIRef("Media Capture and Streams")}}
 
-<p>The {{domxref("HTMLCanvasElement")}}
-    <strong><code>captureStream()</code></strong> method returns a
-    {{domxref("MediaStream")}} which includes a
-    {{domxref("CanvasCaptureMediaStreamTrack")}} containing a real-time video capture of
-    the canvas's contents.</p>
+The {{domxref("HTMLCanvasElement")}}
+**`captureStream()`** method returns a
+{{domxref("MediaStream")}} which includes a
+{{domxref("CanvasCaptureMediaStreamTrack")}} containing a real-time video capture of
+the canvas's contents.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>MediaStream</var> = <var>canvas</var>.captureStream(<var>frameRate</var>);
-</pre>
+```js
+MediaStream = canvas.captureStream(frameRate);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>frameRate</code> {{optional_inline}}</dt>
-  <dd>A double-precision floating-point value that indicates the rate of capture of each
+- `frameRate` {{optional_inline}}
+  - : A double-precision floating-point value that indicates the rate of capture of each
     frame. If not set, a new frame will be captured each time the canvas changes; if set
-    to <code>0</code>, frames will not be captured automatically; instead, they will only
+    to `0`, frames will not be captured automatically; instead, they will only
     be captured when the returned track's
     {{domxref("CanvasCaptureMediaStreamTrack.requestFrame", "requestFrame()")}} method is
-    called.</dd>
-</dl>
+    called.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A reference to a {{domxref("MediaStream")}} object, which has a single
-  {{domxref("CanvasCaptureMediaStreamTrack")}} in it.</p>
+A reference to a {{domxref("MediaStream")}} object, which has a single
+{{domxref("CanvasCaptureMediaStreamTrack")}} in it.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt><code>NotSupportedError</code></dt>
-  <dd>The value of <code>frameRate</code> is negative.</dd>
-</dl>
+- `NotSupportedError`
+  - : The value of `frameRate` is negative.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">// Find the canvas element to capture
+```js
+// Find the canvas element to capture
 var canvasElt = document.querySelector('canvas');
 
 // Get the stream
@@ -64,21 +62,19 @@ var stream = canvasElt.captureStream(25); // 25 FPS
 // E.g. Send it to another computer using an RTCPeerConnection
 //      pc is an RTCPeerConnection created elsewhere
 pc.addStream(stream);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("HTMLMediaElement.captureStream()")}}, which allows capturing a stream
-    from a media element.</li>
-  <li>{{domxref("MediaStream")}}</li>
-  <li>{{domxref("Media Capture and Streams API")}}</li>
-</ul>
+- {{domxref("HTMLMediaElement.captureStream()")}}, which allows capturing a stream
+  from a media element.
+- {{domxref("MediaStream")}}
+- {{domxref("Media Capture and Streams API")}}

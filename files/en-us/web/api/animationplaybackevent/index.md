@@ -13,39 +13,33 @@ tags:
   - web animations api
 browser-compat: api.AnimationPlaybackEvent
 ---
-<p>{{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}</p>
+{{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}
 
-<p>The AnimationPlaybackEvent interface of the <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> represents animation events.</p>
+The AnimationPlaybackEvent interface of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) represents animation events.
 
-<p>As animations play, they report changes to their {{domxref("Animation.playState", "playState")}} through animation events.</p>
+As animations play, they report changes to their {{domxref("Animation.playState", "playState")}} through animation events.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("AnimationPlaybackEvent.AnimationPlaybackEvent()")}}</dt>
- <dd>Constructs a new <code>AnimationPlaybackEvent</code> object instance.</dd>
-</dl>
+- {{domxref("AnimationPlaybackEvent.AnimationPlaybackEvent()")}}
+  - : Constructs a new `AnimationPlaybackEvent` object instance.
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<dl>
- <dt>{{domxref("AnimationPlaybackEvent.currentTime")}}</dt>
- <dd>The current time of the animation that generated the event.</dd>
- <dt>{{domxref("AnimationPlaybackEvent.timelineTime")}}</dt>
- <dd>The time value of the timeline of the animation that generated the event.</dd>
-</dl>
+- {{domxref("AnimationPlaybackEvent.currentTime")}}
+  - : The current time of the animation that generated the event.
+- {{domxref("AnimationPlaybackEvent.timelineTime")}}
+  - : The time value of the timeline of the animation that generated the event.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
- <li>{{domxref("Animation.playState")}}</li>
-</ul>
+- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
+- {{domxref("Animation.playState")}}

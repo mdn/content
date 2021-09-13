@@ -2,37 +2,37 @@
 title: USBConfiguration.configurationValue
 slug: Web/API/USBConfiguration/configurationValue
 tags:
-- API
-- Property
-- Reference
-- USB
-- USBConfiguration
-- WebUSB
-- WebUSB API
-- configurationValue
+  - API
+  - Property
+  - Reference
+  - USB
+  - USBConfiguration
+  - WebUSB
+  - WebUSB API
+  - configurationValue
 browser-compat: api.USBConfiguration.configurationValue
 ---
-<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("WebUSB API")}}</div>
+{{draft}}{{securecontext_header}}{{DefaultAPISidebar("WebUSB API")}}
 
-<p>The <strong><code>configurationValue</code></strong> read-only property
-  of the {{domxref("USBConfiguration")}} interface null</p>
+The **`configurationValue`** read-only property
+of the {{domxref("USBConfiguration")}} interface null
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>value</var> = USBConfiguration.configurationValue</pre>
+```js
+var value = USBConfiguration.configurationValue
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>The <a
-    href="https://www.beyondlogic.org/usbnutshell/usb5.shtml#ConfigurationDescriptors">configuration
-    descriptor</a> of the {{domxref("USBDevice")}} specified in the constructor of the
-  current {{domxref("USBConfiguration")}} instance.</p>
+The [configuration
+descriptor](https://www.beyondlogic.org/usbnutshell/usb5.shtml#ConfigurationDescriptors) of the {{domxref("USBDevice")}} specified in the constructor of the
+current {{domxref("USBConfiguration")}} instance.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

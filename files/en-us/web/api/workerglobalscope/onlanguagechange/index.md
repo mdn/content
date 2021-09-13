@@ -10,30 +10,32 @@ tags:
   - onlanguagechange
 browser-compat: api.WorkerGlobalScope.onlanguagechange
 ---
-<p>{{APIRef("Web Workers API")}}</p>
+{{APIRef("Web Workers API")}}
 
-<p>The <strong><code>onlanguagechange</code></strong> property of the {{domxref("WorkerGlobalScope")}} interface represents an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> to be called when the {{event("languagechange")}} event occurs.</p>
+The **`onlanguagechange`** property of the {{domxref("WorkerGlobalScope")}} interface represents an [event handler](/en-US/docs/Web/Events/Event_handlers) to be called when the {{event("languagechange")}} event occurs.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre>self.onlanguagechange = function() { ... };</pre>
+    self.onlanguagechange = function() { ... };
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following code snippet shows an <code>onlanguagechange</code> handler set inside a worker:</p>
+The following code snippet shows an `onlanguagechange` handler set inside a worker:
 
-<pre class="brush: js">self.onlanguagechange = function() {
+```js
+self.onlanguagechange = function() {
   console.log('Your preferred language settings have been changed');
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<p>The {{domxref("WorkerGlobalScope")}} interface it belongs to.</p>
+The {{domxref("WorkerGlobalScope")}} interface it belongs to.

@@ -12,35 +12,32 @@ tags:
   - Video
 browser-compat: api.MediaSession
 ---
-<p>{{SeeCompatTable}}{{APIRef("Media Session API")}}</p>
+{{SeeCompatTable}}{{APIRef("Media Session API")}}
 
-<p>The <strong><code>MediaSession</code></strong> interface of the <a href="/en-US/docs/Web/API/Media_Session_API">Media Session API</a> allows a web page to provide custom behaviors for standard media playback interactions, and to report metadata that can be sent by the user agent to the device or operating system for presentation in standardized user interface elements.</p>
+The **`MediaSession`** interface of the [Media Session API](/en-US/docs/Web/API/Media_Session_API) allows a web page to provide custom behaviors for standard media playback interactions, and to report metadata that can be sent by the user agent to the device or operating system for presentation in standardized user interface elements.
 
-<p>For example, a smartphone might have a standard panel in its lock screen that provides controls for media playback and information display. A browser on the device can use <code>MediaSession</code> to make browser playback controllable from that standard/global user interface.</p>
+For example, a smartphone might have a standard panel in its lock screen that provides controls for media playback and information display. A browser on the device can use `MediaSession` to make browser playback controllable from that standard/global user interface.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("MediaSession.metadata", "metadata")}}</dt>
- <dd>Returns an instance of {{domxref("MediaMetadata")}}, which contains rich media metadata for display in a platform UI.</dd>
- <dt>{{domxref("MediaSession.playbackState", "playbackState")}}</dt>
- <dd>Indicates whether the current media session is playing. Valid values are <code>none</code>, <code>paused</code>, or <code>playing</code>.</dd>
-</dl>
+- {{domxref("MediaSession.metadata", "metadata")}}
+  - : Returns an instance of {{domxref("MediaMetadata")}}, which contains rich media metadata for display in a platform UI.
+- {{domxref("MediaSession.playbackState", "playbackState")}}
+  - : Indicates whether the current media session is playing. Valid values are `none`, `paused`, or `playing`.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("MediaSession.setActionHandler", "setActionHandler()")}}</dt>
- <dd>Sets an action handler for a <a href="/en-US/docs/Web/API/MediaSessionAction">media session action</a>, such as play or pause.</dd>
- <dt>{{domxref("MediaSession.setPositionState", "setPositionState()")}}</dt>
- <dd>Sets the current playback position and speed of the media currently being presented.</dd>
-</dl>
+- {{domxref("MediaSession.setActionHandler", "setActionHandler()")}}
+  - : Sets an action handler for a [media session action](/en-US/docs/Web/API/MediaSessionAction), such as play or pause.
+- {{domxref("MediaSession.setPositionState", "setPositionState()")}}
+  - : Sets the current playback position and speed of the media currently being presented.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example creates a new media session and assigns action handlers to it:</p>
+The following example creates a new media session and assigns action handlers to it:
 
-<pre class="brush: js">if ('mediaSession' in navigator) {
+```js
+if ('mediaSession' in navigator) {
   navigator.mediaSession.metadata = new MediaMetadata({
     title: 'Unforgettable',
     artist: 'Nat King Cole',
@@ -64,11 +61,13 @@ browser-compat: api.MediaSession
   navigator.mediaSession.setActionHandler('previoustrack', function() { /* Code excerpted. */ });
   navigator.mediaSession.setActionHandler('nexttrack', function() { /* Code excerpted. */ });
   navigator.mediaSession.setActionHandler('skipad', function() { /* Code excerpted. */ });
-}</pre>
+}
+```
 
-<p>The following example sets up two functions for playing and pausing, then uses them as callbacks with the relevant action handlers.</p>
+The following example sets up two functions for playing and pausing, then uses them as callbacks with the relevant action handlers.
 
-<pre class="brush: js">const actionHandlers = [
+```js
+const actionHandlers = [
   // play
   [
     'play',
@@ -83,7 +82,7 @@ browser-compat: api.MediaSession
   ],
   [
     'pause',
-    () =&gt; {
+    () => {
       // pause out audio
       audioEl.pause();
       // set playback state
@@ -100,12 +99,13 @@ for (const [action, handler] of actionHandlers) {
   } catch (error) {
     console.log(`The media session action "${action}" is not supported yet.`);
   }
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

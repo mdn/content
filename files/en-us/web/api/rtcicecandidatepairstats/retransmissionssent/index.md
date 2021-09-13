@@ -3,39 +3,37 @@ title: RTCIceCandidatePairStats.retransmissionsSent
 slug: Web/API/RTCIceCandidatePairStats/retransmissionsSent
 browser-compat: api.RTCIceCandidatePairStats.retransmissionsSent
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The {{domxref("RTCIceCandidatePairStats")}} dictionary's
-        <strong><code>retransmissionsSent</code></strong> property indicates the total
-        number of {{Glossary("STUN")}} connectivity check request retransmissions that
-        have been sent so far on the pair of candidates.</p>
+The {{domxref("RTCIceCandidatePairStats")}} dictionary's
+**`retransmissionsSent`** property indicates the total
+number of {{Glossary("STUN")}} connectivity check request retransmissions that
+have been sent so far on the pair of candidates.
 
-<p>The number of retransmissions that have been received on the connection can be found in
-    {{domxref("RTCIceCandidatePairStats.retransmissionsReceived",
-    "retransmissionsReceived")}}.</p>
+The number of retransmissions that have been received on the connection can be found in
+{{domxref("RTCIceCandidatePairStats.retransmissionsReceived",
+    "retransmissionsReceived")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-    class="brush: js"><em>retransmissionsSent</em> = <em>rtcIceCandidatePairStats</em>.retransmissionsSent;</pre>
+```js
+retransmissionsSent = rtcIceCandidatePairStats.retransmissionsSent;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An integer value indicating the total number of retransmitted STUN connectivity check
-    requests have been sent on the connection referenced by this candidate pair so far.
-</p>
+An integer value indicating the total number of retransmitted STUN connectivity check
+requests have been sent on the connection referenced by this candidate pair so far.
 
-<div class="notecard note">
-    <p><strong>Note:</strong> Retransmissions are connectivity check requests with a
-        <code>TRANSACTION_TRANSMIT_COUNTER</code> attribute whose <code>req</code> field
-        is greater than 1 (indicating that the request has been transmitted more than
-        once). See {{RFC(7982)}} for further details.</p>
-</div>
+> **Note:** Retransmissions are connectivity check requests with a
+> `TRANSACTION_TRANSMIT_COUNTER` attribute whose `req` field
+> is greater than 1 (indicating that the request has been transmitted more than
+> once). See {{RFC(7982)}} for further details.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

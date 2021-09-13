@@ -7,28 +7,24 @@ tags:
   - Web NFC
 browser-compat: api.NDEFMessage
 ---
-<p>{{Draft}}{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}</p>
+{{Draft}}{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 
-<p>The <strong><code>NDEFMessage</code></strong> interface of the <a href="/en-US/docs/Web/API/Web_NFC_API">Web NFC API</a> represents the content of an NDEF message that has been read from or could be written to an NFC tag. An instance is acquired by calling the <code>NDEFMessage()</code> constructor or from the {{domxref("NDEFReadingEvent.message")}} property, which is passed to {{domxref("NDEFReader.onreading")}}.</p>
+The **`NDEFMessage`** interface of the [Web NFC API](/en-US/docs/Web/API/Web_NFC_API) represents the content of an NDEF message that has been read from or could be written to an NFC tag. An instance is acquired by calling the `NDEFMessage()` constructor or from the {{domxref("NDEFReadingEvent.message")}} property, which is passed to {{domxref("NDEFReader.onreading")}}.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{DOMxRef("NDEFMessage.NDEFMessage", "NDEFMessage()")}}</dt>
- <dd>Creates a new <code>NDEFMessage</code> object, initialized with the given NDEF records.</dd>
-</dl>
+- {{DOMxRef("NDEFMessage.NDEFMessage", "NDEFMessage()")}}
+  - : Creates a new `NDEFMessage` object, initialized with the given NDEF records.
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<dl>
- <dt>{{DOMxRef("NDEFMessage.records")}}{{ReadOnlyInline}}</dt>
- <dd>Returns the list of NDEF records contained in the message.</dd>
-</dl>
+- {{DOMxRef("NDEFMessage.records")}}{{ReadOnlyInline}}
+  - : Returns the list of NDEF records contained in the message.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

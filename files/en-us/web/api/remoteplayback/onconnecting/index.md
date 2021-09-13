@@ -9,29 +9,31 @@ tags:
   - RemotePlayback
 browser-compat: api.RemotePlayback.onconnecting
 ---
-<div>{{DefaultAPISidebar("Remote Playback API")}}</div>
+{{DefaultAPISidebar("Remote Playback API")}}
 
-<p>The <strong><code>onconnecting</code></strong> event handler of the {{domxref("RemotePlayback")}} interface processes the events fired when the user agent initiates remote playback.</p>
+The **`onconnecting`** event handler of the {{domxref("RemotePlayback")}} interface processes the events fired when the user agent initiates remote playback.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">RemotePlayback.onconnecting = function;
-RemotePlayback.addEventListener('<em>connecting</em>', function);</pre>
+```js
+RemotePlayback.onconnecting = function;
+RemotePlayback.addEventListener('connecting', function);
+```
 
-<h2>Example</h2>
+## Example
 
-<p>In the following example the value of {{domxref("RemotePlayback.state")}} is printed to the console when the user agent initiates a connection.</p>
+In the following example the value of {{domxref("RemotePlayback.state")}} is printed to the console when the user agent initiates a connection.
 
-<pre class="brush: js">RemotePlayback.onconnecting = function() {
+```js
+RemotePlayback.onconnecting = function() {
   console.log(RemotePlayback.state);
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
-
+{{Compat}}

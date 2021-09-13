@@ -2,47 +2,46 @@
 title: PublicKeyCredentialRequestOptions.rpId
 slug: Web/API/PublicKeyCredentialRequestOptions/rpId
 tags:
-- API
-- Property
-- PublicKeyCredentialRequestOptions
-- Reference
-- Web Authentication API
-- WebAuthn
+  - API
+  - Property
+  - PublicKeyCredentialRequestOptions
+  - Reference
+  - Web Authentication API
+  - WebAuthn
 browser-compat: api.PublicKeyCredentialRequestOptions.rpId
 ---
-<p>{{APIRef("Web Authentication API")}}{{securecontext_header}}</p>
+{{APIRef("Web Authentication API")}}{{securecontext_header}}
 
-<p>The <strong><code>rpId</code></strong> property, of the
-  {{domxref("PublicKeyCredentialRequestOptions")}} dictionary, is an optional property
-  which indicates the relying party's identifier as a {{domxref("USVString")}}. Its value
-  can only be a suffix of the current origin's domain. For example, if you are browsing on
-  <code>foo.example.com</code>, the <code>rpId</code> value may be
-  <code>"example.com"</code> but not <code>"bar.org"</code> or
-  <code>"baz.example.com"</code>.</p>
+The **`rpId`** property, of the
+{{domxref("PublicKeyCredentialRequestOptions")}} dictionary, is an optional property
+which indicates the relying party's identifier as a {{domxref("USVString")}}. Its value
+can only be a suffix of the current origin's domain. For example, if you are browsing on
+`foo.example.com`, the `rpId` value may be
+`"example.com"` but not `"bar.org"` or
+`"baz.example.com"`.
 
-<p>This property is optional. If it is not explicitly provided, the user agent will use
-  the value of the current origin's domain.</p>
+This property is optional. If it is not explicitly provided, the user agent will use
+the value of the current origin's domain.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> An analogous option exists for the creation operation
-    ({{domxref("CredentialsContainer.create","navigators.credentials.create()")}}), see
-    the <code>id</code> property of {{domxref("PublicKeyCredentialCreationOptions.rp")}}.
-  </p>
-</div>
+> **Note:** An analogous option exists for the creation operation
+> ({{domxref("CredentialsContainer.create","navigators.credentials.create()")}}), see
+> the `id` property of {{domxref("PublicKeyCredentialCreationOptions.rp")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>rpId </em>= <em>publicKeyCredentialRequestOptions</em>.rpId</pre>
+```js
+rpId = publicKeyCredentialRequestOptions.rpId
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("USVString")}} for the identifier of the relying party. Its value can only
-  be a suffix of the current origin's domain.</p>
+A {{domxref("USVString")}} for the identifier of the relying party. Its value can only
+be a suffix of the current origin's domain.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var options = {
+```js
+var options = {
   challenge: new Uint8Array([/* bytes sent from the server */]),
   rpId: "example.com" // will only work if the current domain
                       // is something like foo.example.com
@@ -55,19 +54,17 @@ navigator.credentials.get({ "publicKey": options })
 }).catch(function (err) {
      console.error(err);
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("PublicKeyCredentialCreationOptions.rp")}} which represents the relying
-    party (including its ID) for the creation operation</li>
-</ul>
+- {{domxref("PublicKeyCredentialCreationOptions.rp")}} which represents the relying
+  party (including its ID) for the creation operation

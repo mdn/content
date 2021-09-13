@@ -2,50 +2,50 @@
 title: PublicKeyCredentialCreationOptions.user
 slug: Web/API/PublicKeyCredentialCreationOptions/user
 tags:
-- API
-- Property
-- PublicKeyCredentialCreationOptions
-- Reference
-- Web Authentication API
-- WebAuthn
+  - API
+  - Property
+  - PublicKeyCredentialCreationOptions
+  - Reference
+  - Web Authentication API
+  - WebAuthn
 browser-compat: api.PublicKeyCredentialCreationOptions.user
 ---
-<p>{{APIRef("Web Authentication API")}}{{securecontext_header}}</p>
+{{APIRef("Web Authentication API")}}{{securecontext_header}}
 
-<p>The <strong><code>user</code></strong> property of the
-  {{domxref("PublicKeyCredentialCreationOptions")}} dictionary is an object describing the
-  user account for which the credentials are generated (via
-  {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}}).</p>
+The **`user`** property of the
+{{domxref("PublicKeyCredentialCreationOptions")}} dictionary is an object describing the
+user account for which the credentials are generated (via
+{{domxref("CredentialsContainer.create()","navigator.credentials.create()")}}).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>userAccount </em>= <em>publicKeyCredentialCreationOptions</em>.user</pre>
+```js
+userAccount = publicKeyCredentialCreationOptions.user
+```
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
-  <dt><code>displayName</code></dt>
-  <dd>A {{domxref("DOMString")}} which is human readable and intended for display. It may
-    be the full name of the user (e.g. <code>"John Doe"</code>). This is not intended to
-    store the login of the user (see <code>name</code> below).</dd>
-  <dt><code>icon</code> {{optional_inline}}</dt>
-  <dd>An URL as a {{domxref("USVString")}} value which points to an image resource which
-    can be the avatar image for the user.</dd>
-  <dt><code>id</code></dt>
-  <dd>A {{domxref("BufferSource")}} uniquely identifying a given user. This an opaque
+- `displayName`
+  - : A {{domxref("DOMString")}} which is human readable and intended for display. It may
+    be the full name of the user (e.g. `"John Doe"`). This is not intended to
+    store the login of the user (see `name` below).
+- `icon` {{optional_inline}}
+  - : An URL as a {{domxref("USVString")}} value which points to an image resource which
+    can be the avatar image for the user.
+- `id`
+  - : A {{domxref("BufferSource")}} uniquely identifying a given user. This an opaque
     identifier which can be used by the authenticator to link the user account with its
     corresponding credentials. This value will later be used when fetching the credentials
-    in {{domxref("AuthenticatorAssertionResponse.userHandle")}}.</dd>
-  <dt><code>name</code></dt>
-  <dd>A {{domxref("DOMString")}} giving a human-readable name for the user's identifier
-    (e.g. <code>"jdoe@example.com"</code>).This property is intended for display and may
-    be use to distinguish different account with the same <code>displayName</code>.</dd>
-</dl>
+    in {{domxref("AuthenticatorAssertionResponse.userHandle")}}.
+- `name`
+  - : A {{domxref("DOMString")}} giving a human-readable name for the user's identifier
+    (e.g. `"jdoe@example.com"`).This property is intended for display and may
+    be use to distinguish different account with the same `displayName`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var publicKey = {
+```js
+var publicKey = {
   challenge: new Uint8Array(26) /* this actually is given from the server */,
   rp: {
     name: "Example CORP",
@@ -53,7 +53,7 @@ browser-compat: api.PublicKeyCredentialCreationOptions.user
   },
   user: {
     // To be changed for each user
-    id: new Uint8Array.from(window.atob("LAEGMLKJNRLKGNAMLAFALFKA="), c=&gt;c.charCodeAt(0));
+    id: new Uint8Array.from(window.atob("LAEGMLKJNRLKGNAMLAFALFKA="), c=>c.charCodeAt(0));
 
     name: "jdoe@example.com",
     displayName: "John Doe",
@@ -74,19 +74,18 @@ navigator.credentials.create({ publicKey })
     // of the credential
   }).catch(function (err) {
      console.error(err);
-  });</pre>
+  });
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("AuthenticatorAssertionResponse.userHandle")}} which should match the
-    <code>id</code> property of <code>user</code> for the same user/credential.</li>
-</ul>
+- {{domxref("AuthenticatorAssertionResponse.userHandle")}} which should match the
+  `id` property of `user` for the same user/credential.

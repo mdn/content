@@ -2,64 +2,60 @@
 title: CompositionEvent.initCompositionEvent()
 slug: Web/API/CompositionEvent/initCompositionEvent
 tags:
-- API
-- CompositionEvent
-- Deprecated
-- Method
-- Reference
-- initCompositionEvent
+  - API
+  - CompositionEvent
+  - Deprecated
+  - Method
+  - Reference
+  - initCompositionEvent
 browser-compat: api.CompositionEvent.initCompositionEvent
 ---
-<p>{{deprecated_header}}{{APIRef("DOM Events")}}</p>
+{{deprecated_header}}{{APIRef("DOM Events")}}
 
-<p>The <strong><code>initCompositionEvent()</code></strong>
-  method of the {{domxref("CompositionEvent")}} interface initializes the attributes of a
-  <code>CompositionEvent</code> object instance.</p>
+The **`initCompositionEvent()`**
+method of the {{domxref("CompositionEvent")}} interface initializes the attributes of a
+`CompositionEvent` object instance.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The correct way of creating a {{domxref("CompositionEvent")}} is to use
-  the constructor {{domxref("CompositionEvent.CompositionEvent", "CompositionEvent()")}}.<p></div>
+> **Note:** The correct way of creating a {{domxref("CompositionEvent")}} is to use
+> the constructor {{domxref("CompositionEvent.CompositionEvent", "CompositionEvent()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"> compositionEventInstance.initCompositionEvent(<em>typeArg, canBubbleArg, cancelableArg, viewArg, dataArg, localeArg</em>)</pre>
+```js
+ compositionEventInstance.initCompositionEvent(typeArg, canBubbleArg, cancelableArg, viewArg, dataArg, localeArg)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>typeArg</code></dt>
-  <dd>A {{domxref("DOMString")}} representing the type of composition event; this will be
-    one of <code>compositionstart</code>, <code>compositionupdate</code>, or
-    <code>compositionend</code>.</dd>
-  <dt><code>canBubbleArg</code></dt>
-  <dd>A boolean value specifying whether or not the event can bubble.</dd>
-  <dt><code>cancelableArg</code></dt>
-  <dd>A boolean value indicating whether or not the event can be canceled.</dd>
-  <dt><code>viewArg</code></dt>
-  <dd>The {{domxref("Window")}} object from which the event was generated.</dd>
-  <dt><code>dataArg</code></dt>
-  <dd>A {{domxref("DOMString")}} representing the value of the <code>data</code>
-    attribute.</dd>
-  <dt><code>localeArg</code></dt>
-  <dd>A {{domxref("DOMString")}} representing the value of the <code>locale</code>
-    attribute.</dd>
-</dl>
+- `typeArg`
+  - : A {{domxref("DOMString")}} representing the type of composition event; this will be
+    one of `compositionstart`, `compositionupdate`, or
+    `compositionend`.
+- `canBubbleArg`
+  - : A boolean value specifying whether or not the event can bubble.
+- `cancelableArg`
+  - : A boolean value indicating whether or not the event can be canceled.
+- `viewArg`
+  - : The {{domxref("Window")}} object from which the event was generated.
+- `dataArg`
+  - : A {{domxref("DOMString")}} representing the value of the `data`
+    attribute.
+- `localeArg`
+  - : A {{domxref("DOMString")}} representing the value of the `locale`
+    attribute.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Void.</p>
+Void.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This method is no longer on a standardization track. It is kept for compatibility purposes. Use the constructor {{domxref("CompositionEvent.CompositionEvent", "CompositionEvent()")}}.</p>
+This method is no longer on a standardization track. It is kept for compatibility purposes. Use the constructor {{domxref("CompositionEvent.CompositionEvent", "CompositionEvent()")}}.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("CompositionEvent")}}</li>
-</ul>
+- {{domxref("CompositionEvent")}}

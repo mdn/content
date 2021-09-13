@@ -11,49 +11,52 @@ tags:
   - Web Audio
   - Web Audio API
 ---
-<div>{{APIRef("Web Audio API")}}</div>
+{{APIRef("Web Audio API")}}
 
-<p>This article demonstrates how to use a {{domxref("ConstantSourceNode")}} to link multiple parameters together so they share the same value, which can be changed by setting the value of the {{domxref("ConstantSourceNode.offset")}} parameter.</p>
+This article demonstrates how to use a {{domxref("ConstantSourceNode")}} to link multiple parameters together so they share the same value, which can be changed by setting the value of the {{domxref("ConstantSourceNode.offset")}} parameter.
 
-<p>You may have times when you want to have multiple audio parameters be linked so they share the same value even while being changed in some way. For example, perhaps you have a set of oscillators, and two of them need to share the same, configurable volume, or you have a filter that's been applied to certain inputs but not to all of them. You could use a loop and change the value of each affected {{domxref("AudioParam")}} one at a time, but there are two drawbacks to doing it that way: first, that's extra code that, as you're about to see, you don't have to write; and second, that loop uses valuable CPU time on your thread (likely the main thread), and there's a way to offload all that work to the audio rendering thread, which is optimized for this kind of work and may run at a more appropriate priority level than your code.</p>
+You may have times when you want to have multiple audio parameters be linked so they share the same value even while being changed in some way. For example, perhaps you have a set of oscillators, and two of them need to share the same, configurable volume, or you have a filter that's been applied to certain inputs but not to all of them. You could use a loop and change the value of each affected {{domxref("AudioParam")}} one at a time, but there are two drawbacks to doing it that way: first, that's extra code that, as you're about to see, you don't have to write; and second, that loop uses valuable CPU time on your thread (likely the main thread), and there's a way to offload all that work to the audio rendering thread, which is optimized for this kind of work and may run at a more appropriate priority level than your code.
 
-<p>The solution is simple, and it involves using an audio node type which, at first glance, doesn't look all that useful: {{domxref("ConstantSourceNode")}}.</p>
+The solution is simple, and it involves using an audio node type which, at first glance, doesn't look all that useful: {{domxref("ConstantSourceNode")}}.
 
-<h2 id="The_technique">The technique</h2>
+## The technique
 
-<p>This is actually a really easy way to do something that sounds like it might be hard to do. You need to create a {{domxref("ConstantSourceNode")}} and connect it to all of the {{domxref("AudioParam")}}s whose values should be linked to always match each other. Since <code>ConstantSourceNode</code>'s {{domxref("ConstantSourceNode.offset", "offset")}} value is sent straight through to all of its outputs, it acts as a splitter for that value, sending it to each connected parameter.</p>
+This is actually a really easy way to do something that sounds like it might be hard to do. You need to create a {{domxref("ConstantSourceNode")}} and connect it to all of the {{domxref("AudioParam")}}s whose values should be linked to always match each other. Since `ConstantSourceNode`'s {{domxref("ConstantSourceNode.offset", "offset")}} value is sent straight through to all of its outputs, it acts as a splitter for that value, sending it to each connected parameter.
 
-<p>The diagram below shows how this works; an input value, <code>N</code>, is set as the value of the {{domxref("ConstantSourceNode.offset")}} property. The <code>ConstantSourceNode</code> can have as many outputs as necessary; in this case, we've connected it to three nodes: two {{domxref("GainNode")}}s and a {{domxref("StereoPannerNode")}}. So <code>N</code> becomes the value of the specified parameter ({{domxref("GainNode.gain", "gain")}} for the {{domxref("GainNode")}}s and pan for the {{domxref("StereoPannerNode")}}.</p>
+The diagram below shows how this works; an input value, `N`, is set as the value of the {{domxref("ConstantSourceNode.offset")}} property. The `ConstantSourceNode` can have as many outputs as necessary; in this case, we've connected it to three nodes: two {{domxref("GainNode")}}s and a {{domxref("StereoPannerNode")}}. So `N` becomes the value of the specified parameter ({{domxref("GainNode.gain", "gain")}} for the {{domxref("GainNode")}}s and pan for the {{domxref("StereoPannerNode")}}.
 
-<p><img alt="Dagram in SVG showing how ConstantSourceNode can be used to split an input parameter to share it with multiple nodes." src="customsourcenode-as-splitter.svg"></p>
+![Dagram in SVG showing how ConstantSourceNode can be used to split an input parameter to share it with multiple nodes.](customsourcenode-as-splitter.svg)
 
-<p>As a result, every time you change <code>N</code> (the value of the input {{domxref("AudioParam")}}, the values of the two <code>GainNode</code>s' <code>gain</code> properties and the value of the <code>StereoPannerNode</code>'s <code>pan</code> propertry are all set to <code>N</code> as well.</p>
+As a result, every time you change `N` (the value of the input {{domxref("AudioParam")}}, the values of the two `GainNode`s' `gain` properties and the value of the `StereoPannerNode`'s `pan` propertry are all set to `N` as well.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>Let's take a look at this technique in action. In this simple example, we create three {{domxref("OscillatorNode")}}s. Two of them have adjustable gain, controlled using a shared input control. The other oscillator has a fixed volume.</p>
+Let's take a look at this technique in action. In this simple example, we create three {{domxref("OscillatorNode")}}s. Two of them have adjustable gain, controlled using a shared input control. The other oscillator has a fixed volume.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<p>The HTML content for this example is primarily a button to toggle the oscillator tones on and off and an {{HTMLElement("input")}} element of type <code>range</code> to control the volume of two of the three oscillators.</p>
+The HTML content for this example is primarily a button to toggle the oscillator tones on and off and an {{HTMLElement("input")}} element of type `range` to control the volume of two of the three oscillators.
 
-<pre class="brush: html">&lt;div class="controls"&gt;
-  &lt;div class="left"&gt;
-    &lt;div id="playButton" class="button"&gt;
+```html
+<div class="controls">
+  <div class="left">
+    <div id="playButton" class="button">
       ▶️
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="right"&gt;
-    &lt;span&gt;Volume: &lt;/span&gt;
-    &lt;input type="range" min="0.0" max="1.0" step="0.01"
-        value="0.8" name="volume" id="volumeControl"&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
+    </div>
+  </div>
+  <div class="right">
+    <span>Volume: </span>
+    <input type="range" min="0.0" max="1.0" step="0.01"
+        value="0.8" name="volume" id="volumeControl">
+  </div>
+</div>
 
-&lt;p&gt;Use the button above to start and stop the tones, and the volume control to
-change the volume of the notes E and G in the chord.&lt;/p&gt;</pre>
+<p>Use the button above to start and stop the tones, and the volume control to
+change the volume of the notes E and G in the chord.</p>
+```
 
-<pre class="brush: css hidden">.controls {
+```css hidden
+.controls {
   width: 400px;
   position: relative;
   vertical-align: middle;
@@ -97,17 +100,19 @@ change the volume of the notes E and G in the chord.&lt;/p&gt;</pre>
 
 .left span, .left input {
   vertical-align: middle;
-}</pre>
+}
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<p>Now let's take a look at the JavaScript code, a piece at a time.</p>
+Now let's take a look at the JavaScript code, a piece at a time.
 
-<h4 id="Setting_up">Setting up</h4>
+#### Setting up
 
-<p>Let's start by looking at the global variable initialization.</p>
+Let's start by looking at the global variable initialization.
 
-<pre class="brush: js">let context = null;
+```js
+let context = null;
 
 let playButton = null;
 let volumeControl = null;
@@ -120,28 +125,28 @@ let gainNode1 = null;
 let gainNode2 = null;
 let gainNode3 = null;
 
-let playing = false;</pre>
+let playing = false;
+```
 
-<p>These variables are:</p>
+These variables are:
 
-<dl>
- <dt><code>context</code></dt>
- <dd>The {{domxref("AudioContext")}} in which all the audio nodes live.</dd>
- <dt><code>playButton</code> and <code>volumeControl</code></dt>
- <dd>References to the play button and volume control elements.</dd>
- <dt><code>oscNode1</code>, <code>oscNode2</code>, and <code>oscNode3</code></dt>
- <dd>The three {{domxref("OscillatorNode")}}s used to generate the chord.</dd>
- <dt><code>gainNode1</code>, <code>gainNode2</code>, and <code>gainNode3</code></dt>
- <dd>The three {{domxref("GainNode")}} instances which provide the volume levels for each of the three oscillators. <code>gainNode2</code> and <code>gainNode3</code> will be linked together to have the same, adjustable, value using the {{domxref("ConstantSourceNode")}}.</dd>
- <dt><code>constantNode</code></dt>
- <dd>The {{domxref("ConstantSourceNode")}} used to control the values of <code>gainNode2</code> and <code>gainNode3</code> together.</dd>
- <dt><code>playing</code></dt>
- <dd>A boolean value that we'll use to keep track of whether or not we're currently playing the tones.</dd>
-</dl>
+- `context`
+  - : The {{domxref("AudioContext")}} in which all the audio nodes live.
+- `playButton` and `volumeControl`
+  - : References to the play button and volume control elements.
+- `oscNode1`, `oscNode2`, and `oscNode3`
+  - : The three {{domxref("OscillatorNode")}}s used to generate the chord.
+- `gainNode1`, `gainNode2`, and `gainNode3`
+  - : The three {{domxref("GainNode")}} instances which provide the volume levels for each of the three oscillators. `gainNode2` and `gainNode3` will be linked together to have the same, adjustable, value using the {{domxref("ConstantSourceNode")}}.
+- `constantNode`
+  - : The {{domxref("ConstantSourceNode")}} used to control the values of `gainNode2` and `gainNode3` together.
+- `playing`
+  - : A boolean value that we'll use to keep track of whether or not we're currently playing the tones.
 
-<p>Now let's look at the <code>setup()</code> function, which is our handler for the window's {{event("load")}} event; it handles all the initialization tasks that require the DOM to be in place.</p>
+Now let's look at the `setup()` function, which is our handler for the window's {{event("load")}} event; it handles all the initialization tasks that require the DOM to be in place.
 
-<pre class="brush: js">function setup() {
+```js
+function setup() {
   context = new (window.AudioContext || window.webkitAudioContext)();
 
   playButton = document.querySelector("#playButton");
@@ -170,25 +175,26 @@ let playing = false;</pre>
 }
 
 window.addEventListener("load", setup, false);
-</pre>
+```
 
-<p>First, we get access to the window's {{domxref("AudioContext")}}, stashing the reference in <code>context</code>. Then we get references to the control widgets, setting <code>playButton</code> to reference the play button and <code>volumeControl</code> to reference the slider control that the user will use to adjust the gain on the linked pair of oscillators.</p>
+First, we get access to the window's {{domxref("AudioContext")}}, stashing the reference in `context`. Then we get references to the control widgets, setting `playButton` to reference the play button and `volumeControl` to reference the slider control that the user will use to adjust the gain on the linked pair of oscillators.
 
-<p>Then we assign a handler for the play button's {{event("click")}} event (see {{anch("Toggling the oscillators on and off")}} for more on the <code>togglePlay()</code> method), and for the volume slider's {{event("input")}} event (see {{anch("Controlling the linked oscillators")}} to see the very short <code>changeVolume()</code> method).</p>
+Then we assign a handler for the play button's {{event("click")}} event (see {{anch("Toggling the oscillators on and off")}} for more on the `togglePlay()` method), and for the volume slider's {{event("input")}} event (see {{anch("Controlling the linked oscillators")}} to see the very short `changeVolume()` method).
 
-<p>Next, the {{domxref("GainNode")}} <code>gainNode1</code> is created to handle the volume for the non-linked oscillator (<code>oscNode1</code>). We set that gain to 0.5. We also create <code>gainNode2</code> and <code>gainNode3</code>, setting their values to match <code>gainNode1</code>, then set the value of the volume slider to the same value, so it is synchronized with the gain level it controls.</p>
+Next, the {{domxref("GainNode")}} `gainNode1` is created to handle the volume for the non-linked oscillator (`oscNode1`). We set that gain to 0.5. We also create `gainNode2` and `gainNode3`, setting their values to match `gainNode1`, then set the value of the volume slider to the same value, so it is synchronized with the gain level it controls.
 
-<p>Once all the gain nodes are created, we create the {{domxref("ConstantSourceNode")}}, <code>constantNode</code>. We connect its output to the <code>gain</code> {{domxref("AudioParam")}} on both <code>gainNode2</code> and <code>gainNode3</code>, and we start the constant node running by calling its {{domxref("AudioScheduledSourceNode/start", "start()")}} method; now it's sending the value 0.5 to the two gain nodes' values, and any change to {{domxref("ConstantSourceNode.offset", "constantNode.offset")}} will automatically set the gain of both <code>gainNode2</code> and <code>gainNode3</code> (affecting their audio inputs as expected).</p>
+Once all the gain nodes are created, we create the {{domxref("ConstantSourceNode")}}, `constantNode`. We connect its output to the `gain` {{domxref("AudioParam")}} on both `gainNode2` and `gainNode3`, and we start the constant node running by calling its {{domxref("AudioScheduledSourceNode/start", "start()")}} method; now it's sending the value 0.5 to the two gain nodes' values, and any change to {{domxref("ConstantSourceNode.offset", "constantNode.offset")}} will automatically set the gain of both `gainNode2` and `gainNode3` (affecting their audio inputs as expected).
 
-<p>Finally, we connect all the gain nodes to the {{domxref("AudioContext")}}'s {{domxref("BaseAudioContext/destination", "destination")}}, so that any sound delivered to the gain nodes will reach the output, whether that output be speakers, headphones, a recording stream, or any other destination type.</p>
+Finally, we connect all the gain nodes to the {{domxref("AudioContext")}}'s {{domxref("BaseAudioContext/destination", "destination")}}, so that any sound delivered to the gain nodes will reach the output, whether that output be speakers, headphones, a recording stream, or any other destination type.
 
-<p>After setting the window's {{event("load")}} event handler to be the <code>setup()</code> function, the stage is set. Let's see how the action plays out.</p>
+After setting the window's {{event("load")}} event handler to be the `setup()` function, the stage is set. Let's see how the action plays out.
 
-<h4 id="Toggling_the_oscillators_on_and_off">Toggling the oscillators on and off</h4>
+#### Toggling the oscillators on and off
 
-<p>Because {{domxref("OscillatorNode")}} doesn't support the notion of being in a paused state, we have to simulate it by terminating the oscillators and starting them again when the play button is clicked again to toggle them back on. Let's look at the code.</p>
+Because {{domxref("OscillatorNode")}} doesn't support the notion of being in a paused state, we have to simulate it by terminating the oscillators and starting them again when the play button is clicked again to toggle them back on. Let's look at the code.
 
-<pre class="brush: js">function togglePlay(event) {
+```js
+function togglePlay(event) {
   if (playing) {
     playButton.textContent = "▶️";
     stopOscillators();
@@ -196,29 +202,33 @@ window.addEventListener("load", setup, false);
     playButton.textContent = "⏸";
     startOscillators();
   }
-}</pre>
+}
+```
 
-<p>If the <code>playing</code> variable indicates we're already playing the oscillators, we change the <code>playButton</code>'s content to be the Unicode character "right-pointing triangle" (▶️) and call <code>stopOscillators()</code> to shut down the oscillators. See {{anch("Stopping the oscillators")}} below for that code.</p>
+If the `playing` variable indicates we're already playing the oscillators, we change the `playButton`'s content to be the Unicode character "right-pointing triangle" (▶️) and call `stopOscillators()` to shut down the oscillators. See {{anch("Stopping the oscillators")}} below for that code.
 
-<p>If <code>playing</code> is false, indicating that we're currently paused, we change the play button's content to be the Unicode character "pause symbol" (⏸) and call <code>startOscillators()</code> to start the oscillators playing their tones. That code is covered under {{anch("Starting the oscillators")}} below.</p>
+If `playing` is false, indicating that we're currently paused, we change the play button's content to be the Unicode character "pause symbol" (⏸) and call `startOscillators()` to start the oscillators playing their tones. That code is covered under {{anch("Starting the oscillators")}} below.
 
-<h4 id="Controlling_the_linked_oscillators">Controlling the linked oscillators</h4>
+#### Controlling the linked oscillators
 
-<p>The <code>changeVolume()</code> function—the event handler for the slider control for the gain on the linked oscillator pair—looks like this:</p>
+The `changeVolume()` function—the event handler for the slider control for the gain on the linked oscillator pair—looks like this:
 
-<pre class="brush: js">function changeVolume(event) {
+```js
+function changeVolume(event) {
   constantNode.offset.value = volumeControl.value;
-}</pre>
+}
+```
 
-<p>That simple function controls the gain on both nodes. All we have to do is set the value of the {{domxref("ConstantSourceNode")}}'s {{domxref("ConstantSourceNode.offset", "offset")}} parameter. That value becomes the node's constant output value, which is fed into all of its outputs, which are, as set above, <code>gainNode2</code> and <code>gainNode3</code>.</p>
+That simple function controls the gain on both nodes. All we have to do is set the value of the {{domxref("ConstantSourceNode")}}'s {{domxref("ConstantSourceNode.offset", "offset")}} parameter. That value becomes the node's constant output value, which is fed into all of its outputs, which are, as set above, `gainNode2` and `gainNode3`.
 
-<p>While this is an extremely simple example, imagine having a 32 oscillator synthesizer with multiple linked parameters in play across a number of patched nodes. Being able to shorten the number of operations to adjust them all will prove invaluable for code size and performance both.</p>
+While this is an extremely simple example, imagine having a 32 oscillator synthesizer with multiple linked parameters in play across a number of patched nodes. Being able to shorten the number of operations to adjust them all will prove invaluable for code size and performance both.
 
-<h4 id="Starting_the_oscillators">Starting the oscillators</h4>
+#### Starting the oscillators
 
-<p>When the user clicks the play/pause toggle button while the oscillators aren't playing, the <code>startOscillators()</code> function gets called.</p>
+When the user clicks the play/pause toggle button while the oscillators aren't playing, the `startOscillators()` function gets called.
 
-<pre class="brush: js">function startOscillators() {
+```js
+function startOscillators() {
   oscNode1 = context.createOscillator();
   oscNode1.type = "sine";
   oscNode1.frequency.value = 261.625565300598634; // middle C
@@ -239,42 +249,41 @@ window.addEventListener("load", setup, false);
   oscNode3.start();
 
   playing = true;
-}</pre>
+}
+```
 
-<p>Each of the three oscillators is set up the same way:</p>
+Each of the three oscillators is set up the same way:
 
-<ol>
- <li>Create the {{domxref("OscillatorNode")}} by calling {{domxref("BaseAudioContext.createOscillator")}}.</li>
- <li>Set the oscillator's type to <code>"sine"</code> to use a sine wave as the audio waveform.</li>
- <li>Set the oscillator's frequency to the desired value; in this case, <code>oscNode1</code> is set to a middle C, while <code>oscNode2</code> and <code>oscNode3</code> round out the chord by playing the E and G notes.</li>
- <li>Connect the new oscillator to the corresponding gain node.</li>
-</ol>
+1.  Create the {{domxref("OscillatorNode")}} by calling {{domxref("BaseAudioContext.createOscillator")}}.
+2.  Set the oscillator's type to `"sine"` to use a sine wave as the audio waveform.
+3.  Set the oscillator's frequency to the desired value; in this case, `oscNode1` is set to a middle C, while `oscNode2` and `oscNode3` round out the chord by playing the E and G notes.
+4.  Connect the new oscillator to the corresponding gain node.
 
-<p>Once all three oscillators have been created, they're started by calling each one's {{domxref("AudioScheduledSourceNode.start", "ConstantSourceNode.start()")}} method in turn, and <code>playing</code> is set to <code>true</code> to track that the tones are playing.</p>
+Once all three oscillators have been created, they're started by calling each one's {{domxref("AudioScheduledSourceNode.start", "ConstantSourceNode.start()")}} method in turn, and `playing` is set to `true` to track that the tones are playing.
 
-<h4 id="Stopping_the_oscillators">Stopping the oscillators</h4>
+#### Stopping the oscillators
 
-<p>Stopping the oscillators when the user toggles the play state to pause the tones is as simple as stopping each node.</p>
+Stopping the oscillators when the user toggles the play state to pause the tones is as simple as stopping each node.
 
-<pre class="brush: js">function stopOscillators() {
+```js
+function stopOscillators() {
   oscNode1.stop();
   oscNode2.stop();
   oscNode3.stop();
   playing = false;
-}</pre>
+}
+```
 
-<p>Each node is stopped by calling its {{domxref("AudioScheduledSourceNode.stop", "ConstantSourceNode.stop()")}} method, then <code>playing</code> is set to <code>false</code>.</p>
+Each node is stopped by calling its {{domxref("AudioScheduledSourceNode.stop", "ConstantSourceNode.stop()")}} method, then `playing` is set to `false`.
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{ EmbedLiveSample('Example', 600, 200) }}</p>
+{{ EmbedLiveSample('Example', 600, 200) }}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a></li>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Simple_synth">Simple synth keyboard</a> (example)</li>
- <li>{{domxref("OscillatorNode")}}</li>
- <li>{{domxref("ConstantSourceNode")}}</li>
-</ul>
+- [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Simple synth keyboard](/en-US/docs/Web/API/Web_Audio_API/Simple_synth) (example)
+- {{domxref("OscillatorNode")}}
+- {{domxref("ConstantSourceNode")}}

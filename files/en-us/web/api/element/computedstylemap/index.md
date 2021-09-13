@@ -13,56 +13,62 @@ tags:
   - computedStyleMap()
 browser-compat: api.Element.computedStyleMap
 ---
-<p>{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}</p>
+{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>computedStyleMap()</code></strong> method of
-    the {{domxref("Element")}} interface returns a {{domxref("StylePropertyMapReadOnly")}}
-    interface which provides a read-only representation of a CSS declaration block that is
-    an alternative to {{domxref("CSSStyleDeclaration")}}. </p>
+The **`computedStyleMap()`** method of
+the {{domxref("Element")}} interface returns a {{domxref("StylePropertyMapReadOnly")}}
+interface which provides a read-only representation of a CSS declaration block that is
+an alternative to {{domxref("CSSStyleDeclaration")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>stylePropertyMapReadOnly</var> = element.computedStyleMap()</pre>
+```js
+var stylePropertyMapReadOnly = element.computedStyleMap()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("StylePropertyMapReadOnly")}} interface.</p>
+A {{domxref("StylePropertyMapReadOnly")}} interface.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>We start with some simple HTML: a paragraph with a link, and a definition list to which
-  we will add all the CSS Property / Value pairs.</p>
+We start with some simple HTML: a paragraph with a link, and a definition list to which
+we will add all the CSS Property / Value pairs.
 
-<pre class="brush: html">&lt;p&gt;
-   &lt;a href="https://example.com"&gt;Link&lt;/a&gt;
-&lt;/p&gt;
-&lt;dl id="regurgitation"&gt;&lt;/dl&gt;</pre>
+```html
+<p>
+   <a href="https://example.com">Link</a>
+</p>
+<dl id="regurgitation"></dl>
+```
 
-<p>We add a little bit of CSS</p>
+We add a little bit of CSS
 
-<pre class="brush: css">a {
+```css
+a {
   --color: red;
   color: var(--color);
-}</pre>
+}
+```
 
-<p>We add JavaScript to grab our link and return back a definition list of all the CSS
-  property values using <code>computedStyleMap().</code></p>
+We add JavaScript to grab our link and return back a definition list of all the CSS
+property values using `computedStyleMap().`
 
-<pre class="brush: js">// get the element
+```js
+// get the element
 const myElement = document.querySelector('a');
 
-// get the &lt;dl&gt; we'll be populating
+// get the <dl> we'll be populating
 const stylesList = document.querySelector('#regurgitation');
 
 // Retrieve all computed styles with computedStyleMap()
 const allComputedStyles = myElement.computedStyleMap();
 
-// iterate thru the map of all the properties and values, adding a &lt;dt&gt; and &lt;dd&gt; for each
+// iterate thru the map of all the properties and values, adding a <dt> and <dd> for each
 for (const [prop, val] of allComputedStyles) {
 	// properties
 	const cssProperty = document.createElement('dt');
@@ -73,22 +79,23 @@ for (const [prop, val] of allComputedStyles) {
 	const cssValue = document.createElement('dd');
 	cssValue.appendChild(document.createTextNode(val));
 	stylesList.appendChild(cssValue);
-}</pre>
+}
+```
 
-<p>In <a href= "#Browser_compatibility">browsers that support <code>computedStyleMap()</code></a>, 
-  you'll see a list of all the CSS properties and values.
-  In other browsers you'll just see a link.</p>
+In [browsers that support `computedStyleMap()`](#Browser_compatibility),
+you'll see a list of all the CSS properties and values.
+In other browsers you'll just see a link.
 
-<p>{{EmbedLiveSample("Examples", 300, 300)}}</p>
+{{EmbedLiveSample("Examples", 300, 300)}}
 
-<p>Did you realize how many default CSS properties a link had? Update the '<code>a</code>'
-  to the '<code>p</code>', and you'll notice a difference in the <code>margin-top</code>
-  and <code>margin-bottom</code> default computed values.</p>
+Did you realize how many default CSS properties a link had? Update the '`a`'
+to the '`p`', and you'll notice a difference in the `margin-top`
+and `margin-bottom` default computed values.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

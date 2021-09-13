@@ -10,75 +10,75 @@ tags:
   - XMLHttpRequest
 browser-compat: api.FormData.FormData
 ---
-<p>{{APIRef("XMLHttpRequest")}}</p>
+{{APIRef("XMLHttpRequest")}}
 
-<p>The <code><strong>FormData()</strong></code> constructor creates a new {{domxref("FormData")}} object.</p>
+The **`FormData()`** constructor creates a new {{domxref("FormData")}} object.
 
-<div class="note">
-<p><strong>Note:</strong> This feature is available in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
-</div>
+> **Note:** This feature is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">new FormData(form)</pre>
+```js
+new FormData(form)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>form </code>{{optional_inline}}</dt>
- <dd>An HTML {{HTMLElement("form")}} element — when specified, the {{domxref("FormData")}} object will be populated with the form's current keys/values using the name property of each element for the keys and their submitted value for the values. It will also encode file input content.</dd>
-</dl>
+- `form `{{optional_inline}}
+  - : An HTML {{HTMLElement("form")}} element — when specified, the {{domxref("FormData")}} object will be populated with the form's current keys/values using the name property of each element for the keys and their submitted value for the values. It will also encode file input content.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following line creates an empty {{domxref("FormData")}} object:</p>
+The following line creates an empty {{domxref("FormData")}} object:
 
-<pre class="brush: js">var formData = new FormData(); // Currently empty</pre>
+```js
+var formData = new FormData(); // Currently empty
+```
 
-<p>You could add a key/value pair to this using {{domxref("FormData.append")}}:</p>
+You could add a key/value pair to this using {{domxref("FormData.append")}}:
 
-<pre class="brush: js">formData.append('username', 'Chris');
-</pre>
+```js
+formData.append('username', 'Chris');
+```
 
-<p>Or you can specify the optional <code><em>form</em></code> argument when creating the <code>FormData</code> object, to prepopulate it with values from the specified form:</p>
+Or you can specify the optional `form` argument when creating the `FormData` object, to prepopulate it with values from the specified form:
 
-<pre class="brush: html">&lt;form id="myForm" name="myForm"&gt;
-  &lt;div&gt;
-    &lt;label for="username"&gt;Enter name:&lt;/label&gt;
-    &lt;input type="text" id="username" name="username"&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;label for="useracc"&gt;Enter account number:&lt;/label&gt;
-    &lt;input type="text" id="useracc" name="useracc"&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;label for="userfile"&gt;Upload file:&lt;/label&gt;
-    &lt;input type="file" id="userfile" name="userfile"&gt;
-  &lt;/div&gt;
-  &lt;input type="submit" value="Submit!"&gt;
-&lt;/form&gt;
-</pre>
+```html
+<form id="myForm" name="myForm">
+  <div>
+    <label for="username">Enter name:</label>
+    <input type="text" id="username" name="username">
+  </div>
+  <div>
+    <label for="useracc">Enter account number:</label>
+    <input type="text" id="useracc" name="useracc">
+  </div>
+  <div>
+    <label for="userfile">Upload file:</label>
+    <input type="file" id="userfile" name="userfile">
+  </div>
+  <input type="submit" value="Submit!">
+</form>
+```
 
-<div class="note">
-<p><strong>Note:</strong> Only successful form controls are included in a FormData object, i.e. those with a name, not disabled and checked (radio buttons and checkboxes) or selected (one or more options within a select).</p>
-</div>
+> **Note:** Only successful form controls are included in a FormData object, i.e. those with a name, not disabled and checked (radio buttons and checkboxes) or selected (one or more options within a select).
 
-<pre class="brush: js">let myForm = document.getElementById('myForm');
-let formData = new FormData(myForm);</pre>
+```js
+let myForm = document.getElementById('myForm');
+let formData = new FormData(myForm);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("XMLHTTPRequest")}}</li>
- <li><a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest" title="Using XMLHttpRequest">Using XMLHttpRequest</a></li>
- <li><a href="/en-US/docs/Web/API/FormData/Using_FormData_Objects">Using FormData objects</a></li>
- <li>{{HTMLElement("Form")}}</li>
-</ul>
+- {{domxref("XMLHTTPRequest")}}
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest "Using XMLHttpRequest")
+- [Using FormData objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)
+- {{HTMLElement("Form")}}

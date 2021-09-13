@@ -9,39 +9,44 @@ tags:
   - DecompressionStream
 browser-compat: api.DecompressionStream.writable
 ---
-<div>{{DefaultAPISidebar("Compression Streams API")}}</div>
+{{DefaultAPISidebar("Compression Streams API")}}
 
-<p>The <strong><code>writable</code></strong> read-only property of the {{domxref("DecompressionStream")}} interface returns a {{domxref("WritableStream")}}.</p>
+The **`writable`** read-only property of the {{domxref("DecompressionStream")}} interface returns a {{domxref("WritableStream")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">let writableStream = DecompressionStream.writable;</pre>
+    let writableStream = DecompressionStream.writable;
 
-<h3>Value</h3>
-<p>A {{domxref("WritableStream")}}.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("WritableStream")}}.
 
-<p>The following example returns a {{domxref("WritableStream")}} from a <code>DecompressionStream</code>.</p>
+## Examples
 
-<pre class="brush:js">let stream = new DecompressionStream('gzip');
-console.log(stream.writeable); //a WritableStream</pre>
+The following example returns a {{domxref("WritableStream")}} from a `DecompressionStream`.
+
+```js
+let stream = new DecompressionStream('gzip');
+console.log(stream.writeable); //a WritableStream
+```
 
 <table class="no-markdown">
   <tbody>
-   <tr>
-    <th scope="col">Specification</th>
-    <th scope="col">Status</th>
-    <th scope="col">Comment</th>
-   </tr>
-   <tr>
-    <td>{{SpecName('Streams','#dom-generictransformstream-writable','writable')}}</td>
-    <td>{{Spec2('Streams')}}</td>
-    <td>Initial definition.</td>
-   </tr>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName('Streams','#dom-generictransformstream-writable','writable')}}
+      </td>
+      <td>{{Spec2('Streams')}}</td>
+      <td>Initial definition.</td>
+    </tr>
   </tbody>
- </table>
+</table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

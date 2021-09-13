@@ -2,55 +2,56 @@
 title: PeriodicSyncEvent.tag
 slug: Web/API/PeriodicSyncEvent/tag
 tags:
-- Offline
-- PWA
-- PeriodicSyncEvent
-- Property
-- Service Worker
-- Web Periodic Background Synchronization API
-- periodic sync
+  - Offline
+  - PWA
+  - PeriodicSyncEvent
+  - Property
+  - Service Worker
+  - Web Periodic Background Synchronization API
+  - periodic sync
 browser-compat: api.PeriodicSyncEvent.tag
 ---
-<div>{{draft}}{{DefaultAPISidebar("Periodic Background Sync")}}</div>
+{{draft}}{{DefaultAPISidebar("Periodic Background Sync")}}
 
-<p>The <strong><code>tag</code></strong> read-only property of the
-  {{domxref("PeriodicSyncEvent")}} interface returns the developer-defined identifier for
-  the {{domxref('PeriodicSyncEvent')}}. This is specified when calling the
-  {{domxref('PeriodicSyncManager.register()')}} method of the
-  {{domxref('PeriodicSyncManager')}} interface. Multiple tags can be used by the web app
-  to run different periodic tasks at different frequencies.</p>
+The **`tag`** read-only property of the
+{{domxref("PeriodicSyncEvent")}} interface returns the developer-defined identifier for
+the {{domxref('PeriodicSyncEvent')}}. This is specified when calling the
+{{domxref('PeriodicSyncManager.register()')}} method of the
+{{domxref('PeriodicSyncManager')}} interface. Multiple tags can be used by the web app
+to run different periodic tasks at different frequencies.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const <var>tag</var> = PeriodicSyncEvent.tag;</pre>
+```js
+const tag = PeriodicSyncEvent.tag;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>Returns a {{jsxref('String')}} of the defined identifier.</p>
+Returns a {{jsxref('String')}} of the defined identifier.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example demonstrates listening for a periodic sync event in the service
-  worker, and accessing the <code>tag</code> property.</p>
+The following example demonstrates listening for a periodic sync event in the service
+worker, and accessing the `tag` property.
 
-<pre class="brush: js">self.addEventListener('periodicsync', event =&gt; {
+```js
+self.addEventListener('periodicsync', event => {
   console.log(event.tag); // logs the events tag
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://web.dev/periodic-background-sync/">Richer offline experiences with
-      the Periodic Background Sync API</a></li>
-  <li><a href="https://webplatformapis.com/periodic_sync/periodicSync_improved.html">A
-      Periodic Background Sync demo app</a></li>
-</ul>
+- [Richer offline experiences with
+  the Periodic Background Sync API](https://web.dev/periodic-background-sync/)
+- [A
+  Periodic Background Sync demo app](https://webplatformapis.com/periodic_sync/periodicSync_improved.html)

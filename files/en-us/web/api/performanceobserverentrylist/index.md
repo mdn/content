@@ -8,39 +8,39 @@ tags:
   - Web Performance
 browser-compat: api.PerformanceObserverEntryList
 ---
-<div>{{APIRef("Performance Timeline API")}}</div>
+{{APIRef("Performance Timeline API")}}
 
-<p>The <strong><code>PerformanceObserverEntryList</code></strong> interface is a list of {{domxref("PerformanceEntry","peformance events", '', 'true')}} that were explicitly <em>observed</em> via the {{domxref("PerformanceObserver.observe","observe()")}} method.</p>
+The **`PerformanceObserverEntryList`** interface is a list of {{domxref("PerformanceEntry","peformance events", '', 'true')}} that were explicitly _observed_ via the {{domxref("PerformanceObserver.observe","observe()")}} method.
 
-<p>Note: this interface is exposed to {{domxref("Window")}} and {{domxref("Worker")}}.</p>
+Note: this interface is exposed to {{domxref("Window")}} and {{domxref("Worker")}}.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
-	<dt>{{domxref("PerformanceObserverEntryList.getEntries","PerformanceObserverEntryList.getEntries()")}}</dt>
-	<dd>Returns a list of explicitly <em>observed</em> {{domxref("PerformanceEntry")}} objects based on the given <em>filter</em>.</dd>
-	<dt>{{domxref("PerformanceObserverEntryList.getEntriesByType","PerformanceObserverEntryList.getEntriesByType()")}}</dt>
-	<dd>Returns a list of explicitly <em>observed</em> {{domxref("PerformanceEntry")}} objects of the given <em>entry type</em>.</dd>
-	<dt>{{domxref("PerformanceObserverEntryList.getEntriesByName","PerformanceObserverEntryList.getEntriesByName()")}}</dt>
-	<dd>Returns a list of explicitly <em>observed</em> {{domxref("PerformanceEntry")}} objects based on the given <em>name</em> and <em>entry type</em>.</dd>
-</dl>
+- {{domxref("PerformanceObserverEntryList.getEntries","PerformanceObserverEntryList.getEntries()")}}
+  - : Returns a list of explicitly _observed_ {{domxref("PerformanceEntry")}} objects based on the given _filter_.
+- {{domxref("PerformanceObserverEntryList.getEntriesByType","PerformanceObserverEntryList.getEntriesByType()")}}
+  - : Returns a list of explicitly _observed_ {{domxref("PerformanceEntry")}} objects of the given _entry type_.
+- {{domxref("PerformanceObserverEntryList.getEntriesByName","PerformanceObserverEntryList.getEntriesByName()")}}
+  - : Returns a list of explicitly _observed_ {{domxref("PerformanceEntry")}} objects based on the given _name_ and _entry type_.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">// Create observer for all performance event types
+```js
+// Create observer for all performance event types
 // list is of type PerformanceObserveEntryList
 var observe_all = new PerformanceObserver(function(list, obs) {
    var perfEntries = list.getEntries();
-   for (var i = 0; i &lt; perfEntries.length; i++) {
+   for (var i = 0; i < perfEntries.length; i++) {
       print_perf_entry(perfEntries[i]);
       // do something with it
    }
-})</pre>
+})
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

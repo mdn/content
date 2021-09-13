@@ -11,50 +11,42 @@ tags:
   - Web Bluetooth API
 browser-compat: api.BluetoothRemoteGATTDescriptor
 ---
-<div>{{APIRef("Bluetooth API")}}{{SeeCompatTable}}</div>
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
-<p>The <code>BluetoothRemoteGATTDescriptor</code> interface of the <a
-    href="/en-US/docs/Web/API/Web_Bluetooth_API">Web Bluetooth API</a> provides a GATT Descriptor,
-  which provides further information about a characteristic’s value.</p>
+The `BluetoothRemoteGATTDescriptor` interface of the [Web Bluetooth API](/en-US/docs/Web/API/Web_Bluetooth_API) provides a GATT Descriptor,
+which provides further information about a characteristic’s value.
 
-<div class="note">
-  <p><strong>Note:</strong> This page describes the W3C Community Group Web Bluetooth API. For the Firefox OS
-    Bluetooth API, see <a
-      href="/en-US/docs/Archive/B2G_OS/API/BluetoothGattDescriptor"><code>BluetoothGattDescriptor</code>
-      (Firefox OS)</a>.</p>
-</div>
+> **Note:** This page describes the W3C Community Group Web Bluetooth API. For the Firefox OS
+> Bluetooth API, see [`BluetoothGattDescriptor`
+> (Firefox OS)](/en-US/docs/Archive/B2G_OS/API/BluetoothGattDescriptor).
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
-  <dt>{{DOMxRef("BluetoothRemoteGATTDescriptor.characteristic")}}{{ReadOnlyInline}}</dt>
-  <dd>Returns the {{DOMxRef("BluetoothRemoteGATTCharacteristic")}} this descriptor belongs
-    to.</dd>
-  <dt>{{DOMxRef("BluetoothRemoteGATTDescriptor.uuid")}}{{ReadOnlyInline}}</dt>
-  <dd>Returns the UUID of the characteristic descriptor, for
-    example '<code>00002902-0000-1000-8000-00805f9b34fb</code>' for theClient
-    Characteristic Configuration descriptor.</dd>
-  <dt>{{DOMxRef("BluetoothRemoteGATTDescriptor.value")}}{{ReadOnlyInline}}</dt>
-  <dd>Returns the currently cached descriptor value. This value gets updated when the
-    value of the descriptor is read.</dd>
-</dl>
+- {{DOMxRef("BluetoothRemoteGATTDescriptor.characteristic")}}{{ReadOnlyInline}}
+  - : Returns the {{DOMxRef("BluetoothRemoteGATTCharacteristic")}} this descriptor belongs
+    to.
+- {{DOMxRef("BluetoothRemoteGATTDescriptor.uuid")}}{{ReadOnlyInline}}
+  - : Returns the UUID of the characteristic descriptor, for
+    example '`00002902-0000-1000-8000-00805f9b34fb`' for theClient
+    Characteristic Configuration descriptor.
+- {{DOMxRef("BluetoothRemoteGATTDescriptor.value")}}{{ReadOnlyInline}}
+  - : Returns the currently cached descriptor value. This value gets updated when the
+    value of the descriptor is read.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
-  <dt>{{DOMxRef("BluetoothRemoteGATTDescriptor.readValue()")}}</dt>
-  <dd>Returns a {{JSxRef("Promise")}} that resolves to
-    an {{JSxRef("ArrayBuffer")}} holding a duplicate  of the <code>value</code> property
-    if it is available and supported. Otherwise it throws an error.</dd>
-  <dt>{{DOMxRef("BluetoothRemoteGATTDescriptor.writeValue()")}}</dt>
-  <dd>Sets the value property to the bytes contained in an {{JSxRef("ArrayBuffer")}} and
-    returns a {{JSxRef("Promise")}}.</dd>
-</dl>
+- {{DOMxRef("BluetoothRemoteGATTDescriptor.readValue()")}}
+  - : Returns a {{JSxRef("Promise")}} that resolves to
+    an {{JSxRef("ArrayBuffer")}} holding a duplicate  of the `value` property
+    if it is available and supported. Otherwise it throws an error.
+- {{DOMxRef("BluetoothRemoteGATTDescriptor.writeValue()")}}
+  - : Sets the value property to the bytes contained in an {{JSxRef("ArrayBuffer")}} and
+    returns a {{JSxRef("Promise")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,53 +2,56 @@
 title: HTMLElement.onpaste
 slug: Web/API/HTMLElement/onpaste
 tags:
-- API
-- Event Handler
-- Experimental
-- HTMLElement
-- NeedsSpecTable
-- Property
-- Reference
+  - API
+  - Event Handler
+  - Experimental
+  - HTMLElement
+  - NeedsSpecTable
+  - Property
+  - Reference
 browser-compat: api.HTMLElement.onpaste
 ---
-<div>{{ APIRef("HTML DOM") }} {{SeeCompatTable}}</div>
+{{ APIRef("HTML DOM") }} {{SeeCompatTable}}
 
-<p>The <code><strong>HTMLElement.onpaste</strong></code> property of the
-  {{domxref("HTMLElement")}} interface is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> that processes
-  {{event("paste")}} events.</p>
+The **`HTMLElement.onpaste`** property of the
+{{domxref("HTMLElement")}} interface is an [event handler](/en-US/docs/Web/Events/Event_handlers) that processes
+{{event("paste")}} events.
 
-<p>The <code>paste</code> event fires when the user attempts to paste text.</p>
+The `paste` event fires when the user attempts to paste text.
 
-<p>Note that there is currently no DOM-only way to obtain the text being pasted; you'll
-  have to use an {{ Interface("nsIClipboard") }} to get that information.</p>
+Note that there is currently no DOM-only way to obtain the text being pasted; you'll
+have to use an {{ Interface("nsIClipboard") }} to get that information.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>target</em>.onpaste = <em>functionRef</em>;</pre>
+```js
+target.onpaste = functionRef;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p><code>functionRef</code> is a function name or a <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function
-    expression</a>. The function receives a {{domxref("ClipboardEvent")}} object as its
-  sole argument.</p>
+`functionRef` is a function name or a [function
+expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("ClipboardEvent")}} object as its
+sole argument.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example logs every copy and paste attempt to the {{htmlElement("textarea")}}.</p>
+This example logs every copy and paste attempt to the {{htmlElement("textarea")}}.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;h3&gt;Play with this text area:&lt;/h3&gt;
-&lt;textarea id="editor" rows="3"&gt;Try copying and pasting text into this field!&lt;/textarea&gt;
+```html
+<h3>Play with this text area:</h3>
+<textarea id="editor" rows="3">Try copying and pasting text into this field!</textarea>
 
-&lt;h3&gt;Log:&lt;/h3&gt;
-&lt;p id="log"&gt;&lt;/p&gt;</pre>
+<h3>Log:</h3>
+<p id="log"></p>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">function logCopy(event) {
+```js
+function logCopy(event) {
   log.innerText = 'Copied!\n' + log.innerText;
 }
 
@@ -60,32 +63,29 @@ const editor = document.getElementById('editor');
 const log = document.getElementById('log');
 
 editor.oncopy = logCopy;
-editor.onpaste = logPaste;</pre>
+editor.onpaste = logPaste;
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example", 700, 300)}}</p>
+{{EmbedLiveSample("Example", 700, 300)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p><a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-onpaste">WHATWG
-    Standard</a></p>
+[WHATWG
+Standard](https://html.spec.whatwg.org/multipage/webappapis.html#handler-onpaste)
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>Since Firefox 13, the preference <code>dom.event.clipboardevents.enabled</code>
-  controls this feature. It defaults to <code>true</code> but can be disabled.</p>
+Since Firefox 13, the preference `dom.event.clipboardevents.enabled`
+controls this feature. It defaults to `true` but can be disabled.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>Clipboard API event {{event("paste")}}</li>
-  <li>Related event handlers
-    <ul>
-      <li>{{domxref("HTMLElement.oncopy")}}</li>
-      <li>{{domxref("HTMLElement.oncut")}}</li>
-    </ul>
-  </li>
-</ul>
+- Clipboard API event {{event("paste")}}
+- Related event handlers
+
+  - {{domxref("HTMLElement.oncopy")}}
+  - {{domxref("HTMLElement.oncut")}}

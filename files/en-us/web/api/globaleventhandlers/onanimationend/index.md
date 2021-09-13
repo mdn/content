@@ -2,65 +2,63 @@
 title: GlobalEventHandlers.onanimationend
 slug: Web/API/GlobalEventHandlers/onanimationend
 tags:
-- API
-- Animations
-- CSS
-- CSS Animations
-- CSS3 Animations
-- Document
-- Element
-- Event Handler
-- GlobalEventHandlers
-- Property
-- Reference
-- Web Animations
-- Window
-- onanimationend
-- web animations api
+  - API
+  - Animations
+  - CSS
+  - CSS Animations
+  - CSS3 Animations
+  - Document
+  - Element
+  - Event Handler
+  - GlobalEventHandlers
+  - Property
+  - Reference
+  - Web Animations
+  - Window
+  - onanimationend
+  - web animations api
 browser-compat: api.GlobalEventHandlers.onanimationend
 ---
-<div>{{APIRef("CSS3 Animations")}}</div>
+{{APIRef("CSS3 Animations")}}
 
-<p>The <code><strong>onanimationend</strong></code> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is the <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> for
-  processing {{event("animationend")}} events.</p>
+The **`onanimationend`** property of the
+{{domxref("GlobalEventHandlers")}} mixin is the [event handler](/en-US/docs/Web/Events/Event_handlers) for
+processing {{event("animationend")}} events.
 
-<p>The <code>animationend</code> event fires when a <a href="/en-US/docs/Web/CSS/CSS_Animations">CSS animation</a>
-  reaches the end of its active period (which is calculated as
-  <code>{{cssxref("animation-duration")}} * {{cssxref("animation-iteration-count")}}) + {{cssxref("animation-delay")}}</code>).
-</p>
+The `animationend` event fires when a [CSS animation](/en-US/docs/Web/CSS/CSS_Animations)
+reaches the end of its active period (which is calculated as
+`{{cssxref("animation-duration")}} * {{cssxref("animation-iteration-count")}}) + {{cssxref("animation-delay")}}`).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>animEndHandler</em> = <em>target</em>.onanimationend;
-<em>target</em>.onanimationend = <em>Function</em>
-</pre>
+```js
+var animEndHandler = target.onanimationend;
+target.onanimationend = Function
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{jsxref("Function")}} to be called when an {{event("animationend")}} event occurs
-  indicating that a CSS animation has ended on the <em><code>target</code></em>, where the
-  target object is an HTML element ({{domxref("HTMLElement")}}), document
-  ({{domxref("Document")}}), or window ({{domxref("Window")}}). The function receives as
-  input a single parameter: an {{domxref("AnimationEvent")}} object describing the event
-  which occurred.</p>
+A {{jsxref("Function")}} to be called when an {{event("animationend")}} event occurs
+indicating that a CSS animation has ended on the _`target`_, where the
+target object is an HTML element ({{domxref("HTMLElement")}}), document
+({{domxref("Document")}}), or window ({{domxref("Window")}}). The function receives as
+input a single parameter: an {{domxref("AnimationEvent")}} object describing the event
+which occurred.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See <a href="/en-US/docs/Web/API/GlobalEventHandlers/onanimationstart#example"><code>GlobalEventHandlers.onanimationstart</code></a> for example code.</p>
+See [`GlobalEventHandlers.onanimationstart`](/en-US/docs/Web/API/GlobalEventHandlers/onanimationstart#example) for example code.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{event("animationend")}} event, which triggers this event handler</li>
-  <li>{{domxref("AnimationEvent")}}</li>
-  <li>The {{event("animationstart")}} event</li>
-</ul>
+- The {{event("animationend")}} event, which triggers this event handler
+- {{domxref("AnimationEvent")}}
+- The {{event("animationstart")}} event

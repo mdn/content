@@ -2,61 +2,58 @@
 title: CanvasRenderingContext2D.imageSmoothingQuality
 slug: Web/API/CanvasRenderingContext2D/imageSmoothingQuality
 tags:
-- API
-- Canvas
-- CanvasRenderingContext2D
-- Experimental
-- Property
-- Reference
-- imageSmoothingQuality
+  - API
+  - Canvas
+  - CanvasRenderingContext2D
+  - Experimental
+  - Property
+  - Reference
+  - imageSmoothingQuality
 browser-compat: api.CanvasRenderingContext2D.imageSmoothingQuality
 ---
-<div>{{APIRef}} {{SeeCompatTable}}</div>
+{{APIRef}} {{SeeCompatTable}}
 
-<p>The <code><strong>imageSmoothingQuality</strong></code> property of the
-  {{domxref("CanvasRenderingContext2D")}} interface, part of the <a
-    href="/en-US/docs/Web/API/Canvas_API">Canvas API</a>, lets you set the quality of
-  image smoothing.</p>
+The **`imageSmoothingQuality`** property of the
+{{domxref("CanvasRenderingContext2D")}} interface, part of the [Canvas API](/en-US/docs/Web/API/Canvas_API), lets you set the quality of
+image smoothing.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> For this property to have an effect,
-    {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}}
-    must be <code>true</code>.</p>
-</div>
+> **Note:** For this property to have an effect,
+> {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}}
+> must be `true`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>ctx</em>.imageSmoothingQuality = "low" || "medium" || "high"
-</pre>
+```js
+ctx.imageSmoothingQuality = "low" || "medium" || "high"
+```
 
-<h3 id="Options">Options</h3>
+### Options
 
-<p>Possible values:</p>
+Possible values:
 
-<dl>
-  <dt><code>"low"</code></dt>
-  <dd>Low quality.</dd>
-  <dt><code>"medium"</code></dt>
-  <dd>Medium quality.</dd>
-  <dt><code>"high"</code></dt>
-  <dd>High quality.</dd>
-</dl>
+- `"low"`
+  - : Low quality.
+- `"medium"`
+  - : Medium quality.
+- `"high"`
+  - : High quality.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="Setting_image_smoothing_quality">Setting image smoothing quality</h3>
+### Setting image smoothing quality
 
-<p>This example uses the <code>imageSmoothingQuality</code> property with a scaled image.
-</p>
+This example uses the `imageSmoothingQuality` property with a scaled image.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js;">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 let img = new Image();
@@ -65,24 +62,22 @@ img.onload = function() {
   ctx.imageSmoothingQuality = 'low';
   ctx.drawImage(img, 0, 0, 300, 150);
 };
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Setting_image_smoothing_quality', 700, 180) }}</p>
+{{ EmbedLiveSample('Setting_image_smoothing_quality', 700, 180) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining this property: {{domxref("CanvasRenderingContext2D")}}</li>
-  <li>{{domxref("CanvasRenderingContext2D.imageSmoothingEnabled")}}</li>
-  <li>{{cssxref("image-rendering")}}</li>
-</ul>
+- The interface defining this property: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled")}}
+- {{cssxref("image-rendering")}}

@@ -2,48 +2,51 @@
 title: ServiceWorkerContainer.getRegistrations()
 slug: Web/API/ServiceWorkerContainer/getRegistrations
 tags:
-- API
-- Experimental
-- Method
-- Reference
-- Service Workers
-- ServiceWorker
-- ServiceWorkerContainer
+  - API
+  - Experimental
+  - Method
+  - Reference
+  - Service Workers
+  - ServiceWorker
+  - ServiceWorkerContainer
 browser-compat: api.ServiceWorkerContainer.getRegistrations
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p>The <strong><code>getRegistrations()</code></strong> method of the
-  {{domxref("ServiceWorkerContainer")}} interface gets all
-  {{domxref("ServiceWorkerRegistration")}}s associated with a
-  <code>ServiceWorkerContainer</code>, in an array. The method returns a
-  {{jsxref("Promise")}} that resolves to an array of
-  {{domxref("ServiceWorkerRegistration")}}.</p>
+The **`getRegistrations()`** method of the
+{{domxref("ServiceWorkerContainer")}} interface gets all
+{{domxref("ServiceWorkerRegistration")}}s associated with a
+`ServiceWorkerContainer`, in an array. The method returns a
+{{jsxref("Promise")}} that resolves to an array of
+{{domxref("ServiceWorkerRegistration")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>serviceWorkerContainer</em>.getRegistrations().then(function(<em>serviceWorkerRegistrations</em>) { ... });</pre>
+```js
+serviceWorkerContainer.getRegistrations().then(function(serviceWorkerRegistrations) { ... });
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} that resolves to an array of
-  {{domxref("ServiceWorkerRegistration")}} objects.</p>
+A {{jsxref("Promise")}} that resolves to an array of
+{{domxref("ServiceWorkerRegistration")}} objects.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">navigator.serviceWorker.getRegistrations().then(function(registrations) {
+```js
+navigator.serviceWorker.getRegistrations().then(function(registrations) {
   document.querySelector('#status').textContent = 'ServiceWorkerRegistrations found.';
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

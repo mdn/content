@@ -2,65 +2,64 @@
 title: Window.name
 slug: Web/API/Window/name
 tags:
-- API
-- HTML DOM
-- Property
-- Reference
+  - API
+  - HTML DOM
+  - Property
+  - Reference
 browser-compat: api.Window.name
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code>Window.name</code> property
-    gets/sets the name of the window's browsing context.</p>
+The `Window.name` property
+gets/sets the name of the window's browsing context.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>string</var> = window.name;
-window.name = <var>string</var>;
-</pre>
+```js
+string = window.name;
+window.name = string;
+```
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The name of the window is used primarily for setting targets for hyperlinks and forms.
-  Browsing contexts do not need to have names.</p>
+The name of the window is used primarily for setting targets for hyperlinks and forms.
+Browsing contexts do not need to have names.
 
-<p>Modern browsers will reset <code>Window.name</code> to an empty string if a tab loads a
-  page from a different domain, and restore the name if the original page is reloaded
-  (e.g. by selecting the "back" button). This prevents an untrusted page from accessing
-  any information that the previous page might have stored in the property (potentially
-  the new page might also modify such data, which might then be read by the original page
-  if it was reloaded).</p>
+Modern browsers will reset `Window.name` to an empty string if a tab loads a
+page from a different domain, and restore the name if the original page is reloaded
+(e.g. by selecting the "back" button). This prevents an untrusted page from accessing
+any information that the previous page might have stored in the property (potentially
+the new page might also modify such data, which might then be read by the original page
+if it was reloaded).
 
-<p><code>Window.name</code> has also been used in some frameworks for providing
-  cross-domain messaging (e.g. Dojo's <a
-    href="https://www.sitepen.com/blog/2008/07/22/windowname-transport/">dojox.io.windowName</a>)
-  as a more secure alternative to JSONP. Modern web applications hosting sensitive data
-  should, however, not rely on <code>window.name</code> for cross-domain messaging — that
-  is not its intended purpose and there are safer/better ways of sharing information
-  between windows.
-  <code><a href="/en-US/docs/Web/API/Window/postMessage">Window.postMessage()</a></code>
-  is the recommended mechanism.</p>
+`Window.name` has also been used in some frameworks for providing
+cross-domain messaging (e.g. Dojo's [dojox.io.windowName](https://www.sitepen.com/blog/2008/07/22/windowname-transport/))
+as a more secure alternative to JSONP. Modern web applications hosting sensitive data
+should, however, not rely on `window.name` for cross-domain messaging — that
+is not its intended purpose and there are safer/better ways of sharing information
+between windows.
+[`Window.postMessage()`](/en-US/docs/Web/API/Window/postMessage)
+is the recommended mechanism.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> <code>window.name</code> converts all stored values to their
-    string representations using the <code>toString</code> method.</p>
-</div>
+> **Note:** `window.name` converts all stored values to their
+> string representations using the `toString` method.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: html">&lt;script&gt;
+```html
+<script>
     // Open a tab with a specific browsing context name
     const otherTab = window.open("url1", "_blank");
     if (otherTab)
         otherTab.name = "other-tab";
-&lt;/script&gt;
-&lt;a href="url2" target="other-tab"&gt;This link will be opened in the other tab.&lt;/a&gt;
-</pre>
+</script>
+<a href="url2" target="other-tab">This link will be opened in the other tab.</a>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

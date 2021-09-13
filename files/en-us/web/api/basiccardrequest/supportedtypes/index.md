@@ -2,60 +2,60 @@
 title: BasicCardRequest.supportedTypes
 slug: Web/API/BasicCardRequest/supportedTypes
 tags:
-- API
-- Basic Card Payment
-- BasicCardRequest
-- Commerce
-- Credit
-- Debit
-- Payment Method
-- Payment Request
-- Payment Request API
-- Property
-- Reference
-- payment
-- supportedTypes
-- Deprecated
-- Non-standard
+  - API
+  - Basic Card Payment
+  - BasicCardRequest
+  - Commerce
+  - Credit
+  - Debit
+  - Payment Method
+  - Payment Request
+  - Payment Request API
+  - Property
+  - Reference
+  - payment
+  - supportedTypes
+  - Deprecated
+  - Non-standard
 browser-compat: api.BasicCardRequest.supportedTypes
 ---
-<p>{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}</p>
+{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
 
-<p>The obsolete <strong><code>supportedTypes</code></strong>
-    property of the {{domxref("BasicCardRequest")}} dictionary can optionally be provided
-    to specify an array of {{domxref("DOMString")}}s representing the card types that the
-    retailer supports (e.g. <code>credit</code>, <code>debit</code>,
-    <code>prepaid</code>).</p>
+The obsolete **`supportedTypes`**
+property of the {{domxref("BasicCardRequest")}} dictionary can optionally be provided
+to specify an array of {{domxref("DOMString")}}s representing the card types that the
+retailer supports (e.g. `credit`, `debit`,
+`prepaid`).
 
-<p>This property is obsolete and should no longer be used. Instead of making the web app
-  or site worry about this, the onus has been transferred to the payment processor.</p>
+This property is obsolete and should no longer be used. Instead of making the web app
+or site worry about this, the onus has been transferred to the payment processor.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>basicCardRequest</em>.supportedTypes = [<em>cardType1</em>...<em>cardTypeN</em>];</pre>
+```js
+basicCardRequest.supportedTypes = [cardType1...cardTypeN];
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An array containing one or more {{domxref("DOMString")}}s, which describe the card
-  types the retailer supports. Legal values are defined in
-  <code><a href="https://w3c.github.io/payment-method-basic-card/#basiccardtype-enum">BasicCardType</a></code>
-  enum, and are currently:</p>
+An array containing one or more {{domxref("DOMString")}}s, which describe the card
+types the retailer supports. Legal values are defined in
+[`BasicCardType`](https://w3c.github.io/payment-method-basic-card/#basiccardtype-enum)
+enum, and are currently:
 
-<ul>
-  <li><code>credit</code></li>
-  <li><code>debit</code></li>
-  <li><code>prepaid</code></li>
-</ul>
+- `credit`
+- `debit`
+- `prepaid`
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example shows a sample definition of the first parameter of the
-  {{domxref("PaymentRequest.PaymentRequest", "PaymentRequest()")}} constructor, the
-  <code>data</code> property of which contains <code>supportedNetworks</code> and
-  <code>supportedTypes</code> properties.</p>
+The following example shows a sample definition of the first parameter of the
+{{domxref("PaymentRequest.PaymentRequest", "PaymentRequest()")}} constructor, the
+`data` property of which contains `supportedNetworks` and
+`supportedTypes` properties.
 
-<pre class="brush: js">var supportedInstruments = [{
+```js
+var supportedInstruments = [{
   supportedMethods: 'basic-card',
   data: {
     supportedNetworks: ['visa', 'mastercard', 'amex', 'jcb',
@@ -69,8 +69,8 @@ var details = { ... };
 var options = { ... };
 
 var request = new PaymentRequest(supportedInstruments, details, options);
-</pre>
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

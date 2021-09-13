@@ -12,41 +12,41 @@ tags:
   - Deprecated
 browser-compat: api.Document.preferredStyleSheetSet
 ---
-<div>{{APIRef("DOM")}}{{deprecated_header}}</div>
+{{APIRef("DOM")}}{{deprecated_header}}
 
-<p>The <strong><code>preferredStyleSheetSet</code></strong> property returns the preferred style sheet set as set by the page
-author.</p>
+The **`preferredStyleSheetSet`** property returns the preferred style sheet set as set by the page
+author.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>preferredStyleSheetSet</var> = document.preferredStyleSheetSet
-</pre>
+```js
+preferredStyleSheetSet = document.preferredStyleSheetSet
+```
 
-<p>On return, <code>preferredStyleSheetSet</code> indicates the author's preferred style
-  sheet set. This is determined from the order of style sheet declarations and the
-  <code>Default-Style</code> HTTP header.</p>
+On return, `preferredStyleSheetSet` indicates the author's preferred style
+sheet set. This is determined from the order of style sheet declarations and the
+`Default-Style` HTTP header.
 
-<p>If there isn't a preferred style sheet set defined by the author, the empty string
-  (<code>""</code>) is returned.</p>
+If there isn't a preferred style sheet set defined by the author, the empty string
+(`""`) is returned.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">if (document.preferredStyleSheetSet) {
+```js
+if (document.preferredStyleSheetSet) {
   console.log("The preferred style sheet set is: " + document.preferredStyleSheetSet);
 } else {
   console.log("There is no preferred style sheet.");
 }
-</pre>
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("document.lastStyleSheetSet")}}</li>
-  <li>{{domxref("document.selectedStyleSheetSet")}}</li>
-  <li>{{domxref("document.styleSheetSets")}}</li>
-  <li>{{domxref("document.enableStyleSheetsForSet()")}}</li>
-</ul>
+- {{domxref("document.lastStyleSheetSet")}}
+- {{domxref("document.selectedStyleSheetSet")}}
+- {{domxref("document.styleSheetSets")}}
+- {{domxref("document.enableStyleSheetsForSet()")}}

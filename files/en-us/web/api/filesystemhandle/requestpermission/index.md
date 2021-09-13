@@ -9,49 +9,44 @@ tags:
   - Method
 browser-compat: api.FileSystemHandle.requestPermission
 ---
-<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
-</div>
+{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
-<p>The <strong><code>requestPermission()</code></strong> method of the
-  {{domxref("FileSystemHandle")}} interface requests read or readwrite permissions for the
-  file handle.</p>
+The **`requestPermission()`** method of the
+{{domxref("FileSystemHandle")}} interface requests read or readwrite permissions for the
+file handle.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>PermissionState</var> = FileSystemHandle.requestPermission(FileSystemHandlePermissionDescriptor);</pre>
+```js
+var PermissionState = FileSystemHandle.requestPermission(FileSystemHandlePermissionDescriptor);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>FileSystemHandlePermissionDescriptor {{optional_inline}}</dt>
-  <dd>An object which specifies the permission mode to query for. Options are as follows:
-    <ul>
-      <li><code>'mode'</code>: Can be either <code>'read'</code> or
-        <code>'readwrite'</code>.</li>
-    </ul>
-  </dd>
-</dl>
+- FileSystemHandlePermissionDescriptor {{optional_inline}}
 
-<h3 id="Return_value">Return value</h3>
+  - : An object which specifies the permission mode to query for. Options are as follows:
 
-<p>{{domxref('PermissionStatus.state')}} which is one of <code>'granted'</code>,
-  <code>'denied'</code> or <code>'prompt'</code>.</p>
+    - `'mode'`: Can be either `'read'` or
+      `'readwrite'`.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Return value
 
-<dl>
-  <dt><code>TypeError</code></dt>
-  <dd>No parameter is specified or the <code>mode</code> is not that of
-    <code>'read'</code> or <code>'readwrite'</code></dd>
-</dl>
+{{domxref('PermissionStatus.state')}} which is one of `'granted'`,
+`'denied'` or `'prompt'`.
 
-<h2 id="Examples">Examples</h2>
+### Exceptions
 
-<p>The following asynchronous function requests permissions if they have not been granted.
-</p>
+- `TypeError`
+  - : No parameter is specified or the `mode` is not that of
+    `'read'` or `'readwrite'`
 
-<pre class="brush: js">// fileHandle is a FileSystemFileHandle
+## Examples
+
+The following asynchronous function requests permissions if they have not been granted.
+
+```js
+// fileHandle is a FileSystemFileHandle
 // withWrite is a boolean set to true if write
 
 async function verifyPermission(fileHandle, withWrite) {
@@ -73,20 +68,18 @@ async function verifyPermission(fileHandle, withWrite) {
   // The user did not grant permission, return false.
   return false;
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/File_System_Access_API">File System Access API</a></li>
-  <li><a href="https://web.dev/file-system-access/">The File System Access API:
-      simplifying access to local files</a></li>
-</ul>
+- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
+- [The File System Access API:
+  simplifying access to local files](https://web.dev/file-system-access/)

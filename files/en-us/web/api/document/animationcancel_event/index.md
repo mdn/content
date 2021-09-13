@@ -12,64 +12,68 @@ tags:
   - animationcancel
 browser-compat: api.Document.animationcancel_event
 ---
-<div>{{APIRef}}{{SeeCompatTable}}</div>
+{{APIRef}}{{SeeCompatTable}}
 
-<p>The <strong><code>animationcancel</code></strong> event is fired when a <a href="/en-US/docs/Web/CSS/CSS_Animations">CSS Animation</a> unexpectedly aborts. In other words, any time it stops running without sending an {{domxref("Document/animationend_event", "animationend")}} event. This might happen when the {{cssxref("animation-name")}} is changed such that the animation is removed, or when the animating node is hidden using CSS. Therefore, either directly or because any of its containing nodes are hidden.</p>
+The **`animationcancel`** event is fired when a [CSS Animation](/en-US/docs/Web/CSS/CSS_Animations) unexpectedly aborts. In other words, any time it stops running without sending an {{domxref("Document/animationend_event", "animationend")}} event. This might happen when the {{cssxref("animation-name")}} is changed such that the animation is removed, or when the animating node is hidden using CSS. Therefore, either directly or because any of its containing nodes are hidden.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th>Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th>Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th>Interface</th>
-   <td>{{domxref("AnimationEvent")}}</td>
-  </tr>
-  <tr>
-   <th>Event handler property</th>
-   <td>{{domxref("GlobalEventHandlers/onanimationcancel","onanimationcancel")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Interface</th>
+      <td>{{domxref("AnimationEvent")}}</td>
+    </tr>
+    <tr>
+      <th>Event handler property</th>
+      <td>
+        {{domxref("GlobalEventHandlers/onanimationcancel","onanimationcancel")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>The original target for this event is the {{domxref("Element")}} that had the animation applied. You can listen for this event on the {{domxref("Document")}} interface to handle it in the capture or bubbling phases. For full details on this event please see the page on <a href="/en-US/docs/Web/API/HTMLElement/animationcancel_event">HTMLElement: animationcancel</a>.</p>
+The original target for this event is the {{domxref("Element")}} that had the animation applied. You can listen for this event on the {{domxref("Document")}} interface to handle it in the capture or bubbling phases. For full details on this event please see the page on [HTMLElement: animationcancel](/en-US/docs/Web/API/HTMLElement/animationcancel_event).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This code adds a listener to the <code>animationcancel</code> event.</p>
+This code adds a listener to the `animationcancel` event.
 
-<pre class="brush: js">document.addEventListener('animationcancel', () =&gt; {
+```js
+document.addEventListener('animationcancel', () => {
   console.log('Animation canceled');
-});</pre>
+});
+```
 
-<p>The same, but using the {{domxref("GlobalEventHandlers/onanimationcancel","onanimationcancel")}} property instead of <code>addEventListener()</code>:</p>
+The same, but using the {{domxref("GlobalEventHandlers/onanimationcancel","onanimationcancel")}} property instead of `addEventListener()`:
 
-<pre class="brush: js">document.onanimationcancel = () =&gt; {
+```js
+document.onanimationcancel = () => {
   console.log('Animation canceled');
-};</pre>
+};
+```
 
-<p><a href="/en-US/docs/Web/API/HTMLElement/animationcancel_event#live_example">See a live example of this event.</a></p>
+[See a live example of this event.](/en-US/docs/Web/API/HTMLElement/animationcancel_event#live_example)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Animations">CSS Animations</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">Using CSS Animations</a></li>
- <li>{{domxref("AnimationEvent")}}</li>
- <li>Related events: {{domxref("Document/animationstart_event", "animationstart")}}, {{domxref("Document/animationend_event", "animationend")}}, {{domxref("Document/animationiteration_event", "animationiteration")}}</li>
- <li>This event on {{domxref("Window")}} targets: {{domxref("Window/animationcancel_event", "animationcancel")}}</li>
- <li>This event on {{domxref("HTMLElement")}} targets: {{domxref("HTMLElement/animationcancel_event", "animationcancel")}}</li>
-</ul>
+- [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations)
+- [Using CSS Animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- {{domxref("AnimationEvent")}}
+- Related events: {{domxref("Document/animationstart_event", "animationstart")}}, {{domxref("Document/animationend_event", "animationend")}}, {{domxref("Document/animationiteration_event", "animationiteration")}}
+- This event on {{domxref("Window")}} targets: {{domxref("Window/animationcancel_event", "animationcancel")}}
+- This event on {{domxref("HTMLElement")}} targets: {{domxref("HTMLElement/animationcancel_event", "animationcancel")}}

@@ -2,69 +2,66 @@
 title: Blob.stream()
 slug: Web/API/Blob/stream
 tags:
-- API
-- Blob
-- Change
-- Convert
-- File API
-- Method
-- ReadableStream
-- Reference
-- stream
+  - API
+  - Blob
+  - Change
+  - Convert
+  - File API
+  - Method
+  - ReadableStream
+  - Reference
+  - stream
 browser-compat: api.Blob.stream
 ---
-<p>{{APIRef("File API")}}</p>
+{{APIRef("File API")}}
 
-<p>The {{domxref("Blob")}} interface's
-    <code><strong>stream()</strong></code> method returns a {{domxref("ReadableStream")}}
-    which upon reading returns the data contained within the <code>Blob</code>.</p>
+The {{domxref("Blob")}} interface's
+**`stream()`** method returns a {{domxref("ReadableStream")}}
+which upon reading returns the data contained within the `Blob`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>stream</em> = <em>blob</em>.stream();</pre>
+```js
+var stream = blob.stream();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A {{domxref("ReadableStream")}} which, upon reading, returns the contents of the
-  <code>Blob</code>.</p>
+A {{domxref("ReadableStream")}} which, upon reading, returns the contents of the
+`Blob`.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>With <code>stream()</code> and the returned {{domxref("ReadableStream")}}, you gain
-  several interesting capabilities:</p>
+With `stream()` and the returned {{domxref("ReadableStream")}}, you gain
+several interesting capabilities:
 
-<ul>
-  <li>Call {{domxref("ReadableStream.getReader", "getReader()")}} on the returned stream
-    to get an object to use to read the data from the blob using methods such as the
-    {{domxref("ReadableStreamDefaultReader")}} interface's
-    {{domxref("ReadableStreamDefaultReader.read", "read()")}} method.</li>
-  <li>Call the returned stream's {{domxref("ReadableStream.pipeTo", "pipeTo()")}} method
-    to pipe the blob's data to a writable stream.</li>
-  <li>Call the returned stream's {{domxref("ReadableStream.tee", "tee()")}} method to
-    <strong>tee</strong> the readable stream. This returns an array containing two new
-    <code>ReadableStream</code> objects, each of which returns the contents of the
-    <code>Blob</code>.</li>
-  <li>Call the returned stream's {{domxref("ReadableStream.pipeThrough",
+- Call {{domxref("ReadableStream.getReader", "getReader()")}} on the returned stream
+  to get an object to use to read the data from the blob using methods such as the
+  {{domxref("ReadableStreamDefaultReader")}} interface's
+  {{domxref("ReadableStreamDefaultReader.read", "read()")}} method.
+- Call the returned stream's {{domxref("ReadableStream.pipeTo", "pipeTo()")}} method
+  to pipe the blob's data to a writable stream.
+- Call the returned stream's {{domxref("ReadableStream.tee", "tee()")}} method to
+  **tee** the readable stream. This returns an array containing two new
+  `ReadableStream` objects, each of which returns the contents of the
+  `Blob`.
+- Call the returned stream's {{domxref("ReadableStream.pipeThrough",
     "pipeThrough()")}} method to pipe the stream through a {{domxref("TransformStream")}}
-    or any other readable and writable pair.</li>
-</ul>
+  or any other readable and writable pair.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Response.body")}}</li>
-  <li><a href="/en-US/docs/Web/API/Streams_API">Streams API</a></li>
-</ul>
+- {{domxref("Response.body")}}
+- [Streams API](/en-US/docs/Web/API/Streams_API)

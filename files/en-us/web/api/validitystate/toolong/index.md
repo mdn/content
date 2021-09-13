@@ -10,21 +10,19 @@ tags:
   - Reference
 browser-compat: api.ValidityState.tooLong
 ---
-<div>{{draft}}</div>
+{{draft}}
 
-<p>The read-only <strong><code>tooLong</code></strong> property of a <strong><code><a href="/en-US/docs/Web/API/ValidityState">ValidityState</a></code></strong> object indicates if the value of an {{HTMLElement("input")}} or {{HTMLElement("textarea")}}, after having been edited by the user, exceeds the maximum code-unit length established by the element's <code><a href="/en-US/docs/Web/HTML/Attributes/maxlength">maxlength</a></code> attribute.</p>
+The read-only **`tooLong`** property of a **[`ValidityState`](/en-US/docs/Web/API/ValidityState)** object indicates if the value of an {{HTMLElement("input")}} or {{HTMLElement("textarea")}}, after having been edited by the user, exceeds the maximum code-unit length established by the element's [`maxlength`](/en-US/docs/Web/HTML/Attributes/maxlength) attribute.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">Constraint validation</a></li>
- <li><a href="/en-US/docs/Learn/Forms/Form_validation">Forms: Data form validation</a></li>
-</ul>
+- [Constraint validation](/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation)
+- [Forms: Data form validation](/en-US/docs/Learn/Forms/Form_validation)

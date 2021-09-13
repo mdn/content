@@ -15,56 +15,53 @@ tags:
   - show
 browser-compat: api.Window.pageshow_event
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>pageshow</code></strong> event is sent to a {{domxref("Window")}} when the browser displays the window's document due to navigation.</p>
+The **`pageshow`** event is sent to a {{domxref("Window")}} when the browser displays the window's document due to navigation.
 
-<p>This includes:</p>
+This includes:
 
-<ul>
- <li>Initially loading the page</li>
- <li>Navigating to the page from another page in the same window or tab</li>
- <li>Restoring a frozen page on mobile OSes</li>
- <li>Returning to the page using the browser's forward or back buttons</li>
-</ul>
+- Initially loading the page
+- Navigating to the page from another page in the same window or tab
+- Restoring a frozen page on mobile OSes
+- Returning to the page using the browser's forward or back buttons
 
-<div class="notecard note">
-<p><strong>Note:</strong> During the initial page load, the <code>pageshow</code> event fires <em>after</em> the {{domxref("Window/load_event", "load")}} event.</p>
-</div>
+> **Note:** During the initial page load, the `pageshow` event fires _after_ the {{domxref("Window/load_event", "load")}} event.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("PageTransitionEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("Window.onpageshow", "onpageshow")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("PageTransitionEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>{{domxref("Window.onpageshow", "onpageshow")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example sets up event handlers for events listed in the array <code>events</code>. The handler, <code>eventLogger()</code>, logs the type of event that occurred to the console, and includes the value of the {{domxref("PageTransitionEvent.persisted", "persisted")}} flag on <code>pageshow</code> and <code>pagehide</code> events.</p>
+This example sets up event handlers for events listed in the array `events`. The handler, `eventLogger()`, logs the type of event that occurred to the console, and includes the value of the {{domxref("PageTransitionEvent.persisted", "persisted")}} flag on `pageshow` and `pagehide` events.
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">const events = [
+```js
+const events = [
   "pagehide", "pageshow",
   "unload", "load"
 ];
 
-const eventLogger = event =&gt; {
+const eventLogger = event => {
   switch (event.type) {
     case "pagehide":
     case "pageshow":
@@ -77,31 +74,31 @@ const eventLogger = event =&gt; {
   }
 };
 
-events.forEach(eventName =&gt;
+events.forEach(eventName =>
   window.addEventListener(eventName, eventLogger)
-);</pre>
+);
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Open the console and watch the output as you navigate to and from
+```html
+<p>Open the console and watch the output as you navigate to and from
 this page. Try loading new pages into this tab, then navigating forward
-and backward through history, noting the events’ output to the log.&lt;/p&gt;
-</pre>
+and backward through history, noting the events’ output to the log.</p>
+```
 
-<h3 id="Results">Results</h3>
+### Results
 
-<p>{{EmbedLiveSample("Examples", 640, 250)}}</p>
+{{EmbedLiveSample("Examples", 640, 250)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("Window.pagehide_event", "pagehide")}}</li>
-</ul>
+- {{domxref("Window.pagehide_event", "pagehide")}}

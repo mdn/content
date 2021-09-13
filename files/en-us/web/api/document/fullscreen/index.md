@@ -14,54 +14,52 @@ tags:
   - screen
 browser-compat: api.Document.fullscreen
 ---
-<div>{{APIRef("Fullscreen API")}}{{Deprecated_Header}}</div>
+{{APIRef("Fullscreen API")}}{{Deprecated_Header}}
 
-<p>The obsolete {{domxref("Document")}} interface's <strong><code>fullscreen</code></strong> read-only property reports whether or not the document is currently displaying content in full-screen mode.</p>
+The obsolete {{domxref("Document")}} interface's **`fullscreen`** read-only property reports whether or not the document is currently displaying content in full-screen mode.
 
-<p>Although this property is read-only, it will not throw if it is modified (even in strict mode); the setter is a no-operation and it will be ignored.</p>
+Although this property is read-only, it will not throw if it is modified (even in strict mode); the setter is a no-operation and it will be ignored.
 
-<div class="note">
-<p><strong>Note:</strong> Since this property is deprecated, you can determine if full-screen mode is active on the document by checking to see if {{DOMxRef("Document.fullscreenElement")}} is not <code>null</code>.</p>
-</div>
+> **Note:** Since this property is deprecated, you can determine if full-screen mode is active on the document by checking to see if {{DOMxRef("Document.fullscreenElement")}} is not `null`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="eval">var <var>isFullScreen</var> = <var>document</var>.fullscreen;
-</pre>
+    var isFullScreen = document.fullscreen;
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A Boolean value which is <code>true</code> if the document is currently displaying an element in full-screen mode; otherwise, the value is <code>false.</code></p>
+A Boolean value which is `true` if the document is currently displaying an element in full-screen mode; otherwise, the value is `false.`
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This simple function reports whether or not full-screen mode is currently active, using the obsolete <code>fullscreen</code> property.</p>
+This simple function reports whether or not full-screen mode is currently active, using the obsolete `fullscreen` property.
 
-<pre class="brush: js">function isDocumentInFullScreenMode() {
+```js
+function isDocumentInFullScreenMode() {
   return document.fullscreen;
 }
-</pre>
+```
 
-<p>This next example, on the other hand, uses the current <code>fullscreenElement</code> property to determine the same thing:</p>
+This next example, on the other hand, uses the current `fullscreenElement` property to determine the same thing:
 
-<pre class="brush: js">function isDocumentInFullScreenMode() {
+```js
+function isDocumentInFullScreenMode() {
   return document.fullscreenElement !== null;
-}</pre>
+}
+```
 
-<p>If <code>fullscreenElement</code> isn't <code>null</code>, this returns <code>true</code>, indicating that full-screen mode is in effect.</p>
+If `fullscreenElement` isn't `null`, this returns `true`, indicating that full-screen mode is in effect.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Fullscreen_API">Fullscreen API</a></li>
- <li><a href="/en-US/docs/Web/API/Fullscreen_API/Guide">Guide to the Fullscreen API</a></li>
- <li>{{DOMxRef("Document.fullscreenEnabled")}}</li>
-</ul>
+- [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API)
+- [Guide to the Fullscreen API](/en-US/docs/Web/API/Fullscreen_API/Guide)
+- {{DOMxRef("Document.fullscreenEnabled")}}

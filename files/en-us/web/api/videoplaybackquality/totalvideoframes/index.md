@@ -2,72 +2,73 @@
 title: VideoPlaybackQuality.totalVideoFrames
 slug: Web/API/VideoPlaybackQuality/totalVideoFrames
 tags:
-- API
-- Experimental
-- Frames
-- HTML DOM
-- Media
-- Media Playback Quality
-- Media Playback Quality API
-- Playback
-- Property
-- Quality
-- Reference
-- Video
-- VideoPlaybackQuality
-- totalVideoFrames
+  - API
+  - Experimental
+  - Frames
+  - HTML DOM
+  - Media
+  - Media Playback Quality
+  - Media Playback Quality API
+  - Playback
+  - Property
+  - Quality
+  - Reference
+  - Video
+  - VideoPlaybackQuality
+  - totalVideoFrames
 browser-compat: api.VideoPlaybackQuality.totalVideoFrames
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p>The {{domxref("VideoPlaybackQuality")}} interface's
-    <code><strong>totalVideoFrames</strong></code> read-only property returns the total
-    number of video frames that have been displayed or dropped since the media was
-    loaded.</p>
+The {{domxref("VideoPlaybackQuality")}} interface's
+**`totalVideoFrames`** read-only property returns the total
+number of video frames that have been displayed or dropped since the media was
+loaded.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>value</em> = <em>videoPlaybackQuality</em>.totalVideoFrames;</pre>
+```js
+value = videoPlaybackQuality.totalVideoFrames;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>The total number of frames that the {{HTMLElement("video")}} element has displayed or
-  dropped since the media was loaded into it. Essentially, this is the number of frames
-  the element <em>would have presented</em> had no problems occurred.</p>
+The total number of frames that the {{HTMLElement("video")}} element has displayed or
+dropped since the media was loaded into it. Essentially, this is the number of frames
+the element _would have presented_ had no problems occurred.
 
-<p>This value is reset when the media is reloaded or replaced.</p>
+This value is reset when the media is reloaded or replaced.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example calls {{domxref("HTMLVideoElement.getVideoPlaybackQuality",
+This example calls {{domxref("HTMLVideoElement.getVideoPlaybackQuality",
   "getVideoPlaybackQuality()")}} to obtain a {{domxref("VideoPlaybackQuality")}} object,
-  then determines what percentage of frames have been lost by either corruption or being
-  dropped. If that exceeds 10% (0.1), a function called
-  <code>lostFramesThresholdExceeded()</code> is called to, perhaps, update a quality
-  indicator to show an increase in frame loss.</p>
+then determines what percentage of frames have been lost by either corruption or being
+dropped. If that exceeds 10% (0.1), a function called
+`lostFramesThresholdExceeded()` is called to, perhaps, update a quality
+indicator to show an increase in frame loss.
 
-<pre class="brush: js">var videoElem = document.getElementById("my_vid");
+```js
+var videoElem = document.getElementById("my_vid");
 var quality = videoElem.getVideoPlaybackQuality();
 
-if ((quality.corruptedVideoFrames + quality.droppedVideoFrames)/quality.totalVideoFrames &gt; 0.1) {
+if ((quality.corruptedVideoFrames + quality.droppedVideoFrames)/quality.totalVideoFrames > 0.1) {
   lostFramesThresholdExceeded();
-}</pre>
+}
+```
 
-<p>A similar algorithm might be used to attempt to switch to a lower-resolution video that
-  requires less bandwidth, in order to avoid dropping frames.</p>
+A similar algorithm might be used to attempt to switch to a lower-resolution video that
+requires less bandwidth, in order to avoid dropping frames.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("HTMLVideoElement.getVideoPlaybackQuality()")}} method for
-    constructing and returning this interface.</li>
-</ul>
+- The {{domxref("HTMLVideoElement.getVideoPlaybackQuality()")}} method for
+  constructing and returning this interface.

@@ -13,30 +13,27 @@ tags:
   - WebVR
 browser-compat: api.VRStageParameters
 ---
-<div>{{APIRef("WebVR API")}}{{Deprecated_Header}}</div>
+{{APIRef("WebVR API")}}{{Deprecated_Header}}
 
-<p>The <strong><code>VRStageParameters</code></strong> interface of the <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a> represents the values describing the stage area for devices that support room-scale experiences.</p>
+The **`VRStageParameters`** interface of the [WebVR API](/en-US/docs/Web/API/WebVR_API) represents the values describing the stage area for devices that support room-scale experiences.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This interface was part of the old <a href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</a>. It has been superseded by the <a href="https://immersive-web.github.io/webxr/">WebXR Device API</a>.</p>
-</div>
+> **Note:** This interface was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-<p>This interface is accessible through the {{domxref("VRDisplay.stageParameters")}} property.</p>
+This interface is accessible through the {{domxref("VRDisplay.stageParameters")}} property.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("VRStageParameters.sittingToStandingTransform")}} {{readonlyInline}}</dt>
- <dd>Contains a matrix that transforms the sitting-space view matrices of {{domxref("VRFrameData")}} to standing-space.</dd>
- <dt>{{domxref("VRStageParameters.sizeX")}} {{readonlyInline}}</dt>
- <dd><dfn>Returns the w</dfn>idth of the play-area bounds in meters.</dd>
- <dt>{{domxref("VRStageParameters.sizeY")}} {{readonlyInline}}</dt>
- <dd><dfn>Returns the depth</dfn> of the play-area bounds in meters.</dd>
-</dl>
+- {{domxref("VRStageParameters.sittingToStandingTransform")}} {{readonlyInline}}
+  - : Contains a matrix that transforms the sitting-space view matrices of {{domxref("VRFrameData")}} to standing-space.
+- {{domxref("VRStageParameters.sizeX")}} {{readonlyInline}}
+  - : *Returns the w*idth of the play-area bounds in meters.
+- {{domxref("VRStageParameters.sizeY")}} {{readonlyInline}}
+  - : _Returns the depth_ of the play-area bounds in meters.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var info = document.querySelector('p');
+```js
+var info = document.querySelector('p');
 var vrDisplay;
 
 navigator.getVRDisplays().then(function(displays) {
@@ -47,25 +44,25 @@ navigator.getVRDisplays().then(function(displays) {
   if(stageParams === null) {
     info.textContent = 'Your VR Hardware does not support room-scale experiences.'
   } else {
-    info.innerHTML = '&lt;strong&gt;Display stage parameters&lt;/strong&gt;'
-                 + '&lt;br&gt;Sitting to standing transform: ' + stageParams.sittingToStandingTransform
-                 + '&lt;br&gt;Play area width (m): ' + stageParams.sizeX
-                 + '&lt;br&gt;Play area depth (m): ' + stageParams.sizeY
+    info.innerHTML = '<strong>Display stage parameters</strong>'
+                 + '<br>Sitting to standing transform: ' + stageParams.sittingToStandingTransform
+                 + '<br>Play area width (m): ' + stageParams.sizeX
+                 + '<br>Play area depth (m): ' + stageParams.sizeY
   }
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This interface was part of the old <a href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</a> that has been superseded by the <a href="https://immersive-web.github.io/webxr/">WebXR Device API</a>. It is no longer on track to becoming a standard.</p>
-<p>Until all browsers have implemented the new <a href="/en-US/docs/Web/API/WebXR_Device_API/Fundamentals">WebXR APIs</a>, it is recommended to rely on frameworks, like <a href="https://aframe.io/">A-Frame</a>, <a href="https://www.babylonjs.com/">Babylon.js</a>, or <a href="https://threejs.org/">Three.js</a>, or a <a href="https://github.com/immersive-web/webxr-polyfill">polyfill</a>, to develop WebXR applications that will work across all browsers <a href="https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/">[1]</a>.</p>
+This interface was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) that has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/). It is no longer on track to becoming a standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals), it is recommended to rely on frameworks, like [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), or [Three.js](https://threejs.org/), or a [polyfill](https://github.com/immersive-web/webxr-polyfill), to develop WebXR applications that will work across all browsers [\[1\]](https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/).
 
-<p>{{Compat}}</p>
+## Browser compatibility
 
-<h2 id="See_also">See also</h2>
+{{Compat}}
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebVR_API">WebVR API homepage</a></li>
- <li><a href="https://mixedreality.mozilla.org/">https://mixedreality.mozilla.org/</a> — demos, downloads, and other resources from the Mozilla VR team.</li>
-</ul>
+## See also
+
+- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API)
+- <https://mixedreality.mozilla.org/> — demos, downloads, and other resources from the Mozilla VR team.

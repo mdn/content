@@ -2,70 +2,64 @@
 title: DataTransfer.addElement()
 slug: Web/API/DataTransfer/addElement
 tags:
-- API
-- Method
-- Non-standard
-- Reference
-- drag and drop
+  - API
+  - Method
+  - Non-standard
+  - Reference
+  - drag and drop
 browser-compat: api.DataTransfer.addElement
 ---
-<div>{{APIRef("HTML Drag and Drop API")}}</div>
+{{APIRef("HTML Drag and Drop API")}}
 
-<p>{{Non-standard_header()}}</p>
+{{Non-standard_header()}}
 
-<p>The <strong><code>DataTransfer.addElement()</code></strong> method sets the drag source
-  to the given element. This element will be the element to which {{event("drag")}} and
-  {{event("dragend")}} events are fired, and not the default target (the node that was
-  dragged).</p>
+The **`DataTransfer.addElement()`** method sets the drag source
+to the given element. This element will be the element to which {{event("drag")}} and
+{{event("dragend")}} events are fired, and not the default target (the node that was
+dragged).
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This method is Firefox-specific.</p>
-</div>
+> **Note:** This method is Firefox-specific.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <em>dataTransfer</em>.addElement(el);
-</pre>
+```js
+void dataTransfer.addElement(el);
+```
 
-<h3 id="Arguments">Arguments</h3>
+### Arguments
 
-<dl>
-  <dt><em>el</em></dt>
-  <dd>The {{domxref("Element")}} to set as the drag source.</dd>
-</dl>
+- _el_
+  - : The {{domxref("Element")}} to set as the drag source.
 
-<h3 id="Return_Value">Return value</h3>
+### Return value
 
-<dl>
-  <dt>void</dt>
-  <dd> </dd>
-</dl>
+- void
+  - :
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example shows the use of the <code>addElement()</code> method</p>
+This example shows the use of the `addElement()` method
 
-<pre class="brush: js">function change_drag_node(event, node)
+```js
+function change_drag_node(event, node)
 {
   var dt = event.dataTransfer;
   dt.addElement(node);
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This method is not defined in any Web standard.</p>
+This method is not defined in any Web standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API">Drag and drop</a></li>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</a></li>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">Recommended Drag Types</a></li>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items">Dragging and Dropping Multiple Items</a></li>
- <li><a href="https://codepen.io/tech_query/pen/MqGgap">DataTransfer test - Paste or Drag</a></li>
-</ul>
+- [Drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
+- [Drag Operations](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+- [Recommended Drag Types](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
+- [Dragging and Dropping Multiple Items](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
+- [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)

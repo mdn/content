@@ -2,31 +2,30 @@
 title: Screen.left
 slug: Web/API/Screen/left
 tags:
-- API
-- 'API:Microsoft Extensions'
-- 'API:Mozilla Extensions'
-- 'API:WebKit Extensions'
-- DOM
-- Non-standard
-- Property
+  - API
+  - API:Microsoft Extensions
+  - API:Mozilla Extensions
+  - API:WebKit Extensions
+  - DOM
+  - Non-standard
+  - Property
 browser-compat: api.Screen.left
 ---
-<p>{{APIRef("CSSOM")}}{{Non-standard_Header}}</p>
+{{APIRef("CSSOM")}}{{Non-standard_Header}}
 
-<p>Returns the distance in pixels from the left side of the main screen to the left side
-  of the current screen.</p>
+Returns the distance in pixels from the left side of the main screen to the left side
+of the current screen.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>left</var> = window.screen.left;
-</pre>
+```js
+var left = window.screen.left;
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{DOMxRef("screen.top")}}</li>
-</ul>
+- {{DOMxRef("screen.top")}}

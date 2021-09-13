@@ -2,43 +2,46 @@
 title: StylePropertyMapReadOnly.entries()
 slug: Web/API/StylePropertyMapReadOnly/entries
 tags:
-- API
-- CSS Typed Object Model API
-- Experimental
-- Houdini
-- Method
-- Reference
-- StylePropertyMapReadOnly
-- entries()
+  - API
+  - CSS Typed Object Model API
+  - Experimental
+  - Houdini
+  - Method
+  - Reference
+  - StylePropertyMapReadOnly
+  - entries()
 browser-compat: api.StylePropertyMapReadOnly.entries
 ---
-<p>{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}</p>
+{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>StylePropertyMapReadOnly.entries()</code></strong> method returns an
-  array of a given object's own enumerable property <code>[key, value]</code> pairs, in
-  the same order as that provided by a {{jsxref("Statements/for...in", "for...in")}} loop
-  (the difference being that a for-in loop enumerates properties in the prototype chain as
-  well).</p>
+The **`StylePropertyMapReadOnly.entries()`** method returns an
+array of a given object's own enumerable property `[key, value]` pairs, in
+the same order as that provided by a {{jsxref("Statements/for...in", "for...in")}} loop
+(the difference being that a for-in loop enumerates properties in the prototype chain as
+well).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">StylePropertyMapReadOnly.entries()</pre>
+```js
+StylePropertyMapReadOnly.entries()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An array of the given <code>StylePropertyMapReadOnly</code> object's own enumerable
-  property <code>[key, value]</code> pairs.</p>
+An array of the given `StylePropertyMapReadOnly` object's own enumerable
+property `[key, value]` pairs.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>Here shows an example of using <code>StylePropertyMapReadOnly.entries()</code> method
-  on an elements computed styles.</p>
+Here shows an example of using `StylePropertyMapReadOnly.entries()` method
+on an elements computed styles.
 
-<pre class="brush: js">// grab a dom element
+```js
+// grab a dom element
 const buttonEl = document.querySelector('button');
 
 // we can retrieve all computed styles with `computedStyleMap`
@@ -49,12 +52,12 @@ const iterableStyles = allComputedStyles.entries();
 
 // returns a two item array with align-content as the first item and CSSStyleValue as the second
 console.log(iterableStyles.next().value);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

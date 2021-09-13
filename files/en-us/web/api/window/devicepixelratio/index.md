@@ -13,58 +13,60 @@ tags:
   - resolution
 browser-compat: api.Window.devicePixelRatio
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p>The <code><strong>devicePixelRatio</strong></code> of
-    {{domxref("Window")}} interface returns the ratio of the resolution in <em>physical
-      pixels</em> to the resolution in <em>CSS pixels</em> for the current display
-    device.</p>
+The **`devicePixelRatio`** of
+{{domxref("Window")}} interface returns the ratio of the resolution in _physical
+pixels_ to the resolution in _CSS pixels_ for the current display
+device.
 
-<p>This value could also be interpreted as the ratio of pixel sizes: the
-  size of one <em>CSS pixel</em> to the size of one <em>physical pixel</em>. In simpler
-  terms, this tells the browser how many of the screen's actual pixels should be used to
-  draw a single CSS pixel.</p>
+This value could also be interpreted as the ratio of pixel sizes: the
+size of one *CSS pixel* to the size of one _physical pixel_. In simpler
+terms, this tells the browser how many of the screen's actual pixels should be used to
+draw a single CSS pixel.
 
-<p>This is useful when dealing with the difference between rendering on a standard display
-  versus a HiDPI or Retina display, which use more screen pixels to draw the same objects,
-  resulting in a sharper image.</p>
+This is useful when dealing with the difference between rendering on a standard display
+versus a HiDPI or Retina display, which use more screen pixels to draw the same objects,
+resulting in a sharper image.
 
-<p>You can use {{domxref("Window.matchMedia", "window.matchMedia()")}} to check if the
-  value of <code>devicePixelRatio</code> changes (which can happen, for example, if the
-  user drags the window to a display with a different pixel density). See
-  {{anch("Monitoring screen resolution or zoom level changes", "the example below")}}.</p>
+You can use {{domxref("Window.matchMedia", "window.matchMedia()")}} to check if the
+value of `devicePixelRatio` changes (which can happen, for example, if the
+user drags the window to a display with a different pixel density). See
+{{anch("Monitoring screen resolution or zoom level changes", "the example below")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em><var>value</var></em> = window.devicePixelRatio;
-</pre>
+```js
+value = window.devicePixelRatio;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A double-precision floating-point value indicating the ratio of the display's
-  resolution in physical pixels to the resolution in CSS pixels. A value of 1 indicates a
-  classic 96 DPI (76 DPI on some platforms) display, while a value of 2 is expected for
-  HiDPI/Retina displays. Other values may be returned as well in the case of unusually low
-  resolution displays or, more often, when a screen has a higher pixel depth than double
-  the standard resolution of 96 or 76 DPI.</p>
+A double-precision floating-point value indicating the ratio of the display's
+resolution in physical pixels to the resolution in CSS pixels. A value of 1 indicates a
+classic 96 DPI (76 DPI on some platforms) display, while a value of 2 is expected for
+HiDPI/Retina displays. Other values may be returned as well in the case of unusually low
+resolution displays or, more often, when a screen has a higher pixel depth than double
+the standard resolution of 96 or 76 DPI.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Correcting_resolution_in_a_&lt;canvas&gt;">Correcting resolution in a
-  <code>&lt;canvas&gt;</code></h3>
+### Correcting resolution in a `<canvas>`
 
-<p>A {{htmlelement("canvas")}} can appear too blurry on retina screens. 
-  Use <code>window.devicePixelRatio</code> to determine how much extra pixel density
-  should be added to allow for a sharper image.</p>
+A {{htmlelement("canvas")}} can appear too blurry on retina screens. 
+Use `window.devicePixelRatio` to determine how much extra pixel density
+should be added to allow for a sharper image.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 // Set display size (css pixels).
@@ -91,25 +93,26 @@ var x = size / 2;
 var y = size / 2;
 
 var textString = "I love MDN";
-ctx.fillText(textString, x, y);</pre>
+ctx.fillText(textString, x, y);
+```
 
-<p><a href="devicepixelration_diff.jpg"><img alt="Side-by-side comparison of the effect of different devicePixelRatio values on an image shown in a retina display." src="devicepixelration_diff.jpg"></a></p>
+[![Side-by-side comparison of the effect of different devicePixelRatio values on an image shown in a retina display.](devicepixelration_diff.jpg)](devicepixelration_diff.jpg)
 
-<h3 id="Monitoring_screen_resolution_or_zoom_level_changes">Monitoring screen resolution
-  or zoom level changes</h3>
+### Monitoring screen resolution or zoom level changes
 
-<p>In this example, we'll set up a media query and watch it to see when the device
-  resolution changes, so that we can check the value of <code>devicePixelRatio</code> to
-  handle any updates we need to.</p>
+In this example, we'll set up a media query and watch it to see when the device
+resolution changes, so that we can check the value of `devicePixelRatio` to
+handle any updates we need to.
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<p>The JavaScript code creates the media query that monitors the device resolution and
-  checks the value of <code>devicePixelRatio</code> any time it changes.</p>
+The JavaScript code creates the media query that monitors the device resolution and
+checks the value of `devicePixelRatio` any time it changes.
 
-<pre class="brush: js">let pixelRatioBox = document.querySelector(".pixel-ratio");
+```js
+let pixelRatioBox = document.querySelector(".pixel-ratio");
 
-const updatePixelRatio = () =&gt; {
+const updatePixelRatio = () => {
   let pr = window.devicePixelRatio;
   let prString = (pr * 100).toFixed(0);
   pixelRatioBox.innerText = `${prString}% (${pr.toFixed(2)})`;
@@ -117,43 +120,46 @@ const updatePixelRatio = () =&gt; {
 }
 
 updatePixelRatio();
-</pre>
-<p>The string <code>mqString</code> is set up to be the media query itself. The media
-  query, which begins as <code>(resolution: 1dppx)</code> (for standard  displays) or
-  <code>(resolution: 2dppx)</code> (for Retina/HiDPI displays), checks to see if the
-  current display resolution matches a specific  number of device dots per
-  <code>px</code>.</p>
+```
 
-<p>The <code>updatePixelRatio()</code> function fetches the current value of
-  <code>devicePixelRatio</code>, then sets the {{domxref("HTMLElement.innerText",
-  "innerText")}} of the element <code>pixelRatioBox</code> to a string which displays the
-  ratio both as a percentage and as a raw decimal value with up to two decimal places.</p>
+The string `mqString` is set up to be the media query itself. The media
+query, which begins as `(resolution: 1dppx)` (for standard  displays) or
+`(resolution: 2dppx)` (for Retina/HiDPI displays), checks to see if the
+current display resolution matches a specific  number of device dots per
+`px`.
 
-<p>Then the <code>updatePixelRatio()</code> function is called once to display the
-  starting value, after which the media query is created using
-  {{domxref("Window.matchMedia", "matchMedia()")}} and
-  {{domxref("EventTarget.addEventListener", "addEventListener()")}} is called to set up
-  <code>updatePixelRatio()</code> as a handler for the <code>change</code> event.</p>
+The `updatePixelRatio()` function fetches the current value of
+`devicePixelRatio`, then sets the {{domxref("HTMLElement.innerText",
+  "innerText")}} of the element `pixelRatioBox` to a string which displays the
+ratio both as a percentage and as a raw decimal value with up to two decimal places.
 
-<h4 id="HTML_2">HTML</h4>
+Then the `updatePixelRatio()` function is called once to display the
+starting value, after which the media query is created using
+{{domxref("Window.matchMedia", "matchMedia()")}} and
+{{domxref("EventTarget.addEventListener", "addEventListener()")}} is called to set up
+`updatePixelRatio()` as a handler for the `change` event.
 
-<p>The HTML creates the boxes containing the instructions and the <code>pixel-ratio</code>
-  box that will display the current pixel ratio information.</p>
+#### HTML
 
-<pre class="brush: html">&lt;div class="container"&gt;
-  &lt;div class="inner-container"&gt;
-    &lt;p&gt;This example demonstrates the effect of zooming the page in
+The HTML creates the boxes containing the instructions and the `pixel-ratio`
+box that will display the current pixel ratio information.
+
+```html
+<div class="container">
+  <div class="inner-container">
+    <p>This example demonstrates the effect of zooming the page in
        and out (or moving it to a screen with a different scaling
-       factor) on the value of the property &lt;code&gt;Window.devicePixelRatio&lt;/code&gt;.
-       Try it and watch what happens!&lt;/p&gt;
-  &lt;/div&gt;
-    &lt;div class="pixel-ratio"&gt;&lt;/div&gt;
-&lt;/div&gt;</pre>
-</pre>
+       factor) on the value of the property <code>Window.devicePixelRatio</code>.
+       Try it and watch what happens!</p>
+  </div>
+    <div class="pixel-ratio"></div>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-  <pre class="brush: css">body {
+```css
+body {
   font: 22px arial, sans-serif;
 }
 
@@ -182,26 +188,23 @@ updatePixelRatio();
   right: 1em;
   font-weight: bold;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Monitoring_screen_resolution_or_zoom_level_changes", "100%", 500)}}
-</p>
+{{EmbedLiveSample("Monitoring_screen_resolution_or_zoom_level_changes", "100%", 500)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/Media_Queries">Media queries</a></li>
- <li><a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">Using media queries</a></li>
- <li><a href="/en-US/docs/Web/CSS/@media/resolution">CSS <code>resolution</code> media query</a></li>
- <li>The {{cssxref("image-resolution")}} property</li>
-</ul>
+- [Media queries](/en-US/docs/Web/CSS/Media_Queries)
+- [Using media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [CSS `resolution` media query](/en-US/docs/Web/CSS/@media/resolution)
+- The {{cssxref("image-resolution")}} property

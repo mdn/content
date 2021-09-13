@@ -8,24 +8,27 @@ tags:
   - Web NFC
 browser-compat: api.NDEFRecord.encoding
 ---
-<div>{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}</div>
-<p>The <strong><code>encoding</code></strong>
-    property of the {{DOMxRef("NDEFRecord")}} interface returns the encoding of
-    a textual payload, or <code>null</code> otherwise.</p>
+{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 
-<h2 id="Syntax">Syntax</h2>
+The **`encoding`**
+property of the {{DOMxRef("NDEFRecord")}} interface returns the encoding of
+a textual payload, or `null` otherwise.
 
-<pre class="brush: js">NDEFRecord.encoding</pre>
+## Syntax
 
-<h3 id="Value">Value</h3>
+```js
+NDEFRecord.encoding
+```
 
-<p>A {{DOMxRef("USVString")}} which can be one of the following: <code>"utf-8"</code>,
-  <code>"utf-16"</code>, <code>"utf-16le"</code>, or <code>"utf-16be"</code>.</p>
+### Value
 
-<h2 id="Specifications">Specifications</h2>
+A {{DOMxRef("USVString")}} which can be one of the following: `"utf-8"`,
+`"utf-16"`, `"utf-16le"`, or `"utf-16be"`.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -10,92 +10,81 @@ tags:
   - verify
 browser-compat: api.SubtleCrypto.verify
 ---
-<p>{{APIRef("Web Crypto API")}}{{SecureContext_header}}</p>
+{{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
-<p>The <code><strong>verify()</strong></code> method of the {{domxref("SubtleCrypto")}}
-  interface verifies a digital {{glossary("signature")}}.</p>
+The **`verify()`** method of the {{domxref("SubtleCrypto")}}
+interface verifies a digital {{glossary("signature")}}.
 
-<p>It takes as its arguments a {{glossary("key")}} to verify the signature with, some
-  algorithm-specific parameters, the signature, and the original signed data. It returns a
-  {{jsxref("Promise")}} which will be fulfilled with a boolean value
-  indicating whether the signature is valid.</p>
+It takes as its arguments a {{glossary("key")}} to verify the signature with, some
+algorithm-specific parameters, the signature, and the original signed data. It returns a
+{{jsxref("Promise")}} which will be fulfilled with a boolean value
+indicating whether the signature is valid.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const result = crypto.subtle.verify(algorithm, key, signature, data);
-</pre>
+```js
+const result = crypto.subtle.verify(algorithm, key, signature, data);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<ul>
-  <li><em><code>algorithm</code></em> is a {{domxref("DOMString")}} or object defining the
-    algorithm to use, and for some algorithm choices, some extra parameters. The values
-    given for the extra parameters must match those passed into the corresponding
-    {{domxref("SubtleCrypto.sign()", "sign()")}} call.
+- _`algorithm`_ is a {{domxref("DOMString")}} or object defining the
+  algorithm to use, and for some algorithm choices, some extra parameters. The values
+  given for the extra parameters must match those passed into the corresponding
+  {{domxref("SubtleCrypto.sign()", "sign()")}} call.
 
-    <ul>
-      <li>To use <a
-          href="/en-US/docs/Web/API/SubtleCrypto/sign#rsassa-pkcs1-v1_5">RSASSA-PKCS1-v1_5</a>,
-        pass the string <code>"RSASSA-PKCS1-v1_5"</code> or an object of the form
-        <code>{ "name": "RSASSA-PKCS1-v1_5" }</code>.</li>
-      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/sign#rsa-pss">RSA-PSS</a>, pass
-        an {{domxref("RsaPssParams")}} object.</li>
-      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/sign#ecdsa">ECDSA</a>, pass an
-        {{domxref("EcdsaParams")}} object.</li>
-      <li>To use <a href="/en-US/docs/Web/API/SubtleCrypto/sign#hmac">HMAC</a>, pass the
-        string <code>"HMAC"</code> or an object of the form
-        <code>{ "name": "HMAC" }</code>.</li>
-    </ul>
-  </li>
-  <li><code><em>key</em></code> is a {{domxref("CryptoKey")}} containing the key that will
-    be used to verify the signature. It is the secret key for a symmetric algorithm and
-    the public key for a public-key system.</li>
-  <li><code><em>signature</em></code> is a {{jsxref("ArrayBuffer")}} containing the
-    {{glossary("signature")}} to verify.</li>
-  <li><em><code>data</code></em> is a {{jsxref("ArrayBuffer")}} containing the data whose
-    signature is to be verified.</li>
-</ul>
+  - To use [RSASSA-PKCS1-v1_5](/en-US/docs/Web/API/SubtleCrypto/sign#rsassa-pkcs1-v1_5),
+    pass the string `"RSASSA-PKCS1-v1_5"` or an object of the form
+    `{ "name": "RSASSA-PKCS1-v1_5" }`.
+  - To use [RSA-PSS](/en-US/docs/Web/API/SubtleCrypto/sign#rsa-pss), pass
+    an {{domxref("RsaPssParams")}} object.
+  - To use [ECDSA](/en-US/docs/Web/API/SubtleCrypto/sign#ecdsa), pass an
+    {{domxref("EcdsaParams")}} object.
+  - To use [HMAC](/en-US/docs/Web/API/SubtleCrypto/sign#hmac), pass the
+    string `"HMAC"` or an object of the form
+    `{ "name": "HMAC" }`.
 
-<h3 id="Return_value">Return value</h3>
+- `key` is a {{domxref("CryptoKey")}} containing the key that will
+  be used to verify the signature. It is the secret key for a symmetric algorithm and
+  the public key for a public-key system.
+- `signature` is a {{jsxref("ArrayBuffer")}} containing the
+  {{glossary("signature")}} to verify.
+- _`data`_ is a {{jsxref("ArrayBuffer")}} containing the data whose
+  signature is to be verified.
 
-<ul>
-  <li><code><em>result</em></code> is a {{jsxref("Promise")}} that fulfills with a
-    boolean value: <code>true</code> if the signature is valid, <code>false</code>
-    otherwise.</li>
-</ul>
+### Return value
 
-<h3 id="Exceptions">Exceptions</h3>
+- `result` is a {{jsxref("Promise")}} that fulfills with a
+  boolean value: `true` if the signature is valid, `false`
+  otherwise.
 
-<p>The promise is rejected when the following exception is encountered:</p>
+### Exceptions
 
-<dl>
-  <dt>{{exception("InvalidAccessError")}}</dt>
-  <dd>Raised when the encryption key is not a key for the requested verifying algorithm or
+The promise is rejected when the following exception is encountered:
+
+- {{exception("InvalidAccessError")}}
+  - : Raised when the encryption key is not a key for the requested verifying algorithm or
     when trying to use an algorithm that is either unknown or isn't suitable for a verify
-    operation.</dd>
-</dl>
+    operation.
 
-<h2 id="Supported_algorithms">Supported algorithms</h2>
+## Supported algorithms
 
-<p>The <code>verify()</code> method supports the same algorithms as the
-  <code><a href="/en-US/docs/Web/API/SubtleCrypto/sign#supported_algorithms">sign()</a></code>
-  method.</p>
+The `verify()` method supports the same algorithms as the
+[`sign()`](/en-US/docs/Web/API/SubtleCrypto/sign#supported_algorithms)
+method.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<div class="notecard note">
-  <p><strong>Note:</strong> You can <a
-      href="https://mdn.github.io/dom-examples/web-crypto/sign-verify/index.html">try the
-      working examples</a> out on GitHub.</p>
-</div>
+> **Note:** You can [try the
+> working examples](https://mdn.github.io/dom-examples/web-crypto/sign-verify/index.html) out on GitHub.
 
-<h3 id="RSASSA-PKCS1-v1_5">RSASSA-PKCS1-v1_5</h3>
+### RSASSA-PKCS1-v1_5
 
-<p>This code uses a public key to verify a signature. <a
-    href="https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/rsassa-pkcs1.js">See
-    the complete code on GitHub.</a></p>
+This code uses a public key to verify a signature. [See
+the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/rsassa-pkcs1.js)
 
-<pre class="brush: js">/*
+```js
+/*
 Fetch the contents of the "message" textbox, and encode it
 in a form we can use for sign operation.
 */
@@ -124,15 +113,16 @@ async function verifyMessage(publicKey) {
   );
 
   signatureValue.classList.add(result ? "valid" : "invalid");
-}</pre>
+}
+```
 
-<h3 id="RSA-PSS">RSA-PSS</h3>
+### RSA-PSS
 
-<p>This code uses a public key to verify a signature. <a
-    href="https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/rsa-pss.js">See
-    the complete code on GitHub.</a></p>
+This code uses a public key to verify a signature. [See
+the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/rsa-pss.js)
 
-<pre class="brush: js">/*
+```js
+/*
 Fetch the contents of the "message" textbox, and encode it
 in a form we can use for sign operation.
 */
@@ -164,15 +154,16 @@ async function verifyMessage(publicKey) {
   );
 
   signatureValue.classList.add(result ? "valid" : "invalid");
-}</pre>
+}
+```
 
-<h3 id="ECDSA">ECDSA</h3>
+### ECDSA
 
-<p>This code uses a public key to verify a signature. <a
-    href="https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/ecdsa.js">See
-    the complete code on GitHub.</a></p>
+This code uses a public key to verify a signature. [See
+the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/ecdsa.js)
 
-<pre class="brush: js">/*
+```js
+/*
 Fetch the contents of the "message" textbox, and encode it
 in a form we can use for sign operation.
 */
@@ -204,15 +195,16 @@ async function verifyMessage(publicKey) {
   );
 
   signatureValue.classList.add(result ? "valid" : "invalid");
-}</pre>
+}
+```
 
-<h3 id="HMAC">HMAC</h3>
+### HMAC
 
-<p>This code uses a secret key to verify a signature. <a
-    href="https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/hmac.js">See
-    the complete code on GitHub.</a></p>
+This code uses a secret key to verify a signature. [See
+the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/hmac.js)
 
-<pre class="brush: js">/*
+```js
+/*
 Fetch the contents of the "message" textbox, and encode it
 in a form we can use for sign operation.
 */
@@ -241,27 +233,24 @@ async function verifyMessage(key) {
    );
 
    signatureValue.classList.add(result ? "valid" : "invalid");
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("SubtleCrypto.sign()")}}.</li>
-  <li><a href="https://datatracker.ietf.org/doc/html/rfc3447">RFC 3447</a> specifies
-    RSASSA-PKCS1-v1_5.</li>
-  <li><a href="https://datatracker.ietf.org/doc/html/rfc3447">RFC 3447</a> specifies RSA-PSS.</li>
-  <li><a
-      href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf">FIPS-186</a> specifies
-    ECDSA.</li>
-  <li><a
-      href="https://csrc.nist.gov/csrc/media/publications/fips/198/1/final/documents/fips-198-1_final.pdf">FIPS
-      198-1</a> specifies HMAC.</li>
-</ul>
+- {{domxref("SubtleCrypto.sign()")}}.
+- [RFC 3447](https://datatracker.ietf.org/doc/html/rfc3447) specifies
+  RSASSA-PKCS1-v1_5.
+- [RFC 3447](https://datatracker.ietf.org/doc/html/rfc3447) specifies RSA-PSS.
+- [FIPS-186](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf) specifies
+  ECDSA.
+- [FIPS
+  198-1](https://csrc.nist.gov/csrc/media/publications/fips/198/1/final/documents/fips-198-1_final.pdf) specifies HMAC.

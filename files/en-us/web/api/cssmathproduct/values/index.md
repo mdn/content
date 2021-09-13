@@ -2,37 +2,38 @@
 title: CSSMathProduct.values
 slug: Web/API/CSSMathProduct/values
 tags:
-- API
-- CSS Typed Object Model API
-- CSSMathProduct
-- CSSUnparsedValue
-- Experimental
-- Houdini
-- Property
-- Reference
-- values
+  - API
+  - CSS Typed Object Model API
+  - CSSMathProduct
+  - CSSUnparsedValue
+  - Experimental
+  - Houdini
+  - Property
+  - Reference
+  - values
 browser-compat: api.CSSMathProduct.values
 ---
-<p>{{draft}}{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}</p>
+{{draft}}{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>CSSMathProduct.values</code></strong> read-only
-  property of the {{domxref("CSSMathProduct")}} interface returns a
-  {{domxref('CSSNumericArray')}} object which contains one or more
-  {{domxref('CSSNumericValue')}} objects.</p>
+The **`CSSMathProduct.values`** read-only
+property of the {{domxref("CSSMathProduct")}} interface returns a
+{{domxref('CSSNumericArray')}} object which contains one or more
+{{domxref('CSSNumericValue')}} objects.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>cssNumericArray</em> = CSSMathProduct.values;</pre>
+```js
+var cssNumericArray = CSSMathProduct.values;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref('CSSNumericArray')}}.</p>
+A {{domxref('CSSNumericArray')}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

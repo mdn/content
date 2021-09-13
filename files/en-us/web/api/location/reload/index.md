@@ -2,51 +2,49 @@
 title: 'Location: reload()'
 slug: Web/API/Location/reload
 tags:
-- API
-- HTML DOM
-- Location
-- Method
-- Reference
+  - API
+  - HTML DOM
+  - Location
+  - Method
+  - Reference
 browser-compat: api.Location.reload
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p>The <code><strong>location.reload()</strong></code> method reloads the current URL, like the Refresh button.</p>
+The **`location.reload()`** method reloads the current URL, like the Refresh button.
 
-<p>The reload may be blocked and a <code>SECURITY_ERROR</code> {{domxref("DOMException")}}
-  thrown. This happens if the {{Glossary("origin")}} of the script calling
-  <code>location.reload()</code> differs from the origin of the page that owns the
-  {{domxref("Location")}} object. See <a
-    href="/en-US/docs/Web/Security/Same-origin_policy">Same-origin policy</a> for more
-  information.</p>
+The reload may be blocked and a `SECURITY_ERROR` {{domxref("DOMException")}}
+thrown. This happens if the {{Glossary("origin")}} of the script calling
+`location.reload()` differs from the origin of the page that owns the
+{{domxref("Location")}} object. See [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy) for more
+information.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">location.reload();
-</pre>
+```js
+location.reload();
+```
 
-<h2 id="location.reload_has_no_parameter">location.reload() has no parameter</h2>
+## location.reload() has no parameter
 
-<p>Firefox supports a non-standard <a href="https://searchfox.org/mozilla-central/source/dom/base/Location.cpp#551"><code>forceGet</code> boolean parameter</a> for <code>location.reload()</code>, to tell Firefox to bypass its cache and force-reload the current document. However, in all other browsers, any parameter you specify in a <code>location.reload()</code> call will be ignored and have no effect of any kind.</p>
+Firefox supports a non-standard [`forceGet` boolean parameter](https://searchfox.org/mozilla-central/source/dom/base/Location.cpp#551) for `location.reload()`, to tell Firefox to bypass its cache and force-reload the current document. However, in all other browsers, any parameter you specify in a `location.reload()` call will be ignored and have no effect of any kind.
 
-<p>You may, though, come across instances of <code>location.reload(true)</code> in existing code that was written with the assumption the force-reload effect occurs in all browsers. A GitHub "<code>location.reload(true)</code>" search returns <a href="https://github.com/search?q=%22location.reload%28true%29%22&type=code">several hundred thousand results</a>. So there’s a lot of existing code which has it.</p>
+You may, though, come across instances of `location.reload(true)` in existing code that was written with the assumption the force-reload effect occurs in all browsers. A GitHub "`location.reload(true)`" search returns [several hundred thousand results](https://github.com/search?q=%22location.reload%28true%29%22&type=code). So there’s a lot of existing code which has it.
 
-<p>The history of it is: some version of Netscape Navigator added support for it, which apparently eventually got picked up in Firefox. And at one point the W3C Web APIs Working Group <a href="https://www.w3.org/2005/06/tracker/webapi/issues/69">took up an issue</a> to consider adding it to the specification for <code>location.reload()</code>. However, it was never actually added.</p>
+The history of it is: some version of Netscape Navigator added support for it, which apparently eventually got picked up in Firefox. And at one point the W3C Web APIs Working Group [took up an issue](https://www.w3.org/2005/06/tracker/webapi/issues/69) to consider adding it to the specification for `location.reload()`. However, it was never actually added.
 
-<p>So a boolean parameter is not part of the current specification for <code>location.reload()</code> — and in fact has <em>never</em> been part of any specification for <code>location.reload()</code> ever published.</p>
+So a boolean parameter is not part of the current specification for `location.reload()` — and in fact has _never_ been part of any specification for `location.reload()` ever published.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("Location")}} interface it belongs to.</li>
-  <li>Similar methods: {{domxref("Location.assign()")}} and
-    {{domxref("Location.replace()")}}.</li>
-</ul>
+- The {{domxref("Location")}} interface it belongs to.
+- Similar methods: {{domxref("Location.assign()")}} and
+  {{domxref("Location.replace()")}}.

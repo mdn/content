@@ -2,151 +2,147 @@
 title: CanvasRenderingContext2D.fillText()
 slug: Web/API/CanvasRenderingContext2D/fillText
 tags:
-- API
-- Canvas
-- CanvasRenderingContext2D
-- Draw String
-- Draw Text
-- Drawing Strings
-- Drawing Text
-- Fill Text
-- Filling Text
-- Method
-- Reference
-- Text
-- fillText
+  - API
+  - Canvas
+  - CanvasRenderingContext2D
+  - Draw String
+  - Draw Text
+  - Drawing Strings
+  - Drawing Text
+  - Fill Text
+  - Filling Text
+  - Method
+  - Reference
+  - Text
+  - fillText
 browser-compat: api.CanvasRenderingContext2D.fillText
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The {{domxref("CanvasRenderingContext2D")}} method
-  <code><strong>fillText()</strong></code>, part of the Canvas 2D API, draws a text string
-  at the specified coordinates, filling the string's characters with the current
-  {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}}. An optional parameter
-  allows specifying a maximum width for the rendered text, which the {{Glossary("user
-  agent")}} will achieve by condensing the text or by using a lower font size.</p>
+The {{domxref("CanvasRenderingContext2D")}} method
+**`fillText()`**, part of the Canvas 2D API, draws a text string
+at the specified coordinates, filling the string's characters with the current
+{{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}}. An optional parameter
+allows specifying a maximum width for the rendered text, which the {{Glossary("user
+  agent")}} will achieve by condensing the text or by using a lower font size.
 
-<p>This method draws directly to the canvas without modifying the current path, so any
-  subsequent {{domxref("CanvasRenderingContext2D.fill()", "fill()")}} or
-  {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}} calls will have no effect
-  on it.</p>
+This method draws directly to the canvas without modifying the current path, so any
+subsequent {{domxref("CanvasRenderingContext2D.fill()", "fill()")}} or
+{{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}} calls will have no effect
+on it.
 
-<p>The text is rendered using the font and text layout configuration as defined by the
-  {{domxref("CanvasRenderingContext2D.font","font")}},
-  {{domxref("CanvasRenderingContext2D.textAlign","textAlign")}},
-  {{domxref("CanvasRenderingContext2D.textBaseline","textBaseline")}}, and
-  {{domxref("CanvasRenderingContext2D.direction","direction")}} properties.</p>
+The text is rendered using the font and text layout configuration as defined by the
+{{domxref("CanvasRenderingContext2D.font","font")}},
+{{domxref("CanvasRenderingContext2D.textAlign","textAlign")}},
+{{domxref("CanvasRenderingContext2D.textBaseline","textBaseline")}}, and
+{{domxref("CanvasRenderingContext2D.direction","direction")}} properties.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> To draw the outlines of the characters in a string, call the context's
-    {{domxref("CanvasRenderingContext2D.strokeText", "strokeText()")}} method.</p>
-</div>
+> **Note:** To draw the outlines of the characters in a string, call the context's
+> {{domxref("CanvasRenderingContext2D.strokeText", "strokeText()")}} method.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>CanvasRenderingContext2D</em>.fillText(<em>text</em>, <em>x</em>, <em>y</em> [, <em>maxWidth</em>]);
-</pre>
+```js
+CanvasRenderingContext2D.fillText(text, x, y [, maxWidth]);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>text</code></dt>
-  <dd>A {{domxref("DOMString")}} specifying the text string to render into the context.
+- `text`
+  - : A {{domxref("DOMString")}} specifying the text string to render into the context.
     The text is rendered using the settings specified by
     {{domxref("CanvasRenderingContext2D.font","font")}},
     {{domxref("CanvasRenderingContext2D.textAlign","textAlign")}},
     {{domxref("CanvasRenderingContext2D.textBaseline","textBaseline")}}, and
-    {{domxref("CanvasRenderingContext2D.direction","direction")}}.</dd>
-  <dt><code>x</code></dt>
-  <dd>The x-axis coordinate of the point at which to begin drawing the text, in pixels.
-  </dd>
-  <dt><code>y</code></dt>
-  <dd>The y-axis coordinate of the baseline on which to begin drawing the text, in pixels.
-  </dd>
-  <dt><code>maxWidth</code> {{optional_inline}}</dt>
-  <dd>The maximum number of pixels wide the text may be once rendered. If not specified,
+    {{domxref("CanvasRenderingContext2D.direction","direction")}}.
+- `x`
+  - : The x-axis coordinate of the point at which to begin drawing the text, in pixels.
+- `y`
+  - : The y-axis coordinate of the baseline on which to begin drawing the text, in pixels.
+- `maxWidth` {{optional_inline}}
+  - : The maximum number of pixels wide the text may be once rendered. If not specified,
     there is no limit to the width of the text. However, if this value is provided, the
     user agent will adjust the kerning, select a more horizontally condensed font (if one
     is available or can be generated without loss of quality), or scale down to a smaller
-    font size in order to fit the text in the specified width.</dd>
-</dl>
+    font size in order to fit the text in the specified width.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{jsxref("undefined")}}.</p>
+{{jsxref("undefined")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Drawing_filled_text">Drawing filled text</h3>
+### Drawing filled text
 
-<p>This example writes the words "Hello world" using the <code>fillText()</code> method.
-</p>
+This example writes the words "Hello world" using the `fillText()` method.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<p>First, we need a canvas to draw into. This code creates a context 400 pixels wide and
-  150 pixels across.</p>
+First, we need a canvas to draw into. This code creates a context 400 pixels wide and
+150 pixels across.
 
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="150"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas" width="400" height="150"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<p>The JavaScript code for this example follows.</p>
+The JavaScript code for this example follows.
 
-<pre class="brush: js;">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.font = '50px serif';
 ctx.fillText('Hello world', 50, 90);
-</pre>
+```
 
-<p>This code obtains a reference to the {{HTMLElement("canvas")}}, then gets a reference
-  to its 2D graphics context.</p>
+This code obtains a reference to the {{HTMLElement("canvas")}}, then gets a reference
+to its 2D graphics context.
 
-<p>With that in hand, we set the {{domxref("CanvasRenderingContext2D.font", "font")}} to
-  50-pixel-tall "serif" (the user's default {{interwiki("wikipedia", "serif")}} font),
-  then call <code>fillText()</code> to draw the text "Hello world," starting at the
-  coordinates (50, 90).</p>
+With that in hand, we set the {{domxref("CanvasRenderingContext2D.font", "font")}} to
+50-pixel-tall "serif" (the user's default {{interwiki("wikipedia", "serif")}} font),
+then call `fillText()` to draw the text "Hello world," starting at the
+coordinates (50, 90).
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Drawing_filled_text', 700, 180) }}</p>
+{{ EmbedLiveSample('Drawing_filled_text', 700, 180) }}
 
-<h3 id="Restricting_the_text_size">Restricting the text size</h3>
+### Restricting the text size
 
-<p>This example writes the words "Hello world," restricting its width to 140 pixels.</p>
+This example writes the words "Hello world," restricting its width to 140 pixels.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="150"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas" width="400" height="150"></canvas>
+```
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js;">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.font = '50px serif';
 ctx.fillText('Hello world', 50, 90, 140);
-</pre>
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Restricting_the_text_size', 700, 180) }}</p>
+{{ EmbedLiveSample('Restricting_the_text_size', 700, 180) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text">Drawing text</a></li>
-  <li>{{domxref("CanvasRenderingContext2D")}}</li>
-  <li>{{domxref("CanvasRenderingContext2D.strokeText()")}}</li>
-</ul>
+- [Drawing text](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text)
+- {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.strokeText()")}}

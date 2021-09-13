@@ -2,87 +2,87 @@
 title: CanvasRenderingContext2D.fillStyle
 slug: Web/API/CanvasRenderingContext2D/fillStyle
 tags:
-- API
-- Canvas
-- CanvasRenderingContext2D
-- Property
-- Reference
+  - API
+  - Canvas
+  - CanvasRenderingContext2D
+  - Property
+  - Reference
 browser-compat: api.CanvasRenderingContext2D.fillStyle
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The
-  <strong><code>CanvasRenderingContext2D.fillStyle</code></strong>
-  property of the <a href="/en-US/docs/Web/API/Canvas_API">Canvas 2D API</a> specifies the
-  color, gradient, or pattern to use inside shapes. The default style is <code>#000</code>
-  (black).</p>
+The
+**`CanvasRenderingContext2D.fillStyle`**
+property of the [Canvas 2D API](/en-US/docs/Web/API/Canvas_API) specifies the
+color, gradient, or pattern to use inside shapes. The default style is `#000`
+(black).
 
-<div class="note">
-  <p><strong>Note:</strong> For more examples of fill and stroke styles, see <a
-      href="/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Applying
-      styles and color</a> in the <a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas
-      tutorial</a>.</p>
-</div>
+> **Note:** For more examples of fill and stroke styles, see [Applying
+> styles and color](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) in the [Canvas
+> tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>ctx</em>.fillStyle = <em>color</em>;
-<em>ctx</em>.fillStyle = <em>gradient</em>;
-<em>ctx</em>.fillStyle = <em>pattern</em>;
-</pre>
+```js
+ctx.fillStyle = color;
+ctx.fillStyle = gradient;
+ctx.fillStyle = pattern;
+```
 
-<h3 id="Options">Options</h3>
+### Options
 
-<dl>
-  <dt><code>color</code></dt>
-  <dd>A {{domxref("DOMString")}} parsed as <a href="/en-US/docs/Web/CSS">CSS</a>
-    {{cssxref("&lt;color&gt;")}} value.</dd>
-  <dt><code>gradient</code></dt>
-  <dd>A {{domxref("CanvasGradient")}} object (a linear or radial gradient).</dd>
-  <dt><code>pattern</code></dt>
-  <dd>A {{domxref("CanvasPattern")}} object (a repeating image).</dd>
-</dl>
+- `color`
+  - : A {{domxref("DOMString")}} parsed as [CSS](/en-US/docs/Web/CSS)
+    {{cssxref("&lt;color&gt;")}} value.
+- `gradient`
+  - : A {{domxref("CanvasGradient")}} object (a linear or radial gradient).
+- `pattern`
+  - : A {{domxref("CanvasPattern")}} object (a repeating image).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Changing_the_fill_color_of_a_shape">Changing the fill color of a shape</h3>
+### Changing the fill color of a shape
 
-<p>This example applies a blue fill color to a rectangle.</p>
+This example applies a blue fill color to a rectangle.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js;">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.fillStyle = 'blue';
 ctx.fillRect(10, 10, 100, 100);
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Changing_the_fill_color_of_a_shape', 700, 160) }}</p>
+{{ EmbedLiveSample('Changing_the_fill_color_of_a_shape', 700, 160) }}
 
-<h3 id="Creating_multiple_fill_colors_using_loops">Creating multiple fill colors using
-  loops</h3>
+### Creating multiple fill colors using loops
 
-<p>In this example, we use two <code>for</code> loops to draw a grid of rectangles, each
-  having a different fill color. To achieve this, we use the two variables <code>i</code>
-  and <code>j</code> to generate a unique RGB color for each square, and only modify the
-  red and green values. (The blue channel has a fixed value.) By modifying the channels,
-  you can generate all kinds of palettes.</p>
+In this example, we use two `for` loops to draw a grid of rectangles, each
+having a different fill color. To achieve this, we use the two variables `i`
+and `j` to generate a unique RGB color for each square, and only modify the
+red and green values. (The blue channel has a fixed value.) By modifying the channels,
+you can generate all kinds of palettes.
 
-<pre class="brush: html hidden">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+```html hidden
+<canvas id="canvas" width="150" height="150"></canvas>
+```
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
-for (let i = 0; i &lt; 6; i++) {
-  for (let j = 0; j &lt; 6; j++) {
+for (let i = 0; i < 6; i++) {
+  for (let j = 0; j < 6; j++) {
     ctx.fillStyle = `rgb(
         ${Math.floor(255 - 42.5 * i)},
         ${Math.floor(255 - 42.5 * j)},
@@ -90,42 +90,39 @@ for (let i = 0; i &lt; 6; i++) {
     ctx.fillRect(j * 25, i * 25, 25, 25);
   }
 }
-</pre>
+```
 
-<p>The result looks like this:</p>
+The result looks like this:
 
-<p>{{EmbedLiveSample("Creating_multiple_fill_colors_using_loops", 160, 160,
-  "canvas_fillstyle.png")}}</p>
+{{EmbedLiveSample("Creating_multiple_fill_colors_using_loops", 160, 160,
+  "canvas_fillstyle.png")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h3 id="WebKitBlink-specific_note">WebKit/Blink-specific note</h3>
+### WebKit/Blink-specific note
 
-<p>In WebKit- and Blink-based browsers, the non-standard and deprecated method
-  <code>ctx.setFillColor()</code> is implemented in addition to this property.</p>
+In WebKit- and Blink-based browsers, the non-standard and deprecated method
+`ctx.setFillColor()` is implemented in addition to this property.
 
-<pre class="brush: js">setFillColor(color, optional alpha);
+```js
+setFillColor(color, optional alpha);
 setFillColor(grayLevel, optional alpha);
 setFillColor(r, g, b, a);
 setFillColor(c, m, y, k, a);
-</pre>
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Canvas_API">Canvas API</a></li>
-  <li>The interface defining this property: {{domxref("CanvasRenderingContext2D")}}</li>
-  <li>Values used by this property:
-    <ul>
-      <li>{{cssxref("&lt;color&gt;")}} CSS data type</li>
-      <li>{{domxref("CanvasGradient")}} object</li>
-      <li>{{domxref("CanvasPattern")}} object</li>
-    </ul>
-  </li>
-</ul>
+- [Canvas API](/en-US/docs/Web/API/Canvas_API)
+- The interface defining this property: {{domxref("CanvasRenderingContext2D")}}
+- Values used by this property:
+
+  - {{cssxref("&lt;color&gt;")}} CSS data type
+  - {{domxref("CanvasGradient")}} object
+  - {{domxref("CanvasPattern")}} object

@@ -9,39 +9,40 @@ tags:
   - Stylesheets
 browser-compat: api.Document.styleSheets
 ---
-<div>{{APIRef("CSSOM")}}</div>
+{{APIRef("CSSOM")}}
 
-<p>The <strong><code>styleSheets</code></strong> read-only property of the {{domxref("Document")}} interface returns a {{domxref('StyleSheetList')}} of {{domxref('CSSStyleSheet')}} objects, for stylesheets explicitly linked into or embedded in a document.</p>
+The **`styleSheets`** read-only property of the {{domxref("Document")}} interface returns a {{domxref('StyleSheetList')}} of {{domxref('CSSStyleSheet')}} objects, for stylesheets explicitly linked into or embedded in a document.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">document.styleSheets</pre>
+```js
+document.styleSheets
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>The returned list is ordered as follows:</p>
+The returned list is ordered as follows:
 
-<ul>
- <li>StyleSheets retrieved from {{htmlelement("link")}} headers are placed first, sorted in header order.</li>
- <li>StyleSheets retrieved from the DOM are placed after, sorted in <a href="https://dom.spec.whatwg.org/#concept-tree-order">tree order</a>.</li>
-</ul>
+- StyleSheets retrieved from {{htmlelement("link")}} headers are placed first, sorted in header order.
+- StyleSheets retrieved from the DOM are placed after, sorted in [tree order](https://dom.spec.whatwg.org/#concept-tree-order).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">function getStyleSheet(unique_title) {
-  for (var i=0; i&lt;document.styleSheets.length; i++) {
+```js
+function getStyleSheet(unique_title) {
+  for (var i=0; i<document.styleSheets.length; i++) {
     var sheet = document.styleSheets[i];
     if (sheet.title == unique_title) {
       return sheet;
     }
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

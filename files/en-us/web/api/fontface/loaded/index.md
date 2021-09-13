@@ -2,36 +2,37 @@
 title: FontFace.loaded
 slug: Web/API/FontFace/loaded
 tags:
-- API
-- CSS Font Loading API
-- CSSOM
-- FontFace
-- Fonts
-- Property
-- Reference
-- loaded
+  - API
+  - CSS Font Loading API
+  - CSSOM
+  - FontFace
+  - Fonts
+  - Property
+  - Reference
+  - loaded
 browser-compat: api.FontFace.loaded
 ---
-<div>{{APIRef("CSS Font Loading API")}}</div>
+{{APIRef("CSS Font Loading API")}}
 
-<p>The <strong><code>loaded</code></strong> read-only property of the
-  {{domxref("FontFace")}} interface returns a {{jsxref('Promise')}} that resolves with the
-  current <code>FontFace</code> object when the font specified in the object's constructor
-  is done loading or rejects with a <code>SyntaxError</code>.</p>
+The **`loaded`** read-only property of the
+{{domxref("FontFace")}} interface returns a {{jsxref('Promise')}} that resolves with the
+current `FontFace` object when the font specified in the object's constructor
+is done loading or rejects with a `SyntaxError`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let promise = FontFace.loaded;</pre>
+```js
+let promise = FontFace.loaded;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{jsxref('Promise')}} that resolves with the current <code>FontFace</code> object.
-</p>
+A {{jsxref('Promise')}} that resolves with the current `FontFace` object.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

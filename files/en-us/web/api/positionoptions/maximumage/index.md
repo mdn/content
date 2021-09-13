@@ -10,32 +10,31 @@ tags:
   - Secure context
 browser-compat: api.PositionOptions.maximumAge
 ---
-<div>{{securecontext_header}}{{APIRef("Geolocation API")}}</div>
+{{securecontext_header}}{{APIRef("Geolocation API")}}
 
-<p>The <code><strong>PositionOptions.maximumAge</strong></code> property is a positive
-	<code>long</code> value indicating the maximum age in milliseconds of a possible
-	cached position that is acceptable to return. If set to <code>0</code>, it means that
-	the device cannot use a cached position and must attempt to retrieve the real current
-	position. If set to
-	<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity">Infinity</a></code>
-	the device must return a cached position regardless of its age.</p>
+The **`PositionOptions.maximumAge`** property is a positive
+`long` value indicating the maximum age in milliseconds of a possible
+cached position that is acceptable to return. If set to `0`, it means that
+the device cannot use a cached position and must attempt to retrieve the real current
+position. If set to
+[`Infinity`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity)
+the device must return a cached position regardless of its age.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>positionOptions</var>.maximumAge = <var>timeLength</var>
-</pre>
+```js
+positionOptions.maximumAge = timeLength
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><a href="/en-US/docs/Web/API/Geolocation_API">Using geolocation</a></li>
-	<li>The {{domxref("PositionOptions")}} interface it belongs to.</li>
-</ul>
+- [Using geolocation](/en-US/docs/Web/API/Geolocation_API)
+- The {{domxref("PositionOptions")}} interface it belongs to.

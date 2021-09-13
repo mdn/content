@@ -11,67 +11,73 @@ tags:
   - Reference
 browser-compat: api.HTMLElement.animationstart_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <strong><code>animationstart</code></strong> event is fired when a <a href="/en-US/docs/Web/CSS/CSS_Animations">CSS Animation</a> has started. If there is an {{cssxref("animation-delay")}}, this event will fire once the delay period has expired. A negative delay will cause the event to fire with an {{domxref("AnimationEvent/elapsedTime", "elapsedTime")}} equal to the absolute value of the delay (and, correspondingly, the animation will begin playing at that time index into the sequence).</p>
+The **`animationstart`** event is fired when a [CSS Animation](/en-US/docs/Web/CSS/CSS_Animations) has started. If there is an {{cssxref("animation-delay")}}, this event will fire once the delay period has expired. A negative delay will cause the event to fire with an {{domxref("AnimationEvent/elapsedTime", "elapsedTime")}} equal to the absolute value of the delay (and, correspondingly, the animation will begin playing at that time index into the sequence).
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th>Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th>Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th>Interface</th>
-   <td>{{domxref("AnimationEvent")}}</td>
-  </tr>
-  <tr>
-   <th>Event handler property</th>
-   <td>{{domxref("GlobalEventHandlers/onanimationstart","onanimationstart")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Interface</th>
+      <td>{{domxref("AnimationEvent")}}</td>
+    </tr>
+    <tr>
+      <th>Event handler property</th>
+      <td>
+        {{domxref("GlobalEventHandlers/onanimationstart","onanimationstart")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This listens for the <code>animationstart</code> event and logs a message when it is fired:</p>
+This listens for the `animationstart` event and logs a message when it is fired:
 
-<pre class="brush: js">const animated = document.querySelector('.animated');
+```js
+const animated = document.querySelector('.animated');
 
-animated.addEventListener('animationstart', () =&gt; {
+animated.addEventListener('animationstart', () => {
   console.log('Animation started');
 });
-</pre>
+```
 
-<p>The same, but using <code>onanimationstart</code>:</p>
+The same, but using `onanimationstart`:
 
-<pre class="brush: js">const animated = document.querySelector('.animated');
+```js
+const animated = document.querySelector('.animated');
 
-animated.onanimationstart = () =&gt; {
+animated.onanimationstart = () => {
   console.log('Animation started');
 };
-</pre>
+```
 
-<h3 id="Live_example">Live example</h3>
+### Live example
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="animation-example"&gt;
-    &lt;div class="container"&gt;
-        &lt;p class="animation"&gt;You chose a cold night to visit our planet.&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;button class="activate" type="button"&gt;Activate animation&lt;/button&gt;
-    &lt;div class="event-log"&gt;&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="animation-example">
+    <div class="container">
+        <p class="animation">You chose a cold night to visit our planet.</p>
+    </div>
+    <button class="activate" type="button">Activate animation</button>
+    <div class="event-log"></div>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.container {
+```css
+.container {
   height: 3rem;
 }
 
@@ -97,35 +103,36 @@ animated.onanimationstart = () =&gt; {
     transform: translateX(0) scaleX(1);
   }
 }
-</pre>
+```
 
-<h4 id="JS">JS</h4>
+#### JS
 
-<pre class="brush: js">const animation = document.querySelector('p.animation');
-const animationEventLog = document.querySelector('.animation-example&gt;.event-log');
-const applyAnimation = document.querySelector('.animation-example&gt;button.activate');
+```js
+const animation = document.querySelector('p.animation');
+const animationEventLog = document.querySelector('.animation-example>.event-log');
+const applyAnimation = document.querySelector('.animation-example>button.activate');
 let iterationCount = 0;
 
-animation.addEventListener('animationstart', () =&gt; {
+animation.addEventListener('animationstart', () => {
   animationEventLog.textContent = `${animationEventLog.textContent}'animation started' `;
 });
 
-animation.addEventListener('animationiteration', () =&gt; {
+animation.addEventListener('animationiteration', () => {
   iterationCount++;
   animationEventLog.textContent = `${animationEventLog.textContent}'animation iterations: ${iterationCount}' `;
 });
 
-animation.addEventListener('animationend', () =&gt; {
+animation.addEventListener('animationend', () => {
   animationEventLog.textContent = `${animationEventLog.textContent}'animation ended'`;
   animation.classList.remove('active');
   applyAnimation.textContent = "Activate animation";
 });
 
-animation.addEventListener('animationcancel', () =&gt; {
+animation.addEventListener('animationcancel', () => {
   animationEventLog.textContent = `${animationEventLog.textContent}'animation canceled'`;
 });
 
-applyAnimation.addEventListener('click', () =&gt; {
+applyAnimation.addEventListener('click', () => {
   animation.classList.toggle('active');
   animationEventLog.textContent = '';
   iterationCount = 0;
@@ -136,27 +143,25 @@ applyAnimation.addEventListener('click', () =&gt; {
     applyAnimation.textContent = "Activate animation";
   }
 });
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Live_example', '100%', '150px') }}</p>
+{{ EmbedLiveSample('Live_example', '100%', '150px') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Animations">CSS Animations</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">Using CSS Animations</a></li>
- <li>{{domxref("AnimationEvent")}}</li>
- <li>Related events: {{domxref("HTMLElement/animationend_event", "animationend")}}, {{domxref("HTMLElement/animationiteration_event", "animationiteration")}}, {{domxref("HTMLElement/animationcancel_event", "animationcancel")}}</li>
- <li>This event on {{domxref("Document")}} targets: {{domxref("Document/animationstart_event", "animationstart")}}</li>
- <li>This event on {{domxref("Window")}} targets: {{domxref("Window/animationstart_event", "animationstart")}}</li>
-</ul>
+- [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations)
+- [Using CSS Animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- {{domxref("AnimationEvent")}}
+- Related events: {{domxref("HTMLElement/animationend_event", "animationend")}}, {{domxref("HTMLElement/animationiteration_event", "animationiteration")}}, {{domxref("HTMLElement/animationcancel_event", "animationcancel")}}
+- This event on {{domxref("Document")}} targets: {{domxref("Document/animationstart_event", "animationstart")}}
+- This event on {{domxref("Window")}} targets: {{domxref("Window/animationstart_event", "animationstart")}}

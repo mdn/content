@@ -2,35 +2,34 @@
 title: ProgressEvent.loaded
 slug: Web/API/ProgressEvent/loaded
 tags:
-- API
-- Progress Event
-- ProgressEvent
-- Property
+  - API
+  - Progress Event
+  - ProgressEvent
+  - Property
 browser-compat: api.ProgressEvent.loaded
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p>The <code><strong>ProgressEvent.loaded</strong></code> read-only property is an integer
-  representing the amount of work already performed by the underlying process. The ratio
-  of work done can be calculated with the property and <code>ProgressEvent.total</code>.
-  When downloading a resource using HTTP, this only represent the part of the content
-  itself, not headers and other overhead.</p>
+The **`ProgressEvent.loaded`** read-only property is an integer
+representing the amount of work already performed by the underlying process. The ratio
+of work done can be calculated with the property and `ProgressEvent.total`.
+When downloading a resource using HTTP, this only represent the part of the content
+itself, not headers and other overhead.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>value</em> = <em>ProgressEvent</em>.loaded</pre>
+```js
+value = ProgressEvent.loaded
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("ProgressEvent")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("ProgressEvent")}} interface it belongs to.

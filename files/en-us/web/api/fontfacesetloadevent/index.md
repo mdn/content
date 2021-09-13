@@ -13,28 +13,24 @@ tags:
   - Reference
 browser-compat: api.FontFaceSetLoadEvent
 ---
-<p>{{SeeCompatTable}}{{APIRef("CSS Font Loading API")}}</p>
+{{SeeCompatTable}}{{APIRef("CSS Font Loading API")}}
 
-<p>The <strong><code>FontFaceSetLoadEvent</code></strong> interface of the <a href="/en-US/docs/Web/API/CSS_Font_Loading_API">CSS Font Loading API </a> is fired whenever a {{domxref("FontFaceSet")}} loads.</p>
+The **`FontFaceSetLoadEvent`** interface of the [CSS Font Loading API ](/en-US/docs/Web/API/CSS_Font_Loading_API)is fired whenever a {{domxref("FontFaceSet")}} loads.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("FontFaceSetLoadEvent.FontFaceSetLoadEvent","FontFaceSetLoadEvent()")}}</dt>
- <dd>Creates a new <code>FontFaceSetLoadEvent</code> object.</dd>
-</dl>
+- {{domxref("FontFaceSetLoadEvent.FontFaceSetLoadEvent","FontFaceSetLoadEvent()")}}
+  - : Creates a new `FontFaceSetLoadEvent` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("FontFaceSetLoadEvent.fontfaces")}}{{readonlyInline}}</dt>
- <dd>Returns an array of {{domxref("FontFace")}} instances each of which represents a single usable font.</dd>
-</dl>
+- {{domxref("FontFaceSetLoadEvent.fontfaces")}}{{readonlyInline}}
+  - : Returns an array of {{domxref("FontFace")}} instances each of which represents a single usable font.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

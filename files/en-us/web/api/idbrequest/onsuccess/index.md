@@ -12,37 +12,35 @@ tags:
   - onsuccess
 browser-compat: api.IDBRequest.onsuccess
 ---
-<p>{{ APIRef("IndexedDB") }}</p>
+{{ APIRef("IndexedDB") }}
 
-<div>
-  <p>The <strong><code>onsuccess</code></strong> event handler of the
-    {{domxref("IDBRequest")}} interface handles the
-    <code><a href="/en-US/docs/Web/API/IDBRequest/success_event">success</a></code> event,
-    fired when the result of a request is successfully returned.</p>
+The **`onsuccess`** event handler of the
+{{domxref("IDBRequest")}} interface handles the
+[`success`](/en-US/docs/Web/API/IDBRequest/success_event) event,
+fired when the result of a request is successfully returned.
 
-  <p>The event handler takes one parameter, a success <a
-      href="/en-US/docs/Web/API/IDBRequest/success_event">Event</a> with type="success".</p>
+The event handler takes one parameter, a success [Event](/en-US/docs/Web/API/IDBRequest/success_event) with type="success".
 
-  <p>{{AvailableInWorkers}}</p>
-</div>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">request.onsuccess = function(event) { ... };</pre>
+```js
+request.onsuccess = function(event) { ... };
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example requests a given record title, <code>onsuccess</code> gets the
-  associated record from the {{domxref("IDBObjectStore")}} (made available
-  as <code>objectStoreTitleRequest.result</code>), updates
-    one property of the record, and then puts the updated record back into the object
-    store. For a full working example, see our <a
-    href="https://github.com/mdn/to-do-notifications/">To-do
-    Notifications</a> app (<a
-    href="https://mdn.github.io/to-do-notifications/">view
-    example live</a>.)</p>
+The following example requests a given record title, `onsuccess` gets the
+associated record from the {{domxref("IDBObjectStore")}} (made available
+as `objectStoreTitleRequest.result`), updates
+one property of the record, and then puts the updated record back into the object
+store. For a full working example, see our [To-do
+Notifications](https://github.com/mdn/to-do-notifications/) app ([view
+example live](https://mdn.github.io/to-do-notifications/).)
 
-<pre class="brush: js;">var title = "Walk dog";
+```js
+var title = "Walk dog";
 
 // Open up a transaction as usual
 var objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
@@ -66,30 +64,27 @@ objectStoreTitleRequest.onsuccess = function() {
   updateTitleRequest.onsuccess = function() {
     displayData();
   };
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
-  <li><a href="/en-US/docs/Web/API/IDBRequest/success_event">Success Event</a></li>
-  <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
-  <li>Using transactions: {{domxref("IDBTransaction")}}</li>
-  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
-  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
-  <li>Using cursors: {{domxref("IDBCursor")}}</li>
-  <li>Reference example: <a class="external"
-      href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
-      Notifications</a> (<a class="external"
-      href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-  <li><code><a href="/en-US/docs/Web/API/IDBRequest/success_event">success</a></code>
-    event</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- [Success Event](/en-US/docs/Web/API/IDBRequest/success_event)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do
+  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- [`success`](/en-US/docs/Web/API/IDBRequest/success_event)
+  event

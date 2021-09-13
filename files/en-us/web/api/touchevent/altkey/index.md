@@ -10,46 +10,43 @@ tags:
   - touch
 browser-compat: api.TouchEvent.altKey
 ---
-<p>{{APIRef("Touch Events") }}</p>
+{{APIRef("Touch Events") }}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>A boolean value indicating whether or not the <kbd>alt</kbd> (Alternate) key is enabled when the touch event is created. If the <kbd>alt</kbd> key is enabled, the attribute's value is <code>true</code>. Otherwise, it is <code>false</code>.</p>
+A boolean value indicating whether or not the <kbd>alt</kbd> (Alternate) key is enabled when the touch event is created. If the <kbd>alt</kbd> key is enabled, the attribute's value is `true`. Otherwise, it is `false`.
 
-<p>This property is {{readonlyInline}}.</p>
+This property is {{readonlyInline}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="eval">var <em>altEnabled</em> = <em>touchEvent</em>.altKey;
-</pre>
+    var altEnabled = touchEvent.altKey;
 
-<h3 id="Return_Value">Return value</h3>
+### Return value
 
-<dl>
- <dt><code>altEnabled</code></dt>
- <dd><code>true</code> if the <kbd>alt</kbd> key is enabled for this event; and <code>false</code> if the <kbd>alt</kbd> is not enabled.</dd>
-</dl>
+- `altEnabled`
+  - : `true` if the <kbd>alt</kbd> key is enabled for this event; and `false` if the <kbd>alt</kbd> is not enabled.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example illustrates how to access the {{domxref("TouchEvent")}} key modifier properties: {{domxref("TouchEvent.altKey")}}, {{domxref("TouchEvent.ctrlKey")}}, {{domxref("TouchEvent.metaKey")}} and {{domxref("TouchEvent.shiftKey")}}.</p>
+This example illustrates how to access the {{domxref("TouchEvent")}} key modifier properties: {{domxref("TouchEvent.altKey")}}, {{domxref("TouchEvent.ctrlKey")}}, {{domxref("TouchEvent.metaKey")}} and {{domxref("TouchEvent.shiftKey")}}.
 
-<p>In following code snippet, the {{event("touchstart")}} event handler logs the state of the event's modifier keys.</p>
+In following code snippet, the {{event("touchstart")}} event handler logs the state of the event's modifier keys.
 
-<pre class="brush: js">someElement.addEventListener('touchstart', function(e) {
+```js
+someElement.addEventListener('touchstart', function(e) {
    // Log the state of this event's modifier keys
    console.log("altKey = " + e.altKey);
    console.log("ctrlKey = " + e.ctrlKey);
    console.log("metaKey = " + e.metaKey);
    console.log("shiftKey = " + e.shiftKey);
 }, false);
+```
 
-</pre>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

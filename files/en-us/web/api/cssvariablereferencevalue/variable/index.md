@@ -2,37 +2,36 @@
 title: CSSVariableReferenceValue.variable
 slug: Web/API/CSSVariableReferenceValue/variable
 tags:
-- API
-- CSS Typed Object Model API
-- CSSVariableReferenceValue
-- Houdini
-- NeedsExample
-- Property
-- Reference
-- variable
+  - API
+  - CSS Typed Object Model API
+  - CSSVariableReferenceValue
+  - Houdini
+  - NeedsExample
+  - Property
+  - Reference
+  - variable
 browser-compat: api.CSSVariableReferenceValue.variable
 ---
-<div>{{draft}}{{APIRef("CSSOM")}}{{SeeCompatTable}}</div>
+{{draft}}{{APIRef("CSSOM")}}{{SeeCompatTable}}
 
-<p>The <strong><code>variable</code></strong> property of the
-  {{domxref("CSSVariableReferenceValue")}} interface returns the <a
-    href="/en-US/docs/Web/CSS/--*">custom property name</a> of the
-  {{domxref("CSSVariableReferenceValue")}}.</p>
+The **`variable`** property of the
+{{domxref("CSSVariableReferenceValue")}} interface returns the [custom property name](/en-US/docs/Web/CSS/--*) of the
+{{domxref("CSSVariableReferenceValue")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var variable = <var>cssVariableReferenceValue</var>.variable;</pre>
+```js
+var variable = cssVariableReferenceValue.variable;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref('USVString')}} beginning with <code>--</code> (that is, a <a
-    href="/en-US/docs/Web/CSS/--*">custom property name</a>).</p>
+A {{domxref('USVString')}} beginning with `--` (that is, a [custom property name](/en-US/docs/Web/CSS/--*)).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

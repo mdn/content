@@ -2,45 +2,41 @@
 title: CharacterData.substringData()
 slug: Web/API/CharacterData/substringData
 tags:
-- API
-- DOM
-- Method
-- Node
-- Reference
-- CharacterData
+  - API
+  - DOM
+  - Method
+  - Node
+  - Reference
+  - CharacterData
 browser-compat: api.CharacterData.substringData
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>
-  The <code>substringData()</code> method of the {{domxref("CharacterData")}}
-  interface returns a portion of the existing data, starting at the specified
-  index and extending for a given number of characters afterwards.
-</p>
+The `substringData()` method of the {{domxref("CharacterData")}}
+interface returns a portion of the existing data, starting at the specified
+index and extending for a given number of characters afterwards.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js notranslate">
-  <var>domString</var> = <var>characterData</var>.substringData(<var>offset</var>, <var>count</var>)
-</pre>
+```js
+  domString = characterData.substringData(offset, count)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>offset</var></code></dt>
-  <dd>The index of the first character to include in the returned substring.</dd>
-  <dt><code><var>count</var></code></dt>
-  <dd>The number of characters to return.</dd>
-</dl>
+- `offset`
+  - : The index of the first character to include in the returned substring.
+- `count`
+  - : The number of characters to return.
 
-<h3 id="Returns">Return value</h3>
+### Return value
 
-<p>{{jsxref("DOMString")}}.</p>
+{{jsxref("DOMString")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

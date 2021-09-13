@@ -12,35 +12,34 @@ tags:
   - lastEventID
 browser-compat: api.ServiceWorkerMessageEvent.lastEventId
 ---
-<p>{{APIRef("Service Workers API")}}{{deprecated_header}}</p>
+{{APIRef("Service Workers API")}}{{deprecated_header}}
 
-<div class="warning">
-  <p><strong>Warning:</strong> In modern browsers, this property has been deprecated.
-    Service worker messages will now use the {{domxref("MessageEvent")}} interface, for
-    consistency with other web messaging features.</p>
-</div>
+> **Warning:** In modern browsers, this property has been deprecated.
+> Service worker messages will now use the {{domxref("MessageEvent")}} interface, for
+> consistency with other web messaging features.
 
-<p>The <strong><code>lastEventID</code></strong> read-only property of the
-  {{domxref("ServiceWorkerMessageEvent")}} interface represents, in <a
-    href="/en-US/docs/Web/API/en-US/docs/Server-sent_events/Using_server-sent_events">server-sent
-    events</a>, the last event ID of the event source.</p>
+The **`lastEventID`** read-only property of the
+{{domxref("ServiceWorkerMessageEvent")}} interface represents, in [server-sent
+events](/en-US/docs/Web/API/en-US/docs/Server-sent_events/Using_server-sent_events), the last event ID of the event source.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var myLastEventId = ServiceWorkerMessageEventInstance.lastEventId;</pre>
+```js
+var myLastEventId = ServiceWorkerMessageEventInstance.lastEventId;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}}.</p>
+A {{domxref("DOMString")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>When the following code is used inside the main thread to set up a message channel
-  between it and a service worker for sending messages between the two, the event object
-  of <code>onmessage</code> will be a <code>ServiceWorkerMessageEvent</code>.</p>
+When the following code is used inside the main thread to set up a message channel
+between it and a service worker for sending messages between the two, the event object
+of `onmessage` will be a `ServiceWorkerMessageEvent`.
 
-<pre class="brush: js">navigator.serviceWorker.ready.then(function(reg) {
+```js
+navigator.serviceWorker.ready.then(function(reg) {
 
   ...
 
@@ -53,21 +52,19 @@ browser-compat: api.ServiceWorkerMessageEvent.lastEventId
 
       mySW = reg.active;
       mySW.postMessage('hello', [channel.port2]);
-  });</pre>
+  });
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service
-      Workers</a></li>
-  <li><a class="external external-icon" href="https://github.com/mdn/sw-test">Service
-      workers basic code example</a></li>
-  <li><a class="external external-icon"
-      href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker
-      ready?</a></li>
-  <li><a href="/en-US/docs/Web/API/Channel_Messaging_API">Channel Messaging</a></li>
-</ul>
+- [Using Service
+  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Service
+  workers basic code example](https://github.com/mdn/sw-test)
+- [Is ServiceWorker
+  ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- [Channel Messaging](/en-US/docs/Web/API/Channel_Messaging_API)

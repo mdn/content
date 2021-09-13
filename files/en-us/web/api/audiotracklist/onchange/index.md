@@ -2,74 +2,73 @@
 title: AudioTrackList.onchange
 slug: Web/API/AudioTrackList/onchange
 tags:
-- API
-- Adding Audio Tracks
-- Adding Tracks
-- Audio
-- AudioTrackList
-- Event Handler
-- HTML DOM
-- Media
-- Property
-- Reference
-- addTrack
-- onchange
-- track
+  - API
+  - Adding Audio Tracks
+  - Adding Tracks
+  - Audio
+  - AudioTrackList
+  - Event Handler
+  - HTML DOM
+  - Media
+  - Property
+  - Reference
+  - addTrack
+  - onchange
+  - track
 browser-compat: api.AudioTrackList.onchange
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong>{{domxref("AudioTrackList")}}</strong> property
-    <strong><code>onchange</code></strong> is an event handler which is called when the
-    {{event("change")}} event occurs, indicating that one or more of the
-    {{domxref("AudioTrack")}}s in the <code>AudioTrackList</code> have been enabled or
-    disabled.</p>
+The **{{domxref("AudioTrackList")}}** property
+**`onchange`** is an event handler which is called when the
+{{event("change")}} event occurs, indicating that one or more of the
+{{domxref("AudioTrack")}}s in the `AudioTrackList` have been enabled or
+disabled.
 
-<p>The event is passed into the event handler in the form of an {{domxref("Event")}}
-  object; the event doesn't provide any additional information. To determine the new state
-  of media's tracks, you'll have to look at their {{domxref("AudioTrack.enabled")}} flags.
-</p>
+The event is passed into the event handler in the form of an {{domxref("Event")}}
+object; the event doesn't provide any additional information. To determine the new state
+of media's tracks, you'll have to look at their {{domxref("AudioTrack.enabled")}} flags.
 
-<div class="note">
-  <p><strong>Note:</strong> You can also add a handler for the <code>change</code> event
-    using {{domxref("EventTarget.addEventListener", "addEventListener()")}}.</p>
-</div>
+> **Note:** You can also add a handler for the `change` event
+> using {{domxref("EventTarget.addEventListener", "addEventListener()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>AudioTrackList</em>.onchange = <em>eventHandler</em>;</pre>
+```js
+AudioTrackList.onchange = eventHandler;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>Set <code>onchange</code> to a function that should be called whenever tracks are
-  enabled or disabled on the media element.</p>
+Set `onchange` to a function that should be called whenever tracks are
+enabled or disabled on the media element.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This snippet establishes a handler for the {{event("change")}} event that looks at each
-  of the tracks in the list, calling a function to update the state of a user interface
-  control that indicates the current state of the track.</p>
+This snippet establishes a handler for the {{event("change")}} event that looks at each
+of the tracks in the list, calling a function to update the state of a user interface
+control that indicates the current state of the track.
 
-<pre class="brush: js">var trackList = document.querySelector("video").audioTracks;
+```js
+var trackList = document.querySelector("video").audioTracks;
 
 trackList.onchange = function(event) {
   trackList.forEach(function(track) {
     updateTrackEnabledButton(track.id, track.enabled);
   });
 };
-</pre>
+```
 
-<p>The <code>updateTrackEnabledButton()</code>, in this example, should be a function that
-  finds a user interface control using the track's {{domxref("AudioTrack.id", "id")}}
-  (perhaps the app uses the track ID as the control element's ID) and the track's
-  {{domxref("AudioTrack.enabled", "enabled")}} flag to determine which state the control
-  should be in now.</p>
+The `updateTrackEnabledButton()`, in this example, should be a function that
+finds a user interface control using the track's {{domxref("AudioTrack.id", "id")}}
+(perhaps the app uses the track ID as the control element's ID) and the track's
+{{domxref("AudioTrack.enabled", "enabled")}} flag to determine which state the control
+should be in now.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

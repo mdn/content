@@ -12,61 +12,68 @@ tags:
   - onfocus
 browser-compat: api.Window.focus_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <strong><code>focus</code></strong> event fires when an element has received focus.</p>
+The **`focus`** event fires when an element has received focus.
 
-<p>The opposite of <code>focus</code> is {{domxref("Window/blur_event", "blur")}}.</p>
+The opposite of `focus` is {{domxref("Window/blur_event", "blur")}}.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th>Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th>Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th>Interface</th>
-   <td>{{DOMxRef("FocusEvent")}}</td>
-  </tr>
-  <tr>
-   <th>Event handler property</th>
-   <td>{{domxref("GlobalEventHandlers/onfocus", "onfocus")}}</td>
-  </tr>
-  <tr>
-   <th>Sync / Async</th>
-   <td>Sync</td>
-  </tr>
-  <tr>
-   <th>Composed</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Interface</th>
+      <td>{{DOMxRef("FocusEvent")}}</td>
+    </tr>
+    <tr>
+      <th>Event handler property</th>
+      <td>
+        {{domxref("GlobalEventHandlers/onfocus", "onfocus")}}
+      </td>
+    </tr>
+    <tr>
+      <th>Sync / Async</th>
+      <td>Sync</td>
+    </tr>
+    <tr>
+      <th>Composed</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Live_example">Live example</h3>
+### Live example
 
-<p>This example changes the appearance of a document when it loses focus. It uses {{domxref("EventTarget.addEventListener()", "addEventListener()")}} to monitor <code>focus</code> and {{domxref("Window/blur_event", "blur")}} events.</p>
+This example changes the appearance of a document when it loses focus. It uses {{domxref("EventTarget.addEventListener()", "addEventListener()")}} to monitor `focus` and {{domxref("Window/blur_event", "blur")}} events.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p id="log"&gt;Click on this document to give it focus.&lt;/p&gt;</pre>
+```html
+<p id="log">Click on this document to give it focus.</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.paused {
+```css
+.paused {
   background: #ddd;
   color: #555;
-}</pre>
+}
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">function pause() {
+```js
+function pause() {
   document.body.classList.add('paused');
   log.textContent = 'FOCUS LOST!';
 }
@@ -79,23 +86,22 @@ function play() {
 const log = document.getElementById('log');
 
 window.addEventListener('blur', pause);
-window.addEventListener('focus', play);</pre>
+window.addEventListener('focus', play);
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Live_example")}}</p>
+{{EmbedLiveSample("Live_example")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Related event: {{domxref("Window/blur_event", "blur")}}</li>
- <li>This event on <code>Element</code> targets: {{domxref("Element/focus_event", "focus")}} event</li>
-</ul>
+- Related event: {{domxref("Window/blur_event", "blur")}}
+- This event on `Element` targets: {{domxref("Element/focus_event", "focus")}} event

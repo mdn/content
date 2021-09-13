@@ -2,70 +2,71 @@
 title: CanvasRenderingContext2D.ellipse()
 slug: Web/API/CanvasRenderingContext2D/ellipse
 tags:
-- API
-- Canvas
-- CanvasRenderingContext2D
-- Method
-- Reference
+  - API
+  - Canvas
+  - CanvasRenderingContext2D
+  - Method
+  - Reference
 browser-compat: api.CanvasRenderingContext2D.ellipse
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The
-  <strong><code>CanvasRenderingContext2D.ellipse()</code></strong>
-  method of the Canvas 2D API adds an elliptical arc to the current sub-path.</p>
+The
+**`CanvasRenderingContext2D.ellipse()`**
+method of the Canvas 2D API adds an elliptical arc to the current sub-path.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <em>ctx</em>.ellipse(<em>x</em>, <em>y</em>, <em>radiusX</em>, <em>radiusY</em>, <em>rotation</em>, <em>startAngle</em>, <em>endAngle</em> [, <em>counterclockwise</em>]);
-</pre>
+```js
+void ctx.ellipse(x, y, radiusX, radiusY, rotation, startAngle, endAngle [, counterclockwise]);
+```
 
-<p>The <code>ellipse()</code> method creates an elliptical arc centered at
-  <code>(x, y)</code> with the radii <code>radiusX</code> and <code>radiusY</code>. The
-  path starts at <code>startAngle</code> and ends at <code>endAngle</code>, and travels in
-  the direction given by <code>counterclockwise</code> (defaulting to clockwise).</p>
+The `ellipse()` method creates an elliptical arc centered at
+`(x, y)` with the radii `radiusX` and `radiusY`. The
+path starts at `startAngle` and ends at `endAngle`, and travels in
+the direction given by `counterclockwise` (defaulting to clockwise).
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>x</code></dt>
-  <dd>The x-axis (horizontal) coordinate of the ellipse's center.</dd>
-  <dt><code>y</code></dt>
-  <dd>The y-axis (vertical) coordinate of the ellipse's center.</dd>
-  <dt><code>radiusX</code></dt>
-  <dd>The ellipse's major-axis radius. Must be non-negative.</dd>
-  <dt><code>radiusY</code></dt>
-  <dd>The ellipse's minor-axis radius. Must be non-negative.</dd>
-  <dt><code>rotation</code></dt>
-  <dd>The rotation of the ellipse, expressed in radians.</dd>
-  <dt><code>startAngle</code></dt>
-  <dd>The angle at which the ellipse starts, measured clockwise from the positive x-axis
-    and expressed in radians.</dd>
-  <dt><code>endAngle</code></dt>
-  <dd>The angle at which the ellipse ends, measured clockwise from the positive x-axis and
-    expressed in radians.</dd>
-  <dt><code>counterclockwise</code> {{optional_inline}}</dt>
-  <dd>An optional boolean value which, if <code>true</code>, draws the ellipse
-    counterclockwise (anticlockwise). The default value is <code>false</code>
-    (clockwise).</dd>
-</dl>
+- `x`
+  - : The x-axis (horizontal) coordinate of the ellipse's center.
+- `y`
+  - : The y-axis (vertical) coordinate of the ellipse's center.
+- `radiusX`
+  - : The ellipse's major-axis radius. Must be non-negative.
+- `radiusY`
+  - : The ellipse's minor-axis radius. Must be non-negative.
+- `rotation`
+  - : The rotation of the ellipse, expressed in radians.
+- `startAngle`
+  - : The angle at which the ellipse starts, measured clockwise from the positive x-axis
+    and expressed in radians.
+- `endAngle`
+  - : The angle at which the ellipse ends, measured clockwise from the positive x-axis and
+    expressed in radians.
+- `counterclockwise` {{optional_inline}}
+  - : An optional boolean value which, if `true`, draws the ellipse
+    counterclockwise (anticlockwise). The default value is `false`
+    (clockwise).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Drawing_a_full_ellipse">Drawing a full ellipse</h3>
+### Drawing a full ellipse
 
-<p>This example draws an ellipse at an angle of π/4 radians (45<strong>°</strong>). To
-  make a full ellipse, the arc begins at an angle of 0 radians (0<strong>°</strong>), and
-  ends at an angle of 2π radians (360<strong>°</strong>).</p>
+This example draws an ellipse at an angle of π/4 radians (45**°**). To
+make a full ellipse, the arc begins at an angle of 0 radians (0**°**), and
+ends at an angle of 2π radians (360**°**).
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas" width="200" height="200"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas" width="200" height="200"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js;">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // Draw the ellipse
@@ -79,24 +80,26 @@ ctx.setLineDash([5, 5]);
 ctx.moveTo(0, 200);
 ctx.lineTo(200, 0);
 ctx.stroke();
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Drawing_a_full_ellipse', 700, 250) }}</p>
+{{ EmbedLiveSample('Drawing_a_full_ellipse', 700, 250) }}
 
-<h3 id="Various_elliptical_arcs">Various elliptical arcs</h3>
+### Various elliptical arcs
 
-<p>This example creates three elliptical paths with varying properties.</p>
+This example creates three elliptical paths with varying properties.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js;">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.fillStyle = 'red';
@@ -113,23 +116,21 @@ ctx.fillStyle = 'green';
 ctx.beginPath();
 ctx.ellipse(240, 75, 50, 30, Math.PI * .25, 0, Math.PI, true);
 ctx.fill();
-</pre>
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Various_elliptical_arcs', 700, 180) }}</p>
+{{ EmbedLiveSample('Various_elliptical_arcs', 700, 180) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining this method: {{domxref("CanvasRenderingContext2D")}}</li>
-  <li>Use {{domxref("CanvasRenderingContext2D.arc()")}} to draw a circular arc</li>
-</ul>
+- The interface defining this method: {{domxref("CanvasRenderingContext2D")}}
+- Use {{domxref("CanvasRenderingContext2D.arc()")}} to draw a circular arc

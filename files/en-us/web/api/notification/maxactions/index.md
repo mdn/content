@@ -2,52 +2,52 @@
 title: Notification.maxActions
 slug: Web/API/Notification/maxActions
 tags:
-- API
-- Notification
-- Notifications
-- Notifications API
-- Property
-- Reference
-- actions
+  - API
+  - Notification
+  - Notifications
+  - Notifications API
+  - Property
+  - Reference
+  - actions
 browser-compat: api.Notification.maxActions
 ---
-<p>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</p>
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-<p>The <strong><code>maxActions</code></strong> attribute of the
-  {{domxref("Notification")}} interface returns the maximum number of actions supported by
-  the device and the User Agent. Effectively, this is the maximum number of elements in
-  {{domxref("Notification.actions")}} array which will be respected by the User Agent.</p>
+The **`maxActions`** attribute of the
+{{domxref("Notification")}} interface returns the maximum number of actions supported by
+the device and the User Agent. Effectively, this is the maximum number of elements in
+{{domxref("Notification.actions")}} array which will be respected by the User Agent.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>Notification</var>.maxActions
-</pre>
+```js
+Notification.maxActions
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An integer {{JSxRef("Number")}} which indicates the largest number of notification
-  actions that can be presented to the user by the User Agent and the device.</p>
+An integer {{JSxRef("Number")}} which indicates the largest number of notification
+actions that can be presented to the user by the User Agent and the device.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following snippet logs the maximum number of supported actions.</p>
+The following snippet logs the maximum number of supported actions.
 
-<pre class="brush: js">const maxActions = Notification.maxActions;
+```js
+const maxActions = Notification.maxActions;
 console.log('This device can display at most ' + maxActions + ' actions on each notification.');
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using
-      the Notifications API</a></li>
-  <li>{{domxref("Notification.actions")}}</li>
-</ul>
+- [Using
+  the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- {{domxref("Notification.actions")}}

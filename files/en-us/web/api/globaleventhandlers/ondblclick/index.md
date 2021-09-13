@@ -2,80 +2,80 @@
 title: GlobalEventHandlers.ondblclick
 slug: Web/API/GlobalEventHandlers/ondblclick
 tags:
-- API
-- Event Handler
-- GlobalEventHandlers
-- HTML DOM
-- Property
-- Reference
+  - API
+  - Event Handler
+  - GlobalEventHandlers
+  - HTML DOM
+  - Property
+  - Reference
 browser-compat: api.GlobalEventHandlers.ondblclick
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p>The <code><strong>ondblclick</strong></code> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> that
-  processes {{event("dblclick")}} events on the given element.</p>
+The **`ondblclick`** property of the
+{{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
+processes {{event("dblclick")}} events on the given element.
 
-<p>The <code>dblclick</code> event is raised when the user double clicks an element. It
-  fires after two {{event("click")}} events.</p>
+The `dblclick` event is raised when the user double clicks an element. It
+fires after two {{event("click")}} events.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>target</em>.ondblclick = <em>functionRef</em>;
-</pre>
+```js
+target.ondblclick = functionRef;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p><code>functionRef</code> is a function name or a <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function
-    expression</a>. The function receives a {{domxref("MouseEvent")}} object as its sole
-  argument. Within the function,
-  <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code> will
-  be the element upon which the event was triggered.</p>
+`functionRef` is a function name or a [function
+expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("MouseEvent")}} object as its sole
+argument. Within the function,
+[`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) will
+be the element upon which the event was triggered.
 
-<p>Only one <code>ondblclick</code> handler can be assigned to an object at a time. You
-  may prefer to use the {{domxref("EventTarget.addEventListener()")}} method instead,
-  since it's more flexible.</p>
+Only one `ondblclick` handler can be assigned to an object at a time. You
+may prefer to use the {{domxref("EventTarget.addEventListener()")}} method instead,
+since it's more flexible.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example logs the position of double clicks.</p>
+This example logs the position of double clicks.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Double click anywhere in this example.&lt;/p&gt;
-&lt;p id="log"&gt;&lt;/p&gt;</pre>
+```html
+<p>Double click anywhere in this example.</p>
+<p id="log"></p>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">let log = document.getElementById('log');
+```js
+let log = document.getElementById('log');
 
 document.ondblclick = logDoubleClick;
 
 function logDoubleClick(e) {
   log.textContent = `Position: (${e.clientX}, ${e.clientY})`;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{event("dblclick")}} event</li>
-  <li>Related event handlers
-    <ul>
-      <li>{{domxref("GlobalEventHandlers.onauxclick")}}</li>
-      <li>{{domxref("GlobalEventHandlers.onclick")}}</li>
-    </ul>
-  </li>
-</ul>
+- {{event("dblclick")}} event
+- Related event handlers
+
+  - {{domxref("GlobalEventHandlers.onauxclick")}}
+  - {{domxref("GlobalEventHandlers.onclick")}}

@@ -9,22 +9,26 @@ tags:
   - InterventionReportBody
 browser-compat: api.InterventionReportBody.id
 ---
-<div>{{APIRef("Reporting API")}}</div>
+{{APIRef("Reporting API")}}
 
-<p>The <strong><code>id</code></strong> read-only property of the {{domxref("InterventionReportBody")}} interface returns a string identifying the intervention that generated the report. This can be used to group reports.</p>
+The **`id`** read-only property of the {{domxref("InterventionReportBody")}} interface returns a string identifying the intervention that generated the report. This can be used to group reports.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let id = InterventionReportBody.id;</pre>
+```js
+let id = InterventionReportBody.id;
+```
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString","string")}}.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("DOMString","string")}}.
 
-<p>In this example we create a new {{domxref("ReportingObserver")}} to observe intervention reports, then print the value of <code>id</code> to the console.</p>
+## Examples
 
-<pre class="brush: js">let options = {
+In this example we create a new {{domxref("ReportingObserver")}} to observe intervention reports, then print the value of `id` to the console.
+
+```js
+let options = {
   types: ['intervention'],
   buffered: true
 }
@@ -33,12 +37,13 @@ let observer = new ReportingObserver(function(reports, observer) {
   let firstReport = reports[0];
   console.log(firstReport.type); // intervention
   console.log(firstReport.body.id);
-}, options);</pre>
+}, options);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

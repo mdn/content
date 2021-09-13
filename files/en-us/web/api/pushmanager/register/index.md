@@ -2,42 +2,40 @@
 title: PushManager.register()
 slug: Web/API/PushManager/register
 tags:
-- API
-- Deprecated
-- Method
-- Reference
-- Simple Push API
+  - API
+  - Deprecated
+  - Method
+  - Reference
+  - Simple Push API
 browser-compat: api.PushManager.register
 ---
-<div>{{deprecated_header}}{{ApiRef("Push API")}}</div>
+{{deprecated_header}}{{ApiRef("Push API")}}
 
-<p>The <strong><code>register</code></strong> method is used to ask the system to request
-  a new endpoint for notifications.</p>
+The **`register`** method is used to ask the system to request
+a new endpoint for notifications.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This method has been superseded by {{domxref("PushManager.subscribe()")}}.</p>
-</div>
+> **Note:** This method has been superseded by {{domxref("PushManager.subscribe()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var request = navigator.push.register();</pre>
+```js
+var request = navigator.push.register();
+```
 
-<h3 id="Return">Return</h3>
+### Return
 
-<p>A {{domxref("DOMRequest")}} object to handle the success or failure of the method call.
-</p>
+A {{domxref("DOMRequest")}} object to handle the success or failure of the method call.
 
-<p>If the method call is successful, the request's <code>result</code> will be a string,
-  which is the endpoint URL.</p>
+If the method call is successful, the request's `result` will be a string,
+which is the endpoint URL.
 
-<div class="note">
-  <p><strong>Note:</strong> if you do not need the URL any more, please use
-    {{domxref("Pushmanager.unregister()")}} to clean up after yourself.</p>
-</div>
+> **Note:** if you do not need the URL any more, please use
+> {{domxref("Pushmanager.unregister()")}} to clean up after yourself.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var req = navigator.push.register();
+```js
+var req = navigator.push.register();
 
 req.onsuccess = function(e) {
   var endpoint = req.result;
@@ -47,19 +45,17 @@ req.onsuccess = function(e) {
 req.onerror = function(e) {
   debug("Error getting a new endpoint: " + JSON.stringify(e));
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This feature is not part of any specification. It is no longer on track to become a standard.</p>
+This feature is not part of any specification. It is no longer on track to become a standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("PushManager")}}</li>
-  <li>{{domxref("DOMRequest")}}</li>
-</ul>
+- {{domxref("PushManager")}}
+- {{domxref("DOMRequest")}}

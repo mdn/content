@@ -2,59 +2,61 @@
 title: TextTrackList.length
 slug: Web/API/TextTrackList/length
 tags:
-- API
-- HTML DOM
-- Media
-- Property
-- Read-only
-- Reference
-- TextTrackList
-- length
-- list
-- track
+  - API
+  - HTML DOM
+  - Media
+  - Property
+  - Read-only
+  - Reference
+  - TextTrackList
+  - length
+  - list
+  - track
 browser-compat: api.TextTrackList.length
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The read-only <strong>{{domxref("TextTrackList")}}</strong>
-    property <code><strong>length</strong></code> returns the number of entries in the
-    <code>TextTrackList</code>, each of which is a {{domxref("TextTrack")}} representing
-    one track in the media element.</p>
+The read-only **{{domxref("TextTrackList")}}**
+property **`length`** returns the number of entries in the
+`TextTrackList`, each of which is a {{domxref("TextTrack")}} representing
+one track in the media element.
 
-<p>A value of 0 indicates that there are no text
-  tracks in the media.</p>
+A value of 0 indicates that there are no text
+tracks in the media.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>trackCount</em> = <em>TextTrackList</em>.length;</pre>
+```js
+var trackCount = TextTrackList.length;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A number indicating how many text tracks are included in the
-  <code>TextTrackList</code>. Each track can be accessed by treating the
-  <code>TextTrackList</code> as an array of objects of type {{domxref("TextTrack")}}.</p>
+A number indicating how many text tracks are included in the
+`TextTrackList`. Each track can be accessed by treating the
+`TextTrackList` as an array of objects of type {{domxref("TextTrack")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This snippet gets the number of text tracks in the first media element found in the
-  {{Glossary("DOM")}} by {{domxref("Document.querySelector", "querySelector()")}}.</p>
+This snippet gets the number of text tracks in the first media element found in the
+{{Glossary("DOM")}} by {{domxref("Document.querySelector", "querySelector()")}}.
 
-<pre class="brush: js">var mediaElem = document.querySelector("video, audio");
+```js
+var mediaElem = document.querySelector("video, audio");
 var numTextTracks = 0;
 
 if (mediaElem.textTracks) {
   numTextTracks = mediaElem.textTracks.length;
 }
-</pre>
+```
 
-<p>Note that this sample checks to be sure {{domxref("HTMLMediaElement.textTracks")}} is
-  defined, to avoid failing on browsers without support for {{domxref("TextTrack")}}.</p>
+Note that this sample checks to be sure {{domxref("HTMLMediaElement.textTracks")}} is
+defined, to avoid failing on browsers without support for {{domxref("TextTrack")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

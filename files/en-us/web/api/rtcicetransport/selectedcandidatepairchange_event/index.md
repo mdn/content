@@ -16,91 +16,90 @@ tags:
   - selectedcandidatepairchange
 browser-compat: api.RTCIceTransport.selectedcandidatepairchange_event
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>A <strong><code>selectedcandidatepairchange</code></strong> event is sent to an {{domxref("RTCIceTransport")}} when the {{Glossary("ICE")}} agent selects a new pair of candidates that describe the endpoints of a viable connection.</p>
+A **`selectedcandidatepairchange`** event is sent to an {{domxref("RTCIceTransport")}} when the {{Glossary("ICE")}} agent selects a new pair of candidates that describe the endpoints of a viable connection.
 
-<p>The pair of candidates is in turn described by an {{domxref("RTCIceCandidatePair")}} object which contains one {{domxref("RTCIceCandidate")}} representing the local end of the connection, and another representing the remote end of the connection.</p>
+The pair of candidates is in turn described by an {{domxref("RTCIceCandidatePair")}} object which contains one {{domxref("RTCIceCandidate")}} representing the local end of the connection, and another representing the remote end of the connection.
 
-<p>Together, the candidates can be used to establish a connection to be used by the {{domxref("RTCIceTransport")}}, and, by extension, by an {{domxref("RTCPeerConnection")}}.</p>
+Together, the candidates can be used to establish a connection to be used by the {{domxref("RTCIceTransport")}}, and, by extension, by an {{domxref("RTCPeerConnection")}}.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{DOMxRef("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{DOMxRef("RTCIceTransport.onselectedcandidatepairchange", "onselectedcandidatepairchange")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{DOMxRef("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{DOMxRef("RTCIceTransport.onselectedcandidatepairchange", "onselectedcandidatepairchange")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example creates an event handler for <code>selectedcandidatepairchange</code> that updates a display providing the user information about the progress of the ICE negotiation for an {{domxref("RTCPeerConnection")}} called <code>pc</code>.</p>
+This example creates an event handler for `selectedcandidatepairchange` that updates a display providing the user information about the progress of the ICE negotiation for an {{domxref("RTCPeerConnection")}} called `pc`.
 
-<pre class="brush: js">let iceTransport = pc.getSenders[0].transport.iceTransport;
+```js
+let iceTransport = pc.getSenders[0].transport.iceTransport;
 let localProtoElem = document.getElementById("local-protocol");
 let remoteProtoElem = document.getElementById("remote-protocol");
 
-iceTransport.addEventListener("selectedcandidatepairchange", ev =&gt; {
+iceTransport.addEventListener("selectedcandidatepairchange", ev => {
   let pair = iceTransport.getSelectedCandidatePair();
   localProtoElem.innerText = pair.local.protocol.toUpperCase();
   remoteProtoElem.innerText = pair.remote.protocol.toUpperCase();
-}, false)</pre>
+}, false)
+```
 
-<p>This can also be done by setting the {{domxref("RTCIceTransport.onselectedcandidatepairchange", "onselectedcandidatepairchange")}} event handler property directly.</p>
+This can also be done by setting the {{domxref("RTCIceTransport.onselectedcandidatepairchange", "onselectedcandidatepairchange")}} event handler property directly.
 
-<pre class="brush: js">let iceTransport = pc.getSenders[0].transport.iceTransport;
+```js
+let iceTransport = pc.getSenders[0].transport.iceTransport;
 let localProtoElem = document.getElementById("local-protocol");
 let remoteProtoElem = document.getElementById("remote-protocol");
 
-iceTransport.onselectedcandidatepairchange = ev =&gt; {
+iceTransport.onselectedcandidatepairchange = ev => {
   let pair = iceTransport.getSelectedCandidatePair();
   localProtoElem.innerText = pair.local.protocol.toUpperCase();
   remoteProtoElem.innerText = pair.remote.protocol.toUpperCase();
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API/Connectivity">WebRTC connectivity</a></li>
- <li>{{domxref("RTCIceTransport.onselectedcandidatepairchange")}}</li>
-</ul>
+- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+- [WebRTC connectivity](/en-US/docs/Web/API/WebRTC_API/Connectivity)
+- {{domxref("RTCIceTransport.onselectedcandidatepairchange")}}
 
-<h3 id="Related_RTCIceTransport_events">Related RTCIceTransport events</h3>
+### Related RTCIceTransport events
 
-<ul>
- <li>{{event("statechange")}}</li>
- <li>{{event("gatheringstatechange")}}</li>
-</ul>
+- {{event("statechange")}}
+- {{event("gatheringstatechange")}}
 
-<h3 id="Related_RTCPeerConnection_events">Related RTCPeerConnection events</h3>
+### Related RTCPeerConnection events
 
-<ul>
- <li>{{event("negotiationneeded")}}</li>
- <li>{{event("signalingstatechange")}}</li>
- <li>{{event("iceconnectionstatechange")}}</li>
- <li>{{event("icegatheringstatechange")}}</li>
- <li>{{event("connectionstatechange")}}</li>
-</ul>
+- {{event("negotiationneeded")}}
+- {{event("signalingstatechange")}}
+- {{event("iceconnectionstatechange")}}
+- {{event("icegatheringstatechange")}}
+- {{event("connectionstatechange")}}

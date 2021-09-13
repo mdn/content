@@ -11,32 +11,31 @@ tags:
   - Secure context
 browser-compat: api.PositionOptions.enableHighAccuracy
 ---
-<div>{{securecontext_header}}{{APIRef("Geolocation API")}}</div>
+{{securecontext_header}}{{APIRef("Geolocation API")}}
 
-<p>The <code><strong>PositionOptions.enableHighAccuracy</strong></code> property is a
-	boolean value that indicates the application would like to receive the best
-	possible results. If <code>true</code> and if the device is able to provide a more
-	accurate position, it will do so. Note that this can result in slower response times
-	or increased power consumption (with a GPS chip on a mobile device for example). On
-	the other hand, if <code>false</code> (the default value), the device can take the
-	liberty to save resources by responding more quickly and/or using less power.</p>
+The **`PositionOptions.enableHighAccuracy`** property is a
+boolean value that indicates the application would like to receive the best
+possible results. If `true` and if the device is able to provide a more
+accurate position, it will do so. Note that this can result in slower response times
+or increased power consumption (with a GPS chip on a mobile device for example). On
+the other hand, if `false` (the default value), the device can take the
+liberty to save resources by responding more quickly and/or using less power.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>positionOptions</var>.enableHighAccuracy = <var>booleanValue</var>
-</pre>
+```js
+positionOptions.enableHighAccuracy = booleanValue
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><a href="/en-US/docs/Web/API/Geolocation_API">Using geolocation</a></li>
-	<li>The {{domxref("PositionOptions")}} interface it belongs to.</li>
-</ul>
+- [Using geolocation](/en-US/docs/Web/API/Geolocation_API)
+- The {{domxref("PositionOptions")}} interface it belongs to.

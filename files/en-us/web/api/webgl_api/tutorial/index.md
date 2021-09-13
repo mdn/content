@@ -7,33 +7,31 @@ tags:
   - WebGL
   - WebGL API
 ---
-<div>{{WebGLSidebar}}</div>
+{{WebGLSidebar}}
 
-<p>This tutorial describes how to use the {{HTMLElement("canvas")}}  element to draw WebGL graphics, starting with the basics. The examples provided should give you some clear ideas of what you can do with WebGL and will provide code snippets that may get you started in building your own content.</p>
+This tutorial describes how to use the {{HTMLElement("canvas")}} element to draw WebGL graphics, starting with the basics. The examples provided should give you some clear ideas of what you can do with WebGL and will provide code snippets that may get you started in building your own content.
 
-<p><a href="http://www.khronos.org/webgl/">WebGL</a> enables web content to use an API based on <a href="http://www.khronos.org/opengles/">OpenGL ES</a> 2.0 to perform 3D rendering in an HTML <code>&lt;canvas&gt;</code> in browsers that support it without the use of plug-ins. WebGL programs consist of control code written in JavaScript and special effects code (shader code) that is executed on a computer's Graphics Processing Unit (GPU). WebGL elements can be mixed with other HTML elements and composited with other parts of the page or page background.</p>
+[WebGL](http://www.khronos.org/webgl/) enables web content to use an API based on [OpenGL ES](http://www.khronos.org/opengles/) 2.0 to perform 3D rendering in an HTML `<canvas>` in browsers that support it without the use of plug-ins. WebGL programs consist of control code written in JavaScript and special effects code (shader code) that is executed on a computer's Graphics Processing Unit (GPU). WebGL elements can be mixed with other HTML elements and composited with other parts of the page or page background.
 
-<h2 id="Before_you_start">Before you start</h2>
+## Before you start
 
-<p>Using the <code>&lt;canvas&gt;</code> element is not very difficult, but you do need a basic understanding of <a href="/en-US/docs/Web/HTML">HTML</a> and <a href="/en-US/docs/Web/JavaScript">JavaScript</a>. The <code>&lt;canvas&gt;</code> element and WebGL are not supported in some older browsers, but are supported in recent versions of all major browsers. In order to draw graphics on the canvas we use a JavaScript context object, which creates graphics on the fly.</p>
+Using the `<canvas>` element is not very difficult, but you do need a basic understanding of [HTML](/en-US/docs/Web/HTML) and [JavaScript](/en-US/docs/Web/JavaScript). The `<canvas>` element and WebGL are not supported in some older browsers, but are supported in recent versions of all major browsers. In order to draw graphics on the canvas we use a JavaScript context object, which creates graphics on the fly.
 
-<h2 id="In_this_tutorial">In this tutorial</h2>
+## In this tutorial
 
-<dl>
- <dt><a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL">Getting started with WebGL</a></dt>
- <dd>How to set up a WebGL context.</dd>
- <dt><a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context">Adding 2D content to a WebGL context</a></dt>
- <dd>How to render simple flat shapes using WebGL.</dd>
- <dt><a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL">Using shaders to apply color in WebGL</a></dt>
- <dd>Demonstrates how to add color to shapes using shaders.</dd>
- <dt><a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL">Animating objects with WebGL</a></dt>
- <dd>Shows how to rotate and translate objects to create simple animations.</dd>
- <dt><a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL">Creating 3D objects using WebGL</a></dt>
- <dd>Shows how to create and animate a 3D object (in this case, a cube).</dd>
- <dt><a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL">Using textures in WebGL</a></dt>
- <dd>Demonstrates how to map textures onto the faces of an object.</dd>
- <dt><a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL">Lighting in WebGL</a></dt>
- <dd>How to simulate lighting effects in your WebGL context.</dd>
- <dt><a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL">Animating textures in WebGL</a></dt>
- <dd>Shows how to animate textures; in this case, by mapping an Ogg video onto the faces of a rotating cube.</dd>
-</dl>
+- [Getting started with WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL)
+  - : How to set up a WebGL context.
+- [Adding 2D content to a WebGL context](/en-US/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context)
+  - : How to render simple flat shapes using WebGL.
+- [Using shaders to apply color in WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL)
+  - : Demonstrates how to add color to shapes using shaders.
+- [Animating objects with WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL)
+  - : Shows how to rotate and translate objects to create simple animations.
+- [Creating 3D objects using WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL)
+  - : Shows how to create and animate a 3D object (in this case, a cube).
+- [Using textures in WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)
+  - : Demonstrates how to map textures onto the faces of an object.
+- [Lighting in WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL)
+  - : How to simulate lighting effects in your WebGL context.
+- [Animating textures in WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL)
+  - : Shows how to animate textures; in this case, by mapping an Ogg video onto the faces of a rotating cube.

@@ -8,100 +8,68 @@ tags:
   - WebGL extension
 browser-compat: api.WEBGL_draw_buffers
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <code><strong>WEBGL_draw_buffers</strong></code> extension is part of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> and enables a fragment shader to write to several textures, which is useful for <a href="https://hacks.mozilla.org/2014/01/webgl-deferred-shading/">deferred shading</a>, for example.</p>
+The **`WEBGL_draw_buffers`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and enables a fragment shader to write to several textures, which is useful for [deferred shading](https://hacks.mozilla.org/2014/01/webgl-deferred-shading/), for example.
 
-<p>WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also <a href="/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</a> in the <a href="/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</a>.</p>
+WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
 
-<div class="note">
-<p><strong>Note:</strong> This extension is only available to {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} contexts. In {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}}, the functionality of this extension is available on the WebGL2 context by default. In WebGL 2, the constants are available without the "WEBGL" suffix and the new GLSL built-ins require GLSL <code>#version 300 es</code>.</p>
-</div>
+> **Note:** This extension is only available to {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} contexts. In {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}}, the functionality of this extension is available on the WebGL2 context by default. In WebGL 2, the constants are available without the "WEBGL" suffix and the new GLSL built-ins require GLSL `#version 300 es`.
 
-<h2 id="Constants">Constants</h2>
+## Constants
 
-<p>This extension exposes new constants, which can be used in the {{domxref("WebGLRenderingContext.framebufferRenderbuffer()", "gl.framebufferRenderbuffer()")}}, {{domxref("WebGLRenderingContext.framebufferTexture2D()", "gl.framebufferTexture2D()")}}, {{domxref("WebGLRenderingContext.getFramebufferAttachmentParameter()", "gl.getFramebufferAttachmentParameter()")}} {{domxref("WEBGL_draw_buffers.drawBuffersWEBGL()", "ext.drawBuffersWEBGL()")}}, and {{domxref("WebGLRenderingContext.getParameter()", "gl.getParameter()")}} methods.</p>
+This extension exposes new constants, which can be used in the {{domxref("WebGLRenderingContext.framebufferRenderbuffer()", "gl.framebufferRenderbuffer()")}}, {{domxref("WebGLRenderingContext.framebufferTexture2D()", "gl.framebufferTexture2D()")}}, {{domxref("WebGLRenderingContext.getFramebufferAttachmentParameter()", "gl.getFramebufferAttachmentParameter()")}} {{domxref("WEBGL_draw_buffers.drawBuffersWEBGL()", "ext.drawBuffersWEBGL()")}}, and {{domxref("WebGLRenderingContext.getParameter()", "gl.getParameter()")}} methods.
 
-<dl>
- <dt><code>ext.COLOR_ATTACHMENT0_WEBGL<br>
- ext.COLOR_ATTACHMENT1_WEBGL<br>
- ext.COLOR_ATTACHMENT2_WEBGL<br>
- ext.COLOR_ATTACHMENT3_WEBGL<br>
- ext.COLOR_ATTACHMENT4_WEBGL<br>
- ext.COLOR_ATTACHMENT5_WEBGL<br>
- ext.COLOR_ATTACHMENT6_WEBGL<br>
- ext.COLOR_ATTACHMENT7_WEBGL<br>
- ext.COLOR_ATTACHMENT8_WEBGL<br>
- ext.COLOR_ATTACHMENT9_WEBGL<br>
- ext.COLOR_ATTACHMENT10_WEBGL<br>
- ext.COLOR_ATTACHMENT11_WEBGL<br>
- ext.COLOR_ATTACHMENT12_WEBGL<br>
- ext.COLOR_ATTACHMENT13_WEBGL<br>
- ext.COLOR_ATTACHMENT14_WEBGL<br>
- ext.COLOR_ATTACHMENT15_WEBGL</code></dt>
- <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying a color buffer.</dd>
- <dt><code>ext.DRAW_BUFFER0_WEBGL<br>
- ext.DRAW_BUFFER1_WEBGL<br>
- ext.DRAW_BUFFER2_WEBGL<br>
- ext.DRAW_BUFFER3_WEBGL<br>
- ext.DRAW_BUFFER4_WEBGL<br>
- ext.DRAW_BUFFER5_WEBGL<br>
- ext.DRAW_BUFFER6_WEBGL<br>
- ext.DRAW_BUFFER7_WEBGL<br>
- ext.DRAW_BUFFER8_WEBGL<br>
- ext.DRAW_BUFFER9_WEBGL<br>
- ext.DRAW_BUFFER10_WEBGL<br>
- ext.DRAW_BUFFER11_WEBGL<br>
- ext.DRAW_BUFFER12_WEBGL<br>
- ext.DRAW_BUFFER13_WEBGL<br>
- ext.DRAW_BUFFER14_WEBGL<br>
- ext.DRAW_BUFFER15_WEBGL</code></dt>
- <dd>A {{domxref("WebGL_API/Types", "GLenum")}} returning a draw buffer.</dd>
- <dt><code>ext.MAX_COLOR_ATTACHMENTS_WEBGL</code></dt>
- <dd>A {{domxref("WebGL_API/Types", "GLint")}} indicating the maximum number of framebuffer color attachment points.</dd>
- <dt><code>ext.MAX_DRAW_BUFFERS_WEBGL</code></dt>
- <dd>A {{domxref("WebGL_API/Types", "GLint")}} indicating the maximum number of draw buffers.</dd>
-</dl>
+- `ext.COLOR_ATTACHMENT0_WEBGL ext.COLOR_ATTACHMENT1_WEBGL ext.COLOR_ATTACHMENT2_WEBGL ext.COLOR_ATTACHMENT3_WEBGL ext.COLOR_ATTACHMENT4_WEBGL ext.COLOR_ATTACHMENT5_WEBGL ext.COLOR_ATTACHMENT6_WEBGL ext.COLOR_ATTACHMENT7_WEBGL ext.COLOR_ATTACHMENT8_WEBGL ext.COLOR_ATTACHMENT9_WEBGL ext.COLOR_ATTACHMENT10_WEBGL ext.COLOR_ATTACHMENT11_WEBGL ext.COLOR_ATTACHMENT12_WEBGL ext.COLOR_ATTACHMENT13_WEBGL ext.COLOR_ATTACHMENT14_WEBGL ext.COLOR_ATTACHMENT15_WEBGL`
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying a color buffer.
+- `ext.DRAW_BUFFER0_WEBGL ext.DRAW_BUFFER1_WEBGL ext.DRAW_BUFFER2_WEBGL ext.DRAW_BUFFER3_WEBGL ext.DRAW_BUFFER4_WEBGL ext.DRAW_BUFFER5_WEBGL ext.DRAW_BUFFER6_WEBGL ext.DRAW_BUFFER7_WEBGL ext.DRAW_BUFFER8_WEBGL ext.DRAW_BUFFER9_WEBGL ext.DRAW_BUFFER10_WEBGL ext.DRAW_BUFFER11_WEBGL ext.DRAW_BUFFER12_WEBGL ext.DRAW_BUFFER13_WEBGL ext.DRAW_BUFFER14_WEBGL ext.DRAW_BUFFER15_WEBGL`
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} returning a draw buffer.
+- `ext.MAX_COLOR_ATTACHMENTS_WEBGL`
+  - : A {{domxref("WebGL_API/Types", "GLint")}} indicating the maximum number of framebuffer color attachment points.
+- `ext.MAX_DRAW_BUFFERS_WEBGL`
+  - : A {{domxref("WebGL_API/Types", "GLint")}} indicating the maximum number of draw buffers.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p>This extension exposes one new method.</p>
+This extension exposes one new method.
 
-<dl>
- <dt>{{domxref("WEBGL_draw_buffers.drawBuffersWEBGL()", "ext.drawBuffersWEBGL()")}}</dt>
- <dd>
- <p>Defines the draw buffers to which all fragment colors are written. (When using {{domxref("WebGL2RenderingContext", "WebGL2")}}, this method is available as {{domxref("WebGL2RenderingContext.drawBuffers()", "gl.drawBuffers()")}} by default).</p>
- </dd>
-</dl>
+- {{domxref("WEBGL_draw_buffers.drawBuffersWEBGL()", "ext.drawBuffersWEBGL()")}}
+  - : Defines the draw buffers to which all fragment colors are written. (When using {{domxref("WebGL2RenderingContext", "WebGL2")}}, this method is available as {{domxref("WebGL2RenderingContext.drawBuffers()", "gl.drawBuffers()")}} by default).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Enabling the extension:</p>
+Enabling the extension:
 
-<pre class="brush: js">var ext = gl.getExtension('WEBGL_draw_buffers');
-</pre>
+```js
+var ext = gl.getExtension('WEBGL_draw_buffers');
+```
 
-<p>Binding multiple textures (to a <code>tx[]</code> array) to different framebuffer color attachments:</p>
+Binding multiple textures (to a `tx[]` array) to different framebuffer color attachments:
 
-<pre class="brush: js">var fb = gl.createFramebuffer();
+```js
+var fb = gl.createFramebuffer();
 gl.bindFramebuffer(gl.FRAMEBUFFER, fb);
 gl.framebufferTexture2D(gl.FRAMEBUFFER, ext.COLOR_ATTACHMENT0_WEBGL, gl.TEXTURE_2D, tx[0], 0);
 gl.framebufferTexture2D(gl.FRAMEBUFFER, ext.COLOR_ATTACHMENT1_WEBGL, gl.TEXTURE_2D, tx[1], 0);
 gl.framebufferTexture2D(gl.FRAMEBUFFER, ext.COLOR_ATTACHMENT2_WEBGL, gl.TEXTURE_2D, tx[2], 0);
-gl.framebufferTexture2D(gl.FRAMEBUFFER, ext.COLOR_ATTACHMENT3_WEBGL, gl.TEXTURE_2D, tx[3], 0);</pre>
+gl.framebufferTexture2D(gl.FRAMEBUFFER, ext.COLOR_ATTACHMENT3_WEBGL, gl.TEXTURE_2D, tx[3], 0);
+```
 
-<p>Mapping the color attachments to draw buffer slots that the fragment shader will write to using <code>gl_FragData</code>:</p>
+Mapping the color attachments to draw buffer slots that the fragment shader will write to using `gl_FragData`:
 
-<pre class="brush: js">ext.drawBuffersWEBGL([
+```js
+ext.drawBuffersWEBGL([
   ext.COLOR_ATTACHMENT0_WEBGL, // gl_FragData[0]
   ext.COLOR_ATTACHMENT1_WEBGL, // gl_FragData[1]
   ext.COLOR_ATTACHMENT2_WEBGL, // gl_FragData[2]
   ext.COLOR_ATTACHMENT3_WEBGL  // gl_FragData[3]
-]);</pre>
+]);
+```
 
-<p>Shader code that writes to multiple textures:</p>
+Shader code that writes to multiple textures:
 
-<pre class="brush: html">&lt;script type="x-shader/x-fragment"&gt;
+```html
+<script type="x-shader/x-fragment">
 #extension GL_EXT_draw_buffers : require
 
 precision highp float;
@@ -112,20 +80,19 @@ void main(void) {
   gl_FragData[2] = vec4(0.75);
   gl_FragData[3] = vec4(1.0);
 }
-&lt;/script&gt;</pre>
+</script>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.getExtension()")}}</li>
- <li>{{domxref("WebGL2RenderingContext.drawBuffers()")}}</li>
- <li><a href="https://hacks.mozilla.org/2014/01/webgl-deferred-shading/">WebGL deferred shading - Mozilla Hacks blog</a></li>
-</ul>
+- {{domxref("WebGLRenderingContext.getExtension()")}}
+- {{domxref("WebGL2RenderingContext.drawBuffers()")}}
+- [WebGL deferred shading - Mozilla Hacks blog](https://hacks.mozilla.org/2014/01/webgl-deferred-shading/)

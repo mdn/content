@@ -10,39 +10,36 @@ tags:
   - Reference
 browser-compat: api.PointerEvent.height
 ---
-<div>{{ APIRef("Pointer Events") }}</div>
+{{ APIRef("Pointer Events") }}
 
-<p>The <code><strong>height</strong></code> read-only property of the
-  {{domxref("PointerEvent")}} interface represents the height of the pointer's contact
-  geometry, along the y-axis (in CSS pixels). Depending on the source of the pointer
-  device (for example a finger), for a given pointer, each event may produce a different
-  value.</p>
+The **`height`** read-only property of the
+{{domxref("PointerEvent")}} interface represents the height of the pointer's contact
+geometry, along the y-axis (in CSS pixels). Depending on the source of the pointer
+device (for example a finger), for a given pointer, each event may produce a different
+value.
 
-<p>If the input hardware cannot report the contact geometry to the browser, the height
-  defaults to <code>1</code>.</p>
+If the input hardware cannot report the contact geometry to the browser, the height
+defaults to `1`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>contactHeight</em> = <em>pointerEvent</em>.height;
-</pre>
+```js
+var contactHeight = pointerEvent.height;
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<dl>
-  <dt><code>contactHeight</code></dt>
-  <dd>The height of the event's contact area (in CSS pixels).</dd>
-</dl>
+- `contactHeight`
+  - : The height of the event's contact area (in CSS pixels).
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>An example of this property is included in the <a
-    href="/en-US/docs/Web/API/PointerEvent/width#example">PointerEvent.width example</a>.
-</p>
+An example of this property is included in the [PointerEvent.width example](/en-US/docs/Web/API/PointerEvent/width#example).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,28 +2,28 @@
 title: WebGLRenderingContext.getError()
 slug: Web/API/WebGLRenderingContext/getError
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getError
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.getError()</code></strong> method of the <a
-    href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> returns error information.</p>
+The **`WebGLRenderingContext.getError()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) returns error information.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">GLenum <var>gl</var>.getError();
-</pre>
+```js
+GLenum gl.getError();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
 <table class="no-markdown">
   <thead>
@@ -39,23 +39,31 @@ browser-compat: api.WebGLRenderingContext.getError
     </tr>
     <tr>
       <td><code>gl.INVALID_ENUM</code></td>
-      <td>An unacceptable value has been specified for an enumerated argument. The command
-        is ignored and the error flag is set.</td>
+      <td>
+        An unacceptable value has been specified for an enumerated argument. The
+        command is ignored and the error flag is set.
+      </td>
     </tr>
     <tr>
       <td><code>gl.INVALID_VALUE</code></td>
-      <td>A numeric argument is out of range. The command is ignored and the error flag is
-        set.</td>
+      <td>
+        A numeric argument is out of range. The command is ignored and the error
+        flag is set.
+      </td>
     </tr>
     <tr>
       <td><code>gl.INVALID_OPERATION</code></td>
-      <td>The specified command is not allowed for the current state. The command is
-        ignored and the error flag is set.</td>
+      <td>
+        The specified command is not allowed for the current state. The command
+        is ignored and the error flag is set.
+      </td>
     </tr>
     <tr>
       <td><code>gl.INVALID_FRAMEBUFFER_OPERATION</code></td>
-      <td>The currently bound framebuffer is not framebuffer complete when trying to
-        render to or to read from it.</td>
+      <td>
+        The currently bound framebuffer is not framebuffer complete when trying
+        to render to or to read from it.
+      </td>
     </tr>
     <tr>
       <td><code>gl.OUT_OF_MEMORY</code></td>
@@ -63,32 +71,33 @@ browser-compat: api.WebGLRenderingContext.getError
     </tr>
     <tr>
       <td><code>gl.CONTEXT_LOST_WEBGL</code></td>
-      <td>If the WebGL context is lost, this error is returned on the first call to
-        <code>getError</code>. Afterwards and until the context has been restored, it
-        returns <code>gl.NO_ERROR</code>.</td>
+      <td>
+        If the WebGL context is lost, this error is returned on the first call
+        to <code>getError</code>. Afterwards and until the context has been
+        restored, it returns <code>gl.NO_ERROR</code>.
+      </td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">gl.getError(); // gl.NO_ERROR (0)
+```js
+gl.getError(); // gl.NO_ERROR (0)
 
 gl.enable(gl.FOOBAR);
 gl.getError(); // gl.INVALID_ENUM;
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext")}}</li>
-  <li>{{domxref("WebGLContextEvent")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext")}}
+- {{domxref("WebGLContextEvent")}}

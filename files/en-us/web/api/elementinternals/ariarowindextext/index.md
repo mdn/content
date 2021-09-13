@@ -11,38 +11,39 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals.ariaRowIndexText
 ---
-<div>{{DefaultAPISidebar("DOM")}}</div>
+{{DefaultAPISidebar("DOM")}}
 
-<p>The <strong><code>ariaRowIndexText</code></strong> property of the {{domxref("ElementInternals")}} interface reflects the value of the <code>aria-rowindextext</code> attribute, which defines a human readable text alternative of aria-rowindex.</p>
+The **`ariaRowIndexText`** property of the {{domxref("ElementInternals")}} interface reflects the value of the `aria-rowindextext` attribute, which defines a human readable text alternative of aria-rowindex.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Setting aria attributes on <code>ElementInternals</code> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <a href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</a>.</p>
-</div>
+> **Note:** Setting aria attributes on `ElementInternals` allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the [Accessibility Object Model explainer](https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let ariaRowIndexText = ElementInternals.ariaRowIndexText;
-ElementInternals.ariaRowIndexText = ariaRowIndexText;</pre>
+```js
+let ariaRowIndexText = ElementInternals.ariaRowIndexText;
+ElementInternals.ariaRowIndexText = ariaRowIndexText;
+```
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString")}}.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("DOMString")}}.
 
-<p>In this example the value of <code>ariaRowIndexText</code> is set to "Heading row".</p>
+## Examples
 
-<pre class="brush: js">this.internals_.ariaRowIndexText = "Heading row";</pre>
+In this example the value of `ariaRowIndexText` is set to "Heading row".
 
-<h2 id="Specifications">Specifications</h2>
+```js
+this.internals_.ariaRowIndexText = "Heading row";
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role">ARIA: table role</a></li>
-</ul>
+- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role)

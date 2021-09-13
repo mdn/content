@@ -2,48 +2,49 @@
 title: PictureInPictureWindow.onresize
 slug: Web/API/PictureInPictureWindow/onresize
 tags:
-- API
-- Interface
-- Media
-- Picture-in-Picture
-- Picture-in-Picture API
-- Video
-- pip
+  - API
+  - Interface
+  - Media
+  - Picture-in-Picture
+  - Picture-in-Picture API
+  - Video
+  - pip
 browser-compat: api.PictureInPictureWindow.onresize
 ---
-<div>{{ ApiRef() }}</div>
+{{ ApiRef() }}
 
-<p>The <code><strong>onresize</strong></code> property of the
-  {{domxref("PictureInPictureWindow")}} interface is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> that
-  processes {{domxref("PictureInPictureWindow.resize_event",
-  "PictureInPictureWindow.resize")}} events.</p>
+The **`onresize`** property of the
+{{domxref("PictureInPictureWindow")}} interface is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
+processes {{domxref("PictureInPictureWindow.resize_event",
+  "PictureInPictureWindow.resize")}} events.
 
-<p>The <code>resize</code> event fires after the floating video window has been resized.
-</p>
+The `resize` event fires after the floating video window has been resized.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>pictureInPictureWindow</em>.onresize = <em>functionRef</em>;
-</pre>
+```js
+pictureInPictureWindow.onresize = functionRef;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p><code>functionRef</code> is a function name or a <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function
-    expression</a>. The function receives a {{domxref("FocusEvent")}} object as its sole
-  argument.</p>
+`functionRef` is a function name or a [function
+expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("FocusEvent")}} object as its sole
+argument.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Window_size_logger">Window size logger</h3>
+### Window size logger
 
-<pre class="brush: html">&lt;p&gt;Resize the floating video window to fire the &lt;code&gt;resize&lt;/code&gt; event.&lt;/p&gt;
-&lt;p&gt;Window height: &lt;span id="height"&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Window width: &lt;span id="width"&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;video id="video" muted autoplay src=""&gt;&lt;/video&gt;
-</pre>
+```html
+<p>Resize the floating video window to fire the <code>resize</code> event.</p>
+<p>Window height: <span id="height"></span></p>
+<p>Window width: <span id="width"></span></p>
+<video id="video" muted autoplay src=""></video>
+```
 
-<pre class="brush: js">const video = document.querySelector('#video');
+```js
+const video = document.querySelector('#video');
 const heightOutput = document.querySelector('#height');
 const widthOutput = document.querySelector('#width');
 
@@ -53,21 +54,19 @@ function resize(evt) {
 }
 
 video.requestPictureInPicture()
-  .then(pictureInPictureWindow =&gt; {
+  .then(pictureInPictureWindow => {
     pictureInPictureWindow.onresize = resize;
   });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Picture-in-Picture_API">Picture-in-Picture API</a></li>
-</ul>
+- [Picture-in-Picture API](/en-US/docs/Web/API/Picture-in-Picture_API)

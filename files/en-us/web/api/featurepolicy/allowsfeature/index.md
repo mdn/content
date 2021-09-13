@@ -3,46 +3,49 @@ title: FeaturePolicy.allowsFeature()
 slug: Web/API/FeaturePolicy/allowsFeature
 browser-compat: api.FeaturePolicy.allowsFeature
 ---
-<div>{{APIRef("Feature Policy API")}}{{SeeCompatTable}}</div>
+{{APIRef("Feature Policy API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>allowsFeature()</code></strong> method of
-		the {{DOMxRef("FeaturePolicy")}} interface enables introspection of individual
-		directives of the Feature Policy it is run on. It returns a {{JSxRef("Boolean")}}
-		that is <code>true</code> if and only if the specified feature is allowed in the
-		specified context (or the default context if no context is specified).</p>
+The **`allowsFeature()`** method of
+the {{DOMxRef("FeaturePolicy")}} interface enables introspection of individual
+directives of the Feature Policy it is run on. It returns a {{JSxRef("Boolean")}}
+that is `true` if and only if the specified feature is allowed in the
+specified context (or the default context if no context is specified).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const allowed = <em>FeaturePolicy</em>.allowsFeature(&lt;feature&gt;)
-</pre>
+```js
+const allowed = FeaturePolicy.allowsFeature(<feature>)
+```
 
-<p>or</p>
+or
 
-<pre
-	class="brush: js">const allowed = <em>FeaturePolicy</em>.allowsFeature(&lt;feature&gt;, &lt;origin&gt;)</pre>
+```js
+const allowed = FeaturePolicy.allowsFeature(<feature>, <origin>)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<h4 id="Feature_name"><code>Feature name</code></h4>
+#### `Feature name`
 
-<p>A specific feature name must be specified.</p>
+A specific feature name must be specified.
 
-<h4 id="Origin_name_Optional_inline"><code>Origin name</code> {{Optional_inline}}</h4>
+#### `Origin name` {{Optional_inline}}
 
-<p>An origin URL to check the feature on. If it is omitted the default origin is used.</p>
+An origin URL to check the feature on. If it is omitted the default origin is used.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{JSxRef("Boolean")}} that is <code>true</code> if and only if the feature is
-	allowed.</p>
+A {{JSxRef("Boolean")}} that is `true` if and only if the feature is
+allowed.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example queries whether or not the document is allowed to use camera API
-	by the Feature Policy. Please note that Camera API might be restricted by the
-	Permissions API, if the user did not grant the corresponding permission yet.</p>
+The following example queries whether or not the document is allowed to use camera API
+by the Feature Policy. Please note that Camera API might be restricted by the
+Permissions API, if the user did not grant the corresponding permission yet.
 
-<pre class="brush: js">// First, get the Feature Policy object
+```js
+// First, get the Feature Policy object
 const featurePolicy = document.featurePolicy
 
 // Then query feature for specific
@@ -53,12 +56,12 @@ if (allowed){
 } else {
   console.log("FP does not allows camera.")
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

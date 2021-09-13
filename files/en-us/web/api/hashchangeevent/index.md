@@ -11,64 +11,67 @@ tags:
   - events
 browser-compat: api.HashChangeEvent
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <code><strong>HashChangeEvent</strong></code> interface represents events that fire when the fragment identifier of the URL has changed.</p>
+The **`HashChangeEvent`** interface represents events that fire when the fragment identifier of the URL has changed.
 
-<p>The fragment identifier is the part of the URL that follows (and includes) the <code>#</code> symbol.</p>
+The fragment identifier is the part of the URL that follows (and includes) the `#` symbol.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface also inherits the properties of its parent, {{domxref("Event")}}.</em></p>
+_This interface also inherits the properties of its parent, {{domxref("Event")}}._
 
-<dl>
- <dt>{{domxref("HashChangeEvent.newURL")}} {{readonlyInline}}</dt>
- <dd>The new URL to which the window is navigating.</dd>
- <dt>{{domxref("HashChangeEvent.oldURL")}} {{readonlyInline}}</dt>
- <dd>The previous URL from which the window was navigated.</dd>
-</dl>
+- {{domxref("HashChangeEvent.newURL")}} {{readonlyInline}}
+  - : The new URL to which the window is navigating.
+- {{domxref("HashChangeEvent.oldURL")}} {{readonlyInline}}
+  - : The previous URL from which the window was navigated.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface has no methods of its own, but inherits the methods of its parent, {{domxref("Event")}}.</em></p>
+_This interface has no methods of its own, but inherits the methods of its parent, {{domxref("Event")}}._
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Syntax_options_for_a_hash_change">Syntax options for a hash change</h3>
+### Syntax options for a hash change
 
-<p>You can listen for the {{event("hashchange")}} event using any of the following options:</p>
+You can listen for the {{event("hashchange")}} event using any of the following options:
 
-<pre class="brush: js">window.onhashchange = funcRef;
-</pre>
+```js
+window.onhashchange = funcRef;
+```
 
-<p><strong>or</strong></p>
+**or**
 
-<pre class="brush: html">&lt;body onhashchange="funcRef();"&gt;
-</pre>
+```html
+<body onhashchange="funcRef();">
+```
 
-<p><strong>or</strong></p>
+**or**
 
-<pre class="brush: js">window.addEventListener("hashchange", funcRef, false);
-</pre>
+```js
+window.addEventListener("hashchange", funcRef, false);
+```
 
-<h3 id="Basic_example">Basic example</h3>
+### Basic example
 
-<pre class="brush: js">function locationHashChanged() {
+```js
+function locationHashChanged() {
   if (location.hash === '#somecoolfeature') {
     somecoolfeature();
   }
 }
 
 window.addEventListener('hashchange', locationHashChanged);
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>There are several fallback scripts listed on the <a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills">Modernizr GitHub page</a>. Basically, those scripts check the <code>hash</code> property of {{domxref("Window.location")}} at a regular interval. Here is a version that allows only one handler to be bound to the {{domxref("WindowEventHandlers.onhashchange", "onhashchange")}} property:</p>
+There are several fallback scripts listed on the [Modernizr GitHub page](https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills). Basically, those scripts check the `hash` property of {{domxref("Window.location")}} at a regular interval. Here is a version that allows only one handler to be bound to the {{domxref("WindowEventHandlers.onhashchange", "onhashchange")}} property:
 
-<pre class="brush: js">;(function(window) {
+```js
+;(function(window) {
 
   // Exit if the browser implements that event
   if ( "onhashchange" in window.document.body ) { return; }
@@ -83,7 +86,7 @@ window.addEventListener('hashchange', locationHashChanged);
         newHash = location.hash;
 
     // If the hash has changed and a handler has been bound...
-    if ( newHash != oldHash &amp;&amp; typeof window.onhashchange === "function" ) {
+    if ( newHash != oldHash && typeof window.onhashchange === "function" ) {
       // Execute the handler
       window.onhashchange({
         type: "hashchange",
@@ -96,19 +99,18 @@ window.addEventListener('hashchange', locationHashChanged);
     }
   }, 100);
 
-})(window);</pre>
+})(window);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Related_events">Related events</h2>
+## Related events
 
-<ul>
- <li>{{event("hashchange")}}</li>
- <li>{{event("popstate")}}</li>
-</ul>
+- {{event("hashchange")}}
+- {{event("popstate")}}

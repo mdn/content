@@ -12,42 +12,41 @@ tags:
   - getReceivers
 browser-compat: api.RTCPeerConnection.getReceivers
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <code><strong>RTCPeerConnection.getReceivers()</strong></code> method returns an
-	array of {{domxref("RTCRtpReceiver")}} objects, each of which represents one RTP
-	receiver. Each RTP receiver manages the reception and decoding of data for
-	a {{domxref("MediaStreamTrack")}} on an {{domxref("RTCPeerConnection")}}</p>
+The **`RTCPeerConnection.getReceivers()`** method returns an
+array of {{domxref("RTCRtpReceiver")}} objects, each of which represents one RTP
+receiver. Each RTP receiver manages the reception and decoding of data for
+a {{domxref("MediaStreamTrack")}} on an {{domxref("RTCPeerConnection")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>receivers</em> = <em>rtcPeerConnection</em>.getReceivers();
-</pre>
+```js
+var receivers = rtcPeerConnection.getReceivers();
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An array of {{domxref("RTCRtpReceiver")}} objects, one for each track on the
-	connection. The array is empty if there are no RTP receivers on the connection.</p>
+An array of {{domxref("RTCRtpReceiver")}} objects, one for each track on the
+connection. The array is empty if there are no RTP receivers on the connection.
 
-<p>The order of the returned <code>RTCRtpReceiver</code> instances is not defined by the
-	specification, and may change from one call to <code>getReceivers()</code> to the
-	next.</p>
+The order of the returned `RTCRtpReceiver` instances is not defined by the
+specification, and may change from one call to `getReceivers()` to the
+next.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>tbd</p>
+tbd
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><a href="/en-US/docs/Web/Guide/API/WebRTC_API">WebRTC</a></li>
-	<li>{{domxref("RTCRtpSender")}}</li>
-</ul>
+- [WebRTC](/en-US/docs/Web/Guide/API/WebRTC_API)
+- {{domxref("RTCRtpSender")}}

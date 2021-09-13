@@ -2,68 +2,69 @@
 title: Element.scrollLeft
 slug: Web/API/Element/scrollLeft
 tags:
-- API
-- CSSOM View
-- Property
-- Reference
+  - API
+  - CSSOM View
+  - Property
+  - Reference
 browser-compat: api.Element.scrollLeft
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>Element.scrollLeft</code></strong> property gets or sets the number
-  of pixels that an element's content is scrolled from its left edge.</p>
+The **`Element.scrollLeft`** property gets or sets the number
+of pixels that an element's content is scrolled from its left edge.
 
-<p>If the element's {{cssxref("direction")}} is <code>rtl</code> (right-to-left), then
-  <code>scrollLeft</code> is <code>0</code> when the scrollbar is at its rightmost
-  position (at the start of the scrolled content), and then increasingly negative as you
-  scroll towards the end of the content.</p>
+If the element's {{cssxref("direction")}} is `rtl` (right-to-left), then
+`scrollLeft` is `0` when the scrollbar is at its rightmost
+position (at the start of the scrolled content), and then increasingly negative as you
+scroll towards the end of the content.
 
-<div class="notecard warning">
-  <p><strong>Warning:</strong> On systems using display scaling, <code>scrollLeft</code> may give you a decimal
-    value.</p>
+> **Warning:** On systems using display scaling, `scrollLeft` may give you a decimal
+> value.
+
+## Syntax
+
+### Getting the value
+
+```js
+// Get the number of pixels scrolled
+var sLeft = element.scrollLeft;
+```
+
+`sLeft` is an integer representing the number of pixels that
+`element` has been scrolled from the left edge.
+
+### Setting the value
+
+```js
+// Set the number of pixels scrolled
+element.scrollLeft = 10;
+```
+
+`scrollLeft` can be specified as any integer value. However:
+
+- If the element can't be scrolled (e.g., it has no overflow), `scrollLeft`
+  is set to `0`.
+- If specified as a value less than `0` (greater than `0` for
+  right-to-left elements), `scrollLeft` is set to `0`.
+- If specified as a value greater than the maximum that the content can be scrolled,
+  `scrollLeft` is set to the maximum.
+
+## Example
+
+### HTML
+
+```html
+<div id="container">
+  <div id="content">Click the button to slide right!</div>
 </div>
 
-<h2 id="Syntax">Syntax</h2>
+<button id="slide" type="button">Slide right</button>
+```
 
-<h3 id="Getting_the_value">Getting the value</h3>
+### CSS
 
-<pre class="brush: js">// Get the number of pixels scrolled
-var <em>sLeft</em> = <em>element</em>.scrollLeft;
-</pre>
-
-<p><code>sLeft</code> is an integer representing the number of pixels that
-  <code>element</code> has been scrolled from the left edge.</p>
-
-<h3 id="Setting_the_value">Setting the value</h3>
-
-<pre class="brush: js">// Set the number of pixels scrolled
-<em>element</em>.scrollLeft = 10;
-</pre>
-
-<p><code>scrollLeft</code> can be specified as any integer value. However:</p>
-
-<ul>
-  <li>If the element can't be scrolled (e.g., it has no overflow), <code>scrollLeft</code>
-    is set to <code>0</code>.</li>
-  <li>If specified as a value less than <code>0</code> (greater than <code>0</code> for
-    right-to-left elements), <code>scrollLeft</code> is set to <code>0</code>.</li>
-  <li>If specified as a value greater than the maximum that the content can be scrolled,
-    <code>scrollLeft</code> is set to the maximum.</li>
-</ul>
-
-<h2 id="Example">Example</h2>
-
-<h3 id="HTML">HTML</h3>
-
-<pre class="brush: html">&lt;div id="container"&gt;
-  &lt;div id="content"&gt;Click the button to slide right!&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;button id="slide" type="button"&gt;Slide right&lt;/button&gt;</pre>
-
-<h3 id="CSS">CSS</h3>
-
-<pre class="brush: css">#container {
+```css
+#container {
   width: 100px;
   height: 100px;
   border: 1px solid #ccc;
@@ -73,34 +74,34 @@ var <em>sLeft</em> = <em>element</em>.scrollLeft;
 #content {
   width: 250px;
   background-color: #ccc;
-}</pre>
+}
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">const button = document.getElementById('slide');
+```js
+const button = document.getElementById('slide');
 
 button.onclick = function () {
   document.getElementById('container').scrollLeft += 20;
-};</pre>
+};
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://msdn.microsoft.com/en-us/library/hh781509(v=vs.85).aspx"
-      title="MSDN Measuring Element Dimension and Location">MSDN's Measuring Element
-      Dimension and Location</a></li>
-  <li>{{domxref("Element.scrollTop")}}</li>
-  <li>{{domxref("Element.scrollTo()")}}</li>
-</ul>
+- [MSDN's Measuring Element
+  Dimension and Location](<https://msdn.microsoft.com/en-us/library/hh781509(v=vs.85).aspx> "MSDN Measuring Element Dimension and Location")
+- {{domxref("Element.scrollTop")}}
+- {{domxref("Element.scrollTo()")}}

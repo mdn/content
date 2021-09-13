@@ -2,51 +2,51 @@
 title: CSSNumericValue.equals()
 slug: Web/API/CSSNumericValue/equals
 tags:
-- API
-- CSS Typed Object Model API
-- CSSNumericValue
-- Experimental
-- Houdini
-- Method
-- Reference
-- equals()
+  - API
+  - CSS Typed Object Model API
+  - CSSNumericValue
+  - Experimental
+  - Houdini
+  - Method
+  - Reference
+  - equals()
 browser-compat: api.CSSNumericValue.equals
 ---
-<div>{{draft}}{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}</div>
+{{draft}}{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
-<p>The <strong><code>equals()</code></strong> method of the
-  {{domxref("CSSNumericValue")}} interface returns a boolean indicating whether the passed
-  value are strictly equal. To return a value of <code>true</code>, all passed values must
-  be of the same type and value and must be in the same order. This allows structural
-  equality to be tested quickly.</p>
+The **`equals()`** method of the
+{{domxref("CSSNumericValue")}} interface returns a boolean indicating whether the passed
+value are strictly equal. To return a value of `true`, all passed values must
+be of the same type and value and must be in the same order. This allows structural
+equality to be tested quickly.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var boolean = CSSNumericValue.equals(number);</pre>
+```js
+var boolean = CSSNumericValue.equals(number);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>number</dt>
-  <dd>Either a {{jsxref('Number')}} or a {{domxref('CSSNumericValue')}}.</dd>
-</dl>
+- number
+  - : Either a {{jsxref('Number')}} or a {{domxref('CSSNumericValue')}}.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref('Boolean')}}.</p>
+A {{jsxref('Boolean')}}.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>As stated earlier, all passed values must be of the same type and value and must be in
-  the same order. Some of the following examples illustrate what happens when they are
-  not.</p>
+As stated earlier, all passed values must be of the same type and value and must be in
+the same order. Some of the following examples illustrate what happens when they are
+not.
 
-<pre class="brush: js">let cssMathSum = new CSSMathSum(CSS.px(1), CSS.px(2));
+```js
+let cssMathSum = new CSSMathSum(CSS.px(1), CSS.px(2));
 let matchingCssMathSum = new CSSMathSum(CSS.px(1), CSS.px(2));
 // Prints true
 console.log(cssMathSum.equals(matchingCssMathSum));
@@ -56,12 +56,13 @@ let otherCssMathSum = CSSMathSum(CSS.px(2), CSS.px(1));
 console.log(cssMathSum.equals(otherCssMathSum));
 
 // Also prints false
-console.log(CSS.cm("1").equal(CSS.in("0.393701")));</pre>
+console.log(CSS.cm("1").equal(CSS.in("0.393701")));
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

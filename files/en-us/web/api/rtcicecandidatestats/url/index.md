@@ -2,52 +2,50 @@
 title: RTCIceCandidateStats.url
 slug: Web/API/RTCIceCandidateStats/url
 tags:
-- API
-- Candidate
-- Connection
-- Connectivity
-- ICE
-- Network
-- Networking
-- Property
-- RTCIceCandidateStats
-- Reference
-- Statistics
-- Stats
-- URL
-- WebRTC
-- WebRTC API
-- rtc
+  - API
+  - Candidate
+  - Connection
+  - Connectivity
+  - ICE
+  - Network
+  - Networking
+  - Property
+  - RTCIceCandidateStats
+  - Reference
+  - Statistics
+  - Stats
+  - URL
+  - WebRTC
+  - WebRTC API
+  - rtc
 browser-compat: api.RTCIceCandidateStats.url
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The {{domxref("RTCIceCandidateStats")}} dictionary's
-    <strong><code>url</code></strong> property specifies the URL of the
-    {{Glossary("ICE")}} server from which the described candidate was obtained. This
-    property is <em>only</em> available for local candidates.
-</p>
+The {{domxref("RTCIceCandidateStats")}} dictionary's
+**`url`** property specifies the URL of the
+{{Glossary("ICE")}} server from which the described candidate was obtained. This
+property is _only_ available for local candidates.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>url</em> = <em>rtcIceCandidateStats</em>.url;</pre>
+```js
+url = rtcIceCandidateStats.url;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} specifying the URL of the ICE server from which the
-  candidate described by the <code>RTCIceCandidateStats</code> was obtained. This is the
-  same URL that would be received in the {{event("icecandidate")}} event's
-  {{domxref("RTCPeerConnectionIceEvent.url", "url")}} property.</p>
+A {{domxref("DOMString")}} specifying the URL of the ICE server from which the
+candidate described by the `RTCIceCandidateStats` was obtained. This is the
+same URL that would be received in the {{event("icecandidate")}} event's
+{{domxref("RTCPeerConnectionIceEvent.url", "url")}} property.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This property does not exist for remote candidates.</p>
-</div>
+> **Note:** This property does not exist for remote candidates.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

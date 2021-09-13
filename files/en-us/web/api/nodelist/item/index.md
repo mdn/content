@@ -2,54 +2,50 @@
 title: NodeList.item()
 slug: Web/API/NodeList/item
 tags:
-- API
-- DOM
-- Method
-- NodeList
-- Reference
+  - API
+  - DOM
+  - Method
+  - NodeList
+  - Reference
 browser-compat: api.NodeList.item
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>Returns a node from a <a
-    href="/en-US/docs/Web/API/NodeList"><code>NodeList</code></a> by index. This method
-  doesn't throw exceptions as long as you provide arguments. A value of <code>null</code>
-  is returned if the index is out of range, and a <code>TypeError</code> is thrown if no
-  argument is provided.</p>
+Returns a node from a [`NodeList`](/en-US/docs/Web/API/NodeList) by index. This method
+doesn't throw exceptions as long as you provide arguments. A value of `null`
+is returned if the index is out of range, and a `TypeError` is thrown if no
+argument is provided.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>nodeItem</em> = <em>nodeList</em>.item(<em>index</em>)
-</pre>
+```js
+nodeItem = nodeList.item(index)
+```
 
-<ul>
-  <li><code>nodeList</code> is a <code>NodeList</code>. This is usually obtained from
-    another DOM property or method, such as <a
-      href="/en-US/docs/Web/API/Node/childNodes">childNodes</a>.</li>
-  <li><code>index</code> is the index of the node to be fetched. The index is zero-based.
-  </li>
-  <li><code>nodeItem</code> is the <code>index</code>th node in the <code>nodeList</code>
-    returned by the <code>item</code> method.</li>
-</ul>
+- `nodeList` is a `NodeList`. This is usually obtained from
+  another DOM property or method, such as [childNodes](/en-US/docs/Web/API/Node/childNodes).
+- `index` is the index of the node to be fetched. The index is zero-based.
+- `nodeItem` is the `index`th node in the `nodeList`
+  returned by the `item` method.
 
-<h2 id="Alternate_Syntax">Alternate Syntax</h2>
+## Alternate Syntax
 
-<p>JavaScript also offers an array-like bracketed syntax for obtaining an item from a
-  NodeList by index:</p>
+JavaScript also offers an array-like bracketed syntax for obtaining an item from a
+NodeList by index:
 
-<pre class="eval"><em>nodeItem</em> = <em>nodeList</em>[<em>index</em>]
-</pre>
+    nodeItem = nodeList[index]
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var tables = document.getElementsByTagName("table");
-var firstTable = tables.item(1); // or tables[1] - returns the <strong>second</strong> table in the DOM
-</pre>
+```js
+var tables = document.getElementsByTagName("table");
+var firstTable = tables.item(1); // or tables[1] - returns the second table in the DOM
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

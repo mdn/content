@@ -2,48 +2,48 @@
 title: PerformanceObserver()
 slug: Web/API/PerformanceObserver/PerformanceObserver
 tags:
-- API
-- Constructor
-- PerformanceObserver
-- Reference
-- Web Performance
+  - API
+  - Constructor
+  - PerformanceObserver
+  - Reference
+  - Web Performance
 browser-compat: api.PerformanceObserver.PerformanceObserver
 ---
-<div>{{APIRef("Performance Timeline API")}}</div>
+{{APIRef("Performance Timeline API")}}
 
-<p>The <strong><code>PerformanceObserver()</code></strong> constructor creates a new
-  {{domxref("PerformanceObserver")}} object with the given observer <code>callback</code>.
-  The observer callback is invoked when {{domxref("PerformanceEntry","performance entry
+The **`PerformanceObserver()`** constructor creates a new
+{{domxref("PerformanceObserver")}} object with the given observer `callback`.
+The observer callback is invoked when {{domxref("PerformanceEntry","performance entry
   events", '', 'true')}} are recorded for the
-  {{domxref("PerformanceEntry.entryType","entry types",'','true')}} that have been
-  registered, via the {{domxref("PerformanceObserver.observe","observe()")}} method.</p>
+{{domxref("PerformanceEntry.entryType","entry types",'','true')}} that have been
+registered, via the {{domxref("PerformanceObserver.observe","observe()")}} method.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var observer = new PerformanceObserver(<em>callback</em>);
-</pre>
+```js
+var observer = new PerformanceObserver(callback);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><em><code>callback</code></em></dt>
-  <dd>A <code>PerformanceObserverCallback</code> callback that will be invoked when
-    <em>observed</em> performance events are recorded. When the callback is invoked, its
+- _`callback`_
+  - : A `PerformanceObserverCallback` callback that will be invoked when
+    _observed_ performance events are recorded. When the callback is invoked, its
     first parameter is a {{domxref("PerformanceObserverEntryList","list of performance
     observer entries", '', 'true')}} and the second parameter is the
-    {{domxref("PerformanceObserver","observer")}} object.</dd>
-</dl>
+    {{domxref("PerformanceObserver","observer")}} object.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A new {{domxref("PerformanceObserver")}} object which will call the specified
-  <code>callback</code> when observed performance events occur.</p>
+A new {{domxref("PerformanceObserver")}} object which will call the specified
+`callback` when observed performance events occur.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var observer = new PerformanceObserver(function(list, obj) {
+```js
+var observer = new PerformanceObserver(function(list, obj) {
   var entries = list.getEntries();
-  for (var i=0; i &lt; entries.length; i++) {
+  for (var i=0; i < entries.length; i++) {
     // Process "mark" and "frame" events
   }
 });
@@ -54,12 +54,12 @@ function perf_observer(list, observer) {
 }
 var observer2 = new PerformanceObserver(perf_observer);
 observer2.observe({entryTypes: ["measure"]});
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

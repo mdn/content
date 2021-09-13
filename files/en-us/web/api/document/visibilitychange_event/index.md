@@ -11,78 +11,81 @@ tags:
   - visibilitychange
 browser-compat: api.Document.visibilitychange_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code>visibilitychange</code> event is fired at the document when the contents of its tab have become visible or have been hidden.</p>
+The `visibilitychange` event is fired at the document when the contents of its tab have become visible or have been hidden.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("Document.onvisibilitychange", "onvisibilitychange")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{domxref("Document.onvisibilitychange", "onvisibilitychange")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>The event doesn't include the document's updated visibility status, but you can get that information from the document's {{domxref("Document.visibilityState", "visibilityState")}} property.</p>
+The event doesn't include the document's updated visibility status, but you can get that information from the document's {{domxref("Document.visibilityState", "visibilityState")}} property.
 
-<p>This event fires with a <code>visibilityState</code> of <code>hidden</code> when a user navigates to a new page, switches tabs, closes the tab, minimizes or closes the browser, or, on mobile, switches from the browser to a different app. Transitioning to <code>hidden</code> is the last event that's reliably observable by the page, so developers should treat it as the likely end of the user's session (for example, for  <a href="/en-US/docs/Web/API/Navigator/sendBeacon">sending analytics data</a>).</p>
+This event fires with a `visibilityState` of `hidden` when a user navigates to a new page, switches tabs, closes the tab, minimizes or closes the browser, or, on mobile, switches from the browser to a different app. Transitioning to `hidden` is the last event that's reliably observable by the page, so developers should treat it as the likely end of the user's session (for example, for [sending analytics data](/en-US/docs/Web/API/Navigator/sendBeacon)).
 
-<p>The transition to <code>hidden</code> is also a good point at which pages can stop making UI updates and stop any tasks that the user doesn't want to have running in the background.</p>
+The transition to `hidden` is also a good point at which pages can stop making UI updates and stop any tasks that the user doesn't want to have running in the background.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3>Pausing music on transitioning to hidden</h3>
+### Pausing music on transitioning to hidden
 
-<p>This example begins playing a music track when the document becomes visible, and pauses the music when the document is no longer visible.</p>
+This example begins playing a music track when the document becomes visible, and pauses the music when the document is no longer visible.
 
-<pre class="brush:js">document.addEventListener("visibilitychange", function() {
+```js
+document.addEventListener("visibilitychange", function() {
   if (document.visibilityState === 'visible') {
     backgroundMusic.play();
   } else {
     backgroundMusic.pause();
   }
 });
-</pre>
+```
 
-<h3>Sending end-of-session analytics on transitioning to hidden</h3>
+### Sending end-of-session analytics on transitioning to hidden
 
-<p>This example treats the transition to <code>hidden</code> as the end of the user's session, and sends the appropriate analytics using the {{domxref("Navigator.sendBeacon()")}}
-  API:</p>
+This example treats the transition to `hidden` as the end of the user's session, and sends the appropriate analytics using the {{domxref("Navigator.sendBeacon()")}}
+API:
 
-<pre class="brush: js">document.addEventListener('visibilitychange', function logData() {
+```js
+document.addEventListener('visibilitychange', function logData() {
   if (document.visibilityState === 'hidden') {
     navigator.sendBeacon('/log', analyticsData);
   }
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Page_Visibility_API">Page Visibility API</a></li>
- <li>{{domxref("Document.visibilityState")}}</li>
- <li><a href="https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/">Don't lose user and app state, use Page Visibility</a> explains in  detail why you should use <code>visibilitychange</code>, not  <code>beforeunload</code>/<code>unload</code>.</li>
- <li><a href="https://developers.google.com/web/updates/2018/07/page-lifecycle-api#developer-recommendations-for-each-state">Page Lifecycle API</a> gives best-practices guidance on handling page lifecyle behavior in your web applications.</li>
-</ul>
+- [Page Visibility API](/en-US/docs/Web/API/Page_Visibility_API)
+- {{domxref("Document.visibilityState")}}
+- [Don't lose user and app state, use Page Visibility](https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/) explains in detail why you should use `visibilitychange`, not `beforeunload`/`unload`.
+- [Page Lifecycle API](https://developers.google.com/web/updates/2018/07/page-lifecycle-api#developer-recommendations-for-each-state) gives best-practices guidance on handling page lifecyle behavior in your web applications.

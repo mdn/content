@@ -9,27 +9,30 @@ tags:
   - BackgroundFetchRegistration
 browser-compat: api.BackgroundFetchRegistration.recordsAvailable
 ---
-<div>{{DefaultAPISidebar("Background Fetch API")}}</div>
+{{DefaultAPISidebar("Background Fetch API")}}
 
-<p>The <strong><code>recordsAvailable</code></strong> read-only property of the {{domxref("BackgroundFetchRegistration")}} interface returns <code>true</code> if there are requests and responses to be accessed. If this returns false then {{domxref("BackgroundFetchRegistration.match()","match()")}} and {{domxref("BackgroundFetchRegistration.matchAll()","matchAll()")}} can't be used.</p>
+The **`recordsAvailable`** read-only property of the {{domxref("BackgroundFetchRegistration")}} interface returns `true` if there are requests and responses to be accessed. If this returns false then {{domxref("BackgroundFetchRegistration.match()","match()")}} and {{domxref("BackgroundFetchRegistration.matchAll()","matchAll()")}} can't be used.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">let recordsAvailable = BackgroundFetchRegistration.recordsAvailable;</pre>
+    let recordsAvailable = BackgroundFetchRegistration.recordsAvailable;
 
-<h3>Value</h3>
-<p>A {{jsxref("boolean")}}.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{jsxref("boolean")}}.
 
-<p>Logging {{domxref("BackgroundFetchRegistration.recordsAvailable")}} to the console returns <code>true</code> or <code>false</code> to indicate if there are records.</p>
+## Examples
 
-<pre class="brush: js">console.log(bgFetch.recordsAvailable);</pre>
+Logging {{domxref("BackgroundFetchRegistration.recordsAvailable")}} to the console returns `true` or `false` to indicate if there are records.
 
-<h2 id="Specifications">Specifications</h2>
+```js
+console.log(bgFetch.recordsAvailable);
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

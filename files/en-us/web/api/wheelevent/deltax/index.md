@@ -10,34 +10,35 @@ tags:
   - WheelEvent
 browser-compat: api.WheelEvent.deltaX
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p>The <code><strong>WheelEvent.deltaX</strong></code> read-only property is a
-  <code>double</code> representing the horizontal scroll amount in the
-  {{domxref("WheelEvent.deltaMode")}} unit.</p>
+The **`WheelEvent.deltaX`** read-only property is a
+`double` representing the horizontal scroll amount in the
+{{domxref("WheelEvent.deltaMode")}} unit.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var dX = event.deltaX;</pre>
+```js
+var dX = event.deltaX;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var syntheticEvent = new WheelEvent("syntheticWheel", {"deltaX": 4, "deltaMode": 0});
+```js
+var syntheticEvent = new WheelEvent("syntheticWheel", {"deltaX": 4, "deltaMode": 0});
 
 console.log(syntheticEvent.deltaX);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{ event("wheel") }}</li>
-  <li>{{domxref("WheelEvent")}}</li>
-</ul>
+- {{ event("wheel") }}
+- {{domxref("WheelEvent")}}

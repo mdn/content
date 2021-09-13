@@ -2,85 +2,84 @@
 title: Node.appendChild()
 slug: Web/API/Node/appendChild
 tags:
-- API
-- DOM
-- Method
-- Node
-- Reference
+  - API
+  - DOM
+  - Method
+  - Node
+  - Reference
 browser-compat: api.Node.appendChild
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>Node.appendChild()</strong></code> method adds a node to the end of
-  the list of children of a specified parent node. If the given child is a reference to an
-  existing node in the document, <code>appendChild()</code> moves it from its current
-  position to the new position (there is no requirement to remove the node from its parent
-  node before appending it to some other node).</p>
+The **`Node.appendChild()`** method adds a node to the end of
+the list of children of a specified parent node. If the given child is a reference to an
+existing node in the document, `appendChild()` moves it from its current
+position to the new position (there is no requirement to remove the node from its parent
+node before appending it to some other node).
 
-<p>This means that a node can't be in two points of the document simultaneously. So if the
-  node already has a parent, the node is first removed, then appended at the new position.
-  The {{domxref("Node.cloneNode()")}} method can be used to make a copy of the node before
-  appending it under the new parent. Note that the copies made with <code>cloneNode</code>
-  will not be automatically kept in sync.</p>
+This means that a node can't be in two points of the document simultaneously. So if the
+node already has a parent, the node is first removed, then appended at the new position.
+The {{domxref("Node.cloneNode()")}} method can be used to make a copy of the node before
+appending it under the new parent. Note that the copies made with `cloneNode`
+will not be automatically kept in sync.
 
-<p>If the given child is a {{domxref("DocumentFragment")}}, the entire contents of the
-  {{domxref("DocumentFragment")}} are moved into the child list of the specified parent
-  node.</p>
+If the given child is a {{domxref("DocumentFragment")}}, the entire contents of the
+{{domxref("DocumentFragment")}} are moved into the child list of the specified parent
+node.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The {{domxref("Element.append()")}} method supports multiple arguments and
-    appending strings.</p>
-</div>
+> **Note:** The {{domxref("Element.append()")}} method supports multiple arguments and
+> appending strings.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>element</var>.appendChild(<var>aChild</var>)</pre>
+```js
+element.appendChild(aChild)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>aChild</var></code></dt>
-  <dd>The node to append to the given parent node (commonly an element).</dd>
-</dl>
+- `aChild`
+  - : The node to append to the given parent node (commonly an element).
 
-<h3 id="Returns">Return value</h3>
+### Return value
 
-<p>The returned value is the appended child (<code><var>aChild</var></code>), except
-  when <code><var>aChild</var></code> is a {{domxref("DocumentFragment")}}, in which case
-  the empty {{domxref("DocumentFragment")}} is returned.</p>
+The returned value is the appended child (`aChild`), except
+when `aChild` is a {{domxref("DocumentFragment")}}, in which case
+the empty {{domxref("DocumentFragment")}} is returned.
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Chaining may not work as expected, due to <code>appendChild()</code> returning the
-  child element:</p>
+Chaining may not work as expected, due to `appendChild()` returning the
+child element:
 
-<pre
-  class="brush: js">let aBlock = document.createElement('block').appendChild( document.createElement('b') );</pre>
+```js
+let aBlock = document.createElement('block').appendChild( document.createElement('b') );
+```
 
-<p>Sets <code><var>aBlock</var></code> to <code>&lt;b&gt;&lt;/b&gt;</code> only, which is
-  probably not what you want.</p>
+Sets `aBlock` to `<b></b>` only, which is
+probably not what you want.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">// Create a new paragraph element, and append it to the end of the document body
+```js
+// Create a new paragraph element, and append it to the end of the document body
 let p = document.createElement("p");
-document.body.appendChild(p);</pre>
+document.body.appendChild(p);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Node.removeChild()")}}</li>
-  <li>{{domxref("Node.replaceChild()")}}</li>
-  <li>{{domxref("Node.insertBefore()")}}</li>
-  <li>{{domxref("Node.hasChildNodes()")}}</li>
-  <li>{{domxref("Element.insertAdjacentElement()")}}</li>
-  <li>{{domxref("Element.append()")}}</li>
-</ul>
+- {{domxref("Node.removeChild()")}}
+- {{domxref("Node.replaceChild()")}}
+- {{domxref("Node.insertBefore()")}}
+- {{domxref("Node.hasChildNodes()")}}
+- {{domxref("Element.insertAdjacentElement()")}}
+- {{domxref("Element.append()")}}

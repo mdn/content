@@ -10,75 +10,69 @@ tags:
   - Method
 browser-compat: api.FileSystemDirectoryHandle.getDirectoryHandle
 ---
-<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
-</div>
+{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
-<p>The <strong><code>getDirectoryHandle()</code></strong> method of the
-  {{domxref("FileSystemDirectoryHandle")}} interface returns a
-  {{domxref('FileSystemDirectoryHandle')}} for a subdirectory with the specified name
-  within the directory handle on which the method is called.</p>
+The **`getDirectoryHandle()`** method of the
+{{domxref("FileSystemDirectoryHandle")}} interface returns a
+{{domxref('FileSystemDirectoryHandle')}} for a subdirectory with the specified name
+within the directory handle on which the method is called.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>FileSystemDirectoryHandle</var> = FileSystemDirectoryHandle.getDirectoryHandle();</pre>
+```js
+var FileSystemDirectoryHandle = FileSystemDirectoryHandle.getDirectoryHandle();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><em>name</em></dt>
-  <dd>A {{domxref('USVString')}} representing the {{domxref('FileSystemHandle.name')}} of
-    the subdirectory you wish to retrieve.</dd>
-  <dt><em>options</em> {{optional_inline}}</dt>
-  <dd>An optional object containing options for the retrieved subdirectory. Options are as
+- _name_
+  - : A {{domxref('USVString')}} representing the {{domxref('FileSystemHandle.name')}} of
+    the subdirectory you wish to retrieve.
+- _options_ {{optional_inline}}
+
+  - : An optional object containing options for the retrieved subdirectory. Options are as
     follows:
-    <ul>
-      <li><code>create</code>: A {{jsxref('Boolean')}}. Default <code>false</code>. When
-        set to <code>true</code> if the directory is not found, one with the specified
-        name will be created and returned.</li>
-    </ul>
-  </dd>
-</dl>
 
-<h3 id="Return_value">Return value</h3>
+    - `create`: A {{jsxref('Boolean')}}. Default `false`. When
+      set to `true` if the directory is not found, one with the specified
+      name will be created and returned.
 
-<p>A {{jsxref('Promise')}} which resolves with a {{domxref('FileSystemDirectoryHandle')}}.
-</p>
+### Return value
 
-<h3 id="Exceptions">Exceptions</h3>
+A {{jsxref('Promise')}} which resolves with a {{domxref('FileSystemDirectoryHandle')}}.
 
-<dl>
-  <dt><code>NotAllowedError</code></dt>
-  <dd>If {{domxref('PermissionStatus')}} is not 'granted'.</dd>
-  <dt><code>TypeMismatchError</code></dt>
-  <dd>If the returned entry is a file and not a directory.</dd>
-  <dt><code>NotFoundError</code></dt>
-  <dd>if directory doesn't exist and the <code>create</code> option is set to
-    <code>false</code>.</dd>
-</dl>
+### Exceptions
 
-<h2 id="Examples">Examples</h2>
+- `NotAllowedError`
+  - : If {{domxref('PermissionStatus')}} is not 'granted'.
+- `TypeMismatchError`
+  - : If the returned entry is a file and not a directory.
+- `NotFoundError`
+  - : if directory doesn't exist and the `create` option is set to
+    `false`.
 
-<p>The following example returns a directory handle with the specified name, if the
-  directory does not exist it is created.</p>
+## Examples
 
-<pre class="brush: js">const dirName = 'directoryToGetName';
+The following example returns a directory handle with the specified name, if the
+directory does not exist it is created.
+
+```js
+const dirName = 'directoryToGetName';
 
 // assuming we have a directory handle: 'currentDirHandle'
-const subDir = currentDirHandle.getDirectoryHandle(dirName, {create: true});</pre>
+const subDir = currentDirHandle.getDirectoryHandle(dirName, {create: true});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/File_System_Access_API">File System Access API</a></li>
-  <li><a href="https://web.dev/file-system-access/">The File System Access API:
-      simplifying access to local files</a></li>
-</ul>
+- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
+- [The File System Access API:
+  simplifying access to local files](https://web.dev/file-system-access/)

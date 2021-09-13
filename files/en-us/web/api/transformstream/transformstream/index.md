@@ -8,76 +8,71 @@ tags:
   - TransformStream
 browser-compat: api.TransformStream.TransformStream
 ---
-<p>{{APIRef("Streams")}}</p>
+{{APIRef("Streams")}}
 
-<p>The <strong><code>TransformStream()</code></strong> constructor creates a new {{domxref("TransformStream")}} object which represents a pair of streams: a {{domxref("WritableStream")}} representing the writable side, and a {{domxref("ReadableStream")}} representing the readable side.</p>
+The **`TransformStream()`** constructor creates a new {{domxref("TransformStream")}} object which represents a pair of streams: a {{domxref("WritableStream")}} representing the writable side, and a {{domxref("ReadableStream")}} representing the readable side.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">new TransformStream();
+```js
+new TransformStream();
 new TransformStream(transformer);
 new TransformStream(transformer, writableStrategy);
-new TransformStream(transformer, writableStrategy, readableStrategy);</pre>
+new TransformStream(transformer, writableStrategy, readableStrategy);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>transformer</code>{{Optional_Inline}}</dt>
-  <dd>
-    <p>An object representing the <code>transformer</code>. If not supplied the resulting stream will be an <strong>identity transform stream</strong> which forwards all chunks written to its writable side to its readable side, without any changes.</p>
+- `transformer`{{Optional_Inline}}
 
-  <p>The transformer object can contain any of the following methods. In each method <code>controller</code> is an instance of {{domxref("TransformStreamDefaultController")}}.</p>
+  - : An object representing the `transformer`. If not supplied the resulting stream will be an **identity transform stream** which forwards all chunks written to its writable side to its readable side, without any changes.
 
-  <dl>
-    <dt><code>start(controller)</code></dt>
-    <dd>Called when the <code>TransformStream</code> is constructed. It is typically used to enqueue chunks using {{domxref("TransformStreamDefaultController.enqueue()")}}. </dd>
-    <dt><code>transform(chunk, controller)</code></dt>
-    <dd>Called when a chunk written to the writable side is ready to be transformed, and performs the work of the transformation stream. If no <code>transform()</code> method is supplied, the identity transform is used, and the chunk will be enqueued with no changes.</dd>
-    <dt><code>flush(controller)</code></dt>
-    <dd>Called after all chunks written to the writable side have been successfully transformed, and the writable side is about to be closed.</dd>
-  </dl>
+    The transformer object can contain any of the following methods. In each method `controller` is an instance of {{domxref("TransformStreamDefaultController")}}.
 
-</dd>
-  <dt><code>writableStrategy</code>{{Optional_Inline}}</dt>
-  <dd>An object that optionally defines a queuing strategy for the stream. This takes two
+    - `start(controller)`
+      - : Called when the `TransformStream` is constructed. It is typically used to enqueue chunks using {{domxref("TransformStreamDefaultController.enqueue()")}}.
+    - `transform(chunk, controller)`
+      - : Called when a chunk written to the writable side is ready to be transformed, and performs the work of the transformation stream. If no `transform()` method is supplied, the identity transform is used, and the chunk will be enqueued with no changes.
+    - `flush(controller)`
+      - : Called after all chunks written to the writable side have been successfully transformed, and the writable side is about to be closed.
+
+- `writableStrategy`{{Optional_Inline}}
+
+  - : An object that optionally defines a queuing strategy for the stream. This takes two
     parameters:
-    <dl>
-      <dt><code>highWaterMark</code></dt>
-      <dd>A non-negative integer. This defines the total number of chunks that can be
-        contained in the internal queue before backpressure is applied.</dd>
-      <dt><code>size(chunk)</code></dt>
-      <dd>A method containing a parameter <code>chunk</code>. This indicates the size to
-        use for each chunk, in bytes.</dd>
-    </dl>
-  </dd>
-  <dt><code>readableStrategy</code>{{Optional_Inline}}</dt>
-  <dd>An object that optionally defines a queuing strategy for the stream. This takes two
+
+    - `highWaterMark`
+      - : A non-negative integer. This defines the total number of chunks that can be
+        contained in the internal queue before backpressure is applied.
+    - `size(chunk)`
+      - : A method containing a parameter `chunk`. This indicates the size to
+        use for each chunk, in bytes.
+
+- `readableStrategy`{{Optional_Inline}}
+
+  - : An object that optionally defines a queuing strategy for the stream. This takes two
     parameters:
-    <dl>
-      <dt><code>highWaterMark</code></dt>
-      <dd>A non-negative integer. This defines the total number of chunks that can be
-        contained in the internal queue before backpressure is applied.</dd>
-      <dt><code>size(chunk)</code></dt>
-      <dd>A method containing a parameter <code>chunk</code>. This indicates the size to
-        use for each chunk, in bytes.</dd>
-    </dl>
-  </dd>
-</dl>
 
-<div class="notecard note">
-  <p><strong>Note:</strong> You could define your own custom
-    <code>readableStrategy</code> or <code>writableStrategy</code>, or use an instance of
-    {{domxref("ByteLengthQueuingStrategy")}} or {{domxref("CountQueuingStrategy")}}
-    for the object values.</p>
-</div>
+    - `highWaterMark`
+      - : A non-negative integer. This defines the total number of chunks that can be
+        contained in the internal queue before backpressure is applied.
+    - `size(chunk)`
+      - : A method containing a parameter `chunk`. This indicates the size to
+        use for each chunk, in bytes.
 
-<h2 id="Examples">Examples</h2>
+> **Note:** You could define your own custom
+> `readableStrategy` or `writableStrategy`, or use an instance of
+> {{domxref("ByteLengthQueuingStrategy")}} or {{domxref("CountQueuingStrategy")}}
+> for the object values.
 
-<h3>Transforming text to uppercase</h3>
+## Examples
 
-<p>The following example transforms text to uppercase chunk by chunk. This example is from <a href="https://web.dev/streams/">Streams—The Definitive Guide</a>, which has a number of examples of different types of streams.</p>
+### Transforming text to uppercase
 
-<pre class="brush: js">function upperCaseStream() {
+The following example transforms text to uppercase chunk by chunk. This example is from [Streams—The Definitive Guide](https://web.dev/streams/), which has a number of examples of different types of streams.
+
+```js
+function upperCaseStream() {
   return new TransformStream({
     transform(chunk, controller) {
       controller.enqueue(chunk.toUpperCase());
@@ -98,21 +93,24 @@ fetch('./lorem-ipsum.txt').then((response) =>
     .pipeThrough(new TextDecoderStream())
     .pipeThrough(upperCaseStream())
     .pipeTo(appendToDOMStream(document.body))
-);</pre>
+);
+```
 
-<h3>Creating an identity transform stream</h3>
+### Creating an identity transform stream
 
-<p>If no <code>transformer</code> argument is supplied then the result will be an identity transform stream which forwards all chunks written to the writable side to the readable side with no changes. In the following example an identity transform stream is used to add buffering to a pipe.</p>
+If no `transformer` argument is supplied then the result will be an identity transform stream which forwards all chunks written to the writable side to the readable side with no changes. In the following example an identity transform stream is used to add buffering to a pipe.
 
-<pre class="brush: js">const writableStrategy = new ByteLengthQueuingStrategy({ highWaterMark: 1024 * 1024 });
+```js
+const writableStrategy = new ByteLengthQueuingStrategy({ highWaterMark: 1024 * 1024 });
 readableStream
   .pipeThrough(new TransformStream(undefined, writableStrategy))
-  .pipeTo(writableStream);</pre>
+  .pipeTo(writableStream);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

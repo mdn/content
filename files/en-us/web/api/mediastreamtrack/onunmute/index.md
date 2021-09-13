@@ -14,52 +14,51 @@ tags:
   - unmute
 browser-compat: api.MediaStreamTrack.onunmute
 ---
-<div>{{ APIRef("Media Capture and Streams") }}</div>
+{{ APIRef("Media Capture and Streams") }}
 
-<p>{{domxref("MediaStreamTrack")}}'s
-    <code><strong>onunmute</strong></code> event handler is called when the
-    {{event("unmute")}} event is received. Such an event is sent when the track is again
-    able to send data.</p>
+{{domxref("MediaStreamTrack")}}'s
+**`onunmute`** event handler is called when the
+{{event("unmute")}} event is received. Such an event is sent when the track is again
+able to send data.
 
-<p>When the <code>onunmute</code> event handler is called, the track's
-  {{domxref("MediaStreamTrack.muted", "muted")}} flag is <code>false</code>.</p>
+When the `onunmute` event handler is called, the track's
+{{domxref("MediaStreamTrack.muted", "muted")}} flag is `false`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>track</em>.onunmute = <em>unmuteHandler</em>;
-</pre>
+```js
+track.onunmute = unmuteHandler;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p><code>unmuteHandler</code> is a function which is called when the
-  <code>MediaStreamTrack</code> receives the {{event("unmute")}} event. The event handler
-  receives as input a single parameter: an {{domxref("Event")}} whose
-  {{domxref("Event.kind", "kind")}} is <code>"unmute"</code>.</p>
+`unmuteHandler` is a function which is called when the
+`MediaStreamTrack` receives the {{event("unmute")}} event. The event handler
+receives as input a single parameter: an {{domxref("Event")}} whose
+{{domxref("Event.kind", "kind")}} is `"unmute"`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example creates an <code>unmute</code> event handler which changes the state of a
-  visual indicator to display the Emoji character representing a "speaker" icon.</p>
+This example creates an `unmute` event handler which changes the state of a
+visual indicator to display the Emoji character representing a "speaker" icon.
 
-<pre class="brush: js">myTrack.onunmute = function(evt) {
-  playStateIcon.innerHTML = "&amp;#x1F508;";
+```js
+myTrack.onunmute = function(evt) {
+  playStateIcon.innerHTML = "&#x1F508;";
 };
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{event("unmute")}} event and its type, {{domxref("Event")}}.</li>
-  <li>{{domxref("MediaStreamTrack.muted")}} to determine if a track is currently muted
-  </li>
-  <li>{{domxref("MediaStreamTrack.onmute")}}, the event handler for the
-    {{domxref("MediaStreamTrack.mute_event")}} event.</li>
-</ul>
+- The {{event("unmute")}} event and its type, {{domxref("Event")}}.
+- {{domxref("MediaStreamTrack.muted")}} to determine if a track is currently muted
+- {{domxref("MediaStreamTrack.onmute")}}, the event handler for the
+  {{domxref("MediaStreamTrack.mute_event")}} event.

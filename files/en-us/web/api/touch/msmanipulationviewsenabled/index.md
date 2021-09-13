@@ -4,30 +4,27 @@ slug: Web/API/Touch/MsManipulationViewsEnabled
 tags:
   - msManipulationViesEnabled
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>{{Non-standard_header()}}</p>
+{{Non-standard_header()}}
 
-<p>The <code><strong>msManipulationViewsEnabled</strong></code> read-only property returns <em>true</em> if manipulation features are support available, such as <em>touch panning</em> and <em>zooming</em> using CSS rules.</p>
+The **`msManipulationViewsEnabled`** read-only property returns _true_ if manipulation features are support available, such as _touch panning_ and _zooming_ using CSS rules.
 
-<p>This proprietary property is specific to Internet Explorer and Microsoft Edge.</p>
+This proprietary property is specific to Internet Explorer and Microsoft Edge.
 
-<h2 id="Value">Value</h2>
+## Value
 
-<p>Returns <em>true</em> if manipulation features are support available, such as <em>touch panning</em> and <em>zooming</em> using CSS rules.</p>
+Returns _true_ if manipulation features are support available, such as _touch panning_ and _zooming_ using CSS rules.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>Using a JSON file:</p>
+Using a JSON file:
 
-<pre>{
-msManipulationViewsEnabled: true,
-}
-</pre>
+    {
+    msManipulationViewsEnabled: true,
+    }
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Touch">Touch API</a></li>
- <li><a href="/en-US/docs/Web/API/Microsoft_Extensions">Microsoft API extensions </a></li>
-</ul>
+- [Touch API](/en-US/docs/Web/API/Touch)
+- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_Extensions)

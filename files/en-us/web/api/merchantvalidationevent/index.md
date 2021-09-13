@@ -16,35 +16,29 @@ tags:
   - Secure context
 browser-compat: api.MerchantValidationEvent
 ---
-<p>{{deprecated_header}}{{non-standard_header}}{{securecontext_header}}</p>
+{{deprecated_header}}{{non-standard_header}}{{securecontext_header}}
 
-<p>The <strong><code>MerchantValidationEvent</code></strong> interface of the <a href="/en-US/docs/Web/API/Payment_Request_API">Payment Request API</a> enables a merchant to verify themselves as allowed to use a particular payment handler.</p>
+The **`MerchantValidationEvent`** interface of the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) enables a merchant to verify themselves as allowed to use a particular payment handler.
 
-<p>To learn more about merchant validation, see {{SectionOnPage("/en-US/docs/Web/API/Payment_Request_API/Concepts", "Merchant validation")}}.</p>
+To learn more about merchant validation, see {{SectionOnPage("/en-US/docs/Web/API/Payment_Request_API/Concepts", "Merchant validation")}}.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("MerchantValidationEvent.MerchantValidationEvent()","MerchantValidationEvent()")}} {{securecontext_inline}}</dt>
- <dd>Creates a new <code>MerchantValidationEvent</code> object describing a {{event("merchantvalidation")}} event that will be sent to the payment handler to request that it validate the merchant.</dd>
-</dl>
+- {{domxref("MerchantValidationEvent.MerchantValidationEvent()","MerchantValidationEvent()")}} {{securecontext_inline}}
+  - : Creates a new `MerchantValidationEvent` object describing a {{event("merchantvalidation")}} event that will be sent to the payment handler to request that it validate the merchant.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("MerchantValidationEvent.methodName")}} {{securecontext_inline}}</dt>
- <dd>A {{domxref("DOMString")}} providing a unique payment method identifier for the payment handler that's requiring validation. This may be either one of the standard payment method identifier strings or a URL that both identifies and handles requests for the payment handler, such as <code>https://apple.com/apple-pay</code>.</dd>
- <dt>{{domxref("MerchantValidationEvent.validationURL")}} {{securecontext_inline}}</dt>
- <dd>A {{domxref("USVString")}} specifying a URL from which the site or app can fetch payment handler specific validation information. Once this data is retrieved, the data (or a promise resolving to the validation data) should be passed into {{domxref("MerchantValidationEvent.complete", "complete()")}} to validate that the payment request is coming from an authorized merchant.</dd>
-</dl>
+- {{domxref("MerchantValidationEvent.methodName")}} {{securecontext_inline}}
+  - : A {{domxref("DOMString")}} providing a unique payment method identifier for the payment handler that's requiring validation. This may be either one of the standard payment method identifier strings or a URL that both identifies and handles requests for the payment handler, such as `https://apple.com/apple-pay`.
+- {{domxref("MerchantValidationEvent.validationURL")}} {{securecontext_inline}}
+  - : A {{domxref("USVString")}} specifying a URL from which the site or app can fetch payment handler specific validation information. Once this data is retrieved, the data (or a promise resolving to the validation data) should be passed into {{domxref("MerchantValidationEvent.complete", "complete()")}} to validate that the payment request is coming from an authorized merchant.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("MerchantValidationEvent.complete()")}} {{securecontext_inline}}</dt>
- <dd>Pass the data retrieved from the URL specified by {{domxref("MerchantValidationEvent.validationURL", "validationURL")}} into <code>complete()</code> to complete the validation process for the {{domxref("PaymentRequest")}}.</dd>
-</dl>
+- {{domxref("MerchantValidationEvent.complete()")}} {{securecontext_inline}}
+  - : Pass the data retrieved from the URL specified by {{domxref("MerchantValidationEvent.validationURL", "validationURL")}} into `complete()` to complete the validation process for the {{domxref("PaymentRequest")}}.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

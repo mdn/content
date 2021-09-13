@@ -9,36 +9,36 @@ tags:
   - TextMetrics
 browser-compat: api.TextMetrics.width
 ---
-<div>{{APIRef("Canvas API")}}</div>
+{{APIRef("Canvas API")}}
 
-<p>The read-only <strong><code>width</code></strong> property of the {{domxref("TextMetrics")}} interface contains the text's advance width (the width of that inline box) in CSS pixels.</p>
+The read-only **`width`** property of the {{domxref("TextMetrics")}} interface contains the text's advance width (the width of that inline box) in CSS pixels.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Given this {{HTMLElement("canvas")}} element:</p>
+Given this {{HTMLElement("canvas")}} element:
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<p>... you can get a {{domxref("TextMetrics")}} object using the following code:</p>
+... you can get a {{domxref("TextMetrics")}} object using the following code:
 
-<pre class="brush: js;">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 let text = ctx.measureText('foo'); // TextMetrics object
 text.width; // 16;
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("TextMetrics")}}</li>
-</ul>
+- {{domxref("TextMetrics")}}

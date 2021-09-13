@@ -2,59 +2,59 @@
 title: DataTransferItem.kind
 slug: Web/API/DataTransferItem/kind
 tags:
-- API
-- DataTransferItem
-- HTML DOM
-- HTML Drag and Drop API
-- Property
-- Reference
-- drag and drop
-- kind
+  - API
+  - DataTransferItem
+  - HTML DOM
+  - HTML Drag and Drop API
+  - Property
+  - Reference
+  - drag and drop
+  - kind
 browser-compat: api.DataTransferItem.kind
 ---
-<div>{{APIRef("HTML Drag and Drop API")}}</div>
+{{APIRef("HTML Drag and Drop API")}}
 
-<p>The read-only <strong><code>DataTransferItem.kind</code></strong> property returns a
-  {{domxref("DataTransferItem")}} representing the <em>drag data item</em> kind: some text
-  or some file.</p>
+The read-only **`DataTransferItem.kind`** property returns a
+{{domxref("DataTransferItem")}} representing the _drag data item_ kind: some text
+or some file.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>itemKind</em> = <em>DataTransferItem</em>.kind;
-</pre>
+```js
+var itemKind = DataTransferItem.kind;
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("DOMString")}} representing the drag data item's kind. It must be one of
-  the following values:</p>
+A {{domxref("DOMString")}} representing the drag data item's kind. It must be one of
+the following values:
 
-<dl>
-  <dt><code>'file'</code></dt>
-  <dd>If the drag data item is a file.</dd>
-  <dt><code>'string'</code></dt>
-  <dd>If the kind of drag data item is a <em>plain Unicode string</em>.</dd>
-</dl>
+- `'file'`
+  - : If the drag data item is a file.
+- `'string'`
+  - : If the kind of drag data item is a _plain Unicode string_.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example shows the use of the <code>kind</code> property.</p>
+This example shows the use of the `kind` property.
 
-<pre class="brush: js">function drop_handler(ev) {
+```js
+function drop_handler(ev) {
  console.log("Drop");
  ev.preventDefault();
  var data = event.dataTransfer.items;
- for (var i = 0; i &lt; data.length; i += 1) {
-   if ((data[i].kind == 'string') &amp;&amp;
+ for (var i = 0; i < data.length; i += 1) {
+   if ((data[i].kind == 'string') &&
        (data[i].type.match('^text/plain'))) {
      // This item is the target node
      data[i].getAsString(function (s){
        ev.target.appendChild(document.getElementById(s));
      });
-   } else if ((data[i].kind == 'string') &amp;&amp;
+   } else if ((data[i].kind == 'string') &&
               (data[i].type.match('^text/html'))) {
      // Drag data item is HTML
      console.log("... Drop: HTML");
-   } else if ((data[i].kind == 'file') &amp;&amp;
+   } else if ((data[i].kind == 'file') &&
               (data[i].type.match('^image/'))) {
      // Drag data item is an image file
      var f = data[i].getAsFile();
@@ -62,22 +62,20 @@ browser-compat: api.DataTransferItem.kind
    }
  }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API">Drag and drop</a></li>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</a></li>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">Recommended Drag Types</a></li>
- <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items">Dragging and Dropping Multiple Items</a></li>
- <li><a href="https://codepen.io/tech_query/pen/MqGgap">DataTransfer test - Paste or Drag</a></li>
-</ul>
+- [Drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
+- [Drag Operations](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+- [Recommended Drag Types](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
+- [Dragging and Dropping Multiple Items](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
+- [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)

@@ -13,62 +13,54 @@ tags:
   - StaticRange
 browser-compat: api.StaticRange
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>The <a href="/en-US/docs/Web/API/Document_Object_Model">DOM</a> <strong><code>StaticRange</code></strong> interface extends {{domxref("AbstractRange")}} to provide a method to specify a range of content in the DOM whose contents don't update to reflect changes which occur within the DOM tree.</p>
+The [DOM](/en-US/docs/Web/API/Document_Object_Model) **`StaticRange`** interface extends {{domxref("AbstractRange")}} to provide a method to specify a range of content in the DOM whose contents don't update to reflect changes which occur within the DOM tree.
 
-<p>This interface offers the same set of properties and methods as <code>AbstractRange</code>.</p>
+This interface offers the same set of properties and methods as `AbstractRange`.
 
-<p><code>AbstractRange</code> and <code>StaticRange</code> are not available from <a href="/en-US/docs/Web/API/Web_Workers_API">web workers</a>.</p>
+`AbstractRange` and `StaticRange` are not available from [web workers](/en-US/docs/Web/API/Web_Workers_API).
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("StaticRange.StaticRange", "StaticRange()")}}</dt>
- <dd>Creates a new <code>StaticRange</code> object given the {{domxref("StaticRangeInit")}} dictionary specifying the default values for its properties.</dd>
-</dl>
+- {{domxref("StaticRange.StaticRange", "StaticRange()")}}
+  - : Creates a new `StaticRange` object given the {{domxref("StaticRangeInit")}} dictionary specifying the default values for its properties.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>The properties below are inherited from its parent interface, {{domxref("AbstractRange")}}.</em></p>
+_The properties below are inherited from its parent interface, {{domxref("AbstractRange")}}._
 
-<dl>
- <dt>{{domxref("StaticRange.collapsed")}} {{ReadOnlyInline}}</dt>
- <dd>Returns a Boolean value which is <code>true</code> if the range's start and end positions are the same, resulting in a range of length 0.</dd>
- <dt>{{domxref("StaticRange.endContainer")}} {{ReadOnlyInline}}</dt>
- <dd>Returns the DOM {{domxref("Node")}} which contains the ending point of the range. The offset into the node at which the end position is located is indicated by <code>endOffset</code>.</dd>
- <dt>{{domxref("StaticRange.endOffset")}} {{ReadOnlyInline}}</dt>
- <dd>Returns an integer value indicating the offset into the node given by <code>endContainer</code> at which the last character of the range is found.</dd>
- <dt>{{domxref("StaticRange.startContainer")}} {{ReadOnlyInline}}</dt>
- <dd>Returns the DOM {{domxref("Node")}} which contains the starting point of the range (which is in turn identified by <code>startOffset</code>.</dd>
- <dt>{{domxref("StaticRange.startOffset")}} {{ReadOnlyInline}}</dt>
- <dd>Returns an integer value indicating the offset into the node specified by <code>startContainer</code> at which the first character of the range is located.</dd>
-</dl>
+- {{domxref("StaticRange.collapsed")}} {{ReadOnlyInline}}
+  - : Returns a Boolean value which is `true` if the range's start and end positions are the same, resulting in a range of length 0.
+- {{domxref("StaticRange.endContainer")}} {{ReadOnlyInline}}
+  - : Returns the DOM {{domxref("Node")}} which contains the ending point of the range. The offset into the node at which the end position is located is indicated by `endOffset`.
+- {{domxref("StaticRange.endOffset")}} {{ReadOnlyInline}}
+  - : Returns an integer value indicating the offset into the node given by `endContainer` at which the last character of the range is found.
+- {{domxref("StaticRange.startContainer")}} {{ReadOnlyInline}}
+  - : Returns the DOM {{domxref("Node")}} which contains the starting point of the range (which is in turn identified by `startOffset`.
+- {{domxref("StaticRange.startOffset")}} {{ReadOnlyInline}}
+  - : Returns an integer value indicating the offset into the node specified by `startContainer` at which the first character of the range is located.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("StaticRange.toRange()")}}</dt>
- <dd>Returns a new {{domxref("Range")}} object which describes the same range as the source <code>StaticRange</code>, but is "live" with values that change to reflect changes in the contents of the DOM tree.</dd>
-</dl>
+- {{domxref("StaticRange.toRange()")}}
+  - : Returns a new {{domxref("Range")}} object which describes the same range as the source `StaticRange`, but is "live" with values that change to reflect changes in the contents of the DOM tree.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>A DOM range specifies a span of content in a document, potentially beginning inside one node (or element) and ending inside another one. Unlike a {{domxref("Range")}}, a <code>StaticRange</code> represents a range which is fixed in time; it does not change to try to keep the same content within it as the document changes. If any changes are made to the DOM, the actual data contained within the range specified by a <code>StaticRange</code> may change. This lets the {{Glossary("user agent")}} avoid a lot of work that is unnecessary if the web app or site doesn't need a live-updating range.</p>
+A DOM range specifies a span of content in a document, potentially beginning inside one node (or element) and ending inside another one. Unlike a {{domxref("Range")}}, a `StaticRange` represents a range which is fixed in time; it does not change to try to keep the same content within it as the document changes. If any changes are made to the DOM, the actual data contained within the range specified by a `StaticRange` may change. This lets the {{Glossary("user agent")}} avoid a lot of work that is unnecessary if the web app or site doesn't need a live-updating range.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Live updating range of content within the DOM: {{domxref("Range")}}</li>
- <li>{{domxref("AbstractRange")}}, the abstract interface from which all ranges are derived</li>
-</ul>
+- Live updating range of content within the DOM: {{domxref("Range")}}
+- {{domxref("AbstractRange")}}, the abstract interface from which all ranges are derived

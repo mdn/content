@@ -17,106 +17,104 @@ tags:
   - request
 browser-compat: api.Request.destination
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p>The <strong><code>destination</code></strong> read-only
-    property of the <strong>{{domxref("Request")}}</strong> interface returns a string
-    describing the type of content being requested.</p>
+The **`destination`** read-only
+property of the **{{domxref("Request")}}** interface returns a string
+describing the type of content being requested.
 
-<p>The string must be one of the <code>audio</code>, <code>audioworklet</code>, 
-  <code>document</code>, <code>embed</code>, <code>font</code>, <code>frame</code>, 
-  <code>iframe</code>, <code>image</code>, <code>manifest</code>, <code>object</code>, 
-  <code>paintworklet</code>, <code>report</code>, <code>script</code>, <code>sharedworker</code>, 
-  <code>style</code>, <code>track</code>, <code>video</code>, <code>worker</code>
-  or <code>xslt</code> strings, or the empty string, which is the default value.</p>
+The string must be one of the `audio`, `audioworklet`,
+`document`, `embed`, `font`, `frame`,
+`iframe`, `image`, `manifest`, `object`,
+`paintworklet`, `report`, `script`, `sharedworker`,
+`style`, `track`, `video`, `worker`
+or `xslt` strings, or the empty string, which is the default value.
 
-<p>The <code>destination</code> is used by the {{Glossary("user agent")}} to, for example,
-  help determine which set of rules to follow for CORS purposes, or how to navigate any
-  complicated code paths that affect how specific types of request get handled.</p>
+The `destination` is used by the {{Glossary("user agent")}} to, for example,
+help determine which set of rules to follow for CORS purposes, or how to navigate any
+complicated code paths that affect how specific types of request get handled.
 
-<p>These destinations vary substantially in how they operate. Some are data receptacles,
-  where the received data is stored for processing later. Others are script-based, in
-  which case the received data is delivered to a script by calling it and passing the data
-  along. Script-based destinations include {{HTMLElement("script")}} elements, as well as
-  any of the {{domxref("Worklet")}}-based destinations
-  (including {{domxref("AudioWorklet")}} and {{domxref("PaintWorklet")}}), and the
-  {{domxref("Worker")}}-based destinations, including {{domxref("ServiceWorker")}}
-  and {{domxref("SharedWorker")}}.</p>
+These destinations vary substantially in how they operate. Some are data receptacles,
+where the received data is stored for processing later. Others are script-based, in
+which case the received data is delivered to a script by calling it and passing the data
+along. Script-based destinations include {{HTMLElement("script")}} elements, as well as
+any of the {{domxref("Worklet")}}-based destinations
+(including {{domxref("AudioWorklet")}} and {{domxref("PaintWorklet")}}), and the
+{{domxref("Worker")}}-based destinations, including {{domxref("ServiceWorker")}}
+and {{domxref("SharedWorker")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>destination</em> = <var>request</var>.destination;</pre>
+```js
+var destination = request.destination;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A string which indicates the type of content the request is asking for. This type is much broader than the usual document type values (such as <code>"document"</code> or <code>"manifest"</code>), and may include contextual cues such as <code>"image"</code> or <code>"worker"</code> or <code>"audioworklet"</code>.</p>
+A string which indicates the type of content the request is asking for. This type is much broader than the usual document type values (such as `"document"` or `"manifest"`), and may include contextual cues such as `"image"` or `"worker"` or `"audioworklet"`.
 
-<p>Possible values are:</p>
+Possible values are:
 
-<dl>
- <dt><code>""</code></dt>
- <dd>The default value of <code>destination</code> is used for destinations that do not have their own value. <a href="/en-US/docs/Web/API/Navigator/sendBeacon">navigator.sendBeacon()</a>, <a href="/en-US/docs/Web/API/EventSource">EventSource</a>, <a href="/en-US/docs/Web/HTML/Element/a#attr-ping">&lt;a ping&gt;</a>, <a href="/en-US/docs/Web/HTML/Element/area#attr-ping">&lt;area ping&gt;</a>, <a href="/en-US/docs/Web/API/fetch">fetch()</a>, <a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a>, <a href="/en-US/docs/Web/API/WebSocket">WebSocket</a>, <a href="/en-US/docs/Web/API/Cache">Cache </a>and more.</dd>
- <dt><code>"audio"</code></dt>
- <dd>The target is audio data.</dd>
- <dt><code>"audioworklet"</code></dt>
- <dd>The target is data being fetched for use by an audio worklet.</dd>
- <dt><code>"document"</code></dt>
- <dd>The target is a document (HTML or XML).</dd>
- <dt><code>"embed"</code></dt>
- <dd>The target is embedded content.</dd>
- <dt><code>"font"</code></dt>
- <dd>The target is a font.</dd>
- <dt><code>"image"</code></dt>
- <dd>The target is an image.</dd>
- <dt><code>"manifest"</code></dt>
- <dd>The target is a manifest.</dd>
- <dt><code>"object"</code></dt>
- <dd>The target is an object.</dd>
- <dt><code>"paintworklet"</code></dt>
- <dd>The target is a paint worklet.</dd>
- <dt><code>"report"</code></dt>
- <dd>The target is a report.</dd>
- <dt><code>"script"</code></dt>
- <dd>The target is a script.</dd>
- <dt><code>"serviceworker"</code></dt>
- <dd>The target is a service worker.</dd>
- <dt><code>"sharedworker"</code></dt>
- <dd>The target is a shared worker.</dd>
- <dt><code>"style"</code></dt>
- <dd>The target is a style</dd>
- <dt><code>"track"</code></dt>
- <dd>The target is an HTML {{HTMLELement("track")}}.</dd>
- <dt><code>"video"</code></dt>
- <dd>The target is video data.</dd>
- <dt><code>"worker"</code></dt>
- <dd>The target is a worker.</dd>
- <dt><code>"xslt"</code></dt>
- <dd>The target is an XLST transform.</dd>
-</dl>
+- `""`
+  - : The default value of `destination` is used for destinations that do not have their own value. [navigator.sendBeacon()](/en-US/docs/Web/API/Navigator/sendBeacon), [EventSource](/en-US/docs/Web/API/EventSource), [\<a ping>](/en-US/docs/Web/HTML/Element/a#attr-ping), [\<area ping>](/en-US/docs/Web/HTML/Element/area#attr-ping), [fetch()](/en-US/docs/Web/API/fetch), [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest), [WebSocket](/en-US/docs/Web/API/WebSocket), [Cache ](/en-US/docs/Web/API/Cache)and more.
+- `"audio"`
+  - : The target is audio data.
+- `"audioworklet"`
+  - : The target is data being fetched for use by an audio worklet.
+- `"document"`
+  - : The target is a document (HTML or XML).
+- `"embed"`
+  - : The target is embedded content.
+- `"font"`
+  - : The target is a font.
+- `"image"`
+  - : The target is an image.
+- `"manifest"`
+  - : The target is a manifest.
+- `"object"`
+  - : The target is an object.
+- `"paintworklet"`
+  - : The target is a paint worklet.
+- `"report"`
+  - : The target is a report.
+- `"script"`
+  - : The target is a script.
+- `"serviceworker"`
+  - : The target is a service worker.
+- `"sharedworker"`
+  - : The target is a shared worker.
+- `"style"`
+  - : The target is a style
+- `"track"`
+  - : The target is an HTML {{HTMLELement("track")}}.
+- `"video"`
+  - : The target is video data.
+- `"worker"`
+  - : The target is a worker.
+- `"xslt"`
+  - : The target is an XLST transform.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In the following snippet, we create a new request using the
-  {{domxref("Request.Request", "Request()")}} constructor (for an image file in the same
-  directory as the script), then save the request's destination:</p>
+In the following snippet, we create a new request using the
+{{domxref("Request.Request", "Request()")}} constructor (for an image file in the same
+directory as the script), then save the request's destination:
 
-<pre class="brush: js">var myRequest = new Request('flowers.jpg');
-var myDestination = myRequest.destination; // returns the empty string by default</pre>
+```js
+var myRequest = new Request('flowers.jpg');
+var myDestination = myRequest.destination; // returns the empty string by default
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
-  <li><a href="/en-US/docs/Web/HTTP/CORS">HTTP access control (CORS)</a>
-  </li>
-  <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
-</ul>
+- [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [HTTP](/en-US/docs/Web/HTTP)

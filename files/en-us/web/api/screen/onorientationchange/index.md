@@ -10,38 +10,34 @@ tags:
   - Screen Orientation
 browser-compat: api.Screen.onorientationchange
 ---
-<p>{{APIRef("Screen Orientation API")}}{{Deprecated_Header}}</p>
+{{APIRef("Screen Orientation API")}}{{Deprecated_Header}}
 
-<div class="notecard warning">
-  <p><strong>Warning:</strong> This is a non-standard deprecated feature which was
-    implemented only in Firefox under a different name. Use
-    {{DOMxRef("ScreenOrientation.onchange")}} instead.</p>
-</div>
+> **Warning:** This is a non-standard deprecated feature which was
+> implemented only in Firefox under a different name. Use
+> {{DOMxRef("ScreenOrientation.onchange")}} instead.
 
-<p>An event handler for the {{domxref("Window/orientationchange_event",
-  "orientationchange")}} events sent to the screen object.</p>
+An event handler for the {{domxref("Window/orientationchange_event",
+  "orientationchange")}} events sent to the screen object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">screen.onorientationchange = <var>funcRef</var>;
-</pre>
+```js
+screen.onorientationchange = funcRef;
+```
 
-<p>Where <code>funcRef</code> is a reference to a function.</p>
+Where `funcRef` is a reference to a function.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This feature is not part of any specification. It is no longer on track to becoming a standard.</p>
+This feature is not part of any specification. It is no longer on track to becoming a standard.
 
-<p>Use {{domxref("ScreenOrientation.onchange")}} instead.</p>
+Use {{domxref("ScreenOrientation.onchange")}} instead.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{event("orientationchange")}}</li>
-  <li><a href="/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation">Managing screen orientation</a>
-  </li>
-</ul>
+- {{event("orientationchange")}}
+- [Managing screen orientation](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)

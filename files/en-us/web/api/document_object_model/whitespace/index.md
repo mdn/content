@@ -8,208 +8,208 @@ tags:
   - JavaScript
   - whitespace
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The presence of whitespace in the <a href="/en-US/docs/Web/API/Document_Object_Model">DOM</a> can cause layout problems and make manipulation of the content tree difficult in unexpected ways, depending on where it is located. This article explores when difficulties can occur, and looks at what can be done to mitigate resulting problems.</p>
+The presence of whitespace in the [DOM](/en-US/docs/Web/API/Document_Object_Model) can cause layout problems and make manipulation of the content tree difficult in unexpected ways, depending on where it is located. This article explores when difficulties can occur, and looks at what can be done to mitigate resulting problems.
 
-<h2 id="What_is_whitespace">What is whitespace?</h2>
+## What is whitespace?
 
-<p>Whitespace is any string of text composed only of spaces, tabs or line breaks (to be precise, CRLF sequences, carriage returns or line feeds). These characters allow you to format your code in a way that will make it easily readable by yourself and other people. In fact, much of our source code is full of these whitespace characters, and we only tend to get rid of it in a production build step to reduce code download sizes.</p>
+Whitespace is any string of text composed only of spaces, tabs or line breaks (to be precise, CRLF sequences, carriage returns or line feeds). These characters allow you to format your code in a way that will make it easily readable by yourself and other people. In fact, much of our source code is full of these whitespace characters, and we only tend to get rid of it in a production build step to reduce code download sizes.
 
-<h3 id="HTML_largely_ignores_whitespace">HTML largely ignores whitespace?</h3>
+### HTML largely ignores whitespace?
 
-<p>In the case of HTML, whitespace is largely ignored — whitespace in between words is treated as a single character, and whitespace at the start and end of elements and outside elements is ignored. Take the following minimal example:</p>
+In the case of HTML, whitespace is largely ignored — whitespace in between words is treated as a single character, and whitespace at the start and end of elements and outside elements is ignored. Take the following minimal example:
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
+```html
+<!DOCTYPE html>
 
-    &lt;h1&gt;       Hello      World!     &lt;/h1&gt;</pre>
+    <h1>       Hello      World!     </h1>
+```
 
-<p>This source code contains a couple of line feeds after the <code>DOCTYPE</code> and a bunch of space characters before,  after, and inside the <code>&lt;h1&gt;</code> element, but the browser doesn’t seem to care at all and just shows the words "Hello World!" as if these characters didn’t exist at all:</p>
+This source code contains a couple of line feeds after the `DOCTYPE` and a bunch of space characters before,  after, and inside the `<h1>` element, but the browser doesn’t seem to care at all and just shows the words "Hello World!" as if these characters didn’t exist at all:
 
-<p>{{EmbedLiveSample('HTML_largely_ignores_whitespace')}}</p>
+{{EmbedLiveSample('HTML_largely_ignores_whitespace')}}
 
-<p>This is so that whitespace characters don't impact the layout of your page. Creating space around and inside elements is the job of CSS.</p>
+This is so that whitespace characters don't impact the layout of your page. Creating space around and inside elements is the job of CSS.
 
-<h3 id="What_does_happen_to_whitespace">What <em>does</em> happen to whitespace?</h3>
+### What _does_ happen to whitespace?
 
-<p>They don't just disappear, however.</p>
+They don't just disappear, however.
 
-<p>Any whitespace characters that are outside of HTML elements in the original document are represented in the DOM. This is needed internally so that the editor can preserve formatting of documents. This means that:</p>
+Any whitespace characters that are outside of HTML elements in the original document are represented in the DOM. This is needed internally so that the editor can preserve formatting of documents. This means that:
 
-<ul>
- <li>There will be some text nodes that contain only whitespace, and</li>
- <li>Some text nodes will have whitespace at the beginning or end.</li>
-</ul>
+- There will be some text nodes that contain only whitespace, and
+- Some text nodes will have whitespace at the beginning or end.
 
-<p>Take the following document, for example:</p>
+Take the following document, for example:
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;My Document&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;h1&gt;Header&lt;/h1&gt;
-  &lt;p&gt;
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Document</title>
+</head>
+<body>
+  <h1>Header</h1>
+  <p>
     Paragraph
-  &lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+  </p>
+</body>
+</html>
+```
 
-<p>The DOM tree for this looks like so:</p>
+The DOM tree for this looks like so:
 
-<p><img alt="dom tree equivalent of the above HTML example" src="dom-string.png"></p>
+![dom tree equivalent of the above HTML example](dom-string.png)
 
-<p>Conserving whitespace characters in the DOM is useful in many ways, but there are certain places where this makes certain layouts more difficult to implement, and causes problems for developers who want to iterate through nodes in the DOM. We'll look at these, and some solutions, later on.</p>
+Conserving whitespace characters in the DOM is useful in many ways, but there are certain places where this makes certain layouts more difficult to implement, and causes problems for developers who want to iterate through nodes in the DOM. We'll look at these, and some solutions, later on.
 
-<h3 id="How_does_CSS_process_whitespace">How does CSS process whitespace?</h3>
+### How does CSS process whitespace?
 
-<p>Most whitespace characters are ignored, not all of them are. In the earlier example one of the spaces between "Hello" and "World!" still exists when the page is rendered in a browser. There are rules in the browser engine that decide which whitespace characters are useful and which aren’t — these are specified at least in part in <a href="https://www.w3.org/TR/css-text-3">CSS Text Module Level 3</a>, and especially the parts about the <a href="https://www.w3.org/TR/css-text-3/#white-space-property">CSS <code>white-space</code> property</a> and <a href="https://www.w3.org/TR/css-text-3/#white-space-processing">whitespace processing details</a>, but we also offer an easier explanation below.</p>
+Most whitespace characters are ignored, not all of them are. In the earlier example one of the spaces between "Hello" and "World!" still exists when the page is rendered in a browser. There are rules in the browser engine that decide which whitespace characters are useful and which aren’t — these are specified at least in part in [CSS Text Module Level 3](https://www.w3.org/TR/css-text-3), and especially the parts about the [CSS `white-space` property](https://www.w3.org/TR/css-text-3/#white-space-property) and [whitespace processing details](https://www.w3.org/TR/css-text-3/#white-space-processing), but we also offer an easier explanation below.
 
-<h4>Example</h4>
+#### Example
 
-<p>Let’s take another example. To make it easier, we’ve added a comment that shows all spaces with ◦, all tabs with ⇥ , and all line breaks with ⏎:</p>
+Let’s take another example. To make it easier, we’ve added a comment that shows all spaces with ◦, all tabs with ⇥ , and all line breaks with ⏎:
 
-<p>This example:</p>
+This example:
 
-<pre class="brush: html">&lt;h1&gt;   Hello
-        &lt;span&gt; World!&lt;/span&gt;   &lt;/h1&gt;
+```html
+<h1>   Hello
+        <span> World!</span>   </h1>
 
-&lt;!--
-&lt;h1&gt;◦◦◦Hello◦⏎
-⇥⇥⇥⇥&lt;span&gt;◦World!&lt;/span&gt;⇥◦◦&lt;/h1&gt;
---&gt;
-</pre>
+<!--
+<h1>◦◦◦Hello◦⏎
+⇥⇥⇥⇥<span>◦World!</span>⇥◦◦</h1>
+-->
+```
 
-<p>is rendered in the browser like so:</p>
+is rendered in the browser like so:
 
-<p>{{EmbedLiveSample('Example')}}</p>
+{{EmbedLiveSample('Example')}}
 
-<h4>Explanation</h4>
+#### Explanation
 
-<p>The <code>&lt;h1&gt;</code> element contains only inline elements. In fact it contains:</p>
+The `<h1>` element contains only inline elements. In fact it contains:
 
-<ul>
- <li>A text node (consisting of some spaces, the word "Hello" and some tabs).</li>
- <li>An inline element (the <code>&lt;span&gt;</code>, which contains a space, and the word "World!").</li>
- <li>Another text node (consisting only of tabs and spaces).</li>
-</ul>
+- A text node (consisting of some spaces, the word "Hello" and some tabs).
+- An inline element (the `<span>`, which contains a space, and the word "World!").
+- Another text node (consisting only of tabs and spaces).
 
-<p>Because of this, it establishes what is called an <a href="/en-US/docs/Web/CSS/Inline_formatting_context">inline formatting context</a>. This is one of the possible layout rendering contexts that browser engines work with.</p>
+Because of this, it establishes what is called an [inline formatting context](/en-US/docs/Web/CSS/Inline_formatting_context). This is one of the possible layout rendering contexts that browser engines work with.
 
-<p>Inside this context, whitespace character processing can be summarized as follows:</p>
+Inside this context, whitespace character processing can be summarized as follows:
 
-<ol>
- <li>
-  <p>First, all spaces and tabs immediately before and after a line break are ignored so, if we take our example markup from before and apply this first rule, we get:</p>
+1.  First, all spaces and tabs immediately before and after a line break are ignored so, if we take our example markup from before and apply this first rule, we get:
 
-  <pre class="brush: html">&lt;h1&gt;◦◦◦Hello⏎
-&lt;span&gt;◦World!&lt;/span&gt;⇥◦◦&lt;/h1&gt;</pre>
- </li>
- <li>
-  <p>Next, all tab characters are handled as space characters, so the example becomes:</p>
+    ```html
+    <h1>◦◦◦Hello⏎
+    <span>◦World!</span>⇥◦◦</h1>
+    ```
 
-  <pre class="brush: html">&lt;h1&gt;◦◦◦Hello⏎
-&lt;span&gt;◦World!&lt;/span&gt;◦◦◦&lt;/h1&gt;</pre>
- </li>
- <li>
-  <p>Next, line breaks are converted to spaces:</p>
+2.  Next, all tab characters are handled as space characters, so the example becomes:
 
-  <pre class="brush: html">&lt;h1&gt;◦◦◦Hello◦&lt;span&gt;◦World!&lt;/span&gt;◦◦◦&lt;/h1&gt;</pre>
- </li>
- <li>
-  <p>After that, any space immediately following another space (even across two separate inline elements) is ignored, so we end up with:</p>
+    ```html
+    <h1>◦◦◦Hello⏎
+    <span>◦World!</span>◦◦◦</h1>
+    ```
 
-  <pre class="brush: html">&lt;h1&gt;◦Hello◦&lt;span&gt;World!&lt;/span&gt;◦&lt;/h1&gt;</pre>
- </li>
- <li>
-  <p>And finally, sequences of spaces at the beginning and end of a line are removed, so we finally get this:</p>
+3.  Next, line breaks are converted to spaces:
 
-  <pre class="brush: html">&lt;h1&gt;Hello◦&lt;span&gt;World!&lt;/span&gt;&lt;/h1&gt;</pre>
- </li>
-</ol>
+    ```html
+    <h1>◦◦◦Hello◦<span>◦World!</span>◦◦◦</h1>
+    ```
 
-<p>This is why people visiting the web page will see the phrase "Hello World!" nicely written at the top of the page, rather than a weirdly indented "Hello" followed but an even more weirdly indented "World!" on the line below that.</p>
+4.  After that, any space immediately following another space (even across two separate inline elements) is ignored, so we end up with:
 
-<div class="notecard note">
-<p><strong>Note:</strong> <a href="/en-US/docs/Tools">Firefox DevTools</a> have supported highlighting text nodes since version 52, making it easier to see exactly what nodes whitespace characters are contained within. Pure whitespace nodes are marked with a "whitespace" label.</p>
-</div>
+    ```html
+    <h1>◦Hello◦<span>World!</span>◦</h1>
+    ```
 
-<h3 id="Whitespace_in_block_formatting_contexts">Whitespace in block formatting contexts</h3>
+5.  And finally, sequences of spaces at the beginning and end of a line are removed, so we finally get this:
 
-<p>Above we just looked at elements that contain inline elements, and inline formatting contexts. If an element contains at least one block element, then it instead establishes what is called a <a href="/en-US/docs/Web/Guide/CSS/Block_formatting_context">block formatting context</a>.</p>
+    ```html
+    <h1>Hello◦<span>World!</span></h1>
+    ```
 
-<p>Within this context, whitespace is treated very differently.</p>
+This is why people visiting the web page will see the phrase "Hello World!" nicely written at the top of the page, rather than a weirdly indented "Hello" followed but an even more weirdly indented "World!" on the line below that.
 
-<h4>Example</h4>
+> **Note:** [Firefox DevTools](/en-US/docs/Tools) have supported highlighting text nodes since version 52, making it easier to see exactly what nodes whitespace characters are contained within. Pure whitespace nodes are marked with a "whitespace" label.
 
-Let’s take a look at an example to explain how. We've marked the whitespace characters as before.</p>
+### Whitespace in block formatting contexts
 
-<p>We have 3 text nodes that contain only whitespace, one before the first <code>&lt;div&gt;</code>, one between the 2 <code>&lt;divs&gt;</code>, and one after the second <code>&lt;div&gt;</code>.</p>
+Above we just looked at elements that contain inline elements, and inline formatting contexts. If an element contains at least one block element, then it instead establishes what is called a [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context).
 
-<pre class="brush: html">&lt;body&gt;
-  &lt;div&gt;  Hello  &lt;/div&gt;
+Within this context, whitespace is treated very differently.
 
-   &lt;div&gt;  World!   &lt;/div&gt;
-&lt;/body&gt;
+#### Example
 
-&lt;!--
-&lt;body&gt;⏎
-⇥&lt;div&gt;◦◦Hello◦◦&lt;/div&gt;⏎
+Let’s take a look at an example to explain how. We've marked the whitespace characters as before.
+
+We have 3 text nodes that contain only whitespace, one before the first `<div>`, one between the 2 `<divs>`, and one after the second `<div>`.
+
+```html
+<body>
+  <div>  Hello  </div>
+
+   <div>  World!   </div>
+</body>
+
+<!--
+<body>⏎
+⇥<div>◦◦Hello◦◦</div>⏎
 ⏎
-◦◦◦&lt;div&gt;◦◦World!◦◦&lt;/div&gt;◦◦⏎
-&lt;/body&gt;
---&gt;
-</pre>
+◦◦◦<div>◦◦World!◦◦</div>◦◦⏎
+</body>
+-->
+```
 
-<p>This renders like so:</p>
+This renders like so:
 
-<p>{{EmbedLiveSample('Example_2')}}</p>
+{{EmbedLiveSample('Example_2')}}
 
-<h4>Explanation</h4>
+#### Explanation
 
-<p>We can summarize how the whitespace here is handled as follows (the may be some slight differences in exact behavior between browsers, but this basically works):</p>
+We can summarize how the whitespace here is handled as follows (the may be some slight differences in exact behavior between browsers, but this basically works):
 
-<ol>
- <li>
-  <p>Because we’re inside a block formatting context, everything must be a block, so our 3 text nodes also become blocks, just like the 2 <code>&lt;div&gt;</code>s. Blocks occupy the full width available and are stacked on top of each other, which means that we end up with a layout composed of this list of blocks:</p>
+1.  Because we’re inside a block formatting context, everything must be a block, so our 3 text nodes also become blocks, just like the 2 `<div>`s. Blocks occupy the full width available and are stacked on top of each other, which means that we end up with a layout composed of this list of blocks:
 
-  <pre class="brush: html">&lt;block&gt;⏎⇥&lt;/block&gt;
-&lt;block&gt;◦◦Hello◦◦&lt;/block&gt;
-&lt;block&gt;⏎◦◦◦&lt;/block&gt;
-&lt;block&gt;◦◦World!◦◦&lt;/block&gt;
-&lt;block&gt;◦◦⏎&lt;/block&gt;</pre>
- </li>
- <li>
-  <p>This is then simplified further by applying the processing rules for whitespace in inline formatting contexts to these blocks:</p>
+    ```html
+    <block>⏎⇥</block>
+    <block>◦◦Hello◦◦</block>
+    <block>⏎◦◦◦</block>
+    <block>◦◦World!◦◦</block>
+    <block>◦◦⏎</block>
+    ```
 
-  <pre class="brush: html">&lt;block&gt;&lt;/block&gt;
-&lt;block&gt;Hello&lt;/block&gt;
-&lt;block&gt;&lt;/block&gt;
-&lt;block&gt;World!&lt;/block&gt;
-&lt;block&gt;&lt;/block&gt;</pre>
- </li>
- <li>
-  <p>The 3 empty blocks we now have are not going to occupy any space in the final layout, because they don’t contain anything, so we’ll end up with only 2 blocks taking up space in the page. People viewing the web page see the words "Hello" and "World!" on 2 separate lines as you’d expect 2 <code>&lt;div&gt;</code>s to be laid out. The browser engine has essentially ignored all of the whitespace that was added in the source code.</p>
- </li>
-</ol>
+2.  This is then simplified further by applying the processing rules for whitespace in inline formatting contexts to these blocks:
 
-<h2 id="Spaces_in_between_inline_and_inline-block_elements">Spaces in between inline and inline-block elements</h2>
+    ```html
+    <block></block>
+    <block>Hello</block>
+    <block></block>
+    <block>World!</block>
+    <block></block>
+    ```
 
-<p>Let's move on to look at a few issues that can arise due to whitespace, and what can be done about them. First of all, we'll look at what happens with spaces in between inline and inline-block elements. In fact, we saw this already in our very first example, when we described how whitespace is processed inside inline formatting contexts.</p>
+3.  The 3 empty blocks we now have are not going to occupy any space in the final layout, because they don’t contain anything, so we’ll end up with only 2 blocks taking up space in the page. People viewing the web page see the words "Hello" and "World!" on 2 separate lines as you’d expect 2 `<div>`s to be laid out. The browser engine has essentially ignored all of the whitespace that was added in the source code.
 
-<p>We said that there were rules to ignore most characters but that word-separating characters remain. When you’re only dealing with block-level elements such as <code>&lt;p&gt;</code> that only contain inline elements such as <code>&lt;em&gt;</code>, <code>&lt;strong&gt;</code>, <code>&lt;span&gt;</code>, etc., you don’t normally care about this because the extra whitespace that does make it to the layout is helpful to separate the words in the sentence.</p>
+## Spaces in between inline and inline-block elements
 
-<p>It gets more interesting however when you start using <code>inline-block</code> elements. These elements behave like inline elements on the outside, and blocks on the inside, and are often used to display more complex pieces of UI than just text, side-by-side on the same line, for example navigation menu items.</p>
+Let's move on to look at a few issues that can arise due to whitespace, and what can be done about them. First of all, we'll look at what happens with spaces in between inline and inline-block elements. In fact, we saw this already in our very first example, when we described how whitespace is processed inside inline formatting contexts.
 
-<p>Because they are blocks, many people expect that they will behave as such, but really they don’t. If there is formatting whitespace between adjacent inline elements, this will result in space in the layout, just like the spaces between words in text.</p>
+We said that there were rules to ignore most characters but that word-separating characters remain. When you’re only dealing with block-level elements such as `<p>` that only contain inline elements such as `<em>`, `<strong>`, `<span>`, etc., you don’t normally care about this because the extra whitespace that does make it to the layout is helpful to separate the words in the sentence.
 
-<h3>Example</h3>
+It gets more interesting however when you start using `inline-block` elements. These elements behave like inline elements on the outside, and blocks on the inside, and are often used to display more complex pieces of UI than just text, side-by-side on the same line, for example navigation menu items.
 
-<p>Consider this example (again, we've included an HTML comment that shows the whitespace characters in the HTML):</p>
+Because they are blocks, many people expect that they will behave as such, but really they don’t. If there is formatting whitespace between adjacent inline elements, this will result in space in the layout, just like the spaces between words in text.
 
-<pre class="brush: css">.people-list {
+### Example
+
+Consider this example (again, we've included an HTML comment that shows the whitespace characters in the HTML):
+
+```css
+.people-list {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -222,65 +222,69 @@ Let’s take a look at an example to explain how. We've marked the whitespace ch
   background: #f06;
   border: 1px solid;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;ul class="people-list"&gt;
+```html
+<ul class="people-list">
 
-    &lt;li&gt;&lt;/li&gt;
+    <li></li>
 
-    &lt;li&gt;&lt;/li&gt;
+    <li></li>
 
-    &lt;li&gt;&lt;/li&gt;
+    <li></li>
 
-    &lt;li&gt;&lt;/li&gt;
+    <li></li>
 
-    &lt;li&gt;&lt;/li&gt;
+    <li></li>
 
-  &lt;/ul&gt;
+  </ul>
 
-&lt;!--
-&lt;ul class="people-list"&gt;⏎
+<!--
+<ul class="people-list">⏎
 
-◦◦&lt;li&gt;&lt;/li&gt;⏎
+◦◦<li></li>⏎
 
-◦◦&lt;li&gt;&lt;/li&gt;⏎
+◦◦<li></li>⏎
 
-◦◦&lt;li&gt;&lt;/li&gt;⏎
+◦◦<li></li>⏎
 
-◦◦&lt;li&gt;&lt;/li&gt;⏎
+◦◦<li></li>⏎
 
-◦◦&lt;li&gt;&lt;/li&gt;⏎
+◦◦<li></li>⏎
 
-&lt;/ul&gt;
---&gt;
-</pre>
+</ul>
+-->
+```
 
-<p>This renders as follows:</p>
+This renders as follows:
 
-<p>{{EmbedLiveSample('Example_3')}}</p>
+{{EmbedLiveSample('Example_3')}}
 
-<p>You probably don't want the gaps in between the blocks — depending on the use case (is this a list of avatars, or horizontal nav buttons?), you probably want the element sides flush with each other, and to be able to control any spacing yourself.</p>
+You probably don't want the gaps in between the blocks — depending on the use case (is this a list of avatars, or horizontal nav buttons?), you probably want the element sides flush with each other, and to be able to control any spacing yourself.
 
-<p>The Firefox DevTools HTML Inspector will highlight text nodes, and also show you exactly what area the elements are taking up — useful if you are wondering what is causing the problem, and are maybe thinking you've got some extra margin in there or something!</p>
+The Firefox DevTools HTML Inspector will highlight text nodes, and also show you exactly what area the elements are taking up — useful if you are wondering what is causing the problem, and are maybe thinking you've got some extra margin in there or something!
 
-<p><img alt="" src="whitespace-devtools.png"></p>
+![](whitespace-devtools.png)
 
-<h3>Solutions</h3>
+### Solutions
 
-<p>There are a few ways of getting around this problem:</p>
+There are a few ways of getting around this problem:
 
-<p>Use <a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a> to create the horizontal list of items instead of trying an <code>inline-block</code> solution. This handles everything for you, and is definitely the preferred solution:</p>
+Use [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox) to create the horizontal list of items instead of trying an `inline-block` solution. This handles everything for you, and is definitely the preferred solution:
 
-<pre class="brush: css">ul {
+```css
+ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   display: flex;
-}</pre>
+}
+```
 
-<p>If you need to rely on <code>inline-block</code>, you could set the <code><a href="/en-US/docs/Web/CSS/font-size">font-size</a></code> of the list to 0. This only works if your blocks are not sized with ems (based on the <code>font-size</code>, so the block size would also end up being 0). rems would be a good choice here:</p>
+If you need to rely on `inline-block`, you could set the [`font-size`](/en-US/docs/Web/CSS/font-size) of the list to 0. This only works if your blocks are not sized with ems (based on the `font-size`, so the block size would also end up being 0). rems would be a good choice here:
 
-<pre class="brush: css">ul {
+```css
+ul {
   font-size: 0;
   ...
 }
@@ -291,32 +295,37 @@ li {
   height: 2rem;
   ...
 }
-</pre>
+```
 
-<p>Or you could set negative margin on the list items:</p>
+Or you could set negative margin on the list items:
 
-<pre class="brush: css">li {
+```css
+li {
   display: inline-block;
   width: 2rem;
   height: 2rem;
   margin-right: -0.25rem;
-}</pre>
+}
+```
 
-<p>You can also solve this problem by putting your list items all on the same line in the source, which causes the whitespace nodes to not be created in the first place:</p>
+You can also solve this problem by putting your list items all on the same line in the source, which causes the whitespace nodes to not be created in the first place:
 
-<pre class="brush: html">&lt;li&gt;&lt;/li&gt;&lt;li&gt;&lt;/li&gt;&lt;li&gt;&lt;/li&gt;&lt;li&gt;&lt;/li&gt;&lt;li&gt;&lt;/li&gt;</pre>
+```html
+<li></li><li></li><li></li><li></li><li></li>
+```
 
-<h2 id="DOM_traversal_and_whitespace">DOM traversal and whitespace</h2>
+## DOM traversal and whitespace
 
-<p>When trying to do <a href="/en-US/docs/Web/API/Document_Object_Model">DOM</a> manipulation in JavaScript, you can also encounter problems because of whitespace nodes. For example, if you have a reference to a parent node and want to affect its first element child using <code><a href="/en-US/docs/Web/API/Node/firstChild">Node.firstChild</a></code>, if there is a rogue whitespace node just after the opening parent tag you will not get the result you are expecting. The text node would be selected instead of the element you want to affect.</p>
+When trying to do [DOM](/en-US/docs/Web/API/Document_Object_Model) manipulation in JavaScript, you can also encounter problems because of whitespace nodes. For example, if you have a reference to a parent node and want to affect its first element child using [`Node.firstChild`](/en-US/docs/Web/API/Node/firstChild), if there is a rogue whitespace node just after the opening parent tag you will not get the result you are expecting. The text node would be selected instead of the element you want to affect.
 
-<p>As another example, if you have a certain subset of elements that you want to do something to based on whether they are empty (have no child nodes) or not, you could check whether each element is empty using something like <code><a href="/en-US/docs/Web/API/Node/hasChildNodes">Node.hasChildNodes()</a></code>, but again, if any target elements contain text nodes, you could end up with false results.</p>
+As another example, if you have a certain subset of elements that you want to do something to based on whether they are empty (have no child nodes) or not, you could check whether each element is empty using something like [`Node.hasChildNodes()`](/en-US/docs/Web/API/Node/hasChildNodes), but again, if any target elements contain text nodes, you could end up with false results.
 
-<h2 id="Whitespace_helper_functions">Whitespace helper functions</h2>
+## Whitespace helper functions
 
-<p>The JavaScript code below defines several functions that make it easier to deal with whitespace in the DOM:</p>
+The JavaScript code below defines several functions that make it easier to deal with whitespace in the DOM:
 
-<pre class="brush: js">/**
+```js
+/**
  * Throughout, whitespace is defined as one of the characters
  *  "\t" TAB \u0009
  *  "\n" LF  \u000A
@@ -354,7 +363,7 @@ function is_all_ws( nod )
 function is_ignorable( nod )
 {
   return ( nod.nodeType == 8) || // A comment node
-         ( (nod.nodeType == 3) &amp;&amp; is_all_ws(nod) ); // a text node, all ws
+         ( (nod.nodeType == 3) && is_all_ws(nod) ); // a text node, all ws
 }
 
 /**
@@ -458,13 +467,14 @@ function data_of( txt )
     data = data.substring(0, data.length - 1);
   return data;
 }
-</pre>
+```
 
-<h3 id="Example">Example</h3>
+### Example
 
-<p>The following code demonstrates the use of the functions above. It iterates over the children of an element (whose children are all elements) to find the one whose text is <code>"This is the third paragraph"</code>, and then changes the class attribute and the contents of that paragraph.</p>
+The following code demonstrates the use of the functions above. It iterates over the children of an element (whose children are all elements) to find the one whose text is `"This is the third paragraph"`, and then changes the class attribute and the contents of that paragraph.
 
-<pre class="brush: js">var cur = first_child(document.getElementById("test"));
+```js
+var cur = first_child(document.getElementById("test"));
 while (cur)
 {
   if (data_of(cur.firstChild) == "This is the third paragraph.")
@@ -474,4 +484,4 @@ while (cur)
   }
   cur = node_after(cur);
 }
-</pre>
+```

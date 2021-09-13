@@ -12,64 +12,60 @@ tags:
   - SecurityPolicyViolationEvent
 browser-compat: api.SecurityPolicyViolationEvent
 ---
-<p>{{APIRef("{{HTTPSidebar}}")}}{{ SeeCompatTable() }}</p>
+{{APIRef("{{HTTPSidebar}}")}}{{ SeeCompatTable() }}
 
-<p>The <strong><code>SecurityPolicyViolationEvent</code></strong> interface inherits from {{domxref("Event")}}, and represents the event object of an event sent on a document or worker when its content security policy is violated.</p>
+The **`SecurityPolicyViolationEvent`** interface inherits from {{domxref("Event")}}, and represents the event object of an event sent on a document or worker when its content security policy is violated.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("SecurityPolicyViolationEvent.SecurityPolicyViolationEvent","SecurityPolicyViolationEvent()")}}</dt>
- <dd>Creates a new <code>SecurityPolicyViolationEvent</code> object instance.</dd>
-</dl>
+- {{domxref("SecurityPolicyViolationEvent.SecurityPolicyViolationEvent","SecurityPolicyViolationEvent()")}}
+  - : Creates a new `SecurityPolicyViolationEvent` object instance.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("SecurityPolicyViolationEvent.blockedURI")}}{{readonlyInline}}</dt>
- <dd>A {{domxref("USVString")}} representing the URI of the resource that was blocked because it violates a policy.</dd>
- <dt>{{domxref("SecurityPolicyViolationEvent.columnNumber")}}{{readonlyInline}}</dt>
- <dd>The column number in the document or worker at which the violation occurred.</dd>
- <dt>{{domxref("SecurityPolicyViolationEvent.disposition")}}{{readonlyInline}}</dt>
- <dd>Indicates how the violated policy is configured to be treated by the user agent. This will be <code>"enforce"</code> or <code>"report"</code>.</dd>
- <dt>{{domxref("SecurityPolicyViolationEvent.documentURI")}}{{readonlyInline}}</dt>
- <dd>A {{domxref("USVString")}} representing the URI of the document or worker in which the violation was found.</dd>
- <dt>{{domxref("SecurityPolicyViolationEvent.effectiveDirective")}}{{readonlyInline}}</dt>
- <dd>A {{domxref("DOMString")}} representing the directive whose enforcement uncovered the violation.</dd>
- <dt>{{domxref("SecurityPolicyViolationEvent.lineNumber")}}{{readonlyInline}}</dt>
- <dd>The line number in the document or worker at which the violation occurred.</dd>
- <dt>{{domxref("SecurityPolicyViolationEvent.originalPolicy")}}{{readonlyInline}}</dt>
- <dd>A {{domxref("DOMString")}} containing the policy whose enforcement uncovered the violation.</dd>
- <dt>{{domxref("SecurityPolicyViolationEvent.referrer")}}{{readonlyInline}}</dt>
- <dd>A {{domxref("USVString")}} representing the referrer of the resources whose policy was violated. This will be a URL or <code>null</code>.</dd>
- <dt>{{domxref("SecurityPolicyViolationEvent.sample")}}{{readonlyInline}}</dt>
- <dd>A {{domxref("DOMString")}} representing a sample of the resource that caused the violation, usually the first 40 characters. This will only be populated if the resource is an inline script, event handler, or style — external resources causing a violation will not generate a sample.</dd>
- <dt>{{domxref("SecurityPolicyViolationEvent.sourceFile")}}{{readonlyInline}}</dt>
- <dd>A {{domxref("USVString")}} representing the URI of the document or worker in which the violation was found.</dd>
- <dt>{{domxref("SecurityPolicyViolationEvent.statusCode")}}{{readonlyInline}}</dt>
- <dd>A number representing the HTTP status code of the document or worker in which the violation occurred.</dd>
- <dt>{{domxref("SecurityPolicyViolationEvent.violatedDirective")}}{{readonlyInline}}</dt>
- <dd>A {{domxref("DOMString")}} representing the directive whose enforcement uncovered the violation.</dd>
-</dl>
+- {{domxref("SecurityPolicyViolationEvent.blockedURI")}}{{readonlyInline}}
+  - : A {{domxref("USVString")}} representing the URI of the resource that was blocked because it violates a policy.
+- {{domxref("SecurityPolicyViolationEvent.columnNumber")}}{{readonlyInline}}
+  - : The column number in the document or worker at which the violation occurred.
+- {{domxref("SecurityPolicyViolationEvent.disposition")}}{{readonlyInline}}
+  - : Indicates how the violated policy is configured to be treated by the user agent. This will be `"enforce"` or `"report"`.
+- {{domxref("SecurityPolicyViolationEvent.documentURI")}}{{readonlyInline}}
+  - : A {{domxref("USVString")}} representing the URI of the document or worker in which the violation was found.
+- {{domxref("SecurityPolicyViolationEvent.effectiveDirective")}}{{readonlyInline}}
+  - : A {{domxref("DOMString")}} representing the directive whose enforcement uncovered the violation.
+- {{domxref("SecurityPolicyViolationEvent.lineNumber")}}{{readonlyInline}}
+  - : The line number in the document or worker at which the violation occurred.
+- {{domxref("SecurityPolicyViolationEvent.originalPolicy")}}{{readonlyInline}}
+  - : A {{domxref("DOMString")}} containing the policy whose enforcement uncovered the violation.
+- {{domxref("SecurityPolicyViolationEvent.referrer")}}{{readonlyInline}}
+  - : A {{domxref("USVString")}} representing the referrer of the resources whose policy was violated. This will be a URL or `null`.
+- {{domxref("SecurityPolicyViolationEvent.sample")}}{{readonlyInline}}
+  - : A {{domxref("DOMString")}} representing a sample of the resource that caused the violation, usually the first 40 characters. This will only be populated if the resource is an inline script, event handler, or style — external resources causing a violation will not generate a sample.
+- {{domxref("SecurityPolicyViolationEvent.sourceFile")}}{{readonlyInline}}
+  - : A {{domxref("USVString")}} representing the URI of the document or worker in which the violation was found.
+- {{domxref("SecurityPolicyViolationEvent.statusCode")}}{{readonlyInline}}
+  - : A number representing the HTTP status code of the document or worker in which the violation occurred.
+- {{domxref("SecurityPolicyViolationEvent.violatedDirective")}}{{readonlyInline}}
+  - : A {{domxref("DOMString")}} representing the directive whose enforcement uncovered the violation.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">document.addEventListener("securitypolicyviolation", (e) =&gt; {
+```js
+document.addEventListener("securitypolicyviolation", (e) => {
   console.log(e.blockedURI);
   console.log(e.violatedDirective);
   console.log(e.originalPolicy);
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/HTTP/CSP">Content Security Policy (CSP)</a></li>
-</ul>
+- [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP)

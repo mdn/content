@@ -10,45 +10,48 @@ tags:
   - Element
 browser-compat: api.Element.ariaLive
 ---
-<div>{{DefaultAPISidebar("DOM")}}</div>
+{{DefaultAPISidebar("DOM")}}
 
-<p>The <strong><code>ariaLive</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions">aria-live</a></code> attribute, which indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.</p>
+The **`ariaLive`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) attribute, which indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox notranslate">var <var>ariaLive</var> = element.ariaLive;
-<var>element</var>.ariaLive = <var>ariaLive</var></pre>
+    var ariaLive = element.ariaLive;
+    element.ariaLive = ariaLive
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString")}} with one of the following values:</p>
+### Value
 
-<dl>
-  <dt><code>"assertive"</code></dt>
-  <dd>Indicates that updates to the region have the highest priority and should be presented the user immediately.</dd>
-  <dt><code>"off"</code></dt>
-  <dd>Indicates that updates to the region should not be presented to the user unless the user is currently focused on that region.</dd>
-  <dt><code>"polite"</code></dt>
-  <dd>Indicates that updates to the region should be presented at the next graceful opportunity, such as at the end of speaking the current sentence or when the user pauses typing.</dd>
-</dl>
+A {{domxref("DOMString")}} with one of the following values:
 
-<h2 id="Examples">Examples</h2>
+- `"assertive"`
+  - : Indicates that updates to the region have the highest priority and should be presented the user immediately.
+- `"off"`
+  - : Indicates that updates to the region should not be presented to the user unless the user is currently focused on that region.
+- `"polite"`
+  - : Indicates that updates to the region should be presented at the next graceful opportunity, such as at the end of speaking the current sentence or when the user pauses typing.
 
-<p>In this example the <code>aria-live</code> attribute on the element with an ID of <code>planetInfo</code> is set to "polite". We then update the value to "assertive".</p>
+## Examples
 
-<pre class="brush: html">&lt;div role="region" id="planetInfo" aria-live="polite"&gt;
-  &lt;h2 id="planetTitle"&gt;No planet selected&lt;/h2&gt;
-  &lt;p id="planetDescription"&gt;Select a planet to view its description&lt;/p&gt;
-&lt;/div&gt;</pre>
+In this example the `aria-live` attribute on the element with an ID of `planetInfo` is set to "polite". We then update the value to "assertive".
 
-<pre class="brush: js">let el = document.getElementById('planetInfo');
+```html
+<div role="region" id="planetInfo" aria-live="polite">
+  <h2 id="planetTitle">No planet selected</h2>
+  <p id="planetDescription">Select a planet to view its description</p>
+</div>
+```
+
+```js
+let el = document.getElementById('planetInfo');
 console.log(el.ariaLive); // "polite"
 el.ariaLive = "assertive";
-console.log(el.ariaLive); // assertive</pre>
+console.log(el.ariaLive); // assertive
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

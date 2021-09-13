@@ -2,39 +2,41 @@
 title: Document.close()
 slug: Web/API/Document/close
 tags:
-- API
-- Document
-- HTML DOM
-- Method
-- Reference
+  - API
+  - Document
+  - HTML DOM
+  - Method
+  - Reference
 browser-compat: api.Document.close
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>Document.close()</code></strong> method finishes writing to a
-  document, opened with {{domxref("Document.open()")}}.</p>
+The **`Document.close()`** method finishes writing to a
+document, opened with {{domxref("Document.open()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">document.close();
-</pre>
+```js
+document.close();
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">// Open a document to write to it
+```js
+// Open a document to write to it
 document.open();
 
 // Write the content of the document
-document.write("&lt;p&gt;The one and only content.&lt;/p&gt;");
+document.write("<p>The one and only content.</p>");
 
 // Close the document
 document.close();
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

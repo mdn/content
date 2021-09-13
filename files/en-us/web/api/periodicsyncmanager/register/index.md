@@ -2,63 +2,59 @@
 title: PeriodicSyncManager.register()
 slug: Web/API/PeriodicSyncManager/register
 tags:
-- Background Sync
-- Method
-- Offline
-- PWA
-- PeriodicSyncManager
-- Service Worker
-- Web Periodic Background Synchronization API
+  - Background Sync
+  - Method
+  - Offline
+  - PWA
+  - PeriodicSyncManager
+  - Service Worker
+  - Web Periodic Background Synchronization API
 browser-compat: api.PeriodicSyncManager.register
 ---
-<div>{{draft}}{{DefaultAPISidebar("Periodic Background Sync")}}</div>
+{{draft}}{{DefaultAPISidebar("Periodic Background Sync")}}
 
-<p>The <strong><code>register()</code></strong> method of the
-  {{domxref("PeriodicSyncManager")}} interface registers a periodic sync request with the
-  browser with the specified tag and options. It returns a {{jsxref('Promise')}} that
-  resolves when the registration completes.</p>
+The **`register()`** method of the
+{{domxref("PeriodicSyncManager")}} interface registers a periodic sync request with the
+browser with the specified tag and options. It returns a {{jsxref('Promise')}} that
+resolves when the registration completes.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>register</var> = PeriodicSyncManager.register(tag, BackgroundSyncOptions);</pre>
+```js
+var register = PeriodicSyncManager.register(tag, BackgroundSyncOptions);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><em>tag</em></dt>
-  <dd>A unique {{jsxref('String')}} identifier</dd>
-  <dt><em>BackgroundSyncOptions</em> {{optional_inline}}</dt>
-  <dd>An {{jsxref('Object')}} containing the following optional data:
-    <ul>
-      <li><code>minInterval</code>: The minimum interval time, in milliseconds, at which
-        the periodic sync should occur.</li>
-    </ul>
-  </dd>
-</dl>
+- _tag_
+  - : A unique {{jsxref('String')}} identifier
+- _BackgroundSyncOptions_ {{optional_inline}}
 
-<h3 id="Return_value">Return value</h3>
+  - : An {{jsxref('Object')}} containing the following optional data:
 
-<p>Returns a {{jsxref("Promise")}} that resolves with {{jsxref('undefined')}}</p>
+    - `minInterval`: The minimum interval time, in milliseconds, at which
+      the periodic sync should occur.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Return value
 
-<dl>
-  <dt>InvalidStateError</dt>
-  <dd>There is no active {{domxref('ServiceWorker')}} present.</dd>
-  <dt>NotAllowedError</dt>
-  <dd>If permission for background periodic sync is not granted.</dd>
-  <dt>InvalidAccessError</dt>
-  <dd>The active window is not the main window (not of "auxiliary" or "top-level" type).
-  </dd>
-</dl>
+Returns a {{jsxref("Promise")}} that resolves with {{jsxref('undefined')}}
 
-<h2 id="Examples">Examples</h2>
+### Exceptions
 
-<p>The following asynchronous function registers a periodic background sync at a minimum
-  interval of one day from a browsing context:</p>
+- InvalidStateError
+  - : There is no active {{domxref('ServiceWorker')}} present.
+- NotAllowedError
+  - : If permission for background periodic sync is not granted.
+- InvalidAccessError
+  - : The active window is not the main window (not of "auxiliary" or "top-level" type).
 
-<pre class="brush: js">async function registerPeriodicNewsCheck() {
+## Examples
+
+The following asynchronous function registers a periodic background sync at a minimum
+interval of one day from a browsing context:
+
+```js
+async function registerPeriodicNewsCheck() {
   const registration = await navigator.serviceWorker.ready;
   try {
     await registration.periodicSync.register('fetch-news', {
@@ -68,21 +64,19 @@ browser-compat: api.PeriodicSyncManager.register
     console.log('Periodic Sync could not be registered!');
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://web.dev/periodic-background-sync/">Richer offline experiences with
-      the Periodic Background Sync API</a></li>
-  <li><a href="https://webplatformapis.com/periodic_sync/periodicSync_improved.html">A
-      Periodic Background Sync demo app</a></li>
-</ul>
+- [Richer offline experiences with
+  the Periodic Background Sync API](https://web.dev/periodic-background-sync/)
+- [A
+  Periodic Background Sync demo app](https://webplatformapis.com/periodic_sync/periodicSync_improved.html)

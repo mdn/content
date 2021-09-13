@@ -2,177 +2,171 @@
 title: WebGL2RenderingContext.texSubImage3D()
 slug: Web/API/WebGL2RenderingContext/texSubImage3D
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGL2
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGL2
 browser-compat: api.WebGL2RenderingContext.texSubImage3D
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGL2RenderingContext.texSubImage3D()</code></strong> method of the
-  <a href="/en-US/docs/Web/API/WebGL_API">WebGL API </a>specifies a sub-rectangle of the
-  current texture.</p>
+The **`WebGL2RenderingContext.texSubImage3D()`** method of the
+[WebGL API ](/en-US/docs/Web/API/WebGL_API)specifies a sub-rectangle of the
+current texture.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void gl.texSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, ArrayBufferView? srcData, optional srcOffset);
+```js
+void gl.texSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, ArrayBufferView? srcData, optional srcOffset);
 
-void <var>gl</var>.texSubImage3D(<var>target</var>, <var>level</var>, <var>xoffset</var>, <var>yoffset</var>, <var>zoffset</var>, width, height, depth, <var>format</var>, <var>type</var>, ImageBitmap? <var>pixels</var>);
+void gl.texSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, ImageBitmap? pixels);
 
-void <var>gl</var>.texSubImage3D(<var>target</var>, <var>level</var>, <var>xoffset</var>, <var>yoffset</var>, <var>zoffset</var>, width, height, depth, <var>format</var>, <var>type</var>, ImageData? <var>pixels</var>);
+void gl.texSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, ImageData? pixels);
 
-void <var>gl</var>.texSubImage3D(<var>target</var>, <var>level</var>, <var>xoffset</var>, <var>yoffset</var>, <var>zoffset</var>, width, height, depth, <var>format</var>, <var>type</var>, HTMLImageElement? <var>pixels</var>);
+void gl.texSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, HTMLImageElement? pixels);
 
-void <var>gl</var>.texSubImage3D(<var>target</var>, <var>level</var>, <var>xoffset</var>, <var>yoffset</var>, <var>zoffset</var>, width, height, depth, <var>format</var>, <var>type</var>, HTMLCanvasElement? <var>pixels</var>);
+void gl.texSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, HTMLCanvasElement? pixels);
 
-void <var>gl</var>.texSubImage3D(<var>target</var>, <var>level</var>, <var>xoffset</var>, <var>yoffset</var>, <var>zoffset</var>, width, height, depth, <var>format</var>, <var>type</var>, HTMLVideoElement? <var>pixels</var>);
+void gl.texSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, HTMLVideoElement? pixels);
 
-void <var>gl</var>.texSubImage3D(<var>target</var>, <var>level</var>, <var>xoffset</var>, <var>yoffset</var>, <var>zoffset</var>, width, height, depth, <var>format</var>, <var>type</var>, GLintptr <var>offset</var>);
-</pre>
+void gl.texSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, GLintptr offset);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>target</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target) of the active texture.
+- `target`
+
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target) of the active texture.
     Possible values:
-    <ul>
-      <li><code>gl.TEXTURE_3D</code>: A three-dimensional texture.</li>
-      <li><code>gl.TEXTURE_2D_ARRAY</code>: A two-dimensional array texture.</li>
-    </ul>
-  </dd>
-  <dt><code>level</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLint")}} specifying the level of detail. Level 0 is the base image
-    level and level <em>n</em> is the <em>n</em>th mipmap reduction level.</dd>
-  <dt><code>xoffset</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLint")}} specifying the x offset within the texture image.</dd>
-  <dt><code>yoffset</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLint")}} specifying the y offset within the texture image.</dd>
-  <dt><code>zoffset</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLint")}} specifying the z offset within the texture image.</dd>
-  <dt><code>width</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the width of the texture.</dd>
-  <dt><code>height</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the height of the texture.</dd>
-  <dt><code>depth</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the depth of the texture.</dd>
-  <dt><code>format</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the format of the texel data. Possible values:
-    <ul>
-      <li><code>gl.ALPHA</code>: Discards the red, green and blue components and reads the
-        alpha component.</li>
-      <li><code>gl.RGB</code>: Discards the alpha components and reads the red, green and
-        blue components.</li>
-      <li><code>gl.RGBA</code>: Red, green, blue and alpha components are read from the
-        color buffer.</li>
-      <li><code>gl.LUMINANCE</code>: Each color component is a luminance component, alpha
-        is 1.0.</li>
-      <li><code>gl.LUMINANCE_ALPHA</code>: Each component is a luminance/alpha component.
-      </li>
-      <li><code>gl.R8</code></li>
-      <li><code>gl.R16F</code></li>
-      <li><code>gl.</code>R32F</li>
-      <li><code>gl.R8UI</code></li>
-      <li><code>gl.RG8</code></li>
-      <li><code>gl.RG16F</code></li>
-      <li><code>gl.RG32F</code></li>
-      <li><code>gl.RGUI</code></li>
-      <li><code>gl.RGB8</code></li>
-      <li><code>gl.SRGB8</code></li>
-      <li><code>gl.RGB565</code></li>
-      <li><code>gl.R11F_G11F_B10F</code></li>
-      <li><code>gl.RGB9_E5</code></li>
-      <li><code>gl.RGB16F</code></li>
-      <li><code>gl.RGB32F</code></li>
-      <li><code>gl.RGB8UI</code></li>
-      <li><code>gl.RGBA8</code></li>
-      <li><code>gl.SRGB_APLHA8</code></li>
-      <li><code>gl.RGB5_A1</code></li>
-      <li><code>gl.RGBA4444</code></li>
-      <li><code>gl.RGBA16F</code></li>
-      <li><code>gl.RGBA32F</code></li>
-      <li><code>gl.RGBA8UI</code></li>
-    </ul>
-  </dd>
-  <dt><code>type</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the data type of the texel data. Possible values:
-    <ul>
-      <li><code>gl.UNSIGNED_BYTE</code>: 8 bits per channel for <code>gl.RGBA</code></li>
-      <li><code>gl.UNSIGNED_SHORT_5_6_5</code>: 5 red bits, 6 green bits, 5 blue bits.
-      </li>
-      <li><code>gl.UNSIGNED_SHORT_4_4_4_4</code>: 4 red bits, 4 green bits, 4 blue bits, 4
-        alpha bits.</li>
-      <li><code>gl.UNSIGNED_SHORT_5_5_5_1</code>: 5 red bits, 5 green bits, 5 blue bits, 1
-        alpha bit.</li>
-      <li><code>gl.BYTE</code></li>
-      <li><code>gl.UNSIGNED_SHORT</code></li>
-      <li><code>gl.SHORT</code></li>
-      <li><code>gl.UNSIGNED_INT</code></li>
-      <li><code>gl.INT</code></li>
-      <li><code>gl.HALF_FLOAT</code></li>
-      <li><code>gl.FLOAT</code></li>
-      <li><code>gl.UNSIGNED_INT_2_10_10_10_REV</code></li>
-      <li><code>gl.UNSIGNED_INT_10F_11F_11F_REV</code></li>
-      <li><code>gl.UNSIGNED_INT_5_9_9_9_REV</code></li>
-      <li><code>gl.UNSIGNED_INT_24_8</code></li>
-      <li><code>gl.FLOAT_32_UNSIGNED_INT_24_8_REV</code> (pixels must be
-        {{jsxref("null")}})</li>
-    </ul>
-  </dd>
-  <dt><code>pixels</code></dt>
-  <dd>One of the following objects can be used as a pixel source for the texture:
-    <ul>
-      <li>{{domxref("ArrayBufferView")}},
-        <ul>
-          <li>A {{jsxref("Uint8Array")}} must be used if <code>type</code> is
-            <code>gl.UNSIGNED_BYTE</code>.</li>
-          <li>A {{jsxref("Uint16Array")}} must be used if <code>type</code> is either
-            <code>gl.UNSIGNED_SHORT_5_6_5</code>, <code>gl.UNSIGNED_SHORT_4_4_4_4</code>,
-            <code>gl.UNSIGNED_SHORT_5_5_5_1</code>, or <code>ext.HALF_FLOAT_OES</code>.
-          </li>
-          <li>A {{jsxref("Float32Array")}} must be used if <code>type</code> is
-            <code>gl.FLOAT</code>.</li>
-        </ul>
-      </li>
-      <li>{{domxref("ImageBitmap")}},</li>
-      <li>{{domxref("ImageData")}},</li>
-      <li>{{domxref("HTMLImageElement")}},</li>
-      <li>{{domxref("HTMLCanvasElement")}},</li>
-      <li>{{domxref("HTMLVideoElement")}}.</li>
-    </ul>
-  </dd>
-  <dt>offset</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLintptr")}} byte offset into the {{domxref("WebGLBuffer")}}'s data
+
+    - `gl.TEXTURE_3D`: A three-dimensional texture.
+    - `gl.TEXTURE_2D_ARRAY`: A two-dimensional array texture.
+
+- `level`
+  - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the level of detail. Level 0 is the base image
+    level and level _n_ is the *n*th mipmap reduction level.
+- `xoffset`
+  - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the x offset within the texture image.
+- `yoffset`
+  - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the y offset within the texture image.
+- `zoffset`
+  - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the z offset within the texture image.
+- `width`
+  - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the width of the texture.
+- `height`
+  - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the height of the texture.
+- `depth`
+  - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the depth of the texture.
+- `format`
+
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the format of the texel data. Possible values:
+
+    - `gl.ALPHA`: Discards the red, green and blue components and reads the
+      alpha component.
+    - `gl.RGB`: Discards the alpha components and reads the red, green and
+      blue components.
+    - `gl.RGBA`: Red, green, blue and alpha components are read from the
+      color buffer.
+    - `gl.LUMINANCE`: Each color component is a luminance component, alpha
+      is 1.0.
+    - `gl.LUMINANCE_ALPHA`: Each component is a luminance/alpha component.
+    - `gl.R8`
+    - `gl.R16F`
+    - `gl.`R32F
+    - `gl.R8UI`
+    - `gl.RG8`
+    - `gl.RG16F`
+    - `gl.RG32F`
+    - `gl.RGUI`
+    - `gl.RGB8`
+    - `gl.SRGB8`
+    - `gl.RGB565`
+    - `gl.R11F_G11F_B10F`
+    - `gl.RGB9_E5`
+    - `gl.RGB16F`
+    - `gl.RGB32F`
+    - `gl.RGB8UI`
+    - `gl.RGBA8`
+    - `gl.SRGB_APLHA8`
+    - `gl.RGB5_A1`
+    - `gl.RGBA4444`
+    - `gl.RGBA16F`
+    - `gl.RGBA32F`
+    - `gl.RGBA8UI`
+
+- `type`
+
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the data type of the texel data. Possible values:
+
+    - `gl.UNSIGNED_BYTE`: 8 bits per channel for `gl.RGBA`
+    - `gl.UNSIGNED_SHORT_5_6_5`: 5 red bits, 6 green bits, 5 blue bits.
+    - `gl.UNSIGNED_SHORT_4_4_4_4`: 4 red bits, 4 green bits, 4 blue bits, 4
+      alpha bits.
+    - `gl.UNSIGNED_SHORT_5_5_5_1`: 5 red bits, 5 green bits, 5 blue bits, 1
+      alpha bit.
+    - `gl.BYTE`
+    - `gl.UNSIGNED_SHORT`
+    - `gl.SHORT`
+    - `gl.UNSIGNED_INT`
+    - `gl.INT`
+    - `gl.HALF_FLOAT`
+    - `gl.FLOAT`
+    - `gl.UNSIGNED_INT_2_10_10_10_REV`
+    - `gl.UNSIGNED_INT_10F_11F_11F_REV`
+    - `gl.UNSIGNED_INT_5_9_9_9_REV`
+    - `gl.UNSIGNED_INT_24_8`
+    - `gl.FLOAT_32_UNSIGNED_INT_24_8_REV` (pixels must be
+      {{jsxref("null")}})
+
+- `pixels`
+
+  - : One of the following objects can be used as a pixel source for the texture:
+
+    - {{domxref("ArrayBufferView")}},
+
+      - A {{jsxref("Uint8Array")}} must be used if `type` is
+        `gl.UNSIGNED_BYTE`.
+      - A {{jsxref("Uint16Array")}} must be used if `type` is either
+        `gl.UNSIGNED_SHORT_5_6_5`, `gl.UNSIGNED_SHORT_4_4_4_4`,
+        `gl.UNSIGNED_SHORT_5_5_5_1`, or `ext.HALF_FLOAT_OES`.
+      - A {{jsxref("Float32Array")}} must be used if `type` is
+        `gl.FLOAT`.
+
+    - {{domxref("ImageBitmap")}},
+    - {{domxref("ImageData")}},
+    - {{domxref("HTMLImageElement")}},
+    - {{domxref("HTMLCanvasElement")}},
+    - {{domxref("HTMLVideoElement")}}.
+
+- offset
+  - : A {{domxref("WebGL_API/Types", "GLintptr")}} byte offset into the {{domxref("WebGLBuffer")}}'s data
     store. Used to upload data to the currently bound {{domxref("WebGLTexture")}} from the
-    <code>WebGLBuffer</code> bound to the <code>PIXEL_UNPACK_BUFFER</code> target.</dd>
-</dl>
+    `WebGLBuffer` bound to the `PIXEL_UNPACK_BUFFER` target.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">gl.texSubImage3D(gl.TEXTURE_3D, 0, 0, 0, 0, image.width, image.height, 1, gl.RGBA, gl.UNSIGNED_BYTE, image);
-</pre>
+```js
+gl.texSubImage3D(gl.TEXTURE_3D, 0, 0, 0, 0, image.width, image.height, 1, gl.RGBA, gl.UNSIGNED_BYTE, image);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.createTexture()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.bindTexture()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.texImage2D()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.compressedTexImage2D()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.copyTexImage2D()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.getTexParameter()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.createTexture()")}}
+- {{domxref("WebGLRenderingContext.bindTexture()")}}
+- {{domxref("WebGLRenderingContext.texImage2D()")}}
+- {{domxref("WebGLRenderingContext.compressedTexImage2D()")}}
+- {{domxref("WebGLRenderingContext.copyTexImage2D()")}}
+- {{domxref("WebGLRenderingContext.getTexParameter()")}}

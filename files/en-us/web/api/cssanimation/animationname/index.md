@@ -2,38 +2,41 @@
 title: CSSAnimation
 slug: Web/API/CSSAnimation/animationName
 tags:
-- API
-- Animation
-- CSSAnimation
-- Property
-- Reference
+  - API
+  - Animation
+  - CSSAnimation
+  - Property
+  - Reference
 browser-compat: api.CSSAnimation.animationName
 ---
-<div>{{APIRef("Web Animations API")}}{{SeeCompatTable}}</div>
+{{APIRef("Web Animations API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>animationName</code></strong> property of the
-  {{domxref("CSSAnimation")}} interface returns the {{CSSXref("animation-name")}}. This
-  specifies one or more keyframe at-rules which describe the animation applied to the
-  element.</p>
+The **`animationName`** property of the
+{{domxref("CSSAnimation")}} interface returns the {{CSSXref("animation-name")}}. This
+specifies one or more keyframe at-rules which describe the animation applied to the
+element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">const <var>animationName</var> = CSSAnimation.animationName;</pre>
+```js
+const animationName = CSSAnimation.animationName;
+```
 
-<h3>Value</h3>
-<p>A {{domxref("CSSOMString")}}.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("CSSOMString")}}.
 
-<h3>Returning the animationName</h3>
+## Examples
 
-<p>The animation in the following example is defined in CSS with the name
-  <code>slide-in</code>. Calling {{domxref("Element.getAnimations()")}} returns an array
-  of all {{domxref("Animation")}} objects. The <code>animationName</code> property returns
-  the name given to the animation, in our case <code>slide-in</code>.</p>
+### Returning the animationName
 
-<pre class="brush: css">.animate {
+The animation in the following example is defined in CSS with the name
+`slide-in`. Calling {{domxref("Element.getAnimations()")}} returns an array
+of all {{domxref("Animation")}} objects. The `animationName` property returns
+the name given to the animation, in our case `slide-in`.
+
+```css
+.animate {
   animation: slide-in 0.7s both;
 }
 
@@ -44,15 +47,18 @@ browser-compat: api.CSSAnimation.animationName
   100% {
     transform: translateY(0);
   }
-}</pre>
+}
+```
 
-<pre class="brush: js">let animations = document.querySelector(".animate").getAnimations();
-console.log(animations[0].animationName);</pre>
+```js
+let animations = document.querySelector(".animate").getAnimations();
+console.log(animations[0].animationName);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

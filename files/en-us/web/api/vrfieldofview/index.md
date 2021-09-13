@@ -12,30 +12,27 @@ tags:
   - WebVR
 browser-compat: api.VRFieldOfView
 ---
-<p>{{APIRef("WebVR API")}}{{SeeCompatTable}}{{Deprecated_header}}</p>
+{{APIRef("WebVR API")}}{{SeeCompatTable}}{{Deprecated_header}}
 
-<p>The <strong><code>VRFieldOfView</code></strong> interface of the <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a> represents a field of view defined by 4 different degree values describing the view from a center point.</p>
+The **`VRFieldOfView`** interface of the [WebVR API](/en-US/docs/Web/API/WebVR_API) represents a field of view defined by 4 different degree values describing the view from a center point.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This interface was part of the old <a href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</a>. It has been superseded by the <a href="https://immersive-web.github.io/webxr/">WebXR Device API</a>.</p>
-</div>
+> **Note:** This interface was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("VRFieldOfView.upDegrees")}} {{deprecated_inline}} {{readonlyInline}}</dt>
- <dd>The number of degrees upwards that the field of view extends in.</dd>
- <dt>{{domxref("VRFieldOfView.rightDegrees")}} {{deprecated_inline}} {{readonlyInline}}</dt>
- <dd>The number of degrees to the right that the field of view extends in.</dd>
- <dt>{{domxref("VRFieldOfView.downDegrees")}} {{deprecated_inline}} {{readonlyInline}}</dt>
- <dd>The number of degrees downwards that the field of view extends in.</dd>
- <dt>{{domxref("VRFieldOfView.leftDegrees")}} {{deprecated_inline}} {{readonlyInline}}</dt>
- <dd>The number of degrees to the left that the field of view extends in.</dd>
-</dl>
+- {{domxref("VRFieldOfView.upDegrees")}} {{deprecated_inline}} {{readonlyInline}}
+  - : The number of degrees upwards that the field of view extends in.
+- {{domxref("VRFieldOfView.rightDegrees")}} {{deprecated_inline}} {{readonlyInline}}
+  - : The number of degrees to the right that the field of view extends in.
+- {{domxref("VRFieldOfView.downDegrees")}} {{deprecated_inline}} {{readonlyInline}}
+  - : The number of degrees downwards that the field of view extends in.
+- {{domxref("VRFieldOfView.leftDegrees")}} {{deprecated_inline}} {{readonlyInline}}
+  - : The number of degrees to the left that the field of view extends in.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var info = document.querySelector('p');
+```js
+var info = document.querySelector('p');
 var list = document.querySelector('ul');
 var vrDisplay;
 
@@ -59,41 +56,41 @@ function reportFieldOfView() {
     var listitem1 = document.createElement('li');
     var listitem2 = document.createElement('li');
 
-    listitem1.innerHTML = '&lt;strong&gt;Left eye parameters&lt;/strong&gt;'
-                 + '&lt;br&gt;Offset: ' + lEye.offset
-                 + '&lt;br&gt;Render width: ' + lEye.renderWidth
-                 + '&lt;br&gt;Render height: ' + lEye.renderHeight
-                 + '&lt;br&gt;Up degrees: ' + lFOV.upDegrees
-                 + '&lt;br&gt;Right degrees: ' + lFOV.rightDegrees
-                 + '&lt;br&gt;Down degrees: ' + lFOV.downDegrees
-                 + '&lt;br&gt;Left degrees: ' + lFOV.leftDegrees
+    listitem1.innerHTML = '<strong>Left eye parameters</strong>'
+                 + '<br>Offset: ' + lEye.offset
+                 + '<br>Render width: ' + lEye.renderWidth
+                 + '<br>Render height: ' + lEye.renderHeight
+                 + '<br>Up degrees: ' + lFOV.upDegrees
+                 + '<br>Right degrees: ' + lFOV.rightDegrees
+                 + '<br>Down degrees: ' + lFOV.downDegrees
+                 + '<br>Left degrees: ' + lFOV.leftDegrees
 
-   listitem2.innerHTML = '&lt;strong&gt;Right eye parameters&lt;/strong&gt;'
-                + '&lt;br&gt;Offset: ' + rEye.offset
-                + '&lt;br&gt;Render width: ' + rEye.renderWidth
-                + '&lt;br&gt;Render height: ' + rEye.renderHeight
-                + '&lt;br&gt;Up degrees: ' + rFOV.upDegrees
-                + '&lt;br&gt;Right degrees: ' + rFOV.rightDegrees
-                + '&lt;br&gt;Down degrees: ' + rFOV.downDegrees
-                + '&lt;br&gt;Left degrees: ' + rFOV.leftDegrees
+   listitem2.innerHTML = '<strong>Right eye parameters</strong>'
+                + '<br>Offset: ' + rEye.offset
+                + '<br>Render width: ' + rEye.renderWidth
+                + '<br>Render height: ' + rEye.renderHeight
+                + '<br>Up degrees: ' + rFOV.upDegrees
+                + '<br>Right degrees: ' + rFOV.rightDegrees
+                + '<br>Down degrees: ' + rFOV.downDegrees
+                + '<br>Left degrees: ' + rFOV.leftDegrees
 
     list.appendChild(listitem1);
     list.appendChild(listitem2);
   });
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This interface was part of the old <a href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</a> that has been superseded by the <a href="https://immersive-web.github.io/webxr/">WebXR Device API</a>. It is no longer on track to becoming a standard.</p>
-<p>Until all browsers have implemented the new <a href="/en-US/docs/Web/API/WebXR_Device_API/Fundamentals">WebXR APIs</a>, it is recommended to rely on frameworks, like <a href="https://aframe.io/">A-Frame</a>, <a href="https://www.babylonjs.com/">Babylon.js</a>, or <a href="https://threejs.org/">Three.js</a>, or a <a href="https://github.com/immersive-web/webxr-polyfill">polyfill</a>, to develop WebXR applications that will work across all browsers <a href="https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/">[1]</a>.</p>
+This interface was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) that has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/). It is no longer on track to becoming a standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals), it is recommended to rely on frameworks, like [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), or [Three.js](https://threejs.org/), or a [polyfill](https://github.com/immersive-web/webxr-polyfill), to develop WebXR applications that will work across all browsers [\[1\]](https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/).
 
-<p>{{Compat}}</p>
+## Browser compatibility
 
-<h2 id="See_also">See also</h2>
+{{Compat}}
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebVR_API">WebVR API homepage</a></li>
- <li><a href="https://mixedreality.mozilla.org/">https://mixedreality.mozilla.org/</a> — demos, downloads, and other resources from the Mozilla VR team.</li>
-</ul>
+## See also
+
+- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API)
+- <https://mixedreality.mozilla.org/> — demos, downloads, and other resources from the Mozilla VR team.

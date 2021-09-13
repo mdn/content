@@ -13,52 +13,47 @@ tags:
   - web animations api
 browser-compat: api.KeyframeEffect
 ---
-<div>{{SeeCompatTable}}{{ APIRef("Web Animations") }}</div>
+{{SeeCompatTable}}{{ APIRef("Web Animations") }}
 
-<p>The <strong><code>KeyframeEffect</code></strong> interface of the <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> lets us create sets of animatable properties and values, called <strong>keyframes.</strong> These can then be played using the {{domxref("Animation.Animation", "Animation()")}} constructor.</p>
+The **`KeyframeEffect`** interface of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) lets us create sets of animatable properties and values, called **keyframes.** These can then be played using the {{domxref("Animation.Animation", "Animation()")}} constructor.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("KeyframeEffect.KeyframeEffect", "KeyframeEffect()")}}</dt>
- <dd>Returns a new <code>KeyframeEffect</code> object instance, and also allows you to clone an existing keyframe effect object instance.</dd>
-</dl>
+- {{domxref("KeyframeEffect.KeyframeEffect", "KeyframeEffect()")}}
+  - : Returns a new `KeyframeEffect` object instance, and also allows you to clone an existing keyframe effect object instance.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("KeyframeEffect.target")}}</dt>
- <dd>Gets and sets the element, or originating element of the pseudo-element, being animated by this object. This may be <code>null</code> for animations that do not target a specific element or pseudo-element.</dd>
- <dt>{{domxref("KeyframeEffect.pseudoElement")}} {{Experimental_Inline}}</dt>
- <dd>Gets and sets the selector of the pseudo-element being animated by this object. This may be <code>null</code> for animations that do not target a pseudo-element.</dd>
- <dt>{{domxref("KeyframeEffect.iterationComposite")}}</dt>
- <dd>Gets and sets the iteration composite operation for resolving the property value changes of this keyframe effect.</dd>
- <dt>{{domxref("KeyframeEffect.composite")}}</dt>
- <dd>Gets and sets the composite operation property for resolving the property value changes between this and other keyframe effects.</dd>
-</dl>
+- {{domxref("KeyframeEffect.target")}}
+  - : Gets and sets the element, or originating element of the pseudo-element, being animated by this object. This may be `null` for animations that do not target a specific element or pseudo-element.
+- {{domxref("KeyframeEffect.pseudoElement")}} {{Experimental_Inline}}
+  - : Gets and sets the selector of the pseudo-element being animated by this object. This may be `null` for animations that do not target a pseudo-element.
+- {{domxref("KeyframeEffect.iterationComposite")}}
+  - : Gets and sets the iteration composite operation for resolving the property value changes of this keyframe effect.
+- {{domxref("KeyframeEffect.composite")}}
+  - : Gets and sets the composite operation property for resolving the property value changes between this and other keyframe effects.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface inherits some of its methods from its parent, {{domxref("AnimationEffect")}}.</em></p>
+_This interface inherits some of its methods from its parent, {{domxref("AnimationEffect")}}._
 
-<dl>
- <dt>{{domxref("AnimationEffect.getComputedTiming()")}}</dt>
- <dd>Returns the calculated, current timing values for this keyframe effect.</dd>
- <dt>{{domxref("KeyframeEffect.getKeyframes()")}}</dt>
- <dd>Returns the computed keyframes that make up this effect along with their computed keyframe offsets.</dd>
- <dt>{{domxref("AnimationEffect.getTiming()")}}</dt>
- <dd>The {{domxref("EffectTiming")}} object associated with the animation containing all the animation's timing values.</dd>
- <dt>{{domxref("KeyframeEffect.setKeyframes()")}}</dt>
- <dd>Replaces the set of keyframes that make up this effect.</dd>
- <dt>{{domxref("AnimationEffect.updateTiming()")}}</dt>
- <dd>Updates the specified timing properties.</dd>
-</dl>
+- {{domxref("AnimationEffect.getComputedTiming()")}}
+  - : Returns the calculated, current timing values for this keyframe effect.
+- {{domxref("KeyframeEffect.getKeyframes()")}}
+  - : Returns the computed keyframes that make up this effect along with their computed keyframe offsets.
+- {{domxref("AnimationEffect.getTiming()")}}
+  - : The {{domxref("EffectTiming")}} object associated with the animation containing all the animation's timing values.
+- {{domxref("KeyframeEffect.setKeyframes()")}}
+  - : Replaces the set of keyframes that make up this effect.
+- {{domxref("AnimationEffect.updateTiming()")}}
+  - : Updates the specified timing properties.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the <a href="http://codepen.io/rachelnabors/pen/eJyWzm/?editors=0010">Follow the White Rabbit example</a>, the KeyframeEffect constructor is used to create a set of keyframes that dictate how the White Rabbit should animate down the hole:</p>
+In the [Follow the White Rabbit example](http://codepen.io/rachelnabors/pen/eJyWzm/?editors=0010), the KeyframeEffect constructor is used to create a set of keyframes that dictate how the White Rabbit should animate down the hole:
 
-<pre class="brush: js"> var rabbitDownKeyframes = new KeyframeEffect(
+```js
+ var rabbitDownKeyframes = new KeyframeEffect(
     whiteRabbit, // element to animate
     [
       { transform: 'translateY(0%)' }, // keyframe
@@ -66,19 +61,17 @@ browser-compat: api.KeyframeEffect
     ],
     { duration: 3000, fill: 'forwards' } // keyframe options
   );
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
- <li>{{domxref("Animation")}}</li>
-</ul>
+- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
+- {{domxref("Animation")}}

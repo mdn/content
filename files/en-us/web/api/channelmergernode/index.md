@@ -9,70 +9,66 @@ tags:
   - Web Audio API
 browser-compat: api.ChannelMergerNode
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<p>The <code>ChannelMergerNode</code> interface, often used in conjunction with its opposite, {{domxref("ChannelSplitterNode")}}, reunites different mono inputs into a single output. Each input is used to fill a channel of the output. This is useful for accessing each channels separately, e.g. for performing channel mixing where gain must be separately controlled on each channel.</p>
+The `ChannelMergerNode` interface, often used in conjunction with its opposite, {{domxref("ChannelSplitterNode")}}, reunites different mono inputs into a single output. Each input is used to fill a channel of the output. This is useful for accessing each channels separately, e.g. for performing channel mixing where gain must be separately controlled on each channel.
 
-<p><img alt="" src="webaudiomerger.png"></p>
+![](webaudiomerger.png)
 
-<p>If <code>ChannelMergerNode</code> has one single output, but as many inputs as there are channels to merge; the number of inputs is defined as a parameter of its constructor and the call to {{domxref("BaseAudioContext/createChannelMerger", "AudioContext.createChannelMerger()")}}. In the case that no value is given, it will default to <code>6</code>.</p>
+If `ChannelMergerNode` has one single output, but as many inputs as there are channels to merge; the number of inputs is defined as a parameter of its constructor and the call to {{domxref("BaseAudioContext/createChannelMerger", "AudioContext.createChannelMerger()")}}. In the case that no value is given, it will default to `6`.
 
-<p>Using a <code>ChannelMergerNode</code>, it is possible to create outputs with more channels than the rendering hardware is able to process. In that case, when the signal is sent to the {{domxref("BaseAudioContext/listener", "AudioContext.listener")}} object, supernumerary channels will be ignored.</p>
+Using a `ChannelMergerNode`, it is possible to create outputs with more channels than the rendering hardware is able to process. In that case, when the signal is sent to the {{domxref("BaseAudioContext/listener", "AudioContext.listener")}} object, supernumerary channels will be ignored.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Number of inputs</th>
-   <td>variable; default to <code>6</code>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Number of outputs</th>
-   <td><code>1</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Channel count mode</th>
-   <td><code>"max"</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Channel count</th>
-   <td><code>2 </code>(not used in the default count mode)</td>
-  </tr>
-  <tr>
-   <th scope="row">Channel interpretation</th>
-   <td><code>"speakers"</code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Number of inputs</th>
+      <td>variable; default to <code>6</code>.</td>
+    </tr>
+    <tr>
+      <th scope="row">Number of outputs</th>
+      <td><code>1</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Channel count mode</th>
+      <td><code>"max"</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Channel count</th>
+      <td><code>2 </code>(not used in the default count mode)</td>
+    </tr>
+    <tr>
+      <th scope="row">Channel interpretation</th>
+      <td><code>"speakers"</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("ChannelMergerNode.ChannelMergerNode()", "ChannelMergerNode()")}}</dt>
- <dd>Creates a new <code>ChannelMergerNode</code> object instance.</dd>
-</dl>
+- {{domxref("ChannelMergerNode.ChannelMergerNode()", "ChannelMergerNode()")}}
+  - : Creates a new `ChannelMergerNode` object instance.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>No specific property; inherits properties from its parent, {{domxref("AudioNode")}}</em>.</p>
+_No specific property; inherits properties from its parent, {{domxref("AudioNode")}}_.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>No specific method; inherits methods from its parent, {{domxref("AudioNode")}}</em>.</p>
+_No specific method; inherits methods from its parent, {{domxref("AudioNode")}}_.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See <a href="/en-US/docs/Web/API/BaseAudioContext/createChannelMerger#example"><code>BaseAudioContext.createChannelMerger()</code></a> for example code.</p>
+See [`BaseAudioContext.createChannelMerger()`](/en-US/docs/Web/API/BaseAudioContext/createChannelMerger#example) for example code.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

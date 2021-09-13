@@ -8,52 +8,47 @@ tags:
   - WebGL extension
 browser-compat: api.WEBGL_lose_context
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong>WEBGL_lose_context</strong> extension is part of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> and exposes functions to simulate losing and restoring a {{domxref("WebGLRenderingContext")}}.</p>
+The **WEBGL_lose_context** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and exposes functions to simulate losing and restoring a {{domxref("WebGLRenderingContext")}}.
 
-<p>WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also <a href="/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</a> in the <a href="/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</a>.</p>
+WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
 
-<div class="note">
-<p><strong>Note:</strong> This extension is available to both, {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} and {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}} contexts.</p>
-</div>
+> **Note:** This extension is available to both, {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} and {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}} contexts.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("WEBGL_lose_context.loseContext()")}}</dt>
- <dd>Simulates losing the context.</dd>
- <dt>{{domxref("WEBGL_lose_context.restoreContext()")}}</dt>
- <dd>Simulates restoring the context.</dd>
-</dl>
+- {{domxref("WEBGL_lose_context.loseContext()")}}
+  - : Simulates losing the context.
+- {{domxref("WEBGL_lose_context.restoreContext()")}}
+  - : Simulates restoring the context.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>With this extension, you can simulate the <code><a href="/en-US/docs/Web/API/HTMLCanvasElement/webglcontextlost_event">webglcontextlost</a></code> and <code><a href="/en-US/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event">webglcontextrestored</a></code> events:</p>
+With this extension, you can simulate the [`webglcontextlost`](/en-US/docs/Web/API/HTMLCanvasElement/webglcontextlost_event) and [`webglcontextrestored`](/en-US/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event) events:
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const gl = canvas.getContext('webgl');
 
-canvas.addEventListener('webglcontextlost', (event) =&gt; {
+canvas.addEventListener('webglcontextlost', (event) => {
   console.log(event);
 });
 
 gl.getExtension('WEBGL_lose_context').loseContext();
 
 // WebGLContextEvent event with type "webglcontextlost" is logged.
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.isContextLost()")}}</li>
- <li>Events: <code><a href="/en-US/docs/Web/API/HTMLCanvasElement/webglcontextlost_event">webglcontextlost</a></code>, <code><a href="/en-US/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event">webglcontextrestored</a></code>, <code><a href="/en-US/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror_event">webglcontextcreationerror</a></code></li>
-</ul>
+- {{domxref("WebGLRenderingContext.isContextLost()")}}
+- Events: [`webglcontextlost`](/en-US/docs/Web/API/HTMLCanvasElement/webglcontextlost_event), [`webglcontextrestored`](/en-US/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event), [`webglcontextcreationerror`](/en-US/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror_event)

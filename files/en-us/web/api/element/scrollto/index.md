@@ -2,63 +2,61 @@
 title: Element.scrollTo()
 slug: Web/API/Element/scrollTo
 tags:
-- API
-- Element
-- Method
-- Reference
-- scrollTo
+  - API
+  - Element
+  - Method
+  - Reference
+  - scrollTo
 browser-compat: api.Element.scrollTo
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code><strong>scrollTo()</strong></code> method of the {{domxref("Element")}}
-  interface scrolls to a particular set of coordinates inside a given element.</p>
+The **`scrollTo()`** method of the {{domxref("Element")}}
+interface scrolls to a particular set of coordinates inside a given element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">element.scrollTo(<em>x-coord</em>, <em>y-coord</em>)
-element.scrollTo(<em>options</em>)
-</pre>
+```js
+element.scrollTo(x-coord, y-coord)
+element.scrollTo(options)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<ul>
-  <li><code><var>x-coord</var></code> is the pixel along the horizontal axis of the
-    element that you want displayed in the upper left.</li>
-  <li><code><var>y-coord</var></code> is the pixel along the vertical axis of the element
-    that you want displayed in the upper left.</li>
-</ul>
+- `x-coord` is the pixel along the horizontal axis of the
+  element that you want displayed in the upper left.
+- `y-coord` is the pixel along the vertical axis of the element
+  that you want displayed in the upper left.
 
-<p>- or -</p>
+\- or -
 
-<ul>
-  <li><code>options</code> is a {{domxref("ScrollToOptions")}} dictionary.</li>
-</ul>
+- `options` is a {{domxref("ScrollToOptions")}} dictionary.
 
-<h2 id="Example">Examples</h2>
+## Examples
 
-<pre class="brush:js">element.scrollTo(0, 1000);
-</pre>
+```js
+element.scrollTo(0, 1000);
+```
 
-<p>Using <code>options</code>:</p>
+Using `options`:
 
-<pre class="brush: js">element.scrollTo({
+```js
+element.scrollTo({
   top: 100,
   left: 100,
   behavior: 'smooth'
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Element.scrollTop")}}, {{domxref("Element.scrollLeft")}}</li>
-  <li>{{domxref("Window.scrollTo()")}}</li>
-</ul>
+- {{domxref("Element.scrollTop")}}, {{domxref("Element.scrollLeft")}}
+- {{domxref("Window.scrollTo()")}}

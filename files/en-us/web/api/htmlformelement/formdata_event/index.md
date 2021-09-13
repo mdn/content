@@ -8,42 +8,43 @@ tags:
   - formevent
 browser-compat: api.HTMLFormElement.formdata_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <strong><code>formdata</code></strong> event fires after the entry list representing the form's data is constructed. This happens when the form is submitted, but can also be triggered by the invocation of a {{domxref("FormData.FormData", "FormData()")}} constructor.</p>
+The **`formdata`** event fires after the entry list representing the form's data is constructed. This happens when the form is submitted, but can also be triggered by the invocation of a {{domxref("FormData.FormData", "FormData()")}} constructor.
 
-<h2 id="General_info">General info</h2>
+## General info
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th>Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th>Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th>Interface</th>
-   <td>{{DOMxRef("FormDataEvent")}}</td>
-  </tr>
-  <tr>
-   <th>Event handler property</th>
-   <td>{{domxref("GlobalEventHandlers.onformdata")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Interface</th>
+      <td>{{DOMxRef("FormDataEvent")}}</td>
+    </tr>
+    <tr>
+      <th>Event handler property</th>
+      <td>{{domxref("GlobalEventHandlers.onformdata")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">// grab reference to form
+```js
+// grab reference to form
 
 const formElem = document.querySelector('form');
 
 // submit handler
 
-formElem.addEventListener('submit', (e) =&gt; {
+formElem.addEventListener('submit', (e) => {
   // on form submission, prevent default
   e.preventDefault();
 
@@ -53,7 +54,7 @@ formElem.addEventListener('submit', (e) =&gt; {
 
 // formdata handler to retrieve data
 
-formElem.addEventListener('formdata', (e) =&gt; {
+formElem.addEventListener('formdata', (e) => {
   console.log('formdata fired');
 
   // Get the form data from the event object
@@ -66,11 +67,13 @@ formElem.addEventListener('formdata', (e) =&gt; {
   var request = new XMLHttpRequest();
   request.open("POST", "/formHandler");
   request.send(data);
-});</pre>
+});
+```
 
-<p>The <code>onformdata</code> version would look like this:</p>
+The `onformdata` version would look like this:
 
-<pre class="brush: js">formElem.onformdata = (e) =&gt; {
+```js
+formElem.onformdata = (e) => {
   console.log('formdata fired');
 
   // Get the form data from the event object
@@ -83,19 +86,18 @@ formElem.addEventListener('formdata', (e) =&gt; {
   var request = new XMLHttpRequest();
   request.open("POST", "/formHandler");
   request.send(data);
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>HTML {{htmlElement("form")}} element</li>
- <li>{{domxref("FormDataEvent")}}</li>
-</ul>
+- HTML {{htmlElement("form")}} element
+- {{domxref("FormDataEvent")}}

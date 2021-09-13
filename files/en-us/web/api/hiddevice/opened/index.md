@@ -9,34 +9,37 @@ tags:
   - HIDDevice
 browser-compat: api.HIDDevice.opened
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}
 
-<p>The <strong><code>opened</code></strong> read-only property of the {{domxref("HIDDevice")}} interface returns true if the connection to the {{domxref("HIDDevice")}} is open and ready to transfer data.</p>
+The **`opened`** read-only property of the {{domxref("HIDDevice")}} interface returns true if the connection to the {{domxref("HIDDevice")}} is open and ready to transfer data.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let opened = HIDDevice.opened;</pre>
+```js
+let opened = HIDDevice.opened;
+```
 
-<h3>Value</h3>
-<p>A boolean value, true if the connection is open.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A boolean value, true if the connection is open.
 
-<p>The following example rerieves devices with {{domxref("HID.getDevices()")}} and logs the value of <code>opened</code> to the console.</p>
+## Examples
 
-<pre class="brush: js">document.addEventListener('DOMContentLoaded', async () => {
+The following example rerieves devices with {{domxref("HID.getDevices()")}} and logs the value of `opened` to the console.
+
+```js
+document.addEventListener('DOMContentLoaded', async () => {
   let devices = await navigator.hid.getDevices();
   devices.forEach(device => {
     console.log(`HID: ${device.opened}`);
   });
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
-
+{{Compat}}

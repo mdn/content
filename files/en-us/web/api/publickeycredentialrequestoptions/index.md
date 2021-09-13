@@ -10,34 +10,33 @@ tags:
   - WebAuthn
 browser-compat: api.PublicKeyCredentialRequestOptions
 ---
-<div>{{APIRef("Web Authentication API")}}{{securecontext_header}}</div>
+{{APIRef("Web Authentication API")}}{{securecontext_header}}
 
-<p>The <code><strong>PublicKeyCredentialRequestOptions</strong></code> dictionary of the <a href="/en-US/docs/Web/API/Web_Authentication_API">Web Authentication API</a> holds the options passed to {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}} in order to fetch a given {{domxref("PublicKeyCredential")}}.</p>
+The **`PublicKeyCredentialRequestOptions`** dictionary of the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) holds the options passed to {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}} in order to fetch a given {{domxref("PublicKeyCredential")}}.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("PublicKeyCredentialRequestOptions.challenge")}}</dt>
- <dd>A {{domxref("BufferSource")}}, emitted by the relying party's server and used as a <a href="https://en.wikipedia.org/wiki/Challenge%E2%80%93response_authentication">cryptographic challenge</a>. This value will be signed by the authenticator and the signature will be sent back as part of {{domxref("AuthenticatorAssertionResponse.signature")}}.</dd>
- <dt>{{domxref("PublicKeyCredentialRequestOptions.timeout")}} {{optional_inline}}</dt>
- <dd>A numerical hint, in milliseconds, which indicates the time the caller is willing to wait for the retrieval operation to complete. This hint may be overridden by the browser.</dd>
- <dt>{{domxref("PublicKeyCredentialRequestOptions.rpId")}} {{optional_inline}}</dt>
- <dd>A {{domxref("USVString")}} which indicates the relying party's identifier (ex. <code>"login.example.org"</code>). If this option is not provided, the client will use the current origin's domain.</dd>
- <dt>{{domxref("PublicKeyCredentialRequestOptions.allowCredentials")}} {{optional_inline}}</dt>
- <dd>An {{jsxref("Array")}} of credentials descriptor which restricts the acceptable existing credentials for retrieval.</dd>
- <dt>{{domxref("PublicKeyCredentialRequestOptions.userVerification")}} {{optional_inline}}</dt>
- <dd>A string qualifying how the user verification should be part of the authentication process.</dd>
- <dt>{{domxref("PublicKeyCredentialRequestOptions.extensions")}} {{optional_inline}}</dt>
- <dd>An object with several client extensions' inputs. Those extensions are used to request additional processing (e.g. dealing with legacy FIDO APIs credentials, prompting a specific text on the authenticator, etc.).</dd>
-</dl>
+- {{domxref("PublicKeyCredentialRequestOptions.challenge")}}
+  - : A {{domxref("BufferSource")}}, emitted by the relying party's server and used as a [cryptographic challenge](https://en.wikipedia.org/wiki/Challenge%E2%80%93response_authentication). This value will be signed by the authenticator and the signature will be sent back as part of {{domxref("AuthenticatorAssertionResponse.signature")}}.
+- {{domxref("PublicKeyCredentialRequestOptions.timeout")}} {{optional_inline}}
+  - : A numerical hint, in milliseconds, which indicates the time the caller is willing to wait for the retrieval operation to complete. This hint may be overridden by the browser.
+- {{domxref("PublicKeyCredentialRequestOptions.rpId")}} {{optional_inline}}
+  - : A {{domxref("USVString")}} which indicates the relying party's identifier (ex. `"login.example.org"`). If this option is not provided, the client will use the current origin's domain.
+- {{domxref("PublicKeyCredentialRequestOptions.allowCredentials")}} {{optional_inline}}
+  - : An {{jsxref("Array")}} of credentials descriptor which restricts the acceptable existing credentials for retrieval.
+- {{domxref("PublicKeyCredentialRequestOptions.userVerification")}} {{optional_inline}}
+  - : A string qualifying how the user verification should be part of the authentication process.
+- {{domxref("PublicKeyCredentialRequestOptions.extensions")}} {{optional_inline}}
+  - : An object with several client extensions' inputs. Those extensions are used to request additional processing (e.g. dealing with legacy FIDO APIs credentials, prompting a specific text on the authenticator, etc.).
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var options = {
+```js
+var options = {
   challenge: new Uint8Array([/* bytes sent from the server */]),
   rpId: "example.com", /* will only work if the current domain
                          is something like foo.example.com */
@@ -69,19 +68,16 @@ navigator.credentials.get({ "publicKey": options })
 }).catch(function (err) {
      console.error(err);
 });
+```
 
-</pre>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("PublicKeyCredentialCreationOptions")}}: the dictionary which provides option for the public key credential creation</li>
-</ul>
+- {{domxref("PublicKeyCredentialCreationOptions")}}: the dictionary which provides option for the public key credential creation

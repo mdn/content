@@ -11,38 +11,36 @@ tags:
   - hand
 browser-compat: api.Gamepad.hand
 ---
-<div>{{APIRef("Gamepad")}}{{SeeCompatTable}}</div>
+{{APIRef("Gamepad")}}{{SeeCompatTable}}
 
-<p>The <strong><code>hand</code></strong> read-only property of the {{domxref("Gamepad")}} interface returns an enum defining what hand the controller is being held in, or is most likely to be held in.</p>
+The **`hand`** read-only property of the {{domxref("Gamepad")}} interface returns an enum defining what hand the controller is being held in, or is most likely to be held in.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var myHand = gamepadInstance.hand;</pre>
+```js
+var myHand = gamepadInstance.hand;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A <code><a href="https://w3c.github.io/gamepad/extensions.html#gamepadhand-enum">GamepadHand</a></code> enum; possible values are:</p>
+A [`GamepadHand`](https://w3c.github.io/gamepad/extensions.html#gamepadhand-enum) enum; possible values are:
 
-<ul>
-	<li><code>left</code> — the left hand.</li>
-	<li><code>right</code> — the right hand.</li>
-	<li>Empty string ("") — this value is returned if the other values are not applicable, e.g. the controller is held in both hands, or would be fine in either.</li>
-</ul>
+- `left` — the left hand.
+- `right` — the right hand.
+- Empty string ("") — this value is returned if the other values are not applicable, e.g. the controller is held in both hands, or would be fine in either.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>TBC</p>
+TBC
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a></li>
-</ul>
+- [Gamepad API](/en-US/docs/Web/API/Gamepad_API)

@@ -9,106 +9,79 @@ tags:
   - WebSockets
 browser-compat: api.WebSocket
 ---
-<div>{{APIRef("Web Sockets API")}}</div>
+{{APIRef("Web Sockets API")}}
 
-<p>The <code>WebSocket</code> object provides the API for creating and managing a <a href="/en-US/docs/Web/API/WebSockets_API">WebSocket</a> connection to a server, as well as for sending and receiving data on the connection.</p>
+The `WebSocket` object provides the API for creating and managing a [WebSocket](/en-US/docs/Web/API/WebSockets_API) connection to a server, as well as for sending and receiving data on the connection.
 
-<p>To construct a <code>WebSocket</code>, use the <code><a href="/en-US/docs/Web/API/WebSocket/WebSocket">WebSocket()</a></code> constructor.</p>
+To construct a `WebSocket`, use the [`WebSocket()`](/en-US/docs/Web/API/WebSocket/WebSocket) constructor.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("WebSocket.WebSocket", "WebSocket(url[, protocols])")}}</dt>
- <dd>Returns a newly created <code>WebSocket</code> object.</dd>
-</dl>
+- {{domxref("WebSocket.WebSocket", "WebSocket(url[, protocols])")}}
+  - : Returns a newly created `WebSocket` object.
 
-<h2 id="Constants">Constants</h2>
+## Constants
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th>Constant</th>
-      <th>Value</th>
-    </tr>
-  </thead>
- <tbody>
-  <tr>
-   <td><code>WebSocket.CONNECTING</code></td>
-   <td><code>0</code></td>
-  </tr>
-  <tr>
-   <td><code>WebSocket.OPEN</code></td>
-   <td><code>1</code></td>
-  </tr>
-  <tr>
-   <td><code>WebSocket.CLOSING</code></td>
-   <td><code>2</code></td>
-  </tr>
-  <tr>
-   <td><code>WebSocket.CLOSED</code></td>
-   <td><code>3</code></td>
-  </tr>
- </tbody>
-</table>
+| Constant               | Value |
+| ---------------------- | ----- |
+| `WebSocket.CONNECTING` | `0`   |
+| `WebSocket.OPEN`       | `1`   |
+| `WebSocket.CLOSING`    | `2`   |
+| `WebSocket.CLOSED`     | `3`   |
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("WebSocket.binaryType")}}</dt>
- <dd>The binary data type used by the connection.</dd>
- <dt>{{domxref("WebSocket.bufferedAmount")}} {{readonlyinline}}</dt>
- <dd>The number of bytes of queued data.</dd>
- <dt>{{domxref("WebSocket.extensions")}} {{readonlyinline}}</dt>
- <dd>The extensions selected by the server.</dd>
- <dt>{{domxref("WebSocket.onclose")}}</dt>
- <dd>An event listener to be called when the connection is closed.</dd>
- <dt>{{domxref("WebSocket.onerror")}}</dt>
- <dd>An event listener to be called when an error occurs.</dd>
- <dt>{{domxref("WebSocket.onmessage")}}</dt>
- <dd>An event listener to be called when a message is received from the server.</dd>
- <dt>{{domxref("WebSocket.onopen")}}</dt>
- <dd>An event listener to be called when the connection is opened.</dd>
- <dt>{{domxref("WebSocket.protocol")}} {{readonlyinline}}</dt>
- <dd>The sub-protocol selected by the server.</dd>
- <dt>{{domxref("WebSocket.readyState")}} {{readonlyinline}}</dt>
- <dd>The current state of the connection.</dd>
- <dt>{{domxref("WebSocket.url")}} {{readonlyinline}}</dt>
- <dd>The absolute URL of the WebSocket.</dd>
-</dl>
+- {{domxref("WebSocket.binaryType")}}
+  - : The binary data type used by the connection.
+- {{domxref("WebSocket.bufferedAmount")}} {{readonlyinline}}
+  - : The number of bytes of queued data.
+- {{domxref("WebSocket.extensions")}} {{readonlyinline}}
+  - : The extensions selected by the server.
+- {{domxref("WebSocket.onclose")}}
+  - : An event listener to be called when the connection is closed.
+- {{domxref("WebSocket.onerror")}}
+  - : An event listener to be called when an error occurs.
+- {{domxref("WebSocket.onmessage")}}
+  - : An event listener to be called when a message is received from the server.
+- {{domxref("WebSocket.onopen")}}
+  - : An event listener to be called when the connection is opened.
+- {{domxref("WebSocket.protocol")}} {{readonlyinline}}
+  - : The sub-protocol selected by the server.
+- {{domxref("WebSocket.readyState")}} {{readonlyinline}}
+  - : The current state of the connection.
+- {{domxref("WebSocket.url")}} {{readonlyinline}}
+  - : The absolute URL of the WebSocket.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("WebSocket.close", "WebSocket.close([code[, reason]])")}}</dt>
- <dd>Closes the connection.</dd>
- <dt>{{domxref("WebSocket.send", "WebSocket.send(data)")}}</dt>
- <dd>Enqueues data to be transmitted.</dd>
-</dl>
+- {{domxref("WebSocket.close", "WebSocket.close([code[, reason]])")}}
+  - : Closes the connection.
+- {{domxref("WebSocket.send", "WebSocket.send(data)")}}
+  - : Enqueues data to be transmitted.
 
-<h2 id="Events">Events</h2>
+## Events
 
-<p>Listen to these events using <code>addEventListener()</code> or by assigning an event listener to the <code>on<em>eventname</em></code> property of this interface.</p>
+Listen to these events using `addEventListener()` or by assigning an event listener to the `oneventname` property of this interface.
 
-<dl>
- <dt>{{domxref("WebSocket/close_event", "close")}}</dt>
- <dd>Fired when a connection with a <code>WebSocket</code> is closed.<br>
- Also available via the {{domxref("WebSocket/onclose", "onclose")}} property</dd>
- <dt>{{domxref("WebSocket/error_event", "error")}}</dt>
- <dd>Fired when a connection with a <code>WebSocket</code> has been closed because of an error, such as when some data couldn't be sent.<br>
- Also available via the {{domxref("WebSocket/onerror", "onerror")}} property.</dd>
- <dt>{{domxref("WebSocket/message_event", "message")}}</dt>
- <dd>Fired when data is received through a <code>WebSocket</code>.<br>
- Also available via the {{domxref("WebSocket/onmessage", "onmessage")}} property.</dd>
- <dt>{{domxref("WebSocket/open_event", "open")}}</dt>
- <dd>Fired when a connection with a <code>WebSocket</code> is opened.<br>
- Also available via the {{domxref("WebSocket/onopen", "onopen")}} property.</dd>
-</dl>
+- {{domxref("WebSocket/close_event", "close")}}
+  - : Fired when a connection with a `WebSocket` is closed.
+    Also available via the {{domxref("WebSocket/onclose", "onclose")}} property
+- {{domxref("WebSocket/error_event", "error")}}
+  - : Fired when a connection with a `WebSocket` has been closed because of an error, such as when some data couldn't be sent.
+    Also available via the {{domxref("WebSocket/onerror", "onerror")}} property.
+- {{domxref("WebSocket/message_event", "message")}}
+  - : Fired when data is received through a `WebSocket`.
+    Also available via the {{domxref("WebSocket/onmessage", "onmessage")}} property.
+- {{domxref("WebSocket/open_event", "open")}}
+  - : Fired when a connection with a `WebSocket` is opened.
+    Also available via the {{domxref("WebSocket/onopen", "onopen")}} property.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">// Create WebSocket connection.
+```js
+// Create WebSocket connection.
 const socket = new WebSocket('ws://localhost:8080');
 
 // Connection opened
@@ -119,18 +92,17 @@ socket.addEventListener('open', function (event) {
 // Listen for messages
 socket.addEventListener('message', function (event) {
     console.log('Message from server ', event.data);
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications">Writing WebSocket client applications</a></li>
-</ul>
+- [Writing WebSocket client applications](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)

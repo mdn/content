@@ -15,43 +15,41 @@ tags:
   - complete
 browser-compat: api.MerchantValidationEvent.complete
 ---
-<p>{{deprecated_header}}{{non-standard_header}}{{securecontext_header}}</p>
+{{deprecated_header}}{{non-standard_header}}{{securecontext_header}}
 
-<p>The {{domxref("MerchantValidationEvent")}} method <code><strong>complete()</strong></code> takes merchant-specific information previously received from the {{domxref("MerchantValidationEvent.validationURL", "validationURL")}} and uses it to validate the merchant.</p>
+The {{domxref("MerchantValidationEvent")}} method **`complete()`** takes merchant-specific information previously received from the {{domxref("MerchantValidationEvent.validationURL", "validationURL")}} and uses it to validate the merchant.
 
-<p>All you have to do is call <code>complete()</code> from your handler for the {{event("merchantvalidation")}} event, passing in the data fetched from the <code>validationURL</code>.</p>
+All you have to do is call `complete()` from your handler for the {{event("merchantvalidation")}} event, passing in the data fetched from the `validationURL`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>merchantValidationEvent</em>.complete(<em>validationData</em>);
-<em>merchantValidationEvent</em>.complete(<em>merchantSessionPromise</em>);
-</pre>
+```js
+merchantValidationEvent.complete(validationData);
+merchantValidationEvent.complete(merchantSessionPromise);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>validationData</code> or <code>merchantSessionPromise</code></dt>
- <dd>An object containing the data needed to complete the merchant validation process, or a {{jsxref("Promise")}} which resolves to the validation data.</dd>
-</dl>
+- `validationData` or `merchantSessionPromise`
+  - : An object containing the data needed to complete the merchant validation process, or a {{jsxref("Promise")}} which resolves to the validation data.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>undefined</code>.</p>
+`undefined`.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>This exception may be passed into the rejection handler for the promise:</p>
+This exception may be passed into the rejection handler for the promise:
 
-<dl>
- <dt><code>InvalidStateError</code></dt>
- <dd>The event did not come directly from the user agent, but was instead dispatched by other code. another payment request is currently being processed, the current payment request is not currently being displayed to the user, or payment information is currently being updated.</dd>
-</dl>
+- `InvalidStateError`
+  - : The event did not come directly from the user agent, but was instead dispatched by other code. another payment request is currently being processed, the current payment request is not currently being displayed to the user, or payment information is currently being updated.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this example, we see the client-side code needed to support merchant validation for a payment request called <code>payRequest</code>:</p>
+In this example, we see the client-side code needed to support merchant validation for a payment request called `payRequest`:
 
-<pre class="brush: js">payRequest.onmerchantvalidation = event =&gt; {
+```js
+payRequest.onmerchantvalidation = event => {
   const validationDataPromise = getValidationData(event.validationURL);
   event.complete(validationDataPromise);
 }
@@ -59,18 +57,16 @@ browser-compat: api.MerchantValidationEvent.complete
 function getValidationData(url) {
   /* ...retrieve the validation data from the URL... */
 }
-</pre>
+```
 
-<p>This code sets up a handler for the {{event("merchantvalidation")}} event. The event handler calls a function, <code>getValidationData()</code>, which retrieves the data from the validation URL, then passes that data (or a promise to deliver the data) into <code>complete()</code>.</p>
+This code sets up a handler for the {{event("merchantvalidation")}} event. The event handler calls a function, `getValidationData()`, which retrieves the data from the validation URL, then passes that data (or a promise to deliver the data) into `complete()`.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Payment_Request_API">Payment Request API</a></li>
- <li><a href="/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API">Using the Payment Request API</a></li>
- <li><a href="/en-US/docs/Web/API/Payment_Request_API/Concepts">Payment processing concepts</a></li>
-</ul>
+- [Payment Request API](/en-US/docs/Web/API/Payment_Request_API)
+- [Using the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
+- [Payment processing concepts](/en-US/docs/Web/API/Payment_Request_API/Concepts)

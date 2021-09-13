@@ -2,37 +2,38 @@
 title: NDEFReader()
 slug: Web/API/NDEFReader/NDEFReader
 tags:
-- NDEF
-- Reference
-- Web NFC
-- Constructor
+  - NDEF
+  - Reference
+  - Web NFC
+  - Constructor
 browser-compat: api.NDEFReader.NDEFReader
 ---
-<p>{{draft}}{{securecontext_header}}{{APIRef()}}</p>
+{{draft}}{{securecontext_header}}{{APIRef()}}
 
-<p>The <strong><code>NDEFReader()</code></strong>
-    constructor of the {{domxref("NDEFReader")}} interface returns a
-    new <code>NDEFReader</code> object, which is used to read NDEF messages from
-    compatible NFC devices, e.g. NDEF tags, within the reader's magnetic induction
-    field.</p>
+The **`NDEFReader()`**
+constructor of the {{domxref("NDEFReader")}} interface returns a
+new `NDEFReader` object, which is used to read NDEF messages from
+compatible NFC devices, e.g. NDEF tags, within the reader's magnetic induction
+field.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let reader = new NDEFReader();
-</pre>
+```js
+let reader = new NDEFReader();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A new {{DOMxRef("NDEFReader")}}.</p>
+A new {{DOMxRef("NDEFReader")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

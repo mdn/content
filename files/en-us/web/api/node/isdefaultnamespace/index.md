@@ -2,47 +2,50 @@
 title: Node.isDefaultNamespace()
 slug: Web/API/Node/isDefaultNamespace
 tags:
-- API
-- DOM
-- Method
-- NeedsSpecTable
-- Node
-- Reference
+  - API
+  - DOM
+  - Method
+  - NeedsSpecTable
+  - Node
+  - Reference
 browser-compat: api.Node.isDefaultNamespace
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>Node.isDefaultNamespace()</code></strong> method accepts a namespace
-  URI as an argument and returns a boolean value that is <code>true</code>
-  if the namespace is the default namespace on the given node and <code>false</code> if
-  not.</p>
+The **`Node.isDefaultNamespace()`** method accepts a namespace
+URI as an argument and returns a boolean value that is `true`
+if the namespace is the default namespace on the given node and `false` if
+not.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>result</em> = <em>node</em>.isDefaultNamespace(<em>namespaceURI</em>);</pre>
+```js
+result = node.isDefaultNamespace(namespaceURI);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p><code>namespaceURI</code> is a string representing the namespace against which the
-  element will be checked.</p>
+`namespaceURI` is a string representing the namespace against which the
+element will be checked.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>result</code> is a boolean value that holds the return value
-  <code>true</code> or <code>false</code>.</p>
+`result` is a boolean value that holds the return value
+`true` or `false`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">var XULNS = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+```js
+var XULNS = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 var el = document.getElementsByTagNameNS(XULNS, 'textbox')[0];
 
-alert(el.isDefaultNamespace(XULNS)); // true</pre>
+alert(el.isDefaultNamespace(XULNS)); // true
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

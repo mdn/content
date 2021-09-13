@@ -7,33 +7,35 @@ tags:
   - edge case
   - relative URL
 ---
-<p>{{DefaultAPISidebar("Fetch API")}}</p>
+{{DefaultAPISidebar("Fetch API")}}
 
-<p>This article explains an edge case that occurs with fetch (and potentially other APIs exhibiting the same kind of resource retrieval behavior). When a cross-origin fetch involving a relative URL is initiated from an {{htmlelement("iframe")}}, the relative URL used to be resolved against the current global location, rather than the iframe's location.</p>
+This article explains an edge case that occurs with fetch (and potentially other APIs exhibiting the same kind of resource retrieval behavior). When a cross-origin fetch involving a relative URL is initiated from an {{htmlelement("iframe")}}, the relative URL used to be resolved against the current global location, rather than the iframe's location.
 
-<h2 id="The_edge_case">The edge case</h2>
+## The edge case
 
-<p>Many sites will never come up against this edge case. To see it:</p>
+Many sites will never come up against this edge case. To see it:
 
-<ul>
-	<li>You need a same-origin iframe</li>
-	<li>That same-origin iframe needs to have a location with a different base URL</li>
-	<li>You have to use the fetch function cross-global, e.g. <code>frame.contentWindow.fetch()</code></li>
-	<li>The URL passed to fetch needs to be relative</li>
-</ul>
+- You need a same-origin iframe
+- That same-origin iframe needs to have a location with a different base URL
+- You have to use the fetch function cross-global, e.g. `frame.contentWindow.fetch()`
+- The URL passed to fetch needs to be relative
 
-<h2 id="The_problem">The problem</h2>
+## The problem
 
-<p>In the past we would resolve the relative URL against the current global, for example:</p>
+In the past we would resolve the relative URL against the current global, for example:
 
-<pre class="brush: js">let absolute = new URL(relative, window.location.href)</pre>
+```js
+let absolute = new URL(relative, window.location.href)
+```
 
-<p>This is not a problem as such. It is just that different APIs that exhibit this kind of behavior were doing it inconsistently with the behavior defined in the spec, which could lead to problems further down the line.</p>
+This is not a problem as such. It is just that different APIs that exhibit this kind of behavior were doing it inconsistently with the behavior defined in the spec, which could lead to problems further down the line.
 
-<h2 id="The_solution">The solution</h2>
+## The solution
 
-<p>In Firefox 60 onwards, Mozilla resolves the relative URL against the global that owns the <code>fetch()</code> function being used (see {{bug(1432272)}}). So in the case described above, it is resolved against the iframe's location:</p>
+In Firefox 60 onwards, Mozilla resolves the relative URL against the global that owns the `fetch()` function being used (see {{bug(1432272)}}). So in the case described above, it is resolved against the iframe's location:
 
-<pre class="brush: js">let absolute = new URL(relative, frame.contentWindow.location.href)</pre>
+```js
+let absolute = new URL(relative, frame.contentWindow.location.href)
+```
 
-<p>There is a lot of discussion in progress about getting new specs to align with this behavior change, to mitigate potential problems going forward.</p>
+There is a lot of discussion in progress about getting new specs to align with this behavior change, to mitigate potential problems going forward.

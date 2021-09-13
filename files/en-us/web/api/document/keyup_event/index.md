@@ -10,89 +10,91 @@ tags:
   - keyup
 browser-compat: api.Document.keyup_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <strong><code>keyup</code></strong> event is fired when a key is released.</p>
+The **`keyup`** event is fired when a key is released.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("KeyboardEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("GlobalEventHandlers.onkeyup", "onkeyup")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("KeyboardEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{domxref("GlobalEventHandlers.onkeyup", "onkeyup")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>The {{domxref("Document/keydown_event", "keydown")}} and <code>keyup</code> events provide a code indicating which key is pressed, while {{domxref("Document/keypress_event", "keypress")}} indicates which <em>character</em> was entered. For example, a lowercase "a" will be reported as 65 by <code>keydown</code> and <code>keyup</code>, but as 97 by <code>keypress</code>. An uppercase "A" is reported as 65 by all events.</p>
+The {{domxref("Document/keydown_event", "keydown")}} and `keyup` events provide a code indicating which key is pressed, while {{domxref("Document/keypress_event", "keypress")}} indicates which _character_ was entered. For example, a lowercase "a" will be reported as 65 by `keydown` and `keyup`, but as 97 by `keypress`. An uppercase "A" is reported as 65 by all events.
 
-<div class="notecard note">
-<p><strong>Note:</strong> If you're looking for a way to react to changes in an input's value, you should use the <a href="/en-US/docs/Web/API/HTMLElement/input_event"><code>input</code> event</a>. Some changes are not detectable by <code>keyup</code>, for example pasting text from the context menu in a text input.</p>
-</div>
+> **Note:** If you're looking for a way to react to changes in an input's value, you should use the [`input` event](/en-US/docs/Web/API/HTMLElement/input_event). Some changes are not detectable by `keyup`, for example pasting text from the context menu in a text input.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example logs the {{domxref("KeyboardEvent.code")}} value whenever you release a key.</p>
+This example logs the {{domxref("KeyboardEvent.code")}} value whenever you release a key.
 
-<h3 id="addEventListener_keyup_example">addEventListener keyup example</h3>
+### addEventListener keyup example
 
-<pre class="brush: html">&lt;p&gt;Focus the IFrame first (e.g. by clicking in it), then try pressing some keys.&lt;/p&gt;
-&lt;p id="log"&gt;&lt;/p&gt;</pre>
+```html
+<p>Focus the IFrame first (e.g. by clicking in it), then try pressing some keys.</p>
+<p id="log"></p>
+```
 
-<pre class="brush: js">const log = document.getElementById('log');
+```js
+const log = document.getElementById('log');
 
 document.addEventListener('keyup', logKey);
 
 function logKey(e) {
   log.textContent += ` ${e.code}`;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("addEventListener_keyup_example")}}</p>
+{{EmbedLiveSample("addEventListener_keyup_example")}}
 
-<h3 id="onkeyup_equivalent">onkeyup equivalent</h3>
+### onkeyup equivalent
 
-<pre class="brush: js">document.onkeyup = logKey;</pre>
+```js
+document.onkeyup = logKey;
+```
 
+### Ignoring keyup during IME composition
 
-<h3 id="Ignoring_keyup_during_ime_composition">Ignoring keyup during IME composition</h3>
+An _Input Method Editor (IME)_ is a program that enables users to enter characters that are not supported by their keyboard using some other key combination.
 
-<p>An <em>Input Method Editor (IME)</em> is a program that enables users to enter characters that are not supported by their keyboard using some other key combination.</p>
+Since Firefox 65, the {{domxref("Document/keydown_event", "keydown")}} and `keyup` events are now fired during IME composition, to improve cross-browser compatibility for CJKT users ({{bug(354358)}}. To ignore all `keyup` events that are part of composition, do something like this (229 is a special value set for a `keyCode` relating to an event that has been processed by an IME):
 
-<p>Since Firefox 65, the {{domxref("Document/keydown_event", "keydown")}} and <code>keyup</code> events are now fired during IME composition, to improve cross-browser compatibility for CJKT users ({{bug(354358)}}. To ignore all <code>keyup</code> events that are part of composition, do something like this (229 is a special value set for a <code>keyCode</code> relating to an event that has been processed by an IME):</p>
-
-<pre class="brush: js">eventTarget.addEventListener("keyup", event =&gt; {
+```js
+eventTarget.addEventListener("keyup", event => {
   if (event.isComposing || event.keyCode === 229) {
     return;
   }
   // do something
 });
-</pre>
+```
 
+## Specifications
 
+{{Specifications}}
 
-<h2 id="Specifications">Specifications</h2>
+## Browser compatibility
 
-<p>{{Specifications}}</p>
+{{Compat}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## See also
 
-<p>{{Compat}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{domxref("Document/keydown_event", "keydown")}}</li>
- <li>{{domxref("Document/keypress_event", "keypress")}}</li>
- <li>{{domxref("Element")}}: {{domxref("Element/keyup_event", "keyup")}} event</li>
-</ul>
+- {{domxref("Document/keydown_event", "keydown")}}
+- {{domxref("Document/keypress_event", "keypress")}}
+- {{domxref("Element")}}: {{domxref("Element/keyup_event", "keyup")}} event

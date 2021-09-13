@@ -2,45 +2,41 @@
 title: CharacterData.deleteData()
 slug: Web/API/CharacterData/deleteData
 tags:
-- API
-- DOM
-- Method
-- Node
-- Reference
-- CharacterData
+  - API
+  - DOM
+  - Method
+  - Node
+  - Reference
+  - CharacterData
 browser-compat: api.CharacterData.deleteData
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>
-  The <code>deleteData()</code> method of the {{domxref("CharacterData")}}
-  interface removes all data from this <code>CharacterData</code> Node, leaving
-  it empty.
-</p>
+The `deleteData()` method of the {{domxref("CharacterData")}}
+interface removes all data from this `CharacterData` Node, leaving
+it empty.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js notranslate">
-  <var>characterData</var>.deleteData(<var>offset</var>, <var>count</var>)
-</pre>
+```js
+  characterData.deleteData(offset, count)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>offset</var></code></dt>
-  <dd>is an integer representing the number of bytes from the start of the data to remove from.</dd>
-  <dt><code><var>count</var></code></dt>
-  <dd>is an integer representing the number of bytes to remove.</dd>
-</dl>
+- `offset`
+  - : is an integer representing the number of bytes from the start of the data to remove from.
+- `count`
+  - : is an integer representing the number of bytes to remove.
 
-<h3 id="Returns">Return value</h3>
+### Return value
 
-<p>{{jsxref("undefined")}}.</p>
+{{jsxref("undefined")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -13,23 +13,24 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisUtterance.onmark
 ---
-<div>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</div>
+{{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>onmark</code></strong> property of the
-  {{domxref("SpeechSynthesisUtterance")}} interface represents an event handler that will
-  run when the spoken utterance reaches a named <a
-    href="https://www.w3.org/TR/speech-synthesis/#S3.3.2">SSML mark tag</a> (when the
-  <code><a href="/en-US/docs/Web/API/SpeechSynthesisUtterance/mark_event">mark</a></code>
-  event fires.)</p>
+The **`onmark`** property of the
+{{domxref("SpeechSynthesisUtterance")}} interface represents an event handler that will
+run when the spoken utterance reaches a named [SSML mark tag](https://www.w3.org/TR/speech-synthesis/#S3.3.2) (when the
+[`mark`](/en-US/docs/Web/API/SpeechSynthesisUtterance/mark_event)
+event fires.)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">speechSynthesisUtteranceInstance.onmark = function() { ... };
-</pre>
+```js
+speechSynthesisUtteranceInstance.onmark = function() { ... };
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var synth = window.speechSynthesis;
+```js
+var synth = window.speechSynthesis;
 
 var inputForm = document.querySelector('form');
 var inputTxt = document.querySelector('input');
@@ -44,7 +45,7 @@ inputForm.onsubmit = function(event) {
 
   var utterThis = new SpeechSynthesisUtterance(inputTxt.value);
   var selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-  for(i = 0; i &lt; voices.length ; i++) {
+  for(i = 0; i < voices.length ; i++) {
     if(voices[i].name === selectedOption) {
       utterThis.voice = voices[i];
     }
@@ -57,18 +58,17 @@ inputForm.onsubmit = function(event) {
   }
 
   inputTxt.blur();
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)

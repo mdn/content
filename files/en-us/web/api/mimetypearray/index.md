@@ -8,31 +8,28 @@ tags:
   - mimeType
 browser-compat: api.MimeTypeArray
 ---
-<p>{{APIRef("HTML DOM")}}{{deprecated_header}}</p>
+{{APIRef("HTML DOM")}}{{deprecated_header}}
 
-<p>The <strong><code>MimeTypeArray</code></strong> interface returns an array of {{domxref('MimeType')}} instances, each of which contains information about a supported browser plugins. This object is returned by {{domxref("Navigator.mimeTypes")}}.</p>
+The **`MimeTypeArray`** interface returns an array of {{domxref('MimeType')}} instances, each of which contains information about a supported browser plugins. This object is returned by {{domxref("Navigator.mimeTypes")}}.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("MimeTypeArray.length")}}</dt>
- <dd>The number of items in the array.</dd>
-</dl>
+- {{domxref("MimeTypeArray.length")}}
+  - : The number of items in the array.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("MimeTypeArray.item()")}}</dt>
- <dd>Returns the <code>MimeType</code> object with the specified index.</dd>
- <dt>{{domxref("MimeTypeArray.namedItem()")}}</dt>
- <dd>Returns the <code>MimeType</code> object with the specified name.</dd>
-</dl>
+- {{domxref("MimeTypeArray.item()")}}
+  - : Returns the `MimeType` object with the specified index.
+- {{domxref("MimeTypeArray.namedItem()")}}
+  - : Returns the `MimeType` object with the specified name.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example tests whether a plugin is available for the application/pdf mime type and if so, which plugin that is.</p>
+The following example tests whether a plugin is available for the application/pdf mime type and if so, which plugin that is.
 
-<pre class="brush: js">var mimeTypes = navigator.mimeTypes;
+```js
+var mimeTypes = navigator.mimeTypes;
 var flashPlugin = mimeTypes['video/x-flv'];
 if (typeof flashPlugin === "undefined") {
   var vid = document.createElement('video');
@@ -41,12 +38,12 @@ if (typeof flashPlugin === "undefined") {
   // Notify the user that flash is being deprecated and they
   //   should upgrade their browser.
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

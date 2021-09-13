@@ -2,58 +2,58 @@
 title: FetchEvent.clientId
 slug: Web/API/FetchEvent/clientId
 tags:
-- API
-- Experimental
-- FetchEvent
-- Property
-- Reference
-- Service Workers
-- clientId
+  - API
+  - Experimental
+  - FetchEvent
+  - Property
+  - Reference
+  - Service Workers
+  - clientId
 browser-compat: api.FetchEvent.clientId
 ---
-<p>{{APIRef("Service Workers API")}}</p>
+{{APIRef("Service Workers API")}}
 
-<p>The <code><strong>clientId</strong></code> read-only property of the
-  {{domxref("FetchEvent")}} interface returns the id of the {{domxref("Client")}} that the
-  current service worker is controlling.</p>
+The **`clientId`** read-only property of the
+{{domxref("FetchEvent")}} interface returns the id of the {{domxref("Client")}} that the
+current service worker is controlling.
 
-<p>The {{domxref("Clients.get()")}} method could then be passed this ID to retrieve the
-  associated client.</p>
+The {{domxref("Clients.get()")}} method could then be passed this ID to retrieve the
+associated client.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>myClientId</em> = <em>fetchEvent</em>.clientId;</pre>
+```js
+var myClientId = fetchEvent.clientId;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} that represents the client ID.</p>
+A {{domxref("DOMString")}} that represents the client ID.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">self.addEventListener('fetch', function(event) {
+```js
+self.addEventListener('fetch', function(event) {
   console.log(event.clientId);
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service
-      Workers</a></li>
-  <li><a class="external external-icon" href="https://github.com/mdn/sw-test">Service
-      workers basic code example</a></li>
-  <li><a class="external external-icon"
-      href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker
-      ready?</a></li>
-  <li>{{jsxref("Promise")}}</li>
-  <li><a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web
-      workers</a></li>
-</ul>
+- [Using Service
+  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Service
+  workers basic code example](https://github.com/mdn/sw-test)
+- [Is ServiceWorker
+  ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- {{jsxref("Promise")}}
+- [Using web
+  workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

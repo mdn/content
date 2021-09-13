@@ -18,81 +18,81 @@ tags:
   - iceconnectionstatechange
 browser-compat: api.RTCPeerConnection.iceconnectionstatechange_event
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>
-  An <strong><code>iceconnectionstatechange</code></strong> event is sent to an {{domxref("RTCPeerConnection")}} object each time the {{Glossary("ICE")}} connection state changes during the negotiation process.
-  The new ICE connection state is available in the object's {{domxref("RTCPeerConnection.iceConnectionState", "iceConnectionState")}} property.
-</p>
+An **`iceconnectionstatechange`** event is sent to an {{domxref("RTCPeerConnection")}} object each time the {{Glossary("ICE")}} connection state changes during the negotiation process.
+The new ICE connection state is available in the object's {{domxref("RTCPeerConnection.iceConnectionState", "iceConnectionState")}} property.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{DOMxRef("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{DOMxRef("RTCPeerConnection.oniceconnectionstatechange", "oniceconnectionstatechange")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{DOMxRef("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{DOMxRef("RTCPeerConnection.oniceconnectionstatechange", "oniceconnectionstatechange")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>One common task performed by the <code>iceconnectionstatechange</code> event listener: to trigger ICE restart when the state changes to <code>failed</code>. See {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Session_lifetime", "ICE restart")}} for further information.</p>
+One common task performed by the `iceconnectionstatechange` event listener: to trigger ICE restart when the state changes to `failed`. See {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Session_lifetime", "ICE restart")}} for further information.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>A successful connection attempt will typically involve the state starting at <code>new</code>, then transitioning through <code>checking</code>, then <code>connected</code>, and finally <code>completed</code>. However, under certain circumstances, the <code>connected</code> state can be skipped, causing a connection to transition directly from the <code>checking</code> state to <code>completed</code>. This can happen when only the last checked candidate is successful, and the gathering and end-of-candidates signals both occur before the successful negotiation is completed.</p>
+A successful connection attempt will typically involve the state starting at `new`, then transitioning through `checking`, then `connected`, and finally `completed`. However, under certain circumstances, the `connected` state can be skipped, causing a connection to transition directly from the `checking` state to `completed`. This can happen when only the last checked candidate is successful, and the gathering and end-of-candidates signals both occur before the successful negotiation is completed.
 
-<h3 id="ICE_connection_state_during_ICE_restarts">ICE connection state during ICE restarts</h3>
+### ICE connection state during ICE restarts
 
-<p>When an ICE restart is processed, the gathering and connectivity checking process is started over from the beginning, which will cause the <code>iceConnectionState</code> to transition to <code>connected</code> if the ICE restart was triggered while in the <code>completed</code> state. If ICE restart is initiated while in the transient <code>disconnected</code> state, the state transitions instead to <code>checking</code>, essentially indicating that the negotiation is ignoring the fact that the connection had been temporarily lost.</p>
+When an ICE restart is processed, the gathering and connectivity checking process is started over from the beginning, which will cause the `iceConnectionState` to transition to `connected` if the ICE restart was triggered while in the `completed` state. If ICE restart is initiated while in the transient `disconnected` state, the state transitions instead to `checking`, essentially indicating that the negotiation is ignoring the fact that the connection had been temporarily lost.
 
-<h3 id="State_transitions_as_negotiation_ends">State transitions as negotiation ends</h3>
+### State transitions as negotiation ends
 
-<p>When the negotiation process runs out of candidates to check, the ICE connection transitions to one of two states. If no suitable candidates were found, the state transitions to <code>failed</code>. If at least one suitable candidate was successfully identified, the state transitions to <code>completed</code>. The ICE layer makes this determination upon receiving the end-of-candidates signal, which is provided by caling {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} with a candidate whose {{domxref("RTCIceCandidate.candidate", "candidate")}} property is an empty string (""), or by setting the {{domxref("RTCPeerConnection")}} property {{domxref("RTCPeerConnection.canTrickleIceCandidates", "canTrickleIceCandidates")}} to <code>false</code>.</p>
+When the negotiation process runs out of candidates to check, the ICE connection transitions to one of two states. If no suitable candidates were found, the state transitions to `failed`. If at least one suitable candidate was successfully identified, the state transitions to `completed`. The ICE layer makes this determination upon receiving the end-of-candidates signal, which is provided by caling {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} with a candidate whose {{domxref("RTCIceCandidate.candidate", "candidate")}} property is an empty string (""), or by setting the {{domxref("RTCPeerConnection")}} property {{domxref("RTCPeerConnection.canTrickleIceCandidates", "canTrickleIceCandidates")}} to `false`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>An event handler for this event can be added using the {{domxref("RTCPeerConnection.oniceconnectionstatechange")}} property or by using {{domxref("EventTarget.addEventListener", "addEventListener()")}} on the <code>RTCPeerConnection</code>.</p>
+An event handler for this event can be added using the {{domxref("RTCPeerConnection.oniceconnectionstatechange")}} property or by using {{domxref("EventTarget.addEventListener", "addEventListener()")}} on the `RTCPeerConnection`.
 
-<p>In this example, a handler for <code>iceconnectionstatechange</code> is set up to update a call state indicator by using the value of {{domxref("RTCPeerConnection.iceConnectionState", "iceConnectionState")}} to create a string which corresponds to the name of a CSS class that we can assign to the status indicator to cause it to reflect the current state of the connection.</p>
+In this example, a handler for `iceconnectionstatechange` is set up to update a call state indicator by using the value of {{domxref("RTCPeerConnection.iceConnectionState", "iceConnectionState")}} to create a string which corresponds to the name of a CSS class that we can assign to the status indicator to cause it to reflect the current state of the connection.
 
-<pre class="brush: js">pc.addEventListener("iceconnectionstatechange", ev =&gt; {
+```js
+pc.addEventListener("iceconnectionstatechange", ev => {
   let stateElem = document.querySelector("#call-state");
   stateElem.className = `${pc.iceConnectionState}-state`;
 }, false);
-</pre>
+```
 
-<p>This can also be written as:</p>
+This can also be written as:
 
-<pre class="brush: js">pc.oniceconnectionstatechange = ev =&gt; {
+```js
+pc.oniceconnectionstatechange = ev => {
   let stateElem = document.querySelector("#call-state");
   stateElem.className = `${pc.iceConnectionState}-state`;
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
- <li>{{domxref("RTCPeerConnection")}}</li>
- <li>{{domxref("RTCPeerConnection.onIceConnectionStateChange")}}</li>
- <li>{{domxref("RTCPeerConnection.iceConnectionState")}}</li>
-</ul>
+- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+- {{domxref("RTCPeerConnection")}}
+- {{domxref("RTCPeerConnection.onIceConnectionStateChange")}}
+- {{domxref("RTCPeerConnection.iceConnectionState")}}

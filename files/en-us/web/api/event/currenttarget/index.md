@@ -2,37 +2,39 @@
 title: Event.currentTarget
 slug: Web/API/Event/currentTarget
 tags:
-- API
-- DOM
-- Event
-- NeedsBrowserCompatibility
-- Property
-- Read-only
+  - API
+  - DOM
+  - Event
+  - NeedsBrowserCompatibility
+  - Property
+  - Read-only
 browser-compat: api.Event.currentTarget
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>currentTarget</strong></code> read-only property of the
-  {{domxref("Event")}} interface identifies the current target for the event, as the event
-  traverses the DOM. It always refers to the element to which the event handler has been
-  attached, as opposed to {{domxref("Event.target")}}, which identifies the element on
-  which the event occurred and which may be its descendant.</p>
+The **`currentTarget`** read-only property of the
+{{domxref("Event")}} interface identifies the current target for the event, as the event
+traverses the DOM. It always refers to the element to which the event handler has been
+attached, as opposed to {{domxref("Event.target")}}, which identifies the element on
+which the event occurred and which may be its descendant.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>currentEventTarget</em> = <em>event</em>.currentTarget;</pre>
+```js
+var currentEventTarget = event.currentTarget;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>{{domxref("EventTarget")}}</p>
+{{domxref("EventTarget")}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p><code>Event.currentTarget</code> is interesting to use when attaching the same event
-  handler to several elements.</p>
+`Event.currentTarget` is interesting to use when attaching the same event
+handler to several elements.
 
-<pre class="brush: js">function hide(e){
+```js
+function hide(e){
   e.currentTarget.style.visibility = 'hidden';
   console.log(e.currentTarget);
   // When this function is used as an event handler: this === e.currentTarget
@@ -40,40 +42,36 @@ browser-compat: api.Event.currentTarget
 
 var ps = document.getElementsByTagName('p');
 
-for(var i = 0; i &lt; ps.length; i++){
-  // console: print the clicked &lt;p&gt; element
+for(var i = 0; i < ps.length; i++){
+  // console: print the clicked <p> element
   ps[i].addEventListener('click', hide, false);
 }
-// console: print &lt;body&gt;
+// console: print <body>
 document.body.addEventListener('click', hide, false);
 
 // Click around and make paragraphs disappear
-</pre>
+```
 
-<div class="note">
-  <p><strong>Note:</strong> The value of <code>event.currentTarget</code>
-    is <strong>only</strong> available while the event is being handled. If you
-    {{DOMxRef("console.log()")}} the
-    <code>event</code> object, storing it in a variable, and <em>then</em> look for the
-    <code>currentTarget</code> key in the console, its value will be <code>null</code>.
-    Instead, you can either directly <code>console.log(event.currentTarget)</code> to be
-    able to view it in the console or use
-    the <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/debugger">debugger</a></code> statement,
-    which will pause the execution of your code thus showing you the value of
-    <code>event.currentTarget</code>.</p>
-</div>
+> **Note:** The value of `event.currentTarget`
+> is **only** available while the event is being handled. If you
+> {{DOMxRef("console.log()")}} the
+> `event` object, storing it in a variable, and _then_ look for the
+> `currentTarget` key in the console, its value will be `null`.
+> Instead, you can either directly `console.log(event.currentTarget)` to be
+> able to view it in the console or use
+> the [`debugger`](/en-US/docs/Web/JavaScript/Reference/Statements/debugger) statement,
+> which will pause the execution of your code thus showing you the value of
+> `event.currentTarget`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Event/Comparison_of_Event_Targets">Comparison of Event
-      Targets</a></li>
-</ul>
+- [Comparison of Event
+  Targets](/en-US/docs/Web/API/Event/Comparison_of_Event_Targets)

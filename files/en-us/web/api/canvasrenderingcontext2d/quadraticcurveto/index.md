@@ -2,56 +2,56 @@
 title: CanvasRenderingContext2D.quadraticCurveTo()
 slug: Web/API/CanvasRenderingContext2D/quadraticCurveTo
 tags:
-- API
-- Canvas
-- CanvasRenderingContext2D
-- Method
-- Reference
+  - API
+  - Canvas
+  - CanvasRenderingContext2D
+  - Method
+  - Reference
 browser-compat: api.CanvasRenderingContext2D.quadraticCurveTo
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The
-  <strong><code>CanvasRenderingContext2D.quadraticCurveTo()</code></strong>
-  method of the Canvas 2D API adds a quadratic <a
-    href="https://en.wikipedia.org/wiki/B%C3%A9zier_curve">Bézier curve</a> to the current
-  sub-path. It requires two points: the first one is a control point and the second one is
-  the end point. The starting point is the latest point in the current path, which can be
-  changed using {{domxref("CanvasRenderingContext2D.moveTo", "moveTo()")}} before creating
-  the quadratic Bézier curve.</p>
+The
+**`CanvasRenderingContext2D.quadraticCurveTo()`**
+method of the Canvas 2D API adds a quadratic [Bézier curve](https://en.wikipedia.org/wiki/B%C3%A9zier_curve) to the current
+sub-path. It requires two points: the first one is a control point and the second one is
+the end point. The starting point is the latest point in the current path, which can be
+changed using {{domxref("CanvasRenderingContext2D.moveTo", "moveTo()")}} before creating
+the quadratic Bézier curve.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <em>ctx</em>.quadraticCurveTo(<em>cpx</em>, <em>cpy</em>, <em>x</em>, <em>y</em>);
-</pre>
+```js
+void ctx.quadraticCurveTo(cpx, cpy, x, y);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>cpx</code></dt>
-  <dd>The x-axis coordinate of the control point.</dd>
-  <dt><code>cpy</code></dt>
-  <dd>The y-axis coordinate of the control point.</dd>
-  <dt><code>x</code></dt>
-  <dd>The x-axis coordinate of the end point.</dd>
-  <dt><code>y</code></dt>
-  <dd>The y-axis coordinate of the end point.</dd>
-</dl>
+- `cpx`
+  - : The x-axis coordinate of the control point.
+- `cpy`
+  - : The y-axis coordinate of the control point.
+- `x`
+  - : The x-axis coordinate of the end point.
+- `y`
+  - : The y-axis coordinate of the end point.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="How_quadraticCurveTo_works">How quadraticCurveTo works</h3>
+### How quadraticCurveTo works
 
-<p>This example shows how a quadratic Bézier curve is drawn.</p>
+This example shows how a quadratic Bézier curve is drawn.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js;">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // Quadratic Bézier curve
@@ -72,55 +72,55 @@ ctx.fillStyle = 'red';
 ctx.beginPath();
 ctx.arc(230, 30, 5, 0, 2 * Math.PI);
 ctx.fill();
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>In this example, the control point is red and the
-  start and end points are blue.</p>
+In this example, the control point is red and the
+start and end points are blue.
 
-<p>{{ EmbedLiveSample('How_quadraticCurveTo_works', 315, 165) }}</p>
+{{ EmbedLiveSample('How_quadraticCurveTo_works', 315, 165) }}
 
-<h3 id="A_simple_quadratic_curve">A simple quadratic curve</h3>
+### A simple quadratic curve
 
-<p>This example draws a simple quadratic Bézier curve using
-  <code>quadraticCurveTo()</code>.</p>
+This example draws a simple quadratic Bézier curve using
+`quadraticCurveTo()`.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<p>The curve begins at the point specified by <code>moveTo()</code>: (20, 110). The
-  control point is placed at (230, 150). The curve ends at (250, 20).</p>
+The curve begins at the point specified by `moveTo()`: (20, 110). The
+control point is placed at (230, 150). The curve ends at (250, 20).
 
-<pre class="brush: js;">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.beginPath();
 ctx.moveTo(20, 110);
 ctx.quadraticCurveTo(230, 150, 250, 20);
 ctx.stroke();
-</pre>
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('A_simple_quadratic_curve', 700, 180) }}</p>
+{{ EmbedLiveSample('A_simple_quadratic_curve', 700, 180) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining this method: {{domxref("CanvasRenderingContext2D")}}</li>
-  <li><a href="https://en.wikipedia.org/wiki/B%C3%A9zier_curve">Wikipedia article on
-      Bézier curves</a></li>
-</ul>
+- The interface defining this method: {{domxref("CanvasRenderingContext2D")}}
+- [Wikipedia article on
+  Bézier curves](https://en.wikipedia.org/wiki/B%C3%A9zier_curve)

@@ -2,75 +2,72 @@
 title: MediaTrackSettings.echoCancellation
 slug: Web/API/MediaTrackSettings/echoCancellation
 tags:
-- API
-- Audio
-- Media
-- Media Capture and Streams API
-- Media Streams API
-- MediaTrackSettings
-- Property
-- Reference
-- Settings
-- echoCancellation
+  - API
+  - Audio
+  - Media
+  - Media Capture and Streams API
+  - Media Streams API
+  - MediaTrackSettings
+  - Property
+  - Reference
+  - Settings
+  - echoCancellation
 browser-compat: api.MediaTrackSettings.echoCancellation
 ---
-<div>{{APIRef("Media Capture and Streams")}}</div>
+{{APIRef("Media Capture and Streams")}}
 
-<p>The {{domxref("MediaTrackSettings")}} dictionary's
-  <code><strong>echoCancellation</strong></code> property is a Boolean value whose value
-  indicates whether or not echo cancellation is enabled on an audio track. This lets you
-  determine what value was selected to comply with your specified constraints for this
-  property's value as described in the
-  {{domxref("MediaTrackConstraints.echoCancellation")}} property you provided when calling
-  either {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} or
-  {{domxref("MediaStreamTrack.applyConstraints()")}}.</p>
+The {{domxref("MediaTrackSettings")}} dictionary's
+**`echoCancellation`** property is a Boolean value whose value
+indicates whether or not echo cancellation is enabled on an audio track. This lets you
+determine what value was selected to comply with your specified constraints for this
+property's value as described in the
+{{domxref("MediaTrackConstraints.echoCancellation")}} property you provided when calling
+either {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} or
+{{domxref("MediaStreamTrack.applyConstraints()")}}.
 
-<p>Echo cancellation is a feature which attempts to prevent echo effects on a two-way
-  audio connection by attempting to reduce or eliminate crosstalk between the user's
-  output device and their input device. For example, it might apply a filter that negates
-  the sound being produced on the speakers from being included in the input track
-  generated from the microphone.</p>
+Echo cancellation is a feature which attempts to prevent echo effects on a two-way
+audio connection by attempting to reduce or eliminate crosstalk between the user's
+output device and their input device. For example, it might apply a filter that negates
+the sound being produced on the speakers from being included in the input track
+generated from the microphone.
 
-<p>If needed, you can determine whether or not this constraint is supported by checking
-  the value of {{domxref("MediaTrackSupportedConstraints.echoCancellation")}} as returned
-  by a call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically
-  this is unnecessary since browsers will ignore any constraints they're unfamiliar with.
-</p>
+If needed, you can determine whether or not this constraint is supported by checking
+the value of {{domxref("MediaTrackSupportedConstraints.echoCancellation")}} as returned
+by a call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically
+this is unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
-<p>Because {{Glossary("RTP")}} doesn't include this information, tracks associated with a
-  <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> {{domxref("RTCPeerConnection")}}
-  will never include this property.</p>
+Because {{Glossary("RTP")}} doesn't include this information, tracks associated with a
+[WebRTC](/en-US/docs/Web/API/WebRTC_API) {{domxref("RTCPeerConnection")}}
+will never include this property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>echoCancellation</em> = <em>MediaTrackSettings</em>.echoCancellation;
-</pre>
+```js
+var echoCancellation = MediaTrackSettings.echoCancellation;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A Boolean value which is <code>true</code> if the track has echo cancellation
-  functionality enabled or <code>false</code> if echo cancellation is disabled.</p>
+A Boolean value which is `true` if the track has echo cancellation
+functionality enabled or `false` if echo cancellation is disabled.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
-  Constraint exerciser")}} for an example.</p>
+See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
+  Constraint exerciser")}} for an example.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a>
-  </li>
-  <li><a href="/en-US/docs/Web/API/Media_Streams_API/Constraints">Capabilities,
-      constraints, and settings</a></li>
-  <li>{{domxref("MediaTrackConstraints.echoCancellation")}}</li>
-  <li>{{domxref("MediaTrackSettings")}}</li>
-</ul>
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- [Capabilities,
+  constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- {{domxref("MediaTrackConstraints.echoCancellation")}}
+- {{domxref("MediaTrackSettings")}}

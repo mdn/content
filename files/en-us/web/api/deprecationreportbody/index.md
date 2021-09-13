@@ -10,73 +10,74 @@ tags:
   - Reporting API
 browser-compat: api.DeprecationReportBody
 ---
-<div>{{APIRef("Reporting API")}}</div>
+{{APIRef("Reporting API")}}
 
-<p>The <code>DeprecationReportBody</code> interface of the <a href="/en-US/docs/Web/API/Reporting_API">Reporting API</a> represents the body of a deprecation report.</p>
+The `DeprecationReportBody` interface of the [Reporting API](/en-US/docs/Web/API/Reporting_API) represents the body of a deprecation report.
 
-<p>A deprecation report is generated when a deprecated feature (for example a deprecated API method) is used on a document being observed by a {{domxref("ReportingObserver")}}. In addition to the support of this API, receiving useful deprecation warnings relies on browser vendors adding these warnings for deprecated features.</p>
+A deprecation report is generated when a deprecated feature (for example a deprecated API method) is used on a document being observed by a {{domxref("ReportingObserver")}}. In addition to the support of this API, receiving useful deprecation warnings relies on browser vendors adding these warnings for deprecated features.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<p>An instance of <code>DeprecationReportBody</code> is returned as the value of {{domxref("Report.body")}} when {{domxref("Report.Type")}} is <code>deprecation</code>. The interface has no constructor.</p>
+An instance of `DeprecationReportBody` is returned as the value of {{domxref("Report.body")}} when {{domxref("Report.Type")}} is `deprecation`. The interface has no constructor.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p>This interface also inherits properties from {{domxref("ReportBody")}}.</p>
+This interface also inherits properties from {{domxref("ReportBody")}}.
 
-<dl>
- <dt>{{domxref("DeprecationReportBody.id")}}</dt>
- <dd>A string representing the feature or API that is deprecated, for example <code>NavigatorGetUserMedia</code>. This can be used to group reports by deprecated feature.</dd>
- <dt>{{domxref("DeprecationReportBody.anticipatedRemoval")}}</dt>
- <dd>A {{jsxref("Date")}} object (rendered as a string) representing the date when the feature is expected to be removed from the current browser. If the date is not known, this property will return <code>null</code>.</dd>
- <dt>{{domxref("DeprecationReportBody.message")}}</dt>
- <dd>A string containing a human-readable description of the deprecation, including information such as what newer feature has superseded it, if any. This typically matches the message a browser will display in its DevTools console when a deprecated feature is used, if one is available.</dd>
- <dt>{{domxref("DeprecationReportBody.sourceFile")}}</dt>
- <dd>A string containing the path to the source file where the deprecated feature was used, if known, or <code>null</code> otherwise.</dd>
- <dt>{{domxref("DeprecationReportBody.lineNumber")}}</dt>
- <dd>A number representing the line in the source file in which the deprecated feature was used, if known, or <code>null</code> otherwise.</dd>
- <dt>{{domxref("DeprecationReportBody.columnNumber")}}</dt>
- <dd>A number representing the column in the source file in which the deprecated feature was used, if known, or <code>null</code> otherwise.</dd>
-</dl>
+- {{domxref("DeprecationReportBody.id")}}
+  - : A string representing the feature or API that is deprecated, for example `NavigatorGetUserMedia`. This can be used to group reports by deprecated feature.
+- {{domxref("DeprecationReportBody.anticipatedRemoval")}}
+  - : A {{jsxref("Date")}} object (rendered as a string) representing the date when the feature is expected to be removed from the current browser. If the date is not known, this property will return `null`.
+- {{domxref("DeprecationReportBody.message")}}
+  - : A string containing a human-readable description of the deprecation, including information such as what newer feature has superseded it, if any. This typically matches the message a browser will display in its DevTools console when a deprecated feature is used, if one is available.
+- {{domxref("DeprecationReportBody.sourceFile")}}
+  - : A string containing the path to the source file where the deprecated feature was used, if known, or `null` otherwise.
+- {{domxref("DeprecationReportBody.lineNumber")}}
+  - : A number representing the line in the source file in which the deprecated feature was used, if known, or `null` otherwise.
+- {{domxref("DeprecationReportBody.columnNumber")}}
+  - : A number representing the column in the source file in which the deprecated feature was used, if known, or `null` otherwise.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p>This interface also inherits methods from {{domxref("ReportBody")}}.</p>
+This interface also inherits methods from {{domxref("ReportBody")}}.
 
-<dl>
-  <dt>{{domxref("DeprecationReportBody.toJSON()")}}</dt>
-  <dd>A <em>serializer</em> which returns a JSON representation of the <code>InterventionReportBody</code> object.</dd>
-</dl>
+- {{domxref("DeprecationReportBody.toJSON()")}}
+  - : A _serializer_ which returns a JSON representation of the `InterventionReportBody` object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In our <a href="https://mdn.github.io/dom-examples/reporting-api/deprecation_report.html">deprecation_report.html</a> example, we create a simple reporting observer to observe usage of deprecated features on our web page:</p>
+In our [deprecation_report.html](https://mdn.github.io/dom-examples/reporting-api/deprecation_report.html) example, we create a simple reporting observer to observe usage of deprecated features on our web page:
 
-<pre class="brush: js">let options = {
+```js
+let options = {
   types: ['deprecation'],
   buffered: true
 }
 
 let observer = new ReportingObserver(function(reports, observer) {
-  reportBtn.onclick = () =&gt; displayReports(reports);
-}, options);</pre>
+  reportBtn.onclick = () => displayReports(reports);
+}, options);
+```
 
-<p>We then tell it to start observing reports using {{domxref("ReportingObserver.observe()")}}; this tells the observer to start collecting reports in its report queue, and runs the callback function specified inside the constructor:</p>
+We then tell it to start observing reports using {{domxref("ReportingObserver.observe()")}}; this tells the observer to start collecting reports in its report queue, and runs the callback function specified inside the constructor:
 
-<pre class="brush: js">observer.observe();</pre>
+```js
+observer.observe();
+```
 
-<p>Because of the event handler we set up inside the <code>ReportingObserver()</code> constructor, we can now click the button to display the report details.</p>
+Because of the event handler we set up inside the `ReportingObserver()` constructor, we can now click the button to display the report details.
 
-<p><img alt="image of a jolly bearded man with various stats displayed below it about a deprecated feature" src="reporting_api_example.png"></p>
+![image of a jolly bearded man with various stats displayed below it about a deprecated feature](reporting_api_example.png)
 
-<p>The report details are displayed via the <code>displayReports()</code> fuction, which takes the observer callback's <code>reports</code> parameter as its parameter:</p>
+The report details are displayed via the `displayReports()` fuction, which takes the observer callback's `reports` parameter as its parameter:
 
-<pre class="brush: js">function displayReports(reports) {
+```js
+function displayReports(reports) {
   const outputElem = document.querySelector('.output');
   const list = document.createElement('ul');
   outputElem.appendChild(list);
 
-  for(let i = 0; i &lt; reports.length; i++) {
+  for(let i = 0; i < reports.length; i++) {
     let listItem = document.createElement('li');
     let textNode = document.createTextNode('Report ' + (i + 1) + ', type: ' + reports[i].type);
     listItem.appendChild(textNode);
@@ -91,21 +92,20 @@ let observer = new ReportingObserver(function(reports, observer) {
       innerList.appendChild(innerListItem);
     }
   }
-}</pre>
+}
+```
 
-<p>The <code>reports</code> parameter contains an array of all the reports in the observer's report queue. We loop over each report using a basic <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for">for</a></code> loop, then iterate over each entry of in the report's body (a <code>DeprecationReportBody</code> instance) using a <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a></code> structure, displaying each key/value pair inside a list item.</p>
+The `reports` parameter contains an array of all the reports in the observer's report queue. We loop over each report using a basic [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for) loop, then iterate over each entry of in the report's body (a `DeprecationReportBody` instance) using a [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) structure, displaying each key/value pair inside a list item.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Reporting_API">Reporting API</a></li>
- <li><a href="https://developers.google.com/web/updates/2018/09/reportingapi">The Reporting API</a></li>
-</ul>
+- [Reporting API](/en-US/docs/Web/API/Reporting_API)
+- [The Reporting API](https://developers.google.com/web/updates/2018/09/reportingapi)

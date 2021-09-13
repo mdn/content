@@ -9,65 +9,59 @@ tags:
   - BackgroundFetchRegistration
 browser-compat: api.BackgroundFetchRegistration.match
 ---
-<div>{{DefaultAPISidebar("Background Fetch API")}}</div>
+{{DefaultAPISidebar("Background Fetch API")}}
 
-<p>The <strong><code>match()</code></strong> method of the {{domxref("BackgroundFetchRegistration")}} interface returns the first matching {{domxref("BackgroundFetchRecord")}}.</p>
+The **`match()`** method of the {{domxref("BackgroundFetchRegistration")}} interface returns the first matching {{domxref("BackgroundFetchRecord")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">let record = BackgroundFetchRegistration.match(request, options);</pre>
+    let record = BackgroundFetchRegistration.match(request, options);
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>request</code></dt>
-  <dd>The {{domxref("Request")}} for which you are attempting to find records.
-    This can be a {{domxref("Request")}} object or a URL.</dd>
-  <dt><code>options</code> {{optional_inline}}</dt>
-  <dd>An object that sets options for the <code>match</code> operation. The available
+- `request`
+  - : The {{domxref("Request")}} for which you are attempting to find records.
+    This can be a {{domxref("Request")}} object or a URL.
+- `options` {{optional_inline}}
+
+  - : An object that sets options for the `match` operation. The available
     options are:
-    <dl>
-      <dt><code>ignoreSearch</code></dt>
-      <dd>A boolean value that specifies whether to
+
+    - `ignoreSearch`
+      - : A boolean value that specifies whether to
         ignore the query string in the URL. For example, if set to
-        <code>true</code> the <code>?value=bar</code> part of
-        <code>http://foo.com/?value=bar</code> would be ignored when performing a match.
-        It defaults to <code>false</code>.</dd>
-      <dt><code>ignoreMethod</code></dt>
-      <dd>A boolean value. When <code>true</code>,
-        prevents matching operations from validating the {{domxref("Request")}} <code>http</code> method.
-        If <code>false</code> (the default) only <code>GET</code> and <code>HEAD</code> are allowed.</dd>
-      <dt><code>ignoreVary</code></dt>
-      <dd>A boolean value. When <code>true</code> indicates that the <a href="/en-US/docs/Web/HTTP/Headers/Vary"><code>VARY</code></a>
+        `true` the `?value=bar` part of
+        `http://foo.com/?value=bar` would be ignored when performing a match.
+        It defaults to `false`.
+    - `ignoreMethod`
+      - : A boolean value. When `true`,
+        prevents matching operations from validating the {{domxref("Request")}} `http` method.
+        If `false` (the default) only `GET` and `HEAD` are allowed.
+    - `ignoreVary`
+      - : A boolean value. When `true` indicates that the [`VARY`](/en-US/docs/Web/HTTP/Headers/Vary)
         header should be ignored.
-        It defaults to <code>false</code>.</dd>
-    </dl>
-  </dd>
-</dl>
+        It defaults to `false`.
 
-<h3 id="Returns">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} that resolves with the first {{domxref("BackgroundFetchRecord")}} that matches
-  the request or {{jsxref("undefined")}} if no match is found.</p>
+A {{jsxref("Promise")}} that resolves with the first {{domxref("BackgroundFetchRecord")}} that matches
+the request or {{jsxref("undefined")}} if no match is found.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> <code>BackgroundFetchRegistration.match()</code> is basically identical to
-    {{domxref("BackgroundFetchRegistration.matchAll()")}}, except that rather than resolving with an array of
-    all matching records, it resolves with the first matching record only.</p>
-</div>
+> **Note:** `BackgroundFetchRegistration.match()` is basically identical to
+> {{domxref("BackgroundFetchRegistration.matchAll()")}}, except that rather than resolving with an array of
+> all matching records, it resolves with the first matching record only.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt><code>InvalidStateError</code></dt>
-  <dd>A {{domxref("DOMException")}} indicating that you called <code>match()</code> when there are no fetches in progress. This state will be reflected by {{domxref("BackgroundFetchRegistration.recordsAvailable")}} being set to <code>false</code></dd>
-</dl>
+- `InvalidStateError`
+  - : A {{domxref("DOMException")}} indicating that you called `match()` when there are no fetches in progress. This state will be reflected by {{domxref("BackgroundFetchRegistration.recordsAvailable")}} being set to `false`
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this example we look for a record with the url "/ep-5.mp3". If a {{domxref("BackgroundFetchRecord")}} is found then we can return some information about it.</p>
+In this example we look for a record with the url "/ep-5.mp3". If a {{domxref("BackgroundFetchRecord")}} is found then we can return some information about it.
 
-<pre class="brush: js">bgFetch.match('/ep-5.mp3').then(async (record) => {
+```js
+bgFetch.match('/ep-5.mp3').then(async (record) => {
   if (!record) {
     console.log('No record found');
     return;
@@ -76,12 +70,13 @@ browser-compat: api.BackgroundFetchRegistration.match
   console.log(`Here's the request`, record.request);
   const response = await record.responseReady;
   console.log(`And here's the response`, response);
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -8,27 +8,25 @@ tags:
   - Reference
 browser-compat: api.MimeType
 ---
-<p>{{APIRef("HTML DOM")}}{{deprecated_header}}</p>
+{{APIRef("HTML DOM")}}{{deprecated_header}}
 
-<p>The <strong><code>MimeType</code></strong> interface provides contains information about a MIME type associated with a particular plugin. {{domxref("Navigator.mimeTypes")}} returns an array of this object.</p>
+The **`MimeType`** interface provides contains information about a MIME type associated with a particular plugin. {{domxref("Navigator.mimeTypes")}} returns an array of this object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("MimeType.type")}}</dt>
- <dd>Returns the MIME type of the associated plugin.</dd>
- <dt>{{domxref("MimeType.description")}}</dt>
- <dd>Returns a description of the associated plugin or an empty string if there is none.</dd>
- <dt>{{domxref("MimeType.suffixes")}}</dt>
- <dd>A string containing valid file extensions for the data displayed by the plugin, or an empty string if an extension is not valid for the particular module. For example, a browser's content decryption module may appear in the plugin list but support more file extensions than can be anticipated. It might therefore return an empty string.</dd>
- <dt>{{domxref("MimeType.enabledPlugin")}}</dt>
- <dd>Returns an instance of {{domxref("Plugin")}} containing information about the plugin itself.</dd>
-</dl>
+- {{domxref("MimeType.type")}}
+  - : Returns the MIME type of the associated plugin.
+- {{domxref("MimeType.description")}}
+  - : Returns a description of the associated plugin or an empty string if there is none.
+- {{domxref("MimeType.suffixes")}}
+  - : A string containing valid file extensions for the data displayed by the plugin, or an empty string if an extension is not valid for the particular module. For example, a browser's content decryption module may appear in the plugin list but support more file extensions than can be anticipated. It might therefore return an empty string.
+- {{domxref("MimeType.enabledPlugin")}}
+  - : Returns an instance of {{domxref("Plugin")}} containing information about the plugin itself.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -10,56 +10,48 @@ tags:
   - Deprecated
 browser-compat: api.CSSValueList
 ---
-<div>{{APIRef("CSSOM")}}{{Deprecated_header}}</div>
+{{APIRef("CSSOM")}}{{Deprecated_header}}
 
-<p>The <code><strong>CSSValueList</strong></code> interface derives from the {{DOMxRef("CSSValue")}} interface and provides the abstraction of an ordered collection of CSS values.</p>
+The **`CSSValueList`** interface derives from the {{DOMxRef("CSSValue")}} interface and provides the abstraction of an ordered collection of CSS values.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This interface was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
-  not implement it.</p>
-  <p>To achieve your purpose, you can use:</p>
-  <ul>
-    <li>the untyped <a href="/en-US/docs/Web/API/CSS_Object_Model">CSS Object Model</a>, widely supported, or</li>
-    <li>the modern <a href="/en-US/docs/Web/API/CSS_Typed_OM_API">CSS Typed Object Model API</a>, less supported and considered experimental.</li>
-  </ul>
-</div>
+> **Note:** This interface was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
+> not implement it.
+>
+> To achieve your purpose, you can use:
+>
+> - the untyped [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model), widely supported, or
+> - the modern [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API), less supported and considered experimental.
 
-<p>Some properties allow an empty list in their syntax. In that case, these properties take the <code>none</code> identifier. So, an empty list means that the property has the value <code>none</code>.</p>
+Some properties allow an empty list in their syntax. In that case, these properties take the `none` identifier. So, an empty list means that the property has the value `none`.
 
-<p>The items in the <code>CSSValueList</code> are accessible via an integral index, starting from 0.</p>
+The items in the `CSSValueList` are accessible via an integral index, starting from 0.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{DOMxRef("CSSValue")}}</em>.</p>
+_Inherits properties from its parent, {{DOMxRef("CSSValue")}}_.
 
-<dl>
- <dt>{{DOMxRef("CSSValueList.length")}}{{ReadOnlyInline}}</dt>
- <dd>An <code>unsigned long</code> representing the number of <code>CSSValues</code> in the list.</dd>
-</dl>
+- {{DOMxRef("CSSValueList.length")}}{{ReadOnlyInline}}
+  - : An `unsigned long` representing the number of `CSSValues` in the list.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{DOMxRef("CSSValueList.item()")}}</dt>
- <dd>This method is used to retrieve a {{DOMxRef("CSSValue")}} by ordinal index. The order in this collection represents the order of the values in the CSS style property. If index is greater than or equal to the number of values in the list, this returns <code>null</code>.</dd>
-</dl>
+- {{DOMxRef("CSSValueList.item()")}}
+  - : This method is used to retrieve a {{DOMxRef("CSSValue")}} by ordinal index. The order in this collection represents the order of the values in the CSS style property. If index is greater than or equal to the number of values in the list, this returns `null`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This feature was originally defined in the <a href="https://www.w3.org/TR/DOM-Level-2-Style">DOM Style Level 2</a> specification, but has been dropped from any
-  standardization effort since then.</p>
+This feature was originally defined in the [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style) specification, but has been dropped from any
+standardization effort since then.
 
-<p>It has been superseded by a modern, but incompatible, <a href="/en-US/docs/Web/API/CSS_Typed_OM_API">CSS Typed Object Model API</a> that is now on the standard track.</p>
+It has been superseded by a modern, but incompatible, [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) that is now on the standard track.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{DOMxRef("CSSPrimitiveValue")}}</li>
- <li>{{DOMxRef("CSSValue")}}</li>
-</ul>
+- {{DOMxRef("CSSPrimitiveValue")}}
+- {{DOMxRef("CSSValue")}}

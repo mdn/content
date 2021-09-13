@@ -11,38 +11,40 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals.ariaDisabled
 ---
-<div>{{DefaultAPISidebar("DOM")}}</div>
+{{DefaultAPISidebar("DOM")}}
 
-<p>The <strong><code>ariaDisabled</code></strong> property of the {{domxref("ElementInternals")}} interface reflects the value of the <code>aria-disabled</code> attribute, which indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.</p>
+The **`ariaDisabled`** property of the {{domxref("ElementInternals")}} interface reflects the value of the `aria-disabled` attribute, which indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Setting aria attributes on <code>ElementInternals</code> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <a href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</a>.</p>
-</div>
+> **Note:** Setting aria attributes on `ElementInternals` allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the [Accessibility Object Model explainer](https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let ariaDisabled = ElementInternals.ariaDisabled;
-ElementInternals.ariaDisabled = ariaDisabled;</pre>
+```js
+let ariaDisabled = ElementInternals.ariaDisabled;
+ElementInternals.ariaDisabled = ariaDisabled;
+```
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString")}} with one of the following values:</p>
+### Value
 
-<dl>
-  <dt><code>"true"</code></dt>
-  <dd>The element and all focusable descendants are disabled, but perceivable, and their values cannot be changed by the user.</dd>
-  <dt><code>"false"</code></dt>
-  <dd>The element is enabled.</dl>
+A {{domxref("DOMString")}} with one of the following values:
 
-<h2 id="Examples">Examples</h2>
+- `"true"`
+  - : The element and all focusable descendants are disabled, but perceivable, and their values cannot be changed by the user.
+- `"false"`
+  - : The element is enabled.
 
-<p>In this example the value of <code>ariaDisabled</code> is set to "true".</p>
+## Examples
 
-<pre class="brush: js">this.internals_.ariaDisabled = "true";</pre>
+In this example the value of `ariaDisabled` is set to "true".
 
-<h2 id="Specifications">Specifications</h2>
+```js
+this.internals_.ariaDisabled = "true";
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

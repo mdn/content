@@ -11,76 +11,77 @@ tags:
   - Element
 browser-compat: api.Element.ariaSort
 ---
-<div>{{DefaultAPISidebar("DOM")}}</div>
+{{DefaultAPISidebar("DOM")}}
 
-<p>The <strong><code>ariaSort</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <code>aria-sort</code> attribute, which indicates if items in a table or grid are sorted in ascending or descending order.</p>
+The **`ariaSort`** property of the {{domxref("Element")}} interface reflects the value of the `aria-sort` attribute, which indicates if items in a table or grid are sorted in ascending or descending order.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox notranslate">var <var>ariaSort</var> = element.ariaSort;
-<var>element</var>.ariaSort = <var>ariaSort</var></pre>
+    var ariaSort = element.ariaSort;
+    element.ariaSort = ariaSort
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString")}} with one of the following values:</p>
+### Value
 
-<dl>
-  <dt><code>"ascending"</code></dt>
-  <dd>Items are sorted in ascending order by this column.</dd>
-  <dt><code>"descending"</code></dt>
-  <dd>Items are sorted in descending order by this column.</dd>
-  <dt><code>"none"</code></dt>
-  <dd>There is no defined sort applied to the column.</dd>
-  <dt><code>"other"</code></dt>
-  <dd>A sort algorithm other than ascending or descending has been applied.</dd>
-</dl>
+A {{domxref("DOMString")}} with one of the following values:
 
-<h2 id="Examples">Examples</h2>
+- `"ascending"`
+  - : Items are sorted in ascending order by this column.
+- `"descending"`
+  - : Items are sorted in descending order by this column.
+- `"none"`
+  - : There is no defined sort applied to the column.
+- `"other"`
+  - : A sort algorithm other than ascending or descending has been applied.
 
-<p>In this example the <code>aria-sort</code> attribute on the element with an ID of <code>role-heading</code> is set to "none". Using <code>ariaSort</code> we update the value to "ascending".</p>
+## Examples
 
-<pre class="brush: html">&lt;table id="semantic-table" role="table" aria-label="Semantic Elements" aria-describedby="semantic_elements_table_desc" aria-rowcount="100"&gt;
-  &lt;caption id="semantic_elements_table_desc"&gt;Semantic Elements to use instead of ARIA's roles&lt;/caption&gt;
-  &lt;thead role="rowgroup"&gt;
-    &lt;tr role="row"&gt;
-      &lt;th role="columnheader" id="role-heading" aria-sort="none" aria-rowindex="1" aria-colindex="1"&gt;ARIA Role&lt;/th&gt;
-      &lt;th role="columnheader" id="element-heading" aria-sort="none" aria-rowindex="1"&gt;Semantic Element&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody role="rowgroup"&gt;
-    &lt;tr role="row"&gt;
-      &lt;td role="cell" aria-rowindex="11"&gt;header&lt;/td&gt;
-      &lt;td role="cell" aria-rowindex="11"&gt;h1&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr role="row"&gt;
-      &lt;td role="cell" aria-rowindex="16"&gt;header&lt;/td&gt;
-      &lt;td role="cell" aria-rowindex="16"&gt;h6&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr role="row"&gt;
-      &lt;td role="cell" aria-rowindex="18"&gt;rowgroup&lt;/td&gt;
-      &lt;td role="cell" aria-rowindex="18"&gt;thead&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr role="row"&gt;
-      &lt;td role="cell" aria-rowindex="24"&gt;term&lt;/td&gt;
-      &lt;td role="cell" aria-rowindex="24"&gt;dt&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;</pre>
+In this example the `aria-sort` attribute on the element with an ID of `role-heading` is set to "none". Using `ariaSort` we update the value to "ascending".
 
-<pre class="brush: js">let el = document.getElementById('role-heading');
+```html
+<table id="semantic-table" role="table" aria-label="Semantic Elements" aria-describedby="semantic_elements_table_desc" aria-rowcount="100">
+  <caption id="semantic_elements_table_desc">Semantic Elements to use instead of ARIA's roles</caption>
+  <thead role="rowgroup">
+    <tr role="row">
+      <th role="columnheader" id="role-heading" aria-sort="none" aria-rowindex="1" aria-colindex="1">ARIA Role</th>
+      <th role="columnheader" id="element-heading" aria-sort="none" aria-rowindex="1">Semantic Element</th>
+    </tr>
+  </thead>
+  <tbody role="rowgroup">
+    <tr role="row">
+      <td role="cell" aria-rowindex="11">header</td>
+      <td role="cell" aria-rowindex="11">h1</td>
+    </tr>
+    <tr role="row">
+      <td role="cell" aria-rowindex="16">header</td>
+      <td role="cell" aria-rowindex="16">h6</td>
+    </tr>
+    <tr role="row">
+      <td role="cell" aria-rowindex="18">rowgroup</td>
+      <td role="cell" aria-rowindex="18">thead</td>
+    </tr>
+    <tr role="row">
+      <td role="cell" aria-rowindex="24">term</td>
+      <td role="cell" aria-rowindex="24">dt</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+```js
+let el = document.getElementById('role-heading');
 console.log(el.ariaSort); // none
 el.ariaSort = "ascending"
-console.log(el.ariaSort); // ascending</pre>
+console.log(el.ariaSort); // ascending
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role">ARIA: table role</a></li>
-</ul>
+- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role)

@@ -10,59 +10,62 @@ tags:
   - Reference
   - Web
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code>change</code> event is fired for {{HTMLElement("input")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}} elements when an alteration to the element's value is committed by the user. Unlike the {{domxref("HTMLElement/input_event", "input")}} event, the <code>change</code> event is not necessarily fired for each alteration to an element's <code>value</code>.</p>
+The `change` event is fired for {{HTMLElement("input")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}} elements when an alteration to the element's value is committed by the user. Unlike the {{domxref("HTMLElement/input_event", "input")}} event, the `change` event is not necessarily fired for each alteration to an element's `value`.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("GlobalEventHandlers/onchange", "onchange")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{domxref("GlobalEventHandlers/onchange", "onchange")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>Depending on the kind of element being changed and the way the user interacts with the element, the <code>change</code> event fires at a different moment:</p>
+Depending on the kind of element being changed and the way the user interacts with the element, the `change` event fires at a different moment:
 
-<ul>
- <li>When the element is <code>:checked</code> (by clicking or using the keyboard) for <code>{{HTMLElement('input/radio', '&lt;input type="radio"&gt;')}}</code> and <code>{{HTMLElement('input/checkbox', '&lt;input type="checkbox"&gt;')}}</code>;</li>
- <li>When the user commits the change explicitly (e.g., by selecting a value from a {{HTMLElement("select")}}'s dropdown with a mouse click, by selecting a date from a date picker for <code>{{HTMLElement('input/date', '&lt;input type="date"&gt;')}}</code>, by selecting a file in the file picker for <code>{{HTMLElement('input/file', '&lt;input type="file"&gt;')}}</code>, etc.);</li>
- <li>When the element loses focus after its value was changed, but not committed (e.g., after editing the value of {{HTMLElement("textarea")}} or <code>{{HTMLElement('input/text', '&lt;input type="text"&gt;')}}</code>).</li>
-</ul>
+- When the element is `:checked` (by clicking or using the keyboard) for `{{HTMLElement('input/radio', '&lt;input type="radio"&gt;')}}` and `{{HTMLElement('input/checkbox', '&lt;input type="checkbox"&gt;')}}`;
+- When the user commits the change explicitly (e.g., by selecting a value from a {{HTMLElement("select")}}'s dropdown with a mouse click, by selecting a date from a date picker for `{{HTMLElement('input/date', '&lt;input type="date"&gt;')}}`, by selecting a file in the file picker for `{{HTMLElement('input/file', '&lt;input type="file"&gt;')}}`, etc.);
+- When the element loses focus after its value was changed, but not committed (e.g., after editing the value of {{HTMLElement("textarea")}} or `{{HTMLElement('input/text', '&lt;input type="text"&gt;')}}`).
 
-<p>The HTML specification lists <a href="https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply">the <code>&lt;input&gt;</code> types that should fire the <code>change</code> event</a>.</p>
+The HTML specification lists [the `<input>` types that should fire the `change` event](https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="select_element">&lt;select&gt; element</h3>
+### \<select> element
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;label&gt;Choose an ice cream flavor:
-  &lt;select class="ice-cream" name="ice-cream"&gt;
-    &lt;option value=""&gt;Select One …&lt;/option&gt;
-    &lt;option value="chocolate"&gt;Chocolate&lt;/option&gt;
-    &lt;option value="sardine"&gt;Sardine&lt;/option&gt;
-    &lt;option value="vanilla"&gt;Vanilla&lt;/option&gt;
-  &lt;/select&gt;
-&lt;/label&gt;
+```html
+<label>Choose an ice cream flavor:
+  <select class="ice-cream" name="ice-cream">
+    <option value="">Select One …</option>
+    <option value="chocolate">Chocolate</option>
+    <option value="sardine">Sardine</option>
+    <option value="vanilla">Vanilla</option>
+  </select>
+</label>
 
-&lt;div class="result"&gt;&lt;/div&gt;</pre>
+<div class="result"></div>
+```
 
-<pre class="brush: css hidden">body {
+```css hidden
+body {
   display: grid;
   grid-template-areas: "select result";
 }
@@ -74,52 +77,57 @@ select {
 .result {
   grid-area: result;
 }
-</pre>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const selectElement = document.querySelector('.ice-cream');
+```js
+const selectElement = document.querySelector('.ice-cream');
 
-selectElement.addEventListener('change', (event) =&gt; {
+selectElement.addEventListener('change', (event) => {
   const result = document.querySelector('.result');
   result.textContent = `You like ${event.target.value}`;
 });
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('select_element', '100%', '75px') }}</p>
+{{ EmbedLiveSample('select_element', '100%', '75px') }}
 
-<h3 id="Text_input_element">Text input element</h3>
+### Text input element
 
-<p>For some elements, including <code>&lt;input type="text"&gt;</code>, the <code>change</code> event doesn't fire until the control loses focus. Try entering something into the field below, and then click somewhere else to trigger the event.</p>
+For some elements, including `<input type="text">`, the `change` event doesn't fire until the control loses focus. Try entering something into the field below, and then click somewhere else to trigger the event.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;input placeholder="Enter some text" name="name"/&gt;
-&lt;p id="log"&gt;&lt;/p&gt;</pre>
+```html
+<input placeholder="Enter some text" name="name"/>
+<p id="log"></p>
+```
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const input = document.querySelector('input');
+```js
+const input = document.querySelector('input');
 const log = document.getElementById('log');
 
 input.addEventListener('change', updateValue);
 
 function updateValue(e) {
   log.textContent = e.target.value;
-}</pre>
+}
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Text_input_element', '100%', '75px') }}</p>
+{{ EmbedLiveSample('Text_input_element', '100%', '75px') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications("api.GlobalEventHandlers.onchange")}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.GlobalEventHandlers.onchange")}}</p>
+{{Compat("api.GlobalEventHandlers.onchange")}}
 
-<p>Different browsers do not always agree whether a <code>change</code> event should be fired for certain types of interaction. For example, keyboard navigation in {{HTMLElement("select")}} elements used to never fire a <code>change</code> event in Gecko until the user hit Enter or switched the focus away from the <code>&lt;select&gt;</code> (see {{bug("126379")}}). Since Firefox 63 (Quantum), this behavior is consistent between all major browsers, however.</p>
+Different browsers do not always agree whether a `change` event should be fired for certain types of interaction. For example, keyboard navigation in {{HTMLElement("select")}} elements used to never fire a `change` event in Gecko until the user hit Enter or switched the focus away from the `<select>` (see {{bug("126379")}}). Since Firefox 63 (Quantum), this behavior is consistent between all major browsers, however.

@@ -7,80 +7,78 @@ tags:
   - Files
 browser-compat: api.FileList
 ---
-<div>{{APIRef("File API")}}</div>
+{{APIRef("File API")}}
 
-<p>An object of this type is returned by the <code>files</code> property of the HTML {{HTMLElement("input")}} element; this lets you access the list of files selected with the <code>&lt;input type="file"&gt;</code> element. It's also used for a list of files dropped into web content when using the drag and drop API; see the <a href="/en-US/docs/Web/API/DataTransfer"><code>DataTransfer</code></a> object for details on this usage.</p>
+An object of this type is returned by the `files` property of the HTML {{HTMLElement("input")}} element; this lets you access the list of files selected with the `<input type="file">` element. It's also used for a list of files dropped into web content when using the drag and drop API; see the [`DataTransfer`](/en-US/docs/Web/API/DataTransfer) object for details on this usage.
 
-<div class="note">
-<p><strong>Note:</strong> Prior to {{Gecko("1.9.2")}}, the input element only supported a single file being selected at a time, meaning that the FileList would contain only one file. Starting with {{Gecko("1.9.2")}}, if the input element's multiple attribute is true, the FileList may contain multiple files.</p>
-</div>
+> **Note:** Prior to {{Gecko("1.9.2")}}, the input element only supported a single file being selected at a time, meaning that the FileList would contain only one file. Starting with {{Gecko("1.9.2")}}, if the input element's multiple attribute is true, the FileList may contain multiple files.
 
-<h2 id="Using_the_file_list">Using the file list</h2>
+## Using the file list
 
-<p>All <code>&lt;input&gt;</code> element nodes have a <code>files</code> attribute of type <code>FileList</code> on them which allows access to the items in this list. For example, if the HTML includes the following file input:</p>
+All `<input>` element nodes have a `files` attribute of type `FileList` on them which allows access to the items in this list. For example, if the HTML includes the following file input:
 
-<pre>&lt;input id="fileItem" type="file"&gt;
-</pre>
+    <input id="fileItem" type="file">
 
-<p>The following line of code fetches the first file in the node's file list as a <a href="/en-US/docs/Web/API/File"><code>File</code></a> object:</p>
+The following line of code fetches the first file in the node's file list as a [`File`](/en-US/docs/Web/API/File) object:
 
-<pre class="brush: js">var file = document.getElementById('fileItem').files[0];
-</pre>
+```js
+var file = document.getElementById('fileItem').files[0];
+```
 
-<h2 id="Method_overview">Method overview</h2>
+## Method overview
 
 <table class="standard-table">
-	<tbody>
-		<tr>
-			<td><code>File <a href="#item()">item</a>(index);</code></td>
-		</tr>
-	</tbody>
+  <tbody>
+    <tr>
+      <td>
+        <code>File <a href="#item()">item</a>(index);</code>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Attributes">Properties</h2>
+## Properties
 
 <table class="standard-table">
-	<tbody>
-		<tr>
-			<td class="header">Attribute</td>
-			<td class="header">Type</td>
-			<td class="header">Description</td>
-		</tr>
-		<tr>
-			<td><code>length</code></td>
-			<td><code>integer</code></td>
-			<td>A read-only value indicating the number of files in the list.</td>
-		</tr>
-	</tbody>
+  <tbody>
+    <tr>
+      <td class="header">Attribute</td>
+      <td class="header">Type</td>
+      <td class="header">Description</td>
+    </tr>
+    <tr>
+      <td><code>length</code></td>
+      <td><code>integer</code></td>
+      <td>A read-only value indicating the number of files in the list.</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<h3 id="item()">item()</h3>
+### item()
 
-<p>Returns a <a href="/en-US/docs/Web/API/File"><code>File</code></a> object representing the file at the specified index in the file list.</p>
+Returns a [`File`](/en-US/docs/Web/API/File) object representing the file at the specified index in the file list.
 
-<pre> File item(
-   index
- );
-</pre>
+     File item(
+       index
+     );
 
-<h4 id="Parameters">Parameters</h4>
+#### Parameters
 
-<dl>
-	<dt><code>index</code></dt>
-	<dd>The zero-based index of the file to retrieve from the list.</dd>
-</dl>
+- `index`
+  - : The zero-based index of the file to retrieve from the list.
 
-<h4 id="Return_value">Return value</h4>
+#### Return value
 
-<p>The <a href="/en-US/docs/Web/API/File"><code>File</code></a> representing the requested file.</p>
+The [`File`](/en-US/docs/Web/API/File) representing the requested file.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example iterates over all the files selected by the user using an <code>input</code> element:</p>
+This example iterates over all the files selected by the user using an `input` element:
 
-<pre class="brush:js">// fileInput is an HTML input element: &lt;input type="file" id="myfileinput" multiple&gt;
+```js
+// fileInput is an HTML input element: <input type="file" id="myfileinput" multiple>
 var fileInput = document.getElementById("myfileinput");
 
 // files is a FileList object (similar to NodeList)
@@ -88,7 +86,7 @@ var files = fileInput.files;
 var file;
 
 // loop through files
-for (var i = 0; i &lt; files.length; i++) {
+for (var i = 0; i < files.length; i++) {
 
     // get item
     file = files.item(i);
@@ -97,22 +95,23 @@ for (var i = 0; i &lt; files.length; i++) {
 
     alert(file.name);
 }
-</pre>
+```
 
-<p>Here is a complete example.</p>
+Here is a complete example.
 
-<pre class="brush:html">&lt;!DOCTYPE HTML&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;!--multiple is set to allow multiple files to be selected--&gt;
+```html
+<!DOCTYPE HTML>
+<html>
+<head>
+</head>
+<body>
+<!--multiple is set to allow multiple files to be selected-->
 
-&lt;input id="myfiles" multiple type="file"&gt;
+<input id="myfiles" multiple type="file">
 
-&lt;/body&gt;
+</body>
 
-&lt;script&gt;
+<script>
 
 var pullfiles=function(){
     // love the query selector
@@ -122,7 +121,7 @@ var pullfiles=function(){
     var fl = files.length;
     var i = 0;
 
-    while ( i &lt; fl) {
+    while ( i < fl) {
         // localize file var in the loop
         var file = files[i];
         alert(file.name);
@@ -134,23 +133,21 @@ var pullfiles=function(){
 document.querySelector("#myfiles").onchange=pullfiles;
 
 //a.t
-&lt;/script&gt;
+</script>
 
-&lt;/html&gt;</pre>
+</html>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
-	<li><a href="/en-US/docs/Web/API/File/Using_files_from_web_applications" title="Using files from web applications">Using files from web applications</a></li>
-	<li><code><a href="/en-US/docs/Web/API/File">File</a></code></li>
-	<li><code><a href="/en-US/docs/Web/API/FileReader">FileReader</a></code></li>
-</ul>
+- [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications "Using files from web applications")
+- [`File`](/en-US/docs/Web/API/File)
+- [`FileReader`](/en-US/docs/Web/API/FileReader)

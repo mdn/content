@@ -2,44 +2,46 @@
 title: ClipboardItem.types
 slug: Web/API/ClipboardItem/types
 tags:
-- API
-- Clipboard
-- Clipboard API
-- ClipboardItem
-- Cut
-- Property
-- Read-only
-- Reference
-- Types
-- copy
-- paste
+  - API
+  - Clipboard
+  - Clipboard API
+  - ClipboardItem
+  - Cut
+  - Property
+  - Read-only
+  - Reference
+  - Types
+  - copy
+  - paste
 browser-compat: api.ClipboardItem.types
 ---
-<div>{{DefaultAPISidebar("Clipboard API")}}</div>
+{{DefaultAPISidebar("Clipboard API")}}
 
-<p>The read-only
-    <strong><code>types</code></strong> property of the {{domxref("ClipboardItem")}}
-    interface returns an {{jsxref("Array")}} of {{Glossary("MIME type", 'MIME types')}}
-    available within the {{domxref("ClipboardItem")}}</p>
+The read-only
+**`types`** property of the {{domxref("ClipboardItem")}}
+interface returns an {{jsxref("Array")}} of {{Glossary("MIME type", 'MIME types')}}
+available within the {{domxref("ClipboardItem")}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>types</var> = <var>clipboardItem</var>.types;</pre>
+```js
+var types = clipboardItem.types;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{jsxref("Array")}} of available {{Glossary("MIME type", 'MIME types')}}.</p>
+An {{jsxref("Array")}} of available {{Glossary("MIME type", 'MIME types')}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the below example, we're returning all items on the clipboard via the
-  {{domxref("clipboard.read()")}} method. Then checking the <code>types</code> property
-  for available types before utilizing the {{domxref("ClipboardItem.getType()")}} method
-  to return the {{domxref("Blob")}} object. If no clipboards contents is found for the
-  specified type, an error is returned.</p>
+In the below example, we're returning all items on the clipboard via the
+{{domxref("clipboard.read()")}} method. Then checking the `types` property
+for available types before utilizing the {{domxref("ClipboardItem.getType()")}} method
+to return the {{domxref("Blob")}} object. If no clipboards contents is found for the
+specified type, an error is returned.
 
-<pre class="brush: js">async function getClipboardContents() {
+```js
+async function getClipboardContents() {
   try {
     const clipboardItems = await navigator.clipboard.read();
 
@@ -56,22 +58,20 @@ browser-compat: api.ClipboardItem.types
     console.error(err.name, err.message);
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Clipboard_API">Clipboard API</a></li>
-  <li><a href="https://async-clipboard-api.glitch.me/">Async Clipboard API demo on
-      Glitch</a></li>
-  <li><a href="https://web.dev/image-support-for-async-clipboard/">Image support for Async
-      Clipboard article</a></li>
-</ul>
+- [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
+- [Async Clipboard API demo on
+  Glitch](https://async-clipboard-api.glitch.me/)
+- [Image support for Async
+  Clipboard article](https://web.dev/image-support-for-async-clipboard/)

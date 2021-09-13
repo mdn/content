@@ -9,26 +9,28 @@ tags:
   - DeprecationReportBody
 browser-compat: api.DeprecationReportBody.sourceFile
 ---
-<div>{{APIRef("Reporting API")}}</div>
+{{APIRef("Reporting API")}}
 
-<p>The <strong><code>sourceFile</code></strong> read-only property of the {{domxref("DeprecationReportBody")}} interface returns the path to the source file where the deprecated feature was used.</p>
+The **`sourceFile`** read-only property of the {{domxref("DeprecationReportBody")}} interface returns the path to the source file where the deprecated feature was used.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This property can be used with {{domxref("DeprecationReportBody.lineNumber")}} and {{domxref("DeprecationReportBody.columnNumber")}} to locate the column and line in the file where the error occurred.</p>
-</div>
+> **Note:** This property can be used with {{domxref("DeprecationReportBody.lineNumber")}} and {{domxref("DeprecationReportBody.columnNumber")}} to locate the column and line in the file where the error occurred.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let sourceFile = DeprecationReportBody.sourceFile;</pre>
+```js
+let sourceFile = DeprecationReportBody.sourceFile;
+```
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString","string")}}, or <code>null</code> if the path is not known.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("DOMString","string")}}, or `null` if the path is not known.
 
-<p>In this example we create a new {{domxref("ReportingObserver")}} to observe deprecation reports, then print the value of <code>sourceFile</code> to the console.</p>
+## Examples
 
-<pre class="brush: js">let options = {
+In this example we create a new {{domxref("ReportingObserver")}} to observe deprecation reports, then print the value of `sourceFile` to the console.
+
+```js
+let options = {
   types: ['deprecation'],
   buffered: true
 }
@@ -37,12 +39,13 @@ let observer = new ReportingObserver(function(reports, observer) {
   let firstReport = reports[0];
   console.log(firstReport.type); // deprecation
   console.log(firstReport.body.sourceFile);
-}, options);</pre>
+}, options);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

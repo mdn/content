@@ -9,27 +9,30 @@ tags:
   - BackgroundFetchRegistration
 browser-compat: api.BackgroundFetchRegistration.uploadTotal
 ---
-<div>{{DefaultAPISidebar("Background Fetch API")}}</div>
+{{DefaultAPISidebar("Background Fetch API")}}
 
-<p>The <strong><code>uploadTotal</code></strong> read-only property of the {{domxref("BackgroundFetchRegistration")}} interface returns the total number of bytes to be sent to the server.</p>
+The **`uploadTotal`** read-only property of the {{domxref("BackgroundFetchRegistration")}} interface returns the total number of bytes to be sent to the server.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">let uploadTotal = BackgroundFetchRegistration.uploadTotal;</pre>
+    let uploadTotal = BackgroundFetchRegistration.uploadTotal;
 
-<h3>Value</h3>
-<p>A {{jsxref("number")}}.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{jsxref("number")}}.
 
-<p>Logging {{domxref("BackgroundFetchRegistration.uploadTotal")}} to the console returns the uploadTotal.</p>
+## Examples
 
-<pre class="brush: js">console.log(bgFetch.uploadTotal);</pre>
+Logging {{domxref("BackgroundFetchRegistration.uploadTotal")}} to the console returns the uploadTotal.
 
-<h2 id="Specifications">Specifications</h2>
+```js
+console.log(bgFetch.uploadTotal);
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

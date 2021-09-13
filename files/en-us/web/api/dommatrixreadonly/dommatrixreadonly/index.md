@@ -2,38 +2,37 @@
 title: DOMMatrixReadOnly()
 slug: Web/API/DOMMatrixReadOnly/DOMMatrixReadOnly
 tags:
-- API
-- Constructor
-- Experimental
-- Geometry
-- Geometry Interfaces
-- Reference
-- matrix
+  - API
+  - Constructor
+  - Experimental
+  - Geometry
+  - Geometry Interfaces
+  - Reference
+  - matrix
 browser-compat: api.DOMMatrixReadOnly.DOMMatrixReadOnly
 ---
-<p>{{APIRef("Geometry Interfaces")}}{{Non-standard_header}}</p>
+{{APIRef("Geometry Interfaces")}}{{Non-standard_header}}
 
-<p>The <strong><code>DOMMatrixReadOnly</code></strong> constructor creates a new
-	{{domxref("DOMMatrixReadOnly")}} object which represents 4x4 matrices, suitable for 2D
-	and 3D operations.</p>
+The **`DOMMatrixReadOnly`** constructor creates a new
+{{domxref("DOMMatrixReadOnly")}} object which represents 4x4 matrices, suitable for 2D
+and 3D operations.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-	class="brush: js">var <em>domMatrixReadOnly</em> = new DOMMatrixReadOnly([<em>init</em>])</pre>
+```js
+var domMatrixReadOnly = new DOMMatrixReadOnly([init])
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-	<dt>init {{optional_inline}}</dt>
-	<dd>Either a string containing a sequence of numbers or an array of integers
-		specifying the matrix you want to create.</dd>
-</dl>
+- init {{optional_inline}}
+  - : Either a string containing a sequence of numbers or an array of integers
+    specifying the matrix you want to create.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

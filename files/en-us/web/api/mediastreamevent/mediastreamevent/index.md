@@ -9,47 +9,45 @@ tags:
   - WebRTC
 browser-compat: api.MediaStreamEvent.MediaStreamEvent
 ---
-<p>{{APIRef("WebRTC")}}{{deprecated_header}}</p>
+{{APIRef("WebRTC")}}{{deprecated_header}}
 
-<p>The <code><strong>MediaStreamEvent()</strong></code> constructor creates a new
-  {{domxref("MediaStreamEvent")}}.</p>
+The **`MediaStreamEvent()`** constructor creates a new
+{{domxref("MediaStreamEvent")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"> var event = new MediaStreamEvent(<em>type</em>, <em>mediaStreamEventInit</em>);</pre>
+```js
+ var event = new MediaStreamEvent(type, mediaStreamEventInit);
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-  <dt><em>type</em></dt>
-  <dd>Is a {{domxref("DOMString")}} containing the name of the event, like
-    <code>addstream</code> or <code>removestream</code>.</dd>
-  <dt><em>mediaStreamEventInit</em></dt>
-  <dd>Is a <code>MediaStreamEventInit</code> dictionary, having the following fields:
-    <ul>
-      <li><code>"stream"</code> of type {{domxref("MediaStream")}} representing the stream
-        being concerned by the event.</li>
-      <li><code>"bubbles"</code>, optional and defaulting to <code>false</code>, inherited
-        from <code>EventInit</code>, and indicating if the event must bubble or not.</li>
-      <li><code>"cancelable"</code>, optional and defaulting to <code>false</code>,
-        inherited from <code>EventInit</code>, and indicating if the event can be canceled
-        or not.</li>
-    </ul>
-  </dd>
-</dl>
+- _type_
+  - : Is a {{domxref("DOMString")}} containing the name of the event, like
+    `addstream` or `removestream`.
+- _mediaStreamEventInit_
 
-<h2 id="Example">Example</h2>
+  - : Is a `MediaStreamEventInit` dictionary, having the following fields:
 
-<pre class="brush: js">// s is a MediaStream
-var event = new MediaStreamEvent("addstream", {"stream": s});</pre>
+    - `"stream"` of type {{domxref("MediaStream")}} representing the stream
+      being concerned by the event.
+    - `"bubbles"`, optional and defaulting to `false`, inherited
+      from `EventInit`, and indicating if the event must bubble or not.
+    - `"cancelable"`, optional and defaulting to `false`,
+      inherited from `EventInit`, and indicating if the event can be canceled
+      or not.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Example
 
-<p>{{Compat}}</p>
+```js
+// s is a MediaStream
+var event = new MediaStreamEvent("addstream", {"stream": s});
+```
 
-<h2 id="See_also">See also</h2>
+## Browser compatibility
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
-</ul>
+{{Compat}}
+
+## See also
+
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)

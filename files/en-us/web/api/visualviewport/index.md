@@ -10,73 +10,70 @@ tags:
   - viewport
 browser-compat: api.VisualViewport
 ---
-<p>{{APIRef("Visual Viewport")}}</p>
+{{APIRef("Visual Viewport")}}
 
-<p>The <strong><code>VisualViewport</code></strong> interface of the <a href="/en-US/docs/Web/API/Visual_Viewport_API">Visual Viewport API</a> represents the visual viewport for a given window. For a page containing iframes, each iframe, as well as the containing page, will have a unique window object. Each window on a page will have a unique <code>VisualViewport</code> representing the properties associated with that window.</p>
+The **`VisualViewport`** interface of the [Visual Viewport API](/en-US/docs/Web/API/Visual_Viewport_API) represents the visual viewport for a given window. For a page containing iframes, each iframe, as well as the containing page, will have a unique window object. Each window on a page will have a unique `VisualViewport` representing the properties associated with that window.
 
-<p>You can get a window's visual viewport using {{domxref("Window.visualViewport")}}.</p>
+You can get a window's visual viewport using {{domxref("Window.visualViewport")}}.
 
-<div class="note">
-<p><strong>Note:</strong> Only the top-level window has a visual viewport that's distinct from the layout viewport. Therefore, it's generally only the <code>VisualViewport</code> object of the top-level window that's useful. For an {{htmlelement("iframe")}}, visual viewport metrics like {{domxref("VisualViewport.width")}} always correspond to layout viewport metrics like {{domxref("Element.clientWidth", "document.documentElement.clientWidth")}}.</p>
-</div>
+> **Note:** Only the top-level window has a visual viewport that's distinct from the layout viewport. Therefore, it's generally only the `VisualViewport` object of the top-level window that's useful. For an {{htmlelement("iframe")}}, visual viewport metrics like {{domxref("VisualViewport.width")}} always correspond to layout viewport metrics like {{domxref("Element.clientWidth", "document.documentElement.clientWidth")}}.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em><code>VisualViewport</code> also inherits properties from its parent, {{domxref("EventTarget")}}.</em></p>
+_`VisualViewport` also inherits properties from its parent, {{domxref("EventTarget")}}._
 
-<dl>
- <dt>{{domxref("VisualViewport.offsetLeft")}} {{readonlyinline}}</dt>
- <dd>Returns the offset of the left edge of the visual viewport from the left edge of the layout viewport in CSS pixels.</dd>
- <dt>{{domxref("VisualViewport.offsetTop")}} {{readonlyinline}}</dt>
- <dd>Returns the offset of the top edge of the visual viewport from the top edge of the layout viewport in CSS pixels.</dd>
- <dt>{{domxref("VisualViewport.pageLeft")}} {{readonlyinline}}</dt>
- <dd>Returns the x coordinate of the visual viewport relative to the initial containing block origin of the top edge in CSS pixels.</dd>
- <dt>{{domxref("VisualViewport.pageTop")}} {{readonlyinline}}</dt>
- <dd>Returns the y coordinate of the visual viewport relative to the initial containing block origin of the top edge in CSS pixels.</dd>
- <dt>{{domxref("VisualViewport.width")}} {{readonlyinline}}</dt>
- <dd>Returns the width of the visual viewport in CSS pixels.</dd>
- <dt>{{domxref("VisualViewport.height")}} {{readonlyinline}}</dt>
- <dd>Returns the height of the visual viewport in CSS pixels.</dd>
- <dt>{{domxref("VisualViewport.scale")}} {{readonlyinline}}</dt>
- <dd>Returns the pinch-zoom scaling factor applied to the visual viewport.</dd>
-</dl>
+- {{domxref("VisualViewport.offsetLeft")}} {{readonlyinline}}
+  - : Returns the offset of the left edge of the visual viewport from the left edge of the layout viewport in CSS pixels.
+- {{domxref("VisualViewport.offsetTop")}} {{readonlyinline}}
+  - : Returns the offset of the top edge of the visual viewport from the top edge of the layout viewport in CSS pixels.
+- {{domxref("VisualViewport.pageLeft")}} {{readonlyinline}}
+  - : Returns the x coordinate of the visual viewport relative to the initial containing block origin of the top edge in CSS pixels.
+- {{domxref("VisualViewport.pageTop")}} {{readonlyinline}}
+  - : Returns the y coordinate of the visual viewport relative to the initial containing block origin of the top edge in CSS pixels.
+- {{domxref("VisualViewport.width")}} {{readonlyinline}}
+  - : Returns the width of the visual viewport in CSS pixels.
+- {{domxref("VisualViewport.height")}} {{readonlyinline}}
+  - : Returns the height of the visual viewport in CSS pixels.
+- {{domxref("VisualViewport.scale")}} {{readonlyinline}}
+  - : Returns the pinch-zoom scaling factor applied to the visual viewport.
 
-<h2 id="Events">Events</h2>
+## Events
 
-<p>Listen to these events using <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> or by assigning an event listener to the relevant <code>on<em>eventname</em></code> property of this interface.</p>
+Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the relevant `oneventname` property of this interface.
 
-<dl>
- <dt><code><a href="/en-US/docs/Web/API/VisualViewport/resize_event">resize</a></code></dt>
- <dd>Fired when the visual viewport is resized.<br>
- Also available via the {{domxref("VisualViewport.onresize")}} property.</dd>
- <dt><code><a href="/en-US/docs/Web/API/VisualViewport/scroll_event">scroll</a></code></dt>
- <dd>Fired when the visual viewport is scrolled.<br>
- Also available via the {{domxref("VisualViewport.onscroll")}} property.</dd>
-</dl>
+- [`resize`](/en-US/docs/Web/API/VisualViewport/resize_event)
+  - : Fired when the visual viewport is resized.
+    Also available via the {{domxref("VisualViewport.onresize")}} property.
+- [`scroll`](/en-US/docs/Web/API/VisualViewport/scroll_event)
+  - : Fired when the visual viewport is scrolled.
+    Also available via the {{domxref("VisualViewport.onscroll")}} property.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Hiding_an_overlaid_box_on_zoom">Hiding an overlaid box on zoom</h3>
+### Hiding an overlaid box on zoom
 
-<p>This example, taken from the <a href="https://github.com/WICG/visual-viewport">Visual Viewport README</a>, shows how to write a simple bit of code that will hide an overlaid box (which might contain an advert, say) when the user zooms in. This is a nice way to improve the user experience when zooming in on pages. A <a href="https://wicg.github.io/visual-viewport/examples/hide-on-zoom.html">live sample</a>  is also available.</p>
+This example, taken from the [Visual Viewport README](https://github.com/WICG/visual-viewport), shows how to write a simple bit of code that will hide an overlaid box (which might contain an advert, say) when the user zooms in. This is a nice way to improve the user experience when zooming in on pages. A [live sample](https://wicg.github.io/visual-viewport/examples/hide-on-zoom.html)  is also available.
 
-<pre class="brush: js">var bottomBar = document.getElementById('bottombar');
+```js
+var bottomBar = document.getElementById('bottombar');
 var viewport = window.visualViewport;
 
 function resizeHandler() {
-   if (viewport.scale &gt; 1.3)
+   if (viewport.scale > 1.3)
      bottomBar.style.display = "none";
    else
      bottomBar.style.display = "block";
 }
 
-window.visualViewport.addEventListener('resize', resizeHandler);</pre>
+window.visualViewport.addEventListener('resize', resizeHandler);
+```
 
-<h3 id="Simulating_position_device-fixed">Simulating position: device-fixed</h3>
+### Simulating position: device-fixed
 
-<p>This example, also taken from the <a href="https://github.com/WICG/visual-viewport">Visual Viewport README</a>, shows how to use this API to simulate <code>position: device-fixed</code>, which fixes elements to the visual viewport. A <a href="https://wicg.github.io/visual-viewport/examples/fixed-to-viewport.html">live sample</a> is also available.</p>
+This example, also taken from the [Visual Viewport README](https://github.com/WICG/visual-viewport), shows how to use this API to simulate `position: device-fixed`, which fixes elements to the visual viewport. A [live sample](https://wicg.github.io/visual-viewport/examples/fixed-to-viewport.html) is also available.
 
-<pre class="brush: js">var bottomBar = document.getElementById('bottombar');
+```js
+var bottomBar = document.getElementById('bottombar');
 var viewport = window.visualViewport;
 function viewportHandler() {
   var layoutViewport = document.getElementById('layoutViewport');
@@ -96,22 +93,19 @@ function viewportHandler() {
                               'scale(' + 1/viewport.scale + ')'
 }
 window.visualViewport.addEventListener('scroll', viewportHandler);
-window.visualViewport.addEventListener('resize', viewportHandler);</pre>
+window.visualViewport.addEventListener('resize', viewportHandler);
+```
 
-<div class="notecard note">
-<p><strong>Note:</strong> This technique should be used with care; emulating <code>position: device-fixed</code> in this way can result in the fixed element flickering during scrolling.</p>
-</div>
+> **Note:** This technique should be used with care; emulating `position: device-fixed` in this way can result in the fixed element flickering during scrolling.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://github.com/bokand/bokand.github.io/blob/master/web_viewports_explainer.md">Web Viewports Explainer</a> — useful explanation of web viewports concepts, including the difference between visual viewport and layout viewport.</li>
-</ul>
+- [Web Viewports Explainer](https://github.com/bokand/bokand.github.io/blob/master/web_viewports_explainer.md) — useful explanation of web viewports concepts, including the difference between visual viewport and layout viewport.

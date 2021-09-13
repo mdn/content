@@ -9,75 +9,69 @@ tags:
   - Method
 browser-compat: api.FileSystemDirectoryHandle.removeEntry
 ---
-<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
-</div>
+{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
-<p>The <strong><code>removeEntry()</code></strong> method of the
-  {{domxref("FileSystemDirectoryHandle")}} interface attempts to remove an entry if the
-  directory handle contains a file or directory called the name specified.</p>
+The **`removeEntry()`** method of the
+{{domxref("FileSystemDirectoryHandle")}} interface attempts to remove an entry if the
+directory handle contains a file or directory called the name specified.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">FileSystemDirectoryHandle.removeEntry(name).then...</pre>
+```js
+FileSystemDirectoryHandle.removeEntry(name).then...
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><em>name</em></dt>
-  <dd>A {{domxref('USVString')}} representing the {{domxref('FileSystemHandle.name')}} of
-    the entry you wish to remove.</dd>
-  <dt><em>options</em> {{optional_inline}}</dt>
-  <dd>An optional object containing options, which are as follows:
-    <ul>
-      <li><code>recursive</code>: A {{jsxref('Boolean')}}. Default <code>false</code>.
-        When set to <code>true</code> entries will be removed recursively.</li>
-    </ul>
-  </dd>
-</dl>
+- _name_
+  - : A {{domxref('USVString')}} representing the {{domxref('FileSystemHandle.name')}} of
+    the entry you wish to remove.
+- _options_ {{optional_inline}}
 
-<h3 id="Return_value">Return value</h3>
+  - : An optional object containing options, which are as follows:
 
-<p>A {{jsxref('Promise')}} which resolves with <code>undefined</code>.</p>
+    - `recursive`: A {{jsxref('Boolean')}}. Default `false`.
+      When set to `true` entries will be removed recursively.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Return value
 
-<dl>
-  <dt><code>TypeError</code></dt>
-  <dd>If the name is not a valid string or contains characters not allowed on the file
-    system</dd>
-  <dt><code>NotAllowedError</code></dt>
-  <dd>If {{domxref('PermissionStatus')}} is not 'granted'.</dd>
-  <dt><code>InvalidModificationError</code></dt>
-  <dd>If <code>recursive</code> is set to false and the entry to be removed has children.
-  </dd>
-  <dt><code>NotFoundError</code></dt>
-  <dd>If an entry name is not found or matched</dd>
-</dl>
+A {{jsxref('Promise')}} which resolves with `undefined`.
 
-<h2 id="Examples">Examples</h2>
+### Exceptions
 
-<p>The following example removes an entry within the directory handle.</p>
+- `TypeError`
+  - : If the name is not a valid string or contains characters not allowed on the file
+    system
+- `NotAllowedError`
+  - : If {{domxref('PermissionStatus')}} is not 'granted'.
+- `InvalidModificationError`
+  - : If `recursive` is set to false and the entry to be removed has children.
+- `NotFoundError`
+  - : If an entry name is not found or matched
 
-<pre class="brush: js">const entryName = 'entryToRemove';
+## Examples
+
+The following example removes an entry within the directory handle.
+
+```js
+const entryName = 'entryToRemove';
 
 // assuming we have a directory handle: 'currentDirHandle'
-currentDirHandle.removeEntry(entryName).then( () =&gt; {
+currentDirHandle.removeEntry(entryName).then( () => {
   // code to run if removing was successful
-} );</pre>
+} );
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/File_System_Access_API">File System Access API</a></li>
-  <li><a href="https://web.dev/file-system-access/">The File System Access API:
-      simplifying access to local files</a></li>
-</ul>
+- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
+- [The File System Access API:
+  simplifying access to local files](https://web.dev/file-system-access/)

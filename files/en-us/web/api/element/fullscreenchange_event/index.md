@@ -11,53 +11,58 @@ tags:
   - fullscreenchange
 browser-compat: api.Element.fullscreenchange_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code>fullscreenchange</code> event is fired immediately after an {{domxref("Element")}} switches into or out of full-screen mode.</p>
+The `fullscreenchange` event is fired immediately after an {{domxref("Element")}} switches into or out of full-screen mode.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("Element.onfullscreenchange", "onfullscreenchange")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{domxref("Element.onfullscreenchange", "onfullscreenchange")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>This event is sent to the <code>Element</code> which is transitioning into or out of full-screen mode.</p>
+This event is sent to the `Element` which is transitioning into or out of full-screen mode.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this example, a handler for the <code>fullscreenchange</code> event is added to the element whose ID is <code>fullscreen-div</code>.</p>
+In this example, a handler for the `fullscreenchange` event is added to the element whose ID is `fullscreen-div`.
 
-<p>If the user clicks on the "Toggle Fullscreen Mode" button, the <code>click</code> handler will toggle full-screen mode for the <code>div</code>. If <code>document.fullscreenElement</code> has a value it will exit full-screen mode. If not, the div will be placed into full-screen mode.</p>
+If the user clicks on the "Toggle Fullscreen Mode" button, the `click` handler will toggle full-screen mode for the `div`. If `document.fullscreenElement` has a value it will exit full-screen mode. If not, the div will be placed into full-screen mode.
 
-<p>Remember that by the time the <code>fullscreenchange</code> event is handled, the status of the element has already changed. So if the change is to full-screen mode, <code>document.fullscreenElement</code> will point to the element that is now in full-screen mode. On the other hand, if <code>document.fullscreenElement</code> is null, full-screen mode has been canceled.</p>
+Remember that by the time the `fullscreenchange` event is handled, the status of the element has already changed. So if the change is to full-screen mode, `document.fullscreenElement` will point to the element that is now in full-screen mode. On the other hand, if `document.fullscreenElement` is null, full-screen mode has been canceled.
 
-<p>What that means to the example code is that, if an element is currently in full-screen mode, the <code>fullscreenchange</code> handler logs the <code>id</code> of the full-screen element to the console. If <code>document.fullscreenElement</code> is null, the code logs a message that the change is to leave full-screen mode.</p>
+What that means to the example code is that, if an element is currently in full-screen mode, the `fullscreenchange` handler logs the `id` of the full-screen element to the console. If `document.fullscreenElement` is null, the code logs a message that the change is to leave full-screen mode.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html"> &lt;h1&gt;fullscreenchange event example&lt;/h1&gt;
- &lt;div id="fullscreen-div"&gt;
-   &lt;button id="toggle-fullscreen"&gt;Toggle Fullscreen Mode&lt;/button&gt;
- &lt;/div&gt;</pre>
+```html
+ <h1>fullscreenchange event example</h1>
+ <div id="fullscreen-div">
+   <button id="toggle-fullscreen">Toggle Fullscreen Mode</button>
+ </div>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">document.getElementById('fullscreen-div').addEventListener('fullscreenchange', (event) =&gt; {
+```js
+document.getElementById('fullscreen-div').addEventListener('fullscreenchange', (event) => {
   // document.fullscreenElement will point to the element that
   // is in fullscreen mode if there is one. If not, the value
   // of the property is null.
@@ -68,28 +73,27 @@ browser-compat: api.Element.fullscreenchange_event
   }
 });
 
-document.getElementById('toggle-fullscreen').addEventListener('click', (event) =&gt; {
+document.getElementById('toggle-fullscreen').addEventListener('click', (event) => {
   if (document.fullscreenElement) {
     // exitFullscreen is only available on the Document object.
     document.exitFullscreen();
   } else {
     document.getElementById('fullscreen-div').requestFullscreen();
   }
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Document/fullscreenchange_event">Document: fullscreenchange event</a></li>
- <li><a href="/en-US/docs/Web/API/Element/fullscreenerror_event">Element: fullscreenerror event</a></li>
- <li><a href="/en-US/docs/Web/API/Fullscreen_API">Fullscreen API</a></li>
- <li><a href="/en-US/docs/Web/API/Fullscreen_API/Guide">Guide to the Fullscreen API</a></li>
-</ul>
+- [Document: fullscreenchange event](/en-US/docs/Web/API/Document/fullscreenchange_event)
+- [Element: fullscreenerror event](/en-US/docs/Web/API/Element/fullscreenerror_event)
+- [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API)
+- [Guide to the Fullscreen API](/en-US/docs/Web/API/Fullscreen_API/Guide)

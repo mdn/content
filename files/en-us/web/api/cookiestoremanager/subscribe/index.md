@@ -9,56 +9,55 @@ tags:
   - CookieStoreManager
 browser-compat: api.CookieStoreManager.subscribe
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("Cookie Store")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("Cookie Store")}}
 
-<p>The <strong><code>subscribe()</code></strong> method of the {{domxref("CookieStoreManager")}} interface subscribes a {{domxref("ServiceWorkerRegistration")}} to cookie change events.</p>
+The **`subscribe()`** method of the {{domxref("CookieStoreManager")}} interface subscribes a {{domxref("ServiceWorkerRegistration")}} to cookie change events.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox notranslate">let promise = registration.cookies.subscribe(subscriptions);</pre>
+    let promise = registration.cookies.subscribe(subscriptions);
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>subscriptions</dt>
-  <dd>An object containing:
-    <dl>
-      <dt><code>name</code></dt>
-      <dd>A {{domxref("USVString")}} with the name of a cookie.</dd>
-      <dt><code>url</code></dt>
-      <dd>A {{domxref("USVString")}} with the url of a cookie scope. This may be narrower than the scope of the service worker registration.</dd>
-    </dl>
-  </dd>
-</dl>
+- subscriptions
 
-<h3 id="Returns">Return value</h3>
+  - : An object containing:
 
-<p>A {{jsxref("Promise")}} that resolves with {{jsxref("Undefined")}} when the subscription completes.</p>
+    - `name`
+      - : A {{domxref("USVString")}} with the name of a cookie.
+    - `url`
+      - : A {{domxref("USVString")}} with the url of a cookie scope. This may be narrower than the scope of the service worker registration.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Return value
 
-<dl>
-  <dt>{{jsxref("TypeError")}}</dt>
-  <dd>Thrown if the url passed in <code>subscriptions</code> does not match the service worker registration's {{domxref("ServiceWorkerRegistration.scope","scope")}}.</dd>
-</dl>
+A {{jsxref("Promise")}} that resolves with {{jsxref("Undefined")}} when the subscription completes.
 
-<h2 id="Examples">Examples</h2>
+### Exceptions
 
-<p>In this example the {{domxref("ServiceWorkerRegistration")}} represented by <code>registration</code> is subscribing to change events on the cookie named <code>"cookie1"</code> with a scope of <code>"/path1"</code>.</p>
+- {{jsxref("TypeError")}}
+  - : Thrown if the url passed in `subscriptions` does not match the service worker registration's {{domxref("ServiceWorkerRegistration.scope","scope")}}.
 
-<pre class="brush: js">const subscriptions = [{ name: 'cookie1', url: `/path1` }];
-await registration.cookies.subscribe(subscriptions);</pre>
+## Examples
 
-<p>The url passed to the <code>subscribe()</code> method, may be narrower than the service worker registration scope. In the following example the subscription is for <code>/path/one/</code>, so it will receive change events for changes on the first cookie, but not the second.</p>
+In this example the {{domxref("ServiceWorkerRegistration")}} represented by `registration` is subscribing to change events on the cookie named `"cookie1"` with a scope of `"/path1"`.
 
-<pre class="brush: js">registration.cookies.subscribe([{name: 'cookie1', url: '/path/one/'}]); // subscription
+```js
+const subscriptions = [{ name: 'cookie1', url: `/path1` }];
+await registration.cookies.subscribe(subscriptions);
+```
+
+The url passed to the `subscribe()` method, may be narrower than the service worker registration scope. In the following example the subscription is for `/path/one/`, so it will receive change events for changes on the first cookie, but not the second.
+
+```js
+registration.cookies.subscribe([{name: 'cookie1', url: '/path/one/'}]); // subscription
 cookieStore.set({name: 'cookie1', value: 'cookie-value', path: '/path/one/'}); // recieves a change event
-cookieStore.set({name: 'cookie1', value: 'cookie-value', path: '/path/two/'}); // does not receive a change event</pre>
+cookieStore.set({name: 'cookie1', value: 'cookie-value', path: '/path/two/'}); // does not receive a change event
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

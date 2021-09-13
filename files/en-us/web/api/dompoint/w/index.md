@@ -2,47 +2,46 @@
 title: DOMPoint.w
 slug: Web/API/DOMPoint/w
 tags:
-- API
-- DOM
-- DOMPoint
-- Geometry
-- Geometry Interfaces
-- Point
-- Property
-- Reference
-- W
-- perspective
+  - API
+  - DOM
+  - DOMPoint
+  - Geometry
+  - Geometry Interfaces
+  - Point
+  - Property
+  - Reference
+  - W
+  - perspective
 browser-compat: api.DOMPoint.w
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>DOMPoint</strong></code> interface's
-    <code><strong>w</strong></code> property holds the point's perspective value, w, for a
-    point in space.</p>
+The **`DOMPoint`** interface's
+**`w`** property holds the point's perspective value, w, for a
+point in space.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>perspective</em> = <em>DOMPoint</em>.w;</pre>
+```js
+var perspective = DOMPoint.w;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A double-precision floating-point value indicating the <em>w</em> perspective value for
-  the point. This value is <strong>unrestricted</strong>, meaning that it is allowed to be
-  infinite or invalid (that is, its value may be {{jsxref("NaN")}} or {{jsxref("Infinity",
-  "±Infinity")}}). The default is 1.0.</p>
+A double-precision floating-point value indicating the _w_ perspective value for
+the point. This value is **unrestricted**, meaning that it is allowed to be
+infinite or invalid (that is, its value may be {{jsxref("NaN")}} or {{jsxref("Infinity",
+  "±Infinity")}}). The default is 1.0.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The other coordinate properties: {{domxref("DOMPoint.x", "x")}},
-    {{domxref("DOMPoint.y", "y")}}, and {{domxref("DOMPoint.z", "z")}}.</li>
-</ul>
+- The other coordinate properties: {{domxref("DOMPoint.x", "x")}},
+  {{domxref("DOMPoint.y", "y")}}, and {{domxref("DOMPoint.z", "z")}}.

@@ -11,43 +11,45 @@ tags:
   - Element
 browser-compat: api.Element.ariaDisabled
 ---
-<div>{{DefaultAPISidebar("DOM")}}</div>
+{{DefaultAPISidebar("DOM")}}
 
-<p>The <strong><code>ariaDisabled</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <code>aria-disabled</code> attribute, which indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.</p>
+The **`ariaDisabled`** property of the {{domxref("Element")}} interface reflects the value of the `aria-disabled` attribute, which indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Where possible, use the {{htmlelement("input")}} element with <code>type="button"</code> or the {{htmlelement("button")}} element —  because those elements have built in semantics and do not require ARIA attributes.</p>
-</div>
+> **Note:** Where possible, use the {{htmlelement("input")}} element with `type="button"` or the {{htmlelement("button")}} element —  because those elements have built in semantics and do not require ARIA attributes.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox notranslate">var <var>ariaDisabled</var> = element.ariaDisabled;
-<var>element</var>.ariaDisabled = <var>ariaDisabled</var></pre>
+    var ariaDisabled = element.ariaDisabled;
+    element.ariaDisabled = ariaDisabled
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString")}} with one of the following values:</p>
+### Value
 
-<dl>
-  <dt><code>"true"</code></dt>
-  <dd>The element and all focusable descendants are disabled, but perceivable, and their values cannot be changed by the user.</dd>
-  <dt><code>"false"</code></dt>
-  <dd>The element is enabled.</dl>
+A {{domxref("DOMString")}} with one of the following values:
 
-<h2 id="Examples">Examples</h2>
+- `"true"`
+  - : The element and all focusable descendants are disabled, but perceivable, and their values cannot be changed by the user.
+- `"false"`
+  - : The element is enabled.
 
-<p>In this example the <code>aria-disabled</code> attribute on the element with an ID of <code>saveChanges</code> is set to "true" indicating that this input is currently disabled. Using <code>ariaDisabled</code> we update the value to "false".</p>
+## Examples
 
-<pre class="brush: html">&lt;div id="saveChanges" tabindex="0" role="button" aria-disabled="true"&gt;Save&lt;/div&gt;</pre>
+In this example the `aria-disabled` attribute on the element with an ID of `saveChanges` is set to "true" indicating that this input is currently disabled. Using `ariaDisabled` we update the value to "false".
 
-<pre class="brush: js">let el = document.getElementById('saveChanges');
+```html
+<div id="saveChanges" tabindex="0" role="button" aria-disabled="true">Save</div>
+```
+
+```js
+let el = document.getElementById('saveChanges');
 console.log(el.ariaDisabled); // "true"
 el.ariaDisabled = "false"
-console.log(el.ariaDisabled); // "false"</pre>
+console.log(el.ariaDisabled); // "false"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

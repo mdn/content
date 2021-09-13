@@ -2,53 +2,52 @@
 title: PerformanceNavigationTiming.type
 slug: Web/API/PerformanceNavigationTiming/type
 tags:
-- API
-- Property
-- Reference
-- Web Performance
+  - API
+  - Property
+  - Reference
+  - Web Performance
 browser-compat: api.PerformanceNavigationTiming.type
 ---
-<div>{{APIRef("Navigation Timing")}}{{SeeCompatTable}}</div>
+{{APIRef("Navigation Timing")}}{{SeeCompatTable}}
 
-<p>The <strong><code>type</code></strong> read-only property returns a
-  {{domxref("DOMString","string")}} representing the type of navigation. The value must be
-  one of the following:</p>
+The **`type`** read-only property returns a
+{{domxref("DOMString","string")}} representing the type of navigation. The value must be
+one of the following:
 
-<dl>
-  <dt>navigate</dt>
-  <dd>Navigation started by clicking a link, entering the URL in the browser's address
+- navigate
+  - : Navigation started by clicking a link, entering the URL in the browser's address
     bar, form submission, or initializing through a script operation other than reload and
-    back_forward as listed below.</dd>
-  <dt>reload</dt>
-  <dd>Navigation is through the browser's reload operation or
-    {{domxref("location.reload()")}}.</dd>
-  <dt>back_forward</dt>
-  <dd>Navigation is through the browser's history traversal operation.</dd>
-  <dt>prerender</dt>
-  <dd>Navigation is initiated by a <a
-      href="https://www.w3.org/TR/resource-hints/#prerender">prerender hint</a>.</dd>
-</dl>
+    back_forward as listed below.
+- reload
+  - : Navigation is through the browser's reload operation or
+    {{domxref("location.reload()")}}.
+- back_forward
+  - : Navigation is through the browser's history traversal operation.
+- prerender
+  - : Navigation is initiated by a [prerender hint](https://www.w3.org/TR/resource-hints/#prerender).
 
-<p>This property is {{readonlyInline}}.</p>
+This property is {{readonlyInline}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>perfEntry</em>.type;
-</pre>
+```js
+perfEntry.type;
+```
 
-<h3 id="Return_Value">Return Value</h3>
+### Return Value
 
-<p>A {{domxref("DOMString","string")}} which is one of the values listed above.</p>
+A {{domxref("DOMString","string")}} which is one of the values listed above.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example illustrates this property's usage.</p>
+The following example illustrates this property's usage.
 
-<pre class="brush: js">function print_nav_timing_data() {
+```js
+function print_nav_timing_data() {
   // Use getEntriesByType() to just get the "navigation" events
   var perfEntries = performance.getEntriesByType("navigation");
 
-  for (var i=0; i &lt; perfEntries.length; i++) {
+  for (var i=0; i < perfEntries.length; i++) {
     console.log("= Navigation entry[" + i + "]");
     var p = perfEntries[i];
     // dom Properties
@@ -65,12 +64,12 @@ browser-compat: api.PerformanceNavigationTiming.type
     console.log("redirectCount = " + p.redirectCount);
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

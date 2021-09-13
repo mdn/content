@@ -2,47 +2,47 @@
 title: VideoPlaybackQuality.totalFrameDelay
 slug: Web/API/VideoPlaybackQuality/totalFrameDelay
 tags:
-- API
-- Experimental
-- Media Source Extensions
-- Deprecated
-- Property
-- Reference
-- Video
-- VideoPlaybackQuality
-- totalFrameDelay
+  - API
+  - Experimental
+  - Media Source Extensions
+  - Deprecated
+  - Property
+  - Reference
+  - Video
+  - VideoPlaybackQuality
+  - totalFrameDelay
 browser-compat: api.VideoPlaybackQuality.totalFrameDelay
 ---
-<p>{{APIRef("Media Source Extensions")}}{{deprecated_header}}</p>
+{{APIRef("Media Source Extensions")}}{{deprecated_header}}
 
-<p>The <strong><code>VideoPlaybackQuality.totalFrameDelay</code></strong> read-only
-  property returns a <code>double</code> containing the sum of the frame delay since the
-  creation of the associated {{domxref("HTMLVideoElement")}}. The frame delay is the
-  difference between a frame's theoretical presentation time and its effective display
-  time.</p>
+The **`VideoPlaybackQuality.totalFrameDelay`** read-only
+property returns a `double` containing the sum of the frame delay since the
+creation of the associated {{domxref("HTMLVideoElement")}}. The frame delay is the
+difference between a frame's theoretical presentation time and its effective display
+time.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>value</em> = <em>videoPlaybackQuality</em>.totalFrameDelay;</pre>
+```js
+value = videoPlaybackQuality.totalFrameDelay;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var videoElt = document.getElementById('my_vid');
+```js
+var videoElt = document.getElementById('my_vid');
 var quality = videoElt.getVideoPlaybackQuality();
 
 alert(quality.totalFrameDelay);
-</pre>
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("HTMLVideoElement.getVideoPlaybackQuality()")}} method for
-    constructing and returning this interface.</li>
-  <li>{{domxref("MediaSource")}}</li>
-  <li>{{domxref("SourceBuffer")}}</li>
-</ul>
+- The {{domxref("HTMLVideoElement.getVideoPlaybackQuality()")}} method for
+  constructing and returning this interface.
+- {{domxref("MediaSource")}}
+- {{domxref("SourceBuffer")}}

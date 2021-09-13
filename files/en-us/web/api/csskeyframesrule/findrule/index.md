@@ -10,39 +10,36 @@ tags:
   - Reference
 browser-compat: api.CSSKeyframesRule.findRule
 ---
-<div>{{APIRef("CSSOM") }}</div>
+{{APIRef("CSSOM") }}
 
-<p>The <strong><code>findRule()</code></strong> method of the {{domxref("CSSKeyframeRule")}} interface finds the {{domxref("CSSKeyFrameRule")}} that matches the specified keyframe selector.</p>
+The **`findRule()`** method of the {{domxref("CSSKeyframeRule")}} interface finds the {{domxref("CSSKeyFrameRule")}} that matches the specified keyframe selector.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox"><var>CSSKeyframesRule</var>.findRule(<var>select</var>);</pre>
+    CSSKeyframesRule.findRule(select);
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>select</code></dt>
-    <dd><p>A {{domxref("CSSOMString")}} which contains the keyframe selector of the rule to be found, which must be:</p>
-      <ul>
-        <li>a comma-separated list of percentage values between 0% and 100%;</li>
-        <li>or, the keywords <code>from</code> or <code>to</code></li>
-      </ul>
+- `select`
 
-      <p>Note that the number and order of the values in the specified keyframe selector must match those of the targeted keyframe rule(s). White-space is disregarded.</p>
-    </dd>
-</dl>
+  - : A {{domxref("CSSOMString")}} which contains the keyframe selector of the rule to be found, which must be:
 
-<h3 id="value">Return value</h3>
-<p>A {{domxref("CSSKeyframeRule")}} which is the last matching rule. If no rules are found, nothing is returned.</p>
+    - a comma-separated list of percentage values between 0% and 100%;
+    - or, the keywords `from` or `to`
 
-<h2 id="Example">Example</h2>
+    Note that the number and order of the values in the specified keyframe selector must match those of the targeted keyframe rule(s). White-space is disregarded.
 
-<p>
-    The CSS includes a keyframes at-rule. This will be the first {{domxref("CSSRule")}} returned by <code>document.styleSheets[0].cssRules</code>.
-    <code>myRules[0]</code> returns a {{domxref("CSSKeyframesRule")}} object. Calling findRule("to") returns a {{domxref("CSSKeyframeRule")}} representing the second rule.
-</p>
+### Return value
 
-<pre class="brush: css">@keyframes slidein {
+A {{domxref("CSSKeyframeRule")}} which is the last matching rule. If no rules are found, nothing is returned.
+
+## Example
+
+The CSS includes a keyframes at-rule. This will be the first {{domxref("CSSRule")}} returned by `document.styleSheets[0].cssRules`.
+`myRules[0]` returns a {{domxref("CSSKeyframesRule")}} object. Calling findRule("to") returns a {{domxref("CSSKeyframeRule")}} representing the second rule.
+
+```css
+@keyframes slidein {
   from {
     transform: translateX(0%);
   }
@@ -50,16 +47,19 @@ browser-compat: api.CSSKeyframesRule.findRule
   to {
     transform: translateX(100%);
   }
-}</pre>
+}
+```
 
-<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
+```js
+let myRules = document.styleSheets[0].cssRules;
 let keyframes = myRules[0]; // a CSSKeyframesRule
-console.log(keyframes.findRule('to'));  // a CSSKeyframeRule object</pre>
+console.log(keyframes.findRule('to'));  // a CSSKeyframeRule object
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

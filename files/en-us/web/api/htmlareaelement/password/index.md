@@ -7,41 +7,40 @@ tags:
   - Property
 browser-compat: api.HTMLAreaElement.password
 ---
-<p>{{ApiRef("HTML DOM")}}</p>
+{{ApiRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLAreaElement.password</code></strong> property is a
-  {{domxref("USVString")}} containing the password specified before the domain name.</p>
+The **`HTMLAreaElement.password`** property is a
+{{domxref("USVString")}} containing the password specified before the domain name.
 
-<p>If it is set without first setting the
-  <code><a href="/en-US/docs/Web/API/HTMLAreaElement/username">username</a></code>
-  property, it silently fails.</p>
+If it is set without first setting the
+[`username`](/en-US/docs/Web/API/HTMLAreaElement/username)
+property, it silently fails.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 // Getter
-<em>string</em> = <em>area</em>.password;
+string = area.password;
 // Setter
-<em>area</em>.password = <em>string</em>;
-</pre>
+area.password = string;
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">// An &lt;area id="myArea" href="https://anonymous:flabada@developer.mozilla.org/en-US/docs/HTMLAreaElement"&gt; is in the document
+```js
+// An <area id="myArea" href="https://anonymous:flabada@developer.mozilla.org/en-US/docs/HTMLAreaElement"> is in the document
 const area = document.getElementByID("myArea");
 area.password; // returns 'flabada'
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("HTMLAreaElement")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("HTMLAreaElement")}} interface it belongs to.

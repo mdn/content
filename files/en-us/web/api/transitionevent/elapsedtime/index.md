@@ -12,29 +12,27 @@ tags:
   - TransitionEvent
 browser-compat: api.TransitionEvent.elapsedTime
 ---
-<p>{{ apiref("CSSOM") }} {{SeeCompatTable}}</p>
+{{ apiref("CSSOM") }} {{SeeCompatTable}}
 
-<p>The <code><strong>TransitionEvent.elapsedTime</strong></code> read-only property is a
-  <code>float</code> giving the amount of time the animation has been running, in seconds,
-  when this event fired. This value is not affected by the {{cssxref("transition-delay")}}
-  property.</p>
+The **`TransitionEvent.elapsedTime`** read-only property is a
+`float` giving the amount of time the animation has been running, in seconds,
+when this event fired. This value is not affected by the {{cssxref("transition-delay")}}
+property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>name</em> = <em>TransitionEvent</em>.elapsedTime</pre>
+```js
+name = TransitionEvent.elapsedTime
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">Using CSS transitions</a>
-  </li>
-</ul>
+- [Using CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)

@@ -2,44 +2,39 @@
 title: Selection.removeAllRanges()
 slug: Web/API/Selection/removeAllRanges
 tags:
-- API
-- Experimental
-- HTML Editing
-- Method
-- Reference
-- Selection
+  - API
+  - Experimental
+  - HTML Editing
+  - Method
+  - Reference
+  - Selection
 browser-compat: api.Selection.removeAllRanges
 ---
-<div>
-  <div>
-    <div>{{ ApiRef("DOM") }}{{SeeCompatTable}}</div>
-  </div>
-</div>
+{{ ApiRef("DOM") }}{{SeeCompatTable}}
 
-<p>The <strong><code>Selection.removeAllRanges()</code></strong> method removes all ranges
-  from the selection, leaving the {{domxref("Selection.anchorNode", "anchorNode")}} and
-  {{domxref("Selection.focusNode","focusNode")}} properties equal to <code>null</code> and
-  leaving nothing selected.</p>
+The **`Selection.removeAllRanges()`** method removes all ranges
+from the selection, leaving the {{domxref("Selection.anchorNode", "anchorNode")}} and
+{{domxref("Selection.focusNode","focusNode")}} properties equal to `null` and
+leaving nothing selected.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>sel</em>.removeAllRanges();
-</pre>
+```js
+sel.removeAllRanges();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p><em>None.</em></p>
+_None._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Selection")}}, the interface it belongs to.</li>
-</ul>
+- {{domxref("Selection")}}, the interface it belongs to.

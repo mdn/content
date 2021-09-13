@@ -2,35 +2,33 @@
 title: msSetMediaProtectionManager
 slug: Web/API/MsSetMediaProtectionManager
 tags:
-- msSetMediaProtectionManager
+  - msSetMediaProtectionManager
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>{{Non-standard_header()}}</p>
+{{Non-standard_header()}}
 
-<p>The <strong><code>msSetMediaProtectionManager</code></strong> method specifies the
-  media protection manager for a given media pipeline.</p>
+The **`msSetMediaProtectionManager`** method specifies the
+media protection manager for a given media pipeline.
 
-<p>This proprietary method is specific to Internet Explorer and Microsoft Edge.</p>
+This proprietary method is specific to Internet Explorer and Microsoft Edge.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 HTMLMediaElement.msSetMediaProtectionManager(mediaProtectionManager);
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>The <a
-    href="https://docs.microsoft.com/en-us/uwp/api/windows.media.protection">Windows.Media.Protection</a>
-  namespace provides classes to manage Digital Rights Management (DRM) media contents. The
-  <code>MediaProtectionManager</code> class can be passed as an input to a media playback
-  API or the <code>mediaProtectionManager</code> property inside the tag's video or audio.
-</p>
+The [Windows.Media.Protection](https://docs.microsoft.com/en-us/uwp/api/windows.media.protection)
+namespace provides classes to manage Digital Rights Management (DRM) media contents. The
+`MediaProtectionManager` class can be passed as an input to a media playback
+API or the `mediaProtectionManager` property inside the tag's video or audio.
 
-<p>The optional parameter of the <code>msSetMediaProtectionManager</code> property is
-  <code>mediaProtectionManager</code> and can be any type.</p>
+The optional parameter of the `msSetMediaProtectionManager` property is
+`mediaProtectionManager` and can be any type.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>This method does not return a value.</p>
+This method does not return a value.

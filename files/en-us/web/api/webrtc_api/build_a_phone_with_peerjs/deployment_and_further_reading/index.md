@@ -2,22 +2,20 @@
 title: Deployment and further reading
 slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Deployment_and_further_reading
 ---
-<p>{{WebRTCSidebar}}</p>
+{{WebRTCSidebar}}
 
-<p>{{PreviousMenu("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/End_a_call")}}</p>
+{{PreviousMenu("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/End_a_call")}}
 
-<h2 id="Deployment">Deployment</h2>
+## Deployment
 
-<p>The easiest place to deploy this app would be <a href="https://glitch.com/">Glitch</a>, since you don’t have to fiddle with configuring the port for the peer server.</p>
+The easiest place to deploy this app would be [Glitch](https://glitch.com/), since you don’t have to fiddle with configuring the port for the peer server.
 
-<h2 id="Further_Reading">Further Reading</h2>
+## Further Reading
 
-<ul>
- <li><a href="https://peerjs.com/">PeerJS</a></li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
- <li><a href="https://github.com/peers/peerjs-server">PeerJS Server</a></li>
- <li><a href="https://www.youtube.com/watch?v=OOrBcpwelPY">A similar video tutorial with video</a></li>
- <li><a href="https://github.com/SamsungInternet/WebPhone/tree/master/tutorial">The code tutorial</a></li>
-</ul>
+- [PeerJS](https://peerjs.com/)
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)
+- [PeerJS Server](https://github.com/peers/peerjs-server)
+- [A similar video tutorial with video](https://www.youtube.com/watch?v=OOrBcpwelPY)
+- [The code tutorial](https://github.com/SamsungInternet/WebPhone/tree/master/tutorial)
 
-<p>{{PreviousMenu("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/End_a_call")}}</p>
+{{PreviousMenu("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/End_a_call")}}

@@ -2,48 +2,46 @@
 title: Document.onvisibilitychange
 slug: Web/API/Document/onvisibilitychange
 tags:
-- API
-- Document
-- Event Handler
-- Page Visibility
-- Property
-- Reference
-- onvisibilitychange
+  - API
+  - Document
+  - Event Handler
+  - Page Visibility
+  - Property
+  - Reference
+  - onvisibilitychange
 browser-compat: api.Document.onvisibilitychange
 ---
-<div>{{ApiRef('DOM')}}</div>
+{{ApiRef('DOM')}}
 
-<p>The <code><strong>Document.onvisibilitychange</strong></code> property represents the
-  event handler that is called when a {{event("visibilitychange")}} event reaches this
-  object.</p>
+The **`Document.onvisibilitychange`** property represents the
+event handler that is called when a {{event("visibilitychange")}} event reaches this
+object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>obj</em>.onvisibilitychange = <em>function</em>;
-</pre>
+```js
+obj.onvisibilitychange = function;
+```
 
-<ul>
-  <li><code>function</code> is the name of a user-defined function, without the () suffix
-    or any parameters, or an anonymous function declaration.</li>
-</ul>
+- `function` is the name of a user-defined function, without the () suffix
+  or any parameters, or an anonymous function declaration.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">document.onvisibilitychange = function() {
+```js
+document.onvisibilitychange = function() {
   console.log("Visibility of page has changed!");
 };
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Page_Visibility_API">Page Visibility API</a></li>
-</ul>
+- [Page Visibility API](/en-US/docs/Web/API/Page_Visibility_API)

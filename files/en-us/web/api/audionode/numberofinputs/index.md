@@ -2,33 +2,35 @@
 title: AudioNode.numberOfInputs
 slug: Web/API/AudioNode/numberOfInputs
 tags:
-- API
-- AudioNode
-- Property
-- Reference
-- Web Audio API
-- numberOfInputs
+  - API
+  - AudioNode
+  - Property
+  - Reference
+  - Web Audio API
+  - numberOfInputs
 browser-compat: api.AudioNode.numberOfInputs
 ---
-<div>{{APIRef("Web Audio API")}}</div>
+{{APIRef("Web Audio API")}}
 
-<p>The <code>numberOfInputs</code> property of
-    the {{domxref("AudioNode")}} interface returns the number of inputs feeding the
-    node. Source nodes are defined as nodes having a <code>numberOfInputs</code>
-  property with a value of 0.</p>
+The `numberOfInputs` property of
+the {{domxref("AudioNode")}} interface returns the number of inputs feeding the
+node. Source nodes are defined as nodes having a `numberOfInputs`
+property with a value of 0.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>numInputs</em> = <em>audioNode</em>.numberOfInputs;</pre>
+```js
+var numInputs = audioNode.numberOfInputs;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An integer ≥ 0.</p>
+An integer ≥ 0.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js;">const audioCtx = new AudioContext();
+```js
+const audioCtx = new AudioContext();
 
 const oscillator = audioCtx.createOscillator();
 const gainNode = audioCtx.createGain();
@@ -38,19 +40,17 @@ oscillator.connect(gainNode).connect(audioCtx.destination);
 console.log(oscillator.numberOfInputs); // 0
 console.log(gainNode.numberOfInputs); // 1
 console.log(audioCtx.destination.numberOfInputs); // 1
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio
-      API</a></li>
-</ul>
+- [Using the Web Audio
+  API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

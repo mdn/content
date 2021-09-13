@@ -9,35 +9,34 @@ tags:
   - screen
 browser-compat: api.WakeLock
 ---
-<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Screen Wake Lock API")}}</div>
+{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Screen Wake Lock API")}}
 
-<p>The <strong><code>WakeLock</code></strong> interface of the {{domxref('Screen Wake Lock API')}} prevents device screens from dimming or locking when an application needs to keep running.</p>
+The **`WakeLock`** interface of the {{domxref('Screen Wake Lock API')}} prevents device screens from dimming or locking when an application needs to keep running.
 
-<p>The system wake lock is exposed through the global {{domxref('Navigator.wakelock')}} property.</p>
+The system wake lock is exposed through the global {{domxref('Navigator.wakelock')}} property.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt><code>{{domxref("WakeLock.request", "request")}}</code></dt>
- <dd>Requests a {{domxref("WakeLockSentinel")}} object, which returns a {{jsxref("Promise")}} that resolves with a {{domxref("WakeLockSentinel")}} object.</dd>
-</dl>
+- `{{domxref("WakeLock.request", "request")}}`
+  - : Requests a {{domxref("WakeLockSentinel")}} object, which returns a {{jsxref("Promise")}} that resolves with a {{domxref("WakeLockSentinel")}} object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following asynchronous function requests a {{domxref("WakeLockSentinel")}} object. The {{domxref("WakeLock.request")}} method is wrapped in a <code>try...catch</code> statement to account for if the browser refuses the request for any reason.</p>
+The following asynchronous function requests a {{domxref("WakeLockSentinel")}} object. The {{domxref("WakeLock.request")}} method is wrapped in a `try...catch` statement to account for if the browser refuses the request for any reason.
 
-<pre class="brush: js">try {
+```js
+try {
   const wakeLock = await navigator.wakeLock.request('screen');
 } catch (err) {
   // the wake lock request fails - usually system related, such being low on battery
   console.log(`${err.name}, ${err.message}`);
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

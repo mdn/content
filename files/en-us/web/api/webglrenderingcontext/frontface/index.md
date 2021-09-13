@@ -2,56 +2,52 @@
 title: WebGLRenderingContext.frontFace()
 slug: Web/API/WebGLRenderingContext/frontFace
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.frontFace
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.frontFace()</code></strong> method of the <a
-    href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> specifies whether polygons are
-  front- or back-facing by setting a winding orientation.</p>
+The **`WebGLRenderingContext.frontFace()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) specifies whether polygons are
+front- or back-facing by setting a winding orientation.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <var>gl</var>.frontFace(<var>mode</var>);
-</pre>
+```js
+void gl.frontFace(mode);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>mode</dt>
-  <dd>A <a href="/en-US/docs/Web/API/WebGL_API/Types">GLenum</a> type winding orientation.
-    The default value is <code>gl.CCW</code>. Possible values:
-    <ul>
-      <li><code>gl.CW</code>: Clock-wise winding.</li>
-      <li><code>gl.CCW</code>: Counter-clock-wise winding.</li>
-    </ul>
-  </dd>
-</dl>
+- mode
 
-<h3 id="Return_value">Return value</h3>
+  - : A [GLenum](/en-US/docs/Web/API/WebGL_API/Types) type winding orientation.
+    The default value is `gl.CCW`. Possible values:
 
-<p>None.</p>
+    - `gl.CW`: Clock-wise winding.
+    - `gl.CCW`: Counter-clock-wise winding.
 
-<h2 id="Examples">Examples</h2>
+### Return value
 
-<pre class="brush: js">gl.frontFace(gl.CW);
-</pre>
+None.
 
-<h2 id="Specifications">Specifications</h2>
+## Examples
+
+```js
+gl.frontFace(gl.CW);
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.cullFace()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.cullFace()")}}

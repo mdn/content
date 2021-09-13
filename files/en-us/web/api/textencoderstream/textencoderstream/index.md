@@ -8,25 +8,27 @@ tags:
   - TextEncoderStream
 browser-compat: api.TextEncoderStream.TextEncoderStream
 ---
-<p>{{APIRef("Encoding API")}}</p>
+{{APIRef("Encoding API")}}
 
-<p>The <strong><code>TextEncoderStream()</code></strong> constructor creates a new {{domxref("TextEncoderStream")}} object which is used to convert a stream of strings into bytes using UTF-8 encoding.</p>
+The **`TextEncoderStream()`** constructor creates a new {{domxref("TextEncoderStream")}} object which is used to convert a stream of strings into bytes using UTF-8 encoding.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <var>TextEncoderStream</var> = new TextEncoderStream();</pre>
+    var TextEncoderStream = new TextEncoderStream();
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this example a <code>TextEncoderStream</code> is created and used to upload a stream of text.</p>
+In this example a `TextEncoderStream` is created and used to upload a stream of text.
 
-<pre class="brush:js">const body = textStream.pipeThrough(new TextEncoderStream());
-fetch('/dest', { method: 'POST', body, headers: {'Content-Type': 'text/plain; charset=UTF-8'} });</pre>
+```js
+const body = textStream.pipeThrough(new TextEncoderStream());
+fetch('/dest', { method: 'POST', body, headers: {'Content-Type': 'text/plain; charset=UTF-8'} });
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

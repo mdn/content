@@ -8,33 +8,29 @@ tags:
   - Reference
 browser-compat: api.HTMLModElement
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p>The <strong><code>HTMLModElement</code></strong> interface provides special properties (beyond the regular methods and properties available through the {{domxref("HTMLElement")}} interface they also have available to them by inheritance) for manipulating modification elements, that is {{HTMLElement("del")}} and {{HTMLElement("ins")}}.</p>
+The **`HTMLModElement`** interface provides special properties (beyond the regular methods and properties available through the {{domxref("HTMLElement")}} interface they also have available to them by inheritance) for manipulating modification elements, that is {{HTMLElement("del")}} and {{HTMLElement("ins")}}.
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{domxref("HTMLElement")}}.</em></p>
+_Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLModElement.cite")}}</dt>
- <dd>Is a {{domxref("DOMString")}} reflecting the {{htmlattrxref("cite", "del")}} HTML attribute, containing a URI of a resource explaining the change.</dd>
- <dt>{{domxref("HTMLModElement.dateTime")}}</dt>
- <dd>Is a {{domxref("DOMString")}} reflecting the {{htmlattrxref("datetime", "del")}} HTML attribute, containing a date-and-time string representing a timestamp for the change.</dd>
-</dl>
+- {{domxref("HTMLModElement.cite")}}
+  - : Is a {{domxref("DOMString")}} reflecting the {{htmlattrxref("cite", "del")}} HTML attribute, containing a URI of a resource explaining the change.
+- {{domxref("HTMLModElement.dateTime")}}
+  - : Is a {{domxref("DOMString")}} reflecting the {{htmlattrxref("datetime", "del")}} HTML attribute, containing a date-and-time string representing a timestamp for the change.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>HTML elements implementing this interface: {{HTMLElement("ins")}}, {{HTMLElement("del")}}.</li>
-</ul>
+- HTML elements implementing this interface: {{HTMLElement("ins")}}, {{HTMLElement("del")}}.

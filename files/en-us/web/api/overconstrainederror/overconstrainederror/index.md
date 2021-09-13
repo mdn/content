@@ -2,45 +2,43 @@
 title: OverconstrainedError()
 slug: Web/API/OverconstrainedError/OverconstrainedError
 tags:
-- API
-- Audio
-- Constructor
-- Media
-- Media Capture and Streams API
-- Media Streams API
-- OverconstrainedError
-- Reference
-- Video
+  - API
+  - Audio
+  - Constructor
+  - Media
+  - Media Capture and Streams API
+  - Media Streams API
+  - OverconstrainedError
+  - Reference
+  - Video
 browser-compat: api.OverconstrainedError.OverconstrainedError
 ---
-<div>{{securecontext_header}}{{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}
-</div>
+{{securecontext_header}}{{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}
 
-<p>The <strong><code>OverconstrainedError</code></strong> constructor
-  creates a new {{domxref("OverconstrainedError")}} object which indicates that the set of
-  desired capabilities for the current {{domxref("MediaStreamTrack")}} cannot currently be
-  met. When this event is thrown on a <code>MediaStreamTrack</code>, it is muted until
-  either the current constraints can be established or until satisfiable constraints are
-  applied.</p>
+The **`OverconstrainedError`** constructor
+creates a new {{domxref("OverconstrainedError")}} object which indicates that the set of
+desired capabilities for the current {{domxref("MediaStreamTrack")}} cannot currently be
+met. When this event is thrown on a `MediaStreamTrack`, it is muted until
+either the current constraints can be established or until satisfiable constraints are
+applied.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>OverconstrainedError</var> = new OverconstrainedError()</pre>
+```js
+var OverconstrainedError = new OverconstrainedError()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>constraint</dt>
-  <dd>The constraint that was not satified.</dd>
-  <dt>message</dt>
-  <dd>Text for the error's <code>message</code> property.</dd>
-</dl>
+- constraint
+  - : The constraint that was not satified.
+- message
+  - : Text for the error's `message` property.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

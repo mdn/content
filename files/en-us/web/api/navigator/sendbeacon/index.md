@@ -2,154 +2,144 @@
 title: Navigator.sendBeacon()
 slug: Web/API/Navigator/sendBeacon
 tags:
-- API
-- Beacon
-- Method
-- Navigator
-- NeedsExample
-- Networking
-- Reference
-- Web Performance
-- sendBeacon
+  - API
+  - Beacon
+  - Method
+  - Navigator
+  - NeedsExample
+  - Networking
+  - Reference
+  - Web Performance
+  - sendBeacon
 browser-compat: api.Navigator.sendBeacon
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <code><strong>navigator.sendBeacon()</strong></code>
-    method {{glossary("Asynchronous", "asynchronously")}} sends a small amount of data
-    over {{Glossary("HTTP")}} to a web server.</p>
+The **`navigator.sendBeacon()`**
+method {{glossary("Asynchronous", "asynchronously")}} sends a small amount of data
+over {{Glossary("HTTP")}} to a web server.
 
-<p>It’s intended to be used for
-    sending analytics data to a web server, and avoids some of the problems with
-    legacy techniques for sending analytics, such as the use of
-    {{domxref("XMLHttpRequest","XMLHttpRequest")}}.</p>
+It’s intended to be used for
+sending analytics data to a web server, and avoids some of the problems with
+legacy techniques for sending analytics, such as the use of
+{{domxref("XMLHttpRequest","XMLHttpRequest")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">navigator.sendBeacon(<var>url</var>);
-navigator.sendBeacon(<var>url</var>, <var>data</var>);
-</pre>
+```js
+navigator.sendBeacon(url);
+navigator.sendBeacon(url, data);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>url</var></code></dt>
-  <dd>The URL that will receive the <var>data</var>. Can be relative or absolute.</dd>
-  <dt><code><var>data</var></code> {{Optional_inline}}</dt>
-  <dd>A {{jsxref("ArrayBuffer")}}, {{domxref("ArrayBufferView")}}, {{domxref("Blob")}},
+- `url`
+  - : The URL that will receive the _data_. Can be relative or absolute.
+- `data` {{Optional_inline}}
+  - : A {{jsxref("ArrayBuffer")}}, {{domxref("ArrayBufferView")}}, {{domxref("Blob")}},
     {{domxref("DOMString")}}, {{domxref("FormData")}}, or {{domxref("URLSearchParams")}}
-    object containing the data to send.</dd>
-</dl>
+    object containing the data to send.
 
-<h3 id="Return_values">Return values</h3>
+### Return values
 
-<p>The <code><strong>sendBeacon()</strong></code> method returns <code>true</code> if the
-  {{glossary("user agent")}} successfully queued the <code>data</code> for transfer.
-  Otherwise, it returns <code>false</code>.</p>
+The **`sendBeacon()`** method returns `true` if the
+{{glossary("user agent")}} successfully queued the `data` for transfer.
+Otherwise, it returns `false`.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>This method is intended for analytics and diagnostics code to send data to a server.</p>
+This method is intended for analytics and diagnostics code to send data to a server.
 
-<p>A problem with sending analytics is that a site often wants to send analytics
-  when the user has finished with a page: for example, when the user navigates
-  to another page. In this situation the browser may be about to unload the page,
-  and in that case the browser may choose not to send asynchronous
-  {{domxref("XMLHttpRequest")}} requests.
-</p>
+A problem with sending analytics is that a site often wants to send analytics
+when the user has finished with a page: for example, when the user navigates
+to another page. In this situation the browser may be about to unload the page,
+and in that case the browser may choose not to send asynchronous
+{{domxref("XMLHttpRequest")}} requests.
 
-<p>In the past, web pages have tried to delay page unload long enough to send data. To do this they have
-  used workarounds such as:</p>
+In the past, web pages have tried to delay page unload long enough to send data. To do this they have
+used workarounds such as:
 
-<ul>
-  <li>Submitting the data with a blocking synchronous <code>XMLHttpRequest</code> call.</li>
-  <li>Creating an {{HTMLElement("img")}} element and setting its <code>src</code>. Most user agents will delay the unload to load the image.
-  </li>
-  <li>Creating a no-op loop for several seconds.</li>
-</ul>
+- Submitting the data with a blocking synchronous `XMLHttpRequest` call.
+- Creating an {{HTMLElement("img")}} element and setting its `src`. Most user agents will delay the unload to load the image.
+- Creating a no-op loop for several seconds.
 
-<p>All these methods block unloading the document, which slows down navigation to the next page.
-  There's nothing the next page can do to avoid this, so the new page seems
-  slow, even though it's the fault of the previous page.</p>
+All these methods block unloading the document, which slows down navigation to the next page.
+There's nothing the next page can do to avoid this, so the new page seems
+slow, even though it's the fault of the previous page.
 
-<p>With the <code>sendBeacon()</code> method, the data is transmitted asynchronously when the user
-  agent has an opportunity to do so, without delaying unload or the next navigation.
-  This means:</p>
+With the `sendBeacon()` method, the data is transmitted asynchronously when the user
+agent has an opportunity to do so, without delaying unload or the next navigation.
+This means:
 
-<ul>
-  <li>The data is sent reliably</li>
-  <li>It's sent asynchronously</li>
-  <li>It doesn't impact the loading of the next page</li>
-</ul>
+- The data is sent reliably
+- It's sent asynchronously
+- It doesn't impact the loading of the next page
 
-<h3>Sending analytics at the end of a session</h3>
+### Sending analytics at the end of a session
 
-<p>Web sites often want to send analytics or diagnostics to the server when the user has finished with the page.
-  The most reliable way to do this is to send the data on the <a href="/en-US/docs/Web/API/Document/visibilitychange_event"><code>visibilitychange</code></a> event:</p>
+Web sites often want to send analytics or diagnostics to the server when the user has finished with the page.
+The most reliable way to do this is to send the data on the [`visibilitychange`](/en-US/docs/Web/API/Document/visibilitychange_event) event:
 
-<pre class="brush: js">document.addEventListener('visibilitychange', function logData() {
+```js
+document.addEventListener('visibilitychange', function logData() {
   if (document.visibilityState === 'hidden') {
     navigator.sendBeacon('/log', analyticsData);
   }
-});</pre>
+});
+```
 
-<h4>Avoid unload and beforeunload</h4>
+#### Avoid unload and beforeunload
 
-<p>In the past, many websites have used the <a href="/en-US/docs/Web/API/Window/unload_event"><code>unload</code></a>
-  or <a href="/en-US/docs/Web/API/Window/beforeunload_event"><code>beforeunload</code></a> events to send analytics at the end of a session.
-  However, this is extremely unreliable. In many situations, especially on mobile, the browser will not fire the
-  <code>unload</code>, <code>beforeunload</code>, or <code>pagehide</code> events. For example, these events will not fire in the following situation:</p>
+In the past, many websites have used the [`unload`](/en-US/docs/Web/API/Window/unload_event)
+or [`beforeunload`](/en-US/docs/Web/API/Window/beforeunload_event) events to send analytics at the end of a session.
+However, this is extremely unreliable. In many situations, especially on mobile, the browser will not fire the
+`unload`, `beforeunload`, or `pagehide` events. For example, these events will not fire in the following situation:
 
-  <ol>
-    <li>The user loads the page and interacts with it.</li>
-    <li>When they are finished, they switch to a different app, instead of closing the tab.</li>
-    <li>Later, they close the browser app using the phone's app manager.</li>
-  </ol>
+1.  The user loads the page and interacts with it.
+2.  When they are finished, they switch to a different app, instead of closing the tab.
+3.  Later, they close the browser app using the phone's app manager.
 
-<p>Additionally, the <code>unload</code> event is incompatible with the back/forward cache (<a href="https://web.dev/bfcache/">bfcache</a>)
-  implemented in modern browsers. Some browsers, such as Firefox, handle this incompatibility by excluding pages from the bfcache if they contain unload handlers,
-  thus hurting performance. Others, such as Safari and Chrome on Android, handle it by not firing the <code>unload</code> event when the user navigates to another page in the same tab.</p>
+Additionally, the `unload` event is incompatible with the back/forward cache ([bfcache](https://web.dev/bfcache/))
+implemented in modern browsers. Some browsers, such as Firefox, handle this incompatibility by excluding pages from the bfcache if they contain unload handlers,
+thus hurting performance. Others, such as Safari and Chrome on Android, handle it by not firing the `unload` event when the user navigates to another page in the same tab.
 
-<p>Firefox will also exclude pages from the bfcache if they contain <code>beforeunload</code> handlers.</p>
+Firefox will also exclude pages from the bfcache if they contain `beforeunload` handlers.
 
-<h4>Use pagehide as a fallback</h4>
+#### Use pagehide as a fallback
 
-<p>To support browsers which don't implement <code>visibilitychange</code>, use the <a href="/en-US/docs/Web/API/Window/pagehide_event"><code>pagehide</code></a> event.
-  Like <code>beforeunload</code> and <code>unload</code>, this event is not reliably fired, especially on mobile. However, it is compatible with the bfcache.</p>
+To support browsers which don't implement `visibilitychange`, use the [`pagehide`](/en-US/docs/Web/API/Window/pagehide_event) event.
+Like `beforeunload` and `unload`, this event is not reliably fired, especially on mobile. However, it is compatible with the bfcache.
 
-<h2>Examples</h2>
+## Examples
 
-<p>The following example specifies a handler for the {{event("visibilitychange")}} event. The handler calls <code>sendBeacon()</code> to send analytics.</p>
+The following example specifies a handler for the {{event("visibilitychange")}} event. The handler calls `sendBeacon()` to send analytics.
 
-<pre class="brush: js">document.addEventListener('visibilitychange', function logData() {
+```js
+document.addEventListener('visibilitychange', function logData() {
   if (document.visibilityState === 'hidden') {
     navigator.sendBeacon('/log', analyticsData);
   }
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The <a href="/en-US/docs/Web/API/Document/visibilitychange_event"><code>visibilitychange</code></a> event.</li>
-  <li>{{domxref("Beacon_API","Beacon API", "" , "true")}} overview page.</li>
-  <li><a
-      href="https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/">Don't
-      lose user and app state, use Page Visibility</a> explains in
-    detail why you should use <code>visibilitychange</code>, not
-    <code>beforeunload</code>/<code>unload</code>.
-  </li>
-  <li><a
-      href="https://developers.google.com/web/updates/2018/07/page-lifecycle-api#developer-recommendations-for-each-state">Page
-      Lifecycle API</a> gives best-practices guidance on handling
-    page lifecyle behavior in your web applications.</li>
-  <li><a href="https://github.com/GoogleChromeLabs/page-lifecycle">PageLifecycle.js</a>: a JavaScript library that deals with cross-browser inconsistencies in page lifecyle behavior.</li>
-  <li><a href="https://web.dev/bfcache/">Back/forward cache</a> explains what the back/forward cache is, and its implications for various page lifecycle events.</li>
-</ul>
+- The [`visibilitychange`](/en-US/docs/Web/API/Document/visibilitychange_event) event.
+- {{domxref("Beacon_API","Beacon API", "" , "true")}} overview page.
+- [Don't
+  lose user and app state, use Page Visibility](https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/) explains in
+  detail why you should use `visibilitychange`, not
+  `beforeunload`/`unload`.
+- [Page
+  Lifecycle API](https://developers.google.com/web/updates/2018/07/page-lifecycle-api#developer-recommendations-for-each-state) gives best-practices guidance on handling
+  page lifecyle behavior in your web applications.
+- [PageLifecycle.js](https://github.com/GoogleChromeLabs/page-lifecycle): a JavaScript library that deals with cross-browser inconsistencies in page lifecyle behavior.
+- [Back/forward cache](https://web.dev/bfcache/) explains what the back/forward cache is, and its implications for various page lifecycle events.

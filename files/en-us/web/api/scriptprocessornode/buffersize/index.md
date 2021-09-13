@@ -10,40 +10,38 @@ tags:
   - bufferSize
 browser-compat: api.ScriptProcessorNode.bufferSize
 ---
-<p>{{APIRef("Web Audio API")}}{{deprecated_header}}</p>
+{{APIRef("Web Audio API")}}{{deprecated_header}}
 
-<p>The <code>bufferSize</code> property of the {{domxref("ScriptProcessorNode")}} interface returns an integer representing both the input and output buffer size, in sample-frames. Its value can be a power of 2 value in the range <code>256</code>–<code>16384</code>.</p>
+The `bufferSize` property of the {{domxref("ScriptProcessorNode")}} interface returns an integer representing both the input and output buffer size, in sample-frames. Its value can be a power of 2 value in the range `256`–`16384`.
 
-<div class="note">
-  <p><strong>Note:</strong> This feature was replaced by <a href="/en-US/docs/Web/API/AudioWorklet">AudioWorklets</a> and the {{domxref("AudioWorkletNode")}} interface.</p>
-</div>
+> **Note:** This feature was replaced by [AudioWorklets](/en-US/docs/Web/API/AudioWorklet) and the {{domxref("AudioWorkletNode")}} interface.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var audioCtx = new AudioContext();
+```js
+var audioCtx = new AudioContext();
 var scriptNode = audioCtx.createScriptProcessor(4096, 1, 1);
-console.log(scriptNode.bufferSize);</pre>
+console.log(scriptNode.bufferSize);
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An integer.</p>
+An integer.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See <a href="/en-US/docs/Web/API/BaseAudioContext/createScriptProcessor#example"><code>BaseAudioContext.createScriptProcessor()</code></a> for example code.</p>
+See [`BaseAudioContext.createScriptProcessor()`](/en-US/docs/Web/API/BaseAudioContext/createScriptProcessor#example) for example code.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Since the August 29 2014 <a href="https://www.w3.org/TR/webaudio/#ScriptProcessorNode">Web Audio API specification</a> publication, this feature has been deprecated. It is no longer on track to become a standard.</p>
+Since the August 29 2014 [Web Audio API specification](https://www.w3.org/TR/webaudio/#ScriptProcessorNode) publication, this feature has been deprecated. It is no longer on track to become a standard.
 
-<p>It was replaced by <a href="/en-US/docs/Web/API/AudioWorklet">AudioWorklets</a> and the {{domxref("AudioWorkletNode")}} interface.</p>
+It was replaced by [AudioWorklets](/en-US/docs/Web/API/AudioWorklet) and the {{domxref("AudioWorkletNode")}} interface.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

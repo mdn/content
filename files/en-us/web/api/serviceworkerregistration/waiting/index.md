@@ -2,53 +2,49 @@
 title: ServiceWorkerRegistration.waiting
 slug: Web/API/ServiceWorkerRegistration/waiting
 tags:
-- API
-- Property
-- Reference
-- Service Workers
-- ServiceWorkerRegistration
-- waiting
+  - API
+  - Property
+  - Reference
+  - Service Workers
+  - ServiceWorkerRegistration
+  - waiting
 browser-compat: api.ServiceWorkerRegistration.waiting
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p>The <strong><code>waiting</code></strong> property of the
-  {{domxref("ServiceWorkerRegistration")}} interface returns a service worker whose
-  {{domxref("ServiceWorker.state")}} is <code>installed</code>. This property is initially
-  set to <code>null</code>.</p>
+The **`waiting`** property of the
+{{domxref("ServiceWorkerRegistration")}} interface returns a service worker whose
+{{domxref("ServiceWorker.state")}} is `installed`. This property is initially
+set to `null`.
 
-<div class="note">
-  <p><strong>Note:</strong> This feature is available in <a
-      href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
-</div>
+> **Note:** This feature is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>serviceWorker</em> = <em>serviceWorkerRegistration</em>.waiting;
-</pre>
+```js
+var serviceWorker = serviceWorkerRegistration.waiting;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("ServiceWorker")}} object, if it is currently in an <code>installed</code>
-  state.</p>
+A {{domxref("ServiceWorker")}} object, if it is currently in an `installed`
+state.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service
-      Workers</a></li>
-  <li><a href="https://github.com/mdn/sw-test">Service workers basic code example</a></li>
-  <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker
-      ready?</a></li>
-  <li>{{jsxref("Promise")}}</li>
-  <li><a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web
-      workers</a></li>
-</ul>
+- [Using Service
+  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Is ServiceWorker
+  ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- {{jsxref("Promise")}}
+- [Using web
+  workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

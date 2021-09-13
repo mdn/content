@@ -10,62 +10,68 @@ tags:
   - cancel
 browser-compat: api.HTMLDialogElement.cancel_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <strong><code>cancel</code></strong> event fires on a {{HTMLElement("dialog")}} when the user instructs the browser that they wish to dismiss the current open dialog. For example, the browser might fire this event when the user presses the <kbd>Esc</kbd> key or clicks a "Close dialog" button which is part of the browser's UI.</p>
+The **`cancel`** event fires on a {{HTMLElement("dialog")}} when the user instructs the browser that they wish to dismiss the current open dialog. For example, the browser might fire this event when the user presses the <kbd>Esc</kbd> key or clicks a "Close dialog" button which is part of the browser's UI.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler</th>
-   <td>{{domxref("GlobalEventHandlers/oncancel", "oncancel")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler</th>
+      <td>
+        {{domxref("GlobalEventHandlers/oncancel", "oncancel")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Live_example">Live example</h3>
+### Live example
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;dialog class="example-dialog"&gt;
-    &lt;button class="close" type="reset"&gt;Close&lt;/button&gt;
-&lt;/dialog&gt;
+```html
+<dialog class="example-dialog">
+    <button class="close" type="reset">Close</button>
+</dialog>
 
-&lt;button class="open-dialog"&gt;Open dialog&lt;/button&gt;
+<button class="open-dialog">Open dialog</button>
 
-&lt;div class="result"&gt;&lt;/div&gt;</pre>
+<div class="result"></div>
+```
 
-<pre class="brush: css hidden">button, div {
+```css hidden
+button, div {
     margin: .5rem;
 }
-</pre>
+```
 
-<h4 id="JS">JS</h4>
+#### JS
 
-<pre class="brush: js">const result = document.querySelector('.result');
+```js
+const result = document.querySelector('.result');
 
 const dialog = document.querySelector('.example-dialog');
 
-dialog.addEventListener('cancel', (event) =&gt; {
+dialog.addEventListener('cancel', (event) => {
   result.textContent = 'dialog was canceled';
 });
 
 const openDialog = document.querySelector('.open-dialog');
-openDialog.addEventListener('click', () =&gt; {
+openDialog.addEventListener('click', () => {
   if (typeof dialog.showModal === 'function') {
       dialog.showModal();
       result.textContent = '';
@@ -75,27 +81,25 @@ openDialog.addEventListener('click', () =&gt; {
 });
 
 const closeButton = document.querySelector('.close');
-closeButton.addEventListener('click', () =&gt; {
+closeButton.addEventListener('click', () => {
     dialog.close();
 });
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Live_example', '100%', '100px') }}</p>
+{{ EmbedLiveSample('Live_example', '100%', '100px') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("GlobalEventHandlers.oncancel")}}</li>
- <li>HTML {{HTMLElement("dialog")}} element</li>
- <li>{{domxref("HTMLDialogElement/close_event", "close")}}</li>
-</ul>
+- {{domxref("GlobalEventHandlers.oncancel")}}
+- HTML {{HTMLElement("dialog")}} element
+- {{domxref("HTMLDialogElement/close_event", "close")}}

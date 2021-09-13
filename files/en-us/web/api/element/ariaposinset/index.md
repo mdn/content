@@ -11,35 +11,39 @@ tags:
   - Element
 browser-compat: api.Element.ariaPosInSet
 ---
-<div>{{DefaultAPISidebar("DOM")}}</div>
+{{DefaultAPISidebar("DOM")}}
 
-<p>The <strong><code>ariaPosInSet</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <code>aria-posinset</code> attribute, which defines an element's number or position in the current set of listitems or treeitems.</p>
+The **`ariaPosInSet`** property of the {{domxref("Element")}} interface reflects the value of the `aria-posinset` attribute, which defines an element's number or position in the current set of listitems or treeitems.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox notranslate">var <var>ariaPosInSet</var> = element.ariaPosInSet;
-<var>element</var>.ariaPosInSet = <var>ariaPosInSet</var></pre>
+    var ariaPosInSet = element.ariaPosInSet;
+    element.ariaPosInSet = ariaPosInSet
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString")}} containing an integer.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("DOMString")}} containing an integer.
 
-<p>In this example the <code>aria-posinset</code> attribute on the element with an ID of <code>article2</code> is set to "2". Using <code>ariaPosInSet</code> we update the value to "3".</p>
+## Examples
 
-<pre class="brush: html">&lt;article id="article1" aria-posinset="1"&gt; ... &lt;/article&gt;
-&lt;article id="article2" aria-posinset="2"&gt; ... &lt;/article&gt;
-</pre>
+In this example the `aria-posinset` attribute on the element with an ID of `article2` is set to "2". Using `ariaPosInSet` we update the value to "3".
 
-<pre class="brush: js">let el = document.getElementById('article2');
+```html
+<article id="article1" aria-posinset="1"> ... </article>
+<article id="article2" aria-posinset="2"> ... </article>
+```
+
+```js
+let el = document.getElementById('article2');
 console.log(el.ariaPosInSet); // "2"
 el.ariaPosInSet = "3"
-console.log(el.ariaPosInSet); // "3"</pre>
+console.log(el.ariaPosInSet); // "3"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

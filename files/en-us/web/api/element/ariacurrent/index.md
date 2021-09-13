@@ -11,62 +11,63 @@ tags:
   - Element
 browser-compat: api.Element.ariaCurrent
 ---
-<div>{{DefaultAPISidebar("DOM")}}</div>
+{{DefaultAPISidebar("DOM")}}
 
-<p>The <strong><code>ariaCurrent</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <code>aria-current</code> attribute, which indicates the element that represents the current item within a container or set of related elements.</p>
+The **`ariaCurrent`** property of the {{domxref("Element")}} interface reflects the value of the `aria-current` attribute, which indicates the element that represents the current item within a container or set of related elements.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox notranslate">var <var>ariaCurrent</var> = element.ariaCurrent;
-<var>element</var>.ariaCurrent = <var>ariaCurrent</var></pre>
+    var ariaCurrent = element.ariaCurrent;
+    element.ariaCurrent = ariaCurrent
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString")}} with one of the following values:</p>
+### Value
 
-<dl>
-  <dt><code>"page"</code></dt>
-  <dd>Represents the current page within a set of pages.</dd>
-  <dt><code>"step"</code></dt>
-  <dd>Represents the current step within a process.</dd>
-  <dt><code>"location"</code></dt>
-  <dd>Represents the current location, for example the current page in a breadcrumbs hierarchy.</dd>
-  <dt><code>"date"</code></dt>
-  <dd>Represents the current date within a collection of dates.</dd>
-  <dt><code>"time"</code></dt>
-  <dd>Represents the current time within a set of times.</dd>
-  <dt><code>"true"</code></dt>
-  <dd>Represents the current item within a set.</dd>
-  <dt><code>"false"</code></dt>
-  <dd>Does not represent the current item within a set.</dd>
-</dl>
+A {{domxref("DOMString")}} with one of the following values:
 
-<h2 id="Examples">Examples</h2>
+- `"page"`
+  - : Represents the current page within a set of pages.
+- `"step"`
+  - : Represents the current step within a process.
+- `"location"`
+  - : Represents the current location, for example the current page in a breadcrumbs hierarchy.
+- `"date"`
+  - : Represents the current date within a collection of dates.
+- `"time"`
+  - : Represents the current time within a set of times.
+- `"true"`
+  - : Represents the current item within a set.
+- `"false"`
+  - : Does not represent the current item within a set.
 
-<p>In this example a set of links are used for site navigation. The <code>aria-current</code> attribute indicates the current page. The value <code>page</code> is incorporated into the screenreader announcement. Using <code>ariaCurrent</code> we can update that value.</p>
+## Examples
 
-<pre class="brush: html">&lt;nav&gt;
-  &lt;ul&gt;
-    &lt;li&gt;&lt;a id="link-home" href="/" aria-current="page"&gt;Home&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="/"&gt;About&lt;/a&gt;&lt;/li&gt;
-    &lt;li>&lt;a href="/"&gt;Contact&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;</pre>
+In this example a set of links are used for site navigation. The `aria-current` attribute indicates the current page. The value `page` is incorporated into the screenreader announcement. Using `ariaCurrent` we can update that value.
 
-<pre class="brush: js">let el = document.getElementById('link-home');
+```html
+<nav>
+  <ul>
+    <li><a id="link-home" href="/" aria-current="page">Home</a></li>
+    <li><a href="/">About</a></li>
+    <li><a href="/">Contact</a></li>
+  </ul>
+</nav>
+```
+
+```js
+let el = document.getElementById('link-home');
 console.log(el.ariaCurrent); // "page"
 el.ariaCurrent = "tab"
-console.log(el.ariaCurrent); // "tab"</pre>
+console.log(el.ariaCurrent); // "tab"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://tink.uk/using-the-aria-current-attribute/">Using the aria-current attribute</a></li>
-</ul>
+- [Using the aria-current attribute](https://tink.uk/using-the-aria-current-attribute/)

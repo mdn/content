@@ -2,40 +2,41 @@
 title: SourceBuffer.timestampOffset
 slug: Web/API/SourceBuffer/timestampOffset
 tags:
-- API
-- Audio
-- Experimental
-- MSE
-- Media Source Extensions
-- Property
-- Reference
-- SourceBuffer
-- Video
-- timestampOffset
+  - API
+  - Audio
+  - Experimental
+  - MSE
+  - Media Source Extensions
+  - Property
+  - Reference
+  - SourceBuffer
+  - Video
+  - timestampOffset
 browser-compat: api.SourceBuffer.timestampOffset
 ---
-<div>{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}{{draft}}</div>
+{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}{{draft}}
 
-<p>The <code><strong>timestampOffset</strong></code> property of the
-  {{domxref("SourceBuffer")}} interface controls the offset applied to timestamps inside
-  media segments that are appended to the <code>SourceBuffer</code>.</p>
+The **`timestampOffset`** property of the
+{{domxref("SourceBuffer")}} interface controls the offset applied to timestamps inside
+media segments that are appended to the `SourceBuffer`.
 
-<p>The initial value of <code>timestampOffset</code> is 0.</p>
+The initial value of `timestampOffset` is 0.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>myOffset</em> = <em>sourceBuffer</em>.timestampOffset;
+```js
+var myOffset = sourceBuffer.timestampOffset;
 
-<em>sourceBuffer</em>.timestampOffset = 2.5;
-</pre>
+sourceBuffer.timestampOffset = 2.5;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A double, with the offset amount expressed in seconds.</p>
+A double, with the offset amount expressed in seconds.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>The following exceptions may be thrown when setting a new value for this property.</p>
+The following exceptions may be thrown when setting a new value for this property.
 
 <table class="no-markdown">
   <thead>
@@ -47,31 +48,32 @@ browser-compat: api.SourceBuffer.timestampOffset
   <tbody>
     <tr>
       <td><code>InvalidStateError</code></td>
-      <td>One or more of the {{domxref("SourceBuffer")}} objects in
-        {{domxref("MediaSource.sourceBuffers")}} are being updated (i.e. their
-        {{domxref("SourceBuffer.updating")}} property is currently <code>true</code>), a
-        media segment inside the <code>SourceBuffer</code> is currently being parsed, or
-        this <code>SourceBuffer</code> has been removed from the
-        {{domxref("MediaSource")}}.</td>
+      <td>
+        One or more of the {{domxref("SourceBuffer")}} objects in
+        {{domxref("MediaSource.sourceBuffers")}} are being updated
+        (i.e. their {{domxref("SourceBuffer.updating")}} property is
+        currently <code>true</code>), a media segment inside the
+        <code>SourceBuffer</code> is currently being parsed, or this
+        <code>SourceBuffer</code> has been removed from the
+        {{domxref("MediaSource")}}.
+      </td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>TBD</p>
+TBD
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("MediaSource")}}</li>
-  <li>{{domxref("SourceBufferList")}}</li>
-</ul>
+- {{domxref("MediaSource")}}
+- {{domxref("SourceBufferList")}}

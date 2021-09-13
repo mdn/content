@@ -11,56 +11,54 @@ tags:
   - has
 browser-compat: api.FormData.has
 ---
-<p>{{APIRef("XMLHttpRequest")}}</p>
+{{APIRef("XMLHttpRequest")}}
 
-<p>The <code><strong>has()</strong></code> method of the {{domxref("FormData")}} interface returns a boolean stating whether a <code>FormData</code> object contains a certain key.</p>
+The **`has()`** method of the {{domxref("FormData")}} interface returns a boolean stating whether a `FormData` object contains a certain key.
 
-<div class="note">
-<p><strong>Note:</strong> This method is available in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
-</div>
+> **Note:** This method is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">formData.has(name);</pre>
+```js
+formData.has(name);
+```
 
-<h3 id="append()_Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-	<dt><code>name</code></dt>
-	<dd>A {{domxref("USVString")}} representing the name of the key you want to test for.</dd>
-</dl>
+- `name`
+  - : A {{domxref("USVString")}} representing the name of the key you want to test for.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A boolean value.</p>
+A boolean value.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following line creates an empty <code>FormData</code> object:</p>
+The following line creates an empty `FormData` object:
 
-<pre class="brush: js">var formData = new FormData();</pre>
+```js
+var formData = new FormData();
+```
 
-<p>The following snippet shows the results of testing for the existence of <code>username</code> in the <code>FormData</code> object, before and after appending a <code>username</code> value to it with {{domxref("FormData.append")}}:</p>
+The following snippet shows the results of testing for the existence of `username` in the `FormData` object, before and after appending a `username` value to it with {{domxref("FormData.append")}}:
 
-<pre class="brush: js">formData.has('username'); // Returns false
+```js
+formData.has('username'); // Returns false
 formData.append('username', 'Chris');
 formData.has('username'); // Returns true
+```
 
-</pre>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{domxref("XMLHTTPRequest")}}</li>
-	<li><a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest" title="Using XMLHttpRequest">Using XMLHttpRequest</a></li>
-	<li><a href="/en-US/docs/Web/API/FormData/Using_FormData_Objects">Using FormData objects</a></li>
-	<li>{{HTMLElement("Form")}}</li>
-</ul>
+- {{domxref("XMLHTTPRequest")}}
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest "Using XMLHttpRequest")
+- [Using FormData objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)
+- {{HTMLElement("Form")}}

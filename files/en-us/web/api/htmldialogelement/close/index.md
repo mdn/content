@@ -2,72 +2,72 @@
 title: HTMLDialogElement.close()
 slug: Web/API/HTMLDialogElement/close
 tags:
-- API
-- Experimental
-- HTML DOM
-- HTMLDialogElement
-- Method
-- Reference
-- close
+  - API
+  - Experimental
+  - HTML DOM
+  - HTMLDialogElement
+  - Method
+  - Reference
+  - close
 browser-compat: api.HTMLDialogElement.close
 ---
-<div>
-  <div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-  <p>{{ SeeCompatTable() }}</p>
-  The <strong><code>close()</code></strong> method of the {{domxref("HTMLDialogElement")}}
-  interface closes the dialog. An optional {{domxref("DOMString")}} may be passed as an
-  argument, updating the <code>returnValue</code> of the dialog.
-</div>
+{{ SeeCompatTable() }}
 
-<h2 id="Syntax">Syntax</h2>
+The **`close()`** method of the {{domxref("HTMLDialogElement")}}
+interface closes the dialog. An optional {{domxref("DOMString")}} may be passed as an
+argument, updating the `returnValue` of the dialog.
 
-<pre class="brush: js">dialogInstance.close(returnValue);</pre>
+## Syntax
 
-<h3 id="Parameters">Parameters</h3>
+```js
+dialogInstance.close(returnValue);
+```
 
-<dl>
-  <dt>returnValue {{optional_inline}}</dt>
-  <dd>A {{domxref("DOMString")}} representing an updated value for the
-    {{domxref("HTMLDialogElement.returnValue")}} of the dialog.</dd>
-</dl>
+### Parameters
 
-<h3 id="Return_value">Return value</h3>
+- returnValue {{optional_inline}}
+  - : A {{domxref("DOMString")}} representing an updated value for the
+    {{domxref("HTMLDialogElement.returnValue")}} of the dialog.
 
-<p>Void.</p>
+### Return value
 
-<h2 id="Examples">Examples</h2>
+Void.
 
-<p>The following example shows a simple button that, when clicked, opens a
-  {{htmlelement("dialog")}} containing a form via the <code>showModal()</code> method.
-  From there you can click the <em>Cancel</em> button to close the dialog (via the
-  {{domxref("HTMLDialogElement.close()")}} method), or submit the form via the submit
-  button.</p>
+## Examples
 
-<pre class="brush: html">  &lt;!-- Simple pop-up dialog box, containing a form --&gt;
-  &lt;dialog id="favDialog"&gt;
-    &lt;form method="dialog"&gt;
-      &lt;section&gt;
-        &lt;p&gt;&lt;label for="favAnimal"&gt;Favorite animal:&lt;/label&gt;
-        &lt;select id="favAnimal" name="favAnimal"&gt;
-          &lt;option&gt;&lt;/option&gt;
-          &lt;option&gt;Brine shrimp&lt;/option&gt;
-          &lt;option&gt;Red panda&lt;/option&gt;
-          &lt;option&gt;Spider monkey&lt;/option&gt;
-        &lt;/select&gt;&lt;/p&gt;
-      &lt;/section&gt;
-      &lt;menu&gt;
-        &lt;button id="cancel" type="reset"&gt;Cancel&lt;/button&gt;
-        &lt;button type="submit"&gt;Confirm&lt;/button&gt;
-      &lt;/menu&gt;
-    &lt;/form&gt;
-  &lt;/dialog&gt;
+The following example shows a simple button that, when clicked, opens a
+{{htmlelement("dialog")}} containing a form via the `showModal()` method.
+From there you can click the _Cancel_ button to close the dialog (via the
+{{domxref("HTMLDialogElement.close()")}} method), or submit the form via the submit
+button.
 
-  &lt;menu&gt;
-    &lt;button id="updateDetails"&gt;Update details&lt;/button&gt;
-  &lt;/menu&gt;
+```html
+  <!-- Simple pop-up dialog box, containing a form -->
+  <dialog id="favDialog">
+    <form method="dialog">
+      <section>
+        <p><label for="favAnimal">Favorite animal:</label>
+        <select id="favAnimal" name="favAnimal">
+          <option></option>
+          <option>Brine shrimp</option>
+          <option>Red panda</option>
+          <option>Spider monkey</option>
+        </select></p>
+      </section>
+      <menu>
+        <button id="cancel" type="reset">Cancel</button>
+        <button type="submit">Confirm</button>
+      </menu>
+    </form>
+  </dialog>
 
-  &lt;script&gt;
+  <menu>
+    <button id="updateDetails">Update details</button>
+  </menu>
+
+  <script>
     (function() {
       var updateButton = document.getElementById('updateDetails');
       var cancelButton = document.getElementById('cancel');
@@ -95,25 +95,21 @@ browser-compat: api.HTMLDialogElement.close
       });
 
     })();
-  &lt;/script&gt;</pre>
+  </script>
+```
 
-<div class="note">
-  <p><strong>Note:</strong> You can find this example on GitHub as <a
-      href="https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html">htmldialogelement-basic</a>
-    (<a href="https://mdn.github.io/dom-examples/htmldialogelement-basic/">see it live
-      also</a>).</p>
-</div>
+> **Note:** You can find this example on GitHub as [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html)
+> ([see it live
+> also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The HTML element implementing this interface: {{ HTMLElement("dialog") }}.</li>
-</ul>
+- The HTML element implementing this interface: {{ HTMLElement("dialog") }}.

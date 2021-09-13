@@ -10,40 +10,39 @@ tags:
   - WebAuthn
 browser-compat: api.PublicKeyCredentialCreationOptions
 ---
-<div>{{APIRef("Web Authentication API")}}{{securecontext_header}}</div>
+{{APIRef("Web Authentication API")}}{{securecontext_header}}
 
-<p>The <code><strong>PublicKeyCredentialCreationOptions</strong></code> dictionary of the <a href="/en-US/docs/Web/API/Web_Authentication_API">Web Authentication API</a> holds options passed to {{domxref("CredentialsContainer.create()","navigators.credentials.create()")}} in order to create a {{domxref("PublicKeyCredential")}}.</p>
+The **`PublicKeyCredentialCreationOptions`** dictionary of the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) holds options passed to {{domxref("CredentialsContainer.create()","navigators.credentials.create()")}} in order to create a {{domxref("PublicKeyCredential")}}.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("PublicKeyCredentialCreationOptions.rp")}}</dt>
- <dd>An object describing the relying party which requested the credential creation.</dd>
- <dt>{{domxref("PublicKeyCredentialCreationOptions.user")}}</dt>
- <dd>An object describing the user account for which the credential is generated.</dd>
- <dt>{{domxref("PublicKeyCredentialCreationOptions.challenge")}}</dt>
- <dd>A {{domxref("BufferSource")}}, emitted by the relying party's server and used as a <a href="https://en.wikipedia.org/wiki/Challenge%E2%80%93response_authentication">cryptographic challenge</a>. This value will be signed by the authenticator and the signature will be sent back as part of {{domxref("AuthenticatorAttestationResponse.attestationObject")}}.</dd>
- <dt>{{domxref("PublicKeyCredentialCreationOptions.pubKeyCredParams")}}</dt>
- <dd>An {{jsxref("Array")}} of element which specify the desired features of the credential, including its type and the algorithm used for the cryptographic signature operations. This array is sorted by descending order of preference.</dd>
- <dt>{{domxref("PublicKeyCredentialCreationOptions.timeout")}} {{optional_inline}}</dt>
- <dd>A numerical hint, in milliseconds, which indicates the time the caller is willing to wait for the creation operation to complete. This hint may be overridden by the browser.</dd>
- <dt>{{domxref("PublicKeyCredentialCreationOptions.excludeCredentials")}} {{optional_inline}}</dt>
- <dd>An {{jsxref("Array")}} of descriptors for existing credentials. This is provided by the relying party to avoid creating new public key credentials for an existing user who already have some.</dd>
- <dt>{{domxref("PublicKeyCredentialCreationOptions.authenticatorSelection")}} {{optional_inline}}</dt>
- <dd>An object whose properties are criteria used to filter out the potential authenticators for the creation operation.</dd>
- <dt>{{domxref("PublicKeyCredentialCreationOptions.attestation")}} {{optional_inline}}</dt>
- <dd>A {{jsxref("String")}} which indicates how the attestation (for the authenticator's origin) should be transported.</dd>
- <dt>{{domxref("PublicKeyCredentialCreationOptions.extensions")}} {{optional_inline}}</dt>
- <dd>An object with several client extensions' inputs. Those extensions are used to request additional processing (e.g. dealing with legacy FIDO APIs credentials, prompting a specific text on the authenticator, etc.).</dd>
-</dl>
+- {{domxref("PublicKeyCredentialCreationOptions.rp")}}
+  - : An object describing the relying party which requested the credential creation.
+- {{domxref("PublicKeyCredentialCreationOptions.user")}}
+  - : An object describing the user account for which the credential is generated.
+- {{domxref("PublicKeyCredentialCreationOptions.challenge")}}
+  - : A {{domxref("BufferSource")}}, emitted by the relying party's server and used as a [cryptographic challenge](https://en.wikipedia.org/wiki/Challenge%E2%80%93response_authentication). This value will be signed by the authenticator and the signature will be sent back as part of {{domxref("AuthenticatorAttestationResponse.attestationObject")}}.
+- {{domxref("PublicKeyCredentialCreationOptions.pubKeyCredParams")}}
+  - : An {{jsxref("Array")}} of element which specify the desired features of the credential, including its type and the algorithm used for the cryptographic signature operations. This array is sorted by descending order of preference.
+- {{domxref("PublicKeyCredentialCreationOptions.timeout")}} {{optional_inline}}
+  - : A numerical hint, in milliseconds, which indicates the time the caller is willing to wait for the creation operation to complete. This hint may be overridden by the browser.
+- {{domxref("PublicKeyCredentialCreationOptions.excludeCredentials")}} {{optional_inline}}
+  - : An {{jsxref("Array")}} of descriptors for existing credentials. This is provided by the relying party to avoid creating new public key credentials for an existing user who already have some.
+- {{domxref("PublicKeyCredentialCreationOptions.authenticatorSelection")}} {{optional_inline}}
+  - : An object whose properties are criteria used to filter out the potential authenticators for the creation operation.
+- {{domxref("PublicKeyCredentialCreationOptions.attestation")}} {{optional_inline}}
+  - : A {{jsxref("String")}} which indicates how the attestation (for the authenticator's origin) should be transported.
+- {{domxref("PublicKeyCredentialCreationOptions.extensions")}} {{optional_inline}}
+  - : An object with several client extensions' inputs. Those extensions are used to request additional processing (e.g. dealing with legacy FIDO APIs credentials, prompting a specific text on the authenticator, etc.).
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js;">// some examples of COSE algorithms
+```js
+// some examples of COSE algorithms
 const cose_alg_ECDSA_w_SHA256 = -7;
 const cose_alg_ECDSA_w_SHA512 = -36;
 
@@ -113,18 +112,16 @@ navigator.credentials.create(createCredentialOptions)
     // Deal with any error properly
     console.error(err);
   });;
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("PublicKeyRequestOptions")}}: the dictionary which provides option for the public key retrieval operation</li>
-</ul>
+- {{domxref("PublicKeyRequestOptions")}}: the dictionary which provides option for the public key retrieval operation

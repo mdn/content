@@ -2,64 +2,67 @@
 title: MessagePort.close()
 slug: Web/API/MessagePort/close
 tags:
-- API
-- Channel messaging
-- MessagePort
-- Method
-- Reference
-- close
+  - API
+  - Channel messaging
+  - MessagePort
+  - Method
+  - Reference
+  - close
 browser-compat: api.MessagePort.close
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <code><strong>close()</strong></code> method of the {{domxref("MessagePort")}}
-  interface disconnects the port, so it is no longer active. This stops the flow of
-  messages to that port.</p>
+The **`close()`** method of the {{domxref("MessagePort")}}
+interface disconnects the port, so it is no longer active. This stops the flow of
+messages to that port.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">port.close()</pre>
+```js
+port.close()
+```
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>Void.</p>
+Void.
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In the following code block, you can see a <code>handleMessage</code> handler function,
-  run when a message is sent back to this document using
-  {{domxref("EventTarget.addEventListener")}}.</p>
+In the following code block, you can see a `handleMessage` handler function,
+run when a message is sent back to this document using
+{{domxref("EventTarget.addEventListener")}}.
 
-<pre class="brush: js">channel.port1.addEventListener('message', handleMessage, false);
+```js
+channel.port1.addEventListener('message', handleMessage, false);
 function handleMessage(e) {
   para.innerHTML = e.data;
   textInput.value = '';
 }
 
 channel.port1.start();
-</pre>
+```
 
-<p>You could stop messages being sent at any time using</p>
+You could stop messages being sent at any time using
 
-<pre class="brush: js">channel.port1.close();</pre>
+```js
+channel.port1.close();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging">Using
-      channel messaging</a></li>
-</ul>
+- [Using
+  channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)

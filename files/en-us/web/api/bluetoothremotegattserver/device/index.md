@@ -2,30 +2,31 @@
 title: BluetoothRemoteGATTServer.device
 slug: Web/API/BluetoothRemoteGATTServer/device
 tags:
-- API
-- Bluethooth
-- BluetoothRemoteGATTServer
-- Experimental
-- Property
-- Reference
+  - API
+  - Bluethooth
+  - BluetoothRemoteGATTServer
+  - Experimental
+  - Property
+  - Reference
 browser-compat: api.BluetoothRemoteGATTServer.device
 ---
-<p>{{SeeCompatTable}}</p>
+{{SeeCompatTable}}
 
-<p>The <strong><code>BluetoothRemoteGATTServer.device</code></strong> read-only property
-  returns a reference to the {{domxref("BluetoothDevice")}} running the server.</p>
+The **`BluetoothRemoteGATTServer.device`** read-only property
+returns a reference to the {{domxref("BluetoothDevice")}} running the server.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>device</em> = <em>BluetoothRemoteGATTServer</em>.device</pre>
+```js
+var device = BluetoothRemoteGATTServer.device
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<div>{{APIRef("Web Bluetooth")}}</div>
+{{APIRef("Web Bluetooth")}}

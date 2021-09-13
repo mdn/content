@@ -2,46 +2,47 @@
 title: HTMLMediaElement.muted
 slug: Web/API/HTMLMediaElement/muted
 tags:
-- API
-- HTML DOM
-- HTMLMediaElement
-- Property
-- Web
+  - API
+  - HTML DOM
+  - HTMLMediaElement
+  - Property
+  - Web
 browser-compat: api.HTMLMediaElement.muted
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLMediaElement.muted</code></strong> indicates whether the media
-  element muted.</p>
+The **`HTMLMediaElement.muted`** indicates whether the media
+element muted.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>isMuted</em> = <em>audioOrVideo</em>.muted
-<em>audio</em>.muted = true;</pre>
+```js
+var isMuted = audioOrVideo.muted
+audio.muted = true;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A boolean value. <code>true</code> means muted and <code>false</code> means
-  not muted.</p>
+A boolean value. `true` means muted and `false` means
+not muted.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var obj = document.createElement('video');
+```js
+var obj = document.createElement('video');
 console.log(obj.muted); // false
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining it, {{domxref("HTMLMediaElement")}}.</li>
-  <li>{{domxref("HTMLMediaElement.defaultMuted")}}</li>
-  <li>{{domxref("HTMLMediaElement.volume")}}</li>
-</ul>
+- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- {{domxref("HTMLMediaElement.defaultMuted")}}
+- {{domxref("HTMLMediaElement.volume")}}

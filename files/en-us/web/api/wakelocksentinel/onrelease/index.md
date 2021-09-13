@@ -2,51 +2,53 @@
 title: WakeLockSentinel.onrelease
 slug: Web/API/WakeLockSentinel/onrelease
 tags:
-- Event Handler
-- Property
-- Screen Wake Lock API
-- Wake Lock
-- WakeLockSentinel
-- screen
-- screen wake lock
+  - Event Handler
+  - Property
+  - Screen Wake Lock API
+  - Wake Lock
+  - WakeLockSentinel
+  - screen
+  - screen wake lock
 browser-compat: api.WakeLockSentinel.onrelease
 ---
-<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Screen Wake Lock API")}}</div>
+{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Screen Wake Lock API")}}
 
-<p>The <strong><code>onrelease</code></strong> property of the
-	{{domxref("WakeLockSentinel")}} is fired when the sentinel object's handle has been
-	released.</p>
+The **`onrelease`** property of the
+{{domxref("WakeLockSentinel")}} is fired when the sentinel object's handle has been
+released.
 
-<p>A {{domxref("WakeLockSentinel")}} can be released manually via the release() method, or
-	automatically via the platform wake lock. This can happen if the document becomes
-	inactive or looses visibility, if the device is low on power or the user turns on a
-	power save mode.</p>
+A {{domxref("WakeLockSentinel")}} can be released manually via the release() method, or
+automatically via the platform wake lock. This can happen if the document becomes
+inactive or looses visibility, if the device is low on power or the user turns on a
+power save mode.
 
-<p>This interface inherits from the {{domxref("Event")}} interface.</p>
+This interface inherits from the {{domxref("Event")}} interface.
 
-<p>{{InheritanceDiagram(700, 60, 20)}}</p>
+{{InheritanceDiagram(700, 60, 20)}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-	class="brush: js">wakeLockSentinel.onrelease = function(event) {...}</pre>
+```js
+wakeLockSentinel.onrelease = function(event) {...}
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example updates the UI should the wake lock be released.</p>
+This example updates the UI should the wake lock be released.
 
-<pre class="brush: js">wakeLock.addEventListener('release', () =&gt; {
+```js
+wakeLock.addEventListener('release', () => {
 
   // if wake lock is released alter the UI accordingly
 
   statusElement.textContent = 'Wake Lock has been released';
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

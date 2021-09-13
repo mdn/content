@@ -9,44 +9,46 @@ tags:
   - Reference
 browser-compat: api.CSSFontFaceRule
 ---
-<p>{{APIRef("CSSOM")}}</p>
+{{APIRef("CSSOM")}}
 
-<p>The <strong><code>CSSFontFaceRule</code></strong> interface represents an {{cssxref("@font-face")}} {{cssxref("at-rule")}}.</p>
+The **`CSSFontFaceRule`** interface represents an {{cssxref("@font-face")}} {{cssxref("at-rule")}}.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its ancestor {{domxref("CSSRule")}}.</em></p>
+_Inherits properties from its ancestor {{domxref("CSSRule")}}._
 
-<dl>
-  <dt>{{domxref("CSSFontFaceRule.style")}}{{readonlyinline}}</dt>
-  <dd>Returns a {{domxref("CSSStyleDeclaration")}}.</dd>
-</dl>
+- {{domxref("CSSFontFaceRule.style")}}{{readonlyinline}}
+  - : Returns a {{domxref("CSSStyleDeclaration")}}.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Inherits methods from its ancestor {{domxref("CSSRule")}}.</em></p>
+_Inherits methods from its ancestor {{domxref("CSSRule")}}._
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example uses the CSS found as an example on the {{cssxref("@font-face")}} page. The first {{domxref("CSSRule")}} returned will be a <code>CSSFontFaceRule</code>.</p>
+This example uses the CSS found as an example on the {{cssxref("@font-face")}} page. The first {{domxref("CSSRule")}} returned will be a `CSSFontFaceRule`.
 
-<pre class="brush: css">@font-face {
+```css
+@font-face {
   font-family: MyHelvetica;
   src: local("Helvetica Neue Bold"),
   local("HelveticaNeue-Bold"),
   url(MgOpenModernaBold.ttf);
   font-weight: bold;
-}</pre>
+}
+```
 
-<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0]); //a CSSFontFaceRule</pre>
+```js
+let myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0]); //a CSSFontFaceRule
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

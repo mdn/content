@@ -2,48 +2,49 @@
 title: GlobalEventHandlers.onpointerleave
 slug: Web/API/GlobalEventHandlers/onpointerleave
 tags:
-- API
-- GlobalEventHandlers
-- HTML DOM
-- NeedsBrowserCompatibility
-- Pointer Events
-- PointerEvent
-- Property
-- Reference
-- onpointerleave
+  - API
+  - GlobalEventHandlers
+  - HTML DOM
+  - NeedsBrowserCompatibility
+  - Pointer Events
+  - PointerEvent
+  - Property
+  - Reference
+  - onpointerleave
 browser-compat: api.GlobalEventHandlers.onpointerleave
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The {{domxref("GlobalEventHandlers","global event handler",
+The {{domxref("GlobalEventHandlers","global event handler",
     "", 1)}} for the {{domxref("HTMLElement/pointerleave_event", "pointerleave")}} event,
-    which is delivered to a {{domxref("Node")}} when the pointer (mouse cursor, fingertip,
-    etc.) exits its hit test area (for example, if the cursor exits an
-    {{domxref("Element")}} or {{domxref("Window")}}'s content area). This event is part of
-    the <a href="/en-US/docs/Web/API/Pointer_events">Pointer Events API</a>.</p>
+which is delivered to a {{domxref("Node")}} when the pointer (mouse cursor, fingertip,
+etc.) exits its hit test area (for example, if the cursor exits an
+{{domxref("Element")}} or {{domxref("Window")}}'s content area). This event is part of
+the [Pointer Events API](/en-US/docs/Web/API/Pointer_events).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>EventTarget</var>.onpointerleave = <var>leaveHandler</var>;
+```js
+EventTarget.onpointerleave = leaveHandler;
 
-var <var>leaveHandler</var> = <var>EventTarget</var>.onpointerleave;</pre>
+var leaveHandler = EventTarget.onpointerleave;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<dl>
-  <dt><code><var>leaveHandler</var></code></dt>
-  <dd>The {{domxref("EventListener")}} which will be invoked to handle
+- `leaveHandler`
+  - : The {{domxref("EventListener")}} which will be invoked to handle
     {{domxref("HTMLElement/pointerleave_event", "pointerleave")}} events sent to the
-    target.</dd>
-</dl>
+    target.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example shows two ways to use <code>onpointerleave</code> to set an element's
-  <code>pointerleave</code> event handler.</p>
+This example shows two ways to use `onpointerleave` to set an element's
+`pointerleave` event handler.
 
-<pre class="brush: js">&lt;html&gt;
-&lt;script&gt;
+```js
+<html>
+<script>
 function leaveHandler(ev) {
  // Process the pointerleave event
 }
@@ -51,35 +52,31 @@ function init() {
  var el=document.getElementById("target1");
  el.onpointerleave = leaveHandler;
 }
-&lt;/script&gt;
-&lt;body onload="init();"&gt;
-&lt;div id="target1"&gt; Touch me ... &lt;/div&gt;
-&lt;div id="target2" onpointerleave="leaveHandler(event)"&gt; Touch me ... &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+</script>
+<body onload="init();">
+<div id="target1"> Touch me ... </div>
+<div id="target2" onpointerleave="leaveHandler(event)"> Touch me ... </div>
+</body>
+</html>
+```
 
-<p>See <a href="/en-US/docs/Web/API/Pointer_events/Using_Pointer_Events">Using Pointer
-    Events</a> for additional details.</p>
+See [Using Pointer
+Events](/en-US/docs/Web/API/Pointer_events/Using_Pointer_Events) for additional details.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Pointer_events">Pointer events</a></li>
-  <li><a href="/en-US/docs/Web/API/Pointer_events/Using_Pointer_Events">Using pointer
-      events</a></li>
-  <li>
-    <code><a href="/en-US/docs/Web/API/Document/pointerleave_event">Document: pointerleave</a></code>
-    event</li>
-  <li>
-    <code><a href="/en-US/docs/Web/API/HTMLElement/pointerleave_event">HTMLElement: pointerleave</a></code>
-    event</li>
-</ul>
+- [Pointer events](/en-US/docs/Web/API/Pointer_events)
+- [Using pointer
+  events](/en-US/docs/Web/API/Pointer_events/Using_Pointer_Events)
+- [`Document: pointerleave`](/en-US/docs/Web/API/Document/pointerleave_event)
+  event
+- [`HTMLElement: pointerleave`](/en-US/docs/Web/API/HTMLElement/pointerleave_event)
+  event

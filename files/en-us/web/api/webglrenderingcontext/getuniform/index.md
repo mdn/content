@@ -2,37 +2,35 @@
 title: WebGLRenderingContext.getUniform()
 slug: Web/API/WebGLRenderingContext/getUniform
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getUniform
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.getUniform()</code></strong> method of the <a
-    href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> returns the value of a uniform
-  variable at a given location.</p>
+The **`WebGLRenderingContext.getUniform()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) returns the value of a uniform
+variable at a given location.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">any <var>gl</var>.getUniform(<var>program</var>, <var>location</var>);
-</pre>
+```js
+any gl.getUniform(program, location);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>program</dt>
-  <dd>A {{domxref("WebGLProgram")}} containing the uniform attribute.</dd>
-  <dt>location</dt>
-  <dd>A {{domxref("WebGLUniformLocation")}} object containing the location of the uniform
-    attribute to get.</dd>
-</dl>
+- program
+  - : A {{domxref("WebGLProgram")}} containing the uniform attribute.
+- location
+  - : A {{domxref("WebGLUniformLocation")}} object containing the location of the uniform
+    attribute to get.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The returned type depends on the uniform type:</p>
+The returned type depends on the uniform type:
 
 <table class="standard-table">
   <thead>
@@ -67,7 +65,11 @@ browser-compat: api.WebGLRenderingContext.getUniform
     </tr>
     <tr>
       <td><code>bvec2</code></td>
-      <td>{{jsxref("Array")}} of {{domxref("WebGL_API/Types", "GLBoolean")}} (with 2 elements)</td>
+      <td>
+        {{jsxref("Array")}} of
+        {{domxref("WebGL_API/Types", "GLBoolean")}} (with 2
+        elements)
+      </td>
     </tr>
     <tr>
       <td><code>vec3</code></td>
@@ -79,7 +81,11 @@ browser-compat: api.WebGLRenderingContext.getUniform
     </tr>
     <tr>
       <td><code>bvec3</code></td>
-      <td>{{jsxref("Array")}} of {{domxref("WebGL_API/Types", "GLBoolean")}} (with 3 elements)</td>
+      <td>
+        {{jsxref("Array")}} of
+        {{domxref("WebGL_API/Types", "GLBoolean")}} (with 3
+        elements)
+      </td>
     </tr>
     <tr>
       <td><code>vec4</code></td>
@@ -91,7 +97,11 @@ browser-compat: api.WebGLRenderingContext.getUniform
     </tr>
     <tr>
       <td><code>bvec4</code></td>
-      <td>{{jsxref("Array")}} of {{domxref("WebGL_API/Types", "GLBoolean")}} (with 4 elements)</td>
+      <td>
+        {{jsxref("Array")}} of
+        {{domxref("WebGL_API/Types", "GLBoolean")}} (with 4
+        elements)
+      </td>
     </tr>
     <tr>
       <td><code>mat2</code></td>
@@ -163,23 +173,22 @@ browser-compat: api.WebGLRenderingContext.getUniform
   </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var loc = gl.getUniformLocation(program, 'u_foobar');
+```js
+var loc = gl.getUniformLocation(program, 'u_foobar');
 gl.getUniform(program, loc);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLUniformLocation")}}</li>
-  <li>{{domxref("WebGLRenderingContext.getActiveUniform()")}}</li>
-</ul>
+- {{domxref("WebGLUniformLocation")}}
+- {{domxref("WebGLRenderingContext.getActiveUniform()")}}

@@ -14,67 +14,53 @@ tags:
   - removeSourceBuffer
 browser-compat: api.MediaSource.removeSourceBuffer
 ---
-<div>{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}</div>
+{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
-<p>The <code><strong>removeSourceBuffer()</strong></code> method of the
-  {{domxref("MediaSource")}} interface removes the given {{domxref("SourceBuffer")}} from
-  the {{domxref("SourceBuffers")}} list associated with this <code>MediaSource</code>
-  object.</p>
+The **`removeSourceBuffer()`** method of the
+{{domxref("MediaSource")}} interface removes the given {{domxref("SourceBuffer")}} from
+the {{domxref("SourceBuffers")}} list associated with this `MediaSource`
+object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>mediaSource</em>.removeSourceBuffer(<em>sourceBuffer</em>);</pre>
+```js
+mediaSource.removeSourceBuffer(sourceBuffer);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>sourceBuffer</dt>
-  <dd>The {{domxref("SourceBuffer")}} object to be removed.</dd>
-</dl>
+- sourceBuffer
+  - : The {{domxref("SourceBuffer")}} object to be removed.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{jsxref('undefined')}}</p>
+{{jsxref('undefined')}}
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Exception</th>
-      <th scope="col">Explanation</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>NotFoundError</code></td>
-      <td>The supplied sourceBuffer doesn't exist in
-        {{domxref("MediaSource.sourceBuffers")}}.</td>
-    </tr>
-  </tbody>
-</table>
+| Exception       | Explanation                                                                                      |
+| --------------- | ------------------------------------------------------------------------------------------------ |
+| `NotFoundError` | The supplied sourceBuffer doesn't exist in {{domxref("MediaSource.sourceBuffers")}}. |
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js ">for (i = 0; i &lt; 10; i++) {
+```js
+for (i = 0; i < 10; i++) {
   var sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
 }
 
 mediaSource.removeSourceBuffer(mediaSource.sourceBuffers[0]);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("SourceBuffer")}}</li>
-  <li>{{domxref("SourceBufferList")}}</li>
-</ul>
+- {{domxref("SourceBuffer")}}
+- {{domxref("SourceBufferList")}}

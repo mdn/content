@@ -2,64 +2,61 @@
 title: Navigator.xr
 slug: Web/API/Navigator/xr
 tags:
-- API
-- AR
-- Augmented Reality
-- Getter
-- Graphics
-- Navigator
-- Property
-- Reference
-- VR
-- Virtual Reality
-- WebXR
-- XR
+  - API
+  - AR
+  - Augmented Reality
+  - Getter
+  - Graphics
+  - Navigator
+  - Property
+  - Reference
+  - VR
+  - Virtual Reality
+  - WebXR
+  - XR
 browser-compat: api.Navigator.xr
 ---
-<div>{{APIRef("WebXR Device API")}} {{SecureContext_Header}}</div>
+{{APIRef("WebXR Device API")}} {{SecureContext_Header}}
 
-<p>The read-only <code><strong>xr</strong></code> property
-provided by the {{domxref("Navigator")}}  interface returns an {{domxref("XRSystem")}} object
-which can be used to access the <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</a>.</p>
+The read-only **`xr`** property
+provided by the {{domxref("Navigator")}} interface returns an {{domxref("XRSystem")}} object
+which can be used to access the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API).
 
-<h2 id="Value">Value</h2>
+## Value
 
-<p>The {{domxref("XRSystem")}} object used to interface with the <a
-    href="/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</a> in the current
-  context. This can be used to present augmented and/or virtual reality imagery to the
-  user.</p>
+The {{domxref("XRSystem")}} object used to interface with the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) in the current
+context. This can be used to present augmented and/or virtual reality imagery to the
+user.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>Each {{domxref("Window")}} has its own instance of {{domxref("Navigator")}}, which can
-  be accessed as {{domxref("Window.navigator","window.navigator")}} or as
-  {{domxref("Window.navigator", "navigator")}}. At the same time, a new
-  {{domxref("XRSystem")}} instance is also created and attached to
-  the <code>navigator</code> instance as {{domxref("Navigator.xr", "navigator.xr")}}. If
-  the <code>xr</code> property exists, you can use it to access the <a
-    href="/en-US/docs/Web/API/WebXR_Device_API">WebXR Device API</a>.</p>
+Each {{domxref("Window")}} has its own instance of {{domxref("Navigator")}}, which can
+be accessed as {{domxref("Window.navigator","window.navigator")}} or as
+{{domxref("Window.navigator", "navigator")}}. At the same time, a new
+{{domxref("XRSystem")}} instance is also created and attached to
+the `navigator` instance as {{domxref("Navigator.xr", "navigator.xr")}}. If
+the `xr` property exists, you can use it to access the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API).
 
-<p>To determine if WebXR is available, you can do something like this:</p>
+To determine if WebXR is available, you can do something like this:
 
-<pre class="brush: js">if ("xr" in window.navigator) {
+```js
+if ("xr" in window.navigator) {
   /* WebXR can be used! */
 } else {
   /* WebXR isn't available */
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a>: 2D and 3D accelerated
-    graphics for the web</li>
-  <li><a href="/en-US/docs/Web/API/Canvas_API">Canvas API</a>: 2D graphics API</li>
-</ul>
+- [WebGL API](/en-US/docs/Web/API/WebGL_API): 2D and 3D accelerated
+  graphics for the web
+- [Canvas API](/en-US/docs/Web/API/Canvas_API): 2D graphics API

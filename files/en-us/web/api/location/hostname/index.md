@@ -2,33 +2,36 @@
 title: 'Location: hostname'
 slug: Web/API/Location/hostname
 tags:
-- API
-- Location
-- Property
-- Reference
+  - API
+  - Location
+  - Property
+  - Reference
 browser-compat: api.Location.hostname
 ---
-<p>{{ApiRef("URL API")}}</p>
+{{ApiRef("URL API")}}
 
-<p>The <strong><code>hostname</code></strong> property of the {{domxref("Location")}}
-  interface is a {{domxref("USVString")}} containing the domain of the URL.</p>
+The **`hostname`** property of the {{domxref("Location")}}
+interface is a {{domxref("USVString")}} containing the domain of the URL.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>string</em> = <em>object</em>.hostname;
-<em>object.</em>hostname = <em>string</em>;
-</pre>
+```js
+string = object.hostname;
+object.hostname = string;
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">// Let's an &lt;a id="myAnchor" href="/en-US/docs/Location.hostname"&gt; element be in the document
+```js
+// Let's an <a id="myAnchor" href="/en-US/docs/Location.hostname"> element be in the document
 var anchor = document.getElementById("myAnchor");
-var result = anchor.hostname; // Returns:'developer.mozilla.org'</pre>
+var result = anchor.hostname; // Returns:'developer.mozilla.org'
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

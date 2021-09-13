@@ -2,108 +2,102 @@
 title: ReadableStream.pipeThrough()
 slug: Web/API/ReadableStream/pipeThrough
 tags:
-- API
-- Experimental
-- Method
-- ReadableStream
-- Reference
-- Streams
-- pipeThrough
+  - API
+  - Experimental
+  - Method
+  - ReadableStream
+  - Reference
+  - Streams
+  - pipeThrough
 browser-compat: api.ReadableStream.pipeThrough
 ---
-<div>{{SeeCompatTable}}{{APIRef("Streams")}}</div>
+{{SeeCompatTable}}{{APIRef("Streams")}}
 
-<p>The <strong><code>pipeThrough()</code></strong> method of the
-  {{domxref("ReadableStream")}} interface provides a chainable way of piping the current
-  stream through a transform stream or any other writable/readable pair.</p>
+The **`pipeThrough()`** method of the
+{{domxref("ReadableStream")}} interface provides a chainable way of piping the current
+stream through a transform stream or any other writable/readable pair.
 
-<p>Piping a stream will generally lock it for the duration of the pipe, preventing other
-  readers from locking it.</p>
+Piping a stream will generally lock it for the duration of the pipe, preventing other
+readers from locking it.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">pipeThrough(<var>transformStream</var>);
-pipeThrough(<var>transformStream</var>, <var>options</var>);
-</pre>
+```js
+pipeThrough(transformStream);
+pipeThrough(transformStream, options);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>transformStream</dt>
-  <dd>A {{domxref("TransformStream")}} (or an object with the structure
-    <code>{writable, readable}</code>) consisting of a readable stream and a writable
+- transformStream
+  - : A {{domxref("TransformStream")}} (or an object with the structure
+    `{writable, readable}`) consisting of a readable stream and a writable
     stream working together to transform some data from one form to another. Data writen
-    to the <code>writable</code> stream can be read in some transformed state by the
-    <code>readable</code> stream. For example, a {{domxref("TextDecoder")}}, has bytes
+    to the `writable` stream can be read in some transformed state by the
+    `readable` stream. For example, a {{domxref("TextDecoder")}}, has bytes
     written to it and strings read from it, while a video decoder has encoded bytes
-    written to it and uncompressed video frames read from it.</dd>
-  <dt>options {{optional_inline}}</dt>
-  <dd>The options that should be used when piping to the <code>writable</code> stream.
+    written to it and uncompressed video frames read from it.
+- options {{optional_inline}}
+
+  - : The options that should be used when piping to the `writable` stream.
     Available options are:
-    <ol>
-      <li><code>preventClose</code>: If this is set to <code>true</code>, the source
-        <code>ReadableStream</code> closing will no longer cause the destination
-        <code>WritableStream</code> to be closed. The method will return a fulfilled
+
+    1.  `preventClose`: If this is set to `true`, the source
+        `ReadableStream` closing will no longer cause the destination
+        `WritableStream` to be closed. The method will return a fulfilled
         promise once this process completes, unless an error is encountered while closing
-        the destination in which case it will be rejected with that error.</li>
-      <li><code>preventAbort</code>: If this is set to <code>true</code>, errors in the
-        source <code>ReadableStream</code> will no longer abort the destination
-        <code>WritableStream</code>. The method will return a promise rejected with the
+        the destination in which case it will be rejected with that error.
+    2.  `preventAbort`: If this is set to `true`, errors in the
+        source `ReadableStream` will no longer abort the destination
+        `WritableStream`. The method will return a promise rejected with the
         source’s error, or with any error that occurs during aborting the destination.
-      </li>
-      <li><code>preventCancel</code>: If this is set to <code>true</code>, errors in the
-        destination <code>WritableStream</code> will no longer cancel the source
-        <code>ReadableStream</code>. In this case the method will return a promise
+    3.  `preventCancel`: If this is set to `true`, errors in the
+        destination `WritableStream` will no longer cancel the source
+        `ReadableStream`. In this case the method will return a promise
         rejected with the source’s error, or with any error that occurs during canceling
         the source. In addition, if the destination writable stream starts out closed or
         closing, the source readable stream will no longer be canceled. In this case the
         method will return a promise rejected with an error indicating piping to a closed
-        stream failed, or with any error that occurs during canceling the source.</li>
-      <li><code>signal</code>: If set to an
-        <code><a href="/en-US/docs/Web/API/AbortSignal">AbortSignal</a></code> object,
+        stream failed, or with any error that occurs during canceling the source.
+    4.  `signal`: If set to an
+        [`AbortSignal`](/en-US/docs/Web/API/AbortSignal) object,
         ongoing pipe operations can then be aborted via the corresponding
-        <code><a href="/en-US/docs/Web/API/AbortController">AbortController</a></code>.
-      </li>
-    </ol>
-  </dd>
-</dl>
+        [`AbortController`](/en-US/docs/Web/API/AbortController).
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The <code>readable</code> side of the <code>transformStream</code>.</p>
+The `readable` side of the `transformStream`.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>TypeError</dt>
-  <dd>The <code>writable</code> and/or <code>readable</code> property of
-    <code>transformStream</code> are undefined.</dd>
-</dl>
+- TypeError
+  - : The `writable` and/or `readable` property of
+    `transformStream` are undefined.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the following example (see <a
-    href="https://mdn.github.io/dom-examples/streams/png-transform-stream/">Unpack chunks
-    of a PNG</a> for the full code running live, and <a
-    href="https://github.com/mdn/dom-examples/tree/master/streams/png-transform-stream">png-transform-stream</a>
-  for the source code), an image is fetched and its body retrieved as a
-  {{domxref("ReadableStream")}}. Next, we log the contents of the readable stream, use
-  <code>pipeThrough()</code> to send it to a new function that creates a gray-scaled
-  version of the stream, then log the new stream's contents too.</p>
+In the following example (see [Unpack chunks
+of a PNG](https://mdn.github.io/dom-examples/streams/png-transform-stream/) for the full code running live, and [png-transform-stream](https://github.com/mdn/dom-examples/tree/master/streams/png-transform-stream)
+for the source code), an image is fetched and its body retrieved as a
+{{domxref("ReadableStream")}}. Next, we log the contents of the readable stream, use
+`pipeThrough()` to send it to a new function that creates a gray-scaled
+version of the stream, then log the new stream's contents too.
 
-<pre class="brush: js">// Fetch the original image
+```js
+// Fetch the original image
 fetch('png-logo.png')
 // Retrieve its body as ReadableStream
-.then(response =&gt; response.body)
-.then(rs =&gt; logReadableStream('Fetch Response Stream', rs))
+.then(response => response.body)
+.then(rs => logReadableStream('Fetch Response Stream', rs))
 // Create a gray-scaled PNG stream out of the original
-.then(body =&gt; body.pipeThrough(new PNGTransformStream()))
-.then(rs =&gt; logReadableStream('PNG Chunk Stream', rs))</pre>
+.then(body => body.pipeThrough(new PNGTransformStream()))
+.then(rs => logReadableStream('PNG Chunk Stream', rs))
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

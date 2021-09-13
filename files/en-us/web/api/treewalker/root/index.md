@@ -2,42 +2,43 @@
 title: TreeWalker.root
 slug: Web/API/TreeWalker/root
 tags:
-- API
-- DOM
-- Property
-- TreeWalker
+  - API
+  - DOM
+  - Property
+  - TreeWalker
 browser-compat: api.TreeWalker.root
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p>The <code><strong>TreeWalker.root</strong></code> read-only property returns the node
-  that is the root of what the TreeWalker traverses.</p>
+The **`TreeWalker.root`** read-only property returns the node
+that is the root of what the TreeWalker traverses.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>root</em> = TreeWalker.root;</pre>
+```js
+root = TreeWalker.root;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var treeWalker = document.createTreeWalker(
+```js
+var treeWalker = document.createTreeWalker(
     document.body,
     NodeFilter.SHOW_ELEMENT,
     { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
     false
 );
 root = treeWalker.root; // document.body in this case
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("TreeWalker")}} interface.</li>
-</ul>
+- The {{domxref("TreeWalker")}} interface.

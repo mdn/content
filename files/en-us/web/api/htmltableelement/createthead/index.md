@@ -2,45 +2,47 @@
 title: 'HTMLTableElement: createTHead()'
 slug: Web/API/HTMLTableElement/createTHead
 tags:
-- API
-- HTML DOM
-- HTMLTableElement
-- Method
-- NeedsSpecTable
-- Reference
+  - API
+  - HTML DOM
+  - HTMLTableElement
+  - Method
+  - NeedsSpecTable
+  - Reference
 browser-compat: api.HTMLTableElement.createTHead
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <code><strong>createTHead()</strong></code> method of
-  {{domxref("HTMLTableElement")}} objects returns the {{HTMLElement("thead")}} element
-  associated with a given {{HtmlElement("table")}}. If no header exists in the table, this
-  method creates it, and then returns it.</p>
+The **`createTHead()`** method of
+{{domxref("HTMLTableElement")}} objects returns the {{HTMLElement("thead")}} element
+associated with a given {{HtmlElement("table")}}. If no header exists in the table, this
+method creates it, and then returns it.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> If no header exists, <code>createTHead()</code> inserts a new
-    header directly into the table. The header does not need to be added separately as
-    would be the case if {{domxref("Document.createElement()")}} had been used to create
-    the new <code>&lt;thead&gt;</code> element.</p>
-</div>
+> **Note:** If no header exists, `createTHead()` inserts a new
+> header directly into the table. The header does not need to be added separately as
+> would be the case if {{domxref("Document.createElement()")}} had been used to create
+> the new `<thead>` element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>table</var>.createTHead();</pre>
+```js
+table.createTHead();
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{domxref("HTMLTableSectionElement")}}</p>
+{{domxref("HTMLTableSectionElement")}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">let myhead = mytable.createTHead();
-// Now this should be true: myhead == mytable.tHead</pre>
+```js
+let myhead = mytable.createTHead();
+// Now this should be true: myhead == mytable.tHead
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

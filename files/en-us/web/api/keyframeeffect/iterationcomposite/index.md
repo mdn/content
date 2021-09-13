@@ -13,39 +13,36 @@ tags:
   - web animations api
 browser-compat: api.KeyframeEffect.iterationComposite
 ---
-<p>{{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}</p>
+{{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}
 
-<p>The <code><strong>iterationComposite</strong></code> property of a {{domxref("KeyframeEffect")}} resolves how the animation's property value changes accumulate or override each other upon each of the animation's iterations.</p>
+The **`iterationComposite`** property of a {{domxref("KeyframeEffect")}} resolves how the animation's property value changes accumulate or override each other upon each of the animation's iterations.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">// getting
-var iterationCompositeEnumeration = keyframeEffect.<em>iterationComposite</em>;
+```js
+// getting
+var iterationCompositeEnumeration = keyframeEffect.iterationComposite;
 
 // setting
-keyframeEffect.<em>iterationComposite</em> = 'replace';
-</pre>
+keyframeEffect.iterationComposite = 'replace';
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt>replace</dt>
- <dd>The <code>keyframeEffect</code> value produced is independent of the current iteration.</dd>
- <dt>accumulate</dt>
- <dd>Subsequent iterations of the <code>keyframeEffect</code> build on the final value of the previous iteration.</dd>
-</dl>
+- replace
+  - : The `keyframeEffect` value produced is independent of the current iteration.
+- accumulate
+  - : Subsequent iterations of the `keyframeEffect` build on the final value of the previous iteration.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
- <li>Property of both {{domxref("KeyframeEffect")}} objects.</li>
-</ul>
+- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
+- Property of both {{domxref("KeyframeEffect")}} objects.

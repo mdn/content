@@ -2,47 +2,51 @@
 title: WebGLRenderingContext.getContextAttributes()
 slug: Web/API/WebGLRenderingContext/getContextAttributes
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getContextAttributes
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <code><strong>WebGLRenderingContext.getContextAttributes()</strong></code> method
-  returns a <code>WebGLContextAttributes</code> object that contains the actual context
-  parameters. Might return {{jsxref("null")}}, if the context is lost.</p>
+The **`WebGLRenderingContext.getContextAttributes()`** method
+returns a `WebGLContextAttributes` object that contains the actual context
+parameters. Might return {{jsxref("null")}}, if the context is lost.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var><em>gl</em></var>.getContextAttributes();</pre>
+```js
+gl.getContextAttributes();
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code>WebGLContextAttributes</code> object that contains the actual context
-  parameters, or {{jsxref("null")}} if the context is lost.</p>
+A `WebGLContextAttributes` object that contains the actual context
+parameters, or {{jsxref("null")}} if the context is lost.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Given this {{HTMLElement("canvas")}} element</p>
+Given this {{HTMLElement("canvas")}} element
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<p>and given this WebGL context</p>
+and given this WebGL context
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 gl.getContextAttributes();
-</pre>
+```
 
-<p>the <code>getContextAttributes</code> method returns an object that describes the
-  attributes set on this context, for example:</p>
+the `getContextAttributes` method returns an object that describes the
+attributes set on this context, for example:
 
-<pre class="brush: js">{
+```js
+{
   alpha: true,
   antialias: true,
   depth: true,
@@ -52,29 +56,30 @@ gl.getContextAttributes();
   preserveDrawingBuffer: false,
   stencil: false,
   desynchronized: false
-}</pre>
+}
+```
 
-<p>The context attributes can be set when creating the context using the
-  {{domxref("HTMLCanvasElement.getContext()")}} method:</p>
+The context attributes can be set when creating the context using the
+{{domxref("HTMLCanvasElement.getContext()")}} method:
 
-<pre class="brush: js">canvas.getContext('webgl',
+```js
+canvas.getContext('webgl',
                  { antialias: false,
-                   depth: false });</pre>
+                   depth: false });
+```
 
-<p>See {{domxref("HTMLCanvasElement.getContext()", "getContext()")}} for more information
-  about the individual attributes.</p>
+See {{domxref("HTMLCanvasElement.getContext()", "getContext()")}} for more information
+about the individual attributes.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("HTMLCanvasElement.getContext()")}}</li>
-  <li>{{domxref("CanvasRenderingContext2D.getContextAttributes()")}}</li>
-</ul>
+- {{domxref("HTMLCanvasElement.getContext()")}}
+- {{domxref("CanvasRenderingContext2D.getContextAttributes()")}}

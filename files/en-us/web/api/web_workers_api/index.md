@@ -7,117 +7,90 @@ tags:
   - Reference
   - Web Workers
 ---
-<div>{{DefaultAPISidebar("Web Workers API")}}</div>
+{{DefaultAPISidebar("Web Workers API")}}
 
-<p><strong>Web Workers</strong> makes it possible to run a script operation in a background thread separate from the main execution thread of a web application. The advantage of this is that laborious processing can be performed in a separate thread, allowing the main (usually the UI) thread to run without being blocked/slowed down.</p>
+**Web Workers** makes it possible to run a script operation in a background thread separate from the main execution thread of a web application. The advantage of this is that laborious processing can be performed in a separate thread, allowing the main (usually the UI) thread to run without being blocked/slowed down.
 
-<div class="notecard note">
-<p><strong>Note:</strong> Web Workers can also use the Web Worker API (i.e. workers can spawn workers, provided they are hosted within the same <a href="/en-US/docs/Glossary/Origin">origin</a> as the parent page).</p>
-</div>
+> **Note:** Web Workers can also use the Web Worker API (i.e. workers can spawn workers, provided they are hosted within the same [origin](/en-US/docs/Glossary/Origin) as the parent page).
 
-<h2 id="Web_Workers_concepts_and_usage">Web Workers concepts and usage</h2>
+## Web Workers concepts and usage
 
-<p>A worker is an object created using a constructor (e.g. {{DOMxRef("Worker.Worker", "Worker()")}}) that runs a named JavaScript file — this file contains the code that will run in the worker thread.</p>
+A worker is an object created using a constructor (e.g. {{DOMxRef("Worker.Worker", "Worker()")}}) that runs a named JavaScript file — this file contains the code that will run in the worker thread.
 
-<p>In addition to the standard <a href="/en-US/docs/Web/JavaScript">JavaScript</a> set of functions (such as <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>, <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"><code>Array</code></a>, <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a>, <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON"><code>JSON</code></a>, etc.), you can run almost any code you like inside a worker thread. There are some exceptions: for example, you can't directly manipulate the DOM from inside a worker, or use some default methods and properties of the <a href="/en-US/docs/Web/API/Window"><code>window</code></a> object. For information about the code that you <em>can</em> run see <a href="#worker_global_contexts_and_functions">worker global context and functions</a>, and <a href="#supported_web_apis">supported web APIs</a> below.</p>
+In addition to the standard [JavaScript](/en-US/docs/Web/JavaScript) set of functions (such as [`String`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String), [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array), [`Object`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object), [`JSON`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON), etc.), you can run almost any code you like inside a worker thread. There are some exceptions: for example, you can't directly manipulate the DOM from inside a worker, or use some default methods and properties of the [`window`](/en-US/docs/Web/API/Window) object. For information about the code that you _can_ run see [worker global context and functions](#worker_global_contexts_and_functions), and [supported web APIs](#supported_web_apis) below.
 
-<p>Data is sent between workers and the main thread via a system of messages — both sides send their messages using the <code>postMessage()</code> method, and respond to messages via the <code>onmessage</code> event handler (the message is contained within the {{Event("Message")}} event's <code>data</code> property). The data is copied rather than shared.</p>
+Data is sent between workers and the main thread via a system of messages — both sides send their messages using the `postMessage()` method, and respond to messages via the `onmessage` event handler (the message is contained within the {{Event("Message")}} event's `data` property). The data is copied rather than shared.
 
-<p>Workers may in turn spawn new workers, as long as those workers are hosted within the same {{glossary("origin")}} as the parent page. In addition, workers may use <a href="/en-US/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code></a> for network I/O, with the exception that the <code>responseXML</code> and <code>channel</code> attributes on <code>XMLHttpRequest</code> always return <code>null</code>.</p>
+Workers may in turn spawn new workers, as long as those workers are hosted within the same {{glossary("origin")}} as the parent page. In addition, workers may use [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) for network I/O, with the exception that the `responseXML` and `channel` attributes on `XMLHttpRequest` always return `null`.
 
-<h3 id="Worker_types">Worker types</h3>
+### Worker types
 
-<p>There are a number of different types of workers:</p>
+There are a number of different types of workers:
 
-<ul>
- <li>Dedicated workers are workers that are utilized by a single script. This context is represented by either a {{DOMxRef("DedicatedWorkerGlobalScope")}} object.</li>
- <li>{{DOMxRef("SharedWorker","Shared workers")}} are workers that can be utilized by multiple scripts running in different windows, IFrames, etc., as long as they are in the same domain as the worker. They are a little more complex than dedicated workers — scripts must communicate via an active port.</li>
- <li><a href="/en-US/docs/Web/API/Service_Worker_API">Service Workers</a> essentially act as proxy servers that sit between web applications, the browser, and the network (when available). They are intended, among other things, to enable the creation of effective offline experiences, intercept network requests and take appropriate action based on whether the network is available, and update assets residing on the server. They will also allow access to push notifications and background sync APIs.</li>
-</ul>
+- Dedicated workers are workers that are utilized by a single script. This context is represented by either a {{DOMxRef("DedicatedWorkerGlobalScope")}} object.
+- {{DOMxRef("SharedWorker","Shared workers")}} are workers that can be utilized by multiple scripts running in different windows, IFrames, etc., as long as they are in the same domain as the worker. They are a little more complex than dedicated workers — scripts must communicate via an active port.
+- [Service Workers](/en-US/docs/Web/API/Service_Worker_API) essentially act as proxy servers that sit between web applications, the browser, and the network (when available). They are intended, among other things, to enable the creation of effective offline experiences, intercept network requests and take appropriate action based on whether the network is available, and update assets residing on the server. They will also allow access to push notifications and background sync APIs.
 
-<div class="note">
-<p><strong>Note:</strong> As per the <a href="https://html.spec.whatwg.org/multipage/workers.html#runtime-script-errors-2">Web workers Spec</a>, worker error events should not bubble (see {{bug(1188141)}}. This has been implemented in Firefox 42.</p>
-</div>
+> **Note:** As per the [Web workers Spec](https://html.spec.whatwg.org/multipage/workers.html#runtime-script-errors-2), worker error events should not bubble (see {{bug(1188141)}}. This has been implemented in Firefox 42.
 
-<h3 id="Worker_global_contexts_and_functions">Worker global contexts and functions</h3>
+### Worker global contexts and functions
 
-<p>Workers run in a different global context than the current {{DOMxRef("window")}}! While  {{domxref("Window")}} is not directly available to workers, many of the same methods are defined in a shared mixin (<code>WindowOrWorkerGlobalScope</code>), and made available to workers through their own {{domxref("WorkerGlobalScope")}}-derived contexts: </p>
+Workers run in a different global context than the current {{DOMxRef("window")}}! While  {{domxref("Window")}} is not directly available to workers, many of the same methods are defined in a shared mixin (`WindowOrWorkerGlobalScope`), and made available to workers through their own {{domxref("WorkerGlobalScope")}}-derived contexts:
 
-<ul>
- <li>{{domxref("DedicatedWorkerGlobalScope")}} for dedicated workers</li>
- <li>{{domxref("SharedWorkerGlobalScope")}} for shared workers</li>
- <li>{{domxref("ServiceWorkerGlobalScope")}} for <a href="/en-US/docs/Web/API/Service_Worker_API">service workers</a></li>
-</ul>
+- {{domxref("DedicatedWorkerGlobalScope")}} for dedicated workers
+- {{domxref("SharedWorkerGlobalScope")}} for shared workers
+- {{domxref("ServiceWorkerGlobalScope")}} for [service workers](/en-US/docs/Web/API/Service_Worker_API)
 
-<p>Some of the functions (a subset) that are common to all workers and to the main thread (from  <code>WindowOrWorkerGlobalScope</code>) are: {{domxref("atob", "atob()")}}, {{domxref("btoa", "btoa()")}}, {{domxref("clearInterval", "clearInterval()")}}, {{domxref("clearTimeout()")}},{{domxref("Window.dump()", "dump()")}} {{non-standard_inline}}, {{domxref("setInterval()")}}, {{domxref("setTimeout()")}}.</p>
+Some of the functions (a subset) that are common to all workers and to the main thread (from `WindowOrWorkerGlobalScope`) are: {{domxref("atob", "atob()")}}, {{domxref("btoa", "btoa()")}}, {{domxref("clearInterval", "clearInterval()")}}, {{domxref("clearTimeout()")}},{{domxref("Window.dump()", "dump()")}} {{non-standard_inline}}, {{domxref("setInterval()")}}, {{domxref("setTimeout()")}}.
 
-<p>The following functions are <strong>only</strong> available to workers:</p>
+The following functions are **only** available to workers:
 
-<ul>
- <li>{{domxref("WorkerGlobalScope.importScripts", "WorkerGlobalScope.importScripts()")}} (all workers), </li>
- <li>{{domxref("DedicatedWorkerGlobalScope.postMessage")}} (dedicated workers only).</li>
-</ul>
+- {{domxref("WorkerGlobalScope.importScripts", "WorkerGlobalScope.importScripts()")}} (all workers),
+- {{domxref("DedicatedWorkerGlobalScope.postMessage")}} (dedicated workers only).
 
-<h3 id="Supported_Web_APIs">Supported Web APIs</h3>
+### Supported Web APIs
 
-<div class="notecard note">
-<p><strong>Note:</strong> If a listed API is supported by a platform in a particular version, then it can generally be assumed to be available in web workers. You can also test support for a particular object/function using the site: <a href="https://worker-playground.glitch.me/">https://worker-playground.glitch.me/</a></p>
-</div>
+> **Note:** If a listed API is supported by a platform in a particular version, then it can generally be assumed to be available in web workers. You can also test support for a particular object/function using the site: <https://worker-playground.glitch.me/>
 
-<p>The following Web APIs are available to workers: {{domxref("Barcode_Detection_API","Barcode Detection API")}}, {{domxref("Broadcast_Channel_API","Broadcast Channel API")}}, {{domxref("Cache", "Cache API")}}, {{domxref("Channel_Messaging_API", "Channel Messaging API")}},{{domxref("Console API", "Console API")}}, <a href="/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API</a> ({{domxref("Crypto")}}), {{domxref("CustomEvent")}}, {{domxref("Data_Store_API", "Data Store")}} (Firefox only), {{domxref("DOMRequest")}} and {{domxref("DOMCursor")}}, {{domxref("Encoding_API", "Encoding API")}} ({{domxref("TextEncoder")}}, {{domxref("TextDecoder")}}, etc.), {{domxref("Fetch_API", "Fetch API")}}, {{domxref("FileReader")}}, {{domxref("FileReaderSync")}} (only works in workers!), {{domxref("FormData")}}, {{domxref("ImageData")}}, {{domxref("IndexedDB_API", "IndexedDB")}}, <a href="/en-US/docs/Web/API/Network_Information_API">Network Information API</a>, {{domxref("Notifications_API", "Notifications API")}}, {{domxref("Performance_API","Performance API")}} (including: {{domxref("Performance")}}, {{domxref("PerformanceEntry")}}, {{domxref("PerformanceMeasure")}}, {{domxref("PerformanceMark")}}, {{domxref("PerformanceObserver")}}, {{domxref("PerformanceResourceTiming")}}), {{jsxref("Promise")}}, <a href="/en-US/docs/Web/API/Server-sent_events">Server-sent events</a>, {{domxref("ServiceWorkerRegistration")}}, {{ domxref("URL_API","URL API") }} (e.g. {{ domxref("URL") }}), <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> with {{domxref("OffscreenCanvas")}} (enabled behind a feature preference setting <code>gfx.offscreencanvas.enabled</code>), {{domxref("WebSocket")}}, {{domxref("XMLHttpRequest")}}.</p>
+The following Web APIs are available to workers: {{domxref("Barcode_Detection_API","Barcode Detection API")}}, {{domxref("Broadcast_Channel_API","Broadcast Channel API")}}, {{domxref("Cache", "Cache API")}}, {{domxref("Channel_Messaging_API", "Channel Messaging API")}},{{domxref("Console API", "Console API")}}, [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) ({{domxref("Crypto")}}), {{domxref("CustomEvent")}}, {{domxref("Data_Store_API", "Data Store")}} (Firefox only), {{domxref("DOMRequest")}} and {{domxref("DOMCursor")}}, {{domxref("Encoding_API", "Encoding API")}} ({{domxref("TextEncoder")}}, {{domxref("TextDecoder")}}, etc.), {{domxref("Fetch_API", "Fetch API")}}, {{domxref("FileReader")}}, {{domxref("FileReaderSync")}} (only works in workers!), {{domxref("FormData")}}, {{domxref("ImageData")}}, {{domxref("IndexedDB_API", "IndexedDB")}}, [Network Information API](/en-US/docs/Web/API/Network_Information_API), {{domxref("Notifications_API", "Notifications API")}}, {{domxref("Performance_API","Performance API")}} (including: {{domxref("Performance")}}, {{domxref("PerformanceEntry")}}, {{domxref("PerformanceMeasure")}}, {{domxref("PerformanceMark")}}, {{domxref("PerformanceObserver")}}, {{domxref("PerformanceResourceTiming")}}), {{jsxref("Promise")}}, [Server-sent events](/en-US/docs/Web/API/Server-sent_events), {{domxref("ServiceWorkerRegistration")}}, {{ domxref("URL_API","URL API") }} (e.g. {{ domxref("URL") }}), [WebGL](/en-US/docs/Web/API/WebGL_API) with {{domxref("OffscreenCanvas")}} (enabled behind a feature preference setting `gfx.offscreencanvas.enabled`), {{domxref("WebSocket")}}, {{domxref("XMLHttpRequest")}}.
 
-<p>Workers can also spawn other workers, so these APIs are also available: {{domxref("Worker")}}, {{domxref("WorkerGlobalScope")}}, {{domxref("WorkerLocation")}}, {{domxref("WorkerNavigator")}}.</p>
+Workers can also spawn other workers, so these APIs are also available: {{domxref("Worker")}}, {{domxref("WorkerGlobalScope")}}, {{domxref("WorkerLocation")}}, {{domxref("WorkerNavigator")}}.
 
-<h2 id="Web_Worker_interfaces">Web Worker interfaces</h2>
+## Web Worker interfaces
 
-<dl>
- <dt>{{DOMxRef("Worker")}}</dt>
- <dd>Represents a running worker thread, allowing you to pass messages to the running worker code.</dd>
- <dt>{{DOMxRef("WorkerLocation")}}</dt>
- <dd>Defines the absolute location of the script executed by the {{domxref("Worker")}}.</dd>
- <dt>{{DOMxRef("SharedWorker")}}</dt>
- <dd>Represents a specific kind of worker that can be <em>accessed</em> from several {{glossary("browsing context", "browsing contexts")}}, being several windows, iframes or even workers.</dd>
- <dt>{{DOMxRef("WorkerGlobalScope")}}</dt>
- <dd>Represents the generic scope of any worker (doing the same job as {{DOMxRef("Window")}} does for normal web content). Different types of worker have scope objects that inherit from this interface and add more specific features.</dd>
- <dt>{{DOMxRef("DedicatedWorkerGlobalScope")}}</dt>
- <dd>Represents the scope of a dedicated worker, inheriting from {{DOMxRef("WorkerGlobalScope")}} and adding some dedicated features.</dd>
- <dt>{{DOMxRef("SharedWorkerGlobalScope")}}</dt>
- <dd>Represents the scope of a shared worker, inheriting from {{DOMxRef("WorkerGlobalScope")}} and adding some dedicated features.</dd>
- <dt>{{DOMxRef("WorkerNavigator")}}</dt>
- <dd>Represents the identity and state of the user agent (the client):</dd>
-</dl>
+- {{DOMxRef("Worker")}}
+  - : Represents a running worker thread, allowing you to pass messages to the running worker code.
+- {{DOMxRef("WorkerLocation")}}
+  - : Defines the absolute location of the script executed by the {{domxref("Worker")}}.
+- {{DOMxRef("SharedWorker")}}
+  - : Represents a specific kind of worker that can be _accessed_ from several {{glossary("browsing context", "browsing contexts")}}, being several windows, iframes or even workers.
+- {{DOMxRef("WorkerGlobalScope")}}
+  - : Represents the generic scope of any worker (doing the same job as {{DOMxRef("Window")}} does for normal web content). Different types of worker have scope objects that inherit from this interface and add more specific features.
+- {{DOMxRef("DedicatedWorkerGlobalScope")}}
+  - : Represents the scope of a dedicated worker, inheriting from {{DOMxRef("WorkerGlobalScope")}} and adding some dedicated features.
+- {{DOMxRef("SharedWorkerGlobalScope")}}
+  - : Represents the scope of a shared worker, inheriting from {{DOMxRef("WorkerGlobalScope")}} and adding some dedicated features.
+- {{DOMxRef("WorkerNavigator")}}
+  - : Represents the identity and state of the user agent (the client):
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>We have created a couple of simple demos to show basic usage:</p>
+We have created a couple of simple demos to show basic usage:
 
-<ul>
- <li><a href="https://github.com/mdn/simple-web-worker">Basic dedicated worker example</a> (<a href="https://mdn.github.io/simple-web-worker/">run dedicated worker</a>).</li>
- <li><a href="https://github.com/mdn/simple-shared-worker">Basic shared worker example</a> (<a href="https://mdn.github.io/simple-shared-worker/">run shared worker</a>).</li>
-</ul>
+- [Basic dedicated worker example](https://github.com/mdn/simple-web-worker) ([run dedicated worker](https://mdn.github.io/simple-web-worker/)).
+- [Basic shared worker example](https://github.com/mdn/simple-shared-worker) ([run shared worker](https://mdn.github.io/simple-shared-worker/)).
 
-<p>You can find out more information on how these demos work in <a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using Web Workers</a>.</p>
+You can find out more information on how these demos work in [Using Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table>
- <tbody>
-  <tr>
-   <th>Specification</th>
-  </tr>
-  <tr>
-   <td>
-     <a href="https://html.spec.whatwg.org/multipage/workers.html#workers">HTML Living Standard<br/>
-     # workers</a></td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                 |
+| --------------------------------------------------------------------------------------------- |
+| [HTML Living Standard # workers](https://html.spec.whatwg.org/multipage/workers.html#workers) |
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using Web Workers</a></li>
- <li>{{domxref("Worker")}} interface</li>
- <li>{{domxref("SharedWorker")}} interface</li>
- <li><a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a></li>
-</ul>
+- [Using Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
+- {{domxref("Worker")}} interface
+- {{domxref("SharedWorker")}} interface
+- [Service Worker API](/en-US/docs/Web/API/Service_Worker_API)

@@ -2,43 +2,42 @@
 title: BluetoothRemoteGATTDescriptor.writeValue()
 slug: Web/API/BluetoothRemoteGATTDescriptor/writeValue
 tags:
-- API
-- Bluetooth
-- BluetoothGattDescriptor
-- BluetoothRemoteGATTDescriptor
-- Experimental
-- Property
-- Reference
-- Web Bluetooth API
-- writeValue()
+  - API
+  - Bluetooth
+  - BluetoothGattDescriptor
+  - BluetoothRemoteGATTDescriptor
+  - Experimental
+  - Property
+  - Reference
+  - Web Bluetooth API
+  - writeValue()
 browser-compat: api.BluetoothRemoteGATTDescriptor.writeValue
 ---
-<p>{{APIRef("Web Bluetooth API")}}{{SeeCompatTable}}</p>
+{{APIRef("Web Bluetooth API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>BluetoothRemoteGATTDescriptor.writeValue()</code></strong>
-  method sets the value property to the bytes contained in
-  an {{jsxref("ArrayBuffer")}} and returns a {{jsxref("Promise")}}.</p>
+The **`BluetoothRemoteGATTDescriptor.writeValue()`**
+method sets the value property to the bytes contained in
+an {{jsxref("ArrayBuffer")}} and returns a {{jsxref("Promise")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">BluetoothRemoteGATTDescriptor.writeValue(<em>array</em>[]).then(function() { ... })</pre>
+```js
+BluetoothRemoteGATTDescriptor.writeValue(array[]).then(function() { ... })
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>array</dt>
-  <dd>Sets the value with the bytes contained in the array.</dd>
-</dl>
+- array
+  - : Sets the value with the bytes contained in the array.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A {{jsxref("Promise")}}.</p>
+A {{jsxref("Promise")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

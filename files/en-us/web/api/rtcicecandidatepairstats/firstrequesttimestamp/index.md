@@ -2,53 +2,55 @@
 title: RTCIceCandidatePairStats.firstRequestTimestamp
 slug: Web/API/RTCIceCandidatePairStats/firstRequestTimestamp
 tags:
-- API
-- Connectivity
-- ICE
-- Network
-- Property
-- RTCIceCandidatePairStats
-- Reference
-- STUN
-- Statistics
-- Stats
-- Timing
-- WebRTC
-- WebRTC API
-- firstRequestTimestamp
-- timeStamp
+  - API
+  - Connectivity
+  - ICE
+  - Network
+  - Property
+  - RTCIceCandidatePairStats
+  - Reference
+  - STUN
+  - Statistics
+  - Stats
+  - Timing
+  - WebRTC
+  - WebRTC API
+  - firstRequestTimestamp
+  - timeStamp
 browser-compat: api.RTCIceCandidatePairStats.firstRequestTimeStamp
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The {{domxref("RTCIceCandidatePairStats")}} property
-    <strong><code>firstRequestTimestamp</code></strong> specifies the time at which the
-    first {{Glossary("STUN")}} request was sent on the described candidate pair.</p>
+The {{domxref("RTCIceCandidatePairStats")}} property
+**`firstRequestTimestamp`** specifies the time at which the
+first {{Glossary("STUN")}} request was sent on the described candidate pair.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>firstRequestTimestamp</em> = <em>rtcIceCandidatePairStats</em>.firstRequestTimestamp;</pre>
+```js
+firstRequestTimestamp = rtcIceCandidatePairStats.firstRequestTimestamp;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMHighResTimeStamp")}} object indicating the timestamp at which the first
-  STUN request was sent on the connection described by the described pair of candidates.
-</p>
+A {{domxref("DOMHighResTimeStamp")}} object indicating the timestamp at which the first
+STUN request was sent on the connection described by the described pair of candidates.
 
-<p>You can use this value in combination with
-  {{domxref("RTCIceCandidatePairStats.lastRequestTimestamp", "lastRequestTimestamp")}} and
-  {{domxref("RTCIceCandidatePairStats.requestsSent", "requestsSent")}} to compute the
-  average interval between consecutive connectivity checks:</p>
+You can use this value in combination with
+{{domxref("RTCIceCandidatePairStats.lastRequestTimestamp", "lastRequestTimestamp")}} and
+{{domxref("RTCIceCandidatePairStats.requestsSent", "requestsSent")}} to compute the
+average interval between consecutive connectivity checks:
 
-<pre class="brush: js">avgCheckInterval = (candidatePairStats.lastRequestTimestamp -
+```js
+avgCheckInterval = (candidatePairStats.lastRequestTimestamp -
                     candidatePairStats.firstRequestTimestamp) /
-                   candidatePairStats.requestsSent;</pre>
+                   candidatePairStats.requestsSent;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

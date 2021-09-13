@@ -2,58 +2,54 @@
 title: DOMImplementation.createDocument()
 slug: Web/API/DOMImplementation/createDocument
 tags:
-- API
-- DOM
-- DOMImplementation
-- Method
-- Reference
+  - API
+  - DOM
+  - DOMImplementation
+  - Method
+  - Reference
 browser-compat: api.DOMImplementation.createDocument
 ---
-<p>{{ApiRef("DOM")}}</p>
+{{ApiRef("DOM")}}
 
-<p>The <strong><code>DOMImplementation.createDocument()</code></strong> method creates and
-  returns an {{domxref("XMLDocument")}}.</p>
+The **`DOMImplementation.createDocument()`** method creates and
+returns an {{domxref("XMLDocument")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>doc</em> = document.implementation.createDocument(<em>namespaceURI</em>, <em>qualifiedNameStr</em>, <em>documentType</em>);</pre>
+```js
+var doc = document.implementation.createDocument(namespaceURI, qualifiedNameStr, documentType);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>namespaceURI</code></dt>
-  <dd>Is a {{domxref("DOMString")}} containing the namespace URI of the document to be
-    created, or <code>null</code> if the document doesn't belong to one.</dd>
-  <dt><code>qualifiedNameStr</code></dt>
-  <dd>Is a {{domxref("DOMString")}} containing the qualified name, that is an optional
-    prefix and colon plus the local root element name, of the document to be created.</dd>
-  <dt><code>documentType</code> {{optional_inline}}</dt>
-  <dd>
-    <p>Is the {{domxref("DocumentType")}} of the document to be created. It defaults to
-      <code>null</code>.</p>
-  </dd>
-</dl>
+- `namespaceURI`
+  - : Is a {{domxref("DOMString")}} containing the namespace URI of the document to be
+    created, or `null` if the document doesn't belong to one.
+- `qualifiedNameStr`
+  - : Is a {{domxref("DOMString")}} containing the qualified name, that is an optional
+    prefix and colon plus the local root element name, of the document to be created.
+- `documentType` {{optional_inline}}
+  - : Is the {{domxref("DocumentType")}} of the document to be created. It defaults to
+    `null`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var doc = document.implementation.createDocument ('http://www.w3.org/1999/xhtml', 'html', null);
+```js
+var doc = document.implementation.createDocument ('http://www.w3.org/1999/xhtml', 'html', null);
 var body = document.createElementNS('http://www.w3.org/1999/xhtml', 'body');
 body.setAttribute('id', 'abc');
 doc.documentElement.appendChild(body);
 alert(doc.getElementById('abc')); // [object HTMLBodyElement]
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("DOMImplementation")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("DOMImplementation")}} interface it belongs to.

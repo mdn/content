@@ -10,35 +10,38 @@ tags:
   - web console
 browser-compat: api.console.table
 ---
-<div>{{APIRef("Console API")}}</div>
+{{APIRef("Console API")}}
 
-<p>The <strong><code>console.table()</code></strong> method displays tabular data as a table.</p>
+The **`console.table()`** method displays tabular data as a table.
 
-<p>This function takes one mandatory argument <code>data</code>, which must be an array or
-  an object, and one additional optional parameter <code>columns</code>.</p>
+This function takes one mandatory argument `data`, which must be an array or
+an object, and one additional optional parameter `columns`.
 
-<p>It logs <code>data</code> as a table. Each element in the array (or enumerable property
-  if <code>data</code> is an object) will be a row in the table.</p>
+It logs `data` as a table. Each element in the array (or enumerable property
+if `data` is an object) will be a row in the table.
 
-<p>The first column in the table will be labeled <code>(index)</code>. If
-  <code>data</code> is an array, then its values will be the array indices. If
-  <code>data</code> is an object, then its values will be the property names. Note that
-  (in Firefox) <code>console.table</code> is limited to displaying 1000 rows (first row is
-  the labeled index).</p>
+The first column in the table will be labeled `(index)`. If
+`data` is an array, then its values will be the array indices. If
+`data` is an object, then its values will be the property names. Note that
+(in Firefox) `console.table` is limited to displaying 1000 rows (first row is
+the labeled index).
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h3 id="Collections_of_primitive_types">Collections of primitive types</h3>
+### Collections of primitive types
 
-<p>The <code>data</code> argument may be an array or an object.</p>
+The `data` argument may be an array or an object.
 
-<pre class="brush: js">// an array of strings
+```js
+// an array of strings
 
-console.table(["apples", "oranges", "bananas"]);</pre>
+console.table(["apples", "oranges", "bananas"]);
+```
 
-<p><img alt="" src="console-table-array.png"></p>
+![](console-table-array.png)
 
-<pre class="brush: js">// an object whose properties are strings
+```js
+// an object whose properties are strings
 
 function Person(firstName, lastName) {
   this.firstName = firstName;
@@ -47,26 +50,27 @@ function Person(firstName, lastName) {
 
 var me = new Person("John", "Smith");
 
-console.table(me);</pre>
+console.table(me);
+```
 
-<p><img alt=""
-    src="console-table-simple-object.png"></p>
+![](console-table-simple-object.png)
 
-<h3 id="Collections_of_compound_types">Collections of compound types</h3>
+### Collections of compound types
 
-<p>If the elements in the array, or properties in the object, are themselves arrays or
-  objects, then their elements or properties are enumerated in the row, one per column:
-</p>
+If the elements in the array, or properties in the object, are themselves arrays or
+objects, then their elements or properties are enumerated in the row, one per column:
 
-<pre class="brush: js">// an array of arrays
+```js
+// an array of arrays
 
 var people = [["John", "Smith"], ["Jane", "Doe"], ["Emily", "Jones"]]
-console.table(people);</pre>
+console.table(people);
+```
 
-<p><img alt="Table displaying array of arrays"
-    src="console-table-array-of-array.png"></p>
+![Table displaying array of arrays](console-table-array-of-array.png)
 
-<pre class="brush: js">// an array of objects
+```js
+// an array of objects
 
 function Person(firstName, lastName) {
   this.firstName = firstName;
@@ -77,15 +81,16 @@ var john = new Person("John", "Smith");
 var jane = new Person("Jane", "Doe");
 var emily = new Person("Emily", "Jones");
 
-console.table([john, jane, emily]);</pre>
+console.table([john, jane, emily]);
+```
 
-<p>Note that if the array contains objects, then the columns are labeled with the property
-  name.</p>
+Note that if the array contains objects, then the columns are labeled with the property
+name.
 
-<p><img alt="Table displaying array of objects"
-    src="console-table-array-of-objects.png"></p>
+![Table displaying array of objects](console-table-array-of-objects.png)
 
-<pre class="brush: js">// an object whose properties are objects
+```js
+// an object whose properties are objects
 
 var family = {};
 
@@ -93,18 +98,18 @@ family.mother = new Person("Jane", "Smith");
 family.father = new Person("John", "Smith");
 family.daughter = new Person("Emily", "Smith");
 
-console.table(family);</pre>
+console.table(family);
+```
 
-<p><img alt="Table displaying object of objects"
-    src="console-table-object-of-objects.png"></p>
+![Table displaying object of objects](console-table-object-of-objects.png)
 
-<h3 id="Restricting_the_columns_displayed">Restricting the columns displayed</h3>
+### Restricting the columns displayed
 
-<p>By default, <code>console.table()</code> lists all elements in each row. You can use
-  the optional <code>columns</code> parameter to select a subset of columns to display:
-</p>
+By default, `console.table()` lists all elements in each row. You can use
+the optional `columns` parameter to select a subset of columns to display:
 
-<pre class="brush: js">// an array of objects, logging only firstName
+```js
+// an array of objects, logging only firstName
 
 function Person(firstName, lastName) {
   this.firstName = firstName;
@@ -115,35 +120,33 @@ var john = new Person("John", "Smith");
 var jane = new Person("Jane", "Doe");
 var emily = new Person("Emily", "Jones");
 
-console.table([john, jane, emily], ["firstName"]);</pre>
+console.table([john, jane, emily], ["firstName"]);
+```
 
-<p><img alt="Table displaying array of objects with filtered output"
-    src="console-table-array-of-objects-firstname-only.png">
-</p>
+![Table displaying array of objects with filtered output](console-table-array-of-objects-firstname-only.png)
 
-<h3 id="Sorting_columns">Sorting columns</h3>
+### Sorting columns
 
-<p>You can sort the table by a particular column by clicking on that column's label.</p>
+You can sort the table by a particular column by clicking on that column's label.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">console.table(data);
+```js
+console.table(data);
 console.table(data, columns);
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>data</code></dt>
-  <dd>The data to display. This must be either an array or an object.</dd>
-  <dt><code>columns</code></dt>
-  <dd>An array containing the names of columns to include in the output.</dd>
-</dl>
+- `data`
+  - : The data to display. This must be either an array or an object.
+- `columns`
+  - : An array containing the names of columns to include in the output.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

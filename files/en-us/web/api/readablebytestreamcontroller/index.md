@@ -11,42 +11,38 @@ tags:
   - Streams
 browser-compat: api.ReadableByteStreamController
 ---
-<p>{{APIRef("Streams")}}{{SeeCompatTable}}</p>
+{{APIRef("Streams")}}{{SeeCompatTable}}
 
-<p>The <strong><code>ReadableByteStreamController</code></strong> interface of the <a href="/en-US/docs/Web/API/Streams_API">Streams API</a> represents a controller allowing control of a {{domxref("ReadableStream")}}'s state and internal queue. Byte stream controllers are for byte streams.</p>
+The **`ReadableByteStreamController`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a controller allowing control of a {{domxref("ReadableStream")}}'s state and internal queue. Byte stream controllers are for byte streams.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<p>None. <code>ReadableByteStreamController</code> instances are created automatically during <code>ReadableStream</code> construction.</p>
+None. `ReadableByteStreamController` instances are created automatically during `ReadableStream` construction.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("ReadableByteStreamController.byobRequest")}} {{readonlyInline}}</dt>
- <dd>Returns the current BYOB pull request.</dd>
- <dt>{{domxref("ReadableByteStreamController.desiredSize")}} {{readonlyInline}}</dt>
- <dd>Returns the desired size required to fill the stream's internal queue.</dd>
-</dl>
+- {{domxref("ReadableByteStreamController.byobRequest")}} {{readonlyInline}}
+  - : Returns the current BYOB pull request.
+- {{domxref("ReadableByteStreamController.desiredSize")}} {{readonlyInline}}
+  - : Returns the desired size required to fill the stream's internal queue.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("ReadableByteStreamController.close()")}}</dt>
- <dd>Closes the associated stream.</dd>
- <dt>{{domxref("ReadableByteStreamController.enqueue()")}}</dt>
- <dd>Enqueues a given chunk in the associated stream.</dd>
- <dt>{{domxref("ReadableByteStreamController.error()")}}</dt>
- <dd>Causes any future interactions with the associated stream to error.</dd>
-</dl>
+- {{domxref("ReadableByteStreamController.close()")}}
+  - : Closes the associated stream.
+- {{domxref("ReadableByteStreamController.enqueue()")}}
+  - : Enqueues a given chunk in the associated stream.
+- {{domxref("ReadableByteStreamController.error()")}}
+  - : Causes any future interactions with the associated stream to error.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>TBD.</p>
+TBD.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

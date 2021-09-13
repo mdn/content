@@ -7,46 +7,35 @@ tags:
   - Overview
   - Reference
 ---
-<p>{{DefaultAPISidebar("InputDeviceCapabilities API")}}{{SeeCompatTable}}</p>
+{{DefaultAPISidebar("InputDeviceCapabilities API")}}{{SeeCompatTable}}
 
-<p>The InputDeviceCapabilities API provides details about the underlying sources of input events. The API attempts to describe how the device behaves rather than what it is. For example, the first version of the API indicates whether a device fires touch events rather than whether it is a touch screen.</p>
+The InputDeviceCapabilities API provides details about the underlying sources of input events. The API attempts to describe how the device behaves rather than what it is. For example, the first version of the API indicates whether a device fires touch events rather than whether it is a touch screen.
 
-<h2 id="Input_device_capabilities_concepts_and_usage">Input device capabilities concepts and usage</h2>
+## Input device capabilities concepts and usage
 
-<p>Because DOM events abstract device input, they provide no way to learn what device or type of device fired an event. This can lead to instances where the same action triggers multiple event handlers.  To deal with this, developers make assumptions and use heuristics to normalize behavior on web pages. </p>
+Because DOM events abstract device input, they provide no way to learn what device or type of device fired an event. This can lead to instances where the same action triggers multiple event handlers.  To deal with this, developers make assumptions and use heuristics to normalize behavior on web pages.
 
-<p>The InputDeviceCapabilities API addresses this problem by abstracting the capabilities of input devices. For example, let's say we have a web page that implements both a <code>touchstart</code> and a <code>mousedown</code> event. We can assume that if the touchstart event is triggered that the user's device has a touch interface.  What about when the mousedown event is triggered? It would be useful to know if a <code>touchstart</code> event were also triggered so that we don't take the same action twice. We can do this by checking the sourceCapabilities property of the {{domxref("UIEvent")}}.</p>
+The InputDeviceCapabilities API addresses this problem by abstracting the capabilities of input devices. For example, let's say we have a web page that implements both a `touchstart` and a `mousedown` event. We can assume that if the touchstart event is triggered that the user's device has a touch interface.  What about when the mousedown event is triggered? It would be useful to know if a `touchstart` event were also triggered so that we don't take the same action twice. We can do this by checking the sourceCapabilities property of the {{domxref("UIEvent")}}.
 
-<pre class="brush: js">myButton.addEventListener('mousedown', function(e) {
+```js
+myButton.addEventListener('mousedown', function(e) {
   // Touch event case handled above, don't change the style again on tap.
   if (!e.sourceCapabilities.firesTouchEvents)
     myButton.classList.add("pressed");
-});</pre>
+});
+```
 
-<h2 id="Interfaces">Interfaces</h2>
+## Interfaces
 
-<dl>
- <dt>{{DOMxRef("InputDeviceCapabilities")}}</dt>
- <dd>Provides logical information about an input device.</dd>
-</dl>
+- {{DOMxRef("InputDeviceCapabilities")}}
+  - : Provides logical information about an input device.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Specification</th>
-   <th>Status</th>
-   <th>Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("InputDeviceCapabilities")}}</td>
-   <td>{{Spec2("InputDeviceCapabilities")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                        | Status                                           | Comment             |
+| ---------------------------------------------------- | ------------------------------------------------ | ------------------- |
+| {{SpecName("InputDeviceCapabilities")}} | {{Spec2("InputDeviceCapabilities")}} | Initial definition. |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.InputDeviceCapabilities")}}</p>
+{{Compat("api.InputDeviceCapabilities")}}

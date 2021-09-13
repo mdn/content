@@ -2,55 +2,57 @@
 title: Locks.name
 slug: Web/API/Lock/name
 tags:
-- API
-- Experimental
-- Property
-- Reference
-- Web Locks API
-- lock
-- mode
-- name
+  - API
+  - Experimental
+  - Property
+  - Reference
+  - Web Locks API
+  - lock
+  - mode
+  - name
 browser-compat: api.Lock.name
 ---
-<p>{{SeeCompatTable}}{{APIRef("Web Locks")}}</p>
+{{SeeCompatTable}}{{APIRef("Web Locks")}}
 
-<p>The <strong><code>name</code></strong> read-only property of
-    the {{domxref("Lock")}} interface returns the <em>name</em> passed to
-    {{domxref('LockManager.request')}} selected when the lock was requested.</p>
+The **`name`** read-only property of
+the {{domxref("Lock")}} interface returns the _name_ passed to
+{{domxref('LockManager.request')}} selected when the lock was requested.
 
-<p>The name of a lock is passed by script when the lock is requested. The name is selected
-  by the developer to represent an abstract resource for which use is being coordinated
-  across multiple tabs, workers, or other code within the origin. For example, if only one
-  tab of a web application should be synchronizing network resources with an offline
-  database, it could use a lock name such as <code>"net_db_sync"</code>. </p>
+The name of a lock is passed by script when the lock is requested. The name is selected
+by the developer to represent an abstract resource for which use is being coordinated
+across multiple tabs, workers, or other code within the origin. For example, if only one
+tab of a web application should be synchronizing network resources with an offline
+database, it could use a lock name such as `"net_db_sync"`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>name</var> = <var>Lock</var>.name</pre>
+```js
+var name = Lock.name
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}}.</p>
+A {{domxref("DOMString")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following examples show how the name property passed in the call
-  to {{domxref('LockManager.request()')}}. <code>LockManager</code> is the object returned
-  by {{domxref('navigator.locks')}}.</p>
+The following examples show how the name property passed in the call
+to {{domxref('LockManager.request()')}}. `LockManager` is the object returned
+by {{domxref('navigator.locks')}}.
 
-<pre class="brush: js">navigator.locks.request("net_db_sync", show_lock_properties);
+```js
+navigator.locks.request("net_db_sync", show_lock_properties);
 
 function show_lock_properties(lock) {
   console.log(`The lock name is: ${lock.name}`);
   console.log(`The lock mode is: ${lock.mode}`);
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

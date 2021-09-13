@@ -10,29 +10,31 @@ tags:
   - Request
 browser-compat: api.Request.text
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p>The <strong><code>text()</code></strong> method of the {{domxref("Request")}} interface
+The **`text()`** method of the {{domxref("Request")}} interface
 reads the request body and returns it as a promise that resolves with a {{jsxref("String")}}.
-The response is <em>always</em> decoded using UTF-8.</p>
+The response is *always* decoded using UTF-8.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">request.text().then(function (text) {
+```js
+request.text().then(function (text) {
   // do something with the text sent in the request
-});</pre>
+});
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A Promise that resolves with a {{jsxref("String")}}.</p>
+A Promise that resolves with a {{jsxref("String")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">
+```js
 const text = "Hello world";
 
 const request = new Request('/myEndpoint', {
@@ -43,18 +45,16 @@ const request = new Request('/myEndpoint', {
 request.text().then(function(text) {
   // do something with the text sent in the request
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Response.text()")}}</li>
-</ul>
+- {{domxref("Response.text()")}}

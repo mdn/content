@@ -2,77 +2,76 @@
 title: Selection.addRange()
 slug: Web/API/Selection/addRange
 tags:
-- API
-- Experimental
-- HTML Editing
-- Method
-- Reference
-- Selection
+  - API
+  - Experimental
+  - HTML Editing
+  - Method
+  - Reference
+  - Selection
 browser-compat: api.Selection.addRange
 ---
-<div>{{ ApiRef("DOM") }}{{SeeCompatTable}}</div>
+{{ ApiRef("DOM") }}{{SeeCompatTable}}
 
-<p>The <strong><code>Selection.addRange()</code></strong> method adds a
-  {{domxref("Range")}} to a {{domxref("Selection")}}.</p>
+The **`Selection.addRange()`** method adds a
+{{domxref("Range")}} to a {{domxref("Selection")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>selection</em>.addRange(<em>range</em>);</pre>
+```js
+selection.addRange(range);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>range</code></dt>
-  <dd>A {{ domxref("Range") }} object that will be added to the {{ domxref("Selection")
-    }}.</dd>
-</dl>
+- `range`
+  - : A {{ domxref("Range") }} object that will be added to the {{ domxref("Selection")
+    }}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Currently only Firefox supports multiple selection ranges, other browsers will not
-    add new ranges to the selection if it already contains one.</p>
-</div>
+> **Note:** Currently only Firefox supports multiple selection ranges, other browsers will not
+> add new ranges to the selection if it already contains one.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;I &lt;strong&gt;insist&lt;/strong&gt; that you &lt;strong&gt;try&lt;/strong&gt; selecting the &lt;strong&gt;strong words&lt;/strong&gt;.&lt;/p&gt;
-&lt;button&gt;Select strong words&lt;/button&gt;</pre>
+```html
+<p>I <strong>insist</strong> that you <strong>try</strong> selecting the <strong>strong words</strong>.</p>
+<button>Select strong words</button>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">let button = document.querySelector('button');
+```js
+let button = document.querySelector('button');
 
 button.addEventListener('click', function () {
   let selection = window.getSelection();
   let strongs = document.getElementsByTagName('strong');
 
-  if (selection.rangeCount &gt; 0) {
+  if (selection.rangeCount > 0) {
     selection.removeAllRanges();
   }
 
-  for (let i = 0; i &lt; strongs.length; i++) {
+  for (let i = 0; i < strongs.length; i++) {
     let range = document.createRange();
     range.selectNode(strongs[i]);
     selection.addRange(range);
   }
-});</pre>
+});
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Selection")}}, the interface this method belongs to</li>
-</ul>
+- {{domxref("Selection")}}, the interface this method belongs to

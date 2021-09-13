@@ -4,36 +4,34 @@ slug: Web/API/msGetPropertyEnabled
 tags:
   - msGetPropertyEnabled
 ---
-<div>{{APIRef("HTMLMediaElement")}}</div>
+{{APIRef("HTMLMediaElement")}}
 
-<p>{{Non-standard_header()}}</p>
+{{Non-standard_header()}}
 
-<p>The <code><strong>msGetPropertyEnabled</strong></code> returns whether a given property in the style object is enabled.</p>
+The **`msGetPropertyEnabled`** returns whether a given property in the style object is enabled.
 
-<p>This proprietary method is specific to Internet Explorer browser.</p>
+This proprietary method is specific to Internet Explorer browser.
 
-<h3 id="Syntax">Syntax</h3>
+### Syntax
 
-<pre class="brush: js">var retVal = style.msGetPropertyEnabled(name);
-</pre>
+```js
+var retVal = style.msGetPropertyEnabled(name);
+```
 
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+**name** \[in]
 
-<p><strong>name</strong> [in]</p>
+Type: _String_
 
-<p>Type: <em>String</em></p>
+The name of the property to enable.
 
-<p>The name of the property to enable.</p>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+Type: _Boolean_
 
-<p>Type: <em>Boolean</em></p>
+If _false_, the property is not enabled. If _true_, the property is enabled.
 
-<p>If <em>false</em>, the property is not enabled. If <em>true</em>, the property is enabled.</p>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Microsoft_Extensions">Microsoft API extensions </a></li>
-</ul>
+- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_Extensions)

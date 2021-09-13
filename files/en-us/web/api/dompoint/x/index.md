@@ -2,51 +2,51 @@
 title: DOMPoint.x
 slug: Web/API/DOMPoint/x
 tags:
-- API
-- Coordinates
-- DOM
-- DOMPoint
-- Geometry
-- Geometry Interfaces
-- Point
-- Property
-- Reference
-- x
+  - API
+  - Coordinates
+  - DOM
+  - DOMPoint
+  - Geometry
+  - Geometry Interfaces
+  - Point
+  - Property
+  - Reference
+  - x
 browser-compat: api.DOMPoint.x
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>DOMPoint</strong></code> interface's
-    <code><strong>x</strong></code> property holds the horizontal coordinate, x, for a
-    point in space.</p>
+The **`DOMPoint`** interface's
+**`x`** property holds the horizontal coordinate, x, for a
+point in space.
 
-<p>In general, positive values <code>x</code> mean to the right,
-  and negative values of <code>x</code> means to the left, barring any transforms that may
-  have altered the orientation of the axes.</p>
+In general, positive values `x` mean to the right,
+and negative values of `x` means to the left, barring any transforms that may
+have altered the orientation of the axes.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>xPos</em> = <em>DOMPoint</em>.x;</pre>
+```js
+var xPos = DOMPoint.x;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A double-precision floating-point value indicating the x coordinate's value for the
-  point. This value is <strong>unrestricted</strong>, meaning that it is allowed to be
-  infinite or invalid (that is, its value may be {{jsxref("NaN")}} or {{jsxref("Infinity",
-  "±Infinity")}}).</p>
+A double-precision floating-point value indicating the x coordinate's value for the
+point. This value is **unrestricted**, meaning that it is allowed to be
+infinite or invalid (that is, its value may be {{jsxref("NaN")}} or {{jsxref("Infinity",
+  "±Infinity")}}).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The other coordinate properties: {{domxref("DOMPoint.y", "y")}},
-    {{domxref("DOMPoint.z", "z")}}, and the perspective value, {{domxref("DOMPoint.w",
-    "w")}}.</li>
-</ul>
+- The other coordinate properties: {{domxref("DOMPoint.y", "y")}},
+  {{domxref("DOMPoint.z", "z")}}, and the perspective value, {{domxref("DOMPoint.w",
+    "w")}}.

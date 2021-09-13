@@ -11,75 +11,78 @@ tags:
   - Deprecated
 browser-compat: api.GlobalEventHandlers.onkeypress
 ---
-<div>{{ApiRef("HTML DOM")}} {{deprecated_header}}</div>
+{{ApiRef("HTML DOM")}} {{deprecated_header}}
 
-<p>The <code><strong>onkeypress</strong></code> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> that
-  processes {{event("keypress")}} events.</p>
+The **`onkeypress`** property of the
+{{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
+processes {{event("keypress")}} events.
 
-<p>The <code>keypress</code> event <em>should</em> fire when the user presses a key on the
-  keyboard. However, in practice browsers do not fire <code>keypress</code> events for
-  certain keys.</p>
+The `keypress` event _should_ fire when the user presses a key on the
+keyboard. However, in practice browsers do not fire `keypress` events for
+certain keys.
 
-<div class="notecard warning">
-  <p><strong>Warning:</strong> The <code>onkeypress</code> event handler has been deprecated. You may want to use
-    {{domxref("GlobalEventHandlers.onkeydown", "onkeydown")}} instead.</p>
-</div>
+> **Warning:** The `onkeypress` event handler has been deprecated. You may want to use
+> {{domxref("GlobalEventHandlers.onkeydown", "onkeydown")}} instead.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>target</em>.onkeypress = <var>functionRef</var>;
-</pre>
+```js
+target.onkeypress = functionRef;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p><code>functionRef</code> is a function name or a <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function
-    expression</a>. The function receives a {{domxref("KeyboardEvent")}} object as its
-  sole argument.</p>
+`functionRef` is a function name or a [function
+expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("KeyboardEvent")}} object as its
+sole argument.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_example">Basic example</h3>
+### Basic example
 
-<p>This example logs the {{domxref("KeyboardEvent.code")}} value whenever you press a key
-  inside the {{HtmlElement("input")}} element.</p>
+This example logs the {{domxref("KeyboardEvent.code")}} value whenever you press a key
+inside the {{HtmlElement("input")}} element.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;input&gt;
-&lt;p id="log"&gt;&lt;/p&gt;</pre>
+```html
+<input>
+<p id="log"></p>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const input = document.querySelector('input');
+```js
+const input = document.querySelector('input');
 const log = document.getElementById('log');
 
 input.onkeypress = logKey;
 
 function logKey(e) {
   log.textContent += ` ${e.code}`;
-}</pre>
+}
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Basic_example", 700, 200)}}</p>
+{{EmbedLiveSample("Basic_example", 700, 200)}}
 
-<h3 id="Filter_keys_with_a_regular_expression">Filter keys with a regular expression</h3>
+### Filter keys with a regular expression
 
-<p>This example filters the characters typed into a form field using a <a
-    href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">regular expression</a>.
-</p>
+This example filters the characters typed into a form field using a [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions).
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;label&gt;Enter numbers only:
-  &lt;input&gt;
-&lt;/label&gt;</pre>
+```html
+<label>Enter numbers only:
+  <input>
+</label>
+```
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">function numbersOnly(event) {
+```js
+function numbersOnly(event) {
   return event.charCode === 0 || /\d/.test(String.fromCharCode(event.charCode));
 }
 
@@ -87,18 +90,20 @@ const input = document.querySelector('input');
 input.onkeypress = numbersOnly;
 
 // Prevent pasting (since pasted content might include non-number characters)
-input.onpaste = event =&gt; false;</pre>
+input.onpaste = event => false;
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Filter_keys_with_a_regular_expression")}}</p>
+{{EmbedLiveSample("Filter_keys_with_a_regular_expression")}}
 
-<h3 id="Capture_the_typing_of_a_hidden_word">Capture the typing of a hidden word</h3>
+### Capture the typing of a hidden word
 
-<p>The following JavaScript function will do something after the user types the word
-  "exit" in any point of a page.</p>
+The following JavaScript function will do something after the user types the word
+"exit" in any point of a page.
 
-<pre class="brush: js">/* Type the word "exit" in any point of your page... */
+```js
+/* Type the word "exit" in any point of your page... */
 
 (function () {
   const sSecret = /* Choose your hidden word...: */ "exit";
@@ -112,13 +117,13 @@ input.onpaste = event =&gt; false;</pre>
     if (nChr === 0 ||
         oEvent.target.contentEditable.toUpperCase() === "TRUE" ||
         sNodeType === "TEXTAREA" ||
-        sNodeType === "INPUT" &amp;&amp; oEvent.target.type.toUpperCase() === "TEXT") {
+        sNodeType === "INPUT" && oEvent.target.type.toUpperCase() === "TEXT") {
       return true;
     }
 
     if (nChr !== sSecret.charCodeAt(nOffset)) {
       nOffset = nChr === sSecret.charCodeAt(0) ? 1 : 0;
-    } else if (nOffset &lt; sSecret.length - 1) {
+    } else if (nOffset < sSecret.length - 1) {
       nOffset++;
     } else {
       nOffset = 0;
@@ -129,43 +134,51 @@ input.onpaste = event =&gt; false;</pre>
 
     return true;
   };
-})();</pre>
+})();
+```
 
-<div class="notecard note">
-  <p><strong>Note:</strong> A more complete framework for capturing the typing of hidden
-    words is <a href="https://github.com/madmurphy/spell.js/">available on GitHub</a>.</p>
-</div>
+> **Note:** A more complete framework for capturing the typing of hidden
+> words is [available on GitHub](https://github.com/madmurphy/spell.js/).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
+{{Compat}}
 
-  <p>{{Compat}}</p>
+### Browser compatibility notes
 
-  <h3 id="Browser_compatibility_notes">Browser compatibility notes</h3>
+- The `keypress` event is no longer fired for [non-printable
+  keys](</en-US/docs/Web/API/KeyboardEvent/keyCode#non-printable_keys_(function_keys)>) (see {{bug(968056)}} for Firefox 65's implementation of this), except for
+  the
 
-  <ul>
-    <li>The <code>keypress</code> event is no longer fired for <a
-        href="/en-US/docs/Web/API/KeyboardEvent/keyCode#non-printable_keys_(function_keys)">non-printable
-        keys</a> (see {{bug(968056)}} for Firefox 65's implementation of this), except for
-      the <kbd>Enter</kbd> key, and the <kbd>Shift</kbd> + <kbd>Enter</kbd> and
-      <kbd>Ctrl</kbd> + <kbd>Enter</kbd> key combinations (these were kept for
-      cross-browser compatibility purposes).</li>
-  </ul>
-</div>
+  <kbd>Enter</kbd>
 
-<h2 id="See_also">See also</h2>
+  key, and the
 
-<ul>
-  <li>{{Event("keypress")}} event</li>
-  <li>Related event handlers
-    <ul>
-      <li>{{domxref("GlobalEventHandlers.onkeydown")}}</li>
-      <li>{{domxref("GlobalEventHandlers.onkeyup")}}</li>
-    </ul>
-  </li>
-</ul>
+  <kbd>Shift</kbd>
+
+  \+
+
+  <kbd>Enter</kbd>
+
+  and
+
+  <kbd>Ctrl</kbd>
+
+  \+
+
+  <kbd>Enter</kbd>
+
+  key combinations (these were kept for
+  cross-browser compatibility purposes).
+
+## See also
+
+- {{Event("keypress")}} event
+- Related event handlers
+
+  - {{domxref("GlobalEventHandlers.onkeydown")}}
+  - {{domxref("GlobalEventHandlers.onkeyup")}}

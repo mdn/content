@@ -2,37 +2,38 @@
 title: GlobalEventHandlers.onlostpointercapture
 slug: Web/API/GlobalEventHandlers/onlostpointercapture
 tags:
-- API
-- Event Handler
-- GlobalEventHandlers
-- HTML DOM
-- Property
-- Reference
-- events
-- onlostpointercapture
+  - API
+  - Event Handler
+  - GlobalEventHandlers
+  - HTML DOM
+  - Property
+  - Reference
+  - events
+  - onlostpointercapture
 browser-compat: api.GlobalEventHandlers.onlostpointercapture
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p>The <strong><code>onlostpointercapture</code></strong> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> that
-  processes {{event("lostpointercapture")}} events.</p>
+The **`onlostpointercapture`** property of the
+{{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
+processes {{event("lostpointercapture")}} events.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>target</em>.onlostpointercapture = <em>functionRef</em>;</pre>
+```js
+target.onlostpointercapture = functionRef;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p><code>functionRef</code> is a function name or a <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function
-    expression</a>. The function receives a {{domxref("PointerEvent")}} object as its sole
-  argument.</p>
+`functionRef` is a function name or a [function
+expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("PointerEvent")}} object as its sole
+argument.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">function overHandler(event) {
+```js
+function overHandler(event) {
   // Determine the target event's lostpointercapture handler
   let lostCaptureHandler = event.target.onlostpointercapture;
 }
@@ -41,24 +42,20 @@ function init() {
   let el = document.getElementById('target');
   el.onlostpointercapture = overHandler;
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>
-    <code><a href="/en-US/docs/Web/API/Document/lostpointercapture_event">Document: lostpointercapture</a></code>
-    event</li>
-  <li>
-    <code><a href="/en-US/docs/Web/API/HTMLElement/lostpointercapture_event">HTMLElement: lostpointercapture</a></code>
-    event</li>
-  <li>{{domxref("Element.releasePointerCapture()")}}</li>
-</ul>
+- [`Document: lostpointercapture`](/en-US/docs/Web/API/Document/lostpointercapture_event)
+  event
+- [`HTMLElement: lostpointercapture`](/en-US/docs/Web/API/HTMLElement/lostpointercapture_event)
+  event
+- {{domxref("Element.releasePointerCapture()")}}

@@ -2,68 +2,69 @@
 title: Selection.selectAllChildren()
 slug: Web/API/Selection/selectAllChildren
 tags:
-- API
-- HTML Editing
-- Method
-- Reference
-- Selection
+  - API
+  - HTML Editing
+  - Method
+  - Reference
+  - Selection
 browser-compat: api.Selection.selectAllChildren
 ---
-<div>{{ ApiRef("DOM") }}</div>
+{{ ApiRef("DOM") }}
 
-<p>The <strong><code>Selection.selectAllChildren()</code></strong> method adds all the
-  children of the specified node to the selection. Previous selection is lost.</p>
+The **`Selection.selectAllChildren()`** method adds all the
+children of the specified node to the selection. Previous selection is lost.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>sel</em>.selectAllChildren(<em>parentNode</em>)
-</pre>
+```js
+sel.selectAllChildren(parentNode)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>parentNode</code></dt>
-  <dd>All children of <code>parentNode</code> will be selected. <code>parentNode</code>
-    itself is not part of the selection.</dd>
-</dl>
+- `parentNode`
+  - : All children of `parentNode` will be selected. `parentNode`
+    itself is not part of the selection.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;main&gt;
-  &lt;button&gt;Select Footer&lt;/button&gt;
-  &lt;p&gt;Welcome to my website.&lt;/p&gt;
-  &lt;p&gt;I hope you enjoy your visit.&lt;/p&gt;
-&lt;/main&gt;
-&lt;footer&gt;
-  &lt;address&gt;webmaster@example.com&lt;/address&gt;
-  &lt;p&gt;© 2019&lt;/p&gt;
-&lt;/footer&gt;</pre>
+```html
+<main>
+  <button>Select Footer</button>
+  <p>Welcome to my website.</p>
+  <p>I hope you enjoy your visit.</p>
+</main>
+<footer>
+  <address>webmaster@example.com</address>
+  <p>© 2019</p>
+</footer>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">const button = document.querySelector('button');
+```js
+const button = document.querySelector('button');
 const footer = document.querySelector('footer');
 
-button.addEventListener('click', (e) =&gt; {
+button.addEventListener('click', (e) => {
   window.getSelection().selectAllChildren(footer);
-});</pre>
+});
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example", 700, 200)}}</p>
+{{EmbedLiveSample("Example", 700, 200)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Selection")}}, the interface it belongs to.</li>
-</ul>
+- {{domxref("Selection")}}, the interface it belongs to.

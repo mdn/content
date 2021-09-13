@@ -2,52 +2,50 @@
 title: EventSource.withCredentials
 slug: Web/API/EventSource/withCredentials
 tags:
-- API
-- EventSource
-- Property
-- Reference
-- Server-sent events
-- withCredentials
+  - API
+  - EventSource
+  - Property
+  - Reference
+  - Server-sent events
+  - withCredentials
 browser-compat: api.EventSource.withCredentials
 ---
-<div>{{APIRef('WebSockets API')}}</div>
+{{APIRef('WebSockets API')}}
 
-<p>The <code><strong>withCredentials</strong></code> read-only property of the
-  {{domxref("EventSource")}} interface returns a boolean value indicating whether
-  the <code>EventSource</code> object was instantiated with CORS credentials set.</p>
+The **`withCredentials`** read-only property of the
+{{domxref("EventSource")}} interface returns a boolean value indicating whether
+the `EventSource` object was instantiated with CORS credentials set.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var myWithCredentials = eventSource.withCredentials;</pre>
+```js
+var myWithCredentials = eventSource.withCredentials;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A boolean value indicating whether the <code>EventSource</code> object was
-  instantiated with CORS credentials set (<code>true</code>), or not (<code>false</code>,
-  the default).</p>
+A boolean value indicating whether the `EventSource` object was
+instantiated with CORS credentials set (`true`), or not (`false`,
+the default).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var evtSource = new EventSource('sse.php');
-console.log(evtSource.withCredentials);</pre>
+```js
+var evtSource = new EventSource('sse.php');
+console.log(evtSource.withCredentials);
+```
 
-<div class="note">
-  <p><strong>Note:</strong> You can find a full example on GitHub — see <a
-      href="https://github.com/mdn/dom-examples/tree/master/server-sent-events">Simple SSE
-      demo using PHP.</a></p>
-</div>
+> **Note:** You can find a full example on GitHub — see [Simple SSE
+> demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("EventSource")}}</li>
-</ul>
+- {{domxref("EventSource")}}

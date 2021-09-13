@@ -11,65 +11,68 @@ tags:
   - Element
 browser-compat: api.Element.ariaColIndex
 ---
-<div>{{DefaultAPISidebar("DOM")}}</div>
+{{DefaultAPISidebar("DOM")}}
 
-<p>The <strong><code>ariaColIndex</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <code>aria-colindex</code> attribute, which defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid.</p>
+The **`ariaColIndex`** property of the {{domxref("Element")}} interface reflects the value of the `aria-colindex` attribute, which defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox notranslate">var <var>ariaColIndex</var> = element.ariaColIndex;
-<var>element</var>.ariaColIndex = <var>ariaColIndex</var></pre>
+    var ariaColIndex = element.ariaColIndex;
+    element.ariaColIndex = ariaColIndex
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString")}} which contains an integer.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("DOMString")}} which contains an integer.
 
-<p>In this example the <code>aria-colindex</code> attribute on the element with an ID of <code>role-heading</code> is set to "1". Using <code>ariaColIndex</code> we update the value to "2".</p>
+## Examples
 
-<pre class="brush: html">&lt;table id="semantic-table" role="table" aria-label="Semantic Elements" aria-describedby="semantic_elements_table_desc" aria-rowcount="100"&gt;
-  &lt;caption id="semantic_elements_table_desc"&gt;Semantic Elements to use instead of ARIA's roles&lt;/caption&gt;
-  &lt;thead role="rowgroup"&gt;
-    &lt;tr role="row"&gt;
-      &lt;th role="columnheader" id="role-heading" aria-sort="none" aria-rowindex="1" aria-colindex="1"&gt;ARIA Role&lt;/th&gt;
-      &lt;th role="columnheader" id="element-heading" aria-sort="none" aria-rowindex="1"&gt;Semantic Element&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody role="rowgroup"&gt;
-    &lt;tr role="row"&gt;
-      &lt;td role="cell" aria-rowindex="11"&gt;header&lt;/td&gt;
-      &lt;td role="cell" aria-rowindex="11"&gt;h1&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr role="row"&gt;
-      &lt;td role="cell" aria-rowindex="16"&gt;header&lt;/td&gt;
-      &lt;td role="cell" aria-rowindex="16"&gt;h6&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr role="row"&gt;
-      &lt;td role="cell" aria-rowindex="18"&gt;rowgroup&lt;/td&gt;
-      &lt;td role="cell" aria-rowindex="18"&gt;thead&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr role="row"&gt;
-      &lt;td role="cell" aria-rowindex="24"&gt;term&lt;/td&gt;
-      &lt;td role="cell" aria-rowindex="24"&gt;dt&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;</pre>
+In this example the `aria-colindex` attribute on the element with an ID of `role-heading` is set to "1". Using `ariaColIndex` we update the value to "2".
 
-<pre class="brush: js">let el = document.getElementById('role-heading');
+```html
+<table id="semantic-table" role="table" aria-label="Semantic Elements" aria-describedby="semantic_elements_table_desc" aria-rowcount="100">
+  <caption id="semantic_elements_table_desc">Semantic Elements to use instead of ARIA's roles</caption>
+  <thead role="rowgroup">
+    <tr role="row">
+      <th role="columnheader" id="role-heading" aria-sort="none" aria-rowindex="1" aria-colindex="1">ARIA Role</th>
+      <th role="columnheader" id="element-heading" aria-sort="none" aria-rowindex="1">Semantic Element</th>
+    </tr>
+  </thead>
+  <tbody role="rowgroup">
+    <tr role="row">
+      <td role="cell" aria-rowindex="11">header</td>
+      <td role="cell" aria-rowindex="11">h1</td>
+    </tr>
+    <tr role="row">
+      <td role="cell" aria-rowindex="16">header</td>
+      <td role="cell" aria-rowindex="16">h6</td>
+    </tr>
+    <tr role="row">
+      <td role="cell" aria-rowindex="18">rowgroup</td>
+      <td role="cell" aria-rowindex="18">thead</td>
+    </tr>
+    <tr role="row">
+      <td role="cell" aria-rowindex="24">term</td>
+      <td role="cell" aria-rowindex="24">dt</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+```js
+let el = document.getElementById('role-heading');
 console.log(el.ariaColIndex); // 1
 el.ariaColIndex = "2"
-console.log(el.ariaColIndex); // 2</pre>
+console.log(el.ariaColIndex); // 2
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role">ARIA: table role</a></li>
-</ul>
+- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role)

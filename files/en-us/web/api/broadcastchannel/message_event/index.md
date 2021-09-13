@@ -10,45 +10,54 @@ tags:
   - messaging
 browser-compat: api.BroadcastChannel.message_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code>message</code> event is fired on a {{domxref('BroadcastChannel')}} object when a message arrives on that channel.</p>
+The `message` event is fired on a {{domxref('BroadcastChannel')}} object when a message arrives on that channel.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("MessageEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td><code><a href="/en-US/docs/Web/API/BroadcastChannel/onmessage">onmessage</a></code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("MessageEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/API/BroadcastChannel/onmessage"
+            >onmessage</a
+          ></code
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Live_example">Live example</h3>
+### Live example
 
-<p>In this example there's a "sender" <code><a href="/en-US/docs/Web/HTML/Element/iframe">&lt;iframe&gt;</a></code> that broadcasts the contents of a <code><a href="/en-US/docs/Web/HTML/Element/textarea">&lt;textarea&gt;</a></code> when the user clicks a button. There are two "receiver" iframes that listen to the broadcast message and write the result into a <code><a href="/en-US/docs/Web/HTML/Element/div">&lt;div&gt;</a></code> element.</p>
+In this example there's a "sender" [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe) that broadcasts the contents of a [`<textarea>`](/en-US/docs/Web/HTML/Element/textarea) when the user clicks a button. There are two "receiver" iframes that listen to the broadcast message and write the result into a [`<div>`](/en-US/docs/Web/HTML/Element/div) element.
 
-<h4 id="Sender">Sender</h4>
+#### Sender
 
-<pre class="brush: html hidden">&lt;h1&gt;Sender&lt;/h1&gt;
-&lt;label for="message"&gt;Type a message to broadcast:&lt;/label&gt;&lt;br/&gt;
-&lt;textarea id="message" name="message" rows="1" cols="40"&gt;Hello&lt;/textarea&gt;
-&lt;button id="broadcast-message" type="button"&gt;Broadcast message&lt;/button&gt;</pre>
+```html hidden
+<h1>Sender</h1>
+<label for="message">Type a message to broadcast:</label><br/>
+<textarea id="message" name="message" rows="1" cols="40">Hello</textarea>
+<button id="broadcast-message" type="button">Broadcast message</button>
+```
 
-<pre class="brush: css hidden">body {
+```css hidden
+body {
      border: 1px solid black;
      padding: .5rem;
      height: 150px;
@@ -71,23 +80,28 @@ label, br {
 button {
     vertical-align: top;
     height: 1.5rem;
-}</pre>
+}
+```
 
-<pre class="brush: js">const channel = new BroadcastChannel('example-channel');
+```js
+const channel = new BroadcastChannel('example-channel');
 const messageControl = document.querySelector('#message');
 const broadcastMessageButton = document.querySelector('#broadcast-message');
 
-broadcastMessageButton.addEventListener('click', () =&gt; {
+broadcastMessageButton.addEventListener('click', () => {
     channel.postMessage(messageControl.value);
 })
-</pre>
+```
 
-<h4 id="Receiver_1">Receiver 1</h4>
+#### Receiver 1
 
-<pre class="brush: html hidden">&lt;h1&gt;Receiver 1&lt;/h1&gt;
-&lt;div id="received"&gt;&lt;/div&gt;</pre>
+```html hidden
+<h1>Receiver 1</h1>
+<div id="received"></div>
+```
 
-<pre class="brush: css hidden">body {
+```css hidden
+body {
     border: 1px solid black;
     padding: .5rem;
     height: 100px;
@@ -98,19 +112,24 @@ h1 {
     font: 1.6em "Fira Sans",
     sans-serif; margin-bottom: 1rem;
 }
-</pre>
+```
 
-<pre class="brush: js">const channel = new BroadcastChannel('example-channel');
-channel.addEventListener('message', (event) =&gt; {
+```js
+const channel = new BroadcastChannel('example-channel');
+channel.addEventListener('message', (event) => {
   received.textContent = event.data;
-});</pre>
+});
+```
 
-<h4 id="Receiver_2">Receiver 2</h4>
+#### Receiver 2
 
-<pre class="brush: html hidden">&lt;h1&gt;Receiver 2&lt;/h1&gt;
-&lt;div id="received"&gt;&lt;/div&gt;</pre>
+```html hidden
+<h1>Receiver 2</h1>
+<div id="received"></div>
+```
 
-<pre class="brush: css hidden">body {
+```css hidden
+body {
     border: 1px solid black;
     padding: .5rem;
     height: 100px;
@@ -121,31 +140,31 @@ h1 {
     font: 1.6em "Fira Sans", sans-serif;
     margin-bottom: 1rem;
 }
-</pre>
+```
 
-<pre class="brush: js">const channel = new BroadcastChannel('example-channel');
-channel.addEventListener('message', (event) =&gt; {
+```js
+const channel = new BroadcastChannel('example-channel');
+channel.addEventListener('message', (event) => {
   received.textContent = event.data;
-});</pre>
+});
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{ EmbedLiveSample('Sender', '100%', '170px','' ,'' , 'dummy') }}</p>
+{{ EmbedLiveSample('Sender', '100%', '170px','' ,'' , 'dummy') }}
 
-<p>{{ EmbedLiveSample('Receiver_1', '100%', '150px','' ,'' , 'dummy') }}</p>
+{{ EmbedLiveSample('Receiver_1', '100%', '150px','' ,'' , 'dummy') }}
 
-<p>{{ EmbedLiveSample('Receiver_2', '100%', '150px','' ,'' , 'dummy') }}</p>
+{{ EmbedLiveSample('Receiver_2', '100%', '150px','' ,'' , 'dummy') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Related events: <code><a href="/en-US/docs/Web/API/BroadcastChannel/messageerror_event">messageerror</a></code>.</li>
-</ul>
+- Related events: [`messageerror`](/en-US/docs/Web/API/BroadcastChannel/messageerror_event).

@@ -2,87 +2,91 @@
 title: MediaTrackSupportedConstraints.noiseSuppression
 slug: Web/API/MediaTrackSupportedConstraints/noiseSuppression
 tags:
-- API
-- Audio
-- Constraints
-- Media
-- Media Capture and Streams API
-- Media Constraints
-- Media Streams API
-- MediaStreamTrackSupportedConstraints
-- Property
-- noiseSuppression
+  - API
+  - Audio
+  - Constraints
+  - Media
+  - Media Capture and Streams API
+  - Media Constraints
+  - Media Streams API
+  - MediaStreamTrackSupportedConstraints
+  - Property
+  - noiseSuppression
 browser-compat: api.MediaTrackSupportedConstraints.noiseSuppression
 ---
-<div>{{APIRef("Media Capture and Streams")}}</div>
+{{APIRef("Media Capture and Streams")}}
 
-<p>The {{domxref("MediaTrackSupportedConstraints")}} dictionary's
-  <strong><code>noiseSuppression</code></strong> property is a read-only Boolean value
-  which is present (and set to <code>true</code>) in the object returned by
-  {{domxref("MediaDevices.getSupportedConstraints()")}} if and only if the
-  {{Glossary("user agent")}} supports the <strong><code>noiseSuppression</code></strong>
-  constraint. If the constraint isn't supported, it's not included in the list, so this
-  value will never be <code>false</code>.</p>
+The {{domxref("MediaTrackSupportedConstraints")}} dictionary's
+**`noiseSuppression`** property is a read-only Boolean value
+which is present (and set to `true`) in the object returned by
+{{domxref("MediaDevices.getSupportedConstraints()")}} if and only if the
+{{Glossary("user agent")}} supports the **`noiseSuppression`**
+constraint. If the constraint isn't supported, it's not included in the list, so this
+value will never be `false`.
 
-<p>You can access the supported constraints dictionary by calling
-  <code>navigator.mediaDevices.getSupportedConstraints()</code>.</p>
+You can access the supported constraints dictionary by calling
+`navigator.mediaDevices.getSupportedConstraints()`.
 
-<p>The <code>noiseSuppression</code> constraint indicates whether or not the browser
-  offers the ability to automatically control the gain (volume) on media tracks; this
-  obviously is contingent on whether or not the individual device supports automatic gain
-  control as well.</p>
+The `noiseSuppression` constraint indicates whether or not the browser
+offers the ability to automatically control the gain (volume) on media tracks; this
+obviously is contingent on whether or not the individual device supports automatic gain
+control as well.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>noiseSuppressionSupported</em> = <em>supportedConstraintsDictionary</em>.noiseSuppression;</pre>
+```js
+noiseSuppressionSupported = supportedConstraintsDictionary.noiseSuppression;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>This property is present in the dictionary (and its value is always <code>true</code>)
-  if the user agent supports the <code>noiseSuppression</code> constraint (and therefore
-  supports noise suppression on audio tracks). If the property isn't present, this
-  property is missing from the supported constraints dictionary, and you'll get
-  {{jsxref("undefined")}} if you try to look at its value.</p>
+This property is present in the dictionary (and its value is always `true`)
+if the user agent supports the `noiseSuppression` constraint (and therefore
+supports noise suppression on audio tracks). If the property isn't present, this
+property is missing from the supported constraints dictionary, and you'll get
+{{jsxref("undefined")}} if you try to look at its value.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example displays whether or not your browser supports the
-  <code>noiseSuppression</code> constraint.</p>
+This example displays whether or not your browser supports the
+`noiseSuppression` constraint.
 
-<pre class="brush: html hidden">&lt;div id="result"&gt;
-&lt;/div&gt;</pre>
+```html hidden
+<div id="result">
+</div>
+```
 
-<pre class="brush: css hidden">#result {
+```css hidden
+#result {
   font: 14px "Arial", sans-serif;
-}</pre>
+}
+```
 
-<pre class="brush: js">let result = document.getElementById("result");
+```js
+let result = document.getElementById("result");
 
 if (navigator.mediaDevices.getSupportedConstraints().noiseSuppression) {
     result.textContent = "Supported!";
 } else {
     result.textContent = "Not supported!";
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{ EmbedLiveSample('Example', 600, 80) }}</p>
+{{ EmbedLiveSample('Example', 600, 80) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a>
-  </li>
-  <li>{{domxref("MediaDevices.getSupportedConstraints()")}}</li>
-  <li>{{domxref("MediaTrackSupportedConstraints")}}</li>
-  <li>{{domxref("MediaStreamTrack")}}</li>
-</ul>
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- {{domxref("MediaDevices.getSupportedConstraints()")}}
+- {{domxref("MediaTrackSupportedConstraints")}}
+- {{domxref("MediaStreamTrack")}}

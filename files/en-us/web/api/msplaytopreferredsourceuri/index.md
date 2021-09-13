@@ -2,55 +2,54 @@
 title: msPlayToPreferredSourceUri
 slug: Web/API/MsPlayToPreferredSourceUri
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>{{Non-standard_header()}}</p>
+{{Non-standard_header()}}
 
-<p><code><strong>msPlayToPreferredSourceUri</strong></code> is a read/write property which
-  gets or sets the path to the preferred media source. This enables the <em>PlayTo</em>
-  target device to stream the media content, which can be DRM protected, from a different
-  location, such as a cloud media server.</p>
+**`msPlayToPreferredSourceUri`** is a read/write property which
+gets or sets the path to the preferred media source. This enables the _PlayTo_
+target device to stream the media content, which can be DRM protected, from a different
+location, such as a cloud media server.
 
-<p>This proprietary property is specific to Internet Explorer and Microsoft Edge.</p>
+This proprietary property is specific to Internet Explorer and Microsoft Edge.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 ptr = object.msPlayToPreferredSourceUri;
+```
 
-</pre>
+## Value
 
-<h2 id="Value">Value</h2>
+**`msPlayToPreferredSourceUri`** enables a _PlayTo_
+reference (a URI or URL) for streaming content on the _PlayTo_ target device from
+a different location, such as a cloud media server. This enables web pages and Microsoft
+Store apps to play Digital Rights Management (DRM) protected content. The app specifies
+a preferred Uniform Resource Identifier (URI). This URI can point to a cloud based media
+server allowing streaming directly from the cloud, which can be DRM protected, instead
+of streaming content from the Windows machine which must be unprotected content.
 
-<p><code><strong>msPlayToPreferredSourceUri</strong></code> enables a <em>PlayTo</em>
-  reference (a URI or URL) for streaming content on the <em>PlayTo</em> target device from
-  a different location, such as a cloud media server. This enables web pages and Microsoft
-  Store apps to play Digital Rights Management (DRM) protected content. The app specifies
-  a preferred Uniform Resource Identifier (URI). This URI can point to a cloud based media
-  server allowing streaming directly from the cloud, which can be DRM protected, instead
-  of streaming content from the Windows machine which must be unprotected content.</p>
+A forward slash ("/") is appended to the URI string when it is sent over the network to
+a _PlayTo_ device. This is done to conform to URI standards.
 
-<p>A forward slash ("/") is appended to the URI string when it is sent over the network to
-  a <em>PlayTo</em> device. This is done to conform to URI standards.</p>
+## Example
 
-<h2 id="Example">Example</h2>
+```html
+  <video src="http://www.contoso.com/videos/video.mp4"
+       msPlayToPreferredSourceUri="http://www.contoso.com/catalogid=1234" />
+```
 
-<pre class="brush: html">  &lt;video src="http://www.contoso.com/videos/video.mp4"
-       msPlayToPreferredSourceUri="http://www.contoso.com/catalogid=1234" /&gt;
-</pre>
-
-<pre class="brush: js">  var video = document.createElement('video');
+```js
+  var video = document.createElement('video');
   document.body.appendChild(video);
 
   video.src = "http://www.contoso.com/videos/video.mp4";
   video.msPlayToPreferredSourceUri = "http://www.contoso.com/catalogid=1234";
-</pre>
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://docs.microsoft.com/en-us/playready/">Microsoft PlayReady</a>
-    content access and protection technology is a set of technologies that can be used to
-    distribute audio/video content more securely over a network, and help prevent the
-    unauthorized use of this content.</li>
-</ul>
+- [Microsoft PlayReady](https://docs.microsoft.com/en-us/playready/)
+  content access and protection technology is a set of technologies that can be used to
+  distribute audio/video content more securely over a network, and help prevent the
+  unauthorized use of this content.

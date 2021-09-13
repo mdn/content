@@ -9,53 +9,49 @@ tags:
   - Reference
 browser-compat: api.HTMLAnchorElement.origin
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p>The
-    <strong><code>HTMLAnchorElement.origin</code></strong> read-only property is a
-    {{domxref("USVString")}} containing the Unicode serialization of the origin of the
-    represented URL.</p>
+The
+**`HTMLAnchorElement.origin`** read-only property is a
+{{domxref("USVString")}} containing the Unicode serialization of the origin of the
+represented URL.
 
-<p>That is:</p>
+That is:
 
-<ul>
-  <li>for URL using the <code>http</code> or <code>https</code>, the scheme followed by
-    <code>'://'</code>, followed by the domain, followed by <code>':'</code>, followed by
-    the port (the default port, <code>80</code> and <code>443</code> respectively, if
-    explicitly specified);</li>
-  <li>for URL using <code>file:</code> scheme, the value is browser dependant;</li>
-  <li>for URL using the <code>blob:</code> scheme, the origin of the URL following
-    <code>blob:</code>. E.g <code>"blob:https://mozilla.org"</code> will have
-    <code>"https://mozilla.org".</code></li>
-</ul>
+- for URL using the `http` or `https`, the scheme followed by
+  `'://'`, followed by the domain, followed by `':'`, followed by
+  the port (the default port, `80` and `443` respectively, if
+  explicitly specified);
+- for URL using `file:` scheme, the value is browser dependant;
+- for URL using the `blob:` scheme, the origin of the URL following
+  `blob:`. E.g `"blob:https://mozilla.org"` will have
+  `"https://mozilla.org".`
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 // Getter
-<em>string</em> = <em>anchor</em>.origin;
+string = anchor.origin;
 
 // No setter; read-only property
-</pre>
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-
-<pre class="brush: js">// An &lt;a id="myAnchor" href="https://developer.mozilla.org/en-US/HTMLAnchorElement"&gt; element is in the document
+```js
+// An <a id="myAnchor" href="https://developer.mozilla.org/en-US/HTMLAnchorElement"> element is in the document
 const anchor = document.getElementById("myAnchor");
 anchor.origin; // returns 'https://developer.mozilla.org'
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("HTMLAnchorElement")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("HTMLAnchorElement")}} interface it belongs to.

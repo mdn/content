@@ -2,49 +2,49 @@
 title: CSSTransformValue.entries()
 slug: Web/API/CSSTransformValue/entries
 tags:
-- API
-- CSS Typed Object Model API
-- CSSTransformValue
-- Entries
-- Experimental
-- Houdini
-- Method
-- Reference
+  - API
+  - CSS Typed Object Model API
+  - CSSTransformValue
+  - Entries
+  - Experimental
+  - Houdini
+  - Method
+  - Reference
 browser-compat: api.CSSTransformValue.entries
 ---
-<div>{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{Draft}}</div>
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{Draft}}
 
-<p>The <strong><code>CSSTransformValue.entries()</code></strong> method
-  returns an array of a given object's own enumerable
-  property <code>[key, value]</code> pairs in the same order as that provided by a
-  {{jsxref("for...in")}} loop (the difference being that a for-in loop enumerates
-  properties in the prototype chain as well).</p>
+The **`CSSTransformValue.entries()`** method
+returns an array of a given object's own enumerable
+property `[key, value]` pairs in the same order as that provided by a
+{{jsxref("for...in")}} loop (the difference being that a for-in loop enumerates
+properties in the prototype chain as well).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">CSSTransformValue.entries(obj);</pre>
+```js
+CSSTransformValue.entries(obj);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>obj</var></code></dt>
-  <dd>The {{domxref('CSSTransformValue')}} whose enumerable own property
-    <code>[key, value]</code> pairs are to be returned.</dd>
-</dl>
+- `obj`
+  - : The {{domxref('CSSTransformValue')}} whose enumerable own property
+    `[key, value]` pairs are to be returned.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An array of the given <code>CSSTransformValue</code> object's own enumerable property
-  <code>[key, value]</code> pairs.</p>
+An array of the given `CSSTransformValue` object's own enumerable property
+`[key, value]` pairs.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>To Do</p>
+To Do
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

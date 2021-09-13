@@ -2,53 +2,52 @@
 title: EventSource.onmessage
 slug: Web/API/EventSource/onmessage
 tags:
-- API
-- Event Handler
-- EventSource
-- Property
-- Reference
-- Server-sent events
-- onmessage
+  - API
+  - Event Handler
+  - EventSource
+  - Property
+  - Reference
+  - Server-sent events
+  - onmessage
 browser-compat: api.EventSource.onmessage
 ---
-<div>{{APIRef('WebSockets API')}}</div>
+{{APIRef('WebSockets API')}}
 
-<p>The <code><strong>onmessage</strong></code> property of the {{domxref("EventSource")}}
-  interface is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> called when a {{event("message")}} event is
-  received, that is when a message is coming from the source.</p>
+The **`onmessage`** property of the {{domxref("EventSource")}}
+interface is an [event handler](/en-US/docs/Web/Events/Event_handlers) called when a {{event("message")}} event is
+received, that is when a message is coming from the source.
 
-<p>Event objects of <code>onmessage</code> event handlers are of type
-  {{domxref("MessageEvent")}}.</p>
+Event objects of `onmessage` event handlers are of type
+{{domxref("MessageEvent")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">eventSource.onmessage = function</pre>
+```js
+eventSource.onmessage = function
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">evtSource.onmessage = function(e) {
+```js
+evtSource.onmessage = function(e) {
   var newElement = document.createElement("li");
 
   newElement.textContent = "message: " + e.data;
   eventList.appendChild(newElement);
-}</pre>
+}
+```
 
-<div class="note">
-  <p><strong>Note:</strong> You can find a full example on GitHub — see <a
-      href="https://github.com/mdn/dom-examples/tree/master/server-sent-events">Simple SSE
-      demo using PHP.</a></p>
-</div>
+> **Note:** You can find a full example on GitHub — see [Simple SSE
+> demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("EventSource")}}</li>
-</ul>
+- {{domxref("EventSource")}}

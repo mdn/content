@@ -2,59 +2,55 @@
 title: HTMLTableElement.rules
 slug: Web/API/HTMLTableElement/rules
 tags:
-- API
-- HTML DOM
-- HTMLTableElement
-- NeedsBrowserCompatibility
-- NeedsSpecTable
-- Property
-- Reference
-- Deprecated
+  - API
+  - HTML DOM
+  - HTMLTableElement
+  - NeedsBrowserCompatibility
+  - NeedsSpecTable
+  - Property
+  - Reference
+  - Deprecated
 browser-compat: api.HTMLTableElement.rules
 ---
-<div>
-  <div>
-    <div>{{APIRef("HTML DOM")}} {{Deprecated_Header}}</div>
-  </div>
-</div>
+{{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
-<p>The <strong><code>HTMLTableElement.rules</code></strong> property indicates which cell
-  borders to render in the table.</p>
+The **`HTMLTableElement.rules`** property indicates which cell
+borders to render in the table.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>HTMLTableElement</em>.rules = <em>rules</em>;
-var <em>rules</em> = <em>HTMLTableElement</em>.rules;</pre>
+```js
+HTMLTableElement.rules = rules;
+var rules = HTMLTableElement.rules;
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p><code>rules</code> is a string with one of the following values:</p>
+`rules` is a string with one of the following values:
 
-<dl>
-  <dt><code>none</code></dt>
-  <dd>No rules</dd>
-  <dt><code>groups</code></dt>
-  <dd>Lines between groups only</dd>
-  <dt><code>rows</code></dt>
-  <dd>Lines between rows</dd>
-  <dt><code>cols</code></dt>
-  <dd>Lines between cols</dd>
-  <dt><code>all</code></dt>
-  <dd>Lines between all cells</dd>
-</dl>
+- `none`
+  - : No rules
+- `groups`
+  - : Lines between groups only
+- `rows`
+  - : Lines between rows
+- `cols`
+  - : Lines between cols
+- `all`
+  - : Lines between all cells
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">// Turn on all the internal borders of a table
+```js
+// Turn on all the internal borders of a table
 var t = document.getElementById("TableID");
-t.rules = "all";</pre>
+t.rules = "all";
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<ul>
-  <li>W3C DOM 2 HTML Specification</li>
-</ul>
+- W3C DOM 2 HTML Specification
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

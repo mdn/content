@@ -2,84 +2,82 @@
 title: MediaTrackConstraints.facingMode
 slug: Web/API/MediaTrackConstraints/facingMode
 tags:
-- API
-- Constraints
-- Media
-- Media Capture and Streams API
-- Media Streams API
-- MediaTrackConstraints
-- Property
-- Reference
-- Video
-- WebRTC
-- facingMode
-- getusermedia
+  - API
+  - Constraints
+  - Media
+  - Media Capture and Streams API
+  - Media Streams API
+  - MediaTrackConstraints
+  - Property
+  - Reference
+  - Video
+  - WebRTC
+  - facingMode
+  - getusermedia
 browser-compat: api.MediaTrackConstraints.facingMode
 ---
-<div>{{APIRef("Media Capture and Streams")}}</div>
+{{APIRef("Media Capture and Streams")}}
 
-<p>The {{domxref("MediaTrackConstraints")}} dictionary's
-  <code><strong>facingMode</strong></code> property is a <a href="/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString"><code>ConstrainDOMString</code></a>
-  describing the requested or mandatory constraints placed upon the value of the
-  {{domxref("MediaTrackSettings.facingMode", "facingMode")}} constrainable property.</p>
+The {{domxref("MediaTrackConstraints")}} dictionary's
+**`facingMode`** property is a [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString)
+describing the requested or mandatory constraints placed upon the value of the
+{{domxref("MediaTrackSettings.facingMode", "facingMode")}} constrainable property.
 
-<p>If needed, you can determine whether or not this constraint is supported by checking
-  the value of {{domxref("MediaTrackSupportedConstraints.facingMode")}} as returned by a
-  call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this
-  is unnecessary since browsers will ignore any constraints they're unfamiliar with.</p>
+If needed, you can determine whether or not this constraint is supported by checking
+the value of {{domxref("MediaTrackSupportedConstraints.facingMode")}} as returned by a
+call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this
+is unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
-<p>Because {{Glossary("RTP")}} doesn't include this information, tracks associated with a
-  <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> {{domxref("RTCPeerConnection")}}
-  will never include this property.</p>
+Because {{Glossary("RTP")}} doesn't include this information, tracks associated with a
+[WebRTC](/en-US/docs/Web/API/WebRTC_API) {{domxref("RTCPeerConnection")}}
+will never include this property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>constraintsObject</em> = { facingMode: <em>constraint</em> };
+```js
+var constraintsObject = { facingMode: constraint };
 
-<em>constraintsObject</em>.facingMode = <em>constraint</em>;
-</pre>
+constraintsObject.facingMode = constraint;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An object based on <a href="/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString"><code>ConstrainDOMString</code></a> specifying one or more acceptable,
-  ideal, and/or exact (mandatory) facing modes are acceptable for a video track.</p>
+An object based on [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString) specifying one or more acceptable,
+ideal, and/or exact (mandatory) facing modes are acceptable for a video track.
 
-<p>An <code>exact</code> value in this case indicates that the specified facing mode is
-  specifically required; for example:</p>
+An `exact` value in this case indicates that the specified facing mode is
+specifically required; for example:
 
-<pre class="brush: js">var constraints = {
+```js
+var constraints = {
   facingMode: { exact: "user" }
-};</pre>
+};
+```
 
-<p>This indicates that only a user-facing camera is acceptable; if there is no user-facing
-  camera, or the user declines permission to use that camera, the media request will fail.
-</p>
+This indicates that only a user-facing camera is acceptable; if there is no user-facing
+camera, or the user declines permission to use that camera, the media request will fail.
 
-<p>{{page("/en-US/docs/Web/API/MediaTrackSettings/facingMode", "VideoFacingModeEnum")}}
-</p>
+{{page("/en-US/docs/Web/API/MediaTrackSettings/facingMode", "VideoFacingModeEnum")}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
-  Constraint exerciser")}} for an example.</p>
+See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
+  Constraint exerciser")}} for an example.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a>
-  </li>
-  <li><a href="/en-US/docs/Web/API/Media_Streams_API/Constraints">Capabilities,
-      constraints, and settings</a></li>
-  <li>{{domxref("MediaTrackConstraints")}}</li>
-  <li>{{domxref("MediaDevices.getSupportedConstraints()")}}</li>
-  <li>{{domxref("MediaTrackSupportedConstraints")}}</li>
-  <li>{{domxref("MediaStreamTrack")}}</li>
-</ul>
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- [Capabilities,
+  constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- {{domxref("MediaTrackConstraints")}}
+- {{domxref("MediaDevices.getSupportedConstraints()")}}
+- {{domxref("MediaTrackSupportedConstraints")}}
+- {{domxref("MediaStreamTrack")}}

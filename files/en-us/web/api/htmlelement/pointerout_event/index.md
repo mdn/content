@@ -9,69 +9,77 @@ tags:
   - Reference
 browser-compat: api.HTMLElement.pointerout_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code>pointerout</code> event is fired for several reasons including: pointing device is moved out of the <em>hit test</em> boundaries of an element; firing the {{event("pointerup")}} event for a device that does not support hover (see {{event("pointerup")}}); after firing the {{event("pointercancel")}} event (see {{event("pointercancel")}}); when a pen stylus leaves the hover range detectable by the digitizer.</p>
+The `pointerout` event is fired for several reasons including: pointing device is moved out of the _hit test_ boundaries of an element; firing the {{event("pointerup")}} event for a device that does not support hover (see {{event("pointerup")}}); after firing the {{event("pointercancel")}} event (see {{event("pointercancel")}}); when a pen stylus leaves the hover range detectable by the digitizer.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("PointerEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td><code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onpointerout">onpointerout</a></code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("PointerEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/API/GlobalEventHandlers/onpointerout"
+            >onpointerout</a
+          ></code
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Using <code>addEventListener()</code>:</p>
+Using `addEventListener()`:
 
-<pre class="brush: js">const para = document.querySelector('p');
+```js
+const para = document.querySelector('p');
 
-para.addEventListener('pointerout', (event) =&gt; {
+para.addEventListener('pointerout', (event) => {
   console.log('Pointer moved out');
-});</pre>
+});
+```
 
-<p>Using the <code>onpointerout</code> event handler property:</p>
+Using the `onpointerout` event handler property:
 
-<pre class="brush: js">const para = document.querySelector('p');
+```js
+const para = document.querySelector('p');
 
-para.onpointerout = (event) =&gt; {
+para.onpointerout = (event) => {
   console.log('Pointer moved out');
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><code><a href="/en-US/docs/Web/API/HTMLElement/gotpointercapture_event">gotpointercapture</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/HTMLElement/lostpointercapture_event">lostpointercapture</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/HTMLElement/pointerover_event">pointerover</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/HTMLElement/pointerenter_event">pointerenter</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/HTMLElement/pointerdown_event">pointerdown</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/HTMLElement/pointermove_event">pointermove</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/HTMLElement/pointerup_event">pointerup</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/HTMLElement/pointercancel_event">pointercancel</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/HTMLElement/pointerleave_event">pointerleave</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onpointerout">onpointerout</a></code> event handler property</li>
- <li>This event on <code>Document</code> targets: <code><a href="/en-US/docs/Web/API/Document/pointerout_event">pointerout</a></code> event</li>
-</ul>
+- [`gotpointercapture`](/en-US/docs/Web/API/HTMLElement/gotpointercapture_event)
+- [`lostpointercapture`](/en-US/docs/Web/API/HTMLElement/lostpointercapture_event)
+- [`pointerover`](/en-US/docs/Web/API/HTMLElement/pointerover_event)
+- [`pointerenter`](/en-US/docs/Web/API/HTMLElement/pointerenter_event)
+- [`pointerdown`](/en-US/docs/Web/API/HTMLElement/pointerdown_event)
+- [`pointermove`](/en-US/docs/Web/API/HTMLElement/pointermove_event)
+- [`pointerup`](/en-US/docs/Web/API/HTMLElement/pointerup_event)
+- [`pointercancel`](/en-US/docs/Web/API/HTMLElement/pointercancel_event)
+- [`pointerleave`](/en-US/docs/Web/API/HTMLElement/pointerleave_event)
+- [`onpointerout`](/en-US/docs/Web/API/GlobalEventHandlers/onpointerout) event handler property
+- This event on `Document` targets: [`pointerout`](/en-US/docs/Web/API/Document/pointerout_event) event

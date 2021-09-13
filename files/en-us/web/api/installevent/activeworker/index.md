@@ -11,33 +11,35 @@ tags:
   - activeWorker
 browser-compat: api.InstallEvent.activeWorker
 ---
-<div>{{non-standard_header}}{{deprecated_header}}</div>
+{{non-standard_header}}{{deprecated_header}}
 
-<p>The <code><strong>activeWorker</strong></code> read-only property of the {{domxref("InstallEvent")}} interface returns the {{domxref("ServiceWorker")}} that is currently actively controlling the page.</p>
+The **`activeWorker`** read-only property of the {{domxref("InstallEvent")}} interface returns the {{domxref("ServiceWorker")}} that is currently actively controlling the page.
 
-<p>This will return <code>null</code> if no active worker is already controlling the page.</p>
+This will return `null` if no active worker is already controlling the page.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var myActiveWorker = event.activeWorker</pre>
+```js
+var myActiveWorker = event.activeWorker
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("ServiceWorker")}} object.</p>
+A {{domxref("ServiceWorker")}} object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">self.addEventListener('install', function(event) {
+```js
+self.addEventListener('install', function(event) {
   var myActiveWorker = event.activeWorker;
-});</pre>
+});
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{jsxref("Promise")}}</li>
- <li><a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a></li>
-</ul>
+- {{jsxref("Promise")}}
+- [Fetch API](/en-US/docs/Web/API/Fetch_API)

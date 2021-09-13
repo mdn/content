@@ -8,48 +8,49 @@ tags:
   - Reference
   - Web Bluetooth API
 ---
-<p>{{DefaultAPISidebar("Bluetooth API")}}{{SeeCompatTable}}</p>
+{{DefaultAPISidebar("Bluetooth API")}}{{SeeCompatTable}}
 
-<p>The Web Bluetooth API provides the ability to connect and interact with Bluetooth Low Energy peripherals.</p>
+The Web Bluetooth API provides the ability to connect and interact with Bluetooth Low Energy peripherals.
 
-<div class="notecard note">
-<p><strong>Note:</strong> This API is <em>not available</em> in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a> (not exposed via {{domxref("WorkerNavigator")}}).</p>
-</div>
+> **Note:** This API is _not available_ in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) (not exposed via {{domxref("WorkerNavigator")}}).
 
-<h2 id="Interfaces">Interfaces</h2>
+## Interfaces
 
-<dl>
- <dt>{{DOMxRef("Bluetooth")}}</dt>
- <dd>Returns a {{jsxref("Promise")}} to a {{DOMxRef("BluetoothDevice")}} object with the specified options.</dd>
- <dt>{{DOMxRef("BluetoothCharacteristicProperties")}}</dt>
- <dd>Provides properties of a particular <code>BluetoothRemoteGATTCharacteristic</code>.</dd>
- <dt>{{DOMxRef("BluetoothDevice")}}</dt>
- <dd>Represents a Bluetooth device inside a particular script execution environment.</dd>
- <dt>{{DOMxRef("BluetoothRemoteGATTCharacteristic")}}</dt>
- <dd>Represents a GATT Characteristic, which is a basic data element that provides further information about a peripheral’s service.</dd>
- <dt>{{DOMxRef("BluetoothRemoteGATTDescriptor")}}</dt>
- <dd>Represents a GATT Descriptor, which provides further information about a characteristic’s value.</dd>
- <dt>{{DOMxRef("BluetoothRemoteGATTServer")}}</dt>
- <dd>Represents a GATT Server on a remote device.</dd>
- <dt>{{DOMxRef("BluetoothRemoteGATTService")}}</dt>
- <dd>Represents a service provided by a GATT server, including a device, a list of referenced services, and a list of the characteristics of this service.</dd>
-</dl>
+- {{DOMxRef("Bluetooth")}}
+  - : Returns a {{jsxref("Promise")}} to a {{DOMxRef("BluetoothDevice")}} object with the specified options.
+- {{DOMxRef("BluetoothCharacteristicProperties")}}
+  - : Provides properties of a particular `BluetoothRemoteGATTCharacteristic`.
+- {{DOMxRef("BluetoothDevice")}}
+  - : Represents a Bluetooth device inside a particular script execution environment.
+- {{DOMxRef("BluetoothRemoteGATTCharacteristic")}}
+  - : Represents a GATT Characteristic, which is a basic data element that provides further information about a peripheral’s service.
+- {{DOMxRef("BluetoothRemoteGATTDescriptor")}}
+  - : Represents a GATT Descriptor, which provides further information about a characteristic’s value.
+- {{DOMxRef("BluetoothRemoteGATTServer")}}
+  - : Represents a GATT Server on a remote device.
+- {{DOMxRef("BluetoothRemoteGATTService")}}
+  - : Represents a service provided by a GATT server, including a device, a list of referenced services, and a list of the characteristics of this service.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Feedback</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Web Bluetooth")}}</td>
-   <td>To provide feedback on the Web Bluetooth API, <a href="https://github.com/WebBluetoothCG/web-bluetooth/issues/">file a spec issue</a>.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Feedback</th>
+    </tr>
+    <tr>
+      <td>{{SpecName("Web Bluetooth")}}</td>
+      <td>
+        To provide feedback on the Web Bluetooth API,
+        <a href="https://github.com/WebBluetoothCG/web-bluetooth/issues/"
+          >file a spec issue</a
+        >.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.Bluetooth")}}</p>
+{{Compat("api.Bluetooth")}}

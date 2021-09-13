@@ -3,22 +3,24 @@ title: HTMLElement.accessKeyLabel
 slug: Web/API/HTMLElement/accessKeyLabel
 browser-compat: api.HTMLElement.accessKeyLabel
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p>The <strong><code>HTMLElement.accessKeyLabel</code></strong>
-    read-only property returns a {{jsxref("String")}} containing the element's
-    browser-assigned access key (if any); otherwise it returns an empty string.</p>
+The **`HTMLElement.accessKeyLabel`**
+read-only property returns a {{jsxref("String")}} containing the element's
+browser-assigned access key (if any); otherwise it returns an empty string.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>label</var> = <var>element</var>.accessKeyLabel
-</pre>
+```js
+label = element.accessKeyLabel
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">var btn = document.getElementById('btn1');
+```js
+var btn = document.getElementById('btn1');
 var shortcutLabel = btn.accessKeyLabel || btn.accessKey;
 btn.title += ' [' + shortcutLabel.toUpperCase() + ']';
 
@@ -27,29 +29,28 @@ btn.onclick = function () {
   feedback.textContent = 'Pressed!';
   btn.insertAdjacentElement('afterend', feedback);
 };
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;button accesskey="h" title="Caption" id="btn1"&gt;Hover me&lt;/button&gt;
-</pre>
+```html
+<button accesskey="h" title="Caption" id="btn1">Hover me</button>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{ EmbedLiveSample('Example') }}</p>
+{{ EmbedLiveSample('Example') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("HTMLElement.accessKey")}}</li>
-  <li>The <a href="/en-US/docs/Web/HTML/Global_attributes/accesskey">accesskey</a> global
-    attribute.</li>
-</ul>
+- {{domxref("HTMLElement.accessKey")}}
+- The [accesskey](/en-US/docs/Web/HTML/Global_attributes/accesskey) global
+  attribute.

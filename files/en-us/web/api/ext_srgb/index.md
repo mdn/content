@@ -8,56 +8,51 @@ tags:
   - WebGL extension
 browser-compat: api.EXT_sRGB
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <code><strong>EXT_sRGB</strong></code> extension is part of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> and adds sRGB support to textures and framebuffer objects.</p>
+The **`EXT_sRGB`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and adds sRGB support to textures and framebuffer objects.
 
-<p>WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also <a href="/en-US/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</a> in the <a href="/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</a>.</p>
+WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
 
-<div class="note">
-<p><strong>Note:</strong> This extension is only available to {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} contexts. In {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}}, the functionality of this extension is available on the WebGL2 context by default. The constants in WebGL2 are: <code>gl.SRGB</code>, <code>gl.SRGB8</code>, <code>gl.SRGB8_ALPHA8</code> and <code>gl.FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING</code>.</p>
-</div>
+> **Note:** This extension is only available to {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} contexts. In {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}}, the functionality of this extension is available on the WebGL2 context by default. The constants in WebGL2 are: `gl.SRGB`, `gl.SRGB8`, `gl.SRGB8_ALPHA8` and `gl.FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING`.
 
-<h2 id="Constants">Constants</h2>
+## Constants
 
-<p>This extension exposes the following constants, which can be used in the {{domxref("WebGLRenderingContext.texImage2D()", "texImage2D()")}}, {{domxref("WebGLRenderingContext.texSubImage2D()", "texSubImage2D()")}}, {{domxref("WebGLRenderingContext.renderbufferStorage()", "renderbufferStorage()")}} and {{domxref("WebGLRenderingContext.getFramebufferAttachmentParameter()", "getFramebufferAttachmentParameter()")}} methods.</p>
+This extension exposes the following constants, which can be used in the {{domxref("WebGLRenderingContext.texImage2D()", "texImage2D()")}}, {{domxref("WebGLRenderingContext.texSubImage2D()", "texSubImage2D()")}}, {{domxref("WebGLRenderingContext.renderbufferStorage()", "renderbufferStorage()")}} and {{domxref("WebGLRenderingContext.getFramebufferAttachmentParameter()", "getFramebufferAttachmentParameter()")}} methods.
 
-<dl>
- <dt><code>ext.SRGB_EXT</code></dt>
- <dd>Unsized sRGB format that leaves the precision up to the driver.</dd>
- <dt><code>ext.SRGB_ALPHA_EXT</code></dt>
- <dd>Unsized sRGB format with unsized alpha component.</dd>
- <dt><code>ext.SRGB8_ALPHA8_EXT</code></dt>
- <dd>Sized (8-bit) sRGB and alpha formats.</dd>
- <dt><code>ext.FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING_EXT</code></dt>
- <dd>Returns the framebuffer color encoding (<code>gl.LINEAR</code> or <code>ext.SRGB_EXT</code>).</dd>
-</dl>
+- `ext.SRGB_EXT`
+  - : Unsized sRGB format that leaves the precision up to the driver.
+- `ext.SRGB_ALPHA_EXT`
+  - : Unsized sRGB format with unsized alpha component.
+- `ext.SRGB8_ALPHA8_EXT`
+  - : Sized (8-bit) sRGB and alpha formats.
+- `ext.FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING_EXT`
+  - : Returns the framebuffer color encoding (`gl.LINEAR` or `ext.SRGB_EXT`).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush:js">var ext = gl.getExtension('EXT_sRGB');
+```js
+var ext = gl.getExtension('EXT_sRGB');
 
 var texture = gl.createTexture();
 gl.bindTexture(gl.TEXTURE_2D, texture);
 
 gl.texImage2D(gl.TEXTURE_2D, 0, ext.SRGB_EXT, 512, 512, 0,
               ext.SRGB_EXT, gl.UNSIGNED_BYTE, image);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.getExtension()")}}</li>
- <li>{{domxref("WebGLRenderingContext.texImage2D()")}}</li>
- <li>{{domxref("WebGLRenderingContext.texSubImage2D()")}}</li>
- <li>{{domxref("WebGLRenderingContext.renderbufferStorage()")}}</li>
- <li>{{domxref("WebGLRenderingContext.getFramebufferAttachmentParameter()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.getExtension()")}}
+- {{domxref("WebGLRenderingContext.texImage2D()")}}
+- {{domxref("WebGLRenderingContext.texSubImage2D()")}}
+- {{domxref("WebGLRenderingContext.renderbufferStorage()")}}
+- {{domxref("WebGLRenderingContext.getFramebufferAttachmentParameter()")}}

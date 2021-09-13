@@ -10,121 +10,107 @@ tags:
   - Reference
 browser-compat: api.FileEntrySync
 ---
-<p>{{APIRef("File System API")}} {{Non-standard_header}}</p>
+{{APIRef("File System API")}} {{Non-standard_header}}
 
-<p>The <code>FileEntrySync</code> interface of the <a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">File System API</a> represents a file in a file system. It lets you write content to a file.</p>
+The `FileEntrySync` interface of the [File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction) represents a file in a file system. It lets you write content to a file.
 
-<p>Inherits from: <a href="/en-US/docs/Web/API/FileSystemEntrySync">EntrySync</a></p>
+Inherits from: [EntrySync](/en-US/docs/Web/API/FileSystemEntrySync)
 
-<h2 id="About_this_document">About this document</h2>
+## About this document
 
-<p>This document was last updated on March 2, 2012 and follows the <a href="https://www.w3.org/TR/file-system-api/">W3C Specifications (Working Draft)</a> drafted on April 19, 2011.</p>
+This document was last updated on March 2, 2012 and follows the [W3C Specifications (Working Draft)](https://www.w3.org/TR/file-system-api/) drafted on April 19, 2011.
 
-<p>This specification is more or less abandoned as it didn't get significant traction among browser makers.</p>
+This specification is more or less abandoned as it didn't get significant traction among browser makers.
 
-<h2 id="basic_concepts">Basic concepts</h2>
+## Basic concepts
 
-<p>To write content to file, create a FileWriter object by calling <a href="#createwriter"><code>createWriter()</code></a>.</p>
+To write content to file, create a FileWriter object by calling [`createWriter()`](#createwriter).
 
-<h2 id="Method_overview">Method overview</h2>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td><code>FileWriterSync <a href="#createreader" title="#createWriter">createWriter</a> () raises (<a href="/en-US/docs/Web/API/FileException">FileException</a>);</code></td>
-  </tr>
-  <tr>
-   <td><code>File <a href="#file">file</a> () raises (<a href="/en-US/docs/Web/API/FileException">FileException</a>);</code></td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Methods">Methods</h2>
-
-<h3 id="createWriter">createWriter()</h3>
-
-<p>Creates a new <code>FileWriter</code> associated with the file that the <code>FileEntry</code> represents.</p>
-
-<pre>void createWriter (
-) raises (<a href="/en-US/docs/Web/API/FileException">FileException</a>);</pre>
-
-<h4 id="Parameter">Parameter</h4>
-
-<p>None.</p>
-
-<h4 id="Returns">Returns</h4>
-
-<p>A <code>FileWriterSync</code> object.</p>
-
-<h4 id="Exceptions">Exceptions</h4>
-
-<p>This method can raise a <a href="/en-US/docs/Web/API/FileException">FileException</a> with the following codes:</p>
+## Method overview
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Exception</th>
-   <th scope="col">Description</th>
-  </tr>
-  <tr>
-   <td><code>NOT_FOUND_ERR</code></td>
-   <td>The file does not exist.</td>
-  </tr>
-  <tr>
-   <td><code>INVALID_STATE_ERR</code></td>
-   <td>The file is no longer valid for some reason other than it having been deleted.</td>
-  </tr>
- </thead>
- <tbody>
- </tbody>
+  <tbody>
+    <tr>
+      <td>
+        <code
+          >FileWriterSync
+          <a href="#createreader" title="#createWriter">createWriter</a> ()
+          raises (<a href="/en-US/docs/Web/API/FileException">FileException</a
+          >);</code
+        >
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code
+          >File <a href="#file">file</a> () raises (<a
+            href="/en-US/docs/Web/API/FileException"
+            >FileException</a
+          >);</code
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id="File">file()</h3>
+## Methods
 
-<p>Returns a File that represents the current state of the file that this <code>FileEntry</code> represents.</p>
+### createWriter()
 
-<pre>void file (
-) raises (<a href="/en-US/docs/Web/API/FileException">FileException</a>);</pre>
+Creates a new `FileWriter` associated with the file that the `FileEntry` represents.
 
-<h5 id="Parameter_2">Parameter</h5>
+    void createWriter (
+    ) raises (FileException);
 
-<p>None.</p>
+#### Parameter
 
-<h5 id="Returns_2">Returns</h5>
+None.
 
-<p>A <code>File</code> object.</p>
+#### Returns
 
-<h5 id="Exceptions_2">Exceptions</h5>
+A `FileWriterSync` object.
 
-<p>This method can raise a <a href="/en-US/docs/Web/API/FileException">FileException</a> with the following codes:</p>
+#### Exceptions
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Exception</th>
-   <th scope="col">Description</th>
-  </tr>
-  <tr>
-   <td><code>NOT_FOUND_ERR</code></td>
-   <td>The file does not exist.</td>
-  </tr>
-  <tr>
-   <td><code>INVALID_STATE_ERR</code></td>
-   <td>The file is no longer valid for some reason other than it having been deleted.</td>
-  </tr>
- </thead>
- <tbody>
- </tbody>
-</table>
+This method can raise a [FileException](/en-US/docs/Web/API/FileException) with the following codes:
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+| Exception           | Description                                                                    |
+| ------------------- | ------------------------------------------------------------------------------ |
+| `NOT_FOUND_ERR`     | The file does not exist.                                                       |
+| `INVALID_STATE_ERR` | The file is no longer valid for some reason other than it having been deleted. |
 
-<p>{{Compat}}</p>
+### file()
 
-<h2 id="See_also">See also</h2>
+Returns a File that represents the current state of the file that this `FileEntry` represents.
 
-<p>Specification:{{ spec("http://dev.w3.org/2009/dap/file-system/pub/FileSystem/", "File API: Directories and System Specification", "WD") }}</p>
+    void file (
+    ) raises (FileException);
 
-<p>Reference: <a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">File System API</a></p>
+##### Parameter
 
-<p>Introduction: <a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">Basic Concepts About the File System API</a></p>
+None.
+
+##### Returns
+
+A `File` object.
+
+##### Exceptions
+
+This method can raise a [FileException](/en-US/docs/Web/API/FileException) with the following codes:
+
+| Exception           | Description                                                                    |
+| ------------------- | ------------------------------------------------------------------------------ |
+| `NOT_FOUND_ERR`     | The file does not exist.                                                       |
+| `INVALID_STATE_ERR` | The file is no longer valid for some reason other than it having been deleted. |
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+Specification:{{ spec("http://dev.w3.org/2009/dap/file-system/pub/FileSystem/", "File API: Directories and System Specification", "WD") }}
+
+Reference: [File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+
+Introduction: [Basic Concepts About the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)

@@ -2,31 +2,32 @@
 title: MediaKeySession.keyStatuses
 slug: Web/API/MediaKeySession/keyStatuses
 tags:
-- API
-- EncryptedMediaExtensions
-- Experimental
-- MediaKeySession
-- NeedsExample
-- Property
-- Reference
-- keyStatuses
+  - API
+  - EncryptedMediaExtensions
+  - Experimental
+  - MediaKeySession
+  - NeedsExample
+  - Property
+  - Reference
+  - keyStatuses
 browser-compat: api.MediaKeySession.keyStatuses
 ---
-<div>{{APIRef("EncryptedMediaExtensions")}}</div>
+{{APIRef("EncryptedMediaExtensions")}}
 
-<p>The <code><strong>MediaKeySession.keyStatuses</strong></code> read-only property
-  returns a reference to a read-only {{domxref('MediaKeyStatusMap')}} of the current
-  session's keys and their statuses.</p>
+The **`MediaKeySession.keyStatuses`** read-only property
+returns a reference to a read-only {{domxref('MediaKeyStatusMap')}} of the current
+session's keys and their statuses.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>mediaKeyStatusMapObj</var> = <var>mediaKeySessionObj</var>.keyStatuses;</pre>
+```js
+var mediaKeyStatusMapObj = mediaKeySessionObj.keyStatuses;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

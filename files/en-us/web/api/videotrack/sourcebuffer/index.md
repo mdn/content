@@ -2,42 +2,43 @@
 title: VideoTrack.sourceBuffer
 slug: Web/API/VideoTrack/sourceBuffer
 tags:
-- API
-- HTML DOM
-- MSE
-- Media
-- Media Source Extensions
-- Property
-- Read-only
-- Reference
-- SourceBuffer
-- Video
-- VideoTrack
-- track
+  - API
+  - HTML DOM
+  - MSE
+  - Media
+  - Media Source Extensions
+  - Property
+  - Read-only
+  - Reference
+  - SourceBuffer
+  - Video
+  - VideoTrack
+  - track
 browser-compat: api.VideoTrack.sourceBuffer
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The read-only <strong>{{domxref("VideoTrack")}}</strong>
-    property <strong><code>sourceBuffer</code></strong> returns the
-    {{domxref("SourceBuffer")}} that created the track, or null if the track was not
-    created by a {{domxref("SourceBuffer")}} or the {{domxref("SourceBuffer")}} has been
-    removed from the {{domxref("MediaSource.sourceBuffers")}} attribute of its parent
-    media source.</p>
+The read-only **{{domxref("VideoTrack")}}**
+property **`sourceBuffer`** returns the
+{{domxref("SourceBuffer")}} that created the track, or null if the track was not
+created by a {{domxref("SourceBuffer")}} or the {{domxref("SourceBuffer")}} has been
+removed from the {{domxref("MediaSource.sourceBuffers")}} attribute of its parent
+media source.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>sourceBuffer</em> = <em>VideoTrack</em>.sourceBuffer;</pre>
+```js
+var sourceBuffer = VideoTrack.sourceBuffer;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("SourceBuffer")}} or null.</p>
+A {{domxref("SourceBuffer")}} or null.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

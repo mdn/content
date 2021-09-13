@@ -2,92 +2,81 @@
 title: WebGLRenderingContext.drawArrays()
 slug: Web/API/WebGLRenderingContext/drawArrays
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.drawArrays
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.drawArrays()</code></strong> method of the <a
-    href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> renders primitives from array data.
-</p>
+The **`WebGLRenderingContext.drawArrays()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) renders primitives from array data.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <var>gl</var>.drawArrays(<var>mode</var>, <var>first</var>, <var>count</var>);
-</pre>
+```js
+void gl.drawArrays(mode, first, count);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>mode</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the type primitive to render. Possible values
+- `mode`
+
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the type primitive to render. Possible values
     are:
-    <ul>
-      <li><code>gl.POINTS</code>: Draws a single dot.</li>
-      <li><code>gl.LINE_STRIP</code>: Draws a straight line to the next vertex.</li>
-      <li><code>gl.LINE_LOOP</code>: Draws a straight line to the next vertex, and
-        connects the last vertex back to the first.</li>
-      <li><code>gl.LINES</code>: Draws a line between a pair of vertices.</li>
-      <li>
-        <code><a href="https://en.wikipedia.org/wiki/Triangle_strip">gl.TRIANGLE_STRIP</a></code>
-      </li>
-      <li>
-        <code><a href="https://en.wikipedia.org/wiki/Triangle_fan">gl.TRIANGLE_FAN</a></code>
-      </li>
-      <li><code>gl.TRIANGLES</code>: Draws a triangle for a group of three vertices.</li>
-    </ul>
-  </dd>
-  <dt>first</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLint")}} specifying the starting index in the array of vector points.
-  </dd>
-  <dt>count</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the number of indices to be rendered.</dd>
-</dl>
 
-<h3 id="Return_value">Return value</h3>
+    - `gl.POINTS`: Draws a single dot.
+    - `gl.LINE_STRIP`: Draws a straight line to the next vertex.
+    - `gl.LINE_LOOP`: Draws a straight line to the next vertex, and
+      connects the last vertex back to the first.
+    - `gl.LINES`: Draws a line between a pair of vertices.
+    - [`gl.TRIANGLE_STRIP`](https://en.wikipedia.org/wiki/Triangle_strip)
+    - [`gl.TRIANGLE_FAN`](https://en.wikipedia.org/wiki/Triangle_fan)
+    - `gl.TRIANGLES`: Draws a triangle for a group of three vertices.
 
-<p>None.</p>
+- first
+  - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the starting index in the array of vector points.
+- count
+  - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the number of indices to be rendered.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Return value
 
-<ul>
-  <li>If <code>mode</code> is not one of the accepted values, a
-    <code>gl.INVALID_ENUM</code> error is thrown.</li>
-  <li>If <code>first</code> or <code>count</code> are negative, a
-    <code>gl.INVALID_VALUE</code> error is thrown.</li>
-  <li>if <code>gl.CURRENT_PROGRAM</code> is {{jsxref("null")}}, a
-    <code>gl.INVALID_OPERATION</code> error is thrown.</li>
-</ul>
+None.
 
-<h2 id="Examples">Examples</h2>
+### Exceptions
 
-<pre class="brush: js">gl.drawArrays(gl.POINTS, 0, 8);
-</pre>
+- If `mode` is not one of the accepted values, a
+  `gl.INVALID_ENUM` error is thrown.
+- If `first` or `count` are negative, a
+  `gl.INVALID_VALUE` error is thrown.
+- if `gl.CURRENT_PROGRAM` is {{jsxref("null")}}, a
+  `gl.INVALID_OPERATION` error is thrown.
 
-<h2 id="Specifications">Specifications</h2>
+## Examples
+
+```js
+gl.drawArrays(gl.POINTS, 0, 8);
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.drawElements()")}}</li>
-  <li>{{domxref("ANGLE_instanced_arrays.drawArraysInstancedANGLE()",
-    "ext.drawArraysInstancedANGLE()")}}</li>
-  <li>{{domxref("ANGLE_instanced_arrays.drawElementsInstancedANGLE()",
-    "ext.drawElementsInstancedANGLE()")}}</li>
-  <li>{{domxref("ANGLE_instanced_arrays.vertexAttribDivisorANGLE()",
-    "ext.vertexAttribDivisorANGLE()")}}</li>
-  <li>{{domxref("WebGL2RenderingContext.drawArraysInstanced()")}}</li>
-  <li>{{domxref("WebGL2RenderingContext.drawElementsInstanced()")}}</li>
-  <li>{{domxref("WebGL2RenderingContext.vertexAttribDivisor()")}}</li>
-  <li>{{domxref("WEBGL_multi_draw.multiDrawArraysWEBGL()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.drawElements()")}}
+- {{domxref("ANGLE_instanced_arrays.drawArraysInstancedANGLE()",
+    "ext.drawArraysInstancedANGLE()")}}
+- {{domxref("ANGLE_instanced_arrays.drawElementsInstancedANGLE()",
+    "ext.drawElementsInstancedANGLE()")}}
+- {{domxref("ANGLE_instanced_arrays.vertexAttribDivisorANGLE()",
+    "ext.vertexAttribDivisorANGLE()")}}
+- {{domxref("WebGL2RenderingContext.drawArraysInstanced()")}}
+- {{domxref("WebGL2RenderingContext.drawElementsInstanced()")}}
+- {{domxref("WebGL2RenderingContext.vertexAttribDivisor()")}}
+- {{domxref("WEBGL_multi_draw.multiDrawArraysWEBGL()")}}

@@ -2,60 +2,60 @@
 title: ImageCapture() constructor
 slug: Web/API/ImageCapture/ImageCapture
 tags:
-- API
-- Constructor
-- Experimental
-- Image
-- Image Capture
-- ImageCapture
-- Media
-- MediaStream Image Capture API
-- Reference
+  - API
+  - Constructor
+  - Experimental
+  - Image
+  - Image Capture
+  - ImageCapture
+  - Media
+  - MediaStream Image Capture API
+  - Reference
 browser-compat: api.ImageCapture.ImageCapture
 ---
-<div>{{APIRef("MediaStream Image")}}</div>
+{{APIRef("MediaStream Image")}}
 
-<p>The <strong><code>ImageCapture()</code></strong> constructor
-    creates a new {{domxref("ImageCapture")}} object.</p>
+The **`ImageCapture()`** constructor
+creates a new {{domxref("ImageCapture")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">const <em>imageCapture</em> = new ImageCapture(<em>videoTrack</em>)</pre>
+```js
+const imageCapture = new ImageCapture(videoTrack)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>videoTrack</code></dt>
-  <dd>A {{domxref("MediaStreamTrack")}} from which the still images will be taken. This
+- `videoTrack`
+  - : A {{domxref("MediaStreamTrack")}} from which the still images will be taken. This
     can be any source, such as an incoming stream of a video conference, a playing movie,
-    or the stream from a webcam.</dd>
-</dl>
+    or the stream from a webcam.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A new <code>ImageCapture</code> object which can be used to capture still frames from
-  the specified video track.</p>
+A new `ImageCapture` object which can be used to capture still frames from
+the specified video track.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example shows how to use a call to
-  {{domxref("MediaDevices.getUserMedia()")}} to retrieve the
-  {{domxref("MediaStreamTrack")}} needed by the <code>ImageCapture()</code> constructor.
-</p>
+The following example shows how to use a call to
+{{domxref("MediaDevices.getUserMedia()")}} to retrieve the
+{{domxref("MediaStreamTrack")}} needed by the `ImageCapture()` constructor.
 
-<pre class="brush: js"> navigator.mediaDevices.getUserMedia({video: true})
-  .then(mediaStream =&gt; {
+```js
+ navigator.mediaDevices.getUserMedia({video: true})
+  .then(mediaStream => {
     document.querySelector('video').srcObject = mediaStream
     const track = mediaStream.getVideoTracks()[0];
     imageCapture = new ImageCapture(track);
   })
-  .catch(error =&gt; console.log(error));</pre>
+  .catch(error => console.log(error));
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

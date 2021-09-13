@@ -2,76 +2,75 @@
 title: DocumentFragment.querySelector()
 slug: Web/API/DocumentFragment/querySelector
 tags:
-- API
-- DOM
-- DocumentFragment
-- Method
+  - API
+  - DOM
+  - DocumentFragment
+  - Method
 browser-compat: api.DocumentFragment.querySelector
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<p>The <strong><code>DocumentFragment.querySelector()</code></strong> method returns the
-	first element, or <code>null</code> if no matches are found, within the
-	{{domxref("DocumentFragment")}} (using depth-first pre-order traversal of the
-	document's nodes) that matches the specified group of selectors.</p>
+The **`DocumentFragment.querySelector()`** method returns the
+first element, or `null` if no matches are found, within the
+{{domxref("DocumentFragment")}} (using depth-first pre-order traversal of the
+document's nodes) that matches the specified group of selectors.
 
-<p>If the selector matches an ID and this ID is erroneously used several times in the
-	document, it returns the first matching element.</p>
+If the selector matches an ID and this ID is erroneously used several times in the
+document, it returns the first matching element.
 
-<p>If the selectors specified in parameter are invalid a {{domxref("DOMException")}} with
-	a <code>SYNTAX_ERR</code> value is raised.</p>
+If the selectors specified in parameter are invalid a {{domxref("DOMException")}} with
+a `SYNTAX_ERR` value is raised.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-	class="brush: js"><em>element</em> = <em>documentfragment</em>.querySelector(<em>selectors</em>);</pre>
+```js
+element = documentfragment.querySelector(selectors);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-	<dt><em>selectors </em></dt>
-	<dd>Is a {{domxref("DOMString")}} containing one or more CSS selectors separated by
-		commas.</dd>
-</dl>
+- _selectors_
+  - : Is a {{domxref("DOMString")}} containing one or more CSS selectors separated by
+    commas.
 
-<h2 id="Example">Examples</h2>
+## Examples
 
-<h3 id="Basic_example">Basic example</h3>
+### Basic example
 
-<p>In this basic example, the first element in the {{domxref("DocumentFragment")}} with
-	the class "<code>myclass</code>" is returned:</p>
+In this basic example, the first element in the {{domxref("DocumentFragment")}} with
+the class "`myclass`" is returned:
 
-<pre class="brush: js">var el = documentfragment.querySelector(".myclass");
-</pre>
+```js
+var el = documentfragment.querySelector(".myclass");
+```
 
-<h3 id="CSS_syntax_and_the_method's_argument">CSS syntax and the method's argument</h3>
+### CSS syntax and the method's argument
 
-<p>The string argument pass to <code>querySelector</code> must follow the CSS syntax. To
-	match ID or selectors that do not follow the CSS syntax (by using semicolon or space
-	inappropriately for example), it's mandatory to escape the wrong character with a
-	double back slash:</p>
+The string argument pass to `querySelector` must follow the CSS syntax. To
+match ID or selectors that do not follow the CSS syntax (by using semicolon or space
+inappropriately for example), it's mandatory to escape the wrong character with a
+double back slash:
 
-<pre class="brush: html">&lt;div id="foo\bar"&gt;&lt;/div&gt;
-&lt;div id="foo:bar"&gt;&lt;/div&gt;
+```html
+<div id="foo\bar"></div>
+<div id="foo:bar"></div>
 
-&lt;script&gt;
+<script>
 document.querySelector('#foo\bar')    // Does not match anything
 document.querySelector('#foo\\\\bar') // Match the first div
 document.querySelector('#foo:bar')     // Does not match anything
 document.querySelector('#foo\\:bar')   // Match the second div
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>The {{domxref("DocumentFragment")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("DocumentFragment")}} interface it belongs to.

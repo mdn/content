@@ -2,43 +2,44 @@
 title: IntersectionObserverEntry.rootBounds
 slug: Web/API/IntersectionObserverEntry/rootBounds
 tags:
-- API
-- Experimental
-- Intersection Observer
-- Intersection Observer API
-- IntersectionObserverEntry
-- Property
-- Reference
-- rootBounds
+  - API
+  - Experimental
+  - Intersection Observer
+  - Intersection Observer API
+  - IntersectionObserverEntry
+  - Property
+  - Reference
+  - rootBounds
 browser-compat: api.IntersectionObserverEntry.rootBounds
 ---
-<div>{{APIRef("Intersection Observer API")}}{{SeeCompatTable}}</div>
+{{APIRef("Intersection Observer API")}}{{SeeCompatTable}}
 
-<p>The {{domxref("IntersectionObserverEntry")}} interface's
-    read-only <strong><code>rootBounds</code></strong> property is a
-    {{domxref("DOMRectReadOnly")}} corresponding to the
-    {{domxref("IntersectionObserverEntry.target", "target")}}'s root intersection
-    rectangle, offset by the {{domxref("IntersectionObserver.rootMargin")}} if one is
-    specified.</p>
+The {{domxref("IntersectionObserverEntry")}} interface's
+read-only **`rootBounds`** property is a
+{{domxref("DOMRectReadOnly")}} corresponding to the
+{{domxref("IntersectionObserverEntry.target", "target")}}'s root intersection
+rectangle, offset by the {{domxref("IntersectionObserver.rootMargin")}} if one is
+specified.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var><code>var <em>rootBounds</em> = </code>IntersectionObserverEntry</var>.rootBounds;
-</pre>
+```js
+var rootBounds = IntersectionObserverEntry.rootBounds;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMRectReadOnly")}} which describes the root intersection rectangle. For
-  roots which are the {{domxref("Document")}}'s viewport, this rectangle is the bounds
-  rectangle of the entire document. Otherwise, it's the bounds of the root element.</p>
+A {{domxref("DOMRectReadOnly")}} which describes the root intersection rectangle. For
+roots which are the {{domxref("Document")}}'s viewport, this rectangle is the bounds
+rectangle of the entire document. Otherwise, it's the bounds of the root element.
 
-<p>This rectangle is offset by the values in
-  {{domxref("IntersectionObserver.rootMargin")}}.</p>
+This rectangle is offset by the values in
+{{domxref("IntersectionObserver.rootMargin")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

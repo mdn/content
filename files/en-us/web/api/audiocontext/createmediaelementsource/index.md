@@ -10,37 +10,36 @@ tags:
   - createMediaElementSource
 browser-compat: api.AudioContext.createMediaElementSource
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>The <code>createMediaElementSource()</code> method of the {{ domxref("AudioContext") }} Interface is used to create a new {{ domxref("MediaElementAudioSourceNode") }} object, given an existing HTML {{htmlelement("audio")}} or {{htmlelement("video")}} element, the audio from which can then be played and manipulated.</p>
+The `createMediaElementSource()` method of the {{ domxref("AudioContext") }} Interface is used to create a new {{ domxref("MediaElementAudioSourceNode") }} object, given an existing HTML {{htmlelement("audio")}} or {{htmlelement("video")}} element, the audio from which can then be played and manipulated.
 
-<p>For more details about media element audio source nodes, check out the {{ domxref("MediaElementAudioSourceNode") }} reference page.</p>
+For more details about media element audio source nodes, check out the {{ domxref("MediaElementAudioSourceNode") }} reference page.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var audioCtx = new AudioContext();
-var source = audioCtx.createMediaElementSource(myMediaElement);</pre>
+```js
+var audioCtx = new AudioContext();
+var source = audioCtx.createMediaElementSource(myMediaElement);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>myMediaElement</code></dt>
- <dd>An {{domxref("HTMLMediaElement")}} object that you want to feed into an audio processing graph to manipulate.</dd>
-</dl>
+- `myMediaElement`
+  - : An {{domxref("HTMLMediaElement")}} object that you want to feed into an audio processing graph to manipulate.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A {{domxref("MediaElementAudioSourceNode")}}.</p>
+A {{domxref("MediaElementAudioSourceNode")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This simple example creates a source from an {{htmlelement("audio") }} element using <code>createMediaElementSource()</code>, then passes the audio through a {{ domxref("GainNode") }} before feeding it into the {{ domxref("AudioDestinationNode") }} for playback. When the mouse pointer is moved, the <code>updatePage()</code> function is invoked, which calculates the current gain as a ratio of mouse Y position divided by overall window height. You can therefore increase and decrease the volume of the playing music by moving the mouse pointer up and down.</p>
+This simple example creates a source from an {{htmlelement("audio") }} element using `createMediaElementSource()`, then passes the audio through a {{ domxref("GainNode") }} before feeding it into the {{ domxref("AudioDestinationNode") }} for playback. When the mouse pointer is moved, the `updatePage()` function is invoked, which calculates the current gain as a ratio of mouse Y position divided by overall window height. You can therefore increase and decrease the volume of the playing music by moving the mouse pointer up and down.
 
-<div class="note">
-<p><strong>Note:</strong> You can also <a href="https://mdn.github.io/webaudio-examples/media-source-buffer/">view this example running live</a>, or <a href="https://github.com/mdn/webaudio-examples/tree/master/media-source-buffer">view the source</a>.</p>
-</div>
+> **Note:** You can also [view this example running live](https://mdn.github.io/webaudio-examples/media-source-buffer/), or [view the source](https://github.com/mdn/webaudio-examples/tree/master/media-source-buffer).
 
-<pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+```js
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var myAudio = document.querySelector('audio');
 var pre = document.querySelector('pre');
 var myScript = document.querySelector('script');
@@ -74,22 +73,19 @@ function updatePage(e) {
 // and the gainNode to the destination, so we can play the
 // music and adjust the volume using the mouse cursor
 source.connect(gainNode);
-gainNode.connect(audioCtx.destination);</pre>
+gainNode.connect(audioCtx.destination);
+```
 
-<div class="note">
-<p><strong>Note:</strong> As a consequence of calling <code>createMediaElementSource()</code>, audio playback from the {{domxref("HTMLMediaElement")}} will be re-routed into the processing graph of the AudioContext. So playing/pausing the media can still be done through the media element API and the player controls.</p>
-</div>
+> **Note:** As a consequence of calling `createMediaElementSource()`, audio playback from the {{domxref("HTMLMediaElement")}} will be re-routed into the processing graph of the AudioContext. So playing/pausing the media can still be done through the media element API and the player controls.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

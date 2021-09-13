@@ -10,107 +10,88 @@ tags:
   - generateKey
 browser-compat: api.SubtleCrypto.generateKey
 ---
-<p>{{APIRef("Web Crypto API")}}{{SecureContext_header}}</p>
+{{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
-<p>Use the <code><strong>generateKey()</strong></code> method of the
-  {{domxref("SubtleCrypto")}} interface to generate a new key (for symmetric algorithms)
-  or key pair (for public-key algorithms).</p>
+Use the **`generateKey()`** method of the
+{{domxref("SubtleCrypto")}} interface to generate a new key (for symmetric algorithms)
+or key pair (for public-key algorithms).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const result = crypto.subtle.generateKey(algorithm, extractable, keyUsages);
-</pre>
+```js
+const result = crypto.subtle.generateKey(algorithm, extractable, keyUsages);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<ul>
-  <li><em><code>algorithm</code></em> is a dictionary object defining the type of key to
-    generate and providing extra algorithm-specific parameters.
+- _`algorithm`_ is a dictionary object defining the type of key to
+  generate and providing extra algorithm-specific parameters.
 
-    <ul>
-      <li>For <a
-          href="/en-US/docs/Web/API/SubtleCrypto/sign#rsassa-pkcs1-v1_5">RSASSA-PKCS1-v1_5</a>, <a
-          href="/en-US/docs/Web/API/SubtleCrypto/sign#rsa-pss">RSA-PSS</a>, or <a
-          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep">RSA-OAEP</a>: pass an
-        <code><a href="/en-US/docs/Web/API/RsaHashedKeyGenParams">RsaHashedKeyGenParams</a></code>
-        object.</li>
-      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/sign#ecdsa">ECDSA</a> or <a
-          href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#ecdh">ECDH</a>: pass
-        an <code><a href="/en-US/docs/Web/API/EcKeyGenParams">EcKeyGenParams</a></code>
-        object.</li>
-      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/sign#hmac">HMAC</a>: pass an
-        <code><a href="/en-US/docs/Web/API/HmacKeyGenParams">HmacKeyGenParams</a></code>
-        object.</li>
-      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr">AES-CTR</a>, <a
-          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc">AES-CBC</a>, <a
-          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm">AES-GCM</a>, or <a
-          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-kw">AES-KW</a>: pass an
-        <code><a href="/en-US/docs/Web/API/AesKeyGenParams">AesKeyGenParams</a></code>
-        object.</li>
-    </ul>
-  </li>
-  <li><code><em>extractable</em></code> is a boolean value indicating whether it
-    will be possible to export  the key using {{domxref("SubtleCrypto.exportKey()")}} or
-    {{domxref("SubtleCrypto.wrapKey()")}}.</li>
-  <li><code><em>keyUsages</em></code>  is an {{jsxref("Array")}} indicating what can be
-    done with the newly generated key. Possible values for array elements are:
-    <ul>
-      <li><code>encrypt</code>: The key may be used to {{domxref("SubtleCrypto.encrypt()",
-        "encrypt")}} messages.</li>
-      <li><code>decrypt</code>: The key may be used to {{domxref("SubtleCrypto.decrypt()",
-        "decrypt")}} messages.</li>
-      <li><code>sign</code>: The key may be used to {{domxref("SubtleCrypto.sign()",
-        "sign")}} messages.</li>
-      <li><code>verify</code>: The key may be used to {{domxref("SubtleCrypto.verify()",
-        "verify")}} signatures.</li>
-      <li><code>deriveKey</code>: The key may be used in
-        {{domxref("SubtleCrypto.deriveKey()", "deriving a new key")}}.</li>
-      <li><code>deriveBits</code>: The key may be used in
-        {{domxref("SubtleCrypto.deriveBits()", "deriving bits")}}.</li>
-      <li><code>wrapKey</code>: The key may be used to {{domxref("SubtleCrypto.wrapKey()",
-        "wrap a key")}}.</li>
-      <li><code>unwrapKey</code>: The key may be used to
-        {{domxref("SubtleCrypto.unwrapKey()", "unwrap a key")}}.</li>
-    </ul>
-  </li>
-</ul>
+  - For [RSASSA-PKCS1-v1_5](/en-US/docs/Web/API/SubtleCrypto/sign#rsassa-pkcs1-v1_5), [RSA-PSS](/en-US/docs/Web/API/SubtleCrypto/sign#rsa-pss), or [RSA-OAEP](/en-US/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep): pass an
+    [`RsaHashedKeyGenParams`](/en-US/docs/Web/API/RsaHashedKeyGenParams)
+    object.
+  - For [ECDSA](/en-US/docs/Web/API/SubtleCrypto/sign#ecdsa) or [ECDH](/en-US/docs/Web/API/SubtleCrypto/deriveKey#ecdh): pass
+    an [`EcKeyGenParams`](/en-US/docs/Web/API/EcKeyGenParams)
+    object.
+  - For [HMAC](/en-US/docs/Web/API/SubtleCrypto/sign#hmac): pass an
+    [`HmacKeyGenParams`](/en-US/docs/Web/API/HmacKeyGenParams)
+    object.
+  - For [AES-CTR](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr), [AES-CBC](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc), [AES-GCM](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm), or [AES-KW](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-kw): pass an
+    [`AesKeyGenParams`](/en-US/docs/Web/API/AesKeyGenParams)
+    object.
 
-<h3 id="Return_value">Return value</h3>
+- `extractable` is a boolean value indicating whether it
+  will be possible to export  the key using {{domxref("SubtleCrypto.exportKey()")}} or
+  {{domxref("SubtleCrypto.wrapKey()")}}.
+- `keyUsages`  is an {{jsxref("Array")}} indicating what can be
+  done with the newly generated key. Possible values for array elements are:
 
-<ul>
-  <li><code><em>result</em></code> is a {{jsxref("Promise")}} that fulfills with a
-    {{domxref("CryptoKey")}} (for symmetric algorithms) or a {{domxref("CryptoKeyPair")}}
-    (for public-key algorithms).</li>
-</ul>
+  - `encrypt`: The key may be used to {{domxref("SubtleCrypto.encrypt()",
+        "encrypt")}} messages.
+  - `decrypt`: The key may be used to {{domxref("SubtleCrypto.decrypt()",
+        "decrypt")}} messages.
+  - `sign`: The key may be used to {{domxref("SubtleCrypto.sign()",
+        "sign")}} messages.
+  - `verify`: The key may be used to {{domxref("SubtleCrypto.verify()",
+        "verify")}} signatures.
+  - `deriveKey`: The key may be used in
+    {{domxref("SubtleCrypto.deriveKey()", "deriving a new key")}}.
+  - `deriveBits`: The key may be used in
+    {{domxref("SubtleCrypto.deriveBits()", "deriving bits")}}.
+  - `wrapKey`: The key may be used to {{domxref("SubtleCrypto.wrapKey()",
+        "wrap a key")}}.
+  - `unwrapKey`: The key may be used to
+    {{domxref("SubtleCrypto.unwrapKey()", "unwrap a key")}}.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Return value
 
-<p>The promise is rejected when the following exception is encountered:</p>
+- `result` is a {{jsxref("Promise")}} that fulfills with a
+  {{domxref("CryptoKey")}} (for symmetric algorithms) or a {{domxref("CryptoKeyPair")}}
+  (for public-key algorithms).
 
-<dl>
-  <dt>{{exception("SyntaxError")}}</dt>
-  <dd>Raised when the result is a {{domxref("CryptoKey")}} of type <code>secret</code> or
-    <code>private</code> but <em><code>keyUsages</code></em> is empty.</dd>
-  <dt>{{exception("SyntaxError")}}</dt>
-  <dd>Raised when the result is a {{domxref("CryptoKeyPair")}} and its
-    <code>privateKey.usages</code> attribute is empty.</dd>
-</dl>
+### Exceptions
 
-<h2 id="Examples">Examples</h2>
+The promise is rejected when the following exception is encountered:
 
-<div class="notecard note">
-  <p><strong>Note:</strong> You can <a
-      href="https://mdn.github.io/dom-examples/web-crypto/encrypt-decrypt/index.html">try
-      the working examples</a> on GitHub.</p>
-</div>
+- {{exception("SyntaxError")}}
+  - : Raised when the result is a {{domxref("CryptoKey")}} of type `secret` or
+    `private` but _`keyUsages`_ is empty.
+- {{exception("SyntaxError")}}
+  - : Raised when the result is a {{domxref("CryptoKeyPair")}} and its
+    `privateKey.usages` attribute is empty.
 
-<h3 id="RSA_key_pair_generation">RSA key pair generation</h3>
+## Examples
 
-<p>This code generates an RSA-OAEP encryption key pair. <a
-    href="https://github.com/mdn/dom-examples/blob/master/web-crypto/encrypt-decrypt/rsa-oaep.js">See
-    the complete code on GitHub.</a></p>
+> **Note:** You can [try
+> the working examples](https://mdn.github.io/dom-examples/web-crypto/encrypt-decrypt/index.html) on GitHub.
 
-<pre class="brush: js">let keyPair = window.crypto.subtle.generateKey(
+### RSA key pair generation
+
+This code generates an RSA-OAEP encryption key pair. [See
+the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/encrypt-decrypt/rsa-oaep.js)
+
+```js
+let keyPair = window.crypto.subtle.generateKey(
   {
     name: "RSA-OAEP",
     modulusLength: 4096,
@@ -119,66 +100,67 @@ browser-compat: api.SubtleCrypto.generateKey
   },
   true,
   ["encrypt", "decrypt"]
-);</pre>
+);
+```
 
-<h3 id="Elliptic_curve_key_pair_generation">Elliptic curve key pair generation</h3>
+### Elliptic curve key pair generation
 
-<p>This code generates an ECDSA signing key pair. <a
-    href="https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/ecdsa.js">See
-    the complete code on GitHub.</a></p>
+This code generates an ECDSA signing key pair. [See
+the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/ecdsa.js)
 
-<pre class="brush: js">let keyPair = window.crypto.subtle.generateKey(
+```js
+let keyPair = window.crypto.subtle.generateKey(
   {
     name: "ECDSA",
     namedCurve: "P-384"
   },
   true,
   ["sign", "verify"]
-);</pre>
+);
+```
 
-<h3 id="HMAC_key_generation">HMAC key generation</h3>
+### HMAC key generation
 
-<p>This code generates an HMAC signing key. <a
-    href="https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/hmac.js">See
-    the complete code on GitHub.</a></p>
+This code generates an HMAC signing key. [See
+the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/hmac.js)
 
-<pre class="brush: js">let key = window.crypto.subtle.generateKey(
+```js
+let key = window.crypto.subtle.generateKey(
   {
     name: "HMAC",
     hash: {name: "SHA-512"}
   },
   true,
   ["sign", "verify"]
-);</pre>
+);
+```
 
-<h3 id="AES_key_generation">AES key generation</h3>
+### AES key generation
 
-<p>This code generates an AES-GCM encryption key. <a
-    href="https://github.com/mdn/dom-examples/blob/master/web-crypto/encrypt-decrypt/aes-gcm.js">See
-    the complete code on GitHub.</a></p>
+This code generates an AES-GCM encryption key. [See
+the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/encrypt-decrypt/aes-gcm.js)
 
-<pre class="brush: js">let key = window.crypto.subtle.generateKey(
+```js
+let key = window.crypto.subtle.generateKey(
   {
     name: "AES-GCM",
     length: 256
   },
   true,
   ["encrypt", "decrypt"]
-);</pre>
+);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://www.keylength.com/">Cryptographic key length recommendations</a>.
-  </li>
-  <li><a href="https://csrc.nist.gov/publications/detail/sp/800-131a/rev-1/final">NIST
-      cryptographic algorithm and key length recommendations</a>.</li>
-</ul>
+- [Cryptographic key length recommendations](https://www.keylength.com/).
+- [NIST
+  cryptographic algorithm and key length recommendations](https://csrc.nist.gov/publications/detail/sp/800-131a/rev-1/final).

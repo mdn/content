@@ -2,49 +2,48 @@
 title: SourceBuffer.buffered
 slug: Web/API/SourceBuffer/buffered
 tags:
-- API
-- Audio
-- Experimental
-- MSE
-- Media Source Extensions
-- Property
-- Reference
-- SourceBuffer
-- Video
-- buffered
+  - API
+  - Audio
+  - Experimental
+  - MSE
+  - Media Source Extensions
+  - Property
+  - Reference
+  - SourceBuffer
+  - Video
+  - buffered
 browser-compat: api.SourceBuffer.buffered
 ---
-<div>{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}{{draft}}</div>
+{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}{{draft}}
 
-<p>The <code><strong>buffered</strong></code> read-only property of the
-  {{domxref("SourceBuffer")}} interface returns the time ranges that are currently
-  buffered in the <code>SourceBuffer</code> as a normalized {{domxref("TimeRanges")}}
-  object.</p>
+The **`buffered`** read-only property of the
+{{domxref("SourceBuffer")}} interface returns the time ranges that are currently
+buffered in the `SourceBuffer` as a normalized {{domxref("TimeRanges")}}
+object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>myBufferedRange</em> = <em>sourceBuffer</em>.buffered;
-</pre>
+```js
+var myBufferedRange = sourceBuffer.buffered;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("TimeRanges")}} object.</p>
+A {{domxref("TimeRanges")}} object.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>TBD</p>
+TBD
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("MediaSource")}}</li>
-  <li>{{domxref("SourceBufferList")}}</li>
-</ul>
+- {{domxref("MediaSource")}}
+- {{domxref("SourceBufferList")}}

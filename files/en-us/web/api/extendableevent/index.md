@@ -13,57 +13,46 @@ tags:
   - Workers
 browser-compat: api.ExtendableEvent
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p>The <strong><code>ExtendableEvent</code></strong> interface extends the lifetime of the <code><a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope/install_event">install</a></code> and <code><a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope/activate_event">activate</a></code> events dispatched on the global scope as part of the service worker lifecycle. This ensures that any functional events (like {{domxref("FetchEvent")}}) are not dispatched until it upgrades database schemas and deletes the outdated cache entries.</p>
+The **`ExtendableEvent`** interface extends the lifetime of the [`install`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/install_event) and [`activate`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/activate_event) events dispatched on the global scope as part of the service worker lifecycle. This ensures that any functional events (like {{domxref("FetchEvent")}}) are not dispatched until it upgrades database schemas and deletes the outdated cache entries.
 
-<p>If {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} is called outside of the <code>ExtendableEvent</code> handler, the browser should throw an <code>InvalidStateError</code>; note also that multiple calls will stack up, and the resulting promises will be added to the list of <a href="https://w3c.github.io/ServiceWorker/#extendableevent-extend-lifetime-promises">extend lifetime promises</a>.</p>
+If {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} is called outside of the `ExtendableEvent` handler, the browser should throw an `InvalidStateError`; note also that multiple calls will stack up, and the resulting promises will be added to the list of [extend lifetime promises](https://w3c.github.io/ServiceWorker/#extendableevent-extend-lifetime-promises).
 
-<div class="note">
-<p><strong>Note:</strong> The behavior described in the above paragraph was fixed in Firefox 43 (see {{bug(1180274)}}.)</p>
-</div>
+> **Note:** The behavior described in the above paragraph was fixed in Firefox 43 (see {{bug(1180274)}}.)
 
-<p>This interface inherits from the {{domxref("Event")}} interface.</p>
+This interface inherits from the {{domxref("Event")}} interface.
 
-<p>{{InheritanceDiagram(700, 60, 20)}}</p>
+{{InheritanceDiagram(700, 60, 20)}}
 
-<div class="note">
-<p><strong>Note:</strong> This interface is only available when the global scope is a {{domxref("ServiceWorkerGlobalScope")}}. It is not available when it is a {{domxref("Window")}}, or the scope of another kind of worker.</p>
-</div>
+> **Note:** This interface is only available when the global scope is a {{domxref("ServiceWorkerGlobalScope")}}. It is not available when it is a {{domxref("Window")}}, or the scope of another kind of worker.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("ExtendableEvent.ExtendableEvent()", "ExtendableEvent()")}}</dt>
- <dd>Creates a new <code>ExtendableEvent</code> object.</dd>
-</dl>
+- {{domxref("ExtendableEvent.ExtendableEvent()", "ExtendableEvent()")}}
+  - : Creates a new `ExtendableEvent` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Doesn't implement any specific properties, but inherits properties from its parent, {{domxref("Event")}}.</em></p>
+_Doesn't implement any specific properties, but inherits properties from its parent, {{domxref("Event")}}._
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Inherits methods from its parent, {{domxref("Event")}}</em>.</p>
+_Inherits methods from its parent, {{domxref("Event")}}_.
 
-<dl>
- <dt>{{domxref("ExtendableEvent.waitUntil", "ExtendableEvent.waitUntil()")}}</dt>
- <dd>
- <p>Extends the lifetime of the event.  It is intended to be called in the <code><a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope/install_event">install</a></code> <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> for the {{domxref("ServiceWorkerRegistration.installing", "installing")}} worker and on the <code><a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope/activate_event">activate</a></code> <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> for the {{domxref("ServiceWorkerRegistration.active", "active")}} worker.</p>
- </dd>
-</dl>
+- {{domxref("ExtendableEvent.waitUntil", "ExtendableEvent.waitUntil()")}}
+  - : Extends the lifetime of the event.  It is intended to be called in the [`install`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/install_event) [event handler](/en-US/docs/Web/Events/Event_handlers) for the {{domxref("ServiceWorkerRegistration.installing", "installing")}} worker and on the [`activate`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/activate_event) [event handler](/en-US/docs/Web/Events/Event_handlers) for the {{domxref("ServiceWorkerRegistration.active", "active")}} worker.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This code snippet is from the <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js">service worker prefetch sample</a> (see <a href="https://googlechrome.github.io/samples/service-worker/prefetch/">prefetch example live</a>.) The code calls {{domxref("ExtendableEvent.waitUntil()")}} in {{domxref("ServiceWorkerGlobalScope.oninstall")}}, delaying treating the {{domxref("ServiceWorkerRegistration.installing")}} worker as installed until the passed promise resolves successfully. The promise resolves when all resources have been fetched and cached, or else when any exception occurs.</p>
+This code snippet is from the [service worker prefetch sample](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js) (see [prefetch example live](https://googlechrome.github.io/samples/service-worker/prefetch/).) The code calls {{domxref("ExtendableEvent.waitUntil()")}} in {{domxref("ServiceWorkerGlobalScope.oninstall")}}, delaying treating the {{domxref("ServiceWorkerRegistration.installing")}} worker as installed until the passed promise resolves successfully. The promise resolves when all resources have been fetched and cached, or else when any exception occurs.
 
-<p>The code snippet also shows a best practice for versioning caches used by the service worker. Though there's only one cache in this example, the same approach can be used for multiple caches. It maps a shorthand identifier for a cache to a specific, versioned cache name.</p>
+The code snippet also shows a best practice for versioning caches used by the service worker. Though there's only one cache in this example, the same approach can be used for multiple caches. It maps a shorthand identifier for a cache to a specific, versioned cache name.
 
-<div class="note">
-<p><strong>Note:</strong> In Chrome, logging statements are visible via the "Inspect" interface for the relevant service worker accessed via chrome://serviceworker-internals.</p>
-</div>
+> **Note:** In Chrome, logging statements are visible via the "Inspect" interface for the relevant service worker accessed via chrome://serviceworker-internals.
 
-<pre class="brush: js">var CACHE_VERSION = 1;
+```js
+var CACHE_VERSION = 1;
 var CURRENT_CACHES = {
   prefetch: 'prefetch-cache-v' + CACHE_VERSION
 };
@@ -88,24 +77,23 @@ self.addEventListener('install', function(event) {
       console.error('Pre-fetching failed:', error);
     })
   );
-});</pre>
+});
+```
 
-<div class="note"><p><strong>Note:</strong> When fetching resources, it's very important to use <code>{mode: 'no-cors'}</code> if there is any chance that the resources are served off of a server that doesn't support {{glossary("CORS")}}. In this example, <a href="http://www.chromium.org">www.chromium.org</a> doesn't support CORS.</p></div>
+> **Note:** When fetching resources, it's very important to use `{mode: 'no-cors'}` if there is any chance that the resources are served off of a server that doesn't support {{glossary("CORS")}}. In this example, [www.chromium.org](http://www.chromium.org) doesn't support CORS.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service Workers</a></li>
- <li><a class="external external-icon" href="https://github.com/mdn/sw-test">Service workers basic code example</a></li>
- <li><a class="external external-icon" href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
- <li>{{jsxref("Promise")}}</li>
- <li><a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web workers</a></li>
-</ul>
+- [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- {{jsxref("Promise")}}
+- [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

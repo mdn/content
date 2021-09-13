@@ -2,62 +2,57 @@
 title: CSSStyleSheet.rules
 slug: Web/API/CSSStyleSheet/rules
 tags:
-- API
-- CSS
-- CSSOM
-- CSSOM API
-- CSSStyleSheet
-- Layout
-- Object Model
-- Property
-- Read-only
-- Reference
-- Style
-- StyleSheet
-- legacy
-- Deprecated
+  - API
+  - CSS
+  - CSSOM
+  - CSSOM API
+  - CSSStyleSheet
+  - Layout
+  - Object Model
+  - Property
+  - Read-only
+  - Reference
+  - Style
+  - StyleSheet
+  - legacy
+  - Deprecated
 browser-compat: api.CSSStyleSheet.rules
 ---
-<p>{{APIRef("CSSOM")}}{{deprecated_header}}</p>
+{{APIRef("CSSOM")}}{{deprecated_header}}
 
-<p><code><strong>rules</strong></code> is a <em>deprecated</em>
-    <em>legacy property</em> of the {{domxref("CSSStyleSheet")}} interface. Functionally
-    identical to the preferred {{domxref("CSSStyleSheet.cssRules", "cssRules")}} property,
-    it provides access to a live-updating list of the CSS rules comprising the
-    stylesheet.</p>
+**`rules`** is a _deprecated_
+_legacy property_ of the {{domxref("CSSStyleSheet")}} interface. Functionally
+identical to the preferred {{domxref("CSSStyleSheet.cssRules", "cssRules")}} property,
+it provides access to a live-updating list of the CSS rules comprising the
+stylesheet.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> As a legacy property, you not use <code>rules</code> and
-    should instead use the preferred {{domxref("CSSStyleSheet.cssRules", "cssRules")}}.
-    While <code>rules</code> is unlikely to be removed soon, its availability is not as
-    widespread and using it will result in compatibility problems for your site or app.
-  </p>
-</div>
+> **Note:** As a legacy property, you not use `rules` and
+> should instead use the preferred {{domxref("CSSStyleSheet.cssRules", "cssRules")}}.
+> While `rules` is unlikely to be removed soon, its availability is not as
+> widespread and using it will result in compatibility problems for your site or app.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>rules</em> = <em>cssStyleSheet</em>.rules;</pre>
+```js
+var rules = cssStyleSheet.rules;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A live-updating {{domxref("CSSRuleList")}} containing each of the CSS rules making up
-  the stylesheet. Each entry in the rule list is a {{domxref("CSSRule")}} object
-  describing one rule making up the stylesheet.</p>
+A live-updating {{domxref("CSSRuleList")}} containing each of the CSS rules making up
+the stylesheet. Each entry in the rule list is a {{domxref("CSSRule")}} object
+describing one rule making up the stylesheet.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/CSS_Object_Model">CSS Object Model</a></li>
-  <li><a
-      href="/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information">Using
-      dynamic styling information</a></li>
-</ul>
+- [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model)
+- [Using
+  dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)

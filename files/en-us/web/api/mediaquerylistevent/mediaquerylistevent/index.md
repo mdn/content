@@ -10,54 +10,50 @@ tags:
   - Reference
 browser-compat: api.MediaQueryListEvent.MediaQueryListEvent
 ---
-<p>{{APIRef("CSSOM")}}</p>
+{{APIRef("CSSOM")}}
 
-<p>The <strong><code>MediaQueryListEvent()</code></strong> constructor creates a new
-  <code>MediaQueryListEvent</code> instance.</p>
+The **`MediaQueryListEvent()`** constructor creates a new
+`MediaQueryListEvent` instance.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>myMqlEvent</em> = <em>new MediaQueryListEvent(init);</em></pre>
+```js
+var myMqlEvent = new MediaQueryListEvent(init);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>init</code></dt>
-  <dd>
-    <p>An init object that defines features of the new object instance. The available
-      properties are:</p>
+- `init`
 
-    <ul>
-      <li>media: A {{DOMxRef("DOMString")}} representing a serialized media query.</li>
-      <li>matches: A {{JSxRef("Boolean")}} representing the media query status —
-        <code>true</code> if it matches, <code>false</code> if not.</li>
-    </ul>
-  </dd>
-</dl>
+  - : An init object that defines features of the new object instance. The available
+    properties are:
 
-<h2 id="Examples">Examples</h2>
+    - media: A {{DOMxRef("DOMString")}} representing a serialized media query.
+    - matches: A {{JSxRef("Boolean")}} representing the media query status —
+      `true` if it matches, `false` if not.
 
-<pre
-  class="brush: js">var media = '(max-width: 600px)';
+## Examples
+
+```js
+var media = '(max-width: 600px)';
 var matches = true;
 
-var myMediaQueryListEvent = new MediaQueryListEvent({media, matches});</pre>
+var myMediaQueryListEvent = new MediaQueryListEvent({media, matches});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">Media queries</a></li>
-  <li><a href="/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries">Using media queries from
-      code</a></li>
-  <li>{{DOMxRef("window.matchMedia()")}}</li>
-  <li>{{DOMxRef("MediaQueryList")}}</li>
-  <li>{{DOMxRef("MediaQueryListEvent")}}</li>
-</ul>
+- [Media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Using media queries from
+  code](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- {{DOMxRef("window.matchMedia()")}}
+- {{DOMxRef("MediaQueryList")}}
+- {{DOMxRef("MediaQueryListEvent")}}

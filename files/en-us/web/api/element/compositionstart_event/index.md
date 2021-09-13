@@ -9,57 +9,62 @@ tags:
   - compositionstart
 browser-compat: api.Element.compositionstart_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <strong><code>compositionstart</code></strong> event is fired when a text composition system such as an {{glossary("input method editor")}} starts a new composition session.</p>
+The **`compositionstart`** event is fired when a text composition system such as an {{glossary("input method editor")}} starts a new composition session.
 
-<p>For example, this event could be fired after a user starts entering a Chinese character using a <a href="https://en.wikipedia.org/wiki/Pinyin">Pinyin</a> IME.</p>
+For example, this event could be fired after a user starts entering a Chinese character using a [Pinyin](https://en.wikipedia.org/wiki/Pinyin) IME.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th>Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th>Cancelable</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th>Interface</th>
-   <td>{{domxref("CompositionEvent")}}</td>
-  </tr>
-  <tr>
-   <th>Event handler property</th>
-   <td>None</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Cancelable</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Interface</th>
+      <td>{{domxref("CompositionEvent")}}</td>
+    </tr>
+    <tr>
+      <th>Event handler property</th>
+      <td>None</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">const inputElement = document.querySelector('input[type="text"]');
+```js
+const inputElement = document.querySelector('input[type="text"]');
 
-inputElement.addEventListener('compositionstart', (event) =&gt; {
+inputElement.addEventListener('compositionstart', (event) => {
   console.log(`generated characters were: ${event.data}`);
-});</pre>
+});
+```
 
-<h3 id="Live_example">Live example</h3>
+### Live example
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="control"&gt;
-  &lt;label for="name"&gt;On macOS, click in the textbox below,&lt;br&gt; then type &lt;kbd&gt;option&lt;/kbd&gt; + &lt;kbd&gt;`&lt;/kbd&gt;, then &lt;kbd&gt;a&lt;/kbd&gt;:&lt;/label&gt;
-  &lt;input type="text" id="example" name="example"&gt;
-&lt;/div&gt;
+```html
+<div class="control">
+  <label for="name">On macOS, click in the textbox below,<br> then type <kbd>option</kbd> + <kbd>`</kbd>, then <kbd>a</kbd>:</label>
+  <input type="text" id="example" name="example">
+</div>
 
-&lt;div class="event-log"&gt;
-  &lt;label&gt;Event log:&lt;/label&gt;
-  &lt;textarea readonly class="event-log-contents" rows="8" cols="25"&gt;&lt;/textarea&gt;
-  &lt;button class="clear-log"&gt;Clear&lt;/button&gt;
-&lt;/div&gt;</pre>
+<div class="event-log">
+  <label>Event log:</label>
+  <textarea readonly class="event-log-contents" rows="8" cols="25"></textarea>
+  <button class="clear-log">Clear</button>
+</div>
+```
 
-<pre class="brush: css hidden">body {
+```css hidden
+body {
   padding: .2rem;
   display: grid;
   grid-template-areas: "control  log";
@@ -90,15 +95,16 @@ kbd {
   padding: 1px 2px 0;
   border: 1px solid black;
 }
-</pre>
+```
 
-<h4 id="JS">JS</h4>
+#### JS
 
-<pre class="brush: js">const inputElement = document.querySelector('input[type="text"]');
+```js
+const inputElement = document.querySelector('input[type="text"]');
 const log = document.querySelector('.event-log-contents');
 const clearLog = document.querySelector('.clear-log');
 
-clearLog.addEventListener('click', () =&gt; {
+clearLog.addEventListener('click', () => {
     log.textContent = '';
 });
 
@@ -109,22 +115,20 @@ function handleEvent(event) {
 inputElement.addEventListener('compositionstart', handleEvent);
 inputElement.addEventListener('compositionupdate', handleEvent);
 inputElement.addEventListener('compositionend', handleEvent);
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Live_example', '100%', '180px') }}</p>
+{{ EmbedLiveSample('Live_example', '100%', '180px') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Related events: {{domxref("Element/compositionend_event", "compositionend")}}, {{domxref("Element/compositionupdate_event", "compositionupdate")}}.</li>
-</ul>
+- Related events: {{domxref("Element/compositionend_event", "compositionend")}}, {{domxref("Element/compositionupdate_event", "compositionupdate")}}.

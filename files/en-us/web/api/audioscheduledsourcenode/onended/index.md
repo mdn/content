@@ -2,53 +2,53 @@
 title: AudioScheduledSourceNode.onended
 slug: Web/API/AudioScheduledSourceNode/onended
 tags:
-- API
-- Audio
-- AudioBufferSourceNode
-- AudioScheduledSourceNode
-- ConstantSourceNode
-- Event Handler
-- Media
-- OscillatorNode
-- Property
-- Web Audio API
-- onended
+  - API
+  - Audio
+  - AudioBufferSourceNode
+  - AudioScheduledSourceNode
+  - ConstantSourceNode
+  - Event Handler
+  - Media
+  - OscillatorNode
+  - Property
+  - Web Audio API
+  - onended
 browser-compat: api.AudioScheduledSourceNode.onended
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<p>The <code>onended</code> event handler for the <code>AudioScheduledSourceNode</code>
-  interface specifies an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> to be executed when the
-  {{event("ended")}} event occurs on the node. This event is sent to the node when the
-  concrete interface (such as {{domxref("AudioBufferSourceNode")}},
-  {{domxref("OscillatorNode")}}, or {{domxref("ConstantSourceNode")}}) determines that it
-  has stopped playing.</p>
+The `onended` event handler for the `AudioScheduledSourceNode`
+interface specifies an [event handler](/en-US/docs/Web/Events/Event_handlers) to be executed when the
+{{event("ended")}} event occurs on the node. This event is sent to the node when the
+concrete interface (such as {{domxref("AudioBufferSourceNode")}},
+{{domxref("OscillatorNode")}}, or {{domxref("ConstantSourceNode")}}) determines that it
+has stopped playing.
 
-<div class="note">
-  <p><strong>Note:</strong> The {{event("ended")}} event is only sent to a node configured to loop automatically
-    when the node is stopped using its {{domxref("AudioScheduledSourceNode.stop",
+> **Note:** The {{event("ended")}} event is only sent to a node configured to loop automatically
+> when the node is stopped using its {{domxref("AudioScheduledSourceNode.stop",
     "stop()")}} method. This is the case, for example, when using an
-    {{domxref("AudioBufferSourceNode")}} with its {{domxref("AudioBufferSourceNode.loop",
-    "loop")}} property set to <code>true</code>.</p>
-</div>
+> {{domxref("AudioBufferSourceNode")}} with its {{domxref("AudioBufferSourceNode.loop",
+    "loop")}} property set to `true`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>AudioScheduledSourceNode</em>.onended = <em>EventHandler</em>;
-</pre>
+```js
+AudioScheduledSourceNode.onended = EventHandler;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A function which is called by the browser when the {{event("ended")}} event occurs on
-  the {{domxref("AudioScheduledSourceNode")}}. The function receives as input a single
-  parameter, which is an object of type {{domxref("Event")}} describing the event that
-  occurred.</p>
+A function which is called by the browser when the {{event("ended")}} event occurs on
+the {{domxref("AudioScheduledSourceNode")}}. The function receives as input a single
+parameter, which is an object of type {{domxref("Event")}} describing the event that
+occurred.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example shows basic usage of an {{ domxref("AudioContext") }} to create an oscillator node. For an applied example, check out our <a href="https://mdn.github.io/violent-theremin/">Violent Theremin demo</a> (<a href="https://github.com/mdn/violent-theremin/blob/gh-pages/scripts/app.js">see app.js</a> for relevant code).</p>
+The following example shows basic usage of an {{ domxref("AudioContext") }} to create an oscillator node. For an applied example, check out our [Violent Theremin demo](https://mdn.github.io/violent-theremin/) ([see app.js](https://github.com/mdn/violent-theremin/blob/gh-pages/scripts/app.js) for relevant code).
 
-<pre class="brush: js;">// create web audio api context
+```js
+// create web audio api context
   var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
   // create Oscillator node
@@ -62,22 +62,21 @@ browser-compat: api.AudioScheduledSourceNode.onended
 
   oscillator.onended = function() {
     console.log('Your tone has now stopped playing!');
-  }</pre>
+  }
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The
-    <code><a href="/en-US/docs/Web/API/AudioScheduledSourceNode/ended_event">ended</a></code>
-    event and its type, {{domxref("Event")}}.</li>
-  <li>{{domxref("AudioScheduledSourceNode")}}</li>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a></li>
-</ul>
+- The
+  [`ended`](/en-US/docs/Web/API/AudioScheduledSourceNode/ended_event)
+  event and its type, {{domxref("Event")}}.
+- {{domxref("AudioScheduledSourceNode")}}
+- [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)

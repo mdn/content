@@ -2,56 +2,56 @@
 title: StylePropertyMap.set()
 slug: Web/API/StylePropertyMap/set
 tags:
-- API
-- CSS Typed Object Model API
-- Houdini
-- Method
-- Reference
-- StylePropertyMap
-- set()
+  - API
+  - CSS Typed Object Model API
+  - Houdini
+  - Method
+  - Reference
+  - StylePropertyMap
+  - set()
 browser-compat: api.StylePropertyMap.set
 ---
-<p>{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}</p>
+{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>set()</code></strong> method of the {{domxref("StylePropertyMap")}}
-  interface changes the CSS declaration with the given property.</p>
+The **`set()`** method of the {{domxref("StylePropertyMap")}}
+interface changes the CSS declaration with the given property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">StylePropertyMap.set(<var>property</var>,<var>value<var>)</var></var></pre>
+```js
+StylePropertyMap.set(property,value)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>property</dt>
-  <dd>An identifier indicating the stylistic feature (e.g. font, width, background
-    color) to change.</dd>
-  <dt>value</dt>
-  <dd>The value the given property should have.</dd>
-</dl>
+- property
+  - : An identifier indicating the stylistic feature (e.g. font, width, background
+    color) to change.
+- value
+  - : The value the given property should have.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{jsxref('undefined')}}</p>
+{{jsxref('undefined')}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example sets the {{cssxref('padding-top')}} property, with the given value, within
-  the element's <a href="/en-US/docs/Web/HTML/Global_attributes/style">style
-    attribute</a>.</p>
+This example sets the {{cssxref('padding-top')}} property, with the given value, within
+the element's [style
+attribute](/en-US/docs/Web/HTML/Global_attributes/style).
 
-<pre class="brush: js">// get the button element
+```js
+// get the button element
 const buttonEl = document.querySelector('button');
 
 // set padding-top on button style attribute
 buttonEl.attributeStyleMap.set('padding-top', CSS.px(10));
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

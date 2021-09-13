@@ -9,49 +9,49 @@ tags:
   - Reference
 browser-compat: api.GamepadEvent
 ---
-<p>{{APIRef("Gamepad API")}}{{securecontext_header}}</p>
+{{APIRef("Gamepad API")}}{{securecontext_header}}
 
-<p>The GamepadEvent interface of the Gamepad API contains references to gamepads connected to the system, which is what the gamepad events {{domxref("Window.gamepadconnected")}} and {{domxref("Window.gamepaddisconnected")}} are fired in response to.</p>
+The GamepadEvent interface of the Gamepad API contains references to gamepads connected to the system, which is what the gamepad events {{domxref("Window.gamepadconnected")}} and {{domxref("Window.gamepaddisconnected")}} are fired in response to.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
-	<dt>{{domxref("GamepadEvent.GamepadEvent","GamepadEvent()")}}</dt>
-	<dd>Returns a new <code>GamepadEvent</code> object.</dd>
-</dl>
+- {{domxref("GamepadEvent.GamepadEvent","GamepadEvent()")}}
+  - : Returns a new `GamepadEvent` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
-	<dt>{{ domxref("GamepadEvent.gamepad") }} {{readonlyInline}}</dt>
-	<dd>Returns a {{ domxref("Gamepad") }} object, providing access to the associated gamepad data for the event fired.</dd>
-</dl>
+- {{ domxref("GamepadEvent.gamepad") }} {{readonlyInline}}
+  - : Returns a {{ domxref("Gamepad") }} object, providing access to the associated gamepad data for the event fired.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The gamepad property being called on a fired {{domxref("Window.gamepadconnected")}} event.</p>
+The gamepad property being called on a fired {{domxref("Window.gamepadconnected")}} event.
 
-<pre class="brush: js">window.addEventListener("gamepadconnected", function(e) {
+```js
+window.addEventListener("gamepadconnected", function(e) {
   console.log("Gamepad connected at index %d: %s. %d buttons, %d axes.",
   e.gamepad.index, e.gamepad.id,
   e.gamepad.buttons.length, e.gamepad.axes.length);
-});</pre>
+});
+```
 
-<p>And on a {{domxref("Window.gamepaddisconnected")}} event.</p>
+And on a {{domxref("Window.gamepaddisconnected")}} event.
 
-<pre class="brush: js">window.addEventListener("gamepaddisconnected", function(e) {
+```js
+window.addEventListener("gamepaddisconnected", function(e) {
   console.log("Gamepad disconnected from index %d: %s",
   e.gamepad.index, e.gamepad.id);
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<p><a href="/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API">Using the Gamepad API</a></p>
+[Using the Gamepad API](/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)

@@ -2,56 +2,60 @@
 title: GlobalEventHandlers.onanimationstart
 slug: Web/API/GlobalEventHandlers/onanimationstart
 tags:
-- API
-- Animations
-- CSS Animations
-- CSS3 Animations
-- Document
-- Event Handler
-- GlobalEventHandlers
-- HTMLElement
-- Reference
-- Window
-- onanimationstart
-- onwebkitanimationstart
+  - API
+  - Animations
+  - CSS Animations
+  - CSS3 Animations
+  - Document
+  - Event Handler
+  - GlobalEventHandlers
+  - HTMLElement
+  - Reference
+  - Window
+  - onanimationstart
+  - onwebkitanimationstart
 browser-compat: api.GlobalEventHandlers.onanimationstart
 ---
-<div>{{APIRef("CSS3 Animations")}}</div>
+{{APIRef("CSS3 Animations")}}
 
-<p>An event handler for the {{event("animationstart")}} event. This event is sent when a <a href="/en-US/docs/Web/CSS/CSS_Animations">CSS Animation</a> starts to play.</p>
+An event handler for the {{event("animationstart")}} event. This event is sent when a [CSS Animation](/en-US/docs/Web/CSS/CSS_Animations) starts to play.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>animStartHandler</em> = <em>target</em>.onanimationstart;
-<em>target</em>.onanimationstart = Function</em>
-</pre>
+```js
+var animStartHandler = target.onanimationstart;
+target.onanimationstart = Function
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{jsxref("Function")}} to be called when an {{event("animationstart")}} event occurs
-  indicating that a CSS animation has begun on the <em><code>target</code></em>, where the
-  target object is an HTML element ({{domxref("HTMLElement")}}), document
-  ({{domxref("Document")}}), or window ({{domxref("Window")}}). The function receives as
-  input a single parameter: an {{domxref("AnimationEvent")}} object describing the event
-  which occurred.</p>
+A {{jsxref("Function")}} to be called when an {{event("animationstart")}} event occurs
+indicating that a CSS animation has begun on the _`target`_, where the
+target object is an HTML element ({{domxref("HTMLElement")}}), document
+({{domxref("Document")}}), or window ({{domxref("Window")}}). The function receives as
+input a single parameter: an {{domxref("AnimationEvent")}} object describing the event
+which occurred.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: html hidden">&lt;div class="main"&gt;
-  &lt;div id="box"&gt;
-    &lt;div id="text"&gt;Box&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
+```html hidden
+<div class="main">
+  <div id="box">
+    <div id="text">Box</div>
+  </div>
+</div>
 
-&lt;div class="button" id="play"&gt;
+<div class="button" id="play">
   Play Animation
-&lt;/div&gt;
+</div>
 
-&lt;pre id="log"&gt;&lt;/pre&gt;</pre>
+<pre id="log"></pre>
+```
 
-<h3 id="CSS_content">CSS content</h3>
+### CSS content
 
-<pre class="brush: css hidden">:root {
+```css hidden
+:root {
   --boxwidth:50px;
 }
 
@@ -85,15 +89,17 @@ browser-compat: api.GlobalEventHandlers.onanimationstart
   font: bold 1.4em "Lucida Grande", "Open Sans", sans-serif;
 }
 
- </pre>
+ 
+```
 
-<p>Leaving out some bits of the CSS that don't matter for the discussion here, let's take
-  a look at the styles for the box that we're animating. First is the box itself. We set
-  its size, position, color, and layout. Note that there's nothing there about animation.
-  That's because we don't want the box to start animating right away. We'll add the
-  {{cssxref("animation")}} style later to start animating the box.</p>
+Leaving out some bits of the CSS that don't matter for the discussion here, let's take
+a look at the styles for the box that we're animating. First is the box itself. We set
+its size, position, color, and layout. Note that there's nothing there about animation.
+That's because we don't want the box to start animating right away. We'll add the
+{{cssxref("animation")}} style later to start animating the box.
 
-<pre class="brush: css">#box {
+```css
+#box {
   width: var(--boxwidth);
   height: var(--boxwidth);
   left: 0;
@@ -105,16 +111,16 @@ browser-compat: api.GlobalEventHandlers.onanimationstart
   display: flex;
   justify-content: center;
 }
+```
 
-</pre>
+The animation sequence is described next. First, the `"slideAnimation"`
+class, which establishes the {{cssxref("animation")}} that will cause the box to move
+over the course of five seconds, one time, using the `"slideBox"` keyframe
+set. The keyframes are defined next; they describe an animation which causes the box to
+migrate from the top-left corner of the container to the bottom-right corner.
 
-<p>The animation sequence is described next. First, the <code>"slideAnimation"</code>
-  class, which establishes the {{cssxref("animation")}} that will cause the box to move
-  over the course of five seconds, one time, using the <code>"slideBox"</code> keyframe
-  set. The keyframes are defined next; they describe an animation which causes the box to
-  migrate from the top-left corner of the container to the bottom-right corner.</p>
-
-<pre class="brush: css">.slideAnimation {
+```css
+.slideAnimation {
   animation: 5s ease-in-out 0s 1 slideBox;
 }
 
@@ -128,37 +134,39 @@ browser-compat: api.GlobalEventHandlers.onanimationstart
     top:calc(100% - var(--boxwidth))
   }
 }
-</pre>
+```
 
-<p>Since the CSS describes the animation but doesn't connect it to the box, we'll need
-  some JavaScript code to do that.  We'll get to that shortly.</p>
+Since the CSS describes the animation but doesn't connect it to the box, we'll need
+some JavaScript code to do that.  We'll get to that shortly.
 
-<h3 id="JavaScript_content">JavaScript content</h3>
+### JavaScript content
 
-<p>Before we get to the animation code, we define a function which logs information to a
-  box on the user's screen. We'll use this to show information about the events we
-  receive. Note the use of {{domxref("AnimationEvent.animationName")}} and
-  {{domxref("AnimationEvent.elapsedTime")}} to get information about the event which occurred.</p>
+Before we get to the animation code, we define a function which logs information to a
+box on the user's screen. We'll use this to show information about the events we
+receive. Note the use of {{domxref("AnimationEvent.animationName")}} and
+{{domxref("AnimationEvent.elapsedTime")}} to get information about the event which occurred.
 
-<pre class="brush: js">function log(msg, event) {
+```js
+function log(msg, event) {
   let logBox = document.getElementById("log");
 
   logBox.innerHTML += msg;
 
   if (event) {
-    logBox.innerHTML += " &lt;code&gt;"+ event.animationName +
-        "&lt;/code&gt; at time " + event.elapsedTime.toFixed(2) +
+    logBox.innerHTML += " <code>"+ event.animationName +
+        "</code> at time " + event.elapsedTime.toFixed(2) +
         " seconds.";
   }
 
   logBox.innerHTML += "\n";
 };
-</pre>
+```
 
-<p>Then we set up the event handlers for the {{event("animationstart")}} and
-  {{event("animationend")}} events:</p>
+Then we set up the event handlers for the {{event("animationstart")}} and
+{{event("animationend")}} events:
 
-<pre class="brush: js">let box = document.getElementById("box");
+```js
+let box = document.getElementById("box");
 
 box.onanimationstart = function(event) {
   log("Animation started", event);
@@ -167,39 +175,38 @@ box.onanimationstart = function(event) {
 box.onanimationend = function(event) {
   log("Animation stopped", event);
 };
-</pre>
+```
 
-<p>Finally, we set up a handler for a click on the button that runs the animation:</p>
+Finally, we set up a handler for a click on the button that runs the animation:
 
-<pre class="brush: js">document.getElementById("play").addEventListener("click", function(event) {
+```js
+document.getElementById("play").addEventListener("click", function(event) {
   document.getElementById("box").className = "slideAnimation";
   event.target.style.display = "none";
-}, false);</pre>
+}, false);
+```
 
-<p>This sets the class of the box we want to animate to the class that contains the
-  {{cssxref("animation")}} description, then hides the play button because this example
-  will only run the animation once. For information about why, and how to support running
-  an animation more than once, see
-  {{SectionOnPage("/en-US/docs/Web/CSS/CSS_Animations/Tips", "Run an animation again")}}.
-</p>
+This sets the class of the box we want to animate to the class that contains the
+{{cssxref("animation")}} description, then hides the play button because this example
+will only run the animation once. For information about why, and how to support running
+an animation more than once, see
+{{SectionOnPage("/en-US/docs/Web/CSS/CSS_Animations/Tips", "Run an animation again")}}.
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>Assembled together, you get this:</p>
+Assembled together, you get this:
 
-<p>{{ EmbedLiveSample('Example', 500, 400) }}</p>
+{{ EmbedLiveSample('Example', 500, 400) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{event("animationstart")}} event this event handler is triggered by.</li>
-  <li>{{domxref("AnimationEvent")}}</li>
-</ul>
+- The {{event("animationstart")}} event this event handler is triggered by.
+- {{domxref("AnimationEvent")}}

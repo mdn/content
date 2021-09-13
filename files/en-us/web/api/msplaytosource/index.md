@@ -2,46 +2,43 @@
 title: msPlayToSource
 slug: Web/API/MsPlayToSource
 tags:
-- msPlayToSource
+  - msPlayToSource
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>{{Non-standard_header()}}</p>
+{{Non-standard_header()}}
 
-<p><code><strong>msPlayToSource</strong></code> is a read-only property which gets the
-  source associated with the media element for use by the <a
-    href="https://docs.microsoft.com/en-us/uwp/api/windows.media.playto.playtomanager"><code>PlayToManager</code></a>.
-</p>
+**`msPlayToSource`** is a read-only property which gets the
+source associated with the media element for use by the [`PlayToManager`](https://docs.microsoft.com/en-us/uwp/api/windows.media.playto.playtomanager).
 
-<p>This proprietary property is specific to Internet Explorer and Microsoft Edge.</p>
+This proprietary property is specific to Internet Explorer and Microsoft Edge.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 ptr = object.msPlayToSource;
+```
 
-</pre>
+## Value
 
-<h2 id="Value">Value</h2>
+_PlayTo_ is a means through which an app can connect local playback/display for
+audio, video, and img elements to a remote device. For more information, see the [Windows.Media.PlayTo](https://docs.microsoft.com/en-us/uwp/api/windows.media.playto)
+APIs.
 
-<p><em>PlayTo</em> is a means through which an app can connect local playback/display for
-  audio, video, and img elements to a remote device. For more information, see the <a
-    href="https://docs.microsoft.com/en-us/uwp/api/windows.media.playto">Windows.Media.PlayTo</a>
-  APIs.</p>
+**`msPlayToSource`** is used in the
+`sourceRequested` handler -- get the `PlayToSource` object from an
+audio, video, or img element using the `msPlayToSource` property and pass it
+to `e.setSource`, then set the `PlayToSource.next` property to the
+`msPlayToSource` of another element for continual playing.
 
-<p><code><strong>msPlayToSource</strong></code> is used in the
-  <code>sourceRequested</code> handler -- get the <code>PlayToSource</code> object from an
-  audio, video, or img element using the <code>msPlayToSource</code> property and pass it
-  to <code>e.setSource</code>, then set the <code>PlayToSource.next</code> property to the
-  <code>msPlayToSource</code> of another element for continual playing.</p>
+The property value for `msPlayToSource` is the source associated with the
+media element.
 
-<p>The property value for <code>msPlayToSource</code> is the source associated with the
-  media element.</p>
+## Example
 
-<h2 id="Example">Example</h2>
-
-<pre class="brush: js">&lt;video id="videoplayer" src="http://www.contoso.com/clip.mp4" controls autoplay /&gt;
-&lt;script type="text/javascript"&gt;
+```js
+<video id="videoplayer" src="http://www.contoso.com/clip.mp4" controls autoplay />
+<script type="text/javascript">
 
   // Step 1: Obtain PlayToManager object for app’s current view.
     var ptm = Windows.Media.PlayTo.PlayToManager.getForCurrentView();
@@ -55,4 +52,4 @@ ptr = object.msPlayToSource;
   // The media will then be streamed to the device chosen by the user in the UI.
 
     });
-</pre>
+```

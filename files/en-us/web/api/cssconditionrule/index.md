@@ -8,37 +8,33 @@ tags:
   - Reference
 browser-compat: api.CSSConditionRule
 ---
-<p>{{ APIRef("CSSOM") }}</p>
+{{ APIRef("CSSOM") }}
 
-<p>An object implementing the <strong><code>CSSConditionRule</code></strong> interface represents a single condition CSS {{cssxref("at-rule")}}, which consists of a condition and a statement block.</p>
+An object implementing the **`CSSConditionRule`** interface represents a single condition CSS {{cssxref("at-rule")}}, which consists of a condition and a statement block.
 
-<p>Two objects derive from <code>CSSConditionRule</code>: {{domxref("CSSMediaRule")}} and {{domxref("CSSSupportsRule")}}.</p>
+Two objects derive from `CSSConditionRule`: {{domxref("CSSMediaRule")}} and {{domxref("CSSSupportsRule")}}.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its ancestors {{domxref("CSSRule")}} and {{domxref("CSSGroupingRule")}}.</em></p>
+_Inherits properties from its ancestors {{domxref("CSSRule")}} and {{domxref("CSSGroupingRule")}}._
 
-<dl>
- <dt>{{domxref("CSSConditionRule.conditionText")}}</dt>
- <dd>Represents the text of the condition of the rule.</dd>
-</dl>
+- {{domxref("CSSConditionRule.conditionText")}}
+  - : Represents the text of the condition of the rule.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p>No specific methods; inherits methods from its ancestors {{domxref("CSSRule")}} and {{domxref("CSSGroupingRule")}}.</p>
+No specific methods; inherits methods from its ancestors {{domxref("CSSRule")}} and {{domxref("CSSGroupingRule")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information">Using dynamic styling information</a></li>
-</ul>
+- [Using dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)

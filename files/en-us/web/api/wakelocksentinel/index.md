@@ -10,56 +10,50 @@ tags:
   - screen
 browser-compat: api.WakeLockSentinel
 ---
-<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Screen Wake Lock API")}}</div>
+{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Screen Wake Lock API")}}
 
-<p>The <strong><code>WakeLockSentinel</code></strong> interface of the {{domxref('Screen Wake Lock API')}} provides a handle to the underlying platform wake lock and can be manually released and reacquired. An {{jsxref('Object')}} representing the wake lock is returned via the {{domxref('WakeLock.request()','navigator.wakelock.request()')}} method.</p>
+The **`WakeLockSentinel`** interface of the {{domxref('Screen Wake Lock API')}} provides a handle to the underlying platform wake lock and can be manually released and reacquired. An {{jsxref('Object')}} representing the wake lock is returned via the {{domxref('WakeLock.request()','navigator.wakelock.request()')}} method.
 
-<p>An acquired <code>WakeLockSentinel</code> can be released manually via the {{domxref('WakeLockSentinel.release','release()')}} method, or automatically via the platform wake lock. This can happen if the document becomes inactive or looses visibility, if the device is low on power or the user turns on a power save mode. Releasing all <code>WakeLockSentinel</code> instances of a given wake lock type will cause the underlying platform wake lock to be released.</p>
+An acquired `WakeLockSentinel` can be released manually via the {{domxref('WakeLockSentinel.release','release()')}} method, or automatically via the platform wake lock. This can happen if the document becomes inactive or looses visibility, if the device is low on power or the user turns on a power save mode. Releasing all `WakeLockSentinel` instances of a given wake lock type will cause the underlying platform wake lock to be released.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface provides the following properties.</em></p>
+_This interface provides the following properties._
 
-<dl>
-	<dt>{{domxref("WakeLockSentinel.released", "released")}} {{ReadOnlyInline}}</dt>
-	<dd>Returns a boolean indicating whether the <code>WakeLockSentinel</code> has been released.</dd>
-	<dt>{{domxref("WakeLockSentinel.type", "type")}} {{ReadOnlyInline}}</dt>
-	<dd>Returns a {{jsxref("String")}} representation of the currently acquired <code>WakeLockSentinel</code> type.<br>
-	Return values are:
-	<ul>
-		<li><code>'screen'</code>: A screen wake lock. Prevents devices from dimming or locking the screen.</li>
-	</ul>
-	</dd>
-</dl>
+- {{domxref("WakeLockSentinel.released", "released")}} {{ReadOnlyInline}}
+  - : Returns a boolean indicating whether the `WakeLockSentinel` has been released.
+- {{domxref("WakeLockSentinel.type", "type")}} {{ReadOnlyInline}}
 
-<h2 id="Event_handlers">Event handlers</h2>
+  - : Returns a {{jsxref("String")}} representation of the currently acquired `WakeLockSentinel` type.
+    Return values are:
 
-<dl>
-	<dt>{{domxref("WakeLockSentinel.onrelease", "onrelease")}}</dt>
-	<dd>Fired when the {{domxref('WakeLockSentinel.release','release()')}} method is called or the wake lock is released by the user agent.</dd>
-</dl>
+    - `'screen'`: A screen wake lock. Prevents devices from dimming or locking the screen.
 
-<h2 id="Methods">Methods</h2>
+## Event handlers
 
-<dl>
-	<dt>{{domxref('WakeLockSentinel.release()', 'release()')}}</dt>
-	<dd>Releases the <code>WakeLockSentinel</code>, returning a {{jsxref("Promise")}} that is resolved once the sentinel has been successfully released.</dd>
-</dl>
+- {{domxref("WakeLockSentinel.onrelease", "onrelease")}}
+  - : Fired when the {{domxref('WakeLockSentinel.release','release()')}} method is called or the wake lock is released by the user agent.
 
-<h2 id="Examples">Examples</h2>
+## Methods
 
-<p>In this example we create an asynchronous function which requests a <code>WakeLockSentinel</code>. Once acquired we listen for the <code>onrelease</code> event which can be used to give appropriate UI feedback. The sentinel can be acquired or released via appropriate interactions.</p>
+- {{domxref('WakeLockSentinel.release()', 'release()')}}
+  - : Releases the `WakeLockSentinel`, returning a {{jsxref("Promise")}} that is resolved once the sentinel has been successfully released.
 
-<pre class="brush: js">// create a reference for the wake lock
+## Examples
+
+In this example we create an asynchronous function which requests a `WakeLockSentinel`. Once acquired we listen for the `onrelease` event which can be used to give appropriate UI feedback. The sentinel can be acquired or released via appropriate interactions.
+
+```js
+// create a reference for the wake lock
 let wakeLock = null;
 
 // create an async function to request a wake lock
-const requestWakeLock = async () =&gt; {
+const requestWakeLock = async () => {
   try {
     wakeLock = await navigator.wakeLock.request('screen');
 
     // listen for our release event
-    wakeLock.addEventListener('release', () =&gt; {
+    wakeLock.addEventListener('release', () => {
       // if wake lock is released alter the UI accordingly
     });
 
@@ -69,24 +63,24 @@ const requestWakeLock = async () =&gt; {
   }
 }
 
-wakeLockOnButton.addEventListener('click', () =&gt; {
+wakeLockOnButton.addEventListener('click', () => {
   requestWakeLock();
 })
 
-wakeLockOffButton.addEventListener('click', () =&gt; {
+wakeLockOffButton.addEventListener('click', () => {
   if (wakeLock !== null) {
     wakeLock.release()
-      .then(() =&gt; {
+      .then(() => {
         wakeLock = null;
       })
   }
 })
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

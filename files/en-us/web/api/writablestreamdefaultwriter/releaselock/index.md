@@ -11,31 +11,32 @@ tags:
   - releaseLock
 browser-compat: api.WritableStreamDefaultWriter.releaseLock
 ---
-<p>{{APIRef("Streams")}}{{SeeCompatTable}}</p>
+{{APIRef("Streams")}}{{SeeCompatTable}}
 
-<p>The <strong><code>releaseLock()</code></strong> method of the
-  {{domxref("WritableStreamDefaultWriter")}} interface releases the writer's lock on the
-  corresponding stream. After the lock is released, the writer is no longer active. If the
-  associated stream is errored when the lock is released, the writer will appear errored
-  in the same way from now on; otherwise, the writer will appear closed.</p>
+The **`releaseLock()`** method of the
+{{domxref("WritableStreamDefaultWriter")}} interface releases the writer's lock on the
+corresponding stream. After the lock is released, the writer is no longer active. If the
+associated stream is errored when the lock is released, the writer will appear errored
+in the same way from now on; otherwise, the writer will appear closed.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>writableStreamDefaultWritere</em>.releaseLock()</pre>
+```js
+writableStreamDefaultWritere.releaseLock()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>undefined</code>.</p>
+`undefined`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre
-  class="brush: js ">const writableStream = new WritableStream({
+```js
+const writableStream = new WritableStream({
   write(chunk) {
     ...
   },
@@ -54,12 +55,13 @@ const writer = writableStream.getWriter();
 ...
 
 // release writer's lock on the stream when desired
-writer.releaseLock();</pre>
+writer.releaseLock();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

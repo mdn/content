@@ -2,132 +2,125 @@
 title: Node.textContent
 slug: Web/API/Node/textContent
 tags:
-- API
-- DOM
-- Node
-- Property
-- Reference
+  - API
+  - DOM
+  - Node
+  - Property
+  - Reference
 browser-compat: api.Node.textContent
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>textContent</strong></code> property of the {{domxref ("Node")}}
-	interface represents the text content of the node and its descendants.</p>
+The **`textContent`** property of the {{domxref ("Node")}}
+interface represents the text content of the node and its descendants.
 
-<div class="notecard note">
-	<p><strong>Note:</strong> <code>textContent</code> and
-		{{domxref("HTMLElement.innerText")}} are easily confused, but the two properties
-		are <a href="#differences_from_innertext">different in important ways</a>.</p>
-</div>
+> **Note:** `textContent` and
+> {{domxref("HTMLElement.innerText")}} are easily confused, but the two properties
+> are [different in important ways](#differences_from_innertext).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let <var>text</var> = <var>someNode</var>.textContent
-<var>someOtherNode</var>.textContent = <var>string</var>
-</pre>
+```js
+let text = someNode.textContent
+someOtherNode.textContent = string
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A string or {{jsxref("null")}}</p>
+A string or {{jsxref("null")}}
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The value of <code>textContent</code> depends on the situation:</p>
+The value of `textContent` depends on the situation:
 
-<ul>
-	<li>If the node is a {{domxref("document")}} or a {{glossary("Doctype")}},
-		<code>textContent</code> returns {{jsxref("null")}}.
+- If the node is a {{domxref("document")}} or a {{glossary("Doctype")}},
+  `textContent` returns {{jsxref("null")}}.
 
-		<div class="note"><p><strong>Note:</strong> To get <em>all</em> of the text and <a
-				href="/en-US/docs/Web/API/CDATASection">CDATA data</a> for the whole
-			document, one could use
-			<code><a href="/en-US/docs/Web/API/document/documentElement">document.documentElement</a>.textContent</code>.
-		</p></div>
-	</li>
-	<li>If the node is a <a href="/en-US/docs/Web/API/CDATASection">CDATA section</a>,
-		comment, <a href="/en-US/docs/Web/API/ProcessingInstruction">processing
-			instruction</a>, or <a href="/en-US/docs/Web/API/Text">text node</a>,
-		<code>textContent</code> returns the text inside the node, i.e., the
-		{{domxref("Node.nodeValue")}}.</li>
-	<li>For other node types, <code>textContent</code> returns the concatenation of the
-		<code>textContent</code> of every child node, excluding comments and processing
-		instructions. (This is an empty string if the node has no children.)</li>
-</ul>
+  > **Note:** To get _all_ of the text and [CDATA data](/en-US/docs/Web/API/CDATASection) for the whole
+  > document, one could use
+  > `document.documentElement.textContent`.
 
-<p>Setting <code>textContent</code> on a node removes <em>all</em> of the node's children
-	and replaces them with a single text node with the given string value.</p>
+- If the node is a [CDATA section](/en-US/docs/Web/API/CDATASection),
+  comment, [processing
+  instruction](/en-US/docs/Web/API/ProcessingInstruction), or [text node](/en-US/docs/Web/API/Text),
+  `textContent` returns the text inside the node, i.e., the
+  {{domxref("Node.nodeValue")}}.
+- For other node types, `textContent` returns the concatenation of the
+  `textContent` of every child node, excluding comments and processing
+  instructions. (This is an empty string if the node has no children.)
 
-<h3 id="Differences_from_innerText">Differences from innerText</h3>
+Setting `textContent` on a node removes _all_ of the node's children
+and replaces them with a single text node with the given string value.
 
-<p>Don't get confused by the differences between <code>Node.textContent</code> and
-	{{domxref("HTMLElement.innerText")}}. Although the names seem similar, there are
-	important differences:</p>
+### Differences from innerText
 
-<ul>
-	<li><code>textContent</code> gets the content of <em>all</em> elements, including
-		{{HTMLElement("script")}} and {{HTMLElement("style")}} elements. In contrast,
-		<code>innerText</code> only shows “human-readable” elements.</li>
-	<li><code>textContent</code> returns every element in the node. In contrast,
-		<code>innerText</code> is aware of styling and won’t return the text of “hidden”
-		elements.
-		<ul>
-			<li>Moreover, since <code>innerText</code> takes CSS styles into account,
-				reading the value of <code>innerText</code> triggers a
-				{{glossary("reflow")}} to ensure up-to-date computed styles. (Reflows can
-				be computationally expensive, and thus should be avoided when possible.)
-			</li>
-		</ul>
-	</li>
-	<li>Both <code>textContent</code> and <code>innerText</code> remove child nodes when altered,
-    but altering <code>innerText</code> in Internet Explorer (version 11 and below) also
-		<em>permanently destroys</em> all descendant text nodes. It is impossible to
-		insert the nodes again into any other element or into the same element after doing
-		so.</li>
-</ul>
+Don't get confused by the differences between `Node.textContent` and
+{{domxref("HTMLElement.innerText")}}. Although the names seem similar, there are
+important differences:
 
-<h3 id="Differences_from_innerHTML">Differences from innerHTML</h3>
+- `textContent` gets the content of _all_ elements, including
+  {{HTMLElement("script")}} and {{HTMLElement("style")}} elements. In contrast,
+  `innerText` only shows “human-readable” elements.
+- `textContent` returns every element in the node. In contrast,
+  `innerText` is aware of styling and won’t return the text of “hidden”
+  elements.
 
-<p>{{domxref("Element.innerHTML")}} returns HTML, as its name indicates. Sometimes people
-	use <code>innerHTML</code> to retrieve or write text inside an element, but
-	<code>textContent</code> has better performance because its value is not parsed as
-	HTML.</p>
+  - Moreover, since `innerText` takes CSS styles into account,
+    reading the value of `innerText` triggers a
+    {{glossary("reflow")}} to ensure up-to-date computed styles. (Reflows can
+    be computationally expensive, and thus should be avoided when possible.)
 
-<p>Moreover, using <code>textContent</code> can prevent {{glossary("Cross-site_scripting",
-	"XSS attacks")}}.</p>
+- Both `textContent` and `innerText` remove child nodes when altered,
+  but altering `innerText` in Internet Explorer (version 11 and below) also
+  _permanently destroys_ all descendant text nodes. It is impossible to
+  insert the nodes again into any other element or into the same element after doing
+  so.
 
-<h2 id="Examples">Examples</h2>
+### Differences from innerHTML
 
-<p>Given this HTML fragment:</p>
+{{domxref("Element.innerHTML")}} returns HTML, as its name indicates. Sometimes people
+use `innerHTML` to retrieve or write text inside an element, but
+`textContent` has better performance because its value is not parsed as
+HTML.
 
-<pre
-	class="brush: html">&lt;div id="divA"&gt;This is &lt;span&gt;some&lt;/span&gt; text!&lt;/div&gt;</pre>
+Moreover, using `textContent` can prevent {{glossary("Cross-site_scripting",
+	"XSS attacks")}}.
 
-<p>... you can use <code>textContent</code> to get the element's text content:</p>
+## Examples
 
-<pre class="brush: js">let text = document.getElementById('divA').textContent;
-// The text variable is now: 'This is some text!'</pre>
+Given this HTML fragment:
 
-<p>... or set the element's text content:</p>
+```html
+<div id="divA">This is <span>some</span> text!</div>
+```
 
-<pre class="brush: js">document.getElementById('divA').textContent = 'This text is different!';
+... you can use `textContent` to get the element's text content:
+
+```js
+let text = document.getElementById('divA').textContent;
+// The text variable is now: 'This is some text!'
+```
+
+... or set the element's text content:
+
+```js
+document.getElementById('divA').textContent = 'This text is different!';
 // The HTML for divA is now:
-// &lt;div id="divA"&gt;This text is different!&lt;/div&gt;
-</pre>
+// <div id="divA">This text is different!</div>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{domxref("HTMLElement.innerText")}}</li>
-	<li>{{domxref("Element.innerHTML")}}</li>
-	<li><a href="http://perfectionkills.com/the-poor-misunderstood-innerText/">More on
-			differences between <code>innerText</code> and <code>textContent</code></a>
-		(blog post)</li>
-</ul>
+- {{domxref("HTMLElement.innerText")}}
+- {{domxref("Element.innerHTML")}}
+- [More on
+  differences between `innerText` and `textContent`](http://perfectionkills.com/the-poor-misunderstood-innerText/)
+  (blog post)

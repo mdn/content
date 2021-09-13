@@ -11,55 +11,58 @@ tags:
   - shadow dom
 browser-compat: api.Element.assignedSlot
 ---
-<p>{{APIRef("Shadow DOM")}}</p>
+{{APIRef("Shadow DOM")}}
 
-<p>The <strong><code>assignedSlot</code></strong> read-only
-    property of the {{domxref("Element")}} interface returns an
-    {{domxref("HTMLSlotElement")}} representing the {{htmlelement("slot")}} element the
-    node is inserted in.</p>
+The **`assignedSlot`** read-only
+property of the {{domxref("Element")}} interface returns an
+{{domxref("HTMLSlotElement")}} representing the {{htmlelement("slot")}} element the
+node is inserted in.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var slotElement = elementInstance.assignedSlot</pre>
+```js
+var slotElement = elementInstance.assignedSlot
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref('HTMLSlotElement')}} instance, or <code>null</code> if the element is not
-  assigned to a slot, or if the associated shadow root was attached with its
-  {{domxref("ShadowRoot.mode", "mode")}} set to <code>closed</code> (see
-  {{domxref("Element.attachShadow")}} for further details).</p>
+An {{domxref('HTMLSlotElement')}} instance, or `null` if the element is not
+assigned to a slot, or if the associated shadow root was attached with its
+{{domxref("ShadowRoot.mode", "mode")}} set to `closed` (see
+{{domxref("Element.attachShadow")}} for further details).
 
-<h2 id="Example">Examples</h2>
+## Examples
 
-<p>In our <a
-    href="https://github.com/mdn/web-components-examples/tree/master/simple-template">simple-template
-    example</a> (<a
-    href="https://mdn.github.io/web-components-examples/simple-template/">see it
-    live</a>), we create a trivial custom element example called
-  <code>&lt;my-paragraph&gt;</code> in which a shadow root is attached and then populated
-  using the contents of a template that contains a slot named <code>my-text</code>.</p>
+In our [simple-template
+example](https://github.com/mdn/web-components-examples/tree/master/simple-template) ([see it
+live](https://mdn.github.io/web-components-examples/simple-template/)), we create a trivial custom element example called
+`<my-paragraph>` in which a shadow root is attached and then populated
+using the contents of a template that contains a slot named `my-text`.
 
-<p>When <code>&lt;my-paragraph&gt;</code> is used in the document, the slot is populated
-  by a slottable element by including it inside the element with a
-  <code><a href="/en-US/docs/Web/HTML/Global_attributes/slot">slot</a></code> attribute
-  with the value <code>my-text</code>. Here is one such example:</p>
+When `<my-paragraph>` is used in the document, the slot is populated
+by a slottable element by including it inside the element with a
+[`slot`](/en-US/docs/Web/HTML/Global_attributes/slot) attribute
+with the value `my-text`. Here is one such example:
 
-<pre class="brush: html">&lt;my-paragraph&gt;
-  &lt;span slot="my-text"&gt;Let's have some different text!&lt;/span&gt;
-&lt;/my-paragraph&gt;</pre>
+```html
+<my-paragraph>
+  <span slot="my-text">Let's have some different text!</span>
+</my-paragraph>
+```
 
-<p>In our JavaScript file we get a reference to the {{htmlelement("span")}} shown above,
-  then log a reference to the original <code>&lt;slot&gt;</code> element the
-  <code>&lt;span&gt;</code> was inserted in.</p>
+In our JavaScript file we get a reference to the {{htmlelement("span")}} shown above,
+then log a reference to the original `<slot>` element the
+`<span>` was inserted in.
 
-<pre
-  class="brush: js">let slottedSpan = document.querySelector('my-paragraph span')
-console.log(slottedSpan.assignedSlot); // logs '&lt;slot name="my-text"&gt;'</pre>
+```js
+let slottedSpan = document.querySelector('my-paragraph span')
+console.log(slottedSpan.assignedSlot); // logs '<slot name="my-text">'
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

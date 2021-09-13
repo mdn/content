@@ -9,27 +9,30 @@ tags:
   - LargestContentfulPaint
 browser-compat: api.LargestContentfulPaint.toJSON
 ---
-<div>{{DefaultAPISidebar("Largest Contentful Paint API")}}</div>
+{{DefaultAPISidebar("Largest Contentful Paint API")}}
 
-<p>The <strong><code>toJSON()</code></strong> method of the {{domxref("LargestContentfulPaint")}} interface is a <em>serializer</em>, and returns a JSON representation of the <code>LargestContentfulPaint</code> object.</p>
+The **`toJSON()`** method of the {{domxref("LargestContentfulPaint")}} interface is a _serializer_, and returns a JSON representation of the `LargestContentfulPaint` object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">LargestContentfulPaint.toJSON();</pre>
+```js
+LargestContentfulPaint.toJSON();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Returns">Return value</h3>
+### Return value
 
-<p>A JSON object that is the serialization of the {{domxref("LargestContentfulPaint")}} object.</p>
+A JSON object that is the serialization of the {{domxref("LargestContentfulPaint")}} object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example gets the <code>LargestContentfulPaint</code> object and prints it as JSON to the console.</p>
+The following example gets the `LargestContentfulPaint` object and prints it as JSON to the console.
 
-<pre class="brush: js">try {
+```js
+try {
   let lcp;
 
   const po = new PerformanceObserver((entryList) => {
@@ -42,12 +45,13 @@ browser-compat: api.LargestContentfulPaint.toJSON
 
 } catch (e) {
   // Do nothing if the browser doesn't support this API.
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

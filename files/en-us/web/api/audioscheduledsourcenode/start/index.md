@@ -16,78 +16,73 @@ tags:
   - start
 browser-compat: api.AudioScheduledSourceNode.start
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<p>The <code>start()</code> method on
-    {{domxref("AudioScheduledSourceNode")}} schedules a sound to begin playback at the
-    specified time. If no time is specified, then the sound begins playing
-    immediately.</p>
+The `start()` method on
+{{domxref("AudioScheduledSourceNode")}} schedules a sound to begin playback at the
+specified time. If no time is specified, then the sound begins playing
+immediately.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 start()
 start(when)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>when</code> {{optional_inline}}</dt>
-  <dd>The time, in seconds, at which the sound should begin to play. This value is
+- `when` {{optional_inline}}
+  - : The time, in seconds, at which the sound should begin to play. This value is
     specified in the same time coordinate system as the {{domxref("AudioContext")}} is
     using for its {{domxref("BaseAudioContext/currentTime", "currentTime")}} attribute. A
-    value of 0 (or omitting the <code>when</code> parameter entirely) causes the sound to
-    start playback immediately.</dd>
-</dl>
+    value of 0 (or omitting the `when` parameter entirely) causes the sound to
+    start playback immediately.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{jsxref("undefined")}}</p>
+{{jsxref("undefined")}}
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt><code>InvalidStateNode</code></dt>
-  <dd>The node has already been started. This error occurs even if the node is no longer
+- `InvalidStateNode`
+  - : The node has already been started. This error occurs even if the node is no longer
     running because of a prior call to {{domxref("AudioScheduledSourceNode.stop",
-    "stop()")}}.</dd>
-  <dt><code>RangeError</code></dt>
-  <dd>The value specified for <code>when</code> is negative.</dd>
-</dl>
+    "stop()")}}.
+- `RangeError`
+  - : The value specified for `when` is negative.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example demonstrates how to create an {{domxref("OscillatorNode")}} which is
-  scheduled to start playing in 2 seconds and stop playing 1 second after that. The times
-  are calculated by adding the desired number of seconds to the context's current time
-  stamp returned by {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}}.</p>
+This example demonstrates how to create an {{domxref("OscillatorNode")}} which is
+scheduled to start playing in 2 seconds and stop playing 1 second after that. The times
+are calculated by adding the desired number of seconds to the context's current time
+stamp returned by {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}}.
 
-<pre class="brush: js">context = new AudioContext();
+```js
+context = new AudioContext();
 osc = context.createOscillator();
 osc.connect(context.destination);
 
 /* Schedule the start and stop times for the oscillator */
 
 osc.start(context.currentTime + 2);
-osc.stop(context.currentTime + 3);</pre>
+osc.stop(context.currentTime + 3);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a>
-  </li>
-  <li>{{domxref("AudioScheduledSourceNode.stop", "stop()")}}</li>
-  <li>{{domxref("AudioScheduledSourceNode")}}</li>
-  <li>{{domxref("AudioBufferSourceNode")}}</li>
-  <li>{{domxref("ConstantSourceNode")}}</li>
-  <li>{{domxref("OscillatorNode")}}</li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- {{domxref("AudioScheduledSourceNode.stop", "stop()")}}
+- {{domxref("AudioScheduledSourceNode")}}
+- {{domxref("AudioBufferSourceNode")}}
+- {{domxref("ConstantSourceNode")}}
+- {{domxref("OscillatorNode")}}

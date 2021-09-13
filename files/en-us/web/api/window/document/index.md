@@ -9,19 +9,20 @@ tags:
   - Window
 browser-compat: api.Window.document
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><strong><code>window.document</code></strong> returns a reference to the <a href="/en-US/docs/Web/API/Document">document</a> contained in the window.</p>
+**`window.document`** returns a reference to the [document](/en-US/docs/Web/API/Document) contained in the window.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">console.log(window.document.title);
-</pre>
+```js
+console.log(window.document.title);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -8,35 +8,32 @@ tags:
   - Web MIDI API
 browser-compat: api.MIDIAccess
 ---
-<div>{{securecontext_header}}{{APIRef("Web MIDI API")}}</div>
+{{securecontext_header}}{{APIRef("Web MIDI API")}}
 
-<p>The <strong><code>MIDIAccess</code></strong> interface of the <a href="/en-US/docs/Web/API/Web_MIDI_API">Web MIDI API</a> provides methods for listing MIDI input and output devices, and obtaining access to those devices.</p>
+The **`MIDIAccess`** interface of the [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API) provides methods for listing MIDI input and output devices, and obtaining access to those devices.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("MIDIAccess.inputs")}} {{readonlyinline}}</dt>
- <dd>Returns an instance of {{domxref("MIDIInputMap")}} which provides access to any available MIDI input ports.</dd>
- <dt>{{domxref("MIDIAccess.outputs")}} {{readonlyinline}}</dt>
- <dd>Returns an instance of {{domxref("MIDIOutputMap")}} which provides access to any available MIDI output ports.</dd>
- <dt>{{domxref("MIDIAccess.sysexEnabled")}} {{readonlyinline}}</dt>
- <dd>A boolean attribute indicating whether system exclusive support is enabled on the current MIDIAccess instance.</dd>
-</dl>
+- {{domxref("MIDIAccess.inputs")}} {{readonlyinline}}
+  - : Returns an instance of {{domxref("MIDIInputMap")}} which provides access to any available MIDI input ports.
+- {{domxref("MIDIAccess.outputs")}} {{readonlyinline}}
+  - : Returns an instance of {{domxref("MIDIOutputMap")}} which provides access to any available MIDI output ports.
+- {{domxref("MIDIAccess.sysexEnabled")}} {{readonlyinline}}
+  - : A boolean attribute indicating whether system exclusive support is enabled on the current MIDIAccess instance.
 
-<h3 id="Event_Handlers">Event Handlers</h3>
+### Event Handlers
 
-<dl>
- <dt>{{domxref("MIDIAccess.onstatechange")}}</dt>
- <dd>Called whenever a new MIDI port is added or an existing port changes state.</dd>
-</dl>
+- {{domxref("MIDIAccess.onstatechange")}}
+  - : Called whenever a new MIDI port is added or an existing port changes state.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The {{domxref("Navigator.requestMIDIAccess()")}} method returns a promise that resolves with a {{domxref("MIDIAccess")}} object. Information about the input and output ports is returned.</p>
+The {{domxref("Navigator.requestMIDIAccess()")}} method returns a promise that resolves with a {{domxref("MIDIAccess")}} object. Information about the input and output ports is returned.
 
-<p>When a port changes state, information about that port is printed to the console.</p>
+When a port changes state, information about that port is printed to the console.
 
-<pre class="brush: js">navigator.requestMIDIAccess()
+```js
+navigator.requestMIDIAccess()
   .then(function(access) {
 
      // Get lists of available MIDI controllers
@@ -48,12 +45,13 @@ browser-compat: api.MIDIAccess
        // Print information about the (dis)connected MIDI controller
        console.log(e.port.name, e.port.manufacturer, e.port.state);
      };
-  });</pre>
+  });
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

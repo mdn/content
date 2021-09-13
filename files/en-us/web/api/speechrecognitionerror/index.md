@@ -12,57 +12,57 @@ tags:
   - speech
 browser-compat: api.SpeechRecognitionError
 ---
-<p>{{APIRef("Web Speech API")}}{{deprecated_header}}</p>
+{{APIRef("Web Speech API")}}{{deprecated_header}}
 
-<p>The <strong><code>SpeechRecognitionError</code></strong> interface of the <a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a> represents error messages from the recognition service.</p>
+The **`SpeechRecognitionError`** interface of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) represents error messages from the recognition service.
 
-<div class="notecard note">
-<p><strong>Note:</strong> This <code>SpeechRecognitionError</code> interface was renamed to {{domxref("SpeechRecognitionErrorEvent")}} in the Web Speech API specification.</p>
-</div>
+> **Note:** This `SpeechRecognitionError` interface was renamed to {{domxref("SpeechRecognitionErrorEvent")}} in the Web Speech API specification.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em><code>SpeechRecognitionError</code> also inherits properties from its parent interface, {{domxref("Event")}}.</em></p>
+_`SpeechRecognitionError` also inherits properties from its parent interface, {{domxref("Event")}}._
 
-<dl>
- <dt>{{domxref("SpeechRecognitionError.error")}} {{readonlyinline}}</dt>
- <dd>Returns the type of error raised.</dd>
- <dt>{{domxref("SpeechRecognitionError.message")}} {{readonlyinline}}</dt>
- <dd>Returns a message describing the error in more detail.</dd>
-</dl>
+- {{domxref("SpeechRecognitionError.error")}} {{readonlyinline}}
+  - : Returns the type of error raised.
+- {{domxref("SpeechRecognitionError.message")}} {{readonlyinline}}
+  - : Returns a message describing the error in more detail.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var recognition = new SpeechRecognition();
+```js
+var recognition = new SpeechRecognition();
 
 recognition.onerror = function(event) {
   console.log('Speech recognition error detected: ' + event.error);
   console.log('Additional information: ' + event.message);
-}</pre>
+}
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h3 id="Firefox_OS_permissions">Firefox OS permissions</h3>
+### Firefox OS permissions
 
-<p>To use speech recognition in an app, you need to specify the following permissions in your <a href="/en-US/docs/Web/Apps/Build/Manifest">manifest</a>:</p>
+To use speech recognition in an app, you need to specify the following permissions in your [manifest](/en-US/docs/Web/Apps/Build/Manifest):
 
-<pre class="brush: json">"permissions": {
+```json
+"permissions": {
   "audio-capture" : {
     "description" : "Audio capture"
   },
   "speech-recognition" : {
     "description" : "Speech recognition"
   }
-}</pre>
+}
+```
 
-<p>You also need a privileged app, so you need to include this as well:</p>
+You also need a privileged app, so you need to include this as well:
 
-<pre class="brush: json">  "type": "privileged"</pre>
+```json
+  "type": "privileged"
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)

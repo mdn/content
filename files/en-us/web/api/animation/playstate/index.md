@@ -11,41 +11,39 @@ tags:
   - web animations api
 browser-compat: api.Animation.playState
 ---
-<p>{{APIRef("Web Animations")}}{{SeeCompatTable}}</p>
+{{APIRef("Web Animations")}}{{SeeCompatTable}}
 
-<p>The <strong><code>Animation.playState</code></strong> property of the <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> returns and sets an enumerated value describing the playback state of an animation.</p>
+The **`Animation.playState`** property of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) returns and sets an enumerated value describing the playback state of an animation.
 
-<div class="note">
-<p><strong>Note:</strong> This property is read-only for CSS Animations and Transitions.</p>
-</div>
+> **Note:** This property is read-only for CSS Animations and Transitions.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>currentPlayState</em> = <em>Animation</em>.playState;
+```js
+var currentPlayState = Animation.playState;
 
-<em>Animation</em>.playState = <em>newState</em>;
-</pre>
+Animation.playState = newState;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<dl>
- <dt><code>idle</code></dt>
- <dd>The current time of the animation is unresolved and there are no pending tasks.</dd>
- <dt><code>running</code></dt>
- <dd>The animation is running.</dd>
- <dt><code>paused</code></dt>
- <dd>The animation was suspended and the {{domxref("Animation.currentTime")}} property is not updating.</dd>
- <dt><code>finished</code></dt>
- <dd>The animation has reached one of its boundaries and the {{domxref("Animation.currentTime")}} property is not updating.</dd>
-</dl>
+- `idle`
+  - : The current time of the animation is unresolved and there are no pending tasks.
+- `running`
+  - : The animation is running.
+- `paused`
+  - : The animation was suspended and the {{domxref("Animation.currentTime")}} property is not updating.
+- `finished`
+  - : The animation has reached one of its boundaries and the {{domxref("Animation.currentTime")}} property is not updating.
 
-<p>Previously, Web Animations defined a <code><strong>pending</strong></code> value to indicate that some asynchronous operation such as initiating playback was yet to complete. This is now indicated by the separate {{domxref("Animation.pending")}} property.</p>
+Previously, Web Animations defined a **`pending`** value to indicate that some asynchronous operation such as initiating playback was yet to complete. This is now indicated by the separate {{domxref("Animation.pending")}} property.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In the <a href="http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010">Growing/Shrinking Alice Game</a> example, players can get an ending with <a href="http://codepen.io/rachelnabors/pen/EPJdJx?editors=0010">Alice crying into a pool of tears</a>. In the game, for performance reasons, the tears should only be animating when they're visible. So they must be paused as soon as they are animated like so:</p>
+In the [Growing/Shrinking Alice Game](http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010) example, players can get an ending with [Alice crying into a pool of tears](http://codepen.io/rachelnabors/pen/EPJdJx?editors=0010). In the game, for performance reasons, the tears should only be animating when they're visible. So they must be paused as soon as they are animated like so:
 
-<pre class="brush: js">// Setting up the tear animations
+```js
+// Setting up the tear animations
 
 tears.forEach(function(el) {
   el.animate(
@@ -71,19 +69,17 @@ tears.forEach(function(el) {
   el.pause();
   el.currentTime = 0;
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
- <li>{{domxref("Animation")}} for other methods and properties you can use to control web page animation.</li>
-</ul>
+- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
+- {{domxref("Animation")}} for other methods and properties you can use to control web page animation.

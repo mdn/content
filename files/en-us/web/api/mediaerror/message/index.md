@@ -2,58 +2,59 @@
 title: MediaError.message
 slug: Web/API/MediaError/message
 tags:
-- API
-- Audio
-- Errors
-- HTML DOM
-- Media
-- MediaError
-- Property
-- Video
-- message
+  - API
+  - Audio
+  - Errors
+  - HTML DOM
+  - Media
+  - MediaError
+  - Property
+  - Video
+  - message
 browser-compat: api.MediaError.message
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The read-only property <code><strong>MediaError.message</strong></code> returns a
-  {{domxref("DOMString")}} which contains a human-readable string offering specific
-  diagnostic details related to the error described by the <code>MediaError</code> object,
-  or an empty string (<code>""</code>) if no diagnostic information can be determined or
-  provided.</p>
+The read-only property **`MediaError.message`** returns a
+{{domxref("DOMString")}} which contains a human-readable string offering specific
+diagnostic details related to the error described by the `MediaError` object,
+or an empty string (`""`) if no diagnostic information can be determined or
+provided.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>errorMessage</em> = <em>mediaError</em>.message;</pre>
+```js
+var errorMessage = mediaError.message;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} providing a detailed, specific explanation of what went
-  wrong and possibly how it might be fixed. This is <em>not</em> a generic description of
-  the {{domxref("MediaError.code")}} property's value, but instead goes deeper into the
-  specifics of this particular error and its circumstances. If no specific details are
-  available, this string is empty.</p>
+A {{domxref("DOMString")}} providing a detailed, specific explanation of what went
+wrong and possibly how it might be fixed. This is _not_ a generic description of
+the {{domxref("MediaError.code")}} property's value, but instead goes deeper into the
+specifics of this particular error and its circumstances. If no specific details are
+available, this string is empty.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example creates a {{HTMLElement("audio")}} element, establishes an error handler
-  for it, then lets the user click buttons to choose whether to assign a valid audio file
-  or a missing file to the element's {{htmlattrxref("src", "audio")}} attribute. The error
-  handler outputs a message to a box onscreen describing the error, including both the
-  <code>code</code> and the <code>message</code>.</p>
+This example creates a {{HTMLElement("audio")}} element, establishes an error handler
+for it, then lets the user click buttons to choose whether to assign a valid audio file
+or a missing file to the element's {{htmlattrxref("src", "audio")}} attribute. The error
+handler outputs a message to a box onscreen describing the error, including both the
+`code` and the `message`.
 
-<p>Only the relevant parts of the code are displayed; you can <a
-    href="https://github.com/mdn/dom-examples/blob/master/media/mediaerror/">see the
-    complete source code here</a>.</p>
+Only the relevant parts of the code are displayed; you can [see the
+complete source code here](https://github.com/mdn/dom-examples/blob/master/media/mediaerror/).
 
-<p>The example creates an {{HTMLElement("audio")}} element and lets the user assign either
-  a valid music file to it, or a link to a file which doesn't exist. This lets us see the
-  behavior of the {{event("error")}} event handler, which is received by an event handler
-  we add to the <code>&lt;audio&gt;</code> element itself.</p>
+The example creates an {{HTMLElement("audio")}} element and lets the user assign either
+a valid music file to it, or a link to a file which doesn't exist. This lets us see the
+behavior of the {{event("error")}} event handler, which is received by an event handler
+we add to the `<audio>` element itself.
 
-<p>The error handler looks like this:</p>
+The error handler looks like this:
 
-<pre class="brush: js">  audioElement.onerror = function() {
+```js
+  audioElement.onerror = function() {
     let s = "";
     let err = audioElement.error;
 
@@ -77,39 +78,37 @@ browser-compat: api.MediaError.message
 
     let message = err.message;
 
-    if (message &amp;&amp; message.length) {
+    if (message && message.length) {
       s += " " + message;
     }
 
-    displayErrorMessage("&lt;strong&gt;Error " + err.code + ":&lt;/strong&gt; " + s + "&lt;br&gt;");
-  };</pre>
+    displayErrorMessage("<strong>Error " + err.code + ":</strong> " + s + "<br>");
+  };
+```
 
-<p>This gets the {{domxref("MediaError")}} object describing the error from the
-  {{domxref("HTMLMediaElement.error", "error")}} property on the
-  {{domxref("HTMLAudioElement")}} representing the audio player.  The error's
-  {{domxref("MediaError.code", "code")}} attribute is checked to determine a generic error
-  message to display, and, if <code>message</code> is not empty, it's appended to provide
-  additional details. Then the resulting text is output to the log.</p>
+This gets the {{domxref("MediaError")}} object describing the error from the
+{{domxref("HTMLMediaElement.error", "error")}} property on the
+{{domxref("HTMLAudioElement")}} representing the audio player.  The error's
+{{domxref("MediaError.code", "code")}} attribute is checked to determine a generic error
+message to display, and, if `message` is not empty, it's appended to provide
+additional details. Then the resulting text is output to the log.
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>You can try out this example below, and can <a
-    href="https://mdn.github.io/dom-examples/media/mediaerror/">see the example in action
-    outside this page here</a>.</p>
+You can try out this example below, and can [see the example in action
+outside this page here](https://mdn.github.io/dom-examples/media/mediaerror/).
 
-<p>{{ EmbedGHLiveSample('dom-examples/media/mediaerror', 650, 200) }}</p>
+{{ EmbedGHLiveSample('dom-examples/media/mediaerror', 650, 200) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{HTMLElement("video")}} and {{HTMLElement("audio")}}</li>
-  <li>The interface defining it, {{domxref("MediaError")}}.</li>
-</ul>
+- {{HTMLElement("video")}} and {{HTMLElement("audio")}}
+- The interface defining it, {{domxref("MediaError")}}.

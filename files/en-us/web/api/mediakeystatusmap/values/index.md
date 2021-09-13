@@ -2,36 +2,38 @@
 title: MediaKeyStatusMap.values()
 slug: Web/API/MediaKeyStatusMap/values
 tags:
-- API
-- EncryptedMediaExtensions
-- MediaKeyStatusMap
-- Method
-- Reference
-- values()
+  - API
+  - EncryptedMediaExtensions
+  - MediaKeyStatusMap
+  - Method
+  - Reference
+  - values()
 browser-compat: api.MediaKeyStatusMap.values
 ---
-<p>{{APIRef("EncryptedMediaExtensions API")}}{{SeeCompatTable}}</p>
+{{APIRef("EncryptedMediaExtensions API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>values</code></strong> property of the
-    {{domxref("MediaKeyStatusMap")}} interface returns a new Iterator object, containing
-    values for each element in the status map, in insertion order.</p>
+The **`values`** property of the
+{{domxref("MediaKeyStatusMap")}} interface returns a new Iterator object, containing
+values for each element in the status map, in insertion order.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var iterator = mediaKeyStatusMap.values()</pre>
+```js
+var iterator = mediaKeyStatusMap.values()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A new iterator.</p>
+A new iterator.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -10,37 +10,40 @@ tags:
   - abort
 browser-compat: api.HTMLMediaElement.abort_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <strong><code>abort</code></strong> event is fired when the resource was not fully loaded, but not as the result of an error.</p>
+The **`abort`** event is fired when the resource was not fully loaded, but not as the result of an error.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("GlobalEventHandlers/onabort", "onabort")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{domxref("GlobalEventHandlers/onabort", "onabort")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">const video = document.querySelector('video');
+```js
+const video = document.querySelector('video');
 const videoSrc = 'https://path/to/video.webm';
 
-video.addEventListener('abort', () =&gt; {
+video.addEventListener('abort', () => {
   console.log(`Abort loading: ${videoSrc}`);
 });
 
@@ -48,21 +51,20 @@ const source = document.createElement('source');
 source.setAttribute('src', videoSrc);
 source.setAttribute('type', 'video/webm');
 
-video.appendChild(source);</pre>
+video.appendChild(source);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("HTMLAudioElement")}}</li>
- <li>{{domxref("HTMLVideoElement")}}</li>
- <li>{{HTMLElement("audio")}}</li>
- <li>{{HTMLElement("video")}}</li>
-</ul>
+- {{domxref("HTMLAudioElement")}}
+- {{domxref("HTMLVideoElement")}}
+- {{HTMLElement("audio")}}
+- {{HTMLElement("video")}}

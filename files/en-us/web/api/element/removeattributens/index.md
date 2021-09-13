@@ -10,46 +10,45 @@ tags:
   - Reference
 browser-compat: api.Element.removeAttributeNS
 ---
-<div>{{ APIRef("DOM") }}</div>
+{{ APIRef("DOM") }}
 
-<p>The <strong><code>removeAttributeNS()</code></strong> method of the
-  {{domxref("Element")}} interface removes the specified attribute from an element.</p>
+The **`removeAttributeNS()`** method of the
+{{domxref("Element")}} interface removes the specified attribute from an element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>element</em>.removeAttributeNS(<em>namespace</em>, <em>attrName</em>);
-</pre>
+```js
+element.removeAttributeNS(namespace, attrName);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<ul>
-  <li><code>namespace</code> is a string that contains the namespace of the attribute.
-  </li>
-  <li><code>attrName</code> is a string that names the attribute to be removed from the
-    current node.</li>
-</ul>
+- `namespace` is a string that contains the namespace of the attribute.
+- `attrName` is a string that names the attribute to be removed from the
+  current node.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">// Given:
-//   &lt;div id="div1" xmlns:special="http://www.mozilla.org/ns/specialspace"
-//     special:specialAlign="utterleft" width="200px" /&gt;
+```js
+// Given:
+//   <div id="div1" xmlns:special="http://www.mozilla.org/ns/specialspace"
+//     special:specialAlign="utterleft" width="200px" />
 d = document.getElementById("div1");
 d.removeAttributeNS("http://www.mozilla.org/ns/specialspace", "specialAlign");
-// Now: &lt;div id="div1" width="200px" /&gt;
-</pre>
+// Now: <div id="div1" width="200px" />
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>{{ DOMAttributeMethods() }}</p>
+{{ DOMAttributeMethods() }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>In Firefox 3 and later, this method resets DOM values to
-  their defaults.</p>
+In Firefox 3 and later, this method resets DOM values to
+their defaults.

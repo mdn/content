@@ -13,34 +13,30 @@ tags:
   - Interface
 browser-compat: api.CSSSkew
 ---
-<div>{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}</div>
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}
 
-<p>The <strong><code>CSSSkew</code></strong> interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} is part of the {{domxref('CSSTransformValue')}} interface. It represents the <code><a href="/en-US/docs/Web/CSS/transform-function/skew()">skew()</a></code> value of the individual {{CSSXRef('transform')}} property in CSS.</p>
+The **`CSSSkew`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} is part of the {{domxref('CSSTransformValue')}} interface. It represents the [`skew()`](</en-US/docs/Web/CSS/transform-function/skew()>) value of the individual {{CSSXRef('transform')}} property in CSS.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("CSSSkew.CSSSkew()")}}</dt>
- <dd>Creates a new <code>CSSSkew</code> object.</dd>
-</dl>
+- {{domxref("CSSSkew.CSSSkew()")}}
+  - : Creates a new `CSSSkew` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref('CSSSkew.ax','ax')}}</dt>
- <dd>Returns or sets the x-axis value.</dd>
- <dt>{{domxref('CSSSkew.ay','ay')}}</dt>
- <dd>Returns or sets the y-axis value.</dd>
-</dl>
+- {{domxref('CSSSkew.ax','ax')}}
+  - : Returns or sets the x-axis value.
+- {{domxref('CSSSkew.ay','ay')}}
+  - : Returns or sets the y-axis value.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>To Do</p>
+To Do
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

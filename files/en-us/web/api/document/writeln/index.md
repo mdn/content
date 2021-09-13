@@ -8,36 +8,32 @@ tags:
   - Reference
 browser-compat: api.Document.writeln
 ---
-<p>{{ ApiRef("DOM") }}</p>
+{{ ApiRef("DOM") }}
 
-<p>Writes a string of text followed by a newline character to a document.</p>
+Writes a string of text followed by a newline character to a document.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="eval">document.writeln(<em>line</em>);
-</pre>
+    document.writeln(line);
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<ul>
- <li><code>line</code> is string containing a line of text.</li>
-</ul>
+- `line` is string containing a line of text.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre>document.writeln("&lt;p&gt;enter password:&lt;/p&gt;");
-</pre>
+    document.writeln("<p>enter password:</p>");
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p><strong>document.writeln</strong> is the same as {{domxref("document.write")}} but adds a newline.</p>
+**document.writeln** is the same as {{domxref("document.write")}} but adds a newline.
 
-<div class="note"><p><strong>Note:</strong> <strong>document.writeln</strong> (like <strong>document.write</strong>) does not work in XHTML documents (you'll get a "Operation is not supported" (<code>NS_ERROR_DOM_NOT_SUPPORTED_ERR</code>) error on the error console). This is the case if opening a local file with a .xhtml file extension or for any document served with an application/xhtml+xml MIME type. More information is available in the <a href="https://www.w3.org/MarkUp/2004/xhtml-faq#docwrite">W3C XHTML FAQ</a>.</p></div>
+> **Note:** **document.writeln** (like **document.write**) does not work in XHTML documents (you'll get a "Operation is not supported" (`NS_ERROR_DOM_NOT_SUPPORTED_ERR`) error on the error console). This is the case if opening a local file with a .xhtml file extension or for any document served with an application/xhtml+xml MIME type. More information is available in the [W3C XHTML FAQ](https://www.w3.org/MarkUp/2004/xhtml-faq#docwrite).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

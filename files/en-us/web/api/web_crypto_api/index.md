@@ -7,43 +7,32 @@ tags:
   - Reference
   - Web Crypto API
 ---
-<div>{{DefaultAPISidebar("Web Crypto API")}}</div>
+{{DefaultAPISidebar("Web Crypto API")}}
 
-<p>The <strong>Web Crypto API</strong> is an interface allowing a script to use cryptographic primitives in order to build systems using cryptography.</p>
+The **Web Crypto API** is an interface allowing a script to use cryptographic primitives in order to build systems using cryptography.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<div class="warning">
-<p><strong>Warning:</strong> The Web Crypto API provides a number of low-level cryptographic primitives. It's very easy to misuse them, and the pitfalls involved can be very subtle.</p>
+> **Warning:** The Web Crypto API provides a number of low-level cryptographic primitives. It's very easy to misuse them, and the pitfalls involved can be very subtle.
+>
+> Even assuming you use the basic cryptographic functions correctly, secure key management and overall security system design are extremely hard to get right, and are generally the domain of specialist security experts.
+>
+> Errors in security system design and implementation can make the security of the system completely ineffective.
+>
+> **If you're not sure you know what you are doing, you probably shouldn't be using this API.**
 
-<p>Even assuming you use the basic cryptographic functions correctly, secure key management and overall security system design are extremely hard to get right, and are generally the domain of specialist security experts.</p>
+## Interfaces
 
-<p>Errors in security system design and implementation can make the security of the system completely ineffective.</p>
+Some browsers implemented an interface called {{domxref("Crypto")}} without having it well defined or being cryptographically sound. In order to avoid confusion, methods and properties of this interface have been removed from browsers implementing the Web Crypto API, and all Web Crypto API methods are available on a new interface: {{domxref("SubtleCrypto")}}. The {{domxref("Crypto.subtle")}} property gives access to an object implementing it.
 
-<p><strong>If you're not sure you know what you are doing, you probably shouldn't be using this API.</strong></p>
-</div>
+## Specifications
 
-<h2 id="Interfaces">Interfaces</h2>
+| Specification                                            |
+| -------------------------------------------------------- |
+| [Web Cryptography API](https://w3c.github.io/webcrypto/) |
 
-<p>Some browsers implemented an interface called {{domxref("Crypto")}} without having it well defined or being cryptographically sound. In order to avoid confusion, methods and properties of this interface have been removed from browsers implementing the Web Crypto API, and all Web Crypto API methods are available on a new interface: {{domxref("SubtleCrypto")}}. The {{domxref("Crypto.subtle")}} property gives access to an object implementing it.</p>
+## Browser compatibility
 
-<h2 id="Specifications">Specifications</h2>
+### `Crypto`
 
-<table>
- <thead>
-  <tr>
-   <th>Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><a href="https://w3c.github.io/webcrypto/">Web Cryptography API</a></td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<h3 id="Crypto"><code>Crypto</code></h3>
-
-<p>{{Compat("api.Crypto")}}</p>
+{{Compat("api.Crypto")}}

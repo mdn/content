@@ -2,42 +2,43 @@
 title: StylePropertyMapReadOnly.values()
 slug: Web/API/StylePropertyMapReadOnly/values
 tags:
-- API
-- CSS Typed Object Model API
-- Experimental
-- Houdini
-- Method
-- Reference
-- StylePropertyMapReadOnly
-- values()
+  - API
+  - CSS Typed Object Model API
+  - Experimental
+  - Houdini
+  - Method
+  - Reference
+  - StylePropertyMapReadOnly
+  - values()
 browser-compat: api.StylePropertyMapReadOnly.values
 ---
-<p>{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}</p>
+{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>StylePropertyMapReadOnly.values()</code></strong> method returns a
-  new <em>array iterator</em> containing the values for each index in the
-  <code>StylePropertyMapReadOnly</code> object.</p>
+The **`StylePropertyMapReadOnly.values()`** method returns a
+new _array iterator_ containing the values for each index in the
+`StylePropertyMapReadOnly` object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>StylePropertyMapReadOnly</var>.values()</pre>
+```js
+StylePropertyMapReadOnly.values()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A new {{jsxref("Array")}}.</p>
+A new {{jsxref("Array")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this example we use the <code>values()</code> method to be able to access the values
-  within our <a
-    href="/en-US/docs/Web/API/Element/computedStyleMap"><code>Element.computedStyleMap()</code></a>.
-</p>
+In this example we use the `values()` method to be able to access the values
+within our [`Element.computedStyleMap()`](/en-US/docs/Web/API/Element/computedStyleMap).
 
-<pre class="brush: js">// get a button element
+```js
+// get a button element
 const buttonEl = document.querySelector('button');
 
 // we can retrieve all computed styles with `computedStyleMap`
@@ -46,12 +47,12 @@ const allComputedStyles = buttonEl.computedStyleMap();
 // values returns an iterable list of the css values
 const vals = allComputedStyles.values();
 console.log(vals.next().value); // returns a CSSStyleValue
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

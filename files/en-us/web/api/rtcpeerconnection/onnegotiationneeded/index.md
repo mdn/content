@@ -10,44 +10,45 @@ tags:
   - onnegotiationneeded
 browser-compat: api.RTCPeerConnection.onnegotiationneeded
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The {{domxref("RTCPeerConnection")}} interface's
-  <strong><code>onnegotiationneeded</code></strong> property is an
-  {{domxref("EventListener")}} which specifies a function which is called to handle the
-  {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} event when it occurs on an
-  {{domxref("RTCPeerConnection")}} instance. This event is fired when a change has
-  occurred which requires session negotiation. This negotiation should be carried out as
-  the offerer, because some session changes cannot be negotiated as the answerer.</p>
+The {{domxref("RTCPeerConnection")}} interface's
+**`onnegotiationneeded`** property is an
+{{domxref("EventListener")}} which specifies a function which is called to handle the
+{{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} event when it occurs on an
+{{domxref("RTCPeerConnection")}} instance. This event is fired when a change has
+occurred which requires session negotiation. This negotiation should be carried out as
+the offerer, because some session changes cannot be negotiated as the answerer.
 
-<p>Most commonly, the {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} event is fired after a send track is
-  added to the {{domxref("RTCPeerConnection")}}. If the session is modified in a manner
-  that requires negotiation while a negotiation is already in progress, no
-  {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} event will fire until negotiation completes, and only
-  then if negotiation is still needed.</p>
+Most commonly, the {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} event is fired after a send track is
+added to the {{domxref("RTCPeerConnection")}}. If the session is modified in a manner
+that requires negotiation while a negotiation is already in progress, no
+{{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} event will fire until negotiation completes, and only
+then if negotiation is still needed.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>RTCPeerConnection</em>.onnegotiationneeded = <em>eventHandler</em>;
-</pre>
+```js
+RTCPeerConnection.onnegotiationneeded = eventHandler;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>This should be set to a function you provide which is passed a single parameter: an
-  {{domxref("Event")}} object containing the {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} event. There's
-  no additional information provided in the event; anything you need, you can get by
-  examining the <a href="/en-US/docs/Web/API/RTCPeerConnection#Properties">properties of
-    the <code>RTCPeerConnection</code></a>.</p>
+This should be set to a function you provide which is passed a single parameter: an
+{{domxref("Event")}} object containing the {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} event. There's
+no additional information provided in the event; anything you need, you can get by
+examining the [properties of
+the `RTCPeerConnection`](/en-US/docs/Web/API/RTCPeerConnection#Properties).
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example, derived from the example in <a
-    href="/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling">Signaling and video
-    calling</a>, establishes a handler for {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} events to handle
-  creating an offer, configuring the local end of the connection, and sending the offer to
-  the remote peer.</p>
+This example, derived from the example in [Signaling and video
+calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling), establishes a handler for {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} events to handle
+creating an offer, configuring the local end of the connection, and sending the offer to
+the remote peer.
 
-<pre class="brush: js">pc.onnegotiationneeded = function() {
+```js
+pc.onnegotiationneeded = function() {
   pc.createOffer().then(function(offer) {
     return pc.setLocalDescription(offer);
   })
@@ -56,24 +57,23 @@ browser-compat: api.RTCPeerConnection.onnegotiationneeded
     });
   })
   .catch(reportError);
-}</pre>
+}
+```
 
-<p>First, it creates the offer by calling {{domxref("RTCPeerConnection.createOffer",
+First, it creates the offer by calling {{domxref("RTCPeerConnection.createOffer",
   "createOffer()")}}. When that succeeds, the offer is passed into
-  {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}} to set the
-  local description for the connection. Once that's succeeded in turn, the offer can be
-  sent to the signaling server for delivery to the remote peer.</p>
+{{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}} to set the
+local description for the connection. Once that's succeeded in turn, the offer can be
+sent to the signaling server for delivery to the remote peer.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} event and its type, {{domxref("Event")}}.</li>
-</ul>
+- The {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} event and its type, {{domxref("Event")}}.

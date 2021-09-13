@@ -10,35 +10,33 @@ tags:
   - altitudeAccuracy
 browser-compat: api.GeolocationCoordinates.altitudeAccuracy
 ---
-<div>{{securecontext_header}}{{APIRef("Geolocation API")}}</div>
+{{securecontext_header}}{{APIRef("Geolocation API")}}
 
-<p>The <code><strong>GeolocationCoordinates.altitudeAccuracy</strong></code> read-only
-  property is a strictly positive <code>double</code> representing the accuracy, with a
-  95% confidence level, of the <code>altitude</code> expressed in meters. This value is
-  <code>null</code> if the implementation doesn't support measuring altitude.</p>
+The **`GeolocationCoordinates.altitudeAccuracy`** read-only
+property is a strictly positive `double` representing the accuracy, with a
+95% confidence level, of the `altitude` expressed in meters. This value is
+`null` if the implementation doesn't support measuring altitude.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>let altAcc</var> = <var>geolocationCoordinates</var>Instance.altitudeAccuracy
-</pre>
+```js
+let altAcc = geolocationCoordinatesInstance.altitudeAccuracy
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A positive <code>double</code> representing the accuracy, with a 95% confidence level,
-  of the <code>altitude</code> expressed in meters.</p>
+A positive `double` representing the accuracy, with a 95% confidence level,
+of the `altitude` expressed in meters.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API">Using the Geolocation API</a>
-  </li>
-  <li>{{domxref("GeolocationCoordinates")}}</li>
-</ul>
+- [Using the Geolocation API](/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
+- {{domxref("GeolocationCoordinates")}}

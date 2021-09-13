@@ -2,80 +2,77 @@
 title: GlobalEventHandlers.onsecuritypolicyviolation
 slug: Web/API/GlobalEventHandlers/onsecuritypolicyviolation
 tags:
-- API
-- CSP
-- Event Handler
-- GlobalEventHandlers
-- HTML DOM
-- Property
-- Reference
+  - API
+  - CSP
+  - Event Handler
+  - GlobalEventHandlers
+  - HTML DOM
+  - Property
+  - Reference
 browser-compat: api.GlobalEventHandlers.onsecuritypolicyviolation
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p>The <strong><code>onsecuritypolicyviolation</code></strong> property of the {{domxref("GlobalEventHandlers")}} mixin is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> for processing <a href="/en-US/docs/Web/API/Element/securitypolicyviolation_event">securitypolicyviolation</a> events.</p>
+The **`onsecuritypolicyviolation`** property of the {{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) for processing [securitypolicyviolation](/en-US/docs/Web/API/Element/securitypolicyviolation_event) events.
 
-<p>The <code>securitypolicyviolation</code> event fires when there is a <a href="/en-US/docs/Web/HTTP/CSP">Content Security Policy</a> violation.</p>
+The `securitypolicyviolation` event fires when there is a [Content Security Policy](/en-US/docs/Web/HTTP/CSP) violation.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> In practice you must use the implementation of this property in a top level object (i.e. {{domxref("Window")}} or {{domxref("Document")}}).
-    While the property exists in HTML elements, you can't assign a handler to the property until the elements have been loaded, by which time this event will already have fired.</p>
-</div>
+> **Note:** In practice you must use the implementation of this property in a top level object (i.e. {{domxref("Window")}} or {{domxref("Document")}}).
+> While the property exists in HTML elements, you can't assign a handler to the property until the elements have been loaded, by which time this event will already have fired.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">onsecuritypolicyviolation = functionRef</pre>
+```js
+onsecuritypolicyviolation = functionRef
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<dl>
-  <dt><code>functionRef</code></dt>
-  <dd>A function name, or a <a href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function expression</a>. The function receives a {{domxref("SecurityPolicyViolationEvent")}} object as its sole argument.</dd>
-</dl>
+- `functionRef`
+  - : A function name, or a [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("SecurityPolicyViolationEvent")}} object as its sole argument.
 
-<p>Only one <code>onsecuritypolicyviolation</code> handler can be assigned to an object at a time.</p>
+Only one `onsecuritypolicyviolation` handler can be assigned to an object at a time.
 
-<p>For greater flexibility, you can pass a <a href="/en-US/docs/Web/API/Element/securitypolicyviolation_event">securitypolicyviolation</a> event to the {{domxref("EventTarget.addEventListener()")}} method instead.</p>
+For greater flexibility, you can pass a [securitypolicyviolation](/en-US/docs/Web/API/Element/securitypolicyviolation_event) event to the {{domxref("EventTarget.addEventListener()")}} method instead.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This code shows a very simpler top-level handler set on <code>Window</code> that logs a value in the event to a text area (the same approach will work with a <code>Document</code>).
-Note that in this case the <code>Content-Security-Policy</code> value, which is set using a meta tag, allows the <code>'unsafe-inline'</code> script to run, but the image cannot be loaded.</p>
+This code shows a very simpler top-level handler set on `Window` that logs a value in the event to a text area (the same approach will work with a `Document`).
+Note that in this case the `Content-Security-Policy` value, which is set using a meta tag, allows the `'unsafe-inline'` script to run, but the image cannot be loaded.
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-  &lt;html lang="en"&gt;
-   &lt;head&gt;
-     &lt;title&gt;Examples CSP error on page load&lt;/title&gt;
-     &lt;meta charset="UTF-8"&gt;
-     &lt;meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline';"&gt;
-     &lt;/head&gt;
-   &lt;script&gt;
+```html
+<!DOCTYPE html>
+  <html lang="en">
+   <head>
+     <title>Examples CSP error on page load</title>
+     <meta charset="UTF-8">
+     <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline';">
+     </head>
+   <script>
      //Assign function to onsecuritypolicyviolation global handler
      window.onsecuritypolicyviolation = function(e) {
        const log_area = document.getElementById("log");
        log_area.textContent+=e.blockedURI+"\n";
      };
-   &lt;/script&gt;
-   &lt;body&gt;
-    &lt;h1&gt;Image loading should fail&lt;/h1&gt;
-    &lt;label for="log"&gt;Blocked URI&lt;/label&gt;
-    &lt;textarea id="log" rows="2" cols="50"&gt;&lt;/textarea&gt;
-    &lt;img src="HTTPRevved_fix_typo.png"&gt;
-   &lt;/body&gt;
-  &lt;/html&gt;</pre>
+   </script>
+   <body>
+    <h1>Image loading should fail</h1>
+    <label for="log">Blocked URI</label>
+    <textarea id="log" rows="2" cols="50"></textarea>
+    <img src="HTTPRevved_fix_typo.png">
+   </body>
+  </html>
+```
 
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Element/securitypolicyviolation_event">Element: <code>securitypolicyviolation</code> event</a></li>
-  <li><a href="/en-US/docs/Web/HTTP/CSP">HTTP > Content Security Policy</a></li>
-</ul>
+- [Element: `securitypolicyviolation` event](/en-US/docs/Web/API/Element/securitypolicyviolation_event)
+- [HTTP > Content Security Policy](/en-US/docs/Web/HTTP/CSP)

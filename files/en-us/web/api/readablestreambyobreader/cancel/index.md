@@ -2,60 +2,54 @@
 title: ReadableStreamBYOBReader.cancel()
 slug: Web/API/ReadableStreamBYOBReader/cancel
 tags:
-- API
-- Experimental
-- Method
-- ReadableStreamBYOBReader
-- Reference
-- Streams
-- cancel
+  - API
+  - Experimental
+  - Method
+  - ReadableStreamBYOBReader
+  - Reference
+  - Streams
+  - cancel
 browser-compat: api.ReadableStreamBYOBReader.cancel
 ---
-<div>{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}</div>
+{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}
 
-<p>The <strong><code>cancel()</code></strong> method of the
-  {{domxref("ReadableStreamBYOBReader")}} interface returns a {{jsxref("Promise")}} that resolves when the stream is canceled. Calling this method signals a loss of interest in the stream by a consumer.</p>
+The **`cancel()`** method of the
+{{domxref("ReadableStreamBYOBReader")}} interface returns a {{jsxref("Promise")}} that resolves when the stream is canceled. Calling this method signals a loss of interest in the stream by a consumer.
 
-<div class="note">
-  <p><strong>Note:</strong> If the reader is active, the <code>cancel()</code> method
-    behaves the same as that for the associated stream
-    ({{domxref("ReadableStream.cancel()")}}).</p>
-</div>
+> **Note:** If the reader is active, the `cancel()` method
+> behaves the same as that for the associated stream
+> ({{domxref("ReadableStream.cancel()")}}).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>promise</em> = <em>readableStreamBYOBReader</em>.cancel(<em>reason</em>);</pre>
+```js
+var promise = readableStreamBYOBReader.cancel(reason);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>reason {{optional_inline}}</dt>
-  <dd>A human-readable reason for the cancellation. The underlying source may or may not use it.
-  </dd>
-</dl>
+- reason {{optional_inline}}
+  - : A human-readable reason for the cancellation. The underlying source may or may not use it.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}}, which fulfills with the value given in the <code>reason</code>
-  parameter.</p>
+A {{jsxref("Promise")}}, which fulfills with the value given in the `reason`
+parameter.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>TypeError</dt>
-  <dd>The source object is not a <code>ReadableStreamBYOBReader</code>, or the stream has
-    no owner.</dd>
-</dl>
+- TypeError
+  - : The source object is not a `ReadableStreamBYOBReader`, or the stream has
+    no owner.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>TBD.</p>
+TBD.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

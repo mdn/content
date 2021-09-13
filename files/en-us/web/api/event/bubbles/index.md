@@ -15,25 +15,26 @@ tags:
   - bubbles
 browser-compat: api.Event.bubbles
 ---
-<div>{{ ApiRef("DOM") }}</div>
+{{ ApiRef("DOM") }}
 
-<p>The <code><strong>bubbles</strong></code> read-only property of the {{domxref("Event")}} interface indicates whether the event bubbles up through the DOM or not.</p>
+The **`bubbles`** read-only property of the {{domxref("Event")}} interface indicates whether the event bubbles up through the DOM or not.
 
-<div class="note">
-<p><strong>Note:</strong> See <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling_and_capture">Event bubbling and capture</a> for more information on bubbling.</p>
-</div>
+> **Note:** See [Event bubbling and capture](/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling_and_capture) for more information on bubbling.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>doesItBubble</em> = <em>event</em>.bubbles;</pre>
+```js
+var doesItBubble = event.bubbles;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A boolean value, which is <code>true</code> if the event bubbles up through the DOM.</p>
+A boolean value, which is `true` if the event bubbles up through the DOM.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">function handleInput(e) {
+```js
+function handleInput(e) {
   // Checks whether the event bubbles and ...
   if (!e.bubbles) {
     // ... passes the event along if does not
@@ -43,24 +44,20 @@ browser-compat: api.Event.bubbles
   // Already bubbling
   doOutput(e);
 }
-</pre>
+```
 
-<div class="note">
-<p><strong>Note:</strong> Only certain events can bubble. Events that do bubble have this property set to <code>true</code>. You can use this property to check if an event is allowed to bubble or not.</p>
-</div>
+> **Note:** Only certain events can bubble. Events that do bubble have this property set to `true`. You can use this property to check if an event is allowed to bubble or not.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("Event.stopPropagation", "stopPropagation()")}} to prevent further propagation of the current event in the capturing and bubbling phases</li>
- <li>{{domxref("Event.stopImmediatePropagation", "stopImmediatePropagation()")}} to not call any further listeners for the same event at the same level in the DOM</li>
- <li>{{domxref("Event.preventDefault", "preventDefault()")}} to allow propagation to continue but to disallow the browser to perform its default action should no listeners handle the event</li>
-</ul>
+- {{domxref("Event.stopPropagation", "stopPropagation()")}} to prevent further propagation of the current event in the capturing and bubbling phases
+- {{domxref("Event.stopImmediatePropagation", "stopImmediatePropagation()")}} to not call any further listeners for the same event at the same level in the DOM
+- {{domxref("Event.preventDefault", "preventDefault()")}} to allow propagation to continue but to disallow the browser to perform its default action should no listeners handle the event

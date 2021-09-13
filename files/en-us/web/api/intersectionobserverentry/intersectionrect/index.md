@@ -2,59 +2,62 @@
 title: IntersectionObserverEntry.intersectionRect
 slug: Web/API/IntersectionObserverEntry/intersectionRect
 tags:
-- API
-- Experimental
-- Intersection Observer
-- Intersection Observer API
-- IntersectionObserverEntry
-- Property
-- Reference
-- intersectionRect
+  - API
+  - Experimental
+  - Intersection Observer
+  - Intersection Observer API
+  - IntersectionObserverEntry
+  - Property
+  - Reference
+  - intersectionRect
 browser-compat: api.IntersectionObserverEntry.intersectionRect
 ---
-<div>{{APIRef("Intersection Observer API")}}{{SeeCompatTable}}</div>
+{{APIRef("Intersection Observer API")}}{{SeeCompatTable}}
 
-<p>The {{domxref("IntersectionObserverEntry")}} interface's
-    read-only <strong><code>intersectionRect</code></strong> property is a
-    {{domxref("DOMRectReadOnly")}} object which describes the smallest rectangle that
-    contains the entire portion of the target element which is currently visible within
-    the intersection root.</p>
+The {{domxref("IntersectionObserverEntry")}} interface's
+read-only **`intersectionRect`** property is a
+{{domxref("DOMRectReadOnly")}} object which describes the smallest rectangle that
+contains the entire portion of the target element which is currently visible within
+the intersection root.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var><code>var <em>intersectionRect</em> = </code>IntersectionObserverEntry</var>.intersectionRect;
-</pre>
+```js
+var intersectionRect = IntersectionObserverEntry.intersectionRect;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMRectReadOnly")}} which describes the part of the target element that's
-  currently visible within the root's intersection rectangle.</p>
+A {{domxref("DOMRectReadOnly")}} which describes the part of the target element that's
+currently visible within the root's intersection rectangle.
 
-<p>This rectangle is computed by taking the intersection of
-  {{domxref("IntersectionObserverEntry", "boundingClientRect")}} with each of the
-  {{domxref("IntersectionObserverEntry.target", "target")}}'s ancestors' clip rectangles,
-  with the exception of the intersection {{domxref("IntersectionObserver.root", "root")}}
-  itself.</p>
+This rectangle is computed by taking the intersection of
+{{domxref("IntersectionObserverEntry", "boundingClientRect")}} with each of the
+{{domxref("IntersectionObserverEntry.target", "target")}}'s ancestors' clip rectangles,
+with the exception of the intersection {{domxref("IntersectionObserver.root", "root")}}
+itself.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this simple example, an intersection callback stores the intersection rectangle for
-  later use by the code that draws the target elements' contents, so that only the visible
-  area is redrawn.</p>
+In this simple example, an intersection callback stores the intersection rectangle for
+later use by the code that draws the target elements' contents, so that only the visible
+area is redrawn.
 
-<pre class="brush: js">function intersectionCallback(entries) {
+```js
+function intersectionCallback(entries) {
   entries.forEach(function(entry) {
     refreshZones.push({
       element: entry.target,
       rect: entry.intersectionRect
     });
   });
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

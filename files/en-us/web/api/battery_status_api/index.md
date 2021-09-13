@@ -13,28 +13,25 @@ tags:
   - Overview
 browser-compat: api.BatteryManager
 ---
-<div>{{DefaultAPISidebar("Battery API")}}{{deprecated_header}}</div>
+{{DefaultAPISidebar("Battery API")}}{{deprecated_header}}
 
-<p>The <strong>Battery Status API</strong>, more often referred to as the <strong>Battery API</strong>, provides information about the system's battery charge level and lets you be notified by events that are sent when the battery level or charging status change. This can be used to adjust your app's resource usage to reduce battery drain when the battery is low, or to save changes before the battery runs out in order to prevent data loss.</p>
+The **Battery Status API**, more often referred to as the **Battery API**, provides information about the system's battery charge level and lets you be notified by events that are sent when the battery level or charging status change. This can be used to adjust your app's resource usage to reduce battery drain when the battery is low, or to save changes before the battery runs out in order to prevent data loss.
 
-<div class="notecard note">
-<p><strong>Note:</strong> This API is <em>not available</em> in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a> (not exposed via {{domxref("WorkerNavigator")}}).</p>
-</div>
+> **Note:** This API is _not available_ in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) (not exposed via {{domxref("WorkerNavigator")}}).
 
-<h2 id="Interfaces">Interfaces</h2>
+## Interfaces
 
-<dl>
-  <dt>{{domxref("BatteryManager")}}</dt>
-  <dd>Provides information about the system's battery charge level.</dd>
-  <dt>{{domxref("navigator.getBattery()")}}{{readonlyInline}}</dt>
-  <dd>Returns a {{JSxRef("Promise")}} that resolves with a {{DOMxRef("BatteryManager")}} object.</dd>
-</dl>
+- {{domxref("BatteryManager")}}
+  - : Provides information about the system's battery charge level.
+- {{domxref("navigator.getBattery()")}}{{readonlyInline}}
+  - : Returns a {{JSxRef("Promise")}} that resolves with a {{DOMxRef("BatteryManager")}} object.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this example, we watch for changes both to the charging status (whether or not we're plugged in and charging) and for changes to the battery level and timing. This is done by listening for the {{event("chargingchange")}}, {{event("levelchange")}}, {{event("chargingtimechange")}}, {{event("dischargingtimechange")}} events.</p>
+In this example, we watch for changes both to the charging status (whether or not we're plugged in and charging) and for changes to the battery level and timing. This is done by listening for the {{event("chargingchange")}}, {{event("levelchange")}}, {{event("chargingtimechange")}}, {{event("dischargingtimechange")}} events.
 
-<pre class="brush: js;">navigator.getBattery().then(function(battery) {
+```js
+navigator.getBattery().then(function(battery) {
   function updateAllBatteryInfo(){
     updateChargeInfo();
     updateLevelInfo();
@@ -76,20 +73,18 @@ browser-compat: api.BatteryManager
   }
 
 });
-</pre>
+```
 
-<p>See also <a href="https://www.w3.org/TR/battery-status/#examples">the example in the specification</a>.</p>
+See also [the example in the specification](https://www.w3.org/TR/battery-status/#examples).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="http://hacks.mozilla.org/2012/02/using-the-battery-api-part-of-webapi/">Hacks blog post - Using the Battery API</a></li>
-</ul>
+- [Hacks blog post - Using the Battery API](http://hacks.mozilla.org/2012/02/using-the-battery-api-part-of-webapi/)

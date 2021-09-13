@@ -9,29 +9,14 @@ tags:
   - Deprecated
   - Reference
 ---
-<p>{{APIRef("IndexedDB")}} {{ draft() }}</p>
+{{APIRef("IndexedDB")}} {{ draft() }}
 
-<div class="notecard warning">
-  <p><strong>Warning:</strong> The synchronous version of the IndexedDB API was originally intended for use only with <a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Web Workers</a>, and was eventually removed from the spec because its need was questionable. It may however be reintroduced in the future if there is enough demand from web developers.</p>
-</div>
+> **Warning:** The synchronous version of the IndexedDB API was originally intended for use only with [Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers), and was eventually removed from the spec because its need was questionable. It may however be reintroduced in the future if there is enough demand from web developers.
 
-<p>The {{ unimplemented_inline() }} <code>IDBEnvironmentSync</code> interface of the <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a> will be implemented by <a href="/en-US/docs/Web/API/Worker">worker</a> objects.</p>
+The {{ unimplemented_inline() }} `IDBEnvironmentSync` interface of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) will be implemented by [worker](/en-US/docs/Web/API/Worker) objects.
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Attribute</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>indexedDBSync</code></td>
-   <td><code>readonly <a href="/en-US/docs/Web/API/IDBFactorySync">IDBFactorySync</a></code></td>
-   <td>Provides a synchronous means of accessing the capabilities of indexed databases.</td>
-  </tr>
- </tbody>
-</table>
+| Attribute       | Type                      | Description                                                                      |
+| --------------- | ------------------------- | -------------------------------------------------------------------------------- |
+| `indexedDBSync` | `readonly IDBFactorySync` | Provides a synchronous means of accessing the capabilities of indexed databases. |

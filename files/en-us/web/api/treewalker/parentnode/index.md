@@ -2,48 +2,47 @@
 title: TreeWalker.parentNode()
 slug: Web/API/TreeWalker/parentNode
 tags:
-- API
-- DOM
-- DOM Reference
-- Method
-- TreeWalker
+  - API
+  - DOM
+  - DOM Reference
+  - Method
+  - TreeWalker
 browser-compat: api.TreeWalker.parentNode
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p>The <strong><code>TreeWalker.parentNode()</code></strong> method moves the current
-  {{domxref("Node")}} to the first <em>visible</em> ancestor node in the document order,
-  and returns the found node. If no such node exists, or if it is above the
-  <code>TreeWalker</code>'s <em>root node</em>, returns <code>null</code> and the current
-  node is not changed.</p>
+The **`TreeWalker.parentNode()`** method moves the current
+{{domxref("Node")}} to the first _visible_ ancestor node in the document order,
+and returns the found node. If no such node exists, or if it is above the
+`TreeWalker`'s _root node_, returns `null` and the current
+node is not changed.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>node</em> = <em>treeWalker</em>.parentNode();
-</pre>
+```js
+node = treeWalker.parentNode();
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var treeWalker = document.createTreeWalker(
+```js
+var treeWalker = document.createTreeWalker(
     document.body,
     NodeFilter.SHOW_ELEMENT,
     { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
     false
 );
 var node = treeWalker.parentNode(); // returns null as there is no parent
+```
 
-</pre>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("TreeWalker")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("TreeWalker")}} interface it belongs to.

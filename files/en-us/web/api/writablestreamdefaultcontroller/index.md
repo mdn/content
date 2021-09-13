@@ -11,28 +11,27 @@ tags:
   - WritableStreamDefaultController
 browser-compat: api.WritableStreamDefaultController
 ---
-<p>{{SeeCompatTable}}{{APIRef("Streams")}}</p>
+{{SeeCompatTable}}{{APIRef("Streams")}}
 
-<p>The <strong><code>WritableStreamDefaultController</code></strong> interface of the <a href="/en-US/docs/Web/API/Streams_API">Streams API</a> represents a controller allowing control of a {{domxref("WritableStream")}}'s state. When constructing a <code>WritableStream</code>, the underlying sink is given a corresponding <code>WritableStreamDefaultController</code> instance to manipulate.</p>
+The **`WritableStreamDefaultController`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a controller allowing control of a {{domxref("WritableStream")}}'s state. When constructing a `WritableStream`, the underlying sink is given a corresponding `WritableStreamDefaultController` instance to manipulate.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<p>None. <code>WritableStreamDefaultController</code> instances are created automatically during <code>WritableStream</code> construction.</p>
+None. `WritableStreamDefaultController` instances are created automatically during `WritableStream` construction.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p>None.</p>
+None.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("WritableStreamDefaultController.error()")}}</dt>
- <dd>Causes any future interactions with the associated stream to error.</dd>
-</dl>
+- {{domxref("WritableStreamDefaultController.error()")}}
+  - : Causes any future interactions with the associated stream to error.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">const writableStream = new WritableStream({
+```js
+const writableStream = new WritableStream({
   start(controller) {
     // do stuff with controller
 
@@ -48,12 +47,13 @@ browser-compat: api.WritableStreamDefaultController
   abort(err) {
     ...
   }
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

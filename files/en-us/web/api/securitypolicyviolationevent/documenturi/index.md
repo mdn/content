@@ -2,49 +2,50 @@
 title: SecurityPolicyViolationEvent.documentURI
 slug: Web/API/SecurityPolicyViolationEvent/documentURI
 tags:
-- API
-- CSP
-- Experimental
-- HTTP
-- Property
-- Reference
-- Security
-- SecurityPolicyViolationEvent
-- documentURI
+  - API
+  - CSP
+  - Experimental
+  - HTTP
+  - Property
+  - Reference
+  - Security
+  - SecurityPolicyViolationEvent
+  - documentURI
 browser-compat: api.SecurityPolicyViolationEvent.documentURI
 ---
-<div>{{APIRef("{{HTTPSidebar}}")}}{{ SeeCompatTable() }}</div>
+{{APIRef("{{HTTPSidebar}}")}}{{ SeeCompatTable() }}
 
-<p>The <code><strong>documentURI</strong></code> read-only property of the
-  {{domxref("SecurityPolicyViolationEvent")}} interface is a {{domxref("USVString")}}
-  representing the URI of the document or worker in which the violation was found.</p>
+The **`documentURI`** read-only property of the
+{{domxref("SecurityPolicyViolationEvent")}} interface is a {{domxref("USVString")}}
+representing the URI of the document or worker in which the violation was found.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">let <var>documentURI</var> = <var>violationEventInstance</var>.documentURI;</pre>
+```js
+let documentURI = violationEventInstance.documentURI;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("USVString")}} representing the URI of the document or worker in which the
-  violation was found.</p>
+A {{domxref("USVString")}} representing the URI of the document or worker in which the
+violation was found.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">document.addEventListener("securitypolicyviolation", (e) =&gt; {
+```js
+document.addEventListener("securitypolicyviolation", (e) => {
   console.log(e.documentURI);
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/HTTP/CSP">Content Security Policy (CSP)</a></li>
-</ul>
+- [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP)

@@ -9,24 +9,24 @@ tags:
   - SVG DOM
 browser-compat: api.SVGGElement
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <strong><code>SVGGElement</code></strong> interface corresponds to the {{SVGElement("g")}} element.</p>
+The **`SVGGElement`** interface corresponds to the {{SVGElement("g")}} element.
 
-<p>{{InheritanceDiagram(600, 140)}}</p>
+{{InheritanceDiagram(600, 140)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface doesn't implement any specific properties, but inherits properties from its parent interface, {{domxref("SVGGraphicsElement")}}.</em></p>
+_This interface doesn't implement any specific properties, but inherits properties from its parent interface, {{domxref("SVGGraphicsElement")}}._
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface doesn't implement any specific methods, but inherits methods from its parent interface, {{domxref("SVGGraphicsElement")}}.</em></p>
+_This interface doesn't implement any specific methods, but inherits methods from its parent interface, {{domxref("SVGGraphicsElement")}}._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

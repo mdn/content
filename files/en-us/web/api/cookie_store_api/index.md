@@ -7,40 +7,36 @@ tags:
   - Overview
   - Reference
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("Cookie Store")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("Cookie Store")}}
 
-<p>The Cookie Store API provides an asychronous API for managing cookies, while also exposing cookies to {{domxref("Service Worker API", "service workers")}}. </p>
+The Cookie Store API provides an asychronous API for managing cookies, while also exposing cookies to {{domxref("Service Worker API", "service workers")}}.
 
-<h2>Concepts and Usage</h2>
+## Concepts and Usage
 
-<p>The existing method of getting and setting cookies involves working with {{domxref("document.cookie")}} as a string of key/value pairs. In addition to this being cumbersome and error prone, it also has a host of issues in the context of modern web development.</p>
+The existing method of getting and setting cookies involves working with {{domxref("document.cookie")}} as a string of key/value pairs. In addition to this being cumbersome and error prone, it also has a host of issues in the context of modern web development.
 
-<p>The <code>document.cookie</code> interface is {{Glossary("synchronous")}}, single-threaded, and blocking. When writing a cookie you must wait for the browser to update the string of all cookies. In addition, the reliance on {{domxref("document")}} means that cookies cannot be accessed by service workers which cannot access the <code>document</code> object.</p>
+The `document.cookie` interface is {{Glossary("synchronous")}}, single-threaded, and blocking. When writing a cookie you must wait for the browser to update the string of all cookies. In addition, the reliance on {{domxref("document")}} means that cookies cannot be accessed by service workers which cannot access the `document` object.
 
-<p>The Cookie Store API provides an updated method of managing cookies. It is {{Glossary("asynchronous")}} and promise-based, therefore does not block the event loop. It does not rely on {{domxref("document")}} and so is available to service workers. The methods for getting and setting cookies also provide more feedback by way of error messages. This means that web developers do not have to set then immediately read back a cookie to check that setting was successful. </p>
+The Cookie Store API provides an updated method of managing cookies. It is {{Glossary("asynchronous")}} and promise-based, therefore does not block the event loop. It does not rely on {{domxref("document")}} and so is available to service workers. The methods for getting and setting cookies also provide more feedback by way of error messages. This means that web developers do not have to set then immediately read back a cookie to check that setting was successful.
 
-<h2 id="Interfaces">Interfaces</h2>
+## Interfaces
 
-<dl>
-  <dt>{{domxref("CookieStore")}}</dt>
-  <dd>The <code>CookieStore</code> interface enables getting and setting cookies.</dd>
-  <dt>{{domxref("CookieStoreManager")}}</dt>
-  <dd>The <code>CookieStoreManager</code> interface provides a service worker registration to enable service workers to subscribe to cookie change events.</dd>
-</dl>
+- {{domxref("CookieStore")}}
+  - : The `CookieStore` interface enables getting and setting cookies.
+- {{domxref("CookieStoreManager")}}
+  - : The `CookieStoreManager` interface provides a service worker registration to enable service workers to subscribe to cookie change events.
 
-<h2>Events</h2>
+## Events
 
-<dl>
-  <dt>{{domxref("CookieChangeEvent")}}</dt>
-  <dd>A <code>CookieChangeEvent</code> is dispatched against <code>CookieStore</code> objects in {{domxref("Window")}} contexts when any script-visible cookies changes occur.</dd>
-  <dt>{{domxref("ExtendableCookieChangeEvent")}}</dt>
-  <dd>A <code>ExtendableCookieChangeEvent</code> is dispatched against {{domxref("ServiceWorkerGlobalScope")}} events when any script-visible cookie changes have occurred which match the service worker's cookie change subscription list.</dd>
-</dl>
+- {{domxref("CookieChangeEvent")}}
+  - : A `CookieChangeEvent` is dispatched against `CookieStore` objects in {{domxref("Window")}} contexts when any script-visible cookies changes occur.
+- {{domxref("ExtendableCookieChangeEvent")}}
+  - : A `ExtendableCookieChangeEvent` is dispatched against {{domxref("ServiceWorkerGlobalScope")}} events when any script-visible cookie changes have occurred which match the service worker's cookie change subscription list.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications("api.CookieStore")}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.CookieStore")}}</p>
+{{Compat("api.CookieStore")}}

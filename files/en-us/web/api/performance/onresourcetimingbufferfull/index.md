@@ -2,40 +2,40 @@
 title: Performance.onresourcetimingbufferfull
 slug: Web/API/Performance/onresourcetimingbufferfull
 tags:
-- API
-- Property
-- Reference
-- Web Peformance
+  - API
+  - Property
+  - Reference
+  - Web Peformance
 browser-compat: api.Performance.onresourcetimingbufferfull
 ---
-<div>{{APIRef("Resource Timing API")}}</div>
+{{APIRef("Resource Timing API")}}
 
-<p>The <strong><code>onresourcetimingbufferfull</code></strong> property is an event
-  handler that will be called when the {{event("resourcetimingbufferfull")}} event is
-  fired. This event is fired when the browser's resource timing performance buffer is
-  full.</p>
+The **`onresourcetimingbufferfull`** property is an event
+handler that will be called when the {{event("resourcetimingbufferfull")}} event is
+fired. This event is fired when the browser's resource timing performance buffer is
+full.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">callback = <em>performance</em>.onresourcetimingbufferfull = buffer_full_cb;
-</pre>
+```js
+callback = performance.onresourcetimingbufferfull = buffer_full_cb;
+```
 
-<h3 id="Return_Value">Return value</h3>
+### Return value
 
-<dl>
-  <dt>callback</dt>
-  <dd>An <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> that is invoked when the
-    {{event("resourcetimingbufferfull")}} event is fired.</dd>
-</dl>
+- callback
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) that is invoked when the
+    {{event("resourcetimingbufferfull")}} event is fired.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example sets a callback function on the
-  <code>onresourcetimingbufferfull</code> property.</p>
+The following example sets a callback function on the
+`onresourcetimingbufferfull` property.
 
-<pre class="brush: js">function buffer_full(event) {
+```js
+function buffer_full(event) {
   console.log("WARNING: Resource Timing Buffer is FULL!");
   performance.setResourceTimingBufferSize(200);
 }
@@ -43,24 +43,19 @@ function init() {
   // Set a callback if the resource buffer becomes filled
   performance.onresourcetimingbufferfull = buffer_full;
 }
-&lt;body onload="init()"&gt;
-</pre>
+<body onload="init()">
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{event("resourcetimingbufferfull")}} event</li>
-  <li>{{domxref("Performance.clearResourceTimings","Performance.clearResourceTimings()")}}
-  </li>
-  <li>
-    {{domxref("Performance.setResourceTimingBufferSize","Performance.setResourceTimingBufferSize()")}}
-  </li>
-</ul>
+- {{event("resourcetimingbufferfull")}} event
+- {{domxref("Performance.clearResourceTimings","Performance.clearResourceTimings()")}}
+- {{domxref("Performance.setResourceTimingBufferSize","Performance.setResourceTimingBufferSize()")}}

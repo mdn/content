@@ -2,141 +2,133 @@
 title: RTCRtpSender.setParameters()
 slug: Web/API/RTCRtpSender/setParameters
 tags:
-- API
-- Audio
-- Codec
-- Encoding
-- Method
-- RTCRtpSender
-- Reference
-- Video
-- WebRTC
-- WebRTC API
-- parameters
-- sender
-- setParameters
+  - API
+  - Audio
+  - Codec
+  - Encoding
+  - Method
+  - RTCRtpSender
+  - Reference
+  - Video
+  - WebRTC
+  - WebRTC API
+  - parameters
+  - sender
+  - setParameters
 browser-compat: api.RTCRtpSender.setParameters
 ---
-<div>{{APIRef("WebRTC API")}}</div>
+{{APIRef("WebRTC API")}}
 
-<p>The <strong><code>setParameters()</code></strong> method of
-    the {{domxref("RTCRtpSender")}} interface applies changes the configuration of
-    sender's {{domxref("RTCRtpSender.track", "track")}}, which is the
-    {{domxref("MediaStreamTrack")}} for which the <code>RTCRtpSender</code> is
-    responsible.</p>
+The **`setParameters()`** method of
+the {{domxref("RTCRtpSender")}} interface applies changes the configuration of
+sender's {{domxref("RTCRtpSender.track", "track")}}, which is the
+{{domxref("MediaStreamTrack")}} for which the `RTCRtpSender` is
+responsible.
 
-<p>In other words, <code>setParameters()</code> updates the configuration of the
-  {{Glossary("RTP")}} transmission as well as the encoding configuration for a specific
-  outgoing media track on the <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a>
-  connection.</p>
+In other words, `setParameters()` updates the configuration of the
+{{Glossary("RTP")}} transmission as well as the encoding configuration for a specific
+outgoing media track on the [WebRTC](/en-US/docs/Web/API/WebRTC_API)
+connection.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>promise</em> = <em>rtcRtpSender</em>.setParameters(<em>parameters</em>)</pre>
+```js
+var promise = rtcRtpSender.setParameters(parameters)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>parameters</code></dt>
-  <dd>
-    <p>
-      A parameters object previously obtained by calling the same
-      sender's {{domxref("RTCRtpSender.getParameters", "getParameters()")}} method, with
-      the desired changes to the sender's configuration parameters. These parameters
-      include potential codecs that could be use for encoding the sender's
-      {{domxref("RTCRtpSender.track", "track")}}. The available parameters are:
-    </p>
-    <dl>
-      <dt><code>encodings</code></dt>
-      <dd>An array of {{domxref("RTCRtpEncodingParameters")}} objects, each specifying the parameters for a single codec that could be used to encode the track's media.</dd>
-      <dt><code>transactionId</code></dt>
-      <dd>A string containing a unique ID for the last set of parameters applied; this value is used to ensure that {{domxref("RTCRtpSender.setParameters", "setParameters()")}} can only be called to alter changes made by a specific previous call to {{domxref("RTCRtpSender.getParameters", "getParameters()")}}. Once this parameter is initially set, it cannot be changed.</dd>
-      <dt><code>degradationPreference</code> {{deprecated_inline}}</dt>
-      <dd>Specifies the preferred way the WebRTC layer should handle optimizing bandwidth against quality in constrained-bandwidth situations; the value comes from the {{domxref("RTCDegradationPreference")}} enumerated string type, and the default is <code>balanced</code>.</dd>
-      <dt><code>priority</code> {{deprecated_inline}}</dt>
-      <dd>A string from the {{domxref("RTCPriorityType")}} enumerated type which indicates the encoding's priority. The default value is <code>low</code>.</dd>
+- `parameters`
 
-    </dl>
-  </dd>
-</dl>
+  - : A parameters object previously obtained by calling the same
+    sender's {{domxref("RTCRtpSender.getParameters", "getParameters()")}} method, with
+    the desired changes to the sender's configuration parameters. These parameters
+    include potential codecs that could be use for encoding the sender's
+    {{domxref("RTCRtpSender.track", "track")}}. The available parameters are:
 
-<h3 id="Return_value">Return value</h3>
+    - `encodings`
+      - : An array of {{domxref("RTCRtpEncodingParameters")}} objects, each specifying the parameters for a single codec that could be used to encode the track's media.
+    - `transactionId`
+      - : A string containing a unique ID for the last set of parameters applied; this value is used to ensure that {{domxref("RTCRtpSender.setParameters", "setParameters()")}} can only be called to alter changes made by a specific previous call to {{domxref("RTCRtpSender.getParameters", "getParameters()")}}. Once this parameter is initially set, it cannot be changed.
+    - `degradationPreference` {{deprecated_inline}}
+      - : Specifies the preferred way the WebRTC layer should handle optimizing bandwidth against quality in constrained-bandwidth situations; the value comes from the {{domxref("RTCDegradationPreference")}} enumerated string type, and the default is `balanced`.
+    - `priority` {{deprecated_inline}}
+      - : A string from the {{domxref("RTCPriorityType")}} enumerated type which indicates the encoding's priority. The default value is `low`.
 
-<p>A {{jsxref("Promise")}} that resolves when the {{domxref("RTCRtpSender.track")}}
-  property is updated with the given parameters.</p>
+### Return value
 
-<h3 id="Exceptions">Exceptions</h3>
+A {{jsxref("Promise")}} that resolves when the {{domxref("RTCRtpSender.track")}}
+property is updated with the given parameters.
 
-<p>If an error occurs, the returned promise is rejected with the appropriate exception
-  from the list below.</p>
+### Exceptions
 
-<dl>
-  <dt><code>InvalidModificationError</code></dt>
-  <dd>One of the following problems was detected:
-    <ul>
-      <li>The number of encodings specified in the <code>parameters</code> object's
-        {{domxref("RTCRtpSendParameters.encodings", "encodings")}} property does not match
-        the number of encodings currently listed for the <code>RTCRtpSender</code>. You
-        cannot change the number of encoding options once the sender has been created.
-      </li>
-      <li>The order of the specified <code>encodings</code> has changed from the current
-        list's order.</li>
-      <li>An attempt has been made to alter a property that cannot be changed after the
-        sender is first created.</li>
-    </ul>
-  </dd>
-  <dt><code>InvalidStateError</code></dt>
-  <dd>The transceiver of which the <code>RTCRtpSender</code> is a part is not running, or
-    has no parameters to set.</dd>
-  <dt><code>OperationError</code></dt>
-  <dd>Any error condition which occurs that isn't covered by one of the other error codes
-    results in an <code>OperationError</code>.</dd>
-  <dt><code>RangeError</code></dt>
-  <dd>The value specified for {{domxref("RTCRtpSendParameters.scaleResolutionDownBy",
+If an error occurs, the returned promise is rejected with the appropriate exception
+from the list below.
+
+- `InvalidModificationError`
+
+  - : One of the following problems was detected:
+
+    - The number of encodings specified in the `parameters` object's
+      {{domxref("RTCRtpSendParameters.encodings", "encodings")}} property does not match
+      the number of encodings currently listed for the `RTCRtpSender`. You
+      cannot change the number of encoding options once the sender has been created.
+    - The order of the specified `encodings` has changed from the current
+      list's order.
+    - An attempt has been made to alter a property that cannot be changed after the
+      sender is first created.
+
+- `InvalidStateError`
+  - : The transceiver of which the `RTCRtpSender` is a part is not running, or
+    has no parameters to set.
+- `OperationError`
+  - : Any error condition which occurs that isn't covered by one of the other error codes
+    results in an `OperationError`.
+- `RangeError`
+  - : The value specified for {{domxref("RTCRtpSendParameters.scaleResolutionDownBy",
     "scaleResolutionDownBy")}} is less than 1.0, which would result in scaling up rather
     than down, which is not allowed; or one or more of the specified encodings'
     {{domxref("RTCRtpEncodingParameters.maxFramerate", "maxFramerate")}} values is less
-    than 0.0.</dd>
-</dl>
+    than 0.0.
 
-<p>In addition, if a WebRTC error occurs while configuring or accessing the media, an
-  {{domxref("RTCError")}} is thrown with its {{domxref("RTCError.errorDetail",
-  "errorDetail")}} set to <code>hardware-encoder-error</code>.</p>
+In addition, if a WebRTC error occurs while configuring or accessing the media, an
+{{domxref("RTCError")}} is thrown with its {{domxref("RTCError.errorDetail",
+  "errorDetail")}} set to `hardware-encoder-error`.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>It's important to keep in mind that you can't create an
-  {{domxref("RTCRtpSendParameters")}} object yourself and expect it to work. Instead, you
-  <em>must</em> first call {{domxref("RTCRtpSender.getParameters", "getParameters()")}},
-  modify the received parameters object, then pass that object into
-  <code>setParameters()</code>. WebRTC uses the parameters object's
-  <code>transactionId</code> property to ensure that when you set parameters, your changes
-  are based on the most recent parameters rather than an out of date configuration.</p>
+It's important to keep in mind that you can't create an
+{{domxref("RTCRtpSendParameters")}} object yourself and expect it to work. Instead, you
+_must_ first call {{domxref("RTCRtpSender.getParameters", "getParameters()")}},
+modify the received parameters object, then pass that object into
+`setParameters()`. WebRTC uses the parameters object's
+`transactionId` property to ensure that when you set parameters, your changes
+are based on the most recent parameters rather than an out of date configuration.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>One use case for <code>setParameters()</code> is to try to reduce network bandwidth use
-  in constrained environments by altering the resolution and/or bit rate of the media
-  being transmitted by the {{domxref("RTCRtpSender")}}.</p>
+One use case for `setParameters()` is to try to reduce network bandwidth use
+in constrained environments by altering the resolution and/or bit rate of the media
+being transmitted by the {{domxref("RTCRtpSender")}}.
 
-<p>Currently, some browsers have limitations on their implementations that may cause
-  issues. For that reason, two examples are given here. The first shows how to use
-  <code>setParameters()</code> when all browsers fully support the parameters being used,
-  while the second example demonstrates workarounds to help solve limitations in browsers
-  with incomplete support for the {{domxref("RTCRtpEncodingParameters.maxBitrate",
+Currently, some browsers have limitations on their implementations that may cause
+issues. For that reason, two examples are given here. The first shows how to use
+`setParameters()` when all browsers fully support the parameters being used,
+while the second example demonstrates workarounds to help solve limitations in browsers
+with incomplete support for the {{domxref("RTCRtpEncodingParameters.maxBitrate",
   "maxBitrate")}} and {{domxref("RTCRtpEncodingParameters.scaleResolutionDownBy",
-  "scaleResolutionDownBy")}} parameters.</p>
+  "scaleResolutionDownBy")}} parameters.
 
-<h3 id="By_the_specification">By the specification</h3>
+### By the specification
 
-<p>Once all browsers implement the spec fully, this implementation of
-  <code>setVideoParams()</code> will do the job. This demonstrates how everything
-  <em>should</em> work. You should probably use the second example, below, for now. But
-  this is a clearer demonstration of the basic concept of first fetching the parameters,
-  then altering them, then setting them.</p>
+Once all browsers implement the spec fully, this implementation of
+`setVideoParams()` will do the job. This demonstrates how everything
+_should_ work. You should probably use the second example, below, for now. But
+this is a clearer demonstration of the basic concept of first fetching the parameters,
+then altering them, then setting them.
 
-<pre class="brush: js">async function setVideoParams(sender, height, bitrate) {
+```js
+async function setVideoParams(sender, height, bitrate) {
   const scaleRatio = sender.track.getSettings().height/height;
   const params = sender.getParameters();
 
@@ -144,31 +136,32 @@ browser-compat: api.RTCRtpSender.setParameters
   params.encodings[0].maxBitrate = bitrate;
   await sender.setParameters(params);
 }
-</pre>
+```
 
-<p>In calling this function, you specify a sender, as w.ell as the height you wish to
-  scale the sender's video to, as well as a maximum bitrate to permit the sender to
-  transmit. A scaling factor for the size of the video, <code>scaleRatio</code>, is
-  computed. Then the sender's current parameters are fetched using
-  {{domxref("RTCRtpSender.getParameters", "getParameters()")}}.</p>
+In calling this function, you specify a sender, as w\.ell as the height you wish to
+scale the sender's video to, as well as a maximum bitrate to permit the sender to
+transmit. A scaling factor for the size of the video, `scaleRatio`, is
+computed. Then the sender's current parameters are fetched using
+{{domxref("RTCRtpSender.getParameters", "getParameters()")}}.
 
-<p>The parameters are then altered by changing the first
-  {{domxref("RTCRtpSendParameters.encodings", "encodings")}} object's
-  {{domxref("RTCRtpEncodingParameters.scaleResolutionDownBy", "scaleResolutionDownBy")}}
-  and {{domxref("RTCRtpEncodingParameters.maxBitrate", "maxBitrate")}} to the calculated
-  scaling factor and the specified maximum <code>bitrate</code>.</p>
+The parameters are then altered by changing the first
+{{domxref("RTCRtpSendParameters.encodings", "encodings")}} object's
+{{domxref("RTCRtpEncodingParameters.scaleResolutionDownBy", "scaleResolutionDownBy")}}
+and {{domxref("RTCRtpEncodingParameters.maxBitrate", "maxBitrate")}} to the calculated
+scaling factor and the specified maximum `bitrate`.
 
-<p>The changed parameters are then saved by calling the sender's
-  <code>setParameters()</code> method.</p>
+The changed parameters are then saved by calling the sender's
+`setParameters()` method.
 
-<h3 id="Currently_compatible_implementation">Currently compatible implementation</h3>
+### Currently compatible implementation
 
-<p>As mentioned above, the previous example shows how things are meant to work.
-  Unfortunately, there are implementation issues preventing this in many browsers right
-  now. For that reason, if you want to be compatible with iPhone and other devices running
-  Safari, and with Firefox, use code more like this:</p>
+As mentioned above, the previous example shows how things are meant to work.
+Unfortunately, there are implementation issues preventing this in many browsers right
+now. For that reason, if you want to be compatible with iPhone and other devices running
+Safari, and with Firefox, use code more like this:
 
-<pre class="brush: js">async function setVideoParams(sender, height, bitrate) {
+```js
+async function setVideoParams(sender, height, bitrate) {
   const scaleRatio = sender.track.getSettings().height/height;
   const params = sender.getParameters();
 
@@ -189,35 +182,32 @@ browser-compat: api.RTCRtpSender.setParameters
   if (sender.getParameters().encodings[0].scaleResolutionDownBy == 1) {
     await sender.track.applyConstraints({ height });
   }
-}</pre>
+}
+```
 
-<p>The differences here:</p>
+The differences here:
 
-<ul>
-  <li>If <code>encodings</code> is <code>null</code>, we create it, in order to ensure
-    that we can then set the parameters successfully without crashing.</li>
-  <li>If, after setting the parameters, the value of <code>scaleResolutionDownBy</code> is
-    still 1, we call the sender's track's {{domxref("MediaStreamTrack.applyConstraints",
-    "applyConstraints()")}} method to constrain the track's height to <code>height</code>.
-    This compensates for an unimplemented <code>scaleResolutionDownBy</code> (as is the
-    case in Safari as of this writing).</li>
-</ul>
+- If `encodings` is `null`, we create it, in order to ensure
+  that we can then set the parameters successfully without crashing.
+- If, after setting the parameters, the value of `scaleResolutionDownBy` is
+  still 1, we call the sender's track's {{domxref("MediaStreamTrack.applyConstraints",
+    "applyConstraints()")}} method to constrain the track's height to `height`.
+  This compensates for an unimplemented `scaleResolutionDownBy` (as is the
+  case in Safari as of this writing).
 
-<p>This code will cleanly fall back and work the normal way if the browser fully
-  implements the used features.</p>
+This code will cleanly fall back and work the normal way if the browser fully
+implements the used features.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
-  <li><a href="/en-US/docs/Web/Media/Formats/WebRTC_codecs">Codecs used by WebRTC</a></li>
-  <li><a href="/en-US/docs/Web/Media">Web media technologies</a></li>
-</ul>
+- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+- [Codecs used by WebRTC](/en-US/docs/Web/Media/Formats/WebRTC_codecs)
+- [Web media technologies](/en-US/docs/Web/Media)

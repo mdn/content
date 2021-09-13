@@ -14,10 +14,10 @@ tags:
   - terminate
 browser-compat: api.PresentationConnection.terminate
 ---
-<div>{{APIRef("Presentation API")}}</div>
+{{APIRef("Presentation API")}}
 
-<p>When the <code><dfn>terminate</dfn>()</code> method is called on a {{domxref("PresentationConnection")}}, the {{Glossary("user agent")}} begins the process of terminating the presentation. The exact process differs depending on whether <code>terminate()</code> is called in the controlling or the presenting context.</p>
+When the `terminate()` method is called on a {{domxref("PresentationConnection")}}, the {{Glossary("user agent")}} begins the process of terminating the presentation. The exact process differs depending on whether `terminate()` is called in the controlling or the presenting context.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

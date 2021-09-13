@@ -2,72 +2,70 @@
 title: MediaTrackSettings.latency
 slug: Web/API/MediaTrackSettings/latency
 tags:
-- API
-- Audio
-- Media
-- Media Capture and Streams API
-- Media Streams API
-- MediaTrackSettings
-- Property
-- Reference
-- Settings
-- WebRTC
-- latency
+  - API
+  - Audio
+  - Media
+  - Media Capture and Streams API
+  - Media Streams API
+  - MediaTrackSettings
+  - Property
+  - Reference
+  - Settings
+  - WebRTC
+  - latency
 browser-compat: api.MediaTrackSettings.latency
 ---
-<div>{{APIRef("Media Capture and Streams")}}</div>
+{{APIRef("Media Capture and Streams")}}
 
-<p>The {{domxref("MediaTrackSettings")}} dictionary's
-  <code><strong>latency</strong></code> property is a double-precision floating-point
-  number indicating the estimated latency (specified in seconds) of the
-  {{domxref("MediaStreamTrack")}} as currently configured. This lets you determine what
-  value was selected to comply with your specified constraints for this property's value
-  as described in the {{domxref("MediaTrackConstraints.latency")}} property you provided
-  when calling either {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} or
-  {{domxref("MediaStreamTrack.applyConstraints()")}}.</p>
+The {{domxref("MediaTrackSettings")}} dictionary's
+**`latency`** property is a double-precision floating-point
+number indicating the estimated latency (specified in seconds) of the
+{{domxref("MediaStreamTrack")}} as currently configured. This lets you determine what
+value was selected to comply with your specified constraints for this property's value
+as described in the {{domxref("MediaTrackConstraints.latency")}} property you provided
+when calling either {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} or
+{{domxref("MediaStreamTrack.applyConstraints()")}}.
 
-<p>This is, of course, an approximation, since latency can vary for many reasons including
-  CPU, transmission, and storage overhead.</p>
+This is, of course, an approximation, since latency can vary for many reasons including
+CPU, transmission, and storage overhead.
 
-<p>If needed, you can determine whether or not this constraint is supported by checking
-  the value of {{domxref("MediaTrackSupportedConstraints.latency")}} as returned by a call
-  to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this is
-  unnecessary since browsers will ignore any constraints they're unfamiliar with.</p>
+If needed, you can determine whether or not this constraint is supported by checking
+the value of {{domxref("MediaTrackSupportedConstraints.latency")}} as returned by a call
+to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this is
+unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
-<p>Because {{Glossary("RTP")}} doesn't include this information, tracks associated with a
-  <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> {{domxref("RTCPeerConnection")}}
-  will never include this property.</p>
+Because {{Glossary("RTP")}} doesn't include this information, tracks associated with a
+[WebRTC](/en-US/docs/Web/API/WebRTC_API) {{domxref("RTCPeerConnection")}}
+will never include this property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>latency</em> = <em>MediaTrackSettings</em>.latency;
-</pre>
+```js
+var latency = MediaTrackSettings.latency;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A double-precision floating-point number indicating the estimated latency, in seconds,
-  of the audio track as currently configured.</p>
+A double-precision floating-point number indicating the estimated latency, in seconds,
+of the audio track as currently configured.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
-  Constraint exerciser")}} for an example.</p>
+See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
+  Constraint exerciser")}} for an example.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a>
-  </li>
-  <li><a href="/en-US/docs/Web/API/Media_Streams_API/Constraints">Capabilities,
-      constraints, and settings</a></li>
-  <li>{{domxref("MediaTrackConstraints.latency")}}</li>
-  <li>{{domxref("MediaTrackSettings")}}</li>
-</ul>
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- [Capabilities,
+  constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- {{domxref("MediaTrackConstraints.latency")}}
+- {{domxref("MediaTrackSettings")}}

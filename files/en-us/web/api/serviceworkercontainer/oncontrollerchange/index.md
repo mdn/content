@@ -2,38 +2,41 @@
 title: ServiceWorkerContainer.oncontrollerchange
 slug: Web/API/ServiceWorkerContainer/oncontrollerchange
 tags:
-- API
-- Experimental
-- Interface
-- Property
-- Reference
-- Service Workers
-- ServiceWorker
-- ServiceWorkerContainer
-- onchange
+  - API
+  - Experimental
+  - Interface
+  - Property
+  - Reference
+  - Service Workers
+  - ServiceWorker
+  - ServiceWorkerContainer
+  - onchange
 browser-compat: api.ServiceWorkerContainer.oncontrollerchange
 ---
-<p>{{APIRef("Service Workers API")}}{{ SeeCompatTable() }}</p>
+{{APIRef("Service Workers API")}}{{ SeeCompatTable() }}
 
-<p>The <code><strong>oncontrollerchange</strong></code> property of the
-  {{domxref("ServiceWorkerContainer")}} interface is an event handler fired whenever a
-  {{Event("controllerchange")}} event occurs — when the document's associated
-  {{domxref("ServiceWorkerRegistration")}} acquires a new
-  {{domxref("ServiceWorkerRegistration.active","active")}} worker.</p>
+The **`oncontrollerchange`** property of the
+{{domxref("ServiceWorkerContainer")}} interface is an event handler fired whenever a
+{{Event("controllerchange")}} event occurs — when the document's associated
+{{domxref("ServiceWorkerRegistration")}} acquires a new
+{{domxref("ServiceWorkerRegistration.active","active")}} worker.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>serviceWorkerContainer</em>.oncontrollerchange = function(<em>controllerchangeevent</em>) { ... }</pre>
+```js
+serviceWorkerContainer.oncontrollerchange = function(controllerchangeevent) { ... }
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">// TBD</pre>
+```js
+// TBD
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

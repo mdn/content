@@ -7,34 +7,34 @@ tags:
   - Web NFC
 browser-compat: api.NDEFRecord.lang
 ---
-<p>{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}</p>
+{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 
-<p>The <strong><code>lang</code></strong>
-    property of the {{DOMxRef("NDEFRecord")}} interface returns the language of
-    a textual payload, or <code>null</code> if one was not supplied.</p>
+The **`lang`**
+property of the {{DOMxRef("NDEFRecord")}} interface returns the language of
+a textual payload, or `null` if one was not supplied.
 
-<p>The record might be missing a language tag, for example, if the recorded information is
-  not locale-specific.</p>
+The record might be missing a language tag, for example, if the recorded information is
+not locale-specific.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">NDEFRecord.lang</pre>
+```js
+NDEFRecord.lang
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{DOMxRef("USVString")}}.</p>
+A {{DOMxRef("USVString")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/HTML/Global_attributes/lang">HTML <code>lang</code> attribute</a>, that declares content langauge of the document or its elements</li>
-  <li>HTTP headers that declare content language: {{HTTPHeader("Content-Language")}} and {{HTTPHEader("Accept-Language")}}</li>
-</ul>
+- [HTML `lang` attribute](/en-US/docs/Web/HTML/Global_attributes/lang), that declares content langauge of the document or its elements
+- HTTP headers that declare content language: {{HTTPHeader("Content-Language")}} and {{HTTPHEader("Accept-Language")}}

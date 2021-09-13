@@ -9,37 +9,40 @@ tags:
   - MIDIPort
 browser-compat: api.MIDIPort.type
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("Web MIDI API")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("Web MIDI API")}}
 
-<p>The <strong><code>type</code></strong> read-only property of the {{domxref("MIDIPort")}} interface returns the type of the port, indicating whether this is an input or output MIDI port.</p>
+The **`type`** read-only property of the {{domxref("MIDIPort")}} interface returns the type of the port, indicating whether this is an input or output MIDI port.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let type = MIDIPort.type;
-</pre>
+```js
+let type = MIDIPort.type;
+```
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString","string")}} containing the type of the port, one of:</p>
-<dl>
-  <dt><code>"input"</code></dt>
-  <dd>The <code>MIDIPort</code> is an input port.</dd>
-  <dt><code>"output"</code></dt>
-  <dd>The <code>MIDIPort</code> is an output port.</dd>
-</dl>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("DOMString","string")}} containing the type of the port, one of:
 
-<p>The following example loops through all input ports and prints the <code>type</code> of each to the console.</p>
+- `"input"`
+  - : The `MIDIPort` is an input port.
+- `"output"`
+  - : The `MIDIPort` is an output port.
 
-<pre class="brush: js">for (let entry of midiAccess.inputs) {
+## Examples
+
+The following example loops through all input ports and prints the `type` of each to the console.
+
+```js
+for (let entry of midiAccess.inputs) {
   let input = entry[1];
   console.log(input.type); // should always be input
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

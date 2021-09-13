@@ -9,40 +9,41 @@ tags:
   - Web
 browser-compat: api.Document.DOMContentLoaded_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <strong><code>DOMContentLoaded</code></strong> event fires when the initial HTML document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading.</p>
+The **`DOMContentLoaded`** event fires when the initial HTML document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>Yes (although specified as a simple event that isn't cancelable)</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>None</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>Yes (although specified as a simple event that isn't cancelable)</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>None</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>A different event, {{domxref("Window/load_event", "load")}}, should be used only to detect a fully-loaded page. It is a common mistake to use <code>load</code> where <code>DOMContentLoaded</code> would be more appropriate.</p>
+A different event, {{domxref("Window/load_event", "load")}}, should be used only to detect a fully-loaded page. It is a common mistake to use `load` where `DOMContentLoaded` would be more appropriate.
 
-<p>Synchronous JavaScript pauses parsing of the DOM. If you want the DOM to get parsed as fast as possible after the user has requested the page, you can make your <a href="/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests">JavaScript asynchronous</a> and <a href="https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery">optimize loading of stylesheets</a>. If loaded as usual, stylesheets slow down DOM parsing as they're loaded in parallel, "stealing" traffic from the main HTML document.</p>
+Synchronous JavaScript pauses parsing of the DOM. If you want the DOM to get parsed as fast as possible after the user has requested the page, you can make your [JavaScript asynchronous](/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests) and [optimize loading of stylesheets](https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery). If loaded as usual, stylesheets slow down DOM parsing as they're loaded in parallel, "stealing" traffic from the main HTML document.
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<p>The following code ports the functionality of the <code>DOMContentLoaded</code> event all the way back to IE6+, with a fallback to <code>window.onload</code> that works everywhere.</p>
+The following code ports the functionality of the `DOMContentLoaded` event all the way back to IE6+, with a fallback to `window.onload` that works everywhere.
 
-<pre class="brush: js">// Usage: DOMContentLoaded(function(e) { console.log(e); /* your code here */});
+```js
+// Usage: DOMContentLoaded(function(e) { console.log(e); /* your code here */});
 
 function DOMContentLoaded() { "use strict";
 
@@ -65,12 +66,12 @@ function DOMContentLoaded() { "use strict";
        in legacy browsers is unstable. Should readyState be undefined, accessing undefined properties
        of a defined object (document) will not throw.
 
-       The following statement checks for IE &lt; 11 via conditional compilation.
+       The following statement checks for IE < 11 via conditional compilation.
        `@_jscript_version` is a special String variable defined only in IE conditional comments,
        which themselves only appear as regular comments to other browsers.
        Browsers not named IE interpret the following code as
-       `Number( new Function("")() )` =&gt; `Number(undefined)` =&gt; `NaN`.
-       `NaN` is neither &gt;, &lt;, nor = to any other value.
+       `Number( new Function("")() )` => `Number(undefined)` => `NaN`.
+       `NaN` is neither >, <, nor = to any other value.
        Values: IE5: 5?, IE5.5: 5.5?, IE6/7: 5.6/5.7, IE8: 5.8, IE9: 9, IE10: 10,
        (IE11 older doc mode*): 11, IE11 / NOT IE: undefined
     */
@@ -82,8 +83,8 @@ function DOMContentLoaded() { "use strict";
 
     if (document.readyState === 'complete') { ready(null); return; } // execute ready()
 
-    // For IE&lt;9 poll document.documentElement.doScroll(), no further actions are needed.
-    if (jscript_version &lt; 9) { doIEScrollCheck(); return; }
+    // For IE<9 poll document.documentElement.doScroll(), no further actions are needed.
+    if (jscript_version < 9) { doIEScrollCheck(); return; }
 
     // ael: addEventListener, rel: removeEventListener, aev: attachEvent, dev: detachEvent
 
@@ -123,7 +124,7 @@ function DOMContentLoaded() { "use strict";
         if (typeof fn === 'function') { addOnload.queue.push(fn) } // add the new function
 
         window.onload = function() { // iterate through the queued functions
-            for (var i = 0; i &lt; addOnload.queue.length; i++) { addOnload.queue[i]() }
+            for (var i = 0; i < addOnload.queue.length; i++) { addOnload.queue[i]() }
         };
     }
 
@@ -135,7 +136,7 @@ function DOMContentLoaded() { "use strict";
         // until we find `fn`, and then remove `fn` from its place in the array.
 
         if (typeof addOnload.queue === 'object') { // array
-            for (var i = addOnload.queue.length-1; i &gt;= 0; i--) { // iterate backwards
+            for (var i = addOnload.queue.length-1; i >= 0; i--) { // iterate backwards
                 if (fn === addOnload.queue[i]) {
                     addOnload.queue.splice(i,1); if (!all) {break}
                 }
@@ -156,7 +157,7 @@ function DOMContentLoaded() { "use strict";
         detach(); // detach any event handlers
 
         // run the functions (`funcs` is arguments of DOMContentLoaded)
-        for (var i=0; i &lt; funcs.length; i++) {
+        for (var i=0; i < funcs.length; i++) {
 
             var func = funcs[i];
 
@@ -186,12 +187,12 @@ function DOMContentLoaded() { "use strict";
 
     // doIEScrollCheck: poll document.documentElement.doScroll until it no longer throws.
 
-    function doIEScrollCheck() { // for use in IE &lt; 9 only.
+    function doIEScrollCheck() { // for use in IE < 9 only.
         if ( window.frameElement ) {
             /* We're in an `iframe` or similar.
                The `document.documentElement.doScroll` technique does not work if we're not
                at the top-level (parent document).
-               Attach to onload if we're in an &lt;iframe&gt; in IE as there's no way to tell otherwise
+               Attach to onload if we're in an <iframe> in IE as there's no way to tell otherwise
             */
             try { window.attachEvent("onload", ready); } catch (e) { }
             return;
@@ -211,35 +212,38 @@ function DOMContentLoaded() { "use strict";
 }
 
 // Tested via BrowserStack.
-</pre>
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Basic_usage">Basic usage</h3>
+### Basic usage
 
-<pre class="brush: js">document.addEventListener('DOMContentLoaded', (event) =&gt; {
+```js
+document.addEventListener('DOMContentLoaded', (event) => {
     console.log('DOM fully loaded and parsed');
 });
-</pre>
+```
 
-<h3 id="Delaying_DOMContentLoaded">Delaying DOMContentLoaded</h3>
+### Delaying DOMContentLoaded
 
-<pre class="brush: html">&lt;script&gt;
-  document.addEventListener('DOMContentLoaded', (event) =&gt; {
+```html
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
     console.log('DOM fully loaded and parsed');
   });
 
-for( let i = 0; i &lt; 1000000000; i++)
+for( let i = 0; i < 1000000000; i++)
 {} // This synchronous script is going to delay parsing of the DOM,
    // so the DOMContentLoaded event is going to launch later.
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<h3 id="Checking_whether_loading_is_already_complete">Checking whether loading is already complete</h3>
+### Checking whether loading is already complete
 
-<p><code>DOMContentLoaded</code> may fire before your script has a chance to run, so it is wise to check before adding a listener.</p>
+`DOMContentLoaded` may fire before your script has a chance to run, so it is wise to check before adding a listener.
 
-<pre class="brush: js">function doSomething() {
+```js
+function doSomething() {
   console.info('DOM loaded');
 }
 
@@ -248,22 +252,25 @@ if (document.readyState === 'loading') {  // Loading hasn't finished yet
 } else {  // `DOMContentLoaded` has already fired
   doSomething();
 }
-</pre>
+```
 
-<h3 id="Live_example">Live example</h3>
+### Live example
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="controls"&gt;
-  &lt;button id="reload" type="button"&gt;Reload&lt;/button&gt;
-&lt;/div&gt;
+```html
+<div class="controls">
+  <button id="reload" type="button">Reload</button>
+</div>
 
-&lt;div class="event-log"&gt;
-  &lt;label&gt;Event log:&lt;/label&gt;
-  &lt;textarea readonly class="event-log-contents" rows="8" cols="30"&gt;&lt;/textarea&gt;
-&lt;/div&gt;</pre>
+<div class="event-log">
+  <label>Event log:</label>
+  <textarea readonly class="event-log-contents" rows="8" cols="30"></textarea>
+</div>
+```
 
-<pre class="brush: css hidden">body {
+```css hidden
+body {
   display: grid;
   grid-template-areas: "control  log";
 }
@@ -290,50 +297,47 @@ label, button {
 #reload {
   height: 2rem;
 }
+```
 
-</pre>
+#### JS
 
-<h4 id="JS">JS</h4>
-
-<pre class="brush: js">const log = document.querySelector('.event-log-contents');
+```js
+const log = document.querySelector('.event-log-contents');
 const reload = document.querySelector('#reload');
 
-reload.addEventListener('click', () =&gt; {
+reload.addEventListener('click', () => {
   log.textContent ='';
-  window.setTimeout(() =&gt; {
+  window.setTimeout(() => {
       window.location.reload(true);
   }, 200);
 });
 
-window.addEventListener('load', (event) =&gt; {
+window.addEventListener('load', (event) => {
     log.textContent = log.textContent + 'load\n';
 });
 
-document.addEventListener('readystatechange', (event) =&gt; {
+document.addEventListener('readystatechange', (event) => {
     log.textContent = log.textContent + `readystate: ${document.readyState}\n`;
 });
 
-document.addEventListener('DOMContentLoaded', (event) =&gt; {
+document.addEventListener('DOMContentLoaded', (event) => {
     log.textContent = log.textContent + `DOMContentLoaded\n`;
 });
+```
 
-</pre>
+#### Result
 
-<h4 id="Result">Result</h4>
+{{ EmbedLiveSample('Live_example', '100%', '160px') }}
 
-<p>{{ EmbedLiveSample('Live_example', '100%', '160px') }}</p>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Related events: {{domxref("Window/load_event", "load")}}, {{domxref("Document/readystatechange_event", "readystatechange")}}, {{domxref("Window/beforeunload_event", "beforeunload")}}, {{domxref("Window/unload_event", "unload")}}</li>
- <li>This event on {{domxref("Window")}} targets: {{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}}</li>
-</ul>
+- Related events: {{domxref("Window/load_event", "load")}}, {{domxref("Document/readystatechange_event", "readystatechange")}}, {{domxref("Window/beforeunload_event", "beforeunload")}}, {{domxref("Window/unload_event", "unload")}}
+- This event on {{domxref("Window")}} targets: {{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}}

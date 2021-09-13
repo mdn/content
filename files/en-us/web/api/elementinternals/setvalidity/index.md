@@ -9,83 +9,83 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals.setValidity
 ---
-<div>{{DefaultAPISidebar("DOM")}}</div>
+{{DefaultAPISidebar("DOM")}}
 
-<p>The <strong><code>setValidity()</code></strong> method of the {{domxref("ElementInternals")}} interface sets the validity of the element.</p>
+The **`setValidity()`** method of the {{domxref("ElementInternals")}} interface sets the validity of the element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">ElementInternals.setValidity(flags);
+```js
+ElementInternals.setValidity(flags);
 ElementInternals.setValidity(flags, message);
-ElementInternals.setValidity(flags, message, anchor);</pre>
+ElementInternals.setValidity(flags, message, anchor);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>flags</code>{{Optional_Inline}}</dt>
-  <dd>A dictionary object containing one or more flags indicating the validity state of the element:
-    <dl>
-      <dt><code>valueMissing</code></dt>
-      <dd>A boolean value that is <code>true</code> if the element has a {{htmlattrxref("required", "input")}} attribute, but no value, or <code>false</code> otherwise. If <code>true</code>, the element matches the {{cssxref(":invalid")}} CSS pseudo-class.</dd>
-      <dt><code>typeMismatch</code></dt>
-      <dd>A boolean value that is <code>true</code> if the value is not in the required syntax (when {{htmlattrxref("type", "input")}} is <code>email</code> or <code>url</code>), or <code>false</code> if the syntax is correct. If <code>true</code>, the element matches the {{cssxref(":invalid")}} CSS pseudo-class.</dd>
-      <dt><code>patternMismatch</code></dt>
-      <dd>A boolean value that is <code>true</code> if the value does not match the specified {{htmlattrxref("pattern", "input")}}, and <code>false</code> if it does match. If <code>true</code>, the element matches the {{cssxref(":invalid")}} CSS pseudo-class.</dd>
-      <dt><code>tooLong</code></dt>
-      <dd>A boolean value that is <code>true</code> if the value exceeds the specified <code>maxlength</code> for {{domxref("HTMLInputElement")}} or {{domxref("HTMLTextAreaElement")}} objects, or <code>false</code> if its length is less than or equal to the maximum length. If <code>true</code>, the element matches the {{cssxref(":invalid")}} and {{cssxref(":out-of-range")}} CSS pseudo-classes.</dd>
-      <dt><code>tooShort</code></dt>
-      <dd>A boolean value that is <code>true</code> if the value fails to meet the specified <code>minlength</code> for {{domxref("HTMLInputElement")}} or {{domxref("HTMLTextAreaElement")}} objects, or <code>false</code> if its length is greater than or equal to the minimum length. If <code>true</code>, the element matches the {{cssxref(":invalid")}} and {{cssxref(":out-of-range")}} CSS pseudo-classes.</dd>
-      <dt><code>rangeUnderflow</code></dt>
-      <dd>A boolean value that is <code>true</code> if the value is less than the minimum specified by the {{htmlattrxref("min", "input")}} attribute, or <code>false</code> if it is greater than or equal to the minimum. If <code>true</code>, the element matches the {{cssxref(":invalid")}} and {{cssxref(":out-of-range")}} CSS pseudo-classes.</dd>
-      <dt><code>rangeOverflow</code></dt>
-      <dd>A boolean value that is <code>true</code> if the value is greater than the maximum specified by the {{htmlattrxref("max", "input")}} attribute, or <code>false</code> if it is less than or equal to the maximum. If <code>true</code>, the element matches the {{cssxref(":invalid")}} and {{cssxref(":out-of-range")}} and CSS pseudo-classes.</dd>
-      <dt><code>stepMismatch</code></dt>
-      <dd>A boolean value that is <code>true</code> if the value does not fit the rules determined by the {{htmlattrxref("step", "input")}} attribute (that is, it's not evenly divisible by the step value), or <code>false</code> if it does fit the step rule. If <code>true</code>, the element matches the {{cssxref(":invalid")}} and {{cssxref(":out-of-range")}} CSS pseudo-classes.</dd>
-      <dt><code>badInput</code></dt>
-      <dd>A boolean value that is <code>true</code> if the user has provided input that the browser is unable to convert.</dd>
-      <dt><code>customError</code></dt>
-      <dd>A boolean value indicating whether the element's custom validity message has been set to a non-empty string by calling the element's {{domxref('HTMLObjectElement.setCustomValidity', 'setCustomValidity()')}} method.</dd>
-    </dl>
+- `flags`{{Optional_Inline}}
 
-    <div class="notecard note">
-      <p><strong>Note:</strong> To set all flags to <code>false</code>, indicating that this element passes all constraints validation, pass in an empty object <code>{}</code>. In this case, you do not need to also pass a <code>message</code>.</p>
-    </div>
-  </dd>
-  <dt><code>message</code>{{Optional_Inline}}</dt>
-  <dd>A {{domxref("DOMString","string")}} containing a message, which will be set if any <code>flags</code> are <code>true</code>. This parameter is only optional if all <code>flags</code> are <code>false</code>.</dd>
-  <dt><code>anchor</code>{{Optional_Inline}}</dt>
-  <dd>An {{domxref("HTMLElement")}} which can be used by the user agent to report problems with this form submission.</dd>
-</dl>
+  - : A dictionary object containing one or more flags indicating the validity state of the element:
 
-<h3 id="Returns">Return value</h3>
+    - `valueMissing`
+      - : A boolean value that is `true` if the element has a {{htmlattrxref("required", "input")}} attribute, but no value, or `false` otherwise. If `true`, the element matches the {{cssxref(":invalid")}} CSS pseudo-class.
+    - `typeMismatch`
+      - : A boolean value that is `true` if the value is not in the required syntax (when {{htmlattrxref("type", "input")}} is `email` or `url`), or `false` if the syntax is correct. If `true`, the element matches the {{cssxref(":invalid")}} CSS pseudo-class.
+    - `patternMismatch`
+      - : A boolean value that is `true` if the value does not match the specified {{htmlattrxref("pattern", "input")}}, and `false` if it does match. If `true`, the element matches the {{cssxref(":invalid")}} CSS pseudo-class.
+    - `tooLong`
+      - : A boolean value that is `true` if the value exceeds the specified `maxlength` for {{domxref("HTMLInputElement")}} or {{domxref("HTMLTextAreaElement")}} objects, or `false` if its length is less than or equal to the maximum length. If `true`, the element matches the {{cssxref(":invalid")}} and {{cssxref(":out-of-range")}} CSS pseudo-classes.
+    - `tooShort`
+      - : A boolean value that is `true` if the value fails to meet the specified `minlength` for {{domxref("HTMLInputElement")}} or {{domxref("HTMLTextAreaElement")}} objects, or `false` if its length is greater than or equal to the minimum length. If `true`, the element matches the {{cssxref(":invalid")}} and {{cssxref(":out-of-range")}} CSS pseudo-classes.
+    - `rangeUnderflow`
+      - : A boolean value that is `true` if the value is less than the minimum specified by the {{htmlattrxref("min", "input")}} attribute, or `false` if it is greater than or equal to the minimum. If `true`, the element matches the {{cssxref(":invalid")}} and {{cssxref(":out-of-range")}} CSS pseudo-classes.
+    - `rangeOverflow`
+      - : A boolean value that is `true` if the value is greater than the maximum specified by the {{htmlattrxref("max", "input")}} attribute, or `false` if it is less than or equal to the maximum. If `true`, the element matches the {{cssxref(":invalid")}} and {{cssxref(":out-of-range")}} and CSS pseudo-classes.
+    - `stepMismatch`
+      - : A boolean value that is `true` if the value does not fit the rules determined by the {{htmlattrxref("step", "input")}} attribute (that is, it's not evenly divisible by the step value), or `false` if it does fit the step rule. If `true`, the element matches the {{cssxref(":invalid")}} and {{cssxref(":out-of-range")}} CSS pseudo-classes.
+    - `badInput`
+      - : A boolean value that is `true` if the user has provided input that the browser is unable to convert.
+    - `customError`
+      - : A boolean value indicating whether the element's custom validity message has been set to a non-empty string by calling the element's {{domxref('HTMLObjectElement.setCustomValidity', 'setCustomValidity()')}} method.
 
-<p>Undefined.</p>
+    > **Note:** To set all flags to `false`, indicating that this element passes all constraints validation, pass in an empty object `{}`. In this case, you do not need to also pass a `message`.
 
-<h3>Exceptions</h3>
+- `message`{{Optional_Inline}}
+  - : A {{domxref("DOMString","string")}} containing a message, which will be set if any `flags` are `true`. This parameter is only optional if all `flags` are `false`.
+- `anchor`{{Optional_Inline}}
+  - : An {{domxref("HTMLElement")}} which can be used by the user agent to report problems with this form submission.
 
-<dl>
-  <dt>{{domxref("DOMException")}} <code>NotSupportedError</code></dt>
-  <dd>Thrown if the element does not have its <code>formAssociated</code> property set to <code>true</code>.</dd>
-  <dt>{{domxref("DOMException")}} <code>TypeError</code></dt>
-  <dd>One or more <code>flags</code> is <code>true</code>.</dd>
-  <dt>{{domxref("DOMException")}} <code>NotFoundError</code></dt>
-  <dd>If <code>anchor</code> is given, but the anchor is not a shadow-including descendant of the element.</dd>
-</dl>
+### Return value
 
-<h2 id="Examples">Examples</h2>
+Undefined.
 
-<p>In the following example <code>setValidity</code> is called with an empty <code>flags</code> parameter to indicate that the element meets constraint validation rules.</p>
+### Exceptions
 
-<pre class="brush: js">this.internals_.setValidity({});</pre>
+- {{domxref("DOMException")}} `NotSupportedError`
+  - : Thrown if the element does not have its `formAssociated` property set to `true`.
+- {{domxref("DOMException")}} `TypeError`
+  - : One or more `flags` is `true`.
+- {{domxref("DOMException")}} `NotFoundError`
+  - : If `anchor` is given, but the anchor is not a shadow-including descendant of the element.
 
-<p>In the following example <code>setValidity</code> is called with the flag <code>valueMissing</code> set to <code>true</code>. A <code>message</code> parameter must then also be passed containing a message.</p>
+## Examples
 
-<pre class="brush: js">this.internals_.setValidity({'valueMissing':true},"my message");</pre>
+In the following example `setValidity` is called with an empty `flags` parameter to indicate that the element meets constraint validation rules.
 
-<h2 id="Specifications">Specifications</h2>
+```js
+this.internals_.setValidity({});
+```
 
-<p>{{Specifications}}</p>
+In the following example `setValidity` is called with the flag `valueMissing` set to `true`. A `message` parameter must then also be passed containing a message.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+```js
+this.internals_.setValidity({'valueMissing':true},"my message");
+```
 
-<p>{{Compat}}</p>
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

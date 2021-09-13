@@ -8,39 +8,38 @@ tags:
   - Reference
 browser-compat: api.HTMLAnchorElement.pathname
 ---
-<p>{{ApiRef("HTML DOM")}}</p>
+{{ApiRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLAnchorElement.pathname</code></strong> property is a
-  {{domxref("USVString")}} containing an initial <code>'/'</code> followed by the path of
-  the URL not including the query string or fragment (or the empty string if there is no
-  path).</p>
+The **`HTMLAnchorElement.pathname`** property is a
+{{domxref("USVString")}} containing an initial `'/'` followed by the path of
+the URL not including the query string or fragment (or the empty string if there is no
+path).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 // Getter
-<em>string</em> = <em>anchor</em>.pathname;
+string = anchor.pathname;
 // Setter
-<em>anchor</em>.pathname = <em>string</em>;
-</pre>
+anchor.pathname = string;
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">// An &lt;a id="myAnchor" href="/en-US/docs/HTMLAnchorElement"&gt; element is in the document
+```js
+// An <a id="myAnchor" href="/en-US/docs/HTMLAnchorElement"> element is in the document
 const anchor = document.getElementById("myAnchor");
 anchor.pathname; // returns '/en-US/docs/HTMLAnchorElement'
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("HTMLAnchorElement")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("HTMLAnchorElement")}} interface it belongs to.

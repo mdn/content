@@ -2,53 +2,55 @@
 title: MediaDeviceInfo.groupId
 slug: Web/API/MediaDeviceInfo/groupId
 tags:
-- API
-- Device
-- Input
-- Media
-- MediaDevicesInfo
-- Property
-- groupId
-- output
+  - API
+  - Device
+  - Input
+  - Media
+  - MediaDevicesInfo
+  - Property
+  - groupId
+  - output
 browser-compat: api.MediaDeviceInfo.groupId
 ---
-<p>{{APIRef("Media Capture")}}</p>
+{{APIRef("Media Capture")}}
 
-<p>The <strong><code>groupId</code></strong> readonly property of
-    the {{domxref("MediaDeviceInfo")}} interface returns a {{domxref("DOMString")}} that
-    is a group identifier.</p>
+The **`groupId`** readonly property of
+the {{domxref("MediaDeviceInfo")}} interface returns a {{domxref("DOMString")}} that
+is a group identifier.
 
-<p>Two devices have the same group identifier if they
-  belong to the same physical device; for example, a monitor with both a built-in camera
-  and microphone.</p>
+Two devices have the same group identifier if they
+belong to the same physical device; for example, a monitor with both a built-in camera
+and microphone.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>groupID</em> = <em>mediaDeviceInfo</em>.groupId;</pre>
+```js
+var groupID = mediaDeviceInfo.groupId;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} which uniquely identifies the group of related devices to
-  which this device belongs.</p>
+A {{domxref("DOMString")}} which uniquely identifies the group of related devices to
+which this device belongs.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this example, we assemble a list of the devices which are part of the same group as
-  a given device. This might be used to produce a user interface that gathers associated
-  devices together for presentation purposes, or to make it easy for the user to choose to
-  use the built-in camera and microphone on the same display at the same time.</p>
+In this example, we assemble a list of the devices which are part of the same group as
+a given device. This might be used to produce a user interface that gathers associated
+devices together for presentation purposes, or to make it easy for the user to choose to
+use the built-in camera and microphone on the same display at the same time.
 
-<pre class="brush: js">const getDeviceGroup = mainDevInfo =&gt; {
+```js
+const getDeviceGroup = mainDevInfo => {
   let devList = [];
 
   navigator.mediaDevices.enumerateDevices()
-  .then(devices =&gt; {
-    devices.forEach(device =&gt; {
+  .then(devices => {
+    devices.forEach(device => {
       if (device.groupId === mainDevInfo.groupId) {
         devList.push(device);
       }
@@ -57,38 +59,39 @@ browser-compat: api.MediaDeviceInfo.groupId
 
   return devList;
 };
-</pre>
+```
 
-<p>The <code>getDeviceGroup()</code> function takes as input the
-  <code>MediaDeviceInfo</code> object describing the device for which a group list is to
-  be built. The function starts by initializing the result array, <code>devList</code>, to
-  be an empty array.</p>
+The `getDeviceGroup()` function takes as input the
+`MediaDeviceInfo` object describing the device for which a group list is to
+be built. The function starts by initializing the result array, `devList`, to
+be an empty array.
 
-<p>Then {{domxref("MediaDevices.enumerateDevices",
+Then {{domxref("MediaDevices.enumerateDevices",
   "navigator.mediaDevices.enumerateDevices()")}} is called to get the list of all media
-  devices. Once the promise resolves, we walk the list using {{jsxref("Array.forEach",
+devices. Once the promise resolves, we walk the list using {{jsxref("Array.forEach",
   "forEach()")}}. For each device, if its {{domxref("MediaDeviceInfo.groupId",
-  "groupId")}} matches the main device's <code>groupId</code>, we push the
-  {{domxref("MediaDeviceInfo")}} object onto the list.</p>
+  "groupId")}} matches the main device's `groupId`, we push the
+{{domxref("MediaDeviceInfo")}} object onto the list.
 
-<p>Finally, the list, which now contains a <code>MediaDeviceInfo</code> object for each
-  device in the same group, is returned to the caller.</p>
+Finally, the list, which now contains a `MediaDeviceInfo` object for each
+device in the same group, is returned to the caller.
 
-<p>This could be altered easily to either leave out the passed-in device from the returned
-  list, or to place it at the top of the list, by comparing the two objects'
-  {{domxref("MediaDeviceInfo.deviceId", "deviceId")}} values, only pushing the device onto
-  the result list if it doesn't match.</p>
+This could be altered easily to either leave out the passed-in device from the returned
+list, or to place it at the top of the list, by comparing the two objects'
+{{domxref("MediaDeviceInfo.deviceId", "deviceId")}} values, only pushing the device onto
+the result list if it doesn't match.
 
-<p>This version of the example puts the passed-in device at the top of the result list,
-  then adds any other members of the group that are found:</p>
+This version of the example puts the passed-in device at the top of the result list,
+then adds any other members of the group that are found:
 
-<pre class="brush: js">const getDeviceGroup = mainDevInfo =&gt; {
+```js
+const getDeviceGroup = mainDevInfo => {
   let devList = [mainDevInfo];
 
   navigator.mediaDevices.enumerateDevices()
-  .then(devices =&gt; {
-    devices.forEach(device =&gt; {
-      if ((device.groupId === mainDevInfo.groupId) &amp;&amp;
+  .then(devices => {
+    devices.forEach(device => {
+      if ((device.groupId === mainDevInfo.groupId) &&
           (device.deviceId !== mainDevInfo.deviceId)) {
         devList.push(device);
       }
@@ -96,8 +99,9 @@ browser-compat: api.MediaDeviceInfo.groupId
   });
 
   return devList;
-};</pre>
+};
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -9,40 +9,24 @@ tags:
   - Reference
   - WebAPI
 ---
-<p>{{APIRef("File System API")}}{{ non-standard_header }}</p>
+{{APIRef("File System API")}}{{ non-standard_header }}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>Specifies an event listener to receive {{event("abort")}} events. These events occur when the locked file has been aborted with the {{domxref("LockedFile.abort()")}} method.</p>
+Specifies an event listener to receive {{event("abort")}} events. These events occur when the locked file has been aborted with the {{domxref("LockedFile.abort()")}} method.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="eval"><em>instanceOfLockedFile</em>.onabort = <em>funcRef</em>;
-</pre>
+    instanceOfLockedFile.onabort = funcRef;
 
-<p>Where <code><em>funcRef</em></code> is a function to be called when the {{event("abort")}} event occurs.</p>
+Where `funcRef` is a function to be called when the {{event("abort")}} event occurs.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('FileSystem')}}</td>
-   <td>{{Spec2('FileSystem')}}</td>
-   <td>Draft proposal.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                        | Status                           | Comment         |
+| ------------------------------------ | -------------------------------- | --------------- |
+| {{SpecName('FileSystem')}} | {{Spec2('FileSystem')}} | Draft proposal. |
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("LockedFile")}}</li>
-</ul>
+- {{domxref("LockedFile")}}

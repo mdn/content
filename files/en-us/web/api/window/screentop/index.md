@@ -2,47 +2,46 @@
 title: Window.screenTop
 slug: Web/API/Window/screenTop
 tags:
-- API
-- CSSOM View
-- Property
-- Read-only
-- Reference
-- Window
-- screenTop
+  - API
+  - CSSOM View
+  - Property
+  - Read-only
+  - Reference
+  - Window
+  - screenTop
 browser-compat: api.Window.screenTop
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p>The <code><strong>Window.screenTop</strong></code> read-only property returns the
-  vertical distance, in CSS pixels, from the top border of the user's browser viewport to
-  the top side of the screen.</p>
+The **`Window.screenTop`** read-only property returns the
+vertical distance, in CSS pixels, from the top border of the user's browser viewport to
+the top side of the screen.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> <code>screenTop</code> is an alias of the older
-    {{domxref("Window.screenY")}} property. <code>screenTop</code> was originally
-    supported only in IE but was introduced everywhere due to popularity.</p>
-</div>
+> **Note:** `screenTop` is an alias of the older
+> {{domxref("Window.screenY")}} property. `screenTop` was originally
+> supported only in IE but was introduced everywhere due to popularity.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>topWindowPos</em> = window.screenTop
-</pre>
+```js
+topWindowPos = window.screenTop
+```
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A number equal to the number of CSS pixels from the top edge of the browser viewport to
-  the  top edge of the screen.</p>
+A number equal to the number of CSS pixels from the top edge of the browser viewport to
+the  top edge of the screen.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In our <a
-    href="https://mdn.github.io/dom-examples/screenleft-screentop/">screenleft-screentop</a>
-  example, you'll see a canvas onto which has been drawn a circle. In this example we are
-  using <code>screenLeft</code>/<code>screenTop</code> plus
-  {{domxref("Window.requestAnimationFrame()")}} to constantly redraw the circle in the
-  same physical position on the screen, even if the window position is moved.</p>
+In our [screenleft-screentop](https://mdn.github.io/dom-examples/screenleft-screentop/)
+example, you'll see a canvas onto which has been drawn a circle. In this example we are
+using `screenLeft`/`screenTop` plus
+{{domxref("Window.requestAnimationFrame()")}} to constantly redraw the circle in the
+same physical position on the screen, even if the window position is moved.
 
-<pre class="brush: js">initialLeft = window.screenLeft + canvasElem.offsetLeft;
+```js
+initialLeft = window.screenLeft + canvasElem.offsetLeft;
 initialTop = window.screenTop + canvasElem.offsetTop;
 
 function positionElem() {
@@ -64,28 +63,29 @@ function positionElem() {
   window.requestAnimationFrame(positionElem);
 }
 
-window.requestAnimationFrame(positionElem);</pre>
+window.requestAnimationFrame(positionElem);
+```
 
-<p>Also in the code we include a snippet that detects whether <code>screenLeft</code> is
-  supported, and if not, polyfills in <code>screenLeft</code>/<code>screenTop</code> using
-  {{domxref("Window.screenX")}}/{{domxref("Window.screenY")}}.</p>
+Also in the code we include a snippet that detects whether `screenLeft` is
+supported, and if not, polyfills in `screenLeft`/`screenTop` using
+{{domxref("Window.screenX")}}/{{domxref("Window.screenY")}}.
 
-<pre class="brush: js">if(!window.screenLeft) {
+```js
+if(!window.screenLeft) {
   window.screenLeft = window.screenX;
   window.screenTop = window.screenY;
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("window.screenLeft")}}</li>
-  <li>{{domxref("Window.screenY")}}</li>
-</ul>
+- {{domxref("window.screenLeft")}}
+- {{domxref("Window.screenY")}}

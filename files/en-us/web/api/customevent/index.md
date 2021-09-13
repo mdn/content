@@ -10,65 +10,58 @@ tags:
   - Reference
 browser-compat: api.CustomEvent
 ---
-<div>{{APIRef("DOM")}}</div>
-<p>The <strong><code>CustomEvent</code></strong> interface represents events initialized by an application for any purpose.</p>
+{{APIRef("DOM")}}
 
-<p>{{AvailableInWorkers}}</p>
+The **`CustomEvent`** interface represents events initialized by an application for any purpose.
 
-<h2 id="Constructor">Constructor</h2>
+{{AvailableInWorkers}}
 
-<dl>
- <dt>{{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}</dt>
- <dd>Creates a <code>CustomEvent</code>.</dd>
-</dl>
+## Constructor
 
-<h2 id="Properties">Properties</h2>
+- {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}
+  - : Creates a `CustomEvent`.
 
-<p><em>This interface inherits properties from its parent, </em> {{domxref("Event")}}.</p>
+## Properties
 
-<dl>
- <dt>{{domxref("CustomEvent.detail")}} {{readonlyinline}}</dt>
- <dd>Any data passed when initializing the event.</dd>
-</dl>
+_This interface inherits properties from its parent,_ {{domxref("Event")}}.
 
-<h2 id="Methods">Methods</h2>
+- {{domxref("CustomEvent.detail")}} {{readonlyinline}}
+  - : Any data passed when initializing the event.
 
-<p><em>This interface inherits methods from its parent, </em>{{domxref("Event")}}.</p>
+## Methods
 
-<dl>
- <dt>{{domxref("CustomEvent.initCustomEvent()")}} {{deprecated_inline}}</dt>
- <dd>
- <p>Initializes a <code>CustomEvent</code> object. If the event has already being dispatched, this method does nothing.</p>
- </dd>
-</dl>
+_This interface inherits methods from its parent,_ {{domxref("Event")}}.
 
-<h2 id="Specifications">Specifications</h2>
+- {{domxref("CustomEvent.initCustomEvent()")}} {{deprecated_inline}}
+  - : Initializes a `CustomEvent` object. If the event has already being dispatched, this method does nothing.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Firing_from_privileged_code_to_non-privileged_code">Firing from privileged code to non-privileged code</h2>
+## Firing from privileged code to non-privileged code
 
-<p>When firing a <code>CustomEvent</code> from privileged code (i.e. an extension) to non-privileged code (i.e. a webpage), security issues should be considered. Firefox and other Gecko applications restrict an object created in one context from being directly used for another, which will automatically prevent security holes, but these restrictions may also prevent your code from running as expected.</p>
+When firing a `CustomEvent` from privileged code (i.e. an extension) to non-privileged code (i.e. a webpage), security issues should be considered. Firefox and other Gecko applications restrict an object created in one context from being directly used for another, which will automatically prevent security holes, but these restrictions may also prevent your code from running as expected.
 
-<p>While creating a <code>CustomEvent</code> object, you must create the object from the same <a href="/en-US/docs/XUL/window">window</a>. The <code>detail</code> attribute of your <code>CustomEvent</code> will be subjected to the same restrictions. <code>String</code> and <code>Array</code> values will be readable by the content without restrictions, but custom <code>Object</code> will not. While using a custom object, you will need to define the attributes of that object that are readable from the content script using <a href="/en-US/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.cloneInto">Components.utils.cloneInto()</a>.</p>
+While creating a `CustomEvent` object, you must create the object from the same [window](/en-US/docs/XUL/window). The `detail` attribute of your `CustomEvent` will be subjected to the same restrictions. `String` and `Array` values will be readable by the content without restrictions, but custom `Object` will not. While using a custom object, you will need to define the attributes of that object that are readable from the content script using [Components.utils.cloneInto()](/en-US/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.cloneInto).
 
-<pre class="brush: js">// doc is a reference to the content document
+```js
+// doc is a reference to the content document
 function dispatchCustomEvent(doc) {
   var eventDetail = Components.utils.cloneInto({foo: 'bar'}, doc.defaultView);
   var myEvent = doc.defaultView.CustomEvent("mytype", eventDetail);
   doc.dispatchEvent(myEvent);
-}</pre>
+}
+```
 
-<p>But one needs to keep in mind that exposing a function will allow the content script to run it with chrome privileges, which can open a security vulnerability.</p>
+But one needs to keep in mind that exposing a function will allow the content script to run it with chrome privileges, which can open a security vulnerability.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("Window.postMessage()")}}</li>
- <li><a href="/en-US/docs/Code_snippets/Interaction_between_privileged_and_non-privileged_pages">Interaction between privileged and non-privileged pages</a></li>
- <li><a href="/en-US/docs/Web/Events/Creating_and_triggering_events">Creating and triggering events</a></li>
-</ul>
+- {{domxref("Window.postMessage()")}}
+- [Interaction between privileged and non-privileged pages](/en-US/docs/Code_snippets/Interaction_between_privileged_and_non-privileged_pages)
+- [Creating and triggering events](/en-US/docs/Web/Events/Creating_and_triggering_events)

@@ -2,40 +2,41 @@
 title: HTMLVideoElement.disablePictureInPicture
 slug: Web/API/HTMLVideoElement/disablePictureInPicture
 tags:
-- API
-- HTML
-- HTML DOM
-- HTMLVideoElement
-- Media
-- Picture-in-Picture
-- Picture-in-Picture API
-- Property
-- Reference
-- Video
-- pip
+  - API
+  - HTML
+  - HTML DOM
+  - HTMLVideoElement
+  - Media
+  - Picture-in-Picture
+  - Picture-in-Picture API
+  - Property
+  - Reference
+  - Video
+  - pip
 browser-compat: api.HTMLVideoElement.disablePictureInPicture
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p>The {{domxref("HTMLVideoElement")}} 
-    <code><strong>disablePictureInPicture</strong></code> property reflects the HTML
-    attribute indicating whether the user agent should suggest the
-  picture-in-picture feature to users, or request it automatically.</p>
+The {{domxref("HTMLVideoElement")}} 
+**`disablePictureInPicture`** property reflects the HTML
+attribute indicating whether the user agent should suggest the
+picture-in-picture feature to users, or request it automatically.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>disablePictureInPicture</em> = <em>htmlVideoElement</em>.disablePictureInPicture;</pre>
+```js
+disablePictureInPicture = htmlVideoElement.disablePictureInPicture;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A boolean value that is <code>true</code> if the user agent should
-  suggest that feature to users.</p>
+A boolean value that is `true` if the user agent should
+suggest that feature to users.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

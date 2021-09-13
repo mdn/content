@@ -17,48 +17,42 @@ tags:
   - VideoPlaybackQuality
 browser-compat: api.VideoPlaybackQuality
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p>A <code><strong>VideoPlaybackQuality</strong></code> object is returned by the {{domxref("HTMLVideoElement.getVideoPlaybackQuality()")}} method and contains metrics that can be used to determine the playback quality of a video.</p>
+A **`VideoPlaybackQuality`** object is returned by the {{domxref("HTMLVideoElement.getVideoPlaybackQuality()")}} method and contains metrics that can be used to determine the playback quality of a video.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>The <code>VideoPlaybackQuality</code> interface doesn't inherit properties from any other interfaces.</em></p>
+_The `VideoPlaybackQuality` interface doesn't inherit properties from any other interfaces._
 
-<dl>
- <dt>{{domxref("VideoPlaybackQuality.creationTime", "creationTime")}} {{readonlyInline}}</dt>
- <dd>A {{domxref("DOMHighResTimeStamp")}} containing the time in milliseconds between the start of the navigation and the creation of the object.</dd>
- <dt>{{domxref("VideoPlaybackQuality.droppedVideoFrames", "droppedVideoFrames")}} {{readonlyInline}}</dt>
- <dd>An <code>unsigned long</code> giving the number of video frames dropped since the creation of the associated {{domxref("HTMLVideoElement")}}.</dd>
- <dt>{{domxref("VideoPlaybackQuality.totalVideoFrames", "totalVideoFrames")}} {{readonlyInline}}</dt>
- <dd>An <code>unsigned long</code> giving the number of video frames created and dropped since the creation of the associated {{domxref("HTMLVideoElement")}}.</dd>
-</dl>
+- {{domxref("VideoPlaybackQuality.creationTime", "creationTime")}} {{readonlyInline}}
+  - : A {{domxref("DOMHighResTimeStamp")}} containing the time in milliseconds between the start of the navigation and the creation of the object.
+- {{domxref("VideoPlaybackQuality.droppedVideoFrames", "droppedVideoFrames")}} {{readonlyInline}}
+  - : An `unsigned long` giving the number of video frames dropped since the creation of the associated {{domxref("HTMLVideoElement")}}.
+- {{domxref("VideoPlaybackQuality.totalVideoFrames", "totalVideoFrames")}} {{readonlyInline}}
+  - : An `unsigned long` giving the number of video frames created and dropped since the creation of the associated {{domxref("HTMLVideoElement")}}.
 
-<h3 id="Obsolete_properties">Obsolete properties</h3>
+### Obsolete properties
 
-<dl>
- <dt>{{domxref("VideoPlaybackQuality.corruptedVideoFrames", "corruptedVideoFrames")}} {{readonlyInline}}</dt>
- <dd>An <code>unsigned long</code> giving the number of video frames corrupted since the creation of the associated {{domxref("HTMLVideoElement")}}. A corrupted frame may be created or dropped.</dd>
- <dt>{{domxref("VideoPlaybackQuality.totalFrameDelay", "totalFrameDelay")}} {{readonlyInline}} {{deprecated_inline}}</dt>
- <dd>A <code>double</code> containing the sum of the frame delay since the creation of the associated {{domxref("HTMLVideoElement")}}. The frame delay is the difference between a frame's theoretical presentation time and its effective display time.</dd>
-</dl>
+- {{domxref("VideoPlaybackQuality.corruptedVideoFrames", "corruptedVideoFrames")}} {{readonlyInline}}
+  - : An `unsigned long` giving the number of video frames corrupted since the creation of the associated {{domxref("HTMLVideoElement")}}. A corrupted frame may be created or dropped.
+- {{domxref("VideoPlaybackQuality.totalFrameDelay", "totalFrameDelay")}} {{readonlyInline}} {{deprecated_inline}}
+  - : A `double` containing the sum of the frame delay since the creation of the associated {{domxref("HTMLVideoElement")}}. The frame delay is the difference between a frame's theoretical presentation time and its effective display time.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>The <code>VideoPlaybackQuality</code> interface has no methods, and does not inherit any.</em></p>
+_The `VideoPlaybackQuality` interface has no methods, and does not inherit any._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The {{domxref("HTMLVideoElement.getVideoPlaybackQuality()")}} method to get a <code>VideoPlaybackQuality</code> object</li>
- <li>{{domxref("MediaSource")}}</li>
- <li>{{domxref("SourceBuffer")}}</li>
-</ul>
+- The {{domxref("HTMLVideoElement.getVideoPlaybackQuality()")}} method to get a `VideoPlaybackQuality` object
+- {{domxref("MediaSource")}}
+- {{domxref("SourceBuffer")}}

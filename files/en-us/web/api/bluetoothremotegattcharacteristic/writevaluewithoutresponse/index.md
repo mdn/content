@@ -2,40 +2,39 @@
 title: BluetoothRemoteGATTCharacteristic.writeValueWithoutResponse()
 slug: Web/API/BluetoothRemoteGATTCharacteristic/writeValueWithoutResponse
 tags:
-- API
-- Bluetooth
-- BluetoothRemoteGATTCharacteristic
-- Experimental
-- Property
-- Reference
-- Web Bluetooth API
-- writeValueWithoutResponse
+  - API
+  - Bluetooth
+  - BluetoothRemoteGATTCharacteristic
+  - Experimental
+  - Property
+  - Reference
+  - Web Bluetooth API
+  - writeValueWithoutResponse
 browser-compat: api.BluetoothRemoteGATTCharacteristic.writeValueWithoutResponse
 ---
-<p>The <strong><code>BluetoothRemoteGATTCharacteristic.writeValueWithoutResponse()</code></strong> method sets a {{domxref("BluetoothRemoteGATTCharacteristic")}} object’s <code>value</code> property to the bytes contained in a given {{JSxRef("ArrayBuffer")}}, calls <a href="https://webbluetoothcg.github.io/web-bluetooth/#writecharacteristicvalue"><code>WriteCharacteristicValue</code>(<var>this</var>=<code>this</code>, <var>value=value</var>, <var>response</var>=<code>"never"</code>)</a>, and returns the resulting {{JSxRef("Promise")}}.</p>
+The **`BluetoothRemoteGATTCharacteristic.writeValueWithoutResponse()`** method sets a {{domxref("BluetoothRemoteGATTCharacteristic")}} object’s `value` property to the bytes contained in a given {{JSxRef("ArrayBuffer")}}, calls [`WriteCharacteristicValue`(_this_=`this`, _value=value_, _response_=`"never"`)](https://webbluetoothcg.github.io/web-bluetooth/#writecharacteristicvalue), and returns the resulting {{JSxRef("Promise")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">BluetoothRemoteGATTCharacteristic.writeValueWithoutResponse(value).then(function() { ... })</pre>
+```js
+BluetoothRemoteGATTCharacteristic.writeValueWithoutResponse(value).then(function() { ... })
+```
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A {{jsxref("Promise")}}.</p>
+A {{jsxref("Promise")}}.
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>value</dt>
-  <dd>An {{jsxref("ArrayBuffer")}}. </dd>
-</dl>
+- value
+  - : An {{jsxref("ArrayBuffer")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<div>{{APIRef("Web Bluetooth")}}</div>
+{{APIRef("Web Bluetooth")}}

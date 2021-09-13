@@ -2,173 +2,132 @@
 title: WebGLRenderingContext.framebufferTexture2D()
 slug: Web/API/WebGLRenderingContext/framebufferTexture2D
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.framebufferTexture2D
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.framebufferTexture2D()</code></strong> method
-  of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> attaches a texture to a
-  {{domxref("WebGLFramebuffer")}}.</p>
+The **`WebGLRenderingContext.framebufferTexture2D()`** method
+of the [WebGL API](/en-US/docs/Web/API/WebGL_API) attaches a texture to a
+{{domxref("WebGLFramebuffer")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <var>gl</var>.framebufferTexture2D(<var>target</var>, <var>attachment</var>, <var>textarget</var>, <var>texture</var>, <var>level</var>);
-</pre>
+```js
+void gl.framebufferTexture2D(target, attachment, textarget, texture, level);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>target</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target). Possible values:
-    <ul>
-      <li><code>gl.FRAMEBUFFER</code>: Collection buffer data storage of color, alpha,
-        depth and stencil buffers used to render an image.</li>
-      <li>When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
-        the following values are available additionally:
-        <ul>
-          <li><code>gl.DRAW_FRAMEBUFFER</code>: Used as a destination for drawing,
-            rendering, clearing, and writing operations.</li>
-          <li><code>gl.READ_FRAMEBUFFER</code>: Used as a source for reading operations.
-          </li>
-        </ul>
-        When binding, <code>gl.FRAMEBUFFER</code> sets both the
-        <code>gl.DRAW_FRAMEBUFFER</code> and <code>gl.READ_FRAMEBUFFER</code> binding
-        points. When referencing, <code>gl.FRAMEBUFFER</code> refers to the
-        <code>gl.DRAW_FRAMEBUFFER</code> binding
-      </li>
-    </ul>
-  </dd>
-  <dt>attachment</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the attachment point for the
-    <code>texture</code>. Possible values:
-    <ul>
-      <li><code>gl.COLOR_ATTACHMENT0</code>: Attaches the texture to the framebuffer's
-        color buffer.</li>
-      <li><code>gl.DEPTH_ATTACHMENT</code>: Attaches the texture to the framebuffer's
-        depth buffer.</li>
-      <li><code>gl.STENCIL_ATTACHMENT</code>: Attaches the texture to the framebuffer's
-        stencil buffer.</li>
-      <li>When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
-        the following values are available additionally:
-        <ul>
-          <li><code>gl.DEPTH_STENCIL_ATTACHMENT</code>: depth and stencil buffer.</li>
-          <li><code>gl.COLOR_ATTACHMENT1<br>
-     gl.COLOR_ATTACHMENT2<br>
-     gl.COLOR_ATTACHMENT3<br>
-     gl.COLOR_ATTACHMENT4<br>
-     gl.COLOR_ATTACHMENT5<br>
-     gl.COLOR_ATTACHMENT6<br>
-     gl.COLOR_ATTACHMENT7<br>
-     gl.COLOR_ATTACHMENT8<br>
-     gl.COLOR_ATTACHMENT9<br>
-     gl.COLOR_ATTACHMENT10<br>
-     gl.COLOR_ATTACHMENT11<br>
-     gl.COLOR_ATTACHMENT12<br>
-     gl.COLOR_ATTACHMENT13<br>
-     gl.COLOR_ATTACHMENT14<br>
-     gl.COLOR_ATTACHMENT15</code></li>
-        </ul>
-      </li>
-      <li>When using the {{domxref("WEBGL_draw_buffers")}} extension:
-        <ul>
-          <li><code>ext.COLOR_ATTACHMENT0_WEBGL</code> (same as
-            <code>gl.COLOR_ATTACHMENT0</code>)<br>
-            <code>ext.COLOR_ATTACHMENT1_WEBGL<br>
-     ext.COLOR_ATTACHMENT2_WEBGL<br>
-     ext.COLOR_ATTACHMENT3_WEBGL<br>
-     ext.COLOR_ATTACHMENT4_WEBGL<br>
-     ext.COLOR_ATTACHMENT5_WEBGL<br>
-     ext.COLOR_ATTACHMENT6_WEBGL<br>
-     ext.COLOR_ATTACHMENT7_WEBGL<br>
-     ext.COLOR_ATTACHMENT8_WEBGL<br>
-     ext.COLOR_ATTACHMENT9_WEBGL<br>
-     ext.COLOR_ATTACHMENT10_WEBGL<br>
-     ext.COLOR_ATTACHMENT11_WEBGL<br>
-     ext.COLOR_ATTACHMENT12_WEBGL<br>
-     ext.COLOR_ATTACHMENT13_WEBGL<br>
-     ext.COLOR_ATTACHMENT14_WEBGL<br>
-     ext.COLOR_ATTACHMENT15_WEBGL</code>
-          </li>
-        </ul>
-      </li>
-      <li>When using the {{domxref("WEBGL_depth_texture")}} extension:
-        <ul>
-          <li><code>gl.DEPTH_STENCIL_ATTACHMENT</code>: Depth and stencil buffer data
-            storage.</li>
-        </ul>
-      </li>
-    </ul>
-  </dd>
-  <dt>textarget</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the texture target. Possible values:
-    <ul>
-      <li><code>gl.TEXTURE_2D</code>: A 2D image.</li>
-      <li><code>gl.TEXTURE_CUBE_MAP_POSITIVE_X</code>: Image for the positive X face of
-        the cube.</li>
-      <li><code>gl.TEXTURE_CUBE_MAP_NEGATIVE_X</code>: Image for the negative X face of
-        the cube.</li>
-      <li><code>gl.TEXTURE_CUBE_MAP_POSITIVE_Y</code>: Image for the positive Y face of
-        the cube.</li>
-      <li><code>gl.TEXTURE_CUBE_MAP_NEGATIVE_Y</code>: Image for the negative Y face of
-        the cube.</li>
-      <li><code>gl.TEXTURE_CUBE_MAP_POSITIVE_Z</code>: Image for the positive Z face of
-        the cube.</li>
-      <li><code>gl.TEXTURE_CUBE_MAP_NEGATIVE_Z</code>: Image for the negative Z face of
-        the cube.</li>
-    </ul>
-  </dd>
-  <dt>texture</dt>
-  <dd>A {{domxref("WebGLTexture")}} object whose image to attach.</dd>
-  <dt>level</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLint")}} specifying the mipmap level of the texture image to be
-    attached. Must be 0.</dd>
-</dl>
+- target
 
-<h3 id="Return_value">Return value</h3>
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target). Possible values:
 
-<p>None.</p>
+    - `gl.FRAMEBUFFER`: Collection buffer data storage of color, alpha,
+      depth and stencil buffers used to render an image.
+    - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
+      the following values are available additionally:
 
-<h3 id="Exceptions">Exceptions</h3>
+      - `gl.DRAW_FRAMEBUFFER`: Used as a destination for drawing,
+        rendering, clearing, and writing operations.
+      - `gl.READ_FRAMEBUFFER`: Used as a source for reading operations.
 
-<ul>
-  <li>A <code>gl.INVALID_ENUM</code> error is thrown if
+      When binding, `gl.FRAMEBUFFER` sets both the
+      `gl.DRAW_FRAMEBUFFER` and `gl.READ_FRAMEBUFFER` binding
+      points. When referencing, `gl.FRAMEBUFFER` refers to the
+      `gl.DRAW_FRAMEBUFFER` binding
 
-    <ul>
-      <li><code>target</code> is not <code>gl.FRAMEBUFFER</code>.</li>
-      <li><code>attachment</code> is not one of the accepted attachment points.</li>
-      <li><code>textarget</code> is not one of the accepted texture targets.</li>
-    </ul>
-  </li>
-  <li>A <code>gl.INVALID_VALUE</code> error is thrown if <code>level</code> is not 0.</li>
-  <li>A <code>gl.INVALID_OPERATION</code> error is thrown if <code>texture</code> isn't 0
-    or the name of an existing texture object.</li>
-</ul>
+- attachment
 
-<h2 id="Examples">Examples</h2>
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the attachment point for the
+    `texture`. Possible values:
 
-<pre class="brush: js">gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, texture, 0);
-</pre>
+    - `gl.COLOR_ATTACHMENT0`: Attaches the texture to the framebuffer's
+      color buffer.
+    - `gl.DEPTH_ATTACHMENT`: Attaches the texture to the framebuffer's
+      depth buffer.
+    - `gl.STENCIL_ATTACHMENT`: Attaches the texture to the framebuffer's
+      stencil buffer.
+    - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
+      the following values are available additionally:
 
-<h2 id="Specifications">Specifications</h2>
+      - `gl.DEPTH_STENCIL_ATTACHMENT`: depth and stencil buffer.
+      - `gl.COLOR_ATTACHMENT1 gl.COLOR_ATTACHMENT2 gl.COLOR_ATTACHMENT3 gl.COLOR_ATTACHMENT4 gl.COLOR_ATTACHMENT5 gl.COLOR_ATTACHMENT6 gl.COLOR_ATTACHMENT7 gl.COLOR_ATTACHMENT8 gl.COLOR_ATTACHMENT9 gl.COLOR_ATTACHMENT10 gl.COLOR_ATTACHMENT11 gl.COLOR_ATTACHMENT12 gl.COLOR_ATTACHMENT13 gl.COLOR_ATTACHMENT14 gl.COLOR_ATTACHMENT15`
+
+    - When using the {{domxref("WEBGL_draw_buffers")}} extension:
+
+      - `ext.COLOR_ATTACHMENT0_WEBGL` (same as
+        `gl.COLOR_ATTACHMENT0`)
+        `ext.COLOR_ATTACHMENT1_WEBGL ext.COLOR_ATTACHMENT2_WEBGL ext.COLOR_ATTACHMENT3_WEBGL ext.COLOR_ATTACHMENT4_WEBGL ext.COLOR_ATTACHMENT5_WEBGL ext.COLOR_ATTACHMENT6_WEBGL ext.COLOR_ATTACHMENT7_WEBGL ext.COLOR_ATTACHMENT8_WEBGL ext.COLOR_ATTACHMENT9_WEBGL ext.COLOR_ATTACHMENT10_WEBGL ext.COLOR_ATTACHMENT11_WEBGL ext.COLOR_ATTACHMENT12_WEBGL ext.COLOR_ATTACHMENT13_WEBGL ext.COLOR_ATTACHMENT14_WEBGL ext.COLOR_ATTACHMENT15_WEBGL`
+
+    - When using the {{domxref("WEBGL_depth_texture")}} extension:
+
+      - `gl.DEPTH_STENCIL_ATTACHMENT`: Depth and stencil buffer data
+        storage.
+
+- textarget
+
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the texture target. Possible values:
+
+    - `gl.TEXTURE_2D`: A 2D image.
+    - `gl.TEXTURE_CUBE_MAP_POSITIVE_X`: Image for the positive X face of
+      the cube.
+    - `gl.TEXTURE_CUBE_MAP_NEGATIVE_X`: Image for the negative X face of
+      the cube.
+    - `gl.TEXTURE_CUBE_MAP_POSITIVE_Y`: Image for the positive Y face of
+      the cube.
+    - `gl.TEXTURE_CUBE_MAP_NEGATIVE_Y`: Image for the negative Y face of
+      the cube.
+    - `gl.TEXTURE_CUBE_MAP_POSITIVE_Z`: Image for the positive Z face of
+      the cube.
+    - `gl.TEXTURE_CUBE_MAP_NEGATIVE_Z`: Image for the negative Z face of
+      the cube.
+
+- texture
+  - : A {{domxref("WebGLTexture")}} object whose image to attach.
+- level
+  - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the mipmap level of the texture image to be
+    attached. Must be 0.
+
+### Return value
+
+None.
+
+### Exceptions
+
+- A `gl.INVALID_ENUM` error is thrown if
+
+  - `target` is not `gl.FRAMEBUFFER`.
+  - `attachment` is not one of the accepted attachment points.
+  - `textarget` is not one of the accepted texture targets.
+
+- A `gl.INVALID_VALUE` error is thrown if `level` is not 0.
+- A `gl.INVALID_OPERATION` error is thrown if `texture` isn't 0
+  or the name of an existing texture object.
+
+## Examples
+
+```js
+gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, texture, 0);
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.createFramebuffer()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.deleteFramebuffer()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.isFramebuffer()")}}</li>
-  <li>Other buffers: {{domxref("WebGLBuffer")}}, {{domxref("WebGLRenderbuffer")}}</li>
-  <li>{{domxref("WEBGL_depth_texture")}}</li>
-  <li>{{domxref("WEBGL_draw_buffers")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.createFramebuffer()")}}
+- {{domxref("WebGLRenderingContext.deleteFramebuffer()")}}
+- {{domxref("WebGLRenderingContext.isFramebuffer()")}}
+- Other buffers: {{domxref("WebGLBuffer")}}, {{domxref("WebGLRenderbuffer")}}
+- {{domxref("WEBGL_depth_texture")}}
+- {{domxref("WEBGL_draw_buffers")}}

@@ -9,48 +9,49 @@ tags:
   - get
 browser-compat: api.URLSearchParams.get
 ---
-<p>{{ApiRef("URL API")}}</p>
+{{ApiRef("URL API")}}
 
-<p>The <strong><code>get()</code></strong> method of the {{domxref("URLSearchParams")}}
-  interface returns the first value associated to the given search parameter.</p>
+The **`get()`** method of the {{domxref("URLSearchParams")}}
+interface returns the first value associated to the given search parameter.
 
-<p>{{availableinworkers}}</p>
+{{availableinworkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">URLSearchParams.get(<em>name</em>)</pre>
+```js
+URLSearchParams.get(name)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>name</dt>
-  <dd>The name of the parameter to return.</dd>
-</dl>
+- name
+  - : The name of the parameter to return.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("USVString")}} if the given search parameter is found; otherwise,
-  <code><strong>null</strong></code>.</p>
+A {{domxref("USVString")}} if the given search parameter is found; otherwise,
+**`null`**.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>If the URL of your page is <code>https://example.com/?name=Jonathan&amp;age=18</code>
-  you could parse out the 'name' and 'age' parameters using:</p>
+If the URL of your page is `https://example.com/?name=Jonathan&age=18`
+you could parse out the 'name' and 'age' parameters using:
 
-<pre class="brush: js">let params = new URLSearchParams(document.location.search.substring(1));
-let name = params.get(&quot;name&quot;); // is the string &quot;Jonathan&quot;
-let age = parseInt(params.get(&quot;age&quot;), 10); // is the number 18
-</pre>
+```js
+let params = new URLSearchParams(document.location.search.substring(1));
+let name = params.get("name"); // is the string "Jonathan"
+let age = parseInt(params.get("age"), 10); // is the number 18
+```
 
-<p>Requesting a parameter that isn't present in the query string will return
-  <code><strong>null</strong></code>:</p>
+Requesting a parameter that isn't present in the query string will return
+**`null`**:
 
-<pre><code>let address = params.get("address"); // null</code></pre>
+    let address = params.get("address"); // null
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

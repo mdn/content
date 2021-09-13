@@ -9,40 +9,36 @@ tags:
   - Reference
 browser-compat: api.MediaKeyStatusMap
 ---
-<p>{{APIRef("EncryptedMediaExtensions")}}{{SeeCompatTable}}</p>
+{{APIRef("EncryptedMediaExtensions")}}{{SeeCompatTable}}
 
-<p>The <code><strong>MediaKeyStatusMap</strong></code> interface of the <a href="/en-US/docs/Web/API/Encrypted_Media_Extensions_API">EncryptedMediaExtensions API</a> is a read-only map of media key statuses by key IDs.</p>
+The **`MediaKeyStatusMap`** interface of the [EncryptedMediaExtensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API) is a read-only map of media key statuses by key IDs.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("MediaKeyStatusMap.size")}} {{readonlyinline}}</dt>
- <dd>Returns the number of key/value pars in the status map.</dd>
-</dl>
+- {{domxref("MediaKeyStatusMap.size")}} {{readonlyinline}}
+  - : Returns the number of key/value pars in the status map.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("MediaKeyStatusMap.entries()")}} {{readonlyinline}}</dt>
- <dd>Returns a new <code>Iterator</code> object containing an array of <code>[key, value]</code> for each element in the status map, in insertion order.</dd>
- <dt>{{domxref("MediaKeyStatusMap.forEach()","MediaKeyStatusMap.forEach(callback[, argument])")}} {{readonlyinline}}</dt>
- <dd>Calls <code>callback</code> once for each key-value pair in the status map, in insertion order. If <code>argument</code> is present it will be passed to the callback.</dd>
- <dt>{{domxref("MediaKeyStatusMap.get()")}} {{readonlyinline}}</dt>
- <dd>Returns the value associated with the given key, or <code>undefined</code> if there is none.</dd>
- <dt>{{domxref("MediaKeyStatusMap.has()")}} {{readonlyinline}}</dt>
- <dd>Returns a boolean asserting whether a value has been associated with the given key.</dd>
- <dt>{{domxref("MediaKeyStatusMap.keys()")}} {{readonlyinline}}</dt>
- <dd>Returns a new <code>Iterator</code> object containing keys for each element in the status map, in insertion order.</dd>
- <dt>{{domxref("MediaKeyStatusMap.values()")}} {{readonlyinline}}</dt>
- <dd>Returns a new <code>Iterator</code> object containing values for each element in the status map, in insertion order.</dd>
- <dt>{{domxref("MediaKeyStatusMap.[@@iterator]()")}} {{readonlyinline}}</dt>
- <dd>Returns a new <code>Iterator</code> object containing an array of <code>[key, value]</code> for each element in the status map, in insertion order.</dd>
-</dl>
+- {{domxref("MediaKeyStatusMap.entries()")}} {{readonlyinline}}
+  - : Returns a new `Iterator` object containing an array of `[key, value]` for each element in the status map, in insertion order.
+- {{domxref("MediaKeyStatusMap.forEach()","MediaKeyStatusMap.forEach(callback[, argument])")}} {{readonlyinline}}
+  - : Calls `callback` once for each key-value pair in the status map, in insertion order. If `argument` is present it will be passed to the callback.
+- {{domxref("MediaKeyStatusMap.get()")}} {{readonlyinline}}
+  - : Returns the value associated with the given key, or `undefined` if there is none.
+- {{domxref("MediaKeyStatusMap.has()")}} {{readonlyinline}}
+  - : Returns a boolean asserting whether a value has been associated with the given key.
+- {{domxref("MediaKeyStatusMap.keys()")}} {{readonlyinline}}
+  - : Returns a new `Iterator` object containing keys for each element in the status map, in insertion order.
+- {{domxref("MediaKeyStatusMap.values()")}} {{readonlyinline}}
+  - : Returns a new `Iterator` object containing values for each element in the status map, in insertion order.
+- {{domxref("MediaKeyStatusMap.[@@iterator]()")}} {{readonlyinline}}
+  - : Returns a new `Iterator` object containing an array of `[key, value]` for each element in the status map, in insertion order.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

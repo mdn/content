@@ -14,58 +14,61 @@ tags:
   - pointer lock
 browser-compat: api.MouseEvent.movementX
 ---
-<div>{{APIRef("DOM Events")}}</div>
+{{APIRef("DOM Events")}}
 
-<p>The <strong><code>movementX</code></strong> read-only property of the
-  {{domxref("MouseEvent")}} interface provides the difference in the X coordinate of the
-  mouse pointer between the given event and the previous {{event("mousemove")}} event. In
-  other words, the value of the property is computed like this:
-  <code>currentEvent.movementX = currentEvent.screenX - previousEvent.screenX</code>.</p>
+The **`movementX`** read-only property of the
+{{domxref("MouseEvent")}} interface provides the difference in the X coordinate of the
+mouse pointer between the given event and the previous {{event("mousemove")}} event. In
+other words, the value of the property is computed like this:
+`currentEvent.movementX = currentEvent.screenX - previousEvent.screenX`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>xShift</em> = <em>instanceOfMouseEvent</em>.movementX;
-</pre>
+```js
+var xShift = instanceOfMouseEvent.movementX;
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A number</p>
+A number
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example logs the amount of mouse movement using <code>movementX</code> and
-  {{domxref("MouseEvent.movementY", "movementY")}}.</p>
+This example logs the amount of mouse movement using `movementX` and
+{{domxref("MouseEvent.movementY", "movementY")}}.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p id="log"&gt;Move your mouse around.&lt;/p&gt;</pre>
+```html
+<p id="log">Move your mouse around.</p>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">function logMovement(event) {
-  log.insertAdjacentHTML('afterbegin', `movement: ${event.movementX}, ${event.movementY}&lt;br&gt;`);
-  while (log.childNodes.length &gt; 128) log.lastChild.remove()
+```js
+function logMovement(event) {
+  log.insertAdjacentHTML('afterbegin', `movement: ${event.movementX}, ${event.movementY}<br>`);
+  while (log.childNodes.length > 128) log.lastChild.remove()
 }
 
 const log = document.getElementById('log');
-document.addEventListener('mousemove', logMovement);</pre>
+document.addEventListener('mousemove', logMovement);
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("MouseEvent.movementY")}}</li>
-  <li>{{domxref("MouseEvent")}}</li>
-  <li><a href="/en-US/docs/Web/API/Pointer_Lock_API">Pointer Lock</a></li>
-</ul>
+- {{domxref("MouseEvent.movementY")}}
+- {{domxref("MouseEvent")}}
+- [Pointer Lock](/en-US/docs/Web/API/Pointer_Lock_API)

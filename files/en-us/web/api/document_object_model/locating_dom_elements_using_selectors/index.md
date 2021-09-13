@@ -6,52 +6,50 @@ tags:
   - DOM
   - NeedsBeginnerUpdate
 ---
+The Selectors API provides methods that make it quick and easy to retrieve {{domxref("Element")}} nodes from the DOM by matching against a set of {{cssxref("CSS_Selectors", "selectors")}}. This is much faster than past techniques, wherein it was necessary to, for example, use a loop in JavaScript code to locate the specific items you needed to find.
 
-<p>The Selectors API provides methods that make it quick and easy to retrieve {{domxref("Element")}} nodes from the DOM by matching against a set of {{cssxref("CSS_Selectors", "selectors")}}. This is much faster than past techniques, wherein it was necessary to, for example, use a loop in JavaScript code to locate the specific items you needed to find.</p>
+## The NodeSelector interface
 
-<h2 id="The_NodeSelector_interface">The NodeSelector interface</h2>
+This specification adds two new methods to any objects implementing the {{domxref("Document")}}, {{domxref("DocumentFragment")}}, or {{domxref("Element")}} interfaces:
 
-<p>This specification adds two new methods to any objects implementing the {{domxref("Document")}}, {{domxref("DocumentFragment")}}, or {{domxref("Element")}} interfaces:</p>
+- {{domxref("Element.querySelector", "querySelector()")}}
+  - : Returns the first matching {{domxref("Element")}} node within the node's subtree. If no matching node is found, `null` is returned.
+- {{domxref("Element.querySelectorAll", "querySelectorAll()")}}
+  - : Returns a {{domxref("NodeList")}} containing all matching `Element` nodes within the node's subtree, or an empty `NodeList` if no matches are found.
 
-<dl>
- <dt>{{domxref("Element.querySelector", "querySelector()")}}</dt>
- <dd>Returns the first matching {{domxref("Element")}} node within the node's subtree. If no matching node is found, <code>null</code> is returned.</dd>
- <dt>{{domxref("Element.querySelectorAll", "querySelectorAll()")}}</dt>
- <dd>Returns a {{domxref("NodeList")}} containing all matching <code>Element</code> nodes within the node's subtree, or an empty <code>NodeList</code> if no matches are found.</dd>
-</dl>
+> **Note:** The {{domxref("NodeList")}} returned by {{domxref("Element.querySelectorAll()", "querySelectorAll()")}} is not live, which means that changes in the DOM are not reflected in the collection. This is different from other DOM querying methods that return live node lists.
 
-<div class="notecard note"><p><strong>Note:</strong> The {{domxref("NodeList")}} returned by {{domxref("Element.querySelectorAll()", "querySelectorAll()")}} is not live, which means that changes in the DOM are not reflected in the collection. This is different from other DOM querying methods that return live node lists.</p></div>
+You may find examples and details by reading the documentation for the {{domxref("Element.querySelector()")}} and {{domxref("Element.querySelectorAll()")}} methods.
 
-<p>You may find examples and details by reading the documentation for the {{domxref("Element.querySelector()")}} and {{domxref("Element.querySelectorAll()")}} methods.</p>
+## Selectors
 
-<h2 id="Selectors">Selectors</h2>
+The selector methods accept {{cssxref("CSS_Selectors", "selectors")}} to determine what element or elements should be returned. This includes {{cssxref("Selector_list", "selector lists")}} so you can group multiple selectors in a single query.
 
-<p>The selector methods accept {{cssxref("CSS_Selectors", "selectors")}} to determine what element or elements should be returned. This includes {{cssxref("Selector_list", "selector lists")}} so you can group multiple selectors in a single query.</p>
+To protect the user's privacy, some {{cssxref("Pseudo-classes")}} are not supported or behave differently. For example {{cssxref(":visited")}} will return no matches and {{cssxref(":link")}} is treated as {{cssxref(":any-link")}}.
 
-<p>To protect the user's privacy, some {{cssxref("Pseudo-classes")}} are not supported or behave differently. For example {{cssxref(":visited")}} will return no matches and {{cssxref(":link")}} is treated as {{cssxref(":any-link")}}.</p>
+Only elements can be selected, so {{cssxref("Pseudo-elements")}} are not supported.
 
-<p>Only elements can be selected, so {{cssxref("Pseudo-elements")}} are not supported.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+To select all paragraph (`p`) elements in a document whose classes include `warning` or `note`, you can do the following:
 
-<p>To select all paragraph (<code>p</code>) elements in a document whose classes include <code>warning</code> or <code>note</code>, you can do the following:
-</p>
+```js
+const special = document.querySelectorAll("p.warning, p.note");
+```
 
-<pre class="brush: js">const special = document.querySelectorAll("p.warning, p.note");</pre>
+You can also query by ID. For example:
 
-<p>You can also query by ID. For example:</p>
+```js
+const el = document.querySelector("#main, #basic, #exclamation");
+```
 
-<pre class="brush: js">const el = document.querySelector("#main, #basic, #exclamation");</pre>
+After executing the above code, `el` contains the first element in the document whose ID is one of `main`, `basic`, or `exclamation`.
 
-<p>After executing the above code, <code>el</code> contains the first element in the document whose ID is one of <code>main</code>, <code>basic</code>, or <code>exclamation</code>.</p>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="https://drafts.csswg.org/selectors/">Selectors specification</a></li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Selectors">CSS Selectors</a></li>
- <li>{{domxref("Element.querySelector()")}}</li>
- <li>{{domxref("Element.querySelectorAll()")}}</li>
- <li>{{domxref("Document.querySelector()")}}</li>
- <li>{{domxref("Document.querySelectorAll()")}}</li>
-</ul>
+- [Selectors specification](https://drafts.csswg.org/selectors/)
+- [CSS Selectors](/en-US/docs/Web/CSS/CSS_Selectors)
+- {{domxref("Element.querySelector()")}}
+- {{domxref("Element.querySelectorAll()")}}
+- {{domxref("Document.querySelector()")}}
+- {{domxref("Document.querySelectorAll()")}}

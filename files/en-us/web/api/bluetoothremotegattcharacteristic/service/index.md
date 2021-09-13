@@ -12,27 +12,27 @@ tags:
   - Web Bluetooth API
 browser-compat: api.BluetoothRemoteGATTCharacteristic.service
 ---
-<p>{{SeeCompatTable}}</p>
+{{SeeCompatTable}}
 
-<p>The <strong><code>BluetoothRemoteGATTCharacteristic.service</code></strong> read-only
-  property returns the {{domxref("BluetoothRemoteGATTService")}} this characteristic belongs to.
-</p>
+The **`BluetoothRemoteGATTCharacteristic.service`** read-only
+property returns the {{domxref("BluetoothRemoteGATTService")}} this characteristic belongs to.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>bluetoothRemoteGATTServiceInstance</em> = BluetoothRemoteGATTCharacteristic.service</pre>
+```js
+var bluetoothRemoteGATTServiceInstance = BluetoothRemoteGATTCharacteristic.service
+```
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>An instance {{domxref("BluetoothRemoteGATTService")}}.</p>
+An instance {{domxref("BluetoothRemoteGATTService")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<div>{{APIRef("Web Bluetooth")}}</div>
+{{APIRef("Web Bluetooth")}}

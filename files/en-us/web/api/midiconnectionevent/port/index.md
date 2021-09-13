@@ -9,34 +9,38 @@ tags:
   - MIDIConnectionEvent
 browser-compat: api.MIDIConnectionEvent.port
 ---
-<div>{{securecontext_header}}{{APIRef("Web MIDI API")}}</div>
+{{securecontext_header}}{{APIRef("Web MIDI API")}}
 
-<p>The <strong><code>port</code></strong> read-only property of the {{domxref("MIDIConnectionEvent")}} interface returns the port that has been disconnected or connected.</p>
+The **`port`** read-only property of the {{domxref("MIDIConnectionEvent")}} interface returns the port that has been disconnected or connected.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let port = MIDIConnectionEvent.port;</pre>
+```js
+let port = MIDIConnectionEvent.port;
+```
 
-<h3>Value</h3>
-<p>A {{domxref("MIDIPort")}} object.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("MIDIPort")}} object.
 
-<p>The {{domxref("Navigator.requestMIDIAccess()")}} method returns a promise that resolves with a {{domxref("MIDIAccess")}} object. When a port changes state, a <code>MIDIConnectionEvent</code> is passed to {{domxref("MIDIAccess.onstatechange")}}. Information about the port can then be printed to the console.</p>
+## Examples
 
-<pre class="brush: js">navigator.requestMIDIAccess()
+The {{domxref("Navigator.requestMIDIAccess()")}} method returns a promise that resolves with a {{domxref("MIDIAccess")}} object. When a port changes state, a `MIDIConnectionEvent` is passed to {{domxref("MIDIAccess.onstatechange")}}. Information about the port can then be printed to the console.
+
+```js
+navigator.requestMIDIAccess()
   .then(function(access) {
 
      access.onstatechange = function(e) {
        console.log(e.port.name, e.port.manufacturer, e.port.state);
      };
-  });</pre>
+  });
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
+{{Compat}}

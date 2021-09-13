@@ -10,75 +10,71 @@ tags:
   - bufferedAmount
 browser-compat: api.RTCDataChannel.bufferedAmount
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The read-only <code>RTCDataChannel</code> property
-    <code><strong>bufferedAmount</strong></code> returns the number of bytes of data
-    currently queued to be sent over the data channel. The queue may build up as a
-  result of calls to the {{domxref("RTCDataChannel.send", "send()")}} method. This only
-  includes data buffered by the user agent itself; it doesn't include any framing overhead
-  or buffering done by the operating system or network hardware.</p>
+The read-only `RTCDataChannel` property
+**`bufferedAmount`** returns the number of bytes of data
+currently queued to be sent over the data channel. The queue may build up as a
+result of calls to the {{domxref("RTCDataChannel.send", "send()")}} method. This only
+includes data buffered by the user agent itself; it doesn't include any framing overhead
+or buffering done by the operating system or network hardware.
 
-<p>The user agent may implement the process of actually sending data in any way it
-  chooses; this may be done periodically during the event loop or truly asynchronously. As
-  messages are actually sent, this value is reduced accordingly.</p>
+The user agent may implement the process of actually sending data in any way it
+chooses; this may be done periodically during the event loop or truly asynchronously. As
+messages are actually sent, this value is reduced accordingly.
 
-<div class="note">
-  <p><strong>Note:</strong> Closing the data channel doesn't reset this count, even though the user agent purges
-    the queued messages. However, even after closing the channel, attempts to send
-    messages continue to add to the <code>bufferedAmount</code> value, even though the
-    messages are neither sent nor buffered.</p>
-</div>
+> **Note:** Closing the data channel doesn't reset this count, even though the user agent purges
+> the queued messages. However, even after closing the channel, attempts to send
+> messages continue to add to the `bufferedAmount` value, even though the
+> messages are neither sent nor buffered.
 
-<p>Whenever this value decreases to fall to or below the value specified in the
-  {{domxref("RTCDataChannel.bufferedAmountLowThreshold", "bufferedAmountLowThreshold")}}
-  property, the user agent fires the {{DOMxRef("RTCDataChannel.bufferedamountlow_event", "bufferedamountlow")}} event. This event may
-  be used, for example, to implement code which queues more messages to be sent whenever
-  there's room to buffer them.</p>
+Whenever this value decreases to fall to or below the value specified in the
+{{domxref("RTCDataChannel.bufferedAmountLowThreshold", "bufferedAmountLowThreshold")}}
+property, the user agent fires the {{DOMxRef("RTCDataChannel.bufferedamountlow_event", "bufferedamountlow")}} event. This event may
+be used, for example, to implement code which queues more messages to be sent whenever
+there's room to buffer them.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>amount</em> = <em>aDataChannel</em>.bufferedAmount;
-</pre>
+```js
+var amount = aDataChannel.bufferedAmount;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>The number of bytes of data currently queued to be sent over the data channel but have
-  not yet been sent.</p>
+The number of bytes of data currently queued to be sent over the data channel but have
+not yet been sent.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The snippet below includes a function which changes the contents of a block with the ID
-  "bufferSize" to a string indicating the number of bytes currently buffered on an
-  {{domxref("RTCDataChannel")}}.</p>
+The snippet below includes a function which changes the contents of a block with the ID
+"bufferSize" to a string indicating the number of bytes currently buffered on an
+{{domxref("RTCDataChannel")}}.
 
-<pre>var dc = peerConnection.createDataChannel("File Transfer");
-<code>
-/* ... */
+    var dc = peerConnection.createDataChannel("File Transfer");
 
-function showBufferedAmount(channel) {
-  let el = document.getElementById("bufferSize");
+    /* ... */
 
-  el.innerHTML = channel.bufferedAmount + " bytes";
-}</code>
-</pre>
+    function showBufferedAmount(channel) {
+      let el = document.getElementById("bufferSize");
 
-<h2 id="Specifications">Specifications</h2>
+      el.innerHTML = channel.bufferedAmount + " bytes";
+    }
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API/Using_data_channels">Using WebRTC data
-      channels</a></li>
-  <li>{{domxref("RTCDataChannel")}}</li>
-  <li>{{domxref("RTCDataChannel.bufferedAmountLowThreshold")}}</li>
-  <li>{{DOMxRef("RTCDataChannel.bufferedamountlow_event", "bufferedamountlow")}} event</li>
-  <li>{{domxref("RTCDataChannel.onbufferedamountlow")}}</li>
-</ul>
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)
+- [Using WebRTC data
+  channels](/en-US/docs/Web/API/WebRTC_API/Using_data_channels)
+- {{domxref("RTCDataChannel")}}
+- {{domxref("RTCDataChannel.bufferedAmountLowThreshold")}}
+- {{DOMxRef("RTCDataChannel.bufferedamountlow_event", "bufferedamountlow")}} event
+- {{domxref("RTCDataChannel.onbufferedamountlow")}}

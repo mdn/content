@@ -9,78 +9,73 @@ tags:
   - Web Workers
 browser-compat: api.SharedWorker.SharedWorker
 ---
-<div>{{APIRef("Web Workers API")}}</div>
+{{APIRef("Web Workers API")}}
 
-<p>The <code><strong>SharedWorker()</strong></code> constructor creates a
-  {{domxref("SharedWorker")}} object that executes the script at the specified URL. This
-  script must obey the <a href="/en-US/docs/Web/Security/Same-origin_policy">same-origin
-    policy</a>.</p>
+The **`SharedWorker()`** constructor creates a
+{{domxref("SharedWorker")}} object that executes the script at the specified URL. This
+script must obey the [same-origin
+policy](/en-US/docs/Web/Security/Same-origin_policy).
 
-<div class="note">
-  <p><strong>Note:</strong> there is disagreement among browser manufacturers about
-    whether a data URI is of the same origin or not. Although Gecko 10.0
-    {{geckoRelease("10.0")}} and later accept data URIs, that's not the case in all other
-    browsers.</p>
-</div>
+> **Note:** there is disagreement among browser manufacturers about
+> whether a data URI is of the same origin or not. Although Gecko 10.0
+> {{geckoRelease("10.0")}} and later accept data URIs, that's not the case in all other
+> browsers.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var myWorker = new SharedWorker(<em>aURL</em>, <em>name</em>);
-var myWorker = new SharedWorker(<em>aURL</em>, <em>options</em>);</pre>
+```js
+var myWorker = new SharedWorker(aURL, name);
+var myWorker = new SharedWorker(aURL, options);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><em>aURL</em></dt>
-  <dd>A {{domxref("DOMString")}} representing the URL of the script the worker will
-    execute. It must obey the same-origin policy.</dd>
-  <dt>name {{optional_inline}}</dt>
-  <dd>A {{domxref("DOMString")}} specifying an identifying name for the
+- _aURL_
+  - : A {{domxref("DOMString")}} representing the URL of the script the worker will
+    execute. It must obey the same-origin policy.
+- name {{optional_inline}}
+  - : A {{domxref("DOMString")}} specifying an identifying name for the
     {{domxref("SharedWorkerGlobalScope")}} representing the scope of the worker, which is
-    mainly useful for debugging purposes.</dd>
-  <dt><em>options</em> {{optional_inline}}</dt>
-  <dd>An object containing option properties that can set when creating the object
+    mainly useful for debugging purposes.
+- _options_ {{optional_inline}}
+
+  - : An object containing option properties that can set when creating the object
     instance. Available properties are as follows:
-    <ul>
-      <li><code>type</code>: A {{domxref("DOMString")}} specifying the type of worker to
-        create. The value can be <code>classic</code> or <code>module</code>. If not
-        specified, the default used is <code>classic</code>.</li>
-      <li><code>credentials</code>: A {{domxref("DOMString")}} specifying the type of
-        credentials to use for the worker. The value can be<dfn> <code>omit</code></dfn>,
-        <code><dfn>same-origin</dfn></code>, or <dfn><code>include</code>. If not
-          specified, or if type is <code>classic</code>, the default used is
-          <code>omit</code> (no credentials required).</dfn></li>
-      <li><dfn><code>name</code>: A </dfn>{{domxref("DOMString")}} specifying an
-        identifying name for the {{domxref("SharedWorkerGlobalScope")}} representing the
-        scope of the worker, which is mainly useful for debugging purposes.</li>
-    </ul>
-  </dd>
-</dl>
 
-<h3 id="Return_value">Return value</h3>
+    - `type`: A {{domxref("DOMString")}} specifying the type of worker to
+      create. The value can be `classic` or `module`. If not
+      specified, the default used is `classic`.
+    - `credentials`: A {{domxref("DOMString")}} specifying the type of
+      credentials to use for the worker. The value can be* `omit`*,
+      `same-origin`, or _`include`. If not
+      specified, or if type is `classic`, the default used is
+      `omit` (no credentials required)._
+    - _`name`: A _{{domxref("DOMString")}} specifying an
+      identifying name for the {{domxref("SharedWorkerGlobalScope")}} representing the
+      scope of the worker, which is mainly useful for debugging purposes.
 
-<p>The created worker.</p>
+### Return value
 
-<h3 id="Exceptions">Exceptions</h3>
+The created worker.
 
-<ul>
-  <li>A <code>SecurityError</code> is raised if the document is not allowed to start
-    workers, for example if the URL has an invalid syntax or if the same-origin policy is
-    violated.</li>
-  <li>A <code>NetworkError</code> is raised if the MIME type of the worker script is
-    incorrect. It should <em>always</em> be <code>text/javascript</code> (for historical
-    reasons <a
-      href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#javascript_types">other
-      JavaScript MIME types</a> may be accepted).</li>
-  <li>A <code>SyntaxError</code> is raised if <em>aURL</em> cannot be parsed.</li>
-</ul>
+### Exceptions
 
-<h2 id="Examples">Examples</h2>
+- A `SecurityError` is raised if the document is not allowed to start
+  workers, for example if the URL has an invalid syntax or if the same-origin policy is
+  violated.
+- A `NetworkError` is raised if the MIME type of the worker script is
+  incorrect. It should _always_ be `text/javascript` (for historical
+  reasons [other
+  JavaScript MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#javascript_types) may be accepted).
+- A `SyntaxError` is raised if _aURL_ cannot be parsed.
 
-<p>The following code snippet shows creation of a {{domxref("SharedWorker")}} object using
-  the <code>SharedWorker()</code> constructor and subsequent usage of the object:</p>
+## Examples
 
-<pre class="brush: js">var myWorker = new SharedWorker('worker.js');
+The following code snippet shows creation of a {{domxref("SharedWorker")}} object using
+the `SharedWorker()` constructor and subsequent usage of the object:
+
+```js
+var myWorker = new SharedWorker('worker.js');
 
 myWorker.port.start();
 
@@ -97,24 +92,21 @@ second.onchange = function() {
 myWorker.port.onmessage = function(e) {
   result1.textContent = e.data;
   console.log('Message received from worker');
-}</pre>
+}
+```
 
-<p>For a full example, see our <a class="external-icon external"
-    href="https://github.com/mdn/simple-shared-worker">Basic shared worker example</a> (<a
-    class="external-icon external" href="https://mdn.github.io/simple-shared-worker/">run
-    shared worker</a>.)</p>
+For a full example, see our [Basic shared worker example](https://github.com/mdn/simple-shared-worker) ([run
+shared worker](https://mdn.github.io/simple-shared-worker/).)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("SharedWorker")}} interface it belongs to.</li>
-  <li><a href="https://anlexn.github.io/shared-worker-mdn/">another multiply demo</a></li>
-</ul>
+- The {{domxref("SharedWorker")}} interface it belongs to.
+- [another multiply demo](https://anlexn.github.io/shared-worker-mdn/)

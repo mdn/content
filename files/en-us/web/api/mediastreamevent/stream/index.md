@@ -2,38 +2,40 @@
 title: MediaStreamEvent.stream
 slug: Web/API/MediaStreamEvent/stream
 tags:
-- Experimental
-- MediaStreamEvent
-- Property
-- Read-only
-- Reference
-- WebRTC
+  - Experimental
+  - MediaStreamEvent
+  - Property
+  - Read-only
+  - Reference
+  - WebRTC
 browser-compat: api.MediaStreamEvent.stream
 ---
-<p>{{APIRef("WebRTC")}}{{deprecated_header}}</p>
+{{APIRef("WebRTC")}}{{deprecated_header}}
 
-<p>The read-only property <strong><code>MediaStreamEvent.stream</code></strong> returns
-  the {{domxref("MediaStream")}} associated with the event.</p>
+The read-only property **`MediaStreamEvent.stream`** returns
+the {{domxref("MediaStream")}} associated with the event.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"> var stream = <em>event</em>.stream;</pre>
+```js
+ var stream = event.stream;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">pc.onaddstream = function( ev ) {
+```js
+pc.onaddstream = function( ev ) {
                       alert("A stream (id: '" +
                             ev.stream.id +
                             "') has been added to this connection.");
-                   };</pre>
+                   };
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{event("addstream")}}, {{event("removestream")}}</li>
-  <li>{{domxref("RTCPeerConnection")}}</li>
-</ul>
+- {{event("addstream")}}, {{event("removestream")}}
+- {{domxref("RTCPeerConnection")}}

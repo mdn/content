@@ -10,59 +10,53 @@ tags:
   - Screen Orientation
 browser-compat: api.Screen.unlockOrientation
 ---
-<p>{{APIRef("Screen Orientation API")}}{{Deprecated_Header}}</p>
+{{APIRef("Screen Orientation API")}}{{Deprecated_Header}}
 
-<p>The <strong><code>Screen.unlockOrientation()</code></strong> method removes all the
-  previous screen locks set by the page/app. The {{DOMxRef("ScreenOrientation.unlock()")}}
-  method should be used instead.</p>
+The **`Screen.unlockOrientation()`** method removes all the
+previous screen locks set by the page/app. The {{DOMxRef("ScreenOrientation.unlock()")}}
+method should be used instead.
 
-<div class="notecard warning">
-  <p><strong>Warning:</strong> This feature is deprecated and should be avoided. Use the {{DOMxRef("ScreenOrientation.unlock()")}} method instead.</p>
-</div>
+> **Warning:** This feature is deprecated and should be avoided. Use the {{DOMxRef("ScreenOrientation.unlock()")}} method instead.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This method only works for installed Web apps or for Web pages
-    in <a href="/en-US/docs/Web/API/Fullscreen_API">full-screen mode</a>.
-  </p>
-</div>
+> **Note:** This method only works for installed Web apps or for Web pages
+> in [full-screen mode](/en-US/docs/Web/API/Fullscreen_API).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>unlocked</var> = window.screen.unlockOrientation();
-</pre>
+```js
+var unlocked = window.screen.unlockOrientation();
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Returns <code>true</code> if the orientation was successfully unlocked or
-  <code>false</code> if the orientation couldn't be unlocked.</p>
+Returns `true` if the orientation was successfully unlocked or
+`false` if the orientation couldn't be unlocked.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js;">var unlockOrientation = screen.unlockOrientation || screen.mozUnlockOrientation || screen.msUnlockOrientation || (screen.orientation &amp;&amp; screen.orientation.unlock);
+```js
+var unlockOrientation = screen.unlockOrientation || screen.mozUnlockOrientation || screen.msUnlockOrientation || (screen.orientation && screen.orientation.unlock);
 
 if (unlockOrientation()) {
   // orientation was unlocked
 } else {
   // orientation unlock failed
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This feature is not part of any specification. It is no longer on track to becoming a standard.</p>
+This feature is not part of any specification. It is no longer on track to becoming a standard.
 
-<p>Use {{domxref("ScreenOrientation.unlock()")}} instead.</p>
+Use {{domxref("ScreenOrientation.unlock()")}} instead.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{DOMxRef("Screen.orientation")}}</li>
-  <li>{{DOMxRef("Screen.lockOrientation()")}}</li>
-  <li>{{DOMxRef("Screen.onorientationchange")}}</li>
-  <li><a href="/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation">Managing screen orientation</a>
-  </li>
-</ul>
+- {{DOMxRef("Screen.orientation")}}
+- {{DOMxRef("Screen.lockOrientation()")}}
+- {{DOMxRef("Screen.onorientationchange")}}
+- [Managing screen orientation](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)

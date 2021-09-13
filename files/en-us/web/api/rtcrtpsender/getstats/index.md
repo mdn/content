@@ -13,54 +13,54 @@ tags:
   - getStats
 browser-compat: api.RTCRtpSender.getStats
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The {{domxref("RTCRtpSender")}} method <code><strong>getStats()</strong></code>
-  asynchronously requests an {{domxref("RTCStatsReport")}} object which provides
-  statistics about outgoing traffic on the {{domxref("RTCPeerConnection")}} which owns the
-  sender, returning a {{jsxref("Promise")}} which is fulfilled when the results are
-  available.</p>
+The {{domxref("RTCRtpSender")}} method **`getStats()`**
+asynchronously requests an {{domxref("RTCStatsReport")}} object which provides
+statistics about outgoing traffic on the {{domxref("RTCPeerConnection")}} which owns the
+sender, returning a {{jsxref("Promise")}} which is fulfilled when the results are
+available.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>promise</em> = <em>RTCRtpSender</em>.getStats();
-</pre>
+```js
+var promise = RTCRtpSender.getStats();
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A JavaScript {{jsxref("Promise")}} which is fulfilled once the statistics are
-  available. The promise's fulfillment handler receives as a parameter a
-  {{domxref("RTCStatsReport")}} object containing the collected statistics.</p>
+A JavaScript {{jsxref("Promise")}} which is fulfilled once the statistics are
+available. The promise's fulfillment handler receives as a parameter a
+{{domxref("RTCStatsReport")}} object containing the collected statistics.
 
-<p>The returned <code>RTCStatsReport</code> accumulates the statistics for all of the
-  streams being sent using the <code>RTCRtpSender</code>, as well as the statistics for
-  any dependencies those streams have.</p>
+The returned `RTCStatsReport` accumulates the statistics for all of the
+streams being sent using the `RTCRtpSender`, as well as the statistics for
+any dependencies those streams have.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This simple example obtains the statistics for an <code>RTCRtpSender</code> and updates
-  an element's {{domxref("HTMLElement/innerText", "innerText")}} to display the current round
-  trip time for requests on the sender.</p>
+This simple example obtains the statistics for an `RTCRtpSender` and updates
+an element's {{domxref("HTMLElement/innerText", "innerText")}} to display the current round
+trip time for requests on the sender.
 
-<pre class="brush: js">sender.getStats().then(function(stats) {
+```js
+sender.getStats().then(function(stats) {
   document.getElementById("currentRTT").innerText =
           stats.roundTripTime;
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
-  <li>{{domxref("RTCStatsReport")}}</li>
-  <li>{{domxref("RTCRtpReceiver.getStats()")}}</li>
-  <li>{{domxref("RTCPeerConnection.getStats()")}}</li>
-</ul>
+- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+- {{domxref("RTCStatsReport")}}
+- {{domxref("RTCRtpReceiver.getStats()")}}
+- {{domxref("RTCPeerConnection.getStats()")}}

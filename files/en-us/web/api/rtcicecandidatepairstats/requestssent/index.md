@@ -2,51 +2,50 @@
 title: RTCIceCandidatePairStats.requestsSent
 slug: Web/API/RTCIceCandidatePairStats/requestsSent
 tags:
-- API
-- Connectivity
-- ICE
-- Networking
-- Property
-- RTCIceCandidatePairStats
-- Reference
-- STUN
-- Statistics
-- Stats
-- WebRTC
-- WebRTC API
-- requestsSent
+  - API
+  - Connectivity
+  - ICE
+  - Networking
+  - Property
+  - RTCIceCandidatePairStats
+  - Reference
+  - STUN
+  - Statistics
+  - Stats
+  - WebRTC
+  - WebRTC API
+  - requestsSent
 browser-compat: api.RTCIceCandidatePairStats.requestsSent
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The {{domxref("RTCIceCandidatePairStats")}} dictionary's
-    <strong><code>requestsSent</code></strong> property indicates the total number of
-    {{Glossary("STUN")}} connectivity check requests that have been sent so far on the
-    connection described by this pair of candidates.</p>
+The {{domxref("RTCIceCandidatePairStats")}} dictionary's
+**`requestsSent`** property indicates the total number of
+{{Glossary("STUN")}} connectivity check requests that have been sent so far on the
+connection described by this pair of candidates.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>requestsSent</em> = <em>rtcIceCandidatePairStats</em>.requestsSent;</pre>
+```js
+requestsSent = rtcIceCandidatePairStats.requestsSent;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An integer value which specifies the number of STUN connectivity requests that have
-  been sent to date on the connection described by this pair of {{Glossary("ICE")}}
-  candidates.</p>
+An integer value which specifies the number of STUN connectivity requests that have
+been sent to date on the connection described by this pair of {{Glossary("ICE")}}
+candidates.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The reported number of requests <em>does not</em> include
-    retransmissions. If a request had to be repeated due to network issues, it will be
-    counted multiple times here. This differs from
-    {{domxref("RTCIceCandidatePairStats.requestsReceived", "requestsReceived")}}, which
-    <em>does</em> include retransmisions.</p>
-</div>
+> **Note:** The reported number of requests _does not_ include
+> retransmissions. If a request had to be repeated due to network issues, it will be
+> counted multiple times here. This differs from
+> {{domxref("RTCIceCandidatePairStats.requestsReceived", "requestsReceived")}}, which
+> _does_ include retransmisions.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

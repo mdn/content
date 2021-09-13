@@ -2,112 +2,104 @@
 title: XMLHttpRequest.responseType
 slug: Web/API/XMLHttpRequest/responseType
 tags:
-- AJAX
-- API
-- HTTP
-- HTTP Response
-- HTTP Response Type
-- Property
-- Reference
-- Response
-- XHR
-- XMLHttpRequest
-- responseType
+  - AJAX
+  - API
+  - HTTP
+  - HTTP Response
+  - HTTP Response Type
+  - Property
+  - Reference
+  - Response
+  - XHR
+  - XMLHttpRequest
+  - responseType
 browser-compat: api.XMLHttpRequest.responseType
 ---
-<div>{{APIRef('XMLHttpRequest')}}</div>
+{{APIRef('XMLHttpRequest')}}
 
-<p>The {{domxref("XMLHttpRequest")}} property
-    <strong><code>responseType</code></strong> is an enumerated string value specifying
-    the type of data contained in the response.</p>
+The {{domxref("XMLHttpRequest")}} property
+**`responseType`** is an enumerated string value specifying
+the type of data contained in the response.
 
-<p>It also lets the author change the
-  response type. If an empty string is set as the value of <code>responseType</code>, the
-  default value of <code>text</code> is used.</p>
+It also lets the author change the
+response type. If an empty string is set as the value of `responseType`, the
+default value of `text` is used.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>type</var> = <var>XMLHttpRequest</var>.responseType;
+```js
+var type = XMLHttpRequest.responseType;
 
-<var>XMLHttpRequest</var>.responseType = <var>type</var>;</pre>
+XMLHttpRequest.responseType = type;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{jsxref("String")}} which specifies what type of data the response contains.
+A {{jsxref("String")}} which specifies what type of data the response contains.
 It can take the following values:
-  <dl>
-    <dt><code>""</code></dt>
-    <dd>An empty <code>responseType</code> string is the same as <code>"text"</code>, the default type.</dd>
-    <dt><code>"arraybuffer"</code></dt>
-    <dd>The {{domxref("XMLHttpRequest.response", "response")}} is a JavaScript {{jsxref("ArrayBuffer")}} containing binary data.</dd>
-    <dt><code>"blob"</code></dt>
-    <dd>The <code>response</code> is a {{domxref("Blob")}} object containing the binary data.</dd>
-    <dt><code>"document"</code></dt>
-    <dd>The <code>response</code> is an {{Glossary("HTML")}} {{domxref("Document")}} or {{Glossary("XML")}} {{domxref("XMLDocument")}}, as appropriate based on the MIME type of the received data. See <a href="/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest">HTML in XMLHttpRequest</a> to learn more about using XHR to fetch HTML content.</dd>
-    <dt><code>"json"</code></dt>
-    <dd>The <code>response</code> is a JavaScript object created by parsing the contents of received data as {{Glossary("JSON")}}.</dd>
-    <dt><code>"text"</code></dt>
-    <dd>The <code>response</code> is a text in a {{domxref("DOMString")}} object.</dd>
-    <dt><code>"ms-stream"</code> {{non-standard_inline}}</dt>
-    <dd>The <code>response</code> is part of a streaming download; this response type is only allowed for download requests, and is only supported by Internet Explorer.</dd>
-  </dl>
 
-</p>
+- `""`
+  - : An empty `responseType` string is the same as `"text"`, the default type.
+- `"arraybuffer"`
+  - : The {{domxref("XMLHttpRequest.response", "response")}} is a JavaScript {{jsxref("ArrayBuffer")}} containing binary data.
+- `"blob"`
+  - : The `response` is a {{domxref("Blob")}} object containing the binary data.
+- `"document"`
+  - : The `response` is an {{Glossary("HTML")}} {{domxref("Document")}} or {{Glossary("XML")}} {{domxref("XMLDocument")}}, as appropriate based on the MIME type of the received data. See [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest) to learn more about using XHR to fetch HTML content.
+- `"json"`
+  - : The `response` is a JavaScript object created by parsing the contents of received data as {{Glossary("JSON")}}.
+- `"text"`
+  - : The `response` is a text in a {{domxref("DOMString")}} object.
+- `"ms-stream"` {{non-standard_inline}}
+  - : The `response` is part of a streaming download; this response type is only allowed for download requests, and is only supported by Internet Explorer.
 
-<div class="note">
-  <p><strong>Note:</strong> When setting <code>responseType</code> to a particular value, the author should make
-    sure that the server is actually sending a response compatible with that format. If
-    the server returns data that is not compatible with the <code>responseType</code> that
-    was set, the value of {{domxref("XMLHttpRequest.response", "response")}} will be
-    <code>null</code>.</p>
-</div>
+> **Note:** When setting `responseType` to a particular value, the author should make
+> sure that the server is actually sending a response compatible with that format. If
+> the server returns data that is not compatible with the `responseType` that
+> was set, the value of {{domxref("XMLHttpRequest.response", "response")}} will be
+> `null`.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt><code>InvalidAccessError</code></dt>
-  <dd>An attempt was made to change the value of <code>responseType</code> on
-    an<code>XMLHttpRequest</code> which is in synchronous mode but not in a
+- `InvalidAccessError`
+  - : An attempt was made to change the value of `responseType` on
+    an`XMLHttpRequest` which is in synchronous mode but not in a
     {{domxref("Worker")}}. For additional details, see {{anch("Synchronous XHR
-    restrictions")}} below.</dd>
-</dl>
+    restrictions")}} below.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<h3 id="Synchronous_XHR_restrictions">Synchronous XHR restrictions</h3>
+### Synchronous XHR restrictions
 
-<p>You cannot change the value of <code>responseType</code> in a synchronous
-  <code>XMLHttpRequest</code> except when the request belongs to a {{domxref("Worker")}}.
-  This restriction is designed in part to help ensure that synchronous operations aren't
-  used for large transactions that block the browser's main thread, thereby bogging down
-  the user experience.</p>
+You cannot change the value of `responseType` in a synchronous
+`XMLHttpRequest` except when the request belongs to a {{domxref("Worker")}}.
+This restriction is designed in part to help ensure that synchronous operations aren't
+used for large transactions that block the browser's main thread, thereby bogging down
+the user experience.
 
-<p>XHR requests are asynchronous by default; they are only placed in
-  synchronous mode by passing <code>false</code> as the value of the optional
-  <code>async</code> parameter when calling {{domxref("XMLHttpRequest.open", "open()")}}.
-</p>
+XHR requests are asynchronous by default; they are only placed in
+synchronous mode by passing `false` as the value of the optional
+`async` parameter when calling {{domxref("XMLHttpRequest.open", "open()")}}.
 
-<h3 id="Restrictions_in_Workers">Restrictions in Workers</h3>
+### Restrictions in Workers
 
-<p>Attempts to set the value of <code>responseType</code> to <code>document</code> are
-  ignored in a {{domxref("Worker")}}.</p>
+Attempts to set the value of `responseType` to `document` are
+ignored in a {{domxref("Worker")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using
-      XMLHttpRequest</a></li>
-  <li><a href="/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest">HTML in
-      XMLHttpRequest</a></li>
-  <li>The response data: {{domxref("XMLHttpRequest.response", "response")}},
-    {{domxref("XMLHttpRequest.responseText", "responseText")}}, and
-    {{domxref("XMLHttpRequest.responseXML", "responseXML")}}</li>
-</ul>
+- [Using
+  XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [HTML in
+  XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+- The response data: {{domxref("XMLHttpRequest.response", "response")}},
+  {{domxref("XMLHttpRequest.responseText", "responseText")}}, and
+  {{domxref("XMLHttpRequest.responseXML", "responseXML")}}

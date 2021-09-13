@@ -2,35 +2,36 @@
 title: HTMLObjectElement.contentDocument
 slug: Web/API/HTMLObjectElement/contentDocument
 tags:
-- API
-- HTML DOM
-- HTMLObjectElement
-- NeedsExample
-- Property
-- Reference
-- contentDocument
+  - API
+  - HTML DOM
+  - HTMLObjectElement
+  - NeedsExample
+  - Property
+  - Reference
+  - contentDocument
 browser-compat: api.HTMLObjectElement.contentDocument
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>contentDocument</code></strong> read-only property of
-  the {{domxref("HTMLObjectElement")}} interface Returns a {{domxref("Document")}}
-  representing the active document of the object element's nested browsing context, if
-  any; otherwise null.</p>
+The **`contentDocument`** read-only property of
+the {{domxref("HTMLObjectElement")}} interface Returns a {{domxref("Document")}}
+representing the active document of the object element's nested browsing context, if
+any; otherwise null.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var document = HTMLObjectElement.contentDocument;</pre>
+```js
+var document = HTMLObjectElement.contentDocument;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref('Document')}}.</p>
+A {{domxref('Document')}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

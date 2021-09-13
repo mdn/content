@@ -9,36 +9,36 @@ tags:
   - Web
 browser-compat: api.MediaStream.id
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The <code><strong>MediaStream.id()</strong></code> read-only property is a
-	{{domxref("DOMString")}} containing 36 characters denoting a unique identifier (GUID)
-	for the object.</p>
+The **`MediaStream.id()`** read-only property is a
+{{domxref("DOMString")}} containing 36 characters denoting a unique identifier (GUID)
+for the object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>id</em> = <em>mediaStream</em>.id;
-</pre>
+```js
+var id = mediaStream.id;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var p = navigator.mediaDevices.getUserMedia({ audio: true, video: true });
+```js
+var p = navigator.mediaDevices.getUserMedia({ audio: true, video: true });
 
 p.then(function(stream) {
    console.log(stream.id);
 })
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{domxref("MediaStream")}}, the interface this property belongs to.</li>
-</ul>
+- {{domxref("MediaStream")}}, the interface this property belongs to.

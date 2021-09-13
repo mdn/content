@@ -2,30 +2,31 @@
 title: Document.defaultView
 slug: Web/API/Document/defaultView
 tags:
-- API
-- Document
-- HTML DOM
-- Property
-- Reference
+  - API
+  - Document
+  - HTML DOM
+  - Property
+  - Reference
 browser-compat: api.Document.defaultView
 ---
-<div>{{ApiRef}}</div>
+{{ApiRef}}
 
-<p>In browsers, <strong><code>document.defaultView</code></strong> returns the
-  {{domxref("Window", "window")}} object associated with {{Glossary("Browsing_context", "a
-  document")}}, or <code>null</code> if none is available.</p>
+In browsers, **`document.defaultView`** returns the
+{{domxref("Window", "window")}} object associated with {{Glossary("Browsing_context", "a
+  document")}}, or `null` if none is available.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>win</var> = document.defaultView;</pre>
+```js
+var win = document.defaultView;
+```
 
-<p>This property is read-only.</p>
+This property is read-only.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

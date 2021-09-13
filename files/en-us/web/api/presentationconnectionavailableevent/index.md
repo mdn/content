@@ -11,30 +11,26 @@ tags:
   - events
 browser-compat: api.PresentationConnectionAvailableEvent
 ---
-<p>{{SeeCompatTable}}{{securecontext_header}}{{DefaultAPISidebar("Presentation API")}}</p>
+{{SeeCompatTable}}{{securecontext_header}}{{DefaultAPISidebar("Presentation API")}}
 
-<p>The <strong><code>PresentationConnectionAvailableEvent</code></strong> interface of the <a href="/en-US/docs/Web/API/Presentation_API">Presentation API</a> is fired on a {{domxref("PresentationRequest")}} when a connection associated with the object is created.</p>
+The **`PresentationConnectionAvailableEvent`** interface of the [Presentation API](/en-US/docs/Web/API/Presentation_API) is fired on a {{domxref("PresentationRequest")}} when a connection associated with the object is created.
 
-<p>A <a href="https://www.w3.org/TR/presentation-api/#dfn-controlling-user-agent">controlling user agent</a> <a href="https://www.w3.org/TR/presentation-api/#dfn-firing-an-event">fires</a> a <a href="https://www.w3.org/TR/presentation-api/#dfn-trusted-event">trusted event</a> named <a href="https://www.w3.org/TR/presentation-api/#dfn-connectionavailable"><code>connectionavailable</code></a> on a <a href="https://www.w3.org/TR/presentation-api/#idl-def-presentationrequest"><code>PresentationRequest</code></a> when a connection associated with the object is created. It is fired at the <a href="https://www.w3.org/TR/presentation-api/#idl-def-presentationrequest"><code>PresentationRequest</code></a> instance, using the <a href="https://www.w3.org/TR/presentation-api/#idl-def-presentationconnectionavailableevent"><code>PresentationConnectionAvailableEvent</code></a> interface, with the <a href="https://www.w3.org/TR/presentation-api/#idl-def-presentationconnectionavailableevent-connection"><code>connection</code></a> attribute set to the <a href="https://www.w3.org/TR/presentation-api/#idl-def-presentationconnection"><code>PresentationConnection</code></a> object that was created. The event is fired for each connection that is created for the <a href="https://www.w3.org/TR/presentation-api/#dfn-controller">controller</a>, either by the <a href="https://www.w3.org/TR/presentation-api/#dfn-controller">controller</a> calling <code>start()</code> or <code>reconnect()</code>, or by the <a href="https://www.w3.org/TR/presentation-api/#dfn-controlling-user-agent">controlling user agent</a> creating a connection on the controller's behalf via <a href="https://www.w3.org/TR/presentation-api/#dom-presentation-defaultrequest"><code>defaultRequest</code></a>.</p>
+A [controlling user agent](https://www.w3.org/TR/presentation-api/#dfn-controlling-user-agent) [fires](https://www.w3.org/TR/presentation-api/#dfn-firing-an-event) a [trusted event](https://www.w3.org/TR/presentation-api/#dfn-trusted-event) named [`connectionavailable`](https://www.w3.org/TR/presentation-api/#dfn-connectionavailable) on a [`PresentationRequest`](https://www.w3.org/TR/presentation-api/#idl-def-presentationrequest) when a connection associated with the object is created. It is fired at the [`PresentationRequest`](https://www.w3.org/TR/presentation-api/#idl-def-presentationrequest) instance, using the [`PresentationConnectionAvailableEvent`](https://www.w3.org/TR/presentation-api/#idl-def-presentationconnectionavailableevent) interface, with the [`connection`](https://www.w3.org/TR/presentation-api/#idl-def-presentationconnectionavailableevent-connection) attribute set to the [`PresentationConnection`](https://www.w3.org/TR/presentation-api/#idl-def-presentationconnection) object that was created. The event is fired for each connection that is created for the [controller](https://www.w3.org/TR/presentation-api/#dfn-controller), either by the [controller](https://www.w3.org/TR/presentation-api/#dfn-controller) calling `start()` or `reconnect()`, or by the [controlling user agent](https://www.w3.org/TR/presentation-api/#dfn-controlling-user-agent) creating a connection on the controller's behalf via [`defaultRequest`](https://www.w3.org/TR/presentation-api/#dom-presentation-defaultrequest).
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("PresentationConnectionAvailableEvent.PresentationConnectionAvailableEvent", "PresentationConnectionAvailableEvent()")}}</dt>
- <dd>Creates a new PresentationConnectionAvailableEvent.</dd>
-</dl>
+- {{domxref("PresentationConnectionAvailableEvent.PresentationConnectionAvailableEvent", "PresentationConnectionAvailableEvent()")}}
+  - : Creates a new PresentationConnectionAvailableEvent.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("PresentationConnectionAvailableEvent.connection")}} {{readonlyinline}}</dt>
- <dd>Returns a references to the {{domxref("PresentationConnection")}} object that fired the event.</dd>
-</dl>
+- {{domxref("PresentationConnectionAvailableEvent.connection")}} {{readonlyinline}}
+  - : Returns a references to the {{domxref("PresentationConnection")}} object that fired the event.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

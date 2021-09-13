@@ -1,52 +1,52 @@
 ---
 title: HTMLCollection.length
 slug: Web/API/HTMLCollection/length
-browser-compat: api.HTMLCollection.length
 tags:
   - API
   - HTML DOM
   - HTMLCollection
   - Reference
   - Property
+browser-compat: api.HTMLCollection.length
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>HTMLCollection.length</strong></code> property returns the number of
-  items in a {{domxref("HTMLCollection")}}.</p>
+The **`HTMLCollection.length`** property returns the number of
+items in a {{domxref("HTMLCollection")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>numItems</em> = <em>htmlCollection</em>.length
-</pre>
+```js
+numItems = htmlCollection.length
+```
 
-<ul>
-  <li><code>numItems</code> is an integer value representing the number of items in a
-    <code>HTMLCollection</code>.</li>
-</ul>
+- `numItems` is an integer value representing the number of items in a
+  `HTMLCollection`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The <code>length</code> property is often useful in DOM programming. It's often used to
-  test the length of a list, to see if it exists at all. It's also commonly used as the
-  iterator in a <code>for</code> loop, as in this example.</p>
+The `length` property is often useful in DOM programming. It's often used to
+test the length of a list, to see if it exists at all. It's also commonly used as the
+iterator in a `for` loop, as in this example.
 
-<pre class="brush: js">// All the elements with the class ".test" in the document
+```js
+// All the elements with the class ".test" in the document
 var items = document.getElementsByClassName("test");
 
 // For each test item in the list,
 // append the entire element as a string of HTML
 var gross = "";
-for (var i = 0; i &lt; items.length; i++) {
+for (var i = 0; i < items.length; i++) {
   gross += items[i].innerHTML;
 }
 
 // gross is now all the HTML for the test elements
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

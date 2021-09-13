@@ -9,107 +9,116 @@ tags:
   - Reference
 browser-compat: api.Event.preventDefault
 ---
-<div>{{apiref("DOM")}}</div>
+{{apiref("DOM")}}
 
-<p>The {{domxref("Event")}} interface's
-    <strong><code>preventDefault()</code></strong> method tells the {{Glossary("user
+The {{domxref("Event")}} interface's
+**`preventDefault()`** method tells the {{Glossary("user
     agent")}} that if the event does not get explicitly handled, its default action should
-    not be taken as it normally would be.</p>
+not be taken as it normally would be.
 
-  <p>The event continues to propagate as
-  usual, unless one of its event listeners calls {{domxref("Event.stopPropagation",
+The event continues to propagate as
+usual, unless one of its event listeners calls {{domxref("Event.stopPropagation",
   "stopPropagation()")}} or {{domxref("Event.stopImmediatePropagation",
-  "stopImmediatePropagation()")}}, either of which terminates propagation at once.</p>
+  "stopImmediatePropagation()")}}, either of which terminates propagation at once.
 
-<p>As noted below, calling <code><strong>preventDefault()</strong></code> for a
-  non-cancelable event, such as one dispatched via
-  {{domxref("EventTarget.dispatchEvent()")}}, without specifying
-  <code>cancelable: true</code> has no effect.</p>
+As noted below, calling **`preventDefault()`** for a
+non-cancelable event, such as one dispatched via
+{{domxref("EventTarget.dispatchEvent()")}}, without specifying
+`cancelable: true` has no effect.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>event</em>.preventDefault();
-</pre>
+```js
+event.preventDefault();
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Blocking_default_click_handling">Blocking default click handling</h3>
+### Blocking default click handling
 
-<p>Toggling a checkbox is the default action of clicking on a checkbox. This example
-  demonstrates how to prevent that from happening:</p>
+Toggling a checkbox is the default action of clicking on a checkbox. This example
+demonstrates how to prevent that from happening:
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">document.querySelector("#id-checkbox").addEventListener("click", function(event) {
-         document.getElementById("output-box").innerHTML += "Sorry! &lt;code&gt;preventDefault()&lt;/code&gt; won't let you check this!&lt;br&gt;";
+```js
+document.querySelector("#id-checkbox").addEventListener("click", function(event) {
+         document.getElementById("output-box").innerHTML += "Sorry! <code>preventDefault()</code> won't let you check this!<br>";
          event.preventDefault();
-}, false);</pre>
+}, false);
+```
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;Please click on the checkbox control.&lt;/p&gt;
+```html
+<p>Please click on the checkbox control.</p>
 
-&lt;form&gt;
-  &lt;label for="id-checkbox"&gt;Checkbox:&lt;/label&gt;
-  &lt;input type="checkbox" id="id-checkbox"/&gt;
-&lt;/form&gt;
+<form>
+  <label for="id-checkbox">Checkbox:</label>
+  <input type="checkbox" id="id-checkbox"/>
+</form>
 
-&lt;div id="output-box"&gt;&lt;/div&gt;</pre>
+<div id="output-box"></div>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Blocking_default_click_handling")}}</p>
+{{EmbedLiveSample("Blocking_default_click_handling")}}
 
-<h3 id="Stopping_keystrokes_from_reaching_an_edit_field">Stopping keystrokes from reaching
-  an edit field</h3>
+### Stopping keystrokes from reaching an edit field
 
-<p>The following example demonstrates how invalid text input can be stopped from reaching
-  the input field with <code>preventDefault()</code>. Nowadays, you should usually use <a
-    href="/en-US/docs/Learn/Forms/Form_validation">native HTML form validation</a>
-  instead.</p>
+The following example demonstrates how invalid text input can be stopped from reaching
+the input field with `preventDefault()`. Nowadays, you should usually use [native HTML form validation](/en-US/docs/Learn/Forms/Form_validation)
+instead.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<p>Here's the form:</p>
+Here's the form:
 
-<pre class="brush: html">&lt;div class="container"&gt;
-  &lt;p&gt;Please enter your name using lowercase letters only.&lt;/p&gt;
+```html
+<div class="container">
+  <p>Please enter your name using lowercase letters only.</p>
 
-  &lt;form&gt;
-    &lt;input type="text" id="my-textbox"&gt;
-  &lt;/form&gt;
-&lt;/div&gt;</pre>
+  <form>
+    <input type="text" id="my-textbox">
+  </form>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<p>We use a little bit of CSS for the warning box we'll draw when the user presses an
-  invalid key:</p>
+We use a little bit of CSS for the warning box we'll draw when the user presses an
+invalid key:
 
-<pre class="brush: css">.warning {
+```css
+.warning {
   border: 2px solid #f39389;
   border-radius: 2px;
   padding: 10px;
   position: absolute;
   background-color: #fbd8d4;
   color: #3b3c40;
-}</pre>
+}
+```
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<p>And here's the JavaScript code that does the job. First, listen for
-  {{domxref("Element/keypress_event", "keypress")}} events:</p>
+And here's the JavaScript code that does the job. First, listen for
+{{domxref("Element/keypress_event", "keypress")}} events:
 
-<pre class="brush: js">var myTextbox = document.getElementById('my-textbox');
+```js
+var myTextbox = document.getElementById('my-textbox');
 myTextbox.addEventListener('keypress', checkName, false);
-</pre>
+```
 
-<p>The <code>checkName()</code> function, which looks at the pressed key and decides
-  whether to allow it:</p>
+The `checkName()` function, which looks at the pressed key and decides
+whether to allow it:
 
-<pre class="brush: js">function checkName(evt) {
+```js
+function checkName(evt) {
   var charCode = evt.charCode;
   if (charCode != 0) {
-    if (charCode &lt; 97 || charCode &gt; 122) {
+    if (charCode < 97 || charCode > 122) {
       evt.preventDefault();
       displayWarning(
         "Please use lowercase letters only."
@@ -118,12 +127,13 @@ myTextbox.addEventListener('keypress', checkName, false);
     }
   }
 }
-</pre>
+```
 
-<p>The <code>displayWarning()</code> function presents a notification of a problem. It's
-  not an elegant function but does the job for the purposes of this example:</p>
+The `displayWarning()` function presents a notification of a problem. It's
+not an elegant function but does the job for the purposes of this example:
 
-<pre class="brush: js">var warningTimeout;
+```js
+var warningTimeout;
 var warningBox = document.createElement("div");
 warningBox.className = "warning";
 
@@ -141,25 +151,26 @@ function displayWarning(msg) {
       warningBox.parentNode.removeChild(warningBox);
       warningTimeout = -1;
     }, 2000);
-}</pre>
+}
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Stopping_keystrokes_from_reaching_an_edit_field', 600, 200) }}</p>
+{{ EmbedLiveSample('Stopping_keystrokes_from_reaching_an_edit_field', 600, 200) }}
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Calling <code>preventDefault()</code> during any stage of event flow cancels the event,
-  meaning that any default action normally taken by the implementation as a result of the
-  event will not occur.</p>
+Calling `preventDefault()` during any stage of event flow cancels the event,
+meaning that any default action normally taken by the implementation as a result of the
+event will not occur.
 
-<p>You can use {{domxref("Event.cancelable")}} to check if the event is cancelable.
-  Calling <code>preventDefault()</code> for a non-cancelable event has no effect.</p>
+You can use {{domxref("Event.cancelable")}} to check if the event is cancelable.
+Calling `preventDefault()` for a non-cancelable event has no effect.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

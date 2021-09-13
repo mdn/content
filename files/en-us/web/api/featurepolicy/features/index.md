@@ -3,33 +3,35 @@ title: FeaturePolicy.features()
 slug: Web/API/FeaturePolicy/features
 browser-compat: api.FeaturePolicy.features
 ---
-<div>{{APIRef("Feature Policy API")}}{{SeeCompatTable}}</div>
+{{APIRef("Feature Policy API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>features()</code></strong> method of the
-        {{DOMxRef("FeaturePolicy")}} interface returns a list of names of all features
-        supported by the User Agent. Feature whose name appears on the list might not be
-        allowed by the Feature Policy of the current execution context and/or might not be
-        accessible because of user's permissions.</p>
+The **`features()`** method of the
+{{DOMxRef("FeaturePolicy")}} interface returns a list of names of all features
+supported by the User Agent. Feature whose name appears on the list might not be
+allowed by the Feature Policy of the current execution context and/or might not be
+accessible because of user's permissions.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const supportedFeatures = <em>FeaturePolicy</em>.features()
-</pre>
+```js
+const supportedFeatures = FeaturePolicy.features()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A list of strings that represent names of all Feature Policy directives supported by
-    the User Agent.</p>
+A list of strings that represent names of all Feature Policy directives supported by
+the User Agent.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example logs all the supported directives in the console.</p>
+The following example logs all the supported directives in the console.
 
-<pre class="brush: js">// Get the Feature Policy object
+```js
+// Get the Feature Policy object
 const featurePolicy = document.featurePolicy
 
 // Retrieve the list of all supported Feature Policy directives
@@ -39,12 +41,12 @@ const supportedDirectives = featurePolicy.features()
 for (const directive of supportedDirectives){
   console.log(directive)
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

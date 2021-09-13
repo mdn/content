@@ -2,45 +2,43 @@
 title: performance.clearResourceTimings()
 slug: Web/API/Performance/clearResourceTimings
 tags:
-- API
-- Method
-- Reference
-- Web Performance
+  - API
+  - Method
+  - Reference
+  - Web Performance
 browser-compat: api.Performance.clearResourceTimings
 ---
-<div>{{APIRef("Resource Timing API")}}</div>
+{{APIRef("Resource Timing API")}}
 
-<p>The <strong><code>clearResourceTimings()</code></strong> method removes all
-  {{domxref("PerformanceEntry","performance entries")}} with an
-  {{domxref("PerformanceEntry.entryType","entryType")}} of "<code>resource</code>" from
-  the browser's performance data buffer and sets the size of the performance data buffer
-  to zero. To set the size of the browser's performance data buffer, use the
-  {{domxref("Performance.setResourceTimingBufferSize()")}} method.</p>
+The **`clearResourceTimings()`** method removes all
+{{domxref("PerformanceEntry","performance entries")}} with an
+{{domxref("PerformanceEntry.entryType","entryType")}} of "`resource`" from
+the browser's performance data buffer and sets the size of the performance data buffer
+to zero. To set the size of the browser's performance data buffer, use the
+{{domxref("Performance.setResourceTimingBufferSize()")}} method.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>performance</em>.clearResourceTimings();
-</pre>
+```js
+performance.clearResourceTimings();
+```
 
-<h3 id="Arguments">Arguments</h3>
+### Arguments
 
-<dl>
-  <dt>void</dt>
-  <dd> </dd>
-</dl>
+- void
+  - :
 
-<h3 id="Return_Value">Return value</h3>
+### Return value
 
-<dl>
-  <dt>none</dt>
-  <dd>This method has no return value.</dd>
-</dl>
+- none
+  - : This method has no return value.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">function load_resource() {
+```js
+function load_resource() {
   var image = new Image();
   image.src = "https://developer.mozilla.org/static/img/opengraph-logo.png";
 }
@@ -67,12 +65,12 @@ function clear_performance_timings() {
   else
     console.log("... Performance data buffer NOT cleared!");
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

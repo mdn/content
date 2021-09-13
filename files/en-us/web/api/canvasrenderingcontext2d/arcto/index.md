@@ -2,66 +2,66 @@
 title: CanvasRenderingContext2D.arcTo()
 slug: Web/API/CanvasRenderingContext2D/arcTo
 tags:
-- API
-- Canvas
-- CanvasRenderingContext2D
-- Method
-- Reference
+  - API
+  - Canvas
+  - CanvasRenderingContext2D
+  - Method
+  - Reference
 browser-compat: api.CanvasRenderingContext2D.arcTo
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The
-  <strong><code>CanvasRenderingContext2D.arcTo()</code></strong>
-  method of the Canvas 2D API adds a circular arc to the current sub-path, using the given
-  control points and radius. The arc is automatically connected to the path's latest point
-  with a straight line, if necessary for the specified parameters.</p>
+The
+**`CanvasRenderingContext2D.arcTo()`**
+method of the Canvas 2D API adds a circular arc to the current sub-path, using the given
+control points and radius. The arc is automatically connected to the path's latest point
+with a straight line, if necessary for the specified parameters.
 
-<p>This method is commonly used for making rounded corners.</p>
+This method is commonly used for making rounded corners.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Be aware that you may get unexpected results when using a
-    relatively large radius: the arc's connecting line will go in whatever direction it
-    must to meet the specified radius.</p>
-</div>
+> **Note:** Be aware that you may get unexpected results when using a
+> relatively large radius: the arc's connecting line will go in whatever direction it
+> must to meet the specified radius.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <em>ctx</em>.arcTo(<em>x1</em>, <em>y1</em>, <em>x2</em>, <em>y2</em>, <em>radius</em>);
-</pre>
+```js
+void ctx.arcTo(x1, y1, x2, y2, radius);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>x1</code></dt>
-  <dd>The x-axis coordinate of the first control point.</dd>
-  <dt><code>y1</code></dt>
-  <dd>The y-axis coordinate of the first control point.</dd>
-  <dt><code>x2</code></dt>
-  <dd>The x-axis coordinate of the second control point.</dd>
-  <dt><code>y2</code></dt>
-  <dd>The y-axis coordinate of the second control point.</dd>
-  <dt><code>radius</code></dt>
-  <dd>The arc's radius. Must be non-negative.</dd>
-</dl>
+- `x1`
+  - : The x-axis coordinate of the first control point.
+- `y1`
+  - : The y-axis coordinate of the first control point.
+- `x2`
+  - : The x-axis coordinate of the second control point.
+- `y2`
+  - : The y-axis coordinate of the second control point.
+- `radius`
+  - : The arc's radius. Must be non-negative.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="How_arcTo_works">How arcTo works</h3>
+### How arcTo works
 
-<p>One way to think about <code>arcTo()</code> is to imagine two straight segments: one
-  from the starting point to a first control point, and another from there to a second
-  control point. Without <code>arcTo()</code>, these two segments would form a sharp
-  corner: <code>arcTo()</code> creates a circular arc that fits this corner and smooths is
-  out. In other words, the arc is tangential to both segments.</p>
+One way to think about `arcTo()` is to imagine two straight segments: one
+from the starting point to a first control point, and another from there to a second
+control point. Without `arcTo()`, these two segments would form a sharp
+corner: `arcTo()` creates a circular arc that fits this corner and smooths is
+out. In other words, the arc is tangential to both segments.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js;">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // Tangential lines
@@ -92,34 +92,36 @@ ctx.fillStyle = 'red';
 ctx.arc(200, 130, 5, 0, 2 * Math.PI); // Control point one
 ctx.arc(50, 20, 5, 0, 2 * Math.PI);   // Control point two
 ctx.fill();
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>In this example, the path created by <code>arcTo()</code> is <strong>thick and
-    black</strong>. Tangent lines are gray, control points are red, and the start point is blue.</p>
+In this example, the path created by `arcTo()` is **thick and
+black**. Tangent lines are gray, control points are red, and the start point is blue.
 
-<p>{{ EmbedLiveSample('How_arcTo_works', 315, 165) }}</p>
+{{ EmbedLiveSample('How_arcTo_works', 315, 165) }}
 
-<h3 id="Creating_a_rounded_corner">Creating a rounded corner</h3>
+### Creating a rounded corner
 
-<p>This example creates a rounded corner using <code>arcTo()</code>. This is one of the
-  method's most common uses.</p>
+This example creates a rounded corner using `arcTo()`. This is one of the
+method's most common uses.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<p>The arc begins at the point specified by <code>moveTo()</code>: (230, 20). It is shaped
-  to fit control points at (90, 130) and (20, 20), and has a radius of 50. The
-  <code>lineTo()</code> method connects the arc to (20, 20) with a straight line. Note
-  that the arc's second control point and the point specified by <code>lineTo()</code> are
-  the same, which produces a totally smooth corner.</p>
+The arc begins at the point specified by `moveTo()`: (230, 20). It is shaped
+to fit control points at (90, 130) and (20, 20), and has a radius of 50. The
+`lineTo()` method connects the arc to (20, 20) with a straight line. Note
+that the arc's second control point and the point specified by `lineTo()` are
+the same, which produces a totally smooth corner.
 
-<pre class="brush: js;">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const p0 = { x: 230, y: 20  }
 const p1 = { x: 90,  y: 130 }
@@ -140,27 +142,29 @@ labelPoint(p1);
 labelPoint(p2);
 
 ctx.stroke();
-</pre>
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Creating_a_rounded_corner', 315, 165) }}</p>
+{{ EmbedLiveSample('Creating_a_rounded_corner', 315, 165) }}
 
-<h3 id="Result_of_a_large_radius">Result of a large radius</h3>
+### Result of a large radius
 
-<p>If you use a relatively large radius, the arc may appear in a place you didn't expect.
-  In this example, the arc's connecting line goes above, instead of below, the coordinate
-  specified by <code>moveTo()</code>. This happens because the radius is too large for the
-  arc to fit entirely below the starting point.</p>
+If you use a relatively large radius, the arc may appear in a place you didn't expect.
+In this example, the arc's connecting line goes above, instead of below, the coordinate
+specified by `moveTo()`. This happens because the radius is too large for the
+arc to fit entirely below the starting point.
 
-<h4 id="HTML_3">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript_3">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js;">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.beginPath();
@@ -168,35 +172,37 @@ ctx.moveTo(180, 90);
 ctx.arcTo(180,130, 110,130, 130);
 ctx.lineTo(110, 130);
 ctx.stroke();
-</pre>
+```
 
-<h4 id="Result_3">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Result_of_a_large_radius', 315, 165) }}</p>
+{{ EmbedLiveSample('Result_of_a_large_radius', 315, 165) }}
 
-<h3 id="Live_demo">Live demo</h3>
+### Live demo
 
-<p>More sophisticated demo of the method. You can play around with range input to see how
-  arc changes.</p>
+More sophisticated demo of the method. You can play around with range input to see how
+arc changes.
 
-<h4 id="HTML_4">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;label for="radius"&gt;Radius: &lt;/label&gt;
-  &lt;input name="radius"  type="range" id="radius" min=0 max=100 value=50&gt;
-  &lt;label for="radius"  id="radius-output"&gt;50&lt;/label&gt;
-&lt;/div&gt;
-&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<div>
+  <label for="radius">Radius: </label>
+  <input name="radius"  type="range" id="radius" min=0 max=100 value=50>
+  <label for="radius"  id="radius-output">50</label>
+</div>
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript_4">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx    = canvas.getContext('2d');
 
 const controlOut = document.getElementById('radius-output');
 const control    = document.getElementById('radius');
-      control.oninput = () =&gt; {
+      control.oninput = () => {
           controlOut.textContent = r = control.value;
       };
 
@@ -218,7 +224,7 @@ const labelPoint = function (p, offset, i = 0){
 }
 
 const drawPoints = function (points){
-  for (let i = 0; i &lt; points.length; i++) {
+  for (let i = 0; i < points.length; i++) {
     var p = points[i];
     labelPoint(p, { x: 0, y: -20 } , i)
   }
@@ -249,22 +255,21 @@ const loop = function (t) {
   requestAnimationFrame(loop);
 }
 
-loop(0);</pre>
+loop(0);
+```
 
-<h4 id="Result_4">Result</h4>
+#### Result
 
-<div>{{EmbedLiveSample('Live_demo', 315, 200) }}</div>
+{{EmbedLiveSample('Live_demo', 315, 200) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining this method: {{domxref("CanvasRenderingContext2D")}}</li>
-</ul>
+- The interface defining this method: {{domxref("CanvasRenderingContext2D")}}

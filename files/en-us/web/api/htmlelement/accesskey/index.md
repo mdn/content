@@ -3,20 +3,16 @@ title: HTMLElement.accessKey
 slug: Web/API/HTMLElement/accessKey
 browser-compat: api.HTMLElement.accessKey
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <code><strong>HTMLElement.accessKey</strong></code> property sets the keystroke which a user can press to jump to a given element.</p>
+The **`HTMLElement.accessKey`** property sets the keystroke which a user can press to jump to a given element.
 
-<div class="note">
-<p><strong>Note:</strong> The <code>HTMLElement.accessKey</code> property is seldom used because of its multiple conflicts with already present key bindings in browsers. To work around this, browsers implement accesskey behavior if the keys are pressed with other "qualifying" keys (such as <kbd>Alt</kbd> + accesskey).</p>
-</div>
+> **Note:** The `HTMLElement.accessKey` property is seldom used because of its multiple conflicts with already present key bindings in browsers. To work around this, browsers implement accesskey behavior if the keys are pressed with other "qualifying" keys (such as <kbd>Alt</kbd> + accesskey).
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/HTML/Global_attributes/accesskey">HTML global attribute: accesskey</a></li>
-</ul>
+- [HTML global attribute: accesskey](/en-US/docs/Web/HTML/Global_attributes/accesskey)

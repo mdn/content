@@ -6,21 +6,20 @@ tags:
   - Tutorial
   - WebGL
 ---
-<p>{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context", "Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL")}}</p>
+{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context", "Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL")}}
 
-<p>Having created a square plane in the <a href="/en-US/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context">previous demonstration</a>, the next obvious step is to add a splash of color to it. We can do this by revising the shaders.</p>
+Having created a square plane in the [previous demonstration](/en-US/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context), the next obvious step is to add a splash of color to it. We can do this by revising the shaders.
 
-<div class="notecard note">
-<p><strong>Note:</strong> This example uses the glMatrix library to perform its matrix and vertex math. You'll need to include it if you create your own project based on this code. Our sample loads a copy from a CDN in our HTML's {{HTMLElement("head")}}.</p>
-</div>
+> **Note:** This example uses the glMatrix library to perform its matrix and vertex math. You'll need to include it if you create your own project based on this code. Our sample loads a copy from a CDN in our HTML's {{HTMLElement("head")}}.
 
-<h2 id="Applying_color_to_the_vertices">Applying color to the vertices</h2>
+## Applying color to the vertices
 
-<p>In WebGL objects are built using sets of vertices, each of which has a position and a color. By default, all other pixels' colors (and all its other attributes, including position) are computed using interpolation, automatically creating smooth gradients. Previously, our vertex shader didn't apply any specific colors to the vertices. Between this and the fragment shader assigning the fixed color of white to each pixel, the entire square was rendered as solid white.</p>
+In WebGL objects are built using sets of vertices, each of which has a position and a color. By default, all other pixels' colors (and all its other attributes, including position) are computed using interpolation, automatically creating smooth gradients. Previously, our vertex shader didn't apply any specific colors to the vertices. Between this and the fragment shader assigning the fixed color of white to each pixel, the entire square was rendered as solid white.
 
-<p>Let's say we want to render a gradient in which each corner of the square is a different color: red, blue, green, and white. The first thing to do is to establish these colors for the four vertices. To do this, we first need to create an array of vertex colors, then store it into a WebGL buffer. We'll do that by adding the following code to our <code>initBuffers()</code> function:</p>
+Let's say we want to render a gradient in which each corner of the square is a different color: red, blue, green, and white. The first thing to do is to establish these colors for the four vertices. To do this, we first need to create an array of vertex colors, then store it into a WebGL buffer. We'll do that by adding the following code to our `initBuffers()` function:
 
-<pre class="brush: js">function initBuffers(){
+```js
+function initBuffers(){
   ...
   const colors = [
     1.0,  1.0,  1.0,  1.0,    // white
@@ -38,13 +37,14 @@ tags:
     color: colorBuffer,
   };
 }
-</pre>
+```
 
-<p>This code starts by creating a JavaScript array containing four 4-value vectors, one for each vertex color. Then a new WebGL buffer is allocated to store these colors, and the array is converted into floats and stored into the buffer.</p>
+This code starts by creating a JavaScript array containing four 4-value vectors, one for each vertex color. Then a new WebGL buffer is allocated to store these colors, and the array is converted into floats and stored into the buffer.
 
-<p>To use these colors, the vertex shader needs to be updated to pull the appropriate color from the color buffer:</p>
+To use these colors, the vertex shader needs to be updated to pull the appropriate color from the color buffer:
 
-<pre class="brush: js">  const vsSource = `
+```js
+  const vsSource = `
     attribute vec4 aVertexPosition;
     attribute vec4 aVertexColor;
 
@@ -58,49 +58,54 @@ tags:
       vColor = aVertexColor;
     }
   `;
-</pre>
+```
 
-<p>The key difference here is that for each vertex, we pass its color using a <code>varying</code> to the fragment shader.</p>
+The key difference here is that for each vertex, we pass its color using a `varying` to the fragment shader.
 
-<h2 id="Coloring_the_fragments">Coloring the fragments</h2>
+## Coloring the fragments
 
-<p>As a refresher, here's what our fragment shader looked like previously:</p>
+As a refresher, here's what our fragment shader looked like previously:
 
-<pre class="brush: js">  const fsSource = `
+```js
+  const fsSource = `
     void main() {
       gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
     }
   `;
-</pre>
+```
 
-<p>In order to pick up the interpolated color for each pixel, we need to change this to fetch the value from the <code>vColor</code> varying:</p>
+In order to pick up the interpolated color for each pixel, we need to change this to fetch the value from the `vColor` varying:
 
-<pre class="brush: js">  const fsSource = `
+```js
+  const fsSource = `
     varying lowp vec4 vColor;
 
     void main(void) {
       gl_FragColor = vColor;
     }
   `;
-</pre>
+```
 
-<p>Each fragment receives the interpolated color based on its position relative to the vertex positions instead of a fixed value.</p>
+Each fragment receives the interpolated color based on its position relative to the vertex positions instead of a fixed value.
 
-<h2 id="Drawing_using_the_colors">Drawing using the colors</h2>
+## Drawing using the colors
 
-<p>Next, it's necessary to add code to look up the attribute location for the colors and setup that attribute for the shader program:</p>
+Next, it's necessary to add code to look up the attribute location for the colors and setup that attribute for the shader program:
 
-<pre class="brush: js">  const programInfo = {
+```js
+  const programInfo = {
     program: shaderProgram,
     attribLocations: {
       vertexPosition: gl.getAttribLocation(shaderProgram, 'aVertexPosition'),
       vertexColor: gl.getAttribLocation(shaderProgram, 'aVertexColor'),
     },
-    ...</pre>
+    ...
+```
 
-<p>Then, <code>drawScene()</code> can have the following added to it so it actually uses these colors when drawing the square:</p>
+Then, `drawScene()` can have the following added to it so it actually uses these colors when drawing the square:
 
-<pre class="brush: js">  // Tell WebGL how to pull out the colors from the color buffer
+```js
+  // Tell WebGL how to pull out the colors from the color buffer
   // into the vertexColor attribute.
   {
     const numComponents = 4;
@@ -119,10 +124,10 @@ tags:
     gl.enableVertexAttribArray(
         programInfo.attribLocations.vertexColor);
   }
-</pre>
+```
 
-<p>{{EmbedGHLiveSample('webgl-examples/tutorial/sample3/index.html', 670, 510) }}</p>
+{{EmbedGHLiveSample('webgl-examples/tutorial/sample3/index.html', 670, 510) }}
 
-<p><a href="https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample3">View the complete code</a> | <a href="https://mdn.github.io/webgl-examples/tutorial/sample3/">Open this demo on a new page</a></p>
+[View the complete code](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample3) | [Open this demo on a new page](https://mdn.github.io/webgl-examples/tutorial/sample3/)
 
-<p>{{PreviousNext("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context", "Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL")}}</p>
+{{PreviousNext("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context", "Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL")}}

@@ -2,46 +2,49 @@
 title: ShadowRoot.delegatesFocus
 slug: Web/API/ShadowRoot/delegatesFocus
 tags:
-- API
-- Property
-- Reference
-- ShadowRoot
-- Web Components
-- delegatesFocus
-- shadow dom
+  - API
+  - Property
+  - Reference
+  - ShadowRoot
+  - Web Components
+  - delegatesFocus
+  - shadow dom
 browser-compat: api.ShadowRoot.delegatesFocus
 ---
-<div>{{APIRef("Shadow DOM")}}</div>
+{{APIRef("Shadow DOM")}}
 
-<p>The <strong><code>delegatesFocus</code></strong> read-only property of the
-  {{domxref("ShadowRoot")}} interface returns a boolean that indicates whether
-  delegatesFocus was set when the shadow was attached (see
-  {{domxref("Element.attachShadow()")}}).</p>
+The **`delegatesFocus`** read-only property of the
+{{domxref("ShadowRoot")}} interface returns a boolean that indicates whether
+delegatesFocus was set when the shadow was attached (see
+{{domxref("Element.attachShadow()")}}).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>df</var> = <var>shadowRoot</var>.delegatesFocus</pre>
+```js
+var df = shadowRoot.delegatesFocus
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A boolean value — <code>true</code> if the shadow root does delegate focus,
-  <code>false</code> if it doesn't.</p>
+A boolean value — `true` if the shadow root does delegate focus,
+`false` if it doesn't.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">let customElem = document.querySelector('my-shadow-dom-element');
+```js
+let customElem = document.querySelector('my-shadow-dom-element');
 let shadow = customElem.shadowRoot;
 
   ...
 
 // Does it delegate focus?
-let hostElem = shadow.delegatesFocus;</pre>
+let hostElem = shadow.delegatesFocus;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

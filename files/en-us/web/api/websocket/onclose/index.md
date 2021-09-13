@@ -2,35 +2,37 @@
 title: WebSocket.onclose
 slug: Web/API/WebSocket/onclose
 tags:
-- API
-- Property
-- Reference
-- Web API
-- WebSocket
+  - API
+  - Property
+  - Reference
+  - Web API
+  - WebSocket
 browser-compat: api.WebSocket.onclose
 ---
-<p>{{APIRef("Web Sockets API")}}</p>
+{{APIRef("Web Sockets API")}}
 
-<p>The <code><strong>WebSocket.onclose</strong></code> property is
-  an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> that is called when the WebSocket connection's
-  {{domxref("WebSocket.readyState","readyState")}} changes
-  to {{domxref("WebSocket.readyState","CLOSED")}}. It is called with a
-  {{domxref("CloseEvent")}}.</p>
+The **`WebSocket.onclose`** property is
+an [event handler](/en-US/docs/Web/Events/Event_handlers) that is called when the WebSocket connection's
+{{domxref("WebSocket.readyState","readyState")}} changes
+to {{domxref("WebSocket.readyState","CLOSED")}}. It is called with a
+{{domxref("CloseEvent")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>aWebSocket</em>.onclose = function(event) {
+```js
+aWebSocket.onclose = function(event) {
   console.log("WebSocket is closed now.");
-};</pre>
+};
+```
 
-<h2 id="Value">Value</h2>
+## Value
 
-<p>An {{domxref("EventListener")}}.</p>
+An {{domxref("EventListener")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

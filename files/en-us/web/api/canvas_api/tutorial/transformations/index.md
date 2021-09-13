@@ -10,36 +10,33 @@ tags:
   - Intermediate
   - Web
 ---
-<div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}</div>
+{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}
 
-<p>Earlier in this tutorial we've learned about the <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes">canvas grid</a> and the <strong>coordinate space</strong>. Until now, we only used the default grid and changed the size of the overall canvas for our needs. With transformations there are more powerful ways to translate the origin to a different position, rotate the grid and even scale it.</p>
+Earlier in this tutorial we've learned about the [canvas grid](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) and the **coordinate space**. Until now, we only used the default grid and changed the size of the overall canvas for our needs. With transformations there are more powerful ways to translate the origin to a different position, rotate the grid and even scale it.
 
-<h2 id="Saving_and_restoring_state">Saving and restoring state</h2>
+## Saving and restoring state
 
-<p>Before we look at the transformation methods, let's look at two other methods which are indispensable once you start generating ever more complex drawings.</p>
+Before we look at the transformation methods, let's look at two other methods which are indispensable once you start generating ever more complex drawings.
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.save", "save()")}}</dt>
- <dd>Saves the entire state of the canvas.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.restore", "restore()")}}</dt>
- <dd>Restores the most recently saved canvas state.</dd>
-</dl>
+- {{domxref("CanvasRenderingContext2D.save", "save()")}}
+  - : Saves the entire state of the canvas.
+- {{domxref("CanvasRenderingContext2D.restore", "restore()")}}
+  - : Restores the most recently saved canvas state.
 
-<p>Canvas states are stored on a stack. Every time the <code>save()</code> method is called, the current drawing state is pushed onto the stack. A drawing state consists of</p>
+Canvas states are stored on a stack. Every time the `save()` method is called, the current drawing state is pushed onto the stack. A drawing state consists of
 
-<ul>
- <li>The transformations that have been applied (i.e. <code>translate</code>, <code>rotate</code> and <code>scale</code> – see below).</li>
- <li>The current values of the following attributes: {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}}, {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}}, {{domxref("CanvasRenderingContext2D.globalAlpha", "globalAlpha")}}, {{domxref("CanvasRenderingContext2D.lineWidth", "lineWidth")}}, {{domxref("CanvasRenderingContext2D.lineCap", "lineCap")}}, {{domxref("CanvasRenderingContext2D.lineJoin", "lineJoin")}}, {{domxref("CanvasRenderingContext2D.miterLimit", "miterLimit")}}, {{domxref("CanvasRenderingContext2D.lineDashOffset", "lineDashOffset")}}, {{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX")}}, {{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY")}}, {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}}, {{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor")}}, {{domxref("CanvasRenderingContext2D.globalCompositeOperation", "globalCompositeOperation")}}, {{domxref("CanvasRenderingContext2D.font", "font")}}, {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, {{domxref("CanvasRenderingContext2D.direction", "direction")}}, {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}}.</li>
- <li>The current <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing#clipping_paths">clipping path</a>, which we'll see in the next section.</li>
-</ul>
+- The transformations that have been applied (i.e. `translate`, `rotate` and `scale` – see below).
+- The current values of the following attributes: {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}}, {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}}, {{domxref("CanvasRenderingContext2D.globalAlpha", "globalAlpha")}}, {{domxref("CanvasRenderingContext2D.lineWidth", "lineWidth")}}, {{domxref("CanvasRenderingContext2D.lineCap", "lineCap")}}, {{domxref("CanvasRenderingContext2D.lineJoin", "lineJoin")}}, {{domxref("CanvasRenderingContext2D.miterLimit", "miterLimit")}}, {{domxref("CanvasRenderingContext2D.lineDashOffset", "lineDashOffset")}}, {{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX")}}, {{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY")}}, {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}}, {{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor")}}, {{domxref("CanvasRenderingContext2D.globalCompositeOperation", "globalCompositeOperation")}}, {{domxref("CanvasRenderingContext2D.font", "font")}}, {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, {{domxref("CanvasRenderingContext2D.direction", "direction")}}, {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}}.
+- The current [clipping path](/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing#clipping_paths), which we'll see in the next section.
 
-<p>You can call the <code>save()</code> method as many times as you like. Each time the <code>restore()</code> method is called, the last saved state is popped off the stack and all saved settings are restored.</p>
+You can call the `save()` method as many times as you like. Each time the `restore()` method is called, the last saved state is popped off the stack and all saved settings are restored.
 
-<h3 id="A_save_and_restore_canvas_state_example">A <code>save</code> and <code>restore</code> canvas state example</h3>
+### A `save` and `restore` canvas state example
 
-<p>This example tries to illustrate how the stack of drawing states functions by drawing a set of consecutive rectangles.</p>
+This example tries to illustrate how the stack of drawing states functions by drawing a set of consecutive rectangles.
 
-<pre class="brush: js;">function draw() {
+```js
+function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   ctx.fillRect(0, 0, 150, 150);   // Draw a rectangle with default settings
@@ -58,41 +55,47 @@ tags:
 
   ctx.restore();               // Restore original state
   ctx.fillRect(60, 60, 30, 30);   // Draw a rectangle with restored settings
-}</pre>
+}
+```
 
-<pre class="brush: html hidden">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+```html hidden
+<canvas id="canvas" width="150" height="150"></canvas>
+```
 
-<pre class="brush: js hidden">draw();</pre>
+```js hidden
+draw();
+```
 
-<p>The first step is to draw a large rectangle with the default settings. Next we save this state and make changes to the fill color. We then draw the second and smaller blue rectangle and save the state. Again we change some drawing settings and draw the third semi-transparent white rectangle.</p>
+The first step is to draw a large rectangle with the default settings. Next we save this state and make changes to the fill color. We then draw the second and smaller blue rectangle and save the state. Again we change some drawing settings and draw the third semi-transparent white rectangle.
 
-<p>So far this is pretty similar to what we've done in previous sections. However once we call the first <code>restore()</code> statement, the top drawing state is removed from the stack, and settings are restored. If we hadn't saved the state using <code>save()</code>, we would need to change the fill color and transparency manually in order to return to the previous state. This would be easy for two properties, but if we have more than that, our code would become very long, very fast.</p>
+So far this is pretty similar to what we've done in previous sections. However once we call the first `restore()` statement, the top drawing state is removed from the stack, and settings are restored. If we hadn't saved the state using `save()`, we would need to change the fill color and transparency manually in order to return to the previous state. This would be easy for two properties, but if we have more than that, our code would become very long, very fast.
 
-<p>When the second <code>restore()</code> statement is called, the original state (the one we set up before the first call to <code>save</code>) is restored and the last rectangle is once again drawn in black.</p>
+When the second `restore()` statement is called, the original state (the one we set up before the first call to `save`) is restored and the last rectangle is once again drawn in black.
 
-<p>{{EmbedLiveSample("A_save_and_restore_canvas_state_example", "180", "180", "canvas_savestate.png")}}</p>
+{{EmbedLiveSample("A_save_and_restore_canvas_state_example", "180", "180", "canvas_savestate.png")}}
 
-<h2 id="Translating">Translating</h2>
+## Translating
 
-<p>The first of the transformation methods we'll look at is <code>translate()</code>. This method is used to move the canvas and its origin to a different point in the grid.</p>
+The first of the transformation methods we'll look at is `translate()`. This method is used to move the canvas and its origin to a different point in the grid.
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.translate", "translate(x, y)")}}</dt>
- <dd>Moves the canvas and its origin on the grid. <code>x</code> indicates the horizontal distance to move, and <code>y</code> indicates how far to move the grid vertically.</dd>
-</dl>
-<img alt="" src="canvas_grid_translate.png">
-<p>It's a good idea to save the canvas state before doing any transformations. In most cases, it is just easier to call the <code>restore</code> method than having to do a reverse translation to return to the original state. Also if you're translating inside a loop and don't save and restore the canvas state, you might end up missing part of your drawing, because it was drawn outside the canvas edge.</p>
+- {{domxref("CanvasRenderingContext2D.translate", "translate(x, y)")}}
+  - : Moves the canvas and its origin on the grid. `x` indicates the horizontal distance to move, and `y` indicates how far to move the grid vertically.
 
-<h3 id="A_translate_example">A <code>translate</code> example</h3>
+![](canvas_grid_translate.png)
 
-<p>This example demonstrates some of the benefits of translating the canvas origin. Without the <code>translate()</code> method, all of the rectangles would be drawn at the same position (0,0). The <code>translate()</code> method also gives us the freedom to place the rectangle anywhere on the canvas without having to manually adjust coordinates in the <code>fillRect()</code> function. This makes it a little easier to understand and use.</p>
+It's a good idea to save the canvas state before doing any transformations. In most cases, it is just easier to call the `restore` method than having to do a reverse translation to return to the original state. Also if you're translating inside a loop and don't save and restore the canvas state, you might end up missing part of your drawing, because it was drawn outside the canvas edge.
 
-<p>In the <code>draw()</code> function, we call the <code>fillRect()</code> function nine times using two <code>for</code> loops. In each loop, the canvas is translated, the rectangle is drawn, and the canvas is returned back to its original state. Note how the call to <code>fillRect()</code> uses the same coordinates each time, relying on <code>translate()</code> to adjust the drawing position.</p>
+### A `translate` example
 
-<pre class="brush: js;">function draw() {
+This example demonstrates some of the benefits of translating the canvas origin. Without the `translate()` method, all of the rectangles would be drawn at the same position (0,0). The `translate()` method also gives us the freedom to place the rectangle anywhere on the canvas without having to manually adjust coordinates in the `fillRect()` function. This makes it a little easier to understand and use.
+
+In the `draw()` function, we call the `fillRect()` function nine times using two `for` loops. In each loop, the canvas is translated, the rectangle is drawn, and the canvas is returned back to its original state. Note how the call to `fillRect()` uses the same coordinates each time, relying on `translate()` to adjust the drawing position.
+
+```js
+function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
-  for (var i = 0; i &lt; 3; i++) {
-    for (var j = 0; j &lt; 3; j++) {
+  for (var i = 0; i < 3; i++) {
+    for (var j = 0; j < 3; j++) {
       ctx.save();
       ctx.fillStyle = 'rgb(' + (51 * i) + ', ' + (255 - 51 * i) + ', 255)';
       ctx.translate(10 + j * 50, 10 + i * 50);
@@ -101,34 +104,37 @@ tags:
     }
   }
 }
-</pre>
+```
 
-<pre class="brush: html hidden">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+```html hidden
+<canvas id="canvas" width="150" height="150"></canvas>
+```
 
-<pre class="brush: js hidden">draw();</pre>
+```js hidden
+draw();
+```
 
-<p>{{EmbedLiveSample("A_translate_example", "160", "160", "translate.png")}}</p>
+{{EmbedLiveSample("A_translate_example", "160", "160", "translate.png")}}
 
-<h2 id="Rotating">Rotating</h2>
+## Rotating
 
-<p>The second transformation method is <code>rotate()</code>. We use it to rotate the canvas around the current origin.</p>
+The second transformation method is `rotate()`. We use it to rotate the canvas around the current origin.
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.rotate", "rotate(angle)")}}</dt>
- <dd>Rotates the canvas clockwise around the current origin by the <code>angle</code> number of radians.</dd>
-</dl>
-<img alt="" src="canvas_grid_rotate.png">
-<p>The rotation center point is always the canvas origin. To change the center point, we will need to move the canvas by using the <code>translate()</code> method.</p>
+- {{domxref("CanvasRenderingContext2D.rotate", "rotate(angle)")}}
+  - : Rotates the canvas clockwise around the current origin by the `angle` number of radians.
 
-<h3 id="A_rotate_example">A <code>rotate</code> example</h3>
+![](canvas_grid_rotate.png)
 
-<p>In this example, we'll use the <code>rotate()</code> method to first rotate a rectangle from the canvas origin and then from the center of the rectangle itself with the help of <code>translate()</code>.</p>
+The rotation center point is always the canvas origin. To change the center point, we will need to move the canvas by using the `translate()` method.
 
-<div class="note">
-<p><strong>Note:</strong> Angles are in radians, not degrees. To convert, we are using: <code>radians = (Math.PI/180)*degrees</code>.</p>
-</div>
+### A `rotate` example
 
-<pre class="brush: js;">function draw() {
+In this example, we'll use the `rotate()` method to first rotate a rectangle from the canvas origin and then from the center of the rectangle itself with the help of `translate()`.
+
+> **Note:** Angles are in radians, not degrees. To convert, we are using: `radians = (Math.PI/180)*degrees`.
+
+```js
+function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   // left rectangles, rotate from canvas origin
@@ -157,34 +163,37 @@ tags:
   ctx.fillStyle = '#4D4E53';
   ctx.fillRect(150, 30, 100, 100);
 }
-</pre>
+```
 
-<p>To rotate the rectangle around its own center, we translate the canvas to the center of the rectangle, then rotate the canvas, then translate the canvas back to 0,0, and then draw the rectangle.</p>
+To rotate the rectangle around its own center, we translate the canvas to the center of the rectangle, then rotate the canvas, then translate the canvas back to 0,0, and then draw the rectangle.
 
-<pre class="brush: html hidden">&lt;canvas id="canvas" width="300" height="200"&gt;&lt;/canvas&gt;</pre>
+```html hidden
+<canvas id="canvas" width="300" height="200"></canvas>
+```
 
-<pre class="brush: js hidden">draw();</pre>
+```js hidden
+draw();
+```
 
-<p>{{EmbedLiveSample("A_rotate_example", "310", "210", "rotate.png")}}</p>
+{{EmbedLiveSample("A_rotate_example", "310", "210", "rotate.png")}}
 
-<h2 id="Scaling">Scaling</h2>
+## Scaling
 
-<p>The next transformation method is scaling. We use it to increase or decrease the units in our canvas grid. This can be used to draw scaled down or enlarged shapes and bitmaps.</p>
+The next transformation method is scaling. We use it to increase or decrease the units in our canvas grid. This can be used to draw scaled down or enlarged shapes and bitmaps.
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.scale", "scale(x, y)")}}</dt>
- <dd>Scales the canvas units by x horizontally and by y vertically. Both parameters are real numbers. Values that are smaller than 1.0 reduce the unit size and values above 1.0 increase the unit size. Values of 1.0 leave the units the same size.</dd>
-</dl>
+- {{domxref("CanvasRenderingContext2D.scale", "scale(x, y)")}}
+  - : Scales the canvas units by x horizontally and by y vertically. Both parameters are real numbers. Values that are smaller than 1.0 reduce the unit size and values above 1.0 increase the unit size. Values of 1.0 leave the units the same size.
 
-<p>Using negative numbers you can do axis mirroring (for example using <code>translate(0,canvas.height); scale(1,-1);</code> you will have the well-known Cartesian coordinate system, with the origin in the bottom left corner).</p>
+Using negative numbers you can do axis mirroring (for example using `translate(0,canvas.height); scale(1,-1);` you will have the well-known Cartesian coordinate system, with the origin in the bottom left corner).
 
-<p>By default, one unit on the canvas is exactly one pixel. If we apply, for instance, a scaling factor of 0.5, the resulting unit would become 0.5 pixels and so shapes would be drawn at half size. In a similar way setting the scaling factor to 2.0 would increase the unit size and one unit now becomes two pixels. This results in shapes being drawn twice as large.</p>
+By default, one unit on the canvas is exactly one pixel. If we apply, for instance, a scaling factor of 0.5, the resulting unit would become 0.5 pixels and so shapes would be drawn at half size. In a similar way setting the scaling factor to 2.0 would increase the unit size and one unit now becomes two pixels. This results in shapes being drawn twice as large.
 
-<h3 id="A_scale_example">A <code>scale</code> example</h3>
+### A `scale` example
 
-<p>In this last example, we'll draw shapes with different scaling factors.</p>
+In this last example, we'll draw shapes with different scaling factors.
 
-<pre class="brush: js;">function draw() {
+```js
+function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   // draw a simple rectangle, but scale it.
@@ -198,56 +207,60 @@ tags:
   ctx.font = '48px serif';
   ctx.fillText('MDN', -135, 120);
 }
+```
 
-</pre>
+```html hidden
+<canvas id="canvas" width="150" height="150"></canvas>
+```
 
-<pre class="brush: html hidden">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+```js hidden
+draw();
+```
 
-<pre class="brush: js hidden">draw();</pre>
+{{EmbedLiveSample("A_scale_example", "160", "160", "scale.png")}}
 
-<p>{{EmbedLiveSample("A_scale_example", "160", "160", "scale.png")}}</p>
+## Transforms
 
-<h2 id="Transforms">Transforms</h2>
+Finally, the following transformation methods allow modifications directly to the transformation matrix.
 
-<p>Finally, the following transformation methods allow modifications directly to the transformation matrix.</p>
+- {{domxref("CanvasRenderingContext2D.transform", "transform(a, b, c, d, e, f)")}}
 
-<dl>
- <dt>{{domxref("CanvasRenderingContext2D.transform", "transform(a, b, c, d, e, f)")}}</dt>
- <dd>Multiplies the current transformation matrix with the matrix described by its arguments. The transformation matrix is described by: <math><semantics><mrow><mo>[</mo><mtable columnalign="center center center" rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="TeX">\left[ \begin{array}{ccc} a &amp; c &amp; e \\ b &amp; d &amp; f \\ 0 &amp; 0 &amp; 1 \end{array} \right]</annotation></semantics></math></br>
- If any of the arguments are <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity">Infinity</a></code> the transformation matrix must be marked as infinite instead of the method throwing an exception.</dd>
-</dl>
+  - : Multiplies the current transformation matrix with the matrix described by its arguments. The transformation matrix is described by:
 
-<p>The parameters of this function are:</p>
+    <math><semantics><mrow><mo>[</mo><mtable columnalign="center center center" rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="TeX">\left[ \begin{array}{ccc} a &#x26; c &#x26; e \\ b &#x26; d &#x26; f \\ 0 &#x26; 0 &#x26; 1 \end{array} \right]</annotation></semantics></math>
 
-<dl>
- <dt><code>a (m11)</code></dt>
- <dd>Horizontal scaling.</dd>
- <dt><em><code>b (m12)</code></em></dt>
- <dd>Horizontal skewing.</dd>
- <dt><code>c (m21)</code></dt>
- <dd>Vertical skewing.</dd>
- <dt><code>d (m22)</code></dt>
- <dd>Vertical scaling.</dd>
- <dt><code>e (dx)</code></dt>
- <dd>Horizontal moving.</dd>
- <dt><code>f (dy)</code></dt>
- <dd>Vertical moving.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.setTransform", "setTransform(a, b, c, d, e, f)")}}</dt>
- <dd>Resets the current transform to the identity matrix, and then invokes the <code>transform()</code> method with the same arguments. This basically undoes the current transformation, then sets the specified transform, all in one step.</dd>
- <dt>{{domxref("CanvasRenderingContext2D.resetTransform", "resetTransform()")}}</dt>
- <dd>Resets the current transform to the identity matrix. This is the same as calling: <code>ctx.setTransform(1, 0, 0, 1, 0, 0);</code></dd>
-</dl>
+    If any of the arguments are [`Infinity`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity) the transformation matrix must be marked as infinite instead of the method throwing an exception.
 
-<h3 id="Example_for_transform_and_setTransform">Example for <code>transform</code> and <code>setTransform</code></h3>
+The parameters of this function are:
 
-<pre class="brush: js;">function draw() {
+- `a (m11)`
+  - : Horizontal scaling.
+- _`b (m12)`_
+  - : Horizontal skewing.
+- `c (m21)`
+  - : Vertical skewing.
+- `d (m22)`
+  - : Vertical scaling.
+- `e (dx)`
+  - : Horizontal moving.
+- `f (dy)`
+  - : Vertical moving.
+- {{domxref("CanvasRenderingContext2D.setTransform", "setTransform(a, b, c, d, e, f)")}}
+  - : Resets the current transform to the identity matrix, and then invokes the `transform()` method with the same arguments. This basically undoes the current transformation, then sets the specified transform, all in one step.
+- {{domxref("CanvasRenderingContext2D.resetTransform", "resetTransform()")}}
+  - : Resets the current transform to the identity matrix. This is the same as calling: `ctx.setTransform(1, 0, 0, 1, 0, 0);`
+
+### Example for `transform` and `setTransform`
+
+```js
+function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   var sin = Math.sin(Math.PI / 6);
   var cos = Math.cos(Math.PI / 6);
   ctx.translate(100, 100);
   var c = 0;
-  for (var i = 0; i &lt;= 12; i++) {
+  for (var i = 0; i <= 12; i++) {
     c = Math.floor(255 / 12 * i);
     ctx.fillStyle = 'rgb(' + c + ', ' + c + ', ' + c + ')';
     ctx.fillRect(0, 0, 100, 10);
@@ -258,12 +271,16 @@ tags:
   ctx.fillStyle = 'rgba(255, 128, 255, 0.5)';
   ctx.fillRect(0, 50, 100, 100);
 }
-</pre>
+```
 
-<pre class="brush: html hidden">&lt;canvas id="canvas" width="200" height="250"&gt;&lt;/canvas&gt;</pre>
+```html hidden
+<canvas id="canvas" width="200" height="250"></canvas>
+```
 
-<pre class="brush: js hidden">draw();</pre>
+```js hidden
+draw();
+```
 
-<p>{{EmbedLiveSample("Example_for_transform_and_setTransform", "230", "280", "canvas_transform.png")}}</p>
+{{EmbedLiveSample("Example_for_transform_and_setTransform", "230", "280", "canvas_transform.png")}}
 
-<p>{{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}</p>
+{{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}

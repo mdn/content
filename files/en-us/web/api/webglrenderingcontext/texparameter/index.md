@@ -1,49 +1,45 @@
 ---
-title: 'WebGLRenderingContext.texParameter[fi]()'
+title: WebGLRenderingContext.texParameter[fi]()
 slug: Web/API/WebGLRenderingContext/texParameter
 tags:
-- API
-- Method
-- Reference
-- Textures
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - Textures
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.texParameterf
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.texParameter[fi]()</code></strong> methods of
-  the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> set texture parameters.</p>
+The **`WebGLRenderingContext.texParameter[fi]()`** methods of
+the [WebGL API](/en-US/docs/Web/API/WebGL_API) set texture parameters.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <var>gl</var>.texParameterf(GLenum <var>target</var>, GLenum <var>pname</var>, GLfloat <var>param</var>);
-void <var>gl</var>.texParameteri(GLenum <var>target</var>, GLenum <var>pname</var>, GLint <var>param</var>);
-</pre>
+```js
+void gl.texParameterf(GLenum target, GLenum pname, GLfloat param);
+void gl.texParameteri(GLenum target, GLenum pname, GLint param);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>target</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target). Possible values:
-    <ul>
-      <li><code>gl.TEXTURE_2D</code>: A two-dimensional texture.</li>
-      <li><code>gl.TEXTURE_CUBE_MAP</code>: A cube-mapped texture.</li>
-      <li>When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
-        the following values are available additionally:
-        <ul>
-          <li><code>gl.TEXTURE_3D</code>: A three-dimensional texture.</li>
-          <li><code>gl.TEXTURE_2D_ARRAY</code>: A two-dimensional array texture.</li>
-        </ul>
-      </li>
-    </ul>
-  </dd>
-</dl>
+- target
 
-<p>The <code>pname</code> parameter is a {{domxref("WebGL_API/Types", "GLenum")}} specifying the texture
-  parameter to set. The <code>param</code> parameter is a {{domxref("WebGL_API/Types", "GLfloat")}} or
-  {{domxref("WebGL_API/Types", "GLint")}} specifying the value for the specified parameter
-  <code>pname</code>.</p>
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target). Possible values:
+
+    - `gl.TEXTURE_2D`: A two-dimensional texture.
+    - `gl.TEXTURE_CUBE_MAP`: A cube-mapped texture.
+    - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
+      the following values are available additionally:
+
+      - `gl.TEXTURE_3D`: A three-dimensional texture.
+      - `gl.TEXTURE_2D_ARRAY`: A two-dimensional array texture.
+
+The `pname` parameter is a {{domxref("WebGL_API/Types", "GLenum")}} specifying the texture
+parameter to set. The `param` parameter is a {{domxref("WebGL_API/Types", "GLfloat")}} or
+{{domxref("WebGL_API/Types", "GLint")}} specifying the value for the specified parameter
+`pname`.
 
 <table class="standard-table">
   <thead>
@@ -65,26 +61,35 @@ void <var>gl</var>.texParameteri(GLenum <var>target</var>, GLenum <var>pname</va
     <tr>
       <td><code>gl.TEXTURE_MIN_FILTER</code></td>
       <td>Texture minification filter</td>
-      <td><code>gl.LINEAR</code>, <code>gl.NEAREST</code>,
-        <code>gl.NEAREST_MIPMAP_NEAREST</code>, <code>gl.LINEAR_MIPMAP_NEAREST</code>,
+      <td>
+        <code>gl.LINEAR</code>, <code>gl.NEAREST</code>,
+        <code>gl.NEAREST_MIPMAP_NEAREST</code>,
+        <code>gl.LINEAR_MIPMAP_NEAREST</code>,
         <code>gl.NEAREST_MIPMAP_LINEAR</code> (default value),
-        <code>gl.LINEAR_MIPMAP_LINEAR</code>.</td>
+        <code>gl.LINEAR_MIPMAP_LINEAR</code>.
+      </td>
     </tr>
     <tr>
       <td><code>gl.TEXTURE_WRAP_S</code></td>
       <td>Wrapping function for texture coordinate <code>s</code></td>
-      <td><code>gl.REPEAT</code> (default value),<code>gl.CLAMP_TO_EDGE</code>,
-        <code>gl.MIRRORED_REPEAT</code>.</td>
+      <td>
+        <code>gl.REPEAT</code> (default value),<code>gl.CLAMP_TO_EDGE</code>,
+        <code>gl.MIRRORED_REPEAT</code>.
+      </td>
     </tr>
     <tr>
       <td><code>gl.TEXTURE_WRAP_T</code></td>
       <td>Wrapping function for texture coordinate <code>t</code></td>
-      <td><code>gl.REPEAT</code> (default value),<code>gl.CLAMP_TO_EDGE</code>,
-        <code>gl.MIRRORED_REPEAT</code>.</td>
+      <td>
+        <code>gl.REPEAT</code> (default value),<code>gl.CLAMP_TO_EDGE</code>,
+        <code>gl.MIRRORED_REPEAT</code>.
+      </td>
     </tr>
     <tr>
-      <th colspan="3">Additionally available when using the
-        {{domxref("EXT_texture_filter_anisotropic")}} extension</th>
+      <th colspan="3">
+        Additionally available when using the
+        {{domxref("EXT_texture_filter_anisotropic")}} extension
+      </th>
     </tr>
     <tr>
       <td><code>ext.TEXTURE_MAX_ANISOTROPY_EXT</code></td>
@@ -102,14 +107,18 @@ void <var>gl</var>.texParameteri(GLenum <var>target</var>, GLenum <var>pname</va
     <tr>
       <td><code>gl.TEXTURE_COMPARE_FUNC</code></td>
       <td>Texture Comparison function</td>
-      <td><code>gl.LEQUAL</code> (default value), <code>gl.GEQUAL</code>,
+      <td>
+        <code>gl.LEQUAL</code> (default value), <code>gl.GEQUAL</code>,
         <code>gl.LESS</code>, <code>gl.GREATER</code>, <code>gl.EQUAL</code>,
-        <code>gl.NOTEQUAL</code>, <code>gl.ALWAYS</code>, <code>gl.NEVER</code>.</td>
+        <code>gl.NOTEQUAL</code>, <code>gl.ALWAYS</code>, <code>gl.NEVER</code>.
+      </td>
     </tr>
     <tr>
       <td><code>gl.TEXTURE_COMPARE_MODE</code></td>
       <td>Texture comparison mode</td>
-      <td><code>gl.NONE</code> (default value), <code>gl.COMPARE_REF_TO_TEXTURE</code>.
+      <td>
+        <code>gl.NONE</code> (default value),
+        <code>gl.COMPARE_REF_TO_TEXTURE</code>.
       </td>
     </tr>
     <tr>
@@ -130,41 +139,40 @@ void <var>gl</var>.texParameteri(GLenum <var>target</var>, GLenum <var>pname</va
     <tr>
       <td><code>gl.TEXTURE_WRAP_R</code></td>
       <td>Wrapping function for texture coordinate <code>r</code></td>
-      <td><code>gl.REPEAT</code> (default value), <code>gl.CLAMP_TO_EDGE</code>,
-        <code>gl.MIRRORED_REPEAT</code>.</td>
+      <td>
+        <code>gl.REPEAT</code> (default value), <code>gl.CLAMP_TO_EDGE</code>,
+        <code>gl.MIRRORED_REPEAT</code>.
+      </td>
     </tr>
   </tbody>
 </table>
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">gl.texParameterf(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+```js
+gl.texParameterf(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
 gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR_MIPMAP_NEAREST);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<h3 id="WebGLRenderingContext.texParameterf">
-  <code>WebGLRenderingContext.texParameterf()</code></h3>
+### `WebGLRenderingContext.texParameterf()`
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h3 id="WebGLRenderingContext.texParameteri">
-  <code>WebGLRenderingContext.texParameteri()</code></h3>
+### `WebGLRenderingContext.texParameteri()`
 
-<p>{{Compat("api.WebGLRenderingContext.texParameteri")}}</p>
+{{Compat("api.WebGLRenderingContext.texParameteri")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.getTexParameter()")}}</li>
-  <li>{{domxref("EXT_texture_filter_anisotropic")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.getTexParameter()")}}
+- {{domxref("EXT_texture_filter_anisotropic")}}

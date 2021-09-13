@@ -2,46 +2,45 @@
 title: StylePropertyMapReadOnly.getAll()
 slug: Web/API/StylePropertyMapReadOnly/getAll
 tags:
-- API
-- CSS Typed Object Model API
-- Experimental
-- Houdini
-- Method
-- Reference
-- StylePropertyMapReadOnly
-- getAll()
+  - API
+  - CSS Typed Object Model API
+  - Experimental
+  - Houdini
+  - Method
+  - Reference
+  - StylePropertyMapReadOnly
+  - getAll()
 browser-compat: api.StylePropertyMapReadOnly.getAll
 ---
-<p>{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}</p>
+{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>getAll()</code></strong> method of the
-  {{domxref("StylePropertyMapReadOnly")}} interface returns an array of
-  {{domxref("CSSStyleValue")}} objects containing the values for the provided property.
-</p>
+The **`getAll()`** method of the
+{{domxref("StylePropertyMapReadOnly")}} interface returns an array of
+{{domxref("CSSStyleValue")}} objects containing the values for the provided property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>cssStyleValues[]</var> = StylePropertyMapReadOnly.getAll(<var>property</var>)</pre>
+```js
+var cssStyleValues[] = StylePropertyMapReadOnly.getAll(property)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>property</dt>
-  <dd>The name of the property to retrieve all values of.</dd>
-</dl>
+- property
+  - : The name of the property to retrieve all values of.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An array of {{domxref("CSSStyleValue")}} objects.</p>
+An array of {{domxref("CSSStyleValue")}} objects.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example uses <code>getAll()</code> with the
-  {{cssxref('background-image')}} property. An {{jsxref('Array')}} is returned which
-  contains an item for each background image declared.</p>
+The following example uses `getAll()` with the
+{{cssxref('background-image')}} property. An {{jsxref('Array')}} is returned which
+contains an item for each background image declared.
 
-<pre class="brush: js">// get a button element
+```js
+// get a button element
 const buttonEl = document.querySelector('button');
 
 // we can retrieve all computed styles with `computedStyleMap`
@@ -50,13 +49,12 @@ const allComputedStyles = buttonEl.computedStyleMap();
 // use getAll() with the background image property
 const allBkImages = allComputedStyles.getAll('background-image');
 console.log(allBkImages); // logs an array with each background image as an item
+```
 
-</pre>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

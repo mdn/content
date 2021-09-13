@@ -2,48 +2,48 @@
 title: MediaRecorder.isTypeSupported
 slug: Web/API/MediaRecorder/isTypeSupported
 tags:
-- API
-- Audio
-- Media
-- Media Capture
-- Media Recorder API
-- MediaRecorder
-- Method
-- Reference
-- Video
-- canRecordMimeType
+  - API
+  - Audio
+  - Media
+  - Media Capture
+  - Media Recorder API
+  - MediaRecorder
+  - Method
+  - Reference
+  - Video
+  - canRecordMimeType
 browser-compat: api.MediaRecorder.isTypeSupported
 ---
-<p>{{APIRef("MediaStream Recording")}}</p>
+{{APIRef("MediaStream Recording")}}
 
-<p>The
-    <strong><code>MediaRecorder.isTypeSupported()</code></strong> static method returns a
-    Boolean which is <code>true</code> if the MIME type specified is one the user agent
-    should be able to successfully record.</p>
+The
+**`MediaRecorder.isTypeSupported()`** static method returns a
+Boolean which is `true` if the MIME type specified is one the user agent
+should be able to successfully record.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>canRecord</em> = MediaRecorder.isTypeSupported(<em>mimeType</em>)</pre>
+```js
+var canRecord = MediaRecorder.isTypeSupported(mimeType)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>mimeType</code></dt>
-  <dd>The MIME media type to check.</dd>
-</dl>
+- `mimeType`
+  - : The MIME media type to check.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>true</code> if the {{domxref("MediaRecorder")}} implementation is capable of
-  recording {{domxref("Blob")}} objects for the specified MIME type. Recording may still
-  fail if there are insufficient resources to support the recording and encoding process.
-  If the value is <code>false</code>, the user agent is incapable of recording the
-  specified format.</p>
+`true` if the {{domxref("MediaRecorder")}} implementation is capable of
+recording {{domxref("Blob")}} objects for the specified MIME type. Recording may still
+fail if there are insufficient resources to support the recording and encoding process.
+If the value is `false`, the user agent is incapable of recording the
+specified format.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var types = ["video/webm",
+```js
+var types = ["video/webm",
              "audio/webm",
              "video/webm\;codecs=vp8",
              "video/webm\;codecs=daala",
@@ -54,29 +54,26 @@ browser-compat: api.MediaRecorder.isTypeSupported
 for (var i in types) {
   console.log( "Is " + types[i] + " supported? " + (MediaRecorder.isTypeSupported(types[i]) ? "Maybe!" : "Nope :("));
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/MediaStream_Recording_API">MediaStream Recording
-      API</a></li>
-  <li><a
-      href="/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API">Using
-      the MediaStream Recording API</a></li>
-  <li><a href="/en-US/docs/Web/Media/Formats">Guide to media types and formats on the
-      web</a></li>
-  <li><a href="/en-US/docs/Web/Media/Formats/codecs_parameter">The "codecs" parameter in
-      common media types</a></li>
-  <li>{{domxref("MediaStreamTrack")}}</li>
-  <li>{{domxref("MediaStream")}}</li>
-  <li>{{domxref("MediaCapabilities")}}</li>
-</ul>
+- [MediaStream Recording
+  API](/en-US/docs/Web/API/MediaStream_Recording_API)
+- [Using
+  the MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
+- [Guide to media types and formats on the
+  web](/en-US/docs/Web/Media/Formats)
+- [The "codecs" parameter in
+  common media types](/en-US/docs/Web/Media/Formats/codecs_parameter)
+- {{domxref("MediaStreamTrack")}}
+- {{domxref("MediaStream")}}
+- {{domxref("MediaCapabilities")}}

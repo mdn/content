@@ -2,45 +2,46 @@
 title: HTMLElement.attachInternals()
 slug: Web/API/HTMLElement/attachInternals
 tags:
-- API
-- Element
-- Method
-- Reference
-- attachInternals
+  - API
+  - Element
+  - Method
+  - Reference
+  - attachInternals
 browser-compat: api.HTMLElement.attachInternals
 ---
-<div>{{APIRef('DOM')}}</div>
+{{APIRef('DOM')}}
 
-<p>The <strong><code>HTMLElement.attachInternals()</code></strong> method returns a {{domxref("ElementInternals")}} object. This method allows a <a href="/en-US/docs/Web/Web_Components/Using_custom_elements">custom element</a> to participate in HTML forms. The <code>ElementInternals</code> interface provides utilities for working with these elements in the same way you would work with any standard HTML form element, and also exposes the <a href="https://wicg.github.io/aom/explainer.html">Accessibility Object Model</a> to the element.</p>
+The **`HTMLElement.attachInternals()`** method returns a {{domxref("ElementInternals")}} object. This method allows a [custom element](/en-US/docs/Web/Web_Components/Using_custom_elements) to participate in HTML forms. The `ElementInternals` interface provides utilities for working with these elements in the same way you would work with any standard HTML form element, and also exposes the [Accessibility Object Model](https://wicg.github.io/aom/explainer.html) to the element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>internals</var> = <var>element</var>.attachInternals();</pre>
+```js
+var internals = element.attachInternals();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An {{domxref("ElementInternals")}} object.</p>
+An {{domxref("ElementInternals")}} object.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>{{domxref("DOMException")}} <code>NotSupportedError</code></dt>
-  <dd>Thrown if the element is not a custom element.</dd>
-  <dt>{{domxref("DOMException")}} <code>NotSupportedError</code></dt>
-  <dd>Thrown if the "internals" feature was disabled as part of the element definition.</dd>
-  <dt>{{domxref("DOMException")}} <code>NotSupportedError</code></dt>
-  <dd>Thrown if this method is called twice on the same element.</dd>
-</dl>
+- {{domxref("DOMException")}} `NotSupportedError`
+  - : Thrown if the element is not a custom element.
+- {{domxref("DOMException")}} `NotSupportedError`
+  - : Thrown if the "internals" feature was disabled as part of the element definition.
+- {{domxref("DOMException")}} `NotSupportedError`
+  - : Thrown if this method is called twice on the same element.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example demonstrates how to create a custom form-associated element with {{domxref("HTMLElement.attachInternals")}}. The {{domxref("ElementInternals.form")}} property is then printed to the console to demonstrate that we have an {{domxref("ElementInternals")}} object.</p>
+The following example demonstrates how to create a custom form-associated element with {{domxref("HTMLElement.attachInternals")}}. The {{domxref("ElementInternals.form")}} property is then printed to the console to demonstrate that we have an {{domxref("ElementInternals")}} object.
 
-<pre class="brush: js">class CustomCheckbox extends HTMLElement {
+```js
+class CustomCheckbox extends HTMLElement {
   static formAssociated = true;
 
   constructor() {
@@ -54,19 +55,18 @@ browser-compat: api.HTMLElement.attachInternals
 })();
 
 let element = document.getElementById("custom-checkbox");
-console.log(element.internals_.form);</pre>
+console.log(element.internals_.form);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://web.dev/more-capable-form-controls/">More capable form controls</a></li>
-  <li><a href="https://css-tricks.com/creating-custom-form-controls-with-elementinternals/">Creating custom form controls with ElementInternals</a></li>
-</ul>
+- [More capable form controls](https://web.dev/more-capable-form-controls/)
+- [Creating custom form controls with ElementInternals](https://css-tricks.com/creating-custom-form-controls-with-elementinternals/)

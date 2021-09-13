@@ -9,51 +9,54 @@ tags:
   - Reference
 browser-compat: api.GlobalEventHandlers.oninvalid
 ---
-<div>{{ ApiRef("HTML DOM") }}</div>
+{{ ApiRef("HTML DOM") }}
 
-<p>The <code><strong>oninvalid</strong></code> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> that
-  processes {{event("invalid")}} events.</p>
+The **`oninvalid`** property of the
+{{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) that
+processes {{event("invalid")}} events.
 
-<p>The <code>invalid</code> event fires when a submittable element has been checked and
-  doesn't satisfy its constraints. The validity of submittable elements is checked before
-  submitting their owner form, or after the
-  <code><a href="/en-US/docs/Learn/Forms/Form_validation">checkValidity()</a></code>
-  method of the element or its owner form is called.</p>
+The `invalid` event fires when a submittable element has been checked and
+doesn't satisfy its constraints. The validity of submittable elements is checked before
+submitting their owner form, or after the
+[`checkValidity()`](/en-US/docs/Learn/Forms/Form_validation)
+method of the element or its owner form is called.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>target</em>.oninvalid = <em>functionRef</em>;
-var <em>functionRef</em> = <em>target</em>.oninvalid;
-</pre>
+```js
+target.oninvalid = functionRef;
+var functionRef = target.oninvalid;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p><code>functionRef</code> is a function name or a <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function
-    expression</a>. The function receives a {{domxref("Event")}} object as its sole
-  argument.</p>
+`functionRef` is a function name or a [function
+expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("Event")}} object as its sole
+argument.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example demonstrates <code>oninvalid</code> and
-  {{domxref("GlobalEventHandlers.onsubmit", "onsubmit")}} event handlers on a form.</p>
+This example demonstrates `oninvalid` and
+{{domxref("GlobalEventHandlers.onsubmit", "onsubmit")}} event handlers on a form.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;form id="form"&gt;
-  &lt;p id="error" hidden&gt;Please fill out all fields.&lt;/p&gt;
+```html
+<form id="form">
+  <p id="error" hidden>Please fill out all fields.</p>
 
-  &lt;label for="city"&gt;City&lt;/label&gt;
-  &lt;input type="text" id="city" required&gt;
+  <label for="city">City</label>
+  <input type="text" id="city" required>
 
-  &lt;button type="submit"&gt;Submit&lt;/button&gt;
-&lt;/form&gt;
-&lt;p id="thanks" hidden&gt;Your data has been received. Thanks!&lt;/p&gt;</pre>
+  <button type="submit">Submit</button>
+</form>
+<p id="thanks" hidden>Your data has been received. Thanks!</p>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">const form = document.getElementById('form');
+```js
+const form = document.getElementById('form');
 const error = document.getElementById('error');
 const city = document.getElementById('city');
 const thanks = document.getElementById('thanks');
@@ -71,23 +74,22 @@ function submit(event) {
 
   // For this example, don't actually submit the form
   event.preventDefault();
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{event("invalid")}} event</li>
-  <li><a href="/en-US/docs/Web/Guide/Events/Event_handlers">DOM on-event handlers</a></li>
-</ul>
+- {{event("invalid")}} event
+- [DOM on-event handlers](/en-US/docs/Web/Guide/Events/Event_handlers)

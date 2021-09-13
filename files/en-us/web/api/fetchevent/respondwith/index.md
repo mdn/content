@@ -2,114 +2,109 @@
 title: FetchEvent.respondWith()
 slug: Web/API/FetchEvent/respondWith
 tags:
-- API
-- Experimental
-- FetchEvent
-- Method
-- Offline
-- Reference
-- Service Workers
-- Workers
-- respondWith
+  - API
+  - Experimental
+  - FetchEvent
+  - Method
+  - Offline
+  - Reference
+  - Service Workers
+  - Workers
+  - respondWith
 browser-compat: api.FetchEvent.respondWith
 ---
-<p>{{APIRef("Service Workers API")}}</p>
+{{APIRef("Service Workers API")}}
 
-<p>The <strong><code>respondWith()</code></strong> method of
-		{{domxref("FetchEvent")}} prevents the browser's default fetch handling, and
-		allows you to provide a promise for a {{domxref("Response")}} yourself.</p>
+The **`respondWith()`** method of
+{{domxref("FetchEvent")}} prevents the browser's default fetch handling, and
+allows you to provide a promise for a {{domxref("Response")}} yourself.
 
-<p>In most cases you can provide any response that the receiver understands. For example,
-	if an {{HTMLElement('img')}} initiates the request, the response body needs to be
-	image data. For security reasons, there are a few global rules:</p>
+In most cases you can provide any response that the receiver understands. For example,
+if an {{HTMLElement('img')}} initiates the request, the response body needs to be
+image data. For security reasons, there are a few global rules:
 
-<ul>
-	<li>You can only return {{domxref("Response")}} objects of {{domxref("Response.type",
-		"type")}} "<code>opaque</code>" if the {{domxref("fetchEvent.request")}} object's
-		{{domxref("request.mode", "mode")}} is "<code>no-cors</code>".  This prevents the
-		leaking of private data.</li>
-	<li>You can only return {{domxref("Response")}} objects of {{domxref("Response.type",
-		"type")}} "<code>opaqueredirect</code>" if the {{domxref("fetchEvent.request")}}
-		object's {{domxref("request.mode", "mode")}} is "<code>manual</code>".</li>
-	<li>You cannot return {{domxref("Response")}} objects of {{domxref("Response.type",
-		"type")}} "<code>cors</code>" if the {{domxref("fetchEvent.request")}} object's
-		{{domxref("request.mode", "mode")}} is "<code>same-origin</code>".</li>
-</ul>
+- You can only return {{domxref("Response")}} objects of {{domxref("Response.type",
+		"type")}} "`opaque`" if the {{domxref("fetchEvent.request")}} object's
+  {{domxref("request.mode", "mode")}} is "`no-cors`".  This prevents the
+  leaking of private data.
+- You can only return {{domxref("Response")}} objects of {{domxref("Response.type",
+		"type")}} "`opaqueredirect`" if the {{domxref("fetchEvent.request")}}
+  object's {{domxref("request.mode", "mode")}} is "`manual`".
+- You cannot return {{domxref("Response")}} objects of {{domxref("Response.type",
+		"type")}} "`cors`" if the {{domxref("fetchEvent.request")}} object's
+  {{domxref("request.mode", "mode")}} is "`same-origin`".
 
-<h3 id="Specifying_the_final_URL_of_a_resource">Specifying the final URL of a resource
-</h3>
+### Specifying the final URL of a resource
 
-<p>From Firefox 59 onwards, when a service worker provides a {{domxref("Response")}} to
-	{{domxref("FetchEvent.respondWith()")}}, the {{domxref("Response.url")}} value will be
-	propagated to the intercepted network request as the final resolved URL.  If the
-	{{domxref("Response.url")}} value is the empty string, then the
-	{{domxref("Request.url","FetchEvent.request.url")}} is used as the final URL.</p>
+From Firefox 59 onwards, when a service worker provides a {{domxref("Response")}} to
+{{domxref("FetchEvent.respondWith()")}}, the {{domxref("Response.url")}} value will be
+propagated to the intercepted network request as the final resolved URL.  If the
+{{domxref("Response.url")}} value is the empty string, then the
+{{domxref("Request.url","FetchEvent.request.url")}} is used as the final URL.
 
-<p>In the past the {{domxref("Request.url","FetchEvent.request.url")}} was used as the
-	final URL in all cases.  The provided {{domxref("Response.url")}} was effectively
-	ignored.</p>
+In the past the {{domxref("Request.url","FetchEvent.request.url")}} was used as the
+final URL in all cases.  The provided {{domxref("Response.url")}} was effectively
+ignored.
 
-<p>This means, for example, if a service worker intercepts a stylesheet or worker script,
-	then the provided {{domxref("Response.url")}} will be used to resolve any relative
-	{{cssxref("@import")}} or
-	{{domxref("WorkerGlobalScope.importScripts()","importScripts()")}} subresource loads
-	({{bug(1222008)}}).</p>
+This means, for example, if a service worker intercepts a stylesheet or worker script,
+then the provided {{domxref("Response.url")}} will be used to resolve any relative
+{{cssxref("@import")}} or
+{{domxref("WorkerGlobalScope.importScripts()","importScripts()")}} subresource loads
+({{bug(1222008)}}).
 
-<p>For most types of network request this change has no impact because you can't observe
-	the final URL.  There are a few, though, where it does matter:</p>
+For most types of network request this change has no impact because you can't observe
+the final URL.  There are a few, though, where it does matter:
 
-<ul>
-	<li>If a {{domxref("fetch()")}} is intercepted,
-		then you can observe the final URL on the result's {{domxref("Response.url")}}.
-	</li>
-	<li>If a <a href="/en-US/docs/Web/API/Web_Workers_API">worker</a> script is
-		intercepted, then the final URL is used to set
-		<code><a href="/en-US/docs/Web/API/WorkerGlobalScope/location">self.location</a></code>
-		and used as the base URL for relative URLs in the worker script.</li>
-	<li>If a stylesheet is intercepted, then the final URL is used as the base URL for
-		resolving relative {{cssxref("@import")}} loads.</li>
-</ul>
+- If a {{domxref("fetch()")}} is intercepted,
+  then you can observe the final URL on the result's {{domxref("Response.url")}}.
+- If a [worker](/en-US/docs/Web/API/Web_Workers_API) script is
+  intercepted, then the final URL is used to set
+  [`self.location`](/en-US/docs/Web/API/WorkerGlobalScope/location)
+  and used as the base URL for relative URLs in the worker script.
+- If a stylesheet is intercepted, then the final URL is used as the base URL for
+  resolving relative {{cssxref("@import")}} loads.
 
-<p>Note that navigation requests for {{domxref("Window","Windows")}} and
-	{{domxref("HTMLIFrameElement","iframes")}} do NOT use the final URL.  The way the HTML
-	specification handles redirects for navigations ends up using the request URL for the
-	resulting {{domxref("Window.location")}}.  This means sites can still provide an
-	"alternate" view of a web page when offline without changing the user-visible URL.</p>
+Note that navigation requests for {{domxref("Window","Windows")}} and
+{{domxref("HTMLIFrameElement","iframes")}} do NOT use the final URL.  The way the HTML
+specification handles redirects for navigations ends up using the request URL for the
+resulting {{domxref("Window.location")}}.  This means sites can still provide an
+"alternate" view of a web page when offline without changing the user-visible URL.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>fetchEvent</em>.respondWith(
+```js
+fetchEvent.respondWith(
   // Promise that resolves to a Response.
-);</pre>
+);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>A {{domxref("Response")}} or a {{jsxref("Promise")}} that resolves to a
-	<code>Response</code>. Otherwise, a network error is returned to Fetch.</p>
+A {{domxref("Response")}} or a {{jsxref("Promise")}} that resolves to a
+`Response`. Otherwise, a network error is returned to Fetch.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>undefined</code>.</p>
+`undefined`.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt><code>NetworkError</code></dt>
-  <dd>A network error is triggered on certain combinations of
+- `NetworkError`
+  - : A network error is triggered on certain combinations of
     {{domxref("Request.mode","FetchEvent.request.mode")}} and
     {{domxref("Response.type")}}  values, as hinted at in the "global rules"
-    listed above.</dd>
-  <dt><code>InvalidStateError</code></dt>
-  <dd>The event has not been dispatched or <code>respondWith()</code> has
-    already been invoked.</dd>
-</dl>
+    listed above.
+- `InvalidStateError`
+  - : The event has not been dispatched or `respondWith()` has
+    already been invoked.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This fetch event tries to return a response from the cache API, falling back to the
-	network otherwise.</p>
+This fetch event tries to return a response from the cache API, falling back to the
+network otherwise.
 
-<pre class="brush: js">addEventListener('fetch', event =&gt; {
+```js
+addEventListener('fetch', event => {
   // Prevent the default, and handle the request ourselves.
   event.respondWith(async function() {
     // Try to get the response from a cache.
@@ -119,35 +114,28 @@ browser-compat: api.FetchEvent.respondWith
     // If we didn't find a match in the cache, use the network.
     return fetch(event.request);
   }());
-});</pre>
+});
+```
 
-<div class="notecard note">
-	<p><strong>Note:</strong> {{domxref("CacheStorage.match()", "caches.match()")}} is a
-		convenience method. Equivalent functionality is to call
-		{{domxref("cache.match()")}} on each cache (in the order returned by
-		{{domxref("CacheStorage.keys()", "caches.keys()")}}) until a
-		{{domxref("Response")}} is returned.</p>
-</div>
+> **Note:** {{domxref("CacheStorage.match()", "caches.match()")}} is a
+> convenience method. Equivalent functionality is to call
+> {{domxref("cache.match()")}} on each cache (in the order returned by
+> {{domxref("CacheStorage.keys()", "caches.keys()")}}) until a
+> {{domxref("Response")}} is returned.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
+{{Compat}}
 
-	<p>{{Compat}}</p>
-</div>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
-	<li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using
-			Service Workers</a></li>
-	<li><a class="external external-icon"
-			href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker
-			ready?</a></li>
-	<li>{{jsxref("Promise")}}</li>
-	<li><a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a></li>
-</ul>
+- [Using
+  Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Is ServiceWorker
+  ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- {{jsxref("Promise")}}
+- [Fetch API](/en-US/docs/Web/API/Fetch_API)

@@ -8,46 +8,46 @@ tags:
   - Reference
 browser-compat: api.Element.securitypolicyviolation_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <strong><code>securitypolicyviolation</code></strong> event is fired when a <a href="/en-US/docs/Web/HTTP/CSP">Content Security Policy</a> is violated.</p>
+The **`securitypolicyviolation`** event is fired when a [Content Security Policy](/en-US/docs/Web/HTTP/CSP) is violated.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("SecurityPolicyViolationEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("GlobalEventHandlers/onsecuritypolicyviolation", "onsecuritypolicyviolation")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("SecurityPolicyViolationEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{domxref("GlobalEventHandlers/onsecuritypolicyviolation", "onsecuritypolicyviolation")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>The event is fired on the element that violates the policy and bubbles.
-  It is normally handled by an event handler on the {{domxref("Window")}} or {{domxref("Document")}} object.</p>
-  
-  <p>The handler can be assigned using the {{domxref("GlobalEventHandlers.onsecuritypolicyviolation")}} property or using {{domxref("EventTarget.addEventListener()")}}.</p>
+The event is fired on the element that violates the policy and bubbles.
+It is normally handled by an event handler on the {{domxref("Window")}} or {{domxref("Document")}} object.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> You must add the handler for this event to a top level object (i.e. {{domxref("Window")}} or {{domxref("Document")}}).
-    While the property exists in HTML elements, you can't assign a handler to the property until the elements have been loaded, by which time this event will already have fired.</p>
-</div>
+The handler can be assigned using the {{domxref("GlobalEventHandlers.onsecuritypolicyviolation")}} property or using {{domxref("EventTarget.addEventListener()")}}.
 
-<h2 id="Examples">Examples</h2>
+> **Note:** You must add the handler for this event to a top level object (i.e. {{domxref("Window")}} or {{domxref("Document")}}).
+> While the property exists in HTML elements, you can't assign a handler to the property until the elements have been loaded, by which time this event will already have fired.
 
-<p>The code below shows how you might add an event handler function using the <code>onsecuritypolicyviolation</code> global event handler property or <code>addEventListener()</code> on the top level <code>Window</code> (you could use exactly the same approach on <code>Document</code>).</p>
+## Examples
 
-<pre class="brush: js">
+The code below shows how you might add an event handler function using the `onsecuritypolicyviolation` global event handler property or `addEventListener()` on the top level `Window` (you could use exactly the same approach on `Document`).
+
+```js
 window.onsecuritypolicyviolation = function(e) {
    // Handle SecurityPolicyViolationEvent e here
  };
@@ -55,19 +55,17 @@ window.onsecuritypolicyviolation = function(e) {
 window.addEventListener("securitypolicyviolation", (e) => {
   // Handle SecurityPolicyViolationEvent e here
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("GlobalEventHandlers.onsecuritypolicyviolation")}}</li>
-  <li><a href="/en-US/docs/Web/HTTP/CSP">HTTP > Content Security Policy</a></li>
-</ul>
+- {{domxref("GlobalEventHandlers.onsecuritypolicyviolation")}}
+- [HTTP > Content Security Policy](/en-US/docs/Web/HTTP/CSP)

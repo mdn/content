@@ -2,77 +2,57 @@
 title: IDBObjectStore.getKey()
 slug: Web/API/IDBObjectStore/getKey
 tags:
-- IBDObjectStore
-- IndexedDB
-- Method
-- Reference
-- Storage
-- Web API
+  - IBDObjectStore
+  - IndexedDB
+  - Method
+  - Reference
+  - Storage
+  - Web API
 browser-compat: api.IDBObjectStore.getKey
 ---
-<p>{{ APIRef("IndexedDB") }}</p>
+{{ APIRef("IndexedDB") }}
 
-<div>
-  <p>The <strong><code>getKey()</code></strong> method of the
-    {{domxref("IDBObjectStore")}} interface returns an {{domxref("IDBRequest")}} object,
-    and, in a separate thread, returns the key selected by the specified query. This is
-    for retrieving specific records from an object store.</p>
-</div>
+The **`getKey()`** method of the
+{{domxref("IDBObjectStore")}} interface returns an {{domxref("IDBRequest")}} object,
+and, in a separate thread, returns the key selected by the specified query. This is
+for retrieving specific records from an object store.
 
-<p>If a key is successfully found, then a structured clone of it is created and set as the
-  result of the request object.</p>
+If a key is successfully found, then a structured clone of it is created and set as the
+result of the request object.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var request = <em>objectStore</em>.getKey(<em>key</em>);</pre>
+```js
+var request = objectStore.getKey(key);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><em>key</em></dt>
-  <dd>The key or key range that identifies the record to be retrieved.</dd>
-</dl>
+- _key_
+  - : The key or key range that identifies the record to be retrieved.
 
-<h3 id="Return_Value">Return Value</h3>
+### Return Value
 
-<p>An {{domxref("IDBRequest")}} object on which subsequent events related to this
-  operation are fired.</p>
+An {{domxref("IDBRequest")}} object on which subsequent events related to this
+operation are fired.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>This method may raise a {{domxref("DOMException")}} of one of the following types:</p>
+This method may raise a {{domxref("DOMException")}} of one of the following types:
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Exception</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>TransactionInactiveError</code></td>
-      <td>This {{domxref("IDBObjectStore")}}'s transaction is inactive.</td>
-    </tr>
-    <tr>
-      <td><code>DataError</code></td>
-      <td>The key or key range provided contains an invalid key.</td>
-    </tr>
-    <tr>
-      <td><code>InvalidStateError</code></td>
-      <td>The {{domxref("IDBObjectStore")}} has been deleted or removed.<br>
-         </td>
-    </tr>
-  </tbody>
-</table>
+| Exception                  | Description                                                                 |
+| -------------------------- | --------------------------------------------------------------------------- |
+| `TransactionInactiveError` | This {{domxref("IDBObjectStore")}}'s transaction is inactive.    |
+| `DataError`                | The key or key range provided contains an invalid key.                      |
+| `InvalidStateError`        | The {{domxref("IDBObjectStore")}} has been deleted or removed.   |
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">let openRequest = indexedDB.open("telemetry");
-openRequest.onsuccess = (event) =&gt; {
+```js
+let openRequest = indexedDB.open("telemetry");
+openRequest.onsuccess = (event) => {
   let db = event.target.result;
   let store = db.transaction("netlogs").objectStore("netlogs");
 
@@ -80,31 +60,28 @@ openRequest.onsuccess = (event) =&gt; {
   let yesterday = new Date(today);
   yesterday.setDate(today.getDate() - 1);
   let request = store.getKey(IDBKeyRange(yesterday, today));
-  request.onsuccess = (event) =&gt; {
+  request.onsuccess = (event) => {
     let when = event.target.result;
     alert("The 1st activity in last 24 hours was occurred at " + when);
   };
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
-  <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
-  <li>Using transactions: {{domxref("IDBTransaction")}}</li>
-  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
-  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
-  <li>Using cursors: {{domxref("IDBCursor")}}</li>
-  <li>Reference example: <a class="external"
-      href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
-      Notifications</a> (<a class="external"
-      href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do
+  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

@@ -9,57 +9,57 @@ tags:
   - Reference
 browser-compat: api.EventSource.error_event
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p>The <code>error</code> event of the {{domxref("EventSource")}} API is fired when a connection with an event source fails to be opened.</p>
+The `error` event of the {{domxref("EventSource")}} API is fired when a connection with an event source fails to be opened.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("Event")}} or {{domxref("ErrorEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("EventSource.onerror")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("Event")}} or {{domxref("ErrorEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>{{domxref("EventSource.onerror")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var evtSource = new EventSource('sse.php');
+```js
+var evtSource = new EventSource('sse.php');
 
 // addEventListener version
-evtSource.addEventListener('error', (e) =&gt; {
+evtSource.addEventListener('error', (e) => {
   console.log("An error occurred while attempting to connect.");
 });
 
 // onerror version
-evtSource.onerror = (e) =&gt; {
+evtSource.onerror = (e) => {
   console.log("An error occurred while attempting to connect.");
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events">Using server-sent events</a></li>
- <li><code><a href="/en-US/docs/Web/API/EventSource/open_event">open</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/EventSource/message_event">message</a></code></li>
-</ul>
+- [Using server-sent events](/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events)
+- [`open`](/en-US/docs/Web/API/EventSource/open_event)
+- [`message`](/en-US/docs/Web/API/EventSource/message_event)

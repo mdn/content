@@ -2,121 +2,114 @@
 title: Element.setAttribute()
 slug: Web/API/Element/setAttribute
 tags:
-- API
-- DOM
-- Element
-- Method
-- NeedsBrowserCompatibility
-- NeedsSpecTable
-- Reference
-- setAttribute
+  - API
+  - DOM
+  - Element
+  - Method
+  - NeedsBrowserCompatibility
+  - NeedsSpecTable
+  - Reference
+  - setAttribute
 browser-compat: api.Element.setAttribute
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>Sets the value of an attribute on the specified element. If
-    the attribute already exists, the value is updated; otherwise a new attribute is added
-    with the specified name and value.</p>
+Sets the value of an attribute on the specified element. If
+the attribute already exists, the value is updated; otherwise a new attribute is added
+with the specified name and value.
 
-<p>To get the current value of an attribute, use {{domxref("Element.getAttribute",
+To get the current value of an attribute, use {{domxref("Element.getAttribute",
   "getAttribute()")}}; to remove an attribute, call {{domxref("Element.removeAttribute",
-  "removeAttribute()")}}.</p>
+  "removeAttribute()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>Element</em>.setAttribute(<em>name</em>, <em>value</em>);
-</pre>
+```js
+Element.setAttribute(name, value);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>name</code></dt>
-  <dd>A {{domxref("DOMString")}} specifying the name of the attribute whose value is to be
+- `name`
+  - : A {{domxref("DOMString")}} specifying the name of the attribute whose value is to be
     set. The attribute name is automatically converted to all lower-case when
-    <code>setAttribute()</code> is called on an HTML element in an HTML document.</dd>
-  <dt><code>value</code></dt>
-  <dd>A {{domxref("DOMString")}} containing the value to assign to the attribute. Any
-    non-string value specified is converted automatically into a string.</dd>
-</dl>
+    `setAttribute()` is called on an HTML element in an HTML document.
+- `value`
+  - : A {{domxref("DOMString")}} containing the value to assign to the attribute. Any
+    non-string value specified is converted automatically into a string.
 
-<p>Boolean attributes are considered to be <code>true</code> if they're present on the
-  element at all. You should set <code>value</code> to the empty string (<code>""</code>)
-  or the attribute's name, with no leading or trailing whitespace. See the {{anch("Example",
-  "example")}} below for a practical demonstration.</p>
+Boolean attributes are considered to be `true` if they're present on the
+element at all. You should set `value` to the empty string (`""`)
+or the attribute's name, with no leading or trailing whitespace. See the {{anch("Example",
+  "example")}} below for a practical demonstration.
 
-<p>Since the specified <code>value</code> gets converted into a string, specifying
-  <code>null</code> doesn't necessarily do what you expect. Instead of removing the
-  attribute or setting its value to be {{jsxref("null")}}, it instead sets the attribute's
-  value to the string <code>"null"</code>. If you wish to remove an attribute, call
-  {{domxref("Element.removeAttribute", "removeAttribute()")}}.</p>
+Since the specified `value` gets converted into a string, specifying
+`null` doesn't necessarily do what you expect. Instead of removing the
+attribute or setting its value to be {{jsxref("null")}}, it instead sets the attribute's
+value to the string `"null"`. If you wish to remove an attribute, call
+{{domxref("Element.removeAttribute", "removeAttribute()")}}.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{jsxref("undefined")}}.</p>
+{{jsxref("undefined")}}.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt><code>InvalidCharacterError</code></dt>
-  <dd>The specified attribute <code>name</code> contains one or more characters which are
-    not valid in attribute names.</dd>
-</dl>
+- `InvalidCharacterError`
+  - : The specified attribute `name` contains one or more characters which are
+    not valid in attribute names.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In the following example, <code>setAttribute()</code> is used to set attributes on a
-  {{HTMLElement("button")}}.</p>
+In the following example, `setAttribute()` is used to set attributes on a
+{{HTMLElement("button")}}.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;button&gt;Hello World&lt;/button&gt;</pre>
+```html
+<button>Hello World</button>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush:js">var b = document.querySelector("button");
+```js
+var b = document.querySelector("button");
 
 b.setAttribute("name", "helloButton");
 b.setAttribute("disabled", "");
-</pre>
+```
 
-<p>This demonstrates two things:</p>
+This demonstrates two things:
 
-<ul>
-  <li>The first call to <code>setAttribute()</code> above shows changing the
-    <code>name</code> attribute's value to "helloButton". You can see this using your
-    browser's page inspector (<a
-      href="https://developers.google.com/web/tools/chrome-devtools/inspect-styles">Chrome</a>,
-    <a
-      href="https://docs.microsoft.com/en-us/microsoft-edge/f12-devtools-guide/dom-explorer">Edge</a>,
-    <a href="/en-US/docs/Tools/Page_Inspector">Firefox</a>, <a
-      href="https://developer.apple.com/library/content/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Introduction/Introduction.html">Safari</a>).
-  </li>
-  <li>To set the value of a Boolean attribute, such as <code>disabled</code>, you can
-    specify any value. An empty string or the name of the attribute are recommended
-    values. All that matters is that if the attribute is present at all, <em>regardless of
-      its actual value</em>, its value is considered to be <code>true</code>. The absence
-    of the attribute means its value is <code>false</code>. By setting the value of the
-    <code>disabled</code> attribute to the empty string (<code>""</code>), we are setting
-    <code>disabled</code> to <code>true</code>, which results in the button being
-    disabled.</li>
-</ul>
+- The first call to `setAttribute()` above shows changing the
+  `name` attribute's value to "helloButton". You can see this using your
+  browser's page inspector ([Chrome](https://developers.google.com/web/tools/chrome-devtools/inspect-styles),
+  [Edge](https://docs.microsoft.com/en-us/microsoft-edge/f12-devtools-guide/dom-explorer),
+  [Firefox](/en-US/docs/Tools/Page_Inspector), [Safari](https://developer.apple.com/library/content/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Introduction/Introduction.html)).
+- To set the value of a Boolean attribute, such as `disabled`, you can
+  specify any value. An empty string or the name of the attribute are recommended
+  values. All that matters is that if the attribute is present at all, _regardless of
+  its actual value_, its value is considered to be `true`. The absence
+  of the attribute means its value is `false`. By setting the value of the
+  `disabled` attribute to the empty string (`""`), we are setting
+  `disabled` to `true`, which results in the button being
+  disabled.
 
-<p>{{ EmbedLiveSample('Example', '300', '50') }}</p>
+{{ EmbedLiveSample('Example', '300', '50') }}
 
-<p>{{DOMAttributeMethods}}</p>
+{{DOMAttributeMethods}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h3 id="Notes">Gecko notes</h3>
+### Gecko notes
 
-<p>Using <code>setAttribute()</code> to modify certain attributes, most notably
-  <code>value</code> in XUL, works inconsistently, as the attribute specifies the default
-  value. To access or modify the current values, you should use the properties. For
-  example, use <code>Element.value</code> instead of <code>Element.setAttribute()</code>.
-</p>
+Using `setAttribute()` to modify certain attributes, most notably
+`value` in XUL, works inconsistently, as the attribute specifies the default
+value. To access or modify the current values, you should use the properties. For
+example, use `Element.value` instead of `Element.setAttribute()`.

@@ -13,31 +13,29 @@ tags:
   - withCredentials
 browser-compat: api.XMLHttpRequest.withCredentials
 ---
-<div>{{APIRef('XMLHttpRequest')}}</div>
+{{APIRef('XMLHttpRequest')}}
 
-<p>The <code><strong>XMLHttpRequest.withCredentials</strong></code> property is a boolean value that indicates whether or not cross-site <code>Access-Control</code> requests should be made using credentials such as cookies, authorization headers or TLS client certificates. Setting <code>withCredentials</code> has no effect on same-site requests.</p>
+The **`XMLHttpRequest.withCredentials`** property is a boolean value that indicates whether or not cross-site `Access-Control` requests should be made using credentials such as cookies, authorization headers or TLS client certificates. Setting `withCredentials` has no effect on same-site requests.
 
-<p>In addition, this flag is also used to indicate when cookies are to be ignored in the response. The default is <code>false</code>. <code>XMLHttpRequest</code> from a different domain cannot set cookie values for their own domain unless <code>withCredentials</code> is set to <code>true</code> before making the request. The third-party cookies obtained by setting <code>withCredentials</code> to true will still honor same-origin policy and hence can not be accessed by the requesting script through <a href="/en-US/docs/Web/API/Document/cookie">document.cookie</a> or from response headers.</p>
+In addition, this flag is also used to indicate when cookies are to be ignored in the response. The default is `false`. `XMLHttpRequest` from a different domain cannot set cookie values for their own domain unless `withCredentials` is set to `true` before making the request. The third-party cookies obtained by setting `withCredentials` to true will still honor same-origin policy and hence can not be accessed by the requesting script through [document.cookie](/en-US/docs/Web/API/Document/cookie) or from response headers.
 
-<div class="note">
-<p><strong>Note:</strong> This never affects same-site requests.</p>
-</div>
+> **Note:** This never affects same-site requests.
 
-<div class="note">
-<p><strong>Note:</strong> <code>XMLHttpRequest</code> responses from a different domain <em>cannot</em> set cookie values for their own domain unless <code>withCredentials</code> is set to <code>true</code> before making the request, regardless of <code>Access-Control-</code> header values. </p>
-</div>
+> **Note:** `XMLHttpRequest` responses from a different domain *cannot* set cookie values for their own domain unless `withCredentials` is set to `true` before making the request, regardless of `Access-Control-` header values.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var xhr = new XMLHttpRequest();
+```js
+var xhr = new XMLHttpRequest();
 xhr.open('GET', 'http://example.com/', true);
 xhr.withCredentials = true;
-xhr.send(null);</pre>
+xhr.send(null);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

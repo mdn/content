@@ -2,54 +2,52 @@
 title: WritableStreamDefaultWriter.abort()
 slug: Web/API/WritableStreamDefaultWriter/abort
 tags:
-- API
-- Experimental
-- Method
-- Reference
-- Streams
-- WritableStreamDefaultWriter
-- abort
+  - API
+  - Experimental
+  - Method
+  - Reference
+  - Streams
+  - WritableStreamDefaultWriter
+  - abort
 browser-compat: api.WritableStreamDefaultWriter.abort
 ---
-<div>{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}</div>
+{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}
 
-<p>The <strong><code>abort()</code></strong> method of the
-  {{domxref("WritableStreamDefaultWriter")}} interface aborts the stream, signaling that
-  the producer can no longer successfully write to the stream and it is to be immediately
-  moved to an error state, with any queued writes discarded. </p>
+The **`abort()`** method of the
+{{domxref("WritableStreamDefaultWriter")}} interface aborts the stream, signaling that
+the producer can no longer successfully write to the stream and it is to be immediately
+moved to an error state, with any queued writes discarded.
 
-<p> If the writer is active, the <code>abort()</code> method behaves the same as that for
-  the associated stream ({{domxref("WritableStream.abort()")}}). If not, it returns a
-  rejected promise.</p>
+If the writer is active, the `abort()` method behaves the same as that for
+the associated stream ({{domxref("WritableStream.abort()")}}). If not, it returns a
+rejected promise.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>promise</em> = <em>writableStreamDefaultWriter</em>.abort(<em>reason</em>);</pre>
+```js
+var promise = writableStreamDefaultWriter.abort(reason);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>reason {{optional_inline}}</dt>
-  <dd>A {{domxref("DOMString")}} representing a human-readable reason for the abort.</dd>
-</dl>
+- reason {{optional_inline}}
+  - : A {{domxref("DOMString")}} representing a human-readable reason for the abort.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}}, which fulfills with the value given in the <code>reason</code>
-  parameter.</p>
+A {{jsxref("Promise")}}, which fulfills with the value given in the `reason`
+parameter.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>TypeError</dt>
-  <dd>The stream you are trying to abort is not a {{domxref("WritableStream")}}, or it is
-    locked.</dd>
-</dl>
+- TypeError
+  - : The stream you are trying to abort is not a {{domxref("WritableStream")}}, or it is
+    locked.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">const writableStream = new WritableStream({
+```js
+const writableStream = new WritableStream({
   write(chunk) {
     ...
   },
@@ -68,14 +66,15 @@ const writer = writableStream.getWriter();
 ...
 
 // abort the stream when desired
-writer.abort.then((reason) =&gt; {
+writer.abort.then((reason) => {
   console.log(reason);
-})</pre>
+})
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

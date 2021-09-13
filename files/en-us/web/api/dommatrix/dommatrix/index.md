@@ -2,40 +2,40 @@
 title: DOMMatrix()
 slug: Web/API/DOMMatrix/DOMMatrix
 tags:
-- API
-- Constructor
-- Experimental
-- Geometry
-- Geometry Interfaces
-- Reference
-- matrix
+  - API
+  - Constructor
+  - Experimental
+  - Geometry
+  - Geometry Interfaces
+  - Reference
+  - matrix
 browser-compat: api.DOMMatrix.DOMMatrix
 ---
-<p>{{APIRef("Geometry Interfaces")}}</p>
+{{APIRef("Geometry Interfaces")}}
 
-<p>The <strong><code>DOMMatrix</code></strong> constructor creates a new
-  {{domxref("DOMMatrix")}} object which represents 4x4 matrices, suitable for 2D and 3D
-  operations..</p>
+The **`DOMMatrix`** constructor creates a new
+{{domxref("DOMMatrix")}} object which represents 4x4 matrices, suitable for 2D and 3D
+operations..
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>domMatrix</em> = new DOMMatrix([<em>init</em>])</pre>
+```js
+var domMatrix = new DOMMatrix([init])
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>init {{optional_inline}}</dt>
-  <dd>A string containing a sequence of numbers or an array of numbers specifying the
-    matrix you want to create, or a CSS transform string.</dd>
-</dl>
+- init {{optional_inline}}
+  - : A string containing a sequence of numbers or an array of numbers specifying the
+    matrix you want to create, or a CSS transform string.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example creates a DOMMatrix to use as an argument for calling
-  {{domxref("Point.matrixTransform()")}}.</p>
+This example creates a DOMMatrix to use as an argument for calling
+{{domxref("Point.matrixTransform()")}}.
 
-<pre class="brush: js">var point = new DOMPoint(5, 4);
+```js
+var point = new DOMPoint(5, 4);
 var scaleX = 2;
 var scaleY = 3;
 var translateX = 12;
@@ -50,12 +50,12 @@ var matrix = new DOMMatrix([
   translateY
 ]);
 var transformedPoint = point.matrixTransform(matrix);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

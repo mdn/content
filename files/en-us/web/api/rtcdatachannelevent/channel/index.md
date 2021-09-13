@@ -2,58 +2,58 @@
 title: RTCDataChannelEvent.channel
 slug: Web/API/RTCDataChannelEvent/channel
 tags:
-- Property
-- RTCDataChannelEvent
-- Read-only
-- Reference
-- WebRTC
-- channel
+  - Property
+  - RTCDataChannelEvent
+  - Read-only
+  - Reference
+  - WebRTC
+  - channel
 browser-compat: api.RTCDataChannelEvent.channel
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The read-only property <code><strong>RTCDataChannelEvent.channel</code></strong>
-  returns the {{domxref("RTCDataChannel")}} associated with the event.</p>
+The read-only property **`RTCDataChannelEvent.channel`**
+returns the {{domxref("RTCDataChannel")}} associated with the event.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"> var <em>channel</em> = <em>RTCDataChannelEvent</em>.channel;</pre>
+```js
+ var channel = RTCDataChannelEvent.channel;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("RTCDataChannel")}} object representing the data channel linking the
-  receiving {{domxref("RTCPeerConnection")}} to its remote peer.</p>
+A {{domxref("RTCDataChannel")}} object representing the data channel linking the
+receiving {{domxref("RTCPeerConnection")}} to its remote peer.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The first line of code in the {{DOMxRef("RTCPeerConnection.datachannel_event", "datachannel")}} event handler shown below takes
-  the channel from the event object and saves it locally for use by the code handling data
-  traffic.</p>
+The first line of code in the {{DOMxRef("RTCPeerConnection.datachannel_event", "datachannel")}} event handler shown below takes
+the channel from the event object and saves it locally for use by the code handling data
+traffic.
 
-<pre class="brush: js">pc.ondatachannel = function(event) {
+```js
+pc.ondatachannel = function(event) {
   inboundDataChannel = event.channel;
   inboundDataChannel.onmessage = handleIncomingMessage;
   inboundDataChannel.onopen = handleChannelOpen;
   inboundDataChannel.onclose = handleChannelClose;
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{DOMxRef("RTCPeerConnection.datachannel_event", "datachannel")}}</li>
-  <li>{{domxref("RTCDataChannel")}}</li>
-  <li>{{domxref("RTCPeerConnection.ondatachannel")}}</li>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample">A simple
-      RTCDataChannel sample</a></li>
-  <li>{{domxref("RTCPeerConnection")}}</li>
-</ul>
+- {{DOMxRef("RTCPeerConnection.datachannel_event", "datachannel")}}
+- {{domxref("RTCDataChannel")}}
+- {{domxref("RTCPeerConnection.ondatachannel")}}
+- [A simple
+  RTCDataChannel sample](/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample)
+- {{domxref("RTCPeerConnection")}}

@@ -8,25 +8,26 @@ tags:
   - Reference
 browser-compat: api.HTMLAnchorElement.host
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLAnchorElement.host</code></strong> property is a
-  {{domxref("USVString")}} containing the host, that is the <em>hostname</em>, and then,
-  if the <em>port</em> of the URL is nonempty, a <code>':'</code>, and the <em>port</em>
-  of the URL.</p>
+The **`HTMLAnchorElement.host`** property is a
+{{domxref("USVString")}} containing the host, that is the _hostname_, and then,
+if the _port_ of the URL is nonempty, a `':'`, and the _port_
+of the URL.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 // Getter
-<em>string</em> = <em>anchor</em>.host;
+string = anchor.host;
 // Setter
-<em>anchor</em>.host = <em>string</em>;
-</pre>
+anchor.host = string;
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">const anchor = document.createElement("a");
+```js
+const anchor = document.createElement("a");
 
 anchor.href = "https://developer.mozilla.org/en-US/HTMLAnchorElement"
 anchor.host == "developer.mozilla.org"
@@ -37,18 +38,16 @@ anchor.host == "developer.mozilla.org"
 
 anchor.href = "https://developer.mozilla.org:4097/en-US/HTMLAnchorElement"
 anchor.host == "developer.mozilla.org:4097"
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("HTMLAnchorElement")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("HTMLAnchorElement")}} interface it belongs to.

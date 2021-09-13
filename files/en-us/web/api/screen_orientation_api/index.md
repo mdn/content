@@ -9,35 +9,20 @@ tags:
   - Overview
   - Screen Orientation
 ---
-<p>{{DefaultAPISidebar("Screen Orientation API")}}{{Draft}}{{SeeCompatTable}}</p>
+{{DefaultAPISidebar("Screen Orientation API")}}{{Draft}}{{SeeCompatTable}}
 
-<p>The <strong>Screen Orientation API</strong> provides information about the orientation of the screen.</p>
+The **Screen Orientation API** provides information about the orientation of the screen.
 
-<h2 id="Interfaces">Interfaces</h2>
+## Interfaces
 
-<ul>
-	<li>{{DOMxRef("ScreenOrientation")}}</li>
-</ul>
+- {{DOMxRef("ScreenOrientation")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName("Screen Orientation")}}</td>
-			<td>{{Spec2("Screen Orientation")}}</td>
-			<td>Initial definition.</td>
-		</tr>
-	</tbody>
-</table>
+| Specification                                | Status                                   | Comment             |
+| -------------------------------------------- | ---------------------------------------- | ------------------- |
+| {{SpecName("Screen Orientation")}} | {{Spec2("Screen Orientation")}} | Initial definition. |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.ScreenOrientation")}}</p>
+{{Compat("api.ScreenOrientation")}}

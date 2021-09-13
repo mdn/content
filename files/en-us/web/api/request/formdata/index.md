@@ -10,28 +10,30 @@ tags:
   - Reference
 browser-compat: api.Request.formData
 ---
-<div>{{APIRef("Fetch")}}</div>
+{{APIRef("Fetch")}}
 
-<p>The <strong><code>formData()</code></strong> method of the {{domxref("Request")}} interface
-reads the request body and returns it as a promise that resolves with a {{domxref("FormData")}} object.</p>
+The **`formData()`** method of the {{domxref("Request")}} interface
+reads the request body and returns it as a promise that resolves with a {{domxref("FormData")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">request.formData().then(function(formdata) {
+```js
+request.formData().then(function(formdata) {
   // do something with your formdata
-});</pre>
+});
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} that resolves with a {{domxref("FormData")}} object.</p>
+A {{jsxref("Promise")}} that resolves with a {{domxref("FormData")}} object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">
+```js
 const formData = new FormData();
 const fileField = document.querySelector('input[type="file"]');
 
@@ -46,18 +48,16 @@ const request = new Request('/myEndpoint', {
 request.formData().then(function(data) {
   // do something with the formdata sent in the request
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Response.formData()")}}</li>
-</ul>
+- {{domxref("Response.formData()")}}

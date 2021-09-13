@@ -10,59 +10,55 @@ tags:
   - tabIndex
 browser-compat: api.HTMLElement.tabIndex
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>tabIndex</code></strong> property of the
-{{DOMxRef("HTMLElement")}} interface represents the tab order of the current element.</p>
+The **`tabIndex`** property of the
+{{DOMxRef("HTMLElement")}} interface represents the tab order of the current element.
 
-<p>Tab order is as follows:</p>
+Tab order is as follows:
 
-<ol>
-  <li>Elements with a positive <code>tabIndex</code>. Elements that have identical
-    <code>tabIndex</code> values should be navigated in the order they appear. Navigation
-    proceeds from the lowest <code>tabIndex</code> to the highest <code>tabIndex</code>.
-  </li>
-  <li>Elements that do not support the <code>tabIndex</code> attribute or support it and
-    assign <code>tabIndex</code> to <code>0</code>, in the order they appear.</li>
-</ol>
+1.  Elements with a positive `tabIndex`. Elements that have identical
+    `tabIndex` values should be navigated in the order they appear. Navigation
+    proceeds from the lowest `tabIndex` to the highest `tabIndex`.
+2.  Elements that do not support the `tabIndex` attribute or support it and
+    assign `tabIndex` to `0`, in the order they appear.
 
-<p>Elements that are disabled do not participate in the tabbing order.</p>
+Elements that are disabled do not participate in the tabbing order.
 
-<p>Values don't need to be sequential, nor must they begin with any particular value. They
-  may even be negative, though each browser trims very large values.</p>
+Values don't need to be sequential, nor must they begin with any particular value. They
+may even be negative, though each browser trims very large values.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>element</em>.tabIndex = <em>index</em>;
-var <em>index</em> = <em>element</em>.tabIndex;
-</pre>
+```js
+element.tabIndex = index;
+var index = element.tabIndex;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p><code>index</code> is an integer</p>
+`index` is an integer
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush:js">const b1 = document.getElementById('button1');
+```js
+const b1 = document.getElementById('button1');
 
 b1.tabIndex = 1;
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a
-      href="/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets">Accessibility
-      of keyboard-navigable JavaScript widgets</a></li>
-  <li>The HTML
-    <a href="/en-US/docs/Web/HTML/Global_attributes/tabindex"><code>tabindex</code></a>
-    global attribute.</li>
-</ul>
+- [Accessibility
+  of keyboard-navigable JavaScript widgets](/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
+- The HTML
+  [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex)
+  global attribute.

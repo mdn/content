@@ -3,36 +3,34 @@ title: InputDeviceCapabilities
 slug: Web/API/InputDeviceCapabilities/InputDeviceCapabilities
 browser-compat: api.InputDeviceCapabilities.InputDeviceCapabilities
 ---
-<p>The <code>InputDeviceCapabilities()</code> constructor creates a new
-	{{domxref("InputDeviceCapabilities")}} object provides information about the physical
-	device responsible for generating a touch event.</p>
+The `InputDeviceCapabilities()` constructor creates a new
+{{domxref("InputDeviceCapabilities")}} object provides information about the physical
+device responsible for generating a touch event.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-	class="brush: js">var inputDeviceCapabilities = new InputDeviceCapabilities([InputDeviceCapabilitiesInit])</pre>
+```js
+var inputDeviceCapabilities = new InputDeviceCapabilities([InputDeviceCapabilitiesInit])
+```
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>An instance of the {{domxref("InputDeviceCapabilities")}} interface.</p>
+An instance of the {{domxref("InputDeviceCapabilities")}} interface.
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-	<dt><code>InputDeviceCapabilitiesInit</code> {{optional_inline}}</dt>
-	<dd>A dictionary object containing a set of device capabilities. It contains the
-		following property.
-		<ul>
-			<li><code>fireTouchEvents</code>: A boolean value that indicates
-				whether the device dispatches touch events.</li>
-		</ul>
-	</dd>
-</dl>
+- `InputDeviceCapabilitiesInit` {{optional_inline}}
 
-<h2 id="Specifications">Specifications</h2>
+  - : A dictionary object containing a set of device capabilities. It contains the
+    following property.
+
+    - `fireTouchEvents`: A boolean value that indicates
+      whether the device dispatches touch events.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

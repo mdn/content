@@ -10,48 +10,45 @@ tags:
   - WebRTC
 browser-compat: api.RTCSessionDescription.toJSON
 ---
-<p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
+{{APIRef("WebRTC")}}{{SeeCompatTable}}
 
-<p>The <code><strong>RTCSessionDescription.toJSON()</strong></code> method generates a
-  {{Glossary("JSON")}} description of the object. Both properties,
-  {{domxref("RTCSessionDescription.type", "type")}} and
-  {{domxref("RTCSessionDescription.sdp", "sdp")}}, are contained in the generated JSON.
-</p>
+The **`RTCSessionDescription.toJSON()`** method generates a
+{{Glossary("JSON")}} description of the object. Both properties,
+{{domxref("RTCSessionDescription.type", "type")}} and
+{{domxref("RTCSessionDescription.sdp", "sdp")}}, are contained in the generated JSON.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var jsonValue = sd.toJSON();
-</pre>
+```js
+var jsonValue = sd.toJSON();
+```
 
-<p>The result value is a {{jsxref("JSON")}} object containing the following values:</p>
+The result value is a {{jsxref("JSON")}} object containing the following values:
 
-<ul>
-  <li><code>"type"</code>, containing the value of the
-    {{domxref("RTCSessionDescription.type")}} property and can be one of the following
-    values: <code>"offer"</code>, <code>"answer"</code>, <code>"pranswer"</code> or
-    <code>null</code>.</li>
-  <li><code>"sdp"</code>, containing a {{domxref("DOMString")}}, or <code>null</code>,
-    with the {{Glossary("SDP")}} message corresponding to
-    {{domxref("RTCSessionDescription.sdp")}} property.</li>
-</ul>
+- `"type"`, containing the value of the
+  {{domxref("RTCSessionDescription.type")}} property and can be one of the following
+  values: `"offer"`, `"answer"`, `"pranswer"` or
+  `null`.
+- `"sdp"`, containing a {{domxref("DOMString")}}, or `null`,
+  with the {{Glossary("SDP")}} message corresponding to
+  {{domxref("RTCSessionDescription.sdp")}} property.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">// sd is a RTCSessionDescriptor
+```js
+// sd is a RTCSessionDescriptor
 
 alert(JSON.stringify(sd)); // This call the toJSON() method behind the scene.
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
-</ul>
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)

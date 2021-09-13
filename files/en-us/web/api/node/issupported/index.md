@@ -2,66 +2,61 @@
 title: Node.isSupported()
 slug: Web/API/Node/isSupported
 tags:
-- API
-- DOM
-- Method
-- NeedsBrowserCompatibility
-- NeedsMobileBrowserCompatibility
-- Node
-- Deprecated
-- Reference
+  - API
+  - DOM
+  - Method
+  - NeedsBrowserCompatibility
+  - NeedsMobileBrowserCompatibility
+  - Node
+  - Deprecated
+  - Reference
 browser-compat: api.Node.isSupported
 ---
-<div>{{APIRef("DOM")}}{{deprecated_header}}</div>
+{{APIRef("DOM")}}{{deprecated_header}}
 
-<p>The <code><strong>Node.isSupported()</strong></code>returns a boolean
-  flag containing the result of a test whether the DOM implementation implements a
-  specific feature and this feature is supported by the specific node.</p>
+The **`Node.isSupported()`**returns a boolean
+flag containing the result of a test whether the DOM implementation implements a
+specific feature and this feature is supported by the specific node.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>boolValue</em> = <em>element</em>.isSupported(<em>feature</em>, <em>version</em>)</pre>
+```js
+boolValue = element.isSupported(feature, version)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><em>feature</em></dt>
-  <dd>Is a {{domxref("DOMString")}} containing the name of the feature to test. This is
-    the same name which can be passed to the method <code>hasFeature</code> on <a
-      href="/en-US/docs/Web/API/Document/implementation">DOMImplementation</a>. Possible
-    values defined within the core DOM specification are listed on the DOM Level 2 <a
-      href="https://www.w3.org/TR/DOM-Level-2-Core/introduction.html#ID-Conformance">Conformance
-      Section</a>.</dd>
-  <dt><em>version</em></dt>
-  <dd>Is a {{domxref("DOMString")}} containing the version number of the feature to test.
-    In DOM Level 2, version 1, this is the string <code>2.0</code>. If the version is not
+- _feature_
+  - : Is a {{domxref("DOMString")}} containing the name of the feature to test. This is
+    the same name which can be passed to the method `hasFeature` on [DOMImplementation](/en-US/docs/Web/API/Document/implementation). Possible
+    values defined within the core DOM specification are listed on the DOM Level 2 [Conformance
+    Section](https://www.w3.org/TR/DOM-Level-2-Core/introduction.html#ID-Conformance).
+- _version_
+  - : Is a {{domxref("DOMString")}} containing the version number of the feature to test.
+    In DOM Level 2, version 1, this is the string `2.0`. If the version is not
     specified, supporting any version of the feature will cause the method to return true.
-  </dd>
-</dl>
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: html">&lt;div id="doc"&gt;
-&lt;/div&gt;
+```html
+<div id="doc">
+</div>
 
-&lt;script&gt;
+<script>
  // Get an element and check to see if its supports the DOM2 HTML Module.
  var main = document.getElementById('doc');
  var output = main.isSupported('HTML', '2.0');
-&lt;/script&gt;
-</pre>
+</script>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This feature is not part of any specification. It is no longer on track to become a standard.</p>
+This feature is not part of any specification. It is no longer on track to become a standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("Node")}} interface it belongs to.</li>
-</ul>
+- The {{domxref("Node")}} interface it belongs to.

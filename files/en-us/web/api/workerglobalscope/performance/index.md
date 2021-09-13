@@ -2,74 +2,73 @@
 title: WorkerGlobalScope.performance
 slug: Web/API/WorkerGlobalScope/performance
 tags:
-- API
-- CheckExample
-- Performance
-- Property
-- Read-only
-- Reference
-- WorkerGlobalScope
+  - API
+  - CheckExample
+  - Performance
+  - Property
+  - Read-only
+  - Reference
+  - WorkerGlobalScope
 browser-compat: api.WorkerGlobalScope.performance
 ---
-<p>{{APIRef("Web Workers API")}}</p>
+{{APIRef("Web Workers API")}}
 
-<p>The  <code><strong>performance</strong></code> read-only property of the
-  {{domxref("WorkerGlobalScope")}} interface returns a {{domxref("Performance")}} object
-  to be used on the worker.</p>
+The  **`performance`** read-only property of the
+{{domxref("WorkerGlobalScope")}} interface returns a {{domxref("Performance")}} object
+to be used on the worker.
 
-<div class="note">
-  <p><strong>Note:</strong> Not all {{domxref("Performance")}} properties and methods are available to Web
-    workers.</p>
-</div>
+> **Note:** Not all {{domxref("Performance")}} properties and methods are available to Web
+> workers.
 
-<p>This property is {{readonlyInline}}.</p>
+This property is {{readonlyInline}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var perfObj = <em>self</em>.performance;
-</pre>
+```js
+var perfObj = self.performance;
+```
 
-<h3 id="Return_value">Return Value</h3>
+### Return Value
 
-<p>A {{domxref("Performance")}} object.</p>
+A {{domxref("Performance")}} object.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>If you called</p>
+If you called
 
-<pre class="brush: js">console.log(performance);</pre>
+```js
+console.log(performance);
+```
 
-<p>inside a worker (which would basically be the equivalent of
-  <code>self.console.log(self.performance);</code>, as these are being called on the
-  worker scope, which can be referenced with {{domxref("WorkerGlobalScope.self")}}), you
-  will get a {{domxref("WorkerPerformance")}} object written to the console — something
-  like the following:</p>
+inside a worker (which would basically be the equivalent of
+`self.console.log(self.performance);`, as these are being called on the
+worker scope, which can be referenced with {{domxref("WorkerGlobalScope.self")}}), you
+will get a {{domxref("WorkerPerformance")}} object written to the console — something
+like the following:
 
-<pre class="brush: js">WorkerPerformance {now: function}
+```js
+WorkerPerformance {now: function}
   __proto__: WorkerPerformance
     constructor: function WorkerPerformance() { [native code] }
     now: function now() { [native code] }
-    __proto__: Object</pre>
+    __proto__: Object
+```
 
-<p>You could use this performance object to return performance data, as you might do with
-  a normal {{domxref("Performance")}} object.</p>
+You could use this performance object to return performance data, as you might do with
+a normal {{domxref("Performance")}} object.
 
-<div class="note">
-  <p><strong>Note:</strong> Firefox has a bug with using <code>console.log</code> inside
-    shared/service workers (see {{Bug("1058644")}}), which may return strange results, but
-    this should be fixed soon.</p>
-</div>
+> **Note:** Firefox has a bug with using `console.log` inside
+> shared/service workers (see {{Bug("1058644")}}), which may return strange results, but
+> this should be fixed soon.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Performance")}}</li>
-</ul>
+- {{domxref("Performance")}}

@@ -9,57 +9,49 @@ tags:
   - SVG OM
 browser-compat: api.SVGGraphicsElement
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <strong><code>SVGGraphicsElement</code></strong> interface represents SVG elements whose primary purpose is to directly render graphics into a group.</p>
+The **`SVGGraphicsElement`** interface represents SVG elements whose primary purpose is to directly render graphics into a group.
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface also inherits properties from its parent, {{domxref("SVGElement")}}.</em></p>
+_This interface also inherits properties from its parent, {{domxref("SVGElement")}}._
 
-<dl>
- <dt>{{domxref("SVGGraphicsElement.requiredExtensions")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGStringList")}} reflecting the {{SVGAttr("requiredExtensions")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGGraphicsElement.systemLanguage")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGStringList")}} reflecting the {{SVGAttr("systemLanguage")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGGraphicsElement.transform")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedTransformList")}} reflecting the computed value of the {{cssxref("transform")}} property and its corresponding {{SVGAttr("transform")}} attribute of the given element.</dd>
-</dl>
+- {{domxref("SVGGraphicsElement.requiredExtensions")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGStringList")}} reflecting the {{SVGAttr("requiredExtensions")}} attribute of the given element.
+- {{domxref("SVGGraphicsElement.systemLanguage")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGStringList")}} reflecting the {{SVGAttr("systemLanguage")}} attribute of the given element.
+- {{domxref("SVGGraphicsElement.transform")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedTransformList")}} reflecting the computed value of the {{cssxref("transform")}} property and its corresponding {{SVGAttr("transform")}} attribute of the given element.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface also inherits methods from its parent, {{domxref("SVGElement")}}.</em></p>
+_This interface also inherits methods from its parent, {{domxref("SVGElement")}}._
 
-<dl>
- <dt>{{domxref("SVGGraphicsElement.getBBox()")}}</dt>
- <dd>Returns a {{domxref("DOMRect")}} representing the computed bounding box of the current element.</dd>
- <dt>{{domxref("SVGGraphicsElement.getCTM()")}}</dt>
- <dd>Returns a {{domxref("DOMMatrix")}} representing the matrix that transforms the current element's coordinate system to its SVG viewport's coordinate system.</dd>
- <dt>{{domxref("SVGGraphicsElement.getScreenCTM()")}}</dt>
- <dd>Returns a {{domxref("DOMMatrix")}} representing the matrix that transforms the current element's coordinate system to the coordinate system of the SVG viewport for the SVG document fragment.</dd>
-</dl>
+- {{domxref("SVGGraphicsElement.getBBox()")}}
+  - : Returns a {{domxref("DOMRect")}} representing the computed bounding box of the current element.
+- {{domxref("SVGGraphicsElement.getCTM()")}}
+  - : Returns a {{domxref("DOMMatrix")}} representing the matrix that transforms the current element's coordinate system to its SVG viewport's coordinate system.
+- {{domxref("SVGGraphicsElement.getScreenCTM()")}}
+  - : Returns a {{domxref("DOMMatrix")}} representing the matrix that transforms the current element's coordinate system to the coordinate system of the SVG viewport for the SVG document fragment.
 
+## Events
 
-<h2 id="Events">Events</h2>
+Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the equivalent `on...` handler property defined on {{DOMxRef("GlobalEventHandlers")}} or {{DOMxRef("WindowEventHandlers")}}.
 
-<p>Listen to these events using <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> or by assigning an event listener to the equivalent <code>on...</code> handler property defined on {{DOMxRef("GlobalEventHandlers")}} or {{DOMxRef("WindowEventHandlers")}}.</p>
+- [`copy`](/en-US/docs/Web/API/SVGGraphicsElement/copy_event)
+  - : Fired when the user initiates a copy action through the browser's user interface.
+- [`cut`](/en-US/docs/Web/API/SVGGraphicsElement/cut_event)
+  - : Fired when the user has initiated a "cut" action through the browser's user interface.
+- [`paste`](/en-US/docs/Web/API/SVGGraphicsElement/paste_event)
+  - : Fires when the user has initiated a "paste" action through the browser's user interface.
 
-<dl>
-	<dt><code><a href="/en-US/docs/Web/API/SVGGraphicsElement/copy_event">copy</a></code></dt>
-	<dd>Fired when the user initiates a copy action through the browser's user interface.
-  </dd>
-	<dt><code><a href="/en-US/docs/Web/API/SVGGraphicsElement/cut_event">cut</a></code></dt>
-	<dd>Fired when the user has initiated a "cut" action through the browser's user interface.</dd>
-	<dt><code><a href="/en-US/docs/Web/API/SVGGraphicsElement/paste_event">paste</a></code></dt>
-	<dd>Fires when the user has initiated a "paste" action through the browser's user interface.</dd>
-</dl>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

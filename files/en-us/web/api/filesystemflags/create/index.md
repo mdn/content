@@ -2,51 +2,49 @@
 title: FileSystemFlags.create
 slug: Web/API/FileSystemFlags/create
 tags:
-- API
-- Create
-- File and Directory Entries API
-- FileSystemFlags
-- Files
-- File System API
-- Offline
-- Property
-- Reference
+  - API
+  - Create
+  - File and Directory Entries API
+  - FileSystemFlags
+  - Files
+  - File System API
+  - Offline
+  - Property
+  - Reference
 browser-compat: api.FileSystemFlags.create
 ---
-<div>{{APIRef("File and Directory Entries API")}}</div>
+{{APIRef("File and Directory Entries API")}}
 
-<p>The <strong><code>create</code></strong> property on the {{domxref("FileSystemFlags")}}
-  dictionary is used to indicate whether or not the file should be created if it's
-  missing. <code>FileSystemFlags</code> is only used when calling
-  {{domxref("FileSystemDirectoryEntry.getFile()")}} or
-  {{domxref("FileSystemDirectoryEntry.getDirectory()")}}.</p>
+The **`create`** property on the {{domxref("FileSystemFlags")}}
+dictionary is used to indicate whether or not the file should be created if it's
+missing. `FileSystemFlags` is only used when calling
+{{domxref("FileSystemDirectoryEntry.getFile()")}} or
+{{domxref("FileSystemDirectoryEntry.getDirectory()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>fileSystemFlags</em>.create = <em>booleanValue</em>
-</pre>
+```js
+fileSystemFlags.create = booleanValue
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<p>{{page("/en-US/docs/Web/API/FileSystemFlags", "Values and results")}}</p>
+{{page("/en-US/docs/Web/API/FileSystemFlags", "Values and results")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory
-      Entries API</a></li>
-  <li><a
-      href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">Introduction
-      to the File System API</a></li>
-  <li>{{domxref("FileSystemFlags")}}</li>
-  <li>{{domxref("FileSystemDirectoryEntry.getFile()")}} and
-    {{domxref("FileSystemDirectoryEntry.getDirectory()")}}</li>
-</ul>
+- [File and Directory
+  Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction
+  to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- {{domxref("FileSystemFlags")}}
+- {{domxref("FileSystemDirectoryEntry.getFile()")}} and
+  {{domxref("FileSystemDirectoryEntry.getDirectory()")}}

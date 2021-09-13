@@ -10,29 +10,29 @@ tags:
   - XMLHttpRequest API
 browser-compat: api.FormData.values
 ---
-<p>{{APIRef("XMLHttpRequest")}}</p>
+{{APIRef("XMLHttpRequest")}}
 
-<p>The <code><strong>FormData.values()</strong></code> method returns an
-	{{jsxref("Iteration_protocols",'iterator')}} allowing to go through all values
-	contained in this object. The values are {{domxref("USVString")}} or
-	{{domxref("Blob")}} objects.</p>
+The **`FormData.values()`** method returns an
+{{jsxref("Iteration_protocols",'iterator')}} allowing to go through all values
+contained in this object. The values are {{domxref("USVString")}} or
+{{domxref("Blob")}} objects.
 
-<div class="note">
-	<p><strong>Note:</strong> This method is available in <a
-			href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
-</div>
+> **Note:** This method is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">formData.values();</pre>
+```js
+formData.values();
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Returns an {{jsxref("Iteration_protocols","iterator")}}.</p>
+Returns an {{jsxref("Iteration_protocols","iterator")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js;">// Create a test FormData object
+```js
+// Create a test FormData object
 var formData = new FormData();
 formData.append('key1', 'value1');
 formData.append('key2', 'value2');
@@ -41,28 +41,25 @@ formData.append('key2', 'value2');
 for (var value of formData.values()) {
    console.log(value);
 }
-</pre>
+```
 
-<p>The result is:</p>
+The result is:
 
-<pre>value1
-value2</pre>
+    value1
+    value2
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{domxref("XMLHTTPRequest")}}</li>
-	<li><a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest"
-			title="Using XMLHttpRequest">Using XMLHttpRequest</a></li>
-	<li><a href="/en-US/docs/Web/API/FormData/Using_FormData_Objects">Using
-			FormData objects</a></li>
-	<li>{{HTMLElement("Form")}}</li>
-</ul>
+- {{domxref("XMLHTTPRequest")}}
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest "Using XMLHttpRequest")
+- [Using
+  FormData objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)
+- {{HTMLElement("Form")}}

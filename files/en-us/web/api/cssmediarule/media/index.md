@@ -2,52 +2,53 @@
 title: CSSMediaRule.media
 slug: Web/API/CSSMediaRule/media
 tags:
-- API
-- CSSOM
-- CSSMediaRule
-- Property
-- Reference
+  - API
+  - CSSOM
+  - CSSMediaRule
+  - Property
+  - Reference
 browser-compat: api.CSSMediaRule.media
 ---
-<div>{{ APIRef("CSSOM") }}</div>
+{{ APIRef("CSSOM") }}
 
-<p>
-  The read-only <strong><code>media</code></strong> property of the
-  {{domxref("CSSMediaRule")}} interface {{domxref("MediaList")}} represents the intended
-  destination medium for style information.
+The read-only **`media`** property of the
+{{domxref("CSSMediaRule")}} interface {{domxref("MediaList")}} represents the intended
+destination medium for style information.
 
-</p>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+var media = CSSMediaRule.media;
+```
 
-<pre
-  class="brush: js">var <var>media</var> = <var>CSSMediaRule</var>.media;</pre>
+### Value
 
-<h3>Value</h3>
-<p>a {{domxref("MediaList")}}</p>
+a {{domxref("MediaList")}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>
-  The CSS includes a media query with one style rule. This will be the first
-  {{domxref("CSSRule")}} returned by <code>document.styleSheets[0].cssRules</code>.
-  Calling <code>myRules[0].media</code> therefore returns a {{domxref("MediaList")}}
-  object representing the media query.
-</p>
+The CSS includes a media query with one style rule. This will be the first
+{{domxref("CSSRule")}} returned by `document.styleSheets[0].cssRules`.
+Calling `myRules[0].media` therefore returns a {{domxref("MediaList")}}
+object representing the media query.
 
-<pre class="brush: css">@media (min-width: 500px) {
+```css
+@media (min-width: 500px) {
   body {
     color: blue;
   }
-}</pre>
+}
+```
 
-<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].media); // a MediaList</pre>
+```js
+let myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0].media); // a MediaList
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

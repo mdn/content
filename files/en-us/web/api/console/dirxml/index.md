@@ -2,38 +2,36 @@
 title: console.dirxml()
 slug: Web/API/console/dirxml
 tags:
-- API
-- DOM
-- Debugging
-- Method
-- Web Development
-- web console
+  - API
+  - DOM
+  - Debugging
+  - Method
+  - Web Development
+  - web console
 browser-compat: api.console.dirxml
 ---
-<div>{{APIRef("Console API")}}</div>
+{{APIRef("Console API")}}
 
-<p>The <strong><code>console.dirxml()</code></strong> method displays an interactive tree of the descendant elements of the specified XML/HTML
-	element. If it is not possible to display as an element the JavaScript Object view is
-	shown instead. The output is presented as a hierarchical listing of expandable nodes
-	that let you see the contents of child nodes.</p>
+The **`console.dirxml()`** method displays an interactive tree of the descendant elements of the specified XML/HTML
+element. If it is not possible to display as an element the JavaScript Object view is
+shown instead. The output is presented as a hierarchical listing of expandable nodes
+that let you see the contents of child nodes.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">console.dirxml(<em>object</em>);
-</pre>
+```js
+console.dirxml(object);
+```
 
-<h2 id="Parameters">Parameters</h2>
+## Parameters
 
-<dl>
-	<dt><code>object</code></dt>
-	<dd>A JavaScript object whose properties should be output.</dd>
-</dl>
+- `object`
+  - : A JavaScript object whose properties should be output.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
+{{Compat}}

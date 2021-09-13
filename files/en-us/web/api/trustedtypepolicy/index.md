@@ -8,52 +8,51 @@ tags:
   - TrustedTypePolicy
 browser-compat: api.TrustedTypePolicy
 ---
-<div>{{DefaultAPISidebar("Trusted Types API")}}</div>
+{{DefaultAPISidebar("Trusted Types API")}}
 
-<p>The <strong><code>TrustedTypePolicy</code></strong> interface of the {{domxref('Trusted Types API')}} defines a group of functions which create {{domxref('TrustedType')}} objects.</p>
+The **`TrustedTypePolicy`** interface of the {{domxref('Trusted Types API')}} defines a group of functions which create {{domxref('TrustedType')}} objects.
 
-<p>A <code>TrustedTypePolicy</code> object is created by {{domxref("TrustedTypePolicyFactory.createPolicy","TrustedTypePolicyFactory.createPolicy()")}} to define a policy for enforcing security rules on input. Therefore, <code>TrustedTypePolicy</code> has no constructor.</p>
+A `TrustedTypePolicy` object is created by {{domxref("TrustedTypePolicyFactory.createPolicy","TrustedTypePolicyFactory.createPolicy()")}} to define a policy for enforcing security rules on input. Therefore, `TrustedTypePolicy` has no constructor.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
-  <dt>{{domxref("TrustedTypePolicy.name")}}{{ReadOnlyInline}}</dt>
-  <dd>A {{domxref("DOMString")}} containing the name of the policy.</dd>
-</dl>
+- {{domxref("TrustedTypePolicy.name")}}{{ReadOnlyInline}}
+  - : A {{domxref("DOMString")}} containing the name of the policy.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
-  <dt>{{domxref("TrustedTypePolicy.createHTML","TrustedTypePolicy.createHTML()")}}</dt>
-  <dd>Creates a {{domxref("TrustedHTML")}} object.</dd>
-  <dt>{{domxref("TrustedTypePolicy.createScript","TrustedTypePolicy.createScript()")}}</dt>
-  <dd>Creates a {{domxref("TrustedScript")}} object.</dd>
-  <dt>{{domxref("TrustedTypePolicy.createScriptURL","TrustedTypePolicy.createScriptURL()")}}</dt>
-  <dd>Creates a {{domxref("TrustedScriptURL")}} object.</dd>
-</dl>
+- {{domxref("TrustedTypePolicy.createHTML","TrustedTypePolicy.createHTML()")}}
+  - : Creates a {{domxref("TrustedHTML")}} object.
+- {{domxref("TrustedTypePolicy.createScript","TrustedTypePolicy.createScript()")}}
+  - : Creates a {{domxref("TrustedScript")}} object.
+- {{domxref("TrustedTypePolicy.createScriptURL","TrustedTypePolicy.createScriptURL()")}}
+  - : Creates a {{domxref("TrustedScriptURL")}} object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the below example we create a policy that will create {{domxref("TrustedHTML")}} objects using {{domxref("TrustedTypePolicyFactory.createPolicy()")}}. We can then use {{domxref("TrustedTypePolicy.createHTML")}} to create a sanitized HTML string to be inserted into the document.</p>
+In the below example we create a policy that will create {{domxref("TrustedHTML")}} objects using {{domxref("TrustedTypePolicyFactory.createPolicy()")}}. We can then use {{domxref("TrustedTypePolicy.createHTML")}} to create a sanitized HTML string to be inserted into the document.
 
-<p>The sanitized value can then be used with {{domxref("Element.innerHTML")}} to ensure that no new HTML elements can be injected.</p>
+The sanitized value can then be used with {{domxref("Element.innerHTML")}} to ensure that no new HTML elements can be injected.
 
-<pre class="brush: html">&lt;div id="myDiv"&gt;&lt;/div&gt;</pre>
+```html
+<div id="myDiv"></div>
+```
 
-<pre class="brush: js">const escapeHTMLPolicy = trustedTypes.createPolicy("myEscapePolicy", {
-  createHTML: (string) =&gt; string.replace(/\&gt;/g, "&lt;")
+```js
+const escapeHTMLPolicy = trustedTypes.createPolicy("myEscapePolicy", {
+  createHTML: (string) => string.replace(/\>/g, "<")
 });
 
 let el = document.getElementById("myDiv");
-const escaped = escapeHTMLPolicy.createHTML("&lt;img src=x onerror=alert(1)&gt;");
+const escaped = escapeHTMLPolicy.createHTML("<img src=x onerror=alert(1)>");
 console.log(escaped instanceof TrustedHTML); // true
 el.innerHTML = escaped;
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

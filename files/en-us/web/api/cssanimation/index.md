@@ -9,34 +9,33 @@ tags:
   - Reference
 browser-compat: api.CSSAnimation
 ---
-<div>{{APIRef("Web Animations API")}}{{SeeCompatTable}}</div>
+{{APIRef("Web Animations API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>CSSAnimation</code></strong> interface of the {{domxref('Web Animations API','','',' ')}} represents an {{domxref("Animation")}} object.</p>
+The **`CSSAnimation`** interface of the {{domxref('Web Animations API','','',' ')}} represents an {{domxref("Animation")}} object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p>Inherits methods from its ancestor {{domxref("Animation")}} and adds {{domxref("animationName")}}.</p>
+Inherits methods from its ancestor {{domxref("Animation")}} and adds {{domxref("animationName")}}.
 
-<dl>
-    <dt>{{domxref("CSSAnimation.animationName")}}{{readonlyinline}}</dt>
-    <dd>Returns the animation name as a {{domxref("CSSOMString")}}.</dd>
-</dl>
+- {{domxref("CSSAnimation.animationName")}}{{readonlyinline}}
+  - : Returns the animation name as a {{domxref("CSSOMString")}}.
 
-<h3 id="Event_handlers">Event handlers</h3>
+### Event handlers
 
-<p>No specific event handlers; inherits methods from its ancestor {{domxref("Animation")}}.</p>
+No specific event handlers; inherits methods from its ancestor {{domxref("Animation")}}.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p>No specific methods; inherits methods from its ancestor {{domxref("Animation")}}.</p>
+No specific methods; inherits methods from its ancestor {{domxref("Animation")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3>Inspecting the returned CSSAnimation</h3>
+### Inspecting the returned CSSAnimation
 
-<p>The animation in the following example is defined in CSS with the name <code>slide-in</code>. Calling {{domxref("Element.getAnimations()")}} returns an array of all {{domxref("Animation")}} objects. In our case this returns a <code>CSSAnimation</code> object, representing the animation created in CSS.</p>
+The animation in the following example is defined in CSS with the name `slide-in`. Calling {{domxref("Element.getAnimations()")}} returns an array of all {{domxref("Animation")}} objects. In our case this returns a `CSSAnimation` object, representing the animation created in CSS.
 
-<pre class="brush: css">.animate {
+```css
+.animate {
   animation: slide-in 0.7s both;
 }
 
@@ -47,15 +46,18 @@ browser-compat: api.CSSAnimation
   100% {
     transform: translateY(0);
   }
-}</pre>
+}
+```
 
-<pre class="brush: js">let animations = document.querySelector(".animate").getAnimations();
-console.log(animations[0]);</pre>
+```js
+let animations = document.querySelector(".animate").getAnimations();
+console.log(animations[0]);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

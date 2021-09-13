@@ -2,40 +2,42 @@
 title: CSSTransition.transitionProperty
 slug: Web/API/CSSTransition/transitionProperty
 tags:
-- API
-- Animation
-- CSSTransition
-- Property
-- Reference
+  - API
+  - Animation
+  - CSSTransition
+  - Property
+  - Reference
 browser-compat: api.CSSTransition.transitionProperty
 ---
-<div>{{APIRef("Web Animations API")}}{{SeeCompatTable}}</div>
+{{APIRef("Web Animations API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>transitionProperty</code></strong> property of the
-  {{domxref("CSSTransition")}} interface returns the <strong>expanded transition property
-    name</strong> of the transition. This is the longhand CSS property for which the
-  transition was generated.</p>
+The **`transitionProperty`** property of the
+{{domxref("CSSTransition")}} interface returns the **expanded transition property
+name** of the transition. This is the longhand CSS property for which the
+transition was generated.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">const <var>transitionProperty</var> = CSSAnimation.transitionProperty;</pre>
+```js
+const transitionProperty = CSSAnimation.transitionProperty;
+```
 
-<h3>Value</h3>
-<p>A {{domxref("CSSOMString")}}.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("CSSOMString")}}.
 
-<h3>Returning the transitionProperty</h3>
+## Examples
 
+### Returning the transitionProperty
 
-<p>The transition in the following example changes the width of the box on hover. Calling
-  {{domxref("Element.getAnimations()")}} returns an array of all {{domxref("Animation")}}
-  objects. In our case this returns a <code>CSSTransition</code> object, representing the
-  animation created. The <code>transitionProperty</code> property returns the property
-  that the transition is created for, which is <code>width</code>.</p>
+The transition in the following example changes the width of the box on hover. Calling
+{{domxref("Element.getAnimations()")}} returns an array of all {{domxref("Animation")}}
+objects. In our case this returns a `CSSTransition` object, representing the
+animation created. The `transitionProperty` property returns the property
+that the transition is created for, which is `width`.
 
-<pre class="brush: css">.box {
+```css
+.box {
   background-color: #165baa;
   color: #fff;
   width: 100px;
@@ -45,18 +47,21 @@ browser-compat: api.CSSTransition.transitionProperty
 
 .box:hover {
   width: 200px;
-}</pre>
+}
+```
 
-<pre class="brush: js">const item = document.querySelector(".box");
+```js
+const item = document.querySelector(".box");
 item.addEventListener('transitionrun', () => {
   let animations = document.querySelector(".box").getAnimations();
   console.log(animations[0].propertyName);
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

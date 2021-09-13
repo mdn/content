@@ -4,48 +4,27 @@ slug: Web/API/HTMLVideoElement/onMSVideoFrameStepCompleted
 tags:
   - onMSVideoFrameStepCompleted
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>{{Non-standard_header()}}</p>
+{{Non-standard_header()}}
 
-<p><code><strong>onMSVideoFrameStepCompleted</strong></code> is an event which occurs when the video frame has been stepped forward or backward one frame.</p>
+**`onMSVideoFrameStepCompleted`** is an event which occurs when the video frame has been stepped forward or backward one frame.
 
-<p>This proprietary property is specific to Internet Explorer and Microsoft Edge.</p>
+This proprietary property is specific to Internet Explorer and Microsoft Edge.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Value</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>Event Property</td>
-   <td>object.onMSVideoFrameStepCompleted = handler;</td>
-  </tr>
-  <tr>
-   <td>attachEvent Method</td>
-   <td>object.attachEvent("onMSVideoFrameStepCompleted", handler)</td>
-  </tr>
-  <tr>
-   <td>addEventListener Method</td>
-   <td>object.addEventListener("", handler, useCapture)</td>
-  </tr>
- </tbody>
-</table>
+| Value                   | Description                                                |
+| ----------------------- | ---------------------------------------------------------- |
+| Event Property          | object.onMSVideoFrameStepCompleted = handler;              |
+| attachEvent Method      | object.attachEvent("onMSVideoFrameStepCompleted", handler) |
+| addEventListener Method | object.addEventListener("", handler, useCapture)           |
 
-<h2 id="Event_handler">Event handler parameters</h2>
+## Event handler parameters
 
-<ul>
- <li>val[in], type=function</li>
-</ul>
+- val\[in], type=function
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/HTMLVideoElement">HTMLVideoElement</a></li>
- <li><a href="/en-US/docs/Web/API/Microsoft_Extensions">Microsoft API extensions </a></li>
-</ul>
+- [HTMLVideoElement](/en-US/docs/Web/API/HTMLVideoElement)
+- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_Extensions)

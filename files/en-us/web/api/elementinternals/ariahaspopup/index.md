@@ -11,49 +11,50 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals.ariaHasPopup
 ---
-<div>{{DefaultAPISidebar("DOM")}}</div>
+{{DefaultAPISidebar("DOM")}}
 
-<p>The <strong><code>ariaHasPopup</code></strong> property of the {{domxref("ElementInternals")}} interface reflects the value of the <code>aria-haspopup</code> attribute, which indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element.</p>
+The **`ariaHasPopup`** property of the {{domxref("ElementInternals")}} interface reflects the value of the `aria-haspopup` attribute, which indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Setting aria attributes on <code>ElementInternals</code> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <a href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</a>.</p>
-</div>
+> **Note:** Setting aria attributes on `ElementInternals` allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the [Accessibility Object Model explainer](https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let ariaHasPopup = ElementInternals.ariaHasPopup;
-ElementInternals.ariaHasPopup = ariaHasPopup;</pre>
+```js
+let ariaHasPopup = ElementInternals.ariaHasPopup;
+ElementInternals.ariaHasPopup = ariaHasPopup;
+```
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString")}} with one of the following values:</p>
+### Value
 
-<dl>
-  <dt><code>"false"</code></dt>
-  <dd>The element does not have a popup.</dd>
-  <dt><code>"true"</code></dt>
-  <dd>The element has a popup that is a menu.</dd>
-  <dt><code>"menu"</code></dt>
-  <dd>The element has a popup that is a menu.</dd>
-  <dt><code>"listbox"</code></dt>
-  <dd>The element has a popup that is a listbox.</dd>
-  <dt><code>"tree"</code></dt>
-  <dd>The element has a popup that is a tree.</dd>
-  <dt><code>"grid"</code></dt>
-  <dd>The element has a popup that is a grid.</dd>
-  <dt><code>"dialog"</code></dt>
-  <dd>The element has a popup that is a dialog.</dd>
-</dl>
+A {{domxref("DOMString")}} with one of the following values:
 
-<h2 id="Examples">Examples</h2>
+- `"false"`
+  - : The element does not have a popup.
+- `"true"`
+  - : The element has a popup that is a menu.
+- `"menu"`
+  - : The element has a popup that is a menu.
+- `"listbox"`
+  - : The element has a popup that is a listbox.
+- `"tree"`
+  - : The element has a popup that is a tree.
+- `"grid"`
+  - : The element has a popup that is a grid.
+- `"dialog"`
+  - : The element has a popup that is a dialog.
 
-<p>In this example the value of <code>ariaHasPopup</code> is set to "true".</p>
+## Examples
 
-<pre class="brush: js">this.internals_.ariaHasPopup = "true";</pre>
+In this example the value of `ariaHasPopup` is set to "true".
 
-<h2 id="Specifications">Specifications</h2>
+```js
+this.internals_.ariaHasPopup = "true";
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

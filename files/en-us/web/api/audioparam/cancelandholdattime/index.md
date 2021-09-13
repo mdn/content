@@ -2,47 +2,44 @@
 title: AudioParam.cancelAndHoldAtTime()
 slug: Web/API/AudioParam/cancelAndHoldAtTime
 tags:
-- API
-- Audio
-- AudioParam
-- Experimental
-- Method
-- Reference
-- Web Audio API
-- cancelAndHoldAtTime
-- cancelValuesAndHoldAtTime
+  - API
+  - Audio
+  - AudioParam
+  - Experimental
+  - Method
+  - Reference
+  - Web Audio API
+  - cancelAndHoldAtTime
+  - cancelValuesAndHoldAtTime
 browser-compat: api.AudioParam.cancelAndHoldAtTime
 ---
-<div>{{APIRef("Web Audio API")}}</div>
+{{APIRef("Web Audio API")}}
 
-<p>The <strong><code>cancelAndHoldAtTime()</code></strong> property of the
-  {{domxref("AudioParam")}} interface cancels all scheduled future changes to the
-  <code>AudioParam</code> but holds its value at a given time until further changes are
-  made using other methods.</p>
+The **`cancelAndHoldAtTime()`** property of the
+{{domxref("AudioParam")}} interface cancels all scheduled future changes to the
+`AudioParam` but holds its value at a given time until further changes are
+made using other methods.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var audioParam = AudioParam.cancelAndHoldAtTime(cancelTime)</pre>
+```js
+var audioParam = AudioParam.cancelAndHoldAtTime(cancelTime)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>cancelTime</dt>
-  <dd>A double representing the time (in seconds) after the <a
-      href="/en-US/docs/Web/API/AudioContext"
-      title="An AudioContext can be a target of events, therefore it implements the EventTarget interface."><code>AudioContext</code></a> was
-    first created after which all scheduled changes will be cancelled.</dd>
-</dl>
+- cancelTime
+  - : A double representing the time (in seconds) after the [`AudioContext`](/en-US/docs/Web/API/AudioContext "An AudioContext can be a target of events, therefore it implements the EventTarget interface.") was
+    first created after which all scheduled changes will be cancelled.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A reference to the {{domxref("AudioParam")}} it was called on.</p>
+A reference to the {{domxref("AudioParam")}} it was called on.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

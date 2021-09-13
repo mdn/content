@@ -9,59 +9,61 @@ tags:
   - Reference
 browser-compat: api.File.name
 ---
-<div>{{APIRef("File API")}}</div>
+{{APIRef("File API")}}
 
-<p>Returns the name of the file represented by a {{domxref("File")}} object. For security
-  reasons, the path is excluded from this property.</p>
+Returns the name of the file represented by a {{domxref("File")}} object. For security
+reasons, the path is excluded from this property.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>name</var> = <var>file</var>.name;</pre>
+```js
+var name = file.name;
+```
 
-<h2 id="Value">Value</h2>
+## Value
 
-<p>A string, containing the name of the file without path, such as "My Resume.rtf".</p>
+A string, containing the name of the file without path, such as "My Resume.rtf".
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: html">&lt;input type="file" multiple onchange="processSelectedFiles(this)"&gt;
+```html
+<input type="file" multiple onchange="processSelectedFiles(this)">
 
-&lt;div id="output"&gt;&lt;/div&gt;
-</pre>
+<div id="output"></div>
+```
 
-<pre class="brush: js">const output = document.querySelector("#output");
+```js
+const output = document.querySelector("#output");
 function processSelectedFiles(fileInput) {
   let files = fileInput.files;
   output.textContent = "List of Selected Files:";
-  
-  for (let i = 0; i &lt; files.length; i++) {
+
+  for (let i = 0; i < files.length; i++) {
     output.textContent += `\nFilename: ${files[i].name}`;
   }
-}</pre>
+}
+```
 
-<pre class="brush: css hidden">
+```css hidden
 #output{
   padding: 0.5em 0;
   white-space: pre;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Example', 300, 100) }}</p>
+{{ EmbedLiveSample('Example', 300, 100) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/File/Using_files_from_web_applications">Using files from web
-      applications</a></li>
-</ul>
+- [Using files from web
+  applications](/en-US/docs/Web/API/File/Using_files_from_web_applications)

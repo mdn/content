@@ -11,36 +11,32 @@ tags:
   - Interface
 browser-compat: api.CSSMathInvert
 ---
-<div>{{draft}}{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}</div>
+{{draft}}{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
-<p>The <strong><code>CSSMathInvert</code></strong> interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents a CSS {{CSSXref('calc()','calc()')}} used as <code>calc(1 / &lt;value&gt;).</code> It inherits properties and methods from its parent {{domxref('CSSNumericValue')}}.</p>
+The **`CSSMathInvert`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents a CSS {{CSSXref('calc()','calc()')}} used as `calc(1 / <value>).` It inherits properties and methods from its parent {{domxref('CSSNumericValue')}}.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("CSSMathInvert.CSSMathInvert()")}}</dt>
- <dd>Creates a new <code>CSSMathInvert</code> object.</dd>
-</dl>
+- {{domxref("CSSMathInvert.CSSMathInvert()")}}
+  - : Creates a new `CSSMathInvert` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref('CSSMathInvert.value')}}{{ReadOnlyInline}}</dt>
- <dd>Returns a {{domxref('CSSNumericValue')}} object.</dd>
-</dl>
+- {{domxref('CSSMathInvert.value')}}{{ReadOnlyInline}}
+  - : Returns a {{domxref('CSSNumericValue')}} object.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>To do</p>
+To do
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

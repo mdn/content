@@ -10,46 +10,45 @@ tags:
   - Secure context
 browser-compat: api.Geolocation.watchPosition
 ---
-<p>{{securecontext_header}}{{ APIref("Geolocation API") }}</p>
+{{securecontext_header}}{{ APIref("Geolocation API") }}
 
-<p>The {{domxref("Geolocation")}} method
-    <strong><code>watchPosition()</code></strong> method is used to register a handler
-    function that will be called automatically each time the position of the device
-    changes. You can also, optionally, specify an error handling callback function.
-</p>
+The {{domxref("Geolocation")}} method
+**`watchPosition()`** method is used to register a handler
+function that will be called automatically each time the position of the device
+changes. You can also, optionally, specify an error handling callback function.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">navigator.geolocation.watchPosition(<var>success</var>[, <var>error</var>[, <var>options</var>]])</pre>
+```js
+navigator.geolocation.watchPosition(success[, error[, options]])
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>success</var></code></dt>
-  <dd>A callback function that takes a {{domxref("GeolocationPosition")}} object as an
-    input parameter.</dd>
-  <dt><code><var>error</var></code> {{optional_inline}}</dt>
-  <dd>An optional callback function that takes a {{domxref("GeolocationPositionError")}}
-    object as an input parameter.</dd>
-  <dt><code><var>options</var></code> {{optional_inline}}</dt>
-  <dd>An optional {{domxref("PositionOptions")}} object that provides configuration
-    options for the location watch.</dd>
-</dl>
+- `success`
+  - : A callback function that takes a {{domxref("GeolocationPosition")}} object as an
+    input parameter.
+- `error` {{optional_inline}}
+  - : An optional callback function that takes a {{domxref("GeolocationPositionError")}}
+    object as an input parameter.
+- `options` {{optional_inline}}
+  - : An optional {{domxref("PositionOptions")}} object that provides configuration
+    options for the location watch.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An integer ID that identifies the registered handler. The ID can be passed to the
-  {{domxref("Geolocation.clearWatch()")}} to unregister the handler.</p>
+An integer ID that identifies the registered handler. The ID can be passed to the
+{{domxref("Geolocation.clearWatch()")}} to unregister the handler.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var id, target, options;
+```js
+var id, target, options;
 
 function success(pos) {
   var crd = pos.coords;
 
-  if (target.latitude === crd.latitude &amp;&amp; target.longitude === crd.longitude) {
+  if (target.latitude === crd.latitude && target.longitude === crd.longitude) {
     console.log('Congratulations, you reached the target');
     navigator.geolocation.clearWatch(id);
   }
@@ -71,23 +70,20 @@ options = {
 };
 
 id = navigator.geolocation.watchPosition(success, error, options);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API">Using the Geolocation API</a>
-  </li>
-  <li>The interface it belongs to, {{domxref("Geolocation")}}, and the way to access it —
-    {{domxref("Navigator.geolocation")}}.</li>
-  <li>The opposite operation: {{domxref("Geolocation.clearWatch()")}}</li>
-  <li>A similar method: {{domxref("Geolocation.getCurrentPosition()")}}</li>
-</ul>
+- [Using the Geolocation API](/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
+- The interface it belongs to, {{domxref("Geolocation")}}, and the way to access it —
+  {{domxref("Navigator.geolocation")}}.
+- The opposite operation: {{domxref("Geolocation.clearWatch()")}}
+- A similar method: {{domxref("Geolocation.getCurrentPosition()")}}

@@ -9,29 +9,32 @@ tags:
   - BackgroundFetchEvent
 browser-compat: api.BackgroundFetchEvent.registration
 ---
-<div>{{DefaultAPISidebar("Background Fetch API")}}</div>
+{{DefaultAPISidebar("Background Fetch API")}}
 
-<p>The <strong><code>registration</code></strong> read-only property of the {{domxref("BackgroundFetchEvent")}} interface returns a {{domxref("BackgroundFetchRegistration")}} object.</p>
+The **`registration`** read-only property of the {{domxref("BackgroundFetchEvent")}} interface returns a {{domxref("BackgroundFetchRegistration")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">let registration = BackgroundFetchEvent.registration;</pre>
+    let registration = BackgroundFetchEvent.registration;
 
-<h3>Value</h3>
-<p>A  {{domxref("BackgroundFetchRegistration")}}.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("BackgroundFetchRegistration")}}.
 
-<p>In this example, if the user clicks on the user interface displaying the download progress, this fires the <code>onbackgroundfetchclick</code> event. The current {{domxref("BackgroundFetchRegistration")}} is returned by calling <code>event.registration</code>.</p>
+## Examples
 
-<pre class="brush: js">addEventListener('backgroundfetchclick', (event) => {
+In this example, if the user clicks on the user interface displaying the download progress, this fires the `onbackgroundfetchclick` event. The current {{domxref("BackgroundFetchRegistration")}} is returned by calling `event.registration`.
+
+```js
+addEventListener('backgroundfetchclick', (event) => {
   console.log(event.registration);
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

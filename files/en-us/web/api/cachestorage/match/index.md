@@ -13,87 +13,83 @@ tags:
   - match
 browser-compat: api.CacheStorage.match
 ---
-<p>{{APIRef("Service Workers API")}}</p>
+{{APIRef("Service Workers API")}}
 
-<p>The <strong><code>match()</code></strong> method of the
-    {{domxref("CacheStorage")}} interface checks if a given {{domxref("Request")}} or url
-    string is a key for a stored {{domxref("Response")}}. This method returns a
-    {{jsxref("Promise")}} for a {{domxref("Response")}}, or a {{jsxref("Promise")}} which
-    resolves to <code>undefined</code> if no match is found.</p>
+The **`match()`** method of the
+{{domxref("CacheStorage")}} interface checks if a given {{domxref("Request")}} or url
+string is a key for a stored {{domxref("Response")}}. This method returns a
+{{jsxref("Promise")}} for a {{domxref("Response")}}, or a {{jsxref("Promise")}} which
+resolves to `undefined` if no match is found.
 
-<p>You can access <code>CacheStorage</code> through the global
-  {{domxref("caches")}} property.</p>
+You can access `CacheStorage` through the global
+{{domxref("caches")}} property.
 
-<p><code>Cache</code> objects are searched in creation order.</p>
+`Cache` objects are searched in creation order.
 
-<div class="note"><p><strong>Note:</strong> {{domxref("CacheStorage.match()",
+> **Note:** {{domxref("CacheStorage.match()",
   "caches.match()")}} is a convenience method. Equivalent functionality is to call
-  {{domxref("cache.match()")}} on each cache (in the order returned by
-  {{domxref("CacheStorage.keys()", "caches.keys()")}}) until a {{domxref("Response")}} is
-  returned.</p></div>
+> {{domxref("cache.match()")}} on each cache (in the order returned by
+> {{domxref("CacheStorage.keys()", "caches.keys()")}}) until a {{domxref("Response")}} is
+> returned.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">caches.match(<em>request</em>, <em>options</em>).then(function(<em>response</em>) {
+```js
+caches.match(request, options).then(function(response) {
   // Do something with the response
 });
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>request</dt>
-  <dd>The {{domxref("Request")}} you want to match.  This can be a  {{domxref("Request")}}
-    object or a URL string.</dd>
-  <dt>options {{optional_inline}}</dt>
-  <dd>An object whose properties control how matching is done in the <code>match</code>
+- request
+  - : The {{domxref("Request")}} you want to match.  This can be a  {{domxref("Request")}}
+    object or a URL string.
+- options {{optional_inline}}
+
+  - : An object whose properties control how matching is done in the `match`
     operation. The available options are:
-    <ul>
-      <li><code>ignoreSearch</code>: A boolean value that specifies whether the
-        matching process should ignore the query string in the url.  For example, if set
-        to <code>true</code>, the <code>?value=bar</code> part of
-        <code>http://foo.com/?value=bar</code> would be ignored when performing a match.
-        It defaults to <code>false</code>.</li>
-      <li><code>ignoreMethod</code>: A boolean value that, when set to
-        <code>true</code>, prevents matching operations from validating the
-        {{domxref("Request")}} <code>http</code> method (normally only <code>GET</code>
-        and <code>HEAD</code> are allowed.) It defaults to <code>false</code>.</li>
-      <li><code>ignoreVary</code>: A boolean value that, when set to
-        <code>true,</code> tells the matching operation not to perform <code>VARY</code>
-        header matching. In other words, if the URL matches you will get a match
-        regardless of whether the {{domxref("Response")}} object has a <code>VARY</code>
-        header or not. It defaults to <code>false</code>.</li>
-      <li><code>cacheName</code>: A {{domxref("DOMString")}} that represents a specific
-        cache to search within.</li>
-    </ul>
-  </dd>
-</dl>
 
-<h3 id="Return_value">Return value</h3>
+    - `ignoreSearch`: A boolean value that specifies whether the
+      matching process should ignore the query string in the url.  For example, if set
+      to `true`, the `?value=bar` part of
+      `http://foo.com/?value=bar` would be ignored when performing a match.
+      It defaults to `false`.
+    - `ignoreMethod`: A boolean value that, when set to
+      `true`, prevents matching operations from validating the
+      {{domxref("Request")}} `http` method (normally only `GET`
+      and `HEAD` are allowed.) It defaults to `false`.
+    - `ignoreVary`: A boolean value that, when set to
+      `true,` tells the matching operation not to perform `VARY`
+      header matching. In other words, if the URL matches you will get a match
+      regardless of whether the {{domxref("Response")}} object has a `VARY`
+      header or not. It defaults to `false`.
+    - `cacheName`: A {{domxref("DOMString")}} that represents a specific
+      cache to search within.
 
-<p>a {{jsxref("Promise")}} that resolves to the matching {{domxref("Response")}}. If
-  no matching response to the specified request is found, the promise resolves
-  with <code>undefined</code>.</p>
+### Return value
 
-<h2 id="Examples">Examples</h2>
+a {{jsxref("Promise")}} that resolves to the matching {{domxref("Response")}}. If
+no matching response to the specified request is found, the promise resolves
+with `undefined`.
 
-<p>This example is from the MDN <a href="https://github.com/mdn/sw-test/">sw-test
-    example</a> (see <a href="https://mdn.github.io/sw-test/">sw-test running live</a>).
-  Here we wait for a {{domxref("FetchEvent")}} to fire. We construct a custom response
-  like so:</p>
+## Examples
 
-<ol>
-  <li>Check whether a match for the request is found in the {{domxref("CacheStorage")}}
+This example is from the MDN [sw-test
+example](https://github.com/mdn/sw-test/) (see [sw-test running live](https://mdn.github.io/sw-test/)).
+Here we wait for a {{domxref("FetchEvent")}} to fire. We construct a custom response
+like so:
+
+1.  Check whether a match for the request is found in the {{domxref("CacheStorage")}}
     using {{domxref("CacheStorage.match","CacheStorage.match()")}}. If so, serve that.
-  </li>
-  <li>If not, open the <code>v1</code> cache using <code>open()</code>, put the default
+2.  If not, open the `v1` cache using `open()`, put the default
     network request in the cache using {{domxref("Cache.put","Cache.put()")}} and return a
-    clone of the default network request using <code>return response.clone()</code>. The
-    last is necessary because <code>put()</code> consumes the response body.</li>
-  <li>If this fails (e.g., because the network is down), return a fallback response.</li>
-</ol>
+    clone of the default network request using `return response.clone()`. The
+    last is necessary because `put()` consumes the response body.
+3.  If this fails (e.g., because the network is down), return a fallback response.
 
-<pre class="brush: js">self.addEventListener('fetch', function(event) {
+```js
+self.addEventListener('fetch', function(event) {
   event.respondWith(caches.match(event.request).then(function(response) {
     // caches.match() always resolves
     // but in case of success response will have value
@@ -116,21 +112,19 @@ browser-compat: api.CacheStorage.match
     }
   }));
 });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service
-      Workers</a></li>
-  <li>{{domxref("Cache")}}</li>
-  <li>{{domxref("caches")}}</li>
-</ul>
+- [Using Service
+  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- {{domxref("Cache")}}
+- {{domxref("caches")}}

@@ -12,38 +12,38 @@ tags:
   - load
 browser-compat: api.FontFace.load
 ---
-<div>{{APIRef("CSS Font Loading API")}}</div>
+{{APIRef("CSS Font Loading API")}}
 
-<p>The <strong><code>load()</code></strong> method of the
-  {{domxref("FontFace")}} interface loads a font based on current object's
-  constructor-passed requirements, including a location or source buffer, and returns a
-  {{jsxref('Promise')}} that resolves with the current FontFace object.</p>
+The **`load()`** method of the
+{{domxref("FontFace")}} interface loads a font based on current object's
+constructor-passed requirements, including a location or source buffer, and returns a
+{{jsxref('Promise')}} that resolves with the current FontFace object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let promise = FontFace.load();</pre>
+```js
+let promise = FontFace.load();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref('Promise')}} that resolves with a reference to the current
-  <code>FontFace</code> object when the font loads or rejects with a <code>NetworkError</code> {{domxref("DOMException")}} if the
-  loading process fails.</p>
+A {{jsxref('Promise')}} that resolves with a reference to the current
+`FontFace` object when the font loads or rejects with a `NetworkError` {{domxref("DOMException")}} if the
+loading process fails.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>NetworkError</dt>
-  <dd>Indicates that the attempt to load the font failed.</dd>
-</dl>
+- NetworkError
+  - : Indicates that the attempt to load the font failed.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

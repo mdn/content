@@ -2,42 +2,42 @@
 title: SpeechSynthesisVoice.default
 slug: Web/API/SpeechSynthesisVoice/default
 tags:
-- API
-- Experimental
-- Property
-- Reference
-- SpeechSynthesisVoice
-- Web Speech API
-- default
-- speech
-- synthesis
+  - API
+  - Experimental
+  - Property
+  - Reference
+  - SpeechSynthesisVoice
+  - Web Speech API
+  - default
+  - speech
+  - synthesis
 browser-compat: api.SpeechSynthesisVoice.default
 ---
-<div>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</div>
+{{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>default</code></strong> read-only property of the
-  {{domxref("SpeechSynthesisVoice")}} interface returns a boolean value
-  indicating whether the voice is the default voice for the current app
-  (<code>true</code>), or not (<code>false</code>.)</p>
+The **`default`** read-only property of the
+{{domxref("SpeechSynthesisVoice")}} interface returns a boolean value
+indicating whether the voice is the default voice for the current app
+(`true`), or not (`false`.)
 
-<div class="note">
-  <p><strong>Note:</strong> For some devices, it might be the default voice for the
-    voice's language. The spec is not very clear on which it should be, so some
-    implementations may differ.</p>
-</div>
+> **Note:** For some devices, it might be the default voice for the
+> voice's language. The spec is not very clear on which it should be, so some
+> implementations may differ.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var amIDefault = speechSynthesisVoiceInstance.default;
-</pre>
+```js
+var amIDefault = speechSynthesisVoiceInstance.default;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A boolean value.</p>
+A boolean value.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">for(i = 0; i &lt; voices.length ; i++) {
+```js
+for(i = 0; i < voices.length ; i++) {
   var option = document.createElement('option');
   option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
 
@@ -48,18 +48,17 @@ browser-compat: api.SpeechSynthesisVoice.default
   option.setAttribute('data-lang', voices[i].lang);
   option.setAttribute('data-name', voices[i].name);
   voiceSelect.appendChild(option);
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)

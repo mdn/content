@@ -9,23 +9,27 @@ tags:
   - VTTCue
 browser-compat: api.VTTCue.size
 ---
-<div>{{APIRef("WebVTT")}}</div>
+{{APIRef("WebVTT")}}
 
-<p>The <strong><code>size</code></strong> property of the {{domxref("VTTCue")}} interface represents the size of the cue as a percentage of the video size.</p>
+The **`size`** property of the {{domxref("VTTCue")}} interface represents the size of the cue as a percentage of the video size.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let size = VTTCue.size;
-VTTCue.size = 50;</pre>
+```js
+let size = VTTCue.size;
+VTTCue.size = 50;
+```
 
-<h3>Value</h3>
-<p>A number representing the size of the cue as a percentage of the video size.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A number representing the size of the cue as a percentage of the video size.
 
-<p>In the following example a new {{domxref("VTTCue")}} is created, then the value of <code>size</code> is set to <code>50</code>. The value is then printed to the console.</p>
+## Examples
 
-<pre class="brush: js">let video = document.querySelector('video');
+In the following example a new {{domxref("VTTCue")}} is created, then the value of `size` is set to `50`. The value is then printed to the console.
+
+```js
+let video = document.querySelector('video');
 let track = video.addTextTrack("captions", "Captions", "en");
 track.mode = "showing";
 
@@ -34,14 +38,12 @@ cue1.size = 50;
 console.log(cue1.size);
 
 track.addCue(cue1);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
-
-
+{{Compat}}

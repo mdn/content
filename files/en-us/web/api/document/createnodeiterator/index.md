@@ -9,122 +9,57 @@ tags:
   - Method
 browser-compat: api.Document.createNodeIterator
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>Returns a new <a
-    href="/en-US/docs/Web/API/NodeIterator"><code>NodeIterator</code></a> object.</p>
+Returns a new [`NodeIterator`](/en-US/docs/Web/API/NodeIterator) object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const nodeIterator = document.createNodeIterator(<var>root</var>[, <var>whatToShow</var>[, <var>filter</var>]]);
-</pre>
+```js
+const nodeIterator = document.createNodeIterator(root[, whatToShow[, filter]]);
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-  <dt><code><var>root</var></code></dt>
-  <dd>The root node at which to begin the {{ domxref("NodeIterator") }}'s traversal.</dd>
-  <dt><code><var>whatToShow</var></code> {{ optional_inline() }}</dt>
-  <dd>Is an optional <code>unsigned long</code> representing a bitmask created by
+- `root`
+  - : The root node at which to begin the {{ domxref("NodeIterator") }}'s traversal.
+- `whatToShow` {{ optional_inline() }}
+
+  - : Is an optional `unsigned long` representing a bitmask created by
     combining the constant properties of
-    <code><a href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter">NodeFilter</a></code>.
+    [`NodeFilter`](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter).
     It is a convenient way of filtering for certain types of node. It defaults to
-    <code>0xFFFFFFFF</code> representing the <code>SHOW_ALL</code> constant.
-    <table class="standard-table">
-      <thead>
-        <tr>
-          <th>Constant</th>
-          <th>Numerical value</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code>NodeFilter.SHOW_ALL</code></td>
-          <td><code>-1</code> (that is the max value of <code>unsigned long</code>)</td>
-          <td>Shows all nodes.</td>
-        </tr>
-        <tr>
-          <td><code>NodeFilter.SHOW_ATTRIBUTE</code> {{deprecated_inline}}</td>
-          <td><code>2</code></td>
-          <td>Shows attribute {{ domxref("Attr") }} nodes. This is meaningful only when creating a {{ domxref("TreeWalker") }} with an
-              {{ domxref("Attr") }} node as its root. In this case, it means that the
-              attribute node will appear in the first position of the iteration or
-              traversal. Since attributes are never children of other nodes, they do not
-              appear when traversing over the document tree.
-          </td>
-        </tr>
-        <tr>
-          <td><code>NodeFilter.SHOW_CDATA_SECTION</code> {{deprecated_inline}}</td>
-          <td><code>8</code></td>
-          <td>Shows {{ domxref("CDATASection") }} nodes.</td>
-        </tr>
-        <tr>
-          <td><code>NodeFilter.SHOW_COMMENT</code></td>
-          <td><code>128</code></td>
-          <td>Shows {{ domxref("Comment") }} nodes.</td>
-        </tr>
-        <tr>
-          <td><code>NodeFilter.SHOW_DOCUMENT</code></td>
-          <td><code>256</code></td>
-          <td>Shows {{ domxref("Document") }} nodes.</td>
-        </tr>
-        <tr>
-          <td><code>NodeFilter.SHOW_DOCUMENT_FRAGMENT</code></td>
-          <td><code>1024</code></td>
-          <td>Shows {{ domxref("DocumentFragment") }} nodes.</td>
-        </tr>
-        <tr>
-          <td><code>NodeFilter.SHOW_DOCUMENT_TYPE</code></td>
-          <td><code>512</code></td>
-          <td>Shows {{ domxref("DocumentType") }} nodes.</td>
-        </tr>
-        <tr>
-          <td><code>NodeFilter.SHOW_ELEMENT</code></td>
-          <td><code>1</code></td>
-          <td>Shows {{ domxref("Element") }} nodes.</td>
-        </tr>
-        <tr>
-          <td><code>NodeFilter.SHOW_ENTITY</code> {{deprecated_inline}}</td>
-          <td><code>32</code></td>
-          <td>Legacy, no more usable.</td>
-        </tr>
-        <tr>
-          <td><code>NodeFilter.SHOW_ENTITY_REFERENCE</code> {{deprecated_inline}}</td>
-          <td><code>16</code></td>
-          <td>Legacy, no more usable.</td>
-        </tr>
-        <tr>
-          <td><code>NodeFilter.SHOW_NOTATION</code> {{deprecated_inline}}</td>
-          <td><code>2048</code></td>
-          <td>Legacy, no more usable.</td>
-        </tr>
-        <tr>
-          <td><code>NodeFilter.SHOW_PROCESSING_INSTRUCTION</code></td>
-          <td><code>64</code></td>
-          <td>Shows {{ domxref("ProcessingInstruction") }} nodes.</td>
-        </tr>
-        <tr>
-          <td><code>NodeFilter.SHOW_TEXT</code></td>
-          <td><code>4</code></td>
-          <td>Shows {{ domxref("Text") }} nodes.</td>
-        </tr>
-      </tbody>
-    </table>
-  </dd>
-  <dt><code><var>filter</var></code> {{ optional_inline() }}</dt>
-  <dd>An object implementing the {{ domxref("NodeFilter") }} interface. Its
-    <code>acceptNode()</code> method will be called for each node in the subtree based at
+    `0xFFFFFFFF` representing the `SHOW_ALL` constant.
+
+    | Constant                                                        | Numerical value                                 | Description                                                                                                                                                                                                                                                                                                                                                                                                            |
+    | --------------------------------------------------------------- | ----------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | `NodeFilter.SHOW_ALL`                                           | `-1` (that is the max value of `unsigned long`) | Shows all nodes.                                                                                                                                                                                                                                                                                                                                                                                                       |
+    | `NodeFilter.SHOW_ATTRIBUTE` {{deprecated_inline}}        | `2`                                             | Shows attribute {{ domxref("Attr") }} nodes. This is meaningful only when creating a {{ domxref("TreeWalker") }} with an {{ domxref("Attr") }} node as its root. In this case, it means that the attribute node will appear in the first position of the iteration or traversal. Since attributes are never children of other nodes, they do not appear when traversing over the document tree. |
+    | `NodeFilter.SHOW_CDATA_SECTION` {{deprecated_inline}}    | `8`                                             | Shows {{ domxref("CDATASection") }} nodes.                                                                                                                                                                                                                                                                                                                                                                  |
+    | `NodeFilter.SHOW_COMMENT`                                       | `128`                                           | Shows {{ domxref("Comment") }} nodes.                                                                                                                                                                                                                                                                                                                                                                          |
+    | `NodeFilter.SHOW_DOCUMENT`                                      | `256`                                           | Shows {{ domxref("Document") }} nodes.                                                                                                                                                                                                                                                                                                                                                                          |
+    | `NodeFilter.SHOW_DOCUMENT_FRAGMENT`                             | `1024`                                          | Shows {{ domxref("DocumentFragment") }} nodes.                                                                                                                                                                                                                                                                                                                                                              |
+    | `NodeFilter.SHOW_DOCUMENT_TYPE`                                 | `512`                                           | Shows {{ domxref("DocumentType") }} nodes.                                                                                                                                                                                                                                                                                                                                                                  |
+    | `NodeFilter.SHOW_ELEMENT`                                       | `1`                                             | Shows {{ domxref("Element") }} nodes.                                                                                                                                                                                                                                                                                                                                                                          |
+    | `NodeFilter.SHOW_ENTITY` {{deprecated_inline}}           | `32`                                            | Legacy, no more usable.                                                                                                                                                                                                                                                                                                                                                                                                |
+    | `NodeFilter.SHOW_ENTITY_REFERENCE` {{deprecated_inline}} | `16`                                            | Legacy, no more usable.                                                                                                                                                                                                                                                                                                                                                                                                |
+    | `NodeFilter.SHOW_NOTATION` {{deprecated_inline}}         | `2048`                                          | Legacy, no more usable.                                                                                                                                                                                                                                                                                                                                                                                                |
+    | `NodeFilter.SHOW_PROCESSING_INSTRUCTION`                        | `64`                                            | Shows {{ domxref("ProcessingInstruction") }} nodes.                                                                                                                                                                                                                                                                                                                                                      |
+    | `NodeFilter.SHOW_TEXT`                                          | `4`                                             | Shows {{ domxref("Text") }} nodes.                                                                                                                                                                                                                                                                                                                                                                              |
+
+- `filter` {{ optional_inline() }}
+  - : An object implementing the {{ domxref("NodeFilter") }} interface. Its
+    `acceptNode()` method will be called for each node in the subtree based at
     root which is accepted as included by the whatToShow flag to determine whether or not
     to include it in the list of iterable nodes (a simple callback function may also be
-    used instead). The method should return one of <code>NodeFilter.FILTER_ACCEPT</code>,
-    <code>NodeFilter.FILTER_REJECT</code>, or <code>NodeFilter.FILTER_SKIP</code>. See the
-    {{ anch("Example") }}.</dd>
-</dl>
+    used instead). The method should return one of `NodeFilter.FILTER_ACCEPT`,
+    `NodeFilter.FILTER_REJECT`, or `NodeFilter.FILTER_SKIP`. See the
+    {{ anch("Example") }}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">const nodeIterator = document.createNodeIterator(
+```js
+const nodeIterator = document.createNodeIterator(
     document.body,
     NodeFilter.SHOW_ELEMENT,
     {
@@ -139,12 +74,12 @@ let currentNode;
 while (currentNode = nodeIterator.nextNode()) {
   pars.push(currentNode);
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

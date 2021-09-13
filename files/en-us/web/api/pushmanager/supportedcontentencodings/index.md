@@ -2,34 +2,35 @@
 title: PushManager.supportedContentEncodings
 slug: Web/API/PushManager/supportedContentEncodings
 tags:
-- API
-- Experimental
-- Property
-- PushManager
-- Reference
-- Service Workers
-- supportedContentEncodings
+  - API
+  - Experimental
+  - Property
+  - PushManager
+  - Reference
+  - Service Workers
+  - supportedContentEncodings
 browser-compat: api.PushManager.supportedContentEncodings
 ---
-<p>{{SeeCompatTable}}{{APIRef("Push API")}}</p>
+{{SeeCompatTable}}{{APIRef("Push API")}}
 
-<p>The <strong><code>supportedContentEncodings</code></strong> read-only property of the
-  {{domxref("PushManager")}} interface returns an array of supported content codings that
-  can be used to encrypt the payload of a push message.</p>
+The **`supportedContentEncodings`** read-only property of the
+{{domxref("PushManager")}} interface returns an array of supported content codings that
+can be used to encrypt the payload of a push message.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>encodings</em>[] = PushManager.<em>supportedContentEncodings</em></pre>
+```js
+var encodings[] = PushManager.supportedContentEncodings
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An array of strings.</p>
+An array of strings.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

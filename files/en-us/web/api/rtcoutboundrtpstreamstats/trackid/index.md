@@ -2,51 +2,52 @@
 title: RTCOutboundRtpStreamStats.trackId
 slug: Web/API/RTCOutboundRtpStreamStats/trackId
 tags:
-- API
-- Audio
-- Media
-- MediaStreamTrack
-- Property
-- RTCOutboundRtpStreamStats
-- RTCRtpSender
-- RTP
-- Reference
-- Statistics
-- Stats
-- Video
-- WebRTC
-- WebRTC API
-- id
-- stream
-- track
-- trackId
+  - API
+  - Audio
+  - Media
+  - MediaStreamTrack
+  - Property
+  - RTCOutboundRtpStreamStats
+  - RTCRtpSender
+  - RTP
+  - Reference
+  - Statistics
+  - Stats
+  - Video
+  - WebRTC
+  - WebRTC API
+  - id
+  - stream
+  - track
+  - trackId
 browser-compat: api.RTCOutboundRtpStreamStats.trackId
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <strong><code>trackId</code></strong> property of the
-    {{domxref("RTCOutboundRtpStreamStats")}} dictionary indicates the
-    {{domxref("RTCStats.id", "id")}} of the
-    {{domxref("RTCSenderAudioTrackAttachmentStats")}} or
-    {{domxref("RTCSenderVideoTrackAttachmentStats")}} object representing the
-    {{domxref("MediaStreamTrack")}} which is being sent on this stream.</p>
+The **`trackId`** property of the
+{{domxref("RTCOutboundRtpStreamStats")}} dictionary indicates the
+{{domxref("RTCStats.id", "id")}} of the
+{{domxref("RTCSenderAudioTrackAttachmentStats")}} or
+{{domxref("RTCSenderVideoTrackAttachmentStats")}} object representing the
+{{domxref("MediaStreamTrack")}} which is being sent on this stream.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>trackStatsId</em> = <em>RTCOutboundRtpStreamStats</em>.trackId;</pre>
+```js
+var trackStatsId = RTCOutboundRtpStreamStats.trackId;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} containing the ID of the
-  {{domxref("RTCSenderAudioTrackAttachmentStats")}} or
-  {{domxref("RTCSenderVideoTrackAttachmentStats")}} object representing the track which is
-  the source of the media being sent on this stream.</p>
+A {{domxref("DOMString")}} containing the ID of the
+{{domxref("RTCSenderAudioTrackAttachmentStats")}} or
+{{domxref("RTCSenderVideoTrackAttachmentStats")}} object representing the track which is
+the source of the media being sent on this stream.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

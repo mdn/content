@@ -2,59 +2,57 @@
 title: 'Location: assign()'
 slug: Web/API/Location/assign
 tags:
-- API
-- HTML-DOM
-- Location
-- Method
-- Reference
+  - API
+  - HTML-DOM
+  - Location
+  - Method
+  - Reference
 browser-compat: api.Location.assign
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p>The <code><strong>Location.assign()</strong></code> method causes the window to load
-  and display the document at the URL specified. After the navigation occurs, the user can
-  navigate back to the page that called <code>Location.assign()</code> by pressing the
-  "back" button.</p>
+The **`Location.assign()`** method causes the window to load
+and display the document at the URL specified. After the navigation occurs, the user can
+navigate back to the page that called `Location.assign()` by pressing the
+"back" button.
 
-<p>If the assignment can't happen because of a security violation, a
-  {{domxref("DOMException")}} of the <code>SECURITY_ERROR</code> type is thrown. This
-  happens if the origin of the script calling the method is different from the origin of
-  the page originally described by the {{domxref("Location")}} object, mostly when the
-  script is hosted on a different domain.</p>
+If the assignment can't happen because of a security violation, a
+{{domxref("DOMException")}} of the `SECURITY_ERROR` type is thrown. This
+happens if the origin of the script calling the method is different from the origin of
+the page originally described by the {{domxref("Location")}} object, mostly when the
+script is hosted on a different domain.
 
-<p>If the provided URL is not valid, a {{domxref("DOMException")}} of the
-  <code>SYNTAX_ERROR</code> type is thrown.</p>
+If the provided URL is not valid, a {{domxref("DOMException")}} of the
+`SYNTAX_ERROR` type is thrown.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>location</em>.assign(<em>url</em>);
-</pre>
+```js
+location.assign(url);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>url</code></dt>
-  <dd>Is a {{domxref("DOMString")}} containing the URL of the page to navigate to.</dd>
-</dl>
+- `url`
+  - : Is a {{domxref("DOMString")}} containing the URL of the page to navigate to.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre
-  class="brush: js">// Navigate to the Location.reload article
-window.location.assign('https://developer.mozilla.org/en-US/docs/Web/API/Location/reload');</pre>
+```js
+// Navigate to the Location.reload article
+window.location.assign('https://developer.mozilla.org/en-US/docs/Web/API/Location/reload');
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("Location")}} interface it belongs to.</li>
-  <li>Similar methods: {{domxref("Location.replace()")}} and
-    {{domxref("Location.reload()")}}.</li>
-</ul>
+- The {{domxref("Location")}} interface it belongs to.
+- Similar methods: {{domxref("Location.replace()")}} and
+  {{domxref("Location.reload()")}}.

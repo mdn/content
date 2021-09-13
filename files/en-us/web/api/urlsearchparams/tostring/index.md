@@ -9,65 +9,62 @@ tags:
   - toString
 browser-compat: api.URLSearchParams.toString
 ---
-<p>{{ApiRef("URL API")}}</p>
+{{ApiRef("URL API")}}
 
-<p>The <strong><code>toString()</code></strong> method of the
-  {{domxref("URLSearchParams")}} interface returns a query string suitable for use in a
-  URL.</p>
+The **`toString()`** method of the
+{{domxref("URLSearchParams")}} interface returns a query string suitable for use in a
+URL.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This method returns the query string without the question
-    mark. This is different from <a
-      href="/en-US/docs/Web/API/HTMLAnchorElement/search">window.location.search</a>,
-    which includes it.</p>
-</div>
+> **Note:** This method returns the query string without the question
+> mark. This is different from [window.location.search](/en-US/docs/Web/API/HTMLAnchorElement/search),
+> which includes it.
 
-<p>{{availableinworkers}}</p>
+{{availableinworkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">URLSearchParams.toString()</pre>
+```js
+URLSearchParams.toString()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("DOMString")}}, without the question mark. (Returns an empty string if no
-  search parameters have been set.)</p>
+A {{domxref("DOMString")}}, without the question mark. (Returns an empty string if no
+search parameters have been set.)
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">let url = new URL('https://example.com?foo=1&amp;bar=2');
+```js
+let url = new URL('https://example.com?foo=1&bar=2');
 let params = new URLSearchParams(url.search.slice(1));
 
 //Add a second foo parameter.
 params.append('foo', 4);
 console.log(params.toString());
-//Prints 'foo=1&amp;bar=2&amp;foo=4'
+//Prints 'foo=1&bar=2&foo=4'
 
 // note: params can also be directly created
-let url = new URL('https://example.com?foo=1&amp;bar=2');
+let url = new URL('https://example.com?foo=1&bar=2');
 let params = url.searchParams;
 
 // or even simpler
-let params = new URLSearchParams('foo=1&amp;bar=2');
-</pre>
+let params = new URLSearchParams('foo=1&bar=2');
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("URL")}} interface.</li>
-  <li><a
-      href="https://developers.google.com/web/updates/2016/01/urlsearchparams?hl=en">Google
-      Developers: Easy URL manipulation with URLSearchParams</a></li>
-</ul>
+- The {{domxref("URL")}} interface.
+- [Google
+  Developers: Easy URL manipulation with URLSearchParams](https://developers.google.com/web/updates/2016/01/urlsearchparams?hl=en)

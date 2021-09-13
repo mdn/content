@@ -3,40 +3,37 @@ title: GlobalEventHandlers.onemptied
 slug: Web/API/GlobalEventHandlers/onemptied
 browser-compat: api.GlobalEventHandlers.onemptied
 ---
-<div>
-    <div>{{ ApiRef("HTML DOM") }}</div>
-</div>
+{{ ApiRef("HTML DOM") }}
 
-<p>The <code>onemptied</code> property sets and returns the <a
-        href="/en-US/docs/Web/Guide/Events/Event_handlers">event handler</a> for the
-    <code><a href="/en-US/docs/Web/API/HTMLMediaElement/emptied_event">emptied</a></code> event.</p>
+The `onemptied` property sets and returns the [event handler](/en-US/docs/Web/Guide/Events/Event_handlers) for the
+[`emptied`](/en-US/docs/Web/API/HTMLMediaElement/emptied_event) event.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em><var>element</var></em>.onemptied = <em>handlerFunction</em>;
-var <em>handlerFunction</em> = <em><var>element</var></em>.onemptied;
-</pre>
+```js
+element.onemptied = handlerFunction;
+var handlerFunction = element.onemptied;
+```
 
-<p><code><em>handlerFunction</em></code> should be either <code>null</code> or a <a
-        href="/en-US/docs/Web/JavaScript/Reference/Functions">JavaScript function</a>
-    specifying the handler for the event.</p>
+`handlerFunction` should be either `null` or a [JavaScript function](/en-US/docs/Web/JavaScript/Reference/Functions)
+specifying the handler for the event.
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>See the <a href="/en-US/docs/Web/Guide/Events/Event_handlers">DOM event handlers</a>
-    page for information on working with <code>on...</code> handlers.</p>
+See the [DOM event handlers](/en-US/docs/Web/Guide/Events/Event_handlers)
+page for information on working with `on...` handlers.
 
-<p>The <code>emptied</code> event is fired when the media has become empty; for example,
-    this event is sent if the media has already been loaded (or partially loaded), and the
-    <code>load()</code> method is called to reload it.</p>
+The `emptied` event is fired when the media has become empty; for example,
+this event is sent if the media has already been loaded (or partially loaded), and the
+`load()` method is called to reload it.
 
-<p>See the  <code><a href="/en-US/docs/Web/API/HTMLMediaElement/emptied_event">emptied</a></code> event
-    documentation for more information about the event.</p>
+See the  [`emptied`](/en-US/docs/Web/API/HTMLMediaElement/emptied_event) event
+documentation for more information about the event.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

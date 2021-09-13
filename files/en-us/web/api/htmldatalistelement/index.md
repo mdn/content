@@ -8,35 +8,31 @@ tags:
   - Reference
 browser-compat: api.HTMLDataListElement
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLDataListElement</code></strong> interface provides special properties (beyond the {{domxref("HTMLElement")}} object interface it also has available to it by inheritance) to manipulate {{ HTMLElement("datalist") }} elements and their content.</p>
+The **`HTMLDataListElement`** interface provides special properties (beyond the {{domxref("HTMLElement")}} object interface it also has available to it by inheritance) to manipulate {{ HTMLElement("datalist") }} elements and their content.
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{domxref("HTMLElement")}} </em></p>
+_Inherits properties from its parent, {{domxref("HTMLElement")}}_
 
-<dl>
- <dt>{{domxref("HTMLDataListElement.options")}} {{readonlyInline}}</dt>
- <dd>Is a {{domxref("HTMLCollection")}} representing a collection of the contained option elements.</dd>
-</dl>
+- {{domxref("HTMLDataListElement.options")}} {{readonlyInline}}
+  - : Is a {{domxref("HTMLCollection")}} representing a collection of the contained option elements.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}.</em></p>
+_No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The HTML element implementing this interface: {{ HTMLElement("datalist") }}</li>
-</ul>
+- The HTML element implementing this interface: {{ HTMLElement("datalist") }}

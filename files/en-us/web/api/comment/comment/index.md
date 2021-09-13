@@ -8,37 +8,36 @@ tags:
   - DOM
 browser-compat: api.Comment.Comment
 ---
-<p>{{ApiRef("DOM")}}{{SeeCompatTable}}</p>
+{{ApiRef("DOM")}}{{SeeCompatTable}}
 
-<p>The <code><strong>Comment()</strong></code> constructor returns a newly created
-  {{domxref("Comment")}} object with the optional {{domxref("DOMString")}} given in
-  parameter as its textual content.</p>
+The **`Comment()`** constructor returns a newly created
+{{domxref("Comment")}} object with the optional {{domxref("DOMString")}} given in
+parameter as its textual content.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">comment1 = new Comment(); // Create an empty comment
-comment2 = new Comment(&quot;This is a comment&quot;);
-</pre>
+```js
+comment1 = new Comment(); // Create an empty comment
+comment2 = new Comment("This is a comment");
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js ">var comment = new Comment("Test");</pre>
+```js
+var comment = new Comment("Test");
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<div class="note">
-  <p><strong>Note:</strong> For browsers where this constructor is not supported,
-    {{domxref("Document.createComment()")}} may be suitable.</p>
-</div>
+> **Note:** For browsers where this constructor is not supported,
+> {{domxref("Document.createComment()")}} may be suitable.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</a></li>
-</ul>
+- [The DOM interfaces index](/en-US/docs/Web/API/Document_Object_Model)

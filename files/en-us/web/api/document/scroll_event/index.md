@@ -11,44 +11,45 @@ tags:
   - UIEvent
 browser-compat: api.Document.scroll_event
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p>The <strong><code>scroll</code></strong> event fires when the document view has been scrolled. For element scrolling, see {{domxref("Element/scroll_event", "Element:&nbsp;scroll&nbsp;event")}}.</p>
+The **`scroll`** event fires when the document view has been scrolled. For element scrolling, see {{domxref("Element/scroll_event", "Element:&nbsp;scroll&nbsp;event")}}.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th>Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th>Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th>Interface</th>
-   <td>{{DOMxRef("Event")}}</td>
-  </tr>
-  <tr>
-   <th>Event handler property</th>
-   <td>{{DOMxRef("GlobalEventHandlers.onscroll", "onscroll")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Interface</th>
+      <td>{{DOMxRef("Event")}}</td>
+    </tr>
+    <tr>
+      <th>Event handler property</th>
+      <td>
+        {{DOMxRef("GlobalEventHandlers.onscroll", "onscroll")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<div class="notecard note">
-<p><strong>Note:</strong> In iOS UIWebViews, <code>scroll</code> events are not fired while scrolling is taking place; they are only fired after the scrolling has completed. See <a href="https://github.com/twbs/bootstrap/issues/16202">Bootstrap issue #16202</a>. Safari and WKWebViews are not affected by this bug.</p>
-</div>
+> **Note:** In iOS UIWebViews, `scroll` events are not fired while scrolling is taking place; they are only fired after the scrolling has completed. See [Bootstrap issue #16202](https://github.com/twbs/bootstrap/issues/16202). Safari and WKWebViews are not affected by this bug.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Scroll_event_throttling">Scroll event throttling</h3>
+### Scroll event throttling
 
-<p>Since <code>scroll</code> events can fire at a high rate, the event handler shouldn't execute computationally expensive operations such as DOM modifications. Instead, it is recommended to throttle the event using {{DOMxRef("Window.requestAnimationFrame()", "requestAnimationFrame()")}}, {{DOMxRef("setTimeout()")}}, or a {{DOMxRef("CustomEvent")}}, as follows.</p>
+Since `scroll` events can fire at a high rate, the event handler shouldn't execute computationally expensive operations such as DOM modifications. Instead, it is recommended to throttle the event using {{DOMxRef("Window.requestAnimationFrame()", "requestAnimationFrame()")}}, {{DOMxRef("setTimeout()")}}, or a {{DOMxRef("CustomEvent")}}, as follows.
 
-<p>Note, however, that input events and animation frames are fired at about the same rate, and therefore the optimization below is often unnecessary. This example optimizes the<code>scroll</code> event for <code>requestAnimationFrame</code>.</p>
+Note, however, that input events and animation frames are fired at about the same rate, and therefore the optimization below is often unnecessary. This example optimizes the`scroll` event for `requestAnimationFrame`.
 
-<pre class="brush: js">// Reference: http://www.html5rocks.com/en/tutorials/speed/animations/
+```js
+// Reference: http://www.html5rocks.com/en/tutorials/speed/animations/
 
 let lastKnownScrollPosition = 0;
 let ticking = false;
@@ -68,20 +69,19 @@ document.addEventListener('scroll', function(e) {
 
     ticking = true;
   }
-});</pre>
+});
+```
 
-<p>See more, similar examples on the <code><a href="/en-US/docs/Web/API/Window/resize_event">resize</a></code> event page.</p>
+See more, similar examples on the [`resize`](/en-US/docs/Web/API/Window/resize_event) event page.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Element/scroll_event">Element: <code>scroll</code> event</a></li>
-</ul>
+- [Element: `scroll` event](/en-US/docs/Web/API/Element/scroll_event)

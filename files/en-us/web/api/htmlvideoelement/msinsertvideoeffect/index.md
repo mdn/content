@@ -2,52 +2,49 @@
 title: HTMLVideoElement.msInsertVideoEffect()
 slug: Web/API/HTMLVideoElement/msInsertVideoEffect
 tags:
-- API
-- 'API:Microsoft Extensions'
-- Method
-- Non-standard
-- Reference
-- msInsertVideoEffect
+  - API
+  - API:Microsoft Extensions
+  - Method
+  - Non-standard
+  - Reference
+  - msInsertVideoEffect
 ---
-<div>{{APIRef("HTML DOM")}}{{Non-standard_Header}}</div>
+{{APIRef("HTML DOM")}}{{Non-standard_Header}}
 
-<p>The <strong><code>HTMLMediaElement.msInsertVideoEffect()</code></strong> method inserts
-  the specified video effect into the media pipeline.</p>
+The **`HTMLMediaElement.msInsertVideoEffect()`** method inserts
+the specified video effect into the media pipeline.
 
-<p>This proprietary method is specific to Internet Explorer and Microsoft Edge.</p>
+This proprietary method is specific to Internet Explorer and Microsoft Edge.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>str</em> = <em>HTMLMediaElement</em>.msInsertVideoEffect(<em>activatableClassId</em>: {{DOMxRef("DOMString")}}, <em>effectRequired</em>: {{JSxRef("Boolean", "boolean")}}<em>, config</em>);
-</pre>
+```js
+str = HTMLMediaElement.msInsertVideoEffect(activatableClassId: {{DOMxRef("DOMString")}}, effectRequired: {{JSxRef("Boolean", "boolean")}}, config);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>activatableClassId</dt>
-  <dd>A {{DOMxRef("DOMString")}} defining the video effects class.</dd>
-  <dt>effectRequired</dt>
-  <dd>A {{JSxRef("Boolean")}}<a href="/en-US/docs/Glossary/Boolean"> </a>which if set to
-    <em>true</em> requires a video effect to be defined.</dd>
-  <dt>config{{Optional_Inline}}</dt>
-  <dd>An optional {{JSxRef("Object")}} to help with defining any additional configuration
-    needed.</dd>
-</dl>
+- activatableClassId
+  - : A {{DOMxRef("DOMString")}} defining the video effects class.
+- effectRequired
+  - : A {{JSxRef("Boolean")}}[ ](/en-US/docs/Glossary/Boolean)which if set to
+    _true_ requires a video effect to be defined.
+- config{{Optional_Inline}}
+  - : An optional {{JSxRef("Object")}} to help with defining any additional configuration
+    needed.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>This method does not return a value.</p>
+This method does not return a value.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var oVideo1 = document.getElementById("video1");
+```js
+var oVideo1 = document.getElementById("video1");
 oVideo1.msInsertVideoEffect("Windows.Media.VideoEffects.VideoStabilization", true, null);
-</pre>
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{DOMxRef("HTMLVideoElement")}}</li>
-  <li><a href="/en-US/docs/Web/API/Microsoft_API_extensions">Microsoft API extensions </a>
-  </li>
-</ul>
+- {{DOMxRef("HTMLVideoElement")}}
+- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_API_extensions)

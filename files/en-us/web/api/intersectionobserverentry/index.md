@@ -10,39 +10,37 @@ tags:
   - Reference
 browser-compat: api.IntersectionObserverEntry
 ---
-<div>{{APIRef("Intersection Observer API")}}</div>
+{{APIRef("Intersection Observer API")}}
 
-<p>The <code><strong>IntersectionObserverEntry</strong></code> interface of the <a href="/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer API</a> describes the intersection between the target element and its root container at a specific moment of transition.</p>
+The **`IntersectionObserverEntry`** interface of the [Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API) describes the intersection between the target element and its root container at a specific moment of transition.
 
-<p>Instances of <code>IntersectionObserverEntry</code> are delivered to an {{domxref("IntersectionObserver")}} callback in its <code>entries</code> parameter; otherwise, these objects can only be obtained by calling {{domxref("IntersectionObserver.takeRecords()")}}.</p>
+Instances of `IntersectionObserverEntry` are delivered to an {{domxref("IntersectionObserver")}} callback in its `entries` parameter; otherwise, these objects can only be obtained by calling {{domxref("IntersectionObserver.takeRecords()")}}.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("IntersectionObserverEntry.boundingClientRect")}} {{readonlyinline}}</dt>
- <dd>Returns the bounds rectangle of the target element as a {{domxref("DOMRectReadOnly")}}. The bounds are computed as described in the documentation for {{domxref("Element.getBoundingClientRect()")}}.</dd>
- <dt>{{domxref("IntersectionObserverEntry.intersectionRatio")}} {{readonlyinline}}</dt>
- <dd>Returns the ratio of the <code>intersectionRect</code> to the <code>boundingClientRect</code>.</dd>
- <dt>{{domxref("IntersectionObserverEntry.intersectionRect")}} {{readonlyinline}}</dt>
- <dd>Returns a {{domxref("DOMRectReadOnly")}} representing the target's visible area.</dd>
- <dt>{{domxref("IntersectionObserverEntry.isIntersecting")}} {{ReadOnlyInline}}</dt>
- <dd>A Boolean value which is <code>true</code> if the target element intersects with the intersection observer's root. If this is <code>true</code>, then, the <code>IntersectionObserverEntry</code> describes a transition into a state of intersection; if it's <code>false</code>, then you know the transition is from intersecting to not-intersecting.</dd>
- <dt>{{domxref("IntersectionObserverEntry.rootBounds")}} {{readonlyinline}}</dt>
- <dd>Returns a {{domxref("DOMRectReadOnly")}} for the intersection observer's root.</dd>
- <dt>{{domxref("IntersectionObserverEntry.target")}} {{ReadOnlyInline}}</dt>
- <dd>The {{domxref("Element")}} whose intersection with the root changed.</dd>
- <dt>{{domxref("IntersectionObserverEntry.time")}} {{readonlyinline}}</dt>
- <dd>A {{domxref("DOMHighResTimeStamp")}} indicating the time at which the intersection was recorded, relative to the <code>IntersectionObserver</code>'s <a href="/en-US/docs/Web/API/DOMHighResTimeStamp#the_time_origin">time origin</a>.</dd>
-</dl>
+- {{domxref("IntersectionObserverEntry.boundingClientRect")}} {{readonlyinline}}
+  - : Returns the bounds rectangle of the target element as a {{domxref("DOMRectReadOnly")}}. The bounds are computed as described in the documentation for {{domxref("Element.getBoundingClientRect()")}}.
+- {{domxref("IntersectionObserverEntry.intersectionRatio")}} {{readonlyinline}}
+  - : Returns the ratio of the `intersectionRect` to the `boundingClientRect`.
+- {{domxref("IntersectionObserverEntry.intersectionRect")}} {{readonlyinline}}
+  - : Returns a {{domxref("DOMRectReadOnly")}} representing the target's visible area.
+- {{domxref("IntersectionObserverEntry.isIntersecting")}} {{ReadOnlyInline}}
+  - : A Boolean value which is `true` if the target element intersects with the intersection observer's root. If this is `true`, then, the `IntersectionObserverEntry` describes a transition into a state of intersection; if it's `false`, then you know the transition is from intersecting to not-intersecting.
+- {{domxref("IntersectionObserverEntry.rootBounds")}} {{readonlyinline}}
+  - : Returns a {{domxref("DOMRectReadOnly")}} for the intersection observer's root.
+- {{domxref("IntersectionObserverEntry.target")}} {{ReadOnlyInline}}
+  - : The {{domxref("Element")}} whose intersection with the root changed.
+- {{domxref("IntersectionObserverEntry.time")}} {{readonlyinline}}
+  - : A {{domxref("DOMHighResTimeStamp")}} indicating the time at which the intersection was recorded, relative to the `IntersectionObserver`'s [time origin](/en-US/docs/Web/API/DOMHighResTimeStamp#the_time_origin).
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface has no methods.</em></p>
+_This interface has no methods._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

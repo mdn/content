@@ -9,75 +9,79 @@ tags:
   - Reference
 browser-compat: api.HTMLElement.pointermove_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code>pointermove</code> event is fired when a pointer changes coordinates, and the pointer has not been <a href="/en-US/docs/Web/API/HTMLElement/pointercancel_event">canceled</a> by a browser <a href="/en-US/docs/Web/CSS/touch-action">touch-action</a>.</p>
+The `pointermove` event is fired when a pointer changes coordinates, and the pointer has not been [canceled](/en-US/docs/Web/API/HTMLElement/pointercancel_event) by a browser [touch-action](/en-US/docs/Web/CSS/touch-action).
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("PointerEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("GlobalEventHandlers/onpointermove", "onpointermove")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("PointerEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{domxref("GlobalEventHandlers/onpointermove", "onpointermove")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>The event, which is of type {{domxref("PointerEvent")}}, provides all the information you need to know about the user's interaction with the pointing device, including the position, movement distance, button states, and much more.</p>
+The event, which is of type {{domxref("PointerEvent")}}, provides all the information you need to know about the user's interaction with the pointing device, including the position, movement distance, button states, and much more.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>To add a handler for <code>pointermove</code> events using {{domxref("EventTarget.addEventListener", "addEventListener()")}}:</p>
+To add a handler for `pointermove` events using {{domxref("EventTarget.addEventListener", "addEventListener()")}}:
 
-<pre class="brush: js">const para = document.querySelector('p');
+```js
+const para = document.querySelector('p');
 
-para.addEventListener('pointermove', (event) =&gt; {
+para.addEventListener('pointermove', (event) => {
   console.log('Pointer moved');
-});</pre>
+});
+```
 
-<p>You can also use the <code>onpointermove</code> event handler property:</p>
+You can also use the `onpointermove` event handler property:
 
-<pre class="brush: js">const para = document.querySelector('p');
+```js
+const para = document.querySelector('p');
 
-para.onpointermove = (event) =&gt; {
+para.onpointermove = (event) => {
   console.log('Pointer moved');
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><code><a href="/en-US/docs/Web/API/HTMLElement/gotpointercapture_event">gotpointercapture</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/HTMLElement/lostpointercapture_event">lostpointercapture</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/HTMLElement/pointerover_event">pointerover</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/HTMLElement/pointerenter_event">pointerenter</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/HTMLElement/pointerdown_event">pointerdown</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/HTMLElement/pointerup_event">pointerup</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/HTMLElement/pointercancel_event">pointercancel</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/HTMLElement/pointerout_event">pointerout</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/HTMLElement/pointerleave_event">pointerleave</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onpointermove">onpointermove</a></code> event handler property</li>
- <li>This event on <code>Document</code> targets: <code><a href="/en-US/docs/Web/API/Document/pointermove_event">pointermove</a></code> event</li>
-</ul>
+- [`gotpointercapture`](/en-US/docs/Web/API/HTMLElement/gotpointercapture_event)
+- [`lostpointercapture`](/en-US/docs/Web/API/HTMLElement/lostpointercapture_event)
+- [`pointerover`](/en-US/docs/Web/API/HTMLElement/pointerover_event)
+- [`pointerenter`](/en-US/docs/Web/API/HTMLElement/pointerenter_event)
+- [`pointerdown`](/en-US/docs/Web/API/HTMLElement/pointerdown_event)
+- [`pointerup`](/en-US/docs/Web/API/HTMLElement/pointerup_event)
+- [`pointercancel`](/en-US/docs/Web/API/HTMLElement/pointercancel_event)
+- [`pointerout`](/en-US/docs/Web/API/HTMLElement/pointerout_event)
+- [`pointerleave`](/en-US/docs/Web/API/HTMLElement/pointerleave_event)
+- [`onpointermove`](/en-US/docs/Web/API/GlobalEventHandlers/onpointermove) event handler property
+- This event on `Document` targets: [`pointermove`](/en-US/docs/Web/API/Document/pointermove_event) event
 
-<p>Internet Explorer also used to support an event named <code>MSPointerHover</code>, which fired when a contact (normally a pen) moves over an element without touching the surface. This proprietary method is specific to Internet Explorer and, as of Internet Explorer 11, has been deprecated. Starting with IE11 the <code><a href="/en-US/docs/Web/API/HTMLElement/pointermove_event">pointermove</a></code> event will fire for all pen movement (regardless if its hovering or not).</p>
+Internet Explorer also used to support an event named `MSPointerHover`, which fired when a contact (normally a pen) moves over an element without touching the surface. This proprietary method is specific to Internet Explorer and, as of Internet Explorer 11, has been deprecated. Starting with IE11 the [`pointermove`](/en-US/docs/Web/API/HTMLElement/pointermove_event) event will fire for all pen movement (regardless if its hovering or not).

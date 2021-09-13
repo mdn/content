@@ -2,37 +2,36 @@
 title: PushSubscription.subscriptionId
 slug: Web/API/PushSubscription/subscriptionId
 tags:
-- API
-- Deprecated
-- Experimental
-- Property
-- Push
-- Push API
-- PushSubscription
-- Reference
-- Service Workers
-- subscriptionId
+  - API
+  - Deprecated
+  - Experimental
+  - Property
+  - Push
+  - Push API
+  - PushSubscription
+  - Reference
+  - Service Workers
+  - subscriptionId
 browser-compat: api.PushSubscription.subscriptionId
 ---
-<div>{{APIRef("Push API")}}{{Deprecated_header}}</div>
+{{APIRef("Push API")}}{{Deprecated_header}}
 
-<p>The <code><strong>subscriptionId</strong></code> read-only property of the
-  {{domxref("PushSubscription")}} interface returns a {{domxref("DOMString")}} containing
-  the subscription ID associated with the push subscription.</p>
+The **`subscriptionId`** read-only property of the
+{{domxref("PushSubscription")}} interface returns a {{domxref("DOMString")}} containing
+the subscription ID associated with the push subscription.
 
-<div class="notecard warning">
-  <p><strong>Warning:</strong> Instead of this feature, use the {{domxref("PushSubscription.endPoint")}} property on the same interface.</p>
-</div>
+> **Warning:** Instead of this feature, use the {{domxref("PushSubscription.endPoint")}} property on the same interface.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>subId</em> = <em>pushSubscription</em>.subscriptionId;</pre>
+```js
+var subId = pushSubscription.subscriptionId;
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This feature was removed from the <a href="https://w3c.github.io/push-api/#pushsubscription-interface">Push API</a> specification. It is no longer on track to become a standard.</p>
+This feature was removed from the [Push API](https://w3c.github.io/push-api/#pushsubscription-interface) specification. It is no longer on track to become a standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

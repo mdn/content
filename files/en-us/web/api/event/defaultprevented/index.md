@@ -9,31 +9,36 @@ tags:
   - Read-only
 browser-compat: api.Event.defaultPrevented
 ---
-<div>{{ APIRef("DOM") }}</div>
+{{ APIRef("DOM") }}
 
-<p>The <code><strong>defaultPrevented</strong></code> read-only property of the {{domxref("Event")}} interface returns a boolean value indicating whether or not the call to {{ domxref("Event.preventDefault()") }} canceled the event.</p>
+The **`defaultPrevented`** read-only property of the {{domxref("Event")}} interface returns a boolean value indicating whether or not the call to {{ domxref("Event.preventDefault()") }} canceled the event.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>defaultWasPrevented</em> = <em>event</em>.defaultPrevented;</pre>
+```js
+var defaultWasPrevented = event.defaultPrevented;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A boolean value, where <code>true</code> indicates that the default {{glossary("user agent")}} action was prevented, and <code>false</code> indicates that it was not.</p>
+A boolean value, where `true` indicates that the default {{glossary("user agent")}} action was prevented, and `false` indicates that it was not.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example logs attempts to visit links from two {{htmlElement("a")}} elements. JavaScript is used to prevent the second link from working.</p>
+This example logs attempts to visit links from two {{htmlElement("a")}} elements. JavaScript is used to prevent the second link from working.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;&lt;a id="link1" href="#link1"&gt;Visit link 1&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a id="link2" href="#link2"&gt;Try to visit link 2&lt;/a&gt; (you can't)&lt;/p&gt;
-&lt;p id="log"&gt;&lt;/p&gt;</pre>
+```html
+<p><a id="link1" href="#link1">Visit link 1</a></p>
+<p><a id="link2" href="#link2">Try to visit link 2</a> (you can't)</p>
+<p id="log"></p>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">function stopLink(event) {
+```js
+function stopLink(event) {
   event.preventDefault();
 }
 
@@ -52,16 +57,17 @@ function logClick(event) {
 
 const a = document.getElementById('link2');
 a.addEventListener('click', stopLink);
-document.addEventListener('click', logClick);</pre>
+document.addEventListener('click', logClick);
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

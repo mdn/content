@@ -2,40 +2,41 @@
 title: CSSRule.parentStyleSheet
 slug: Web/API/CSSRule/parentStyleSheet
 tags:
-- API
-- CSSOM
-- CSSRule
-- Property
-- Reference
+  - API
+  - CSSOM
+  - CSSRule
+  - Property
+  - Reference
 browser-compat: api.CSSRule.parentStyleSheet
 ---
-<div>{{ APIRef("CSSOM") }}</div>
+{{ APIRef("CSSOM") }}
 
-<p>The <code><strong>parentStyleSheet</strong></code> property of the
-  {{domxref("CSSRule")}} interface returns the {{domxref("StyleSheet")}} object in which
-  the current rule is defined.</p>
+The **`parentStyleSheet`** property of the
+{{domxref("CSSRule")}} interface returns the {{domxref("StyleSheet")}} object in which
+the current rule is defined.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>stylesheet</em> = cssRule.parentStyleSheet</pre>
+```js
+var stylesheet = cssRule.parentStyleSheet
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
-  <dt><code>stylesheet</code></dt>
-  <dd>A {{domxref("StyleSheet")}} object.</dd>
-</dl>
+- `stylesheet`
+  - : A {{domxref("StyleSheet")}} object.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
-console.log(myRules.parentStyleSheet);</pre>
+```js
+let myRules = document.styleSheets[0].cssRules;
+console.log(myRules.parentStyleSheet);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

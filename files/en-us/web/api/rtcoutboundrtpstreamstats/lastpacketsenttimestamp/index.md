@@ -2,49 +2,47 @@
 title: RTCOutboundRtpStreamStats.lastPacketSentTimestamp
 slug: Web/API/RTCOutboundRtpStreamStats/lastPacketSentTimestamp
 tags:
-- API
-- Packet
-- Property
-- RTCOutboundRtpStreamStats
-- RTCRtpSender
-- RTP
-- Reference
-- Statistics
-- Stats
-- WebRTC
-- WebRTC API
-- lastPacketSentTImestamp
-- timeStamp
+  - API
+  - Packet
+  - Property
+  - RTCOutboundRtpStreamStats
+  - RTCRtpSender
+  - RTP
+  - Reference
+  - Statistics
+  - Stats
+  - WebRTC
+  - WebRTC API
+  - lastPacketSentTImestamp
+  - timeStamp
 browser-compat: api.RTCOutboundRtpStreamStats.lastPacketSentTimestamp
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <strong><code>lastPacketSentTimestamp</code></strong>
-    property of the {{domxref("RTCOutboundRtpStreamStats")}} dictionary indicates the time
-    at which the {{domxref("RTCRtpSender")}} described by this
-    {{domxref("RTCOutboundRtpStreamStats")}} object last transmitted a packet to the
-    remote receiver.</p>
+The **`lastPacketSentTimestamp`**
+property of the {{domxref("RTCOutboundRtpStreamStats")}} dictionary indicates the time
+at which the {{domxref("RTCRtpSender")}} described by this
+{{domxref("RTCOutboundRtpStreamStats")}} object last transmitted a packet to the
+remote receiver.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>lastPacketTimestamp</em> = <em>RTCOutboundRtpStreamStats</em>.lastPacketSentTimestamp;</pre>
+```js
+var lastPacketTimestamp = RTCOutboundRtpStreamStats.lastPacketSentTimestamp;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMHighResTimeStamp")}} which specifies the time at which the most
-  recently received packet arrived on this RTP stream.</p>
+A {{domxref("DOMHighResTimeStamp")}} which specifies the time at which the most
+recently received packet arrived on this RTP stream.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This value differs from the {{domxref("RTCStats.timestamp",
+> **Note:** This value differs from the {{domxref("RTCStats.timestamp",
     "timestamp")}}, which represents the time at which the statistics object was created.
-  </p>
-</div>
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

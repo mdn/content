@@ -8,44 +8,41 @@ tags:
   - DecompressionStream
 browser-compat: api.DecompressionStream.DecompressionStream
 ---
-<div>{{DefaultAPISidebar("Compression Streams API")}}</div>
+{{DefaultAPISidebar("Compression Streams API")}}
 
-<p>The <strong><code>DecompressionStream()</code></strong> constructor creates a new {{domxref("DecompressionStream")}} object which decompresses a stream of data.</p>
+The **`DecompressionStream()`** constructor creates a new {{domxref("DecompressionStream")}} object which decompresses a stream of data.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">let DecompressionStream = new DecompressionStream(format);</pre>
+    let DecompressionStream = new DecompressionStream(format);
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>format</code></dt>
-  <dd>One of the following compression formats:
-    <ul>
-      <li><code>"gzip"</code></li>
-      <li><code>"deflate"</code></li>
-    </ul>
-  </dd>
-</dl>
+- `format`
 
-<h2 id="Exceptions">Exceptions</h2>
+  - : One of the following compression formats:
 
-<dl>
-  <dt>{{jsxref("TypeError")}}</dt>
-  <dd>Thrown if the format passed to the constructor is not supported.</dd>
-</dl>
+    - `"gzip"`
+    - `"deflate"`
 
-<h2 id="Examples">Examples</h2>
+## Exceptions
 
-<p>In this example a blob is decompressed using gzip compression.</p>
+- {{jsxref("TypeError")}}
+  - : Thrown if the format passed to the constructor is not supported.
 
-<pre class="brush: js">const ds = new DecompressionStream('gzip');
-const decompressedStream = blob.stream().pipeThrough(ds);</pre>
+## Examples
 
-<h2 id="Specifications">Specifications</h2>
+In this example a blob is decompressed using gzip compression.
+
+```js
+const ds = new DecompressionStream('gzip');
+const decompressedStream = blob.stream().pipeThrough(ds);
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

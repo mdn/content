@@ -9,55 +9,52 @@ tags:
   - Reference
 browser-compat: api.Element.msContentZoom_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}{{Non-standard_header}}
 
-<div>{{Non-standard_header}}</div>
+The **`msContentZoom`** event fires when a user zooms the element (changes the scale of the content).
 
-<p>The <code><strong>msContentZoom</strong></code> event fires when a user zooms the element (changes the scale of the content).</p>
+It is a proprietary event specific to Microsoft Edge and Internet Explorer.
 
-<p>It is a proprietary event specific to Microsoft Edge and Internet Explorer.</p>
-
-<p>Zoomed elements can expose their zoom level through <code>msContentZoom</code> (ie. scrollTop/Left). The zoom level can be reset with {{DOMxRef("Element.msZoomTo()")}}.</p>
+Zoomed elements can expose their zoom level through `msContentZoom` (ie. scrollTop/Left). The zoom level can be reset with {{DOMxRef("Element.msZoomTo()")}}.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>Unknown</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>Unknown</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>Unknown</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>Unknown</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>Unknown</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>Unknown</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>Unknown</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>Unknown</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">  contentZoom.addEventListener("MSContentZoom", function(e) {
+```js
+  contentZoom.addEventListener("MSContentZoom", function(e) {
      zoomFactor.value = contentZoom.msContentZoomFactor.toFixed(2);
   });
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any specification.</p>
+Not part of any specification.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/CSSStyleDeclaration">CSS Style Declaration</a></li>
- <li><a href="/en-US/docs/Web/API/Microsoft_Extensions">Microsoft API extensions </a></li>
-</ul>
+- [CSS Style Declaration](/en-US/docs/Web/API/CSSStyleDeclaration)
+- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_Extensions)

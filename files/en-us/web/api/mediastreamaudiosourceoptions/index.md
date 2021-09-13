@@ -17,23 +17,21 @@ tags:
   - stream
 browser-compat: api.MediaStreamAudioSourceOptions
 ---
-<div>{{APIRef("Web Audio API")}}</div>
+{{APIRef("Web Audio API")}}
 
-<p>The <code><strong>MediaStreamAudioSourceOptions</strong></code> dictionary provides configuration options used when creating a {{domxref("MediaStreamAudioSourceNode")}} using its constructor.</p>
+The **`MediaStreamAudioSourceOptions`** dictionary provides configuration options used when creating a {{domxref("MediaStreamAudioSourceNode")}} using its constructor.
 
-<p>It is not needed when using the {{domxref("AudioContext.createMediaStreamSource()")}} method.</p>
+It is not needed when using the {{domxref("AudioContext.createMediaStreamSource()")}} method.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("MediaStreamAudioSourceOptions.mediaStream", "mediaStream")}}</dt>
- <dd>A required property which specifies the {{domxref("MediaStream")}} from which to obtain audio for the node.</dd>
-</dl>
+- {{domxref("MediaStreamAudioSourceOptions.mediaStream", "mediaStream")}}
+  - : A required property which specifies the {{domxref("MediaStream")}} from which to obtain audio for the node.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

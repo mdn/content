@@ -9,58 +9,62 @@ tags:
   - Window
 browser-compat: api.Window.languagechange_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <strong><code>languagechange</code></strong> event is fired at the global scope object when the user's preferred language changes.</p>
+The **`languagechange`** event is fired at the global scope object when the user's preferred language changes.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler</th>
-   <td>{{domxref("WindowEventHandlers/onlanguagechange", "onlanguagechange")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler</th>
+      <td>
+        {{domxref("WindowEventHandlers/onlanguagechange", "onlanguagechange")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>You can use the <code>languagechange</code> event in an {{domxref("EventTarget/addEventListener", "addEventListener")}} method:</p>
+You can use the `languagechange` event in an {{domxref("EventTarget/addEventListener", "addEventListener")}} method:
 
-<pre class="brush: js">window.addEventListener('languagechange', function() {
+```js
+window.addEventListener('languagechange', function() {
   console.log('languagechange event detected!');
-});</pre>
+});
+```
 
-<p>Or use the <code><a href="/en-US/docs/Web/API/WindowEventHandlers/onlanguagechange">onlanguagechange</a></code> event handler property:</p>
+Or use the [`onlanguagechange`](/en-US/docs/Web/API/WindowEventHandlers/onlanguagechange) event handler property:
 
-<pre class="brush: js">window.onlanguagechange = function(event) {
+```js
+window.onlanguagechange = function(event) {
   console.log('languagechange event detected!');
-};</pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("navigator.language")}}</li>
- <li>{{domxref("navigator.languages")}}</li>
- <li>{{domxref("navigator")}}</li>
- <li>{{domxref("WindowEventHandlers.onlanguagechange")}}</li>
-</ul>
+- {{domxref("navigator.language")}}
+- {{domxref("navigator.languages")}}
+- {{domxref("navigator")}}
+- {{domxref("WindowEventHandlers.onlanguagechange")}}

@@ -11,52 +11,51 @@ tags:
   - Storage
 browser-compat: api.indexedDB
 ---
-<div>{{ APIRef() }}</div>
+{{ APIRef() }}
 
-<p>The global <strong><code>indexedDB</code></strong> read-only property provides a mechanism for applications to
-  asynchronously access the capabilities of indexed databases.</p>
+The global **`indexedDB`** read-only property provides a mechanism for applications to
+asynchronously access the capabilities of indexed databases.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>IDBFactory</em> = self.indexedDB;</pre>
+```js
+var IDBFactory = self.indexedDB;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("IDBFactory")}} object.</p>
+An {{domxref("IDBFactory")}} object.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following code creates a request for a database to be opened asynchronously, after
-  which the database is opened when the request's <code>onsuccess</code> handler is fired:
-</p>
+The following code creates a request for a database to be opened asynchronously, after
+which the database is opened when the request's `onsuccess` handler is fired:
 
-<pre class="brush: js;">var db;
+```js
+var db;
 function openDB() {
  var DBOpenRequest = window.indexedDB.open('toDoList');
  DBOpenRequest.onsuccess = function(e) {
    db = DBOpenRequest.result;
  }
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
-  <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
-  <li>Using transactions: {{domxref("IDBTransaction")}}</li>
-  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
-  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
-  <li>Using cursors: {{domxref("IDBCursor")}}</li>
-  <li>Reference example: <a class="external"
-      href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
-      Notifications</a> (<a class="external"
-      href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do
+  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

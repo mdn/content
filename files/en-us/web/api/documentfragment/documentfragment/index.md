@@ -9,31 +9,31 @@ tags:
   - Experimental
 browser-compat: api.DocumentFragment.DocumentFragment
 ---
-<div>{{ApiRef("DOM")}}{{SeeCompatTable}}</div>
+{{ApiRef("DOM")}}{{SeeCompatTable}}
 
-<p>The <code><strong>DocumentFragment()</strong></code> constructor returns a new, empty
-  {{domxref("DocumentFragment")}} object .</p>
+The **`DocumentFragment()`** constructor returns a new, empty
+{{domxref("DocumentFragment")}} object .
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>fragment</em> = new DocumentFragment()</pre>
+```js
+fragment = new DocumentFragment()
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre
-  class="brush: js ">let fragment = new DocumentFragment();</pre>
+```js
+let fragment = new DocumentFragment();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</a></li>
-</ul>
+- [The DOM interfaces index](/en-US/docs/Web/API/Document_Object_Model)

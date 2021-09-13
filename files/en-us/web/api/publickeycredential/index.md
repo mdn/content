@@ -11,43 +11,38 @@ tags:
   - WebAuthn
 browser-compat: api.PublicKeyCredential
 ---
-<div>{{APIRef("Web Authentication API")}}{{securecontext_header}}</div>
+{{APIRef("Web Authentication API")}}{{securecontext_header}}
 
-<p>The <code><strong>PublicKeyCredential</strong></code> interface provides information about a public key / private key pair, which is a credential for logging in to a service using an un-phishable and data-breach resistant asymmetric key pair instead of a password. It inherits from {{domxref("Credential")}}, and was created by the <a href="/en-US/docs/Web/API/Web_Authentication_API">Web Authentication API</a> extension to the <a href="/en-US/docs/Web/API/Credential_Management_API">Credential Management API</a>. Other interfaces that inherit from {{domxref("Credential")}} are {{domxref("PasswordCredential")}} and {{domxref("FederatedCredential")}}.</p>
+The **`PublicKeyCredential`** interface provides information about a public key / private key pair, which is a credential for logging in to a service using an un-phishable and data-breach resistant asymmetric key pair instead of a password. It inherits from {{domxref("Credential")}}, and was created by the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) extension to the [Credential Management API](/en-US/docs/Web/API/Credential_Management_API). Other interfaces that inherit from {{domxref("Credential")}} are {{domxref("PasswordCredential")}} and {{domxref("FederatedCredential")}}.
 
-<div class="note">
-<p><strong>Note:</strong> This API is restricted to top-level contexts. Use from within an {{HTMLElement("iframe")}} element will not have any effect.</p>
-</div>
+> **Note:** This API is restricted to top-level contexts. Use from within an {{HTMLElement("iframe")}} element will not have any effect.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt><code>PublicKeyCredential.type</code> {{ReadOnlyInline()}}{{securecontext_inline}}</dt>
- <dd>Inherited from {{domxref("Credential")}}. Always set to <code>public-key</code> for <code>PublicKeyCredential</code> instances.</dd>
- <dt>{{domxref("PublicKeyCredential.id")}} {{ReadOnlyInline()}}{{securecontext_inline}}</dt>
- <dd>Inherited from {{domxref("Credential")}} and overridden to be the <a href="/en-US/docs/Glossary/Base64">base64url encoding</a> of {{domxref("PublicKeyCredential.rawId")}}.</dd>
- <dt>{{domxref("PublicKeyCredential.rawId")}} {{ReadOnlyInline()}}{{securecontext_inline}}</dt>
- <dd>An {{jsxref("ArrayBuffer")}} that holds the globally unique identifier for this <code>PublicKeyCredential</code>. This identifier can be used to look up credentials for future calls to {{domxref("CredentialsContainer.get")}}.</dd>
- <dt>{{domxref("PublicKeyCredential.response")}} {{ReadOnlyInline()}} {{securecontext_inline}}</dt>
- <dd>An instance of an {{domxref("AuthenticatorResponse")}} object. It is either of type {{domxref("AuthenticatorAttestationResponse")}} if the <code>PublicKeyCredential</code> was the results of a {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} call, or of type {{domxref("AuthenticatorAssertionResponse")}} if the <code>PublicKeyCredential</code> was the result of a {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}} call.</dd>
-</dl>
+- `PublicKeyCredential.type` {{ReadOnlyInline()}}{{securecontext_inline}}
+  - : Inherited from {{domxref("Credential")}}. Always set to `public-key` for `PublicKeyCredential` instances.
+- {{domxref("PublicKeyCredential.id")}} {{ReadOnlyInline()}}{{securecontext_inline}}
+  - : Inherited from {{domxref("Credential")}} and overridden to be the [base64url encoding](/en-US/docs/Glossary/Base64) of {{domxref("PublicKeyCredential.rawId")}}.
+- {{domxref("PublicKeyCredential.rawId")}} {{ReadOnlyInline()}}{{securecontext_inline}}
+  - : An {{jsxref("ArrayBuffer")}} that holds the globally unique identifier for this `PublicKeyCredential`. This identifier can be used to look up credentials for future calls to {{domxref("CredentialsContainer.get")}}.
+- {{domxref("PublicKeyCredential.response")}} {{ReadOnlyInline()}} {{securecontext_inline}}
+  - : An instance of an {{domxref("AuthenticatorResponse")}} object. It is either of type {{domxref("AuthenticatorAttestationResponse")}} if the `PublicKeyCredential` was the results of a {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} call, or of type {{domxref("AuthenticatorAssertionResponse")}} if the `PublicKeyCredential` was the result of a {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}} call.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("PublicKeyCredential.getClientExtensionResults()")}}{{securecontext_inline}}</dt>
- <dd>If any extensions were requested, this method will return the results of processing those extensions.</dd>
- <dt>{{domxref("PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()")}}{{securecontext_inline}}</dt>
- <dd>A static method returning a {{jsxref("Promise")}} which resolves to <code>true</code> if an authenticator bound to the platform is capable of <em>verifying</em> the user.</dd>
-</dl>
+- {{domxref("PublicKeyCredential.getClientExtensionResults()")}}{{securecontext_inline}}
+  - : If any extensions were requested, this method will return the results of processing those extensions.
+- {{domxref("PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()")}}{{securecontext_inline}}
+  - : A static method returning a {{jsxref("Promise")}} which resolves to `true` if an authenticator bound to the platform is capable of _verifying_ the user.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Creating_a_new_instance_of_PublicKeyCredential">Creating a new instance of PublicKeyCredential</h3>
+### Creating a new instance of PublicKeyCredential
 
-<p>Here, we use {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} to generate a new credential.</p>
+Here, we use {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} to generate a new credential.
 
-<pre class="brush: js">var publicKey = {
+```js
+var publicKey = {
   challenge: /* from the server */,
   rp: {
     name: "Example CORP",
@@ -72,13 +67,15 @@ navigator.credentials.create({ publicKey })
     var clientExtensionsResults = newCredentialInfo.getClientExtensionResults();
   }).catch(function (err) {
      console.error(err);
-  });</pre>
+  });
+```
 
-<h3 id="Getting_an_existing_instance_of_PublicKeyCredential">Getting an existing instance of PublicKeyCredential</h3>
+### Getting an existing instance of PublicKeyCredential
 
-<p>Here, we fetch an existing credential from an authenticator, using {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}}.</p>
+Here, we fetch an existing credential from an authenticator, using {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}}.
 
-<pre class="brush: js">var options = {
+```js
+var options = {
   challenge: new Uint8Array([/* bytes sent from the server */])
 };
 
@@ -89,19 +86,16 @@ navigator.credentials.get({ "publicKey": options })
 }).catch(function (err) {
      console.error(err);
 });
+```
 
-</pre>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The parent interface {{domxref("Credential")}}</li>
-</ul>
+- The parent interface {{domxref("Credential")}}

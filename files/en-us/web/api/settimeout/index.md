@@ -15,65 +15,65 @@ tags:
   - Polyfill
 browser-compat: api.setTimeout
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The global <strong><code>setTimeout()</code></strong> method sets a timer which executes a function or specified
-  piece of code once the timer expires.</p>
+The global **`setTimeout()`** method sets a timer which executes a function or specified
+piece of code once the timer expires.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <var>timeoutID</var> = setTimeout(<var>function</var>[, <var>delay</var>, <var>arg1</var>, <var>arg2</var>, ...]);
-var <var>timeoutID</var> = setTimeout(<var>function</var>[, <var>delay</var>]);
-var <var>timeoutID</var> = setTimeout(<var>code</var>[, <var>delay</var>]);
-</pre>
+```js
+var timeoutID = setTimeout(function[, delay, arg1, arg2, ...]);
+var timeoutID = setTimeout(function[, delay]);
+var timeoutID = setTimeout(code[, delay]);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>function</var></code></dt>
-  <dd>A {{jsxref("function")}} to be executed after the timer expires.</dd>
-  <dt><code><var>code</var></code></dt>
-  <dd>An alternative syntax that allows you to include a string instead of a function,
-    which is compiled and executed when the timer expires. This syntax is <strong>not
-      recommended</strong> for the same reasons that make using
-    {{jsxref("Global_Objects/eval", "eval()")}} a security risk.</dd>
-  <dt><code><var>delay</var></code> {{optional_inline}}</dt>
-  <dd>The time, in milliseconds that the timer should wait before
+- `function`
+  - : A {{jsxref("function")}} to be executed after the timer expires.
+- `code`
+  - : An alternative syntax that allows you to include a string instead of a function,
+    which is compiled and executed when the timer expires. This syntax is **not
+    recommended** for the same reasons that make using
+    {{jsxref("Global_Objects/eval", "eval()")}} a security risk.
+- `delay` {{optional_inline}}
+  - : The time, in milliseconds that the timer should wait before
     the specified function or code is executed. If this parameter is omitted, a value of 0
     is used, meaning execute "immediately", or more accurately, the next event cycle. Note
     that in either case, the actual delay may be longer than intended; see
-    {{anch("Reasons_for_delays", "Reasons for delays longer than specified")}} below.</dd>
-  <dt><code><var>arg1</var>, ..., <var>argN</var></code> {{optional_inline}}</dt>
-  <dd>Additional arguments which are passed through to the function specified by
-    <code><var>function</var></code>.</dd>
-</dl>
+    {{anch("Reasons_for_delays", "Reasons for delays longer than specified")}} below.
+- `arg1, ..., argN` {{optional_inline}}
+  - : Additional arguments which are passed through to the function specified by
+    `function`.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The returned <code><var>timeoutID</var></code> is a positive integer value which
-  identifies the timer created by the call to <code>setTimeout()</code>. This value can be
-  passed to {{domxref("clearTimeout","clearTimeout()")}} to
-  cancel the timeout.</p>
+The returned `timeoutID` is a positive integer value which
+identifies the timer created by the call to `setTimeout()`. This value can be
+passed to {{domxref("clearTimeout","clearTimeout()")}} to
+cancel the timeout.
 
-<p>It is guaranteed that a <code><var>timeoutID</var></code> value will never be reused by a subsequent call to
-  <code>setTimeout()</code> or <code>setInterval()</code> on the same object (a window or
-  a worker). However, different objects use separate pools of IDs.</p>
+It is guaranteed that a `timeoutID` value will never be reused by a subsequent call to
+`setTimeout()` or `setInterval()` on the same object (a window or
+a worker). However, different objects use separate pools of IDs.
 
-<h2>Description</h2>
+## Description
 
-<p>Timeouts are cancelled using
-  {{domxref("clearTimeout()")}}.</p>
+Timeouts are cancelled using
+{{domxref("clearTimeout()")}}.
 
-<p>To call a function repeatedly (e.g., every <em>N</em> milliseconds), consider using
-  {{domxref("setInterval()")}}.</p>
+To call a function repeatedly (e.g., every _N_ milliseconds), consider using
+{{domxref("setInterval()")}}.
 
-<h3 id="asynchronous">Working with asynchronous functions</h3>
+### Working with asynchronous functions
 
-<p><code>setTimeout()</code> is an asynchronous function, meaning that the timer function will not pause execution of other functions in the functions stack.
-  In other words, you cannot use <code>setTimeout()</code> to create a "pause" before the next function in the function stack fires.</p>
+`setTimeout()` is an asynchronous function, meaning that the timer function will not pause execution of other functions in the functions stack.
+In other words, you cannot use `setTimeout()` to create a "pause" before the next function in the function stack fires.
 
-<p>See the following example:</p>
-  <pre class="brush: js">
+See the following example:
+
+```js
   setTimeout(() => {console.log("this is the first message")}, 5000);
   setTimeout(() => {console.log("this is the second message")}, 3000);
   setTimeout(() => {console.log("this is the third message")}, 1000);
@@ -83,130 +83,138 @@ var <var>timeoutID</var> = setTimeout(<var>code</var>[, <var>delay</var>]);
   // this is the third message
   // this is the second message
   // this is the first message
-</pre>
+```
 
-<p>Notice that the first function does not create a 5-second "pause" before calling the second function. Instead, the first function is called, but waits 5 seconds to
-  execute. While the first function is waiting to execute, the second function is called, and a 3-second wait is applied to the second function before it executes. Since neither
-  the first nor the second function's timers have completed, the third function is called and completes its execution first. Then the second follows. Then finally the first function
-  is executed after its timer finally completes.
+Notice that the first function does not create a 5-second "pause" before calling the second function. Instead, the first function is called, but waits 5 seconds to
+execute. While the first function is waiting to execute, the second function is called, and a 3-second wait is applied to the second function before it executes. Since neither
+the first nor the second function's timers have completed, the third function is called and completes its execution first. Then the second follows. Then finally the first function
+is executed after its timer finally completes.
 
-  <p>To create a progression in which one function only fires after the completion of another function, see the documentation on <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a>.
+To create a progression in which one function only fires after the completion of another function, see the documentation on [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h3 id="The_this_problem">The "this" problem</h3>
+### The "this" problem
 
-<p>When you pass a method to <code>setTimeout()</code>, it will be invoked with a <code>this</code> value that may differ from your
-  expectation. The general issue is explained in detail in the <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/this#as_an_object_method">JavaScript
-    reference</a>.</p>
+When you pass a method to `setTimeout()`, it will be invoked with a `this` value that may differ from your
+expectation. The general issue is explained in detail in the [JavaScript
+reference](/en-US/docs/Web/JavaScript/Reference/Operators/this#as_an_object_method).
 
-<p>Code executed by <code>setTimeout()</code> is called from an execution context separate
-  from the function from which <code>setTimeout</code> was called. The usual rules for
-  setting the <code>this</code> keyword for the called function apply, and if you have not
-  set <code>this</code> in the call or with <code>bind</code>, it will default to
-  the <code>window</code> (or <code>global</code>) object. It will not be the same as the
-  <code>this</code> value for the function that called <code>setTimeout</code>.</p>
+Code executed by `setTimeout()` is called from an execution context separate
+from the function from which `setTimeout` was called. The usual rules for
+setting the `this` keyword for the called function apply, and if you have not
+set `this` in the call or with `bind`, it will default to
+the `window` (or `global`) object. It will not be the same as the
+`this` value for the function that called `setTimeout`.
 
-<p>See the following example:</p>
+See the following example:
 
-<pre class="brush: js">const myArray = ['zero', 'one', 'two'];
+```js
+const myArray = ['zero', 'one', 'two'];
 myArray.myMethod = function (sProperty) {
-  console.log(arguments.length &gt; 0 ? this[sProperty] : this);
+  console.log(arguments.length > 0 ? this[sProperty] : this);
 };
 
 myArray.myMethod(); // prints "zero,one,two"
-myArray.myMethod(1); // prints "one"</pre>
+myArray.myMethod(1); // prints "one"
+```
 
-<p>The above works because when <code>myMethod</code> is called, its <code>this</code> is
-  set to <code>myArray</code> by the call, so within the function,
-  <code>this[sProperty]</code> is equivalent to <code>myArray[sProperty]</code>. However,
-  in the following:</p>
+The above works because when `myMethod` is called, its `this` is
+set to `myArray` by the call, so within the function,
+`this[sProperty]` is equivalent to `myArray[sProperty]`. However,
+in the following:
 
-<pre
-  class="brush: js">setTimeout(myArray.myMethod, 1.0*1000); // prints "[object Window]" after 1 second
-setTimeout(myArray.myMethod, 1.5*1000, '1'); // prints "undefined" after 1.5 seconds</pre>
+```js
+setTimeout(myArray.myMethod, 1.0*1000); // prints "[object Window]" after 1 second
+setTimeout(myArray.myMethod, 1.5*1000, '1'); // prints "undefined" after 1.5 seconds
+```
 
-<p>The <code>myArray.myMethod</code> function is passed to <code>setTimeout</code>, then
-  when it's called, its <code>this</code> is not set so it defaults to the
-  <code>window</code> object.</p>
+The `myArray.myMethod` function is passed to `setTimeout`, then
+when it's called, its `this` is not set so it defaults to the
+`window` object.
 
-<p>There's also no option to pass a <code>thisArg</code> to
-  <code>setTimeout</code> as there is in Array methods such as {{jsxref("Array.forEach()", "forEach()")}} and {{jsxref("Array.reduce()", "reduce()")}}. As shown below,
-  using <code>call</code> to set <code>this</code> doesn't work either.</p>
+There's also no option to pass a `thisArg` to
+`setTimeout` as there is in Array methods such as {{jsxref("Array.forEach()", "forEach()")}} and {{jsxref("Array.reduce()", "reduce()")}}. As shown below,
+using `call` to set `this` doesn't work either.
 
-<pre class="brush: js">setTimeout.call(myArray, myArray.myMethod, 2.0*1000); // error
+```js
+setTimeout.call(myArray, myArray.myMethod, 2.0*1000); // error
 setTimeout.call(myArray, myArray.myMethod, 2.5*1000, 2); // same error
-</pre>
+```
 
-<h4 id="solutions">Solutions</h4>
+#### Solutions
 
-<h5>Use a wrapper function</h5>
+##### Use a wrapper function
 
-<p>A common way to solve the problem is to use a wrapper function that sets
-  <code>this</code> to the required value:</p>
+A common way to solve the problem is to use a wrapper function that sets
+`this` to the required value:
 
-<pre
-  class="brush: js">setTimeout(function(){myArray.myMethod()}, 2.0*1000); // prints "zero,one,two" after 2 seconds
-setTimeout(function(){myArray.myMethod('1')}, 2.5*1000); // prints "one" after 2.5 seconds</pre>
+```js
+setTimeout(function(){myArray.myMethod()}, 2.0*1000); // prints "zero,one,two" after 2 seconds
+setTimeout(function(){myArray.myMethod('1')}, 2.5*1000); // prints "one" after 2.5 seconds
+```
 
-<p>The wrapper function can be an arrow function:</p>
+The wrapper function can be an arrow function:
 
-<pre
-  class="brush: js">setTimeout(() =&gt; {myArray.myMethod()}, 2.0*1000); // prints "zero,one,two" after 2 seconds
-setTimeout(() =&gt; {myArray.myMethod('1')}, 2.5*1000); // prints "one" after 2.5 seconds</pre>
+```js
+setTimeout(() => {myArray.myMethod()}, 2.0*1000); // prints "zero,one,two" after 2 seconds
+setTimeout(() => {myArray.myMethod('1')}, 2.5*1000); // prints "one" after 2.5 seconds
+```
 
-<h5>Use bind()</h5>
+##### Use bind()
 
-<p>Alternatively, you can use {{jsxref("Function.bind()", "bind()")}} to set the value of <code>this</code> for all calls to a given function:</p>
+Alternatively, you can use {{jsxref("Function.bind()", "bind()")}} to set the value of `this` for all calls to a given function:
 
-<pre class="brush: js">const myArray = ['zero', 'one', 'two'];
+```js
+const myArray = ['zero', 'one', 'two'];
 const myBoundMethod = (function (sProperty) {
-    console.log(arguments.length &gt; 0 ? this[sProperty] : this);
+    console.log(arguments.length > 0 ? this[sProperty] : this);
 }).bind(myArray);
 
 myBoundMethod(); // prints "zero,one,two" because 'this' is bound to myArray in the function
 myBoundMethod(1); // prints "one"
 setTimeout(myBoundMethod, 1.0*1000); // still prints "zero,one,two" after 1 second because of the binding
 setTimeout(myBoundMethod, 1.5*1000, "1"); // prints "one" after 1.5 seconds
-</pre>
+```
 
-<h3 id="Passing_string_literals">Passing string literals</h3>
+### Passing string literals
 
-<p>Passing a string instead of a function to <code>setTimeout()</code> has the same problems as using
-  <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval">eval()</a></code>.
-</p>
+Passing a string instead of a function to `setTimeout()` has the same problems as using
+[`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval).
 
-<pre class="brush: js example-bad">// Don't do this
+```js example-bad
+// Don't do this
 setTimeout("console.log('Hello World!');", 500);
-</pre>
+```
 
-<pre class="brush: js example-good">// Do this instead
+```js example-good
+// Do this instead
 setTimeout(function() {
   console.log('Hello World!');
 }, 500);
-</pre>
+```
 
-<p>A string passed to <code>{{domxref("setTimeout()")}}</code> is evaluated in the global context, so local symbols in the context where <code>{{domxref("setTimeout()")}}</code> was called will not be available when the string is evaluated as code.</p>
+A string passed to `{{domxref("setTimeout()")}}` is evaluated in the global context, so local symbols in the context where `{{domxref("setTimeout()")}}` was called will not be available when the string is evaluated as code.
 
-<h3 id="Reasons_for_delays">Reasons for delays longer than specified</h3>
+### Reasons for delays longer than specified
 
-<p>There are a number of reasons why a timeout may take longer to fire than anticipated.
-  This section describes the most common reasons.</p>
+There are a number of reasons why a timeout may take longer to fire than anticipated.
+This section describes the most common reasons.
 
-<h4 id="Nested_timeouts">Nested timeouts</h4>
+#### Nested timeouts
 
-<p>As specified in the <a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#timers">HTML standard</a>,
-browsers will enforce a minimum timeout of 4 milliseconds once a nested call to <code>setTimeout</code> has been scheduled 5 times.</p>
+As specified in the [HTML standard](https://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#timers),
+browsers will enforce a minimum timeout of 4 milliseconds once a nested call to `setTimeout` has been scheduled 5 times.
 
-<p>This can be seen in the following example, in which we nest a call to <code>setTimeout</code> with a delay of <code>0</code> milliseconds,
+This can be seen in the following example, in which we nest a call to `setTimeout` with a delay of `0` milliseconds,
 and log the delay each time the handler is called. The first four times, the delay is approximately 0 milliseconds, and after that it is
-approximately 4 milliseconds:</p>
+approximately 4 milliseconds:
 
-<pre class="brush: html">&lt;button id="run"&gt;Run&lt;/button&gt;
-&lt;pre&gt;previous    this    actual delay&lt;/pre&gt;
-&lt;div id="log"&gt;&lt;/div&gt;
-</pre>
+```html
+<button id="run">Run</button>
+<pre>previous    this    actual delay</pre>
+<div id="log"></div>
+```
 
-<pre class="brush: js">
+```js
 let last = 0;
 let iterations = 10;
 
@@ -248,100 +256,99 @@ function logline(now) {
 }
 
 document.querySelector("#run").addEventListener("click", run);
-</pre>
+```
 
-<p>{{EmbedLiveSample("Nested_timeouts", 100, 420)}}</p>
+{{EmbedLiveSample("Nested_timeouts", 100, 420)}}
 
-<h4 id="Timeouts_in_inactive_tabs">Timeouts in inactive tabs</h4>
+#### Timeouts in inactive tabs
 
-<p>To reduce the load (and associated battery usage) from background tabs, browsers will enforce
-  a minimum timeout delay in inactive tabs. It may also be waived if a page is playing sound
-  using a Web Audio API {{domxref("AudioContext")}}.</p>
+To reduce the load (and associated battery usage) from background tabs, browsers will enforce
+a minimum timeout delay in inactive tabs. It may also be waived if a page is playing sound
+using a Web Audio API {{domxref("AudioContext")}}.
 
-<p>The specifics of this are browser-dependent:</p>
+The specifics of this are browser-dependent:
 
-<ul>
-  <li>Firefox Desktop and Chrome both have a minimum timeout of 1 second for inactive tabs.</li>
-  <li>Firefox for Android has a minimum timeout of 15 minutes for inactive tabs and may unload them entirely.</li>
-  <li>Firefox does not throttle inactive tabs if the tab contains an {{domxref("AudioContext")}}.</li>
-</ul>
+- Firefox Desktop and Chrome both have a minimum timeout of 1 second for inactive tabs.
+- Firefox for Android has a minimum timeout of 15 minutes for inactive tabs and may unload them entirely.
+- Firefox does not throttle inactive tabs if the tab contains an {{domxref("AudioContext")}}.
 
-<h4 id="Throttling_of_tracking_scripts">Throttling of tracking scripts</h4>
+#### Throttling of tracking scripts
 
-<p>Firefox enforces additional throttling for scripts that it recognises as tracking scripts.
-  When running in the foreground, the throttling minimum delay is still 4ms. In background tabs, however,
-  the throttling minimum delay is 10,000 ms, or 10 seconds, which comes into effect 30 seconds after a
-  document has first loaded.</p>
+Firefox enforces additional throttling for scripts that it recognises as tracking scripts.
+When running in the foreground, the throttling minimum delay is still 4ms. In background tabs, however,
+the throttling minimum delay is 10,000 ms, or 10 seconds, which comes into effect 30 seconds after a
+document has first loaded.
 
-<p>See <a href="https://wiki.mozilla.org/Security/Tracking_protection">Tracking Protection</a> for
-  more details.</p>
+See [Tracking Protection](https://wiki.mozilla.org/Security/Tracking_protection) for
+more details.
 
-<h4 id="Late_timeouts">Late timeouts</h4>
+#### Late timeouts
 
-<p>The timeout can also fire later than expected if the page (or the OS/browser) is busy with other tasks.
-  One important case to note is that the function or code snippet cannot be executed until
-  the thread that called <code>setTimeout()</code> has terminated. For example:</p>
+The timeout can also fire later than expected if the page (or the OS/browser) is busy with other tasks.
+One important case to note is that the function or code snippet cannot be executed until
+the thread that called `setTimeout()` has terminated. For example:
 
-<pre class="brush: js">function foo() {
+```js
+function foo() {
   console.log('foo has been called');
 }
 setTimeout(foo, 0);
-console.log('After setTimeout');</pre>
+console.log('After setTimeout');
+```
 
-<p>Will write to the console:</p>
+Will write to the console:
 
-<pre>After setTimeout
-foo has been called</pre>
+    After setTimeout
+    foo has been called
 
-<p>This is because even though <code>setTimeout</code> was called with a delay of zero,
-  it's placed on a queue and scheduled to run at the next opportunity; not immediately.
-  Currently-executing code must complete before functions on the queue are executed, thus
-  the resulting execution order may not be as expected.</p>
+This is because even though `setTimeout` was called with a delay of zero,
+it's placed on a queue and scheduled to run at the next opportunity; not immediately.
+Currently-executing code must complete before functions on the queue are executed, thus
+the resulting execution order may not be as expected.
 
-<h4 id="Deferral_of_timeouts_during_pageload">Deferral of timeouts during pageload</h4>
+#### Deferral of timeouts during pageload
 
-<p>Firefox will defer firing <code>setTimeout()</code> timers
-  while the current tab is loading. Firing is deferred until the main thread is deemed
-  idle (similar to <a
-    href="/en-US/docs/Web/API/Window/requestIdleCallback">window.requestIdleCallback()</a>),
-  or until the load event is fired.</p>
+Firefox will defer firing `setTimeout()` timers
+while the current tab is loading. Firing is deferred until the main thread is deemed
+idle (similar to [window.requestIdleCallback()](/en-US/docs/Web/API/Window/requestIdleCallback)),
+or until the load event is fired.
 
-<h3 id="WebExtension_background_pages_and_timers">WebExtension background pages and timers
-</h3>
+### WebExtension background pages and timers
 
-<p>In <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a>, <code>setTimeout()</code>
-  does not work reliably. Extension authors should use the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/alarms"><code>alarms</code></a>
-  API instead.</p>
+In [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions), `setTimeout()`
+does not work reliably. Extension authors should use the [`alarms`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/alarms)
+API instead.
 
-<h3 id="Maximum_delay_value">Maximum delay value</h3>
+### Maximum delay value
 
-<p>Browsers including Internet Explorer, Chrome, Safari, and Firefox store the delay as a
-  32-bit signed integer internally. This causes an integer overflow when using delays
-  larger than 2,147,483,647 ms (about 24.8 days), resulting in the timeout being executed
-  immediately.</p>
+Browsers including Internet Explorer, Chrome, Safari, and Firefox store the delay as a
+32-bit signed integer internally. This causes an integer overflow when using delays
+larger than 2,147,483,647 ms (about 24.8 days), resulting in the timeout being executed
+immediately.
 
-<h2 id="Example">Examples</h2>
+## Examples
 
-<h3 id="Setting_and_clearing_timeouts">Setting and clearing timeouts</h3>
+### Setting and clearing timeouts
 
-<p>The following example sets up two simple buttons in a web page and hooks them to the
-  <code>setTimeout()</code> and <code>clearTimeout()</code> routines. Pressing the first
-  button will set a timeout which shows a message after two seconds and stores the
-  timeout id for use by <code>clearTimeout()</code>. You may optionally cancel this
-  timeout by pressing on the second button.</p>
+The following example sets up two simple buttons in a web page and hooks them to the
+`setTimeout()` and `clearTimeout()` routines. Pressing the first
+button will set a timeout which shows a message after two seconds and stores the
+timeout id for use by `clearTimeout()`. You may optionally cancel this
+timeout by pressing on the second button.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">
-&lt;button onclick="delayedMessage();"&gt;Show an message after two seconds&lt;/button&gt;
-&lt;button onclick="clearMessage();"&gt;Cancel message before it happens&lt;/button&gt;
+```html
+<button onclick="delayedMessage();">Show an message after two seconds</button>
+<button onclick="clearMessage();">Cancel message before it happens</button>
 
-&lt;div id="output"&gt;&lt;/div&gt;
-</pre>
+<div id="output"></div>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">let timeoutID;
+```js
+let timeoutID;
 
 function setOutput(outputContent) {
   document.querySelector('#output').textContent = outputContent;
@@ -355,36 +362,33 @@ function delayedMessage() {
 function clearMessage() {
   clearTimeout(timeoutID);
 }
-</pre>
+```
 
-<pre class="brush: css hidden">
+```css hidden
 #output {
   padding: .5rem 0;
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Setting_and_clearing_timeouts')}}</p>
+{{EmbedLiveSample('Setting_and_clearing_timeouts')}}
 
-<p>See also the <a
-    href="/en-US/docs/Web/API/clearTimeout#example"><code>clearTimeout()</code>
-    example</a>.</p>
+See also the [`clearTimeout()`
+example](/en-US/docs/Web/API/clearTimeout#example).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>A polyfill of <code>setTimeout</code> which allows passing arguments to the callback is available in <a href="https://github.com/zloirock/core-js#settimeout-and-setinterval"><code>core-js</code></a></li>
-  <li>{{domxref("clearTimeout")}}</li>
-  <li>{{domxref("setInterval()")}}</li>
-  <li>{{domxref("window.requestAnimationFrame")}}</li>
-  <li>{{domxref("queueMicrotask()")}}</li>
-</ul>
+- A polyfill of `setTimeout` which allows passing arguments to the callback is available in [`core-js`](https://github.com/zloirock/core-js#settimeout-and-setinterval)
+- {{domxref("clearTimeout")}}
+- {{domxref("setInterval()")}}
+- {{domxref("window.requestAnimationFrame")}}
+- {{domxref("queueMicrotask()")}}

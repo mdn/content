@@ -11,42 +11,44 @@ tags:
   - ElementInternals
 browser-compat: api.ElementInternals.ariaAtomic
 ---
-<div>{{DefaultAPISidebar("DOM")}}</div>
+{{DefaultAPISidebar("DOM")}}
 
-<p>The <strong><code>ariaAtomic</code></strong> property of the {{domxref("ElementInternals")}} interface reflects the value of the <code>aria-atomic</code> attribute, which indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the <code>aria-relevant</code> attribute.</p>
+The **`ariaAtomic`** property of the {{domxref("ElementInternals")}} interface reflects the value of the `aria-atomic` attribute, which indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the `aria-relevant` attribute.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Setting aria attributes on <code>ElementInternals</code> allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the <a href="https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object">Accessibility Object Model explainer</a>.</p>
-</div>
+> **Note:** Setting aria attributes on `ElementInternals` allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the [Accessibility Object Model explainer](https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let ariaAtomic = ElementInternals.ariaAtomic;
-ElementInternals.ariaAtomic = ariaAtomic;</pre>
+```js
+let ariaAtomic = ElementInternals.ariaAtomic;
+ElementInternals.ariaAtomic = ariaAtomic;
+```
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString")}} with one of the following values:</p>
-<dl>
-  <dt><code>"false"</code></dt>
-  <dd>Assistive technologies will present only the changed node or nodes.</dd>
-  <dt><code>"true"</code></dt>
-  <dd>Assistive technologies will present the entire changed region as a whole, including the author-defined label if one exists.</dd>
-</dl>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("DOMString")}} with one of the following values:
 
-<p>In this example the value of <code>ariaAtomic</code> is set to "true" in the constructor for a custom element .</p>
+- `"false"`
+  - : Assistive technologies will present only the changed node or nodes.
+- `"true"`
+  - : Assistive technologies will present the entire changed region as a whole, including the author-defined label if one exists.
 
-<pre class="brush: js">constructor() {
+## Examples
+
+In this example the value of `ariaAtomic` is set to "true" in the constructor for a custom element .
+
+```js
+constructor() {
   super();
   this.internals_ = this.attachInternals();
   this.internals_.ariaAtomic = "true";
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

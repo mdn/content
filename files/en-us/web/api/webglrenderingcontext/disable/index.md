@@ -2,135 +2,77 @@
 title: WebGLRenderingContext.disable()
 slug: Web/API/WebGLRenderingContext/disable
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.disable
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.disable()</code></strong> method of the <a
-    href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> disables specific WebGL
-  capabilities for this context.</p>
+The **`WebGLRenderingContext.disable()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) disables specific WebGL
+capabilities for this context.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <var>gl</var>.disable(<var>cap</var>);
-</pre>
+```js
+void gl.disable(cap);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>cap</code></dt>
-  <dd>
-    <p>A {{domxref("WebGL_API/Types", "GLenum")}} specifying which WebGL capability to disable. Possible
-    values:</p>
-    <table class="standard-table">
-      <thead>
-        <tr>
-          <th scope="col">Constant</th>
-          <th scope="col">Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code>gl.BLEND</code></td>
-          <td>Deactivates blending of the computed fragment color values. See
-            {{domxref("WebGLRenderingContext.blendFunc()")}}.</td>
-        </tr>
-        <tr>
-          <td><code>gl.CULL_FACE</code></td>
-          <td>Deactivates culling of polygons. See
-            {{domxref("WebGLRenderingContext.cullFace()")}}.</td>
-        </tr>
-        <tr>
-          <td><code>gl.DEPTH_TEST</code></td>
-          <td>Deactivates depth comparisons and updates to the depth buffer. See
-            {{domxref("WebGLRenderingContext.depthFunc()")}}.</td>
-        </tr>
-        <tr>
-          <td><code>gl.DITHER</code></td>
-          <td>Deactivates dithering of color components before they get written to the
-            color buffer.</td>
-        </tr>
-        <tr>
-          <td><code>gl.POLYGON_OFFSET_FILL</code></td>
-          <td>Deactivates adding an offset to depth values of polygon's fragments. See
-            {{domxref("WebGLRenderingContext.polygonOffset()")}}.</td>
-        </tr>
-        <tr>
-          <td><code>gl.SAMPLE_ALPHA_TO_COVERAGE</code></td>
-          <td>Deactivates the computation of a temporary coverage value determined by the
-            alpha value.</td>
-        </tr>
-        <tr>
-          <td><code>gl.SAMPLE_COVERAGE</code></td>
-          <td>Deactivates ANDing the fragment's coverage with the temporary coverage
-            value. See {{domxref("WebGLRenderingContext.sampleCoverage()")}}.</td>
-        </tr>
-        <tr>
-          <td><code>gl.SCISSOR_TEST</code></td>
-          <td>Deactivates the scissor test that discards fragments that are outside of the
-            scissor rectangle. See {{domxref("WebGLRenderingContext.scissor()")}}.</td>
-        </tr>
-        <tr>
-          <td><code>gl.STENCIL_TEST</code></td>
-          <td>Deactivates stencil testing and updates to the stencil buffer. See
-            {{domxref("WebGLRenderingContext.stencilFunc()")}}.</td>
-        </tr>
-      </tbody>
-    </table>
-    <p>When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, the
-    following values are available additionally:</p>
+- `cap`
 
-    <table class="standard-table">
-      <thead>
-        <tr>
-          <th scope="col">Constant</th>
-          <th scope="col">Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code>gl.RASTERIZER_DISCARD</code></td>
-          <td>Deactivates that primitives are discarded immediately before the
-            rasterization stage, but after the optional transform feedback stage.
-            <code>gl.clear()</code> commands are ignored.</td>
-        </tr>
-      </tbody>
-    </table>
-  </dd>
-</dl>
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying which WebGL capability to disable. Possible
+    values:
 
-<h3 id="Return_value">Return value</h3>
+    | Constant                      | Description                                                                                                                                                       |
+    | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | `gl.BLEND`                    | Deactivates blending of the computed fragment color values. See {{domxref("WebGLRenderingContext.blendFunc()")}}.                                 |
+    | `gl.CULL_FACE`                | Deactivates culling of polygons. See {{domxref("WebGLRenderingContext.cullFace()")}}.                                                            |
+    | `gl.DEPTH_TEST`               | Deactivates depth comparisons and updates to the depth buffer. See {{domxref("WebGLRenderingContext.depthFunc()")}}.                              |
+    | `gl.DITHER`                   | Deactivates dithering of color components before they get written to the color buffer.                                                                            |
+    | `gl.POLYGON_OFFSET_FILL`      | Deactivates adding an offset to depth values of polygon's fragments. See {{domxref("WebGLRenderingContext.polygonOffset()")}}.                    |
+    | `gl.SAMPLE_ALPHA_TO_COVERAGE` | Deactivates the computation of a temporary coverage value determined by the alpha value.                                                                          |
+    | `gl.SAMPLE_COVERAGE`          | Deactivates ANDing the fragment's coverage with the temporary coverage value. See {{domxref("WebGLRenderingContext.sampleCoverage()")}}.       |
+    | `gl.SCISSOR_TEST`             | Deactivates the scissor test that discards fragments that are outside of the scissor rectangle. See {{domxref("WebGLRenderingContext.scissor()")}}. |
+    | `gl.STENCIL_TEST`             | Deactivates stencil testing and updates to the stencil buffer. See {{domxref("WebGLRenderingContext.stencilFunc()")}}.                          |
 
-<p>None.</p>
+    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, the
+    following values are available additionally:
 
-<h2 id="Examples">Examples</h2>
+    | Constant                | Description                                                                                                                                                               |
+    | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | `gl.RASTERIZER_DISCARD` | Deactivates that primitives are discarded immediately before the rasterization stage, but after the optional transform feedback stage. `gl.clear()` commands are ignored. |
 
-<pre class="brush: js">gl.disable(gl.DITHER);
-</pre>
+### Return value
 
-<p>To check if a capability is disabled, use the
-  {{domxref("WebGLRenderingContext.isEnabled()")}} method:</p>
+None.
 
-<pre class="brush: js">gl.isEnabled(gl.DITHER);
+## Examples
+
+```js
+gl.disable(gl.DITHER);
+```
+
+To check if a capability is disabled, use the
+{{domxref("WebGLRenderingContext.isEnabled()")}} method:
+
+```js
+gl.isEnabled(gl.DITHER);
 // false
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.enable()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.isEnabled()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.enable()")}}
+- {{domxref("WebGLRenderingContext.isEnabled()")}}

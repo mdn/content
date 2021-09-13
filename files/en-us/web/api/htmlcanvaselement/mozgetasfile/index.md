@@ -2,68 +2,67 @@
 title: HTMLCanvasElement.mozGetAsFile()
 slug: Web/API/HTMLCanvasElement/mozGetAsFile
 tags:
-- API
-- Canvas
-- Firefox
-- HTMLCanvasElement
-- Method
-- Mozilla
-- Non-standard
-- Reference
-- mozGetAsFile
-- Deprecated
+  - API
+  - Canvas
+  - Firefox
+  - HTMLCanvasElement
+  - Method
+  - Mozilla
+  - Non-standard
+  - Reference
+  - mozGetAsFile
+  - Deprecated
 browser-compat: api.HTMLCanvasElement.mozGetAsFile
 ---
-<div>{{APIRef("Canvas API")}} {{Deprecated_Header}} {{non-standard_header}}</div>
+{{APIRef("Canvas API")}} {{Deprecated_Header}} {{non-standard_header}}
 
-<p>The non-standard, Firefox-specific the {{domxref("HTMLCanvasElement")}} method
-  {{domxref("HTMLCanvasElement.mozGetAsFile", "mozGetAsFile()")}} returns a memory-based
-  {{domxref("File")}} object representing the image contained in the canvas.</p>
+The non-standard, Firefox-specific the {{domxref("HTMLCanvasElement")}} method
+{{domxref("HTMLCanvasElement.mozGetAsFile", "mozGetAsFile()")}} returns a memory-based
+{{domxref("File")}} object representing the image contained in the canvas.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var><em>canvas</em>.mozGetAsFile(<em>name</em>, <em>type</em>);</var>
-</pre>
+```js
+canvas.mozGetAsFile(name, type);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>name</code></dt>
-  <dd>A {{domxref("DOMString")}} indicating the file name to give the file representing
-    the image file in memory.</dd>
-  <dt><code>type</code> {{optional_inline}}</dt>
-  <dd>A {{domxref("DOMString")}} which specifies the image file format to use when
-    creating the new image file. The default type is <code>image/png</code>. For other
-    options, see our <a href="/en-US/docs/Web/Media/Formats/Image_types">Image file type
-      and format guide</a>.</dd>
-</dl>
+- `name`
+  - : A {{domxref("DOMString")}} indicating the file name to give the file representing
+    the image file in memory.
+- `type` {{optional_inline}}
+  - : A {{domxref("DOMString")}} which specifies the image file format to use when
+    creating the new image file. The default type is `image/png`. For other
+    options, see our [Image file type
+    and format guide](/en-US/docs/Web/Media/Formats/Image_types).
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("File")}} object representing the image contained in the canvas. The file's
-  data is entirely located in memory until such time as it is explicitly written to disk.
-</p>
+A {{domxref("File")}} object representing the image contained in the canvas. The file's
+data is entirely located in memory until such time as it is explicitly written to disk.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<div>
-  <p>This example creates an image file from the {{HTMLElement("canvas")}} element on the
-    page, then uses a {{domxref("FileReader")}} to read the image data from the file.</p>
+This example creates an image file from the {{HTMLElement("canvas")}} element on the
+page, then uses a {{domxref("FileReader")}} to read the image data from the file.
 
-  <h3 id="HTML">HTML</h3>
+### HTML
 
-  <pre
-    class="brush: html">&lt;canvas id="canvas" width="100" height="100"&gt;&lt;/canvas&gt;
-&lt;p&gt;&lt;a href="#" id="link"&gt;Click here to try out mozGetAsFile()&lt;/a&gt;.&lt;/p&gt;</pre>
+```html
+<canvas id="canvas" width="100" height="100"></canvas>
+<p><a href="#" id="link">Click here to try out mozGetAsFile()</a>.</p>
+```
 
-  <h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-  <p>The following code uses <code>mozGetAsFile()</code> to create a {{domxref("File")}}
-    object from the canvas and appends it as an image to the page by loading it as a data
-    URL using the {{domxref("FileReader.readAsDataURL", "readAsDataURL()")}} method. Then
-    a new {{HTMLElement("img")}} element is created using the new data URL.</p>
+The following code uses `mozGetAsFile()` to create a {{domxref("File")}}
+object from the canvas and appends it as an image to the page by loading it as a data
+URL using the {{domxref("FileReader.readAsDataURL", "readAsDataURL()")}} method. Then
+a new {{HTMLElement("img")}} element is created using the new data URL.
 
-  <pre class="brush: js;">function draw() {
+```js
+function draw() {
   var canvas = document.getElementById('canvas');
   var ctx = canvas.getContext('2d');
 
@@ -90,13 +89,13 @@ function copy() {
   }
 }
 
-window.addEventListener('load', draw);</pre>
-</div>
+window.addEventListener('load', draw);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any specification.</p>
+Not part of any specification.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

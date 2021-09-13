@@ -10,44 +10,40 @@ tags:
   - Intermediate
   - Web
 ---
-<div>{{CanvasSidebar}}</div>
+{{CanvasSidebar}}
 
-<p>This tutorial describes how to use the <a href="/en-US/docs/Web/HTML/Element/canvas"><strong><code>&lt;canvas&gt;</code></strong></a> element to draw 2D graphics, starting with the basics. The examples provided should give you some clear ideas about what you can do with canvas, and will provide code snippets that may get you started in building your own content.</p>
+This tutorial describes how to use the [**`<canvas>`**](/en-US/docs/Web/HTML/Element/canvas) element to draw 2D graphics, starting with the basics. The examples provided should give you some clear ideas about what you can do with canvas, and will provide code snippets that may get you started in building your own content.
 
-<p><code>&lt;canvas&gt;</code> is an <a href="/en-US/docs/Web/HTML">HTML</a> element which can be used to draw graphics via scripting (usually <a href="/en-US/docs/Glossary/JavaScript">JavaScript</a>). This can, for instance, be used to draw graphs, combine photos, or create simple (and <a href="/en-US/docs/Web/API/Canvas_API/A_basic_ray-caster" title="A_Basic_RayCaster">not so simple</a>) animations. The images on this page show examples of <a href="/en-US/docs/Web/HTML/Element/canvas"><strong><code>&lt;canvas&gt;</code></strong></a> implementations which will be created in this tutorial.</p>
+`<canvas>` is an [HTML](/en-US/docs/Web/HTML) element which can be used to draw graphics via scripting (usually [JavaScript](/en-US/docs/Glossary/JavaScript)). This can, for instance, be used to draw graphs, combine photos, or create simple (and [not so simple](/en-US/docs/Web/API/Canvas_API/A_basic_ray-caster "A_Basic_RayCaster")) animations. The images on this page show examples of [**`<canvas>`**](/en-US/docs/Web/HTML/Element/canvas) implementations which will be created in this tutorial.
 
-<p>First introduced in WebKit by Apple for the OS X Dashboard, <code>&lt;canvas&gt;</code> has since been implemented in browsers. Today, all major browsers support it.</p>
+First introduced in WebKit by Apple for the OS X Dashboard, `<canvas>` has since been implemented in browsers. Today, all major browsers support it.
 
-<h2 id="Before_you_start">Before you start</h2>
+## Before you start
 
-<p>Using the <code>&lt;canvas&gt;</code> element is not very difficult, but you do need a basic understanding of <a href="/en-US/docs/Web/HTML">HTML</a> and <a href="/en-US/docs/Web/JavaScript">JavaScript</a>. The <code>&lt;canvas&gt;</code> element is not supported in some older browsers, but is supported in recent versions of all major browsers. The default size of the canvas is 300 pixels × 150 pixels (width × height). But custom sizes can be defined using the HTML <code>height</code> and <code>width</code> property. In order to draw graphics on the canvas we use a JavaScript context object, which creates graphics on the fly.</p>
+Using the `<canvas>` element is not very difficult, but you do need a basic understanding of [HTML](/en-US/docs/Web/HTML) and [JavaScript](/en-US/docs/Web/JavaScript). The `<canvas>` element is not supported in some older browsers, but is supported in recent versions of all major browsers. The default size of the canvas is 300 pixels × 150 pixels (width × height). But custom sizes can be defined using the HTML `height` and `width` property. In order to draw graphics on the canvas we use a JavaScript context object, which creates graphics on the fly.
 
-<h2 id="In_this_tutorial">In this tutorial</h2>
+## In this tutorial
 
-<ol>
-	<li><a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_usage">Basic usage</a></li>
-	<li><a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes">Drawing shapes</a></li>
-	<li><a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Applying styles and colors</a></li>
-	<li><a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text">Drawing text</a></li>
-	<li><a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images">Using images</a></li>
-	<li><a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Transformations">Transformations</a></li>
-	<li><a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing">Compositing and clipping</a></li>
-	<li><a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations">Basic animations</a></li>
-	<li><a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Advanced_animations">Advanced animations</a></li>
-	<li><a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">Pixel manipulation</a></li>
-	<li><a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas" title="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Canvas_tutorial/Optimizing_canvas">Optimizing the canvas</a></li>
-	<li><a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Finale">Finale</a></li>
-</ol>
+1.  [Basic usage](/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_usage)
+2.  [Drawing shapes](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
+3.  [Applying styles and colors](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)
+4.  [Drawing text](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text)
+5.  [Using images](/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images)
+6.  [Transformations](/en-US/docs/Web/API/Canvas_API/Tutorial/Transformations)
+7.  [Compositing and clipping](/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing)
+8.  [Basic animations](/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations)
+9.  [Advanced animations](/en-US/docs/Web/API/Canvas_API/Tutorial/Advanced_animations)
+10. [Pixel manipulation](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)
+11. [Optimizing the canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas "https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Canvas_tutorial/Optimizing_canvas")
+12. [Finale](/en-US/docs/Web/API/Canvas_API/Tutorial/Finale)
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><a href="/en-US/docs/Web/API/Canvas_API">Canvas topic page</a></li>
-	<li><a href="http://www.html5canvastutorials.com/">HTML5CanvasTutorials</a></li>
-</ul>
+- [Canvas topic page](/en-US/docs/Web/API/Canvas_API)
+- [HTML5CanvasTutorials](http://www.html5canvastutorials.com/)
 
-<h2 id="A_note_to_contributors">A note to contributors</h2>
+## A note to contributors
 
-<p>Due to an unfortunate technical error that occurred the week of June 17, 2013, we lost the history of this tutorial, including attributions to all past contributors to its content. We apologize for this, and hope you'll forgive this unfortunate mishap.</p>
+Due to an unfortunate technical error that occurred the week of June 17, 2013, we lost the history of this tutorial, including attributions to all past contributors to its content. We apologize for this, and hope you'll forgive this unfortunate mishap.
 
-<div>{{ Next("Web/API/Canvas_API/Tutorial/Basic_usage") }}</div>
+{{ Next("Web/API/Canvas_API/Tutorial/Basic_usage") }}

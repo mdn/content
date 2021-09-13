@@ -10,33 +10,35 @@ tags:
   - onopen
 browser-compat: api.RTCDataChannel.onopen
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The <code><strong>RTCDataChannel.onopen</strong></code> property is an
-  <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> which specifies a function to be called when the
-  {{DOMxRef("RTCDataChannel.open_event", "open")}} event is fired; this is a simple {{domxref("Event")}} which is sent
-  when the data channel's underlying data transport—the link over which the
-  {{domxref("RTCDataChannel")}}'s messages flow—is established or re-established.</p>
+The **`RTCDataChannel.onopen`** property is an
+[event handler](/en-US/docs/Web/Events/Event_handlers) which specifies a function to be called when the
+{{DOMxRef("RTCDataChannel.open_event", "open")}} event is fired; this is a simple {{domxref("Event")}} which is sent
+when the data channel's underlying data transport—the link over which the
+{{domxref("RTCDataChannel")}}'s messages flow—is established or re-established.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>RTCDataChannel</em>.onopen = <em>function</em>;</pre>
+```js
+RTCDataChannel.onopen = function;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A function which the browser will call to handle the {{DOMxRef("RTCDataChannel.open_event", "open")}} event. The
-  function receives as its only input parameter the event itself, of type
-  {{domxref("Event")}}.</p>
+A function which the browser will call to handle the {{DOMxRef("RTCDataChannel.open_event", "open")}} event. The
+function receives as its only input parameter the event itself, of type
+{{domxref("Event")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example adds a new data channel to an existing {{domxref("RTCPeerConnection")}},
-  <code>myPeerConnection</code>. It then establishes an {{DOMxRef("RTCDataChannel.open_event", "open")}} event handler
-  which updates some user interface elements to prepare them for being used to send
-  messages over the data channel.</p>
+This example adds a new data channel to an existing {{domxref("RTCPeerConnection")}},
+`myPeerConnection`. It then establishes an {{DOMxRef("RTCDataChannel.open_event", "open")}} event handler
+which updates some user interface elements to prepare them for being used to send
+messages over the data channel.
 
-<pre class="brush: js">let dc = myPeerConnection.createDataChannel("Message Channel");
+```js
+let dc = myPeerConnection.createDataChannel("Message Channel");
 
 dc.onopen = function(event) {
   let messageBox = document.getElementById("messageBox");
@@ -46,21 +48,19 @@ dc.onopen = function(event) {
   messageBox.focus();
   sendButton.disabled = false;
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
-  <li>The {{DOMxRef("RTCDataChannel.open_event", "open")}} event and its type, {{domxref("Event")}}.</li>
-  <li>{{domxref("RTCDataChannel.onclose")}}</li>
-  <li>The {{DOMxRef("RTCDataChannel.close_event", "close")}} event and its type, {{domxref("Event")}}.</li>
-</ul>
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)
+- The {{DOMxRef("RTCDataChannel.open_event", "open")}} event and its type, {{domxref("Event")}}.
+- {{domxref("RTCDataChannel.onclose")}}
+- The {{DOMxRef("RTCDataChannel.close_event", "close")}} event and its type, {{domxref("Event")}}.

@@ -2,65 +2,69 @@
 title: WebGLRenderingContext.canvas
 slug: Web/API/WebGLRenderingContext/canvas
 tags:
-- Property
-- Read-only
-- WebGL
-- WebGLRenderingContext
+  - Property
+  - Read-only
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.canvas
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <code><strong>WebGLRenderingContext.canvas</strong></code> property is a read-only
-  reference to the {{domxref("HTMLCanvasElement")}} or {{domxref("OffscreenCanvas")}}
-  object that is associated with the context. It might be {{jsxref("null")}} if it is not
-  associated with a {{HTMLElement("canvas")}} element or an {{domxref("OffscreenCanvas")}}
-  object.</p>
+The **`WebGLRenderingContext.canvas`** property is a read-only
+reference to the {{domxref("HTMLCanvasElement")}} or {{domxref("OffscreenCanvas")}}
+object that is associated with the context. It might be {{jsxref("null")}} if it is not
+associated with a {{HTMLElement("canvas")}} element or an {{domxref("OffscreenCanvas")}}
+object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var><em>gl</em></var>.canvas;</pre>
+```js
+gl.canvas;
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Either a {{domxref("HTMLCanvasElement")}} or {{domxref("OffscreenCanvas")}} object or
-  {{jsxref("null")}}.</p>
+Either a {{domxref("HTMLCanvasElement")}} or {{domxref("OffscreenCanvas")}} object or
+{{jsxref("null")}}.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Canvas_element">Canvas element</h3>
+### Canvas element
 
-<p>Given this {{HTMLElement("canvas")}} element:</p>
+Given this {{HTMLElement("canvas")}} element:
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<p>You can get back a reference to it from the <code>WebGLRenderingContext</code> using
-  the <code>canvas</code> property:</p>
+You can get back a reference to it from the `WebGLRenderingContext` using
+the `canvas` property:
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 gl.canvas; // HTMLCanvasElement
-</pre>
+```
 
-<h3 id="Offscreen_canvas">Offscreen canvas</h3>
+### Offscreen canvas
 
-<p>Example using the experimental {{domxref("OffscreenCanvas")}} object.</p>
+Example using the experimental {{domxref("OffscreenCanvas")}} object.
 
-<pre class="brush: js">var offscreen = new OffscreenCanvas(256, 256);
+```js
+var offscreen = new OffscreenCanvas(256, 256);
 var gl = offscreen.getContext('webgl');
-gl.canvas; // OffscreenCanvas</pre>
+gl.canvas; // OffscreenCanvas
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("CanvasRenderingContext2D.canvas")}}</li>
-  <li>{{domxref("OffscreenCanvas")}}</li>
-</ul>
+- {{domxref("CanvasRenderingContext2D.canvas")}}
+- {{domxref("OffscreenCanvas")}}

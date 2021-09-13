@@ -13,22 +13,22 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisUtterance.onend
 ---
-<div>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</div>
+{{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>onend</code></strong> property of the
-  {{domxref("SpeechSynthesisUtterance")}} interface represents an event handler that will
-  run when the utterance has finished being spoken (when the <a
-    href="/en-US/docs/Web/API/SpeechSynthesisUtterance/end_event">end</a> event fires.)
-</p>
+The **`onend`** property of the
+{{domxref("SpeechSynthesisUtterance")}} interface represents an event handler that will
+run when the utterance has finished being spoken (when the [end](/en-US/docs/Web/API/SpeechSynthesisUtterance/end_event) event fires.)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">speechSynthesisUtteranceInstance.onend = function() { ... };
-</pre>
+```js
+speechSynthesisUtteranceInstance.onend = function() { ... };
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var synth = window.speechSynthesis;
+```js
+var synth = window.speechSynthesis;
 
 var inputForm = document.querySelector('form');
 var inputTxt = document.querySelector('input');
@@ -43,7 +43,7 @@ inputForm.onsubmit = function(event) {
 
   var utterThis = new SpeechSynthesisUtterance(inputTxt.value);
   var selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-  for(i = 0; i &lt; voices.length ; i++) {
+  for(i = 0; i < voices.length ; i++) {
     if(voices[i].name === selectedOption) {
       utterThis.voice = voices[i];
     }
@@ -56,18 +56,17 @@ inputForm.onsubmit = function(event) {
   }
 
   inputTxt.blur();
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)

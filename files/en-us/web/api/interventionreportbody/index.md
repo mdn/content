@@ -10,49 +10,46 @@ tags:
   - Reporting API
 browser-compat: api.InterventionReportBody
 ---
-<div>{{APIRef("Reporting API")}}</div>
+{{APIRef("Reporting API")}}
 
-<p>The <code>InterventionReportBody</code> interface of the <a href="/en-US/docs/Web/API/Reporting_API">Reporting API</a> represents the body of an intervention report.</p>
+The `InterventionReportBody` interface of the [Reporting API](/en-US/docs/Web/API/Reporting_API) represents the body of an intervention report.
 
-<p>An intervention report is generated when usage of a feature in a web document has been blocked by the browser for reasons such as security, performance, or user annoyance. So for example, a script was been stopped because it was significantly slowing down the browser, or the browser's autoplay policy blocked audio from playing without a user gesture to trigger it.</p>
+An intervention report is generated when usage of a feature in a web document has been blocked by the browser for reasons such as security, performance, or user annoyance. So for example, a script was been stopped because it was significantly slowing down the browser, or the browser's autoplay policy blocked audio from playing without a user gesture to trigger it.
 
-<p>A deprecation report is generated when a deprecated feature (for example a deprecated API method) is used on a document being observed by a {{domxref("ReportingObserver")}}. In addition to the support of this API, receiving useful intervention warnings relies on browser vendors adding these warnings for the relevant features.</p>
+A deprecation report is generated when a deprecated feature (for example a deprecated API method) is used on a document being observed by a {{domxref("ReportingObserver")}}. In addition to the support of this API, receiving useful intervention warnings relies on browser vendors adding these warnings for the relevant features.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<p>An instance of <code>InterventionReportBody</code> is returned as the value of {{domxref("Report.body")}} when {{domxref("Report.Type")}} is <code>intervention</code>. The interface has no constructor.</p>
+An instance of `InterventionReportBody` is returned as the value of {{domxref("Report.body")}} when {{domxref("Report.Type")}} is `intervention`. The interface has no constructor.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p>This interface also inherits properties from {{domxref("ReportBody")}}.</p>
+This interface also inherits properties from {{domxref("ReportBody")}}.
 
-<dl>
- <dt>{{domxref("InterventionReportBody.id")}}{{ReadOnlyInline}}</dt>
- <dd>A {{domxref("DOMString","string")}} representing the intervention that generated the report. This can be used to group reports.</dd>
- <dt>{{domxref("InterventionReportBody.message")}}{{ReadOnlyInline}}</dt>
- <dd>A {{domxref("DOMString","string")}} containing a human-readable description of the intervention, including information such how the intervention could be avoided. This typically matches the message a browser will display in its DevTools console when an intervention is imposed, if one is available.</dd>
- <dt>{{domxref("InterventionReportBody.sourceFile")}}{{ReadOnlyInline}}</dt>
- <dd>A {{domxref("DOMString","string")}} containing the path to the source file where the intervention occurred, if known, or <code>null</code> otherwise.</dd>
- <dt>{{domxref("InterventionReportBody.lineNumber")}}{{ReadOnlyInline}}</dt>
- <dd>A {{domxref("DOMString","string")}} representing the line in the source file in which the intervention occurred, if known, or <code>null</code> otherwise.</dd>
- <dt>{{domxref("InterventionReportBody.columnNumber")}}{{ReadOnlyInline}}</dt>
- <dd>A {{domxref("DOMString","string")}} representing the column in the source file in which the intervention occurred, if known, or <code>null</code> otherwise.</dd>
-</dl>
+- {{domxref("InterventionReportBody.id")}}{{ReadOnlyInline}}
+  - : A {{domxref("DOMString","string")}} representing the intervention that generated the report. This can be used to group reports.
+- {{domxref("InterventionReportBody.message")}}{{ReadOnlyInline}}
+  - : A {{domxref("DOMString","string")}} containing a human-readable description of the intervention, including information such how the intervention could be avoided. This typically matches the message a browser will display in its DevTools console when an intervention is imposed, if one is available.
+- {{domxref("InterventionReportBody.sourceFile")}}{{ReadOnlyInline}}
+  - : A {{domxref("DOMString","string")}} containing the path to the source file where the intervention occurred, if known, or `null` otherwise.
+- {{domxref("InterventionReportBody.lineNumber")}}{{ReadOnlyInline}}
+  - : A {{domxref("DOMString","string")}} representing the line in the source file in which the intervention occurred, if known, or `null` otherwise.
+- {{domxref("InterventionReportBody.columnNumber")}}{{ReadOnlyInline}}
+  - : A {{domxref("DOMString","string")}} representing the column in the source file in which the intervention occurred, if known, or `null` otherwise.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p>This interface also inherits methods from {{domxref("ReportBody")}}.</p>
+This interface also inherits methods from {{domxref("ReportBody")}}.
 
-<dl>
-  <dt>{{domxref("InterventionReportBody.toJSON()")}}</dt>
-  <dd>A <em>serializer</em> which returns a JSON representation of the <code>InterventionReportBody</code> object.</dd>
-</dl>
+- {{domxref("InterventionReportBody.toJSON()")}}
+  - : A _serializer_ which returns a JSON representation of the `InterventionReportBody` object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this example we create a new {{domxref("ReportingObserver")}} to observe intervention reports, then print details of each property of the first report to the console.</p>
+In this example we create a new {{domxref("ReportingObserver")}} to observe intervention reports, then print details of each property of the first report to the console.
 
-<pre class="brush: js">let options = {
+```js
+let options = {
   types: ['intervention'],
   buffered: true
 }
@@ -65,19 +62,18 @@ let observer = new ReportingObserver(function(reports, observer) {
   console.log(firstReport.body.sourceFile);
   console.log(firstReport.body.lineNumber);
   console.log(firstReport.body.columnNumber);
-}, options);</pre>
+}, options);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Reporting_API">Reporting API</a></li>
- <li><a href="https://developers.google.com/web/updates/2018/09/reportingapi">The Reporting API</a></li>
-</ul>
+- [Reporting API](/en-US/docs/Web/API/Reporting_API)
+- [The Reporting API](https://developers.google.com/web/updates/2018/09/reportingapi)

@@ -9,70 +9,60 @@ tags:
   - SVG DOM
 browser-compat: api.SVGAnimationElement
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <strong><code>SVGAnimationElement</code></strong> interface is the base interface for all of the animation element interfaces: {{domxref("SVGAnimateElement")}}, {{domxref("SVGSetElement")}}, {{domxref("SVGAnimateColorElement")}}, {{domxref("SVGAnimateMotionElement")}} and {{domxref("SVGAnimateTransformElement")}}.</p>
+The **`SVGAnimationElement`** interface is the base interface for all of the animation element interfaces: {{domxref("SVGAnimateElement")}}, {{domxref("SVGSetElement")}}, {{domxref("SVGAnimateColorElement")}}, {{domxref("SVGAnimateMotionElement")}} and {{domxref("SVGAnimateTransformElement")}}.
 
-<p>{{InheritanceDiagram(600, 140)}}</p>
+{{InheritanceDiagram(600, 140)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface also inherits properties from its parent, {{domxref("SVGElement")}}.</em></p>
+_This interface also inherits properties from its parent, {{domxref("SVGElement")}}._
 
-<dl>
- <dt>{{domxref("SVGAnimationElement.requiredExtensions")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGStringList")}} reflecting the {{SVGAttr("requiredExtensions")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGAnimationElement.systemLanguage")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGStringList")}} reflecting the {{SVGAttr("systemLanguage")}} attribute of the given element.</dd>
- <dt>{{domxref("SVGAnimationElement.targetElement")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGElement")}} representing the element which is being animated. If no target element is being animated (for example, because the {{SVGAttr("href")}} specifies an unknown element) the value returned is <code>null</code>.</dd>
-</dl>
+- {{domxref("SVGAnimationElement.requiredExtensions")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGStringList")}} reflecting the {{SVGAttr("requiredExtensions")}} attribute of the given element.
+- {{domxref("SVGAnimationElement.systemLanguage")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGStringList")}} reflecting the {{SVGAttr("systemLanguage")}} attribute of the given element.
+- {{domxref("SVGAnimationElement.targetElement")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGElement")}} representing the element which is being animated. If no target element is being animated (for example, because the {{SVGAttr("href")}} specifies an unknown element) the value returned is `null`.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface also inherits methods from its parent, {{domxref("SVGElement")}}.</em></p>
+_This interface also inherits methods from its parent, {{domxref("SVGElement")}}._
 
-<dl>
- <dt>{{domxref("SVGAnimationElement.getStartTime()")}}</dt>
- <dd>Returns a float representing the begin time, in seconds, for this animation element's current interval, if it exists, regardless of whether the interval has begun yet. If there is no current interval, then a {{domxref("DOMException")}} with code <code>INVALID_STATE_ERR</code> is thrown.</dd>
- <dt>{{domxref("SVGAnimationElement.getCurrentTime()")}}</dt>
- <dd>Returns a float representing the current time in seconds relative to time zero for the given time container.</dd>
- <dt>{{domxref("SVGAnimationElement.getSimpleDuration()")}}</dt>
- <dd>Returns a float representing the number of seconds for the simple duration for this animation. If the simple duration is undefined (e.g., the end time is indefinite), then a {{domxref("DOMException")}} with code <code>NOT_SUPPORTED_ERR</code> is raised.</dd>
- <dt>{{domxref("SVGAnimationElement.beginElement()")}} {{experimental_inline}}</dt>
- <dd>Creates a begin instance time for the current time. The new instance time is added to the begin instance times list. The behavior of this method is equivalent to <code>beginElementAt(0)</code>.</dd>
- <dt>{{domxref("SVGAnimationElement.beginElementAt()")}} {{experimental_inline}}</dt>
- <dd>
- <p>Creates a begin instance time for the current time plus the specified offset. The new instance time is added to the begin instance times list.</p>
- </dd>
- <dt>{{domxref("SVGAnimationElement.endElement()")}} {{experimental_inline}}</dt>
- <dd>
- <p>Creates an end instance time for the current time. The new instance time is added to the end instance times list. The behavior of this method is equivalent to <code>endElementAt(0)</code>.</p>
- </dd>
- <dt>{{domxref("SVGAnimationElement.endElementAt()")}} {{experimental_inline}}</dt>
- <dd>Creates a end instance time for the current time plus the specified offset. The new instance time is added to the end instance times list.</dd>
-</dl>
+- {{domxref("SVGAnimationElement.getStartTime()")}}
+  - : Returns a float representing the begin time, in seconds, for this animation element's current interval, if it exists, regardless of whether the interval has begun yet. If there is no current interval, then a {{domxref("DOMException")}} with code `INVALID_STATE_ERR` is thrown.
+- {{domxref("SVGAnimationElement.getCurrentTime()")}}
+  - : Returns a float representing the current time in seconds relative to time zero for the given time container.
+- {{domxref("SVGAnimationElement.getSimpleDuration()")}}
+  - : Returns a float representing the number of seconds for the simple duration for this animation. If the simple duration is undefined (e.g., the end time is indefinite), then a {{domxref("DOMException")}} with code `NOT_SUPPORTED_ERR` is raised.
+- {{domxref("SVGAnimationElement.beginElement()")}} {{experimental_inline}}
+  - : Creates a begin instance time for the current time. The new instance time is added to the begin instance times list. The behavior of this method is equivalent to `beginElementAt(0)`.
+- {{domxref("SVGAnimationElement.beginElementAt()")}} {{experimental_inline}}
+  - : Creates a begin instance time for the current time plus the specified offset. The new instance time is added to the begin instance times list.
+- {{domxref("SVGAnimationElement.endElement()")}} {{experimental_inline}}
+  - : Creates an end instance time for the current time. The new instance time is added to the end instance times list. The behavior of this method is equivalent to `endElementAt(0)`.
+- {{domxref("SVGAnimationElement.endElementAt()")}} {{experimental_inline}}
+  - : Creates a end instance time for the current time plus the specified offset. The new instance time is added to the end instance times list.
 
-<h2 id="Events">Events</h2>
+## Events
 
-<p>Listen to these events using <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> or by assigning an event listener to the <code>on...</code> handler property of this interface.</p>
+Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `on...` handler property of this interface.
 
-<dl>
- <dt><code><a href="/en-US/docs/Web/API/SVGAnimationElement/beginEvent_event">beginEvent</a></code></dt>
- <dd>Fired when the element local timeline begins to play.<br>
- Also available via the <code><a href="/en-US/docs/Web/API/SVGAnimationElement/onbegin">onbegin</a></code> property.</dd>
- <dt><code><a href="/en-US/docs/Web/API/SVGAnimationElement/endEvent_event">endEvent</a></code></dt>
- <dd>Fired when at the active end of the animation is reached.<br>
- Also available via the <code><a href="/en-US/docs/Web/API/SVGAnimationElement/onend">onend</a></code> property.</dd>
- <dt><code><a href="/en-US/docs/Web/API/SVGAnimationElement/repeatEvent_event">repeatEvent</a></code></dt>
- <dd>Fired when the element's local timeline repeats. It will be fired each time the element repeats, after the first iteration.<br>
- Also available via the <code><a href="/en-US/docs/Web/API/SVGAnimationElement/onrepeat">onrepeat</a></code> property.</dd>
-</dl>
+- [`beginEvent`](/en-US/docs/Web/API/SVGAnimationElement/beginEvent_event)
+  - : Fired when the element local timeline begins to play.
+    Also available via the [`onbegin`](/en-US/docs/Web/API/SVGAnimationElement/onbegin) property.
+- [`endEvent`](/en-US/docs/Web/API/SVGAnimationElement/endEvent_event)
+  - : Fired when at the active end of the animation is reached.
+    Also available via the [`onend`](/en-US/docs/Web/API/SVGAnimationElement/onend) property.
+- [`repeatEvent`](/en-US/docs/Web/API/SVGAnimationElement/repeatEvent_event)
+  - : Fired when the element's local timeline repeats. It will be fired each time the element repeats, after the first iteration.
+    Also available via the [`onrepeat`](/en-US/docs/Web/API/SVGAnimationElement/onrepeat) property.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,70 +2,67 @@
 title: RTCInboundRtpStreamStats.sliCount
 slug: Web/API/RTCInboundRtpStreamStats/sliCount
 tags:
-- API
-- Corruption
-- Errors
-- Property
-- RTCInboundRtpStreamStats
-- RTP
-- Reference
-- SLI
-- Slice Loss
-- Statistics
-- Stats
-- Video
-- WebRTC
-- WebRTC API
-- sliCount
-- stream
+  - API
+  - Corruption
+  - Errors
+  - Property
+  - RTCInboundRtpStreamStats
+  - RTP
+  - Reference
+  - SLI
+  - Slice Loss
+  - Statistics
+  - Stats
+  - Video
+  - WebRTC
+  - WebRTC API
+  - sliCount
+  - stream
 browser-compat: api.RTCInboundRtpStreamStats.sliCount
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The <strong><code>sliCount</code></strong> property of the
-    {{domxref("RTCInboundRtpStreamStats")}} dictionary indicates how many <strong>Slice
-      Loss Indication</strong> (<strong>SLI</strong>) packets the
-    {{domxref("RTCRtpReceiver")}} for which this object provdes statistics sent to the
-    remote {{domxref("RTCRtpSender")}}.</p>
+The **`sliCount`** property of the
+{{domxref("RTCInboundRtpStreamStats")}} dictionary indicates how many **Slice
+Loss Indication** (**SLI**) packets the
+{{domxref("RTCRtpReceiver")}} for which this object provdes statistics sent to the
+remote {{domxref("RTCRtpSender")}}.
 
-<p>An SLI packet is used by a decoder to let
-  the encoder know that it's detected corruption of one or more consecutive macroblocks
-  (in scan order) in the received media.</p>
+An SLI packet is used by a decoder to let
+the encoder know that it's detected corruption of one or more consecutive macroblocks
+(in scan order) in the received media.
 
-<p>In general, what's usually of interest is that the higher this number is, the more the
-  stream data is becoming corrupted between the sender and the receiver, requiring resends
-  or dropping frames.</p>
+In general, what's usually of interest is that the higher this number is, the more the
+stream data is becoming corrupted between the sender and the receiver, requiring resends
+or dropping frames.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>sliCount</em> = <em>rtcInboundRtpStreamStats</em>.sliCount;</pre>
+```js
+var sliCount = rtcInboundRtpStreamStats.sliCount;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An unsigned integer indicating the number of SLI packets this receiver sent to the
-  remote sender due to lost runs of macroblocks. A high value of <code>sliCount</code> may
-  be an indication of an unreliable network.</p>
+An unsigned integer indicating the number of SLI packets this receiver sent to the
+remote sender due to lost runs of macroblocks. A high value of `sliCount` may
+be an indication of an unreliable network.
 
-<p>This is a very technical part of how video codecs work. For details, see {{RFC(4585,
-  "6.3.2")}}.</p>
+This is a very technical part of how video codecs work. For details, see {{RFC(4585,
+  "6.3.2")}}.
 
-<div class="note">
-  <p><strong>Note:</strong> This value is only present for video media.</p>
-</div>
+> **Note:** This value is only present for video media.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{RFC(4585, "6.3.2")}}: Definition of "Slice Loss Indication" in the document
-    <em>Extended RTP Profile for Real-time Transport Control Protocol (RTCP)-Based
-      Feedback (RTP/AVPF)</em>.</li>
-</ul>
+- {{RFC(4585, "6.3.2")}}: Definition of "Slice Loss Indication" in the document
+  _Extended RTP Profile for Real-time Transport Control Protocol (RTCP)-Based
+  Feedback (RTP/AVPF)_.

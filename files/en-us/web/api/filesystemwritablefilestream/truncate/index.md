@@ -10,65 +10,60 @@ tags:
   - write
 browser-compat: api.FileSystemWritableFileStream.truncate
 ---
-<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
-</div>
+{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
-<p>The <strong><code>truncate()</code></strong> method of the
-  {{domxref("FileSystemWritableFileStream")}} interface resizes the file associated with
-  the stream to be the specified size in bytes.</p>
+The **`truncate()`** method of the
+{{domxref("FileSystemWritableFileStream")}} interface resizes the file associated with
+the stream to be the specified size in bytes.
 
-<p>If the size specified is larger than the current file size this pads the file with
-  <code>null</code> bytes, otherwise it truncates the file.</p>
+If the size specified is larger than the current file size this pads the file with
+`null` bytes, otherwise it truncates the file.
 
-<p>The file cursor is also updated when <code>truncate()</code> is called. If the offset
-  is smaller than the size, it remains unchanged. If the offset is larger than size, the
-  offset is set to that size. This ensures that subsequent writes do not error.</p>
+The file cursor is also updated when `truncate()` is called. If the offset
+is smaller than the size, it remains unchanged. If the offset is larger than size, the
+offset is set to that size. This ensures that subsequent writes do not error.
 
-<p>No changes are written to the actual file on disk until the stream has been closed.
-  Changes are typically written to a temporary file instead.</p>
+No changes are written to the actual file on disk until the stream has been closed.
+Changes are typically written to a temporary file instead.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">FileSystemWritableFileStream.truncate().then(...);</pre>
+```js
+FileSystemWritableFileStream.truncate().then(...);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>size</dt>
-  <dd>An <code>unsigned long</code> of the amount of bytes to resize the stream to.</dd>
-</dl>
+- size
+  - : An `unsigned long` of the amount of bytes to resize the stream to.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref('Promise')}} which returns undefined.</p>
+A {{jsxref('Promise')}} which returns undefined.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>NotAllowedError</dt>
-  <dd>If the {{domxref('PermissionState')}} is not 'granted'.</dd>
-  <dt>TypeError</dt>
-  <dd>If the size is undefined or not an unsigned long.</dd>
-</dl>
+- NotAllowedError
+  - : If the {{domxref('PermissionState')}} is not 'granted'.
+- TypeError
+  - : If the size is undefined or not an unsigned long.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">// todo
-</pre>
+```js
+// todo
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/File_System_Access_API">File System Access API</a></li>
-  <li><a href="https://web.dev/file-system-access/">The File System Access API:
-      simplifying access to local files</a></li>
-</ul>
+- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
+- [The File System Access API:
+  simplifying access to local files](https://web.dev/file-system-access/)

@@ -2,78 +2,75 @@
 title: IDBVersionChangeEvent.oldVersion
 slug: Web/API/IDBVersionChangeEvent/oldVersion
 tags:
-- API
-- Database
-- IDBVersionChangeEvent
-- IndexedDB
-- Property
-- Reference
-- Storage
-- oldVersion
+  - API
+  - Database
+  - IDBVersionChangeEvent
+  - IndexedDB
+  - Property
+  - Reference
+  - Storage
+  - oldVersion
 browser-compat: api.IDBVersionChangeEvent.oldVersion
 ---
-<p>{{ APIRef("IndexedDB") }}</p>
+{{ APIRef("IndexedDB") }}
 
-<p>The <strong><code>oldVersion</code></strong> read-only property of the
-  {{domxref("IDBVersionChangeEvent")}} interface returns the old version number of the
-  database.</p>
+The **`oldVersion`** read-only property of the
+{{domxref("IDBVersionChangeEvent")}} interface returns the old version number of the
+database.
 
-<div>
-  <p>When the opened database doesn't exist yet, the value of <code>oldVersion</code> is
-    0.</p>
-</div>
+When the opened database doesn't exist yet, the value of `oldVersion` is
+0\.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var oldVersion = IDBVersionChangeEvent.oldVersion</pre>
+```js
+var oldVersion = IDBVersionChangeEvent.oldVersion
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A <a href="/en-US/docs/NSPR_API_Reference/Long_Long_(64-bit)_Integers">64-bit
-    integer</a>.</p>
+A [64-bit
+integer](</en-US/docs/NSPR_API_Reference/Long_Long_(64-bit)_Integers>).
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var dbName = "sampleDB";
+```js
+var dbName = "sampleDB";
 var dbVersion = 2;
 var request = indexedDB.open(dbName, dbVersion);
 
 request.onupgradeneeded = function(e) {
   var db = request.result;
-  if (e.oldVersion &lt; 1) {
+  if (e.oldVersion < 1) {
     db.createObjectStore("store1");
   }
 
-  if (e.oldVersion &lt; 2) {
+  if (e.oldVersion < 2) {
     db.deleteObjectStore("store1");
     db.createObjectStore("store2");
   }
 
-  // etc. for version &lt; 3, 4...
-};</pre>
+  // etc. for version < 3, 4...
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
-  <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
-  <li>Using transactions: {{domxref("IDBTransaction")}}</li>
-  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
-  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
-  <li>Using cursors: {{domxref("IDBCursor")}}</li>
-  <li>Reference example: <a class="external"
-      href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
-      Notifications</a> (<a class="external"
-      href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do
+  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

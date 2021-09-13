@@ -8,38 +8,38 @@ tags:
   - TreeWalker
 browser-compat: api.TreeWalker.currentNode
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p>The <code><strong>TreeWalker.currentNode</strong></code> property represents the
-  {{domxref("Node")}} on which the {{domxref("TreeWalker")}} is currently pointing at.</p>
+The **`TreeWalker.currentNode`** property represents the
+{{domxref("Node")}} on which the {{domxref("TreeWalker")}} is currently pointing at.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">node = treeWalker.currentNode;
+```js
+node = treeWalker.currentNode;
 treeWalker.currentNode = node;
-</pre>
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var treeWalker = document.createTreeWalker(
+```js
+var treeWalker = document.createTreeWalker(
     document.body,
     NodeFilter.SHOW_ELEMENT,
     { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
     false
 );
 root = treeWalker.currentNode; // the root element as it is the first element!
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The {{domxref("TreeWalker")}} interface.</li>
-</ul>
+- The {{domxref("TreeWalker")}} interface.

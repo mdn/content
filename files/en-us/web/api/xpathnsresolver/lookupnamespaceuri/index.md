@@ -2,49 +2,46 @@
 title: XPathNSResolver.lookupNamespaceURI()
 slug: Web/API/XPathNSResolver/lookupNamespaceURI
 tags:
-- API
-- DOM
-- DOM XPath API
-- Method
-- Reference
-- XPath
-- XPathNSResolver
+  - API
+  - DOM
+  - DOM XPath API
+  - Method
+  - Reference
+  - XPath
+  - XPathNSResolver
 browser-compat: api.XPathNSResolver.lookupNamespaceURI
 ---
-<div>{{APIRef("DOM XPath")}}</div>
+{{APIRef("DOM XPath")}}
 
-<p>The <code>lookupNamespaceURI</code> method looks up the namespace URI associated to the
-  given namespace prefix within an {{Glossary("XPath")}} expression evaluated by the
-  {{domxref("XPathEvaluator")}} interface.</p>
+The `lookupNamespaceURI` method looks up the namespace URI associated to the
+given namespace prefix within an {{Glossary("XPath")}} expression evaluated by the
+{{domxref("XPathEvaluator")}} interface.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>DOMString</var> <var>XPathNSResolver</var>.lookupNamespaceURI(<var>prefix</var>);
-</pre>
+```js
+DOMString XPathNSResolver.lookupNamespaceURI(prefix);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>prefix</dt>
-  <dd>A {{domxref("DOMString")}} representing the prefix to look for.</dd>
-</dl>
+- prefix
+  - : A {{domxref("DOMString")}} representing the prefix to look for.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("DOMString")}} representing the associated namespace URI or
-  <code>null</code> if none is found.</p>
+A {{domxref("DOMString")}} representing the associated namespace URI or
+`null` if none is found.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("XPathEvaluator")}}</li>
-  <li>{{domxref("Node.lookupNamespaceURI()")}}</li>
-</ul>
+- {{domxref("XPathEvaluator")}}
+- {{domxref("Node.lookupNamespaceURI()")}}

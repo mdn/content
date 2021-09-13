@@ -8,19 +8,18 @@ tags:
   - Overview
   - Reference
 ---
-<p>{{DefaultAPISidebar("Media Capabilities API")}}</p>
+{{DefaultAPISidebar("Media Capabilities API")}}
 
-<div>
-<p>The <strong>Media Capabilities API</strong> allows developers to determine decoding and encoding abilities of the device, exposing information such as whether media is supported and whether playback should be smooth and power efficient, with real time feedback about playback to better enable adaptive streaming, and access to display property information.</p>
-</div>
+The **Media Capabilities API** allows developers to determine decoding and encoding abilities of the device, exposing information such as whether media is supported and whether playback should be smooth and power efficient, with real time feedback about playback to better enable adaptive streaming, and access to display property information.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Detect_audio_file_support_and_expected_performance">Detect audio file support and expected performance</h3>
+### Detect audio file support and expected performance
 
-<p>This example defines a audio configuration then checks to see if the user agent supports decoding that media configuration, and whether it will perform well in terms of smoothness and power efficiency.</p>
+This example defines a audio configuration then checks to see if the user agent supports decoding that media configuration, and whether it will perform well in terms of smoothness and power efficiency.
 
-<pre class="brush: js">if ('mediaCapabilities' in navigator) {
+```js
+if ('mediaCapabilities' in navigator) {
   const audioFileConfiguration = {
     type : 'file',
     audio : {
@@ -31,85 +30,67 @@ tags:
     }
   };
 
-  navigator.mediaCapabilities.decodingInfo(audioFileConfiguration).then(result =&gt; {
+  navigator.mediaCapabilities.decodingInfo(audioFileConfiguration).then(result => {
     console.log('This configuration is ' +
         (result.supported ? '' : 'not ') + 'supported, ' +
         (result.smooth ? '' : 'not ') + 'smooth, and ' +
         (result.powerEfficient ? '' : 'not ') + 'power efficient.')
     })
-    .catch(() =&gt; {
+    .catch(() => {
       console.log("decodingInfo error: " + contentType)
     });
-}</pre>
+}
+```
 
-<h2 id="Media_Capabilities_API_concepts_and_usage">Media Capabilities API concepts and usage</h2>
+## Media Capabilities API concepts and usage
 
-<p>There are a myriad of video and audio codecs. Different browsers support different media types and new media types are always being developed. With the Media Capabilities API, developers can ensure each user is getting the best bitrate and storage savings for their browser, device, and OS capabilities.</p>
+There are a myriad of video and audio codecs. Different browsers support different media types and new media types are always being developed. With the Media Capabilities API, developers can ensure each user is getting the best bitrate and storage savings for their browser, device, and OS capabilities.
 
-<p>Whether a device uses hardware or software decoding impacts how smooth and power efficient the video decoding is and how efficient the playback will be. The Media Capabilities API enables determining which codecs are supported and how performant a media file will be both in terms of smoothness and power efficiency.</p>
+Whether a device uses hardware or software decoding impacts how smooth and power efficient the video decoding is and how efficient the playback will be. The Media Capabilities API enables determining which codecs are supported and how performant a media file will be both in terms of smoothness and power efficiency.
 
-<p>The Media Capabilities API provide more powerful features than say {{DOMxRef("MediaRecorder.isTypeSupported()")}} or {{DOMxRef("HTMLMediaElement.canPlayType()")}}, which only address general browser support, not performance. The API also provides abilities to access display property information such as  supported color gamut, dynamic range abilities, and real-time feedback about the playback.</p>
+The Media Capabilities API provide more powerful features than say {{DOMxRef("MediaRecorder.isTypeSupported()")}} or {{DOMxRef("HTMLMediaElement.canPlayType()")}}, which only address general browser support, not performance. The API also provides abilities to access display property information such as  supported color gamut, dynamic range abilities, and real-time feedback about the playback.
 
-<p>To test support, smoothness and power efficiency of a video or audio file, you define the <a href="/en-US/docs/Web/API/MediaConfiguration">media configuration</a> you want to test, and then pass the audio or video configuration as the parameter of the {{DOMxRef("MediaCapabilities")}} interface's <code>encodingInfo()</code> and <code>decodingInfo()</code> methods.</p>
+To test support, smoothness and power efficiency of a video or audio file, you define the [media configuration](/en-US/docs/Web/API/MediaConfiguration) you want to test, and then pass the audio or video configuration as the parameter of the {{DOMxRef("MediaCapabilities")}} interface's `encodingInfo()` and `decodingInfo()` methods.
 
-<p>Media capabilities information enables websites to enable adaptative streaming to alter the quality of content based on actual user-perceived quality, and react to a pick of CPU/GPU usage in real time.</p>
+Media capabilities information enables websites to enable adaptative streaming to alter the quality of content based on actual user-perceived quality, and react to a pick of CPU/GPU usage in real time.
 
-<h2 id="Media_Capabilities_Interfaces">Media Capabilities Interfaces</h2>
+## Media Capabilities Interfaces
 
-<dl>
-	<dt>{{DOMxRef("MediaCapabilities")}}</dt>
-	<dd>Provides information about the decoding abilities of the device, system and browser based on codecs, profile, resolution, and bitrates. The  information can be used to serve optimal media streams to the user and determine if playback should be smooth and power efficient . </dd>
-	<dt>{{DOMxRef("MediaCapabilitiesInfo")}}</dt>
-	<dd>The interface of the promise returned by  the {{DOMxRef("MediaCapabilities", "mediaCapabilities")}}'s  <a href="/en-US/docs/Web/API/MediaCapabilities/encodingInfo"><code>encodingInfo()</code></a> and <a href="/en-US/docs/Web/API/MediaCapabilities/decodingInfo"><code>decodingInfo()</code></a> methods; returning whether the media configuration tested is  supported, smooth, and power efficient.</dd>
-	<dt>ScreenColorGamut</dt>
-	<dd>Will describe the color gamut, or the range of color, the screen can display (not currently supported anywhere).</dd>
-	<dt>ScreenLuminance</dt>
-	<dd>Will describe the known luminance characteristics of the screen (not currently supported anywhere).</dd>
-</dl>
+- {{DOMxRef("MediaCapabilities")}}
+  - : Provides information about the decoding abilities of the device, system and browser based on codecs, profile, resolution, and bitrates. The  information can be used to serve optimal media streams to the user and determine if playback should be smooth and power efficient .
+- {{DOMxRef("MediaCapabilitiesInfo")}}
+  - : The interface of the promise returned by  the {{DOMxRef("MediaCapabilities", "mediaCapabilities")}}'s  [`encodingInfo()`](/en-US/docs/Web/API/MediaCapabilities/encodingInfo) and [`decodingInfo()`](/en-US/docs/Web/API/MediaCapabilities/decodingInfo) methods; returning whether the media configuration tested is  supported, smooth, and power efficient.
+- ScreenColorGamut
+  - : Will describe the color gamut, or the range of color, the screen can display (not currently supported anywhere).
+- ScreenLuminance
+  - : Will describe the known luminance characteristics of the screen (not currently supported anywhere).
 
-<h2 id="Media_Capabilities_dictionaries">Media Capabilities dictionaries</h2>
+## Media Capabilities dictionaries
 
-<dl>
-	<dt>{{DOMxRef("MediaConfiguration")}}</dt>
-	<dd>Describes how video and audio configuration dictionaries must be configured, or defined, to be passed as a parameter of the {{DOMxRef("MediaCapabilities.encodingInfo()")}} and {{DOMxRef("MediaCapabilities.decodingInfo()")}} methods. It is inherited by the {{DOMxRef("MediaDecodingConfiguration")}} and {{DOMxRef("MediaEncodingConfiguration")}} dictionaries.</dd>
-	<dt>{{DOMxRef("MediaDecodingConfiguration")}}</dt>
-	<dd>Defines the valid values for allowed types of media when the media configuration is submitted as the parameter for {{DOMxRef("MediaCapabilities.decodingInfo()")}}. Consists of a media decoding type and a {{DOMxRef("VideoConfiguration")}} or {{DOMxRef("AudioConfiguration")}} dictionary.</dd>
-	<dt>{{DOMxRef("MediaEncodingConfiguration")}}</dt>
-	<dd>Defines the valid values for allowed types of media when the media configuration is submitted as the parameter for {{DOMxRef("mediaCapabilities.encodingInfo()")}}. Consists of a media encoding type and a {{DOMxRef("VideoConfiguration")}} or {{DOMxRef("AudioConfiguration")}} dictionary.</dd>
-	<dt>{{DOMxRef("VideoConfiguration")}}</dt>
-	<dd>Describes the required video properties that must be configured when querying a video configuration to be passed as part of a {{DOMxRef("MediaConfiguration")}} parameter to the {{DOMxRef("MediaCapabilities.encodingInfo()")}} and {{DOMxRef("MediaCapabilities.decodingInfo()")}} methods.</dd>
-	<dt>{{DOMxRef("AudioConfiguration")}}</dt>
-	<dd>Describes the required audio properties that must be configured when querying an audio configuration to be passed as part of a {{DOMxRef("MediaConfiguration")}} parameter to the {{DOMxRef("MediaCapabilities.encodingInfo()")}} and {{DOMxRef("MediaCapabilities.decodingInfo()")}} methods.</dd>
-</dl>
+- {{DOMxRef("MediaConfiguration")}}
+  - : Describes how video and audio configuration dictionaries must be configured, or defined, to be passed as a parameter of the {{DOMxRef("MediaCapabilities.encodingInfo()")}} and {{DOMxRef("MediaCapabilities.decodingInfo()")}} methods. It is inherited by the {{DOMxRef("MediaDecodingConfiguration")}} and {{DOMxRef("MediaEncodingConfiguration")}} dictionaries.
+- {{DOMxRef("MediaDecodingConfiguration")}}
+  - : Defines the valid values for allowed types of media when the media configuration is submitted as the parameter for {{DOMxRef("MediaCapabilities.decodingInfo()")}}. Consists of a media decoding type and a {{DOMxRef("VideoConfiguration")}} or {{DOMxRef("AudioConfiguration")}} dictionary.
+- {{DOMxRef("MediaEncodingConfiguration")}}
+  - : Defines the valid values for allowed types of media when the media configuration is submitted as the parameter for {{DOMxRef("mediaCapabilities.encodingInfo()")}}. Consists of a media encoding type and a {{DOMxRef("VideoConfiguration")}} or {{DOMxRef("AudioConfiguration")}} dictionary.
+- {{DOMxRef("VideoConfiguration")}}
+  - : Describes the required video properties that must be configured when querying a video configuration to be passed as part of a {{DOMxRef("MediaConfiguration")}} parameter to the {{DOMxRef("MediaCapabilities.encodingInfo()")}} and {{DOMxRef("MediaCapabilities.decodingInfo()")}} methods.
+- {{DOMxRef("AudioConfiguration")}}
+  - : Describes the required audio properties that must be configured when querying an audio configuration to be passed as part of a {{DOMxRef("MediaConfiguration")}} parameter to the {{DOMxRef("MediaCapabilities.encodingInfo()")}} and {{DOMxRef("MediaCapabilities.decodingInfo()")}} methods.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('Media Capabilities')}}</td>
-			<td>{{Spec2('Media Capabilities')}}</td>
-			<td>Initial definition</td>
-		</tr>
-	</tbody>
-</table>
+| Specification                                | Status                                   | Comment            |
+| -------------------------------------------- | ---------------------------------------- | ------------------ |
+| {{SpecName('Media Capabilities')}} | {{Spec2('Media Capabilities')}} | Initial definition |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("api.MediaCapabilities")}}</p>
+{{Compat("api.MediaCapabilities")}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><a href="/en-US/docs/Web/API/HTMLMediaElement">HTMLMediaElement</a>'s method <a href="/en-US/docs/Web/API/HTMLMediaElement/canPlayType">canPlayType()</a></li>
-	<li><a href="/en-US/docs/Web/API/MediaSource">MediaSource</a>'s method <a href="/en-US/docs/Web/API/MediaSource/isTypeSupported">isTypeSupported()</a></li>
-	<li>{{DOMxRef("Navigator")}} interface</li>
-	<li><a href="/en-US/docs/Web/API/Media_Capabilities_API/Using_the_Media_Capabilities_API">Using the Media Capabilities API</a></li>
-</ul>
+- [HTMLMediaElement](/en-US/docs/Web/API/HTMLMediaElement)'s method [canPlayType()](/en-US/docs/Web/API/HTMLMediaElement/canPlayType)
+- [MediaSource](/en-US/docs/Web/API/MediaSource)'s method [isTypeSupported()](/en-US/docs/Web/API/MediaSource/isTypeSupported)
+- {{DOMxRef("Navigator")}} interface
+- [Using the Media Capabilities API](/en-US/docs/Web/API/Media_Capabilities_API/Using_the_Media_Capabilities_API)

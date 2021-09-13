@@ -2,56 +2,55 @@
 title: WebGL2RenderingContext.uniformBlockBinding()
 slug: Web/API/WebGL2RenderingContext/uniformBlockBinding
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGL2
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGL2
 browser-compat: api.WebGL2RenderingContext.uniformBlockBinding
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGL2RenderingContext.uniformBlockBinding()</code></strong> method
-  of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL 2 API</a> assigns binding points
-  for active uniform blocks.</p>
+The **`WebGL2RenderingContext.uniformBlockBinding()`** method
+of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) assigns binding points
+for active uniform blocks.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">void <var>gl</var>.uniformBlockBinding(<var>program</var>, <var>uniformBlockIndex</var>, <var>uniformBlockBinding</var>);</pre>
+```js
+void gl.uniformBlockBinding(program, uniformBlockIndex, uniformBlockBinding);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>program</code></dt>
-  <dd>A {{domxref("WebGLProgram")}} containing the active uniform block whose binding to
-    assign.</dd>
-  <dt><code>uniformBlockIndex</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLuint")}} specifying the index of the active uniform block within the
-    program.</dd>
-  <dt>uniformBlockBinding</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLuint")}} specifying the binding point to which to bind the uniform
-    block.</dd>
-</dl>
+- `program`
+  - : A {{domxref("WebGLProgram")}} containing the active uniform block whose binding to
+    assign.
+- `uniformBlockIndex`
+  - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the index of the active uniform block within the
+    program.
+- uniformBlockBinding
+  - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the binding point to which to bind the uniform
+    block.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">gl.uniformBlockBinding(program, 0, 1);</pre>
+```js
+gl.uniformBlockBinding(program, 0, 1);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGL2RenderingContext.getUniformIndices()")}}</li>
-</ul>
+- {{domxref("WebGL2RenderingContext.getUniformIndices()")}}

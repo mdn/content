@@ -2,36 +2,38 @@
 title: FontFace.stretch
 slug: Web/API/FontFace/stretch
 tags:
-- API
-- CSS Font Loading API
-- CSSOM
-- FontFace
-- Fonts
-- Property
-- Reference
-- stretch
+  - API
+  - CSS Font Loading API
+  - CSSOM
+  - FontFace
+  - Fonts
+  - Property
+  - Reference
+  - stretch
 browser-compat: api.FontFace.stretch
 ---
-<div>{{APIRef("CSS Font Loading API")}}</div>
+{{APIRef("CSS Font Loading API")}}
 
-<p>The <strong><code>stretch</code></strong> property of the
-  {{domxref("FontFace")}} interface retrieves or sets how the font stretches. It is
-  equivalent to the {{cssxref("@font-face/font-stretch", "font-stretch")}} descriptor.</p>
+The **`stretch`** property of the
+{{domxref("FontFace")}} interface retrieves or sets how the font stretches. It is
+equivalent to the {{cssxref("@font-face/font-stretch", "font-stretch")}} descriptor.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let stretchDescriptor = FontFace.stretch;
-FontFace.stretch = stretchDescriptor;</pre>
+```js
+let stretchDescriptor = FontFace.stretch;
+FontFace.stretch = stretchDescriptor;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref('CSSOMString')}} containing a descriptor as it would be defined in a style
-  sheet's <code>@font-face</code> rule.</p>
+A {{domxref('CSSOMString')}} containing a descriptor as it would be defined in a style
+sheet's `@font-face` rule.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

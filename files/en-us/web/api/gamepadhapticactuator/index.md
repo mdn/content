@@ -13,40 +13,34 @@ tags:
   - WebVR
 browser-compat: api.GamepadHapticActuator
 ---
-<div>{{APIRef("Gamepad API")}}{{SeeCompatTable}}{{securecontext_header}}</div>
+{{APIRef("Gamepad API")}}{{SeeCompatTable}}{{securecontext_header}}
 
-<p>The <strong><code>GamepadHapticActuator</code></strong> interface of the <a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a> represents hardware in the controller designed to provide haptic feedback to the user (if available), most commonly vibration hardware.</p>
+The **`GamepadHapticActuator`** interface of the [Gamepad API](/en-US/docs/Web/API/Gamepad_API) represents hardware in the controller designed to provide haptic feedback to the user (if available), most commonly vibration hardware.
 
-<p>This interface is accessible through the {{domxref("Gamepad.hapticActuators")}} property.</p>
+This interface is accessible through the {{domxref("Gamepad.hapticActuators")}} property.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("GamepadHapticActuator.type")}} {{readonlyInline}}</dt>
- <dd>Returns an enum representing the type of the haptic hardware.</dd>
-</dl>
+- {{domxref("GamepadHapticActuator.type")}} {{readonlyInline}}
+  - : Returns an enum representing the type of the haptic hardware.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("GamepadHapticActuator.pulse()")}} {{readonlyInline}}</dt>
- <dd>Makes the hardware pulse at a certain intensity for a specified duration.</dd>
-</dl>
+- {{domxref("GamepadHapticActuator.pulse()")}} {{readonlyInline}}
+  - : Makes the hardware pulse at a certain intensity for a specified duration.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>TBD.</p>
+TBD.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a></li>
-</ul>
+- [Gamepad API](/en-US/docs/Web/API/Gamepad_API)

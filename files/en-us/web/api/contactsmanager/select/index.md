@@ -2,77 +2,74 @@
 title: ContactsManager.select()
 slug: Web/API/ContactsManager/select
 tags:
-- Contact Picker API
-- Contacts
-- ContactsPicker
-- Method
-- PWA
-- contact picker
+  - Contact Picker API
+  - Contacts
+  - ContactsPicker
+  - Method
+  - PWA
+  - contact picker
 browser-compat: api.ContactsManager.select
 ---
-<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Contact Picker API")}}</div>
+{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Contact Picker API")}}
 
-<p>The <strong><code>select()</code></strong> method of the
-  {{domxref("ContactsManager")}} interface returns a {{jsxref('Promise')}} which, when
-  resolved, presents the user with a contact picker which allows them to select contact(s)
-  they wish to share. This method requires a user gesture for the {{jsxref('Promise')}} to
-  resolve.</p>
+The **`select()`** method of the
+{{domxref("ContactsManager")}} interface returns a {{jsxref('Promise')}} which, when
+resolved, presents the user with a contact picker which allows them to select contact(s)
+they wish to share. This method requires a user gesture for the {{jsxref('Promise')}} to
+resolve.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <var>ContactInfo</var> = ContactsManager.select(properties, options);</pre>
+```js
+var ContactInfo = ContactsManager.select(properties, options);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><em>properties</em></dt>
-  <dd>An array of {{jsxref('String', 'strings')}} defining what information to retrieve
+- _properties_
+
+  - : An array of {{jsxref('String', 'strings')}} defining what information to retrieve
     from a contact. Allowed values are as follows:
-    <ul>
-      <li><code>'name'</code>: The contact's name.</li>
-      <li><code>'tel'</code>: The telephone number(s) of the contact.</li>
-      <li><code>'email'</code>: The email address of the contact.</li>
-      <li><code>'address'</code>: The contact's postal address.</li>
-      <li><code>'icon'</code>: The avatar of the contact.</li>
-    </ul>
-  </dd>
-  <dt><code>options</code> {{optional_inline}}</dt>
-  <dd>Options are as follows:
-    <ul>
-      <li><code>multiple</code>: A Boolean that allows multiple contacts to be selected.
-        The default is <code>false</code>.</li>
-    </ul>
-  </dd>
-</dl>
 
-<h3 id="Return_value">Return value</h3>
+    - `'name'`: The contact's name.
+    - `'tel'`: The telephone number(s) of the contact.
+    - `'email'`: The email address of the contact.
+    - `'address'`: The contact's postal address.
+    - `'icon'`: The avatar of the contact.
 
-<p>Returns a {{jsxref('Promise')}} which resolves on successful contact selection.</p>
+- `options` {{optional_inline}}
 
-<h3 id="Exceptions">Exceptions</h3>
+  - : Options are as follows:
 
-<dl>
-  <dt><code>InvalidStateError</code></dt>
-  <dd>The browsing context is not top-level or the contact picker is showing a flag. A
+    - `multiple`: A Boolean that allows multiple contacts to be selected.
+      The default is `false`.
+
+### Return value
+
+Returns a {{jsxref('Promise')}} which resolves on successful contact selection.
+
+### Exceptions
+
+- `InvalidStateError`
+  - : The browsing context is not top-level or the contact picker is showing a flag. A
     flag denotes an already existing contact picker, only one picker can exist at any
-    time.</dd>
-  <dt><code>SecurityError</code></dt>
-  <dd>If the method is not triggered by user interaction.</dd>
-  <dt><code>TypeError</code></dt>
-  <dd>If <code>properties</code> is empty, or if any of the specified properties are not
-    supported.</dd>
-</dl>
+    time.
+- `SecurityError`
+  - : If the method is not triggered by user interaction.
+- `TypeError`
+  - : If `properties` is empty, or if any of the specified properties are not
+    supported.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example sets an array of properties to be retrieved for each contact, as
-  well as setting an options object to allow for multiple contacts to be selected.</p>
+The following example sets an array of properties to be retrieved for each contact, as
+well as setting an options object to allow for multiple contacts to be selected.
 
-<p>An asynchronous function is then defined which uses the <code>select()</code> method to
-  present the user with a contact picker interface and handle the chosen results.</p>
+An asynchronous function is then defined which uses the `select()` method to
+present the user with a contact picker interface and handle the chosen results.
 
-<pre class="brush: js">const props = ['name', 'email', 'tel', 'address', 'icon'];
+```js
+const props = ['name', 'email', 'tel', 'address', 'icon'];
 const opts = {multiple: true};
 
 async function getContacts() {
@@ -82,14 +79,15 @@ async function getContacts() {
   } catch (ex) {
       // Handle any errors here.
   }
-}</pre>
+}
+```
 
-<p><code>handleResults()</code> is a developer defined function.</p>
+`handleResults()` is a developer defined function.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -9,36 +9,35 @@ tags:
   - Web Audio API
 browser-compat: api.AnalyserNode.getFloatTimeDomainData
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>The <strong><code>getFloatTimeDomainData()</code></strong> method of the {{ domxref("AnalyserNode") }} Interface copies the current waveform, or time-domain, data into a {{jsxref("Float32Array")}} array passed into it.</p>
+The **`getFloatTimeDomainData()`** method of the {{ domxref("AnalyserNode") }} Interface copies the current waveform, or time-domain, data into a {{jsxref("Float32Array")}} array passed into it.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var audioCtx = new AudioContext();
+```js
+var audioCtx = new AudioContext();
 var analyser = audioCtx.createAnalyser();
 var dataArray = new Float32Array(analyser.fftSize); // Float32Array needs to be the same length as the fftSize
 analyser.getFloatTimeDomainData(dataArray); // fill the Float32Array with data returned from getFloatTimeDomainData()
-</pre>
+```
 
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+- `array`
+  - : The {{jsxref("Float32Array")}} that the time domain data will be copied to.
+    If the array has fewer elements than the {{domxref("AnalyserNode.frequencyBinCount")}}, excess elements are dropped. If it has more elements than needed, excess elements are ignored.
 
-<dl>
- <dt><code>array</code></dt>
- <dd>The {{jsxref("Float32Array")}} that the time domain data will be copied to.<br>
- If the array has fewer elements than the {{domxref("AnalyserNode.frequencyBinCount")}}, excess elements are dropped. If it has more elements than needed, excess elements are ignored.</dd>
-</dl>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+None.
 
-<p>None.</p>
+## Example
 
-<h2 id="Example">Example</h2>
+The following example shows basic usage of an {{domxref("AudioContext")}} to create an `AnalyserNode`, then {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} and {{htmlelement("canvas")}} to collect time domain data repeatedly and draw an "oscilloscope style" output of the current audio input. For more complete applied examples/information, check out our [Voice-change-O-matic-float-data](https://mdn.github.io/voice-change-o-matic-float-data/) demo (see the [source code](https://github.com/mdn/voice-change-o-matic-float-data) too).
 
-<p>The following example shows basic usage of an {{domxref("AudioContext")}} to create an <code>AnalyserNode</code>, then {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} and {{htmlelement("canvas")}} to collect time domain data repeatedly and draw an "oscilloscope style" output of the current audio input. For more complete applied examples/information, check out our <a href="https://mdn.github.io/voice-change-o-matic-float-data/">Voice-change-O-matic-float-data</a> demo (see the <a href="https://github.com/mdn/voice-change-o-matic-float-data">source code</a> too).</p>
-
-<pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+```js
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var analyser = audioCtx.createAnalyser();
 
   ...
@@ -63,7 +62,7 @@ function draw() {
   var sliceWidth = WIDTH * 1.0 / bufferLength;
   var x = 0;
 
-  for(var i = 0; i &lt; bufferLength; i++) {
+  for(var i = 0; i < bufferLength; i++) {
     var v = dataArray[i] * 200.0;
     var y = HEIGHT/2 + v;
 
@@ -79,26 +78,22 @@ function draw() {
   canvasCtx.stroke();
 };
 
-draw();</pre>
+draw();
+```
 
+## Parameters
 
-<h2 id="Parameters_2">Parameters</h2>
+- array
+  - : The {{jsxref("Float32Array")}} that the time domain data will be copied to.
 
-<dl>
- <dt>array</dt>
- <dd>The {{jsxref("Float32Array")}} that the time domain data will be copied to.</dd>
-</dl>
-
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

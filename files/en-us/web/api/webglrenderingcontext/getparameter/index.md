@@ -2,42 +2,40 @@
 title: WebGLRenderingContext.getParameter()
 slug: Web/API/WebGLRenderingContext/getParameter
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGLRenderingContext
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getParameter
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGLRenderingContext.getParameter()</code></strong> method of the <a
-    href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> returns a value for the passed
-  parameter name.</p>
+The **`WebGLRenderingContext.getParameter()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) returns a value for the passed
+parameter name.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">any <var>gl</var>.getParameter(<var>pname</var>);
-</pre>
+```js
+any gl.getParameter(pname);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>pname</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying which parameter value to return. See below for
-    possible values.</dd>
-</dl>
+- `pname`
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying which parameter value to return. See below for
+    possible values.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Depends on the parameter.</p>
+Depends on the parameter.
 
-<h2 id="Parameter_names">Parameter names</h2>
+## Parameter names
 
-<h3 id="WebGL_1">WebGL 1</h3>
+### WebGL 1
 
-<p>You can query the following <code>pname</code> parameters when using a
-  {{domxref("WebGLRenderingContext")}}.</p>
+You can query the following `pname` parameters when using a
+{{domxref("WebGLRenderingContext")}}.
 
 <table class="no-markdown">
   <thead>
@@ -130,32 +128,37 @@ browser-compat: api.WebGLRenderingContext.getParameter
     </tr>
     <tr>
       <td><code>gl.COLOR_WRITEMASK</code></td>
-      <td>sequence&lt;{{domxref("WebGL_API/Types", "GLboolean")}}&gt; (with 4 values)</td>
+      <td>
+        sequence&#x3C;{{domxref("WebGL_API/Types", "GLboolean")}}>
+        (with 4 values)
+      </td>
       <td></td>
     </tr>
     <tr>
       <td><code>gl.COMPRESSED_TEXTURE_FORMATS</code></td>
       <td>{{jsxref("Uint32Array")}}</td>
-      <td>Returns the compressed texture formats.<br>
-        <br>
-        When using the {{domxref("WEBGL_compressed_texture_s3tc")}} extension:
+      <td>
+        Returns the compressed texture formats.<br /><br />When using the
+        {{domxref("WEBGL_compressed_texture_s3tc")}} extension:
         <ul>
           <li><code>ext.COMPRESSED_RGB_S3TC_DXT1_EXT</code></li>
           <li><code>ext.COMPRESSED_RGBA_S3TC_DXT1_EXT</code></li>
           <li><code>ext.COMPRESSED_RGBA_S3TC_DXT3_EXT</code></li>
           <li><code>ext.COMPRESSED_RGBA_S3TC_DXT5_EXT</code></li>
         </ul>
-
-        <p>When using the {{domxref("WEBGL_compressed_texture_s3tc_srgb")}} extension:</p>
-
+        <p>
+          When using the
+          {{domxref("WEBGL_compressed_texture_s3tc_srgb")}}
+          extension:
+        </p>
         <ul>
           <li><code>ext.COMPRESSED_SRGB_S3TC_DXT1_EXT</code></li>
           <li><code>ext.COMPRESSED_SRGB_ALPHA_S3TC_DXT1_EXT</code></li>
           <li><code>ext.COMPRESSED_SRGB_ALPHA_S3TC_DXT3_EXT</code></li>
           <li><code>ext.COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT</code></li>
         </ul>
-        When using the {{domxref("WEBGL_compressed_texture_etc")}} extension:
-
+        When using the {{domxref("WEBGL_compressed_texture_etc")}}
+        extension:
         <ul>
           <li><code>ext.COMPRESSED_R11_EAC</code></li>
           <li><code>ext.COMPRESSED_SIGNED_R11_EAC</code></li>
@@ -168,21 +171,21 @@ browser-compat: api.WebGLRenderingContext.getParameter
           <li><code>ext.COMPRESSED_RGB8_PUNCHTHROUGH_ALPHA1_ETC2</code></li>
           <li><code>ext.COMPRESSED_SRGB8_PUNCHTHROUGH_ALPHA1_ETC2</code></li>
         </ul>
-        When using the {{domxref("WEBGL_compressed_texture_pvrtc")}} extension:
-
+        When using the
+        {{domxref("WEBGL_compressed_texture_pvrtc")}} extension:
         <ul>
           <li><code>ext.COMPRESSED_RGB_PVRTC_4BPPV1_IMG</code></li>
           <li><code>ext.COMPRESSED_RGBA_PVRTC_4BPPV1_IMG</code></li>
           <li><code>ext.COMPRESSED_RGB_PVRTC_2BPPV1_IMG</code></li>
           <li><code>ext.COMPRESSED_RGBA_PVRTC_2BPPV1_IMG</code></li>
         </ul>
-        When using the {{domxref("WEBGL_compressed_texture_etc1")}} extension:
-
+        When using the
+        {{domxref("WEBGL_compressed_texture_etc1")}} extension:
         <ul>
           <li><code>ext.COMPRESSED_RGB_ETC1_WEBGL</code></li>
         </ul>
-        When using the {{domxref("WEBGL_compressed_texture_astc")}} extension:
-
+        When using the
+        {{domxref("WEBGL_compressed_texture_astc")}} extension:
         <ul>
           <li><code>ext.COMPRESSED_RGBA_ASTC_4x4_KHR</code></li>
           <li><code>ext.COMPRESSED_SRGB8_ALPHA8_ASTC_4x4_KHR</code></li>
@@ -223,13 +226,19 @@ browser-compat: api.WebGLRenderingContext.getParameter
     <tr>
       <td><code>gl.CULL_FACE_MODE</code></td>
       <td>{{domxref("WebGL_API/Types", "GLenum")}}</td>
-      <td><code>gl.FRONT</code>, <code>gl.BACK</code> or <code>gl.FRONT_AND_BACK</code>.
-        See also {{domxref("WebGLRenderingContext/cullFace", "cullFace")}}</td>
+      <td>
+        <code>gl.FRONT</code>, <code>gl.BACK</code> or
+        <code>gl.FRONT_AND_BACK</code>. See also
+        {{domxref("WebGLRenderingContext/cullFace", "cullFace")}}
+      </td>
     </tr>
     <tr>
       <td><code>gl.CURRENT_PROGRAM</code></td>
       <td>{{domxref("WebGLProgram")}} or <code>null</code></td>
-      <td>See {{domxref("WebGLRenderingContext/useProgram", "useProgram")}}.</td>
+      <td>
+        See
+        {{domxref("WebGLRenderingContext/useProgram", "useProgram")}}.
+      </td>
     </tr>
     <tr>
       <td><code>gl.DEPTH_BITS</code></td>
@@ -274,20 +283,28 @@ browser-compat: api.WebGLRenderingContext.getParameter
     <tr>
       <td><code>gl.FRAMEBUFFER_BINDING</code></td>
       <td>{{domxref("WebGLFramebuffer")}} or <code>null</code></td>
-      <td><code>null</code> corresponds to a binding to the default framebuffer. See also
-        {{domxref("WebGLRenderingContext/bindFramebuffer", "bindFramebuffer")}}.</td>
+      <td>
+        <code>null</code> corresponds to a binding to the default framebuffer.
+        See also
+        {{domxref("WebGLRenderingContext/bindFramebuffer", "bindFramebuffer")}}.
+      </td>
     </tr>
     <tr>
       <td><code>gl.FRONT_FACE</code></td>
       <td>{{domxref("WebGL_API/Types", "GLenum")}}</td>
-      <td><code>gl.CW</code> or <code>gl.CCW</code>. See also
-        {{domxref("WebGLRenderingContext/frontFace", "frontFace")}}.</td>
+      <td>
+        <code>gl.CW</code> or <code>gl.CCW</code>. See also
+        {{domxref("WebGLRenderingContext/frontFace", "frontFace")}}.
+      </td>
     </tr>
     <tr>
       <td><code>gl.GENERATE_MIPMAP_HINT</code></td>
       <td>{{domxref("WebGL_API/Types", "GLenum")}}</td>
-      <td><code>gl.FASTEST</code>, <code>gl.NICEST</code> or <code>gl.DONT_CARE</code>.
-        See also {{domxref("WebGLRenderingContext/hint", "hint")}}.</td>
+      <td>
+        <code>gl.FASTEST</code>, <code>gl.NICEST</code> or
+        <code>gl.DONT_CARE</code>. See also
+        {{domxref("WebGLRenderingContext/hint", "hint")}}.
+      </td>
     </tr>
     <tr>
       <td><code>gl.GREEN_BITS</code></td>
@@ -392,7 +409,9 @@ browser-compat: api.WebGLRenderingContext.getParameter
     <tr>
       <td><code>gl.RENDERBUFFER_BINDING</code></td>
       <td>{{domxref("WebGLRenderbuffer")}} or <code>null</code></td>
-      <td>See {{domxref("WebGLRenderingContext/bindRenderbuffer", "bindRenderbuffer")}}.
+      <td>
+        See
+        {{domxref("WebGLRenderingContext/bindRenderbuffer", "bindRenderbuffer")}}.
       </td>
     </tr>
     <tr>
@@ -573,10 +592,10 @@ browser-compat: api.WebGLRenderingContext.getParameter
   </tbody>
 </table>
 
-<h3 id="WebGL_2">WebGL 2</h3>
+### WebGL 2
 
-<p>You can query the following <code>pname</code> parameters when using a
-  {{domxref("WebGL2RenderingContext")}}.</p>
+You can query the following `pname` parameters when using a
+{{domxref("WebGL2RenderingContext")}}.
 
 <table class="no-markdown">
   <thead>
@@ -590,31 +609,47 @@ browser-compat: api.WebGLRenderingContext.getParameter
     <tr>
       <td><code>gl.COPY_READ_BUFFER_BINDING</code></td>
       <td>{{domxref("WebGLBuffer")}} or <code>null</code></td>
-      <td>See {{domxref("WebGLRenderingContext/bindBuffer", "bindBuffer")}}.</td>
+      <td>
+        See
+        {{domxref("WebGLRenderingContext/bindBuffer", "bindBuffer")}}.
+      </td>
     </tr>
     <tr>
       <td><code>gl.COPY_WRITE_BUFFER_BINDING</code></td>
       <td>{{domxref("WebGLBuffer")}} or <code>null</code></td>
-      <td>See {{domxref("WebGLRenderingContext/bindBuffer", "bindBuffer")}}.</td>
+      <td>
+        See
+        {{domxref("WebGLRenderingContext/bindBuffer", "bindBuffer")}}.
+      </td>
     </tr>
     <tr>
-      <td><code>gl.DRAW_BUFFER<em>i</em></code></td>
+      <td>
+        <code>gl.DRAW_BUFFER<em>i</em></code>
+      </td>
       <td>{{domxref("WebGL_API/Types", "GLenum")}}</td>
-      <td><code>gl.BACK</code>, <code>gl.NONE</code> or
+      <td>
+        <code>gl.BACK</code>, <code>gl.NONE</code> or
         <code>gl.COLOR_ATTACHMENT{0-15}</code>. See also
-        {{domxref("WebGL2RenderingContext/drawBuffers", "drawBuffers")}}.</td>
+        {{domxref("WebGL2RenderingContext/drawBuffers", "drawBuffers")}}.
+      </td>
     </tr>
     <tr>
       <td><code>gl.DRAW_FRAMEBUFFER_BINDING</code></td>
       <td>{{domxref("WebGLFramebuffer")}} or <code>null</code></td>
-      <td><code>null</code> corresponds to a binding to the default framebuffer. See also
-        {{domxref("WebGLRenderingContext/bindFramebuffer", "bindFramebuffer")}}.</td>
+      <td>
+        <code>null</code> corresponds to a binding to the default framebuffer.
+        See also
+        {{domxref("WebGLRenderingContext/bindFramebuffer", "bindFramebuffer")}}.
+      </td>
     </tr>
     <tr>
       <td><code>gl.FRAGMENT_SHADER_DERIVATIVE_HINT</code></td>
       <td>{{domxref("WebGL_API/Types", "GLenum")}}</td>
-      <td><code>gl.FASTEST</code>, <code>gl.NICEST</code> or <code>gl.DONT_CARE</code>.
-        See also {{domxref("WebGLRenderingContext/hint", "hint")}}.</td>
+      <td>
+        <code>gl.FASTEST</code>, <code>gl.NICEST</code> or
+        <code>gl.DONT_CARE</code>. See also
+        {{domxref("WebGLRenderingContext/hint", "hint")}}.
+      </td>
     </tr>
     <tr>
       <td><code>gl.MAX_3D_TEXTURE_SIZE</code></td>
@@ -759,27 +794,42 @@ browser-compat: api.WebGLRenderingContext.getParameter
     <tr>
       <td><code>gl.PACK_ROW_LENGTH</code></td>
       <td>{{domxref("WebGL_API/Types", "GLint")}}</td>
-      <td>See {{domxref("WebGLRenderingContext/pixelStorei", "pixelStorei")}}.</td>
+      <td>
+        See
+        {{domxref("WebGLRenderingContext/pixelStorei", "pixelStorei")}}.
+      </td>
     </tr>
     <tr>
       <td><code>gl.PACK_SKIP_PIXELS</code></td>
       <td>{{domxref("WebGL_API/Types", "GLint")}}</td>
-      <td>See {{domxref("WebGLRenderingContext/pixelStorei", "pixelStorei")}}.</td>
+      <td>
+        See
+        {{domxref("WebGLRenderingContext/pixelStorei", "pixelStorei")}}.
+      </td>
     </tr>
     <tr>
       <td><code>gl.PACK_SKIP_ROWS</code></td>
       <td>{{domxref("WebGL_API/Types", "GLint")}}</td>
-      <td>See {{domxref("WebGLRenderingContext/pixelStorei", "pixelStorei")}}.</td>
+      <td>
+        See
+        {{domxref("WebGLRenderingContext/pixelStorei", "pixelStorei")}}.
+      </td>
     </tr>
     <tr>
       <td><code>gl.PIXEL_PACK_BUFFER_BINDING</code></td>
       <td>{{domxref("WebGLBuffer")}} or <code>null</code></td>
-      <td>See {{domxref("WebGLRenderingContext/bindBuffer", "bindBuffer")}}.</td>
+      <td>
+        See
+        {{domxref("WebGLRenderingContext/bindBuffer", "bindBuffer")}}.
+      </td>
     </tr>
     <tr>
       <td><code>gl.PIXEL_UNPACK_BUFFER_BINDING</code></td>
       <td>{{domxref("WebGLBuffer")}} or <code>null</code></td>
-      <td>See {{domxref("WebGLRenderingContext/bindBuffer", "bindBuffer")}}.</td>
+      <td>
+        See
+        {{domxref("WebGLRenderingContext/bindBuffer", "bindBuffer")}}.
+      </td>
     </tr>
     <tr>
       <td><code>gl.RASTERIZER_DISCARD</code></td>
@@ -794,8 +844,11 @@ browser-compat: api.WebGLRenderingContext.getParameter
     <tr>
       <td><code>gl.READ_FRAMEBUFFER_BINDING</code></td>
       <td>{{domxref("WebGLFramebuffer")}} or <code>null</code></td>
-      <td><code>null</code> corresponds to a binding to the default framebuffer. See also
-        {{domxref("WebGLRenderingContext/bindFramebuffer", "bindFramebuffer")}}.</td>
+      <td>
+        <code>null</code> corresponds to a binding to the default framebuffer.
+        See also
+        {{domxref("WebGLRenderingContext/bindFramebuffer", "bindFramebuffer")}}.
+      </td>
     </tr>
     <tr>
       <td><code>gl.SAMPLE_ALPHA_TO_COVERAGE</code></td>
@@ -810,17 +863,26 @@ browser-compat: api.WebGLRenderingContext.getParameter
     <tr>
       <td><code>gl.SAMPLER_BINDING</code></td>
       <td>{{domxref("WebGLSampler")}} or <code>null</code></td>
-      <td>See {{domxref("WebGL2RenderingContext/bindSampler", "bindSampler")}}.</td>
+      <td>
+        See
+        {{domxref("WebGL2RenderingContext/bindSampler", "bindSampler")}}.
+      </td>
     </tr>
     <tr>
       <td><code>gl.TEXTURE_BINDING_2D_ARRAY</code></td>
       <td>{{domxref("WebGLTexture")}} or <code>null</code></td>
-      <td>See {{domxref("WebGLRenderingContext/bindTexture", "bindTexture")}}.</td>
+      <td>
+        See
+        {{domxref("WebGLRenderingContext/bindTexture", "bindTexture")}}.
+      </td>
     </tr>
     <tr>
       <td><code>gl.TEXTURE_BINDING_3D</code></td>
       <td>{{domxref("WebGLTexture")}} or <code>null</code></td>
-      <td>See {{domxref("WebGLRenderingContext/bindTexture", "bindTexture")}}.</td>
+      <td>
+        See
+        {{domxref("WebGLRenderingContext/bindTexture", "bindTexture")}}.
+      </td>
     </tr>
     <tr>
       <td><code>gl.TRANSFORM_FEEDBACK_ACTIVE</code></td>
@@ -829,14 +891,22 @@ browser-compat: api.WebGLRenderingContext.getParameter
     </tr>
     <tr>
       <td><code>gl.TRANSFORM_FEEDBACK_BINDING</code></td>
-      <td>{{domxref("WebGLTransformFeedback")}} or <code>null</code></td>
-      <td>See {{domxref("WebGL2RenderingContext/bindTransformFeedback",
-        "bindTransformFeedback")}}.</td>
+      <td>
+        {{domxref("WebGLTransformFeedback")}} or <code>null</code>
+      </td>
+      <td>
+        See
+        {{domxref("WebGL2RenderingContext/bindTransformFeedback",
+        "bindTransformFeedback")}}.
+      </td>
     </tr>
     <tr>
       <td><code>gl.TRANSFORM_FEEDBACK_BUFFER_BINDING</code></td>
       <td>{{domxref("WebGLBuffer")}} or <code>null</code></td>
-      <td>See {{domxref("WebGLRenderingContext/bindBuffer", "bindBuffer")}}.</td>
+      <td>
+        See
+        {{domxref("WebGLRenderingContext/bindBuffer", "bindBuffer")}}.
+      </td>
     </tr>
     <tr>
       <td><code>gl.TRANSFORM_FEEDBACK_PAUSED</code></td>
@@ -846,51 +916,75 @@ browser-compat: api.WebGLRenderingContext.getParameter
     <tr>
       <td><code>gl.UNIFORM_BUFFER_BINDING</code></td>
       <td>{{domxref("WebGLBuffer")}} or <code>null</code></td>
-      <td>See {{domxref("WebGLRenderingContext/bindBuffer", "bindBuffer")}}.</td>
+      <td>
+        See
+        {{domxref("WebGLRenderingContext/bindBuffer", "bindBuffer")}}.
+      </td>
     </tr>
     <tr>
       <td><code>gl.UNIFORM_BUFFER_OFFSET_ALIGNMENT</code></td>
       <td>{{domxref("WebGL_API/Types", "GLint")}}</td>
-      <td>See {{domxref("WebGLRenderingContext/pixelStorei", "pixelStorei")}}.</td>
+      <td>
+        See
+        {{domxref("WebGLRenderingContext/pixelStorei", "pixelStorei")}}.
+      </td>
     </tr>
     <tr>
       <td><code>gl.UNPACK_IMAGE_HEIGHT</code></td>
       <td>{{domxref("WebGL_API/Types", "GLint")}}</td>
-      <td>See {{domxref("WebGLRenderingContext/pixelStorei", "pixelStorei")}}.</td>
+      <td>
+        See
+        {{domxref("WebGLRenderingContext/pixelStorei", "pixelStorei")}}.
+      </td>
     </tr>
     <tr>
       <td><code>gl.UNPACK_ROW_LENGTH</code></td>
       <td>{{domxref("WebGL_API/Types", "GLint")}}</td>
-      <td>See {{domxref("WebGLRenderingContext/pixelStorei", "pixelStorei")}}.</td>
+      <td>
+        See
+        {{domxref("WebGLRenderingContext/pixelStorei", "pixelStorei")}}.
+      </td>
     </tr>
     <tr>
       <td><code>gl.UNPACK_SKIP_IMAGES</code></td>
       <td>{{domxref("WebGL_API/Types", "GLint")}}</td>
-      <td>See {{domxref("WebGLRenderingContext/pixelStorei", "pixelStorei")}}.</td>
+      <td>
+        See
+        {{domxref("WebGLRenderingContext/pixelStorei", "pixelStorei")}}.
+      </td>
     </tr>
     <tr>
       <td><code>gl.UNPACK_SKIP_PIXELS</code></td>
       <td>{{domxref("WebGL_API/Types", "GLint")}}</td>
-      <td>See {{domxref("WebGLRenderingContext/pixelStorei", "pixelStorei")}}.</td>
+      <td>
+        See
+        {{domxref("WebGLRenderingContext/pixelStorei", "pixelStorei")}}.
+      </td>
     </tr>
     <tr>
       <td><code>gl.UNPACK_SKIP_ROWS</code></td>
       <td>{{domxref("WebGL_API/Types", "GLint")}}</td>
-      <td>See {{domxref("WebGLRenderingContext/pixelStorei", "pixelStorei")}}.</td>
+      <td>
+        See
+        {{domxref("WebGLRenderingContext/pixelStorei", "pixelStorei")}}.
+      </td>
     </tr>
     <tr>
       <td><code>gl.VERTEX_ARRAY_BINDING</code></td>
-      <td>{{domxref("WebGLVertexArrayObject")}} or <code>null</code></td>
-      <td>See {{domxref("WebGL2RenderingContext/bindVertexArray", "bindVertexArray")}}.
+      <td>
+        {{domxref("WebGLVertexArrayObject")}} or <code>null</code>
+      </td>
+      <td>
+        See
+        {{domxref("WebGL2RenderingContext/bindVertexArray", "bindVertexArray")}}.
       </td>
     </tr>
   </tbody>
 </table>
 
-<h3 id="WebGL_extensions">WebGL extensions</h3>
+### WebGL extensions
 
-<p>You can query the following <code>pname</code> parameters when using <a
-    href="/en-US/docs/Web/API/WebGL_API/Using_Extensions">WebGL extensions</a>:</p>
+You can query the following `pname` parameters when using [WebGL extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions):
 
 <table class="no-markdown">
   <thead>
@@ -912,8 +1006,10 @@ browser-compat: api.WebGLRenderingContext.getParameter
       <td><code>ext.FRAGMENT_SHADER_DERIVATIVE_HINT_OES</code></td>
       <td>{{domxref("WebGL_API/Types", "GLenum")}}</td>
       <td>{{domxref("OES_standard_derivatives")}}</td>
-      <td>Accuracy of the derivative calculation for the GLSL built-in functions:
-        <code>dFdx</code>, <code>dFdy</code>, and <code>fwidth</code>.</td>
+      <td>
+        Accuracy of the derivative calculation for the GLSL built-in functions:
+        <code>dFdx</code>, <code>dFdy</code>, and <code>fwidth</code>.
+      </td>
     </tr>
     <tr>
       <td><code>ext.MAX_COLOR_ATTACHMENTS_WEBGL</code></td>
@@ -928,38 +1024,27 @@ browser-compat: api.WebGLRenderingContext.getParameter
       <td>The maximum number of draw buffers.</td>
     </tr>
     <tr>
-      <td><code>ext.DRAW_BUFFER0_WEBGL<br>
-    ext.DRAW_BUFFER1_WEBGL<br>
-    ext.DRAW_BUFFER2_WEBGL<br>
-    ext.DRAW_BUFFER3_WEBGL<br>
-    ext.DRAW_BUFFER4_WEBGL<br>
-    ext.DRAW_BUFFER5_WEBGL<br>
-    ext.DRAW_BUFFER6_WEBGL<br>
-    ext.DRAW_BUFFER7_WEBGL<br>
-    ext.DRAW_BUFFER8_WEBGL<br>
-    ext.DRAW_BUFFER9_WEBGL<br>
-    ext.DRAW_BUFFER10_WEBGL<br>
-    ext.DRAW_BUFFER11_WEBGL<br>
-    ext.DRAW_BUFFER12_WEBGL<br>
-    ext.DRAW_BUFFER13_WEBGL<br>
-    ext.DRAW_BUFFER14_WEBGL<br>
-    ext.DRAW_BUFFER15_WEBGL</code></td>
+      <td>
+        <code
+          >ext.DRAW_BUFFER0_WEBGL<br />ext.DRAW_BUFFER1_WEBGL<br />ext.DRAW_BUFFER2_WEBGL<br />ext.DRAW_BUFFER3_WEBGL<br />ext.DRAW_BUFFER4_WEBGL<br />ext.DRAW_BUFFER5_WEBGL<br />ext.DRAW_BUFFER6_WEBGL<br />ext.DRAW_BUFFER7_WEBGL<br />ext.DRAW_BUFFER8_WEBGL<br />ext.DRAW_BUFFER9_WEBGL<br />ext.DRAW_BUFFER10_WEBGL<br />ext.DRAW_BUFFER11_WEBGL<br />ext.DRAW_BUFFER12_WEBGL<br />ext.DRAW_BUFFER13_WEBGL<br />ext.DRAW_BUFFER14_WEBGL<br />ext.DRAW_BUFFER15_WEBGL</code
+        >
+      </td>
       <td>{{domxref("WebGL_API/Types", "GLenum")}}</td>
       <td>{{domxref("WEBGL_draw_buffers")}}</td>
       <td>Drawing buffers.</td>
     </tr>
     <tr>
       <td><code>ext.VERTEX_ARRAY_BINDING_OES</code></td>
-      <td>{{domxref("WebGLVertexArrayObject", "WebGLVertexArrayObjectOES")}}</td>
+      <td>
+        {{domxref("WebGLVertexArrayObject", "WebGLVertexArrayObjectOES")}}
+      </td>
       <td>{{domxref("OES_vertex_array_object")}}</td>
       <td>Bound vertex array object (VAO).</td>
     </tr>
     <tr>
       <td><code>ext.TIMESTAMP_EXT</code></td>
       <td>{{domxref("WebGL_API/Types", "GLuint64EXT")}}</td>
-      <td>
-        <p>{{domxref("EXT_disjoint_timer_query")}}</p>
-      </td>
+      <td><p>{{domxref("EXT_disjoint_timer_query")}}</p></td>
       <td>The current time.</td>
     </tr>
     <tr>
@@ -979,28 +1064,27 @@ browser-compat: api.WebGLRenderingContext.getParameter
   </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">gl.getParameter(gl.DITHER);
+```js
+gl.getParameter(gl.DITHER);
 gl.getParameter(gl.VERSION);
 gl.getParameter(gl.VIEWPORT);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.enable()")}}</li>
-  <li>{{domxref("WebGLRenderingContext.disable()")}}</li>
-  <li>{{domxref("EXT_texture_filter_anisotropic")}}</li>
-  <li>{{domxref("OES_standard_derivatives")}}</li>
-  <li>{{domxref("WEBGL_draw_buffers")}}</li>
-  <li>{{domxref("EXT_disjoint_timer_query")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.enable()")}}
+- {{domxref("WebGLRenderingContext.disable()")}}
+- {{domxref("EXT_texture_filter_anisotropic")}}
+- {{domxref("OES_standard_derivatives")}}
+- {{domxref("WEBGL_draw_buffers")}}
+- {{domxref("EXT_disjoint_timer_query")}}

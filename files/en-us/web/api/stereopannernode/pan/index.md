@@ -10,39 +10,36 @@ tags:
   - Web Audio API
 browser-compat: api.StereoPannerNode.pan
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<p>The <code>pan</code> property of the {{ domxref("StereoPannerNode") }} interface is an <a href="/en-US/docs/Web/API/AudioParam#a-rate">a-rate</a> {{domxref("AudioParam")}} representing the amount of panning to apply. The value can range between <code>-1</code> (full left pan) and <code>1</code> (full right pan).</p>
+The `pan` property of the {{ domxref("StereoPannerNode") }} interface is an [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} representing the amount of panning to apply. The value can range between `-1` (full left pan) and `1` (full right pan).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var audioCtx = new AudioContext();
+```js
+var audioCtx = new AudioContext();
 var panNode = audioCtx.createStereoPanner();
 panNode.pan.value = -0.5;
-</pre>
+```
 
-<h3 id="Returned_value">Returned value</h3>
+### Returned value
 
-<p>An <a href="/en-US/docs/Web/API/AudioParam#a-rate">a-rate</a> {{domxref("AudioParam")}} containing the panning to apply.</p>
+An [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} containing the panning to apply.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Though the <code>AudioParam</code> returned is read-only, the value it represents is not.</p>
-</div>
+> **Note:** Though the `AudioParam` returned is read-only, the value it represents is not.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>See <a href="/en-US/docs/Web/API/BaseAudioContext/createStereoPanner#example"><code>BaseAudioContext.createStereoPanner()</code></a> for example code.</p>
+See [`BaseAudioContext.createStereoPanner()`](/en-US/docs/Web/API/BaseAudioContext/createStereoPanner#example) for example code.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

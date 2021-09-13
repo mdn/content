@@ -2,52 +2,51 @@
 title: MediaKeyStatusMap.forEach()
 slug: Web/API/MediaKeyStatusMap/forEach
 tags:
-- API
-- EncryptedMediaExtensions
-- MediaKeyStatusMap
-- Method
-- Reference
-- forEach()
+  - API
+  - EncryptedMediaExtensions
+  - MediaKeyStatusMap
+  - Method
+  - Reference
+  - forEach()
 browser-compat: api.MediaKeyStatusMap.forEach
 ---
-<p>{{APIRef("EncryptedMediaExtensions API")}}{{SeeCompatTable}}</p>
+{{APIRef("EncryptedMediaExtensions API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>forEach</code></strong> property of the
-    {{domxref("MediaKeyStatusMap")}} interface calls callback once for each key-value pair
-    in the status map, in insertion order. If an argument is present it will be passed to
-    the callback.</p>
+The **`forEach`** property of the
+{{domxref("MediaKeyStatusMap")}} interface calls callback once for each key-value pair
+in the status map, in insertion order. If an argument is present it will be passed to
+the callback.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var>mediaKeyStatusMap</var>.forEach(<var>callback</var>[, <var>thisArg</var>])</pre>
+```js
+mediaKeyStatusMap.forEach(callback[, thisArg])
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>callback</code></dt>
-  <dd>Function to execute for each element, taking three arguments:
-    <dl>
-      <dt><code>currentValue</code></dt>
-      <dd>The current element being processed in the array.</dd>
-      <dt><code>index</code></dt>
-      <dd>The index of the current element being processed in the array.</dd>
-      <dt><code>array</code></dt>
-      <dd>Which array <code>forEach()</code> is being applied to.</dd>
-    </dl>
-  </dd>
-  <dt><code>thisArg {{Optional_inline}}</code></dt>
-  <dd>Value used as <code>this</code> when executing <code>callback</code>.</dd>
-</dl>
+- `callback`
 
-<h3 id="Returns">Returns</h3>
+  - : Function to execute for each element, taking three arguments:
 
-<p>{{jsxref('undefined')}}.</p>
+    - `currentValue`
+      - : The current element being processed in the array.
+    - `index`
+      - : The index of the current element being processed in the array.
+    - `array`
+      - : Which array `forEach()` is being applied to.
 
-<h2 id="Specifications">Specifications</h2>
+- `thisArg {{Optional_inline}}`
+  - : Value used as `this` when executing `callback`.
+
+### Returns
+
+{{jsxref('undefined')}}.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

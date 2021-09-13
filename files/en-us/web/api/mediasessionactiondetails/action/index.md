@@ -2,54 +2,50 @@
 title: MediaSessionActionDetails.action
 slug: Web/API/MediaSessionActionDetails/action
 tags:
-- API
-- Media
-- Media Session
-- Media Session API
-- MediaSessionActionDetails
-- Property
-- Reference
-- Session
-- action
-- details
+  - API
+  - Media
+  - Media Session
+  - Media Session API
+  - MediaSessionActionDetails
+  - Property
+  - Reference
+  - Session
+  - action
+  - details
 browser-compat: api.MediaSessionActionDetails.action
 ---
-<p>{{APIRef("Media Session API")}}</p>
+{{APIRef("Media Session API")}}
 
-<p>The <code><strong>action</strong></code> property is the only
-    required property {{domxref("MediaSessionActionDetails")}} dictionary, specifying the
-    type of media session action which the action handler callback is being executed
-    for.</p>
+The **`action`** property is the only
+required property {{domxref("MediaSessionActionDetails")}} dictionary, specifying the
+type of media session action which the action handler callback is being executed
+for.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let <em>mediaSessionActionDetails</em> = { action: <em>actionType</em> };
+```js
+let mediaSessionActionDetails = { action: actionType };
 
-let <em>actionType</em> = <em>mediaSessionActionDetails</em>.action;
-</pre>
+let actionType = mediaSessionActionDetails.action;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} specifying which of the action types the callback is being
-  invoked for:</p>
+A {{domxref("DOMString")}} specifying which of the action types the callback is being
+invoked for:
 
-<p>{{page("/en-US/docs/Web/API/MediaSessionActionDetails", "action-types")}}</p>
+{{page("/en-US/docs/Web/API/MediaSessionActionDetails", "action-types")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
+{{Compat}}
 
-  <p>{{Compat}}</p>
+## See also
 
-  <h2 id="See_also">See also</h2>
-
-  <ul>
-    <li>Media Session API</li>
-    <li>Refer to the {{domxref("MediaSession")}} method
-      {{domxref("MediaSession.setActionHandler", "setActionHandler()")}}</li>
-  </ul>
-</div>
+- Media Session API
+- Refer to the {{domxref("MediaSession")}} method
+  {{domxref("MediaSession.setActionHandler", "setActionHandler()")}}

@@ -10,47 +10,46 @@ tags:
   - maxChannelCount
 browser-compat: api.AudioDestinationNode.maxChannelCount
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>The <code>maxchannelCount</code> property of the {{ domxref("AudioDestinationNode") }} interface is an <code>unsigned long</code> defining the maximum amount of channels that the physical device can handle.</p>
+The `maxchannelCount` property of the {{ domxref("AudioDestinationNode") }} interface is an `unsigned long` defining the maximum amount of channels that the physical device can handle.
 
-<p>The {{domxref("AudioNode.channelCount")}} property can be set between 0 and this value (both included). If <code>maxChannelCount</code> is <code>0</code>, like in {{domxref("OfflineAudioContext")}}, the channel count cannot be changed.</p>
-</div>
+The {{domxref("AudioNode.channelCount")}} property can be set between 0 and this value (both included). If `maxChannelCount` is `0`, like in {{domxref("OfflineAudioContext")}}, the channel count cannot be changed.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var audioCtx = new AudioContext();
+```js
+var audioCtx = new AudioContext();
 var myDestination = audioCtx.destination;
 myDestination.maxChannelCount = 2;
-</pre>
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An <code>unsigned long</code>.</p>
+An `unsigned long`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following would set up a simple audio graph, featuring an <code>AudioDestinationNode</code> with <code>maxChannelCount</code> of 2:</p>
+The following would set up a simple audio graph, featuring an `AudioDestinationNode` with `maxChannelCount` of 2:
 
-<pre class="brush: js">var audioCtx = new AudioContext();
+```js
+var audioCtx = new AudioContext();
 var source = audioCtx.createMediaElementSource(myMediaElement);
 source.connect(gainNode);
 audioCtx.destination.maxChannelCount = 2;
-gainNode.connect(audioCtx.destination);</pre>
+gainNode.connect(audioCtx.destination);
+```
 
-<p>To see a more complete implementation, check out one of our MDN Web Audio examples, such as <a href="https://mdn.github.io/voice-change-o-matic/">Voice-change-o-matic</a> or <a href="https://mdn.github.io/violent-theremin/">Violent Theremin</a>.</p>
+To see a more complete implementation, check out one of our MDN Web Audio examples, such as [Voice-change-o-matic](https://mdn.github.io/voice-change-o-matic/) or [Violent Theremin](https://mdn.github.io/violent-theremin/).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

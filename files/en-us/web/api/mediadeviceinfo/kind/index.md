@@ -2,32 +2,34 @@
 title: MediaDeviceInfo.kind
 slug: Web/API/MediaDeviceInfo/kind
 tags:
-- API
-- Experimental
-- Media
-- MediaDevicesInfo
-- Property
-- kind
+  - API
+  - Experimental
+  - Media
+  - MediaDevicesInfo
+  - Property
+  - kind
 browser-compat: api.MediaDeviceInfo.kind
 ---
-<p>{{SeeCompatTable}}{{APIRef("Media Capture")}}</p>
+{{SeeCompatTable}}{{APIRef("Media Capture")}}
 
-<p>The <strong><code>kind</code></strong> readonly property of
-    the {{domxref("MediaDeviceInfo")}} interface returns an enumerated value, that is
-    either "videoinput", "audioinput" or "audiooutput".</p>
+The **`kind`** readonly property of
+the {{domxref("MediaDeviceInfo")}} interface returns an enumerated value, that is
+either "videoinput", "audioinput" or "audiooutput".
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var kind = MediaDeviceInfo.kind</pre>
+```js
+var kind = MediaDeviceInfo.kind
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}}.</p>
+A {{domxref("DOMString")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

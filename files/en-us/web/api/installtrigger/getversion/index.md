@@ -2,34 +2,31 @@
 title: InstallTrigger.getVersion()
 slug: Web/API/InstallTrigger/getVersion
 ---
-<div class="warning"><p><strong>Warning:</strong> Parts of this page show the use of the <a href="/en-US/docs/XPInstall_API_Reference">XPInstall API</a>. The majority of this API is now deprecated and as of Gecko 1.9 no longer available. <a href="/en-US/docs/Extensions">Extension</a>, <a href="/en-US/docs/Themes">Theme</a>, and <a href="/en-US/docs/Plugins">plug-in</a> developers must switch away from <code>install.js</code> based packages to the new <a href="/en-US/docs/Bundles">packaging scheme</a> with an <code><a href="/en-US/docs/Install_Manifests">install.rdf</a></code> manifest. In particular plugin developers should see <a href="/en-US/docs/Shipping_a_plugin_as_a_Toolkit_bundle">how to package a plugin as an extension</a>.</p></div>
+> **Warning:** Parts of this page show the use of the [XPInstall API](/en-US/docs/XPInstall_API_Reference). The majority of this API is now deprecated and as of Gecko 1.9 no longer available. [Extension](/en-US/docs/Extensions), [Theme](/en-US/docs/Themes), and [plug-in](/en-US/docs/Plugins) developers must switch away from `install.js` based packages to the new [packaging scheme](/en-US/docs/Bundles) with an [`install.rdf`](/en-US/docs/Install_Manifests) manifest. In particular plugin developers should see [how to package a plugin as an extension](/en-US/docs/Shipping_a_plugin_as_a_Toolkit_bundle).
 
-<h3 id="getVersion">getVersion</h3>
+### getVersion
 
-<p>Returns an object representing the version number from the Client Version Registry for the specified component. It is used in both trigger scripts and installation scripts.</p>
+Returns an object representing the version number from the Client Version Registry for the specified component. It is used in both trigger scripts and installation scripts.
 
-<h4 id="Method_of">Method of</h4>
+#### Method of
 
-<p><a href="/en-US/docs/Web/API/InstallTrigger">InstallTrigger</a> object</p>
+[InstallTrigger](/en-US/docs/Web/API/InstallTrigger) object
 
-<h4 id="Syntax">Syntax</h4>
+#### Syntax
 
-<pre>InstallVersion getVersion ( String component );
-</pre>
+    InstallVersion getVersion ( String component );
 
-<h4 id="Parameters">Parameters</h4>
+#### Parameters
 
-<p>The <code>getVersion</code> method has one parameter:</p>
+The `getVersion` method has one parameter:
 
-<dl>
- <dt><code>component</code></dt>
- <dd>The name of a component in the Client Version Registry.</dd>
-</dl>
+- `component`
+  - : The name of a component in the Client Version Registry.
 
-<h4 id="Returns">Returns</h4>
+#### Returns
 
-<p>If Software Installation is disabled, this method returns <code>NULL</code>. Otherwise, it returns an <a href="/en-US/docs/XPInstall_API_Reference/InstallVersion_Object"> InstallVersion</a> object representing the version of the component.</p>
+If Software Installation is disabled, this method returns `NULL`. Otherwise, it returns an [InstallVersion](/en-US/docs/XPInstall_API_Reference/InstallVersion_Object) object representing the version of the component.
 
-<p>If the component has not been registered in the Client Version Registry or if the specified component was installed with a null version, this method returns null.</p>
+If the component has not been registered in the Client Version Registry or if the specified component was installed with a null version, this method returns null.
 
-<p>Installing a component with a <code>NULL</code> version indicates that the component should always be updated when the opportunity arises.</p>
+Installing a component with a `NULL` version indicates that the component should always be updated when the opportunity arises.

@@ -11,67 +11,68 @@ tags:
   - StylePropertyMapReadOnly
 browser-compat: api.StylePropertyMapReadOnly
 ---
-<p>{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}</p>
+{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
-<p>The <strong><code>StylePropertyMapReadOnly</code></strong> interface of the <a href="/en-US/docs/Web/API/CSS_Typed_Object_Model_API">CSS Typed Object Model API</a> provides a read-only representation of a CSS declaration block that is an alternative to {{domxref("CSSStyleDeclaration")}}. Retrieve an instance of this interface using {{domxref('Element.computedStyleMap','Element.computedStyleMap()')}}.</p>
+The **`StylePropertyMapReadOnly`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_Object_Model_API) provides a read-only representation of a CSS declaration block that is an alternative to {{domxref("CSSStyleDeclaration")}}. Retrieve an instance of this interface using {{domxref('Element.computedStyleMap','Element.computedStyleMap()')}}.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref('StylePropertyMapReadOnly.size')}}</dt>
- <dd>Returns an unsinged long integer containing the size of the <code>StylePropertyMapReadOnly</code> object.</dd>
-</dl>
+- {{domxref('StylePropertyMapReadOnly.size')}}
+  - : Returns an unsinged long integer containing the size of the `StylePropertyMapReadOnly` object.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref('StylePropertyMapReadOnly.entries()')}}</dt>
- <dd>Returns an array of a given object's own enumerable property <code>[key, value]</code> pairs, in the same order as that provided by a {{jsxref("Statements/for...in", "for...in")}} loop (the difference being that a for-in loop enumerates properties in the prototype chain as well).</dd>
- <dt>{{domxref('StylePropertyMapReadOnly.forEach()')}}</dt>
- <dd>Executes a provided function once for each element of <code>StylePropertyMapReadOnly</code>.</dd>
- <dt>{{domxref('StylePropertyMapReadOnly.get()')}}</dt>
- <dd>Returns the value of the specified property.</dd>
- <dt>{{domxref('StylePropertyMapReadOnly.getAll()')}}</dt>
- <dd>Returns an array of {{domxref("CSSStyleValue")}} objects containing the values for the provided property.</dd>
- <dt>{{domxref('StylePropertyMapReadOnly.has()')}}</dt>
- <dd>Indicates whether the specified property is in the <code>StylePropertyMapReadOnly</code> object.</dd>
- <dt>{{domxref('StylePropertyMapReadOnly.keys()')}}</dt>
- <dd>Returns a new <em>array iterator</em> containing the keys for each item in <code>StylePropertyMapReadOnly</code>.</dd>
- <dt>{{domxref('StylePropertyMapReadOnly.values()')}}</dt>
- <dd>Returns a new <em>array iterator</em> containing the values for each index in the <code>StylePropertyMapReadOnly</code> object.</dd>
-</dl>
+- {{domxref('StylePropertyMapReadOnly.entries()')}}
+  - : Returns an array of a given object's own enumerable property `[key, value]` pairs, in the same order as that provided by a {{jsxref("Statements/for...in", "for...in")}} loop (the difference being that a for-in loop enumerates properties in the prototype chain as well).
+- {{domxref('StylePropertyMapReadOnly.forEach()')}}
+  - : Executes a provided function once for each element of `StylePropertyMapReadOnly`.
+- {{domxref('StylePropertyMapReadOnly.get()')}}
+  - : Returns the value of the specified property.
+- {{domxref('StylePropertyMapReadOnly.getAll()')}}
+  - : Returns an array of {{domxref("CSSStyleValue")}} objects containing the values for the provided property.
+- {{domxref('StylePropertyMapReadOnly.has()')}}
+  - : Indicates whether the specified property is in the `StylePropertyMapReadOnly` object.
+- {{domxref('StylePropertyMapReadOnly.keys()')}}
+  - : Returns a new _array iterator_ containing the keys for each item in `StylePropertyMapReadOnly`.
+- {{domxref('StylePropertyMapReadOnly.values()')}}
+  - : Returns a new _array iterator_ containing the values for each index in the `StylePropertyMapReadOnly` object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>We have to have an element to observe:</p>
+We have to have an element to observe:
 
-<pre class="brush: html">&lt;p&gt;
+```html
+<p>
    This is a paragraph with some text. We can add some CSS, or not. The
    style map will include all the default and inherted CSS property values.
-&lt;/p&gt;
-&lt;dl id="output"&gt;&lt;/dl&gt;</pre>
+</p>
+<dl id="output"></dl>
+```
 
-<p>We add a touch of CSS with a custom property to better demonstrate the output:</p>
+We add a touch of CSS with a custom property to better demonstrate the output:
 
-<pre class="brush: css">p {
+```css
+p {
    --someVariable: 1.6em;
    --someOtherVariable: translateX(33vw);
    --anotherVariable: 42;
    line-height: var(--someVariable);
-}</pre>
+}
+```
 
-<p>We add JavaScript to grab our paragraph and return back a definition list of all the default CSS property values using {{domxref('Element.computedStyleMap()')}}.</p>
+We add JavaScript to grab our paragraph and return back a definition list of all the default CSS property values using {{domxref('Element.computedStyleMap()')}}.
 
-<pre class="brush: js">// get the element
+```js
+// get the element
 const myElement = document.querySelector('p');
 
-// get the &lt;dl&gt; we'll be populating
+// get the <dl> we'll be populating
 const stylesList = document.querySelector('#output');
 
 // Retrieve all computed styles with computedStyleMap()
 const stylePropertyMap = myElement.computedStyleMap();
 
-// iterate thru the map of all the properties and values, adding a &lt;dt&gt; and &lt;dd&gt; for each
+// iterate thru the map of all the properties and values, adding a <dt> and <dd> for each
 for (const [prop, val] of stylePropertyMap) {
 	// properties
 	const cssProperty = document.createElement('dt');
@@ -82,14 +83,15 @@ for (const [prop, val] of stylePropertyMap) {
 	const cssValue = document.createElement('dd');
 	cssValue.innerText = val;
 	stylesList.appendChild(cssValue);
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Examples", 120, 300)}}</p>
+{{EmbedLiveSample("Examples", 120, 300)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

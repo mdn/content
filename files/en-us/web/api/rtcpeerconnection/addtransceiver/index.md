@@ -15,57 +15,52 @@ tags:
   - Method
 browser-compat: api.RTCPeerConnection.addTransceiver
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The {{domxref("RTCPeerConnection")}} method
-    <code><strong>addTransceiver()</strong></code> creates a new
-    {{domxref("RTCRtpTransceiver")}} and adds it to the set of transceivers associated
-    with the <code>RTCPeerConnection</code>. Each transceiver represents a
-  bidirectional stream, with both an {{domxref("RTCRtpSender")}} and an
-  {{domxref("RTCRtpReceiver")}} associated with it.</p>
+The {{domxref("RTCPeerConnection")}} method
+**`addTransceiver()`** creates a new
+{{domxref("RTCRtpTransceiver")}} and adds it to the set of transceivers associated
+with the `RTCPeerConnection`. Each transceiver represents a
+bidirectional stream, with both an {{domxref("RTCRtpSender")}} and an
+{{domxref("RTCRtpReceiver")}} associated with it.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>rtpTransceiver</em> = <em>RTCPeerConnection</em>.addTransceiver(<em>trackOrKind</em>, <em>init</em>);</pre>
+```js
+rtpTransceiver = RTCPeerConnection.addTransceiver(trackOrKind, init);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>trackOrKind</code></dt>
-  <dd>A {{domxref("MediaStreamTrack")}} to associate with the transceiver, or a
+- `trackOrKind`
+  - : A {{domxref("MediaStreamTrack")}} to associate with the transceiver, or a
     {{domxref("DOMString")}} which is used as the {{domxref("MediaStreamTrack.kind",
     "kind")}} of the receiver's {{domxref("RTCRtpReceiver.track", "track")}}, and by
-    extension of the {{domxref("RTCRtpReceiver")}} itself.</dd>
-  <dt><code>init</code> {{optional_inline}}</dt>
-  <dd>An object that conforms to the {{domxref("RTCRtpTransceiverInit")}} dictionary which
+    extension of the {{domxref("RTCRtpReceiver")}} itself.
+- `init` {{optional_inline}}
+  - : An object that conforms to the {{domxref("RTCRtpTransceiverInit")}} dictionary which
     provides any options that you may wish to specify when creating the new transceiver.
     Possible values are:
-    {{page("/en-US/docs/Web/API/RTCRtpTransceiverInit", "Properties")}}</dd>
-</dl>
+    {{page("/en-US/docs/Web/API/RTCRtpTransceiverInit", "Properties")}}
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt><code>TypeError</code></dt>
-  <dd>A string was specified as <code>trackOrKind</code> which is not valid. The string
-    must be either <code>"audio"</code> or <code>"video"</code>.</dd>
-</dl>
+- `TypeError`
+  - : A string was specified as `trackOrKind` which is not valid. The string
+    must be either `"audio"` or `"video"`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
-  <li><a href="/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP">Introduction to the Real-time
-      Transport Protocol (RTP)</a></li>
-  <li>{{domxref("RTCPeerConnection.addTrack()")}} also creates transceivers</li>
-  <li>{{domxref("RTCRtpReceiver")}} and {{domxref("RTCRtpSender")}}</li>
-</ul>
+- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+- [Introduction to the Real-time
+  Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)
+- {{domxref("RTCPeerConnection.addTrack()")}} also creates transceivers
+- {{domxref("RTCRtpReceiver")}} and {{domxref("RTCRtpSender")}}

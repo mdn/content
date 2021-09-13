@@ -10,69 +10,68 @@ tags:
   - Reference
 browser-compat: api.History.replaceState
 ---
-<div>{{APIRef("History API")}}</div>
+{{APIRef("History API")}}
 
-<p>The <strong><code>History.replaceState()</code></strong> method modifies the current
-  history entry, replacing it with the <code>stateObj</code>, <code>title</code>, and
-  <code>URL</code> passed in the method parameters. This method is particularly useful
-  when you want to update the state object or URL of the current history entry in response
-  to some user action.</p>
+The **`History.replaceState()`** method modifies the current
+history entry, replacing it with the `stateObj`, `title`, and
+`URL` passed in the method parameters. This method is particularly useful
+when you want to update the state object or URL of the current history entry in response
+to some user action.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">history.replaceState(<em>stateObj</em>, <em>title</em>, [<em>url</em>])</pre>
+```js
+history.replaceState(stateObj, title, [url])
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>stateObj</code></dt>
-  <dd>The state object is a JavaScript object which is associated with the history entry
-    passed to the <code>replaceState</code> method. The state object can be
-    <code>null</code>.</dd>
-  <dt><code>title</code></dt>
-  <dd><a href="https://github.com/whatwg/html/issues/2174">Most browsers currently ignore
-      this parameter</a>, although they may use it in the future. Passing the empty string
+- `stateObj`
+  - : The state object is a JavaScript object which is associated with the history entry
+    passed to the `replaceState` method. The state object can be
+    `null`.
+- `title`
+  - : [Most browsers currently ignore
+    this parameter](https://github.com/whatwg/html/issues/2174), although they may use it in the future. Passing the empty string
     here should be safe against future changes to the method. Alternatively, you could
-    pass a short title for the state.</dd>
-  <dt><code>url</code> {{optional_inline}}</dt>
-  <dd>The URL of the history entry. The new URL must be of the same origin as the current
-    URL; otherwise replaceState throws an exception.</dd>
-</dl>
+    pass a short title for the state.
+- `url` {{optional_inline}}
+  - : The URL of the history entry. The new URL must be of the same origin as the current
+    URL; otherwise replaceState throws an exception.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Suppose https://www.mozilla.org/foo.html executes the following JavaScript:</p>
+Suppose https\://www\.mozilla.org/foo.html executes the following JavaScript:
 
-<pre
-  class="brush: js">const stateObj = { foo: 'bar' };
-history.pushState(stateObj, '', 'bar.html');</pre>
+```js
+const stateObj = { foo: 'bar' };
+history.pushState(stateObj, '', 'bar.html');
+```
 
-<p>The explanation of these two lines above can be found in the <a
-    href="/en-US/docs/Web/API/History_API/Working_with_the_History_API#example_of_pushstate_method">Example
-    of <code>pushState()</code> method</a> section of the <a
-    href="/en-US/docs/Web/API/History_API/Working_with_the_History_API">Working with the
-    History API</a> article. Then suppose
-    <code>https://www.mozilla.org/bar.html</code> executes the following
-  JavaScript:</p>
+The explanation of these two lines above can be found in the [Example
+of `pushState()` method](/en-US/docs/Web/API/History_API/Working_with_the_History_API#example_of_pushstate_method) section of the [Working with the
+History API](/en-US/docs/Web/API/History_API/Working_with_the_History_API) article. Then suppose
+`https://www.mozilla.org/bar.html` executes the following
+JavaScript:
 
-<pre
-  class="brush: js">history.replaceState(stateObj, '', 'bar2.html');</pre>
+```js
+history.replaceState(stateObj, '', 'bar2.html');
+```
 
-<p>This will cause the URL bar to display
-  <code>https://www.mozilla.org/bar2.html</code>, but won't cause the browser
-  to load <code>bar2.html</code> or even check that <code>bar2.html</code> exists.</p>
+This will cause the URL bar to display
+`https://www.mozilla.org/bar2.html`, but won't cause the browser
+to load `bar2.html` or even check that `bar2.html` exists.
 
-<p>Suppose now that the user navigates to
-  <code>https://www.microsoft.com</code>, then clicks the Back button. At this
-  point, the URL bar will display <code>https://www.mozilla.org/bar2.html</code>.
-    If the user now clicks Back again, the URL bar will
-    display https://www.mozilla.org/foo.html, and totally bypass bar.html.</p>
+Suppose now that the user navigates to
+`https://www.microsoft.com`, then clicks the Back button. At this
+point, the URL bar will display `https://www.mozilla.org/bar2.html`.
+If the user now clicks Back again, the URL bar will
+display https\://www\.mozilla.org/foo.html, and totally bypass bar.html.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

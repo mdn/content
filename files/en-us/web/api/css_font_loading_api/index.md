@@ -10,38 +10,29 @@ tags:
   - NeedsContent
   - Reference
 ---
-<div>{{DefaultAPISidebar("CSS Font Loading API")}}{{SeeCompatTable}}</div>
+{{DefaultAPISidebar("CSS Font Loading API")}}{{SeeCompatTable}}
 
-<p>The CSS Font Loading API provides events and interfaces for dynamically loading font resources.</p>
+The CSS Font Loading API provides events and interfaces for dynamically loading font resources.
 
-<div class="notecard note">
-<p><strong>Note:</strong> This feature is available in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a> (<code>self.fonts</code> provides access to {{domxref('FontFaceSet')}}).</p>
-</div>
+> **Note:** This feature is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) (`self.fonts` provides access to {{domxref('FontFaceSet')}}).
 
-<h2 id="Interfaces">Interfaces</h2>
+## Interfaces
 
-<dl>
- <dt>{{domxref('FontFace')}}</dt>
- <dd>Represents a single usable font face.</dd>
- <dt>{{domxref('FontFaceSet')}}</dt>
- <dd>An interface loading font faces and checking their download statuses.</dd>
- <dt>{{domxref('FontFaceSource')}}</dt>
- <dd>A {{Glossary("mixin")}} providing all of the fonts used in font-related operations, unless defined otherwise. It defines the {{domxref("FontFaceSources.fonts")}} property available to {{domxref("Document")}} and {{domxref("WorkerGlobalScope")}}.</dd>
- <dt>{{domxref('FontFaceSetLoadEvent')}}</dt>
- <dd>Fired whenever a {{domxref("FontFaceSet")}} loads.</dd>
-</dl>
+- {{domxref('FontFace')}}
+  - : Represents a single usable font face.
+- {{domxref('FontFaceSet')}}
+  - : An interface loading font faces and checking their download statuses.
+- {{domxref('FontFaceSource')}}
+  - : A {{Glossary("mixin")}} providing all of the fonts used in font-related operations, unless defined otherwise. It defines the {{domxref("FontFaceSources.fonts")}} property available to {{domxref("Document")}} and {{domxref("WorkerGlobalScope")}}.
+- {{domxref('FontFaceSetLoadEvent')}}
+  - : Fired whenever a {{domxref("FontFaceSet")}} loads.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications("api.FontFace")}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
-<h3 id="FontFace_interface">FontFace interface</h3>
+### FontFace interface
 
-<div>
-
-<p>{{Compat("api.FontFace")}}</p>
-</div>
-</div>
+{{Compat("api.FontFace")}}

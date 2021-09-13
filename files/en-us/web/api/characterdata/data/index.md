@@ -2,26 +2,24 @@
 title: CharacterData.data
 slug: Web/API/CharacterData/data
 tags:
-- API
-- DOM
-- Method
-- Node
-- Reference
-- CharacterData
+  - API
+  - DOM
+  - Method
+  - Node
+  - Reference
+  - CharacterData
 browser-compat: api.CharacterData.data
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>
-  The <code>data</code> property of the {{domxref("CharacterData")}}
-  interface returns or sets the value of the current <code>CharacterData</code>
-  Node's data.
-</p>
+The `data` property of the {{domxref("CharacterData")}}
+interface returns or sets the value of the current `CharacterData`
+Node's data.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -8,56 +8,50 @@ tags:
   - Interface
 browser-compat: api.DocumentType
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>DocumentType</code></strong> interface represents a {{domxref("Node")}} containing a doctype.</p>
+The **`DocumentType`** interface represents a {{domxref("Node")}} containing a doctype.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{domxref("Node")}}.</em></p>
+_Inherits properties from its parent, {{domxref("Node")}}._
 
-<dl>
-	<dt>{{domxref("DocumentType.internalSubset")}} {{readonlyInline}} {{deprecated_inline}}</dt>
-	<dd>A {{domxref("DOMString")}} of the internal subset, or <code>null</code> if there is none. Eg <code>"&lt;!ELEMENT foo (bar)&gt;"</code>.</dd>
-	<dt>{{domxref("DocumentType.name")}} {{readonlyInline}}</dt>
-	<dd>A {{domxref("DOMString")}}, eg <code>"html"</code> for <code>&lt;!DOCTYPE HTML&gt;</code>.</dd>
-	<dt>{{domxref("DocumentType.notations")}} {{readonlyInline}} {{deprecated_inline}}</dt>
-	<dd>A {{domxref("NamedNodeMap")}} with notations declared in the DTD.</dd>
-	<dt>{{domxref("DocumentType.publicId")}} {{readonlyInline}}</dt>
-	<dd>A {{domxref("DOMString")}}, eg <code>"-//W3C//DTD HTML 4.01//EN"</code>, empty string for HTML5.</dd>
-	<dt>{{domxref("DocumentType.systemId")}} {{readonlyInline}}</dt>
-	<dd>A {{domxref("DOMString")}}, eg <code>"http://www.w3.org/TR/html4/strict.dtd"</code>, empty string for HTML5.</dd>
-</dl>
+- {{domxref("DocumentType.internalSubset")}} {{readonlyInline}} {{deprecated_inline}}
+  - : A {{domxref("DOMString")}} of the internal subset, or `null` if there is none. Eg `"<!ELEMENT foo (bar)>"`.
+- {{domxref("DocumentType.name")}} {{readonlyInline}}
+  - : A {{domxref("DOMString")}}, eg `"html"` for `<!DOCTYPE HTML>`.
+- {{domxref("DocumentType.notations")}} {{readonlyInline}} {{deprecated_inline}}
+  - : A {{domxref("NamedNodeMap")}} with notations declared in the DTD.
+- {{domxref("DocumentType.publicId")}} {{readonlyInline}}
+  - : A {{domxref("DOMString")}}, eg `"-//W3C//DTD HTML 4.01//EN"`, empty string for HTML5.
+- {{domxref("DocumentType.systemId")}} {{readonlyInline}}
+  - : A {{domxref("DOMString")}}, eg `"http://www.w3.org/TR/html4/strict.dtd"`, empty string for HTML5.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Inherits methods from its parent, {{domxref("Node")}}.</em></p>
+_Inherits methods from its parent, {{domxref("Node")}}._
 
-<dl>
-	<dt>{{domxref("DocumentType.after()")}}</dt>
-	<dd>Inserts a set of {{domxref("Node")}} or {{domxref("DOMString")}} objects in the children list of the
-    <code>DocumentType</code>'s parent, just after the <code>DocumentType</code> object.</dd>
-  <dt>{{domxref("DocumentType.before()")}}</dt>
-  <dd>Inserts a set of {{domxref("Node")}} or {{domxref("DOMString")}} objects in the children list of the
-    <code>DocumentType</code>'s parent, just before the <code>DocumentType</code> object.</dd>
-  <dt>{{domxref("DocumentType.remove()")}}</dt>
-	<dd>Removes the object from its parent children list.</dd>
-  <dt>{{domxref("DocumentType.replaceWith()")}}</dt>
-	<dd>Replaces the document type with a set of given nodes.</dd>
-</dl>
+- {{domxref("DocumentType.after()")}}
+  - : Inserts a set of {{domxref("Node")}} or {{domxref("DOMString")}} objects in the children list of the
+    `DocumentType`'s parent, just after the `DocumentType` object.
+- {{domxref("DocumentType.before()")}}
+  - : Inserts a set of {{domxref("Node")}} or {{domxref("DOMString")}} objects in the children list of the
+    `DocumentType`'s parent, just before the `DocumentType` object.
+- {{domxref("DocumentType.remove()")}}
+  - : Removes the object from its parent children list.
+- {{domxref("DocumentType.replaceWith()")}}
+  - : Replaces the document type with a set of given nodes.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><a href="/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index.</a></li>
-</ul>
+- [The DOM interfaces index.](/en-US/docs/Web/API/Document_Object_Model)

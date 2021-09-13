@@ -9,35 +9,38 @@ tags:
   - Reference
 browser-compat: api.CSSStyleRule.selectorText
 ---
-<div>{{APIRef("CSSOM") }}</div>
+{{APIRef("CSSOM") }}
 
-<p>The <strong><code>selectorText</code></strong> property of the {{domxref("CSSStyleRule")}} interface gets and sets the selectors associated with the <code>CSSStyleRule</code>.</p>
+The **`selectorText`** property of the {{domxref("CSSStyleRule")}} interface gets and sets the selectors associated with the `CSSStyleRule`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox">var <var>text</var> = <var>CSSStyleRule</var>.selectorText;
-<var>CSSStyleRule</var>.selectorText = <var>text</var>;</pre>
+    var text = CSSStyleRule.selectorText;
+    CSSStyleRule.selectorText = text;
 
+### Value
 
-<h3>Value</h3>
-<p>A {{domxref('CSSOMString')}}.</p>
+A {{domxref('CSSOMString')}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The CSS includes one style rule. This will be the first {{domxref("CSSRule")}} returned by <code>document.styleSheets[0].cssRules</code>. <code>myRules[0].selectorText</code> therefore returns a literal string of the selector, in this case <code>"h1"</code>.
-</p>
+The CSS includes one style rule. This will be the first {{domxref("CSSRule")}} returned by `document.styleSheets[0].cssRules`. `myRules[0].selectorText` therefore returns a literal string of the selector, in this case `"h1"`.
 
-<pre class="brush: css">h1 {
+```css
+h1 {
   color: pink;
-}</pre>
+}
+```
 
-<pre class="brush: js">let text = document.styleSheets[0].selectorText;
-console.log(myRules[0].selectorText); // a string containing "h1".</pre>
+```js
+let text = document.styleSheets[0].selectorText;
+console.log(myRules[0].selectorText); // a string containing "h1".
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,49 +2,50 @@
 title: CanvasRenderingContext2D.currentTransform
 slug: Web/API/CanvasRenderingContext2D/currentTransform
 tags:
-- API
-- Canvas
-- CanvasRenderingContext2D
-- Experimental
-- Property
-- Reference
-- Deprecated
+  - API
+  - Canvas
+  - CanvasRenderingContext2D
+  - Experimental
+  - Property
+  - Reference
+  - Deprecated
 browser-compat: api.CanvasRenderingContext2D.currentTransform
 ---
-<div>{{deprecated_header}}{{non-standard_header}}</div>
+{{deprecated_header}}{{non-standard_header}}
 
-<p>The
-  <strong><code>CanvasRenderingContext2D.currentTransform</code></strong>
-  property of the Canvas 2D API returns or sets a {{domxref("DOMMatrix")}} (current
-  specification) or {{domxref("SVGMatrix")}} {{deprecated_inline}} (old specification)
-  object for the current transformation matrix.</p>
+The
+**`CanvasRenderingContext2D.currentTransform`**
+property of the Canvas 2D API returns or sets a {{domxref("DOMMatrix")}} (current
+specification) or {{domxref("SVGMatrix")}} {{deprecated_inline}} (old specification)
+object for the current transformation matrix.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>ctx</em>.currentTransform [= <em>value</em>];
-</pre>
+```js
+ctx.currentTransform [= value];
+```
 
-<dl>
-  <dt><code>value</code></dt>
-  <dd>A {{domxref("DOMMatrix")}} or {{domxref("SVGMatrix")}} {{deprecated_inline}} object
-    to use as the current transformation matrix.</dd>
-</dl>
+- `value`
+  - : A {{domxref("DOMMatrix")}} or {{domxref("SVGMatrix")}} {{deprecated_inline}} object
+    to use as the current transformation matrix.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Manually_changing_the_matrix">Manually changing the matrix</h3>
+### Manually changing the matrix
 
-<p>This example uses the <code>currentTransform</code> property to set a transformation
-  matrix. A rectangle is then drawn using that transformation.</p>
+This example uses the `currentTransform` property to set a transformation
+matrix. A rectangle is then drawn using that transformation.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 let matrix = ctx.currentTransform;
@@ -56,20 +57,18 @@ matrix.e = 0;
 matrix.f = 0;
 ctx.currentTransform = matrix;
 ctx.fillRect(0, 0, 100, 100);
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Manually_changing_the_matrix', 700, 180) }}</p>
+{{ EmbedLiveSample('Manually_changing_the_matrix', 700, 180) }}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining this property: {{domxref("CanvasPattern")}}</li>
-  <li>{{domxref("SVGMatrix")}}</li>
-  <li>{{domxref("DOMMatrix")}}</li>
-</ul>
+- The interface defining this property: {{domxref("CanvasPattern")}}
+- {{domxref("SVGMatrix")}}
+- {{domxref("DOMMatrix")}}

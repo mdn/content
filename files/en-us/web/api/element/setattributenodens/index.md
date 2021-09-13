@@ -9,25 +9,23 @@ tags:
   - Reference
 browser-compat: api.Element.setAttributeNodeNS
 ---
-<div>{{ APIRef("DOM") }}</div>
+{{ APIRef("DOM") }}
 
-<p><code>setAttributeNodeNS</code> adds a new namespaced attribute node to an element.</p>
+`setAttributeNodeNS` adds a new namespaced attribute node to an element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="eval"><em>replacedAttr</em> = element.setAttributeNodeNS(<em>attributeNode</em>)
-</pre>
+    replacedAttr = element.setAttributeNodeNS(attributeNode)
 
-<ul>
- <li><code>replacedAttr</code> is the replaced attribute node, if any, returned by this function.</li>
- <li><code>attributeNode</code> is an <code>Attr</code> node.</li>
-</ul>
+- `replacedAttr` is the replaced attribute node, if any, returned by this function.
+- `attributeNode` is an `Attr` node.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">// &lt;div id="one" xmlns:myNS="http://www.mozilla.org/ns/specialspace"
-//            myNS:special-align="utterleft"&gt;one&lt;/div&gt;
-// &lt;div id="two"&gt;two&lt;/div&gt;
+```js
+// <div id="one" xmlns:myNS="http://www.mozilla.org/ns/specialspace"
+//            myNS:special-align="utterleft">one</div>
+// <div id="two">two</div>
 
 var myns = "http://www.mozilla.org/ns/specialspace";
 var d1 = document.getElementById("one");
@@ -35,20 +33,20 @@ var d2 = document.getElementById("two");
 var a = d1.getAttributeNodeNS(myns, "special-align");
 d2.setAttributeNodeNS(a.cloneNode(true));
 alert(d2.attributes[1].value) // returns: `utterleft'
-</pre>
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>If the specified attribute already exists on the element, then that attribute is replaced with the new one and the replaced one is returned.</p>
+If the specified attribute already exists on the element, then that attribute is replaced with the new one and the replaced one is returned.
 
-<p>Note that if you try to set without cloning the node, Mozilla gives an NS_ERROR_DOM_INUSE_ATTRIBUTE_ERR "Attribute already in use" error, as the DOM requires cloning for Attr to be reused (unlike other Nodes which can be moved).</p>
+Note that if you try to set without cloning the node, Mozilla gives an NS_ERROR_DOM_INUSE_ATTRIBUTE_ERR "Attribute already in use" error, as the DOM requires cloning for Attr to be reused (unlike other Nodes which can be moved).
 
-<p>{{ DOMAttributeMethods() }}</p>
+{{ DOMAttributeMethods() }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

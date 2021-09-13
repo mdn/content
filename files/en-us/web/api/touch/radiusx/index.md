@@ -10,40 +10,37 @@ tags:
   - touch
 browser-compat: api.Touch.radiusX
 ---
-<p>{{ APIRef("Touch Events") }}</p>
+{{ APIRef("Touch Events") }}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>Returns the X radius of the ellipse that most closely circumscribes the area of contact with the touch surface. The value is in CSS pixels of the same scale as {{ domxref("Touch.screenX") }}.</p>
+Returns the X radius of the ellipse that most closely circumscribes the area of contact with the touch surface. The value is in CSS pixels of the same scale as {{ domxref("Touch.screenX") }}.
 
-<p>This value, in combination with {{ domxref("Touch.radiusY") }} and {{ domxref("Touch.rotationAngle") }} constructs an ellipse that approximates the size and shape of the area of contact between the user and the screen. This may be a relatively large ellipse representing the contact between a fingertip and the screen or a small area representing the tip of a stylus, for example.</p>
+This value, in combination with {{ domxref("Touch.radiusY") }} and {{ domxref("Touch.rotationAngle") }} constructs an ellipse that approximates the size and shape of the area of contact between the user and the screen. This may be a relatively large ellipse representing the contact between a fingertip and the screen or a small area representing the tip of a stylus, for example.
 
-<div class="note">
-<p><strong>Note:</strong> This attribute has <em>not</em> been formally standardized. It is specified in the {{SpecName('Touch Events 2')}} {{Spec2('Touch Events 2')}} specification and not in {{SpecName('Touch Events')}} {{Spec2('Touch Events')}}. This attribute is not widely implemented.</p>
-</div>
+> **Note:** This attribute has _not_ been formally standardized. It is specified in the {{SpecName('Touch Events 2')}} {{Spec2('Touch Events 2')}} specification and not in {{SpecName('Touch Events')}} {{Spec2('Touch Events')}}. This attribute is not widely implemented.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="eval">var <em>xRadius</em> = <em>touchItem</em>.radiusX;
-</pre>
+    var xRadius = touchItem.radiusX;
 
-<h3 id="Return_Value">Return value</h3>
+### Return value
 
-<dl>
- <dt><code>xRadius</code></dt>
- <dd>The X radius of the ellipse that most closely circumscribes the area of contact with the touch surface.</dd>
-</dl>
+- `xRadius`
+  - : The X radius of the ellipse that most closely circumscribes the area of contact with the touch surface.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example illustrates using the {{domxref("Touch")}} interface's {{domxref("Touch.radiusX")}}, {{domxref("Touch.radiusX")}} and {{domxref("Touch.rotationAngle")}} properties. The {{domxref("Touch.radiusX")}} property is the radius of the ellipse which most closely circumscribes the touching area (e.g. finger, stylus) along the axis <strong>indicated</strong> by the touch point's {{domxref("Touch.rotationAngle")}}. Likewise, the {{domxref("Touch.radiusY")}} property is the radius of the ellipse which most closely circumscribes the touching area (e.g. finger, stylus) along the axis <strong>perpendicular</strong> to that indicated by {{domxref("Touch.rotationAngle")}}. The {{domxref("Touch.rotationAngle")}} is the angle (in degrees) that the ellipse described by <code>radiusX</code> and <code>radiusY</code> is rotated clockwise about its center.</p>
+This example illustrates using the {{domxref("Touch")}} interface's {{domxref("Touch.radiusX")}}, {{domxref("Touch.radiusX")}} and {{domxref("Touch.rotationAngle")}} properties. The {{domxref("Touch.radiusX")}} property is the radius of the ellipse which most closely circumscribes the touching area (e.g. finger, stylus) along the axis **indicated** by the touch point's {{domxref("Touch.rotationAngle")}}. Likewise, the {{domxref("Touch.radiusY")}} property is the radius of the ellipse which most closely circumscribes the touching area (e.g. finger, stylus) along the axis **perpendicular** to that indicated by {{domxref("Touch.rotationAngle")}}. The {{domxref("Touch.rotationAngle")}} is the angle (in degrees) that the ellipse described by `radiusX` and `radiusY` is rotated clockwise about its center.
 
-<p>The following simple code snippet, registers a single handler for the {{domxref("Document/touchstart_event", "touchstart")}}, {{event("touchmove")}} and {{event("touchend")}} events. When the <code>src</code> element is touched, the element's width and height will be calculate based on the touch point's <code>radiusX</code> and <code>radiusY</code> values and the element will then be rotated using the touch point's <code>rotationAngle</code>.</p>
+The following simple code snippet, registers a single handler for the {{domxref("Document/touchstart_event", "touchstart")}}, {{event("touchmove")}} and {{event("touchend")}} events. When the `src` element is touched, the element's width and height will be calculate based on the touch point's `radiusX` and `radiusY` values and the element will then be rotated using the touch point's `rotationAngle`.
 
-<pre class="brush: html">&lt;div id="src"&gt; ... &lt;/div&gt;
-</pre>
+```html
+<div id="src"> ... </div>
+```
 
-<pre class="brush: js">var src = document.getElementById("src");
+```js
+var src = document.getElementById("src");
 
 src.addEventListener('touchstart', rotate);
 src.addEventListener('touchmove', rotate);
@@ -60,12 +57,12 @@ function rotate (e) {
   src.style.height = touch.radiusY * 2 + 'px';
   src.style.transform = "rotate(" + touch.rotationAngle + "deg)";
 };
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

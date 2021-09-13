@@ -2,88 +2,88 @@
 title: HTMLElement.innerText
 slug: Web/API/HTMLElement/innerText
 tags:
-- API
-- HTML DOM
-- HTMLElement
-- Property
-- Reference
+  - API
+  - HTML DOM
+  - HTMLElement
+  - Property
+  - Reference
 browser-compat: api.HTMLElement.innerText
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <code><strong>innerText</strong></code> property of the
-    {{domxref("HTMLElement")}} interface represents the "rendered" text content of a node
-    and its descendants.</p>
+The **`innerText`** property of the
+{{domxref("HTMLElement")}} interface represents the "rendered" text content of a node
+and its descendants.
 
-<p>As a getter, it approximates the text the user would get
-  if they highlighted the contents of the element with the cursor and then copied it to
-  the clipboard.</p>
+As a getter, it approximates the text the user would get
+if they highlighted the contents of the element with the cursor and then copied it to
+the clipboard.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> <code>innerText</code> is easily confused with
-    {{domxref("Node.textContent")}}, but there are important differences between the two.
-    Basically, <code>innerText</code> is aware of the rendered appearance of text, while
-    <code>textContent</code> is not.</p>
-</div>
+> **Note:** `innerText` is easily confused with
+> {{domxref("Node.textContent")}}, but there are important differences between the two.
+> Basically, `innerText` is aware of the rendered appearance of text, while
+> `textContent` is not.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const <em>renderedText</em> = <em>htmlElement</em>.innerText
-<em>htmlElement</em>.innerText = <em>string</em></pre>
+```js
+const renderedText = htmlElement.innerText
+htmlElement.innerText = string
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} representing the rendered text content of an element. If the
-  element itself is not <a
-    href="https://html.spec.whatwg.org/multipage/rendering.html#being-rendered">being
-    rendered</a> (e.g detached from the document or is hidden from view), the returned
-  value is the same as the {{domxref("Node.textContent")}} property.</p>
+A {{domxref("DOMString")}} representing the rendered text content of an element. If the
+element itself is not [being
+rendered](https://html.spec.whatwg.org/multipage/rendering.html#being-rendered) (e.g detached from the document or is hidden from view), the returned
+value is the same as the {{domxref("Node.textContent")}} property.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example compares <code>innerText</code> with {{domxref("Node.textContent")}}. Note
-  how <code>innerText</code> is aware of things like {{htmlElement("br")}} elements, and
-  ignores hidden elements.</p>
+This example compares `innerText` with {{domxref("Node.textContent")}}. Note
+how `innerText` is aware of things like {{htmlElement("br")}} elements, and
+ignores hidden elements.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre
-  class="brush: html">&lt;h3&gt;Source element:&lt;/h3&gt;
-&lt;p id="source"&gt;
-  &lt;style&gt;#source { color: red;  } #text { text-transform: uppercase; }&lt;/style&gt;
-&lt;span id=text&gt;Take a look at&lt;br&gt;how this text&lt;br&gt;is interpreted
-       below.&lt;/span&gt;
-  &lt;span style="display:none"&gt;HIDDEN TEXT&lt;/span&gt;
-&lt;/p&gt;
-&lt;h3&gt;Result of textContent:&lt;/h3&gt;
-&lt;textarea id="textContentOutput" rows="6" cols="30" readonly&gt;...&lt;/textarea&gt;
-&lt;h3&gt;Result of innerText:&lt;/h3&gt;
-&lt;textarea id="innerTextOutput" rows="6" cols="30" readonly&gt;...&lt;/textarea&gt;</pre>
+```html
+<h3>Source element:</h3>
+<p id="source">
+  <style>#source { color: red;  } #text { text-transform: uppercase; }</style>
+<span id=text>Take a look at<br>how this text<br>is interpreted
+       below.</span>
+  <span style="display:none">HIDDEN TEXT</span>
+</p>
+<h3>Result of textContent:</h3>
+<textarea id="textContentOutput" rows="6" cols="30" readonly>...</textarea>
+<h3>Result of innerText:</h3>
+<textarea id="innerTextOutput" rows="6" cols="30" readonly>...</textarea>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">const source = document.getElementById("source");
+```js
+const source = document.getElementById("source");
 const textContentOutput = document.getElementById("textContentOutput");
 const innerTextOutput = document.getElementById("innerTextOutput");
 
 textContentOutput.value = source.textContent;
-innerTextOutput.value = source.innerText;</pre>
+innerTextOutput.value = source.innerText;
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example", 700, 450)}}</p>
+{{EmbedLiveSample("Example", 700, 450)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("HTMLElement.outerText")}}</li>
-  <li>{{domxref("Element.innerHTML")}}</li>
-</ul>
+- {{domxref("HTMLElement.outerText")}}
+- {{domxref("Element.innerHTML")}}

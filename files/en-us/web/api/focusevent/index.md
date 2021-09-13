@@ -9,42 +9,36 @@ tags:
   - Reference
 browser-compat: api.FocusEvent
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p>The <strong><code>FocusEvent</code></strong> interface represents focus-related events, including {{domxref("Element/focus_event", "focus")}}, {{domxref("Element/blur_event", "blur")}}, {{domxref("Element/focusin_event", "focusin")}}, and {{domxref("Element/focusout_event", "focusout")}}.</p>
+The **`FocusEvent`** interface represents focus-related events, including {{domxref("Element/focus_event", "focus")}}, {{domxref("Element/blur_event", "blur")}}, {{domxref("Element/focusin_event", "focusin")}}, and {{domxref("Element/focusout_event", "focusout")}}.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("FocusEvent.FocusEvent", "FocusEvent()")}}</dt>
- <dd>Creates a <code>FocusEvent</code> event with the given parameters.</dd>
-</dl>
+- {{domxref("FocusEvent.FocusEvent", "FocusEvent()")}}
+  - : Creates a `FocusEvent` event with the given parameters.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface also inherits properties from its parent {{domxref("UIEvent")}}, and indirectly from {{domxref("Event")}}</em>.</p>
+_This interface also inherits properties from its parent {{domxref("UIEvent")}}, and indirectly from {{domxref("Event")}}_.
 
-<dl>
- <dt>{{domxref("FocusEvent.relatedTarget")}}</dt>
- <dd>Is an {{domxref("EventTarget")}} representing a secondary target for this event. In some cases (such as when tabbing in or out a page), this property may be set to <code>null</code> for security reasons.</dd>
-</dl>
+- {{domxref("FocusEvent.relatedTarget")}}
+  - : Is an {{domxref("EventTarget")}} representing a secondary target for this event. In some cases (such as when tabbing in or out a page), this property may be set to `null` for security reasons.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface has no specific methods. It inherits methods from its parent {{domxref("UIEvent")}}, and indirectly from {{domxref("Event")}}.</em></p>
+_This interface has no specific methods. It inherits methods from its parent {{domxref("UIEvent")}}, and indirectly from {{domxref("Event")}}._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The {{domxref("Event")}} base interface</li>
-</ul>
+- The {{domxref("Event")}} base interface

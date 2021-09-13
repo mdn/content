@@ -2,37 +2,36 @@
 title: WEBGL_lose_context.restoreContext()
 slug: Web/API/WEBGL_lose_context/restoreContext
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGL extension
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGL extension
 browser-compat: api.WEBGL_lose_context.restoreContext
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong>WEBGL_lose_context.restoreContext()</strong> method is part of the <a
-    href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> and allows you to simulate
-  restoring the context of a {{domxref("WebGLRenderingContext")}} object.</p>
+The **WEBGL_lose_context.restoreContext()** method is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and allows you to simulate
+restoring the context of a {{domxref("WebGLRenderingContext")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">gl.getExtension('WEBGL_lose_context').restoreContext();</pre>
+```js
+gl.getExtension('WEBGL_lose_context').restoreContext();
+```
 
-<h3 id="Errors_thrown">Errors thrown</h3>
+### Errors thrown
 
-<ul>
-  <li><code>INVALID_OPERATION</code> if the context was not lost.</li>
-</ul>
+- `INVALID_OPERATION` if the context was not lost.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>With this method, you can simulate the
-  <code><a href="/en-US/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event">webglcontextrestored</a></code>
-  event:</p>
+With this method, you can simulate the
+[`webglcontextrestored`](/en-US/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event)
+event:
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
 
 canvas.addEventListener('webglcontextrestored', function(e) {
@@ -40,23 +39,20 @@ canvas.addEventListener('webglcontextrestored', function(e) {
 }, false);
 
 gl.getExtension('WEBGL_lose_context').restoreContext();
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.isContextLost()")}}</li>
-  <li>Events:
-    <code><a href="/en-US/docs/Web/API/HTMLCanvasElement/webglcontextlost_event">webglcontextlost</a></code>,
-    <code><a href="/en-US/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event">webglcontextrestored</a></code>,
-    <code><a href="/en-US/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror_event">webglcontextcreationerror</a></code>
-  </li>
-</ul>
+- {{domxref("WebGLRenderingContext.isContextLost()")}}
+- Events:
+  [`webglcontextlost`](/en-US/docs/Web/API/HTMLCanvasElement/webglcontextlost_event),
+  [`webglcontextrestored`](/en-US/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event),
+  [`webglcontextcreationerror`](/en-US/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror_event)

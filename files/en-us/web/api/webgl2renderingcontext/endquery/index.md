@@ -2,65 +2,61 @@
 title: WebGL2RenderingContext.endQuery()
 slug: Web/API/WebGL2RenderingContext/endQuery
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGL2
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGL2
 browser-compat: api.WebGL2RenderingContext.endQuery
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGL2RenderingContext.endQuery()</code></strong> method of the <a
-    href="/en-US/docs/Web/API/WebGL_API">WebGL 2 API</a> marks the end of a given query
-  target.</p>
+The **`WebGL2RenderingContext.endQuery()`** method of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) marks the end of a given query
+target.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <var>gl</var>.endQuery(<var>target</var>);
-</pre>
+```js
+void gl.endQuery(target);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>target</dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLenum")}} specifying the target of the query. Possible values:
-    <ul>
-      <li><code>gl.ANY_SAMPLES_PASSED</code>: Specifies an occlusion query: these queries
-        detect whether an object is visible (whether the scoped drawing commands pass the
-        depth test and if so, how many samples pass).</li>
-      <li><code>gl.ANY_SAMPLES_PASSED_CONSERVATIVE</code>: Same as above above, but less
-        accurate and faster version.</li>
-      <li><code>gl.TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN</code>: Number of primitives that
-        are written to transform feedback buffers.</li>
-    </ul>
-  </dd>
-</dl>
+- target
 
-<h3 id="Return_value">Return value</h3>
+  - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the target of the query. Possible values:
 
-<p>None.</p>
+    - `gl.ANY_SAMPLES_PASSED`: Specifies an occlusion query: these queries
+      detect whether an object is visible (whether the scoped drawing commands pass the
+      depth test and if so, how many samples pass).
+    - `gl.ANY_SAMPLES_PASSED_CONSERVATIVE`: Same as above above, but less
+      accurate and faster version.
+    - `gl.TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN`: Number of primitives that
+      are written to transform feedback buffers.
 
-<h2 id="Examples">Examples</h2>
+### Return value
 
-<pre class="brush: js">var query = gl.createQuery();
+None.
+
+## Examples
+
+```js
+var query = gl.createQuery();
 gl.beginQuery(gl.ANY_SAMPLES_PASSED, query);
 
 // ...
 
 gl.endQuery(gl.ANY_SAMPLES_PASSED);
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLQuery")}}</li>
-</ul>
+- {{domxref("WebGLQuery")}}

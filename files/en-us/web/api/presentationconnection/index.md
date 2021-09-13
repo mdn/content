@@ -10,51 +10,45 @@ tags:
   - Reference
 browser-compat: api.PresentationConnection
 ---
-<div>{{SeeCompatTable}}{{securecontext_header}}{{DefaultAPISidebar("Presentation API")}}</div>
+{{SeeCompatTable}}{{securecontext_header}}{{DefaultAPISidebar("Presentation API")}}
 
-<p>The <strong><code>PresentationConnection</code></strong> interface of the <a href="/en-US/docs/Web/API/Presentation_API">Presentation API</a> provides methods and properties for managing a single presentation. Each <a href="https://www.w3.org/TR/presentation-api/#dfn-presentation-connection">presentation connection</a> is represented by a <code>PresentationConnection</code> object. Both the <a href="https://www.w3.org/TR/presentation-api/#dfn-controlling-user-agent">controlling user agent</a> and <a href="https://www.w3.org/TR/presentation-api/#dfn-receiving-user-agent">receiving user agent</a> <em>MUST</em> implement <code>PresentationConnection</code>.</p>
+The **`PresentationConnection`** interface of the [Presentation API](/en-US/docs/Web/API/Presentation_API) provides methods and properties for managing a single presentation. Each [presentation connection](https://www.w3.org/TR/presentation-api/#dfn-presentation-connection) is represented by a `PresentationConnection` object. Both the [controlling user agent](https://www.w3.org/TR/presentation-api/#dfn-controlling-user-agent) and [receiving user agent](https://www.w3.org/TR/presentation-api/#dfn-receiving-user-agent) _MUST_ implement `PresentationConnection`.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("PresentationConnection.binaryType")}}</dt>
- <dd>Returns either blob or arrayBuffer. When a <code>PresentationConnection</code> object is created, its <a href="https://www.w3.org/TR/presentation-api/#idl-def-presentationconnection-binarytype"><code>binaryType</code></a> IDL attribute <em>MUST</em> be set to the string " <a href="https://www.w3.org/TR/presentation-api/#dom-binarytype-arraybuffer"><code>arraybuffer</code></a>".</dd>
- <dt>{{domxref("PresentationConnection.id")}} {{readonlyInline}}</dt>
- <dd>Provides the presentation connection identifier.</dd>
- <dt>{{domxref("PresentationConnection.state")}} {{readonlyInline}}</dt>
- <dd>Returns the <a href="https://www.w3.org/TR/presentation-api/#dfn-presentation-connection">presentation connection</a>'s current state.</dd>
- <dt>{{domxref("PresentationConnection.url")}} {{readonlyinline}}</dt>
- <dd>Returns the URL used to create or reconnect to the presentation.</dd>
-</dl>
+- {{domxref("PresentationConnection.binaryType")}}
+  - : Returns either blob or arrayBuffer. When a `PresentationConnection` object is created, its [`binaryType`](https://www.w3.org/TR/presentation-api/#idl-def-presentationconnection-binarytype) IDL attribute _MUST_ be set to the string " [`arraybuffer`](https://www.w3.org/TR/presentation-api/#dom-binarytype-arraybuffer)".
+- {{domxref("PresentationConnection.id")}} {{readonlyInline}}
+  - : Provides the presentation connection identifier.
+- {{domxref("PresentationConnection.state")}} {{readonlyInline}}
+  - : Returns the [presentation connection](https://www.w3.org/TR/presentation-api/#dfn-presentation-connection)'s current state.
+- {{domxref("PresentationConnection.url")}} {{readonlyinline}}
+  - : Returns the URL used to create or reconnect to the presentation.
 
-<h3 id="Event_handlers">Event handlers</h3>
+### Event handlers
 
-<dl>
- <dt>{{domxref("PresentationConnection.onclose")}}</dt>
- <dd>Fired when there is a call to {{DOMxRef("PresentationConnection.close", "PresentationConnection.close()")}}.</dd>
- <dt>{{domxref("PresentationConnection.onconnect")}}</dt>
- <dd>Fired when a presentation connection is established.</dd>
- <dt>{{domxref("PresentationConnection.onmessage")}}</dt>
- <dd>Fired when there is a call to {{DOMxRef("PresentationConnection.send", "PresentationConnection.send()")}}.</dd>
- <dt>{{domxref("PresentationConnection.onterminated")}}</dt>
- <dd>Fired when there is a call to {{DOMxRef("PresentationConnection.terminate", "PresentationConnection.terminate()")}}.</dd>
-</dl>
+- {{domxref("PresentationConnection.onclose")}}
+  - : Fired when there is a call to {{DOMxRef("PresentationConnection.close", "PresentationConnection.close()")}}.
+- {{domxref("PresentationConnection.onconnect")}}
+  - : Fired when a presentation connection is established.
+- {{domxref("PresentationConnection.onmessage")}}
+  - : Fired when there is a call to {{DOMxRef("PresentationConnection.send", "PresentationConnection.send()")}}.
+- {{domxref("PresentationConnection.onterminated")}}
+  - : Fired when there is a call to {{DOMxRef("PresentationConnection.terminate", "PresentationConnection.terminate()")}}.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("PresentationConnection.close()")}}</dt>
- <dd>Closes the current connection and sends a {{domxref("PresentationConnectionCloseEvent")}} to {{DOMxRef("PresentationConnection.onclosed")}}.</dd>
- <dt>{{domxref("PresentationConnection.send()")}}</dt>
- <dd>Sends either binary or text data between a controlling browsing context and a presenting browsing context.</dd>
- <dt>{{domxref("PresentationConnection.terminate()")}}</dt>
- <dd>Terminates the current connection and fires {{DOMxRef("PresentationConnection.onterminated")}}.</dd>
-</dl>
+- {{domxref("PresentationConnection.close()")}}
+  - : Closes the current connection and sends a {{domxref("PresentationConnectionCloseEvent")}} to {{DOMxRef("PresentationConnection.onclosed")}}.
+- {{domxref("PresentationConnection.send()")}}
+  - : Sends either binary or text data between a controlling browsing context and a presenting browsing context.
+- {{domxref("PresentationConnection.terminate()")}}
+  - : Terminates the current connection and fires {{DOMxRef("PresentationConnection.onterminated")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,34 +2,35 @@
 title: Element.part
 slug: Web/API/Element/part
 tags:
-- API
-- Element
-- Property
-- Reference
-- part
+  - API
+  - Element
+  - Property
+  - Reference
+  - part
 browser-compat: api.Element.part
 ---
-<div>{{ ApiRef("DOM") }}</div>
+{{ ApiRef("DOM") }}
 
-<p>The <strong><code>part</code></strong> property of the {{domxref("Element")}} interface
-  represents the part identifier(s) of the element (i.e. set using the <code>part</code>
-  attribute), returned as a {{domxref("DOMTokenList")}}. These can be used to style parts
-  of a shadow DOM, via the {{cssxref("::part")}} pseudo-element.</p>
+The **`part`** property of the {{domxref("Element")}} interface
+represents the part identifier(s) of the element (i.e. set using the `part`
+attribute), returned as a {{domxref("DOMTokenList")}}. These can be used to style parts
+of a shadow DOM, via the {{cssxref("::part")}} pseudo-element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>let elementPartList = element</em>.part
-</pre>
+```js
+let elementPartList = element.part
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following excerpt is from our <a
-    href="https://mdn.github.io/web-components-examples/shadow-part/">shadow-part</a>
-  example. Here the <code>part</code> attribute is used to find the shadow parts, and the
-  <code>part</code> property is then used to change the part identifiers of each tab so
-  the correct styling is applied to the active tab when tabs are clicked.  </p>
+The following excerpt is from our [shadow-part](https://mdn.github.io/web-components-examples/shadow-part/)
+example. Here the `part` attribute is used to find the shadow parts, and the
+`part` property is then used to change the part identifiers of each tab so
+the correct styling is applied to the active tab when tabs are clicked.
 
-<pre class="brush: js">let tabs = [];
+```js
+let tabs = [];
 let children = this.shadowRoot.children;
 
 for(let elem of children) {
@@ -38,28 +39,27 @@ for(let elem of children) {
   }
 }
 
-tabs.forEach((tab) =&gt; {
-  tab.addEventListener('click', (e) =&gt; {
-    tabs.forEach((tab) =&gt; {
+tabs.forEach((tab) => {
+  tab.addEventListener('click', (e) => {
+    tabs.forEach((tab) => {
       tab.part = 'tab';
     })
     e.target.part = 'tab active';
   })
 
   console.log(tab.part);
-})</pre>
+})
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{cssxref("::part")}}</li>
-  <li>{{htmlattrxref("part")}}</li>
-</ul>
+- {{cssxref("::part")}}
+- {{htmlattrxref("part")}}

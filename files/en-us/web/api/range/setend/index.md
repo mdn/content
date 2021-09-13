@@ -12,78 +12,70 @@ tags:
   - setEnd
 browser-compat: api.Range.setEnd
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<p>The <strong><code>Range.setEnd()</code></strong> method sets the end position of a {{
+The **`Range.setEnd()`** method sets the end position of a {{
   domxref("Range") }} to be located at the given offset into the specified node x.Setting
-  the end point above (higher in the document) than the start point will result in a
-  collapsed range with the start and end points both set to the specified end position.
-</p>
+the end point above (higher in the document) than the start point will result in a
+collapsed range with the start and end points both set to the specified end position.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>range</em>.setEnd(<em>endNode</em>, <em>endOffset</em>);
-</pre>
+```js
+range.setEnd(endNode, endOffset);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>endNode</code></dt>
-  <dd>The {{ domxref("Node") }} inside which the {{ domxref("Range") }} should end.</dd>
-  <dt><code>endOffset</code></dt>
-  <dd>An integer greater than or equal to zero representing the offset for the end of the
-    <code>Range</code> from the start of <code>endNode</code>.</dd>
-</dl>
+- `endNode`
+  - : The {{ domxref("Node") }} inside which the {{ domxref("Range") }} should end.
+- `endOffset`
+  - : An integer greater than or equal to zero representing the offset for the end of the
+    `Range` from the start of `endNode`.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>undefined</code>.</p>
+`undefined`.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>Exceptions are thrown as {{domxref("DOMException")}} objects of the following types:
-</p>
+Exceptions are thrown as {{domxref("DOMException")}} objects of the following types:
 
-<dl>
-  <dt><code>InvalidNodeTypeError</code></dt>
-  <dd>The node specified by <code>endNode</code> is a doctype node; range endpoints cannot
-    be located inside a doctype node.</dd>
-  <dt><code>IndexSizeError</code></dt>
-  <dd>The value specified by <code>endOffset</code> is either greater than or equal to the
-    length of the node or is less than zero.</dd>
-</dl>
+- `InvalidNodeTypeError`
+  - : The node specified by `endNode` is a doctype node; range endpoints cannot
+    be located inside a doctype node.
+- `IndexSizeError`
+  - : The value specified by `endOffset` is either greater than or equal to the
+    length of the node or is less than zero.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>If the <code>endNode</code> is a {{domxref("Node")}} of type {{domxref("Text")}},
-  {{domxref("Comment")}}, or {{domxref("CDataSection")}}, then <code>endOffset</code> is
-  the number of characters from the start of <code>endNode</code>. For other
-  {{domxref("Node")}} types, <code>endOffset</code> is the number of child nodes between
-  the start of the <code>endNode</code>.</p>
+If the `endNode` is a {{domxref("Node")}} of type {{domxref("Text")}},
+{{domxref("Comment")}}, or {{domxref("CDataSection")}}, then `endOffset` is
+the number of characters from the start of `endNode`. For other
+{{domxref("Node")}} types, `endOffset` is the number of child nodes between
+the start of the `endNode`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">const range = document.createRange();
+```js
+const range = document.createRange();
 const endNode = document.getElementsByTagName('p').item(3);
 const endOffset = endNode.childNodes.length;
 range.setEnd(endNode, endOffset);
-</pre>
+```
 
-<div class="notecard note">
-  <p><strong>Note:</strong> <code>setEnd()</code> is commonly used in conjunction with
-    {{domxref("Range.setStart", "setStart()")}} to fully configure a range.</p>
-</div>
+> **Note:** `setEnd()` is commonly used in conjunction with
+> {{domxref("Range.setStart", "setStart()")}} to fully configure a range.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</a></li>
-</ul>
+- [The DOM interfaces index](/en-US/docs/Web/API/Document_Object_Model)

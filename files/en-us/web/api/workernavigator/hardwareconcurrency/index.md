@@ -11,63 +11,63 @@ tags:
   - hardwareConcurrency
 browser-compat: api.WorkerNavigator.hardwareConcurrency
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p>The <code><strong>navigator.hardwareConcurrency</strong></code> read-only property
-  returns the number of logical processors available to run threads on the user's
-  computer.</p>
+The **`navigator.hardwareConcurrency`** read-only property
+returns the number of logical processors available to run threads on the user's
+computer.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>logicalProcessors</em> = navigator.hardwareConcurrency
-</pre>
+```js
+logicalProcessors = navigator.hardwareConcurrency
+```
 
-<h2 id="Value">Value</h2>
+## Value
 
-<p>A {{jsxref("Number")}} indicating the number of logical processor cores.</p>
+A {{jsxref("Number")}} indicating the number of logical processor cores.
 
-<p>Modern computers have multiple physical processor cores in their CPU (two or four cores
-  is typical), but each physical core is also usually able to run more than one thread at
-  a time using advanced scheduling techniques. So a four-core CPU may offer eight
-  <strong>logical processor cores</strong>, for example. The number of logical processor
-  cores can be used to measure the number of threads which can effectively be run at once
-  without them having to context switch.</p>
+Modern computers have multiple physical processor cores in their CPU (two or four cores
+is typical), but each physical core is also usually able to run more than one thread at
+a time using advanced scheduling techniques. So a four-core CPU may offer eight
+**logical processor cores**, for example. The number of logical processor
+cores can be used to measure the number of threads which can effectively be run at once
+without them having to context switch.
 
-<p>The browser may, however, choose to report a lower number of logical cores in order to
-  represent more accurately the number of {{domxref("Worker")}}s that can run at once, so
-  don't treat this as an absolute measurement of the number of cores in the user's system.
-</p>
+The browser may, however, choose to report a lower number of logical cores in order to
+represent more accurately the number of {{domxref("Worker")}}s that can run at once, so
+don't treat this as an absolute measurement of the number of cores in the user's system.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this example, one {{domxref("Worker")}} is created for each logical processor
-  reported by the browser and a record is created which includes a reference to the new
-  worker as well as a Boolean value indicating whether or not we're using that worker yet;
-  these objects are, in turn, stored into an array for later use. This creates a pool of
-  workers we can use to process requests later.</p>
+In this example, one {{domxref("Worker")}} is created for each logical processor
+reported by the browser and a record is created which includes a reference to the new
+worker as well as a Boolean value indicating whether or not we're using that worker yet;
+these objects are, in turn, stored into an array for later use. This creates a pool of
+workers we can use to process requests later.
 
-<p>The following code can be run in a worker:</p>
+The following code can be run in a worker:
 
-<pre class="brush: js">let workerList = [];
+```js
+let workerList = [];
 
-for (let i = 0; i &lt; navigator.hardwareConcurrency; i++) {
+for (let i = 0; i < navigator.hardwareConcurrency; i++) {
   let newWorker = {
     worker: new Worker('cpuworker.js'),
     inUse: false
   };
   workerList.push(newWorker);
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WorkerNavigator")}}</li>
-</ul>
+- {{domxref("WorkerNavigator")}}

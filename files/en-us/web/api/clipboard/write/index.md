@@ -2,63 +2,59 @@
 title: Clipboard.write()
 slug: Web/API/Clipboard/write
 tags:
-- API
-- Clip
-- Clipboard
-- Clipboard API
-- Cut
-- Method
-- Pasteboard
-- Reference
-- Scrap
-- copy
-- paste
-- write
+  - API
+  - Clip
+  - Clipboard
+  - Clipboard API
+  - Cut
+  - Method
+  - Pasteboard
+  - Reference
+  - Scrap
+  - copy
+  - paste
+  - write
 browser-compat: api.Clipboard.write
 ---
-<div>{{APIRef("Clipboard API")}}</div>
+{{APIRef("Clipboard API")}}
 
-<p>The {{domxref("Clipboard")}} method
-    <strong><code>write()</code></strong> writes arbitrary data, such as images, to the
-    clipboard. This can be used to implement cut and copy functionality.</p>
+The {{domxref("Clipboard")}} method
+**`write()`** writes arbitrary data, such as images, to the
+clipboard. This can be used to implement cut and copy functionality.
 
-<p>The <code>"clipboard-write"</code> permission of the <a
-    href="/en-US/docs/Web/API/Permissions_API">Permissions API</a>, is granted
-  automatically to pages when they are in the active tab.</p>
+The `"clipboard-write"` permission of the [Permissions API](/en-US/docs/Web/API/Permissions_API), is granted
+automatically to pages when they are in the active tab.
 
-<div class="note">
-  <p><strong>Note:</strong> Browser support for the asynchronous clipboard APIs is still
-    in the process of being implemented. Be sure to check the {{anch("Browser
+> **Note:** Browser support for the asynchronous clipboard APIs is still
+> in the process of being implemented. Be sure to check the {{anch("Browser
     compatibility", "compatibility table")}} as well as
-    {{SectionOnPage("/en-US/docs/Web/API/Clipboard", "Clipboard availability")}} for more
-    information.</p>
-</div>
+> {{SectionOnPage("/en-US/docs/Web/API/Clipboard", "Clipboard availability")}} for more
+> information.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>promise</em> = navigator.clipboard.write(<em>data</em>)</pre>
+```js
+var promise = navigator.clipboard.write(data)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>data</code></dt>
-  <dd>An array of {{domxref("ClipboardItem")}} objects containing data to be written to
-    the clipboard.</dd>
-</dl>
+- `data`
+  - : An array of {{domxref("ClipboardItem")}} objects containing data to be written to
+    the clipboard.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} which is resolved when the data has been written to the
-  clipboard. The promise is rejected if the clipboard is unable to complete the clipboard
-  access.</p>
+A {{jsxref("Promise")}} which is resolved when the data has been written to the
+clipboard. The promise is rejected if the clipboard is unable to complete the clipboard
+access.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example function replaces the current contents of the clipboard with a specified
-  string.</p>
+This example function replaces the current contents of the clipboard with a specified
+string.
 
-<pre class="brush: js">
+```js
 function setClipboard(text) {
     var type = "text/plain";
     var blob = new Blob([text], { type });
@@ -73,22 +69,21 @@ function setClipboard(text) {
         }
     );
 }
-</pre>
+```
 
-<p>The code begins by creating a new a {{domxref("Blob")}} object. This object is
-  required to construct a {{domxref("ClipboardItem")}} object which is sent to the
-  clipboard. The {{domxref("Blob")}} constructor takes in  the content we want to copy
-  and its type. This {{domxref("Blob")}} object can be derived from many sources e.g. a {{domxref("Canvas")}}.
-  <br />
-  <br />
-  Next, we create a new {{domxref("ClipboardItem")}} object into which the blob will be placed for sending to the clipboard.
-  The key of the object passed to the {{domxref("ClipboardItem")}} constructor indicates the content type, the value indicates the content. Then <code>write()</code> is called, specifying both a fulfillment function
-  and an error function.</p>
+The code begins by creating a new a {{domxref("Blob")}} object. This object is
+required to construct a {{domxref("ClipboardItem")}} object which is sent to the
+clipboard. The {{domxref("Blob")}} constructor takes in the content we want to copy
+and its type. This {{domxref("Blob")}} object can be derived from many sources e.g. a {{domxref("Canvas")}}.
 
-<h3 id="Example_of_copying_canvas_contents_to_the_clipboard">Example of copying canvas
-  contents to the clipboard</h3>
+Next, we create a new {{domxref("ClipboardItem")}} object into which the blob will be placed for sending to the clipboard.
+The key of the object passed to the {{domxref("ClipboardItem")}} constructor indicates the content type, the value indicates the content. Then `write()` is called, specifying both a fulfillment function
+and an error function.
 
-<pre class="brush: js">function copyCanvasContentsToClipboard(canvas, onDone, onError) {
+### Example of copying canvas contents to the clipboard
+
+```js
+function copyCanvasContentsToClipboard(canvas, onDone, onError) {
   canvas.toBlob(function (blob) {
     let data = [new ClipboardItem({ [blob.type]: blob })];
 
@@ -98,26 +93,23 @@ function setClipboard(text) {
       onError(err);
     })
   });
-}</pre>
+}
+```
 
-<div class="note">
-  <p><strong>Note:</strong> You can only pass in one clipboard item at a time.</p>
-</div>
+> **Note:** You can only pass in one clipboard item at a time.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Clipboard_API">Clipboard API</a></li>
-  <li><a href="https://async-clipboard-api.glitch.me/">Async Clipboard API demo on
-      Glitch</a></li>
-  <li><a href="https://web.dev/image-support-for-async-clipboard/">Image support for Async
-      Clipboard article</a></li>
-</ul>
+- [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
+- [Async Clipboard API demo on
+  Glitch](https://async-clipboard-api.glitch.me/)
+- [Image support for Async
+  Clipboard article](https://web.dev/image-support-for-async-clipboard/)

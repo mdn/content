@@ -9,31 +9,29 @@ tags:
   - SVG DOM
 browser-compat: api.SVGScriptElement
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <strong><code>SVGScriptElement</code></strong> interface corresponds to the SVG {{SVGElement("script")}} element.</p>
+The **`SVGScriptElement`** interface corresponds to the SVG {{SVGElement("script")}} element.
 
-<p>{{InheritanceDiagram(600, 140)}}</p>
+{{InheritanceDiagram(600, 140)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("SVGScriptElement.href")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} attribute of the given {{SVGElement("script")}} element.</dd>
- <dt>{{domxref("SVGScriptElement.type")}} {{ReadOnlyInline}}</dt>
- <dd>A {{domxref("DOMString")}} corresponding to the {{SVGAttr("type")}} attribute of the given {{SVGElement("script")}} element. A {{domxref("DOMException")}} is raised with the code <code>NO_MODIFICATION_ALLOWED_ERR</code> on an attempt to change the value of a read only attribute.</dd>
- <dt>{{domxref("SVGScriptElement.crossOrigin")}} {{ReadOnlyInline}}</dt>
- <dd>A {{domxref("DOMString")}} corresponding to the {{SVGAttr("crossorigin")}} attribute of the given {{SVGElement("script")}} element.</dd>
-</dl>
+- {{domxref("SVGScriptElement.href")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} attribute of the given {{SVGElement("script")}} element.
+- {{domxref("SVGScriptElement.type")}} {{ReadOnlyInline}}
+  - : A {{domxref("DOMString")}} corresponding to the {{SVGAttr("type")}} attribute of the given {{SVGElement("script")}} element. A {{domxref("DOMException")}} is raised with the code `NO_MODIFICATION_ALLOWED_ERR` on an attempt to change the value of a read only attribute.
+- {{domxref("SVGScriptElement.crossOrigin")}} {{ReadOnlyInline}}
+  - : A {{domxref("DOMString")}} corresponding to the {{SVGAttr("crossorigin")}} attribute of the given {{SVGElement("script")}} element.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface doesn't implement any specific methods, but inherits methods from its parent interface, {{domxref("SVGElement")}}.</em></p>
+_This interface doesn't implement any specific methods, but inherits methods from its parent interface, {{domxref("SVGElement")}}._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

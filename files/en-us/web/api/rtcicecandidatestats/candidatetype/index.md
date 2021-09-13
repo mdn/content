@@ -2,39 +2,40 @@
 title: RTCIceCandidateStats.candidateType
 slug: Web/API/RTCIceCandidateStats/candidateType
 tags:
-- API
-- Candidate
-- ICE
-- Networking
-- RTCIceCandidateStats
-- Reference
-- Statistics
-- Stats
-- WebRTC
-- WebRTC API
-- candidateType
-- rtc
+  - API
+  - Candidate
+  - ICE
+  - Networking
+  - RTCIceCandidateStats
+  - Reference
+  - Statistics
+  - Stats
+  - WebRTC
+  - WebRTC API
+  - candidateType
+  - rtc
 browser-compat: api.RTCIceCandidateStats.candidateType
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The {{domxref("RTCIceCandidateStats")}} interface's
-  <code><strong>candidateType</strong></code> property is a string which indicates the
-  type of {{Glossary("ICE")}} candidate the object represents.</p>
+The {{domxref("RTCIceCandidateStats")}} interface's
+**`candidateType`** property is a string which indicates the
+type of {{Glossary("ICE")}} candidate the object represents.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>candidateType</em> = <em>rtcIceCandidateStats</em>.candidateType;
-</pre>
+```js
+candidateType = rtcIceCandidateStats.candidateType;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} whose value is one of the strings found in <a href="/en-US/docs/Web/API/RTCIceCandidate/type#Values"><code>RTCIceCandidate.type</code></a>.</p>
+A {{domxref("DOMString")}} whose value is one of the strings found in [`RTCIceCandidate.type`](/en-US/docs/Web/API/RTCIceCandidate/type#Values).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

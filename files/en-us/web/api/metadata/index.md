@@ -13,36 +13,30 @@ tags:
   - metadata
 browser-compat: api.Metadata
 ---
-<p>{{ APIRef("File System API") }}{{SeeCompatTable}}{{Non-standard_header}}</p>
+{{ APIRef("File System API") }}{{SeeCompatTable}}{{Non-standard_header}}
 
-<p>The <strong><code>Metadata</code></strong> interface is used by the <a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</a> to contain information about a file system entry. This metadata includes the file's size and modification date and time.</p>
+The **`Metadata`** interface is used by the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) to contain information about a file system entry. This metadata includes the file's size and modification date and time.
 
-<div class="note">
-<p><strong>Note:</strong> This interface isn't available through the global scope; instead, you obtain a <code>Metadata</code> object describing a {{domxref("FileSystemEntry")}} using the method {{domxref("FileSystemEntry.getMetadata()")}}.</p>
-</div>
+> **Note:** This interface isn't available through the global scope; instead, you obtain a `Metadata` object describing a {{domxref("FileSystemEntry")}} using the method {{domxref("FileSystemEntry.getMetadata()")}}.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("Metadata.modificationTime", "modificationTime")}} {{ReadOnlyInline}}</dt>
- <dd>A {{jsxref("Date")}} object indicating the date and time the entry was modified.</dd>
- <dt>{{domxref("Metadata.size", "size")}} {{ReadOnlyInline}}</dt>
- <dd>A 64-bit unsigned integer indicating the size of the entry in bytes.</dd>
-</dl>
+- {{domxref("Metadata.modificationTime", "modificationTime")}} {{ReadOnlyInline}}
+  - : A {{jsxref("Date")}} object indicating the date and time the entry was modified.
+- {{domxref("Metadata.size", "size")}} {{ReadOnlyInline}}
+  - : A 64-bit unsigned integer indicating the size of the entry in bytes.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This API has no official W3C or WHATWG specification.</p>
+This API has no official W3C or WHATWG specification.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</a></li>
- <li><a href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction">Introduction to the File System API</a></li>
- <li>{{domxref("FileSystemEntry")}}</li>
- <li>{{domxref("FileSystemFileEntry")}} and {{domxref("FileSystemDirectoryEntry")}}</li>
-</ul>
+- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- {{domxref("FileSystemEntry")}}
+- {{domxref("FileSystemFileEntry")}} and {{domxref("FileSystemDirectoryEntry")}}

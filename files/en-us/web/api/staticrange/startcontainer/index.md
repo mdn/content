@@ -2,39 +2,40 @@
 title: StaticRange.startContainer
 slug: Web/API/StaticRange/startContainer
 tags:
-- API
-- DOM
-- DOM API
-- Property
-- Range
-- Read-only
-- Reference
-- Static Range API
-- StaticRange
-- container
-- start
-- startContainer
+  - API
+  - DOM
+  - DOM API
+  - Property
+  - Range
+  - Read-only
+  - Reference
+  - Static Range API
+  - StaticRange
+  - container
+  - start
+  - startContainer
 browser-compat: api.StaticRange.startContainer
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>The read-only <strong><code>startContainer</code></strong>
-    property of the {{domxref("StaticRange")}} interface returns the start
-    {{domxref("Node")}} for the range.</p>
+The read-only **`startContainer`**
+property of the {{domxref("StaticRange")}} interface returns the start
+{{domxref("Node")}} for the range.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>node</em> = <em>staticNode</em>.startContainer</pre>
+```js
+var node = staticNode.startContainer
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>The DOM {{domxref("Node")}} inside which the start position of the range is found.</p>
+The DOM {{domxref("Node")}} inside which the start position of the range is found.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

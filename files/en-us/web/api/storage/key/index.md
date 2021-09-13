@@ -2,70 +2,68 @@
 title: Storage.key()
 slug: Web/API/Storage/key
 tags:
-- API
-- Method
-- Reference
-- Storage
-- Web Storage
+  - API
+  - Method
+  - Reference
+  - Storage
+  - Web Storage
 browser-compat: api.Storage.key
 ---
-<div>{{APIRef("Web Storage API")}}</div>
+{{APIRef("Web Storage API")}}
 
-<p>The <strong><code>key()</code></strong> method of the {{domxref("Storage")}} interface,
-  when passed a number n, returns the name of the nth key in a given <code>Storage</code>
-  object. The order of keys is user-agent defined, so you should not rely on it.</p>
+The **`key()`** method of the {{domxref("Storage")}} interface,
+when passed a number n, returns the name of the nth key in a given `Storage`
+object. The order of keys is user-agent defined, so you should not rely on it.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>aKeyName</em> = <em>storage</em>.key(<em>index</em>);</pre>
+```js
+var aKeyName = storage.key(index);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>index</code></dt>
-  <dd>An integer representing the number of the key you want to get the name of. This is a
-    zero-based index.</dd>
-</dl>
+- `index`
+  - : An integer representing the number of the key you want to get the name of. This is a
+    zero-based index.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{domxref("DOMString")}} containing the name of the key. If the index does not exist,
-  <code>null</code> is returned.</p>
+A {{domxref("DOMString")}} containing the name of the key. If the index does not exist,
+`null` is returned.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following function iterates over the local storage keys:</p>
+The following function iterates over the local storage keys:
 
-<pre class="brush: js">function forEachKey(callback) {
-  for (var i = 0; i &lt; localStorage.length; i++) {
+```js
+function forEachKey(callback) {
+  for (var i = 0; i < localStorage.length; i++) {
     callback(localStorage.key(i));
   }
-}</pre>
+}
+```
 
-<p>The following function iterates over the local storage keys and gets the value set for
-  each key:</p>
+The following function iterates over the local storage keys and gets the value set for
+each key:
 
-<pre class="brush: js">for(var i =0; i &lt; localStorage.length; i++){
+```js
+for(var i =0; i < localStorage.length; i++){
   console.log(localStorage.getItem(localStorage.key(i)));
-}</pre>
+}
+```
 
-<div class="note">
-  <p><strong>Note:</strong> For a real world example, see our <a
-      href="https://mdn.github.io/dom-examples/web-storage/">Web Storage Demo</a>.</p>
-</div>
+> **Note:** For a real world example, see our [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the
-      Web Storage API</a></li>
-</ul>
+- [Using the
+  Web Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)

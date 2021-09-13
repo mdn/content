@@ -10,48 +10,53 @@ tags:
   - resize
 browser-compat: api.Window.resize_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <strong><code>resize</code></strong> event fires when the document view (window) has been resized.</p>
+The **`resize`** event fires when the document view (window) has been resized.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("UIEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{domxref("GlobalEventHandlers.onresize", "onresize")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{domxref("UIEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{domxref("GlobalEventHandlers.onresize", "onresize")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>In some earlier browsers it was possible to register <code>resize</code> event handlers on any HTML element. It is still possible to set <code>onresize</code> attributes or use {{domxref("EventTarget.addEventListener", "addEventListener()")}} to set a handler on any element. However, <code>resize</code> events are only fired on the {{domxref("Window", "window")}} object (i.e. returned by {{domxref("document.defaultView")}}). Only handlers registered on the <code>window</code> object will receive <code>resize</code> events.</p>
+In some earlier browsers it was possible to register `resize` event handlers on any HTML element. It is still possible to set `onresize` attributes or use {{domxref("EventTarget.addEventListener", "addEventListener()")}} to set a handler on any element. However, `resize` events are only fired on the {{domxref("Window", "window")}} object (i.e. returned by {{domxref("document.defaultView")}}). Only handlers registered on the `window` object will receive `resize` events.
 
-<p>There is a proposal to allow all elements to be notified of resize changes. See <a href="https://wicg.github.io/ResizeObserver/">Resize Observer</a> to read the draft document, and <a href="https://github.com/WICG/ResizeObserver/issues">GitHub issues</a> to read the on-going discussions.</p>
+There is a proposal to allow all elements to be notified of resize changes. See [Resize Observer](https://wicg.github.io/ResizeObserver/) to read the draft document, and [GitHub issues](https://github.com/WICG/ResizeObserver/issues) to read the on-going discussions.
 
-<p>If the resize event is triggered too many times for your application, see <a href="http://bencentra.com/code/2015/02/27/optimizing-window-resize.html">Optimizing window.onresize</a> to control the time after which the event fires.</p>
+If the resize event is triggered too many times for your application, see [Optimizing window.onresize](http://bencentra.com/code/2015/02/27/optimizing-window-resize.html) to control the time after which the event fires.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Window_size_logger">Window size logger</h3>
+### Window size logger
 
-<p>The following example reports the window size each time it is resized. Bear in mind that since the example is running in an <code>&lt;iframe&gt;</code>, you'll need to actually get the <code>&lt;iframe&gt;</code> to resize before you see an effect.</p>
+The following example reports the window size each time it is resized. Bear in mind that since the example is running in an `<iframe>`, you'll need to actually get the `<iframe>` to resize before you see an effect.
 
-<pre class="brush: html">&lt;p&gt;Resize the browser window to fire the &lt;code&gt;resize&lt;/code&gt; event.&lt;/p&gt;
-&lt;p&gt;Window height: &lt;span id="height"&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Window width: &lt;span id="width"&gt;&lt;/span&gt;&lt;/p&gt;</pre>
+```html
+<p>Resize the browser window to fire the <code>resize</code> event.</p>
+<p>Window height: <span id="height"></span></p>
+<p>Window width: <span id="width"></span></p>
+```
 
-<pre class="brush: js">const heightOutput = document.querySelector('#height');
+```js
+const heightOutput = document.querySelector('#height');
 const widthOutput = document.querySelector('#width');
 
 function reportWindowSize() {
@@ -59,26 +64,27 @@ function reportWindowSize() {
   widthOutput.textContent = window.innerWidth;
 }
 
-window.onresize = reportWindowSize;</pre>
+window.onresize = reportWindowSize;
+```
 
-<p>{{EmbedLiveSample("Window_size_logger")}}</p>
+{{EmbedLiveSample("Window_size_logger")}}
 
-<h3 id="addEventListener_equivalent">addEventListener equivalent</h3>
+### addEventListener equivalent
 
-<p>You could set up the event handler using the <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> method:</p>
+You could set up the event handler using the [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
-<pre class="brush: js">window.addEventListener('resize', reportWindowSize);</pre>
+```js
+window.addEventListener('resize', reportWindowSize);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("GlobalEventHandlers.onresize")}}</li>
-</ul>
+- {{domxref("GlobalEventHandlers.onresize")}}

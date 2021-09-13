@@ -2,81 +2,81 @@
 title: HTMLMediaElement.currentTime
 slug: Web/API/HTMLMediaElement/currentTime
 tags:
-- API
-- Audio
-- HTML DOM
-- HTMLMediaElement
-- Media
-- Property
-- Time
-- Video
-- Web
-- currentTime
-- offset
-- seconds
-- seek
+  - API
+  - Audio
+  - HTML DOM
+  - HTMLMediaElement
+  - Media
+  - Property
+  - Time
+  - Video
+  - Web
+  - currentTime
+  - offset
+  - seconds
+  - seek
 browser-compat: api.HTMLMediaElement.currentTime
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The {{domxref("HTMLMediaElement")}} interface's
-    <code><strong>currentTime</strong></code> property specifies the current playback time
-    in seconds.</p>
+The {{domxref("HTMLMediaElement")}} interface's
+**`currentTime`** property specifies the current playback time
+in seconds.
 
-<p>Changing the value of <code>currentTime</code> seeks the media to
-  the new time.</p>
+Changing the value of `currentTime` seeks the media to
+the new time.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>currentTime</em> = <em>htmlMediaElement</em>.currentTime;
-<em>htmlMediaElement</em>.currentTime = 35;
-</pre>
+```js
+var currentTime = htmlMediaElement.currentTime;
+htmlMediaElement.currentTime = 35;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A double-precision floating-point value indicating the current playback time in
-  seconds.</p>
+A double-precision floating-point value indicating the current playback time in
+seconds.
 
-<p>If the media is not yet playing, the value of <code>currentTime</code> indicates the
-  time position within the media at which playback will begin once the
-  {{domxref("HTMLMediaElement.play", "play()")}} method is called.</p>
+If the media is not yet playing, the value of `currentTime` indicates the
+time position within the media at which playback will begin once the
+{{domxref("HTMLMediaElement.play", "play()")}} method is called.
 
-<p>Setting <code>currentTime</code> to a new value seeks the media to the given time, if
-  the media is available.</p>
+Setting `currentTime` to a new value seeks the media to the given time, if
+the media is available.
 
-<p>For media without a known duration—such as media being streamed live—it's possible that
-  the browser may not be able to obtain parts of the media that have expired from the
-  media buffer. Also, media whose timeline doesn't begin at 0 seconds cannot be seeked to
-  a time before its timeline's earliest time.</p>
+For media without a known duration—such as media being streamed live—it's possible that
+the browser may not be able to obtain parts of the media that have expired from the
+media buffer. Also, media whose timeline doesn't begin at 0 seconds cannot be seeked to
+a time before its timeline's earliest time.
 
-<p>The length of the media in seconds can be determined using the
-  {{domxref("HTMLMediaElement.duration", "duration")}} property.</p>
+The length of the media in seconds can be determined using the
+{{domxref("HTMLMediaElement.duration", "duration")}} property.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var video = document.createElement('video');
+```js
+var video = document.createElement('video');
 console.log(video.currentTime);
-</pre>
+```
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<h3 id="Reduced_time_precision">Reduced time precision</h3>
+### Reduced time precision
 
-<p>To offer protection against timing attacks and fingerprinting, browsers may round or
-  otherwise adjust the value returned by <code>currentTime</code>.</p>
+To offer protection against timing attacks and fingerprinting, browsers may round or
+otherwise adjust the value returned by `currentTime`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining it, {{domxref("HTMLMediaElement")}}.</li>
-  <li>{{domxref("HTMLMediaElement.fastSeek()")}}: Another way to set the time</li>
-  <li>{{domxref("HTMLMediaElement.duration")}}: The duration of the media in seconds</li>
-</ul>
+- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- {{domxref("HTMLMediaElement.fastSeek()")}}: Another way to set the time
+- {{domxref("HTMLMediaElement.duration")}}: The duration of the media in seconds

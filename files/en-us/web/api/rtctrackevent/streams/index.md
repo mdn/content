@@ -2,41 +2,42 @@
 title: RTCTrackEvent.streams
 slug: Web/API/RTCTrackEvent/streams
 tags:
-- API
-- Media
-- Property
-- RTCTrackEvent
-- Read-only
-- Reference
-- Streams
-- WebRTC
-- WebRTC API
-- events
-- track
+  - API
+  - Media
+  - Property
+  - RTCTrackEvent
+  - Read-only
+  - Reference
+  - Streams
+  - WebRTC
+  - WebRTC API
+  - events
+  - track
 browser-compat: api.RTCTrackEvent.streams
 ---
-<div>{{APIRef("WebRTC")}}</div>
+{{APIRef("WebRTC")}}
 
-<p>The <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a>
-    interface {{domxref("RTCTrackEvent")}}'s read-only
-    <strong><code>streams</code></strong> property specifies an array of
-    {{domxref("MediaStream")}} objects, one for each of the streams that comprise the
-    track being added to the {{domxref("RTCPeerConnection")}}.</p>
+The [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+interface {{domxref("RTCTrackEvent")}}'s read-only
+**`streams`** property specifies an array of
+{{domxref("MediaStream")}} objects, one for each of the streams that comprise the
+track being added to the {{domxref("RTCPeerConnection")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>streams</em> = <em>trackEvent</em>.streams;</pre>
+```js
+var streams = trackEvent.streams;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{jsxref("Array")}} of {{domxref("MediaStream")}} objects, one for each stream that
-  make up the new track.</p>
+An {{jsxref("Array")}} of {{domxref("MediaStream")}} objects, one for each stream that
+make up the new track.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

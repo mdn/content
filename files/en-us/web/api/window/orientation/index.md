@@ -5,18 +5,18 @@ tags:
   - NeedsContent
 browser-compat: api.Window.orientation
 ---
-<div>{{APIRef}}{{deprecated_header}}</div>
+{{APIRef}}{{deprecated_header}}
 
-<p>Returns the orientation in degrees (in 90-degree increments) of the viewport relative to the device's natural orientation.</p>
+Returns the orientation in degrees (in 90-degree increments) of the viewport relative to the device's natural orientation.
 
-<p>Its only possible values are <code>-90</code>, <code>0</code>, <code>90</code>, and <code>180</code>. Positive values are counterclockwise; negative values are clockwise.</p>
+Its only possible values are `-90`, `0`, `90`, and `180`. Positive values are counterclockwise; negative values are clockwise.
 
-<p>This property is deprecated. Use the {{domxref("Screen.orientation")}} property instead, available on the {{domxref("window.screen")}} property.</p>
+This property is deprecated. Use the {{domxref("Screen.orientation")}} property instead, available on the {{domxref("window.screen")}} property.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

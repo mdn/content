@@ -2,53 +2,48 @@
 title: FileReader.readAsArrayBuffer()
 slug: Web/API/FileReader/readAsArrayBuffer
 tags:
-- API
-- DOM
-- File API
-- FileReader
-- Files
-- Method
-- Reference
-- readAsArrayBuffer
+  - API
+  - DOM
+  - File API
+  - FileReader
+  - Files
+  - Method
+  - Reference
+  - readAsArrayBuffer
 browser-compat: api.FileReader.readAsArrayBuffer
 ---
-<p>{{APIRef("File API")}}</p>
+{{APIRef("File API")}}
 
-<p>The {{domxref("FileReader")}} interface's
-  <strong><code>readAsArrayBuffer()</code></strong> method is used to start reading the
-  contents of a specified {{domxref("Blob")}} or {{domxref("File")}}. When the read
-  operation is finished, the {{domxref("FileReader.readyState","readyState")}} becomes
-  <code>DONE</code>, and the {{domxref("FileReader/loadend_event", "loadend")}} is
-  triggered. At that time, the {{domxref("FileReader.result","result")}} attribute
-  contains an {{jsxref("ArrayBuffer")}} representing the file's data.</p>
+The {{domxref("FileReader")}} interface's
+**`readAsArrayBuffer()`** method is used to start reading the
+contents of a specified {{domxref("Blob")}} or {{domxref("File")}}. When the read
+operation is finished, the {{domxref("FileReader.readyState","readyState")}} becomes
+`DONE`, and the {{domxref("FileReader/loadend_event", "loadend")}} is
+triggered. At that time, the {{domxref("FileReader.result","result")}} attribute
+contains an {{jsxref("ArrayBuffer")}} representing the file's data.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The {{domxref("Blob.arrayBuffer()")}} method is a newer promise-based API to read a
-    file as an array buffer.</p>
-</div>
+> **Note:** The {{domxref("Blob.arrayBuffer()")}} method is a newer promise-based API to read a
+> file as an array buffer.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><var>instanceOfFileReader</var>.readAsArrayBuffer(<var>blob</var>);</pre>
+```js
+instanceOfFileReader.readAsArrayBuffer(blob);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code><var>blob</var></code></dt>
-  <dd>The {{domxref("Blob")}} or {{domxref("File")}} from which to read.</dd>
-</dl>
+- `blob`
+  - : The {{domxref("Blob")}} or {{domxref("File")}} from which to read.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("FileReader")}}</li>
-</ul>
+- {{domxref("FileReader")}}

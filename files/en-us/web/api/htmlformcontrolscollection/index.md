@@ -15,39 +15,35 @@ tags:
   - Reference
 browser-compat: api.HTMLFormControlsCollection
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLFormControlsCollection</code></strong> interface represents a <em>collection</em> of HTML <em>form control elements</em>.</p>
+The **`HTMLFormControlsCollection`** interface represents a _collection_ of HTML _form control elements_.
 
-<p>It represents the lists returned by the {{domxref("HTMLFormElement")}} interface's {{domxref("HTMLFormElement.elements", "elements")}} property and the {{domxref("HTMLFieldSetElement")}} interface's {{domxref("HTMLFieldSetElement.elements", "elements")}} property.</p>
+It represents the lists returned by the {{domxref("HTMLFormElement")}} interface's {{domxref("HTMLFormElement.elements", "elements")}} property and the {{domxref("HTMLFieldSetElement")}} interface's {{domxref("HTMLFieldSetElement.elements", "elements")}} property.
 
-<p>This interface replaces one method from {{domxref("HTMLCollection")}}, on which it is based.</p>
+This interface replaces one method from {{domxref("HTMLCollection")}}, on which it is based.
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface inherits the properties of its parent, {{domxref("HTMLCollection")}}.</em></p>
+_This interface inherits the properties of its parent, {{domxref("HTMLCollection")}}._
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface inherits the methods of its parent, {{domxref("HTMLCollection")}}.</em></p>
+_This interface inherits the methods of its parent, {{domxref("HTMLCollection")}}._
 
-<dl>
- <dt>{{domxref("HTMLFormControlsCollection.namedItem()")}}</dt>
- <dd>Returns the {{domxref("RadioNodeList")}} or the {{domxref("Element")}} in the collection whose <code>name</code> or <code>id</code> matches the specified name, or <code>null</code> if no nodes match. Note that this version of <code>namedItem()</code> hide the one inherited from {{domxref("HTMLCollection")}}. Like that one, in JavaScript, using the array bracket syntax with a {{jsxref("String")}}, like <code><em>collection</em>["value"]</code> is equivalent to <code><em>collection</em>.namedItem("value")</code>.</dd>
-</dl>
+- {{domxref("HTMLFormControlsCollection.namedItem()")}}
+  - : Returns the {{domxref("RadioNodeList")}} or the {{domxref("Element")}} in the collection whose `name` or `id` matches the specified name, or `null` if no nodes match. Note that this version of `namedItem()` hide the one inherited from {{domxref("HTMLCollection")}}. Like that one, in JavaScript, using the array bracket syntax with a {{jsxref("String")}}, like `collection["value"]` is equivalent to `collection.namedItem("value")`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("HTMLCollection")}}, {{domxref("RadioNodeList")}}, {{domxref("HTMLOptionsCollection")}}</li>
-</ul>
+- {{domxref("HTMLCollection")}}, {{domxref("RadioNodeList")}}, {{domxref("HTMLOptionsCollection")}}

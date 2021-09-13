@@ -12,103 +12,87 @@ tags:
   - open
 browser-compat: api.IDBFactory.open
 ---
-  <p>{{APIRef("IndexedDB")}}</p>
-  <p>The <strong><code>open()</code></strong> method of the {{domxref("IDBFactory")}}
-    interface requests opening a <a
-      href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#database_connection">connection to a database</a>.
-  </p>
+{{APIRef("IndexedDB")}}
 
-  <p>The method returns an {{domxref("IDBOpenDBRequest")}} object immediately, and
-    performs the open operation asynchronously. If the operation is successful, a
-    <code>success</code> event is fired on the request object that is returned from this
-    method, with its <code>result</code> attribute set to the new
-    {{domxref("IDBDatabase")}} object for the connection.</p>
+The **`open()`** method of the {{domxref("IDBFactory")}}
+interface requests opening a [connection to a database](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#database_connection).
 
-<p>May trigger <code>upgradeneeded</code>, <code>blocked</code> or
-  <code>versionchange</code> events.</p>
+The method returns an {{domxref("IDBOpenDBRequest")}} object immediately, and
+performs the open operation asynchronously. If the operation is successful, a
+`success` event is fired on the request object that is returned from this
+method, with its `result` attribute set to the new
+{{domxref("IDBDatabase")}} object for the connection.
 
-<p>{{AvailableInWorkers}}</p>
+May trigger `upgradeneeded`, `blocked` or
+`versionchange` events.
 
-<h2 id="Syntax">Syntax</h2>
+{{AvailableInWorkers}}
 
-<p>For the current standard:</p>
+## Syntax
 
-<pre class="brush: js">var <em>IDBOpenDBRequest</em> = <em>indexedDB</em>.open(<em>name</em>);
-var <em>IDBOpenDBRequest</em> = <em>indexedDB</em>.open(<em>name</em>, <em>version</em>);
-</pre>
+For the current standard:
 
-<h3 id="Parameters">Parameters</h3>
+```js
+var IDBOpenDBRequest = indexedDB.open(name);
+var IDBOpenDBRequest = indexedDB.open(name, version);
+```
 
-<dl>
-  <dt>name</dt>
-  <dd>The name of the database.</dd>
-  <dt>version {{optional_inline}}</dt>
-  <dd>Optional. The version to open the database with. If the version is not provided and
+### Parameters
+
+- name
+  - : The name of the database.
+- version {{optional_inline}}
+  - : Optional. The version to open the database with. If the version is not provided and
     the database exists, then a connection to the database will be opened without changing
     its version. If the version is not provided and the database does not exist, then it
-    will be created with version <code>1</code>.</dd>
-</dl>
+    will be created with version `1`.
 
-<h4 id="Experimental_Gecko_options_object">Experimental Gecko options object</h4>
+#### Experimental Gecko options object
 
-<dl>
-  <dt>options (version and storage) {{optional_inline}} {{deprecated_inline}}</dt>
-  <dd>In Gecko, since <a href="/en-US/docs/Mozilla/Firefox/Releases/26">version 26</a>, you can include
-    a non-standard <code>options</code> object as a parameter of {{
-    domxref("IDBFactory.open") }} that contains the <code>version</code> number of the
+- options (version and storage) {{optional_inline}} {{deprecated_inline}}
+
+  - : In Gecko, since [version 26](/en-US/docs/Mozilla/Firefox/Releases/26), you can include
+    a non-standard `options` object as a parameter of {{
+    domxref("IDBFactory.open") }} that contains the `version` number of the
     database, plus a storage value that specifies whether you want to
-    use <code>persistent</code> or <code>temporary</code> storage.
-    <div class="warning"><p><strong>Warning:</strong> The <code>storage</code> attribute is
-      deprecated and will soon be removed from Gecko. You should use
-      {{domxref("StorageManager.persist()")}} to get persistent storage instead.</p></div>
-  </dd>
-</dl>
+    use `persistent` or `temporary` storage.
 
-<div class="note">
-  <p><strong>Note:</strong> You can find out more information on the different available
-    storage types, and how Firefox handles client-side data storage, at <a
-      href="/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria">Browser
-      storage limits and eviction criteria</a>.</p>
-</div>
+    > **Warning:** The `storage` attribute is
+    > deprecated and will soon be removed from Gecko. You should use
+    > {{domxref("StorageManager.persist()")}} to get persistent storage instead.
 
-<h3 id="Return_value">Return value</h3>
+> **Note:** You can find out more information on the different available
+> storage types, and how Firefox handles client-side data storage, at [Browser
+> storage limits and eviction criteria](/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria).
 
-<p>A {{domxref("IDBOpenDBRequest")}} object on which subsequent events related to this
-  request are fired.</p>
+### Return value
 
-<h3 id="Exceptions">Exceptions</h3>
+A {{domxref("IDBOpenDBRequest")}} object on which subsequent events related to this
+request are fired.
 
-<p>This method may raise a {{domxref("DOMException")}} of the following types:</p>
+### Exceptions
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Exception</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>TypeError</code></td>
-      <td>The value of version is zero or a negative number or not a number.</td>
-    </tr>
-  </tbody>
-</table>
+This method may raise a {{domxref("DOMException")}} of the following types:
 
-<h2 id="Example">Example</h2>
+| Exception   | Description                                                        |
+| ----------- | ------------------------------------------------------------------ |
+| `TypeError` | The value of version is zero or a negative number or not a number. |
 
-<p>Example of calling <code>open</code> with the current specification's
-  <code>version</code> parameter:</p>
+## Example
 
-<pre class="brush: js">var request = window.indexedDB.open("toDoList", 4);</pre>
+Example of calling `open` with the current specification's
+`version` parameter:
 
-<p>In the following code snippet, we make a request to open a database, and include
-  handlers for the success and error cases. For a full working example, see our <a
-    href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
-    Notifications</a> app (<a class="external"
-    href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</p>
+```js
+var request = window.indexedDB.open("toDoList", 4);
+```
 
-<pre class="brush:js">var note = document.querySelector("ul");
+In the following code snippet, we make a request to open a database, and include
+handlers for the success and error cases. For a full working example, see our [To-do
+Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) app ([view example live](https://mdn.github.io/to-do-notifications/).)
+
+```js
+var note = document.querySelector("ul");
 
 // In the following line, you should include the prefixes
 // of implementations you want to test.
@@ -126,38 +110,34 @@ var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 // these two event handlers act on the database being opened
 // successfully, or not
 DBOpenRequest.onerror = function(event) {
-  note.innerHTML += '&lt;li&gt;Error loading database.&lt;/li&gt;';
+  note.innerHTML += '<li>Error loading database.</li>';
 };
 
 DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '&lt;li&gt;Database initialised.&lt;/li&gt;';
+  note.innerHTML += '<li>Database initialised.</li>';
 
   // store the result of opening the database in the db
   // variable. This is used a lot later on, for opening
   // transactions and suchlike.
   db = DBOpenRequest.result;
 };
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
-  <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
-  <li>Using transactions: {{domxref("IDBTransaction")}}</li>
-  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
-  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
-  <li>Using cursors: {{domxref("IDBCursor")}}</li>
-  <li>Reference example: <a class="external"
-      href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do
-      Notifications</a> (<a class="external"
-      href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
-</ul>
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do
+  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

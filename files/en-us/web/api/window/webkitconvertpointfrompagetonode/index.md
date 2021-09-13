@@ -13,58 +13,50 @@ tags:
   - convertPointFromPageToNode
 browser-compat: api.Window.convertPointFromPageToNode
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>{{Non-standard_header}}</p>
+{{Non-standard_header}}
 
-<p>Given a {{domxref("WebKitPoint")}} specified in the page's coordinate system, the
-  {{domxref("Window")}} method <strong><code>convertPointFromPageToNode()</code></strong>
-  returns a <code>Point</code> object specifying the same location in the coordinate
-  system of the specified DOM {{domxref("Node")}}.</p>
+Given a {{domxref("WebKitPoint")}} specified in the page's coordinate system, the
+{{domxref("Window")}} method **`convertPointFromPageToNode()`**
+returns a `Point` object specifying the same location in the coordinate
+system of the specified DOM {{domxref("Node")}}.
 
-<div class="warning">
-  <p><strong>Warning:</strong> Please review the {{anch("Browser compatibility")}} section before using this method,
-    as it's not widely supported (nor is the {{domxref("WebKitPoint")}} object it uses).</p>
-</div>
+> **Warning:** Please review the {{anch("Browser compatibility")}} section before using this method,
+> as it's not widely supported (nor is the {{domxref("WebKitPoint")}} object it uses).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>Point</em> = <em>Window</em>.convertPointFromPageToNode(<em>node</em>, <em>pagePoint</em>);</pre>
+```js
+Point = Window.convertPointFromPageToNode(node, pagePoint);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>node</code></dt>
-  <dd>The {{domxref("Node")}} into whose coordinate system the point is to be converted.
-  </dd>
-  <dt><code>pagePoint</code></dt>
-  <dd>A {{domxref("WebKitPoint")}} object specifying a point in the coordinate system of the
-    page, which is to be converted into the node's coordinate system.</dd>
-</dl>
+- `node`
+  - : The {{domxref("Node")}} into whose coordinate system the point is to be converted.
+- `pagePoint`
+  - : A {{domxref("WebKitPoint")}} object specifying a point in the coordinate system of the
+    page, which is to be converted into the node's coordinate system.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code>Point</code> object describing the specified location in the node's coordinate
-  system.</p>
+A `Point` object describing the specified location in the node's coordinate
+system.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This method was specified in <a
-    href="https://www.w3.org/TR/2009/WD-css3-2d-transforms-20090320/">the defunct 20 March
-    2009 Working Draft of CSS 2D Transforms Module Level 3</a>. It is not present in the
-  current CSS Transforms Module Level 1 Working Draft.</p>
+This method was specified in [the defunct 20 March
+2009 Working Draft of CSS 2D Transforms Module Level 3](https://www.w3.org/TR/2009/WD-css3-2d-transforms-20090320/). It is not present in the
+current CSS Transforms Module Level 1 Working Draft.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Window.webkitConvertPointFromNodeToPage")}}</li>
-  <li>Mozilla implementation bug: {{bug(850808)}}</li>
-  <li><a
-      href="https://msdn.microsoft.com/en-us/library/ie/dn760735(v=vs.85).aspx"><code>webkitConvertPointFromPageToNode</code>
-      documentation at IE Dev Center</a></li>
-</ul>
+- {{domxref("Window.webkitConvertPointFromNodeToPage")}}
+- Mozilla implementation bug: {{bug(850808)}}
+- [`webkitConvertPointFromPageToNode`
+  documentation at IE Dev Center](<https://msdn.microsoft.com/en-us/library/ie/dn760735(v=vs.85).aspx>)

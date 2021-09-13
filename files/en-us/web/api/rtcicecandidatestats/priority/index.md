@@ -3,102 +3,79 @@ title: RTCIceCandidateStats.priority
 slug: Web/API/RTCIceCandidateStats/priority
 browser-compat: api.RTCIceCandidateStats.priority
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The {{domxref("RTCIceCandidateStats")}} dictionary's
-        <strong><code>priority</code></strong> property is a positive integer value
-        indicating the priority (or desirability) of the described candidate.</p>
+The {{domxref("RTCIceCandidateStats")}} dictionary's
+**`priority`** property is a positive integer value
+indicating the priority (or desirability) of the described candidate.
 
-<p>During {{Glossary("ICE")}} negotiation while setting up a WebRTC peer connection, the
-    priority values reported to the remote peer by a {{Glossary("user agent")}} are used
-    to determine which candidates are considered "more desirable". The higher the value,
-    the more desirable the candidate is.</p>
+During {{Glossary("ICE")}} negotiation while setting up a WebRTC peer connection, the
+priority values reported to the remote peer by a {{Glossary("user agent")}} are used
+to determine which candidates are considered "more desirable". The higher the value,
+the more desirable the candidate is.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-    class="brush: js"><em>priority</em> = <em>rtcIceCandidateStats</em>.priority;</pre>
+```js
+priority = rtcIceCandidateStats.priority;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A positive integer indicating the priority of the {{domxref("RTCIceCandidate")}}
-    described by the <code>RTCIceCandidateStats</code> object. The value may be anywhere
-    from 1 to 2,147,483,647.</p>
+A positive integer indicating the priority of the {{domxref("RTCIceCandidate")}}
+described by the `RTCIceCandidateStats` object. The value may be anywhere
+from 1 to 2,147,483,647.
 
-<h2 id="Determining_priority">Determining priority</h2>
+## Determining priority
 
-<p>The ICE specification describes how user agents and other software using WebRTC should
-    calculate the priority. The priority of a candidate is calculated using the following
-    variables as inputs:</p>
+The ICE specification describes how user agents and other software using WebRTC should
+calculate the priority. The priority of a candidate is calculated using the following
+variables as inputs:
 
-<ul>
-    <li>The preferability of the candidate type (local, server reflexive, peer reflexive,
-        or relayed)</li>
-    <li>The preferability of the candidate's specific IP address (for multihomed agents)
-    </li>
-    <li>The candidate's component ID (1 for RTP, 2 for RTCP)</li>
-</ul>
+- The preferability of the candidate type (local, server reflexive, peer reflexive,
+  or relayed)
+- The preferability of the candidate's specific IP address (for multihomed agents)
+- The candidate's component ID (1 for RTP, 2 for RTCP)
 
-<p>The candidate's priority is computed using the formula (<em>p<sub>type</sub></em> is
-    the priority of the candidate's type and <em>p<sub>local</sub></em> is the priority of
-    the IP address):</p>
+The candidate's priority is computed using the formula (_p<sub>type</sub>_ is
+the priority of the candidate's type and _p<sub>local</sub>_ is the priority of
+the IP address):
 
-<p><math display="block">
-        <semantics>
-            <mrow>
-                <mi mathvariant="italic">priority</mi>
-                <mo>=</mo>
-                <msup>
-                    <mn>2</mn>
-                    <mn>24</mn>
-                </msup>
-                <mo>×</mo>
-                <msub>
-                    <mi>p</mi>
-                    <mrow>
-                        <mi>type</mi>
-                    </mrow>
-                </msub>
-                <mo>+</mo>
-                <msup>
-                    <mn>2</mn>
-                    <mn>8</mn>
-                </msup>
-                <mo>×</mo>
-                <msub>
-                    <mi>p</mi>
-                    <mrow>
-                        <mi>local</mi>
-                    </mrow>
-                </msub>
-                <mo>+</mo>
-                <mo stretchy="false">(</mo>
-                <mn>256</mn>
-                <mo>-</mo>
-                <mi mathvariant="italic">componentID</mi>
-                <mo stretchy="false">)</mo>
-            </mrow>
-            <annotation encoding="TeX">priority\quad =\quad { 2 }^{ 24 }\times { p }_{
-                type }\quad +\quad { 2 }^{ 8 }\times { p }_{ local }\quad +\quad (256\quad
-                -\quad componentID)</annotation>
-        </semantics>
-    </math></p>
+<math display="block"><semantics><mrow><mi mathvariant="italic">priority</mi>
+<mo>=</mo>
+<msup><mn>2</mn>
+<mn>24</mn>
+</msup><mo>×</mo>
+<msub><mi>p</mi>
+<mrow><mi>type</mi>
+</mrow></msub><mo>+</mo>
+<msup><mn>2</mn>
+<mn>8</mn>
+</msup><mo>×</mo>
+<msub><mi>p</mi>
+<mrow><mi>local</mi>
+</mrow></msub><mo>+</mo>
+<mo stretchy="false">(</mo>
+<mn>256</mn>
+<mo>-</mo>
+<mi mathvariant="italic">componentID</mi>
+<mo stretchy="false">)</mo>
+</mrow><annotation encoding="TeX">priority\quad =\quad { 2 }^{ 24 }\times { p }_{
+type }\quad +\quad { 2 }^{ 8 }\times { p }_{ local }\quad +\quad (256\quad
+-\quad componentID)</annotation></semantics></math>
 
-<p>This is equivalent to mapping the priorities of teh candidate type, the local IP, and
-    the component ID into various bit ranges within the 32-bit <code>priority</code>
-    value.</p>
+This is equivalent to mapping the priorities of teh candidate type, the local IP, and
+the component ID into various bit ranges within the 32-bit `priority`
+value.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-    <li>{{RFC(5245, "4.1.2.1")}}: Recommended Formula section in the ICE specification
-    </li>
-</ul>
+- {{RFC(5245, "4.1.2.1")}}: Recommended Formula section in the ICE specification

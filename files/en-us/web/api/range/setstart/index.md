@@ -8,66 +8,67 @@ tags:
   - Range
 browser-compat: api.Range.setStart
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<p>The <strong><code>Range.setStart()</code></strong> method sets the start position of a
-  {{ domxref("Range") }}.</p>
+The **`Range.setStart()`** method sets the start position of a
+{{ domxref("Range") }}.
 
-<p>If the <code>startNode</code> is a {{domxref("Node")}} of type {{domxref("Text")}},
-  {{domxref("Comment")}}, or {{domxref("CDataSection")}}, then <code>startOffset</code> is
-  the number of characters from the start of <code>startNode</code>. For other
-  <code>Node</code> types, <code>startOffset</code> is the number of child nodes between
-  the start of the <code>startNode</code>.</p>
+If the `startNode` is a {{domxref("Node")}} of type {{domxref("Text")}},
+{{domxref("Comment")}}, or {{domxref("CDataSection")}}, then `startOffset` is
+the number of characters from the start of `startNode`. For other
+`Node` types, `startOffset` is the number of child nodes between
+the start of the `startNode`.
 
-<p>Setting the start point below (lower in the document) the end point will result in a
-  collapsed range with the start and end points both set to the specified start position.
-</p>
+Setting the start point below (lower in the document) the end point will result in a
+collapsed range with the start and end points both set to the specified start position.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>range</em>.setStart(<em>startNode</em>, <em>startOffset</em>);
-</pre>
+```js
+range.setStart(startNode, startOffset);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><em>startNode</em></dt>
-  <dd>The {{ domxref("Node") }} where the {{ domxref("Range") }} should start.</dd>
-  <dt><em>startOffset</em></dt>
-  <dd>An integer greater than or equal to zero representing the offset for the start of
-    the {{ domxref("Range") }} from the start of <code>startNode</code>.</dd>
-</dl>
+- _startNode_
+  - : The {{ domxref("Node") }} where the {{ domxref("Range") }} should start.
+- _startOffset_
+  - : An integer greater than or equal to zero representing the offset for the start of
+    the {{ domxref("Range") }} from the start of `startNode`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Highlight_part_of_an_element">Highlight part of an element</h3>
+### Highlight part of an element
 
-<p>This example uses the <code>Range.setStart()</code> and {{domxref("Range.setEnd()")}}
-  methods to add part of an address to a range. The selected range is then highlighted
-  using  {{domxref("Range.surroundContents()")}}.</p>
+This example uses the `Range.setStart()` and {{domxref("Range.setEnd()")}}
+methods to add part of an address to a range. The selected range is then highlighted
+using  {{domxref("Range.surroundContents()")}}.
 
-<p>The address contains nine nodes: five text nodes, and four {{htmlElement("br")}}
-  elements.</p>
+The address contains nine nodes: five text nodes, and four {{htmlElement("br")}}
+elements.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p id="address"&gt;Wyatt Earp&lt;br&gt;
-101 E. Main St.&lt;br&gt;
-Dodge City, KS&lt;br&gt;
-67801&lt;br&gt;
-USA&lt;/p&gt;
+```html
+<p id="address">Wyatt Earp<br>
+101 E. Main St.<br>
+Dodge City, KS<br>
+67801<br>
+USA</p>
 
-&lt;hr&gt;
-&lt;p&gt;Nodes in the original address:&lt;/p&gt;
-&lt;ol id="log"&gt;&lt;/ol&gt;</pre>
+<hr>
+<p>Nodes in the original address:</p>
+<ol id="log"></ol>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const address = document.getElementById('address');
+```js
+const address = document.getElementById('address');
 const log = document.getElementById('log');
 
 // Log info
-address.childNodes.forEach(node =&gt; {
+address.childNodes.forEach(node => {
   const li = document.createElement('li');
   li.textContent = `${node.nodeName}, ${node.nodeValue}`;
   log.appendChild(li);
@@ -81,46 +82,49 @@ range.setStart(address, startOffset);
 range.setEnd(address, endOffset);
 
 const mark = document.createElement('mark');
-range.surroundContents(mark);</pre>
+range.surroundContents(mark);
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Highlight_part_of_an_element", 700, 400)}}</p>
+{{EmbedLiveSample("Highlight_part_of_an_element", 700, 400)}}
 
-<h3 id="Get_characters_from_a_text_node">Get characters from a text node</h3>
+### Get characters from a text node
 
-<p>This example uses the <code>Range.setStart()</code> and {{domxref("Range.setEnd()")}}
-  methods to define the contents of a range. The resulting range contains the first
-  through fifth characters within a text node.</p>
+This example uses the `Range.setStart()` and {{domxref("Range.setEnd()")}}
+methods to define the contents of a range. The resulting range contains the first
+through fifth characters within a text node.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p id="content"&gt;0123456789&lt;/p&gt;
-&lt;p id="log"&gt;&lt;/p&gt;</pre>
+```html
+<p id="content">0123456789</p>
+<p id="log"></p>
+```
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const element = document.getElementById('content');
+```js
+const element = document.getElementById('content');
 const textNode = element.childNodes[0];
 const range = document.createRange();
 range.setStart(textNode, 0);  // Start at first character
 range.setEnd(textNode, 5);    // End at fifth character
-document.getElementById('log').textContent = range;</pre>
+document.getElementById('log').textContent = range;
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Get_characters_from_a_text_node", 700, 100)}}</p>
+{{EmbedLiveSample("Get_characters_from_a_text_node", 700, 100)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index</a></li>
-</ul>
+- [The DOM interfaces index](/en-US/docs/Web/API/Document_Object_Model)

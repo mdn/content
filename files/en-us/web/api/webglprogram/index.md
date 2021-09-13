@@ -14,13 +14,14 @@ tags:
   - WebGLProgram
 browser-compat: api.WebGLProgram
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <code><strong>WebGLProgram</strong></code> is part of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> and is a combination of two compiled {{domxref("WebGLShader")}}s consisting of a vertex shader and a fragment shader (both written in GLSL).</p>
+The **`WebGLProgram`** is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and is a combination of two compiled {{domxref("WebGLShader")}}s consisting of a vertex shader and a fragment shader (both written in GLSL).
 
-<p>To create a <code>WebGLProgram</code>, call the GL context's {{domxref("WebGLRenderingContext.createProgram", "createProgram()")}} function. After attaching the shader programs using {{domxref("WebGLRenderingContext.attachShader", "attachShader()")}}, you link them into a usable program. This is shown in the code below.</p>
+To create a `WebGLProgram`, call the GL context's {{domxref("WebGLRenderingContext.createProgram", "createProgram()")}} function. After attaching the shader programs using {{domxref("WebGLRenderingContext.attachShader", "attachShader()")}}, you link them into a usable program. This is shown in the code below.
 
-<pre class="brush: js">var program = gl.createProgram();
+```js
+var program = gl.createProgram();
 
 // Attach pre-existing shaders
 gl.attachShader(program, vertexShader);
@@ -32,17 +33,18 @@ if ( !gl.getProgramParameter( program, gl.LINK_STATUS) ) {
   var info = gl.getProgramInfoLog(program);
   throw 'Could not compile WebGL program. \n\n' + info;
 }
-</pre>
+```
 
-<p>See {{domxref("WebGLShader")}} for information on creating the <code>vertexShader</code> and <code>fragmentShader</code> in the above example.</p>
+See {{domxref("WebGLShader")}} for information on creating the `vertexShader` and `fragmentShader` in the above example.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Using_the_program">Using the program</h3>
+### Using the program
 
-<p>The steps to actually do some work with the program involve telling the GPU to use the program, bind the appropriate data and configuration options, and finally draw something to the screen.</p>
+The steps to actually do some work with the program involve telling the GPU to use the program, bind the appropriate data and configuration options, and finally draw something to the screen.
 
-<pre class="brush: js">// Use the program
+```js
+// Use the program
 gl.useProgram(program);
 
 // Bind existing attribute data
@@ -52,45 +54,44 @@ gl.vertexAttribPointer(attributeLocation, 3, gl.FLOAT, false, 0, 0);
 
 // Draw a single triangle
 gl.drawArrays(gl.TRIANGLES, 0, 3);
-</pre>
+```
 
-<h3 id="Deleting_the_program">Deleting the program</h3>
+### Deleting the program
 
-<p>If there is an error linking the program or you wish to delete an existing program, then it is as simple as running {{domxref("WebGLRenderingContext.deleteProgram()")}}. This frees the memory of the linked program.</p>
+If there is an error linking the program or you wish to delete an existing program, then it is as simple as running {{domxref("WebGLRenderingContext.deleteProgram()")}}. This frees the memory of the linked program.
 
-<pre class="brush: js">gl.deleteProgram(program);
-</pre>
+```js
+gl.deleteProgram(program);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("WebGLShader")}}</li>
- <li>{{domxref("WebGLRenderingContext.attachShader()")}}</li>
- <li>{{domxref("WebGLRenderingContext.compileShader()")}}</li>
- <li>{{domxref("WebGLRenderingContext.createProgram()")}}</li>
- <li>{{domxref("WebGLRenderingContext.createShader()")}}</li>
- <li>{{domxref("WebGLRenderingContext.deleteProgram()")}}</li>
- <li>{{domxref("WebGLRenderingContext.deleteShader()")}}</li>
- <li>{{domxref("WebGLRenderingContext.detachShader()")}}</li>
- <li>{{domxref("WebGLRenderingContext.getAttachedShaders()")}}</li>
- <li>{{domxref("WebGLRenderingContext.getProgramParameter()")}}</li>
- <li>{{domxref("WebGLRenderingContext.getProgramInfoLog()")}}</li>
- <li>{{domxref("WebGLRenderingContext.getShaderParameter()")}}</li>
- <li>{{domxref("WebGLRenderingContext.getShaderPrecisionFormat()")}}</li>
- <li>{{domxref("WebGLRenderingContext.getShaderInfoLog()")}}</li>
- <li>{{domxref("WebGLRenderingContext.getShaderSource()")}}</li>
- <li>{{domxref("WebGLRenderingContext.isProgram()")}}</li>
- <li>{{domxref("WebGLRenderingContext.isShader()")}}</li>
- <li>{{domxref("WebGLRenderingContext.linkProgram()")}}</li>
- <li>{{domxref("WebGLRenderingContext.shaderSource()")}}</li>
- <li>{{domxref("WebGLRenderingContext.useProgram()")}}</li>
- <li>{{domxref("WebGLRenderingContext.validateProgram()")}}</li>
-</ul>
+- {{domxref("WebGLShader")}}
+- {{domxref("WebGLRenderingContext.attachShader()")}}
+- {{domxref("WebGLRenderingContext.compileShader()")}}
+- {{domxref("WebGLRenderingContext.createProgram()")}}
+- {{domxref("WebGLRenderingContext.createShader()")}}
+- {{domxref("WebGLRenderingContext.deleteProgram()")}}
+- {{domxref("WebGLRenderingContext.deleteShader()")}}
+- {{domxref("WebGLRenderingContext.detachShader()")}}
+- {{domxref("WebGLRenderingContext.getAttachedShaders()")}}
+- {{domxref("WebGLRenderingContext.getProgramParameter()")}}
+- {{domxref("WebGLRenderingContext.getProgramInfoLog()")}}
+- {{domxref("WebGLRenderingContext.getShaderParameter()")}}
+- {{domxref("WebGLRenderingContext.getShaderPrecisionFormat()")}}
+- {{domxref("WebGLRenderingContext.getShaderInfoLog()")}}
+- {{domxref("WebGLRenderingContext.getShaderSource()")}}
+- {{domxref("WebGLRenderingContext.isProgram()")}}
+- {{domxref("WebGLRenderingContext.isShader()")}}
+- {{domxref("WebGLRenderingContext.linkProgram()")}}
+- {{domxref("WebGLRenderingContext.shaderSource()")}}
+- {{domxref("WebGLRenderingContext.useProgram()")}}
+- {{domxref("WebGLRenderingContext.validateProgram()")}}

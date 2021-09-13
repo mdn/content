@@ -9,37 +9,43 @@ tags:
   - PerformanceElementTiming
 browser-compat: api.PerformanceElementTiming.naturalWidth
 ---
-<div>{{DefaultAPISidebar("Element Timing")}}</div>
+{{DefaultAPISidebar("Element Timing")}}
 
-<p>The <strong><code>naturalWidth</code></strong> read-only property of the {{domxref("PerformanceElementTiming")}} interface returns the intrinsic width of the image element.</p>
-<h2 id="Syntax">Syntax</h2>
+The **`naturalWidth`** read-only property of the {{domxref("PerformanceElementTiming")}} interface returns the intrinsic width of the image element.
 
-<pre class="syntaxbox">var <var>width</var> = <var>PerformanceElementTiming</var>.naturalWidth;</pre>
+## Syntax
 
-<h3>Value</h3>
-<p>An unsigned 32-bit integer (unsigned long) which is the intrinsic width of the image if this is applied to an image, 0 for text.</p>
+    var width = PerformanceElementTiming.naturalWidth;
 
-<h2 id="Examples">Examples</h2>
+### Value
 
-<p>In this example the image file has a width of 1000px and a height of 750px. Calling <code>entry.naturalWidth</code> returns <code>1000</code>, that being the intrinsic width in pixels.</p>
+An unsigned 32-bit integer (unsigned long) which is the intrinsic width of the image if this is applied to an image, 0 for text.
 
-<pre class="brush:html">&lt;img src="image.jpg" alt="a nice image" elementtiming="big-image" id="myImage"&gt;</pre>
+## Examples
 
-<pre class="brush:js">const observer = new PerformanceObserver((list) => {
+In this example the image file has a width of 1000px and a height of 750px. Calling `entry.naturalWidth` returns `1000`, that being the intrinsic width in pixels.
+
+```html
+<img src="image.jpg" alt="a nice image" elementtiming="big-image" id="myImage">
+```
+
+```js
+const observer = new PerformanceObserver((list) => {
   let entries = list.getEntries().forEach(function (entry) {
     if (entry.identifier === "big-image") {
       console.log(entry.naturalWidth);
     }
   });
 });
-observer.observe({ entryTypes: ["element"] });</pre>
+observer.observe({ entryTypes: ["element"] });
+```
 
-<div class="notecard note"><p><strong>Note:</strong> This example uses the {{domxref("PerformanceObserver")}} interface to create a list of performance measurement events. In our case we observe the {{domxref("PerformanceEntry.entrytype")}} <code>element</code> in order to use the <code>PerformanceElementTiming</code> interface.</p></div>
+> **Note:** This example uses the {{domxref("PerformanceObserver")}} interface to create a list of performance measurement events. In our case we observe the {{domxref("PerformanceEntry.entrytype")}} `element` in order to use the `PerformanceElementTiming` interface.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -8,35 +8,31 @@ tags:
   - Reference
 browser-compat: api.HTMLQuoteElement
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLQuoteElement</code></strong> interface provides special properties and methods (beyond the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating quoting elements, like {{HTMLElement("blockquote")}} and {{HTMLElement("q")}}, but not the {{HTMLElement("cite")}} element.</p>
+The **`HTMLQuoteElement`** interface provides special properties and methods (beyond the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating quoting elements, like {{HTMLElement("blockquote")}} and {{HTMLElement("q")}}, but not the {{HTMLElement("cite")}} element.
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{domxref("HTMLElement")}}.</em></p>
+_Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLQuoteElement.cite")}}</dt>
- <dd>Is a {{domxref("DOMString")}} reflecting the {{htmlattrxref("cite", "blockquote")}} HTML attribute, containing a URL for the source of the quotation.</dd>
-</dl>
+- {{domxref("HTMLQuoteElement.cite")}}
+  - : Is a {{domxref("DOMString")}} reflecting the {{htmlattrxref("cite", "blockquote")}} HTML attribute, containing a URL for the source of the quotation.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>No specific method; inherits properties from its parent, {{domxref("HTMLElement")}}.</em></p>
+_No specific method; inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The HTML elements implementing this interface: {{HTMLElement("blockquote")}} and {{HTMLElement("q")}}, but not {{HTMLElement("cite")}}.</li>
-</ul>
+- The HTML elements implementing this interface: {{HTMLElement("blockquote")}} and {{HTMLElement("q")}}, but not {{HTMLElement("cite")}}.

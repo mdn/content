@@ -13,22 +13,24 @@ tags:
   - collapsed
 browser-compat: api.AbstractRange.collapsed
 ---
-<p>{{APIRef("DOM WHATWG")}}</p>
+{{APIRef("DOM WHATWG")}}
 
-<p>The <strong><code>collapsed</code></strong> read-only property of the {{domxref("AbstractRange")}} interface returns <code>true</code> if the range's start position and end position are the same.</p>
+The **`collapsed`** read-only property of the {{domxref("AbstractRange")}} interface returns `true` if the range's start position and end position are the same.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>isCollapsed</em> = <em>range</em>.collapsed</pre>
+```js
+var isCollapsed = range.collapsed
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A boolean value which is <code>true</code> if the range is <strong>collapsed</strong>. A collapsed range is one in which the start and end positions are the same, resulting in a zero-character-long range..</p>
+A boolean value which is `true` if the range is **collapsed**. A collapsed range is one in which the start and end positions are the same, resulting in a zero-character-long range..
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

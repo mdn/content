@@ -2,60 +2,63 @@
 title: IntersectionObserverEntry.intersectionRatio
 slug: Web/API/IntersectionObserverEntry/intersectionRatio
 tags:
-- API
-- Experimental
-- Intersection Observer
-- Intersection Observer API
-- IntersectionObserverEntry
-- Property
-- Reference
-- intersectionRatio
+  - API
+  - Experimental
+  - Intersection Observer
+  - Intersection Observer API
+  - IntersectionObserverEntry
+  - Property
+  - Reference
+  - intersectionRatio
 browser-compat: api.IntersectionObserverEntry.intersectionRatio
 ---
-<div>{{APIRef("Intersection Observer API")}}{{SeeCompatTable}}</div>
+{{APIRef("Intersection Observer API")}}{{SeeCompatTable}}
 
-<p>The {{domxref("IntersectionObserverEntry")}} interface's
-    read-only <strong><code>intersectionRatio</code></strong> property tells you how much
-    of the target element is currently visible within the root's intersection ratio, as a
-    value between 0.0 and 1.0.</p>
+The {{domxref("IntersectionObserverEntry")}} interface's
+read-only **`intersectionRatio`** property tells you how much
+of the target element is currently visible within the root's intersection ratio, as a
+value between 0.0 and 1.0.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var><code>var <em>intersectionRatio</em> = </code>IntersectionObserverEntry</var>.intersectionRatio;
-</pre>
+```js
+var intersectionRatio = IntersectionObserverEntry.intersectionRatio;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A number between 0.0 and 1.0 which indicates how much of the target element is actually
-  visible within the root's intersection rectangle. More precisely, this value is the
-  ratio of the area of the intersection rectangle
-  ({{domxref("IntersectionObserverEntry.intersectionRect", "intersectionRect")}}) to the
-  area of the target's bounds rectangle
-  ({{domxref("IntersectionObserverEntry.boundingClientRect", "boundingClientRect")}}).</p>
+A number between 0.0 and 1.0 which indicates how much of the target element is actually
+visible within the root's intersection rectangle. More precisely, this value is the
+ratio of the area of the intersection rectangle
+({{domxref("IntersectionObserverEntry.intersectionRect", "intersectionRect")}}) to the
+area of the target's bounds rectangle
+({{domxref("IntersectionObserverEntry.boundingClientRect", "boundingClientRect")}}).
 
-<p>If the area of the target's bounds rectangle is zero, the returned value is 1 if
-  {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}} is
-  <code>true</code> or 0 if not.</p>
+If the area of the target's bounds rectangle is zero, the returned value is 1 if
+{{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}} is
+`true` or 0 if not.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In this simple example, an intersection callback sets each target element's
-  {{cssxref("opacity")}} to the intersection ratio of that element with the root.</p>
+In this simple example, an intersection callback sets each target element's
+{{cssxref("opacity")}} to the intersection ratio of that element with the root.
 
-<pre class="brush: js">function intersectionCallback(entries) {
+```js
+function intersectionCallback(entries) {
   entries.forEach(function(entry) {
     entry.target.style.opacity = entry.intersectionRatio;
   });
-}</pre>
+}
+```
 
-<p>To see a more concrete example, take a look at
-  {{SectionOnPage("/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility",
-  "Handling intersection changes")}}.</p>
+To see a more concrete example, take a look at
+{{SectionOnPage("/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility",
+  "Handling intersection changes")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

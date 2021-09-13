@@ -9,43 +9,37 @@ tags:
   - Deprecated
 browser-compat: api.HTMLBaseFontElement
 ---
-<div>{{APIRef("HTML DOM")}}{{deprecated_header}}</div>
+{{APIRef("HTML DOM")}}{{deprecated_header}}
 
-<p>The <strong><code>HTMLBaseFontElement</code></strong> interface provides special properties (beyond the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating {{HTMLElement("basefont")}} elements.</p>
+The **`HTMLBaseFontElement`** interface provides special properties (beyond the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating {{HTMLElement("basefont")}} elements.
 
-<p>The <code>&lt;basefont&gt;</code> element has been deprecated in HTML4 and removed in HTML5. This latest specification requires that this element implements {{domxref("HTMLUnknownElement")}} rather than <code>HTMLBaseFontElement</code>.</p>
+The `<basefont>` element has been deprecated in HTML4 and removed in HTML5. This latest specification requires that this element implements {{domxref("HTMLUnknownElement")}} rather than `HTMLBaseFontElement`.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Use <a href="/en-US/docs/Web/CSS/CSS_Fonts">CSS Fonts</a> features instead.</p>
-</div>
+> **Note:** Use [CSS Fonts](/en-US/docs/Web/CSS/CSS_Fonts) features instead.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent, {{domxref("HTMLElement")}}.</em></p>
+_Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLBaseFontElement.color")}}</dt>
- <dd>Is a {{domxref("DOMString")}} representing the text color using either a named color or a color specified in the hexadecimal <code>#RRGGBB</code> format.</dd>
- <dt>{{domxref("HTMLBaseFontElement.face")}}</dt>
- <dd>Is a {{domxref("DOMString")}} representing a list of one or more font names. The document text in the default style is rendered in the first font face that the client's browser supports. If no font listed is installed on the local system, the browser typically defaults to the proportional or fixed-width font for that system.</dd>
- <dt>{{domxref("HTMLBaseFontElement.size")}}</dt>
- <dd>Is a {{domxref("DOMString")}} representing the font size as either a numeric or relative value. Numeric values range from <code>1</code> to <code>7</code> with <code>1</code> being the smallest and <code>3</code> the default. Relative value starts with a <code>'+'</code> or a <code>'-</code>'.</dd>
-</dl>
+- {{domxref("HTMLBaseFontElement.color")}}
+  - : Is a {{domxref("DOMString")}} representing the text color using either a named color or a color specified in the hexadecimal `#RRGGBB` format.
+- {{domxref("HTMLBaseFontElement.face")}}
+  - : Is a {{domxref("DOMString")}} representing a list of one or more font names. The document text in the default style is rendered in the first font face that the client's browser supports. If no font listed is installed on the local system, the browser typically defaults to the proportional or fixed-width font for that system.
+- {{domxref("HTMLBaseFontElement.size")}}
+  - : Is a {{domxref("DOMString")}} representing the font size as either a numeric or relative value. Numeric values range from `1` to `7` with `1` being the smallest and `3` the default. Relative value starts with a `'+'` or a `'-`'.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}.</em></p>
+_No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This feature was present in the HTML specification up through HTML 3.2, but was deprecated in HTML 4, and then removed — and so is not in the current HTML specification. No modern browsers support it and this feature is no longer on track to become a standard.</p>
+This feature was present in the HTML specification up through HTML 3.2, but was deprecated in HTML 4, and then removed — and so is not in the current HTML specification. No modern browsers support it and this feature is no longer on track to become a standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The HTML element {{HTMLElement("basefont")}} <em>was</em> implementing this interface.</li>
-</ul>
+- The HTML element {{HTMLElement("basefont")}} _was_ implementing this interface.

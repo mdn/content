@@ -9,38 +9,41 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.restore
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The
-  <strong><code>CanvasRenderingContext2D.restore()</code></strong>
-  method of the Canvas 2D API restores the most recently saved canvas state by popping the
-  top entry in the drawing state stack. If there is no saved state, this method does
-  nothing.</p>
+The
+**`CanvasRenderingContext2D.restore()`**
+method of the Canvas 2D API restores the most recently saved canvas state by popping the
+top entry in the drawing state stack. If there is no saved state, this method does
+nothing.
 
-<p>For more information about the <a
-    href="/en-US/docs/Web/API/CanvasRenderingContext2D/save#drawing_state">drawing
-    state</a>, see {{domxref("CanvasRenderingContext2D.save()")}}.</p>
+For more information about the [drawing
+state](/en-US/docs/Web/API/CanvasRenderingContext2D/save#drawing_state), see {{domxref("CanvasRenderingContext2D.save()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <em>ctx</em>.restore();</pre>
+```js
+void ctx.restore();
+```
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Restoring_a_saved_state">Restoring a saved state</h3>
+### Restoring a saved state
 
-<p>This example uses the <code>save()</code> method to save the default state and
-  <code>restore()</code> to restore it later, so that you are able to draw a rect with the
-  default state later.</p>
+This example uses the `save()` method to save the default state and
+`restore()` to restore it later, so that you are able to draw a rect with the
+default state later.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // Save the default state
@@ -53,23 +56,21 @@ ctx.fillRect(10, 10, 100, 100);
 ctx.restore();
 
 ctx.fillRect(150, 40, 100, 100);
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Restoring_a_saved_state', 700, 180) }}</p>
+{{ EmbedLiveSample('Restoring_a_saved_state', 700, 180) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining this method: {{domxref("CanvasRenderingContext2D")}}</li>
-  <li>{{domxref("CanvasRenderingContext2D.save()")}}</li>
-</ul>
+- The interface defining this method: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.save()")}}

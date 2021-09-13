@@ -2,100 +2,99 @@
 title: Selection.setBaseAndExtent()
 slug: Web/API/Selection/setBaseAndExtent
 tags:
-- API
-- Experimental
-- Method
-- Reference
-- Selection
-- setBaseAndExtent
+  - API
+  - Experimental
+  - Method
+  - Reference
+  - Selection
+  - setBaseAndExtent
 browser-compat: api.Selection.setBaseAndExtent
 ---
-<div>{{ ApiRef("DOM") }}{{SeeCompatTable}}</div>
+{{ ApiRef("DOM") }}{{SeeCompatTable}}
 
-<p>The <strong><code>setBaseAndExtent()</code></strong> method of the
-  {{domxref("Selection")}} interface sets the selection to be a range including all or
-  parts of two specified DOM nodes, and any content located between them.</p>
+The **`setBaseAndExtent()`** method of the
+{{domxref("Selection")}} interface sets the selection to be a range including all or
+parts of two specified DOM nodes, and any content located between them.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>sel</em>.setBaseAndExtent(<em>anchorNode</em>,<em>anchorOffset</em>,<em>focusNode</em>,<em>focusOffset</em>)
-</pre>
+```js
+sel.setBaseAndExtent(anchorNode,anchorOffset,focusNode,focusOffset)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><em><code>anchorNode</code></em></dt>
-  <dd>The node at the start of the selection.</dd>
-  <dt><em><code>anchorOffset</code></em></dt>
-  <dd>The number of child nodes from the start of the anchor node that should be excluded
+- _`anchorNode`_
+  - : The node at the start of the selection.
+- _`anchorOffset`_
+  - : The number of child nodes from the start of the anchor node that should be excluded
     from the selection. So for example, if the value is 0 the whole node is included. If
-    the value is 1, the whole node minus the first child node is included. And so on.</dd>
-  <dt><em><code>focusNode</code></em></dt>
-  <dd>The node at the end of the selection.</dd>
-  <dt><code><em>focusOffset</em></code></dt>
-  <dd>The number of child nodes from the start of the focus node that should be included
+    the value is 1, the whole node minus the first child node is included. And so on.
+- _`focusNode`_
+  - : The node at the end of the selection.
+- `focusOffset`
+  - : The number of child nodes from the start of the focus node that should be included
     in the selection. So for example, if the value is 0 the whole node is excluded. If the
-    value is 1, the first child node is included. And so on.</dd>
-</dl>
+    value is 1, the first child node is included. And so on.
 
-<div class="note">
-  <p><strong>Note:</strong> If the focus position appears before the anchor position in
-    the document, the direction of the selection is reversed — the caret is placed at the
-    beginning of the text rather the end, which matters for any keyboard command that
-    might follow. For example, <kbd>Shift</kbd> + <kbd>➡︎</kbd> would cause the selection
-    to narrow from the beginning rather than grow at the end.</p>
+> **Note:** If the focus position appears before the anchor position in
+> the document, the direction of the selection is reversed — the caret is placed at the
+> beginning of the text rather the end, which matters for any keyboard command that
+> might follow. For example, <kbd>Shift</kbd> + <kbd>➡︎</kbd> would cause the selection
+> to narrow from the beginning rather than grow at the end.
+
+### Return Value
+
+Void.
+
+### Exceptions
+
+If `anchorOffset` is larger than the number of child nodes inside
+`anchorNode`, or if `focusOffset` is larger than the number of
+child nodes inside `focusNode`, an {{domxref("IndexSizeError")}} exception is
+thrown.
+
+## Examples
+
+In this example, we have two paragraphs containing spans, each one containing a single
+word. The first one is set as the `anchorNode` and the second is set as the
+`focusNode`. We also have an additional paragraph that sits in between the
+two nodes.
+
+Next, we have two form inputs that allow you to set the `anchorOffset` and
+`focusOffset` — they both have a default value of 0.
+
+We also have a button that when pressed invokes a function that runs the
+`setBaseAndExtent()` method with the specified offsets, and copies the
+selection into the output paragraph at the very bottom of the HTML.
+
+```html
+<h1>setBaseAndExtent example</h1>
+<div>
+  <p class="one"><span>Fish</span><span>Dog</span><span>Cat</span><span>Bird</span></p>
+  <p>MIDDLE</p>
+  <p class="two"><span>Car</span><span>Bike</span><span>Boat</span><span>Plane</span></p>
 </div>
 
-<h3 id="Return_Value">Return Value</h3>
+<div>
+  <p>
+    <label for="aOffset">Anchor offset</label>
+    <input id="aOffset" name="aOffset" type="number" value="0">
+  </p>
+  <p>
+    <label for="fOffset">Focus offset</label>
+    <input id="fOffset" name="fOffset" type="number" value="0">
+  </p>
+  <p><button>Capture selection</button></p>
+</div>
 
-<p>Void.</p>
+<p><strong>Output</strong>: <span class="output"></span></p>
+```
 
-<h3 id="Exceptions">Exceptions</h3>
+The JavaScript looks like so:
 
-<p>If <code>anchorOffset</code> is larger than the number of child nodes inside
-  <code>anchorNode</code>, or if <code>focusOffset</code> is larger than the number of
-  child nodes inside <code>focusNode</code>, an {{domxref("IndexSizeError")}} exception is
-  thrown.</p>
-
-<h2 id="Examples">Examples</h2>
-
-<p>In this example, we have two paragraphs containing spans, each one containing a single
-  word. The first one is set as the <code>anchorNode</code> and the second is set as the
-  <code>focusNode</code>. We also have an additional paragraph that sits in between the
-  two nodes.</p>
-
-<p>Next, we have two form inputs that allow you to set the <code>anchorOffset</code> and
-  <code>focusOffset</code> — they both have a default value of 0.</p>
-
-<p>We also have a button that when pressed invokes a function that runs the
-  <code>setBaseAndExtent()</code> method with the specified offsets, and copies the
-  selection into the output paragraph at the very bottom of the HTML.</p>
-
-<pre
-  class="brush: html">&lt;h1&gt;setBaseAndExtent example&lt;/h1&gt;
-&lt;div&gt;
-  &lt;p class="one"&gt;&lt;span&gt;Fish&lt;/span&gt;&lt;span&gt;Dog&lt;/span&gt;&lt;span&gt;Cat&lt;/span&gt;&lt;span&gt;Bird&lt;/span&gt;&lt;/p&gt;
-  &lt;p&gt;MIDDLE&lt;/p&gt;
-  &lt;p class="two"&gt;&lt;span&gt;Car&lt;/span&gt;&lt;span&gt;Bike&lt;/span&gt;&lt;span&gt;Boat&lt;/span&gt;&lt;span&gt;Plane&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div&gt;
-  &lt;p&gt;
-    &lt;label for="aOffset"&gt;Anchor offset&lt;/label&gt;
-    &lt;input id="aOffset" name="aOffset" type="number" value="0"&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-    &lt;label for="fOffset"&gt;Focus offset&lt;/label&gt;
-    &lt;input id="fOffset" name="fOffset" type="number" value="0"&gt;
-  &lt;/p&gt;
-  &lt;p&gt;&lt;button&gt;Capture selection&lt;/button&gt;&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;Output&lt;/strong&gt;: &lt;span class="output"&gt;&lt;/span&gt;&lt;/p&gt;</pre>
-
-<p>The JavaScript looks like so:</p>
-
-<pre class="brush: js">var one = document.querySelector('.one');
+```js
+var one = document.querySelector('.one');
 var two = document.querySelector('.two');
 
 var aOffset = document.getElementById('aOffset');
@@ -116,31 +115,26 @@ button.onclick = function() {
   } catch(e) {
     output.textContent = e.message;
   }
-}</pre>
+}
+```
 
-<p>Play with the live example below, setting different offset values to see how this
-  affects the selection.</p>
+Play with the live example below, setting different offset values to see how this
+affects the selection.
 
-<p>{{ EmbedLiveSample('Examples', '100%', 370) }}</p>
+{{ EmbedLiveSample('Examples', '100%', 370) }}
 
-<div class="note">
-  <p><strong>Note:</strong> You can find this <a
-      href="https://github.com/chrisdavidmills/selection-api-examples/blob/master/setBaseAndExtent.html">example
-      on GitHub</a> (<a
-      href="https://chrisdavidmills.github.io/selection-api-examples/setBaseAndExtent.html">see
-      it live also</a>.)</p>
-</div>
+> **Note:** You can find this [example
+> on GitHub](https://github.com/chrisdavidmills/selection-api-examples/blob/master/setBaseAndExtent.html) ([see
+> it live also](https://chrisdavidmills.github.io/selection-api-examples/setBaseAndExtent.html).)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Selection")}}</li>
-</ul>
+- {{domxref("Selection")}}

@@ -14,71 +14,67 @@ tags:
   - conversion
 browser-compat: api.XMLSerializer
 ---
-<div>{{APIRef("XMLSerializer")}}</div>
+{{APIRef("XMLSerializer")}}
 
-<p>The <code>XMLSerializer</code> interface provides the {{domxref("XMLSerializer.serializeToString", "serializeToString()")}} method to construct an XML string representing a {{Glossary("DOM")}} tree.</p>
+The `XMLSerializer` interface provides the {{domxref("XMLSerializer.serializeToString", "serializeToString()")}} method to construct an XML string representing a {{Glossary("DOM")}} tree.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
-	<dt>{{domxref("XMLSerializer.serializeToString", "serializeToString()")}}</dt>
-	<dd>Returns the serialized subtree of a string.</dd>
-	<dt>{{domxref("XMLSerializer.serializeToStream", "serializeToStream()")}} {{ non-standard_inline }}{{ deprecated_inline }}</dt>
-	<dd>The subtree rooted by the specified element is serialized to a byte stream using the character set specified.</dd>
-</dl>
+- {{domxref("XMLSerializer.serializeToString", "serializeToString()")}}
+  - : Returns the serialized subtree of a string.
+- {{domxref("XMLSerializer.serializeToStream", "serializeToStream()")}} {{ non-standard_inline }}{{ deprecated_inline }}
+  - : The subtree rooted by the specified element is serialized to a byte stream using the character set specified.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Serializing_XML_into_a_string">Serializing XML into a string</h3>
+### Serializing XML into a string
 
-<p>The first, basic, example just serializes an entire document into a string containing XML.</p>
+The first, basic, example just serializes an entire document into a string containing XML.
 
-<pre class="brush: js"> var s = new XMLSerializer();
+```js
+ var s = new XMLSerializer();
  var d = document;
  var str = s.serializeToString(d);
- saveXML(str);</pre>
+ saveXML(str);
+```
 
-<p>This involves creating a new <code>XMLSerializer</code> object, then passing the {{domxref("Document")}} to be serialized into {{domxref("XMLSerializer.serializeToString", "serializeToString()")}}, which returns the XML equivalent of the document.</p>
+This involves creating a new `XMLSerializer` object, then passing the {{domxref("Document")}} to be serialized into {{domxref("XMLSerializer.serializeToString", "serializeToString()")}}, which returns the XML equivalent of the document.
 
-<h3 id="Inserting_nodes_into_a_DOM_based_on_XML">Inserting nodes into a DOM based on XML</h3>
+### Inserting nodes into a DOM based on XML
 
-<p>This example uses the {{domxref("Element.insertAdjacentHTML()")}} method to insert a new DOM {{domxref("Node")}} into the body of the {{domxref("Document")}}, based on XML created by serializing an {{domxref("Element")}} object.</p>
+This example uses the {{domxref("Element.insertAdjacentHTML()")}} method to insert a new DOM {{domxref("Node")}} into the body of the {{domxref("Document")}}, based on XML created by serializing an {{domxref("Element")}} object.
 
-<div class="note">
-<p><strong>Note:</strong> In the real world, you should usually instead call {{domxref("Document.importNode", "importNode()")}} method to import the new node into the DOM, then call one of the following methods to add the node to the DOM tree:</p>
+> **Note:** In the real world, you should usually instead call {{domxref("Document.importNode", "importNode()")}} method to import the new node into the DOM, then call one of the following methods to add the node to the DOM tree:
+>
+> - The {{domxref("Element.append()")}}/{{domxref("Element.prepend()")}} and {{domxref("Document.append()")}}/{{domxref("Document.prepend()")}} methods.
+> - The {{domxref("Element.replaceWith")}} method (to replace an existing node with the new one)
+> - The {{domxref("Document.insertAdjacentElement()")}} and {{domxref("Element.insertAdjacentElement()")}} methods.
 
-<ul>
-	<li>The {{domxref("Element.append()")}}/{{domxref("Element.prepend()")}} and {{domxref("Document.append()")}}/{{domxref("Document.prepend()")}} methods.</li>
-	<li>The {{domxref("Element.replaceWith")}} method (to replace an existing node with the new one)</li>
-	<li>The {{domxref("Document.insertAdjacentElement()")}} and {{domxref("Element.insertAdjacentElement()")}} methods.</li>
-</ul>
-</div>
+Because `insertAdjacentHTML()` accepts a string and not a `Node` as its second parameter, `XMLSerializer` is used to first convert the node into a string.
 
-<p>Because <code>insertAdjacentHTML()</code> accepts a string and not a <code>Node</code> as its second parameter, <code>XMLSerializer</code> is used to first convert the node into a string.</p>
-
-<pre class="brush: js">var inp = document.createElement('input');
+```js
+var inp = document.createElement('input');
 var XMLS = new XMLSerializer();
 var inp_xmls = XMLS.serializeToString(inp); // First convert DOM node into a string
 
 // Insert the newly created node into the document's body
-document.body.insertAdjacentHTML('afterbegin', inp_xmls);</pre>
+document.body.insertAdjacentHTML('afterbegin', inp_xmls);
+```
 
-<p>The code creates a new {{HTMLElement("input")}} element by calling {{domxref("Document.createElement()")}}, then serializes it into XML using {{domxref("XMLSerializer.serializeToString", "serializeToString()")}}.</p>
+The code creates a new {{HTMLElement("input")}} element by calling {{domxref("Document.createElement()")}}, then serializes it into XML using {{domxref("XMLSerializer.serializeToString", "serializeToString()")}}.
 
-<p>Once that's done, <code>insertAdjacentHTML()</code> is used to insert the <code>&lt;input&gt;</code> element into the DOM.</p>
+Once that's done, `insertAdjacentHTML()` is used to insert the `<input>` element into the DOM.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><a href="/en-US/docs/Web/Guide/Parsing_and_serializing_XML">Parsing and serializing XML</a></li>
-	<li>{{domxref("XMLHttpRequest")}}</li>
-	<li>{{domxref("DOMParser")}}</li>
-</ul>
+- [Parsing and serializing XML](/en-US/docs/Web/Guide/Parsing_and_serializing_XML)
+- {{domxref("XMLHttpRequest")}}
+- {{domxref("DOMParser")}}

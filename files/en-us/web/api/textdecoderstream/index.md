@@ -8,51 +8,43 @@ tags:
   - TextDecoderStream
 browser-compat: api.TextDecoderStream
 ---
-<p>{{APIRef("Encoding API")}}</p>
+{{APIRef("Encoding API")}}
 
-<p>The <strong><code>TextDecoderStream</code></strong> interface of the {{domxref('Encoding API','','',' ')}} converts a stream of strings into bytes in the UTF-8 encoding. It is the streaming equivalent of {{domxref("TextDecoder")}}.</p>
+The **`TextDecoderStream`** interface of the {{domxref('Encoding API','','',' ')}} converts a stream of strings into bytes in the UTF-8 encoding. It is the streaming equivalent of {{domxref("TextDecoder")}}.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
-  <dt>{{domxref("TextDecoderStream.TextDecoderStream()")}}</dt>
-  <dd>Creates a new <code>TextDecoderStream</code> object.</dd>
-</dl>
+- {{domxref("TextDecoderStream.TextDecoderStream()")}}
+  - : Creates a new `TextDecoderStream` object.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
-  <dt>{{DOMxRef("TextDecoderStream.encoding")}}{{ReadOnlyInline}}</dt>
-  <dd>An encoding.</dd>
-  <dt>{{DOMxRef("TextDecoderStream.fatal")}}{{ReadOnlyInline}}</dt>
-  <dd>A {{jsxref("boolean")}} indicating if the error mode is fatal.</dd>
-  <dt>{{DOMxRef("TextDecoderStream.ignoreBOM")}}{{ReadOnlyInline}}</dt>
-  <dd>A {{jsxref("boolean")}} indicating whether the byte order mark is ignored.</dd>
-  <dt>{{DOMxRef("TextDecoderStream.readable")}}{{ReadOnlyInline}}</dt>
-  <dd>Returns the {{domxref("ReadableStream")}} instance controlled by this object.</dd>
-  <dt>{{DOMxRef("TextDecoderStream.writable")}}{{ReadOnlyInline}}</dt>
-  <dd>Returns the {{domxref("WritableStream")}} instance controlled by this object.</dd>
-</dl>
+- {{DOMxRef("TextDecoderStream.encoding")}}{{ReadOnlyInline}}
+  - : An encoding.
+- {{DOMxRef("TextDecoderStream.fatal")}}{{ReadOnlyInline}}
+  - : A {{jsxref("boolean")}} indicating if the error mode is fatal.
+- {{DOMxRef("TextDecoderStream.ignoreBOM")}}{{ReadOnlyInline}}
+  - : A {{jsxref("boolean")}} indicating whether the byte order mark is ignored.
+- {{DOMxRef("TextDecoderStream.readable")}}{{ReadOnlyInline}}
+  - : Returns the {{domxref("ReadableStream")}} instance controlled by this object.
+- {{DOMxRef("TextDecoderStream.writable")}}{{ReadOnlyInline}}
+  - : Returns the {{domxref("WritableStream")}} instance controlled by this object.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<ul>
-  <li><a href="https://streams.spec.whatwg.org/demos/">Examples of streaming structured data and HTML</a></li>
-  <li><a href="https://glitch.com/~fetch-request-stream">An example of fetch request streams which uses <code>TextDecoderStream</code></a>.</li>
-</ul>
+- [Examples of streaming structured data and HTML](https://streams.spec.whatwg.org/demos/)
+- [An example of fetch request streams which uses `TextDecoderStream`](https://glitch.com/~fetch-request-stream).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("TextEncoderStream")}}</li>
-  <li><a href="/en-US/docs/Web/API/Streams_API/Concepts">Streams API Concepts</a></li>
-  <li><a href="https://deanhume.com/experimenting-with-the-streams-api/">Experimenting with the Streams API</a></li>
-</ul>
+- {{domxref("TextEncoderStream")}}
+- [Streams API Concepts](/en-US/docs/Web/API/Streams_API/Concepts)
+- [Experimenting with the Streams API](https://deanhume.com/experimenting-with-the-streams-api/)

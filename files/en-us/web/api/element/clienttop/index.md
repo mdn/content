@@ -2,57 +2,56 @@
 title: Element.clientTop
 slug: Web/API/Element/clientTop
 tags:
-- API
-- CSSOM View
-- NeedsAgnostify
-- NeedsMarkupWork
-- Property
-- Reference
+  - API
+  - CSSOM View
+  - NeedsAgnostify
+  - NeedsMarkupWork
+  - Property
+  - Reference
 browser-compat: api.Element.clientTop
 ---
-<div>{{ APIRef("DOM") }}</div>
+{{ APIRef("DOM") }}
 
-<p>The width of the top border of an element in pixels. It is a read-only, integer
-	property of element.</p>
+The width of the top border of an element in pixels. It is a read-only, integer
+property of element.
 
-<p>As it happens, all that lies between the two locations (<code>offsetTop</code> and
-	client area top) is the element's border. This is because the <code>offsetTop</code>
-	indicates the location of the top of the border (not the margin) while the client area
-	starts immediately below the border, (client area includes padding.) Therefore, the
-	<strong>clientTop</strong> value will always equal the integer portion of the
-	<code>.getComputedStyle()</code> value for "border-top-width". (Actually might be
-	Math.round(parseFloat()).) For example, if the computed "border-top-width" is zero,
-	then <strong><code>clientTop</code></strong> is also zero.</p>
+As it happens, all that lies between the two locations (`offsetTop` and
+client area top) is the element's border. This is because the `offsetTop`
+indicates the location of the top of the border (not the margin) while the client area
+starts immediately below the border, (client area includes padding.) Therefore, the
+**clientTop** value will always equal the integer portion of the
+`.getComputedStyle()` value for "border-top-width". (Actually might be
+Math.round(parseFloat()).) For example, if the computed "border-top-width" is zero,
+then **`clientTop`** is also zero.
 
-<div class="note">
-	<p><strong>Note:</strong> This property will round the value to an integer. If you
-		need a fractional value, use {{ domxref("element.getBoundingClientRect()") }}.</p>
-</div>
+> **Note:** This property will round the value to an integer. If you
+> need a fractional value, use {{ domxref("element.getBoundingClientRect()") }}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var <em>top</em> = <var>element</var>.clientTop;
-</pre>
+```js
+var top = element.clientTop;
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>In the following example, the client area has a white background and a 24px black <code>border-top</code>. The <code>clientTop</code> value is the distance from where the margin (yellow) area ends and the padding and content areas (white) begin: that is, 24px.</p>
+In the following example, the client area has a white background and a 24px black `border-top`. The `clientTop` value is the distance from where the margin (yellow) area ends and the padding and content areas (white) begin: that is, 24px.
 
-<h3>HTML</h3>
+### HTML
 
-<pre class="brush: html">
-&lt;div id="container"&gt;
-  &lt;div id="contained"&gt;
-    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+```html
+<div id="container">
+  <div id="contained">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
 	  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-	  nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+	  nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </div>
+</div>
+```
 
-<h3>CSS</h3>
+### CSS
 
-<pre class="brush: css">
+```css
 
 #container {
 	margin: 3rem;
@@ -67,20 +66,20 @@ browser-compat: api.Element.clientTop
 	overflow: auto;
 	background-color: white;
 }
-</pre>
+```
 
-<h3>Result</h3>
+### Result
 
 {{EmbedLiveSample("Example", 400, 350)}}
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p><code>clientTop</code> was first introduced in the MS IE DHTML object model.</p>
+`clientTop` was first introduced in the MS IE DHTML object model.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

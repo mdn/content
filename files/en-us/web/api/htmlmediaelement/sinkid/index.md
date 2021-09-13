@@ -2,34 +2,35 @@
 title: HTMLMediaElement.sinkId
 slug: Web/API/HTMLMediaElement/sinkId
 tags:
-- API
-- Audio
-- Experimental
-- Extensions
-- HTMLMediaElement
-- Media
-- Property
-- Reference
+  - API
+  - Audio
+  - Experimental
+  - Extensions
+  - HTMLMediaElement
+  - Media
+  - Property
+  - Reference
 browser-compat: api.HTMLMediaElement.sinkId
 ---
-<p>{{SeeCompatTable}}{{APIRef("HTML DOM")}}</p>
+{{SeeCompatTable}}{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLMediaElement.sinkId</code></strong> read-only property returns a
-  {{domxref("DOMString")}} that is the unique ID of the audio device delivering output. If
-  it is using the user agent default, it returns an empty string. This ID should be one of
-  the {{domxref("MediaDeviceInfo.deviceId")}} values returned from
-  {{domxref("MediaDevices.enumerateDevices()")}}, <code>id-multimedia</code>, or
-  <code>id-communications</code>.</p>
+The **`HTMLMediaElement.sinkId`** read-only property returns a
+{{domxref("DOMString")}} that is the unique ID of the audio device delivering output. If
+it is using the user agent default, it returns an empty string. This ID should be one of
+the {{domxref("MediaDeviceInfo.deviceId")}} values returned from
+{{domxref("MediaDevices.enumerateDevices()")}}, `id-multimedia`, or
+`id-communications`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>sinkId</em> = HTMLMediaElement.sinkId</pre>
+```js
+var sinkId = HTMLMediaElement.sinkId
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

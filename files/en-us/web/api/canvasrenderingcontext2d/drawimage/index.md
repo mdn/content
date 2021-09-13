@@ -9,133 +9,133 @@ tags:
   - Reference
 browser-compat: api.CanvasRenderingContext2D.drawImage
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <code><strong>CanvasRenderingContext2D.drawImage()</strong></code> method of the
-  Canvas 2D API provides different ways to draw an image onto the canvas.</p>
+The **`CanvasRenderingContext2D.drawImage()`** method of the
+Canvas 2D API provides different ways to draw an image onto the canvas.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <em>ctx</em>.drawImage(<em>image</em>, <em>dx</em>, <em>dy</em>);
-void <em>ctx</em>.drawImage(<em>image</em>, <em>dx</em>, <em>dy</em>, <em>dWidth</em>, <em>dHeight</em>);
-void <em>ctx</em>.drawImage(<em>image</em>, <em>sx</em>, <em>sy</em>, <em>sWidth</em>, <em>sHeight</em>, <em>dx</em>, <em>dy</em>, <em>dWidth</em>, <em>dHeight</em>);
-</pre>
+```js
+void ctx.drawImage(image, dx, dy);
+void ctx.drawImage(image, dx, dy, dWidth, dHeight);
+void ctx.drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
+```
 
-<p><img alt="drawImage" src="canvas_drawimage.jpg"></p>
+![drawImage](canvas_drawimage.jpg)
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>image</code></dt>
-  <dd>An element to draw into the context. The specification permits any canvas image
+- `image`
+  - : An element to draw into the context. The specification permits any canvas image
     source ({{domxref("CanvasImageSource")}}), specifically, a
     {{domxref("CSSImageValue")}}, an {{domxref("HTMLImageElement")}}, an
     {{domxref("SVGImageElement")}}, an {{domxref("HTMLVideoElement")}}, an
     {{domxref("HTMLCanvasElement")}}, an {{domxref("ImageBitmap")}}, or an
-    {{domxref("OffscreenCanvas")}}.</dd>
-  <dt><code>sx</code> {{optional_inline}}</dt>
-  <dd>The x-axis coordinate of the top left corner of the sub-rectangle of the source
-    <code>image</code> to draw into the destination context. Use the 3- or 5-argument syntax
-    to omit this argument.</dd>
-  <dt><code>sy</code> {{optional_inline}}</dt>
-  <dd>The y-axis coordinate of the top left corner of the sub-rectangle of the source
-    <code>image</code> to draw into the destination context.  Use the 3- or 5-argument syntax
-    to omit this argument.</dd>
-  <dt><code>sWidth</code> {{optional_inline}}</dt>
-  <dd>The width of the sub-rectangle of the source <code>image</code> to draw into the
+    {{domxref("OffscreenCanvas")}}.
+- `sx` {{optional_inline}}
+  - : The x-axis coordinate of the top left corner of the sub-rectangle of the source
+    `image` to draw into the destination context. Use the 3- or 5-argument syntax
+    to omit this argument.
+- `sy` {{optional_inline}}
+  - : The y-axis coordinate of the top left corner of the sub-rectangle of the source
+    `image` to draw into the destination context. Use the 3- or 5-argument syntax
+    to omit this argument.
+- `sWidth` {{optional_inline}}
+  - : The width of the sub-rectangle of the source `image` to draw into the
     destination context. If not specified, the entire rectangle from the coordinates
-    specified by <code>sx</code> and <code>sy</code> to the bottom-right corner of the
-    image is used.  Use the 3- or 5-argument syntax to omit this argument.
-  </dd>
-  <dt><code>sHeight</code> {{optional_inline}}</dt>
-  <dd>The height of the sub-rectangle of the source <code>image</code> to draw into the
-    destination context.  Use the 3- or 5-argument syntax to omit this argument.</dd>
-  <dt><code>dx</code></dt>
-  <dd>The x-axis coordinate in the destination canvas at which to place the top-left
-    corner of the source <code>image</code>.</dd>
-  <dt><code>dy</code></dt>
-  <dd>The y-axis coordinate in the destination canvas at which to place the top-left
-    corner of the source <code>image</code>.</dd>
-  <dt><code>dWidth</code></dt>
-  <dd>The width to draw the <code>image</code> in the destination canvas. This allows
+    specified by `sx` and `sy` to the bottom-right corner of the
+    image is used. Use the 3- or 5-argument syntax to omit this argument.
+- `sHeight` {{optional_inline}}
+  - : The height of the sub-rectangle of the source `image` to draw into the
+    destination context. Use the 3- or 5-argument syntax to omit this argument.
+- `dx`
+  - : The x-axis coordinate in the destination canvas at which to place the top-left
+    corner of the source `image`.
+- `dy`
+  - : The y-axis coordinate in the destination canvas at which to place the top-left
+    corner of the source `image`.
+- `dWidth`
+  - : The width to draw the `image` in the destination canvas. This allows
     scaling of the drawn image. If not specified, the image is not scaled in width when
-    drawn. Note that this argument is not included in the 3-argument syntax.</dd>
-  <dt><code>dHeight</code></dt>
-  <dd>The height to draw the <code>image</code> in the destination canvas. This allows
+    drawn. Note that this argument is not included in the 3-argument syntax.
+- `dHeight`
+  - : The height to draw the `image` in the destination canvas. This allows
     scaling of the drawn image. If not specified, the image is not scaled in height when
-    drawn. Note that this argument is not included in the 3-argument syntax.</dd>
-</dl>
+    drawn. Note that this argument is not included in the 3-argument syntax.
 
-<h3 id="Exceptions_thrown">Exceptions thrown</h3>
+### Exceptions thrown
 
-<dl>
-  <dt><code>INDEX_SIZE_ERR</code></dt>
-  <dd>If the canvas or source rectangle width or height is zero.</dd>
-  <dt><code>INVALID_STATE_ERR</code></dt>
-  <dd>The image has no image data.</dd>
-  <dt><code>TYPE_MISMATCH_ERR</code></dt>
-  <dd>The specified source element isn't supported.</dd>
-  <dt><code>NS_ERROR_NOT_AVAILABLE</code></dt>
-  <dd>The image is not loaded yet. Use <code>.complete === true</code> and
-    <code>.onload</code> to determine when it is ready.</dd>
-</dl>
+- `INDEX_SIZE_ERR`
+  - : If the canvas or source rectangle width or height is zero.
+- `INVALID_STATE_ERR`
+  - : The image has no image data.
+- `TYPE_MISMATCH_ERR`
+  - : The specified source element isn't supported.
+- `NS_ERROR_NOT_AVAILABLE`
+  - : The image is not loaded yet. Use `.complete === true` and
+    `.onload` to determine when it is ready.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Drawing_an_image_to_the_canvas">Drawing an image to the canvas</h3>
+### Drawing an image to the canvas
 
-<p>This example draws an image to the canvas using the <code>drawImage()</code> method.
-</p>
+This example draws an image to the canvas using the `drawImage()` method.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-&lt;div style="display:none;"&gt;
-  &lt;img id="source"
+```html
+<canvas id="canvas"></canvas>
+<div style="display:none;">
+  <img id="source"
        src="rhino.jpg"
-       width="300" height="227"&gt;
-&lt;/div&gt;
-</pre>
+       width="300" height="227">
+</div>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<p>The source image is taken from the coordinates (33, 71), with a width of 104 and a
-  height of 124. It is drawn to the canvas at (21, 20), where it is given a width of 87
-  and a height of 104.</p>
+The source image is taken from the coordinates (33, 71), with a width of 104 and a
+height of 124. It is drawn to the canvas at (21, 20), where it is given a width of 87
+and a height of 104.
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const image = document.getElementById('source');
 
-image.addEventListener('load', e =&gt; {
+image.addEventListener('load', e => {
   ctx.drawImage(image, 33, 71, 104, 124, 21, 20, 87, 104);
 });
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{ EmbedLiveSample('Drawing_an_image_to_the_canvas', 700, 180) }}</p>
+{{ EmbedLiveSample('Drawing_an_image_to_the_canvas', 700, 180) }}
 
-<h3 id="Understanding_source_element_size">Understanding source element size</h3>
+### Understanding source element size
 
-<p>The <code>drawImage()</code> method uses the source element's <em>intrinsic size in CSS
-    pixels</em> when drawing.</p>
+The `drawImage()` method uses the source element's _intrinsic size in CSS
+pixels_ when drawing.
 
-<p>For example, if you load an <code>Image</code> and specify the optional size parameters
-  in its <a href="/en-US/docs/Web/API/HTMLImageElement/Image">constructor</a>, you will
-  have to use the <code>naturalWidth</code> and <code>naturalHeight</code> properties of
-  the created instance to properly calculate things like crop and scale regions, rather
-  than <code>element.width</code> and <code>element.height</code>. The same goes for
-  <code>videoWidth</code> and <code>videoHeight</code> if the element is a
-  {{htmlelement("video")}} element, and so on.</p>
+For example, if you load an `Image` and specify the optional size parameters
+in its [constructor](/en-US/docs/Web/API/HTMLImageElement/Image), you will
+have to use the `naturalWidth` and `naturalHeight` properties of
+the created instance to properly calculate things like crop and scale regions, rather
+than `element.width` and `element.height`. The same goes for
+`videoWidth` and `videoHeight` if the element is a
+{{htmlelement("video")}} element, and so on.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 const image = new Image(60, 45); // Using optional size for image
@@ -157,61 +157,54 @@ function drawImageActualSize() {
   // using the element's width and height properties - lets draw one
   // on top in the corner:
   ctx.drawImage(this, 0, 0, this.width, this.height);
-}</pre>
+}
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample('Understanding_source_element_size', 700, 260)}}</p>
+{{EmbedLiveSample('Understanding_source_element_size', 700, 260)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h3 id="Gecko-specific_notes">Gecko-specific notes</h3>
+### Gecko-specific notes
 
-<ul>
-  <li>Support for flipping the image by using negative values for <code>sw</code> and
-    <code>sh</code> was added in Gecko 5.0 {{geckoRelease("5.0")}}.</li>
-  <li>Starting with {{geckoRelease("5.0")}}, <code>drawImage()</code> handles negative
-    arguments in accordance with the specification, by flipping the rectangle around the
-    appropriate axis.</li>
-  <li>Specifying a <code>null</code> or <code>undefined</code> image when calling or
-    <code>drawImage()</code> correctly throws a <code>TYPE_MISMATCH_ERR</code> exception
-    starting with {{geckoRelease("5.0")}}.</li>
-  <li>Prior to Gecko 7.0 {{ geckoRelease("7.0") }}, Firefox threw an exception if any of
-    the coordinate values was non-finite or zero. As per the specification, this no longer
-    happens.</li>
-  <li>Gecko 9.0 {{ geckoRelease("9.0") }} now correctly supports CORS for drawing images
-    across domains without <a
-      href="/en-US/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f">tainting the
-      canvas</a>.</li>
-  <li>Gecko 11.0 {{ geckoRelease("11.0") }} now allows SVG-as-an-image to be drawn into a
-    canvas without <a
-      href="/en-US/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f">tainting the
-      canvas</a>.</li>
-</ul>
+- Support for flipping the image by using negative values for `sw` and
+  `sh` was added in Gecko 5.0 {{geckoRelease("5.0")}}.
+- Starting with {{geckoRelease("5.0")}}, `drawImage()` handles negative
+  arguments in accordance with the specification, by flipping the rectangle around the
+  appropriate axis.
+- Specifying a `null` or `undefined` image when calling or
+  `drawImage()` correctly throws a `TYPE_MISMATCH_ERR` exception
+  starting with {{geckoRelease("5.0")}}.
+- Prior to Gecko 7.0 {{ geckoRelease("7.0") }}, Firefox threw an exception if any of
+  the coordinate values was non-finite or zero. As per the specification, this no longer
+  happens.
+- Gecko 9.0 {{ geckoRelease("9.0") }} now correctly supports CORS for drawing images
+  across domains without [tainting the
+  canvas](/en-US/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f).
+- Gecko 11.0 {{ geckoRelease("11.0") }} now allows SVG-as-an-image to be drawn into a
+  canvas without [tainting the
+  canvas](/en-US/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f).
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<ul>
-  <li><code>drawImage()</code> only works correctly on an {{domxref("HTMLVideoElement")}}
-    when its {{domxref("HTMLMediaElement.readyState")}} is greater than 1 (i.e.,
-    <strong>seek</strong> event fired after setting the <code>currentTime</code>
-    property).</li>
-  <li><code>drawImage()</code> will always use the source element's <em>intrinsic size in
-      CSS pixels</em> when drawing, cropping, and/or scaling.</li>
-  <li>In some older browser versions, <code>drawImage()</code> will ignore all EXIF
-    metadata in images, including the Orientation. This behavior is especially troublesome
-    on iOS devices. You should detect the Orientation yourself and use
-    <code>rotate()</code> to make it right.</li>
-</ul>
+- `drawImage()` only works correctly on an {{domxref("HTMLVideoElement")}}
+  when its {{domxref("HTMLMediaElement.readyState")}} is greater than 1 (i.e.,
+  **seek** event fired after setting the `currentTime`
+  property).
+- `drawImage()` will always use the source element's _intrinsic size in
+  CSS pixels_ when drawing, cropping, and/or scaling.
+- In some older browser versions, `drawImage()` will ignore all EXIF
+  metadata in images, including the Orientation. This behavior is especially troublesome
+  on iOS devices. You should detect the Orientation yourself and use
+  `rotate()` to make it right.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>The interface defining this method: {{domxref("CanvasRenderingContext2D")}}</li>
-</ul>
+- The interface defining this method: {{domxref("CanvasRenderingContext2D")}}

@@ -11,44 +11,44 @@ tags:
   - Element
 browser-compat: api.Element.ariaLevel
 ---
-<div>{{DefaultAPISidebar("DOM")}}</div>
+{{DefaultAPISidebar("DOM")}}
 
-<p>The <strong><code>ariaLevel</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <code>aria-level</code> attribute, which defines the hierarchical level of an element within a structure.</p>
+The **`ariaLevel`** property of the {{domxref("Element")}} interface reflects the value of the `aria-level` attribute, which defines the hierarchical level of an element within a structure.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Where possible use an HTML {{htmlelement("h1")}} or other correct heading level as these have built in semantics and do not require ARIA attributes.</p>
-</div>
+> **Note:** Where possible use an HTML {{htmlelement("h1")}} or other correct heading level as these have built in semantics and do not require ARIA attributes.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox notranslate">var <var>ariaLevel</var> = element.ariaLevel;
-<var>element</var>.ariaLevel = <var>ariaLevel</var></pre>
+    var ariaLevel = element.ariaLevel;
+    element.ariaLevel = ariaLevel
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString")}} containing an integer.</p>
+### Value
 
-<h2 id="Examples">Examples</h2>
+A {{domxref("DOMString")}} containing an integer.
 
-<p>In this example the <code>aria-level</code> attribute on the element with an ID of <code>main-heading</code> is set to "1". Using <code>ariaLevel</code> we update the value to "2".</p>
+## Examples
 
-<pre class="brush: html">&lt;div role="heading" id="main-heading" aria-level="1"&gt;This is a main page heading&lt;/div&gt;
-</pre>
+In this example the `aria-level` attribute on the element with an ID of `main-heading` is set to "1". Using `ariaLevel` we update the value to "2".
 
-<pre class="brush: js">let el = document.getElementById('main-heading');
+```html
+<div role="heading" id="main-heading" aria-level="1">This is a main page heading</div>
+```
+
+```js
+let el = document.getElementById('main-heading');
 console.log(el.ariaLevel); // "1"
 el.ariaLevel = "2"
-console.log(el.ariaLevel); // "2"</pre>
+console.log(el.ariaLevel); // "2"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/heading_role">ARIA: heading role</a></li>
-</ul>
+- [ARIA: heading role](/en-US/docs/Web/Accessibility/ARIA/Roles/heading_role)

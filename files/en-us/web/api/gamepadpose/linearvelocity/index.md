@@ -13,35 +13,35 @@ tags:
   - linearVelocity
 browser-compat: api.GamepadPose.linearVelocity
 ---
-<div>{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
+{{APIRef("WebVR API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>linearVelocity</code></strong> read-only property of the {{domxref("GamepadPose")}} interface returns an array representing the linear velocity vector of the {{domxref("Gamepad")}}, in meters per second.</p>
+The **`linearVelocity`** read-only property of the {{domxref("GamepadPose")}} interface returns an array representing the linear velocity vector of the {{domxref("Gamepad")}}, in meters per second.
 
-<p>In other words, the current velocity at which the sensor is moving along the <code>x</code>, <code>y</code>, and <code>z</code> axes.</p>
+In other words, the current velocity at which the sensor is moving along the `x`, `y`, and `z` axes.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var myGamepadLinVel = gamepadPoseInstance.linearVelocity;</pre>
+```js
+var myGamepadLinVel = gamepadPoseInstance.linearVelocity;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{jsxref("Float32Array")}}, or <code>null</code> if the gamepad is not able to provide linear velocity data.</p>
+A {{jsxref("Float32Array")}}, or `null` if the gamepad is not able to provide linear velocity data.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>TBD</p>
+TBD
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a></li>
- <li><a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a></li>
-</ul>
+- [WebVR API](/en-US/docs/Web/API/WebVR_API)
+- [Gamepad API](/en-US/docs/Web/API/Gamepad_API)

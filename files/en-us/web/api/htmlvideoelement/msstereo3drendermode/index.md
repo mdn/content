@@ -4,34 +4,29 @@ slug: Web/API/HTMLVideoElement/msStereo3DRenderMode
 tags:
   - msStereo3DRenderMode
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>{{Non-standard_header()}}</p>
+{{Non-standard_header()}}
 
-<p><code><strong>msStereo3DRenderMode</strong></code> is a read/write property which gets
-  or sets whether the system display is set to stereo display (if stereo-capable).</p>
+**`msStereo3DRenderMode`** is a read/write property which gets
+or sets whether the system display is set to stereo display (if stereo-capable).
 
-<p>This proprietary property is specific to Internet Explorer and Microsoft Edge.</p>
+This proprietary property is specific to Internet Explorer and Microsoft Edge.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>HTMLVideoElement</em>.msStereo3DRenderMode(mono, stereo);
+```js
+HTMLVideoElement.msStereo3DRenderMode(mono, stereo);
+```
 
-</pre>
+## Value
 
-<h2 id="Value">Value</h2>
+The following values set the stereo display to mono or stereo. The default is mono.
 
-<p>The following values set the stereo display to mono or stereo. The default is mono.</p>
+- `mono (0)`: Specifies that stereo mode is disabled.
+- `stereo (1)`: Specifies stereo mode is enabled.
 
-<ul>
-  <li><code>mono (0)</code>: Specifies that stereo mode is disabled.</li>
-  <li><code>stereo (1)</code>: Specifies stereo mode is enabled.</li>
-</ul>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
-  <li><a href="/en-US/docs/Web/API/HTMLVideoElement">HTMLVideoElement</a></li>
-  <li><a href="/en-US/docs/Web/API/Microsoft_Extensions">Microsoft API extensions </a>
-  </li>
-</ul>
+- [HTMLVideoElement](/en-US/docs/Web/API/HTMLVideoElement)
+- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_Extensions)

@@ -8,81 +8,76 @@ tags:
   - Reference
 browser-compat: api.HTMLOutputElement
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>HTMLOutputElement</code></strong> interface provides properties and methods (beyond those inherited from {{domxref("HTMLElement")}}) for manipulating the layout and presentation of {{HTMLElement("output")}} elements.</p>
+The **`HTMLOutputElement`** interface provides properties and methods (beyond those inherited from {{domxref("HTMLElement")}}) for manipulating the layout and presentation of {{HTMLElement("output")}} elements.
 
-<p>{{InheritanceDiagram(600, 120)}}</p>
+{{InheritanceDiagram(600, 120)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface also inherits properties from its parent, {{domxref("HTMLElement")}}.</em></p>
+_This interface also inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLOutputElement.defaultValue")}}</dt>
- <dd>A {{domxref("DOMString")}} representing the default value of the element, initially the empty string.</dd>
- <dt>{{domxref("HTMLOutputElement.form")}}{{ReadOnlyInline}}</dt>
- <dd>An {{domxref("HTMLFormElement")}} indicating the form associated with the control, reflecting the {{htmlattrxref("form", "output")}} HTML attribute if it is defined.</dd>
- <dt>{{domxref("HTMLOutputElement.htmlFor")}}{{ReadOnlyInline}}</dt>
- <dd>A {{domxref("DOMTokenList")}} reflecting the {{htmlattrxref("for", "output")}} HTML attribute, containing a list of IDs of other elements in the same document that contribute to (or otherwise affect) the calculated <code>value</code>.</dd>
- <dt>{{domxref("HTMLOutputElement.labels")}}{{ReadOnlyInline}}</dt>
- <dd>A {{domxref("NodeList")}} of {{HTMLElement("label")}} elements associated with the element.</dd>
- <dt>{{domxref("HTMLOutputElement.name")}}</dt>
- <dd>A {{domxref("DOMString")}} reflecting the {{htmlattrxref("name", "output")}} HTML attribute, containing the name for the control that is submitted with form data.</dd>
- <dt>{{domxref("HTMLOutputElement.type")}}{{ReadOnlyInline}}</dt>
- <dd>The {{domxref("DOMString")}} "<code>output</code>".</dd>
- <dt>{{domxref("HTMLOutputElement.validationMessage")}}{{ReadOnlyInline}}</dt>
- <dd>A {{domxref("DOMString")}} representing a localized message that describes the validation constraints that the control does not satisfy (if any). This is the empty string if the control is not a candidate for constraint validation (<code>willValidate</code> is <code>false</code>), or it satisfies its constraints.</dd>
- <dt>{{domxref("HTMLOutputElement.validity")}}{{ReadOnlyInline}}</dt>
- <dd>A {{domxref("ValidityState")}} representing the validity states that this element is in.</dd>
- <dt>{{domxref("HTMLOutputElement.value")}}</dt>
- <dd>A {{domxref("DOMString")}} representing the value of the contents of the elements. Behaves like the {{domxref("Node.textContent")}} property.</dd>
- <dt>{{domxref("HTMLOutputElement.willValidate")}}{{ReadOnlyInline}}</dt>
- <dd>A boolean value indicating whether the element is a candidate for constraint validation.</dd>
-</dl>
+- {{domxref("HTMLOutputElement.defaultValue")}}
+  - : A {{domxref("DOMString")}} representing the default value of the element, initially the empty string.
+- {{domxref("HTMLOutputElement.form")}}{{ReadOnlyInline}}
+  - : An {{domxref("HTMLFormElement")}} indicating the form associated with the control, reflecting the {{htmlattrxref("form", "output")}} HTML attribute if it is defined.
+- {{domxref("HTMLOutputElement.htmlFor")}}{{ReadOnlyInline}}
+  - : A {{domxref("DOMTokenList")}} reflecting the {{htmlattrxref("for", "output")}} HTML attribute, containing a list of IDs of other elements in the same document that contribute to (or otherwise affect) the calculated `value`.
+- {{domxref("HTMLOutputElement.labels")}}{{ReadOnlyInline}}
+  - : A {{domxref("NodeList")}} of {{HTMLElement("label")}} elements associated with the element.
+- {{domxref("HTMLOutputElement.name")}}
+  - : A {{domxref("DOMString")}} reflecting the {{htmlattrxref("name", "output")}} HTML attribute, containing the name for the control that is submitted with form data.
+- {{domxref("HTMLOutputElement.type")}}{{ReadOnlyInline}}
+  - : The {{domxref("DOMString")}} "`output`".
+- {{domxref("HTMLOutputElement.validationMessage")}}{{ReadOnlyInline}}
+  - : A {{domxref("DOMString")}} representing a localized message that describes the validation constraints that the control does not satisfy (if any). This is the empty string if the control is not a candidate for constraint validation (`willValidate` is `false`), or it satisfies its constraints.
+- {{domxref("HTMLOutputElement.validity")}}{{ReadOnlyInline}}
+  - : A {{domxref("ValidityState")}} representing the validity states that this element is in.
+- {{domxref("HTMLOutputElement.value")}}
+  - : A {{domxref("DOMString")}} representing the value of the contents of the elements. Behaves like the {{domxref("Node.textContent")}} property.
+- {{domxref("HTMLOutputElement.willValidate")}}{{ReadOnlyInline}}
+  - : A boolean value indicating whether the element is a candidate for constraint validation.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface also inherits methods from its parent, {{domxref("HTMLElement")}}.</em></p>
+_This interface also inherits methods from its parent, {{domxref("HTMLElement")}}._
 
-<dl>
- <dt>{{domxref("HTMLOutputElement.checkValidity()")}}</dt>
- <dd>Checks the validity of the element and returns a boolean value holding the check result.</dd>
- <dt>{{domxref("HTMLOutputElement.reportValidity()")}}</dt>
- <dd>
-   <p>This method reports the problems with the constraints on the element, if any, to the user. If there are problems, fires an {{domxref("HTMLInputElement/invalid_event", "invalid")}} event at the element, and returns <code>false</code>; if there are no problems, it returns <code>true</code>.</p>
-   <p>When the problem is reported, the user agent may focus the element and change the scrolling position of the document or perform some other action that brings the element to the user's attention. User agents may report more than one constraint violation if this element suffers from multiple problems at once. If the element is not rendered, then the user agent may report the error for the running script instead of notifying the user.</p>
- </dd>
- <dt>{{domxref("HTMLOutputElement.setCustomValidity()")}}</dt>
- <dd>Sets a custom validity message for the element. If this message is not the empty string, then the element is suffering from a custom validity error, and does not validate.</dd>
-</dl>
+- {{domxref("HTMLOutputElement.checkValidity()")}}
+  - : Checks the validity of the element and returns a boolean value holding the check result.
+- {{domxref("HTMLOutputElement.reportValidity()")}}
 
-<h2 id="Modes">Modes</h2>
+  - : This method reports the problems with the constraints on the element, if any, to the user. If there are problems, fires an {{domxref("HTMLInputElement/invalid_event", "invalid")}} event at the element, and returns `false`; if there are no problems, it returns `true`.
 
-<p>This element behaves in one of two modes: <em>default</em> mode and <em>value</em> mode.</p>
+    When the problem is reported, the user agent may focus the element and change the scrolling position of the document or perform some other action that brings the element to the user's attention. User agents may report more than one constraint violation if this element suffers from multiple problems at once. If the element is not rendered, then the user agent may report the error for the running script instead of notifying the user.
 
-<h3 id="Default_mode">Default mode</h3>
+- {{domxref("HTMLOutputElement.setCustomValidity()")}}
+  - : Sets a custom validity message for the element. If this message is not the empty string, then the element is suffering from a custom validity error, and does not validate.
 
-<p>Initially, the element is in default mode, and so the contents of the element represent both the value of the element and its default value.</p>
+## Modes
 
-<p>If the element is in default mode when the descendants of the element are changed in any way, the <code>defaultValue</code> property is set to the value of the {{domxref("Node.textContent","textContent")}} property.</p>
+This element behaves in one of two modes: _default_ mode and _value_ mode.
 
-<p>Resetting the form puts the element into default mode, and sets the {{domxref("Node.textContent","textContent")}} property to the value of the <code>defaultValue</code> property.</p>
+### Default mode
 
-<h3 id="Value_mode">Value mode</h3>
+Initially, the element is in default mode, and so the contents of the element represent both the value of the element and its default value.
 
-<p>The element goes into value mode when the contents of the <code>value</code> property are set. The <code>value</code> property otherwise behaves like the {{domxref("Node.textContent","textContent")}} property. When the element is in value mode, the default value is accessible only through the <code>defaultValue</code> property.</p>
+If the element is in default mode when the descendants of the element are changed in any way, the `defaultValue` property is set to the value of the {{domxref("Node.textContent","textContent")}} property.
 
-<h2 id="Specifications">Specifications</h2>
+Resetting the form puts the element into default mode, and sets the {{domxref("Node.textContent","textContent")}} property to the value of the `defaultValue` property.
+
+### Value mode
+
+The element goes into value mode when the contents of the `value` property are set. The `value` property otherwise behaves like the {{domxref("Node.textContent","textContent")}} property. When the element is in value mode, the default value is accessible only through the `defaultValue` property.
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The HTML element implementing this interface: {{HTMLElement("output")}}.</li>
-</ul>
+- The HTML element implementing this interface: {{HTMLElement("output")}}.

@@ -2,65 +2,68 @@
 title: InputEvent.getTargetRanges()
 slug: Web/API/InputEvent/getTargetRanges
 tags:
-- API
-- DOM Events
-- Input
-- InputEvent
-- Method
-- Reference
-- events
-- getTargetRanges()
+  - API
+  - DOM Events
+  - Input
+  - InputEvent
+  - Method
+  - Reference
+  - events
+  - getTargetRanges()
 browser-compat: api.InputEvent.getTargetRanges
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p>The <strong><code>getTargetRanges()</code></strong> method of the {{domxref("InputEvent")}} interface returns an array of static ranges that will be affected by a change to the DOM if the input event is not canceled.</p>
+The **`getTargetRanges()`** method of the {{domxref("InputEvent")}} interface returns an array of static ranges that will be affected by a change to the DOM if the input event is not canceled.
 
-<p>This allows web apps to override text edit behavior before the browser modifies the DOM tree, and provides more control over input events to improve performance.</p>
+This allows web apps to override text edit behavior before the browser modifies the DOM tree, and provides more control over input events to improve performance.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>staticRanges</em>[] = <em>inputEvent</em>.getTargetRanges()</pre>
+```js
+var staticRanges[] = inputEvent.getTargetRanges()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>An array of {{domxref("StaticRange")}} objects.</p>
+An array of {{domxref("StaticRange")}} objects.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Feature_Detection">Feature Detection</h3>
+### Feature Detection
 
-<p>The following function returns true if <code>beforeinput</code>, and thus
-  <code>getTargetRanges</code>, is supported.</p>
+The following function returns true if `beforeinput`, and thus
+`getTargetRanges`, is supported.
 
-<pre class="brush: js">function isBeforeInputEventAvailable() {
+```js
+function isBeforeInputEventAvailable() {
   return window.InputEvent && typeof InputEvent.prototype.getTargetRanges === "function";
 }
-</pre>
+```
 
-<h3 id="Basic_usage">Basic usage</h3>
+### Basic usage
 
-<p>The following example selects a <code>contenteditable</code> element and utilizes the
-  <code><a href="/en-US/docs/Web/API/HTMLElement/beforeinput_event">beforeinput</a></code>
-  event to log the result of <code>getTargetRanges()</code>.</p>
+The following example selects a `contenteditable` element and utilizes the
+[`beforeinput`](/en-US/docs/Web/API/HTMLElement/beforeinput_event)
+event to log the result of `getTargetRanges()`.
 
-<pre class="brush: js">const editableElem = document.querySelector('[contenteditable="true"]');
+```js
+const editableElem = document.querySelector('[contenteditable="true"]');
 
-editableElem.addEventListener('beforeinput', (e) =&gt; {
+editableElem.addEventListener('beforeinput', (e) => {
     const targetRanges = e.getTargetRanges();
     console.log(targetRanges);
 })
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

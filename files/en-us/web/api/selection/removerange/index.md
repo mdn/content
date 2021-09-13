@@ -2,61 +2,55 @@
 title: Selection.removeRange()
 slug: Web/API/Selection/removeRange
 tags:
-- API
-- Experimental
-- HTML Editing
-- Method
-- Reference
-- Selection
+  - API
+  - Experimental
+  - HTML Editing
+  - Method
+  - Reference
+  - Selection
 browser-compat: api.Selection.removeRange
 ---
-<div>
-  <div>
-    <div>{{ ApiRef("DOM") }}{{SeeCompatTable}}</div>
-  </div>
-</div>
+{{ ApiRef("DOM") }}{{SeeCompatTable}}
 
-<p>The <strong><code>Selection.removeRange()</code></strong> method removes a range from a
-  selection.</p>
+The **`Selection.removeRange()`** method removes a range from a
+selection.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>sel</em>.removeRange(<em>range</em>)
-</pre>
+```js
+sel.removeRange(range)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><em><code>range</code></em></dt>
-  <dd>A range object that will be removed to the selection.</dd>
-</dl>
+- _`range`_
+  - : A range object that will be removed to the selection.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{jsxref('undefined')}}</p>
+{{jsxref('undefined')}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">/* Programmaticaly, more than one range can be selected.
+```js
+/* Programmaticaly, more than one range can be selected.
  * This will remove all ranges except the first. */
 s = window.getSelection();
-if(s.rangeCount &gt; 1) {
- for(var i = 1; i &lt; s.rangeCount; i++) {
+if(s.rangeCount > 1) {
+ for(var i = 1; i < s.rangeCount; i++) {
   s.removeRange(s.getRangeAt(i));
  }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Selection")}}, the interface it belongs to.</li>
-</ul>
+- {{domxref("Selection")}}, the interface it belongs to.

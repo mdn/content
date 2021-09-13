@@ -2,33 +2,35 @@
 title: ScreenOrientation.angle
 slug: Web/API/ScreenOrientation/angle
 tags:
-- API
-- Orientation
-- Property
-- Reference
-- Screen Orientation API
-- ScreenOrientation
-- angle
+  - API
+  - Orientation
+  - Property
+  - Reference
+  - Screen Orientation API
+  - ScreenOrientation
+  - angle
 browser-compat: api.ScreenOrientation.angle
 ---
-<div>{{APIRef("Screen Orientation")}}</div>
+{{APIRef("Screen Orientation")}}
 
-<p>The <strong><code>angle</code></strong> read-only property of the
-  {{domxref("ScreenOrientation")}} interface returns the document's current orientation
-  angle.</p>
+The **`angle`** read-only property of the
+{{domxref("ScreenOrientation")}} interface returns the document's current orientation
+angle.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">angle = screen.orientation.angle</pre>
+```js
+angle = screen.orientation.angle
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An unsigned short integer.</p>
+An unsigned short integer.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

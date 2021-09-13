@@ -2,28 +2,29 @@
 title: console.clear()
 slug: Web/API/console/clear
 tags:
-- API
-- Debugging
-- Method
-- Reference
-- console
-- web console
+  - API
+  - Debugging
+  - Method
+  - Reference
+  - console
+  - web console
 browser-compat: api.console.clear
 ---
-<div>{{APIRef("Console API")}}</div>
+{{APIRef("Console API")}}
 
-<p>The <strong><code>console.clear()</code></strong> method clears the console if the
-  environment allows it.</p>
+The **`console.clear()`** method clears the console if the
+environment allows it.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">console.clear();
-</pre>
+```js
+console.clear();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

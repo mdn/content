@@ -2,54 +2,52 @@
 title: GlobalEventHandlers.oncancel
 slug: Web/API/GlobalEventHandlers/oncancel
 tags:
-- API
-- Dialog
-- Event Handler
-- GlobalEventHandlers
-- HTML DOM
-- NeedsExample
-- Property
-- Reference
+  - API
+  - Dialog
+  - Event Handler
+  - GlobalEventHandlers
+  - HTML DOM
+  - NeedsExample
+  - Property
+  - Reference
 browser-compat: api.GlobalEventHandlers.oncancel
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p>The <code><strong>oncancel</strong></code> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> for
-  processing {{event("cancel")}} events sent to a {{HTMLElement("dialog")}} element.</p>
+The **`oncancel`** property of the
+{{domxref("GlobalEventHandlers")}} mixin is an [event handler](/en-US/docs/Web/Events/Event_handlers) for
+processing {{event("cancel")}} events sent to a {{HTMLElement("dialog")}} element.
 
-<p>The <code>cancel</code> event fires when the user indicates a wish to dismiss a
-  <code>&lt;dialog&gt;</code>. This event handler prevents the event from bubbling, so any
-  parent handlers are not notified of the event.</p>
+The `cancel` event fires when the user indicates a wish to dismiss a
+`<dialog>`. This event handler prevents the event from bubbling, so any
+parent handlers are not notified of the event.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>target</em>.oncancel = <em>functionRef</em>;
-</pre>
+```js
+target.oncancel = functionRef;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p><code>functionRef</code> is a function name or a <a
-    href="/en-US/docs/Web/JavaScript/Reference/Operators/function">function
-    expression</a>. The function receives an {{domxref("Event")}} object as its sole
-  argument.</p>
+`functionRef` is a function name or a [function
+expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives an {{domxref("Event")}} object as its sole
+argument.
 
-<p>Only one <code>oncancel</code> handler can be assigned to an object at a time. You may
-  prefer to use the {{domxref("EventTarget.addEventListener()")}} method instead, since
-  it's more flexible.</p>
+Only one `oncancel` handler can be assigned to an object at a time. You may
+prefer to use the {{domxref("EventTarget.addEventListener()")}} method instead, since
+it's more flexible.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{event("cancel")}} event</li>
-  <li>HTML {{HTMLElement("dialog")}} element</li>
-  <li>Related event handler: {{domxref("GlobalEventHandlers.onclose")}}</li>
-</ul>
+- {{event("cancel")}} event
+- HTML {{HTMLElement("dialog")}} element
+- Related event handler: {{domxref("GlobalEventHandlers.onclose")}}

@@ -9,30 +9,28 @@ tags:
   - SVG DOM
 browser-compat: api.SVGDescElement
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <strong><code>SVGDescElement</code></strong> interface corresponds to the {{SVGElement("desc")}} element.</p>
+The **`SVGDescElement`** interface corresponds to the {{SVGElement("desc")}} element.
 
-<p>{{InheritanceDiagram(600, 140)}}</p>
+{{InheritanceDiagram(600, 140)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface also inherits properties from its parent, {{domxref("SVGGeometryElement")}}.</em></p>
+_This interface also inherits properties from its parent, {{domxref("SVGGeometryElement")}}._
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface has no methods but inherits methods from its parent, {{domxref("SVGGeometryElement")}}.</em></p>
+_This interface has no methods but inherits methods from its parent, {{domxref("SVGGeometryElement")}}._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGElement("desc")}}</li>
-</ul>
+- {{SVGElement("desc")}}

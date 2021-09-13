@@ -2,64 +2,64 @@
 title: FetchEvent.resultingClientId
 slug: Web/API/FetchEvent/resultingClientId
 tags:
-- API
-- DOM
-- FetchEvent
-- Property
-- Reference
-- Service Workers
-- Worker
-- resultingClientId
+  - API
+  - DOM
+  - FetchEvent
+  - Property
+  - Reference
+  - Service Workers
+  - Worker
+  - resultingClientId
 browser-compat: api.FetchEvent.resultingClientId
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p>The <strong><code>resultingClientId</code></strong> read-only property of the
-  {{domxref("FetchEvent")}} interface is the {{domxref("Client.id", "id")}} of the
-  {{domxref("Client", "client")}} that replaces the previous client during a page
-  navigation.</p>
+The **`resultingClientId`** read-only property of the
+{{domxref("FetchEvent")}} interface is the {{domxref("Client.id", "id")}} of the
+{{domxref("Client", "client")}} that replaces the previous client during a page
+navigation.
 
-<p>For example, when navigating from page A to page B <code>resultingClientId</code> is
-  the ID of the client associated with page B.</p>
+For example, when navigating from page A to page B `resultingClientId` is
+the ID of the client associated with page B.
 
-<p>If the fetch request is a subresource request or the request's
-  <code><a href="/en-US/docs/Web/API/Request/destination">destination</a></code> is
-  <code>report</code>, <code>resultingClientId</code> will be an empty string.</p>
+If the fetch request is a subresource request or the request's
+[`destination`](/en-US/docs/Web/API/Request/destination) is
+`report`, `resultingClientId` will be an empty string.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>myResultingClientId</em> = <em>fetchEvent</em>.resultingClientId;</pre>
+```js
+var myResultingClientId = fetchEvent.resultingClientId;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}}.</p>
+A {{domxref("DOMString")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">self.addEventListener('fetch', function(event) {
+```js
+self.addEventListener('fetch', function(event) {
   console.log(event.resultingClientId);
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service
-      Workers</a></li>
-  <li><a class="external external-icon" href="https://github.com/mdn/sw-test">Service
-      workers basic code example</a></li>
-  <li><a class="external external-icon"
-      href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker
-      ready?</a></li>
-  <li>{{jsxref("Promise")}}</li>
-  <li><a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web
-      workers</a></li>
-</ul>
+- [Using Service
+  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Service
+  workers basic code example](https://github.com/mdn/sw-test)
+- [Is ServiceWorker
+  ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- {{jsxref("Promise")}}
+- [Using web
+  workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

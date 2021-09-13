@@ -13,31 +13,33 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisUtterance.volume
 ---
-<div>{{APIRef("Web Speech API")}}{{SeeCompatTable}}</div>
+{{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-<p>The <strong><code>volume</code></strong> property of the
-  {{domxref("SpeechSynthesisUtterance")}} interface gets and sets the volume that the
-  utterance will be spoken at.</p>
+The **`volume`** property of the
+{{domxref("SpeechSynthesisUtterance")}} interface gets and sets the volume that the
+utterance will be spoken at.
 
-<p>If not set, the default value 1 will be used.</p>
+If not set, the default value 1 will be used.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var myVolume = speechSynthesisUtteranceInstance.volume;
+```js
+var myVolume = speechSynthesisUtteranceInstance.volume;
 speechSynthesisUtteranceInstance.volume = 0.5;
-</pre>
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A float that represents the volume value, between 0 (lowest) and 1 (highest.)</p>
+A float that represents the volume value, between 0 (lowest) and 1 (highest.)
 
-<p>If <a href="https://www.w3.org/TR/speech-synthesis/">SSML</a> is used, this value will
-  be overridden by <a href="https://www.w3.org/TR/speech-synthesis/#S3.2.4">prosody
-    tags</a> in the markup.</p>
+If [SSML](https://www.w3.org/TR/speech-synthesis/) is used, this value will
+be overridden by [prosody
+tags](https://www.w3.org/TR/speech-synthesis/#S3.2.4) in the markup.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">var synth = window.speechSynthesis;
+```js
+var synth = window.speechSynthesis;
 
 var inputForm = document.querySelector('form');
 var inputTxt = document.querySelector('input');
@@ -52,7 +54,7 @@ inputForm.onsubmit = function(event) {
 
   var utterThis = new SpeechSynthesisUtterance(inputTxt.value);
   var selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-  for(i = 0; i &lt; voices.length ; i++) {
+  for(i = 0; i < voices.length ; i++) {
     if(voices[i].name === selectedOption) {
       utterThis.voice = voices[i];
     }
@@ -60,18 +62,17 @@ inputForm.onsubmit = function(event) {
   utterThis.volume = 0.5;
   synth.speak(utterThis);
   inputTxt.blur();
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)

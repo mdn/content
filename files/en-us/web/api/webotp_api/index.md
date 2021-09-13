@@ -7,32 +7,33 @@ tags:
   - Overview
   - Reference
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("WebOTP API")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("WebOTP API")}}
 
-<p>The <strong>WebOTP API</strong> provides a method for verifying that a phone number belongs to the user, by generating a one-time password on receipt of a specially formatted SMS message.</p>
+The **WebOTP API** provides a method for verifying that a phone number belongs to the user, by generating a one-time password on receipt of a specially formatted SMS message.
 
-<h2> Concepts and Usage</h2>
+## Concepts and Usage
 
-<p>Phone numbers are often used as a way to identify the user of an app, and to verify that the number belongs to the user, SMS is frequently deployed. A typical scenario would involve a message being sent to the user with a one-time password. They would then need to copy and paste that password into a form to verify that the user owns the number.</p>
+Phone numbers are often used as a way to identify the user of an app, and to verify that the number belongs to the user, SMS is frequently deployed. A typical scenario would involve a message being sent to the user with a one-time password. They would then need to copy and paste that password into a form to verify that the user owns the number.
 
-<p>The WebOTP API removes friction from this process by allowing the password to be received by the app and verified automatically, with no need to copy and paste any codes.</p>
+The WebOTP API removes friction from this process by allowing the password to be received by the app and verified automatically, with no need to copy and paste any codes.
 
-<h2 id="Interfaces"> Interfaces</h2>
+## Interfaces
 
-<dl>
-  <dt>{{domxref("OTPCredential")}}</dt>
-  <dd>Extends {{domxref("Credential")}} and contains the attributes that are returned when a new one-time password is created.</dd>
-</dl>
+- {{domxref("OTPCredential")}}
+  - : Extends {{domxref("Credential")}} and contains the attributes that are returned when a new one-time password is created.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this example, when an SMS message arrives, and the user grants permission, an {{domxref("OTPCredential")}} object is returned with a one-time password. This password is then prefilled into the form field, and the form submitted.</p>
+In this example, when an SMS message arrives, and the user grants permission, an {{domxref("OTPCredential")}} object is returned with a one-time password. This password is then prefilled into the form field, and the form submitted.
 
-<p><a href="https://glitch.com/edit/#!/web-otp?path=views%2Findex.html%3A55%3A8">Try the demo using a phone here</a>.</p>
+[Try the demo using a phone here](https://glitch.com/edit/#!/web-otp?path=views%2Findex.html%3A55%3A8).
 
-<pre class="brush: html">&lt;input type="text" autocomplete="one-time-code" inputmode="numeric"&gt;</pre>
+```html
+<input type="text" autocomplete="one-time-code" inputmode="numeric">
+```
 
-<pre class="brush: js">if ('OTPCredential' in window) {
+```js
+if ('OTPCredential' in window) {
   window.addEventListener('DOMContentLoaded', e => {
     const input = document.querySelector('input[autocomplete="one-time-code"]');
     if (!input) return;
@@ -53,22 +54,16 @@ tags:
       console.log(err);
     });
   });
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table>
-  <tr>
-    <th>Specification</th>
-  </tr>
-  <tr>
-    <td><a href="https://wicg.github.io/web-otp/">WebOTP API</a></td>
-  </tr>
-</table>
+| Specification                                 |
+| --------------------------------------------- |
+| [WebOTP API](https://wicg.github.io/web-otp/) |
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://web.dev/web-otp/">Verify phone numbers on the web with WebOTP</a></li>
-  <li><a href="https://web.dev/web-otp-iframe/">Fill OTP forms within cross-origin iframes with WebOTP API</a></li>
-</ul>
+- [Verify phone numbers on the web with WebOTP](https://web.dev/web-otp/)
+- [Fill OTP forms within cross-origin iframes with WebOTP API](https://web.dev/web-otp-iframe/)

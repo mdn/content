@@ -9,14 +9,14 @@ tags:
   - Reference
 browser-compat: api.MouseEvent.x
 ---
-<div>{{APIRef}}{{SeeCompatTable}}</div>
+{{APIRef}}{{SeeCompatTable}}
 
-<p>The <strong><code>MouseEvent.x</code></strong> property is an alias for the {{domxref("MouseEvent.clientX")}} property.</p>
+The **`MouseEvent.x`** property is an alias for the {{domxref("MouseEvent.clientX")}} property.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

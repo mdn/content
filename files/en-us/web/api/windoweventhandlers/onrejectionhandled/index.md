@@ -2,40 +2,44 @@
 title: WindowEventHandlers.onrejectionhandled
 slug: Web/API/WindowEventHandlers/onrejectionhandled
 tags:
-- API
-- Event Handler
-- HTML DOM
-- JavaScript
-- Promises
-- Property
-- Reference
-- WindowEventHandlers
-- events
-- onrejectionhandled
+  - API
+  - Event Handler
+  - HTML DOM
+  - JavaScript
+  - Promises
+  - Property
+  - Reference
+  - WindowEventHandlers
+  - events
+  - onrejectionhandled
 browser-compat: api.WindowEventHandlers.onrejectionhandled
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <strong><code>onrejectionhandled</code></strong> property of the
-  {{domxref("WindowEventHandlers")}} mixin is the <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> for
-  processing {{event("rejectionhandled")}} events. These events are raised when
-  {{jsxref("Promise")}}s are rejected.</p>
+The **`onrejectionhandled`** property of the
+{{domxref("WindowEventHandlers")}} mixin is the [event handler](/en-US/docs/Web/Events/Event_handlers) for
+processing {{event("rejectionhandled")}} events. These events are raised when
+{{jsxref("Promise")}}s are rejected.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">window.addEventListener("rejectionhandled", function(event) { ... });
-window.onrejectionhandled = function(event) { ...};</pre>
+```js
+window.addEventListener("rejectionhandled", function(event) { ... });
+window.onrejectionhandled = function(event) { ...};
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">window.onrejectionhandled = function(e) {
+```js
+window.onrejectionhandled = function(e) {
   console.log(e.reason);
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

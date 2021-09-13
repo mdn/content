@@ -2,104 +2,100 @@
 title: DOMMatrixReadOnly.scale()
 slug: Web/API/DOMMatrixReadOnly/scale
 tags:
-- API
-- DOMMatrix
-- DOMMatrixReadOnly
-- Experimental
-- Geometry
-- Geometry Interfaces
-- Interface
-- Method
-- Reference
-- Scale
-- matrix
+  - API
+  - DOMMatrix
+  - DOMMatrixReadOnly
+  - Experimental
+  - Geometry
+  - Geometry Interfaces
+  - Interface
+  - Method
+  - Reference
+  - Scale
+  - matrix
 browser-compat: api.DOMMatrixReadOnly.scale
 ---
-<p>{{APIRef("Geometry Interfaces")}}{{SeeCompatTable}}</p>
+{{APIRef("Geometry Interfaces")}}{{SeeCompatTable}}
 
-<p>The <strong><code>scale()</code></strong> method of the
-  {{domxref("DOMMatrixReadOnly")}} interface creates a new matrix being the result of the
-  original matrix with a scale transform applied.</p>
+The **`scale()`** method of the
+{{domxref("DOMMatrixReadOnly")}} interface creates a new matrix being the result of the
+original matrix with a scale transform applied.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>scale()</code> method is specified with either one or six values.</p>
+The `scale()` method is specified with either one or six values.
 
-<pre
-  class="brush: js">DOMMatrix.scale(<em>scaleX</em>[, <em>scaleY</em>][, <em>scaleZ][, originX</em>][, <em>originY</em>][, <em>originZ</em>])</pre>
+```js
+DOMMatrix.scale(scaleX[, scaleY][, scaleZ][, originX][, originY][, originZ])
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt>scaleX</dt>
-  <dd>A multiplier for the scale value on the x-axis.</dd>
-  <dt>scaleY {{optional_inline}}</dt>
-  <dd>A multiplier for the scale value on the y-axis.  If not supplied, this defaults to
-    the value of <code>scaleX</code>.</dd>
-  <dt>scaleZ {{optional_inline}}</dt>
-  <dd>A multiplier for the scale value on the z-axis.  If this value is anything other
-    than 1, the resulting matrix will be 3D.</dd>
-  <dt>originX {{optional_inline}}</dt>
-  <dd>An x-coordinate for the origin of the transformation.  If no origin is supplied,
-    this defaults to 0.</dd>
-  <dt>originY {{optional_inline}}</dt>
-  <dd>A y-coordinate for the origin of the transformation.  If no origin is supplied, this
-    defaults to 0.</dd>
-  <dt>originZ {{optional_inline}}</dt>
-  <dd>A z-coordinate for the origin of the transformation.  If no origin is supplied, this
+- scaleX
+  - : A multiplier for the scale value on the x-axis.
+- scaleY {{optional_inline}}
+  - : A multiplier for the scale value on the y-axis.  If not supplied, this defaults to
+    the value of `scaleX`.
+- scaleZ {{optional_inline}}
+  - : A multiplier for the scale value on the z-axis.  If this value is anything other
+    than 1, the resulting matrix will be 3D.
+- originX {{optional_inline}}
+  - : An x-coordinate for the origin of the transformation.  If no origin is supplied,
+    this defaults to 0.
+- originY {{optional_inline}}
+  - : A y-coordinate for the origin of the transformation.  If no origin is supplied, this
+    defaults to 0.
+- originZ {{optional_inline}}
+  - : A z-coordinate for the origin of the transformation.  If no origin is supplied, this
     defaults to 0. If this value is anything other than 0, the resulting matrix will be
-    3D.</dd>
-</dl>
+    3D.
 
-<h3>Return value</h3>
+### Return value
 
-<p>Returns a <a href="/en-US/docs/Web/API/DOMMatrix"
-    title="The DOMMatrix interface represents 4x4 matrices, suitable for 2D and 3D operations."><code>DOMMatrix</code></a>
-  containing a new matrix being the result of the matrix x and y dimensions being scaled
-  by the given factor, centered on the origin given. The original matrix is not modified.
-</p>
+Returns a [`DOMMatrix`](/en-US/docs/Web/API/DOMMatrix "The DOMMatrix interface represents 4x4 matrices, suitable for 2D and 3D operations.")
+containing a new matrix being the result of the matrix x and y dimensions being scaled
+by the given factor, centered on the origin given. The original matrix is not modified.
 
-<p>If a scale is applied about the z-axis, the resulting matrix will be a 4x4 3D matrix.
-</p>
+If a scale is applied about the z-axis, the resulting matrix will be a 4x4 3D matrix.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> At time of writing, Firefox still supports an older version of
-    the specification that accepts either one or three values.</p>
+> **Note:** At time of writing, Firefox still supports an older version of
+> the specification that accepts either one or three values.
+>
+>     DOMMatrix.scale(scale[, originX][, originY])
+>
+> We'll show an example of how you can deal with the cross-browser support implications
+> of this in the Examples section, below.
 
-  <pre>DOMMatrix.scale(scale[, originX][, originY])</pre>
+## Examples
 
-  <p>We'll show an example of how you can deal with the cross-browser support implications
-    of this in the Examples section, below.</p>
-</div>
+This SVG contains three squares, one red, one blue, and one green, each positioned at
+the document origin:
 
-<h2 id="Examples">Examples</h2>
+```html
+<svg width="250" height="250" viewBox="0 0 25 25">
+  <rect width="25" height="25" fill="red" />
+  <rect id="transformed" width="25" height="25" fill="blue" />
+  <rect id="transformedOrigin" width="25" height="25" fill="green" />
+</svg>
+```
 
-<p>This SVG contains three squares, one red, one blue, and one green, each positioned at
-  the document origin:</p>
+This JavaScript first creates an identity matrix, then uses the `scale()`
+method to create a new matrix with a single parameter.
 
-<pre class="brush: html">&lt;svg width="250" height="250" viewBox="0 0 25 25"&gt;
-  &lt;rect width="25" height="25" fill="red" /&gt;
-  &lt;rect id="transformed" width="25" height="25" fill="blue" /&gt;
-  &lt;rect id="transformedOrigin" width="25" height="25" fill="green" /&gt;
-&lt;/svg&gt;</pre>
+We test if the browser supports a six parameter `scale()` method by creating
+a new matrix using three parameters and observing it's `is2D` property — if
+this is `false` then the third parameter has been accepted by the browser as
+a `scaleZ` parameter, making this a 3D matrix.
 
-<p>This JavaScript first creates an identity matrix, then uses the <code>scale()</code>
-  method to create a new matrix with a single parameter. </p>
+We then create a new matrix scaled about a given origin, using either three or six
+parameters depending on the browser support.
 
-<p>We test if the browser supports a six parameter <code>scale()</code> method by creating
-  a new matrix using three parameters and observing it's <code>is2D</code> property — if
-  this is <code>false</code> then the third parameter has been accepted by the browser as
-  a <code>scaleZ</code> parameter, making this a 3D matrix.</p>
+These new matrices are then applied to the blue and green squares as a
+`transform`, changing their dimensions and position. The red square is left
+in place.
 
-<p>We then create a new matrix scaled about a given origin, using either three or six
-  parameters depending on the browser support.</p>
-
-<p>These new matrices are then applied to the blue and green squares as a
-  <code>transform</code>, changing their dimensions and position. The red square is left
-  in place.</p>
-
-<pre
-  class="brush: js">const matrix = new DOMMatrixReadOnly();
+```js
+const matrix = new DOMMatrixReadOnly();
 const scaledMatrix = matrix.scale(0.5);
 
 let scaledMatrixWithOrigin = matrix.scale(0.5, 25, 25);
@@ -111,16 +107,17 @@ if (browserExpectsSixParamScale) {
 }
 
 document.querySelector('#transformed').setAttribute('transform', scaledMatrix.toString());
-document.querySelector('#transformedOrigin').setAttribute('transform', scaledMatrixWithOrigin.toString());</pre>
+document.querySelector('#transformedOrigin').setAttribute('transform', scaledMatrixWithOrigin.toString());
+```
 
-<p>{{ EmbedLiveSample('Examples', '250', '250',
+{{ EmbedLiveSample('Examples', '250', '250',
   'screen_shot_2019-02-18_at_13.23.31.png',
-  'Web/API/DOMMatrixReadOnly/scale') }}</p>
+  'Web/API/DOMMatrixReadOnly/scale') }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

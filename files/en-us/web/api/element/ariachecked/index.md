@@ -11,55 +11,54 @@ tags:
   - Element
 browser-compat: api.Element.ariaChecked
 ---
-<div>{{DefaultAPISidebar("DOM")}}</div>
+{{DefaultAPISidebar("DOM")}}
 
-<p>The <strong><code>ariaChecked</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <code>aria-checked</code> attribute, which indicates the current "checked" state of checkboxes, radio buttons, and other widgets that have a checked state.</p>
+The **`ariaChecked`** property of the {{domxref("Element")}} interface reflects the value of the `aria-checked` attribute, which indicates the current "checked" state of checkboxes, radio buttons, and other widgets that have a checked state.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Where possible use an HTML {{htmlelement("input")}} element with <code>type="checkbox"</code> as this element has built in semantics and does not require ARIA attributes.</p>
-</div>
+> **Note:** Where possible use an HTML {{htmlelement("input")}} element with `type="checkbox"` as this element has built in semantics and does not require ARIA attributes.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="syntaxbox notranslate">var <var>ariaChecked</var> = element.ariaChecked;
-<var>element</var>.ariaChecked = <var>ariaChecked</var></pre>
+    var ariaChecked = element.ariaChecked;
+    element.ariaChecked = ariaChecked
 
-<h3>Value</h3>
-<p>A {{domxref("DOMString")}} with one of the following values:</p>
+### Value
 
-<dl>
-  <dt><code>"true"</code></dt>
-  <dd>The element is checked.</dd>
-  <dt><code>"mixed"</code></dt>
-  <dd>Indicates a mixed mode value for a tri-state checkbox or menuitemcheckbox.</dd>
-  <dt><code>"false"</code></dt>
-  <dd>The element supports being checked but is not currently checked.</dd>
-  <dt><code>"undefined"</code></dt>
-  <dd>The element does not support being checked.</dd>
-</dl>
+A {{domxref("DOMString")}} with one of the following values:
 
-<h2 id="Examples">Examples</h2>
+- `"true"`
+  - : The element is checked.
+- `"mixed"`
+  - : Indicates a mixed mode value for a tri-state checkbox or menuitemcheckbox.
+- `"false"`
+  - : The element supports being checked but is not currently checked.
+- `"undefined"`
+  - : The element does not support being checked.
 
-<p>In this example the <code>aria-checked</code> attribute on the element with an ID of <code>checkBoxInput</code> is set to "false" indicating that this input is currently unchecked. Using <code>ariaChecked</code> we update the value to "true".</p>
+## Examples
 
-<pre class="brush: html">&lt;span role="checkbox" id="checkBoxInput" aria-checked="false" tabindex="0" aria-labelledby="chk1-label"&gt;
-&lt;/span&gt; &lt;label id="chk1-label"&gt;Remember my preferences&lt;/label&gt;</pre>
+In this example the `aria-checked` attribute on the element with an ID of `checkBoxInput` is set to "false" indicating that this input is currently unchecked. Using `ariaChecked` we update the value to "true".
 
-<pre class="brush: js">let el = document.getElementById('checkBoxInput');
+```html
+<span role="checkbox" id="checkBoxInput" aria-checked="false" tabindex="0" aria-labelledby="chk1-label">
+</span> <label id="chk1-label">Remember my preferences</label>
+```
+
+```js
+let el = document.getElementById('checkBoxInput');
 console.log(el.ariaChecked); // "false"
 el.ariaChecked = "true"
-console.log(el.ariaChecked); // "true"</pre>
+console.log(el.ariaChecked); // "true"
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role">ARIA: checkbox role</a></li>
-</ul>
+- [ARIA: checkbox role](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role)

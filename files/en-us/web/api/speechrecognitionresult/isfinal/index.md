@@ -2,37 +2,39 @@
 title: SpeechRecognitionResult.isFinal
 slug: Web/API/SpeechRecognitionResult/isFinal
 tags:
-- API
-- Experimental
-- Property
-- Reference
-- SpeechRecognitionResult
-- Web Speech API
-- isFinal
-- recognition
-- speech
+  - API
+  - Experimental
+  - Property
+  - Reference
+  - SpeechRecognitionResult
+  - Web Speech API
+  - isFinal
+  - recognition
+  - speech
 browser-compat: api.SpeechRecognitionResult.isFinal
 ---
-<p>{{APIRef("Web Speech API")}}{{ SeeCompatTable() }}</p>
+{{APIRef("Web Speech API")}}{{ SeeCompatTable() }}
 
-<p>The <code><strong>isFinal</strong></code> read-only property of the
-  {{domxref("SpeechRecognitionResult")}} interface is a boolean value that states
-  whether this result is final (<code>true</code>) or not (<code>false</code>) — if so,
-  then this is the final time this result will be returned; if not, then this result is an
-  interim result, and may be updated later on.</p>
+The **`isFinal`** read-only property of the
+{{domxref("SpeechRecognitionResult")}} interface is a boolean value that states
+whether this result is final (`true`) or not (`false`) — if so,
+then this is the final time this result will be returned; if not, then this result is an
+interim result, and may be updated later on.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var myIsFinal = speechRecognitionResultInstance.isFinal;</pre>
+```js
+var myIsFinal = speechRecognitionResultInstance.isFinal;
+```
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A boolean value.</p>
+A boolean value.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">recognition.onresult = function(event) {
+```js
+recognition.onresult = function(event) {
   // The SpeechRecognitionEvent results property returns a SpeechRecognitionResultList object
   // The SpeechRecognitionResultList object contains SpeechRecognitionResult objects.
   // It has a getter so it can be accessed like an array
@@ -46,36 +48,39 @@ browser-compat: api.SpeechRecognitionResult.isFinal
   bg.style.backgroundColor = color;
 
   console.log(event.results[0].isFinal);
-}</pre>
+}
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h3 id="Firefox_OS_permissions">Firefox OS permissions</h3>
+### Firefox OS permissions
 
-<p>To use speech recognition in an app, you need to specify the following permissions in
-  your <a href="/en-US/docs/Web/Apps/Build/Manifest">manifest</a>:</p>
+To use speech recognition in an app, you need to specify the following permissions in
+your [manifest](/en-US/docs/Web/Apps/Build/Manifest):
 
-<pre class="brush: json">"permissions": {
+```json
+"permissions": {
   "audio-capture" : {
     "description" : "Audio capture"
   },
   "speech-recognition" : {
     "description" : "Speech recognition"
   }
-}</pre>
+}
+```
 
-<p>You also need a privileged app, so you need to include this as well:</p>
+You also need a privileged app, so you need to include this as well:
 
-<pre class="brush: json">  "type": "privileged"</pre>
+```json
+  "type": "privileged"
+```
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
-</ul>
+- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)

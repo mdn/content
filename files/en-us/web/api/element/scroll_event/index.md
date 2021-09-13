@@ -9,44 +9,45 @@ tags:
   - Scroll
 browser-compat: api.Element.scroll_event
 ---
-<p>{{APIRef}}</p>
+{{APIRef}}
 
-<p>The <strong><code>scroll</code></strong> event fires an element has been scrolled.</p>
+The **`scroll`** event fires an element has been scrolled.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{DOMxRef("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td>{{DOMxRef("GlobalEventHandlers.onscroll", "onscroll")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Bubbles</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Cancelable</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td>{{DOMxRef("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Event handler property</th>
+      <td>
+        {{DOMxRef("GlobalEventHandlers.onscroll", "onscroll")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<div class="notecard note">
-<p><strong>Note:</strong> In iOS UIWebViews, <code>scroll</code> events are not fired while scrolling is taking place; they are only fired after the scrolling has completed. See <a href="https://github.com/twbs/bootstrap/issues/16202">Bootstrap issue #16202</a>. Safari and WKWebViews are not affected by this bug.</p>
-</div>
+> **Note:** In iOS UIWebViews, `scroll` events are not fired while scrolling is taking place; they are only fired after the scrolling has completed. See [Bootstrap issue #16202](https://github.com/twbs/bootstrap/issues/16202). Safari and WKWebViews are not affected by this bug.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Scroll_event_throttling">Scroll event throttling</h3>
+### Scroll event throttling
 
-<p>Since <code>scroll</code> events can fire at a high rate, the event handler shouldn't execute computationally expensive operations such as DOM modifications. Instead, it is recommended to throttle the event using {{DOMxRef("Window.requestAnimationFrame()", "requestAnimationFrame()")}}, {{DOMxRef("setTimeout()")}}, or a {{DOMxRef("CustomEvent")}}, as follows.</p>
+Since `scroll` events can fire at a high rate, the event handler shouldn't execute computationally expensive operations such as DOM modifications. Instead, it is recommended to throttle the event using {{DOMxRef("Window.requestAnimationFrame()", "requestAnimationFrame()")}}, {{DOMxRef("setTimeout()")}}, or a {{DOMxRef("CustomEvent")}}, as follows.
 
-<p>Note, however, that input events and animation frames are fired at about the same rate, and therefore the optimization below is often unnecessary. This example optimizes the <code>scroll</code> event for <code>requestAnimationFrame</code>.</p>
+Note, however, that input events and animation frames are fired at about the same rate, and therefore the optimization below is often unnecessary. This example optimizes the `scroll` event for `requestAnimationFrame`.
 
-<pre class="brush: js">// Reference: http://www.html5rocks.com/en/tutorials/speed/animations/
+```js
+// Reference: http://www.html5rocks.com/en/tutorials/speed/animations/
 
 let last_known_scroll_position = 0;
 let ticking = false;
@@ -66,22 +67,19 @@ window.addEventListener('scroll', function(e) {
 
     ticking = true;
   }
-});</pre>
+});
+```
 
-<div class="notecard note">
-<p><strong>Note:</strong> You can find more examples on the {{domxref("Document/resize_event", "resize")}} event page.</p>
-</div>
+> **Note:** You can find more examples on the {{domxref("Document/resize_event", "resize")}} event page.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Document: {{domxref("Document/scroll_event", "scroll")}} event</li>
-</ul>
+- Document: {{domxref("Document/scroll_event", "scroll")}} event

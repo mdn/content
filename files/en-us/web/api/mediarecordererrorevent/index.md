@@ -19,33 +19,30 @@ tags:
   - WebRTC
 browser-compat: api.MediaRecorderErrorEvent
 ---
-<div>{{APIRef("MediaStream Recording")}}</div>
+{{APIRef("MediaStream Recording")}}
 
-<p>The <code>MediaRecorderErrorEvent</code> interface represents errors returned by the <a href="/en-US/docs/Web/API/MediaStream_Recording_API">MediaStream Recording API.</a> It is an {{domxref("Event")}} object that encapsulates a reference to a {{domxref("DOMException")}} describing the error that occurred.</p>
+The `MediaRecorderErrorEvent` interface represents errors returned by the [MediaStream Recording API.](/en-US/docs/Web/API/MediaStream_Recording_API) It is an {{domxref("Event")}} object that encapsulates a reference to a {{domxref("DOMException")}} describing the error that occurred.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Inherits properties from its parent interface, {{domxref("Event")}}</em>.</p>
+_Inherits properties from its parent interface, {{domxref("Event")}}_.
 
-<dl>
- <dt>{{domxref("MediaRecorderErrorEvent.error", "error")}} {{ReadOnlyInline}}</dt>
- <dd>A {{domxref("DOMException")}} containing information about the error that occurred. Read only.</dd>
-</dl>
+- {{domxref("MediaRecorderErrorEvent.error", "error")}} {{ReadOnlyInline}}
+  - : A {{domxref("DOMException")}} containing information about the error that occurred. Read only.
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("MediaRecorderErrorEvent.MediaRecorderErrorEvent", "MediaStreamRecorderEvent()")}}</dt>
- <dd>Creates and returns a new <code>MediaRecorderErrorEvent</code> event object with the given parameters.</dd>
-</dl>
+- {{domxref("MediaRecorderErrorEvent.MediaRecorderErrorEvent", "MediaStreamRecorderEvent()")}}
+  - : Creates and returns a new `MediaRecorderErrorEvent` event object with the given parameters.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Inherits methods from its parent interface, {{domxref("Event")}}</em>.</p>
+_Inherits methods from its parent interface, {{domxref("Event")}}_.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-<p>{{Compat}}</p>
+## Browser compatibility
+
+{{Compat}}

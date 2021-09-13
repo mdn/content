@@ -12,24 +12,23 @@ tags:
   - Video
 browser-compat: api.AudioConfiguration
 ---
-<div>{{APIRef("Media Capabilities API")}}</div>
+{{APIRef("Media Capabilities API")}}
 
-<p>The <strong><code>AudioConfiguration</code></strong> dictionary of the <a href="/en-US/docs/Web/API/Media_Capabilities_API">Media Capabilities API</a> defines the audio file being tested when calling {{domxref("MediaCapabilities.encodingInfo()")}} or {{domxref("MediaCapabilities.decodingInfo()")}} to query whether a specific audio configuration is supported, smooth, and/or power efficient.</p>
+The **`AudioConfiguration`** dictionary of the [Media Capabilities API](/en-US/docs/Web/API/Media_Capabilities_API) defines the audio file being tested when calling {{domxref("MediaCapabilities.encodingInfo()")}} or {{domxref("MediaCapabilities.decodingInfo()")}} to query whether a specific audio configuration is supported, smooth, and/or power efficient.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p>The <code>AudioConfiguration</code> dictionary is made up of four audio properties, including:</p>
+The `AudioConfiguration` dictionary is made up of four audio properties, including:
 
-<ul>
- <li><strong>contentType</strong>: A valid audio MIME type, For information on possible values and what they mean, see the <a href="/en-US/docs/Web/Media/Formats/Audio_codecs">web audio codec guide</a>.</li>
- <li><strong>channels</strong>: the number of channels used by the audio track.</li>
- <li><strong>bitrate</strong>: The number of bits used to encode one second of the audio file.</li>
- <li> <strong>samplerate</strong>: The number of audio samples making up one second of the audio file.</li>
-</ul>
+- **contentType**: A valid audio MIME type, For information on possible values and what they mean, see the [web audio codec guide](/en-US/docs/Web/Media/Formats/Audio_codecs).
+- **channels**: the number of channels used by the audio track.
+- **bitrate**: The number of bits used to encode one second of the audio file.
+- **samplerate**: The number of audio samples making up one second of the audio file.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">//Create media configuration to be tested
+```js
+//Create media configuration to be tested
 const mediaConfig = {
     type : 'file', // 'record', 'transmission', or 'media-source'
     audio : {
@@ -41,32 +40,31 @@ const mediaConfig = {
 };
 
 // check support and performance
-navigator.mediaCapabilities.decodingInfo(mediaConfig).then(result =&gt; {
+navigator.mediaCapabilities.decodingInfo(mediaConfig).then(result => {
     console.log('This configuration is ' +
         (result.supported ? '' : 'not ') + 'supported, ' +
         (result.smooth ? '' : 'not ') + 'smooth, and ' +
         (result.powerEfficient ? '' : 'not ') + 'power efficient.'
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/Media">Web media technologies</a></li>
- <li><a href="/en-US/docs/Web/Media/Formats">Guide to media types and formats on the web</a></li>
- <li><a href="/en-US/docs/Web/API/Media_Capabilities_API">Media Capabilities API</a></li>
- <li><a href="/en-US/docs/Web/API/Media_Capabilities_API/Using_the_Media_Capabilities_API">Using the Media Capabilities API</a></li>
- <li><a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a></li>
- <li><a href="/en-US/docs/Web/API/MediaStream_Recording_API">MediaStream Recording API</a></li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
- <li>{{domxref("MediaDecodingConfiguration")}}</li>
- <li>{{domxref("MediaEncodingConfiguration")}}</li>
- <li>{{domxref("VideoConfiguration")}}</li>
-</ul>
+- [Web media technologies](/en-US/docs/Web/Media)
+- [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
+- [Media Capabilities API](/en-US/docs/Web/API/Media_Capabilities_API)
+- [Using the Media Capabilities API](/en-US/docs/Web/API/Media_Capabilities_API/Using_the_Media_Capabilities_API)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API)
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)
+- {{domxref("MediaDecodingConfiguration")}}
+- {{domxref("MediaEncodingConfiguration")}}
+- {{domxref("VideoConfiguration")}}

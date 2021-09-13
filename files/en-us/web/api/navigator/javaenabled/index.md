@@ -8,26 +8,24 @@ tags:
   - Navigator
 browser-compat: api.Navigator.javaEnabled
 ---
-<p>{{ APIRef("HTML DOM") }}</p>
+{{ APIRef("HTML DOM") }}
 
-<p>This method always returns false.</p>
+This method always returns false.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="eval"><em>result</em> = window.navigator.javaEnabled()
-</pre>
+    result = window.navigator.javaEnabled()
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="eval">if (window.navigator.javaEnabled()) {
-   // code will never be executed; the condition is always false
-}
-</pre>
+    if (window.navigator.javaEnabled()) {
+       // code will never be executed; the condition is always false
+    }
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

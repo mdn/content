@@ -2,93 +2,90 @@
 title: PromiseRejectionEvent()
 slug: Web/API/PromiseRejectionEvent/PromiseRejectionEvent
 tags:
-- API
-- Constructor
-- HTML DOM
-- JavaScript
-- PromiseRejectionEvent
-- Promises
-- Reference
-- events
+  - API
+  - Constructor
+  - HTML DOM
+  - JavaScript
+  - PromiseRejectionEvent
+  - Promises
+  - Reference
+  - events
 browser-compat: api.PromiseRejectionEvent.PromiseRejectionEvent
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <code><strong>PromiseRejectionEvent()</strong></code>
-    constructor returns a newly created {{domxref("PromiseRejectionEvent")}}, which
-    represents events fired when a JavaScript {{jsxref("Promise")}} is rejected.</p>
+The **`PromiseRejectionEvent()`**
+constructor returns a newly created {{domxref("PromiseRejectionEvent")}}, which
+represents events fired when a JavaScript {{jsxref("Promise")}} is rejected.
 
-<p>With promise rejection events, it becomes possible to detect and report promises which
-  fail and whose failures go unnoticed. It also becomes easier to write a global handler
-  for errors.</p>
+With promise rejection events, it becomes possible to detect and report promises which
+fail and whose failures go unnoticed. It also becomes easier to write a global handler
+for errors.
 
-<p>There are two types of <code>PromiseRejectionEvent</code>:
-  {{event("unhandledrejection")}} is sent by the JavaScript runtime when a promise is
-  rejected but the rejection goes unhandled. A {{event("rejectionhandled")}} event is
-  emitted if a promise is rejected but the rejection is caught by a rejection handler..
-</p>
+There are two types of `PromiseRejectionEvent`:
+{{event("unhandledrejection")}} is sent by the JavaScript runtime when a promise is
+rejected but the rejection goes unhandled. A {{event("rejectionhandled")}} event is
+emitted if a promise is rejected but the rejection is caught by a rejection handler..
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>promiseRejectionEvent</em> = PromiseRejectionEvent(<em>type</em>, <em>options</em>);
-</pre>
+```js
+promiseRejectionEvent = PromiseRejectionEvent(type, options);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p><em>The <code>PromiseRejectionEvent()</code> constructor also inherits parameters from
-    {{domxref("Event.Event", "Event()")}}.</em></p>
+_The `PromiseRejectionEvent()` constructor also inherits parameters from
+{{domxref("Event.Event", "Event()")}}._
 
-<dl>
-  <dt><code>type</code></dt>
-  <dd>A string representing the name of the type of the
-    <code>PromiseRejectionEvent</code>. This is case-sensitive and should be one of
+- `type`
+  - : A string representing the name of the type of the
+    `PromiseRejectionEvent`. This is case-sensitive and should be one of
     {{event("rejectionhandled", '"rejectionhandled"')}} or {{event("unhandledrejection",
     '"unhandledrejection"')}}, to match the event names of the possible (non-synthetic)
-    {{domxref("PromiseRejectionEvent")}} events that user agents can actually fire).</dd>
-  <dt><code>options</code></dt>
-  <dd>An {{jsxref("Object")}} specifying details about the rejection which occurred:
-    <dl>
-      <dt><code>promise</code></dt>
-      <dd>The {{jsxref("Promise")}} that was rejected.</dd>
-      <dt><code>reason</code></dt>
-      <dd>Any value or {{jsxref("Object")}} which represents the reason the promise was
+    {{domxref("PromiseRejectionEvent")}} events that user agents can actually fire).
+- `options`
+
+  - : An {{jsxref("Object")}} specifying details about the rejection which occurred:
+
+    - `promise`
+      - : The {{jsxref("Promise")}} that was rejected.
+    - `reason`
+      - : Any value or {{jsxref("Object")}} which represents the reason the promise was
         rejected. This can be anything from a numeric error code to an error
         {{domxref("DOMString")}} to an object which contains detailed information
-        describing the situation resulting in the promise being rejected.</dd>
-    </dl>
-  </dd>
-</dl>
+        describing the situation resulting in the promise being rejected.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A new <code>PromiseRejectionEvent</code> configured as specified by the parameters.</p>
+A new `PromiseRejectionEvent` configured as specified by the parameters.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example creates a new {{event("unhandledrejection")}} event for the promise
-  <code>myPromise</code> with the reason being the string "My house is on fire". The
-  <code>reason</code> could just as easily be a number, or even an object with detailed
-  information including the home address, how serious the fire is, and the phone number of
-  an emergency contact who should be notified.</p>
+This example creates a new {{event("unhandledrejection")}} event for the promise
+`myPromise` with the reason being the string "My house is on fire". The
+`reason` could just as easily be a number, or even an object with detailed
+information including the home address, how serious the fire is, and the phone number of
+an emergency contact who should be notified.
 
-<pre class="brush: js">let myRejectionEvent = new PromiseRejectionEvent("unhandledrejection", {
+```js
+let myRejectionEvent = new PromiseRejectionEvent("unhandledrejection", {
   promise : myPromise,
   reason : "My house is on fire"
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="/en-US/docs/Archive/Add-ons/Techniques/Promises">Promises</a></li>
-  <li><a href="/en-US/docs/Web/JavaScript/Guide/Using_promises">Using promises</a></li>
-  <li>{{jsxref("Promise")}}</li>
-  <li>{{domxref("PromiseRejectionEvent")}}</li>
-</ul>
+- [Promises](/en-US/docs/Archive/Add-ons/Techniques/Promises)
+- [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises)
+- {{jsxref("Promise")}}
+- {{domxref("PromiseRejectionEvent")}}

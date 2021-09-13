@@ -2,111 +2,112 @@
 title: HTMLElement.hidden
 slug: Web/API/HTMLElement/hidden
 tags:
-- API
-- Attribute
-- Element
-- HTML
-- HTML element
-- Property
-- Reference
-- hidden
+  - API
+  - Attribute
+  - Element
+  - HTML
+  - HTML element
+  - Property
+  - Reference
+  - hidden
 browser-compat: api.HTMLElement.hidden
 ---
-<div>
-  <div>{{ APIRef("HTML DOM") }}</div>
-</div>
+{{ APIRef("HTML DOM") }}
 
-<p>The {{domxref("HTMLElement")}} property
-    <strong><code>hidden</code></strong> is a boolean value which is
-    <code>true</code> if the element is hidden; otherwise the value is <code>false</code>.
-    This is quite different from using the CSS property {{cssxref("display")}} to control
-    the visibility of an element.</p>
+The {{domxref("HTMLElement")}} property
+**`hidden`** is a boolean value which is
+`true` if the element is hidden; otherwise the value is `false`.
+This is quite different from using the CSS property {{cssxref("display")}} to control
+the visibility of an element.
 
-<p>The <code>hidden</code> property applies to all
-  presentation modes and should not be used to hide content that is meant to be directly
-  accessible to the user.</p>
+The `hidden` property applies to all
+presentation modes and should not be used to hide content that is meant to be directly
+accessible to the user.
 
-<p>Appropriate use cases for <code>hidden</code> include:</p>
+Appropriate use cases for `hidden` include:
 
-<ul>
-  <li>Content that isn't yet relevant but may be needed later</li>
-  <li>Content that was previously needed but is not any longer</li>
-  <li>Content that is reused by other parts of the page in a template-like fashion</li>
-  <li>Creating an offscreen canvas as a drawing buffer</li>
-</ul>
+- Content that isn't yet relevant but may be needed later
+- Content that was previously needed but is not any longer
+- Content that is reused by other parts of the page in a template-like fashion
+- Creating an offscreen canvas as a drawing buffer
 
-<p>Inappropriate use cases include:</p>
+Inappropriate use cases include:
 
-<ul>
-  <li>Hiding panels in a tabbed dialog box</li>
-  <li>Hiding content in one presentation while intending it to be visible in others</li>
-</ul>
+- Hiding panels in a tabbed dialog box
+- Hiding content in one presentation while intending it to be visible in others
 
-<div class="note">
-  <p><strong>Note:</strong> Elements that are not <code>hidden</code> must not link to elements which are.</p>
-</div>
+> **Note:** Elements that are not `hidden` must not link to elements which are.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>isHidden</em> = <em>HTMLElement</em>.hidden;
+```js
+isHidden = HTMLElement.hidden;
 
-<em>HTMLElement</em>.hidden = true | false;</pre>
+HTMLElement.hidden = true | false;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A Boolean which is <code>true</code> if the element is hidden from view; otherwise, the
-  value is <code>false</code>.</p>
+A Boolean which is `true` if the element is hidden from view; otherwise, the
+value is `false`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>Here's an example where a hidden block is used to contain a thank you message that is
-  displayed after a user agrees to an unusual request.</p>
+Here's an example where a hidden block is used to contain a thank you message that is
+displayed after a user agrees to an unusual request.
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">document.getElementById("okButton")
+```js
+document.getElementById("okButton")
         .addEventListener("click", function() {
   document.getElementById("welcome").hidden = true;
   document.getElementById("awesome").hidden = false;
-}, false);</pre>
+}, false);
+```
 
-<p>This code sets up a handler for the welcome panel's "OK" button that hides the welcome
-  panel and makes the follow-up panel—with the curious name "awesome"—visible in its
-  place.</p>
+This code sets up a handler for the welcome panel's "OK" button that hides the welcome
+panel and makes the follow-up panel—with the curious name "awesome"—visible in its
+place.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<p>The HTML for the two boxes are shown here.</p>
+The HTML for the two boxes are shown here.
 
-<h4 id="The_welcome_panel">The welcome panel</h4>
+#### The welcome panel
 
-<pre class="brush: html">&lt;div id="welcome" class="panel"&gt;
-  &lt;h1&gt;Welcome to Foobar.com!&lt;/h1&gt;
-  &lt;p&gt;By clicking "OK" you agree to be awesome every day!&lt;/p&gt;
-  &lt;button class="button" id="okButton"&gt;OK&lt;/button&gt;
-&lt;/div&gt;</pre>
+```html
+<div id="welcome" class="panel">
+  <h1>Welcome to Foobar.com!</h1>
+  <p>By clicking "OK" you agree to be awesome every day!</p>
+  <button class="button" id="okButton">OK</button>
+</div>
+```
 
-<p>This HTML creates a panel (in a {{HTMLElement("div")}} block) that welcomes the user to
-  a site and tells them what they're agreeing to by clicking the OK button.</p>
+This HTML creates a panel (in a {{HTMLElement("div")}} block) that welcomes the user to
+a site and tells them what they're agreeing to by clicking the OK button.
 
-<h4 id="The_follow-up_panel">The follow-up panel</h4>
+#### The follow-up panel
 
-<p>Once the user clicks the "OK" button in the welcome panel, the JavaScript code swaps
-  the two panels by changing their respective values for <code>hidden</code>. The
-  follow-up panel looks like this in HTML:</p>
+Once the user clicks the "OK" button in the welcome panel, the JavaScript code swaps
+the two panels by changing their respective values for `hidden`. The
+follow-up panel looks like this in HTML:
 
-<pre class="brush: html">&lt;div id="awesome" class="panel" hidden&gt;
-  &lt;h1&gt;Thanks!&lt;/h1&gt;
-  &lt;p&gt;Thank you &lt;strong&gt;so&lt;/strong&gt; much for agreeing to be
+```html
+<div id="awesome" class="panel" hidden>
+  <h1>Thanks!</h1>
+  <p>Thank you <strong>so</strong> much for agreeing to be
   awesome today! Now get out there and do awesome things
-  awesomely to make the world more awesome!&lt;/p&gt;
-&lt;/div&gt;</pre>
+  awesomely to make the world more awesome!</p>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<p>The content is styled using the CSS below.</p>
+The content is styled using the CSS below.
 
-<pre class="brush: css">.panel {
+```css
+.panel {
   font: 16px "Open Sans", Helvetica, Arial, sans-serif;
   border: 1px solid #22d;
   padding: 12px;
@@ -122,23 +123,22 @@ browser-compat: api.HTMLElement.hidden
 h1 {
   margin-top: 0;
   font-size: 175%;
-}</pre>
+}
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{ EmbedLiveSample('Example', 560, 200) }}</p>
+{{ EmbedLiveSample('Example', 560, 200) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{htmlattrxref("hidden")}} attribute</li>
-  <li>{{cssxref("display")}}</li>
-</ul>
+- {{htmlattrxref("hidden")}} attribute
+- {{cssxref("display")}}

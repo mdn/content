@@ -10,106 +10,90 @@ tags:
   - Workers
 browser-compat: api.DedicatedWorkerGlobalScope
 ---
-<p>{{APIRef("Web Workers API")}}</p>
+{{APIRef("Web Workers API")}}
 
-<p>The <strong><code>DedicatedWorkerGlobalScope</code></strong> object (the {{domxref("Worker")}} global scope) is accessible through the {{domxref("window.self","self")}} keyword. Some additional global functions, namespaces objects, and constructors, not typically associated with the worker global scope, but available on it, are listed in the <a href="/en-US/docs/Web/JavaScript/Reference">JavaScript Reference</a>. See also: <a href="/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">Functions available to workers</a>.</p>
+The **`DedicatedWorkerGlobalScope`** object (the {{domxref("Worker")}} global scope) is accessible through the {{domxref("window.self","self")}} keyword. Some additional global functions, namespaces objects, and constructors, not typically associated with the worker global scope, but available on it, are listed in the [JavaScript Reference](/en-US/docs/Web/JavaScript/Reference). See also: [Functions available to workers](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers).
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface inherits properties from the {{domxref("WorkerGlobalScope")}} interface, and its parent {{domxref("EventTarget")}}.</em></p>
+_This interface inherits properties from the {{domxref("WorkerGlobalScope")}} interface, and its parent {{domxref("EventTarget")}}._
 
-<dl>
- <dt>{{domxref("DedicatedWorkerGlobalScope.name")}} {{readOnlyinline}}</dt>
- <dd>The name that the {{domxref("Worker")}} was (optionally) given when it was created using the {{domxref("Worker.Worker", "Worker()")}} constructor. This is mainly useful for debugging purposes.</dd>
-</dl>
+- {{domxref("DedicatedWorkerGlobalScope.name")}} {{readOnlyinline}}
+  - : The name that the {{domxref("Worker")}} was (optionally) given when it was created using the {{domxref("Worker.Worker", "Worker()")}} constructor. This is mainly useful for debugging purposes.
 
-<h3 id="Properties_inherited_from_WorkerGlobalScope">Properties inherited from WorkerGlobalScope</h3>
+### Properties inherited from WorkerGlobalScope
 
-<dl>
- <dt>{{domxref("WorkerGlobalScope.self")}}</dt>
- <dd>Returns an object reference to the <code>DedicatedWorkerGlobalScope</code> object itself.</dd>
- <dt>{{domxref("WorkerGlobalScope.console")}} {{readOnlyinline}}</dt>
- <dd>Returns the {{domxref("console")}} associated with the worker.</dd>
- <dt>{{domxref("WorkerGlobalScope.location")}} {{readOnlyinline}}</dt>
- <dd>Returns the {{domxref("WorkerLocation")}} associated with the worker. <code>WorkerLocation</code> is a specific location object, mostly a subset of the {{domxref("Location")}} for browsing scopes, but adapted to workers.</dd>
- <dt>{{domxref("WorkerGlobalScope.navigator")}} {{readOnlyinline}}</dt>
- <dd>Returns the {{domxref("WorkerNavigator")}} associated with the worker. <code>WorkerNavigator</code> is a specific navigator object, mostly a subset of the {{domxref("Navigator")}} for browsing scopes, but adapted to workers.</dd>
- <dt>{{domxref("WorkerGlobalScope.performance")}} {{readOnlyinline}} {{Non-standard_inline}}</dt>
- <dd>Returns the {{domxref("Performance")}} object associated with the worker, which is a regular performance object, but with a subset of its properties and methods available.</dd>
-</dl>
+- {{domxref("WorkerGlobalScope.self")}}
+  - : Returns an object reference to the `DedicatedWorkerGlobalScope` object itself.
+- {{domxref("WorkerGlobalScope.console")}} {{readOnlyinline}}
+  - : Returns the {{domxref("console")}} associated with the worker.
+- {{domxref("WorkerGlobalScope.location")}} {{readOnlyinline}}
+  - : Returns the {{domxref("WorkerLocation")}} associated with the worker. `WorkerLocation` is a specific location object, mostly a subset of the {{domxref("Location")}} for browsing scopes, but adapted to workers.
+- {{domxref("WorkerGlobalScope.navigator")}} {{readOnlyinline}}
+  - : Returns the {{domxref("WorkerNavigator")}} associated with the worker. `WorkerNavigator` is a specific navigator object, mostly a subset of the {{domxref("Navigator")}} for browsing scopes, but adapted to workers.
+- {{domxref("WorkerGlobalScope.performance")}} {{readOnlyinline}} {{Non-standard_inline}}
+  - : Returns the {{domxref("Performance")}} object associated with the worker, which is a regular performance object, but with a subset of its properties and methods available.
 
-<h3 id="Event_handlers">Event handlers</h3>
+### Event handlers
 
-<p><em>This interface inherits event handlers from the {{domxref("WorkerGlobalScope")}} interface, and its parent {{domxref("EventTarget")}}.</em></p>
+_This interface inherits event handlers from the {{domxref("WorkerGlobalScope")}} interface, and its parent {{domxref("EventTarget")}}._
 
-<dl>
- <dt>{{domxref("DedicatedWorkerGlobalScope.onmessage")}}</dt>
- <dd>Is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> representing the code to be called when the {{event("message")}} event is raised. These events are of type {{domxref("MessageEvent")}} and will be called when the worker receives a message from the document that started it (i.e. from the {{domxref("Worker.postMessage")}} method.)</dd>
- <dt>{{domxref("DedicatedWorkerGlobalScope.onmessageerror")}}</dt>
- <dd>Is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> representing the code to be called when the {{event("messageerror")}} event is raised.</dd>
-</dl>
+- {{domxref("DedicatedWorkerGlobalScope.onmessage")}}
+  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("message")}} event is raised. These events are of type {{domxref("MessageEvent")}} and will be called when the worker receives a message from the document that started it (i.e. from the {{domxref("Worker.postMessage")}} method.)
+- {{domxref("DedicatedWorkerGlobalScope.onmessageerror")}}
+  - : Is an [event handler](/en-US/docs/Web/Events/Event_handlers) representing the code to be called when the {{event("messageerror")}} event is raised.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface inherits methods from the {{domxref("WorkerGlobalScope")}} interface, and its parent {{domxref("EventTarget")}}.</em></p>
+_This interface inherits methods from the {{domxref("WorkerGlobalScope")}} interface, and its parent {{domxref("EventTarget")}}._
 
-<dl>
- <dt>{{domxref("DedicatedWorkerGlobalScope.close()")}}</dt>
- <dd>Discards any tasks queued in the <code>WorkerGlobalScope</code>'s event loop, effectively closing this particular scope.</dd>
- <dt>{{domxref("DedicatedWorkerGlobalScope.postMessage()")}}</dt>
- <dd>Sends a message — which can consist of <code>any</code> JavaScript object — to the parent document that first spawned the worker.</dd>
-</dl>
+- {{domxref("DedicatedWorkerGlobalScope.close()")}}
+  - : Discards any tasks queued in the `WorkerGlobalScope`'s event loop, effectively closing this particular scope.
+- {{domxref("DedicatedWorkerGlobalScope.postMessage()")}}
+  - : Sends a message — which can consist of `any` JavaScript object — to the parent document that first spawned the worker.
 
-<h3 id="Inherited_from_WorkerGlobalScope">Inherited from WorkerGlobalScope</h3>
+### Inherited from WorkerGlobalScope
 
-<dl>
- <dt>{{domxref("WorkerGlobalScope.dump()")}} {{non-standard_inline}}</dt>
- <dd>Writes a message to the console.</dd>
- <dt>{{domxref("WorkerGlobalScope.importScripts()")}}</dt>
- <dd>Imports one or more scripts into the worker's scope. You can specify as many as you'd like, separated by commas. For example:<code> importScripts('foo.js', 'bar.js');</code></dd>
-</dl>
+- {{domxref("WorkerGlobalScope.dump()")}} {{non-standard_inline}}
+  - : Writes a message to the console.
+- {{domxref("WorkerGlobalScope.importScripts()")}}
+  - : Imports one or more scripts into the worker's scope. You can specify as many as you'd like, separated by commas. For example:` importScripts('foo.js', 'bar.js');`
 
-<h3 id="Implemented_from_other_places">Implemented from other places</h3>
+### Implemented from other places
 
-<dl>
- <dt>{{domxref("atob", "atob()")}}</dt>
- <dd>Decodes a string of data which has been encoded using base-64 encoding.</dd>
- <dt>{{domxref("btoa", "btoa")}}</dt>
- <dd>Creates a base-64 encoded ASCII string from a string of binary data.</dd>
- <dt>{{domxref("clearInterval")}}</dt>
- <dd>Cancels the repeated execution set using {{domxref("setInterval")}}.</dd>
- <dt>{{domxref("clearTimeout")}}</dt>
- <dd>Cancels the repeated execution set using {{domxref("setTimeout")}}.</dd>
- <dt>{{domxref("setInterval")}}</dt>
- <dd>Schedules the execution of a function every X milliseconds.</dd>
- <dt>{{domxref("setTimeout")}}</dt>
- <dd>Sets a delay for executing a function.</dd>
-</dl>
+- {{domxref("atob", "atob()")}}
+  - : Decodes a string of data which has been encoded using base-64 encoding.
+- {{domxref("btoa", "btoa")}}
+  - : Creates a base-64 encoded ASCII string from a string of binary data.
+- {{domxref("clearInterval")}}
+  - : Cancels the repeated execution set using {{domxref("setInterval")}}.
+- {{domxref("clearTimeout")}}
+  - : Cancels the repeated execution set using {{domxref("setTimeout")}}.
+- {{domxref("setInterval")}}
+  - : Schedules the execution of a function every X milliseconds.
+- {{domxref("setTimeout")}}
+  - : Sets a delay for executing a function.
 
-<h2 id="Events">Events</h2>
+## Events
 
-<dl>
- <dt><code><a href="/en-US/docs/Web/API/DedicatedWorkerGlobalScope/message_event">message</a></code></dt>
- <dd>Fired when the worker receives a message from its parent.<br>
- Also available via the <code><a href="/en-US/docs/Web/API/DedicatedWorkerGlobalScope/onmessage">onmessage</a></code> property.</dd>
- <dt><code><a href="/en-US/docs/Web/API/DedicatedWorkerGlobalScope/messageerror_event">messageerror</a></code></dt>
- <dd>Fired when a worker receives a message that can't be deserialized.<br>
- Also available via the <code><a href="/en-US/docs/Web/API/DedicatedWorkerGlobalScope/onmessageerror">onmessageerror</a></code> property.</dd>
-</dl>
+- [`message`](/en-US/docs/Web/API/DedicatedWorkerGlobalScope/message_event)
+  - : Fired when the worker receives a message from its parent.
+    Also available via the [`onmessage`](/en-US/docs/Web/API/DedicatedWorkerGlobalScope/onmessage) property.
+- [`messageerror`](/en-US/docs/Web/API/DedicatedWorkerGlobalScope/messageerror_event)
+  - : Fired when a worker receives a message that can't be deserialized.
+    Also available via the [`onmessageerror`](/en-US/docs/Web/API/DedicatedWorkerGlobalScope/onmessageerror) property.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("Worker")}}</li>
- <li>{{domxref("WorkerGlobalScope")}}</li>
- <li><a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using web workers</a></li>
- <li><a href="/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">Functions available to workers</a></li>
-</ul>
+- {{domxref("Worker")}}
+- {{domxref("WorkerGlobalScope")}}
+- [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [Functions available to workers](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)

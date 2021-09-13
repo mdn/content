@@ -11,48 +11,48 @@ tags:
   - web animations api
 browser-compat: api.Animation.commitStyles
 ---
-<p>{{APIRef("Web Animations")}}{{SeeCompatTable}}</p>
+{{APIRef("Web Animations")}}{{SeeCompatTable}}
 
-<div>
-<p>The <code>commitStyles()</code> method of the <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a>'s {{domxref("Animation")}} interface commits the end styling state of an animation to the element being animated, even after that animation has been removed. It will cause the end styling state to be written to the element being animated, in the form of properties inside a <code>style</code> attribute.</p>
-</div>
+The `commitStyles()` method of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)'s {{domxref("Animation")}} interface commits the end styling state of an animation to the element being animated, even after that animation has been removed. It will cause the end styling state to be written to the element being animated, in the form of properties inside a `style` attribute.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>animation</em>.commitStyles();</pre>
+```js
+animation.commitStyles();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">const divElem = document.querySelector('div');
+```js
+const divElem = document.querySelector('div');
 
-document.body.addEventListener('mousemove', evt =&gt; {
+document.body.addEventListener('mousemove', evt => {
   let anim = divElem.animate(
     { transform: `translate(${ evt.clientX}px, ${evt.clientY}px)` },
     { duration: 500, fill: 'forwards' }
   );
 
   anim.commitStyles();
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
- <li>{{domxref("Animation")}} for other methods and properties you can use to control web page animation.</li>
-</ul>
+- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
+- {{domxref("Animation")}} for other methods and properties you can use to control web page animation.

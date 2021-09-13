@@ -2,58 +2,57 @@
 title: HTMLImageElement.vspace
 slug: Web/API/HTMLImageElement/vspace
 tags:
-- API
-- HTML
-- HTML DOM
-- HTMLImageElement
-- Image
-- Property
-- Reference
-- Vertical
-- bottom
-- img
-- margin
-- space
-- spacing
-- top
-- vspace
-- Deprecated
+  - API
+  - HTML
+  - HTML DOM
+  - HTMLImageElement
+  - Image
+  - Property
+  - Reference
+  - Vertical
+  - bottom
+  - img
+  - margin
+  - space
+  - spacing
+  - top
+  - vspace
+  - Deprecated
 browser-compat: api.HTMLImageElement.vspace
 ---
-<p>{{APIRef("HTML DOM")}}{{deprecated_header}}</p>
+{{APIRef("HTML DOM")}}{{deprecated_header}}
 
-<p>The <em>obsolete</em> <code><strong>vspace</strong></code> property of the
-  {{domxref("HTMLImageElement")}} interface specifies the number of pixels of empty space
-  to leave empty on the top and bottom of the {{HTMLElement("img")}} element when laying
-  out the page.</p>
+The *obsolete* **`vspace`** property of the
+{{domxref("HTMLImageElement")}} interface specifies the number of pixels of empty space
+to leave empty on the top and bottom of the {{HTMLElement("img")}} element when laying
+out the page.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>htmlImageElement</em>.vspace = <em>marginHeight</em>;
-<em>marginHeight</em> = <em>htmlImageElement</em>.vspace;
-</pre>
+```js
+htmlImageElement.vspace = marginHeight;
+marginHeight = htmlImageElement.vspace;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An integer value specifying the height, in pixels, of the vertical margin to apply to
-  the top and bottom sides of the image.</p>
+An integer value specifying the height, in pixels, of the vertical margin to apply to
+the top and bottom sides of the image.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>The value specified for <code>vspace</code> is mapped to the {{cssxref("margin-top")}}
-  and {{cssxref("margin-bottom")}} properties to specify the height of those margins in
-  pixels.</p>
+The value specified for `vspace` is mapped to the {{cssxref("margin-top")}}
+and {{cssxref("margin-bottom")}} properties to specify the height of those margins in
+pixels.
 
-<div class="notecard warning">
-  <p><strong>Warning:</strong> This property is obsolete. You should instead use the CSS
-    {{cssxref("margin")}} property and its longhand forms to establish margins around
-    an <code>&lt;img&gt;</code>.</p>
-</div>
+> **Warning:** This property is obsolete. You should instead use the CSS
+> {{cssxref("margin")}} property and its longhand forms to establish margins around
+> an `<img>`.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,68 +2,67 @@
 title: PerformanceObserver.observe()
 slug: Web/API/PerformanceObserver/observe
 tags:
-- API
-- Method
-- Performance
-- PerformanceObserver
-- Reference
-- Web Performance
+  - API
+  - Method
+  - Performance
+  - PerformanceObserver
+  - Reference
+  - Web Performance
 browser-compat: api.PerformanceObserver.observe
 ---
-<div>{{APIRef("Performance Timeline API")}}</div>
+{{APIRef("Performance Timeline API")}}
 
-<p>The <strong><code>observe()</code></strong> method of the
-    <strong>{{domxref("PerformanceObserver")}}</strong> interface is used to specify the
-    set of performance entry types to observe.</p>
+The **`observe()`** method of the
+**{{domxref("PerformanceObserver")}}** interface is used to specify the
+set of performance entry types to observe.
 
-<p>The performance entry types are
-  specified as an array of {{domxref("DOMString")}} objects, each naming one entry type;
-  the type names are documented in
-  {{SectionOnPage("/en-US/docs/Web/API/PerformanceEntry/entryType", "Performance entry
-  type names")}}.</p>
+The performance entry types are
+specified as an array of {{domxref("DOMString")}} objects, each naming one entry type;
+the type names are documented in
+{{SectionOnPage("/en-US/docs/Web/API/PerformanceEntry/entryType", "Performance entry
+  type names")}}.
 
-<p>When a matching performance entry is recorded, the performance observer's callback
-  function—set when creating the {{domxref("PerformanceObserver")}}—is invoked.</p>
+When a matching performance entry is recorded, the performance observer's callback
+function—set when creating the {{domxref("PerformanceObserver")}}—is invoked.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>observer</em>.observe(<em>options</em>);
-</pre>
+```js
+observer.observe(options);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>options</code></dt>
-  <dd>A <code>PerformanceObserverInit</code> dictionary with the following possible
+- `options`
+
+  - : A `PerformanceObserverInit` dictionary with the following possible
     members:
-    <ul>
-      <li><code>entryTypes</code>: An array of {{domxref("DOMString")}} objects, each
-        specifying one performance entry type to observe. May not be used together with
-        the "<code>type</code>" or "<code>buffered</code>" options.</li>
-      <li><code>type</code>: A single {{domxref("DOMString")}} specifying exactly one
-        performance entry type to observe. May not be used together with the
-        <code>entryTypes</code> option.</li>
-      <li><code>buffered</code>: A boolean flag to indicate whether buffered
-        entries should be queued into the observer's buffer. Must be used only with the
-        "<code>type</code>" option.</li>
-    </ul>
 
-    <p>See {{domxref("PerformanceEntry.entryType")}} for a list of valid performance entry
-      type names. Unrecognized types are ignored, though the browser may output a warning
-      message to the console to help developers debug their code. If no valid types are
-      found, <code>observe()</code> has no effect.</p>
-  </dd>
-</dl>
+    - `entryTypes`: An array of {{domxref("DOMString")}} objects, each
+      specifying one performance entry type to observe. May not be used together with
+      the "`type`" or "`buffered`" options.
+    - `type`: A single {{domxref("DOMString")}} specifying exactly one
+      performance entry type to observe. May not be used together with the
+      `entryTypes` option.
+    - `buffered`: A boolean flag to indicate whether buffered
+      entries should be queued into the observer's buffer. Must be used only with the
+      "`type`" option.
 
-<h2 id="Examples">Examples</h2>
+    See {{domxref("PerformanceEntry.entryType")}} for a list of valid performance entry
+    type names. Unrecognized types are ignored, though the browser may output a warning
+    message to the console to help developers debug their code. If no valid types are
+    found, `observe()` has no effect.
 
-<p>This example creates and configures two <code>PerformanceObservers</code>; one watches
-  for <code>"mark"</code> and <code>"frame"</code> events, and the other watches for
-  <code>"measure"</code> events.</p>
+## Examples
 
-<pre class="brush: js">var observer = new PerformanceObserver(function(list, obj) {
+This example creates and configures two `PerformanceObservers`; one watches
+for `"mark"` and `"frame"` events, and the other watches for
+`"measure"` events.
+
+```js
+var observer = new PerformanceObserver(function(list, obj) {
   var entries = list.getEntries();
-  for (var i=0; i &lt; entries.length; i++) {
+  for (var i=0; i < entries.length; i++) {
     // Process "mark" and "frame" events
   }
 });
@@ -74,12 +73,12 @@ function perf_observer(list, observer) {
 }
 var observer2 = new PerformanceObserver(perf_observer);
 observer2.observe({entryTypes: ["measure"]});
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

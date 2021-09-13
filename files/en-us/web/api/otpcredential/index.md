@@ -8,34 +8,33 @@ tags:
   - OTPCredential
 browser-compat: api.OTPCredential
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("WebOTP API")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("WebOTP API")}}
 
-<p>The <strong><code>OTPCredential</code></strong> interface of the {{domxref('WebOTP API','','',' ')}} contains the attributes that are returned when a new one-time password is retreived.</p>
+The **`OTPCredential`** interface of the {{domxref('WebOTP API','','',' ')}} contains the attributes that are returned when a new one-time password is retreived.
 
 {{InheritanceDiagram}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface also inherits properties from {{domxref("Credential")}}.</em></p>
+_This interface also inherits properties from {{domxref("Credential")}}._
 
-<dl>
-  <dt>{{domxref("OTPCredential.code")}}</dt>
-  <dd>The one-time password.</dd>
-</dl>
+- {{domxref("OTPCredential.code")}}
+  - : The one-time password.
 
-<h3 id="Event_handlers">Event handlers</h3>
+### Event handlers
 
-<p>None.</p>
+None.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The below code triggers the browser's permission flow when an SMS message arrives. If permission is granted then the promise resolves with an <code>OTPCredential</code> object. <a href="https://glitch.com/edit/#!/web-otp?path=views%2Findex.html%3A55%3A8">See this code as part of a simple demo</a>.</p>
+The below code triggers the browser's permission flow when an SMS message arrives. If permission is granted then the promise resolves with an `OTPCredential` object. [See this code as part of a simple demo](https://glitch.com/edit/#!/web-otp?path=views%2Findex.html%3A55%3A8).
 
-<pre class="brush: js">navigator.credentials.get({
+```js
+navigator.credentials.get({
   otp: { transport:['sms'] },
   signal: ac.signal
 }).then(otp => {
@@ -43,15 +42,13 @@ browser-compat: api.OTPCredential
   if (form) form.submit();
 }).catch(err => {
   console.log(err);
-});</pre>
+});
+```
 
+## Specifications
 
-<h2 id="Specifications">Specifications</h2>
+{{Specifications}}
 
-<p>{{Specifications}}</p>
+## Browser compatibility
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<p>{{Compat}}</p>
-
-
+{{Compat}}

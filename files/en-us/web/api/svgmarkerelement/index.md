@@ -8,105 +8,107 @@ tags:
   - SVGMarkerElement
 browser-compat: api.SVGMarkerElement
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <strong><code>SVGMarkerElement</code></strong> interface provides access to the properties of {{SVGElement("marker")}} elements, as well as methods to manipulate them. The {{SVGElement("marker")}} element defines the graphics used for drawing marks on a shape.</p>
+The **`SVGMarkerElement`** interface provides access to the properties of {{SVGElement("marker")}} elements, as well as methods to manipulate them. The {{SVGElement("marker")}} element defines the graphics used for drawing marks on a shape.
 
-<p>{{InheritanceDiagram(600, 140)}}</p>
+{{InheritanceDiagram(600, 140)}}
 
-<p>The following properties and methods all return, or act on the attributes of the {{SVGElement("marker")}} element represented by <code>SVGMarkerElement</code>.</p>
+The following properties and methods all return, or act on the attributes of the {{SVGElement("marker")}} element represented by `SVGMarkerElement`.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface also inherits properties from its parent, {{domxref("SVGElement")}}.</em></p>
+_This interface also inherits properties from its parent, {{domxref("SVGElement")}}._
 
-<dl>
-  <dt>{{domxref("SVGMarkerElement.markerUnits")}}{{ReadOnlyInline}}</dt>
-  <dd>Returns an {{domxref("SVGAnimatedEnumeration")}} object, with one of the following values:
-    <dl>
-      <dt>0</dt>
-      <dd><code>SVG_MARKERUNITS_UNKNOWN</code> which means that the {{SVGattr("markerUnits")}} attribute has a value other than the two predefined keywords.</dd>
-      <dt>1</dt>
-      <dd><code>SVG_MARKERUNITS_USERSPACEONUSE</code> which means that the {{SVGattr("markerUnits")}} attribute has the keyword value <code>userSpaceOnUse</code>.</dd>
-      <dt>2</dt>
-      <dd><code>SVG_MARKERUNITS_STROKEWIDTH</code> which means that the {{SVGattr("markerUnits")}} attribute has the keyword value <code>strokeWidth</code>.</dd>
-    </dl>
-  </dd>
-  <dt>{{domxref("SVGMarkerElement.markerWidth")}}{{ReadOnlyInline}}</dt>
-  <dd>Returns an {{domxref("SVGAnimatedLength")}} object containing the width of the {{SVGElement("marker")}} viewport.</dd>
-  <dt>{{domxref("SVGMarkerElement.markerHeight")}}{{ReadOnlyInline}}</dt>
-  <dd>Returns an {{domxref("SVGAnimatedLength")}} object containing the height of the {{SVGElement("marker")}} viewport.</dd>
-  <dt>{{domxref("SVGMarkerElement.orientType")}}{{ReadOnlyInline}}</dt>
-  <dd>Returns an {{domxref("SVGAnimatedEnumeration")}} object, with one of the following values:
-    <dl>
-      <dt>0</dt>
-      <dd><code>SVG_MARKER_ORIENT_UNKNOWN</code> which means that the {{SVGattr("orient")}} attribute has a value other than the two predefined keywords.</dd>
-      <dt>1</dt>
-      <dd><code>SVG_MARKERUNITS_ORIENT_AUTO</code> which means that the {{SVGattr("orient")}} attribute has the keyword value <code>auto</code>.</dd>
-      <dt>2</dt>
-      <dd><code>SVG_MARKERUNITS_ORIENT_ANGLE</code> which means that the {{SVGattr("orient")}} attribute has an {{cssxref("angle")}} or {{cssxref("number")}} value indicating the angle.</dd>
-    </dl>
-  </dd>
-  <dt>{{domxref("SVGMarkerElement.orientAngle")}}{{ReadOnlyInline}}</dt>
-  <dd>Returns an {{domxref("SVGAnimatedAngle")}} object containing the angle of the {{SVGattr("orient")}} attribute.</dd>
-  <dt>{{domxref("SVGMarkerElement.refX")}}{{ReadOnlyInline}}</dt>
-  <dd>Returns an {{domxref("SVGAnimatedLength")}} object containing the value of the {{SVGattr("refX")}} attribute of the {{SVGElement("marker")}}.</dd>
-  <dt>{{domxref("SVGMarkerElement.refY")}}{{ReadOnlyInline}}</dt>
-  <dd>Returns an {{domxref("SVGAnimatedLength")}} object containing the value of the {{SVGattr("refY")}} attribute of the {{SVGElement("marker")}}.</dd>
-  <dt>{{domxref("SVGMarkerElement.viewBox")}}{{ReadOnlyInline}}</dt>
-  <dd>Returns an {{domxref("SVGAnimatedRect")}} object containing an {{domxref("SVGRect")}} which contains the values set by the {{SVGattr("viewBox")}} attribute on the {{SVGElement("marker")}}.</dd>
-  <dt>{{domxref("SVGMarkerElement.preserveAspectRatio")}}{{ReadOnlyInline}}</dt>
-  <dd>Returns an {{domxref("SVGPreserveAspectRatio")}} object which contains the values set by the {{SVGattr("preserveAspectRatio")}} attribute on the {{SVGElement("marker")}} viewport.</dd>
-</dl>
+- {{domxref("SVGMarkerElement.markerUnits")}}{{ReadOnlyInline}}
 
-<h2 id="Methods">Methods</h2>
+  - : Returns an {{domxref("SVGAnimatedEnumeration")}} object, with one of the following values:
 
-<p><em>This interface also inherits methods from its parent, {{domxref("SVGElement")}}.</em></p>
+    - 0
+      - : `SVG_MARKERUNITS_UNKNOWN` which means that the {{SVGattr("markerUnits")}} attribute has a value other than the two predefined keywords.
+    - 1
+      - : `SVG_MARKERUNITS_USERSPACEONUSE` which means that the {{SVGattr("markerUnits")}} attribute has the keyword value `userSpaceOnUse`.
+    - 2
+      - : `SVG_MARKERUNITS_STROKEWIDTH` which means that the {{SVGattr("markerUnits")}} attribute has the keyword value `strokeWidth`.
 
-<dl>
-  <dt>{{domxref("SVGMarkerElement.setOrientToAuto()")}}</dt>
-  <dd>Sets the value of the {{SVGattr("orient")}} attribute to <code>auto</code>.</dd>
-  <dt>{{domxref("SVGMarkerElement.setOrientToAngle()")}}</dt>
-  <dd>Sets the value of the {{SVGattr("orient")}} attribute to a specific angle value.</dd>
-</dl>
+- {{domxref("SVGMarkerElement.markerWidth")}}{{ReadOnlyInline}}
+  - : Returns an {{domxref("SVGAnimatedLength")}} object containing the width of the {{SVGElement("marker")}} viewport.
+- {{domxref("SVGMarkerElement.markerHeight")}}{{ReadOnlyInline}}
+  - : Returns an {{domxref("SVGAnimatedLength")}} object containing the height of the {{SVGElement("marker")}} viewport.
+- {{domxref("SVGMarkerElement.orientType")}}{{ReadOnlyInline}}
 
-<h2 id="Examples">Examples</h2>
+  - : Returns an {{domxref("SVGAnimatedEnumeration")}} object, with one of the following values:
 
-<p>The following SVG will be referenced in the examples.</p>
+    - 0
+      - : `SVG_MARKER_ORIENT_UNKNOWN` which means that the {{SVGattr("orient")}} attribute has a value other than the two predefined keywords.
+    - 1
+      - : `SVG_MARKERUNITS_ORIENT_AUTO` which means that the {{SVGattr("orient")}} attribute has the keyword value `auto`.
+    - 2
+      - : `SVG_MARKERUNITS_ORIENT_ANGLE` which means that the {{SVGattr("orient")}} attribute has an {{cssxref("angle")}} or {{cssxref("number")}} value indicating the angle.
 
-<pre class="brush: html">&lt;svg id="svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;defs&gt;
-    &lt;marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
+- {{domxref("SVGMarkerElement.orientAngle")}}{{ReadOnlyInline}}
+  - : Returns an {{domxref("SVGAnimatedAngle")}} object containing the angle of the {{SVGattr("orient")}} attribute.
+- {{domxref("SVGMarkerElement.refX")}}{{ReadOnlyInline}}
+  - : Returns an {{domxref("SVGAnimatedLength")}} object containing the value of the {{SVGattr("refX")}} attribute of the {{SVGElement("marker")}}.
+- {{domxref("SVGMarkerElement.refY")}}{{ReadOnlyInline}}
+  - : Returns an {{domxref("SVGAnimatedLength")}} object containing the value of the {{SVGattr("refY")}} attribute of the {{SVGElement("marker")}}.
+- {{domxref("SVGMarkerElement.viewBox")}}{{ReadOnlyInline}}
+  - : Returns an {{domxref("SVGAnimatedRect")}} object containing an {{domxref("SVGRect")}} which contains the values set by the {{SVGattr("viewBox")}} attribute on the {{SVGElement("marker")}}.
+- {{domxref("SVGMarkerElement.preserveAspectRatio")}}{{ReadOnlyInline}}
+  - : Returns an {{domxref("SVGPreserveAspectRatio")}} object which contains the values set by the {{SVGattr("preserveAspectRatio")}} attribute on the {{SVGElement("marker")}} viewport.
+
+## Methods
+
+_This interface also inherits methods from its parent, {{domxref("SVGElement")}}._
+
+- {{domxref("SVGMarkerElement.setOrientToAuto()")}}
+  - : Sets the value of the {{SVGattr("orient")}} attribute to `auto`.
+- {{domxref("SVGMarkerElement.setOrientToAngle()")}}
+  - : Sets the value of the {{SVGattr("orient")}} attribute to a specific angle value.
+
+## Examples
+
+The following SVG will be referenced in the examples.
+
+```html
+<svg id="svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
         markerWidth="6" markerHeight="6"
-        orient="90"&gt;
-      &lt;path d="M 0 0 L 10 5 L 0 10 z" /&gt;
-    &lt;/marker&gt;
-  &lt;/defs&gt;
-&lt;/svg&gt;</pre>
+        orient="90">
+      <path d="M 0 0 L 10 5 L 0 10 z" />
+    </marker>
+  </defs>
+</svg>
+```
 
-<h3>Finding the Width of the Marker</h3>
+### Finding the Width of the Marker
 
-<p>The <code>markerWidth</code> property returns an {{domxref("SVGAnimatedLength")}} which contains an {{domxref("SVGLength")}} with the value of the {{SVGattr("markerWidth")}} attribute.</p>
+The `markerWidth` property returns an {{domxref("SVGAnimatedLength")}} which contains an {{domxref("SVGLength")}} with the value of the {{SVGattr("markerWidth")}} attribute.
 
-<pre class="brush: js">let marker = document.getElementById("arrow");
-console.log(marker.markerWidth.baseVal.value); // 6</pre>
+```js
+let marker = document.getElementById("arrow");
+console.log(marker.markerWidth.baseVal.value); // 6
+```
 
-<h3>Updating the Orientation Angle</h3>
+### Updating the Orientation Angle
 
-<p>In the following example the value of the <code>orient</code> attribute is updated using <code>setOrientToAngle()</code> using an {{domxref("SVGAngle")}} created using {{domxref("SVGElement.createSVGAngle()")}}.</p>
+In the following example the value of the `orient` attribute is updated using `setOrientToAngle()` using an {{domxref("SVGAngle")}} created using {{domxref("SVGElement.createSVGAngle()")}}.
 
-<pre class="brush: js">let svg = document.getElementById("svg");
+```js
+let svg = document.getElementById("svg");
 let marker = document.getElementById("arrow");
 console.log(marker.orientAngle.baseVal.value); // value in SVG above - 90
 let angle = svg.createSVGAngle();
 angle.value = "110";
 marker.setOrientToAngle(angle);
-console.log(marker.orientAngle.baseVal.value); // new value - 110</pre>
+console.log(marker.orientAngle.baseVal.value); // new value - 110
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

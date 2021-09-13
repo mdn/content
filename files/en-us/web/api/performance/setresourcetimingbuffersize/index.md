@@ -2,48 +2,46 @@
 title: performance.setResourceTimingBufferSize()
 slug: Web/API/Performance/setResourceTimingBufferSize
 tags:
-- API
-- Method
-- Reference
-- Web Performance
+  - API
+  - Method
+  - Reference
+  - Web Performance
 browser-compat: api.Performance.setResourceTimingBufferSize
 ---
-<div>{{APIRef("Resource Timing API")}}</div>
+{{APIRef("Resource Timing API")}}
 
-<p>The <strong><code>setResourceTimingBufferSize()</code></strong> method sets the
-  browser's <em>resource timing buffer</em> size to the specified number of
-  "<code>resource</code>" {{domxref("PerformanceEntry.entryType","performance entry
-  type")}} objects.</p>
+The **`setResourceTimingBufferSize()`** method sets the
+browser's _resource timing buffer_ size to the specified number of
+"`resource`" {{domxref("PerformanceEntry.entryType","performance entry
+  type")}} objects.
 
-<p>A browser's recommended resource timing buffer size is at least 150
-  {{domxref("PerformanceEntry","performance entry")}} objects.</p>
+A browser's recommended resource timing buffer size is at least 150
+{{domxref("PerformanceEntry","performance entry")}} objects.
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>performance</em>.setResourceTimingBufferSize(maxSize);
-</pre>
+```js
+performance.setResourceTimingBufferSize(maxSize);
+```
 
-<h3 id="Arguments">Arguments</h3>
+### Arguments
 
-<dl>
-  <dt>maxSize</dt>
-  <dd>A <code>number</code> representing the maximum number of
+- maxSize
+  - : A `number` representing the maximum number of
     {{domxref("PerformanceEntry","performance entry")}} objects the browser should hold in
-    its performance entry buffer.</dd>
-</dl>
+    its performance entry buffer.
 
-<h3 id="Return_Value">Return value</h3>
+### Return value
 
-<dl>
-  <dt>none</dt>
-  <dd>This method has no return value.</dd>
-</dl>
+- none
+  - : This method has no return value.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">function setResourceTimingBufferSize(maxSize) {
+```js
+function setResourceTimingBufferSize(maxSize) {
   if (performance === undefined) {
     log("Browser does not support Web Performance");
     return;
@@ -56,12 +54,12 @@ browser-compat: api.Performance.setResourceTimingBufferSize
     log("... Performance.setResourceTimingBufferSize() = NOT supported");
   }
 }
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -2,49 +2,49 @@
 title: HTMLObjectElement.setCustomValidity
 slug: Web/API/HTMLObjectElement/setCustomValidity
 tags:
-- API
-- HTML DOM
-- HTMLObjectElement
-- Method
-- NeedsExample
-- Reference
-- setCustomValidity()
+  - API
+  - HTML DOM
+  - HTMLObjectElement
+  - Method
+  - NeedsExample
+  - Reference
+  - setCustomValidity()
 browser-compat: api.HTMLObjectElement.setCustomValidity
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>The <strong><code>setCustomValidity()</code></strong> method of the
-	{{domxref("HTMLObjectElement")}} interface sets a custom validity message for the
-	element.</p>
+The **`setCustomValidity()`** method of the
+{{domxref("HTMLObjectElement")}} interface sets a custom validity message for the
+element.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">HTMLObjectElement.setCustomValidity(message);</pre>
+```js
+HTMLObjectElement.setCustomValidity(message);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-	<dt>error</dt>
-	<dd>The message to use for validity errors.</dd>
-</dl>
+- error
+  - : The message to use for validity errors.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>{{jsxref('undefined')}}</p>
+{{jsxref('undefined')}}
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this example, we pass the ID of an input element, and set different error messages
-	depending on whether the value is missing, too low or too high. Additionally you
-	<em>must</em> call the <a
-		href="/en-US/docs/Web/API/HTMLFormElement/reportValidity">reportValidity</a>
-	method on the same element or nothing will happen.</p>
+In this example, we pass the ID of an input element, and set different error messages
+depending on whether the value is missing, too low or too high. Additionally you
+_must_ call the [reportValidity](/en-US/docs/Web/API/HTMLFormElement/reportValidity)
+method on the same element or nothing will happen.
 
-<pre class="brush: js">function validate(inputID) {
+```js
+function validate(inputID) {
   const input = document.getElementById(inputID);
   const validityState = input.validity;
 
@@ -57,34 +57,33 @@ browser-compat: api.HTMLObjectElement.setCustomValidity
   } else {
     input.setCustomValidity('');
   }
-  
+
   input.reportValidity();
-}</pre>
+}
+```
 
-<p>It's vital to set the message to an empty string if there are no errors. As long as the
-	error message is not null, the form will not pass validation and will not be
-	submitted.</p>
+It's vital to set the message to an empty string if there are no errors. As long as the
+error message is not null, the form will not pass validation and will not be
+submitted.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{domxref('validityState')}}</li>
-	<li>{{domxref('validityState.valueMissing')}}</li>
-	<li>{{domxref('validityState.typeMismatch')}}</li>
-	<li>{{domxref('validityState.patternMismatch')}}</li>
-	<li>{{domxref('validityState.tooLong')}}</li>
-	<li>{{domxref('validityState.tooShort')}}</li>
-	<li>{{domxref('validityState.rangeUnderflow')}}</li>
-	<li>{{domxref('validityState.rangeOverflow')}}</li>
-	<li>{{domxref('validityState.stepMismatch')}}</li>
-	<li>{{domxref('validityState.valid')}}</li>
-	<li>{{domxref('validityState.customError')}}</li>
-</ul>
+- {{domxref('validityState')}}
+- {{domxref('validityState.valueMissing')}}
+- {{domxref('validityState.typeMismatch')}}
+- {{domxref('validityState.patternMismatch')}}
+- {{domxref('validityState.tooLong')}}
+- {{domxref('validityState.tooShort')}}
+- {{domxref('validityState.rangeUnderflow')}}
+- {{domxref('validityState.rangeOverflow')}}
+- {{domxref('validityState.stepMismatch')}}
+- {{domxref('validityState.valid')}}
+- {{domxref('validityState.customError')}}

@@ -8,46 +8,41 @@ tags:
   - Serial
 browser-compat: api.Serial
 ---
-<div>{{securecontext_header}}{{DefaultAPISidebar("Serial API")}}</div>
+{{securecontext_header}}{{DefaultAPISidebar("Serial API")}}
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code>Serial</code> interface of the {{domxref("Web_Serial_API", "Web Serial API")}} provides attributes and methods for finding and connecting to serial ports from a web page.</p>
+The `Serial` interface of the {{domxref("Web_Serial_API", "Web Serial API")}} provides attributes and methods for finding and connecting to serial ports from a web page.
 
+## Event Handlers
 
-<h2 id="Event_handlers">Event Handlers</h2>
+- {{domxref("Serial.onconnect")}}
+  - : An event handler called when a port has been connected to the device.
+- {{domxref("Serial.ondisconnect")}}
+  - : An event handler called when a port has been disconnected from the device.
 
-<dl>
-  <dt>{{domxref("Serial.onconnect")}}</dt>
-  <dd>An event handler called when a port has been connected to the device.</dd>
-  <dt>{{domxref("Serial.ondisconnect")}}</dt>
-  <dd>An event handler called when a port has been disconnected from the device.</dd>
-</dl>
+## Methods
 
-<h2 id="Methods">Methods</h2>
+- {{domxref("Serial.requestPort()")}}
 
-<dl>
-  <dt>{{domxref("Serial.requestPort()")}}</dt>
-  <dd>
-    <p>Returns a {{jsxref("Promise")}} that resolves with an instance of {{domxref("SerialPort")}} representing the device chosen by the user or rejects if no device was selected.</p>
-    <p>This method must be called with user activation.</p>
-  </dd>
-  <dt>{{domxref("Serial.getPorts()")}}</dt>
-  <dd>
-    Returns a {{jsxref("Promise")}} that resolves with an array of  {{domxref("SerialPort")}} objects representing serial ports connected to
+  - : Returns a {{jsxref("Promise")}} that resolves with an instance of {{domxref("SerialPort")}} representing the device chosen by the user or rejects if no device was selected.
+
+    This method must be called with user activation.
+
+- {{domxref("Serial.getPorts()")}}
+  - : Returns a {{jsxref("Promise")}} that resolves with an array of {{domxref("SerialPort")}} objects representing serial ports connected to
     the host which the origin has permission to access.
-  </dd>
-</dl>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example shows how a site can check for available ports and allow the user to grant it permission to access additional ports.</p>
+The following example shows how a site can check for available ports and allow the user to grant it permission to access additional ports.
 
-<p>On load event listeners are added for the <code>connect</code> and <code>disconnect</code> events so that the site can react when a device is connected or disconnected from the system. The {{domxref("Serial.getPorts()","getPorts()")}} method is then called to see which ports are connected that the site already has access to.</p>
+On load event listeners are added for the `connect` and `disconnect` events so that the site can react when a device is connected or disconnected from the system. The {{domxref("Serial.getPorts()","getPorts()")}} method is then called to see which ports are connected that the site already has access to.
 
-<p>If the site doesn't have access to any connected ports it has to wait until it has user activation to proceed. In this example we use a {{domxref("Element.click_event", "click")}} event handler on a button for this task. A filter is passed to {{domxref("Serial.requestPort()","requestPort()")}} with a USB vendor ID in order to limit the set of devices shown to the user to only USB devices built by a particular manufacturer.</p>
+If the site doesn't have access to any connected ports it has to wait until it has user activation to proceed. In this example we use a {{domxref("Element.click_event", "click")}} event handler on a button for this task. A filter is passed to {{domxref("Serial.requestPort()","requestPort()")}} with a USB vendor ID in order to limit the set of devices shown to the user to only USB devices built by a particular manufacturer.
 
-<pre class="brush: js">navigator.serial.addEventListener('connect', (e) => {
+```js
+navigator.serial.addEventListener('connect', (e) => {
   // Connect to `e.target` or add it to a list of available ports.
 });
 
@@ -66,12 +61,13 @@ button.addEventListener('click', () => {
   }).catch((e) => {
     // The user didn't select a port.
   });
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

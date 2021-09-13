@@ -10,39 +10,41 @@ tags:
   - WorkerGlobalScope
 browser-compat: api.WorkerGlobalScope.console
 ---
-<p>{{APIRef("Web Workers API")}}{{Non-standard_header}}</p>
+{{APIRef("Web Workers API")}}{{Non-standard_header}}
 
-<p>The <code><strong>console</strong></code> read-only property of the {{domxref("WorkerGlobalScope")}} interface returns a {{domxref("console")}} object providing access to the browser console for the worker.</p>
+The **`console`** read-only property of the {{domxref("WorkerGlobalScope")}} interface returns a {{domxref("console")}} object providing access to the browser console for the worker.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var consoleObj = self.console;</pre>
+```js
+var consoleObj = self.console;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("console")}} object.</p>
+A {{domxref("console")}} object.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This property allows you to have access to a browser console for debugging purposes, inside a worker. So for example you could call</p>
+This property allows you to have access to a browser console for debugging purposes, inside a worker. So for example you could call
 
-<pre class="brush: js">console.log('test');</pre>
+```js
+console.log('test');
+```
 
-<p>inside a worker (which would basically be the equivalent of <code>self.console.log('test');</code>, as these are being called on the worker scope, which can be referenced with {{domxref("WorkerGlobalScope.self")}}), to return a test message out to the browser console.</p>
+inside a worker (which would basically be the equivalent of `self.console.log('test');`, as these are being called on the worker scope, which can be referenced with {{domxref("WorkerGlobalScope.self")}}), to return a test message out to the browser console.
 
-<p>If you are calling <code>console.log()</code> from a {{domxref("DedicatedWorkerGlobalScope")}} or other worker scope that acts on a single loaded window, that tab's web console will receive the logs. However, If you are calling <code>console.log()</code> from a {{domxref("SharedWorkerGlobalScope")}}, the global browser console will receive the logs.</p>
+If you are calling `console.log()` from a {{domxref("DedicatedWorkerGlobalScope")}} or other worker scope that acts on a single loaded window, that tab's web console will receive the logs. However, If you are calling `console.log()` from a {{domxref("SharedWorkerGlobalScope")}}, the global browser console will receive the logs.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not yet part of any specification.</p>
+Not yet part of any specification.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("console")}}</li>
- <li>{{domxref("WorkerGlobalScope")}}</li>
-</ul>
+- {{domxref("console")}}
+- {{domxref("WorkerGlobalScope")}}

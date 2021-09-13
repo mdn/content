@@ -2,28 +2,29 @@
 title: CSSRule.type
 slug: Web/API/CSSRule/type
 tags:
-- API
-- CSSOM
-- Property
-- Reference
-- Read-only
-- Deprecated
+  - API
+  - CSSOM
+  - Property
+  - Reference
+  - Read-only
+  - Deprecated
 browser-compat: api.CSSRule.type
 ---
-<div>{{APIRef("CSSOM")}}{{Deprecated_header}}</div>
+{{APIRef("CSSOM")}}{{Deprecated_header}}
 
-<p>The read-only <strong><code>type</code></strong> property of the
-  {{domxref("CSSRule")}} interface is a deprecated property that returns an integer
-  indicating which type of rule the {{domxref("CSSRule")}} represents.</p>
+The read-only **`type`** property of the
+{{domxref("CSSRule")}} interface is a deprecated property that returns an integer
+indicating which type of rule the {{domxref("CSSRule")}} represents.
 
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+var type = cssRule.type;
+```
 
-<pre class="brush: js">var <var>type</var> = <var>cssRule</var>.type;</pre>
+### Value
 
-
-<h3>Value</h3>
-<p>An integer which will be one of the type constants listed in the table below.</p>
+An integer which will be one of the type constants listed in the table below.
 
 <table class="no-markdown">
   <tbody>
@@ -37,17 +38,23 @@ browser-compat: api.CSSRule.type
       <td><code>CSSRule.STYLE_RULE</code></td>
       <td><code>1</code></td>
       <td>{{domxref("CSSStyleRule")}}</td>
-      <td>The most common kind of rule:<br>
-        <code>selector { prop1: val1; prop2: val2; }</code>
+      <td>
+        The most common kind of rule:<br /><code
+          >selector { prop1: val1; prop2: val2; }</code
+        >
       </td>
     </tr>
     <tr>
       <td><code>CSSRule.IMPORT_RULE</code></td>
       <td><code>3</code></td>
       <td>{{domxref("CSSImportRule")}}</td>
-      <td>An {{cssxref("@import")}} rule. (Until the documentation is completed, see the
-        interface definition in the Mozilla source code: <a
-          href="http://mxr.mozilla.org/mozilla-central/source/dom/interfaces/css/nsIDOMCSSImportRule.idl#9">nsIDOMCSSImportRule</a>.)
+      <td>
+        An {{cssxref("@import")}} rule. (Until the documentation is
+        completed, see the interface definition in the Mozilla source code:
+        <a
+          href="http://mxr.mozilla.org/mozilla-central/source/dom/interfaces/css/nsIDOMCSSImportRule.idl#9"
+          >nsIDOMCSSImportRule</a
+        >.)
       </td>
     </tr>
     <tr>
@@ -71,13 +78,19 @@ browser-compat: api.CSSRule.type
     <tr>
       <td><code>CSSRule.KEYFRAMES_RULE</code></td>
       <td><code>7</code></td>
-      <td>{{domxref("CSSKeyframesRule")}} {{experimental_inline}}</td>
+      <td>
+        {{domxref("CSSKeyframesRule")}}
+        {{experimental_inline}}
+      </td>
       <td></td>
     </tr>
     <tr>
       <td><code>CSSRule.KEYFRAME_RULE</code></td>
       <td><code>8</code></td>
-      <td>{{domxref("CSSKeyframeRule")}} {{experimental_inline}}</td>
+      <td>
+        {{domxref("CSSKeyframeRule")}}
+        {{experimental_inline}}
+      </td>
       <td></td>
     </tr>
     <tr>
@@ -89,13 +102,19 @@ browser-compat: api.CSSRule.type
     <tr>
       <td><code>CSSRule.NAMESPACE_RULE</code></td>
       <td><code>10</code></td>
-      <td>{{domxref("CSSNamespaceRule")}} {{experimental_inline}}</td>
+      <td>
+        {{domxref("CSSNamespaceRule")}}
+        {{experimental_inline}}
+      </td>
       <td></td>
     </tr>
     <tr>
       <td><code>CSSRule.COUNTER_STYLE_RULE</code></td>
       <td><code>11</code></td>
-      <td>{{domxref("CSSCounterStyleRule")}} {{experimental_inline}}</td>
+      <td>
+        {{domxref("CSSCounterStyleRule")}}
+        {{experimental_inline}}
+      </td>
       <td></td>
     </tr>
     <tr>
@@ -107,7 +126,10 @@ browser-compat: api.CSSRule.type
     <tr>
       <td><code>CSSRule.DOCUMENT_RULE</code></td>
       <td><code>13</code></td>
-      <td>{{domxref("CSSDocumentRule")}} {{experimental_inline}}</td>
+      <td>
+        {{domxref("CSSDocumentRule")}}
+        {{experimental_inline}}
+      </td>
       <td></td>
     </tr>
     <tr>
@@ -119,19 +141,27 @@ browser-compat: api.CSSRule.type
     <tr>
       <td><code>CSSRule.VIEWPORT_RULE</code></td>
       <td><code>15</code></td>
-      <td>{{domxref("CSSViewportRule")}} {{experimental_inline}}</td>
+      <td>
+        {{domxref("CSSViewportRule")}}
+        {{experimental_inline}}
+      </td>
       <td></td>
     </tr>
     <tr>
       <td><code>CSSRule.REGION_STYLE_RULE</code></td>
       <td><code>16</code></td>
-      <td>{{domxref("CSSRegionStyleRule")}} {{experimental_inline}}</td>
+      <td>
+        {{domxref("CSSRegionStyleRule")}}
+        {{experimental_inline}}
+      </td>
       <td></td>
     </tr>
     <tr>
       <td><code>CSSRule.UNKNOWN_RULE</code></td>
       <td><code>0</code></td>
-      <td>{{domxref("CSSUnknownRule")}} {{deprecated_inline}}</td>
+      <td>
+        {{domxref("CSSUnknownRule")}} {{deprecated_inline}}
+      </td>
       <td></td>
     </tr>
     <tr>
@@ -143,15 +173,17 @@ browser-compat: api.CSSRule.type
   </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].type);</pre>
+```js
+let myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0].type);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

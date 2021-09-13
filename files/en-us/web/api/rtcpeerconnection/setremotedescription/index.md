@@ -16,206 +16,199 @@ tags:
   - setRemoteDescription
 browser-compat: api.RTCPeerConnection.setRemoteDescription
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("WebRTC")}}
 
-<p>The {{domxref("RTCPeerConnection")}}
-		method <code><strong>setRemoteDescription()</strong></code> sets the specified
-		session description as the remote peer's current offer or answer. The description
-		specifies the properties of the remote end of the connection, including the media
-		format. The method takes a single parameter—the session description—and it
-	returns a {{jsxref("Promise")}} which is fulfilled once the description has been
-	changed, asynchronously.</p>
+The {{domxref("RTCPeerConnection")}}
+method **`setRemoteDescription()`** sets the specified
+session description as the remote peer's current offer or answer. The description
+specifies the properties of the remote end of the connection, including the media
+format. The method takes a single parameter—the session description—and it
+returns a {{jsxref("Promise")}} which is fulfilled once the description has been
+changed, asynchronously.
 
-<p>This is typically called after receiving an offer or answer from another peer over the
-	signaling server. Keep in mind that if <code>setRemoteDescription()</code> is called
-	while a connection is already in place, it means renegotiation is underway (possibly
-	to adapt to changing network conditions).</p>
+This is typically called after receiving an offer or answer from another peer over the
+signaling server. Keep in mind that if `setRemoteDescription()` is called
+while a connection is already in place, it means renegotiation is underway (possibly
+to adapt to changing network conditions).
 
-<p>Because descriptions will be exchanged until the two peers agree on a configuration,
-	the description submitted by calling <code>setRemoteDescription()</code> does not
-	immediately take effect. Instead, the current connection configuration remains in
-	place until negotiation is complete. Only then does the agreed-upon configuration take
-	effect.</p>
+Because descriptions will be exchanged until the two peers agree on a configuration,
+the description submitted by calling `setRemoteDescription()` does not
+immediately take effect. Instead, the current connection configuration remains in
+place until negotiation is complete. Only then does the agreed-upon configuration take
+effect.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><em>aPromise</em> = <em>rtcPeerConnection</em>.setRemoteDescription(<em>sessionDescription</em>);
-</pre>
+```js
+aPromise = rtcPeerConnection.setRemoteDescription(sessionDescription);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-	<dt><code>sessionDescription</code></dt>
-	<dd>An {{domxref("RTCSessionDescriptionInit")}} or
-		{{domxref("RTCSessionDescription")}} which specifies the remote peer's current
-		offer or answer. This value is an offer or answer received from the remote
-		peer through your implementation of</dd>
-</dl>
+- `sessionDescription`
+  - : An {{domxref("RTCSessionDescriptionInit")}} or
+    {{domxref("RTCSessionDescription")}} which specifies the remote peer's current
+    offer or answer. This value is an offer or answer received from the remote
+    peer through your implementation of
 
-<p>The <code>sessionDescription</code> parameter is technically of type
-	<code>RTCSessionDescriptionInit</code>, but because
-	{{domxref("RTCSessionDescription")}} serializes to be indistinguishable from
-	<code>RTCSessionDescriptionInit</code>, you can also pass in an
-	<code>RTCSessionDescription</code>. This lets you simplify code such as the following:
-</p>
+The `sessionDescription` parameter is technically of type
+`RTCSessionDescriptionInit`, but because
+{{domxref("RTCSessionDescription")}} serializes to be indistinguishable from
+`RTCSessionDescriptionInit`, you can also pass in an
+`RTCSessionDescription`. This lets you simplify code such as the following:
 
-<pre class="brush: js">myPeerConnection.setRemoteDescription(new RTCSessionDescription(description))
+```js
+myPeerConnection.setRemoteDescription(new RTCSessionDescription(description))
 .then(function () {
   return createMyStream();
 })
-</pre>
+```
 
-<p>to be:</p>
+to be:
 
-<pre class="brush: js">myPeerConnection.setRemoteDescription(description)
+```js
+myPeerConnection.setRemoteDescription(description)
 .then(function () {
   return createMyStream();
-})</pre>
+})
+```
 
-<p>Using
-	<code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/async_function">async</a></code>/<code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/await">await</a></code>
-	syntax, you can further simplify this to:</p>
+Using
+[`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function)/[`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await)
+syntax, you can further simplify this to:
 
-<pre class="brush: js">await myPeerConnection.setRemoteDescription(description);
-createMyStream();</pre>
+```js
+await myPeerConnection.setRemoteDescription(description);
+createMyStream();
+```
 
-<p>Since it's unnecessary, the {{domxref("RTCSessionDescription.RTCSessionDescription",
-	"RTCSessionDescription()")}} constructor is deprecated.</p>
+Since it's unnecessary, the {{domxref("RTCSessionDescription.RTCSessionDescription",
+	"RTCSessionDescription()")}} constructor is deprecated.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{jsxref("Promise")}} which is fulfilled once the value of the connection's
-	{{domxref("RTCPeerConnection.remoteDescription", "remoteDescription")}} is
-	successfully changed or rejected if the change cannot be applied (for example, if the
-	specified description is incompatible with one or both of the peers on the
-	connection). The promise fulfillment handler receives no input parameters.</p>
+A {{jsxref("Promise")}} which is fulfilled once the value of the connection's
+{{domxref("RTCPeerConnection.remoteDescription", "remoteDescription")}} is
+successfully changed or rejected if the change cannot be applied (for example, if the
+specified description is incompatible with one or both of the peers on the
+connection). The promise fulfillment handler receives no input parameters.
 
-<div class="note">
-	<p><strong>Note:</strong> The process of changing descriptions actually involves
-		intermediary steps handled by the WebRTC layer to ensure that an active connection
-		can be changed without losing the connection if the change does not succeed. See
-		{{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Pending and
-		current descriptions")}} for more details on this process.</p>
-</div>
+> **Note:** The process of changing descriptions actually involves
+> intermediary steps handled by the WebRTC layer to ensure that an active connection
+> can be changed without losing the connection if the change does not succeed. See
+> {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Pending and
+		current descriptions")}} for more details on this process.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>The following exceptions are reported to the rejection handler for the promise returned
-	by <code>setRemoteDescription()</code>:</p>
+The following exceptions are reported to the rejection handler for the promise returned
+by `setRemoteDescription()`:
 
-<dl>
-	<dt><code>InvalidAccessError</code></dt>
-	<dd>The content of the description is invalid.</dd>
-	<dt><code>InvalidStateError</code></dt>
-	<dd>The {{domxref("RTCPeerConnection")}} is closed, or it's in a state which isn't
-		compatible with the specified description's
-		{{domxref("RTCSessionDescription.type", "type")}}. For example, if the
-		<code>type</code> is <code>rollback</code> and the signaling state is one of
-		<code>stable</code>, <code>have-local-pranswer</code>, or
-		<code>have-remote-pranswer</code>, this exception is thrown, because you can't
-		roll back a connection that's either fully established or is in the final stage of
-		becoming connected.</dd>
-	<dt><code>OperationError</code></dt>
-	<dd>Any errors that occur which don't match the others specifeid here are reported as
-		<code>OperationError</code>. This includes identity validation errors.</dd>
-	<dt><code>RTCError</code></dt>
-	<dd>An <code>RTCError</code> with the {{domxref("RTCError.errorDetail",
-		"errorDetail")}} set to <code>sdp-syntax-error</code> is reported if the
-		{{Glossary("SDP")}} specified by {{domxref("RTCSessionDescription.sdp")}}. The
-		error object's {{domxref("RTCError.sdpLineNumber", "sdpLineNumber")}} property
-		indicates the line number within the SDP on which the syntax error was detected.
-	</dd>
-	<dt><code>TypeError</code></dt>
-	<dd>The specified <code>RTCSessionDescriptionInit</code> or
-		<code>RTCSessionDescription</code> object is missing the
-		{{domxref("RTCSessionDescription.type", "type")}} property, or no description
-		parameter was provided at all.</dd>
-</dl>
+- `InvalidAccessError`
+  - : The content of the description is invalid.
+- `InvalidStateError`
+  - : The {{domxref("RTCPeerConnection")}} is closed, or it's in a state which isn't
+    compatible with the specified description's
+    {{domxref("RTCSessionDescription.type", "type")}}. For example, if the
+    `type` is `rollback` and the signaling state is one of
+    `stable`, `have-local-pranswer`, or
+    `have-remote-pranswer`, this exception is thrown, because you can't
+    roll back a connection that's either fully established or is in the final stage of
+    becoming connected.
+- `OperationError`
+  - : Any errors that occur which don't match the others specifeid here are reported as
+    `OperationError`. This includes identity validation errors.
+- `RTCError`
+  - : An `RTCError` with the {{domxref("RTCError.errorDetail",
+		"errorDetail")}} set to `sdp-syntax-error` is reported if the
+    {{Glossary("SDP")}} specified by {{domxref("RTCSessionDescription.sdp")}}. The
+    error object's {{domxref("RTCError.sdpLineNumber", "sdpLineNumber")}} property
+    indicates the line number within the SDP on which the syntax error was detected.
+- `TypeError`
+  - : The specified `RTCSessionDescriptionInit` or
+    `RTCSessionDescription` object is missing the
+    {{domxref("RTCSessionDescription.type", "type")}} property, or no description
+    parameter was provided at all.
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>When you call <code>setRemoteDescription()</code>, the ICE agent checks to make sure
-	the {{domxref("RTCPeerConnection")}} is in either the <code>stable</code> or
-	<code>have-remote-offer</code> {{domxref("RTCPeerConnection.signalingState",
+When you call `setRemoteDescription()`, the ICE agent checks to make sure
+the {{domxref("RTCPeerConnection")}} is in either the `stable` or
+`have-remote-offer` {{domxref("RTCPeerConnection.signalingState",
 	"signalingState")}}. These states indicate that either an existing connection is being
-	renegotiated or that an offer previously specified by an earlier call to
-	<code>setRemoteDescription()</code> is to be replaced with the new offer. In either of
-	those two cases, we're at the beginning of the negotiation process, and the offer is
-	set as the remote description.</p>
+renegotiated or that an offer previously specified by an earlier call to
+`setRemoteDescription()` is to be replaced with the new offer. In either of
+those two cases, we're at the beginning of the negotiation process, and the offer is
+set as the remote description.
 
-<p>On the other hand, if we're in the middle of an ongoing negotiation and an offer is
-	passed into <code>setRemoteDescription()</code>, the ICE agent automatically begins an
-	ICE rollback in order to return the connection to a stable signaling state, then, once
-	the rollback is completed, sets the remote description to the specified offer. This
-	begins a new negotiation session, with the newly-established offer as the starting
-	point.</p>
+On the other hand, if we're in the middle of an ongoing negotiation and an offer is
+passed into `setRemoteDescription()`, the ICE agent automatically begins an
+ICE rollback in order to return the connection to a stable signaling state, then, once
+the rollback is completed, sets the remote description to the specified offer. This
+begins a new negotiation session, with the newly-established offer as the starting
+point.
 
-<p>Upon starting the new negotiation with the newly-established offer, the local peer is
-	now the callee, even if it was previously the caller. This happens instead of throwing
-	an exception, thereby reducing the number of potential errors which might occur, and
-	simplifies the processing you need to do when you receive an offer, by eliminating the
-	need to handle the offer/answer process differently depending on whether the local
-	peer is the caller or callee.</p>
+Upon starting the new negotiation with the newly-established offer, the local peer is
+now the callee, even if it was previously the caller. This happens instead of throwing
+an exception, thereby reducing the number of potential errors which might occur, and
+simplifies the processing you need to do when you receive an offer, by eliminating the
+need to handle the offer/answer process differently depending on whether the local
+peer is the caller or callee.
 
-<div class="notecard note">
-	<p><strong>Note:</strong> Earlier implementations of WebRTC would throw an exception
-		if an offer was set outside a <code>stable</code> or
-		<code>have-remote-offer</code> state.</p>
-</div>
+> **Note:** Earlier implementations of WebRTC would throw an exception
+> if an offer was set outside a `stable` or
+> `have-remote-offer` state.
 
-<h2 id="Deprecated_syntax">Deprecated syntax</h2>
+## Deprecated syntax
 
-<p>In older code and documentation, you may see a callback-based version of this function
-	used. This has been deprecated and its use is <em>strongly</em> discouraged. You
-	should update any existing code to use the {{jsxref("Promise")}}-based version of
-	<code>setRemoteDescription()</code> instead. The parameters for the older form of
-	<code>setRemoteDescription()</code> are described below, to aid in updating existing
-	code.</p>
+In older code and documentation, you may see a callback-based version of this function
+used. This has been deprecated and its use is _strongly_ discouraged. You
+should update any existing code to use the {{jsxref("Promise")}}-based version of
+`setRemoteDescription()` instead. The parameters for the older form of
+`setRemoteDescription()` are described below, to aid in updating existing
+code.
 
-<pre
-	class="brush: js"><em>pc</em>.setRemoteDescription(<em>sessionDescription</em>, <em>successCallback</em>, <em>errorCallback</em>);</pre>
+```js
+pc.setRemoteDescription(sessionDescription, successCallback, errorCallback);
+```
 
-<h3 id="Parameters_2">Parameters</h3>
+### Parameters
 
-<dl>
-	<dt><code>successCallback</code> {{deprecated_inline}}</dt>
-	<dd>A JavaScript {{jsxref("Function")}} which accepts no input parameters to be called
-		once the description has been successfully set. At that time, the offer can be
-		sent to a remote peer via the signaling server.</dd>
-	<dt><code>errorCallback</code> {{deprecated_inline}}</dt>
-	<dd>A function matching the signautre <code>RTCPeerConnectionErrorCallback</code>
-		which gets called if the description can't be set. It is passed a single
-		{{domxref("DOMException")}} object explaining why the request failed.</dd>
-</dl>
+- `successCallback` {{deprecated_inline}}
+  - : A JavaScript {{jsxref("Function")}} which accepts no input parameters to be called
+    once the description has been successfully set. At that time, the offer can be
+    sent to a remote peer via the signaling server.
+- `errorCallback` {{deprecated_inline}}
+  - : A function matching the signautre `RTCPeerConnectionErrorCallback`
+    which gets called if the description can't be set. It is passed a single
+    {{domxref("DOMException")}} object explaining why the request failed.
 
-<p>This deprecated form of the method returns instantaneously without waiting for the
-	actual setting to be done: in case of success, the <code>successCallback</code> will
-	be called; in case of failure, the <code>errorCallback</code> will be called.</p>
+This deprecated form of the method returns instantaneously without waiting for the
+actual setting to be done: in case of success, the `successCallback` will
+be called; in case of failure, the `errorCallback` will be called.
 
-<h3 id="Exceptions_2">Exceptions</h3>
+### Exceptions
 
-<p>When using the deprecated callback-based version of
-	<code>setRemoteDescription()</code>, the following exceptions may occur:</p>
+When using the deprecated callback-based version of
+`setRemoteDescription()`, the following exceptions may occur:
 
-<dl>
-	<dt><code>InvalidStateError</code> {{deprecated_inline}}</dt>
-	<dd>The connection's {{domxref("RTCPeerConnection.signalingState", "signalingState")}}
-		is <code>"closed"</code>, indicating that the connection is not currently open, so
-		negotiation cannot take place.</dd>
-	<dt><code>InvalidSessionDescriptionError</code> {{deprecated_inline}}</dt>
-	<dd>The {{domxref("RTCSessionDescription")}} specified by the
-		<code>sessionDescription</code> parameter is invalid.</dd>
-</dl>
+- `InvalidStateError` {{deprecated_inline}}
+  - : The connection's {{domxref("RTCPeerConnection.signalingState", "signalingState")}}
+    is `"closed"`, indicating that the connection is not currently open, so
+    negotiation cannot take place.
+- `InvalidSessionDescriptionError` {{deprecated_inline}}
+  - : The {{domxref("RTCSessionDescription")}} specified by the
+    `sessionDescription` parameter is invalid.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>Here we see a function which handles an offer received from the remote peer. This code
-	is derived from the example and tutorial in the article <a
-		href="/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling">Signaling and
-		video calling</a>; take a look at that for more details and a more in-depth
-	explanation of what's going on.</p>
+Here we see a function which handles an offer received from the remote peer. This code
+is derived from the example and tutorial in the article [Signaling and
+video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling); take a look at that for more details and a more in-depth
+explanation of what's going on.
 
-<pre class="brush: js">function handleOffer(msg) {
+```js
+function handleOffer(msg) {
   createMyPeerConnection();
 
   myPeerConnection.setRemoteDescription(msg.description).then(function () {
@@ -235,31 +228,30 @@ createMyStream();</pre>
     // Send the answer to the remote peer using the signaling server
   })
   .catch(handleGetUserMediaError);
-}</pre>
+}
+```
 
-<p>After creating our {{domxref("RTCPeerConnection")}} and saving it as
-	<code>myPeerConnection</code>, we pass the description included in the received offer
-	message, <code>msg</code>, directly into <code>setRemoteDescription()</code> to tell
-	the user agent's WebRTC layer what configuration the caller has proposed using. When
-	our promise fulfillment handler is called, indicating that this has been done, we
-	create a stream, add it to the connection, then create an SDP answer and call
-	{{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}} to set
-	that as the configuration at our end of the call before forwarding that answer to the
-	caller.</p>
+After creating our {{domxref("RTCPeerConnection")}} and saving it as
+`myPeerConnection`, we pass the description included in the received offer
+message, `msg`, directly into `setRemoteDescription()` to tell
+the user agent's WebRTC layer what configuration the caller has proposed using. When
+our promise fulfillment handler is called, indicating that this has been done, we
+create a stream, add it to the connection, then create an SDP answer and call
+{{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}} to set
+that as the configuration at our end of the call before forwarding that answer to the
+caller.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
-	<li>{{domxref("RTCPeerConnection.remoteDescription")}},
-		{{domxref("RTCPeerConnection.pendingRemoteDescription")}},
-		{{domxref("RTCPeerConnection.currentRemoteDescription")}}</li>
-</ul>
+- [WebRTC](/en-US/docs/Web/Guide/API/WebRTC)
+- {{domxref("RTCPeerConnection.remoteDescription")}},
+  {{domxref("RTCPeerConnection.pendingRemoteDescription")}},
+  {{domxref("RTCPeerConnection.currentRemoteDescription")}}

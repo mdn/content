@@ -9,46 +9,41 @@ tags:
   - Reference
 browser-compat: api.ProgressEvent
 ---
-<div>{{APIRef("DOM Events")}}</div>
+{{APIRef("DOM Events")}}
 
-<p>The <strong><code>ProgressEvent</code></strong> interface represents events measuring progress of an underlying process, like an HTTP request (for an <code>XMLHttpRequest</code>, or the loading of the underlying resource of an {{HTMLElement("img")}}, {{HTMLElement("audio")}}, {{HTMLElement("video")}}, {{HTMLElement("style")}} or {{HTMLElement("link")}}).</p>
+The **`ProgressEvent`** interface represents events measuring progress of an underlying process, like an HTTP request (for an `XMLHttpRequest`, or the loading of the underlying resource of an {{HTMLElement("img")}}, {{HTMLElement("audio")}}, {{HTMLElement("video")}}, {{HTMLElement("style")}} or {{HTMLElement("link")}}).
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h2 id="Constructor">Constructor</h2>
+## Constructor
 
-<dl>
- <dt>{{domxref("ProgressEvent.ProgressEvent", "ProgressEvent()")}}</dt>
- <dd>Creates a <code>ProgressEvent</code> event with the given parameters.</dd>
-</dl>
+- {{domxref("ProgressEvent.ProgressEvent", "ProgressEvent()")}}
+  - : Creates a `ProgressEvent` event with the given parameters.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>Also inherits properties from its parent {{domxref("Event")}}</em>.</p>
+_Also inherits properties from its parent {{domxref("Event")}}_.
 
-<dl>
- <dt>{{domxref("ProgressEvent.lengthComputable")}} {{readonlyInline}}</dt>
- <dd>A boolean flag indicating if the total work to be done, and the amount of work already done, by the underlying process is calculable. In other words, it tells if the progress is measurable or not.</dd>
- <dt>{{domxref("ProgressEvent.loaded")}} {{readonlyInline}}</dt>
- <dd>A 64-bit unsigned integer value indicating the amount of work already performed by the underlying process. The ratio of work done can be calculated by dividing <code>total</code> by the value of this property. When downloading a resource using HTTP, this only counts the body of the HTTP message, and doesn't include headers and other overhead.</dd>
- <dt>{{domxref("ProgressEvent.total")}} {{readonlyInline}}</dt>
- <dd>A 64-bit unsigned integer representing the total amount of work that the underlying process is in the progress of performing. When downloading a resource using HTTP, this is the <code>Content-Length</code> (the size of the body of the message), and doesn't include the headers and other overhead.</dd>
-</dl>
+- {{domxref("ProgressEvent.lengthComputable")}} {{readonlyInline}}
+  - : A boolean flag indicating if the total work to be done, and the amount of work already done, by the underlying process is calculable. In other words, it tells if the progress is measurable or not.
+- {{domxref("ProgressEvent.loaded")}} {{readonlyInline}}
+  - : A 64-bit unsigned integer value indicating the amount of work already performed by the underlying process. The ratio of work done can be calculated by dividing `total` by the value of this property. When downloading a resource using HTTP, this only counts the body of the HTTP message, and doesn't include headers and other overhead.
+- {{domxref("ProgressEvent.total")}} {{readonlyInline}}
+  - : A 64-bit unsigned integer representing the total amount of work that the underlying process is in the progress of performing. When downloading a resource using HTTP, this is the `Content-Length` (the size of the body of the message), and doesn't include the headers and other overhead.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>Also inherits methods from its parent {{domxref("Event")}}.</em></p>
+_Also inherits methods from its parent {{domxref("Event")}}._
 
-<dl>
- <dt>{{domxref("ProgressEvent.initProgressEvent()")}} {{deprecated_inline}}{{non-Standard_inline}}</dt>
- <dd>Initializes a <code>ProgressEvent</code> created using the deprecated {{domxref("Document.createEvent()", "Document.createEvent(\"ProgressEvent\")")}} method.</dd>
-</dl>
+- {{domxref("ProgressEvent.initProgressEvent()")}} {{deprecated_inline}}{{non-Standard_inline}}
+  - : Initializes a `ProgressEvent` created using the deprecated {{domxref("Document.createEvent()", "Document.createEvent(\"ProgressEvent\")")}} method.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example adds a <code>ProgressEvent</code> to a new {{domxref("XMLHTTPRequest")}} and uses it to display the status of the request.</p>
+The following example adds a `ProgressEvent` to a new {{domxref("XMLHTTPRequest")}} and uses it to display the status of the request.
 
-<pre class="brush: js">var progressBar = document.getElementById("p"),
+```js
+var progressBar = document.getElementById("p"),
     client = new XMLHttpRequest()
 client.open("GET", "magical-unicorns")
 client.onprogress = function(pe) {
@@ -60,18 +55,17 @@ client.onprogress = function(pe) {
 client.onloadend = function(pe) {
   progressBar.value = pe.loaded
 }
-client.send()</pre>
+client.send()
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>The {{domxref("Event")}} base interface.</li>
-</ul>
+- The {{domxref("Event")}} base interface.

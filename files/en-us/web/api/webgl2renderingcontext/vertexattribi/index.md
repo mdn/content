@@ -1,63 +1,60 @@
 ---
-title: 'WebGL2RenderingContext.vertexAttribI4[u]i[v]()'
+title: WebGL2RenderingContext.vertexAttribI4[u]i[v]()
 slug: Web/API/WebGL2RenderingContext/vertexAttribI
 tags:
-- API
-- Method
-- Reference
-- WebGL
-- WebGL2
+  - API
+  - Method
+  - Reference
+  - WebGL
+  - WebGL2
 browser-compat: api.WebGL2RenderingContext.vertexAttribI4i
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p>The <strong><code>WebGL2RenderingContext.vertexAttribI4[u]i[v]()</code></strong>
-  methods of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL 2 API</a> specify integer
-  values for generic vertex attributes.</p>
+The **`WebGL2RenderingContext.vertexAttribI4[u]i[v]()`**
+methods of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) specify integer
+values for generic vertex attributes.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">void <var>gl</var>.vertexAttribI4i(<var>index</var>, <var>v0</var>, <var>v1</var>, <var>v2</var>, <var>v3</var>);
-void <var>gl</var>.vertexAttribI4ui(<var>index</var>, <var>v0</var>, <var>v1</var>, <var>v2</var>, <var>v3</var>);
+```js
+void gl.vertexAttribI4i(index, v0, v1, v2, v3);
+void gl.vertexAttribI4ui(index, v0, v1, v2, v3);
 
-void <var>gl</var>.vertexAttribI4iv(<var>index</var>, <var>value</var>);
-void <var>gl</var>.vertexAttribI4uiv(<var>index</var>, <var>value</var>);
-</pre>
+void gl.vertexAttribI4iv(index, value);
+void gl.vertexAttribI4uiv(index, value);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>index</code></dt>
-  <dd>A {{domxref("WebGL_API/Types", "GLuint")}} specifying the position of the vertex attribute to be
-    modified.</dd>
-  <dt><code>v0, v1, v2, v3</code></dt>
-  <dd>An integer {{jsxref("Number")}} for the vertex attribute value.</dd>
-  <dt><code>value</code></dt>
-  <dd>
-    <p>A {{jsxref("Uint32Array")}}/{{jsxref("Int32Array")}} or sequences of
-      {{domxref("WebGL_API/Types", "GLuint")}}/ {{domxref("WebGL_API/Types", "GLint")}} for integer vector vertex attribute
-      values.</p>
-  </dd>
-</dl>
+- `index`
+  - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the position of the vertex attribute to be
+    modified.
+- `v0, v1, v2, v3`
+  - : An integer {{jsxref("Number")}} for the vertex attribute value.
+- `value`
+  - : A {{jsxref("Uint32Array")}}/{{jsxref("Int32Array")}} or sequences of
+    {{domxref("WebGL_API/Types", "GLuint")}}/ {{domxref("WebGL_API/Types", "GLint")}} for integer vector vertex attribute
+    values.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">gl.vertexAttribI4i(a_foobar, 10);</pre>
+```js
+gl.vertexAttribI4i(a_foobar, 10);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("WebGLRenderingContext.getVertexAttrib()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.getVertexAttrib()")}}

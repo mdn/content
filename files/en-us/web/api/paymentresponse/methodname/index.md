@@ -2,48 +2,50 @@
 title: PaymentResponse.methodName
 slug: Web/API/PaymentResponse/methodName
 tags:
-- API
-- Commerce
-- Experimental
-- Payment Request
-- Payment Request API
-- PaymentResponse
-- Property
-- Reference
-- Secure context
-- methodName
+  - API
+  - Commerce
+  - Experimental
+  - Payment Request
+  - Payment Request API
+  - PaymentResponse
+  - Property
+  - Reference
+  - Secure context
+  - methodName
 browser-compat: api.PaymentResponse.methodName
 ---
-<p>{{securecontext_header}}{{APIRef("Payment Request API")}}</p>
+{{securecontext_header}}{{APIRef("Payment Request API")}}
 
-<p>The <strong><code>methodName</code></strong> read-only
-    property of the {{domxref("PaymentResponse")}} interface returns a string uniquely
-    identifying the payment handler selected by the user.</p>
+The **`methodName`** read-only
+property of the {{domxref("PaymentResponse")}} interface returns a string uniquely
+identifying the payment handler selected by the user.
 
-<p>This string may be either
-  one of the standardized payment method identifiers or a URL used by the payment handler
-  to process payments.</p>
+This string may be either
+one of the standardized payment method identifiers or a URL used by the payment handler
+to process payments.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var <em>methodName</em> = <em>PaymentResponse</em>.methodName;</pre>
+```js
+var methodName = PaymentResponse.methodName;
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A {{domxref("DOMString")}} uniquely identifying the payment handler being used to
-  process the payment. This may be either a standardized identifier, or a URL used by the
-  payment processor to handle payments. See
-  {{SectionOnPage("/en-US/docs/Web/API/Payment_Request_API/Concepts", "Merchant
-  validation")}} for more information.</p>
+A {{domxref("DOMString")}} uniquely identifying the payment handler being used to
+process the payment. This may be either a standardized identifier, or a URL used by the
+payment processor to handle payments. See
+{{SectionOnPage("/en-US/docs/Web/API/Payment_Request_API/Concepts", "Merchant
+  validation")}} for more information.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The following example extracts the method name from the {{domxref('PaymentResponse')}}
-  object to the promise returned from {{domxref('PaymentRequest.show()')}}. In a
-  real-world implementation this data would then be sent to a payment server.</p>
+The following example extracts the method name from the {{domxref('PaymentResponse')}}
+object to the promise returned from {{domxref('PaymentRequest.show()')}}. In a
+real-world implementation this data would then be sent to a payment server.
 
-<pre class="brush: js">payment.show().then(paymentResponse =&gt; {
+```js
+payment.show().then(paymentResponse => {
   var paymentData = {
     // payment method string
     method: paymentResponse.methodName,
@@ -53,12 +55,13 @@ browser-compat: api.PaymentResponse.methodName
     address: toDict(paymentResponse.shippingAddress)
   };
   // Send information to the server
-});</pre>
+});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

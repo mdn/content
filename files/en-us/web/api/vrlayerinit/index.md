@@ -14,30 +14,27 @@ tags:
   - WebVR
 browser-compat: api.VRLayerInit
 ---
-<div>{{APIRef("WebVR API")}}{{Deprecated_Header}}</div>
+{{APIRef("WebVR API")}}{{Deprecated_Header}}
 
-<p>The <strong><code>VRLayerInit</code></strong> dictionary of the <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a> represents a content layer (an {{domxref("HTMLCanvasElement")}} or {{domxref("OffscreenCanvas")}}) that you want to present in a VR display.</p>
+The **`VRLayerInit`** dictionary of the [WebVR API](/en-US/docs/Web/API/WebVR_API) represents a content layer (an {{domxref("HTMLCanvasElement")}} or {{domxref("OffscreenCanvas")}}) that you want to present in a VR display.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This dictionary was part of the old <a href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</a>. It has been superseded by the <a href="https://immersive-web.github.io/webxr/">WebXR Device API</a>.</p>
-</div>
+> **Note:** This dictionary was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-<p>You can retrieve <code>VRLayerInit</code> objects using {{domxref("VRDisplay.getLayers()")}}, and present them using the {{domxref("VRDisplay.requestPresent()")}} method.</p>
+You can retrieve `VRLayerInit` objects using {{domxref("VRDisplay.getLayers()")}}, and present them using the {{domxref("VRDisplay.requestPresent()")}} method.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("VRLayerInit.leftBounds")}}</dt>
- <dd>Defines the left texture bounds of the canvas whose contents will be presented by the {{domxref("VRDisplay")}}.</dd>
- <dt>{{domxref("VRLayerInit.rightBounds")}}</dt>
- <dd>Defines the right texture bounds of the canvas whose contents will be presented by the {{domxref("VRDisplay")}}.</dd>
- <dt>{{domxref("VRLayerInit.source")}}</dt>
- <dd>Defines the canvas whose contents will be presented by the {{domxref("VRDisplay")}} when {{domxref("VRDisplay.submitFrame()")}} is called.</dd>
-</dl>
+- {{domxref("VRLayerInit.leftBounds")}}
+  - : Defines the left texture bounds of the canvas whose contents will be presented by the {{domxref("VRDisplay")}}.
+- {{domxref("VRLayerInit.rightBounds")}}
+  - : Defines the right texture bounds of the canvas whose contents will be presented by the {{domxref("VRDisplay")}}.
+- {{domxref("VRLayerInit.source")}}
+  - : Defines the canvas whose contents will be presented by the {{domxref("VRDisplay")}} when {{domxref("VRDisplay.submitFrame()")}} is called.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">// currently returns an empty array
+```js
+// currently returns an empty array
 var layers = vrDisplay.getLayers();
 
 if(navigator.getVRDisplays) {
@@ -45,7 +42,7 @@ if(navigator.getVRDisplays) {
   // Then get the displays attached to the computer
   navigator.getVRDisplays().then(function(displays) {
     // If a display is available, use it to present the scene
-    if(displays.length &gt; 0) {
+    if(displays.length > 0) {
       vrDisplay = displays[0];
       console.log('Display found');
       // Starting the presentation when the button is clicked: It can only be called in response to a user gesture
@@ -61,32 +58,32 @@ if(navigator.getVRDisplays) {
       });
     }
   });
-}</pre>
+}
+```
 
-<p>{{domxref("VRLayerInit")}} objects look something like this:</p>
+{{domxref("VRLayerInit")}} objects look something like this:
 
-<pre class="brush: js">{
+```js
+{
   leftBounds : [ ... ],
   rightBounds: [ ... ],
-  source: <em>canvasReference</em>
-}</pre>
+  source: canvasReference
+}
+```
 
-<div class="note">
-<p><strong>Note:</strong> The <code>canvasReference</code> refers to the {{htmlelement("canvas")}} element itself, not the WebGL context associated with the canvas. The other two members are arrays</p>
-</div>
+> **Note:** The `canvasReference` refers to the {{htmlelement("canvas")}} element itself, not the WebGL context associated with the canvas. The other two members are arrays
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This dictionary was part of the old <a href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</a> that has been superseded by the <a href="https://immersive-web.github.io/webxr/">WebXR Device API</a>. It is no longer on track to becoming a standard.</p>
-<p>Until all browsers have implemented the new <a href="/en-US/docs/Web/API/WebXR_Device_API/Fundamentals">WebXR APIs</a>, it is recommended to rely on frameworks, like <a href="https://aframe.io/">A-Frame</a>, <a href="https://www.babylonjs.com/">Babylon.js</a>, or <a href="https://threejs.org/">Three.js</a>, or a <a href="https://github.com/immersive-web/webxr-polyfill">polyfill</a>, to develop WebXR applications that will work across all browsers <a href="https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/">[1]</a>.</p>
+This dictionary was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) that has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/). It is no longer on track to becoming a standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals), it is recommended to rely on frameworks, like [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), or [Three.js](https://threejs.org/), or a [polyfill](https://github.com/immersive-web/webxr-polyfill), to develop WebXR applications that will work across all browsers [\[1\]](https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/).
 
-<p>{{Compat}}</p>
+## Browser compatibility
 
-<h2 id="See_also">See also</h2>
+{{Compat}}
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebVR_API">WebVR API homepage</a></li>
- <li><a href="https://mixedreality.mozilla.org/">https://mixedreality.mozilla.org/</a> — demos, downloads, and other resources from the Mozilla VR team.</li>
-</ul>
+## See also
+
+- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API)
+- <https://mixedreality.mozilla.org/> — demos, downloads, and other resources from the Mozilla VR team.

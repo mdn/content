@@ -9,35 +9,31 @@ tags:
   - SVG DOM
 browser-compat: api.SVGClipPathElement
 ---
-<div>{{APIRef("SVG")}}</div>
+{{APIRef("SVG")}}
 
-<p>The <strong><code>SVGClipPathElement</code></strong> interface provides access to the properties of {{SVGElement("clipPath")}} elements, as well as methods to manipulate them.</p>
+The **`SVGClipPathElement`** interface provides access to the properties of {{SVGElement("clipPath")}} elements, as well as methods to manipulate them.
 
-<p>{{InheritanceDiagram(600, 140)}}</p>
+{{InheritanceDiagram(600, 140)}}
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<p><em>This interface also inherits properties from its parent, {{domxref("SVGElement")}}.</em></p>
+_This interface also inherits properties from its parent, {{domxref("SVGElement")}}._
 
-<dl>
- <dt>{{domxref("SVGClipPathElement.clipPathUnits")}} {{ReadOnlyInline}}</dt>
- <dd>An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("clipPathUnits")}} attribute of the given {{SVGElement("clipPath")}} element. Takes one of the constants defined in {{domxref("SVGUnitTypes")}}.</dd>
-</dl>
+- {{domxref("SVGClipPathElement.clipPathUnits")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("clipPathUnits")}} attribute of the given {{SVGElement("clipPath")}} element. Takes one of the constants defined in {{domxref("SVGUnitTypes")}}.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p><em>This interface doesn't implement any specific methods, but inherits methods from its parent, {{domxref("SVGElement")}}.</em></p>
+_This interface doesn't implement any specific methods, but inherits methods from its parent, {{domxref("SVGElement")}}._
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGElement("clipPath")}}</li>
-</ul>
+- {{SVGElement("clipPath")}}

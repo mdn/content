@@ -2,32 +2,33 @@
 title: Document.embeds
 slug: Web/API/Document/embeds
 tags:
-- API
-- Document
-- HTML DOM
-- NeedsExample
-- Property
+  - API
+  - Document
+  - HTML DOM
+  - NeedsExample
+  - Property
 browser-compat: api.Document.embeds
 ---
-<div>{{ApiRef}}</div>
+{{ApiRef}}
 
-<p>The <strong><code>embeds</code></strong> read-only property of the
-  {{domxref("Document")}} interface returns a list of the embedded
-  {{htmlelement("embed")}} elements within the current document.</p>
+The **`embeds`** read-only property of the
+{{domxref("Document")}} interface returns a list of the embedded
+{{htmlelement("embed")}} elements within the current document.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js"><var>nodeList</var> = document.embeds
-</pre>
+```js
+nodeList = document.embeds
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{domxref("HTMLCollection")}}.</p>
+An {{domxref("HTMLCollection")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}

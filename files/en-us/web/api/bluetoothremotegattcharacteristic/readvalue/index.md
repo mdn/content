@@ -2,38 +2,39 @@
 title: BluetoothRemoteGATTCharacteristic.readValue()
 slug: Web/API/BluetoothRemoteGATTCharacteristic/readValue
 tags:
-- API
-- Bluetooth
-- BluetoothRemoteGATTCharacteristic
-- Experimental
-- Property
-- Reference
-- Web Bluetooth API
-- readValue
+  - API
+  - Bluetooth
+  - BluetoothRemoteGATTCharacteristic
+  - Experimental
+  - Property
+  - Reference
+  - Web Bluetooth API
+  - readValue
 browser-compat: api.BluetoothRemoteGATTCharacteristic.readValue
 ---
-<p>{{SeeCompatTable}}</p>
+{{SeeCompatTable}}
 
-<p>The <strong><code>BluetoothRemoteGATTCharacteristic.readValue()</code></strong> method
-  returns a {{jsxref("Promise")}} that resolves to a {{jsxref("DataView")}} holding a
-  duplicate of the <code>value</code> property if it is available and supported. Otherwise
-  it throws an error.</p>
+The **`BluetoothRemoteGATTCharacteristic.readValue()`** method
+returns a {{jsxref("Promise")}} that resolves to a {{jsxref("DataView")}} holding a
+duplicate of the `value` property if it is available and supported. Otherwise
+it throws an error.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">BluetoothRemoteGATTCharacteristic.readValue().then(function(dataView) { ... })</pre>
+```js
+BluetoothRemoteGATTCharacteristic.readValue().then(function(dataView) { ... })
+```
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A {{jsxref("Promise")}} that resolves to an {{jsxref("DataView")}}.</p>
+A {{jsxref("Promise")}} that resolves to an {{jsxref("DataView")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<div>{{APIRef("Web Bluetooth")}}</div>
+{{APIRef("Web Bluetooth")}}

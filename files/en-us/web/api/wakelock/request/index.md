@@ -2,64 +2,59 @@
 title: WakeLock.request()
 slug: Web/API/WakeLock/request
 tags:
-- API
-- Method
-- Reference
-- Screen Wake Lock API
-- WakeLock
+  - API
+  - Method
+  - Reference
+  - Screen Wake Lock API
+  - WakeLock
 browser-compat: api.WakeLock.request
 ---
-<div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Screen Wake Lock API")}}</div>
+{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Screen Wake Lock API")}}
 
-<p>The <strong><code>request()</code></strong> method of the
-	{{domxref("WakeLock")}} interface returns a {{jsxref("Promise")}} that resolves with a
-	{{domxref("WakeLockSentinel")}} object, which allows control over screen dimming and
-	locking.</p>
+The **`request()`** method of the
+{{domxref("WakeLock")}} interface returns a {{jsxref("Promise")}} that resolves with a
+{{domxref("WakeLockSentinel")}} object, which allows control over screen dimming and
+locking.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-	class="brush: js">var <var>wakeLock</var> = navigator.wakeLock.request(<var>type</var>);</pre>
+```js
+var wakeLock = navigator.wakeLock.request(type);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-	<dt><em>type</em></dt>
-	<dd>Options are as follows:
-		<ul>
-			<li><code>'screen'</code>: Requests a screen wake lock. Prevents devices from
-				dimming or locking the screen.</li>
-		</ul>
-	</dd>
-</dl>
+- _type_
 
-<h3 id="Return_value">Return value</h3>
+  - : Options are as follows:
 
-<p>A {{jsxref("Promise")}} that resolves with a {{domxref("WakeLockSentinel")}} object.
-</p>
+    - `'screen'`: Requests a screen wake lock. Prevents devices from
+      dimming or locking the screen.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Return value
 
-<dl>
-	<dt><code>NotAllowedError</code></dt>
-	<dd>Thrown when wake lock is not available, which can happen because:
-		<ul>
-			<li>Document is not allowed to use screen wake lock due to screen-wake-lock
-				policy.</li>
-			<li>Document is not fully active.</li>
-			<li>Document is hidden.</li>
-			<li>{{Glossary("User Agent")}} could not acquire platform's wake lock.</li>
-		</ul>
-	</dd>
-</dl>
+A {{jsxref("Promise")}} that resolves with a {{domxref("WakeLockSentinel")}} object.
 
-<h2 id="Examples">Examples</h2>
+### Exceptions
 
-<p>The following asynchronous function requests a {{domxref("WakeLockSentinel")}} object.
-	The <code>request()</code> method is wrapped in a <code>try...catch</code> statement
-	to account for if the browser refuses the request for any reason.</p>
+- `NotAllowedError`
 
-<pre class="brush: js">const requestWakeLock = async () =&gt; {
+  - : Thrown when wake lock is not available, which can happen because:
+
+    - Document is not allowed to use screen wake lock due to screen-wake-lock
+      policy.
+    - Document is not fully active.
+    - Document is hidden.
+    - {{Glossary("User Agent")}} could not acquire platform's wake lock.
+
+## Examples
+
+The following asynchronous function requests a {{domxref("WakeLockSentinel")}} object.
+The `request()` method is wrapped in a `try...catch` statement
+to account for if the browser refuses the request for any reason.
+
+```js
+const requestWakeLock = async () => {
   try {
 
     const wakeLock = await navigator.wakeLock.request('screen');
@@ -72,19 +67,17 @@ browser-compat: api.WakeLock.request
 }
 
 requestWakeLock();
-</pre>
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-	<li>{{DOMxRef("WakeLock")}}</li>
-	<li>{{DOMxRef("Navigator.wakeLock")}}</li>
-</ul>
+- {{DOMxRef("WakeLock")}}
+- {{DOMxRef("Navigator.wakeLock")}}

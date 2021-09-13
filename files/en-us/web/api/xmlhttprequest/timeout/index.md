@@ -12,19 +12,20 @@ tags:
   - timeout
 browser-compat: api.XMLHttpRequest.timeout
 ---
-<div>{{APIRef('XMLHttpRequest')}}</div>
+{{APIRef('XMLHttpRequest')}}
 
-<p>The <code><strong>XMLHttpRequest.timeout</strong></code> property is an <code>unsigned long</code> representing the number of milliseconds a request can take before automatically being terminated. The default value is 0, which means there is no timeout. Timeout shouldn't be used for synchronous XMLHttpRequests requests used in a {{Glossary('document environment')}} or it will throw an <code>InvalidAccessError</code> exception. When a timeout happens, a <a href="/en-US/docs/Web/API/XMLHttpRequest/timeout_event">timeout</a> event is fired. </p>
+The **`XMLHttpRequest.timeout`** property is an `unsigned long` representing the number of milliseconds a request can take before automatically being terminated. The default value is 0, which means there is no timeout. Timeout shouldn't be used for synchronous XMLHttpRequests requests used in a {{Glossary('document environment')}} or it will throw an `InvalidAccessError` exception. When a timeout happens, a [timeout](/en-US/docs/Web/API/XMLHttpRequest/timeout_event) event is fired.
 
-<div class="note"><p><strong>Note:</strong> You may not use a timeout for synchronous requests with an owning window.</p></div>
+> **Note:** You may not use a timeout for synchronous requests with an owning window.
 
-<p><a href="/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests#example_using_a_timeout">Using a timeout with an asynchronous request</a> </p>
+[Using a timeout with an asynchronous request](/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests#example_using_a_timeout)
 
-<p>In Internet Explorer, the timeout property may be set only after calling the <a href="/en-US/docs/Web/API/XMLHttpRequest/open">open()</a> method and before calling the <a href="/en-US/docs/Web/API/XMLHttpRequest/send">send()</a> method.</p>
+In Internet Explorer, the timeout property may be set only after calling the [open()](/en-US/docs/Web/API/XMLHttpRequest/open) method and before calling the [send()](/en-US/docs/Web/API/XMLHttpRequest/send) method.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: js">var xhr = new XMLHttpRequest();
+```js
+var xhr = new XMLHttpRequest();
 xhr.open('GET', '/server', true);
 
 xhr.timeout = 2000; // time in milliseconds
@@ -37,12 +38,13 @@ xhr.ontimeout = function (e) {
   // XMLHttpRequest timed out. Do something here.
 };
 
-xhr.send(null);</pre>
+xhr.send(null);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

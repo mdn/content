@@ -8,15 +8,16 @@ tags:
   - Property
 browser-compat: api.NDEFReader.onreadingerror
 ---
-<p>{{Draft}}{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}</p>
+{{Draft}}{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 
-<p>The <code>onreadingerror</code> property of the {{DOMxRef("NDEFReader")}} interface is called whenever an error occurs during reading of NFC tags, e.g. when tags leave the reader's magnetic induction field.</p>
+The `onreadingerror` property of the {{DOMxRef("NDEFReader")}} interface is called whenever an error occurs during reading of NFC tags, e.g. when tags leave the reader's magnetic induction field.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example shows how to process events using both the <code>onreading</code> and <code>onreadingerror</code> event handlerss.</p>
+The following example shows how to process events using both the `onreading` and `onreadingerror` event handlerss.
 
-<pre class="brush: js">const ndef = new NDEFReader();
+```js
+const ndef = new NDEFReader();
   ndef.scan().then(() => {
     console.log("Scan started successfully.");
     ndef.onreadingerror = (event) => {
@@ -28,12 +29,13 @@ browser-compat: api.NDEFReader.onreadingerror
   }).catch(error => {
     console.log(`Error! Scan failed to start: ${error}.`);
   });
-  </pre>
 
-<h2 id="Specifications">Specifications</h2>
+```
+
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

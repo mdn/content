@@ -15,29 +15,28 @@ tags:
   - Window
 browser-compat: api.Window.mozPaintCount
 ---
-<p>{{APIRef()}}{{Non-standard_Header}}{{deprecated_header}}</p>
+{{APIRef()}}{{Non-standard_Header}}{{deprecated_header}}
 
-<p>Returns the number of times the current document has been painted to the screen in this
-  window.</p>
+Returns the number of times the current document has been painted to the screen in this
+window.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js">var paintCount = window.mozPaintCount;</pre>
+```js
+var paintCount = window.mozPaintCount;
+```
 
-<ul>
-  <li><code><em>paintCount</em></code> stores the <code>window.mozPaintCount</code>
-    property value.</li>
-  <li>The <code>window.mozPaintCount</code> value is a <code>long long</code>, and starts
-    at zero when the document is first created, incrementing by one each time the document
-    is painted.</li>
-</ul>
+- `paintCount` stores the `window.mozPaintCount`
+  property value.
+- The `window.mozPaintCount` value is a `long long`, and starts
+  at zero when the document is first created, incrementing by one each time the document
+  is painted.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Not part of any <abbr title="World Wide Web Consortium">W3C</abbr> technical
-  specification or recommendation.</p>
+Not part of any W3C technical
+specification or recommendation.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

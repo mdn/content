@@ -10,69 +10,63 @@ tags:
   - Reference
 browser-compat: api.Document.prepend
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>The <strong><code>Document.prepend()</code></strong> method
-  inserts a set of {{domxref("Node")}} objects or {{domxref("DOMString")}} objects before
-  the first child of the document. {{domxref("DOMString")}} objects
-  are inserted as equivalent {{domxref("Text")}} nodes.</p>
+The **`Document.prepend()`** method
+inserts a set of {{domxref("Node")}} objects or {{domxref("DOMString")}} objects before
+the first child of the document. {{domxref("DOMString")}} objects
+are inserted as equivalent {{domxref("Text")}} nodes.
 
-<p>This method prepends a child to a <code>Document</code>. To prepend to an arbitrary element in the tree, see {{domxref("Element.prepend()")}}.</p>
+This method prepends a child to a `Document`. To prepend to an arbitrary element in the tree, see {{domxref("Element.prepend()")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
+```js
 prepend(...nodesOrDOMStrings)
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><code>nodesOrDOMStrings</code></dt>
-  <dd>A set of {{domxref("Node")}} or {{domxref("DOMString")}} objects to insert.</dd>
-</dl>
+- `nodesOrDOMStrings`
+  - : A set of {{domxref("Node")}} or {{domxref("DOMString")}} objects to insert.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<ul>
-  <li>{{domxref("HierarchyRequestError")}}: Node cannot be inserted at the specified point
-    in the hierarchy.</li>
-</ul>
+- {{domxref("HierarchyRequestError")}}: Node cannot be inserted at the specified point
+  in the hierarchy.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Prepending_a_root_element_to_a_document">Prepending a root element to a document</h3>
+### Prepending a root element to a document
 
-<p>If you try to prepend an element to an existing HTML document,
-it might throw a {{domxref("HierarchyRequestError")}} given a {{HTMLElement("html")}} element already exists.</p>
+If you try to prepend an element to an existing HTML document,
+it might throw a {{domxref("HierarchyRequestError")}} given a {{HTMLElement("html")}} element already exists.
 
-<pre class="brush: js">
+```js
 let html = document.createElement("html");
 document.prepend(html);
 // HierarchyRequestError: The operation would yield an incorrect node tree.
-</pre>
+```
 
-<p>If you are creating a new document without any existing element, you can prepend a root HTML element (or a root SVG element):</p>
+If you are creating a new document without any existing element, you can prepend a root HTML element (or a root SVG element):
 
-<pre class="brush: js">
+```js
 let doc = new Document();
 let html = document.createElement("html");
 doc.prepend(html);
 
-doc.children; // HTMLCollection [&lt;html&gt;]
-</pre>
+doc.children; // HTMLCollection [<html>]
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{domxref("Document.append()")}}</li>
-  <li>{{domxref("Element.prepend()")}}</li>
-</ul>
+- {{domxref("Document.append()")}}
+- {{domxref("Element.prepend()")}}

@@ -8,53 +8,52 @@ tags:
   - Reference
 browser-compat: api.LargestContentfulPaint
 ---
-<div>{{DefaultAPISidebar("Largest Contentful Paint API")}}</div>
+{{DefaultAPISidebar("Largest Contentful Paint API")}}
 
-<p>The <strong>Largest Contentful Paint (LCP) API</strong> enables monitoring the largest paint element triggered on screen.</p>
+The **Largest Contentful Paint (LCP) API** enables monitoring the largest paint element triggered on screen.
 
-<h2> Concepts and Usage</h2>
+## Concepts and Usage
 
-<p>The Largest Contentful Paint metric provides the render time of the largest image or text block visible within the viewport, recorded from when the page first begins to load. The API supports the following elements:</p>
-<ul>
-  <li>{{HTMLElement("img")}} elements.</li>
-  <li><code><a href="/en-US/docs/Web/SVG/Element/image">&lt;image&gt;</a></code> elements inside an SVG.</li>
-  <li>The poster images of {{HTMLElement("video")}} elements.</li>
-  <li>Elements with a {{cssxref("background-image")}}.</li>
-  <li>Groups of text nodes, such as {{HTMLElement("p")}}.</li>
-</ul>
+The Largest Contentful Paint metric provides the render time of the largest image or text block visible within the viewport, recorded from when the page first begins to load. The API supports the following elements:
 
-<h2 id="Interfaces"> Interfaces</h2>
+- {{HTMLElement("img")}} elements.
+- [`<image>`](/en-US/docs/Web/SVG/Element/image) elements inside an SVG.
+- The poster images of {{HTMLElement("video")}} elements.
+- Elements with a {{cssxref("background-image")}}.
+- Groups of text nodes, such as {{HTMLElement("p")}}.
 
-<dl>
-  <dt>{{domxref("LargestContentfulPaint")}}</dt>
-  <dd>Reports details about the largest image or text paint before user input on a web page.</dd>
-</dl>
+## Interfaces
 
-<h2 id="Examples">Examples</h2>
+- {{domxref("LargestContentfulPaint")}}
+  - : Reports details about the largest image or text paint before user input on a web page.
 
-<p>The following example shows an image and a large paragraph of text. An observer is registered to get the largest contentful paint while the page is loading.</p>
+## Examples
 
-<pre class="brush: html">&lt;img src="large_image.jpg"&gt;
-&lt;p id='large-paragraph'&gt;This is large body of text.&lt;/p&gt;</pre>
+The following example shows an image and a large paragraph of text. An observer is registered to get the largest contentful paint while the page is loading.
 
-<pre class="brush: js">const observer = new PerformanceObserver((list) => {
+```html
+<img src="large_image.jpg">
+<p id='large-paragraph'>This is large body of text.</p>
+```
+
+```js
+const observer = new PerformanceObserver((list) => {
   let perfEntries = list.getEntries();
   let lastEntry = perfEntries[perfEntries.length - 1];
   // Process the latest candidate for largest contentful paint
 });
-observer.observe({entryTypes: ['largest-contentful-paint']});</pre>
+observer.observe({entryTypes: ['largest-contentful-paint']});
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://web.dev/lcp/">Largest Contentful Paint (LCP)</a></li>
-  <li><a href="https://web.dev/lighthouse-largest-contentful-paint/">LCP in Lighthouse</a></li>
-</ul>
+- [Largest Contentful Paint (LCP)](https://web.dev/lcp/)
+- [LCP in Lighthouse](https://web.dev/lighthouse-largest-contentful-paint/)

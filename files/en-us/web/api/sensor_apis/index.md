@@ -10,25 +10,26 @@ tags:
   - Sensor APIs
   - Sensors
 ---
-<div>{{APIRef("Sensor API")}}</div>
+{{APIRef("Sensor API")}}
 
-<p>The <strong>Sensor APIs</strong> are a set of interfaces built to a common design that expose device sensors in a consistent way to the web platform.</p>
+The **Sensor APIs** are a set of interfaces built to a common design that expose device sensors in a consistent way to the web platform.
 
-<h2 id="sensor_apis_concepts_and_usage">Sensor APIs concepts and usage</h2>
+## Sensor APIs concepts and usage
 
-<p>Although the Generic Sensor API specification defines a {{domxref('Sensor')}} interface, as a web developer you will never use it. Instead you'll use one of its subclasses to retrieve specific kinds of sensor data. For example, the {{domxref('accelerometer')}} interface returns the acceleration of the device along all three axes at the time it is read.</p>
+Although the Generic Sensor API specification defines a {{domxref('Sensor')}} interface, as a web developer you will never use it. Instead you'll use one of its subclasses to retrieve specific kinds of sensor data. For example, the {{domxref('accelerometer')}} interface returns the acceleration of the device along all three axes at the time it is read.
 
-<p>Sensors may or may not correspond exactly to a physical device sensor. For example, the {{domxref('Gyroscope')}} interface corresponds exactly to a physical device interface. Alternatively, the {{domxref('AbsoluteOrientationSensor')}} interface provides information that is algorithmically agregated from two or more device sensors. These sensor types are referred to as <em>low-level</em> and <em>high-level</em> respectively. The latter type of sensor is also called a fusion sensor (alternatively, virtual or synthetic sensors).</p>
+Sensors may or may not correspond exactly to a physical device sensor. For example, the {{domxref('Gyroscope')}} interface corresponds exactly to a physical device interface. Alternatively, the {{domxref('AbsoluteOrientationSensor')}} interface provides information that is algorithmically agregated from two or more device sensors. These sensor types are referred to as _low-level_ and _high-level_ respectively. The latter type of sensor is also called a fusion sensor (alternatively, virtual or synthetic sensors).
 
-<h3 id="feature_detection">Feature detection</h3>
+### Feature detection
 
-<p>Sensor interfaces are only proxies for the underlying device sensors. Consequently, feature detection is more complicated for sensors than it is for other APIs. The presence of a sensor API does not tell you whether that API is connected to a real hardware sensor, whether that sensor works, if it's still connected, or even whether the user has granted access to it. Making all this information consistently available is costly to performance and battery life.</p>
+Sensor interfaces are only proxies for the underlying device sensors. Consequently, feature detection is more complicated for sensors than it is for other APIs. The presence of a sensor API does not tell you whether that API is connected to a real hardware sensor, whether that sensor works, if it's still connected, or even whether the user has granted access to it. Making all this information consistently available is costly to performance and battery life.
 
-<p>Therefore, feature detection for sensor APIs must include both detection of the APIs themselves and <a href="#defensive_programming">defensive programming strategies (see below)</a>.</p>
+Therefore, feature detection for sensor APIs must include both detection of the APIs themselves and [defensive programming strategies (see below)](#defensive_programming).
 
-<p>The examples below show three methods for detecting sensor APIs. Additionally you can put object instantiation inside a {{jsxref('statements/try...catch', 'try...catch')}} block. Notice that detection through the {{domxref('Navigator')}} interface is not one of the available options.</p>
+The examples below show three methods for detecting sensor APIs. Additionally you can put object instantiation inside a {{jsxref('statements/try...catch', 'try...catch')}} block. Notice that detection through the {{domxref('Navigator')}} interface is not one of the available options.
 
-<pre class="brush: js">if (typeof Gyroscope === "function") {
+```js
+if (typeof Gyroscope === "function") {
     // run in circles...
 }
 
@@ -38,28 +39,26 @@ if ("ProximitySensor" in window) {
 
 if (window.AmbientLightSensor) {
     // go dark...
-}</pre>
+}
+```
 
-<h3 id="defensive_programming">Defensive programming</h3>
+### Defensive programming
 
-<p>As stated in Feature Detection, checking for a particular sensor API is insufficient for feature detection. The existence of an actual sensor must be confirmed as well. This is where defensive programming is needed. Defensive programming requires three strategies.</p>
+As stated in Feature Detection, checking for a particular sensor API is insufficient for feature detection. The existence of an actual sensor must be confirmed as well. This is where defensive programming is needed. Defensive programming requires three strategies.
 
-<ul>
- <li>Checking for thrown errors when instantiating a sensor object.</li>
- <li>Listening for errors thrown during its use.</li>
- <li>Handling the errors gracefully so that the user experience is enhanced rather than degraded.</li>
-</ul>
+- Checking for thrown errors when instantiating a sensor object.
+- Listening for errors thrown during its use.
+- Handling the errors gracefully so that the user experience is enhanced rather than degraded.
 
-<p>The code example below illustrates these principles. The {{jsxref('statements/try...catch', 'try...catch')}} block catches errors thrown during sensor instantiation. It implements a handler for {{domxref('Sensor.onerror')}} to catch errors thrown during use. The only time anything is shown to the user is when <a href="/en-US/docs/Web/API/Permissions_API">permissions</a> need to be requested and when the sensor type isn't supported by the device.</p>
+The code example below illustrates these principles. The {{jsxref('statements/try...catch', 'try...catch')}} block catches errors thrown during sensor instantiation. It implements a handler for {{domxref('Sensor.onerror')}} to catch errors thrown during use. The only time anything is shown to the user is when [permissions](/en-US/docs/Web/API/Permissions_API) need to be requested and when the sensor type isn't supported by the device.
 
-<div class="note">
-<p><strong>Note:</strong> If a feature policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.</p>
-</div>
+> **Note:** If a feature policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.
 
-<pre class="brush: js">let accelerometer = null;
+```js
+let accelerometer = null;
 try {
     accelerometer = new Accelerometer({ referenceFrame: 'device' });
-    accelerometer.addEventListener('error', event =&gt; {
+    accelerometer.addEventListener('error', event => {
         // Handle runtime errors.
         if (event.error.name === 'NotAllowedError') {
             // Branch to code for requesting permission.
@@ -67,7 +66,7 @@ try {
             console.log('Cannot connect to the sensor.');
         }
     });
-    accelerometer.addEventListener('reading', () =&gt; reloadOnShake(accelerometer));
+    accelerometer.addEventListener('reading', () => reloadOnShake(accelerometer));
     accelerometer.start();
 } catch (error) {
     // Handle construction errors.
@@ -79,149 +78,104 @@ try {
     } else {
         throw error;
     }
-}</pre>
+}
+```
 
-<h3 id="permissions_and_feature_policy">Permissions and Feature Policy</h3>
+### Permissions and Feature Policy
 
-<p>Sensor readings may not be taken unless the user grants permission to a specific sensor type. Do this using the <a href="/en-US/docs/Web/API/Permissions_API">Permissions API</a>. A brief example, shown below, requests permission before attempting to use the sensor.</p>
+Sensor readings may not be taken unless the user grants permission to a specific sensor type. Do this using the [Permissions API](/en-US/docs/Web/API/Permissions_API). A brief example, shown below, requests permission before attempting to use the sensor.
 
-<pre class="brush: js">navigator.permissions.query({ name: 'accelerometer' })
-.then(result =&gt; {
+```js
+navigator.permissions.query({ name: 'accelerometer' })
+.then(result => {
   if (result.state === 'denied') {
     console.log('Permission to use accelerometer sensor is denied.');
     return;
   }
   // Use the sensor.
-});</pre>
+});
+```
 
-<p>An alternative approach is to attempt to use the error and listen for the <code>SecurityError</code>.</p>
+An alternative approach is to attempt to use the error and listen for the `SecurityError`.
 
-<pre class="brush: js">const sensor = new AbsoluteOrientationSensor();
+```js
+const sensor = new AbsoluteOrientationSensor();
 sensor.start();
-sensor.onerror = event =&gt; {
+sensor.onerror = event => {
   if (event.error.name === 'SecurityError')
     console.log("No permissions to use AbsoluteOrientationSensor.");
-};</pre>
+};
+```
 
-<p>The following table describes for each sensor type, the name required for the Permissions API, the {{HTMLElement('iframe')}} element's <code>allow</code> attribute and the {{httpheader('Feature-Policy')}} directive.</p>
+The following table describes for each sensor type, the name required for the Permissions API, the {{HTMLElement('iframe')}} element's `allow` attribute and the {{httpheader('Feature-Policy')}} directive.
 
-<table class="standard-table">
- <caption>Sensor permissions</caption>
- <thead>
-  <tr>
-   <th scope="col">Sensor</th>
-   <th scope="col">Permission/Feature Policy Name</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>AbsoluteOrientationSensor</code></td>
-   <td><code>'accelerometer'</code>, <code>'gyroscope'</code>, and <code>'magnetometer'</code></td>
-  </tr>
-  <tr>
-   <td><code>Accelerometer</code></td>
-   <td><code>'accelerometer'</code></td>
-  </tr>
-  <tr>
-   <td><code>AmbientLightSensor</code></td>
-   <td><code>'ambient-light-sensor'</code></td>
-  </tr>
-  <tr>
-   <td><code>GravitySensor</code></td>
-   <td><code>'accelerometer'</code></td>
-  </tr>
-  <tr>
-   <td><code>Gyroscope</code></td>
-   <td><code>'gyroscope'</code></td>
-  </tr>
-  <tr>
-   <td><code>LinearAccelerationSensor</code></td>
-   <td><code>'accelerometer'</code></td>
-  </tr>
-  <tr>
-   <td><code>Magnetometer</code></td>
-   <td><code>'magnetometer'</code></td>
-  </tr>
-  <tr>
-   <td><code>RelativeOrientationSensor</code></td>
-   <td><code>'accelerometer'</code>, and <code>'gyroscope'</code></td>
-  </tr>
- </tbody>
-</table>
+| Sensor                      | Permission/Feature Policy Name                         |
+| --------------------------- | ------------------------------------------------------ |
+| `AbsoluteOrientationSensor` | `'accelerometer'`, `'gyroscope'`, and `'magnetometer'` |
+| `Accelerometer`             | `'accelerometer'`                                      |
+| `AmbientLightSensor`        | `'ambient-light-sensor'`                               |
+| `GravitySensor`             | `'accelerometer'`                                      |
+| `Gyroscope`                 | `'gyroscope'`                                          |
+| `LinearAccelerationSensor`  | `'accelerometer'`                                      |
+| `Magnetometer`              | `'magnetometer'`                                       |
+| `RelativeOrientationSensor` | `'accelerometer'`, and `'gyroscope'`                   |
 
-<h3 id="readings">Readings</h3>
+### Readings
 
-<p>Sensor readings are received through the {{domxref('Sensor.onreading')}} callback which is inherited by all sensor types. Reading frequency is decided by you, accomplished with an option passed to a sensor's constructor. The option is a number that specifies the number of readings per second. A whole number or decimal may be used, the latter for frequencies less than a second. The actual reading frequency depends device hardware and consequently may be less than requested.</p>
+Sensor readings are received through the {{domxref('Sensor.onreading')}} callback which is inherited by all sensor types. Reading frequency is decided by you, accomplished with an option passed to a sensor's constructor. The option is a number that specifies the number of readings per second. A whole number or decimal may be used, the latter for frequencies less than a second. The actual reading frequency depends device hardware and consequently may be less than requested.
 
-<p>The following example illustrates this using the {{domxref('Magnetometer')}} sensor.</p>
+The following example illustrates this using the {{domxref('Magnetometer')}} sensor.
 
-<pre class="brush: js">let magSensor = new Magnetometer({frequency: 60});
+```js
+let magSensor = new Magnetometer({frequency: 60});
 
-magSensor.addEventListener('reading', e =&gt; {
+magSensor.addEventListener('reading', e => {
   console.log("Magnetic field along the X-axis " + magSensor.x);
   console.log("Magnetic field along the Y-axis " + magSensor.y);
   console.log("Magnetic field along the Z-axis " + magSensor.z);
 })
-magSensor.addEventListener('error', event =&gt; {
+magSensor.addEventListener('error', event => {
   console.log(event.error.name, event.error.message);
 })
 magSensor.start();
-</pre>
+```
 
-<h2 id="interfaces">Interfaces</h2>
+## Interfaces
 
-<dl>
- <dt>{{domxref('AbsoluteOrientationSensor')}}{{securecontext_inline}}</dt>
- <dd>Describes the device's physical orientation in relation to the Earth's reference coordinate system.</dd>
- <dt>{{domxref('Accelerometer')}}{{securecontext_inline}}</dt>
- <dd>Provides the acceleration applied to the device along all three axes.</dd>
- <dt>{{domxref('AmbientLightSensor')}}{{securecontext_inline}}</dt>
- <dd>Returns the current light level or illuminance of the ambient light around the hosting device.</dd>
- <dt>{{domxref('GravitySensor')}}{{securecontext_inline}}</dt>
- <dd>Provides the gravity applied to the device along all three axes.</dd>
- <dt>{{domxref('Gyroscope')}}{{securecontext_inline}}</dt>
- <dd>Provides the angular velocity of the device along all three axes.</dd>
- <dt>{{domxref('LinearAccelerationSensor')}}{{securecontext_inline}}</dt>
- <dd>Provides the acceleration applied to the device along all three axes, but without the contribution of gravity.</dd>
- <dt>{{domxref('Magnetometer')}}{{securecontext_inline}}</dt>
- <dd>Provides information about the magnetic field as detected by the device's primary magnetometer sensor.</dd>
- <dt>{{domxref('OrientationSensor')}}{{securecontext_inline}}</dt>
- <dd>The base class for the {{domxref('AbsoluteOrientationSensor')}}. This interface cannot be used directly, instead it provides properties and methods accessed by interfaces that inherit from it.</dd>
- <dt>{{domxref('RelativeOrientationSensor')}}{{securecontext_inline}}</dt>
- <dd>Describes the device's physical orientation without regard to the Earth's reference coordinate system.</dd>
- <dt>{{domxref('Sensor')}}{{securecontext_inline}}</dt>
- <dd>The base class for all the other sensor interfaces. This interface cannot be used directly. Instead it provides properties, event handlers, and methods accessed by interfaces that inherit from it.</dd>
- <dt>{{domxref('SensorErrorEvent')}}{{securecontext_inline}}</dt>
- <dd>Provides information about errors thrown by a {{domxref('Sensor')}} or related interface.</dd>
-</dl>
+- {{domxref('AbsoluteOrientationSensor')}}{{securecontext_inline}}
+  - : Describes the device's physical orientation in relation to the Earth's reference coordinate system.
+- {{domxref('Accelerometer')}}{{securecontext_inline}}
+  - : Provides the acceleration applied to the device along all three axes.
+- {{domxref('AmbientLightSensor')}}{{securecontext_inline}}
+  - : Returns the current light level or illuminance of the ambient light around the hosting device.
+- {{domxref('GravitySensor')}}{{securecontext_inline}}
+  - : Provides the gravity applied to the device along all three axes.
+- {{domxref('Gyroscope')}}{{securecontext_inline}}
+  - : Provides the angular velocity of the device along all three axes.
+- {{domxref('LinearAccelerationSensor')}}{{securecontext_inline}}
+  - : Provides the acceleration applied to the device along all three axes, but without the contribution of gravity.
+- {{domxref('Magnetometer')}}{{securecontext_inline}}
+  - : Provides information about the magnetic field as detected by the device's primary magnetometer sensor.
+- {{domxref('OrientationSensor')}}{{securecontext_inline}}
+  - : The base class for the {{domxref('AbsoluteOrientationSensor')}}. This interface cannot be used directly, instead it provides properties and methods accessed by interfaces that inherit from it.
+- {{domxref('RelativeOrientationSensor')}}{{securecontext_inline}}
+  - : Describes the device's physical orientation without regard to the Earth's reference coordinate system.
+- {{domxref('Sensor')}}{{securecontext_inline}}
+  - : The base class for all the other sensor interfaces. This interface cannot be used directly. Instead it provides properties, event handlers, and methods accessed by interfaces that inherit from it.
+- {{domxref('SensorErrorEvent')}}{{securecontext_inline}}
+  - : Provides information about errors thrown by a {{domxref('Sensor')}} or related interface.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table>
-  <tr>
-   <th>Specification</th>
-  </tr>
-  <tr>
-   <td><a href="https://w3c.github.io/sensors/">Generic Sensor API</a></td>
-  </tr>
-  <tr>
-   <td><a href="https://w3c.github.io/accelerometer/">Accelerometer</a></td>
-  </tr>
-  <tr>
-   <td><a href="https://w3c.github.io/ambient-light/">Ambient Light Sensor</a></td>
-  </tr>
-  <tr>
-   <td><a href="https://w3c.github.io/gyroscope/">Gyroscope</a></td>
-  </tr>
-  <tr>
-   <td><a href="https://w3c.github.io/magnetometer/">Magnetometer</a></td>
-  </tr>
-  <tr>
-   <td><a href="https://w3c.github.io/orientation-sensor/">Orientation Sensor</a></td>
-  </tr>
+| Specification                                                   |
+| --------------------------------------------------------------- |
+| [Generic Sensor API](https://w3c.github.io/sensors/)            |
+| [Accelerometer](https://w3c.github.io/accelerometer/)           |
+| [Ambient Light Sensor](https://w3c.github.io/ambient-light/)    |
+| [Gyroscope](https://w3c.github.io/gyroscope/)                   |
+| [Magnetometer](https://w3c.github.io/magnetometer/)             |
+| [Orientation Sensor](https://w3c.github.io/orientation-sensor/) |
 
-</table>
+## Browser compatibility
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<p>{{Compat("api.Sensor")}}</p>
+{{Compat("api.Sensor")}}

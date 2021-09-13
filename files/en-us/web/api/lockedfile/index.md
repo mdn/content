@@ -8,77 +8,58 @@ tags:
   - Reference
   - WebAPI
 ---
-<p>{{APIRef("File System API")}} {{non-standard_header}}</p>
+{{APIRef("File System API")}} {{non-standard_header}}
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>The <code>LockedFile</code> interface provides tools to deal with a given file with all the necessary locks.</p>
+The `LockedFile` interface provides tools to deal with a given file with all the necessary locks.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("LockedFile.fileHandle")}} {{readonlyinline}}</dt>
- <dd>The {{domxref("IDBMutableFile")}} object from which the lock was opened.</dd>
- <dt>{{domxref("LockedFile.mode")}} {{readonlyinline}}</dt>
- <dd>The mode for accessing the file; can be <code>readonly</code> or <code>readwrite</code>.</dd>
- <dt>{{domxref("LockedFile.active")}} {{readonlyinline}}</dt>
- <dd>A flag indicating if the file can be accessed (<code>true</code>) or not (<code>false</code>).</dd>
- <dt>{{domxref("LockedFile.location")}}</dt>
- <dd>The position of the reading/writing pointer within the file.</dd>
-</dl>
+- {{domxref("LockedFile.fileHandle")}} {{readonlyinline}}
+  - : The {{domxref("IDBMutableFile")}} object from which the lock was opened.
+- {{domxref("LockedFile.mode")}} {{readonlyinline}}
+  - : The mode for accessing the file; can be `readonly` or `readwrite`.
+- {{domxref("LockedFile.active")}} {{readonlyinline}}
+  - : A flag indicating if the file can be accessed (`true`) or not (`false`).
+- {{domxref("LockedFile.location")}}
+  - : The position of the reading/writing pointer within the file.
 
-<h3 id="Events_Handler">Events Handler</h3>
+### Events Handler
 
-<dl>
- <dt>{{domxref("LockedFile.oncomplete")}}</dt>
- <dd>The {{event("complete")}} event is triggered each time a read or write operation is successful.</dd>
- <dt>{{domxref("LockedFile.onabort")}}</dt>
- <dd>The {{event("abort")}} event is triggered each time the {{domxref("LockedFile.abort()","abort()")}} method is called.</dd>
- <dt>{{domxref("LockedFile.onerror")}}</dt>
- <dd>The {{event("error")}} event is triggered each time something goes wrong.</dd>
-</dl>
+- {{domxref("LockedFile.oncomplete")}}
+  - : The {{event("complete")}} event is triggered each time a read or write operation is successful.
+- {{domxref("LockedFile.onabort")}}
+  - : The {{event("abort")}} event is triggered each time the {{domxref("LockedFile.abort()","abort()")}} method is called.
+- {{domxref("LockedFile.onerror")}}
+  - : The {{event("error")}} event is triggered each time something goes wrong.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{domxref("LockedFile.getMetadata()")}}</dt>
- <dd>Allows to retrieve the file metadata (size and date of the last modification). Returns a {{domxref("FileRequest")}}.</dd>
- <dt>{{domxref("LockedFile.readAsArrayBuffer()")}}</dt>
- <dd>Allows to retrieve a part of the content of the file as an {{jsxref("ArrayBuffer")}}. Returns a {{domxref("FileRequest")}} object.</dd>
-<dt>{{domxref("LockedFile.readAsText()")}}</dt>
- <dd>Allows to retrieve a part of the content of the file as a string. Returns a {{domxref("FileRequest")}} object.</dd>
- <dt>{{domxref("LockedFile.write()")}}</dt>
- <dd>Allows to write some data in the file starting at the {{domxref("LockedFile.location","location")}} offset. Returns a {{domxref("FileRequest")}} object.</dd>
- <dt>{{domxref("LockedFile.append()")}}</dt>
- <dd>Allows to write some data at the end of the file. Returns a {{domxref("FileRequest")}} object.</dd>
- <dt>{{domxref("LockedFile.truncate()")}}</dt>
- <dd>Allows to truncate the file's content. Returns a {{domxref("FileRequest")}} object.</dd>
- <dt>{{domxref("LockedFile.flush()")}}</dt>
- <dd>Allows to guarantee that any buffered data has been transferred to disk.</dd>
- <dt>{{domxref("LockedFile.abort()")}}</dt>
- <dd>Makes the <code>LockedFile</code> inactive and cancels all ongoing operations.</dd>
-</dl>
+- {{domxref("LockedFile.getMetadata()")}}
+  - : Allows to retrieve the file metadata (size and date of the last modification). Returns a {{domxref("FileRequest")}}.
+- {{domxref("LockedFile.readAsArrayBuffer()")}}
+  - : Allows to retrieve a part of the content of the file as an {{jsxref("ArrayBuffer")}}. Returns a {{domxref("FileRequest")}} object.
+- {{domxref("LockedFile.readAsText()")}}
+  - : Allows to retrieve a part of the content of the file as a string. Returns a {{domxref("FileRequest")}} object.
+- {{domxref("LockedFile.write()")}}
+  - : Allows to write some data in the file starting at the {{domxref("LockedFile.location","location")}} offset. Returns a {{domxref("FileRequest")}} object.
+- {{domxref("LockedFile.append()")}}
+  - : Allows to write some data at the end of the file. Returns a {{domxref("FileRequest")}} object.
+- {{domxref("LockedFile.truncate()")}}
+  - : Allows to truncate the file's content. Returns a {{domxref("FileRequest")}} object.
+- {{domxref("LockedFile.flush()")}}
+  - : Allows to guarantee that any buffered data has been transferred to disk.
+- {{domxref("LockedFile.abort()")}}
+  - : Makes the `LockedFile` inactive and cancels all ongoing operations.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('FileSystem')}}</td>
-   <td>{{Spec2('FileSystem')}}</td>
-   <td>Draft proposal.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                        | Status                           | Comment         |
+| ------------------------------------ | -------------------------------- | --------------- |
+| {{SpecName('FileSystem')}} | {{Spec2('FileSystem')}} | Draft proposal. |
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("IDBMutableFile")}}</li>
- <li>{{domxref("FileRequest")}}</li>
-</ul>
+- {{domxref("IDBMutableFile")}}
+- {{domxref("FileRequest")}}

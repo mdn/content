@@ -12,56 +12,49 @@ tags:
   - WebVR
 browser-compat: api.VRPose
 ---
-<div>{{APIRef("WebVR API")}}{{Deprecated_Header}}</div>
+{{APIRef("WebVR API")}}{{Deprecated_Header}}
 
-<p>The <strong><code>VRPose</code></strong> interface of the <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a> represents the state of a VR sensor at a given timestamp (which includes orientation, position, velocity, and acceleration information.)</p>
+The **`VRPose`** interface of the [WebVR API](/en-US/docs/Web/API/WebVR_API) represents the state of a VR sensor at a given timestamp (which includes orientation, position, velocity, and acceleration information.)
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This interface was part of the old <a href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</a>. It has been superseded by the <a href="https://immersive-web.github.io/webxr/">WebXR Device API</a>.</p>
-</div>
+> **Note:** This interface was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-<p>This interface is accessible through the {{domxref("VRDisplay.getPose()")}} and {{domxref("VRDisplay.getFrameData()")}} methods. {{domxref("VRDisplay.getPose()")}} is deprecated.</p>
+This interface is accessible through the {{domxref("VRDisplay.getPose()")}} and {{domxref("VRDisplay.getFrameData()")}} methods. {{domxref("VRDisplay.getPose()")}} is deprecated.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{domxref("VRPose.position")}} {{readonlyInline}}</dt>
- <dd>Returns the position of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}} as a 3D vector</dd>
- <dt>{{domxref("VRPose.linearVelocity")}} {{readonlyInline}}</dt>
- <dd>Returns the linear velocity of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}}, in meters per second.</dd>
- <dt>{{domxref("VRPose.linearAcceleration")}} {{readonlyInline}}</dt>
- <dd>Returns the linear acceleration of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}}, in meters per second per second.</dd>
- <dt>{{domxref("VRPose.orientation")}} {{readonlyInline}}</dt>
- <dd>Returns the orientation of the sensor at the current {{domxref("VRPose.timestamp")}}, as a quarternion value.</dd>
- <dt>{{domxref("VRPose.angularVelocity")}} {{readonlyInline}}</dt>
- <dd>Returns the angular velocity of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}}, in radians per second.</dd>
- <dt>{{domxref("VRPose.angularAcceleration")}} {{readonlyInline}}</dt>
- <dd>Returns the angular acceleration of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}}, in meters per second per second.</dd>
-</dl>
+- {{domxref("VRPose.position")}} {{readonlyInline}}
+  - : Returns the position of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}} as a 3D vector
+- {{domxref("VRPose.linearVelocity")}} {{readonlyInline}}
+  - : Returns the linear velocity of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}}, in meters per second.
+- {{domxref("VRPose.linearAcceleration")}} {{readonlyInline}}
+  - : Returns the linear acceleration of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}}, in meters per second per second.
+- {{domxref("VRPose.orientation")}} {{readonlyInline}}
+  - : Returns the orientation of the sensor at the current {{domxref("VRPose.timestamp")}}, as a quarternion value.
+- {{domxref("VRPose.angularVelocity")}} {{readonlyInline}}
+  - : Returns the angular velocity of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}}, in radians per second.
+- {{domxref("VRPose.angularAcceleration")}} {{readonlyInline}}
+  - : Returns the angular acceleration of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}}, in meters per second per second.
 
-<h3 id="Obsolete_properties">Obsolete properties</h3>
+### Obsolete properties
 
-<dl>
- <dt>{{domxref("VRPose.timeStamp")}} {{readonlyInline}} {{deprecated_inline}}</dt>
- <dd>Returns the current time stamp of the system — a monotonically increasing value useful for determining if position data has been updated, and what order updates have occurred in. <strong>This version of <code>timestamp</code> has been removed from the spec — instead, timestamps are now returned when {{domxref("VRDisplay.getFrameData()")}} is called — see {{domxref("VRFrameData.timestamp")}}.</strong></dd>
-</dl>
+- {{domxref("VRPose.timeStamp")}} {{readonlyInline}} {{deprecated_inline}}
+  - : Returns the current time stamp of the system — a monotonically increasing value useful for determining if position data has been updated, and what order updates have occurred in. **This version of `timestamp` has been removed from the spec — instead, timestamps are now returned when {{domxref("VRDisplay.getFrameData()")}} is called — see {{domxref("VRFrameData.timestamp")}}.**
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>See <a href="/en-US/docs/Web/API/VRDisplay/getFrameData#examples"><code>VRDisplay.getFrameData()</code></a> for example code.</p>
+See [`VRDisplay.getFrameData()`](/en-US/docs/Web/API/VRDisplay/getFrameData#examples) for example code.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>This interface was part of the old <a href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</a> that has been superseded by the <a href="https://immersive-web.github.io/webxr/">WebXR Device API</a>. It is no longer on track to becoming a standard.</p>
-<p>Until all browsers have implemented the new <a href="/en-US/docs/Web/API/WebXR_Device_API/Fundamentals">WebXR APIs</a>, it is recommended to rely on frameworks, like <a href="https://aframe.io/">A-Frame</a>, <a href="https://www.babylonjs.com/">Babylon.js</a>, or <a href="https://threejs.org/">Three.js</a>, or a <a href="https://github.com/immersive-web/webxr-polyfill">polyfill</a>, to develop WebXR applications that will work across all browsers <a href="https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/">[1]</a>.</p>
+This interface was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) that has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/). It is no longer on track to becoming a standard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals), it is recommended to rely on frameworks, like [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), or [Three.js](https://threejs.org/), or a [polyfill](https://github.com/immersive-web/webxr-polyfill), to develop WebXR applications that will work across all browsers [\[1\]](https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/).
 
-<p>{{Compat}}</p>
+## Browser compatibility
 
-<h2 id="See_also">See also</h2>
+{{Compat}}
 
-<ul>
- <li><a href="/en-US/docs/Web/API/WebVR_API">WebVR API homepage</a></li>
- <li><a href="https://mixedreality.mozilla.org/">https://mixedreality.mozilla.org/</a> — demos, downloads, and other resources from the Mozilla VR team.</li>
-</ul>
+## See also
+
+- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API)
+- <https://mixedreality.mozilla.org/> — demos, downloads, and other resources from the Mozilla VR team.

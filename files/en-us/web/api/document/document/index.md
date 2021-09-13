@@ -2,28 +2,29 @@
 title: Document()
 slug: Web/API/Document/Document
 tags:
-- API
-- Constructor
-- DOM
-- Document
-- Reference
+  - API
+  - Constructor
+  - DOM
+  - Document
+  - Reference
 browser-compat: api.Document.Document
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>The <strong><code>Document</code></strong> constructor creates a new
-	{{domxref("Document")}} object that is a web page loaded in the browser and serving as
-	an entry point into the page's content.</p>
+The **`Document`** constructor creates a new
+{{domxref("Document")}} object that is a web page loaded in the browser and serving as
+an entry point into the page's content.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">new Document();
-</pre>
+```js
+new Document();
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>{{Compat}}</div>
+{{Compat}}

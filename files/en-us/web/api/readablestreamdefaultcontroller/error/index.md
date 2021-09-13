@@ -2,62 +2,57 @@
 title: ReadableStreamDefaultController.error()
 slug: Web/API/ReadableStreamDefaultController/error
 tags:
-- API
-- Error
-- Method
-- ReadableStreamDefaultController
-- Reference
-- Streams
+  - API
+  - Error
+  - Method
+  - ReadableStreamDefaultController
+  - Reference
+  - Streams
 browser-compat: api.ReadableStreamDefaultController.error
 ---
-<div>{{APIRef("Streams")}}</div>
+{{APIRef("Streams")}}
 
-<p>The <strong><code>error()</code></strong> method of the
-  {{domxref("ReadableStreamDefaultController")}} interface causes any future interactions
-  with the associated stream to error.</p>
+The **`error()`** method of the
+{{domxref("ReadableStreamDefaultController")}} interface causes any future interactions
+with the associated stream to error.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The <code>error()</code> method can be called
-    more than once, and can be called when the stream is not readable.</p>
-</div>
+> **Note:** The `error()` method can be called
+> more than once, and can be called when the stream is not readable.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre
-  class="brush: js"><em>readableStreamDefaultController</em>.error(<em>e</em>);</pre>
+```js
+readableStreamDefaultController.error(e);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-  <dt><em>e</em></dt>
-  <dd>The error you want future interactions to fail with.</dd>
-</dl>
+- _e_
+  - : The error you want future interactions to fail with.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>undefined</code>.</p>
+`undefined`.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
-  <dt>TypeError</dt>
-  <dd>The source object is not a <code>ReadableStreamDefaultController</code>, or the
-    stream is not readable for some other reason.</dd>
-</dl>
+- TypeError
+  - : The source object is not a `ReadableStreamDefaultController`, or the
+    stream is not readable for some other reason.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The <a href="https://streams.spec.whatwg.org/#example-rs-push-backpressure">A readable
-    stream with an underlying push source and backpressure support</a> example in the spec
-  provides a good example of using
-  {{domxref("ReadablestreamDefaultController.desiredSize")}} to manually detect when the
-  stream is full and apply backpressure, and also of using <code>error()</code> to
-  manually trigger a stream error if another part of the system it relies on fails.</p>
+The [A readable
+stream with an underlying push source and backpressure support](https://streams.spec.whatwg.org/#example-rs-push-backpressure) example in the spec
+provides a good example of using
+{{domxref("ReadablestreamDefaultController.desiredSize")}} to manually detect when the
+stream is full and apply backpressure, and also of using `error()` to
+manually trigger a stream error if another part of the system it relies on fails.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
