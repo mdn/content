@@ -16,9 +16,9 @@ tags:
 ---
 <div>{{APIRef("WebVR API")}}{{deprecated_header}}</div>
 
-<div class="notecard note"><strong>Note:</strong> WebVR API is replaced by <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR API</a>. WebVR was never ratified as a standard, was implemented and enabled by default in very few browsers and supported a small number of devices.</div>
+<div class="notecard note"><p><strong>Note:</strong> WebVR API is replaced by <a href="/en-US/docs/Web/API/WebXR_Device_API">WebXR API</a>. WebVR was never ratified as a standard, was implemented and enabled by default in very few browsers and supported a small number of devices.</p></div>
 
-<p class="summary">This article discusses some of the concepts and theory behind virtual reality (VR). If you are a newcomer to the area, it is worthwhile getting an understanding of these topics before you start diving into code.</p>
+<p>This article discusses some of the concepts and theory behind virtual reality (VR). If you are a newcomer to the area, it is worthwhile getting an understanding of these topics before you start diving into code.</p>
 
 <h2 id="The_history_of_VR">The history of VR</h2>
 
@@ -52,7 +52,7 @@ tags:
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: Computer-connected systems sometimes don't include a position sensor, but they usually do.</p>
+<p><strong>Note:</strong> Computer-connected systems sometimes don't include a position sensor, but they usually do.</p>
 </div>
 
 <p>Other hardware that complements the VR experience includes:</p>
@@ -110,7 +110,7 @@ tags:
 <p>The default values for these properties will differ slightly by VR hardware, although they tend to be around 53° up and down, and 47° left and right, with zNear and zFar coming in at around 0.1m and 10000m respectively.</p>
 
 <div class="note">
-<p><strong>Note</strong>: The user can potentially see all the way around them, which is a brand new concept for apps and games. Try to give people a reason to look around and see what's behind them — make them reach out and find things that are not visible at the very beginning. Describe what's behind their backs.</p>
+<p><strong>Note:</strong> The user can potentially see all the way around them, which is a brand new concept for apps and games. Try to give people a reason to look around and see what's behind them — make them reach out and find things that are not visible at the very beginning. Describe what's behind their backs.</p>
 </div>
 
 <h2 id="Concepts_for_VR_apps">Concepts for VR apps</h2>
@@ -119,7 +119,7 @@ tags:
 
 <h3 id="Stereoscopic_vision">Stereoscopic vision</h3>
 
-<p>Stereoscopic vision is the normal vision humans and (most) animals have — <span class="hvr">the</span> <span class="hvr">perception</span> of two <span class="hvr">slightly</span> <span class="hvr">differing</span> <span class="hvr">images</span> (one <span class="hvr">from</span> <span class="hvr">each</span> <span class="hvr">eye) as a single image. This</span> <span class="hvr">results</span> in <span class="hvr">depth</span> <span class="hvr">perception, helping us to see the world in glorious 3D. To recreate this in VR apps, you need to render two very slightly different views side by side, which will be taken in by the left and right eyes when the user is using the HMD.</span></p>
+<p>Stereoscopic vision is the normal vision humans and (most) animals have — the perception of two slightly differing images (one from each eye) as a single image. This results in depth perception, helping us to see the world in glorious 3D. To recreate this in VR apps, you need to render two very slightly different views side by side, which will be taken in by the left and right eyes when the user is using the HMD.</p>
 
 <p><img alt="How to create stereoscopic 3D images" src="createstereoscopicimages.png"></p>
 

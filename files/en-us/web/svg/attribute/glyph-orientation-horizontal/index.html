@@ -5,10 +5,11 @@ tags:
   - Deprecated
   - SVG
   - SVG Attribute
+browser-compat: svg.attributes.presentation.glyph-orientation-horizontal
 ---
-<div>{{SVGRef}}{{deprecated_header("SVG 2")}}</div>
+<div>{{SVGRef}}{{Deprecated_Header}}</div>
 
-<p>The <strong><code>glyph-orientation-horizontal</code></strong> attribute affects the amount that hte current text position advances as each {{Glossary("glyph")}} is rendered.</p>
+<p>The <strong><code>glyph-orientation-horizontal</code></strong> attribute affects the amount that the current text position advances as each {{Glossary("glyph")}} is rendered.</p>
 
 <p>When the reference orientation direction is horizontal and the <code>glyph-orientation-horizontal</code> results in an orientation angle that is a multiple of 180 degrees, then the current text position is incremented according to the horizontal metrics of the glyph. Otherwise, if the value of this attribute is not a multiple of 180 degrees, then the current text position is incremented according to the vertical metrics of the glyph.</p>
 
@@ -16,7 +17,15 @@ tags:
 
 <p class="note"><strong>Note:</strong> As a presentation attribute, <code>glyph-orientation-horizontal</code> can be used as a CSS property.</p>
 
-<p>As a presentation attribute, it can be applied to any element but it has effect only on the following five elements: {{SVGElement("altGlyph")}}, {{SVGElement("textPath")}}, {{SVGElement("text")}}, {{SVGElement("tref")}}, and {{SVGElement("tspan")}}</p>
+<p>You can use this attribute with the following SVG elements:</p>
+
+<ul>
+  <li>{{SVGElement("altGlyph")}}</li>
+  <li>{{SVGElement("textPath")}}</li>
+  <li>{{SVGElement("text")}}</li>
+  <li>{{SVGElement("tref")}}</li>
+  <li>{{SVGElement("tspan")}}</li>
+</ul>
 
 <h2 id="Context_notes">Context notes</h2>
 
@@ -66,4 +75,4 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("svg.attributes.presentation.glyph-orientation-horizontal")}}</p>
+<p>{{Compat}}</p>

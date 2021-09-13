@@ -9,10 +9,13 @@ tags:
   - Media
   - Reference
   - Web Audio API
+browser-compat: api.AudioBufferSourceNode
 ---
 <p>{{APIRef("Web Audio API")}}</p>
 
-<p><span class="seoSummary">The <strong><code>AudioBufferSourceNode</code></strong> interface is an {{domxref("AudioScheduledSourceNode")}} which represents an audio source consisting of in-memory audio data, stored in an {{domxref("AudioBuffer")}}. It's especially useful for playing back audio which has particularly stringent timing accuracy requirements, such as for sounds that must match a specific rhythm and can be kept in memory rather than being played from disk or the network.</span> To play sounds which require accurate timing but must be streamed from the network or played from disk, use a {{domxref("AudioWorkletNode")}} to implement its playback.</p>
+<p>The <strong><code>AudioBufferSourceNode</code></strong> interface is an {{domxref("AudioScheduledSourceNode")}} which represents an audio source consisting of in-memory audio data, stored in an {{domxref("AudioBuffer")}}.</p>
+
+<p>This interface is especially useful for playing back audio which has particularly stringent timing accuracy requirements, such as for sounds that must match a specific rhythm and can be kept in memory rather than being played from disk or the network. To play sounds which require accurate timing but must be streamed from the network or played from disk, use a {{domxref("AudioWorkletNode")}} to implement its playback.</p>
 
 <p>{{InheritanceDiagram(600, 140)}}</p>
 
@@ -23,7 +26,7 @@ tags:
 <p>Multiple calls to {{domxref("AudioScheduledSourceNode/stop", "stop()")}} are allowed. The most recent call replaces the previous one, if the <code>AudioBufferSourceNode</code> has not already reached the end of the buffer.</p>
 
 <p><br>
- <img alt="The AudioBufferSourceNode takes the content of an AudioBuffer and m" src="webaudioaudiobuffersourcenode.png" style="display: block; margin: 0px auto;"></p>
+ <img alt="The AudioBufferSourceNode takes the content of an AudioBuffer and m" src="webaudioaudiobuffersourcenode.png"></p>
 
 <table class="properties">
  <tbody>
@@ -46,7 +49,7 @@ tags:
 
 <dl>
  <dt>{{domxref("AudioBufferSourceNode.AudioBufferSourceNode", "AudioBufferSourceNode()")}}</dt>
- <dd>Creates and returns a new <code>AudioBufferSourceNode</code> object. An {{domxref("AudioBufferSourceNode")}} can be instantiated using the {{domxref("BaseAudioContext/createBufferSource", "AudioContext.createBufferSource()")}} method.</dd>
+ <dd>Creates and returns a new <code>AudioBufferSourceNode</code> object. As an alternative, you can use the {{domxref("BaseAudioContext.createBufferSource()")}} factory method; see <a href="/en-US/docs/Web/API/AudioNode#creating_an_audionode">Creating an AudioNode</a>.</dd>
 </dl>
 
 <h2 id="Properties">Properties</h2>
@@ -81,7 +84,7 @@ tags:
 <p>In this example, we create a two-second buffer, fill it with white noise, and then play it using an <code>AudioBufferSourceNode</code>. The comments should clearly explain what is going on.</p>
 
 <div class="note">
-<p>You can also <a class="external external-icon" href="https://mdn.github.io/webaudio-examples/audio-buffer/">run the code live</a>, or <a class="external external-icon" href="https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html">view the source</a>.</p>
+<p><strong>Note:</strong> You can also <a class="external external-icon" href="https://mdn.github.io/webaudio-examples/audio-buffer/">run the code live</a>, or <a class="external external-icon" href="https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html">view the source</a>.</p>
 </div>
 
 <pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -113,29 +116,16 @@ source.connect(audioCtx.destination);
 source.start();</pre>
 
 <div class="note">
-<p>For a <code>decodeAudioData()</code> example, see the {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}} page.</p>
+<p><strong>Note:</strong> For a <code>decodeAudioData()</code> example, see the {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}} page.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#AudioBufferSourceNode', 'AudioBufferSourceNode')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.AudioBufferSourceNode")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

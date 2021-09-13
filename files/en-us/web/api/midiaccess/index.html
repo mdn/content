@@ -6,8 +6,9 @@ tags:
   - Interface
   - Reference
   - Web MIDI API
+browser-compat: api.MIDIAccess
 ---
-<p>{{SeeCompatTable}}{{APIRef("Web MIDI API")}} </p>
+<div>{{securecontext_header}}{{APIRef("Web MIDI API")}}</div>
 
 <p>The <strong><code>MIDIAccess</code></strong> interface of the <a href="/en-US/docs/Web/API/Web_MIDI_API">Web MIDI API</a> provides methods for listing MIDI input and output devices, and obtaining access to those devices.</p>
 
@@ -31,6 +32,10 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
+<p>The {{domxref("Navigator.requestMIDIAccess()")}} method returns a promise that resolves with a {{domxref("MIDIAccess")}} object. Information about the input and output ports is returned.</p>
+
+<p>When a port changes state, information about that port is printed to the console.</p>
+
 <pre class="brush: js">navigator.requestMIDIAccess()
   .then(function(access) {
 
@@ -47,21 +52,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebMIDI API','#midiaccess-interface')}}</td>
-   <td>{{Spec2('WebMIDI API')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MIDIAccess")}}</p>
+<p>{{Compat}}</p>

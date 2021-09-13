@@ -7,6 +7,7 @@ tags:
   - CSSOM
   - Interface
   - Reference
+browser-compat: api.CSSKeyframesRule
 ---
 <div>{{APIRef("CSSOM")}}</div>
 
@@ -30,9 +31,9 @@ tags:
 <p><em>Inherits methods from its ancestor {{domxref("CSSRule")}}.</em></p>
 
 <dl>
- <dt id="appendRule">{{domxref("CSSKeyframesRule.appendRule()")}}</dt>
+ <dt>{{domxref("CSSKeyframesRule.appendRule()")}}</dt>
  <dd>Inserts a new keyframe rule into the current CSSKeyframesRule. The parameter is a {{domxref("DOMString")}} containing a keyframe in the same format as an entry of a {{cssxref("@keyframes")}} at-rule. If it contains more than one keyframe rule, a {{domxref("DOMException")}} with a <code>SYNTAX_ERR</code> is thrown.</dd>
- <dt id="deleteRule">{{domxref("CSSKeyframesRule.deleteRule()")}}</dt>
+ <dt>{{domxref("CSSKeyframesRule.deleteRule()")}}</dt>
  <dd>Deletes a keyframe rule from the current CSSKeyframesRule. The parameter is the index of the keyframe to be deleted, expressed as a {{domxref("DOMString")}} resolving as a number between <code>0%</code> and <code>100%</code>.</dd>
  <dt>{{domxref("CSSKeyframesRule.findRule()")}}</dt>
  <dd>Returns a keyframe rule corresponding to the given key. The key is a {{domxref("DOMString")}} containing an index of the keyframe to be returned, resolving to a percentage between <code>0%</code> and <code>100%</code>. If no such keyframe exists, <code>findRule</code> returns <code>null</code>.</dd>
@@ -41,7 +42,7 @@ tags:
 <h2 id="Example">Example</h2>
 
 <p>
-    The CSS includes a keyframes at-rule. This will be the first {{domxref("CSSRule")}} returned by <code>document.styleSheets[0].cssRules</code>. 
+    The CSS includes a keyframes at-rule. This will be the first {{domxref("CSSRule")}} returned by <code>document.styleSheets[0].cssRules</code>.
     <code>myRules[0]</code> returns a {{domxref("CSSKeyframesRule")}} object.</p>
 
 <pre class="brush: css">@keyframes slidein {
@@ -59,26 +60,11 @@ let keyframes = myRules[0]; // a CSSKeyframesRule </pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Animations', '#interface-csskeyframesrule', 'CSSKeyframesRule')}}</td>
-   <td>{{Spec2('CSS3 Animations')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.CSSKeyframesRule")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

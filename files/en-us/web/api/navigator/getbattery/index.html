@@ -2,21 +2,22 @@
 title: Navigator.getBattery()
 slug: Web/API/Navigator/getBattery
 tags:
-- API
-- Battery API
-- Device API
-- Method
-- Navigator
-- Reference
-- getBattery
+  - API
+  - Battery API
+  - Device API
+  - Method
+  - Navigator
+  - Reference
+  - getBattery
+browser-compat: api.Navigator.getBattery
 ---
-<div>{{ ApiRef("Battery API") }}{{deprecated_header}}</div>
+<div>{{ ApiRef("Battery API") }}</div>
 
 <p>The <strong><code>getBattery()</code></strong> method provides information about the
   system's battery. It returns a battery promise, which is resolved in a
   {{domxref("BatteryManager")}} object providing also some new events you can handle to
   monitor the battery status. This implements the <a
-    href="/en-US/docs/WebAPI/Battery_Status">Battery Status API</a>; see that
+    href="/en-US/docs/Web/API/Battery_Status_API">Battery Status API</a>; see that
   documentation for additional details, a guide to using the API, and sample code.</p>
 
 <div class="notecard note">
@@ -78,32 +79,16 @@ navigator.getBattery().then(function(battery) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("Battery API", "#dom-navigator-getbattery",
-        "Navigator.getBattery()")}}</td>
-      <td>{{Spec2("Battery API")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Navigator.getBattery")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/WebAPI/Battery_Status">Battery Status API</a></li>
+  <li><a href="/en-US/docs/Web/API/Battery_Status_API">Battery Status API</a></li>
   <li><code>Feature-Policy</code> {{HTTPHeader("Feature-Policy/battery", "battery")}}
     feature</li>
 </ul>

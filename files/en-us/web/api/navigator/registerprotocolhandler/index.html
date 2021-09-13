@@ -9,12 +9,13 @@ tags:
   - Reference
   - Web-Based Protocol Handlers
   - registerProtocolHandler
+browser-compat: api.Navigator.registerProtocolHandler
 ---
 <div>{{APIRef("HTML DOM")}}{{securecontext_header}}</div>
 
-<p><span class="seoSummary">The <strong>{{domxref("Navigator")}}</strong> method
+<p>The <strong>{{domxref("Navigator")}}</strong> method
     <code><strong>registerProtocolHandler()</strong></code> lets websites register their
-    ability to open or handle particular URL schemes (aka protocols).</span></p>
+    ability to open or handle particular URL schemes (aka protocols).</p>
 
 <p>For example, this API lets webmail sites open <code>mailto:</code> URLs, or <abbr
     title="Voice over Internet Protocol, also called IP telephony">VoIP</abbr> sites open
@@ -25,13 +26,13 @@ tags:
 <pre class="brush: js">navigator.registerProtocolHandler(<var>scheme</var>, <var>url</var>);
 </pre>
 
-<div class="note"><strong>Note:</strong> The original implementation required three
+<div class="note"><p><strong>Note:</strong> The original implementation required three
   arguments:
   <code>navigator.registerProtocolHandler(<var>scheme</var>, <var>url, title</var>)</code>,
   which most browsers still support (see the <a
     href="#browser_compatibility">compatibility table below</a>). It is recommended to
   still set the title, since browsers that support the updated spec will most likely be
-  backwards-compatible and still accept the title (but not use it).</div>
+  backwards-compatible and still accept the title (but not use it).</p></div>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -45,19 +46,19 @@ tags:
       <code>%s</code></strong>, as a placeholder that will be replaced with the <a
       href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent">escaped</a>
     URL to be handled.
-    <div class="note"><strong>Note:</strong> The handler URL must use the
-      <code>https</code> scheme. Older browsers also supported <code>http</code>.</div>
+    <div class="note"><p><strong>Note:</strong> The handler URL must use the
+      <code>https</code> scheme. Older browsers also supported <code>http</code>.</p></div>
   </dd>
-  <dt><code><var>title</var></code> {{Obsolete_Inline}}</dt>
+  <dt><code><var>title</var></code> {{deprecated_inline}}</dt>
   <dd>A human-readable title string for the handler. <strong>This will be displayed to the
       user</strong>, such as prompting “Allow this site to handle [scheme] links?” or
     listing registered handlers in the browser’s settings.
-    <div class="note"><strong>Note:</strong> The title has been removed from the spec due
+    <div class="note"><p><strong>Note:</strong> The title has been removed from the spec due
       to spoofing concerns, but some browsers <strong>still require it</strong> (check the
       <a href="#browser_compatibility">compatibility table below</a>). It is recommended
       to <strong>always set the title</strong>, since browsers that support the updated
       spec most likely will be backwards-compatible and still accept the title (but not
-      use it).</div>
+      use it).</p></div>
   </dd>
 </dl>
 
@@ -109,6 +110,7 @@ tags:
     <li><code>ircs</code></li>
     <li><code>magnet</code></li>
     <li><code>mailto</code></li>
+    <li><code>matrix</code></li>
     <li><code>mms</code></li>
     <li><code>news</code></li>
     <li><code>nntp</code></li>
@@ -152,27 +154,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', 'system-state.html#custom-handlers',
-        'registerProtocolHandler()')}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td>Living standard</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Navigator.registerProtocolHandler")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -6,18 +6,21 @@ tags:
   - Property
   - Reference
   - XMLHttpRequest
+browser-compat: api.XMLHttpRequest.readyState
 ---
 <p>{{APIRef('XMLHttpRequest')}}</p>
 
 <p>The <strong>XMLHttpRequest.readyState</strong> property returns the state an XMLHttpRequest client is in. An <abbr title="XMLHttpRequest">XHR</abbr> client exists in one of the following states:</p>
 
 <table class="standard-table">
+ <thead>
+   <tr>
+     <th>Value</th>
+     <th>State</th>
+     <th>Description</th>
+   </tr>
+ </thead>
  <tbody>
-  <tr>
-   <td class="header">Value</td>
-   <td class="header">State</td>
-   <td class="header">Description</td>
-  </tr>
   <tr>
    <td><code>0</code></td>
    <td><code>UNSENT</code></td>
@@ -60,7 +63,7 @@ tags:
 </dl>
 
 <div class="note">
-<p>The state names are different in versions of Internet Explorer earlier than 11. Instead of <code>UNSENT</code>, <code>OPENED</code>,<code> HEADERS_RECEIVED</code>,<code> LOADING</code> and <code>DONE</code>, the names <code>READYSTATE_UNINITIALIZED</code> (0), <code>READYSTATE_LOADING</code> (1), <code>READYSTATE_LOADED</code> (2), <code>READYSTATE_INTERACTIVE</code> (3) and <code>READYSTATE_COMPLETE</code> (4) are used.</p>
+<p><strong>Note:</strong> The state names are different in versions of Internet Explorer earlier than 11. Instead of <code>UNSENT</code>, <code>OPENED</code>,<code> HEADERS_RECEIVED</code>,<code> LOADING</code> and <code>DONE</code>, the names <code>READYSTATE_UNINITIALIZED</code> (0), <code>READYSTATE_LOADING</code> (1), <code>READYSTATE_LOADED</code> (2), <code>READYSTATE_INTERACTIVE</code> (3) and <code>READYSTATE_COMPLETE</code> (4) are used.</p>
 </div>
 
 <h2 id="Example">Example</h2>
@@ -84,21 +87,8 @@ xhr.send(null);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('XMLHttpRequest', '#states')}}</td>
-   <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td>WHATWG living standard</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.XMLHttpRequest.readyState")}}</p>
+<p>{{Compat}}</p>

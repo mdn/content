@@ -6,10 +6,13 @@ tags:
   - HTML DOM
   - Navigator
   - Property
+browser-compat: api.Navigator.cookieEnabled
 ---
 <div>{{ApiRef("HTML DOM")}}</div>
 
-<p><span class="seoSummary"><code>navigator.cookieEnabled</code> returns a Boolean value that indicates whether cookies are enabled or not.</span> The property is read-only.</p>
+<p><code>navigator.cookieEnabled</code> returns a Boolean value that indicates whether cookies are enabled or not.</p>
+
+<p>The property is read-only.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -20,9 +23,9 @@ tags:
  <li><code>cookieEnabled</code> is a <a href="/en-US/docs/Glossary/Boolean">Boolean</a>: <code>true</code> or <code>false</code>.</li>
 </ul>
 
-<div class="note"><strong>Note:</strong> When the browser is configured to block third-party cookies, and <code>navigator.cookieEnabled</code> is invoked inside a third-party iframe, it returns <code>true</code> in Safari, Edge Spartan and IE (while trying to set a cookie in such scenario would fail). It returns <code>false</code> in Firefox and Chromium-based browsers.</div>
+<div class="note"><p><strong>Note:</strong> When the browser is configured to block third-party cookies, and <code>navigator.cookieEnabled</code> is invoked inside a third-party iframe, it returns <code>true</code> in Safari, Edge Spartan and IE (while trying to set a cookie in such scenario would fail). It returns <code>false</code> in Firefox and Chromium-based browsers.</p></div>
 
-<div class="note"><strong>Note:</strong> Web browsers may prevent writing certain cookies in certain scenarios. For example, Chrome 80+ does not allow creating cookies with <code><a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite">SameSite=None</a></code> attribute, <a href="https://www.chromestatus.com/feature/5633521622188032">unless they are created over HTTPS and with <code>Secure</code> attribute.</a></div>
+<div class="note"><p><strong>Note:</strong> Web browsers may prevent writing certain cookies in certain scenarios. For example, Chrome 80+ does not allow creating cookies with <code><a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite">SameSite=None</a></code> attribute, <a href="https://www.chromestatus.com/feature/5633521622188032">unless they are created over HTTPS and with <code>Secure</code> attribute.</a></p></div>
 
 <h2 id="Example">Example</h2>
 
@@ -33,23 +36,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "webappapis.html#dom-navigator-cookieenabled", "Navigator.cookieEnabled")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Navigator.cookieEnabled")}}</p>
+<p>{{Compat}}</p>

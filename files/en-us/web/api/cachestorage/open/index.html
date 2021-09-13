@@ -11,18 +11,19 @@ tags:
   - Service worker API
   - ServiceWorker
   - open
+browser-compat: api.CacheStorage.open
 ---
 <p>{{APIRef("Service Workers API")}}</p>
 
-<p><span class="seoSummary">The <strong><code>open()</code></strong> method of the
+<p>The <strong><code>open()</code></strong> method of the
     {{domxref("CacheStorage")}} interface returns a {{jsxref("Promise")}} that resolves to
-    the {{domxref("Cache")}} object matching the <code>cacheName</code>.</span></p>
+    the {{domxref("Cache")}} object matching the <code>cacheName</code>.</p>
 
 <p>You can access <code>CacheStorage</code> through the global
-  {{domxref("WindowOrWorkerGlobalScope.caches", "caches")}} property.</p>
+  {{domxref("caches")}} property.</p>
 
 <div class="note">
-  <p><strong>Note</strong>: If the specified {{domxref("Cache")}} does not exist, a new
+  <p><strong>Note:</strong> If the specified {{domxref("Cache")}} does not exist, a new
     cache is created with that <code>cacheName</code> and a {{jsxref("Promise")}} that
     resolves to this new {{domxref("Cache")}} object is returned.</p>
 </div>
@@ -74,25 +75,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Service Workers', '#cache-storage-open', 'CacheStorage: open')}}
-      </td>
-      <td>{{Spec2('Service Workers')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.CacheStorage.open")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -100,5 +87,5 @@ tags:
   <li><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Using Service
       Workers</a></li>
   <li>{{domxref("Cache")}}</li>
-  <li>{{domxref("WindowOrWorkerGlobalScope.caches")}}</li>
+  <li>{{domxref("caches")}}</li>
 </ul>

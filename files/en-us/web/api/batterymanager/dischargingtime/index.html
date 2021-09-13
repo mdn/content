@@ -7,7 +7,7 @@ tags:
   - NeedsMarkupWork
   - Property
   - Reference
-  - Référence(2)
+browser-compat: api.BatteryManager.dischargingTime
 ---
 <div>{{deprecated_header}}</div>
 
@@ -17,7 +17,7 @@ tags:
   discharged.</p>
 
 <div class="note">
-  <p>Even if the time returned is precise to the second, browsers round them to a higher
+  <p><strong>Note:</strong> Even if the time returned is precise to the second, browsers round them to a higher
     interval (typically to the closest 15 minutes) for privacy reasons.</p>
 </div>
 
@@ -42,7 +42,7 @@ tags:
 
 <h3 id="JavaScript_Content">JavaScript Content</h3>
 
-<pre class="brush: js;  highlight:[3]">navigator.getBattery().then(function(battery) {
+<pre class="brush: js; ">navigator.getBattery().then(function(battery) {
 
     var time = battery.dischargingTime;
 
@@ -54,26 +54,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("Battery API")}}</td>
-      <td>{{Spec2("Battery API")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.BatteryManager.dischargingTime")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

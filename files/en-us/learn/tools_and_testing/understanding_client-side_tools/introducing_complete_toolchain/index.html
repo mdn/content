@@ -17,7 +17,7 @@ tags:
 
 <p class="summary">In the final couple of articles in the series we will solidify your tooling knowledge by walking you through the process of building up a sample case study toolchain. We'll go all the way from setting up a sensible development environment and putting transformation tools in place to actually deploying your app on Netlify. In this article we'll introduce the case study, set up our development environment, and set up our code transformation tools.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -142,7 +142,7 @@ tags:
 
 <p>You can interact with git in a number of different ways, from using the command line to issue commands, to using a <a href="https://git-scm.com/downloads/guis">git GUI app</a> to issue the same commands by pushing buttons, or even from directly inside your code editor, as seen in the Visual Studio Code example below:</p>
 
-<p><img alt="github integration shown in VS Code" src="vscode-git.png" style="border-style: solid; border-width: 1px;"></p>
+<p><img alt="github integration shown in VS Code" src="vscode-git.png"></p>
 
 <p>Anyway, installing git is all we need to do for now. Let's move on.</p>
 
@@ -218,7 +218,7 @@ tags:
 
 <p>As with other tools, code editor integration support is typically good for eslint, and potentially more useful as it can give us real-time feedback when issues crop up:</p>
 
-<p><img alt="eslint error integration shown in VS Code" src="eslint-error.png" style="border-style: solid; border-width: 1px;"></p>
+<p><img alt="eslint error integration shown in VS Code" src="eslint-error.png"></p>
 
 <h2 id="Configuring_the_initial_project">Configuring the initial project</h2>
 
@@ -281,7 +281,7 @@ cd will-it-miss</pre>
 <p>We have our project files in place. That’s all we need to do for now!</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: If you want to just take our existing project and set it up, ready to use, you could go into the root directory of the unzipped downloaded, and run one single installation command to install all of the project’s dependencies: <code>npm install</code>. This is possible because we installed all the tools locally, not globally, and highlights why it is such a powerful option.</p>
+<p><strong>Note</strong>: To set up the project on your local machine, go to the root directory of the unzipped folder, open a terminal in that location, and execute the <code>npm install</code> command in the terminal. This will install all of the project dependencies that are stored in the `package.json` file.</p>
 </div>
 
 <h4 id="Installing_our_tools">Installing our tools</h4>
@@ -332,7 +332,7 @@ cd will-it-miss</pre>
   }
 }</pre>
 
-  <p>The above eslint configuration says that we want to use the "recommended" eslint settings, that we're going to allow usage of ES6 features (such as <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map()</a></code> or <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/Set">Set()</a></code>), that we can use module <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/import">import</a></code> statements, and that using <code><a href="/en-US/docs/Web/API/Console/log">console.log()</a></code> is allowed.</p>
+  <p>The above eslint configuration says that we want to use the "recommended" eslint settings, that we're going to allow usage of ES6 features (such as <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map()</a></code> or <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/Set">Set()</a></code>), that we can use module <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/import">import</a></code> statements, and that using <code><a href="/en-US/docs/Web/API/console/log">console.log()</a></code> is allowed.</p>
  </li>
  <li>
   <p>However, in the project's source files we are using React JSX syntax (for your real projects you might use React or Vue or any other framework, or no framework at all!).</p>
@@ -401,7 +401,7 @@ cd will-it-miss</pre>
 
 <p>Until then, Parcel will do the transformation between nested CSS and natively supported CSS with the help of <a href="https://postcss.org/">PostCSS</a>, which Parcel works with out of the box. Since we've specifically decided this project should use CSS nesting (instead of Sass), the project will need to include a PostCSS plugin.</p>
 
-<p>Let's use the <a href="http://preset-env.cssdb.org/">postcss-preset-env</a>, which lets us "use tomorrow's CSS today". To do so, follow these steps:</p>
+<p>Let's use the <a href="https://preset-env.cssdb.org/">postcss-preset-env</a>, which lets us "use tomorrow's CSS today". To do so, follow these steps:</p>
 
 <ol>
  <li>

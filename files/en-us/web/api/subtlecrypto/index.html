@@ -10,10 +10,11 @@ tags:
   - Reference
   - SubtleCrypto
   - Web Crypto API
+browser-compat: api.SubtleCrypto
 ---
 <div>{{APIRef("Web Crypto API")}}{{SecureContext_header}}</div>
 
-<p><span class="seoSummary">The <code><strong>SubtleCrypto</strong></code> interface of the <a href="/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API</a> provides a number of low-level cryptographic functions. Access to the features of <code>SubtleCrypto</code> is obtained through the {{domxref("Crypto.subtle", "subtle")}} property of the {{domxref("Crypto")}} object you get from {{domxref("Window.crypto")}}.</span></p>
+<p>The <code><strong>SubtleCrypto</strong></code> interface of the <a href="/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API</a> provides a number of low-level cryptographic functions. Access to the features of <code>SubtleCrypto</code> is obtained through the {{domxref("Crypto.subtle", "subtle")}} property of the {{domxref("Crypto")}} object you get from {{domxref("Window.crypto")}}.</p>
 
 <div class="warning">
 <p><strong>Warning:</strong> This API provides a number of low-level cryptographic primitives. It's very easy to misuse them, and the pitfalls involved can be very subtle.</p>
@@ -41,7 +42,7 @@ tags:
  <dt>{{domxref("SubtleCrypto.sign()")}}</dt>
  <dd>Returns a {{jsxref("Promise")}} that fulfills with the signature corresponding to the text, algorithm, and key given as parameters.</dd>
  <dt>{{domxref("SubtleCrypto.verify()")}}</dt>
- <dd>Returns a {{jsxref("Promise")}} that fulfills with a {{jsxref("Boolean")}} value indicating if the signature given as a parameter matches the text, algorithm, and key that are also given as parameters.</dd>
+ <dd>Returns a {{jsxref("Promise")}} that fulfills with a boolean value indicating if the signature given as a parameter matches the text, algorithm, and key that are also given as parameters.</dd>
  <dt>{{domxref("SubtleCrypto.digest()")}}</dt>
  <dd>Returns a {{jsxref("Promise")}} that fulfills with a digest generated from the algorithm and text given as parameters.</dd>
  <dt>{{domxref("SubtleCrypto.generateKey()")}}</dt>
@@ -68,9 +69,11 @@ tags:
 
 <p>These are the functions you can use to implement security features such as privacy and authentication in a system. The <code>SubtleCrypto</code> API provides the following cryptography functions:</p>
 
-<p>* {{DOMxRef("SubtleCrypto.sign","sign()")}} and {{DOMxRef("SubtleCrypto.verify","verify()")}}: create and verify digital signatures.<br>
- * {{DOMxRef("SubtleCrypto.encrypt","encrypt()")}} and {{DOMxRef("SubtleCrypto.decrypt","decrypt()")}}: encrypt and decrypt data.<br>
- * {{DOMxRef("SubtleCrypto.digest","digest()")}}: create a fixed-length, collision-resistant digest of some data.</p>
+<ul>
+  <li>{{DOMxRef("SubtleCrypto.sign","sign()")}} and {{DOMxRef("SubtleCrypto.verify","verify()")}}: create and verify digital signatures.</li>
+  <li>{{DOMxRef("SubtleCrypto.encrypt","encrypt()")}} and {{DOMxRef("SubtleCrypto.decrypt","decrypt()")}}: encrypt and decrypt data.</li>
+  <li>{{DOMxRef("SubtleCrypto.digest","digest()")}}: create a fixed-length, collision-resistant digest of some data.</li>
+</ul>
 
 <h3 id="Key_management_functions">Key management functions</h3>
 
@@ -107,25 +110,21 @@ tags:
   <tr>
    <th scope="row"></th>
    <th scope="col">
-    <p><a href="/en-US/docs/Web/API/SubtleCrypto/sign">sign()</a></p>
-
-    <p><a href="/en-US/docs/Web/API/SubtleCrypto/verify">verify()</a></p>
+     <a href="/en-US/docs/Web/API/SubtleCrypto/sign">sign()</a><br>
+     <a href="/en-US/docs/Web/API/SubtleCrypto/verify">verify()</a>
    </th>
    <th scope="col">
-    <p><a href="/en-US/docs/Web/API/SubtleCrypto/encrypt">encrypt()</a></p>
-
-    <p><a href="/en-US/docs/Web/API/SubtleCrypto/decrypt">decrypt()</a></p>
+    <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt">encrypt()</a><br>
+    <a href="/en-US/docs/Web/API/SubtleCrypto/decrypt">decrypt()</a>
    </th>
    <th scope="col"><a href="/en-US/docs/Web/API/SubtleCrypto/digest">digest()</a></th>
    <th scope="col">
-    <p><a href="/en-US/docs/Web/API/SubtleCrypto/deriveBits">deriveBits()</a></p>
-
-    <p><a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey">deriveKey()</a></p>
+    <a href="/en-US/docs/Web/API/SubtleCrypto/deriveBits">deriveBits()</a><br>
+    <a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey">deriveKey()</a>
    </th>
    <th scope="col">
-    <p><a href="/en-US/docs/Web/API/SubtleCrypto/wrapKey">wrapKey()</a></p>
-
-    <p><a href="/en-US/docs/Web/API/SubtleCrypto/unwrapKey">unwrapKey()</a></p>
+    <a href="/en-US/docs/Web/API/SubtleCrypto/wrapKey">wrapKey()</a><br>
+    <a href="/en-US/docs/Web/API/SubtleCrypto/unwrapKey">unwrapKey()</a>
    </th>
   </tr>
  </thead>
@@ -263,24 +262,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{ SpecName('Web Crypto API', '#subtlecrypto-interface', 'SubtleCrypto') }}</td>
-   <td>{{ Spec2('Web Crypto API') }}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.SubtleCrypto")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

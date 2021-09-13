@@ -8,13 +8,16 @@ tags:
 - Reference
 - Web Audio API
 - mediaElement
+browser-compat: api.MediaElementAudioSourceNode.mediaElement
 ---
 <div>{{APIRef("Web Audio API")}}</div>
 
-<p><span class="seoSummary">The {{domxref("MediaElementAudioSourceNode")}} interface's
+<p>The {{domxref("MediaElementAudioSourceNode")}} interface's
     read-only <code><strong>mediaElement</strong></code> property indicates the
     {{domxref("HTMLMediaElement")}} that contains the audio track from which the node is
-    receiving audio.</span> This stream was specified when the node was first created,
+    receiving audio.</p>
+
+<p>This stream was specified when the node was first created,
   either using the {{domxref("MediaElementAudioSourceNode.MediaElementAudioSourceNode",
   "MediaElementAudioSourceNode()")}} constructor or the
   {{domxref("AudioContext.createMediaElementSource()")}} method.</p>
@@ -43,23 +46,8 @@ console.log(source.mediaElement);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Web Audio
-        API','#dom-mediaelementaudiosourcenode-mediaelement','MediaElementAudioSourceNode.mediaElement')}}
-      </td>
-      <td>{{Spec2('Web Audio API')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MediaElementAudioSourceNode.mediaElement")}}</p>
+<p>{{Compat}}</p>

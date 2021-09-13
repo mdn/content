@@ -8,12 +8,13 @@ tags:
 - NeedsSpecTable
 - Node
 - Reference
+browser-compat: api.Node.isDefaultNamespace
 ---
 <div>{{APIRef("DOM")}}</div>
 
 <p>The <strong><code>Node.isDefaultNamespace()</code></strong> method accepts a namespace
-  URI as an argument and returns a {{jsxref("Boolean")}} with a value of <code>true</code>
-  if the namespace is the default namespace on the given node or <code>false</code> if
+  URI as an argument and returns a boolean value that is <code>true</code>
+  if the namespace is the default namespace on the given node and <code>false</code> if
   not.</p>
 
 <h2 id="Syntax">Syntax</h2>
@@ -28,7 +29,7 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p><code>result</code> is a {{jsxref("Boolean")}} that holds the return value
+<p><code>result</code> is a boolean value that holds the return value
   <code>true</code> or <code>false</code>.</p>
 
 <h2 id="Example">Example</h2>
@@ -40,24 +41,8 @@ alert(el.isDefaultNamespace(XULNS)); // true</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("DOM WHATWG", "#dom-node-isdefaultnamespace", "Node:
-        isDefaultNamespace")}}</td>
-      <td>{{Spec2("DOM WHATWG")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Node.isDefaultNamespace")}}</p>
+<p>{{Compat}}</p>

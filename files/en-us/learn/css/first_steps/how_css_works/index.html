@@ -12,7 +12,7 @@ tags:
 
 <p class="summary">We have learned the basics of CSS, what it is for and how to write simple stylesheets. In this lesson we will take a look at how a browser takes CSS and HTML and turns that into a webpage.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -40,7 +40,7 @@ tags:
 
 <p>The following diagram also offers a simple view of the process.</p>
 
-<p><img alt="" src="rendering.svg" style="max-width: 635px;"></p>
+<p><img alt="Rendering process overview" src="rendering.svg"></p>
 
 <h2 id="About_the_DOM">About the DOM</h2>
 
@@ -132,7 +132,7 @@ tags:
 
 <p>{{EmbedLiveSample('Skipping_example', '100%', 200)}}</p>
 
-<p>This behavior is very useful. It means that you can use new CSS as an enhancement, knowing that no error will occur if it is not understood — the browser will either get the new feature or not. Coupled with the way that the cascade works, and the fact that browsers will use the last CSS they come across in a stylesheet when you have two rules with the same specificity you can also offer alternatives for browsers that don't support new CSS.</p>
+<p>This behavior is very useful. It means that you can use new CSS as an enhancement, knowing that no error will occur if it is not understood — the browser will either get the new feature or not. This enables basic fallback styling.</p>
 
 <p>This works particularly well when you want to use a value that is quite new and not supported everywhere. For example, some older browsers do not support <code>calc()</code> as a value. I might give a fallback width for a box in pixels, then go on to give a width with a <code>calc()</code> value of <code>100% - 50px</code>. Old browsers will use the pixel version, ignoring the line about <code>calc()</code> as they don't understand it. New browsers will interpret the line using pixels, but then override it with the line using <code>calc()</code> as that line appears later in the cascade.</p>
 

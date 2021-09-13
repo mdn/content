@@ -6,10 +6,13 @@ tags:
   - Sensors
   - Window Event
   - events
+browser-compat: api.Window.deviceorientation_event
 ---
 <div>{{APIRef}}</div>
 
-<p><span class="seoSummary">The <code>deviceorientation</code> event is fired when fresh data is available from an orientation sensor about the current orientation of the device as compared to the Earth coordinate frame. This data is gathered from a magnetometer inside the device.</span> See <a href="/en-US/docs/DOM/Orientation_and_motion_data_explained">Orientation and motion data explained</a> for details.</p>
+<p>The <code>deviceorientation</code> event is fired when fresh data is available from an orientation sensor about the current orientation of the device as compared to the Earth coordinate frame. This data is gathered from a magnetometer inside the device.</p>
+
+<p>See <a href="/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained">Orientation and motion data explained</a> for details.</p>
 
 <table class="properties">
  <tbody>
@@ -54,29 +57,16 @@ var handleOrientationEvent = function(frontToBack, leftToRight, rotateDegrees) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Device Orientation", "#deviceorientation", "DeviceOrientation event")}}</td>
-   <td>{{Spec2("Device Orientation")}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Window.deviceorientation_event")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/Events/devicemotion"><code>devicemotion</code></a></li>
+ <li><a href="/en-US/docs/Web/API/Window/devicemotion_event"><code>devicemotion</code></a></li>
  <li><a href="/en-US/docs/Web/API/Detecting_device_orientation">Detecting device orientation</a></li>
  <li><a href="/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained">Orientation and motion data explained</a></li>
  <li>Simulating orientation events on desktop browsers with the <a href="https://louisremi.github.com/orientation-devtool/">orientation-devtool</a></li>

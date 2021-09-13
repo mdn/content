@@ -8,10 +8,11 @@ tags:
 - ShadowRoot
 - mode
 - shadow dom
+browser-compat: api.ShadowRoot.mode
 ---
 <div>{{APIRef("Shadow DOM")}}</div>
 
-<p>The <strong><code>mode</code></strong> property of the {{domxref("ShadowRoot")}}
+<p>The <strong><code>mode</code></strong> read-only property of the {{domxref("ShadowRoot")}}
 	specifies its mode — either <code>open</code> or <code>closed</code>. This defines
 	whether or not the shadow root's internal features are accessible from JavaScript.</p>
 
@@ -33,32 +34,23 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js">let customElem = document.querySelector('my-shadow-dom-element');
-let shadow = customElem.shadowRoot;
+<pre class="brush: js">
+  // We create a closed shadow root, that is not accessible
+  let element = document.createElement("div");
+  element.attachShadow({ mode: "closed" });
+  element.shadowRoot // null as the shadow root is closed
 
-// Another way to check whether the shadow root is open; it will return null if not
-if(shadow) {
-  // If it is open, close it to stop people stealing our secrets!
-  shadow.mode = 'closed';
-}</pre>
+  // We create an open shadow root, that is accessible
+  let element2 = document.createElement("div");
+  element2.attachShadow({ mode: "open" });
+  console.log("The shadow is" + element2.shadowRoot.mode) // logs "The shadow is open"
+  element2.shadowRoot.innerHTML("<p>Opened shadow</p>") // The shadow is open, we can access it from outside
+</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-		<tr>
-			<td>{{SpecName('DOM WHATWG','#dom-shadowroot-mode','ShadowRoot.mode')}}</td>
-			<td>{{Spec2('DOM WHATWG')}}</td>
-			<td></td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.ShadowRoot.mode")}}</p>
+<p>{{Compat}}</p>

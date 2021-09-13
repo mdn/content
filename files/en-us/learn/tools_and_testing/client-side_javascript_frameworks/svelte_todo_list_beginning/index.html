@@ -19,7 +19,7 @@ tags:
 
 <p class="summary">We want our users to be able to browse, add and delete tasks, and also to mark them as complete. This will be the basic functionality that we'll be developing in this tutorial series, plus we'll look at some more advanced concepts along the way too.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -125,7 +125,7 @@ export default app</pre>
 
 <p>Now if you check your testing server URL you'll see our <code>Todos.svelte</code> component being rendered:</p>
 
-<p><img alt="basic component rendering which a title that says 'Svelte to-do list'" src="02-todos-component-rendered.png" style="border-style: solid; border-width: 1px; display: block; margin: 0 auto;"></p>
+<p><img alt="basic component rendering which a title that says 'Svelte to-do list'" src="02-todos-component-rendered.png"></p>
 
 <h2 id="Adding_static_markup">Adding static markup</h2>
 
@@ -254,7 +254,7 @@ export default app</pre>
 
 <p>Check the rendered out again, and you'll see something like this:</p>
 
-<p><img alt="A todo list app, but unstyled, with a title of `what needs to be done`, inputs, checkboxes, etc." src="03-unstyled-todo-app.png" style="border-style: solid; border-width: 1px;"></p>
+<p><img alt="A todo list app, but unstyled, with a title of `what needs to be done`, inputs, checkboxes, etc." src="03-unstyled-todo-app.png"></p>
 
 <p>The HTML markup above is not very nicely styled and it's also functionally useless. Nevertheless, let's have a look at the markup and see how it relates to our desired features:</p>
 
@@ -330,7 +330,7 @@ created public/build/bundle.js in 220ms
 </pre>
 
 <div class="notecard note">
-<p><strong>Note</strong>: With VSCode you can automatically add this ignore comment by clicking on the <em>Quick fix...</em> link or pressing <kbd>Ctrl</kbd> + <kbd>+</kbd>.</p>
+<p><strong>Note</strong>: With VSCode you can automatically add this ignore comment by clicking on the <em>Quick fix...</em> link or pressing <kbd>Ctrl</kbd> + <kbd>.</kbd>.</p>
 </div>
 
 <p>If you want to globally disable this warning you can add this <code>onwarn</code> handler to your <code>rollup.config.js</code> file inside the configuration for the <code>Svelte</code> plugin, like this:</p>
@@ -748,5 +748,15 @@ body {
    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">TypeScript support in Svelte</a></li>
    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">Deployment and next steps</a></li>
   </ul>
+ </li>
+ <li>Angular
+   <ul>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started">Getting started with Angular</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning">Beginning our Angular todo list app</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling">Styling our Angular app</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component">Creating an item component</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering">Filtering our to-do items</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building">Building Angular applications and further resources</a></li>
+   </ul>
  </li>
 </ul>

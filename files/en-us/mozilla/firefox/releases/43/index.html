@@ -86,7 +86,7 @@ tags:
 
 <ul>
  <li>The {{domxref("HTMLCanvasElement.captureStream()")}} method has been activated by default ({{bug(1177276)}}).</li>
- <li>The non-standard constraint style option list for {{domxref("RTCOfferOptions")}} has been deprecated and will be removed entirely in Firefox 44; see <a href="https://www.fxsitecompat.com/en-USdocs/2015/constraint-like-rtcofferoptions-are-no-longer-supported/">this post on the site compatibility blog</a> for details.</li>
+ <li>The non-standard constraint style option list for {{domxref("RTCOfferOptions")}} has been deprecated and will be removed entirely in Firefox 44.</li>
 </ul>
 
 <h4 id="Miscellaneous">Miscellaneous</h4>
@@ -102,7 +102,7 @@ tags:
  <li>Experimental support for {{domxref("Selection")}} events {{event("selectionchange")}} and {{event("selectstart")}}, as well as the {{domxref("GlobalEventHandlers/onselectionchange", "Document.onselectionchange")}} and {{domxref("GlobalEventHandlers.onselectstart")}} event handlers property has been added ({{bug(571294)}}). The <code>selectionchange</code> event is fired on the {{domxref("Document")}} if the associated <code>Selection</code> object is concerned, or on the specific {{domxref("HTMLInputElement")}} or {{domxref("HTMLTextAreaElement")}} ({{bug(1196479)}}). This feature is controlled by the <code>dom.select_events.enabled</code> preference, that defaults to <code>false</code>, except on Nightly.</li>
  <li>Support for {{domxref("MouseEvent.offsetX")}} and {{domxref("MouseEvent.offsetY")}} have been activated on Firefox for Android and Firefox OS ({{bug(1204841)}}).</li>
  <li>The {{domxref("HTMLCanvasElement.mozFetchAsStream()")}} method has been removed ({{bug(1206030)}}).</li>
- <li>The constructor {{domxref("Request.Request", "Request()")}} as well as {{domxref("WindowOrWorkerGlobalScope/fetch", "fetch()")}} will now raise a {{exception("TypeError")}} exception when used with a URL containing a username and password ({{bug(1195820)}}).</li>
+ <li>The constructor {{domxref("Request.Request", "Request()")}} as well as {{domxref("fetch()")}} will now raise a {{exception("TypeError")}} exception when used with a URL containing a username and password ({{bug(1195820)}}).</li>
 </ul>
 
 <h3 id="MathML">MathML</h3>
@@ -160,12 +160,6 @@ tags:
 <h3 id="Other">Other</h3>
 
 <p><em>No change.</em></p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="https://www.fxsitecompat.com/en-US/versions/43/">Site Compatibility for Firefox 43</a></li>
-</ul>
 
 <h2 id="Older_versions">Older versions</h2>
 

@@ -8,10 +8,11 @@ tags:
   - Interface
   - stream
   - write file
+browser-compat: api.FileSystemWritableFileStream
 ---
 <div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}</div>
 
-<p class="summary">The <strong><code>FileSystemWritableFileStream</code></strong> interface of the {{domxref('File System Access API')}} is a {{domxref('WritableStream')}} object with additional convenience methods, which operates on a single file on disk. The interface is accessed through the {{domxref('FileSystemFileHandle.createWritable()')}} method.</p>
+<p>The <strong><code>FileSystemWritableFileStream</code></strong> interface of the {{domxref('File System Access API')}} is a {{domxref('WritableStream')}} object with additional convenience methods, which operates on a single file on disk. The interface is accessed through the {{domxref('FileSystemFileHandle.createWritable()')}} method.</p>
 
 <h2 id="Properties">Properties</h2>
 
@@ -69,24 +70,11 @@ writableStream.write({ type: "truncate", size: size })
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('File System Access API','#api-filesystemwritablefilestream','FileSystemWritableFileStream')}}</td>
-   <td>{{Spec2('File System Access API')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.FileSystemWritableFileStream")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

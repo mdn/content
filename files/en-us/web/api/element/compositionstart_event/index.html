@@ -7,6 +7,7 @@ tags:
   - Input method
   - Reference
   - compositionstart
+browser-compat: api.Element.compositionstart_event
 ---
 <div>{{APIRef}}</div>
 
@@ -58,10 +59,7 @@ inputElement.addEventListener('compositionstart', (event) =&gt; {
   &lt;button class="clear-log"&gt;Clear&lt;/button&gt;
 &lt;/div&gt;</pre>
 
-<div class="hidden">
-<h4 id="CSS">CSS</h4>
-
-<pre class="brush: css">body {
+<pre class="brush: css hidden">body {
   padding: .2rem;
   display: grid;
   grid-template-areas: "control  log";
@@ -93,7 +91,6 @@ kbd {
   border: 1px solid black;
 }
 </pre>
-</div>
 
 <h4 id="JS">JS</h4>
 
@@ -120,24 +117,11 @@ inputElement.addEventListener('compositionend', handleEvent);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('UI Events', '#event-type-compositionstart')}}</td>
-   <td>{{Spec2('UI Events')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Element.compositionstart_event")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

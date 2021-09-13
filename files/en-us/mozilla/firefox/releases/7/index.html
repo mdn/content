@@ -23,7 +23,7 @@ tags:
 <h4 id="Canvas">Canvas</h4>
 
 <ul>
- <li>As part of the <a class="external" href="http://blog.mozilla.com/joe/2011/04/26/introducing-the-azure-project/">Azure project</a> the Direct2D Azure Backend <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=651858">has been implemented</a> and will significantly improve the performance of the 2D canvas.</li>
+ <li>As part of the <a class="external" href="https://blog.mozilla.com/joe/2011/04/26/introducing-the-azure-project/">Azure project</a> the Direct2D Azure Backend <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=651858">has been implemented</a> and will significantly improve the performance of the 2D canvas.</li>
  <li>Specifying invalid values when calling <code>setTransform()</code>, <code>bezierCurveTo()</code>, or <code>arcTo()</code> no longer throws an exception; these calls are now correctly silently ignored.</li>
  <li>The <a href="/en-US/docs/Web/API/CanvasRenderingContext2D#ispointinpath()"><code>isPointInPath()</code></a> method now correctly considers the transformation matrix when comparing the specified point to the current path.</li>
  <li>Calling <code>strokeRect()</code> with a zero width and height now correctly does nothing.</li>
@@ -32,7 +32,7 @@ tags:
  <li><code>toDataURL()</code> method now accepts a second argument to control JPEG quality.</li>
  <li>Support for the non-standard <code>globalCompositeOperation</code> operations <code>clear</code> and <code>over</code> has been removed.</li>
  <li><a href="/en-US/docs/Canvas_tutorial/Applying_styles_and_colors#Shadows">Shadows</a> are now only drawn for <code>source-over</code> compositing operations.</li>
- <li>You can now configure the fill rule used by canvas by setting the <code>mozFillRule </code><a href="/en-US/docs/Web/API/CanvasRenderingContext2D#attributes">attribute</a> on the context.</li>
+ <li>You can now configure the fill rule used by canvas by setting the <code>mozFillRule</code> <a href="/en-US/docs/Web/API/CanvasRenderingContext2D#attributes">attribute</a> on the context.</li>
  <li>Support for the experimental <code>mozDash</code>, <code>mozDashOffset</code>, <code>mozCurrentTransform</code> and <code>mozCurrentTransformInverse</code> attributes has been added.</li>
  <li>Support for the non-standard methods <code>mozDrawText()</code>, <code>mozMeasureText()</code>, <code>mozPathText()</code> and <code>mozTextAlongPath()</code> has been removed.</li>
 </ul>
@@ -50,7 +50,7 @@ tags:
  <li>XLink href has been restored and the MathML3 <code>href</code> attribute is now supported. Developers are encouraged to move to the latter syntax.</li>
  <li>Support for the <code>voffset</code> attribute on {{ MathMLElement("mpadded") }} elements has been added and behavior of <code>lspace</code> attribute has been fixed.</li>
  <li>The top-level {{ MathMLElement("math") }} element now accepts any attributes of the {{ MathMLElement("mstyle") }} element.</li>
- <li>Support for <a class="external" href="http://www.ctan.org/tex-archive/fonts/Asana-Math/">Asana Math</a> fonts has been added.</li>
+ <li>Support for <a class="external" href="https://www.ctan.org/tex-archive/fonts/Asana-Math/">Asana Math</a> fonts has been added.</li>
  <li>The <code>medium</code> line thickness of fraction bars in {{ MathMLElement("mfrac") }} elements has been corrected to match the default thickness.</li>
  <li><a href="/en-US/docs/Web/MathML/Attribute/Values#constants_(namedspaces)">Names for negative spaces</a> are now supported.</li>
 </ul>
@@ -92,7 +92,6 @@ tags:
  <li>Message logged with <code>console.log</code> while the <a href="/en-US/docs/Tools/Web_Console" title="Using the Web Console">web console</a> isn't open are still logged, although they aren't displayed when the web console is opened.</li>
 </ul>
 
-<div class="changelog">
 <h3 id="Web_timing">Web timing</h3>
 
 <ul>
@@ -104,7 +103,6 @@ tags:
 <ul>
  <li>In addition to the previously supported <code>text/xsl</code>, XSLT stylesheets can now use the official internet media (MIME) type <code>application/xslt+xml</code> (in the <a class="external" href="https://www.w3.org/TR/xml-stylesheet/">stylesheet processing instruction</a> or the <a class="external" href="https://datatracker.ietf.org/doc/html/rfc5988">HTTP Link header field</a>).</li>
 </ul>
-</div>
 
 <h2 id="Changes_for_Mozilla_and_add-on_developers">Changes for Mozilla and add-on developers</h2>
 

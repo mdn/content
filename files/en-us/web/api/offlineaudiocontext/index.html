@@ -8,6 +8,7 @@ tags:
   - OfflineAudioContext
   - Reference
   - Web Audio API
+browser-compat: api.OfflineAudioContext
 ---
 <div>{{APIRef("Web Audio API")}}</div>
 
@@ -35,7 +36,7 @@ tags:
 
 <dl>
  <dt>{{domxref("OfflineAudioContext.oncomplete")}}</dt>
- <dd>Is an {{domxref("EventHandler")}} called when processing is terminated, that is when the {{event("complete")}} event (of type {{domxref("OfflineAudioCompletionEvent")}}) is raised, after the event-based version of {{domxref("OfflineAudioContext.startRendering()")}} is used.</dd>
+ <dd>Is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> called when processing is terminated, that is when the {{event("complete")}} event (of type {{domxref("OfflineAudioCompletionEvent")}}) is raised, after the event-based version of {{domxref("OfflineAudioContext.startRendering()")}} is used.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
@@ -57,7 +58,7 @@ tags:
 </dl>
 
 <div class="note">
-<p><strong>Note</strong>: The <code>resume()</code> method is still available — it is now defined on the {{domxref("BaseAudioContext")}} interface (see {{domxref("BaseAudioContext.resume()")}}) and thus can be accessed by both the {{domxref("AudioContext")}} and {{domxref("OfflineAudioContext")}} interfaces.</p>
+<p><strong>Note:</strong> The <code>resume()</code> method is still available — it is now defined on the {{domxref("BaseAudioContext")}} interface (see {{domxref("AudioContext.resume")}}) and thus can be accessed by both the {{domxref("AudioContext")}} and {{domxref("OfflineAudioContext")}} interfaces.</p>
 </div>
 
 <h2 id="Events">Events</h2>
@@ -72,14 +73,14 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>In this simple example, we declare both an {{domxref("AudioContext")}} and an <code>OfflineAudioContext</code> object. We use the <code>AudioContext</code> to load an audio track via XHR ({{domxref("AudioContext.decodeAudioData")}}), then the <code>OfflineAudioContext</code> to render the audio into an {{domxref("AudioBufferSourceNode")}} and play the track through. After the offline audio graph is set up, you need to render it to an {{domxref("AudioBuffer")}} using {{domxref("OfflineAudioContext.startRendering")}}.</p>
+<p>In this simple example, we declare both an {{domxref("AudioContext")}} and an <code>OfflineAudioContext</code> object. We use the <code>AudioContext</code> to load an audio track via XHR ({{domxref("BaseAudioContext.decodeAudioData")}}), then the <code>OfflineAudioContext</code> to render the audio into an {{domxref("AudioBufferSourceNode")}} and play the track through. After the offline audio graph is set up, you need to render it to an {{domxref("AudioBuffer")}} using {{domxref("OfflineAudioContext.startRendering")}}.</p>
 
 <p>When the <code>startRendering()</code> promise resolves, rendering has completed and the output <code>AudioBuffer</code> is returned out of the promise.</p>
 
 <p>At this point we create another audio context, create an {{domxref("AudioBufferSourceNode")}} inside it, and set its buffer to be equal to the promise <code>AudioBuffer</code>. This is then played as part of a simple standard audio graph.</p>
 
 <div class="note">
-<p><strong>Note</strong>: For a working example, see our <a href="https://mdn.github.io/webaudio-examples/offline-audio-context-promise/">offline-audio-context-promise</a> Github repo (see the <a href="https://github.com/mdn/webaudio-examples/tree/master/offline-audio-context-promise">source code</a> too.)</p>
+<p><strong>Note:</strong> For a working example, see our <a href="https://mdn.github.io/webaudio-examples/offline-audio-context-promise/">offline-audio-context-promise</a> Github repo (see the <a href="https://github.com/mdn/webaudio-examples/tree/master/offline-audio-context-promise">source code</a> too.)</p>
 </div>
 
 <pre class="brush: js">// define online and offline audio context
@@ -134,27 +135,14 @@ getData();</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#OfflineAudioContext', 'OfflineAudioContext')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.OfflineAudioContext")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
+ <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
 </ul>

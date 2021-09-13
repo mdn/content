@@ -10,6 +10,7 @@ tags:
   - Reference
   - Window
   - open
+browser-compat: api.Window.open
 ---
 <div>{{APIRef}}</div>
 
@@ -18,6 +19,11 @@ tags:
   {{HTMLElement("iframe")}} or tab) with the specified name. If the name doesn't exist,
   then a new browsing context is opened in a new tab or a new window, and the specified
   resource is loaded into it.</p>
+
+<div class="notecard note">
+   <p><strong>Note:</strong> For brevity, this document will generally use the term "window" as a
+   shorthand for "a browsing context in a tab or window".</p>
+</div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -99,30 +105,11 @@ function openRequestedPopup() {
   into the <em>existing</em> window. In this case the return value of the method is the
   existing window and <code><var>windowFeatures</var></code> is ignored. Providing an
   empty string for <code><var>url</var></code> is a way to get a reference to an open
-  window by its name without changing the window's location. On Firefox and Chrome (at
-  least), <em>this only works from the same parent</em>, ie. if the current window is the
-  opener of the window you try to get an handle on. Otherwise the call to
+  window by its name without changing the window's location. Otherwise the call to
   <code>window.open()</code> will just create a new window.</p>
 
 <p>To open a <em>new</em> window on every call of <code>window.open()</code>, use the
   special value <code>_blank</code> for <code><var>windowName</var></code>.</p>
-
-<div class="note">
-  <p id="Note_on_use_of_window_open">Note on the use of <code>window.open()</code> to
-    reopen an existing window with name <code><var>windowName</var></code> : This
-    functionality is not valid for all browsers and more with variable conditions.
-    <s>Firefox (50.0.1) functions as described: from the same domain+port reopen with same
-      name will access the previously created window</s>. Google Chrome (55.0.2883.87 m )
-    on the other hand will do it only from the same parent (as if the window was created
-    dependent, which is the "opener"). This is a wide limitation and generates
-    unbelievable complexity of development. Firefox (51.) gets the handle but cannot run
-    any <code>Element.focus()</code> while Chrome can run <code>focus()</code> from opener
-    to child but not between siblings nor, reverse, from child to opener. This function is
-    the lonely key to get back the handle on a window if the developer has access only to
-    its name (the name can be saved with cookies or local storage but not the window
-    object handle). For now 10/01/2017 the differencies of behavior found recently have
-    not still been tested for others Browsers.</p>
-</div>
 
 <h2 id="Window_features">Window features</h2>
 
@@ -134,10 +121,12 @@ function openRequestedPopup() {
   an empty string), then the new secondary window will render the default toolbars of the
   main window.</p>
 
-<div class="note">
-  <p><strong>Tip</strong>: Note that in some browsers, users can override the
+<div class="notecard note">
+  <p><strong>Note:</strong> In some browsers, users can override the
     <code><var>windowFeatures</var></code> settings and enable (or prevent the disabling
-    of) features</p>
+    of) features. Further, control of some window features is available only on some browsers
+    and platforms (See <a href="#popup_condition">popup condition</a> section)
+  </p>
 </div>
 
 <h3 id="Position_and_size_features">Position and size features</h3>
@@ -151,17 +140,17 @@ function openRequestedPopup() {
 <h4 id="Position">Position</h4>
 
 <div class="notecard warning">
-  <p>If only one of them is specified, the behavior is implementation-dependent, and web
+  <p><strong>Warning:</strong> If only one of them is specified, the behavior is implementation-dependent, and web
     author should not rely on it.</p>
 </div>
 
 <dl>
-  <dt id="left"><code>left</code> or <code>screenX</code></dt>
+  <dt><code>left</code> or <code>screenX</code></dt>
   <dd>Specifies the distance the new window is placed from the left side of the work area
     for applications of the user's operating system to the leftmost border (resizing
     handle) of the browser window. The new window cannot be initially positioned
     offscreen.</dd>
-  <dt id="top"><code>top</code> or <code>screenY</code></dt>
+  <dt><code>top</code> or <code>screenY</code></dt>
   <dd>Specifies the distance the new window is placed from the top side of the work area
     for applications of the user's operating system to the topmost border (resizing
     handle) of the browser window. The new window cannot be initially positioned
@@ -179,17 +168,17 @@ function openRequestedPopup() {
 <h4 id="Size">Size</h4>
 
 <div class="notecard warning">
-  <p>If only one of them is specified, the behavior is implementation-dependent, and web
+  <p><strong>Warning:</strong> If only one of them is specified, the behavior is implementation-dependent, and web
     author should not rely on it.</p>
 </div>
 
 <dl>
-  <dt id="width"><code>width</code> or <code>innerWidth</code></dt>
+  <dt><code>width</code> or <code>innerWidth</code></dt>
   <dd>Specifies the width of the content area, viewing area of the new secondary window in
     pixels. The width value includes the width of the vertical scrollbar if present. The
     width value does not include the sidebar if it is expanded. The minimum required value
     is 100.</dd>
-  <dt id="height"><code>height</code> or <code>innerHeight</code></dt>
+  <dt><code>height</code> or <code>innerHeight</code></dt>
   <dd>Specifies the height of the content area, viewing area of the new secondary window
     in pixels. The height value includes the height of the horizontal scrollbar if
     present. The height value does not include other UI parts such as location bar, title
@@ -203,15 +192,15 @@ function openRequestedPopup() {
 <h3 id="Browser-dependent_size_features">Browser-dependent size features</h3>
 
 <div class="notecard warning">
-  <p>Do not use them.</p>
+  <p><strong>Warning:</strong> Do not use them.</p>
 </div>
 
 <dl>
-  <dt><code>outerWidth</code> (only on Firefox, obsolete from Firefox 80)</dt>
+  <dt><code>outerWidth</code> {{deprecated_inline}} (only on Firefox, obsolete from Firefox 80)</dt>
   <dd>Specifies the width of the whole browser window in pixels. This
     <code>outerWidth</code> value includes the window vertical scrollbar (if present) and
     left and right window resizing borders.</dd>
-  <dt><code>outerHeight</code> (only on Firefox, obsolete from Firefox 80)</dt>
+  <dt><code>outerHeight</code> {{deprecated_inline}} (only on Firefox, obsolete from Firefox 80)</dt>
   <dd>Specifies the height of the whole browser window in pixels. This
     <code>outerHeight</code> value includes any/all present toolbar, window horizontal
     scrollbar (if present) and top and bottom window resizing borders. Minimal required
@@ -221,7 +210,7 @@ function openRequestedPopup() {
 <h3 id="Toolbar_and_UI_parts_features">Toolbar and UI parts features</h3>
 
 <div class="notecard warning">
-  <p>In modern browsers (Firefox 76 or newer, Google Chrome, Safari, Chromium Edge), the
+  <p><strong>Warning:</strong> In modern browsers (Firefox 76 or newer, Google Chrome, Safari, Chromium Edge), the
     following features are just a condition for whether to open popup or not. See <a
       href="#popup_condition">popup condition</a> section.</p>
 </div>
@@ -269,8 +258,8 @@ function openRequestedPopup() {
     <br>
     If <code><var>windowFeatures</var></code> is non-empty, <code>resizable</code>
     defaults to on.
-    <div class="note">
-      <p><strong>Tip</strong>: For accessibility reasons, it is strongly recommended to
+    <div class="notecard note">
+      <p><strong>Note:</strong> For accessibility reasons, it is strongly recommended to
         set this feature always on</p>
     </div>
   </dd>
@@ -282,9 +271,9 @@ function openRequestedPopup() {
     defaults to off.<br>
     <br>
     See <a href="#note_on_scrollbars">note on scrollbars</a>.
-    <div class="note">
-      <p><strong>Tip</strong>: For accessibility reasons, it is strongly encouraged to set
-        this feature always on</p>
+    <div class="notecard note">
+      <p><strong>Note:</strong> For accessibility reasons, it is strongly encouraged to set
+        this feature always on.</p>
     </div>
   </dd>
 </dl>
@@ -292,30 +281,29 @@ function openRequestedPopup() {
 <h3 id="Window_functionality_features">Window functionality features</h3>
 
 <dl>
-  <dt id="noopener"><code>noopener</code></dt>
-  <dd>If this feature is set, the newly-opened window will open as normal, except that it
+  <dt><code>noopener</code></dt>
+  <dd>
+    <p>If this feature is set, the newly-opened window will open as normal, except that it
     will not have access back to the originating window (via {{domxref("Window.opener")}}
     — it returns <code>null</code>). In addition, the <code>window.open()</code> call will
     also return <code>null</code>, so the originating window will not have access to the
     new one either. This is useful for preventing untrusted sites opened via
-    <code>window.open()</code> from tampering with the originating window, and vice versa.
-  </dd>
-  <dd>Note that when <code>noopener</code> is used, nonempty target names other than
+    <code>window.open()</code> from tampering with the originating window, and vice versa.</p>
+    <p>Note that when <code>noopener</code> is used, nonempty target names other than
     <code>_top</code>, <code>_self</code>, and <code>_parent</code> are all treated like
-    <code>_blank</code> in terms of deciding whether to open a new window/tab.<br>
-    <br>
-    This is supported in modern browsers including Chrome, and Firefox 52+. See
+    <code>_blank</code> in terms of deciding whether to open a new window/tab.</p>
+    <p>This is supported in modern browsers including Chrome, and Firefox 52+. See
     <code><a href="/en-US/docs/Web/HTML/Link_types#noopener">rel="noopener"</a></code> for
     more information and for browser compatibility details, including information about
-    ancillary effects.
+    ancillary effects.</p>
   </dd>
-  <dt id="noreferrer"><code>noreferrer</code></dt>
+  <dt><code>noreferrer</code></dt>
   <dd>If this feature is set, the request to load the content located at the specified URL
     will be loaded with the request's <code>referrer</code> set to
     <code>noreferrer</code>; this prevents the request from sending the URL of the page
     that initiated the request to the server where the request is sent. In addition,
     setting this feature also automatically sets
-    <code><a href="#noopener">noopener</a></code>. See
+    <code>noopener</code>. See
     <code><a href="/en-US/docs/Web/HTML/Link_types#noreferrer">rel="noreferrer"</a></code>
     for additional details and compatibility information. Firefox introduced support for
     <code>noreferrer</code> in Firefox 68.</dd>
@@ -373,7 +361,7 @@ function openFFPromotionPopup() {
 <p><a href="https://www.w3.org/TR/html401/present/frames.html#h-16.3.2">HTML 4.01 Target
     attribute specifications</a></p>
 
-<p><a href="http://www.htmlhelp.com/faq/html/links.html#new-window">How do I create a link
+<p><a href="https://www.htmlhelp.com/faq/html/links.html#new-window">How do I create a link
     that opens a new window?</a></p>
 
 <p>You can also parameterize the function to make it versatile, functional in more
@@ -453,12 +441,14 @@ function openRequestedSinglePopup(url) {
 <dl>
   <dt>How can I prevent the confirmation message asking the user whether they want to
     close the window?</dt>
-  <dd>You cannot. <strong>New windows not opened by javascript cannot as a rule be closed
+  <dd>
+    <p>You cannot. <strong>New windows not opened by javascript cannot as a rule be closed
       by JavaScript.</strong> The JavaScript Console in Mozilla-based browsers will report
     the warning message:
     <code>"Scripts may not close windows that were not opened by script."</code> Otherwise
-    the history of URLs visited during the browser session would be lost.</dd>
-  <dd>More on the {{domxref("window.close()")}} method</dd>
+    the history of URLs visited during the browser session would be lost.</p>
+    <p>More on the {{domxref("window.close()")}} method.</p>
+  </dd>
   <dt>How can I bring back the window if it is minimized or behind another window?</dt>
   <dd>First check for the existence of the window object reference of such window and if
     it exists and if it has not been closed, then use the <a
@@ -479,39 +469,23 @@ function openRequestedSinglePopup(url) {
     content and usability of windows. This is in the best interests of both the web author
     and the users.</dd>
   <dt>How do I resize a window to fit its content?</dt>
-  <dd>You cannot reliably because the users can prevent the window from being resized by
+  <dd>
+    <p>You cannot reliably because the users can prevent the window from being resized by
     setting <code>dom.disable_window_move_resize</code> to <code>true</code> in
     <code>about:config</code> or by editing accordingly their <a
-      href="https://www.mozilla.org/support/firefox/edit#user">user.js file</a>.</dd>
-  <dd>In general, users usually disable moving and resizing of existing windows because
+      href="https://www.mozilla.org/support/firefox/edit#user">user.js file</a>.</p>
+    <p>In general, users usually disable moving and resizing of existing windows because
     allowing authors' scripts to do so has been abused overwhelmingly in the past and the
     rare scripts that do not abuse such feature are often wrong, inaccurate when resizing
     the window. 99% of all those scripts disable window resizability and disable
     scrollbars when in fact they should enable both of these features to allow a cautious
-    and sane fallback mechanism if their calculations are wrong.</dd>
-  <dd>The window method <a href="/en-US/docs/Web/API/Window/sizeToContent">sizeToContent()</a>
+    and sane fallback mechanism if their calculations are wrong.</p>
+    <p>The window method <a href="/en-US/docs/Web/API/Window/sizeToContent">sizeToContent()</a>
     can also be disabled. Moving and resizing a window remotely on the user's screen via
     script will very often annoy the users, will disorient the user, and will be wrong at
     best. The web author expects to have full control of (and can decide about) every
-    position and size aspects of the users' browser window ... which is not true.</dd>
-  <dt>How do I open a referenced resource of a link in a new tab? or in a specific tab?
-  </dt>
-  <dd>To open a resource in a new tab see <a href="/en-US/docs/XUL/tabbrowser">Tabbed
-      browser</a>. Some <a
-      href="/en-US/Add-ons/Code_snippets/Tabbed_browser?redirectlocale=en-US&amp;redirectslug=Code_snippets%2FTabbed_browser">Code
-      snippets</a> are available. If you are using the SDK, tabs are <a
-      href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/tabs">handled a bit differently</a></dd>
-  <dd><a href="http://kmeleon.sourceforge.net/">K-meleon 1.1</a>, a Mozilla-based browser,
-    gives complete control and power to the user regarding how links are opened. Only the
-    user can set his advanced preferences to do that. Some advanced extensions also give
-    Mozilla and Firefox a lot of power over how referenced resources are loaded.</dd>
-  <dd>In a few years, the <a
-      href="https://www.w3.org/TR/2004/WD-css3-hyperlinks-20040224/#target0">target
-      property of the CSS3 hyperlink module</a> may be implemented (if CSS3 Hyperlink
-    module as it is right now is approved). And even if and when this happens, you can
-    expect developers of browsers with tab-browsing to give the user entire veto power and
-    full control over how links can open web pages. How to open a link should always be
-    entirely under the control of the user.</dd>
+    position and size aspects of the users' browser window ... which is not true.</p>
+  </dd>
   <dt>How do I know whether a window I opened is still open?</dt>
   <dd>You can test for the existence of the window object reference which is the returned
     value in case of success of the window.open() call and then verify that
@@ -529,16 +503,18 @@ function openRequestedSinglePopup(url) {
     the javascript console saying "Error: uncaught
     exception: Permission denied to get property
     &lt;property_name or method_name&gt;. Why is that?</dt>
-  <dd>It is because of the cross-domain script security restriction (also referred as the
+  <dd>
+    <p>It is because of the cross-domain script security restriction (also referred as the
     "Same Origin Policy"). A script loaded in a window (or frame) from a distinct origin
     (domain name) <strong>cannot get nor set</strong> properties of another window (or
     frame) or the properties of any of its HTML objects coming from another distinct
     origin (domain name). Therefore, before executing a script targeting a secondary
     window, the browser in the main window will verify that the secondary window has the
-    same domain name.</dd>
-  <dd>More reading on the cross-domain script security restriction: <a
+    same domain name.</p>
+    <p>More reading on the cross-domain script security restriction: <a
       href="https://www.mozilla.org/projects/security/components/same-origin.html"
-     >http://www.mozilla.org/projects/secu...me-origin.html</a></dd>
+     >http://www.mozilla.org/projects/secu...me-origin.html</a></p>
+   </dd>
 </dl>
 
 <h2 id="Usability_issues">Usability issues</h2>
@@ -605,12 +581,12 @@ function openRequestedSinglePopup(url) {
 <p><strong>Further reading:</strong></p>
 
 <ul>
-  <li><a href="http://www.useit.com/alertbox/20021223.html">Top Ten Web-Design Mistakes of
+  <li><a href="https://www.useit.com/alertbox/20021223.html">Top Ten Web-Design Mistakes of
       2002</a>, 6. JavaScript in Links, Jakob Nielsen, December 2002</li>
   <li><a
-      href="http://www.evolt.org/article/Links_and_JavaScript_Living_Together_in_Harmony/17/20938/">Links
+      href="https://www.evolt.org/article/Links_and_JavaScript_Living_Together_in_Harmony/17/20938/">Links
       &amp; JavaScript Living Together in Harmony</a>, Jeff Howden, February 2002</li>
-  <li><a href="http://jibbering.com/faq/#FAQ4_24">comp.lang.javascript newsgroup
+  <li><a href="https://jibbering.com/faq/#FAQ4_24">comp.lang.javascript newsgroup
       discussion FAQ on "javascript:" links</a></li>
 </ul>
 
@@ -642,7 +618,7 @@ function openRequestedSinglePopup(url) {
     a small monitor where the windows are maximized to fill up the screen. So a user who
     tries to return to the origin will be confused by a grayed out <em>Back</em>
     button."<br>
-    quote from <a href="http://www.useit.com/alertbox/990530.html">The Top Ten
+    quote from <a href="https://www.useit.com/alertbox/990530.html">The Top Ten
       <em>New</em> Mistakes of Web Design</a>: 2. Opening New Browser Windows, Jakob
     Nielsen, May 1999</p>
 </blockquote>
@@ -663,55 +639,11 @@ function openRequestedSinglePopup(url) {
       Accessibility Initiative regarding popups</a></li>
   <li>"Use link titles to provide users with a preview of where each link will take them,
     before they have clicked on it." <a
-      href="http://www.useit.com/alertbox/991003.html">Ten Good Deeds in Web Design</a>,
+      href="https://www.useit.com/alertbox/991003.html">Ten Good Deeds in Web Design</a>,
     Jakob Nielsen, October 1999</li>
-  <li><a href="http://www.useit.com/alertbox/980111.html">Using Link Titles to Help Users
+  <li><a href="https://www.useit.com/alertbox/980111.html">Using Link Titles to Help Users
       Predict Where They Are Going</a>, Jakob Nielsen, January 1998</li>
 </ul>
-
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <td class="header" colspan="4">Example "New Window" Icons &amp; Cursors</td>
-    </tr>
-    <tr>
-      <td><img alt="New window icon from yahoo.com"
-          src="newwindowyahoo.png"></td>
-      <td><img alt="New window icon from microsoft.com"
-          src="newwinmsie.gif"></td>
-      <td><img alt="New window icon from webaim.org"
-          src="popup_requested_new_window.gif"></td>
-      <td><img alt="New window icon from sun.com"
-          src="popupimagesun.gif"></td>
-    </tr>
-    <tr>
-      <td><img alt="New window icon from bbc.co.uk"
-          src="opennews_rb.gif"></td>
-      <td><img alt="New window icon from Accessible Internet Solutions"
-          src="ais_newwindowicon.png"></td>
-      <td><img alt="New window icon from accessify.com"
-          src="pop-up-launcher.gif"></td>
-      <td><img alt="New window icon from webstyleguide.com"
-          src="webstyleguide_com_newwind.gif"></td>
-    </tr>
-    <tr>
-      <td><img alt="New window icon from an unknown source"
-          src="popicon_1.gif"></td>
-      <td><img alt="New window icon from an unknown source"
-          src="new.gif"></td>
-      <td><img alt="New window icon from an unknown source"
-          src="willcreateorrecyclenewwindow.gif"></td>
-      <td><img alt="New window icon from gtalbot.org"
-          src="openrequestedpopup.png"></td>
-    </tr>
-    <tr>
-      <td colspan="2"><img alt="New window cursor from draig.de"
-          src="cursor_linknewwindowtargetblank.png"></td>
-      <td colspan="2"><img alt="New window cursor from mithgol.ru"
-          src="cursor_newwindowsergeysokoloff.png"></td>
-    </tr>
-  </tbody>
-</table>
 
 <h4 id="Always_use_the_target_attribute">Always use the target attribute</h4>
 
@@ -736,8 +668,8 @@ function openRequestedSinglePopup(url) {
   single secondary window, which is recycled. On the other hand, using "_blank" as the
   target attribute value will create several new and unnamed windows on the user's desktop
   that cannot be recycled, reused. In any case, if your code is well done, it should not
-  interfere with the user's final choice but rather merely offer him more choices, more
-  ways to open links and more power to the tool he's using (a browser).</p>
+  interfere with the user's final choice but rather merely offer them more choices, more
+  ways to open links and more power to the tool they are using (a browser).</p>
 
 <h2 id="Glossary">Glossary</h2>
 
@@ -755,32 +687,11 @@ function openRequestedSinglePopup(url) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', 'window-object.html#dom-open', 'Window.open()')}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{ SpecName('CSSOM View', '#the-features-argument-to-the-open()-method', 'The
-        features argument to the open() method') }}</td>
-      <td>{{ Spec2('CSSOM View') }}</td>
-      <td>Defines the effect of the <code>features</code> argument</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Window.open")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Notes">Notes</h2>
 
@@ -852,28 +763,28 @@ function openRequestedSinglePopup(url) {
     initially positioned offscreen. This is by default in all Mozilla-based browser
     releases.</strong></p>
 
-<p><a href="http://msdn2.microsoft.com/en-us/library/ms997645.aspx#xpsp_topic5">MSIE 6 SP2
+<p><a href="https://msdn2.microsoft.com/en-us/library/ms997645.aspx#xpsp_topic5">MSIE 6 SP2
     has a similar error correction mechanism</a> but it is not activated by default in all
   security levels: a security setting can disable such error correction mechanism.</p>
 
 <h2 id="Tutorials">Tutorials</h2>
 
 <ul>
-  <li><a href="http://www.infimum.dk/HTML/JSwindows.html">JavaScript windows
+  <li><a href="https://www.infimum.dk/HTML/JSwindows.html">JavaScript windows
       (tutorial)</a> by Lasse Reichstein Nielsen</li>
-  <li><a href="http://accessify.com/features/tutorials/the-perfect-popup/">The perfect
+  <li><a href="https://accessify.com/features/tutorials/the-perfect-popup/">The perfect
       pop-up (tutorial)</a> by Ian Lloyd</li>
-  <li><a href="http://www.gtalbot.org/FirefoxSection/Popup/PopupAndFirefox.html">Popup
+  <li><a href="https://www.gtalbot.org/FirefoxSection/Popup/PopupAndFirefox.html">Popup
       windows and Firefox (interactive demos)</a> by Gérard Talbot</li>
 </ul>
 
 <h2 id="References">References</h2>
 
 <ul>
-  <li><a href="http://www.cs.tut.fi/~jkorpela/www/links.html">Links Want To Be Links</a>
+  <li><a href="https://www.cs.tut.fi/~jkorpela/www/links.html">Links Want To Be Links</a>
     by Jukka K. Korpela</li>
   <li><a
-      href="http://www.evolt.org/article/Links_and_JavaScript_Living_Together_in_Harmony/17/20938/">Links
+      href="https://www.evolt.org/article/Links_and_JavaScript_Living_Together_in_Harmony/17/20938/">Links
       &amp; JavaScript Living Together in Harmony</a> by Jeff Howden</li>
 </ul>
 

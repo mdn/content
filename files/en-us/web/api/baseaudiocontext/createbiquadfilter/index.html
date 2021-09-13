@@ -9,6 +9,7 @@ tags:
   - Reference
   - Web Audio API
   - createBiquadFilter
+browser-compat: api.BaseAudioContext.createBiquadFilter
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
@@ -16,6 +17,12 @@ tags:
   <p>The <code>createBiquadFilter()</code> method of the {{ domxref("BaseAudioContext") }}
     interface creates a {{ domxref("BiquadFilterNode") }}, which represents a second order
     filter configurable as several different common filter types.</p>
+</div>
+
+<div class="notecard note">
+  <p><strong>Note:</strong> The {{domxref("BiquadFilterNode.BiquadFilterNode", "BiquadFilterNode()")}} constructor is the
+    recommended way to create a {{domxref("BiquadFilterNode")}}; see
+    <a href="/en-US/docs/Web/API/AudioNode#creating_an_audionode">Creating an AudioNode</a>.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -60,25 +67,11 @@ biquadFilter.gain.setValueAtTime(25, audioCtx.currentTime);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Web Audio API', '#dom-baseaudiocontext-createbiquadfilter',
-        'createBiquadFilter()')}}</td>
-      <td>{{Spec2('Web Audio API')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.BaseAudioContext.createBiquadFilter")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

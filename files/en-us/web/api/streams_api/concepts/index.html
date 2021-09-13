@@ -8,7 +8,7 @@ tags:
 ---
 <div>{{apiref("Streams")}}</div>
 
-<p class="summary">The <a href="/en-US/docs/Web/API/Streams_API">Streams API</a> adds a very useful set of tools to the web platform, providing objects allowing JavaScript to programmatically access streams of data received over the network and process them as desired by the developer. Some of the concepts and terminology associated with streams might be new to you — this article explains all you need to know.</p>
+<p>The <a href="/en-US/docs/Web/API/Streams_API">Streams API</a> adds a very useful set of tools to the web platform, providing objects allowing JavaScript to programmatically access streams of data received over the network and process them as desired by the developer. Some of the concepts and terminology associated with streams might be new to you — this article explains all you need to know.</p>
 
 <h2 id="Readable_streams">Readable streams</h2>
 
@@ -36,7 +36,7 @@ tags:
 <p>Note that there are two different types of readable stream. As well as the conventional readable stream there is a type called a byte stream — this is an extended version of a conventional stream for reading underlying byte sources. Compared with the conventional readable stream, byte streams are allowed to be read by BYOB readers (BYOB, "bring your own buffer"). This kind of readers allow streams to be read straight into a buffer supplied by the developer, minimizing the copying required. Which underlying stream (and by extension, reader and controller) your code will use depends on how the stream was created in the first place (see the {{domxref("ReadableStream.ReadableStream","ReadableStream()")}} constructor page).</p>
 
 <div class="warning">
-<p><strong>Important</strong>: Byte streams are not implemented anywhere as yet, and questions have been raised as to whether the spec details are in a finished enough state for them to be implemented. This may change over time.</p>
+<p><strong>Warning:</strong> Byte streams are not implemented anywhere as yet, and questions have been raised as to whether the spec details are in a finished enough state for them to be implemented. This may change over time.</p>
 </div>
 
 <p>You can make use of ready-made readable streams via mechanisms like a {{domxref("Response.body")}} from a fetch request, or roll your own streams using the {{domxref("ReadableStream.ReadableStream","ReadableStream()")}} constructor.</p>
@@ -81,7 +81,7 @@ tags:
 <p><img alt="" src="pipechain.png"></p>
 
 <div class="note">
-<p><strong>Note</strong>: This functionality isn't fully thought through yet, or available in many browsers. At some point the spec writers hope to add something like a <code>TransformStream</code> class to make creating transform streams easier.</p>
+<p><strong>Note:</strong> This functionality isn't fully thought through yet, or available in many browsers. At some point the spec writers hope to add something like a <code>TransformStream</code> class to make creating transform streams easier.</p>
 </div>
 
 <h2 id="Backpressure">Backpressure</h2>
@@ -112,7 +112,7 @@ tags:
 <p>The <strong>desired size</strong> is the size of chunks the stream can still accept to keep the stream flowing but below the high water mark in size. After the calculation is performed, chunk generation will be slowed down/sped up as appropriate to keep the stream flowing as fast as possible while keeping the desired size above zero. If the value falls to zero (or below in the case of writable streams), it means that chunks are being generated faster than the stream can cope with, which results in problems.</p>
 
 <div class="note">
-<p><strong>Note</strong>: What happens in the case of zero or negative desired size hasn’t really been defined in the spec so far. Patience is a virtue.</p>
+<p><strong>Note:</strong> What happens in the case of zero or negative desired size hasn’t really been defined in the spec so far. Patience is a virtue.</p>
 </div>
 
 <p>As an example, let's take a chunk size of 1, and a high water mark of 3. This means that up to 3 chunks can be enqueued before the high water mark is reached and backpressure is applied.</p>

@@ -14,12 +14,15 @@ tags:
 - replace
 - replaceTrack
 - track
+browser-compat: api.RTCRtpSender.replaceTrack
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
-<p><span class="seoSummary">The {{domxref("RTCRtpSender")}} method
+<p>The {{domxref("RTCRtpSender")}} method
     <code><strong>replaceTrack()</strong></code> replaces the track currently being used
-    as the sender's source with a new {{domxref("MediaStreamTrack")}}.</span> The new
+    as the sender's source with a new {{domxref("MediaStreamTrack")}}.</p>
+
+<p>The new
   track must be of the same media kind (audio, video, etc) and switching the track should
   not require negotiation.</p>
 
@@ -45,7 +48,7 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A {{domxref("Promise")}} which is fulfilled once the track has been successfully
+<p>A {{jsxref("Promise")}} which is fulfilled once the track has been successfully
   replaced. The promise is rejected if the track cannot be replaced for any reason; this
   is commonly because the change would require renegotiation of the codec, which is not
   allowed (see {{anch("Things that require negotiation")}}).</p>
@@ -125,25 +128,11 @@ navigator.mediaDevices
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName("WebRTC 1.0", "#dom-rtcrtpsender-replacetrack",
-        "RTCRtpSender.replaceTrack()")}}</td>
-      <td>{{Spec2("WebRTC 1.0")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCRtpSender.replaceTrack")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

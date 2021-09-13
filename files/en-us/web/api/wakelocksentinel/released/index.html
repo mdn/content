@@ -6,10 +6,11 @@ tags:
 - Read-only
 - Screen Wake Lock API
 - WakeLockSentinel
+browser-compat: api.WakeLockSentinel.released
 ---
 <div>{{draft}}{{DefaultAPISidebar("Screen Wake Lock API")}}</div>
 
-<p class="summary">The read-only <strong><code>released</code></strong> property of the
+<p>The read-only <strong><code>released</code></strong> property of the
 	{{domxref("WakeLockSentinel")}} interface returns a boolean that indicates whether
 	a {{domxref("WakeLockSentinel")}} has been released yet.</p>
 
@@ -20,7 +21,7 @@ tags:
 
 <h3 id="Value">Value</h3>
 
-<p>A {{jsxref("Boolean")}}. Its value is <code>false</code> until the
+<p>A boolean value, that is <code>false</code> until the
 	{{domxref("WakeLockSentinel")}} has been released (either through a call to
 	{{domxref("WakeLockSentinel.release()")}} or because the lock has been released
 	automatically) and the {{domxref("WakeLockSentinel.onrelease")}} event has been
@@ -43,22 +44,8 @@ await sentinel.release();
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-		<tr>
-			<td>{{SpecName('Screen Wake
-				Lock','#dom-wakelocksentinel-released','released')}}</td>
-			<td>{{Spec2('Screen Wake Lock')}}</td>
-			<td>Initial definition.</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.WakeLockSentinel.released")}}</p>
+<p>{{Compat}}</p>

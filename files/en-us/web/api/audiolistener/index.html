@@ -6,8 +6,8 @@ tags:
   - AudioListener
   - Interface
   - Reference
-  - Référence(2)
   - Web Audio API
+browser-compat: api.AudioListener
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
@@ -15,12 +15,12 @@ tags:
 
 <p>It is important to note that there is only one listener per context and that it isn't an {{domxref("AudioNode")}}.</p>
 
-<p><img alt="We see the position, up and front vectors of an AudioListener, with the up and front vectors at 90° from the other." src="webaudiolistenerreduced.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="We see the position, up and front vectors of an AudioListener, with the up and front vectors at 90° from the other." src="webaudiolistenerreduced.png"></p>
 
 <h2 id="Properties">Properties</h2>
 
 <div class="note">
-<p>The position, forward, and up value are set and retrieved using different syntaxes. Retrieval is done by accessing, for example, <code>AudioListener.positionX</code>, while setting the same property is done with <code>AudioListener.positionX.value</code>. This is why these values are not marked read only, which is how they appear in the specification's IDL.</p>
+<p><strong>Note:</strong> The position, forward, and up value are set and retrieved using different syntaxes. Retrieval is done by accessing, for example, <code>AudioListener.positionX</code>, while setting the same property is done with <code>AudioListener.positionX.value</code>. This is why these values are not marked read only, which is how they appear in the specification's IDL.</p>
 </div>
 
 <dl>
@@ -54,15 +54,15 @@ tags:
 </dl>
 
 <div class="note">
-<p><strong>Note</strong>: Although these methods are deprecated they are currently the only way to set the orientation and position in Firefox, Internet Explorer and Safari.</p>
+<p><strong>Note:</strong> Although these methods are deprecated they are currently the only way to set the orientation and position in Firefox, Internet Explorer and Safari.</p>
 </div>
 
 <h2 id="Deprecated_features">Deprecated features</h2>
 
 <dl>
-	<dt>{{domxref("AudioListener.dopplerFactor")}} {{obsolete_inline}}</dt>
+	<dt>{{domxref("AudioListener.dopplerFactor")}} {{deprecated_inline}}</dt>
 	<dd>A double value representing the amount of pitch shift to use when rendering a <a href="https://en.wikipedia.org/wiki/Doppler_effect">doppler effect</a>.</dd>
-	<dt>{{domxref("AudioListener.speedOfSound")}} {{obsolete_inline}}</dt>
+	<dt>{{domxref("AudioListener.speedOfSound")}} {{deprecated_inline}}</dt>
 	<dd>Is a double value representing the speed of sound, in <em>meters per second</em>.</dd>
 </dl>
 
@@ -80,28 +80,15 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>{{page("/en-US/docs/Web/API/AudioContext.createPanner","Example")}}</p>
+<p>See <a href="/en-US/docs/Web/API/BaseAudioContext/createPanner#example"><code>BaseAudioContext.createPanner()</code></a> for example code.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-		<tr>
-			<td>{{SpecName('Web Audio API', '#audiolistener', 'AudioListener')}}</td>
-			<td>{{Spec2('Web Audio API')}}</td>
-			<td></td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.AudioListener")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

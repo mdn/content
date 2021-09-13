@@ -10,10 +10,11 @@ tags:
 - PWA
 - content index
 - content indexing
+browser-compat: api.ContentIndex.add
 ---
 <div>{{draft}}{{DefaultAPISidebar("Content Index API")}}</div>
 
-<p class="summary">The <strong><code>add()</code></strong> method of the
+<p>The <strong><code>add()</code></strong> method of the
   {{domxref("ContentIndex")}} interface registers an item with the {{domxref('Content
   Index API','content index')}}.</p>
 
@@ -70,12 +71,15 @@ tags:
 
 <dl>
   <dt><code>TypeError</code></dt>
-  <dd>If the service worker's registration is not present or the service worker does not
-    contain a {{domxref('FetchEvent')}}.</dd>
-  <dd>If the <code>id</code>, <code>title</code>, <code>description</code> or
-    <code>url</code> are missing, not of type {{jsxref('String')}}, or an empty
-    {{jsxref('String')}}.</dd>
-  <dd>If <code>icons</code> images are not of image type.</dd>
+  <dd><p>This exception is thrown in the following conditions:</p>
+    <ul>
+      <li>The service worker's registration is not present or the service worker does not
+      contain a {{domxref('FetchEvent')}}.</li>
+      <li>The <code>id</code>, <code>title</code>, <code>description</code> or
+      <code>url</code> are missing, not of type {{jsxref('String')}}, or an empty {{jsxref('String')}}.</li>
+      <li>The items referenced by <code>icons</code> are not of image type.</li>
+    </ul>
+  </dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -138,24 +142,11 @@ self.registration.index.add(item);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Content Index API','#content-index-add','add')}}</td>
-      <td>{{Spec2('Content Index API')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.ContentIndex.add")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

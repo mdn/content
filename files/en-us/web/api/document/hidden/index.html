@@ -9,6 +9,7 @@ tags:
 - Read-only
 - Reference
 - Web
+browser-compat: api.Document.hidden
 ---
 <p>{{ ApiRef("DOM") }}</p>
 
@@ -16,7 +17,7 @@ tags:
   value indicating if the page is considered hidden or not.</p>
 
 <div class="note">
-  <p>This property is described as "historical" in the <a
+  <p><strong>Note:</strong> This property is described as "historical" in the <a
       href="https://www.w3.org/TR/page-visibility-2/">Page Visibility Level 2
       specification</a>. Consider using the {{domxref("Document.visibilityState")}}
     property instead.</p>
@@ -37,7 +38,7 @@ tags:
 <h2 id="Usage_notes">Usage notes</h2>
 
 <div class="warning">
-  <p>Due to prerendering, it may happen that <code>document.hidden</code> is
+  <p><strong>Warning:</strong> Due to prerendering, it may happen that <code>document.hidden</code> is
     <code>true</code>, even if the page is actually visible to the user. In such scenario
     the page load starts with
     <code><a href="/en-US/docs/Web/API/Document/visibilityState">document.visibilityState</a> = "prerender"</code>
@@ -48,24 +49,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th>Specification</th>
-      <th>Status</th>
-      <th>Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Page Visibility API','#dom-document-hidden', 'Document.hidden')}}
-      </td>
-      <td>{{Spec2('Page Visibility API')}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Document.hidden")}}</p>
+<p>{{Compat}}</p>

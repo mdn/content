@@ -7,6 +7,7 @@ tags:
   - DOM
   - Property
   - Reference
+browser-compat: api.ValidityState.patternMismatch
 ---
 <p>{{draft}}The read-only <strong><code>patternMismatch</code></strong> property of a <strong><code><a href="/en-US/docs/Web/API/ValidityState">ValidityState</a></code></strong> object indicates if the value of an {{HTMLElement("input")}}, after having been edited by the user, does not conform to the constraints set by the element's <code><a href="/en-US/docs/Web/HTML/Attributes/pattern">pattern</a></code> attribute.</p>
 
@@ -37,44 +38,21 @@ tags:
 <p>Note, in this case, we get a <code>patternMismatch</code> not a {{domxref('validityState.tooLong')}} or {{domxref('validityState.tooShort')}} if the values are too long or too short because it is the pattern that is dictating the length of the value. Had we used <code><a href="/en-US/docs/Web/HTML/Attributes/minlength">minlength</a></code> and <code><a href="/en-US/docs/Web/HTML/Attributes/maxlength">maxlength</a></code> attributes instead, we may have seen {{domxref('validityState.tooLong')}} or {{domxref('validityState.tooShort')}} being true.</p>
 
 <div class="notecard note">
-<p>Note: The <code>{{HTMLElement("input/email", "email")}}</code> input type requires, at minimum, a match of <code>x@y</code> and the <code>{{HTMLElement("input/url", "url")}}</code> type requires, at minimum, a match to x:, with no pattern attribute present. When invalid, the {{domxref('validityState.typeMismatch')}} will be true, if there is no pattern attribute (or if the pattern attribute is not valid for that input type).</p>
+<p><strong>Note:</strong> The <code>{{HTMLElement("input/email", "email")}}</code> input type requires, at minimum, a match of <code>x@y</code> and the <code>{{HTMLElement("input/url", "url")}}</code> type requires, at minimum, a match to x:, with no pattern attribute present. When invalid, the {{domxref('validityState.typeMismatch')}} will be true, if there is no pattern attribute (or if the pattern attribute is not valid for that input type).</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{ SpecName('HTML WHATWG', 'constraints.html#dom-validitystate-patternmismatch', 'ValidityState.patternMismatch') }}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('HTML5.1', 'sec-forms.html#dom-validitystate-patternmismatch', 'ValidityState.patternMismatch') }}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('HTML5 W3C', 'forms.html#dom-validitystate-patternmismatch', 'ValidityState.patternMismatch') }}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.ValidityState.patternMismatch")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li><a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">Constraint validation</a></li>
- <li><a href="/en-US/docs/Web/Guide/HTML/Forms/Data_form_validation">Forms: Data form validation</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Form_validation">Forms: Data form validation</a></li>
  <li><a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">Regular Expressions</a></li>
 </ul>

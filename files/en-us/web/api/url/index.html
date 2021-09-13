@@ -16,12 +16,16 @@ tags:
   - hostname
   - href
   - origin
+  - Polyfill
+browser-compat: api.URL
 ---
 <p>{{APIRef("URL API")}}</p>
 
-<p><span class="seoSummary">The <strong><code>URL</code></strong> interface is used to parse, construct, normalize, and encode {{glossary("URL", "URLs")}}. It works by providing properties which allow you to easily read and modify the components of a URL.</span> You normally create a new <code>URL</code> object by specifying the URL as a string when calling its constructor, or by providing a relative URL and a base URL. You can then easily read the parsed components of the URL or make changes to the URL.</p>
+<p>The <strong><code>URL</code></strong> interface is used to parse, construct, normalize, and encode {{glossary("URL", "URLs")}}. It works by providing properties which allow you to easily read and modify the components of a URL.</p>
 
-<p>If a browser doesn't yet support the {{domxref("URL.URL", "URL()")}} constructor, you can access a URL object using the {{domxref("Window")}} interface's {{domxref("Window.URL")}} property. Be sure to check to see if any of your target browsers require this to be prefixed.</p>
+<p>You normally create a new <code>URL</code> object by specifying the URL as a string when calling its constructor, or by providing a relative URL and a base URL. You can then easily read the parsed components of the URL or make changes to the URL.</p>
+
+<p>If a browser doesn't yet support the {{domxref("URL.URL", "URL()")}} constructor, you can access a URL object using the {{domxref("Window")}} interface's {{domxref("URL")}} property. Be sure to check to see if any of your target browsers require this to be prefixed.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -115,37 +119,18 @@ console.log(parsedUrl.searchParams.get("id")); // "123"
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('File API', '#creating-revoking', 'URL')}}</td>
-   <td>{{Spec2('File API')}}</td>
-   <td>Added the static methods <code>URL.createObjectURL()</code> and <code>URL.revokeObjectURL</code><code>()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('URL', '#api', 'API')}}</td>
-   <td>{{Spec2('URL')}}</td>
-   <td>Initial definition (implements <code>URLUtils</code>).</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.URL")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
+ <li>A polyfill of <code>URL</code> is available in <a href="https://github.com/zloirock/core-js#url-and-urlsearchparams"><code>core-js</code></a></li>
  <li><a href="/en-US/docs/Web/API/URL_API">URL API</a></li>
  <li><a href="/en-US/docs/Learn/Common_questions/What_is_a_URL">What is a URL?</a></li>
- <li>Property to obtain a <code>URL</code> object: {{domxref("Window.URL")}}.</li>
+ <li>Property to obtain a <code>URL</code> object: {{domxref("URL")}}.</li>
  <li>{{domxref("URLSearchParams")}}.</li>
 </ul>

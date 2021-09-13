@@ -4,19 +4,22 @@ slug: Web/API/VRPose/angularAcceleration
 tags:
   - API
   - Experimental
-  - Expérimental(2)
   - Property
   - Reference
-  - Référence(2)
   - VR
   - VRPose
   - Virtual Reality
   - WebVR
   - angularAcceleration
+browser-compat: api.VRPose.angularAcceleration
 ---
 <div>{{APIRef("WebVR API")}}{{Deprecated_Header}}</div>
 
 <p>The <strong><code>angularAcceleration</code></strong> read-only property of the {{domxref("VRPose")}} interface returns an array representing the angular acceleration vector of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}}, in meters per second per second.</p>
+
+<div class="notecard note">
+  <p><strong>Note:</strong> This property was part of the old <a href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</a>. It has been superseded by the <a href="https://immersive-web.github.io/webxr/">WebXR Device API</a>.</p>
+</div>
 
 <p>In other words, the current acceleration of the sensor's rotation around the <code>x</code>, <code>y</code>, and <code>z</code> axes.</p>
 
@@ -26,7 +29,7 @@ tags:
 
 <h3 id="Value">Value</h3>
 
-<p>A {{domxref("Float32Array")}}, or <code>null</code> if the VR sensor is not able to provide angular acceleration information.</p>
+<p>A {{jsxref("Float32Array")}}, or <code>null</code> if the VR sensor is not able to provide angular acceleration information.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -55,24 +58,12 @@ function drawVRScene() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebVR 1.1', '#dom-vrpose-angularacceleration', 'angularAcceleration')}}</td>
-   <td>{{Spec2('WebVR 1.1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+<p>This property was part of the old <a href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</a> that has been superseded by the <a href="https://immersive-web.github.io/webxr/">WebXR Device API</a>. It is no longer on track to becoming a standard.</p>
+<p>Until all browsers have implemented the new <a href="/en-US/docs/Web/API/WebXR_Device_API/Fundamentals">WebXR APIs</a>, it is recommended to rely on frameworks, like <a href="https://aframe.io/">A-Frame</a>, <a href="https://www.babylonjs.com/">Babylon.js</a>, or <a href="https://threejs.org/">Three.js</a>, or a <a href="https://github.com/immersive-web/webxr-polyfill">polyfill</a>, to develop WebXR applications that will work across all browsers <a href="https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/">[1]</a>.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.VRPose.angularAcceleration")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

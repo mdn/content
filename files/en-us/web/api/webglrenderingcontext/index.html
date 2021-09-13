@@ -15,11 +15,11 @@ tags:
   - WebGL
   - WebGLRenderingContext
   - rendering
+browser-compat: api.WebGLRenderingContext
 ---
 <div>{{APIRef("WebGL")}}</div>
 
-<div id="Summary">
-<p><span class="seoSummary">The <code><strong>WebGLRenderingContext</strong></code> interface provides an interface to the OpenGL ES 2.0 graphics rendering context for the drawing surface of an HTML {{HTMLElement("canvas")}} element.</span></p>
+<p>The <code><strong>WebGLRenderingContext</strong></code> interface provides an interface to the OpenGL ES 2.0 graphics rendering context for the drawing surface of an HTML {{HTMLElement("canvas")}} element.</p>
 
 <p>To get an access to a WebGL context for 2D and/or 3D graphics rendering, call {{domxref("HTMLCanvasElement.getContext()", "getContext()")}} on a <code>&lt;canvas&gt;</code> element, supplying "webgl" as the argument:</p>
 
@@ -30,7 +30,6 @@ var gl = canvas.getContext('webgl');
 <p>Once you have the WebGL rendering context for a canvas, you can render within it. The <a href="/en-US/docs/Web/API/WebGL_API/Tutorial" title="WebGL tutorial">WebGL tutorial</a> has more information, examples, and resources on how to get started with WebGL.</p>
 
 <p>If you require a WebGL 2.0 context, see {{domxref("WebGL2RenderingContext")}}; this supplies access to an implementation of OpenGL ES 3.0 graphics.</p>
-</div>
 
 <h2 id="Constants">Constants</h2>
 
@@ -331,42 +330,13 @@ var gl = canvas.getContext('webgl');
  <dd>Returns an extension object.</dd>
 </dl>
 
-<h2 id="Examples">Examples</h2>
-
-<h3 id="WebGL_context_feature_detection">WebGL context feature detection</h3>
-
-<p>{{page("/en-US/docs/Web/API/WebGL_API/By_example/Detect_WebGL", "detect-webgl-intro")}}</p>
-
-<h3 id="Effect_of_canvas_size_on_rendering_with_WebGL">Effect of canvas size on rendering with WebGL</h3>
-
-<p>{{page("/en-US/docs/Web/API/WebGL_API/By_example/Canvas_size_and_WebGL", "canvas-size-and-webgl-intro")}}</p>
-
-<p>{{page("/en-US/docs/Web/API/WebGL_API/By_example/Canvas_size_and_WebGL", "canvas-size-and-webgl-source")}}</p>
-
-<p>{{EmbedLiveSample("canvas-size-and-webgl-source", 660,180 ,"" , "/Web/API/WebGL_API/By_example/Canvas_size_and_WebGL")}}</p>
-
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebGL', "#5.14", "WebGLRenderingContext")}}</td>
-   <td>{{Spec2('WebGL')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("api.WebGLRenderingContext")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

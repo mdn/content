@@ -16,17 +16,18 @@ tags:
   - cue
   - track
   - vtt
+browser-compat: api.TextTrackCue
 ---
-<p>{{APIRef("WebVTT")}}</p>
+<div>{{APIRef("WebVTT")}}</div>
 
-<p><span class="seoSummary"><code><strong>TextTrackCue</strong></code> is an abstract class which is used as the basis for the various derived cue types, such as {{domxref("VTTCue")}}; you will instead work with those derived types.</span> These cues represent a string of text that is presented for some duration of time during the performance of a {{domxref("TextTrack")}}. The cue includes the start time (the time at which the text will be displayed) and the end time (the time at which it will be removed from the display), as well as other information.</p>
+<p><code><strong>TextTrackCue</strong></code> is an abstract class which is used as the basis for the various derived cue types, such as {{domxref("VTTCue")}}; you will instead work with those derived types. These cues represent strings of text presented for some duration of time during the performance of a {{domxref("TextTrack")}}. The cue includes the start time (the time at which the text will be displayed) and the end time (the time at which it will be removed from the display), as well as other information.</p>
 
 <h2 id="Properties">Properties</h2>
 
 <p><em>This interface also inherits properties from {{domxref("EventTarget")}}.</em></p>
 
-<dl id="property_definitions">
- <dt>{{domxref("TextTrackCue.track")}} {{readOnlyInline}}</dt>
+<dl>
+ <dt>{{domxref("TextTrackCue.track")}}{{readOnlyInline}}</dt>
  <dd>The {{domxref("TextTrack")}} that this cue belongs to, or <code>null</code> if it doesn't belong to any.</dd>
  <dt>{{domxref("TextTrackCue.id")}}</dt>
  <dd>A {{domxref("DOMString")}} that identifies the cue.</dd>
@@ -42,33 +43,15 @@ tags:
 
 <dl>
  <dt>{{domxref("TextTrackCue.onenter")}}</dt>
- <dd>The event handler for the {{event("enter")}} event.</dd>
+ <dd>The event handler fired when a cue becomes active.</dd>
  <dt>{{domxref("TextTrackCue.onexit")}}</dt>
- <dd>The event handler for the {{event("exit")}} event.</dd>
+ <dd>The event handler fired when the cue has stopped being active.</dd>
 </dl>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','#texttrackcue','TextTrackCue')}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C','#texttrackcue','TextTrackCue')}}</td>
-   <td>{{Spec2("HTML5 W3C")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.TextTrackCue")}}</p>
+<p>{{Compat}}</p>

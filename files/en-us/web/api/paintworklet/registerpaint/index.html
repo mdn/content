@@ -2,20 +2,21 @@
 title: PaintWorkletGlobalScope.registerPaint
 slug: Web/API/PaintWorklet/registerPaint
 tags:
-- API
-- CSS
-- CSS Paint API
-- Houdini
-- Painting
-- Property
-- Reference
-- Worklet
-- paintWorklet
-- registerPaint
+  - API
+  - CSS
+  - CSS Paint API
+  - Houdini
+  - Painting
+  - Property
+  - Reference
+  - Worklet
+  - paintWorklet
+  - registerPaint
+browser-compat: api.PaintWorkletGlobalScope.registerPaint
 ---
 <div>{{draft}}{{APIRef("CSS Painting API")}}</div>
 
-<p class="summary">The
+<p>The
   <strong><code>PaintWorkletGlobalScope.registerPaint()</code></strong> method of the
   {{domxref("PaintWorklet")}} interface registers a class programmatically generate an
   image where a CSS property expects a file.</p>
@@ -84,7 +85,7 @@ registerPaint('checkerboard', CheckerboardPainter);</pre>
    CSS.paintWorklet.addModule('checkboardWorklet.js');
 &lt;/script&gt;</pre>
 
-<p>You can then use the <code>{{cssxref('paint', 'paint()')}}</code> CSS function in your
+<p>You can then use the <code>{{cssxref('paint()', 'paint()')}}</code> CSS function in your
   CSS anywhere an <code>{{cssxref('&lt;image&gt;')}}</code> value is valid.</p>
 
 <pre class="brush: css">li {
@@ -93,26 +94,11 @@ registerPaint('checkerboard', CheckerboardPainter);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('CSS Painting
-        API','#dom-paintworkletglobalscope-registerpaint','PaintWorkletGlobalScope.registerPaint')}}
-      </td>
-      <td>{{Spec2('CSS Painting API')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.PaintWorkletGlobalScope.registerPaint")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -7,10 +7,11 @@ tags:
   - Interface
   - barcode
   - barcode detector
+browser-compat: api.BarcodeDetector
 ---
 <div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Barcode Detector API")}}</div>
 
-<p class="summary">The <strong><code>BarcodeDetector</code></strong> interface of the {{domxref('Barcode Detection API')}} allows detection of linear and two dimensional barcodes in images.</p>
+<p>The <strong><code>BarcodeDetector</code></strong> interface of the {{domxref('Barcode Detection API')}} allows detection of linear and two dimensional barcodes in images.</p>
 
 <h2 id="Constructors">Constructors</h2>
 
@@ -23,7 +24,7 @@ tags:
 
 <dl>
  <dt>{{domxref('BarcodeDetector.detect', 'detect()')}}</dt>
- <dd>Returns a {{domxref('Promise')}} which fulfills with an array of <code>detectedBarcode</code> objects with the following properties:
+ <dd>Returns a {{jsxref('Promise')}} which fulfills with an array of <code>detectedBarcode</code> objects with the following properties:
  <ul>
   <li><code>boundingBox</code>: A {{domxref('DOMRectReadOnly')}}, which returns the dimensions of a rectangle representing the extent of a detected barcode, aligned with the image.</li>
   <li><code>cornerPoints</code>: The x and y co-ordinates of the four corner points of the detected barcode relative to the image, starting with the top left and working clockwise. This may not be square due to perspective distortions within the image.</li>
@@ -76,24 +77,11 @@ BarcodeDetector.getSupportedFormats()
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Shape Detection API','#barcodedetector','BarcodeDetector')}}</td>
-   <td>{{Spec2('Shape Detection API')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.BarcodeDetector")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -1,5 +1,5 @@
 ---
-title: IntersectionObserver.IntersectionObserver()
+title: IntersectionObserver()
 slug: Web/API/IntersectionObserver/IntersectionObserver
 tags:
 - API
@@ -9,12 +9,15 @@ tags:
 - Reference
 - Visibility
 - Visible
+browser-compat: api.IntersectionObserver.IntersectionObserver
 ---
 <div>{{APIRef("Intersection Observer API")}}</div>
 
-<p><span class="seoSummary">The <strong><code>IntersectionObserver()</code></strong>
+<p>The <strong><code>IntersectionObserver()</code></strong>
     constructor creates and returns a new {{domxref("IntersectionObserver")}}
-    object.</span> The <code>rootMargin</code>, if specified, is checked to ensure it's
+    object.</p>
+
+<p>The <code>rootMargin</code>, if specified, is checked to ensure it's
   syntactically correct, the thresholds are checked to ensure that they're all in the
   range 0.0 and 1.0 inclusive, and the threshold list is sorted in ascending numeric
   order. if the threshold list is empty, it's set to the array [0.0].</p>
@@ -100,28 +103,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('IntersectionObserver','#dom-intersectionobserver-intersectionobserver','IntersectionObserver
-        constructor')}}</td>
-      <td>{{Spec2('IntersectionObserver')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data.
-  If you'd like to contribute to the data, please check out <a
-    href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-  and send us a pull request.</p>
-
-<p>{{Compat("api.IntersectionObserver.IntersectionObserver")}}</p>
+<p>{{Compat}}</p>

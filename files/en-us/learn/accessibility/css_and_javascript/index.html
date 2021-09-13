@@ -20,7 +20,7 @@ tags:
 
 <p class="summary">CSS and JavaScript, when used properly, also have the potential to allow for accessible web experiences ... or they can significantly harm accessibility if misused. This article outlines some CSS and JavaScript best practices that should be considered to ensure even complex content is as accessible as possible.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -137,9 +137,9 @@ a:active {
 
 <p>The standard link conventions are underlined and a different color (default: blue) in their standard state, another color variation when the link has previously been visited (default: purple), and yet another color when the link is activated (default: red). In addition, the mouse pointer changes to a pointer icon when links are moused over, and the link receives a highlight when focused (e.g. via tabbing) or activated. The following image shows the highlight in both Firefox (a dotted outline) and Chrome (a blue outline):</p>
 
-<p><img alt="" src="focus-highlight-firefox.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="focus-highlight-firefox.png"></p>
 
-<p><img alt="" src="focus-highlight-chrome.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="focus-highlight-chrome.png"></p>
 
 <p>You can be creative with link styles, as long as you keep giving users feedback when they interact with the links. Something should definitely happen when states change, and you shouldn't get rid of the pointer cursor or the outline — both are very important accessibility aids for those using keyboard controls.</p>
 
@@ -170,7 +170,7 @@ a:active {
 
 <p>When choosing a color scheme for your website, make sure that the text (foreground) color contrasts well with the background color. Your design might look cool, but it is no good if people with visual impairments like color blindness can't read your content.</p>
 
-<p>There is an easy way to check whether your contrast is large enough to not cause problems. There are a number of contrast checking tools online that you can enter your foreground and background colors into, to check them. For example WebAIM's <a href="http://webaim.org/resources/contrastchecker/">Color Contrast Checker</a> is simple to use, and provides an explanation of what you need to conform to the WCAG criteria around color contrast.</p>
+<p>There is an easy way to check whether your contrast is large enough to not cause problems. There are a number of contrast checking tools online that you can enter your foreground and background colors into, to check them. For example WebAIM's <a href="https://webaim.org/resources/contrastchecker/">Color Contrast Checker</a> is simple to use, and provides an explanation of what you need to conform to the WCAG criteria around color contrast.</p>
 
 <div class="note">
 <p><strong>Note</strong>: A high contrast ratio will also allow anyone using a smartphone or tablet with a glossy screen to better read pages when in a bright environment, such as sunlight.</p>
@@ -182,14 +182,14 @@ a:active {
 
 <p>There are many instances where a visual design will require that not all content is shown at once. For example, in our <a href="https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html">Tabbed info box example</a> (see <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html">source code</a>) we have three panels of information, but we are <a href="/en-US/docs/Learn/CSS/CSS_layout/Positioning">positioning</a> them on top of one another and providing tabs that can be clicked to show each one (it is also keyboard accessible — you can alternatively use Tab and Enter/Return to select them).</p>
 
-<p><img alt="" src="tabbed-info-box.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="tabbed-info-box.png"></p>
 
 <p>Screen reader users don't care about any of this — they are happy with the content as long as the source order makes sense, and they can get to it all. Absolute positioning (as used in this example) is generally seen as one of the best mechanisms of hiding content for visual effect, because it doesn't stop screen readers from getting to it.</p>
 
 <p>On the other hand, you shouldn't use {{cssxref("visibility")}}<code>:hidden</code> or {{cssxref("display")}}<code>:none</code>, because they do hide content from screen readers. Unless of course, there is a good reason why you want this content to be hidden from screen readers.</p>
 
 <div class="note">
-<p><strong>Note</strong>: <a href="http://webaim.org/techniques/css/invisiblecontent/">Invisible Content Just for Screen Reader Users</a> has a lot more useful detail surrounding this topic.</p>
+<p><strong>Note</strong>: <a href="https://webaim.org/techniques/css/invisiblecontent/">Invisible Content Just for Screen Reader Users</a> has a lot more useful detail surrounding this topic.</p>
 </div>
 
 <h3 id="Accept_that_users_can_override_styles">Accept that users can override styles</h3>
@@ -316,7 +316,7 @@ function validate(e) {
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: WebAIM's <a href="http://webaim.org/techniques/formvalidation/">Usable and Accessible Form Validation and Error Recovery</a> provides some further useful information about accessible form validation.</p>
+<p><strong>Note</strong>: WebAIM's <a href="https://webaim.org/techniques/formvalidation/">Usable and Accessible Form Validation and Error Recovery</a> provides some further useful information about accessible form validation.</p>
 </div>
 
 <h3 id="Other_JavaScript_accessibility_concerns">Other JavaScript accessibility concerns</h3>

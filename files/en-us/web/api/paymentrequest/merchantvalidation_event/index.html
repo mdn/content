@@ -15,10 +15,11 @@ tags:
   - events
   - merchantvalidation
   - payment
+browser-compat: api.PaymentRequest.merchantvalidation_event
 ---
 <div>{{deprecated_header}}{{non-standard_header}}{{securecontext_header}}</div>
 
-<p><span class="seoSummary"><code><strong>merchantvalidation</strong></code> events are delivered by the <a href="/en-US/docs/Web/API/Payment_Request_API">Payment Request API</a> to a {{domxref("PaymentRequest")}} object when a payment handler requires that the merchant requesting the purchase validate itself as permitted to use the payment handler.</span></p>
+<p><code><strong>merchantvalidation</strong></code> events are delivered by the <a href="/en-US/docs/Web/API/Payment_Request_API">Payment Request API</a> to a {{domxref("PaymentRequest")}} object when a payment handler requires that the merchant requesting the purchase validate itself as permitted to use the payment handler.</p>
 
 <p>See {{SectionOnPage("/en-US/docs/Web/API/Payment_Request_API/Concepts", "Merchant validation")}} for details on how the merchant validation process works.</p>
 
@@ -45,7 +46,7 @@ tags:
 
 <h2 id="Examples">Examples</h2>
 
-<p>In this example, an event handler is established for the <code>merchantvalidation</code> event. It uses the {{domxref("WindowOrWorkerGlobalScope.fetch", "fetch()")}} to send a request to its own server with an argument of the payment method's validation URL, obtained from the event's {{domxref("MerchantValidationEvent.validationURL", "validationURL")}} property. The merchant server should access the validation URL in accordance with the payment method documention. Typically, a client should not access the validation URL.</p>
+<p>In this example, an event handler is established for the <code>merchantvalidation</code> event. It uses the {{domxref("fetch()")}} to send a request to its own server with an argument of the payment method's validation URL, obtained from the event's {{domxref("MerchantValidationEvent.validationURL", "validationURL")}} property. The merchant server should access the validation URL in accordance with the payment method documention. Typically, a client should not access the validation URL.</p>
 
 <pre class="brush: js">request.addEventListener("merchantvalidation", event =&gt; {
   event.complete(async () =&gt; {
@@ -85,7 +86,7 @@ const response = await request.show();</pre>
 
 <div>
 
-<p>{{Compat("api.PaymentRequest.merchantvalidation_event")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

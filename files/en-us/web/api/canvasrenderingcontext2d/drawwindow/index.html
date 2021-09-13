@@ -8,19 +8,24 @@ tags:
 - Method
 - Non-standard
 - Reference
+- Deprecated
+browser-compat: api.CanvasRenderingContext2D.drawWindow
 ---
 <div>{{APIRef}} {{deprecated_header}}</div>
 
 <p>The deprecated, non-standard and internal only
-  <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.drawWindow()</code></strong>
+  <strong><code>CanvasRenderingContext2D.drawWindow()</code></strong>
   method of the Canvas 2D API renders a region of a window into the <code>canvas</code>.
   The contents of the window's viewport are rendered, ignoring viewport clipping and
   scrolling.</p>
 
 <p>This API cannot be used by Web content. It is synchronous, and as such can't capture
   cross-origin (out of process) iframes with Fission.  If you're using it from an
-  extension, you should switch to {{WebExtAPIRef('tabs.captureTab')}}.  If you're writing
-  chrome code, you probably want <a
+  extension, you should switch to {{WebExtAPIRef('tabs.captureTab')}} to capture the
+  tab's image as a <a class="external" href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs"
+  rel="external">data: url</a> and then render the captured image onto canvas using
+  {{domxref("CanvasRenderingContext2D.drawImage")}}. If you're writing chrome code,
+  you probably want <a
     href="https://searchfox.org/mozilla-central/rev/9b282b34b5/dom/chrome-webidl/WindowGlobalActors.webidl#81-98">WindowGlobalParent.drawSnapshot</a>
   from the parent process.</p>
 
@@ -59,13 +64,16 @@ tags:
   </dd>
   <dt><code>flags</code> {{optional_inline}}</dt>
   <dd>Used to better control the <code>drawWindow</code> call. Flags can be ORed together.
+
     <table class="standard-table">
-      <tbody>
+      <thead>
         <tr>
-          <td class="header">Constant</td>
-          <td class="header">Value</td>
-          <td class="header">Description</td>
+          <th>Constant</th>
+          <th>Value</th>
+          <th>Description</th>
         </tr>
+      </thead>
+      <tbody>
         <tr>
           <td><code>DRAWWINDOW_DRAW_CARET</code></td>
           <td><code>0x01</code></td>
@@ -74,8 +82,10 @@ tags:
         <tr>
           <td><code>DRAWWINDOW_DO_NOT_FLUSH</code></td>
           <td><code>0x02</code></td>
-          <td>Do not flush pending layout notifications that could otherwise be batched
-            up.</td>
+          <td>
+            Do not flush pending layout notifications that could otherwise be
+            batched up.
+          </td>
         </tr>
         <tr>
           <td><code>DRAWWINDOW_DRAW_VIEW</code></td>
@@ -85,9 +95,12 @@ tags:
         <tr>
           <td><code>DRAWWINDOW_USE_WIDGET_LAYERS</code></td>
           <td><code>0x08</code></td>
-          <td>Use the widget layer manager if available. This means hardware acceleration
-            may be used, but it might actually be slower or lower quality than normal. It
-            will, however, more accurately reflect the pixels rendered to the screen.</td>
+          <td>
+            Use the widget layer manager if available. This means hardware
+            acceleration may be used, but it might actually be slower or lower
+            quality than normal. It will, however, more accurately reflect the
+            pixels rendered to the screen.
+          </td>
         </tr>
         <tr>
           <td><code>DRAWWINDOW_ASYNC_DECODE_IMAGES</code></td>
@@ -122,7 +135,7 @@ tags:
   so on according to the current transformation.</p>
 
 <p>Ted Mielczarek's <a class="external external-icon"
-    href="http://ted.mielczarek.org/code/mozilla/tabpreview/">tab preview</a> extension
+    href="https://ted.mielczarek.org/code/mozilla/tabpreview/">tab preview</a> extension
   uses this technique in chrome to provide thumbnails of web pages, and the source is
   available for reference.</p>
 
@@ -133,11 +146,12 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.CanvasRenderingContext2D.drawWindow")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
   <li>The interface defining this method: {{domxref("CanvasRenderingContext2D")}}</li>
   <li>{{domxref("CanvasRenderingContext2D.drawWidgetAsOnScreen()")}}</li>
+  <li><a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images">Using images</a></li>
 </ul>

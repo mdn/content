@@ -4,6 +4,7 @@ slug: Web/SVG/Attribute/lang
 tags:
   - SVG
   - SVG Attribute
+browser-compat: svg.attributes.core.lang
 ---
 <div>{{SVGRef}}</div>
 
@@ -13,7 +14,7 @@ tags:
 
 <p>In SVG 1.1 there was a <code>lang</code> attribute defined with a different meaning and only applying to {{SVGElement("glyph")}} elements. That attribute specified a list of languages in <a href="https://www.ietf.org/rfc/bcp/bcp47.txt">BCP 47 format</a>. The glyph was meant to be used if the <code>xml:lang</code> attribute exactly matched one of the languages given in the value of this parameter, or if the <code>xml:lang</code> attribute exactly equaled a prefix of one of the languages given in the value of this parameter such that the first tag character following the prefix was "-".</p>
 
-<p>All elements are using this attribute.</p>
+<p>You can use this attribute with any SVG element.</p>
 
 <div id="topExample">
 <pre class="brush: html; highlight[2]">&lt;svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg"&gt;
@@ -75,7 +76,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("svg.attributes.core.lang")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

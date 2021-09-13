@@ -2,12 +2,13 @@
 title: OffscreenCanvas.getContext()
 slug: Web/API/OffscreenCanvas/getContext
 tags:
-- API
-- Canvas
-- Experimental
-- Method
-- OffscreenCanvas
-- Reference
+  - API
+  - Canvas
+  - Experimental
+  - Method
+  - OffscreenCanvas
+  - Reference
+browser-compat: api.OffscreenCanvas.getContext
 ---
 <div>{{APIRef("Canvas API")}} {{SeeCompatTable}}</div>
 
@@ -16,7 +17,7 @@ tags:
   supported.</p>
 
 <div class="note">
-  <p><strong>Note</strong>: This API is currently implemented for <a
+  <p><strong>Note:</strong> This API is currently implemented for <a
       href="/en-US/docs/Web/API/WebGLRenderingContext">WebGL1</a> and <a
       href="/en-US/docs/Web/API/WebGL2RenderingContext">WebGL2</a> contexts only. See
     {{bug(801176)}} for <a href="/en-US/docs/Web/API/Canvas_API">Canvas 2D API</a> support
@@ -41,11 +42,11 @@ tags:
       <li><strong><code>"webgl"</code></strong> creates a
         {{domxref("WebGLRenderingContext")}} object representing a three-dimensional
         rendering context. This context is only available on browsers that implement <a
-          href="/en-US/docs/Web/WebGL">WebGL</a> version 1 (OpenGL ES 2.0).</li>
+          href="/en-US/docs/Web/API/WebGL_API">WebGL</a> version 1 (OpenGL ES 2.0).</li>
       <li><strong><code>"webgl2"</code></strong> creates a
         {{domxref("WebGL2RenderingContext")}} object representing a three-dimensional
         rendering context. This context is only available on browsers that implement <a
-          href="/en-US/docs/Web/WebGL">WebGL</a> version 2 (OpenGL ES 3.0).
+          href="/en-US/docs/Web/API/WebGL_API">WebGL</a> version 2 (OpenGL ES 3.0).
         {{experimental_inline}}</li>
       <li>
         <p><strong><code>"bitmaprenderer"</code></strong> creates a
@@ -116,7 +117,7 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A {{domxref("RenderingContext")}} which is either a</p>
+<p>A rendering context which is either a</p>
 
 <ul>
   <li>{{domxref("CanvasRenderingContext2D")}} for <code>"2d"</code>,</li>
@@ -140,25 +141,11 @@ gl.canvas; // OffscreenCanvas</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', "#dom-offscreencanvas-getcontext",
-        "OffscreenCanvas.getContext()")}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.OffscreenCanvas.getContext")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

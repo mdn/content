@@ -2,7 +2,7 @@
 title: NSPR functions
 slug: Mozilla/Projects/NSS/Reference/NSPR_functions
 ---
-<p><a class="external" href="https://www.mozilla.org/projects/nspr/" title="http://www.mozilla.org/projects/nspr/">NSPR</a> is a platform abstraction library that provides a cross-platform API to common OS services.  NSS uses NSPR internally as the porting layer.  However, a small number of NSPR functions are required for using the certificate verification and SSL functions in NSS.  These NSPR functions are listed in this section.</p>
+<p><a class="external" href="https://www.mozilla.org/projects/nspr/">NSPR</a> is a platform abstraction library that provides a cross-platform API to common OS services.  NSS uses NSPR internally as the porting layer.  However, a small number of NSPR functions are required for using the certificate verification and SSL functions in NSS.  These NSPR functions are listed in this section.</p>
 <h3 id="NSPR_initialization_and_shutdown">NSPR initialization and shutdown</h3>
 <p>NSPR is automatically initialized by the first NSPR function called by the application.  Call <a class="internal" href="/en-US/PR_Cleanup"><code>PR_Cleanup</code></a> to shut down NSPR and clean up its resources.<a class="internal" href="/en-US/PR_Init"><br>
 </a></p>
@@ -18,7 +18,7 @@ slug: Mozilla/Projects/NSS/Reference/NSPR_functions
 <ul> <li><a class="internal" href="/en-US/PR_Now">PR_Now</a></li>
 </ul>
 <h3 id="Interval_time">Interval time</h3>
-<p>The NSPR socket I/O functions <a class="internal" href="/en-US/PR_Recv"><code>PR_Recv</code></a> and <a class="internal" href="/en-US/PR_Send"><code>PR_Send</code></a> (used by the NSS SSL functions) take a <code>PRIntervalTime</code> timeout parameter.  <code>PRIntervalTime</code> has an abstract, platform-dependent time unit.  Call <a class="internal" href="/en-US/PR_SecondsToInterval"><code>PR_SecondsToInterval</code></a> or <code><a class="internal" href="/en-US/PR_MillisecondsToInterval">PR_MillisecondsToInterval</a> </code>to convert a time interval in seconds or milliseconds to <code>PRIntervalTime</code>.</p>
+<p>The NSPR socket I/O functions <a class="internal" href="/en-US/PR_Recv"><code>PR_Recv</code></a> and <a class="internal" href="/en-US/PR_Send"><code>PR_Send</code></a> (used by the NSS SSL functions) take a <code>PRIntervalTime</code> timeout parameter.  <code>PRIntervalTime</code> has an abstract, platform-dependent time unit.  Call <a class="internal" href="/en-US/PR_SecondsToInterval"><code>PR_SecondsToInterval</code></a> or <code><a class="internal" href="/en-US/PR_MillisecondsToInterval">PR_MillisecondsToInterval</a></code> to convert a time interval in seconds or milliseconds to <code>PRIntervalTime</code>.</p>
 <ul> <li><a class="internal" href="/en-US/PR_SecondsToInterval">PR_SecondsToInterval</a></li> <li><a class="internal" href="/en-US/PR_MillisecondsToInterval">PR_MillisecondsToInterval</a></li>
 </ul>
 <h3 id="NSPR_IO_layering">NSPR I/O layering</h3>

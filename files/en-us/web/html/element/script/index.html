@@ -5,24 +5,25 @@ tags:
   - Element
   - HTML
   - HTML scripting
-  - 'HTML:Flow content'
-  - 'HTML:Metadata content'
-  - 'HTML:Phrasing content'
-  - 'HTML:Script-supporting element'
+  - HTML:Flow content
+  - HTML:Metadata content
+  - HTML:Phrasing content
+  - HTML:Script-supporting element
   - Reference
   - Script
   - Web
   - tag
+browser-compat: html.elements.script
 ---
 <p>{{HTMLRef}}</p>
 
-<p><span class="seoSummary">The <strong>HTML <code>&lt;script&gt;</code> element</strong> is used to embed executable code or data; this is typically used to embed or refer to JavaScript code.</span> The <code>&lt;script&gt;</code> element can also be used with other languages, such as <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a>'s GLSL shader programming language and <a href="/en-US/docs/Glossary/JSON">JSON</a>.</p>
+<p>The <strong><code>&lt;script&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element is used to embed executable code or data; this is typically used to embed or refer to JavaScript code. The <code>&lt;script&gt;</code> element can also be used with other languages, such as <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a>'s GLSL shader programming language and <a href="/en-US/docs/Glossary/JSON">JSON</a>.</p>
 
 <table class="properties">
  <tbody>
   <tr>
    <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Metadata_content">Metadata content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">Phrasing content</a>.</td>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#metadata_content">Metadata content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">Phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
@@ -34,7 +35,7 @@ tags:
   </tr>
   <tr>
    <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Metadata_content">metadata content</a>, or any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
+   <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#metadata_content">metadata content</a>, or any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Implicit ARIA role</th>
@@ -91,22 +92,22 @@ tags:
  <dt>{{htmlattrdef("nomodule")}}</dt>
  <dd>This Boolean attribute is set to indicate that the script should not be executed in browsers that support<a href="https://hacks.mozilla.org/2015/08/es6-in-depth-modules/"> ES2015 modules</a> — in effect, this can be used to serve fallback scripts to older browsers that do not support modular JavaScript code.</dd>
  <dt>{{htmlattrdef("nonce")}}</dt>
- <dd>A cryptographic nonce (number used once) to whitelist scripts in a <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src">script-src Content-Security-Policy</a>. The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource's policy is otherwise trivial.</dd>
+ <dd>A cryptographic nonce (number used once) to allow scripts in a <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src">script-src Content-Security-Policy</a>. The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource's policy is otherwise trivial.</dd>
  <dt id="attr-referrer">{{htmlattrdef("referrerpolicy")}}</dt>
  <dd>Indicates which <a href="/en-US/docs/Web/API/Document/referrer">referrer</a> to send when fetching the script, or resources fetched by the script:
- <ul>
+  <ul>
   <li><code>no-referrer</code>: The {{HTTPHeader("Referer")}} header will not be sent.</li>
-  <li><code>no-referrer-when-downgrade</code> (default): The {{HTTPHeader("Referer")}} header will not be sent to {{Glossary("origin")}}s without {{Glossary("TLS")}} ({{Glossary("HTTPS")}}).</li>
-  <li><code>origin</code>: The sent referrer will be limited to the origin of the referring page: its {{Glossary("protocol", "scheme")}}, {{Glossary("host")}}, and {{Glossary("port")}}.</li>
+  <li><code>no-referrer-when-downgrade</code>: The {{HTTPHeader("Referer")}} header will not be sent to {{Glossary("origin")}}s without {{Glossary("TLS")}} ({{Glossary("HTTPS")}}).</li>
+  <li><code>origin</code>: The sent referrer will be limited to the origin of the referring page: its <a href="/en-US/docs/Learn/Common_questions/What_is_a_URL">scheme</a>, {{Glossary("host")}}, and {{Glossary("port")}}.</li>
   <li><code>origin-when-cross-origin</code>: The referrer sent to other origins will be limited to the scheme, the host, and the port. Navigations on the same origin will still include the path.</li>
-  <li><code>same-origin</code>: A referrer will be sent for <a href="/en-US/docs/Web/Security/Same-origin_policy">same origin</a>, but cross-origin requests will contain no referrer information.</li>
-  <li><code>strict-origin</code>: Only send the origin of the document as the referrer when the protocol security level stays the same (e.g. HTTPS→HTTPS), but don't send it to a less secure destination (e.g. HTTPS→HTTP).</li>
-  <li><code>strict-origin-when-cross-origin</code>: Send a full URL when performing a same-origin request, but only send the origin when the protocol security level stays the same (e.g.HTTPS→HTTPS), and send no header to a less secure destination (e.g. HTTPS→HTTP).</li>
-  <li><code>unsafe-url</code>: The referrer will include the origin <em>and</em> the path (but not the <a href="/en-US/docs/Web/API/HTMLHyperlinkElementUtils/hash">fragment</a>, <a href="/en-US/docs/Web/API/HTMLHyperlinkElementUtils/password">password</a>, or <a href="/en-US/docs/Web/API/HTMLHyperlinkElementUtils/username">username</a>). <strong>This value is unsafe</strong>, because it leaks origins and paths from TLS-protected resources to insecure origins.</li>
+  <li><code>same-origin</code>: A referrer will be sent for {{Glossary("Same-origin policy", "same origin")}}, but cross-origin requests will contain no referrer information.</li>
+  <li><code>strict-origin</code>: Only send the origin of the document as the referrer when the protocol security level stays the same (HTTPS→HTTPS), but don't send it to a less secure destination (HTTPS→HTTP).</li>
+  <li><code>strict-origin-when-cross-origin</code> (default): Send a full URL when performing a same-origin request, only send the origin when the protocol security level stays the same (HTTPS→HTTPS), and send no header to a less secure destination (HTTPS→HTTP).</li>
+  <li><code>unsafe-url</code>: The referrer will include the origin <em>and</em> the path (but not the <a href="/en-US/docs/Web/API/HTMLAnchorElement/hash">fragment</a>, <a href="/en-US/docs/Web/API/HTMLAnchorElement/password">password</a>, or <a href="/en-US/docs/Web/API/HTMLAnchorElement/username">username</a>). <strong>This value is unsafe</strong>, because it leaks origins and paths from TLS-protected resources to insecure origins.</li>
  </ul>
 
  <div class="notecard note">
- <p><strong>Note</strong>: An empty string value (<code>""</code>) is both the default value, and a fallback value if <code>referrerpolicy</code> is not supported. If <code>referrerpolicy</code> is not explicitly specified on the <code>&lt;script&gt;</code> element, it will adopt a higher-level referrer policy, i.e. one set on the whole document or domain. If a higher-level policy is not available, the empty string is treated as being equivalent to <code>no-referrer-when-downgrade</code>.</p>
+ <p><strong>Note</strong>: An empty string value (<code>""</code>) is both the default value, and a fallback value if <code>referrerpolicy</code> is not supported. If <code>referrerpolicy</code> is not explicitly specified on the <code>&lt;script&gt;</code> element, it will adopt a higher-level referrer policy, i.e. one set on the whole document or domain. If a higher-level policy is not available, the empty string is treated as being equivalent to <code>strict-origin-when-cross-origin</code>.</p>
  </div>
  </dd>
  <dt>{{htmlattrdef("src")}}</dt>
@@ -118,7 +119,7 @@ tags:
  <p>This attribute indicates the type of script represented. The value of this attribute will be in one of the following categories:</p>
 
  <ul>
-  <li><strong>Omitted or a JavaScript MIME type:</strong> This indicates the script is JavaScript. The HTML5 specification urges authors to omit the attribute rather than provide a redundant MIME type. In earlier browsers, this identified the scripting language of the embedded or imported (via the <code>src</code> attribute) code. JavaScript MIME types are <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#JavaScript_types">listed in the specification</a>.</li>
+  <li><strong>Omitted or a JavaScript MIME type:</strong> This indicates the script is JavaScript. The HTML5 specification urges authors to omit the attribute rather than provide a redundant MIME type. In earlier browsers, this identified the scripting language of the embedded or imported (via the <code>src</code> attribute) code. JavaScript MIME types are <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#javascript_types">listed in the specification</a>.</li>
   <li><strong><code>module</code>:</strong> Causes the code to be treated as a JavaScript module. The processing of the script contents is not affected by the <code>charset</code> and <code>defer</code> attributes. For information on using <code>module</code>, see our <a href="/en-US/docs/Web/JavaScript/Guide/Modules">JavaScript modules</a> guide. Unlike classic scripts, module scripts require the use of the CORS protocol for cross-origin fetching.</li>
   <li><strong>Any other value:</strong> The embedded content is treated as a data block which won't be processed by the browser. Developers must use a valid MIME type that is not a JavaScript MIME type to denote data blocks. The <code>src</code> attribute will be ignored.</li>
  </ul>
@@ -178,36 +179,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comments</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "scripting.html#the-script-element", "&lt;script&gt;")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>Removed the {{HTMLAttrxRef("charset", "script")}} attribute</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5 W3C", "semantics-scripting.html#the-script-element", "&lt;script&gt;")}}</td>
-   <td>{{Spec2("HTML5 W3C")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML4.01", "interact/scripts.html#h-18.2.1", "&lt;script&gt;")}}</td>
-   <td>{{Spec2("HTML4.01")}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{Compat("html.elements.script", 2)}}</div>
+<div>{{Compat}}</div>
 
 <h3 id="Compatibility_notes">Compatibility notes</h3>
 

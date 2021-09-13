@@ -7,6 +7,7 @@ tags:
   - Experimental
   - Interface
   - Reference
+browser-compat: api.OffscreenCanvas
 ---
 <div>{{APIRef("Canvas API")}} {{SeeCompatTable}}</div>
 
@@ -45,7 +46,7 @@ tags:
 
 <h3 id="Synchronous_display_of_frames_produced_by_an_OffscreenCanvas">Synchronous display of frames produced by an <code>OffscreenCanvas</code></h3>
 
-<p>One way to use the <code>OffscreenCanvas</code> API, is to use a {{domxref("RenderingContext")}} that has been obtained from an <code>OffscreenCanvas</code> object to generate new frames. Once a new frame has finished rendering in this context,  the {{domxref("OffscreenCanvas.transferToImageBitmap", "transferToImageBitmap()")}} method can be called to save the most recent rendered image. This method returns an {{domxref("ImageBitmap")}} object, which can be used in a variety of Web APIs and also in a second canvas without creating a transfer copy.</p>
+<p>One way to use the <code>OffscreenCanvas</code> API, is to use a rendering context that has been obtained from an <code>OffscreenCanvas</code> object to generate new frames. Once a new frame has finished rendering in this context,  the {{domxref("OffscreenCanvas.transferToImageBitmap", "transferToImageBitmap()")}} method can be called to save the most recent rendered image. This method returns an {{domxref("ImageBitmap")}} object, which can be used in a variety of Web APIs and also in a second canvas without creating a transfer copy.</p>
 
 <p>To display the <code>ImageBitmap</code>, you can use a {{domxref("ImageBitmapRenderingContext")}} context, which can be created by calling <code>canvas.getContext("bitmaprenderer")</code> on a (visible) canvas element. This context only provides functionality to replace the canvas's contents with the given <code>ImageBitmap</code>. A call to {{domxref("ImageBitmapRenderingContext.transferFromImageBitmap()")}} with the previously rendered and saved <code>ImageBitmap</code> from the OffscreenCanvas, will display the <code>ImageBitmap</code> on the canvas and transfer its ownership to the canvas. A single <code>OffscreenCanvas</code> may transfer frames into an arbitrary number of other <code>ImageBitmapRenderingContext</code> objects.</p>
 
@@ -77,7 +78,7 @@ two.transferFromImageBitmap(bitmapTwo);
 
 <h3 id="Asynchronous_display_of_frames_produced_by_an_OffscreenCanvas">Asynchronous display of frames produced by an <code>OffscreenCanvas</code></h3>
 
-<p>Another way to use the <code>OffscreenCanvas</code> API, is to call {{domxref("HTMLCanvasElement.transferControlToOffscreen", "transferControlToOffscreen()")}} on a {{HTMLElement("canvas")}} element, either on a <a href="/en-US/docs/Web/API/Web_Workers_API">worker</a> or the main thread, which will return an <code>OffscreenCanvas</code> object from an {{domxref("HTMLCanvasElement")}} object from the main thread. Calling {{domxref("OffscreenCanvas.getContext", "getContext()")}} will then obtain a <code>RenderingContext</code> from that <code>OffscreenCanvas</code>.</p>
+<p>Another way to use the <code>OffscreenCanvas</code> API, is to call {{domxref("HTMLCanvasElement.transferControlToOffscreen", "transferControlToOffscreen()")}} on a {{HTMLElement("canvas")}} element, either on a <a href="/en-US/docs/Web/API/Web_Workers_API">worker</a> or the main thread, which will return an <code>OffscreenCanvas</code> object from an {{domxref("HTMLCanvasElement")}} object from the main thread. Calling {{domxref("OffscreenCanvas.getContext", "getContext()")}} will then obtain a rendering context from that <code>OffscreenCanvas</code>.</p>
 
 <p>main.js (main thread code):</p>
 
@@ -113,24 +114,11 @@ worker.postMessage({canvas: offscreen}, [offscreen]);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#the-offscreencanvas-interface", "OffscreenCanvas")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.OffscreenCanvas")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -6,13 +6,13 @@ tags:
   - AnalyserNode
   - Property
   - Reference
-  - Référence(2)
   - Web Audio API
   - smoothingTimeConstant
+browser-compat: api.AnalyserNode.smoothingTimeConstant
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
-<p class="summary">The <strong><code>smoothingTimeConstant</code></strong> property of the {{ domxref("AnalyserNode") }} interface is a double value representing the averaging constant with the last analysis frame. It's basically an average between the current buffer and the last buffer the <code>AnalyserNode</code> processed, and results in a much smoother set of value changes over time.</p>
+<p>The <strong><code>smoothingTimeConstant</code></strong> property of the {{ domxref("AnalyserNode") }} interface is a double value representing the averaging constant with the last analysis frame. It's basically an average between the current buffer and the last buffer the <code>AnalyserNode</code> processed, and results in a much smoother set of value changes over time.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -29,7 +29,7 @@ tags:
 <p>In technical terms, we apply a <a href="https://webaudio.github.io/web-audio-api/#blackman-window">Blackman window</a> and smooth the values over time. The default value is good enough for most cases.</p>
 
 <div class="note">
-<p><strong>Note</strong>:  If a value outside the range 0–1 is set, an <code>INDEX_SIZE_ERR</code> exception is thrown.</p>
+<p><strong>Note:</strong> If a value outside the range 0–1 is set, an <code>INDEX_SIZE_ERR</code> exception is thrown.</p>
 </div>
 
 <h2 id="Example">Example</h2>
@@ -79,24 +79,11 @@ draw();</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#dom-analysernode-smoothingtimeconstant', 'smoothingTimeConstant')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.AnalyserNode.smoothingTimeConstant")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

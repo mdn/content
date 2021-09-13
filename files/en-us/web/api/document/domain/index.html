@@ -7,8 +7,10 @@ tags:
   - HTML DOM
   - Property
   - Reference
+  - Deprecated
+browser-compat: api.Document.domain
 ---
-<div>{{ApiRef}}{{ Deprecated_header() }}</div>
+<div>{{ApiRef}} {{Deprecated_Header}}</div>
 
 <p>The <strong><code>domain</code></strong> property of the {{domxref("Document")}}
   interface gets/sets the domain portion of the {{glossary("origin")}} of the current
@@ -95,14 +97,14 @@ tags:
 
 <ul>
   <li>The {{httpheader('Feature-Policy/document-domain','document-domain')}}
-    {{HTTPHeader("Feature-Policy")}} is enabled</li>
-  <li>The document is inside a sandboxed {{htmlelement("iframe")}}</li>
-  <li>The document has no {{glossary("browsing context")}}</li>
+    {{HTTPHeader("Feature-Policy")}} is disabled.</li>
+  <li>The document is inside a sandboxed {{htmlelement("iframe")}}.</li>
+  <li>The document has no {{glossary("browsing context")}}.</li>
   <li>The document's <a
       href="https://html.spec.whatwg.org/multipage/origin.html#concept-origin-effective-domain">effective
-      domain</a> is <code>null</code></li>
+      domain</a> is <code>null</code>.</li>
   <li>The given value is neither the same as the page's current hostname, nor a parent
-    domain of it</li>
+    domain of it.</li>
 </ul>
 
 <p>As an example of this last failure case, trying to set <code>document.domain</code> to
@@ -145,32 +147,15 @@ tags:
   <code>currentHostname</code> is also the string "<code>developer.mozilla.org</code>".
   Other alternatives that provide slightly different information are
   {{domxref("Location.host")}}, which includes the port, and
-  {{domxref("WindowOrWorkerGlobalScope.origin")}}, which provides the full origin.</p>
+  {{domxref("origin")}}, which provides the full origin.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('HTML
-        WHATWG','origin.html#relaxing-the-same-origin-restriction','document.domain')}}
-      </td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{Compat("api.Document.domain")}}</div>
+<div>{{Compat}}</div>
 
 <h2 id="See_also">See also</h2>
 
@@ -178,5 +163,5 @@ tags:
   <li><a href="/en-US/docs/Web/Security/Same-origin_policy">Same-origin policy</a></li>
   <li>{{domxref("Location.hostname")}}</li>
   <li>{{domxref("Location.host")}}</li>
-  <li>{{domxref("WindowOrWorkerGlobalScope.origin")}}</li>
+  <li>{{domxref("origin")}}</li>
 </ul>

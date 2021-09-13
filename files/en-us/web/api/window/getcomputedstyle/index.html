@@ -2,20 +2,22 @@
 title: Window.getComputedStyle()
 slug: Web/API/Window/getComputedStyle
 tags:
-- API
-- CSSOM View
-- Method
-- Reference
-- Window
-- getComputedStyle
+  - API
+  - CSSOM View
+  - Method
+  - Reference
+  - Window
+  - getComputedStyle
+browser-compat: api.Window.getComputedStyle
 ---
 <p>{{APIRef("CSSOM")}}</p>
 
-<p class="summary"><span class="seoSummary">The
+<p>The
     <strong><code>Window.getComputedStyle()</code></strong> method returns an object
     containing the values of all CSS properties of an element, after applying active
-    stylesheets and resolving any basic computation those values may contain.</span>
-  Individual CSS property values are accessed through APIs provided by the object, or by
+    stylesheets and resolving any basic computation those values may contain.</p>
+
+<p>Individual CSS property values are accessed through APIs provided by the object, or by
   indexing with CSS property names.</p>
 
 <h2 id="Syntax">Syntax</h2>
@@ -39,10 +41,10 @@ window.getComputedStyle(element, pseudoElt);
 
 <dl>
   <dt>{{JSxRef("TypeError")}}</dt>
-  <dd>If the passed object is not an {{DOMxRef("Element")}} or the
-    <code><var>pseudoElt</var></code> is not a valid pseudo-element selector or is
-    {{CSSxRef("::part", "::part()")}} or {{CSSxRef("::slotted", "::slotted()")}}.</dd>
   <dd>
+    <p>If the passed object is not an {{DOMxRef("Element")}} or the
+    <code><var>pseudoElt</var></code> is not a valid pseudo-element selector or is
+    {{CSSxRef("::part", "::part()")}} or {{CSSxRef("::slotted", "::slotted()")}}.</p>
     <div class="notecard note">
       <p><strong>Note:</strong> Valid pseudo-element selector refers to syntactic
         validity, e.g. <code>::unsupported</code> is considered valid, even though the
@@ -95,7 +97,7 @@ para.textContent = 'My computed font-size is ' +
 <h2 id="Description">Description</h2>
 
 <p>The returned object is the same {{DOMxRef("CSSStyleDeclaration")}} type as the object
-  returned from the element's {{DOMxRef("HTMLElement.style", "style")}} property. However,
+  returned from the element's {{DOMxRef("HTMLElement/style", "style")}} property. However,
   the two objects have different purposes:</p>
 
 <ul>
@@ -187,32 +189,11 @@ para.textContent = 'My computed font-size is ' +
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("CSSOM", "#dom-window-getcomputedstyle", "getComputedStyle()")}}</td>
-      <td>{{Spec2("CSSOM")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("DOM2 Style", "#CSS-CSSview-getComputedStyle",
-        "getComputedStyle()")}}</td>
-      <td>{{Spec2("DOM2 Style")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Window.getComputedStyle")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -10,7 +10,7 @@ tags:
 ---
 <p>{{DefaultAPISidebar("Gamepad API")}}</p>
 
-<p><span class="seoSummary">HTML5 introduced many of the necessary components for rich, interactive game development. Technologies like <code>&lt;canvas&gt;</code>, WebGL, <code>&lt;audio&gt;</code>, and <code>&lt;video&gt;</code>, along with JavaScript implementations, have matured to the point where they can now support many tasks previously requiring native code. The Gamepad API is a way for developers and designers to access and use gamepads and other game controllers.</span></p>
+<p>HTML5 introduced many of the necessary components for rich, interactive game development. Technologies like <code>&lt;canvas&gt;</code>, WebGL, <code>&lt;audio&gt;</code>, and <code>&lt;video&gt;</code>, along with JavaScript implementations, have matured to the point where they can now support many tasks previously requiring native code. The Gamepad API is a way for developers and designers to access and use gamepads and other game controllers.</p>
 
 <p>The <a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a> introduces new events on the {{ domxref("Window") }} object for reading gamepad and controller (hereby referred to as <em>gamepad</em>) state. In addition to these events, the API also adds a {{ domxref("Gamepad") }} object, which you can use to query the state of a connected gamepad, and a {{ domxref("navigator.getGamepads()") }} method which you can use to get a list of gamepads known to the page.</p>
 
@@ -18,8 +18,8 @@ tags:
 
 <p>When a new gamepad is connected to the computer, the focused page first receives a {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} event. If a gamepad is already connected when the page loaded, the {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} event is dispatched to the focused page when the user presses a button or moves an axis.</p>
 
-<div class="blockIndicator geckoVersionNote">
-<p>In Firefox, gamepads are only exposed to a page when the user interacts with one with the page visible. This helps prevent gamepads being used for fingerprinting the user. Once one gamepad has been interacted with, other gamepads that are connected will automatically be visible.</p>
+<div class="notecard note">
+<p><strong>Note:</strong> In Firefox, gamepads are only exposed to a page when the user interacts with one with the page visible. This helps prevent gamepads being used for fingerprinting the user. Once one gamepad has been interacted with, other gamepads that are connected will automatically be visible.</p>
 </div>
 
 <p>You can use {{domxref("Window/gamepadconnected_event", "gamepadconnected")}} like this:</p>
@@ -97,7 +97,7 @@ window.addEventListener("gamepaddisconnected", function(e) { gamepadHandler(e, f
 </ul>
 
 <div class="notecard note">
-<p><strong>Note</strong>: The Gamepad object is available on the {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} event rather than the {{ domxref("Window") }} object itself, for security reasons. Once we have a reference to it, we can query its properties for information about the current state of the gamepad. Behind the scenes, this object will be updated every time the gamepad's state changes.</p>
+<p><strong>Note:</strong> The Gamepad object is available on the {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} event rather than the {{ domxref("Window") }} object itself, for security reasons. Once we have a reference to it, we can query its properties for information about the current state of the gamepad. Behind the scenes, this object will be updated every time the gamepad's state changes.</p>
 </div>
 
 <h3 id="Using_button_information">Using button information</h3>
@@ -130,7 +130,7 @@ var b = 0;
   cancelRequestAnimationFrame(start);
 });</pre>
 
-<p>Chrome does things differently here. Instead of constantly storing the gamepad's latest state in a variable it only stores a snapshot, so to do the same thing in Chrome you have to keep polling it and then only use the {{ domxref("Gamepad") }} object in code when it is available. We have done this below using {{ domxref("WindowOrWorkerGlobalScope.setInterval") }}; once the object is available the gamepad info is outputted, the game loop is started, and the interval is cleared using {{ domxref("WindowOrWorkerGlobalScope.clearInterval") }}. Note that in older versions of Chrome {{ domxref("Navigator.getGamepads()") }} is implemented with a <code>webkit</code> prefix. We attempt to detect and handle both the prefixed version and the standard version of the function for backwards compatibility.</p>
+<p>Chrome does things differently here. Instead of constantly storing the gamepad's latest state in a variable it only stores a snapshot, so to do the same thing in Chrome you have to keep polling it and then only use the {{ domxref("Gamepad") }} object in code when it is available. We have done this below using {{ domxref("setInterval()") }}; once the object is available the gamepad info is outputted, the game loop is started, and the interval is cleared using {{ domxref("clearInterval") }}. Note that in older versions of Chrome {{ domxref("Navigator.getGamepads()") }} is implemented with a <code>webkit</code> prefix. We attempt to detect and handle both the prefixed version and the standard version of the function for backwards compatibility.</p>
 
 <pre class="brush: js">var interval;
 
@@ -338,9 +338,5 @@ if (!haveEvents) {
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<div class="hidden">
-<p>The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-</div>
 
 <p>{{Compat("api.Gamepad")}}</p>

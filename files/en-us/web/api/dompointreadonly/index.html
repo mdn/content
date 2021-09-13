@@ -12,10 +12,11 @@ tags:
   - Interface
   - Point
   - Reference
+browser-compat: api.DOMPointReadOnly
 ---
 <div>{{APIRef("Geometry Interfaces")}}</div>
 
-<p><span class="seoSummary">The <strong><code>DOMPointReadOnly</code></strong> interface specifies the coordinate and perspective fields used by {{domxref("DOMPoint")}} to define a 2D or 3D point in a coordinate system.</span></p>
+<p>The <strong><code>DOMPointReadOnly</code></strong> interface specifies the coordinate and perspective fields used by {{domxref("DOMPoint")}} to define a 2D or 3D point in a coordinate system.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -38,7 +39,7 @@ const point = new DOMPointReadOnly(100, 100, 100, 1.0);</pre>
 
 <dl>
  <dt>{{domxref("DOMPointReadOnly.DOMPointReadOnly","DOMPointReadOnly()")}}</dt>
- <dd>Creates a new <code>DOMPointReadOnly</code> object given the values of its coordinates and perspective. To create a point using a<code>DOMPointInit</code> object, you can instead use {{domxref("DOMPointReadOnly.fromPoint()")}}.</dd>
+ <dd>Creates a new <code>DOMPointReadOnly</code> object given the values of its coordinates and perspective. To create a point using an object object, you can instead use {{domxref("DOMPointReadOnly.fromPoint()")}}.</dd>
 </dl>
 
 <h2 id="Properties">Properties</h2>
@@ -58,40 +59,25 @@ const point = new DOMPointReadOnly(100, 100, 100, 1.0);</pre>
 
 <dl>
  <dt>{{domxref("DOMPointReadOnly.fromPoint()")}}</dt>
- <dd>A static method that creates a new <code>DOMPointReadOnly</code> object given the coordinates provided in the specified {{domxref("DOMPointInit")}} object.</dd>
+ <dd>A static method that creates a new <code>DOMPointReadOnly</code> object given the coordinates provided in the specified object.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
 
 <dl>
  <dt>{{domxref("DOMPointReadOnly.matrixTransform", "matrixTransform()")}}</dt>
- <dd>Applies a matrix transform specified as a {{domxref("DOMMatrixInit")}} object to the <code>DOMPointReadOnly</code> object.</dd>
+ <dd>Applies a matrix transform specified as an object to the <code>DOMPointReadOnly</code> object.</dd>
  <dt>{{domxref("DOMPointReadOnly.toJSON()", "toJSON()")}}</dt>
  <dd>Returns a JSON representation of the <code>DOMPointReadOnly</code> object.</dd>
 </dl>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Geometry Interfaces', '#DOMPoint', 'DOMPoint')}}</td>
-   <td>{{Spec2('Geometry Interfaces')}}</td>
-   <td>Latest spec version is an ED.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.DOMPointReadOnly")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

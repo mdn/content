@@ -4,16 +4,14 @@ slug: Web/API/FileSystemFlags
 tags:
   - API
   - Dictionary
-  - Experimental
-  - File System API
   - File and Directory Entries API
   - FileSystemFlags
   - Files
   - Interface
-  - Non-standard
   - Reference
+browser-compat: api.FileSystemFlags
 ---
-<p>{{APIRef("File System API")}}{{SeeCompatTable}}</p>
+<p>{{APIRef("File and Directory Entries API")}}</p>
 
 <p>The <strong><code>FileSystemFlags</code></strong> dictionary defines a set of values which are used when specifying option flags when calling certain methods in the <a href="/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</a>. Methods which accept an options parameter of this type may specify zero or more of these flags as fields in an object, like this:</p>
 
@@ -23,7 +21,7 @@ tags:
 <p>Here, we see that the <code>create</code> property is provided, with a value of <code>true</code>, indicating that the directory should be created if it's not already there.</p>
 
 <div class="note">
-<p>Note that these option flags currently don't have any useful meaning when used in the scope of Web content, where security precautions prevent the creation of new files or the replacement of existing ones.</p>
+<p><strong>Note:</strong> These option flags currently don't have any useful meaning when used in the scope of Web content, where security precautions prevent the creation of new files or the replacement of existing ones.</p>
 </div>
 
 <h2 id="Properties">Properties</h2>
@@ -38,11 +36,12 @@ tags:
 <h3 id="Values_and_results">Values and results</h3>
 
 <p>The table below describes the result of each possible combination of these flags depending on whether or not the target file or directory path already exists.</p>
+<p>Note that, when <code>create</code> is <code>false</code>, the value of <code>exclusive</code> is irrelevant and ignored.</p>
 
 <table class="standard-table">
  <thead>
   <tr>
-   <th colspan="2" scope="col" style="text-align: center;">Option values</th>
+   <th colspan="2" scope="col">Option values</th>
    <th rowspan="2" scope="col">File/directory condition</th>
    <th rowspan="2" scope="col">Result</th>
   </tr>
@@ -54,13 +53,13 @@ tags:
  <tbody>
   <tr>
    <td><code>false</code></td>
-   <td>n/a<sup>[1]</sup></td>
+   <td>n/a</td>
    <td>Path exists and matches the desired type (depending on whether the function called is <code>getFile()</code> or <code>getDirectory()</code></td>
    <td>The <code>successCallback</code> is called with a {{domxref("FileSystemFileEntry")}} if <code>getFile()</code> was called or a {{domxref("FileSystemDirectoryEntry")}} if <code>getDirectory()</code> was called.</td>
   </tr>
   <tr>
    <td><code>false</code></td>
-   <td>n/a<sup>[1]</sup></td>
+   <td>n/a</td>
    <td>Path exists but doesn't match the desired type</td>
    <td>The <code>errorCallback</code> is called with an appropriate error code (if the callback was provided).</td>
   </tr>
@@ -91,30 +90,13 @@ tags:
  </tbody>
 </table>
 
-<p>[1] When <code>create</code> is <code>false</code>, the value of <code>exclusive</code> is irrelevant and ignored.</p>
-
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('File System API', '#dictdef-filesystemflags', 'FileSystemFlags') }}</td>
-   <td>{{ Spec2('File System API') }}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.FileSystemFlags")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

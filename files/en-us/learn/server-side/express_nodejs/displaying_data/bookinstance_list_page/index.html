@@ -10,13 +10,14 @@ tags:
 ---
 <p>Next we'll implement our list of all book copies (<code>BookInstance</code>) in the library. This page needs to include the title of the <code>Book</code> associated with each <code>BookInstance</code> (linked to its detail page) along with other information in the <code>BookInstance</code> model, including the status, imprint, and unique id of each copy. The unique id text should be linked to the <code>BookInstance</code> detail page.</p>
 
-<h2 class="highlight-spanned" id="Controller"><span class="highlight-span">Controller</span></h2>
+<h2 id="Controller">Controller</h2>
 
 <p>The <code>BookInstance</code> list controller function needs to get a list of all book instances, populate the associated book information, and then pass the list to the template for rendering.</p>
 
-<p>Open <code>/controllers/bookinstanceController.js</code>. Find the exported <code>bookinstance_list()</code> controller method and replace it with the following code (the changed code is shown in bold).</p>
+<p>Open <code>/controllers/bookinstanceController.js</code>.
+Find the exported <code>bookinstance_list()</code> controller method and replace it with the following code.</p>
 
-<pre class="brush: js line-numbers language-js">// Display list of all BookInstances.
+<pre class="brush: js">// Display list of all BookInstances.
 exports.bookinstance_list = function(req, res, next) {
 
   BookInstance.find()
@@ -33,11 +34,11 @@ exports.bookinstance_list = function(req, res, next) {
 
 <p>On success, the callback passed to the query renders the <strong>bookinstance_list</strong>(.pug) template, passing the <code>title</code> and <code>bookinstance_list</code> as variables.</p>
 
-<h2 class="highlight-spanned" id="View"><span class="highlight-span">View</span></h2>
+<h2 id="View">View</h2>
 
 <p>Create <strong>/views/bookinstance_list.pug</strong> and copy in the text below.</p>
 
-<pre class="brush: js line-numbers language-js">extends layout
+<pre class="brush: js">extends layout
 
 block content
   h1= title
@@ -60,11 +61,11 @@ block content
 
 <p>This view is much the same as all the others. It extends the layout, replacing the <em>content</em> block, displays the <code>title</code> passed in from the controller, and iterates through all the book copies in <code>bookinstance_list</code>. For each copy we display its status (color coded) and if the book is not available, its expected return date. One new feature is introduced—we can use dot notation after a tag to assign a class. So <code>span.text-success</code> will be compiled to <code>&lt;span class="text-success"&gt;</code> (and might also be written in Pug as <code>span(class="text-success")</code>.</p>
 
-<h2 class="highlight-spanned" id="What_does_it_look_like"><span class="highlight-span">What does it look like?</span></h2>
+<h2 id="What_does_it_look_like">What does it look like?</h2>
 
-<p>Run the application, open your browser to <a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>, then select the <em>All book-instances</em> link. If everything is set up correctly, your site should look something like the following screenshot.</p>
+<p>Run the application, open your browser to <a href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>, then select the <em>All book-instances</em> link. If everything is set up correctly, your site should look something like the following screenshot.</p>
 
-<p><img alt="BookInstance List Page - Express Local Library site" src="locallibary_express_bookinstance_list.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="BookInstance List Page - Express Local Library site" src="locallibary_express_bookinstance_list.png"></p>
 
 <h2 id="Next_steps">Next steps</h2>
 

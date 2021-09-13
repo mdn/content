@@ -8,6 +8,7 @@ tags:
   - History API
   - Method
   - Reference
+browser-compat: api.History.replaceState
 ---
 <div>{{APIRef("History API")}}</div>
 
@@ -44,7 +45,7 @@ tags:
 <p>Suppose https://www.mozilla.org/foo.html executes the following JavaScript:</p>
 
 <pre
-  class="brush: js line-numbers language-js">const stateObj = { foo: 'bar' };
+  class="brush: js">const stateObj = { foo: 'bar' };
 history.pushState(stateObj, '', 'bar.html');</pre>
 
 <p>The explanation of these two lines above can be found in the <a
@@ -56,7 +57,7 @@ history.pushState(stateObj, '', 'bar.html');</pre>
   JavaScript:</p>
 
 <pre
-  class="brush: js line-numbers language-js">history.replaceState(stateObj, '', 'bar2.html');</pre>
+  class="brush: js">history.replaceState(stateObj, '', 'bar2.html');</pre>
 
 <p>This will cause the URL bar to display
   <code>https://www.mozilla.org/bar2.html</code>, but won't cause the browser
@@ -70,28 +71,8 @@ history.pushState(stateObj, '', 'bar.html');</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName("HTML WHATWG", "history.html#dom-history-replacestate",
-        "History.replaceState()")}}</td>
-      <td>{{Spec2("HTML WHATWG")}}</td>
-      <td>No change from {{SpecName("HTML5 W3C")}}.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName("HTML5 W3C", "history.html#dom-history-replacestate",
-        "History.replaceState()")}}</td>
-      <td>{{Spec2("HTML5 W3C")}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.History.replaceState")}}</p>
+<p>{{Compat}}</p>

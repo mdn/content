@@ -10,10 +10,11 @@ tags:
   - Reference
   - pointercancel
   - user input
+browser-compat: api.HTMLElement.pointercancel_event
 ---
 <div>{{APIRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>pointercancel</code></strong> event is fired when the browser determines that there are unlikely to be any more pointer events, or if after the {{event("pointerdown")}} event is fired, the pointer is then used to manipulate the viewport by panning, zooming, or scrolling.</span></p>
+<p>The <strong><code>pointercancel</code></strong> event is fired when the browser determines that there are unlikely to be any more pointer events, or if after the {{event("pointerdown")}} event is fired, the pointer is then used to manipulate the viewport by panning, zooming, or scrolling.</p>
 
 <table class="properties">
  <tbody>
@@ -46,7 +47,7 @@ tags:
 </ul>
 
 <div class="note">
-<p>After the <code>pointercancel</code> event is fired, the browser will also send {{event("pointerout")}} followed by {{event("pointerleave")}}.</p>
+<p><strong>Note:</strong> After the <code>pointercancel</code> event is fired, the browser will also send {{event("pointerout")}} followed by {{event("pointerleave")}}.</p>
 </div>
 
 <h2 id="Examples">Examples</h2>
@@ -69,26 +70,11 @@ para.onpointercancel = (event) =&gt; {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Pointer Events 2','#the-pointercancel-event')}}</td>
-   <td>{{Spec2('Pointer Events 2')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Pointer Events', '#the-pointercancel-event')}}</td>
-   <td>{{Spec2('Pointer Events')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.HTMLElement.pointercancel_event")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

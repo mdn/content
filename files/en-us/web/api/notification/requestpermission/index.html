@@ -8,6 +8,7 @@ tags:
   - Notifications
   - Notifications API
   - Reference
+browser-compat: api.Notification.requestPermission
 ---
 <p>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</p>
 
@@ -16,7 +17,7 @@ tags:
 </div>
 
 <div class="notecard note">
-<p><strong>Note</strong>: Safari still uses the callback syntax to get the permission. Read <a href="/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</a> for a good example of how to feature detect this and run code as appropriate.</p>
+<p><strong>Note:</strong> Safari still uses the callback syntax to get the permission. Read <a href="/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</a> for a good example of how to feature detect this and run code as appropriate.</p>
 </div>
 
 <p>The <strong><code>requestPermission()</code></strong> method of the {{domxref("Notification")}} interface requests permission from the user for the current origin to display notifications.</p>
@@ -34,7 +35,7 @@ tags:
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code><var>callback</var></code> {{optional_inline}} {{deprecated_inline("gecko46")}}</dt>
+ <dt><code><var>callback</var></code> {{optional_inline}} {{deprecated_inline}}</dt>
  <dd>An optional callback function that is called with the permission value. Deprecated in favor of the promise return value.</dd>
 </dl>
 
@@ -85,29 +86,16 @@ tags:
 <p>We no longer show a live sample on this page, as Chrome and Firefox no longer allow notification permissions to be requested from cross-origin {{htmlelement("iframe")}}s, with other browsers to follow. To see a example in action, check out our <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do list example</a> (also see <a href="https://mdn.github.io/to-do-notifications/">the app running live</a>.)</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: In the above example we spawn notifications in response to a user gesture (clicking a button). This is not only best practice — you should not be spamming users with notifications they didn't agree to — but going forward browsers will explicitly disallow notifications not triggered in response to a user gesture. Firefox is already doing this from version 72, for example.</p>
+<p><strong>Note:</strong> In the above example we spawn notifications in response to a user gesture (clicking a button). This is not only best practice — you should not be spamming users with notifications they didn't agree to — but going forward browsers will explicitly disallow notifications not triggered in response to a user gesture. Firefox is already doing this from version 72, for example.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Notifications')}}</td>
-   <td>{{Spec2('Web Notifications')}}</td>
-   <td>Living standard</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Notification.requestPermission")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

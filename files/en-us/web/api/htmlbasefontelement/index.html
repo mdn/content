@@ -5,14 +5,19 @@ tags:
   - API
   - HTML DOM
   - Interface
-  - Obsolete
   - Reference
+  - Deprecated
+browser-compat: api.HTMLBaseFontElement
 ---
 <div>{{APIRef("HTML DOM")}}{{deprecated_header}}</div>
 
 <p>The <strong><code>HTMLBaseFontElement</code></strong> interface provides special properties (beyond the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating {{HTMLElement("basefont")}} elements.</p>
 
 <p>The <code>&lt;basefont&gt;</code> element has been deprecated in HTML4 and removed in HTML5. This latest specification requires that this element implements {{domxref("HTMLUnknownElement")}} rather than <code>HTMLBaseFontElement</code>.</p>
+
+<div class="notecard note">
+  <p><strong>Note:</strong> Use <a href="/en-US/docs/Web/CSS/CSS_Fonts">CSS Fonts</a> features instead.</p>
+</div>
 
 <h2 id="Properties">Properties</h2>
 
@@ -33,29 +38,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM2 HTML", "html.html#ID-32774408", "HTMLBaseFontElement")}}</td>
-   <td>{{Spec2('DOM2 HTML')}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM1", "level-one-html.html#ID-32774408", "HTMLBaseFontElement")}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+<p>This feature was present in the HTML specification up through HTML 3.2, but was deprecated in HTML 4, and then removed — and so is not in the current HTML specification. No modern browsers support it and this feature is no longer on track to become a standard.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.HTMLBaseFontElement")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

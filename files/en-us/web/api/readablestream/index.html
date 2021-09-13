@@ -13,10 +13,11 @@ tags:
   - Reference
   - Streams
   - data
+browser-compat: api.ReadableStream
 ---
 <p>{{APIRef("Streams")}}</p>
 
-<p><span class="seoSummary">The <code>ReadableStream</code> interface of the <a href="/en-US/docs/Web/API/Streams_API">Streams API</a> represents a readable stream of byte data. The <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> offers a concrete instance of a <code>ReadableStream</code> through the {{domxref("Body.body", "body")}} property of a {{domxref("Response")}} object.</span></p>
+<p>The <code>ReadableStream</code> interface of the <a href="/en-US/docs/Web/API/Streams_API">Streams API</a> represents a readable stream of byte data. The <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> offers a concrete instance of a <code>ReadableStream</code> through the {{domxref("Response.body", "body")}} property of a {{domxref("Response")}} object.</p>
 
 <h2 id="Constructor">Constructor</h2>
 
@@ -29,14 +30,14 @@ tags:
 
 <dl>
 	<dt>{{domxref("ReadableStream.locked")}} {{readonlyInline}}</dt>
-	<dd>The <code>locked</code> getter returns whether or not the readable stream is <a href="https://streams.spec.whatwg.org/#locked-to-a-reader" id="ref-for-locked-to-a-reader②">locked to a reader</a>.</dd>
+	<dd>The <code>locked</code> getter returns whether or not the readable stream is <a href="https://streams.spec.whatwg.org/#locked-to-a-reader">locked to a reader</a>.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
 
 <dl>
 	<dt>{{domxref("ReadableStream.cancel()")}}</dt>
-	<dd>Returns a {{jsref("Promise")}} that resolves when the stream is canceled. Calling this method signals a loss of interest in the stream by a consumer. The supplied <code>reason</code> argument will be given to the underlying source, which may or may not use it.</dd>
+	<dd>Returns a {{jsxref("Promise")}} that resolves when the stream is canceled. Calling this method signals a loss of interest in the stream by a consumer. The supplied <code>reason</code> argument will be given to the underlying source, which may or may not use it.</dd>
 	<dt>{{domxref("ReadableStream.getReader()")}}</dt>
 	<dd>Creates a reader and locks the stream to it. While the stream is locked, no other reader can be acquired until this one is released.</dd>
 	<dt>{{domxref("ReadableStream.pipeThrough()")}}</dt>
@@ -44,7 +45,7 @@ tags:
 	<dt>{{domxref("ReadableStream.pipeTo()")}}</dt>
 	<dd>Pipes the current ReadableStream to a given {{domxref("WritableStream")}} and returns a {{jsxref("Promise")}} that fulfills when the piping process completes successfully, or rejects if any errors were encountered.</dd>
 	<dt>{{domxref("ReadableStream.tee()")}}</dt>
-	<dd>The <code>tee</code> method <a href="https://streams.spec.whatwg.org/#tee-a-readable-stream" id="ref-for-tee-a-readable-stream②">tees</a> this readable stream, returning a two-element array containing the two resulting branches as new {{domxref("ReadableStream")}} instances. Each of those streams receives the same incoming data.</dd>
+	<dd>The <code>tee</code> method <a href="https://streams.spec.whatwg.org/#tee-a-readable-stream">tees</a> this readable stream, returning a two-element array containing the two resulting branches as new {{domxref("ReadableStream")}} instances. Each of those streams receives the same incoming data.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -53,7 +54,7 @@ tags:
 
 <p>In the following example, an artificial {{domxref("Response")}} is created to stream HTML fragments fetched from another resource to the browser.</p>
 
-<p>It demonstrates the usage of a {{domxref("ReadableStream")}} in combination with a {{domxref("Uint8Array")}}.</p>
+<p>It demonstrates the usage of a {{domxref("ReadableStream")}} in combination with a {{jsxref("Uint8Array")}}.</p>
 
 <pre class="brush: js">fetch('https://www.example.org')
 .then(response => response.body)
@@ -117,24 +118,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-		<tr>
-			<td>{{SpecName('Streams','#rs-class','ReadableStream')}}</td>
-			<td>{{Spec2('Streams')}}</td>
-			<td>Initial definition</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.ReadableStream")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

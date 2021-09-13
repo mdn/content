@@ -40,7 +40,6 @@ xhr.send();
 
 <p>This method relies on the "force async" nature of the feature. When you try to set <code>responseType</code> of an <code>XMLHttpRequest</code> object after it is opened as "sync". This throws an error in the browsers that implement the feature and works on others.</p>
 
-<div class="line" id="LC13">
 <pre class="brush: js">function HTMLinXHR() {
   if (!window.XMLHttpRequest)
     return false;
@@ -54,7 +53,6 @@ xhr.send();
   return false;
 }
 </pre>
-</div>
 
 <p><a href="https://jsfiddle.net/HTcKP/1/">View on JSFiddle</a></p>
 
@@ -129,30 +127,13 @@ oReq.onload = function () { console.log(getHTML(this, "intro")); };
 oReq.send(null);
 </pre>
 
-<div class="note"><strong>Note:</strong> This solution is very expensive for the interpreter. <strong>Use it only when it is really necessary</strong>.</div>
+<div class="note"><p><strong>Note:</strong> This solution is very expensive for the interpreter. <strong>Use it only when it is really necessary</strong>.</p></div>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('XMLHttpRequest')}}</td>
-   <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications("api.XMLHttpRequest")}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<h3 id="XMLHttpRequest_interface"><code>XMLHttpRequest</code> interface</h3>
 
 <p>{{Compat("api.XMLHttpRequest")}}</p>
 

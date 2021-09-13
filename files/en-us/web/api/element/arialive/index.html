@@ -8,10 +8,11 @@ tags:
   - ariaLive
   - AriaAttributes
   - Element
+browser-compat: api.Element.ariaLive
 ---
 <div>{{DefaultAPISidebar("DOM")}}</div>
 
-<p class="summary">The <strong><code>ariaLive</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions">aria-live</a></code> attribute, which indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.</p>
+<p>The <strong><code>ariaLive</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions">aria-live</a></code> attribute, which indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -34,7 +35,7 @@ tags:
 
 <p>In this example the <code>aria-live</code> attribute on the element with an ID of <code>planetInfo</code> is set to "polite". We then update the value to "assertive".</p>
 
-<pre class="brush: html">&lt;div role="region" id="planetInfo" aria-live="polite"&lt;
+<pre class="brush: html">&lt;div role="region" id="planetInfo" aria-live="polite"&gt;
   &lt;h2 id="planetTitle"&gt;No planet selected&lt;/h2&gt;
   &lt;p id="planetDescription"&gt;Select a planet to view its description&lt;/p&gt;
 &lt;/div&gt;</pre>
@@ -46,23 +47,8 @@ console.log(el.ariaLive); // assertive</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ARIA 1.2','#dom-ariamixin-arialive','ariaLive')}}</td>
-   <td>{{Spec2('ARIA 1.2')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
-
-<p>{{Compat("api.Element.ariaLive")}}</p>
+<p>{{Compat}}</p>

@@ -1,0 +1,27 @@
+name: Ping other repos
+# This workflow exists for this use case: When another repo wants to take
+# some action each time an MDN PR is merged and a change is pushed to the
+# MDN main branch. For example, other repos that pull in content directly
+# from MDN as part of their own builds might want to automatically re-run
+# their repo build scripts each time a change is pushed to MDN upstream.
+#
+# https://github.com/mdn/browser-compat-data/blob/main/.github/workflows/ping-other-repos.yml
+# has the BCD equivalent of this workflow.
+
+on:
+  push:
+    branches: [main]
+jobs:
+  ping:
+    if: github.repository == 'mdn/content'  # Won’t be run from forks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping w3c/mdn-spec-links
+        # This is one of many possible repos we can ping. When adding other
+        # repos, you can follow this w3c/mdn-spec-links one as an example.
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{ secrets.REPO_PINGER_MDN_SPEC_LINKS }}
+          repository: w3c/mdn-spec-links
+          event-type: ping
+          client-payload: '{"repository": "${{ github.repository }}", "ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'

@@ -7,6 +7,7 @@ tags:
 - CanvasRenderingContext2D
 - Property
 - Reference
+browser-compat: api.CanvasRenderingContext2D.imageSmoothingEnabled
 ---
 <div>{{APIRef}}</div>
 
@@ -36,7 +37,7 @@ tags:
 
 <dl>
   <dt><code>value</code></dt>
-  <dd>A {{jsxref("Boolean")}} indicating whether to smooth scaled images or not. The
+  <dd>A boolean value indicating whether to smooth scaled images or not. The
     default value is <code>true</code>.</dd>
 </dl>
 
@@ -55,7 +56,7 @@ tags:
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js; highlight[17,18,21,22]">const canvas = document.getElementById('canvas');
+<pre class="brush: js;">const canvas = document.getElementById('canvas');
 
 const ctx = canvas.getContext('2d');
 ctx.font = '16px sans-serif';
@@ -86,25 +87,11 @@ img.onload = function() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-imagesmoothingenabled",
-        "CanvasRenderingContext2D.imageSmoothingEnabled")}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.CanvasRenderingContext2D.imageSmoothingEnabled")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

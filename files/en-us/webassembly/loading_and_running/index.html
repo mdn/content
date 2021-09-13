@@ -16,9 +16,9 @@ tags:
 
 <p>WebAssembly is not yet integrated with <code>&lt;script type='module'&gt;</code> or ES2015 <code>import</code> statements, thus there is not a path to have the browser fetch modules for you using imports.</p>
 
-<p>The older {{jsxref("WebAssembly.compile")}}/{{jsxref("WebAssembly.instantiate")}} methods require you to create an {{domxref("ArrayBuffer")}} containing your WebAssembly module binary after fetching the raw bytes, and then compile/instantiate it. This is analogous to <code>new Function(string)</code>, except that we are substituting a string of characters (JavaScript source code) with an array buffer of bytes (WebAssembly source code).</p>
+<p>The older {{jsxref("WebAssembly.compile")}}/{{jsxref("WebAssembly.instantiate")}} methods require you to create an {{jsxref("ArrayBuffer")}} containing your WebAssembly module binary after fetching the raw bytes, and then compile/instantiate it. This is analogous to <code>new Function(string)</code>, except that we are substituting a string of characters (JavaScript source code) with an array buffer of bytes (WebAssembly source code).</p>
 
-<p>The newer {{jsxref("WebAssembly.compileStreaming")}}/{{jsxref("WebAssembly.instantiateStreaming")}} methods are a lot more efficient — they perform their actions directly on the raw stream of bytes coming from the network, cutting out the need for the {{domxref("ArrayBuffer")}} step.</p>
+<p>The newer {{jsxref("WebAssembly.compileStreaming")}}/{{jsxref("WebAssembly.instantiateStreaming")}} methods are a lot more efficient — they perform their actions directly on the raw stream of bytes coming from the network, cutting out the need for the {{jsxref("ArrayBuffer")}} step.</p>
 
 <p>So how do we get those bytes into an array buffer and compiled? The following sections explain.</p>
 
@@ -33,7 +33,7 @@ tags:
   // Do something with the results!
 });</pre>
 
-<p>If we used the older {{jsxref("WebAssembly.instantiate()")}} method, which doesn't work on the direct stream, we'd need an extra step of converting the fetched byte code to an {{domxref("ArrayBuffer")}}, like so:</p>
+<p>If we used the older {{jsxref("WebAssembly.instantiate()")}} method, which doesn't work on the direct stream, we'd need an extra step of converting the fetched byte code to an {{jsxref("ArrayBuffer")}}, like so:</p>
 
 <pre class="brush: js">fetch('module.wasm').then(response =&gt;
   response.arrayBuffer()
@@ -57,7 +57,7 @@ tags:
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: The second overload form takes a {{jsxref("WebAssembly.Module")}} object as an argument, and returns a promise directly containing the instance object as the result. See the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate#Second_overload_example">Second overload example</a>.</p>
+<p><strong>Note</strong>: The second overload form takes a {{jsxref("WebAssembly.Module")}} object as an argument, and returns a promise directly containing the instance object as the result. See the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate#second_overload_example">Second overload example</a>.</p>
 </div>
 
 <h3 id="Running_your_WebAssembly_code">Running your WebAssembly code</h3>

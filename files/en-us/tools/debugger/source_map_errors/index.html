@@ -62,8 +62,8 @@ tags:
 
 <p>See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1437937">Bug 1437937: WebExtensions Doesn't Find Source Maps</a> for details.</p>
 
-<pre class="brush: html"><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">Source-Map-Fehler: TypeError: NetworkError when attempting to fetch resource.
+<pre class="brush: html">Source-Map-Fehler: TypeError: NetworkError when attempting to fetch resource.
  Ressourcen-Adresse: moz-extension://c7f0f003-4fcf-49fd-8ec0-c49361266581/background.js
- Source-Map-Adresse: background.js.map</span></span></span></pre>
+ Source-Map-Adresse: background.js.map</pre>
 
 <p>The only workaround is to manually change the map URL to a public one (http://localhost:1234/file.map.js) and start a local webserver at this port.</p>

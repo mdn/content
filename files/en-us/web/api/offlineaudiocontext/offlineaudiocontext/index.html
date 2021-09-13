@@ -1,35 +1,34 @@
 ---
-title: OfflineAudioContext.OfflineAudioContext()
+title: OfflineAudioContext()
 slug: Web/API/OfflineAudioContext/OfflineAudioContext
 tags:
-- API
-- Audio
-- Audio Contexts
-- Constructor
-- OfflineAudioContext
-- Reference
-- Web Audio API
+  - API
+  - Audio
+  - Audio Contexts
+  - Constructor
+  - OfflineAudioContext
+  - Reference
+  - Web Audio API
+browser-compat: api.OfflineAudioContext.OfflineAudioContext
 ---
 <div>{{APIRef("Web Audio API")}}</div>
 
-<p class="summary"><span class="seoSummary">The
+<p>The
     <code><strong>OfflineAudioContext()</strong></code> constructor—part of the <a
       href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>—creates and returns a new
     {{domxref("OfflineAudioContext")}} object instance, which can then be used to render
-    audio to an {{domxref("AudioBuffer")}} rather than to an audio output device.</span>
-</p>
+    audio to an {{domxref("AudioBuffer")}} rather than to an audio output device.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">var <em>offlineAudioCtx</em> = new OfflineAudioContext(<em>numberOfChannels</em>, <em>length</em>, <em>sampleRate</em>);
-
-var <em>offlineAudioCtx</em> = new OfflineAudioContext(<em>options</em>);</pre>
+<pre class="brush: js">OfflineAudioContext(options);
+OfflineAudioContext(numberOfChannels, length, sampleRate);</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <p>You can specify the parameters for the <code>OfflineAudioContext()</code> constructor
   as either the same set of parameters as are inputs into the
-  {{domxref("AudioContext.createBuffer()")}} method, or by passing those parameters in an
+  {{domxref("BaseAudioContext.createBuffer")}} method, or by passing those parameters in an
   <code>options</code> object. Either way, the individual parameters are the same.</p>
 
 <dl>
@@ -54,8 +53,8 @@ var <em>offlineAudioCtx</em> = new OfflineAudioContext(<em>options</em>);</pre>
   with no arguments, the <code>OfflineAudioContext()</code> constructor requires three
   arguments, since it needs to create an <code>AudioBuffer</code>. This works in exactly
   the same way as when you create a new {{domxref("AudioBuffer")}} with the
-  {{domxref("AudioContext.createBuffer()")}} method. For more detail, read <a
-    href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Audio_buffers.3A_frames.2C_samples_and_channels">Audio
+  {{domxref("BaseAudioContext.createBuffer")}} method. For more detail, read <a
+    href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_buffers.3a_frames.2c_samples_and_channels">Audio
     buffers: frames, samples and channels</a> from our <a
     href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API">Basic
     concepts</a> guide.</p>
@@ -65,7 +64,7 @@ var <em>offlineAudioCtx</em> = new OfflineAudioContext(<em>options</em>);</pre>
 <p>A new {{domxref("OfflineAudioContext")}} object whose associated
   <code>AudioBuffer</code> is configured as requested.</p>
 
-<p class="note">Like a regular <code>AudioContext</code>, an
+<p>Like a regular <code>AudioContext</code>, an
   <code>OfflineAudioContext</code> can be the target of events, therefore it implements
   the {{domxref("EventTarget")}} interface.</p>
 
@@ -80,7 +79,7 @@ const source = offlineCtx.createBufferSource();
 // etc...
 </pre>
 
-<p class="note">For a full working example, see our <a class="external external-icon"
+<p>For a full working example, see our <a class="external external-icon"
     href="https://mdn.github.io/webaudio-examples/offline-audio-context-promise/">offline-audio-context-promise</a>
   Github repo (see the <a class="external external-icon"
     href="https://github.com/mdn/webaudio-examples/blob/master/offline-audio-context-promise/index.html">source
@@ -88,23 +87,8 @@ const source = offlineCtx.createBufferSource();
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Web Audio
-        API','#dom-offlineaudiocontext-offlineaudiocontext','OfflineAudioContext()')}}
-      </td>
-      <td>{{Spec2('Web Audio API')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.OfflineAudioContext.OfflineAudioContext")}}</p>
+<p>{{Compat}}</p>

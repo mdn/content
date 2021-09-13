@@ -7,10 +7,11 @@ tags:
 - Reference
 - Screen Wake Lock API
 - WakeLock
+browser-compat: api.WakeLock.request
 ---
 <div>{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Screen Wake Lock API")}}</div>
 
-<p class="summary">The <strong><code>request()</code></strong> method of the
+<p>The <strong><code>request()</code></strong> method of the
 	{{domxref("WakeLock")}} interface returns a {{jsxref("Promise")}} that resolves with a
 	{{domxref("WakeLockSentinel")}} object, which allows control over screen dimming and
 	locking.</p>
@@ -34,7 +35,7 @@ tags:
 
 <h3 id="Return_value">Return value</h3>
 
-<p>A {{domxref("Promise")}} that resolves with a {{domxref("WakeLockSentinel")}} object.
+<p>A {{jsxref("Promise")}} that resolves with a {{domxref("WakeLockSentinel")}} object.
 </p>
 
 <h3 id="Exceptions">Exceptions</h3>
@@ -75,24 +76,11 @@ requestWakeLock();
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-		<tr>
-			<td>{{SpecName('Screen Wake Lock','#the-request-method','request()')}}</td>
-			<td>{{Spec2('Screen Wake Lock')}}</td>
-			<td>Initial definition.</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.WakeLock.request")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

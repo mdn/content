@@ -18,7 +18,7 @@ tags:
 
 <p class="summary">The {{glossary("Head", "head")}} of an HTML document is the part that is not displayed in the web browser when the page is loaded. It contains information such as the page {{htmlelement("title")}}, links to {{glossary("CSS")}} (if you choose to style your HTML content with CSS), links to custom favicons, and other metadata (data about the HTML, such as the author, and important keywords that describe the document.) In this article we'll cover all of the above and more, in order to give you a good basis for working with markup.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -75,14 +75,14 @@ tags:
   </ol>
  </li>
  <li>Now open the file in your browser. You should see something like this:
-  <p><img alt="A simple web page with the title set to &lt;title&gt; element, and the &lt;h1&gt; set to &lt;h1&gt; element." src="title-example.png" style="display: block; margin: 0 auto;">It should now be completely obvious where the <code>&lt;h1&gt;</code> content appears, and where the <code>&lt;title&gt;</code> content appears!</p>
+  <p><img alt="A simple web page with the title set to &lt;title&gt; element, and the &lt;h1&gt; set to &lt;h1&gt; element." src="title-example.png">It should now be completely obvious where the <code>&lt;h1&gt;</code> content appears, and where the <code>&lt;title&gt;</code> content appears!</p>
  </li>
  <li>You should also try opening the code up in your code editor, editing the contents of these elements, then refreshing the page in your browser. Have some fun with it.</li>
 </ol>
 
 <p>The <code>&lt;title&gt;</code> element contents are also used in other ways. For example, if you try bookmarking the page (<em>Bookmarks &gt; Bookmark This Page</em> or the star icon in the URL bar in Firefox), you will see the <code>&lt;title&gt;</code> contents filled in as the suggested bookmark name.</p>
 
-<p><img alt="A webpage being bookmarked in firefox; the bookmark name has been automatically filled in with the contents of the &lt;title&gt; element " src="bookmark-example.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="A webpage being bookmarked in firefox; the bookmark name has been automatically filled in with the contents of the &lt;title&gt; element " src="bookmark-example.png"></p>
 
 <p>The <code>&lt;title&gt;</code> contents are also used in search results, as you'll see below.</p>
 
@@ -98,9 +98,9 @@ tags:
 
 <p>This element specifies the document's character encoding — the character set that the document is permitted to use. <code>utf-8</code> is a universal character set that includes pretty much any character from any human language. This means that your web page will be able to handle displaying any language; it's therefore a good idea to set this on every web page you create! For example, your page could handle English and Japanese just fine:</p>
 
-<p><img alt="a web page containing English and Japanese characters, with the character encoding set to universal, or utf-8. Both languages display fine," src="correct-encoding.png" style="display: block; margin: 0 auto;">If you set your character encoding to <code>ISO-8859-1</code>, for example (the character set for the Latin alphabet), your page rendering may appear all messed up:</p>
+<p><img alt="a web page containing English and Japanese characters, with the character encoding set to universal, or utf-8. Both languages display fine," src="correct-encoding.png">If you set your character encoding to <code>ISO-8859-1</code>, for example (the character set for the Latin alphabet), your page rendering may appear all messed up:</p>
 
-<p><img alt="a web page containing English and Japanese characters, with the character encoding set to latin. The Japanese characters don't display correctly" src="bad-encoding.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="a web page containing English and Japanese characters, with the character encoding set to latin. The Japanese characters don't display correctly" src="bad-encoding.png"></p>
 
 <div class="note">
 <p><strong>Note</strong>: Some browsers (like Chrome) automatically fix incorrect encodings, so depending on what browser you use, you may not see this problem. You should still set an encoding of <code>utf-8</code> on your page anyway to avoid any potential problems in other browsers.</p>
@@ -138,7 +138,7 @@ started with developing web sites and applications."&gt;</pre>
 
 <ol>
  <li>Go to the <a href="/en-US/">front page of The Mozilla Developer Network</a>.</li>
- <li>View the page's source (Right/<kbd>Ctrl</kbd> + click on the page, choose <em>View Page Source</em> from the context menu.)</li>
+ <li>View the page's source (right-click on the page, choose <em>View Page Source</em> from the context menu.)</li>
  <li>Find the description meta tag. It will look something like this (although it may change over time):
   <pre class="brush: html">&lt;meta name="description" content="The MDN Web Docs site
   provides information about Open Web technologies
@@ -146,23 +146,23 @@ started with developing web sites and applications."&gt;</pre>
   progressive web apps."&gt;</pre>
  </li>
  <li>Now search for "MDN Web Docs" in your favorite search engine (We used Google.) You'll notice the description <code>&lt;meta&gt;</code> and <code>&lt;title&gt;</code> element content used in the search result — definitely worth having!
-  <p><img alt='A Yahoo search result for "Mozilla Developer Network"' src="mdn-search-result.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+  <p><img alt='A Yahoo search result for "Mozilla Developer Network"' src="mdn-search-result.png"></p>
  </li>
 </ol>
 
-<div class="note">
-<p><strong>Note</strong>: In Google, you will see some relevant subpages of MDN Web Docs listed below the main homepage link — these are called sitelinks, and are configurable in <a href="http://www.google.com/webmasters/tools/">Google's webmaster tools</a> — a way to make your site's search results better in the Google search engine.</p>
+<div class="notecard note">
+<p><strong>Note:</strong> In Google, you will see some relevant subpages of MDN Web Docs listed below the main homepage link — these are called sitelinks, and are configurable in <a href="https://www.google.com/webmasters/tools/">Google's webmaster tools</a> — a way to make your site's search results better in the Google search engine.</p>
 </div>
 
-<div class="note">
-<p><strong>Note</strong>: Many <code>&lt;meta&gt;</code> features just aren't used any more. For example, the keyword <code>&lt;meta&gt;</code> element (<code>&lt;meta name="keywords" content="fill, in, your, keywords, here"&gt;</code>) — which is supposed to provide keywords for search engines to determine relevance of that page for different search terms — is ignored by search engines, because spammers were just filling the keyword list with hundreds of keywords, biasing results.</p>
+<div class="notecard note">
+<p><strong>Note:</strong> Many <code>&lt;meta&gt;</code> features just aren't used any more. For example, the keyword <code>&lt;meta&gt;</code> element (<code>&lt;meta name="keywords" content="fill, in, your, keywords, here"&gt;</code>) — which is supposed to provide keywords for search engines to determine relevance of that page for different search terms — is ignored by search engines, because spammers were just filling the keyword list with hundreds of keywords, biasing results.</p>
 </div>
 
 <h3 id="Other_types_of_metadata">Other types of metadata</h3>
 
 <p>As you travel around the web, you'll find other types of metadata, too. A lot of the features you'll see on websites are proprietary creations, designed to provide certain sites (such as social networking sites) with specific pieces of information they can use.</p>
 
-<p>For example, <a href="http://ogp.me/">Open Graph Data</a> is a metadata protocol that Facebook invented to provide richer metadata for websites. In the MDN Web Docs sourcecode, you'll find this:</p>
+<p>For example, <a href="https://ogp.me/">Open Graph Data</a> is a metadata protocol that Facebook invented to provide richer metadata for websites. In the MDN Web Docs sourcecode, you'll find this:</p>
 
 <pre class="brush: html">&lt;meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.png"&gt;
 &lt;meta property="og:description" content="The Mozilla Developer Network (MDN) provides
@@ -172,7 +172,7 @@ and HTML5 Apps. It also documents Mozilla products, like Firefox OS."&gt;
 
 <p>One effect of this is that when you link to MDN Web Docs on facebook, the link appears along with an image and description: a richer experience for users.</p>
 
-<p><img alt="Open graph protocol data from the MDN homepage as displayed on facebook, showing an image, title, and description." src="facebook-output.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="Open graph protocol data from the MDN homepage as displayed on facebook, showing an image, title, and description." src="facebook-output.png"></p>
 
 <p>Twitter also has its own similar proprietary metadata called <a href="https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/abouts-cards">Twitter Cards</a>, which has a similar effect when the site's URL is displayed on twitter.com. For example:</p>
 
@@ -189,13 +189,13 @@ and HTML5 Apps. It also documents Mozilla products, like Firefox OS."&gt;
 <ol>
  <li>Saving it in the same directory as the site's index page, saved in <code>.ico</code> format (most browsers will support favicons in more common formats like <code>.gif</code> or <code>.png</code>, but using the ICO format will ensure it works as far back as Internet Explorer 6.)</li>
  <li>Adding the following line into your HTML's {{HTMLElement("head")}} block to reference it:
-  <pre class="brush: html">&lt;link rel="shortcut icon" href="favicon.ico" type="image/x-icon"&gt;</pre>
+  <pre class="brush: html">&lt;link rel="icon" href="favicon.ico" type="image/x-icon"&gt;</pre>
  </li>
 </ol>
 
 <p>Here is an example of a favicon in a bookmarks panel:</p>
 
-<p><img alt="The Firefox bookmarks panel, showing a bookmarked example with a favicon displayed next to it." src="bookmark-favicon.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="The Firefox bookmarks panel, showing a bookmarked example with a favicon displayed next to it." src="bookmark-favicon.png"></p>
 
 <p>There are lots of other icon types to consider these days as well. For example, you'll find this in the source code of the MDN Web Docs homepage:</p>
 
@@ -208,13 +208,13 @@ and HTML5 Apps. It also documents Mozilla products, like Firefox OS."&gt;
 &lt;!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: --&gt;
 &lt;link rel="apple-touch-icon-precomposed" href="https://developer.mozilla.org/static/img/favicon57.png"&gt;
 &lt;!-- basic favicon --&gt;
-&lt;link rel="shortcut icon" href="https://developer.mozilla.org/static/img/favicon32.png"&gt;</pre>
+&lt;link rel="icon" href="https://developer.mozilla.org/static/img/favicon32.png"&gt;</pre>
 
 <p>The comments explain what each icon is used for — these elements cover things like providing a nice high resolution icon to use when the website is saved to an iPad's home screen.</p>
 
 <p>Don't worry too much about implementing all these types of icon right now — this is a fairly advanced feature, and you won't be expected to have knowledge of this to progress through the course. The main purpose here is to let you know what such things are, in case you come across them while browsing other websites' source code.</p>
 
-<div class="note">
+<div class="notecard note">
 <p><strong>Note:</strong> If your site uses a Content Security Policy (CSP) to enhance its security, the policy applies to the favicon. If you encounter problems with the favicon not loading, verify that the {{HTTPHeader("Content-Security-Policy")}} header's <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/img-src"><code>img-src</code> directive</a> is not preventing access to it.</p>
 </div>
 
@@ -229,7 +229,7 @@ and HTML5 Apps. It also documents Mozilla products, like Firefox OS."&gt;
   <pre class="brush: html">&lt;link rel="stylesheet" href="my-css-file.css"&gt;</pre>
  </li>
  <li>
-  <p>The {{htmlelement("script")}} element should also go into the head, and should include a <code>src</code> attribute containing the path to the JavaScript you want to load, and <code>defer</code>, which basically instructs the browser to load the JavaScript at the same time as the page's HTML. This is useful as it makes sure that the HTML is all loaded before the JavaScript runs, so that you don't get errors resulting from JavaScript trying to access an HTML element that doesn't exist on the page yet. There are actually a number of ways to handle loading JavaScript on your page, but this is the most foolproof one to use for modern browsers (for others, read <a href="/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#script_loading_strategies">Script loading strategies</a>). </p>
+  <p>The {{htmlelement("script")}} element should also go into the head, and should include a <code>src</code> attribute containing the path to the JavaScript you want to load, and <code>defer</code>, which basically instructs the browser to load the JavaScript after the page has finished parsing the HTML. This is useful as it makes sure that the HTML is all loaded before the JavaScript runs, so that you don't get errors resulting from JavaScript trying to access an HTML element that doesn't exist on the page yet. There are actually a number of ways to handle loading JavaScript on your page, but this is the most foolproof one to use for modern browsers (for others, read <a href="/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#script_loading_strategies">Script loading strategies</a>). </p>
 
   <pre class="brush: html">&lt;script src="my-js-file.js" defer&gt;&lt;/script&gt;</pre>
 
@@ -249,15 +249,15 @@ and HTML5 Apps. It also documents Mozilla products, like Firefox OS."&gt;
 
 <p>If done correctly, when you save your HTML and refresh your browser you should be able to see that things have changed:</p>
 
-<p><img alt="Example showing a page with CSS and JavaScript applied to it. The CSS has made the page go green, whereas the JavaScript has added a dynamic list to the page." src="js-and-css.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="Example showing a page with CSS and JavaScript applied to it. The CSS has made the page go green, whereas the JavaScript has added a dynamic list to the page." src="js-and-css.png"></p>
 
 <ul>
- <li>The JavaScript has added an empty list to the page. Now when you click anywhere on the list, a dialog box will pop up asking you to enter some text for a new list item. When you press the OK button, a new list item will be added to the list containing the text. When you click on an existing list item, a dialog box will pop up allowing you to change the item's text.</li>
+ <li>The JavaScript has added an empty list to the page. Now when you click anywhere outside the list, a dialog box will pop up asking you to enter some text for a new list item. When you press the OK button, a new list item will be added to the list containing the text. When you click on an existing list item, a dialog box will pop up allowing you to change the item's text.</li>
  <li>The CSS has caused the background to go green, and the text to become bigger. It has also styled some of the content that the JavaScript has added to the page (the red bar with the black border is the styling the CSS has added to the JS-generated list.)</li>
 </ul>
 
-<div class="note">
-<p><strong>Note</strong>: If you get stuck in this exercise and can't get the CSS/JS to apply, try checking out our <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/css-and-js.html">css-and-js.html</a> example page.</p>
+<div class="notecard note">
+<p><strong>Note:</strong> If you get stuck in this exercise and can't get the CSS/JS to apply, try checking out our <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/css-and-js.html">css-and-js.html</a> example page.</p>
 </div>
 
 <h2 id="Setting_the_primary_language_of_the_document">Setting the primary language of the document</h2>

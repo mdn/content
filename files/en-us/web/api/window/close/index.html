@@ -8,6 +8,7 @@ tags:
 - Method
 - Reference
 - Window
+browser-compat: api.Window.close
 ---
 <div>{{APIRef}}</div>
 
@@ -49,43 +50,10 @@ function closeOpenedWindow() {
 }
 </pre>
 
-<h3 id="Closing_the_current_window">Closing the current window</h3>
-
-<p>In the past, when you called the <code>window</code> object's <code>close()</code>
-  method directly, rather than calling <code>close()</code> on a <code>window</code>
-  <strong>instance</strong>, the browser closed the frontmost window, whether your script
-  created that window or not. This is no longer the case; for security reasons, scripts
-  are no longer allowed to close windows they didn't open. (Firefox 46.0.1: scripts can
-  not close windows, they had not opened)</p>
-
-<pre class="brush: js">function closeCurrentWindow() {
-  window.close();
-}
-</pre>
-
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', '#dom-window-close', 'window.close()')}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML5 W3C', "browsers.html#dom-window-close", "Window.close()")}}
-      </td>
-      <td>{{Spec2('HTML5 W3C')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Window.close")}}</p>
+<p>{{Compat}}</p>

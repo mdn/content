@@ -40,7 +40,7 @@ tags:
 
 <div class="notecard note">
   <h4>Note</h4>
-  <p>This feature is enabled from Firefox 81 by setting the preference <code>devtools.inspector.ruleview.inline-compatibility-warning.enabled</code> to <code>true</code> (open <code>about.config</code> in the URL bar to view/set Firefox preferences).</p>
+  <p>This feature is enabled from Firefox 81 by setting the preference <code>devtools.inspector.ruleview.inline-compatibility-warning.enabled</code> to <code>true</code> (open <code>about:config</code> in the URL bar to view/set Firefox preferences).</p>
 </div>
 
 <p><img alt="Tooltip displayed next to CSS element. Hover to find out browsers with compatibility issues." src="firefox_compatibility_tootips.jpg"></p>
@@ -61,16 +61,16 @@ tags:
 
 <ul>
  <li><em>Highlight matched elements</em>: next to the selector is a target icon: click this to highlight all nodes in the page that match this selector.</li>
- <li><em>Overridden declaration</em>: declarations that are overridden by later rules are crossed out. See <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#overridden_declarations">overridden declarations</a>.</li>
+ <li><em>Overridden declaration</em>: declarations that are overridden by later rules are crossed out. See <a href="#overridden_declarations">overridden declarations</a>.</li>
  <li><em>Inactive rules</em> (not shown): if a rule is inactive (e.g., <code>padding</code> on a <code>:visited</code> pseudo-element), it is colored gray, with an info icon that gives more information when clicked.</li>
- <li><em>Filter rules containing this property</em>: next to overridden declarations is an icon you can click to filter the rules list to show only those rules that include that property. See <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#overridden_declarations">overridden declarations</a>.</li>
+ <li><em>Filter rules containing this property</em>: next to overridden declarations is an icon you can click to filter the rules list to show only those rules that include that property. See <a href="#overridden_declarations">overridden declarations</a>.</li>
  <li><em>Enable/disable</em>: if you hover over a declaration, a checkbox appears next to it: you can use this to toggle the declaration on or off.</li>
- <li><em>Filename and line number</em>: on the right-hand side is a link to the rule. See <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#link_to_css_file">link to CSS file</a>.</li>
+ <li><em>Filename and line number</em>: on the right-hand side is a link to the rule. See <a href="#link_to_css_file">link to CSS file</a>.</li>
 </ul>
 
 <p>If the element has a <code><a href="/en-US/docs/Web/CSS/display">display: grid</a></code> declaration, then it gets a grid icon next to it, like this: <img alt="" src="screen_shot_2016-12-16_at_10.51.15_am.png">. Click that icon to display the grid overlaid on the page, including grid lines and tracks. See <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">Examine grid layouts</a> for more on this.</p>
 
-<p>To view <a href="/en-US/docs/Web/CSS/Cascade">user-agent styles</a> (<em>i.e.,</em> browser-default CSS rules), enable "Inspector &gt; Show Browser Styles" under the <a href="/en-US/docs/Tools/Settings">developer tool settings</a> panel. (Note that this setting is independent of the "Browser styles" checkbox in the <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#examine_computed_css">Computed view</a>.)</p>
+<p>To view <a href="/en-US/docs/Web/CSS/Cascade">user-agent styles</a> (<em>i.e.,</em> browser-default CSS rules), enable "Inspector &gt; Show Browser Styles" under the <a href="/en-US/docs/Tools/Settings">developer tool settings</a> panel. (Note that this setting is independent of the "Browser styles" checkbox in the <a href="#examine_computed_css">Computed view</a>.)</p>
 
 <p>User-agent styles are displayed against a different background, and the link to the filename and line number contains the prefix <code>(user agent)</code>:</p>
 
@@ -233,7 +233,7 @@ tags:
 <p>Note that if the operating system mode is set to a particular mode, then simulating that mode will not change page rendering (i.e. simulating dark mode when the operating system is using dark mode will not change the display).</p>
 
 <div class="notecard note">
-  <h4>Note</h4> 
+  <h4>Note</h4>
   <p>If <code>privacy.resistFingerprinting</code> has been set <strong>true</strong>, the <code><a href="/en-US/docs/Web/CSS/@media/prefers-color-scheme">prefers-color-scheme</a></code> preference is forced to <code>light</code>. You must set <code>privacy.resistFingerprinting</code> to <strong>false</strong> in order to use this feature.</p>
 </div>
 
@@ -309,7 +309,7 @@ tags:
 <div class="notecard note">
   <h4>Note</h4>
   <p>You can view changes made to the rules view only. If you edit the CSS using the Style Editor, the changes will not be shown in the changes pane.</p>
-  
+
   <p>Also remember, as noted above, that changes you make to the CSS rules are temporary and will be reset if you reload the page.</p>
 </div>
 
@@ -354,6 +354,6 @@ tags:
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>Complete list of Page Inspector <a href="/en-US/docs/Tools/Page_Inspector/Keyboard_shortcuts">Keyboard shortcuts</a>.</li>
+ <li>Complete list of Page Inspector <a href="/en-US/docs/Tools/Keyboard_shortcuts#page_inspector">Keyboard shortcuts</a>.</li>
  <li>The Inspector also includes a number of specialized tools for working with particular CSS features, such as colors, fonts, and animations. To read about these see the list of <a href="/en-US/docs/Tools/Page_Inspector">how to guides</a>.</li>
 </ul>

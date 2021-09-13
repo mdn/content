@@ -7,6 +7,7 @@ tags:
   - Files
   - Interface
   - Reference
+browser-compat: api.FileReader
 ---
 <div>{{APIRef("File API")}}</div>
 
@@ -35,6 +36,13 @@ tags:
  <dt>{{domxref("FileReader.readyState")}} {{readonlyinline}}</dt>
  <dd>A number indicating the state of the <code>FileReader</code>. This is one of the following:
  <table class="standard-table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
   <tbody>
    <tr>
     <td><code>EMPTY</code></td>
@@ -76,7 +84,7 @@ tags:
 </dl>
 
 <div class="note">
-<p>As <code>FileReader</code> inherits from {{domxref("EventTarget")}}, all those events can also be listened for by using the {{domxref("EventTarget.addEventListener()","addEventListener")}} method.</p>
+<p><strong>Note:</strong> As <code>FileReader</code> inherits from {{domxref("EventTarget")}}, all those events can also be listened for by using the {{domxref("EventTarget.addEventListener()","addEventListener")}} method.</p>
 </div>
 
 <h2 id="Methods">Methods</h2>
@@ -85,7 +93,7 @@ tags:
  <dt>{{domxref("FileReader.abort()")}}</dt>
  <dd>Aborts the read operation. Upon return, the <code>readyState</code> will be <code>DONE</code>.</dd>
  <dt>{{domxref("FileReader.readAsArrayBuffer()")}}</dt>
- <dd>Starts reading the contents of the specified {{domxref("Blob")}}, once finished, the <code>result</code> attribute contains an {{domxref("ArrayBuffer")}} representing the file's data.</dd>
+ <dd>Starts reading the contents of the specified {{domxref("Blob")}}, once finished, the <code>result</code> attribute contains an {{jsxref("ArrayBuffer")}} representing the file's data.</dd>
  <dt>{{domxref("FileReader.readAsBinaryString()")}}</dt>
  <dd>Starts reading the contents of the specified {{domxref("Blob")}}, once finished, the <code>result</code> attribute contains the raw binary data from the file as a string.</dd>
  <dt>{{domxref("FileReader.readAsDataURL()")}}</dt>
@@ -121,26 +129,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("File API", "#dfn-filereader", "FileReader")}}</td>
-   <td>{{Spec2("File API")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.FileReader")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

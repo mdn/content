@@ -13,12 +13,15 @@ tags:
   - TrackDefaultList
   - Video
   - source
+browser-compat: api.TrackDefaultList
 ---
 <p>{{APIRef("Media Source Extensions")}}{{deprecated_header}}</p>
 
 <p>The <strong><code>TrackDefaultList</code></strong> interface represents a simple container list for multiple {{domxref("TrackDefault")}} objects.</p>
 
 <p>The <code>TrackDefaultList</code> associated with a particular <code>SourceBuffer</code> can be retrieved using the {{domxref("SourceBuffer.trackDefaults")}} property.</p>
+
+<p>The individual <code>TrackDefault</code> objects can be accessed using the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#accessing_array_elements">array operator</a> <code>[]</code>.</p>
 
 <h2 id="Constructor">Constructor</h2>
 
@@ -40,11 +43,6 @@ tags:
 
 <p><em>Inherits properties from its parent interface, {{domxref("EventTarget")}}.</em></p>
 
-<dl>
- <dt>{{domxref("TrackDefaultList.TrackDefault()")}}</dt>
- <dd>This getter allows the <code>TrackDefault</code> objects in the list to be accessed with an array operator (i.e. <code>[]</code>.)</dd>
-</dl>
-
 <h2 id="Examples">Examples</h2>
 
 <p>TBD.</p>
@@ -54,7 +52,7 @@ tags:
 <div>
 <div>
 
-<p>{{Compat("api.TrackDefaultList")}}</p>
+<p>{{Compat}}</p>
 </div>
 </div>
 

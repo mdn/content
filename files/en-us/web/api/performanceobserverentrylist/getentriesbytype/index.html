@@ -7,12 +7,13 @@ tags:
   - PerformanceObserverEntryList
   - Reference
   - Web Performance
+browser-compat: api.PerformanceObserverEntryList.getEntriesByType
 ---
 <div>{{APIRef("Performance Timeline API")}}</div>
 
 <p>The <strong><code>getEntriesByType()</code></strong> method of the {{domxref("PerformanceObserverEntryList")}} returns a list of explicitly <em>observed</em> {{domxref("PerformanceEntry","performance entry", '', 'true')}} objects for a given {{domxref("PerformanceEntry.entryType","performance entry type", '', 'true')}}. The list's members are determined by the set of {{domxref("PerformanceEntry.entryType","entry types", '', 'true')}} specified in the call to the {{domxref("PerformanceObserver.observe","observe()")}} method. The list is available in the observer's callback function (as the first parameter in the callback).</p>
 
-<p class="note">This method is exposed to {{domxref("Window")}} and {{domxref("Worker")}} interfaces.</p>
+<p>This method is exposed to {{domxref("Window")}} and {{domxref("Worker")}} interfaces.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -77,21 +78,8 @@ observe_frame.observe({entryTypes: ['frame']});
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Performance Timeline Level 2', '#dom-performanceobserverentrylist-getentriesbytype', 'getEntriesByType()')}}</td>
-   <td>{{Spec2('Performance Timeline Level 2')}}</td>
-   <td>Initial definition of <code>getEntriesByType()</code> method.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.PerformanceObserverEntryList.getEntriesByType")}}</p>
+<p>{{Compat}}</p>

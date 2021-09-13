@@ -12,14 +12,17 @@ tags:
 - WebGL
 - WebGLRenderingContext
 - getUniformLocation
+browser-compat: api.WebGLRenderingContext.getUniformLocation
 ---
 <div>{{APIRef("WebGL")}}</div>
 
-<p><span class="seoSummary">Part of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL
+<p>Part of the <a href="/en-US/docs/Web/API/WebGL_API">WebGL
             API</a>, the {{domxref("WebGLRenderingContext")}} method
         <strong><code>getUniformLocation()</code></strong> returns the location of a
         specific <strong>uniform</strong> variable which is part of a given
-        {{domxref("WebGLProgram")}}.</span> The uniform variable is returned as a
+        {{domxref("WebGLProgram")}}.</p>
+
+<p>The uniform variable is returned as a
     {{domxref("WebGLUniformLocation")}} object, which is an opaque identifier used to
     specify where in the GPU's memory that uniform variable is located.</p>
 
@@ -92,7 +95,7 @@ tags:
 </p>
 
 <div class="note">
-    <p>The <code>WebGLUniformLocation</code> type is compatible with the
+    <p><strong>Note:</strong> The <code>WebGLUniformLocation</code> type is compatible with the
         <code>GLint</code> type when specifying the index or location of a uniform
         attribute.</p>
 </div>
@@ -119,7 +122,7 @@ tags:
         basic 2D WebGL animation example</a>, obtains the locations of three uniforms from
     the shading program, then sets the value of each of the three uniforms.</p>
 
-<pre class="brush: js highlight[3-8]">gl.useProgram(shaderProgram);
+<pre class="brush: js">gl.useProgram(shaderProgram);
 
 uScalingFactor =
     gl.getUniformLocation(shaderProgram, "uScalingFactor");
@@ -133,8 +136,7 @@ gl.uniform2fv(uRotationVector, currentRotation);
 gl.uniform4fv(uGlobalColor, [0.1, 0.7, 0.2, 1.0]);</pre>
 
 <div class="notecard note">
-    <h3>Note</h3>
-    <p>This code snippet is taken from <a
+    <p><strong>Note:</strong> This code snippet is taken from <a
         href="/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example#Drawing_and_animating_the_scene">the
         function <code>animateScene()</code></a> in "A basic 2D WebGL animation example."
     See that article for the full sample and to see the resulting animation in action.</p>
@@ -165,35 +167,11 @@ gl.uniform4fv(uGlobalColor, [0.1, 0.7, 0.2, 1.0]);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-    <tbody>
-        <tr>
-            <th scope="col">Specification</th>
-            <th scope="col">Status</th>
-            <th scope="col">Comment</th>
-        </tr>
-        <tr>
-            <td>{{SpecName('WebGL', "#5.14.10", "getUniformLocation")}}</td>
-            <td>{{Spec2('WebGL')}}</td>
-            <td>Initial definition.</td>
-        </tr>
-        <tr>
-            <td>{{SpecName('OpenGL ES 2.0', "glGetUniformLocation.xml",
-                "glGetUniformLocation")}}</td>
-            <td>{{Spec2('OpenGL ES 2.0')}}</td>
-            <td>Man page of the OpenGL API.</td>
-        </tr>
-    </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data.
-    If you'd like to contribute to the data, please check out <a
-        href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-    and send us a pull request.</p>
-
-<p>{{Compat("api.WebGLRenderingContext.getUniformLocation")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -7,12 +7,13 @@ tags:
   - Document
   - Method
   - Reference
+browser-compat: api.Document.elementFromPoint
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><span class="seoSummary">The <strong><code>elementFromPoint()</code></strong>
+<p>The <strong><code>elementFromPoint()</code></strong>
     method, available on the {{domxref("Document")}} object, returns the topmost {{domxref("Element")}} at the specified coordinates
-    (relative to the viewport).</span></p>
+    (relative to the viewport).</p>
 
 <p>If the element at the specified point belongs to another document (for example, the
   document of an {{HTMLElement("iframe")}}), that document's parent element is returned
@@ -71,7 +72,7 @@ tags:
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush:html" id="ExampleCode">&lt;p id="para1"&gt;Some text here&lt;/p&gt;
+<pre class="brush:html">&lt;p id="para1"&gt;Some text here&lt;/p&gt;
 &lt;button onclick="changeColor('blue');"&gt;Blue&lt;/button&gt;
 &lt;button onclick="changeColor('red');"&gt;Red&lt;/button&gt;
 </pre>
@@ -85,22 +86,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('CSSOM View', '#dom-document-elementfrompoint', 'elementFromPoint()')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Document.elementFromPoint")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

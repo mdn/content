@@ -13,6 +13,7 @@ tags:
 - Reference
 - Scale
 - matrix
+browser-compat: api.DOMMatrixReadOnly.scale
 ---
 <p>{{APIRef("Geometry Interfaces")}}{{SeeCompatTable}}</p>
 
@@ -27,32 +28,30 @@ tags:
 <pre
   class="brush: js">DOMMatrix.scale(<em>scaleX</em>[, <em>scaleY</em>][, <em>scaleZ][, originX</em>][, <em>originY</em>][, <em>originZ</em>])</pre>
 
-<h3 class="highlight-spanned" id="Parameters"><span
-    class="highlight-span">Parameters</span></h3>
+<h3 id="Parameters">Parameters</h3>
 
 <dl>
   <dt>scaleX</dt>
   <dd>A multiplier for the scale value on the x-axis.</dd>
-  <dt>scaleY <span class="inlineIndicator optional optionalInline">Optional</span></dt>
+  <dt>scaleY {{optional_inline}}</dt>
   <dd>A multiplier for the scale value on the y-axis.  If not supplied, this defaults to
     the value of <code>scaleX</code>.</dd>
-  <dt>scaleZ <span class="inlineIndicator optional optionalInline">Optional</span></dt>
+  <dt>scaleZ {{optional_inline}}</dt>
   <dd>A multiplier for the scale value on the z-axis.  If this value is anything other
     than 1, the resulting matrix will be 3D.</dd>
-  <dt>originX <span class="inlineIndicator optional optionalInline">Optional</span></dt>
+  <dt>originX {{optional_inline}}</dt>
   <dd>An x-coordinate for the origin of the transformation.  If no origin is supplied,
     this defaults to 0.</dd>
-  <dt>originY <span class="inlineIndicator optional optionalInline">Optional</span></dt>
+  <dt>originY {{optional_inline}}</dt>
   <dd>A y-coordinate for the origin of the transformation.  If no origin is supplied, this
     defaults to 0.</dd>
-  <dt>originZ <span class="inlineIndicator optional optionalInline">Optional</span></dt>
+  <dt>originZ {{optional_inline}}</dt>
   <dd>A z-coordinate for the origin of the transformation.  If no origin is supplied, this
     defaults to 0. If this value is anything other than 0, the resulting matrix will be
     3D.</dd>
 </dl>
 
-<h3 class="highlight-spanned" id="Return_value"><span class="highlight-span">Return
-    value</span></h3>
+<h3>Return value</h3>
 
 <p>Returns a <a href="/en-US/docs/Web/API/DOMMatrix"
     title="The DOMMatrix interface represents 4x4 matrices, suitable for 2D and 3D operations."><code>DOMMatrix</code></a>
@@ -64,7 +63,7 @@ tags:
 </p>
 
 <div class="notecard note">
-  <p><strong>Note</strong>: At time of writing, Firefox still supports an older version of
+  <p><strong>Note:</strong> At time of writing, Firefox still supports an older version of
     the specification that accepts either one or three values.</p>
 
   <pre>DOMMatrix.scale(scale[, originX][, originY])</pre>
@@ -115,27 +114,13 @@ document.querySelector('#transformed').setAttribute('transform', scaledMatrix.to
 document.querySelector('#transformedOrigin').setAttribute('transform', scaledMatrixWithOrigin.toString());</pre>
 
 <p>{{ EmbedLiveSample('Examples', '250', '250',
-  'https://mdn.mozillademos.org/files/16524/Screen_Shot_2019-02-18_at_13.23.31.png',
+  'screen_shot_2019-02-18_at_13.23.31.png',
   'Web/API/DOMMatrixReadOnly/scale') }}</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{ SpecName('Geometry Interfaces', '#dom-dommatrixreadonly-scale',
-        'DOMMatrixReadOnly.scale()') }}</td>
-      <td>{{ Spec2('Geometry Interfaces') }}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.DOMMatrixReadOnly.scale")}}</p>
+<p>{{Compat}}</p>

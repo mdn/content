@@ -9,10 +9,11 @@ tags:
 - Resize Observer API
 - ResizeObserverEntry
 - borderBoxSize
+browser-compat: api.ResizeObserverEntry.borderBoxSize
 ---
 <div>{{APIRef("Resize Observer API")}}{{SeeCompatTable}}</div>
 
-<p class="summary">The <strong><code>borderBoxSize</code></strong> read-only property of
+<p>The <strong><code>borderBoxSize</code></strong> read-only property of
   the {{domxref("ResizeObserverEntry")}} interface returns an array containing the new
   border box size of the observed element when the callback is run.</p>
 
@@ -41,7 +42,7 @@ tags:
 </dl>
 
 <div class="notecard note">
-  <p><strong>Note</strong>: For more explanation of writing modes and block and inline
+  <p><strong>Note:</strong> For more explanation of writing modes and block and inline
     dimensions, read <a
       href="/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">Handling
       different text directions</a>.</p>
@@ -65,21 +66,8 @@ resizeObserver.observe(document.querySelector('div'));</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Resize Observer','#dom-resizeobserverentry-borderboxsize','borderBoxSize')}}</td>
-      <td>{{Spec2('Resize Observer')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.ResizeObserverEntry.borderBoxSize")}}</p>
+<p>{{Compat}}</p>

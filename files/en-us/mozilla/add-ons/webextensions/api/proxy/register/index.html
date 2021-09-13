@@ -11,14 +11,19 @@ tags:
   - WebExtensions
   - register
   - registerProxyScript
+browser-compat: webextensions.api.proxy.register
 ---
 <p>{{AddonSidebar()}} {{deprecated_header}}</p>
 
-<p>This method was deprecated in Firefox 68 and removed in Firefox 71. In Firefox 68–70, calling this method logs an error message to the console:</p>
+<div class="notecard warning">
+  <h4>Warning</h4>
+  <p>This method was deprecated in Firefox 68 and removed in Firefox 71. In Firefox 68–70, calling this method logs an error message to the console:</p>
 
-<p><img alt="" src="proxy_register_warning.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
+  <p><img alt="" src="proxy_register_warning.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
+</div>
 
-<p>Registers a <a href="/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file">Proxy Auto-Configuration (PAC) file</a>. The file is executed immediately, and its <code>FindProxyForURL()</code> function will be called for any HTTP, HTTPS, or FTP requests.</p>
+
+<p>Registers a <a href="/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file">Proxy Auto-Configuration (PAC) file</a>. The file is executed immediately, and its <code>FindProxyForURL()</code> function will be called for any HTTP or HTTPS requests.</p>
 
 <p>If PAC files are registered by more than one extension, then requests will be passed initially to the one that was registered first.</p>
 
@@ -102,7 +107,7 @@ browser.runtime.onMessage.addListener((message) =&gt; {
 <ul>
  <li>any DOM functions (for example, <a href="/en-US/docs/Web/API/Window">window</a> or any of its properties)</li>
  <li>any WebExtension APIs except <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage">runtime.sendMessage()</a></code> and <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage">runtime.onMessage</a></code></li>
- <li>the <a href="/en-US/docs/Web/API/Console">console API</a> - to log messages from a PAC, send a message to the background script:</li>
+ <li>the <a href="/en-US/docs/Web/API/console">Console API</a> - to log messages from a PAC, send a message to the background script:</li>
 </ul>
 
 <pre class="brush: js">//  pac.js
@@ -150,11 +155,9 @@ browser.proxy.register(proxyScriptURL);</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+<p>{{Compat}}</p>
 
-<p>{{Compat("webextensions.api.proxy.register")}}</p>
-
-<div class="note"><strong>Acknowledgements</strong>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
+<div class="notecard note">
+  <h4>Acknowledgements</h4>
+  <p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
 </div>

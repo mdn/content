@@ -8,6 +8,7 @@ tags:
 - Method
 - Reference
 - drag and drop
+browser-compat: api.DataTransfer.setDragImage
 ---
 <div>{{APIRef("HTML Drag and Drop API")}}</div>
 
@@ -35,11 +36,11 @@ tags:
 
 <dl>
   <dt><em>img |</em> element</dt>
-  <dd>An image {{domxref("Element")}} element to use for the drag feedback image.</dd>
-  <dd>If {{domxref("Element")}} is an img element, then set the drag data store bitmap to
+  <dd><p>An image {{domxref("Element")}} element to use for the drag feedback image.</p>
+  <p>If {{domxref("Element")}} is an img element, then set the drag data store bitmap to
     the element's image (at its intrinsic size); otherwise, set the drag data store bitmap
     to an image generated from the given element (the exact mechanism for doing so is not
-    currently specified).</dd>
+    currently specified).</p></dd>
   <dt><em>xOffset</em></dt>
   <dd>A <code>long</code> indicating the horizontal offset within the image.</dd>
   <dt><em>yOffset</em></dt>
@@ -48,10 +49,7 @@ tags:
 
 <h3 id="Return_Value">Return value</h3>
 
-<dl>
-  <dt>void</dt>
-  <dd></dd>
-</dl>
+<p>None.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -118,48 +116,18 @@ function drop_handler(ev) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG',
-        'interaction.html#dom-datatransfer-setdragimage','setDragImage()')}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML5.1',
-        'editing.html#dom-datatransfer-setdragimage','setDragImage()')}}</td>
-      <td>{{Spec2('HTML5.1')}}</td>
-      <td>Not included in W3C HTML5 {{Spec2('HTML5 W3C')}}</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.DataTransfer.setDragImage")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
-<p>{{page("/en-US/docs/Web/API/DataTransfer", "See also")}}</p>
-
-<div class="jfk-bubble gtx-bubble"
-  style="left: -1px; top: 27px; opacity: 1; transition: opacity 0.218s ease-out 0s;">
-  <div class="jfk-bubble-content-id" id="bubble-4">
-    <div id="gtx-host" style="max-width: 400px;"></div>
-  </div>
-
-  <div class="jfk-bubble-closebtn-id jfk-bubble-closebtn"></div>
-
-  <div class="jfk-bubble-arrow-id jfk-bubble-arrow jfk-bubble-arrowup"
-    style="left: 15px;">
-    <div class="jfk-bubble-arrowimplbefore"></div>
-
-    <div class="jfk-bubble-arrowimplafter"></div>
-  </div>
-</div>
+<ul>
+ <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API">Drag and drop</a></li>
+ <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</a></li>
+ <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">Recommended Drag Types</a></li>
+ <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items">Dragging and Dropping Multiple Items</a></li>
+ <li><a href="https://codepen.io/tech_query/pen/MqGgap">DataTransfer test - Paste or Drag</a></li>
+</ul>

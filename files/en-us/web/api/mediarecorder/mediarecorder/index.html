@@ -2,21 +2,24 @@
 title: MediaRecorder()
 slug: Web/API/MediaRecorder/MediaRecorder
 tags:
-- API
-- Audio
-- Constructor
-- Media
-- Media Capture
-- Media Recorder API
-- MediaRecorder
-- Reference
-- Video
+  - API
+  - Audio
+  - Constructor
+  - Media
+  - Media Capture
+  - Media Recorder API
+  - MediaRecorder
+  - Reference
+  - Video
+browser-compat: api.MediaRecorder.MediaRecorder
 ---
 <div>{{APIRef("MediaStream Recording")}}</div>
 
-<p><span class="seoSummary">The <strong><code>MediaRecorder()</code></strong> constructor
+<p>The <strong><code>MediaRecorder()</code></strong> constructor
     creates a new {{domxref("MediaRecorder")}} object that will record a specified
-    {{domxref("MediaStream")}}.</span> The object can optionally be configured to record
+    {{domxref("MediaStream")}}.</p>
+
+<p>The object can optionally be configured to record
   using a specific media container (file type), and, further, can specify the exact codec
   and codec configuration(s) to use by specifying <a
     href="/en-US/docs/Web/Media/Formats/codecs_parameter">the <code>codecs</code>
@@ -35,9 +38,7 @@ tags:
     from a stream created using {{domxref("MediaDevices.getUserMedia",
     "navigator.mediaDevices.getUserMedia()")}} or from an {{HTMLElement("audio")}},
     {{HTMLElement("video")}} or {{HTMLElement("canvas")}} element.</dd>
-  <dt>
-    <p><strong><code>options</code> </strong>{{optional_inline}}</p>
-  </dt>
+  <dt><strong><code>options</code> </strong>{{optional_inline}}</dt>
   <dd>
     <p>A dictionary object that can contain the following properties:</p>
 
@@ -62,12 +63,12 @@ tags:
     </ul>
 
     <div class="note">
-      <p>If bits per second values are not specified for video and/or audio, the default
+      <p><strong>Note:</strong> If bits per second values are not specified for video and/or audio, the default
         adopted for video is 2.5Mbps, while the audio default is adaptive, depending upon
         the sample rate and the number of channels.</p>
     </div>
     <div class="notecard note">
-      <p>Video resolution, frame rate and similar settings are specified as constraints
+      <p><strong>Note:</strong> Video resolution, frame rate and similar settings are specified as constraints
         when calling {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}},
         not here in the MediaRecorder API.</p>
     </div>
@@ -109,29 +110,16 @@ if (navigator.mediaDevices.getUserMedia) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName("MediaStream Recording")}}</td>
-      <td>{{Spec2("MediaStream Recording")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MediaRecorder.MediaRecorder")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API">Using
+  <li><a href="/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API">Using
       the MediaRecorder API</a></li>
   <li><a href="https://mdn.github.io/web-dictaphone/">Web Dictaphone</a>: MediaRecorder +
     getUserMedia + Web Audio API visualization demo, by <a
@@ -139,5 +127,5 @@ if (navigator.mediaDevices.getUserMedia) {
       href="https://github.com/mdn/web-dictaphone/">source on Github</a>.)</li>
   <li><a href="http://simpl.info/mediarecorder/">simpl.info MediaStream Recording
       demo</a>, by <a href="https://twitter.com/sw12">Sam Dutton</a>.</li>
-  <li>{{domxref("Navigator.mediaDevices.getUserMedia()")}}</li>
+  <li>{{domxref("MediaDevices.getUserMedia")}}</li>
 </ul>

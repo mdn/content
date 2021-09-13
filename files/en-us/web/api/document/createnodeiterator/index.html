@@ -7,10 +7,11 @@ tags:
   - Gecko
   - MakeBrowserAgnostic
   - Method
+browser-compat: api.Document.createNodeIterator
 ---
 <p>{{APIRef("DOM")}}</p>
 
-<p>Returns a new <a class="internal"
+<p>Returns a new <a
     href="/en-US/docs/Web/API/NodeIterator"><code>NodeIterator</code></a> object.</p>
 
 <h2 id="Syntax">Syntax</h2>
@@ -32,9 +33,9 @@ tags:
     <table class="standard-table">
       <thead>
         <tr>
-          <th class="header" scope="col">Constant</th>
-          <th class="header" scope="col">Numerical value</th>
-          <th class="header" scope="col">Description</th>
+          <th>Constant</th>
+          <th>Numerical value</th>
+          <th>Description</th>
         </tr>
       </thead>
       <tbody>
@@ -46,14 +47,11 @@ tags:
         <tr>
           <td><code>NodeFilter.SHOW_ATTRIBUTE</code> {{deprecated_inline}}</td>
           <td><code>2</code></td>
-          <td>
-            <p>Shows attribute {{ domxref("Attr") }} nodes.</p>
-
-            <p>This is meaningful only when creating a {{ domxref("TreeWalker") }} with an
+          <td>Shows attribute {{ domxref("Attr") }} nodes. This is meaningful only when creating a {{ domxref("TreeWalker") }} with an
               {{ domxref("Attr") }} node as its root. In this case, it means that the
               attribute node will appear in the first position of the iteration or
               traversal. Since attributes are never children of other nodes, they do not
-              appear when traversing over the document tree.</p>
+              appear when traversing over the document tree.
           </td>
         </tr>
         <tr>
@@ -89,26 +87,17 @@ tags:
         <tr>
           <td><code>NodeFilter.SHOW_ENTITY</code> {{deprecated_inline}}</td>
           <td><code>32</code></td>
-          <td>Shows {{ domxref("Entity") }} nodes. This is meaningful only when creating a
-            {{ domxref("TreeWalker") }} with an {{ domxref("Entity") }} node as its root;
-            in this case, it means that the {{ domxref("Entity") }} node will appear in
-            the first position of the traversal. Since entities are not part of the
-            document tree, they do not appear when traversing over the document tree.</td>
+          <td>Legacy, no more usable.</td>
         </tr>
         <tr>
           <td><code>NodeFilter.SHOW_ENTITY_REFERENCE</code> {{deprecated_inline}}</td>
           <td><code>16</code></td>
-          <td>Shows {{ domxref("EntityReference") }} nodes.</td>
+          <td>Legacy, no more usable.</td>
         </tr>
         <tr>
           <td><code>NodeFilter.SHOW_NOTATION</code> {{deprecated_inline}}</td>
           <td><code>2048</code></td>
-          <td>Shows {{ domxref("Notation") }} nodes. This is meaningful only when creating
-            a {{ domxref("TreeWalker") }} with a {{ domxref("Notation") }} node as its
-            root; in this case, it means that the {{ domxref("Notation") }} node will
-            appear in the first position of the traversal. Since entities are not part of
-            the document tree, they do not appear when traversing over the document tree.
-          </td>
+          <td>Legacy, no more usable.</td>
         </tr>
         <tr>
           <td><code>NodeFilter.SHOW_PROCESSING_INSTRUCTION</code></td>
@@ -154,24 +143,8 @@ while (currentNode = nodeIterator.nextNode()) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('DOM WHATWG', '#dom-document-createnodeiterator',
-        'document.createNodeIterator')}}</td>
-      <td>{{Spec2('DOM WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Document.createNodeIterator")}}</p>
+<p>{{Compat}}</p>

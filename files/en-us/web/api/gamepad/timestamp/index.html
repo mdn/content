@@ -9,7 +9,7 @@ tags:
   - NeedsMarkupWork
   - Property
   - Reference
-  - Référence(2)
+browser-compat: api.Gamepad.timestamp
 ---
 <div>{{APIRef("Gamepad API")}}</div>
 
@@ -25,13 +25,12 @@ tags:
 	newer values will always be greater than or equal to older values.</p>
 
 <div class="note">
-	<p><strong>Note</strong>: This property is not currently supported anywhere.</p>
+	<p><strong>Note:</strong> This property is not currently supported anywhere.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre
-	class="brush: js"><span class="idlInterface" id="idl-def-Gamepad"><span class="idlAttribute">readonly    attribute <span class="idlAttrType">DOMHighResTimeStamp</span> <span class="idlAttrName">timestamp</span>;</span></span></pre>
+<pre class="brush: js">const timestamp = gamepad.timestamp;</pre>
 
 <h2 id="Example">Example</h2>
 
@@ -44,25 +43,11 @@ console.log(gp.timestamp);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-		<tr>
-			<td>{{SpecName("Gamepad", "#dom-gamepad-timestamp", "Gamepad.timestamp")}}
-			</td>
-			<td>{{Spec2("Gamepad")}}</td>
-			<td>Initial definition</td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Gamepad.timestamp")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -19,7 +19,7 @@ tags:
 
 <p class="summary">Manually running tests on several browsers and devices, several times per day, can get tedious, and time-consuming. To handle this efficiently, you should become familiar with automation tools. In this article, we look at what is available, how to use task runners, and how to use the basics of commercial browser test automation apps such as LambdaTest, Sauce Labs, BrowserStack, and TestingBot.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -39,8 +39,8 @@ tags:
 <p>We agree — testing all the things we've looked at in previous articles manually can be a real pain. Fortunately, there are tools to help us automate some of this pain away. There are two main ways in which we can automate the tests we've been talking about in this module:</p>
 
 <ol>
- <li>Use a task runner such as <a href="http://gruntjs.com/">Grunt</a> or <a href="http://gulpjs.com/">Gulp</a>, or <a href="https://docs.npmjs.com/misc/scripts">npm scripts</a> to run tests and clean up code during your build process. This is a great way to perform tasks like linting and minifying code, adding in CSS prefixes or transpiling nascent JavaScript features for maximum cross-browser reach, and so on.</li>
- <li>Use a browser automation system like <a href="http://www.seleniumhq.org/">Selenium</a> to run specific tests on installed browsers and return results, alerting you to failures in browsers as they crop up. Commercial cross-browser testing apps like <a href="https://www.lambdatest.com/">LambdaTest</a>, <a href="https://saucelabs.com/">Sauce Labs</a>, <a href="https://www.browserstack.com/">BrowserStack</a>, and <a href="https://testingbot.com">TestingBot</a> are based on Selenium, but allow you to access their set up remotely using a simple interface, saving you the hassle of setting up your own testing system.</li>
+ <li>Use a task runner such as <a href="https://gruntjs.com/">Grunt</a> or <a href="https://gulpjs.com/">Gulp</a>, or <a href="https://docs.npmjs.com/misc/scripts">npm scripts</a> to run tests and clean up code during your build process. This is a great way to perform tasks like linting and minifying code, adding in CSS prefixes or transpiling nascent JavaScript features for maximum cross-browser reach, and so on.</li>
+ <li>Use a browser automation system like <a href="https://www.seleniumhq.org/">Selenium</a> to run specific tests on installed browsers and return results, alerting you to failures in browsers as they crop up. Commercial cross-browser testing apps like <a href="https://www.lambdatest.com/">LambdaTest</a>, <a href="https://saucelabs.com/">Sauce Labs</a>, <a href="https://www.browserstack.com/">BrowserStack</a>, and <a href="https://testingbot.com">TestingBot</a> are based on Selenium, but allow you to access their set up remotely using a simple interface, saving you the hassle of setting up your own testing system.</li>
 </ol>
 
 <p>We will look at how to set up your own Selenium-based testing system in the next article. In this article, we'll look at how to set up a task runner, and use the basic functionality of commercial systems like the ones mentioned above.</p>
@@ -144,7 +144,7 @@ exports.default = function(cb) {
 
 <p>See the links above for full instructions on the different gulp packages we are using.</p>
 
-<p>To use each plugin, you need to first install it via npm, then require any dependencies at the top of the <code>gulpfile.js</code> file, then add your test(s) to the bottom of it, and finally export the name of your task to be availabe via gulp's command.</p>
+<p>To use each plugin, you need to first install it via npm, then require any dependencies at the top of the <code>gulpfile.js</code> file, then add your test(s) to the bottom of it, and finally export the name of your task to be available via gulp's command.</p>
 
 <h4 id="html-tidy">html-tidy</h4>
 
@@ -229,7 +229,7 @@ const csslint = require('gulp-csslint');</pre>
  </li>
 </ol>
 
-<p>Here we grab our <code>style.css</code> file, run csslint on it (which outputs a list of any errors in your CSS to the terminal), then runs it through autoprefixer to add any prefixes needed to make nascent CSS features run in older browsers. At the end of the pipe chain, we output our modified prefixed CSS to the <code>build </code>directory. Note that this only works if csslint doesn't find any errors — try removing a curly brace from your CSS file and re-running gulp to see what output you get!</p>
+<p>Here we grab our <code>style.css</code> file, run csslint on it (which outputs a list of any errors in your CSS to the terminal), then runs it through autoprefixer to add any prefixes needed to make nascent CSS features run in older browsers. At the end of the pipe chain, we output our modified prefixed CSS to the <code>build</code> directory. Note that this only works if csslint doesn't find any errors — try removing a curly brace from your CSS file and re-running gulp to see what output you get!</p>
 
 <h4 id="js-hint_and_babel">js-hint and babel</h4>
 
@@ -274,7 +274,7 @@ const jshint = require('gulp-jshint');
 
 <p>Once this is all set up, you can run the <code>gulp</code> command inside your project directory, and you should get an output like this:</p>
 
-<p><img alt="" src="gulp-output.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="gulp-output.png"></p>
 
 <p>You can then try out the files output by your automated tasks by looking at them inside the <code>build</code> directory, and loading <code>build/index.html</code> in your web browser.</p>
 
@@ -298,14 +298,14 @@ const jshint = require('gulp-jshint');
 <p><strong>Note</strong>: One problem with our watch command above is that our CSSLint/Autoprefixer combination throws full-blown errors when a CSS error is encountered, which stops the watch working. You'll have to restart the watch once a CSS error is encountered, or find another way to do this.</p>
 </div>
 
-<p>There's a lot more you can do with Gulp. The <a href="http://gulpjs.com/plugins/">Gulp plugin directory</a> has literally thousands of plugins to search through.</p>
+<p>There's a lot more you can do with Gulp. The <a href="https://gulpjs.com/plugins/">Gulp plugin directory</a> has literally thousands of plugins to search through.</p>
 
 <h3 id="Other_task_runners">Other task runners</h3>
 
 <p>There are many other task runners available. We certainly aren't trying to say that Gulp is the best solution out there, but it works for us and it is fairly accessible to beginners. You could also try using other solutions:</p>
 
 <ul>
- <li>Grunt works in a very similar way to Gulp, except that it relies on tasks specified in a config file, rather than using written JavaScript. See <a href="http://gruntjs.com/getting-started">Getting started with Grunt for more details.</a></li>
+ <li>Grunt works in a very similar way to Gulp, except that it relies on tasks specified in a config file, rather than using written JavaScript. See <a href="https://gruntjs.com/getting-started">Getting started with Grunt for more details.</a></li>
  <li>You can also run tasks directly using npm scripts located inside your <code>package.json</code> file, without needing to install any kind of extra task runner system. This works on the premise that things like Gulp plugins are basically wrappers around command line tools. So, if you can work out how to run the tools using the command line, you can then run them using npm scripts. It is a bit trickier to work with, but can be rewarding for those who are strong with their command line skills.<a href="https://css-tricks.com/why-npm-scripts/"> Why npm scripts?</a> provides a good introduction with a good deal of further information.</li>
 </ul>
 
@@ -340,13 +340,13 @@ const jshint = require('gulp-jshint');
 
 <ol>
  <li>To start off with manual testing you need to select the <strong>"Real Time Testing"</strong> tab from the left navigation menu.<br>
-  <img alt="LambdaTest Dashboard" src="lambdatest-dashboard.png" style="border-style: solid; border-width: 2px;"></li>
+  <img alt="LambdaTest Dashboard" src="lambdatest-dashboard.png"></li>
  <li>As you click on the <strong>Real Time Testing</strong> you will be directed to a screen where you can choose the browser configuration, browser version, OS, and screen resolution with which you want to test your website.<br>
-  <img alt="Real Time Testing" src="mark-as-bug-1.png" style="border-style: solid; border-width: 2px;"></li>
+  <img alt="Real Time Testing" src="mark-as-bug-1.png"></li>
  <li>As you click on the Start button, a loading screen will appear, providing you with a VM (Virtual Machine) based on your configurations. Once loaded, you can perform live, interactive cross-browser testing with a website.<br>
-  <a href="https://www.lambdatest.com/support/docs/wp-content/uploads/2019/03/mark-as-bug-2.png"><img alt="Mark as bug" src="mark-as-bug-2.png" style="border-style: solid; border-width: 2px;"></a><br>
+  <a href="https://www.lambdatest.com/support/docs/wp-content/uploads/2019/03/mark-as-bug-2.png"><img alt="Mark as bug" src="mark-as-bug-2.png"></a><br>
   If you notice an issue with the UI, then you can share it with your colleagues by capturing a screenshot of your VM with the screenshot button. You can also record a video of your test session by hitting the recorder button in your test session.</li>
- <li>With the in-built image editor, highlight your screenshot before you push it to your colleagues.<img alt="Highlight a bug" src="mark-as-bug-3.png" style="border-style: solid; border-width: 2px;"></li>
+ <li>With the in-built image editor, highlight your screenshot before you push it to your colleagues.<img alt="Highlight a bug" src="mark-as-bug-3.png"></li>
  <li>
   <p id="Using_the_mark_as_bug_button_you_can_push_bug_to_numerous_third-party_tools_which_are_integrated_with_LambdaTest_such_as_Jira_asana_trello_and_more._That_way_you_can_log_a_bug_directly_from_the_middle_of_your_test_session_on_LambdaTest_to_your_project_management_instance._Check_out_all_LambdaTest_integrations_with_third-party_tools.">Using the mark as bug button you can push bugs to numerous third-party tools such as Jira, Asana, Trello, and more. That way you can log a bug directly from your test session on LambdaTest to your project management instance. Check out all the <a href="https://www.lambdatest.com/integrations">third-party LambdaTest integrations</a>.</p>
  </li>
@@ -373,9 +373,9 @@ const jshint = require('gulp-jshint');
 
 <ol>
  <li>Click <em>Start a new manual session</em>.</li>
- <li>In the next screen, type in the URL of a page you want to test (use <a href="https://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box-fixed.html">https://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box-fixed.html</a>, for example), then choose a browser/OS combination you want to test by using the different buttons and lists. There is a lot of choice, as you'll see!<img alt="" src="sauce-manual-session.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></li>
+ <li>In the next screen, type in the URL of a page you want to test (use <a href="https://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box-fixed.html">https://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box-fixed.html</a>, for example), then choose a browser/OS combination you want to test by using the different buttons and lists. There is a lot of choice, as you'll see!<img alt="" src="sauce-manual-session.png"></li>
  <li>When you click Start session, a loading screen will then appear, which spins up a virtual machine running the combination you chose.</li>
- <li>When loading has finished, you can then start to remotely test the web site running in the chosen browser.<img alt="" src="sauce-test-running.png" style="display: block; margin: 0px auto;"></li>
+ <li>When loading has finished, you can then start to remotely test the web site running in the chosen browser.<img alt="" src="sauce-test-running.png"></li>
  <li>From here you can see the layout as it would look in the browser you are testing, move the mouse around and try clicking buttons, etc. The top menu allows you to:
   <ul>
    <li>Stop the session</li>
@@ -463,11 +463,11 @@ myAccount.getAccountDetails(function (err, res) {
 
 <p>The BrowserStack Live dashboard allows you to choose what device and browser you want to test on — Platforms in the left column, devices on the right. When you mouse over or click on each device, you get a choice of browsers available on that device.</p>
 
-<p><img alt="" src="browserstack-test-choices-sized.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="browserstack-test-choices-sized.png"></p>
 
 <p>Clicking on one of those browser icons will load up your choice of platform/device/browser — choose one now, and give it a try.</p>
 
-<p><img alt="" src="browserstack-test-device-sized.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="browserstack-test-device-sized.png"></p>
 
 <div class="note">
 <p><strong>Note</strong>: The blue device icon next to some of the mobile device choices signals that you will be testing on a real device; choices without that icon will be run on an emulator.</p>
@@ -477,7 +477,7 @@ myAccount.getAccountDetails(function (err, res) {
 
 <p>You'll also see a menu that allows you to control the session.</p>
 
-<p><img alt="" src="browserstack-test-menu-sized.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="browserstack-test-menu-sized.png"></p>
 
 <p>The features here are as follows:</p>
 

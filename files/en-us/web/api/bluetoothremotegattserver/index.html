@@ -9,6 +9,7 @@ tags:
   - Interface
   - Reference
   - Web Bluetooth API
+browser-compat: api.BluetoothRemoteGATTServer
 ---
 <div>{{APIRef("Bluetooth API")}}{{SeeCompatTable}}</div>
 
@@ -17,23 +18,11 @@ tags:
   Server on a remote device.</p>
 
 <div class="note">
-  <p>This page describes the W3C Community Group Web Bluetooth API. For the Firefox OS
+  <p><strong>Note:</strong> This page describes the W3C Community Group Web Bluetooth API. For the Firefox OS
     Bluetooth API, see <a
       href="/en-US/docs/Archive/B2G_OS/API/BluetoothGattServer"><code>BluetoothGattServer</code>
       (Firefox OS)</a>.</p>
 </div>
-
-<h2 id="Interface">Interface</h2>
-
-<pre class="brush: js">interface BluetoothRemoteGATTServer {
-  readonly attribute BluetoothDevice device;
-  readonly attribute boolean connected;
-
-  Promise&lt;BluetoothRemoteGATTServer&gt; connect();
-  void disconnect();
-  Promise&lt;BluetoothRemoteGATTService&gt; getPrimaryService(BluetoothServiceUUID service);
-  Promise&lt;sequence&lt;BluetoothRemoteGATTService&gt;&gt; getPrimaryServices(optional BluetoothServiceUUID service);
-};</pre>
 
 <h2 id="Properties">Properties</h2>
 
@@ -65,24 +54,10 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName("Web Bluetooth", "#bluetoothremotegattserver",
-        "BluetoothRemoteGATTServer")}}</td>
-      <td>{{Spec2("Web Bluetooth")}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.BluetoothRemoteGATTServer")}}</p>
+<p>{{Compat}}</p>
 
 <div>{{APIRef("Web Bluetooth")}}</div>

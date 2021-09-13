@@ -2,23 +2,24 @@
 title: RTCPeerConnection.removeTrack()
 slug: Web/API/RTCPeerConnection/removeTrack
 tags:
-- Audio
-- Media
-- Method
-- RTCPeerConnection
-- Reference
-- Tracks
-- Video
-- WebRTC
-- removeTrack
+  - Audio
+  - Media
+  - Method
+  - RTCPeerConnection
+  - Reference
+  - Tracks
+  - Video
+  - WebRTC
+  - removeTrack
+browser-compat: api.RTCPeerConnection.removeTrack
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
-<p><span class="seoSummary">The
+<p>The
     <code><strong>RTCPeerConnection.removeTrack()</strong></code> method tells the local
     end of the connection to stop sending media from the specified track, without actually
     removing the corresponding {{domxref("RTCRtpSender")}} from the list of senders as
-    reported by {{domxref("RTCPeerConnection.getSenders()")}}.</span> If the track is
+    reported by {{domxref("RTCPeerConnection.getSenders()")}}. If the track is
   already stopped, or is not in the connection's senders list, this method has no effect.
 </p>
 
@@ -26,18 +27,18 @@ tags:
   ({{domxref("RTCPeerConnection.signalingState", "signalingState")}} is set to
   <code>"stable"</code>), it is marked as needing to be negotiated again; the remote peer
   won't experience the change until this negotiation occurs. A
-  {{event("negotiationneeded")}} event is sent to the {{domxref("RTCPeerConnection")}} to
+  {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} event is sent to the {{domxref("RTCPeerConnection")}} to
   let the local end know this negotiation must occur.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js"><code><em>pc</em>.removeTrack(sender);
-</code></pre>
+<pre class="brush: js">pc.removeTrack(sender);
+</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
-  <dt><code>mediaTrack</code></dt>
+  <dt><code>sender</code></dt>
   <dd>A {{domxref("RTCRtpSender")}} specifying the sender to remove from the connection.
   </dd>
 </dl>
@@ -72,27 +73,11 @@ document.getElementById("closeButton").addEventListener("click", function(event)
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table" style="height: 49px; width: 1000px;">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ SpecName('WebRTC 1.0', '#dom-rtcpeerconnection-removetrack',
-        'RTCPeerConnection.removeTrack()') }}</td>
-      <td>{{ Spec2('WebRTC 1.0') }}</td>
-      <td>Initial specification.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCPeerConnection.removeTrack")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

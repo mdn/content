@@ -7,10 +7,11 @@ tags:
   - Reference
   - id
   - PerformanceElementTiming
+browser-compat: api.PerformanceElementTiming.id
 ---
 <div>{{DefaultAPISidebar("Element Timing")}}</div>
 
-<p class="summary">The <strong><code>id</code></strong> read-only property of the {{domxref("PerformanceElementTiming")}} interface returns the {{htmlattrxref("id")}} of the associated element.</p>
+<p>The <strong><code>id</code></strong> read-only property of the {{domxref("PerformanceElementTiming")}} interface returns the {{htmlattrxref("id")}} of the associated element.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -34,27 +35,12 @@ tags:
 });
 observer.observe({ entryTypes: ["element"] });</pre>
 
-<p class="notecard note">This example uses the {{domxref("PerformanceObserver")}} interface to create a list of performance measurement events. In our case we observe the {{domxref("PerformanceEntry.entrytype")}} <code>element</code> in order to use the <code>PerformanceElementTiming</code> interface.</p>
+<div class="notecard note"><p><strong>Note:</strong> This example uses the {{domxref("PerformanceObserver")}} interface to create a list of performance measurement events. In our case we observe the {{domxref("PerformanceEntry.entrytype")}} <code>element</code> in order to use the <code>PerformanceElementTiming</code> interface.</p></div>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-   <tr>
-    <th scope="col">Specification</th>
-    <th scope="col">Status</th>
-    <th scope="col">Comment</th>
-   </tr>
-   <tr>
-    <td>{{SpecName('Element Timing','#dom-performanceelementtiming-id','PerformanceElementTiming.id')}}</td>
-    <td>{{Spec2('Element Timing')}}</td>
-    <td>Initial definition.</td>
-   </tr>
-  </tbody>
- </table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
-
-<p>{{Compat("api.PerformanceElementTiming.id")}}</p>
+<p>{{Compat}}</p>

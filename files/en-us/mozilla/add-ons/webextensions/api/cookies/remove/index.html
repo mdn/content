@@ -11,6 +11,7 @@ tags:
   - Reference
   - WebExtensions
   - remove
+browser-compat: webextensions.api.cookies.remove
 ---
 <div>{{AddonSidebar()}}</div>
 
@@ -52,13 +53,11 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("webextensions.api.cookies.remove")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Examples">Examples</h2>
 
-<p>This example tries to remove the cookie named "favourite-colour", whose URL matches the URL of the document hosted by the currently active tab:</p>
+<p>This example tries to remove the cookie named "favorite-color", whose URL matches the URL of the document hosted by the currently active tab:</p>
 
 <pre class="brush: js">function onRemoved(cookie) {
   console.log(`Removed: ${cookie}`);
@@ -71,7 +70,7 @@ function onError(error) {
 function removeCookie(tabs) {
   var removing = browser.cookies.remove({
     url: tabs[0].url,
-    name: "favourite-colour"
+    name: "favorite-color"
   });
   removing.then(onRemoved, onError);
 }

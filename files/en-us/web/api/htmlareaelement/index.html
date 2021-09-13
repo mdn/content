@@ -6,6 +6,7 @@ tags:
   - HTML DOM
   - Interface
   - Reference
+browser-compat: api.HTMLAreaElement
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
@@ -34,8 +35,8 @@ tags:
  <dd>Is a {{domxref("USVString")}} containing the hostname in the referenced URL.</dd>
  <dt>{{domxref("HTMLAreaElement.href")}}</dt>
  <dd>Is a {{domxref("USVString")}} containing that reflects the {{ htmlattrxref("href", "area") }} HTML attribute, containing a valid URL of a linked resource.</dd>
- <dt>{{domxref("HTMLAreaElement.noHref")}} {{obsolete_inline}}</dt>
- <dd>Is a {{jsxref("Boolean")}} flag indicating if the area is inactive (<code>true</code>) or active (<code>false</code>).</dd>
+ <dt>{{domxref("HTMLAreaElement.noHref")}} {{deprecated_inline}}</dt>
+ <dd>Is a boolean flag indicating if the area is inactive (<code>true</code>) or active (<code>false</code>).</dd>
  <dt>{{domxref("HTMLAreaElement.origin")}} {{readonlyInline}}</dt>
  <dd>Returns a {{domxref("USVString")}} containing the origin of the URL, that is its scheme, its domain and its port.</dd>
  <dt>{{domxref("HTMLAreaElement.password")}}</dt>
@@ -56,7 +57,7 @@ tags:
  <dd>Is a {{domxref("USVString")}} containing the search element (including leading question mark <code>'?'</code>), if any, of the referenced URL.</dd>
  <dt>{{domxref("HTMLAreaElement.shape")}}</dt>
  <dd>Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("shape", "area") }} HTML attribute, indicating the shape of the hot-spot, limited to known values.</dd>
- <dt>{{domxref("HTMLOrForeignElement.tabIndex")}}</dt>
+ <dt>{{domxref("HTMLElement.tabIndex")}}</dt>
  <dd>Is a <code>long</code> containing the element's position in the tabbing order.</dd>
  <dt>{{domxref("HTMLAreaElement.target")}}</dt>
  <dd>Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("target", "area") }} HTML attribute, indicating the browsing context in which to open the linked resource.</dd>
@@ -75,20 +76,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "#htmlareaelement", "HTMLAreaElement")}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.HTMLAreaElement")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

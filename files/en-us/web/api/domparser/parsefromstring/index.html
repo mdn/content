@@ -5,6 +5,7 @@ tags:
   - API
   - Method
   - Reference
+browser-compat: api.DOMParser.parseFromString
 ---
 <div>{{APIRef("DOMParser")}}</div>
 
@@ -22,7 +23,7 @@ tags:
   <dd>The {{domxref("DOMString")}} to be parsed. It must contain either an
     {{Glossary("HTML")}}, {{Glossary("xml")}}, {{Glossary("xhtml+xml")}}, or
     {{Glossary("svg")}} document.</dd>
-  <dt id="Argument02"><code><var>mimeType</var></code></dt>
+  <dt><code><var>mimeType</var></code></dt>
   <dd>
     <p>A {{domxref("DOMString")}}. This string determines whether the XML parser or the HTML parser is used to parse the string. Valid values are:</p>
     <ul>
@@ -78,46 +79,24 @@ console.log(doc3.body.firstChild.textContent);
 
 <h3>Error handling</h3>
 
-<p>Note that if the XML parser is used and parsing fails, the <code>DOMParser</code> does not throw an
-  exception, but instead returns an error document:</p>
+<p>Note that if the XML parser is used and parsing fails, the <code>DOMParser</code> throws an error:</p>
 
 <pre class="brush: js">const parser = new DOMParser();
 
 const xmlString = "&lt;warning&gt;Beware of the missing closing tag";
 const doc = parser.parseFromString(xmlString, "application/xml");
-
-console.log(doc.documentElement.tagName);
-// parsererror
-
-console.log(doc.documentElement.textContent);
-// XML Parsing Error: no element found
+// XML Parsing Error: no root element found
 </pre>
 
 <p>The parsing error may also be reported to the browser's JavaScript console.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', '#dom-domparser-parsefromstring', 'parseFromString()')}}
-      </td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.DOMParser.parseFromString")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

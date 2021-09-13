@@ -6,12 +6,23 @@ tags:
   - CSSOM
   - CSSPrimitiveValue
   - Interface
-  - Obsolete
   - Reference
+  - Deprecated
+browser-compat: api.CSSPrimitiveValue
 ---
-<div>{{APIRef("CSSOM")}}</div>
+<div>{{APIRef("CSSOM")}}{{deprecated_header}}</div>
 
 <p>The <code><strong>CSSPrimitiveValue</strong></code> interface derives from the {{DOMxRef("CSSValue")}} interface and represents the current computed value of a CSS property.</p>
+
+<div class="notecard note">
+  <p><strong>Note:</strong> This interface was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
+  not implement it.</p>
+  <p>To achieve your purpose, you can use:</p>
+  <ul>
+    <li>the untyped <a href="/en-US/docs/Web/API/CSS_Object_Model">CSS Object Model</a>, widely supported, or</li>
+    <li>the modern <a href="/en-US/docs/Web/API/CSS_Typed_OM_API">CSS Typed Object Model API</a>, less supported and considered experimental.</li>
+  </ul>
+</div>
 
 <p>This interface represents a single CSS value. It may be used to determine the value of a specific style property currently set in a block or to set a specific style property explicitly within the block. An instance of this interface might be obtained from the {{DOMxRef("CSSStyleDeclaration.getPropertyCSSValue()", "getPropertyCSSValue()")}} method of the {{DOMxRef("CSSStyleDeclaration")}} interface. A <code>CSSPrimitiveValue</code> object only occurs in a context of a CSS property.</p>
 
@@ -27,11 +38,13 @@ tags:
  <dt>{{DOMxRef("CSSPrimitiveValue.primitiveType")}} {{readonlyInline}}</dt>
  <dd>An <code>unsigned short</code> representing the type of the value. Possible values are:
  <table class="standard-table">
+  <thead>
+    <tr>
+     <th>Constant</th>
+     <th>Description</th>
+    </tr>
+  </thead>
   <tbody>
-   <tr>
-    <td class="header">Constant</td>
-    <td class="header">Description</td>
-   </tr>
    <tr>
     <td><code>CSS_ATTR</code></td>
     <td>The value is an {{CSSxRef("attr()")}} function. The value can be obtained by using the <code>getStringValue()</code> method.</td>
@@ -162,24 +175,14 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Style', 'css.html#CSS-CSSPrimitiveValue', 'CSSPrimitiveValue')}}</td>
-   <td>{{Spec2('DOM2 Style')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+<p>This feature was originally defined in the <a href="https://www.w3.org/TR/DOM-Level-2-Style">DOM Style Level 2</a> specification, but has been dropped from any
+  standardization effort since then.</p>
+
+<p>It has been superseded by a modern, but incompatible, <a href="/en-US/docs/Web/API/CSS_Typed_OM_API">CSS Typed Object Model API</a> that is now on the standard track.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.CSSPrimitiveValue")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

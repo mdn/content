@@ -2,25 +2,27 @@
 title: RTCPeerConnection.createDataChannel()
 slug: Web/API/RTCPeerConnection/createDataChannel
 tags:
-- API
-- Experimental
-- Media
-- Method
-- RTCPeerConnection
-- Reference
-- WebRTC
-- createDataChannel
+  - API
+  - Media
+  - Method
+  - RTCPeerConnection
+  - Reference
+  - WebRTC
+  - createDataChannel
+browser-compat: api.RTCPeerConnection.createDataChannel
 ---
 <p>{{APIRef("WebRTC")}}</p>
 
-<p><span class="seoSummary">The <strong><code>createDataChannel()</code></strong> method
-    on the {{domxref("RTCPeerConnection")}} interface creates a new channel linked with
-    the remote peer, over which any kind of data may be transmitted.</span> This can be
-  useful for back-channel content such as images, file transfer, text chat, game update
+<p>The <strong><code>createDataChannel()</code></strong> method
+  on the {{domxref("RTCPeerConnection")}} interface
+  creates a new channel linked with the remote peer,
+  over which any kind of data may be transmitted.
+  This can be useful for back-channel content,
+  such as images, file transfer, text chat, game update
   packets, and so forth.</p>
 
 <p>If the new data channel is the first one added to the connection, renegotiation is
-  started by delivering a {{event("negotiationneeded")}} event.</p>
+  started by delivering a {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} event.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -31,55 +33,80 @@ tags:
 
 <dl>
   <dt><code>label</code></dt>
-  <dd>A human-readable name for the channel. This string may not be longer than 65,535
-    <em>bytes</em>.</dd>
+  <dd>
+    A human-readable name for the channel.
+    This string may not be longer than 65,535 bytes.</dd>
   <dt><code>options</code> {{optional_inline}}</dt>
-  <dd>An <a href="#rtcdatachannelinit_dictionary"><code>RTCDataChannelInit</code>
-      dictionary</a> providing configuration options for the data channel</dd>
-</dl>
+  <dd>
+    An object providing configuration options for the data channel.
+    It can contain the following fields:
+    <dl>
+      <dt><code>ordered</code> {{optional_inline}}</dt>
+      <dd>
+        Indicates whether or not
+        messages sent on the {{domxref("RTCDataChannel")}}
+        are required to arrive at their destination in the same order
+        in which they were sent (<code>true</code>),
+        or if they're allowed to arrive out-of-order (<code>false</code>).
+        <strong>Default: <code>true</code>.</strong>
+      </dd>
 
-<h3 id="RTCDataChannelInit_dictionary">RTCDataChannelInit dictionary</h3>
+      <dt><code>maxPacketLifeTime</code> {{optional_inline}}</dt>
+      <dd>
+        The maximum number of milliseconds
+        that attempts to transfer a message may take in unreliable mode.
+        While this value is a 16-bit unsigned number,
+        each user agent may clamp it
+        to whatever maximum it deems appropriate.
+        <strong>Default: <code>null</code>.</strong>
+      </dd>
 
-<p>The <code>RTCDataChannelInit</code> dictionary provides the following fields, any of
-  which may be included in the object passed as the options parameter in order to
-  configure the data channel to suit your needs:</p>
+      <dt><code>maxRetransmits</code> {{optional_inline}}</dt>
+      <dd>
+        The maximum number of times
+        the user agent should attempt to retransmit a message
+        which fails the first time in unreliable mode.
+        While this value is a 16-bit unsigned number,
+        each user agent may clamp it to whatever maximum it deems appropriate.
+        <strong>Default: <code>null</code>.</strong>
+      </dd>
 
-<dl>
-  <dt><code>ordered</code> {{optional_inline}}</dt>
-  <dd>Indicates whether or not messages sent on the {{domxref("RTCDataChannel")}} are
-    required to arrive at their destination in the same order in which they were sent
-    (<code>true</code>), or if they're allowed to arrive out-of-order
-    (<code>false</code>). <strong>Default: <code>true</code>.</strong></dd>
-  <dt><strong><code>maxPacketLifeTime</code> {{optional_inline}}</strong></dt>
-  <dd>The maximum number of milliseconds that attempts to transfer a message may take in
-    unreliable mode. While this value is a 16-bit unsigned number, each user agent may
-    clamp it to whatever maximum it deems appropriate. <strong>Default:
-      <code>null</code>.</strong></dd>
-  <dt><code>maxRetransmits</code> {{optional_inline}}</dt>
-  <dd>The maximum number of times the user agent should attempt to retransmit a message
-    which fails the first time in unreliable mode. While this value is a16-bit unsigned
-    number, each user agent may clamp it to whatever maximum it deems appropriate.
-    <strong>Default: <code>null</code>.</strong></dd>
-  <dt><code>protocol</code> {{optional_inline}}</dt>
-  <dd>The name of the sub-protocol being used on the {{domxref("RTCDataChannel")}}, if
-    any; otherwise, the empty string (""). <strong>Default: empty string,
-      <code>""</code>.</strong> This string may not be longer than 65,535 <em>bytes</em>.
+      <dt><code>protocol</code> {{optional_inline}}</dt>
+      <dd>
+        The name of the sub-protocol
+        being used on the {{domxref("RTCDataChannel")}},
+        if any;
+        otherwise, the empty string (<code>""</code>).
+        <strong>Default: empty string (<code>""</code>).</strong>
+        This string may not be longer than 65,535 <em>bytes</em>.
+      </dd>
+
+      <dt><code>negotiated</code> {{optional_inline}}</dt>
+      <dd>
+        By default (<code>false</code>),
+        data channels are negotiated in-band,
+        where one side calls <code>createDataChannel</code>, and
+        the other side listens to the {{domxref("RTCDataChannelEvent")}} event
+        using the {{DOMxRef("RTCPeerConnection.ondatachannel", "ondatachannel")}} event handler.
+        Alternatively (<code>true</code>),
+        they can be negotiated out of-band,
+        where both sides call <code>createDataChannel</code>
+        with an agreed-upon ID.
+        <strong>Default: <code>false</code>.</strong>
+      </dd>
+
+      <dt><code>id</code> {{optional_inline}}</dt>
+      <dd>
+        A 16-bit numeric ID for the channel;
+        permitted values are 0 to 65534.
+        If you don't include this option,
+        the user agent will select an ID for you.
+      </dd>
+    </dl>
   </dd>
-  <dt><code>negotiated</code> {{optional_inline}}</dt>
-  <dd>By default (<code>false</code>), data channels are negotiated in-band, where one
-    side calls <code>createDataChannel</code>, and the other side listens to the
-    {{domxref("RTCDataChannelEvent")}} event using the <code>ondatachannel</code>
-    <code>EventHandler</code> . Alternatively (<code>true</code>), they can be negotiated
-    out of-band, where both sides call <code>createDataChannel </code>with an agreed-upon
-    id. <strong>Default: <code>false</code>.</strong></dd>
-  <dt><code>id</code> {{optional_inline}}</dt>
-  <dd>An 16-bit numeric ID for the channel; permitted values are 0-65534. If you don't
-    include this option, the user agent will select an ID for you.</dd>
 </dl>
-
 <div class="note">
-  <p>The options which can be configured using the <code>RTCDataChannelInit</code>
-    dictionary represent the script-settable subset of the properties on the
+  <p><strong>Note:</strong> These options represent the script-settable subset of the properties on the
     {{domxref("RTCDataChannel")}} interface.</p>
 </div>
 
@@ -119,7 +146,7 @@ tags:
 <h2 id="Examples">Examples</h2>
 
 <p>This example shows how to create a data channel and set up handlers for the
-  {{event("open")}} and {{event("message")}} events to send and receive messages on it
+  {{DOMxRef("RTCDataChannel/open_event", "open")}} and {{DOMxRef("RTCDataChannel/message_event", "message")}} events to send and receive messages on it
   (For brievity, the example assumes onnegotiationneeded is set up).</p>
 
 <pre class="brush: js">// Offerer side
@@ -166,25 +193,11 @@ channel.onmessage = function(event) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebRTC 1.0', '#dom-peerconnection-createdatachannel',
-        'createDataChannel()')}}</td>
-      <td>{{Spec2('WebRTC 1.0')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCPeerConnection.createDataChannel")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

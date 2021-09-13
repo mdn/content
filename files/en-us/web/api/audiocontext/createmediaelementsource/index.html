@@ -6,9 +6,9 @@ tags:
   - AudioContext
   - Method
   - Reference
-  - Référence(2)
   - Web Audio API
   - createMediaElementSource
+browser-compat: api.AudioContext.createMediaElementSource
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
@@ -37,7 +37,7 @@ var source = audioCtx.createMediaElementSource(myMediaElement);</pre>
 <p>This simple example creates a source from an {{htmlelement("audio") }} element using <code>createMediaElementSource()</code>, then passes the audio through a {{ domxref("GainNode") }} before feeding it into the {{ domxref("AudioDestinationNode") }} for playback. When the mouse pointer is moved, the <code>updatePage()</code> function is invoked, which calculates the current gain as a ratio of mouse Y position divided by overall window height. You can therefore increase and decrease the volume of the playing music by moving the mouse pointer up and down.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can also <a href="https://mdn.github.io/webaudio-examples/media-source-buffer/">view this example running live</a>, or <a href="https://github.com/mdn/webaudio-examples/tree/master/media-source-buffer">view the source</a>.</p>
+<p><strong>Note:</strong> You can also <a href="https://mdn.github.io/webaudio-examples/media-source-buffer/">view this example running live</a>, or <a href="https://github.com/mdn/webaudio-examples/tree/master/media-source-buffer">view the source</a>.</p>
 </div>
 
 <pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -77,29 +77,16 @@ source.connect(gainNode);
 gainNode.connect(audioCtx.destination);</pre>
 
 <div class="note">
-<p><strong>Note</strong>: As a consequence of calling <code>createMediaElementSource()</code>, audio playback from the {{domxref("HTMLMediaElement")}} will be re-routed into the processing graph of the AudioContext. So playing/pausing the media can still be done through the media element API and the player controls.</p>
+<p><strong>Note:</strong> As a consequence of calling <code>createMediaElementSource()</code>, audio playback from the {{domxref("HTMLMediaElement")}} will be re-routed into the processing graph of the AudioContext. So playing/pausing the media can still be done through the media element API and the player controls.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#dom-audiocontext-createmediaelementsource', 'createMediaElementSource()')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.AudioContext.createMediaElementSource")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

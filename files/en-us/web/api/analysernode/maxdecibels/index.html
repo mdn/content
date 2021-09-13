@@ -8,10 +8,11 @@ tags:
   - Reference
   - Web Audio API
   - maxDecibels
+browser-compat: api.AnalyserNode.maxDecibels
 ---
 <div>{{APIRef("Web Audio API")}}</div>
 
-<p class="summary">The <strong><code>maxDecibels</code></strong> property of the {{domxref("AnalyserNode")}} interface is a double value representing the maximum power value in the scaling range for the FFT analysis data, for conversion to unsigned byte values — basically, this specifies the maximum value for the range of results when using <code>getByteFrequencyData()</code>.</p>
+<p>The <strong><code>maxDecibels</code></strong> property of the {{domxref("AnalyserNode")}} interface is a double value representing the maximum power value in the scaling range for the FFT analysis data, for conversion to unsigned byte values — basically, this specifies the maximum value for the range of results when using <code>getByteFrequencyData()</code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -25,7 +26,7 @@ tags:
 
 <p>When getting data from <code>getByteFrequencyData()</code>, any frequencies with an amplitude of <code>maxDecibels</code> or higher will be returned as <code>255</code>.</p>
 
-<p class="note"><strong>Note</strong>: If a value less than or equal to <code>AnalyserNode.minDecibels</code> is set, an <code>IndexSizeError</code> exception is thrown.</p>
+<p><strong>Note</strong>: If a value less than or equal to <code>AnalyserNode.minDecibels</code> is set, an <code>IndexSizeError</code> exception is thrown.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -71,24 +72,11 @@ draw();</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#dom-analysernode-maxdecibels', 'maxDecibels')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.AnalyserNode.maxDecibels")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

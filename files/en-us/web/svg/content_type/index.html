@@ -126,7 +126,7 @@ hexdigit ::= [0-9A-Fa-f]
 <dl>
 	<dt>&lt;coordinate&gt;</dt>
 	<dd>
-	<p>A &lt;coordinate&gt; is a length in the user coordinate system that is the given distance from the origin of the user coordinate system along the relevant axis (the x-axis for X coordinates, the y-axis for Y coordinates). Its syntax is the same as that for <a href="/en-US/docs/SVG/Content_type#length">&lt;length&gt;</a>.</p>
+	<p>A &lt;coordinate&gt; is a length in the user coordinate system that is the given distance from the origin of the user coordinate system along the relevant axis (the x-axis for X coordinates, the y-axis for Y coordinates). Its syntax is the same as that for <a href="/en-US/docs/Web/SVG/Content_type#length">&lt;length&gt;</a>.</p>
 
 	<p>Within the SVG DOM, a &lt;coordinate&gt; is represented as an {{domxref("SVGLength")}} or an {{domxref("SVGAnimatedLength")}}.</p>
 	</dd>
@@ -137,7 +137,7 @@ hexdigit ::= [0-9A-Fa-f]
 <dl class="definitions">
 	<dt>&lt;frequency&gt;</dt>
 	<dd>
-	<p>Frequency values are used with aural properties. As defined in CSS2, a frequency value is a <a href="/en-US/docs/SVG/Content_type#Number">&lt;number&gt;</a> immediately followed by a frequency unit identifier. The frequency unit identifiers are:</p>
+	<p>Frequency values are used with aural properties. As defined in CSS2, a frequency value is a <a href="/en-US/docs/Web/SVG/Content_type#number">&lt;number&gt;</a> immediately followed by a frequency unit identifier. The frequency unit identifiers are:</p>
 
 	<ul>
 		<li><code>Hz</code>: Hertz</li>
@@ -152,21 +152,7 @@ hexdigit ::= [0-9A-Fa-f]
 
 <dl>
 	<dt>&lt;FuncIRI&gt;</dt>
-	<dd>Functional notation for a reference. The syntax for this reference is the same as the {{cssxref("uri", "CSS URI")}}.</dd>
-</dl>
-
-<h2 id="ICCColor">ICCColor</h2>
-
-<dl>
-	<dt>&lt;icccolor&gt;</dt>
-	<dd>
-	<p>An &lt;icccolor&gt; is an ICC color specification. In SVG 1.1, an ICC color specification is given by a name, which references a {{SVGElement("color-profile")}} element, and one or more color component values. The grammar is as follows:</p>
-
-	<pre>icccolor ::= "icc-color(" name (, number)+ ")"
-</pre>
-
-	<p>The corresponding SVG DOM interface for &lt;icccolor&gt; is {{domxref("SVGICCColor")}}.</p>
-	</dd>
+	<dd>Functional notation for a reference. The syntax for this reference is the same as the {{cssxref("url()", "CSS URI")}}.</dd>
 </dl>
 
 <h2 id="Integer">Integer</h2>
@@ -324,7 +310,7 @@ hexdigit ::= [0-9A-Fa-f]
 
 <dl>
 	<dt>&lt;opacity-value&gt;</dt>
-	<dd>The opacity of the color or the content the current object is filled with, as a <a href="/en-US/docs/SVG/Content_type#Number">&lt;number&gt;</a>. Any values outside the range <code>0.0</code> (fully transparent) to <code>1.0</code> (fully opaque) will be clamped to this range.</dd>
+	<dd>The opacity of the color or the content the current object is filled with, as a <a href="/en-US/docs/Web/SVG/Content_type#number">&lt;number&gt;</a>. Any values outside the range <code>0.0</code> (fully transparent) to <code>1.0</code> (fully opaque) will be clamped to this range.</dd>
 </dl>
 
 <h2 id="Paint">Paint</h2>

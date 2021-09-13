@@ -13,11 +13,12 @@ tags:
 - WebRTC
 - deviceId
 - getusermedia
+browser-compat: api.MediaTrackConstraints.deviceId
 ---
 <div>{{APIRef("Media Capture and Streams")}}</div>
 
 <p>The {{domxref("MediaTrackConstraints")}} dictionary's
-  <code><strong>deviceId</strong></code> property is a {{domxref("ConstrainDOMString")}}
+  <code><strong>deviceId</strong></code> property is a <a href="/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString"><code>ConstrainDOMString</code></a>
   describing the requested or mandatory constraints placed upon the value of the
   {{domxref("MediaTrackSettings.deviceId", "deviceId")}} constrainable property.</p>
 
@@ -39,7 +40,7 @@ tags:
 
 <h3 id="Value">Value</h3>
 
-<p>An object based on {{domxref("ConstrainDOMString")}} specifying one or more acceptable,
+<p>An object based on <a href="/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString"><code>ConstrainDOMString</code></a> specifying one or more acceptable,
   ideal, and/or exact (mandatory) device IDs which are acceptable as the source of media
   content.</p>
 
@@ -57,7 +58,7 @@ tags:
   "getUserMedia()")}}.</p>
 
 <div class="note">
-  <p>An exception to the rule that device IDs are the same across browsing sessions:
+  <p><strong>Note:</strong> An exception to the rule that device IDs are the same across browsing sessions:
     private browsing mode will use a different ID, and will change it each browsing
     session.</p>
 </div>
@@ -69,27 +70,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ SpecName('Media Capture', '#dom-mediatrackconstraintset-deviceid',
-        'deviceId') }}</td>
-      <td>{{ Spec2('Media Capture') }}</td>
-      <td>Initial specification.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MediaTrackConstraints.deviceId")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

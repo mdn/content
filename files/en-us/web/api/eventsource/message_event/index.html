@@ -7,6 +7,7 @@ tags:
   - EventSource
   - Reference
   - message
+browser-compat: api.EventSource.message_event
 ---
 <p>{{APIRef}}</p>
 
@@ -37,7 +38,7 @@ tags:
 
 <p>In this basic example, an <code>EventSource</code> is created to receive events from the server; a page with the name <code>sse.php</code> is responsible for generating the events.</p>
 
-<pre class="brush: js line-numbers language-js">var evtSource = new EventSource('sse.php');
+<pre class="brush: js">var evtSource = new EventSource('sse.php');
 var eventList = document.querySelector('ul');
 
 evtSource.addEventListener('message', (e) =&gt; {
@@ -58,22 +59,11 @@ evtSource.addEventListener('message', (e) =&gt; {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "indices.html#event-message", "message event")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.EventSource.message_event")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

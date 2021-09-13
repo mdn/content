@@ -7,6 +7,7 @@ tags:
   - Reference
   - SVG
   - SVG DOM
+browser-compat: api.SVGTextContentElement
 ---
 <div>{{APIRef("SVG")}}</div>
 
@@ -65,11 +66,11 @@ tags:
  <dd>Returns a float representing the computed length of the formatted text advance distance for a substring of text within the element. Note that this method only accounts for the widths of the glyphs in the substring and any extra spacing inserted by the CSS 'letter-spacing' and 'word-spacing' properties. Visual spacing adjustments made by the 'x' attribute is ignored.</dd>
  <dt>{{domxref("SVGTextContentElement.getStartPositionOfChar()")}}</dt>
  <dd>Returns a {{domxref("DOMPoint")}} representing the position of a typographic character after text layout has been performed.
- <p class="note"><strong>Note:</strong> In SVG 1.1 this method returned an {{domxref("SVGPoint")}}.</p>
+ <p><strong>Note:</strong> In SVG 1.1 this method returned an {{domxref("SVGPoint")}}.</p>
  </dd>
  <dt>{{domxref("SVGTextContentElement.getEndPositionOfChar()")}}</dt>
  <dd>Returns a {{domxref("DOMPoint")}} representing the trailing position of a typographic character after text layout has been performed.
- <p class="note"><strong>Note:</strong> In SVG 1.1 this method returned an {{domxref("SVGPoint")}}.</p>
+ <p><strong>Note:</strong> In SVG 1.1 this method returned an {{domxref("SVGPoint")}}.</p>
  </dd>
  <dt>{{domxref("SVGTextContentElement.getExtentOfChar()")}}</dt>
  <dd>Returns a {{domxref("DOMRect")}} representing the computed tight bounding box of the glyph cell that corresponds to a given typographic character.</dd>
@@ -83,26 +84,8 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG2", "text.html#InterfaceSVGTextContentElement", "SVGTextContentElement")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Changed inheritance from {{domxref("SVGElement")}} to {{domxref("SVGGraphicsElement")}} and <code>getStartPositionOfChar()</code> and removed implementations of {{domxref("SVGTests")}}, {{domxref("SVGLangSpace")}}, {{domxref("SVGExternalResourcesRequired")}}, {{domxref("SVGStylable")}} interfaces and <code>getEndPositionOfChar()</code> to return a {{domxref("DOMPoint")}} instead of an {{domxref("SVGPoint")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "text.html#InterfaceSVGTextContentElement", "SVGTextContentElement")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.SVGTextContentElement")}}</p>
+<p>{{Compat}}</p>

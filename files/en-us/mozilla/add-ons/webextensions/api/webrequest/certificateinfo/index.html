@@ -10,6 +10,7 @@ tags:
   - Type
   - WebExtensions
   - webRequest
+browser-compat: webextensions.api.webRequest.CertificateInfo
 ---
 <div>{{AddonSidebar()}}</div>
 
@@ -39,14 +40,14 @@ tags:
  </dd>
  <dt><code>issuer</code></dt>
  <dd><code>String</code>. Name of the organization that issued this certificate, represented as a Distinguished Name and formatted as a comma-separated list of Relative Distinguished Names, each of the form "type=value".</dd>
- <dd>For example: "<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-string">CN=DigiCert SHA2 Secure Server CA,O=DigiCert Inc,C=US</span></span></span></span>".</dd>
+ <dd>For example: "CN=DigiCert SHA2 Secure Server CA,O=DigiCert Inc,C=US".</dd>
  <dt><code>rawDER</code></dt>
  <dd><code>Array</code> of <code>Number</code>. If <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/getSecurityInfo" title="Use this function to get detailed information about the TLS connection associated with a particular request."><code>webRequest.getSecurityInfo()</code></a> was called with the <code>rawDER</code> option present and set to <code>true</code>, this will contain the DER encoding of the certificate.</dd>
  <dt><code>serialNumber</code></dt>
  <dd><code>String</code>. The certificate's <a href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.2">serial number</a>.</dd>
  <dt><code>subject</code></dt>
  <dd><code>String</code>. Name of the organization that issued this certificate, represented as a Distinguished Name and formatted as a comma-separated list of Relative Distinguished Names, each of the form "type=value".</dd>
- <dd>For example: "<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-string">CN=*.cdn.mozilla.net,O=Mozilla Corporation,L=Mountain View,ST=California,C=US</span></span></span></span>".</dd>
+ <dd>For example: "CN=*.cdn.mozilla.net,O=Mozilla Corporation,L=Mountain View,ST=California,C=US".</dd>
  <dt><code>subjectPublicKeyInfoDigest</code></dt>
  <dd>
  <p><code>Object</code>. An object containing the following properties:</p>
@@ -71,8 +72,6 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("webextensions.api.webRequest.CertificateInfo", 10)}}</p>
+<p>{{Compat}}</p>
 
 <p>{{WebExtExamples}}</p>

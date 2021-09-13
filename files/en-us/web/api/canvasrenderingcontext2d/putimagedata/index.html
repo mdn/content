@@ -7,11 +7,12 @@ tags:
 - CanvasRenderingContext2D
 - Method
 - Reference
+browser-compat: api.CanvasRenderingContext2D.putImageData
 ---
 <div>{{APIRef}}</div>
 
 <p>The
-  <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.putImageData()</code></strong>
+  <strong><code>CanvasRenderingContext2D.putImageData()</code></strong>
   method of the Canvas 2D API paints data from the given {{domxref("ImageData")}} object
   onto the canvas. If a dirty rectangle is provided, only the pixels from that rectangle
   are painted. This method is not affected by the canvas transformation matrix.</p>
@@ -120,7 +121,7 @@ putImageData(ctx, imagedata, 150, 0, 50, 50, 25, 25);
 <h3 id="Data_loss_due_to_browser_optimization">Data loss due to browser optimization</h3>
 
 <div class="notecard warning">
-  <p> Due to the lossy nature of converting to and from premultiplied alpha color values,
+  <p><strong>Warning:</strong> Due to the lossy nature of converting to and from premultiplied alpha color values,
     pixels that have just been set using <code>putImageData()</code> might be returned to
     an equivalent <code>getImageData()</code> as different values.</p>
 </div>
@@ -150,25 +151,11 @@ after: Uint8ClampedArray(4) [ 255, 255, 255, 1 ]</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-putimagedata",
-        "CanvasRenderingContext2D.putImageData")}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.CanvasRenderingContext2D.putImageData")}}</p>
+<p>{{Compat}}</p>
 
 <h3 id="Gecko-specific_notes">Gecko-specific notes</h3>
 

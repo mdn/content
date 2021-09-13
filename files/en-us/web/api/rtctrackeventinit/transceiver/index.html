@@ -11,13 +11,15 @@ tags:
 - WebRTC
 - WebRTC API
 - events
+browser-compat: api.RTCTrackEventInit.transceiver
 ---
 <div>{{APIRef("WebAPI")}}</div>
 
-<p><span class="seoSummary">The {{domxref("RTCTrackEventInit")}} dictionary's
+<p>The {{domxref("RTCTrackEventInit")}} dictionary's
     <strong><code>transceiver</code></strong> property specifies the
-    {{domxref("RTCRtpTransceiver")}} associated with the {{event("track")}} event.</span>
-  The transceiver pairs the track's {{domxref("RTCTrackEvent.receiver", "receiver")}} with
+    {{domxref("RTCRtpTransceiver")}} associated with the {{event("track")}} event.</p>
+
+<p>The transceiver pairs the track's {{domxref("RTCTrackEvent.receiver", "receiver")}} with
   an {{domxref("RTCRtpSender")}} to allow bidirectional communication.</p>
 
 <h2 id="Syntax">Syntax</h2>
@@ -37,24 +39,8 @@ var <em>rtpTransceiver</em> = <em>trackEventInit</em>.transceiver;</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('WebRTC 1.0', '#dom-rtctrackeventinit-transceiver',
-        'RTCTrackEventInit.transceiver')}}</td>
-      <td>{{Spec2('WebRTC 1.0')}}</td>
-      <td>Initial specification.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCTrackEventInit.transceiver")}}</p>
+<p>{{Compat}}</p>

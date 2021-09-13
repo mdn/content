@@ -12,17 +12,18 @@ tags:
   - XML
   - XMLSerializer
   - conversion
+browser-compat: api.XMLSerializer
 ---
 <div>{{APIRef("XMLSerializer")}}</div>
 
-<p><span class="seoSummary">The <code>XMLSerializer</code> interface provides the {{domxref("XMLSerializer.serializeToString", "serializeToString()")}} method to construct an XML string representing a {{Glossary("DOM")}} tree.</span></p>
+<p>The <code>XMLSerializer</code> interface provides the {{domxref("XMLSerializer.serializeToString", "serializeToString()")}} method to construct an XML string representing a {{Glossary("DOM")}} tree.</p>
 
 <h2 id="Methods">Methods</h2>
 
 <dl>
-	<dt id="serializeToString">{{domxref("XMLSerializer.serializeToString", "serializeToString()")}}</dt>
+	<dt>{{domxref("XMLSerializer.serializeToString", "serializeToString()")}}</dt>
 	<dd>Returns the serialized subtree of a string.</dd>
-	<dt id="serializeToStream">{{domxref("XMLSerializer.serializeToStream", "serializeToStream()")}} {{ non-standard_inline }}{{ deprecated_inline }}</dt>
+	<dt>{{domxref("XMLSerializer.serializeToStream", "serializeToStream()")}} {{ non-standard_inline }}{{ deprecated_inline }}</dt>
 	<dd>The subtree rooted by the specified element is serialized to a byte stream using the character set specified.</dd>
 </dl>
 
@@ -47,8 +48,8 @@ tags:
 <p><strong>Note:</strong> In the real world, you should usually instead call {{domxref("Document.importNode", "importNode()")}} method to import the new node into the DOM, then call one of the following methods to add the node to the DOM tree:</p>
 
 <ul>
-	<li>The {{domxref("Document")}} and {{domxref("Element")}} methods {{domxref("ParentNode.append", "append()")}} and {{domxref("ParentNode.prepend", "prepend()")}}</li>
-	<li>The {{domxref("ChildNode.replaceWith", "Node.replaceWith()")}} method (to replace an existing node with the new one)</li>
+	<li>The {{domxref("Element.append()")}}/{{domxref("Element.prepend()")}} and {{domxref("Document.append()")}}/{{domxref("Document.prepend()")}} methods.</li>
+	<li>The {{domxref("Element.replaceWith")}} method (to replace an existing node with the new one)</li>
 	<li>The {{domxref("Document.insertAdjacentElement()")}} and {{domxref("Element.insertAdjacentElement()")}} methods.</li>
 </ul>
 </div>
@@ -68,24 +69,11 @@ document.body.insertAdjacentHTML('afterbegin', inp_xmls);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-		<tr>
-			<td>{{SpecName('DOM Parsing', '#the-xmlserializer-interface', 'XMLSerializer')}}</td>
-			<td>{{Spec2('DOM Parsing')}}</td>
-			<td></td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.XMLSerializer")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

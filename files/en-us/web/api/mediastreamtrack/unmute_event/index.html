@@ -11,10 +11,13 @@ tags:
   - Reference
   - Video
   - unmute
+browser-compat: api.MediaStreamTrack.unmute_event
 ---
 <div>{{APIRef("Media Capture and Streams")}}</div>
 
-<p><span class="seoSummary">The <code><strong>unmute</strong></code> event is sent to a {{domxref("MediaStreamTrack")}} when the track's source is once again able to provide media data after a period of not being able to do so.</span> This ends the {{domxref("MediaStreamTrack.muted", "muted")}} state that began with the {{domxref("MediaStreamTrack/mute_event", "mute")}} event.</p>
+<p>The <code><strong>unmute</strong></code> event is sent to a {{domxref("MediaStreamTrack")}} when the track's source is once again able to provide media data after a period of not being able to do so.</p>
+
+<p>This ends the {{domxref("MediaStreamTrack.muted", "muted")}} state that began with the {{domxref("MediaStreamTrack/mute_event", "mute")}} event.</p>
 
 <table class="properties">
  <tbody>
@@ -69,26 +72,11 @@ musicTrack.mute = event = &gt; {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Media Capture', '#event-mediastreamtrack-unmute', 'unmute')}}</td>
-   <td>{{Spec2('Media Capture')}}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MediaStreamTrack.unmute_event")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

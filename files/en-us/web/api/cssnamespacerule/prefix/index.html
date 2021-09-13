@@ -8,6 +8,7 @@ tags:
 - Property
 - Reference
 - prefix
+browser-compat: api.CSSNamespaceRule.prefix
 ---
 <p>{{ APIRef("CSSOM") }}</p>
 
@@ -28,27 +29,14 @@ tags:
 <pre class="brush:css">@namespace url(http://www.w3.org/1999/xhtml);
 @namespace svg url(http://www.w3.org/2000/svg);</pre>
 
-<pre class="brush:javascript">let myRules = document.styleSheets[0].cssRules;
+<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
 console.log(myRules[0].namespaceURI); an empty string ""
 console.log(myRules[1].namespaceURI); "svg"</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th>Specification</th>
-      <th>Status</th>
-      <th>Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('CSSOM','#dom-cssnamespacerule-namespaceuri','namespaceURI')}}</td>
-      <td>{{Spec2('CSSOM')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.CSSNamespaceRule.prefix")}}</p>
+<p>{{Compat}}</p>

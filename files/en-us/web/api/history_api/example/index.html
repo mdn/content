@@ -4,11 +4,10 @@ slug: Web/API/History_API/Example
 ---
 <p>This is an example of an AJAX website composed only of three pages (<em>first_page.php</em>, <em>second_page.php</em> and <em>third_page.php</em>). To see how it works, please create the following files (or git clone <a href="https://github.com/giabao/mdn-ajax-nav-example">https://github.com/giabao/mdn-ajax-nav-example.git</a> ):</p>
 
-<div class="note" id="const_compatibility"><strong>Note:</strong> For fully integrating the {{HTMLElement("form")}} elements within this <em>mechanism</em>, please take a look at the paragraph <a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#submitting_forms_and_uploading_files">Submitting forms and uploading files</a>.</div>
+<div class="note"><p><strong>Note:</strong> For fully integrating the {{HTMLElement("form")}} elements within this <em>mechanism</em>, please take a look at the paragraph <a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#submitting_forms_and_uploading_files">Submitting forms and uploading files</a>.</p></div>
 
 <p><strong>first_page.php</strong>:</p>
 
-<div style="height: 400px; margin-bottom: 12px; overflow: auto;">
 <pre class="brush: php">&lt;?php
     $page_title = "First page";
 
@@ -53,11 +52,9 @@ slug: Web/API/History_API/Example
     }
 ?&gt;
 </pre>
-</div>
 
 <p><strong>second_page.php</strong>:</p>
 
-<div style="height: 400px; margin-bottom: 12px; overflow: auto;">
 <pre class="brush: php">&lt;?php
     $page_title = "Second page";
 
@@ -102,11 +99,9 @@ slug: Web/API/History_API/Example
     }
 ?&gt;
 </pre>
-</div>
 
 <p><strong>third_page.php</strong>:</p>
 
-<div style="height: 400px; margin-bottom: 12px; overflow: auto;">
 <pre class="brush: php">&lt;?php
     $page_title = "Third page";
     $page_content = "&lt;p&gt;This is the content of &lt;strong&gt;third_page.php&lt;/strong&gt;. This content is stored into a php variable.&lt;/p&gt;";
@@ -142,7 +137,6 @@ slug: Web/API/History_API/Example
     }
 ?&gt;
 </pre>
-</div>
 
 <p><strong>css/style.css</strong>:</p>
 
@@ -191,7 +185,6 @@ slug: Web/API/History_API/Example
 
 <p><strong>js/ajax_nav.js</strong>:</p>
 
-<div style="height: 400px; margin-bottom: 12px; overflow: auto;">
 <pre class="brush: js">"use strict";
 
 const ajaxRequest = new (function () {
@@ -399,7 +392,6 @@ const ajaxRequest = new (function () {
 
 })();
 </pre>
-</div>
 
 <p><br>
  For more information, please see: <a href="/en-US/docs/Web/API/History_API/Working_with_the_History_API">Working with the History API</a>.</p>

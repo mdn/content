@@ -9,6 +9,7 @@ tags:
   - NeedsSpecTable
   - Reference
   - getElementsByTagNameNS
+browser-compat: api.Document.getElementsByTagNameNS
 ---
 <div>{{APIRef("DOM")}}</div>
 
@@ -24,13 +25,13 @@ tags:
   <li><var>elements</var> is a live {{DOMxRef("NodeList")}} (but see the note below) of
     found elements in the order they appear in the tree.</li>
   <li><var>namespace</var> is the namespace URI of elements to look for (see
-    {{domxref("Node.namespaceURI", "element.namespaceURI")}}).</li>
+    {{domxref("Element.namespaceURI", "element.namespaceURI")}}).</li>
   <li><var>name</var> is either the local name of elements to look for or the special
-    value <code>*</code>, which matches all elements (see {{domxref("Node.localName",
+    value <code>*</code>, which matches all elements (see {{domxref("Element.localName",
     "element.localName")}}).</li>
 </ul>
 
-<p class="note"><strong>Note:</strong> While the W3C specification says
+<p><strong>Note:</strong> While the W3C specification says
   <code>elements</code> is a <code>NodeList</code>, this method returns a
   {{DOMxRef("HTMLCollection")}} both in Gecko and Internet Explorer. Opera returns a
   <code>NodeList</code>, but with a <code>namedItem</code> method implemented, which makes
@@ -39,7 +40,7 @@ tags:
     href="https://bugzilla.mozilla.org/show_bug.cgi?id=14869">bug 14869</a> for details.
 </p>
 
-<p class="note"><strong>Note:</strong> Currently parameters in this method are
+<p><strong>Note:</strong> Currently parameters in this method are
   case-sensitive, but they were case-insensitive in Firefox 3.5 and before. See the <a
     href="/en-US/docs/Mozilla/Firefox/Releases/3.6#dom">developer release note for Firefox
     3.6</a> and a note in Browser compatibility section in
@@ -160,27 +161,11 @@ function div2ParaElems()
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('DOM WHATWG', '#dom-document-getelementsbytagnamens',
-        'document.getElementsByTagNameNS')}}</td>
-      <td>{{Spec2('DOM WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Document.getElementsByTagNameNS")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

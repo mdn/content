@@ -11,17 +11,25 @@ tags:
   - Tutorial
 ---
 <div>{{DefaultAPISidebar("DOM")}}</div>
-<p><span class="seoSummary">The <strong>Document Object Model</strong> (<strong>DOM</strong>) is the data representation of the objects that comprise the structure and content of a document on the web. In this guide, we'll briefly introduce the DOM.</span> We'll look at how the DOM represents an {{Glossary("HTML")}} or {{Glossary("XML")}} document in memory and how you use APIs to create web content and applications.</p>
+<p>
+  The <strong>Document Object Model</strong> (<em>DOM</em>) is the data representation of the objects
+  that comprise the structure and content of a document on the web.
+  This guide will introduce the DOM,
+  look at how the DOM represents an {{Glossary("HTML")}} document in memory
+  and how to use APIs to create web content and applications.</p>
 
 <h2 id="What_is_the_DOM">What is the DOM?</h2>
 
-<p>The Document Object Model (DOM) is a programming interface for HTML and XML documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects. That way, programming languages can connect to the page.</p>
+<p>
+  The Document Object Model (DOM) is a programming interface for web documents.
+  It represents the page so that programs can change the document structure, style, and content.
+  The DOM represents the document as nodes and objects;
+  that way, programming languages can interact with the page.
+</p>
 
-<p>A Web page is a document. This document can be either displayed in the browser window or as the HTML source. But it is the same document in both cases. The Document Object Model (DOM) represents that same document so it can be manipulated. The DOM is an object-oriented representation of the web page, which can be modified with a scripting language such as JavaScript.</p>
+<p>A web page is a document that can be either displayed in the browser window or as the HTML source. In both cases, it is the same document but the Document Object Model (DOM) representation allows it to be manipulated. As an object-oriented representation of the web page, it can be modified with a scripting language such as JavaScript.</p>
 
-<p>The <a href="https://www.w3.org/DOM/">W3C DOM</a> and <a href="https://dom.spec.whatwg.org">WHATWG DOM</a> standards are implemented in most modern browsers. Many browsers extend the standard, so care must be exercised when using them on the web where documents may be accessed by various browsers with different DOMs.</p>
-
-<p>For example, the standard DOM specifies that the <code>querySelectorAll</code> method in the code below must return a list of all the <code>&lt;p&gt;</code> elements in the document:</p>
+<p>For example, the DOM specifies that the <code>querySelectorAll</code> method in this code snippet must return a list of all the {{HTMLElement("p")}} elements in the document:</p>
 
 <pre class="brush: js">const paragraphs = document.querySelectorAll("p");
 // paragraphs[0] is the first &lt;p&gt; element
@@ -29,19 +37,31 @@ tags:
 alert(paragraphs[0].nodeName);
 </pre>
 
-<p>All of the properties, methods, and events available for manipulating and creating web pages are organized into objects (for example, the <code>document</code> object that represents the document itself, the <code>table</code> object that implements the special {{domxref("HTMLTableElement")}} DOM interface for accessing HTML tables, and so forth). This documentation provides an object-by-object reference to the DOM.</p>
+<p>All of the properties, methods, and events available for manipulating and creating web pages are organized into objects. For example, the <code>document</code> object that represents the document itself, any <code>table</code> objects that implement the {{domxref("HTMLTableElement")}} DOM interface for accessing HTML tables, and so forth, are all objects.</p>
 
-<p>The modern DOM is built using multiple APIs that work together. The core <a href="/en-US/docs/Web/API/Document_Object_Model">DOM</a> defines the objects that fundamentally describe a document and the objects within it. This is expanded upon as needed by other APIs that add new features and capabilities to the DOM. For example, the <a href="/en-US/docs/Web/API/HTML_DOM_API">HTML DOM API</a> adds support for representing HTML documents to the core DOM.</p>
+<p>
+  The DOM is built using multiple APIs that work together.
+  The core <a href="/en-US/docs/Web/API/Document_Object_Model">DOM</a> defines the entities
+  describing any document and the objects within it.
+  This is expanded upon as needed by other APIs that add new features and capabilities to the DOM.
+  For example, the <a href="/en-US/docs/Web/API/HTML_DOM_API">HTML DOM API</a> adds support for representing HTML documents to the core DOM,
+  and the SVG API adds support for representing SVG documents.
+</p>
 
 <h2 id="DOM_and_JavaScript">DOM and JavaScript</h2>
 
-<p>The short example above, like nearly all of the examples in this reference, is {{glossary("JavaScript")}}. That is to say, it's <em>written</em> in JavaScript, but it <em>uses</em> the DOM to access the document and its elements. The DOM is not a programming language, but without it, the JavaScript language wouldn't have any model or notion of web pages, HTML documents, XML documents, and their component parts (e.g. elements). Every element in a document—the document as a whole, the head, tables within the document, table headers, text within the table cells—is part of the document object model for that document, so they can all be accessed and manipulated using the DOM and a scripting language like JavaScript.</p>
+<p>The previous short example, like nearly all examples, is {{glossary("JavaScript")}}. That is to say, it is <em>written</em> in JavaScript, but <em>uses</em> the DOM to access the document and its elements. The DOM is not a programming language, but without it, the JavaScript language wouldn't have any model or notion of web pages, HTML documents, SVG documents, and their component parts. The document as a whole, the head, tables within the document, table headers, text within the table cells, and all other elements in a document are parts of the document object model for that document. They can all be accessed and manipulated using the DOM and a scripting language like JavaScript.</p>
 
-<p>In the beginning, JavaScript and the DOM were tightly intertwined, but eventually, they evolved into separate entities. The page content is stored in the DOM and may be accessed and manipulated via JavaScript, so that we may write this approximative equation:</p>
+<p>
+  The DOM is not part of the JavaScript language,
+  but is instead a Web API used to build websites.
+  JavaScript can also be used in other contexts.
+  For example, Node.js runs JavaScript programs on a computer,
+  but provides a different set of APIs,
+  and the DOM API is not a core part of the Node.js runtime.</p>
 
-<p>API = DOM + JavaScript</p>
-
-<p>The DOM was designed to be independent of any particular programming language, making the structural representation of the document available from a single, consistent API. Though we focus exclusively on JavaScript in this reference documentation, implementations of the DOM can be built for any language, as this Python example demonstrates:</p>
+<p>The DOM was designed to be independent of any particular programming language, making the structural representation of the document available from a single, consistent API.
+  Even if most web developers will only use the DOM through JavaScript, implementations of the DOM can be built for any language, as this Python example demonstrates:</p>
 
 <pre class="brush: python"># Python DOM example
 import xml.dom.minidom as m
@@ -52,18 +72,28 @@ p_list = doc.getElementsByTagName("para")
 
 <p>For more information on what technologies are involved in writing JavaScript on the web, see <a href="/en-US/docs/Web/JavaScript/JavaScript_technologies_overview">JavaScript technologies overview</a>.</p>
 
-<h2 id="How_Do_I_Access_the_DOM.3F">Accessing the DOM</h2>
+<h2>Accessing the DOM</h2>
 
-<p>You don't have to do anything special to begin using the DOM. Different browsers have different implementations of the DOM, and these implementations exhibit varying degrees of conformance to the actual DOM standard (a subject we try to avoid in this documentation), but every web browser uses some document object model to make web pages accessible via JavaScript.</p>
+<p>
+  You don't have to do anything special to begin using the DOM.
+  You use the API directly in JavaScript from within what is called a <em>script</em>, a program run by a browser.</p>
 
-<p>When you create a script–whether it's inline in a <code>&lt;script&gt;</code> element or included in the web page by means of a script loading instruction–you can immediately begin using the API for the {{domxref("document")}} or {{domxref("Window", "window")}} elements to manipulate the document itself or to get at the children of that document, which are the various elements in the web page. Your DOM programming may be something as simple as the following, which displays an alert message by using the {{domxref("window.alert", "alert()")}} function from the {{domxref("Window", "window")}} object, or it may use more sophisticated DOM methods to actually create new content, as in the longer example below.</p>
+<p>When you create a script, whether inline in a <code>&lt;script&gt;</code> element or included in the web page, you can immediately begin using the API for the {{domxref("document")}} or {{domxref("Window", "window")}} objects to manipulate the document itself, or any of the various elements in the web page (the descendant elements of the document). Your DOM programming may be something as simple as the following example, which displays a message on the console by using the {{domxref("console.log()")}} function:</p>
 
-<p>This following JavaScript will display an alert when the document is loaded (and when the whole DOM is available for use):</p>
-
-<pre class="brush: html">&lt;body onload="window.alert('Welcome to my home page!');"&gt;
+<pre class="brush: html">&lt;body onload="console.log('Welcome to my home page!');"&gt;
 </pre>
 
-<p>Another example. This function creates a new H1 element, adds text to that element, and then adds the <code>H1</code> to the tree for this document:</p>
+<p>
+  As it is generally not recommended to mix the structure of the page (written in HTML)
+  and manipulation of the DOM (written in JavaScript),
+  the JavaScript parts will be grouped together here,
+  and separated from the HTML.
+</p>
+<p>
+  For example, the following function creates a new {{HTMLElement("h1")}} element,
+  adds text to that element,
+  and then adds it to the tree for the document:
+</p>
 
 <pre class="brush: html">&lt;html&gt;
   &lt;head&gt;
@@ -86,7 +116,7 @@ p_list = doc.getElementsByTagName("para")
 
 <h2 id="Important_Data_Types">Fundamental data types</h2>
 
-<p>This reference tries to describe the various objects and types in simple terms. But there are a number of different data types being passed around the API that you should be aware of.</p>
+<p>This page tries to describe the various objects and types in simple terms. But there are a number of different data types being passed around the API that you should be aware of.</p>
 
 <div class="notecard note">
 <p><strong>Note:</strong> Because the vast majority of code that uses the DOM revolves around manipulating HTML documents, it's common to refer to the nodes in the DOM as <strong>elements</strong>, although strictly speaking not every node is an element.</p>
@@ -124,7 +154,7 @@ p_list = doc.getElementsByTagName("para")
     These two are equivalent. In the first, <code>item()</code> is the single method on the <code>nodeList</code> object. The latter uses the typical array syntax to fetch the second item in the list.</td>
   </tr>
   <tr>
-   <td>{{domxref("Attribute")}}</td>
+   <td>{{domxref("Attr")}}</td>
    <td>When an <code>attribute</code> is returned by a member (e.g., by the <code>createAttribute()</code> method), it is an object reference that exposes a special (albeit small) interface for attributes. Attributes are nodes in the DOM just like elements are, though you may rarely use them as such.</td>
   </tr>
   <tr>
@@ -134,7 +164,7 @@ p_list = doc.getElementsByTagName("para")
  </tbody>
 </table>
 
-<p>There are also some common terminology considerations to keep in mind. It's common to refer to any {{domxref("Attribute")}} node as an <code>attribute</code>, for example, and to refer to an array of DOM nodes as a <code>nodeList</code>. You'll find these terms and others to be introduced and used throughout the documentation.</p>
+<p>There are also some common terminology considerations to keep in mind. It's common to refer to any {{domxref("Attr")}} node as an <code>attribute</code>, for example, and to refer to an array of DOM nodes as a <code>nodeList</code>. You'll find these terms and others to be introduced and used throughout the documentation.</p>
 
 <h2 id="DOM_interfaces">DOM interfaces</h2>
 
@@ -142,7 +172,7 @@ p_list = doc.getElementsByTagName("para")
 
 <p>But the relationship between objects and the interfaces that they implement in the DOM can be confusing, and so this section attempts to say a little something about the actual interfaces in the DOM specification and how they are made available.</p>
 
-<h3 id="Interfaces_and_Objects">Interfaces and Objects</h3>
+<h3 id="Interfaces_and_objects">Interfaces and objects</h3>
 
 <p>Many objects borrow from several different interfaces. The table object, for example, implements a specialized {{domxref("HTMLTableElement")}} interface, which includes such methods as <code>createCaption</code> and <code>insertRow</code>. But since it's also an HTML element, <code>table</code> implements the <code>Element</code> interface described in the DOM {{domxref("Element")}} Reference chapter. And finally, since an HTML element is also, as far as the DOM is concerned, a node in the tree of nodes that make up the object model for an HTML or XML page, the table object also implements the more basic <code>Node</code> interface, from which <code>Element</code> derives.</p>
 
@@ -159,7 +189,7 @@ for (let i = 0; i &lt; tableAttrs.length; i++) {
 table.summary = "note: increased border";
 </pre>
 
-<h3 id="Core_Interfaces_in_the_DOM">Core Interfaces in the DOM</h3>
+<h3 id="Core_interfaces_in_the_DOM">Core interfaces in the DOM</h3>
 
 <p>This section lists some of the most commonly-used interfaces in the DOM. The idea is not to describe what these APIs do here but to give you an idea of the sorts of methods and properties you will see very often as you use the DOM. These common APIs are used in the longer examples in the <a href="/en-US/docs/Web/API/Document_Object_Model/Examples">DOM Examples</a> chapter at the end of this book.</p>
 
@@ -169,11 +199,11 @@ table.summary = "note: increased border";
 
 <ul>
  <li><code>{{domxref("document.querySelector", "", "", "1")}}(selector)</code></li>
- <li><code>document.{{domxref("Element.querySelectorAll", "querySelectorAll", "", "1")}}(name)</code></li>
+ <li><code>{{domxref("document.querySelectorAll", "", "", "1")}}(name)</code></li>
  <li><code>{{domxref("document.createElement", "", "", "1")}}(name)</code></li>
  <li><code>parentNode.{{domxref("Node.appendChild", "appendChild", "", "1")}}(node)</code></li>
  <li><code>element.{{domxref("element.innerHTML", "innerHTML", "", "1")}}</code></li>
- <li><code>element.{{domxref("ElementCSSInlineStyle/style", "style", "", "1")}}.left</code></li>
+ <li><code>element.{{domxref("HTMLElement/style", "style", "", "1")}}.left</code></li>
  <li><code>element.{{domxref("element.setAttribute", "setAttribute", "", "1")}}()</code></li>
  <li><code>element.{{domxref("element.getAttribute", "getAttribute", "", "1")}}()</code></li>
  <li><code>element.{{domxref("EventTarget.addEventListener", "addEventListener", "", "1")}}()</code></li>
@@ -182,17 +212,19 @@ table.summary = "note: increased border";
  <li><code>{{domxref("window.scrollTo", "", "", "1")}}()</code></li>
 </ul>
 
-<h2 id="Testing_the_DOM_API">Testing the DOM API</h2>
+<h2 id="Example">Example</h2>
 
-<p>This document provides samples for every interface that you can use in your own web development. In some cases, the samples are complete HTML pages, with the DOM access in a <code>&lt;script&gt;</code> element, the interface (e.g, buttons) necessary to fire up the script in a form, and the HTML elements upon which the DOM operates listed as well. When this is the case, you can cut and paste the example into a new HTML document, save it, and run the example from the browser.</p>
+<p>The following simple example illustrates using the DOM {{domxref("Document")}} API — specifically, it illustrates using the {{domxref("Document.body", "body")}} property of the {{domxref("Document")}} API to change:</p>
 
-<p>There are some cases, however, when the examples are more concise. To run examples that only demonstrate the basic relationship of the interface to the HTML elements, you may want to set up a test page in which interfaces can be easily accessed from scripts. The following very simple web page provides a <code>&lt;script&gt;</code> element in the header in which you can place functions that test the interface, a few HTML elements with attributes that you can retrieve, set, or otherwise manipulate, and the web user interface necessary to call those functions from the browser.</p>
-
-<p>You can use this test page or create a similar one to test the DOM interfaces you are interested in and see how they work on the browser platform. You can update the contents of the <code>test()</code> function as needed, create more buttons, or add elements as necessary.</p>
+<ul>
+  <li>the document's text color</li>
+  <li>the document’s background color</li>
+  <li>the documents’s link color (that is, the color of any hypertext links anywhere in the document)</li>
+</ul>
 
 <pre class="brush: html">&lt;html&gt;
 &lt;head&gt;
-  &lt;title&gt;DOM Tests&lt;/title&gt;
+  &lt;title&gt;Simple Document API example&lt;/title&gt;
   &lt;script&gt;
     function setBodyAttr(attr, value) {
       if (document.body) document.body[attr] = value;
@@ -201,9 +233,9 @@ table.summary = "note: increased border";
   &lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-  &lt;div style="margin: .5in; height: 400px;"&gt;
-    &lt;p&gt;&lt;b&gt;&lt;code&gt;text&lt;/code&gt;&lt;/b&gt;&lt;/p&gt;
+  &lt;div&gt;
     &lt;form&gt;
+      &lt;p&gt;&lt;b&gt;&lt;code&gt;text&lt;/code&gt;&lt;/b&gt;&lt;/p&gt;
       &lt;select onChange="setBodyAttr('text',
         this.options[this.selectedIndex].value);"&gt;
         &lt;option value="black"&gt;black&lt;/option&gt;
@@ -225,18 +257,23 @@ table.summary = "note: increased border";
         &lt;a href="http://some.website.tld/page.html" id="sample"&gt;
           (sample link)
         &lt;/a&gt;
-      &lt;/small&gt;&lt;br /&gt;
-      &lt;input type="button" value="version" onclick="ver()" /&gt;
+      &lt;/small&gt;
     &lt;/form&gt;
   &lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
 
-<p>To test a lot of interfaces in a single page—for example, a "suite" of properties that affect the colors of a web page—you can create a similar test page with a whole console of buttons, textfields, and other HTML elements. The following screenshot gives you some idea of how interfaces can be grouped together for testing.</p>
+<h3 id="result">Result</h3>
 
-<figure>
-<figcaption>Figure 0.1 Sample DOM Test Page</figcaption>
-<img src="dom_ref_introduction_to_the_dom.gif"></figure>
+{{EmbedLiveSample("Example", "85ch", "263px")}}
 
-<p>In this example, the drop-down menus dynamically update such DOM—accessible aspects of the web page as its background color (<code>bgColor</code>), the color of the hyperlinks (<code>aLink</code>), and color of the text (<code>text</code>). However, you design your test pages, testing the interfaces as you read about them is an important part of learning how to use the DOM effectively.</p>
+<h2>Specifications</h2>
+<table>
+  <tr>
+    <th>Specification</th>
+  </tr>
+  <tr>
+    <td><a href="https://dom.spec.whatwg.org/">DOM Living Standard</a></td>
+  </tr>
+</table>

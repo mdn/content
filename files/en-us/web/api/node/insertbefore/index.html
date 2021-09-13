@@ -2,17 +2,18 @@
 title: Node.insertBefore()
 slug: Web/API/Node/insertBefore
 tags:
-- API
-- DOM
-- Method
-- Node
-- Reference
+  - API
+  - DOM
+  - Method
+  - Node
+  - Reference
+browser-compat: api.Node.insertBefore
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><span class="seoSummary">The <code><strong>Node.insertBefore()</strong></code> method
+<p>The <code><strong>Node.insertBefore()</strong></code> method
     inserts a node before a <em>reference node</em> as a child of a specified <em>parent
-      node</em>. </span></p>
+      node</em>. </p>
 
 <p>If the given node already exists in the document, <code>insertBefore()</code> moves it
   from its current position to the new position. (That is, it will automatically be
@@ -124,7 +125,7 @@ parentDiv.insertBefore(sp1, sp2)
 <p>In the previous example, <code>sp1</code> could be inserted after <code>sp2</code>
   using:</p>
 
-<pre class="brush: js"><code>parentDiv.insertBefore(sp1, sp2.nextSibling)</code></pre>
+<pre class="brush: js">parentDiv.insertBefore(sp1, sp2.nextSibling)</pre>
 
 <p>If <code>sp2</code> does not have a next sibling, then it must be the last child —
   <code>sp2.nextSibling</code> returns <code>null</code>, and <code>sp1</code> is inserted
@@ -156,48 +157,11 @@ parentElement.insertBefore(newElement, theFirstChild)
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('DOM WHATWG','#dom-node-insertbefore','Node.insertBefore')}}</td>
-      <td>{{Spec2('DOM WHATWG')}}</td>
-      <td>Fixes errors in the insertion algorithm</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('DOM4','#dom-node-insertbefore','Node.insertBefore')}}</td>
-      <td>{{Spec2('DOM4')}}</td>
-      <td>Describes the algorithm in more detail</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('DOM3 Core','core.html#ID-952280727','Node.insertBefore')}}</td>
-      <td>{{Spec2('DOM3 Core')}}</td>
-      <td>No notable changes</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('DOM2 Core','core.html#ID-952280727','Node.insertBefore')}}</td>
-      <td>{{Spec2('DOM2 Core')}}</td>
-      <td>No notable changes</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('DOM1','level-one-core.html#method-insertBefore','Node.insertBefore')}}
-      </td>
-      <td>{{Spec2('DOM1')}}</td>
-      <td>Introduced</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Node.insertBefore")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -207,7 +171,7 @@ parentElement.insertBefore(newElement, theFirstChild)
   <li>{{domxref("Node.appendChild()")}}</li>
   <li>{{domxref("Node.hasChildNodes()")}}</li>
   <li>{{domxref("Element.insertAdjacentElement()")}}</li>
-  <li>{{domxref("ParentNode.prepend()")}}</li>
-  <li>{{domxref("ChildNode.before()")}}</li>
-  <li>{{domxref("ChildNode.after()")}}</li>
+  <li>{{domxref("Element.prepend()")}}</li>
+  <li>{{domxref("Element.before()")}}</li>
+  <li>{{domxref("Element.after()")}}</li>
 </ul>

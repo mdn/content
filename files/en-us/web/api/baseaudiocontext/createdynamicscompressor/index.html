@@ -9,6 +9,7 @@ tags:
   - Reference
   - Web Audio API
   - createDynamicsCompressor
+browser-compat: api.BaseAudioContext.createDynamicsCompressor
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
@@ -25,6 +26,12 @@ tags:
   sounds are played simultaneously, where you want to control the overall signal level and
   help avoid clipping (distorting) of the audio output.</p>
 
+  <div class="notecard note">
+    <p><strong>Note:</strong> The {{domxref("DynamicsCompressorNode.DynamicsCompressorNode", "DynamicsCompressorNode()")}}
+      constructor is the recommended way to create a {{domxref("DynamicsCompressorNode")}}; see
+      <a href="/en-US/docs/Web/API/AudioNode#creating_an_audionode">Creating an AudioNode</a>.</p>
+  </div>
+
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="brush: js">baseAudioCtx.createDynamicsCompressor();</pre>
@@ -35,14 +42,14 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<p>The below code demonstrates a simple usage of <code>createDynamicsCompressor()</code>
+<p>The code below demonstrates a simple usage of <code>createDynamicsCompressor()</code>
   to add compression to an audio track. For a more complete example, have a look at our <a
     href="https://mdn.github.io/webaudio-examples/compressor-example/">basic Compressor
     example</a> (<a
     href="https://github.com/mdn/webaudio-examples/tree/master/compressor-example">view
     the source code</a>).</p>
 
-<pre class="brush: js highlight[6,18,19]">// Create a MediaElementAudioSourceNode
+<pre class="brush: js">// Create a MediaElementAudioSourceNode
 // Feed the HTMLMediaElement into it
 var source = audioCtx.createMediaElementSource(myAudio);
 
@@ -78,25 +85,11 @@ button.onclick = function() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Web Audio API', '#dom-baseaudiocontext-createdynamicscompressor',
-        'createDynamicsCompressor()')}}</td>
-      <td>{{Spec2('Web Audio API')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.BaseAudioContext.createDynamicsCompressor")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

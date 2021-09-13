@@ -8,26 +8,28 @@ tags:
   - MutationEvent
   - Reference
   - events
+browser-compat: api.MutationEvent
 ---
 <div>{{APIRef("DOM Events")}}{{Deprecated_Header}}</div>
 
+<div class="notecard note">
+  <p><strong>Note:</strong> <a href="https://www.w3.org/TR/DOM-Level-3-Events/#events-mutationevents">Mutation Events</a> (W3C DOM Level 3 Events) have been deprecated in favor of <a href="/en-US/docs/Web/API/MutationObserver">Mutation Observers</a> (W3C DOM4).</p>
+</div>
+
 <p>The <code><strong>MutationEvent</strong></code> interface provides event properties that are specific to modifications to the Document Object Model (DOM) hierarchy and nodes.</p>
 
-<div class="notecard note">
-<p><strong>Note:</strong> <a href="https://www.w3.org/TR/DOM-Level-3-Events/#events-mutationevents">Mutation Events</a> (W3C DOM Level 3 Events) have been deprecated in favor of <a href="/en-US/docs/Web/API/MutationObserver">Mutation Observers</a> (W3C DOM4).</p>
-</div>
 
 <h2 id="Preface">Preface</h2>
 
-<p id="Replacement.3A_mutation_observers">The mutation events have been marked as deprecated in <a href="https://www.w3.org/TR/DOM-Level-3-Events/#events-mutationevents">the DOM Events specification</a>, as the API's design is flawed (see details in the "DOM Mutation Events Replacement: The Story So Far / Existing Points of Consensus" post to <span id="to"><a href="http://lists.w3.org/Archives/Public/public-webapps/2011JulSep/0779.html">public-webapps</a>)</span>.</p>
+<p>The mutation events have been marked as deprecated in <a href="https://www.w3.org/TR/DOM-Level-3-Events/#events-mutationevents">the DOM Events specification</a>, as the API's design is flawed (see details in the "DOM Mutation Events Replacement: The Story So Far / Existing Points of Consensus" post to <a href="https://lists.w3.org/Archives/Public/public-webapps/2011JulSep/0779.html">public-webapps</a>).</p>
 
-<p><a href="/en-US/docs/Web/API/MutationObserver">Mutation Observers</a> are the proposed replacement for mutation events in DOM4. They are expected to be included in Firefox 14 and <a href="http://updates.html5rocks.com/2012/02/Detect-DOM-changes-with-Mutation-Observers">Chrome 18</a>.</p>
+<p><a href="/en-US/docs/Web/API/MutationObserver">Mutation Observers</a> have replaced mutation events in DOM4. They have been supported in <a href="/en-US/docs/Web/API/MutationObserver#browser_compatibility">most popular browsers for some years</a>.</p>
 
-<p>The practical reasons to avoid the mutation events are <strong>performance issues</strong> and <strong>cross-browser support</strong>.</p>
+<p>In addition, mutation events should be avoided because they have <strong>performance issues</strong> and <strong>poor cross-browser support</strong> (as described in the following sections).</p>
 
 <h3 id="Performance">Performance</h3>
 
-<p>Adding DOM mutation listeners to a document <a href="http://groups.google.com/group/mozilla.dev.platform/browse_thread/thread/2f42f1d75bb906fb?pli=1" rel="external">profoundly degrades the performance</a> of further DOM modifications to that document (making them 1.5 - 7 times slower!). Moreover, removing the listeners does not reverse the damage.</p>
+<p>Adding DOM mutation listeners to a document <a href="https://groups.google.com/group/mozilla.dev.platform/browse_thread/thread/2f42f1d75bb906fb?pli=1" rel="external">profoundly degrades the performance</a> of further DOM modifications to that document (making them 1.5 - 7 times slower!). Moreover, removing the listeners does not reverse the damage.</p>
 
 <p>The performance effect is <a class="link-https" href="https://groups.google.com/forum/#!topic/mozilla.dev.platform/UH2VqFQRTDA">limited to the documents that have the mutation event listeners</a>.</p>
 
@@ -37,7 +39,7 @@ tags:
 
 <ul>
  <li>IE prior to version 9 didn't support the mutation events at all and does not implement some of them correctly in version 9 (<a href="http://help.dottoro.com/ljmcxjla.php">for example, DOMNodeInserted</a>)</li>
- <li>WebKit doesn't support DOMAttrModified (see <a class="link-https" href="https://bugs.webkit.org/show_bug.cgi?id=8191">webkit bug 8191</a> and <a href="http://engineering.silk.co/post/31921750832/mutation-events-what-happens">the workaround</a>)</li>
+ <li>WebKit doesn't support DOMAttrModified (see <a class="link-https" href="https://bugs.webkit.org/show_bug.cgi?id=8191">webkit bug 8191</a> and <a href="https://engineering.silk.co/post/31921750832/mutation-events-what-happens">the workaround</a>)</li>
  <li>"mutation name events", i.e. DOMElementNameChanged and DOMAttributeNameChanged are not supported in Firefox (as of version 11), and probably in other browsers as well.</li>
  <li>...</li>
 </ul>
@@ -73,11 +75,10 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MutationEvent")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li>{{DOMxRef("MutationNameEvent")}}</li>
- <li><a href="/en-US/docs/Web/Guide/Events/Mutation_events">Using mutation events</a></li>
 </ul>

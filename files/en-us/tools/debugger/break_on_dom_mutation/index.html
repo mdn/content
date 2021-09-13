@@ -24,7 +24,7 @@ tags:
  <dd>Execution pauses if any of the element's descendant nodes are modified.<br>
  That means, the script execution is stopped whenever a child node or descendant node deeper in the DOM structure is added to or removed from the element the option is set on.<br>
  <br>
- Examples for when this breakpoint is triggered are calling {{domxref("Node.appendChild()")}} and {{domxref("Node.removeChild()")}}, calling {{domxref("ChildNode.remove()")}} or setting {{domxref("Element.innerHTML")}} on one of the subnodes.</dd>
+ Examples for when this breakpoint is triggered are calling {{domxref("Node.appendChild()")}} and {{domxref("Node.removeChild()")}}, calling {{domxref("Element.remove()")}} or setting {{domxref("Element.innerHTML")}} on one of the subnodes.</dd>
  <dt>Attribute Modification</dt>
  <dd>Execution pauses when any of the elements' attributes are modified.<br>
  That means, the script execution is stopped whenever an attribute is added to or removed from the element the option is set on or the value of one of its attributes is changed.<br>
@@ -33,7 +33,7 @@ tags:
  <dt>Node Removal</dt>
  <dd>Execution pauses if the element the option is set on is removed.<br>
  <br>
- Examples for when this breakpoint is triggered are calling {{domxref("ChildNode/remove", "Element.remove()")}} or {{domxref("Node.removeChild()")}} on its parent node.</dd>
+ Examples for when this breakpoint is triggered are calling {{domxref("Element.remove()")}} or {{domxref("Node.removeChild()")}} on its parent node.</dd>
 </dl>
 
 <p>Once you set the breakpoint, go to the Debugger. You can see the breakpoint listed in the right-most panel under <strong>DOM Mutation Breakpoints</strong>.</p>

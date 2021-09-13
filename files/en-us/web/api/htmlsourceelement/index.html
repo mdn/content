@@ -6,6 +6,7 @@ tags:
   - HTML DOM
   - Interface
   - Reference
+browser-compat: api.HTMLSourceElement
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
@@ -24,7 +25,7 @@ tags:
  <dd>Is a {{domxref("DOMString")}} representing image sizes between breakpoints</dd>
  <dt>{{domxref("HTMLSourceElement.src")}}</dt>
  <dd>Is a {{domxref("DOMString")}} reflecting the {{ htmlattrxref("src", "source") }} HTML attribute, containing the URL for the media resource. The {{domxref("HTMLSourceElement.src")}} property has a meaning only when the associated {{HTMLElement("source")}} element is nested in a media element that is a {{htmlelement("video")}} or an {{htmlelement("audio")}} element. It has no meaning and is ignored when it is nested in a {{HTMLElement("picture")}} element.
- <div class="note"><strong>Note</strong>: If the <code>src</code> property is updated (along with any siblings), the parent {{domxref("HTMLMediaElement")}}'s <code>load</code> method should be called when done, since <code>&lt;source&gt;</code> elements are not re-scanned automatically.</div>
+ <div class="note"><p><strong>Note:</strong> If the <code>src</code> property is updated (along with any siblings), the parent {{domxref("HTMLMediaElement")}}'s <code>load</code> method should be called when done, since <code>&lt;source&gt;</code> elements are not re-scanned automatically.</p></div>
  </dd>
  <dt>{{domxref("HTMLSourceElement.srcset")}} {{experimental_inline}}</dt>
  <dd>Is a {{domxref("DOMString")}} reflecting the {{ htmlattrxref("srcset", "source") }} HTML attribute, containing a list of candidate images, separated by a comma (<code>',', U+002C COMMA</code>). A candidate image is a URL followed by a <code>'w'</code> with the width of the images, or an <code>'x'</code> followed by the pixel density.</dd>
@@ -38,24 +39,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "#htmlsourceelement", "HTMLSourceElement")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.HTMLSourceElement")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

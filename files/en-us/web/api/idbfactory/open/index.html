@@ -10,11 +10,12 @@ tags:
   - Reference
   - Storage
   - open
+browser-compat: api.IDBFactory.open
 ---
   <p>{{APIRef("IndexedDB")}}</p>
   <p>The <strong><code>open()</code></strong> method of the {{domxref("IDBFactory")}}
     interface requests opening a <a
-      href="/en-US/docs/Web/API/IndexedDB_API#gloss_database_connection">connection to a database</a>.
+      href="/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#database_connection">connection to a database</a>.
   </p>
 
   <p>The method returns an {{domxref("IDBOpenDBRequest")}} object immediately, and
@@ -57,14 +58,14 @@ var <em>IDBOpenDBRequest</em> = <em>indexedDB</em>.open(<em>name</em>, <em>versi
     domxref("IDBFactory.open") }} that contains the <code>version</code> number of the
     database, plus a storage value that specifies whether you want to
     use <code>persistent</code> or <code>temporary</code> storage.
-    <div class="warning"><strong>Warning:</strong> The <code>storage</code> attribute is
+    <div class="warning"><p><strong>Warning:</strong> The <code>storage</code> attribute is
       deprecated and will soon be removed from Gecko. You should use
-      {{domxref("StorageManager.persist()")}} to get persistent storage instead.</div>
+      {{domxref("StorageManager.persist()")}} to get persistent storage instead.</p></div>
   </dd>
 </dl>
 
 <div class="note">
-  <p><strong>Note</strong>: You can find out more information on the different available
+  <p><strong>Note:</strong> You can find out more information on the different available
     storage types, and how Firefox handles client-side data storage, at <a
       href="/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria">Browser
       storage limits and eviction criteria</a>.</p>
@@ -99,8 +100,7 @@ var <em>IDBOpenDBRequest</em> = <em>indexedDB</em>.open(<em>name</em>, <em>versi
 <p>Example of calling <code>open</code> with the current specification's
   <code>version</code> parameter:</p>
 
-<pre class="brush: js"
-  style="font-size: 14px;">var request = window.indexedDB.open("toDoList", 4);</pre>
+<pre class="brush: js">var request = window.indexedDB.open("toDoList", 4);</pre>
 
 <p>In the following code snippet, we make a request to open a database, and include
   handlers for the success and error cases. For a full working example, see our <a
@@ -141,29 +141,11 @@ DBOpenRequest.onsuccess = function(event) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('IndexedDB', '#dom-idbfactory-open', 'open()')}}</td>
-      <td>{{Spec2('IndexedDB')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("IndexedDB 2", "#dom-idbfactory-open", "open()")}}</td>
-      <td>{{Spec2("IndexedDB 2")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.IDBFactory.open")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

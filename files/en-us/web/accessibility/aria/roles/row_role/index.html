@@ -10,9 +10,7 @@ tags:
   - Reference
   - Row Role
 ---
-<div>{{Page("/en-US/docs/Web/Accessibility/ARIA/Roles", "Subnav")}}</div>
-
-<p>An element with <code>role="row"</code> is a row of cells within a tabular structure. A row contains one or more cells,  grid cells or column headers, and possibly a row header, within a <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role">grid</a></code>, <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role">table</a></code> or <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Treegrid_Role">treegrid</a></code>, and optionally within a <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role">rowgroup</a></code>.</p>
+<p>An element with <code>role="row"</code> is a row of cells within a tabular structure. A row contains one or more cells,  grid cells or column headers, and possibly a row header, within a <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role">grid</a></code>, <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role">table</a></code> or <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role">treegrid</a></code>, and optionally within a <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role">rowgroup</a></code>.</p>
 
 <pre class="brush: html">&lt;div role="table" aria-label="Populations" aria-describedby="country_population_desc"&gt;
    &lt;div id="country_population_desc"&gt;World Populations by Country&lt;/div&gt;
@@ -37,7 +35,7 @@ tags:
 
 <h2 id="Description">Description</h2>
 
-<p>The element <code>role="row"</code> is a row within a <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role">grid</a></code>, <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role">table</a></code> or <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Treegrid_Role">treegrid</a></code>, and optionally within a <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role">rowgroup</a></code>, that is a container for one or more <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Cell_Role">cells</a></code>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Gridcell_role"><code>gridcells</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Columnheader_Role"><code>columnheaders</code></a>, or <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Rowheader_Role"><code>rowheaders</code></a> within a static tabular structure. Using native <a href="/en-US/docs/Web/HTML/Element/tr">HTML <code>&lt;tr&gt;</code></a> elements, whenever possible, is strongly encouraged.</p>
+<p>The element <code>role="row"</code> is a row within a <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role">grid</a></code>, <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role">table</a></code> or <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role">treegrid</a></code>, and optionally within a <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role">rowgroup</a></code>, that is a container for one or more <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Cell_Role">cells</a></code>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Gridcell_role"><code>gridcells</code></a>, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role"><code>columnheaders</code></a>, or <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role"><code>rowheaders</code></a> within a static tabular structure. Using native <a href="/en-US/docs/Web/HTML/Element/tr">HTML <code>&lt;tr&gt;</code></a> elements, whenever possible, is strongly encouraged.</p>
 
 <p>To create an ARIA row, add <code>role="row"</code> to the container element. That row should be nested within a grid, table or treegrid. A group of rows can be nested within a grid, table or treegrid directly, or within a rowgroup in one of those containers. Each row contains child cells. These cells can be of different types, depending on whether they are column or row headers, or grid or regular cells.</p>
 
@@ -45,7 +43,7 @@ tags:
 
 <p>If the row is within a treegrid, rows can include the <code>aria-expanded</code> attribute, using the attribute to indicate the present status. This is not the case for an ordinary table or grid, in which the aria-expanded attribute is not present.</p>
 
-<p>To create an interactive widget that has a tabular structure, use the grid pattern instead. If the interaction provides for the selection state of individual cells, if left to right and top to bottom navigation is provided, or if the user interface allows the rearranging of cell order or otherwise changing individual cell order such as through drag and drop, use <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role">grid</a> or <a href="/en-US/docs/">treegrid</a> instead.</p>
+<p>To create an interactive widget that has a tabular structure, use the grid pattern instead. If the interaction provides for the selection state of individual cells, if left to right and top to bottom navigation is provided, or if the user interface allows the rearranging of cell order or otherwise changing individual cell order such as through drag and drop, use <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role">grid</a> or <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role">treegrid</a> instead.</p>
 
 <div class="note">
 <p>Note: Using the native HTML table element (&lt;table&gt;) along with the table row element (&lt;tr&gt;) whenever possible is strongly encouraged.</p>
@@ -62,7 +60,7 @@ tags:
  <dd>One of the three possible contexts (along with grid and treegrid) in which you'll find a row, it identifies the row as being part of a non-interactive table structure containing data arranged in rows and columns, similar to the native &lt;table&gt; HTML element. </dd>
  <dt><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role">role="grid"</a></dt>
  <dd>One of the three possible contexts (along with table and treegrid) in which you'll find a row, it identifies the row as being part of a non-interactive table structure containing data arranged in rows and columns, similar to the native &lt;table&gt; HTML element.</dd>
- <dt><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Gridtree_Role">role="treegrid"</a></dt>
+ <dt><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/gridtree_role">role="treegrid"</a></dt>
  <dd>Similar to a grid, but with rows that can be expanded and collapsed in the same manner as for a tree.</dd>
 </dl>
 
@@ -71,7 +69,7 @@ tags:
 <dl>
  <dt><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Cell_Role">role="cell"</a></dt>
  <dd>A cell in a row within a tabular container.</dd>
- <dt><a href="/en-US/docs/en-US/docs/Web/Accessibility/ARIA/Roles/Gridcell_Role">role="gridcell"</a></dt>
+ <dt><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Gridcell_role">role="gridcell"</a></dt>
  <dd>A cell in a row within a grid or treegrid.</dd>
  <dt>role="columnheader"</dt>
  <dd>A header cell that is the structural equivalent of the HTML &lt;th&gt; element with a column scope. Unlike a plain cell, the columnheader role establishes a relationship between it and all cells in the corresponding column. </dd>
@@ -126,7 +124,7 @@ tags:
 
 <h3 id="Required_JavaScript_features">Required JavaScript features</h3>
 
-<p>None. For sortable columns, see the <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Columnheader_Role">columnheader</a> aria role.</p>
+<p>None. For sortable columns, see the <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role">columnheader</a> aria role.</p>
 
 <div class="note">
 <p><span class="ILfuVd yZ8quc">The first rule of ARIA use is you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and <strong>adding</strong> an ARIA role, state or property to make it accessible, then do so. Employ the HTML &lt;table&gt; element instead of the ARIA role of table whenever possible.</span></p>
@@ -227,3 +225,10 @@ tags:
 <ul>
  <li><a href="/en-US/docs/Web/HTML/Element/tr">HTML table row</a></li>
 </ul>
+
+
+<section id="Quick_links">
+   <ol>
+     <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}</li>
+   </ol>
+ </section>

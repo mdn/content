@@ -6,6 +6,7 @@ tags:
   - CSSOM
   - Interface
   - Reference
+browser-compat: api.CSSNamespaceRule
 ---
 <p>{{APIRef("CSSOM")}}</p>
 
@@ -18,7 +19,7 @@ tags:
 <p><em>Inherits methods from its ancestor {{domxref("CSSRule")}}.</em></p>
 
 <dl>
- <dt id="cssRules">{{domxref("CSSNamespaceRule.namespaceURI")}}</dt>
+ <dt>{{domxref("CSSNamespaceRule.namespaceURI")}}</dt>
  <dd>Returns a {{ domxref("DOMString") }} containing the text of the URI of the given namespace.</dd>
  <dt>{{domxref("CSSNamespaceRule.prefix")}}</dt>
  <dd>Returns a {{ domxref("DOMString") }} with the name of the prefix associated to this namespace. If there is no such prefix, returns an empty string.</dd>
@@ -34,28 +35,13 @@ tags:
 
 <pre class="brush:css">@namespace url(http://www.w3.org/1999/xhtml);</pre>
 
-<pre class="brush:javascript">let myRules = document.styleSheets[0].cssRules;
+<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
 console.log(myRules[0]); //a CSSNamespaceRule</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSSOM', '#the-cssnamespacerule-interface', 'CSSNamespaceRule') }}</td>
-   <td>{{ Spec2('CSSOM') }}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.CSSNamespaceRule")}}</p>
+<p>{{Compat}}</p>

@@ -8,6 +8,7 @@ tags:
 - Reference
 - shadow dom
 - slot
+browser-compat: api.Element.slot
 ---
 <p>{{APIRef("Shadow DOM")}}</p>
 
@@ -54,25 +55,12 @@ tags:
 
 <pre
   class="brush: js">let slottedSpan = document.querySelector('my-paragraph span')
-console.log(slottedSpan.slot); // logs <span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-string">'my-text'</span></span></span></span></pre>
+console.log(slottedSpan.slot); // logs 'my-text'</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('DOM WHATWG','#dom-element-slot','slot')}}</td>
-      <td>{{Spec2('DOM WHATWG')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Element.slot")}}</p>
+<p>{{Compat}}</p>

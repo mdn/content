@@ -2,13 +2,13 @@
 title: Window.captureEvents()
 slug: Web/API/Window/captureEvents
 tags:
-- API
-- Gecko
-- HTML DOM
-- Method
-- Non-standard
+  - API
+  - Gecko
+  - HTML DOM
+  - Method
+  - Non-standard
 ---
-<div>{{ ApiRef() }} {{deprecated_header(1.9)}} {{Non-standard_header}}</div>
+<div>{{ ApiRef() }} {{Deprecated_Header}} {{Non-standard_header}}</div>
 
 <p>The <code><strong>Window.captureEvents()</strong></code> method registers the window to
   capture all events of the specified type.</p>
@@ -57,7 +57,7 @@ function page_click() {
 <p>Events raised in the DOM by user activity (such as clicking buttons or shifting focus
   away from the current document) generally pass through the high-level <a
     href="/en-US/docs/Web/API/Window"><code>window</code></a> and <a
-    href="/en-US/docs/Web/API/document"><code>document</code></a> objects first before
+    href="/en-US/docs/Web/API/Document"><code>document</code></a> objects first before
   arriving at the object that initiated the event.</p>
 
 <p>When you call the <code>captureEvents()</code> method on the <a
@@ -65,7 +65,7 @@ function page_click() {
   specify (for example, <code>Event.CLICK</code>) no longer pass through to "lower"
   objects in the hierarchy. In order for events to "bubble up" in the way that they
   normally do, you must call <a
-    href="/en-US/docs/Web/API/window.releaseEvents"><code>window.releaseEvents()</code></a>
+    href="/en-US/docs/Web/API/Window/releaseEvents"><code>window.releaseEvents()</code></a>
   ({{deprecated_inline}}) on the window to keep it from trapping events.</p>
 
 <p>Note that you can pass a list of events to this method using the following syntax:

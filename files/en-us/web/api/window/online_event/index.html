@@ -7,12 +7,13 @@ tags:
   - Online
   - Reference
   - Window
+browser-compat: api.Window.online_event
 ---
 <div>{{APIRef}}</div>
 
 <p>The <strong><code>online</code></strong> event of the {{domxref("Window")}} interface is fired when the browser has gained access to the network and the value of {{domxref("Navigator.onLine")}} switches to <code>true</code>.</p>
 
-<div class="note"><strong>Note:</strong> This event shouldn't be used to determine the availability of a particular website. Network problems or firewalls might still prevent the website from being reached.</div>
+<div class="note"><p><strong>Note:</strong> This event shouldn't be used to determine the availability of a particular website. Network problems or firewalls might still prevent the website from being reached.</p></div>
 
 <table class="properties">
  <tbody>
@@ -48,24 +49,13 @@ window.ononline = (event) =&gt; {
 };
 </pre>
 
-<h2 class="brush: js" id="Specifications">Specifications</h2>
+<h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "indices.html#event-online", "online event")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Window.online_event")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

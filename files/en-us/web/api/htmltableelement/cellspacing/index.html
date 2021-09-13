@@ -6,10 +6,11 @@ tags:
 - HTML DOM
 - HTMLTableElement
 - NeedsSpecTable
-- Obsolete
 - Property
 - Reference
 - cellSpacing
+- Deprecated
+browser-compat: api.HTMLTableElement.cellSpacing
 ---
 <div>
   <div>
@@ -17,11 +18,11 @@ tags:
   </div>
 </div>
 
-<p><span class="seoSummary">While you should instead use the CSS
+<p>While you should instead use the CSS
     {{cssxref("border-spacing")}} property, the obsolete {{domxref("HTMLTableElement")}}
     interface's <code><strong>cellSpacing</strong></code> property represents the spacing
     around the individual {{HTMLElement("th")}} and {{HTMLElement("td")}} elements
-    representing a table's cells.</span> Any two cells are separated by the sum of the
+    representing a table's cells. Any two cells are separated by the sum of the
   <code>cellSpacing</code> of each of the two cells.</p>
 
 <h2 id="Syntax">Syntax</h2>
@@ -51,4 +52,4 @@ t.cellSpacing = "10";</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.HTMLTableElement.cellSpacing")}}</p>
+<p>{{Compat}}</p>

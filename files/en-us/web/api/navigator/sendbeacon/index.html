@@ -11,12 +11,15 @@ tags:
 - Reference
 - Web Performance
 - sendBeacon
+browser-compat: api.Navigator.sendBeacon
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p><span class="seoSummary">The <code><strong>navigator.sendBeacon()</strong></code>
+<p>The <code><strong>navigator.sendBeacon()</strong></code>
     method {{glossary("Asynchronous", "asynchronously")}} sends a small amount of data
-    over {{Glossary("HTTP")}} to a web server.</span> It’s intended to be used for
+    over {{Glossary("HTTP")}} to a web server.</p>
+
+<p>It’s intended to be used for
     sending analytics data to a web server, and avoids some of the problems with
     legacy techniques for sending analytics, such as the use of
     {{domxref("XMLHttpRequest","XMLHttpRequest")}}.</p>
@@ -33,7 +36,7 @@ navigator.sendBeacon(<var>url</var>, <var>data</var>);
   <dt><code><var>url</var></code></dt>
   <dd>The URL that will receive the <var>data</var>. Can be relative or absolute.</dd>
   <dt><code><var>data</var></code> {{Optional_inline}}</dt>
-  <dd>A {{domxref("ArrayBuffer")}}, {{domxref("ArrayBufferView")}}, {{domxref("Blob")}},
+  <dd>A {{jsxref("ArrayBuffer")}}, {{domxref("ArrayBufferView")}}, {{domxref("Blob")}},
     {{domxref("DOMString")}}, {{domxref("FormData")}}, or {{domxref("URLSearchParams")}}
     object containing the data to send.</dd>
 </dl>
@@ -126,26 +129,11 @@ navigator.sendBeacon(<var>url</var>, <var>data</var>);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Beacon', '#sendbeacon-method', 'sendBeacon()')}}</td>
-      <td>{{Spec2('Beacon')}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Navigator.sendBeacon")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

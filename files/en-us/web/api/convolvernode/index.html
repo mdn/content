@@ -7,13 +7,14 @@ tags:
   - Interface
   - Reference
   - Web Audio API
+browser-compat: api.ConvolverNode
 ---
 <p>{{APIRef("Web Audio API")}}</p>
 
 <p>The <code>ConvolverNode</code> interface is an {{domxref("AudioNode")}} that performs a Linear Convolution on a given {{domxref("AudioBuffer")}}, often used to achieve a reverb effect. A <code>ConvolverNode</code> always has exactly one input and one output.</p>
 
 <div class="note">
-<p><strong>Note</strong>: For more information on the theory behind Linear Convolution, see the <a href="https://en.wikipedia.org/wiki/Convolution">Convolution article on Wikipedia</a>.</p>
+<p><strong>Note:</strong> For more information on the theory behind Linear Convolution, see the <a href="https://en.wikipedia.org/wiki/Convolution">Convolution article on Wikipedia</a>.</p>
 </div>
 
 <table class="properties">
@@ -68,7 +69,7 @@ tags:
 <p>The following example shows basic usage of an AudioContext to create a convolver node.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You will need to find an impulse response to complete the example below. See this <a href="https://codepen.io/DonKarlssonSan/pen/doVKRE">Codepen</a> for an applied example.</p>
+<p><strong>Note:</strong> You will need to find an impulse response to complete the example below. See this <a href="https://codepen.io/DonKarlssonSan/pen/doVKRE">Codepen</a> for an applied example.</p>
 </div>
 
 <pre class="brush: js">let audioCtx = new window.AudioContext();
@@ -95,24 +96,11 @@ reverb.connect(audioCtx.destination);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-		<tr>
-			<td>{{SpecName('Web Audio API', '#ConvolverNode', 'ConvolverNode')}}</td>
-			<td>{{Spec2('Web Audio API')}}</td>
-			<td></td>
-		</tr>
-	</tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.ConvolverNode")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

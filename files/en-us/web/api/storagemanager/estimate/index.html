@@ -12,10 +12,11 @@ tags:
   - StorageManager
   - Usage
   - estimate
+browser-compat: api.StorageManager.estimate
 ---
 <p>{{securecontext_header}}{{APIRef("Storage")}}</p>
 
-<p><span class="seoSummary">The <strong><code>estimate()</code></strong> method of the {{domxref("StorageManager")}} interface asks the Storage Manager for how much storage the current <a href="/en-US/docs/Glossary/Same-origin_policy">origin</a> takes up (<code>usage</code>), and how much space is available (<code>quota</code>).</span></p>
+<p>The <strong><code>estimate()</code></strong> method of the {{domxref("StorageManager")}} interface asks the Storage Manager for how much storage the current <a href="/en-US/docs/Glossary/Same-origin_policy">origin</a> takes up (<code>usage</code>), and how much space is available (<code>quota</code>).</p>
 
 <p>This method operates asynchronously, so it returns a {{jsxref("Promise")}} which resolves once the information is available. The promise's fulfillment handler is called with a {{domxref("StorageEstimate")}} containing the usage and quota data.</p>
 
@@ -32,7 +33,7 @@ tags:
 <p>A {{jsxref('Promise')}} that resolves to an object which conforms to the {{domxref('StorageEstimate')}} dictionary. This dictionary contains estimates of how much space is available to the origin in {{domxref("StorageEstimate.quota")}}, as well as how much is currently used in {{domxref("StorageEstimate.usage")}}.</p>
 
 <div class="notecard note">
-<p><strong>The returned values are not exact;</strong> between compression, deduplication, and obfuscation for security reasons, they will be imprecise.</p>
+<p><strong>Note:</strong> The returned values are not exact: between compression, deduplication, and obfuscation for security reasons, they will be imprecise.</p>
 </div>
 
 <p>You may find that the <code>quota</code> varies from origin to origin. This variance is based on factors such as:</p>
@@ -69,26 +70,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Storage','#dom-storagemanager-estimate','estimate()')}}</td>
-   <td>{{Spec2('Storage')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.StorageManager.estimate")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

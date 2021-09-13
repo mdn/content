@@ -8,11 +8,12 @@ tags:
 - HTML DOM
 - Property
 - Reference
+browser-compat: api.GlobalEventHandlers.oninput
 ---
 <div>{{ApiRef("HTML DOM")}}</div>
 
 <p>The <strong><code>oninput</code></strong> property of the
-  {{domxref("GlobalEventHandlers")}} mixin is an {{domxref("EventHandler")}} that
+  {{domxref("GlobalEventHandlers")}} mixin is an <a href="/en-US/docs/Web/Events/Event_handlers">event handler</a> that
   processes {{event("input")}} events on the {{HTMLElement("input")}},
   {{HTMLElement("select")}}, and {{HTMLElement("textarea")}} elements. It also handles
   these events on elements where {{domxref("HTMLElement.contentEditable",
@@ -65,33 +66,16 @@ function handleInput(e) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("HTML WHATWG", "#ix-handler-oninput", "oninput")}}</td>
-      <td>{{Spec2("HTML WHATWG")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.GlobalEventHandlers.oninput")}}</p>
+<p>{{Compat}}</p>
 
 <p>The following links discuss compatibility issues and fixes that may be helpful when
   working with older browsers:</p>
 
 <ul>
-  <li><a href="http://blog.danielfriesen.name/2010/02/16/html5-browser-maze-oninput-support/">A
-      HTML5 Browser maze, oninput support</a></li>
   <li><a href="http://www.useragentman.com/blog/2011/05/12/fixing-oninput-in-ie9-using-html5widgets/">Fixing
       oninput in IE Using html5Widgets</a> includes polyfill for IE6-8</li>
   <li>Mathias Bynens suggests <a href="http://mathiasbynens.be/notes/oninput">binding to both input and keydown</a>

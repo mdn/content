@@ -8,12 +8,13 @@ tags:
   - Method
   - Reference
   - write
+browser-compat: api.Document.write
 ---
 <div>{{ApiRef("DOM")}}</div>
 
 <p>The <strong><code>Document.write()</code></strong> method writes a string of text to a document stream opened by {{domxref("document.open()")}}.</p>
 
-<div class="note"><strong>Note</strong>: Because <code>document.write()</code> writes to the document <strong>stream</strong>, calling <code>document.write()</code> on a closed (loaded) document automatically calls <code>document.open()</code>, <a href="/en-US/docs/Web/API/Document/open#notes">which will clear the document</a>.</div>
+<div class="note"><p><strong>Note:</strong> Because <code>document.write()</code> writes to the document <strong>stream</strong>, calling <code>document.write()</code> on a closed (loaded) document automatically calls <code>document.open()</code>, <a href="/en-US/docs/Web/API/Document/open#notes">which will clear the document</a>.</p></div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -65,41 +66,21 @@ tags:
 &lt;/script&gt;
 </pre>
 
-<div class="note"><strong>Note</strong>: <code>document.write()</code> and {{domxref("document.writeln")}} <a href="/en-US/docs/Archive/Web/Writing_JavaScript_for_HTML">do not work in XHTML documents</a> (you'll get an "Operation is not supported" [<code>NS_ERROR_DOM_NOT_SUPPORTED_ERR</code>] error in the error console). This happens when opening a local file with the .xhtml file extension or for any document served with an <code>application/xhtml+xml</code> {{Glossary("MIME type")}}. More information is available in the <a href="https://www.w3.org/MarkUp/2004/xhtml-faq#docwrite">W3C XHTML FAQ</a>.</div>
+<div class="note"><p><strong>Note:</strong> <code>document.write()</code> and {{domxref("document.writeln")}} <a href="/en-US/docs/Archive/Web/Writing_JavaScript_for_HTML">do not work in XHTML documents</a> (you'll get an "Operation is not supported" [<code>NS_ERROR_DOM_NOT_SUPPORTED_ERR</code>] error in the error console). This happens when opening a local file with the .xhtml file extension or for any document served with an <code>application/xhtml+xml</code> {{Glossary("MIME type")}}. More information is available in the <a href="https://www.w3.org/MarkUp/2004/xhtml-faq#docwrite">W3C XHTML FAQ</a>.</p></div>
 
-<div class="note"><strong>Note</strong>: Using <code>document.write()</code> in <a href="/en-US/docs/Web/HTML/Element/script#attr-defer">deferred</a> or <a href="/en-US/docs/Web/HTML/Element/script#attr-async">asynchronous</a> scripts will be ignored and you'll get a message like "A call to <code>document.write()</code> from an asynchronously-loaded external script was ignored" in the error console.</div>
+<div class="note"><p><strong>Note:</strong> Using <code>document.write()</code> in <a href="/en-US/docs/Web/HTML/Element/script#attr-defer">deferred</a> or <a href="/en-US/docs/Web/HTML/Element/script#attr-async">asynchronous</a> scripts will be ignored and you'll get a message like "A call to <code>document.write()</code> from an asynchronously-loaded external script was ignored" in the error console.</p></div>
 
-<div class="note"><strong>Note</strong>: In Edge only, calling <code>document.write()</code> more than once in an {{HTMLElement("iframe")}} causes the error "SCRIPT70: Permission denied".</div>
+<div class="note"><p><strong>Note:</strong> In Edge only, calling <code>document.write()</code> more than once in an {{HTMLElement("iframe")}} causes the error "SCRIPT70: Permission denied".</p></div>
 
-<div class="note"><strong>Note</strong>: Starting with version 55, Chrome will not execute <code>&lt;script&gt;</code> elements injected via <code>document.write()</code> when specific conditions are met. For more information, refer to <a href="https://developers.google.com/web/updates/2016/08/removing-document-write">Intervening against document.write()</a>.</div>
+<div class="note"><p><strong>Note:</strong> Starting with version 55, Chrome will not execute <code>&lt;script&gt;</code> elements injected via <code>document.write()</code> when specific conditions are met. For more information, refer to <a href="https://developers.google.com/web/updates/2016/08/removing-document-write">Intervening against document.write()</a>.</p></div>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "#dom-document-write", "document.write(...)")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM2 HTML", "html.html#ID-75233634", "document.write(...)")}}</td>
-   <td>{{Spec2("DOM2 HTML")}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{Compat("api.Document.write")}}</div>
+<div>{{Compat}}</div>
 
 <h2 id="See_also">See also</h2>
 

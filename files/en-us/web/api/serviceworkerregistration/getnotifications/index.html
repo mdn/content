@@ -12,16 +12,17 @@ tags:
 - ServiceWorker
 - ServiceWorkerRegistration
 - getNotifications
+browser-compat: api.ServiceWorkerRegistration.getNotifications
 ---
 <div>{{APIRef("Service Workers API")}}</div>
 
-<p><span class="seoSummary">The <strong><code>getNotifications()</code></strong> method of
+<p>The <strong><code>getNotifications()</code></strong> method of
     the {{domxref("ServiceWorkerRegistration")}} interface returns a list of the
     notifications in the order that they were created from the current origin via the
     current service worker registration. Origins can have many active but
     differently-scoped service worker registrations. Notifications created by one service
     worker on the same origin will not be available to other active services workers on
-    that same origin.</span></p>
+    that same origin.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -60,23 +61,8 @@ navigator.serviceWorker.ready.then(function(registration) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Web Notifications',
-        '#dom-serviceworkerregistration-getnotifications',
-        'ServiceWorkerRegistration.getNotifications()')}}</td>
-      <td>{{Spec2('Web Notifications')}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.ServiceWorkerRegistration.getNotifications")}}</p>
+<p>{{Compat}}</p>

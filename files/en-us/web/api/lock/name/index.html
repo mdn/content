@@ -10,12 +10,13 @@ tags:
 - lock
 - mode
 - name
+browser-compat: api.Lock.name
 ---
 <p>{{SeeCompatTable}}{{APIRef("Web Locks")}}</p>
 
-<p><span class="seoSummary">The <strong><code>name</code></strong> read-only property of
+<p>The <strong><code>name</code></strong> read-only property of
     the {{domxref("Lock")}} interface returns the <em>name</em> passed to
-    {{domxref('LockManager.request')}} selected when the lock was requested.</span></p>
+    {{domxref('LockManager.request')}} selected when the lock was requested.</p>
 
 <p>The name of a lock is passed by script when the lock is requested. The name is selected
   by the developer to represent an abstract resource for which use is being coordinated
@@ -48,21 +49,8 @@ function show_lock_properties(lock) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Web Locks','#dom-lock-name','name')}}</td>
-      <td>{{Spec2('Web Locks')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Lock.name")}}</p>
+<p>{{Compat}}</p>

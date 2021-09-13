@@ -10,6 +10,7 @@ tags:
 - Reference
 - Storage
 - name
+browser-compat: api.IDBObjectStore.name
 ---
 <p>{{ APIRef("IndexedDB") }}</p>
 
@@ -28,8 +29,8 @@ var <em>myObjectStoreName</em> = <em>IDBObjectStore</em>.name;
 
 <h3 id="Value">Value</h3>
 
-<p><span style="line-height: 1.5;">A {{domxref("DOMString")}} containing the object
-    store's name.</span></p>
+<p>A {{domxref("DOMString")}} containing the object
+    store's name.</p>
 
 <h3 id="Exceptions">Exceptions</h3>
 
@@ -51,19 +52,15 @@ var <em>myObjectStoreName</em> = <em>IDBObjectStore</em>.name;
 
 <p>In the following code snippet, we open a read/write transaction on our database and add
   some data to an object store using <code>add()</code>. After the object store has been
-  created, we log <span
-    style="background-color: #fafbfc; font-family: consolas,monaco,andale mono,monospace; font-size: 1rem; line-height: 19px; white-space: pre;">objectStore.name</span> to
-  the console. <span style="line-height: 1.5;">For a full working example, see
-    our </span><a href="https://github.com/mdn/to-do-notifications/"
-    style="line-height: 1.5;">To-do Notifications</a><span style="line-height: 1.5;"> app
-    (</span><a href="https://mdn.github.io/to-do-notifications/"
-    style="line-height: 1.5;">view example live</a><span
-    style="line-height: 1.5;">.)</span></p>
+  created, we log <code>objectStore.name</code> to
+  the console. For a full working example, see
+    our <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> app
+    (><a href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</p>
 
-<pre class="brush: js" style="font-size: 14px;">// Let us open our database
-<span style="line-height: 1.5;">var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+<pre class="brush: js">// Let us open our database
+var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-</span><span style="line-height: 1.5;">DBOpenRequest.onsuccess = function(event) {</span>
+DBOpenRequest.onsuccess = function(event) {
   note.innerHTML += '&lt;li&gt;Database initialised.&lt;/li&gt;';
 
   // store the result of opening the database in the db variable.
@@ -105,29 +102,11 @@ function addData() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('IndexedDB', '#dom-idbobjectstore-name', 'name')}}</td>
-      <td>{{Spec2('IndexedDB')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("IndexedDB 2", "#dom-idbobjectstore-name", "name")}}</td>
-      <td>{{Spec2("IndexedDB 2")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.IDBObjectStore.name")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

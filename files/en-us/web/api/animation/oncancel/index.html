@@ -10,6 +10,7 @@ tags:
   - Web Animations
   - oncancel
   - web animations api
+browser-compat: api.Animation.oncancel
 ---
 <p>{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}</p>
 
@@ -18,7 +19,7 @@ tags:
 <p>The <code>cancel</code> event can be triggered manually with {{domxref("Animation.cancel()")}} when the animation enters the <code>"idle"</code> play state from another state, such as when the animation is removed from an element before it finishes playing</p>
 
 <div class="note">
-<p>Creating a new animation that is initially idle does not trigger a {{event("cancel")}} event on the new animation.</p>
+<p><strong>Note:</strong> Creating a new animation that is initially idle does not trigger a {{event("cancel")}} event on the new animation.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -40,24 +41,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Animations', '#dom-animation-oncancel', 'Animation.oncancel' )}}</td>
-   <td>{{Spec2('Web Animations')}}</td>
-   <td>Editor's draft.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Animation.oncancel")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -1,0 +1,107 @@
+---
+title: Element.append()
+slug: Web/API/Element/append
+tags:
+  - API
+  - DOM
+  - Method
+  - Node
+  - Element
+  - Reference
+browser-compat: api.Element.append
+---
+<p>{{APIRef("DOM")}}</p>
+
+<p>The <strong><code>Element.append()</code></strong> method
+  inserts a set of {{domxref("Node")}} objects or {{domxref("DOMString")}} objects after
+  the last child of the <code>Element</code>. {{domxref("DOMString")}} objects
+  are inserted as equivalent {{domxref("Text")}} nodes.</p>
+
+<p>Differences from {{domxref("Node.appendChild()")}}:</p>
+
+<ul>
+  <li><code>Element.append()</code> allows you to also append {{domxref("DOMString")}}
+    objects, whereas <code>Node.appendChild()</code> only accepts {{domxref("Node")}}
+    objects.</li>
+  <li><code>Element.append()</code> has no return value, whereas
+    <code>Node.appendChild()</code> returns the appended {{domxref("Node")}} object.</li>
+  <li><code>Element.append()</code> can append several nodes and strings, whereas
+    <code>Node.appendChild()</code> can only append one node.</li>
+</ul>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="brush: js">
+append(...nodesOrDOMStrings)
+</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<dl>
+  <dt><code>nodesOrDOMStrings</code></dt>
+  <dd>A set of {{domxref("Node")}} or {{domxref("DOMString")}} objects to insert.</dd>
+</dl>
+
+<h3 id="Exceptions">Exceptions</h3>
+
+<ul>
+  <li>{{domxref("HierarchyRequestError")}}: Node cannot be inserted at the specified point
+    in the hierarchy.</li>
+</ul>
+
+<h2 id="Examples">Examples</h2>
+
+<h3 id="Appending_an_element">Appending an element</h3>
+
+<pre class="brush: js">let div = document.createElement("div")
+let p = document.createElement("p")
+div.append(p)
+
+console.log(div.childNodes) // NodeList [ &lt;p&gt; ]
+</pre>
+
+<h3 id="Appending_text">Appending text</h3>
+
+<pre class="brush: js">let div = document.createElement("div")
+div.append("Some text")
+
+console.log(div.textContent) // "Some text"</pre>
+
+<h3 id="Appending_an_element_and_text">Appending an element and text</h3>
+
+<pre class="brush: js">let div = document.createElement("div")
+let p = document.createElement("p")
+div.append("Some text", p)
+
+console.log(div.childNodes) // NodeList [ #text "Some text", &lt;p&gt; ]</pre>
+
+<h3 id="The_append_method_is_unscopable">The append method is unscopable</h3>
+
+<p>The <code>append()</code> method is not scoped into the <code>with</code> statement.
+  See {{jsxref("Symbol.unscopables")}} for more information.</p>
+
+<pre class="brush: js">let div = document.createElement("div")
+
+with(div) {
+  append("foo")
+}
+// ReferenceError: append is not defined </pre>
+
+
+<h2 id="Specifications">Specifications</h2>
+
+{{Specifications}}
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+  <li>{{domxref("Element.prepend()")}}</li>
+  <li>{{domxref("Node.appendChild()")}}</li>
+  <li>{{domxref("Element.after()")}}</li>
+  <li>{{domxref("Element.insertAdjacentElement()")}}</li>
+  <li>{{domxref("NodeList")}}</li>
+</ul>

@@ -2,20 +2,22 @@
 title: Window.requestAnimationFrame()
 slug: Web/API/window/requestAnimationFrame
 tags:
-- API
-- Animations
-- Drawing
-- Games
-- Graphics
-- HTML DOM
-- Intermediate
-- JavaScript timers
-- Method
-- Performance
-- Reference
-- Scheduling
-- Window
-- requestAnimationFrame
+  - API
+  - Animations
+  - Drawing
+  - Games
+  - Graphics
+  - HTML DOM
+  - Intermediate
+  - JavaScript timers
+  - Method
+  - Performance
+  - Reference
+  - Scheduling
+  - Window
+  - requestAnimationFrame
+  - Polyfill
+browser-compat: api.Window.requestAnimationFrame
 ---
 <div>{{APIRef}}</div>
 
@@ -24,9 +26,9 @@ tags:
   specified function to update an animation before the next repaint. The method takes a
   callback as an argument to be invoked before the repaint.</p>
 
-<div class="note"><strong>Note:</strong> Your callback routine must itself call
+<div class="note"><p><strong>Note:</strong> Your callback routine must itself call
   <code>requestAnimationFrame()</code> again if you want to animate another frame at the
-  next repaint. <code>requestAnimationFrame()</code> is 1 shot.</div>
+  next repaint. <code>requestAnimationFrame()</code> is 1 shot.</p></div>
 
 <p>You should call this method whenever you're ready to update your animation onscreen.
   This will request that your animation function be called before the browser performs the
@@ -38,7 +40,7 @@ tags:
 
 <p>The callback method is passed a single argument, a {{domxref("DOMHighResTimeStamp")}},
   which indicates the current time (based on the number of milliseconds since <a
-    href="/en-US/docs/Web/API/DOMHighResTimeStamp#The_time_origin">time origin</a>). When
+    href="/en-US/docs/Web/API/DOMHighResTimeStamp#the_time_origin">time origin</a>). When
   multiple callbacks queued by <code>requestAnimationFrame()</code> begin to fire in a
   single frame, each receives the same timestamp even though time has passed during the
   computation of every previous callback's workload (in the code example below we only
@@ -47,7 +49,7 @@ tags:
   (1000 µs).</p>
 
 <div class="notecard warning">
-  <p>Be sure to always use the first argument (or some other method for getting the
+  <p><strong>Warning:</strong> Be sure to always use the first argument (or some other method for getting the
     current time) to calculate how much the animation will progress in a frame,
     <strong>otherwise the animation will run faster on high refresh rate screens</strong>.
     Check the example below for a way to do this.</p>
@@ -85,17 +87,21 @@ tags:
   (<code>0.1 * 2000</code>) to the right of its initial position.</p>
 
 <pre class="brush: js">const element = document.getElementById('some-element-you-want-to-animate');
-let start;
+let start, previousTimeStamp;
 
 function step(timestamp) {
   if (start === undefined)
     start = timestamp;
   const elapsed = timestamp - start;
 
-  // `Math.min()` is used here to make sure that the element stops at exactly 200px.
-  element.style.transform = 'translateX(' + Math.min(0.1 * elapsed, 200) + 'px)';
+  if (previousTimeStamp !== timestamp) {
+    // Math.min() is used here to make sure the element stops at exactly 200px
+    const count = Math.min(0.1 * elapsed, 200);
+    element.style.transform = 'translateX(' + count + 'px)';
+  }
 
   if (elapsed &lt; 2000) { // Stop the animation after 2 seconds
+    previousTimeStamp = timestamp
     window.requestAnimationFrame(step);
   }
 }
@@ -110,33 +116,11 @@ window.requestAnimationFrame(step);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('HTML WHATWG', '#animation-frames', 'requestAnimationFrame')}}</td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td>No change, supersedes the previous one.</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('RequestAnimationFrame',
-        '#dom-windowanimationtiming-requestanimationframe', 'requestAnimationFrame')}}
-      </td>
-      <td>{{Spec2('RequestAnimationFrame')}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Window.requestAnimationFrame")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -147,18 +131,19 @@ window.requestAnimationFrame(step);
       href="http://weblogs.mozillazine.org/roc/archives/2010/08/mozrequestanima.html">mozRequestAnimationFrame</a>
     - Blog post</li>
   <li><a
-      href="http://paulirish.com/2011/requestanimationframe-for-smart-animating/">requestAnimationFrame
+      href="https://paulirish.com/2011/requestanimationframe-for-smart-animating/">requestAnimationFrame
       for smart animating</a> - Blog post</li>
   <li><a
-      href="http://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/">Animating
+      href="https://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/">Animating
       with javascript: from setInterval to requestAnimationFrame</a> - Blog post</li>
   <li><a
-      href="http://blogs.msdn.com/b/ie/archive/2011/07/05/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-1.aspx">Using
+      href="https://blogs.msdn.com/b/ie/archive/2011/07/05/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-1.aspx">Using
       PC Hardware more efficiently in HTML5: New Web Performance APIs, Part 1</a> - Blog
     post</li>
-  <li><a href="http://www.testufo.com/#test=animation-time-graph">TestUFO: Test your web
+  <li><a href="https://www.testufo.com/#test=animation-time-graph">TestUFO: Test your web
       browser for requestAnimationFrame() Timing Deviations</a></li>
   <li>Paul Irish: <a class="external external-icon"
       href="http://updates.html5rocks.com/2012/05/requestAnimationFrame-API-now-with-sub-millisecond-precision">requestAnimationFrame
       API: now with sub-millisecond precision</a></li>
+  <li><a href="https://github.com/behnammodi/polyfill/blob/master/window.polyfill.js">A polyfill</a></li>
 </ul>

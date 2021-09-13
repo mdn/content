@@ -10,6 +10,7 @@ tags:
   - Window
   - blur
   - onblur
+browser-compat: api.Window.blur_event
 ---
 <div>{{APIRef}}</div>
 
@@ -86,30 +87,10 @@ window.addEventListener('focus', play);</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("UI Events", "#event-type-blur")}}</td>
-   <td>{{Spec2("UI Events")}}</td>
-   <td>Added info that this event is composed.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM3 Events", "#event-type-blur")}}</td>
-   <td>{{Spec2("DOM3 Events")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Window.blur_event")}}</p>
+<p>{{Compat}}</p>
 
 <p>The value of {{DOMxRef("Document.activeElement")}} varies across browsers while this event is being handled ({{bug(452307)}}): IE10 sets it to the element that the focus will move to, while Firefox and Chrome often set it to the <code>body</code> of the document.</p>
 

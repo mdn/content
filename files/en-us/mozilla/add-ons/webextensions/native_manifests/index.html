@@ -150,20 +150,20 @@ tags:
 <p>For example:</p>
 
 <pre class="brush: json line-numbers  language-json">{
-  &quot;name&quot;: &quot;favourite-colour-examples@mozilla.org&quot;,
+  &quot;name&quot;: &quot;favourite-color-examples@mozilla.org&quot;,
   &quot;description&quot;: &quot;ignored&quot;,
   &quot;type&quot;: &quot;storage&quot;,
   &quot;data&quot;:
   {
-    &quot;colour&quot;: &quot;management thinks it should be blue!&quot;
+    &quot;color&quot;: &quot;management thinks it should be blue!&quot;
   }
 }</pre>
 
-<p>Given this JSON manifest, the <code>favourite-colour-examples@mozilla.org</code> extension could access the data using code like this:</p>
+<p>Given this JSON manifest, the <code>favourite-color-examples@mozilla.org</code> extension could access the data using code like this:</p>
 
-<pre class="brush: js line-numbers language-js">let storageItem = browser.storage.managed.get('colour');
+<pre class="brush: js line-numbers language-js">let storageItem = browser.storage.managed.get('color');
 storageItem.then((res) =&gt; {
-  console.log(`Managed colour is: ${res.colour}`);
+  console.log(`Managed color is: ${res.color}`);
 });</pre>
 
 <h2 id="PKCS_11_manifests">PKCS #11 manifests</h2>

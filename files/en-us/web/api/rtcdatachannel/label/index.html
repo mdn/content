@@ -2,15 +2,15 @@
 title: RTCDataChannel.label
 slug: Web/API/RTCDataChannel/label
 tags:
-- Experimental
-- Property
-- RTCDataChannel
-- Read-only
-- Reference
-- WebRTC
-- label
+  - Property
+  - RTCDataChannel
+  - Read-only
+  - Reference
+  - WebRTC
+  - label
+browser-compat: api.RTCDataChannel.label
 ---
-<p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
+<p>{{APIRef("WebRTC")}}</p>
 
 <p>The read-only <code>RTCDataChannel</code> property <code><strong>label</strong></code>
   returns a {{domxref("DOMString")}} containing a name describing the data channel. These
@@ -24,7 +24,7 @@ tags:
 <p>A unique ID can be found in the {{domxref("RTCDataChannel.id", "id")}} property.</p>
 
 <div class="note">
-  <p>A data channel's label is set when the channel is created by calling
+  <p><strong>Note:</strong> A data channel's label is set when the channel is created by calling
     {{domxref("RTCPeerConnection.createDataChannel()")}}. It cannot be changed after that.
   </p>
 </div>
@@ -46,41 +46,25 @@ tags:
   time later, sets the content of a UI element to display the channel's name.</p>
 
 <pre class="brush: js">var pc = new RTCPeerConnection();
-var dc = pc.createDataChannel("my channel");
+var dc = pc.createDataChannel(&quot;my channel&quot;);
 
 /* ... */
-<code>
-document.getElementById("channel-name").innerHTML =
-          "&lt;span class='channelName'&gt;" + dc.label + "&lt;/span&gt;";</code></pre>
+
+document.getElementById(&quot;channel-name&quot;).innerHTML =
+          &quot;&lt;span class='channelName'&gt;&quot; + dc.label + &quot;&lt;/span&gt;&quot;;</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table" style="height: 49px; width: 1000px;">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ SpecName('WebRTC 1.0', '#dom-datachannel-label', 'RTCDataChannel.label') }}
-      </td>
-      <td>{{ Spec2('WebRTC 1.0') }}</td>
-      <td>Initial specification.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCDataChannel.label")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
+  <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a></li>
   <li>{{domxref("RTCDataChannel")}}</li>
   <li>{{domxref("RTCDataChannel.id")}}</li>
   <li>{{domxref("RTCPeerConnection.createDataChannel()")}}</li>

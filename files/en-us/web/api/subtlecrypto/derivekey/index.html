@@ -2,13 +2,14 @@
 title: SubtleCrypto.deriveKey()
 slug: Web/API/SubtleCrypto/deriveKey
 tags:
-- API
-- Crypto
-- Method
-- Reference
-- SubtleCrypto
-- Web
-- deriveKey
+  - API
+  - Crypto
+  - Method
+  - Reference
+  - SubtleCrypto
+  - Web
+  - deriveKey
+browser-compat: api.SubtleCrypto.deriveKey
 ---
 <p>{{APIRef("Web Crypto API")}}{{SecureContext_header}}</p>
 
@@ -24,25 +25,25 @@ tags:
 
 <p>It's worth noting that the three key derivation algorithms you can use have quite
   different characteristics and are appropriate in quite different situations. See <a
-    href="#Supported_algorithms">Supported algorithms</a> for some more detail on this.
+    href="#supported_algorithms">Supported algorithms</a> for some more detail on this.
 </p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">const <em>result</em> = crypto<code>.subtle.deriveKey(
+<pre class="brush: js">const <em>result</em> = crypto.subtle.deriveKey(
     <em>algorithm</em>,
     <em>baseKey</em>,
     <em>derivedKeyAlgorithm</em>,
     <em>extractable</em>,
     <em>keyUsages</em>
-)</code>;
+);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <ul>
   <li><code><em>algorithm</em></code> is an object defining the <a
-      href="#Supported_algorithms">derivation algorithm</a> to use.
+      href="#supported_algorithms">derivation algorithm</a> to use.
 
     <ul>
       <li>To use <a href="#ecdh">ECDH</a>, pass an
@@ -66,18 +67,18 @@ tags:
   <li><code><em>derivedKeyAlgorithm</em></code> is an object defining the algorithm the
     derived key will be used for.
     <ul>
-      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/sign#HMAC">HMAC</a>: pass an
+      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/sign#hmac">HMAC</a>: pass an
         <code><a href="/en-US/docs/Web/API/HmacKeyGenParams">HmacKeyGenParams</a></code>
         object.</li>
-      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#AES-CTR">AES-CTR</a>, <a
-          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#AES-CBC">AES-CBC</a>, <a
-          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#AES-GCM">AES-GCM</a>, or <a
-          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#AES-KW">AES-KW</a>: pass an
+      <li>For <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr">AES-CTR</a>, <a
+          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc">AES-CBC</a>, <a
+          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm">AES-GCM</a>, or <a
+          href="/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-kw">AES-KW</a>: pass an
         <code><a href="/en-US/docs/Web/API/AesKeyGenParams">AesKeyGenParams</a></code>
         object.</li>
     </ul>
   </li>
-  <li><code><em>extractable</em></code> is a {{jsxref("Boolean")}} indicating whether it
+  <li><code><em>extractable</em></code> is a boolean value indicating whether it
     will be possible to export  the key using {{domxref("SubtleCrypto.exportKey()")}} or
     {{domxref("SubtleCrypto.wrapKey()")}}.</li>
   <li><code><em>keyUsages</em></code>  is an {{jsxref("Array")}} indicating what can be
@@ -94,11 +95,11 @@ tags:
         "verify")}} signatures.</li>
       <li><code>deriveKey</code>: The key may be used in
         {{domxref("SubtleCrypto.deriveKey()", "deriving a new key")}}.</li>
-      <li><code>"deriveBits"</code>: The key may be used in
+      <li><code>deriveBits</code>: The key may be used in
         {{domxref("SubtleCrypto.deriveBits()", "deriving bits")}}.</li>
-      <li><code>"wrapKey"</code>: The key may be used to
+      <li><code>wrapKey</code>: The key may be used to
         {{domxref("SubtleCrypto.wrapKey()", "wrap a key")}}.</li>
-      <li><code>"unwrapKey"</code>: The key may be used to
+      <li><code>unwrapKey</code>: The key may be used to
         {{domxref("SubtleCrypto.unwrapKey()", "unwrap a key")}}.</li>
     </ul>
   </li>
@@ -117,9 +118,8 @@ tags:
 
 <ul>
   <li>{{exception("InvalidAccessError")}}</li>
-  <li>Raised when the master key is not a key for the requested derivation algorithm or if
-    the {{domxref("CryptoKey.usages")}} value of that key doesn't contain
-    <code>deriveKey</code>.</li>
+  <li>Raised when the master key is not a key for the requested derivation algorithm 
+    or if the <em>keyUsages</em> value of that key doesn't contain <code>deriveKey</code>.</li>
   <li>{{exception("NotSupported")}}</li>
   <li>Raised when trying to use an algorithm that is either unknown or isn't suitable for
     derivation, or if the algorithm requested for the derived key doesn't define a key
@@ -168,7 +168,7 @@ tags:
 <h2 id="Examples">Examples</h2>
 
 <div class="notecard note">
-  <p><strong>Note</strong>: You can <a
+  <p><strong>Note:</strong> You can <a
       href="https://mdn.github.io/dom-examples/web-crypto/derive-key/index.html">try the
       working examples</a> on GitHub.</p>
 </div>
@@ -294,25 +294,11 @@ async function encrypt(plaintext, salt, iv) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{ SpecName('Web Crypto API', '#dfn-SubtleCrypto-method-deriveKey',
-        'SubtleCrypto.deriveKey()') }}</td>
-      <td>{{ Spec2('Web Crypto API') }}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.SubtleCrypto.deriveKey")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

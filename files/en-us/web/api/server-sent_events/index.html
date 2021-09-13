@@ -9,12 +9,12 @@ tags:
 ---
 <p>{{DefaultAPISidebar("Server Sent Events")}}</p>
 
-<p>Traditionally, a web page has to send a request to the server to receive new data; that is, the page requests data from the server. With server-sent events, it's possible for a server to send new data to a web page at any time, by pushing messages to the web page. These incoming messages can be treated as <em><a href="/en-US/docs/DOM/event">Events</a> + data</em> inside the web page.</p>
+<p>Traditionally, a web page has to send a request to the server to receive new data; that is, the page requests data from the server. With server-sent events, it's possible for a server to send new data to a web page at any time, by pushing messages to the web page. These incoming messages can be treated as <em><a href="/en-US/docs/Web/API/Event">Events</a> + data</em> inside the web page.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
 <div class="notecard note">
-<p>Firefox does not currently support the use of server-sent events in service workers (it does support them dedicated and shared workers). See {{bug(1681218)}}.</p>
+<p><strong>Note:</strong> Firefox does not currently support the use of server-sent events in service workers (it does support them in dedicated and shared workers). See {{bug(1681218)}}.</p>
 </div>
 
 <h2 id="Concepts_and_usage">Concepts and usage</h2>
@@ -36,21 +36,14 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
+<table>
   <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
+   <th>Specification</th>
   </tr>
- </thead>
- <tbody>
   <tr>
-   <td>{{SpecName('HTML WHATWG', '#server-sent-events', 'Server-sent events')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
+   <td><a href="https://html.spec.whatwg.org/multipage/server-sent-events.html#server-sent-events">HTML Living Standard<br/><small># server-sent-events</small></a></td>
   </tr>
- </tbody>
+
 </table>
 
 <h2 id="See_also">See also</h2>
@@ -63,21 +56,21 @@ tags:
  <li>Remy Sharp’s <a class="link-https" href="https://github.com/remy/polyfills/blob/master/EventSource.js">EventSource polyfill</a></li>
  <li>Yaffle’s <a class="link-https" href="https://github.com/Yaffle/EventSource">EventSource polyfill</a></li>
  <li>Rick Waldron’s <a class="link-https" href="https://github.com/rwldrn/jquery.eventsource">jquery plugin</a></li>
- <li>intercooler.js <a href="http://intercoolerjs.org/docs.html#sse">declarative SSE support</a></li>
+ <li>intercooler.js <a href="https://intercoolerjs.org/docs.html#sse">declarative SSE support</a></li>
 </ul>
 
 <h3 id="Related_Topics">Related Topics</h3>
 
 <ul>
- <li><a href="/en-US/docs/AJAX">AJAX</a></li>
- <li><a href="/en-US/docs/JavaScript">JavaScript</a></li>
- <li><a href="/en-US/docs/WebSockets">WebSockets</a></li>
+ <li><a href="/en-US/docs/Web/Guide/AJAX">AJAX</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript">JavaScript</a></li>
+ <li><a href="/en-US/docs/Web/API/WebSockets_API">WebSockets</a></li>
 </ul>
 
 <h3 id="Other_resources">Other resources</h3>
 
 <ul>
- <li>A <a href="http://hacks.mozilla.org/2011/06/a-wall-powered-by-eventsource-and-server-sent-events/">Twitter like application</a> powered by server-sent events and <a class="link-https" href="https://github.com/mozilla/webowonder-demos/tree/master/demos/friends%20timeline" title="https://github.com/mozilla/webowonder-demos/tree/master/demos/friends timeline">its code on Github</a>.</li>
- <li><a href="http://dsheiko.com/weblog/html5-and-server-sent-events">HTML5 and Server-sent events</a></li>
- <li><a href="http://rajudasa.blogspot.in/2012/05/html5-server-sent-events-using-aspnet.html">Server-sent events using Asp.Net</a></li>
+ <li>A <a href="https://hacks.mozilla.org/2011/06/a-wall-powered-by-eventsource-and-server-sent-events/">Twitter like application</a> powered by server-sent events and <a class="link-https" href="https://github.com/mozilla/webowonder-demos/tree/master/demos/friends%20timeline">its code on Github</a>.</li>
+ <li><a href="https://dsheiko.com/weblog/html5-and-server-sent-events">HTML5 and Server-sent events</a></li>
+ <li><a href="https://rajudasa.blogspot.in/2012/05/html5-server-sent-events-using-aspnet.html">Server-sent events using Asp.Net</a></li>
 </ul>

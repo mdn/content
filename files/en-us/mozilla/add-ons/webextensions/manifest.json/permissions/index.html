@@ -8,6 +8,7 @@ tags:
   - Reference
   - WebExtensions
   - manifest.json
+browser-compat: webextensions.manifest.permissions
 ---
 <p>{{AddonSidebar}}</p>
 
@@ -38,7 +39,7 @@ tags:
 
 <p>If you request permissions using this key, then the browser may inform the user at install time that the extension is requesting certain privileges, and ask them to confirm that they are happy to grant these privileges. The browser may also allow the user to inspect an extension's privileges after installation. As the request to grant privileges may impact on users' willingness to install your extension, requesting privileges is worth careful consideration. For example, you want to avoid requesting unnecessary permissions and may want to provide information about why you are requesting permissions in your extension's store description. More information on the issues you should consider is provided in the article <a href="https://extensionworkshop.com/documentation/develop/request-the-right-permissions/">Request the right permissions</a>.</p>
 
-<p>For information on how to test and preview permission requests, see <a href="https://extensionworkshop.com/documentation/develop/test-permission-requests/">Test permission requests</a>  on the Extension Workshop site.</p>
+<p>For information on how to test and preview permission requests, see <a href="https://extensionworkshop.com/documentation/develop/test-permission-requests/">Test permission requests</a> on the Extension Workshop site.</p>
 
 <p>The key can contain three kinds of permissions:</p>
 
@@ -57,9 +58,9 @@ tags:
 <ul>
  <li><a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a> and <a href="/en-US/docs/Web/API/Fetch_API">fetch</a> access to those origins without cross-origin restrictions (even for requests made from content scripts)</li>
  <li>the ability to read tab-specific metadata without the "tabs" permission, such as the <code>url</code>, <code>title</code>, and <code>favIconUrl</code> properties of {{WebExtAPIRef("tabs.Tab")}} objects</li>
- <li>the ability to inject scripts programmatically (using {{webextAPIref("tabs/executeScript", "tabs.executeScript()")}} ) into pages served from those origins</li>
- <li>the ability to receive events from the {{webextAPIref("webrequest")}}  API for these hosts</li>
- <li>the ability to access cookies for that host using the {{webextAPIref("cookies")}} API, as long as the <code>"cookies"</code> API permission is also included.</li>
+ <li>the ability to inject scripts programmatically (using {{webextAPIref("tabs/executeScript", "tabs.executeScript()")}}) into pages served from those origins</li>
+ <li>the ability to receive events from the {{webextAPIref("webrequest")}} API for these hosts</li>
+ <li>the ability to access cookies for that host using the {{webextAPIref("cookies")}} API, as long as the <code>"cookies"</code> API permission is also included.</li>
  <li>bypassing tracking protection for extension pages where a host is specified as a full domain or with wildcards. Content scripts, however, can only bypass tracking protection for hosts specified with a full domain.</li>
 </ul>
 
@@ -129,7 +130,7 @@ tags:
 <p>In most cases the permission just grants access to the API, with the following exceptions:</p>
 
 <ul>
- <li><code>tabs</code> gives you access to {{webextAPIref("tabs", "privileged parts of the <code>tabs</code> API")}} without the need for <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a>: <code>Tab.url</code>, <code>Tab.title</code>, and <code>Tab.faviconUrl</code>.
+ <li><code>tabs</code> gives you access to {{webextAPIref("tabs", "privileged parts of the <code>tabs</code> API")}} without the need for <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a>: <code>Tab.url</code>, <code>Tab.title</code>, and <code>Tab.faviconUrl</code>.
 
   <ul>
    <li>In Firefox 85 and earlier, you also need <code>tabs</code> if you want to include <code>url</code> in the <code>queryInfo</code> parameter to {{webextAPIref("tabs/query", "tabs.query()")}}. The rest of the <code>tabs</code> API can be used without requesting any permission.</li>
@@ -148,7 +149,7 @@ tags:
 <p>"User interaction" includes:</p>
 
 <ul>
- <li>the user clicks the extension's {{webextAPIref("browserAction", "browser action", "", 1)}} or page action</li>
+ <li>the user clicks the extension's {{webextAPIref("browserAction", "browser action", "", 1)}} or page action</li>
  <li>the user selects its context menu item</li>
  <li>the user activates a keyboard shortcut defined by the extension</li>
 </ul>
@@ -162,15 +163,15 @@ tags:
 
 <p>The intention of this permission is to enable extensions to fulfill a common use case, without having to give them very powerful permissions. Many extensions want to "do something to the current page when the user asks".</p>
 
-<p>For example, consider an extension that wants to run a script in the current page when the user clicks a browser action. If the  <code>activeTab</code> permission did not exist, the extension would need to ask for the host permission <code>&lt;all_urls&gt;</code>. But this gives the extension more power than it needs: it could now execute scripts in <em>any tab</em>, <em>any time</em> it likes, instead of just the active tab and only in response to a user action.</p>
+<p>For example, consider an extension that wants to run a script in the current page when the user clicks a browser action. If the  <code>activeTab</code> permission did not exist, the extension would need to ask for the host permission <code>&lt;all_urls&gt;</code>. But this gives the extension more power than it needs: it could now execute scripts in <em>any tab</em>, <em>any time</em> it likes, instead of just the active tab and only in response to a user action.</p>
 
 <div class="notecard note">
 <p><strong>Note:</strong> You can only get access to the tab/data that was there, when the user interaction occurred (e.g. the click). When the active tab navigates away (e.g., due to finishing loading or some other event), the permission does not grant you access to the tab anymore.</p>
 </div>
 
-<p>Usually the tab that's granted <code>activeTab</code> is just the currently active tab, except in one case.  The {{webextAPIref("menus")}} API enables an extension to create a menu item which is shown if the user context-clicks on a tab (that is, on the element in the tabstrip that enables the user to switch from one tab to another).</p>
+<p>Usually the tab that's granted <code>activeTab</code> is just the currently active tab, except in one case.  The {{webextAPIref("menus")}} API enables an extension to create a menu item which is shown if the user context-clicks on a tab (that is, on the element in the tabstrip that enables the user to switch from one tab to another).</p>
 
-<p>If the user clicks such an item, then the <code>activeTab</code> permission is granted for the tab the user clicked, even if it's not the currently active tab (as of Firefox 63, {{bug(1446956)}}).</p>
+<p>If the user clicks such an item, then the <code>activeTab</code> permission is granted for the tab the user clicked, even if it's not the currently active tab (as of Firefox 63, {{bug(1446956)}}).</p>
 
 <h2 id="Clipboard_access">Clipboard access</h2>
 
@@ -191,7 +192,7 @@ tags:
 
 <ul>
  <li>Enables extensions to exceed any quota imposed by the {{WebExtAPIRef("storage/local", "storage.local")}} API</li>
- <li>In Firefox, enables extensions to create a {{webextAPIref("IndexedDB_API/Browser_storage_limits_and_eviction_criteria", '"persistent" IndexedDB database')}}, without the browser prompting the user for permission at the time the database is created.</li>
+ <li>In Firefox, enables extensions to create a <a href="/en-US/docs/Web/API/IndexedDB_API">"persistent" IndexedDB database</a> without the browser prompting the user for permission at the time the database is created.</li>
 </ul>
 
 <h2 id="Example">Example</h2>
@@ -210,6 +211,4 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("webextensions.manifest.permissions")}}</p>
+<p>{{Compat}}</p>

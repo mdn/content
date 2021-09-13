@@ -19,7 +19,7 @@ tags:
 
 <p class="summary">With our component plan worked out, it's now time to start updating our app from a completely static UI to one that actually allows us to interact and change things. In this article we'll do this, digging into events and state along the way, and ending up with an app in which we can successfully add and delete tasks, and toggle tasks as completed.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -353,7 +353,7 @@ const headingText = `${taskList.length} ${tasksNoun} remaining`;</pre>
   console.log(tasks[0])
 }</pre>
 
-<p>Next, we'll add <code>toggleTaskCompleted</code> to the props of each <code>&lt;Todo/&gt;</code> component rendered inside our <code>taskList</code>; update it like so:</p>
+<p>Next, we'll add <code>toggleTaskCompleted</code> to the props of each <code>&lt;Todo /&gt;</code> component rendered inside our <code>taskList</code>; update it like so:</p>
 
 <pre class="brush: js">const taskList = tasks.map(task =&gt; (
   &lt;Todo
@@ -405,7 +405,7 @@ const headingText = `${taskList.length} ${tasksNoun} remaining`;</pre>
 
 <h2 id="Deleting_a_task">Deleting a task</h2>
 
-<p>Deleting a task will follow a similar pattern to toggling its completed state: We need to define a function for updating our state, then pass that function into <code>&lt;Todo/&gt;</code> as a prop and call it when the right event happens.</p>
+<p>Deleting a task will follow a similar pattern to toggling its completed state: We need to define a function for updating our state, then pass that function into <code>&lt;Todo /&gt;</code> as a prop and call it when the right event happens.</p>
 
 <h3 id="The_deleteTask_callback_prop">The <code>deleteTask</code> callback prop</h3>
 
@@ -428,7 +428,7 @@ const headingText = `${taskList.length} ${tasksNoun} remaining`;</pre>
   /&gt;
 ));</pre>
 
-<p>In <code>Todo.js</code>, we want to call <code>props.deleteTask()</code> when the "Delete" button is pressed. <code>deleteTask()</code> needs to know the ID of the task that called it, so it can delete the correct task from the state</p>
+<p>In <code>Todo.js</code>, we want to call <code>props.deleteTask()</code> when the "Delete" button is pressed. <code>deleteTask()</code> needs to know the ID of the task that called it, so it can delete the correct task from the state.</p>
 
 <p>Update the "Delete" button inside Todo.js, like so:</p>
 
@@ -513,5 +513,15 @@ const headingText = `${taskList.length} ${tasksNoun} remaining`;</pre>
    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">TypeScript support in Svelte</a></li>
    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">Deployment and next steps</a></li>
   </ul>
+ </li>
+ <li>Angular
+   <ul>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started">Getting started with Angular</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning">Beginning our Angular todo list app</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling">Styling our Angular app</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component">Creating an item component</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering">Filtering our to-do items</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building">Building Angular applications and further resources</a></li>
+   </ul>
  </li>
 </ul>

@@ -4,44 +4,61 @@ slug: MDN/Structures/Page_types/API_reference_page_template
 tags:
   - API
   - Template
-  - reference page
+  - Reference
+browser-compat: path.to.feature.NameOfTheInterface
 ---
 <p>{{MDNSidebar}}</p>
 
+<!-- Remove div below here before publishing -->
 <div class="notecard note">
 <h2 id="Remove_before_publishing">Remove before publishing</h2>
 
-<h3 id="Title_and_slug">Title and slug</h3>
+<h3 id="Page_front_matter">Page front matter</h3>
 
-<p>An API reference page should have a <em>Title</em> of <em>Name of the interface the page is about</em>. For example, the <a href="/en-US/docs/Web/API/Request">Request</a> interface page has a <em>title</em> of <em>Request</em>.</p>
+<p>The frontmatter at the top of the page is used to define "page metadata". The values should be updated appropriately for the particular interface.</p>
 
-<p>The <em>Slug</em> (the last segment at the end of the URL) should also be filled in as <em>Name of the interface the page is about</em>, so <code>Request</code>'s slug is <em>Request</em>. This is usually filled in for you automatically.</p>
+<pre>---
+title: NameOfTheInterface
+slug: Web/API/NameOfTheInterface
+tags:
+  - API
+  - NameOfTheInterface
+  - NameOfTheAPI
+  - Reference
+  - Experimental
+
+browser-compat: path.to.feature.NameOfTheInterface
+---</pre>
+
+<dl>
+<dt><strong>title</strong></dt>
+<dd>Title heading displayed at top of page. This is just the name of the interface. For example, the <a href="/en-US/docs/Web/API/Request">Request</a> interface page has a <em>title</em> of <em>Request</em>.</dd>
+<dt>slug</dt>
+<dd>The end of the URL path after <code>https://developer.mozilla.org/en-US/docs/</code>). This will be formatted like <code>Web/API/NameOfTheParentInterface</code>. For example, <a href="/en-US/docs/Web/API/Request">Request</a> slug is "Web/API/Request".</dd>
+<dt>tags</dt>
+<dd><p>Include the following tags: <strong>API</strong>, <strong>Reference</strong>, <strong>Interface</strong>, <em>the name of the API</em> (e.g. <strong>WebVR</strong>), the name of the interface (e.g. <strong>Request</strong>), <strong>Experimental</strong> (if the technology is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental">experimental</a>), <strong>Secure context</strong> (if it is available in a secure context only), and <strong>Deprecated</strong> (if it is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete">deprecated</a>).</p>
+
+  <p>Optionally, you can elect to include some other tags that represent terms people might search for when looking for information on that technology. For example on WebVR interface pages we include <strong>VR</strong> and <strong>Virtual reality</strong>.</p></dd>
+<dt>browser-compat</dt>
+<dd><p>Replace the placeholder value <code>path.to.feature.NameOfTheMethod</code> with the query string for the method in the <a href="https://github.com/mdn/browser-compat-data">Browser compat data repo</a>. The toolchain automatically uses the key to populate the compatibility and specification sections (replacing the <code>\{{Compat}}</code> and <code>\{{Specifications}}</code> macros).</p>
+  
+  <p>Note that you may first need to create/update an entry for the API method in our <a href="https://github.com/mdn/browser-compat-data">Browser compat data repo</a>, and the entry for the API will need to include specification information. See our <a href="/en-US/docs/MDN/Structures/Compatibility_tables">guide on how to do this</a>.</p></dd>
+</dl>
 
 <h3 id="Top_macros">Top macros</h3>
 
 <p>There are five macro calls at the top of the template by default. You should update or delete them according to the advice below:</p>
 
 <ul>
- <li>\{{APIRef("<em>GroupDataName</em>")}} — this generates the left hand reference sidebar showing quick reference links related to the current page. For example, every page in the <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a> has the same sidebar, which points to the other pages in the API. To generate the correct sidebar for your API, you need to add a GroupData entry to our KumaScript GitHub repo, and include the entry's name inside the macro call in place of <em>GroupDataName</em>. See our <a href="/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference/Sidebars">API reference sidebars</a> guide for information on how to do this.</li>
- <li>\{{Draft}} — this generates a <strong>Draft</strong> banner that indicates that the page is not yet complete, and should only be removed when the first draft of the page is completely finished. After it is ready to be published, you can remove this.</li>
- <li>\{{SeeCompatTable}} — this generates a <strong>This is an experimental technology</strong> banner that indicates the technology is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental">experimental</a>). If the technology you are documenting is not experimental, you can remove this. If it is experimental, and the technology is hidden behind a pref in Firefox, you should also fill in an entry for it in the <a href="/en-US/docs/Mozilla/Firefox/Experimental_features">Experimental features in Firefox</a> page.</li>
- <li>\{{SecureContext_Header}} — this generates a <strong>Secure context</strong> banner that indicates the technology is only available in a <a href="/en-US/docs/Web/Security/Secure_Contexts">secure context</a>. If it isn't, then you can remove the macro call. If it is, then you should also fill in an entry for it in the <a href="/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts">Features restricted to secure contexts</a> page.</li>
- <li>\{{Deprecated_Header}} — this generates a <strong>Deprecated</strong> banner that indicates the technology is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete">deprecated</a>. If it isn't, then you can remove the macro call.</li>
- <li>\{{Interface_Overview("<em>GroupDataName</em>")}} {{Experimental_Inline}} — this generates the main body of the page (Constructor, Properties, Methods and Events).</li>
+ <li><code>\{{APIRef("<em>GroupDataName</em>")}}</code> — this generates the left hand reference sidebar showing quick reference links related to the current page. For example, every page in the <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a> has the same sidebar, which points to the other pages in the API. To generate the correct sidebar for your API, you need to add a GroupData entry to our KumaScript GitHub repo, and include the entry's name inside the macro call in place of <em>GroupDataName</em>. See our <a href="/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference/Sidebars">API reference sidebars</a> guide for information on how to do this.</li>
+ <li><code>\{{Draft}}</code> — this generates a <strong>Draft</strong> banner that indicates that the page is not yet complete, and should only be removed when the first draft of the page is completely finished. After it is ready to be published, you can remove this.</li>
+ <li><code>\{{SeeCompatTable}}</code> — this generates a <strong>This is an experimental technology</strong> banner that indicates the technology is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental">experimental</a>). If the technology you are documenting is not experimental, you can remove this. If it is experimental, and the technology is hidden behind a pref in Firefox, you should also fill in an entry for it in the <a href="/en-US/docs/Mozilla/Firefox/Experimental_features">Experimental features in Firefox</a> page.</li>
+ <li><code>\{{SecureContext_Header}}</code> — this generates a <strong>Secure context</strong> banner that indicates the technology is only available in a <a href="/en-US/docs/Web/Security/Secure_Contexts">secure context</a>. If it isn't, then you can remove the macro call. If it is, then you should also fill in an entry for it in the <a href="/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts">Features restricted to secure contexts</a> page.</li>
+ <li><code>\{{Deprecated_Header}}</code> — this generates a <strong>Deprecated</strong> banner that indicates the technology is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete">deprecated</a>. If it isn't, then you can remove the macro call.</li>
+ <li><code>\{{Interface_Overview("<em>GroupDataName</em>")}} {{Experimental_Inline}}</code> — this generates the main body of the page (Constructor, Properties, Methods and Events).</li>
 </ul>
-
-<h3 id="Tags">Tags</h3>
-
-<p>In an API reference page, you need to include the following tags (see the <em>Tags</em> section at the bottom of the editor UI): <strong>API</strong>, <strong>Reference</strong>, <strong>Interface</strong>, <em>the name of the API</em> (e.g. <strong>WebVR</strong>), the name of the interface (e.g. <strong>Request</strong>), <strong>Experimental</strong> (if the technology is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental">experimental</a>), <strong>Secure context</strong> (if it is available in a secure context only), and <strong>Deprecated</strong> (if it is <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete">deprecated</a>).</p>
-
-<p>Optionally, you can elect to include some other tags that effective represent terms people might search for when looking for information on that technology. For example on WebVR interface pages we include <strong>VR</strong> and <strong>Virtual reality</strong>.</p>
-
-<h3 id="Browser_compatibility">Browser compatibility</h3>
-
-<p>To fill in the browser compat data, you first need to fill in an entry for the API into our <a href="https://github.com/mdn/browser-compat-data">Browser compat data repo</a> — see our <a href="/en-US/docs/MDN/Structures/Compatibility_tables#the_new_way_the_browser_compat_data_repo_and_dynamic_tables">guide on how to do this</a>.</p>
-
-<p>Once that is done, you can show the compat data for the interface with a \{{Compat(…)}} macro call.</p>
 </div>
+<!-- Remove div above here before publishing -->
 
 <p>{{APIRef("GroupDataName")}}{{Draft}}{{SeeCompatTable}}{{SecureContext_Header}}{{Deprecated_Header}}</p>
 
@@ -109,31 +126,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("NameOfOtherSpecification", "#document-fragment-linking-directly-to-feature-definition", "NameOfTheFeature")}}</td>
-   <td>{{Spec2("NameOfOtherSpecification")}}</td>
-   <td>Defines blah blah feature. If no other specs define specific subfeatures of this interface, you can delete this table row.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("NameOfSpecification", "#document-fragment-linking-directly-to-interface-definition", "NameOfTheInterface")}}</td>
-   <td>{{Spec2("NameOfSpecification")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="Browser_compatibility_2">Browser compatibility</h2>
 
-<p>{{Compat("path.to.feature.NameOfTheInterface")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

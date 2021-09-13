@@ -10,7 +10,7 @@ tags:
 ---
 <p>{{DefaultAPISidebar("Permissions API")}}{{SeeCompatTable}}</p>
 
-<p class="summary">This article provides a basic guide to using the W3C Permissions API, which provides a programmatic way to query the status of API permissions attributed to the current context.</p>
+<p>This article provides a basic guide to using the W3C Permissions API, which provides a programmatic way to query the status of API permissions attributed to the current context.</p>
 
 <h2 id="The_trouble_with_asking_for_permission...">The trouble with asking for permission...</h2>
 
@@ -34,7 +34,7 @@ tags:
 
 <p>For this article, we have put together a simple demo called Location Finder. It uses Geolocation to query the user's current location and plot it out on a Google Map:</p>
 
-<p><img alt="Screenshot showing a map of Greenfield, UK." src="location-finder-with-permissions-api.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="Screenshot showing a map of Greenfield, UK." src="location-finder-with-permissions-api.png"></p>
 
 <p>You can <a href="https://chrisdavidmills.github.io/location-finder-permissions-api/">run the example live</a>, or <a href="https://github.com/chrisdavidmills/location-finder-permissions-api/tree/gh-pages">view the source code on Github</a>. Most of the code is simple and unremarkable — below we'll just be walking through the Permissions API-related code, so check the code yourself if you want to study any of the other parts.</p>
 
@@ -105,7 +105,7 @@ function revokePermission() {
 }</pre>
 
 <div class="note">
-<p>The <code>revoke()</code> function has been disabled by default starting in Firefox 51, since its design has been brought into question in the <a href="https://www.w3.org/2011/webappsec/">Web Applications Security Working Group</a>. It can be re-enabled by setting the preference <code>dom.permissions.revoke.enable</code> to <code>true</code>.</p>
+<p><strong>Note:</strong> The <code>revoke()</code> function has been disabled by default starting in Firefox 51, since its design has been brought into question in the <a href="https://www.w3.org/2011/webappsec/">Web Applications Security Working Group</a>. It can be re-enabled by setting the preference <code>dom.permissions.revoke.enable</code> to <code>true</code>.</p>
 </div>
 
 <h3 id="Responding_to_permission_state_changes">Responding to permission state changes</h3>

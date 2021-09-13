@@ -9,12 +9,19 @@ tags:
   - Reference
   - Web Audio API
   - createOscillator
+browser-compat: api.BaseAudioContext.createOscillator
 ---
 <p>{{APIRef("Web Audio API")}}</p>
 
 <p>The <code>createOscillator()</code> method of the {{domxref("BaseAudioContext")}}
   interface creates an {{domxref("OscillatorNode")}}, a source representing a periodic
   waveform. It basically generates a constant tone.</p>
+
+<div class="notecard note">
+  <p><strong>Note:</strong> The {{domxref("OscillatorNode.OscillatorNode", "OscillatorNode()")}}
+    constructor is the recommended way to create a {{domxref("OscillatorNode")}}; see
+    <a href="/en-US/docs/Web/API/AudioNode#creating_an_audionode">Creating an AudioNode</a>.</p>
+</div>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -47,25 +54,11 @@ oscillator.start();</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Web Audio API', '#dom-baseaudiocontext-createoscillator',
-        'createOscillator')}}</td>
-      <td>{{Spec2('Web Audio API')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.BaseAudioContext.createOscillator")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

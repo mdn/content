@@ -8,12 +8,12 @@ tags:
   - Property
   - Reference
   - Stylesheets
+  - Deprecated
+browser-compat: api.Document.selectedStyleSheetSet
 ---
 <div>{{APIRef("DOM")}}{{deprecated_header}}</div>
 
-<p>The <strong><code>selectedStyleSheetSet</code></strong> property <span
-    class="seosummary">indicates the name of the style sheet set that's currently in
-    use.</span></p>
+<p>The <strong><code>selectedStyleSheetSet</code></strong> property indicates the name of the style sheet set that's currently in use.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -30,9 +30,9 @@ tags:
   <code>currentStyleSheetSet</code>, then setting the value of
   <code>lastStyleSheetSet</code> to that value as well.</p>
 
-<div class="note"><strong>Note:</strong> This attribute's value is live; directly changing
+<div class="note"><p><strong>Note:</strong> This attribute's value is live; directly changing
   the <code>disabled</code> attribute on style sheets will affect the value of this
-  attribute.</div>
+  attribute.</p></div>
 
 <h2 id="Example">Example</h2>
 
@@ -43,7 +43,7 @@ document.selectedStyleSheetSet = 'Some other style sheet';
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Document.selectedStyleSheetSet")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

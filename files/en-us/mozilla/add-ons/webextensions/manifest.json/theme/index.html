@@ -11,6 +11,7 @@ tags:
   - Themes
   - colors
   - theme manifest
+browser-compat: webextensions.manifest.theme
 ---
 <div>{{AddonSidebar}}</div>
 
@@ -87,7 +88,7 @@ tags:
    <td>
     <p>Optional as of Firefox 60. Mandatory before Firefox 60.</p>
 
-    <p>A JSON object whose properties represent the images to display in various parts of the browser. See <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme#images">images</a></code> for details on the properties that this object can contain.</p>
+    <p>A JSON object whose properties represent the images to display in various parts of the browser. See <code><a href="#images">images</a></code> for details on the properties that this object can contain.</p>
    </td>
   </tr>
   <tr>
@@ -96,7 +97,7 @@ tags:
    <td>
     <p>Mandatory.</p>
 
-    <p>A JSON object whose properties represent the colors of various parts of the browser. See <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme#colors">colors</a></code> for details on the properties that this object can contain.</p>
+    <p>A JSON object whose properties represent the colors of various parts of the browser. See <code><a href="#colors">colors</a></code> for details on the properties that this object can contain.</p>
    </td>
   </tr>
   <tr>
@@ -105,7 +106,7 @@ tags:
    <td>
     <p>Optional</p>
 
-    <p>This object has two properties that affect how the <code>"additional_backgrounds"</code> images are displayed. See <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme#properties">properties</a></code> for details on the properties that this object can contain.</p>
+    <p>This object has two properties that affect how the <code>"additional_backgrounds"</code> images are displayed. See <code><a href="#properties">properties</a></code> for details on the properties that this object can contain.</p>
 
     <ul>
      <li><code>"additional_backgrounds_alignment":</code> an array of enumeration values defining the alignment of the corresponding <code>"additional_backgrounds":</code> array item.<br>
@@ -135,7 +136,7 @@ tags:
  </thead>
  <tbody>
   <tr>
-   <td><code>headerURL </code> <code>{{Deprecated_Inline}}</code></td>
+   <td><code>headerURL </code> {{Deprecated_Inline}}</td>
    <td><code>String</code></td>
    <td>
     <div class="notecard warning">
@@ -203,7 +204,7 @@ tags:
 <p>All these properties can be specified as either a string containing any valid <a href="/en-US/docs/Web/CSS/color_value">CSS color string</a> (including hexadecimal), or an RGB array, such as <code>"tab_background_text": [ 107 , 99 , 23 ]</code>.</p>
 
 <div class="notecard note">
-<p><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme#chrome_compatibility">In Chrome, colors may only be specified as RGB arrays</a>.</p>
+<p><a href="#chrome_compatibility">In Chrome, colors may only be specified as RGB arrays</a>.</p>
 
 <p>In Firefox for Android colors can be specified using:</p>
 
@@ -225,7 +226,7 @@ tags:
  <tbody>
   <tr>
    <td>
-    <p><code>accentcolor</code><code> {{Deprecated_Inline}}</code></p>
+    <p><code>accentcolor</code> {{Deprecated_Inline}}</p>
    </td>
    <td>
     <div class="notecard warning">
@@ -669,8 +670,11 @@ tags:
    </td>
   </tr>
   <tr>
-   <td><code>tab_background_separator</code></td>
+   <td><code>tab_background_separator</code> {{Deprecated_Inline}}</td>
    <td>
+    <div class="notecard warning">
+    <p><code>tab_background_separator</code> is not supported starting with Firefox 89.
+    </div>
     <p>The color of the vertical separator of the background tabs.</p>
 
     <details open><summary>See example</summary>
@@ -806,7 +810,7 @@ tags:
    </td>
   </tr>
   <tr>
-   <td><code>textcolor {{Deprecated_Inline}}</code></td>
+   <td><code>textcolor</code> {{Deprecated_Inline}}</td>
    <td>
     <div class="notecard warning">
     <p><code>textcolor</code> has been removed in Firefox 70. You will begin to get warnings in Firefox 65 and later if you load a theme that uses this property. Use <code>tab_background_text</code> instead.</p>
@@ -1012,8 +1016,11 @@ tags:
    </td>
   </tr>
   <tr>
-   <td><code>toolbar_field_separator</code></td>
+   <td><code>toolbar_field_separator</code> {{Deprecated_Inline}}</td>
    <td>
+    <div class="notecard warning">
+    <p><code>toolbar_field_separator</code> is not supported starting with Firefox 89.
+    </div>
     <p>The color of separators inside the URL bar. In Firefox 58 this was implemented as <code>toolbar_vertical_separator</code>.</p>
 
     <details open><summary>See example</summary>
@@ -1136,7 +1143,7 @@ tags:
   <tr>
    <td><code>toolbar_vertical_separator</code></td>
    <td>
-    <p>The color of the separator next to the application menu icon. In Firefox 58, it corresponds to the color of separators inside the URL bar.</p>
+    <p>The color of the separator in the bookmarks toolbar. In Firefox 58, it corresponds to the color of separators inside the URL bar.</p>
 
     <details open><summary>See example</summary>
 
@@ -1179,15 +1186,15 @@ tags:
   </tr>
   <tr>
    <td><code>frame</code></td>
-   <td><code>accentcolor</code> <code>{{Deprecated_Inline}}</code></td>
+   <td><code>accentcolor</code> {{Deprecated_Inline}}</td>
   </tr>
   <tr>
    <td><code>frame_inactive</code></td>
-   <td><code>accentcolor</code> <code>{{Deprecated_Inline}}</code></td>
+   <td><code>accentcolor</code> {{Deprecated_Inline}}</td>
   </tr>
   <tr>
    <td><code>tab_background_text</code></td>
-   <td><code>textcolor</code> <code>{{Deprecated_Inline}}</code></td>
+   <td><code>textcolor</code> {{Deprecated_Inline}}</td>
   </tr>
  </tbody>
 </table>
@@ -1331,21 +1338,7 @@ tags:
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("webextensions.manifest.theme")}}</p>
-
-<h3 id="Colors">Colors</h3>
-
-<p>{{Compat("webextensions.manifest.theme.colors", 10)}}</p>
-
-<h3 id="Images">Images</h3>
-
-<p>{{Compat("webextensions.manifest.theme.images", 10)}}</p>
-
-<h3 id="Properties">Properties</h3>
-
-<p>{{Compat("webextensions.manifest.theme.properties", 10)}}</p>
+<p>{{Compat}}</p>
 
 <h3 id="Chrome_compatibility">Chrome compatibility</h3>
 

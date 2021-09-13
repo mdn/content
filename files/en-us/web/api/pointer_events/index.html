@@ -12,15 +12,15 @@ tags:
 ---
 <p>{{DefaultAPISidebar("Pointer Events")}}</p>
 
-<p>Much of today's web content assumes the user's pointing device will be a mouse. However, since many devices support other types of pointing input devices, such as pen/stylus and touch surfaces, extensions to the existing pointing device event models are needed. <em><a href="#term_pointer_event">Pointer events</a></em> address that need.</p>
+<p>Much of today's web content assumes the user's pointing device will be a mouse. However, since many devices support other types of pointing input devices, such as pen/stylus and touch surfaces, extensions to the existing pointing device event models are needed. <em><a href="#pointer_event">Pointer events</a></em> address that need.</p>
 
 <div class="notecard note">
-<p><strong>Note:</strong> Pointer events are <em>not available</em> in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
+<p><strong>Note:</strong> Pointer events are <em>not available</em> in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
 </div>
 
 <p>Pointer events are DOM events that are fired for a pointing device. They are designed to create a single DOM event model to handle pointing input devices such as a mouse, pen/stylus or touch (such as one or more fingers).</p>
 
-<p>The <em><a href="#term_pointer">pointer</a></em> is a hardware-agnostic device that can target a specific set of screen coordinates. Having a single event model for pointers can simplify creating Web sites and applications and provide a good user experience regardless of the user's hardware. However, for scenarios when device-specific handling is desired, pointer events defines a {{domxref("PointerEvent.pointerType","pointerType property")}} to inspect the device type which produced the event.</p>
+<p>The <em><a href="#pointer">pointer</a></em> is a hardware-agnostic device that can target a specific set of screen coordinates. Having a single event model for pointers can simplify creating Web sites and applications and provide a good user experience regardless of the user's hardware. However, for scenarios when device-specific handling is desired, pointer events defines a {{domxref("PointerEvent.pointerType","pointerType property")}} to inspect the device type which produced the event.</p>
 
 <p>The events needed to handle generic pointer input are analogous to {{domxref("MouseEvent","mouse events")}} (<code>mousedown</code>/<code>pointerdown</code>, <code>mousemove</code>/<code>pointermove</code>, etc.). Consequently, pointer event types are intentionally similar to mouse event types.</p>
 
@@ -28,22 +28,33 @@ tags:
 
 <h2 id="Terminology">Terminology</h2>
 
-<dl>
- <dt>active buttons state</dt>
- <dd>The condition when a <em><a href="#term_pointer">pointer</a></em> has a non-zero value for the <code>buttons</code> property. For example, in the case of a pen, when the pen has physical contact with the digitizer, or at least one button is depressed while hovering.</dd>
- <dt>active pointer</dt>
- <dd>Any <em><a href="#term_pointer">pointer</a></em> input device that can produce events. A pointer is considered active if it can still produce further events. For example, a pen that is a down state is considered active because it can produce additional events when the pen is lifted or moved.</dd>
- <dt id="term_digitizer">digitizer</dt>
- <dd>A sensing device with a surface that can detect contact. Most commonly, the sensing device is a touch-enabled screen that can sense input from an input device such as a pen, stylus, or finger. Some sensing devices can detect the close proximity of the input device, and the state is expressed as a hover following the mouse.</dd>
- <dt id="term_hit_test">hit test</dt>
- <dd>The process the browser uses to determine a target element for a pointer event. Typically, this is determined by considering the pointer's location and also the visual layout of elements in a document on screen media.</dd>
- <dt id="term_pointer">pointer</dt>
- <dd>A hardware-agnostic representation of input devices that can target a specific coordinate (or set of coordinates) on a screen. Examples of <em>pointer</em> input devices are mouse, pen/stylus, and touch contacts.</dd>
- <dt>pointer capture</dt>
- <dd>Pointer capture allows the events for a pointer to be retargeted to a particular element other than the normal hit test result of the pointer's location.</dd>
- <dt id="term_pointer_event">pointer event</dt>
- <dd>A DOM {{domxref("PointerEvent","event")}} fired for a <em><a href="#term_pointer">pointer</a></em>.</dd>
-</dl>
+<h3>active buttons state</h3>
+
+<p>The condition when a <em><a href="#pointer">pointer</a></em> has a non-zero value for the <code>buttons</code> property. For example, in the case of a pen, when the pen has physical contact with the digitizer, or at least one button is depressed while hovering.</p>
+
+<h3>active pointer</h3>
+
+<p>Any <em><a href="#pointer">pointer</a></em> input device that can produce events. A pointer is considered active if it can still produce further events. For example, a pen that is a down state is considered active because it can produce additional events when the pen is lifted or moved.</p>
+
+<h3>digitizer</h3>
+
+<p>A sensing device with a surface that can detect contact. Most commonly, the sensing device is a touch-enabled screen that can sense input from an input device such as a pen, stylus, or finger. Some sensing devices can detect the close proximity of the input device, and the state is expressed as a hover following the mouse.</p>
+
+<h3>hit test</h3>
+
+<p>The process the browser uses to determine a target element for a pointer event. Typically, this is determined by considering the pointer's location and also the visual layout of elements in a document on screen media.</p>
+
+<h3>pointer</h3>
+
+<p>A hardware-agnostic representation of input devices that can target a specific coordinate (or set of coordinates) on a screen. Examples of <em>pointer</em> input devices are mouse, pen/stylus, and touch contacts.</p>
+
+<h3>pointer capture</h3>
+
+<p>Pointer capture allows the events for a pointer to be retargeted to a particular element other than the normal hit test result of the pointer's location.</p>
+
+<h3>pointer event</h3>
+
+<p>A DOM {{domxref("PointerEvent","event")}} fired for a <em><a href="#pointer">pointer</a></em>.</p>
 
 <h2 id="Interfaces">Interfaces</h2>
 
@@ -86,7 +97,7 @@ tags:
 
 <p>Below is a short description of each event type and its associated {{domxref("GlobalEventHandlers","Global Event Handler")}}.</p>
 
-<table class="standard-table">
+<table class="no-markdown">
  <thead>
   <tr>
    <th scope="col">Event</th>
@@ -98,12 +109,12 @@ tags:
   <tr>
    <td>{{event('pointerover')}}</td>
    <td>{{domxref('GlobalEventHandlers.onpointerover','onpointerover')}}</td>
-   <td>Fired when a pointer is moved into an element's <a href="#term_hit_test">hit test</a> boundaries.</td>
+   <td>Fired when a pointer is moved into an element's <a href="#hit_test">hit test</a> boundaries.</td>
   </tr>
   <tr>
    <td>{{event('pointerenter')}}</td>
    <td>{{domxref('GlobalEventHandlers.onpointerenter','onpointerenter')}}</td>
-   <td>Fired when a pointer is moved into the <a href="#term_hit_test">hit test</a> boundaries of an element or one of its descendants, including as a result of a pointerdown event from a device that does not support hover (see <code>pointerdown</code>).</td>
+   <td>Fired when a pointer is moved into the <a href="#hit_test">hit test</a> boundaries of an element or one of its descendants, including as a result of a pointerdown event from a device that does not support hover (see <code>pointerdown</code>).</td>
   </tr>
   <tr>
    <td>{{event('pointerdown')}}</td>
@@ -128,12 +139,12 @@ tags:
   <tr>
    <td>{{event('pointerout')}}</td>
    <td>{{domxref('GlobalEventHandlers.onpointerout','onpointerout')}}</td>
-   <td>Fired for several reasons including: pointer is moved out of the <a href="#term_hit_test">hit test</a> boundaries of an element; firing the pointerup event for a device that does not support hover (see pointerup); after firing the <code>pointercancel</code> event (see <code>pointercancel</code>); when a pen stylus leaves the hover range detectable by the digitizer.</td>
+   <td>Fired for several reasons including: pointer is moved out of the <a href="#hit_test">hit test</a> boundaries of an element; firing the pointerup event for a device that does not support hover (see pointerup); after firing the <code>pointercancel</code> event (see <code>pointercancel</code>); when a pen stylus leaves the hover range detectable by the digitizer.</td>
   </tr>
   <tr>
    <td>{{event('pointerleave')}}</td>
    <td>{{domxref('GlobalEventHandlers.onpointerleave','onpointerleave')}}</td>
-   <td>Fired when a pointer is moved out of the <a href="#term_hit_test">hit test</a> boundaries of an element. For pen devices, this event is fired when the stylus leaves the hover range detectable by the digitizer.</td>
+   <td>Fired when a pointer is moved out of the <a href="#hit_test">hit test</a> boundaries of an element. For pen devices, this event is fired when the stylus leaves the hover range detectable by the digitizer.</td>
   </tr>
   <tr>
    <td>{{event('gotpointercapture')}}</td>
@@ -293,7 +304,7 @@ tags:
 
 <p>The following table provides the values of <code>button</code> and <code>buttons</code> for the various device button states.</p>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">Device Button State</th>
@@ -346,12 +357,12 @@ tags:
 </table>
 
 <div class="notecard note">
-<p><strong>Notice:</strong> The <code>button</code> property indicates a change in the state of the button. However, as in the case of touch, when multiple events occur with one event, all of them have the same value.</p>
+<p><strong>Note:</strong> The <code>button</code> property indicates a change in the state of the button. However, as in the case of touch, when multiple events occur with one event, all of them have the same value.</p>
 </div>
 
-<h2 id="Pointer_capture">Pointer capture</h2>
+<h2>Capturing the pointer</h2>
 
-<p>Pointer capture allows events for a particular {{domxref("PointerEvent","pointer event")}} to be re-targeted to a particular element instead of the normal <a href="#term_hit_test">hit test</a> at a pointer's location. This can be used to ensure that an element continues to receive pointer events even if the pointer device's contact moves off the element (for example by scrolling).</p>
+<p>Pointer capture allows events for a particular {{domxref("PointerEvent","pointer event")}} to be re-targeted to a particular element instead of the normal <a href="#hit_test">hit test</a> at a pointer's location. This can be used to ensure that an element continues to receive pointer events even if the pointer device's contact moves off the element (for example by scrolling).</p>
 
 <p>The following example shows pointer capture being set on an element.</p>
 
@@ -456,39 +467,16 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
+<table>
   <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Pointer Events 3')}}</td>
-   <td>{{Spec2('Pointer Events 3')}}</td>
-   <td>Added new APIs for <code>getCoalescedEvent</code> and <code>getPredictedEvents</code>, new <code>pointerrawupdate</code> event, additional <code>touch-action</code> property values <code>pan-left</code>, <code>pan-right</code>, <code>pan-up</code>, <code>pan-down</code>.</td>
+   <th>Specification</th>
   </tr>
   <tr>
-   <td>{{SpecName('Pointer Events 2')}}</td>
-   <td>{{Spec2('Pointer Events 2')}}</td>
-   <td>Adds <code>hasPointerCapture</code> method and clarifies more edge cases and dynamic scenarios. </td>
+   <td><a href="https://w3c.github.io/pointerevents/">Pointer Events</a></td>
   </tr>
-  <tr>
-   <td>{{SpecName('Pointer Events')}}</td>
-   <td>{{Spec2('Pointer Events')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<div class="hidden">
-<p>The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-</div>
-
 <p>{{Compat("api.PointerEvent")}}</p>
 
 <p>Some new values have been defined for the {{cssxref("touch-action", "CSS touch-action")}} property as part of the {{SpecName('Pointer Events 3')}} specification but currently those new values have limited implementation support.</p>
@@ -503,7 +491,7 @@ tags:
 
 <ul>
  <li><a href="https://github.com/w3c/pointerevents">Pointer Events Working Group</a></li>
- <li><a href="http://lists.w3.org/Archives/Public/public-pointer-events/">Mail list</a></li>
+ <li><a href="https://lists.w3.org/Archives/Public/public-pointer-events/">Mail list</a></li>
  <li><a href="irc://irc.w3.org:6667/">W3C #pointerevents IRC channel</a></li>
 </ul>
 

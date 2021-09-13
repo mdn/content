@@ -13,10 +13,13 @@ tags:
   - Payments
   - Reference
   - complete
+browser-compat: api.MerchantValidationEvent.complete
 ---
 <p>{{deprecated_header}}{{non-standard_header}}{{securecontext_header}}</p>
 
-<p><span class="seoSummary">The {{domxref("MerchantValidationEvent")}} method <code><strong>complete()</strong></code> takes merchant-specific information previously received from the {{domxref("MerchantValidationEvent.validationURL", "validationURL")}} and uses it to validate the merchant.</span> All you have to do is call <code>complete()</code> from your handler for the {{event("merchantvalidation")}} event, passing in the data fetched from the <code>validationURL</code>.</p>
+<p>The {{domxref("MerchantValidationEvent")}} method <code><strong>complete()</strong></code> takes merchant-specific information previously received from the {{domxref("MerchantValidationEvent.validationURL", "validationURL")}} and uses it to validate the merchant.</p>
+
+<p>All you have to do is call <code>complete()</code> from your handler for the {{event("merchantvalidation")}} event, passing in the data fetched from the <code>validationURL</code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -62,7 +65,7 @@ function getValidationData(url) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MerchantValidationEvent.complete")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

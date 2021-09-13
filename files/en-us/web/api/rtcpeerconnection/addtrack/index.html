@@ -2,26 +2,27 @@
 title: RTCPeerConnection.addTrack()
 slug: Web/API/RTCPeerConnection/addTrack
 tags:
-- API
-- Audio
-- Media
-- Method
-- RTCPeerConnection
-- Reference
-- Tracks
-- Video
-- WebRTC
-- addTrack
+  - API
+  - Audio
+  - Media
+  - Method
+  - RTCPeerConnection
+  - Reference
+  - Tracks
+  - Video
+  - WebRTC
+  - addTrack
+browser-compat: api.RTCPeerConnection.addTrack
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
-<p><span class="seoSummary">The {{domxref("RTCPeerConnection")}} method
+<p>The {{domxref("RTCPeerConnection")}} method
     <strong><code>addTrack()</code></strong> adds a new media track to the set of tracks
-    which will be transmitted to the other peer.</span></p>
+    which will be transmitted to the other peer.></p>
 
 <div class="note">
   <p><strong>Note:</strong> Adding a track to a connection triggers renegotiation by
-    firing a {{event("negotiationneeded")}} event. See
+    firing a {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} event. See
     {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling",
     "Starting negotiation")}} for details.</p>
 </div>
@@ -105,7 +106,7 @@ tags:
 }</pre>
 
 <p>The result is a set of tracks being sent to the remote peer, with no stream
-  associations. The handler for the {{event("track")}} event on the remote peer will be
+  associations. The handler for the {{DOMxRef("RTCPeerConnection/track_event", "track")}} event on the remote peer will be
   responsible for determining what stream to add each track to, even if that means adding
   them all to the same stream. The {{domxref("RTCPeerConnection.ontrack", "ontrack")}}
   handler might look like this:</p>
@@ -161,7 +162,7 @@ pc.ontrack = ev =&gt; {
   }
 }</pre>
 
-<p>The remote peer might then use a {{event("track")}} event handler that looks like this:
+<p>The remote peer might then use a {{DOMxRef("RTCPeerConnection/track_event", "track")}} event handler that looks like this:
 </p>
 
 <pre
@@ -272,27 +273,11 @@ pc.setRemoteDescription(desc).then(function () {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ SpecName('WebRTC 1.0', '#dom-rtcpeerconnection-addtrack',
-        'RTCPeerConnection.addTrack()') }}</td>
-      <td>{{ Spec2('WebRTC 1.0') }}</td>
-      <td>Initial specification.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.RTCPeerConnection.addTrack")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -301,5 +286,5 @@ pc.setRemoteDescription(desc).then(function () {
   <li><a href="/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP">Introduction to the Real-time
       Transport Protocol (RTP)</a></li>
   <li>{{domxref("RTCPeerConnection.ontrack")}}</li>
-  <li>{{event("track")}}</li>
+  <li>{{DOMxRef("RTCPeerConnection/track_event", "track")}}</li>
 </ul>

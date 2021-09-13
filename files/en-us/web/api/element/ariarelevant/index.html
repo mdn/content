@@ -9,10 +9,11 @@ tags:
   - AriaAttributes
   - AriaMixin
   - Element
+browser-compat: api.Element.ariaRelevant
 ---
 <div>{{DefaultAPISidebar("DOM")}}{{SeeCompatTable}}</div>
 
-<p class="summary">The <strong><code>ariaRelevant</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute"><code>aria-relevant</code></a> attribute, which indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified. This is used to describe what changes in an <code>aria-live</code> region are relevant and should be announced.</p>
+<p>The <strong><code>ariaRelevant</code></strong> property of the {{domxref("Element")}} interface reflects the value of the <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute"><code>aria-relevant</code></a> attribute, which indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified. This is used to describe what changes in an <code>aria-live</code> region are relevant and should be announced.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -30,7 +31,7 @@ tags:
   <dt>"text"</dt>
   <dd>Changes to the textual content of existing nodes should be considered relevant.</dd>
   <dt>"all"</dt>
-  <dd>Equivalent to additions removals text.</dd>
+  <dd>Equivalent to <code>"additions removals text"</code>.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -46,6 +47,4 @@ console.log(el.ariaRelevant); // text</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
-
-<p>{{Compat("api.Element.ariaRelevant")}}</p>
+<p>{{Compat}}</p>

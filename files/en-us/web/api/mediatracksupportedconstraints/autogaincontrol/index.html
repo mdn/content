@@ -15,6 +15,7 @@ tags:
 - Volume
 - Web
 - autoGainControl
+browser-compat: api.MediaTrackSupportedConstraints.autoGainControl
 ---
 <div>{{APIRef("Media Capture and Streams")}}</div>
 
@@ -51,20 +52,12 @@ tags:
 <p>This example displays whether or not your browser supports the
   <code>autoGainControl</code> constraint.</p>
 
-<div class="hidden">
-  <h3 id="HTML_content">HTML content</h3>
-
-  <pre class="brush: html">&lt;div id="result"&gt;
+<pre class="brush: html hidden">&lt;div id="result"&gt;
 &lt;/div&gt;</pre>
 
-  <h3 id="CSS_content">CSS content</h3>
-
-  <pre class="brush: css">#result {
+<pre class="brush: css hidden">#result {
   font: 14px "Arial", sans-serif;
 }</pre>
-
-  <h3 id="JavaScript_content">JavaScript content</h3>
-</div>
 
 <pre class="brush: js">let result = document.getElementById("result");
 
@@ -80,27 +73,11 @@ if (navigator.mediaDevices.getSupportedConstraints().autoGainControl) {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ SpecName('Media Capture',
-        '#dom-mediatracksupportedconstraints-autogaincontrol', 'autoGainControl') }}</td>
-      <td>{{ Spec2('Media Capture') }}</td>
-      <td>Initial specification.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.MediaTrackSupportedConstraints.autoGainControl")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

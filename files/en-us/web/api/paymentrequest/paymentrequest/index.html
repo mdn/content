@@ -1,5 +1,5 @@
 ---
-title: PaymentRequest.PaymentRequest()
+title: PaymentRequest()
 slug: Web/API/PaymentRequest/PaymentRequest
 tags:
 - API
@@ -10,12 +10,13 @@ tags:
 - Reference
 - Secure context
 - payment
+browser-compat: api.PaymentRequest.PaymentRequest
 ---
 <p>{{securecontext_header}}{{APIRef("Payment Request API")}}</p>
 
-<p><span class="seoSummary">The <strong><code>PaymentRequest()</code></strong> constructor
+<p>The <strong><code>PaymentRequest()</code></strong> constructor
     creates a new {{domxref("PaymentRequest")}} object which will be used to handle the
-    process of generating, validating, and submitting a payment request.</span></p>
+    process of generating, validating, and submitting a payment request.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -85,9 +86,9 @@ tags:
     </dl>
   </dd>
   <dt><code>options</code> {{optional_inline}}</dt>
-  <dd>Lets you set options that control the behavior of the user agent. This parameter
-    contains the following fields:</dd>
   <dd>
+    <p>Lets you set options that control the behavior of the user agent. This parameter
+    contains the following fields:</p>
     <dl>
       <dt><code>requestPayerName</code></dt>
       <dd>A Boolean indicating whether the user agent should collect the payer's name and
@@ -170,21 +171,8 @@ try {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('Payment','#constructor','PaymentRequest() constructor')}}</td>
-      <td>{{Spec2('Payment')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.PaymentRequest.PaymentRequest")}}</p>
+<p>{{Compat}}</p>

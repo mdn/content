@@ -10,6 +10,7 @@ tags:
 - MediaStream Recording API
 - Property
 - Reference
+browser-compat: api.MediaRecorderErrorEvent.error
 ---
 <div>{{APIRef("MediaStream Recording")}}</div>
 
@@ -48,11 +49,7 @@ tags:
   <dt><code>SecurityError</code></dt>
   <dd>The {{domxref("MediaStream")}} is configured to disallow recording. This may be the
     case, for example, with sources obtained using {{domxref("MediaDevices.getUserMedia",
-    "getUserMedia()")}} when the user denies permission to use an input device.  This also
-    happens when a {{domxref("MediaStreamTrack")}} within the stream is marked as
-    {{domxref("MediaStreamTrack.isolated", "isolated")}} due to the
-    {{domxref("MediaStreamConstraints.peerIdentity", "peerIdentity")}} constraint on the
-    source stream.</dd>
+    "getUserMedia()")}} when the user denies permission to use an input device.</dd>
   <dt><code>InvalidModificationError</code></dt>
   <dd>The number of tracks on the stream being recorded has changed. You can't add or
     remove tracks while recording media.</dd>
@@ -96,34 +93,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ SpecName('MediaStream Recording', '#errorevent-section',
-        'MediaRecorderErrorEvent.error') }}</td>
-      <td>{{ Spec2('MediaStream Recording') }}</td>
-      <td>Initial specification.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div class="hidden">
-  <p>The compatibility table on this page is generated from structured data. If you'd like
-    to contribute to the data, please check out <a
-      href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>
-    and send us a pull request.</p>
-</div>
-
-<p>{{Compat("api.MediaRecorderErrorEvent.error")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

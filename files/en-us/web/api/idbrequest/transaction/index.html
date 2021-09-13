@@ -10,6 +10,7 @@ tags:
 - Reference
 - Storage
 - transaction
+browser-compat: api.IDBRequest.transaction
 ---
 <p>{{ APIRef("IndexedDB") }}</p>
 
@@ -46,15 +47,12 @@ tags:
 
 <p>The following example requests a given record title, <code>onsuccess</code> gets the
   associated record from the {{domxref("IDBObjectStore")}} (made available
-  as <code>objectStoreTitleRequest.result</code><span style="line-height: 1.5;">), updates
+  as <code>objectStoreTitleRequest.result</code>), updates
     one property of the record, and then puts the updated record back into the object
     store in another request. The source of the requests is logged to the developer
     console — both originate from the same transaction. For a full working example, see
-    our </span><a href="https://github.com/mdn/to-do-notifications/"
-    style="line-height: 1.5;">To-do Notifications</a><span style="line-height: 1.5;"> app
-    (</span><a href="https://mdn.github.io/to-do-notifications/"
-    style="line-height: 1.5;">view example live</a><span
-    style="line-height: 1.5;">.)</span></p>
+    our <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> app
+    (<a href="https://mdn.github.io/to-do-notifications/">view example live</a>.)</p>
 
 <pre class="brush: js">var title = "Walk dog";
 
@@ -75,7 +73,7 @@ objectStoreTitleRequest.onsuccess = function() {
   // into the database
   var updateTitleRequest = objectStore.put(data);
 
-  <span style="font-size: 1rem;">// Log the transaction that originated this request</span>
+  // Log the transaction that originated this request
   console.log("The transaction that originated this request is " + updateTitleRequest.transaction);
 
   // When this new request succeeds, run the displayData()
@@ -114,29 +112,11 @@ openRequest.onsuccess = function() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('IndexedDB', '#dom-idbrequest-transaction', 'transaction')}}</td>
-      <td>{{Spec2('IndexedDB')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("IndexedDB 2", "#dom-idbrequest-transaction", "transaction")}}</td>
-      <td>{{Spec2("IndexedDB 2")}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.IDBRequest.transaction")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

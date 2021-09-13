@@ -18,19 +18,22 @@ tags:
 
 <h2 id="Usage">Usage</h2>
 
-<p>So what does WebDriver let you do and what does it look like? Since WebDriver is programming language neutral, the answer to this question <a href="/en-US/docs/Web/WebDriver/Clients">depends on which WebDriver client you’re using</a> and the choice of language.</p>
+<p>So what does WebDriver let you do and what does it look like? Since WebDriver is programming language neutral, the answer to this question depends on which WebDriver client you’re using and the choice of language.</p>
 
 <p>But using a popular client written in Python, your interaction with WebDriver might look like this:</p>
 
-<pre>from selenium import webdriver
+<pre>
+from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support.expected_conditions import presence_of_element_located
 
-wait = WebDriverWait(driver, 10)
+
 
 with webdriver.Firefox() as driver:
+
+    wait = WebDriverWait(driver, 10)
     driver.get("http://google.com/ncr")
     driver.find_element_by_name("q").send_keys("cheese" + Keys.RETURN)
 
@@ -38,7 +41,8 @@ with webdriver.Firefox() as driver:
 
     results = driver.find_elements_by_css_selector("h3&gt;a")
     for i, result in results.iteritems():
-        print("#{}: {} ({})".format(i, result.text, result.get_property("href")))</pre>
+        print(f"#{i}: {result.text} ({result.get_property('href')})")
+</pre>
 
 <p>This might produce output akin to this:</p>
 
@@ -49,12 +53,14 @@ with webdriver.Firefox() as driver:
 
 <div class="column-container">
 <div class="column-half">
-<h3 id="Commands"><a href="/en-US/docs/Web/WebDriver/Commands">Commands</a></h3>
+<h3 id="Commands">Commands</h3>
 
+<p><a href="/en-US/docs/Web/WebDriver/Commands">Commands</a></p>
 <p>{{ListSubpages("/en-US/docs/Web/WebDriver/Commands")}}</p>
 
-<h3 id="Types"><a href="/en-US/docs/Web/WebDriver/Types">Types</a></h3>
+<h3 id="Types">Types</h3>
 
+<p><a href="/en-US/docs/Web/WebDriver/Types">Types</a></p>
 <ul>
  <li><a href="/en-US/docs/Web/WebDriver/Errors#payload">Error object</a></li>
  <li><a href="/en-US/docs/Web/WebDriver/Timeouts">Timeouts object</a></li>
@@ -64,42 +70,27 @@ with webdriver.Firefox() as driver:
 </div>
 
 <div class="column-half">
-<h3 id="Capabilities"><a href="/en-US/docs/Web/WebDriver/Capabilities">Capabilities</a></h3>
-
+<h3 id="Capabilities">Capabilities</h3>
+<p><a href="/en-US/docs/Web/WebDriver/Capabilities">Capabilities</a></p>
 <p>{{ListSubpages("/en-US/docs/Web/WebDriver/Capabilities")}}</p>
 
-<h3 id="Errors"><a href="/en-US/docs/Web/WebDriver/Errors">Errors</a></h3>
-
+<h3 id="Errors">Errors</h3>
+<p><a href="/en-US/docs/Web/WebDriver/Errors">Errors</a></p>
 <p>{{ListSubpages("/en-US/docs/Web/WebDriver/Errors")}}</p>
 </div>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebDriver')}}</td>
-   <td>{{Spec2('WebDriver')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<p>{{Compat("webdriver", 2)}}</p>
+<ul>
+  <li><a href="https://w3c.github.io/webdriver/">WebDriver</a></li>
+</ul>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li><a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing">Cross browser testing</a></li>
- <li><a href="https://seleniumhq.github.io/docs/">Selenium documentation</a> (work in progress)</li>
+ <li><a href="https://www.selenium.dev/documentation/">Selenium documentation</a></li>
 </ul>
 
 <p>{{QuickLinksWithSubpages}}</p>

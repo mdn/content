@@ -14,12 +14,13 @@ tags:
 - XML
 - XMLSerializer
 - serializeToString
+browser-compat: api.XMLSerializer.serializeToString
 ---
 <div>{{APIRef("DOM Parsing")}}</div>
 
-<p><span class="seoSummary">The {{domxref("XMLSerializer")}} method
+<p>The {{domxref("XMLSerializer")}} method
     <code><strong>serializeToString()</strong></code> constructs a string representing the
-    specified {{Glossary("DOM")}} tree in {{Glossary("XML")}} form.</span></p>
+    specified {{Glossary("DOM")}} tree in {{Glossary("XML")}} form.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -84,8 +85,8 @@ tags:
 
 <ul>
   <li>For XML serializations, <code>Element</code> and <code>Attr</code> nodes are always
-    serialized with their {{domxref("Node.namespaceURI", "namespaceURI")}} intact. This
-    may mean that a previously-specified {{domxref("Node.prefix", "prefix")}} or default
+    serialized with their {{domxref("Element.namespaceURI", "namespaceURI")}} intact. This
+    may mean that a previously-specified {{domxref("Element.prefix", "prefix")}} or default
     namespace may be dropped or altered.</li>
   <li>The resulting XML is compatible with the HTML parser.</li>
   <li>Elements in the HTML namespace that have no child nodes (thereby representing empty
@@ -96,23 +97,11 @@ tags:
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('DOM Parsing', '#dom-xmlserializer-serializetostring',
-        'serializeToString()')}}</td>
-      <td>{{Spec2('DOM Parsing')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
+
+{{Compat}}
 
 <h2 id="See_also">See also</h2>
 
