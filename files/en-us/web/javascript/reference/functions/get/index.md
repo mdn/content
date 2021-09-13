@@ -115,6 +115,20 @@ const obj = {
 console.log(obj.foo); // "bar"
 ```
 
+### Defining static getters
+
+```js
+class MyConstants {
+  static get foo() {
+    return 'foo';
+  }
+}
+
+console.log(MyConstants.foo); // 'foo'
+MyConstants.foo = 'bar';
+console.log(MyConstants.foo); // 'foo', a static getter's value cannot be changed
+```
+
 ### Smart / self-overwriting / lazy getters
 
 Getters give you a way to _define_ a property of an object, but they do not
