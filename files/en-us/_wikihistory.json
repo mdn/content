@@ -132030,13 +132030,6 @@
       "nmve"
     ]
   },
-  "Web/JavaScript/Reference/Errors/Var_hides_argument": {
-    "modified": "2020-04-16T12:35:06.895Z",
-    "contributors": [
-      "fscholz",
-      "nmve"
-    ]
-  },
   "Web/JavaScript/Reference/Errors/in_operator_no_object": {
     "modified": "2020-12-06T05:37:14.314Z",
     "contributors": [
