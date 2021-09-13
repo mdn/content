@@ -263,94 +263,103 @@ setCookie.then(logCookie, logError);</pre>
 
 <h3 id="Unsupported_APIs">Unsupported APIs</h3>
 
-<h4 id="declarativeContent">declarativeContent</h4>
-
-<p><a href="https://developer.chrome.com/extensions/declarativeContent" id="declarativeContent_incompatibilities" name="dec">declarativeContent</a></p>
-
-<dl>
- <dt>In Firefox</dt>
- <dd>Chrome's <code>declarativeContent</code> API <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1435864">has not yet been implemented</a> in Firefox.</dd>
- <dd>In addition, Firefox <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1323433#c16">will not be supporting</a> the <code>declarativeContent.RequestContentScript</code> API (which is rarely used, and is unavailable in stable releases of Chrome).</dd>
-</dl>
+  <dl>
+    <dt>declarativeContent</dt>
+    <dd>
+      <p><a href="https://developer.chrome.com/extensions/declarativeContent" id="declarativeContent_incompatibilities" name="dec">declarativeContent</a></p>
+      
+      <dl>
+       <dt>In Firefox</dt>
+       <dd>Chrome's <code>declarativeContent</code> API <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1435864">has not yet been implemented</a> in Firefox.</dd>
+       <dd>In addition, Firefox <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1323433#c16">will not be supporting</a> the <code>declarativeContent.RequestContentScript</code> API (which is rarely used, and is unavailable in stable releases of Chrome).</dd>
+      </dl>
+  </dl>
 
 <h3 id="Miscellaneous_incompatibilities">Miscellaneous incompatibilities</h3>
-
-<h4 id="URLs_in_CSS">URLs in CSS</h4>
-
 <dl>
- <dt>In Firefox</dt>
- <dd>URLs in injected CSS files are resolved relative to <em>the CSS file itself</em>.</dd>
- <dt>In Chrome</dt>
- <dd>URLs in injected CSS files are resolved relative to <em>the page they are injected into</em>.</dd>
+  <dt>URLs in CSS</dt>
+  <dd>
+    <dl>
+     <dt>In Firefox</dt>
+     <dd>URLs in injected CSS files are resolved relative to <em>the CSS file itself</em>.</dd>
+     <dt>In Chrome</dt>
+     <dd>URLs in injected CSS files are resolved relative to <em>the page they are injected into</em>.</dd>
+    </dl>
+  </dd>
+    
+  <dt>Additional incompatibilities</dt>
+  <dd>  
+    <dl>
+     <dt>In Firefox</dt>
+     <dd>Background pages do not support using <a href="/en-US/docs/Web/API/Window/alert"><code>alert()</code></a>, <a href="/en-US/docs/Web/API/Window/confirm"><code>confirm()</code></a>, or <a href="/en-US/docs/Web/API/Window/prompt"><code>prompt()</code></a>.</dd>
+    </dl>
+  </dd> 
+  
+  <dt>web_accessible_resources</dt>
+  <dd>
+    <dl>
+     <dt>In Chrome</dt>
+     <dd>When a resource is listed in <code>web_accessible_resources</code>, it is accessible as <code>chrome-extension://«<var>your-extension-id</var>»/«<var>path/to/resource</var>»</code>. The extension ID is fixed for a given extension.</dd>
+     <dt>In Firefox</dt>
+     <dd>Resources are assigned a random UUID that changes for every instance of Firefox: <code>moz-extension://«<var>random-UUID</var>»/«<var>path/to/resource</var>»</code>. This randomness can prevent you from doing a few things, such as add your specific extension's URL to another domain's CSP policy.</dd>
+    </dl>
+  </dd>
+    
+  <dt>property</dt>
+  <dd>
+    <dl>
+     <dt>In Chrome</dt>
+     <dd>When working with an unpacked extension, the manifest may include a <a href="https://developer.chrome.com/extensions/manifest/key"><code>"key"</code> property</a> to pin the extension ID across different machines. This is mainly useful when working with <code>web_accessible_resources</code>.</dd>
+     <dt>In Firefox</dt>
+     <dd>Since Firefox uses random UUIDs for <code>web_accessible_resources</code>, this property is unsupported.</dd>
+    </dl>
+  </dd>
+    
+  <dt>Content script requests happen in the context of extension, not content page</dt>
+  <dd>  
+    <dl>
+     <dt>In Chrome</dt>
+     <dd>When a content script makes a request (for example, using <a href="/en-US/docs/Web/API/Fetch_API/Using_Fetch"><code>fetch()</code></a>) to a relative URL (like <code>/api</code>), it will be sent to <code>https://example.com/api</code>.</dd>
+     <dt>In Firefox</dt>
+     <dd>When a content script makes a request, you <em>must</em> provide absolute URLs.</dd>
+    </dl>
+  </dd>  
+
+  <dt>Sharing variables between content scripts</dt>
+  <dd>      
+    <dl>
+     <dt>In Firefox</dt>
+     <dd>You cannot share variables between content scripts by assigning them to <code>this.{variableName}</code> in one script and then attempting to access them using <code>window.{variableName}</code> in another. This is a limitation created by the sandbox environment in Firefox. This limitation may be removed, see {{bug(1208775)}}.</dd>
+    </dl>
+  </dd>   
+
+  <dt>Content script lifecycle during navigation</dt>
+  <dd>      
+    <dl>
+     <dt>In Chrome</dt>
+     <dd>Content scripts are destroyed when the user navigates away from a web page. If the user then returns to the page through history, by clicking the back button, the content script is injected into the web page again.</dd>
+     <dt>In Firefox</dt>
+     <dd>
+     <p>Content scripts remain injected in a web page after the user has navigated away, however, window object properties are destroyed. For example, if a content script sets <code>window.prop1 = "prop"</code>  and the user then navigates away and returns to the page <code>window.prop1</code> is undefined. This issue is tracked in {{bug(1525400)}} .</p>
+    
+     <p>To mimic the behavior of Chrome, listen for the <a href="/en-US/docs/Web/API/Window/pageshow_event">pageshow</a> and <a href="/en-US/docs/Web/API/Window/pagehide_event">pagehide</a> events. Then simulate the injection or destruction of the content script.</p>
+     </dd>
+    </dl>
+  </dd>  
+
+  <dt>zoom behavior</dt>
+  <dd>
+    <p>See {{WebExtAPIRef("tabs.ZoomSettingsScope")}}</p>
+    <dl>
+     <dt>In Chrome</dt>
+     <dd>Zoom changes are reset on navigation; navigating a tab will always load pages with their per-origin zoom factors.</dd>
+     <dt>In Firefox</dt>
+     <dd>
+     <p>The zoom level persists across page loads and navigation within the tab. in Chrome-based browsers</p>
+     </dd>
+    </dl>
+  </dd>
 </dl>
-
-<h4 id="Additional_incompatibilities">Additional incompatibilities</h4>
-
-<dl>
- <dt>In Firefox</dt>
- <dd>Background pages do not support using <a href="/en-US/docs/Web/API/Window/alert"><code>alert()</code></a>, <a href="/en-US/docs/Web/API/Window/confirm"><code>confirm()</code></a>, or <a href="/en-US/docs/Web/API/Window/prompt"><code>prompt()</code></a>.</dd>
-</dl>
-
-<h4 id="web_accessible_resources">web_accessible_resources</h4>
-
-<dl>
- <dt>In Chrome</dt>
- <dd>When a resource is listed in <code>web_accessible_resources</code>, it is accessible as <code>chrome-extension://«<var>your-extension-id</var>»/«<var>path/to/resource</var>»</code>. The extension ID is fixed for a given extension.</dd>
- <dt>In Firefox</dt>
- <dd>Resources are assigned a random UUID that changes for every instance of Firefox: <code>moz-extension://«<var>random-UUID</var>»/«<var>path/to/resource</var>»</code>. This randomness can prevent you from doing a few things, such as add your specific extension's URL to another domain's CSP policy.</dd>
-</dl>
-
-<h4 id="Manifest_key_property">Manifest "key" property</h4>
-
-<dl>
- <dt>In Chrome</dt>
- <dd>When working with an unpacked extension, the manifest may include a <a href="https://developer.chrome.com/extensions/manifest/key"><code>"key"</code> property</a> to pin the extension ID across different machines. This is mainly useful when working with <code>web_accessible_resources</code>.</dd>
- <dt>In Firefox</dt>
- <dd>Since Firefox uses random UUIDs for <code>web_accessible_resources</code>, this property is unsupported.</dd>
-</dl>
-
-<h4 id="Content_script_requests_happen_in_the_context_of_extension_not_content_page">Content script requests happen in the context of extension, not content page</h4>
-
-<dl>
- <dt>In Chrome</dt>
- <dd>When a content script makes a request (for example, using <a href="/en-US/docs/Web/API/Fetch_API/Using_Fetch"><code>fetch()</code></a>) to a relative URL (like <code>/api</code>), it will be sent to <code>https://example.com/api</code>.</dd>
- <dt>In Firefox</dt>
- <dd>When a content script makes a request, you <em>must</em> provide absolute URLs.</dd>
-</dl>
-
-<h4 id="Sharing_variables_between_content_scripts">Sharing variables between content scripts</h4>
-
-<dl>
- <dt>In Firefox</dt>
- <dd>You cannot share variables between content scripts by assigning them to <code>this.{variableName}</code> in one script and then attempting to access them using <code>window.{variableName}</code> in another. This is a limitation created by the sandbox environment in Firefox. This limitation may be removed, see {{bug(1208775)}}.</dd>
-</dl>
-
-<h4 id="Content_script_lifecycle_during_navigation">Content script lifecycle during navigation</h4>
-
-<dl>
- <dt>In Chrome</dt>
- <dd>Content scripts are destroyed when the user navigates away from a web page. If the user then returns to the page through history, by clicking the back button, the content script is injected into the web page again.</dd>
- <dt>In Firefox</dt>
- <dd>
- <p>Content scripts remain injected in a web page after the user has navigated away, however, window object properties are destroyed. For example, if a content script sets <code>window.prop1 = "prop"</code>  and the user then navigates away and returns to the page <code>window.prop1</code> is undefined. This issue is tracked in {{bug(1525400)}} .</p>
-
- <p>To mimic the behavior of Chrome, listen for the <a href="/en-US/docs/Web/API/Window/pageshow_event">pageshow</a> and <a href="/en-US/docs/Web/API/Window/pagehide_event">pagehide</a> events. Then simulate the injection or destruction of the content script.</p>
- </dd>
-</dl>
-
-<h4 id="per-tab_zoom_behavior">"per-tab" zoom behavior</h4>
-
-<p>See {{WebExtAPIRef("tabs.ZoomSettingsScope")}}</p>
-
-<dl>
- <dt>In Chrome</dt>
- <dd>Zoom changes are reset on navigation; navigating a tab will always load pages with their per-origin zoom factors.</dd>
- <dt>In Firefox</dt>
- <dd>
- <p>The zoom level persists across page loads and navigation within the tab. in Chrome-based browsers</p>
- </dd>
-</dl>
-
 <h2 id="manifest.json_keys">manifest.json keys</h2>
 
 <p>The main <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json"><code>manifest.json</code></a> page includes a table describing browser support for <code>manifest.json</code> keys. Where there are caveats around support for a given key, this is indicated in the table with an asterisk "*" and in the reference page for the key, the caveats are explained.</p>
