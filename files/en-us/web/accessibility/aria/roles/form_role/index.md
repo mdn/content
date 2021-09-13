@@ -119,7 +119,7 @@ Certain technologies such as browser extensions can generate lists of all landma
 | Specification                                                                    | Status                                           |
 | -------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#form","ARIA Form Role")}}                     | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#form","Role Form")}} | {{Spec2('ARIA Authoring Practices')}} |
+| {{SpecName("ARIA Authoring Practices 1.2","#form","Role Form")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
 
 ## Screen reader support
 

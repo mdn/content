@@ -9,7 +9,7 @@ tags:
   - NeedsContent
 ---
 
-A `banner` role represents general and informative content frequently placed at the beginning of the page. This usually includes a logo, company name, search icon, photo related to the page, or slogan.
+The `banner` role is for defining a global site header, which usually includes a logo, company name, search icon, and possibly a slogan, generally at the top of the page.
 
 ```html
 <div role="banner">
@@ -19,7 +19,7 @@ A `banner` role represents general and informative content frequently placed at 
 </div>
 ```
 
-By default, the HTML5 {{htmlelement("header")}} element has an identical meaning to the `banner` landmark, unless it is a descendant of {{htmlelement("aside")}}, {{htmlelement("article")}}, {{htmlelement("main")}}, {{htmlelement("nav")}}, or {{htmlelement("section")}}.
+By default, the HTML5 {{htmlelement("header")}} element has an identical meaning to the `banner` landmark, unless it is a descendant of {{htmlelement("aside")}}, {{htmlelement("article")}}, {{htmlelement("main")}}, {{htmlelement("nav")}}, or {{htmlelement("section")}}, and which point {{htmlelement("header")}} is the heading for that section, and not the equivalent of the site-wide banner.
 
 ## Description
 
@@ -76,7 +76,7 @@ While it is best to use the `header` element and ensure it is not a descendant 
 | Specification                                                                                                | Status                                           |
 | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ |
 | {{SpecName("ARIA","#banner","ARIA: banner role")}}                                         | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#aria_lh_banner","Banner landmark role")}} | {{Spec2('ARIA Authoring Practices')}} |
+| {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_banner","Banner landmark role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
 
 
 ## See also

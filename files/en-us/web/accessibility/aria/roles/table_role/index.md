@@ -130,7 +130,7 @@ none
 | Specification                                                                            | Status                                           |
 | ---------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#table","ARIA Table Role")}}                         | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#table","ARIA Table Role")}} | {{Spec2('ARIA Authoring Practices')}} |
+| {{SpecName("ARIA Authoring Practices 1.2","#table","ARIA Table Role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
 
 ## See also
 

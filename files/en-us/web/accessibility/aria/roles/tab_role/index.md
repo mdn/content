@@ -189,7 +189,7 @@ It is recommended to use a `button` element with the role `tab` for their bu
 | Specification                                                                    | Status                                           |
 | -------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#tab","tab")}}                                     | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#tabpanel","tabs")}} | {{Spec2('ARIA Authoring Practices')}} |
+| {{SpecName("ARIA Authoring Practices 1.2","#tabpanel","tabs")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
 
 ## Precedence order
 

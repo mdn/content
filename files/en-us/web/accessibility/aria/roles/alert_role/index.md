@@ -56,7 +56,7 @@ The `alert` role should read out content that has changed, or bring the user's a
 | Specification                                                                    | Status                                           |
 | -------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#alert","Alert")}}                                 | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.0","#log","Log")}} | {{Spec2('ARIA Authoring Practices')}} |
+| {{SpecName("ARIA Authoring Practices 1.2","#log","Log")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
 
 ## See also
 

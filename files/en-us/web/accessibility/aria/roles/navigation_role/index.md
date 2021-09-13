@@ -116,7 +116,7 @@ Certain technologies such as browser extensions can generate lists of all landma
 | Specification                                                                                                            | Status                                           |
 | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ |
 | {{SpecName("ARIA","#navigation","ARIA Navigation Role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#aria_lh_navigation","Navigation Landmark Role")}} | {{Spec2('ARIA Authoring Practices')}} |
+| {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_navigation","Navigation Landmark Role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
 
 ## Screen reader support
 

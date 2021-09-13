@@ -81,7 +81,7 @@ This role does not support any specific keyboard interaction.
 | Specification                                                            | Status                                           |
 | ------------------------------------------------------------------------ | ------------------------------------------------ |
 | {{SpecName("ARIA","#article","article")}}                 | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#feed","feed")}} | {{Spec2('ARIA Authoring Practices')}} |
+| {{SpecName("ARIA Authoring Practices 1.2","#feed","feed")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
 
 ## Precedence order
 

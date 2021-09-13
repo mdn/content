@@ -66,7 +66,7 @@ See the [`dialog` role's required javaScript features](en-US/docs/Web/Accessibil
 | Specification                                                                                                                    | Status                                           |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#alertdialog","ARIA: alertdialog role")}}                                             | {{Spec2('ARIA')}}  |
-| {{SpecName("ARIA Authoring Practices 1.1","#alertdialog","Alertdialog")}} | {{Spec2('ARIA Authoring Practices')}} |
+| {{SpecName("ARIA Authoring Practices 1.2","#alertdialog","Alertdialog")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
 
 
 ## See Also

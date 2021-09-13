@@ -34,7 +34,7 @@ tags:
 | Specification                                                                                                                    | Status                                           |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#tooltip","ARIA: tooltip role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#aria_lh_tooltip_role","tooltip role")}} | {{Spec2('ARIA Authoring Practices')}} |
+| {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_tooltip_role","tooltip role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
 
 
 ## See Also

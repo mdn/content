@@ -34,7 +34,7 @@ tags:
 | Specification                                                                                                                    | Status                                           |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#menuitemradio","ARIA: menuitemradio")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#aria_lh_menuitemradio","menuitemradio")}} | {{Spec2('ARIA Authoring Practices')}} |
+| {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_menuitemradio","menuitemradio")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
 
 
 ## See Also

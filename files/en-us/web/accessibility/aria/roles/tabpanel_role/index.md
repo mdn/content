@@ -57,7 +57,7 @@ Any additional benefits this feature has for non-typical screen reader users, li
 | Specification                                                                        | Status                                           |
 | ------------------------------------------------------------------------------------ | ------------------------------------------------ |
 | {{SpecName("ARIA","#tabpanel","tabpanel")}}                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#tabpanel","tabpanel")}} | {{Spec2('ARIA Authoring Practices')}} |
+| {{SpecName("ARIA Authoring Practices 1.2","#tabpanel","tabpanel")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
 
 ## Precedence order
 

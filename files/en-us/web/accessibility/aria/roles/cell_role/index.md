@@ -155,7 +155,7 @@ none
 | Specification                                                                            | Status                                           |
 | ---------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#cell","ARIA Cell Role")}}                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#cell","ARIA Cell Role")}} | {{Spec2('ARIA Authoring Practices')}} |
+| {{SpecName("ARIA Authoring Practices 1.2","#cell","ARIA Cell Role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
 
 ## See also
 

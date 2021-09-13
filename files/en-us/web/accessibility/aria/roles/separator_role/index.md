@@ -34,7 +34,7 @@ tags:
 | Specification                                                                                                                    | Status                                           |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#separator","ARIA: separator role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#aria_lh_separator_role","separator role")}} | {{Spec2('ARIA Authoring Practices')}} |
+| {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_separator_role","separator role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
 
 
 ## See Also

@@ -28,7 +28,7 @@ Do not use.
 | Specification                                                                                                                    | Status                                           |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#section","ARIA: section role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#aria_lh_section_role","section role")}} | {{Spec2('ARIA Authoring Practices')}} |
+| {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_section_role","section role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
 
 
 ## See Also

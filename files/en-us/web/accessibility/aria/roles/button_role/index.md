@@ -243,7 +243,7 @@ If a link performs the action of a button, giving the element `role="button"` he
 | Specification                                                                    | Status                                           |
 | -------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#button","button")}}                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#button","button")}} | {{Spec2('ARIA Authoring Practices')}} |
+| {{SpecName("ARIA Authoring Practices 1.2","#button","button")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
 
 ## Notes 
 

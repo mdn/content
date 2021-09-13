@@ -84,7 +84,7 @@ Columnheader has the same semantics `<tr scope="col">`.
 | Specification               | Status                                           |
 | --------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#columnheader","ARIA: columnheader role")}}| {{Spec2('ARIA')}}|
-| {{SpecName("ARIA Authoring Practices 1.1","#table","Table")}} | {{Spec2('ARIA Authoring Practices')}} |
+| {{SpecName("ARIA Authoring Practices 1.2","#table","Table")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
 
 
 ## See Also
