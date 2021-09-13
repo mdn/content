@@ -8,8 +8,18 @@ tags:
   - KeyboardEvent
   - Method
   - Reference
+  - Non Standard
 ---
-<p>{{ ApiRef("DOM Events") }}{{non-standard_header}}{{deprecated_header}}</p>
+<p>{{ ApiRef("DOM Events") }}</p>
+
+<div class="notecard warning">
+  <p><strong>Warning:</strong> Do NOT use this method; Use the {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} constructor instead!</p>
+      
+  <p>The method has been removed from the DOM specification and is not supported by any current browser.
+    Firefox hides this method behind the preference (<code>dom.keyboardevent.init_key_event.enabled</code>) from version 93 and plans to remove it shortly afterwards.</p>
+</div>
+
+<p>{{deprecated_header}}</p>
 
 <p>The <strong><code>KeyboardEvent.initKeyEvent()</code></strong> method is used to
   initialize the value of an event created using
@@ -19,17 +29,6 @@ tags:
   <code>initKeyEvent()</code> must be called to set the event before it is <a
     href="/en-US/docs/Web/API/EventTarget/dispatchEvent">dispatched</a>.</p>
 
-<div class="warning">
-  <p><strong>Warning:</strong> Do not use this method. Use the
-      {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} constructor
-      instead.<br>
-    <br>
-    This method is based on the key events spec in the <a class="external"
-    href="https://www.w3.org/TR/1999/WD-DOM-Level-2-19990923/events.html">early versions
-    of DOM 2 Events</a>, later removed from that spec. Prefer the modern constructor structure as
-    the only cross-browser way of building events.
-  </p>
-</div>
 
 <h2 id="Syntax">Syntax</h2>
 

@@ -60,57 +60,75 @@ for (const [key, value] of mySearchParams.entries()) {}</pre>
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js">var paramsString = "q=URLUtils.searchParams&amp;topic=api";
-var searchParams = new URLSearchParams(paramsString);
+<pre class="brush: js">const paramsString = 'q=URLUtils.searchParams&amp;topic=api';
+let searchParams = new URLSearchParams(paramsString);
 
 //Iterate the search parameters.
 for (let p of searchParams) {
   console.log(p);
 }
 
-searchParams.has("topic") === true; // true
-searchParams.get("topic") === "api"; // true
-searchParams.getAll("topic"); // ["api"]
-searchParams.get("foo") === null; // true
-searchParams.append("topic", "webdev");
-searchParams.toString(); // "q=URLUtils.searchParams&amp;topic=api&amp;topic=webdev"
-searchParams.set("topic", "More webdev");
-searchParams.toString(); // "q=URLUtils.searchParams&amp;topic=More+webdev"
-searchParams.delete("topic");
-searchParams.toString(); // "q=URLUtils.searchParams"
+searchParams.has('topic') === true;      // true
+searchParams.get('topic') === "api";     // true
+searchParams.getAll('topic');            // ["api"]
+searchParams.get('foo') === null;        // true
+searchParams.append('topic', 'webdev');
+searchParams.toString();                 // "q=URLUtils.searchParams&amp;topic=api&amp;topic=webdev"
+searchParams.set('topic', 'More webdev');
+searchParams.toString();                 // "q=URLUtils.searchParams&amp;topic=More+webdev"
+searchParams.delete('topic');
+searchParams.toString();                 // "q=URLUtils.searchParams"
+</pre>
+
+<pre class="brush: js">// Search parameters can also be an object
+let paramsObj = {foo: 'bar', baz: 'bar'};
+let searchParams = new URLSearchParams(paramsObj);
+
+searchParams.toString();                 // "foo=bar&baz=bar"
+searchParams.has('foo');                 // true
+searchParams.get('foo');                 // bar
+</pre>
+
+<pre class="brush: js">
+// Having duplicate parameters only returns the first value
+let paramStr = 'foo=bar&foo=baz';
+let searchParams = new URLSearchParams(paramStr);
+
+searchParams.toString();                 // "foo=bar&foo=baz"
+searchParams.has('foo');                 // true
 </pre>
 
 <h3 id="Gotchas">Gotchas</h3>
 
 <p>The <code>URLSearchParams</code> constructor does <em>not</em> parse full URLs. However, it will strip an initial leading <code>?</code> off of a string, if present.</p>
 
-<pre class="brush: js">var paramsString1 = "http://example.com/search?query=%40";
-var searchParams1 = new URLSearchParams(paramsString1);
+<pre class="brush: js">const paramsString1 = 'http://example.com/search?query=%40';
+const searchParams1 = new URLSearchParams(paramsString1);
 
-searchParams1.has("query"); // false
-searchParams1.has("http://example.com/search?query"); // true
+searchParams1.has('query'); // false
+searchParams1.has('http://example.com/search?query'); // true
 
-searchParams1.get("query"); // null
-searchParams1.get("http://example.com/search?query"); // "@" (equivalent to decodeURIComponent('%40'))
+searchParams1.get('query'); // null
+searchParams1.get('http://example.com/search?query'); // "@" (equivalent to decodeURIComponent('%40'))
 
-var paramsString2 = "?query=value";
-var searchParams2 = new URLSearchParams(paramsString2);
-searchParams2.has("query"); // true
+const paramsString2 = '?query=value';
+const searchParams2 = new URLSearchParams(paramsString2);
+searchParams2.has('query'); // true
 
-var url = new URL("http://example.com/search?query=%40");
-var searchParams3 = new URLSearchParams(url.search);
-searchParams3.has("query") // true
+const url = new URL('http://example.com/search?query=%40');
+const searchParams3 = new URLSearchParams(url.search);
+searchParams3.has('query') // true
 
-let base64 = btoa(String.fromCharCode(19,224,23,64,31,128)); // base64 is "E+AXQB+A"
-let searchParams = new URLSearchParams("q=foo&bin=" + base64); // q=foo&bin=E+AXQB+A
-let getBin = searchParams.get("bin"); // "E AXQB A" + char is replaced by spaces
+const base64 = btoa(String.fromCharCode(19,224,23,64,31,128)); // base64 is "E+AXQB+A"
+const searchParams = new URLSearchParams('q=foo&bin=' + base64); // q=foo&bin=E+AXQB+A
+const getBin = searchParams.get('bin'); // "E AXQB A" + char is replaced by spaces
 btoa(atob(getBin)); // "EAXQBA==" no error thrown
 btoa(String.fromCharCode(16,5,208,4)) // "EAXQBA==" decodes to wrong binary value
-getBin.replace(/ /g, "+"); // "E+AXQB+A" is one solution
+getBin.replace(/ /g, '+'); // "E+AXQB+A" is one solution
 
 // or use set to add the parameter, but this increases the query string length
-searchParams.set("bin2", base64) // "q=foo&bin=E+AXQB+A&bin2=E%2BAXQB%2BA" encodes + as %2B
-searchParams.get("bin2"); // "E+AXQB+A"
+searchParams.set('bin2', base64) // "q=foo&bin=E+AXQB+A&bin2=E%2BAXQB%2BA" encodes + as %2B
+searchParams.get('bin2'); // "E+AXQB+A"
 </pre>
 
 <h2 id="Specifications">Specifications</h2>

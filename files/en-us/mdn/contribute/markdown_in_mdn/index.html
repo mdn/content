@@ -334,8 +334,9 @@ On MDN, this would produce the following HTML:
 <p>In GFM (but not CommonMark) there is a syntax for tables: <a href="https://github.github.com/gfm/#tables-extension-">https://github.github.com/gfm/#tables-extension-</a>. We will make use of this but:</p>
 
 <ul>
-  <li>The GFM syntax only supports a subset of the features available in HTML.</li>
-  <li>For some GFM-compatible tables the GFM representation is actually less readable than HTML.</li>
+  <li>The GFM syntax only supports a subset of the features available in HTML. If you need to use table features that are not supported in GFM, use HTML for the table.</li>
+  <li>If the GFM representation of the table would be more than 150 characters wide, use HTML for the table.</li>
+  <li>We support a special kind of table called a "properties table", which has its own CSS class and is therefore always HTML.</li>
 </ul>
 
 <p>So the general principle here is: authors should use the GFM Markdown syntax when they can, and fall back to raw HTML when they have to or when HTML is more readable. See "When to use HTML tables" below.</p>
@@ -364,7 +365,7 @@ cell 4    | cell 5    | cell 6
 
 <h3>When to use HTML tables</h3>
 
-<p>There are two main circumstances in which authors should use HTML tables rather than GFM syntax: when the table uses features that are not supported in GFM, and when the table would be less readable in GFM.</p>
+<p>There are three main circumstances in which authors should use HTML tables rather than GFM syntax: when the table uses features that are not supported in GFM, when the GFM table would be too wide to be readable, and when the writer wants a special type of table called a "properties table".</p>
 
 <h4>Table features that are not supported in GFM</h4>
 
@@ -382,9 +383,9 @@ cell 4    | cell 5    | cell 6
 
 <p>Note that we don't recommend the general use of <code>&lt;caption&gt;</code> elements on tables, since that would also rule out the GFM syntax.</p>
 
-<h4>GFM table syntax readability issues</h4>
+<h4>GFM table maximum width</h4>
 
-<p>Even when a table could be written in GFM it is sometimes better to use HTML, because GFM uses an "ASCII art" approach to tables that is not readable when there are many columns or when cell contents are long. For example, consider this table:</p>
+<p>Even when a table could be written in GFM it is sometimes better to use HTML, because GFM uses an "ASCII art" approach to tables that is not readable when table rows get long. For example, consider this table:</p>
 
 <pre class="brush: html">
   &lt;table&gt;
@@ -417,9 +418,43 @@ cell 4    | cell 5    | cell 6
 
 <p>In a case like this it would be better to use HTML.</p>
 
+<p>This leads us to the following guideline: <em>if the Markdown representation of the table would be more than 150 characters wide, use HTML for the table</em>.</p>
+
+<h4>Properties tables</h4>
+
+<p>Properties tables are a specific type of table used for displaying structured property-value content across a set of pages of a particular type. For example, all event pages have a properties table listing common information about the event: whether it bubbles, whether it is cancellable, and so on.</p>
+
+<p>These tables have two columns: the first column is the header column and lists the properties, and the second column lists their values for this particular item. For example, here's the properties table for the {{domxref("XMLHttpRequest/progress_event", "progress")}} event of the {{domxref("XMLHttpRequest")}} interface:</p>
+
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">Bubbles</th>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Cancelable</th>
+   <td>No</td>
+  </tr>
+  <tr>
+   <th scope="row">Interface</th>
+   <td>{{domxref("ProgressEvent")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">Event handler property</th>
+   <td>{{domxref("XMLHttpRequestEventTarget/onprogress", "onprogress")}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>These pages can't be represented in GFM anyway, because they have a header column. Writers should therefore use HTML. To get the special styling, writers should apply the <code>"properties"</code> class to the table:</p>
+
+<pre class="brush: html">&lt;table class="properties"&gt;
+</pre>
+
 <h3>Discussion reference</h3>
 
-<p>This issue was resolved in <a href="https://github.com/mdn/content/issues/4325">https://github.com/mdn/content/issues/4325</a> and <a href="https://github.com/mdn/content/issues/7342">https://github.com/mdn/content/issues/7342</a>.</p>
+<p>This issue was resolved in <a href="https://github.com/mdn/content/issues/4325">https://github.com/mdn/content/issues/4325</a>, <a href="https://github.com/mdn/content/issues/7342">https://github.com/mdn/content/issues/7342</a>, and <a href="https://github.com/mdn/content/issues/7898#issuecomment-913265900">https://github.com/mdn/content/issues/7898#issuecomment-913265900</a>.</p>
 
 <h2>Superscript and subscript</h2>
 

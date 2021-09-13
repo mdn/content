@@ -6799,7 +6799,6 @@
 /en-US/docs/Web/API/AnimationTimingEffectProperties/iterations	/en-US/docs/Web/API/EffectTiming/iterations
 /en-US/docs/Web/API/Apps.mgmt.addEventListener	/en-US/docs/Web/API/EventTarget/addEventListener
 /en-US/docs/Web/API/Apps.mgmt.removeEventListener	/en-US/docs/Web/API/EventTarget/removeEventListener
-/en-US/docs/Web/API/ArrayBuffer	/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 /en-US/docs/Web/API/AudioBuffer.copyFromChannel	/en-US/docs/Web/API/AudioBuffer/copyFromChannel
 /en-US/docs/Web/API/AudioBuffer.copyToChannel	/en-US/docs/Web/API/AudioBuffer/copyToChannel
 /en-US/docs/Web/API/AudioBuffer.duration	/en-US/docs/Web/API/AudioBuffer/duration
@@ -6891,6 +6890,7 @@
 /en-US/docs/Web/API/AudioNode.numberOfInputs	/en-US/docs/Web/API/AudioNode/numberOfInputs
 /en-US/docs/Web/API/AudioNode.numberOfOutputs	/en-US/docs/Web/API/AudioNode/numberOfOutputs
 /en-US/docs/Web/API/AudioNode/connect(AudioNode)	/en-US/docs/Web/API/AudioNode/connect
+/en-US/docs/Web/API/AudioNodeOptions	/en-US/docs/Web/API/AudioNode
 /en-US/docs/Web/API/AudioParam.cancelScheduledValues	/en-US/docs/Web/API/AudioParam/cancelScheduledValues
 /en-US/docs/Web/API/AudioParam.defaultValue	/en-US/docs/Web/API/AudioParam/defaultValue
 /en-US/docs/Web/API/AudioParam.exponentialRampToValueAtTime	/en-US/docs/Web/API/AudioParam/exponentialRampToValueAtTime
@@ -7182,8 +7182,13 @@
 /en-US/docs/Web/API/DOMImplementation.hasFeature	/en-US/docs/Web/API/DOMImplementation/hasFeature
 /en-US/docs/Web/API/DOMMatrix/DOMMatrix.DOMMatrix	/en-US/docs/Web/API/DOMMatrix/DOMMatrix
 /en-US/docs/Web/API/DOMMatrix/DOMMatrixReadOnly	/en-US/docs/Web/API/DOMMatrixReadOnly/DOMMatrixReadOnly
-/en-US/docs/Web/API/DOMPoint/DOMPoint.fromPoint()	/en-US/docs/Web/API/DOMPoint/fromPoint
+/en-US/docs/Web/API/DOMPoint/DOMPoint.fromPoint()	/en-US/docs/web/api/DOMPoint/fromPoint
 /en-US/docs/Web/API/DOMPoint/toJSON	/en-US/docs/Web/API/DOMPointReadOnly/toJSON
+/en-US/docs/Web/API/DOMPointInit	/en-US/docs/web/api/DOMPoint/fromPoint
+/en-US/docs/Web/API/DOMPointInit/w	/en-US/docs/web/api/DOMPoint/w
+/en-US/docs/Web/API/DOMPointInit/x	/en-US/docs/web/api/DOMPoint/x
+/en-US/docs/Web/API/DOMPointInit/y	/en-US/docs/web/api/DOMPoint/y
+/en-US/docs/Web/API/DOMPointInit/z	/en-US/docs/web/api/DOMPoint/z
 /en-US/docs/Web/API/DOMPointReadOnly/DOMPoint.x	/en-US/docs/Web/API/DOMPointReadOnly/x
 /en-US/docs/Web/API/DOMReadOnlyMatrix	/en-US/docs/Web/API/DOMMatrixReadOnly
 /en-US/docs/Web/API/DOMTokenList/DOMTokenList.add()	/en-US/docs/Web/API/DOMTokenList/add
@@ -7537,7 +7542,6 @@
 /en-US/docs/Web/API/GlobalEventHandlers/onmozfullscreenchange	/en-US/docs/Web/API/Document/onfullscreenchange
 /en-US/docs/Web/API/GlobalEventHandlers/onmozfullscreenerror	/en-US/docs/Web/API/Document/onfullscreenerror
 /en-US/docs/Web/API/GlobalEventHandlers/onpointerdown/drag	/en-US/docs/Web/API/GlobalEventHandlers/ondrag
-/en-US/docs/Web/API/GlobalFetch	/en-US/docs/Web/API/WindowOrWorkerGlobalScope
 /en-US/docs/Web/API/GlobalFetch/GlobalFetch.fetch()	/en-US/docs/Web/API/fetch
 /en-US/docs/Web/API/GlobalFetch/fetch	/en-US/docs/Web/API/fetch
 /en-US/docs/Web/API/Guide/Events/Creating_and_triggering_events	/en-US/docs/Web/Events/Creating_and_triggering_events
@@ -8913,7 +8917,6 @@
 /en-US/docs/Web/API/Window/setInterval	/en-US/docs/Web/API/setInterval
 /en-US/docs/Web/API/Window/setTimeout	/en-US/docs/Web/API/setTimeout
 /en-US/docs/Web/API/Window/sidebar/Adding_search_engines_from_Web_pages	/en-US/docs/Web/OpenSearch
-/en-US/docs/Web/API/WindowBase64	/en-US/docs/Web/API/WindowOrWorkerGlobalScope
 /en-US/docs/Web/API/WindowBase64.atob	/en-US/docs/Web/API/atob
 /en-US/docs/Web/API/WindowBase64.btoa	/en-US/docs/Web/API/btoa
 /en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding	/en-US/docs/Glossary/Base64
@@ -8947,7 +8950,6 @@
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/unhandledrejection_event	/en-US/docs/Web/API/Window/unhandledrejection_event
 /en-US/docs/Web/API/WindowSessionStorage	/en-US/docs/Web/API/Window/sessionStorage
 /en-US/docs/Web/API/WindowSessionStorage.sessionStorage	/en-US/docs/Web/API/Window/sessionStorage
-/en-US/docs/Web/API/WindowTimers	/en-US/docs/Web/API/WindowOrWorkerGlobalScope
 /en-US/docs/Web/API/WindowTimers.clearInterval	/en-US/docs/Web/API/clearInterval
 /en-US/docs/Web/API/WindowTimers.clearTimeout	/en-US/docs/Web/API/clearTimeout
 /en-US/docs/Web/API/WindowTimers.setInterval	/en-US/docs/Web/API/setInterval
