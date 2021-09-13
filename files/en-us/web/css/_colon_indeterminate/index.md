@@ -90,9 +90,8 @@ progress {
 }
 
 progress:indeterminate {
-  opacity: 0.5;
-  background-color: lightgray;
-  box-shadow: 0 0 2px 1px red;
+width:80vw; 
+height:40px;
 }
 ```
 
