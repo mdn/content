@@ -8,6 +8,7 @@ tags:
   - ARIA Tabpanel
   - ARIA widget
   - Reference
+  - Needscontent
 ---
 {{draft}}
 
@@ -23,7 +24,6 @@ An element with the `tabpanel` role
 
 ### Associated Roles and Attributes
 
-<dl><dt>aria-</dt><dd></dd></dl>
 
 ### Keyboard interaction
 
@@ -64,4 +64,10 @@ Any additional benefits this feature has for non-typical screen reader users, li
 What are the related properties, and in what order will this attribute or property be read (which property will take precedence over this one, and which property will be overwritten.
 
 
-<section id="Quick_links"><ol><li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}</li></ol></section>
+<section id="Quick_links">
+
+1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
+
+    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+
+</section>
