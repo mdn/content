@@ -26,6 +26,7 @@ every element in the calling array.
 map((element) => { ... })
 map((element, index) => { ... })
 map((element, index, array) => { ... })
+map((element, index, array) => { ... }, thisArg)
 
 // Callback function
 map(callbackFn)
