@@ -90,8 +90,8 @@ progress {
 }
 
 progress:indeterminate {
-width:80vw; 
-height:40px;
+  width:80vw;
+  height:40px;
 }
 ```
 
