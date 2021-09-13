@@ -39,7 +39,7 @@ browser-compat: api.IDBCursorWithValue
 
 <h2 id="Example">Example</h2>
 
-<p>In this example we create a transaction, retrieve an object store, then use a cursor to iterate through all the records in the object store. The cursor does not require us to select the data based on a key; we can just grab all of it. Also note that in each iteration of the loop, you can grab data from the current record under the cursor object using <code>cursor.value.foo</code>. For a complete working example, see our <a href="https://github.com/mdn/IDBcursor-example/">IDBCursor example</a> (<a href="https://mdn.github.io/IDBcursor-example/">view example live</a>.)</p>
+<p>In this example we create a transaction, retrieve an object store, then use a cursor to iterate through all the records in the object store. The cursor does not require us to select the data based on a key; we can just grab all of it. Also note that in each iteration of the loop, you can grab data from the current record under the cursor object using <code>cursor.value.foo</code>. For a complete working example, see our <a href="https://github.com/mdn/indexeddb-examples/tree/master/idbcursor">IDBCursor example</a> (<a href="https://mdn.github.io/indexeddb-examples/idbcursor/">view example live</a>.)</p>
 
 <pre class="brush: js">function displayData() {
   var transaction = db.transaction(['rushAlbumList'], "readonly");
