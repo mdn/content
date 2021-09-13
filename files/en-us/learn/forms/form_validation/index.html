@@ -415,7 +415,7 @@ input:focus:invalid {
 
 <ul>
  <li><code>checkValidity()</code>: Returns <code>true</code> if the element's value has no validity problems; <code>false</code> otherwise. If the element is invalid, this method also fires an <a href="/en-US/docs/Web/API/HTMLInputElement/invalid_event"><code>invalid</code> event</a> on the element.</li>
- <li><code>reportValidity()</code>: Report the invalid field(s) using the browser native messages. Useful in combination with <code>preventDefault()</code> in an <code>onSubmit</code> event handler</li>
+ <li><code>reportValidity()</code>: Reports invalid field(s) using events. Useful in combination with <code>preventDefault()</code> in an <code>onSubmit</code> event handler</li>
  <li><code>setCustomValidity(<em>message</em>)</code>: Adds a custom error message to the element; if you set a custom error message, the element is considered to be invalid, and the specified error is displayed. This lets you use JavaScript code to establish a validation failure other than those offered by the standard HTML5 validation constraints. The message is shown to the user when reporting the problem.</li>
 </ul>
 
