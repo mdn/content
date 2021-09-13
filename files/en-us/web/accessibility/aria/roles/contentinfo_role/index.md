@@ -7,7 +7,7 @@ tags:
   - Reference
   - role-contentinfo
 ---
-The `contentinfo` [landmark role](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles) is used to identify information repeated at the end of every page of a website, including copyright information, navigation links, and privacy statements. This section is commonly called a footer.
+The `contentinfo` role defines a footer, containing identifying information such as copyright information, navigation links, and privacy statements, found on every document within a site. This section is commonly called a footer.
 
 ```html
 <div role="contentinfo">
@@ -16,7 +16,7 @@ The `contentinfo` [landmark role](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techni
 </div>
 ```
 
-This is a website footer. Using the [`<footer>`](/en-US/docs/Web/HTML/Element/footer) element instead is recommended:
+This is a website footer. Using the {{HTMLElement('footer')}} element instead is recommended:
 
 ```html
 <footer>
@@ -27,11 +27,11 @@ This is a website footer. Using the [`<footer>`](/en-US/docs/Web/HTML/Element/fo
 
 ## Description
 
-The `contentinfo` role is [a landmark](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles) used to identify a page footer. Landmarks can be used by assistive technology to quickly identify and navigate to large sections of the document. Pages should only include one top-level `contentinfo` landmark role per page.
+The `contentinfo` role is [a landmark](/en-US/docs/Web/Accessibility/ARIA/Roles#Landmark_roles) used to identify a page footer. Landmarks can be used by assistive technology to quickly identify and navigate to large sections of the document. Pages should only include one top-level `contentinfo` landmark role per page.
 
-Each page should only include one `contentinfo` landmark, created by either using the [`<footer>` element](/en-US/docs/Web/HTML/Element/footer) or by declaring `role="contentinfo"`. `contentinfo` landmarks present in content embedded via [`<iframe>` elements](/en-US/docs/Web/HTML/Element/iframe) do not count towards this limit.
+Each page should only include one `contentinfo` landmark, created by either using the {{HTMLElement('footer')}} element or by declaring `role="contentinfo"`. `contentinfo` landmarks present in content embedded via {{HTMLElement('iframe')}} do not count towards this limit.
 
-<div class="note"><p>Using the <a href="/en-US/docs/Web/HTML/Element/footer">`<footer>` element</a> will automatically communicate a section has a role of `contentinfo`. Developers should always prefer using the correct semantic HTML element over using ARIA, making sure to <a href="/en-US/docs/Web/HTML/Element/footer#accessibility_concerns">test for known issues</a> in VoiceOver.</p></div>
+> **Note:** Using the {{HTMLElement('footer')}} element</a> will automatically communicate a section has a role of `contentinfo`. Developers should always prefer using the correct semantic HTML element over using ARIA, making sure to {{HTMLElement('footer#accessibility_concerns', 'test for known issues')}} in VoiceOver.
 
 ## Examples
 
@@ -57,23 +57,23 @@ Each page should only include one `contentinfo` landmark, created by either usin
 
 ### Use sparingly
 
-[Landmark roles](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles) are intended to identify larger overall sections of the document. Using too many landmark roles can create "noise" in screen readers, making it difficult to understand the overall layout of the page.
+[Landmark roles](/en-US/docs/Web/Accessibility/ARIA/Roles#Landmark_roles) are intended to identify larger overall sections of the document. Using too many landmark roles can create "noise" in screen readers, making it difficult to understand the overall layout of the page.
 
 ### One `contentinfo` landmark per page
 
 #### The `<body>` element
 
-There should be only one `contentinfo` landmark per document, used as the immediate descendant of the [`<body>` element](/en-US/docs/Web/HTML/Element/body).
+There should be only one `contentinfo` landmark per document, used as the immediate descendant of the {{HTMLElement('body')}} element.
 
 #### Mega-footers
 
-Do not nest additional [`<footer>` elements](/en-US/docs/Web/HTML/Element/footer) or `contentinfo` landmarks inside of the document's footer. Use other [content sectioning elements](/en-US/docs/Web/HTML/Element#content_sectioning) instead.
+Do not nest additional {{HTMLElement('footer')}} elements or `contentinfo` landmarks inside of the document's footer. Use other [content sectioning elements](/en-US/docs/Web/HTML/Element#content_sectioning) instead.
 
 ### Labeling landmarks
 
 #### Multiple landmarks
 
-If there is more than one `contentinfo` landmark role or [`<footer>` element](/en-US/docs/Web/HTML/Element/footer) in a document, provide a label with the `aria-label` attribute for each landmark. This label will allow assistive technology users to quickly understand the purpose of each landmark.
+If there is more than one `contentinfo` landmark role or {{HTMLElement('footer')}} element in a document, provide a label with the `aria-label` attribute for each landmark. This label will allow assistive technology users to quickly understand the purpose of each landmark.
 
 ```html
 <body>
@@ -84,7 +84,7 @@ If there is more than one `contentinfo` landmark role or [`<footer>` element](/e
     <h2>Everyday Pad Thai</h2>
     <!-- article content -->
     <footer aria-label="Everyday Pad Thai metadata">
-      <p>Posted on <time datetime="2018-09-23 12:17">May 16</time> by <a href="#">Lisa</a>.</p>
+      <p>Posted on <time datetime="2021-09-23 12:17">September 23</time> by <a href="#">Lisa</a>.</p>
     </footer>
   </article>
 
@@ -104,7 +104,7 @@ Screen readers will announce the type of role the landmark is. Because of this, 
 
 ### Prefer HTML
 
-When it is an immediate descendant of the [`<body>` element,](/en-US/docs/Web/HTML/Element/body) using the [`<footer>` element](/en-US/docs/Web/HTML/Element/footer) will automatically communicate a section has a role of `contentinfo` (save for [a known issue](/en-US/docs/Web/HTML/Element/footer#accessibility_concerns) in VoiceOver). If at all possible, prefer using `<footer>` instead. Note that a `footer` element nested within an `article`, `aside`, `main`, `nav`, or `section` is not considered `contentinfo.`
+When it is an immediate descendant of the {{HTMLElement('body')}} using the {{HTMLElement('footer')}} element will automatically communicate a section has a role of `contentinfo` (save for {{HTMLElement('footer#accessibility_concerns', 'a known issue')}} in VoiceOver). If at all possible, prefer using `<footer>` instead. Note that a `footer` element nested within an `article`, `aside`, `main`, `nav`, or `section` is not considered `contentinfo.`
 
 ### Added benefits
 
@@ -119,14 +119,11 @@ Certain technologies such as browser extensions can generate lists of all landma
 | {{SpecName("ARIA","#contentinfo","contentinfo landmark role")}}                                     | {{Spec2('ARIA')}}                         |
 | {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_contentinfo","contentinfo landmark role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
 
-## Screen reader support
-
 ## See also
 
-- [\<footer>: The Footer element](/en-US/docs/Web/HTML/Element/footer)
+- The {{HTMLElement('footer')}} element
 - [contentinfo (role): Accessible Rich Internet Applications (WAI-ARIA) 1.1](https://www.w3.org/TR/wai-aria/#contentinfo)
 - [Using HTML sections and outlines](/en-US/docs/Web/HTML/Element/Heading_Elements)
-- [Landmark roles: Using ARIA: Roles, States, and Properties](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles)
 - [Using WAI-ARIA Landmarks – 2013 | The Paciello Group](https://developer.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/)
 - [Accessible Landmarks | scottohara.me](https://www.scottohara.me/blog/2018/03/03/landmarks.html)
 - [The Footer Element Update | HTML5 Doctor](https://html5doctor.com/the-footer-element-update/)
