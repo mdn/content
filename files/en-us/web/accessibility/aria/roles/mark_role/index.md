@@ -43,7 +43,7 @@ Using the [`<mark>` element](/en-US/docs/Web/HTML/Element/mark) will automatical
 
 Will be part of WAI-ARIA 1.3, which is still being drafted.
 
-## Screen reader support
+
 
 TBD
 

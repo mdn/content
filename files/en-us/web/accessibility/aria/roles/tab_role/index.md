@@ -195,7 +195,7 @@ It is recommended to use a `button` element with the role `tab` for their bu
 
 What are the related properties, and in what order will this attribute or property be read (which property will take precedence over this one, and which property will be overwritten.
 
-## Screen reader support
+
 
 Screenreader support is still to be determined. Visit https\://github.com/mdn/content/blob/main/rfcs/aria-roles.md for more information.
 

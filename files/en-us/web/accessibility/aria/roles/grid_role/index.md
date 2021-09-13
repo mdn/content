@@ -586,7 +586,7 @@ Even if the keyboard use is properly implemented, some users might not be aware 
 | {{SpecName("ARIA","#grid","Role Grid")}}                             | {{Spec2('ARIA')}}                         |
 | {{SpecName("ARIA Authoring Practices 1.2","#grid","Role Grid")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
 
-## Screen reader support
+
 
 TBD
 

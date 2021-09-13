@@ -37,7 +37,7 @@ None, except as required by any attributes. For example, setting `aria-busy` to 
 | ------------------------------------------------ | ------------------------ |
 | {{SpecName("ARIA","#feed","feed")}} | {{Spec2('ARIA')}} |
 
-## Screen reader support
+
 
 Coming soon
 

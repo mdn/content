@@ -103,7 +103,7 @@ Another example where this might be suitable is when using ASCII emoji combinati
 | -------------------------------------------- | ------------------------ |
 | {{SpecName("ARIA","#img","img")}} | {{Spec2('ARIA')}} |
 
-## Screen reader support
+
 
 TBD
 

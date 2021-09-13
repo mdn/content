@@ -93,7 +93,7 @@ Certain technologies such as browser extensions can generate lists of all landma
 | {{SpecName("ARIA","#search","ARIA search role")}}                                         | {{Spec2('ARIA')}}                         |
 | {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_search","ARIA search role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
 
-## Screen reader support
+
 
 TBD
 

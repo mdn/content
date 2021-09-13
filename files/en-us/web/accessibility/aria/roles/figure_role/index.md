@@ -126,7 +126,7 @@ If at all possible, you<span class="ILfuVd yZ8quc"> should use the appropriate s
 | ---------------------------------------------------- | ------------------------ |
 | {{SpecName("ARIA","#figure","figure")}} | {{Spec2('ARIA')}} |
 
-## Screen reader support
+
 
 TBD
 

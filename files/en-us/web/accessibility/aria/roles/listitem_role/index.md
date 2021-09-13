@@ -81,7 +81,7 @@ or use an ordered list if the order of the list items matters:
 | -------------------------------------------------------- | ------------------------ |
 | {{SpecName("ARIA","#listitem","listitem")}} | {{Spec2('ARIA')}} |
 
-## Screen reader support
+
 
 TBD
 

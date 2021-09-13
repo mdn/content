@@ -78,7 +78,7 @@ Nested comments are also possible with ARIA annotations — nest the comments in
 
 Will be part of WAI-ARIA 1.3, which is still being drafted.
 
-## Screen reader support
+
 
 TBD
 

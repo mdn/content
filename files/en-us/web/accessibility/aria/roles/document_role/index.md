@@ -67,7 +67,7 @@ The document role is an easy way to indirectly control assistive technology beha
 | -------------------------------------------------------- | ------------------------ |
 | {{SpecName("ARIA","#document","document")}} | {{Spec2('ARIA')}} |
 
-## Screen reader support
+
 
 ## See also
 

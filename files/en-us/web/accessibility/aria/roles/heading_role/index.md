@@ -91,7 +91,7 @@ None.
 
 The heading role overrides the native semantic meaning of the element it is being used for. The `aria-level` attribute, in addition, determines what level of heading is being exposed.
 
-## Screen reader support
+
 
 TBD
 

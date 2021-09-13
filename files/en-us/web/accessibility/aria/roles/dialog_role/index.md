@@ -122,7 +122,7 @@ When the dialog is correctly labeled and focus is moved to an element (often an 
 | {{SpecName("ARIA Authoring Practices 1.2","#dialog_modal","Dialog")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
 
 
-## Screen reader support
+
 
 Coming soon
 
