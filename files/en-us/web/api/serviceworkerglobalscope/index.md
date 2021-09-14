@@ -56,6 +56,9 @@ This interface inherits from the {{domxref("WorkerGlobalScope")}} interface, and
 - `notificationclose`
   - : Occurs — when a user closes a displayed notification.
     Also available via the {{domxref("ServiceWorkerGlobalScope.onnotificationclose")}} property.
+- {{domxref("ServiceWorkerGlobalScope/sync_event", "sync")}}
+  - : Occurs when connectivity is restored and a sync request was registered with the {{domxref("SyncManager")}}.
+    Also available via the {{domxref("ServiceWorkerGlobalScope.onsync")}} property.
 - {{domxref("ServiceWorkerGlobalScope/periodicsync_event", "periodicsync")}}
   - : Occurs at periodic intervals, which were specified when registering a {{domxref("PeriodicSyncManager")}}.
     Also available via the {{domxref("ServiceWorkerGlobalScope.onperiodicsync")}} property.
