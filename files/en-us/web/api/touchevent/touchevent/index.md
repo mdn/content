@@ -31,29 +31,13 @@ const event = new TouchEvent(typeArg, touchEventInit);
     - `"touches"`, optional and defaulting to `[]`, of type `Touch[]`, that is a list of objects for every point of contact currently touching the surface.
     - `"targetTouches"`, optional and defaulting to `[]`, of type `Touch[]`, that is a list of objects for every point of contact that is touching the surface _and_ started on the element that is the target of the current event.
     - `"changedTouches"`, optional and defaulting to `[]`, of type `Touch[]`, that is a list of objects for every point of contact which contributed to the event.
-    - `"ctrlKey"`, optional and defaulting to `false`, a boolean value that indicates if the
+    - `"ctrlKey"`, optional and defaulting to `false`, a boolean value that indicates if the <kbd>ctrl</kbd> key was simultaneously pressed.
 
-      <kbd>ctrl</kbd>
+    - `"shiftKey"`, optional and defaulting to `false`, a boolean value that indicates if the <kbd>shift</kbd> key was simultaneously pressed.
 
-      key was simultaneously pressed.
+    - `"altKey"`, optional and defaulting to `false`, a boolean value that indicates if the <kbd>alt</kbd> key was simultaneously pressed.
 
-    - `"shiftKey"`, optional and defaulting to `false`, a boolean value that indicates if the
-
-      <kbd>shift</kbd>
-
-      key was simultaneously pressed.
-
-    - `"altKey"`, optional and defaulting to `false`, a boolean value that indicates if the
-
-      <kbd>alt</kbd>
-
-      key was simultaneously pressed.
-
-    - `"metaKey"`, optional and defaulting to `false`, a boolean value that indicates if the
-
-      <kbd>meta</kbd>
-
-      key was simultaneously pressed.
+    - `"metaKey"`, optional and defaulting to `false`, a boolean value that indicates if the <kbd>meta</kbd> key was simultaneously pressed.
 
     _The Touch`EventInit` dictionary also accepts fields from {{domxref("UIEvent.UIEvent", "UIEventInit")}} and from {{domxref("Event.Event", "EventInit")}} dictionaries._
 

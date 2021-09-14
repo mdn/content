@@ -32,13 +32,7 @@ Several more specific events are based on `MouseEvent`, including {{domxref("Whe
 _This interface also inherits properties of its parents, {{domxref("UIEvent")}} and {{domxref("Event")}}._
 
 - {{domxref("MouseEvent.altKey")}} {{readonlyinline}}
-
-  - : Returns `true` if the
-
-    <kbd>alt</kbd>
-
-    key was down when the mouse event was fired.
-
+  - : Returns `true` if the <kbd>alt</kbd> key was down when the mouse event was fired.
 - {{domxref("MouseEvent.button")}} {{readonlyinline}}
   - : The button number that was pressed (if applicable) when the mouse event was fired.
 - {{domxref("MouseEvent.buttons")}} {{readonlyinline}}
@@ -48,21 +42,9 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 - {{domxref("MouseEvent.clientY")}} {{readonlyinline}}
   - : The Y coordinate of the mouse pointer in local (DOM content) coordinates.
 - {{domxref("MouseEvent.ctrlKey")}} {{readonlyinline}}
-
-  - : Returns `true` if the
-
-    <kbd>control</kbd>
-
-    key was down when the mouse event was fired.
-
+  - : Returns `true` if the <kbd>control</kbd> key was down when the mouse event was fired.
 - {{domxref("MouseEvent.metaKey")}} {{readonlyinline}}
-
-  - : Returns `true` if the
-
-    <kbd>meta</kbd>
-
-    key was down when the mouse event was fired.
-
+  - : Returns `true` if the <kbd>meta</kbd> key was down when the mouse event was fired.
 - {{domxref("MouseEvent.movementX")}} {{readonlyinline}}
   - : The X coordinate of the mouse pointer relative to the position of the last {{event("mousemove")}} event.
 - {{domxref("MouseEvent.movementY")}} {{readonlyinline}}
@@ -84,13 +66,7 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 - {{domxref("MouseEvent.screenY")}} {{readonlyinline}}
   - : The Y coordinate of the mouse pointer in global (screen) coordinates.
 - {{domxref("MouseEvent.shiftKey")}} {{readonlyinline}}
-
-  - : Returns `true` if the
-
-    <kbd>shift</kbd>
-
-    key was down when the mouse event was fired.
-
+  - : Returns `true` if the <kbd>shift</kbd> key was down when the mouse event was fired.
 - {{domxref("MouseEvent.which")}} {{non-standard_inline}} {{readonlyinline}}
   - : The button being pressed when the mouse event was fired.
 - {{domxref("MouseEvent.mozPressure")}} {{non-standard_inline()}} {{deprecated_inline}} {{readonlyinline}}
