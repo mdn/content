@@ -38,3 +38,5 @@ tags:
 
 
 ## See Also
+
+- [ARIA: using the `presentation` role](/en-US/docs/Web/Accessibility/ARIA/aria_techniques/using_the_presentation_role)

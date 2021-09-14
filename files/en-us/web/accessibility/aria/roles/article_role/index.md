@@ -89,6 +89,7 @@ This role corresponds to the `<article>` element in HTML, and that element shoul
 
 ## See also
 
+- [ARIA: using the `article` role](/en-US/docs/Web/Accessibility/ARIA/aria_techniques/using_the_article_role)
 - [`feed` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Feed_Role)
 - [`section` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Section_Role)
 - [`<article>` element](/en-US/docs/Web/HTML/Element/article)

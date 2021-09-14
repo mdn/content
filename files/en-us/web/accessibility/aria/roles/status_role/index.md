@@ -49,6 +49,7 @@ Elements with the role status have an implicit `aria-live` value of `polite` and
 
 ## See Also
 
+- [ARIA: using the `status` role](/en-US/docs/Web/Accessibility/ARIA/aria_techniques/using_the_status_role)
 - [ARIA: `alert` role](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role)
 - [ARIA: `log` role](/en-US/docs/Web/Accessibility/ARIA/Roles/log_role)
 - [ARIA: `marquee` role](/en-US/docs/Web/Accessibility/ARIA/Roles/marquee_role)

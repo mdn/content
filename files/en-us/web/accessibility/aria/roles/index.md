@@ -71,13 +71,13 @@ There are 6 categories of ARIA roles:
 
 3. ### Landmark roles
 
-  - [banner](/en-US/docs/Web/Accessibility/ARIA/Roles/Banner_role)
-  - [complementary](/en-US/docs/Web/Accessibility/ARIA/Roles/Complementary_role)
-  - [contentinfo](/en-US/docs/Web/Accessibility/ARIA/Roles/Contentinfo_role)
-  - [form](/en-US/docs/Web/Accessibility/ARIA/Roles/Form_Role)
-  - [main](/en-US/docs/Web/Accessibility/ARIA/Roles/Main_role)
-  - [navigation](/en-US/docs/Web/Accessibility/ARIA/Roles/Navigation_Role)
-  - [region](/en-US/docs/Web/Accessibility/ARIA/Roles/Region_role)
+  - [banner](/en-US/docs/Web/Accessibility/ARIA/Roles/Banner_role) (document {{HTMLElement('header')}})
+  - [complementary](/en-US/docs/Web/Accessibility/ARIA/Roles/Complementary_role) ({{HTMLElement('aside')}})
+  - [contentinfo](/en-US/docs/Web/Accessibility/ARIA/Roles/Contentinfo_role) (document {{HTMLElement('footer')}})
+  - [form](/en-US/docs/Web/Accessibility/ARIA/Roles/Form_Role) 
+  - [main](/en-US/docs/Web/Accessibility/ARIA/Roles/Main_role) ({{HTMLElement('main')}})
+  - [navigation](/en-US/docs/Web/Accessibility/ARIA/Roles/Navigation_Role) ({{HTMLElement('nav')}})
+  - [region](/en-US/docs/Web/Accessibility/ARIA/Roles/Region_role) ({{HTMLElement('section')}})
   - [search](/en-US/docs/Web/Accessibility/ARIA/Roles/Search_role)
 
 
