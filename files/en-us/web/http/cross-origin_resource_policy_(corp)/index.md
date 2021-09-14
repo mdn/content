@@ -41,7 +41,7 @@ During a cross-origin resource policy check, if the header is set, the browser w
 
 ## Relationship to cross-origin embedder policy (COEP)
 
-The {{HTTPHeader("Cross-Origin-Embedder-Policy")}} HTTP response header, when used upon a document, can be used to require subresources to either be same-origin with the document, or come with {{HTTPHeader("Cross-Origin-Resource-Policy")}} HTTP response header to indicate they are okay with being embedded. This is why the `cross-origin` value exists.
+The {{HTTPHeader("Cross-Origin-Embedder-Policy")}} HTTP response header, when used upon a document, can be used to require subresources to either be same-origin with the document, or come with a {{HTTPHeader("Cross-Origin-Resource-Policy")}} HTTP response header to indicate they are okay with being embedded. This is why the `cross-origin` value exists.
 
 ## History
 
