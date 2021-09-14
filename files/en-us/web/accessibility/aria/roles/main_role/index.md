@@ -5,7 +5,9 @@ tags:
   - ARIA
   - ARIA Role
   - Reference
-  - role-main
+  - Accessibility
+  - main role
+  - landmark role
 ---
 The `main` landmark role is used to indicate the primary content of a document. The main content area consists of content that is directly related to or expands upon the central topic of a document, or the main function of an application.
 
@@ -91,7 +93,7 @@ Using the [`<main>` element](/en-US/docs/Web/HTML/Element/main) will automatical
 
 Skip navigation, also known as "skipnav", is a technique that allows an assistive technology user to quickly bypass large sections of repeated content (main navigation, info banners, etc.). This allows the user to access the main content of the page faster.
 
-Adding an [`id` attribute](/en-US/docs/Web/HTML/Global_attributes/id) to the element with a declaration of `role="main"` allows it to be a target of a skip navigation link.
+Adding an [`id` attribute](/en-US/docs/Web/HTML/Global_attributes/id) to the element with a declaration of `role="main"` allows it to be a target of a skip navigation link users.
 
 ```html
 <body>
@@ -105,13 +107,22 @@ Adding an [`id` attribute](/en-US/docs/Web/HTML/Global_attributes/id) to the ele
 </body>
 ```
 
+Which is the equivalent of: 
+
+```html
+<body>
+  <a href="#main-content">Skip to main content</a>
+
+  <!-- navigation and header content -->
+
+  <main id="main-content">
+    <!-- main page content -->
+  </main>
+</body>
+```
+
 - [WebAIM: "Skip Navigation" Links](https://webaim.org/techniques/skipnav/)
 
-### Added benefits
-
-Certain technologies such as browser extensions can generate lists of all landmark roles present on a page, allowing non-screen reader users to also quickly identify and navigate to large sections of the document.
-
-- [Landmarks browser extension](https://matatk.agrip.org.uk/landmarks/)
 
 ## Specifications
 
@@ -124,12 +135,10 @@ Certain technologies such as browser extensions can generate lists of all landma
 
 ## See also
 
-- [\<main>: The Main element](/en-US/docs/Web/HTML/Element/main)
-- [main (role): Accessible Rich Internet Applications (WAI-ARIA) 1.1](https://www.w3.org/TR/wai-aria/#main)
+- The {{HTMLElement('main')}} element
 - [Using HTML sections and outlines](/en-US/docs/Web/HTML/Element/Heading_Elements)
-- [Landmark roles: Using ARIA: Roles, States, and Properties](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles)
 - [Using WAI-ARIA Landmarks – 2013 | The Paciello Group](https://developer.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/)
 - [Accessible Landmarks | scottohara.me](https://www.scottohara.me/blog/2018/03/03/landmarks.html)
 - [The main element | HTML5 Doctor](https://html5doctor.com/the-main-element/)
 
-<section id="Quick_links"><ol><li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}</li></ol></section>
+
