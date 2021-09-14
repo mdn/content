@@ -20,13 +20,11 @@ browser-compat: api.PannerNode.PannerNode
 
 <h3 id="Parameters">Parameters</h3>
 
-<p><em>Inherits parameters from the {{domxref("AudioNodeOptions")}} dictionary</em>.</p>
-
 <dl>
 	<dt><em>context</em></dt>
 	<dd>A {{domxref("BaseAudioContext")}} representing the audio context you want the node to be associated with.</dd>
 	<dt><em>options</em> {{optional_inline}}</dt>
-	<dd>A <code><a href="https://webaudio.github.io/web-audio-api/#idl-def-PannerOptions">PannerOptions</a></code> dictionary object defining the properties you want the <code>PannerNode</code> to have (It also inherits the options defined in the <a href="https://webaudio.github.io/web-audio-api/#idl-def-AudioNodeOptions">AudioNodeOptions</a> dictionary.):
+	<dd>A <code><a href="https://webaudio.github.io/web-audio-api/#idl-def-PannerOptions">PannerOptions</a></code> dictionary object defining the properties you want the <code>PannerNode</code> to have:
 	<ul>
 		<li><code>panningModel</code>: The {{domxref("PannerNode.panningModel")}} you want the {{domxref("PannerNode")}} to have (the default is <code>equalpower</code>.)</li>
 		<li><code>distanceModel</code>: The {{domxref("PannerNode.distanceModel")}} you want the {{domxref("PannerNode")}} to have (the default is <code>inverse</code>.)</li>
@@ -42,6 +40,23 @@ browser-compat: api.PannerNode.PannerNode
 		<li><code>coneInnerAngle</code>: The {{domxref("PannerNode.coneInnerAngle")}} you want the {{domxref("PannerNode")}} to have (the default is <code>360</code>.)</li>
 		<li><code>coneOuterAngle</code>: The {{domxref("PannerNode.coneOuterAngle")}} you want the {{domxref("PannerNode")}} to have (the default is <code>360</code>.)</li>
 		<li><code>coneOuterGain</code>: The {{domxref("PannerNode.coneOuterGain")}} you want the {{domxref("PannerNode")}} to have. The default is <code>0</code>, and its value can be in the range 0–1.</li>
+		<li><code>channelCount</code>: Represents an integer used to determine how many channels are used when <a
+	      href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing">up-mixing
+	      and down-mixing</a> connections to any inputs to the node. (See
+	    {{domxref("AudioNode.channelCount")}} for more information.) Its usage and precise
+	    definition depend on the value of <code>channelCountMode</code>.</li>
+	  <li><code>channelCountMode</code>: Represents an enumerated value describing the way channels must be matched between
+	    the node's inputs and outputs. (See {{domxref("AudioNode.channelCountMode")}} for more
+	    information including default values.)</li>
+	  <li>
+	  	<code>channelInterpretation</code>: Represents an enumerated value describing the meaning of the channels. This
+	    interpretation will define how audio <a
+	      href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing">up-mixing
+	      and down-mixing</a> will happen.<br>
+	    The possible values are <code>"speakers"</code> or <code>"discrete"</code>. (See
+	    {{domxref("AudioNode.channelCountMode")}} for more information including default
+	    values.)
+	  </li>
 	</ul>
 	</dd>
 </dl>

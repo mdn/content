@@ -136,7 +136,7 @@ Which is comparable to a combination of import and export:
 ```js
 import { default as function1,
          function2 } from 'bar.js';
-export { function1 as default, function2 };
+export { function1, function2 };
 ```
 
 But where `function1` and `function2` do not become available

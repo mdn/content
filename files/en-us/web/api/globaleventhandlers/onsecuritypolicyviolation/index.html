@@ -17,6 +17,11 @@ browser-compat: api.GlobalEventHandlers.onsecuritypolicyviolation
 
 <p>The <code>securitypolicyviolation</code> event fires when there is a <a href="/en-US/docs/Web/HTTP/CSP">Content Security Policy</a> violation.</p>
 
+<div class="notecard note">
+  <p><strong>Note:</strong> In practice you must use the implementation of this property in a top level object (i.e. {{domxref("Window")}} or {{domxref("Document")}}).
+    While the property exists in HTML elements, you can't assign a handler to the property until the elements have been loaded, by which time this event will already have fired.</p>
+</div>
+
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="brush: js">onsecuritypolicyviolation = functionRef</pre>

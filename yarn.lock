@@ -39,10 +39,10 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-4.0.2.tgz#54431f690853e11b61f93b29ded25978f78c38e0"
   integrity sha512-XGLqWi1uOil0L4TJs9KOTMRl9FdEtRQLvBDaB7++AFnFf9G0QYihiUNRJ4eXZa53KI9VORsEi3Fj8p3N+m/Gdw==
 
-"@mdn/yari@0.4.765":
-  version "0.4.765"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.765.tgz#ddc828e878abb6f1aa401f7853c6185668967e29"
-  integrity sha512-yhWEq8Pm8m/ReUUj5lkuqyrsmwoxF6Lvmdov/yyEEushqEuSsKh/CSa+2MqJnGuxebWgU0irDqumdnJjLSSaWA==
+"@mdn/yari@0.4.771":
+  version "0.4.771"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.771.tgz#2c16a562be3a33b93fc513ad9c14995101e76fd4"
+  integrity sha512-U7zS1a39MP0cMzljGcjL+bV0dfB6AjTal8DmFrxMBd91Wr59X8zz2845fZS99Tyr8L7YqBXGqOUopZ8vPKGZYQ==
   dependencies:
     "@caporal/core" "2.0.2"
     "@fast-csv/parse" "4.3.6"
@@ -56,11 +56,11 @@
     cookie "0.4.1"
     cookie-parser "1.4.5"
     cssesc "^3.0.0"
-    dayjs "1.10.6"
+    dayjs "1.10.7"
     dotenv "10.0.0"
     ejs "3.1.6"
     express "4.17.1"
-    fast-xml-parser "3.19.0"
+    fast-xml-parser "3.20.0"
     fdir "5.1.0"
     file-type "16.5.3"
     front-matter "^4.0.2"
@@ -104,7 +104,7 @@
     remark-stringify "^9.0.1"
     sanitize-filename "^1.6.3"
     send "0.17.1"
-    source-map-support "0.5.19"
+    source-map-support "0.5.20"
     tempy "1.0.1"
     unified "^9.2.1"
     unist-builder "^2.0.3"
@@ -1065,10 +1065,10 @@ currently-unhandled@^0.4.1:
   dependencies:
     array-find-index "^1.0.1"
 
-dayjs@1.10.6:
-  version "1.10.6"
-  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.10.6.tgz#288b2aa82f2d8418a6c9d4df5898c0737ad02a63"
-  integrity sha512-AztC/IOW4L1Q41A86phW5Thhcrco3xuAA+YX/BLpLWWjRcTj5TOt/QImBLmCKlrF7u7k47arTnOyL6GnbG8Hvw==
+dayjs@1.10.7:
+  version "1.10.7"
+  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.10.7.tgz#2cf5f91add28116748440866a0a1d26f3a6ce468"
+  integrity sha512-P6twpd70BcPK34K26uJ1KT3wlhpuOAPoMwJzpsIWUxHZ7wpmbdZL/hQqBDfz7hGurYSa5PhzdhDHtt319hL3ig==
 
 debug@2.6.9:
   version "2.6.9"
@@ -1601,10 +1601,12 @@ fast-safe-stringify@^2.0.4:
   resolved "https://registry.yarnpkg.com/fast-safe-stringify/-/fast-safe-stringify-2.0.7.tgz#124aa885899261f68aedb42a7c080de9da608743"
   integrity sha512-Utm6CdzT+6xsDk2m8S6uL8VHxNwI6Jub+e9NYTcAms28T84pTa25GJQV9j0CY0N1rM8hK4x6grpF2BQf+2qwVA==
 
-fast-xml-parser@3.19.0:
-  version "3.19.0"
-  resolved "https://registry.yarnpkg.com/fast-xml-parser/-/fast-xml-parser-3.19.0.tgz#cb637ec3f3999f51406dd8ff0e6fc4d83e520d01"
-  integrity sha512-4pXwmBplsCPv8FOY1WRakF970TjNGnGnfbOnLqjlYvMiF1SR3yOHyxMR/YCXpPTOspNF5gwudqktIP4VsWkvBg==
+fast-xml-parser@3.20.0:
+  version "3.20.0"
+  resolved "https://registry.yarnpkg.com/fast-xml-parser/-/fast-xml-parser-3.20.0.tgz#b9ce9ddbc44d2cb7e38f846c5929c667bbf0936d"
+  integrity sha512-cMQwDJYVDjMPU56DviszewgMKuNzuf4NQSBuDf9RgZ6FKm5QEMxW05Za8lvnuL6moxoeZVUWBlL733WmovvV6g==
+  dependencies:
+    strnum "^1.0.3"
 
 fastq@^1.6.0:
   version "1.8.0"
@@ -4140,10 +4142,10 @@ sort-keys@^2.0.0:
   dependencies:
     is-plain-obj "^1.0.0"
 
-source-map-support@0.5.19:
-  version "0.5.19"
-  resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.19.tgz#a98b62f86dcaf4f67399648c085291ab9e8fed61"
-  integrity sha512-Wonm7zOCIJzBGQdB+thsPar0kYuCIzYvxZwlBa87yi/Mdjv7Tip2cyVbLj5o0cFPN4EVkuTwb3GDDyUx2DGnGw==
+source-map-support@0.5.20:
+  version "0.5.20"
+  resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.20.tgz#12166089f8f5e5e8c56926b377633392dd2cb6c9"
+  integrity sha512-n1lZZ8Ve4ksRqizaBQgxXDgKwttHDhyfQjA6YZZn8+AroHbsIz+JjwxQDxbp+7y5OYCI8t1Yk7etjD9CRd2hIw==
   dependencies:
     buffer-from "^1.0.0"
     source-map "^0.6.0"
@@ -4332,6 +4334,11 @@ strip-outer@^1.0.0:
   integrity sha512-k55yxKHwaXnpYGsOzg4Vl8+tDrWylxDEpknGjhTiZB8dFRU5rTo9CAzeycivxV3s+zlTKwrs6WxMxR95n26kwg==
   dependencies:
     escape-string-regexp "^1.0.2"
+
+strnum@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/strnum/-/strnum-1.0.3.tgz#bbc438bcb35fbbfc9c1e82f73097665b6ec6959e"
+  integrity sha512-GVoRjsqAYZkAH16GDzfTuafuwKxzKdaaCQyLaWf37gOP1e2PPbAKWoME1OmO+c4RCKMfNrrPRDLFCNBFU45N/A==
 
 strtok3@^6.2.4:
   version "6.2.4"

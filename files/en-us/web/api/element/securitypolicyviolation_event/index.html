@@ -33,8 +33,15 @@ browser-compat: api.Element.securitypolicyviolation_event
  </tbody>
 </table>
 
-<p>The event bubbles and is normally handled by an event handler on the {{domxref("Window")}} or {{domxref("Document")}} object.
-  The handler can be assigned using the {{domxref("GlobalEventHandlers.onsecuritypolicyviolation")}} property or using {{domxref("EventTarget.addEventListener()")}}.</p>
+<p>The event is fired on the element that violates the policy and bubbles.
+  It is normally handled by an event handler on the {{domxref("Window")}} or {{domxref("Document")}} object.</p>
+  
+  <p>The handler can be assigned using the {{domxref("GlobalEventHandlers.onsecuritypolicyviolation")}} property or using {{domxref("EventTarget.addEventListener()")}}.</p>
+
+<div class="notecard note">
+  <p><strong>Note:</strong> You must add the handler for this event to a top level object (i.e. {{domxref("Window")}} or {{domxref("Document")}}).
+    While the property exists in HTML elements, you can't assign a handler to the property until the elements have been loaded, by which time this event will already have fired.</p>
+</div>
 
 <h2 id="Examples">Examples</h2>
 

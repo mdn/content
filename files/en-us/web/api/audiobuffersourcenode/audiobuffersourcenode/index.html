@@ -23,8 +23,6 @@ browser-compat: api.AudioBufferSourceNode.AudioBufferSourceNode
 
 <h3 id="Parameters">Parameters</h3>
 
-<p><em>Inherits parameters from the {{domxref("AudioNodeOptions")}} dictionary</em>.</p>
-
 <dl>
   <dt><em>context</em></dt>
   <dd>A reference to an {{domxref("AudioContext")}}.</dd>
@@ -51,9 +49,6 @@ browser-compat: api.AudioBufferSourceNode.AudioBufferSourceNode
         the buffer's sample rate and rounding to the nearest integer value. Thus, its
         behavior is independent of the value of the <code>playbackRate</code> parameter.
       </li>
-    </ul>
-
-    <ul>
       <li><code>loopStart</code>: An optional value in seconds, where looping should begin
         if the loop attribute is <code>true</code>. The default is <code>0</code>. It's
         sensible to set this to a value between 0 and the duration of the buffer. If
@@ -66,6 +61,23 @@ browser-compat: api.AudioBufferSourceNode.AudioBufferSourceNode
       <li><code>playbackRate</code>: The speed at which to render the audio stream. Its
         default value is <code>1</code>. This parameter is k-rate. This is a compound
         parameter with detune. Its nominal range is (-∞ to +∞).</li>
+        <li><code>channelCount</code>: Represents an integer used to determine how many channels are used when <a
+        href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing">up-mixing
+        and down-mixing</a> connections to any inputs to the node. (See
+      {{domxref("AudioNode.channelCount")}} for more information.) Its usage and precise
+      definition depend on the value of <code>channelCountMode</code>.</li>
+      <li><code>channelCountMode</code>: Represents an enumerated value describing the way channels must be matched between
+        the node's inputs and outputs. (See {{domxref("AudioNode.channelCountMode")}} for more
+        information including default values.)</li>
+      <li>
+        <code>channelInterpretation</code>: Represents an enumerated value describing the meaning of the channels. This
+        interpretation will define how audio <a
+          href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing">up-mixing
+          and down-mixing</a> will happen.<br>
+        The possible values are <code>"speakers"</code> or <code>"discrete"</code>. (See
+        {{domxref("AudioNode.channelCountMode")}} for more information including default
+        values.)
+      </li>
     </ul>
   </dd>
 </dl>

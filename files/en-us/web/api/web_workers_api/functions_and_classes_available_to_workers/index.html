@@ -9,7 +9,7 @@ tags:
 
 <h2 id="Worker_Contexts_Functions">Worker Contexts &amp; Functions</h2>
 
-<p><strong>Workers run in a different global context than the current window!</strong> While  {{domxref("Window")}} is not directly available to workers, many of the same methods are defined in a shared mixin ({{domxref("WindowOrWorkerGlobalScope")}}), and made available to workers through their own {{domxref("WorkerGlobalScope")}}-derived contexts: </p>
+<p><strong>Workers run in a different global context than the current window!</strong> While  {{domxref("Window")}} is not directly available to workers, many of the same methods are defined in a shared mixin (<code>WindowOrWorkerGlobalScope</code>), and made available to workers through their own {{domxref("WorkerGlobalScope")}}-derived contexts: </p>
 
 <ul>
  <li>{{domxref("DedicatedWorkerGlobalScope")}} for dedicated workers</li>
@@ -17,7 +17,7 @@ tags:
  <li>{{domxref("ServiceWorkerGlobalScope")}} for <a href="/en-US/docs/Web/API/ServiceWorker_API">service workers</a></li>
 </ul>
 
-<p>Some of the functions that are common to all workers and to the main thread (from {{domxref("WindowOrWorkerGlobalScope")}}) are: {{domxref("atob", "atob()")}}, {{domxref("btoa", "btoa()")}}, {{domxref("clearInterval", "clearInterval()")}}, {{domxref("clearTimeout()")}},{{domxref("Window.dump()", "dump()")}} {{non-standard_inline}}, {{domxref("setInterval()")}}, {{domxref("setTimeout()")}}.</p>
+<p>Some of the functions that are common to all workers and to the main thread (from <code>WindowOrWorkerGlobalScope</code>) are: {{domxref("atob", "atob()")}}, {{domxref("btoa", "btoa()")}}, {{domxref("clearInterval", "clearInterval()")}}, {{domxref("clearTimeout()")}},{{domxref("Window.dump()", "dump()")}} {{non-standard_inline}}, {{domxref("setInterval()")}}, {{domxref("setTimeout()")}}.</p>
 
 <p>The following functions are <strong>only</strong> available to workers:</p>
 

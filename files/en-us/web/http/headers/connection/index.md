@@ -66,6 +66,10 @@ Connection: close
     in-between: these headers define the connection between the emitter and the first
     entity, not the destination node.
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}
