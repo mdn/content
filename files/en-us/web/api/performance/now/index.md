@@ -113,5 +113,4 @@ of cross-origin attacks dubbed [XS-Leaks](https://github.com/xsleaks/xsleaks).
 
 ## See also
 
-- [When
-  milliseconds are not enough: performance.now() ](http://updates.html5rocks.com/2012/08/When-milliseconds-are-not-enough-performance-now)from HTML5 Rocks.
+- [When milliseconds are not enough: performance.now()](http://updates.html5rocks.com/2012/08/When-milliseconds-are-not-enough-performance-now) from HTML5 Rocks.

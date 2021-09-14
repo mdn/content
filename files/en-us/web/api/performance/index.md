@@ -71,7 +71,7 @@ _The `Performance` interface doesn't inherit any methods._
 Listen to these events using `addEventListener()` or by assigning an event listener to the `oneventname` property of this interface.
 
 - {{DOMxRef("Performance.resourcetimingbufferfull_event", "resourcetimingbufferfull")}}
-  - : Fired when the browser's[ resource timing buffer](/en-US/docs/Web/API/Performance/setResourceTimingBufferSize) is full.
+  - : Fired when the browser's [resource timing buffer](/en-US/docs/Web/API/Performance/setResourceTimingBufferSize) is full.
     Also available via the {{DOMxRef("Performance.onresourcetimingbufferfull", "onresourcetimingbufferfull")}} property.
 
 ## Specifications

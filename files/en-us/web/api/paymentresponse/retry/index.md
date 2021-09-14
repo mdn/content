@@ -54,7 +54,7 @@ See the {{anch("Examples", "example")}} below for a thorough example, but the ba
 concept, in outline form, is:
 
 1.  Create a new {{domxref("PaymentRequest")}}
-    (`new `{{domxref("PaymentRequest.PaymentRequest", "PaymentRequest()")}})
+    (`new` {{domxref("PaymentRequest.PaymentRequest", "PaymentRequest()")}})
 2.  Display the payment request ({{domxref("PaymentRequest.show()")}}
 3.  If `show()` resolves, the returned {{domxref("PaymentResponse")}}
     describes the requested payment and the options chosen by the user. Continue by...

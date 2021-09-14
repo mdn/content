@@ -109,7 +109,7 @@ An `SVGTransformList` object can be designated as read only, which means that at
 | Name                                          | Type          | Description                      |
 | --------------------------------------------- | ------------- | -------------------------------- |
 | `numberOfItems`                               | unsigned long | The number of items in the list. |
-| `length `{{ non-standard_inline() }} | unsigned long | The number of items in the list. |
+| `length` {{ non-standard_inline() }} | unsigned long | The number of items in the list. |
 
 ## Methods
 

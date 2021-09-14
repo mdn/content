@@ -59,7 +59,7 @@ const result = crypto.subtle.importKey(
     object.
   - For [AES-CTR](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr), [AES-CBC](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc), [AES-GCM](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm), or [AES-KW](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-kw): Pass the
     string identifying the algorithm or an object of the form
-    `{ "name": ALGORITHM }`, where `ALGORITHM `is the name of
+    `{ "name": ALGORITHM }`, where `ALGORITHM` is the name of
     the algorithm.
   - For [PBKDF2](/en-US/docs/Web/API/SubtleCrypto/deriveKey#pbkdf2) :
     Pass the string `PBKDF2`.

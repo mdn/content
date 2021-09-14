@@ -27,7 +27,7 @@ object.addEventListener("mssitemodejumplistitemremoved", handler, useCapture)
 
 ### Note
 
-This event is raised once for every item that has been removed since the last time `msSiteModeShowJumpList `was called. This event is not triggered if `msSiteModeClearJumpList `has been called.
+This event is raised once for every item that has been removed since the last time `msSiteModeShowJumpList` was called. This event is not triggered if `msSiteModeClearJumpList` has been called.
 
 ### Parameters
 

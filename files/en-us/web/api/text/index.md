@@ -25,7 +25,7 @@ To understand what a text node is, consider the following document:
 In that document, there are three text nodes, with the following contents:
 
 - "`Aliens?`" (the contents of the `title` element)
-- "`\n `" (after the `</head>` end tag, a newline followed by a space)
+- "`\n`" (after the `</head>` end tag, a newline followed by a space)
 - "`Why yes.\n`" (the contents of the `body` element)
 
 Each of those text nodes is an object that has the properties and methods documented in this article.

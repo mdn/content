@@ -54,7 +54,7 @@ But `pushState()` has a few advantages:
 - The new URL can be any URL in the same origin as the current URL. In contrast, setting `window.location` keeps you at the same {{ domxref("document") }} only if you modify only the hash.
 - You don't have to change the URL if you don't want to. In contrast, setting `window.location = "#foo";` creates a new history entry only if the current hash isn't `#foo`.
 - You can associate arbitrary data with your new history entry. With the hash-based approach, you need to encode all of the relevant data into a short string.
-- If `title `is subsequently used by browsers, this data can be utilized (independent of, say, the hash).
+- If `title` is subsequently used by browsers, this data can be utilized (independent of, say, the hash).
 
 Note that `pushState()` never causes a `hashchange` event to be fired, even if the new URL differs from the old URL only in its hash.
 

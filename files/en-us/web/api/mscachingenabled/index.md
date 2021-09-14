@@ -21,11 +21,11 @@ This proprietary method is specific to Internet Explorer and Microsoft Edge.
 ### Parameters
 
 - _cacheState_\[out, retval]
-  - : Type = **boolean**. If true, `XMLHttpRequest `is cached to disk. If false, it is not written to disk.
+  - : Type = **boolean**. If true, `XMLHttpRequest` is cached to disk. If false, it is not written to disk.
 
 ### Return value
 
-Type: **boolean**. If true, `XMLHttpRequest `is cached to disk. If false, it is not written to disk.
+Type: **boolean**. If true, `XMLHttpRequest` is cached to disk. If false, it is not written to disk.
 
 ## See also
 

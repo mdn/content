@@ -82,7 +82,7 @@ console.log( height.value )  // 50
 console.log( height.unit )   // vmax
 ```
 
-In this example, we set the margin on our element using the` CSS.px()`
+In this example, we set the margin on our element using the `CSS.px()`
 factory function:
 
 ```js

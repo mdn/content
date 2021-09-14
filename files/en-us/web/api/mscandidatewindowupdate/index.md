@@ -37,7 +37,7 @@ object.addEventListener("MSCandidateWindowUpdate", handler, useCapture)
 
 Type: _IHTMLEventObj_
 
-Pointer to an `IHTMLEventObj `interface for the current event.
+Pointer to an `IHTMLEventObj` interface for the current event.
 
 TAn IME candidate window may be identified as needing to change size for any of the following reasons:
 

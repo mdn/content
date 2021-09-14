@@ -14,7 +14,7 @@ browser-compat: api.FileException
 ---
 {{APIRef("File System API")}}{{Non-standard_Header}}{{deprecated_header}}
 
-In the [File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction), a `FileException `object represents error conditions that you might encounter while accessing the file system using the synchronous API. It extends the FileException interface described in [File Writer](http://dev.w3.org/2009/dap/file-system/pub/FileSystem/#bib-FILE-WRITER) and adds several new error codes.
+In the [File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction), a `FileException` object represents error conditions that you might encounter while accessing the file system using the synchronous API. It extends the FileException interface described in [File Writer](http://dev.w3.org/2009/dap/file-system/pub/FileSystem/#bib-FILE-WRITER) and adds several new error codes.
 
 ## Basic concepts
 

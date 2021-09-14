@@ -30,7 +30,7 @@ animate(keyframes, options)
 
 - `keyframes`
   - : Either an array of keyframe objects, **or** a keyframe object whose
-    properties are arrays of values to iterate over. See [Keyframe Formats ](/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats)for more details.
+    properties are arrays of values to iterate over. See [Keyframe Formats](/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats) for more details.
 - `options`
 
   - : Either an **integer representing the animation's duration** (in

@@ -64,7 +64,7 @@ None.
 
 An `INVALID_VALUE` error is generated if:
 
-- `offset` + `returnedData.byteLength `would extend beyond the
+- `offset` + `returnedData.byteLength` would extend beyond the
   end of the buffer
 - `returnedData` is {{jsxref("null")}}
 - `offset` is less than zero.

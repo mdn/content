@@ -34,7 +34,7 @@ The **`Attr`** interface represents one of a DOM element's attributes as an obje
     > Gecko outputs a deprecation note starting from Gecko 7.0 {{geckoRelease("7.0")}}. This note was removed again in Gecko 49.0 {{geckoRelease("49.0")}}.
 
 - {{domxref("Attr.specified", "specified")}} {{readOnlyInline}}
-  - : This property always returns `true`. Originally, it returned `true `if the attribute was explicitly specified in the source code or by a script, and `false` if its value came from the default one defined in the document's DTD.
+  - : This property always returns `true`. Originally, it returned `true` if the attribute was explicitly specified in the source code or by a script, and `false` if its value came from the default one defined in the document's DTD.
 - {{domxref("Attr.value", "value")}}
   - : The attribute's value.
 

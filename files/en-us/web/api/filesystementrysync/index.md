@@ -319,7 +319,7 @@ This method can raise a [FileException](/en-US/docs/Web/API/FileException) with 
 
 ### toURL()
 
-Returns a URL that can be used to identify this entry. It exposes a new URL scheme—`filesystem:`—that you can use to fill `src` or `href `attributes. For example, if you wanted to display an image and have its [fileEntry](/en-US/docs/Web/API/FileSystemFileEntry), calling `toURL()` gives you the image file's file system URL. You get something like: `filesystem:http://example.com/temporary/lolcat.png.`
+Returns a URL that can be used to identify this entry. It exposes a new URL scheme—`filesystem:`—that you can use to fill `src` or `href` attributes. For example, if you wanted to display an image and have its [fileEntry](/en-US/docs/Web/API/FileSystemFileEntry), calling `toURL()` gives you the image file's file system URL. You get something like: `filesystem:http://example.com/temporary/lolcat.png.`
 
 The file system URL does not expire. Because the method describes a location on disk, the URL is valid for as long as that location exists. You can delete the file and recreate it, and it's all good.
 

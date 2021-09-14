@@ -15,7 +15,7 @@ browser-compat: api.WebGLRenderingContext.compressedTexImage2D
 
 The **`WebGLRenderingContext.compressedTexImage2D()`**
 and **`WebGL2RenderingContext.compressedTexImage3D()`** methods
-of the [WebGL API ](/en-US/docs/Web/API/WebGL_API)specify a two- or
+of the [WebGL API](/en-US/docs/Web/API/WebGL_API) specify a two- or
 three-dimensional texture image in a compressed format.
 
 Compressed image formats must be enabled by [WebGL extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) before

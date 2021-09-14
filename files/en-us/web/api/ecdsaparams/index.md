@@ -10,7 +10,7 @@ tags:
 ---
 {{ APIRef("Web Crypto API") }}
 
-The **`EcdsaParams`** dictionary of the [Web Crypto API ](/en-US/docs/Web/API/Web_Crypto_API)represents the object that should be passed as the `algorithm` parameter into {{domxref("SubtleCrypto.sign()")}} or {{domxref("SubtleCrypto.verify()")}} when using the [ECDSA](/en-US/docs/Web/API/SubtleCrypto/sign#ecdsa) algorithm.
+The **`EcdsaParams`** dictionary of the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) represents the object that should be passed as the `algorithm` parameter into {{domxref("SubtleCrypto.sign()")}} or {{domxref("SubtleCrypto.verify()")}} when using the [ECDSA](/en-US/docs/Web/API/SubtleCrypto/sign#ecdsa) algorithm.
 
 ## Properties
 

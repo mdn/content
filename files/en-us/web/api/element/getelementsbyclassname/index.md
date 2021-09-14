@@ -110,8 +110,8 @@ while (matches.length > 0) {
 ```
 
 This code finds descendant elements with the `"colorbox"` class, adds the
-class `"hueframe"`, by calling `item(0), `then removes
-`"colorbox" `(using array notation). Another element (if any are left) will
+class `"hueframe"`, by calling `item(0)`, then removes
+`"colorbox"` (using array notation). Another element (if any are left) will
 then become `item(0)`.
 
 ### Filtering the results using array methods

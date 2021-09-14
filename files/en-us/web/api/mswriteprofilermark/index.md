@@ -37,7 +37,7 @@ For Windows XP, this method sends an event to an event tracing session with `Tra
 
 The event includes a pointer to a window object, current markup, and the event name passed as `bstrProfilerMarkName`.
 
-The `bstrProfilerMarkName `property has a 32-character limit when called from script.
+The `bstrProfilerMarkName` property has a 32-character limit when called from script.
 
 This method is useful to profile real website performance by using the operating system metrics as a baseline.
 

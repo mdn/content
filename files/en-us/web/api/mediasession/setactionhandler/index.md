@@ -33,7 +33,7 @@ navigator.mediaSession.setActionHandler(type, callback)
   - : A {{domxref("DOMString")}} representing an action type to listen for. It will be one
     of `{{anch("play")}}`,
     `{{anch("pause")}}`, `{{anch("stop")}}`,
-    `{{anch("seekbackward")}}`,` {{anch("seekforward")}}`, `{{anch("seekto")}}`, `{{anch("skipad")}}`,`{{anch("previoustrack")}}`,
+    `{{anch("seekbackward")}}`, `{{anch("seekforward")}}`, `{{anch("seekto")}}`, `{{anch("skipad")}}`,`{{anch("previoustrack")}}`,
     or `{{anch("nexttrack")}}`. Further details on the action types can be
     found below under {{anch("Media session actions")}}.
 - `callback`

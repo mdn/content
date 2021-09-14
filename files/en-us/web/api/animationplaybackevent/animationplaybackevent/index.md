@@ -27,7 +27,7 @@ var animationPlaybackEvent = new AnimationPlaybackEvent(type, eventInitDict);
 
 - `{{domxref("Event.type", "type")}}`
   - : A [`DOMString`](/en-US/docs/Web/API/DOMString "DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String.") representing the name of the event.
-- `eventInitDict `{{optional_inline}}
+- `eventInitDict` {{optional_inline}}
 
   - : An optional `EventInit` dictionary object containing the following fields:
 

@@ -54,7 +54,7 @@ _This interface inherits methods from the {{domxref("WorkerGlobalScope")}} inter
 - {{domxref("WorkerGlobalScope.dump()")}} {{non-standard_inline}}
   - : Allows you to write a message to stdout — i.e. in your terminal. This is the same as Firefox's {{domxref("window.dump")}}, but for workers.
 - {{domxref("WorkerGlobalScope.importScripts()")}}
-  - : Imports one or more scripts into the worker's scope. You can specify as many as you'd like, separated by commas. For example:` importScripts('foo.js', 'bar.js');`
+  - : Imports one or more scripts into the worker's scope. You can specify as many as you'd like, separated by commas. For example: `importScripts('foo.js', 'bar.js');`
 
 ### Implemented from other places
 

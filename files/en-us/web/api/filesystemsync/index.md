@@ -12,7 +12,7 @@ browser-compat: api.FileSystemSync
 ---
 {{APIRef("File System API")}} {{non-standard_header}}
 
-In the [File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction), a `FileSystemSync `object represents a file system. It has two properties.
+In the [File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction), a `FileSystemSync` object represents a file system. It has two properties.
 
 ## About this document
 

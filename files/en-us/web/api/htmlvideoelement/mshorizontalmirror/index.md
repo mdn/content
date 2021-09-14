@@ -12,7 +12,7 @@ tags:
 {{APIRef("DOM")}}{{Non-standard_Header}}
 
 **`msHorizontalMirror`** is a read/write property which gets or
-sets whether a [video ](/en-US/docs/Web/HTML/Element/video)element is flipped
+sets whether a [video](/en-US/docs/Web/HTML/Element/video) element is flipped
 horizontally in the display.
 
 This proprietary property is specific to Internet Explorer and Microsoft Edge.

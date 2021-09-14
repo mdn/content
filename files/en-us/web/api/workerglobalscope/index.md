@@ -74,7 +74,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
 ### Standard methods
 
 - {{domxref("WorkerGlobalScope.importScripts()")}}
-  - : Imports one or more scripts into the worker's scope. You can specify as many as you'd like, separated by commas. For example:` importScripts('foo.js', 'bar.js');`
+  - : Imports one or more scripts into the worker's scope. You can specify as many as you'd like, separated by commas. For example: `importScripts('foo.js', 'bar.js');`
 
 ### Non-standard methods
 
