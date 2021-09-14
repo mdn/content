@@ -21,11 +21,11 @@ The `<basefont>` element has been deprecated in HTML4 and removed in HTML5. This
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-- {{domxref("HTMLBaseFontElement.color")}}
+- `HTMLBaseFontElement.color`
   - : Is a {{domxref("DOMString")}} representing the text color using either a named color or a color specified in the hexadecimal `#RRGGBB` format.
-- {{domxref("HTMLBaseFontElement.face")}}
+- `HTMLBaseFontElement.face`
   - : Is a {{domxref("DOMString")}} representing a list of one or more font names. The document text in the default style is rendered in the first font face that the client's browser supports. If no font listed is installed on the local system, the browser typically defaults to the proportional or fixed-width font for that system.
-- {{domxref("HTMLBaseFontElement.size")}}
+- `HTMLBaseFontElement.size`
   - : Is a {{domxref("DOMString")}} representing the font size as either a numeric or relative value. Numeric values range from `1` to `7` with `1` being the smallest and `3` the default. Relative value starts with a `'+'` or a `'-`'.
 
 ## Methods
