@@ -77,9 +77,14 @@ browser-compat: html.elements.header
     &lt;p&gt;Posted on Wednesday, &lt;time datetime="2017-10-04"&gt;4 October 2017&lt;/time&gt; by Jane Smith&lt;/p&gt;
   &lt;/header&gt;
   &lt;p&gt;We live on a planet that's blue and green, with so many things still unseen.&lt;/p&gt;
-  &lt;p&gt;&lt;a href="https://janesmith.com/the-planet-earth/"&gt;Continue reading....&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;a href="https://example.com/the-planet-earth/"&gt;Continue reading....&lt;/a&gt;&lt;/p&gt;
 &lt;/article&gt;
 </pre>
+
+<h2 id="Accessibility">Accessibility</h2>
+
+<p>The <code>&lt;header></code> element defines a <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Banner_role"><code>banner</code></a> landmark when its context is the {{HTMLElement('body')}} element. The HTML header element is not considered a banner landmark when it is descendant of an  {{HTMLElement('article')}},  {{HTMLElement('aside')}},  {{HTMLElement('main')}},  {{HTMLElement('nav')}}, or {{HTMLElement('section')}} element. 
+
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -92,6 +97,6 @@ browser-compat: html.elements.header
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>Other section-related elements: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("footer")}}, {{HTMLElement("section")}}, {{HTMLElement("address")}}.</li>
+ <li>Other section-related elements: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("footer")}}, {{HTMLElement("section")}}, {{HTMLElement("address")}}.</li>
  <li><a href="/en-US/docs/Web/HTML/Element/Heading_Elements">Using HTML sections and outlines</a></li>
 </ul>
