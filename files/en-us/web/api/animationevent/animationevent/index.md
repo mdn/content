@@ -43,7 +43,7 @@ _The `AnimationEvent()` constructor also inherits arguments from
     `"animationstart"` event, `elapsedTime` is `0.0`
     unless there was a negative value for {{cssxref("animation-delay")}}, in which case
     the event will be fired with `elapsedTime` containing
-    `(-1 * `_delay_`)`. It defaults to `0.0`.
+    `(-1 * delay)`. It defaults to `0.0`.
 - `pseudoElement` {{optional_inline}}
   - : Is a {{domxref("DOMString")}}, starting with `"::"`, containing the name
     of the [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements "Learn more about pseudo-elements.") the animation runs on.
