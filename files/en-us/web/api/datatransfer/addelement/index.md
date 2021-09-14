@@ -33,8 +33,7 @@ void dataTransfer.addElement(el);
 
 ### Return value
 
-- void
-  - :
+None.
 
 ## Example
 
