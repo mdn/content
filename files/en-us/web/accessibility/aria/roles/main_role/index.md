@@ -37,13 +37,11 @@ The {{HTMLElement('main')}} element has a role of `main`. Developers should us
 
 - aria-owns
 
-  - : Documents and applications can be nested in the DOM, which may lead to having more than one main element as DOM descendants. If this is the case, include `aria-owns` to identify the relationship of the main to it's document or application ancestor.
+  - : The `aria-owns` attribute establishes relationships in the accessibility layer that aren't present in the DOM. Documents and applications can be nested in the DOM, which may lead to having more than one main element as DOM descendants. If this is the case, include `aria-owns` to identify the relationship of the main to it's document or application ancestor.
 
-
-    Can be named using aria-labelledby if a visible label is present, otherwise with aria-label.
-    See the Main Landmark section.
-
-
+- aria-label/aria-labeledby
+    
+  - : Providing an accessible name can with [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute) if a visible header is present, otherwise with [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute), can be helpful for orienting assistive technology users, especially in single-page applications where main content changes happen without generating a page load event.
 
 
 ## Example
@@ -87,7 +85,7 @@ It is also helpful to include an accessible name to help orient assistive techno
 
 ### Prefer HTML
 
-Using the [`<main>` element](/en-US/docs/Web/HTML/Element/main) will automatically communicate a section has a role of `main`. If at all possible, prefer using it instead.
+Using the {{HTMLElement('main')}} element will automatically communicate a section has a role of `main`. If at all possible, prefer using it instead.
 
 ### Skip navigation
 
@@ -140,6 +138,7 @@ Which is the equivalent of:
 - [Using WAI-ARIA Landmarks – 2013 | The Paciello Group](https://developer.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/)
 - [Accessible Landmarks | scottohara.me](https://www.scottohara.me/blog/2018/03/03/landmarks.html)
 - [The main element | HTML5 Doctor](https://html5doctor.com/the-main-element/)
+
 
 
 <section id="Quick_links">
