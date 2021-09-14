@@ -55,9 +55,7 @@ normally until it reaches the 25 second mark. Then the current play position wil
 back to the 20 second mark and continue playing until the 25 second mark, ad infinitum
 (or at least until {{domxref("AudioScheduledSourceNode/stop", "stop()")}} is called).
 
-> **Note:** For a full working example, see[ this code running
-> live](https://mdn.github.io/webaudio-examples/decode-audio-data/), or [view
-> the source](https://github.com/mdn/webaudio-examples/tree/master/decode-audio-data).
+> **Note:** For a full working example, see [this code running live](https://mdn.github.io/webaudio-examples/decode-audio-data/), or [view the source](https://github.com/mdn/webaudio-examples/tree/master/decode-audio-data).
 
 ```js
 function getData() {

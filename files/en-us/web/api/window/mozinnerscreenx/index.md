@@ -19,9 +19,7 @@ browser-compat: api.Window.mozInnerScreenX
 Gets the X coordinate of the top-left corner of the window's viewport, in screen
 coordinates.
 
-> **Note:** This coordinate is reported in CSS pixels, not in
-> hardware pixels. That means it can be affected by the zoom level; to compute the actual
-> number of physical screen pixels, you should use the[ > `nsIDOMWindowUtils.screenPixelsPerCSSPixel`](/en-US/docs/XPCOM_Interface_Reference/nsIDOMWindowUtils) property.
+> **Note:** This coordinate is reported in CSS pixels, not in hardware pixels. That means it can be affected by the zoom level; to compute the actual number of physical screen pixels, you should use the [`nsIDOMWindowUtils.screenPixelsPerCSSPixel`](/en-US/docs/XPCOM_Interface_Reference/nsIDOMWindowUtils) property.
 
 ## Syntax
 
