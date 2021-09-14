@@ -56,7 +56,7 @@ external object, `Object.hasOwn()` is more intuitive.
 
 ### Using hasOwn to test for a property's existence 
 
-The following code hows how to determine whether the `example` object contains a property named `prop`.
+The following code is how to determine whether the `example` object contains a property named `prop`.
  
 ```js
 let example = {};
@@ -66,7 +66,7 @@ example.prop = 'exists';
 Object.hasOwn(example, 'prop');   // true - 'prop' has been defined
 
 example.prop = null;
-Object.hasOwn(example, 'prop');   // true - own property exists wtih value of null
+Object.hasOwn(example, 'prop');   // true - own property exists with value of null
 
 example.prop = undefined;
 Object.hasOwn(example, 'prop');   // true - own property exists with value of undefined
