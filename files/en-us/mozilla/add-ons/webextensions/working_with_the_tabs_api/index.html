@@ -307,16 +307,12 @@ tags:
 <dl>
   <dt>manifest.json</dt>
   <dd>
-    <p><a href="https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/manifest.json">manifest.json</a></p>
-    
-    <p>None of the functions require a permission to operate, so there are no features in the <code>manifest.json</code> file that need to be highlighted.</p>
+    <p>None of the functions require a permission to operate, so there are no features in the <a href="https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/manifest.json">manifest.json</a> file that need to be highlighted.</p>
   </dd>
 
   <dt>tabs.html</dt>
   <dd>
-    <p><a href="https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/tabs.html">tabs.html</a></p>
-    
-    <p>tabs.html defines the “menu” displayed in the popup, which includes the “Move active tab to the beginning of the window list” option, with a series of <code>&lt;a&gt;</code> tags grouped by a visual separator. Each menu item is given an <code>id</code>, which is used in <code>tabs.js</code> to determine which menu item is being requested.</p>
+    <p><a href="https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/tabs.html">tabs.html</a> defines the “menu” displayed in the popup, which includes the “Move active tab to the beginning of the window list” option, with a series of <code>&lt;a&gt;</code> tags grouped by a visual separator. Each menu item is given an <code>id</code>, which is used in <code>tabs.js</code> to determine which menu item is being requested.</p>
     
     <pre class="brush: html">    &lt;a href="#" id="tabs-move-beginning"&gt;Move active tab to the beginning of the window&lt;/a&gt;&lt;br&gt;
         &lt;a href="#" id="tabs-move-end"&gt;Move active tab to the end of the window&lt;/a&gt;&lt;br&gt;
@@ -332,9 +328,7 @@ tags:
   <dt>tabs.js</dt>
   <dd>
 
-    <p><a href="https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/tabs.js">tabs.js</a></p>
-    
-    <p>To implement the “menu” defined in <code>tabs.html</code>, <code>tabs.js</code> includes a listener for clicks in <code>tabs.html</code>:</p>
+    <p>To implement the “menu” defined in <code>tabs.html</code>, <a href="https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/tabs.js">tabs.js</a> includes a listener for clicks in <code>tabs.html</code>:</p>
     
     <pre class="brush: js">document.addEventListener("click", function(e) {
      function callOnActiveTab(callback) {
@@ -429,23 +423,17 @@ tags:
 <dl>
   <dt>manifest.json</dt>
   <dd>
-    <p><a href="https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/manifest.json">manifest.json</a></p>
-    
-    <p>None of the zoom functions require permissions, so there are no features in the <code>manifest.json</code> file that need to be highlighted.</p>
+    <p>None of the zoom functions require permissions, so there are no features in the <a href="https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/manifest.json">manifest.json</a> file that need to be highlighted.</p>
   </dd>
 
   <dt>tabs.html</dt>
   <dd>
-    <p><a href="https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/tabs.html">tabs.html</a></p>
-    
-    <p>We have already discussed how the <code>tabs.html</code> defines the options for this extension, nothing new or unique is done to provide the zoom options.</p>
+    <p>We have already discussed how the <a href="https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/tabs.html">tabs.html</a> defines the options for this extension, nothing new or unique is done to provide the zoom options.</p>
   </dd>
 
   <dt>tabs.js</dt>
   <dd>
-    <p><a href="https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/tabs.js">tabs.js</a></p>
-
-    <p><code>tabs.js</code> starts by defining several constants used in the zoom code:</p>
+    <p><a href="https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/tabs.js">tabs.js</a> starts by defining several constants used in the zoom code:</p>
     
     <pre class="brush: js">const ZOOM_INCREMENT = 0.2;
     const MAX_ZOOM = 5;
@@ -497,9 +485,9 @@ tags:
 <dl>
   <dt>manifest.json</dt>
   <dd>
-    <p><a href="https://github.com/mdn/webextensions-examples/blob/master/apply-css/manifest.json">manifest.json</a></p>
+    <p></p>
     
-    <p>To use the CSS features you need either:</p>
+    <p>The <a href="https://github.com/mdn/webextensions-examples/blob/master/apply-css/manifest.json">manifest.json</a> requests permissions required to use the CSS features. You need either:</p>
     
     <ul>
     	<li><code>"tabs"</code> permission and <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permission</a>; or,</li>
@@ -548,9 +536,7 @@ tags:
   <dt>background.js</dt>
 
   <dd>
-    <p><a href="https://github.com/mdn/webextensions-examples/blob/master/apply-css/background.js">background.js</a></p>
-    
-    <p>On startup, background.js sets some constants to define the CSS to be applied, titles for the “page action”, and a list of protocols the extension will work in:</p>
+    <p>On startup, <a href="https://github.com/mdn/webextensions-examples/blob/master/apply-css/background.js">background.js</a> sets some constants to define the CSS to be applied, titles for the “page action”, and a list of protocols the extension will work in:</p>
     
     <pre class="brush: js">const CSS = "body { border: 20px solid red; }";
     const TITLE_APPLY = "Apply CSS";

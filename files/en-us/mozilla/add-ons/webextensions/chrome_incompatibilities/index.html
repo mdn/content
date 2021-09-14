@@ -112,10 +112,9 @@ setCookie.then(logCookie, logError);</pre>
 <p>The rest of this section describes compatibility issues that are not already captured in the tables.</p>
 
 <dl>
-  <dt>notifications</dt>
+  <dt>Notifications API</dt>
   <dd>
-    <p><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications" id="notifications_incompatibilities">notifications</a></p>
-    
+    <p id="notifications_incompatibilities">These incompatibilities are present in {{WebExtAPIRef("notifications")}}:</p>
     <ul>
      <li>
       <p>For <code>notifications.create()</code>, with <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications/TemplateType">type</a> "basic"</code>:</p>
@@ -147,11 +146,9 @@ setCookie.then(logCookie, logError);</pre>
     </ul>
   </dd>
 
-  <dt>proxy</dt>
+  <dt>Proxy API</dt>
   <dd>
-    <p><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy" id="proxy_incompatibilities">proxy</a></p>
-
-    <p>Firefox's Proxy API followed a completely different design from Chrome's Proxy API.</p>
+    <p id="proxy_incompatibilities">Firefox's {{WebExtAPIRef("proxy")}} API followed a completely different design from Chrome's Proxy API.</p>
     
     <dl>
      <dt>In Chrome</dt>
@@ -163,10 +160,10 @@ setCookie.then(logCookie, logError);</pre>
     </dl>
   </dd>
 
-  <dt>tabs</dt>
+  <dt>Tabs API</dt>
   <dd>
 
-    <p><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs" id="tabs_incompatibilities">tabs</a></p>
+    <p id="tabs_incompatibilities">These incompatibilities are present in {{WebExtAPIRef("tabs")}}:</p>
     
     <ul>
      <li>
@@ -207,9 +204,9 @@ setCookie.then(logCookie, logError);</pre>
     </ul>
   </dd>
 
-  <dt>webRequest</dt>
+  <dt>WebRequest API</dt>
   <dd>
-    <p><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest" id="webRequest_incompatibilities">webRequest</a></p>
+    <p id="web_request_incompatibilities">These incompatibilities are present in {{WebExtAPIRef("webRequest")}}:</p>
     
     <dl>
       <dt>In Firefox</dt>
@@ -250,13 +247,11 @@ setCookie.then(logCookie, logError);</pre>
   </dd>
 
 
-  <dt>windows</dt>
+  <dt>Windows API</dt>
   <dd> 
-    <p><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows" id="windows_incompatibilities">windows</a></p>
-    
     <dl>
      <dt>In Firefox</dt>
-     <dd><code>onFocusChanged</code> will trigger multiple times for a given focus change.</dd>
+     <dd><code>onFocusChanged</code> of the {{WebExtAPIRef("windows")}} API, will trigger multiple times for a given focus change.</dd>
     </dl>
   </dd>
 </dl>
@@ -264,13 +259,11 @@ setCookie.then(logCookie, logError);</pre>
 <h3 id="Unsupported_APIs">Unsupported APIs</h3>
 
   <dl>
-    <dt>declarativeContent</dt>
+    <dt>DeclarativeContent API</dt>
     <dd>
-      <p><a href="https://developer.chrome.com/extensions/declarativeContent" id="declarativeContent_incompatibilities" name="dec">declarativeContent</a></p>
-      
+      <p id="declarative_content_incompatibilities">Chrome's <a href="https://developer.chrome.com/extensions/declarativeContent" id="declarativeContent_incompatibilities" name="dec">declarativeContent</a> API <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1435864">has not yet been implemented</a> in Firefox:</p>     
       <dl>
        <dt>In Firefox</dt>
-       <dd>Chrome's <code>declarativeContent</code> API <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1435864">has not yet been implemented</a> in Firefox.</dd>
        <dd>In addition, Firefox <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1323433#c16">will not be supporting</a> the <code>declarativeContent.RequestContentScript</code> API (which is rarely used, and is unavailable in stable releases of Chrome).</dd>
       </dl>
   </dl>
