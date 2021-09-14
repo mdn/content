@@ -37,7 +37,7 @@ var mediaRecorder = new MediaRecorder(stream[, options]);
     from a stream created using {{domxref("MediaDevices.getUserMedia",
     "navigator.mediaDevices.getUserMedia()")}} or from an {{HTMLElement("audio")}},
     {{HTMLElement("video")}} or {{HTMLElement("canvas")}} element.
-- **`options` **{{optional_inline}}
+- **`options`** {{optional_inline}}
 
   - : A dictionary object that can contain the following properties:
 
