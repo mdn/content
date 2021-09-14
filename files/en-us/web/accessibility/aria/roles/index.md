@@ -71,6 +71,8 @@ There are 6 categories of ARIA roles:
 
 3. ### Landmark roles
 
+Landmark roles provide a way to identify the organization and structure of a web page. By classifying and labeling sections of a page, structural information conveyed visually through layout is represented programmatically. Screen readers use landmark roles to provide keyboard navigation to important sections of a page.
+
   - [banner](/en-US/docs/Web/Accessibility/ARIA/Roles/Banner_role) (document {{HTMLElement('header')}})
   - [complementary](/en-US/docs/Web/Accessibility/ARIA/Roles/Complementary_role) ({{HTMLElement('aside')}})
   - [contentinfo](/en-US/docs/Web/Accessibility/ARIA/Roles/Contentinfo_role) (document {{HTMLElement('footer')}})
