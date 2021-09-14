@@ -73,7 +73,7 @@ void gl.texSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, d
     - `gl.LUMINANCE_ALPHA`: Each component is a luminance/alpha component.
     - `gl.R8`
     - `gl.R16F`
-    - `gl.`R32F
+    - `gl.R32F`
     - `gl.R8UI`
     - `gl.RG8`
     - `gl.RG16F`
