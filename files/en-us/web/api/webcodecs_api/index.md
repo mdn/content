@@ -16,13 +16,13 @@ For example, video or audio editors, and video conferencing.
 ##  Concepts and Usage
 
 Many Web APIs use media codecs internally.
-For example, the {{domxref("Web Audio API")}}, and {{domxref("WebRTC API")}}.
+For example, the {{domxref("Web Audio API")}}, and the {{domxref("WebRTC API")}}.
 However these APIs do not allow developers to work with individual frames of a video stream and unmuxed chunks of encoded audio or video.
 
 Web developers have typically used WebAssembly in order to get round this limitation,
 and to work with media codecs in the browser.
 However this requires additional bandwidth to download codecs that already exist in the browser,
-reduced performance and power efficiency, and an additional development overhead.
+reducing performance and power efficiency, and adding additional development overhead.
 
 The WebCodecs API provides access to codecs that are already in the browser.
 It gives access to raw video frames, chunks of audio data, image decoders, audio and video encoders and decoders.
@@ -56,7 +56,7 @@ It gives access to raw video frames, chunks of audio data, image decoders, audio
 
 ## Examples
 
-In the following example frames are returned from a {{domxref("MediaStreamTrackProcessor")}}, then encoded.
+In the following example, frames are returned from a {{domxref("MediaStreamTrackProcessor")}}, then encoded.
 See the full example and read more about it in the article [Video processing with WebCodecs](https://web.dev/webcodecs/).
 
 ```js
