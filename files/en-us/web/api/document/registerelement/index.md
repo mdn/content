@@ -35,7 +35,7 @@ var constructor = document.registerElement(tag-name, options);
 - _tag-name_
   - : The name of the custom element. The name must contain a dash (-), for example
     `my-tag`.
-- _options{{optional_inline}}_
+- _options_ {{optional_inline}}
   - : An object with properties **prototype** to base the custom element on,
     and **extends**, an existing tag to extend. Both of these are optional.
 
