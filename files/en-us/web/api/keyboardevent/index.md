@@ -121,19 +121,7 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 
 - {{domxref("KeyboardEvent.altKey")}} {{Readonlyinline}}
 
-  - : Returns a boolean value that is `true` if the
-
-    <kbd>Alt</kbd>
-
-    (
-
-    <kbd>Option</kbd>
-
-    or
-
-    <kbd>⌥</kbd>
-
-    on OS X) key was active when the key event was generated.
+  - : Returns a boolean value that is `true` if the  <kbd>Alt</kbd> (<kbd>Option</kbd> or <kbd>⌥</kbd> on OS X) key was active when the key event was generated.
 
 - {{domxref("KeyboardEvent.code")}} {{Readonlyinline}}
 
@@ -143,11 +131,7 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 
 - {{domxref("KeyboardEvent.ctrlKey")}} {{Readonlyinline}}
 
-  - : Returns a boolean value that is `true` if the
-
-    <kbd>Ctrl</kbd>
-
-    key was active when the key event was generated.
+  - : Returns a boolean value that is `true` if the <kbd>Ctrl</kbd> key was active when the key event was generated.
 
 - {{domxref("KeyboardEvent.isComposing")}} {{Readonlyinline}}
   - : Returns a boolean value that is `true` if the event is fired between after `compositionstart` and before `compositionend`.
@@ -163,29 +147,13 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
   - : Returns a {{jsxref("Number")}} representing the location of the key on the keyboard or other input device. A list of the constants identifying the locations is shown above in {{anch("Keyboard locations")}}.
 - {{domxref("KeyboardEvent.metaKey")}} {{Readonlyinline}}
 
-  - : Returns a boolean value that is `true` if the
-
-    <kbd>Meta</kbd>
-
-    key (on Mac keyboards, the
-
-    <kbd>⌘ Command</kbd>
-
-    key; on Windows keyboards, the Windows key (
-
-    <kbd>⊞</kbd>
-
-    )) was active when the key event was generated.
+  - : Returns a boolean value that is `true` if the <kbd>Meta</kbd> key (on Mac keyboards, the <kbd>⌘ Command</kbd> key; on Windows keyboards, the Windows key (<kbd>⊞</kbd>)) was active when the key event was generated.
 
 - {{domxref("KeyboardEvent.repeat")}} {{Readonlyinline}}
   - : Returns a boolean value that is `true` if the key is being held down such that it is automatically repeating.
 - {{domxref("KeyboardEvent.shiftKey")}} {{Readonlyinline}}
 
-  - : Returns a boolean value that is `true` if the
-
-    <kbd>Shift</kbd>
-
-    key was active when the key event was generated.
+  - : Returns a boolean value that is `true` if the <kbd>Shift</kbd> key was active when the key event was generated.
 
 ## Methods
 
@@ -193,23 +161,7 @@ _This interface also inherits methods of its parents, {{domxref("UIEvent")}} and
 
 - {{domxref("KeyboardEvent.getModifierState()")}}
 
-  - : Returns a boolean value indicating if a modifier key such as
-
-    <kbd>Alt</kbd>
-
-    ,
-
-    <kbd>Shift</kbd>
-
-    ,
-
-    <kbd>Ctrl</kbd>
-
-    , or
-
-    <kbd>Meta</kbd>
-
-    , was pressed when the event was created.
+  - : Returns a boolean value indicating if a modifier key such as <kbd>Alt</kbd>, <kbd>Shift</kbd>, <kbd>Ctrl</kbd>, or <kbd>Meta</kbd>, was pressed when the event was created.
 
 ## Obsolete methods
 

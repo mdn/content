@@ -43,33 +43,14 @@ The **`MouseEvent()`** constructor creates a new
       on the client window of the user's screen;
       setting this value doesn't move the mouse pointer.
     - `"ctrlKey"`, optional boolean value, defaulting to `false`,
-      that indicates if the
-
-      <kbd>ctrl</kbd>
-
-      key was simultaneously pressed.
-
+      that indicates if the <kbd>ctrl</kbd> key was simultaneously pressed.
     - `"shiftKey"`, optional boolean value, defaulting to `false`,
-      that indicates if the
-
-      <kbd>shift</kbd>
-
-      key was simultaneously pressed.
-
+      that indicates if the <kbd>shift</kbd> key was simultaneously pressed.
     - `"altKey"`, optional boolean value, defaulting to `false`,
-      that indicates if the
-
-      <kbd>alt</kbd>
-
-      key was simultaneously pressed.
-
+      that indicates if the <kbd>alt</kbd> key was simultaneously pressed.
     - `"metaKey"`, optional boolean value, defaulting to `false`,
-      that indicates if the
-
-      <kbd>meta</kbd>
-
+      that indicates if the <kbd>meta</kbd>
       key was simultaneously pressed.
-
     - `"button"`, optional `short`, defaulting to `0`,
       that describes which button is pressed
       during events related to the press or release of a button:

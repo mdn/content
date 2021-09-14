@@ -303,12 +303,7 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 - {{domxref("HTMLDialogElement/cancel_event", "cancel")}}
 
-  - : Fires on a {{HTMLElement("dialog")}} when the user instructs the browser that they wish to dismiss the current open dialog. For example, the browser might fire this event when the user presses the
-
-    <kbd>Esc</kbd>
-
-    key or clicks a "Close dialog" button which is part of the browser's UI.
-    Also available via the {{domxref("GlobalEventHandlers/oncancel", "oncancel")}} property.
+  - : Fires on a {{HTMLElement("dialog")}} when the user instructs the browser that they wish to dismiss the current open dialog. For example, the browser might fire this event when the user presses the <kbd>Esc</kbd> key or clicks a "Close dialog" button which is part of the browser's UI. Also available via the {{domxref("GlobalEventHandlers/oncancel", "oncancel")}} property.
 
 - {{domxref("Element/error_event", "error")}}
   - : Fired when a resource failed to load, or can't be used. For example, if a script has an execution error or an image can't be found or is invalid.
