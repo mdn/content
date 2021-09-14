@@ -121,12 +121,7 @@ single cookie at a time using this method. Consider also that:
   > **Note:** These flags are only settable with the `secure`
   > attribute.
 
-> **Note:** As you can see from the code above,
-> `document.cookie` is an [accessor
-> property](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#description) with native _setter_ and _getter_ functions, and
-> consequently is _not_ a [data
-> property](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#description) with a value: what you write is not the same as what you read,
-> everything is always mediated by the JavaScript interpreter.
+> **Note:** As you can see from the code above, `document.cookie` is an [accessor property](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#description) with native _setter_ and _getter_ functions, and consequently is _not_ a [data property](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#description) with a value: what you write is not the same as what you read, everything is always mediated by the JavaScript interpreter.
 
 ## Examples
 
