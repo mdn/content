@@ -13,7 +13,7 @@ browser-compat: api.PresentationConnectionList
 ---
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef("Presentation API")}}
 
-`PresentationConnectionList`_ is the collection of \*\*incoming presentation connections_.
+`PresentationConnectionList` is the collection of incoming presentation connections.
 
 ## Properties
 

@@ -30,8 +30,8 @@ var myWorker = new Worker(aURL, options);
   - : An object containing option properties that can be set when creating the object instance. Available properties are as follows:
 
     - `type`: A {{domxref("DOMString")}} specifying the type of worker to create. The value can be `classic` or `module`. If not specified, the default used is `classic`.
-    - `credentials`: A {{domxref("DOMString")}} specifying the type of credentials to use for the worker. The value can be* `omit`*, `same-origin`, or _`include`. If not specified, or if type is `classic`, the default used is `omit` (no credentials required)._
-    - _`name`: A _{{domxref("DOMString")}} specifying an identifying name for the {{domxref("DedicatedWorkerGlobalScope")}} representing the scope of the worker, which is mainly useful for debugging purposes.
+    - `credentials`: A {{domxref("DOMString")}} specifying the type of credentials to use for the worker. The value can be `omit`, `same-origin`, or _`include`. If not specified, or if type is `classic`, the default used is `omit` (no credentials required)._
+    - `name`: A {{domxref("DOMString")}} specifying an identifying name for the {{domxref("DedicatedWorkerGlobalScope")}} representing the scope of the worker, which is mainly useful for debugging purposes.
 
 ### Exceptions
 

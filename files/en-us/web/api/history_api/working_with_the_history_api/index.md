@@ -33,7 +33,7 @@ If the user clicks **Back** once again, the URL will change to `https://mozilla
 
 ### The pushState() method
 
-`pushState()` takes three parameters: a **state* object*; a **title** (currently ignored); and (optionally), a **URL\*\*.
+`pushState()` takes three parameters: a **state object**; a **title** (currently ignored); and (optionally), a **URL**.
 
 Let's examine each of these three parameters in more detail.
 

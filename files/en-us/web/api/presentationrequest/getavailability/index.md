@@ -32,7 +32,7 @@ When the `getAvailability()` method is called, the user agent _MUST_ run the fol
     1.  [Reject](https://www.w3.org/TR/presentation-api/#dfn-rejecting-a-promise) _P_ with a [`NotSupportedError`](https://www.w3.org/TR/presentation-api/#dfn-notsupportederror) exception.
     2.  Abort all the remaining steps.
 
-6.  If there exists a tuple *(*A*, *presentationUrls*)* in the [set of availability objects](https://www.w3.org/TR/presentation-api/#dfn-set-of-availability-objects), then:
+6.  If there exists a tuple (*A*, *presentationUrls*) in the [set of availability objects](https://www.w3.org/TR/presentation-api/#dfn-set-of-availability-objects), then:
 
     1.  [Resolve](https://www.w3.org/TR/presentation-api/#dfn-resolving-a-promise) _P_ with _A_.
     2.  Abort all the remaining steps.
@@ -43,7 +43,7 @@ When the `getAvailability()` method is called, the user agent _MUST_ run the fol
     2.  `true` if there is at least one [compatible presentation display](https://www.w3.org/TR/presentation-api/#dfn-compatible-presentation-display) for some member of _presentationUrls_. Meaning there is an entry _(presentationUrl, display)_ in the [list of available presentation displays](https://www.w3.org/TR/presentation-api/#dfn-list-of-available-presentation-displays) for some _presentationUrl_ in _presentationUrls_.
     3.  `false` otherwise.
 
-8.  Create a tuple *(*A*, *presentationUrls*)* and add it to the [set of availability objects](https://www.w3.org/TR/presentation-api/#dfn-set-of-availability-objects).
+8.  Create a tuple (*A*, *presentationUrls*) and add it to the [set of availability objects](https://www.w3.org/TR/presentation-api/#dfn-set-of-availability-objects).
 9.  Run the algorithm to [monitor the list of available presentation displays](https://www.w3.org/TR/presentation-api/#dfn-monitor-the-list-of-available-presentation-displays).
 10. [Resolve](https://www.w3.org/TR/presentation-api/#dfn-resolving-a-promise) _P_ with _A_.
 

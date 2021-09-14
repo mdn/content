@@ -22,7 +22,7 @@ of the {{DOMxRef("HTMLElement")}} interface provides read/write access to [custo
 > Instead, all writes must be to the individual properties within the
 > `dataset`, which in turn represent the data attributes.
 
-An HTML `data-*`_ attribute_ and its corresponding DOM
+An HTML `data-*` attribute and its corresponding DOM
 `dataset.property` modify their shared name according to where
 they are read or written:
 
