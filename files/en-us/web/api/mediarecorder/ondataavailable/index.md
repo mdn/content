@@ -16,7 +16,7 @@ browser-compat: api.MediaRecorder.ondataavailable
 ---
 {{APIRef("MediaStream Recording")}}
 
-The **`MediaRecorder.ondataavailable `**event handler (part of
+The **`MediaRecorder.ondataavailable`** event handler (part of
 the [MediaStream Recording
 API](/en-US/docs/Web/API/MediaStream_Recording_API)) handles the {{event("dataavailable")}} event, letting you run code in
 response to {{domxref("Blob")}} data being made available for use.

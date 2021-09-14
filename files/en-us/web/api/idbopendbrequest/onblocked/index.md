@@ -14,7 +14,7 @@ browser-compat: api.IDBOpenDBRequest.onblocked
 ---
 {{ APIRef("IndexedDB") }}
 
-The **`onblocked `**event handler of the
+The **`onblocked`** event handler of the
 {{domxref("IDBOpenDBRequest")}} interface is the event handler for the
 {{event("blocked")}} event. This event is triggered when the {{event("upgradeneeded")}}
 should be triggered because of a version change but the database is still in use (that

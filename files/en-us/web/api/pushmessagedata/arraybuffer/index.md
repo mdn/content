@@ -14,7 +14,7 @@ browser-compat: api.PushMessageData.arrayBuffer
 ---
 {{APIRef("Push API")}}{{SeeCompatTable()}}
 
-The **`arrayBuffer()`**method of the {{domxref("PushMessageData")}} interface extracts push message data as an {{jsxref("ArrayBuffer")}} object.
+The **`arrayBuffer()`** method of the {{domxref("PushMessageData")}} interface extracts push message data as an {{jsxref("ArrayBuffer")}} object.
 
 ## Syntax
 

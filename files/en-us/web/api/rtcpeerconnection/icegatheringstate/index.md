@@ -12,7 +12,7 @@ browser-compat: api.RTCPeerConnection.iceGatheringState
 ---
 {{APIRef("WebRTC")}}
 
-The read-only property**`RTCPeerConnection.iceGatheringState`** returns a string
+The read-only property **`RTCPeerConnection.iceGatheringState`** returns a string
 that describes the connection's ICE gathering state.
 This lets you detect, for example, when collection of ICE candidates has finished.
 

@@ -15,7 +15,7 @@ browser-compat: api.MediaRecorder.onstart
 ---
 {{APIRef("Media Recorder API")}}
 
-The **`MediaRecorder.onstart`**event handler (part of the [MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API)) handles the
+The **`MediaRecorder.onstart`** event handler (part of the [MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API)) handles the
 `start` event, allowing you to run code in response to media recording being
 started by a `MediaRecorder`.
 

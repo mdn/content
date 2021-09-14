@@ -12,7 +12,7 @@ browser-compat: api.OffscreenCanvas.convertToBlob
 ---
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
 
-The **`OffscreenCanvas.convertToBlob()`**method creates a {{domxref("Blob")}} object representing the image contained in the canvas.
+The **`OffscreenCanvas.convertToBlob()`** method creates a {{domxref("Blob")}} object representing the image contained in the canvas.
 
 ## Syntax
 
