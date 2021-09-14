@@ -16,6 +16,8 @@ The **`overscroll-behavior`** CSS property sets what a browser does when reachin
 
 {{EmbedInteractiveExample("pages/css/overscroll-behavior.html")}}
 
+## Syntax
+
 ```css
 /* Keyword values */
 overscroll-behavior: auto; /* default */
@@ -32,15 +34,13 @@ overscroll-behavior: revert;
 overscroll-behavior: unset;
 ```
 
-By default, mobile browsers tend to provide a "bounce" effect or even a page refresh when the top or bottom of a page (or other scroll area) is reached. You may also have noticed that when you have a dialog box with scrolling content on top of a page of scrolling content, once the dialog box's scroll boundary is reached, the underlying page will then start to scroll — this is called **scroll chaining**.
-
-
-In some cases these behaviors are not desirable. You can use `overscroll-behavior` to get rid of unwanted scroll chaining and the browser's Facebook/Twitter app-inspired "pull to refresh"-type behavior.
-## Syntax
-
 The `overscroll-behavior` property is specified as one or two keywords chosen from the list of values below.
 
 Two keywords specifies the `overscroll-behavior` value on the `x` and `y` axes respectively. If only one value is specified, both x and y are assumed to have the same value.
+
+By default, mobile browsers tend to provide a "bounce" effect or even a page refresh when the top or bottom of a page (or other scroll area) is reached. You may also have noticed that when you have a dialog box with scrolling content on top of a page of scrolling content, once the dialog box's scroll boundary is reached, the underlying page will then start to scroll — this is called **scroll chaining**.
+
+In some cases these behaviors are not desirable. You can use `overscroll-behavior` to get rid of unwanted scroll chaining and the browser's Facebook/Twitter app-inspired "pull to refresh"-type behavior.
 
 ### Values
 
