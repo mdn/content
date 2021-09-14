@@ -56,9 +56,9 @@ public class WebSocket {
 
 Methods:
 
-- `java.net.`[Socket](http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html)` getInputStream()`
+- `java.net.`[Socket](http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html) `getInputStream()`
   Returns an input stream for this socket.
-- `java.net.`[Socket](http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html)` getOutputStream()`
+- `java.net.`[Socket](http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html) `getOutputStream()`
   Returns an output stream for this socket.
 
 ### OutputStream
