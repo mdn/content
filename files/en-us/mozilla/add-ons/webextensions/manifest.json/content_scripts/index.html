@@ -78,9 +78,9 @@ browser-compat: webextensions.manifest.content_scripts
    <td><a id="css"><code>css</code></a></td>
    <td><code>Array</code></td>
    <td>
-    <p>An array of paths, relative to <code>manifest.json</code>, referencing CSS files that will be injected into matching pages.</p>
+    <p>An array of paths, relative to the manifest.json file, referencing CSS files that will be injected into matching pages.</p>
 
-    <p>Files are injected in the order given, and before the DOM is loaded.</p>
+    <p>Files are injected in the order given, and at the time specified by <code><a href="#run_at">run_at</a></code>.</p>
 
     <div class="notecard note">
     <p><strong>Note:</strong> Firefox resolves URLs in injected CSS files relative to the CSS file itself, rather than to the page it's injected into.</p>
@@ -115,7 +115,7 @@ browser-compat: webextensions.manifest.content_scripts
 
     <p>...then <code>"my-content-script.js"</code> can use jQuery.</p>
 
-    <p>Files are injected at the time specified by <code><a href="#run_at">run_at</a></code>.</p>
+    <p>The files are injected after any files in <code><a href="#css">css</a></code>, and at the time specified by <code><a href="#run_at">run_at</a></code>.</p>
    </td>
   </tr>
   <tr>
@@ -160,7 +160,7 @@ browser-compat: webextensions.manifest.content_scripts
    <td><a id="run_at"><code>run_at</code></a></td>
    <td><code>String</code></td>
    <td>
-    <p>This option determines when the scripts specified in <code><a href="#js">js</a></code> are injected. You can supply one of three strings here, each of which identifies a state in the process of loading a document. The states directly correspond to {{domxref("Document/readyState", "Document.readyState")}}:</p>
+    <p>This option determines when the files specified in <code><a href="#css">css</a></code> and <code><a href="#js">js</a></code> are injected. You can supply one of three strings here, each of which identifies a state in the process of loading a document. The states directly correspond to {{domxref("Document/readyState", "Document.readyState")}}:</p>
 
     <dl>
      <dt><code>"document_start"</code></dt>
