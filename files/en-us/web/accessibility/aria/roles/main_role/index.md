@@ -142,3 +142,10 @@ Which is the equivalent of:
 - [The main element | HTML5 Doctor](https://html5doctor.com/the-main-element/)
 
 
+<section id="Quick_links">
+
+1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
+
+    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+
+</section>

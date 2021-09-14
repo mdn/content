@@ -93,4 +93,10 @@ or use an ordered list if the order of the list items matters:
 - [ARIA: list role](/en-US/docs/Web/Accessibility/ARIA/Roles/List_role)
 - [ARIA: group role](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role)
 
-<section id="Quick_links"><ol><li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}</li></ol></section>
+<section id="Quick_links">
+
+1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
+
+    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+
+</section>

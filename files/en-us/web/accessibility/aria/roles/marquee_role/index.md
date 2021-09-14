@@ -49,4 +49,10 @@ The marquee is required to have an accessible name.  Use `aria-labelledby` if a 
 - [ARIA: `timer` role](/en-US/docs/Web/Accessibility/ARIA/Roles/timer_role)
 - [ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
 
-<section id="Quick_links"><ol><li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}</li></ol></section>
+<section id="Quick_links">
+
+1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
+
+    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+
+</section>

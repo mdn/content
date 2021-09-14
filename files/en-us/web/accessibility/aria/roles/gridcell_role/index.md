@@ -166,4 +166,10 @@ The first rule of ARIA is: if a native HTML element or attribute has the semanti
 - [gridcell: Accessible Rich Internet Applications (WAI-ARIA) 1.1](https://www.w3.org/TR/wai-aria-1.1/#gridcell)
 - [Gridcell Role - Maxability](https://www.maxability.co.in/wai-aria-overview/gridcell-role/)
 
-<section id="Quick_links"><ol><li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}</li></ol></section>
+<section id="Quick_links">
+
+1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
+
+    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+
+</section>

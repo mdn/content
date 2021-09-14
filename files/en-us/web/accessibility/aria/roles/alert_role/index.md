@@ -69,4 +69,10 @@ The `alert` role should read out content that has changed, or bring the user's a
 - [ARIA alert support - The Paciello Group](https://developer.paciellogroup.com/blog/2017/04/aria-alert-support/)
 
 
-<section id="Quick_links"><ol><li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}</li></ol></section>
+<section id="Quick_links">
+
+1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
+
+    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+
+</section>

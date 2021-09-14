@@ -261,4 +261,10 @@ If a link performs the action of a button, giving the element `role="button"` he
 - [Official WAI-ARIA example code](https://www.w3.org/TR/wai-aria-practices/examples/button/button.html)
 - [ARIA menubutton role](/en-US/docs/Web/Accessibility/ARIA/Roles/menubutton_role)
 
-<section id="Quick_links"><ol><li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}</li></ol></section>
+<section id="Quick_links">
+
+1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
+
+    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+
+</section>

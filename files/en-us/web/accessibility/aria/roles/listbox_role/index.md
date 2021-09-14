@@ -202,4 +202,10 @@ This could have more easily been handled with the native HTML {{HTMLElement('sel
 - [ARIA Best Practices – Listbox](https://www.w3.org/TR/wai-aria-practices/#Listbox)
 - [ARIA Role Model – Listbox](https://www.w3.org/TR/wai-aria-1.1/#listbox)
 
-<section id="Quick_links"><ol><li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}</li></ol></section>
+<section id="Quick_links">
+
+1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
+
+    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+
+</section>
