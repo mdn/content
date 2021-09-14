@@ -13,7 +13,7 @@ browser-compat: api.VideoColorSpace.matrix
 
 The **`matrix`** read-only property of the {{domxref("VideoColorSpace")}} interface returns the matrix coefficient of the video. Matrix coefficients describe the relationship between sample component values and color coordinates.
 
-### Value
+## Value
 
 A string containing one of the following values:
 

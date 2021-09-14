@@ -21,6 +21,8 @@ new VideoColorSpace(init);
 
 ### Parameters
 
+All values default to `null` when they are not present.
+
 - `init`{{Optional_Inline}}
   - : A dictionary object containing the following:
     - `primaries`{{Optional_Inline}}

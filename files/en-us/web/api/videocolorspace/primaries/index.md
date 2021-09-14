@@ -13,7 +13,7 @@ browser-compat: api.VideoColorSpace.primaries
 
 The **`primaries`** read-only property of the {{domxref("VideoColorSpace")}} interface returns the color gamut of the video.
 
-### Value
+## Value
 
 A string containing one of the following values:
 

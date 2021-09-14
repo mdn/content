@@ -13,7 +13,7 @@ browser-compat: api.VideoColorSpace.fullRange
 
 The **`fullRange`** read-only property of the {{domxref("VideoColorSpace")}} interface returns `true` if full-range color values are used.
 
-### Value
+## Value
 
 A {{jsxref("Boolean")}}, `true` if full-range color values are used.
 
