@@ -30,7 +30,7 @@ var successBool = navigator.vibrate(pattern);
   - : Provides a pattern of vibration and pause intervals. Each value indicates a number
     of milliseconds to vibrate or pause, in alternation. You may provide either a single
     value (to vibrate once for that many milliseconds) or an array of values to
-    alternately vibrate, pause, then vibrate again. See [Vibration API](/en-US/docs/WebAPI/Vibration) for details.
+    alternately vibrate, pause, then vibrate again. See [Vibration API](/en-US/docs/Web/API/Vibration_API) for details.
 
 Passing a value of `0`, an empty array, or an array containing all zeros
 will cancel any currently ongoing vibration pattern.
@@ -52,4 +52,4 @@ navigator.vibrate([100,30,100,30,100,30,200,30,200,30,200,30,100,30,100,30,100])
 
 ## See also
 
-- [Vibration API](/en-US/docs/WebAPI/Vibration)
+- [Vibration API](/en-US/docs/Web/API/Vibration_API)
