@@ -7,7 +7,7 @@ tags:
   - Reference
   - role-main
 ---
-The `main` [landmark role](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles) is used to indicate the primary content of a document. The main content area consists of content that is directly related to or expands upon the central topic of a document, or the central functionality of an application.
+The `main` landmark role is used to indicate the primary content of a document. The main content area consists of content that is directly related to or expands upon the central topic of a document, or the main function of an application.
 
 ```html
 <div id="main" role="main">
@@ -20,11 +20,29 @@ This is the main section of a document that discusses avocados. Subsections of t
 
 ## Description
 
-The `main` role is a navigational [landmark](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles) role identifying the main content of a document. Landmarks can be used by assistive technology to quickly identify and navigate to large sections of the document. By classifying and labeling sections of a page, structural information conveyed visually through layout can be represented programmatically. Screen readers use landmark roles to provide keyboard navigation to important sections of a page. For those navigating via landmark roles, the main role is an alternative for "skip to main content" links.There should only be one `main` landmark role per document.
+The `main` role is a navigational [landmark](/en-US/docs/Web/Accessibility/ARIA/Roles#Landmark_roles) role identifying the main content of a document. Landmarks can be used by assistive technology such as screen readers to quickly identify and navigate to large sections of the document. 
 
-The [`<main>` element](/en-US/docs/Web/HTML/Element/main) has a role of `main`. Developers should always prefer using the correct semantic HTML element over using ARIA.
+By classifying and labeling sections of a page, structural information conveyed visually through layout can be represented programmatically. Screen readers use landmark roles to provide keyboard navigation to important sections of a page. For those navigating via landmark roles, the main role is an alternative for "skip to main content" links. 
 
-Documents and applications can be nested in the DOM, which may lead to having more than one main element as DOM descendants. If this is the case, include `aria-owns` to identify the relationship of the main to it's document or application ancestor.
+There should only be one `main` landmark role per document.
+
+The {{HTMLElement('main')}} element has a role of `main`. Developers should use semantic HTML -- in this case  {{HTMLElement('main')}} -- over using ARIA.
+
+
+
+
+### Associated ARIA roles, states, and properties
+
+- aria-owns
+
+  - : Documents and applications can be nested in the DOM, which may lead to having more than one main element as DOM descendants. If this is the case, include `aria-owns` to identify the relationship of the main to it's document or application ancestor.
+
+
+    Can be named using aria-labelledby if a visible label is present, otherwise with aria-label.
+    See the Main Landmark section.
+
+
+
 
 ## Example
 
@@ -45,7 +63,7 @@ Documents and applications can be nested in the DOM, which may lead to having mo
 
 ### Use only one `main` role per document
 
-The `main` [landmark role](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles) should only be used once per document.
+The `main` [landmark role](/en-US/docs/Web/Accessibility/ARIA/Roles#Landmark_roles) should only be used once per document.
 
 If a document contains two `main` roles, say updating page content when triggered by JavaScript, the inactive `main` role's presence should be removed from assistive technology via techniques such as toggling the [`hidden` attribute](/en-US/docs/Web/HTML/Global_attributes/hidden).
 
@@ -60,6 +78,8 @@ If a document contains two `main` roles, say updating page content when triggere
   <!-- content -->
 </main>
 ```
+
+It is also helpful to include an accessible name to help orient assistive technology users, especially in single-page applications where main content changes happen without generating a page load event. This can be added with `aria-labeledby` if there is an appropriate name in the content, or a`ria-label` if not.
 
 ## Best practices
 
