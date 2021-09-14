@@ -39,7 +39,7 @@ void gl.texStorage3D(target, levels, internalformat, width, height, depth);
 
     - `gl.R8`
     - `gl.R16F`
-    - `gl.`R32F
+    - `gl.R32F`
     - `gl.R8UI`
     - `gl.RG8`
     - `gl.RG16F`
