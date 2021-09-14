@@ -101,7 +101,7 @@ The options include ICE server and transport settings and identity information.
 
     - `"all"`
       - : All ICE candidates will be considered.
-    - `"public" `{{deprecated_inline}}
+    - `"public"` {{deprecated_inline}}
       - : Only ICE candidates with public IP addresses will be considered. _Removed from the specification's May 13, 2016 working draft._
     - `"relay"`
       - : Only ICE candidates whose IP addresses are being relayed, such as those being passed through a STUN or TURN server, will be considered.

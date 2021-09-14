@@ -25,7 +25,7 @@ var messageEvent = new MessageEvent(type, init);
 
 - **`type`**
   - : The type of `MessageEvent` that will be created. This can be one of XXX
-- **`init` **{{optional_inline}}
+- **`init`** {{optional_inline}}
 
   - : A dictionary object that can contain the following properties:
 

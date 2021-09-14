@@ -25,7 +25,7 @@ None
 
 True if Software Installation is enabled for this client machine; otherwise, false. The
 method reflects the value of the Software Installation preference in the user
-interface, and of the `xpinstall.enabled `preference in pref.js.
+interface, and of the `xpinstall.enabled` preference in pref.js.
 
 ## Example
 

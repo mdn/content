@@ -70,7 +70,7 @@ f.size = "6";
 ## Specifications
 
 The \<font> tag is not supported in HTML5 and as a result neither is
-`<font>.size `.
+`<font>.size`.
 
 ## Browser compatibility
 

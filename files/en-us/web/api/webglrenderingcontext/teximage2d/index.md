@@ -12,7 +12,7 @@ browser-compat: api.WebGLRenderingContext.texImage2D
 ---
 {{APIRef("WebGL")}}
 
-The **`WebGLRenderingContext.texImage2D()`** method of the [WebGL API ](/en-US/docs/Web/API/WebGL_API)specifies a two-dimensional texture
+The **`WebGLRenderingContext.texImage2D()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) specifies a two-dimensional texture
 image.
 
 ## Syntax

@@ -112,7 +112,7 @@ This method is also demonstrated in the article [Manipulating video using canvas
 
 ### A color picker
 
-In this example we are using the [`getImageData()` ](/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData)method to display the color under the mouse cursor. For this, we need the current position of the mouse with `layerX` and `layerY`, then we look up the pixel data on that position in the pixel array that [`getImageData()`](/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData) provides us. Finally, we use the array data to set a background color and a text in the `<div>` to display the color. Clicking on the image will do the same operation but remember what the selected color was.
+In this example we are using the [`getImageData()`](/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData)method to display the color under the mouse cursor. For this, we need the current position of the mouse with `layerX` and `layerY`, then we look up the pixel data on that position in the pixel array that [`getImageData()`](/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData) provides us. Finally, we use the array data to set a background color and a text in the `<div>` to display the color. Clicking on the image will do the same operation but remember what the selected color was.
 
 ```js
 var img = new Image();
@@ -156,7 +156,7 @@ Also see the source code — [HTML](https://github.com/mdn/dom-examples/blob/mas
 
 ## Painting pixel data into a context
 
-You can use the[ putImageData() ](/en-US/docs/Web/API/CanvasRenderingContext2D/putImageData)method to paint pixel data into a context:
+You can use the [putImageData()](/en-US/docs/Web/API/CanvasRenderingContext2D/putImageData) method to paint pixel data into a context:
 
 ```js
 ctx.putImageData(myImageData, dx, dy);

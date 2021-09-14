@@ -67,7 +67,7 @@ The following strings represent the possible orientation requirements you may sp
   - : It represents both `landscape-primary` and
     `landscape-secondary`.
 - `default`
-  - : It represents either `portrait-primary `and
+  - : It represents either `portrait-primary` and
     `landscape-primary` depends on natural orientation of devices. For example,
     if the panel resolution is 1280\*800, `default` will make it landscape, if
     the resolution is 800\*1280, `default` will make it to portrait.

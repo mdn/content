@@ -11,7 +11,7 @@ browser-compat: api.WebGL2RenderingContext.texImage3D
 ---
 {{APIRef("WebGL")}}
 
-The **`WebGLRenderingContext.texImage3D()`** method of the [WebGL API ](/en-US/docs/Web/API/WebGL_API)specifies a three-dimensional
+The **`WebGLRenderingContext.texImage3D()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) specifies a three-dimensional
 texture image.
 
 ## Syntax

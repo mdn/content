@@ -37,7 +37,7 @@ The **`slotchange`** event is fired on an {{DOMxRef("HTMLSlotElement")}} instanc
   </tbody>
 </table>
 
-In order to trigger a **slotchange** event, one has to set or remove the `slot `attribute.
+In order to trigger a **slotchange** event, one has to set or remove the `slot` attribute.
 
 ## Examples
 

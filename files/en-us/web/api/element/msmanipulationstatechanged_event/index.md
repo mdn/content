@@ -42,7 +42,7 @@ It is a proprietary event specific to Microsoft Edge and Internet Explorer.
   </tbody>
 </table>
 
-Get manipulation states using the `lastState `and `currentState `properties.
+Get manipulation states using the `lastState` and `currentState` properties.
 
 ## Examples
 

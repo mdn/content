@@ -76,6 +76,6 @@ The Web Animation API has a [polyfill](https://github.com/web-animations/web-ani
 ## See also
 
 - [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) — main page
-- [Using the Web Animations API ](/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API)— guide
+- [Using the Web Animations API](/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API) — guide
 - The [full suite of Alice in Wonderland demos](http://codepen.io/collection/bpEza/) on CodePen for you to play with, fork, and share
 - [web-animations-js](https://github.com/web-animations/web-animations-js) — the Web Animations API polyfill

@@ -94,7 +94,7 @@ const result = crypto.subtle.unwrapKey(
     object.
   - For [AES-CTR](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr), [AES-CBC](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc), [AES-GCM](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm), or [AES-KW](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-kw): Pass the
     string identifying the algorithm or an object of the form
-    `{ "name": ALGORITHM }`, where `ALGORITHM `is the name of
+    `{ "name": ALGORITHM }`, where `ALGORITHM` is the name of
     the algorithm.
 
 - `extractable` is a [`Boolean`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean "The Boolean object is an object wrapper for a boolean value.")

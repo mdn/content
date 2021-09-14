@@ -18,7 +18,7 @@ browser-compat: api.Animation.updatePlaybackRate
 {{APIRef("Web Animations")}}{{SeeCompatTable}}
 
 The
-**`updatePlaybackRate()` **method of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)'s
+**`updatePlaybackRate()`** method of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)'s
 {{domxref("Animation")}} Interface sets the speed of an animation after first
 synchronizing its playback position.
 

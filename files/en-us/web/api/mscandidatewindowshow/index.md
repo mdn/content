@@ -37,15 +37,15 @@ object.addEventListener("MSCandidateWindowShow", handler, useCapture)
 
 Type: _IHTMLEventObj_
 
-Pointer to an `IHTMLEventObj `interface for the current event.
+Pointer to an `IHTMLEventObj` interface for the current event.
 
-This event fires after the positioning information of the IME candidate window has been determined. You can obtain the positioning information using the [getCandidateWindowClientRect ](/en-US/docs/Web/API/getCandidateWindowClientRect)method, and adjust your layout as needed to avoid any occlusions with the IME candidate window.
+This event fires after the positioning information of the IME candidate window has been determined. You can obtain the positioning information using the [getCandidateWindowClientRect](/en-US/docs/Web/API/getCandidateWindowClientRect) method, and adjust your layout as needed to avoid any occlusions with the IME candidate window.
 
 Web applications need only register for this event once per element (the handler will remain valid for the lifetime of the element).
 
 ### Example
 
-in IE11, developers can detect the opening of the IME candidate window by listening to `MSCandidateWindowShow` event, then call `getCandidateWindowClientRect() `function to find out where the candidate window is and position the suggestion UI away from it:
+in IE11, developers can detect the opening of the IME candidate window by listening to `MSCandidateWindowShow` event, then call `getCandidateWindowClientRect()` function to find out where the candidate window is and position the suggestion UI away from it:
 
 ```js
 var context = document.getElementById("mySearchBox").msGetInputContext();

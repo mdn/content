@@ -84,7 +84,7 @@ Interfaces that define audio sources for use in the Web Audio API.
 - {{domxref("AudioScheduledSourceNode")}}
   - : The **`AudioScheduledSourceNode`** is a parent interface for several types of audio source node interfaces. It is an {{domxref("AudioNode")}}.
 - {{domxref("OscillatorNode")}}
-  - : The **`OscillatorNode` **interface represents a periodic waveform, such as a sine or triangle wave. It is an {{domxref("AudioNode")}} audio-processing module that causes a given *frequency* of wave to be created.
+  - : The **`OscillatorNode`** interface represents a periodic waveform, such as a sine or triangle wave. It is an {{domxref("AudioNode")}} audio-processing module that causes a given *frequency* of wave to be created.
 - {{domxref("AudioBuffer")}}
   - : The **`AudioBuffer`** interface represents a short audio asset residing in memory, created from an audio file using the {{ domxref("BaseAudioContext.decodeAudioData") }} method, or created with raw data using {{ domxref("BaseAudioContext.createBuffer") }}. Once decoded into this form, the audio can then be put into an {{ domxref("AudioBufferSourceNode") }}.
 - {{domxref("AudioBufferSourceNode")}}

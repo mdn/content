@@ -55,7 +55,7 @@ document.body.addEventListener('mousemove', evt => {
 
 Here we have a `<div>` element, and an event listener that fires the event handler code whenever the mouse moves. The event handler sets up an animation that animates the \<div> element to the position of the mouse pointer. This could result in a huge animations list, which could create a memory leak. For this reason, modern browsers automatically remove overriding forward filling animations.
 
-A console message is logged each time an animation it removed, invoked when the `remove `event is fired.
+A console message is logged each time an animation it removed, invoked when the `remove` event is fired.
 
 ## Specifications
 

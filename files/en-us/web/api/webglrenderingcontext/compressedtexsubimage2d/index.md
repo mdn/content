@@ -14,7 +14,7 @@ browser-compat: api.WebGLRenderingContext.compressedTexSubImage2D
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.compressedTexSubImage2D()`**
-method of the [WebGL API ](/en-US/docs/Web/API/WebGL_API)specifies a
+method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) specifies a
 two-dimensional sub-rectangle for a texture image in a compressed format.
 
 Compressed image formats must be enabled by [WebGL extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) before

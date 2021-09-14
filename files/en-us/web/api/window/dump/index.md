@@ -45,7 +45,7 @@ shown. It is therefore advisable to either check this preference yourself or use
 debugging preference of your own to make sure you don't send lots of debugging content
 to a user's console when they might not be interested in it at all. Note that
 `dump` output from XPCOM components goes to `stderr`, while
-`dump `called elsewhere will output to `stdout`.
+`dump` called elsewhere will output to `stdout`.
 
 In [Gecko](/en-US/docs/Mozilla/Gecko) `dump()` is **disabled by
 default** – it doesn't do anything but doesn't raise an error either. To see

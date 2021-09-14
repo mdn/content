@@ -11,7 +11,7 @@ browser-compat: api.CryptoKeyPair
 ---
 {{APIRef("Web Crypto API")}}
 
-The **`CryptoKeyPair`** dictionary of the [Web Crypto API ](/en-US/docs/Web/API/Web_Crypto_API)represents a key pair for an asymmetric cryptography algorithm, also known as a public-key algorithm.
+The **`CryptoKeyPair`** dictionary of the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) represents a key pair for an asymmetric cryptography algorithm, also known as a public-key algorithm.
 
 A `CryptoKeyPair` object can be obtained using {{domxref("SubtleCrypto.generateKey()")}}, when the selected algorithm is one of the asymmetric algorithms: RSASSA-PKCS1-v1_5, RSA-PSS, RSA-OAEP, ECDSA, or ECDH.
 

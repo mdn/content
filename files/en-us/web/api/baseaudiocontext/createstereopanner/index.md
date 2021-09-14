@@ -42,7 +42,7 @@ source code](https://github.com/mdn/webaudio-examples/tree/master/stereo-panner-
 slider {{HTMLElement("input")}} to increase and decrease pan value. In the JavaScript we
 create a {{domxref("MediaElementAudioSourceNode")}} and a
 {{domxref("StereoPannerNode")}}, and connect the two together using the
-`connect() `method. We then use an `oninput` event handler to
+`connect()` method. We then use an `oninput` event handler to
 change the value of the {{domxref("StereoPannerNode.pan")}} parameter and update the pan
 value display when the slider is moved.
 
