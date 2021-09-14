@@ -34,7 +34,7 @@ Note that some user agents might implement certain levels of foveation, so you m
 - `2/3`: medium foveation
 - `1.0`: maximum foveation
 
-If the user agent or device does not support the `fixedFoveation` property at all, it is {{jsxref("null")}} on getting and a no-op on setting.
+Some devices don't support foveated rendering. In that case `fixedFoveation` is {{jsxref("null")}} and setting it will not do anything.
 
 ## Examples
 
