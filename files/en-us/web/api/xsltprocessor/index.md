@@ -26,19 +26,19 @@ new XSLTProcessor()
 
 ## Methods
 
-- `[Throws] void `{{domxref("XSLTProcessor.importStylesheet")}}`(`{{domxref("Node")}}` styleSheet)`
+- [Throws] void {{domxref("XSLTProcessor.importStylesheet")}}({{domxref("Node")}} styleSheet)
   - : Imports the XSLT stylesheet. If the given node is a document node, you can pass in a
     full XSL Transform or a [literal result element
     transform](https://www.w3.org/TR/xslt#result-element-stylesheet); otherwise, it must be an `<xsl:stylesheet>` or
     `<xsl:transform>` element.
-- `[Throws] `{{domxref("DocumentFragment")}}
-  {{domxref("XSLTProcessor.transformToFragment")}}`(`{{domxref("Node")}}` source, `{{domxref("Document")}}` owner)`
+- [Throws] {{domxref("DocumentFragment")}}
+  {{domxref("XSLTProcessor.transformToFragment")}}({{domxref("Node")}} source, {{domxref("Document")}} owner)
   - : Transforms the node source by applying the stylesheet imported using the
     {{domxref("XSLTProcessor.importStylesheet()")}} function. The owner document of the
     resulting document fragment is the owner node.
-- [`[Throws]`](/en-US/docs/Mozilla/WebIDL_bindings#Throws)
+- [[Throws]](/en-US/docs/Mozilla/WebIDL_bindings#Throws)
   {{domxref("Document")}}
-  {{domxref("XSLTProcessor.transformToDocument")}}`(`{{domxref("Node")}}` source)`
+  {{domxref("XSLTProcessor.transformToDocument")}}({{domxref("Node")}} source)
 
   - : Transforms the node source applying the stylesheet given importing using the
     {{domxref("XSLTProcessor.importStylesheet()")}} function.
@@ -51,23 +51,23 @@ new XSLTProcessor()
     | `xml`         | {{domxref("XMLDocument")}}                                                                             |
     | `text`        | {{domxref("XMLDocument")}} with a single root element `<transformiix:result>` with the text as a child |
 
-- `[Throws] void `{{domxref("XSLTProcessor.setParameter")}}`(`{{jsxref("String")}}` namespaceURI, `{{jsxref("String")}}` localName, any value)`
+- [Throws] void {{domxref("XSLTProcessor.setParameter")}}({{jsxref("String")}} namespaceURI, {{jsxref("String")}} localName, any value)
   - : Sets a parameter in the XSLT stylesheet that was imported. (Sets the value of an
     `<xsl:param>`.) A null value for `namespaceURI` is treated
     the same as an empty string.
-- `[Throws] any `{{domxref("XSLTProcessor.getParameter")}}`(`{{jsxref("String")}}` namespaceURI, `{{jsxref("String")}}` localName)`
+- [Throws] any {{domxref("XSLTProcessor.getParameter")}}({{jsxref("String")}} namespaceURI, {{jsxref("String")}} localName)
   - : Gets the value of a parameter from the XSLT stylesheet. A null value for
     `namespaceURI` is treated the same as an empty string.
-- `[Throws] void `{{domxref("XSLTProcessor.removeParameter")}}`(`{{jsxref("String")}}` namespaceURI, `{{jsxref("String")}}` localName)`
+- [Throws] void {{domxref("XSLTProcessor.removeParameter")}}({{jsxref("String")}} namespaceURI, {{jsxref("String")}} localName)
   - : Removes the parameter if it was previously set. This will make the
     `XSLTProcessor` use the default value for the parameter as specified in the
     stylesheet. A null value for `namespaceURI` is treated the same as an empty
     string.
-- `void `{{domxref("XSLTProcessor.clearParameters()")}}
+- void {{domxref("XSLTProcessor.clearParameters()")}}
   - : Removes all set parameters from the `XSLTProcessor`. The
     `XSLTProcessor` will then use the defaults specified in the XSLT
     stylesheet.
-- `void `{{domxref("XSLTProcessor.reset()")}}
+- void {{domxref("XSLTProcessor.reset()")}}
   - : Removes all parameters and stylesheets from the `XSLTProcessor`.
 
 ## Properties
@@ -77,8 +77,7 @@ new XSLTProcessor()
 The following properties are [`[ChromeOnly]`](/en-US/docs/Mozilla/WebIDL_bindings#ChromeOnly)
 and not exposed to Web content:
 
-- `[ChromeOnly] attribute unsigned long `{{domxref("XSLTProcessor.flags")}}
-
+- [ChromeOnly] attribute unsigned long {{domxref("XSLTProcessor.flags")}}
   - : Flags that tweak the behavior of the processor. Not reset by calling
     {{domxref("XSLTProcessor.reset()")}}. Default value: `0`
 
