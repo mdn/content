@@ -15,7 +15,7 @@ browser-compat: api.MediaRecorder.onstop
 ---
 {{APIRef("Media Recorder API")}}
 
-The **`MediaRecorder.onstop `**event handler (part of the [MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API)) handles the
+The **`MediaRecorder.onstop`** event handler (part of the [MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API)) handles the
 `stop` event, allowing you to run code in response to media recording via a
 `MediaRecorder` being stopped.
 

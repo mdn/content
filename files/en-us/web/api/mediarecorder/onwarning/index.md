@@ -15,7 +15,7 @@ browser-compat: api.MediaRecorder.onwarning
 ---
 {{Deprecated_header}}{{APIRef("Media Recorder API")}}
 
-The **`MediaRecorder.onwarning `**event handler (part of the [MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API)) handles the
+The **`MediaRecorder.onwarning`** event handler (part of the [MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API)) handles the
 recording `warning` event, allowing you to run code in response to non-fatal
 errors being thrown during media recording via a `MediaRecorder` (errors that don't
 halt recording).

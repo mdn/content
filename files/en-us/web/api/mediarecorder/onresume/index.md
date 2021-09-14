@@ -15,7 +15,7 @@ browser-compat: api.MediaRecorder.onresume
 ---
 {{APIRef("Media Recorder API")}}
 
-The **`MediaRecorder.onresume `**event handler (part of the [MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API)) handles the
+The **`MediaRecorder.onresume`** event handler (part of the [MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API)) handles the
 `resume` event, allowing you to run code in response to the media recording
 being resumed after pausing.
 

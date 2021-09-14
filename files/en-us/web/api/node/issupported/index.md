@@ -14,7 +14,7 @@ browser-compat: api.Node.isSupported
 ---
 {{APIRef("DOM")}}{{deprecated_header}}
 
-The **`Node.isSupported()`**returns a boolean
+The **`Node.isSupported()`** method returns a boolean
 flag containing the result of a test whether the DOM implementation implements a
 specific feature and this feature is supported by the specific node.
 

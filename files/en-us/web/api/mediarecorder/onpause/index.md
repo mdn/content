@@ -15,7 +15,7 @@ browser-compat: api.MediaRecorder.onpause
 ---
 {{APIRef("Media Recorder API")}}
 
-The **`MediaRecorder.onpause `**event handler (part of the [MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API)) handles the
+The **`MediaRecorder.onpause`** event handler (part of the [MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API)) handles the
 `pause` event, allowing you to run code in response to the media recording
 being paused.
 

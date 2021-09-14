@@ -14,7 +14,7 @@ browser-compat: api.PushMessageData.blob
 ---
 {{APIRef("Push API")}}{{SeeCompatTable()}}
 
-The **`blob()`**method of the {{domxref("PushMessageData")}} interface extracts push message data as a {{domxref("Blob")}} object.
+The **`blob()`** method of the {{domxref("PushMessageData")}} interface extracts push message data as a {{domxref("Blob")}} object.
 
 ## Syntax
 
