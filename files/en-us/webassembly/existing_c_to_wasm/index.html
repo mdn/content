@@ -117,7 +117,7 @@ api.destroy_buffer(p);</pre>
 
 <p>The image is now available in wasm. It is time to call the WebP encoder to do its job. Looking at the <a href="https://developers.google.com/speed/webp/docs/api#simple_encoding_api">WebP documentation</a>, you'll find that <code>WebPEncodeRGBA</code> seems like a perfect fit. The function takes a pointer to the input image and its dimensions, as well as a quality option between 0 and 100. It also allocates an output buffer for us that we need to free using <code>WebPFree()</code> once we are done with the WebP image.</p>
 
-<p>The result of the encoding operation is an output buffer and its length. Because functions in C can't have arrays as return types (unless you allocate memory dynamically), this example resorts to a static global array. This may not be clean C. In fact, it relies on wasm pointers being 32 bits wide. But this is a fair shortuct for keeping things simple:</p>
+<p>The result of the encoding operation is an output buffer and its length. Because functions in C can't have arrays as return types (unless you allocate memory dynamically), this example resorts to a static global array. This may not be clean C. In fact, it relies on wasm pointers being 32 bits wide. But this is a fair shortcut for keeping things simple:</p>
 
 <pre class="brush: js">int result[2];
 EMSCRIPTEN_KEEPALIVE
