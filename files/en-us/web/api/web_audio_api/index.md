@@ -186,7 +186,7 @@ It is possible to process/render an audio graph very quickly in the background â
 - {{event("complete")}} (event)
   - : The `complete` event is fired when the rendering of an {{domxref("OfflineAudioContext")}} is terminated.
 - {{domxref("OfflineAudioCompletionEvent")}}
-  - : The `OfflineAudioCompletionEvent` represents events that occur when the processing of an {{domxref("OfflineAudioContext")}} is terminated. The {{event("complete")}} event implements this interface.
+  - : The `OfflineAudioCompletionEvent` represents events that occur when the processing of an {{domxref("OfflineAudioContext")}} is terminated. The {{event("complete")}} event uses this interface.
 
 ## Guides and tutorials
 
