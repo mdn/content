@@ -16,16 +16,16 @@ The **`type`** read-only property returns a the type of navigation.
 
 A {{domxref("DOMString","string")}} containing one of the following values:
 
-- `navigate`
+- `"navigate"`
   - : Navigation started by clicking a link, entering the URL in the browser's address
     bar, form submission, or initializing through a script operation other than reload and
     back_forward as listed below.
-- `reload`
+- `"reload"`
   - : Navigation is through the browser's reload operation or
     {{domxref("location.reload()")}}.
-- `back_forward`
+- `"back_forward"`
   - : Navigation is through the browser's history traversal operation.
-- `prerender`
+- `"prerender"`
   - : Navigation is initiated by a [prerender hint](https://www.w3.org/TR/resource-hints/#prerender).
 
 ## Example
