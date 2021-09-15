@@ -1760,7 +1760,6 @@
 /en-US/docs/DOM/ValidityState	/en-US/docs/Web/API/ValidityState
 /en-US/docs/DOM/WheelEvent	/en-US/docs/Web/API/WheelEvent
 /en-US/docs/DOM/Window.dispatchEvent	/en-US/docs/Web/API/EventTarget/dispatchEvent
-/en-US/docs/DOM/Window.routeEvent	/en-US/docs/Web/API/Window/routeEvent
 /en-US/docs/DOM/Worker	/en-US/docs/Web/API/Worker
 /en-US/docs/DOM/Worker/Functions_available_to_workers	/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 /en-US/docs/DOM/XMLHttpRequest	/en-US/docs/Web/API/XMLHttpRequest
@@ -3066,7 +3065,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/Using_the_Page_Visibility_API	/en-US/docs/Web/API/Page_Visibility_API
 /en-US/docs/Document_Object_Model_(DOM)/ValidityState	/en-US/docs/Web/API/ValidityState
 /en-US/docs/Document_Object_Model_(DOM)/Window.dispatchEvent	/en-US/docs/Web/API/EventTarget/dispatchEvent
-/en-US/docs/Document_Object_Model_(DOM)/Window.routeEvent	/en-US/docs/Web/API/Window/routeEvent
 /en-US/docs/Document_Object_Model_(DOM)/Worker	/en-US/docs/Web/API/Worker
 /en-US/docs/Document_Object_Model_(DOM)/Worker/Functions_available_to_workers	/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 /en-US/docs/Document_Object_Model_(DOM)/createEvent	/en-US/docs/Web/API/Document/createEvent
@@ -8844,7 +8842,6 @@
 /en-US/docs/Web/API/Window.dispatchEvent	/en-US/docs/Web/API/EventTarget/dispatchEvent
 /en-US/docs/Web/API/Window.localStorage	/en-US/docs/Web/API/Window/localStorage
 /en-US/docs/Web/API/Window.onlanguagechange	/en-US/docs/Web/API/WindowEventHandlers/onlanguagechange
-/en-US/docs/Web/API/Window.routeEvent	/en-US/docs/Web/API/Window/routeEvent
 /en-US/docs/Web/API/Window.sessionStorage	/en-US/docs/Web/API/Window/sessionStorage
 /en-US/docs/Web/API/Window/StaticRange	/en-US/docs/Web/API/StaticRange
 /en-US/docs/Web/API/Window/URL	/en-US/docs/Web/API/URL

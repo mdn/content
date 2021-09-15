@@ -280,8 +280,6 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Replaces the existing children of a document with a specified new set of children.
 - {{DOMxRef("Document.requestStorageAccess()")}}
   - : Returns a {{jsxref("Promise")}} that resolves if the access to first-party storage was granted, and rejects if access was denied.
-- {{DOMxRef("Document.routeEvent()")}} {{Non-standard_Inline}} {{deprecated_inline}}
-  - : See {{DOMxRef("Window.routeEvent()")}}.
 - {{DOMxRef("Document.mozSetImageElement()")}} {{Non-standard_Inline}}
   - : Allows you to change the element being used as the background image for a specified element ID.
 

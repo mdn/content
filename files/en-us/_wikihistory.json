@@ -90169,19 +90169,6 @@
       "louisremi"
     ]
   },
-  "Web/API/Window/routeEvent": {
-    "modified": "2020-10-15T21:14:51.519Z",
-    "contributors": [
-      "lucian95",
-      "Sheppy",
-      "fscholz",
-      "kosvrouvas",
-      "teoli",
-      "iamanupmenon",
-      "kohei.yoshino",
-      "Brettz9"
-    ]
-  },
   "Web/API/Window/screen": {
     "modified": "2020-10-15T21:14:35.689Z",
     "contributors": [
