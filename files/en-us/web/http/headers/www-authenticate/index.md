@@ -42,7 +42,7 @@ The client is expected to select the most secure of the challenges it understand
 ## Syntax
 
 At least one challenge must be specified.
-Multiple challenges may be specified commas-separated in a single header, or in individual headers:
+Multiple challenges may be specified, comma-separated, in a single header, or in individual headers:
 ```http
 // Challenges specified in single header
 WWW-Authenticate: challenge1, ..., challengeN
