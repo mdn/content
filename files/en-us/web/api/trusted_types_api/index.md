@@ -46,8 +46,6 @@ A policy is a factory for Trusted Types. Web developers can specify a set of pol
   - : Defines the functions used to create the above Trusted Type objects.
 - {{domxref("TrustedTypePolicyFactory")}}
   - : Creates policies and verifies that Trusted Type object instances were created via one of the policies.
-- {{domxref("TrustedTypePolicyOptions")}}
-  - : A dictionary that holds author-defined functions for converting string values into trusted values.
 
 ## Examples
 
