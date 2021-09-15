@@ -48,23 +48,23 @@ stylesheet.insertRule(rule [, index])
 
 The newly inserted rule's index within the stylesheet's rule-list.
 
-### Restrictions
+### Exceptions
 
 CSS has some intuitive and not-so-intuitive restrictions affecting where rules can be
-inserted. Violating them will likely raise a {{domxref("DOMException")}}.
+inserted. Violating them will raise an exception.
 
 - If `index` >
   `{{domxref("CSSRuleList", "", "", "1")}}.length`, the method aborts with an
-  `IndexSizeError`.
+  `IndexSizeError` {{domxref("DOMException")}}.
 - If `rule` cannot be inserted at `index` `0` due to
   some CSS constraint, the method aborts with a `HierarchyRequestError` {{domxref("DOMException")}}.
 - If more than one rule is given in the `rule` parameter, the method aborts
-  with a `SyntaxError`.
+  with a `SyntaxError`{{domxref("DOMException")}}.
 - If trying to insert an {{cssxref("@import")}} at-rule after a style rule, the method
   aborts with a `HierarchyRequestError`  {{domxref("DOMException")}}.
 - If `rule` is {{cssxref("@namespace")}} and the rule-list has more than
   just `@import` at-rules and/or `@namespace` at-rules, the method
-  aborts with an `InvalidStateError`.
+  aborts with an `InvalidStateError` {{domxref("DOMException")}}.
 
 ## Examples
 
