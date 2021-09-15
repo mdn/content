@@ -1,6 +1,6 @@
 ---
-title: Web Background Synchronization API
-slug: Web/API/Web_Background_Synchronization_API
+title: Background Synchronization API
+slug: Web/API/Background_Synchronization_API
 tags:
   - API
   - Background
@@ -16,9 +16,9 @@ tags:
 
 {{DefaultAPISidebar("Background Sync")}}
 
-The Web Background Synchronization API provides a way to defer tasks to be run in a {{domxref('Service Worker API','service worker')}} until the user has a stable network connection.
+The Background Synchronization API provides a way to defer tasks to be run in a {{domxref('Service Worker API','service worker')}} until the user has a stable network connection.
 
-## Web Background Synchronization Concepts and Usage</h2>
+## Background Synchronization Concepts and Usage
 
 The Background Sync API allows web applications to defer server synchronization work to their service worker to handle at a later time, if the device is offline. Uses may include sending requests in the background if they couldn't be sent while the application was being used.
 
@@ -28,12 +28,12 @@ The {{domxref('SyncManager')}} interface is available through {{domxref('Service
 
 As this API relies on service workers, functionality provided by this API is only available in a secure context.
 
-> **Note:** At the time of writing, the Web Background Synchronization API is only available through an installed [Progressive Web App](/en-US/docs/Web/Progressive_web_apps)
+> **Note:** At the time of writing, the Background Synchronization API is only available through an installed [Progressive Web App](/en-US/docs/Web/Progressive_web_apps)
 
-## Web Background Synchronization Interfaces
+## Background Synchronization Interfaces
 
 - {{domxref('SyncManager')}}
-  - : Registers tasks to be run in a service worker at a later time with network connectivity. These tasks are referred to as background sync requests.
+  - : Registers tasks to be run in a service worker at a later time with network connectivity. These tasks are referred to as _background sync requests_.
 - {{domxref('SyncEvent')}}
   - : Represents a synchronization event, sent to the {{domxref('ServiceWorkerGlobalScope', 'global scope')}} of a {{domxref('ServiceWorker')}}. It provides a way to run tasks in the service worker with network connectivity.
 
@@ -42,15 +42,15 @@ As this API relies on service workers, functionality provided by this API is onl
 The following additions to the {{domxref('Service Worker API')}} are specified in the Background Sync specification to provide an entry point for using Background Sync.
 
 - {{domxref("ServiceWorkerRegistration.sync")}} {{readonlyinline}}
-  - : Returns a reference to the {{domxref("SyncManager")}} interface for registering tasks to run at specific intervals.
+  - : Returns a reference to the {{domxref("SyncManager")}} interface for registering tasks to run with network connectivity.
 - {{domxref("ServiceWorkerGlobalScope.onsync")}}
-  - : An event handler fired whenever a {{Event("sync")}} event occurs. This happens at timed intervals, that are specified when registering a {{domxref('SyncManager')}}.
+  - : An event handler fired whenever a {{Event("sync")}} event occurs. This happens either immediately if the network is available or as soon as the network becomes available.
 
 ## Examples
 
 The following examples show how to use the interface.
 
-### Requesting a Background Sync
+### Requesting a background sync
 
 The following asynchronous function registers a background sync from a browsing context:
 
@@ -65,9 +65,9 @@ async function syncMessagesLater() {
 }
 ```
 
-### Verifying a Background Sync by Tag
+### Verifying a background sync by Tag
 
-This code checks to see if a Background Sync task with a given tag is registered.
+This code checks to see if a background sync task with a given tag is registered.
 
 ```js
 navigator.serviceWorker.ready.then(registration => {
@@ -78,7 +78,7 @@ navigator.serviceWorker.ready.then(registration => {
 });
 ```
 
-### Listening for a Background Sync within a Service Worker
+### Listening for a background sync within a Service Worker
 
 The following example shows how to respond to a background sync event in the service worker.
 
