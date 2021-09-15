@@ -47,8 +47,7 @@ foo.bar = {}; // TypeError: can't assign to property "bar" on "my string": not a
 
 ### Fixing the issue
 
-Either fix the code to prevent the [primitive](/en-US/docs/Glossary/Primitive) from being used in such places, or
-fix the issue is to create the object equivalent {{jsxref("Object")}}.
+Either fix the code to prevent the [primitive](/en-US/docs/Glossary/Primitive) from being used in such places, or fix the issue by creating the object equivalent {{jsxref("Object")}}.
 
 ```js example-good
 'use strict';
