@@ -15,6 +15,11 @@ The **`HTMLOptionElement`** interface represents {{HTMLElement("option")}} eleme
 
 {{InheritanceDiagram(600, 120)}}
 
+## Constructor
+
+- {{domxref("HTMLOptionElement.Option", "Option()")}}
+  - : Returns a newly created `HTMLOptionElement` object. It has four parameters: the text to display, `text`, the value associated, `value`, the value of `defaultSelected`, and the value of `selected`. The last three parameters are optional.
+
 ## Properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
@@ -38,10 +43,8 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 ## Methods
 
-_Inherits methods from its parent, {{domxref("HTMLElement")}}._
+_Doesn't implement any specific method, but inherits methods from its parent, {{domxref("HTMLElement")}}._
 
-- Option()
-  - : Is a constructor creating an `HTMLOptionElement` object. It has four values: the text to display, `text`, the value associated, `value`, the value of `defaultSelected`, and the value of `selected`. The last three values are optional.
 
 ## Specifications
 
