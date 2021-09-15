@@ -31,9 +31,8 @@ collection.add(item[, before]);
 
 ### Exceptions
 
-- A {{domxref("DOMError")}} of the type `HierarchyRequestError` if the
-  _item_ passed to the method is an ancestor of the
-  `{{domxref("HTMLSelectElement")}}`.
+- `HierarchyRequestError` {{DOMxRef("DOMException")}}
+  - : Thrown if the _item_ passed to the method is an ancestor of the`{{domxref("HTMLSelectElement")}}`.
 
 ## Examples
 

@@ -32,8 +32,8 @@ replaceChildren(...nodesOrDOMStrings)
 
 ### Exceptions
 
-- {{domxref("HierarchyRequestError")}}: The [constraints of the node
-  tree](https://dom.spec.whatwg.org/#concept-node-tree) are violated.
+- `HierarchyRequestError` {{DOMxRef("DOMException")}}
+  - : Thrown when the [constraints of the node tree](https://dom.spec.whatwg.org/#concept-node-tree) are violated.
 
 ## Examples
 
