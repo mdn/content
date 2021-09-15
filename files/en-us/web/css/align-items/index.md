@@ -232,7 +232,7 @@ display.addEventListener('change', function (evt) {
 
 ## Specifications
 
-{{Specifications}}
+{{Specifications("css.properties.align-items.grid_context")}}
 
 ## Browser compatibility
 

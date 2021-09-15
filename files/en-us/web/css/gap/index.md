@@ -177,7 +177,7 @@ This property is specified as a value for `<'row-gap'>` followed optionally by a
 
 ## Specifications
 
-{{Specifications}}
+{{Specifications("css.properties.gap.grid_context")}}
 
 ## Browser compatibility
 
@@ -186,4 +186,4 @@ This property is specified as a value for `<'row-gap'>` followed optionally by a
 ## See also
 
 - Related CSS properties: {{CSSxRef("row-gap")}}, {{CSSxRef("column-gap")}}
-- Grid Layout Guide: _[Basic concepts of grid layout - Gutters](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#Gutters)_
+- Grid Layout Guide: _[Basic concepts of grid layout - Gutters](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#gutters)_

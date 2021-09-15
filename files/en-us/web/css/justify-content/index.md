@@ -163,11 +163,11 @@ justifyContent.addEventListener("change", function (evt) {
 
 #### Result
 
-{{EmbedLiveSample("Setting_flex_item_distribution", "100%", 140)}}
+{{EmbedLiveSample("Setting_flex_item_distribution", "100%", 180)}}
 
 ## Specifications
 
-{{Specifications}}
+{{Specifications("css.properties.justify-content.grid_context")}}
 
 ## Browser compatibility
 
