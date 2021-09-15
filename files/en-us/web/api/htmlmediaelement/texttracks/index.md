@@ -15,7 +15,7 @@ tags:
   - textTracks
 browser-compat: api.HTMLMediaElement.textTracks
 ---
-{{APIRef("HTML DOM")}}{{draft}}
+{{APIRef("HTML DOM")}}
 
 The read-only **`textTracks`**
 property on {{DOMxRef("HTMLMediaElement")}} objects returns a
@@ -95,20 +95,6 @@ for (var i = 0, L = tracks.length; i < L; i++) { /* tracks.length == 10 */
 ```
 
 {{EmbedLiveSample("Examples", "100%", 150)}}
-
-## Properties & Methods
-
-### properties
-
-- length
-  - : Returns the number of text tracks in `TextTrackList` object.
-
-### methods
-
-- getTrackById()
-  - : The _`getTrackById(id)`_ method returns the first
-    `TextTrack` in the `TextTrackList` object that matches the id,
-    or null if there is no match.
 
 ## Specifications
 
