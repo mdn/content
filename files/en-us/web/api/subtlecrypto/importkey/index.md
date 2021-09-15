@@ -303,9 +303,6 @@ function importPrivateKey(pem) {
     binaryDer,
     {
       name: "RSA-PSS",
-      // Consider using a 4096-bit key for systems that require long-term security
-      modulusLength: 2048,
-      publicExponent: new Uint8Array([1, 0, 1]),
       hash: "SHA-256",
     },
     true,
