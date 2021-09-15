@@ -33,8 +33,7 @@ append(...nodesOrDOMStrings)
 ### Exceptions
 
 - `HierarchyRequestError` {{DOMxRef("DOMException")}}
-  - : Thrown when the node cannot be inserted at the specified point
-  in the hierarchy.
+  - : Thrown when the node cannot be inserted at the specified point in the hierarchy.
 
 ## Examples
 
