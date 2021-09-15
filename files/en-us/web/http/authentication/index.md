@@ -10,7 +10,8 @@ tags:
 ---
 {{HTTPSidebar}}
 
-HTTP provides a general framework for access control and authentication. This page is an introduction to the HTTP framework for authentication, and shows how to restrict access to your server using the HTTP "Basic" schema.
+HTTP provides a general framework for access control and authentication.
+This page is an introduction to the HTTP framework for authentication, and shows how to restrict access to your server using the HTTP "Basic" schema.
 
 ## The general HTTP authentication framework
 
@@ -28,7 +29,8 @@ In the case of a "Basic" authentication like shown in the figure, the exchange *
 
 ### Proxy authentication
 
-The same challenge and response mechanism can be used for _proxy authentication_. As both resource authentication and proxy authentication can coexist, a different set of headers and status codes is needed. In the case of proxies, the challenging status code is {{HTTPStatus("407")}} (Proxy Authentication Required), the {{HTTPHeader("Proxy-Authenticate")}} response header contains at least one challenge applicable to the proxy, and the {{HTTPHeader("Proxy-Authorization")}} request header is used for providing the credentials to the proxy server.
+The same challenge and response mechanism can be used for _proxy authentication_.
+As both resource authentication and proxy authentication can coexist, a different set of headers and status codes is needed. In the case of proxies, the challenging status code is {{HTTPStatus("407")}} (Proxy Authentication Required), the {{HTTPHeader("Proxy-Authenticate")}} response header contains at least one challenge applicable to the proxy, and the {{HTTPHeader("Proxy-Authorization")}} request header is used for providing the credentials to the proxy server.
 
 ### Access forbidden
 
@@ -40,7 +42,8 @@ In all cases, the server may prefer returning a {{HTTPStatus("404")}} `Not Found
 
 ### Authentication of cross-origin images
 
-A potential security hole recently been fixed by browsers is authentication of cross-site images. From [Firefox 59](/en-US/docs/Mozilla/Firefox/Releases/59) onwards, image resources loaded from different origins to the current document are no longer able to trigger HTTP authentication dialogs ({{bug(1423146)}}), preventing user credentials being stolen if attackers were able to embed an arbitrary image into a third-party page.
+A potential security hole (that has since been fixed in browsers) was authentication of cross-site images.
+From [Firefox 59](/en-US/docs/Mozilla/Firefox/Releases/59) onwards, image resources loaded from different origins to the current document are no longer able to trigger HTTP authentication dialogs ({{bug(1423146)}}), preventing user credentials being stolen if attackers were able to embed an arbitrary image into a third-party page.
 
 ### Character encoding of HTTP authentication
 
@@ -54,7 +57,7 @@ The {{HTTPHeader("WWW-Authenticate")}} and {{HTTPHeader("Proxy-Authenticate")}} 
 
 The syntax for these headers is the following:
 
-```
+```http
 WWW-Authenticate: <type> realm=<realm>
 Proxy-Authenticate: <type> realm=<realm>
 ```
@@ -65,23 +68,27 @@ Here, `<type>` is the authentication scheme ("Basic" is the most common scheme a
 
 The {{HTTPHeader("Authorization")}} and {{HTTPHeader("Proxy-Authorization")}} request headers contain the credentials to authenticate a user agent with a (proxy) server. Here, the `<type>` is needed again followed by the credentials, which can be encoded or encrypted depending on which authentication scheme is used.
 
-```
+```http
 Authorization: <type> <credentials>
 Proxy-Authorization: <type> <credentials>
 ```
 
 ### Authentication schemes
 
-The general HTTP authentication framework is used by several authentication schemes. Schemes can differ in security strength and in their availability in client or server software.
+The general HTTP authentication framework is used by several authentication schemes.
+Schemes can differ in security strength and in their availability in client or server software.
 
-The most common authentication scheme is the "Basic" authentication scheme, which is introduced in more detail below. IANA maintains a [list of authentication schemes](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml), but there are other schemes offered by host services, such as Amazon AWS. Common authentication schemes include:
+The most common authentication scheme is the "Basic" authentication scheme, which is introduced in more detail below.
+IANA maintains a [list of authentication schemes](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml), but there are other schemes offered by host services, such as Amazon AWS.
+
+Common authentication schemes include:
 
 - **Basic**
   - : See {{rfc(7617)}}, base64-encoded credentials. More information below.
 - **Bearer**
   - : See {{rfc(6750)}}, bearer tokens to access OAuth 2.0-protected resources
 - **Digest**
-  - : See {{rfc(7616)}}, only md5 hashing is supported in Firefox, see {{bug(472823)}} for SHA encryption support
+  - : See {{rfc(7616)}}. Firefox 93 and later support SHA-256 encryption. Previous versions only support MD5 hashing (not recommended).
 - **HOBA**
   - : See {{rfc(7486)}}, Section 3, **H**TTP **O**rigin-**B**ound **A**uthentication, digital-signature-based
 - **Mutual**
@@ -119,7 +126,8 @@ user2:$apr1$O04r.y2H$/vEkesPhVInBByJUkXitA/
 
 ### Restricting access with nginx and basic authentication
 
-For nginx, you will need to specify a location that you are going to protect and the `auth_basic` directive that provides the name to the password-protected area. The `auth_basic_user_file` directive then points to a `.htpasswd` file containing the encrypted user credentials, just like in the Apache example above.
+For nginx, you will need to specify a location that you are going to protect and the `auth_basic` directive that provides the name to the password-protected area.
+The `auth_basic_user_file` directive then points to a `.htpasswd` file containing the encrypted user credentials, just like in the Apache example above.
 
 ```
 location /status {
@@ -136,7 +144,8 @@ Many clients also let you avoid the login prompt by using an encoded URL contain
 https://username:password@www.example.com/
 ```
 
-**The use of these URLs is deprecated**. In Chrome, the `username:password@` part in URLs is even [stripped out](https://bugs.chromium.org/p/chromium/issues/detail?id=82250#c7) for security reasons. In Firefox, it is checked if the site actually requires authentication and if not, Firefox will warn the user with a prompt "You are about to log in to the site “www\.example.com” with the username “username”, but the website does not require authentication. This may be an attempt to trick you."
+**The use of these URLs is deprecated**.
+In Chrome, the `username:password@` part in URLs is even [stripped out](https://bugs.chromium.org/p/chromium/issues/detail?id=82250#c7) for security reasons. In Firefox, it is checked if the site actually requires authentication and if not, Firefox will warn the user with a prompt "You are about to log in to the site “www\.example.com” with the username “username”, but the website does not require authentication. This may be an attempt to trick you."
 
 ## See also
 
