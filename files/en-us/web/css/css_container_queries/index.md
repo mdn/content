@@ -33,19 +33,21 @@ It is this situation that container queries would solve. Instead of looking at t
 
 The container queries specification is to become part of {{cssxref("CSS_Containment", "CSS Containment")}}, and add new values to the {{cssxref("contain")}} property. The `contain` property was initially designed to allow for performance optimizations. It provides a way for web developers to isolate parts of the DOM and declare to the browser these are independent from the rest of the document.
 
-Using `contain: size` indicates to the browser that the size of this area is known in both dimensions. A container that knows how big it is, is exactly what we need for container queries!
+For container queries, the `container-type` property describes the possible query types which can be used on a container. When `container-type` is defined on a parent container, the `@container` query can be used to apply conditional style rules to its descendants.
 
-However, we don't often know how big things are in both dimensions. When we use media queries, most of the time we care about the available width (or inline size). We define columns as a percentage or fraction of the space in that dimension. Therefore, container queries extend the contain property by allowing size to be indicated in one dimension only. This is described as single-axis containment.
+Using `container-type: size` indicates to the browser that the size of this area is known in both dimensions. A container that knows how big it is, is exactly what we need for container queries!
+
+However, we don't often know how big things are in both dimensions. When we use media queries, most of the time we care about the available width (or inline size). We define columns as a percentage or fraction of the space in that dimension. Therefore, container queries use the `container-type` property to allow size to be indicated in one dimension only. This is described as single-axis containment.
 
 The following CSS creates a container with containment on the inline axis only. The content can grow to as large as it needs to be on the block axis.
 
 ```css
 .sidebar {
-  contain: layout inline-size;
+  container-type: inline-size;
 }
 ```
 
-Adding the contain property with layout and a size value creates a **containment context** on that element. This means that the browser knows we might want to query this container later. You can then write a query which looks to this containment context rather than the viewport size, in order to make layout decisions for a component.
+Adding the `container-type` property with a size value creates a **containment context** on that element. This means that the browser knows we might want to query this container later. You can then write a query which looks to this containment context rather than the viewport size, in order to make layout decisions for a component.
 
 A container query is created using `@container`. This will query the nearest containment context. To cause the card to display as two columns only if the sidebar is wider than 700px, we use the following CSS:
 
@@ -60,7 +62,7 @@ A container query is created using `@container`. This will query the nearest con
 
 If other areas of the layout are also containment contexts then we can drop the component into those areas and it will respond to the relevant containment context. This makes the various components that we might create in our pattern library truly reusable, without us needing to know the context that they are in.
 
-There are many things to be worked out, however this is the basic concept. The basic features as shown here can already be tested out in Chrome Canary. [Download Canary](https://www.google.com/intl/en_uk/chrome/canary/), then go to <kbd>chrome://flags</kbd>, search for Container Queries and enable that flag.
+There are many things to be worked out, however this is the basic concept. The basic features as shown here can already be tested out in Chrome. Go to <kbd>chrome://flags</kbd>, search for Container Queries and enable that flag.
 
 You can then take a look at [my demo](https://codepen.io/rachelandrew/pen/NWdaxde) showing the above scenario, or [this growing collection of container queries demos](https://codepen.io/collection/XQrgJo).
 
