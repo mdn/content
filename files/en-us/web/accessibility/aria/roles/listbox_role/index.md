@@ -7,6 +7,7 @@ tags:
   - Accessibility
   - Reference
   - listbox role
+  - composite widget role
   - NeedsContent
 ---
 The `listbox` role is used for lists from which a user may select one or more items which are static and, unlike HTML {{HTMLElement('select')}} elements, may contain images.

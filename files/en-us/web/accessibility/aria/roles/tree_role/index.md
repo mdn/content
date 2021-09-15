@@ -9,6 +9,7 @@ tags:
   - Reference
   - ARIA roles
   - Tree role
+  - composite widget role
   - NeedsContent
 ---
 

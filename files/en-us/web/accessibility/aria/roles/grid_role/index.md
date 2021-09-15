@@ -9,6 +9,7 @@ tags:
   - Reference
   - ARIA roles
   - grid role
+  - composite widget role
   - NeedsContent
 ---
 The grid role is for a widget that contains one or more rows of cells. The position of each cell is significant and can be focused using keyboard input.
@@ -74,7 +75,7 @@ If the grid is used as an interactive widget, [keyboard](#keyboard-use) interac
 - [aria-readonly](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-readonly_attribute)
   - : If the user can navigate the grid but not change the value or values of the grid, the `aria-readonly` should be set to `true`. The default value is `false`.
 
-<div class="note"><p>For many use cases, an HTML <a href="/en-US/docs/Web/HTML/Element/table">table</a> element is sufficient as it and its elements already include many ARIA roles.</p></div>
+> **Note:** For many use cases, an HTML {{HTMLElement(table)}} element is sufficient as it and the various table elements already include many ARIA roles.
 
 ### Keyboard interactions
 

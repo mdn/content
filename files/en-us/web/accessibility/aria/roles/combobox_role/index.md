@@ -8,6 +8,7 @@ tags:
   - roles
   - Reference
   - ARIA roles
+  - composite widget role
   - NeedsContent
 ---
 
