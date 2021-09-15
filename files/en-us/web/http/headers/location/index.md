@@ -19,7 +19,7 @@ pointed to by `Location` depends of the original method and of the kind of
 redirection:
 
 - {{HTTPStatus("303")}} (See Also) responses always lead to the use of a
-  {{HTTPMethod("GET")}} method
+  {{HTTPMethod("GET")}} method.
 - {{HTTPStatus("307")}} (Temporary Redirect) and
   {{HTTPStatus("308")}} (Permanent Redirect) don't change the method used in the
   original request
