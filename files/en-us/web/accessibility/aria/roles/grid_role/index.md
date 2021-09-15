@@ -4,6 +4,12 @@ slug: Web/Accessibility/ARIA/Roles/Grid_Role
 tags:
   - ARIA
   - HTML
+  - Accessibility
+  - roles
+  - Reference
+  - ARIA roles
+  - grid role
+  - NeedsContent
 ---
 The grid role is for a widget that contains one or more rows of cells. The position of each cell is significant and can be focused using keyboard input.
 
