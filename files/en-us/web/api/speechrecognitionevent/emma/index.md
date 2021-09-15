@@ -40,9 +40,9 @@ the user agent will return `null`.
 
 ```js
 recognition.onresult = function(event) {
-  var color = event.results[0][0].transcript;
-  diagnostic.textContent = 'Result received: ' + color + '.';
-  bg.style.backgroundColor = color;
+  var color = event.results[0][0].transcript;
+  diagnostic.textContent = 'Result received: ' + color + '.';
+  bg.style.backgroundColor = color;
   console.log(event.emma);
 }
 ```
@@ -50,28 +50,6 @@ recognition.onresult = function(event) {
 ## Browser compatibility
 
 {{Compat}}
-
-### Firefox OS permissions
-
-To use speech recognition in an app, you need to specify the following permissions in
-your [manifest](/en-US/docs/Web/Apps/Build/Manifest):
-
-```json
-"permissions": {
-  "audio-capture" : {
-    "description" : "Audio capture"
-  },
-  "speech-recognition" : {
-    "description" : "Speech recognition"
-  }
-}
-```
-
-You also need a privileged app, so you need to include this as well:
-
-```json
-  "type": "privileged"
-```
 
 ## See also
 

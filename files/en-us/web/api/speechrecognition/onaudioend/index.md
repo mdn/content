@@ -48,5 +48,4 @@ recognition.onaudioend = function() {
 ## See also
 
 - [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)
-- [`audioend`
-  event](/en-US/docs/Web/API/SpeechRecognition/audioend_event)
+- [`audioend` event](/en-US/docs/Web/API/SpeechRecognition/audioend_event)

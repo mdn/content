@@ -32,7 +32,7 @@ mySpeechRecognition.onspeechstart = function() { ... };
 
 ```js
 recognition.onspeechstart = function() {
-  console.log('Speech has been detected');
+  console.log('Speech has been detected');
 }
 ```
 

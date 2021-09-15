@@ -32,7 +32,7 @@ mySpeechRecognition.onspeechend = function() { ... };
 
 ```js
 recognition.onspeechend = function() {
-  console.log('Speech has stopped being detected');
+  console.log('Speech has stopped being detected');
 }
 ```
 
