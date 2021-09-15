@@ -48,7 +48,7 @@ You can use the `result` event in an [`addEventListener`](/en-US/docs/Web/API/Ev
 var recognition = new webkitSpeechRecognition() || new SpeechRecognition();
 
 recognition.addEventListener('result', function(event) {
-  var color = event.results[0][0].transcript;
+  var color = event.results[0][0].transcript;
   diagnostic.textContent = 'Result received: ' + color + '.';
   bg.style.backgroundColor = color;
 });
@@ -58,9 +58,9 @@ Or use the [`onresult`](/en-US/docs/Web/API/SpeechRecognition/onresult) event ha
 
 ```js
 recognition.onresult = function(event) {
-  var color = event.results[0][0].transcript;
-  diagnostic.textContent = 'Result received: ' + color + '.';
-  bg.style.backgroundColor = color;
+  var color = event.results[0][0].transcript;
+  diagnostic.textContent = 'Result received: ' + color + '.';
+  bg.style.backgroundColor = color;
 }
 ```
 

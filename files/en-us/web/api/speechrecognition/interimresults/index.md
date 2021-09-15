@@ -20,8 +20,7 @@ returned (`true`) or not (`false`.) Interim results are results
 that are not yet final (e.g. the {{domxref("SpeechRecognitionResult.isFinal")}} property
 is `false`.)
 
-The default value for **`interimResults`** is
-`false`.
+The default value for **`interimResults`** is `false`.
 
 ## Syntax
 
@@ -62,28 +61,6 @@ recognition.maxAlternatives = 1;
 ## Browser compatibility
 
 {{Compat}}
-
-### Firefox OS permissions
-
-To use speech recognition in an app, you need to specify the following permissions in
-your [manifest](/en-US/docs/Web/Apps/Build/Manifest):
-
-```json
-"permissions": {
-  "audio-capture" : {
-    "description" : "Audio capture"
-  },
-  "speech-recognition" : {
-    "description" : "Speech recognition"
-  }
-}
-```
-
-You also need a privileged app, so you need to include this as well:
-
-```json
-  "type": "privileged"
-```
 
 ## See also
 

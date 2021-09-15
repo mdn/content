@@ -31,7 +31,7 @@ mySpeechRecognition.onstart = function() { ... };
 
 ```js
 recognition.onstart = function() {
-  console.log('Speech recognition service has started');
+  console.log('Speech recognition service has started');
 }
 ```
 

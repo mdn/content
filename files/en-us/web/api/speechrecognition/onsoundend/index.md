@@ -31,7 +31,7 @@ mySpeechRecognition.onsoundend = function() { ... };
 
 ```js
 recognition.onsoundend = function() {
-  console.log('Sound has stopped being received');
+  console.log('Sound has stopped being received');
 }
 ```
 

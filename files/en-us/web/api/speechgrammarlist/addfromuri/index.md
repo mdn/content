@@ -64,28 +64,6 @@ speechRecognitionList.addFromURI('http://www.example.com/grammar.txt'); // adds 
 
 {{Compat}}
 
-### Firefox OS permissions
-
-To use speech recognition in an app, you need to specify the following permissions in
-your [manifest](/en-US/docs/Web/Apps/Build/Manifest):
-
-```json
-"permissions": {
-  "audio-capture" : {
-    "description" : "Audio capture"
-  },
-  "speech-recognition" : {
-    "description" : "Speech recognition"
-  }
-}
-```
-
-You also need a privileged app, so you need to include this as well:
-
-```json
-  "type": "privileged"
-```
-
 ## See also
 
 - [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)

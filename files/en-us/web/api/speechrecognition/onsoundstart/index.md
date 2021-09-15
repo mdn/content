@@ -30,7 +30,7 @@ mySpeechRecognition.onsoundstart = function() { ... };
 
 ```js
 recognition.onsoundstart = function() {
-  console.log('Some sound is being received');
+  console.log('Some sound is being received');
 }
 ```
 
