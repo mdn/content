@@ -16,7 +16,7 @@ The HTTP **`WWW-Authenticate`** response header defines the [HTTP authentication
 > **Note:** This header is part of the [General HTTP authentication framework](/en-US/docs/Web/HTTP/Authentication#the_general_http_authentication_framework), which can be used with a number of [authentication schemes](/en-US/docs/Web/HTTP/Authentication#authentication_schemes) .
 > Each "challenge" lists a scheme supported by the server and additional parameters that are defined for that scheme type. 
 
-A server using [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) will respond with {{HTTPStatus("401")}} `Unauthorized` response to a request for a protected resource.
+A server using [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) will respond with a {{HTTPStatus("401")}} `Unauthorized` response to a request for a protected resource.
 This response must include at least one `WWW-Authenticate` header and at least one {{Glossary("challenge")}}, to indicate what authentication schemes can be used to access the resource (and any additional data that each particular scheme needs).
 
 Multiple challenges are allowed in the one `WWW-Authenticate` header, and multiple `WWW-Authenticate` headers are allowed in the one response.
