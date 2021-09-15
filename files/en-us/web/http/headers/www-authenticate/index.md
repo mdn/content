@@ -22,7 +22,7 @@ This response must include at least one `WWW-Authenticate` header and at least o
 Multiple challenges are allowed in one `WWW-Authenticate` header, and multiple `WWW-Authenticate` headers are allowed in one response.
 A server may also include the `WWW-Authenticate` header in other response messages to indicate that supplying credentials might affect the response.
 
-After recieving `WWW-Authenticate` a client will typically prompt the user for credentials, and then re-request the resource.
+After receiving the `WWW-Authenticate` header, a client will typically prompt the user for credentials, and then re-request the resource.
 This request uses the {{HTTPHeader("Authorization")}} header to supply the credentials to the server, encoded appropriately for the selected "challenge" authentication method.
 The client is expected to select the most secure of the challenges it understands (note that in some cases the "most secure" method is debatable).
 
