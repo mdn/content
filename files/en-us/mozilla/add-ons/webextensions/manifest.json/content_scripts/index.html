@@ -90,17 +90,17 @@ browser-compat: webextensions.manifest.content_scripts
   <tr>
    <td><a id="exclude_globs"><code>exclude_globs</code></a></td>
    <td><code>Array</code></td>
-   <td>An array of strings containing wildcards. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts#matching_url_patterns">Matching URL patterns</a> below.</td>
+   <td>An array of strings containing wildcards. See <a href="#matching_url_patterns">Matching URL patterns</a> below.</td>
   </tr>
   <tr>
    <td><a id="exclude_matches"><code>exclude_matches</code></a></td>
    <td><code>Array</code></td>
-   <td>An array of <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match patterns</a>. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts#matching_url_patterns">Matching URL patterns</a> below.</td>
+   <td>An array of <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match patterns</a>. See <a href="#matching_url_patterns">Matching URL patterns</a> below.</td>
   </tr>
   <tr>
    <td><a id="include_globs"><code>include_globs</code></a></td>
    <td><code>Array</code></td>
-   <td>An array of strings containing wildcards. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts#matching_url_patterns">Matching URL patterns</a> below.</td>
+   <td>An array of strings containing wildcards. See <a href="#matching_url_patterns">Matching URL patterns</a> below.</td>
   </tr>
   <tr>
    <td><a id="js"><code>js</code></a></td>
@@ -122,7 +122,7 @@ browser-compat: webextensions.manifest.content_scripts
    <td><code><a id="match_about_blank">match_about_blank</a></code></td>
    <td><code>Boolean</code></td>
    <td>
-    <p>Insert the content scripts into pages whose URL is <code>"about:blank"</code> or <code>"about:srcdoc"</code>, if the URL of the page that opened or created this page <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts#matching_url_patterns">matches the patterns</a> specified in the rest of the <code>content_scripts</code> key.</p>
+    <p>Insert the content scripts into pages whose URL is <code>"about:blank"</code> or <code>"about:srcdoc"</code>, if the URL of the page that opened or created this page <a href="#matching_url_patterns">matches the patterns</a> specified in the rest of the <code>content_scripts</code> key.</p>
 
     <p>This is especially useful to run scripts in empty iframes , whose URL is <code>"about:blank"</code>. To do this you should also set the <code>all_frames</code> key.</p>
 
@@ -143,7 +143,7 @@ browser-compat: webextensions.manifest.content_scripts
     <div class="notecard note">
     <p><strong>Note: </strong><code>match_about_blank</code> is supported in Firefox from version 52. </p>
 
-    <p>Note that in Firefox, content scripts won't be injected into empty iframes at <code>"document_start"</code>, even if you specify that value in <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts#run_at">run_at</a></code> .</p>
+    <p>Note that in Firefox, content scripts won't be injected into empty iframes at <code>"document_start"</code>, even if you specify that value in <code><a href="#run_at">run_at</a></code> .</p>
     </div>
    </td>
   </tr>
@@ -151,7 +151,7 @@ browser-compat: webextensions.manifest.content_scripts
    <td><a id="matches"><code>matches</code></a></td>
    <td><code>Array</code></td>
    <td>
-    <p>An array of <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match patterns</a>. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts#matching_url_patterns">Matching URL patterns</a> below.</p>
+    <p>An array of <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match patterns</a>. See <a href="#matching_url_patterns">Matching URL patterns</a> below.</p>
 
     <p>This is the only mandatory key.</p>
    </td>
