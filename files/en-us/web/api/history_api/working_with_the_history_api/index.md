@@ -58,8 +58,6 @@ But `pushState()` has a few advantages:
 
 Note that `pushState()` never causes a `hashchange` event to be fired, even if the new URL differs from the old URL only in its hash.
 
-In a [XUL](/en-US/docs/Mozilla/Tech/XUL) document, it creates the specified XUL element.
-
 In other documents, it creates an element with a `null` namespace URI.
 
 ### The replaceState() method
