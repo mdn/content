@@ -57,5 +57,3 @@ for(let i = 0; i < sel.rangeCount; i++) {
 ## See also
 
 - {{domxref("Selection")}}, the interface it belongs to.
-- [Tree Selection](/en-US/docs/XUL_Tutorial/Tree_Selection) (for the
-  `getRangeAt()` method on the `nsITreeSelection` interface)
