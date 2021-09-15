@@ -56,6 +56,9 @@ This interface inherits from the {{domxref("WorkerGlobalScope")}} interface, and
 - `notificationclose`
   - : Occurs — when a user closes a displayed notification.
     Also available via the {{domxref("ServiceWorkerGlobalScope.onnotificationclose")}} property.
+- {{domxref("ServiceWorkerGlobalScope/sync_event", "sync")}}
+  - : Triggered when a call to {{domxref("SyncManager.register")}} is made from a service worker client page. The attempt to sync is made either immediately if the network is available or as soon as the network becomes available.
+    Also available via the {{domxref("ServiceWorkerGlobalScope.onsync")}} property.
 - {{domxref("ServiceWorkerGlobalScope/periodicsync_event", "periodicsync")}}
   - : Occurs at periodic intervals, which were specified when registering a {{domxref("PeriodicSyncManager")}}.
     Also available via the {{domxref("ServiceWorkerGlobalScope.onperiodicsync")}} property.
@@ -65,9 +68,6 @@ This interface inherits from the {{domxref("WorkerGlobalScope")}} interface, and
 - {{domxref("ServiceWorkerGlobalScope/pushsubscriptionchange_event", "pushsubscriptionchange")}}
   - : Occurs when a push subscription has been invalidated, or is about to be invalidated (e.g. when a push service sets an expiration time).
     Also available via the {{domxref("ServiceWorkerGlobalScope.onpushsubscriptionchange")}} property.
-- `sync`
-  - : Triggered when a call to {{domxref("SyncManager.register")}} is made from a service worker client page. The attempt to sync is made either immediately if the network is available or as soon as the network becomes available.
-    Also available via the {{domxref("ServiceWorkerGlobalScope.onsync")}} property.
 
 ## Methods
 
