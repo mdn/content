@@ -18,13 +18,14 @@ In cases of redirection, the HTTP method used to make the new request to fetch t
 pointed to by `Location` depends of the original method and of the kind of
 redirection:
 
-- If {{HTTPStatus("303")}} (See Also) responses always lead to the use of a
-  {{HTTPMethod("GET")}} method, {{HTTPStatus("307")}} (Temporary Redirect) and
+- {{HTTPStatus("303")}} (See Also) responses always lead to the use of a
+  {{HTTPMethod("GET")}} method
+- {{HTTPStatus("307")}} (Temporary Redirect) and
   {{HTTPStatus("308")}} (Permanent Redirect) don't change the method used in the
-  original request;
+  original request
 - {{HTTPStatus("301")}} (Moved Permanently) and {{HTTPStatus("302")}} (Found) doesn't
   change the method most of the time, though older user-agents may (so you basically
-  don't know).
+  don't know)
 
 All responses with one of these status codes send a `Location` header.
 
