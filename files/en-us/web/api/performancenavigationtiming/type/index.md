@@ -14,7 +14,7 @@ The **`type`** read-only property returns a the type of navigation.
 
 ## Value
 
-The value is one of the following strings:
+A {{domxref("DOMString","string")}} containing one of the following values:
 
 - `navigate`
   - : Navigation started by clicking a link, entering the URL in the browser's address
