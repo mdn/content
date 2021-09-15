@@ -23,7 +23,7 @@ redirection:
 - {{HTTPStatus("307")}} (Temporary Redirect) and
   {{HTTPStatus("308")}} (Permanent Redirect) don't change the method used in the
   original request
-- {{HTTPStatus("301")}} (Moved Permanently) and {{HTTPStatus("302")}} (Found) doesn't
+- {{HTTPStatus("301")}} (Moved Permanently) and {{HTTPStatus("302")}} (Found) don't
   change the method most of the time, though older user-agents may (so you basically
   don't know)
 
