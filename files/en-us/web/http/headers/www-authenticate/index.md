@@ -100,7 +100,7 @@ For others you may need to check the specifications:
   - : As above.
 - **`charset="UTF-8"`** {{optional_inline}}
   - : Tells the client the server's preferred encoding scheme when submitting a username and password.
-      The only allowed value is the case insensitive string "UTF-8".
+      The only allowed value is the case-insensitive string "UTF-8".
       This does not relate to the encoding of the realm string.
 
 ## Examples
