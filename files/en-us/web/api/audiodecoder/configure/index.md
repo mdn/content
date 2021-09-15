@@ -11,7 +11,7 @@ browser-compat: api.AudioDecoder.configure
 ---
 {{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
 
-The **`configure`** method of the {{domxref("AudioDecoder")}} interface enqueues a control message to configure the audio decoder for decoding chunks.
+The **`configure()`** method of the {{domxref("AudioDecoder")}} interface enqueues a control message to configure the audio decoder for decoding chunks.
 
 ## Syntax
 
@@ -36,7 +36,7 @@ AudioDecoder.configure(config)
 
 ### Return Value
 
-Undefined.
+{{jsxref("Undefined")}}.
 
 ### Exceptions
 

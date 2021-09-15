@@ -11,7 +11,7 @@ browser-compat: api.AudioDecoder.flush
 ---
 {{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
 
-The **`flush`** method of the {{domxref("AudioDecoder")}} interface returns a promise that resolves once all pending messages in the queue have been completed.
+The **`flush()`** method of the {{domxref("AudioDecoder")}} interface returns a Promise that resolves once all pending messages in the queue have been completed.
 
 ## Syntax
 
@@ -25,12 +25,12 @@ None.
 
 ### Return Value
 
-A {{jsxref("Promise")}} that resolved with undefined.
+A {{jsxref("Promise")}} that resolves with undefined.
 
 ### Exceptions
 
 - {{domxref("DOMException")}} `InvalidStateError`
-  - : A rejected promise returned if the {{domxref("AudioDecoder.state","state")}} is not `"configured"`.
+  - : The Promise rejected because the {{domxref("AudioDecoder.state","state")}} is not `"configured"`.
 
 ## Examples
 

@@ -11,7 +11,7 @@ browser-compat: api.AudioDecoder.decode
 ---
 {{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
 
-The **`decode`** method of the {{domxref("AudioDecoder")}} interface enqueues a control message to decode a given chunk of audio.
+The **`decode()`** method of the {{domxref("AudioDecoder")}} interface enqueues a control message to decode a given chunk of audio.
 
 ## Syntax
 
@@ -26,7 +26,7 @@ AudioDecoder.decode(chunk)
 
 ### Return Value
 
-Undefined.
+{{jsxref("Undefined")}}.
 
 ### Exceptions
 

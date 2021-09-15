@@ -33,7 +33,7 @@ The **`AudioDecoder`** interface of the {{domxref('WebCodecs API','','',' ')}} d
 - {{domxref("AudioDecoder.flush()")}}
   - : Returns a promise that resolves once all pending messages in the queue have been completed.
 - {{domxref("AudioDecoder.reset()")}}
-  - : Resets all state including configuration, control messages in the control message queue, and all pending callbacks.
+  - : Resets all states including configuration, control messages in the control message queue, and all pending callbacks.
 - {{domxref("AudioDecoder.close()")}}
   - : Ends all pending work and releases system resources.
 
