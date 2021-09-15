@@ -45488,77 +45488,6 @@
       "sicking"
     ]
   },
-  "Web/API/File/fileName": {
-    "modified": "2019-03-24T00:01:38.261Z",
-    "contributors": [
-      "mfluehr",
-      "Jedipedia",
-      "teoli",
-      "tomleo",
-      "Jeremie",
-      "iamanupmenon",
-      "Sheppy",
-      "ethertank",
-      "Crash"
-    ]
-  },
-  "Web/API/File/fileSize": {
-    "modified": "2019-07-29T13:31:46.998Z",
-    "contributors": [
-      "bershanskiy",
-      "mfluehr",
-      "Jedipedia",
-      "teoli",
-      "Jeremie",
-      "iamanupmenon",
-      "Sheppy",
-      "ethertank",
-      "Crash"
-    ]
-  },
-  "Web/API/File/getAsBinary": {
-    "modified": "2019-03-24T00:16:06.711Z",
-    "contributors": [
-      "Jedipedia",
-      "simontheteemo",
-      "RubtsovAV",
-      "teoli",
-      "Jeremie",
-      "kscarfone",
-      "Sheppy",
-      "ethertank",
-      "ajsb85",
-      "ziyunfei",
-      "Crash"
-    ]
-  },
-  "Web/API/File/getAsDataURL": {
-    "modified": "2019-11-16T11:29:32.403Z",
-    "contributors": [
-      "mfuji09",
-      "bershanskiy",
-      "Jedipedia",
-      "teoli",
-      "Jeremie",
-      "iamanupmenon",
-      "Sheppy",
-      "Crash"
-    ]
-  },
-  "Web/API/File/getAsText": {
-    "modified": "2019-11-18T12:04:54.306Z",
-    "contributors": [
-      "mfuji09",
-      "maar-ten",
-      "Jedipedia",
-      "teoli",
-      "ianwsperber",
-      "Jeremie",
-      "iamanupmenon",
-      "Sheppy",
-      "Crash"
-    ]
-  },
   "Web/API/File/lastModified": {
     "modified": "2020-10-15T21:56:03.263Z",
     "contributors": [
@@ -57579,85 +57508,6 @@
       "chrisdavidmills",
       "Sebastianz",
       "kscarfone"
-    ]
-  },
-  "Web/API/InstallTrigger": {
-    "modified": "2019-03-24T00:00:03.285Z",
-    "contributors": [
-      "mattstrick",
-      "tocretpa",
-      "Sheppy",
-      "trevorh",
-      "Daniel Veditz",
-      "Fredchat",
-      "Mgjbot",
-      "Rod Whiteley"
-    ]
-  },
-  "Web/API/InstallTrigger/compareVersion": {
-    "modified": "2019-03-24T00:00:01.687Z",
-    "contributors": [
-      "wbamberg",
-      "Sheppy",
-      "trevorh",
-      "Daniel Veditz",
-      "Fredchat",
-      "Rod Whiteley"
-    ]
-  },
-  "Web/API/InstallTrigger/enabled": {
-    "modified": "2019-03-23T23:45:31.374Z",
-    "contributors": [
-      "Sheppy",
-      "ethertank",
-      "trevorh",
-      "Fredchat",
-      "Callek",
-      "MozillAisawesome",
-      "Rod Whiteley"
-    ]
-  },
-  "Web/API/InstallTrigger/getVersion": {
-    "modified": "2019-03-23T23:59:59.963Z",
-    "contributors": [
-      "wbamberg",
-      "Sheppy",
-      "trevorh",
-      "Daniel Veditz",
-      "Fredchat",
-      "Rod Whiteley"
-    ]
-  },
-  "Web/API/InstallTrigger/install": {
-    "modified": "2019-03-23T23:58:02.610Z",
-    "contributors": [
-      "Sheppy",
-      "kmaglione",
-      "ethertank",
-      "Wladimir_Palant",
-      "LJR",
-      "Mossop",
-      "Fredchat",
-      "Rod Whiteley"
-    ]
-  },
-  "Web/API/InstallTrigger/installChrome": {
-    "modified": "2019-03-23T23:45:31.116Z",
-    "contributors": [
-      "Sheppy",
-      "trevorh",
-      "Fredchat",
-      "Rod Whiteley"
-    ]
-  },
-  "Web/API/InstallTrigger/startSoftwareUpdate": {
-    "modified": "2019-03-23T23:45:30.859Z",
-    "contributors": [
-      "Sheppy",
-      "ethertank",
-      "trevorh",
-      "Fredchat",
-      "Rod Whiteley"
     ]
   },
   "Web/API/IntersectionObserver": {
@@ -90317,19 +90167,6 @@
       "Sheppy",
       "ethertank",
       "louisremi"
-    ]
-  },
-  "Web/API/Window/routeEvent": {
-    "modified": "2020-10-15T21:14:51.519Z",
-    "contributors": [
-      "lucian95",
-      "Sheppy",
-      "fscholz",
-      "kosvrouvas",
-      "teoli",
-      "iamanupmenon",
-      "kohei.yoshino",
-      "Brettz9"
     ]
   },
   "Web/API/Window/screen": {

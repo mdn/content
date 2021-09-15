@@ -38,6 +38,13 @@ tags:
   <li>{{jsxref("Object.hasOwn()")}} can be used to test whether a property was defined on an object or inherited ({{bug(1721149)}}).</li>
 </ul>
 
+<h3 id="HTTP">HTTP</h3>
+
+<ul>
+  <li>Firefox will automatically upgrade an HTTP request to HTTPS when a usable {{Glossary("HTTPS RR")}} is available.
+    It will also use information provided in an <em>HTTPS RR</em> to optimize the process of establishing HTTPS connections⁠—this is conceptually similar to using the {{HTTPHeader("Alt-Svc")}} header. 
+    ({{bug(1721132)}}).</li>
+</ul>
 
 <h3 id="APIs">APIs</h3>
 
