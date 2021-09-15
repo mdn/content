@@ -39,7 +39,7 @@ eventListener.handleEvent(event);
 
 ### Return value
 
-`undefined`. If you return a value, the browser will ignore it.
+None.
 
 ## Specifications
 
