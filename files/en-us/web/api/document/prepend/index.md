@@ -32,15 +32,15 @@ prepend(...nodesOrDOMStrings)
 
 ### Exceptions
 
-- {{domxref("HierarchyRequestError")}}: Node cannot be inserted at the specified point
-  in the hierarchy.
+- `HierarchyRequestError` {{DOMxRef("DOMException")}}
+  - : Thrown when the node cannot be inserted at the specified point in the hierarchy.
 
 ## Examples
 
 ### Prepending a root element to a document
 
 If you try to prepend an element to an existing HTML document,
-it might throw a {{domxref("HierarchyRequestError")}} given a {{HTMLElement("html")}} element already exists.
+it might throw a `HierarchyRequestError' {{domxref("DOMException")}} given a {{HTMLElement("html")}} element already exists.
 
 ```js
 let html = document.createElement("html");

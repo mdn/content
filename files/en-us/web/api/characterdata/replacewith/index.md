@@ -28,8 +28,8 @@ replaceWith(...nodes)
 
 ### Exceptions
 
-- {{domxref("HierarchyRequestError")}}: Node cannot be inserted at the specified point
-  in the hierarchy.
+- `HierarchyRequestError` {{DOMxRef("DOMException")}}
+  - : Thrown when the node cannot be inserted at the specified point in the hierarchy.
 
 ## Examples
 

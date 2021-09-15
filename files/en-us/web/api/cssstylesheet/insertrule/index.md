@@ -57,11 +57,11 @@ inserted. Violating them will likely raise a {{domxref("DOMException")}}.
   `{{domxref("CSSRuleList", "", "", "1")}}.length`, the method aborts with an
   `IndexSizeError`.
 - If `rule` cannot be inserted at `index` `0` due to
-  some CSS constraint, the method aborts with a `HierarchyRequestError`.
+  some CSS constraint, the method aborts with a `HierarchyRequestError` {{domxref("DOMException")}}.
 - If more than one rule is given in the `rule` parameter, the method aborts
   with a `SyntaxError`.
 - If trying to insert an {{cssxref("@import")}} at-rule after a style rule, the method
-  aborts with a `HierarchyRequestError`.
+  aborts with a `HierarchyRequestError`  {{domxref("DOMException")}}.
 - If `rule` is {{cssxref("@namespace")}} and the rule-list has more than
   just `@import` at-rules and/or `@namespace` at-rules, the method
   aborts with an `InvalidStateError`.
