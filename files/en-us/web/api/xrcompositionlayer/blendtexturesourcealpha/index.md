@@ -10,7 +10,6 @@ tags:
   - WebXR API
   - WebXR Device API
   - XR
-
 browser-compat: api.XRCompositionLayer.blendTextureSourceAlpha
 ---
 {{APIRef("WebXR Device API")}}

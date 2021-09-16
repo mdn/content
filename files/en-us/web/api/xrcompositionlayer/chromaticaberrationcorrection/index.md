@@ -10,14 +10,13 @@ tags:
   - WebXR API
   - WebXR Device API
   - XR
-
 browser-compat: api.XRCompositionLayer.chromaticAberrationCorrection
 ---
 {{APIRef("WebXR Device API")}}
 
 The **`chromaticAberrationCorrection`** property of the {{domxref("XRCompositionLayer")}} interface is a boolean enabling the layer's optical chromatic aberration correction.
 
-Chromatic aberration ("color fringing") is an imperfection when a lens fails to focus all wavelengths of colors at the same point. This effect results in a seven-colored rainbow and to remove these imperfections a process called chromatic aberration correction is needed. For more information, read [Chromatic aberration](https://en.wikipedia.org/wiki/Chromatic_aberration) on Wikipedia.
+Chromatic aberration ("color fringing") is an imperfection wherein a lens fails to focus all wavelengths of colors at the same point. This effect results in a seven-colored rainbow. To remove these imperfections a process called chromatic aberration correction is needed. For more information, read [Chromatic aberration](https://en.wikipedia.org/wiki/Chromatic_aberration) on Wikipedia.
 
 ## Value
 

@@ -10,7 +10,6 @@ tags:
   - WebXR API
   - WebXR Device API
   - XR
-
 browser-compat: api.XRCompositionLayer.mipLevels
 ---
 {{APIRef("WebXR Device API")}}
