@@ -22,8 +22,6 @@ The `XMLSerializer` interface provides the {{domxref("XMLSerializer.serializeToS
 
 - {{domxref("XMLSerializer.serializeToString", "serializeToString()")}}
   - : Returns the serialized subtree of a string.
-- {{domxref("XMLSerializer.serializeToStream", "serializeToStream()")}} {{ non-standard_inline }}{{ deprecated_inline }}
-  - : The subtree rooted by the specified element is serialized to a byte stream using the character set specified.
 
 ## Examples
 
