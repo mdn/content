@@ -27,11 +27,11 @@ browser-compat: html.elements.input.input-month
 
 <p>For those of you using a browser that doesn't support <code>month</code>, the screenshot below shows what it looks like in Chrome and Opera. Clicking the down arrow on the right hand side brings up a date picker that lets you select the month and year.</p>
 
-<p><img alt="" src="month-control-chrome.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="month-control-chrome.png"></p>
 
 <p>The Microsoft Edge <code>month</code> control looks like this:</p>
 
-<p><img alt="" src="month-control-edge.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="month-control-edge.png"></p>
 
 <table class="properties">
  <tbody>
@@ -218,7 +218,7 @@ monthControl.value = '1978-06';</pre>
 
 <p>Here's a screenshot for those of you who aren't using a supporting browser:</p>
 
-<p><img alt="" src="month-required.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="month-required.png"></p>
 
 <p>Here's the CSS used in the above example. Here we make use of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS properties to style the input based on whether or not the current value is valid. We had to put the icons on a {{htmlelement("span")}} next to the input, not on the input itself, because in Chrome the generated content is placed inside the form control, and can't be styled or shown effectively.</p>
 
@@ -255,7 +255,7 @@ input:valid+span:after {
 
 <p>As mentioned above, the major problem with using date inputs at the time of writing is that many major browsers don't yet implement them all; only Chrome/Opera and Edge support it on desktop, and most modern browsers on mobile. As an example, the <code>month</code> picker on Chrome for Android looks like this:</p>
 
-<p><img alt="" src="month-android.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="month-android.png"></p>
 
 <p>Non-supporting browsers gracefully degrade to a text input, but this creates problems both in terms of consistency of user interface (the presented control will be different), and data handling.</p>
 

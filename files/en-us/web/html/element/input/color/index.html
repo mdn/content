@@ -87,23 +87,11 @@ function watchColorPicker(event) {
 
 <h3 id="Selecting_the_value">Selecting the value</h3>
 
-<p>If the {{HTMLElement("input")}} element's implementation of the <code>color</code> type on the user's browser doesn't support a color well, but is instead a text field for entering the color string directly, you can use the {{domxref("HTMLInputElement.select", "select()")}} method to select the text currently in the edit field. If the browser instead uses a color well, <code>select()</code> does nothing. You should be aware of this behavior so your code can respond appropriately in either case.</p>
+<p>When a browser doesn't support a color picker interface, its implementation of color inputs will be a text box that validates the contents automatically to ensure that the value is in the correct format. In this case you can use the {{domxref("HTMLInputElement.select", "select()")}} method to select the text currently in the edit field.</p>
+
+<p>If the browser instead uses a color well, <code>select()</code> does nothing. You should be aware of this behavior so your code can respond appropriately in either case.</p>
 
 <pre class="brush: js">colorWell.select();</pre>
-
-<h3 id="Appearance_variations">Appearance variations</h3>
-
-<p>As previously mentioned, when a browser doesn't support a color picker interface, its implementation of color inputs will be a text box that validates the contents automatically to ensure that the value is in the correct format. For example, in Safari 10.1, you would see something that looks like this:</p>
-
-<p><img alt="Screenshot of the example taken in Safari." src="input-color-safari.png" style="border-style: solid; border-width: 1px;"></p>
-
-<p>The same content looks like this in Firefox 55:</p>
-
-<p><img alt="Screenshot of the example taken in Firefox 55 for macOS" src="input-color-firefox.png" style="border-style: solid; border-width: 1px;"></p>
-
-<p>In this case, clicking on the color well presents the platform's color picker for you to choose a color from (in this case, the macOS picker):</p>
-
-<p><img alt="Screenshot of the element with the color picker open in Firefox Mac." src="input-with-picker-firefox-mac.png" style="border-style: solid; border-width: 1px;"></p>
 
 <h2 id="Validation">Validation</h2>
 
