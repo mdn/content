@@ -30,8 +30,7 @@ range.setEnd(endNode, endOffset);
 - `endNode`
   - : The {{ domxref("Node") }} inside which the {{ domxref("Range") }} should end.
 - `endOffset`
-  - : An integer greater than or equal to zero representing the offset for the end of the
-    `Range` from the start of `endNode`.
+  - : An integer greater than or equal to zero representing the offset for the end of the `Range` from the start of `endNode`.
 
 ### Return value
 
