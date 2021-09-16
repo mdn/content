@@ -29,8 +29,8 @@ Must be a power of 2 between 2^5 and 2^15, so one of: `32`, `64`, `128`, `256`, 
 
 ### Exceptions
 
-: `IndexSizeError` {{domxref("DOMException")}}
-  : - Thrown if the value set is not a power of 2, or is outside the allowed range.
+- `IndexSizeError` {{domxref("DOMException")}}
+  - : Thrown if the value set is not a power of 2, or is outside the allowed range.
 
 ## Example
 

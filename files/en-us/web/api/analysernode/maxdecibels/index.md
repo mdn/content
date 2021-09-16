@@ -29,8 +29,8 @@ When getting data from `getByteFrequencyData()`, any frequencies with an amplitu
 
 ### Exceptions
 
-: `IndexSizeError` {{domxref("DOMException")}}
-  : - Thrown if a value less than or equal to `AnalyserNode.minDecibels` is set.
+- `IndexSizeError` {{domxref("DOMException")}}
+  - : Thrown if a value less than or equal to `AnalyserNode.minDecibels` is set.
 
 ## Example
 
