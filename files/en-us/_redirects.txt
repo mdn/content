@@ -5726,7 +5726,6 @@
 /en-US/docs/Mozilla_CSS_Extensions	/en-US/docs/Web/CSS/Mozilla_Extensions
 /en-US/docs/Mozilla_MathML_Project/Authoring	/en-US/docs/Web/MathML/Authoring
 /en-US/docs/Mozilla_MathML_Project/Authoring_MathML	/en-US/docs/Web/MathML/Authoring
-/en-US/docs/Mozilla_SVG_Status	/en-US/docs/Web/SVG/SVG_1.1_Support_in_Firefox
 /en-US/docs/Mozilla_event_reference	/en-US/docs/Web/Events
 /en-US/docs/Mozilla_event_reference/DOMContentLoaded_(event)	/en-US/docs/Web/API/Window/DOMContentLoaded_event
 /en-US/docs/Mozilla_event_reference/DOMContentLoading (event)	/en-US/docs/Web/API/Window/DOMContentLoaded_event
@@ -6260,10 +6259,6 @@
 /en-US/docs/SVG_Tutorial	/en-US/docs/Web/SVG/Tutorial
 /en-US/docs/SVG_animation_(SMIL)_in_Firefox	/en-US/docs/Web/SVG/SVG_animation_with_SMIL
 /en-US/docs/SVG_improvements_in_Firefox_3	/en-US/docs/Mozilla/Firefox/Releases/3/SVG_improvements
-/en-US/docs/SVG_in_Firefox	/en-US/docs/Web/SVG/SVG_1.1_Support_in_Firefox
-/en-US/docs/SVG_in_Firefox_1.5	/en-US/docs/Web/SVG/SVG_1.1_Support_in_Firefox
-/en-US/docs/SVG_in_Firefox_2	/en-US/docs/Web/SVG/SVG_1.1_Support_in_Firefox
-/en-US/docs/SVG_in_Firefox_2.0	/en-US/docs/Web/SVG/SVG_1.1_Support_in_Firefox
 /en-US/docs/Same_origin_policy_for_JavaScript	/en-US/docs/Web/Security/Same-origin_policy
 /en-US/docs/Sample_.htaccess_file	/en-US/docs/Learn/Server-side/Apache_Configuration_htaccess
 /en-US/docs/Scripting_plugins	/en-US/docs/Plugins/Guide/Scripting_plugins

@@ -155966,59 +155966,6 @@
       "Jonathan_Watt"
     ]
   },
-  "Web/SVG/SVG_1.1_Support_in_Firefox": {
-    "modified": "2019-03-24T00:13:24.445Z",
-    "contributors": [
-      "Sebastianz",
-      "Longsonr",
-      "teoli",
-      "kscarfone",
-      "ethertank",
-      "Dholbert",
-      "trevorh",
-      "Sheppy",
-      "fscholz",
-      "Taken",
-      "Arsen7",
-      "Soupdragon",
-      "Jürgen Jeka",
-      "Drew LeSueur",
-      "charlesreilly",
-      "Jonathan_Watt",
-      "Mvent2",
-      "Mgalli",
-      "MarkFinkle",
-      "Nightstrike",
-      "MarcDiethelm",
-      "Jeff Schiller",
-      "Pmsyyz",
-      "Gepstein6",
-      "Nickolay",
-      "Mgjbot",
-      "Okome",
-      "Ptak82",
-      "Tor",
-      "Callek",
-      "Koznak",
-      "BenoitL",
-      "Takenbot",
-      "Dria",
-      "Gavindoughtie",
-      "Bzbarsky"
-    ]
-  },
-  "Web/SVG/SVG_2_support_in_Mozilla": {
-    "modified": "2020-03-29T19:28:01.592Z",
-    "contributors": [
-      "Zearin_Galaurum",
-      "fscholz",
-      "webinista",
-      "Sebastianz",
-      "rener_bz",
-      "cabanier",
-      "rolfedh"
-    ]
-  },
   "Web/SVG/SVG_animation_with_SMIL": {
     "modified": "2019-11-07T08:50:12.574Z",
     "contributors": [
