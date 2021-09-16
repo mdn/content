@@ -11,7 +11,7 @@ browser-compat: api.AudioDecoder.close
 ---
 {{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
 
-The **`close`** method of the {{domxref("AudioDecoder")}} interface ends all pending work and releases system resources.
+The **`close()`** method of the {{domxref("AudioDecoder")}} interface ends all pending work and releases system resources.
 
 ## Syntax
 
