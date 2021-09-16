@@ -47,6 +47,8 @@ Traditionally, the Intl API used strings to represent locales, just as Unicode d
   - : Returns the language associated with the locale.
 - {{jsxref("Intl/Locale/numberingSystem", "Intl.Locale.prototype.numberingSystem")}}
   - : Returns the numeral system used by the locale.
+- {{jsxref("Intl/Locale/numberingSystems", "Intl.Locale.prototype.numberingSystems")}}
+  - : Returns an {{jsxref("Array")}} of numbering system identifiers available according to the locale's rules.
 - {{jsxref("Intl/Locale/numeric", "Intl.Locale.prototype.numeric")}}
   - : Returns whether the locale has special collation handling for numeric characters.
 - {{jsxref("Intl/Locale/region", "Intl.Locale.prototype.region")}}
