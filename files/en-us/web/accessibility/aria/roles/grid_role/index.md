@@ -14,6 +14,12 @@ tags:
 ---
 The grid role is for a widget that contains one or more rows of cells. The position of each cell is significant and can be focused using keyboard input.
 
+
+
+## Description
+
+The `grid` role is a composite widget containing a collection of one or more rows with one or more cells where some or all cells in the grid are focusable by using methods of two-dimensional navigation, such as directional arrow keys.
+
 ```html
 <table role="grid" aria-labelledby="id-select-your-seat">
   <caption id="id-select-your-seat">Select your seat</caption>
@@ -46,8 +52,6 @@ The grid role is for a widget that contains one or more rows of cells. The posit
   </tbody>
 </table>
 ```
-
-## Description
 
 A grid widget contains one or more rows with one or more cells of thematically related interactive content. While it does not imply a specific visual presentation, it implies a relationship among elements. Uses fall into two categories: presenting tabular information (data grids) and grouping other widgets (layout grids). Even though both data grids and layout grids employ the same ARIA roles, states, and properties, differences in their content and purpose surface factors that are important to consider in keyboard interaction design. See [ARIA Authoring practices](https://www.w3.org/TR/wai-aria-practices-1.2/#grid) for more details
 

@@ -27,7 +27,7 @@ Instead of using ARIA to create a figure, consider using the native, semantic [H
 
 ## Description
 
-Any content that should be grouped together and consumed as a figure (which could include images, video, audio, code snippets, or other content) can be identified as a figure using `role="figure"`.
+A `figure` is a perceivable section of content that typically contains a graphical document, images, code snippets, or example text. The parts of a figure MAY be user-navigable. Any content that should be grouped together and consumed as a figure (which could include images, video, audio, code snippets, or other content) can be identified as a figure using `role="figure"`.
 
 There are no hard and fast rules about how you should write your figure content. You should make sure that it is accessible just like any other content. For example, make sure it is perceivable by users of assistive technology, navigable by keyboard as well as mouse, and so on.
 
@@ -133,8 +133,8 @@ If at all possible, you<span class="ILfuVd yZ8quc"> should use the appropriate s
 
 - [Accessibility Object Model](https://wicg.github.io/aom/spec/)
 - [ARIA in HTML](https://w3c.github.io/html-aria/)
-- [HTML \<figure> element](/en-US/docs/Web/HTML/Element/figure)
-- [HTML \<figcaption> element](/en-US/docs/Web/HTML/Element/figcaption)
+- [HTML `<figure>` element](/en-US/docs/Web/HTML/Element/figure)
+- [HTML `<figcaption>` element](/en-US/docs/Web/HTML/Element/figcaption)
 
 <section id="Quick_links">
 

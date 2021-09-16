@@ -9,7 +9,7 @@ tags:
   - Reference
   - Web Development
 ---
-The [`dialog`](https://www.w3.org/TR/2009/WD-wai-aria-20091215/roles#dialog) role is used to mark up an HTML based application dialog or window that separates content or UI from the rest of the web application or page. Dialogs are generally placed on top of the rest of the page content using an overlay. Dialogs can be either non-modal (it's still possible to interact with content outside of the dialog) or modal (only the content in the dialog can be interacted with).
+The `dialog` role is used to mark up an HTML based application dialog or window that separates content or UI from the rest of the web application or page. Dialogs are generally placed on top of the rest of the page content using an overlay. Dialogs can be either non-modal (it's still possible to interact with content outside of the dialog) or modal (only the content in the dialog can be interacted with).
 
 ```html
 <div role="dialog" aria-labelledby="dialog1Title" aria-describedby="dialog1Desc">
@@ -20,6 +20,8 @@ The [`dialog`](https://www.w3.org/TR/2009/WD-wai-aria-20091215/roles#dialog) ro
 ```
 
 ## Description
+
+A dialog is a descendant window of the primary window of a web application. For HTML pages, the primary application window is the entire web document, i.e., the body element.
 
 Marking up a dialog element with the `dialog` role helps assistive technology identify the dialog's content as being grouped and separated from the rest of the page content. However, adding `role="dialog"` alone is not sufficient to make a dialog accessible. Additionally, the following needs to be done:
 

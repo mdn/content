@@ -12,7 +12,7 @@ tags:
 ---
 
 
-The `columnheader` value of the ARIA role attribute identifies an element as being a cell in a row that is the header for a column, similar to the native {{HTMLElement('th')}} element with column scope. 
+The `columnheader` value of the ARIA role attribute identifies an element as being a cell in a row contains header information for a column, similar to the native {{HTMLElement('th')}} element with column scope. 
 
 ## Description
 

@@ -8,7 +8,7 @@ tags:
   - document structure role
   - Reference
 ---
-Generally used in complex composite [widgets](/en-US/docs/Web/Accessibility/ARIA/Roles/widget_Role) or [applications](/en-US/docs/Web/Accessibility/ARIA/Roles/Application_Role), the `document` role can inform assistive technologies to switch context to a reading mode: The `document` role tells assistive technologies with reading or browse modes to use the document mode to read the content contained within this element.
+The `document` role is for the top container containing content that assistive technology users may want to browse in a reading mode.Generally used in complex composite [widgets](/en-US/docs/Web/Accessibility/ARIA/Roles/widget_Role) or [applications](/en-US/docs/Web/Accessibility/ARIA/Roles/Application_Role), the `document` role can inform assistive technologies to switch context to a reading mode: The `document` role tells assistive technologies with reading or browse modes to use the document mode to read the content contained within this element.
 
 ```html
 <div role="dialog">

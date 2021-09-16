@@ -32,7 +32,7 @@ A better, more semantic way of writing the cells above would be to use the sema
 
 ## Description
 
-The element with `role="cell"` is a cell within a row, optionally within a [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role), within a  [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role), [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role) or `treegrid` within a static tabular structure. Using native HTML {{HTMLElement('td')}} elements, whenever possible, is strongly encouraged.
+The element with `role="cell"` is a cell within a row, optionally within a [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role), within a [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role). If the cell is in a [`grid](/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role) or` [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/Treegrid_role), opt for  [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/Gridcell_Role). Using native HTML {{HTMLElement('td')}} elements, whenever possible, is strongly encouraged.
 
 Each element with `role="cell"` MUST be nested in a container element with [`role="row"`](/en-US/docs/Web/Accessibility/ARIA/Roles/Row_Role). That row, in turn, can be nested within an element with [`role="rowgroup"`](/en-US/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role), and should be nested within a `grid`, `table` or `treegrid`. If a cell contains column or row header information, use the `columnheader` or `rowheader` roles, respectively. If the cell does not contain header information and is nested in a `grid` or `treegrid`, the role of `gridcell` may be more appropriate.
 
@@ -163,6 +163,7 @@ When applied to a {{HTMLElement('td')}}, it returns cell semantics to the elemen
 ## See also
 
 - [`role="row"`](/en-US/docs/Web/Accessibility/ARIA/Roles/Row_Role)
+- [`role="gridcell"`](/en-US/docs/Web/Accessibility/ARIA/Roles/Gridcell_Role)
 - [HTML `<td>` element](/en-US/docs/Web/HTML/Element/td)
 - [HTML `<th>` element ](/en-US/docs/Web/HTML/Element/th)
 - [HTML table advanced features and accessibility](/en-US/docs/Learn/HTML/Tables/Advanced)

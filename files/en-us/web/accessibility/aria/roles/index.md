@@ -109,9 +109,9 @@ Landmark roles provide a way to identify the organization and structure of a web
   Avoid using [command](/en-US/docs/Web/Accessibility/ARIA/Roles/command_role), [composite](/en-US/docs/Web/Accessibility/ARIA/Roles/composite_role), [input](/en-US/docs/Web/Accessibility/ARIA/Roles/input_role), [landmark](/en-US/docs/Web/Accessibility/ARIA/Roles/landmark_role), [range](/en-US/docs/Web/Accessibility/ARIA/Roles/range_role), [roletype](/en-US/docs/Web/Accessibility/ARIA/Roles/roletype_role), [section](/en-US/docs/Web/Accessibility/ARIA/Roles/section_role), [sectionhead](/en-US/docs/Web/Accessibility/ARIA/Roles/sectionhead_role), [select](/en-US/docs/Web/Accessibility/ARIA/Roles/select_role), [structure](/en-US/docs/Web/Accessibility/ARIA/Roles/structure_role), [widget](/en-US/docs/Web/Accessibility/ARIA/Roles/widget_role),and [window](/en-US/docs/Web/Accessibility/ARIA/Roles/window_role).
 
 
-  > **Warning:** Don't use abstract roles in your sites and applications. They are for use by browsers. They are included for reference only. 
+  > **Note:** Don't use abstract roles in your sites and applications. They are for use by browsers. They are included for reference only. 
 
-
+  > **Warning:** "Abstract roles are used for the ontology. Authors **MUST NOT** use abstract roles in content." - The WAI-ARIA specification
 
 ## Roles defined on MDN
 
