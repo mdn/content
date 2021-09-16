@@ -17,7 +17,7 @@ browser-compat: api.PublicKeyCredentialCreationOptions.attestation
 value indicates the preference regarding the attestation transport, between the
 authenticator, the client and the relying party.
 
-The attestation is a mean for the relying party to verify the origin of the
+The attestation is a means for the relying party to verify the origin of the
 authenticator with an attestation certificate authority. The information contained in
 the attestation may thus disclose some information about the user (e.g. which device
 they are using).
