@@ -8,7 +8,7 @@ tags:
   - Reference
 browser-compat: html.elements.a.rel.noopener
 ---
-<p><span class="seoSummary">The <strong><code>noopener</code></strong> keyword for the <code><a href="/en-US/docs/Web/HTML/Attributes/rel">rel</a></code> attribute of the {{HTMLElement("a")}}, {{HTMLElement("area")}}, and {{HTMLElement("form")}} elements instructs the browser to navigate to the target resource without granting the new browsing context access to the document that opened it — by not setting the {{DOMxRef("Window.opener")}} property on the opened window (it returns <code>null</code>).</span></p>
+<p>The <strong><code>noopener</code></strong> keyword for the <code><a href="/en-US/docs/Web/HTML/Attributes/rel">rel</a></code> attribute of the {{HTMLElement("a")}}, {{HTMLElement("area")}}, and {{HTMLElement("form")}} elements instructs the browser to navigate to the target resource without granting the new browsing context access to the document that opened it — by not setting the {{DOMxRef("Window.opener")}} property on the opened window (it returns <code>null</code>).</p>
 
 <p>This is especially useful when opening untrusted links, in order to ensure they cannot tamper with the originating document via the {{DOMxRef("Window.opener")}} property (see <a href="https://mathiasbynens.github.io/rel-noopener/">About rel=noopener</a> for more details), while still providing the <code>Referer</code> HTTP header (unless <code>noreferrer</code> is used as well).</p>
 
