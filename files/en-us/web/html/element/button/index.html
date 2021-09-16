@@ -67,8 +67,8 @@ browser-compat: html.elements.button
  <p>Firefox, unlike other browsers, <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">persists the dynamic disabled state</a> of a {{HTMLElement("button")}} across page loads. Use the {{htmlattrxref("autocomplete","button")}} attribute to control this feature.</p>
  </dd>
  <dt>{{htmlattrdef("form")}}</dt>
- <dd>The {{HTMLElement("form")}} element to associate the button with (its <em>form owner</em>). The value of this attribute must be the <code>id</code> of a <code>&lt;form&gt;</code> in the same document. (If this attribute is not set, the <code>&lt;button&gt;</code> is associated with its ancestor <code>&lt;form&gt;</code> element, if any.)</dd>
- <dd>This attribute lets you associate <code>&lt;button&gt;</code> elements to <code>&lt;form&gt;</code>s anywhere in the document, not just inside a <code>&lt;form&gt;</code>. It can also override an ancestor <code>&lt;form&gt;</code> element.</dd>
+ <dd><p>The {{HTMLElement("form")}} element to associate the button with (its <em>form owner</em>). The value of this attribute must be the <code>id</code> of a <code>&lt;form&gt;</code> in the same document. (If this attribute is not set, the <code>&lt;button&gt;</code> is associated with its ancestor <code>&lt;form&gt;</code> element, if any.)</p>
+ <p>This attribute lets you associate <code>&lt;button&gt;</code> elements to <code>&lt;form&gt;</code>s anywhere in the document, not just inside a <code>&lt;form&gt;</code>. It can also override an ancestor <code>&lt;form&gt;</code> element.</p></dd>
  <dt>{{htmlattrdef("formaction")}}</dt>
  <dd>The URL that processes the information submitted by the button. Overrides the {{htmlattrxref("action","form")}} attribute of the button's form owner. Does nothing if there is no form owner.</dd>
  <dt>{{htmlattrdef("formenctype")}}</dt>
@@ -91,8 +91,8 @@ browser-compat: html.elements.button
  <p>If specified, this attribute overrides the {{htmlattrxref("method","form")}} attribute of the button's form owner.</p>
  </dd>
  <dt>{{htmlattrdef("formnovalidate")}}</dt>
- <dd>If the button is a submit button, this Boolean attribute specifies that the form is not to be <a href="/en-US/docs/Learn/Forms/Form_validation">validated</a> when it is submitted. If this attribute is specified, it overrides the {{htmlattrxref("novalidate","form")}} attribute of the button's form owner.</dd>
- <dd>This attribute is also available on <code><a href="/en-US/docs/Web/HTML/Element/input/image">&lt;input type="image"&gt;</a></code> and <code><a href="/en-US/docs/Web/HTML/Element/input/submit">&lt;input type="submit"&gt;</a></code> elements.</dd>
+ <dd><p>If the button is a submit button, this Boolean attribute specifies that the form is not to be <a href="/en-US/docs/Learn/Forms/Form_validation">validated</a> when it is submitted. If this attribute is specified, it overrides the {{htmlattrxref("novalidate","form")}} attribute of the button's form owner.</p>
+ <p>This attribute is also available on <code><a href="/en-US/docs/Web/HTML/Element/input/image">&lt;input type="image"&gt;</a></code> and <code><a href="/en-US/docs/Web/HTML/Element/input/submit">&lt;input type="submit"&gt;</a></code> elements.</p></dd>
  <dt>{{htmlattrdef("formtarget")}}</dt>
  <dd>If the button is a submit button, this attribute is a author-defined name or standardized, underscore-prefixed keyword indicating where to display the response from submitting the form. This is the <code>name</code> of, or keyword for, a <em>browsing context</em> (a tab, window, or {{HTMLElement("iframe")}}). If this attribute is specified, it overrides the {{htmlattrxref("target", "form")}} attribute of the button's form owner. The following keywords have special meanings:
  <ul>
