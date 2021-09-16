@@ -9,6 +9,7 @@ tags:
   - Accessibility
   - Reference
   - Table Role
+  - document structure role
 ---
 The table value of the ARIA role attribute identifies the element containing the role as having a non-interactive table structure containing data arranged in rows and columns, similar to the native [`<table>`](/en-US/docs/Web/HTML/Element/table) HTML element.
 

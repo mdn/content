@@ -9,6 +9,7 @@ tags:
   - Accessibility
   - Reference
   - Row Role
+  - document structure role
 ---
 An element with `role="row"` is a row of cells within a tabular structure. A row contains one or more cells,  grid cells or column headers, and possibly a row header, within a [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role), [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role) or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role), and optionally within a [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role).
 

@@ -8,7 +8,7 @@ tags:
   - roles
   - Reference
   - ARIA roles
-  - NeedsContent
+  - document structure role
 ---
 
 The `columnheader` value of the ARIA role attribute identifies an element as being a cell in a row that is the header for a column, similar to the native [`<th>`](/en-US/docs/Web/HTML/Element/th) element with column scope. 

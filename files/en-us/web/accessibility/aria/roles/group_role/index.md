@@ -1,6 +1,6 @@
 ---
-title: 'ARIA: none role'
-slug: Web/Accessibility/ARIA/roles/none_role
+title: 'ARIA: group role'
+slug: Web/Accessibility/ARIA/roles/group_role
 tags: 
 
   - Accessibility
@@ -34,13 +34,11 @@ tags:
 
 | Specification                                                                                                                    | Status                                           |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#none","ARIA: none role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_none_role","none role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+| {{SpecName("ARIA","#group","ARIA: group role")}}                                             | {{Spec2('ARIA')}}                         |
+| {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_group_role","group role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
 
 
 ## See Also
-
-
 
 
 <section id="Quick_links">

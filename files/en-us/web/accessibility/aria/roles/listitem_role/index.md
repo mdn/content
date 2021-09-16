@@ -9,6 +9,7 @@ tags:
   - Reference
   - Role
   - listitem
+  - document structure role
 ---
 The ARIA `listitem` role can be used to identify an item inside a list of items. It is normally used in conjunction with the `list` role, which is used to identify a list container.
 

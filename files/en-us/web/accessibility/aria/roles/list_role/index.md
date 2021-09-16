@@ -8,6 +8,7 @@ tags:
   - Accessibility
   - Reference
   - Role
+  - document structure role
   - list
 ---
 The ARIA `list` role can be used to identify a list of items. It is normally used in conjunction with the `listitem` role, which is used to identify a list item contained inside the list.

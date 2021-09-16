@@ -8,6 +8,9 @@ tags:
   - table
   - role
   - role attribute
+  - cell role
+  - Reference
+  - document structure role
 ---
 The `cell` value of the ARIA _role_ attribute identifies an element as being a cell in a tabular container that does not contain column or row header information. To be supported, the cell must be nested in an element with the role of `row`.
 

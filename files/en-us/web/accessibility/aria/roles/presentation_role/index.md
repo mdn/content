@@ -8,6 +8,7 @@ tags:
   - roles
   - Reference
   - ARIA roles
+  - document structure role
   - NeedsContent
 ---
 

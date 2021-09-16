@@ -5,6 +5,7 @@ tags:
   - ARIA
   - ARIA Role
   - ARIA heading
+  - document structure role
   - Reference
 ---
 The heading role defines this element as a heading to a page or section. To give the page more structure, a level should also be provided to indicate relationships between sections.

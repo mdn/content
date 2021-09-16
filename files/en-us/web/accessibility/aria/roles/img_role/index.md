@@ -7,6 +7,7 @@ tags:
   - ARIA Role
   - Accessibility
   - Reference
+  - document structure role
   - Role
   - figure
 ---

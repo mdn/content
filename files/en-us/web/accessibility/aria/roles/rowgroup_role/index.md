@@ -7,6 +7,10 @@ tags:
   - Roles
   - rowgroup
   - table
+  - document structure role
+  - Accessibility
+  - ARIA role
+  - reference
 ---
 An element with `role="rowgroup"` is a group of [rows](/en-US/docs/Web/Accessibility/ARIA/Roles/Row_Role) within a tabular structure. A `rowgroup` contains one or more rows of [cells](/en-US/docs/Web/Accessibility/ARIA/Roles/Cell_Role),  [grid cells](/en-US/docs/Web/Accessibility/ARIA/Roles/Gridcell_role), [column headers](/en-US/docs/Web/Accessibility/ARIA/Roles/Columnheader_Role), or [row headers](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_Role) within a [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role), [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role) or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/Treegrid_Role).
 

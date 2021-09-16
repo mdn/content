@@ -5,6 +5,7 @@ tags:
   - ARIA
   - ARIA Role
   - Document
+  - document structure role
   - Reference
 ---
 Generally used in complex composite [widgets](/en-US/docs/Web/Accessibility/ARIA/Roles/widget_Role) or [applications](/en-US/docs/Web/Accessibility/ARIA/Roles/Application_Role), the `document` role can inform assistive technologies to switch context to a reading mode: The `document` role tells assistive technologies with reading or browse modes to use the document mode to read the content contained within this element.

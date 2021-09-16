@@ -7,6 +7,7 @@ tags:
   - ARIA widget
   - Reference
   - Role application
+  - document structure role
 ---
 The `application` role indicates to assistive technologies that an element _and all of its children_ should be treated similar to a desktop application, and no traditional HTML interpretation techniques should be used. This role should only be used to define very dynamic and desktop-like web applications.
 
@@ -18,7 +19,7 @@ This defines this `div` element and all of its descendants to be treated like th
 
 ## Description
 
-The `application` role indicates to assistive technologies that this part of the web content contains elements that do not conform to any other known HTML element or WAI-ARIA widget. Any sort of special interpretation of HTML structures and widgets should be suspended, and control should be completely handed over to the browser and web application to handle mouse, keyboard, or touch interaction.
+The `application` [document structure role](/en-US/docs/Web/Accessibility/ARIA/Roles#Document_structure_roles), indicates to assistive technologies that this part of the web content contains elements that do not conform to any other known HTML element or WAI-ARIA widget. Any sort of special interpretation of HTML structures and widgets should be suspended, and control should be completely handed over to the browser and web application to handle mouse, keyboard, or touch interaction.
 
 In this mode, the web author is completely responsible for handling any and all keyboard input, focus management, and other interactions and cannot assume assistive technologies would do any processing on their end.
 

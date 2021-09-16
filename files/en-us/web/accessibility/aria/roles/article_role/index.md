@@ -7,6 +7,7 @@ tags:
   - ARIA article role
   - Article
   - Article role
+  - document structure role
   - Reference
 ---
 
