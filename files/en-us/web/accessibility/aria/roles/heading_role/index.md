@@ -8,17 +8,21 @@ tags:
   - document structure role
   - Reference
 ---
-The heading role defines this element as a heading to a page or section. To give the page more structure, a level should also be provided to indicate relationships between sections.
+The `heading` role defines this element as a heading to a page or section. To give the page more structure, a level should also be provided to indicate relationships between sections.
+
+## Description
+
+The heading role indicates to assistive technologies that this element should be treated like a heading. Screen readers would read the text and indicate that it is formatted like a heading. In addition, the level tells assistive technologies which part of the page structure this heading represents. A level 1 heading usually indicates the main heading of a page, a level 2 heading the first subsection, a level 3 is a subsection of that, and so on.
 
 ```html
 <div role="heading" aria-level="1">This is a main page heading</div>
 ```
 
-This defines the text in the `div` to be the main heading of the page, indicated by being level 1 via the aria-level attribute.
+This defines the text in the `div` to be the main heading of the page, indicated by being level 1 via the aria-level attribute. Opt for using the {{HTMLElement('h1')}} element instead.
 
-## Description
-
-The heading role indicates to assistive technologies that this element should be treated like a heading. Screen readers would read the text and indicate that it is formatted like a heading. In addition, the level tells assistive technologies which part of the page structure this heading represents. A level 1 heading usually indicates the main heading of a page, a level 2 heading the first subsection, a level 3 is a subsection of that, and so on.
+```html
+<h1>This is a main page heading</h1>
+```
 
 ### Associated WAI-ARIA roles, states, and properties
 
@@ -36,7 +40,7 @@ This role does not require any special keyboard navigation. As with any heading,
 - Changing attribute values
   - : Usually not required, unless dynamically inserting content. In that case, the newly-added headings need aria-level attributes whose values are consistent with the rest of the document structure.
 
-<div class="note"><p><span class="ILfuVd yZ8quc">Instead of using a `<div>` or `<span>` with a `heading` role and `aria-level`, consider using a native `<h1>` through `<h6>` element instead to indicate that this text is a heading, and what part of the structure it represents.</span></p></div>
+> **Note:** Instead of using a `<div>` or `<span>` with a `heading` role and `aria-level`, consider using a native {{HTMLElement('h1')}}  through {{HTMLElement('h6')}}  elements instead to indicate that this text is a heading, and what part of the structure it represents.
 
 ## Examples
 
@@ -44,39 +48,41 @@ The following shows a typical page structure.
 
 ```html
 <div id="container">
-<div role="heading" aria-level="1">The main page heading</div>
-<p>This article is about showing a page structure.</p>
-<div role="heading" aria-level="2">Introduction</div>
-<p>An introductory text.</p>
-<div role="heading" aria-level="2">Chapter 1</div>
-<p>Text</p>
-<div role="heading" aria-level="3">Chapter 1.1</div>
-<p>More text in a sub section.</p>
-...</div>
+  <div role="heading" aria-level="1">The main page heading</div>
+  <p>This article is about showing a page structure.</p>
+  <div role="heading" aria-level="2">Introduction</div>
+  <p>An introductory text.</p>
+  <div role="heading" aria-level="2">Chapter 1</div>
+  <p>Text</p>
+  <div role="heading" aria-level="3">Chapter 1.1</div>
+  <p>More text in a sub section.</p>
+</div>
 ```
 
 However, instead, you should do:
 
 ```html
 <div id="container">
-<h1>The main page heading</h1>
-<p>This article is about showing a page structure.</p>
-<h2>Introduction</h2>
-<p>An introductory text.</p>
-<h2>Chapter 1</h2>
-<p>Text</p>
-<h3>Chapter 1.1</h3>
-<p>More text in a sub section.</p>
-...</div>
+  <h1>The main page heading</h1>
+  <p>This article is about showing a page structure.</p>
+  <h2>Introduction</h2>
+  <p>An introductory text.</p>
+  <h2>Chapter 1</h2>
+  <p>Text</p>
+  <h3>Chapter 1.1</h3>
+  <p>More text in a sub section.</p>
+</div>
 ```
 
 ## Accessibility concerns
+
+> **Warning:** Using `aria-label` or `aria-labelledby` will the content of your heading from assistive technologies, reading the label instead of the heading.
 
 If you must use the `heading` role and `aria-level` attribute, do not go over level 6 so that you are consistent with HTML. Although theoretically you can go higher, and some screen readers may support it, the results can be unpredictable with other browser/screen reader combinations.
 
 ## Best practices
 
-The best way to use this role is to not use it at all, and instead use the native heading tags `<h1>` through `<h6>` as shown in the example above. The `heading` role and `aria-level` attribute should only be used to retrofit accessibility on legacy code that you cannot make major changes to.
+The best way to use this role is to **not use it at all**, and instead use the native heading tags {{HTMLElement('h1')}}  through {{HTMLElement('h6')}}  as shown in the example above. The `heading` role and `aria-level` attribute should only be used to retrofit accessibility on legacy code that you cannot make major changes to.
 
 ### Added benefits
 
@@ -87,6 +93,8 @@ None.
 | Specification                                            | Status                   |
 | -------------------------------------------------------- | ------------------------ |
 | {{SpecName("ARIA","#heading","heading")}} | {{Spec2('ARIA')}} |
+| {{SpecName("ARIA Authoring Practices 1.2","#heading","heading role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+
 
 ## Precedence order
 
@@ -96,7 +104,7 @@ The heading role overrides the native semantic meaning of the element it is bein
 
 ## See also
 
-- [\<h1> thru \<h6>: The HTML Section Heading elements](/en-US/docs/Web/HTML/Element/Heading_Elements)
+- [`<h1>` thru `<h6>`: The HTML Section Heading elements](/en-US/docs/Web/HTML/Element/Heading_Elements)
 
 <section id="Quick_links">
 
