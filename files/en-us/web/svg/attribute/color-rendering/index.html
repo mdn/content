@@ -8,7 +8,7 @@ browser-compat: svg.attributes.presentation.color-rendering
 ---
 <div>{{deprecated_header}}</div>
 
-<p class="seoSummary">The <strong><code>color-rendering</code></strong> attribute provides a hint to the SVG user agent about how to optimize its color interpolation and compositing operations.</p>
+<p>The <strong><code>color-rendering</code></strong> attribute provides a hint to the SVG user agent about how to optimize its color interpolation and compositing operations.</p>
 
 <p><code>color-rendering</code> takes precedence over {{SVGAttr("color-interpolation-filters")}}. For example, assume <code>color-rendering: optimizeSpeed</code> and <code>color-interpolation-filters: linearRGB</code>. In this case, the SVG user agent should perform color operations in a way that optimizes performance, which might mean sacrificing the color interpolation precision as specified by through the <code>linearRGB</code> value for <code>color-interpolation-filters</code>.</p>
 
