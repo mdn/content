@@ -40,16 +40,10 @@ new URLPattern(input, baseURL);
 
 ### Exceptions
 
-<!-- This is not a GFM table, because those can not contain unordered lists. -->
-<dl>
-  <dt>{{jsxref("TypeError")}}</dt>
-  <dt>Indicates one of the following:
-    <ul>
-      <li>The given pattern or base URL is not valid or syntactically correct.</li>
-      <li>A <code>baseURL</code> is provided, and input is an absolute pattern or a structured object.</li>
-    </ul>
-  </dt>
-</dl>
+- {{jsxref("TypeError")}}
+  - : Indicates one of the following:
+    - The given pattern or base URL is not valid or syntactically correct.
+    - A `baseURL` is provided, and input is an absolute pattern or a structured object.
 
 ## Examples
 
