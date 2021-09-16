@@ -11,11 +11,12 @@ tags:
   - document structure role
 ---
 
-The `columnheader` value of the ARIA role attribute identifies an element as being a cell in a row that is the header for a column, similar to the native [`<th>`](/en-US/docs/Web/HTML/Element/th) element with column scope. 
+
+The `columnheader` value of the ARIA role attribute identifies an element as being a cell in a row that is the header for a column, similar to the native {{HTMLElement('th')}} element with column scope. 
 
 ## Description
 
-An element with *role="columnheader"* nested as a descendant for an element with *role="row"*, is a static tabular structure of a column header cell in a tabular container, either a table or grid, or other chart that needs to show data relationships. To be supported, the columnheader must be nested in an element with the [role of row](/en-US/docs/Web/Accessibility/ARIA/Roles/Row_Role). 
+An element with *role="columnheader"* nested as a descendant for an element with *role="row"*, is a static tabular structure of a column header cell in a tabular container, either a table or grid, or other chart that needs to show data relationships. To be supported, the columnheader must be nested in an element with the [role of `row`](/en-US/docs/Web/Accessibility/ARIA/Roles/Row_Role). 
 
 
 ### Associated WAI-ARIA roles, states, and properties
@@ -77,7 +78,7 @@ The `aria-sort` attribute can be added to a `<th scope="col>`  even when the ARI
 
 ### Prefer HTML
 
-Columnheader has the same semantics `<tr scope="col">`.  
+Columnheader has the same semantics `<th scope="col">`.  
 
 ## Specifications
 

@@ -47,6 +47,15 @@ The `application` role is designed to provide a means for widgets that are not p
   - : Used to indicate the idref of an element that contains additional instructions for navigating or operating this element.
 - aria-roledescription
   - : Used to give the application a more descriptive role text for screen readers to speak. This should be localized.
+- aria-disabled
+  - : Indicates that an element is visible but disabled
+- aria-errormessage
+  - : A reference to the element that provides the error message for an the element on which it is set
+- aria-expanded
+  - : If set to `true`, the grouping element owned or controlled by this element is expanded, or `false` if collapsed.
+- aria-haspopup
+  - : Indicates there is a popup, such as menu or dialog, that can be triggered by the element.
+
 
 ### Keyboard interactions
 
@@ -82,12 +91,13 @@ Improperly using the `application` role can unintentionally take away access fro
 | Specification                                                    | Status                   |
 | ---------------------------------------------------------------- | ------------------------ |
 | {{SpecName("ARIA","#application","application")}} | {{Spec2('ARIA')}} |
+| {{SpecName("ARIA Authoring Practices 1.2","#application","application")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
 
 ## Precedence order
 
 Applying the `application` role will cause this and all of the descendant elements of this element to be treated like application content, not web content. Any reading mechanisms assistive technologies may have for web content will not apply.
 
-See also
+## See also
 
 - [If you use the WAI-ARIA role "application", please do so wisely](https://www.marcozehe.de/2012/02/06/if-you-use-the-wai-aria-role-application-please-do-so-wisely/) - blog post by Marco Zehe
 - [Using the ARIA application role](https://tink.uk/using-the-aria-application-role/) - by Léonie Watson

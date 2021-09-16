@@ -9,12 +9,11 @@ tags:
   - Reference
   - ARIA roles
   - document structure role
-  - NeedsContent
 ---
 
-
-
 ## Description
+
+To provide an accessible name, reference the term being defined with `role="term"`, using `aria-labelledby`.
 
 ### Associated WAI-ARIA roles, states, and properties
 

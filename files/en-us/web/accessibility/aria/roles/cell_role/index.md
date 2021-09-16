@@ -32,13 +32,13 @@ A better, more semantic way of writing the cells above would be to use the sema
 
 ## Description
 
-The element with `role="cell"` is a cell within a row, optionally within a [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role), within a  [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role), [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role) or `treegrid` within a static tabular structure. Using native [HTML `<td>`](/en-US/docs/Web/HTML/Element/td) elements, whenever possible, is strongly encouraged.
+The element with `role="cell"` is a cell within a row, optionally within a [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role), within a  [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role), [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role) or `treegrid` within a static tabular structure. Using native HTML {{HTMLElement('td')}} elements, whenever possible, is strongly encouraged.
 
-Each element with `role="cell"` MUST be nested in a container element with `role="row"`. That row, in turn, can be nested within an element with `role="rowgroup"`, and should be nested within a `grid`, `table` or `treegrid`. If a cell contains column or row header information, use the `columnheader` or `rowheader` roles, respectively. If the cell does not contain header information and is nested in a `grid` or `treegrid`, the role of `gridcell` may be more appropriate.
+Each element with `role="cell"` MUST be nested in a container element with [`role="row"`](/en-US/docs/Web/Accessibility/ARIA/Roles/Row_Role). That row, in turn, can be nested within an element with [`role="rowgroup"`](/en-US/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role), and should be nested within a `grid`, `table` or `treegrid`. If a cell contains column or row header information, use the `columnheader` or `rowheader` roles, respectively. If the cell does not contain header information and is nested in a `grid` or `treegrid`, the role of `gridcell` may be more appropriate.
 
 A cell can contain a number of property attributes clarifying the cell's position within the tabular data structure, including `aria-colindex`, `aria-colspan`, `aria-rowindex`, and `aria-rowspan`.
 
-> **Note** Using the native HTML table element (`<table>`) along with the table row element (`<tr>`) and table cell element (`<td>`) whenever possible is strongly encouraged.
+> **Note** Using the native HTML table element ({{HTMLElement('table')}} elements, whenever possible, is strongly encouraged.) along with the table row element ({{HTMLElement('tr')}} elements, whenever possible, is strongly encouraged.) and table cell element ({{HTMLElement('td')}} elements, whenever possible, is strongly encouraged.) whenever possible is strongly encouraged.
 
 ### Associated WAI-ARIA roles, states, and properties
 
@@ -151,7 +151,7 @@ Above is the semantic way of writing a table. The ARIA roles are not necessary i
 
 ### Added benefits
 
-none
+When applied to a {{HTMLElement('td')}}, it returns cell semantics to the element in case the semantics were removed, such as with `display: grid;`. 
 
 ## Specifications
 
