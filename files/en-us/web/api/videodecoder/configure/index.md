@@ -72,7 +72,7 @@ AudioDecoder.configure(config)
 - {{domxref("DOMException")}} `TypeError`
   - : Thrown if the provided `config` is invalid.
 - {{domxref("DOMException")}} `InvalidStateError`
-  - : Thrown if the {{domxref("AudioDecoder.state","state")}} is `"closed"`.
+  - : Thrown if the {{domxref("VideoDecoder.state","state")}} is `"closed"`.
 - {{domxref("DOMException")}} `NotSupportedError`
   - : Thrown if the provided `config` is valid but the user agent cannot provide a codec that can decode this profile.
 
