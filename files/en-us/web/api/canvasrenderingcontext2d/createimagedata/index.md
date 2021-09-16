@@ -39,9 +39,9 @@ ImageData ctx.createImageData(imagedata);
 A new {{domxref("ImageData")}} object with the specified width and height. The new
 object is filled with transparent black pixels.
 
-### Errors thrown
+### Exceptions
 
-- `IndexSizeError`
+- `IndexSizeError` {{domxref("DOMException")}}
   - : Thrown if either of the `width` or `height` arguments is zero.
 
 ## Examples
@@ -51,17 +51,15 @@ object is filled with transparent black pixels.
 This snippet creates a blank `ImageData` object using the
 `createImageData()` method.
 
-#### HTML
+The HTML is very simple:
 
 ```html
 <canvas id="canvas"></canvas>
 ```
 
-#### JavaScript
-
 The generated object is 100 pixels wide and 50 pixels tall, making 5,000 pixels in all.
 Each pixel within an `ImageData` object consists of four array values, so the
-object's {{domxref("ImageData.data", "data")}} property has  a length of 4 × 5,000, or
+object's {{domxref("ImageData.data", "data")}} property has a length of 4 × 5,000, or
 20,000.
 
 ```js
@@ -77,13 +75,11 @@ console.log(imageData);
 
 This example creates and fills a new `ImageData` object with purple pixels.
 
-#### HTML
+The HTML is trivial, consisting only of the `<canvas>` element:
 
 ```html
 <canvas id="canvas"></canvas>
 ```
-
-#### JavaScript
 
 Since each pixel consists of four values, the `for` loop iterates by
 multiples of four. The array values associated with each pixel are R (red), G (green), B
@@ -124,17 +120,6 @@ manipulation with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipula
 ## Browser compatibility
 
 {{Compat}}
-
-### Gecko-specific notes
-
-- Starting with {{geckoRelease("5.0")}}:
-
-  - `createImageData()` now correctly returns at least one pixel's worth
-    of image data if a rectangle smaller than one pixel is specified.
-  - Specifying non-finite values when calling `createImageData()` now
-    properly throws a `NOT_SUPPORTED_ERR` exception.
-  - `createImageData()` now handles negative arguments in accordance with
-    the specification, by flipping the rectangle around the appropriate axis.
 
 ## See also
 

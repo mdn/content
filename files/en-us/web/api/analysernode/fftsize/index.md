@@ -25,9 +25,12 @@ analyserNode.fftSize = newValue;
 
 An unsigned integer, representing the window size of the FFT, given in number of samples. A higher value will result in more details in the frequency domain but fewer details in the time domain.
 
-Must be a power of 2 between <math><semantics><msup><mn>2</mn><mn>5</mn></msup><annotation encoding="TeX">2^5</annotation></semantics></math> and <math><semantics><msup><mn>2</mn><mn>15</mn></msup><annotation encoding="TeX">2^15</annotation></semantics></math>, so one of: `32`, `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`, `16384`, and `32768`. Defaults to `2048`.
+Must be a power of 2 between 2^5 and 2^15, so one of: `32`, `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`, `16384`, and `32768`. Defaults to `2048`.
 
-**Note**: If its value is not a power of 2, or it is outside the specified range, a {{domxref("DOMException")}} with the name `IndexSizeError` is thrown.
+### Exceptions
+
+: `IndexSizeError` {{domxref("DOMException")}}
+  : - Thrown if the value set is not a power of 2, or is outside the allowed range.
 
 ## Example
 
@@ -40,7 +43,7 @@ var analyser = audioCtx.createAnalyser();
   ...
 
 analyser.fftSize = 2048;
-var bufferLength = analyser.frequencyBinCount ;
+var bufferLength = analyser.frequencyBinCount;
 var dataArray = new Uint8Array(bufferLength);
 analyser.getByteTimeDomainData(dataArray);
 
