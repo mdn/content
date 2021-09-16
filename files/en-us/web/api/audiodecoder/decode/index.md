@@ -31,7 +31,7 @@ AudioDecoder.decode(chunk)
 ### Exceptions
 
 - {{domxref("DOMException")}} `InvalidStateError`
-  - : Thrown if the {{domxref("AudioEncode.state","state")}} is not `"configured"`.
+  - : Thrown if the {{domxref("AudioDecoder.state","state")}} is not `"configured"`.
 - {{domxref("DOMException")}} `DataError`
   - : Thrown if the `chunk` is unable to be decoded due to relying on other frames for decoding.
 
