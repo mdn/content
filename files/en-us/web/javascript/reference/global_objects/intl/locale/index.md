@@ -41,6 +41,8 @@ Traditionally, the Intl API used strings to represent locales, just as Unicode d
   - : Returns the collation type for the `Locale`, which is used to order strings according to the locale's rules.
 - {{jsxref("Intl/Locale/hourCycle", "Intl.Locale.prototype.hourCycle")}}
   - : Returns the time keeping format convention used by the locale.
+- {{jsxref("Intl/Locale/hourCycles", "Intl.Locale.prototype.hourCycles")}}
+  - : Returns an {{jsxref("Array")}} of hour cycle identifiers, indicating either the 12-hour format ("h11", "h12") or the 24-hour format ("h23", "h24").
 - {{jsxref("Intl/Locale/language", "Intl.Locale.prototype.language")}}
   - : Returns the language associated with the locale.
 - {{jsxref("Intl/Locale/numberingSystem", "Intl.Locale.prototype.numberingSystem")}}
