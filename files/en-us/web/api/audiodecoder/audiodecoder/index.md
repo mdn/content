@@ -23,9 +23,9 @@ new AudioDecoder(init);
 - `init`
   - : A dictionary object containing two required callbacks.
     - `output`
-      - : A callback which is passed a single argument of an {{domxref("AudioData")}} object, otherwise `undefined`.
+      - : A callback which is passed a single argument of an {{domxref("AudioData")}} object.
     - `error`
-      - : A callback which is passed a single argument of the error that has been thrown, otherwise `undefined`.
+      - : A callback which is passed a single argument of the error that has been thrown.
 
 ## Examples
 
