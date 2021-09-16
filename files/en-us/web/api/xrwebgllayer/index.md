@@ -31,6 +31,8 @@ Although `XRWebGLLayer` is currently the only type of framebuffer layer supporte
 
 - {{domxref('XRWebGLLayer.antialias', "antialias")}} {{ReadOnlyInline}}
   - : A Boolean value indicating whether or not the WebGL context's framebuffer supports anti-aliasing. The specific type of anti-aliasing is determined by the {{Glossary("user agent")}}.
+- {{domxref('XRWebGLLayer.fixedFoveation', "fixedFoveation")}}
+  - : A number indicating the amount of foveation used by the XR compositor. Fixed Foveated Rendering (FFR) renders the edges of the eye textures at a lower resolution than the center and reduces the GPU load.
 - {{domxref('XRWebGLLayer.framebuffer', "framebuffer")}} {{ReadOnlyInline}}
   - : Returns a {{domxref('WebGLFramebuffer')}} suitable for passing into the {{domxref("WebGLRenderingContext.bindFrameBuffer", "bindFrameBuffer()")}} method.
 - {{domxref('XRWebGLLayer.framebufferWidth', "framebufferWidth")}} {{ReadOnlyInline}}
