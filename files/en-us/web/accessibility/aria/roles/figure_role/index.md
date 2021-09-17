@@ -13,25 +13,22 @@ tags:
 ---
 The ARIA `figure` role can be used to identify a figure inside page content where appropriate semantics do not already exist. A figure is generally considered to be one or more images, code snippets, or other content that puts across information in a different way to a regular flow of text.
 
-```html
-<div role="figure" aria-labelledby="caption">
-  <img src="image.png"
-      alt="full alternative image description">
-  <p id="caption">Figure 1: The caption</p>
-</div>
-```
-
-In the above example, we have a figure that consists of two separate content items — an image and a caption. This is wrapped by a {{htmlelement("div")}} element that identifies the content as a figure using `role="figure"`.
-
-Instead of using ARIA to create a figure, consider using the native, semantic [HTML \<figure> element](/en-US/docs/Web/HTML/Element/figure). along with the [\<figcaption> element](/en-US/docs/Web/HTML/Element/figcaption).  See {{anch("Best practices")}} below.
-
 ## Description
 
 A `figure` is a perceivable section of content that typically contains a graphical document, images, code snippets, or example text. The parts of a figure MAY be user-navigable. Any content that should be grouped together and consumed as a figure (which could include images, video, audio, code snippets, or other content) can be identified as a figure using `role="figure"`.
 
-There are no hard and fast rules about how you should write your figure content. You should make sure that it is accessible just like any other content. For example, make sure it is perceivable by users of assistive technology, navigable by keyboard as well as mouse, and so on.
+```html
+<div role="figure" aria-labelledby="caption">
+  <img src="image.png"
+      alt="put image description here">
+  <p id="caption">Figure 1: The caption</p>
+</div>
+```
 
-You can add a caption or label to your figure in a number of ways. You could add an ID to an element containing content that describes the figure, and then reference that ID inside an appropriate attribute on the figure to associate the figure with the label:
+In the above example, we have a figure that consists of two separate content items — an image and a caption. This is wrapped by a {{htmlelement("div")}} element that identifies the content as a figure using `role="figure"`. 
+
+For HTML, use the {{HTMLElement('figure')}} and {{HTMLElement('figcaption')}} elements. The figcaption will serve as the accessible name for the figure.  When not using HTML, or when retrofitting legacy HTML, use the `aria-labelledby` on the figure, pointing to the figure's caption.
+If there is no visible caption, `aria-label` can be used.
 
 ```html
 <div role="figure" aria-labelledby="figure-1">
@@ -42,35 +39,19 @@ You can add a caption or label to your figure in a number of ways. You could add
 
 - Use `aria-labelledby` when the text is a concise label.
 - Use `aria-describedby` when the text is a longer description.
+- Use `aria-label` when there is no visible figure caption.
 
-Again, this can be done semantically, without ARIA, with HTML's [`<figure>`](/en-US/docs/Web/HTML/Element/figure) and [`<figcaption>`](/en-US/docs/Web/HTML/Element/figcaption) elements
+This can be done semantically, without ARIA, with HTML's {{HTMLElement('figure')}} element along with {{HTMLElement('figcaption')}}. 
 
 ```html
 <figure>
-  ...
-  <figcaption>Text that describes the figure.</figcaption>
+  <img src="image.png"
+      alt="put image description here">
+  <caption>Figure 1: The caption</caption>
 </figure>
 ```
 
-If you don't want the label to be visible on the screen, but still want to provide a descriptive label for assistive technology users, you can use the `aria-label` attribute on the figure container:
-
-```html
-<div role="figure" aria-label="Text that describes the figure.">
-  ...
-</div>
-```
-
-You can use the aria-label with \<figure> as well:
-
-```html
-<figure aria-label="Text that describes the figure.">
-  ...
-</figure>
-```
-
-Generally, you should reference the figure from the main text, but the figure need not be displayed at the same location as the referencing element.
-
-<div class="note"><p><strong>Note</strong>:<span class="ILfuVd yZ8quc"> If at all possible in your work, you should use the appropriate semantic HTML elements to mark up a figure and its caption — {{htmlelement("figure")}} and {{htmlelement("figcaption")}}. See {{anch("Best practices")}} for a full example.</span></p></div>
+> **Note:** If at all possible in your work, you should use the appropriate semantic HTML elements to mark up a figure and its caption — {{htmlelement("figure")}} and {{htmlelement("figcaption")}}. 
 
 ### Associated WAI-ARIA roles, states, and properties
 
@@ -93,6 +74,7 @@ No role specific JavaScript requirements. If you don't have control over the HTM
 
 We could extend the initial example on the page to also identify a paragraph that provides a descriptive label for the figure by referencing its ID in `aria-labelledby`:
 
+```html
     <div role="figure" aria-labelledby="figure-1">
       <img src="diagram.png"
            alt="diagram showing the four layers of awesome and their relative priority order —
@@ -102,12 +84,13 @@ We could extend the initial example on the page to also identify a paragraph tha
       `</pre>
       <p id="figure-1">Figure 1: The four layers of awesome.</p>
     </div>
+```
 
 ## Best practices
 
 Only use `role="figure"` if you have to — for example if you don't have control over your HTML but are able to improve accessibility dynamically after the fact with JavaScript.
 
-If at all possible, you<span class="ILfuVd yZ8quc"> should use the appropriate semantic HTML elements to mark up a figure and its caption — {{htmlelement("figure")}} and {{htmlelement("figcaption")}}. For example, our above example should be rewritten as follows:</span>
+If at all possible, you should use the appropriate semantic HTML elements to mark up a figure and its caption — {{htmlelement("figure")}} and {{htmlelement("figcaption")}}. For example, our above example should be rewritten as follows:
 
 ```html
 <figure>
@@ -126,6 +109,9 @@ If at all possible, you<span class="ILfuVd yZ8quc"> should use the appropriate s
 | Specification                                        | Status                   |
 | ---------------------------------------------------- | ------------------------ |
 | {{SpecName("ARIA","#figure","figure")}} | {{Spec2('ARIA')}} |
+| {{SpecName("ARIA Authoring Practices 1.2","#describing_with_captions","Describing with captions")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+
+
 
 
 
