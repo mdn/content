@@ -28,10 +28,9 @@ browser-compat: svg.attributes.presentation.stroke-linejoin
   <li>{{SVGElement('tspan')}}</li>
 </ul>
 
-<div id="topExample">
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+<h2>Example</h2>
+
+<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
 
 <pre class="brush: html">&lt;svg viewBox="0 0 18 12" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;!--
@@ -89,8 +88,7 @@ browser-compat: svg.attributes.presentation.stroke-linejoin
 &lt;/svg&gt;
 </pre>
 
-<p>{{EmbedLiveSample('topExample', '100%', 400)}}</p>
-</div>
+<p>{{EmbedLiveSample("Example", '100%', 400)}}</p>
 
 <h2 id="Usage_context">Usage context</h2>
 
@@ -116,8 +114,6 @@ browser-compat: svg.attributes.presentation.stroke-linejoin
 <div class="notecard note"><strong>Note:</strong> the <code>arcs</code> value as been introduced in SVG2 and it isn't widely supported yet, see <a href="#browser_compatibility">Browser compatibility</a> below for details.</div>
 
 <p>The <code>arcs</code> value indicates that an arcs corner is to be used to join path segments. The arcs shape is formed by extending the outer edges of the stroke at the join point with arcs that have the same curvature as the outer edges at the join point.</p>
-
-<h4 id="Example">Example</h4>
 
 <div class="hidden">
 <pre class="brush: css">html,body,svg { height:100% }</pre>
@@ -146,8 +142,6 @@ browser-compat: svg.attributes.presentation.stroke-linejoin
 <h3 id="bevel">bevel</h3>
 
 <p>The <code>bevel</code> value indicates that a bevelled corner is to be used to join path segments.</p>
-
-<h4 id="Example_2">Example</h4>
 
 <div class="hidden">
 <pre class="brush: css">html,body,svg { height:100% }</pre>
@@ -178,8 +172,6 @@ browser-compat: svg.attributes.presentation.stroke-linejoin
 <p>The <code>miter</code> value indicates that a sharp corner is to be used to join path segments. The corner is formed by extending the outer edges of the stroke at the tangents of the path segments until they intersect.</p>
 
 <div class="notecard note"><strong>Note:</strong> If the {{SVGAttr('stroke-miterlimit')}} is exceeded, the line join falls back to <code>bevel</code>.</div>
-
-<h4 id="Example_3">Example</h4>
 
 <div class="hidden">
 <pre class="brush: css">html,body,svg { height:100% }</pre>
@@ -223,8 +215,6 @@ browser-compat: svg.attributes.presentation.stroke-linejoin
 
 <p>If the {{SVGAttr('stroke-miterlimit')}} is exceeded, the miter is clipped at a distance equal to half the {{SVGAttr('stroke-miterlimit')}} value multiplied by the stroke width from the intersection of the path segments. This provides a better rendering than <code>miter</code> on very sharp join or in case of an animation.</p>
 
-<h4 id="Example_4">Example</h4>
-
 <div class="hidden">
 <pre class="brush: css">html,body,svg { height:100% }</pre>
 </div>
@@ -261,8 +251,6 @@ browser-compat: svg.attributes.presentation.stroke-linejoin
 <h3 id="round">round</h3>
 
 <p>The <code>round</code> value indicates that a round corner is to be used to join path segments.</p>
-
-<h4 id="Example_5">Example</h4>
 
 <div class="hidden">
 <pre class="brush: css">html,body,svg { height:100% }</pre>
