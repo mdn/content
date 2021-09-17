@@ -43,7 +43,7 @@ A string with a language-sensitive representation of the given number.
 
 When formatting large numbers of numbers, it is better to create a
 {{jsxref("Intl.NumberFormat")}} object and use the function provided by its
-{{jsxref("Intl/NumberFormat/format")}} property.
+{{jsxref("Intl/NumberFormat/format", "format")}} property.
 
 ## Examples
 
