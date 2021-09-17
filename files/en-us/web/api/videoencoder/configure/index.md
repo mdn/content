@@ -11,7 +11,7 @@ browser-compat: api.VideoEncoder.configure
 ---
 {{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
 
-The **`configure`** method of the {{domxref("VideoEncoder")}} interface enqueues a control message to configure the audio decoder for decoding chunks.
+The **`configure()`** method of the {{domxref("VideoEncoder")}} interface enqueues a control message to configure the audio decoder for decoding chunks.
 
 ## Syntax
 
@@ -34,27 +34,27 @@ AudioDecoder.configure(config)
     - `displayHeight`{{Optional_Inline}}
       - : An integer representing the vertical dimension of each output {{domxref("EncodedVideoChunk")}} in pixels when displayed.
     - `hardwareAcceleration`
-      - : An hint that configures the hardware accelaration method of this codec. One of:
+      - : A hint that configures the hardware acceleration method of this codec. One of:
         - `"no-preference"`
         - `"prefer-hardware"`
         - `"prefer-software"`
     - `bitrate`
       - : An integer containing the average bitrate of the encoded video in units of bits per second.
     - `framerate`
-      - : An integer containing the expected framerate in frames per second.
+      - : An integer containing the expected frame rate in frames per second.
     - `alpha`
-      - : A string indicating whether the alpha component of the VideoFrame inputs should be kept or discarded prior to encoding, defaults to `"discard"`. One of:
-        - `"discard"`
+      - : A string indicating whether the alpha component of the `VideoFrame` inputs should be kept or discarded prior to encoding. One of:
+        - `"discard"` (default)
         - `"keep"`
     - `scalabilityMode`
       - : A {{domxref("DOMString", "string")}} containing an encoding scalability mode identifier as defined in [WebRTC](https://w3c.github.io/webrtc-svc/#scalabilitymodes*).
     - `bitrateMode`
-      - : A string containing a bitrate mode, defaulting to `"variable"`. One of:
+      - : A string containing a bitrate mode. One of:
         - `"constant"`
-        - `"variable"`
+        - `"variable"` (default)
     - `latencyMode`
-      - : A string containing a value that configures the latency behavior of this codec, defaulting to `"quality"`. One of:
-        - `"quality"`
+      - : A string containing a value that configures the latency behavior of this codec. One of:
+        - `"quality"` (default)
         - `"realtime"`
 
 
