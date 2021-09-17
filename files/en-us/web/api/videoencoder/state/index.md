@@ -11,7 +11,7 @@ browser-compat: api.VideoEncoder.state
 ---
 {{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
 
-The **`state`** property of the {{domxref("VideoEncoder")}} interface returns the current state of the underlying codec.
+The **`state`** read-only property of the {{domxref("VideoEncoder")}} interface returns the current state of the underlying codec.
 
 ## Value
 
