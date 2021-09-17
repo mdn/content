@@ -11,23 +11,22 @@ tags:
   - document structure role
 ---
 
+The `definition` ARIA role indicates the element is a definition of a term or concept. 
+
 ## Description
 
-To provide an accessible name, reference the term being defined with `role="term"`, using `aria-labelledby`.
+The `definition` ARIA role can be included an element that is a definition of a term or concept, similar to the native {{HTMLElement('dfn')}} element. To associate the defintion with the `term` being defined, and to provide an accessible name, reference the term being defined with `role="term"`, using `aria-labelledby`.
 
-### Associated WAI-ARIA roles, states, and properties
+```html
+<p><span role="term">Mansplaining</span>, <span role="definition">a portmanteau of "man" and "explain", is the patronizing act of explaining without being asked to do so, to someone already learned on the topic, often after someone has already explained it</span>. </p>
+```
 
-### Keyboard interactions
+> **Note:** Instead of a `<span>` with the [`term`](/en-US/docs/Web/Accessibility/ARIA/Roles/term_role) and `definition` roles, use the {{HTMLElement('dfn')}} element. **Always use native element if available**
 
-### Required JavaScript features
 
-## Examples
-
-## Accessibility Concerns
-
-## Best Practices
-
-### Prefer HTML
+```html
+<p><dfn>Mansplaining</dfn>, a portmanteau of "man" and "explain", is the patronizing act of explaining without being asked to do so, to someone already learned on the topic, often after someone has already explained it. </p>
+```
 
 ## Specifications
 
@@ -39,6 +38,11 @@ To provide an accessible name, reference the term being defined with `role="term
 
 ## See Also
 
+- [The `term` role](/en-US/docs/Web/Accessibility/ARIA/Roles/term_role)
+- The {{HTMLElement('dfn')}} element
+- The {{HTMLElement('dd')}} element
+- The {{HTMLElement('dl')}} element
+- The {{HTMLElement('dt')}} element
 
 <section id="Quick_links">
 
