@@ -8,17 +8,17 @@ tags:
   - document structure role
   - Reference
 ---
-The `heading` role defines this element as a heading to a page or section. To give the page more structure, a level should also be provided to indicate relationships between sections.
+The `heading` role defines this element as a heading to a page or section, with the `aria-level` attribute providing for more structure.
 
 ## Description
 
-The heading role indicates to assistive technologies that this element should be treated like a heading. Screen readers would read the text and indicate that it is formatted like a heading. In addition, the level tells assistive technologies which part of the page structure this heading represents. A level 1 heading usually indicates the main heading of a page, a level 2 heading the first subsection, a level 3 is a subsection of that, and so on.
+The heading role indicates to assistive technologies that this element should be treated like a heading. Screen readers would read the text and indicate that it is formatted like a heading. In addition, the level tells assistive technologies which part of the page structure this heading represents. A level 1 heading, indicated with `aria-level="1"`, usually indicates the main heading of a page, a level 2 heading, defined with `aria-level="2"` the first subsection, a level 3 is a subsection of that, and so on.
 
 ```html
 <div role="heading" aria-level="1">This is a main page heading</div>
 ```
 
-This defines the text in the `div` to be the main heading of the page, indicated by being level 1 via the aria-level attribute. Opt for using the {{HTMLElement('h1')}} element instead.
+This defines the text in the `div` to be the main heading of the page, indicated by being level 1 via the aria-level attribute. Opt for using the {{HTMLElement('h1')}} (thru {{HTMLElement('h6')}}) element instead.
 
 ```html
 <h1>This is a main page heading</h1>
