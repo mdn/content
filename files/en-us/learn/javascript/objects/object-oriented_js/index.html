@@ -85,8 +85,10 @@ tags:
 
 <ol>
  <li>Let's start by looking at how you could define a person with a normal function. Add this function within the <code>script</code> element:
-
-  <pre class="brush: js">function createNewPerson(name) {
+  
+  <pre class="brush: js">
+  // Factory Function
+  function createNewPerson(name) {
   const obj = {};
   obj.name = name;
   obj.greeting = function() {
