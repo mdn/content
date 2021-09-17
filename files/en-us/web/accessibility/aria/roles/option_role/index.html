@@ -1,0 +1,107 @@
+---
+title: 'ARIA: option role'
+slug: Web/Accessibility/ARIA/Roles/option_role
+tags:
+  - ARIA
+  - Accessibility
+---
+
+<p>The <code>option</code> role is used for selectable items in a <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role">listbox</a>.</p>
+
+<h2 id="Description">Description</h2>
+
+<p>The <code>option</code> role is used to identify selections a user can make in a <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role">listbox</a>. These options are similar to the {{HTMLElement('option')}} elements in a {{HTMLElement('select')}} element, but they can contain images.</p>
+
+
+<p>All selected options should have <code>aria-selected</code> set to <code>true</code> and all options that are not selected should have <code>aria-selected</code> set to <code>false</code>. If an option is not selectable, <code>aria-selected</code> should be omitted entirely.</p>
+
+<p>The <code>option</code> role should only be used to identify selections in a <code>listbox</code> so that they can be understood properly by accessibility tools. They must also have an accessible name as the content between its tags or through ARIA with <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute">aria-label</a> or <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute">aria-labelled-by</a></p>
+
+<p>It is highly recommended to use a {{HTMLElement('select')}} element or an  {{HTMLElement('input')}} element with the <code>checkbox</code> or <code>radio</code> type instead, when possible. These native HTML elements provide keyboard interactivity to manage focus for all the descendants for you automatically.</p>
+
+<h3 id="Associated_ARIA_roles_states_and_properties">Associated ARIA roles, states, and properties</h3>
+
+<h4 id="Associated_Roles">Associated Roles</h4>
+
+<dl>
+	<dt><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role">listbox</a></dt>
+	<dd>An <code>option</code> <i>must</i> be contained in or owned by a <code>listbox</code></dd>
+	<dt><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Listitem_role">listitem</a></dt>
+	<dd>An item in a <code>list</code></dd>
+</dl>
+
+<h4 id="States_and_Properties">States and Properties</h4>
+<!-- 
+<dl>
+	<dt>aria-activedescendant</dt>
+	<dd>Holds the <code>id</code> string of the currently active element within the listbox. If that's an option element, then that would be the <code>id</code> of the most recently interacted with option, regardless of whether that option has an <code>aria-selected</code> value of <code>true</code> or not. Takes the value of only one <code>id</code>, even in a multiselectable listbox. If the <code>id</code> does not refer to a DOM descendant of the listbox, then that <code>id</code> must be included among the IDs in the <code>aria-owns</code> attribute.</dd>
+	<dt>aria-owns</dt>
+	<dd>This is a space-separated list of element IDs which are not DOM child elements of the listbox. IDs listed here cannot also be listed in <code>aria-owns</code> attributes of any other elements.</dd>
+	<dt>aria-multiselectable</dt>
+	<dd>Include and set to <code>true</code> if the user can select more than one option. If set to <code>true</code>, <em>every</em> selectable option should have an <code>aria-selected</code> attribute included and set to <code>true</code> or <code>false</code>.  Options which are <em>not</em> selectable <em>should not</em> have the <code>aria-selected</code> attribute.</dd>
+	<dd>If <code>false</code> or omitted, only the currently selected option, if any option is selected, needs the <code>aria-selected</code> attribute, and it must be set to <code>true</code>.</dd>
+	<dt>aria-required</dt>
+	<dd>A Boolean attribute which indicates that an option with a non-empty string value must be selected.</dd>
+	<dt>aria-readonly</dt>
+	<dd>The user cannot change which options are selected or unselected, but the listbox is otherwise operable.</dd>
+	<dt>aria-label</dt>
+	<dd>A human-readable string value which identifies the listbox. If there's a visible label, then <code>aria-labelledby</code> should be used instead to refer to that label.</dd>
+	<dt>aria-labelledby</dt>
+	<dd>Identifies the visible element or elements in a space-separated list of element IDs which identify the listbox. If there's no visible label, then <code>aria-label</code> should be used instead to include a label. (Note: "labelled", with two L's, is the correct spelling based on the accessibility API conventions.)</dd>
+	<dt>aria-roledescription</dt>
+	<dd>A human-readable string value which more clearly identifies the role of the listbox. Screen readers will often read this value to the user after reading the label (if there is one), in place of saying "listbox".</dd>
+</dl> -->
+
+<p>(For further details and a full list of ARIA states and properties see the <a href="https://www.w3.org/TR/wai-aria-1.1/#option">ARIA <code>option</code> (role)</a> documentation.)</p>
+
+<h3 id="Keyboard_interactions">Keyboard interactions</h3>
+ 
+
+<h3 id="Required_JavaScript_features">Required JavaScript features</h3>
+
+<h2 id="Examples">Examples</h2>
+
+<h2 id="Best_practices">Best practices</h2>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table>
+	<tbody>
+		<tr>
+			<th scope="col">Specification</th>
+			<th scope="col">Status</th>
+		</tr>
+		<tr>
+			<td>{{SpecName("ARIA","#option","ARIA option role")}}</td>
+			<td>{{Spec2('ARIA')}}</td>
+		</tr>
+		<tr>
+			<td>{{SpecName("ARIA Authoring Practices","#Option","Option Role")}}</td>
+			<td>{{Spec2('ARIA Authoring Practices')}}</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2 id="Screen_reader_support">Screen reader support</h2>
+
+<p>TBD</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+	<li>HTML {{HTMLElement('select')}} element</li>
+	<li>HTML {{HTMLElement('label')}} element</li>
+	<li>HTML {{HTMLElement('option')}} element</li>
+	<li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role">ARIA: <code>combobox</code> role</a></li>
+	<li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/option_role">ARIA: <code>option</code> role</a></li>
+	<li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/List_role">ARIA: <code>list</code> role</a></li>
+	<li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Listitem_role">ARIA: <code>listitem</code> role</a></li>
+	<li><a href="https://www.w3.org/TR/wai-aria-practices/#Listbox">ARIA Best Practices – Listbox</a></li>
+	<li><a href="https://www.w3.org/TR/wai-aria-1.1/#listbox">ARIA Role Model – Listbox</a></li>
+</ul>
+
+<section id="Quick_links">
+	<ol>
+	  <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}</li>
+	</ol>
+</section>
