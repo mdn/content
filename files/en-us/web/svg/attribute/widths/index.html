@@ -38,9 +38,10 @@ browser-compat: svg.elements.font-face.widths
 
 <dl>
  <dt><code>&lt;number&gt;</code></dt>
- <dd>This value is a comma-separated list of UCS range values as defined in <a class="noxref" href="https://www.iso.org/standard/29819.html" rel="biblioentry"><span class="normref">ISO 10646</span></a>, each followed by one or more glyph widths.</dd>
- <dd>If this attribute is used, the {{SVGAttr("units-per-em")}} attribute must also be used.
- <p>If the range is omitted, a range of U+0-7FFFFFFF is assumed which covers all characters and their glyphs. If not enough glyph widths are given, the last in the list is replicated to cover that range. If too many widths are provided, the extras are ignored.</p>
+ <dd>
+   <p>This value is a comma-separated list of UCS range values as defined in <a class="noxref" href="https://www.iso.org/standard/29819.html" rel="biblioentry"><span class="normref">ISO 10646</span></a>, each followed by one or more glyph widths.</p>
+   <p>If this attribute is used, the {{SVGAttr("units-per-em")}} attribute must also be used.</p>
+   <p>If the range is omitted, a range of U+0-7FFFFFFF is assumed which covers all characters and their glyphs. If not enough glyph widths are given, the last in the list is replicated to cover that range. If too many widths are provided, the extras are ignored.</p>
  </dd>
 </dl>
 
