@@ -60337,14 +60337,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/MediaStream/ended": {
-    "modified": "2020-10-15T21:49:07.309Z",
-    "contributors": [
-      "fscholz",
-      "jpmedley",
-      "Sheppy"
-    ]
-  },
   "Web/API/MediaStream/getAudioTracks": {
     "modified": "2020-10-15T22:09:49.250Z",
     "contributors": [
