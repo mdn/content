@@ -37,7 +37,7 @@ VideoDecoder.decode(chunk)
 
 ## Examples
 
-The following example demonstrates how to use the `decode()` method to decode {{domxref("EncodedVideoChunks")}} created from encoded video data.
+The following example demonstrates how to use the `decode()` method to decode {{domxref("EncodedVideoChunk")}} objects created from encoded video data.
 
 ```js
 let responses = await downloadVideoChunksFromServer(timestamp);

@@ -10,7 +10,7 @@ browser-compat: api.VideoDecoder
 ---
 {{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
 
-The **`VideoDecoder`** interface of the {{domxref('WebCodecs API','','',' ')}} decodes chunks of video.
+The **`VideoDecoder`** interface of the {{domxref('WebCodecs API','','','true')}} decodes chunks of video.
 
 ## Constructor
 
@@ -22,7 +22,7 @@ The **`VideoDecoder`** interface of the {{domxref('WebCodecs API','','',' ')}} d
 - {{domxref("VideoDecoder.decodeQueueSize")}}{{ReadOnlyInline}}
   - : An integer representing the number of decode queue requests.
 - {{domxref("VideoDecoder.state")}}{{ReadOnlyInline}}
-  - : Represents the state of the underlying codec and whether it is configured for decoding.
+  - : Indicates whether the underlying codec is configured for decoding.
 
 ## Methods
 

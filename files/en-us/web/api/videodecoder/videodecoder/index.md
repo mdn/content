@@ -21,15 +21,15 @@ new VideoDecoder();
 ### Parameters
 
 - `init`
-  - : A dictionary object containing two required callbacks.
+  - : A dictionary object containing two callbacks.
     - `output`
-      - : A callback which is passed a single argument of an {{domxref("VideoFrame")}} object.
+      - : A callback which takes a {{domxref("VideoFrame")}} object as its only argument.
     - `error`
-      - : A callback which is passed a single argument of the error that has been thrown.
+      - : A callback which takes an {{jsxref("Error")}} object as its only argument.
 
 ## Examples
 
-In the following example an `VideoDecoder` is created with the two required callback functions, one to deal with the decoded frame and the other to handle errors.
+In the following example a `VideoDecoder` is created with the two required callback functions, one to deal with the decoded frame and the other to handle errors.
 
 ```js
 const videoDecoder = new VideoDecoder({

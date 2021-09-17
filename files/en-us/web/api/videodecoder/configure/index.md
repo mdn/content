@@ -11,7 +11,7 @@ browser-compat: api.VideoDecoder.configure
 ---
 {{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
 
-The **`configure`** method of the {{domxref("VideoDecoder")}} interface enqueues a control message to configure the audio decoder for decoding chunks.
+The **`configure()`** method of the {{domxref("VideoDecoder")}} interface enqueues a control message to configure the audio decoder for decoding chunks.
 
 ## Syntax
 
@@ -22,7 +22,7 @@ AudioDecoder.configure(config)
 ### Parameters
 
 - `config`
-  - : A dictionary object containing the following members:
+  - : An object containing the following members:
     - `codec`
       - : A {{domxref("DOMString","string")}} containing a [valid codec string](https://www.w3.org/TR/webcodecs-codec-registry/#audio-codec-registry).
     - `description`{{Optional_Inline}}
@@ -36,7 +36,7 @@ AudioDecoder.configure(config)
     - `displayAspectHeight`{{Optional_Inline}}
       - : An integer representing the vertical dimension of the {{domxref("VideoFrame")}} in pixels when displayed.
     - `colorSpace`
-      - : A dictionary object. representing a {{domxref("VideoColorSpace")}}, containing the following members:
+      - : An object. representing a {{domxref("VideoColorSpace")}}, containing the following members:
         - `primaries`
           - : A string representing the color gamut of the video sample. One of:
             - `"bt709"`
@@ -54,15 +54,16 @@ AudioDecoder.configure(config)
             - `"bt470bg"`
             - `"smpte170m"`
     - `hardwareAcceleration`
-      - : An hint as to the hardware accelaration method to use. One of:
+      - : A hint as to the hardware acceleration method to use. One of:
         - `"no-preference"`
         - `"prefer-hardware"`
         - `"prefer-software"`
     - `optimizeForLatency`
-      - : An boolean, if `true` is a hint that the selected decoder should be optimized to minimize the number of {{domxref("EncodedVideoChunk")}} objects that have to be decoded before a {{domxref("VideoFrame")}} is output.
+      - : A boolean. If `true`this is a hint that the selected decoder should be optimized to minimize the number of {{domxref("EncodedVideoChunk")}} objects that have to be decoded before a {{domxref("VideoFrame")}} is output.
 
 
 > **Note:** The registrations in the [WebCodecs Codec Registry](https://www.w3.org/TR/webcodecs-codec-registry/#audio-codec-registry) link to a specification detailing whether and how to populate the optional `description` member.
+
 ### Return Value
 
 {{jsxref("Undefined")}}.
