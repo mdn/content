@@ -175,7 +175,13 @@ startTime.addEventListener("input", function() {
 
 <h3 id="attr-step"><code id="step">step</code></h3>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/number", "step-include")}}</p>
+<p>The <code>step</code> attribute is a number that specifies the granularity that the value must adhere to, or the special value <code>any</code>, which is described below. Only values which are equal to the basis for stepping (<code>{{anch("min")}}</code> if specified, {{htmlattrxref("value", "input")}} otherwise, and an appropriate default value if neither of those is provided) are valid.</p>
+
+<p>A string value of <code>any</code> means that no stepping is implied, and any value is allowed (barring other constraints, such as <code>{{anch("min")}}</code> and <code>{{anch("max")}}</code>).</p>
+
+<div class="note">
+<p><strong>Note:</strong> When the data entered by the user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round to the nearest valid value, preferring numbers in the positive direction when there are two equally close options.</p>
+</div>
 
 <p>For <code>time</code> inputs, the value of <code>step</code> is given in seconds, with a scaling factor of 1000 (since the underlying numeric value is in milliseconds). The default value of <code>step</code> is 60, indicating 60 seconds (or 1 minute, or 60,000 milliseconds).</p>
 
