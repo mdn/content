@@ -18,7 +18,9 @@ browser-compat: html.elements.input.input-password
 ---
 <div>{{HTMLRef("Input_types")}}</div>
 
-<p><span class="seoSummary"><code>&lt;input&gt;</code> elements of type <strong><code>password</code></strong> provide a way for the user to securely enter a password.</span> The element is presented as a one-line plain text editor control in which the text is obscured so that it cannot be read, usually by replacing each character with a symbol such as the asterisk ("*") or a dot ("•"). This character will vary depending on the {{Glossary("user agent")}} and {{Glossary("OS")}}.</p>
+<p><code>&lt;input&gt;</code> elements of type <strong><code>password</code></strong> provide a way for the user to securely enter a password.</p>
+
+<p>The element is presented as a one-line plain text editor control in which the text is obscured so that it cannot be read, usually by replacing each character with a symbol such as the asterisk ("*") or a dot ("•"). This character will vary depending on the {{Glossary("user agent")}} and {{Glossary("OS")}}.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-password.html", "tabbed-standard")}}</div>
 
@@ -160,12 +162,10 @@ browser-compat: html.elements.input.input-password
  <dd>Allow the browser or password manager to automatically enter a new password for the site; this is used on "change your password" and "new user" forms, on the field asking the user for a new password. The new password may be generated in a variety of ways, depending on the password manager in use. It may fill in a new suggested password, or it might show the user an interface for creating one.</dd>
 </dl>
 
-<div id="Autocomplete_sample1">
 <pre class="brush: html">&lt;label for="userPassword"&gt;Password:&lt;/label&gt;
 &lt;input id="userPassword" type="password" autocomplete="current-password"&gt;</pre>
-</div>
 
-<p>{{EmbedLiveSample("Autocomplete_sample1", 600, 40)}}</p>
+<p>{{EmbedLiveSample("Allowing_autocomplete", 600, 40)}}</p>
 
 <h3 id="Making_the_password_mandatory">Making the password mandatory</h3>
 
@@ -225,14 +225,12 @@ browser-compat: html.elements.input.input-password
 
 <p>In this example, only values consisting of at least four and no more than eight hexadecimal digits are valid.</p>
 
-<div id="Validation_sample1">
 <pre class="brush: html">&lt;label for="hexId"&gt;Hex ID: &lt;/label&gt;
 &lt;input id="hexId" type="password" pattern="[0-9a-fA-F]{4,8}"
        title="Enter an ID consisting of 4-8 hexadecimal digits"
        autocomplete="new-password"&gt;</pre>
-</div>
 
-<p>{{EmbedLiveSample("Validation_sample1", 600, 40)}}</p>
+<p>{{EmbedLiveSample("Validation", 600, 40)}}</p>
 
 <h2 id="Examples">Examples</h2>
 

@@ -89,7 +89,7 @@ tags:
 
 <h2 id="The_display_property">The display property</h2>
 
-<p>The main methods for achieving page layout in CSS all involve specifying values for the <code>display</code> property. This property allows us to change the default way something displays. Everything in normal flow has a default value for <code>display</code>; i.e., a default way that elements are set to behave. For example, the fact that paragraphs in English display one below the other is due to the fact that they are styled with <code>display: block</code>. If you create a link around some text inside a paragraph, that link remains inline with the rest of the text, and doesn’t break onto a new line. This is because the {{htmlelement("a")}} element is <code>display: inline</code> by default.</p>
+<p>The main methods for achieving page layout in CSS all involve specifying values for the <code>display</code> property. This property allows us to change the default way something displays. Everything in normal flow has a default value for <code>display</code>; i.e., a default way that elements are set to behave. For example, the fact that paragraphs in English display one below the other is because they are styled with <code>display: block</code>. If you create a link around some text inside a paragraph, that link remains inline with the rest of the text, and doesn’t break onto a new line. This is because the {{htmlelement("a")}} element is <code>display: inline</code> by default.</p>
 
 <p>You can change this default display behavior. For example, the {{htmlelement("li")}} element is <code>display: block</code> by default, meaning that list items display one below the other in our English document. If we were to change the display value to <code>inline</code> they would display next to each other, as words would do in a sentence. The fact that you can change the value of <code>display</code> for any element means that you can pick HTML elements for their semantic meaning without being concerned about how they will look. The way they look is something that you can change.</p>
 
@@ -336,7 +336,7 @@ p {
 
 <p>Positioning allows you to move an element from where it would otherwise be placed in normal flow over to another location. Positioning isn’t a method for creating the main layouts of a page; it's more about managing and fine-tuning the position of specific items on a page.</p>
 
-<p>There are, however, useful techniques for obtaining specific layout patterns that rely on the {{cssxref("position")}} property. Understanding positioning also helps in understanding normal flow, and what it means to move an item out of normal flow.</p>
+<p>There are, however, useful techniques for obtaining specific layout patterns that rely on the {{cssxref("position")}} property. Understanding positioning also helps in understanding normal flow, and what it means to move an item out of the normal flow.</p>
 
 <p>There are five types of positioning you should know about:</p>
 
@@ -430,7 +430,7 @@ p {
 
 <h3 id="Absolute_positioning">Absolute positioning</h3>
 
-<p>Absolute positioning is used to completely remove an element from normal flow and instead position it using offsets from the edges of a containing block.</p>
+<p>Absolute positioning is used to completely remove an element from the normal flow and instead position it using offsets from the edges of a containing block.</p>
 
 <p>Going back to our original non-positioned example, we could add the following CSS rule to implement absolute positioning:</p>
 
@@ -484,7 +484,7 @@ p {
 
 <p>Fixed positioning removes our element from document flow in the same way as absolute positioning. However, instead of the offsets being applied from the container, they are applied from the viewport. Because the item remains fixed in relation to the viewport, we can create effects such as a menu that remains fixed as the page scrolls beneath it.</p>
 
-<p>For this example, our HTML containes three paragraphs of text so that we can scroll through the page, as well as a box with the property of <code>position: fixed</code>.</p>
+<p>For this example, our HTML contains three paragraphs of text so that we can scroll through the page, as well as a box with the property of <code>position: fixed</code>.</p>
 
 <pre class="brush: html">&lt;h1&gt;Fixed positioning&lt;/h1&gt;
 

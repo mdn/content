@@ -29,11 +29,6 @@ _This interface inherits properties from its parent, {{domxref("EventTarget")}}.
 
 - {{domxref("MediaStream.active")}} {{readonlyinline}}
   - : A Boolean value that returns `true` if the `MediaStream` is active, or `false` otherwise.
-- {{domxref("MediaStream.ended")}} {{readonlyInline}} {{deprecated_inline}}
-  - : A Boolean value set to `true` if the end of the stream has been reached. This has been removed from the specification; you should instead check the value of {{domxref("MediaStreamTrack.readyState")}} to see if its value is `ended` for the track or tracks you want to ensure have finished playing.
-
-<!---->
-
 - {{domxref("MediaStream.id")}} {{readonlyInline}}
   - : A {{domxref("DOMString")}} containing 36 characters denoting a universally unique identifier (UUID) for the object.
 

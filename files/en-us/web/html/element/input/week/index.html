@@ -19,7 +19,7 @@ browser-compat: html.elements.input.input-week
 ---
 <div>{{HTMLRef("Input_types")}}</div>
 
-<p><span class="seoSummary">{{HTMLElement("input")}} elements of type <strong><code>week</code></strong> create input fields allowing easy entry of a year plus the <a href="https://en.wikipedia.org/wiki/ISO_8601#Week_dates">ISO 8601 week number</a> during that year (i.e., week 1 to <a href="https://en.wikipedia.org/wiki/ISO_8601#Week_dates">52 or 53</a>).</span></p>
+<p>{{HTMLElement("input")}} elements of type <strong><code>week</code></strong> create input fields allowing easy entry of a year plus the <a href="https://en.wikipedia.org/wiki/ISO_8601#Week_dates">ISO 8601 week number</a> during that year (i.e., week 1 to <a href="https://en.wikipedia.org/wiki/ISO_8601#Week_dates">52 or 53</a>).</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-week.html", "tabbed-shorter")}}</div>
 
@@ -27,11 +27,11 @@ browser-compat: html.elements.input.input-week
 
 <p>In Chrome/Opera the <code>week</code> control provides slots to fill in week and year values, a pop-up calendar interface to select them more visually, and an "X" button to clear the control's value.</p>
 
-<p><img alt="" src="week-control-chrome.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="week-control-chrome.png"></p>
 
 <p>The Edge <code>week</code> control is somewhat more elaborate, opening up week and year pickers with sliding reels.</p>
 
-<p><img alt="" src="week-control-edge.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="week-control-edge.png"></p>
 
 <table class="properties">
  <tbody>
@@ -123,7 +123,13 @@ weekControl.value = '2017-W45';</pre>
 
 <h3 id="attr-step"><code id="step">step</code></h3>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/number", "step-include")}}</p>
+<p>The <code>step</code> attribute is a number that specifies the granularity that the value must adhere to, or the special value <code>any</code>, which is described below. Only values which are equal to the basis for stepping (<code>{{anch("min")}}</code> if specified, {{htmlattrxref("value", "input")}} otherwise, and an appropriate default value if neither of those is provided) are valid.</p>
+
+<p>A string value of <code>any</code> means that no stepping is implied, and any value is allowed (barring other constraints, such as <code>{{anch("min")}}</code> and <code>{{anch("max")}}</code>).</p>
+
+<div class="note">
+<p><strong>Note:</strong> When the data entered by the user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round to the nearest valid value, preferring numbers in the positive direction when there are two equally close options.</p>
+</div>
 
 <p>For <code>week</code> inputs, the value of <code>step</code> is given in weeks, with a scaling factor of 604,800,000 (since the underlying numeric value is in milliseconds). The default value of <code>step</code> is 1, indicating 1week. The default stepping base is -259,200,000, which is the beginning of the first week of 1970 (<code>"1970-W01"</code>).</p>
 
@@ -224,7 +230,7 @@ input:valid+span:after {
 
 <p>Here's'a screenshot for those of you who aren't using a supporting browser:</p>
 
-<p><img alt="" src="week-validation-chrome.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="week-validation-chrome.png"></p>
 
 <div class="warning">
 <p><strong>Important</strong>: HTML form validation is <em>not</em> a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, of the wrong type, and so forth).</p>
@@ -236,7 +242,7 @@ input:valid+span:after {
 
 <p>Mobile platforms such as Android and iOS make really good use of such input types, providing specialist UI controls that make it really easy to select values in a touchscreen environment. For example, the <code>week</code> picker on Chrome for Android looks like this:</p>
 
-<p><img alt="" src="week-chrome-android.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="week-chrome-android.png"></p>
 
 <p>Non-supporting browsers gracefully degrade to a text input, but this creates problems both in terms of consistency of user interface (the presented control will be different), and data handling.</p>
 

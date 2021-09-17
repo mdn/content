@@ -60337,14 +60337,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/MediaStream/ended": {
-    "modified": "2020-10-15T21:49:07.309Z",
-    "contributors": [
-      "fscholz",
-      "jpmedley",
-      "Sheppy"
-    ]
-  },
   "Web/API/MediaStream/getAudioTracks": {
     "modified": "2020-10-15T22:09:49.250Z",
     "contributors": [
@@ -155943,20 +155935,6 @@
       "Jonathan_Watt"
     ]
   },
-  "Web/SVG/Other_Resources": {
-    "modified": "2019-03-23T23:50:56.433Z",
-    "contributors": [
-      "SphinxKnight",
-      "JuliaM",
-      "Jeremie",
-      "Ptak82",
-      "Mgjbot",
-      "Nickolay",
-      "Callek",
-      "Stelt",
-      "Dria"
-    ]
-  },
   "Web/SVG/Project": {
     "modified": "2019-03-23T23:56:40.467Z",
     "contributors": [
@@ -155964,59 +155942,6 @@
       "velvel53",
       "Jeremie",
       "Jonathan_Watt"
-    ]
-  },
-  "Web/SVG/SVG_1.1_Support_in_Firefox": {
-    "modified": "2019-03-24T00:13:24.445Z",
-    "contributors": [
-      "Sebastianz",
-      "Longsonr",
-      "teoli",
-      "kscarfone",
-      "ethertank",
-      "Dholbert",
-      "trevorh",
-      "Sheppy",
-      "fscholz",
-      "Taken",
-      "Arsen7",
-      "Soupdragon",
-      "Jürgen Jeka",
-      "Drew LeSueur",
-      "charlesreilly",
-      "Jonathan_Watt",
-      "Mvent2",
-      "Mgalli",
-      "MarkFinkle",
-      "Nightstrike",
-      "MarcDiethelm",
-      "Jeff Schiller",
-      "Pmsyyz",
-      "Gepstein6",
-      "Nickolay",
-      "Mgjbot",
-      "Okome",
-      "Ptak82",
-      "Tor",
-      "Callek",
-      "Koznak",
-      "BenoitL",
-      "Takenbot",
-      "Dria",
-      "Gavindoughtie",
-      "Bzbarsky"
-    ]
-  },
-  "Web/SVG/SVG_2_support_in_Mozilla": {
-    "modified": "2020-03-29T19:28:01.592Z",
-    "contributors": [
-      "Zearin_Galaurum",
-      "fscholz",
-      "webinista",
-      "Sebastianz",
-      "rener_bz",
-      "cabanier",
-      "rolfedh"
     ]
   },
   "Web/SVG/SVG_animation_with_SMIL": {

@@ -17,7 +17,7 @@ browser-compat: html.elements.input.input-time
 ---
 <div>{{HTMLRef("Input_types")}}</div>
 
-<p><span class="seoSummary">{{htmlelement("input")}} elements of type <strong><code>time</code></strong> create input fields designed to let the user easily enter a time (hours and minutes, and optionally seconds).</span></p>
+<p>{{htmlelement("input")}} elements of type <strong><code>time</code></strong> create input fields designed to let the user easily enter a time (hours and minutes, and optionally seconds).</p>
 
 <p>The control's user interface varies from browser to browser; see {{anch("Browser compatibility")}} for further details. In unsupported browsers, the control degrades gracefully to <code><a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code>.</p>
 
@@ -45,9 +45,9 @@ browser-compat: html.elements.input.input-time
 
 <p>The Edge <code>time</code> control is somewhat more elaborate, opening up an hour and minute picker with sliding reels. It, like Chrome, uses a 12- or 24-hour format for inputting times, based on system locale:</p>
 
-<p><img alt="12-hour Edge time input" src="edge_time.png" style="display: block;"> 12-hour</p>
+<p><img alt="12-hour Edge time input" src="edge_time.png"> 12-hour</p>
 
-<p><img alt="24-hour Edge time input" src="edge-time.png" style="display: block;"> 24-hour</p>
+<p><img alt="24-hour Edge time input" src="edge-time.png"> 24-hour</p>
 
 <table class="properties">
  <tbody>
@@ -175,7 +175,13 @@ startTime.addEventListener("input", function() {
 
 <h3 id="attr-step"><code id="step">step</code></h3>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/number", "step-include")}}</p>
+<p>The <code>step</code> attribute is a number that specifies the granularity that the value must adhere to, or the special value <code>any</code>, which is described below. Only values which are equal to the basis for stepping (<code>{{anch("min")}}</code> if specified, {{htmlattrxref("value", "input")}} otherwise, and an appropriate default value if neither of those is provided) are valid.</p>
+
+<p>A string value of <code>any</code> means that no stepping is implied, and any value is allowed (barring other constraints, such as <code>{{anch("min")}}</code> and <code>{{anch("max")}}</code>).</p>
+
+<div class="note">
+<p><strong>Note:</strong> When the data entered by the user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round to the nearest valid value, preferring numbers in the positive direction when there are two equally close options.</p>
+</div>
 
 <p>For <code>time</code> inputs, the value of <code>step</code> is given in seconds, with a scaling factor of 1000 (since the underlying numeric value is in milliseconds). The default value of <code>step</code> is 60, indicating 60 seconds (or 1 minute, or 60,000 milliseconds).</p>
 
@@ -315,10 +321,6 @@ if (input.validity.valid &amp;&amp; input.type === 'time') {
 
 <p>{{ EmbedLiveSample('Making_times_required', 600, 120) }}</p>
 
-<p>Here's a screenshot for those of you who aren't using a browser that supports <code>time</code> inputs:</p>
-
-<p><img alt="" src="firefox-validation-message.png" style="display: block; margin: 0 auto;"></p>
-
 <div class="warning">
 <p><strong>Important</strong>: HTML form validation is <em>not</em> a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, of the wrong type, and so forth).</p>
 </div>
@@ -327,7 +329,7 @@ if (input.validity.valid &amp;&amp; input.type === 'time') {
 
 <p>As mentioned, older versions of Safari and a few other, less common, browsers don't support time inputs natively. In general, otherwise, support is good — especially on mobile platforms, which tend to have very nice user interfaces for specifying a time value. For example, the <code>time</code> picker on Chrome for Android looks like this:</p>
 
-<p><img alt="" src="chrome-android-time.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="chrome-android-time.png"></p>
 
 <p>Browsers that don't support time inputs gracefully degrade to a text input, but this creates problems both in terms of consistency of user interface (the presented control will be different), and data handling.</p>
 

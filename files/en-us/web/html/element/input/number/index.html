@@ -15,7 +15,9 @@ browser-compat: html.elements.input.input-number
 ---
 <div>{{HTMLRef("Input_types")}}</div>
 
-<p><span class="seoSummary">{{HTMLElement("input")}} elements of type <strong><code>number</code></strong> are used to let the user enter a number. They include built-in validation to reject non-numerical entries.</span> The browser may opt to provide stepper arrows to let the user increase and decrease the value using their mouse or by tapping with a fingertip.</p>
+<p>{{HTMLElement("input")}} elements of type <strong><code>number</code></strong> are used to let the user enter a number. They include built-in validation to reject non-numerical entries.</p>
+
+<p>The browser may opt to provide stepper arrows to let the user increase and decrease the value using their mouse or by tapping with a fingertip.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-number.html", "tabbed-shorter")}}</div>
 
@@ -113,14 +115,12 @@ browser-compat: html.elements.input.input-number
 
 <h3 id="attr-step"><code id="step">step</code></h3>
 
-<div id="step-include">
 <p>The <code>step</code> attribute is a number that specifies the granularity that the value must adhere to, or the special value <code>any</code>, which is described below. Only values which are equal to the basis for stepping (<code>{{anch("min")}}</code> if specified, {{htmlattrxref("value", "input")}} otherwise, and an appropriate default value if neither of those is provided) are valid.</p>
 
 <p>A string value of <code>any</code> means that no stepping is implied, and any value is allowed (barring other constraints, such as <code>{{anch("min")}}</code> and <code>{{anch("max")}}</code>).</p>
 
 <div class="note">
 <p><strong>Note:</strong> When the data entered by the user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round to the nearest valid value, preferring numbers in the positive direction when there are two equally close options.</p>
-</div>
 </div>
 
 <p>The default stepping value for <code>number</code> inputs is <code>1</code>, allowing only integers to be entered—<em>unless</em> the stepping base is not an integer.</p>
@@ -137,9 +137,7 @@ browser-compat: html.elements.input.input-number
 <p><strong>Note</strong>: It's crucial to remember that a user can tinker with your HTML behind the scenes, so your site <em>must not</em> use simple client-side validation for any security purposes. You <em>must</em> verify on the server side any transaction in which the provided value may have security implications of any kind.</p>
 </div>
 
-<p>Mobile browsers further help with the user experience by showing a special keyboard more suited for entering numbers when the user tries to enter a value. The following screenshot is taken from Firefox for Android:</p>
-
-<p><img alt="" src="number-keyboard-fxa.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p>Mobile browsers further help with the user experience by showing a special keyboard more suited for entering numbers when the user tries to enter a value.</p>
 
 <h3 id="A_simple_number_input">A simple number input</h3>
 
