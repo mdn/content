@@ -75,7 +75,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
     It does help satisfying the requirements
     about which characters are allowed for \<cookie-value> though.
 
-    > **Note:** Some `><cookie-name>` have a specific semantic:
+    > **Note:** Some `<cookie-name>` have a specific semantic:
     >
     > **`__Secure-` prefix**:
     > Cookies names starting with `__Secure-`
@@ -152,7 +152,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
     If the request originated from a different URL than the current one,
     no cookies with the `SameSite=Strict` attribute are sent.
 
-    `Lax`means that the cookie is not sent on cross-site requests,
+    `Lax` means that the cookie is not sent on cross-site requests,
     such as calls to load images or frames,
     but is sent when a user is navigating to the origin site from an external site
     (e.g., if following a link).
