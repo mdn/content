@@ -22,7 +22,46 @@ A `feed` is a dynamic scrollable `list` of `articles` in which articles are adde
 
 ## Description
 
-<div class="role-description" id="desc-feed"><p>A feed is a page structure for a scrollable <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/List_role">list</a> of `<a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Article_Role">articles</a>` where scrolling may cause articles to be added to the top or end of the list. The list establishes an interoperability contract between the web page and assistive technologies that governs scroll interactions so that assistive technology users can read articles, jump forward and backward by article, and reliably trigger new articles to load while in reading mode. Examples include an RSS feed, news feeds, social media feeds like Facebook, Instagram or Twitter, or even a list of related products on an eCommerce page. These streams can be limited or infinite, loading more content as the user scrolls. Implementing the feed pattern allows a screen reader to reliably read and trigger the loading of feed content while in reading mode.</p><p>A `feed` is a container element whose children are &#x3C;article>s or have role `article`. Each article within a feed should be focusable, with tabindex of 0 or -1. An article should be scrolled into view when it, or a descendant element, receives focus. If the addition of articles occupies the main browser thread, make sure to set `aria-busy="true"` on the feed itself, and make sure to set it back to `false` when processing ends, or the user may not see the updates.</p><p>To ensure good user experience, avoid inserting or removing articles in the middle of a `feed`, load new articles before the user has reached the end of the feed, and provide keyboard commands for moving focus among articles so that keyboard users can navigate through your feed. See keyboard interactions below.</p><p>If the number of articles is known, set `aria-setsize` on the articles themselves. However, if the total number is extremely large, indefinite, or changes often, set `aria-setsize="-1"` to indicate that the size of the feed is not known.</p><p>Another feature of the feed pattern is skim reading: Articles within a feed can contain both an accessible name with the `aria-label` and a description with an `aria-describedby,` suggesting to screen readers which elements to speak after the label when navigating by article. By identifying the elements inside of an article that provide the title and the primary content, assistive technologies can provide functions that enable users to jump from article to article and efficiently discern which articles they want to read.</p><p>The feed pattern enables reliable assistive technology reading mode interaction by establishing the following interoperability agreement between the web page and assistive technologies:</p><ol><li>In the context of a feed, the web page code is responsible for:<ul><li>Appropriate visual scrolling of the content based on which article contains DOM focus.</li><li>Loading or removing feed articles based on which article contains DOM focus.</li></ul></li><li>In the context of a feed, assistive technologies with a reading mode are responsible for:<ul><li>Indicating which article contains the reading cursor by ensuring the article element or one of its descendants has DOM focus.</li><li>Providing reading mode keys that move DOM focus to the next and previous articles.</li><li>Providing reading mode keys for moving the reading cursor and DOM focus past the end and before the start of the feed.</li></ul></li></ol><h3 id="Keyboard_interaction">Keyboard interaction</h3><p>Supporting the following, or a similar, interface is recommended when focus is inside the feed:</p><ul><li><kbd>Page Down</kbd>: Move focus to next article.</li><li><kbd>Page Up</kbd>: Move focus to previous article.</li><li><kbd>Control + End</kbd>: Move focus to the first focusable element after the feed.</li><li><kbd>Control + Home</kbd>: Move focus to the first focusable element before the feed.</li></ul><p>If a feed is nested within a feed, such as a comments feed within a feed of blog posts, the convention is to tab into the nested feed with the <kbd>Tab</kbd> key and to provide another key, such as  <kbd>Alt + Page Down</kbd>, to navigate from an 'outer' article to the first item in that article's nested feed. Navigate between the nested feed and main feed with <kbd>Control + End</kbd> , moving focus from the inner feed to the next article in the outer feed.</p><h3 id="WAI-ARIA_roles_states_and_properties"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> roles, states, and properties</h3><dl><dt>aria-label</dt><dd>If the feed has no visible title, the `feed` element has a label specified with <a class="property-reference" href="https://w3c.github.io/aria/#aria-label">aria-label</a>. If it does, see aria-labelledby.</dd><dt>aria-labelledby</dt><dd>If the feed has a visible title, the `feed` element has <a class="property-reference" href="https://w3c.github.io/aria/#aria-labelledby">aria-labelledby</a> referring to the element containing the title. If not, add an aria-label.</dd><dt>aria-busy</dt><dd>When busy, such as when articles are being added or removed from the `feed`, set `<a class="state-reference" href="https://w3c.github.io/aria/#aria-busy">aria-busy=</a>"true"` during the update operation. Make sure it's reset to `false` when the operation is complete or the changes may not become visible.</dd><dt>article</dt><dd>Each section of content in a feed should be contained in an `<article>` or element with role <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Article_Role">article</a>. Each `article` should have an <a class="property-reference" href="https://w3c.github.io/aria/#aria-labelledby">aria-labelledby</a> referring to the article title or other child that can serve as a distinguishing label. Each article should preferably have <a class="property-reference" href="https://w3c.github.io/aria/#aria-describedby">aria-describedby</a> referring to one or more elements inside the article that serve as the primary content of the article. Each `article` element has <a class="property-reference" href="https://w3c.github.io/aria/#aria-posinset">aria-posinset</a> set to a value that represents its position in the feed and an <a class="property-reference" href="https://w3c.github.io/aria/#aria-setsize">aria-setsize</a> set to a value that represents either the total number of articles that have been loaded or the total number in the feed, depending on which value is more helpful to users. If the total number in the feed is not known, set `aria-setsize="-1"`.</dd></dl></div>
+A `feed` is a type of [`list`](/en-US/docs/Web/Accessibility/ARIA/Roles/List_role), the containing role for a scrollable  of [`articles`](/en-US/docs/Web/Accessibility/ARIA/Roles/Article_Role) where scrolling may cause articles to be added to the top or end of the list. The role enables assistive technology to use the browse mode reading cursor to both read and scroll through a stream of rich content that may continue scrolling infinitely by loading more content as the user reads. Examples include an RSS feed, news feeds, social media feeds like Facebook, Instagram or Twitter, or even a list of related products on an eCommerce page. These streams can be limited or infinite, loading more content as the user scrolls. Implementing the `feed` pattern allows a screen reader to reliably read and trigger the loading of feed content while in reading mode.
+
+Unlike the document structure elements that representing static HTML elements, the `feed` role requires specific interactions and implementation of keyboard navigation. The `feed` is a container element whose children are {{HTMLElement('article')}}s or have role `article`. Each article within a feed should be focusable, with tabindex of 0 or -1. An article should be scrolled into view when it, or a descendant element, receives focus. If the addition of articles occupies the main browser thread, make sure to set `aria-busy="true"` on the feed itself, and make sure to set it back to `false` when processing ends, or the user may not see the updates.
+
+If the number of articles is known, set `aria-setsize` on the articles themselves. However, if the total number is extremely large, indefinite, or changes often, set `aria-setsize="-1"` to indicate that the size of the feed is not known.
+
+Another feature of the feed pattern is skim reading: Articles within a feed can contain both an accessible name with the `aria-label` and a description with an `aria-describedby,` suggesting to screen readers which elements to speak after the label when navigating by article. By identifying the elements inside of an article that provide the title and the primary content, assistive technologies can provide functions that enable users to jump from article to article and efficiently discern which articles they want to read.
+
+The feed pattern enables reliable assistive technology reading mode interaction by establishing the following interoperability agreement between the web page and assistive technologies:
+
+In the context of a feed, the web page code is responsible for:
+
+  - Appropriate visual scrolling of the content based on which article contains DOM focus.
+  - Loading or removing feed articles based on which article contains DOM focus.
+
+  
+### Keyboard interaction
+
+Supporting the following, or a similar, interface is recommended when focus is inside the feed:
+
+  - <kbd>Page Down</kbd>: Move focus to next article.
+  - <kbd>Page Up</kbd>: Move focus to previous article.
+  - <kbd>Control + End</kbd>: Move focus to the first focusable element after the feed.
+  - <kbd>Control + Home</kbd>: Move focus to the first focusable element before the feed.
+  
+  If a feed is nested within a feed, such as a comments feed within a feed of blog posts, the convention is to tab into the nested feed with the <kbd>Tab</kbd> key and to provide another key, such as  <kbd>Alt + Page Down</kbd>, to navigate from an 'outer' article to the first item in that article's nested feed. Navigate between the nested feed and main feed with <kbd>Control + End</kbd> , moving focus from the inner feed to the next article in the outer feed.
+  
+  ### <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> roles, states, and properties
+  
+- `aria-label`
+  - : If the feed has no visible title, the `feed` element has a label specified with `aria-label`. If it does, see `aria-labelledby`.
+
+- `aria-labelledby`
+  - : If the feed has a visible title, the `feed` element has `aria-labelledby` referring to the element containing the title. If not, add an `aria-label`.
+
+- `aria-busy`
+  - : When busy, such as when articles are being added or removed from the `feed`, set `aria-busy="true"` during the update operation. Make sure it's reset to `false` when the operation is complete or the changes may not become visible.
+
+- article
+  - : Each section of content in a feed should be contained in an `<article>` or element with role <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Article_Role">article</a>. Each `article` should have an <a class="property-reference" href="https://w3c.github.io/aria/#aria-labelledby">aria-labelledby</a> referring to the article title or other child that can serve as a distinguishing label. Each article should preferably have <a class="property-reference" href="https://w3c.github.io/aria/#aria-describedby">aria-describedby</a> referring to one or more elements inside the article that serve as the primary content of the article. Each `article` element has <a class="property-reference" href="https://w3c.github.io/aria/#aria-posinset">aria-posinset</a> set to a value that represents its position in the feed and an <a class="property-reference" href="https://w3c.github.io/aria/#aria-setsize">aria-setsize</a> set to a value that represents either the total number of articles that have been loaded or the total number in the feed, depending on which value is more helpful to users. If the total number in the feed is not known, set `aria-setsize="-1"`.
 
 ### Required JavaScript features
 
@@ -32,6 +71,11 @@ None, except as required by any attributes. For example, setting `aria-busy` to 
 
 [Example Implementation of Feed Pattern](https://w3c.github.io/aria-practices/examples/feed/feed.html)
 
+## Best practices
+
+To ensure good user experience, avoid inserting or removing articles in the middle of a `feed`, load new articles before the user has reached the end of the feed, and provide keyboard commands for moving focus among articles so that keyboard users can navigate through your feed. See [keyboard interactions](#Keyboard_interaction).
+
+
 ## Specifications
 
 | Specification                                    | Status                   |
@@ -40,17 +84,12 @@ None, except as required by any attributes. For example, setting `aria-busy` to 
 
 
 
-Coming soon
-
 ## See also
 
-- [HTML \<article> element](/en-US/docs/Web/HTML/Element/article)
-- [Lists in HTML](/en-US/docs/Web/HTML/Element/ul)
-- [ARIA: article role](/en-US/docs/Web/Accessibility/ARIA/Roles/Article_Role)
-- [ARIA: list role](/en-US/docs/Web/Accessibility/ARIA/Roles/List_role)
-- <cite><a href="https://www.w3.org/TR/wai-aria-practices-1.1/"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Authoring Practices</a></cite>
-
-  \- additional details on implementing a feed design pattern.
+- The HTML {{HTMLElement('article')}} element
+- The {{HTMLElement('ul')}} unordered list element
+- [ARIA: `article` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Article_Role)
+- [ARIA: `list` role](/en-US/docs/Web/Accessibility/ARIA/Roles/List_role)
 
 <section id="Quick_links">
 
