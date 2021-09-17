@@ -38,7 +38,7 @@ In the context of a feed, the web page code is responsible for:
   - Loading or removing feed articles based on which article contains DOM focus.
 
   
-### Keyboard interaction
+### Keyboard interactions
 
 Supporting the following, or a similar, interface is recommended when focus is inside the feed:
 
@@ -73,7 +73,7 @@ None, except as required by any attributes. For example, setting `aria-busy` to 
 
 ## Best practices
 
-To ensure good user experience, avoid inserting or removing articles in the middle of a `feed`, load new articles before the user has reached the end of the feed, and provide keyboard commands for moving focus among articles so that keyboard users can navigate through your feed. See [keyboard interactions](#Keyboard_interaction).
+To ensure good user experience, avoid inserting or removing articles in the middle of a `feed`, load new articles before the user has reached the end of the feed, and provide keyboard commands for moving focus among articles so that keyboard users can navigate through your feed. See {{anch('Keyboard interactions')}}.
 
 
 ## Specifications
