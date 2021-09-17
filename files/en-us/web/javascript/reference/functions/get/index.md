@@ -7,6 +7,7 @@ tags:
   - Functions
   - JavaScript
   - Language feature
+  - Reference
 browser-compat: javascript.functions.get
 ---
 {{jsSidebar("Functions")}}
@@ -167,11 +168,6 @@ get notifier() {
 },
 ```
 
-For Firefox code, see also the `XPCOMUtils.jsm` code module, which defines
-the
-[`defineLazyGetter()`](</en-US/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.jsm#defineLazyGetter()>)
-function.
-
 ### `get` vs. `defineProperty`
 
 While using the `get` keyword and {{jsxref("Object.defineProperty()")}} have
@@ -214,7 +210,7 @@ console.log(
 
 ## See also
 
-- [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set)
+- [Setter](/en-US/docs/Web/JavaScript/Reference/Functions/set)
 - {{jsxref("Operators/delete", "delete")}}
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Object.defineGetter", "__defineGetter__")}}
