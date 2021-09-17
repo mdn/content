@@ -144,7 +144,7 @@ tags:
 
 <p>So far so good! Let's try out the app now. You'll notice that when you click on the filter buttons, they are selected and the style updates appropriately. But! We have a problem — the todos aren't filtered. That's because the <code>filter</code> variable flows down from the <code>Todos</code> component to the <code>FilterButton</code> component through the prop, but changes occurring in the <code>FilterButton</code> component don't flow back up to its parent — the data binding is one-way by default. Let's look at a way to solve this.</p>
 
-<h2 id="Sharing_data_between_components_passing_a_handler_as_a_prop">Sharing data between components: passing a handler as a prop</h2>
+<h2 id="Sharing_data_between_components_passFing_a_handler_as_a_prop">Sharing data between components: passing a handler as a prop</h2>
 
 <p>One way to let child components notify their parents of any changes is to pass a handler as a prop. The child component will execute the handler, passing the needed information as a parameter, and the handler will modify the parent's state.</p>
 
@@ -190,13 +190,6 @@ tags:
   <pre class="brush: html">&lt;FilterButton bind:filter={filter} /&gt;</pre>
 
   <p>As usual, Svelte provides us with a nice shorthand — <code>bind:value={value}</code> is equivalent to <code>bind:value</code>. So in the above example you could just write <code>&lt;FilterButton bind:filter /&gt;</code>.</p>
- </li>
- <li>
-  <p>The child component can now modify the value of the parent's filter variable, so we no longer need the <code>onclick</code> prop. Modify your <code>FilterButton</code> <code>&lt;script&gt;</code> like this:</p>
-
-  <pre class="brush: html">&lt;script&gt;
-  export let filter = 'all'
-&lt;/script&gt;</pre>
  </li>
  <li>
   <p>Try your app again, and you should still see your filters working correctly.</p>
