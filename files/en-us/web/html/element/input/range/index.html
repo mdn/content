@@ -100,7 +100,9 @@ browser-compat: html.elements.input.input-range
  </tbody>
 </table>
 
-<p id="attr-list">{{page("/en-US/docs/Web/HTML/Element/input/text", "attr-list", 0, 1, 2)}}</p>
+<h3 id="attr-list"><code id="list">list</code></h3>
+
+<p>The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The {{HTMLElement("datalist")}} provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the {{htmlattrxref("type", "input")}} are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.</p>
 
 <p>See the <a href="#a_range_control_with_hash_marks">range control with hash marks</a> below for an example of how the options on a range are denoted in supported browsers.</p>
 
@@ -147,7 +149,7 @@ browser-compat: html.elements.input.input-range
 
 <h3 id="attr-orient"><code id="orient">orient</code> {{non-standard_inline}}</h3>
 
-<p id="orient-include">Similar to the -moz-orient non-standard CSS property impacting the {{htmlelement('progress')}} and {{htmlelement('meter')}} elements, the <code>orient</code> attribute defines the orientation of the range slider. Values include <code>horizontal</code>, meaning the range is rendered horizontally, and <code>vertical</code>, where the range is rendered vertically.</p>
+<p>Similar to the -moz-orient non-standard CSS property impacting the {{htmlelement('progress')}} and {{htmlelement('meter')}} elements, the <code>orient</code> attribute defines the orientation of the range slider. Values include <code>horizontal</code>, meaning the range is rendered horizontally, and <code>vertical</code>, where the range is rendered vertically.</p>
 
 <div class="notecard note">
 <p><strong>Note:</strong> The following input attributes do not apply to the input range: <code>accept</code>, <code>alt</code>, <code>checked</code>, <code>dirname</code>, <code>formaction</code>, <code>formenctype</code>, <code>formmethod</code>, <code>formnovalidate</code>, <code>formtarget</code>, <code>height</code>, <code>maxlength</code>, <code>minlength</code>, <code>multiple</code>, <code>pattern</code>, <code>placeholder</code>, <code>readonly</code>, <code>required</code>, <code>size</code>, <code>src</code>, and <code>width</code>. Any of these attributes, if included, will be ignored.</p>

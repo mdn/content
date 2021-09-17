@@ -95,7 +95,9 @@ browser-compat: html.elements.input.input-number
  </tbody>
 </table>
 
-<p id="attr-list">{{page("/en-US/docs/Web/HTML/Element/input/text", "attr-list", 0, 1, 2)}}</p>
+<h3 id="attr-list"><code id="list">list</code></h3>
+
+<p>The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The {{HTMLElement("datalist")}} provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the {{htmlattrxref("type", "input")}} are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.</p>
 
 <h3 id="attr-max"><code id="max">max</code></h3>
 
@@ -109,9 +111,23 @@ browser-compat: html.elements.input.input-number
 
 <p>This value must be less than or equal to the value of the <code>max</code> attribute.</p>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "attr-placeholder", 0, 1, 2)}}</p>
+<h3><code>placeholder</code></h3>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "attr-readonly", 0, 1, 2)}}</p>
+<p>The <code>placeholder</code> attribute is a string that provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that demonstrates the expected type of data, rather than an explanatory message. The text <em>must not</em> include carriage returns or line feeds.</p>
+
+<p>If the control's content has one directionality ({{Glossary("LTR")}} or {{Glossary("RTL")}}) but needs to present the placeholder in the opposite directionality, you can use Unicode bidirectional algorithm formatting characters to override directionality within the placeholder; see {{SectionOnPage("/en-US/docs/Web/Localization/Unicode_Bidirectional_Text_Algorithm", "Overriding BiDi using Unicode control characters")}} for those characters.</p>
+
+<div class="note">
+<p><strong>Note:</strong> Avoid using the <code>placeholder</code> attribute if you can. It is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content. See {{SectionOnPage("/en-US/docs/Web/HTML/Element/input", "Labels and placeholders")}} for more information.</p>
+</div>
+
+<h3><code>readonly</code></h3>
+
+<p>A Boolean attribute which, if present, means this field cannot be edited by the user. Its <code>value</code> can, however, still be changed by JavaScript code directly setting the {{domxref("HTMLInputElement")}} <code>value</code> property.</p>
+
+<div class="note">
+<p><strong>Note:</strong> Because a read-only field cannot have a value, <code>required</code> does not have any effect on inputs with the <code>readonly</code> attribute also specified.</p>
+</div>
 
 <h3 id="attr-step"><code id="step">step</code></h3>
 

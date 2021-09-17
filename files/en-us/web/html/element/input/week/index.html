@@ -119,7 +119,13 @@ weekControl.value = '2017-W45';</pre>
 
 <p>This value must be less than or equal to the value of the <code>max</code> attribute.</p>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "attr-readonly", 0, 1, 2)}}</p>
+<h3><code>readonly</code></h3>
+
+<p>A Boolean attribute which, if present, means this field cannot be edited by the user. Its <code>value</code> can, however, still be changed by JavaScript code directly setting the {{domxref("HTMLInputElement")}} <code>value</code> property.</p>
+
+<div class="note">
+<p><strong>Note:</strong> Because a read-only field cannot have a value, <code>required</code> does not have any effect on inputs with the <code>readonly</code> attribute also specified.</p>
+</div>
 
 <h3 id="attr-step"><code id="step">step</code></h3>
 
