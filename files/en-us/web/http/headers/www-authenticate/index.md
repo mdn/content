@@ -6,14 +6,16 @@ tags:
   - HTTP Header
   - Reference
   - Response Header
-  - header
+  - Header
+  - WWW-Authenticate
+  - Authentication
 browser-compat: http.headers.WWW-Authenticate
 ---
 {{HTTPSidebar}}
 
 The HTTP **`WWW-Authenticate`** response header defines the [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) methods ("challenges") that might be used to gain access to a specific resource.
 
-> **Note:** This header is part of the [General HTTP authentication framework](/en-US/docs/Web/HTTP/Authentication#the_general_http_authentication_framework), which can be used with a number of [authentication schemes](/en-US/docs/Web/HTTP/Authentication#authentication_schemes) .
+> **Note:** This header is part of the [General HTTP authentication framework](/en-US/docs/Web/HTTP/Authentication#the_general_http_authentication_framework), which can be used with a number of [authentication schemes](/en-US/docs/Web/HTTP/Authentication#authentication_schemes).
 > Each "challenge" lists a scheme supported by the server and additional parameters that are defined for that scheme type. 
 
 A server using [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) will respond with a {{HTTPStatus("401")}} `Unauthorized` response to a request for a protected resource.
@@ -84,7 +86,7 @@ WWW-Authenticate: Basic realm=<realm>, charset="UTF-8"
     > **Note:** For more information/options see [HTTP Authentication > Authentication schemes](/en-US/docs/Web/HTTP/Authentication#authentication_schemes)
 - **realm=**\<realm> {{optional_inline}}
   - : A string describing a protected area.
-    A realm allows a server to partition up the areas it protects (if supported by a scheme that allows such partitioning).
+    A realm allows a server to partition up the areas it protects (if supported by a scheme that allows such partitioning), and informs users about which paricular username/password are required.
     If no realm is specified, clients often display a formatted hostname instead.
 - `<token68>` {{optional_inline}}
   - : A token that may be useful for some schemes. The token allows the 66 unreserved URI characters plus a few others.
@@ -103,6 +105,41 @@ For others you may need to check the specifications:
       The only allowed value is the case-insensitive string "UTF-8".
       This does not relate to the encoding of the realm string.
 
+### Digest
+
+- **`<realm>`** {{optional_inline}}
+  - : String indicating which username/password to use.
+      Minimally should include the host name, but might indicate the users or group that have access.
+- **`domain=`** `<list of URIs>` {{optional_inline}}
+  - : A quoted, space-separated list of URI prefixes that define all the locations where the authentication information may be be used.
+      If this key is not is not specified then the authentication information may be used anywhere on the web root.
+- **`nonce=`** `"<server specified string>`
+  - : A server-specified quoted string that is used to control the lifetime in which particular credentials will be considered valid.
+    This must be uniquely generated each time a 401 response is made, and may be regenerated more often (for example, allowing a digest to be used only once).
+    The specification has advice on possible algorithms for generating this value, which is opaque to the client.
+- **`opaque=`** `"<server specified string>`
+  - : A server-specified quoted string that should be returned unchanged in the {{HTTPHeader("Authorization")}}. 
+    This is opaque to the client. The server is recommended to include Base64 or hexadecimal data.
+- **`stale=`** `true` or some other flag {{optional_inline}}
+  - : A case-insensitive flag indicating that the previous request from the client was rejected because the `nonce` used is too old (stale).
+      If this is `true` the request can be re-tried using the same username/password encrypted using the new `nonce`.
+      If it is any other value then the username/password are invalid and must be re-requested from the user.
+- **`algorithm=`** `"MD5"` | `"SHA-256"`  | `"SHA-512"`  {{optional_inline}}
+  - : Algorithm used to produce the digest (default if not specified is `"MD5"`).
+     There are session and non-session variants.
+     The session variants have the same name but are suffixed with "-sess".
+     For example: `"MD5-sess"`.
+- **`qop=`**
+  - : Quoted string indicating the quality of protection supported by the server. This must be supplied, and unrecognised options must be ignored.
+      - `"auth"`: Authentication
+      - `"auth-int"`: Authentication with integrity protection
+- **`charset="UTF-8"`** {{optional_inline}}
+  - : Tells the client the server's preferred encoding scheme when submitting a username and password.
+      The only allowed value is the case-insensitive string "UTF-8".
+- **`userhash=`** `"true"` | `"false"` {{optional_inline}}
+  - : A server may use this to indicate that it supports username hashing (default is `"false"`)
+
+
 ## Examples
 
 ### Basic authentication
@@ -113,13 +150,16 @@ A server that only supports basic authentication might have a `WWW-Authenticate`
 WWW-Authenticate: Basic realm="Access to the staging site", charset="UTF-8"
 ```
 
-Both the realm and charset are optional, so it could instead look like this:
+A user-agent recieving this header would first prompt the user for their username and password, and then re-request the resource: this time including the (encoded) credentials in the {{HTTPHeader("Authorization")}} header.
+The {{HTTPHeader("Authorization")}} header might look like this:
 
-```http
-WWW-Authenticate: Basic
+```https
+Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 ```
 
-See also [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) for examples on how to configure Apache or nginx servers to password protect your site with HTTP basic authentication.
+For `"Basic"` authentication the credentials are constructed by first combining the username and the password with a colon (`aladdin:opensesame`), and then by encoding the resulting string in [`base64`](/en-US/docs/Glossary/Base64) (`YWxhZGRpbjpvcGVuc2VzYW1l`).
+
+> **Note:** See also [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) for examples on how to configure Apache or nginx servers to password protect your site with HTTP basic authentication.
 
 ## Specifications
 
