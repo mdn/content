@@ -15,8 +15,8 @@ tags:
 <pre class="brush: js">const foo = function() {
    console.log("foobar");
 }
-// Invoke it using the variable
-foo();
+foo(); // Invoke it using the variable
+// foobar
 </pre>
 
 <p>We assigned an <strong>Anonymous Function</strong> in a {{glossary("Variable")}}, then we used that variable to invoke the function by adding parentheses <code>()</code> at the end.</p>
@@ -37,6 +37,7 @@ function greeting(helloMessage, name) {
 }
 // Pass `sayHello` as an argument to `greeting` function
 greeting(sayHello, "JavaScript!");
+// Hello, JavaScript!
 </pre>
 
 <p>We are passing our <code>sayHello()</code> function as an argument to the <code>greeting()</code> function, this explains how we are treating the function as a <strong>value</strong>.</p>
@@ -73,6 +74,7 @@ greeting(sayHello, "JavaScript!");
 }
 const myFunc = sayHello();
 myFunc();
+// Hello!
 </pre>
 
 <p>This way, it returns the <code>Hello!</code> message.</p>
@@ -89,6 +91,7 @@ myFunc();
    }
 }
 sayHello()();
+// Hello!
 </pre>
 
 <p>We are using double parentheses <code>()()</code> to invoke the returned function as well.</p>

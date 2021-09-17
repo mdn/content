@@ -19,7 +19,7 @@ browser-compat: html.elements.input.input-month
 ---
 <div>{{HTMLRef("Input_types")}}</div>
 
-<p><span class="seoSummary">{{HTMLElement("input")}} elements of type <strong><code>month</code></strong> create input fields that let the user enter a month and year allowing a month and year to be easily entered. The value is a string whose value is in the format "<code>YYYY-MM</code>", where <code>YYYY</code> is the four-digit year and <code>MM</code> is the month number.</span></p>
+<p>{{HTMLElement("input")}} elements of type <strong><code>month</code></strong> create input fields that let the user enter a month and year allowing a month and year to be easily entered. The value is a string whose value is in the format "<code>YYYY-MM</code>", where <code>YYYY</code> is the four-digit year and <code>MM</code> is the month number.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-month.html", "tabbed-shorter")}}</div>
 
@@ -27,11 +27,11 @@ browser-compat: html.elements.input.input-month
 
 <p>For those of you using a browser that doesn't support <code>month</code>, the screenshot below shows what it looks like in Chrome and Opera. Clicking the down arrow on the right hand side brings up a date picker that lets you select the month and year.</p>
 
-<p><img alt="" src="month-control-chrome.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="month-control-chrome.png"></p>
 
 <p>The Microsoft Edge <code>month</code> control looks like this:</p>
 
-<p><img alt="" src="month-control-edge.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="month-control-edge.png"></p>
 
 <table class="properties">
  <tbody>
@@ -62,32 +62,30 @@ browser-compat: html.elements.input.input-month
 
 <p>A {{domxref("DOMString")}} representing the value of the month and year entered into the input, in the form YYYY-MM (four or more digit year, then a hyphen ("<code>-</code>"), followed by the two-digit month). The format of the month string used by this input type is described in {{SectionOnPage("/en-US/docs/Web/HTML/Date_and_time_formats", "Format of a valid local month string")}}.</p>
 
+<h3>Setting a default value</h3>
+
 <p>You can set a default value for the input control by including a month and year inside the {{htmlattrxref("value", "input")}} attribute, like so:</p>
 
-<div id="value-example-1">
 <pre class="brush: html">&lt;label for="bday-month"&gt;What month were you born in?&lt;/label&gt;
 &lt;input id="bday-month" type="month" name="bday-month" value="2017-06"&gt;</pre>
 
-<p>{{EmbedLiveSample('value-example-1', 600, 60)}}</p>
-</div>
+<p>{{EmbedLiveSample('Setting_a_default_value', 600, 60)}}</p>
 
 <p>One thing to note is that the displayed date format differs from the actual <code>value</code>; most {{Glossary("user agent", "user agents")}} display the month and year in a locale-appropriate form, based on the set locale of the user's operating system, whereas the date <code>value</code> is always formatted <code>yyyy-MM</code>.</p>
 
 <p>When the above value is submitted to the server, for example, it will look like <code>bday-month=1978-06</code>.</p>
 
+<h3>Setting the value using JavaScript</h3>
+
 <p>You can also get and set the date value in JavaScript using the {{domxref("HTMLInputElement.value")}} property, for example:</p>
 
-<div id="value-example-2">
-<div class="hidden">
 <pre class="brush: html">&lt;label for="bday-month"&gt;What month were you born in?&lt;/label&gt;
 &lt;input id="bday-month" type="month" name="bday-month" value="2017-06"&gt;</pre>
-</div>
 
 <pre class="brush: js">var monthControl = document.querySelector('input[type="month"]');
 monthControl.value = '1978-06';</pre>
 
-<p>{{EmbedLiveSample("value-example-2", 600, 60)}}</p>
-</div>
+<p>{{EmbedLiveSample("Setting_the_value_using_JavaScript", 600, 60)}}</p>
 
 <h2 id="Additional_attributes">Additional attributes</h2>
 
@@ -148,7 +146,13 @@ monthControl.value = '1978-06';</pre>
 
 <h3 id="attr-step"><code id="step">step</code></h3>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/number", "step-include")}}</p>
+<p>The <code>step</code> attribute is a number that specifies the granularity that the value must adhere to, or the special value <code>any</code>, which is described below. Only values which are equal to the basis for stepping (<code>{{anch("min")}}</code> if specified, {{htmlattrxref("value", "input")}} otherwise, and an appropriate default value if neither of those is provided) are valid.</p>
+
+<p>A string value of <code>any</code> means that no stepping is implied, and any value is allowed (barring other constraints, such as <code>{{anch("min")}}</code> and <code>{{anch("max")}}</code>).</p>
+
+<div class="note">
+<p><strong>Note:</strong> When the data entered by the user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round to the nearest valid value, preferring numbers in the positive direction when there are two equally close options.</p>
+</div>
 
 <p>For <code>month</code> inputs, the value of <code>step</code> is given in months, with a scaling factor of 1 (since the underlying numeric value is also in months). The default value of <code>step</code> is 1 month.</p>
 
@@ -218,7 +222,7 @@ monthControl.value = '1978-06';</pre>
 
 <p>Here's a screenshot for those of you who aren't using a supporting browser:</p>
 
-<p><img alt="" src="month-required.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="month-required.png"></p>
 
 <p>Here's the CSS used in the above example. Here we make use of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS properties to style the input based on whether or not the current value is valid. We had to put the icons on a {{htmlelement("span")}} next to the input, not on the input itself, because in Chrome the generated content is placed inside the form control, and can't be styled or shown effectively.</p>
 
@@ -255,7 +259,7 @@ input:valid+span:after {
 
 <p>As mentioned above, the major problem with using date inputs at the time of writing is that many major browsers don't yet implement them all; only Chrome/Opera and Edge support it on desktop, and most modern browsers on mobile. As an example, the <code>month</code> picker on Chrome for Android looks like this:</p>
 
-<p><img alt="" src="month-android.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="month-android.png"></p>
 
 <p>Non-supporting browsers gracefully degrade to a text input, but this creates problems both in terms of consistency of user interface (the presented control will be different), and data handling.</p>
 

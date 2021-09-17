@@ -14,9 +14,9 @@ tags:
 ---
 <div>{{HTMLRef}}</div>
 
-<p>The use of color is a fundamental form of human expression. Children experiment with color before they even have the manual dexterity to draw. Maybe that's why color is one of the first things people often want to experiment with when learning to develop websites. <span class="seoSummary">With <a href="/en-US/docs/Web/CSS">CSS</a>, there are lots of ways to add color to your <a href="/en-US/docs/Web/HTML">HTML</a> <a href="/en-US/docs/Web/HTML/Element">elements</a> to create just the look you want. This article is a primer introducing each of the ways CSS color can be used in HTML.</span></p>
+<p>This article is a primer introducing each of the ways CSS color can be used in HTML.</p>
 
-<p>Fortunately, adding color to your HTML is actually really easy to do, and you can add color to nearly anything.</p>
+<p>The use of color is a fundamental form of human expression. Children experiment with color before they even have the manual dexterity to draw. Maybe that's why color is one of the first things people often want to experiment with when learning to develop websites. With <a href="/en-US/docs/Web/CSS">CSS</a>, there are lots of ways to add color to your <a href="/en-US/docs/Web/HTML">HTML</a> <a href="/en-US/docs/Web/HTML/Element">elements</a> to create just the look you want.</p>
 
 <p>We're going to touch on most of what you'll need to know when using color, including a {{anch("Things that can have color", "list of what you can color and what CSS properties are involved")}}, {{anch("How to describe a color", "how you describe colors")}}, and how to actually {{anch("Using color", "use colors both in stylesheets and in scripts")}}. We'll also take a look at how to {{anch("Letting the user picka color", "let the user pick a color")}}.</p>
 
@@ -146,11 +146,9 @@ tags:
 
 <p>Designers and artists often prefer to work using the {{interwiki("wikipedia", "HSL and HSV", "HSL")}} (Hue/Saturation/Luminosity) color method. On the web, HSL colors are represented using HSL functional notation. The <code>hsl()</code> CSS function is very similar to the <code>rgb()</code> function in usage otherwise.</p>
 
-<div style="padding-bottom: 20px;">
-<figure style="width: 500px;"><img alt="HSL color cylinder" src="1200px-hsl_color_solid_cylinder_alpha_lowgamma.png">
-<figcaption><em><strong>Figure 1. An HSL color cylinder.</strong> Hue defines the actual color based on the position along a circular color wheel representing the colors of the visible spectrum. Saturation is a percentage of how much of the way between being a shade of gray and having the maximum possible amount of the given hue. As the value of luminance (or lightness) increases, the color transitions from the darkest possible to the brightest possible (from black to white). Image courtesy of user <a href="https://commons.wikimedia.org/wiki/User:SharkD">SharkD</a> on <a href="https://www.wikipedia.org/">Wikipedia</a>, distributed under the <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a> license.</em></figcaption>
-</figure>
-</div>
+<p>The diagram below shows an HSL color cylinder. Hue defines the actual color based on the position along a circular color wheel representing the colors of the visible spectrum. Saturation is a percentage of how much of the way between being a shade of gray and having the maximum possible amount of the given hue. As the value of luminance (or lightness) increases, the color transitions from the darkest possible to the brightest possible (from black to white). Image courtesy of user <a href="https://commons.wikimedia.org/wiki/User:SharkD">SharkD</a> on <a href="https://www.wikipedia.org/">Wikipedia</a>, distributed under the <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a> license.</p>
+
+<img alt="HSL color cylinder" src="640px-hsl_color_solid_cylinder.png">
 
 <p>The value of the hue (H) component of an HSL color is an angle from red around through yellow, green, cyan, blue, and magenta (ending up back at red again at 360°) that identifies what the base color is. The value can be specified in any {{cssxref("&lt;angle&gt;")}} unit supported by CSS, including degrees (<code>deg</code>), radians (<code>rad</code>), gradians (<code>grad</code>), or turns (<code>turn</code>). But this doesn't control how vivid or dull, or how bright or dark the color is.</p>
 
@@ -168,9 +166,7 @@ tags:
 
 <p>Here are some sample colors in HSL notation:</p>
 
-<div id="hsl-swatches">
-<div class="hidden">
-<pre class="brush: css">table {
+<pre class="brush: css hidden">table {
   border: 1px solid black;
   font: 16px "Open Sans", Helvetica, Arial, sans-serif;
   border-spacing: 0;
@@ -221,13 +217,11 @@ th {
   &lt;/tr&gt;
  &lt;/tbody&gt;
 &lt;/table&gt;</pre>
-</div>
 
-<p>{{EmbedLiveSample("hsl-swatches", 300, 260)}}</p>
-</div>
+<p>{{EmbedLiveSample("HSL_functional_notation", 300, 260)}}</p>
 
 <div class="note">
-<p>Note that when you omit the hue's unit, it's assumed to be in degrees (<code>deg</code>).</p>
+<p><strong>Note:</strong> When you omit the hue's unit, it's assumed to be in degrees (<code>deg</code>).</p>
 </div>
 
 <h2 id="Using_color">Using color</h2>

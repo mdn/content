@@ -23,13 +23,13 @@ tags:
 
 <p>In addition, you can specify the opacity of either the <code>fill</code> or <code>stroke</code> separately in SVG. These are controlled by the <code>fill-opacity</code> and <code>stroke-opacity</code> attributes.</p>
 
-<div class="note style-wrap"><strong>Note:</strong> in Firefox 3+, <code>rgba</code> values are also allowed, and will give the same effect. But for compatibility with other viewers, it's often best to specify the <code>fill</code>/<code>stroke</code> opacity separately. If you specify both an <code>rgba</code> value and a <code>fill</code>/<code>stroke</code> opacity value, both will be applied.</div>
+<div class="note"><p><strong>Note:</strong> In Firefox, <code>rgba</code> values are also allowed, and will give the same effect. But for compatibility with other viewers, it's often best to specify the <code>fill</code>/<code>stroke</code> opacity separately. If you specify both an <code>rgba</code> value and a <code>fill</code>/<code>stroke</code> opacity value, both will be applied.</p></div>
 
 <h3 id="Stroke">Stroke</h3>
 
 <p>In addition to its color properties, there are a few other attributes available to control the way a stroke is drawn on a line.</p>
 
-<p><img alt="" class="internal" src="svg_stroke_linecap_example.png" style="float: right;"></p>
+<p><img alt="" class="internal" src="svg_stroke_linecap_example.png"></p>
 
 <pre class="brush:xml;">&lt;?xml version="1.0" standalone="no"?&gt;
 &lt;svg width="160" height="140" xmlns="http://www.w3.org/2000/svg" version="1.1"&gt;
@@ -52,7 +52,7 @@ tags:
 
 <p>Use <code>stroke-linejoin</code> to control how the joint between two line segments is drawn.</p>
 
-<p><img alt="" class="internal" src="svg_stroke_linejoin_example.png" style="float: right;"></p>
+<p><img alt="" class="internal" src="svg_stroke_linejoin_example.png"></p>
 
 <pre class="brush:xml;">&lt;?xml version="1.0" standalone="no"?&gt;
 &lt;svg width="160" height="280" xmlns="http://www.w3.org/2000/svg" version="1.1"&gt;
@@ -70,7 +70,7 @@ tags:
 
 <p>Finally, you can also use dashed line types on a stroke by specifying the <code>stroke-dasharray</code> attribute.</p>
 
-<p><img alt="" class="internal" src="svg_stroke_dasharray_example.png" style="float: right;"></p>
+<p><img alt="" class="internal" src="svg_stroke_dasharray_example.png"></p>
 
 <pre class="brush:xml;">&lt;?xml version="1.0" standalone="no"?&gt;
 &lt;svg width="200" height="150" xmlns="http://www.w3.org/2000/svg" version="1.1"&gt;
@@ -83,7 +83,7 @@ tags:
 <p>The <code>stroke-dasharray</code> attribute takes a series of comma-separated numbers as its argument. </p>
 
 <div class="note">
-<p><strong>Note:</strong> Unlike {{SVGElement("path")}}s, these numbers <strong><em>must</em></strong> be comma-separated (whitespace is ignored).</p>
+<p><strong>Note:</strong> Unlike {{SVGElement("path")}} elements, these numbers <strong><em>must</em></strong> be comma-separated (whitespace is ignored).</p>
 </div>
 
 <p>The first number specifies a distance for the filled area, and the second a distance for the unfilled area. So in the above example, the second path fills 5 pixel units, with 5 blank units until the next dash of 5 units. You can specify more numbers if you would like a more complicated dash pattern. The first example specifies three numbers, in which case the renderer loops the numbers twice to create an even pattern. So the first path renders 5 filled, 10 empty, 5 filled, and then loops back to create 5 empty, 10 filled, 5 empty. The pattern then repeats.</p>
@@ -94,7 +94,7 @@ tags:
 
 <p>In addition to setting attributes on objects, you can also use CSS to style fills and strokes. Not all attributes can be set via CSS. Attributes that deal with painting and filling are usually available, so <code>fill</code>, <code>stroke</code>, <code>stroke-dasharray</code>, etc... can all be set this way, in addition to the gradient and pattern versions of those shown below. Attributes like <code>width</code>, <code>height</code>, or {{SVGElement("path")}} commands cannot be set through CSS. It's easiest just to test and find out what is available and what isn't.</p>
 
-<div class="note style-wrap"><strong>Note:</strong> The <a href="https://www.w3.org/TR/SVG/propidx.html">SVG specification</a> decides strictly between attributes that are <em>properties</em> and other attributes. The former can be modified with CSS, the latter not.</div>
+<div class="note"><p><strong>Note:</strong> The <a href="https://www.w3.org/TR/SVG/propidx.html">SVG specification</a> decides strictly between attributes that are <em>properties</em> and other attributes. The former can be modified with CSS, the latter not.</p></div>
 
 <p>CSS can be inserted inline with the element via the <code>style</code> attribute:</p>
 

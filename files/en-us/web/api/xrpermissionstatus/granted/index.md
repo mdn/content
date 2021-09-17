@@ -44,6 +44,8 @@ An array of strings, each identifying a single WebXR feature which the app or si
   - : Articulated hand pose information from hand-based input controllers (see {{domxref("XRHand")}} and {{domxref("XRInputSource.hand")}}) has been enabled.
 - `hit-test`
   - : Hit testing features for performing hit tests against real world geometry has been enabled.
+- `layers`
+  - : The ability to create various layer types (other than {{domxref("XRProjectionLayer")}}) has been enabled.
 - `light-estimation`
   - : The ability to estimate environmental lighting conditions using {{domxref("XRLightEstimate")}} objects has been enabled.
 - `local`

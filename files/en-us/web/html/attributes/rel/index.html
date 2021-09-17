@@ -11,7 +11,7 @@ tags:
 ---
 <p>{{HTMLSidebar}}{{draft}}</p>
 
-<p class="summary">The <strong><code>rel</code></strong> attribute defines the relationship between a linked resource and the current document. Valid on {{htmlelement('link')}}, {{htmlelement('a')}}, {{htmlelement('area')}}, and {{htmlelement('form')}}, the supported values depend on the element on which the attribute is found.</p>
+<p>The <strong><code>rel</code></strong> attribute defines the relationship between a linked resource and the current document. Valid on {{htmlelement('link')}}, {{htmlelement('a')}}, {{htmlelement('area')}}, and {{htmlelement('form')}}, the supported values depend on the element on which the attribute is found.</p>
 
 <p>The type of relationships is given by the value of the <code>rel</code> attribute, which, if present, must have a value that is an unordered set of unique space-separated keywords. Differently from a <code>class</code> name, which does not express semantics, the <code>rel</code> attribute must express tokens that are semantically valid for both machines and humans. The current registries for the possible values of the <code>rel</code> attribute are the <a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">IANA link relation registry</a>, the <a href="https://html.spec.whatwg.org/multipage/links.html#linkTypes">HTML Living Standard</a>, and the freely-editable <a href="https://microformats.org/wiki/existing-rel-values">existing-rel-values page</a> in the microformats wiki, <a href="https://html.spec.whatwg.org/multipage/links.html#other-link-types">as suggested</a> by the Living Standard. If a <code>rel</code> attribute not present in one of the three sources above is used some HTML validators (such as the <a href="https://validator.w3.org/">W3C Markup Validation Service</a>) will generate a warning.</p>
 
@@ -329,19 +329,8 @@ tags:
 <h3 id="Non-standard_values">Non-standard values</h3>
 
 <dl>
-	<dt>apple-touch-icon-precomposed</dt>
-	<dd>
-	<pre class="brush: html"> &lt;!-- third-generation iPad with high-resolution Retina display: --&gt;
-  &lt;link rel="apple-touch-icon-precomposed" sizes="144x144" href="/static/img/favicon144.e7e21ca263ca.png"&gt;
-  &lt;!-- iPhone with high-resolution Retina display: --&gt;
-  &lt;link rel="apple-touch-icon-precomposed" sizes="114x114" href="/static/img/favicon114.d526f38b09c5.png"&gt;
-  &lt;!-- first- and second-generation iPad: --&gt;
-  &lt;link rel="apple-touch-icon-precomposed" sizes="72x72" href="/static/img/favicon72.cc65d1d762a0.png"&gt;
-  &lt;!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: --&gt;
-  &lt;link rel="apple-touch-icon-precomposed" href="/static/img/favicon57.de33179910ae.png"&gt;
-  &lt;!-- basic favicon --&gt;
-  &lt;link rel="icon" href="/static/img/favicon32.7f3da72dcea1.png"&gt;</pre>
-	</dd>
+	<dt>{{htmlattrdef("apple-touch-icon")}}</dt>
+	<dd>Specifies the icon for a web application on an iOS device.</dd>
 </dl>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

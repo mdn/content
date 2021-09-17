@@ -90,25 +90,17 @@ browser-compat: svg.elements.feComposite
 
 <h2 id="Example">Example</h2>
 
-<p>This example defines filters for each of the supported operations (<code>over</code>, <code>atop</code>, <code>lighter</code>, etc.), which composite an input <code>SourceGraphic</code> with an image of the MDN logo. The filters are each applied to a circle element, which is then used as the <code>SourceGraphic</code>. The relevant code for just one filter (<code>lighter</code>) is shown below:</p>
-
-<pre class="brush: xml">&lt;defs&gt;
-  &lt;filter id="imageLighter"&gt;
-    &lt;feImage xlink:href="mdn_logo_only_color.png" x="10px" y="10px" width="160px" /&gt;
-    &lt;feComposite in2="SourceGraphic" operator="lighter"/&gt;
-  &lt;/filter&gt;
-&lt;/defs&gt;
-&lt;circle cx="90px" cy="80px" r="70px" fill="#c00" style="filter:url(#imageLighter)"/&gt;
-</pre>
+<p>This example defines filters for each of the supported operations (<code>over</code>, <code>atop</code>, <code>lighter</code>, etc.), which composite an input <code>SourceGraphic</code> with an image of the MDN logo. The filters are each applied to a circle element, which is then used as the <code>SourceGraphic</code>.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p><code>BackgroundImage</code> cannot be used as a compositing source on modern browsers, so we can't define a filter that composites using whatever pixels happen to be under the filter as one of the sources. The approach above is a <a href="/en-US/docs/Web/SVG/Attribute/in#workaround_for_backgroundimage">workaround because we can't use <code>BackgroundImage</code></a>.</p>
+  <p><strong>Note:</strong> <code>BackgroundImage</code> cannot be used as a compositing source on modern browsers, so we can't define a filter that composites using whatever pixels happen to be under the filter as one of the sources. The approach taken here is a <a href="/en-US/docs/Web/SVG/Attribute/in#workaround_for_backgroundimage">workaround because we can't use <code>BackgroundImage</code></a>.</p>
 </div>
 
 <h3 id="SVG">SVG</h3>
 
-<pre class="brush: xml">&lt;svg style="width:800px; height:400px; display: inline;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
+<pre class="brush: html">
+
+&lt;svg style="width:800px; height:400px; display: inline;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
   &lt;defs&gt;
     &lt;filter id="imageOver"&gt;
       &lt;feImage xlink:href="mdn_logo_only_color.png" x="10px" y="10px" width="160px" /&gt;
@@ -172,70 +164,7 @@ browser-compat: svg.elements.feComposite
 
 <h3 id="Result">Result</h3>
 
-<p>The image below shows the rendered file.</p>
-
-<div>
-  <svg style="width:800px; height:400px; display: inline;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <defs>
-      <filter id="imageOver">
-        <feImage xlink:href="mdn_logo_only_color.png" x="10px" y="10px" width="160px" />
-        <feComposite in2="SourceGraphic" operator="over"/>
-      </filter>
-      <filter id="imageIn">
-        <feImage xlink:href="mdn_logo_only_color.png" x="10px" y="10px" width="160px" />
-        <feComposite in2="SourceGraphic" operator="in"/>
-      </filter>
-      <filter id="imageOut">
-        <feImage xlink:href="mdn_logo_only_color.png" x="10px" y="10px" width="160px" />
-        <feComposite in2="SourceGraphic" operator="out"/>
-      </filter>
-      <filter id="imageAtop">
-        <feImage xlink:href="mdn_logo_only_color.png" x="10px" y="10px" width="160px" />
-        <feComposite in2="SourceGraphic" operator="atop"/>
-      </filter>
-      <filter id="imageXor">
-        <feImage xlink:href="mdn_logo_only_color.png" x="10px" y="10px" width="160px" />
-        <feComposite in2="SourceGraphic" operator="xor"/>
-      </filter>
-      <filter id="imageArithmetic">
-        <feImage xlink:href="mdn_logo_only_color.png" x="10px" y="10px" width="160px" />
-        <feComposite in2="SourceGraphic" operator="arithmetic" k1="0.1" k2="0.2" k3="0.3" k4="0.4" />
-      </filter>
-      <filter id="imageLighter">
-        <feImage xlink:href="mdn_logo_only_color.png" x="10px" y="10px" width="160px" />
-        <feComposite in2="SourceGraphic" operator="lighter"/>
-      </filter>
-    </defs>
-    <g transform="translate(0,25)">
-      <circle cx="90px" cy="80px" r="70px" fill="#c00" style="filter:url(#imageOver)"/>
-      <text x="80" y="-5">over</text>
-    </g>
-    <g transform="translate(200,25)">
-      <circle cx="90px" cy="80px" r="70px" fill="#c00" style="filter:url(#imageIn)"/>
-      <text x="80" y="-5">in</text>
-    </g>
-    <g transform="translate(400,25)">
-      <circle cx="90px" cy="80px" r="70px" fill="#c00" style="filter:url(#imageOut)"/>
-      <text x="80" y="-5">out</text>
-    </g>
-    <g transform="translate(600,25)">
-      <circle cx="90px" cy="80px" r="70px" fill="#c00" style="filter:url(#imageAtop)"/>
-      <text x="80" y="-5">atop</text>
-    </g>
-    <g transform="translate(0,240)">
-      <circle cx="90px" cy="80px" r="70px" fill="#c00" style="filter:url(#imageXor)"/>
-      <text x="80" y="-5">xor</text>
-    </g>
-    <g transform="translate(200,240)">
-      <circle cx="90px" cy="80px" r="70px" fill="#c00" style="filter:url(#imageArithmetic)"/>
-      <text x="70" y="-5">arithmetic</text>
-    </g>
-    <g transform="translate(400,240)">
-      <circle cx="90px" cy="80px" r="70px" fill="#c00" style="filter:url(#imageLighter)"/>
-      <text x="80" y="-5">lighter</text>
-    </g>
-  </svg>
-</div>
+<div>{{EmbedLiveSample("Example", 100, 450)}}</div>
 
 <h2 id="Specifications">Specifications</h2>
 

@@ -56,8 +56,9 @@ browser-compat: html.elements.output
  <dt>{{htmlattrdef("for")}}</dt>
  <dd>A space-separated list of other elements’ {{htmlattrxref("id")}}s, indicating that those elements contributed input values to (or otherwise affected) the calculation.</dd>
  <dt>{{htmlattrdef("form")}}</dt>
- <dd>The {{HTMLElement("form")}} element to associate the output with (its <em>form owner</em>). The value of this attribute must be the {{htmlattrxref("id")}} of a <code>&lt;form&gt;</code> in the same document. (If this attribute is not set, the <code>&lt;output&gt;</code> is associated with its ancestor <code>&lt;form&gt;</code> element, if any.)</dd>
- <dd>This attribute lets you associate <code>&lt;output&gt;</code> elements to <code>&lt;form&gt;</code>s anywhere in the document, not just inside a <code>&lt;form&gt;</code>. It can also override an ancestor <code>&lt;form&gt;</code> element.</dd>
+ <dd><p>The {{HTMLElement("form")}} element to associate the output with (its <em>form owner</em>). The value of this attribute must be the {{htmlattrxref("id")}} of a <code>&lt;form&gt;</code> in the same document. (If this attribute is not set, the <code>&lt;output&gt;</code> is associated with its ancestor <code>&lt;form&gt;</code> element, if any.)</p>
+ <p>This attribute lets you associate <code>&lt;output&gt;</code> elements to <code>&lt;form&gt;</code>s anywhere in the document, not just inside a <code>&lt;form&gt;</code>. It can also override an ancestor <code>&lt;form&gt;</code> element.</p>
+ </dd>
  <dt>{{htmlattrdef("name")}}</dt>
  <dd>The element's name. Used in the {{domxref("HTMLFormElement.elements", "form.elements")}} API.</dd>
 </dl>

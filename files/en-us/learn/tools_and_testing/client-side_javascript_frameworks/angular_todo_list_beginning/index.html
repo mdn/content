@@ -174,7 +174,7 @@ What would you like to do today?
 
 <p>In <code>app.component.ts</code>, add the following method to the class:</p>
 
-<pre class="brush: js">addItem(description) {
+<pre class="brush: js">addItem(description: string) {
   this.allItems.unshift({
     description,
     done: false

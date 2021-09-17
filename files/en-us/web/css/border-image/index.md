@@ -15,7 +15,7 @@ The **`border-image`** [CSS](/en-US/docs/Web/CSS) property draws an image around
 
 {{EmbedInteractiveExample("pages/css/border-image.html")}}
 
-> **Note:** You should specify a separate {{cssxref("border-style")}} in case the border image fails to load. Indeed, this is required according to the specification, although not all browsers implement this requirement.
+> **Note:** You should specify a separate {{cssxref("border-style")}} in case the border image fails to load. Although the specification doesn't strictly require it, some browsers don't render the border image if {{cssxref("border-style")}} is `none` or {{cssxref("border-width")}} is `0`.
 
 ## Constituent properties
 

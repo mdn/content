@@ -2,10 +2,10 @@
 title: firefoxOptions
 slug: Web/WebDriver/Capabilities/firefoxOptions
 tags:
-  - Extension capabilities
   - Reference
   - WebDriver
   - capabilities
+  - Extension capabilities
   - firefoxOptions
 ---
 <p>The <a id="firefoxOptions"><strong><code>moz:firefoxOptions</code> capability</strong></a> is a namespaced set of
@@ -78,7 +78,7 @@ tags:
 <h5 id="args_array_of_strings"><code>args</code> (array of strings)</h5>
 
 <p>Command line arguments to pass to the Firefox binary. These must include the leading dash (<code>-</code>) where
-  required, e.g. <code>["<a href="/en-US/docs/Mozilla/Firefox/Headless_mode">-headless</a>"]</code>.</p>
+  required, e.g. <code>["<a href="https://hacks.mozilla.org/2017/12/using-headless-mode-in-firefox/">-headless</a>"]</code>.</p>
 
 <p>To have geckodriver pick up an existing <a href="#profile">profile</a> on the local filesystem, you may pass
   <code>["-profile", "/path/to/profile"]</code>. But if a profile has to be transferred to a target machine it is
@@ -184,8 +184,8 @@ tags:
 
 <p>A JSON Object with one entry per preference to set. The preference will be written to the <a
     href="#profile">profile</a> before starting Firefox. A full list of available preferences is available from visiting
-  "<a>about:config</a>" in your Firefox browser. Some of these are documented on the <a
-    href="/en-US/docs/Mozilla/Preferences/Preference_reference">preference reference</a> page.</p>
+  "<a>about:config</a>" in your Firefox browser. Some of these are documented in <a
+    href="https://searchfox.org/mozilla-central/source/modules/libpref/init/all.js">this source</a> file.</p>
 
 <p>An example of a preference object:</p>
 
@@ -214,7 +214,7 @@ tags:
 
 <p>The following is an example of a full <a href="/en-US/docs/Web/WebDriver/Capabilities">capabilities object</a> that
   selects a specific Firefox binary to run with a prepared <a href="#profile">profile</a> from the filesystem in <a
-    href="/en-US/docs/Mozilla/Firefox/Headless_mode">headless mode</a>. It also increases the number of IPC processes
+    href="https://hacks.mozilla.org/2017/12/using-headless-mode-in-firefox/">headless mode</a>. It also increases the number of IPC processes
   through a preference, turns off chrome errors/warnings in the console, and enables more verbose logging:</p>
 
 <pre class="brush: json">{
@@ -283,7 +283,7 @@ tags:
   <li><a
       href="https://firefox-source-docs.mozilla.org/testing/geckodriver/geckodriver/Capabilities.html#capabilities-example">geckodriver’s
       documentation on supported Firefox capabilities</a></li>
-  <li><a href="/en-US/docs/Web/WebDriver/Capabilities/goog/chromeOptions">Chrome-specific WebDriver capabilities</a>
+  <li><a href="https://chromedriver.chromium.org/capabilities">Chrome-specific WebDriver capabilities</a>
     (<code>goog:chromeOptions)</code></li>
   <li><a href="/en-US/docs/Web/WebDriver/Capabilities">List of WebDriver capabilities</a></li>
   <li><a href="/en-US/docs/Web/WebDriver/Commands/NewSession">New Session</a> command</li>

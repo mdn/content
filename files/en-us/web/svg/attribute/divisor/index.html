@@ -9,7 +9,9 @@ browser-compat: svg.elements.feConvolveMatrix.divisor
 ---
 <div>{{SVGRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>divisor</code></strong> attribute specifies the value by which the resulting number of applying the {{SVGAttr("kernelMatrix")}} of a {{SVGElement("feConvolveMatrix")}} element to the input image color value is divided to yield the destination color value.</span> A divisor that is the sum of all the matrix values tends to have an evening effect on the overall color intensity of the result.</p>
+<p>The <strong><code>divisor</code></strong> attribute specifies the value by which the resulting number of applying the {{SVGAttr("kernelMatrix")}} of a {{SVGElement("feConvolveMatrix")}} element to the input image color value is divided to yield the destination color value.</p>
+
+<p>A divisor that is the sum of all the matrix values tends to have an evening effect on the overall color intensity of the result.</p>
 
 <p>You can use this attribute with the following SVG elements:</p>
 
@@ -17,12 +19,11 @@ browser-compat: svg.elements.feConvolveMatrix.divisor
   <li>{{SVGElement("feConvolveMatrix")}}</li>
 </ul>
 
-<div id="topExample">
-<div class="hidden">
-<pre class="brush: css">html, body, svg {
+<h2>Example</h2>
+
+<pre class="brush: css hidden">html, body, svg {
   height: 100%;
 }</pre>
-</div>
 
 <pre class="brush: html; highlight[3,6]">&lt;svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;filter id="convolveMatrix1" x="0" y="0" width="100%" height="100%"&gt;
@@ -38,8 +39,7 @@ browser-compat: svg.elements.feConvolveMatrix.divisor
       style="filter:url(#convolveMatrix2); transform:translateX(220px);"/&gt;
 &lt;/svg&gt;</pre>
 
-<p>{{EmbedLiveSample("topExample", "420", "200")}}</p>
-</div>
+<p>{{EmbedLiveSample("Example", "420", "200")}}</p>
 
 <h2 id="Usage_notes">Usage notes</h2>
 
