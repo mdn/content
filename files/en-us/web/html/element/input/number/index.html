@@ -115,14 +115,12 @@ browser-compat: html.elements.input.input-number
 
 <h3 id="attr-step"><code id="step">step</code></h3>
 
-<div id="step-include">
 <p>The <code>step</code> attribute is a number that specifies the granularity that the value must adhere to, or the special value <code>any</code>, which is described below. Only values which are equal to the basis for stepping (<code>{{anch("min")}}</code> if specified, {{htmlattrxref("value", "input")}} otherwise, and an appropriate default value if neither of those is provided) are valid.</p>
 
 <p>A string value of <code>any</code> means that no stepping is implied, and any value is allowed (barring other constraints, such as <code>{{anch("min")}}</code> and <code>{{anch("max")}}</code>).</p>
 
 <div class="note">
 <p><strong>Note:</strong> When the data entered by the user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round to the nearest valid value, preferring numbers in the positive direction when there are two equally close options.</p>
-</div>
 </div>
 
 <p>The default stepping value for <code>number</code> inputs is <code>1</code>, allowing only integers to be entered—<em>unless</em> the stepping base is not an integer.</p>

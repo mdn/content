@@ -132,30 +132,11 @@ browser-compat: html.elements.input.input-file
 
 <p>In addition to the attributes listed above, the following non-standard attributes are available on some browsers. You should try to avoid using them when possible, since doing so will limit the ability of your code to function in browsers that don't implement them.</p>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Attribute</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>{{anch("webkitdirectory")}}</code></td>
-   <td>A Boolean indicating whether or not to only allow the user to choose a directory (or directories, if <code>{{anch("multiple")}}</code> is also present)</td>
-  </tr>
- </tbody>
-</table>
+<h3><code>webkitdirectory</code></h3>
 
-<h3 id="attr-webkitdirectory"><code id="webkitdirectory">webkitdirectory</code> {{non-standard_inline}}</h3>
-
-<div id="webkitdirectory-include">
 <p>The Boolean <code>webkitdirectory</code> attribute, if present, indicates that only directories should be available to be selected by the user in the file picker interface. See {{domxref("HTMLInputElement.webkitdirectory")}} for additional details and examples.</p>
 
-<div class="note">
-<p><strong>Note:</strong> Though originally implemented only for WebKit-based browsers, <code>webkitdirectory</code> is also usable in Microsoft Edge as well as Firefox 50 and later. However, even though it has relatively broad support, it is still not standard and should not be used unless you have no alternative.</p>
-</div>
-</div>
+<p>Though originally implemented only for WebKit-based browsers, <code>webkitdirectory</code> is also usable in Microsoft Edge as well as Firefox 50 and later. However, even though it has relatively broad support, it is still not standard and should not be used unless you have no alternative.</p>
 
 <h2 id="Unique_file_type_specifiers">Unique file type specifiers</h2>
 

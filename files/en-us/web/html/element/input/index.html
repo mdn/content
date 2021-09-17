@@ -647,7 +647,7 @@ let hatSize = form.elements["hat-size"];
  <p>If the <code>pattern</code> attribute is present but is not specified or is invalid, no regular expression is applied and this attribute is ignored completely. If the pattern attribute is valid and a non-empty value does not match the pattern, constraint validation will prevent form submission.</p>
 
  <div class="note">
- <p><strong>Tip:</strong> If using the <code>pattern</code> attribute, inform the user about the expected format by including explanatory text nearby. You can also include a {{htmlattrxref("title", "input")}} attribute to explain what the requirements are to match the pattern; most browsers will display this title as a tooltip. The visible explanation is required for accessibility. The tooltip is an enhancement.</p>
+ <p><strong>Note:</strong> If using the <code>pattern</code> attribute, inform the user about the expected format by including explanatory text nearby. You can also include a {{htmlattrxref("title", "input")}} attribute to explain what the requirements are to match the pattern; most browsers will display this title as a tooltip. The visible explanation is required for accessibility. The tooltip is an enhancement.</p>
  </div>
 
  <p>See {{anch("Client-side validation")}} for more information.</p>
@@ -884,11 +884,10 @@ let hatSize = form.elements["hat-size"];
  </tbody>
 </table>
 
-<h4 id="Examples">Examples</h4>
+<h4>Pseudo-classes example</h4>
 
 <p>We can style a checkbox label based on whether the checkbox is checked or not. In this example, we are styling the {{cssxref('color')}} and {{cssxref('font-weight')}} of the {{htmlelement('label')}} that comes immediately after a checked input. We haven't applied any styles if the <code>input</code> is not checked.</p>
 
-<div id="checkbox_label">
 <pre class="brush: html hidden">&lt;input id="checkboxInput" type="checkbox"&gt;
 &lt;label for="checkboxInput"&gt;Toggle the checkbox on and off&lt;/label&gt;
 </pre>
@@ -899,8 +898,7 @@ let hatSize = form.elements["hat-size"];
 }
 </pre>
 
-<p>{{EmbedLiveSample('checkbox_label', 500, 80)}}</p>
-</div>
+<p>{{EmbedLiveSample('Pseudo-classes_example', 500, 80)}}</p>
 
 <h3 id="Attribute_selectors">Attribute selectors</h3>
 
