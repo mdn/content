@@ -76,11 +76,11 @@ browser-compat: svg.attributes.conditional_processing.systemLanguage
 
 <p><code>systemLanguage</code> is often used in conjunction with the <span class="element-name">{{SVGElement("switch")}}</span> element. If the attribute is used in other situations, then it represents a simple switch on the given element whether to render the element or not.</p>
 
-<p class="note"><strong>Note:</strong> If several alternative language objects are enclosed in a <code>&lt;switch&gt;</code> and none of them matches, this may lead to situations where no content is displayed. It is thus recommended to include a "catch-all" choice at the end of such a <span class="element-name"><code>&lt;switch&gt;</code> </span>which is acceptable in all cases.</p>
+<div class="note"><p><strong>Note:</strong> If several alternative language objects are enclosed in a <code>&lt;switch&gt;</code> and none of them matches, this may lead to situations where no content is displayed. It is thus recommended to include a "catch-all" choice at the end of such a <span class="element-name"><code>&lt;switch&gt;</code> </span>which is acceptable in all cases.</p></div>
 
 <p>The attribute evaluates to "true" if one of the language tags indicated by user preferences is a case-insensitive match or prefix (followed by a "-") of one of the language tags given in the value of this parameter. Otherwise it evaluates to "false".</p>
 
-<p class="note"><strong>Note:</strong> The prefix matching rule does not imply that if a user understands a language with a certain tag, that the user will also understand all languages with the tag as prefix.</p>
+<div class="note"><p><strong>Note:</strong> The prefix matching rule does not imply that if a user understands a language with a certain tag, that the user will also understand all languages with the tag as prefix.</p></div>
 
 <p>If the attribute is not present, then it implicitly evaluates to "true". If a null string or empty string value is given, the attribute evaluates to "false".</p>
 
