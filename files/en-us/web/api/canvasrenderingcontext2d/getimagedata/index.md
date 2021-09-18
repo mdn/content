@@ -81,8 +81,6 @@ canvas specified. The coordinates of the rectangle's top-left corner are
 This example draws a rectangle, and then uses `getImageData()` to grab a
 portion of the canvas.
 
-The HTML is very simple:
-
 ```html
 <canvas id="canvas"></canvas>
 ```
