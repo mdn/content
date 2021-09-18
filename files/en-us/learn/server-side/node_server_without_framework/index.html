@@ -109,9 +109,10 @@ if (filePath == './') {
 
 <p>For example, if the URL sent is <code>example.org</code>, it will be interpreted as <code>example.org/index.html</code>.</p>
 
-<p>Next, we look for the extension of the file being requested and see if it matches with one of our <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME types</a>. If no matches are found, we use the <code>application/octet-stream</code> as the default type.</p>
+<p>Next, we lowercase and look for the extension of the file being requested to see if it matches with one of our <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME types</a>. If no matches are found, we use the <code>application/octet-stream</code> as the default type.</p>
 
-<pre class="brush: js">var mimeTypes = {
+<pre class="brush: js">var extname = String(path.extname(filePath)).toLowerCase();
+var mimeTypes = {
     '.html': 'text/html',
     '.js': 'text/javascript',
     '.css': 'text/css',
@@ -139,8 +140,16 @@ var contentType = mimeTypes[extname] || 'application/octet-stream';
 });
 </pre>
 
-<p>The first thing we do is to compensate for any possible errors. Most often, the error will be <code>ENOENT</code>, in which case we reply with a 404 error.</p>
+<p>The first thing we do is to compensate for any possible errors.</p>
+<pre class="brush: js">
+if (error) {
+  ..
+} else {
+  ..
+}
+</pre>
 
+<p>Most often, the error will be <code>ENOENT</code>, in which case we reply with a 404 error.</p>
 <pre class="brush: js">if(error.code == 'ENOENT') {
     fs.readFile('./404.html', function(error, content) {
         response.writeHead(404, { 'Content-Type': 'text/html' });
@@ -156,7 +165,3 @@ else {
 
 <pre class="brush: js">response.writeHead(200, { 'Content-Type': contentType });
 response.end(content, 'utf-8');</pre>
-
-<h2 id="To_do">To do</h2>
-
-<p>Perhaps an extended version serving static files and handling dynamic requests.</p>
