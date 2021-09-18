@@ -76,9 +76,11 @@ text-emphasis-style: unset;
 
 ### Basic example
 
-    h2 {
-      text-emphasis-style: sesame;
-    }
+```css
+h2 {
+  text-emphasis-style: sesame;
+}
+```
 
 ## Specifications
 
