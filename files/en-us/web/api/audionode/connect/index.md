@@ -68,7 +68,7 @@ If the destination is an `AudioParam`, `connect()` returns
   - : Thrown if the specified connection would create a cycle (in which the audio loops back through
     the same nodes repeatedly) and there are no {{domxref("DelayNode")}} objects in the cycle to
     prevent the resulting waveform from getting stuck constructing the same audio frame
-    indefinitely. Also thrown if the `inputIndex` parameter is used whiile the destination is an {{domxref("AudioParam")}}.
+    indefinitely. Also thrown if the `inputIndex` parameter is used while the destination is an {{domxref("AudioParam")}}.
 
 ## Examples
 
