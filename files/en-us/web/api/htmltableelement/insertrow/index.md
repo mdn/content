@@ -56,7 +56,7 @@ row.
 The following exceptions can be raised:
 
 - `IndexSizeError` {{domxref("DOMException")}}
-  - : Thrown if `index` is greater than the number of rows
+  - : Thrown if `index` is greater than the number of rows.
 
 ## Example
 
