@@ -14,7 +14,7 @@ browser-compat: svg.elements.feConvolveMatrix
 
 <p>A matrix convolution is based on an n-by-m matrix (the convolution kernel) which describes how a given pixel value in the input image is combined with its neighboring pixel values to produce a resulting pixel value. Each result pixel is determined by applying the kernel matrix to the corresponding source pixel and its neighboring pixels. The basic convolution formula which is applied to each color value for a given pixel is:</p>
 
-<p id="feConvolveMatrixElementFormula">COLOR<sub>X,Y</sub> = ( <br>
+<p>COLOR<sub>X,Y</sub> = ( <br>
                SUM <sub>I=0 to [<a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementOrderAttribute">orderY</a>-1]</sub> { <br>
                  SUM <sub>J=0 to [<a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementOrderAttribute">orderX</a>-1]</sub> { <br>
                    SOURCE <sub>X-<a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementTargetXAttribute">targetX</a>+J, Y-<a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementTargetYAttribute">targetY</a>+I</sub> *  <a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementKernelMatrixAttribute">kernelMatrix</a><sub><a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementOrderAttribute">orderX</a>-J-1,  <a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementOrderAttribute">orderY</a>-I-1</sub> <br>
@@ -98,7 +98,7 @@ browser-compat: svg.elements.feConvolveMatrix
     &lt;/filter&gt;
   &lt;/defs&gt;
 
-  &lt;image xlink:href="/files/12668/MDN.svg" x="0" y="0"
+  &lt;image xlink:href="mdn.svg" x="0" y="0"
       height="200" width="200" style="filter:url(#emboss);" /&gt;
 &lt;/svg&gt;</pre>
 

@@ -43,14 +43,18 @@ element.
 
 - `index` {{optional_inline}}
   - : The row index of the new row. If `index` is `-1` or equal to
-    the number of rows, the row is appended as the last row. If `index` is
-    greater than the number of rows, an `IndexSizeError` exception will result.
+    the number of rows, the row is appended as the last row.
     If `index` is omitted it defaults to `-1`.
 
 ### Return value
 
-`newRow` is an {{domxref("HTMLTableRowElement")}} that references the new
+An {{domxref("HTMLTableRowElement")}} that references the new
 row.
+
+### Exceptions
+
+- `IndexSizeError` {{domxref("DOMException")}}
+  - : Thrown if `index` is greater than the number of rows.
 
 ## Example
 

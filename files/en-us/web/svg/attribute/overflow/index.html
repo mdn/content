@@ -36,19 +36,17 @@ browser-compat: svg.attributes.presentation.overflow
   <li>{{SVGElement("text")}}</li>
 </ul>
 
-<div id="Example">
-<div class="hidden">
-<pre class="brush: css">html, body, svg {
+<h2>Example</h2>
+
+<pre class="brush: css hidden">html, body, svg {
   height: 100%;
 }</pre>
-</div>
 
 <pre class="brush: html; highlight[1]">&lt;svg viewBox="0 0 200 30" xmlns="http://www.w3.org/2000/svg" overflow="auto"&gt;
   &lt;text y="20"&gt;This text is wider than the SVG, so there should be a scrollbar shown.&lt;/text&gt;
 &lt;/svg&gt;</pre>
 
 <p>{{EmbedLiveSample("Example", "200", "50")}}</p>
-</div>
 
 <h2 id="Usage_notes">Usage notes</h2>
 
