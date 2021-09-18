@@ -34,11 +34,9 @@ range.setEnd(endNode, endOffset);
 
 ### Return value
 
-`undefined`.
+None.
 
 ### Exceptions
-
-Possible exceptions are:
 
 - `InvalidNodeTypeError` {{domxref("DOMException")}}
   - : The node specified by `endNode` is a doctype node; range endpoints cannot be located inside a doctype node.
