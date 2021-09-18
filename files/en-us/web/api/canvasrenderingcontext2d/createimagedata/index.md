@@ -51,8 +51,6 @@ object is filled with transparent black pixels.
 This snippet creates a blank `ImageData` object using the
 `createImageData()` method.
 
-The HTML is very simple:
-
 ```html
 <canvas id="canvas"></canvas>
 ```
@@ -74,8 +72,6 @@ console.log(imageData);
 ### Filling a blank ImageData object
 
 This example creates and fills a new `ImageData` object with purple pixels.
-
-The HTML is trivial, consisting only of the `<canvas>` element:
 
 ```html
 <canvas id="canvas"></canvas>
