@@ -13,10 +13,9 @@ browser-compat: svg.elements.clipPath
 
 <p>A clipping path restricts the region to which paint can be applied. Conceptually, parts of the drawing that lie outside of the region bounded by the clipping path are not drawn.</p>
 
-<div id="Example">
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+<h2>Example</h2>
+
+<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
 
 <pre class="brush: html">&lt;svg viewBox="0 0 100 100"&gt;
   &lt;clipPath id="myClip"&gt;
@@ -47,7 +46,6 @@ browser-compat: svg.elements.clipPath
 }</pre>
 
 <p>{{EmbedLiveSample('Example', 100, 100)}}</p>
-</div>
 
 <p>A clipping path is conceptually equivalent to a custom viewport for the referencing element. Thus, it affects the <em>rendering</em> of an element, but not the element's <em>inherent geometry</em>. The bounding box of a clipped element (meaning, an element which references a <code>&lt;clipPath&gt;</code> element via a {{SVGAttr("clip-path")}} property, or a child of the referencing element) must remain the same as if it were not clipped.</p>
 

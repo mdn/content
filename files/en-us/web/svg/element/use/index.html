@@ -12,10 +12,9 @@ browser-compat: svg.elements.use
 
 <p>The <strong><code>&lt;use&gt;</code></strong> element takes nodes from within the SVG document, and duplicates them somewhere else.</p>
 
-<div id="Example">
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+<h2>Example</h2>
+
+<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
 
 <pre class="brush: html">&lt;svg viewBox="0 0 30 10" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;circle id="myCircle" cx="5" cy="5" r="4" stroke="blue"/&gt;
@@ -30,7 +29,6 @@ That's why the circles have different x positions, but the same stroke value.
 &lt;/svg&gt;</pre>
 
 <p>{{EmbedLiveSample('Example', 100, 100)}}</p>
-</div>
 
 <p>The effect is the same as if the nodes were deeply cloned into a non-exposed DOM, then pasted where the <code>use</code> element is, much like cloned <a href="/en-US/docs/Web/HTML/Element/template">template elements</a> in HTML5.</p>
 
