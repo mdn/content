@@ -15,11 +15,11 @@ tags:
 
 CSS Grid Layout implements the specification [Box Alignment Level 3](https://drafts.csswg.org/css-align/) which is the same standard [flexbox ](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout)uses for aligning items in its flex container. This specification details how alignment should work in all the different layout methods. Layout methods will conform to the specification where possible and implement individual behavior based on their differences (features and constraints). While the specification currently specifies alignment details for all layout methods, browsers have not fully implemented all of the specification; however, the CSS Grid Layout method has been widely adopted.
 
-This guide presents demonstrations of how box alignment in grid layout works. You will see many similarities in how these properties and values work in flexbox. Due to grid being two-dimensional and flexbox one-dimensional there are some small differences that you should watch out for. So we will start by looking at the two axes that we deal with when aligning things in a grid.
+This guide presents demonstrations of how box alignment in grid layout works. You will see many similarities in how these properties and values work in flexbox. Due to grid being two-dimensional and flexbox one-dimensional there are some small differences that you should watch out for. So we will start by looking at the two axis that we deal with when aligning things in a grid.
 
-## The two axes of a grid layout
+## The two axis of a grid layout
 
-When working with grid layout you have two axes available to align things against – the _block axis_ and the _inline axis_. The block axis is the axis upon which blocks are laid out in block layout. If you have two paragraphs on your page they display one below the other, so it is this direction we describe as the block axis.
+When working with grid layout you have two axis available to align things against – the _block axis_ and the _inline axis_. The block axis is the axis upon which blocks are laid out in block layout. If you have two paragraphs on your page they display one below the other, so it is this direction we describe as the block axis.
 
 ![](block_axis.png)
 
@@ -27,7 +27,7 @@ The _inline axis_ runs across the block axis, it is the direction in which text 
 
 ![](7_inline_axis.png)
 
-We are able to align the content inside grid areas, and the grid tracks themselves on these two axes.
+We are able to align the content inside grid areas, and the grid tracks themselves on these two axis.
 
 ## Aligning items on the Block Axis
 
@@ -310,7 +310,7 @@ By combining the align and justify properties we can easily center an item insid
 
 ## Aligning the grid tracks on the block axis
 
-If you have a situation where your grid tracks use an area that is smaller than the grid container, then you can align the grid tracks themselves, inside that container. Once again, this operates on the block and inline axes, with {{cssxref("align-content")}} aligning tracks on the block axis, and {{cssxref("justify-content")}} performing alignment on the inline axis. The {{CSSxRef("place-content")}} property is shorthand for {{cssxref("align-content")}} and {{cssxref("justify-content")}}. The values for {{cssxref("align-content")}}, {{cssxref("justify-content")}} and {{cssxref("place-content")}} are:
+If you have a situation where your grid tracks use an area that is smaller than the grid container, then you can align the grid tracks themselves, inside that container. Once again, this operates on the block and inline axis, with {{cssxref("align-content")}} aligning tracks on the block axis, and {{cssxref("justify-content")}} performing alignment on the inline axis. The {{CSSxRef("place-content")}} property is shorthand for {{cssxref("align-content")}} and {{cssxref("justify-content")}}. The values for {{cssxref("align-content")}}, {{cssxref("justify-content")}} and {{cssxref("place-content")}} are:
 
 - `normal`
 - `start`
