@@ -97,11 +97,13 @@ var path = require('path');
 <pre class="brush: js language-js">http.createServer(function (request, response) {
     ...
 }).listen(8125);
+console.log('Server running at http://127.0.0.1:8125/');</pre>
 </pre>
 
-<p>The following lines deal with fixing the request URL if it does not specify a file.</p>
+<p>The following lines deal with logging the request URL and fixing it if it does not specify a file.</p>
 
-<pre class="brush: js">var filePath = '.' + request.url;
+<pre class="brush: js">console.log('request ', request.url);
+var filePath = '.' + request.url;
 if (filePath == './') {
     filePath = './index.html';
 }
