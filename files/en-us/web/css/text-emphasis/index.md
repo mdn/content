@@ -110,7 +110,7 @@ h2 {
 
 #### Result
 
-{{EmbedLiveSample("A_heading_with_emphasis_shape_and_color", 500, 70)}}
+{{EmbedLiveSample("A_heading_with_emphasis_shape_and_color", 500, 90)}}
 
 ## Specifications
 
