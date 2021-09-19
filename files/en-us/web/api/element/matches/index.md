@@ -34,8 +34,8 @@ var result = element.matches(selectorString);
 
 ### Exceptions
 
-- `SYNTAX_ERR`
-  - : The specified selector string is invalid.
+- `SyntaxError` {{domxref("DOMException")}}
+  - : Thrown if the specified selector string is invalid.
 
 ## Example
 
@@ -59,39 +59,6 @@ var result = element.matches(selectorString);
 
 This will log "The Philippine eagle is endangered!" to the console, since the element
 has indeed a `class` attribute with value `endangered`.
-
-## Polyfill
-
-For browsers that do not support `Element.matches()` or
-`Element.matchesSelector()`, but include support for
-`document.querySelectorAll()`, a polyfill exists:
-
-```js
-if (!Element.prototype.matches) {
-  Element.prototype.matches =
-      Element.prototype.matchesSelector ||
-      Element.prototype.mozMatchesSelector ||
-      Element.prototype.msMatchesSelector ||
-      Element.prototype.oMatchesSelector ||
-      Element.prototype.webkitMatchesSelector ||
-      function(s) {
-        var matches = (this.document || this.ownerDocument).querySelectorAll(s),
-            i = matches.length;
-        while (--i >= 0 && matches.item(i) !== this) {}
-        return i > -1;
-      };
-}
-```
-
-However, given the practicality of supporting older browsers, the following should
-suffice for most (if not all) practical cases (i.e. IE9+ support).
-
-```js
-if (!Element.prototype.matches) {
-  Element.prototype.matches = Element.prototype.msMatchesSelector ||
-                              Element.prototype.webkitMatchesSelector;
-}
-```
 
 ## Specifications
 
