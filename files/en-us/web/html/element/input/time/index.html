@@ -164,7 +164,9 @@ startTime.addEventListener("input", function() {
     href="#making_min_and_max_cross_midnight">making min and max cross midnight</a> section of this article.</p>
 </div>
 
-<p id="attr-list">{{page("/en-US/docs/Web/HTML/Element/input/text", "attr-list", 0, 1, 2)}}</p>
+<h3 id="attr-list"><code id="list">list</code></h3>
+
+<p>The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The {{HTMLElement("datalist")}} provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the {{htmlattrxref("type", "input")}} are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.</p>
 
 <h3 id="attr-max"><code id="max">max</code></h3>
 
@@ -174,7 +176,13 @@ startTime.addEventListener("input", function() {
 
 <p>A string specifying the earliest time to accept, given in the {{anch("Time value format", "time value format")}} described previously. If the value specified isn't a valid time string, no minimum value is set.</p>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "attr-readonly", 0, 1, 2)}}</p>
+<h3><code>readonly</code></h3>
+
+<p>A Boolean attribute which, if present, means this field cannot be edited by the user. Its <code>value</code> can, however, still be changed by JavaScript code directly setting the {{domxref("HTMLInputElement")}} <code>value</code> property.</p>
+
+<div class="note">
+<p><strong>Note:</strong> Because a read-only field cannot have a value, <code>required</code> does not have any effect on inputs with the <code>readonly</code> attribute also specified.</p>
+</div>
 
 <h3 id="attr-step"><code id="step">step</code></h3>
 
