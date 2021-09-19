@@ -14,7 +14,7 @@ browser-compat: api.Window.mozInnerScreenY
 ---
 {{APIRef}}
 
-The `mozInnerScreenY`property of the {{domxref("Window")}} interface returns the Y coordinate of the top-left corner of the window's viewport, in screen
+The `mozInnerScreenY` property of the {{domxref("Window")}} interface returns the Y coordinate of the top-left corner of the window's viewport, in screen
 coordinates.
 
 > **Note:** This coordinate is reported in CSS pixels, not in hardware pixels.
