@@ -768,13 +768,22 @@ let hatSize = form.elements["hat-size"];
  <dt>{{htmlattrdef("autocorrect")}} {{non-standard_inline}}</dt>
  <dd>{{page("/en-US/docs/Web/HTML/Element/input/text", "autocorrect-include")}}</dd>
  <dt>{{htmlattrdef("incremental")}} {{non-standard_inline}}</dt>
- <dd>{{page("/en-US/docs/Web/HTML/Element/input/search", "incremental-include")}}</dd>
+ <dd>
+   <p>The Boolean attribute <code>incremental</code> is a WebKit and Blink extension (so supported by Safari, Opera, Chrome, etc.) which, if present, tells the {{Glossary("user agent")}} to process the input as a live search. As the user edits the value of the field, the user agent sends {{event("search")}} events to the {{domxref("HTMLInputElement")}} object representing the search box. This allows your code to update the search results in real time as the user edits the search.</p>
+
+   <p>If <code>incremental</code> is not specified, the {{event("search")}} event is only sent when the user explicitly initiates a search (such as by pressing the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the field).</p>
+
+   <p>The <code>search</code> event is rate-limited so that it is not sent more frequently than an implementation-defined interval.</p>
+ </dd>
  <dt>{{htmlattrdef("mozactionhint")}} {{non-standard_inline}}</dt>
  <dd>{{page("/en-US/docs/Web/HTML/Element/input/text", "mozactionhint-include")}}</dd>
  <dt>{{htmlattrdef("orient")}} {{non-standard_inline}}</dt>
  <dd>{{page("/en-US/docs/Web/HTML/Element/input/range", "orient-include")}}</dd>
  <dt>{{htmlattrdef("results")}} {{non-standard_inline}}</dt>
- <dd>{{page("/en-US/docs/Web/HTML/Element/input/search", "results-include")}}</dd>
+ <dd>
+   <p>The <code>results</code> attribute—supported only by Safari—is a numeric value that lets you override the maximum number of entries to be displayed in the {{HTMLElement("input")}} element's natively-provided drop-down menu of previous search queries.</p>
+
+   <p>The value must be a non-negative decimal number. If not provided, or an invalid value is given, the browser's default maximum number of entries is used.</p></dd>
  <dt>{{htmlattrdef("webkitdirectory")}} {{non-standard_inline}}</dt>
  <dd>{{page("/en-US/docs/Web/HTML/Element/input/file", "webkitdirectory-include")}}</dd>
 </dl>
