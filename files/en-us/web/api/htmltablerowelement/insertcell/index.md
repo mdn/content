@@ -12,12 +12,12 @@ browser-compat: api.HTMLTableRowElement.insertCell
 {{APIRef("HTML DOM")}}
 
 The **`HTMLTableRowElement.insertCell()`** method inserts a new
-cell ({{HtmlElement("td")}}) into a table row ({{HtmlElement("tr")}}) and returns a
+cell ({{HtmlElement("td")}}) into a table row ({{HtmlElement("tr")}}) and returns a
 reference to the cell.
 
 > **Note:** `insertCell()` inserts the cell directly into the
 > row. The cell does not need to be appended separately
-> with {{domxref("Node.appendChild()")}} as would be the case if
+> with {{domxref("Node.appendChild()")}} as would be the case if
 > {{domxref("Document.createElement()")}} had been used to create the new
 > `<td>` element.
 >
@@ -36,16 +36,17 @@ element.
 ### Parameters
 
 - `index` {{optional_inline}}
-  - : `index` is the cell index of the new cell. If `index` is
-    `-1` or equal to the number of cells, the cell is appended as the last cell
-    in the row. If `index` is greater than the number of cells, an
-    `IndexSizeError` exception will result. If `index` is omitted it
-    defaults to `-1`.
+  - : The cell index of the new cell. If `index` is `-1` or equal to the number of cells, the cell is appended as the last cell in the row. If `index` is omitted it defaults to `-1`.
 
 ### Return value
 
-`newCell` is an {{domxref("HTMLTableCellElement")}} that references the new
+An {{domxref("HTMLTableCellElement")}} that references the new
 cell.
+
+### Exceptions
+
+- `IndexSizeError` {{domxref("DOMException")}}
+  - : Thrown if `index` is greater than the number of cells.
 
 ## Example
 

@@ -75,8 +75,7 @@ tags:
 <p><code>BackgroundImage</code> is not supported as a filter source in modern browsers (see the <a href="/en-US/docs/Web/SVG/Element/feComposite#browser_compatibility">feComposite compatibility table</a>). We therefore need to import one of the images to blend inside the filter itself, using an <code>&lt;feImage&gt;</code> element.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>Firefox <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=455986">Bug 455986</a> means that <code>feImage</code> cannot load partial images, including circles, rectangles, paths or other fragments defined in the document. So that this example works on more browsers, a full external image of the logo is loaded.</p>
+  <p><strong>Note:</strong> Firefox <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=455986">Bug 455986</a> means that <code>feImage</code> cannot load partial images, including circles, rectangles, paths or other fragments defined in the document. So that this example works on more browsers, a full external image of the logo is loaded.</p>
 </div>
 
 

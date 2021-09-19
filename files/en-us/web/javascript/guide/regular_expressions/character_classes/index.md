@@ -305,4 +305,4 @@ console.table(nonEnglishText.match(regexpBMPWord));
   - [Groups and ranges](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)
 
 - [The `RegExp()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
-- [CharacterClass in the ECMAScript specification](https://tc39.es/ecma262/#sec-characterclass)
+- [CharacterClass in the ECMAScript specification](https://tc39.es/ecma262/multipage/text-processing.html#sec-characterclass)

@@ -35,21 +35,18 @@ AudioNode.connect(destination, outputIndex);
 - `outputIndex` {{optional_inline}}
   - : An index specifying which output of the current `AudioNode` to connect to
     the destination. The index numbers are defined according to the number of output
-    channels (see [Audio
-    channels](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_channels)). While you can only connect a given output to a given input once
+    channels (see [Audio channels](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_channels)).
+    While you can only connect a given output to a given input once
     (repeated attempts are ignored), you can connect an output to multiple inputs by
     calling `connect()` repeatedly. This makes [fan-out](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#fan-in_and_fan-out)
     possible. The default value is 0.
 - `inputIndex` {{optional_inline}}
   - : An index describing which input of the destination you want to connect the current
     `AudioNode` to; the default is 0. The index numbers are defined according
-    to the number of input channels (see [Audio
-    channels](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_channels)). It is possible to connect an `AudioNode` to another
+    to the number of input channels
+    (see [Audio channels](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_channels)). It is possible to connect an `AudioNode` to another
     `AudioNode`, which in turn connects back to the first
-    `AudioNode`, creating a cycle. This is allowed only if there is at least
-    one {{domxref("DelayNode")}} in the cycle. Otherwise, a `NotSupportedError`
-    exception is thrown. This parameter is not allowed if the destination is an
-    {{domxref("AudioParam")}}.
+    `AudioNode`, creating a cycle.
 
 ### Return value
 
@@ -63,16 +60,15 @@ If the destination is an `AudioParam`, `connect()` returns
 
 ### Exceptions
 
-- `IndexSizeError`
-  - : The value specified as `outputIndex` or `inputIndex` doesn't
-    correspond to an existing input or output.
-- `InvalidAccessError`
-  - : The destination node is not part of the same audio context as the source node.
-- `NotSupportedError`
-  - : The specified connection would create a cycle (in which the audio loops back through
-    the same nodes repeatedly) and there are no {{domxref("DelayNode")}}s in the cycle to
+- `IndexSizeError` {{domxref("DOMException")}}
+  - : Thrown if the value specified as `outputIndex` or `inputIndex` doesn't correspond to an existing input or output.
+- `InvalidAccessError` {{domxref("DOMException")}}
+  - : Thrown if the destination node is not part of the same audio context as the source node.
+- `NotSupportedError` {{domxref("DOMException")}}
+  - : Thrown if the specified connection would create a cycle (in which the audio loops back through
+    the same nodes repeatedly) and there are no {{domxref("DelayNode")}} objects in the cycle to
     prevent the resulting waveform from getting stuck constructing the same audio frame
-    indefinitely.
+    indefinitely. Also thrown if the `inputIndex` parameter is used while the destination is an {{domxref("AudioParam")}}.
 
 ## Examples
 

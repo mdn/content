@@ -126,34 +126,6 @@ function div2ParaElems()
 </html>
 ```
 
-## Potential Workaround for other browsers which do not support
-
-If the desired browser did not support XPath, another approach (such as traversing the
-DOM through all its children, identifying all @xmlns instances, etc.) would be necessary
-to find all tags with the desired local name and namespace, but XPath is much faster.
-(To accommodate Explorer, one could call an XPath wrapper instead of the XPath in the
-function below (as Explorer supports XPath with a different API), such as [this
-wrapper class](http://www.davidflanagan.com/javascript5/display.php?n=21-10&f=21/10.js).)
-
-```js
-function getElementsByTagNameNSWrapper (ns, elName, doc, context) {
- if (!doc) {
-  doc = document;
- }
- if (!context) {
-  context = doc;
- }
-
- var result = doc.evaluate('//*[local-name()="'+elName+'" and namespace-uri() = "'+ns+'"]', context, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
-
-        var a = [];
-        for(var i = 0; i < result.snapshotLength; i++) {
-            a[i] = result.snapshotItem(i);
-        }
-        return a;
-}
-```
-
 ## Specifications
 
 {{Specifications}}

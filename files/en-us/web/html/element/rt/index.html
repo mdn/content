@@ -58,41 +58,24 @@ browser-compat: html.elements.rt
 
 <h2 id="Examples">Examples</h2>
 
+<h3>Using ruby annotations</h3>
+
 <p>This simple example provides Romaji transliteration for the kanji characters within the {{HTMLElement("ruby")}} element:</p>
 
-<div id="with-ruby">
 <pre class="brush: html">&lt;ruby&gt;
   漢 &lt;rt&gt;Kan&lt;/rt&gt;
   字 &lt;rt&gt;ji&lt;/rt&gt;
 &lt;/ruby&gt;
 </pre>
 
-<div class="hidden">
-<pre class="brush: css">body {
+<pre class="brush: css hidden">body {
   font-size: 22px;
 }
 </pre>
-</div>
-</div>
 
 <p>The output looks like this in your browser:</p>
 
-<p>{{EmbedLiveSample("with-ruby", 600, 60)}}</p>
-
-<p>On a browser <em>without</em> ruby support, this example might look like this:</p>
-
-<div id="without-ruby">
-<div class="hidden">
-<pre class="brush: html">漢 Kan 字 ji</pre>
-
-<pre class="brush: css">body {
-  font-size: 22px;
-}
-</pre>
-</div>
-</div>
-
-<p>{{EmbedLiveSample("without-ruby", 600, 60)}}</p>
+<p>{{EmbedLiveSample("Using_ruby_annotations", 600, 60)}}</p>
 
 <h2 id="Specifications">Specifications</h2>
 

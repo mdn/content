@@ -231,7 +231,7 @@ browser-compat: html.elements.input.input-url
 <p>It's important, however, to note that this is not enough to ensure that the specified text is a URL which actually exists, corresponds to the user of the site, or is acceptable in any other way. It ensures that the value of the field is properly formatted to be a URL.</p>
 
 <div class="note">
-<p><strong>Note</strong>: It's also crucial to remember that a user can tinker with your HTML behind the scenes, so your site <em>must not</em> use this validation for any security purposes. You <em>must</em> verify the URL on the server-side of any transaction in which the provided text may have any security implications of any kind.</p>
+<p><strong>Note:</strong> A user can tinker with your HTML behind the scenes, so your site <em>must not</em> use this validation for any security purposes. You <em>must</em> verify the URL on the server-side of any transaction in which the provided text may have any security implications of any kind.</p>
 </div>
 
 <h3 id="A_simple_URL_input">A simple URL input</h3>
@@ -283,23 +283,23 @@ browser-compat: html.elements.input.input-url
 <p>{{EmbedLiveSample("Element_value_length", 600, 40) }}</p>
 
 <div class="note">
-<p><strong>Note</strong>: These attributes also affect validation; a value shorter or longer than the specified minimum/maximum lengths will be classified as invalid; in addition most browsers will refuse to let the user enter a value longer than the specified maximum length.</p>
+<p><strong>Note:</strong> These attributes also affect validation; a value shorter or longer than the specified minimum/maximum lengths will be classified as invalid; in addition most browsers will refuse to let the user enter a value longer than the specified maximum length.</p>
 </div>
 
 <h3 id="Providing_default_options">Providing default options</h3>
 
+<h4>Providing a single default using the value attribute</h4>
+
 <p>As always, you can provide a default value for a <code>url</code> input box by setting its {{htmlattrxref("value", "input")}} attribute:</p>
 
-<div id="Default_value">
 <pre class="brush: html">&lt;input id="myURL" name="myURL" type="url"
        value="http://www.example.com"&gt;</pre>
-</div>
 
-<p>{{EmbedLiveSample("Default_value", 600, 40)}}</p>
+<p>{{EmbedLiveSample("Providing_a_single_default_using_the_value_attribute", 600, 40)}}</p>
 
 <h4 id="Offering_suggested_values">Offering suggested values</h4>
 
-<p>Taking it a step farther, you can provide a list of default options from which the user can select by specifying the {{htmlattrxref("list", "input")}} attribute. This doesn't limit the user to those options, but does allow them to select commonly-used URLs more quickly. This also offers hints to {{htmlattrxref("autocomplete", "input")}}. The <code>list</code> attribute specifies the ID of a {{HTMLElement("datalist")}}, which in turn contains one {{HTMLElement("option")}} element per suggested value; each <code>option</code>'s <code>value</code> is the corresponding suggested value for the URL entry box.</p>
+<p>Taking it a step further, you can provide a list of default options from which the user can select by specifying the {{htmlattrxref("list", "input")}} attribute. This doesn't limit the user to those options, but does allow them to select commonly-used URLs more quickly. This also offers hints to {{htmlattrxref("autocomplete", "input")}}. The <code>list</code> attribute specifies the ID of a {{HTMLElement("datalist")}}, which in turn contains one {{HTMLElement("option")}} element per suggested value; each <code>option</code>'s <code>value</code> is the corresponding suggested value for the URL entry box.</p>
 
 <pre class="brush: html">&lt;input id="myURL" name="myURL" type="url"
        list="defaultURLs"&gt;
@@ -351,14 +351,12 @@ browser-compat: html.elements.input.input-url
 
 <p>As mentioned earlier, to make a URL entry required before the form can be submitted (you can't leave the field blank), you just need to include the {{htmlattrxref("required", "input")}} attribute on the input.</p>
 
-<div id="Making_a_URL_required_example">
 <pre class="brush: html">&lt;form&gt;
   &lt;input id="myURL" name="myURL" type="url" required&gt;
   &lt;button&gt;Submit&lt;/button&gt;
 &lt;/form&gt;</pre>
-</div>
 
-<p>{{EmbedLiveSample("Making_a_URL_required_example", 600, 40)}}</p>
+<p>{{EmbedLiveSample("Making_a_URL_required", 600, 40)}}</p>
 
 <p>Try submitting the above form with no value entered to see what happens.</p>
 
@@ -429,7 +427,7 @@ browser-compat: html.elements.input.input-url
 <p>That's why, instead, we specify the string "The URL must be in a myco domain". By doing that, the resulting full error message might be something like "The entered text doesn't match the required pattern. The URL should be in a myco domain."</p>
 
 <div class="note">
-<p><strong>Note</strong>: If you run into trouble while writing your validation regular expressions and they're not working properly, check your browser's console; there may be helpful error messages there to aid you in solving the problem.</p>
+<p><strong>Note:</strong> If you run into trouble while writing your validation regular expressions and they're not working properly, check your browser's console; there may be helpful error messages there to aid you in solving the problem.</p>
 </div>
 
 <h2 id="Examples">Examples</h2>

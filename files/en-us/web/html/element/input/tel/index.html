@@ -268,23 +268,23 @@ browser-compat: html.elements.input.input-tel
 <p>{{EmbedLiveSample("Element_value_length", 600, 40) }}</p>
 
 <div class="note">
-<p><strong>Note</strong>: The above attributes do affect {{anch("Validation")}} — the above example's inputs will count as invalid if the length of the value is less than 9 characters, or more than 14. Most browser won't even let you enter a value over the max length.</p>
+<p><strong>Note:</strong> The above attributes do affect {{anch("Validation")}} — the above example's inputs will count as invalid if the length of the value is less than 9 characters, or more than 14. Most browser won't even let you enter a value over the max length.</p>
 </div>
 
 <h3 id="Providing_default_options">Providing default options</h3>
 
+<h4>Providing a single default using the value attribute</h4>
+
 <p>As always, you can provide a default value for an <code>tel</code> input box by setting its {{htmlattrxref("value", "input")}} attribute:</p>
 
-<div id="Default_value">
 <pre class="brush: html">&lt;input id="telNo" name="telNo" type="tel"
        value="333-4444-4444"&gt;</pre>
-</div>
 
-<p>{{EmbedLiveSample("Default_value", 600, 40)}}</p>
+<p>{{EmbedLiveSample("Providing_a_single_default_using_the_value_attribute", 600, 40)}}</p>
 
 <h4 id="Offering_suggested_values">Offering suggested values</h4>
 
-<p>Taking it a step farther, you can provide a list of default phone number values from which the user can select. To do this, use the {{htmlattrxref("list", "input")}} attribute. This doesn't limit the user to those options, but does allow them to select commonly-used telephone numbers more quickly. This also offers hints to {{htmlattrxref("autocomplete", "input")}}. The <code>list</code> attribute specifies the ID of a {{HTMLElement("datalist")}} element, which in turn contains one {{HTMLElement("option")}} element per suggested value; each <code>option</code>'s <code>value</code> is the corresponding suggested value for the telephone number entry box.</p>
+<p>Taking it a step further, you can provide a list of default phone number values from which the user can select. To do this, use the {{htmlattrxref("list", "input")}} attribute. This doesn't limit the user to those options, but does allow them to select commonly-used telephone numbers more quickly. This also offers hints to {{htmlattrxref("autocomplete", "input")}}. The <code>list</code> attribute specifies the ID of a {{HTMLElement("datalist")}} element, which in turn contains one {{HTMLElement("option")}} element per suggested value; each <code>option</code>'s <code>value</code> is the corresponding suggested value for the telephone number entry box.</p>
 
 <pre class="brush: html">&lt;label for="telNo"&gt;Phone number: &lt;/label&gt;
 &lt;input id="telNo" name="telNo" type="tel" list="defaultTels"&gt;
@@ -309,7 +309,7 @@ browser-compat: html.elements.input.input-tel
 <p>As we've touched on before, it's quite difficult to provide a one-size-fits-all client-side validation solution for phone numbers. So what can we do? Let's consider some options.</p>
 
 <div class="warning">
-<p><strong>Important</strong>: HTML form validation is <em>not</em> a substitute for server-side scripts that ensure the entered data is in the proper format before it is allowed into the database.  It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data (or data which is too large, is of the wrong type, and so forth) is entered into your database.</p>
+<p><strong>Warning:</strong> HTML form validation is <em>not</em> a substitute for server-side scripts that ensure the entered data is in the proper format before it is allowed into the database.  It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data (or data which is too large, is of the wrong type, and so forth) is entered into your database.</p>
 </div>
 
 <h3 id="Making_telephone_numbers_required">Making telephone numbers required</h3>

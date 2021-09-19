@@ -13,7 +13,7 @@ browser-compat: svg.attributes.presentation.transform-origin
 <p>You can use this attribute with any SVG element.</p>
 
 <div class="notecard note">
-<p>Note: As a presentation attribute in SVG, <code>transform-origin</code> corresponds in syntax and behavior to the <code>transform-origin</code> property in CSS, and can be used as CSS property to style SVG. See the <a href="/en-US/docs/Web/CSS/transform-origin">CSS transform-origin</a> property for more information. </p>
+<p><strong>Note:</strong> As a presentation attribute in SVG, <code>transform-origin</code> corresponds in syntax and behavior to the <code>transform-origin</code> property in CSS, and can be used as CSS property to style SVG. See the <a href="/en-US/docs/Web/CSS/transform-origin">CSS transform-origin</a> property for more information. </p>
 </div>
 
 <h2 id="Usage_notes">Usage notes</h2>
@@ -36,7 +36,7 @@ browser-compat: svg.attributes.presentation.transform-origin
 </table>
 
 <div class="notecard note">
-<p>The default value of <code>transform-origin</code> is <code>0 0</code> for all SVG elements except for root <code>&lt;svg&gt;</code> elements and <code>&lt;svg&gt;</code> elements that are a direct child of a <a href="/en-US/docs/Web/SVG/Element/foreignObject">foreignObject</a>, and whose transform-origin is <code>50% 50%</code>, like other CSS elements.</p>
+<p><strong>Note:</strong> The default value of <code>transform-origin</code> is <code>0 0</code> for all SVG elements except for root <code>&lt;svg&gt;</code> elements and <code>&lt;svg&gt;</code> elements that are a direct child of a <a href="/en-US/docs/Web/SVG/Element/foreignObject">foreignObject</a>, and whose transform-origin is <code>50% 50%</code>, like other CSS elements.</p>
 </div>
 
 <p>The <code>transform-origin</code> property may be specified using one, two, or three values, where each value represents an offset. Offsets that are not explicitly defined are reset to their corresponding <a href="/en-US/docs/Web/CSS/initial_value">initial values</a>.</p>
@@ -79,7 +79,7 @@ browser-compat: svg.attributes.presentation.transform-origin
 <p>The fourth image image shows how to do the transformation in browsers that don't support <code>transform-origin</code> — because the code for the fourth image does the same transformation as the third image's <code>transform-origin</code>-based code, but by only using <code>transform</code>, without <code>transform-origin</code>.</p>
 
 <div class="notecard note">
-<p>Note: These examples use a modified version of a code snippet in a Stack Overflow <a href="https://stackoverflow.com/q/67057190">question</a> from <a href="https://stackoverflow.com/users/1033939/maxim-kulikov">Maxim Kulikov</a>, as well as a modified version of a code snippet in an <a href="https://stackoverflow.com/a/67057754">answer</a> from <a href="https://stackoverflow.com/users/271353/michael-mullany">Michael Mullany</a> that accompanies the question. Both code snippets are used under the terms of the <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a> license.)</p>
+<p><strong>Note:</strong> These examples use a modified version of a code snippet in a Stack Overflow <a href="https://stackoverflow.com/q/67057190">question</a> from <a href="https://stackoverflow.com/users/1033939/maxim-kulikov">Maxim Kulikov</a>, as well as a modified version of a code snippet in an <a href="https://stackoverflow.com/a/67057754">answer</a> from <a href="https://stackoverflow.com/users/271353/michael-mullany">Michael Mullany</a> that accompanies the question. Both code snippets are used under the terms of the <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a> license.)</p>
 </div>
 
 <h3 id="html">HTML</h3>
@@ -161,11 +161,11 @@ browser-compat: svg.attributes.presentation.transform-origin
           &lt;line x1="0" y1="100" x2="200" y2="100" stroke="rebeccapurple" stroke-width="2"/&gt;
         &lt;/g&gt;
       &lt;/defs&gt;
-      
+
       &lt;use href="#target-g-1" fill="black"/&gt;
       &lt;use href="#target-g-1" fill="blue"
           transform="translate(100 100) scale(0.75 0.75) translate(-100 -100)"/&gt;
-      
+
       &lt;svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="200" height="200" viewBox="0 0 200 200"&gt;
         &lt;use href="#target-g-1" fill="red"
             transform="translate(100 100) scale(0.5 0.5) translate(-100 -100)"/&gt;
