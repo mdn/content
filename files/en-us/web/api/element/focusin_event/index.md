@@ -90,3 +90,5 @@ form.addEventListener('focusout', (event) => {
 ## See also
 
 - Related events: {{domxref("Element/blur_event", "blur")}}, {{domxref("Element/focus_event", "focus")}}, {{domxref("Element/focusout_event", "focusout")}}
+- [Focusing: focus/blur](https://javascript.info/focus-blur)
+
