@@ -17,7 +17,7 @@ browser-compat: api.XRProjectionLayer.textureArrayLength
 
 The read-only **`textureArrayLength`** property of the {{domxref("XRProjectionLayer")}} interface indicates layer's layer count for array textures when using `texture-array` as the `textureType`.
 
-The projection layer's layer count for array textures is determined by the user agent or the device. It is reported in the {{domxref("XRSubImage")}} which can only be accessed inside the frame loop. If you want to manage your own depth buffers and don't want to wait for first frame after layer creation to determine the required dimensions for those buffers, the `textureArrayLength` property allows access to layer count for array textures outside the frame loop. Allocation of these buffers can happen directly after layer creation.
+The projection layer's layer count for array textures is determined by the user agent or the device. It is reported in the {{domxref("XRSubImage")}}, which can only be accessed inside the frame loop. If you want to manage your own depth buffers and don't want to wait for first frame after layer creation to determine the required dimensions for those buffers, the `textureArrayLength` property allows access to layer count for array textures outside the frame loop. Allocation of these buffers can happen directly after layer creation.
 
 ## Value
 

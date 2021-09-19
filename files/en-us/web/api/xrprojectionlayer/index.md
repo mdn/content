@@ -22,9 +22,9 @@ The **`XRProjectionLayer`** interface of the [WebXR Device API](/en-US/docs/Web/
 `XRProjectionLayer` is supported by all {{domxref("XRSession")}} objects (no `layers` feature descriptor is needed).
 
 To create a new `XRProjectionLayer`, call {{domxref("XRWebGLBinding.createProjectionLayer()")}}.
-To present layers to the XR device add them to the `layers` render state using {{domxref("XRSession.updateRenderState()")}}.
+To present layers to the XR device, add them to the `layers` render state using {{domxref("XRSession.updateRenderState()")}}.
 
-`XRProjectionLayer` objects don’t have associated an {{domxref("XRSpace")}} because they render to the full frame.
+`XRProjectionLayer` objects don’t have an associated {{domxref("XRSpace")}}, because they render to the full frame.
 
 ## Properties
 

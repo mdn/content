@@ -16,7 +16,7 @@ browser-compat: api.XRProjectionLayer.textureHeight
 
 The read-only **`textureHeight`** property of the {{domxref("XRProjectionLayer")}} interface indicates the height in pixels of the color textures of this layer.
 
-The projection layer's texture height is determined by the user agent or the device. It is reported in the {{domxref("XRSubImage")}} which can only be accessed inside the frame loop. If you want to manage your own depth buffers and don't want to wait for first frame after layer creation to determine the required dimensions for those buffers, the `textureHeight` property allows access to layer texture height outside the frame loop. Allocation of these buffers can happen directly after layer creation.
+The projection layer's texture height is determined by the user agent or the device. It is reported in the {{domxref("XRSubImage")}}, which can only be accessed inside the frame loop. If you want to manage your own depth buffers and don't want to wait for first frame after layer creation to determine the required dimensions for those buffers, the `textureHeight` property allows access to layer texture height outside the frame loop. Allocation of these buffers can happen directly after layer creation.
 
 ## Value
 
