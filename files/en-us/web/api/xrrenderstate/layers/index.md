@@ -14,7 +14,7 @@ browser-compat: api.XRRenderState.layers
 ---
 {{APIRef("WebXR Device API")}}
 
-The read-only **`layers`** property of the {{domxref("XRRenderState")}} interface is an ordered array containing {{domxref("XRLayer")}} that are displayed by the XR compositor.
+The read-only **`layers`** property of the {{domxref("XRRenderState")}} interface is an ordered array containing {{domxref("XRLayer")}} objects that are displayed by the XR compositor.
 
 ## Value
 

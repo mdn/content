@@ -31,7 +31,7 @@ When you apply changes using the `XRSession` method {{domxref("XRSession.updat
 - {{DOMxRef("XRRenderState.inlineVerticalFieldOfView")}} {{readonlyInline}}
   - : The default vertical field of view, defined in radians, to use when the session is in `inline` mode. `null` for all immersive sessions.
 - {{DOMxRef("XRRenderState.layers")}} {{readonlyInline}}
-  - : An ordered array containing {{domxref("XRLayer")}} that are displayed by the XR compositor.
+  - : An ordered array containing {{domxref("XRLayer")}} objects that are displayed by the XR compositor.
 
 ## Specifications
 
