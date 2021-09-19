@@ -416,6 +416,7 @@ greeting;</pre>
     setGameOver();
   } else if (guessCount === 10) {
     lastResult.textContent = '!!!GAME OVER!!!';
+    lowOrHi.textContent = '';
     setGameOver();
   } else {
     lastResult.textContent = 'Wrong!';
@@ -435,12 +436,12 @@ greeting;</pre>
 <p>This is a lot of code — phew! Let's go through each section and explain what it does.</p>
 
 <ul>
- <li>The first line (line 2 above) declares a variable called <code>userGuess</code> and sets its value to the current value entered inside the text field. We also run this value through the built-in <code>Number()</code> constructor, just to make sure the value is definitely a number.</li>
- <li>Next, we encounter our first conditional code block (lines 3–5 above). A conditional code block allows you to run code selectively, depending on whether a certain condition is true or not. It looks a bit like a function, but it isn't. The simplest form of conditional block starts with the keyword <code>if</code>, then some parentheses, then some curly braces. Inside the parentheses we include a test. If the test returns <code>true</code>, we run the code inside the curly braces. If not, we don't, and move on to the next bit of code. In this case the test is testing whether the <code>guessCount</code> variable is equal to <code>1</code> (i.e. whether this is the player's first go or not):
+ <li>The first line declares a variable called <code>userGuess</code> and sets its value to the current value entered inside the text field. We also run this value through the built-in <code>Number()</code> constructor, just to make sure the value is definitely a number.</li>
+ <li>Next, we encounter our first conditional code block. A conditional code block allows you to run code selectively, depending on whether a certain condition is true or not. It looks a bit like a function, but it isn't. The simplest form of conditional block starts with the keyword <code>if</code>, then some parentheses, then some curly braces. Inside the parentheses we include a test. If the test returns <code>true</code>, we run the code inside the curly braces. If not, we don't, and move on to the next bit of code. In this case the test is testing whether the <code>guessCount</code> variable is equal to <code>1</code> (i.e. whether this is the player's first go or not):
   <pre class="brush: js">guessCount === 1</pre>
   If it is, we make the guesses paragraph's text content equal to <code>Previous guesses: </code>. If not, we don't.</li>
  <li>Line 6 appends the current <code>userGuess</code> value onto the end of the <code>guesses</code> paragraph, plus a blank space so there will be a space between each guess shown.</li>
- <li>The next block (lines 8–24 above) does a few checks:
+ <li>The next block does a few checks:
   <ul>
    <li>The first <code>if(){ }</code> checks whether the user's guess is equal to the <code>randomNumber</code> set at the top of our JavaScript. If it is, the player has guessed correctly and the game is won, so we show the player a congratulations message with a nice green color, clear the contents of the Low/High guess information box, and run a function called <code>setGameOver()</code>, which we'll discuss later.</li>
    <li>Now we've chained another test onto the end of the last one using an <code>else if(){ }</code> structure. This one checks whether this turn is the user's last turn. If it is, the program does the same thing as in the previous block, except with a game over message instead of a congratulations message.</li>
