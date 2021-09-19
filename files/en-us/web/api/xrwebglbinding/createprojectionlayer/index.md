@@ -24,12 +24,12 @@ createProjectionLayer(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-  - : An optional object to configure the {{domxref("XRProjectionLayer")}}. If none is provided a default configuration will be used.
+  - : An optional object to configure the {{domxref("XRProjectionLayer")}}. If none is provided, a default configuration will be used.
 
 The `options` object can have the following optional properties:
 
 - `textureType` {{optional_inline}}
-  - : An string defining the type of texture that layer will have. Possible values:
+  - : An string defining the type of texture the layer will have. Possible values:
     - `texture`: The textures of {{domxref("XRWebGLSubImage")}} will be of type `gl.TEXTURE_2D`.
     - `texture-array`: the textures of {{domxref("XRWebGLSubImage")}} will be of type `gl.TEXTURE_2D_ARRAY` (WebGL 2 contexts only).
     The default value is `texture`.
@@ -37,7 +37,7 @@ The `options` object can have the following optional properties:
   - : A {{domxref("GLenum")}} defining the data type of the color texture data. Possible values:
     - `gl.RGBA`
     - `gl.RGBA`
-    Additionally, for contexts with the {{domxref("EXT_sRGB")}} extension enabled.
+    Additionally, for contexts with the {{domxref("EXT_sRGB")}} extension enabled:
     - `ext.SRGB_EXT`
     - `ext.SRGB_ALPHA_EXT`
     Additionally, for {{domxref("WebGL2RenderingContext")}} contexts:
@@ -56,7 +56,7 @@ The `options` object can have the following optional properties:
     - `gl.DEPTH24_STENCIL24`
    The default value is `gl.DEPTH_COMPONENT`.
 - `scaleFactor` {{optional_inline}}
-  - : A floating-point value which is used to scale the layer during compositing. A value of `1.0` represents the default pixel size for the frame buffer. See also {{domxref("XRWebGLLayer.getNativeFramebufferScaleFactor()")}}. Unlike other layers, the `XRProjectionLayer` can't be created with an explicit pixel width and height because the size is inferred by the hardware (projection layers fill the observer's entire view).
+  - : A floating-point value which is used to scale the layer during compositing. A value of `1.0` represents the default pixel size for the frame buffer. See also {{domxref("XRWebGLLayer.getNativeFramebufferScaleFactor()")}}. Unlike other layers, the `XRProjectionLayer` can't be created with an explicit pixel width and height, because the size is inferred by the hardware (projection layers fill the observer's entire view).
 
 ### Return value
 
@@ -66,7 +66,7 @@ An {{domxref("XRProjectionLayer")}} object.
 
 ### Creating an `XRProjectionLayer` in a WebGL 2 context
 
-The `textureType` option allows to allocate a texture array instead, in which every {{domxref("XRView")}} will be rendered into a separate level of the array. This allows for some rendering optimizations, such as the use of the {{domxref("OVR_multiview2")}} extension available in WebGL 2 contexts.
+The `textureType` option allows allocating a texture array instead, in which every {{domxref("XRView")}} will be rendered into a separate level of the array. This allows for some rendering optimizations, such as the use of the {{domxref("OVR_multiview2")}} extension available in WebGL 2 contexts.
 
 ```js
 function onXRSessionStarted(xrSession) {
