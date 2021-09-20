@@ -107,8 +107,9 @@ A floated element is at least as tall as its tallest nested floated children. We
 
 ```css
 section {
+  box-sizing: border-box;
   border: 1px solid blue;
-  width: 100vw;
+  width: 100%;
   float: left;
 }
 
@@ -131,7 +132,7 @@ div {
 
 #### Result
 
-{{EmbedLiveSample('How_floated_elements_are_positioned','398','190')}}
+{{EmbedLiveSample('How_floated_elements_are_positioned','400','190')}}
 
 ### Clearing floats
 
