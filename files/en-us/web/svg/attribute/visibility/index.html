@@ -10,11 +10,11 @@ browser-compat: svg.attributes.presentation.visibility
 
 <p>The <strong><code>visibility</code></strong> attribute lets you control the visibility of graphical elements. With a value of <code>hidden</code> or <code>collapse</code> the current graphics element is invisible.</p>
 
-<div class="note"><strong>Note:</strong> If the <code>visibility</code> attribute is set to <code>hidden</code> on a text element, then the text is invisible but still takes up space in text layout calculations.</div>
+<div class="note"><p><strong>Note:</strong> If the <code>visibility</code> attribute is set to <code>hidden</code> on a text element, then the text is invisible but still takes up space in text layout calculations.</p></div>
 
 <p>Depending on the value of attribute {{SVGAttr("pointer-events")}}, graphics elements which have their <code>visibility</code> attribute set to <code>hidden</code> still might receive events.</p>
 
-<p class="note"><strong>Note:</strong> As a presentation attribute, <code>visibility</code> can be used as a CSS property. See the {{cssxref("visibility", "CSS visibility")}} property for more information.</p>
+<div class="note"><p><strong>Note:</strong> As a presentation attribute, <code>visibility</code> can be used as a CSS property. See the {{cssxref("visibility", "CSS visibility")}} property for more information.</p></div>
 
 <p>You can use this attribute with the following SVG elements:</p>
 
@@ -40,12 +40,11 @@ browser-compat: svg.attributes.presentation.visibility
   <li>{{SVGElement("video")}}</li>
 </ul>
 
-<div id="topExample">
-<div class="hidden">
-<pre class="brush: css">html, body, svg {
+<h2>Example</h2>
+
+<pre class="brush: css hidden">html, body, svg {
   height: 100%;
 }</pre>
-</div>
 
 <pre class="brush: html; highlight[5,6]">&lt;svg viewBox="0 0 220 120" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;rect x="10" y="10" width="200" height="100" stroke="black"
@@ -56,8 +55,7 @@ browser-compat: svg.attributes.presentation.visibility
   &lt;/g&gt;
 &lt;/svg&gt;</pre>
 
-<p>{{EmbedLiveSample("topExample", "250", "100")}}</p>
-</div>
+<p>{{EmbedLiveSample("Example", "250", "100")}}</p>
 
 <h2 id="Usage_notes">Usage notes</h2>
 

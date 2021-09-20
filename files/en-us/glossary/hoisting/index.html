@@ -6,9 +6,9 @@ tags:
   - Glossary
   - JavaScript
 ---
-<p>JavaScript <strong>Hoisting</strong> refers to the process whereby the compiler allocates memory for variable and function declarations prior to execution of the code. Declarations that are made using <code>var</code> are initialized with a default value of <code>undefined</code>. Declarations made using <code>let</code> and <code>const</code> are not initialized as part of hoisting.</p>
+<p>JavaScript <strong>Hoisting</strong> refers to the process whereby the interpreter allocates memory for variable and function declarations prior to execution of the code. Declarations that are made using <code>var</code> are initialized with a default value of <code>undefined</code>. Declarations made using <code>let</code> and <code>const</code> are not initialized as part of hoisting.</p>
 
-<p>Conceptually hoisting is often presented as the compiler "splitting variable declaration and initialization, and moving (just) the declarations to the top of the code".
+<p>Conceptually hoisting is often presented as the interpreter "splitting variable declaration and initialization, and moving (just) the declarations to the top of the code".
   This allows variables to appear in code before they are defined.
   Note however, that any variable initialization in the original code will not happen until the line of code is executed.</p>
 
@@ -16,9 +16,8 @@ tags:
   <p><strong>Note:</strong> The term hoisting is not used in any normative specification prose prior to <a href="https://www.ecma-international.org/ecma-262/6.0/index.html">ECMAScript® 2015 Language Specification</a>. Hoisting was thought up as a general way of thinking about how execution contexts (specifically the creation and execution phases) work in JavaScript.</p>
 </div>
 
-<h2 id="Learn_more">Learn more</h2>
 
-<h3 id="Technical_example">Technical example</h3>
+<h2 id="Technical_example">Technical example</h2>
 
 <p>One of the advantages of JavaScript putting function declarations into memory before it executes any code segment is that it allows you to use a function before you declare it in your code. For example:</p>
 
@@ -89,7 +88,7 @@ console.log(a + "" + b); // 'Cranberry'</pre>
 <p>For information and examples see <a href="/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz"><code>let</code> > temporal dead zone</a>.</p>
 
 
-<h3 id="Technical_reference">Technical reference</h3>
+<h2 id="see_also">See also</h2>
 
 <ul>
  <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/var">var statement</a> — MDN</li>

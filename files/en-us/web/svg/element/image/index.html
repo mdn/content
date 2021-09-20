@@ -10,15 +10,14 @@ browser-compat: svg.elements.image
 ---
 <div>{{SVGRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>&lt;image&gt;</code></strong> SVG element includes images inside SVG documents. It can display {{glossary("raster image")}} files or other SVG files.</span></p>
+<p>The <strong><code>&lt;image&gt;</code></strong> SVG element includes images inside SVG documents. It can display {{glossary("raster image")}} files or other SVG files.</p>
 
 <p>The only image formats SVG software must support are {{glossary("JPEG")}}, {{glossary("PNG")}}, and other SVG files. Animated {{glossary("GIF")}} behavior is undefined.</p>
 
 <p>SVG files displayed with <code>&lt;image&gt;</code> are <a href="/en-US/docs/Web/SVG/SVG_as_an_Image">treated as an image</a>: external resources aren't loaded, {{cssxref(":visited")}} styles <a href="/en-US/docs/Web/CSS/Privacy_and_the_:visited_selector">aren't applied</a>, and they cannot be interactive. To include dynamic SVG elements, try {{SVGElement("use")}} with an external URL. To include SVG files and run scripts inside them, try {{HTMLElement("object")}} inside of {{SVGElement("foreignObject")}}.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>The HTML spec defines <code>&lt;image&gt;</code> as a synonym for {{HTMLElement("img")}} while parsing HTML. This specific element and its behavior only apply inside SVG documents or <a href="/en-US/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction">inline SVG</a>.</p>
+  <p><strong>Note:</strong> The HTML spec defines <code>&lt;image&gt;</code> as a synonym for {{HTMLElement("img")}} while parsing HTML. This specific element and its behavior only apply inside SVG documents or <a href="/en-US/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction">inline SVG</a>.</p>
 </div>
 
 <h2 id="Usage_context">Usage context</h2>

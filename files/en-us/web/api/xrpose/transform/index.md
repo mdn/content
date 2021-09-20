@@ -26,13 +26,7 @@ the position and orientation of the pose relative to the base {{DOMxRef("XRSpace
 as specified when the pose was obtained by calling
 {{domxref("XRFrame.getPose()")}}.
 
-## Syntax
-
-```js
-let poseTransform = xrPose.transform;
-```
-
-### Value
+## Value
 
 An {{domxref("XRRigidTransform")}} which provides the position and orientation of the
 {{domxref("XRPose")}} relative to the {{domxref("XRFrame")}} to which this

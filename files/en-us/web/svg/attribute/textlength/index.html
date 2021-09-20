@@ -29,20 +29,18 @@ browser-compat: svg.attributes.textLength
   <li>{{SVGElement("tspan")}}</li>
 </ul>
 
-<div id="topExample">
-<div class="hidden">
-<pre class="brush: css">html, body, svg {
+<h2>Example</h2>
+
+<pre class="brush: css hidden">html, body, svg {
   height: 100%;
 }</pre>
-</div>
 
 <pre class="brush: html">&lt;svg viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;text y="20" textLength="6em"&gt;Small text length&lt;/text&gt;
   &lt;text y="40" textLength="120%"&gt;Big text length&lt;/text&gt;
 &lt;/svg&gt;</pre>
-</div>
 
-<p>{{EmbedLiveSample("topExample", "200", "100")}}</p>
+<p>{{EmbedLiveSample("Example", "200", "100")}}</p>
 
 <h2 id="Usage_notes">Usage notes</h2>
 
@@ -70,17 +68,15 @@ browser-compat: svg.attributes.textLength
  <dd>A numeric value outlines a length referring to the units of the current coordinate system.</dd>
 </dl>
 
-<h2 id="Example">Example</h2>
+<h2>Interactive example</h2>
 
 <p>Let's create a simple example that presents text you can resize using an {{HTMLElement("input")}} element of type <code><a href="/en-US/docs/Web/HTML/Element/input/range">"range"</a></code>.</p>
 
-<div class="hidden">
 <h3 id="CSS">CSS</h3>
 
 <pre class="brush: css">.controls {
   font: 16px "Open Sans", "Arial", sans-serif;
 }</pre>
-</div>
 
 <h3 id="SVG">SVG</h3>
 
@@ -142,7 +138,7 @@ widthSlider.dispatchEvent(new Event("input"));
 
 <p>Here's what the example looks like. Try dragging the slider around to get a feel for what it does.</p>
 
-<p>{{EmbedLiveSample("Example", 650, 160)}}</p>
+<p>{{EmbedLiveSample("Interactive_example", 650, 160)}}</p>
 
 <h2 id="Specifications">Specifications</h2>
 

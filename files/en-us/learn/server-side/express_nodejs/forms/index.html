@@ -15,9 +15,9 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs/deployment", "Learn/Server-side/Express_Nodejs")}}</div>
 
-<p class="summary">In this tutorial we'll show you how to work with HTML Forms in Express using Pug. In particular, we'll discuss how to write forms to create, update, and delete documents from the site's database.</p>
+<p>In this tutorial we'll show you how to work with HTML Forms in Express using Pug. In particular, we'll discuss how to write forms to create, update, and delete documents from the site's database.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -38,7 +38,7 @@ tags:
 
 <p>In this tutorial, we're going to show you how the above operations may be performed in <em>Express</em>. Along the way, we'll extend the <em>LocalLibrary</em> website to allow users to create, edit and delete items from the library.</p>
 
-<div class="note">
+<div class="notecard note">
 <p><strong>Note:</strong> We haven't looked at how to restrict particular routes to authenticated or authorized users, so at this point, any user will be able to make changes to the database.</p>
 </div>
 
@@ -46,7 +46,7 @@ tags:
 
 <p>First a brief overview of <a href="/en-US/docs/Learn/Forms">HTML Forms</a>. Consider a simple HTML form, with a single text field for entering the name of some "team", and its associated label:</p>
 
-<p><img alt="Simple name field example in HTML form" src="form_example_name_field.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="Simple name field example in HTML form" src="form_example_name_field.png"></p>
 
 <p>The form is defined in HTML as a collection of elements inside <code>&lt;form&gt;...&lt;/form&gt;</code> tags, containing at least one <code>input</code> element of <code>type="submit"</code>.</p>
 
@@ -56,7 +56,7 @@ tags:
     &lt;input type="submit" value="OK"&gt;
 &lt;/form&gt;</pre>
 
-<p>While here we have included just one (text) field for entering the team name, a form <em>may</em> contain any number of other input elements and their associated labels. The field's <code>type</code> attribute defines what sort of widget will be displayed. The <code>name</code> and <code>id</code> of the field are used to identify the field in JavaScript/CSS/HTML, while <code>value</code> defines the initial value for the field when it is first displayed. The matching team label is specified using the <code style="font-style: normal; font-weight: normal;">label</code> tag (see "Enter name" above), with a <code style="font-style: normal; font-weight: normal;">for</code> field containing the <code style="font-style: normal; font-weight: normal;">id</code> value of the associated <code style="font-style: normal; font-weight: normal;">input</code>.</p>
+<p>While here we have included just one (text) field for entering the team name, a form <em>may</em> contain any number of other input elements and their associated labels. The field's <code>type</code> attribute defines what sort of widget will be displayed. The <code>name</code> and <code>id</code> of the field are used to identify the field in JavaScript/CSS/HTML, while <code>value</code> defines the initial value for the field when it is first displayed. The matching team label is specified using the <code>label</code> tag (see "Enter name" above), with a <code>for</code> field containing the <code>id</code> value of the associated <code>input</code>.</p>
 
 <p>The <code>submit</code> input will be displayed as a button (by default)—this can be pressed by the user to upload the data contained by the other input elements to the server (in this case, just the <code>team_name</code>). The form attributes define the HTTP <code>method</code> used to send the data and the destination of the data on the server (<code>action</code>):</p>
 
@@ -115,7 +115,7 @@ tags:
 
 <h4 id="Using_express-validator">Using express-validator</h4>
 
-<div class="note">
+<div class="notecard note">
 <p><strong>Note:</strong> The <a href="https://express-validator.github.io/docs/#basic-guide">express-validator</a> guide on  Github provides a good overview of the API. We recommend you read that to get an idea of all its capabilities (including using <a href="https://express-validator.github.io/docs/schema-validation.html">schema validation</a> and <a href="https://express-validator.github.io/docs/custom-validators-sanitizers.html">creating custom validators</a>). Below we cover just a subset that is useful for the <em>LocalLibrary</em>.</p>
 </div>
 
@@ -180,7 +180,7 @@ tags:
  <li>Delete an object if it is not referenced by other objects (so for example, you won't be able to delete a <code>Book</code> until all associated <code>BookInstance</code> objects have been deleted).</li>
 </ul>
 
-<div class="note">
+<div class="notecard note">
 <p><strong>Note:</strong> A more "robust" implementation might allow you to create the dependent objects when creating a new object, and delete any object at any time (for example, by deleting dependent objects, or by removing references to the deleted object from the database).</p>
 </div>
 

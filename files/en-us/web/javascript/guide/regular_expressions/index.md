@@ -303,7 +303,7 @@ The occurrences of `/d(b+)d/g` in the two statements are different regular expre
 
 ### Advanced searching with flags
 
-Regular expressions have six optional flags that allow for functionality like global and case insensitive searching. These flags can be used separately or together in any order, and are included as part of the regular expression.
+Regular expressions have optional flags that allow for functionality like global searching and case-insensitive searching. These flags can be used separately or together in any order, and are included as part of the regular expression.
 
 | Flag | Description                                                                                                                                         | Corresponding property                                                                                 |
 | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |

@@ -7,6 +7,8 @@ tags:
   - Mobile
   - viewport
 ---
+<p>This article describes how to use the "viewport" <code>&lt;meta&gt;</code> tag to control the viewport's size and shape.</p>
+
 <h2 id="Background">Background</h2>
 
 <p>The browser's {{glossary("viewport")}} is the area of the window in which web content can be seen. This is often not the same size as the rendered page, in which case the browser provides scrollbars for the user to scroll around and access all the content.</p>
@@ -19,7 +21,7 @@ tags:
 
 <p>However, this mechanism is not so good for pages that are optimized for narrow screens using <a href="/en-US/docs/Web/CSS/Media_Queries">media queries</a> — if the virtual viewport is 980px for example, media queries that kick in at 640px or 480px or less will never be used, limiting the effectiveness of such responsive design techniques.</p>
 
-<p><span class="seoSummary">To mitigate this problem of virtual viewport on narrow screen devices, Apple introduced the "viewport meta tag" in Safari iOS to let web developers control the viewport's size and scale.</span> Many other mobile browsers now support this tag, although it is not part of any web standard. Apple's <a href="https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html">documentation</a> does a good job explaining how web developers can use this tag, but we had to do some detective work to figure out exactly how to implement it in Fennec. For example, Safari's documentation says the content is a "comma-delimited list," but existing browsers and web pages use any mix of commas, semicolons, and spaces as separators.</p>
+<p>To mitigate this problem of virtual viewport on narrow screen devices, Apple introduced the "viewport meta tag" in Safari iOS to let web developers control the viewport's size and scale. Many other mobile browsers now support this tag, although it is not part of any web standard. Apple's <a href="https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html">documentation</a> does a good job explaining how web developers can use this tag, but we had to do some detective work to figure out exactly how to implement it in Fennec. For example, Safari's documentation says the content is a "comma-delimited list," but existing browsers and web pages use any mix of commas, semicolons, and spaces as separators.</p>
 
 <p>Learn more about viewports in different mobile browsers in <a href="http://www.quirksmode.org/mobile/viewports2.html">A Tale of Two Viewports</a> at quirksmode.org.</p>
 

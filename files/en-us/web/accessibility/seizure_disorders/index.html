@@ -524,35 +524,46 @@ tags:
 
 <h4 id="Media_Queries_Level_5">Media Queries Level 5</h4>
 
-<h5 id="EnvironmentMQ_Planned_in_Media_Queries_Level_5">EnvironmentMQ (Planned in Media Queries Level 5)</h5>
+<p>EnvironmentMQ (Planned in Media Queries Level 5)</p>
 
-<h6 id="light-level"><a href="https://drafts.csswg.org/mediaqueries-5/#light-level">light-level</a></h6>
+<dl>
+  <dt>light-level</dt>
+  <dd>
+    <p><a href="https://drafts.csswg.org/mediaqueries-5/#light-level">light-level</a> has three valid values: dim, normal, and washed. Interestingly, the specification refrains from actually defining the three levels in terms of a measurement of lux, because devices with a light sensor usually adjust the brightness of the screen automatically. The specifications also note the difference in technology, such as e-ink, which remains readable in bright daylight, versus liquid crystals, which do not.</p>
+  </dd>
 
-<p>Has three valid values: dim, normal, and washed. Interestingly, the specification refrains from actually defining the three levels in terms of a measurement of lux, because devices with a light sensor usually adjust the brightness of the screen automatically. The specifications also note the difference in technology, such as e-ink, which remains readable in bright daylight, versus liquid crystals, which do not.</p>
-
-<h6 id="environment-blending">environment-blending</h6>
-
-<p>From W3C's Draft document, Media Queries Level 5: "<em>The <strong><a href="https://drafts.csswg.org/mediaqueries-5/#descdef-media-environment-blending">environment-blending</a></strong> media feature is used to query the characteristics of the user’s display so the author can adjust the style of the document. An author might choose to adjust the visuals and/or layout of the page depending on the display technology to increase the appeal or improve legibility</em>."</p>
+  <dt>environment-blending</dt>
+  <dd>
+    <p>From W3C's Draft document, Media Queries Level 5: "<em>The <strong><a href="https://drafts.csswg.org/mediaqueries-5/#descdef-media-environment-blending">environment-blending</a></strong> media feature is used to query the characteristics of the user’s display so the author can adjust the style of the document. An author might choose to adjust the visuals and/or layout of the page depending on the display technology to increase the appeal or improve legibility</em>."</p>
+  </dd>
+</dl>
 
 <h5 id="User_Preference_Media_Features_Planned_in_Media_Queries_Level_5">User Preference Media Features (Planned in Media Queries Level 5)</h5>
 
 <p><strong><a href="https://drafts.csswg.org/mediaqueries-5/#mf-user-preferences">User Preference Media Features</a></strong> in <strong><a href="https://drafts.csswg.org/mediaqueries-5/">W3C Editor's Draft Media Queries Level 5</a></strong> are especially promising in providing user control over media. Here are some highlights:</p>
+  
+  <dl>
+    <dt>inverted-colors</dt>
+    <dd>
+      <p>According to the section, <strong><a href="https://drafts.csswg.org/mediaqueries-5/#mf-user-preferences">User Preference Media Features</a></strong> , "The <strong><a href="https://drafts.csswg.org/mediaqueries-5/#descdef-media-inverted-colors" id="ref-for-descdef-media-inverted-colors①">inverted-colors</a></strong> media feature indicates whether the content is displayed normally, or whether colors have been inverted."</p>
+    </dd>
 
-<h6 id="inverted-colors"><a href="https://drafts.csswg.org/mediaqueries-5/#inverted">inverted-colors</a></h6>
+    <dt>forced-colors</dt>
+    <dd>
+      <p><a href="https://drafts4.csswg.org/mediaqueries-5/#forced-colors">forced-colors</a></p>
+      
+      <p>In <strong><a href="https://drafts.csswg.org/css-color-adjust-1/#forced-colors-mode">forced-colors-mode</a>,</strong> the user agent enforces the user's preferred color palette on the page, overriding the author's chosen colors.  From W3C's Draft document, Media Queries Level 5 section on forced-colors: "<em>The forced-colors media feature is used to detect if the user agent has enabled a<strong><a href="https://drafts.csswg.org/css-color-adjust-1/#forced-colors-mode"> forced colors mode</a></strong> where it enforces a user-chosen limited color palette on the page</em>". The user will need to be made aware of this ability, and it will need to play nice with the appropriate value for the prefers-color-scheme media query.</p>
+    </dd>
 
-<p>According to the section, <strong><a href="https://drafts.csswg.org/mediaqueries-5/#mf-user-preferences">User Preference Media Features</a></strong> , "The <strong><a href="https://drafts.csswg.org/mediaqueries-5/#descdef-media-inverted-colors" id="ref-for-descdef-media-inverted-colors①">inverted-colors</a></strong> media feature indicates whether the content is displayed normally, or whether colors have been inverted."</p>
+    <dt>light-level</dt>
+    <dd>
+      <p>From W3C's Draft document, Media Queries Level 5 section on light-level: "<em>The <code><strong><a href="https://drafts.csswg.org/mediaqueries-5/#descdef-media-light-level" id="ref-for-descdef-media-light-level①">light-level</a></strong></code> media feature is used to query about the ambient light-level in which the device is used, to allow the author to adjust style of the document in response</em>." This will be a godsend to those who have motor-skills problems, or for some with cognitive difficulties, who cannot find the right "button" to change their screen settings.</p>
 
-<h6 id="forced-colors"><a href="https://drafts4.csswg.org/mediaqueries-5/#forced-colors">forced-colors</a></h6>
-
-<p>In <strong><a href="https://drafts.csswg.org/css-color-adjust-1/#forced-colors-mode">forced-colors-mode</a>,</strong> the user agent enforces the user's preferred color palette on the page, overriding the author's chosen colors.  From W3C's Draft document, Media Queries Level 5 section on forced-colors: "<em>The forced-colors media feature is used to detect if the user agent has enabled a<strong><a href="https://drafts.csswg.org/css-color-adjust-1/#forced-colors-mode"> forced colors mode</a></strong> where it enforces a user-chosen limited color palette on the page</em>". The user will need to be made aware of this ability, and it will need to play nice with the appropriate value for the prefers-color-scheme media query.</p>
-
-<h6 id="light-level_2">light-level</h6>
-
-<p>From W3C's Draft document, Media Queries Level 5 section on light-level: "<em>The <code><strong><a href="https://drafts.csswg.org/mediaqueries-5/#descdef-media-light-level" id="ref-for-descdef-media-light-level①">light-level</a></strong></code> media feature is used to query about the ambient light-level in which the device is used, to allow the author to adjust style of the document in response</em>." This will be a godsend to those who have motor-skills problems, or for some with cognitive difficulties, who cannot find the right "button" to change their screen settings.</p>
-
-<h6 id="prefers-contrast"><a href="https://drafts4.csswg.org/mediaqueries-5/#prefers-contrast">prefers-contrast</a></h6>
-
-<p>From W3C's Draft document, Media Queries Level 5 section on <code><strong>prefers-contrast</strong></code>: "<em>The <strong><code>prefers-contrast</code></strong> media feature is used to detect if the user has requested the system increase or decrease the amount of contrast between adjacent colors. For example, many users have difficulty reading text that has a small difference in contrast to the text background and would prefer a larger contrast.</em>" Sometimes there can be such a thing as too much contrast; a halo effect around text can occur in such situations and actually reduce legibility. Putting the amount of contrast in the user's control is a definite gift for accessibility.</p>
+      <dt>prefers-contrast</dt>
+      <dd>
+        <p>From W3C's Draft document, Media Queries Level 5 section on <a href="https://drafts4.csswg.org/mediaqueries-5/#prefers-contrast"><code><strong>prefers-contrast</strong></code></a>: "<em>The <strong><code>prefers-contrast</code></strong> media feature is used to detect if the user has requested the system increase or decrease the amount of contrast between adjacent colors. For example, many users have difficulty reading text that has a small difference in contrast to the text background and would prefer a larger contrast.</em>" Sometimes there can be such a thing as too much contrast; a halo effect around text can occur in such situations and actually reduce legibility. Putting the amount of contrast in the user's control is a definite gift for accessibility.</p>
+      </dd>
+  </dl>
 
 <h4 id="MediaQueryList_Interface"><code>MediaQueryList</code> Interface</h4>
 

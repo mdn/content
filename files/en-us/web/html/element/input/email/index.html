@@ -12,7 +12,7 @@ browser-compat: html.elements.input.input-email
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary">{{HTMLElement("input")}} elements of type <code><strong>email</strong></code> are used to let the user enter and edit an e-mail address, or, if the <code><a href="/en-US/docs/Web/HTML/Attributes/multiple">multiple</a></code> attribute is specified, a list of e-mail addresses.</span></p>
+<p>{{HTMLElement("input")}} elements of type <code><strong>email</strong></code> are used to let the user enter and edit an e-mail address, or, if the <code><a href="/en-US/docs/Web/HTML/Attributes/multiple">multiple</a></code> attribute is specified, a list of e-mail addresses.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-email.html", "tabbed-shorter")}}</div>
 
@@ -104,7 +104,9 @@ browser-compat: html.elements.input.input-email
  </tbody>
 </table>
 
-<p id="attr-list">{{page("/en-US/docs/Web/HTML/Element/input/text", "attr-list", 0, 1, 2)}}</p>
+<h3 id="attr-list"><code id="list">list</code></h3>
+
+<p>The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The {{HTMLElement("datalist")}} provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the {{htmlattrxref("type", "input")}} are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.</p>
 
 <h3 id="attr-maxlength"><code id="maxlength">maxlength</code></h3>
 
@@ -128,15 +130,39 @@ browser-compat: html.elements.input.input-email
 
 <h3 id="attr-pattern"><code id="pattern">pattern</code></h3>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "pattern-include")}}</p>
+<p>The <code>pattern</code> attribute, when specified, is a regular expression that the input's {{htmlattrxref("value")}} must match in order for the value to pass <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a>. It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">guide on regular expressions</a>; the <code>'u'</code> flag is specified when compiling the regular expression, so that the pattern is treated as a sequence of Unicode code points, instead of as ASCII. No forward slashes should be specified around the pattern text.</p>
+
+<p>If the specified pattern is not specified or is invalid, no regular expression is applied and this attribute is ignored completely.</p>
+
+<div class="note">
+<p><strong>Note:</strong> Use the {{htmlattrxref("title", "input")}} attribute to specify text that most browsers will display as a tooltip to explain what the requirements are to match the pattern. You should also include other explanatory text nearby.</p>
+</div>
 
 <p>See the section {{anch("Pattern validation")}} for details and an example.</p>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "attr-placeholder", 0, 1, 2)}}</p>
+<h3><code>placeholder</code></h3>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "attr-readonly", 0, 1, 2)}}</p>
+<p>The <code>placeholder</code> attribute is a string that provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that demonstrates the expected type of data, rather than an explanatory message. The text <em>must not</em> include carriage returns or line feeds.</p>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "attr-size", 0, 1, 2)}}</p>
+<p>If the control's content has one directionality ({{Glossary("LTR")}} or {{Glossary("RTL")}}) but needs to present the placeholder in the opposite directionality, you can use Unicode bidirectional algorithm formatting characters to override directionality within the placeholder; see {{SectionOnPage("/en-US/docs/Web/Localization/Unicode_Bidirectional_Text_Algorithm", "Overriding BiDi using Unicode control characters")}} for those characters.</p>
+
+<div class="note">
+<p><strong>Note:</strong> Avoid using the <code>placeholder</code> attribute if you can. It is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content. See {{SectionOnPage("/en-US/docs/Web/HTML/Element/input", "Labels and placeholders")}} for more information.</p>
+</div>
+
+<h3><code>readonly</code></h3>
+
+<p>A Boolean attribute which, if present, means this field cannot be edited by the user. Its <code>value</code> can, however, still be changed by JavaScript code directly setting the {{domxref("HTMLInputElement")}} <code>value</code> property.</p>
+
+<div class="note">
+<p><strong>Note:</strong> Because a read-only field cannot have a value, <code>required</code> does not have any effect on inputs with the <code>readonly</code> attribute also specified.</p>
+</div>
+
+<h3><code>size</code></h3>
+
+<p>The <code>size</code> attribute is a numeric value indicating how many characters wide the input field should be. The value must be a number greater than zero, and the default value is 20. Since character widths vary, this may or may not be exact and should not be relied upon to be so; the resulting input may be narrower or wider than the specified number of characters, depending on the characters and the font ({{cssxref("font")}} settings in use).</p>
+
+<p>This does <em>not</em> set a limit on how many characters the user can enter into the field. It only specifies approximately how many can be seen at a time. To set an upper limit on the length of the input data, use the <code>{{anch("maxlength")}}</code> attribute.</p>
 
 <h2 id="Using_email_inputs">Using email inputs</h2>
 
@@ -145,7 +171,7 @@ browser-compat: html.elements.input.input-email
 <p>It's important, however, to note that this is not enough to ensure that the specified text is an e-mail address which actually exists, corresponds to the user of the site, or is acceptable in any other way. It ensures that the value of the field is properly formatted to be an e-mail address.</p>
 
 <div class="note">
-<p><strong>Note</strong>: It's also crucial to remember that a user can tinker with your HTML behind the scenes, so your site <em>must not</em> use this validation for any security purposes. You <em>must</em> verify the e-mail address on the server side of any transaction in which the provided text may have any security implications of any kind.</p>
+<p><strong>Note:</strong> It's also crucial to remember that a user can tinker with your HTML behind the scenes, so your site <em>must not</em> use this validation for any security purposes. You <em>must</em> verify the e-mail address on the server side of any transaction in which the provided text may have any security implications of any kind.</p>
 </div>
 
 <h3 id="A_simple_email_input">A simple email input</h3>
@@ -169,7 +195,7 @@ browser-compat: html.elements.input.input-email
 <p>The input is now considered valid when a single e-mail address is entered, or when any number of e-mail addresses separated by commas and, optionally, some number of whitespace characters are present.</p>
 
 <div class="note">
-<p><strong>Note</strong>: When <code>multiple</code> is used, the value <em>is</em> allowed to be empty.</p>
+<p><strong>Note:</strong> When <code>multiple</code> is used, the value <em>is</em> allowed to be empty.</p>
 </div>
 
 <p>Some examples of valid strings when <code>multiple</code> is specified:</p>
@@ -225,17 +251,17 @@ browser-compat: html.elements.input.input-email
 
 <h3 id="Providing_default_options">Providing default options</h3>
 
+<h4>Providing a single default using the value attribute</h4>
+
 <p>As always, you can provide a default value for an <code>email</code> input box by setting its {{htmlattrxref("value", "input")}} attribute:</p>
 
-<div id="Default_value">
 <pre class="brush: html">&lt;input type="email" value="default@example.com"&gt;</pre>
-</div>
 
-<p>{{EmbedLiveSample("Default_value", 600, 40)}}</p>
+<p>{{EmbedLiveSample("Providing_a_single_default_using_the_value_attribute", 600, 40)}}</p>
 
 <h4 id="Offering_suggested_values">Offering suggested values</h4>
 
-<p>Taking it a step farther, you can provide a list of default options from which the user can select by specifying the {{htmlattrxref("list", "input")}} attribute. This doesn't limit the user to those options, but does allow them to select commonly-used e-mail addresses more quickly. This also offers hints to {{htmlattrxref("autocomplete", "input")}}. The <code>list</code> attribute specifies the ID of a {{HTMLElement("datalist")}}, which in turn contains one {{HTMLElement("option")}} element per suggested value; each <code>option</code>'s <code>value</code> is the corresponding suggested value for the email entry box.</p>
+<p>Taking it a step further, you can provide a list of default options from which the user can select by specifying the {{htmlattrxref("list", "input")}} attribute. This doesn't limit the user to those options, but does allow them to select commonly-used e-mail addresses more quickly. This also offers hints to {{htmlattrxref("autocomplete", "input")}}. The <code>list</code> attribute specifies the ID of a {{HTMLElement("datalist")}}, which in turn contains one {{HTMLElement("option")}} element per suggested value; each <code>option</code>'s <code>value</code> is the corresponding suggested value for the email entry box.</p>
 
 <pre class="brush: html">&lt;input type="email" size="40" list="defaultEmails"&gt;
 
@@ -251,14 +277,12 @@ browser-compat: html.elements.input.input-email
 
 <p>With the {{HTMLElement("datalist")}} element and its {{HTMLElement("option")}}s in place, the browser will offer the specified values as potential values for the e-mail address; this is typically presented as a popup or drop-down menu containing the suggestions. While the specific user experience may vary from one browser to another, typically clicking in the edit box presents a drop-down of the suggested e-mail addresses. Then, as the user types, the list is filtered to show only matching values. Each typed character narrows down the list until the user makes a selection or types a custom value.</p>
 
-<p><img alt="Animation: Using keyboard entry to filter the list of suggested e-mail addresses" src="html-input-email1.gif" style="border-style: solid; border-width: 1px;"></p>
-
 <h2 id="Validation">Validation</h2>
 
 <p>There are two levels of content validation available for <code>email</code> inputs. First, there's the standard level of validation offered to all {{HTMLElement("input")}}s, which automatically ensures that the contents meet the requirements to be a valid e-mail address. But there's also the option to add additional filtering to ensure that your own specialized needs are met, if you have any.</p>
 
 <div class="warning">
-<p><strong>Important</strong>: HTML form validation is <em>not</em> a substitute for scripts that ensure that the entered data is in the proper format.It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it completely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data (or data which is too large, is of the wrong type, and so forth) is entered into your database.</p>
+<p><strong>Warning:</strong> HTML form validation is <em>not</em> a substitute for scripts that ensure that the entered data is in the proper format.It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it completely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data (or data which is too large, is of the wrong type, and so forth) is entered into your database.</p>
 </div>
 
 <h3 id="Basic_validation">Basic validation</h3>
@@ -272,7 +296,7 @@ browser-compat: html.elements.input.input-email
 <p>To learn more about how form validation works and how to take advantage of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS properties to style the input based on whether or not the current value is valid, see <a href="/en-US/docs/Learn/Forms/Form_validation">Form data validation</a>.</p>
 
 <div class="note">
-<p><strong>Note</strong>: There are known specification issues related to international domain names and the validation of e-mail addresses in HTML. See <a href="https://www.w3.org/Bugs/Public/show_bug.cgi?id=15489">W3C bug 15489</a> for details.</p>
+<p><strong>Note:</strong> There are known specification issues related to international domain names and the validation of e-mail addresses in HTML. See <a href="https://www.w3.org/Bugs/Public/show_bug.cgi?id=15489">W3C bug 15489</a> for details.</p>
 </div>
 
 <h3 id="Pattern_validation">Pattern validation</h3>
@@ -322,7 +346,7 @@ label::after {
 &lt;/form&gt;
 </pre>
 
-<p>{{EmbedLiveSample("Pattern_validation", 700, 275)}}</p>
+<p>{{EmbedLiveSample("Pattern_validation", 700, 300)}}</p>
 
 <p>Our {{HTMLElement("form")}} contains one {{HTMLElement("input")}} of type <code>email</code> for the user's e-mail address, a {{HTMLElement("textarea")}} to enter their message for IT into, and an <code>&lt;input&gt;</code> of type <code><a href="/en-US/docs/Web/HTML/Element/input/submit">"submit"</a></code>, which creates a button to submit the form. Each text entry box has a {{HTMLElement("label")}} associated with it to let the user know what's expected of them.</p>
 
@@ -343,7 +367,7 @@ label::after {
 <p><img alt="" src="email-pattern-match-bad.png"></p>
 
 <div class="note">
-<p><strong>Note</strong>: If you run into trouble while writing your validation regular expressions and they're not working properly, check your browser's console; there may be helpful error messages there to aid you in solving the problem.</p>
+<p><strong>Note:</strong> If you run into trouble while writing your validation regular expressions and they're not working properly, check your browser's console; there may be helpful error messages there to aid you in solving the problem.</p>
 </div>
 
 <h2 id="Examples">Examples</h2>
@@ -364,7 +388,7 @@ label::after {
   &lt;option value="hulk@grrrrrrrr.arg"&gt;
 &lt;/datalist&gt;</pre>
 
-<p>{{EmbedLiveSample('Examples', 600, 50)}}</p>
+<p>{{EmbedLiveSample('Examples', 600, 80)}}</p>
 
 <h2 id="Specifications">Specifications</h2>
 

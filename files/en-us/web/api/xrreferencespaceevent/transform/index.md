@@ -36,13 +36,7 @@ native origin after the changes the event represents are applied. The
 used to convert coordinates from the pre-event coordinate system to the post-event
 coordiante system.
 
-## Syntax
-
-```js
-let refSpace = xrReferenceSpaceEvent.transform;
-```
-
-### Value
+## Value
 
 An {{domxref("XRRigidTransform")}} object providing a transform that can be used to
 convert coordinates from the pre-event coordinate system to the post-event coordinate

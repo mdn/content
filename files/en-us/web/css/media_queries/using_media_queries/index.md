@@ -28,7 +28,7 @@ A media query is composed of an optional _media type_ and any number of _media f
 
 A media query computes to true when the media type (if specified) matches the device on which a document is being displayed _and_ all media feature expressions compute as true. Queries involving unknown media types are always false.
 
-> **Note:** A style sheet with a media query attached to its {{HTMLElement("link")}} tag [will still download](https://scottjehl.github.com/CSS-Download-Tests/) even if the query returns false. Nevertheless, its contents will not apply unless and until the result of the query changes to true.
+> **Note:** A style sheet with a media query attached to its {{HTMLElement("link")}} tag [will still download](https://scottjehl.github.io/CSS-Download-Tests/) even if the query returns false, the download will happen but the priority of downloading will be much less. Nevertheless, its contents will not apply unless and until the result of the query changes to true. You can read why this happens in Tomayac's blog [Why Browser Download Stylesheet with Non-Matching Media Queries](https://medium.com/@tomayac/why-browsers-download-stylesheets-with-non-matching-media-queries-eb61b91b85a2).
 
 ### Media types
 
@@ -85,7 +85,7 @@ The _logical operators_ `not`, `and`, and `only` can be used to compose a comple
 
 #### `and`
 
-The `and` operator is used for combining multiple media features together into a single media query, requiring each chained feature to return true in order for the query to be true. It is also used for joining media features with media types.
+The `and` operator is used for combining multiple media features together into a single media query, requiring each chained feature to return true for the query to be true. It is also used for joining media features with media types.
 
 #### `not`
 

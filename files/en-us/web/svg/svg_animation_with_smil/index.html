@@ -9,7 +9,7 @@ tags:
   - SVG Animation
 ---
 <div class="warning">
-<p>Although Chrome 45 deprecated SMIL in favor of CSS animations and Web animations, the Chrome developers have since <a href="https://groups.google.com/a/chromium.org/d/msg/blink-dev/5o0yiO440LM/YGEJBsjUAwAJ">suspended</a> that deprecation.</p>
+<p><strong>Warning:</strong> Although Chrome 45 deprecated SMIL in favor of CSS animations and Web animations, the Chrome developers have since <a href="https://groups.google.com/a/chromium.org/d/msg/blink-dev/5o0yiO440LM/YGEJBsjUAwAJ">suspended</a> that deprecation.</p>
 </div>
 
 <p>Firefox 4 introduced support for animating <a href="/en-US/docs/Web/SVG">SVG</a> using <a href="https://www.w3.org/TR/REC-smil">Synchronized Multimedia Integration Language</a> (SMIL). SMIL allows you to:</p>
@@ -21,11 +21,11 @@ tags:
  <li>follow a motion path</li>
 </ul>
 
-<p>This is done adding an SVG element like <span class="author-g-shbl2alwmr0wm7ko">{{ SVGElement("animate") }}</span> inside the SVG element to animate. Below are examples for the four different ways.</p>
+<p>This is done adding an SVG element like {{ SVGElement("animate") }} inside the SVG element to animate. Below are examples for the four different ways.</p>
 
 <h2 id="Animating_attributes_of_an_element">Animating attributes of an element</h2>
 
-<p>The following example animates the <strong>cx</strong> attribute of a circle. To do so, we add an <span class="author-g-shbl2alwmr0wm7ko">{{ SVGElement("animate") }} element inside the </span><span class="author-g-shbl2alwmr0wm7ko">{{ SVGElement("circle") }} element. The important attributes for </span><span class="author-g-shbl2alwmr0wm7ko">{{ SVGElement("animate") }} are:</span></p>
+<p>The following example animates the <strong>cx</strong> attribute of a circle. To do so, we add an {{ SVGElement("animate") }} element inside the {{ SVGElement("circle") }} element. The important attributes for {{ SVGElement("animate") }} are:</p>
 
 <dl>
  <dt><strong>attributeName</strong></dt>
@@ -54,7 +54,7 @@ tags:
 
 <h2 id="Animating_the_transform_attributes">Animating the transform attributes</h2>
 
-<p><span class="author-g-shbl2alwmr0wm7ko">The {{ SVGElement("animateTransform") }} element let you animate <strong>transform</strong> attributes. This new element is necessary because we are not animating a simple attribute like <strong>x</strong> which is just a number. Rotation attributes look like this: <code>rotation(theta, x, y)</code>, where <code>theta</code> is the angle in degrees, and <code>x</code> and <code>y</code> are absolute positions. In the example below, we animate the center of the rotation and the angle.</span></p>
+<p>The {{ SVGElement("animateTransform") }} element let you animate <strong>transform</strong> attributes. This new element is necessary because we are not animating a simple attribute like <strong>x</strong> which is just a number. Rotation attributes look like this: <code>rotation(theta, x, y)</code>, where <code>theta</code> is the angle in degrees, and <code>x</code> and <code>y</code> are absolute positions. In the example below, we animate the center of the rotation and the angle.</p>
 
 <pre class="brush: html">&lt;svg width="300" height="100"&gt;
   &lt;title&gt;SVG SMIL Animate with transform&lt;/title&gt;
@@ -77,7 +77,7 @@ tags:
 
 <h2 id="Animation_following_a_path">Animation following a path</h2>
 
-<p><span class="author-g-shbl2alwmr0wm7ko">The {{ SVGElement("animateMotion") }} element lets you animate an element position and rotation according to a path. </span>The path is defined the same way as in <span class="author-g-shbl2alwmr0wm7ko">{{ SVGElement("path") }}. You can set the attribute to define whether the object rotates following the tangent of the path. </span></p>
+<p>The {{ SVGElement("animateMotion") }} element lets you animate an element position and rotation according to a path. The path is defined the same way as in {{ SVGElement("path") }}. You can set the attribute to define whether the object rotates following the tangent of the path. </p>
 
 <h3 id="Example_1_Linear_motion">Example 1: Linear motion</h3>
 

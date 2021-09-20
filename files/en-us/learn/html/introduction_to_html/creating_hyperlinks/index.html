@@ -22,7 +22,7 @@ tags:
 
 <p class="summary">Hyperlinks are really important — they are what makes the Web <em>a web</em>. This article shows the syntax required to make a link, and discusses link best practices.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -45,7 +45,7 @@ tags:
 
 <p>For example, the BBC homepage contains many links that point not only to multiple news stories, but also different areas of the site (navigation functionality), login/registration pages (user tools), and more.</p>
 
-<p><img alt="frontpage of bbc.co.uk, showing many news items, and navigation menu functionality" src="updated-bbc-website.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="frontpage of bbc.co.uk, showing many news items, and navigation menu functionality" src="updated-bbc-website.png"></p>
 
 <h2 id="Anatomy_of_a_link">Anatomy of a link</h2>
 
@@ -107,7 +107,7 @@ tags:
 
 <p>URLs use paths to find files. Paths specify where the file you're interested in is located in the filesystem. Let's look at an example of a directory structure, see the <a href="https://github.com/mdn/learning-area/tree/master/html/introduction-to-html/creating-hyperlinks">creating-hyperlinks</a> directory.</p>
 
-<p><img alt="A simple directory structure. The parent directory is called creating-hyperlinks and contains two files called index.html and contacts.html, and two directories called projects and pdfs, which contain an index.html and a project-brief.pdf file, respectively" src="simple-directory.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="A simple directory structure. The parent directory is called creating-hyperlinks and contains two files called index.html and contacts.html, and two directories called projects and pdfs, which contain an index.html and a project-brief.pdf file, respectively" src="simple-directory.png"></p>
 
 <p>The <strong>root</strong> of this directory structure is called <code>creating-hyperlinks</code>. When working locally with a web site, you'll have one directory that contains the entire site. Inside the <strong>root</strong>, we have an <code>index.html</code> file and a <code>contacts.html</code>. In a real website, <code>index.html</code> would be our home page or landing page (a web page that serves as the entry point for a website or a particular section of a website.).</p>
 
@@ -203,15 +203,6 @@ to download Firefox&lt;/p&gt;
  <li>Minimize instances where multiple copies of the same text are linked to different places. This can cause problems for screen reader users, if there's a list of links out of context that are labeled "click here", "click here", "click here".</li>
 </ul>
 
-<h3 id="Use_relative_links_wherever_possible">Use relative links wherever possible</h3>
-
-<p>From the description above, you might think that it's a good idea to just use absolute links all the time because they don't break when a page is moved like relative links. However, you should use relative links wherever possible when linking to other locations within the <em>same website</em>. When you link to another website, you'll need to use an absolute link.</p>
-
-<ul>
- <li>For a start, it's easier to scan your code — relative URLs are generally shorter than absolute URLs, which makes reading code much easier.</li>
- <li>Second, it's more efficient to use relative URLs wherever possible. When you use an absolute URL, the browser starts by looking up the real location of the server on the Domain Name System ({{glossary("DNS")}}) — see <a href="/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works">How the web works</a> for more information. Then it goes to that server and finds the file that's being requested. With a relative URL, the browser just looks up the file that's being requested on the same server. If you use absolute URLs where relative URLs would do, you're constantly making your browser do extra work, meaning that it will perform less efficiently.</li>
-</ul>
-
 <h3 id="Linking_to_non-HTML_resources_—_leave_clear_signposts">Linking to non-HTML resources — leave clear signposts</h3>
 
 <p>When linking to a resource that will be downloaded (like a PDF or Word document), streamed (like video or audio), or has another potentially unexpected effect (opens a popup window, or loads a Flash movie), you should add clear wording to reduce any confusion.</p>
@@ -270,7 +261,7 @@ to download Firefox&lt;/p&gt;
 
 <p>The finished example should look similar to the following page:</p>
 
-<p><img alt="An example of a simple HTML navigation menu, with home, pictures, projects, and social menu items" src="navigation-example.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="An example of a simple HTML navigation menu, with home, pictures, projects, and social menu items" src="navigation-example.png"></p>
 
 <div class="note">
 <p><strong>Note</strong>: If you get stuck, or aren't sure if you have got it right, you can check the <a href="https://github.com/mdn/learning-area/tree/master/html/introduction-to-html/navigation-menu-marked-up">navigation-menu-marked-up</a> directory to see the correct answer.</p>

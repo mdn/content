@@ -16,9 +16,9 @@ tags:
 
 <p>{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs")}}</p>
 
-<p class="summary">This second article in our <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">Express Tutorial</a> shows how you can create a "skeleton" website project which you can then go on to populate with site-specific routes, templates/views, and database calls.</p>
+<p>This second article in our <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">Express Tutorial</a> shows how you can create a "skeleton" website project which you can then go on to populate with site-specific routes, templates/views, and database calls.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -35,14 +35,14 @@ tags:
 
 <p>This article shows how you can create a "skeleton" website using the <a href="https://expressjs.com/en/starter/generator.html">Express Application Generator</a> tool, which you can then populate with site-specific routes, views/templates, and database calls. In this case, we'll use the tool to create the framework for our <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">Local Library website</a>, to which we'll later add all the other code needed by the site. The process is extremely simple, requiring only that you invoke the generator on the command line with a new project name, optionally also specifying the site's template engine and CSS generator.</p>
 
-<p><span style="line-height: 1.5;">The following sections show you how to call the application generator, and provides a little explanation about the different view/CSS options. We'll also explain how the skeleton website is structured. At the end, we'll show how you can run the website to verify that it works.</span></p>
+<p>The following sections show you how to call the application generator, and provides a little explanation about the different view/CSS options. We'll also explain how the skeleton website is structured. At the end, we'll show how you can run the website to verify that it works.</p>
 
-<div class="note">
-<p><span style="line-height: 1.5;"><strong>Note</strong>: The <em>Express Application Generator</em> is not the only generator for Express applications, and the generated project is not the only viable way to structure your files and directories. The generated site does however have a modular structure that is easy to extend and understand. For information about a <em>minimal</em> Express application, see <a href="https://expressjs.com/en/starter/hello-world.html">Hello world example</a> (Express docs).</span></p>
+<div class="notecard note">
+<p><strong>Note:</strong> The <em>Express Application Generator</em> is not the only generator for Express applications, and the generated project is not the only viable way to structure your files and directories. The generated site does however have a modular structure that is easy to extend and understand. For information about a <em>minimal</em> Express application, see <a href="https://expressjs.com/en/starter/hello-world.html">Hello world example</a> (Express docs).</p>
 </div>
 
-<div class="note">
-<p><span style="line-height: 1.5;"><strong>Note</strong>: This tutorial uses the version of <em>Express</em> that is defined in the <strong>package.json</strong> created by the <em>Express Application Generator.</em> This is not (necessarily) the latest version!</span></p>
+<div class="notecard note">
+<p><strong>Note:</strong> This tutorial uses the version of <em>Express</em> that is defined in the <strong>package.json</strong> created by the <em>Express Application Generator.</em> This is not (necessarily) the latest version!</p>
 </div>
 
 <h2 id="Using_the_application_generator">Using the application generator</h2>
@@ -79,8 +79,7 @@ tags:
 <p>You can also choose a view (template) engine using <code>--view</code> and/or a CSS generation engine using <code>--css</code>.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>The other options for choosing template engines (e.g. <code>--hogan</code>, <code>--ejs</code>, <code>--hbs</code> etc.) are deprecated. Use <code>--view</code> (or <code>-v</code>).</p>
+  <p><strong>Note:</strong> The other options for choosing template engines (e.g. <code>--hogan</code>, <code>--ejs</code>, <code>--hbs</code> etc.) are deprecated. Use <code>--view</code> (or <code>-v</code>).</p>
 </div>
 
 <h3 id="What_view_engine_should_I_use">What view engine should I use?</h3>
@@ -88,8 +87,7 @@ tags:
 <p>The <em>Express Application Generator</em> allows you to configure a number of popular view/templating engines, including <a href="https://www.npmjs.com/package/ejs">EJS</a>, <a href="https://github.com/donpark/hbs">Hbs</a>, <a href="https://pugjs.org/api/getting-started.html">Pug</a> (Jade), <a href="https://www.npmjs.com/package/twig">Twig</a>, and <a href="https://www.npmjs.com/package/vash">Vash</a>, although it chooses Jade by default if you don't specify a view option. Express itself can also support a large number of other templating languages <a href="https://github.com/expressjs/express/wiki#template-engines">out of the box</a>.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>If you want to use a template engine that isn't supported by the generator then see <a href="https://expressjs.com/en/guide/using-template-engines.html">Using template engines with Express</a> (Express docs) and the documentation for your target view engine.</p>
+  <p><strong>Note:</strong> If you want to use a template engine that isn't supported by the generator then see <a href="https://expressjs.com/en/guide/using-template-engines.html">Using template engines with Express</a> (Express docs) and the documentation for your target view engine.</p>
 </div>
 
 <p>Generally speaking, you should select a templating engine that delivers all the functionality you need and allows you to be productive sooner — or in other words, in the same way that you choose any other component! Some of the things to consider when comparing template engines:</p>
@@ -114,8 +112,7 @@ tags:
 
 
 <div class="notecard note">
-  <h4>Tip</h4>
-  <p>There are many resources on the Internet to help you compare the different options!</p>
+  <p><strong>Note:</strong> There are many resources on the Internet to help you compare the different options!</p>
 </div>
 
 <p>For this project, we'll use the <a href="https://pugjs.org/api/getting-started.html">Pug</a> templating engine (this is the recently-renamed Jade engine), as this is one of the most popular Express/JavaScript templating languages and is supported out of the box by the generator.</p>
@@ -125,8 +122,7 @@ tags:
 <p>The <em>Express Application Generator</em> allows you to create a project that is configured to use the most common CSS stylesheet engines: <a href="https://lesscss.org/">LESS</a>, <a href="https://sass-lang.com/">SASS</a>, <a href="http://compass-style.org/">Compass</a>, <a href="https://stylus-lang.com/">Stylus</a>.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>CSS has some limitations that make certain tasks difficult. CSS stylesheet engines allow you to use more powerful syntax for defining your CSS and then compile the definition into plain-old CSS for browsers to use.</p>
+  <p><strong>Note:</strong> CSS has some limitations that make certain tasks difficult. CSS stylesheet engines allow you to use more powerful syntax for defining your CSS and then compile the definition into plain-old CSS for browsers to use.</p>
 </div>
 
 <p>As with templating engines, you should use the stylesheet engine that will allow your team to be most productive. For this project, we'll use vanilla CSS (the default) as our CSS requirements are not sufficiently complicated to justify using anything else.</p>
@@ -202,8 +198,7 @@ npm install</pre>
    <li>On Windows Powershell, use this command:
     <pre class="brush: bash">$ENV:DEBUG = "express-locallibrary-tutorial:*"; npm start</pre>
     <div class="notecard note">
-      <h4>Note</h4>
-        <p>Powershell commands are not covered further in this tutorial (The provided "Windows" commands assume you're using the Windows CMD prompt.)</p>
+        <p><strong>Note:</strong> Powershell commands are not covered further in this tutorial (The provided "Windows" commands assume you're using the Windows CMD prompt.)</p>
     </div>
    </li>
    <li>On macOS or Linux, use this command:
@@ -217,13 +212,12 @@ npm install</pre>
 
 <p>You should see a browser page that looks like this:</p>
 
-<p><img alt="Browser for default Express app generator website" src="expressgeneratorskeletonwebsite.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="Browser for default Express app generator website" src="expressgeneratorskeletonwebsite.png"></p>
 
 <p>Congratulations! You now have a working Express application that can be accessed via port 3000.</p>
 
 <div class="notecard note">
-<h4>Note</h4>
-  <p>You could also start the app just using the <code>npm start</code> command. Specifying the DEBUG variable as shown enables console logging/debugging. For example, when you visit the above page you'll see debug output like this:</p>
+  <p><strong>Note:</strong> You could also start the app just using the <code>npm start</code> command. Specifying the DEBUG variable as shown enables console logging/debugging. For example, when you visit the above page you'll see debug output like this:</p>
 
 <pre class="brush: bash">&gt;SET DEBUG=express-locallibrary-tutorial:* &amp; npm start
 
@@ -273,8 +267,7 @@ GET /stylesheets/style.css 200 4.886 ms - 111
 <p>We can now start the server in almost exactly the same way as previously, but using the <code>devstart</code> command.</p>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>Now if you edit any file in the project the server will restart (or you can restart it by typing <code>rs</code> on the command prompt at any time). You will still need to reload the browser to refresh the page.</p>
+  <p><strong>Note:</strong> Now if you edit any file in the project the server will restart (or you can restart it by typing <code>rs</code> on the command prompt at any time). You will still need to reload the browser to refresh the page.</p>
 
   <p>We now have to call "<code>npm run <em>&lt;scriptname&gt;</em></code>" rather than just <code>npm start</code>, because "start" is actually an NPM command that is mapped to the named script. We could have replaced the command in the <em>start</em> script but we only want to use <em>nodemon</em> during development, so it makes sense to create a new script command.</p>
 
@@ -287,29 +280,33 @@ GET /stylesheets/style.css 200 4.886 ms - 111
 
 <h3 id="Directory_structure">Directory structure</h3>
 
-<p>The generated project, now that you have installed dependencies, has the following file structure (files are the items <strong>not</strong> prefixed with "/"). The <strong>package.json</strong> file defines the application dependencies and other information. It also defines a startup script that will call the application entry point, the JavaScript file <strong>/bin/www</strong>. This sets up some of the application error handling and then loads <strong>app.js</strong> to do the rest of the work. The app routes are stored in separate modules under the <strong>routes/</strong> directory. The templates are stored under the /<strong>views</strong> directory.</p>
+<p>The generated project, now that you have installed dependencies, has the following file structure (files are the items <strong>not</strong> prefixed with "/").
+The <strong>package.json</strong> file defines the application dependencies and other information.
+It also defines a startup script that will call the application entry point, the JavaScript file <strong>/bin/www</strong>.
+This sets up some of the application error handling and then loads <strong>app.js</strong> to do the rest of the work.
+The app routes are stored in separate modules under the <strong>routes/</strong> directory.
+The templates are stored under the /<strong>views</strong> directory.</p>
 
-<pre>/express-locallibrary-tutorial
-    <strong>app.js</strong>
+<pre class="brush: plain">express-locallibrary-tutorial
+    app.js
     /bin
-        <strong>www</strong>
-    <strong>package.json</strong>
-    <strong>package-lock.json</strong>
+        www
+    package.json
+    package-lock.json
     /node_modules
         [about 6700 subdirectories and files]
     /public
         /images
         /javascripts
         /stylesheets
-            <strong>style.css</strong>
+            style.css
     /routes
-        <strong>index.js</strong>
-        <strong>users.js</strong>
+        index.js
+        users.js
     /views
-        <strong>error.pug</strong>
-        <strong>index.pug</strong>
-        <strong>layout.pug</strong>
-
+        error.pug
+        index.pug
+        layout.pug
 </pre>
 
 <p>The following sections describe the files in a little more detail.</p>
@@ -369,12 +366,11 @@ GET /stylesheets/style.css 200 4.886 ms - 111
  * Module dependencies.
  */
 
-<strong>var app = require('../app');</strong>
+var app = require('../app');
 </pre>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p><code>require()</code> is a global node function that is used to import modules into the current file. Here we specify <strong>app.js</strong> module using a relative path and omitting the optional (.<strong>js</strong>) file extension.</p>
+  <p><strong>Note:</strong> <code>require()</code> is a global node function that is used to import modules into the current file. Here we specify <strong>app.js</strong> module using a relative path and omitting the optional (.<strong>js</strong>) file extension.</p>
 </div>
 
 <p>The remainder of the code in this file sets up a node HTTP server with <code>app</code> set to a specific port (defined in an environment variable or 3000 if the variable isn't defined), and starts listening and reporting server errors and connections. For now you don't really need to know anything else about the code (everything in this file is "boilerplate"), but feel free to review it if you're interested.</p>
@@ -407,8 +403,7 @@ var usersRouter = require('./routes/users');
 </pre>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>At this point, we have just <em>imported</em> the module; we haven't actually used its routes yet (this happens just a little bit further down the file).</p>
+  <p><strong>Note:</strong> At this point, we have just <em>imported</em> the module; we haven't actually used its routes yet (this happens just a little bit further down the file).</p>
 </div>
 
 <p>Next, we create the <code>app</code> object using our imported <em>express</em> module, and then use it to set up the view (template) engine. There are two parts to setting up the engine. First, we set the '<code>views</code>' value to specify the folder where the templates will be stored (in this case the subfolder <strong>/views</strong>). Then we set the '<code>view engine</code>' value to specify the template library (in this case "pug").</p>
@@ -420,13 +415,15 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 </pre>
 
-<p>The next set of functions call <code>app.use()</code> to add the <em>middleware</em> libraries into the request handling chain. In addition to the 3rd party libraries we imported previously, we use the <code>express.static</code> middleware to get <em>Express</em> to serve all the static files in the <strong>/public</strong> directory in the project root.</p>
+<p>The next set of functions call <code>app.use()</code> to add the <em>middleware</em> libraries into the request handling chain.
+In addition to the 3rd party libraries we imported previously, we use the <code>express.static</code> middleware to get <em>Express</em> to serve all the static files in the <strong>/public</strong> directory in the project root.</p>
 
 <pre class="brush: js">app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-<strong>app.use(express.static(path.join(__dirname, 'public')));</strong>
+
+app.use(express.static(path.join(__dirname, 'public')));
 </pre>
 
 <p>Now that all the other middleware is set up, we add our (previously imported) route-handling code to the request handling chain. The imported code will define particular routes for the different <em>parts</em> of the site:</p>
@@ -436,8 +433,7 @@ app.use('/users', usersRouter);
 </pre>
 
 <div class="notecard note">
-  <h4>Note</h4>
-  <p>The paths specified above (<code>'/'</code> and '<code>/users'</code>) are treated as a prefix to routes defined in the imported files.
+  <p><strong>Note:</strong> The paths specified above (<code>'/'</code> and '<code>/users'</code>) are treated as a prefix to routes defined in the imported files.
     So for example, if the imported <strong>users</strong> module defines a route for <code>/profile</code>, you would access that route at <code>/users/profile</code>. We'll talk more about routes in a later article.</p>
 </div>
 
@@ -466,14 +462,16 @@ app.use(function(err, req, res, next) {
 
 <h3 id="Routes">Routes</h3>
 
-<p>The route file <strong>/routes/users.js</strong> is shown below (route files share a similar structure, so we don't need to also show <strong>index.js</strong>). First, it loads the <em>express</em> module and uses it to get an <code>express.Router</code> object. Then it specifies a route on that object and lastly exports the router from the module (this is what allows the file to be imported into <strong>app.js</strong>).</p>
+<p>The route file <strong>/routes/users.js</strong> is shown below (route files share a similar structure, so we don't need to also show <strong>index.js</strong>).
+First, it loads the <em>express</em> module and uses it to get an <code>express.Router</code> object.
+Then it specifies a route on that object and lastly exports the router from the module (this is what allows the file to be imported into <strong>app.js</strong>).</p>
 
 <pre class="brush: js">var express = require('express');
 var router = express.Router();
 
 /* GET users listing. */
-<strong>router.get('/', function(req, res, next) {
-  res.send('respond with a resource');</strong>
+router.get('/', function(req, res, next) {
+  res.send('respond with a resource');
 });
 
 module.exports = router;
@@ -482,8 +480,7 @@ module.exports = router;
 <p>The route defines a callback that will be invoked whenever an HTTP <code>GET</code> request with the correct pattern is detected. The matching pattern is the route specified when the module is imported ('<code>/users</code>') plus whatever is defined in this file ('<code>/</code>'). In other words, this route will be used when a URL of <code>/users/</code> is received.</p>
 
 <div class="notecard note">
-  <h4>Tip</h4>
-  <p>Try this out by running the server with node and visiting the URL in your browser: <a href="http://localhost:3000/users/">http://localhost:3000/users/</a>. You should see a message: 'respond with a resource'.</p>
+  <p><strong>Note:</strong> Try this out by running the server with node and visiting the URL in your browser: <a href="http://localhost:3000/users/">http://localhost:3000/users/</a>. You should see a message: 'respond with a resource'.</p>
 </div>
 
 <p>One thing of interest above is that the callback function has the third argument '<code>next</code>', and is hence a middleware function rather than a simple route callback. While the code doesn't currently use the <code>next</code> argument, it may be useful in the future if you want to add multiple route handlers to the <code>'/'</code> route path.</p>
@@ -500,7 +497,7 @@ router.get('/', function(req, res, next) {
 
 <p>The corresponding template for the above route is given below (<strong>index.pug</strong>). We'll talk more about the syntax later. All you need to know for now is that the <code>title</code> variable (with value <code>'Express'</code>) is inserted where specified in the template.</p>
 
-<pre>extends layout
+<pre class="brush: plain">extends layout
 
 block content
   h1= title

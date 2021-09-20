@@ -34,7 +34,7 @@ should be used. In implementations that ignore the `locales` and
 entirely implementation-dependent.
 
 See the [`Intl.NumberFormat()`
-constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat/NumberFormat) for details on these parameters and how to use them.
+constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat) for details on these parameters and how to use them.
 
 ### Return value
 
@@ -43,8 +43,8 @@ A string with a language-sensitive representation of the given BigInt.
 ## Performance
 
 When formatting large numbers of numbers, it is better to create a
-{{jsxref("NumberFormat")}} object and use the function provided by its
-{{jsxref("NumberFormat.format")}} property.
+{{jsxref("Intl.NumberFormat")}} object and use the function provided by its
+{{jsxref("Intl/NumberFormat/format", "NumberFormat.format")}} property.
 
 ## Examples
 

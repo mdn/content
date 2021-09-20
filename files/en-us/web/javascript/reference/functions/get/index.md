@@ -7,6 +7,7 @@ tags:
   - Functions
   - JavaScript
   - Language feature
+  - Reference
 browser-compat: javascript.functions.get
 ---
 {{jsSidebar("Functions")}}
@@ -48,9 +49,18 @@ Note the following when working with the `get` syntax:
 - It must have exactly zero parameters (see [Incompatible ES5
   change: literal getter and setter functions must now have exactly zero or one
   arguments](http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/) for more information);
-- It must not appear in an object literal with another `get` or with a data
-  entry for the same property (`{ get x() { }, get x() { } }` and
-  `{ x: ..., get x() { } }` are forbidden).
+- It must not appear in an object literal with another `get` e.g. the following is forbidden
+  ```js example-bad
+  { 
+    get x() { }, get x() { } 
+  }
+  ```
+- It must not appear with a data entry for the same property e.g. the following is forbidden
+  ```js example-bad
+  { 
+    x: ..., get x() { } 
+  }
+  ```
 
 ## Examples
 
@@ -106,6 +116,20 @@ const obj = {
 console.log(obj.foo); // "bar"
 ```
 
+### Defining static getters
+
+```js
+class MyConstants {
+  static get foo() {
+    return 'foo';
+  }
+}
+
+console.log(MyConstants.foo); // 'foo'
+MyConstants.foo = 'bar';
+console.log(MyConstants.foo); // 'foo', a static getter's value cannot be changed
+```
+
 ### Smart / self-overwriting / lazy getters
 
 Getters give you a way to _define_ a property of an object, but they do not
@@ -143,11 +167,6 @@ get notifier() {
   return this.notifier = document.getElementById('bookmarked-notification-anchor');
 },
 ```
-
-For Firefox code, see also the `XPCOMUtils.jsm` code module, which defines
-the
-[`defineLazyGetter()`](</en-US/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.jsm#defineLazyGetter()>)
-function.
 
 ### `get` vs. `defineProperty`
 
@@ -191,7 +210,7 @@ console.log(
 
 ## See also
 
-- [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set)
+- [Setter](/en-US/docs/Web/JavaScript/Reference/Functions/set)
 - {{jsxref("Operators/delete", "delete")}}
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Object.defineGetter", "__defineGetter__")}}

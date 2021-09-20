@@ -19,10 +19,10 @@ tags:
 <pre class="brush: js">const { body,validationResult } = require("express-validator");
 </pre>
 
-<div class="note">
+<div class="notecard note">
 <p><strong>Note:</strong> This syntax allows us to use <code>body</code> and <code>validationResult</code> as the associated middleware functions, as you will see in the post route section below. It is equivalent to:</p>
 
-<pre>validator = require("express-validator");
+<pre class="brush: js">validator = require("express-validator");
 body = validator.body();
 validationResult = validator.validationResult();
 </pre>
@@ -91,7 +91,7 @@ exports.genre_create_post =  [
 
 <p>The first thing to note is that instead of being a single middleware function (with arguments <code>(req, res, next)</code>) the controller specifies an <em>array</em> of middleware functions. The array is passed to the router function and each method is called in order.</p>
 
-<div class="note">
+<div class="notecard note">
 <p><strong>Note:</strong> This approach is needed, because the validators are middleware functions.</p>
 </div>
 
@@ -179,24 +179,24 @@ block content
 
 <p>The last part of the page is the error code. This prints a list of errors, if the error variable has been defined (in other words, this section will not appear when the template is rendered on the <code>GET</code> route).</p>
 
-<div class="note">
+<div class="notecard note">
 <p><strong>Note:</strong> This is just one way to render the errors. You can also get the names of the affected fields from the error variable, and use these to control where the error messages are rendered, whether to apply custom CSS, etc.</p>
 </div>
 
 <h2 id="What_does_it_look_like">What does it look like?</h2>
 
-<p>Run the application, open your browser to <a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>, then select the <em>Create new genre</em> link. If everything is set up correctly, your site should look something like the following screenshot. After you enter a value, it should be saved and you'll be taken to the genre detail page.</p>
+<p>Run the application, open your browser to <a href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>, then select the <em>Create new genre</em> link. If everything is set up correctly, your site should look something like the following screenshot. After you enter a value, it should be saved and you'll be taken to the genre detail page.</p>
 
-<p><img alt="Genre Create Page - Express Local Library site" src="locallibary_express_genre_create_empty.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="Genre Create Page - Express Local Library site" src="locallibary_express_genre_create_empty.png"></p>
 
 <p>The only error we validate against server-side is that the genre field must not be empty. The screenshot below shows what the error list would look like if you didn't supply a genre (highlighted in red).</p>
 
-<p><img alt="" src="locallibary_express_genre_create_error.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="locallibary_express_genre_create_error.png"></p>
 
-<div class="note">
+<div class="notecard note">
 <p><strong>Note:</strong> Our validation uses <code>trim()</code> to ensure that whitespace is not accepted as a genre name. We can also validate that the field is not empty on the client side by adding the value <code>required='true'</code> to the field definition in the form:</p>
 
-<pre class="brush: js">input#name.form-control(type='text', placeholder='Fantasy, Poetry etc.' name='name' value=(undefined===genre ? '' : genre.name), <strong>required='true'</strong> )</pre>
+<pre class="brush: js">input#name.form-control(type='text', placeholder='Fantasy, Poetry etc.' name='name' value=(undefined===genre ? '' : genre.name), required='true' )</pre>
 </div>
 
 <h2 id="Next_steps">Next steps</h2>

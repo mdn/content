@@ -17,7 +17,7 @@ browser-compat: api.XRLightProbe.probeSpace
 
 The _read-only_ **`probeSpace`** property of the {{DOMxRef("XRLightProbe")}} interface returns an {{domxref("XRSpace")}} tracking the position and orientation that the lighting estimations are relative to.
 
-### Value
+## Value
 
 An {{domxref("XRSpace")}} object.
 

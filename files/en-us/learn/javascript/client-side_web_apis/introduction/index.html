@@ -19,7 +19,7 @@ tags:
 
 <p class="summary">First up, we'll start by looking at APIs from a high level — what are they, how do they work, how to use them in your code, and how are they structured? We'll also take a look at what the different main classes of APIs are, and what kind of uses they have.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -38,7 +38,7 @@ tags:
 
 <p>As a real-world example, think about the electricity supply in your house, apartment, or other dwellings. If you want to use an appliance in your house, you plug it into a plug socket and it works. You don't try to wire it directly into the power supply — to do so would be really inefficient and, if you are not an electrician, difficult and dangerous to attempt.</p>
 
-<p><img alt="" src="plug-socket.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="plug-socket.png"></p>
 
 <p><em>Image source: <a href="https://www.flickr.com/photos/easy-pics/9518184890/in/photostream/lightbox/">Overloaded plug socket</a> by <a href="https://www.flickr.com/photos/easy-pics/">The Clear Communication People</a>, on Flickr.</em></p>
 
@@ -57,7 +57,7 @@ tags:
  <li><strong>Third-party APIs</strong> are not built into the browser by default, and you generally have to retrieve their code and information from somewhere on the Web. For example, the <a href="https://dev.twitter.com/overview/documentation">Twitter API</a> allows you to do things like displaying your latest tweets on your website. It provides a special set of constructs you can use to query the Twitter service and return specific information.</li>
 </ul>
 
-<p><img alt="" src="browser.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="browser.png"></p>
 
 <h3 id="Relationship_between_JavaScript_APIs_and_other_JavaScript_tools">Relationship between JavaScript, APIs, and other JavaScript tools</h3>
 
@@ -265,7 +265,7 @@ request.onload = function() {
 
 <p>In addition, some WebAPIs request permission to be enabled from the user once calls to them are made in your code. As an example, the <a href="/en-US/docs/Web/API/Notifications_API">Notifications API</a> asks for permission using a pop-up dialog box:</p>
 
-<p><img alt="" src="notification-permission.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="notification-permission.png"></p>
 
 <p>The Web Audio and {{domxref("HTMLMediaElement")}} APIs are subject to a security mechanism called <a href="/en-US/docs/Web/API/Web_Audio_API/Best_practices#autoplay_policy">autoplay policy</a> — this basically means that you can't automatically play audio when a page loads — you've got to allow your users to initiate audio play through a control like a button. This is done because autoplaying audio is usually really annoying and we really shouldn't be subjecting our users to it.</p>
 

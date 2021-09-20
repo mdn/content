@@ -10,7 +10,7 @@ browser-compat: svg.attributes.presentation.color
 
 <p>The <strong><code>color</code></strong> attribute is used to provide a potential indirect value, <code><span class="prop-value">currentcolor</span></code>, for the {{SVGAttr("fill")}}, {{SVGAttr("stroke")}}, {{SVGAttr("stop-color")}}, {{SVGAttr("flood-color")}}, and {{SVGAttr("lighting-color")}} attributes.</p>
 
-<p class="note"><strong>Note:</strong> As a presentation attribute, <code>color</code> can be used as a CSS property. See <a href="/en-US/docs/Web/CSS/color">CSS color</a> for further information.</p>
+<div class="note"><p><strong>Note:</strong> As a presentation attribute, <code>color</code> can be used as a CSS property. See <a href="/en-US/docs/Web/CSS/color">CSS color</a> for further information.</p></div>
 
 <p>As a presentation attribute, it can be applied to any element, but as noted above, it has no direct effect on SVG elements.</p>
 
@@ -35,11 +35,9 @@ browser-compat: svg.attributes.presentation.color
 
 <h2 id="Example">Example</h2>
 
-<div class="hidden">
-<pre class="brush: css">html, body, svg {
+<pre class="brush: css hidden">html, body, svg {
   height: 100%;
 }</pre>
-</div>
 
 <pre class="brush: html">&lt;svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;g color="green"&gt;

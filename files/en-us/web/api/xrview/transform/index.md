@@ -38,13 +38,7 @@ With the `transform`, you can then position the view as a camera within the
 {{domxref("XRRigidTransform.matrix", "matrix")}} of the transform's
 {{domxref("XRRigidTransform.inverse", "inverse")}}.
 
-## Syntax
-
-```js
-let viewTransform = xrView.transform;
-```
-
-### Value
+## Value
 
 A {{domxref("XRRigidTransform")}} object specifying the position and orientation of the
 viewpoint represented by the `XRView`.

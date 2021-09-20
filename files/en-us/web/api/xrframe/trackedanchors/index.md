@@ -15,7 +15,7 @@ browser-compat: api.XRFrame.trackedAnchors
 
 The read-only **`trackedAnchor`** property of the {{domxref("XRFrame")}} interface returns an {{domxref("XRAnchorSet")}} object containing all anchors still tracked in the frame.
 
-### Value
+## Value
 
 An {{domxref("XRAnchorSet")}} object.
 

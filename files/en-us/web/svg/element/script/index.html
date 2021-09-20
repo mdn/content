@@ -9,12 +9,9 @@ browser-compat: svg.elements.script
 ---
 <p>The SVG <code>script</code> element allows to add scripts to an SVG document.</p>
 
-<p class="note">While SVG's <code>script</code> element is equivalent to the HTML {{HTMLElement('script')}} element, it has some discrepancies, like it uses the {{SVGAttr('href')}} attribute instead of {{htmlattrxref('src','script')}} and it doesn't support ECMAScript modules so far (See browser compatibility below for details)</p>
+<div class="note"><p><strong>Note:</strong> While SVG's <code>script</code> element is equivalent to the HTML {{HTMLElement('script')}} element, it has some discrepancies, like it uses the {{SVGAttr('href')}} attribute instead of {{htmlattrxref('src','script')}} and it doesn't support ECMAScript modules so far (See browser compatibility below for details)</p></div>
 
-<div id="Example">
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+<h2>Example</h2>
 
 <pre class="brush: html; highlight[4]">&lt;svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;script&gt;
@@ -38,18 +35,17 @@ browser-compat: svg.elements.script
 &lt;/svg&gt;</pre>
 
 <p>{{EmbedLiveSample('Example', 150, '100%')}}</p>
-</div>
 
 <h2 id="Attributes">Attributes</h2>
 
 <dl>
- <dt id="attr-crossorigin">{{htmlattrxref("crossorigin", "script")}}</dt>
+ <dt>{{htmlattrxref("crossorigin", "script")}}</dt>
  <dd>This attribute defines <a href="/en-US/docs/Web/HTML/Attributes/crossorigin">CORS settings</a> as define for the HTML {{HTMLElement('script')}} element.<br>
  <small><em>Value type</em>: <a href="/en-US/docs/Web/SVG/Content_type#string"><strong>&lt;string&gt;</strong></a>; <em>Default value</em>: <code>?</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
  <dt>{{SVGAttr("href")}}</dt>
  <dd>The {{Glossary("URL")}} to the script to load.<br>
  <small><em>Value type</em>: <strong><a href="/en-US/docs/Web/SVG/Content_type#url">&lt;URL&gt;</a></strong> ; <em>Default value</em>: <em>none</em>; <em>Animatable</em>: <strong>no</strong></small></dd>
- <dt id="attr-type">{{SVGAttr("type")}}</dt>
+ <dt>{{SVGAttr("type")}}</dt>
  <dd>This attribute defines type of the script language to use.<br>
  <small><em>Value type</em>: <a href="/en-US/docs/Web/SVG/Content_type#string"><strong>&lt;string&gt;</strong></a>; <em>Default value</em>: <code>application/ecmascript</code>; <em>Animatable</em>: <strong>no</strong></small></dd>
  <dt>{{SVGAttr("xlink:href")}} {{deprecated_inline}}</dt>

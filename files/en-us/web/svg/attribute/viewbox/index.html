@@ -16,16 +16,15 @@ tags:
 <ul>
   <li>{{SVGElement("marker")}}</li>
   <li>{{SVGElement("pattern")}}</li>
-  <li>{{ SVGElement("svg") }}</li>
-  <li>{{ SVGElement("symbol") }}</li>
-  <li>{{ SVGElement("view") }}.</li>
+  <li>{{SVGElement("svg")}}</li>
+  <li>{{SVGElement("symbol")}}</li>
+  <li>{{SVGElement("view")}}</li>
 </ul>
 
-<div id="topExample">
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }
+<h2>Example</h2>
+
+<pre class="brush: css hidden">html,body,svg { height:100% }
 svg:not(:root) { display: inline-block; }</pre>
-</div>
 
 <pre class="brush: html">&lt;svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;!--
@@ -73,12 +72,11 @@ svg:not(:root) { display: inline-block; }</pre>
   &lt;circle cx="50%" cy="50%" r="4" fill="white"/&gt;
 &lt;/svg&gt;</pre>
 
-<p>{{EmbedLiveSample('topExample', '100%', 200)}}</p>
-</div>
+<p>{{EmbedLiveSample("Example", '100%', 200)}}</p>
 
 <p>The exact effect of this attribute is influenced by the {{ SVGAttr("preserveAspectRatio") }} attribute.</p>
 
-<p class="note"><strong>Note:</strong> Values for <code><var>width</var></code> or <code><var>height</var></code> lower or equal to <code>0</code> disable rendering of the element.</p>
+<div class="note"><p><strong>Note:</strong> Values for <code><var>width</var></code> or <code><var>height</var></code> lower or equal to <code>0</code> disable rendering of the element.</p></div>
 
 <h2 id="marker">marker</h2>
 

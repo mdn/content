@@ -13,11 +13,15 @@ tags:
 ---
 <p>{{ PreviousNext("Web/SVG/Tutorial/Getting_Started", "Web/SVG/Tutorial/Basic_Shapes") }}</p>
 
-<p><span class="seoSummary">In this article, we examine how Scalable Vector Graphics (SVG) represents the positions and sizes of objects within a drawing context, including coordinate system and what a "pixel" measurement means in a scalable context.</span></p>
+<p>In this article, we examine how Scalable Vector Graphics (SVG) represents the positions and sizes of objects within a drawing context, including coordinate system and what a "pixel" measurement means in a scalable context.</p>
 
 <h2 id="The_grid">The grid</h2>
 
-<p><img alt="" class="internal" src="canvas_default_grid.png" style="float: right;">For all elements, SVG uses a coordinate system or <strong>grid</strong> system similar to the one used by <a href="/en-US/docs/Web/API/Canvas_API">canvas</a> (and by a whole lot of other computer drawing routines). That is, the top left corner of the document is considered to be the point (0,0), or point of origin. Positions are then measured in pixels from the top left corner, with the positive x direction being to the right, and the positive y direction being to the bottom. Note that this is slightly different than the way you're taught to graph as a kid (y axis is flipped). However, this is the same way elements in HTML are positioned (By default, LTR documents are considered not the RTL documents which position X from right-to-left).</p>
+<p>For all elements, SVG uses a coordinate system or <strong>grid</strong> system similar to the one used by <a href="/en-US/docs/Web/API/Canvas_API">canvas</a> (and by a whole lot of other computer drawing routines). That is, the top left corner of the document is considered to be the point (0,0), or point of origin. Positions are then measured in pixels from the top left corner, with the positive x direction being to the right, and the positive y direction being to the bottom.</p>
+
+<img alt="" src="canvas_default_grid.png">
+
+<p>Note that this is slightly different than the way you're taught to graph as a kid (y axis is flipped). However, this is the same way elements in HTML are positioned (By default, LTR documents are considered not the RTL documents which position X from right-to-left).</p>
 
 <h4 id="Example">Example:</h4>
 

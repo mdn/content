@@ -24,7 +24,8 @@ The **`requestLightProbe()`** method of the
 ## Syntax
 
 ```js
-requestLightProbe(options);
+requestLightProbe()
+requestLightProbe(options)
 ```
 
 ### Parameters

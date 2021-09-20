@@ -22,13 +22,7 @@ The **`depthNear`** read-only property of the
 {{domxref("XRRenderState")}} interface returns the distance in meters of the near clip
 plane from the viewer.
 
-## Syntax
-
-```js
-var aDouble = XRRenderState.depthNear;
-```
-
-### Value
+## Value
 
 A {{jsxref("Number")}}.
 

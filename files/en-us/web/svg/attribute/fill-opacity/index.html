@@ -10,7 +10,7 @@ browser-compat: svg.attributes.presentation.fill-opacity
 
 <p>The <strong><code>fill-opacity</code></strong> attribute is a presentation attribute defining the opacity of the paint server (<em>color</em>, <em>gradient</em>, <em>pattern</em>, etc) applied to a shape.</p>
 
-<p class="note"><strong>Note:</strong> As a presentation attribute <code>fill-opacity</code> can be used as a CSS property.</p>
+<div class="note"><p><strong>Note:</strong> As a presentation attribute <code>fill-opacity</code> can be used as a CSS property.</p></div>
 
 <p>You can use this attribute with the following SVG elements:</p>
 
@@ -28,10 +28,9 @@ browser-compat: svg.attributes.presentation.fill-opacity
   <li>{{SVGElement('tspan')}}</li>
 </ul>
 
-<div id="topExample">
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+<h2>Example</h2>
+
+<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
 
 <pre class="brush: html">&lt;svg viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;!-- Default fill opacity: 1 --&gt;
@@ -50,8 +49,7 @@ browser-compat: svg.attributes.presentation.fill-opacity
           style="fill-opacity: .25;" /&gt;
 &lt;/svg&gt;</pre>
 
-<p>{{EmbedLiveSample('topExample', '100%', 150)}}</p>
-</div>
+<p>{{EmbedLiveSample("Example", '100%', 150)}}</p>
 
 <h2 id="Usage_notes">Usage notes</h2>
 
@@ -72,7 +70,7 @@ browser-compat: svg.attributes.presentation.fill-opacity
  </tbody>
 </table>
 
-<p class="note"><strong>Note:</strong> SVG2 introduces percentage values for <code>fill-opacity</code>, however, it is not widely supported yet (<em>See <a href="#browser_compatibility">Browser compatibility</a> below</em>) as a consequence, it is best practices to set opacity with a value in the range <code>[0-1]</code>.</p>
+<div class="note"><p><strong>Note:</strong> SVG2 introduces percentage values for <code>fill-opacity</code>, however, it is not widely supported yet (<em>See <a href="#browser_compatibility">Browser compatibility</a> below</em>) as a consequence, it is best practices to set opacity with a value in the range <code>[0-1]</code>.</p></div>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

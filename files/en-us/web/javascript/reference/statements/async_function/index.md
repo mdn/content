@@ -274,7 +274,7 @@ or
 > `slow` is fulfilled, then an unhandled promise rejection error will be
 > raised, regardless of whether the caller has configured a catch clause.
 >
-> In `concurrentPromise,` `Promise.all` wires up the promise
+> In `concurrentPromise`, `Promise.all` wires up the promise
 > chain in one go, meaning that the operation will fail-fast regardless of the order of
 > rejection of the promises, and the error will always occur within the configured
 > promise chain, enabling it to be caught in the normal way.
@@ -310,9 +310,9 @@ async function getProcessedData(url) {
 }
 ```
 
-In the above example, notice there is no `await` statement after the
+In the second example, notice there is no `await` statement after the
 `return` keyword, although that would be valid too: The return value of an
-`async function` is implicitly wrapped in {{jsxref("Promise.resolve")}} - if
+async function is implicitly wrapped in {{jsxref("Promise.resolve")}} - if
 it's not already a promise itself (as in this example).
 
 ## Specifications
@@ -325,7 +325,7 @@ it's not already a promise itself (as in this example).
 
 ## See also
 
-- {{jsxref("Operators/async_function", "async function expression")}}
+- {{jsxref("Operators/async_function", "async function expression", "", 1)}}
 - {{jsxref("AsyncFunction")}} object
 - {{jsxref("Operators/await", "await")}}
 - ["Decorating

@@ -18,7 +18,7 @@ tags:
 
 <p class="summary">Modern web browsers support a number of ways for web sites to store data on the user's computer — with the user's permission — then retrieve it when necessary. This lets you persist data for long-term storage, save sites or documents for offline use, retain user-specific settings for your site, and more. This article explains the very basics of how these work.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -156,7 +156,7 @@ myName</pre>
 
 <p>You can find the example HTML at <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/web-storage/personal-greeting.html">personal-greeting.html</a> — this contains a simple website with a header, content, and footer, and a form for entering your name.</p>
 
-<p><img alt="" src="web-storage-demo.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="web-storage-demo.png"></p>
 
 <p>Let's build up the example, so you can understand how it works.</p>
 
@@ -266,7 +266,7 @@ function nameDisplayCheck() {
 
 <p>The app looks something like this:</p>
 
-<p><img alt="" src="idb-demo.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="idb-demo.png"></p>
 
 <p>Each note has a title and some body text, each individually editable. The JavaScript code we'll go through below has detailed comments to help you understand what's going on.</p>
 
@@ -594,7 +594,7 @@ function deleteItem(e) {
 }</pre>
  </li>
  <li>
-  <p>The following snippet is taken from inside <code>fetchVideoFromNetwork()</code> — here we fetch MP4 and WebM versions of the video using two separate {{domxref("WindowOrWorkerGlobalScope/fetch", "WindowOrWorkerGlobalScope.fetch()")}} requests. We then use the {{domxref("Response.blob()")}} method to extract each response's body as a blob, giving us an object representation of the videos that can be stored and displayed later on.</p>
+  <p>The following snippet is taken from inside <code>fetchVideoFromNetwork()</code> — here we fetch MP4 and WebM versions of the video using two separate {{domxref("fetch()")}} requests. We then use the {{domxref("Response.blob()")}} method to extract each response's body as a blob, giving us an object representation of the videos that can be stored and displayed later on.</p>
 
   <p>We have a problem here though — these two requests are both asynchronous, but we only want to try to display or store the video when both promises have fulfilled. Fortunately there is a built-in method that handles such a problem — {{jsxref("Promise.all()")}}. This takes one argument — references to all the individual promises you want to check for fulfillment placed in an array — and is itself promise-based.</p>
 
@@ -663,7 +663,7 @@ Promise.all([mp4Blob, webmBlob]).then(function(values) {
 
 <p>The above example already shows how to create an app that will store large assets in an IndexedDB database, avoiding the need to download them more than once. This is already a great improvement to the user experience, but there is still one thing missing — the main HTML, CSS, and JavaScript files still need to be downloaded each time the site is accessed, meaning that it won't work when there is no network connection.</p>
 
-<p><img alt="" src="ff-offline.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="ff-offline.png"></p>
 
 <p>This is where <a href="/en-US/docs/Web/API/Service_Worker_API">Service workers</a> and the closely-related <a href="/en-US/docs/Web/API/Cache">Cache API</a> come in.</p>
 
@@ -730,7 +730,7 @@ Promise.all([mp4Blob, webmBlob]).then(function(values) {
 
 <p>Inside this block we use {{domxref("CacheStorage.match()")}} to check whether a matching request (i.e. matches the URL) can be found in any cache. This promise fulfills with the matching response if a match is found, or <code>undefined</code> if it isn't.</p>
 
-<p>If a match is found, we return it as the custom response. If not, we <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch()</a> the response from the network and return that instead.</p>
+<p>If a match is found, we return it as the custom response. If not, we <a href="/en-US/docs/Web/API/fetch">fetch()</a> the response from the network and return that instead.</p>
 
 <pre class="brush: js">self.addEventListener('fetch', function(e) {
   console.log(e.request.url);

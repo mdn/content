@@ -19,10 +19,9 @@ tags:
   <li>{{SVGElement("missing-glyph")}}</li>
 </ul>
 
-<div id="Example">
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+<h2>Example</h2>
+
+<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
 
 <pre class="brush: html">&lt;svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;path fill="none" stroke="red"
@@ -34,7 +33,6 @@ tags:
 &lt;/svg&gt;</pre>
 
 <p>{{EmbedLiveSample('Example', '100%', 200)}}</p>
-</div>
 
 <h2 id="path">path</h2>
 
@@ -59,7 +57,7 @@ tags:
 
 <h2 id="glyph">glyph</h2>
 
-<p class="warning"><strong>Warning:</strong> As of SVG2 {{SVGElement('glyph')}} is deprecated and shouldn't be used.</p>
+<div class="warning"><p><strong>Warning:</strong> As of SVG2 {{SVGElement('glyph')}} is deprecated and shouldn't be used.</p></div>
 
 <p>For {{SVGElement('glyph')}}, <code>d</code> is a string containing a series of path commands that define the outline shape of the glyph.</p>
 
@@ -80,11 +78,11 @@ tags:
  </tbody>
 </table>
 
-<p class="note"><strong>Note:</strong> The point of origin (the coordinate <code>0</code>,<code>0</code>) is usually the <em>upper left corner</em> of the context. However the {{SVGElement("glyph")}} element has its origin in the <em>bottom left corner</em> of its letterbox.</p>
+<div class="note"><p><strong>Note:</strong> The point of origin (the coordinate <code>0</code>,<code>0</code>) is usually the <em>upper left corner</em> of the context. However the {{SVGElement("glyph")}} element has its origin in the <em>bottom left corner</em> of its letterbox.</p></div>
 
 <h2 id="missing-glyph">missing-glyph</h2>
 
-<p class="warning"><strong>Warning:</strong> As of SVG2 {{SVGElement('missing-glyph')}} is deprecated and shouldn't be used.</p>
+<div class="warning"><p><strong>Warning:</strong> As of SVG2 {{SVGElement('missing-glyph')}} is deprecated and shouldn't be used.</p></div>
 
 <p>For {{SVGElement('missing-glyph')}}, <code>d</code> is a string containing a series of path commands that define the outline shape of the glyph.</p>
 
@@ -120,7 +118,7 @@ tags:
  <li>ClosePath: <code>Z</code>, <code>z</code></li>
 </ul>
 
-<p class="note"><strong>Note:</strong> Commands are <em>case-sensitive</em>. An upper-case command specifies absolute coordinates, while a lower-case command specifies coordinates relative to the current position.</p>
+<div class="note"><p><strong>Note:</strong> Commands are <em>case-sensitive</em>. An upper-case command specifies absolute coordinates, while a lower-case command specifies coordinates relative to the current position.</p></div>
 
 <p>It is always possible to specify a negative value as an argument to a command:</p>
 
@@ -164,9 +162,7 @@ tags:
 
 <h4 id="Examples">Examples</h4>
 
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
 
 <pre class="brush: html">&lt;svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;path fill="none" stroke="red"
@@ -255,9 +251,7 @@ tags:
 
 <h4 id="Examples_2">Examples</h4>
 
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
 
 <pre class="brush: html">&lt;svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;!-- LineTo commands with absolute coordinates --&gt;
@@ -346,9 +340,7 @@ tags:
 
 <h4 id="Examples_3">Examples</h4>
 
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
 
 <pre class="brush: html">&lt;svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
 
@@ -469,9 +461,7 @@ tags:
 
 <h4 id="Examples_4">Examples</h4>
 
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
 
 <pre class="brush: html">&lt;svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
 
@@ -562,9 +552,7 @@ tags:
 
 <h4 id="Examples_5">Examples</h4>
 
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
 
 <pre class="brush: html">&lt;svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"&gt;
 
@@ -607,13 +595,11 @@ tags:
  </tbody>
 </table>
 
-<p class="note"><strong>Note:</strong> The appearance of a shape closed with <em>ClosePath</em> may be different to that of one closed by drawing a line to the origin, using one of the other commands, because the line ends are joined together (according to the {{SVGAttr('stroke-linejoin')}} setting), rather than just being placed at the same coordinates.</p>
+<div class="note"><p><strong>Note:</strong> The appearance of a shape closed with <em>ClosePath</em> may be different to that of one closed by drawing a line to the origin, using one of the other commands, because the line ends are joined together (according to the {{SVGAttr('stroke-linejoin')}} setting), rather than just being placed at the same coordinates.</p></div>
 
 <h4 id="Examples_6">Examples</h4>
 
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
 
 <pre class="brush: html">&lt;svg viewBox="0 -1 30 11" xmlns="http://www.w3.org/2000/svg"&gt;
 
@@ -646,7 +632,7 @@ tags:
 <p>{{EmbedLiveSample('ClosePath', '100%', 200)}}</p>
 
 <div class="notecard note">
-  <p><strong>Note:</strong> As a <a href="/en-US/docs/Web/SVG/Attribute/Presentation#attr-d">presentation attribute</a> <code>d</code> can be used as a CSS property</p>
+  <p><strong>Note:</strong> As a <a href="/en-US/docs/Web/SVG/Attribute/Presentation">presentation attribute</a> <code>d</code> can be used as a CSS property</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>

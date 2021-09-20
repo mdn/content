@@ -111,225 +111,248 @@ setCookie.then(logCookie, logError);</pre>
 
 <p>The rest of this section describes compatibility issues that are not already captured in the tables.</p>
 
-<h4 id="notifications"><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications" id="notifications_incompatibilities">notifications</a></h4>
-
-<ul>
- <li>
-  <p>For <code>notifications.create()</code>, with <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications/TemplateType">type</a> "basic"</code>:</p>
-
-  <dl>
-   <dt>In Firefox</dt>
-   <dd><code>iconUrl</code> is optional.</dd>
-   <dt>In Chrome</dt>
-   <dd><code>iconUrl</code> is required.</dd>
-  </dl>
- </li>
- <li>
-  <p>When the user clicks on a notification:</p>
-
-  <dl>
-   <dt>In Firefox</dt>
-   <dd>The notification is cleared immediately.</dd>
-   <dt>In Chrome</dt>
-   <dd>This is not the case.</dd>
-  </dl>
- </li>
- <li>
-  <p>If you call <code>notifications.create()</code> more than once in rapid succession:</p>
-
-  <ul>
-   <li>In Firefox, the notifications may not display at all. Waiting to make subsequent calls until within the <code>chrome.notifications.create()</code> callback function is not a sufficient delay to prevent this.</li>
-  </ul>
- </li>
-</ul>
-
-<h4 id="proxy"><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy" id="proxy_incompatibilities">proxy</a></h4>
-
-<p>Firefox's Proxy API followed a completely different design from Chrome's Proxy API.</p>
-
 <dl>
- <dt>In Chrome</dt>
- <dd>An extension can register a PAC file, but can also define explicit proxying rules.</dd>
- <dt>In Firefox</dt>
- <dd>The proxy API only supports the PAC file approach (since this is also possible using extended PAC files).
- <div class="notecard note"><strong>Note:</strong> Because this API is incompatible with Chrome's <code>proxy</code> API, the Firefox proxy API is only available through the <code>browser</code> namespace.</div>
- </dd>
-</dl>
+  <dt>Notifications API</dt>
+  <dd>
+    <p id="notifications_incompatibilities">These incompatibilities are present in {{WebExtAPIRef("notifications")}}:</p>
+    <ul>
+     <li>
+      <p>For <code>notifications.create()</code>, with <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications/TemplateType">type</a> "basic"</code>:</p>
+    
+      <dl>
+       <dt>In Firefox</dt>
+       <dd><code>iconUrl</code> is optional.</dd>
+       <dt>In Chrome</dt>
+       <dd><code>iconUrl</code> is required.</dd>
+      </dl>
+     </li>
+     <li>
+      <p>When the user clicks on a notification:</p>
+    
+      <dl>
+       <dt>In Firefox</dt>
+       <dd>The notification is cleared immediately.</dd>
+       <dt>In Chrome</dt>
+       <dd>This is not the case.</dd>
+      </dl>
+     </li>
+     <li>
+      <p>If you call <code>notifications.create()</code> more than once in rapid succession:</p>
+    
+      <ul>
+       <li>In Firefox, the notifications may not display at all. Waiting to make subsequent calls until within the <code>chrome.notifications.create()</code> callback function is not a sufficient delay to prevent this.</li>
+      </ul>
+     </li>
+    </ul>
+  </dd>
 
-<h4 id="tabs"><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs" id="tabs_incompatibilities">tabs</a></h4>
+  <dt>Proxy API</dt>
+  <dd>
+    <p id="proxy_incompatibilities">Firefox's {{WebExtAPIRef("proxy")}} API followed a completely different design from Chrome's Proxy API.</p>
+    
+    <dl>
+     <dt>In Chrome</dt>
+     <dd>An extension can register a PAC file, but can also define explicit proxying rules.</dd>
+     <dt>In Firefox</dt>
+     <dd>The proxy API only supports the PAC file approach (since this is also possible using extended PAC files).
+     <div class="notecard note"><strong>Note:</strong> Because this API is incompatible with Chrome's <code>proxy</code> API, the Firefox proxy API is only available through the <code>browser</code> namespace.</div>
+     </dd>
+    </dl>
+  </dd>
 
-<ul>
- <li>
-  <p>When using <code>tabs.executeScript()</code> or <code>tabs.insertCSS()</code>:</p>
+  <dt>Tabs API</dt>
+  <dd>
 
-  <dl>
-   <dt>In Firefox</dt>
-   <dd>Relative URLs passed are resolved relative to the current page URL.</dd>
-   <dt>In Chrome</dt>
-   <dd>These URLs are resolved relative to the extension's base URL.</dd>
-  </dl>
+    <p id="tabs_incompatibilities">These incompatibilities are present in {{WebExtAPIRef("tabs")}}:</p>
+    
+    <ul>
+     <li>
+      <p>When using <code>tabs.executeScript()</code> or <code>tabs.insertCSS()</code>:</p>
+    
+      <dl>
+       <dt>In Firefox</dt>
+       <dd>Relative URLs passed are resolved relative to the current page URL.</dd>
+       <dt>In Chrome</dt>
+       <dd>These URLs are resolved relative to the extension's base URL.</dd>
+      </dl>
+    
+      <p>To work cross-browser, you can specify the path as an absolute URL, starting at the extension's root, like this:</p>
+    
+      <pre class="brush: none;">/path/to/script.js
+    </pre>
+     </li>
+     <li>
+      <p>When :</p>
+    
+      <dl>
+       <dt>In Firefox</dt>
+       <dd>Querying tabs by URL with <code>tabs.query()</code> requires the <code>"tabs"</code> permission.</dd>
+       <dt>In Chrome</dt>
+       <dd>querying tabs by URL with <code>tabs.query()</code> It's possible without the <code>"tabs"</code> permission, but will limit results to tabs whose URLs match host permissions.</dd>
+      </dl>
+     </li>
+     <li>
+      <p>When calling <code>tabs.remove()</code>:</p>
+    
+      <dl>
+       <dt>In Firefox</dt>
+       <dd>The <code>tabs.remove()</code> promise is fulfilled after the <code>beforeunload</code> event.</dd>
+       <dt>In Chrome</dt>
+       <dd>The callback does not wait for <code>beforeunload</code>.</dd>
+      </dl>
+     </li>
+    </ul>
+  </dd>
 
-  <p>To work cross-browser, you can specify the path as an absolute URL, starting at the extension's root, like this:</p>
+  <dt>WebRequest API</dt>
+  <dd>
+    <p id="web_request_incompatibilities">These incompatibilities are present in {{WebExtAPIRef("webRequest")}}:</p>
+    
+    <dl>
+      <dt>In Firefox</dt>
+      <dd>
+        <ul>
+         <li>Requests can be redirected only if their original URL uses the <code>http:</code> or <code>https:</code> scheme.</li>
+         <li>The <code>activeTab</code> permission does not allow intercepting network requests in the current tab. (See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1617479">bug 1617479</a>)</li>
+         <li>Events are not fired for system requests (for example, extension upgrades or searchbar suggestions).
+          <ul>
+           <li><strong>From Firefox 57 onwards:</strong> Firefox makes an exception for extensions that need to intercept {{WebExtAPIRef("webRequest.onAuthRequired")}} for proxy authorization. See the documentation for {{WebExtAPIRef("webRequest.onAuthRequired")}}.</li>
+          </ul>
+         </li>
+         <li>If an extension wants to redirect a public (e.g., HTTPS) URL to an <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages">extension page</a>, the extension's <code>manifest.json</code> file must contain a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources"><code>web_accessible_resources</code></a> key with the URL of the extension page.
+          <ul>
+           <li>
+            <div class="notecard note">
+            <p><strong>Note:</strong> <em>Any</em> website may then link or redirect to that URL, and extensions should treat any input (POST data, for example) as if it came from an untrusted source, just as a normal web page should.</p>
+            </div>
+           </li>
+          </ul>
+         </li>
+        </ul>
+      </dd>
+    </dl>
 
-  <pre class="brush: none;">/path/to/script.js
-</pre>
- </li>
- <li>
-  <p>When :</p>
+    <ul>
+     <li>
+      <p>When using <code>browser.webRequest.*</code>:</p>
+    
+      <dl>
+       <dt>In Firefox (starting from Firefox 52)</dt>
+       <dd>Some of the <code>browser.webRequest.*</code> APIs allow returning Promises that resolves <code>webRequest.BlockingResponse</code> asynchronously.</dd>
+       <dt>In Chrome</dt>
+       <dd>Only <code>webRequest.onAuthRequired</code> supports asynchronous <code>webRequest.BlockingResponse</code> via supplying <code>'asyncBlocking'</code>.</dd>
+      </dl>
+     </li>
+    </ul>
+  </dd>
 
-  <dl>
-   <dt>In Firefox</dt>
-   <dd>Querying tabs by URL with <code>tabs.query()</code> requires the <code>"tabs"</code> permission.</dd>
-   <dt>In Chrome</dt>
-   <dd>querying tabs by URL with <code>tabs.query()</code> It's possible without the <code>"tabs"</code> permission, but will limit results to tabs whose URLs match host permissions.</dd>
-  </dl>
- </li>
- <li>
-  <p>When calling <code>tabs.remove()</code>:</p>
 
-  <dl>
-   <dt>In Firefox</dt>
-   <dd>The <code>tabs.remove()</code> promise is fulfilled after the <code>beforeunload</code> event.</dd>
-   <dt>In Chrome</dt>
-   <dd>The callback does not wait for <code>beforeunload</code>.</dd>
-  </dl>
- </li>
-</ul>
-
-<h4 id="webRequest"><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest" id="webRequest_incompatibilities">webRequest</a></h4>
-
-<dl>
- <dt>In Firefox</dt>
- <dd>
- <ul>
-  <li>Requests can be redirected only if their original URL uses the <code>http:</code> or <code>https:</code> scheme.</li>
-  <li>The <code>activeTab</code> permission does not allow intercepting network requests in the current tab. (See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1617479">bug 1617479</a>)</li>
-  <li>Events are not fired for system requests (for example, extension upgrades or searchbar suggestions).
-   <ul>
-    <li><strong>From Firefox 57 onwards:</strong> Firefox makes an exception for extensions that need to intercept {{WebExtAPIRef("webRequest.onAuthRequired")}} for proxy authorization. See the documentation for {{WebExtAPIRef("webRequest.onAuthRequired")}}.</li>
-   </ul>
-  </li>
-  <li>If an extension wants to redirect a public (e.g., HTTPS) URL to an <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages">extension page</a>, the extension's <code>manifest.json</code> file must contain a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources"><code>web_accessible_resources</code></a> key with the URL of the extension page.
-   <ul>
-    <li>
-     <div class="notecard note">
-     <p><strong>Note:</strong> <em>Any</em> website may then link or redirect to that URL, and extensions should treat any input (POST data, for example) as if it came from an untrusted source, just as a normal web page should.</p>
-     </div>
-    </li>
-   </ul>
-  </li>
- </ul>
- </dd>
-</dl>
-
-<ul>
- <li>
-  <p>When using <code>browser.webRequest.*</code>:</p>
-
-  <dl>
-   <dt>In Firefox (starting from Firefox 52)</dt>
-   <dd>Some of the <code>browser.webRequest.*</code> APIs allow returning Promises that resolves <code>webRequest.BlockingResponse</code> asynchronously.</dd>
-   <dt>In Chrome</dt>
-   <dd>Only <code>webRequest.onAuthRequired</code> supports asynchronous <code>webRequest.BlockingResponse</code> via supplying <code>'asyncBlocking'</code>.</dd>
-  </dl>
- </li>
-</ul>
-
-<h4 id="windows"><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows" id="windows_incompatibilities">windows</a></h4>
-
-<dl>
- <dt>In Firefox</dt>
- <dd><code>onFocusChanged</code> will trigger multiple times for a given focus change.</dd>
+  <dt>Windows API</dt>
+  <dd> 
+    <dl>
+     <dt>In Firefox</dt>
+     <dd><code>onFocusChanged</code> of the {{WebExtAPIRef("windows")}} API, will trigger multiple times for a given focus change.</dd>
+    </dl>
+  </dd>
 </dl>
 
 <h3 id="Unsupported_APIs">Unsupported APIs</h3>
 
-<h4 id="declarativeContent"><a href="https://developer.chrome.com/extensions/declarativeContent" id="declarativeContent_incompatibilities" name="dec">declarativeContent</a></h4>
-
-<dl>
- <dt>In Firefox</dt>
- <dd>Chrome's <code>declarativeContent</code> API <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1435864">has not yet been implemented</a> in Firefox.</dd>
- <dd>In addition, Firefox <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1323433#c16">will not be supporting</a> the <code>declarativeContent.RequestContentScript</code> API (which is rarely used, and is unavailable in stable releases of Chrome).</dd>
-</dl>
+  <dl>
+    <dt>DeclarativeContent API</dt>
+    <dd>
+      <p id="declarative_content_incompatibilities">Chrome's <a href="https://developer.chrome.com/extensions/declarativeContent" name="dec">declarativeContent</a> API <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1435864">has not yet been implemented</a> in Firefox:</p>     
+      <dl>
+       <dt>In Firefox</dt>
+       <dd>In addition, Firefox <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1323433#c16">will not be supporting</a> the <code>declarativeContent.RequestContentScript</code> API (which is rarely used, and is unavailable in stable releases of Chrome).</dd>
+      </dl>
+  </dl>
 
 <h3 id="Miscellaneous_incompatibilities">Miscellaneous incompatibilities</h3>
-
-<h4 id="URLs_in_CSS">URLs in CSS</h4>
-
 <dl>
- <dt>In Firefox</dt>
- <dd>URLs in injected CSS files are resolved relative to <em>the CSS file itself</em>.</dd>
- <dt>In Chrome</dt>
- <dd>URLs in injected CSS files are resolved relative to <em>the page they are injected into</em>.</dd>
+  <dt>URLs in CSS</dt>
+  <dd>
+    <dl>
+     <dt>In Firefox</dt>
+     <dd>URLs in injected CSS files are resolved relative to <em>the CSS file itself</em>.</dd>
+     <dt>In Chrome</dt>
+     <dd>URLs in injected CSS files are resolved relative to <em>the page they are injected into</em>.</dd>
+    </dl>
+  </dd>
+    
+  <dt>Additional incompatibilities</dt>
+  <dd>  
+    <dl>
+     <dt>In Firefox</dt>
+     <dd>Background pages do not support using <a href="/en-US/docs/Web/API/Window/alert"><code>alert()</code></a>, <a href="/en-US/docs/Web/API/Window/confirm"><code>confirm()</code></a>, or <a href="/en-US/docs/Web/API/Window/prompt"><code>prompt()</code></a>.</dd>
+    </dl>
+  </dd> 
+  
+  <dt>web_accessible_resources</dt>
+  <dd>
+    <dl>
+     <dt>In Chrome</dt>
+     <dd>When a resource is listed in <code>web_accessible_resources</code>, it is accessible as <code>chrome-extension://«<var>your-extension-id</var>»/«<var>path/to/resource</var>»</code>. The extension ID is fixed for a given extension.</dd>
+     <dt>In Firefox</dt>
+     <dd>Resources are assigned a random UUID that changes for every instance of Firefox: <code>moz-extension://«<var>random-UUID</var>»/«<var>path/to/resource</var>»</code>. This randomness can prevent you from doing a few things, such as add your specific extension's URL to another domain's CSP policy.</dd>
+    </dl>
+  </dd>
+    
+  <dt>Manifest "key" property</dt>
+  <dd>
+    <dl>
+     <dt>In Chrome</dt>
+     <dd>When working with an unpacked extension, the manifest may include a <a href="https://developer.chrome.com/extensions/manifest/key"><code>"key"</code> property</a> to pin the extension ID across different machines. This is mainly useful when working with <code>web_accessible_resources</code>.</dd>
+     <dt>In Firefox</dt>
+     <dd>Since Firefox uses random UUIDs for <code>web_accessible_resources</code>, this property is unsupported.</dd>
+    </dl>
+  </dd>
+    
+  <dt>Content script requests happen in the context of extension, not content page</dt>
+  <dd>  
+    <dl>
+     <dt>In Chrome</dt>
+     <dd>When a content script makes a request (for example, using <a href="/en-US/docs/Web/API/Fetch_API/Using_Fetch"><code>fetch()</code></a>) to a relative URL (like <code>/api</code>), it will be sent to <code>https://example.com/api</code>.</dd>
+     <dt>In Firefox</dt>
+     <dd>When a content script makes a request, you <em>must</em> provide absolute URLs.</dd>
+    </dl>
+  </dd>  
+
+  <dt>Sharing variables between content scripts</dt>
+  <dd>      
+    <dl>
+     <dt>In Firefox</dt>
+     <dd>You cannot share variables between content scripts by assigning them to <code>this.{variableName}</code> in one script and then attempting to access them using <code>window.{variableName}</code> in another. This is a limitation created by the sandbox environment in Firefox. This limitation may be removed, see {{bug(1208775)}}.</dd>
+    </dl>
+  </dd>   
+
+  <dt>Content script lifecycle during navigation</dt>
+  <dd>      
+    <dl>
+     <dt>In Chrome</dt>
+     <dd>Content scripts are destroyed when the user navigates away from a web page. If the user then returns to the page through history, by clicking the back button, the content script is injected into the web page again.</dd>
+     <dt>In Firefox</dt>
+     <dd>
+     <p>Content scripts remain injected in a web page after the user has navigated away, however, window object properties are destroyed. For example, if a content script sets <code>window.prop1 = "prop"</code>  and the user then navigates away and returns to the page <code>window.prop1</code> is undefined. This issue is tracked in {{bug(1525400)}} .</p>
+    
+     <p>To mimic the behavior of Chrome, listen for the <a href="/en-US/docs/Web/API/Window/pageshow_event">pageshow</a> and <a href="/en-US/docs/Web/API/Window/pagehide_event">pagehide</a> events. Then simulate the injection or destruction of the content script.</p>
+     </dd>
+    </dl>
+  </dd>  
+
+  <dt>"per-tab" zoom behavior</dt>
+  <dd>
+    <p>See {{WebExtAPIRef("tabs.ZoomSettingsScope")}}</p>
+    <dl>
+     <dt>In Chrome</dt>
+     <dd>Zoom changes are reset on navigation; navigating a tab will always load pages with their per-origin zoom factors.</dd>
+     <dt>In Firefox</dt>
+     <dd>
+     <p>The zoom level persists across page loads and navigation within the tab. in Chrome-based browsers</p>
+     </dd>
+    </dl>
+  </dd>
 </dl>
-
-<h4 id="Additional_incompatibilities">Additional incompatibilities</h4>
-
-<dl>
- <dt>In Firefox</dt>
- <dd>Background pages do not support using <a href="/en-US/docs/Web/API/Window/alert"><code>alert()</code></a>, <a href="/en-US/docs/Web/API/Window/confirm"><code>confirm()</code></a>, or <a href="/en-US/docs/Web/API/Window/prompt"><code>prompt()</code></a>.</dd>
-</dl>
-
-<h4 id="web_accessible_resources">web_accessible_resources</h4>
-
-<dl>
- <dt>In Chrome</dt>
- <dd>When a resource is listed in <code>web_accessible_resources</code>, it is accessible as <code>chrome-extension://«<var>your-extension-id</var>»/«<var>path/to/resource</var>»</code>. The extension ID is fixed for a given extension.</dd>
- <dt>In Firefox</dt>
- <dd>Resources are assigned a random UUID that changes for every instance of Firefox: <code>moz-extension://«<var>random-UUID</var>»/«<var>path/to/resource</var>»</code>. This randomness can prevent you from doing a few things, such as add your specific extension's URL to another domain's CSP policy.</dd>
-</dl>
-
-<h4 id="Manifest_key_property">Manifest "key" property</h4>
-
-<dl>
- <dt>In Chrome</dt>
- <dd>When working with an unpacked extension, the manifest may include a <a href="https://developer.chrome.com/extensions/manifest/key"><code>"key"</code> property</a> to pin the extension ID across different machines. This is mainly useful when working with <code>web_accessible_resources</code>.</dd>
- <dt>In Firefox</dt>
- <dd>Since Firefox uses random UUIDs for <code>web_accessible_resources</code>, this property is unsupported.</dd>
-</dl>
-
-<h4 id="Content_script_requests_happen_in_the_context_of_extension_not_content_page">Content script requests happen in the context of extension, not content page</h4>
-
-<dl>
- <dt>In Chrome</dt>
- <dd>When a content script makes a request (for example, using <a href="/en-US/docs/Web/API/Fetch_API/Using_Fetch"><code>fetch()</code></a>) to a relative URL (like <code>/api</code>), it will be sent to <code>https://example.com/api</code>.</dd>
- <dt>In Firefox</dt>
- <dd>When a content script makes a request, you <em>must</em> provide absolute URLs.</dd>
-</dl>
-
-<h4 id="Sharing_variables_between_content_scripts">Sharing variables between content scripts</h4>
-
-<dl>
- <dt>In Firefox</dt>
- <dd>You cannot share variables between content scripts by assigning them to <code>this.{variableName}</code> in one script and then attempting to access them using <code>window.{variableName}</code> in another. This is a limitation created by the sandbox environment in Firefox. This limitation may be removed, see {{bug(1208775)}}.</dd>
-</dl>
-
-<h4 id="Content_script_lifecycle_during_navigation">Content script lifecycle during navigation</h4>
-
-<dl>
- <dt>In Chrome</dt>
- <dd>Content scripts are destroyed when the user navigates away from a web page. If the user then returns to the page through history, by clicking the back button, the content script is injected into the web page again.</dd>
- <dt>In Firefox</dt>
- <dd>
- <p>Content scripts remain injected in a web page after the user has navigated away, however, window object properties are destroyed. For example, if a content script sets <code>window.prop1 = "prop"</code>  and the user then navigates away and returns to the page <code>window.prop1</code> is undefined. This issue is tracked in {{bug(1525400)}} .</p>
-
- <p>To mimic the behavior of Chrome, listen for the <a href="/en-US/docs/Web/API/Window/pageshow_event">pageshow</a> and <a href="/en-US/docs/Web/API/Window/pagehide_event">pagehide</a> events. Then simulate the injection or destruction of the content script.</p>
- </dd>
-</dl>
-
-<h4 id="per-tab_zoom_behavior">"per-tab" zoom behavior</h4>
-
-<p>See {{WebExtAPIRef("tabs.ZoomSettingsScope")}}</p>
-
-<dl>
- <dt>In Chrome</dt>
- <dd>Zoom changes are reset on navigation; navigating a tab will always load pages with their per-origin zoom factors.</dd>
- <dt>In Firefox</dt>
- <dd>
- <p>The zoom level persists across page loads and navigation within the tab. in Chrome-based browsers</p>
- </dd>
-</dl>
-
 <h2 id="manifest.json_keys">manifest.json keys</h2>
 
 <p>The main <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json"><code>manifest.json</code></a> page includes a table describing browser support for <code>manifest.json</code> keys. Where there are caveats around support for a given key, this is indicated in the table with an asterisk "*" and in the reference page for the key, the caveats are explained.</p>

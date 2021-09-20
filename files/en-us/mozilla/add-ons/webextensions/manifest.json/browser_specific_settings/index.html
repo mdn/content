@@ -18,7 +18,7 @@ browser-compat: webextensions.manifest.browser_specific_settings
 		</tr>
 		<tr>
 			<th scope="row">Mandatory</th>
-			<td>Usually, no (but see also <a href="https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/#when_do_you_need_an_add-on_id">When do you need an Add-on ID?</a>). Mandatory before Firefox 48 (desktop) and Firefox for Android.</td>
+			<td>Usually, no (but see also <a href="https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/#when-do-you-need-an-add-on-id">When do you need an Add-on ID?</a>). Mandatory if the extension ID cannot be determined, see <a href="#browser_specific_settings_gecko_id"><code>browser_specific_settings.gecko.id</code></a>.</td>
 		</tr>
 		<tr>
 			<th scope="row">Example</th>
@@ -42,11 +42,11 @@ browser-compat: webextensions.manifest.browser_specific_settings
 
 <h3 id="Firefox_Gecko_properties">Firefox (Gecko) properties</h3>
 
-<p>Firefox stores is browser specific settings in the <code>gecko</code> subkey, which has the following properties:</p>
+<p>Firefox stores its browser specific settings in the <code>gecko</code> subkey, which has the following properties:</p>
 
 <dl>
-	<dt><code>id</code></dt>
-	<dd>Is the extension ID. Optional from Firefox 48, mandatory before Firefox 48. See <a href="https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/">Extensions and the Add-on ID</a> to see when you need to specify an add-on ID.</dd>
+	<dt id="browser_specific_settings_gecko_id"><code>id</code></dt>
+	<dd>Is the extension ID. Optional since Firefox 48, where the extension ID is derived from the extension's signature. Mandatory if the extension is unsigned (and not loaded via <code>about:debugging</code>). See <a href="https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/">Extensions and the Add-on ID</a> to see when you need to specify an add-on ID.</dd>
 	<dt><code>strict_min_version</code></dt>
 	<dd>Minimum version of Gecko to support. Versions containing a "*" are not valid in this field. Defaults to "42a1".</dd>
 	<dt><code>strict_max_version</code></dt>
@@ -119,9 +119,6 @@ browser-compat: webextensions.manifest.browser_specific_settings
     "strict_min_version": "42.0",
     "strict_max_version": "50.*",
     "update_url": "https://example.com/updates.json"
-  },
-  "edge": {
-    "browser_action_next_to_addressbar": true
   },
   "safari": {
     "strict_min_version": "14",

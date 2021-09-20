@@ -16,21 +16,13 @@ browser-compat: html.elements.input.input-date
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary">{{HTMLElement("input")}} elements of <strong><code>type="date"</code></strong> create input fields that let the user enter a date, either with a textbox that validates the input or a special date picker interface.</span></p>
+<p>{{HTMLElement("input")}} elements of <strong><code>type="date"</code></strong> create input fields that let the user enter a date, either with a textbox that validates the input or a special date picker interface.</p>
 
 <p>The resulting value includes the year, month, and day, but <em>not</em> the time. The {{HTMLElement("input/time", "time")}} and {{HTMLElement("input/datetime-local", "datetime-local")}} input types support time and date+time input.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-date.html", "tabbed-shorter")}}</div>
 
 <p>The input UI generally varies from browser to browser; see {{anch("Browser compatibility")}} for further details. In unsupported browsers, the control degrades gracefully to <code><a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code>.</p>
-
-<p>Among browsers with custom interfaces for selecting dates are Chrome, Edge, and Opera, whose date control looks like so:</p>
-
-<p><img alt="Chrome's date input as of November 2020" src="chrome-date-input.png" style="display: block; margin: 0 auto;"></p>
-
-<p>And the Firefox date control looks like this:</p>
-
-<p><img alt="Another “dd/mm/yyyy” textbox that expands into a selectable calendar control." src="firefox_datepicker.png" style="display: block; margin: 0 auto;"></p>
 
 <table class="properties">
  <tbody>
@@ -121,7 +113,13 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript ti
 
 <h3 id="attr-step"><code id="step">step</code></h3>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/number", "step-include")}}</p>
+<p>The <code>step</code> attribute is a number that specifies the granularity that the value must adhere to, or the special value <code>any</code>, which is described below. Only values which are equal to the basis for stepping (<code>{{anch("min")}}</code> if specified, {{htmlattrxref("value", "input")}} otherwise, and an appropriate default value if neither of those is provided) are valid.</p>
+
+<p>A string value of <code>any</code> means that no stepping is implied, and any value is allowed (barring other constraints, such as <code>{{anch("min")}}</code> and <code>{{anch("max")}}</code>).</p>
+
+<div class="note">
+<p><strong>Note:</strong> When the data entered by the user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round to the nearest valid value, preferring numbers in the positive direction when there are two equally close options.</p>
+</div>
 
 <p>For <code>date</code> inputs, the value of <code>step</code> is given in days; and is treated as a number of milliseconds equal to 86,400,000 times the <code>step</code> value (the underlying numeric value is in milliseconds). The default value of <code>step</code> is 1, indicating 1 day.</p>
 
@@ -204,10 +202,6 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript ti
 
 <p>{{EmbedLiveSample('Validation', 600, 100)}}</p>
 
-<p>Here's a screenshot for those of you who aren't using a supporting browser:</p>
-
-<p><img alt="The input field has an overlaid speech balloon, with an orange exclamation mark icon and the message “Please fill in this field.”" src="date-picker-chrome-error-message.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
-
 <p>Here's the CSS used in the above example. We make use of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-elements</a> to add an icon next to the input, based on whether or not the current value is valid. We had to put the icon on a {{htmlelement("span")}} next to the input, not on the input itself, because in Chrome at least the input's generated content is placed inside the form control, and can't be styled or shown effectively.</p>
 
 <pre class="brush: css">label {
@@ -233,9 +227,7 @@ input:valid+span::after {
 
 <h2 id="Handling_browser_support">Handling browser support</h2>
 
-<p>As mentioned, the major problem with date inputs at the time of writing is {{anch("Browser compatibility", "browser support")}}. As an example, the date picker on Firefox for Android looks like this:</p>
-
-<p><img alt="A popup calendar picker modal floats above the web page and browser UI." src="date-picker-fxa.png" style="display: block; margin: 0 auto;"></p>
+<p>As mentioned, the major problem with date inputs is {{anch("Browser compatibility", "browser support")}}.</p>
 
 <p>Unsupporting browsers gracefully degrade to a text input, but this creates problems in consistency of user interface (the presented controls are different) and data handling.</p>
 

@@ -8,9 +8,10 @@ tags:
 ---
 <div>{{PreviousNext("Web/SVG/Tutorial/Texts", "Web/SVG/Tutorial/Clipping_and_masking")}}</div>
 
-<p>Now we're ready to start distorting our beautiful images. But first, let's formally introduce the {{SVGElement("g")}} element. With this helper, you can assign properties to a complete set of elements. Actually, that's its only purpose. An example:</p>
+<p>Now we're ready to start distorting our beautiful images. But first, let's formally introduce the {{SVGElement("g")}} element. With this helper, you can assign properties to a complete set of elements. Actually, that's its only purpose.</p>
 
-<div id="two_blocks">
+<h2>Example</h2>
+
 <pre class="brush: html">&lt;svg width="30" height="10"&gt;
     &lt;g fill="red"&gt;
         &lt;rect x="0" y="0" width="10" height="10" /&gt;
@@ -20,7 +21,7 @@ tags:
 </pre>
 </div>
 
-<p>{{ EmbedLiveSample('two_blocks', '30', '10', '', 'Web/SVG/Tutorial/Basic_Transformations') }}</p>
+<p>{{ EmbedLiveSample('Example', '30', '10', '', 'Web/SVG/Tutorial/Basic_Transformations') }}</p>
 
 <p>All following transformations are summed up in an element's <code>transform</code> attribute. Transformations can be chained by concatenating them, separated by whitespace.</p>
 

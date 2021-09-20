@@ -20,7 +20,7 @@ tags:
 
 <p class="summary">Now we'll look at common cross-browser JavaScript problems and how to fix them. This includes information on using browser dev tools to track down and fix problems, using Polyfills and libraries to work around problems, getting modern JavaScript features working in older browsers, and more.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -80,7 +80,7 @@ tags:
 
 <p>The <a href="https://jshint.com/">JSHint homepage</a> provides an online linter, which allows you to enter your JavaScript code on the left and provides an output on the right, including metrics, warnings, and errors.</p>
 
-<p><img alt="" src="jshint-online.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="jshint-online.png"></p>
 
 <h4 id="Code_editor_plugins">Code editor plugins</h4>
 
@@ -96,7 +96,7 @@ tags:
  <li>After the packages have finished installing, try loading up a JavaScript file: you'll see any issues highlighted with green (for warnings) and red (for errors) circles next to the line numbers, and a separate panel at the bottom provides line numbers, error messages, and sometimes suggested values or other fixes.</li>
 </ol>
 
-<p><img alt="" src="jshint-linter.png" style="display: block; margin: 0 auto;">Other popular editors have similar linting packages available. For example, see the "Plugins for text editors and IDEs"  section of the <a href="https://jshint.com/install/">JSHint install page</a>.</p>
+<p><img alt="" src="jshint-linter.png">Other popular editors have similar linting packages available. For example, see the "Plugins for text editors and IDEs"  section of the <a href="https://jshint.com/install/">JSHint install page</a>.</p>
 
 <h4 id="Other_uses">Other uses</h4>
 
@@ -109,7 +109,7 @@ tags:
 
 <p>You can then point these tools at JavaScript files you want to lint, for example:</p>
 
-<p><img alt="" src="js-hint-commandline.png" style="display: block; margin: 0px auto;">You can also use these tools with a task runner/build tool such as <a href="https://gulpjs.com/">Gulp</a> or <a href="https://webpack.github.io/">Webpack</a> to automatically lint your JavaScript during development. (see <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing#using_a_task_runner_to_automate_testing_tools">Using a task runner to automate testing tools</a> in a later article.) See <a href="https://eslint.org/docs/user-guide/integrations">ESLint integrations</a> for ESLint options; JSHint is supported out of the box by Grunt, and also has other integrations available, e.g. <a href="https://github.com/webpack/jshint-loader">JSHint loader for Webpack</a>.</p>
+<p><img alt="" src="js-hint-commandline.png">You can also use these tools with a task runner/build tool such as <a href="https://gulpjs.com/">Gulp</a> or <a href="https://webpack.github.io/">Webpack</a> to automatically lint your JavaScript during development. (see <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing#using_a_task_runner_to_automate_testing_tools">Using a task runner to automate testing tools</a> in a later article.) See <a href="https://eslint.org/docs/user-guide/integrations">ESLint integrations</a> for ESLint options; JSHint is supported out of the box by Grunt, and also has other integrations available, e.g. <a href="https://github.com/webpack/jshint-loader">JSHint loader for Webpack</a>.</p>
 
 <div class="note">
 <p><strong>Note</strong>: ESLint takes a bit more setup and configuration than JSHint, but it is more powerful too.</p>
@@ -178,7 +178,7 @@ showHeroes(superHeroes);</pre>
 
 <p>In Firefox, the Debugger tab looks as follows:</p>
 
-<p><img alt="" src="debugger-tab.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="debugger-tab.png"></p>
 
 <ul>
  <li>On the left, you can select the script you want to debug (in this case we have only one).</li>
@@ -190,7 +190,7 @@ showHeroes(superHeroes);</pre>
 
 <p>Let's get to work. The error is now being thrown at line 51. Click on line number 51 in the center panel to add a breakpoint to it (you'll see a blue arrow appear over the top of it). Now refresh the page (Cmd/Ctrl + R) — the browser will pause execution of the code at line 51. At this point, the right-hand side will update to show some very useful information.</p>
 
-<p><img alt="" src="breakpoint.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="breakpoint.png"></p>
 
 <ul>
  <li>Under <em>Breakpoints</em>, you'll see the details of the break-point you have set.</li>
@@ -248,7 +248,7 @@ showHeroes(superHeroes);</pre>
 <p>For example:</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a> are a great new feature for performing asynchronous operations and making sure those operations are complete before code that relies on their results is used for something else. As an example, the <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">Fetch API</a> (a modern equivalent to <a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHTTPRequest</a>) uses promises to fetch resources across the network and make sure that the response has been returned before they are used (for example, displaying an image inside an {{htmlelement("img")}} element). They are not supported in IE at all but are supported across all modern browsers.</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a> are a great new feature for performing asynchronous operations and making sure those operations are complete before code that relies on their results is used for something else. As an example, the <a href="/en-US/docs/Web/API/fetch">Fetch API</a> (a modern equivalent to <a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHTTPRequest</a>) uses promises to fetch resources across the network and make sure that the response has been returned before they are used (for example, displaying an image inside an {{htmlelement("img")}} element). They are not supported in IE at all but are supported across all modern browsers.</li>
  <li>Arrow functions provide a shorter, more convenient syntax for writing <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions#anonymous_functions">anonymous functions</a>, which also has other advantages (see <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Arrow functions</a>). For a quick example, see <a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/arrow-function.html">arrow-function.html</a> (see the <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/arrow-function.html">source code</a> also). Arrow functions are supported across all modern browsers, except for IE and Safari.</li>
  <li>Declaring <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a> at the top of your JavaScript code causes it to be parsed with a stricter set of rules, meaning that more warnings and errors will be thrown, and some things will be disallowed that would otherwise be acceptable. It is arguably a good idea to use strict mode, as it makes for better, more efficient code, however it has limited/patchy support across browsers (see <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode#strict_mode_in_browsers">Strict mode in browsers</a>).</li>
  <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays">Typed arrays</a> allow JavaScript code to access and manipulate raw binary data, which is necessary as browser APIs for example start to manipulate streams of raw video and audio data. These are available in IE10 and above, and all modern browsers.</li>
@@ -349,7 +349,7 @@ fetch('flowers.jpg').then(function(response) {
 });</pre>
  </li>
  <li>Now if you load it in a browser that doesn't support Fetch (Safari and IE are obvious candidates), you should still see the flower image appear — cool! <br>
-  <img alt="" src="fetch-image.jpg" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></li>
+  <img alt="" src="fetch-image.jpg"></li>
 </ol>
 
 <div class="note">
@@ -380,7 +380,7 @@ function main(err) {
   return window.Promise &amp;&amp; window.fetch;
 }</pre>
 
-<p>Here we are testing whether the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> object and <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch()</a></code> function exist in the browser. If both do, the function returns true. If the function returns <code>false</code>, then we run the code inside the second part of the conditional  — this runs a function called loadScript(), which loads the polyfills into the page, then runs <code>main()</code> after the loading has finished. <code>loadScript()</code> looks like this:</p>
+<p>Here we are testing whether the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> object and <code><a href="/en-US/docs/Web/API/fetch">fetch()</a></code> function exist in the browser. If both do, the function returns true. If the function returns <code>false</code>, then we run the code inside the second part of the conditional  — this runs a function called loadScript(), which loads the polyfills into the page, then runs <code>main()</code> after the loading has finished. <code>loadScript()</code> looks like this:</p>
 
 <pre class="brush: js">function loadScript(src, done) {
   const js = document.createElement('script');

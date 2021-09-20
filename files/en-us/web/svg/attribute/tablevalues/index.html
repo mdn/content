@@ -18,12 +18,11 @@ tags:
   <li>{{SVGElement("feFuncR")}}</li>
 </ul>
 
-<div id="topExample">
-<div class="hidden">
-<pre class="brush: css">html, body, svg {
+<h2>Example</h2>
+
+<pre class="brush: css hidden">html, body, svg {
   height: 100%;
 }</pre>
-</div>
 
 <pre class="brush: html; highlight[13-15,20-22]">&lt;svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;defs&gt;
@@ -56,8 +55,7 @@ tags:
       style="filter: url(#componentTransfer2); transform: translateX(220px);" /&gt;
 &lt;/svg&gt;</pre>
 
-<p>{{EmbedLiveSample("topExample", "480", "200")}}</p>
-</div>
+<p>{{EmbedLiveSample("Example", "480", "200")}}</p>
 
 <h2 id="Usage_notes">Usage notes</h2>
 
@@ -80,8 +78,10 @@ tags:
 
 <dl>
  <dt><code>&lt;list-of-numbers&gt;</code></dt>
- <dd>This value holds a comma- and/or space-separated list of {{cssxref("number")}}s, which define a lookup table for the color component transfer function. Each number can be between <code>0</code> and <code>1</code>.</dd>
- <dd>An empty list results in an identity transfer function.</dd>
+ <dd>
+   <p>This value holds a comma- and/or space-separated list of {{cssxref("number")}}s, which define a lookup table for the color component transfer function. Each number can be between <code>0</code> and <code>1</code>.</p>
+   <p>An empty list results in an identity transfer function.</p>
+ </dd>
 </dl>
 
 <h2 id="Specifications">Specifications</h2>

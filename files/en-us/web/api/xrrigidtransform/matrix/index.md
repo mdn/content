@@ -30,13 +30,7 @@ vector by the 3D rotation specified by the {{domxref("XRRigidTransform.orientati
   "orientation")}}, then translate
 it by the {{domxref("XRRigidTransform.position", "position")}}.
 
-## Syntax
-
-```js
-let matrix = xrRigidTransform.matrix;
-```
-
-### Value
+## Value
 
 A {{jsxref("Float32Array")}} containing 16 entries which represents the 4x4 transform
 matrix which is described by

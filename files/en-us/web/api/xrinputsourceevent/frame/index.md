@@ -30,13 +30,7 @@ representing the event frame during which a [WebXR](/en-US/docs/Web/API/WebXR_De
 This may thus be an event which occurred in the past rather than a current or impending
 event.
 
-## Syntax
-
-```js
-let inputFrame = xrInputSourceEvent.frame;
-```
-
-### Value
+## Value
 
 An {{domxref("XRFrame")}} indicating the event frame at which the user input event
 described by the object took place.

@@ -20,7 +20,7 @@ tags:
 
 <p class="summary">In this article we briefly recap the problems associated with synchronous JavaScript, and take a first look at some of the different asynchronous techniques you'll encounter, showing how they can help us solve such problems.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -149,7 +149,7 @@ gods.forEach(function (eachName, index){
 
 <h2 id="Promises">Promises</h2>
 
-<p>Promises are the new style of async code that you'll see used in modern Web APIs. A good example is the <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch()</a></code> API, which is basically like a modern, more efficient version of {{domxref("XMLHttpRequest")}}. Let's look at a quick example, from our <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data">Fetching data from the server</a> article:</p>
+<p>Promises are the new style of async code that you'll see used in modern Web APIs. A good example is the <code><a href="/en-US/docs/Web/API/fetch">fetch()</a></code> API, which is basically like a modern, more efficient version of {{domxref("XMLHttpRequest")}}. Let's look at a quick example, from our <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data">Fetching data from the server</a> article:</p>
 
 <pre class="brush: js">fetch('products.json').then(function(response) {
   return response.json();

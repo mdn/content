@@ -22,8 +22,8 @@ browser-compat: api.XRRigidTransform.XRRigidTransform
 {{APIRef("WebXR Device API")}}
 
 The
-**` XRRigidTransform``() `** constructor creates and
-returns a new {{domxref("XRRigidTransform")}} object, representing the position and
+**`XRRigidTransform()`** constructor creates
+a new {{domxref("XRRigidTransform")}} object, representing the position and
 orientation of a point or object. Among other things,
 `XRRigidTransform` is used when providing a transform to translate between
 coordinate systems across spaces.
@@ -31,19 +31,21 @@ coordinate systems across spaces.
 ## Syntax
 
 ```js
-let xrRigidTransform = new XRRigidTransform(position, orientation);
+new XRRigidTransform()
+new XRRigidTransform(position)
+new XRRigidTransform(position, orientation)
 ```
 
 ### Parameters
 
 - `position` {{optional_inline}}
-  - : An object conforming to {{domxref("DOMPointInit")}} which specifies the coordinates
+  - : An object which specifies the coordinates
     at which the point or object is located. These dimensions are specified in meters. If
-    this parameter is left out or is not compatible with `DOMPointInit`,  the
+    this parameter is left out or is invalid,  the
     position used is assumed to be `{x: 0, y: 0, z: 0, w: 1}`. `w`
     must _always_ be 1.
 - `orientation` {{optional_inline}}
-  - : An object conforming to {{domxref("DOMPointInit")}} which specifies the direction in
+  - : An object which specifies the direction in
     which the object is facing. The default value for `orientation` is
     `{x: 0, y: 0, z: 0, w: 1}`. The specified orientation gets normalized if
     it's not already.

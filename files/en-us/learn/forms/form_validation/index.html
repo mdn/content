@@ -18,7 +18,7 @@ tags:
 
 <p>Before submitting data to the server, it is important to ensure all required form controls are filled out, in the correct format. This is called <strong>client-side form validation</strong>, and helps ensure data submitted matches the requirements set forth in the various form controls. This article leads you through basic concepts and examples of client-side form validation.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
@@ -411,10 +411,11 @@ input:focus:invalid {
  <li><code>willValidate</code>: Returns <code>true</code> if the element will be validated when the form is submitted; <code>false</code> otherwise.</li>
 </ul>
 
-<p id="Constraint_validation_API_methods">The Constraint Validation API also makes the following methods available on the above elements.</p>
+<p id="Constraint_validation_API_methods">The Constraint Validation API also makes the following methods available on the above elements and the <code><a href="/en-US/docs/Web/HTML/Element/form">form</a></code> element.</p>
 
 <ul>
  <li><code>checkValidity()</code>: Returns <code>true</code> if the element's value has no validity problems; <code>false</code> otherwise. If the element is invalid, this method also fires an <a href="/en-US/docs/Web/API/HTMLInputElement/invalid_event"><code>invalid</code> event</a> on the element.</li>
+ <li><code>reportValidity()</code>: Reports invalid field(s) using events. Useful in combination with <code>preventDefault()</code> in an <code>onSubmit</code> event handler</li>
  <li><code>setCustomValidity(<em>message</em>)</code>: Adds a custom error message to the element; if you set a custom error message, the element is considered to be invalid, and the specified error is displayed. This lets you use JavaScript code to establish a validation failure other than those offered by the standard HTML5 validation constraints. The message is shown to the user when reporting the problem.</li>
 </ul>
 

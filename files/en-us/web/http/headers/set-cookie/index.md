@@ -75,7 +75,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
     It does help satisfying the requirements
     about which characters are allowed for \<cookie-value> though.
 
-    > **Note:** Some `><cookie-name>` have a specific semantic:
+    > **Note:** Some `<cookie-name>` have a specific semantic:
     >
     > **`__Secure-` prefix**:
     > Cookies names starting with `__Secure-`
@@ -131,7 +131,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
     > Insecure sites (`http:`) can't set cookies with the `Secure` attribute (since Chrome 52 and Firefox 52). For Firefox, the `https:` requirements are ignored when the `Secure` attribute is set by localhost (since Firefox 75).
 
 - `HttpOnly` {{optional_inline}}
-  - : Forbids JavaScript from accessing the cookie, for example, through the {{domxref("Document.cookie")}} property. Note that a cookie that has been created with HttpOnly will still be sent with JavaScript-initiated requests, e.g. when calling {{domxref("XMLHttpRequest.send()")}} or {{domxref("WindowOrWorkerGlobalScope.fetch")}}. This mitigates attacks against cross-site scripting ({{Glossary("Cross-site_scripting", "XSS")}}).
+  - : Forbids JavaScript from accessing the cookie, for example, through the {{domxref("Document.cookie")}} property. Note that a cookie that has been created with HttpOnly will still be sent with JavaScript-initiated requests, e.g. when calling {{domxref("XMLHttpRequest.send()")}} or {{domxref("fetch()")}}. This mitigates attacks against cross-site scripting ({{Glossary("Cross-site_scripting", "XSS")}}).
 - `SameSite=<samesite-value>` {{optional_inline}}
 
   - : Controls whether a cookie is sent with cross-origin requests,
@@ -152,7 +152,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
     If the request originated from a different URL than the current one,
     no cookies with the `SameSite=Strict` attribute are sent.
 
-    `Lax`means that the cookie is not sent on cross-site requests,
+    `Lax` means that the cookie is not sent on cross-site requests,
     such as calls to load images or frames,
     but is sent when a user is navigating to the origin site from an external site
     (e.g., if following a link).

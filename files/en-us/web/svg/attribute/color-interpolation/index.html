@@ -9,7 +9,7 @@ browser-compat: svg.attributes.presentation.color-interpolation
 ---
 <div>{{SVGRef}}</div>
 
-<p class="seoSummary">The <strong><code>color-interpolation</code></strong> attribute specifies the color space for gradient interpolations, color animations, and alpha compositing.</p>
+<p>The <strong><code>color-interpolation</code></strong> attribute specifies the color space for gradient interpolations, color animations, and alpha compositing.</p>
 
 <div class="notecard note">
 <p><strong>Note:</strong> For filter effects, the {{SVGAttr("color-interpolation-filters")}} property controls which color space is used.</p>
@@ -19,7 +19,7 @@ browser-compat: svg.attributes.presentation.color-interpolation
 
 <p>When a child element is blended into a background, the value of the <code>color-interpolation</code> property on the child determines the type of blending, not the value of the <code>color-interpolation</code> on the parent. For gradients which make use of the {{SVGAttr("href")}} or the deprecated {{SVGAttr("xlink:href")}} attribute to reference another gradient, the gradient uses the property's value from the gradient element which is directly referenced by the {{SVGAttr("fill")}} or {{SVGAttr("stroke")}} property. When animating colors, color interpolation is performed according to the value of the <code>color-interpolation</code> property on the element being animated.</p>
 
-<p class="note"><strong>Note:</strong> As a presentation attribute, <code>color-interpolation</code> can be used as a CSS property.</p>
+<div class="note"><p><strong>Note:</strong> As a presentation attribute, <code>color-interpolation</code> can be used as a CSS property.</p></div>
 
 <p>You can use this attribute with the following SVG elements:</p>
 
@@ -118,7 +118,3 @@ browser-compat: svg.attributes.presentation.color-interpolation
  <li>{{SVGAttr("color-interpolation-filters")}}</li>
  <li><a href="https://www.youtube.com/watch?v=LKnqECcg6Gw">Computer color is broken</a> - popular demonstration of linearRGB</li>
 </ul>
-
-<div id="gtx-trans">
-<div class="gtx-trans-icon"></div>
-</div>

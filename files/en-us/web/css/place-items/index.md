@@ -83,7 +83,7 @@ place-items: unset;
 - `self-end`
   - : The item is packed flush to the edge of the alignment container of the end side of the item, in the appropriate axis.
 - `center`
-  - : The items are packed flush to each other toward the center of the of the alignment container.
+  - : The items are packed flush to each other toward the center of the alignment container.
 - `left`
   - : The items are packed flush to each other toward the left edge of the alignment container. If the property’s axis is not parallel with the inline axis, this value behaves like `start`.
 - `right`

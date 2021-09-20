@@ -13,39 +13,7 @@ tags:
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: html">&lt;svg viewBox="-1 -1 162 92" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;defs&gt;
-     &lt;path id="smiley" d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" /&gt;
-  &lt;/defs&gt;
-
-  &lt;!-- (width&gt;height) meet --&gt;
-  &lt;svg preserveAspectRatio="xMidYMid meet"  x="0"   y="0"  viewBox="0 0 100 100" width="20"  height="10"&gt;&lt;use href="#smiley" /&gt;&lt;/svg&gt;
-  &lt;svg preserveAspectRatio="xMinYMid meet"  x="25"  y="0"  viewBox="0 0 100 100" width="20"  height="10"&gt;&lt;use href="#smiley" /&gt;&lt;/svg&gt;
-  &lt;svg preserveAspectRatio="xMaxYMid meet"  x="50"  y="0"  viewBox="0 0 100 100" width="20"  height="10"&gt;&lt;use href="#smiley" /&gt;&lt;/svg&gt;
-
-  &lt;!-- (width&gt;height) slice --&gt;
-  &lt;svg preserveAspectRatio="xMidYMin slice" x="0"   y="15" viewBox="0 0 100 100" width="20"  height="10"&gt;&lt;use href="#smiley" /&gt;&lt;/svg&gt;
-  &lt;svg preserveAspectRatio="xMidYMid slice" x="25"  y="15" viewBox="0 0 100 100" width="20"  height="10"&gt;&lt;use href="#smiley" /&gt;&lt;/svg&gt;
-  &lt;svg preserveAspectRatio="xMidYMax slice" x="50"  y="15" viewBox="0 0 100 100" width="20"  height="10"&gt;&lt;use href="#smiley" /&gt;&lt;/svg&gt;
-
-  &lt;!-- (width&lt;height) meet --&gt;
-  &lt;svg preserveAspectRatio="xMidYMin meet"  x="75"  y="0"  viewBox="0 0 100 100" width="10"  height="25"&gt;&lt;use href="#smiley" /&gt;&lt;/svg&gt;
-  &lt;svg preserveAspectRatio="xMidYMid meet"  x="90"  y="0"  viewBox="0 0 100 100" width="10"  height="25"&gt;&lt;use href="#smiley" /&gt;&lt;/svg&gt;
-  &lt;svg preserveAspectRatio="xMidYMax meet"  x="105" y="0"  viewBox="0 0 100 100" width="10"  height="25"&gt;&lt;use href="#smiley" /&gt;&lt;/svg&gt;
-
-  &lt;!-- (width&lt;height) slice --&gt;
-  &lt;svg preserveAspectRatio="xMinYMid slice" x="120" y="0"  viewBox="0 0 100 100" width="10"  height="25"&gt;&lt;use href="#smiley" /&gt;&lt;/svg&gt;
-  &lt;svg preserveAspectRatio="xMidYMid slice" x="135" y="0"  viewBox="0 0 100 100" width="10"  height="25"&gt;&lt;use href="#smiley" /&gt;&lt;/svg&gt;
-  &lt;svg preserveAspectRatio="xMaxYMid slice" x="150" y="0"  viewBox="0 0 100 100" width="10"  height="25"&gt;&lt;use href="#smiley" /&gt;&lt;/svg&gt;
-
-  &lt;!-- none --&gt;
-  &lt;svg preserveAspectRatio="none"           x="0"   y="30" viewBox="0 0 100 100" width="160" height="60"&gt;&lt;use href="#smiley" /&gt;&lt;/svg&gt;
-&lt;/svg&gt;</pre>
-
-<div class="hidden">
-<h6 id="topExample">topExample</h6>
-
-<pre class="brush: css">html,body,svg { height:100% }
+<pre class="brush: css hidden">html,body,svg { height:100% }
 </pre>
 
 <pre class="brush: html">&lt;svg viewBox="-1 -1 162 92" xmlns="http://www.w3.org/2000/svg"&gt;
@@ -175,9 +143,8 @@ tags:
 rect:hover, rect:active {
   outline: 1px solid red;
 }</pre>
-</div>
 
-<p>{{EmbedLiveSample('topExample', '100%', 200)}}</p>
+<p>{{EmbedLiveSample('Example', '100%', 200)}}</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -252,7 +219,7 @@ rect:hover, rect:active {
   <li>{{SVGElement("feImage")}}</li>
   <li>{{SVGElement("marker")}}</li>
   <li>{{SVGElement("pattern")}}</li>
-  <li>{{SVGElement("view")}}.</li>
+  <li>{{SVGElement("view")}}</li>
 </ul>
 
 <h3 id="feImage">feImage</h3>
