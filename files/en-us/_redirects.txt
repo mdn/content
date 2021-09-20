@@ -6226,7 +6226,6 @@
 /en-US/docs/SVG/filter	/en-US/docs/Web/CSS/filter
 /en-US/docs/SVG/g	/en-US/docs/Web/SVG/Element/g
 /en-US/docs/SVG/line	/en-US/docs/Web/SVG/Element/line
-/en-US/docs/SVG/mimeTypes.rdf_corruption	/en-US/docs/Web/SVG/mimeTypes.rdf_corruption
 /en-US/docs/SVG/polyline	/en-US/docs/Web/SVG/Element/polyline
 /en-US/docs/SVG/rect	/en-US/docs/Web/SVG/Element/rect
 /en-US/docs/SVG/use	/en-US/docs/Web/SVG/Element/use
@@ -6246,7 +6245,6 @@
 /en-US/docs/SVG:ellipse	/en-US/docs/Web/SVG/Element/ellipse
 /en-US/docs/SVG:g	/en-US/docs/Web/SVG/Element/g
 /en-US/docs/SVG:line	/en-US/docs/Web/SVG/Element/line
-/en-US/docs/SVG:mimeTypes.rdf_corruption	/en-US/docs/Web/SVG/mimeTypes.rdf_corruption
 /en-US/docs/SVG:polyline	/en-US/docs/Web/SVG/Element/polyline
 /en-US/docs/SVG:rect	/en-US/docs/Web/SVG/Element/rect
 /en-US/docs/SVG:use	/en-US/docs/Web/SVG/Element/use
