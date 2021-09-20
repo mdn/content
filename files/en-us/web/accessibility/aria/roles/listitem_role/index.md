@@ -11,7 +11,7 @@ tags:
   - listitem
   - document structure role
 ---
-The ARIA `listitem` role can be used to identify an item inside a list of items. It is normally used in conjunction with the `list` role, which is used to identify a list container.
+The ARIA `listitem` role can be used to identify an item inside a list of items. It is normally used in conjunction with the [`list`](/en-US/docs/Web/Accessibility/ARIA/Roles/List_role) role, which is used to identify a list container.
 
 ```html
 <section role="list">
@@ -27,7 +27,7 @@ Any content that consists of an outer container with a list of elements inside i
 
 There are no hard and fast rules about which elements you should use to mark up the list and list items, but you should make sure that the list items make sense in the context of a list, e.g. a shopping list, recipe steps, driving directions.
 
-<div class="notecard warning"><p><strong>Warning</strong>: If at all possible in your work, you should use the appropriate semantic HTML elements to mark up a list and its listitems — {{HTMLElement("ul")}}/{{HTMLElement("ol")}} and {{HTMLElement("li")}}. See {{anch("Best practices")}} for a full example.</p></div>
+> **Note:** If at all possible in your work, you should use the appropriate semantic HTML elements to mark up a list and its listitems — {{HTMLElement("ul")}}/{{HTMLElement("ol")}} and {{HTMLElement("li")}}. See {{anch("Best practices")}} for a full example.</p></div>
 
 ### Associated WAI-ARIA Roles, States, and Properties
 
@@ -35,18 +35,6 @@ There are no hard and fast rules about which elements you should use to mark up 
   - : A list of items. Elements with role `list` must have one or more elements with the role `listitem` as children, a one or more elements with the role of `group` that have one or more elements with the `listitem` role as children.
 - [group](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role)
   - : A collection of related objects, limited to list items when nested in a list, not important enough to have their own place in a pages table of contents.
-
-### Keyboard Interactions
-
-None.
-
-### Required JavaScript features
-
-None.
-
-## Examples
-
-[ARIA Lists](https://www.scottohara.me/blog/2018/05/26/aria-lists.html) — some useful examples and thoughts by Scott O'Hara
 
 ## Best practices
 
@@ -72,9 +60,9 @@ or use an ordered list if the order of the list items matters:
 </ol>
 ```
 
-<div class="notecard note"><p><strong>Note</strong>: The ARIA list/listitem roles don't distinguish between ordered and unordered lists.</p></div>
+> **Note:** The ARIA list/listitem roles don't distinguish between ordered and unordered lists.
 
-<div class="notecard note"><p><strong>Note</strong>: If you are marking up a list of items that will function as a tabbed interface, you should instead use the `tab`, `tabpanel`, and `tablist` roles.</p></div>
+> **Note:**  If you are marking up a list of items that will function as a tabbed interface, you should instead use the [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_role), [`tabpanel`](/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_role), and [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role) roles.
 
 ## Specifications
 
@@ -86,13 +74,14 @@ or use an ordered list if the order of the list items matters:
 
 ## See also
 
-- [Accessibility Object Model](https://wicg.github.io/aom/spec/)
-- [ARIA in HTML](https://w3c.github.io/html-aria/)
 - [HTML `<li>` element](/en-US/docs/Web/HTML/Element/li)
 - [HTML `<ul>` element](/en-US/docs/Web/HTML/Element/ul)
 - [HTML `<ol>` element](/en-US/docs/Web/HTML/Element/ol)
-- [ARIA: list role](/en-US/docs/Web/Accessibility/ARIA/Roles/List_role)
-- [ARIA: group role](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role)
+- [ARIA: `list` role](/en-US/docs/Web/Accessibility/ARIA/Roles/List_role)
+- [ARIA: `group` role](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role)
+- [Accessibility Object Model](https://wicg.github.io/aom/spec/)
+- [ARIA in HTML](https://w3c.github.io/html-aria/)
+- [ARIA Lists examples](https://www.scottohara.me/blog/2018/05/26/aria-lists.html) — by Scott O'Hara
 
 <section id="Quick_links">
 

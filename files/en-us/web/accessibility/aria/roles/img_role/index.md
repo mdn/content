@@ -47,6 +47,8 @@ For example:
 </div>
 ```
 
+If an image is purely presenational, consider using the [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/Presentation_role) role.
+
 ### SVG and role="img"
 
 If you are using embedded SVG images in your page, it is a good idea to set `role="img"` on the outer {{HTMLElement('svg')}} element and give it a label. This will cause screen readers to just consider it as a single entity and describe it using the label, rather than trying to read out all the child nodes:
@@ -84,7 +86,7 @@ Another example where this might be suitable is when using ASCII emoji combinati
   </p>
 </div>
 ```
-Only the contents of the `aria-label` are announced to screen reader users, hiding the jibberish of the characters without the need for descendant ARIA to hide things, but also hiding potential content that may be included.
+If aria-labelledby were used, the screen reader would read the it. In this case, only the contents of the `aria-label` are announced to screen reader users, hiding the jibberish of the characters without the need for descendant ARIA to hide things, but also hiding potential content that may be part of the image.
 
 ### Associated WAI-ARIA Roles, States, and Properties
 
@@ -119,6 +121,7 @@ Only the contents of the `aria-label` are announced to screen reader users, hidi
 - The {{HTMLElement('picture')}} element
 - The {{HTMLElement('audio')}} element
 - The {{HTMLElement('video')}} element
+- [ARIA: `presentation` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Presentation_role)
 - [Accessibility Object Model](https://wicg.github.io/aom/spec/)
 - [ARIA in HTML](https://w3c.github.io/html-aria/)
 
