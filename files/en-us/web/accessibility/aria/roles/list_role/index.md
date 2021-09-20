@@ -27,7 +27,7 @@ Any content that consists of an outer container with a list of elements inside i
 
 There are no hard and fast rules about which elements you should use to mark up the list and list items, but you should make sure that the list items make sense in the context of a list, e.g. a shopping list, recipe steps, driving directions.
 
-<div class="notecard warning"><h4>Warning</h4><p>If at all possible in your work, you should use the appropriate semantic HTML elements to mark up a list and its listitems — {{HTMLElement("ul")}}, {{HTMLElement("ol")}} and {{HTMLElement("li")}}. See {{anch("Best practices")}} for a full example.</p></div>
+> **Note:** Best practices dictate using the appropriate semantic HTML elements over ARIA roles to mark up lists and listitems — {{HTMLElement("ul")}}, {{HTMLElement("ol")}} and {{HTMLElement("li")}}. See {{anch("Best practices")}} for a full example.
 
 ### Associated WAI-ARIA Roles, States, and Properties
 
@@ -36,17 +36,6 @@ There are no hard and fast rules about which elements you should use to mark up 
 - [group](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role)
   - : A collection of related objects, limited to list items when nested in a list, not important enough to have their own place in a pages table of contents.
 
-### Keyboard Interactions
-
-None.
-
-### Required JavaScript features
-
-None.
-
-## Examples
-
-[ARIA Lists](https://www.scottohara.me/blog/2018/05/26/aria-lists.html) — some useful examples and thoughts by Scott O'Hara
 
 ## Best practices
 
@@ -72,11 +61,11 @@ or use an ordered list if the order of the list items matters:
 </ol>
 ```
 
-<div class="notecard note"><p><strong>Note</strong>: The ARIA list/listitem roles don't distinguish between ordered and unordered lists.</p></div>
+> **Note:** The ARIA list/listitem roles don't distinguish between ordered and unordered lists.
 
-As an aside, note that if you are using the semantic HTML elements of ol or ul and apply a role of [presentation](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role), each child `li` element inherits the `presentation` role because ARIA requires the `listitem` elements to have the parent `list` element. So, the `li` elements are not exposed to assistive technologies, but elements contained inside of those `li` elements, including nested lists, are visible to assistive technologies.
+As an aside, note that if you are using the semantic HTML elements of ol or ul and apply a role of [`presentation`](/en-US/docs/Web/Accessibility/ARIA/roles/presentation_role), each child `li` element inherits the `presentation` role because ARIA requires the `listitem` elements to have the parent `list` element. So, the `li` elements are not exposed to assistive technologies, but elements contained inside of those `li` elements, including nested lists, are visible to assistive technologies.
 
-<div class="notecard note"><p><strong>Note</strong>: If you are marking up a list of items that will function as a tabbed interface, you should instead use the `tab`, `tabpanel`, and `tablist` roles.</p></div>
+> **Note:** If you are marking up a list of items that will function as a tabbed interface, you should instead use the [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role), [`tabpanel`](/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_role), and [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role) roles.
 
 ## Specifications
 
@@ -88,13 +77,14 @@ As an aside, note that if you are using the semantic HTML elements of ol or ul a
 
 ## See also
 
-- [Accessibility Object Model](https://wicg.github.io/aom/spec/)
-- [ARIA in HTML](https://w3c.github.io/html-aria/)
-- {{HTMLElement("ul")}}
-- {{HTMLElement("ol")}}
-- {{HTMLElement("li")}}
+- The {{HTMLElement("ul")}} element
+- The {{HTMLElement("ol")}} element
+- The {{HTMLElement("li")}} element
 - [ARIA: listitem role](/en-US/docs/Web/Accessibility/ARIA/Roles/Listitem_role)
 - [ARIA: group role](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role)
+- [ARIA Lists examples](https://www.scottohara.me/blog/2018/05/26/aria-lists.html) — by Scott O'Hara
+- [Accessibility Object Model](https://wicg.github.io/aom/spec/)
+- [ARIA in HTML](https://w3c.github.io/html-aria/)
 
 <section id="Quick_links">
 
