@@ -23,6 +23,8 @@ The **`XRWebGLBinding`** interface is used to create layers that have a GPU bac
 ## Methods
 - {{domxref("XRWebGLBinding.createProjectionLayer()")}}
   - : Returns an {{domxref("XRProjectionLayer")}} object which is a layer that fills the entire view of the observer and is refreshed close to the device's native frame rate.
+- {{domxref("XRWebGLBinding.createQuadLayer()")}}
+  - : Returns an {{domxref("XRQuadLayer")}} object which is a two-dimensional object positioned and oriented in 3D space.
 - {{domxref("XRWebGLBinding.getDepthInformation()")}}
   - : Returns an {{domxref("XRWebGLDepthInformation")}} object containing WebGL depth information.
 - {{domxref("XRWebGLBinding.getReflectionCubeMap()")}}
