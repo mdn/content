@@ -299,7 +299,7 @@ Vivamus blandit massa ut metus mattis in fringilla lectus imperdiet. Proin ac an
 </html>
 ```
 
-[View this demo in action](/files/3997/typewriter.html). See also: [`clearInterval()`](/en-US/docs/Web/API/clearInterval).
+[View this demo in action](https://jsfiddle.net/4o0zycpf/). See also: [`clearInterval()`](/en-US/docs/Web/API/clearInterval).
 
 ## Callback arguments
 
@@ -485,7 +485,7 @@ circumstances, although these should not be common. Note also that the actual am
 time that elapses between calls to the callback may be longer than the given
 `delay`; see
 {{SectionOnPage("/en-US/docs/Web/API/setTimeout", "Reasons for
-  delays longer than specified")}} for examples.
+ delays longer than specified")}} for examples.
 
 ### Ensure that execution duration is shorter than interval frequency
 
