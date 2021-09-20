@@ -84,6 +84,10 @@ tags:
 <p> In Firefox, background pages do not support the use of <code><a href="/en-US/docs/Web/API/Window/alert">alert()</a></code>, <code><a href="/en-US/docs/Web/API/Window/confirm">confirm()</a></code>, or <code><a href="/en-US/docs/Web/API/Window/prompt">prompt()</a></code>.</p>
 </div>
 
+<h4 id="Secure_context_Web _APIs">Secure context Web APIs</h4>
+
+<p>From Firefox 90, the web extension address <em>(`moz-extension://`)</em> is considered a <a href="/en-US/docs/Web/Security/Secure_Contexts">secure context</a>, enabling use of APIs such as {{domxref("Cache")}}.</p>
+
 <h4 id="WebExtension_APIs">WebExtension APIs</h4>
 
 <p>Background scripts can use any of the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API">WebExtension APIs</a> in the script, as long as their extension has the necessary <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a>.</p>
