@@ -131,7 +131,7 @@ div {
 
 #### Result
 
-{{EmbedLiveSample('How_floated_elements_are_positioned','400','190')}}
+{{EmbedLiveSample('How_floated_elements_are_positioned','398','190')}}
 
 ### Clearing floats
 
