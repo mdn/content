@@ -58,6 +58,8 @@ text-emphasis-color: unset;
 
 ```css
 em {
+  -webkit-text-emphasis-color: green;
+  -webkit-text-emphasis-style: "*";
   text-emphasis-color: green;
   text-emphasis-style: "*";
 }
