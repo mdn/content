@@ -12,7 +12,7 @@ tags:
 
 <p>There are two types of gradients: linear and radial. You <strong>must</strong> give the gradient an <code>id</code> attribute; otherwise it can't be referenced by other elements inside the file.  Gradients are defined in a defs section as opposed to on a shape itself to promote reusability.</p>
 
-<h2 id="SVGLinearGradient">Linear Gradient</h2>
+<h2>Linear Gradient</h2>
 
 <p>Linear gradients change along a straight line. To insert one, you create a {{SVGElement('linearGradient')}} node inside the definitions section of your SVG file.</p>
 
@@ -43,7 +43,7 @@ tags:
 
 &lt;/svg&gt;</pre>
 
-<p>{{ EmbedLiveSample('SVGLinearGradient','120','240','/files/722/SVG_Linear_Gradient_Example.png') }}</p>
+<p>{{ EmbedLiveSample('Linear_Gradient','120','240','/files/722/SVG_Linear_Gradient_Example.png') }}</p>
 
 <p>Above is an example of a linear gradient being applied to a <code>&lt;rect&gt;</code> element. Inside the linear gradient are several {{SVGElement('stop')}} nodes. These nodes tell the gradient what color it should be at certain positions by specifying an <code>offset</code> attribute for the position, and a <code>stop-color</code> attribute. This can be assigned directly or through CSS. The two methods have been intermixed for the purposes of this example. For instance, this one tells the gradient to start at the color red, change to transparent-black in the middle, and end at the color blue. You can insert as many stop colors as you like to create a blend that's as beautiful or hideous as you need, but the offsets should always increase from 0% (or 0 if you want to drop the % sign) to 100% (or 1). Duplicate values will use the stop that is assigned furthest down the XML tree. Also, like with fill and stroke, you can specify a <code>stop-opacity</code> attribute to set the opacity at that position (again, in FF3 you can also use rgba values to do this).</p>
 
