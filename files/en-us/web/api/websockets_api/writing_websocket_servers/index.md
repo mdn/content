@@ -172,7 +172,7 @@ To close a connection either the client or server can send a control frame with 
 
 > **Note:** WebSocket codes, extensions, subprotocols, etc. are registered at the [IANA WebSocket Protocol Registry](https://www.iana.org/assignments/websocket/websocket.xml).
 
-WebSocket extensions and subprotocols are negotiated via headers during [the handshake](#handshake). Sometimes extensions and subprotocols very similar, but there is a clear distinction. Extensions control the WebSocket _frame_ and _modify_ the payload, while subprotocols structure the WebSocket _payload_ and _never modify_ anything. Extensions are optional and generalized (like compression); subprotocols are mandatory and localized (like ones for chat and for MMORPG games).
+WebSocket extensions and subprotocols are negotiated via headers during [the handshake](#handshake). Sometimes extensions and subprotocols are very similar, but there is a clear distinction. Extensions control the WebSocket _frame_ and _modify_ the payload, while subprotocols structure the WebSocket _payload_ and _never modify_ anything. Extensions are optional and generalized (like compression); subprotocols are mandatory and localized (like ones for chat and for MMORPG games).
 
 ### Extensions
 
