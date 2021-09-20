@@ -49,7 +49,7 @@ For example:
 
 ### SVG and role="img"
 
-If you are using embedded SVG images in your page, it is a good idea to set `role="img"` on the outer `<svg>` element and give it a label. This will cause screen readers to just consider it as a single entity and describe it using the label, rather than trying to read out all the child nodes:
+If you are using embedded SVG images in your page, it is a good idea to set `role="img"` on the outer {{HTMLElement('svg')}} element and give it a label. This will cause screen readers to just consider it as a single entity and describe it using the label, rather than trying to read out all the child nodes:
 
 ```html
 <svg role="img" aria-label="Description of your SVG image">
@@ -64,14 +64,14 @@ In certain cases, assistive technology users won't be able to get the meaning of
 For example, if you use emojis in your text, the meaning might be obvious to a sighted user, but someone using a screenreader might get confused because the emojis might have either no text representation at all, or the alternative text might be confusing and not match the context it is being used in. For example, take the following code:
 
 ```html
-<div role="img" aria-label="That cat is so funny">
+<div role="img" aria-label="That cat is so cute">
   <p>
     &#x1F408; &#x1F602;
   </p>
 </div>
 ```
 
-\&#x1F408; \&#x1F602; are entity references for emojis read out as "Cat" and "Face with tears of joy", but this doesn't necessarily make sense — the implied meaning is possibly more like "That cat is so funny", so we include that in an `aria-label` along with `role="img"`.
+`&#x1F408; &#x1F602;`, 🐈 and 😂,  are entity references for emojis read out as "Cat" and "Face with tears of joy", but this doesn't necessarily make sense — the implied meaning is possibly more like "That cat is so cute", so we include that in an `aria-label` along with `role="img"`.
 
 This seems to work OK across some browser/screenreader combinations, but some of them end up reading the label out twice. Use with caution and test thoroughly.
 
@@ -84,19 +84,27 @@ Another example where this might be suitable is when using ASCII emoji combinati
   </p>
 </div>
 ```
+Only the contents of the `aria-label` are announced to screen reader users, hiding the jibberish of the characters without the need for descendant ARIA to hide things, but also hiding potential content that may be included.
 
 ### Associated WAI-ARIA Roles, States, and Properties
 
-- aria-label
-  - : An accessible name is required. An aria-label attribute
+- `aria-label` or `aria-labelledby`
+  - : An accessible name is required. For the HTML {{HTMLElement('img')}} element, use the `alt` attribute. For all other elements with the `img` role, use `aria-labelledby` or `aria-label`.
 
-### Keyboard Interactions
 
-### Required JavaScript features
 
 ## Examples
 
-- [star rating role="img" example](https://codepen.io/svinkle/pen/oYjoNE)
+````html
+<span role="img" aria-label="Rating: 4 out of 5 stars">
+    <span>★</span>
+    <span>★</span>
+    <span>★</span>
+    <span>★</span>
+    <span>☆</span>
+</span>
+````
+
 
 ## Specifications
 
@@ -107,6 +115,12 @@ Another example where this might be suitable is when using ASCII emoji combinati
 
 
 ## See also
+
+- The {{HTMLElement('img')}} element
+- The {{HTMLElement('svg')}} element
+- The {{HTMLElement('picture')}} element
+- The {{HTMLElement('audio')}} element
+- The {{HTMLElement('video')}} element
 
 - [Accessibility Object Model](https://wicg.github.io/aom/spec/)
 - [ARIA in HTML](https://w3c.github.io/html-aria/)
