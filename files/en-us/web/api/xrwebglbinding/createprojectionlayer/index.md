@@ -44,7 +44,7 @@ The `options` object can have the following optional properties:
     - `gl.SRGB8`
     - `gl.RGB8_ALPHA8`
    The default value is `gl.RGBA`.
-- `colorFormat` {{optional_inline}}: A {{domxref("GLenum")}} defining the data type of the depth texture data or `0` indicating that the layer should not provide a depth texture (in that case {{domxref("XRProjectionLayer.ignoreDepthValues")}} will be `true`).
+- `depthFormat` {{optional_inline}}: A {{domxref("GLenum")}} defining the data type of the depth texture data or `0` indicating that the layer should not provide a depth texture (in that case {{domxref("XRProjectionLayer.ignoreDepthValues")}} will be `true`).
   Possible values within {{domxref("WebGLRenderingContext")}} contexts with the {{domxref("WEBGL_depth_texture")}} extension enabled, or within {{domxref("WebGL2RenderingContext")}} contexts (no extension required):
     - `gl.DEPTH_COMPONENT`
     - `gl.DEPTH_STENCIL`
