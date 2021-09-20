@@ -766,17 +766,50 @@ let hatSize = form.elements["hat-size"];
 
 <dl>
  <dt>{{htmlattrdef("autocorrect")}} {{non-standard_inline}}</dt>
- <dd>{{page("/en-US/docs/Web/HTML/Element/input/text", "autocorrect-include")}}</dd>
+ <dd>
+   <p>A Safari extension, the <code>autocorrect</code> attribute is a string which indicates whether or not to activate automatic correction while the user is editing this field. Permitted values are:</p>
+
+   <dl>
+    <dt><code>on</code></dt>
+    <dd>Enable automatic correction of typos, as well as processing of text substitutions if any are configured.</dd>
+    <dt><code>off</code></dt>
+    <dd>Disable automatic correction and text substitutions.</dd>
+   </dl>
+ </dd>
  <dt>{{htmlattrdef("incremental")}} {{non-standard_inline}}</dt>
- <dd>{{page("/en-US/docs/Web/HTML/Element/input/search", "incremental-include")}}</dd>
+ <dd>
+   <p>The Boolean attribute <code>incremental</code> is a WebKit and Blink extension (so supported by Safari, Opera, Chrome, etc.) which, if present, tells the {{Glossary("user agent")}} to process the input as a live search. As the user edits the value of the field, the user agent sends {{event("search")}} events to the {{domxref("HTMLInputElement")}} object representing the search box. This allows your code to update the search results in real time as the user edits the search.</p>
+
+   <p>If <code>incremental</code> is not specified, the {{event("search")}} event is only sent when the user explicitly initiates a search (such as by pressing the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the field).</p>
+
+   <p>The <code>search</code> event is rate-limited so that it is not sent more frequently than an implementation-defined interval.</p>
+ </dd>
  <dt>{{htmlattrdef("mozactionhint")}} {{non-standard_inline}}</dt>
- <dd>{{page("/en-US/docs/Web/HTML/Element/input/text", "mozactionhint-include")}}</dd>
+ <dd>
+   <p>A Mozilla extension, supported by Firefox for Android, which provides a hint as to what sort of action will be taken if the user presses the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the field. This information is used to decide what kind of label to use on the <kbd>Enter</kbd> key on the virtual keyboard.</p>
+
+   <div class="note">
+   <p><strong>Note:</strong> This <a href="https://html.spec.whatwg.org/#input-modalities:-the-enterkeyhint-attribute">has been standardized</a> as the global attribute {{htmlattrxref("enterkeyhint")}}, but is not yet widely implemented. To see the status of the change being implemented in Firefox, see {{bug(1490661)}}.</p>
+   </div>
+
+   <p>Permitted values are: <code>go</code>, <code>done</code>, <code>next</code>, <code>search</code>, and <code>send</code>. The browser decides, using this hint, what label to put on the enter key.</p>
+ </dd>
  <dt>{{htmlattrdef("orient")}} {{non-standard_inline}}</dt>
- <dd>{{page("/en-US/docs/Web/HTML/Element/input/range", "orient-include")}}</dd>
+ <dd>
+   <p>Similar to the -moz-orient non-standard CSS property impacting the {{htmlelement('progress')}} and {{htmlelement('meter')}} elements, the <code>orient</code> attribute defines the orientation of the range slider. Values include <code>horizontal</code>, meaning the range is rendered horizontally, and <code>vertical</code>, where the range is rendered vertically.</p>
+ </dd>
  <dt>{{htmlattrdef("results")}} {{non-standard_inline}}</dt>
- <dd>{{page("/en-US/docs/Web/HTML/Element/input/search", "results-include")}}</dd>
+ <dd>
+   <p>The <code>results</code> attribute—supported only by Safari—is a numeric value that lets you override the maximum number of entries to be displayed in the {{HTMLElement("input")}} element's natively-provided drop-down menu of previous search queries.</p>
+
+   <p>The value must be a non-negative decimal number. If not provided, or an invalid value is given, the browser's default maximum number of entries is used.</p>
+ </dd>
  <dt>{{htmlattrdef("webkitdirectory")}} {{non-standard_inline}}</dt>
- <dd>{{page("/en-US/docs/Web/HTML/Element/input/file", "webkitdirectory-include")}}</dd>
+ <dd>
+   <p>The Boolean <code>webkitdirectory</code> attribute, if present, indicates that only directories should be available to be selected by the user in the file picker interface. See {{domxref("HTMLInputElement.webkitdirectory")}} for additional details and examples.</p>
+
+   <p>Though originally implemented only for WebKit-based browsers, <code>webkitdirectory</code> is also usable in Microsoft Edge as well as Firefox 50 and later. However, even though it has relatively broad support, it is still not standard and should not be used unless you have no alternative.</p>
+ </dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>

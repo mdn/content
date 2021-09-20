@@ -24,13 +24,13 @@ sel.setBaseAndExtent(anchorNode,anchorOffset,focusNode,focusOffset)
 
 ### Parameters
 
-- _`anchorNode`_
+- `anchorNode`
   - : The node at the start of the selection.
-- _`anchorOffset`_
+- `anchorOffset`
   - : The number of child nodes from the start of the anchor node that should be excluded
     from the selection. So for example, if the value is 0 the whole node is included. If
     the value is 1, the whole node minus the first child node is included. And so on.
-- _`focusNode`_
+- `focusNode`
   - : The node at the end of the selection.
 - `focusOffset`
   - : The number of child nodes from the start of the focus node that should be included
@@ -45,14 +45,12 @@ sel.setBaseAndExtent(anchorNode,anchorOffset,focusNode,focusOffset)
 
 ### Return Value
 
-Void.
+None.
 
 ### Exceptions
 
-If `anchorOffset` is larger than the number of child nodes inside
-`anchorNode`, or if `focusOffset` is larger than the number of
-child nodes inside `focusNode`, an {{domxref("IndexSizeError")}} exception is
-thrown.
+- `IndexSizeError` {{domxref("DOMException")}}
+  - : Thrown if `anchorOffset` is larger than the number of child nodes inside `anchorNode`, or if `focusOffset` is larger than the number of child nodes inside `focusNode`.
 
 ## Examples
 

@@ -65,14 +65,14 @@ canvas specified. The coordinates of the rectangle's top-left corner are
 
 ### Exceptions
 
-- `IndexSizeError`
+- `IndexSizeError` {{domxref("DOMException")}}
   - : Thrown if either `sw` or `sh` are zero.
-- `SecurityError`
+- `SecurityError` {{domxref("DOMException")}}
   - : The canvas contains or may contain pixels which were loaded from an origin other
-    than the one from which the document itself was loaded. To avoid
-    `SecurityError` being thrown in this situation, configure CORS to allow the
-    source image to be used in this way. See [Allowing cross-origin use of images
-    and canvas](/en-US/docs/Web/HTML/CORS_enabled_image).
+    than the one from which the document itself was loaded.
+    To avoid a `SecurityError` {{domxref("DOMException")}} being thrown in this situation,
+    configure CORS to allow the source image to be used in this way.
+    See [Allowing cross-origin use of images and canvas](/en-US/docs/Web/HTML/CORS_enabled_image).
 
 ## Example
 
@@ -81,13 +81,9 @@ canvas specified. The coordinates of the rectangle's top-left corner are
 This example draws a rectangle, and then uses `getImageData()` to grab a
 portion of the canvas.
 
-#### HTML
-
 ```html
 <canvas id="canvas"></canvas>
 ```
-
-#### JavaScript
 
 The object retrieved by `getImageData()` has a width of 200 and a height of
 100, for a total of 20,000 pixels. Of those pixels, most are either transparent or taken
@@ -121,5 +117,4 @@ ctx.putImageData(imageData, 150, 10);
 - The interface defining this method: {{domxref("CanvasRenderingContext2D")}}
 - {{domxref("ImageData")}} object
 - {{domxref("CanvasRenderingContext2D.putImageData()")}}
-- [Pixel
-  manipulation with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)
+- [Pixel manipulation with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)

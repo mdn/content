@@ -31,14 +31,6 @@ tags:
 
 <p>This element is used to mark up sub-portions of a larger text. It must be a child of a <code>text</code> element or another <code>tspan</code> element. A typical use case is to paint one word of a sentence bold red.</p>
 
-<pre class="brush:xml">&lt;text&gt;
-  This is &lt;tspan font-weight="bold" fill="red"&gt;bold and red&lt;/tspan&gt;
-&lt;/text&gt;
-</pre>
-
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
 <pre class="brush:html">&lt;svg width="350" height="60" xmlns="http://www.w3.org/2000/svg"&gt;
 &lt;text&gt;
   This is &lt;tspan font-weight="bold" fill="red"&gt;bold and red&lt;/tspan&gt;
@@ -52,9 +44,8 @@ tags:
 ]]&gt;&lt;/style&gt;
 &lt;/svg&gt;
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code', '100%', 100) }}</p>
+<p>{{ EmbedLiveSample('tspan', '100%', 100) }}</p>
 
 <p>The <code>tspan</code> element has the following custom attributes:</p>
 
@@ -75,16 +66,6 @@ tags:
 
 <p>This element fetches via its <code>xlink:href</code> attribute an arbitrary path and aligns the characters, that it encircles, along this path:</p>
 
-<pre class="brush:xml">&lt;path id="my_path" d="M 20,20 C 80,60 100,40 120,20" fill="transparent" /&gt;
-&lt;text&gt;
-  &lt;textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#my_path"&gt;
-    A curve.
-  &lt;/textPath&gt;
-&lt;/text&gt;</pre>
-
-<div class="hidden">
-<h6 id="Playable_code_2">Playable code 2</h6>
-
 <pre class="brush:html">&lt;svg width="200" height="100" xmlns="http://www.w3.org/2000/svg"&gt;
 &lt;path id="my_path" d="M 20,20 C 80,60 100,40 120,20" fill="transparent" /&gt;
 &lt;text&gt;
@@ -101,8 +82,7 @@ tags:
 ]]&gt;&lt;/style&gt;
 &lt;/svg&gt;
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code_2', '100%', 100) }}</p>
+<p>{{ EmbedLiveSample('textPath', '100%', 100) }}</p>
 
 <div>{{PreviousNext("Web/SVG/Tutorial/Patterns", "Web/SVG/Tutorial/Basic_Transformations")}}</div>

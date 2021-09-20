@@ -30,30 +30,25 @@ range.setEnd(endNode, endOffset);
 - `endNode`
   - : The {{ domxref("Node") }} inside which the {{ domxref("Range") }} should end.
 - `endOffset`
-  - : An integer greater than or equal to zero representing the offset for the end of the
-    `Range` from the start of `endNode`.
+  - : An integer greater than or equal to zero representing the offset for the end of the `Range` from the start of `endNode`.
 
 ### Return value
 
-`undefined`.
+None.
 
 ### Exceptions
 
-Exceptions are thrown as {{domxref("DOMException")}} objects of the following types:
-
-- `InvalidNodeTypeError`
-  - : The node specified by `endNode` is a doctype node; range endpoints cannot
-    be located inside a doctype node.
-- `IndexSizeError`
-  - : The value specified by `endOffset` is either greater than or equal to the
-    length of the node or is less than zero.
+- `InvalidNodeTypeError` {{domxref("DOMException")}}
+  - : The node specified by `endNode` is a doctype node; range endpoints cannot be located inside a doctype node.
+- `IndexSizeError` {{domxref("DOMException")}}
+  - : The value specified by `endOffset` is either greater than or equal to the length of the node or is less than zero.
 
 ## Usage notes
 
 If the `endNode` is a {{domxref("Node")}} of type {{domxref("Text")}},
 {{domxref("Comment")}}, or {{domxref("CDataSection")}}, then `endOffset` is
 the number of characters from the start of `endNode`. For other
-{{domxref("Node")}} types, `endOffset` is the number of child nodes between
+{{domxref("Node")}} types, `endOffset` is the number of child nodes between
 the start of the `endNode`.
 
 ## Example

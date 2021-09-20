@@ -34,15 +34,13 @@ The index of the new rule.
 
 ### Exceptions
 
-- A {{domxref("DOMException")}} IndexSizeError
+- `IndexSizeError` {{domxref("DOMException")}}
   - : Thrown if _index_ is greater than the number of child CSS rules.
-- A {{domxref("DOMException")}} HierarchyRequestError
+- `HierarchyRequestError` {{domxref("DOMException")}}
   - : Thrown if, due to constraints specified by CSS, the new rule cannot be inserted into
     the list at the (zero-index) index position given.
-- A {{domxref("DOMException")}} InvalidStateError
-  - : Thrown if the new rule is an `@namespace` at-rule, and the list of child
-    CSS rules contains anything other than `@import` at-rules and
-    `@namespace` at-rules.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the new rule is an `@namespace` at-rule, and the list of child CSS rules contains anything other than `@import` at-rules and `@namespace` at-rules.
 
 ## Examples
 

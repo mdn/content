@@ -98,7 +98,9 @@ browser-compat: html.elements.input.input-search
  </tbody>
 </table>
 
-<p id="attr-list">{{page("/en-US/docs/Web/HTML/Element/input/text", "attr-list", 0, 1, 2)}}</p>
+<h3 id="attr-list"><code id="list">list</code></h3>
+
+<p>The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The {{HTMLElement("datalist")}} provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the {{htmlattrxref("type", "input")}} are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.</p>
 
 <h3 id="attr-maxlength"><code id="maxlength">maxlength</code></h3>
 
@@ -114,17 +116,56 @@ browser-compat: html.elements.input.input-search
 
 <h3 id="attr-pattern"><code id="pattern">pattern</code></h3>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "pattern-include")}}</p>
+<p>The <code>pattern</code> attribute, when specified, is a regular expression that the input's {{htmlattrxref("value")}} must match in order for the value to pass <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a>. It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">guide on regular expressions</a>; the <code>'u'</code> flag is specified when compiling the regular expression, so that the pattern is treated as a sequence of Unicode code points, instead of as ASCII. No forward slashes should be specified around the pattern text.</p>
+
+<p>If the specified pattern is not specified or is invalid, no regular expression is applied and this attribute is ignored completely.</p>
+
+<div class="note">
+<p><strong>Note:</strong> Use the {{htmlattrxref("title", "input")}} attribute to specify text that most browsers will display as a tooltip to explain what the requirements are to match the pattern. You should also include other explanatory text nearby.</p>
+</div>
 
 <p>See the section {{anch("Specifying a pattern")}} for details and an example.</p>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "attr-placeholder", 0, 1, 2)}}</p>
+<h3><code>placeholder</code></h3>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "attr-readonly", 0, 1, 2)}}</p>
+<p>The <code>placeholder</code> attribute is a string that provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that demonstrates the expected type of data, rather than an explanatory message. The text <em>must not</em> include carriage returns or line feeds.</p>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "attr-size", 0, 1, 2)}}</p>
+<p>If the control's content has one directionality ({{Glossary("LTR")}} or {{Glossary("RTL")}}) but needs to present the placeholder in the opposite directionality, you can use Unicode bidirectional algorithm formatting characters to override directionality within the placeholder; see {{SectionOnPage("/en-US/docs/Web/Localization/Unicode_Bidirectional_Text_Algorithm", "Overriding BiDi using Unicode control characters")}} for those characters.</p>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "attr-spellcheck", 0, 1, 2)}}</p>
+<div class="note">
+<p><strong>Note:</strong> Avoid using the <code>placeholder</code> attribute if you can. It is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content. See {{SectionOnPage("/en-US/docs/Web/HTML/Element/input", "Labels and placeholders")}} for more information.</p>
+</div>
+
+<h3><code>readonly</code></h3>
+
+<p>A Boolean attribute which, if present, means this field cannot be edited by the user. Its <code>value</code> can, however, still be changed by JavaScript code directly setting the {{domxref("HTMLInputElement")}} <code>value</code> property.</p>
+
+<div class="note">
+<p><strong>Note:</strong> Because a read-only field cannot have a value, <code>required</code> does not have any effect on inputs with the <code>readonly</code> attribute also specified.</p>
+</div>
+
+<h3><code>size</code></h3>
+
+<p>The <code>size</code> attribute is a numeric value indicating how many characters wide the input field should be. The value must be a number greater than zero, and the default value is 20. Since character widths vary, this may or may not be exact and should not be relied upon to be so; the resulting input may be narrower or wider than the specified number of characters, depending on the characters and the font ({{cssxref("font")}} settings in use).</p>
+
+<p>This does <em>not</em> set a limit on how many characters the user can enter into the field. It only specifies approximately how many can be seen at a time. To set an upper limit on the length of the input data, use the <code>{{anch("maxlength")}}</code> attribute.</p>
+
+<h3 id="attr-spellcheck"><code id="spellcheck">spellcheck</code></h3>
+
+<p><code>spellcheck</code> is a global attribute which is used to indicate whether or not to enable spell checking for an element. It can be used on any editable content, but here we consider specifics related to the use of <code>spellcheck</code> on {{HTMLElement("input")}} elements. The permitted values for <code>spellcheck</code> are:</p>
+
+<dl>
+ <dt><code>false</code></dt>
+ <dd>Disable spell checking for this element.</dd>
+ <dt><code>true</code></dt>
+ <dd>Enable spell checking for this element.</dd>
+ <dt>"" (empty string) or no value</dt>
+ <dd>Follow the element's default behavior for spell checking. This may be based upon a parent's <code>spellcheck</code> setting or other factors.</dd>
+</dl>
+
+<p>An input field can have spell checking enabled if it doesn't have the {{anch("readonly")}} attribute set and is not disabled.</p>
+
+<p>The value returned by reading <code>spellcheck</code> may not reflect the actual state of spell checking within a control, if the {{Glossary("user agent", "user agent's")}} preferences override the setting.</p>
 
 <h2 id="Non-standard_attributes">Non-standard attributes</h2>
 
@@ -159,29 +200,38 @@ browser-compat: html.elements.input.input-search
 
 <h3 id="attr-autocorrect"><code id="autocorrect">autocorrect</code>> {{non-standard_inline}}</h3>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "autocorrect-include")}}</p>
+<p>A Safari extension, the <code>autocorrect</code> attribute is a string which indicates whether or not to activate automatic correction while the user is editing this field. Permitted values are:</p>
+
+<dl>
+ <dt><code>on</code></dt>
+ <dd>Enable automatic correction of typos, as well as processing of text substitutions if any are configured.</dd>
+ <dt><code>off</code></dt>
+ <dd>Disable automatic correction and text substitutions.</dd>
+</dl>
 
 <h3 id="attr-incremental"><code id="incremental">incremental</code> {{non-standard_inline}}</h3>
 
-<div id="incremental-include">
 <p>The Boolean attribute <code>incremental</code> is a WebKit and Blink extension (so supported by Safari, Opera, Chrome, etc.) which, if present, tells the {{Glossary("user agent")}} to process the input as a live search. As the user edits the value of the field, the user agent sends {{event("search")}} events to the {{domxref("HTMLInputElement")}} object representing the search box. This allows your code to update the search results in real time as the user edits the search.</p>
 
 <p>If <code>incremental</code> is not specified, the {{event("search")}} event is only sent when the user explicitly initiates a search (such as by pressing the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the field).</p>
 
 <p>The <code>search</code> event is rate-limited so that it is not sent more frequently than an implementation-defined interval.</p>
-</div>
 
 <h3 id="attr-mozactionhint"><code id="mozactionhint">mozactionhint</code> {{non-standard_inline}}</h3>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "mozactionhint-include")}}</p>
+<p>A Mozilla extension, supported by Firefox for Android, which provides a hint as to what sort of action will be taken if the user presses the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the field. This information is used to decide what kind of label to use on the <kbd>Enter</kbd> key on the virtual keyboard.</p>
+
+<div class="note">
+<p><strong>Note:</strong> This <a href="https://html.spec.whatwg.org/#input-modalities:-the-enterkeyhint-attribute">has been standardized</a> as the global attribute {{htmlattrxref("enterkeyhint")}}, but is not yet widely implemented. To see the status of the change being implemented in Firefox, see {{bug(1490661)}}.</p>
+</div>
+
+<p>Permitted values are: <code>go</code>, <code>done</code>, <code>next</code>, <code>search</code>, and <code>send</code>. The browser decides, using this hint, what label to put on the enter key.</p>
 
 <h3 id="attr-results"><code id="results">results</code> {{non-standard_inline}}</h3>
 
-<div id="results-include">
 <p>The <code>results</code> attribute—supported only by Safari—is a numeric value that lets you override the maximum number of entries to be displayed in the {{HTMLElement("input")}} element's natively-provided drop-down menu of previous search queries.</p>
 
 <p>The value must be a non-negative decimal number. If not provided, or an invalid value is given, the browser's default maximum number of entries is used.</p>
-</div>
 
 <h2 id="Using_search_inputs">Using search inputs</h2>
 

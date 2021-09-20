@@ -249,7 +249,7 @@ it but doesn't throw an error either.
 
 The `enumerable` property attribute defines whether the property is picked
 by {{jsxref("Object.assign()")}} or [spread
-](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)operator. For non-{{jsxref("Global_Objects/Symbol")}} properties it also defines whether it shows
+](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)operator. For non-{{jsxref("Global_Objects/Symbol", "Symbol")}} properties it also defines whether it shows
 up in a {{jsxref("Statements/for...in", "for...in")}} loop and
 {{jsxref("Object.keys()")}} or not.
 

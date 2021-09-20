@@ -14,12 +14,10 @@ browser-compat: api.Window.mozInnerScreenY
 ---
 {{APIRef}}
 
-## Summary
-
-Gets the Y coordinate of the top-left corner of the window's viewport, in screen
+The `mozInnerScreenY` property of the {{domxref("Window")}} interface returns the Y coordinate of the top-left corner of the window's viewport, in screen
 coordinates.
 
-> **Note:** This coordinate is reported in CSS pixels, not in hardware pixels. That means it can be affected by the zoom level; to compute the actual number of physical screen pixels, you should use the [`nsIDOMWindowUtils.screenPixelsPerCSSPixel`](/en-US/docs/XPCOM_Interface_Reference/nsIDOMWindowUtils) property.
+> **Note:** This coordinate is reported in CSS pixels, not in hardware pixels.
 
 ## Syntax
 
@@ -35,8 +33,7 @@ screenY = window.mozInnerScreenY;
 
 ## Specifications
 
-Not part of any W3C technical
-specification or recommendation.
+This feature is not part of any current specification. It is not on track to become a standard.
 
 ## Browser compatibility
 
@@ -45,4 +42,3 @@ specification or recommendation.
 ## See also
 
 - {{domxref("window.mozInnerScreenX")}}
-- [`nsIDOMWindowUtils.screenPixelsPerCSSPixel`](/en-US/docs/XPCOM_Interface_Reference/nsIDOMWindowUtils)

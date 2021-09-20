@@ -122,3 +122,4 @@ form.addEventListener('blur', (event) => {
 
 - Related events: {{domxref("Element/blur_event", "blur")}}, {{domxref("Element/focusin_event", "focusin")}}, {{domxref("Element/focusout_event", "focusout")}}
 - This event on `Window` targets: {{domxref("Window/focus_event", "focus")}} event
+- [Focusing: focus/blur](https://javascript.info/focus-blur)

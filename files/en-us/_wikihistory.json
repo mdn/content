@@ -156465,15 +156465,6 @@
       "Telanor"
     ]
   },
-  "Web/SVG/mimeTypes.rdf_corruption": {
-    "modified": "2019-01-16T15:50:22.137Z",
-    "contributors": [
-      "Jeremie",
-      "White-Gandalf",
-      "Kohei",
-      "Jonathan_Watt"
-    ]
-  },
   "Web/Security": {
     "modified": "2020-12-14T09:30:29.083Z",
     "contributors": [

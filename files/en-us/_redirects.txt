@@ -5723,6 +5723,7 @@
 /en-US/docs/Mozilla/MathML_Project/Fonts	/en-US/docs/Web/MathML/Fonts
 /en-US/docs/Mozilla/Performance/Scroll-linked_effects	https://firefox-source-docs.mozilla.org/performance/scroll-linked_effects.html
 /en-US/docs/Mozilla/QA/Bug_writing_guidelines	https://bugzilla.mozilla.org/page.cgi?id=bug-writing.html
+/en-US/docs/Mozilla/Tech/Xray_vision	https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html
 /en-US/docs/Mozilla/Virtualenv	https://github.com/mdn/archived-content/tree/main/files/en-us/mozilla/virtualenv
 /en-US/docs/Mozilla_CSS_Extensions	/en-US/docs/Web/CSS/Mozilla_Extensions
 /en-US/docs/Mozilla_MathML_Project/Authoring	/en-US/docs/Web/MathML/Authoring
@@ -6226,7 +6227,6 @@
 /en-US/docs/SVG/filter	/en-US/docs/Web/CSS/filter
 /en-US/docs/SVG/g	/en-US/docs/Web/SVG/Element/g
 /en-US/docs/SVG/line	/en-US/docs/Web/SVG/Element/line
-/en-US/docs/SVG/mimeTypes.rdf_corruption	/en-US/docs/Web/SVG/mimeTypes.rdf_corruption
 /en-US/docs/SVG/polyline	/en-US/docs/Web/SVG/Element/polyline
 /en-US/docs/SVG/rect	/en-US/docs/Web/SVG/Element/rect
 /en-US/docs/SVG/use	/en-US/docs/Web/SVG/Element/use
@@ -6246,7 +6246,6 @@
 /en-US/docs/SVG:ellipse	/en-US/docs/Web/SVG/Element/ellipse
 /en-US/docs/SVG:g	/en-US/docs/Web/SVG/Element/g
 /en-US/docs/SVG:line	/en-US/docs/Web/SVG/Element/line
-/en-US/docs/SVG:mimeTypes.rdf_corruption	/en-US/docs/Web/SVG/mimeTypes.rdf_corruption
 /en-US/docs/SVG:polyline	/en-US/docs/Web/SVG/Element/polyline
 /en-US/docs/SVG:rect	/en-US/docs/Web/SVG/Element/rect
 /en-US/docs/SVG:use	/en-US/docs/Web/SVG/Element/use
@@ -11625,6 +11624,7 @@
 /en-US/docs/XSL_Transformations_in_Mozilla_FAQ	/en-US/docs/Web/API/XSLTProcessor/XSL_Transformations_in_Mozilla_FAQ
 /en-US/docs/XSL_Transformations_in_Mozilla_FAQ_(external)	/en-US/docs/Web/API/XSLTProcessor/XSL_Transformations_in_Mozilla_FAQ
 /en-US/docs/XSL_Transforms	/en-US/docs/Web/API/XSLTProcessor
+/en-US/docs/Xray_vision	https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html
 /en-US/docs/acceptCharset	/en-US/docs/Web/API/HTMLFormElement/acceptCharset
 /en-US/docs/adData	/en-US/docs/Web/API/Web_Bluetooth_API
 /en-US/docs/addEventListener	/en-US/docs/Web/API/EventTarget/addEventListener
