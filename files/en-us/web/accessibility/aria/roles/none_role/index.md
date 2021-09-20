@@ -9,38 +9,13 @@ tags:
   - Reference
   - ARIA roles
   - document structure role
-  - NeedsContent
+  - none role
+  - presentation role
 ---
 
+The `none` role is a synonym for the [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/List_role) role; they both remove the element with the role and its descendants from the accessibility tree.
 
-
-## Description
-
-### Associated WAI-ARIA roles, states, and properties
-
-### Keyboard interactions
-
-### Required JavaScript features
-
-## Examples
-
-## Accessibility Concerns
-
-## Best Practices
-
-### Prefer HTML
-
-## Specifications
-
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#none","ARIA: none role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_none_role","none role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
-
-
-## See Also
-
-
+See the [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/List_role) role for more information.
 
 
 <section id="Quick_links">
