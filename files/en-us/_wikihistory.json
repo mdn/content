@@ -76188,35 +76188,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/ScrollToOptions": {
-    "modified": "2020-10-15T22:11:14.827Z",
-    "contributors": [
-      "Ambar",
-      "mfluehr",
-      "wbamberg",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/ScrollToOptions/behavior": {
-    "modified": "2020-10-15T22:11:14.822Z",
-    "contributors": [
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/ScrollToOptions/left": {
-    "modified": "2020-10-15T22:11:14.584Z",
-    "contributors": [
-      "sideshowbarker",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/ScrollToOptions/top": {
-    "modified": "2020-10-15T22:11:14.310Z",
-    "contributors": [
-      "sideshowbarker",
-      "chrisdavidmills"
-    ]
-  },
   "Web/API/SecurityPolicyViolationEvent": {
     "modified": "2020-10-15T21:52:02.043Z",
     "contributors": [
