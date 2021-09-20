@@ -30,8 +30,6 @@ You are also responsible for periodically purging cache entries. Each browser ha
 
 {{securecontext_header}}
 
-> **Note:** The web extensions address (`moz-extension://`) is also considered secure.
-
 ## Methods
 
 - {{domxref("Cache.match", "Cache.match(request, options)")}}
