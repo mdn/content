@@ -40,39 +40,25 @@ cssPrimitiveValue.setStringValue(stringType, stringValue);
 
     | Constant     | Description                                              |
     | ------------ | -------------------------------------------------------- |
-    | `CSS_ATTR`   | The value is an {{cssxref("attr()")}} function.   |
+    | `CSS_ATTR`   | The value is an {{cssxref("attr()")}} function.          |
     | `CSS_IDENT`  | The value is an identifier.                              |
-    | `CSS_STRING` | The value is a {{cssxref("&lt;string&gt;")}}. |
-    | `CSS_URI`    | The value is a {{cssxref("url()")}}.             |
+    | `CSS_STRING` | The value is a {{cssxref("&lt;string&gt;")}}.            |
+    | `CSS_URI`    | The value is a {{cssxref("url()")}}.                     |
 
 - stringValue
   - : A {{domxref("DOMString")}} representing the new string value.
 
 ### Return value
 
-Void.
+None.
 
 ### Exceptions
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col"><strong>Type</strong></th>
-      <th scope="col"><strong>Description</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>DOMException</code></td>
-      <td>
-        An <code>INVALID_ACCESS_ERR</code> is raised if the CSS value doesn't
-        contain a string value or if the string value can't be converted into
-        the specified unit.<br />An NO_MODIFICATION_ALLOWED_ERR is raised if
-        this property is read-only.
-      </td>
-    </tr>
-  </tbody>
-</table>
+- `InvalidAccessError` {{domxref("DOMException")}}
+  - : Thrown if the CSS value doesn't contain a string value 
+    or if the string value can't be converted into the specified unit.
+- `NoModificationAllowedError' {{domxref("DOMException")}}
+  - : Thrown if the property is read-only.
 
 ## Specifications
 
