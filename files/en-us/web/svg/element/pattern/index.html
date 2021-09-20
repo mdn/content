@@ -9,14 +9,13 @@ browser-compat: svg.elements.pattern
 ---
 <div>{{SVGRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>&lt;pattern&gt;</code></strong> element defines a graphics object which can be redrawn at repeated x- and y-coordinate intervals ("tiled") to cover an area.</span></p>
+<p>The <strong><code>&lt;pattern&gt;</code></strong> element defines a graphics object which can be redrawn at repeated x- and y-coordinate intervals ("tiled") to cover an area.</p>
 
 <p>The <code>&lt;pattern&gt;</code> is referenced by the {{SVGAttr("fill")}} and/or {{SVGAttr("stroke")}} attributes on other <a href="/en-US/docs/Web/SVG/Tutorial/Basic_Shapes">graphics elements</a> to fill or stroke those elements with the referenced pattern.</p>
 
-<div id="Example">
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+<h2>Example</h2>
+
+<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
 
 <pre class="brush: html; highlight[4]">&lt;svg viewBox="0 0 230 100" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;defs&gt;
@@ -30,7 +29,6 @@ browser-compat: svg.elements.pattern
 &lt;/svg&gt;</pre>
 
 <p>{{EmbedLiveSample('Example', 150, '100%')}}</p>
-</div>
 
 <h2 id="Attributes">Attributes</h2>
 
@@ -44,7 +42,7 @@ browser-compat: svg.elements.pattern
  <dt>{{SVGAttr("patternContentUnits")}}</dt>
  <dd>This attribute defines the coordinate system for the contents of the {{SVGElement("pattern")}}.<br>
  <small><em>Value type</em>: <code>userSpaceOnUse</code>|<code>objectBoundingBox</code>; <em>Default value</em>: <code>userSpaceOnUse</code>; <em>Animatable</em>: <strong>yes</strong></small>
- <p class="note"><strong>Note:</strong> This attribute has no effect if a <code>viewBox</code> attribute is specified on the <code>&lt;pattern&gt;</code> element.</p>
+ <div class="note"><p><strong>Note:</strong> This attribute has no effect if a <code>viewBox</code> attribute is specified on the <code>&lt;pattern&gt;</code> element.</p></div>
  </dd>
  <dt>{{SVGAttr("patternTransform")}}</dt>
  <dd>This attribute contains the definition of an optional additional transformation from the pattern coordinate system onto the target coordinate system.<br>
@@ -67,7 +65,7 @@ browser-compat: svg.elements.pattern
  <dt>{{SVGAttr("xlink:href")}} {{deprecated_inline}}</dt>
  <dd>This attribute reference a template pattern that provides default values for the <code>&lt;pattern&gt;</code> attributes.<br>
  <small><em>Value type</em>: <a href="/en-US/docs/Web/SVG/Content_type#url"><strong>&lt;URL&gt;</strong></a>; <em>Default value</em>: <em>none</em>; <em>Animatable</em>: <strong>yes</strong></small>
- <p class="note"><strong>Note:</strong> For browsers implementing <code>href</code>, if both <code>href</code> and <code>xlink:href</code> are set, <code>xlink:href</code> will be ignored and only <code>href</code> will be used.</p>
+ <div class="note"><p><strong>Note:</strong> For browsers implementing <code>href</code>, if both <code>href</code> and <code>xlink:href</code> are set, <code>xlink:href</code> will be ignored and only <code>href</code> will be used.</p></div>
  </dd>
  <dt>{{SVGAttr("y")}}</dt>
  <dd>This attribute determines the y coordinate shift of the pattern tile.<br>

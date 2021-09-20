@@ -50,9 +50,9 @@ browser-compat: svg.attributes.conditional_processing.requiredFeatures
   <li>{{SVGElement("use")}}</li>
 </ul>
 
-<div id="topExample">
-<div class="hidden">
-<pre class="brush: css">html, body, svg {
+<h2>Example</h2>
+
+<pre class="brush: css hidden">html, body, svg {
   height: 100%;
 }
 
@@ -60,7 +60,6 @@ text {
   fill: white;
 }
 </pre>
-</div>
 
 <pre class="brush: html; highlight[4,7]">&lt;svg viewBox="0 0 250 45" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;g&gt;
@@ -73,8 +72,7 @@ text {
   &lt;/g&gt;
 &lt;/svg&gt;</pre>
 
-<p>{{EmbedLiveSample("topExample", "250", "100")}}</p>
-</div>
+<p>{{EmbedLiveSample("Example", "250", "100")}}</p>
 
 <h2 id="Usage_notes">Usage notes</h2>
 
@@ -102,35 +100,35 @@ text {
 
 <h2 id="Feature_strings">Feature strings</h2>
 
-<p>The following are the feature strings for the <code>requiredFeatures</code> attribute. These same feature strings apply to the <a class="internal" href="/en-US/docs/DOM/DOMImplementation.hasFeature">hasFeature</a> method call that is part of the SVG DOM's support for the {{domxref("DOMImplementation")}} interface. In some cases the feature strings map directly to a set of attributes, properties or elements, in others they represent some functionality of the browser. Note that the format and naming for feature strings changed from SVG 1.0 to SVG 1.1. The SVG 1.0 feature strings are not listed here but can be found in the <a href="https://www.w3.org/TR/SVG/feature.html">SVG Specification</a>. Some browser support SVG 1.0 Feature strings for compatibility reasons. However, the SVG 1.0 feature strings are considered deprecated.</p>
+<p>The following are the feature strings for the <code>requiredFeatures</code> attribute. These same feature strings apply to the <a href="/en-US/docs/DOM/DOMImplementation.hasFeature">hasFeature</a> method call that is part of the SVG DOM's support for the {{domxref("DOMImplementation")}} interface. In some cases the feature strings map directly to a set of attributes, properties or elements, in others they represent some functionality of the browser. Note that the format and naming for feature strings changed from SVG 1.0 to SVG 1.1. The SVG 1.0 feature strings are not listed here but can be found in the <a href="https://www.w3.org/TR/SVG/feature.html">SVG Specification</a>. Some browser support SVG 1.0 Feature strings for compatibility reasons. However, the SVG 1.0 feature strings are considered deprecated.</p>
 
 <dl>
- <dt class="plain">http://www.w3.org/TR/SVG11/feature#SVG</dt>
+ <dt>http://www.w3.org/TR/SVG11/feature#SVG</dt>
  <dd>
  <p>At least one of the following feature is supported:</p>
 
- <ul class="plain">
+ <ul>
   <li><em>http://www.w3.org/TR/SVG11/feature#SVG-static</em></li>
   <li><em>http://www.w3.org/TR/SVG11/feature#SVG-animation</em></li>
   <li><em>http://www.w3.org/TR/SVG11/feature#SVG-dynamic</em></li>
   <li><em>http://www.w3.org/TR/SVG11/feature#SVGDOM</em></li>
  </ul>
  </dd>
- <dt class="plain">http://www.w3.org/TR/SVG11/feature#SVGDOM</dt>
+ <dt>http://www.w3.org/TR/SVG11/feature#SVGDOM</dt>
  <dd>
  <p>At least one of the following feature is supported:</p>
 
- <ul class="plain">
+ <ul>
   <li><em>http://www.w3.org/TR/SVG11/feature#SVGDOM-static</em></li>
   <li><em>http://www.w3.org/TR/SVG11/feature#SVGDOM-animation</em></li>
   <li><em>http://www.w3.org/TR/SVG11/feature#SVGDOM-dynamic</em></li>
  </ul>
  </dd>
- <dt class="plain">http://www.w3.org/TR/SVG11/feature#SVG-static</dt>
+ <dt>http://www.w3.org/TR/SVG11/feature#SVG-static</dt>
  <dd>
  <p>The browser supports all the following features:</p>
 
- <ul class="plain">
+ <ul>
   <li><em>http://www.w3.org/TR/SVG11/feature#CoreAttribute</em></li>
   <li><em>http://www.w3.org/TR/SVG11/feature#Structure</em></li>
   <li><em>http://www.w3.org/TR/SVG11/feature#ContainerAttribute</em></li>
@@ -155,23 +153,23 @@ text {
   <li><em>http://www.w3.org/TR/SVG11/feature#Extensibility</em></li>
  </ul>
  </dd>
- <dt class="plain">http://www.w3.org/TR/SVG11/feature#SVGDOM-static</dt>
+ <dt>http://www.w3.org/TR/SVG11/feature#SVGDOM-static</dt>
  <dd>
  <p>The browser supports all of the DOM interfaces and methods that correspond to the language features for <em>http://www.w3.org/TR/SVG11/feature#SVG-static</em>.</p>
  </dd>
- <dt class="plain">http://www.w3.org/TR/SVG11/feature#SVG-animation</dt>
+ <dt>http://www.w3.org/TR/SVG11/feature#SVG-animation</dt>
  <dd>
  <p>The browser supports all of the language features from <em>http://www.w3.org/TR/SVG11/feature#SVG-static</em> plus the feature <em>http://www.w3.org/TR/SVG11/feature#Animation</em>.</p>
  </dd>
- <dt class="plain">http://www.w3.org/TR/SVG11/feature#SVGDOM-animation</dt>
+ <dt>http://www.w3.org/TR/SVG11/feature#SVGDOM-animation</dt>
  <dd>
  <p>The browser supports all of the DOM interfaces and methods that correspond to the language features for <em>http://www.w3.org/TR/SVG11/feature#SVG-animation.</em></p>
  </dd>
- <dt class="plain">http://www.w3.org/TR/SVG11/feature#SVG-dynamic</dt>
+ <dt>http://www.w3.org/TR/SVG11/feature#SVG-dynamic</dt>
  <dd>
  <p>The browser supports all of the language features from <em>http://www.w3.org/TR/SVG11/feature#SVG-animation</em> plus the following features:</p>
 
- <ul class="plain">
+ <ul>
   <li><em>http://www.w3.org/TR/SVG11/feature#Hyperlinking</em></li>
   <li><em>http://www.w3.org/TR/SVG11/feature#Scripting</em></li>
   <li><em>http://www.w3.org/TR/SVG11/feature#View</em></li>
@@ -181,151 +179,151 @@ text {
   <li><em>http://www.w3.org/TR/SVG11/feature#AnimationEventsAttribute</em></li>
  </ul>
  </dd>
- <dt class="plain">http://www.w3.org/TR/SVG11/feature#SVGDOM-dynamic</dt>
+ <dt>http://www.w3.org/TR/SVG11/feature#SVGDOM-dynamic</dt>
  <dd>
  <p>The browser supports all of the DOM interfaces and methods that correspond to the language features for <em>http://www.w3.org/TR/SVG11/feature#SVG-dynamic</em>.</p>
  </dd>
- <dt class="plain">http://www.w3.org/TR/SVG11/feature#CoreAttribute</dt>
+ <dt>http://www.w3.org/TR/SVG11/feature#CoreAttribute</dt>
  <dd>
  <p>The browser supports the {{SVGAttr("id")}}, {{SVGAttr("xml:base")}}, {{SVGAttr("xml:lang")}} and {{SVGAttr("xml:space")}} attributes</p>
  </dd>
- <dt class="plain">http://www.w3.org/TR/SVG11/feature#Structure</dt>
+ <dt>http://www.w3.org/TR/SVG11/feature#Structure</dt>
  <dd>
  <p>The browser supports {{SVGElement("svg")}}, {{SVGElement("g")}}, {{SVGElement("defs")}}, {{SVGElement("desc")}}, {{SVGElement("title")}}, {{SVGElement("metadata")}}, {{SVGElement("symbol")}} and {{SVGElement("use")}} elements.</p>
  </dd>
- <dt class="plain">http://www.w3.org/TR/SVG11/feature#BasicStructure</dt>
+ <dt>http://www.w3.org/TR/SVG11/feature#BasicStructure</dt>
  <dd>
  <p>The browser supports {{SVGElement("svg")}}, {{SVGElement("g")}}, {{SVGElement("defs")}}, {{SVGElement("desc")}}, {{SVGElement("title")}}, {{SVGElement("metadata")}} and {{SVGElement("use")}} elements.</p>
  </dd>
- <dt class="plain">http://www.w3.org/TR/SVG11/feature#ContainerAttribute</dt>
+ <dt>http://www.w3.org/TR/SVG11/feature#ContainerAttribute</dt>
  <dd>
  <p>The browser supports the {{SVGAttr("enable-background")}} attribute</p>
  </dd>
- <dt class="plain">http://www.w3.org/TR/SVG11/feature#ConditionalProcessing</dt>
+ <dt>http://www.w3.org/TR/SVG11/feature#ConditionalProcessing</dt>
  <dd>
  <p>The browser supports the {{SVGElement("switch")}} element, and the {{SVGAttr("requiredFeatures")}}, {{SVGAttr("requiredExtensions")}}, {{SVGAttr("systemLanguage")}} attributes</p>
  </dd>
- <dt class="plain">http://www.w3.org/TR/SVG11/feature#Image</dt>
+ <dt>http://www.w3.org/TR/SVG11/feature#Image</dt>
  <dd>
  <p>The browser supports the {{SVGElement("image")}} element.</p>
  </dd>
- <dt class="plain">http://www.w3.org/TR/SVG11/feature#Style</dt>
+ <dt>http://www.w3.org/TR/SVG11/feature#Style</dt>
  <dd>
  <p>The browser supports the {{SVGElement("style")}} element.</p>
  </dd>
- <dt class="plain">http://www.w3.org/TR/SVG11/feature#ViewportAttribute</dt>
+ <dt>http://www.w3.org/TR/SVG11/feature#ViewportAttribute</dt>
  <dd>
  <p>The browser supports the {{SVGAttr("clip")}} and {{SVGAttr("overflow")}} attributes.</p>
  </dd>
- <dt class="plain">http://www.w3.org/TR/SVG11/feature#Shape</dt>
+ <dt>http://www.w3.org/TR/SVG11/feature#Shape</dt>
  <dd>
  <p>The browser supports the {{SVGElement("rect")}}, {{SVGElement("circle")}}, {{SVGElement("line")}}, {{SVGElement("polyline")}}, {{SVGElement("polygon")}}, {{SVGElement("ellipse")}} and {{SVGElement("path")}} elements.</p>
  </dd>
- <dt class="plain">http://www.w3.org/TR/SVG11/feature#Text</dt>
+ <dt>http://www.w3.org/TR/SVG11/feature#Text</dt>
  <dd>
  <p>The browser supports the {{SVGElement("text")}}, {{SVGElement("tspan")}}, {{SVGElement("tref")}}, {{SVGElement("textPath")}}, {{SVGElement("altGlyph")}}, {{SVGElement("altGlyphDef")}}, {{SVGElement("altGlyphItem")}} and {{SVGElement("glyphRef")}} elements.</p>
  </dd>
- <dt class="plain">http://www.w3.org/TR/SVG11/feature#BasicText</dt>
+ <dt>http://www.w3.org/TR/SVG11/feature#BasicText</dt>
  <dd>
  <p>The browser supports the {{SVGElement("text")}} element</p>
  </dd>
- <dt class="plain">http://www.w3.org/TR/SVG11/feature#PaintAttribute</dt>
+ <dt>http://www.w3.org/TR/SVG11/feature#PaintAttribute</dt>
  <dd>
  <p>The browser supports the {{SVGAttr("color")}}, {{SVGAttr("fill")}}, {{SVGAttr("fill-rule")}}, {{SVGAttr("stroke")}}, {{SVGAttr("stroke-dasharray")}}, {{SVGAttr("stroke-dashoffset")}}, {{SVGAttr("stroke-linecap")}}, {{SVGAttr("stroke-linejoin")}}, {{SVGAttr("stroke-miterlimit")}}, {{SVGAttr("stroke-width")}}, {{SVGAttr("color-interpolation")}} and {{SVGAttr("color-rendering")}} attributes</p>
  </dd>
- <dt class="plain">http://www.w3.org/TR/SVG11/feature#BasicPaintAttribute</dt>
+ <dt>http://www.w3.org/TR/SVG11/feature#BasicPaintAttribute</dt>
  <dd>
  <p>The browser supports the {{SVGAttr("color")}}, {{SVGAttr("fill")}}, {{SVGAttr("fill-rule")}}, {{SVGAttr("stroke")}}, {{SVGAttr("stroke-dasharray")}}, {{SVGAttr("stroke-dashoffset")}}, {{SVGAttr("stroke-linecap")}}, {{SVGAttr("stroke-linejoin")}}, {{SVGAttr("stroke-miterlimit")}}, {{SVGAttr("stroke-width")}} and {{SVGAttr("color-rendering")}} attributes</p>
  </dd>
- <dt class="plain">http://www.w3.org/TR/SVG11/feature#OpacityAttribute</dt>
+ <dt>http://www.w3.org/TR/SVG11/feature#OpacityAttribute</dt>
  <dd>
  <p>The browser supports the {{SVGAttr("opacity")}}, {{SVGAttr("stroke-opacity")}} and {{SVGAttr("fill-opacity")}} attributes</p>
  </dd>
- <dt class="plain">http://www.w3.org/TR/SVG11/feature#GraphicsAttribute</dt>
+ <dt>http://www.w3.org/TR/SVG11/feature#GraphicsAttribute</dt>
  <dd>
  <p>The browser supports the {{SVGAttr("display")}}, {{SVGAttr("image-rendering")}}, {{SVGAttr("pointer-events")}}, {{SVGAttr("shape-rendering")}}, {{SVGAttr("text-rendering")}} and {{SVGAttr("visibility")}} attributes</p>
  </dd>
- <dt class="plain">http://www.w3.org/TR/SVG11/feature#BasicGraphicsAttribute</dt>
+ <dt>http://www.w3.org/TR/SVG11/feature#BasicGraphicsAttribute</dt>
  <dd>
  <p>The browser supports the {{SVGAttr("display")}} and {{SVGAttr("visibility")}} attributes</p>
  </dd>
- <dt class="plain">http://www.w3.org/TR/SVG11/feature#Marker</dt>
+ <dt>http://www.w3.org/TR/SVG11/feature#Marker</dt>
  <dd>
  <p>The browser supports the {{SVGElement("marker")}} element</p>
  </dd>
- <dt class="plain">http://www.w3.org/TR/SVG11/feature#Gradient</dt>
+ <dt>http://www.w3.org/TR/SVG11/feature#Gradient</dt>
  <dd>
  <p>The browser supports the {{SVGElement("linearGradient")}}, {{SVGElement("radialGradient")}} and {{SVGElement("stop")}} elements</p>
  </dd>
- <dt class="plain">http://www.w3.org/TR/SVG11/feature#Pattern</dt>
+ <dt>http://www.w3.org/TR/SVG11/feature#Pattern</dt>
  <dd>
  <p>The browser supports the {{SVGElement("pattern")}} element</p>
  </dd>
- <dt class="plain">http://www.w3.org/TR/SVG11/feature#Clip</dt>
+ <dt>http://www.w3.org/TR/SVG11/feature#Clip</dt>
  <dd>
  <p>The browser supports the {{SVGElement("clipPath")}} element and the {{SVGAttr("clip-path")}}, {{SVGAttr("clip-rule")}} attributes</p>
  </dd>
- <dt class="plain">http://www.w3.org/TR/SVG11/feature#BasicClip</dt>
+ <dt>http://www.w3.org/TR/SVG11/feature#BasicClip</dt>
  <dd>
  <p>The browser supports the {{SVGElement("clipPath")}} element and the {{SVGAttr("clip-path")}} attribute</p>
  </dd>
- <dt class="plain">http://www.w3.org/TR/SVG11/feature#Mask</dt>
+ <dt>http://www.w3.org/TR/SVG11/feature#Mask</dt>
  <dd>
  <p>The browser supports the {{SVGElement("mask")}} element</p>
  </dd>
- <dt class="plain">http://www.w3.org/TR/SVG11/feature#Filter</dt>
+ <dt>http://www.w3.org/TR/SVG11/feature#Filter</dt>
  <dd>
  <p>The browser supports the {{SVGElement("filter")}}, {{SVGElement("feBlend")}}, {{SVGElement("feColorMatrix")}}, {{SVGElement("feComponentTransfer")}}, {{SVGElement("feComposite")}}, {{SVGElement("feConvolveMatrix")}}, {{SVGElement("feDiffuseLighting")}}, {{SVGElement("feDisplacementMap")}}, {{SVGElement("feFlood")}}, {{SVGElement("feGaussianBlur")}}, {{SVGElement("feImage")}}, {{SVGElement("feMerge")}}, {{SVGElement("feMergeNode")}}, {{SVGElement("feMorphology")}}, {{SVGElement("feOffset")}}, {{SVGElement("feSpecularLighting")}}, {{SVGElement("feTile")}}, {{SVGElement("feDistantLight")}}, {{SVGElement("fePointLight")}}, {{SVGElement("feSpotLight")}}, {{SVGElement("feFuncR")}}, {{SVGElement("feFuncG")}}, {{SVGElement("feFuncB")}} and {{SVGElement("feFuncA")}} elements</p>
  </dd>
- <dt class="plain">http://www.w3.org/TR/SVG11/feature#BasicFilter</dt>
+ <dt>http://www.w3.org/TR/SVG11/feature#BasicFilter</dt>
  <dd>
  <p>The browser supports the {{SVGElement("filter")}}, {{SVGElement("feBlend")}}, {{SVGElement("feColorMatrix")}}, {{SVGElement("feComponentTransfer")}}, {{SVGElement("feComposite")}}, {{SVGElement("feFlood")}}, {{SVGElement("feGaussianBlur")}}, {{SVGElement("feImage")}}, {{SVGElement("feMerge")}}, {{SVGElement("feMergeNode")}}, {{SVGElement("feOffset")}}, {{SVGElement("feTile")}}, {{SVGElement("feFuncR")}}, {{SVGElement("feFuncG")}}, {{SVGElement("feFuncB")}} and {{SVGElement("feFuncA")}} elements</p>
  </dd>
- <dt class="plain">http://www.w3.org/TR/SVG11/feature#DocumentEventsAttribute</dt>
+ <dt>http://www.w3.org/TR/SVG11/feature#DocumentEventsAttribute</dt>
  <dd>
  <p>The browser supports the {{SVGAttr("onunload")}}, {{SVGAttr("onabort")}}, {{SVGAttr("onerror")}}, {{SVGAttr("onresize")}}, {{SVGAttr("onscroll")}} and {{SVGAttr("onzoom")}} attributes</p>
  </dd>
- <dt class="plain">http://www.w3.org/TR/SVG11/feature#GraphicalEventsAttribute</dt>
+ <dt>http://www.w3.org/TR/SVG11/feature#GraphicalEventsAttribute</dt>
  <dd>
  <p>The browser supports the {{SVGAttr("onfocusin")}}, {{SVGAttr("onfocusout")}}, {{SVGAttr("onactivate")}}, {{SVGAttr("onclick")}}, {{SVGAttr("onmousedown")}}, {{SVGAttr("onmouseup")}}, {{SVGAttr("onmouseover")}}, {{SVGAttr("onmousemove")}}, {{SVGAttr("onmouseout")}} and {{SVGAttr("onload")}} attributes</p>
  </dd>
- <dt class="plain">http://www.w3.org/TR/SVG11/feature#AnimationEventsAttribute</dt>
+ <dt>http://www.w3.org/TR/SVG11/feature#AnimationEventsAttribute</dt>
  <dd>
  <p>The browser supports the {{SVGAttr("onbegin")}}, {{SVGAttr("onend")}}, {{SVGAttr("onrepeat")}} and {{SVGAttr("onload")}} attributes</p>
  </dd>
- <dt class="plain">http://www.w3.org/TR/SVG11/feature#Cursor</dt>
+ <dt>http://www.w3.org/TR/SVG11/feature#Cursor</dt>
  <dd>
  <p>The browser supports the {{SVGElement("cursor")}} element</p>
  </dd>
- <dt class="plain">http://www.w3.org/TR/SVG11/feature#Hyperlinking</dt>
+ <dt>http://www.w3.org/TR/SVG11/feature#Hyperlinking</dt>
  <dd>
  <p>The browser supports the {{SVGElement("a")}} element</p>
  </dd>
- <dt class="plain">http://www.w3.org/TR/SVG11/feature#XlinkAttribute</dt>
+ <dt>http://www.w3.org/TR/SVG11/feature#XlinkAttribute</dt>
  <dd>
  <p>The browser supports the {{SVGAttr("xlink:type")}}, {{SVGAttr("xlink:href")}}, {{SVGAttr("xlink:role")}}, {{SVGAttr("xlink:arcrole")}}, {{SVGAttr("xlink:title")}}, {{SVGAttr("xlink:show")}} and {{SVGAttr("xlink:actuate")}} attributes</p>
  </dd>
- <dt class="plain">http://www.w3.org/TR/SVG11/feature#View</dt>
+ <dt>http://www.w3.org/TR/SVG11/feature#View</dt>
  <dd>
  <p>The browser supports the {{SVGElement("view")}} element</p>
  </dd>
- <dt class="plain">http://www.w3.org/TR/SVG11/feature#Script</dt>
+ <dt>http://www.w3.org/TR/SVG11/feature#Script</dt>
  <dd>
  <p>The browser supports the {{SVGElement("script")}} element</p>
  </dd>
- <dt class="plain">http://www.w3.org/TR/SVG11/feature#Animation</dt>
+ <dt>http://www.w3.org/TR/SVG11/feature#Animation</dt>
  <dd>
  <p>The browser supports the {{SVGElement("animate")}}, {{SVGElement("set")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, {{SVGElement("animateColor")}} and {{SVGElement("mpath")}} elements</p>
  </dd>
- <dt class="plain">http://www.w3.org/TR/SVG11/feature#Font</dt>
+ <dt>http://www.w3.org/TR/SVG11/feature#Font</dt>
  <dd>
  <p>The browser supports the {{SVGElement("font")}}, {{SVGElement("font-face")}}, {{SVGElement("glyph")}}, {{SVGElement("missing-glyph")}}, {{SVGElement("hkern")}}, {{SVGElement("vkern")}}, {{SVGElement("font-face-src")}}, {{SVGElement("font-face-uri")}}, {{SVGElement("font-face-format")}} and {{SVGElement("font-face-name")}} elements</p>
  </dd>
- <dt class="plain">http://www.w3.org/TR/SVG11/feature#BasicFont</dt>
+ <dt>http://www.w3.org/TR/SVG11/feature#BasicFont</dt>
  <dd>
  <p>The browser supports the {{SVGElement("font")}}, {{SVGElement("font-face")}}, {{SVGElement("glyph")}}, {{SVGElement("missing-glyph")}}, {{SVGElement("hkern")}}, {{SVGElement("font-face-src")}} and {{SVGElement("font-face-name")}} elements</p>
  </dd>
- <dt class="plain">http://www.w3.org/TR/SVG11/feature#Extensibility</dt>
+ <dt>http://www.w3.org/TR/SVG11/feature#Extensibility</dt>
  <dd>
  <p>The browser supports the {{SVGElement("foreignObject")}} element</p>
  </dd>

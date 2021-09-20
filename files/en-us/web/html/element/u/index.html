@@ -17,10 +17,10 @@ browser-compat: html.elements.u
 ---
 <div>{{HTMLRef}}</div>
 
-<p>The <strong><code>&lt;u&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element represents a span of inline text which should be rendered in a way that indicates that it has a non-textual annotation.</span> This is rendered by default as a simple solid underline, but may be altered using CSS.</p>
+<p>The <strong><code>&lt;u&gt;</code></strong> <a href="/en-US/docs/Web/HTML">HTML</a> element represents a span of inline text which should be rendered in a way that indicates that it has a non-textual annotation. This is rendered by default as a simple solid underline, but may be altered using CSS.</p>
 
 <div class="warning">
-<p>This element used to be called the "Underline" element in older versions of HTML, and is still sometimes misused in this way. To underline text, you should instead apply a style that includes the CSS {{cssxref("text-decoration")}} property set to <code>underline</code>.</p>
+<p><strong>Warning:</strong> This element used to be called the "Underline" element in older versions of HTML, and is still sometimes misused in this way. To underline text, you should instead apply a style that includes the CSS {{cssxref("text-decoration")}} property set to <code>underline</code>.</p>
 </div>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/u.html", "tabbed-shorter")}}</div>
@@ -69,7 +69,7 @@ browser-compat: html.elements.u
 <p>Along with other pure styling elements, the original HTML Underline (<code>&lt;u&gt;</code>) element was deprecated in HTML 4; however, <code>&lt;u&gt;</code> was restored in HTML 5 with a new, semantic, meaning: to mark text as having some form of non-textual annotation applied.</p>
 
 <div class="note">
-<p>Be careful to avoid using the <code>&lt;u&gt;</code> element with its default styling (of underlined text) in such a way as to be confused with a hyperlink, which is also underlined by default.</p>
+<p><strong>Note:</strong> Avoid using the <code>&lt;u&gt;</code> element with its default styling (of underlined text) in such a way as to be confused with a hyperlink, which is also underlined by default.</p>
 </div>
 
 <h3 id="Use_cases">Use cases</h3>
@@ -148,28 +148,26 @@ Chicken Noodle Soup With Carrots</pre>
 
 <h4 id="Presenting_a_book_title">Presenting a book title</h4>
 
-<div id="example-unstyled-cite">
 <p>Book titles should be presented using the {{HTMLElement("cite")}} element instead of <code>&lt;u&gt;</code> or even <code>&lt;i&gt;</code>.</p>
 
-<h5 id="HTML_3">HTML</h5>
+<h5>Using the cite element</h5>
 
 <pre class="brush: html">&lt;p&gt;The class read &lt;cite&gt;Moby Dick&lt;/cite&gt; in the first term.&lt;/p&gt;</pre>
 
-<h5 id="Result_with_default_style">Result with default style</h5>
+<p>{{EmbedLiveSample("Using_the_cite_element", 650, 80)}}</p>
 
-<p>{{EmbedLiveSample("example-unstyled-cite", 650, 80)}}</p>
-</div>
+<h5>Styling the cite element</h5>
 
-<p>Note that the default styling for the <code>&lt;cite&gt;</code> element renders the text in italics. You can, if you wish, override that using CSS:</p>
+<p>The default styling for the <code>&lt;cite&gt;</code> element renders the text in italics. You can override that using CSS:</p>
+
+<pre class="brush: html">&lt;p&gt;The class read &lt;cite&gt;Moby Dick&lt;/cite&gt; in the first term.&lt;/p&gt;</pre>
 
 <pre class="brush: css">cite {
   font-style: normal;
   text-decoration: underline;
 }</pre>
 
-<h5 id="Result_with_custom_style">Result with custom style</h5>
-
-<p>{{EmbedLiveSample("Presenting_a_book_title", 650, 80)}}</p>
+<p>{{EmbedLiveSample("Styling_the_cite_element", 650, 80)}}</p>
 
 <h2 id="Specifications">Specifications</h2>
 

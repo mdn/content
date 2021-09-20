@@ -1314,11 +1314,6 @@
 /en-US/docs/DOM/EventTarget.dispatchEvent	/en-US/docs/Web/API/EventTarget/dispatchEvent
 /en-US/docs/DOM/EventTarget.removeEventListener	/en-US/docs/Web/API/EventTarget/removeEventListener
 /en-US/docs/DOM/File	/en-US/docs/Web/API/File
-/en-US/docs/DOM/File.fileName	/en-US/docs/Web/API/File/fileName
-/en-US/docs/DOM/File.fileSize	/en-US/docs/Web/API/File/fileSize
-/en-US/docs/DOM/File.getAsBinary	/en-US/docs/Web/API/File/getAsBinary
-/en-US/docs/DOM/File.getAsDataURL	/en-US/docs/Web/API/File/getAsDataURL
-/en-US/docs/DOM/File.getAsText	/en-US/docs/Web/API/File/getAsText
 /en-US/docs/DOM/File.lastModifiedDate	/en-US/docs/Web/API/File/lastModifiedDate
 /en-US/docs/DOM/File.name	/en-US/docs/Web/API/File/name
 /en-US/docs/DOM/File.size	/en-US/docs/Web/API/Blob/size
@@ -1765,7 +1760,6 @@
 /en-US/docs/DOM/ValidityState	/en-US/docs/Web/API/ValidityState
 /en-US/docs/DOM/WheelEvent	/en-US/docs/Web/API/WheelEvent
 /en-US/docs/DOM/Window.dispatchEvent	/en-US/docs/Web/API/EventTarget/dispatchEvent
-/en-US/docs/DOM/Window.routeEvent	/en-US/docs/Web/API/Window/routeEvent
 /en-US/docs/DOM/Worker	/en-US/docs/Web/API/Worker
 /en-US/docs/DOM/Worker/Functions_available_to_workers	/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 /en-US/docs/DOM/XMLHttpRequest	/en-US/docs/Web/API/XMLHttpRequest
@@ -2826,11 +2820,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/Element.querySelector	/en-US/docs/Web/API/Element/querySelector
 /en-US/docs/Document_Object_Model_(DOM)/Element.querySelectorAll	/en-US/docs/Web/API/Element/querySelectorAll
 /en-US/docs/Document_Object_Model_(DOM)/File	/en-US/docs/Web/API/File
-/en-US/docs/Document_Object_Model_(DOM)/File.fileName	/en-US/docs/Web/API/File/fileName
-/en-US/docs/Document_Object_Model_(DOM)/File.fileSize	/en-US/docs/Web/API/File/fileSize
-/en-US/docs/Document_Object_Model_(DOM)/File.getAsBinary	/en-US/docs/Web/API/File/getAsBinary
-/en-US/docs/Document_Object_Model_(DOM)/File.getAsDataURL	/en-US/docs/Web/API/File/getAsDataURL
-/en-US/docs/Document_Object_Model_(DOM)/File.getAsText	/en-US/docs/Web/API/File/getAsText
 /en-US/docs/Document_Object_Model_(DOM)/File.name	/en-US/docs/Web/API/File/name
 /en-US/docs/Document_Object_Model_(DOM)/File.size	/en-US/docs/Web/API/Blob/size
 /en-US/docs/Document_Object_Model_(DOM)/File.type	/en-US/docs/Web/API/Blob/type
@@ -3076,7 +3065,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/Using_the_Page_Visibility_API	/en-US/docs/Web/API/Page_Visibility_API
 /en-US/docs/Document_Object_Model_(DOM)/ValidityState	/en-US/docs/Web/API/ValidityState
 /en-US/docs/Document_Object_Model_(DOM)/Window.dispatchEvent	/en-US/docs/Web/API/EventTarget/dispatchEvent
-/en-US/docs/Document_Object_Model_(DOM)/Window.routeEvent	/en-US/docs/Web/API/Window/routeEvent
 /en-US/docs/Document_Object_Model_(DOM)/Worker	/en-US/docs/Web/API/Worker
 /en-US/docs/Document_Object_Model_(DOM)/Worker/Functions_available_to_workers	/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 /en-US/docs/Document_Object_Model_(DOM)/createEvent	/en-US/docs/Web/API/Document/createEvent
@@ -5732,13 +5720,13 @@
 /en-US/docs/Mozilla/Firefox/Releases/Firefox_41_for_developers	/en-US/docs/Mozilla/Firefox/Releases/41
 /en-US/docs/Mozilla/Firefox/Releases/Firefox_47_for_developers	/en-US/docs/Mozilla/Firefox/Releases/47
 /en-US/docs/Mozilla/Firefox/Releases/developers	/en-US/docs/Mozilla/Firefox/Releases/63
+/en-US/docs/Mozilla/MathML_Project/Fonts	/en-US/docs/Web/MathML/Fonts
 /en-US/docs/Mozilla/Performance/Scroll-linked_effects	https://firefox-source-docs.mozilla.org/performance/scroll-linked_effects.html
 /en-US/docs/Mozilla/QA/Bug_writing_guidelines	https://bugzilla.mozilla.org/page.cgi?id=bug-writing.html
 /en-US/docs/Mozilla/Virtualenv	https://github.com/mdn/archived-content/tree/main/files/en-us/mozilla/virtualenv
 /en-US/docs/Mozilla_CSS_Extensions	/en-US/docs/Web/CSS/Mozilla_Extensions
 /en-US/docs/Mozilla_MathML_Project/Authoring	/en-US/docs/Web/MathML/Authoring
 /en-US/docs/Mozilla_MathML_Project/Authoring_MathML	/en-US/docs/Web/MathML/Authoring
-/en-US/docs/Mozilla_SVG_Status	/en-US/docs/Web/SVG/SVG_1.1_Support_in_Firefox
 /en-US/docs/Mozilla_event_reference	/en-US/docs/Web/Events
 /en-US/docs/Mozilla_event_reference/DOMContentLoaded_(event)	/en-US/docs/Web/API/Window/DOMContentLoaded_event
 /en-US/docs/Mozilla_event_reference/DOMContentLoading (event)	/en-US/docs/Web/API/Window/DOMContentLoaded_event
@@ -6210,7 +6198,6 @@
 /en-US/docs/SVG/Linking	/en-US/docs/Web/SVG/Linking
 /en-US/docs/SVG/Namespaces_Crash_Course	/en-US/docs/Web/SVG/Namespaces_Crash_Course
 /en-US/docs/SVG/Namespaces_Crash_Course/Example	/en-US/docs/Web/SVG/Namespaces_Crash_Course/Example
-/en-US/docs/SVG/Other_Resources	/en-US/docs/Web/SVG/Other_Resources
 /en-US/docs/SVG/SVG_animation_with_SMIL	/en-US/docs/Web/SVG/SVG_animation_with_SMIL
 /en-US/docs/SVG/SVG_as_an_Image	/en-US/docs/Web/SVG/SVG_as_an_Image
 /en-US/docs/SVG/Scripting	/en-US/docs/Web/SVG/Scripting
@@ -6239,7 +6226,6 @@
 /en-US/docs/SVG/filter	/en-US/docs/Web/CSS/filter
 /en-US/docs/SVG/g	/en-US/docs/Web/SVG/Element/g
 /en-US/docs/SVG/line	/en-US/docs/Web/SVG/Element/line
-/en-US/docs/SVG/mimeTypes.rdf_corruption	/en-US/docs/Web/SVG/mimeTypes.rdf_corruption
 /en-US/docs/SVG/polyline	/en-US/docs/Web/SVG/Element/polyline
 /en-US/docs/SVG/rect	/en-US/docs/Web/SVG/Element/rect
 /en-US/docs/SVG/use	/en-US/docs/Web/SVG/Element/use
@@ -6247,7 +6233,6 @@
 /en-US/docs/SVG:Linking	/en-US/docs/Web/SVG/Linking
 /en-US/docs/SVG:Namespaces_Crash_Course	/en-US/docs/Web/SVG/Namespaces_Crash_Course
 /en-US/docs/SVG:Namespaces_Crash_Course:Example	/en-US/docs/Web/SVG/Namespaces_Crash_Course/Example
-/en-US/docs/SVG:Other_Resources	/en-US/docs/Web/SVG/Other_Resources
 /en-US/docs/SVG:Scripting	/en-US/docs/Web/SVG/Scripting
 /en-US/docs/SVG:Specification_Deviations	/en-US/docs/Web/SVG/Specification_Deviations
 /en-US/docs/SVG:Tutorial	/en-US/docs/Web/SVG/Tutorial
@@ -6260,7 +6245,6 @@
 /en-US/docs/SVG:ellipse	/en-US/docs/Web/SVG/Element/ellipse
 /en-US/docs/SVG:g	/en-US/docs/Web/SVG/Element/g
 /en-US/docs/SVG:line	/en-US/docs/Web/SVG/Element/line
-/en-US/docs/SVG:mimeTypes.rdf_corruption	/en-US/docs/Web/SVG/mimeTypes.rdf_corruption
 /en-US/docs/SVG:polyline	/en-US/docs/Web/SVG/Element/polyline
 /en-US/docs/SVG:rect	/en-US/docs/Web/SVG/Element/rect
 /en-US/docs/SVG:use	/en-US/docs/Web/SVG/Element/use
@@ -6272,10 +6256,6 @@
 /en-US/docs/SVG_Tutorial	/en-US/docs/Web/SVG/Tutorial
 /en-US/docs/SVG_animation_(SMIL)_in_Firefox	/en-US/docs/Web/SVG/SVG_animation_with_SMIL
 /en-US/docs/SVG_improvements_in_Firefox_3	/en-US/docs/Mozilla/Firefox/Releases/3/SVG_improvements
-/en-US/docs/SVG_in_Firefox	/en-US/docs/Web/SVG/SVG_1.1_Support_in_Firefox
-/en-US/docs/SVG_in_Firefox_1.5	/en-US/docs/Web/SVG/SVG_1.1_Support_in_Firefox
-/en-US/docs/SVG_in_Firefox_2	/en-US/docs/Web/SVG/SVG_1.1_Support_in_Firefox
-/en-US/docs/SVG_in_Firefox_2.0	/en-US/docs/Web/SVG/SVG_1.1_Support_in_Firefox
 /en-US/docs/Same_origin_policy_for_JavaScript	/en-US/docs/Web/Security/Same-origin_policy
 /en-US/docs/Sample_.htaccess_file	/en-US/docs/Learn/Server-side/Apache_Configuration_htaccess
 /en-US/docs/Scripting_plugins	/en-US/docs/Plugins/Guide/Scripting_plugins
@@ -7419,15 +7399,12 @@
 /en-US/docs/Web/API/FetchSignal	/en-US/docs/Web/API/AbortSignal
 /en-US/docs/Web/API/FetchSignal/aborted	/en-US/docs/Web/API/AbortSignal/aborted
 /en-US/docs/Web/API/FetchSignal/onabort	/en-US/docs/Web/API/AbortSignal/onabort
-/en-US/docs/Web/API/File.fileName	/en-US/docs/Web/API/File/fileName
-/en-US/docs/Web/API/File.fileSize	/en-US/docs/Web/API/File/fileSize
-/en-US/docs/Web/API/File.getAsBinary	/en-US/docs/Web/API/File/getAsBinary
-/en-US/docs/Web/API/File.getAsDataURL	/en-US/docs/Web/API/File/getAsDataURL
-/en-US/docs/Web/API/File.getAsText	/en-US/docs/Web/API/File/getAsText
 /en-US/docs/Web/API/File.lastModifiedDate	/en-US/docs/Web/API/File/lastModifiedDate
 /en-US/docs/Web/API/File.name	/en-US/docs/Web/API/File/name
 /en-US/docs/Web/API/File.size	/en-US/docs/Web/API/Blob/size
 /en-US/docs/Web/API/File.type	/en-US/docs/Web/API/Blob/type
+/en-US/docs/Web/API/File/fileName	/en-US/docs/Web/API/File/name
+/en-US/docs/Web/API/File/fileSize	/en-US/docs/Web/API/Blob/size
 /en-US/docs/Web/API/FileEntry	/en-US/docs/Web/API/FileSystemFileEntry
 /en-US/docs/Web/API/FileHandle	/en-US/docs/Web/API/IDBMutableFile
 /en-US/docs/Web/API/FileHandle.getFile	/en-US/docs/Web/API/IDBMutableFile/getFile
@@ -8857,7 +8834,6 @@
 /en-US/docs/Web/API/Window.dispatchEvent	/en-US/docs/Web/API/EventTarget/dispatchEvent
 /en-US/docs/Web/API/Window.localStorage	/en-US/docs/Web/API/Window/localStorage
 /en-US/docs/Web/API/Window.onlanguagechange	/en-US/docs/Web/API/WindowEventHandlers/onlanguagechange
-/en-US/docs/Web/API/Window.routeEvent	/en-US/docs/Web/API/Window/routeEvent
 /en-US/docs/Web/API/Window.sessionStorage	/en-US/docs/Web/API/Window/sessionStorage
 /en-US/docs/Web/API/Window/StaticRange	/en-US/docs/Web/API/StaticRange
 /en-US/docs/Web/API/Window/URL	/en-US/docs/Web/API/URL
@@ -11434,20 +11410,6 @@
 /en-US/docs/XML_introduction/Index	/en-US/docs/Web/XML/Index
 /en-US/docs/XML_introduction/xml:base	/en-US/docs/Web/XML/xml:base
 /en-US/docs/XPCOM_Interface_Reference/nsIDOMStorageEvent	/en-US/docs/Web/API/StorageEvent
-/en-US/docs/XPInstall_API_Reference/InstallTrigger_Object	/en-US/docs/Web/API/InstallTrigger
-/en-US/docs/XPInstall_API_Reference/InstallTrigger_Object/Methods/compareVersion	/en-US/docs/Web/API/InstallTrigger/compareVersion
-/en-US/docs/XPInstall_API_Reference/InstallTrigger_Object/Methods/enabled	/en-US/docs/Web/API/InstallTrigger/enabled
-/en-US/docs/XPInstall_API_Reference/InstallTrigger_Object/Methods/getVersion	/en-US/docs/Web/API/InstallTrigger/getVersion
-/en-US/docs/XPInstall_API_Reference/InstallTrigger_Object/Methods/install	/en-US/docs/Web/API/InstallTrigger/install
-/en-US/docs/XPInstall_API_Reference/InstallTrigger_Object/Methods/installChrome	/en-US/docs/Web/API/InstallTrigger/installChrome
-/en-US/docs/XPInstall_API_Reference/InstallTrigger_Object/Methods/startSoftwareUpdate	/en-US/docs/Web/API/InstallTrigger/startSoftwareUpdate
-/en-US/docs/XPInstall_API_Reference:InstallTrigger_Object	/en-US/docs/Web/API/InstallTrigger
-/en-US/docs/XPInstall_API_Reference:InstallTrigger_Object:Methods:compareVersion	/en-US/docs/Web/API/InstallTrigger/compareVersion
-/en-US/docs/XPInstall_API_Reference:InstallTrigger_Object:Methods:enabled	/en-US/docs/Web/API/InstallTrigger/enabled
-/en-US/docs/XPInstall_API_Reference:InstallTrigger_Object:Methods:getVersion	/en-US/docs/Web/API/InstallTrigger/getVersion
-/en-US/docs/XPInstall_API_Reference:InstallTrigger_Object:Methods:install	/en-US/docs/Web/API/InstallTrigger/install
-/en-US/docs/XPInstall_API_Reference:InstallTrigger_Object:Methods:installChrome	/en-US/docs/Web/API/InstallTrigger/installChrome
-/en-US/docs/XPInstall_API_Reference:InstallTrigger_Object:Methods:startSoftwareUpdate	/en-US/docs/Web/API/InstallTrigger/startSoftwareUpdate
 /en-US/docs/XPath	/en-US/docs/Web/XPath
 /en-US/docs/XPath/Axes	/en-US/docs/Web/XPath/Axes
 /en-US/docs/XPath/Axes/ancestor	/en-US/docs/Web/XPath/Axes/ancestor

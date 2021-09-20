@@ -609,8 +609,6 @@ browser-compat: html.elements.input
  <dd>
  <p>A string specifying a name for the input control. This name is submitted along with the control's value when the form data is submitted.</p>
 
- <h5 id="Whats_in_a_name">What's in a name</h5>
-
  <p>Consider the <code>name</code> a required attribute (even though it's not). If an input has no <code>name</code> specified, or <code>name</code> is empty, the input's value is not submitted with the form! (Disabled controls, unchecked radio buttons, unchecked checkboxes, and reset buttons are also not sent.)</p>
 
  <p>There are two special cases:</p>
@@ -620,8 +618,6 @@ browser-compat: html.elements.input
   <li><code>isindex</code>: For historical reasons, the name <code><a href="https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fe-name">isindex</a></code> is not allowed.</li>
  </ol>
 
- <h5 id="name_and_radio_buttons">name and radio buttons</h5>
-
  <p>The <a href="#htmlattrdefname"><code>name</code></a> attribute creates a unique behavior for radio buttons.</p>
 
  <p>Only one radio button in a same-named group of radio buttons can be checked at a time. Selecting any radio button in that group automatically deselects any currently-selected radio button in the same group. The value of that one checked radio button is sent along with the name if the form is submitted,</p>
@@ -629,8 +625,6 @@ browser-compat: html.elements.input
  <p>When tabbing into a series of same-named group of radio buttons, if one is checked, that one will receive focus. If they aren't grouped together in source order, if one of the group is checked, tabbing into the group starts when the first one in the group is encountered, skipping all those that aren't checked. In other words, if one is checked, tabbing skips the unchecked radio buttons in the group. If none are checked, the radio button group receives focus when the first button in the same name group is reached.</p>
 
  <p>Once one of the radio buttons in a group has focus, using the arrow keys will navigate through all the radio buttons of the same name, even if the radio buttons are not grouped together in the source order.</p>
-
- <h5 id="HTMLFormElement.elements">HTMLFormElement.elements</h5>
 
  <p>When an input element is given a <code>name</code>, that name becomes a property of the owning form element's {{domxref("HTMLFormElement.elements")}} property. If you have an input whose <code>name</code> is set to <code>guest</code> and another whose <code>name</code> is <code>hat-size</code>, the following code can be used:</p>
 
@@ -648,14 +642,12 @@ let hatSize = form.elements["hat-size"];
  </dd>
  <dt id="htmlattrdefpattern">{{htmlattrdef("pattern")}}</dt>
  <dd>
- <div id="pattern-include">
  <p>The <code>pattern</code> attribute, when specified, is a regular expression that the input's {{htmlattrxref("value", "input")}} must match in order for the value to pass <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a>. It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">guide on regular expressions</a>; the <code>'u'</code> flag is specified when compiling the regular expression, so that the pattern is treated as a sequence of Unicode code points, instead of as ASCII. No forward slashes should be specified around the pattern text.</p>
 
  <p>If the <code>pattern</code> attribute is present but is not specified or is invalid, no regular expression is applied and this attribute is ignored completely. If the pattern attribute is valid and a non-empty value does not match the pattern, constraint validation will prevent form submission.</p>
 
  <div class="note">
- <p><strong>Tip:</strong> If using the <code>pattern</code> attribute, inform the user about the expected format by including explanatory text nearby. You can also include a {{htmlattrxref("title", "input")}} attribute to explain what the requirements are to match the pattern; most browsers will display this title as a tooltip. The visible explanation is required for accessibility. The tooltip is an enhancement.</p>
- </div>
+ <p><strong>Note:</strong> If using the <code>pattern</code> attribute, inform the user about the expected format by including explanatory text nearby. You can also include a {{htmlattrxref("title", "input")}} attribute to explain what the requirements are to match the pattern; most browsers will display this title as a tooltip. The visible explanation is required for accessibility. The tooltip is an enhancement.</p>
  </div>
 
  <p>See {{anch("Client-side validation")}} for more information.</p>
@@ -688,7 +680,6 @@ let hatSize = form.elements["hat-size"];
  </dd>
  <dt id="htmlattrdefstep">{{htmlattrdef("step")}}</dt>
  <dd>
- <div id="step-include">
  <p>Valid for the numeric input types, including <code>number</code>, date/time input types, and <code>range</code>, the <code><a href="/en-US/docs/Web/HTML/Attributes/step">step</a></code> attribute is a number that specifies the granularity that the value must adhere to.</p>
 
  <p>If not explicitly included:</p>
@@ -706,7 +697,6 @@ let hatSize = form.elements["hat-size"];
 
  <div class="note">
  <p><strong>Note:</strong> When the data entered by the user doesn't adhere to the stepping configuration, the value is considered invalid in contraint validation and will match the <code>:invalid</code> pseudoclass.</p>
- </div>
  </div>
 
  <p>See {{anch("Client-side validation")}} for more information.</p>
@@ -776,17 +766,50 @@ let hatSize = form.elements["hat-size"];
 
 <dl>
  <dt>{{htmlattrdef("autocorrect")}} {{non-standard_inline}}</dt>
- <dd>{{page("/en-US/docs/Web/HTML/Element/input/text", "autocorrect-include")}}</dd>
+ <dd>
+   <p>A Safari extension, the <code>autocorrect</code> attribute is a string which indicates whether or not to activate automatic correction while the user is editing this field. Permitted values are:</p>
+
+   <dl>
+    <dt><code>on</code></dt>
+    <dd>Enable automatic correction of typos, as well as processing of text substitutions if any are configured.</dd>
+    <dt><code>off</code></dt>
+    <dd>Disable automatic correction and text substitutions.</dd>
+   </dl>
+ </dd>
  <dt>{{htmlattrdef("incremental")}} {{non-standard_inline}}</dt>
- <dd>{{page("/en-US/docs/Web/HTML/Element/input/search", "incremental-include")}}</dd>
+ <dd>
+   <p>The Boolean attribute <code>incremental</code> is a WebKit and Blink extension (so supported by Safari, Opera, Chrome, etc.) which, if present, tells the {{Glossary("user agent")}} to process the input as a live search. As the user edits the value of the field, the user agent sends {{event("search")}} events to the {{domxref("HTMLInputElement")}} object representing the search box. This allows your code to update the search results in real time as the user edits the search.</p>
+
+   <p>If <code>incremental</code> is not specified, the {{event("search")}} event is only sent when the user explicitly initiates a search (such as by pressing the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the field).</p>
+
+   <p>The <code>search</code> event is rate-limited so that it is not sent more frequently than an implementation-defined interval.</p>
+ </dd>
  <dt>{{htmlattrdef("mozactionhint")}} {{non-standard_inline}}</dt>
- <dd>{{page("/en-US/docs/Web/HTML/Element/input/text", "mozactionhint-include")}}</dd>
+ <dd>
+   <p>A Mozilla extension, supported by Firefox for Android, which provides a hint as to what sort of action will be taken if the user presses the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the field. This information is used to decide what kind of label to use on the <kbd>Enter</kbd> key on the virtual keyboard.</p>
+
+   <div class="note">
+   <p><strong>Note:</strong> This <a href="https://html.spec.whatwg.org/#input-modalities:-the-enterkeyhint-attribute">has been standardized</a> as the global attribute {{htmlattrxref("enterkeyhint")}}, but is not yet widely implemented. To see the status of the change being implemented in Firefox, see {{bug(1490661)}}.</p>
+   </div>
+
+   <p>Permitted values are: <code>go</code>, <code>done</code>, <code>next</code>, <code>search</code>, and <code>send</code>. The browser decides, using this hint, what label to put on the enter key.</p>
+ </dd>
  <dt>{{htmlattrdef("orient")}} {{non-standard_inline}}</dt>
- <dd>{{page("/en-US/docs/Web/HTML/Element/input/range", "orient-include")}}</dd>
+ <dd>
+   <p>Similar to the -moz-orient non-standard CSS property impacting the {{htmlelement('progress')}} and {{htmlelement('meter')}} elements, the <code>orient</code> attribute defines the orientation of the range slider. Values include <code>horizontal</code>, meaning the range is rendered horizontally, and <code>vertical</code>, where the range is rendered vertically.</p>
+ </dd>
  <dt>{{htmlattrdef("results")}} {{non-standard_inline}}</dt>
- <dd>{{page("/en-US/docs/Web/HTML/Element/input/search", "results-include")}}</dd>
+ <dd>
+   <p>The <code>results</code> attribute—supported only by Safari—is a numeric value that lets you override the maximum number of entries to be displayed in the {{HTMLElement("input")}} element's natively-provided drop-down menu of previous search queries.</p>
+
+   <p>The value must be a non-negative decimal number. If not provided, or an invalid value is given, the browser's default maximum number of entries is used.</p>
+ </dd>
  <dt>{{htmlattrdef("webkitdirectory")}} {{non-standard_inline}}</dt>
- <dd>{{page("/en-US/docs/Web/HTML/Element/input/file", "webkitdirectory-include")}}</dd>
+ <dd>
+   <p>The Boolean <code>webkitdirectory</code> attribute, if present, indicates that only directories should be available to be selected by the user in the file picker interface. See {{domxref("HTMLInputElement.webkitdirectory")}} for additional details and examples.</p>
+
+   <p>Though originally implemented only for WebKit-based browsers, <code>webkitdirectory</code> is also usable in Microsoft Edge as well as Firefox 50 and later. However, even though it has relatively broad support, it is still not standard and should not be used unless you have no alternative.</p>
+ </dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
@@ -894,11 +917,10 @@ let hatSize = form.elements["hat-size"];
  </tbody>
 </table>
 
-<h4 id="Examples">Examples</h4>
+<h4>Pseudo-classes example</h4>
 
 <p>We can style a checkbox label based on whether the checkbox is checked or not. In this example, we are styling the {{cssxref('color')}} and {{cssxref('font-weight')}} of the {{htmlelement('label')}} that comes immediately after a checked input. We haven't applied any styles if the <code>input</code> is not checked.</p>
 
-<div id="checkbox_label">
 <pre class="brush: html hidden">&lt;input id="checkboxInput" type="checkbox"&gt;
 &lt;label for="checkboxInput"&gt;Toggle the checkbox on and off&lt;/label&gt;
 </pre>
@@ -909,8 +931,7 @@ let hatSize = form.elements["hat-size"];
 }
 </pre>
 
-<p>{{EmbedLiveSample('checkbox_label', 500, 80)}}</p>
-</div>
+<p>{{EmbedLiveSample('Pseudo-classes_example', 500, 80)}}</p>
 
 <h3 id="Attribute_selectors">Attribute selectors</h3>
 

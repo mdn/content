@@ -8,13 +8,13 @@ browser-compat: svg.attributes.presentation.text-decoration
 ---
 <div>{{SVGRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>text-decoration</code></strong> attribute defines whether text is decorated with an underline, overline and/or strike-through.</span> It is a shorthand for the {{cssxref("text-decoration-line")}} and {{cssxref("text-decoration-style")}} properties.</p>
+<p>The <strong><code>text-decoration</code></strong> attribute defines whether text is decorated with an underline, overline and/or strike-through. It is a shorthand for the {{cssxref("text-decoration-line")}} and {{cssxref("text-decoration-style")}} properties.</p>
 
 <p>The fill and stroke of the text decoration are given by the fill and stroke of the text at the point where the text decoration is declared.</p>
 
 <p>The paint order of the text decoration, i.e. the fill and stroke, is determined by the value of the {{SVGAttr("paint-order")}} attribute at the point where the text decoration is declared.</p>
 
-<p class="note"><strong>Note:</strong> As a presentation attribute, <code>text-decoration</code> can be used as a CSS property. See the {{cssxref("text-decoration", "CSS text-decoration")}} property for more information.</p>
+<div class="note"><p><strong>Note:</strong> As a presentation attribute, <code>text-decoration</code> can be used as a CSS property. See the {{cssxref("text-decoration", "CSS text-decoration")}} property for more information.</p></div>
 
 <p>You can use this attribute with the following SVG elements:</p>
 
@@ -26,20 +26,18 @@ browser-compat: svg.attributes.presentation.text-decoration
   <li>{{SVGElement("tspan")}}</li>
 </ul>
 
-<div id="topExample">
-<div class="hidden">
-<pre class="brush: css">html, body, svg {
+<h2>Example</h2>
+
+<pre class="brush: css hidden">html, body, svg {
   height: 100%;
 }</pre>
-</div>
 
 <pre class="brush: html; highlight[2,3]">&lt;svg viewBox="0 0 250 50" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;text y="20" text-decoration="underline"&gt;Underlined text&lt;/text&gt;
   &lt;text x="0" y="40" text-decoration="line-through"&gt;Struck-through text&lt;/text&gt;
 &lt;/svg&gt;</pre>
 
-<p>{{EmbedLiveSample("topExample", "250", "100")}}</p>
-</div>
+<p>{{EmbedLiveSample("Example", "250", "100")}}</p>
 
 <h2 id="Usage_notes">Usage notes</h2>
 

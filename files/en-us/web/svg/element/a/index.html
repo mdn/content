@@ -14,11 +14,10 @@ browser-compat: svg.elements.a
 
 <p>SVG's <code>&lt;a&gt;</code> element is a container, which means you can create a link around text (like in HTML) but also around any shape.</p>
 
-<div id="Example">
-<div class="hidden">
-<pre class="brush: css">@namespace svg url(http://www.w3.org/2000/svg);
+<h2>Example</h2>
+
+<pre class="brush: css hidden">@namespace svg url(http://www.w3.org/2000/svg);
 html,body,svg { height:100% }</pre>
-</div>
 
 <pre class="brush: html">&lt;svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;!-- A link around a shape --&gt;
@@ -56,10 +55,9 @@ svg|a:hover, svg|a:active {
 }</pre>
 
 <p>{{EmbedLiveSample('Example', 100, 100)}}</p>
-</div>
 
 <div class="warning">
-<p>Since this element shares its tag name with <a href="/en-US/docs/Web/HTML/Element/a">HTML's <code>&lt;a&gt;</code> element</a>, selecting <code>a</code> with CSS or {{domxref("Document.querySelector", "querySelector")}} may apply to the wrong kind of element. Try <a href="/en-US/docs/Web/CSS/@namespace">the <code>@namespace</code> rule</a> to distinguish the two.</p>
+<p><strong>Warning:</strong> Since this element shares its tag name with <a href="/en-US/docs/Web/HTML/Element/a">HTML's <code>&lt;a&gt;</code> element</a>, selecting <code>a</code> with CSS or {{domxref("Document.querySelector", "querySelector")}} may apply to the wrong kind of element. Try <a href="/en-US/docs/Web/CSS/@namespace">the <code>@namespace</code> rule</a> to distinguish the two.</p>
 </div>
 
 <h2 id="Attributes">Attributes</h2>

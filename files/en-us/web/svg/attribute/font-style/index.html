@@ -17,7 +17,7 @@ browser-compat: svg.attributes.presentation.font-style
 
 <p>The <strong><code>font-style</code></strong> attribute specifies whether the text is to be rendered using a normal, italic, or oblique face.</p>
 
-<p class="note"><strong>Note:</strong> As a presentation attribute, <code>font-style</code> can be used as a CSS property. See the {{cssxref("font-style", "CSS font-style")}} property for more information.</p>
+<div class="note"><p><strong>Note:</strong> As a presentation attribute, <code>font-style</code> can be used as a CSS property. See the {{cssxref("font-style", "CSS font-style")}} property for more information.</p></div>
 
 <p>You can use this attribute with the following SVG elements:</p>
 
@@ -29,20 +29,18 @@ browser-compat: svg.attributes.presentation.font-style
   <li>{{SVGElement("tspan")}}</li>
 </ul>
 
-<div id="topExample">
-<div class="hidden">
-<pre class="brush: css">html, body, svg {
+<h2>Example</h2>
+
+<pre class="brush: css hidden">html, body, svg {
   height: 100%;
 }</pre>
-</div>
 
 <pre class="brush: html; highlight[2,3]">&lt;svg viewBox="0 0 250 30" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;text y="20" font-style="normal"&gt;Normal font style&lt;/text&gt;
   &lt;text x="150" y="20" font-style="italic"&gt;Italic font style&lt;/text&gt;
 &lt;/svg&gt;</pre>
 
-<p>{{EmbedLiveSample("topExample", "250", "30")}}</p>
-</div>
+<p>{{EmbedLiveSample("Example", "250", "30")}}</p>
 
 <h2 id="Usage_notes">Usage notes</h2>
 

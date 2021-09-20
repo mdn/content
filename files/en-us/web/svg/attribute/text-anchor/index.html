@@ -8,11 +8,13 @@ browser-compat: svg.attributes.presentation.text-anchor
 ---
 <div>{{SVGRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>text-anchor</code></strong> attribute is used to align (start-, middle- or end-alignment) a string of pre-formatted text or auto-wrapped text where the wrapping area is determined from the {{SVGAttr("inline-size")}} property relative to a given point.</span> It is not applicable to other types of auto-wrapped text. For those cases you should use {{cssxref("text-align")}}. For multi-line text, the alignment takes place for each line.</p>
+<p>The <strong><code>text-anchor</code></strong> attribute is used to align (start-, middle- or end-alignment) a string of pre-formatted text or auto-wrapped text where the wrapping area is determined from the {{SVGAttr("inline-size")}} property relative to a given point.</p>
+
+<p>This attribute is not applicable to other types of auto-wrapped text. For those cases you should use {{cssxref("text-align")}}. For multi-line text, the alignment takes place for each line.</p>
 
 <p>The <code>text-anchor</code> attribute is applied to each individual text chunk within a given {{SVGElement("text")}} element. Each text chunk has an initial current text position, which represents the point in the user coordinate system resulting from (depending on context) application of the {{SVGAttr("x")}} and {{SVGAttr("y")}} attributes on the <code>&lt;text&gt;</code> element, any <code>x</code> or <code>y</code> attribute values on a {{SVGElement("tspan")}}, {{SVGElement("tref")}} or {{SVGElement("altGlyph")}} element assigned explicitly to the first rendered character in a text chunk, or determination of the initial current text position for a {{SVGElement("textPath")}} element.</p>
 
-<p class="note"><strong>Note:</strong> As a presentation attribute, <code>text-anchor</code> can be used as a CSS property.</p>
+<div class="note"><p><strong>Note:</strong> As a presentation attribute, <code>text-anchor</code> can be used as a CSS property.</p></div>
 
 <p>You can use this attribute with the following SVG elements:</p>
 
@@ -24,12 +26,11 @@ browser-compat: svg.attributes.presentation.text-anchor
   <li>{{SVGElement("tspan")}}</li>
 </ul>
 
-<div id="topExample">
-<div class="hidden">
-<pre class="brush: css">html, body, svg {
+<h2>Example</h2>
+
+<pre class="brush: css hidden">html, body, svg {
   height: 100%;
 }</pre>
-</div>
 
 <pre class="brush: html; highlight[6-8]">&lt;svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;!-- Materialization of anchors --&gt;
@@ -52,8 +53,7 @@ browser-compat: svg.attributes.presentation.text-anchor
   ]]&gt;&lt;/style&gt;
 &lt;/svg&gt;</pre>
 
-<p>{{EmbedLiveSample("topExample", "120", "120")}}</p>
-</div>
+<p>{{EmbedLiveSample("Example", "120", "120")}}</p>
 
 <h2 id="Usage_notes">Usage notes</h2>
 

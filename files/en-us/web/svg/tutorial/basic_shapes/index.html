@@ -12,9 +12,11 @@ tags:
 
 <h2 id="Basic_shapes">Basic shapes</h2>
 
-<p>To insert a shape, you create an element in the document. Different elements correspond to different shapes and take different parameters to describe the size and position of those shapes. Some are slightly redundant in that they can be created by other shapes, but they're all there for your convenience and to keep your SVG documents as short and as readable as possible. All the basic shapes are shown in the image to the right. The code to generate that looks something like:</p>
+<p>To insert a shape, you create an element in the document. Different elements correspond to different shapes and take different parameters to describe the size and position of those shapes. Some are slightly redundant in that they can be created by other shapes, but they're all there for your convenience and to keep your SVG documents as short and as readable as possible. All the basic shapes are shown in the following image.</p>
 
-<p><img alt="" class="internal" src="shapes.png" style="float: right;"></p>
+<p><img alt="" class="internal" src="shapes.png"></p>
+
+<p>The code to generate that image looks something like this:</p>
 
 <pre class="brush:xml">&lt;?xml version="1.0" standalone="no"?&gt;
 &lt;svg width="200" height="250" version="1.1" xmlns="http://www.w3.org/2000/svg"&gt;
@@ -35,7 +37,7 @@ tags:
   &lt;path d="M20,230 Q40,205 50,230 T90,230" fill="none" stroke="blue" stroke-width="5"/&gt;
 &lt;/svg&gt;</pre>
 
-<div class="note"><strong>Note:</strong> The <code>stroke</code>, <code>stroke-width</code>, and <code>fill</code> attributes are explained later in the tutorial.</div>
+<div class="note"><p><strong>Note:</strong> The <code>stroke</code>, <code>stroke-width</code>, and <code>fill</code> attributes are explained later in the tutorial.</p></div>
 
 <h3 id="Rectangles">Rectangle</h3>
 
@@ -63,7 +65,7 @@ tags:
 
 <p>The {{SVGElement("circle")}} element draws a circle on the screen. It takes 3 basic parameters to determine the shape and size of the element.</p>
 
-<pre class="brush:xml;gutter:false;">&lt;circle cx="25" cy="75" r="20"/&gt;</pre>
+<pre class="brush:xml">&lt;circle cx="25" cy="75" r="20"/&gt;</pre>
 
 <dl>
  <dt><code>r</code></dt>
@@ -78,7 +80,7 @@ tags:
 
 <p>An {{SVGElement("ellipse")}} is a more general form of the {{SVGElement("circle")}} element, where you can scale the x and y radius (commonly referred to as the <em>semimajor</em> and <em>semiminor</em> axes in maths) of the circle separately.</p>
 
-<pre class="brush:xml;gutter:false;">&lt;ellipse cx="75" cy="75" rx="20" ry="5"/&gt;</pre>
+<pre class="brush:xml">&lt;ellipse cx="75" cy="75" rx="20" ry="5"/&gt;</pre>
 
 <dl>
  <dt><code>rx</code></dt>
@@ -95,7 +97,7 @@ tags:
 
 <p>The {{SVGElement("line")}} element takes the positions of two points as parameters and draws a straight line between them.</p>
 
-<pre class="brush:xml;gutter:false;">&lt;line x1="10" x2="50" y1="110" y2="150" stroke="black" stroke-width="5"/&gt;</pre>
+<pre class="brush:xml">&lt;line x1="10" x2="50" y1="110" y2="150" stroke="black" stroke-width="5"/&gt;</pre>
 
 <dl>
  <dt><code>x1</code></dt>
@@ -112,7 +114,7 @@ tags:
 
 <p>A {{SVGElement("polyline")}} is a group of connected straight lines. Since the list of points can get quite long, all the points are included in one attribute:</p>
 
-<pre class="brush:xml;gutter:false;">&lt;polyline points="60, 110 65, 120 70, 115 75, 130 80, 125 85, 140 90, 135 95, 150 100, 145"/&gt;</pre>
+<pre class="brush:xml">&lt;polyline points="60, 110 65, 120 70, 115 75, 130 80, 125 85, 140 90, 135 95, 150 100, 145"/&gt;</pre>
 
 <dl>
  <dt><code>points</code></dt>
@@ -129,7 +131,7 @@ tags:
 <p><strong>Note:</strong> A rectangle is a type of polygon, so a polygon can be used to create a <code>&lt;rect/&gt;</code> element in cases where you need a little more flexibility.</p>
 </div>
 
-<pre class="brush:xml;gutter:false;">&lt;polygon points="50, 160 55, 180 70, 180 60, 190 65, 205 50, 195 35, 205 40, 190 30, 180 45, 180"/&gt;</pre>
+<pre class="brush:xml">&lt;polygon points="50, 160 55, 180 70, 180 60, 190 65, 205 50, 195 35, 205 40, 190 30, 180 45, 180"/&gt;</pre>
 
 <dl>
  <dt><code>points</code></dt>
@@ -142,7 +144,7 @@ tags:
 
 <p>For this reason, <a href="/en-US/docs/Web/SVG/Tutorial/Paths">the next section</a> in this tutorial will be focused on paths. But for now, note that there is a single parameter used to control its shape.</p>
 
-<pre class="brush:xml;gutter:false;">&lt;path d="M20,230 Q40,205 50,230 T90,230" fill="none" stroke="blue" stroke-width="5"/&gt;</pre>
+<pre class="brush:xml">&lt;path d="M20,230 Q40,205 50,230 T90,230" fill="none" stroke="blue" stroke-width="5"/&gt;</pre>
 
 <dl>
  <dt><code>d</code></dt>

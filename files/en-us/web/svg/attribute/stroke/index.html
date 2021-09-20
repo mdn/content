@@ -10,7 +10,7 @@ browser-compat: svg.attributes.presentation.stroke
 
 <p>The <strong><code>stroke</code></strong> attribute is a presentation attribute defining the color (<em>or any SVG paint servers like gradients or patterns</em>) used to paint the outline of the shape;</p>
 
-<p class="note"><strong>Note:</strong> As a presentation attribute <code>stroke</code> can be used as a CSS property.</p>
+<div class="note"><p><strong>Note:</strong> As a presentation attribute <code>stroke</code> can be used as a CSS property.</p></div>
 
 <p>You can use this attribute with the following SVG elements:</p>
 
@@ -29,10 +29,9 @@ browser-compat: svg.attributes.presentation.stroke
   <li>{{SVGElement('tspan')}}</li>
 </ul>
 
-<div id="topExample">
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+<h2>Example</h2>
+
+<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
 
 <pre class="brush: html">&lt;svg viewBox="0 0 20 10" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;!-- Simple color stroke --&gt;
@@ -52,8 +51,7 @@ browser-compat: svg.attributes.presentation.stroke
 &lt;/svg&gt;
 </pre>
 
-<p>{{EmbedLiveSample('topExample', '100%', 200)}}</p>
-</div>
+<p>{{EmbedLiveSample("Example", '100%', 200)}}</p>
 
 <h2 id="Usage_notes">Usage notes</h2>
 
@@ -89,7 +87,7 @@ browser-compat: svg.attributes.presentation.stroke
    <td>{{SpecName("SVG2", "painting.html#StrokeProperty", "stroke")}}</td>
    <td>{{Spec2("SVG2")}}</td>
    <td>Definition for shapes and texts.<br>
-    Adds <code style="white-space: nowrap;">context-fill</code> and <code style="white-space: nowrap;">context-stroke</code>.</td>
+    Adds <code>context-fill</code> and <code>context-stroke</code>.</td>
   </tr>
   <tr>
    <td>{{SpecName("SVG1.1", "painting.html#StrokeProperty", "stroke")}}</td>
@@ -103,4 +101,4 @@ browser-compat: svg.attributes.presentation.stroke
 
 <p>{{Compat}}</p>
 
-<p class="note"><strong>Note:</strong> For information on using the <code style="white-space: nowrap;">context-stroke</code> (and <code style="white-space: nowrap;">context-fill</code>) values from HTML documents, see the documentation for the non-standard <span style="white-space: nowrap;">{{cssxref("-moz-context-properties")}}</span> property.</p>
+<div class="note"><p><strong>Note:</strong> For information on using the <code>context-stroke</code> (and <code>context-fill</code>) values from HTML documents, see the documentation for the non-standard {{cssxref("-moz-context-properties")}} property.</p></div>

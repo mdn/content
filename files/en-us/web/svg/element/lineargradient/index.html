@@ -12,13 +12,12 @@ browser-compat: svg.elements.linearGradient
 <p>The <strong><code>&lt;linearGradient&gt;</code></strong> element lets authors define linear gradients that can be applied to fill or stroke of graphical elements.</p>
 
 <div class="notecard note">
-<p>Don't be confused with CSS {{cssxref('linear-gradient()')}} as CSS gradients can only apply to HTML elements where SVG gradient can only apply to SVG elements.</p>
+<p><strong>Note:</strong> Don't be confused with CSS {{cssxref('linear-gradient()')}} as CSS gradients can only apply to HTML elements where SVG gradient can only apply to SVG elements.</p>
 </div>
 
-<div id="Example">
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+<h2>Example</h2>
+
+<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
 
 <pre class="brush: html">&lt;svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
@@ -34,15 +33,14 @@ browser-compat: svg.elements.linearGradient
 &lt;/svg&gt;</pre>
 
 <p>{{EmbedLiveSample('Example', 150, '100%')}}</p>
-</div>
 
 <h2 id="Attributes">Attributes</h2>
 
 <dl>
- <dt id="attr-gradientUnits">{{SVGAttr("gradientUnits")}}</dt>
+ <dt>{{SVGAttr("gradientUnits")}}</dt>
  <dd>This attribute defines the coordinate system for attributes <code>x1</code>, <code>x2</code>, <code>y1</code>, <code>y2</code><br>
  <small><em>Value type</em>: <code>userSpaceOnUse</code>|<code>objectBoundingBox</code> ; <em>Default value</em>: <code>objectBoundingBox</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt id="attr-gradientTransform">{{SVGAttr("gradientTransform")}}</dt>
+ <dt>{{SVGAttr("gradientTransform")}}</dt>
  <dd>This attribute provides additional <a href="/en-US/docs/Web/SVG/Attribute/transform">transformation</a> to the gradient coordinate system.<br>
  <small><em>Value type</em>: <strong><a href="/en-US/docs/Web/SVG/Content_type#transform-list">&lt;transform-list&gt;</a></strong> ; <em>Default value</em>: <em>identity transform</em>; <em>Animatable</em>: <strong>yes</strong></small></dd>
  <dt>{{SVGAttr("href")}}</dt>
@@ -57,7 +55,7 @@ browser-compat: svg.elements.linearGradient
  <dt>{{SVGAttr("x2")}}</dt>
  <dd>This attribute defines the x coordinate of the ending point of the vector gradient along which the linear gradient is drawn.<br>
  <small><em>Value type</em>: <a href="/en-US/docs/Web/SVG/Content_type#length"><strong>&lt;length&gt;</strong></a> ; <em>Default value</em>: <code>100%</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt id="attr-cx">{{SVGAttr("xlink:href")}}</dt>
+ <dt>{{SVGAttr("xlink:href")}}</dt>
  <dd>{{Deprecated_Header}}An <a href="/en-US/docs/Web/SVG/Content_type#iri">&lt;IRI&gt;</a> reference to another <code>&lt;linearGradient&gt;</code> element that will be used as a template.<br>
  <small><em>Value type</em>: <a href="/en-US/docs/Web/SVG/Content_type#iri"><strong>&lt;IRI&gt;</strong></a> ; <em>Default value</em>: none; <em>Animatable</em>: <strong>yes</strong></small></dd>
  <dt>{{SVGAttr("y1")}}</dt>

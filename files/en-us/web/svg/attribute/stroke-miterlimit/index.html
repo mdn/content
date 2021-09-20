@@ -10,7 +10,7 @@ browser-compat: svg.attributes.presentation.stroke-miterlimit
 
 <p>The <strong><code>stroke-miterlimit</code></strong> attribute is a presentation attribute defining a limit on the ratio of the miter length to the {{ SVGAttr("stroke-width") }} used to draw a miter join. When the limit is exceeded, the join is converted from a miter to a bevel.</p>
 
-<p class="note"><strong>Note:</strong> As a presentation attribute <code>stroke-miterlimit</code> can be used as a CSS property.</p>
+<div class="note"><p><strong>Note:</strong> As a presentation attribute <code>stroke-miterlimit</code> can be used as a CSS property.</p></div>
 
 <p>You can use this attribute with the following SVG elements:</p>
 
@@ -26,10 +26,9 @@ browser-compat: svg.attributes.presentation.stroke-miterlimit
   <li>{{SVGElement('tspan')}}</li>
 </ul>
 
-<div id="topExample">
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+<h2>Example</h2>
+
+<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
 
 <pre class="brush: html">&lt;svg viewBox="0 0 38 30" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;!-- Impact of the default miter limit --&gt;
@@ -65,8 +64,7 @@ browser-compat: svg.attributes.presentation.stroke-miterlimit
            M1,29 l7,-3 l7,3 m2,0 l3.5,-3 l3.5,3 m2,0 l2,-3 l2,3 m2,0 l0.75,-3 l0.75,3 m2,0 l0.5,-3 l0.5,3" /&gt;
 &lt;/svg&gt;</pre>
 
-<p>{{EmbedLiveSample('topExample', '100%', 400)}}</p>
-</div>
+<p>{{EmbedLiveSample("Example", '100%', 400)}}</p>
 
 <p>When two line segments meet at a sharp angle and <code>miter</code> joins have been specified for {{ SVGAttr("stroke-linejoin") }}, it is possible for the miter to extend far beyond the thickness of the line stroking the path. The <code>stroke-miterlimit</code> ratio is used to define when the limit is exceeded, if so the join is converted from a miter to a bevel.</p>
 

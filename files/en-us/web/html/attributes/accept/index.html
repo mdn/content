@@ -11,7 +11,9 @@ tags:
 ---
 <p>{{HTMLSidebar}}</p>
 
-<p class="summary"><span class="seoSummary">The <strong><code>accept</code></strong> attribute takes as its value a comma-separated list of one or more file types, or {{anch("Unique file type specifiers", "unique file type specifiers")}}, describing which file types to allow. </span>The accept property is an attribute of the {{HTMLElement("input/file", "file")}} {{htmlelement("input")}} type. It was supported on the {{htmlelement("form")}} element, but was removed in favor of {{HTMLElement("input/file", "file")}} in HTML5.</p>
+<p>The <strong><code>accept</code></strong> attribute takes as its value a comma-separated list of one or more file types, or {{anch("Unique file type specifiers", "unique file type specifiers")}}, describing which file types to allow.</p>
+
+<p>The accept property is an attribute of the {{HTMLElement("input/file", "file")}} {{htmlelement("input")}} type. It was supported on the {{htmlelement("form")}} element, but was removed in favor of {{HTMLElement("input/file", "file")}} in HTML5.</p>
 
 <p>Because a given file type may be identified in more than one manner, it's useful to provide a thorough set of type specifiers when you need files of specific type, or use the wild card to denote a type of any format is acceptable.</p>
 
@@ -34,24 +36,22 @@ tags:
 
 <p>When set on a file input type, the native file picker that opens up should only enable selecting files of the correct file type. Most operating systems lighten the files that don't match the criteria and aren't selectable.</p>
 
-<div id="simple_example">
 <pre class="brush: html">&lt;p&gt;
-	&lt;label for="soundFile"&gt;Select an audio file:&lt;/label&gt;
-	&lt;input type="file" id="soundFile" accept="audio/*"&gt;
-	&lt;/p&gt;
-	&lt;p&gt;
-	&lt;label for="videoFile"&gt;Select a video file:&lt;/label&gt;
-	&lt;input type="file" id="videoFile" accept="video/*"&gt;
-	&lt;/p&gt;
-	&lt;p&gt;
-	&lt;label for="imageFile"&gt;Select some images:&lt;/label&gt;
-	&lt;input type="file" id="imageFile" accept="image/*" multiple&gt;
-	&lt;/p&gt;</pre>
+  &lt;label for="soundFile"&gt;Select an audio file:&lt;/label&gt;
+  &lt;input type="file" id="soundFile" accept="audio/*"&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;label for="videoFile"&gt;Select a video file:&lt;/label&gt;
+  &lt;input type="file" id="videoFile" accept="video/*"&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;label for="imageFile"&gt;Select some images:&lt;/label&gt;
+  &lt;input type="file" id="imageFile" accept="image/*" multiple&gt;
+&lt;/p&gt;</pre>
 
-<p>{{EmbedLiveSample('simple_example', '100%', 200)}}</p>
+<p>{{EmbedLiveSample('Examples', '100%', 200)}}</p>
 
 <p>Note the last example allows you to select multiple images. See the <code><a href="multiple">multiple</a></code> attribute for more information.</p>
-</div>
 
 <h2 id="Unique_file_type_specifiers">Unique file type specifiers</h2>
 

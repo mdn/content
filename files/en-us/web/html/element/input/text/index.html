@@ -16,7 +16,7 @@ browser-compat: html.elements.input.input-text
 ---
 <div>{{HTMLRef("Input_types")}}</div>
 
-<p><span class="seoSummary">{{HTMLElement("input")}} elements of type <code><strong>text</strong></code> create basic single-line text fields.</span></p>
+<p>{{HTMLElement("input")}} elements of type <code><strong>text</strong></code> create basic single-line text fields.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-text.html", "tabbed-shorter")}}</div>
 
@@ -119,14 +119,12 @@ browser-compat: html.elements.input.input-text
 
 <h3 id="attr-pattern"><code id="pattern">pattern</code></h3>
 
-<div id="pattern-include">
 <p>The <code>pattern</code> attribute, when specified, is a regular expression that the input's {{htmlattrxref("value")}} must match in order for the value to pass <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a>. It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">guide on regular expressions</a>; the <code>'u'</code> flag is specified when compiling the regular expression, so that the pattern is treated as a sequence of Unicode code points, instead of as ASCII. No forward slashes should be specified around the pattern text.</p>
 
 <p>If the specified pattern is not specified or is invalid, no regular expression is applied and this attribute is ignored completely.</p>
 
 <div class="note">
-<p><strong>Tip:</strong> Use the {{htmlattrxref("title", "input")}} attribute to specify text that most browsers will display as a tooltip to explain what the requirements are to match the pattern. You should also include other explanatory text nearby.</p>
-</div>
+<p><strong>Note:</strong> Use the {{htmlattrxref("title", "input")}} attribute to specify text that most browsers will display as a tooltip to explain what the requirements are to match the pattern. You should also include other explanatory text nearby.</p>
 </div>
 
 <p>See {{anch("Specifying a pattern")}} for further details and an example.</p>
@@ -197,7 +195,6 @@ browser-compat: html.elements.input.input-text
 
 <h3 id="attr-autocorrect"><code id="autocorrect">autocorrect</code> {{non-standard_inline}}</h3>
 
-<div id="autocorrect-include">
 <p>A Safari extension, the <code>autocorrect</code> attribute is a string which indicates whether or not to activate automatic correction while the user is editing this field. Permitted values are:</p>
 
 <dl>
@@ -206,11 +203,9 @@ browser-compat: html.elements.input.input-text
  <dt><code>off</code></dt>
  <dd>Disable automatic correction and text substitutions.</dd>
 </dl>
-</div>
 
 <h3 id="attr-mozactionhint"><code id="mozactionhint">mozactionhint</code> {{non-standard_inline}}</h3>
 
-<div id="mozactionhint-include">
 <p>A Mozilla extension, supported by Firefox for Android, which provides a hint as to what sort of action will be taken if the user presses the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the field. This information is used to decide what kind of label to use on the <kbd>Enter</kbd> key on the virtual keyboard.</p>
 
 <div class="note">
@@ -218,7 +213,6 @@ browser-compat: html.elements.input.input-text
 </div>
 
 <p>Permitted values are: <code>go</code>, <code>done</code>, <code>next</code>, <code>search</code>, and <code>send</code>. The browser decides, using this hint, what label to put on the enter key.</p>
-</div>
 
 <h2 id="Using_text_inputs">Using text inputs</h2>
 

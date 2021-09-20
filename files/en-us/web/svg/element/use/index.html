@@ -12,10 +12,9 @@ browser-compat: svg.elements.use
 
 <p>The <strong><code>&lt;use&gt;</code></strong> element takes nodes from within the SVG document, and duplicates them somewhere else.</p>
 
-<div id="Example">
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+<h2>Example</h2>
+
+<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
 
 <pre class="brush: html">&lt;svg viewBox="0 0 30 10" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;circle id="myCircle" cx="5" cy="5" r="4" stroke="blue"/&gt;
@@ -30,7 +29,6 @@ That's why the circles have different x positions, but the same stroke value.
 &lt;/svg&gt;</pre>
 
 <p>{{EmbedLiveSample('Example', 100, 100)}}</p>
-</div>
 
 <p>The effect is the same as if the nodes were deeply cloned into a non-exposed DOM, then pasted where the <code>use</code> element is, much like cloned <a href="/en-US/docs/Web/HTML/Element/template">template elements</a> in HTML5.</p>
 
@@ -41,25 +39,25 @@ That's why the circles have different x positions, but the same stroke value.
 <p>For security reasons, browsers may apply the <a href="/en-US/docs/Web/Security/Same-origin_policy">same-origin policy</a> on <code>use</code> elements and may refuse to load a cross-origin URL in the {{SVGAttr("href")}} attribute. There is currently no defined way to set a cross-origin policy for <code>use</code> elements.</p>
 
 <div class="warning">
-<p>Since SVG 2, the {{SVGAttr("xlink:href")}} attribute is deprecated in favor of {{SVGAttr("href")}}. See {{SVGAttr("xlink:href")}} page for more information. However, {{SVGAttr("xlink:href")}} can still be required in practice for cross-browser compatibility (see the <a href="#browser_compatibility">compatibility table</a> below).</p>
+<p><strong>Warning:</strong> Since SVG 2, the {{SVGAttr("xlink:href")}} attribute is deprecated in favor of {{SVGAttr("href")}}. See {{SVGAttr("xlink:href")}} page for more information. However, {{SVGAttr("xlink:href")}} can still be required in practice for cross-browser compatibility (see the <a href="#browser_compatibility">compatibility table</a> below).</p>
 </div>
 
 <h2 id="Attributes">Attributes</h2>
 
 <dl>
- <dt id="attr-cx">{{SVGAttr("href")}}</dt>
+ <dt>{{SVGAttr("href")}}</dt>
  <dd>The URL to an element/fragment that needs to be duplicated.<br>
  <small><em>Value type</em>: <a href="/en-US/docs/Web/SVG/Content_type#url"><strong>&lt;URL&gt;</strong></a> ; <em>Default value</em>: none; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt id="attr-xlink">{{SVGAttr("xlink:href")}}</dt>
+ <dt>{{SVGAttr("xlink:href")}}</dt>
  <dd>{{Deprecated_Header}}An <a href="/en-US/docs/Web/SVG/Content_type#iri">&lt;IRI&gt;</a> reference to an element/fragment that needs to be duplicated.<br>
  <small><em>Value type</em>: <a href="/en-US/docs/Web/SVG/Content_type#iri"><strong>&lt;IRI&gt;</strong></a> ; <em>Default value</em>: none; <em>Animatable</em>: <strong>yes</strong></small></dd>
  <dt>{{SVGAttr("x")}}</dt>
  <dd>The x coordinate of the use element.<br>
  <small><em>Value type</em>: <a href="/en-US/docs/Web/SVG/Content_type#coordinate"><strong>&lt;coordinate&gt;</strong></a> ; <em>Default value</em>: <code>0</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt id="attr-cy">{{SVGAttr("y")}}</dt>
+ <dt>{{SVGAttr("y")}}</dt>
  <dd>The y coordinate of the use element.<br>
  <small><em>Value type</em>: <a href="/en-US/docs/Web/SVG/Content_type#coordinate"><strong>&lt;coordinate&gt;</strong></a> ; <em>Default value</em>: <code>0</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt id="attr-r">{{SVGAttr("width")}}</dt>
+ <dt>{{SVGAttr("width")}}</dt>
  <dd>The width of the use element.<br>
  <small><em>Value type</em>: <a href="/en-US/docs/Web/SVG/Content_type#length"><strong>&lt;length&gt;</strong></a> ; <em>Default value</em>: <code>0</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
  <dt>{{SVGAttr("height")}}</dt>

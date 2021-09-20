@@ -12,10 +12,9 @@ browser-compat: svg.elements.stop
 
 <p>The SVG <strong><code>&lt;stop&gt;</code></strong> element defines a color and its position to use on a gradient. This element is always a child of a {{SVGElement("linearGradient")}} or {{SVGElement("radialGradient")}} element.</p>
 
-<div id="Example">
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+<h2>Example</h2>
+
+<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
 
 <pre class="brush: html; highlight[5,6]">&lt;svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
@@ -31,18 +30,17 @@ browser-compat: svg.elements.stop
 &lt;/svg&gt;</pre>
 
 <p>{{EmbedLiveSample('Example', 150, '100%')}}</p>
-</div>
 
 <h2 id="Attributes">Attributes</h2>
 
 <dl>
- <dt id="attr-offset">{{SVGAttr("offset")}}</dt>
+ <dt>{{SVGAttr("offset")}}</dt>
  <dd>This attribute defines where the gradient stop is placed along the gradient vector.<br>
  <small><em>Value type</em>: <a href="/en-US/docs/Web/SVG/Content_type#number"><strong>&lt;number&gt;</strong></a>|<a href="/en-US/docs/Web/SVG/Content_type#percentage"><strong>&lt;percentage&gt;</strong></a>; <em>Default value</em>: <code>0</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt id="attr-stop-color">{{SVGAttr("stop-color")}}</dt>
+ <dt>{{SVGAttr("stop-color")}}</dt>
  <dd>This attribute defines the color of the gradient stop. It can be used as a CSS property.<br>
  <small><em>Value type</em>: <code>currentcolor</code>|<a href="/en-US/docs/Web/SVG/Content_type#color"><strong>&lt;color&gt;</strong></a>|<a href="/en-US/docs/Web/SVG/Content_type#icccolor"><strong>&lt;icccolor&gt;</strong></a>; <em>Default value</em>: <code>black</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt id="attr-stop-opacity">{{SVGAttr("stop-opacity")}}</dt>
+ <dt>{{SVGAttr("stop-opacity")}}</dt>
  <dd>This attribute defines the opacity of the gradient stop. It can be used as a CSS property.<br>
  <small><em>Value type</em>: <a href="/en-US/docs/Web/SVG/Content_type#opacity_value"><strong>&lt;opacity&gt;</strong></a>; <em>Default value</em>: <code>1</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
 </dl>
