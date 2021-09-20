@@ -55,12 +55,10 @@ The `mask-type` property is specified as one of the keyword values listed below.
 
 ```html
 <div class="graysquare"></div>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0">
-  <defs>
-    <mask id="m" maskContentUnits="objectBoundingBox" style="mask-type:alpha">
-      <rect x=".1" y=".1" width=".8" height=".8" fill="red" fill-opacity=".7"/>
-    </mask>
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 512 512">
+  <mask id="m">
+    <path d="M501 96H11c-6 0-11 5-11 11v298c0 6 5 11 11 11h490c6 0 11-5 11-11V107c0-6-5-11-11-11zm-10 299H21V117h470v278z"/>
+  </mask>
 </svg>
 ```
 
@@ -68,17 +66,22 @@ The `mask-type` property is specified as one of the keyword values listed below.
 
 ```css
 .graysquare {
-    height: 100px;
-    width: 100px;
+    height: 515px;
+    width: 515px;
     background-color: gray;
     border: solid 1px black;
-    mask: url("#m");
+    -webkit-mask: url(#m);
+            mask: url(#m);
+}
+
+mask{
+  mask-type: alpha;
 }
 ```
 
 #### Result
 
-{{EmbedLiveSample('Setting_an_alpha_mask', '100%', '102')}}
+{{EmbedLiveSample('Setting_an_alpha_mask', '100%', '530')}}
 
 ### Setting a luminance mask
 
@@ -86,12 +89,10 @@ The `mask-type` property is specified as one of the keyword values listed below.
 
 ```html
 <div class="graysquare"></div>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0">
-  <defs>
-    <mask id="m" maskContentUnits="objectBoundingBox" style="mask-type:luminance">
-      <rect x=".1" y=".1" width=".8" height=".8" fill="red" fill-opacity=".7"/>
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 512 512">
+    <mask id="m">
+  <path d="M501 96H11c-6 0-11 5-11 11v298c0 6 5 11 11 11h490c6 0 11-5 11-11V107c0-6-5-11-11-11zm-10 299H21V117h470v278z"/>
     </mask>
-  </defs>
 </svg>
 ```
 
@@ -99,11 +100,16 @@ The `mask-type` property is specified as one of the keyword values listed below.
 
 ```css
 .graysquare {
-    height: 100px;
-    width: 100px;
+    height: 515px;
+    width: 515px;
     background-color: gray;
     border: solid 1px black;
-    mask: url("#m");
+    -webkit-mask: url(#m);
+            mask: url(#m);
+}
+
+mask{
+  mask-type: luminance;
 }
 ```
 
