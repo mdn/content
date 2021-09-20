@@ -38,22 +38,88 @@ The user-agent should select the most secure authentication scheme that it suppo
 
 ## Syntax
 
+```http
+Authorization: <auth-scheme> <authorisation-parameters>
 ```
-Authorization: <auth-scheme> <credentials>
+
+Basic authentication
+
+```http
+Authorization: Basic <credentials>
 ```
+
+Digest authentication
+
+```http
+Authorization: Digest username=<username>,
+    realm="<realm>",
+    uri="<url>",
+    algorithm=<algorithm>,
+    nonce="<nonce>",
+    nc=<nc>,
+    cnonce="<cnonce>",
+    qop=<qop>,
+    response="<response>",
+    opaque="<opaque>"
+```
+
 
 ## Directives
 
 - `<auth-scheme>`
   - : The [Authentication scheme](/en-US/docs/Web/HTTP/Authentication#authentication_schemes) that defines how the credentials are encoded.
-    Some of the more common types are (case-insensitive): [Basic](/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme) | Digest | Bearer | HOBA | Mutual | Negotiate | OAuth | SCRAM-SHA-1 | SCRAM-SHA-256 | vapid
+    Some of the more common types are (case-insensitive): [`Basic`](/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme), `Digest`, `Negotiate` and `AWS4-HMAC-SHA256`.
+
     > **Note:** For more information/options see [HTTP Authentication > Authentication schemes](/en-US/docs/Web/HTTP/Authentication#authentication_schemes)
+
+
+Other than `<auth-scheme>` the remaining directives are specific to each [authentication scheme](/en-US/docs/Web/HTTP/Authentication#authentication_schemes).
+Generally you will need to check the relevant specifications for these (keys for a small subset of schemes are listed below).
+
+### Basic
 
 - \<credentials>
 
   - : The credentials, encoded according to the specified scheme.
 
     > **Note:** For information about the encoding algorithm, see the examples: below, in {{HTTPHeader("WWW-Authenticate")}}, in [HTTP Authentication](/en-US/docs/Web/HTTP/Authentication), and in the relevant specifications.
+
+### Digest
+
+
+- \<response>
+  - : A string of the hex digits that proves that the user knows a password.
+      The algorithm encodes the username and password, realm, cnonce, qop, nc, and so on.
+      It is described in detail in the specification. 
+- **`username`**
+  - : A quoted string containing user's name for the specified `realm` in either plain text or the hash code in hexadecimal notation.
+      If the name contains characters that aren't allowed in the field, then `username*` can be used instead (not "as well").
+- **`username*`**
+  - : The user's name formatted using an extended notation defined in RFC5987.
+      This should be used only if the name can't be encoded in `username` and if `userhash` is set `"false"`.
+- **`uri`**
+  - : The _Effective Request URI_. See the specification for more information.
+- **`realm`**
+  - : Realm of the requested username/password (again, should match the value in the corresponding {{HTTPHeader("WWW-Authenticate")}} response for the resource being requested).
+- **`opaque`**
+  - : The value in the corresponding {{HTTPHeader("WWW-Authenticate")}} response for the resource being requested.
+- **`algorithm`**
+  - : The algorithm used to calculate the digest. Must be a supported algorithm from the {{HTTPHeader("WWW-Authenticate")}} response for the resource being requested.
+- **`qop`**
+  - : A token indicating the _quality of protection_ applied to the message.
+      Must match the one value in the set specified in the {{HTTPHeader("WWW-Authenticate")}} response for the resource being requested.
+      - `"auth"`: Authentication
+      - `"auth-int"`: Authentication with integrity protection
+- **`cnonce`**
+  - : An quoted ASCII-only string value provided by the client.
+      This is used by both the client and server to provide mutual authentication, provide some message integrity protection, and avoid "chosen plaintext 
+      attacks".
+      See the specification for additional information. 
+- **`nc`**
+  - : Nonce count. The hexadecimal count of requests in which the client has sent the current `cnonce` value (including the current request).
+      The server can use duplicate `nc` values to recognise replay requests.
+- **`userhash`** {{optional_inline}}
+  - : `"true` if the username has been hashed. `"false"` by default.
 
 
 ## Examples

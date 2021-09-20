@@ -75,6 +75,8 @@ Proxy-Authorization: <type> <credentials>
 
 ### Authentication schemes
 
+<!--   Some of the more common types are (case-insensitive): [Basic](/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme) | Digest | Bearer | HOBA | Mutual | Negotiate | OAuth | SCRAM-SHA-1 | SCRAM-SHA-256 | vapid -->
+
 The general HTTP authentication framework is used by several authentication schemes.
 Schemes can differ in security strength and in their availability in client or server software.
 
