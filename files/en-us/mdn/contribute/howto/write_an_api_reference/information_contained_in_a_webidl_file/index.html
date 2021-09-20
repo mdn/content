@@ -39,8 +39,8 @@ tags:
  <li>For WebCore, Apple also made available a <a href="https://trac.webkit.org/wiki/WebKitIDL">page</a> for its dialect.</li>
 </ul>
 
-<div class="note notecard">
-<p>We describe here only the subset of WebIDL which is most useful when writing documentation. There are many more annotations useful for implementers; refer to the four documents linked above to have a complete overview.</p>
+<div class="note">
+<p><strong>Note:</strong> We describe here only the subset of WebIDL which is most useful when writing documentation. There are many more annotations useful for implementers; refer to the four documents linked above to have a complete overview.</p>
 </div>
 
 <h2 id="Interfaces">Interfaces</h2>
@@ -170,7 +170,7 @@ interface DedicatedWorkerGlobalScope : WorkerGlobalScope {…}</pre>
 
 <h3 id="Preferences">Preferences</h3>
 
-<div class="note notecard">
+<div class="note">
 <p><strong>Note:</strong> this information is specific to Gecko and should only be used in the Browser compatibility section.</p>
 </div>
 
@@ -185,7 +185,7 @@ interface SpeechSynthesis {
 
 <p>Here <code>media.webspeech.synth.enabled</code> controls the <code>SpeechSynthesis</code> interface and its properties (the full listing has more than 3.)</p>
 
-<div class="note notecard">
+<div class="note">
 <p><strong>Note:</strong> the default value of the preference is not available directly in the WebIDL (it can be different from one product using Gecko to another.)</p>
 </div>
 
@@ -227,8 +227,8 @@ interface SpeechSynthesis {
  <li>By starting its description in the interface page with <em>Returns…</em></li>
 </ul>
 
-<div class="note notecard">
-<p><em><strong>Note:</strong> Only read-only properties can be described as 'returning' a value. Non read-only properties can also be used to set a value.</em></p>
+<div class="note">
+<p><strong>Note:</strong> Only read-only properties can be described as 'returning' a value. Non read-only properties can also be used to set a value.</p>
 </div>
 
 <h3 id="Throwing_exceptions">Throwing exceptions</h3>
@@ -274,7 +274,7 @@ interface SpeechSynthesis {
 
 <p>For interface objects, the default is to return a <em>reference</em> to the internal object. This has to be mentioned both in the short description in the interface page, and in the description in the specific sub-pages.</p>
 
-<div class="note notecard">
+<div class="note">
 <p><strong>Note:</strong> The keyword <code>readonly</code> used with a property returning an object applies to the <u>reference</u> (the internal object cannot be changed.) The properties of the returned object can be changed, even if they are marked as read-only in the relevant interface.</p>
 </div>
 
@@ -311,7 +311,7 @@ interface SpeechSynthesis {
 
 <h3 id="Preferences_2">Preferences</h3>
 
-<div class="note notecard">
+<div class="note">
 <p>This information is specific to Gecko and should only be used in the Browser compatibility section.</p>
 </div>
 
@@ -322,8 +322,8 @@ interface SpeechSynthesis {
 
 <p>Here <code>media.webvtt.enabled</code> controls the <code>textTracks</code> property.</p>
 
-<div class="note notecard">
-<p>The default value of the preference is not available directly in the WebIDL (it can be different from one product using Gecko to another).</p>
+<div class="note">
+<p><strong>Note:</strong> The default value of the preference is not available directly in the WebIDL (it can be different from one product using Gecko to another).</p>
 </div>
 
 <h2 id="Methods">Methods</h2>
@@ -384,7 +384,7 @@ interface SpeechSynthesis {
 
 <p>Here <code>media.webvtt.enabled</code> controls the <code>addTextTrack()</code> method.</p>
 
-<div class="note notecard">
+<div class="note">
 <p><strong>Note:</strong> The default value of the preference is not available directly in the WebIDL (it can be different from one product using Gecko to another.)</p>
 </div>
 
@@ -408,7 +408,7 @@ serializer;</strong> // Standard version
 
 <p>The <code>toJSON()</code> method is listed just like any other method of the interface and has its own sub-page (E.g. {{domxref("Performance.toJSON()")}})</p>
 
-<div class="note notecard">
+<div class="note">
 <p><strong>Note:</strong> the WebIDL specification uses <code>serializer</code> instead of <code>jsonifier</code>. This is not used in Gecko — only the non-standard likely early proposal <code>jsonifier</code> is found in mozilla-central.</p>
 </div>
 
@@ -433,7 +433,7 @@ serializer;</strong> // Standard version
 
 <p>Such an iterator allows to use the syntax <code>for (var p in object)</code> as a shorthand of <code>for (var p in object.entries())</code>. We add a sentence about it in the interface description.</p>
 
-<div class="note notecard">
+<div class="note">
 <p><strong>Note:</strong> the value pairs to iterate over can be defined in two different ways:</p>
 
 <ol>
@@ -457,7 +457,7 @@ serializer;</strong> // Standard version
 
 <p>Such an iterator allows to use the syntax <code>for (var p in object)</code> as a shorthand of <code>for (var p in object.entries())</code>. We add a sentence about it in the interface description. E.g. {{domxref('FormData')}}.</p>
 
-<div class="note notecard">
+<div class="note">
 <p><strong>Note:</strong> the value pairs to iterate over are <em>not</em> defined in the webidl file, but in the prose accompanying it. Such a prose is in the spec and usually starts with: <em>"The <a href="https://heycam.github.io/webidl/#dfn-value-pairs-to-iterate-over">value pairs to iterate over</a>…"</em><br>
  E.g, for {{domxref('FormData')}} you find in the spec: <em>"The <a href="https://heycam.github.io/webidl/#dfn-value-pairs-to-iterate-over">value pairs to iterate over</a> are the <a href="https://xhr.spec.whatwg.org/#concept-formdata-entry" title="concept-FormData-entry">entries</a> with the key being the <a href="https://xhr.spec.whatwg.org/#concept-formdata-entry-name" title="concept-FormData-entry-name">name</a> and the value the <a href="https://xhr.spec.whatwg.org/#concept-formdata-entry-value" title="concept-FormData-entry-value">value</a>. "</em></p>
 </div>

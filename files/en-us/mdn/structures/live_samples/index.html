@@ -31,7 +31,7 @@ tags:
 
 <p>The resulting frame (or page) is sandboxed, secure, and technically may do anything that works on the Web. Of course, as a practical matter, the code must contribute to the point of the page that contains it; random stuff running on MDN will be removed by the editor community.</p>
 
-<div class="note notecard">
+<div class="note">
 <p><strong>Note:</strong> You <strong>must</strong> use the macro for presenting the live sample's output.</p>
 </div>
 
@@ -66,8 +66,8 @@ tags:
  <dt>page_slug</dt>
  <dd>
    <p>The slug of the page containing the sample; this is optional, and if it's not provided, the sample is pulled from the same page on which the macro is used.</p>
-   <div class="notecard warning">
-   <strong>Warning:</strong> To show a live sample from one code-containing page in a different, target page, the code-containing page must itself use the <span class="templateLink"><code><a href="https://github.com/mdn/kumascript/blob/master/macros/EmbedLiveSample.ejs">EmbedLiveSample</a></code></span> macro to embed a live sample in its own page. Otherwise, if the code-containing page doesn't itself use the <span class="templateLink"><code><a href="https://github.com/mdn/kumascript/blob/master/macros/EmbedLiveSample.ejs">EmbedLiveSample</a></code></span> macro its own page, the live sample will fail to display at all on the target page. (See <a href="https://github.com/mdn/yari/issues/2243">Yari issue #2243</a>.)
+   <div class="warning">
+   <p><strong>Warning:</strong> To show a live sample from one code-containing page in a different, target page, the code-containing page must itself use the <code><a href="https://github.com/mdn/kumascript/blob/master/macros/EmbedLiveSample.ejs">EmbedLiveSample</a></code> macro to embed a live sample in its own page. Otherwise, if the code-containing page doesn't itself use the <code><a href="https://github.com/mdn/kumascript/blob/master/macros/EmbedLiveSample.ejs">EmbedLiveSample</a></code> macro its own page, the live sample will fail to display at all on the target page. (See <a href="https://github.com/mdn/yari/issues/2243">Yari issue #2243</a>.)</p>
    </div>
  </dd>
 </dl>
@@ -97,7 +97,7 @@ tags:
 
 <p>Each piece of code must be in a {{HTMLElement("pre")}} block, with a separate block for each language, properly marked as to which language it is. Most of the time, this has already been done, but it's always worth double-checking to be sure each piece of code is configured with the correct syntax. This is done with a class on the <code>&lt;pre&gt;</code> element of <code>brush:<em>language-type</em></code>, where <em>language-type</em> is the type of language the block contains, e.g. <code>html</code>, <code>css</code>, or <code>js</code>.</p>
 
-<div class="note notecard">
+<div class="note">
 <p><strong>Note</strong>: You may have more than one block for each language; they are all concatenated together. This lets you have a chunk of code, followed by an explanation of how it works, then another chunk, and so forth. This makes it even easier to produce tutorials and the like that utilize live samples interspersed with explanatory text.</p>
 </div>
 
