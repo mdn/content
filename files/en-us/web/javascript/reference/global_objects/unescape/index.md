@@ -5,6 +5,7 @@ tags:
   - Deprecated
   - JavaScript
   - Method
+  - Polyfill
 browser-compat: javascript.builtins.unescape
 ---
 {{jsSidebar("Objects")}}
@@ -67,6 +68,7 @@ unescape('%u0107');     // "ć"
 
 ## See also
 
+- A polyfill of `unescape` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("decodeURI")}}
 - {{jsxref("decodeURIComponent")}}
 - {{jsxref("escape")}}
