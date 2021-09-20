@@ -74,9 +74,9 @@ browser-compat: svg.attributes.conditional_processing.systemLanguage
  <dd>The value is a set of comma-separated tokens, each of which must be a <a href="https://datatracker.ietf.org/doc/html/bcp47#section-2.1">Language-Tag</a> value, as defined in <a href="http://www.ietf.org/rfc/bcp/bcp47.txt">BCP 47</a>.</dd>
 </dl>
 
-<p><code>systemLanguage</code> is often used in conjunction with the <span class="element-name">{{SVGElement("switch")}}</span> element. If the attribute is used in other situations, then it represents a simple switch on the given element whether to render the element or not.</p>
+<p><code>systemLanguage</code> is often used in conjunction with the {{SVGElement("switch")}} element. If the attribute is used in other situations, then it represents a simple switch on the given element whether to render the element or not.</p>
 
-<div class="note"><p><strong>Note:</strong> If several alternative language objects are enclosed in a <code>&lt;switch&gt;</code> and none of them matches, this may lead to situations where no content is displayed. It is thus recommended to include a "catch-all" choice at the end of such a <span class="element-name"><code>&lt;switch&gt;</code> </span>which is acceptable in all cases.</p></div>
+<div class="note"><p><strong>Note:</strong> If several alternative language objects are enclosed in a <code>&lt;switch&gt;</code> and none of them matches, this may lead to situations where no content is displayed. It is thus recommended to include a "catch-all" choice at the end of such a <code>&lt;switch&gt;</code> which is acceptable in all cases.</p></div>
 
 <p>The attribute evaluates to "true" if one of the language tags indicated by user preferences is a case-insensitive match or prefix (followed by a "-") of one of the language tags given in the value of this parameter. Otherwise it evaluates to "false".</p>
 
