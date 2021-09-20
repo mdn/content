@@ -89,9 +89,7 @@ Only the contents of the `aria-label` are announced to screen reader users, hidi
 ### Associated WAI-ARIA Roles, States, and Properties
 
 - `aria-label` or `aria-labelledby`
-  - : An accessible name is required. For the HTML {{HTMLElement('img')}} element, use the `alt` attribute. For all other elements with the `img` role, use `aria-labelledby` or `aria-label`.
-
-
+  - : An accessible name is required. For the HTML {{HTMLElement('img')}} element, use the `alt` attribute. For all other elements with the `img` role, use `aria-labelledby` if a visible label is present, otherwise use `aria-label`.
 
 ## Examples
 
@@ -121,7 +119,6 @@ Only the contents of the `aria-label` are announced to screen reader users, hidi
 - The {{HTMLElement('picture')}} element
 - The {{HTMLElement('audio')}} element
 - The {{HTMLElement('video')}} element
-
 - [Accessibility Object Model](https://wicg.github.io/aom/spec/)
 - [ARIA in HTML](https://w3c.github.io/html-aria/)
 
