@@ -44,7 +44,8 @@ let dc = pc.createDataChannel("PlayerControl");
 dc.onerror = function(event) {
   myUILibrary.doAlertBox({
     'Network Error':        // Alert title
-    `The error ${event.message} occurred while handling player control network messages in ${event.filename} at ${event.lineno}:${event.colno}.`    
+    `The error ${event.message} occurred while handling player control network messages`
+    + `in ${event.filename} at ${event.lineno}:${event.colno}.`    
   });
 }
 
