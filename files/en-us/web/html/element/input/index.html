@@ -456,7 +456,7 @@ browser-compat: html.elements.input
  <div class="note">
  <p><strong>Note:</strong> Unlike other input controls, a checkboxes and radio buttons value are only included in the submitted data if they are currently <code>checked</code>. If they are, the name and the value(s) of the checked controls are submitted.</p>
 
- <p>For example, if a checkbox whose <code>name</code> is <code>fruit</code> has a <code>value</code> of <code>cherry</code>, and the checkbox is checked, the form data submitted will include <code>fruit=cherry</code>. If the checkbox isn't active, it isn't listed in the form data at all. The default <code>value</code> for checkboxes and radio buttons is <code>on</code>.</p>
+ <p><strong>Note:</strong> For example, if a checkbox whose <code>name</code> is <code>fruit</code> has a <code>value</code> of <code>cherry</code>, and the checkbox is checked, the form data submitted will include <code>fruit=cherry</code>. If the checkbox isn't active, it isn't listed in the form data at all. The default <code>value</code> for checkboxes and radio buttons is <code>on</code>.</p>
  </div>
  </dd>
  <dt>{{htmlattrdef("dirname")}}</dt>
@@ -1001,13 +1001,13 @@ input[min][max] {}
 <p>Not only is the placeholder not accessible to screen readers, but once the user enters any text into the form control, or if the form control already has a value, the placeholder disappears. Browsers with automatic page translation features may skip over attributes when translating, meaning the <code>placeholder</code> may not get translated.</p>
 
 <div class="notecard note">
-<p>Don't use the {{htmlattrxref("placeholder", "input", "", 1)}} attribute if you can avoid it. If you need to label an <code>&lt;input&gt;</code> element, use the {{HTMLElement("label")}} element.</p>
+<p><strong>Note:</strong> Don't use the {{htmlattrxref("placeholder", "input", "", 1)}} attribute if you can avoid it. If you need to label an <code>&lt;input&gt;</code> element, use the {{HTMLElement("label")}} element.</p>
 </div>
 
 <h3 id="Client-side_validation">Client-side validation</h3>
 
 <div class="notecard warning">
-<p><strong>Warning:</strong> Client-side validation is useful, but it does <em>not</em> guarantee that the server will receive valid data. If the data must be in a specific format, <em>always</em> verify it also on the server-side, and return a <a href="/en-US/docs/Web/HTTP/Status/400"><code>400</code> HTTP response</a> if the format is invalid.</p>
+<p><strong>Note:</strong> <strong>Warning:</strong> Client-side validation is useful, but it does <em>not</em> guarantee that the server will receive valid data. If the data must be in a specific format, <em>always</em> verify it also on the server-side, and return a <a href="/en-US/docs/Web/HTTP/Status/400"><code>400</code> HTTP response</a> if the format is invalid.</p>
 </div>
 
 <p>In addition to using CSS to style inputs based on the {{cssxref(":valid")}} or {{cssxref(":invalid")}} UI states based on the current state of each input, as noted in the {{anch('UI pseudo-classes')}} section above, the browser provides for client-side validation on (attempted) form submission. On form submission, if there is a form control that fails constraint validation, supporting browsers will display an error message on the first invalid form control; displaying a default message based on the error type, or a message set by you.</p>
