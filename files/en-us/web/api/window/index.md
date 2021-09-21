@@ -232,8 +232,8 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
   - : Returns the selection object representing the selected item(s).
 - {{domxref("Window.matchMedia()")}}
   - : Returns a {{domxref("MediaQueryList")}} object representing the specified media query string.
-- {{domxref("Window.maximize()")}}
-  - : {{todo("NeedsContents")}}
+- {{domxref("Window.maximize()")}} (top-level XUL windows only)
+  - : Miximizes the window.
 - {{domxref("Window.minimize()")}} (top-level XUL windows only)
   - : Minimizes the window.
 - {{domxref("Window.moveBy()")}}
