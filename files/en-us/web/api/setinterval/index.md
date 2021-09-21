@@ -95,6 +95,8 @@ function myCallback(a, b)
 The following example calls the `flashtext()` function once a second until
 the Stop button is pressed.
 
+#### HTML
+
 ```html
 <div id="my_box">
   <h3>Hello World</h3>
@@ -102,6 +104,19 @@ the Stop button is pressed.
 <button id="start">Start</button>
 <button id="stop">Stop</button>
 ```
+
+#### CSS
+
+```css
+.go {
+  color: green;
+}
+.stop {
+  color: red;
+}
+```
+
+#### JavaScript
 
 ```js
 // variable to store our intervalID
@@ -116,10 +131,10 @@ function changeColor() {
 
 function flashText() {
   const oElem = document.getElementById("my_box");
-  if (oElem.style.color === "red") {
-    oElem.style.color = "blue";
+  if (oElem.className === "go") {
+    oElem.className = "stop";
   } else {
-    oElem.style.color = "red";
+    oElem.className = "go";
   }
 }
 
@@ -132,6 +147,7 @@ function stopTextColor() {
 document.getElementById("start").addEventListener("click", changeColor);
 document.getElementById("stop").addEventListener("click", stopTextColor);
 ```
+#### Result
 
 {{EmbedLiveSample("Example_2:_Alternating_two_colors")}}
 
