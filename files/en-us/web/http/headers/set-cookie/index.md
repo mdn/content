@@ -120,7 +120,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 
     The forward slash (`/`) character is interpreted as a directory separator,
     and subdirectories will be matched as well:
-    for `Path=/docs`, `/docs`, `/docs/Web/`, and `/docs/Web/HTTP` will all match.
+    for `Path=/docs`, the request paths `/docs`, `/docs/`, `/docs/Web/`, and `/docs/Web/HTTP` will all match, but none of `/`, `/docsets`, `/fr/docs` would.
 
 - `Secure` {{optional_inline}}
 
