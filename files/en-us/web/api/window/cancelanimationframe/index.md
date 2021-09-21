@@ -51,7 +51,7 @@ function step(timestamp) {
   }
 }
 myReq = requestAnimationFrame(step);
-// the cancelation uses the last requestId
+// the cancellation uses the last requestId
 cancelAnimationFrame(myReq);
 ```
 
