@@ -42,7 +42,7 @@ A cascade layer can be created with {{cssxref("@import")}}, in this case the rul
 @import(utilities.css) layer(utilities);
 ```
 
-You can also created a named cascade layer without assigning any styles. This can be a single name:
+You can also create a named cascade layer without assigning any styles. This can be a single name:
 
 ```css
 @layer utilities
@@ -139,7 +139,7 @@ Without layers, the selector `box p` would have the highest specificity and ther
 
 ### Assigning rules to existing layers
 
-In the following example two layers are created with no rules applied, then CSS rules are applied to the two layers. The `base` layer defines a color, border, font-size, and padding. The `special` layer defines a different color. As `special` comes last when the layers were defined, the color it provides is used and the text is displayed using `rebeccapurple`. All of the other rules from `base` still apply.
+In the following example, two layers are created with no rules applied, then CSS rules are applied to the two layers. The `base` layer defines a color, border, font-size, and padding. The `special` layer defines a different color. As `special` comes last when the layers were defined, the color it provides is used and the text is displayed using `rebeccapurple`. All of the other rules from `base` still apply.
 
 #### HTML
 
