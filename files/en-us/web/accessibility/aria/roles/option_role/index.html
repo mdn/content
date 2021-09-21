@@ -13,9 +13,9 @@ tags:
 <p>The <code>option</code> role is used to identify selections a user can make in a <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role">listbox</a>. These options are similar to the {{HTMLElement('option')}} elements in a {{HTMLElement('select')}} element, but they can contain images.</p>
 
 
-<p>All selected options should have <code>aria-selected</code> set to <code>true</code> and all options that are not selected should have <code>aria-selected</code> set to <code>false</code>. If an option is not selectable, <code>aria-selected</code> should be omitted entirely.</p>
+<p>All selectable options should have <code>aria-selected</code> match their state, <code>true</code> when selected and <code>false</code> when not. If an option is not selectable, <code>aria-selected</code> should be omitted. A disabled option can either omit the <code>aria-selected</code> option and be removed from the focus order, or mark <code>aria-selected</code> as <code>false</code> to show the user that the option is present, albeit disabled.<p>
 
-<p>The <code>option</code> role should only be used to identify selections in a <code>listbox</code> so that they can be understood properly by accessibility tools. They must also have an accessible name as the content between its tags or through ARIA with <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute">aria-label</a> or <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute">aria-labelled-by</a></p>
+	<p>The <code>option</code> role is for identifying selectable choices of a <code>listbox</code>. Options must be provided an accessible name. Generally, the accessible name for an option should come from the element's descendant content. Authors can also explicitly provide an accessible name by specifying <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute">aria-label</a> or <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute">aria-labelledby</a> to the element with the <code>option</code> role. If using <code>aria-label</code> or <code>aria-labelledby</code>, and the option also displays a visible text label, authors must ensure they adhere to <a href="https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html">WCAG Success Criterion 2.5.3 Label in Name</a>.</p>
 
 <p>It is highly recommended to use a {{HTMLElement('select')}} element or an  {{HTMLElement('input')}} element with the <code>checkbox</code> or <code>radio</code> type instead, when possible. These native HTML elements provide keyboard interactivity to manage focus for all the descendants for you automatically.</p>
 
@@ -95,7 +95,6 @@ tags:
 	<li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role">ARIA: <code>combobox</code> role</a></li>
 	<li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/option_role">ARIA: <code>option</code> role</a></li>
 	<li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/List_role">ARIA: <code>list</code> role</a></li>
-	<li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Listitem_role">ARIA: <code>listitem</code> role</a></li>
 	<li><a href="https://www.w3.org/TR/wai-aria-practices/#Listbox">ARIA Best Practices – Listbox</a></li>
 	<li><a href="https://www.w3.org/TR/wai-aria-1.1/#listbox">ARIA Role Model – Listbox</a></li>
 </ul>
