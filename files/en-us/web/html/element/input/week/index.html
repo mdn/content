@@ -78,48 +78,21 @@ weekControl.value = '2017-W45';</pre>
 
 <h2 id="Additional_attributes">Additional attributes</h2>
 
-<p>In addition to the attributes common to {{HTMLElement("input")}} elements, week inputs offer the following attributes:</p>
+<p>In addition to the attributes common to {{HTMLElement("input")}} elements, week inputs offer the following attributes.</p>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Attribute</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>{{anch("max")}}</code></td>
-   <td>The latest year and week to accept as valid input</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("min")}}</code></td>
-   <td>The earliest year and week to accept as valid input</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("readonly")}}</code></td>
-   <td>A Boolean which, if present, indicates that the user cannot edit the field's contents</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("step")}}</code></td>
-   <td>The stepping interval (the distance between allowed values) to use for both user interface and constraint validation</td>
-  </tr>
- </tbody>
-</table>
-
-<h3 id="attr-max"><code id="max">max</code></h3>
+<h3>max</h3>
 
 <p>The latest (time-wise) year and week number, in the string format discussed in the {{anch("Value")}} section above, to accept. If the {{htmlattrxref("value", "input")}} entered into the element exceeds this, the element fails <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a>. If the value of the <code>max</code> attribute isn't a valid week string, then the element has no maximum value.</p>
 
 <p>This value must be greater than or equal to the year and week specified by the <code>min</code> attribute.</p>
 
-<h3 id="attr-min"><code id="min">min</code></h3>
+<h3>min</h3>
 
 <p>The earliest year and week to accept. If the {{htmlattrxref("value", "input")}} of the element is less than this, the element fails <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a>. If a value is specified for <code>min</code> that isn't a valid week string, the input has no minimum value.</p>
 
 <p>This value must be less than or equal to the value of the <code>max</code> attribute.</p>
 
-<h3><code>readonly</code></h3>
+<h3>readonly</h3>
 
 <p>A Boolean attribute which, if present, means this field cannot be edited by the user. Its <code>value</code> can, however, still be changed by JavaScript code directly setting the {{domxref("HTMLInputElement")}} <code>value</code> property.</p>
 
@@ -127,7 +100,7 @@ weekControl.value = '2017-W45';</pre>
 <p><strong>Note:</strong> Because a read-only field cannot have a value, <code>required</code> does not have any effect on inputs with the <code>readonly</code> attribute also specified.</p>
 </div>
 
-<h3 id="attr-step"><code id="step">step</code></h3>
+<h3>step</h3>
 
 <p>The <code>step</code> attribute is a number that specifies the granularity that the value must adhere to, or the special value <code>any</code>, which is described below. Only values which are equal to the basis for stepping (<code>{{anch("min")}}</code> if specified, {{htmlattrxref("value", "input")}} otherwise, and an appropriate default value if neither of those is provided) are valid.</p>
 

@@ -74,44 +74,21 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript ti
 
 <h2 id="Additional_attributes">Additional attributes</h2>
 
-<p>Along with the attributes common to all {{HTMLElement("input")}} elements, <code>date</code> inputs have the following attributes:</p>
+<p>Along with the attributes common to all {{HTMLElement("input")}} elements, <code>date</code> inputs have the following attributes.</p>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Attribute</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>{{anch("max")}}</code></td>
-   <td>The latest acceptable date</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("min")}}</code></td>
-   <td>The earliest acceptable date</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("step")}}</code></td>
-   <td>The <em>stepping interval</em>, when clicking up and down spinner buttons and validating the date</td>
-  </tr>
- </tbody>
-</table>
-
-<h3 id="attr-max"><code id="max">max</code></h3>
+<h3>max</h3>
 
 <p>The latest date to accept. If the {{htmlattrxref("value", "input")}} entered into the element occurs afterward, the element fails <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a>. If the value of the <code>max</code> attribute isn't a possible date string in the format <code>yyyy-mm-dd</code>, then the element has no maximum date value.</p>
 
 <p>If both the <code>max</code> and <code>min</code> attributes are set, this value must be a date string <strong>later than or equal to</strong> the one in the <code>min</code> attribute.</p>
 
-<h3 id="attr-min"><code id="min">min</code></h3>
+<h3>min</h3>
 
 <p>The earliest date to accept. If the {{htmlattrxref("value", "input")}} entered into the element occurs beforehand, the element fails <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a>. If the value of the <code>min</code> attribute isn't a possible date string in the format <code>yyyy-mm-dd</code>, then the element has no minimum date value.</p>
 
 <p>If both the <code>max</code> and <code>min</code> attributes are set, this value must be a date string <strong>earlier than or equal to</strong> the one in the <code>max</code> attribute.</p>
 
-<h3 id="attr-step"><code id="step">step</code></h3>
+<h3>step</h3>
 
 <p>The <code>step</code> attribute is a number that specifies the granularity that the value must adhere to, or the special value <code>any</code>, which is described below. Only values which are equal to the basis for stepping (<code>{{anch("min")}}</code> if specified, {{htmlattrxref("value", "input")}} otherwise, and an appropriate default value if neither of those is provided) are valid.</p>
 
