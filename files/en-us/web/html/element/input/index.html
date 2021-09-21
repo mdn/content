@@ -42,7 +42,7 @@ browser-compat: html.elements.input
  <tbody>
   <tr>
    <td>{{HTMLElement("input/button", "button")}}</td>
-   <td>A push button with no default behavior displaying the value of the {{anch('htmlattrdefvalue', 'value')}} attribute, empty by default.</td>
+   <td>A push button with no default behavior displaying the value of the {{anch('attr-value', 'value')}} attribute, empty by default.</td>
    <td id="examplebutton">
     <pre class="brush: html hidden">
 &lt;input  type="button" name="button" value="Button" /&gt;</pre>
@@ -90,7 +90,7 @@ browser-compat: html.elements.input
   </tr>
   <tr>
    <td>{{HTMLElement("input/file", "file")}}</td>
-   <td>A control that lets the user select a file. Use the {{anch('htmlattrdefaccept', 'accept')}} attribute to define the types of files that the control can select.</td>
+   <td>A control that lets the user select a file. Use the {{anch('attr-accept', 'accept')}} attribute to define the types of files that the control can select.</td>
    <td id="examplefile">
     <pre class="brush: html hidden">
 &lt;input type="file" accept="image/*, text/*" name="file"/&gt;</pre>
@@ -103,7 +103,7 @@ browser-compat: html.elements.input
   </tr>
   <tr>
    <td>{{HTMLElement("input/image", "image")}}</td>
-   <td>A graphical <code>submit</code> button. Displays an image defined by the <code>src</code> attribute. The {{anch('htmlattrdefalt', 'alt')}} attribute displays if the image {{anch('htmlattrdefsrc', 'src')}} is missing.</td>
+   <td>A graphical <code>submit</code> button. Displays an image defined by the <code>src</code> attribute. The {{anch('attr-alt', 'alt')}} attribute displays if the image {{anch('attr-src', 'src')}} is missing.</td>
    <td id="exampleimage">
     <pre class="brush: html hidden">
 &lt;input type="image" name="image" src="" alt="image input"/&gt;</pre>
@@ -135,7 +135,7 @@ browser-compat: html.elements.input
   </tr>
   <tr>
    <td>{{HTMLElement("input/radio", "radio")}}</td>
-   <td>A radio button, allowing a single value to be selected out of multiple choices with the same {{anch('htmlattrdefname', 'name')}} value.</td>
+   <td>A radio button, allowing a single value to be selected out of multiple choices with the same {{anch('attr-name', 'name')}} value.</td>
    <td id="exampleradio">
     <pre class="brush: html hidden">
 &lt;input type="radio" name="radio"/&gt;</pre>
@@ -143,7 +143,7 @@ browser-compat: html.elements.input
   </tr>
   <tr>
    <td>{{HTMLElement("input/range", "range")}}</td>
-   <td>A control for entering a number whose exact value is not important. Displays as a range widget defaulting to the middle value. Used in conjunction {{anch('htmlattrdefmin', 'min')}} and {{anch('htmlattrdefmax', 'max')}} to define the range of acceptable values.</td>
+   <td>A control for entering a number whose exact value is not important. Displays as a range widget defaulting to the middle value. Used in conjunction {{anch('attr-min', 'min')}} and {{anch('attr-max', 'max')}} to define the range of acceptable values.</td>
    <td id="examplerange">
     <pre class="brush: html hidden">
 &lt;input type="range" name="range" min="0" max="25"/&gt;</pre>
@@ -411,15 +411,15 @@ browser-compat: html.elements.input
 <h3 id="Individual_attributes">Individual attributes</h3>
 
 <dl>
- <dt id="htmlattrdefaccept">{{htmlattrdef("accept")}}</dt>
+ <dt>{{htmlattrdef("accept")}}</dt>
  <dd>
  <p>Valid for the <code>file</code> input type only, the <code>accept</code> attribute defines which file types are selectable in a <code>file</code> upload control. See the {{HTMLElement("input/file", "file")}} input type.</p>
  </dd>
- <dt id="htmlattrdefalt">{{htmlattrdef("alt")}}</dt>
+ <dt>{{htmlattrdef("alt")}}</dt>
  <dd>
  <p>Valid for the <code>image</code> button only, the <code>alt</code> attribute provides alternative text for the image, displaying the value of the attribute if the image {{htmlattrxref("scr", "input", "", 1)}} is missing or otherwise fails to load. See the {{HTMLElement("input/image", "image")}} input type.</p>
  </dd>
- <dt id="htmlattrdefautocomplete">{{htmlattrdef("autocomplete")}}</dt>
+ <dt>{{htmlattrdef("autocomplete")}}</dt>
  <dd>
  <p>(<strong>Not</strong> a Boolean attribute!) The <code><a href="/en-US/docs/Web/HTML/Attributes/autocomplete">autocomplete</a></code> attribute takes as its value a space-separated string that describes what, if any, type of autocomplete functionality the input should provide. A typical implementation of autocomplete recalls previous values entered in the same input field, but more complex forms of autocomplete can exist. For instance, a browser could integrate with a device's contacts list to autocomplete <code>email</code> addresses in an email input field. See {{SectionOnPage("/en-US/docs/Web/HTML/Attributes/autocomplete", "Values")}} for permitted values.</p>
 
@@ -427,7 +427,7 @@ browser-compat: html.elements.input
 
  <p>See <a href="/en-US/docs/Web/HTML/Attributes/autocomplete">The HTML autocomplete attribute</a> for additional information, including information on password security and how <code>autocomplete</code> is slightly different for <code>hidden</code> than for other input types.</p>
  </dd>
- <dt id="htmlattrdefautofocus">{{htmlattrdef("autofocus")}}</dt>
+ <dt>{{htmlattrdef("autofocus")}}</dt>
  <dd>
  <p>A Boolean attribute which, if present, indicates that the input should automatically have focus when the page has finished loading (or when the {{HTMLElement("dialog")}} containing the element has been displayed).</p>
 
@@ -445,11 +445,11 @@ browser-compat: html.elements.input
 
  <p>Use careful consideration for accessibility when applying the <code>autofocus</code> attribute. Automatically focusing on a control can cause the page to scroll on load. The focus can also cause dynamic keyboards to display on some touch devices. While a screen reader will announce the label of the form control receiving focus, the screen reader will not announce anything before the label, and the sighted user on a small device will equally miss the context created by the preceding content.</p>
  </dd>
- <dt id="htmlattrdefcapture">{{htmlattrdef("capture")}}</dt>
+ <dt>{{htmlattrdef("capture")}}</dt>
  <dd>
  <p>Introduced in the HTML Media Capture specification and valid for the <code>file</code> input type only, the <code>capture</code> attribute defines which media—microphone, video, or camera—should be used to capture a new file for upload with <code>file</code> upload control in supporting scenarios. See the {{HTMLElement("input/file", "file")}} input type.</p>
  </dd>
- <dt id="htmlattrdefchecked">{{htmlattrdef("checked")}}</dt>
+ <dt>{{htmlattrdef("checked")}}</dt>
  <dd>
  <p>Valid for both <code>radio</code> and <code>checkbox</code> types, <code>checked</code> is a Boolean attribute. If present on a <code>radio</code> type, it indicates that the radio button is the currently selected one in the group of same-named radio buttons. If present on a <code>checkbox</code> type, it indicates that the checkbox is checked by default (when the page loads). It does <em>not</em> indicate whether this checkbox is currently checked: if the checkbox’s state is changed, this content attribute does not reflect the change. (Only the <a href="/en-US/docs/Web/API/HTMLInputElement"><code>HTMLInputElement</code>’s <code>checked</code> IDL attribute</a> is updated.)</p>
 
@@ -459,7 +459,7 @@ browser-compat: html.elements.input
  <p>For example, if a checkbox whose <code>name</code> is <code>fruit</code> has a <code>value</code> of <code>cherry</code>, and the checkbox is checked, the form data submitted will include <code>fruit=cherry</code>. If the checkbox isn't active, it isn't listed in the form data at all. The default <code>value</code> for checkboxes and radio buttons is <code>on</code>.</p>
  </div>
  </dd>
- <dt id="htmlattrdefdirname">{{htmlattrdef("dirname")}}</dt>
+ <dt>{{htmlattrdef("dirname")}}</dt>
  <dd>
  <p>Valid for <code>text</code> and <code>search</code> input types only, the <code>dirname</code> attribute enables the submission of the directionality of the element. When included, the form control will submit with two name/value pairs: the first being the {{htmlattrxref("name", "input")}} and {{htmlattrxref("value", "input")}}, the second being the value of the <code>dirname</code> as the name with the value of <code>ltr</code> or <code>rtl</code> being set by the browser.</p>
 
@@ -472,7 +472,7 @@ browser-compat: html.elements.input
 
  <p>When the form above is submitted, the input cause both the <code>name</code> / <code>value</code> pair of <code>fruit=cherry</code> and the <code>dirname</code> / direction pair of <code>fruit.dir=ltr</code> to be sent.</p>
  </dd>
- <dt id="htmlattrdefdisabled">{{htmlattrdef("disabled")}}</dt>
+ <dt>{{htmlattrdef("disabled")}}</dt>
  <dd>
  <p>A Boolean attribute which, if present, indicates that the user should not be able to interact with the input. Disabled inputs are typically rendered with a dimmer color or using some other form of indication that the field is not available for use.</p>
 
@@ -482,7 +482,7 @@ browser-compat: html.elements.input
  <p><strong>Note:</strong> Although not required by the specification, Firefox will by default <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">persist the dynamic disabled state</a> of an <code>&lt;input&gt;</code> across page loads. Use the {{htmlattrxref("autocomplete", "input")}} attribute to control this feature.</p>
  </div>
  </dd>
- <dt id="htmlattrdefform">{{htmlattrdef("form")}}</dt>
+ <dt>{{htmlattrdef("form")}}</dt>
  <dd>
  <p>A string specifying the {{HTMLElement("form")}} element with which the input is associated (that is, its <strong>form owner</strong>). This string's value, if present, must match the {{htmlattrxref("id")}} of a <code>&lt;form&gt;</code> element in the same document. If this attribute isn't specified, the <code>&lt;input&gt;</code> element is associated with the nearest containing form, if any.</p>
 
@@ -492,80 +492,41 @@ browser-compat: html.elements.input
  <p><strong>Note:</strong> An input can only be associated with one form.</p>
  </div>
  </dd>
- <dt id="htmlattrdefformaction">{{htmlattrdef('formaction')}}</dt>
+ <dt>{{htmlattrdef('formaction')}}</dt>
  <dd>
  <p>Valid for the <code>image</code> and <code>submit</code> input types only. See the {{HTMLElement("input/submit", "submit")}} input type for more information.</p>
  </dd>
- <dt id="htmlattrdefformenctype">{{htmlattrdef('formenctype')}}</dt>
+ <dt>{{htmlattrdef('formenctype')}}</dt>
  <dd>
  <p>Valid for the <code>image</code> and <code>submit</code> input types only. See the {{HTMLElement("input/submit", "submit")}} input type for more information.</p>
  </dd>
- <dt id="htmlattrdefformmethod">{{htmlattrdef('formmethod')}}</dt>
+ <dt>{{htmlattrdef('formmethod')}}</dt>
  <dd>
  <p>Valid for the <code>image</code> and <code>submit</code> input types only. See the {{HTMLElement("input/submit", "submit")}} input type for more information.</p>
  </dd>
- <dt id="htmlattrdefformnovalidate">{{htmlattrdef('formnovalidate')}}</dt>
+ <dt>{{htmlattrdef('formnovalidate')}}</dt>
  <dd>
  <p>Valid for the <code>image</code> and <code>submit</code> input types only. See the {{HTMLElement("input/submit", "submit")}} input type for more information.</p>
  </dd>
- <dt id="htmlattrdefformtarget">{{htmlattrdef('formtarget')}}</dt>
+ <dt>{{htmlattrdef('formtarget')}}</dt>
  <dd>
  <p>Valid for the <code>image</code> and <code>submit</code> input types only. See the {{HTMLElement("input/submit", "submit")}} input type for more information.</p>
  </dd>
- <dt id="htmlattrdefheight">{{htmlattrdef("height")}}</dt>
+ <dt>{{htmlattrdef("height")}}</dt>
  <dd>
  <p>Valid for the <code>image</code> input button only, the <code>height</code> is the height of the image file to display to represent the graphical submit button. See the {{HTMLElement("input/image", "image")}} input type.</p>
  </dd>
- <dt id="htmlattrdefid">{{htmlattrdef("id")}}</dt>
+ <dt>{{htmlattrdef("id")}}</dt>
  <dd>
  <p>Global attribute valid for all elements, including all the input types, it defines a unique identifier (ID) which must be unique in the whole document. Its purpose is to identify the element when linking. The value is used as the value of the {{htmlelement('label')}}'s <code>for</code> attribute to link the label with the form control. See {{htmlelement('label')}}.</p>
  </dd>
- <dt id="htmlattrdefinputmode">{{htmlattrdef("inputmode")}}</dt>
+ <dt>{{htmlattrdef("inputmode")}}</dt>
  <dd>
  <p>Global value valid for all elements, it provides a hint to browsers as to the type of virtual keyboard configuration to use when editing this element or its contents. Values include <code>none</code>, <code>text</code>, <code>tel</code>, <code>url</code>, <code>email</code>, <code>numeric</code>, <code>decimal</code>, and <code>search</code>.</p>
  </dd>
- <dt id="htmlattrdeflist">{{htmlattrdef("list")}}</dt>
- <dd id="datalist">
+ <dt>{{htmlattrdef("list")}}</dt>
+ <dd>
  <p>The value given to the <code>list</code> attribute should be the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The <code>&lt;datalist&gt;</code> provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the {{htmlattrxref("type", "input")}} are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.</p>
-
- <pre class="brush: html hidden">&lt;datalist id="colorsxx"&gt;
-  &lt;option&gt;#ff0000&lt;/option&gt;
-  &lt;option&gt;#ee0000&lt;/option&gt;
-  &lt;option&gt;#dd0000&lt;/option&gt;
-  &lt;option&gt;#cc0000&lt;/option&gt;
-  &lt;option&gt;#bb0000&lt;/option&gt;
-&lt;/datalist&gt;
-&lt;datalist id="numbersxx"&gt;
-  &lt;option&gt;0&lt;/option&gt;
-  &lt;option&gt;2&lt;/option&gt;
-  &lt;option&gt;4&lt;/option&gt;
-  &lt;option&gt;8&lt;/option&gt;
-  &lt;option&gt;16&lt;/option&gt;
-  &lt;option&gt;32&lt;/option&gt;
-  &lt;option&gt;64&lt;/option&gt;
-&lt;/datalist&gt;
-&lt;datalist id="fruitsxx"&gt;
-  &lt;option&gt;cherry&lt;/option&gt;
-  &lt;option&gt;banana&lt;/option&gt;
-  &lt;option&gt;mango&lt;/option&gt;
-  &lt;option&gt;orange&lt;/option&gt;
-  &lt;option&gt;blueberry&lt;/option&gt;
-&lt;/datalist&gt;
-&lt;datalist id="urlsxx"&gt;
-  &lt;option&gt;https://developer.mozilla.org&lt;/option&gt;
-  &lt;option&gt;https://caniuse.com/&lt;/option&gt;
-  &lt;option&gt;https://mozilla.com&lt;/option&gt;
-  &lt;option&gt;https://mdn.github.io&lt;/option&gt;
-  &lt;option&gt;https://www.youtube.com/user/firefoxchannel&lt;/option&gt;
-&lt;/datalist&gt;
-
-&lt;p&gt;&lt;label for="textx"&gt;Text&lt;/label&gt; &lt;input type="text" list="fruitsxx" id="textx"/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;label for="colorx"&gt;Color&lt;/label&gt; &lt;input type="color" list="colorsxx" id="colorx"/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;label for="rangex"&gt;Range&lt;/label&gt; &lt;input type="range" min="0" max="64" list="numbersxx" id="rangex"/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;label for="numberx"&gt;Number&lt;/label&gt; &lt;input type="number" min="0" max="64" list="numbersxx" id="numberx"/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;label for="urlx"&gt;URL&lt;/label&gt; &lt;input type="url" list="urlsxx" id="urlx"/&gt;&lt;/p&gt;</pre>
-
- <p>{{EmbedLiveSample("datalist",400,275,"","", "nobutton")}}</p>
 
  <p>It is valid on <code>text</code>, <code>search</code>, <code>url</code>, <code>tel</code>, <code>email</code>, <code>date</code>, <code>month</code>, <code>week</code>, <code>time</code>, <code>datetime-local</code>, <code>number</code>, <code>range</code>, and <code>color</code>.</p>
 
@@ -575,19 +536,19 @@ browser-compat: html.elements.input
 
  <p>See the {{htmlelement('datalist')}} element.</p>
  </dd>
- <dt id="htmlattrdefmax"><a href="/en-US/docs/Web/HTML/Attributes/max">{{htmlattrdef("max")}}</a></dt>
+ <dt>{{htmlattrdef("max")}}</dt>
  <dd>
  <p>Valid for <code>date</code>, <code>month</code>, <code>week</code>, <code>time</code>, <code>datetime-local</code>, <code>number</code>, and <code>range</code>, it defines the greatest value in the range of permitted values. If the {{htmlattrxref("value", "input")}} entered into the element exceeds this, the element fails <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a>. If the value of the <code>max</code> attribute isn't a number, then the element has no maximum value.</p>
 
  <p>There is a special case: if the data type is periodic (such as for dates or times), the value of <code>max</code> may be lower than the value of <code>min</code>, which indicates that the range may wrap around; for example, this allows you to specify a time range from 10 PM to 4 AM.</p>
  </dd>
- <dt id="htmlattrdefmaxlength">{{htmlattrdef("maxlength")}}</dt>
+ <dt>{{htmlattrdef("maxlength")}}</dt>
  <dd>
  <p>Valid for <code>text</code>, <code>search</code>, <code>url</code>, <code>tel</code>, <code>email</code>, and <code>password</code>, it defines the maximum number of characters (as UTF-16 code units) the user can enter into the field. This must be an integer value <code>0</code> or higher. If no <code>maxlength</code> is specified, or an invalid value is specified, the field has no maximum length. This value must also be greater than or equal to the value of <code>minlength</code>.</p>
 
  <p>The input will fail <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a> if the length of the text entered into the field is greater than <code>maxlength</code> UTF-16 code units long. By default, browsers prevent users from entering more characters than allowed by the <code>maxlength</code> attribute. See {{anch("Client-side validation")}} for more information.</p>
  </dd>
- <dt id="htmlattrdefmin">{{htmlattrdef("min")}}</dt>
+ <dt>{{htmlattrdef("min")}}</dt>
  <dd>
  <p>Valid for <code>date</code>, <code>month</code>, <code>week</code>, <code>time</code>, <code>datetime-local</code>, <code>number</code>, and <code>range</code>, it defines the most negative value in the range of permitted values. If the {{htmlattrxref("value", "input")}} entered into the element is less than this this, the element fails <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a>. If the value of the <code>min</code> attribute isn't a number, then the element has no minimum value.</p>
 
@@ -595,17 +556,17 @@ browser-compat: html.elements.input
 
  <p>There is a special case: if the data type is periodic (such as for dates or times), the value of <code>max</code> may be lower than the value of <code>min</code>, which indicates that the range may wrap around; for example, this allows you to specify a time range from 10 PM to 4 AM.</p>
  </dd>
- <dt id="htmlattrdefminlength">{{htmlattrdef("minlength")}}</dt>
+ <dt>{{htmlattrdef("minlength")}}</dt>
  <dd>
  <p>Valid for <code>text</code>, <code>search</code>, <code>url</code>, <code>tel</code>, <code>email</code>, and <code>password</code>, it defines the minimum number of characters (as UTF-16 code units) the user can enter into the entry field. This must be an non-negative integer value smaller than or equal to the value specified by <code>maxlength</code>. If no <code>minlength</code> is specified, or an invalid value is specified, the input has no minimum length.</p>
 
  <p>The input will fail <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a> if the length of the text entered into the field is fewer than <code>minlength</code> UTF-16 code units long, preventing form submission. See {{anch("Client-side validation")}} for more information.</p>
  </dd>
- <dt id="htmlattrdefmultiple">{{htmlattrdef("multiple")}}</dt>
+ <dt>{{htmlattrdef("multiple")}}</dt>
  <dd>
  <p>The Boolean <code>multiple</code> attribute, if set, means the user can enter comma separated email addresses in the email widget or can choose more than one file with the <code>file</code> input. See the {{HTMLElement("input/email", "email")}} and {{HTMLElement("input/file", "file")}} input type.</p>
  </dd>
- <dt id="htmlattrdefname">{{htmlattrdef("name")}}</dt>
+ <dt>{{htmlattrdef("name")}}</dt>
  <dd>
  <p>A string specifying a name for the input control. This name is submitted along with the control's value when the form data is submitted.</p>
 
@@ -640,7 +601,7 @@ let hatSize = form.elements["hat-size"];
  <p><strong>Warning:</strong> Avoid giving form elements a <code>name</code> that corresponds to a built-in property of the form, since you would then override the predefined property or method with this reference to the corresponding input.</p>
  </div>
  </dd>
- <dt id="htmlattrdefpattern">{{htmlattrdef("pattern")}}</dt>
+ <dt>{{htmlattrdef("pattern")}}</dt>
  <dd>
  <p>The <code>pattern</code> attribute, when specified, is a regular expression that the input's {{htmlattrxref("value", "input")}} must match in order for the value to pass <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a>. It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">guide on regular expressions</a>; the <code>'u'</code> flag is specified when compiling the regular expression, so that the pattern is treated as a sequence of Unicode code points, instead of as ASCII. No forward slashes should be specified around the pattern text.</p>
 
@@ -652,7 +613,7 @@ let hatSize = form.elements["hat-size"];
 
  <p>See {{anch("Client-side validation")}} for more information.</p>
  </dd>
- <dt id="htmlattrdefplaceholder">{{htmlattrdef("placeholder")}}</dt>
+ <dt>{{htmlattrdef("placeholder")}}</dt>
  <dd>
  <p>The <code>placeholder</code> attribute is a string that provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that provides a hint as to the expected type of data, rather than an explanation or prompt. The text <em>must not</em> include carriage returns or line feeds. So for example if a field is expected to capture a user's first name, and its label is "First Name", a suitable placeholder might be "e.g. Mustafa".</p>
 
@@ -660,25 +621,25 @@ let hatSize = form.elements["hat-size"];
  <p><strong>Note:</strong> The <code>placeholder</code> attribute is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content. See {{anch("Labels")}} for more information.</p>
  </div>
  </dd>
- <dt id="htmlattrdefreadonly">{{htmlattrdef("readonly")}}</dt>
+ <dt>{{htmlattrdef("readonly")}}</dt>
  <dd>
  <p>A Boolean attribute which, if present, indicates that the user should not be able to edit the value of the input. The <code>readonly</code> attribute is supported by the <code>text</code>, <code>search</code>, <code>url</code>, <code>tel</code>, <code>email</code>, <code>date</code>, <code>month</code>, <code>week</code>, <code>time</code>, <code>datetime-local</code>, <code>number</code>, and <code>password</code> input types.</p>
 
  <p>See the <a href="/en-US/docs/Web/HTML/Attributes/readonly">HTML attribute: <code>readonly</code></a> for more information.</p>
  </dd>
- <dt id="htmlattrdefrequired">{{htmlattrdef("required")}}</dt>
+ <dt>{{htmlattrdef("required")}}</dt>
  <dd>
  <p><code>required</code> is a Boolean attribute which, if present, indicates that the user must specify a value for the input before the owning form can be submitted. The <code>required</code> attribute is supported by <code>text</code>, <code>search</code>, <code>url</code>, <code>tel</code>, <code>email</code>, <code>date</code>, <code>month</code>, <code>week</code>, <code>time</code>, <code>datetime-local</code>, <code>number</code>, <code>password</code>, <code>checkbox</code>, <code>radio</code>, and <code>file</code> inputs.</p>
 
  <p>See {{anch("Client-side validation")}} and the <a href="/en-US/docs/Web/HTML/Attributes/required">HTML attribute: <code>required</code></a> for more information.</p>
  </dd>
- <dt id="htmlattrdefsize">{{htmlattrdef("size")}}</dt>
+ <dt>{{htmlattrdef("size")}}</dt>
  <dd>Valid for <code>email</code>, <code>password</code>, <code>tel</code>, and <code>text</code> <code>input</code> types only. Specifies how much of the input is shown. Basically creates same result as setting CSS <code>width</code> property with a few specialities. The actual unit of the value depends on the input type. For <code>password</code> and <code>text</code>, it is a number of characters (or <code>em</code> units) with a default value of <code>20</code>, and for others, it is <code>pixel</code>s. CSS width takes precedence over size attribute.</dd>
- <dt id="htmlattrdefsrc">{{htmlattrdef("src")}}</dt>
+ <dt>{{htmlattrdef("src")}}</dt>
  <dd>
  <p>Valid for the <code>image</code> input button only, the <code>src</code> is string specifying the URL of the image file to display to represent the graphical submit button. See the {{HTMLElement("input/image", "image")}} input type.</p>
  </dd>
- <dt id="htmlattrdefstep">{{htmlattrdef("step")}}</dt>
+ <dt>{{htmlattrdef("step")}}</dt>
  <dd>
  <p>Valid for the numeric input types, including <code>number</code>, date/time input types, and <code>range</code>, the <code><a href="/en-US/docs/Web/HTML/Attributes/step">step</a></code> attribute is a number that specifies the granularity that the value must adhere to.</p>
 
@@ -701,25 +662,25 @@ let hatSize = form.elements["hat-size"];
 
  <p>See {{anch("Client-side validation")}} for more information.</p>
  </dd>
- <dt id="htmlattrdeftabindex">{{htmlattrdef("tabindex")}}</dt>
+ <dt>{{htmlattrdef("tabindex")}}</dt>
  <dd>
  <p>Global attribute valid for all elements, including all the input types, an integer attribute indicating if the element can take input focus (is focusable), if it should participate to sequential keyboard navigation. As all input types except for input of type hidden are focusable, this attribute should not be used on form controls, because doing so would require the management of the focus order for all elements within the document with the risk of harming usability and accessibility if done incorrectly.</p>
  </dd>
- <dt id="htmlattrdeftitle">{{htmlattrdef('title')}}</dt>
+ <dt>{{htmlattrdef('title')}}</dt>
  <dd>
  <p>Global attribute valid for all elements, including all input types, containing a text representing advisory information related to the element it belongs to. Such information can typically, but not necessarily, be presented to the user as a tooltip. The title should NOT be used as the primary explanation of the purpose of the form control. Instead, use the {{htmlelement('label')}} element with a <code>for</code> attribute set to the form control's {{htmlattrdef('id')}} attribute. See {{anch("Labels")}} below.</p>
  </dd>
- <dt id="htmlattrdeftype">{{htmlattrdef("type")}}</dt>
+ <dt>{{htmlattrdef("type")}}</dt>
  <dd>
  <p>A string specifying the type of control to render. For example, to create a checkbox, a value of <code>checkbox</code> is used. If omitted (or an unknown value is specified), the input type <code>text</code> is used, creating a plaintext input field.</p>
 
  <p>Permitted values are listed in <a href="#input_types">Input types</a> above.</p>
  </dd>
- <dt id="htmlattrdefvalue">{{htmlattrdef("value")}}</dt>
+ <dt>{{htmlattrdef("value")}}</dt>
  <dd>
  <p>The input control's value. When specified in the HTML, this is the initial value, and from then on it can be altered or retrieved at any time using JavaScript to access the respective {{domxref("HTMLInputElement")}} object's <code>value</code> property. The <code>value</code> attribute is always optional, though should be considered mandatory for <code>checkbox</code>, <code>radio</code>, and <code>hidden</code>.</p>
  </dd>
- <dt id="htmlattrdefwidth">{{htmlattrdef("width")}}</dt>
+ <dt>{{htmlattrdef("width")}}</dt>
  <dd>
  <p>Valid for the <code>image</code> input button only, the <code>width</code> is the width of the image file to display to represent the graphical submit button. See the {{HTMLElement("input/image", "image")}} input type.</p>
  </dd>
@@ -1151,7 +1112,7 @@ input[min][max] {}
 
 <p>The last line, setting the custom validity message to the error string is vital. If the user makes an error, and the validity is set, it will fail to submit, even if all of the values are valid, until the message is <code>null</code>.</p>
 
-<h4 id="custom_validation_error_example">Custom validation error example</h4>
+<h4>Custom validation error example</h4>
 
 <p>If you want to present a custom error message when a field fails to validate, you need to use the <a href="/en-US/docs/Web/API/Constraint_validation#constraint_validation_interfaces">Constraint validation features</a> available on <code>&lt;input&gt;</code> (and related) elements. Take the following form:</p>
 
@@ -1183,7 +1144,7 @@ nameInput.addEventListener('invalid', () =&gt; {
 
 <p>The example renders like so:</p>
 
-<p>{{EmbedLiveSample('custom_validation_error_example')}}</p>
+<p>{{EmbedLiveSample('Custom_validation_error_example')}}</p>
 
 <p>In brief:</p>
 
