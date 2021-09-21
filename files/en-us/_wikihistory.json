@@ -75712,15 +75712,6 @@
       "Jeremie"
     ]
   },
-  "Web/API/SVGZoomAndPan": {
-    "modified": "2020-10-15T21:53:53.489Z",
-    "contributors": [
-      "sideshowbarker",
-      "beardicus",
-      "fscholz",
-      "Sebastianz"
-    ]
-  },
   "Web/API/Sanitizer": {
     "modified": "2020-12-13T12:17:05.573Z",
     "contributors": [
