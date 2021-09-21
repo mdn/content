@@ -157,7 +157,7 @@ request.session.modified = True
   &lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; \{{ num_authors }}&lt;/li&gt;
 &lt;/ul&gt;
 
-lt;p&gt;You have visited this page \{{ num_visits }} time\{{ num_visits|pluralize }}.&lt;/p&gt;
+&lt;p&gt;You have visited this page \{{ num_visits }} time\{{ num_visits|pluralize }}.&lt;/p&gt;
 </pre>
 
 <p>Note that we use the Django built-in template tag <a href="https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#pluralize">pluralize</a> to add an "s" when the page has been visited multiple time<strong>s</strong>.</p>
