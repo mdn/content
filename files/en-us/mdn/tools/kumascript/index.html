@@ -38,17 +38,17 @@ tags:
 
 <p>A script in KumaScript is a <em>template</em>, and each template is a file in <a href="https://github.com/mdn/yari/tree/master/kumascript/macros">the macros directory</a> of the yari/kumascript repository on GitHub. A sample template might look like this:</p>
 
-<pre class="brush: js no-line-numbers">&lt;% for (let i = 0; i &lt; $0; i++) { %&gt;
+<pre class="brush: js">&lt;% for (let i = 0; i &lt; $0; i++) { %&gt;
   Hello #&lt;%= i %&gt;
 &lt;% } %&gt;</pre>
 
 <p>Invoking a template is done with a <em>macro</em>, which can be used anywhere in any wiki content. Invoking the above template would look like this (provided it was saved in the macros directory with a filename of <code>hello.ejs</code>):</p>
 
-<pre class="brush: none no-line-numbers">\{{hello(3)}}</pre>
+<pre class="brush: js">\{{hello(3)}}</pre>
 
 <p>The output of the macro would look like this:</p>
 
-<pre class="brush: html no-line-numbers">Hello #0
+<pre class="brush: html">Hello #0
 Hello #1
 Hello #2</pre>
 
@@ -56,7 +56,7 @@ Hello #2</pre>
 
 <p>Macro syntax takes the following general form:</p>
 
-<pre class="brush: none no-line-numbers">\{{templateName("arg0", "arg1", ..., "argN")}}</pre>
+<pre class="brush: js">\{{templateName("arg0", "arg1", ..., "argN")}}</pre>
 
 <p>Macro syntax follows these rules:</p>
 
@@ -71,9 +71,9 @@ Hello #2</pre>
 
 <p>As a semi-experimental feature (not guaranteed to work), you can supply a JSON object for the first and only parameter, like so:</p>
 
-<pre class="brush: none no-line-numbers">\{{templateName({ &quot;Alpha&quot;: &quot;one&quot;, &quot;Beta&quot;: [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;], &quot;Foo&quot;: &quot;https:\/\/mozilla.org\/&quot; })}}</pre>
+<pre class="brush: js">\{{templateName({ &quot;Alpha&quot;: &quot;one&quot;, &quot;Beta&quot;: [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;], &quot;Foo&quot;: &quot;https:\/\/mozilla.org\/&quot; })}}</pre>
 
-<p>The data from this macro is available in template code as an object in the <code class="language-javascript">$0</code> argument (e.g., <code>$0.Alpha</code>, <code>$0.Beta</code>, <code>$0.Foo</code>). This also allows you to express complex data structures in macro parameters that are hard or impossible to do with a simple list of parameters.</p>
+<p>The data from this macro is available in template code as an object in the <code>$0</code> argument (e.g., <code>$0.Alpha</code>, <code>$0.Beta</code>, <code>$0.Foo</code>). This also allows you to express complex data structures in macro parameters that are hard or impossible to do with a simple list of parameters.</p>
 
 <p>Note that this parameter style is very picky — it must adhere to <a href="https://json.org/">JSON syntax</a> exactly, which has some requirements about escaping characters that are easy to miss (e.g., all forward slashes are escaped). When in doubt, <a href="https://jsonlint.com/">try running your JSON through a validator</a>.</p>
 
@@ -94,18 +94,18 @@ Hello #2</pre>
  <li>Most text is treated as output and included in the output stream.</li>
  <li>JavaScript variables and expressions can be inserted into the output stream with these blocks:
   <ul>
-   <li><code class="language-ejs">&lt;%= expr %&gt;</code> — the value of a JavaScript expression is escaped for HTML before being included in output (e.g., characters like <code>&lt;</code> and <code>&gt;</code> are turned into <code>&amp;lt;</code> and <code>&amp;gt;</code>).</li>
-   <li><code class="language-ejs">&lt;%- expr %&gt;</code> — the value of a JavaScript expression is included in output without any escaping. (Use this if you want to dynamically build markup or use the results of another template that may include markup.)</li>
+   <li><code>&lt;%= expr %&gt;</code> — the value of a JavaScript expression is escaped for HTML before being included in output (e.g., characters like <code>&lt;</code> and <code>&gt;</code> are turned into <code>&amp;lt;</code> and <code>&amp;gt;</code>).</li>
+   <li><code>&lt;%- expr %&gt;</code> — the value of a JavaScript expression is included in output without any escaping. (Use this if you want to dynamically build markup or use the results of another template that may include markup.)</li>
    <li>It is an error to include semicolons inside these blocks.</li>
   </ul>
  </li>
- <li>Anything inside a <code class="language-ejs">&lt;% %&gt;</code> block is interpreted as JavaScript. This can include loops, conditionals, etc.</li>
- <li>Nothing inside a <code class="language-ejs">&lt;% %&gt;</code> block can ever contribute to the output stream. But, you can transition from JS mode to output mode using <code>&lt;% %&gt;</code>—for example:
+ <li>Anything inside a <code>&lt;% %&gt;</code> block is interpreted as JavaScript. This can include loops, conditionals, etc.</li>
+ <li>Nothing inside a <code>&lt;% %&gt;</code> block can ever contribute to the output stream. But, you can transition from JS mode to output mode using <code>&lt;% %&gt;</code>—for example:
   <pre class="brush: js">&lt;% for (var i = 0; i &lt; $0; i++) { %&gt;
   Hello #&lt;%= i %&gt;
 &lt;% } %&gt;</pre>
 
-  <p>Note how the JavaScript code is contained in <code class="language-ejs">&lt;% ... %&gt;</code>, and output happens in the space between <code class="language-ejs">%&gt; ... &lt;%</code>. The <code>for</code> loop in JS can begin with one <code class="language-ejs">&lt;% %&gt;</code> block, transition to output mode, and finish up in a second <code class="language-ejs">&lt;% %&gt;</code> JS block.</p>
+  <p>Note how the JavaScript code is contained in <code>&lt;% ... %&gt;</code>, and output happens in the space between <code>%&gt; ... &lt;%</code>. The <code>for</code> loop in JS can begin with one <code>&lt;% %&gt;</code> block, transition to output mode, and finish up in a second <code>&lt;% %&gt;</code> JS block.</p>
  </li>
  <li>For more details on EJS syntax, <a href="https://ejs.co">check out the upstream module documentation</a>.</li>
 </ul>
@@ -197,26 +197,26 @@ Hello #2</pre>
 <p>This manually-maintained documentation is likely to fall out of date with the code. With that in mind, <a class="link-https" href="https://github.com/mdn/yari/tree/master/kumascript/src/api">you can always check out the latest state of built-in APIs in the KumaScript source</a>. But here is a selection of useful methods exposed to templates:</p>
 
 <dl>
- <dt><code class="language-javascript">md5(string)</code></dt>
+ <dt><code>md5(string)</code></dt>
  <dd>Returns an MD5 hex digest of the given string.</dd>
- <dt><code class="language-javascript">template("name", ["arg0", "arg1", ..., "argN"])</code></dt>
+ <dt><code>template("name", ["arg0", "arg1", ..., "argN"])</code></dt>
  <dd>
  <p>Executes and returns the result of the named template with the given list of parameters.</p>
 
- <p>Example: <code class="language-javascript">&lt;%- template("warning", ["foo", "bar", "baz"]) %&gt;</code>.</p>
+ <p>Example: <code>&lt;%- template("warning", ["foo", "bar", "baz"]) %&gt;</code>.</p>
 
- <p>Example using the <code>DOMxRef</code> macro: <code class="language-javascript">&lt;%- template("DOMxRef", ["Event.bubbles", "bubbles"]) %&gt;</code>.</p>
+ <p>Example using the <code>DOMxRef</code> macro: <code>&lt;%- template("DOMxRef", ["Event.bubbles", "bubbles"]) %&gt;</code>.</p>
 
- <p>This is a JavaScript function. So, if one of the parameters is an arg variable like $2, do not put it in quotes. Like this: <code class="language-javascript">&lt;%- template("warning", [$1, $2, "baz"]) %&gt;</code>. If you need to call another template from within a block of code, do not use <code>&lt;%</code> ... <code>%&gt;</code>. Example: <code class="language-javascript">myvar = "&lt;li&gt;" + template("LXRSearch", ["ident", "i", $1]) + "&lt;/li&gt;";</code></p>
+ <p>This is a JavaScript function. So, if one of the parameters is an arg variable like $2, do not put it in quotes. Like this: <code>&lt;%- template("warning", [$1, $2, "baz"]) %&gt;</code>. If you need to call another template from within a block of code, do not use <code>&lt;%</code> ... <code>%&gt;</code>. Example: <code>myvar = "&lt;li&gt;" + template("LXRSearch", ["ident", "i", $1]) + "&lt;/li&gt;";</code></p>
  </dd>
- <dt><code class="language-javascript">require(name)</code></dt>
- <dd>Loads another template as a module; any output is ignored. Anything assigned to <code class="language-javascript">module.exports</code> in the template is returned.</dd>
- <dd>Used in templates like so: <code class="language-javascript">&lt;% const my_module = require('MyModule'); %&gt;</code>.</dd>
- <dt><code class="language-javascript">cacheFn(key, timeout, function_to_cache)</code></dt>
+ <dt><code>require(name)</code></dt>
+ <dd>Loads another template as a module; any output is ignored. Anything assigned to <code>module.exports</code> in the template is returned.</dd>
+ <dd>Used in templates like so: <code>&lt;% const my_module = require('MyModule'); %&gt;</code>.</dd>
+ <dt><code>cacheFn(key, timeout, function_to_cache)</code></dt>
  <dd>Using the given key and cache entry lifetime, cache the results of the given function. Honors the value of <code>env.cache_control</code> to invalidate cache on <code>no-cache</code>, which can be sent by a logged-in user hitting shift-refresh.</dd>
- <dt><code class="language-javascript">request</code></dt>
+ <dt><code>request</code></dt>
  <dd>Access to <a class="link-https" href="https://github.com/request/request"><code>request/request</code></a>, a library for making HTTP requests. Using this module in KumaScript templates is not yet very friendly, so you may want to wrap usage in module APIs that simplify things.</dd>
- <dt><code class="language-javascript">log.debug(string)</code></dt>
+ <dt><code>log.debug(string)</code></dt>
  <dd>Outputs a debug message into the script log on the page (i.e. the big red box that usually displays errors).</dd>
 </dl>
 
@@ -231,21 +231,21 @@ Hello #2</pre>
  <li><code>MDN.*</code> - <a href="https://github.com/mdn/kumascript/blob/master/src/api/mdn.js">MDN:Common</a></li>
  <li><code>page.*</code> - <a href="https://github.com/mdn/kumascript/blob/master/src/api/page.js">DekiScript:Page</a></li>
  <li><code>string.*</code> - <a href="https://github.com/mdn/kumascript/blob/master/src/api/string.js">DekiScript:String</a></li>
- <li><code>uri.*</code> - <a class="link-https" href="https://github.com/mdn/kumascript/blob/master/src/api/uri.js">DekiScript:Uri</a></li>
- <li><code>web.*</code> - <a class="link-https" href="https://github.com/mdn/kumascript/blob/master/src/api/web.js">DekiScript:Web</a></li>
- <li><code>wiki.*</code> - <a class="link-https" href="https://github.com/mdn/kumascript/blob/master/src/api/wiki.js">DekiScript:Wiki</a></li>
+ <li><code>uri.*</code> - <a href="https://github.com/mdn/kumascript/blob/master/src/api/uri.js">DekiScript:Uri</a></li>
+ <li><code>web.*</code> - <a href="https://github.com/mdn/kumascript/blob/master/src/api/web.js">DekiScript:Web</a></li>
+ <li><code>wiki.*</code> - <a href="https://github.com/mdn/kumascript/blob/master/src/api/wiki.js">DekiScript:Wiki</a></li>
 </ul>
 
 <p>Other available APIs include:</p>
 
 <dl>
- <dt><code class="language-javascript">kuma.inspect(object)</code></dt>
- <dd>Renders any JS object as a string, handy for use with <code>log.debug()</code>. See also: <a href="https://nodejs.org/api/util.html#util_util_inspect_object_options">node.js <code class="language-javascript">util.inspect()</code></a>.</dd>
- <dt><code class="language-javascript">kuma.htmlEscape(string)</code></dt>
+ <dt><code>kuma.inspect(object)</code></dt>
+ <dd>Renders any JS object as a string, handy for use with <code>log.debug()</code>. See also: <a href="https://nodejs.org/api/util.html#util_util_inspect_object_options">node.js <code>util.inspect()</code></a>.</dd>
+ <dt><code>kuma.htmlEscape(string)</code></dt>
  <dd>Escapes the characters <code>&amp;, &lt;, &gt;, "</code> to <code>&amp;amp, &amp;lt;, &amp;gt;, &amp;quot;</code>, respectively.</dd>
- <dt><code class="language-javascript">kuma.url</code></dt>
+ <dt><code>kuma.url</code></dt>
  <dd>See also: <a href="https://nodejs.org/api/url.html">node.js <code>url</code> module</a>.</dd>
- <dt><code class="language-javascript">kuma.fetchFeed(url)</code></dt>
+ <dt><code>kuma.fetchFeed(url)</code></dt>
  <dd>Fetch an RSS feed and parse it into a JS object. See also: <a href="https://github.com/mdn/kumascript/blob/master/macros/InsertFeedLinkList.ejs"><code>InsertFeedLinkList</code></a></dd>
 </dl>
 
@@ -278,7 +278,7 @@ The result of 2 + 2 = &lt;%= math_lib.add(2, 2) %&gt;</pre>
 
 <p>A useful tip when debugging. You can use the <code>log.debug()</code> method to output text to the scripting messages area at the top of the page that's running your template. Note that you need to be really sure to remove these when you're done debugging, as they're visible to all users! To use it, just do something like this:</p>
 
-<pre class="brush: js no-line-numbers">&lt;%- log.debug("Some text goes here"); %&gt;</pre>
+<pre class="brush: js">&lt;%- log.debug("Some text goes here"); %&gt;</pre>
 
 <p>You can, of course, create more complex output using script code if it's helpful.</p>
 
@@ -305,7 +305,7 @@ The result of 2 + 2 = &lt;%= math_lib.add(2, 2) %&gt;</pre>
 
 <p>Sometimes, you'll see a scripting message like this when you load a page:</p>
 
-<pre class="brush: none no-line-numbers">Kumascript service failed unexpectedly: &lt;class 'httplib.BadStatusLine'&gt;</pre>
+<pre class="brush: none">Kumascript service failed unexpectedly: &lt;class 'httplib.BadStatusLine'&gt;</pre>
 
 <p>This is probably a temporary failure of the KumaScript service. If you Refresh the page, the error may disappear. If that doesn't work, try a Shift-Refresh. If, after a few tries, the error persists - <a class="link-https" href="https://bugzilla.mozilla.org/enter_bug.cgi?product=mozilla.org&amp;format=itrequest">file an IT bug</a> for Mozilla Developer Network to ask for an investigation.</p>
 
@@ -313,15 +313,15 @@ The result of 2 + 2 = &lt;%= math_lib.add(2, 2) %&gt;</pre>
 
 <p>On some pages, you'll see a scripting error like this:</p>
 
-<pre class="brush: none no-line-numbers">Syntax error at line 436, column 461: Expected valid JSON object as the parameter of the preceding macro but...</pre>
+<pre class="brush: none">Syntax error at line 436, column 461: Expected valid JSON object as the parameter of the preceding macro but...</pre>
 
 <p>If you edit the page, you’ll probably see a macro like this at the bottom of the page:</p>
 
-<pre class="brush: none no-line-numbers">\{{ wiki.languages({ &quot;zh-tw&quot;: &quot;zh_tw/Core_JavaScript_1.5_教學/JavaScript_概要&quot;, ... }) }}</pre>
+<pre class="brush: none">\{{ wiki.languages({ &quot;zh-tw&quot;: &quot;zh_tw/Core_JavaScript_1.5_教學/JavaScript_概要&quot;, ... }) }}</pre>
 
 <p>To fix the problem, just delete the macro. Or, replace the curly braces on either side with HTML comments <code>&lt;!-- --&gt;</code> to preserve the information, like so:</p>
 
-<pre class="brush: html no-line-numbers">&lt;!-- wiki.languages({ "zh-tw": "zh_tw/Core_JavaScript_1.5_教學/JavaScript_概要", ... }) --&gt;</pre>
+<pre class="brush: html">&lt;!-- wiki.languages({ "zh-tw": "zh_tw/Core_JavaScript_1.5_教學/JavaScript_概要", ... }) --&gt;</pre>
 
 <p>Because Kuma supports localization differently, these macros aren't actually needed any more. But, they've been left intact in case we need to revisit the relationships between localized pages. Unfortunately, it seems like migration has failed to convert some of them properly.</p>
 
@@ -329,7 +329,7 @@ The result of 2 + 2 = &lt;%= math_lib.add(2, 2) %&gt;</pre>
 
 <p>In KumaScript, the locale of the current document is exposed as an environment variable:</p>
 
-<pre class="brush: js no-line-numbers">const lang = env.locale;</pre>
+<pre class="brush: js">const lang = env.locale;</pre>
 
 <p>The <code>env.locale</code> variable should be reliable and defined for every document.</p>
 
@@ -345,12 +345,12 @@ The result of 2 + 2 = &lt;%= math_lib.add(2, 2) %&gt;</pre>
 
 <p>or</p>
 
-<pre class="brush: js no-line-numbers">&lt;%- mdn.getFileContent(fileObject); %&gt;
+<pre class="brush: js">&lt;%- mdn.getFileContent(fileObject); %&gt;
 </pre>
 
 <p>In other words, you may specify either the URL of the file to read or as a file object. The file objects for a page can be accessed through the array <code>env.files</code>. So, for example, to embed the contents of the first file attached to the article, you can do this:</p>
 
-<pre class="brush: js no-line-numbers">&lt;%- mdn.getFileContent(env.files[0]); %&gt;
+<pre class="brush: js">&lt;%- mdn.getFileContent(env.files[0]); %&gt;
 </pre>
 
 <div class="note">
@@ -395,7 +395,7 @@ The result of 2 + 2 = &lt;%= math_lib.add(2, 2) %&gt;</pre>
 
 <h4 id="String_variables_and_switch">String variables and switch</h4>
 
-<p>Different strings are defined and chosen depending on locale using <code class="language-javascript">mdn.localString()</code>, like this:</p>
+<p>Different strings are defined and chosen depending on locale using <code>mdn.localString()</code>, like this:</p>
 
 <pre class="brush: js">&lt;%
 var s_title = mdn.localString({
