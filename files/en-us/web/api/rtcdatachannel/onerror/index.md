@@ -45,7 +45,7 @@ dc.onerror = function(event) {
   myUILibrary.doAlertBox({
     'Network Error':        // Alert title
     `The error ${event.message} occurred while handling player control network messages`
-    + `in ${event.filename} at ${event.lineno}:${event.colno}.`    
+    + ` in ${event.filename} at ${event.lineno}:${event.colno}.`    
   });
 }
 
