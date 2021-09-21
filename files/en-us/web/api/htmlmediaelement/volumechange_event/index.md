@@ -41,15 +41,6 @@ The `volumechange` event is fired when the volume has changed.
       <th scope="row">Event handler property</th>
       <td>{{domxref("GlobalEventHandlers.onvolumechange")}}</td>
     </tr>
-    <tr>
-      <th scope="row">Specification</th>
-      <td>
-        <a
-          href="https://html.spec.whatwg.org/multipage/media.html#event-media-volumechange"
-          >HTML5 media</a
-        >
-      </td>
-    </tr>
   </tbody>
 </table>
 
