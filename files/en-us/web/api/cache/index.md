@@ -30,6 +30,8 @@ You are also responsible for periodically purging cache entries. Each browser ha
 
 {{securecontext_header}}
 
+> **Note:** The web extensions address (`moz-extension://`) is also considered secure.
+
 ## Methods
 
 - {{domxref("Cache.match", "Cache.match(request, options)")}}
@@ -53,11 +55,11 @@ This code snippet is from the [service worker selective caching sample](https://
 
 The code then uses {{domxref("Cache.match()")}} to see if there's already a matching font in the cache, and if so, returns it. If there isn't a matching font, the code fetches the font from the network and uses {{domxref("Cache.put()")}} to cache the fetched resource.
 
-The code handles exceptions thrown from the {{domxref("fetch()")}} operation. Note that an HTTP error response (e.g., 404) will not trigger an exception. It will return a normal response object that has the appropriate error code.
+The code handles exceptions thrown from the {{domxref("WindowOrWorkerGlobalScope/fetch","fetch()")}} operation. Note that an HTTP error response (e.g., 404) will not trigger an exception. It will return a normal response object that has the appropriate error code.
 
 The code snippet also shows a best practice for versioning caches used by the service worker. Though there's only one cache in this example, the same approach can be used for multiple caches. It maps a shorthand identifier for a cache to a specific, versioned cache name. The code also deletes all caches that aren't named in `CURRENT_CACHES`.
 
-In the code example, `caches` is a property of the {{domxref("ServiceWorkerGlobalScope")}}. It holds the `CacheStorage` object, by which it can access the {{domxref("CacheStorage")}} interface.
+In the code example, `caches` is a property of the {{domxref("ServiceWorkerGlobalScope")}}. It holds the `CacheStorage` object, by which it can access the {{domxref("CacheStorage")}} interface. This is an implementation of the {{domxref("WindowOrWorkerGlobalScope")}} mixin.
 
 > **Note:** In Chrome, visit `chrome://inspect/#service-workers` and click on the "inspect" link below the registered service worker to view logging statements for the various actions the [`service-worker.js`](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js) script is performing.
 
@@ -151,7 +153,7 @@ self.addEventListener('fetch', function(event) {
 
 ### Storing cookies in Caches
 
-The [Fetch API](/en-US/docs/Web/API/Fetch_API) requires {{httpheader("Set-Cookie")}} headers to be stripped before returning a {{domxref("Response")}} object from {{domxref("fetch()")}}. So a `Response` stored in a Cache won't contain headers.
+The [Fetch API](/en-US/docs/Web/API/Fetch_API) requires {{httpheader("Set-Cookie")}} headers to be stripped before returning a {{domxref("Response")}} object from {{domxref("WindowOrWorkerGlobalScope", "fetch()")}}. So a `Response` stored in a Cache won't contain headers.
 
 ## Specifications
 
