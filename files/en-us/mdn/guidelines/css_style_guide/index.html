@@ -13,7 +13,7 @@ tags:
 
 <div class="warning">
   <p><strong>Warning:</strong> We're currently in the process of converting all MDN content from HTML into Markdown. Currently you can write pages in HTML or in Markdown, but we don't want to mix formats within a section.</p>
-  <p>At the moment only the JavaScript documentation is in Markdown (pages under <a href="/en-US/docs/Web/JavaScript">https://developer.mozilla.org/en-US/docs/Web/JavaScript</a>). So if you're writing content in that part of the site, this page is <em>not</em> applicable, and you should instead follow the guidelines in the <a href="/en-US/docs/MDN/Contribute/Markdown_in_MDN">Markdown in MDN</a> guide.</p>
+  <p>At the moment CSS, JavaScript and Web API documentation is in Markdown. So if you're writing content in that part of the site, this page is <em>not</em> applicable, and you should instead follow the guidelines in the <a href="/en-US/docs/MDN/Contribute/Markdown_in_MDN">Markdown in MDN</a> guide.</p>
 </div>
 
 <p>MDN has many built-in global styles available for use when styling and laying out articles, and this article is a guide to the available classes and when to use them.</p>
@@ -146,35 +146,33 @@ function works() {
 &lt;p&gt;\{{EmbedLiveSample("Hidden_Code_Sample")}}&lt;/p&gt;
 </pre>
 
-<h4 id="Hidden_code_sample">Hidden code sample</h4>
 
-<div class="hidden">
-<h5 id="HTML">HTML</h5>
+<div id="Hidden_code">
 
-<pre class="brush: html">&lt;button id="test"&gt;Click Me&lt;/button&gt;
+<h4>Hidden code sample</h4>
+
+<pre class="brush: html hidden">&lt;button id="test"&gt;Click Me&lt;/button&gt;
 </pre>
 
-<h5 id="CSS">CSS</h5>
-
-<pre class="brush: css">button{
+<pre class="brush: css hidden">button{
     background-color: #a00;
     color:#fff;
     font-size: 20px;
 }
 </pre>
-</div>
 
-<h5 id="JavaScript">JavaScript</h5>
 
-<pre class="brush: js">document.getElementById("test").addEventListener("click", works);
+<pre class="brush: js hidden">document.getElementById("test").addEventListener("click", works);
 function works(){
     window.alert("you clicked it!");
 }
 </pre>
 
-<p>{{EmbedLiveSample("Hidden_code_sample", "100%", 150)}}</p>
+</div>
 
-<h2 id=".note.notecard">.note.notecard</h2>
+<p>{{EmbedLiveSample("Hidden_code", "100%", 150)}}</p>
+
+<h2 id=".note">.note</h2>
 
 <p>Turns a section of content into a note box, which is normally a useful note that tangentially relates to the current subject but doesn't directly fit into the flow of information.</p>
 
@@ -188,7 +186,7 @@ function works(){
   &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; This is how we usually present a note in an MDN article.&lt;/p&gt;
 &lt;/div&gt;</pre>
 
-<h2 id=".notecard.warning">.notecard.warning</h2>
+<h2 id=".warning">.warning</h2>
 
 <p>Turns a section of content into a warning box, which normally communicates a vital fact that the reader needs to be really careful about (e.g., they need to do something, or avoid something to avoid serious issues.)</p>
 
