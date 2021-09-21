@@ -35,6 +35,8 @@ The **`Intl`** object is the namespace for the ECMAScript Internationalization A
 
 - {{jsxref("Intl.getCanonicalLocales()")}}
   - : Returns canonical locale names.
+- {{jsxref("Intl.supportedValuesOf()")}}
+  - : Returns a sorted array containing the supported unique calendar, collation, currency, numbering systems, or unit values supported by the implementation.
 
 ## Locale identification and negotiation
 

@@ -106,4 +106,5 @@ console.log((new Intl.DisplayNames([], {type: 'language'})).of('US'));
 ## See also
 
 - {{jsxref("Intl.DisplayNames")}}
+- {{jsxref("Intl.supportedValuesOf()")}}
 - {{jsxref("Global_Objects/Intl", "Intl")}}
