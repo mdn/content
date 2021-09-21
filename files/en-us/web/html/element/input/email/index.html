@@ -59,68 +59,25 @@ browser-compat: html.elements.input.input-email
 
 <h2 id="Additional_attributes">Additional attributes</h2>
 
-<p>In addition to the attributes that operate on all {{HTMLElement("input")}} elements regardless of their type, <code>email</code> inputs support the following attributes:</p>
+<p>In addition to the attributes that operate on all {{HTMLElement("input")}} elements regardless of their type, <code>email</code> inputs support the following attributes.</p>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Attribute</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>{{anch("list")}}</code></td>
-   <td>The id of the &lt;datalist&gt; element that contains the optional pre-defined autocomplete options</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("maxlength")}}</code></td>
-   <td>The maximum number of characters the input should accept</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("minlength")}}</code></td>
-   <td>The minimum number of characters long the input can be and still be considered valid</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("multiple")}}</code></td>
-   <td>Whether or not to allow multiple, comma-separated, e-mail addresses to be entered</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("pattern")}}</code></td>
-   <td>A regular expression the input's contents must match in order to be valid</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("placeholder")}}</code></td>
-   <td>An exemplar value to display in the input field whenever it is empty</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("readonly")}}</code></td>
-   <td>A Boolean attribute indicating whether or not the contents of the input should be read-only</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("size")}}</code></td>
-   <td>A number indicating how many characters wide the input field should be</td>
-  </tr>
- </tbody>
-</table>
-
-<h3 id="attr-list"><code id="list">list</code></h3>
+<h3>list</h3>
 
 <p>The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The {{HTMLElement("datalist")}} provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the {{htmlattrxref("type", "input")}} are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.</p>
 
-<h3 id="attr-maxlength"><code id="maxlength">maxlength</code></h3>
+<h3>maxlength</h3>
 
 <p>The maximum number of characters (as UTF-16 code units) the user can enter into the <code>email</code> input. This must be an integer value 0 or higher. If no <code>maxlength</code> is specified, or an invalid value is specified, the <code>email</code> input has no maximum length. This value must also be greater than or equal to the value of <code>minlength</code>.</p>
 
 <p>The input will fail <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a> if the length of the text value of the field is greater than <code>maxlength</code> UTF-16 code units long. Constraint validation is only applied when the value is changed by the user.</p>
 
-<h3 id="attr-minlength"><code id="minlength">minlength</code></h3>
+<h3>minlength</h3>
 
 <p>The minimum number of characters (as UTF-16 code units) the user can enter into the <code>email</code> input. This must be an non-negative integer value smaller than or equal to the value specified by <code>maxlength</code>. If no <code>minlength</code> is specified, or an invalid value is specified, the <code>email</code> input has no minimum length.</p>
 
 <p>The input will fail <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a> if the length of the text entered into the field is fewer than <code>minlength</code> UTF-16 code units long. Constraint validation is only applied when the value is changed by the user.</p>
 
-<h3 id="attr-multiple"><code id="multiple">multiple</code></h3>
+<h3>multiple</h3>
 
 <p>A Boolean attribute which, if present, indicates that the user can enter a list of multiple e-mail addresses, separated by commas and, optionally, whitespace characters. See {{anch("Allowing multiple e-mail addresses")}} for an example, or <a href="/en-US/docs/Web/HTML/Attributes/multiple">HTML attribute: multiple</a> for more details.</p>
 
@@ -128,7 +85,7 @@ browser-compat: html.elements.input.input-email
 <p><strong>Note:</strong> Normally, if you specify the {{htmlattrxref("required", "input")}} attribute, the user must enter a valid e-mail address for the field to be considered valid. However, if you add the <code>multiple</code> attribute, a list of zero e-mail addresses (an empty string, or one which is entirely whitespace) is a valid value. In other words, the user does not have to enter even one e-mail address when <code>multiple</code> is specified, regardless of the value of <code>required</code>.</p>
 </div>
 
-<h3 id="attr-pattern"><code id="pattern">pattern</code></h3>
+<h3>pattern</h3>
 
 <p>The <code>pattern</code> attribute, when specified, is a regular expression that the input's {{htmlattrxref("value")}} must match in order for the value to pass <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a>. It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">guide on regular expressions</a>; the <code>'u'</code> flag is specified when compiling the regular expression, so that the pattern is treated as a sequence of Unicode code points, instead of as ASCII. No forward slashes should be specified around the pattern text.</p>
 
