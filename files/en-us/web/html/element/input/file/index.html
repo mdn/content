@@ -65,7 +65,7 @@ browser-compat: html.elements.input.input-file
 
 <p>A file input's {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} that represents the path to the selected file(s). If the user selected multiple files, the <code>value</code> represents the first file in the list of files they selected. The other files can be identified using the input's <code>HTMLInputElement.files</code> property.</p>
 
-<div class="note"><strong>Note:</strong>
+<div class="note"><p><strong>Note:</strong></p>
 
 <ol>
  <li>If multiple files are selected, the string represents the first selected file. JavaScript can access the other files <a href="/en-US/docs/Web/API/File/Using_files_from_web_applications#getting_information_about_selected_files">through the input's <code>files</code> property</a>.</li>
@@ -118,7 +118,7 @@ browser-compat: html.elements.input.input-file
 
 <p>The <a href="/en-US/docs/Web/HTML/Attributes/capture"><code>capture</code></a> attribute value is a string that specifies which camera to use for capture of image or video data, if the <a href="/en-US/docs/Web/HTML/Attributes/accept"><code>accept</code></a> attribute indicates that the input should be of one of those types. A value of <code>user</code> indicates that the user-facing camera and/or microphone should be used. A value of <code>environment</code> specifies that the outward-facing camera and/or microphone should be used. If this attribute is missing, the {{Glossary("user agent")}} is free to decide on its own what to do. If the requested facing mode isn't available, the user agent may fall back to its preferred default mode.</p>
 
-<div class="note"><strong>Note:</strong> <code>capture</code> was previously a Boolean attribute which, if present, requested that the device's media capture device(s) such as camera or microphone be used instead of requesting a file input.</div>
+<div class="note"><p><strong>Note:</strong> <code>capture</code> was previously a Boolean attribute which, if present, requested that the device's media capture device(s) such as camera or microphone be used instead of requesting a file input.</p></div>
 
 <h3 id="attr-files"><code id="files">files</code></h3>
 
