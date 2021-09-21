@@ -38,8 +38,7 @@ browser-compat: html.elements.video
  <dt>{{htmlattrdef("autoplay")}}</dt>
  <dd>A Boolean attribute; if specified, the video automatically begins to play back as soon as it can do so without stopping to finish loading the data.
    <div class="notecard note">
-     <h4>Note</h4>
-     <p>Sites that automatically play audio (or videos with an audio track) can be an unpleasant experience for users, so should be avoided when possible. If you must offer autoplay functionality, you should make it opt-in (requiring a user to specifically enable it). However, this can be useful when creating media elements whose source will be set at a later time, under user control. See our <a href="/en-US/docs/Web/Media/Autoplay_guide">autoplay guide</a> for additional information about how to properly use autoplay.</p>
+     <p><strong>Note:</strong> Sites that automatically play audio (or videos with an audio track) can be an unpleasant experience for users, so should be avoided when possible. If you must offer autoplay functionality, you should make it opt-in (requiring a user to specifically enable it). However, this can be useful when creating media elements whose source will be set at a later time, under user control. See our <a href="/en-US/docs/Web/Media/Autoplay_guide">autoplay guide</a> for additional information about how to properly use autoplay.</p>
    </div>
 
  <p>To disable video autoplay, <code>autoplay="false"</code> will not work; the video will autoplay if the attribute is there in the <code>&lt;video&gt;</code> tag at all. To remove autoplay, the attribute needs to be removed altogether.</p>
@@ -93,7 +92,6 @@ browser-compat: html.elements.video
  <p>The default value is different for each browser. The spec advises it to be set to <code>metadata</code>.</p>
 
  <div class="notecard note">
-   <h4>Note</h4>
    <ul>
        <li>The <code>autoplay</code> attribute has precedence over <code>preload</code>. If <code>autoplay</code> is specified, the browser would obviously need to start downloading the video for playback.</li>
        <li>The specification does not force the browser to follow the value of this attribute; it is a mere hint.</li>
