@@ -58,7 +58,7 @@ browser-compat: html.elements.colgroup
 <dl>
  <dt>{{htmlattrdef("span")}}</dt>
  <dd>This attribute contains a positive integer indicating the number of consecutive columns the <code>&lt;colgroup&gt;</code> element spans. If not present, its default value is <code>1</code>.
- <div class="note"><strong>Note:</strong> This attribute is applied on the attributes of the column group, it has no effect on the CSS styling rules associated with it or, even more, to the cells of the column's members of the group.
+ <div class="note"><p><strong>Note:</strong> This attribute is applied on the attributes of the column group, it has no effect on the CSS styling rules associated with it or, even more, to the cells of the column's members of the group.</p>
  <ul>
   <li>The <code>span</code> attribute is not permitted if there are one or more <code>&lt;col&gt;</code> elements within the <code>&lt;colgroup&gt;</code>.</li>
  </ul>
@@ -83,7 +83,7 @@ browser-compat: html.elements.colgroup
 
  <p>If this attribute is not set, the <code>left</code> value is assumed. The descendant {{HTMLElement("col")}} elements may override this value using their own {{htmlattrxref("align", "col")}} attribute.</p>
 
- <div class="note"><strong>Note:</strong>
+ <div class="note"><p><strong>Note:</strong></p>
 
  <ul>
   <li>Do not try to set the {{cssxref("text-align")}} property on a selector giving a {{HTMLElement("colgroup")}} element. Because {{HTMLElement("td")}} elements are not descendant of the {{HTMLElement("colgroup")}} element, they won't inherit it.</li>
