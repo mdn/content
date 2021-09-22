@@ -93,7 +93,7 @@ All features associated with any and all properties and states must be maintaine
 - Focus event handler and aria-activedescendant attribute
   - : If you are implementing a composite widget, such as a combobox composed of a text box and a listbox, you need to manage the `aria-activedescendant` attribute using a handler. Before using this technique, ensure that the browsers you need to target currently support it. See the [specification of aria-descendent](https://www.w3.org/TR/wai-aria-1.1/#aria-activedescendant) for further information.
 
-<div class="note"><p><span class="ILfuVd yZ8quc">It is a better practice to use an {{HTMLElement("input")}} element with type="text", or a {{HTMLElement("textarea")}} element instead of the ARIA textbox role. When using either semantic element, the ARIA textbox role is not necessary. </span>See <a href="https://www.w3.org/TR/aria-in-html/">Notes on Using ARIA in HTML</a>.</p></div>
+> **Note:**It is a better practice to use an {{HTMLElement("input")}} element with type="text", or a {{HTMLElement("textarea")}} element instead of the ARIA textbox role. When using either semantic element, the ARIA textbox role is not necessary. </span>See <a href="https://www.w3.org/TR/aria-in-html/">Notes on Using ARIA in HTML</a>.</p></div>
 
 ## Possible effects on user agents and assistive technology 
 
@@ -105,7 +105,7 @@ All features associated with any and all properties and states must be maintaine
 
 <ul class="ul1"><li class="li2">Screen readers should announce its label and role when focus first lands on a textbox. If it also contains content, this should be announced as with a regular textbox.</li><li class="li2">Screen magnifiers may enlarge the textbox.</li></ul>
 
-<div class="note"><strong>Note:</strong> Opinions may differ on how assistive technology should handle this technique. The information provided above is one of those opinions and therefore not normative.</div>
+> **Note:** **Note:** Opinions may differ on how assistive technology should handle this technique. The information provided above is one of those opinions and therefore not normative.</div>
 
 ## Examples
 

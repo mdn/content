@@ -68,7 +68,7 @@ None
 
 None.
 
-<div class="note"><p><span class="ILfuVd yZ8quc">The first rule of ARIA use is if you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and <strong>adding</strong> an ARIA role, state or property to make it accessible, then do so. Employ the HTML <table> element instead of the ARIA role of table whenever possible.</span></p></div>
+> **Note:** The first rule of ARIA use is if you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and **adding** an ARIA role, state or property to make it accessible, then do so. Employ the HTML `<table>` element instead of the ARIA role of table whenever possible.
 
 ## Examples
 

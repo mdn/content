@@ -36,7 +36,7 @@ An element with the `tabpanel` role
 
 ### Required JavaScript features 
 
-<div class="note"><p>Include note about semantic alternatives to using this role or attribute. <span class="ILfuVd yZ8quc">The first rule of ARIA use is you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and <strong>adding</strong> an ARIA role, state or property to make it accessible, then do so. Then post full details in best practices section below.</span></p></div>
+> **Note:** <p>Include note about semantic alternatives to using this role or attribute. <span class="ILfuVd yZ8quc">The first rule of ARIA use is you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and **adding** an ARIA role, state or property to make it accessible, then do so. Then post full details in best practices section below.</span></p></div>
 
 ## Examples
 

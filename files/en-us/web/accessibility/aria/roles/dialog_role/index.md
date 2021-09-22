@@ -44,7 +44,7 @@ If a dialog already has a visible title bar, the text inside that bar can be use
 </div>
 ```
 
-<div class="note">Keep in mind that a dialog's title and description text do not have to be focusable in order to be perceived by screen readers operating in a non-virtual mode. The combination of the ARIA dialog role and labeling techniques should make the screen reader announce the dialog's information when focus is moved into it.</div>
+> **Note:** Keep in mind that a dialog's title and description text do not have to be focusable in order to be perceived by screen readers operating in a non-virtual mode. The combination of the ARIA dialog role and labeling techniques should make the screen reader announce the dialog's information when focus is moved into it.
 
 ### Required JavaScript features
 
@@ -74,7 +74,7 @@ When the `dialog` role is used, the user agent should do the following:
 
 When the dialog is correctly labeled and focus is moved to an element (often an interactive element, such as a button) inside the dialog, screen readers should announce the dialog's accessible role, name and optionally description, along with announcing the focused element.
 
-<div class="note"><strong>Note:</strong> Opinions may differ on how assistive technology should handle this technique, and the order of announcements may differ depending on the assistive technology used. The information provided above is one of those opinions and therefore not normative.</div>
+> **Note:** Opinions may differ on how assistive technology should handle this technique, and the order of announcements may differ depending on the assistive technology used. The information provided above is one of those opinions and therefore not normative.
 
 ## Examples
 

@@ -9,7 +9,7 @@ tags:
   - Button Role
   - Reference
 ---
-<p class="summary"><span class="seoSummary">The <strong><a href="https://www.w3.org/WAI/PF/aria/roles#button">button</a></strong> role should be used for clickable elements that trigger a response when activated by the user. Adding <code>role="button"</code> will make an element appear as a button control to a screen reader. This role can be used in combination with the <code>aria-pressed</code> attribute to create toggle buttons.</span></p>
+<p class="summary"><span class="seoSummary">The **<a href="https://www.w3.org/WAI/PF/aria/roles#button">button</a>** role should be used for clickable elements that trigger a response when activated by the user. Adding <code>role="button"</code> will make an element appear as a button control to a screen reader. This role can be used in combination with the <code>aria-pressed</code> attribute to create toggle buttons.</span></p>
 
 <pre class="brush: html">&lt;div id="saveChanges" tabindex="0" role="button" aria-pressed="false"&gt;Save&lt;/div&gt;</pre>
 
@@ -17,8 +17,8 @@ tags:
 
 <pre class="brush: html">&lt;button id="saveChanges"&gt;Save&lt;/button&gt;</pre>
 
-<div class="note">
-<p><strong>Note</strong>: If using role="button" instead of the semantic <code>&lt;button&gt;</code> or <code>&lt;input type="button"&gt;</code> elements, you will need to make the element focusable and have to define event handlers for {{event("click")}} and {{event("keydown")}} events, including the <kbd>Enter</kbd> and <kbd>Space</kbd> keys, in order to process the user's input. See the <a href="https://www.w3.org/TR/wai-aria-practices/examples/button/button.html">official WAI-ARIA example code</a>.</p>
+> **Note:** 
+<p>**Note**: If using role="button" instead of the semantic <code>&lt;button&gt;</code> or <code>&lt;input type="button"&gt;</code> elements, you will need to make the element focusable and have to define event handlers for {{event("click")}} and {{event("keydown")}} events, including the <kbd>Enter</kbd> and <kbd>Space</kbd> keys, in order to process the user's input. See the <a href="https://www.w3.org/TR/wai-aria-practices/examples/button/button.html">official WAI-ARIA example code</a>.</p>
 </div>
 
 <h2 id="Description">Description</h2>
@@ -238,7 +238,7 @@ function toggleButton(element) {
 
 <p>Buttons are interactive controls and thus focusable. If the <code>button</code> role is added to an element that is not focusable by itself (such as <code>&lt;span&gt;</code>, <code>&lt;div&gt;</code> or <code>&lt;p&gt;</code>) then, the <code>tabindex</code> attribute has to be used to make the button focusable.</p>
 
-<p class="warning"><strong>Warning:</strong> Be careful when marking up links with the button role. Buttons are expected to be triggered using the <kbd>Space</kbd> or <kbd>Enter</kbd> key, while links are expected to be triggered using the <kbd>Enter</kbd> key. In other words, when links are used to behave like buttons, adding <code>role="button" </code>alone is not sufficient. It will also be necessary to add a key event handler that listens for the <kbd>Space</kbd> key in order to be consistent with native buttons.</p>
+> **Warning:** Be careful when marking up links with the button role. Buttons are expected to be triggered using the <kbd>Space</kbd> or <kbd>Enter</kbd> key, while links are expected to be triggered using the <kbd>Enter</kbd> key. In other words, when links are used to behave like buttons, adding <code>role="button" </code>alone is not sufficient. It will also be necessary to add a key event handler that listens for the <kbd>Space</kbd> key in order to be consistent with native buttons.</p>
 
 <p>When the <code>button</code> role is used, screen readers announce the element as a button, generally saying "click" followed by the button's accessible name. The accessible name is either the content of the element or the value of an <code>aria-label</code> or element referenced by an  <code>aria-labelledby</code> attribute, or description, if included.</p>
 
@@ -288,6 +288,6 @@ function toggleButton(element) {
 
 <section id="Quick_links">
   <ol>
-   <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}</li>
+   <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles">**WAI-ARIA roles**</a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}</li>
   </ol>
 </section>

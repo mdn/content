@@ -56,7 +56,7 @@ The assistive technology, if it supports the `switch` role, responds by doing th
 
 - Screen readers should announce the element as a switch, optionally providing instructions as to how to activate the switch.
 
-<div class="note"><p>There are varying opinions on how assistive technologies should handle this role; the above is a suggested practice and may differ from other sources.</p></div>
+> **Note:** <p>There are varying opinions on how assistive technologies should handle this role; the above is a suggested practice and may differ from other sources.</p></div>
 
 ## Examples
 

@@ -131,7 +131,7 @@ When the user clicks on an option, hits <kbd>Space</kbd> when focused on an opti
 2.  Change the appearance of the option to reflect it's selected state
 3.  Update the aria-activedescendant value on the listbox to the id of the option the user just interacted with, even if they toggled the option to be unselected.
 
-<div class="notecard note"><p>The first rule of ARIA use is you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and <strong>adding</strong> an ARIA role, state or property to make it accessible, then do so. The {{HTMLElement('select')}} element with descendant {{HTMLElement('option')}} elements handles all the needed interactions natively.</p></div>
+<div class="notecard note"><p>The first rule of ARIA use is you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and **adding** an ARIA role, state or property to make it accessible, then do so. The {{HTMLElement('select')}} element with descendant {{HTMLElement('option')}} elements handles all the needed interactions natively.</p></div>
 
 ## Examples
 

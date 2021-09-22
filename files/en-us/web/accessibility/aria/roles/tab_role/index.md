@@ -42,7 +42,7 @@ When working with elements with the `tab` role, when they are selected or acti
 
 ### Required JavaScript features 
 
-<div class="note"><p>While there are ways to build tab-like functionality without JavaScript, there are no substitute combination of HTML and CSS only that will provide the same set of functionality that's required above for accessible tabs with content.</p></div>
+> **Note:** <p>While there are ways to build tab-like functionality without JavaScript, there are no substitute combination of HTML and CSS only that will provide the same set of functionality that's required above for accessible tabs with content.</p></div>
 
 ## Example
 
