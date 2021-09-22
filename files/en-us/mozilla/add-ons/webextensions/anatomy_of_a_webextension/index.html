@@ -86,7 +86,9 @@ tags:
 
 <h4 id="Secure_context_Web _APIs">Secure context Web APIs</h4>
 
-<p>From Firefox 90, the web extension address <em>(`moz-extension://`)</em> is considered a <a href="/en-US/docs/Web/Security/Secure_Contexts">secure context</a>, enabling use of APIs such as {{domxref("Cache")}}.</p>
+<p>Extensions can make use of Web APIs. However, some Web APIs only execute within a <a href="/en-US/docs/Web/Security/Secure_Contexts">secure context</a>, a <code>Window</code> or <code>Worker</code> that meets a minimum standard of authentication and confidentiality. The extension address <em>(`moz-extension://`)</em> is considered a secure context. Therefore, all Web APIs requiring a secure context should work in extensions.</p>
+
+<p>If you encounter a Web API that requires a secure context but doesn't appear to function correctly in an extension, file a <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=WebExtensions&component=Untriaged">Bugzilla bug</a>.</p>
 
 <h4 id="WebExtension_APIs">WebExtension APIs</h4>
 
