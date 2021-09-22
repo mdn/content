@@ -57,12 +57,9 @@ browser-compat: html.elements.colgroup
 
 <dl>
  <dt>{{htmlattrdef("span")}}</dt>
- <dd>This attribute contains a positive integer indicating the number of consecutive columns the <code>&lt;colgroup&gt;</code> element spans. If not present, its default value is <code>1</code>.
- <div class="note"><p><strong>Note:</strong> This attribute is applied on the attributes of the column group, it has no effect on the CSS styling rules associated with it or, even more, to the cells of the column's members of the group.</p>
- <ul>
-  <li>The <code>span</code> attribute is not permitted if there are one or more <code>&lt;col&gt;</code> elements within the <code>&lt;colgroup&gt;</code>.</li>
- </ul>
- </div>
+ <dd><p>This attribute contains a positive integer indicating the number of consecutive columns the <code>&lt;colgroup&gt;</code> element spans. If not present, its default value is <code>1</code>.</p>
+ <p>This attribute is applied on the attributes of the column group, it has no effect on the CSS styling rules associated with it or, even more, to the cells of the column's members of the group.</p>
+ <p>The <code>span</code> attribute is not permitted if there are one or more <code>&lt;col&gt;</code> elements within the <code>&lt;colgroup&gt;</code>.</p>
  </dd>
 </dl>
 
@@ -83,13 +80,9 @@ browser-compat: html.elements.colgroup
 
  <p>If this attribute is not set, the <code>left</code> value is assumed. The descendant {{HTMLElement("col")}} elements may override this value using their own {{htmlattrxref("align", "col")}} attribute.</p>
 
- <div class="note"><p><strong>Note:</strong></p>
-
- <ul>
-  <li>Do not try to set the {{cssxref("text-align")}} property on a selector giving a {{HTMLElement("colgroup")}} element. Because {{HTMLElement("td")}} elements are not descendant of the {{HTMLElement("colgroup")}} element, they won't inherit it.</li>
-  <li>If the table doesn't use a {{htmlattrxref("colspan", "td")}} attribute, use one <code>td:nth-child(an+b)</code> CSS selector per column, where a is the total number of the columns in the table and b is the ordinal position of this column in the table. Only after this selector the <code>text-align</code> property can be used.</li>
-  <li>If the table does use a {{htmlattrxref("colspan", "td")}} attribute, the effect can be achieved by combining adequate CSS attribute selectors like <code>[colspan=n]</code>, though this is not trivial.</li>
- </ul>
+ <div class="note"><p><strong>Note:</strong> Do not try to set the {{cssxref("text-align")}} property on a selector giving a {{HTMLElement("colgroup")}} element. Because {{HTMLElement("td")}} elements are not descendant of the {{HTMLElement("colgroup")}} element, they won't inherit it.</p>
+ <p>If the table doesn't use a {{htmlattrxref("colspan", "td")}} attribute, use one <code>td:nth-child(an+b)</code> CSS selector per column, where a is the total number of the columns in the table and b is the ordinal position of this column in the table. Only after this selector the <code>text-align</code> property can be used.</p>
+ <p>If the table does use a {{htmlattrxref("colspan", "td")}} attribute, the effect can be achieved by combining adequate CSS attribute selectors like <code>[colspan=n]</code>, though this is not trivial.</p>
  </div>
  </dd>
  <dt>{{htmlattrdef("bgcolor")}} {{Deprecated_inline}}</dt>
@@ -111,13 +104,9 @@ browser-compat: html.elements.colgroup
   <li>and <code>top</code>, which will put the text as close to the top of the cell as it is possible.</li>
  </ul>
 
- <div class="note"><strong>Note: </strong>
-
- <ul>
-  <li>Do not try to set the {{cssxref("vertical-align")}} property on a selector giving a <code>&lt;colgroup&gt;</code> element. Because {{HTMLElement("td")}} elements are not descendant of the <code>&lt;colgroup&gt;</code> element, they won't inherit it.</li>
-  <li>If the table doesn't use a {{htmlattrxref("colspan", "td")}} attribute, use the <code>td:nth-child(an+b)</code> CSS selector per column, where a is the total number of the columns in the table and b is the ordinal position of the column in the table. Only after this selector the <code>vertical-align</code> property can be used.</li>
-  <li>If the table does use a {{htmlattrxref("colspan", "td")}} attribute, the effect can be achieved by combining adequate CSS attribute selectors like <code>[colspan=n]</code>, though this is not trivial.</li>
- </ul>
+ <div class="note"><p><strong>Note:</strong> Do not try to set the {{cssxref("vertical-align")}} property on a selector giving a <code>&lt;colgroup&gt;</code> element. Because {{HTMLElement("td")}} elements are not descendant of the <code>&lt;colgroup&gt;</code> element, they won't inherit it.</p>
+ <p>If the table doesn't use a {{htmlattrxref("colspan", "td")}} attribute, use the <code>td:nth-child(an+b)</code> CSS selector per column, where a is the total number of the columns in the table and b is the ordinal position of the column in the table. Only after this selector the <code>vertical-align</code> property can be used.</p>
+ <p>If the table does use a {{htmlattrxref("colspan", "td")}} attribute, the effect can be achieved by combining adequate CSS attribute selectors like <code>[colspan=n]</code>, though this is not trivial.</p>
  </div>
  </dd>
 </dl>

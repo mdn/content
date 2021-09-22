@@ -266,8 +266,7 @@ input:valid+span:after {
 
 <p>There's also the problem that the user won't necessarily know which of the many date formats is expected. We have work left to do.</p>
 
-<div class="hidden">
-<pre class="brush: css">div {
+<pre class="brush: css hidden">div {
   margin-bottom: 10px;
   position: relative;
 }
@@ -291,7 +290,6 @@ input:valid+span:after {
   content: '✓';
   padding-left: 5px;
 }</pre>
-</div>
 
 <p>The best way to deal with dates in forms in a cross-browser way (until all of the major browsers have supported them for a while) is to get the user to enter the month and year in separate controls ({{htmlelement("select")}} elements being popular; see below for an implementation), or use JavaScript libraries such as the <a href="https://jqueryui.com/datepicker/">jQuery date picker</a> plugin.</p>
 
@@ -344,8 +342,7 @@ input:valid+span:after {
 
 <p>The <code>&lt;select&gt;</code> for choosing the month is hardcoded with the names of the months, as they don't change (leaving localization out of things). The list of available year values is dynamically generated depending on the current year (see the code comments below for detailed explanations of how these functions work).</p>
 
-<div class="hidden">
-<pre class="brush: css">div {
+<pre class="brush: css hidden">div {
   margin-bottom: 10px;
   position: relative;
 }
@@ -369,7 +366,6 @@ input:valid+span:after {
   content: '✓';
   padding-left: 5px;
 }</pre>
-</div>
 
 <h3 id="JavaScript">JavaScript</h3>
 

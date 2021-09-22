@@ -235,8 +235,7 @@ input:valid+span::after {
 
 <p>If you submit it, you'll see that the browser displays an error and highlights the input as invalid if your entry doesn't match the pattern <code>####-##-##</code> (where <code>#</code> is a digit from 0 to 9). Of course, this doesn't stop people from entering invalid dates, or incorrect formats. So we still have a problem.</p>
 
-<div class="hidden">
-<pre class="brush: css">span {
+<pre class="brush: css hidden">span {
   position: relative;
 }
 
@@ -252,7 +251,6 @@ input:invalid + span::after {
 input:valid + span::after {
   content: '✓';
 }</pre>
-</div>
 
 <p>At the moment, the best way to deal with dates in forms in a cross-browser way is to have the user enter the day, month, and year in separate controls, or to use a JavaScript library such as <a href="https://jqueryui.com/datepicker/">jQuery date picker</a>.</p>
 
@@ -306,8 +304,7 @@ input:valid + span::after {
 
 <p>The months are hardcoded (as they are always the same), while the day and year values are dynamically generated depending on the currently selected month and year, and the current year (see the code comments below for detailed explanations of how these functions work.)</p>
 
-<div class="hidden">
-<pre class="brush: css">span {
+<pre class="brush: css hidden">span {
   padding-left: 5px;
 }
 
@@ -318,7 +315,6 @@ input:invalid + span::after {
 input:valid + span::after {
   content: '✓';
 }</pre>
-</div>
 
 <h3 id="JavaScript">JavaScript</h3>
 
