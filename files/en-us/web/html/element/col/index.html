@@ -76,18 +76,10 @@ browser-compat: html.elements.col
 
  <p>If this attribute is not set, its value is inherited from the {{htmlattrxref("align", "colgroup")}} of the {{HTMLElement("colgroup")}} element this <code>&lt;col&gt;</code> element belongs too. If there are none, the <code>left</code> value is assumed.</p>
 
- <div class="note"><strong>Note: </strong>
+ <div class="note"><p><strong>Note:</strong> To achieve the same effect as the <code>left</code>, <code>center</code>, <code>right</code> or <code>justify</code> values, do not try to set the {{cssxref("text-align")}} property on a selector giving a <code>&lt;col&gt;</code> element. Because {{HTMLElement("td")}} elements are not descendant of the <code>&lt;col&gt;</code> element, they won't inherit it.</p>
 
- <ul>
-  <li>To achieve the same effect as the <code>left</code>, <code>center</code>, <code>right</code> or <code>justify</code> values:
-
-   <ul>
-    <li>Do not try to set the {{cssxref("text-align")}} property on a selector giving a <code>&lt;col&gt;</code> element. Because {{HTMLElement("td")}} elements are not descendant of the <code>&lt;col&gt;</code> element, they won't inherit it.</li>
-    <li>If the table doesn't use a {{htmlattrxref("colspan", "td")}} attribute, use the <code>td:nth-child(an+b)</code> CSS selector. Set <code>a</code> to zero and <code>b </code>to the position of the column in the table, e.g. <code>td:nth-child(2) { text-align: right; }</code> to right-align the second column.</li>
-    <li>If the table does use a {{htmlattrxref("colspan", "td")}} attribute, the effect can be achieved by combining adequate CSS attribute selectors like <code>[colspan=n]</code>, though this is not trivial.</li>
-   </ul>
-  </li>
- </ul>
+ <p>If the table doesn't use a {{htmlattrxref("colspan", "td")}} attribute, use the <code>td:nth-child(an+b)</code> CSS selector. Set <code>a</code> to zero and <code>b </code>to the position of the column in the table, e.g. <code>td:nth-child(2) { text-align: right; }</code> to right-align the second column.</p>
+    <p>If the table does use a {{htmlattrxref("colspan", "td")}} attribute, the effect can be achieved by combining adequate CSS attribute selectors like <code>[colspan=n]</code>, though this is not trivial.</p>
  </div>
  </dd>
  <dt>{{htmlattrdef("bgcolor")}} {{Deprecated_inline}}</dt>
@@ -109,13 +101,9 @@ browser-compat: html.elements.col
   <li>and <code>top</code>, which will put the text as close to the top of the cell as it is possible.</li>
  </ul>
 
- <div class="note"><p><strong>Note:</strong></p>
-
- <ul>
-  <li>Do not try to set the {{cssxref("vertical-align")}} property on a selector giving a <code>&lt;col&gt;</code> element. Because {{HTMLElement("td")}} elements are not descendant of the <code>&lt;col&gt;</code> element, they won't inherit it.</li>
-  <li>If the table doesn't use a {{htmlattrxref("colspan", "td")}} attribute, use the <code>td:nth-child(an+b)</code> CSS selector where a is the total number of the columns in the table and b is the ordinal position of the column in the table. Only after this selector the <code>vertical-align</code> property can be used.</li>
-  <li>If the table does use a {{htmlattrxref("colspan", "td")}} attribute, the effect can be achieved by combining adequate CSS attribute selectors like <code>[colspan=n]</code>, though this is not trivial.</li>
- </ul>
+ <div class="note"><p><strong>Note:</strong> Do not try to set the {{cssxref("vertical-align")}} property on a selector giving a <code>&lt;col&gt;</code> element. Because {{HTMLElement("td")}} elements are not descendant of the <code>&lt;col&gt;</code> element, they won't inherit it.</p>
+ <p>If the table doesn't use a {{htmlattrxref("colspan", "td")}} attribute, use the <code>td:nth-child(an+b)</code> CSS selector where a is the total number of the columns in the table and b is the ordinal position of the column in the table. Only after this selector the <code>vertical-align</code> property can be used.</p>
+ <p>If the table does use a {{htmlattrxref("colspan", "td")}} attribute, the effect can be achieved by combining adequate CSS attribute selectors like <code>[colspan=n]</code>, though this is not trivial.</p>
  </div>
  </dd>
  <dt>{{htmlattrdef("width")}} {{deprecated_inline}}</dt>
