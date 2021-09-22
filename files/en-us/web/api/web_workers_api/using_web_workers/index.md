@@ -558,6 +558,17 @@ It is possible to switch the content of each mainpage -> worker and worker -> ma
 
 Modern browsers contain an additional way to pass certain types of objects to or from a worker with high performance. {{Glossary("Transferable Objects")}} are transferred from one context to another with a zero-copy operation, which results in a vast performance improvement when sending large data sets.
 
+For example, when transferring an {{jsxref("ArrayBuffer")}} from your main app to a worker script, the original {{jsxref("ArrayBuffer")}} is cleared and no longer usable. Its content is (quite literally) transferred to the worker context.
+
+```js
+// Create a 32MB "file" and fill it.
+var uInt8Array = new Uint8Array(1024 * 1024 * 32); // 32MB
+for (var i = 0; i < uInt8Array.length; ++i) {
+  uInt8Array[i] = i;
+}
+worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
+```
+
 ## Embedded workers
 
 There is not an "official" way to embed the code of a worker within a web page, like {{HTMLElement("script")}} elements do for normal scripts. But a {{HTMLElement("script")}} element that does not have a `src` attribute and has a `type` attribute that does not identify an executable MIME type can be considered a data block element that JavaScript could use. "Data blocks" is a more general feature of HTML5 that can carry almost any textual data. So, a worker could be embedded in this way:
