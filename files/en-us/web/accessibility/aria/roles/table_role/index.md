@@ -57,7 +57,7 @@ If the table contains sortable columns or rows, the `aria-sort` attribute should
 
 To create an interactive widget that has a tabular structure, use the grid pattern instead. If the interaction provides for the selection state of individual cells, if left to right and top to bottom navigation is provided, or if the user interface allows the rearranging of cell order or otherwise changing individual cell order such as through drag and drop, use [grid](/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role) or [treegrid](/en-US/docs/Web/Accessibility/ARIA/Roles/Treegrid_Role) instead.
 
-<div class="note"><p>Note: Using a native HTML table element whenever possible is strongly encouraged.</p></div>
+> **Note:** Using a native HTML table element whenever possible is strongly encouraged.</p></div>
 
 ### Associated WAI-ARIA roles, states, and properties
 

@@ -38,20 +38,20 @@ An element with `role="rowgroup"` is a group of [rows](/en-US/docs/Web/Accessibi
 
 ## Description
 
-`Rowgroup` establishes a relationship between owned row elements and is a structural equivalent to the [thead](/en-US/docs/Web/HTML/Element/thead), [tfoot ](/en-US/docs/Web/HTML/Element/tfoot)and [tbody ](/en-US/docs/Web/HTML/Element/tbody)elements in HTML. There is, however, no differentiation between different types of rowgroups. Their elements must be contained in, or owned by, elements with either the [table ](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role)or [grid](/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role) role. Using the native [\<thead>](/en-US/docs/Web/HTML/Element/thead), [\<tfoot>](/en-US/docs/Web/HTML/Element/tfoot) , and [\<tbody>](/en-US/docs/Web/HTML/Element/tbody) HTML elements, whenever possible, is strongly encouraged.
+`Rowgroup` establishes a relationship between owned row elements and is a structural equivalent to the {{HTMLElement('thead')}}, {{HTMLElement('tfoot')}} and {{HTMLElement('tbody')}} elements in HTML. There is, however, no differentiation between different types of rowgroups. Their elements must be contained in, or owned by, elements with either the [table ](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role) or [grid](/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role) role. Using the native {{HTMLElement('thead')}}, {{HTMLElement('tfoot')}} and {{HTMLElement('tbody')}} HTML elements, whenever possible, is strongly encouraged.
 
 To create an ARIA table header, table footer or table body, add `role="rowgroup"` to the element. That rowgroup should be nested within a grid, table or treegrid, encompassing a group of one or more rows. Each row, in turn, contains child cells. These cells can be of different types, depending on whether they are column or row headers, or plain or grid cells.
 
-<div class="note"><p>Note: Using the native HTML table element (&#x3C;table>) along with the table header (&#x3C;thead>), footer (&#x3C;tfoot>), and body  (&#x3C;tbody>) elements whenever possible is strongly encouraged.</p></div>
+> **Note:** Using the native HTML table element ({{HTMLElement('table')}}) along with the table header ({{HTMLElement('thead')}}), footer ({{HTMLElement('tfoot')}}), and body  ({{HTMLElement('tbody')}}) elements whenever possible is strongly encouraged.
 
 ### Associated WAI-ARIA roles, states, and properties
 
 #### Context roles
 
 - [role="table"](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role)
-  - : One of the three possible contexts (along with grid and treegrid) in which you'll find a row.  It identifies the row as being part of a non-interactive table structure containing data arranged in rows and columns, similar to the native [`<table>`](/en-US/docs/Web/HTML/Element/table) HTML element.
+  - : One of the three possible contexts (along with grid and treegrid) in which you'll find a row.  It identifies the row as being part of a non-interactive table structure containing data arranged in rows and columns, similar to the native {{HTMLElement('table')}} HTML element.
 - [role="grid"](/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role)
-  - : One of the three possible contexts (along with table and treegrid) in which you'll find a row. It identifies the row as being part of a non-interactive table structure containing data arranged in rows and columns, similar to the native [`<table>`](/en-US/docs/Web/HTML/Element/table) HTML element.
+  - : One of the three possible contexts (along with table and treegrid) in which you'll find a row. It identifies the row as being part of a non-interactive table structure containing data arranged in rows and columns, similar to the native {{HTMLElement('table')}} HTML element.
 - [role="treegrid"](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_Role)
   - : Similar to a grid, but with rows that can be expanded and collapsed in the same manner as for a tree.
 
@@ -68,7 +68,7 @@ None
 
 None.
 
-<div class="note"><p><span class="ILfuVd yZ8quc">The first rule of ARIA use is if you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and <strong>adding</strong> an ARIA role, state or property to make it accessible, then do so. Employ the HTML &#x3C;table> element instead of the ARIA role of table whenever possible.</span></p></div>
+<div class="note"><p><span class="ILfuVd yZ8quc">The first rule of ARIA use is if you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and <strong>adding</strong> an ARIA role, state or property to make it accessible, then do so. Employ the HTML <table> element instead of the ARIA role of table whenever possible.</span></p></div>
 
 ## Examples
 
