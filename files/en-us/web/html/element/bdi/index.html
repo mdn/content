@@ -42,11 +42,11 @@ browser-compat: html.elements.bdi
 
 <p>For example, consider some text like:</p>
 
-<pre class="no-line-numbers">EMBEDDED-TEXT - 1st place</pre>
+<pre>EMBEDDED-TEXT - 1st place</pre>
 
 <p>If <code>EMBEDDED-TEXT</code> is LTR, this works fine. But if <code>EMBEDDED-TEXT</code> is RTL, then  <code> - 1</code> will be treated as RTL text (because it consists of neutral and weak characters). The result will be garbled:</p>
 
-<pre class="no-line-numbers">1 - EMBEDDED-TEXTst place</pre>
+<pre>1 - EMBEDDED-TEXTst place</pre>
 
 <p>If you know the directionality of <code>EMBEDDED-TEXT</code> in advance, you can fix this problem by wrapping <code>EMBEDDED-TEXT</code> in a {{HTMLElement("span")}} with the {{htmlattrxref("dir")}} attribute set to the known directionality. But if you don't know the directionality - for example, because <code>EMBEDDED-TEXT</code> is being read from a database or entered by the user - you should use <code>&lt;bdi&gt;</code> to prevent the directionality of <code>EMBEDDED-TEXT</code> from affecting its surroundings.</p>
 
