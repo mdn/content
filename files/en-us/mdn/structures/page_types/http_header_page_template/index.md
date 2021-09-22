@@ -10,64 +10,59 @@ browser-compat: path.to.feature.NameOfTheHeader
 ---
 {{MDNSidebar}}
 
-> **Note:** _Remove this whole explanatory note before publishing_
->
-> ---
->
-> **Page front matter:**
->
-> The frontmatter at the top of the page is used to define "page metadata".
-> The values should be updated appropriately for the particular header.
-> 
-> ```
-> ---
-> title: NameOfTheHeader
-> slug: Web/HTTP/Headers/NameOfTheHeader
-> tags:
->   - NameOfTheHeader
->   - HTTP
->   - HTTP Header
->   - Request header
->   - Response header
->   - Reference
->   - Experimental
->   - Deprecated
-> browser-compat: path.to.feature.NameOfTheHeader
-> ---
-> ```
-> - **title**
->   - : Title heading displayed at top of page. Format as _NameOfTheHeader_. For example, the [Cache-Control](/en-US/docs/Web/HTTP/Headers/Cache-Control) header has a _title_ of `Cache-Control`. 
-> - **slug**
->   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`). This will be formatted like `Web/HTTP/Headers/NameOfTheHeader`. For example, the [Cache-Control](/en-US/docs/Web/HTTP/Headers/Cache-Control) slug is `Web/HTTP/Headers/Cache-Control`. 
-> - **tags**
->   - : Always include the following tags: **HTTP**, **Reference**, **HTTP Header**, _NameOfTheHeader_ (e.g. **Cache-Control**).
->
->       Include the following tags as appropriate:
->       - Type of request/response: **Response header**, **Request header**, **Representation header**, **Payload header**, **Client hint**
->       - Header status: **Experimental** (if the technology is [experimental](/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental)), **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete)).
->       - Any other tags that represent terms people might search for related to the technology. For example the [Cache-Control](/en-US/docs/Web/HTTP/Headers/Cache-Control) header includes the tag **Caching**.
-> - **browser-compat**
->   - : Replace the placeholder value <code>path.to.feature.NameOfTheHeader</code> with the query string for the header in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
->       The toolchain automatically uses the key to populate the compatibility section (replacing the `\{{Compat}}` macro).
->
->       Note that you may first need to create/update an entry for the HTTP header in our <a href="https://github.com/mdn/browser-compat-data">Browser compat data repo</a>, and the entry for the header will need to include specification information.
->       See our [guide on how to do this](/en-US/docs/MDN/Structures/Compatibility_tables).
->
-> ---
->
-> **Top-of-page macros**
->
-> A number of macro calls appear at the top of the content section (immediately below the page frontmatter).
-> You should update or delete them according to the advice below:
-> - `\{{SeeCompatTable}}` — this generates a **This is an experimental technology** banner that indicates the header is [experimental](/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental)).
->   If the header you are documenting is not experimental, you can remove this.
->   If it is experimental, and the technology is hidden behind a pref in Firefox, you should also fill in an entry for it in the [Experimental features in Firefox](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
-> - `\{{deprecated_header}}` — this generates a **Deprecated** banner that indicates that use of the header is [discouraged](/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete).
->   If it isn't, then you can remove the macro call.
-> - `\{{httpsidebar}}` — this generates the HTTP sidebar that must appear on every HTTP reference page.
->   Remember to remove the `\{{MDNSidebar}}` macro when you copy this page.
->
-> _Remember to remove this whole explanatory note before publishing_
+
+**Page front matter:**
+
+The frontmatter at the top of the page is used to define "page metadata".
+The values should be updated appropriately for the particular header.
+
+```
+---
+title: NameOfTheHeader
+slug: Web/HTTP/Headers/NameOfTheHeader
+tags:
+  - NameOfTheHeader
+  - HTTP
+  - HTTP Header
+  - Request header
+  - Response header
+  - Reference
+  - Experimental
+  - Deprecated
+browser-compat: path.to.feature.NameOfTheHeader
+---
+```
+
+- **title**
+  - : Title heading displayed at top of page. Format as _NameOfTheHeader_. For example, the [Cache-Control](/en-US/docs/Web/HTTP/Headers/Cache-Control) header has a _title_ of `Cache-Control`. 
+- **slug**
+  - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`). This will be formatted like `Web/HTTP/Headers/NameOfTheHeader`. For example, the [Cache-Control](/en-US/docs/Web/HTTP/Headers/Cache-Control) slug is `Web/HTTP/Headers/Cache-Control`. 
+- **tags**
+  - : Always include the following tags: **HTTP**, **Reference**, **HTTP Header**, _NameOfTheHeader_ (e.g. **Cache-Control**).
+      Include the following tags as appropriate:
+      - Type of request/response: **Response header**, **Request header**, **Representation header**, **Payload header**, **Client hint**
+      - Header status: **Experimental** (if the technology is [experimental](/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental)), **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete)).
+      - Any other tags that represent terms people might search for related to the technology. For example the [Cache-Control](/en-US/docs/Web/HTTP/Headers/Cache-Control) header includes the tag **Caching**.
+- **browser-compat**
+  - : Replace the placeholder value <code>path.to.feature.NameOfTheHeader</code> with the query string for the header in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
+      The toolchain automatically uses the key to populate the compatibility section (replacing the `\{{Compat}}` macro).
+      Note that you may first need to create/update an entry for the HTTP header in our <a href="https://github.com/mdn/browser-compat-data">Browser compat data repo</a>, and the entry for the header will need to include specification information.
+      See our [guide on how to do this](/en-US/docs/MDN/Structures/Compatibility_tables).
+
+---
+
+**Top-of-page macros**
+
+A number of macro calls appear at the top of the content section (immediately below the page frontmatter).
+You should update or delete them according to the advice below:
+
+- `\{{SeeCompatTable}}` — this generates a **This is an experimental technology** banner that indicates the header is [experimental](/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental)).
+  If the header you are documenting is not experimental, you can remove this.
+  If it is experimental, and the technology is hidden behind a pref in Firefox, you should also fill in an entry for it in the [Experimental features in Firefox](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+- `\{{deprecated_header}}` — this generates a **Deprecated** banner that indicates that use of the header is [discouraged](/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete).
+  If it isn't, then you can remove the macro call.
+- `\{{httpsidebar}}` — this generates the HTTP sidebar that must appear on every HTTP reference page.
+  Remember to remove the `\{{MDNSidebar}}` macro when you copy this page.
 
 
 {{SeeCompatTable}}{{deprecated_header}}{{httpsidebar}}
