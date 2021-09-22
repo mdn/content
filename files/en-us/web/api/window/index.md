@@ -233,7 +233,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
 - {{domxref("Window.matchMedia()")}}
   - : Returns a {{domxref("MediaQueryList")}} object representing the specified media query string.
 - {{domxref("Window.maximize()")}} (top-level XUL windows only)
-  - : Miximizes the window.
+  - : Maximizes the window that displays the page.
 - {{domxref("Window.minimize()")}} (top-level XUL windows only)
   - : Minimizes the window.
 - {{domxref("Window.moveBy()")}}
