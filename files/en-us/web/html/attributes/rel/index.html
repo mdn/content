@@ -232,7 +232,7 @@ tags:
 &lt;link rel=alternate href="/fr/pdf" hreflang=fr type=application/pdf title="French PDF"&gt;</pre>
 		</li>
 	</ul>
-  <p class="note">Note: The obsolete <code>rev="made"</code> is treated as <code>rel="alternate"</code></p>
+  <div class="note"><p><strong>Note:</strong> The obsolete <code>rev="made"</code> is treated as <code>rel="alternate"</code></p></div>
 	</dd>
 	<dt>{{htmlattrdef("author")}}</dt>
 	<dd>Indicates the author of the current document or article. Relevant for {{htmlelement('link')}}, {{htmlelement('a')}}, and {{htmlelement('area')}} elements, the <code>author</code> keyword creates a hyperlink. With {{htmlelement('a')}} and {{htmlelement('area')}}, it indicates the linked document (or <code>mailto:</code>) provides information about the author of the nearest {{htmlelement('article')}} ancestor if there is one, otherwise the entire document. For {{htmlelement('link')}}, it represents the author of the entire document.</dd>
@@ -248,7 +248,7 @@ tags:
 	<dd>Relevant to {{htmlelement('form')}}, {{htmlelement('link')}}, {{htmlelement('a')}}, and {{htmlelement('area')}}, the <code>help</code> keyword indicates that the linked to content provides context-sensitive help, providing information for the parent of the element defining the hyperlink, and its children. When used within <code>&lt;link&gt;</code>, the help is for the whole document. When included with {{htmlelement('a')}} and {{htmlelement('area')}} and supported, the default {{cssxref('cursor')}} will be <code>help</code> instead of <code>pointer</code>.</dd>
 	<dt>{{htmlattrdef("icon")}}</dt>
 	<dd>
-	<p>Valid with {{htmlelement('link')}}, the linked resource represents the icon, a resource for representing the page in the user interface, for the current document.</p>
+	<p><strong>Note:</strong> Valid with {{htmlelement('link')}}, the linked resource represents the icon, a resource for representing the page in the user interface, for the current document.</p>
 
 	<p>The most common use for the <code>icon</code> value is the favicon:</p>
 
@@ -257,7 +257,7 @@ tags:
 	<p>If there are multiple <code>&lt;link rel="icon"&gt;</code>s, the browser uses their <a href="media"><code>media</code></a> attribute, <a href="type"><code>type</code></a>, and <a href="sizes"><code>sizes</code></a> attributes to select the most appropriate icon. If several icons are equally appropriate, the last one is used. If the most appropriate icon is later found to be inappropriate, for example because it uses an unsupported format, the browser proceeds to the next-most appropriate, and so on.</p>
 
 	<div class="notecard note">
-	<p>Prior to Firefox 83 the <a href="/en-US/docs/Web/HTML/Attributes/crossorigin">crossorigin</a> attribute was not supported for <code>rel="icon"</code> there is also <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1121645">an open issue for Chrome</a>.</p>
+	<p><strong>Note:</strong> Prior to Firefox 83 the <a href="/en-US/docs/Web/HTML/Attributes/crossorigin">crossorigin</a> attribute was not supported for <code>rel="icon"</code> there is also <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1121645">an open issue for Chrome</a>.</p>
 	</div>
 
 	<p><strong>Note:</strong> Apple's iOS does not use this link type, nor the <a href="sizes"><code>sizes</code></a> attribute, like others mobile browsers do, to select a webpage icon for Web Clip or a start-up placeholder. Instead it uses the non-standard <a class="external external-icon" href="https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4"><code>apple-touch-icon</code></a> and <a class="external external-icon" href="https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6"><code>apple-touch-startup-image</code></a> respectively.</p>
@@ -266,7 +266,7 @@ tags:
 	</dd>
 	<dt>{{htmlattrdef("license")}}</dt>
 	<dd>
-	<p>Valid on the {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("form")}}, {{HTMLElement("link")}} elements, the <code>license</code> value indicates that the hyperlink leads to a document describing the licensing information; that the main content of the current document is covered by the copyright license described by the referenced document. If not inside the {{HTMLElement("head")}} element, the standard doesn't distinguish between a hyperlink applying to a specific part of the document or to the document as a whole. Only the data on the page can indicate this.</p>
+	<p><strong>Note:</strong> Valid on the {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("form")}}, {{HTMLElement("link")}} elements, the <code>license</code> value indicates that the hyperlink leads to a document describing the licensing information; that the main content of the current document is covered by the copyright license described by the referenced document. If not inside the {{HTMLElement("head")}} element, the standard doesn't distinguish between a hyperlink applying to a specific part of the document or to the document as a whole. Only the data on the page can indicate this.</p>
 
 	<pre class="brush: html">&lt;link rel="license" href="#license"&gt;</pre>
 
@@ -380,13 +380,13 @@ tags:
 		<tr>
 			<td>{{SpecName("HTML3.2", "#link", "&lt;link&gt;")}}</td>
 			<td>
-			<p>{{Spec2("HTML3.2")}}<span class="spec-Obsolete"> (Obsolete)</span></p>
+			<p>{{Spec2("HTML3.2")}} (Obsolete)</p>
 			</td>
 			<td>Added <code>top</code>, <code>contents</code>, <code>index</code>, <code>glossary</code>, <code>copyright</code>, <code>next</code>, <code>previous</code>, <code>help</code>, and <code>search</code>.</td>
 		</tr>
 		<tr>
 			<td>{{RFC(1866, "HTML 2.0")}}</td>
-			<td>{{Spec2("HTML2.0")}}<span class="spec-Obsolete">(Obsolete)</span></td>
+			<td>{{Spec2("HTML2.0")}} (Obsolete)</td>
 			<td>Initial definition.</td>
 		</tr>
 	</tbody>

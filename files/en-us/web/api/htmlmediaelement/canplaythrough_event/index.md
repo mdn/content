@@ -41,15 +41,6 @@ The `canplaythrough` event is fired when the user agent can play the media, and 
         {{domxref("GlobalEventHandlers.oncanplaythrough")}}
       </td>
     </tr>
-    <tr>
-      <th scope="row">Specification</th>
-      <td>
-        <a
-          href="https://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-playing"
-          >HTML5 media</a
-        >
-      </td>
-    </tr>
   </tbody>
 </table>
 

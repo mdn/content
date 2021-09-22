@@ -55,24 +55,9 @@ browser-compat: html.elements.input.input-hidden
 
 <h2 id="Additional_attributes">Additional attributes</h2>
 
-<p>In addition to the attributes common to all {{HTMLElement("input")}} elements, <code>hidden</code> inputs offer the following attributes:</p>
+<p>In addition to the attributes common to all {{HTMLElement("input")}} elements, <code>hidden</code> inputs offer the following attributes.</p>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Attribute</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>{{anch("name")}}</code></td>
-   <td>Like all input types, the name of the input to report when submitting the form; the special value <code>_charset_</code> causes the hidden input's value to be reported as the character encoding used to submit the form</td>
-  </tr>
- </tbody>
-</table>
-
-<h3 id="attr-name"><code id="name">name</code></h3>
+<h3>name</h3>
 
 <p>This is actually one of the common attributes, but it has a special meaning available for hidden inputs. Normally, the {{htmlattrxref("name", "input")}} attribute functions on hidden inputs just like on any other input. However, when the form is submitted, a hidden input whose <code>name</code> is set to <code>_charset_</code> will automatically be reported with the value set to the character encoding used to submit the form.</p>
 
