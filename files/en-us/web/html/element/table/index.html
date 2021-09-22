@@ -244,8 +244,7 @@ browser-compat: html.elements.table
 &lt;/table&gt;
 </pre>
 
-<div class="hidden">
-<pre class="brush: css">table
+<pre class="brush: css hidden">table
 {
 border-collapse: collapse;
 border-spacing: 0px;
@@ -255,11 +254,9 @@ table, th, td
 padding: 5px;
 border: 1px solid black;
 }</pre>
-</div>
 
 <p>{{EmbedLiveSample('Further_simple_examples', '100%', '700')}}</p>
 
-<div class="hidden">
 <h3 id="Table_sorting">Table sorting</h3>
 
 <h4 id="Sorting_table_rows">Sorting table rows</h4>
@@ -371,8 +368,7 @@ document.querySelector('table').tBodies[0].sort(function(a, b){
 
 <p>This example provides one way to display tables in small spaces. We've hidden the HTML content as it is very large, and there is nothing remarkable about it. The CSS is more useful to inspect in this example.</p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;table&gt;
+<pre class="brush: html hidden">&lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th&gt;1&lt;sup&gt;3&lt;/sup&gt; equals:
@@ -545,7 +541,6 @@ document.querySelector('table').tBodies[0].sort(function(a, b){
       &lt;td&gt;row 20: 343
 &lt;/table&gt;
 </pre>
-</div>
 
 <p>When looking at these styles you’ll notice that table’s {{cssxref("display")}} property has been set to <code>block</code>. While this allows scrolling, the table loses some of its integrity, and table cells try to become as small as possible. To mitigate this issue we've set {{cssxref("white-space")}} to <code>nowrap</code> on the <code>&lt;tbody&gt;</code>. However, we don’t do this for the <code>&lt;thead&gt;</code> to avoid long titles forcing columns to be wider than they need to be to display the data.</p>
 
@@ -598,7 +593,6 @@ tr:last-child td {
 <h4 id="Result_3">Result</h4>
 
 <p>{{EmbedLiveSample('Displaying_large_tables_in_small_spaces', '100%', 240)}}</p>
-</div>
 
 <h2 id="Accessibility_concerns">Accessibility concerns</h2>
 

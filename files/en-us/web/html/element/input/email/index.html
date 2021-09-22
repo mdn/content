@@ -264,8 +264,7 @@ browser-compat: html.elements.input.input-email
 
 <p>Since inputs of type <code>email</code> validate against both the standard e-mail address validation <em>and</em> the specified {{htmlattrxref("pattern", "input")}}, you can implement this easily. Let's see how:</p>
 
-<div class="hidden">
-<pre class="brush: css">body {
+<pre class="brush: css hidden">body {
   font: 16px sans-serif;
 }
 
@@ -284,7 +283,6 @@ label {
 label::after {
   content: ":";
 }</pre>
-</div>
 
 <pre class="brush: html">&lt;form&gt;
  &lt;div class="emailBox"&gt;

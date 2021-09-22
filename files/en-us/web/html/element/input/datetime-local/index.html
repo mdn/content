@@ -263,8 +263,7 @@ input:valid+span:after {
 
 <p>We still have a problem.</p>
 
-<div class="hidden">
-<pre class="brush: css">div {
+<pre class="brush: css hidden">div {
   margin-bottom: 10px;
 }
 
@@ -287,7 +286,6 @@ input:valid + span:after {
   position: absolute;
   right: -18px;
 }</pre>
-</div>
 
 <p>The best way to deal with dates in forms in a cross-browser way at the moment is to get the user to enter the day, month, year, and time in separate controls ({{htmlelement("select")}} elements being popular — see below for an implementation), or use JavaScript libraries such as <a href="https://jqueryui.com/datepicker/">jQuery date picker</a>, and the <a href="https://timepicker.co/">jQuery timepicker plugin</a>.</p>
 
@@ -377,8 +375,7 @@ input:valid + span:after {
 
 <p>The months are hard-coded (as they are always the same), while the day and year values are dynamically generated depending on the currently selected month and year, and the current year respectively (see the code comments below for detailed explanations of how these functions work.) We also decided to dynamically generate the hours and minutes, as there are so many of them!</p>
 
-<div class="hidden">
-<pre class="brush: css">div {
+<pre class="brush: css hidden">div {
   margin-bottom: 10px;
   position: relative;
 }
@@ -402,7 +399,6 @@ input:valid+span:after {
   content: '✓';
   padding-left: 5px;
 }</pre>
-</div>
 
 <p>The other part of the code that may be of interest is the feature detection code — to detect whether the browser supports <code>&lt;input type="datetime-local"&gt;</code>, we create a new {{htmlelement("input")}} element, try setting its <code>type</code> to <code>datetime-local</code>, then immediately check what its type is set to. Browsers that don't support <code>datetime-local</code> return <code>text</code>, since that's what <code>datetime-local</code> falls back to. If <code>&lt;input type="datetime-local"&gt;</code> is not supported, we hide the native picker and show the fallback picker UI ({{htmlelement("select")}}) instead.</p>
 
