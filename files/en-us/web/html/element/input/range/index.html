@@ -71,54 +71,27 @@ browser-compat: html.elements.input.input-range
 
 <h2 id="Additional_attributes">Additional attributes</h2>
 
-<p>In addition to the attributes shared by all {{HTMLElement("input")}} elements, range inputs offer the following attributes:</p>
+<p>In addition to the attributes shared by all {{HTMLElement("input")}} elements, range inputs offer the following attributes.</p>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Attribute</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>{{anch("list")}}</code></td>
-   <td>The id of the &lt;datalist&gt; element that contains optional pre-defined options</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("max")}}</code></td>
-   <td>The maximum permitted value</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("min")}}</code></td>
-   <td>The minimum permitted value</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("step")}}</code></td>
-   <td>The stepping interval, used both for user interface and validation purposes</td>
-  </tr>
- </tbody>
-</table>
-
-<h3 id="attr-list"><code id="list">list</code></h3>
+<h3>list</h3>
 
 <p>The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The {{HTMLElement("datalist")}} provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the {{htmlattrxref("type", "input")}} are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.</p>
 
 <p>See the <a href="#a_range_control_with_hash_marks">range control with hash marks</a> below for an example of how the options on a range are denoted in supported browsers.</p>
 
-<h3 id="attr-max"><code id="max">max</code></h3>
+<h3>max</h3>
 
 <p>The greatest value in the range of permitted values. If the {{htmlattrxref("value", "input")}} entered into the element exceeds this, the element fails <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a>. If the value of the <code><a href="/en-US/docs/Web/HTML/Attributes/max">max</a></code> attribute isn't a number, then the element has no maximum value.</p>
 
 <p>This value must be greater than or equal to the value of the <code><a href="/en-US/docs/Web/HTML/Attributes/min">min</a></code> attribute. See the HTML <a href="/en-US/docs/Web/HTML/Attributes/max"><code>max</code></a> attribute.</p>
 
-<h3 id="attr-min"><code id="min">min</code></h3>
+<h3>min</h3>
 
 <p>The lowest value in the range of permitted values. If the {{htmlattrxref("value", "input")}} of the element is less than this, the element fails <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a>. If a value is specified for <code>min</code> that isn't a valid number, the input has no minimum value.</p>
 
 <p>This value must be less than or equal to the value of the <code><a href="/en-US/docs/Web/HTML/Attributes/max">max</a></code> attribute. See the <a href="/en-US/docs/Web/HTML/Attributes/min">HTML <code>min </code>attribute.</a></p>
 
-<h3 id="attr-step"><code id="step">step</code></h3>
+<h3>step</h3>
 
 <p>The <code>step</code> attribute is a number that specifies the granularity that the value must adhere to, or the special value <code>any</code>, which is described below. Only values which are equal to the basis for stepping (<code>{{anch("min")}}</code> if specified, {{htmlattrxref("value", "input")}} otherwise, and an appropriate default value if neither of those is provided) are valid.</p>
 
@@ -130,24 +103,9 @@ browser-compat: html.elements.input.input-range
 
 <p>The default stepping value for <code>range</code> inputs is 1, allowing only integers to be entered, <em>unless</em> the stepping base is not an integer; for example, if you set <code>min</code> to -10 and <code>value</code> to 1.5, then a <code>step</code> of 1 will allow only values such as 1.5, 2.5, 3.5,... in the positive direction and -0.5, -1.5, -2.5,... in the negative direction. See the <a href="/en-US/docs/Web/HTML/Attributes/step">HTML <code>step</code> attribute</a>.</p>
 
-<h3 id="Non_Standard_Attributes">Non Standard Attributes</h3>
+<h2 id="Non_Standard_Attributes">Non Standard Attributes</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Attribute</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>{{anch("orient")}}</code></td>
-   <td>Sets the orientation of the range slider. <strong>Firefox only.</strong></td>
-  </tr>
- </tbody>
-</table>
-
-<h3 id="attr-orient"><code id="orient">orient</code> {{non-standard_inline}}</h3>
+<h3>orient</h3>
 
 <p>Similar to the -moz-orient non-standard CSS property impacting the {{htmlelement('progress')}} and {{htmlelement('meter')}} elements, the <code>orient</code> attribute defines the orientation of the range slider. Values include <code>horizontal</code>, meaning the range is rendered horizontally, and <code>vertical</code>, where the range is rendered vertically.</p>
 

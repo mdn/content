@@ -52,7 +52,7 @@ includes(searchElement, fromIndex)
 
 ### Return value
 
-A {{jsxref("Boolean")}} which is `true` if the value
+A boolean value which is `true` if the value
 `searchElement` is found within the array (or the part of the array
 indicated by the index `fromIndex`, if specified).
 

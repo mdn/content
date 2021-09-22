@@ -41,15 +41,6 @@ The `durationchange` event is fired when the `duration` attribute has been updat
         {{domxref("GlobalEventHandlers.ondurationchange")}}
       </td>
     </tr>
-    <tr>
-      <th scope="row">Specification</th>
-      <td>
-        <a
-          href="https://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-playing"
-          >HTML5 media</a
-        >
-      </td>
-    </tr>
   </tbody>
 </table>
 
