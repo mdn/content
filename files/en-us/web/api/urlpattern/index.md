@@ -179,10 +179,10 @@ console.log(pattern.test('https://example.com/books/123/456/789')); // true
 Patterns can also contain group delimiters. These are pieces of a pattern that
 are surrounded by curly braces (`{}`). These group delimiters are not captured
 in the match result like capturing groups, but can still have modifiers applied
-to them, just like groups. If group delimiters do not contain a modifier, they
-are treated as if the items in them were just part of the parent pattern. Group
-delimiters may not contain other group delimiters, but may contain any other
-pattern items (capturing groups, regex, wildcard, or fixed text).
+to them, just like groups. If group delimiters are not modified by a modifier,
+they are treated as if the items in them were just part of the parent pattern.
+Group delimiters may not contain other group delimiters, but may contain any
+other pattern items (capturing groups, regex, wildcard, or fixed text).
 
 ```js
 // A group delimiter with a ? (optional) modifier
