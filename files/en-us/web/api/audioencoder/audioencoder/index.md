@@ -37,7 +37,7 @@ new AudioEncoder(init);
 
 ## Examples
 
-In the following example a `AudioEncoder` is created with the two required callback functions, one to deal with the decoded frame and the other to handle errors.
+In the following example an `AudioEncoder` is created with the two required callback functions, one to deal with the decoded frame and the other to handle errors.
 
 ```js
 const audioEncoder = new AudioEncoder({
