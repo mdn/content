@@ -17,7 +17,7 @@ The **`SVGSVGElement`** interface provides access to the properties of {{SVGElem
 
 ## Properties
 
-_This interface also inherits properties from its parent, {{domxref("SVGGraphicsElement")}} and also implements the ones from {{domxref("SVGZoomAndPan")}}, {{domxref("SVGFitToViewBox")}}, and {{domxref("WindowEventHandlers")}}._
+_This interface also inherits properties from its parent, {{domxref("SVGGraphicsElement")}} and also implements the ones from {{domxref("SVGFitToViewBox")}} and {{domxref("WindowEventHandlers")}}._
 
 - {{domxref("SVGSVGElement.x")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("x")}} attribute of the given {{SVGElement("svg")}} element.
@@ -70,7 +70,7 @@ _This interface also inherits properties from its parent, {{domxref("SVGGraphics
 
 ## Methods
 
-_This interface also inherits methods from its parent, {{domxref("SVGGraphicsElement")}} and also implements the ones from {{domxref("SVGZoomAndPan")}}, {{domxref("SVGFitToViewBox")}}, and {{domxref("WindowEventHandlers")}}._
+_This interface also inherits methods from its parent, {{domxref("SVGGraphicsElement")}} and also implements the ones from {{domxref("SVGFitToViewBox")}} and {{domxref("WindowEventHandlers")}}._
 
 - {{domxref("SVGSVGElement.suspendRedraw()")}} {{deprecated_inline}}
 

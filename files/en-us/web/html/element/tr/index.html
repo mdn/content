@@ -50,7 +50,7 @@ browser-compat: html.elements.tr
  <p>If no value is expressly set for <code>align</code>, the parent node's value is inherited.</p>
 
  <div class="note">
- <p>Instead of using the obsolete <code>align</code> attribute, you should instead use the CSS {{CSSxRef("text-align")}} property to establish <code>left</code>, <code>center</code>, <code>right</code>, or <code>justify</code> alignment for the row's cells. To apply character-based alignment, set the CSS {{CSSxRef("text-align")}} property to the alignment character (such as <code>"."</code> or <code>","</code>).</p>
+ <p><strong>Note:</strong> Instead of using the obsolete <code>align</code> attribute, you should instead use the CSS {{CSSxRef("text-align")}} property to establish <code>left</code>, <code>center</code>, <code>right</code>, or <code>justify</code> alignment for the row's cells. To apply character-based alignment, set the CSS {{CSSxRef("text-align")}} property to the alignment character (such as <code>"."</code> or <code>","</code>).</p>
  </div>
  </dd>
  <dt>{{HTMLAttrDef("bgcolor")}}{{deprecated_inline}}</dt>
@@ -58,7 +58,7 @@ browser-compat: html.elements.tr
  <p>A {{DOMxRef("DOMString")}} specifying a color to apply to the backgrounds of each of the row's cells. This can be either an <a href="/en-US/docs/Web/CSS/color_value#rgb()">hexadecimal <code>#RRGGBB</code> or <code>#RGB</code> value</a> or a <a href="/en-US/docs/Web/CSS/color_value#color_keywords">color keyword</a>. Omitting the attribute or setting it to <code>null</code> in JavaScript causes the row's cells to inherit the row's parent element's background color.</p>
 
  <div class="note">
- <p>The {{HTMLElement("tr")}} element should be styled using <a href="/en-US/docs/Web/CSS">CSS</a>. To give a similar effect as the <code>bgcolor</code> attribute, use the <a href="/en-US/docs/Web/CSS">CSS</a> property {{CSSxRef("background-color")}}.</p>
+ <p><strong>Note:</strong> The {{HTMLElement("tr")}} element should be styled using <a href="/en-US/docs/Web/CSS">CSS</a>. To give a similar effect as the <code>bgcolor</code> attribute, use the <a href="/en-US/docs/Web/CSS">CSS</a> property {{CSSxRef("background-color")}}.</p>
  </div>
  </dd>
  <dt>{{HTMLAttrDef("char")}}{{deprecated_inline}}</dt>
@@ -66,7 +66,7 @@ browser-compat: html.elements.tr
  <p>A {{DOMxRef("DOMString")}} which sets the character to align the cells in each of the row's columns on (each row's centering that uses the same character gets aligned with others using the same character . Typical values for this include a period (<code>"."</code>) or comma (<code>","</code>) when attempting to align numbers or monetary values. If {{htmlattrxref("align", "tr")}} is not set to <code>char</code>, this attribute is ignored.</p>
 
  <div class="note">
- <p>This attribute is not only obsolete, but was rarely implemented anyway. To achieve the same effect as the {{htmlattrxref("char", "tr")}} attribute, set the CSS {{CSSxRef("text-align")}} property to the same string you would specify for the <code>char</code> property, such as <code>text-align: "."</code>.</p>
+ <p><strong>Note:</strong> This attribute is not only obsolete, but was rarely implemented anyway. To achieve the same effect as the {{htmlattrxref("char", "tr")}} attribute, set the CSS {{CSSxRef("text-align")}} property to the same string you would specify for the <code>char</code> property, such as <code>text-align: "."</code>.</p>
  </div>
  </dd>
  <dt>{{HTMLAttrDef("charoff")}}{{deprecated_inline}}</dt>
@@ -74,7 +74,7 @@ browser-compat: html.elements.tr
  <p>A {{DOMxRef("DOMString")}} indicating the number of characters on the tail end of the column's data should be displayed after the alignment character specified by the <code>char</code> attribute. For example, when displaying money values for currencies that use hundredths of a unit (such as the dollar, which is divided into 100 cents), you would typically specify a value of 2, so that in tandem with <code>char</code> being set to <code>"."</code>, the values in a column would be cleanly aligned on the decimal points, with the number of cents properly displayed to the right of the decimal point.</p>
 
  <div class="note">
- <p>This attribute is obsolete, and was never widely supported anyway.</p>
+ <p><strong>Note:</strong> This attribute is obsolete, and was never widely supported anyway.</p>
  </div>
  </dd>
  <dt>{{HTMLAttrDef("valign")}}{{deprecated_inline}}</dt>
@@ -93,7 +93,7 @@ browser-compat: html.elements.tr
  </dl>
 
  <div class="note">
- <p>Don't use the obsolete <code>valign</code> attribute. Instead, add the CSS {{CSSxRef("vertical-align")}} property to the row.</p>
+ <p><strong>Note:</strong> Don't use the obsolete <code>valign</code> attribute. Instead, add the CSS {{CSSxRef("vertical-align")}} property to the row.</p>
  </div>
  </dd>
 </dl>
@@ -215,15 +215,13 @@ th, td {
 
 <p>The CSS is unchanged from before.</p>
 
-<div class="hidden">
-<pre class="brush: css">table {
+<pre class="brush: css hidden">table {
   border: 1px solid black;
 }
 
 th, td {
   border: 1px solid black;
 }</pre>
-</div>
 
 <h3 id="Explicitly_specifying_table_content_groups">Explicitly specifying table content groups</h3>
 
@@ -275,15 +273,13 @@ th, td {
 
 <p>Once again, we haven't touched the CSS.</p>
 
-<div class="hidden">
-<pre class="brush: css">table {
+<pre class="brush: css hidden">table {
   border: 1px solid black;
 }
 
 th, td {
   border: 1px solid black;
 }</pre>
-</div>
 
 <h4 id="Result_3">Result</h4>
 
@@ -303,8 +299,7 @@ th, td {
 
 <p>{{EmbedLiveSample("Basic_styling", 500, 200)}}</p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;table&gt;
+<pre class="brush: html hidden">&lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th rowspan="2"&gt;Name&lt;/th&gt;
@@ -341,7 +336,6 @@ th, td {
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;</pre>
-</div>
 
 <h4 id="CSS_2">CSS</h4>
 
@@ -378,8 +372,7 @@ th, td {
 
 <p>There is no change to the HTML again. See what proper preparation of your HTML can do for you?</p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;table&gt;
+<pre class="brush: html hidden">&lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th rowspan="2"&gt;Name&lt;/th&gt;
@@ -416,7 +409,6 @@ th, td {
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;</pre>
-</div>
 
 <h4 id="CSS_3">CSS</h4>
 

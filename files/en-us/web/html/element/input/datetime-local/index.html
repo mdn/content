@@ -81,44 +81,21 @@ dateControl.value = '2017-06-01T08:30';</pre>
 
 <h2 id="Additional_attributes">Additional attributes</h2>
 
-<p>In addition to the attributes common to all {{HTMLElement("input")}} elements, datetime-local inputs offer the following attributes:</p>
+<p>In addition to the attributes common to all {{HTMLElement("input")}} elements, datetime-local inputs offer the following attributes.</p>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Attribute</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>{{anch("max")}}</code></td>
-   <td>The latest date and time to accept</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("min")}}</code></td>
-   <td>The earliest date and time to accept</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("step")}}</code></td>
-   <td>The stepping interval to use for this input, such as when clicking arrows on spinner controls or performing validation</td>
-  </tr>
- </tbody>
-</table>
-
-<h3 id="attr-max"><code id="max">max</code></h3>
+<h3>max</h3>
 
 <p>The latest date and time to accept. If the {{htmlattrxref("value", "input")}} entered into the element is later than this timestamp, the element fails <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a>. If the value of the <code>max</code> attribute isn't a valid string which follows the format <code>YYYY-MM-DDThh:mm</code>, then the element has no maximum value.</p>
 
 <p>This value must specify a date string later than or equal to the one specified by the <code>min</code> attribute.</p>
 
-<h3 id="attr-min"><code id="min">min</code></h3>
+<h3>min</h3>
 
 <p>The earliest date and time to accept; timestamps earlier than this will cause the element to fail <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a>. If the value of the <code>min</code> attribute isn't a valid string which follows the format <code>YYYY-MM-DDThh:mm</code>, then the element has no minimum value.</p>
 
 <p>This value must specify a date string earlier than or equal to the one specified by the <code>max</code> attribute.</p>
 
-<h3 id="attr-step"><code id="step">step</code></h3>
+<h3>step</h3>
 
 <p>The <code>step</code> attribute is a number that specifies the granularity that the value must adhere to, or the special value <code>any</code>, which is described below. Only values which are equal to the basis for stepping (<code>{{anch("min")}}</code> if specified, {{htmlattrxref("value", "input")}} otherwise, and an appropriate default value if neither of those is provided) are valid.</p>
 
@@ -168,7 +145,7 @@ dateControl.value = '2017-06-01T08:30';</pre>
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: You should be able to use the {{htmlattrxref("step", "input")}} attribute to vary the number of days jumped each time the date is incremented (e.g. maybe you only want to make Saturdays selectable). However, this does not seem to work effectively in any implementation at the time of writing.</p>
+<p><strong>Note:</strong> You should be able to use the {{htmlattrxref("step", "input")}} attribute to vary the number of days jumped each time the date is incremented (e.g. maybe you only want to make Saturdays selectable). However, this does not seem to work effectively in any implementation at the time of writing.</p>
 </div>
 
 <h3 id="Controlling_input_size">Controlling input size</h3>
@@ -286,8 +263,7 @@ input:valid+span:after {
 
 <p>We still have a problem.</p>
 
-<div class="hidden">
-<pre class="brush: css">div {
+<pre class="brush: css hidden">div {
   margin-bottom: 10px;
 }
 
@@ -310,7 +286,6 @@ input:valid + span:after {
   position: absolute;
   right: -18px;
 }</pre>
-</div>
 
 <p>The best way to deal with dates in forms in a cross-browser way at the moment is to get the user to enter the day, month, year, and time in separate controls ({{htmlelement("select")}} elements being popular — see below for an implementation), or use JavaScript libraries such as <a href="https://jqueryui.com/datepicker/">jQuery date picker</a>, and the <a href="https://timepicker.co/">jQuery timepicker plugin</a>.</p>
 
@@ -400,8 +375,7 @@ input:valid + span:after {
 
 <p>The months are hard-coded (as they are always the same), while the day and year values are dynamically generated depending on the currently selected month and year, and the current year respectively (see the code comments below for detailed explanations of how these functions work.) We also decided to dynamically generate the hours and minutes, as there are so many of them!</p>
 
-<div class="hidden">
-<pre class="brush: css">div {
+<pre class="brush: css hidden">div {
   margin-bottom: 10px;
   position: relative;
 }
@@ -425,7 +399,6 @@ input:valid+span:after {
   content: '✓';
   padding-left: 5px;
 }</pre>
-</div>
 
 <p>The other part of the code that may be of interest is the feature detection code — to detect whether the browser supports <code>&lt;input type="datetime-local"&gt;</code>, we create a new {{htmlelement("input")}} element, try setting its <code>type</code> to <code>datetime-local</code>, then immediately check what its type is set to. Browsers that don't support <code>datetime-local</code> return <code>text</code>, since that's what <code>datetime-local</code> falls back to. If <code>&lt;input type="datetime-local"&gt;</code> is not supported, we hide the native picker and show the fallback picker UI ({{htmlelement("select")}}) instead.</p>
 
@@ -572,7 +545,7 @@ daySelect.onchange = function() {
 }</pre>
 
 <div class="note">
-<p><strong>Note</strong>: Remember that some years have 53 weeks in them (see <a href="https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year">Weeks per year</a>)! You'll need to take this into consideration when developing production apps.</p>
+<p><strong>Note:</strong> Remember that some years have 53 weeks in them (see <a href="https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year">Weeks per year</a>)! You'll need to take this into consideration when developing production apps.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>

@@ -19,10 +19,10 @@ be allowed to proceed for a given element.</p>
 <p>The <code>nonce</code> attribute is useful to allow-list specific elements, such as a particular inline script or style elements.
 It can help you to avoid using the <a href="/en-US/docs/Web/HTTP/CSP">CSP</a> <code>unsafe-inline</code> directive, which would allow-list <em>all</em> inline scripts or styles.</p>
 
-<div class="note">Note: Only use <code>nonce</code> for cases where you have no way around using unsafe inline script
+<div class="note"><p><strong>Note:</strong> Only use <code>nonce</code> for cases where you have no way around using unsafe inline script
 or style contents. If you don't need <code>nonce</code>, don't use it. If your script is static, you could also use a CSP hash instead.
 (See usage notes on <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_inline_script">unsafe inline script</a>.)
-Always try to take full advantage of <a href="/en-US/docs/Web/HTTP/CSP">CSP</a> protections and avoid nonces or unsafe inline scripts whenever possible.</div>
+Always try to take full advantage of <a href="/en-US/docs/Web/HTTP/CSP">CSP</a> protections and avoid nonces or unsafe inline scripts whenever possible.</p></div>
 
 <h3>Using nonce to allow-list a &lt;script&gt; element</h3>
 
@@ -50,7 +50,7 @@ crypto.randomBytes(16).toString('base64');
 <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy"><code>Content-Security-Policy</code></a> header
 (prepend <code>nonce-</code>):</p>
 
-<pre class="brush: http">Content-Security-Policy: script-src 'nonce-8IBTHwOdqNKAWeKl7plt8g=='</pre>
+<pre>Content-Security-Policy: script-src 'nonce-8IBTHwOdqNKAWeKl7plt8g=='</pre>
 
 <h3>Accessing nonces and nonce hiding</h3>
 
