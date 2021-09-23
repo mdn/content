@@ -106,7 +106,7 @@ Using the `flex-direction` property with values of `row-reverse` or `column-reve
   height: 50px;
 }
 
-.col-rev {
+#col-rev {
   flex-direction: column-reverse;
 }
 
