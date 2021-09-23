@@ -9,7 +9,7 @@ browser-compat: svg.elements.feConvolveMatrix.kernelMatrix
 ---
 {{SVGRef}}
 
-the **`kernelMatrix`** attribute defines the list of numbers that make up the kernel matrix for the {{SVGElement("feConvolveMatrix")}} element.
+The **`kernelMatrix`** attribute defines the list of numbers that make up the kernel matrix for the {{SVGElement("feConvolveMatrix")}} element.
 
 Values are separated by space characters and/or a comma. The number of entries in the list must equal to `<orderX>` by `<orderY>` as defined in the {{SVGAttr("order")}} attribute.
 
