@@ -995,8 +995,6 @@
       ],
       "dictionaries": [
         "AddressErrors",
-        "BasicCardRequest",
-        "BasicCardResponse",
         "PaymentMethodData",
         "PaymentCurrencyAmount",
         "PaymentDetailsModifier",
