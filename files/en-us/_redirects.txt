@@ -2145,7 +2145,6 @@
 /en-US/docs/DOM/window.getDefaultComputedStyle	/en-US/docs/Web/API/window/getDefaultComputedStyle
 /en-US/docs/DOM/window.getSelection	/en-US/docs/Web/API/Window/getSelection
 /en-US/docs/DOM/window.history	/en-US/docs/Web/API/Window/history
-/en-US/docs/DOM/window.home	/en-US/docs/Web/API/Window/home
 /en-US/docs/DOM/window.innerHeight	/en-US/docs/Web/API/Window/innerHeight
 /en-US/docs/DOM/window.innerWidth	/en-US/docs/Web/API/Window/innerWidth
 /en-US/docs/DOM/window.length	/en-US/docs/Web/API/Window/length
@@ -2609,7 +2608,6 @@
 /en-US/docs/DOM:window.getComputedStyle	/en-US/docs/Web/API/Window/getComputedStyle
 /en-US/docs/DOM:window.getSelection	/en-US/docs/Web/API/Window/getSelection
 /en-US/docs/DOM:window.history	/en-US/docs/Web/API/Window/history
-/en-US/docs/DOM:window.home	/en-US/docs/Web/API/Window/home
 /en-US/docs/DOM:window.innerHeight	/en-US/docs/Web/API/Window/innerHeight
 /en-US/docs/DOM:window.innerWidth	/en-US/docs/Web/API/Window/innerWidth
 /en-US/docs/DOM:window.length	/en-US/docs/Web/API/Window/length
@@ -9399,7 +9397,6 @@
 /en-US/docs/Web/API/window.getDefaultComputedStyle	/en-US/docs/Web/API/window/getDefaultComputedStyle
 /en-US/docs/Web/API/window.getSelection	/en-US/docs/Web/API/Window/getSelection
 /en-US/docs/Web/API/window.history	/en-US/docs/Web/API/Window/history
-/en-US/docs/Web/API/window.home	/en-US/docs/Web/API/Window/home
 /en-US/docs/Web/API/window.innerHeight	/en-US/docs/Web/API/Window/innerHeight
 /en-US/docs/Web/API/window.innerWidth	/en-US/docs/Web/API/Window/innerWidth
 /en-US/docs/Web/API/window.length	/en-US/docs/Web/API/Window/length
