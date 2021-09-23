@@ -39,15 +39,6 @@ The `emptied` event is fired when the media has become empty; for example, this 
       <th scope="row">Event handler property</th>
       <td>{{domxref("GlobalEventHandlers.onemptied")}}</td>
     </tr>
-    <tr>
-      <th scope="row">Specification</th>
-      <td>
-        <a
-          href="https://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-playing"
-          >HTML5 media</a
-        >
-      </td>
-    </tr>
   </tbody>
 </table>
 

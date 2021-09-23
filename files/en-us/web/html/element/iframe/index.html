@@ -25,7 +25,7 @@ browser-compat: html.elements.iframe
 <p>Each embedded browsing context has its own <a href="/en-US/docs/Web/API/History">session history</a> and <a href="/en-US/docs/Web/API/Document">document</a>. The browsing context that embeds the others is called the <em><dfn>parent</dfn> browsing context</em>. The <em>topmost</em> browsing context — the one with no parent — is usually the browser window, represented by the {{domxref("Window")}} object.</p>
 
 <div class="notecard warning">
-<p>Because each browsing context is a complete document environment, every <code>&lt;iframe&gt;</code> in a page requires increased memory and other computing resources. While theoretically you can use as many <code>&lt;iframe&gt;</code>s as you like, check for performance problems.</p>
+<p><strong>Warning:</strong> Because each browsing context is a complete document environment, every <code>&lt;iframe&gt;</code> in a page requires increased memory and other computing resources. While theoretically you can use as many <code>&lt;iframe&gt;</code>s as you like, check for performance problems.</p>
 </div>
 
 <table class="properties">
@@ -71,11 +71,11 @@ browser-compat: html.elements.iframe
  <p>For more information and examples see: <a href="/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy">Using Feature Policy</a> &gt; <a href="/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy#the_iframe_allow_attribute">The iframe allow attribute</a>.</p></dd>
  <dt>{{htmlattrdef("allowfullscreen")}}</dt>
  <dd><p>Set to <code>true</code> if the <code>&lt;iframe&gt;</code> can activate fullscreen mode by calling the {{domxref("Element.requestFullscreen", "requestFullscreen()")}} method.</p>
- <div class="note">This attribute is considered a legacy attribute and redefined as <code>allow="fullscreen"</code>.</div>
+ <div class="note"><p><strong>Note:</strong> This attribute is considered a legacy attribute and redefined as <code>allow="fullscreen"</code>.</p></div>
  </dd>
  <dt>{{htmlattrdef("allowpaymentrequest")}}</dt>
  <dd><p>Set to <code>true</code> if a cross-origin <code>&lt;iframe&gt;</code> should be allowed to invoke the <a href="/en-US/docs/Web/API/Payment_Request_API">Payment Request API</a>.</p>
- <div class="note">This attribute is considered a legacy attribute and redefined as <code>allow="payment"</code>.</div>
+ <div class="note"><p><strong>Note:</strong> This attribute is considered a legacy attribute and redefined as <code>allow="payment"</code>.</p></div>
  </dd>
  <dt>{{htmlattrdef("csp")}} {{experimental_inline}}</dt>
  <dd>A <a href="/en-US/docs/Web/HTTP/CSP">Content Security Policy</a> enforced for the embedded resource. See {{domxref("HTMLIFrameElement.csp")}} for details.</dd>
@@ -90,7 +90,7 @@ browser-compat: html.elements.iframe
  </dd>
  <dt>{{htmlattrdef("name")}}</dt>
  <dd>A targetable name for the embedded browsing context. This can be used in the <code>target</code> attribute of the {{HTMLElement("a")}}, {{HTMLElement("form")}}, or {{HTMLElement("base")}} elements; the <code>formtarget</code> attribute of the {{HTMLElement("input")}} or {{HTMLElement("button")}} elements; or the <code>windowName</code> parameter in the {{domxref("Window.open()","window.open()")}} method.</dd>
- <dt id="attr-referrer">{{htmlattrdef("referrerpolicy")}}</dt>
+ <dt>{{htmlattrdef("referrerpolicy")}}</dt>
  <dd>Indicates which <a href="/en-US/docs/Web/API/Document/referrer">referrer</a> to send when fetching the frame's resource:
  <ul>
   <li><code>no-referrer</code>: The {{HTTPHeader("Referer")}} header will not be sent.</li>
@@ -122,7 +122,7 @@ browser-compat: html.elements.iframe
   <li><code>allow-top-navigation-by-user-activation</code>: Lets the resource navigate the top-level browsing context, but only if initiated by a user gesture.</li>
  </ul>
 
- <div class="note"><strong>Notes about sandboxing:</strong>
+ <div class="note"><p><strong>Note:</strong></p>
 
  <ul>
   <li>When the embedded document has the same origin as the embedding page, it is <strong>strongly discouraged</strong> to use both <code>allow-scripts</code> and <code>allow-same-origin</code>, as that lets the embedded document remove the <code>sandbox</code> attribute — making it no more secure than not using the <code>sandbox</code> attribute at all.</li>
@@ -164,16 +164,6 @@ browser-compat: html.elements.iframe
  </dd>
 </dl>
 
-<h3 id="Non-standard_attributes">Non-standard attributes</h3>
-
-<dl>
- <dt>{{htmlattrdef("mozbrowser")}} {{non-standard_inline}}</dt>
- <dd>
- <div class="note">See {{bug(1318532)}} for exposing this to WebExtensions in Firefox.</div>
- Makes the <code>&lt;iframe&gt;</code> act like a top-level browser window. See <a href="/en-US/docs/Mozilla/Gecko/Chrome/API/Browser_API">Browser API</a> for details.<br>
- <strong>Available only to <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a>.</strong></dd>
-</dl>
-
 <h2 id="Scripting">Scripting</h2>
 
 <p>Inline frames, like {{HTMLElement("frame")}} elements, are included in the {{domxref("window.frames")}} pseudo-array.</p>
@@ -190,7 +180,7 @@ browser-compat: html.elements.iframe
 
 <h2 id="Examples">Examples</h2>
 
-<h3 id="Example1">A simple &lt;iframe&gt;</h3>
+<h3>A simple &lt;iframe&gt;</h3>
 
 <p>This example embeds the page at <a href="https://example.org">https://example.org</a> in an iframe.</p>
 
@@ -202,7 +192,7 @@ browser-compat: html.elements.iframe
 
 <h4 id="Result">Result</h4>
 
-<p>{{ EmbedLiveSample('Example1', 640,400)}}</p>
+<p>{{ EmbedLiveSample('A_simple_iframe', 640,400)}}</p>
 
 <h2 id="Accessibility_concerns">Accessibility concerns</h2>
 

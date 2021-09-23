@@ -556,7 +556,9 @@ It is possible to switch the content of each mainpage -> worker and worker -> ma
 
 ### Passing data by transferring ownership (transferable objects)
 
-Google Chrome 17+ and Firefox 18+ contain an additional way to pass certain types of objects (transferable objects, that is objects implementing the {{domxref("Transferable")}} interface) to or from a worker with high performance. Transferable objects are transferred from one context to another with a zero-copy operation, which results in a vast performance improvement when sending large data sets. Think of it as pass-by-reference if you're from the C/C++ world. However, unlike pass-by-reference, the 'version' from the calling context is no longer available once transferred. Its ownership is transferred to the new context. For example, when transferring an {{jsxref("ArrayBuffer")}} from your main app to a worker script, the original {{jsxref("ArrayBuffer")}} is cleared and no longer usable. Its content is (quite literally) transferred to the worker context.
+Modern browsers contain an additional way to pass certain types of objects to or from a worker with high performance. {{Glossary("Transferable Objects")}} are transferred from one context to another with a zero-copy operation, which results in a vast performance improvement when sending large data sets.
+
+For example, when transferring an {{jsxref("ArrayBuffer")}} from your main app to a worker script, the original {{jsxref("ArrayBuffer")}} is cleared and no longer usable. Its content is (quite literally) transferred to the worker context.
 
 ```js
 // Create a 32MB "file" and fill it.
@@ -564,11 +566,8 @@ var uInt8Array = new Uint8Array(1024 * 1024 * 32); // 32MB
 for (var i = 0; i < uInt8Array.length; ++i) {
   uInt8Array[i] = i;
 }
-
 worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
 ```
-
-> **Note:** For more information on transferable objects, performance, and feature-detection for this method, read [Transferable Objects: Lightning Fast!](https://updates.html5rocks.com/2011/12/Transferable-Objects-Lightning-Fast) on HTML5 Rocks.
 
 ## Embedded workers
 

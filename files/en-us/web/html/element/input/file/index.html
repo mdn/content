@@ -65,7 +65,7 @@ browser-compat: html.elements.input.input-file
 
 <p>A file input's {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} that represents the path to the selected file(s). If the user selected multiple files, the <code>value</code> represents the first file in the list of files they selected. The other files can be identified using the input's <code>HTMLInputElement.files</code> property.</p>
 
-<div class="note"><strong>Note:</strong>
+<div class="note"><p><strong>Note:</strong></p>
 
 <ol>
  <li>If multiple files are selected, the string represents the first selected file. JavaScript can access the other files <a href="/en-US/docs/Web/API/File/Using_files_from_web_applications#getting_information_about_selected_files">through the input's <code>files</code> property</a>.</li>
@@ -76,36 +76,9 @@ browser-compat: html.elements.input.input-file
 
 <h2 id="Additional_attributes">Additional attributes</h2>
 
-<p>In addition to the common attributes shared by all {{HTMLElement("input")}} elements, inputs of type <code>file</code> also support the following attributes:</p>
+<p>In addition to the common attributes shared by all {{HTMLElement("input")}} elements, inputs of type <code>file</code> also support the following attributes.</p>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Attribute</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>{{anch("accept")}}</code></td>
-   <td>One or more {{anch("Unique file type specifiers", "unique file type specifiers")}} describing file types to allow</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("capture")}}</code></td>
-   <td>What source to use for capturing image or video data</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("files")}}</code></td>
-   <td>A {{domxref("FileList")}} listing the chosen files</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("multiple")}}</code></td>
-   <td>A Boolean which, if present, indicates that the user may choose more than one file</td>
-  </tr>
- </tbody>
-</table>
-
-<h3 id="attr-accept"><code id="accept">accept</code></h3>
+<h3>accept</h3>
 
 <p>The <a href="/en-US/docs/Web/HTML/Attributes/accept"><code>accept</code></a> attribute value is a string that defines the file types the file input should accept. This string is a comma-separated list of <strong>{{anch("Unique file type specifiers", "unique file type specifiers")}}</strong>. Because a given file type may be identified in more than one manner, it's useful to provide a thorough set of type specifiers when you need files of a given format.</p>
 
@@ -114,17 +87,17 @@ browser-compat: html.elements.input.input-file
 <pre class="brush: html">&lt;input type="file" id="docpicker"
   accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"&gt;</pre>
 
-<h3 id="attr-capture"><code id="capture">capture</code></h3>
+<h3>capture</h3>
 
 <p>The <a href="/en-US/docs/Web/HTML/Attributes/capture"><code>capture</code></a> attribute value is a string that specifies which camera to use for capture of image or video data, if the <a href="/en-US/docs/Web/HTML/Attributes/accept"><code>accept</code></a> attribute indicates that the input should be of one of those types. A value of <code>user</code> indicates that the user-facing camera and/or microphone should be used. A value of <code>environment</code> specifies that the outward-facing camera and/or microphone should be used. If this attribute is missing, the {{Glossary("user agent")}} is free to decide on its own what to do. If the requested facing mode isn't available, the user agent may fall back to its preferred default mode.</p>
 
-<div class="note"><strong>Note:</strong> <code>capture</code> was previously a Boolean attribute which, if present, requested that the device's media capture device(s) such as camera or microphone be used instead of requesting a file input.</div>
+<div class="note"><p><strong>Note:</strong> <code>capture</code> was previously a Boolean attribute which, if present, requested that the device's media capture device(s) such as camera or microphone be used instead of requesting a file input.</p></div>
 
-<h3 id="attr-files"><code id="files">files</code></h3>
+<h3>files</h3>
 
 <p>A {{domxref("FileList")}} object that lists every selected file. This list has no more than one member unless the {{htmlattrxref("multiple", "input/file")}} attribute is specified.</p>
 
-<h3 id="attr-multiple"><code id="multiple">multiple</code></h3>
+<h3>multiple</h3>
 
 <p>When the <a href="/en-US/docs/Web/HTML/Attributes/multiple"><code>multiple</code></a> Boolean attribute is specified, the file input allows the user to select more than one file.</p>
 
@@ -168,18 +141,16 @@ browser-compat: html.elements.input.input-file
  &lt;/div&gt;
 &lt;/form&gt;</pre>
 
-<div class="hidden">
-<pre class="brush: css">div {
+<pre class="brush: css hidden">div {
   margin-bottom: 10px;
 }</pre>
-</div>
 
 <p>This produces the following output:</p>
 
 <p>{{EmbedLiveSample('A_basic_example', 650, 90)}}</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can find this example on GitHub too — see the <a href="https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/simple-file.html">source code</a>, and also <a href="https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html">see it running live</a>.</p>
+<p><strong>Note:</strong> You can find this example on GitHub too — see the <a href="https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/simple-file.html">source code</a>, and also <a href="https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html">see it running live</a>.</p>
 </div>
 
 <p>Regardless of the user's device or operating system, the file input provides a button that opens up a file picker dialog that allows the user to choose a file.</p>
@@ -208,7 +179,7 @@ browser-compat: html.elements.input.input-file
 </dl>
 
 <div class="note">
-<p><strong>Note</strong>: You can set as well as get the value of <code>HTMLInputElement.files</code> in all modern browsers; this was most recently added to Firefox, in version 57 (see {{bug(1384030)}}).</p>
+<p><strong>Note:</strong> You can set as well as get the value of <code>HTMLInputElement.files</code> in all modern browsers; this was most recently added to Firefox, in version 57 (see {{bug(1384030)}}).</p>
 </div>
 
 <h3 id="Limiting_accepted_file_types">Limiting accepted file types</h3>
@@ -237,18 +208,16 @@ browser-compat: html.elements.input.input-file
   &lt;/div&gt;
 &lt;/form&gt;</pre>
 
-<div class="hidden">
-<pre class="brush: css">div {
+<pre class="brush: css hidden">div {
   margin-bottom: 10px;
 }</pre>
-</div>
 
 <p>This produces a similar-looking output to the previous example:</p>
 
 <p>{{EmbedLiveSample('Limiting_accepted_file_types', 650, 90)}}</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can find this example on GitHub too — see the <a href="https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-with-accept.html">source code</a>, and also <a href="https://mdn.github.io/learning-area/html/forms/file-examples/file-with-accept.html">see it running live</a>.</p>
+<p><strong>Note:</strong> You can find this example on GitHub too — see the <a href="https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-with-accept.html">source code</a>, and also <a href="https://mdn.github.io/learning-area/html/forms/file-examples/file-with-accept.html">see it running live</a>.</p>
 </div>
 
 <p>It may look similar, but if you try selecting a file with this input, you'll see that the file picker only lets you select the file types specified in the <code>accept</code> value (the exact interface differs across browsers and operating systems).</p>
@@ -277,7 +246,7 @@ input.value = "foo";
 <p>In this example, we'll present a slightly more advanced file chooser that takes advantage of the file information available in the <code>HTMLInputElement.files</code> property, as well as showing off a few clever tricks.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can see the complete source code for this example on GitHub — <a href="https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-example.html">file-example.html</a> (<a href="https://mdn.github.io/learning-area/html/forms/file-examples/file-example.html">see it live also</a>). We won't explain the CSS; the JavaScript is the main focus.</p>
+<p><strong>Note:</strong> You can see the complete source code for this example on GitHub — <a href="https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-example.html">file-example.html</a> (<a href="https://mdn.github.io/learning-area/html/forms/file-examples/file-example.html">see it live also</a>). We won't explain the CSS; the JavaScript is the main focus.</p>
 </div>
 
 <p>First of all, let's look at the HTML:</p>
@@ -295,8 +264,7 @@ input.value = "foo";
   &lt;/div&gt;
 &lt;/form&gt;</pre>
 
-<div class="hidden">
-<pre class="brush: css">html {
+<pre class="brush: css hidden">html {
   font-family: sans-serif;
 }
 
@@ -349,7 +317,6 @@ form label:active, form button:active {
   background-color: #0D3F8F;
   color: white;
 }</pre>
-</div>
 
 <p>This is similar to what we've seen before — nothing special to comment on.</p>
 

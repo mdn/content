@@ -89,56 +89,25 @@ monthControl.value = '1978-06';</pre>
 
 <h2 id="Additional_attributes">Additional attributes</h2>
 
-<p>In addition to the attributes common to {{HTMLElement("input")}} elements, month inputs offer the following attributes:</p>
+<p>In addition to the attributes common to {{HTMLElement("input")}} elements, month inputs offer the following attributes.</p>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Attribute</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>{{anch("list")}}</code></td>
-   <td>The id of the &lt;datalist&gt; element that contains the optional pre-defined autocomplete options</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("max")}}</code></td>
-   <td>The latest year and month to accept as a valid input</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("min")}}</code></td>
-   <td>The earliest year and month to accept as a valid input</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("readonly")}}</code></td>
-   <td>A Boolean which, if present, indicates that the input's value can't be edited</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("step")}}</code></td>
-   <td>A stepping interval to use when incrementing and decrementing the value of the input field</td>
-  </tr>
- </tbody>
-</table>
-
-<h3 id="attr-list"><code id="list">list</code></h3>
+<h3>list</h3>
 
 <p>The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The {{HTMLElement("datalist")}} provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the {{htmlattrxref("type", "input")}} are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.</p>
 
-<h3 id="attr-max"><code id="max">max</code></h3>
+<h3>max</h3>
 
 <p>The latest year and month, in the string format discussed in the {{anch("Value")}} section above, to accept. If the {{htmlattrxref("value", "input")}} entered into the element exceeds this, the element fails <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a>. If the value of the <code>max</code> attribute isn't a valid string in "<code>yyyy-MM</code>" format, then the element has no maximum value.</p>
 
 <p>This value must specify a year-month pairing later than or equal to the one specified by the <code>min</code> attribute.</p>
 
-<h3 id="attr-min"><code id="min">min</code></h3>
+<h3>min</h3>
 
 <p>The latest year and month to accept, in the same "<code>yyyy-MM</code>" format described above. If the {{htmlattrxref("value", "input")}} of the element is less than this, the element fails <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a>. If a value is specified for <code>min</code> that isn't a valid year and month string, the input has no minimum value.</p>
 
 <p>This value must be a year-month pairing which is earlier than or equal to the one specified by the <code>max</code> attribute.</p>
 
-<h3 id="attr-readonly"><code id="readonly">readonly</code></h3>
+<h3>readonly</h3>
 
 <p>A Boolean attribute which, if present, means this field cannot be edited by the user. Its <code>value</code> can, however, still be changed from JavaScript code that directly sets the value of the {{domxref("HTMLInputElement.value")}} property.</p>
 
@@ -146,7 +115,7 @@ monthControl.value = '1978-06';</pre>
 <p><strong>Note:</strong> Because a read-only field cannot have a value, <code>required</code> does not have any effect on inputs with the <code>readonly</code> attribute also specified.</p>
 </div>
 
-<h3 id="attr-step"><code id="step">step</code></h3>
+<h3>step</h3>
 
 <p>The <code>step</code> attribute is a number that specifies the granularity that the value must adhere to, or the special value <code>any</code>, which is described below. Only values which are equal to the basis for stepping (<code>{{anch("min")}}</code> if specified, {{htmlattrxref("value", "input")}} otherwise, and an appropriate default value if neither of those is provided) are valid.</p>
 
@@ -297,8 +266,7 @@ input:valid+span:after {
 
 <p>There's also the problem that the user won't necessarily know which of the many date formats is expected. We have work left to do.</p>
 
-<div class="hidden">
-<pre class="brush: css">div {
+<pre class="brush: css hidden">div {
   margin-bottom: 10px;
   position: relative;
 }
@@ -322,7 +290,6 @@ input:valid+span:after {
   content: '✓';
   padding-left: 5px;
 }</pre>
-</div>
 
 <p>The best way to deal with dates in forms in a cross-browser way (until all of the major browsers have supported them for a while) is to get the user to enter the month and year in separate controls ({{htmlelement("select")}} elements being popular; see below for an implementation), or use JavaScript libraries such as the <a href="https://jqueryui.com/datepicker/">jQuery date picker</a> plugin.</p>
 
@@ -375,8 +342,7 @@ input:valid+span:after {
 
 <p>The <code>&lt;select&gt;</code> for choosing the month is hardcoded with the names of the months, as they don't change (leaving localization out of things). The list of available year values is dynamically generated depending on the current year (see the code comments below for detailed explanations of how these functions work).</p>
 
-<div class="hidden">
-<pre class="brush: css">div {
+<pre class="brush: css hidden">div {
   margin-bottom: 10px;
   position: relative;
 }
@@ -400,7 +366,6 @@ input:valid+span:after {
   content: '✓';
   padding-left: 5px;
 }</pre>
-</div>
 
 <h3 id="JavaScript">JavaScript</h3>
 
@@ -455,7 +420,7 @@ function populateYears() {
 }</pre>
 
 <div class="note">
-<p><strong>Note</strong>: Remember that some years have 53 weeks in them (see <a href="https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year">Weeks per year</a>)! You'll need to take this into consideration when developing production apps.</p>
+<p><strong>Note:</strong> Remember that some years have 53 weeks in them (see <a href="https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year">Weeks per year</a>)! You'll need to take this into consideration when developing production apps.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>
