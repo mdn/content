@@ -92,7 +92,7 @@ async function initPaymentRquest() {
   ).canMakePayment();
 
   if (supportsExamplePay) {
-    // show example pay support
+    // show Example Pay support
     return;
   }
 
