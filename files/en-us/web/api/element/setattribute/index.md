@@ -55,7 +55,7 @@ value to the string `"null"`. If you wish to remove an attribute, call
 
 ### Exceptions
 
-- `InvalidCharacterError`
+- `InvalidCharacterError` {{domxref("DOMException")}}
   - : The specified attribute `name` contains one or more characters which are
     not valid in attribute names.
 

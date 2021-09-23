@@ -53,9 +53,8 @@ This method returns {{jsxref("undefined")}}.
 
 ### Exceptions
 
-| Exception       | Explanation                                            |
-| --------------- | ------------------------------------------------------ |
-| `NotFoundError` | `pointerId` does not match any of the active pointers. |
+- `NotFoundError` {{domxref("DOMException")}}
+  - : Thrown if `pointerId` does not match any active pointer.
 
 ## Example
 
