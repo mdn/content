@@ -13,29 +13,29 @@ browser-compat: api.Bluetooth.requestDevice
 {{APIRef("Bluetooth API")}} {{securecontext_header}}{{SeeCompatTable}}
 
 The **`Bluetooth.requestDevice()`** method of the
-{{domxref("Bluetooth")}} interface returns a {{jsxref("Promise")}} to a
-{{domxref("BluetoothDevice")}} object with the specified options. If there is no chooser
+{{domxref("Bluetooth")}} interface returns a {{jsxref("Promise")}} to a
+{{domxref("BluetoothDevice")}} object with the specified options. If there is no chooser
 UI, this method returns the first device matching the criteria.
 
 ## Syntax
 
 ```js
 Bluetooth.requestDevice([options])
-  .then(function(bluetoothDevice) { ... })
+  .then(function(bluetoothDevice) { ... })
 ```
 
-### Returns
+### Return value
 
-A {{jsxref("Promise")}} to a {{domxref("BluetoothDevice")}} object.
+A {{jsxref("Promise")}} to a {{domxref("BluetoothDevice")}} object.
 
 ### Parameters
 
-- options {{optional_inline}}
+- options {{optional_inline}}
 
-  - : An object that sets options for the device request. The available options are:
+  - : An object that sets options for the device request. The available options are:
 
     - `filters[]`: An array of `BluetoothScanFilters`. This
-      filter consists of an array of  `BluetoothServiceUUID`s, a
+      filter consists of an array of `BluetoothServiceUUID`s, a
       `name` parameter, and a `namePrefix` parameter.
     - `optionalServices[]`: An array of `BluetoothServiceUUID`s.
     - `acceptAllDevices`: A boolean value indicating that the
@@ -44,16 +44,16 @@ A {{jsxref("Promise")}} to a {{domxref("BluetoothDevice")}} object.
 
 ## Exceptions
 
-- `TypeError`
-  - : The provided `options` do not makes sense. For example,
+- `TypeError` {{domxref("DOMException")}}
+  - : Thrown if the provided `options` do not makes sense. For example,
     `options.filters` is present and `options.acceptAllDevices` is
     `true`, or if `options.filters` is not present and
     `options.acceptAllDevices` is `false`. Or
     `options.filters` is `[]`.
-- `NotFoundError`
-  - : There is no Bluetooth device that matches the specified options.
-- `SecurityError`
-  - : This operation is not permitted in this context due to security concerns. For
+- `NotFoundError` {{domxref("DOMException")}}
+  - : Thrown if there is no Bluetooth device that matches the specified options.
+- `SecurityError` {{domxref("DOMException")}}
+  - : Thrown if this operation is not permitted in this context due to security concerns. For
     example, it is called from insecure origin.
 
 ## Example
@@ -69,14 +69,14 @@ A {{jsxref("Promise")}} to a {{domxref("BluetoothDevice")}} object.
 // And enables access to the battery service if devices
 // include it, even if devices do not advertise that service.
 let options = {
-  filters: [
-    {services: ['heart_rate']},
-    {services: [0x1802, 0x1803]},
+  filters: [
+    {services: ['heart_rate']},
+    {services: [0x1802, 0x1803]},
     {services: ['c48e6067-5295-48d3-8d5c-0395f61792b1']},
     {name: 'ExampleName'},
-    {namePrefix: 'Prefix'}
-  ],
-  optionalServices: ['battery_service']
+    {namePrefix: 'Prefix'}
+  ],
+  optionalServices: ['battery_service']
 }
 
 navigator.bluetooth.requestDevice(options).then(function(device) {
