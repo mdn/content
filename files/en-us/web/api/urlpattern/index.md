@@ -23,16 +23,15 @@ The pattern syntax is based on the syntax from the
 can contain:
 
 - Literal strings which will be matched exactly.
-- Wildcards (`/posts/*`) that can be used to match any character.
-- Named groups (`/books/:id`) which can be used to extract a part of the matched
-  URL.
-- Non-capturing groups (`/books{/old}?`) which can be used to make parts of a
-  pattern optional or be matched multiple times.
-- {{jsxref("RegExp")}} groups (`/books/(^\d)`) to do arbitrarially complex regex
-  matches.
+- Wildcards (`/posts/*`) that match any character.
+- Named groups (`/books/:id`) which extract a part of the matched URL.
+- Non-capturing groups (`/books{/old}?`) which make parts of a pattern optional
+  or be matched multiple times.
+- {{jsxref("RegExp")}} groups (`/books/(^\d)`) which make arbitrarily complex
+  regex matches.
 
-Further details about the syntax can be found in the
-[pattern syntax](#pattern_syntax) section below.
+You can find details about the syntax in the [pattern syntax](#pattern_syntax)
+section below.
 
 {{AvailableInWorkers}}
 
@@ -420,8 +419,10 @@ const pattern = new URLPattern({ hostname: 'example.com', pathname: '/foo/*' });
 
 // Prints `true` as the hostname based in the dictionary `baseURL` property
 // matches.
-console.log(
-    pattern.test({ pathname: '/foo/bar', baseURL: 'https://example.com/baz' }));
+console.log(pattern.test({
+  pathname: '/foo/bar',
+  baseURL: 'https://example.com/baz',
+}));
 
 // Prints `true` as the hostname in the second argument base URL matches.
 console.log(pattern.test('/foo/bar', 'https://example.com/baz'));
@@ -432,7 +433,7 @@ try {
 } catch (e) {}
 
 // The `exec()` method takes the same arguments as `test()`.
-const result = pattern.exec("/fo'/bar', 'https://example.com/baz');
+const result = pattern.exec('/foo/bar', 'https://example.com/baz');
 
 console.log(result.pathname.input); // '/foo/bar'
 

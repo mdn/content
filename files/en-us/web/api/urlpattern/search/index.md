@@ -26,9 +26,8 @@ A {{domxref("USVString")}}.
 
 ## Examples
 
-The below example creates a {{domxref("URLPattern")}} object with a pattern of
-`*` for the `search` part. This pattern is a wildcard, thus matching any search
-part.
+The below example creates a {{domxref("URLPattern")}} object with `*` for the
+`search` part. This pattern is a wildcard, thus matching any search part.
 
 ```js
 const pattern = new URLPattern('https://example.com?*');

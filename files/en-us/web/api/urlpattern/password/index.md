@@ -26,7 +26,7 @@ A {{domxref("USVString")}}.
 
 ## Examples
 
-The below example creates a {{domxref("URLPattern")}} object with a pattern of
+The below example creates a {{domxref("URLPattern")}} object with
 `correct-horse-battery{-staple}?` for the `password` part. This pattern matches
 the passwords `correct-horse-battery` and `correct-horse-battery-staple`.
 

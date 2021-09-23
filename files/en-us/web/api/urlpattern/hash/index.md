@@ -26,9 +26,9 @@ A {{domxref("USVString")}}.
 
 ## Examples
 
-The below example creates a {{domxref("URLPattern")}} object with a pattern of
-`books/:id` for the `hash` part. This pattern matches any fragment that starts
-with `books/` and ends with an arbitrary string identifer.
+The below example creates a {{domxref("URLPattern")}} object with `books/:id`
+for the `hash` part. This pattern matches any fragment that starts with `books/`
+and ends with an arbitrary string identifer.
 
 ```js
 const pattern = new URLPattern('https://example.org#books/:id');

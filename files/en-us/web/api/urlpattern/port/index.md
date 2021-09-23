@@ -26,7 +26,7 @@ A {{domxref("USVString")}}.
 
 ## Examples
 
-The below example creates a {{domxref("URLPattern")}} object with a pattern of
+The below example creates a {{domxref("URLPattern")}} object with
 `(80|443|8080)` for the `port` part. This pattern matches the port `80`, `443`,
 and `8080`.
 

@@ -26,7 +26,7 @@ A {{domxref("USVString")}}.
 
 ## Examples
 
-The below example creates a {{domxref("URLPattern")}} object with a pattern of
+The below example creates a {{domxref("URLPattern")}} object with
 `/books/:id(\\d)` for the `pathname` part. This pattern matches URLs starting
 with `/books/`, followed by an integer.
 

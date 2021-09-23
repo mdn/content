@@ -26,9 +26,9 @@ A {{domxref("USVString")}}.
 
 ## Examples
 
-The below example creates a {{domxref("URLPattern")}} object with a pattern of
-`admin` for the `username` part. This pattern matches only if the username part
-of the URL is `admin`.
+The below example creates a {{domxref("URLPattern")}} object with `admin` for
+the `username` part. This pattern matches only if the username part of the URL
+is `admin`.
 
 ```js
 const pattern = new URLPattern({ username: 'admin' });

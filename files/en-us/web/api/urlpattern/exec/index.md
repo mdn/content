@@ -31,9 +31,9 @@ exec(input, baseURL);
 ### Parameters
 
 - `input`
-  - : The URL or URL parts that the matcher will match against. This can either
-    be a {{domxref("USVString")}}, or an object providing the individual URL
-    parts. The object members can be any of `protocol`, `username`, `password`,
+  - : The URL or URL parts to match against. This can either be a
+    {{domxref("USVString")}}, or an object providing the individual URL parts.
+    The object members can be any of `protocol`, `username`, `password`,
     `hostname`, `port`, `pathname`, `search`, `hash`, or `baseURL`. Omitted
     parts in the object will be treated as empty strings. If the input cannot be
     parsed, or a relative URL without a base is provided, the method will return
@@ -50,6 +50,9 @@ passed into the function, and keys for each of the URL parts containing the
 matched input, and matched groups for that part.
 
 ## Examples
+
+This example creates a URL pattern and matches against it some URLs in both
+string, and structured form.
 
 ```js
 const pattern = new URLPattern('http{s}?://*.example.com/books/:id');

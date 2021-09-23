@@ -26,9 +26,8 @@ A {{domxref("USVString")}}.
 
 ## Examples
 
-The below example creates a {{domxref("URLPattern")}} object with a pattern of
-`http{s}?` for the `protocol` part. This pattern matches the `http` and `https`
-protocols.
+The below example creates a {{domxref("URLPattern")}} object with `http{s}?` for
+the `protocol` part. This pattern matches the `http` and `https` protocols.
 
 ```js
 const pattern = new URLPattern({ protocol: 'http{s}?' });

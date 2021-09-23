@@ -26,7 +26,7 @@ A {{domxref("USVString")}}.
 
 ## Examples
 
-The below example creates a {{domxref("URLPattern")}} object with a pattern of
+The below example creates a {{domxref("URLPattern")}} object with
 `*.example.org` for the `hostname` part. This pattern matches any hostname that
 is a direct subdomain of `example.org`.
 
