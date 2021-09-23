@@ -120,18 +120,11 @@ For example, if `Domain=mozilla.org` is set, then cookies are available on subdo
 
 The `Path` attribute indicates a URL path that must exist in the requested URL in order to send the `Cookie` header. The `%x2F` ("/") character is considered a directory separator, and subdirectories match as well.
 
-For example, if `Path=/docs` is set, these request paths match:
+For example, if `Path=/docs` is set, these paths match:
 
 - `/docs`
-- `/docs/`
 - `/docs/Web/`
 - `/docs/Web/HTTP`
-
-But these request paths don't:
-
-- `/`
-- `/docsets`
-- `/fr/docs`
 
 #### SameSite attribute
 
