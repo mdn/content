@@ -4,6 +4,7 @@ slug: Web/API/Payment_Request_API
 tags:
   - API
   - Commerce
+  - Credit Card
   - Intermediate
   - Landing
   - NeedsContent
