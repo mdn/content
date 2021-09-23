@@ -46,11 +46,11 @@ string _htmlString_.
 
 ### Exceptions
 
-- `SyntaxError`
-  - : An attempt was made to set the value of `innerHTML` using a string which
+- `SyntaxError` {{domxref("DOMException")}}
+  - : Thrown if an attempt was made to set the value of `innerHTML` using a string which
     is not properly-formed HTML.
-- `NoModificationAllowedError`
-  - : An attempt was made to insert the HTML into a node whose parent is a
+- `NoModificationAllowedError` {{domxref("DOMException")}}
+  - : Thrown if an attempt was made to insert the HTML into a node whose parent is a
     {{domxref("Document")}}.
 
 ## Usage notes

@@ -34,24 +34,24 @@
     lodash.isundefined "^3.0.1"
     lodash.uniq "^4.5.0"
 
-"@mdn/browser-compat-data@4.0.3":
-  version "4.0.3"
-  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-4.0.3.tgz#d4224c934cf0519e39f9d9d35667cef334cf98fe"
-  integrity sha512-4E2lXYsEIReRs/VntABgz4FRigtCwOmjRDY9++FcgRwcVExkwKt0sesxwj0TiHDtDgjmMQ1woY6WpkTS/T8Y9A==
+"@mdn/browser-compat-data@4.0.4":
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-4.0.4.tgz#85cbd21aea2a07abb7b17515fec3ab9e5d906544"
+  integrity sha512-G3B1PB3EyWpzaV1oi7QkzzHvS0ax0YOCgCyQipVwj9yccXW/pWziCkPCmWDElkMU5ULTJQJ/E0YWIGJFzzVutw==
 
-"@mdn/yari@0.4.778":
-  version "0.4.778"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.778.tgz#54262d3b0a832b56f44e833480f68c4d94de3506"
-  integrity sha512-v8UyfYc4OiIpSVXkOhAxbCW+uSQQhLZXMkSLKFgYULNgf3PybF7w8qpvwZ0OW/UyI8UzFAz1TSgF2OqibgL+Xw==
+"@mdn/yari@0.4.782":
+  version "0.4.782"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.782.tgz#5acde0c2538e67ff15fd5b1a98aeee47c7cfc8c9"
+  integrity sha512-HC7y4K89YLTzwtPrVfu0orZDkb5YXTJa68j9c5kqPIvWrcDuHwQ+lbT65wgf+UAp0JUgjBY8xNEviBicPieFJA==
   dependencies:
     "@caporal/core" "2.0.2"
     "@fast-csv/parse" "4.3.6"
-    "@mdn/browser-compat-data" "4.0.3"
+    "@mdn/browser-compat-data" "4.0.4"
     accept-language-parser "1.5.0"
-    browser-specs "^2.11.0"
+    browser-specs "^2.12.0"
     chalk "4.1.2"
     cheerio "1.0.0-rc.10"
-    cli-progress "^3.9.0"
+    cli-progress "^3.9.1"
     compression "1.7.4"
     cookie "0.4.1"
     cookie-parser "1.4.5"
@@ -86,11 +86,11 @@
     md5-file "5.0.0"
     mdast-util-from-markdown "^0.8.5"
     mdast-util-phrasing "^2.0.0"
-    mdn-data "2.0.21"
+    mdn-data "2.0.22"
     node-gettext "^3.0.0"
     open "^8.2.1"
     open-editor "3.0.0"
-    prismjs "1.24.1"
+    prismjs "1.25.0"
     react-modal "^3.14.3"
     read-chunk "3.2.0"
     rehype-format "^3.1.0"
@@ -548,10 +548,10 @@ braces@^3.0.1:
   dependencies:
     fill-range "^7.0.1"
 
-browser-specs@^2.11.0:
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-2.11.0.tgz#2cd9a9e51e9d6b5b902f78b695d50e78f27ec5dd"
-  integrity sha512-lQjURpTBkELVjRkzqK8fdoNWUNuXWP1X9tBVFfKVKrkkmodGvJc+n0+tnK+qFs6CyyaBusrb7mQyzXNFVFkOdQ==
+browser-specs@^2.12.0:
+  version "2.12.0"
+  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-2.12.0.tgz#6a46123bfb7dbed7e45140efd17486632a6db64a"
+  integrity sha512-aVP2XFaVWXlDLGU8ChCgpIXECPdrYhDJ0pBWvp1XeFHRcjaapI3RpuKKxMaC8t4EuFna60vxdsH5B84UpM3ZtQ==
 
 buffer-alloc-unsafe@^1.1.0:
   version "1.1.0"
@@ -770,10 +770,10 @@ cli-cursor@^3.1.0:
   dependencies:
     restore-cursor "^3.1.0"
 
-cli-progress@^3.9.0:
-  version "3.9.0"
-  resolved "https://registry.yarnpkg.com/cli-progress/-/cli-progress-3.9.0.tgz#25db83447deb812e62d05bac1af9aec5387ef3d4"
-  integrity sha512-g7rLWfhAo/7pF+a/STFH/xPyosaL1zgADhI0OM83hl3c7S43iGvJWEAV2QuDOnQ8i6EMBj/u4+NTd0d5L+4JfA==
+cli-progress@^3.9.1:
+  version "3.9.1"
+  resolved "https://registry.yarnpkg.com/cli-progress/-/cli-progress-3.9.1.tgz#a22eba6a20f53289fdd05d5ee8cb2cc8c28f866e"
+  integrity sha512-AXxiCe2a0Lm0VN+9L0jzmfQSkcZm5EYspfqXKaSIQKqIk+0hnkZ3/v1E9B39mkD6vYhKih3c/RPsJBSwq9O99Q==
   dependencies:
     colors "^1.1.2"
     string-width "^4.2.0"
@@ -3035,10 +3035,10 @@ mdn-data@2.0.14:
   resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.0.14.tgz#7113fc4281917d63ce29b43446f701e68c25ba50"
   integrity sha512-dn6wd0uw5GsdswPFfsgMp5NSB0/aDe6fK94YJV/AJDYXL6HVLWBsxeq7js7Ad+mU2K9LAlwpk6kN2D5mwCPVow==
 
-mdn-data@2.0.21:
-  version "2.0.21"
-  resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.0.21.tgz#47cf3863e068c7d205ec4ff7ff306c83a9feb07d"
-  integrity sha512-kGkDjVRptGvjcZA2NTEHNu6szZ719ixyCbs4q2IFBhTBbfW+p89RV6SBnkGWBIdOXhF+B/Uv0bLFxjAg/EJRHw==
+mdn-data@2.0.22:
+  version "2.0.22"
+  resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.0.22.tgz#16eb79b0b603897e40236625d95018674e7ae5d4"
+  integrity sha512-qDYKNxdP1636yemoyfNsEYUgfdlsTscouOZamt0e7QmN91cmpXDWd+iRADtT9m94jYtYH2QWrraDW+83UlzTwQ==
 
 mdurl@^1.0.0:
   version "1.0.1"
@@ -3642,10 +3642,10 @@ prepend-http@^2.0.0:
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-2.0.0.tgz#e92434bfa5ea8c19f41cdfd401d741a3c819d897"
   integrity sha1-6SQ0v6XqjBn0HN/UAddBo8gZ2Jc=
 
-prismjs@1.24.1:
-  version "1.24.1"
-  resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.24.1.tgz#c4d7895c4d6500289482fa8936d9cdd192684036"
-  integrity sha512-mNPsedLuk90RVJioIky8ANZEwYm5w9LcvCXrxHlwf4fNVSn8jEipMybMkWUyyF0JhnC+C4VcOVSBuHRKs1L5Ow==
+prismjs@1.25.0:
+  version "1.25.0"
+  resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.25.0.tgz#6f822df1bdad965734b310b315a23315cf999756"
+  integrity sha512-WCjJHl1KEWbnkQom1+SzftbtXMKQoezOCYs5rECqMN+jP+apI7ftoflyqigqzopSO3hMhTEb0mFClA8lkolgEg==
 
 process-nextick-args@~2.0.0:
   version "2.0.1"

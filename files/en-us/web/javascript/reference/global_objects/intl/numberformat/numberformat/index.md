@@ -335,4 +335,5 @@ new Intl.NumberFormat('bn', {
 ## See also
 
 - {{jsxref("Intl.NumberFormat")}}
+- {{jsxref("Intl.supportedValuesOf()")}}
 - {{jsxref("Global_Objects/Intl", "Intl")}}

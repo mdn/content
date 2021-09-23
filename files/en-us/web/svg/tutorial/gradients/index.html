@@ -43,7 +43,7 @@ tags:
 
 &lt;/svg&gt;</pre>
 
-<p>{{ EmbedLiveSample('Linear_Gradient','120','240','/files/722/SVG_Linear_Gradient_Example.png') }}</p>
+<p>{{ EmbedLiveSample('Linear_Gradient','120','280') }}</p>
 
 <p>Above is an example of a linear gradient being applied to a <code>&lt;rect&gt;</code> element. Inside the linear gradient are several {{SVGElement('stop')}} nodes. These nodes tell the gradient what color it should be at certain positions by specifying an <code>offset</code> attribute for the position, and a <code>stop-color</code> attribute. This can be assigned directly or through CSS. The two methods have been intermixed for the purposes of this example. For instance, this one tells the gradient to start at the color red, change to transparent-black in the middle, and end at the color blue. You can insert as many stop colors as you like to create a blend that's as beautiful or hideous as you need, but the offsets should always increase from 0% (or 0 if you want to drop the % sign) to 100% (or 1). Duplicate values will use the stop that is assigned furthest down the XML tree. Also, like with fill and stroke, you can specify a <code>stop-opacity</code> attribute to set the opacity at that position (again, in FF3 you can also use rgba values to do this).</p>
 
@@ -93,7 +93,7 @@ tags:
 
 &lt;/svg&gt;</pre>
 
-<p>{{ EmbedLiveSample('Basic_example_2','120','240','/files/726/SVG_Radial_Gradient_Example.png') }}</p>
+<p>{{ EmbedLiveSample('Basic_example_2','120','280') }}</p>
 
 <p>The stops used here are the same as before, but now the object will be red in the center, and in all directions gradually change to blue at the edge. Like linear gradients, the <code>&lt;radialGradient&gt;</code> node can take several attributes to describe its position and orientation. However, unlike linear gradients, it's a bit more complex. The radial gradient is again defined by two points, which determine where its edges are. The first of these defines a circle around which the gradient ends. It requires a center point, designated by the <code>cx</code> and <code>cy</code> attributes, and a radius, <code>r</code>. Setting these three attributes will allow you to move the gradient around and change its size, as shown in the second <code>rect</code> above.</p>
 
@@ -124,7 +124,7 @@ tags:
 
 &lt;/svg&gt;</pre>
 
-<p>{{ EmbedLiveSample('Center_and_focal_point','120','120','/files/727/SVG_Radial_Grandient_Focus_Example.png') }}</p>
+<p>{{ EmbedLiveSample('Center_and_focal_point','120','160') }}</p>
 
 <p>If the focal point is moved outside the circle described earlier, it's impossible for the gradient to be rendered correctly, so the spot will be assumed to be within the edge of the circle. If the focal point isn't given at all, it's assumed to be at the same place as the center point.</p>
 
@@ -166,7 +166,7 @@ tags:
 
 &lt;/svg&gt;</pre>
 
-<p>{{ EmbedLiveSample('spreadMethod','220','220','/files/728/SVG_SpreadMethod_Example.png') }}</p>
+<p>{{ EmbedLiveSample('spreadMethod','220','260') }}</p>
 
 <p>Both gradients also have an attribute named <code>gradientUnits</code>, which describes the unit system you're going to use when you describe the size or orientation of the gradient. There are two possible values to use here: <code>userSpaceOnUse</code> or <code>objectBoundingBox</code>. <code>objectBoundingBox</code> is the default, so that's what has been shown so far. It essentially scales the gradient to the size of your object, so you only have to specify coordinates in values from zero to one, and they're scaled to the size of your object automatically for you. <code>userSpaceOnUse</code> essentially takes in absolute units. So you have to know where your object is, and place the gradient at the same place. The radialGradient above would be rewritten:</p>
 

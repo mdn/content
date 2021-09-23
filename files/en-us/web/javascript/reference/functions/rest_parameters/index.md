@@ -5,16 +5,12 @@ tags:
   - Functions
   - JavaScript
   - Language feature
-  - Rest
-  - Rest parameters
+  - Reference
 browser-compat: javascript.functions.rest_parameters
 ---
 {{jsSidebar("Functions")}}
 
-The **rest parameter** syntax allows a function
-to accept an indefinite number of arguments as an array, providing a way to represent
-{{interwiki("wikipedia", "Variadic_function", "variadic functions")}} in
-JavaScript.
+The **rest parameter** syntax allows a function to accept an indefinite number of arguments as an array, providing a way to represent [variadic functions](https://en.wikipedia.org/wiki/Variadic_function) in JavaScript.
 
 {{EmbedInteractiveExample("pages/js/functions-restparameters.html")}}
 
@@ -28,7 +24,7 @@ function f(a, b, ...theArgs) {
 
 ## Description
 
-A function definition's last parameter can be prefixed with "`...`" (three U+002E FULL STOP characters), which will cause all remaining (user supplied) parameters to be placed within a ["standard" JavaScript array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array).
+A function definition's last parameter can be prefixed with "`...`" (three U+002E FULL STOP characters), which will cause all remaining (user supplied) parameters to be placed within a [standard JavaScript array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array).
 Only the last parameter in a function definition can be a rest parameter.
 
 ```js
@@ -46,7 +42,7 @@ myFun("one", "two", "three", "four", "five", "six")
 // manyMoreArgs, ["three", "four", "five", "six"]
 ```
 
-#### Quick reference
+### Quick reference
 
 A function definition can have only one `...`_restParam_.
 
@@ -71,7 +67,7 @@ There are three main differences between rest parameters and the
 {{jsxref("Functions/arguments", "arguments")}} object:
 
 - The `arguments` object is **not a real array**, while rest
-  parameters are {{jsxref("Global_Objects/Array", "Array")}} instances, meaning methods
+  parameters are {{jsxref("Array")}} instances, meaning methods
   like {{jsxref("Array.sort", "sort")}}, {{jsxref("Array.map", "map")}},
   {{jsxref("Array.forEach", "forEach")}} or {{jsxref("Array/pop", "pop")}} can be
   applied on it directly;
@@ -92,7 +88,6 @@ for converting a set of arguments to an array.
 // Before rest parameters, "arguments" could be converted to a normal array using:
 
 function f(a, b) {
-
   let normalArray = Array.prototype.slice.call(arguments)
   // -- or --
   let normalArray = [].slice.call(arguments)
@@ -119,8 +114,7 @@ In this example, the first argument is mapped to `a` and the second to
 `b`, so these named arguments are used as normal.
 
 However, the third argument, `manyMoreArgs`, will be an array that contains
-the third, fourth, fifth, sixth ...
-nth — as many arguments that the user includes.
+the third, fourth, fifth, sixth ... nth — as many arguments that the user includes.
 
 ```js
 function myFun(a, b, ...manyMoreArgs) {
@@ -164,8 +158,7 @@ myFun("one", "two")
 
 ### Argument length
 
-Since `theArgs` is an array, a count of its elements is given by the
-`length` property:
+Since `theArgs` is an array, a count of its elements is given by the {{jsxref("Array.length", "length")}} property.
 
 ```js
 function fun1(...theArgs) {
@@ -196,7 +189,7 @@ console.log(arr)  // [30, 50, 84]
 
 ### Rest parameters are real arrays; the arguments object is not.
 
-`Array` methods can be used on rest parameters, but not on the
+{{jsxref("Array")}} methods can be used on rest parameters, but not on the
 `arguments` object:
 
 ```js
@@ -238,15 +231,7 @@ console.log(sortArguments(5, 3, 7, 1))  // 1, 3, 5, 7
 
 ## See also
 
-- [Spread
-  syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) (also ‘`...`’)
-- [Arguments
-  object](/en-US/docs/Web/JavaScript/Reference/Functions/arguments)
-- [Array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
-- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions "Functions and function scope")
-- [Original
-  proposal at ecmascript.org](http://wiki.ecmascript.org/doku.php?id=harmony:rest_parameters)
-- [JavaScript
-  arguments object and beyond](http://javascriptweblog.wordpress.com/2011/01/18/javascripts-arguments-object-and-beyond/)
-- [Destructuring
-  assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+- [Spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) (also ‘`...`’)
+- [Destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+- [`arguments` object](/en-US/docs/Web/JavaScript/Reference/Functions/arguments)
+- {{jsxref("Array")}}

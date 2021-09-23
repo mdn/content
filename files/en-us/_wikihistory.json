@@ -88712,24 +88712,6 @@
       "JesseW"
     ]
   },
-  "Web/API/Window/home": {
-    "modified": "2020-10-15T21:10:04.389Z",
-    "contributors": [
-      "mfuji09",
-      "mfluehr",
-      "lucian95",
-      "SphinxKnight",
-      "fscholz",
-      "teoli",
-      "kohei.yoshino",
-      "Sheppy",
-      "Marcoos",
-      "Mgjbot",
-      "Dria",
-      "Callek",
-      "JesseW"
-    ]
-  },
   "Web/API/Window/innerHeight": {
     "modified": "2020-11-20T13:42:29.125Z",
     "contributors": [
@@ -89057,21 +89039,6 @@
     "contributors": [
       "mfuji09",
       "wbamberg"
-    ]
-  },
-  "Web/API/Window/minimize": {
-    "modified": "2020-10-15T21:13:06.423Z",
-    "contributors": [
-      "mfuji09",
-      "mfluehr",
-      "lucian95",
-      "fscholz",
-      "teoli",
-      "cpigat",
-      "libreGeekingKid",
-      "Sheppy",
-      "ethertank",
-      "wellington7"
     ]
   },
   "Web/API/Window/moveBy": {

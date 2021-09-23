@@ -43,31 +43,19 @@ FileSystemDirectoryEntry.getFile([path][, options][, successCallback][, errorCal
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None.
 
-### Errors
+### Exceptions
 
-If an error occurs and an `errorCallback` was specified, it gets called with
-a single parameter: a {{domxref("DOMException")}} object describing the error. The
-name of the {{domxref("DOMException")}} indicates what type of error occurred, as follows:
-
-- `NotFoundError`
-  - : The `create` option was not specified (or was specified as
+- `NotFoundError` {{domxref("DOMException")}}
+  - : Thrown if the `create` option was not specified (or was specified as
     `false`), and the file doesn't exist.
-- `SecurityError`
-  - : The request to access the file was denied for security reasons.
-- `TypeMismatchError`
-  - : The path specified is not a file; it's probably a directory, but might be an
+- `SecurityError` {{domxref("DOMException")}}
+  - : Thrown if the request to access the file was denied for security reasons.
+- `TypeMismatchError` {{domxref("DOMException")}}
+  - : Thrown if the path specified is not a file; it's probably a directory, but might be an
     unsupported file descriptor such as a pipe; this depends on the user agent to some
     extent.
-
-## FileSystemFlags
-
-The `options` parameter is an object which is based on the
-{{domxref("FileSystemFlags")}} dictionary; it provides flags which make it possible to
-adjust the behavior of the `getFile()` method.
-
-{{page("/en-US/docs/Web/API/FileSystemFlags", "Properties")}}
 
 ## Example
 
