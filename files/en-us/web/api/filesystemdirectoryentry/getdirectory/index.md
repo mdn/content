@@ -58,14 +58,6 @@ FileSystemDirectoryEntry.getDirectory([path][, options][, successCallback][, err
     unsupported file descriptor such as a pipe; this depends on the user agent to some
     extent.
 
-## FileSystemFlags
-
-The `options` parameter is an object which is based on the
-{{domxref("FileSystemFlags")}} dictionary; it provides flags which make it possible to
-adjust the behavior of the `getDirectory()` method.
-
-{{page("/en-US/docs/Web/API/FileSystemFlags", "Properties")}}
-
 ## Example
 
 In this example, a function is presented whose job it is to locate within a user's app
