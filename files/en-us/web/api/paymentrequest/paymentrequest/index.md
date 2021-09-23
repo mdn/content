@@ -34,12 +34,16 @@ var paymentRequest = new PaymentRequest(methodData, details, [options]);
 
     - `supportedMethods`
       - : For early implementations of the spec, this was a sequence of identifiers for
-        payment methods that the merchant website accepts. This parameter is a single
+        payment methods that the merchant website accepts. Starting with more recent
+        browsers, this parameter is more generic than credit cards, it is a single
         {{domxref("DOMString")}}, and the meaning of the `data` parameter
-        changes with the `supportedMethods`.
+        changes with the `supportedMethods`. For example, the Example Pay payment method
+        is selected by specifying the string `https://example.com/pay` here.
     - `data`
       - : A JSON-serializable object that provides optional information that might be
-        needed by the supported payment methods.
+        needed by the supported payment methods. This has to conform to the type expected
+        by the payment handler indicated by `supportedMethods`. Developers need to consult
+        whoever controls the payment methods for the expected shape of the data object.
 
 - `details`
 

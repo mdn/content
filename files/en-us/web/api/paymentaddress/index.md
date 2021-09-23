@@ -58,7 +58,7 @@ The following properties are obsolete and should no longer be used, but may stil
 
 In the following example, the {{domxref("PaymentRequest.PaymentRequest","PaymentRequest()")}} constructor is used to create a new payment request, which takes three objects as parameters — one containing details of the payment methods that can be used for the payment, one containing details of the actual order (such as items bought and shipping options), and an optional object containing further options.
 
-The first of these three (`supportedInstruments` in the example below) contains a `data` property that has to conform to the structure defined by the payment method provider.
+The first of these three (`supportedInstruments` in the example below) contains a `data` property that has to conform to the structure defined by the payment method.
 
 ```js
 const supportedInstruments = [

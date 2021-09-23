@@ -51,8 +51,8 @@ property.
 
 The type of the `methodDetails` property depends on the payment method. For
 example, if `methodName` is `https://example.com/pay`, indicating that the
-Example Pay payment method is being used for validation, the `methodDetails`
-field must be an object agreed between the merchant and the payment method.
+Example Pay payment method is being used for validation, the shape of `methodDetails`
+is defined by the payment method.
 
 ## Specifications
 
