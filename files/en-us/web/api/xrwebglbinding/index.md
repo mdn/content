@@ -26,6 +26,8 @@ The **`XRWebGLBinding`** interface is used to create layers that have a GPU bac
   - : The `scaleFactor` that was passed in during the construction of the projection layer. The native buffer size is scaled by this number.
 
 ## Methods
+- {{domxref("XRWebGLBinding.createCylinderLayer()")}}
+  - : Returns an {{domxref("XRCylinderLayer")}} object which is a layer that takes up a curved rectangular space in the virtual environment.
 - {{domxref("XRWebGLBinding.createProjectionLayer()")}}
   - : Returns an {{domxref("XRProjectionLayer")}} object which is a layer that fills the entire view of the observer and is refreshed close to the device's native frame rate.
 - {{domxref("XRWebGLBinding.getDepthInformation()")}}
