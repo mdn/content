@@ -24,14 +24,16 @@ An {{domxref("XRSpace")}}.
 
 ### Setting a layer's dimension and position
 
-This example code positions the layer two meters away from the origin of `xrReferenceSpace` with a `height` and `width` of 1.5 meters.
+This example code positions the layer two meters away from `newSpace` with a `height` and `width` of 1.5 meters.
 
 ```js
 const quadLayer = xrGlBinding.createQuadLayer({
+  space: xrReferenceSpace,
   viewPixelWidth: 512,
   viewPixelHeight: 512
 });
-quadLayer.space = xrReferenceSpace;
+
+quadLayer.space = newSpace;
 quadLayer.transform = new XRRigidTransform({z: -2});
 quadLayer.width = 1.5;
 quadLayer.height = 1.5;
