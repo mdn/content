@@ -33,7 +33,7 @@ tags:
 
 <p>The <code>rect</code> will not be painted, however. Instead its pixel data will be used to determine, which pixels of the circle "make it" to the final rendering. Since the rectangle covers only the upper half of the circle, the lower half of the circle will vanish:</p>
 
-<p>{{ EmbedLiveSample('Creating_clips','240','240','/files/3224/clipdemo.png') }}</p>
+<p>{{ EmbedLiveSample('Creating_clips','240','240') }}</p>
 
 <p>We now have a semicircle without having to deal with arcs in path elements. For the clipping, every path inside the <code>clipPath</code> is inspected and evaluated together with its stroke properties and transformation. Then every part of the target lying in a transparent area of the resulting <code>clipPath</code>'s content will not be rendered. Color, opacity and such have no effect as long as they don't let parts vanish completely.</p>
 
@@ -59,7 +59,7 @@ tags:
 
 <p>You see a green-filled <code>rect</code> at the lowest layer and on top a red-filled <code>rect</code>. The latter has the <code>mask</code> attribute pointing to the <code>mask</code> element. The content of the mask is a single <code>rect</code> element, that is filled with a black-to-white gradient. As a result the pixels of the red rectangle use the luminance value of the mask content as the alpha value (the transparency), and we see a green-to-red gradient as a result:</p>
 
-<p>{{ EmbedLiveSample('Masking','240','240','/files/3234/maskdemo.png') }}</p>
+<p>{{ EmbedLiveSample('Masking','240','240') }}</p>
 
 <h3 id="Transparency_with_opacity">Transparency with <code>opacity</code></h3>
 
@@ -76,7 +76,7 @@ tags:
 &lt;/svg&gt;
 </pre>
 
-<p>{{ EmbedLiveSample('Transparency_with_opacity','240','240','/files/3231/opacitydemo.png') }}</p>
+<p>{{ EmbedLiveSample('Transparency_with_opacity','240','240') }}</p>
 
 <p>You see in this example the red circle on blue background. The yellow stroke is set to 50% opacity, which leads effectively to a double-color stroke.</p>
 
