@@ -10,42 +10,38 @@ tags:
   - SVG Text Content
 browser-compat: svg.elements.altGlyphDef
 ---
-<div>{{SVGRef}}{{deprecated_header}}</div>
+{{SVGRef}}{{deprecated_header}}
 
-<p>The <strong><code>&lt;altGlyphDef&gt;</code></strong> <a href="/en-US/docs/Web/SVG">SVG</a> element defines a substitution representation for glyphs.</p>
+The **`<altGlyphDef>`** [SVG](/en-US/docs/Web/SVG) element defines a substitution representation for glyphs.
 
-<h2 id="Usage_context">Usage context</h2>
+## Usage context
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<h3 id="Global_attributes">Global attributes</h3>
+### Global attributes
 
-<ul>
- <li><a href="/en-US/docs/Web/SVG/Attribute#core_attributes">Core attributes</a></li>
-</ul>
+*   [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
 
-<h3 id="Specific_attributes">Specific attributes</h3>
+### Specific attributes
 
-<p><em>None</em></p>
+*None*
 
-<h2 id="DOM_Interface">DOM Interface</h2>
+## DOM Interface
 
-<p>This element implements the {{domxref("SVGAltGlyphDefElement")}} interface.</p>
+This element implements the {{domxref("SVGAltGlyphDefElement")}} interface.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGElement("glyph")}}</li>
- <li>{{SVGElement("glyphRef")}}</li>
- <li>{{SVGElement("altGlyphDef")}}</li>
-</ul>
+*   {{SVGElement("glyph")}}
+*   {{SVGElement("glyphRef")}}
+*   {{SVGElement("altGlyphDef")}}

@@ -7,82 +7,96 @@ tags:
   - SVG Filter
 browser-compat: svg.attributes.presentation.filter
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <code><strong>filter</strong></code> attribute specifies the filter effects defined by the {{SVGElement("filter")}} element that shall be applied to its element.</p>
+The **`filter`** attribute specifies the filter effects defined by the {{SVGElement("filter")}} element that shall be applied to its element.
 
-<div class="note"><p><strong>Note:</strong> As a presentation attribute, <code>filter</code> can be used as a CSS property. See {{cssxref("filter", "CSS filter")}} for further information.</p></div>
+> **Note:** As a presentation attribute, `filter` can be used as a CSS property. See {{cssxref("filter", "CSS filter")}} for further information.
 
-<p>As a presentation attribute, it can be applied to any element but it only has effect on <a href="/en-US/docs/Web/SVG/Element#Container_elements">container elements</a> without the {{SVGElement("defs")}} element, all <a href="/en-US/docs/Web/SVG/Element#Graphics_elements">graphics elements</a> and the {{SVGElement("use")}} element.</p>
+As a presentation attribute, it can be applied to any element but it only has effect on [container elements](/en-US/docs/Web/SVG/Element#Container_elements) without the {{SVGElement("defs")}} element, all [graphics elements](/en-US/docs/Web/SVG/Element#Graphics_elements) and the {{SVGElement("use")}} element.
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html, body, svg {
+```css hidden
+html, body, svg {
   height: 100%;
-}</pre>
+}
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;filter id="blur"&gt;
-    &lt;feGaussianBlur stdDeviation="2" /&gt;
-  &lt;/filter&gt;
+```html
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <filter id="blur">
+    <feGaussianBlur stdDeviation="2" />
+  </filter>
 
-  &lt;rect x="10" y="10" width="80" height="80" filter="url(#blur)" /&gt;
-&lt;/svg&gt;</pre>
+  <rect x="10" y="10" width="80" height="80" filter="url(#blur)" />
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", "220", "220")}}</p>
+{{EmbedLiveSample("Example", "220", "220")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code>none</code> <a href="/en-US/docs/CSS/Value_definition_syntax#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> <code>&lt;filter-function-list&gt;</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>none</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <code>none</code>
+        <a
+          href="/en-US/docs/CSS/Value_definition_syntax#Single_bar"
+          title="Single bar: exactly one of the entities must be present"
+          >|</a
+        >
+        <code>&#x3C;filter-function-list></code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>none</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>For a description of the values see the {{cssxref("filter","CSS filter")}} property.</p>
+For a description of the values see the {{cssxref("filter","CSS filter")}} property.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Filters 1.0", "#FilterProperty", "filter")}}</td>
-   <td>{{Spec2("Filters 1.0")}}</td>
-   <td>Extended the values by several special filter functions.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "filters.html#FilterProperty", "filter")}}</td>
-   <td>{{Spec2('SVG1.1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("Filters 1.0", "#FilterProperty", "filter")}}
+      </td>
+      <td>{{Spec2("Filters 1.0")}}</td>
+      <td>Extended the values by several special filter functions.</td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "filters.html#FilterProperty", "filter")}}
+      </td>
+      <td>{{Spec2('SVG1.1')}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGElement("filter")}}</li>
- <li>{{cssxref("filter","CSS filter")}}</li>
-</ul>
+*   {{SVGElement("filter")}}
+*   {{cssxref("filter","CSS filter")}}

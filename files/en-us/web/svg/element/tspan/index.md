@@ -8,80 +8,80 @@ tags:
   - SVG Text Content
 browser-compat: svg.elements.tspan
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The SVG <code><strong>&lt;tspan&gt;</strong></code> element defines a subtext within a {{SVGElement('text')}} element or another <code>&lt;tspan&gt;</code> element. It allows for adjustment of the style and/or position of that subtext as needed.</p>
+The SVG **`<tspan>`** element defines a subtext within a {{SVGElement('text')}} element or another `<tspan>` element. It allows for adjustment of the style and/or position of that subtext as needed.
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html; highlight[9]">&lt;svg viewBox="0 0 240 40" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;style&gt;
+```html
+<svg viewBox="0 0 240 40" xmlns="http://www.w3.org/2000/svg">
+  <style>
     text  { font: italic 12px serif; }
     tspan { font: bold 10px sans-serif; fill: red; }
-  &lt;/style&gt;
+  </style>
 
-  &lt;text x="10" y="30" class="small"&gt;
+  <text x="10" y="30" class="small">
     You are
-    &lt;tspan&gt;not&lt;/tspan&gt;
+    <tspan>not</tspan>
     a banana!
-  &lt;/text&gt;
-&lt;/svg&gt;</pre>
+  </text>
+</svg>
+```
 
-<p>{{EmbedLiveSample('Example', 100, '100%')}}</p>
+{{EmbedLiveSample('Example', 100, '100%')}}
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<dl>
- <dt>{{SVGAttr("x")}}</dt>
- <dd>The x coordinate of the starting point of the text baseline.<br>
- <small><em>Value type</em>: <a href="/en-US/docs/Web/SVG/Content_type#length"><strong>&lt;length&gt;</strong></a>|<a href="/en-US/docs/Web/SVG/Content_type#percentage"><strong>&lt;percentage&gt;</strong></a> ; <em>Default value: none; Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("y")}}</dt>
- <dd>The y coordinate of the starting point of the text baseline.<br>
- <small><em>Value type</em>: <a href="/en-US/docs/Web/SVG/Content_type#length"><strong>&lt;length&gt;</strong></a>|<a href="/en-US/docs/Web/SVG/Content_type#percentage"><strong>&lt;percentage&gt;</strong></a> ; <em>Default value: none; Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("dx")}}</dt>
- <dd>Shifts the text position horizontally from a previous text element.<br>
- <small><em>Value type</em>: <a href="/en-US/docs/Web/SVG/Content_type#length"><strong>&lt;length&gt;</strong></a>|<a href="/en-US/docs/Web/SVG/Content_type#percentage"><strong>&lt;percentage&gt;</strong></a> ; <em>Default value</em>: <em>none</em>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("dy")}}</dt>
- <dd>Shifts the text position vertically from a previous text element.<br>
- <small><em>Value type</em>: <a href="/en-US/docs/Web/SVG/Content_type#length"><strong>&lt;length&gt;</strong></a>|<a href="/en-US/docs/Web/SVG/Content_type#percentage"><strong>&lt;percentage&gt;</strong></a> ; <em>Default value: none; Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("rotate")}}</dt>
- <dd>Rotates orientation of each individual glyph. Can rotate glyphs individually.<br>
- <small><em>Value type</em>: <a href="/en-US/docs/Web/SVG/Content_type#list-of-ts"><strong>&lt;list-of-number&gt;</strong></a> ; <em>Default value</em>: none; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("lengthAdjust")}}</dt>
- <dd>How the text is stretched or compressed to fit the width defined by the <code>textLength</code> attribute.<br>
- <small><em>Value type</em>: <code>spacing</code>|<code>spacingAndGlyphs</code>; <em>Default value</em>: <code>spacing</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("textLength")}}</dt>
- <dd>A width that the text should be scaled to fit.<br>
- <small><em>Value type</em>: <a href="/en-US/docs/Web/SVG/Content_type#length"><strong>&lt;length&gt;</strong></a>|<a href="/en-US/docs/Web/SVG/Content_type#percentage"><strong>&lt;percentage&gt;</strong></a> ; <em>Default value</em>: <em>none</em>; <em>Animatable</em>: <strong>yes</strong></small></dd>
-</dl>
+*   {{SVGAttr("x")}}
+    *   : The x coordinate of the starting point of the text baseline.
+        *Value type*: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage) ; *Default value: none; Animatable*: **yes**
+*   {{SVGAttr("y")}}
+    *   : The y coordinate of the starting point of the text baseline.
+        *Value type*: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage) ; *Default value: none; Animatable*: **yes**
+*   {{SVGAttr("dx")}}
+    *   : Shifts the text position horizontally from a previous text element.
+        *Value type*: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage) ; *Default value*: *none*; *Animatable*: **yes**
+*   {{SVGAttr("dy")}}
+    *   : Shifts the text position vertically from a previous text element.
+        *Value type*: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage) ; *Default value: none; Animatable*: **yes**
+*   {{SVGAttr("rotate")}}
+    *   : Rotates orientation of each individual glyph. Can rotate glyphs individually.
+        *Value type*: [**\<list-of-number>**](/en-US/docs/Web/SVG/Content_type#list-of-ts) ; *Default value*: none; *Animatable*: **yes**
+*   {{SVGAttr("lengthAdjust")}}
+    *   : How the text is stretched or compressed to fit the width defined by the `textLength` attribute.
+        *Value type*: `spacing`|`spacingAndGlyphs`; *Default value*: `spacing`; *Animatable*: **yes**
+*   {{SVGAttr("textLength")}}
+    *   : A width that the text should be scaled to fit.
+        *Value type*: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage) ; *Default value*: *none*; *Animatable*: **yes**
 
-<h3 id="Global_attributes">Global attributes</h3>
+### Global attributes
 
-<dl>
- <dt><a href="/en-US/docs/Web/SVG/Attribute/Core">Core Attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}</small></dd>
- <dt><a href="/en-US/docs/Web/SVG/Attribute/Styling">Styling Attributes</a></dt>
- <dd><small>{{SVGAttr('class')}}, {{SVGAttr('style')}}</small></dd>
- <dt><a href="/en-US/docs/Web/SVG/Attribute/Conditional_Processing">Conditional Processing Attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}</small></dd>
- <dt>Event Attributes</dt>
- <dd><small><a href="/en-US/docs/Web/SVG/Attribute/Events#global_event_attributes">Global event attributes</a>, <a href="/en-US/docs/Web/SVG/Attribute/Events#graphical_event_attributes">Graphical event attributes</a></small></dd>
- <dt><a href="/en-US/docs/Web/SVG/Attribute/Presentation">Presentation Attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('dominant-baseline')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr('text-anchor')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}</small></dd>
- <dt>Aria Attributes</dt>
- <dd><small><code>aria-activedescendant</code>, <code>aria-atomic</code>, <code>aria-autocomplete</code>, <code>aria-busy</code>, <code>aria-checked</code>, <code>aria-colcount</code>, <code>aria-colindex</code>, <code>aria-colspan</code>, <code>aria-controls</code>, <code>aria-current</code>, <code>aria-describedby</code>, <code>aria-details</code>, <code>aria-disabled</code>, <code>aria-dropeffect</code>, <code>aria-errormessage</code>, <code>aria-expanded</code>, <code>aria-flowto</code>, <code>aria-grabbed</code>, <code>aria-haspopup</code>, <code>aria-hidden</code>, <code>aria-invalid</code>, <code>aria-keyshortcuts</code>, <code>aria-label</code>, <code>aria-labelledby</code>, <code>aria-level</code>, <code>aria-live</code>, <code>aria-modal</code>, <code>aria-multiline</code>, <code>aria-multiselectable</code>, <code>aria-orientation</code>, <code>aria-owns</code>, <code>aria-placeholder</code>, <code>aria-posinset</code>, <code>aria-pressed</code>, <code>aria-readonly</code>, <code>aria-relevant</code>, <code>aria-required</code>, <code>aria-roledescription</code>, <code>aria-rowcount</code>, <code>aria-rowindex</code>, <code>aria-rowspan</code>, <code>aria-selected</code>, <code>aria-setsize</code>, <code>aria-sort</code>, <code>aria-valuemax</code>, <code>aria-valuemin</code>, <code>aria-valuenow</code>, <code>aria-valuetext</code>, <code>role</code></small></dd>
-</dl>
+*   [Core Attributes](/en-US/docs/Web/SVG/Attribute/Core)
+    *   : Most notably: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}
+*   [Styling Attributes](/en-US/docs/Web/SVG/Attribute/Styling)
+    *   : {{SVGAttr('class')}}, {{SVGAttr('style')}}
+*   [Conditional Processing Attributes](/en-US/docs/Web/SVG/Attribute/Conditional_Processing)
+    *   : Most notably: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
+*   Event Attributes
+    *   : [Global event attributes](/en-US/docs/Web/SVG/Attribute/Events#global_event_attributes), [Graphical event attributes](/en-US/docs/Web/SVG/Attribute/Events#graphical_event_attributes)
+*   [Presentation Attributes](/en-US/docs/Web/SVG/Attribute/Presentation)
+    *   : Most notably: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('dominant-baseline')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr('text-anchor')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
+*   Aria Attributes
+    *   : `aria-activedescendant`, `aria-atomic`, `aria-autocomplete`, `aria-busy`, `aria-checked`, `aria-colcount`, `aria-colindex`, `aria-colspan`, `aria-controls`, `aria-current`, `aria-describedby`, `aria-details`, `aria-disabled`, `aria-dropeffect`, `aria-errormessage`, `aria-expanded`, `aria-flowto`, `aria-grabbed`, `aria-haspopup`, `aria-hidden`, `aria-invalid`, `aria-keyshortcuts`, `aria-label`, `aria-labelledby`, `aria-level`, `aria-live`, `aria-modal`, `aria-multiline`, `aria-multiselectable`, `aria-orientation`, `aria-owns`, `aria-placeholder`, `aria-posinset`, `aria-pressed`, `aria-readonly`, `aria-relevant`, `aria-required`, `aria-roledescription`, `aria-rowcount`, `aria-rowindex`, `aria-rowspan`, `aria-selected`, `aria-setsize`, `aria-sort`, `aria-valuemax`, `aria-valuemin`, `aria-valuenow`, `aria-valuetext`, `role`
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -6,81 +6,84 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.style.style
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>style</code></strong> attribute allows to style an element using {{Glossary("CSS")}} declarations. It functions identically to <a href="/en-US/docs/Web/HTML/Global_attributes/style">the <code>style</code> attribute in HTML</a>.</p>
+The **`style`** attribute allows to style an element using {{Glossary("CSS")}} declarations. It functions identically to [the `style` attribute in HTML](/en-US/docs/Web/HTML/Global_attributes/style).
 
-<p>You can use this attribute with any SVG element.</p>
+You can use this attribute with any SVG element.
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html; highlight[3]">&lt;svg viewbox="0 0 100 60" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;rect width="80"  height="40" x="10" y="10"
-      style="fill: skyblue; stroke: cadetblue; stroke-width: 2;"/&gt;
-&lt;/svg&gt;
-</pre>
+```html
+<svg viewbox="0 0 100 60" xmlns="http://www.w3.org/2000/svg">
+  <rect width="80"  height="40" x="10" y="10"
+      style="fill: skyblue; stroke: cadetblue; stroke-width: 2;"/>
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", "200", "120")}}</p>
+{{EmbedLiveSample("Example", "200", "120")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code>&lt;style&gt;</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>None</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>No</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td><code>&#x3C;style></code></td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>None</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>No</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt><code>&lt;style&gt;</code></dt>
- <dd>The syntax of style data depends on the style sheet language. By default, the style sheet language is <a href="/en-US/docs/Web/CSS">CSS</a>.
- <div class="note"><p><strong>Note:</strong> In theory, <a href="/en-US/docs/Web/SVG/Attribute/contentStyleType">the <code>contentStyleType</code> attribute</a> could be used to specify styling languages other than CSS, like <a href="/en-US/docs/Web/XSLT">XSL(T)</a>. However, this was never implemented satisfactorily in browsers, so you should not rely on it.</p></div>
- </dd>
-</dl>
+*   `<style>`
+    *   : The syntax of style data depends on the style sheet language. By default, the style sheet language is [CSS](/en-US/docs/Web/CSS).
 
-<h2 id="Specifications">Specifications</h2>
+        > **Note:** In theory, [the `contentStyleType` attribute](/en-US/docs/Web/SVG/Attribute/contentStyleType) could be used to specify styling languages other than CSS, like [XSL(T)](/en-US/docs/Web/XSLT). However, this was never implemented satisfactorily in browsers, so you should not rely on it.
+
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG2", "styling.html#StyleAttribute", "style")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "styling.html#StyleAttribute", "style")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("SVG2", "styling.html#StyleAttribute", "style")}}
+      </td>
+      <td>{{Spec2("SVG2")}}</td>
+      <td>No change</td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "styling.html#StyleAttribute", "style")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGElement("style")}}</li>
- <li><a href="/en-US/docs/Web/HTML/Global_attributes/style">HTML <code>style</code> attribute</a></li>
-</ul>
+*   {{SVGElement("style")}}
+*   [HTML `style` attribute](/en-US/docs/Web/HTML/Global_attributes/style)

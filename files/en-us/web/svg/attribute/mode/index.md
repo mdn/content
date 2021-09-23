@@ -7,87 +7,93 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.feBlend.mode
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>mode</code></strong> attribute defines the blending mode on the {{SVGElement("feBlend")}} filter primitive.</p>
+The **`mode`** attribute defines the blending mode on the {{SVGElement("feBlend")}} filter primitive.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("feBlend")}}</li>
-</ul>
+*   {{SVGElement("feBlend")}}
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html, body, svg {
+```css hidden
+html, body, svg {
   height: 100%;
-}</pre>
+}
+```
 
-<pre class="brush: html; highlight[5,10]">&lt;svg viewBox="0 0 480 200" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;filter id="blending1" x="0" y="0" width="100%" height="100%"&gt;
-    &lt;feFlood result="floodFill" x="0" y="0" width="100%" height="100%"
-        flood-color="seagreen" flood-opacity="1"/&gt;
-    &lt;feBlend in="SourceGraphic" in2="floodFill" mode="multiply"/&gt;
-  &lt;/filter&gt;
-  &lt;filter id="blending2" x="0" y="0" width="100%" height="100%"&gt;
-    &lt;feFlood result="floodFill" x="0" y="0" width="100%" height="100%"
-        flood-color="seagreen" flood-opacity="1"/&gt;
-    &lt;feBlend in="SourceGraphic" in2="floodFill" mode="color-dodge"/&gt;
-  &lt;/filter&gt;
+```html
+<svg viewBox="0 0 480 200" xmlns="http://www.w3.org/2000/svg">
+  <filter id="blending1" x="0" y="0" width="100%" height="100%">
+    <feFlood result="floodFill" x="0" y="0" width="100%" height="100%"
+        flood-color="seagreen" flood-opacity="1"/>
+    <feBlend in="SourceGraphic" in2="floodFill" mode="multiply"/>
+  </filter>
+  <filter id="blending2" x="0" y="0" width="100%" height="100%">
+    <feFlood result="floodFill" x="0" y="0" width="100%" height="100%"
+        flood-color="seagreen" flood-opacity="1"/>
+    <feBlend in="SourceGraphic" in2="floodFill" mode="color-dodge"/>
+  </filter>
 
-  &lt;image xlink:href="//developer.mozilla.org/files/6457/mdn_logo_only_color.png" width="200" height="200"
-      style="filter:url(#blending1);"/&gt;
-  &lt;image xlink:href="//developer.mozilla.org/files/6457/mdn_logo_only_color.png" width="200" height="200"
-      style="filter:url(#blending2); transform:translateX(220px);"/&gt;
-&lt;/svg&gt;</pre>
+  <image xlink:href="//developer.mozilla.org/files/6457/mdn_logo_only_color.png" width="200" height="200"
+      style="filter:url(#blending1);"/>
+  <image xlink:href="//developer.mozilla.org/files/6457/mdn_logo_only_color.png" width="200" height="200"
+      style="filter:url(#blending2); transform:translateX(220px);"/>
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", "480", "200")}}</p>
+{{EmbedLiveSample("Example", "480", "200")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td>{{cssxref("blend-mode")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>normal</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>{{cssxref("blend-mode")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>normal</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>For a description of the values, see {{cssxref("blend-mode")}}.</p>
+For a description of the values, see {{cssxref("blend-mode")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Filters 1.0", "#element-attrdef-feblend-mode", "mode")}}</td>
-   <td>{{Spec2("Filters 1.0")}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "filters.html#feBlendModeAttribute", "mode")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("Filters 1.0", "#element-attrdef-feblend-mode", "mode")}}
+      </td>
+      <td>{{Spec2("Filters 1.0")}}</td>
+      <td>No change</td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "filters.html#feBlendModeAttribute", "mode")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

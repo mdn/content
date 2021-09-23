@@ -7,66 +7,68 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.font-face.x-height
 ---
-<div>{{SVGRef}}{{Deprecated_Header}}</div>
+{{SVGRef}}{{Deprecated_Header}}
 
-<p>The <strong><code>x-height</code></strong> attribute indicates the height of lowercase glyphs in the font within the font coordinate system.</p>
+The **`x-height`** attribute indicates the height of lowercase glyphs in the font within the font coordinate system.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("font-face")}}</li>
-</ul>
+*   {{SVGElement("font-face")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code><a href="/en-US/docs/Web/SVG/Content_type#number">&lt;number&gt;</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>None</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>No</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/SVG/Content_type#number"
+            >&#x3C;number></a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>None</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>No</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt><code>&lt;number&gt;</code></dt>
- <dd>This value indicates the height of lowercase glyphs.</dd>
-</dl>
+*   `<number>`
+    *   : This value indicates the height of lowercase glyphs.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG1.1", "fonts.html#FontFaceElementXHeightAttribute", "x-height")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "fonts.html#FontFaceElementXHeightAttribute", "x-height")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGAttr("cap-height")}}</li>
- <li>{{SVGAttr("accent-height")}}</li>
-</ul>
+*   {{SVGAttr("cap-height")}}
+*   {{SVGAttr("accent-height")}}

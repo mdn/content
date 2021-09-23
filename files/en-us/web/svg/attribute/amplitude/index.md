@@ -6,26 +6,24 @@ tags:
   - SVG
   - SVG Attribute
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>amplitude</code></strong> attribute controls the amplitude of the gamma function of a component transfer element when its {{SVGAttr("type")}} attribute is <code>gamma</code>.</p>
+The **`amplitude`** attribute controls the amplitude of the gamma function of a component transfer element when its {{SVGAttr("type")}} attribute is `gamma`.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("feFuncA")}}</li>
-  <li>{{SVGElement("feFuncB")}}</li>
-  <li>{{SVGElement("feFuncG")}}</li>
-  <li>{{SVGElement("feFuncR")}}</li>
-</ul>
+*   {{SVGElement("feFuncA")}}
+*   {{SVGElement("feFuncB")}}
+*   {{SVGElement("feFuncG")}}
+*   {{SVGElement("feFuncR")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Value</th>
-      <td><a href="/en-US/docs/Web/CSS/number">&lt;number&gt;</a></td>
+      <td><a href="/en-US/docs/Web/CSS/number">&#x3C;number></a></td>
     </tr>
     <tr>
       <th scope="row">Default value</th>
@@ -38,7 +36,7 @@ tags:
   </tbody>
 </table>
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
   <thead>
@@ -50,20 +48,22 @@ tags:
   </thead>
   <tbody>
     <tr>
-      <td>{{SpecName("Filters 1.0", "#element-attrdef-fecomponenttransfer-amplitude", "amplitude")}}</td>
+      <td>
+        {{SpecName("Filters 1.0", "#element-attrdef-fecomponenttransfer-amplitude", "amplitude")}}
+      </td>
       <td>{{Spec2("Filters 1.0")}}</td>
       <td>No change</td>
     </tr>
     <tr>
-      <td>{{SpecName("SVG1.1", "filters.html#feComponentTransferAmplitudeAttribute", "amplitude")}}</td>
+      <td>
+        {{SpecName("SVG1.1", "filters.html#feComponentTransferAmplitudeAttribute", "amplitude")}}
+      </td>
       <td>{{Spec2("SVG1.1")}}</td>
       <td>Initial definition</td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{SVGElement("feComponentTransfer")}}</li>
-</ul>
+*   {{SVGElement("feComponentTransfer")}}

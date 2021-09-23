@@ -7,16 +7,17 @@ tags:
   - SVG
 browser-compat: svg.elements.script
 ---
-<p>The SVG <code>script</code> element allows to add scripts to an SVG document.</p>
+The SVG `script` element allows to add scripts to an SVG document.
 
-<div class="note"><p><strong>Note:</strong> While SVG's <code>script</code> element is equivalent to the HTML {{HTMLElement('script')}} element, it has some discrepancies, like it uses the {{SVGAttr('href')}} attribute instead of {{htmlattrxref('src','script')}} and it doesn't support ECMAScript modules so far (See browser compatibility below for details)</p></div>
+> **Note:** While SVG's `script` element is equivalent to the HTML {{HTMLElement('script')}} element, it has some discrepancies, like it uses the {{SVGAttr('href')}} attribute instead of {{htmlattrxref('src','script')}} and it doesn't support ECMAScript modules so far (See browser compatibility below for details)
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: html; highlight[4]">&lt;svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;script&gt;
-  // &lt;![CDATA[
-  window.addEventListener('DOMContentLoaded', () =&gt; {
+```html
+<svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+  <script>
+  // <![CDATA[
+  window.addEventListener('DOMContentLoaded', () => {
     function getColor () {
       const R = Math.round(Math.random() * 255).toString(16).padStart(2,'0')
       const G = Math.round(Math.random() * 255).toString(16).padStart(2,'0')
@@ -24,62 +25,57 @@ browser-compat: svg.elements.script
       return `#${R}${G}${B}`
     }
 
-    document.querySelector('circle').addEventListener('click', (e) =&gt; {
+    document.querySelector('circle').addEventListener('click', (e) => {
       e.target.style.fill = getColor()
     })
   })
-  // ]]&gt;
-  &lt;/script&gt;
+  // ]]>
+  </script>
 
-  &lt;circle cx="5" cy="5" r="4" /&gt;
-&lt;/svg&gt;</pre>
+  <circle cx="5" cy="5" r="4" />
+</svg>
+```
 
-<p>{{EmbedLiveSample('Example', 150, '100%')}}</p>
+{{EmbedLiveSample('Example', 150, '100%')}}
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<dl>
- <dt>{{htmlattrxref("crossorigin", "script")}}</dt>
- <dd>This attribute defines <a href="/en-US/docs/Web/HTML/Attributes/crossorigin">CORS settings</a> as define for the HTML {{HTMLElement('script')}} element.<br>
- <small><em>Value type</em>: <a href="/en-US/docs/Web/SVG/Content_type#string"><strong>&lt;string&gt;</strong></a>; <em>Default value</em>: <code>?</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("href")}}</dt>
- <dd>The {{Glossary("URL")}} to the script to load.<br>
- <small><em>Value type</em>: <strong><a href="/en-US/docs/Web/SVG/Content_type#url">&lt;URL&gt;</a></strong> ; <em>Default value</em>: <em>none</em>; <em>Animatable</em>: <strong>no</strong></small></dd>
- <dt>{{SVGAttr("type")}}</dt>
- <dd>This attribute defines type of the script language to use.<br>
- <small><em>Value type</em>: <a href="/en-US/docs/Web/SVG/Content_type#string"><strong>&lt;string&gt;</strong></a>; <em>Default value</em>: <code>application/ecmascript</code>; <em>Animatable</em>: <strong>no</strong></small></dd>
- <dt>{{SVGAttr("xlink:href")}} {{deprecated_inline}}</dt>
- <dd>The {{Glossary("URL")}} to the script to load.<br>
- <small><em>Value type</em>: <strong><a href="/en-US/docs/Web/SVG/Content_type#url">&lt;URL&gt;</a></strong> ; <em>Default value</em>: <em>none</em>; <em>Animatable</em>: <strong>no</strong></small></dd>
-</dl>
+*   {{htmlattrxref("crossorigin", "script")}}
+    *   : This attribute defines [CORS settings](/en-US/docs/Web/HTML/Attributes/crossorigin) as define for the HTML {{HTMLElement('script')}} element.
+        *Value type*: [**\<string>**](/en-US/docs/Web/SVG/Content_type#string); *Default value*: `?`; *Animatable*: **yes**
+*   {{SVGAttr("href")}}
+    *   : The {{Glossary("URL")}} to the script to load.
+        *Value type*: **[\<URL>](/en-US/docs/Web/SVG/Content_type#url)** ; *Default value*: *none*; *Animatable*: **no**
+*   {{SVGAttr("type")}}
+    *   : This attribute defines type of the script language to use.
+        *Value type*: [**\<string>**](/en-US/docs/Web/SVG/Content_type#string); *Default value*: `application/ecmascript`; *Animatable*: **no**
+*   {{SVGAttr("xlink:href")}} {{deprecated_inline}}
+    *   : The {{Glossary("URL")}} to the script to load.
+        *Value type*: **[\<URL>](/en-US/docs/Web/SVG/Content_type#url)** ; *Default value*: *none*; *Animatable*: **no**
 
-<h3 id="Global_attributes">Global attributes</h3>
+### Global attributes
 
-<dl>
- <dt><a href="/en-US/docs/Web/SVG/Attribute/Core">Core Attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr('id')}}</small></dd>
- <dt><a href="/en-US/docs/Web/SVG/Attribute/Styling">Styling Attributes</a></dt>
- <dd><small>{{SVGAttr('class')}}, {{SVGAttr('style')}}</small></dd>
- <dt>Event Attributes</dt>
- <dd><small><a href="/en-US/docs/Web/SVG/Attribute/Events#global_event_attributes">Global event attributes</a>, <a href="/en-US/docs/Web/SVG/Attribute/Events#document_element_event_attributes">Document element event attributes</a></small></dd>
-</dl>
+*   [Core Attributes](/en-US/docs/Web/SVG/Attribute/Core)
+    *   : Most notably: {{SVGAttr('id')}}
+*   [Styling Attributes](/en-US/docs/Web/SVG/Attribute/Styling)
+    *   : {{SVGAttr('class')}}, {{SVGAttr('style')}}
+*   Event Attributes
+    *   : [Global event attributes](/en-US/docs/Web/SVG/Attribute/Events#global_event_attributes), [Document element event attributes](/en-US/docs/Web/SVG/Attribute/Events#document_element_event_attributes)
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Web/HTML/Element/script"><code>script</code> element in HTML</a></li>
-</ul>
+*   [`script` element in HTML](/en-US/docs/Web/HTML/Element/script)
 
-<p>{{SVGRef}}</p>
+{{SVGRef}}

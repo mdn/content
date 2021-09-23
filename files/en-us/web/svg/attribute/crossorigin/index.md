@@ -11,11 +11,11 @@ tags:
   - Security
 browser-compat: api.SVGImageElement.crossOrigin
 ---
-<p>{{SVGRef}}{{draft}}</p>
+{{SVGRef}}{{draft}}
 
-<p>The crossorigin attribute, valid on the {{ SVGElement("image") }} element, provides support for <a href="/en-US/docs/Web/HTTP/CORS">CORS</a>, defining how the element handles crossorigin requests, thereby enabling the configuration of the CORS requests for the element's fetched data. It is a CORS settings attribute.</p>
+The crossorigin attribute, valid on the {{ SVGElement("image") }} element, provides support for [CORS](/en-US/docs/Web/HTTP/CORS), defining how the element handles crossorigin requests, thereby enabling the configuration of the CORS requests for the element's fetched data. It is a CORS settings attribute.
 
-<p>This table shows all possible keywords and their meaning:</p>
+This table shows all possible keywords and their meaning:
 
 <table class="no-markdown">
   <thead>
@@ -24,57 +24,67 @@ browser-compat: api.SVGImageElement.crossOrigin
       <th>Description</th>
     </tr>
   </thead>
-	<tbody>
-		<tr>
-			<td><code>anonymous</code></td>
-			<td>CORS requests for this element will have the credentials flag set to 'same-origin'.</td>
-		</tr>
-		<tr>
-			<td><code>use-credentials</code></td>
-			<td>CORS requests for this element will have the credentials flag set to 'include'.</td>
-		</tr>
-		<tr>
-			<td><code>""</code></td>
-			<td>Setting the attribute name to an empty value, like <code>crossorigin</code> or <code>crossorigin=""</code>, is the same as <code>anonymous</code>.</td>
-		</tr>
-	</tbody>
+  <tbody>
+    <tr>
+      <td><code>anonymous</code></td>
+      <td>
+        CORS requests for this element will have the credentials flag set to
+        'same-origin'.
+      </td>
+    </tr>
+    <tr>
+      <td><code>use-credentials</code></td>
+      <td>
+        CORS requests for this element will have the credentials flag set to
+        'include'.
+      </td>
+    </tr>
+    <tr>
+      <td><code>""</code></td>
+      <td>
+        Setting the attribute name to an empty value, like
+        <code>crossorigin</code> or <code>crossorigin=""</code>, is the same as
+        <code>anonymous</code>.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>It follows the same processing rules as the HTML attribute {{htmlattrxref("crossorigin")}}.</p>
+It follows the same processing rules as the HTML attribute {{htmlattrxref("crossorigin")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
-	<thead>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-			<th scope="col">Comment</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{SpecName('SVG2', 'embedded.html#ImageElementCrossoriginAttribute', 'crossorigin attribute')}}</td>
-			<td>{{Spec2('SVG2')}}</td>
-			<td></td>
-		</tr>
-	</tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName('SVG2', 'embedded.html#ImageElementCrossoriginAttribute', 'crossorigin attribute')}}
+      </td>
+      <td>{{Spec2('SVG2')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<h3 id="&lt;link_crossorigin&gt;">&lt;link crossorigin&gt;</h3>
+### \<link crossorigin>
 
-<p>{{Compat}}</p>
+{{Compat}}
+
 <!-- TODO: This should link to an attribute of the element instead
 https://github.com/mdn/browser-compat-data/blob/178137547bc29a79b712cec221af099329b1f4a0/svg/elements/image.json
 -->
-<div class="notecard note">
-  <p><strong>Note:</strong> The above compatibility table is broken and needs fixing.</p>
-</div>
 
-<h2 id="See_also">See also</h2>
+> **Note:** The above compatibility table is broken and needs fixing.
 
-<ul>
-	<li><a href="/en-US/docs/Web/HTTP/CORS">Cross-Origin Resource Sharing (CORS)</a></li>
-</ul>
+## See also
+
+*   [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS)

@@ -8,73 +8,68 @@ tags:
   - SVG Graphics
 browser-compat: svg.elements.image
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>&lt;image&gt;</code></strong> SVG element includes images inside SVG documents. It can display {{glossary("raster image")}} files or other SVG files.</p>
+The **`<image>`** SVG element includes images inside SVG documents. It can display {{glossary("raster image")}} files or other SVG files.
 
-<p>The only image formats SVG software must support are {{glossary("JPEG")}}, {{glossary("PNG")}}, and other SVG files. Animated {{glossary("GIF")}} behavior is undefined.</p>
+The only image formats SVG software must support are {{glossary("JPEG")}}, {{glossary("PNG")}}, and other SVG files. Animated {{glossary("GIF")}} behavior is undefined.
 
-<p>SVG files displayed with <code>&lt;image&gt;</code> are <a href="/en-US/docs/Web/SVG/SVG_as_an_Image">treated as an image</a>: external resources aren't loaded, {{cssxref(":visited")}} styles <a href="/en-US/docs/Web/CSS/Privacy_and_the_:visited_selector">aren't applied</a>, and they cannot be interactive. To include dynamic SVG elements, try {{SVGElement("use")}} with an external URL. To include SVG files and run scripts inside them, try {{HTMLElement("object")}} inside of {{SVGElement("foreignObject")}}.</p>
+SVG files displayed with `<image>` are [treated as an image](/en-US/docs/Web/SVG/SVG_as_an_Image): external resources aren't loaded, {{cssxref(":visited")}} styles [aren't applied](/en-US/docs/Web/CSS/Privacy_and_the\_:visited_selector), and they cannot be interactive. To include dynamic SVG elements, try {{SVGElement("use")}} with an external URL. To include SVG files and run scripts inside them, try {{HTMLElement("object")}} inside of {{SVGElement("foreignObject")}}.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> The HTML spec defines <code>&lt;image&gt;</code> as a synonym for {{HTMLElement("img")}} while parsing HTML. This specific element and its behavior only apply inside SVG documents or <a href="/en-US/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction">inline SVG</a>.</p>
-</div>
+> **Note:** The HTML spec defines `<image>` as a synonym for {{HTMLElement("img")}} while parsing HTML. This specific element and its behavior only apply inside SVG documents or [inline SVG](/en-US/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction).
 
-<h2 id="Usage_context">Usage context</h2>
+## Usage context
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<h3 id="Global_attributes">Global attributes</h3>
+### Global attributes
 
-<ul>
-  <li><a href="/en-US/docs/Web/SVG/Attribute#conditional_processing_attributes">Conditional processing attributes</a></li>
-  <li><a href="/en-US/docs/Web/SVG/Attribute#core_attributes">Core attributes</a></li>
-  <li><a href="/en-US/docs/Web/SVG/Attribute#graphical_event_attributes">Graphical event attributes</a></li>
-  <li><a href="/en-US/docs/Web/SVG/Attribute#presentation_attributes">Presentation attributes</a></li>
-  <li><a href="/en-US/docs/Web/SVG/Attribute#xlink_attributes">Xlink attributes</a></li>
-  <li>{{SVGAttr("class")}}</li>
-  <li>{{SVGAttr("style")}}</li>
-  <li>{{SVGAttr("transform")}}</li>
-</ul>
+*   [Conditional processing attributes](/en-US/docs/Web/SVG/Attribute#conditional_processing_attributes)
+*   [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
+*   [Graphical event attributes](/en-US/docs/Web/SVG/Attribute#graphical_event_attributes)
+*   [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
+*   [Xlink attributes](/en-US/docs/Web/SVG/Attribute#xlink_attributes)
+*   {{SVGAttr("class")}}
+*   {{SVGAttr("style")}}
+*   {{SVGAttr("transform")}}
 
-<h3 id="Specific_attributes">Specific attributes</h3>
+### Specific attributes
 
-<ul>
-  <li>{{SVGAttr("x")}}: Positions the image horizontally from the origin.</li>
-  <li>{{SVGAttr("y")}}: Positions the image vertically from the origin.</li>
-  <li>{{SVGAttr("width")}}: The width the image renders at. Unlike HTML's <code>&lt;img&gt;</code>, this attribute is required.</li>
-  <li>{{SVGAttr("height")}}: The height the image renders at. Unlike HTML's <code>&lt;img&gt;</code>, this attribute is required.</li>
-  <li>{{SVGAttr("href")}} and {{SVGAttr("xlink:href")}}: Points at a URL for the image file.</li>
-  <li>{{SVGAttr("preserveAspectRatio")}}: Controls how the image is scaled.</li>
-  <li>{{SVGAttr("crossorigin")}}: Defines the value of the credentials flag for CORS requests.</li>
-</ul>
+*   {{SVGAttr("x")}}: Positions the image horizontally from the origin.
+*   {{SVGAttr("y")}}: Positions the image vertically from the origin.
+*   {{SVGAttr("width")}}: The width the image renders at. Unlike HTML's `<img>`, this attribute is required.
+*   {{SVGAttr("height")}}: The height the image renders at. Unlike HTML's `<img>`, this attribute is required.
+*   {{SVGAttr("href")}} and {{SVGAttr("xlink:href")}}: Points at a URL for the image file.
+*   {{SVGAttr("preserveAspectRatio")}}: Controls how the image is scaled.
+*   {{SVGAttr("crossorigin")}}: Defines the value of the credentials flag for CORS requests.
 
-<h2 id="DOM_Interface">DOM Interface</h2>
+## DOM Interface
 
-<p><code>&lt;image&gt;</code> implements the {{domxref("SVGImageElement")}} interface.</p>
+`<image>` implements the {{domxref("SVGImageElement")}} interface.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>Basic rendering of a PNG image in SVG:</p>
+Basic rendering of a PNG image in SVG:
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<pre class="brush: html">&lt;svg width="200" height="200"
-  xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;image href="mdn_logo_only_color.png" height="200" width="200"/&gt;
-&lt;/svg&gt;
-</pre>
+```html
+<svg width="200" height="200"
+  xmlns="http://www.w3.org/2000/svg">
+  <image href="mdn_logo_only_color.png" height="200" width="200"/>
+</svg>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example", 250, 260)}}</p>
+{{EmbedLiveSample("Example", 250, 260)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

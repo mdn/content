@@ -8,61 +8,65 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.feConvolveMatrix.bias
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>bias</code></strong> attribute shifts the range of the filter. After applying the {{SVGAttr("kernelMatrix")}} of the {{SVGElement("feConvolveMatrix")}} element to the input image to yield a number and applied the {{SVGAttr("divisor")}} attribute, the <code>bias</code> attribute is added to each component. This allows representation of values that would otherwise be clamped to 0 or 1.</p>
+The **`bias`** attribute shifts the range of the filter. After applying the {{SVGAttr("kernelMatrix")}} of the {{SVGElement("feConvolveMatrix")}} element to the input image to yield a number and applied the {{SVGAttr("divisor")}} attribute, the `bias` attribute is added to each component. This allows representation of values that would otherwise be clamped to 0 or 1.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("feConvolveMatrix")}}</li>
-</ul>
+*   {{SVGElement("feConvolveMatrix")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><a href="/en-US/docs/Web/SVG/Content_type#Number">&lt;number&gt;</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>0</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <a href="/en-US/docs/Web/SVG/Content_type#Number">&#x3C;number></a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>One application of bias is when it is desirable to have 0.5 gray value be the zero response of the filter.</p>
+One application of bias is when it is desirable to have 0.5 gray value be the zero response of the filter.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Filters 1.0", "#element-attrdef-feconvolvematrix-bias", "bias")}}</td>
-   <td>{{Spec2("Filters 1.0")}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "filters.html#feConvolveMatrixElementBiasAttribute", "bias")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("Filters 1.0", "#element-attrdef-feconvolvematrix-bias", "bias")}}
+      </td>
+      <td>{{Spec2("Filters 1.0")}}</td>
+      <td>No change</td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "filters.html#feConvolveMatrixElementBiasAttribute", "bias")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

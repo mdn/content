@@ -10,50 +10,44 @@ tags:
   - SVG Light Source
 browser-compat: svg.elements.feDistantLight
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>&lt;feDistantLight&gt;</code></strong> filter primitive defines a distant light source that can be used within a lighting filter primitive: {{SVGElement("feDiffuseLighting")}} or {{SVGElement("feSpecularLighting")}}.</p>
+The **`<feDistantLight>`** filter primitive defines a distant light source that can be used within a lighting filter primitive: {{SVGElement("feDiffuseLighting")}} or {{SVGElement("feSpecularLighting")}}.
 
-<h2 id="Usage_context">Usage context</h2>
+## Usage context
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<h3 id="Global_attributes">Global attributes</h3>
+### Global attributes
 
-<ul>
- <li><a href="/en-US/docs/Web/SVG/Attribute#core_attributes">Core attributes</a></li>
-</ul>
+*   [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
 
-<h3 id="Specific_attributes">Specific attributes</h3>
+### Specific attributes
 
-<ul>
- <li>{{SVGAttr("azimuth")}}</li>
- <li>{{SVGAttr("elevation")}}</li>
-</ul>
+*   {{SVGAttr("azimuth")}}
+*   {{SVGAttr("elevation")}}
 
-<h2 id="DOM_Interface">DOM Interface</h2>
+## DOM Interface
 
-<p>This element implements the {{domxref("SVGFEDistantLightElement")}} interface.</p>
+This element implements the {{domxref("SVGFEDistantLightElement")}} interface.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGElement("filter")}}</li>
- <li>{{SVGElement("animate")}}</li>
- <li>{{SVGElement("set")}}</li>
- <li>{{SVGElement("feDiffuseLighting")}}</li>
- <li>{{SVGElement("feSpecularLighting")}}</li>
- <li>{{SVGElement("fePointLight")}}</li>
- <li>{{SVGElement("feSpotLight")}}</li>
- <li><a href="/en-US/docs/Web/SVG/Tutorial/Filter_effects">SVG tutorial: Filter effects</a></li>
-</ul>
+*   {{SVGElement("filter")}}
+*   {{SVGElement("animate")}}
+*   {{SVGElement("set")}}
+*   {{SVGElement("feDiffuseLighting")}}
+*   {{SVGElement("feSpecularLighting")}}
+*   {{SVGElement("fePointLight")}}
+*   {{SVGElement("feSpotLight")}}
+*   [SVG tutorial: Filter effects](/en-US/docs/Web/SVG/Tutorial/Filter_effects)

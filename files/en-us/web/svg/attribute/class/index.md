@@ -7,53 +7,59 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.style.class
 ---
-<p>« <a href="/en-US/docs/Web/SVG/Attribute">SVG Attribute reference home</a></p>
+« [SVG Attribute reference home](/en-US/docs/Web/SVG/Attribute)
 
-<p>Assigns a class name or set of class names to an element. You may assign the same class name or names to any number of elements, however, multiple class names must be separated by whitespace characters.</p>
+Assigns a class name or set of class names to an element. You may assign the same class name or names to any number of elements, however, multiple class names must be separated by whitespace characters.
 
-<p>An element's class name serves two key roles:</p>
+An element's class name serves two key roles:
 
-<ul>
-	<li>As a style sheet selector, for when an author assigns style information to a set of elements.</li>
-	<li>For general use by the browser.</li>
-</ul>
+*   As a style sheet selector, for when an author assigns style information to a set of elements.
+*   For general use by the browser.
 
-<p>You can use this class to style SVG content using CSS.</p>
+You can use this class to style SVG content using CSS.
 
-<h2 id="Usage_context">Usage context</h2>
+## Usage context
 
 <table class="properties">
-	<tbody>
-		<tr>
-			<th scope="row">Categories</th>
-			<td>None</td>
-		</tr>
-		<tr>
-			<th scope="row">Value</th>
-			<td><a href="/en-US/docs/Web/SVG/Content_type#list-of-ts">&lt;list-of-class-names&gt;</a></td>
-		</tr>
-		<tr>
-			<th scope="row">Animatable</th>
-			<td>Yes</td>
-		</tr>
-		<tr>
-			<th scope="row">Normative document</th>
-			<td><a href="https://www.w3.org/TR/SVG/styling.html#ClassAttribute">SVG 1.1 (2nd Edition): The class attribute</a></td>
-		</tr>
-	</tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Categories</th>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <a href="/en-US/docs/Web/SVG/Content_type#list-of-ts"
+          >&#x3C;list-of-class-names></a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Normative document</th>
+      <td>
+        <a href="https://www.w3.org/TR/SVG/styling.html#ClassAttribute"
+          >SVG 1.1 (2nd Edition): The class attribute</a
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
+## Example
 
-<h2 id="Example">Example</h2>
-
-<pre class="brush: html">&lt;html&gt;
-    &lt;body&gt;
-        &lt;svg width="120" height="220"
+```html
+<html>
+    <body>
+        <svg width="120" height="220"
             viewPort="0 0 120 120" version="1.1"
-            xmlns="http://www.w3.org/2000/svg"&gt;
+            xmlns="http://www.w3.org/2000/svg">
 
-            &lt;style type="text/css" &gt;
-                &lt;![CDATA[
+            <style type="text/css" >
+                <![CDATA[
                     rect.rectClass {
                         stroke: #000066;
                         fill:   #00cc00;
@@ -62,75 +68,72 @@ browser-compat: svg.attributes.style.class
                         stroke: #006600;
                         fill:   #cc0000;
                     }
-                ]]&gt;
-            &lt;/style&gt;
+                ]]>
+            </style>
 
-            &lt;rect class="rectClass" x="10" y="10" width="100" height="100"/&gt;
-            &lt;circle  class="circleClass"   cx="40" cy="50" r="26"/&gt;
-        &lt;/svg&gt;
-    &lt;/body&gt;
-&lt;/html&gt;</pre>
+            <rect class="rectClass" x="10" y="10" width="100" height="100"/>
+            <circle  class="circleClass"   cx="40" cy="50" r="26"/>
+        </svg>
+    </body>
+</html>
+```
 
-<h2 id="Elements">Elements</h2>
+## Elements
 
-<p>The following elements can use the <code>class</code> attribute:</p>
+The following elements can use the `class` attribute:
 
-<div class="threecolumns">
-<ul>
-	<li>{{ SVGElement("a") }}</li>
-	<li>{{ SVGElement("altGlyph") }}</li>
-	<li>{{ SVGElement("circle") }}</li>
-	<li>{{ SVGElement("clipPath") }}</li>
-	<li>{{ SVGElement("defs") }}</li>
-	<li>{{ SVGElement("desc") }}</li>
-	<li>{{ SVGElement("ellipse") }}</li>
-	<li>{{ SVGElement("feBlend") }}</li>
-	<li>{{ SVGElement("feColorMatrix") }}</li>
-	<li>{{ SVGElement("feComponentTransfer") }}</li>
-	<li>{{ SVGElement("feComposite") }}</li>
-	<li>{{ SVGElement("feConvolveMatrix") }}</li>
-	<li>{{ SVGElement("feDiffuseLighting") }}</li>
-	<li>{{ SVGElement("feDisplacementMap") }}</li>
-	<li>{{ SVGElement("feFlood") }}</li>
-	<li>{{ SVGElement("feGaussianBlur") }}</li>
-	<li>{{ SVGElement("feImage") }}</li>
-	<li>{{ SVGElement("feMerge") }}</li>
-	<li>{{ SVGElement("feMorphology") }}</li>
-	<li>{{ SVGElement("feOffset") }}</li>
-	<li>{{ SVGElement("feSpecularLighting") }}</li>
-	<li>{{ SVGElement("feTile") }}</li>
-	<li>{{ SVGElement("feTurbulence") }}</li>
-	<li>{{ SVGElement("filter") }}</li>
-	<li>{{ SVGElement("font") }}</li>
-	<li>{{ SVGElement("foreignObject") }}</li>
-	<li>{{ SVGElement("g") }}</li>
-	<li>{{ SVGElement("glyph") }}</li>
-	<li>{{ SVGElement("glyphRef") }}</li>
-	<li>{{ SVGElement("image") }}</li>
-	<li>{{ SVGElement("line") }}</li>
-	<li>{{ SVGElement("linearGradient") }}</li>
-	<li>{{ SVGElement("marker") }}</li>
-	<li>{{ SVGElement("mask") }}</li>
-	<li>{{ SVGElement("missing-glyph") }}</li>
-	<li>{{ SVGElement("path") }}</li>
-	<li>{{ SVGElement("pattern") }}</li>
-	<li>{{ SVGElement("polygon") }}</li>
-	<li>{{ SVGElement("polyline") }}</li>
-	<li>{{ SVGElement("radialGradient") }}</li>
-	<li>{{ SVGElement("rect") }}</li>
-	<li>{{ SVGElement("stop") }}</li>
-	<li>{{ SVGElement("svg") }}</li>
-	<li>{{ SVGElement("switch") }}</li>
-	<li>{{ SVGElement("symbol") }}</li>
-	<li>{{ SVGElement("text") }}</li>
-	<li>{{ SVGElement("textPath") }}</li>
-	<li>{{ SVGElement("title") }}</li>
-	<li>{{ SVGElement("tref") }}</li>
-	<li>{{ SVGElement("tspan") }}</li>
-	<li>{{ SVGElement("use") }}</li>
-</ul>
-</div>
+*   {{ SVGElement("a") }}
+*   {{ SVGElement("altGlyph") }}
+*   {{ SVGElement("circle") }}
+*   {{ SVGElement("clipPath") }}
+*   {{ SVGElement("defs") }}
+*   {{ SVGElement("desc") }}
+*   {{ SVGElement("ellipse") }}
+*   {{ SVGElement("feBlend") }}
+*   {{ SVGElement("feColorMatrix") }}
+*   {{ SVGElement("feComponentTransfer") }}
+*   {{ SVGElement("feComposite") }}
+*   {{ SVGElement("feConvolveMatrix") }}
+*   {{ SVGElement("feDiffuseLighting") }}
+*   {{ SVGElement("feDisplacementMap") }}
+*   {{ SVGElement("feFlood") }}
+*   {{ SVGElement("feGaussianBlur") }}
+*   {{ SVGElement("feImage") }}
+*   {{ SVGElement("feMerge") }}
+*   {{ SVGElement("feMorphology") }}
+*   {{ SVGElement("feOffset") }}
+*   {{ SVGElement("feSpecularLighting") }}
+*   {{ SVGElement("feTile") }}
+*   {{ SVGElement("feTurbulence") }}
+*   {{ SVGElement("filter") }}
+*   {{ SVGElement("font") }}
+*   {{ SVGElement("foreignObject") }}
+*   {{ SVGElement("g") }}
+*   {{ SVGElement("glyph") }}
+*   {{ SVGElement("glyphRef") }}
+*   {{ SVGElement("image") }}
+*   {{ SVGElement("line") }}
+*   {{ SVGElement("linearGradient") }}
+*   {{ SVGElement("marker") }}
+*   {{ SVGElement("mask") }}
+*   {{ SVGElement("missing-glyph") }}
+*   {{ SVGElement("path") }}
+*   {{ SVGElement("pattern") }}
+*   {{ SVGElement("polygon") }}
+*   {{ SVGElement("polyline") }}
+*   {{ SVGElement("radialGradient") }}
+*   {{ SVGElement("rect") }}
+*   {{ SVGElement("stop") }}
+*   {{ SVGElement("svg") }}
+*   {{ SVGElement("switch") }}
+*   {{ SVGElement("symbol") }}
+*   {{ SVGElement("text") }}
+*   {{ SVGElement("textPath") }}
+*   {{ SVGElement("title") }}
+*   {{ SVGElement("tref") }}
+*   {{ SVGElement("tspan") }}
+*   {{ SVGElement("use") }}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

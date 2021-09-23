@@ -9,93 +9,89 @@ tags:
   - Web
 browser-compat: svg.elements.svg
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <code>svg</code> element is a container that defines a new coordinate system and <a href="/en-US/docs/Web/SVG/Attribute/viewBox">viewport</a>. It is used as the outermost element of SVG documents, but it can also be used to embed an SVG fragment inside an SVG or HTML document.</p>
+The `svg` element is a container that defines a new coordinate system and [viewport](/en-US/docs/Web/SVG/Attribute/viewBox). It is used as the outermost element of SVG documents, but it can also be used to embed an SVG fragment inside an SVG or HTML document.
 
-<div class="note">
-<p><strong>Note:</strong> The <code>xmlns</code> attribute is only required on the outermost <code>svg</code> element of <em>SVG documents</em>. It is unnecessary for inner <code>svg</code> elements or inside HTML documents.</p>
-</div>
+> **Note:** The `xmlns` attribute is only required on the outermost `svg` element of *SVG documents*. It is unnecessary for inner `svg` elements or inside HTML documents.
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html; highlight[4]">&lt;svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg" stroke="red" fill="grey"&gt;
-  &lt;circle cx="50" cy="50" r="40" /&gt;
-  &lt;circle cx="150" cy="50" r="4" /&gt;
+```html
+<svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg" stroke="red" fill="grey">
+  <circle cx="50" cy="50" r="40" />
+  <circle cx="150" cy="50" r="4" />
 
-  &lt;svg viewBox="0 0 10 10" x="200" width="100"&gt;
-    &lt;circle cx="5" cy="5" r="4" /&gt;
-  &lt;/svg&gt;
-&lt;/svg&gt;</pre>
+  <svg viewBox="0 0 10 10" x="200" width="100">
+    <circle cx="5" cy="5" r="4" />
+  </svg>
+</svg>
+```
 
-<p>{{EmbedLiveSample('Example', 150, '100%')}}</p>
+{{EmbedLiveSample('Example', 150, '100%')}}
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<dl>
- <dt>{{SVGAttr("baseProfile")}} {{deprecated_inline}}</dt>
- <dd>The minimum SVG language profile that the document requires.<br>
- <small><em>Value type</em>: <strong>&lt;string&gt;</strong> ; <em>Default value</em>: none; <em>Animatable</em>: <strong>no</strong></small></dd>
- <dt>{{SVGAttr("contentScriptType")}} {{deprecated_inline}}</dt>
- <dd>The default scripting language used by the SVG fragment.<br>
- <small><em>Value type</em>: <strong>&lt;string&gt;</strong> ; <em>Default value</em>: <code>application/ecmascript</code>; <em>Animatable</em>: <strong>no</strong></small></dd>
- <dt>{{SVGAttr("contentStyleType")}} {{deprecated_inline}}</dt>
- <dd>The default style sheet language used by the SVG fragment.<br>
- <small><em>Value type</em>: <strong>&lt;string&gt;</strong> ; <em>Default value</em>: <code>text/css</code>; <em>Animatable</em>: <strong>no</strong></small></dd>
- <dt>{{SVGAttr("height")}}</dt>
- <dd>The displayed height of the rectangular viewport. (Not the height of its coordinate system.)<br>
- <small><em>Value type</em>: <a href="/en-US/docs/Web/SVG/Content_type#length"><strong>&lt;length&gt;</strong></a>|<a href="/en-US/docs/Web/SVG/Content_type#percentage"><strong>&lt;percentage&gt;</strong></a> ; <em>Default value</em>: <code>auto</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("preserveAspectRatio")}}</dt>
- <dd>How the <code>svg</code> fragment must be deformed if it is displayed with a different aspect ratio.<br>
- <small><em>Value type</em>: (<code>none</code>| <code>xMinYMin</code>| <code>xMidYMin</code>| <code>xMaxYMin</code>| <code>xMinYMid</code>| <code>xMidYMid</code>| <code>xMaxYMid</code>| <code>xMinYMax</code>| <code>xMidYMax</code>| <code>xMaxYMax</code>) (<code>meet</code>|<code>slice</code>)? ; <em>Default value</em>: <code>xMidYMid meet</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("version")}} {{deprecated_inline}}</dt>
- <dd>Which version of SVG is used for the inner content of the element.<br>
- <small><em>Value type</em>: <strong><a href="/en-US/docs/Web/SVG/Content_type#number">&lt;number&gt;</a></strong> ; <em>Default value</em>: none; <em>Animatable</em>: <strong>no</strong></small></dd>
- <dt>{{SVGAttr("viewBox")}}</dt>
- <dd>The SVG viewport coordinates for the current SVG fragment.<br>
- <small><em>Value type</em>: <strong><a href="/en-US/docs/Web/SVG/Content_type#list-of-ts">&lt;list-of-numbers&gt;</a></strong> ; <em>Default value</em>: none; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("width")}}</dt>
- <dd>The displayed width of the rectangular viewport. (Not the width of its coordinate system.)<br>
- <small><em>Value type</em>: <a href="/en-US/docs/Web/SVG/Content_type#length"><strong>&lt;length&gt;</strong></a>|<a href="/en-US/docs/Web/SVG/Content_type#percentage"><strong>&lt;percentage&gt;</strong></a> ; <em>Default value</em>: <code>auto</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("x")}}</dt>
- <dd>The displayed x coordinate of the svg container. No effect on outermost <code>svg</code> elements.<br>
- <small><em>Value type</em>: <a href="/en-US/docs/Web/SVG/Content_type#length"><strong>&lt;length&gt;</strong></a>|<a href="/en-US/docs/Web/SVG/Content_type#percentage"><strong>&lt;percentage&gt;</strong></a> ; <em>Default value</em>: <code>0</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("y")}}</dt>
- <dd>The displayed y coordinate of the svg container. No effect on outermost <code>svg</code> elements.<br>
- <small><em>Value type</em>: <a href="/en-US/docs/Web/SVG/Content_type#length"><strong>&lt;length&gt;</strong></a>|<a href="/en-US/docs/Web/SVG/Content_type#percentage"><strong>&lt;percentage&gt;</strong></a> ; <em>Default value</em>: <code>0</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
-</dl>
+*   {{SVGAttr("baseProfile")}} {{deprecated_inline}}
+    *   : The minimum SVG language profile that the document requires.
+        *Value type*: **\<string>** ; *Default value*: none; *Animatable*: **no**
+*   {{SVGAttr("contentScriptType")}} {{deprecated_inline}}
+    *   : The default scripting language used by the SVG fragment.
+        *Value type*: **\<string>** ; *Default value*: `application/ecmascript`; *Animatable*: **no**
+*   {{SVGAttr("contentStyleType")}} {{deprecated_inline}}
+    *   : The default style sheet language used by the SVG fragment.
+        *Value type*: **\<string>** ; *Default value*: `text/css`; *Animatable*: **no**
+*   {{SVGAttr("height")}}
+    *   : The displayed height of the rectangular viewport. (Not the height of its coordinate system.)
+        *Value type*: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage) ; *Default value*: `auto`; *Animatable*: **yes**
+*   {{SVGAttr("preserveAspectRatio")}}
+    *   : How the `svg` fragment must be deformed if it is displayed with a different aspect ratio.
+        *Value type*: (`none`| `xMinYMin`| `xMidYMin`| `xMaxYMin`| `xMinYMid`| `xMidYMid`| `xMaxYMid`| `xMinYMax`| `xMidYMax`| `xMaxYMax`) (`meet`|`slice`)? ; *Default value*: `xMidYMid meet`; *Animatable*: **yes**
+*   {{SVGAttr("version")}} {{deprecated_inline}}
+    *   : Which version of SVG is used for the inner content of the element.
+        *Value type*: **[\<number>](/en-US/docs/Web/SVG/Content_type#number)** ; *Default value*: none; *Animatable*: **no**
+*   {{SVGAttr("viewBox")}}
+    *   : The SVG viewport coordinates for the current SVG fragment.
+        *Value type*: **[\<list-of-numbers>](/en-US/docs/Web/SVG/Content_type#list-of-ts)** ; *Default value*: none; *Animatable*: **yes**
+*   {{SVGAttr("width")}}
+    *   : The displayed width of the rectangular viewport. (Not the width of its coordinate system.)
+        *Value type*: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage) ; *Default value*: `auto`; *Animatable*: **yes**
+*   {{SVGAttr("x")}}
+    *   : The displayed x coordinate of the svg container. No effect on outermost `svg` elements.
+        *Value type*: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage) ; *Default value*: `0`; *Animatable*: **yes**
+*   {{SVGAttr("y")}}
+    *   : The displayed y coordinate of the svg container. No effect on outermost `svg` elements.
+        *Value type*: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage) ; *Default value*: `0`; *Animatable*: **yes**
 
-<div class="note">
-<p><strong>Note:</strong> Starting with SVG2, <code>x</code>, <code>y</code>, <code>width</code>, and <code>height</code> are <em>Geometry Properties</em>, meaning these attributes can also be used as CSS properties.</p>
-</div>
+> **Note:** Starting with SVG2, `x`, `y`, `width`, and `height` are *Geometry Properties*, meaning these attributes can also be used as CSS properties.
 
-<h3 id="Global_attributes">Global attributes</h3>
+### Global attributes
 
-<dl>
- <dt><a href="/en-US/docs/Web/SVG/Attribute/Core">Core Attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}</small></dd>
- <dt><a href="/en-US/docs/Web/SVG/Attribute/Styling">Styling Attributes</a></dt>
- <dd><small>{{SVGAttr('class')}}, {{SVGAttr('style')}}</small></dd>
- <dt><a href="/en-US/docs/Web/SVG/Attribute/Conditional_Processing">Conditional Processing Attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}</small></dd>
- <dt>Event Attributes</dt>
- <dd><small><a href="/en-US/docs/Web/SVG/Attribute/Events#global_event_attributes">Global event attributes</a>, <a href="/en-US/docs/Web/SVG/Attribute/Events#graphical_event_attributes">Graphical event attributes</a>, <a href="/en-US/docs/Web/SVG/Attribute/Events#document_event_attributes">Document event attributes</a>, <a href="/en-US/docs/Web/SVG/Attribute/Events#document_element_event_attributes">Document element event attributes</a></small></dd>
- <dt><a href="/en-US/docs/Web/SVG/Attribute/Presentation">Presentation Attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}</small></dd>
- <dt>Aria Attributes</dt>
- <dd><small><code>aria-activedescendant</code>, <code>aria-atomic</code>, <code>aria-autocomplete</code>, <code>aria-busy</code>, <code>aria-checked</code>, <code>aria-colcount</code>, <code>aria-colindex</code>, <code>aria-colspan</code>, <code>aria-controls</code>, <code>aria-current</code>, <code>aria-describedby</code>, <code>aria-details</code>, <code>aria-disabled</code>, <code>aria-dropeffect</code>, <code>aria-errormessage</code>, <code>aria-expanded</code>, <code>aria-flowto</code>, <code>aria-grabbed</code>, <code>aria-haspopup</code>, <code>aria-hidden</code>, <code>aria-invalid</code>, <code>aria-keyshortcuts</code>, <code>aria-label</code>, <code>aria-labelledby</code>, <code>aria-level</code>, <code>aria-live</code>, <code>aria-modal</code>, <code>aria-multiline</code>, <code>aria-multiselectable</code>, <code>aria-orientation</code>, <code>aria-owns</code>, <code>aria-placeholder</code>, <code>aria-posinset</code>, <code>aria-pressed</code>, <code>aria-readonly</code>, <code>aria-relevant</code>, <code>aria-required</code>, <code>aria-roledescription</code>, <code>aria-rowcount</code>, <code>aria-rowindex</code>, <code>aria-rowspan</code>, <code>aria-selected</code>, <code>aria-setsize</code>, <code>aria-sort</code>, <code>aria-valuemax</code>, <code>aria-valuemin</code>, <code>aria-valuenow</code>, <code>aria-valuetext</code>, <code>role</code></small></dd>
-</dl>
+*   [Core Attributes](/en-US/docs/Web/SVG/Attribute/Core)
+    *   : Most notably: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}
+*   [Styling Attributes](/en-US/docs/Web/SVG/Attribute/Styling)
+    *   : {{SVGAttr('class')}}, {{SVGAttr('style')}}
+*   [Conditional Processing Attributes](/en-US/docs/Web/SVG/Attribute/Conditional_Processing)
+    *   : Most notably: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
+*   Event Attributes
+    *   : [Global event attributes](/en-US/docs/Web/SVG/Attribute/Events#global_event_attributes), [Graphical event attributes](/en-US/docs/Web/SVG/Attribute/Events#graphical_event_attributes), [Document event attributes](/en-US/docs/Web/SVG/Attribute/Events#document_event_attributes), [Document element event attributes](/en-US/docs/Web/SVG/Attribute/Events#document_element_event_attributes)
+*   [Presentation Attributes](/en-US/docs/Web/SVG/Attribute/Presentation)
+    *   : Most notably: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
+*   Aria Attributes
+    *   : `aria-activedescendant`, `aria-atomic`, `aria-autocomplete`, `aria-busy`, `aria-checked`, `aria-colcount`, `aria-colindex`, `aria-colspan`, `aria-controls`, `aria-current`, `aria-describedby`, `aria-details`, `aria-disabled`, `aria-dropeffect`, `aria-errormessage`, `aria-expanded`, `aria-flowto`, `aria-grabbed`, `aria-haspopup`, `aria-hidden`, `aria-invalid`, `aria-keyshortcuts`, `aria-label`, `aria-labelledby`, `aria-level`, `aria-live`, `aria-modal`, `aria-multiline`, `aria-multiselectable`, `aria-orientation`, `aria-owns`, `aria-placeholder`, `aria-posinset`, `aria-pressed`, `aria-readonly`, `aria-relevant`, `aria-required`, `aria-roledescription`, `aria-rowcount`, `aria-rowindex`, `aria-rowspan`, `aria-selected`, `aria-setsize`, `aria-sort`, `aria-valuemax`, `aria-valuemin`, `aria-valuenow`, `aria-valuetext`, `role`
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

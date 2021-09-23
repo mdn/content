@@ -6,610 +6,522 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.conditional_processing.requiredFeatures
 ---
-<div>{{SVGRef}}{{Deprecated_Header}}</div>
+{{SVGRef}}{{Deprecated_Header}}
 
-<p>The <code><strong>requiredFeatures</strong></code> attribute takes a list of feature strings, with the individual strings separated by white space. It determines whether or not all of the named features are supported by the browser; if all of them are supported, the attribute evaluates to <code>true</code> end the element is rendered; otherwise, the attribute evaluates to <code>false</code> and the current element and its children are skipped and thus will not be rendered. This provides a way to design SVG that gracefully falls back when features aren't available.</p>
+The **`requiredFeatures`** attribute takes a list of feature strings, with the individual strings separated by white space. It determines whether or not all of the named features are supported by the browser; if all of them are supported, the attribute evaluates to `true` end the element is rendered; otherwise, the attribute evaluates to `false` and the current element and its children are skipped and thus will not be rendered. This provides a way to design SVG that gracefully falls back when features aren't available.
 
-<p>If the attribute is not present, then its implicit evaluated value is <code>true</code>. If a null string or empty string value is given to attribute <code>requiredFeatures</code>, the attribute is evaluate to <code>false</code>.</p>
+If the attribute is not present, then its implicit evaluated value is `true`. If a null string or empty string value is given to attribute `requiredFeatures`, the attribute is evaluate to `false`.
 
-<p><code>requiredFeatures</code> is often used in conjunction with the {{SVGElement("switch")}} element. If <code>requiredFeatures</code> is used in other situations, it represents a simple switch on the given element whether to render the element or not.</p>
+`requiredFeatures` is often used in conjunction with the {{SVGElement("switch")}} element. If `requiredFeatures` is used in other situations, it represents a simple switch on the given element whether to render the element or not.
 
-<p>To detect availability of an SVG feature from script, there is the (also deprecated) {{domxref("DOMImplementation.hasFeature()")}} method.</p>
+To detect availability of an SVG feature from script, there is the (also deprecated) {{domxref("DOMImplementation.hasFeature()")}} method.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("a")}}</li>
-  <li>{{SVGElement("altGlyph")}}</li>
-  <li>{{SVGElement("animate")}}</li>
-  <li>{{SVGElement("animateColor")}}</li>
-  <li>{{SVGElement("animateMotion")}}</li>
-  <li>{{SVGElement("animateTransform")}}</li>
-  <li>{{SVGElement("circle")}}</li>
-  <li>{{SVGElement("clipPath")}}</li>
-  <li>{{SVGElement("cursor")}}</li>
-  <li>{{SVGElement("defs")}}</li>
-  <li>{{SVGElement("ellipse")}}</li>
-  <li>{{SVGElement("foreignObject")}}</li>
-  <li>{{SVGElement("g")}}</li>
-  <li>{{SVGElement("image")}}</li>
-  <li>{{SVGElement("line")}}</li>
-  <li>{{SVGElement("mask")}}</li>
-  <li>{{SVGElement("path")}}</li>
-  <li>{{SVGElement("pattern")}}</li>
-  <li>{{SVGElement("polygon")}}</li>
-  <li>{{SVGElement("polyline")}}</li>
-  <li>{{SVGElement("rect")}}</li>
-  <li>{{SVGElement("set")}}</li>
-  <li>{{SVGElement("svg")}}</li>
-  <li>{{SVGElement("switch")}}</li>
-  <li>{{SVGElement("text")}}</li>
-  <li>{{SVGElement("textPath")}}</li>
-  <li>{{SVGElement("tref")}}</li>
-  <li>{{SVGElement("tspan")}}</li>
-  <li>{{SVGElement("use")}}</li>
-</ul>
+*   {{SVGElement("a")}}
+*   {{SVGElement("altGlyph")}}
+*   {{SVGElement("animate")}}
+*   {{SVGElement("animateColor")}}
+*   {{SVGElement("animateMotion")}}
+*   {{SVGElement("animateTransform")}}
+*   {{SVGElement("circle")}}
+*   {{SVGElement("clipPath")}}
+*   {{SVGElement("cursor")}}
+*   {{SVGElement("defs")}}
+*   {{SVGElement("ellipse")}}
+*   {{SVGElement("foreignObject")}}
+*   {{SVGElement("g")}}
+*   {{SVGElement("image")}}
+*   {{SVGElement("line")}}
+*   {{SVGElement("mask")}}
+*   {{SVGElement("path")}}
+*   {{SVGElement("pattern")}}
+*   {{SVGElement("polygon")}}
+*   {{SVGElement("polyline")}}
+*   {{SVGElement("rect")}}
+*   {{SVGElement("set")}}
+*   {{SVGElement("svg")}}
+*   {{SVGElement("switch")}}
+*   {{SVGElement("text")}}
+*   {{SVGElement("textPath")}}
+*   {{SVGElement("tref")}}
+*   {{SVGElement("tspan")}}
+*   {{SVGElement("use")}}
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html, body, svg {
+```css hidden
+html, body, svg {
   height: 100%;
 }
 
 text {
   fill: white;
 }
-</pre>
+```
 
-<pre class="brush: html; highlight[4,7]">&lt;svg viewBox="0 0 250 45" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;g&gt;
-    &lt;rect fill="forestgreen" x="10" y="10" height="25" width="230" /&gt;
-    &lt;text x="20" y="27"&gt;requiredFeatures supported&lt;/text&gt;
-  &lt;/g&gt;
-  &lt;g requiredFeatures=""&gt;
-    &lt;rect fill="crimson" x="10" y="10" height="25" width="230" /&gt;
-    &lt;text x="20" y="27"&gt;requiredFeatures not supported&lt;/text&gt;
-  &lt;/g&gt;
-&lt;/svg&gt;</pre>
+```html
+<svg viewBox="0 0 250 45" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <rect fill="forestgreen" x="10" y="10" height="25" width="230" />
+    <text x="20" y="27">requiredFeatures supported</text>
+  </g>
+  <g requiredFeatures="">
+    <rect fill="crimson" x="10" y="10" height="25" width="230" />
+    <text x="20" y="27">requiredFeatures not supported</text>
+  </g>
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", "250", "100")}}</p>
+{{EmbedLiveSample("Example", "250", "100")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code><a href="/en-US/docs/Web/SVG/Content_type#list-of-ts">&lt;list-of-features&gt;</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>true</code> if not defined, <code>false</code> if null or empty string as value</td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>No</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/SVG/Content_type#list-of-ts"
+            >&#x3C;list-of-features></a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td>
+        <code>true</code> if not defined, <code>false</code> if null or empty
+        string as value
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>No</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt><code>&lt;list-of-features&gt;</code></dt>
- <dd>This is a list of feature strings, separated using white space. Determines whether all of the named <em>features</em> are supported by the browser. See {{anch("Feature strings")}} below for a list of allowed values.</dd>
-</dl>
+*   `<list-of-features>`
+    *   : This is a list of feature strings, separated using white space. Determines whether all of the named *features* are supported by the browser. See {{anch("Feature strings")}} below for a list of allowed values.
 
-<h2 id="Feature_strings">Feature strings</h2>
+## Feature strings
 
-<p>The following are the feature strings for the <code>requiredFeatures</code> attribute. These same feature strings apply to the <a href="/en-US/docs/DOM/DOMImplementation.hasFeature">hasFeature</a> method call that is part of the SVG DOM's support for the {{domxref("DOMImplementation")}} interface. In some cases the feature strings map directly to a set of attributes, properties or elements, in others they represent some functionality of the browser. Note that the format and naming for feature strings changed from SVG 1.0 to SVG 1.1. The SVG 1.0 feature strings are not listed here but can be found in the <a href="https://www.w3.org/TR/SVG/feature.html">SVG Specification</a>. Some browser support SVG 1.0 Feature strings for compatibility reasons. However, the SVG 1.0 feature strings are considered deprecated.</p>
+The following are the feature strings for the `requiredFeatures` attribute. These same feature strings apply to the [hasFeature](/en-US/docs/DOM/DOMImplementation.hasFeature) method call that is part of the SVG DOM's support for the {{domxref("DOMImplementation")}} interface. In some cases the feature strings map directly to a set of attributes, properties or elements, in others they represent some functionality of the browser. Note that the format and naming for feature strings changed from SVG 1.0 to SVG 1.1. The SVG 1.0 feature strings are not listed here but can be found in the [SVG Specification](https://www.w3.org/TR/SVG/feature.html). Some browser support SVG 1.0 Feature strings for compatibility reasons. However, the SVG 1.0 feature strings are considered deprecated.
 
-<dl>
- <dt>http://www.w3.org/TR/SVG11/feature#SVG</dt>
- <dd>
- <p>At least one of the following feature is supported:</p>
+*   http\://www\.w3.org/TR/SVG11/feature#SVG
+    *   : At least one of the following feature is supported:
 
- <ul>
-  <li><em>http://www.w3.org/TR/SVG11/feature#SVG-static</em></li>
-  <li><em>http://www.w3.org/TR/SVG11/feature#SVG-animation</em></li>
-  <li><em>http://www.w3.org/TR/SVG11/feature#SVG-dynamic</em></li>
-  <li><em>http://www.w3.org/TR/SVG11/feature#SVGDOM</em></li>
- </ul>
- </dd>
- <dt>http://www.w3.org/TR/SVG11/feature#SVGDOM</dt>
- <dd>
- <p>At least one of the following feature is supported:</p>
+        *   *http\://www\.w3.org/TR/SVG11/feature#SVG-static*
+        *   *http\://www\.w3.org/TR/SVG11/feature#SVG-animation*
+        *   *http\://www\.w3.org/TR/SVG11/feature#SVG-dynamic*
+        *   *http\://www\.w3.org/TR/SVG11/feature#SVGDOM*
+*   http\://www\.w3.org/TR/SVG11/feature#SVGDOM
+    *   : At least one of the following feature is supported:
 
- <ul>
-  <li><em>http://www.w3.org/TR/SVG11/feature#SVGDOM-static</em></li>
-  <li><em>http://www.w3.org/TR/SVG11/feature#SVGDOM-animation</em></li>
-  <li><em>http://www.w3.org/TR/SVG11/feature#SVGDOM-dynamic</em></li>
- </ul>
- </dd>
- <dt>http://www.w3.org/TR/SVG11/feature#SVG-static</dt>
- <dd>
- <p>The browser supports all the following features:</p>
+        *   *http\://www\.w3.org/TR/SVG11/feature#SVGDOM-static*
+        *   *http\://www\.w3.org/TR/SVG11/feature#SVGDOM-animation*
+        *   *http\://www\.w3.org/TR/SVG11/feature#SVGDOM-dynamic*
+*   http\://www\.w3.org/TR/SVG11/feature#SVG-static
+    *   : The browser supports all the following features:
 
- <ul>
-  <li><em>http://www.w3.org/TR/SVG11/feature#CoreAttribute</em></li>
-  <li><em>http://www.w3.org/TR/SVG11/feature#Structure</em></li>
-  <li><em>http://www.w3.org/TR/SVG11/feature#ContainerAttribute</em></li>
-  <li><em>http://www.w3.org/TR/SVG11/feature#ConditionalProcessing</em></li>
-  <li><em>http://www.w3.org/TR/SVG11/feature#Image</em></li>
-  <li><em>http://www.w3.org/TR/SVG11/feature#Style</em></li>
-  <li><em>http://www.w3.org/TR/SVG11/feature#ViewportAttribute</em></li>
-  <li><em>http://www.w3.org/TR/SVG11/feature#Shape</em></li>
-  <li><em>http://www.w3.org/TR/SVG11/feature#Text</em></li>
-  <li><em>http://www.w3.org/TR/SVG11/feature#PaintAttribute</em></li>
-  <li><em>http://www.w3.org/TR/SVG11/feature#OpacityAttribute</em></li>
-  <li><em>http://www.w3.org/TR/SVG11/feature#GraphicsAttribute</em></li>
-  <li><em>http://www.w3.org/TR/SVG11/feature#Marker</em></li>
-  <li><em>http://www.w3.org/TR/SVG11/feature#ColorProfile</em></li>
-  <li><em>http://www.w3.org/TR/SVG11/feature#Gradient</em></li>
-  <li><em>http://www.w3.org/TR/SVG11/feature#Pattern</em></li>
-  <li><em>http://www.w3.org/TR/SVG11/feature#Clip</em></li>
-  <li><em>http://www.w3.org/TR/SVG11/feature#Mask</em></li>
-  <li><em>http://www.w3.org/TR/SVG11/feature#Filter</em></li>
-  <li><em>http://www.w3.org/TR/SVG11/feature#XlinkAttribute</em></li>
-  <li><em>http://www.w3.org/TR/SVG11/feature#Font</em></li>
-  <li><em>http://www.w3.org/TR/SVG11/feature#Extensibility</em></li>
- </ul>
- </dd>
- <dt>http://www.w3.org/TR/SVG11/feature#SVGDOM-static</dt>
- <dd>
- <p>The browser supports all of the DOM interfaces and methods that correspond to the language features for <em>http://www.w3.org/TR/SVG11/feature#SVG-static</em>.</p>
- </dd>
- <dt>http://www.w3.org/TR/SVG11/feature#SVG-animation</dt>
- <dd>
- <p>The browser supports all of the language features from <em>http://www.w3.org/TR/SVG11/feature#SVG-static</em> plus the feature <em>http://www.w3.org/TR/SVG11/feature#Animation</em>.</p>
- </dd>
- <dt>http://www.w3.org/TR/SVG11/feature#SVGDOM-animation</dt>
- <dd>
- <p>The browser supports all of the DOM interfaces and methods that correspond to the language features for <em>http://www.w3.org/TR/SVG11/feature#SVG-animation.</em></p>
- </dd>
- <dt>http://www.w3.org/TR/SVG11/feature#SVG-dynamic</dt>
- <dd>
- <p>The browser supports all of the language features from <em>http://www.w3.org/TR/SVG11/feature#SVG-animation</em> plus the following features:</p>
+        *   *http\://www\.w3.org/TR/SVG11/feature#CoreAttribute*
+        *   *http\://www\.w3.org/TR/SVG11/feature#Structure*
+        *   *http\://www\.w3.org/TR/SVG11/feature#ContainerAttribute*
+        *   *http\://www\.w3.org/TR/SVG11/feature#ConditionalProcessing*
+        *   *http\://www\.w3.org/TR/SVG11/feature#Image*
+        *   *http\://www\.w3.org/TR/SVG11/feature#Style*
+        *   *http\://www\.w3.org/TR/SVG11/feature#ViewportAttribute*
+        *   *http\://www\.w3.org/TR/SVG11/feature#Shape*
+        *   *http\://www\.w3.org/TR/SVG11/feature#Text*
+        *   *http\://www\.w3.org/TR/SVG11/feature#PaintAttribute*
+        *   *http\://www\.w3.org/TR/SVG11/feature#OpacityAttribute*
+        *   *http\://www\.w3.org/TR/SVG11/feature#GraphicsAttribute*
+        *   *http\://www\.w3.org/TR/SVG11/feature#Marker*
+        *   *http\://www\.w3.org/TR/SVG11/feature#ColorProfile*
+        *   *http\://www\.w3.org/TR/SVG11/feature#Gradient*
+        *   *http\://www\.w3.org/TR/SVG11/feature#Pattern*
+        *   *http\://www\.w3.org/TR/SVG11/feature#Clip*
+        *   *http\://www\.w3.org/TR/SVG11/feature#Mask*
+        *   *http\://www\.w3.org/TR/SVG11/feature#Filter*
+        *   *http\://www\.w3.org/TR/SVG11/feature#XlinkAttribute*
+        *   *http\://www\.w3.org/TR/SVG11/feature#Font*
+        *   *http\://www\.w3.org/TR/SVG11/feature#Extensibility*
+*   http\://www\.w3.org/TR/SVG11/feature#SVGDOM-static
+    *   : The browser supports all of the DOM interfaces and methods that correspond to the language features for *http\://www\.w3.org/TR/SVG11/feature#SVG-static*.
+*   http\://www\.w3.org/TR/SVG11/feature#SVG-animation
+    *   : The browser supports all of the language features from *http\://www\.w3.org/TR/SVG11/feature#SVG-static* plus the feature *http\://www\.w3.org/TR/SVG11/feature#Animation*.
+*   http\://www\.w3.org/TR/SVG11/feature#SVGDOM-animation
+    *   : The browser supports all of the DOM interfaces and methods that correspond to the language features for *http\://www\.w3.org/TR/SVG11/feature#SVG-animation.*
+*   http\://www\.w3.org/TR/SVG11/feature#SVG-dynamic
+    *   : The browser supports all of the language features from *http\://www\.w3.org/TR/SVG11/feature#SVG-animation* plus the following features:
 
- <ul>
-  <li><em>http://www.w3.org/TR/SVG11/feature#Hyperlinking</em></li>
-  <li><em>http://www.w3.org/TR/SVG11/feature#Scripting</em></li>
-  <li><em>http://www.w3.org/TR/SVG11/feature#View</em></li>
-  <li><em>http://www.w3.org/TR/SVG11/feature#Cursor</em></li>
-  <li><em>http://www.w3.org/TR/SVG11/feature#GraphicalEventsAttribute</em></li>
-  <li><em>http://www.w3.org/TR/SVG11/feature#DocumentEventsAttribute</em></li>
-  <li><em>http://www.w3.org/TR/SVG11/feature#AnimationEventsAttribute</em></li>
- </ul>
- </dd>
- <dt>http://www.w3.org/TR/SVG11/feature#SVGDOM-dynamic</dt>
- <dd>
- <p>The browser supports all of the DOM interfaces and methods that correspond to the language features for <em>http://www.w3.org/TR/SVG11/feature#SVG-dynamic</em>.</p>
- </dd>
- <dt>http://www.w3.org/TR/SVG11/feature#CoreAttribute</dt>
- <dd>
- <p>The browser supports the {{SVGAttr("id")}}, {{SVGAttr("xml:base")}}, {{SVGAttr("xml:lang")}} and {{SVGAttr("xml:space")}} attributes</p>
- </dd>
- <dt>http://www.w3.org/TR/SVG11/feature#Structure</dt>
- <dd>
- <p>The browser supports {{SVGElement("svg")}}, {{SVGElement("g")}}, {{SVGElement("defs")}}, {{SVGElement("desc")}}, {{SVGElement("title")}}, {{SVGElement("metadata")}}, {{SVGElement("symbol")}} and {{SVGElement("use")}} elements.</p>
- </dd>
- <dt>http://www.w3.org/TR/SVG11/feature#BasicStructure</dt>
- <dd>
- <p>The browser supports {{SVGElement("svg")}}, {{SVGElement("g")}}, {{SVGElement("defs")}}, {{SVGElement("desc")}}, {{SVGElement("title")}}, {{SVGElement("metadata")}} and {{SVGElement("use")}} elements.</p>
- </dd>
- <dt>http://www.w3.org/TR/SVG11/feature#ContainerAttribute</dt>
- <dd>
- <p>The browser supports the {{SVGAttr("enable-background")}} attribute</p>
- </dd>
- <dt>http://www.w3.org/TR/SVG11/feature#ConditionalProcessing</dt>
- <dd>
- <p>The browser supports the {{SVGElement("switch")}} element, and the {{SVGAttr("requiredFeatures")}}, {{SVGAttr("requiredExtensions")}}, {{SVGAttr("systemLanguage")}} attributes</p>
- </dd>
- <dt>http://www.w3.org/TR/SVG11/feature#Image</dt>
- <dd>
- <p>The browser supports the {{SVGElement("image")}} element.</p>
- </dd>
- <dt>http://www.w3.org/TR/SVG11/feature#Style</dt>
- <dd>
- <p>The browser supports the {{SVGElement("style")}} element.</p>
- </dd>
- <dt>http://www.w3.org/TR/SVG11/feature#ViewportAttribute</dt>
- <dd>
- <p>The browser supports the {{SVGAttr("clip")}} and {{SVGAttr("overflow")}} attributes.</p>
- </dd>
- <dt>http://www.w3.org/TR/SVG11/feature#Shape</dt>
- <dd>
- <p>The browser supports the {{SVGElement("rect")}}, {{SVGElement("circle")}}, {{SVGElement("line")}}, {{SVGElement("polyline")}}, {{SVGElement("polygon")}}, {{SVGElement("ellipse")}} and {{SVGElement("path")}} elements.</p>
- </dd>
- <dt>http://www.w3.org/TR/SVG11/feature#Text</dt>
- <dd>
- <p>The browser supports the {{SVGElement("text")}}, {{SVGElement("tspan")}}, {{SVGElement("tref")}}, {{SVGElement("textPath")}}, {{SVGElement("altGlyph")}}, {{SVGElement("altGlyphDef")}}, {{SVGElement("altGlyphItem")}} and {{SVGElement("glyphRef")}} elements.</p>
- </dd>
- <dt>http://www.w3.org/TR/SVG11/feature#BasicText</dt>
- <dd>
- <p>The browser supports the {{SVGElement("text")}} element</p>
- </dd>
- <dt>http://www.w3.org/TR/SVG11/feature#PaintAttribute</dt>
- <dd>
- <p>The browser supports the {{SVGAttr("color")}}, {{SVGAttr("fill")}}, {{SVGAttr("fill-rule")}}, {{SVGAttr("stroke")}}, {{SVGAttr("stroke-dasharray")}}, {{SVGAttr("stroke-dashoffset")}}, {{SVGAttr("stroke-linecap")}}, {{SVGAttr("stroke-linejoin")}}, {{SVGAttr("stroke-miterlimit")}}, {{SVGAttr("stroke-width")}}, {{SVGAttr("color-interpolation")}} and {{SVGAttr("color-rendering")}} attributes</p>
- </dd>
- <dt>http://www.w3.org/TR/SVG11/feature#BasicPaintAttribute</dt>
- <dd>
- <p>The browser supports the {{SVGAttr("color")}}, {{SVGAttr("fill")}}, {{SVGAttr("fill-rule")}}, {{SVGAttr("stroke")}}, {{SVGAttr("stroke-dasharray")}}, {{SVGAttr("stroke-dashoffset")}}, {{SVGAttr("stroke-linecap")}}, {{SVGAttr("stroke-linejoin")}}, {{SVGAttr("stroke-miterlimit")}}, {{SVGAttr("stroke-width")}} and {{SVGAttr("color-rendering")}} attributes</p>
- </dd>
- <dt>http://www.w3.org/TR/SVG11/feature#OpacityAttribute</dt>
- <dd>
- <p>The browser supports the {{SVGAttr("opacity")}}, {{SVGAttr("stroke-opacity")}} and {{SVGAttr("fill-opacity")}} attributes</p>
- </dd>
- <dt>http://www.w3.org/TR/SVG11/feature#GraphicsAttribute</dt>
- <dd>
- <p>The browser supports the {{SVGAttr("display")}}, {{SVGAttr("image-rendering")}}, {{SVGAttr("pointer-events")}}, {{SVGAttr("shape-rendering")}}, {{SVGAttr("text-rendering")}} and {{SVGAttr("visibility")}} attributes</p>
- </dd>
- <dt>http://www.w3.org/TR/SVG11/feature#BasicGraphicsAttribute</dt>
- <dd>
- <p>The browser supports the {{SVGAttr("display")}} and {{SVGAttr("visibility")}} attributes</p>
- </dd>
- <dt>http://www.w3.org/TR/SVG11/feature#Marker</dt>
- <dd>
- <p>The browser supports the {{SVGElement("marker")}} element</p>
- </dd>
- <dt>http://www.w3.org/TR/SVG11/feature#Gradient</dt>
- <dd>
- <p>The browser supports the {{SVGElement("linearGradient")}}, {{SVGElement("radialGradient")}} and {{SVGElement("stop")}} elements</p>
- </dd>
- <dt>http://www.w3.org/TR/SVG11/feature#Pattern</dt>
- <dd>
- <p>The browser supports the {{SVGElement("pattern")}} element</p>
- </dd>
- <dt>http://www.w3.org/TR/SVG11/feature#Clip</dt>
- <dd>
- <p>The browser supports the {{SVGElement("clipPath")}} element and the {{SVGAttr("clip-path")}}, {{SVGAttr("clip-rule")}} attributes</p>
- </dd>
- <dt>http://www.w3.org/TR/SVG11/feature#BasicClip</dt>
- <dd>
- <p>The browser supports the {{SVGElement("clipPath")}} element and the {{SVGAttr("clip-path")}} attribute</p>
- </dd>
- <dt>http://www.w3.org/TR/SVG11/feature#Mask</dt>
- <dd>
- <p>The browser supports the {{SVGElement("mask")}} element</p>
- </dd>
- <dt>http://www.w3.org/TR/SVG11/feature#Filter</dt>
- <dd>
- <p>The browser supports the {{SVGElement("filter")}}, {{SVGElement("feBlend")}}, {{SVGElement("feColorMatrix")}}, {{SVGElement("feComponentTransfer")}}, {{SVGElement("feComposite")}}, {{SVGElement("feConvolveMatrix")}}, {{SVGElement("feDiffuseLighting")}}, {{SVGElement("feDisplacementMap")}}, {{SVGElement("feFlood")}}, {{SVGElement("feGaussianBlur")}}, {{SVGElement("feImage")}}, {{SVGElement("feMerge")}}, {{SVGElement("feMergeNode")}}, {{SVGElement("feMorphology")}}, {{SVGElement("feOffset")}}, {{SVGElement("feSpecularLighting")}}, {{SVGElement("feTile")}}, {{SVGElement("feDistantLight")}}, {{SVGElement("fePointLight")}}, {{SVGElement("feSpotLight")}}, {{SVGElement("feFuncR")}}, {{SVGElement("feFuncG")}}, {{SVGElement("feFuncB")}} and {{SVGElement("feFuncA")}} elements</p>
- </dd>
- <dt>http://www.w3.org/TR/SVG11/feature#BasicFilter</dt>
- <dd>
- <p>The browser supports the {{SVGElement("filter")}}, {{SVGElement("feBlend")}}, {{SVGElement("feColorMatrix")}}, {{SVGElement("feComponentTransfer")}}, {{SVGElement("feComposite")}}, {{SVGElement("feFlood")}}, {{SVGElement("feGaussianBlur")}}, {{SVGElement("feImage")}}, {{SVGElement("feMerge")}}, {{SVGElement("feMergeNode")}}, {{SVGElement("feOffset")}}, {{SVGElement("feTile")}}, {{SVGElement("feFuncR")}}, {{SVGElement("feFuncG")}}, {{SVGElement("feFuncB")}} and {{SVGElement("feFuncA")}} elements</p>
- </dd>
- <dt>http://www.w3.org/TR/SVG11/feature#DocumentEventsAttribute</dt>
- <dd>
- <p>The browser supports the {{SVGAttr("onunload")}}, {{SVGAttr("onabort")}}, {{SVGAttr("onerror")}}, {{SVGAttr("onresize")}}, {{SVGAttr("onscroll")}} and {{SVGAttr("onzoom")}} attributes</p>
- </dd>
- <dt>http://www.w3.org/TR/SVG11/feature#GraphicalEventsAttribute</dt>
- <dd>
- <p>The browser supports the {{SVGAttr("onfocusin")}}, {{SVGAttr("onfocusout")}}, {{SVGAttr("onactivate")}}, {{SVGAttr("onclick")}}, {{SVGAttr("onmousedown")}}, {{SVGAttr("onmouseup")}}, {{SVGAttr("onmouseover")}}, {{SVGAttr("onmousemove")}}, {{SVGAttr("onmouseout")}} and {{SVGAttr("onload")}} attributes</p>
- </dd>
- <dt>http://www.w3.org/TR/SVG11/feature#AnimationEventsAttribute</dt>
- <dd>
- <p>The browser supports the {{SVGAttr("onbegin")}}, {{SVGAttr("onend")}}, {{SVGAttr("onrepeat")}} and {{SVGAttr("onload")}} attributes</p>
- </dd>
- <dt>http://www.w3.org/TR/SVG11/feature#Cursor</dt>
- <dd>
- <p>The browser supports the {{SVGElement("cursor")}} element</p>
- </dd>
- <dt>http://www.w3.org/TR/SVG11/feature#Hyperlinking</dt>
- <dd>
- <p>The browser supports the {{SVGElement("a")}} element</p>
- </dd>
- <dt>http://www.w3.org/TR/SVG11/feature#XlinkAttribute</dt>
- <dd>
- <p>The browser supports the {{SVGAttr("xlink:type")}}, {{SVGAttr("xlink:href")}}, {{SVGAttr("xlink:role")}}, {{SVGAttr("xlink:arcrole")}}, {{SVGAttr("xlink:title")}}, {{SVGAttr("xlink:show")}} and {{SVGAttr("xlink:actuate")}} attributes</p>
- </dd>
- <dt>http://www.w3.org/TR/SVG11/feature#View</dt>
- <dd>
- <p>The browser supports the {{SVGElement("view")}} element</p>
- </dd>
- <dt>http://www.w3.org/TR/SVG11/feature#Script</dt>
- <dd>
- <p>The browser supports the {{SVGElement("script")}} element</p>
- </dd>
- <dt>http://www.w3.org/TR/SVG11/feature#Animation</dt>
- <dd>
- <p>The browser supports the {{SVGElement("animate")}}, {{SVGElement("set")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, {{SVGElement("animateColor")}} and {{SVGElement("mpath")}} elements</p>
- </dd>
- <dt>http://www.w3.org/TR/SVG11/feature#Font</dt>
- <dd>
- <p>The browser supports the {{SVGElement("font")}}, {{SVGElement("font-face")}}, {{SVGElement("glyph")}}, {{SVGElement("missing-glyph")}}, {{SVGElement("hkern")}}, {{SVGElement("vkern")}}, {{SVGElement("font-face-src")}}, {{SVGElement("font-face-uri")}}, {{SVGElement("font-face-format")}} and {{SVGElement("font-face-name")}} elements</p>
- </dd>
- <dt>http://www.w3.org/TR/SVG11/feature#BasicFont</dt>
- <dd>
- <p>The browser supports the {{SVGElement("font")}}, {{SVGElement("font-face")}}, {{SVGElement("glyph")}}, {{SVGElement("missing-glyph")}}, {{SVGElement("hkern")}}, {{SVGElement("font-face-src")}} and {{SVGElement("font-face-name")}} elements</p>
- </dd>
- <dt>http://www.w3.org/TR/SVG11/feature#Extensibility</dt>
- <dd>
- <p>The browser supports the {{SVGElement("foreignObject")}} element</p>
- </dd>
-</dl>
+        *   *http\://www\.w3.org/TR/SVG11/feature#Hyperlinking*
+        *   *http\://www\.w3.org/TR/SVG11/feature#Scripting*
+        *   *http\://www\.w3.org/TR/SVG11/feature#View*
+        *   *http\://www\.w3.org/TR/SVG11/feature#Cursor*
+        *   *http\://www\.w3.org/TR/SVG11/feature#GraphicalEventsAttribute*
+        *   *http\://www\.w3.org/TR/SVG11/feature#DocumentEventsAttribute*
+        *   *http\://www\.w3.org/TR/SVG11/feature#AnimationEventsAttribute*
+*   http\://www\.w3.org/TR/SVG11/feature#SVGDOM-dynamic
+    *   : The browser supports all of the DOM interfaces and methods that correspond to the language features for *http\://www\.w3.org/TR/SVG11/feature#SVG-dynamic*.
+*   http\://www\.w3.org/TR/SVG11/feature#CoreAttribute
+    *   : The browser supports the {{SVGAttr("id")}}, {{SVGAttr("xml:base")}}, {{SVGAttr("xml:lang")}} and {{SVGAttr("xml:space")}} attributes
+*   http\://www\.w3.org/TR/SVG11/feature#Structure
+    *   : The browser supports {{SVGElement("svg")}}, {{SVGElement("g")}}, {{SVGElement("defs")}}, {{SVGElement("desc")}}, {{SVGElement("title")}}, {{SVGElement("metadata")}}, {{SVGElement("symbol")}} and {{SVGElement("use")}} elements.
+*   http\://www\.w3.org/TR/SVG11/feature#BasicStructure
+    *   : The browser supports {{SVGElement("svg")}}, {{SVGElement("g")}}, {{SVGElement("defs")}}, {{SVGElement("desc")}}, {{SVGElement("title")}}, {{SVGElement("metadata")}} and {{SVGElement("use")}} elements.
+*   http\://www\.w3.org/TR/SVG11/feature#ContainerAttribute
+    *   : The browser supports the {{SVGAttr("enable-background")}} attribute
+*   http\://www\.w3.org/TR/SVG11/feature#ConditionalProcessing
+    *   : The browser supports the {{SVGElement("switch")}} element, and the {{SVGAttr("requiredFeatures")}}, {{SVGAttr("requiredExtensions")}}, {{SVGAttr("systemLanguage")}} attributes
+*   http\://www\.w3.org/TR/SVG11/feature#Image
+    *   : The browser supports the {{SVGElement("image")}} element.
+*   http\://www\.w3.org/TR/SVG11/feature#Style
+    *   : The browser supports the {{SVGElement("style")}} element.
+*   http\://www\.w3.org/TR/SVG11/feature#ViewportAttribute
+    *   : The browser supports the {{SVGAttr("clip")}} and {{SVGAttr("overflow")}} attributes.
+*   http\://www\.w3.org/TR/SVG11/feature#Shape
+    *   : The browser supports the {{SVGElement("rect")}}, {{SVGElement("circle")}}, {{SVGElement("line")}}, {{SVGElement("polyline")}}, {{SVGElement("polygon")}}, {{SVGElement("ellipse")}} and {{SVGElement("path")}} elements.
+*   http\://www\.w3.org/TR/SVG11/feature#Text
+    *   : The browser supports the {{SVGElement("text")}}, {{SVGElement("tspan")}}, {{SVGElement("tref")}}, {{SVGElement("textPath")}}, {{SVGElement("altGlyph")}}, {{SVGElement("altGlyphDef")}}, {{SVGElement("altGlyphItem")}} and {{SVGElement("glyphRef")}} elements.
+*   http\://www\.w3.org/TR/SVG11/feature#BasicText
+    *   : The browser supports the {{SVGElement("text")}} element
+*   http\://www\.w3.org/TR/SVG11/feature#PaintAttribute
+    *   : The browser supports the {{SVGAttr("color")}}, {{SVGAttr("fill")}}, {{SVGAttr("fill-rule")}}, {{SVGAttr("stroke")}}, {{SVGAttr("stroke-dasharray")}}, {{SVGAttr("stroke-dashoffset")}}, {{SVGAttr("stroke-linecap")}}, {{SVGAttr("stroke-linejoin")}}, {{SVGAttr("stroke-miterlimit")}}, {{SVGAttr("stroke-width")}}, {{SVGAttr("color-interpolation")}} and {{SVGAttr("color-rendering")}} attributes
+*   http\://www\.w3.org/TR/SVG11/feature#BasicPaintAttribute
+    *   : The browser supports the {{SVGAttr("color")}}, {{SVGAttr("fill")}}, {{SVGAttr("fill-rule")}}, {{SVGAttr("stroke")}}, {{SVGAttr("stroke-dasharray")}}, {{SVGAttr("stroke-dashoffset")}}, {{SVGAttr("stroke-linecap")}}, {{SVGAttr("stroke-linejoin")}}, {{SVGAttr("stroke-miterlimit")}}, {{SVGAttr("stroke-width")}} and {{SVGAttr("color-rendering")}} attributes
+*   http\://www\.w3.org/TR/SVG11/feature#OpacityAttribute
+    *   : The browser supports the {{SVGAttr("opacity")}}, {{SVGAttr("stroke-opacity")}} and {{SVGAttr("fill-opacity")}} attributes
+*   http\://www\.w3.org/TR/SVG11/feature#GraphicsAttribute
+    *   : The browser supports the {{SVGAttr("display")}}, {{SVGAttr("image-rendering")}}, {{SVGAttr("pointer-events")}}, {{SVGAttr("shape-rendering")}}, {{SVGAttr("text-rendering")}} and {{SVGAttr("visibility")}} attributes
+*   http\://www\.w3.org/TR/SVG11/feature#BasicGraphicsAttribute
+    *   : The browser supports the {{SVGAttr("display")}} and {{SVGAttr("visibility")}} attributes
+*   http\://www\.w3.org/TR/SVG11/feature#Marker
+    *   : The browser supports the {{SVGElement("marker")}} element
+*   http\://www\.w3.org/TR/SVG11/feature#Gradient
+    *   : The browser supports the {{SVGElement("linearGradient")}}, {{SVGElement("radialGradient")}} and {{SVGElement("stop")}} elements
+*   http\://www\.w3.org/TR/SVG11/feature#Pattern
+    *   : The browser supports the {{SVGElement("pattern")}} element
+*   http\://www\.w3.org/TR/SVG11/feature#Clip
+    *   : The browser supports the {{SVGElement("clipPath")}} element and the {{SVGAttr("clip-path")}}, {{SVGAttr("clip-rule")}} attributes
+*   http\://www\.w3.org/TR/SVG11/feature#BasicClip
+    *   : The browser supports the {{SVGElement("clipPath")}} element and the {{SVGAttr("clip-path")}} attribute
+*   http\://www\.w3.org/TR/SVG11/feature#Mask
+    *   : The browser supports the {{SVGElement("mask")}} element
+*   http\://www\.w3.org/TR/SVG11/feature#Filter
+    *   : The browser supports the {{SVGElement("filter")}}, {{SVGElement("feBlend")}}, {{SVGElement("feColorMatrix")}}, {{SVGElement("feComponentTransfer")}}, {{SVGElement("feComposite")}}, {{SVGElement("feConvolveMatrix")}}, {{SVGElement("feDiffuseLighting")}}, {{SVGElement("feDisplacementMap")}}, {{SVGElement("feFlood")}}, {{SVGElement("feGaussianBlur")}}, {{SVGElement("feImage")}}, {{SVGElement("feMerge")}}, {{SVGElement("feMergeNode")}}, {{SVGElement("feMorphology")}}, {{SVGElement("feOffset")}}, {{SVGElement("feSpecularLighting")}}, {{SVGElement("feTile")}}, {{SVGElement("feDistantLight")}}, {{SVGElement("fePointLight")}}, {{SVGElement("feSpotLight")}}, {{SVGElement("feFuncR")}}, {{SVGElement("feFuncG")}}, {{SVGElement("feFuncB")}} and {{SVGElement("feFuncA")}} elements
+*   http\://www\.w3.org/TR/SVG11/feature#BasicFilter
+    *   : The browser supports the {{SVGElement("filter")}}, {{SVGElement("feBlend")}}, {{SVGElement("feColorMatrix")}}, {{SVGElement("feComponentTransfer")}}, {{SVGElement("feComposite")}}, {{SVGElement("feFlood")}}, {{SVGElement("feGaussianBlur")}}, {{SVGElement("feImage")}}, {{SVGElement("feMerge")}}, {{SVGElement("feMergeNode")}}, {{SVGElement("feOffset")}}, {{SVGElement("feTile")}}, {{SVGElement("feFuncR")}}, {{SVGElement("feFuncG")}}, {{SVGElement("feFuncB")}} and {{SVGElement("feFuncA")}} elements
+*   http\://www\.w3.org/TR/SVG11/feature#DocumentEventsAttribute
+    *   : The browser supports the {{SVGAttr("onunload")}}, {{SVGAttr("onabort")}}, {{SVGAttr("onerror")}}, {{SVGAttr("onresize")}}, {{SVGAttr("onscroll")}} and {{SVGAttr("onzoom")}} attributes
+*   http\://www\.w3.org/TR/SVG11/feature#GraphicalEventsAttribute
+    *   : The browser supports the {{SVGAttr("onfocusin")}}, {{SVGAttr("onfocusout")}}, {{SVGAttr("onactivate")}}, {{SVGAttr("onclick")}}, {{SVGAttr("onmousedown")}}, {{SVGAttr("onmouseup")}}, {{SVGAttr("onmouseover")}}, {{SVGAttr("onmousemove")}}, {{SVGAttr("onmouseout")}} and {{SVGAttr("onload")}} attributes
+*   http\://www\.w3.org/TR/SVG11/feature#AnimationEventsAttribute
+    *   : The browser supports the {{SVGAttr("onbegin")}}, {{SVGAttr("onend")}}, {{SVGAttr("onrepeat")}} and {{SVGAttr("onload")}} attributes
+*   http\://www\.w3.org/TR/SVG11/feature#Cursor
+    *   : The browser supports the {{SVGElement("cursor")}} element
+*   http\://www\.w3.org/TR/SVG11/feature#Hyperlinking
+    *   : The browser supports the {{SVGElement("a")}} element
+*   http\://www\.w3.org/TR/SVG11/feature#XlinkAttribute
+    *   : The browser supports the {{SVGAttr("xlink:type")}}, {{SVGAttr("xlink:href")}}, {{SVGAttr("xlink:role")}}, {{SVGAttr("xlink:arcrole")}}, {{SVGAttr("xlink:title")}}, {{SVGAttr("xlink:show")}} and {{SVGAttr("xlink:actuate")}} attributes
+*   http\://www\.w3.org/TR/SVG11/feature#View
+    *   : The browser supports the {{SVGElement("view")}} element
+*   http\://www\.w3.org/TR/SVG11/feature#Script
+    *   : The browser supports the {{SVGElement("script")}} element
+*   http\://www\.w3.org/TR/SVG11/feature#Animation
+    *   : The browser supports the {{SVGElement("animate")}}, {{SVGElement("set")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, {{SVGElement("animateColor")}} and {{SVGElement("mpath")}} elements
+*   http\://www\.w3.org/TR/SVG11/feature#Font
+    *   : The browser supports the {{SVGElement("font")}}, {{SVGElement("font-face")}}, {{SVGElement("glyph")}}, {{SVGElement("missing-glyph")}}, {{SVGElement("hkern")}}, {{SVGElement("vkern")}}, {{SVGElement("font-face-src")}}, {{SVGElement("font-face-uri")}}, {{SVGElement("font-face-format")}} and {{SVGElement("font-face-name")}} elements
+*   http\://www\.w3.org/TR/SVG11/feature#BasicFont
+    *   : The browser supports the {{SVGElement("font")}}, {{SVGElement("font-face")}}, {{SVGElement("glyph")}}, {{SVGElement("missing-glyph")}}, {{SVGElement("hkern")}}, {{SVGElement("font-face-src")}} and {{SVGElement("font-face-name")}} elements
+*   http\://www\.w3.org/TR/SVG11/feature#Extensibility
+    *   : The browser supports the {{SVGElement("foreignObject")}} element
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<pre class="brush: html">&lt;svg width="450" height="1170" xmlns="http://www.w3.org/2000/svg"&gt;
+```html
+<svg width="450" height="1170" xmlns="http://www.w3.org/2000/svg">
 
-	&lt;!-- Testing : http://www.w3.org/TR/SVG11/feature#SVG --&gt;
-	&lt;rect class="ko" x="10" y="10" height="25" width="430" /&gt;
-	&lt;rect class="ok" x="10" y="10" height="25" width="430"
-	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#SVG" /&gt;
-	&lt;text x="20" y="27"&gt;http://www.w3.org/TR/SVG11/feature#SVG&lt;/text&gt;
+	<!-- Testing : http://www.w3.org/TR/SVG11/feature#SVG -->
+	<rect class="ko" x="10" y="10" height="25" width="430" />
+	<rect class="ok" x="10" y="10" height="25" width="430"
+	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#SVG" />
+	<text x="20" y="27">http://www.w3.org/TR/SVG11/feature#SVG</text>
 
-	&lt;!-- Testing : http://www.w3.org/TR/SVG11/feature#SVGDOM --&gt;
-	&lt;rect class="ko" x="10" y="35" height="25" width="430" /&gt;
-	&lt;rect class="ok" x="10" y="35" height="25" width="430"
-	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#SVGDOM" /&gt;
-	&lt;text x="20" y="52"&gt;http://www.w3.org/TR/SVG11/feature#SVGDOM&lt;/text&gt;
+	<!-- Testing : http://www.w3.org/TR/SVG11/feature#SVGDOM -->
+	<rect class="ko" x="10" y="35" height="25" width="430" />
+	<rect class="ok" x="10" y="35" height="25" width="430"
+	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#SVGDOM" />
+	<text x="20" y="52">http://www.w3.org/TR/SVG11/feature#SVGDOM</text>
 
-	&lt;!-- Testing : http://www.w3.org/TR/SVG11/feature#SVG-static --&gt;
-	&lt;rect class="ko" x="10" y="60" height="25" width="430" /&gt;
-	&lt;rect class="ok" x="10" y="60" height="25" width="430"
-	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#SVG-static" /&gt;
-	&lt;text x="20" y="77"&gt;http://www.w3.org/TR/SVG11/feature#SVG-static&lt;/text&gt;
+	<!-- Testing : http://www.w3.org/TR/SVG11/feature#SVG-static -->
+	<rect class="ko" x="10" y="60" height="25" width="430" />
+	<rect class="ok" x="10" y="60" height="25" width="430"
+	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#SVG-static" />
+	<text x="20" y="77">http://www.w3.org/TR/SVG11/feature#SVG-static</text>
 
-	&lt;!-- Testing : http://www.w3.org/TR/SVG11/feature#SVGDOM-static --&gt;
-	&lt;rect class="ko" x="10" y="85" height="25" width="430" /&gt;
-	&lt;rect class="ok" x="10" y="85" height="25" width="430"
-	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#SVGDOM-static" /&gt;
-	&lt;text x="20" y="102"&gt;http://www.w3.org/TR/SVG11/feature#SVGDOM-static&lt;/text&gt;
+	<!-- Testing : http://www.w3.org/TR/SVG11/feature#SVGDOM-static -->
+	<rect class="ko" x="10" y="85" height="25" width="430" />
+	<rect class="ok" x="10" y="85" height="25" width="430"
+	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#SVGDOM-static" />
+	<text x="20" y="102">http://www.w3.org/TR/SVG11/feature#SVGDOM-static</text>
 
-	&lt;!-- Testing : http://www.w3.org/TR/SVG11/feature#SVG-animation --&gt;
-	&lt;rect class="ko" x="10" y="110" height="25" width="430" /&gt;
-	&lt;rect class="ok" x="10" y="110" height="25" width="430"
-	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#SVG-animation" /&gt;
-	&lt;text x="20" y="127"&gt;http://www.w3.org/TR/SVG11/feature#SVG-animation&lt;/text&gt;
+	<!-- Testing : http://www.w3.org/TR/SVG11/feature#SVG-animation -->
+	<rect class="ko" x="10" y="110" height="25" width="430" />
+	<rect class="ok" x="10" y="110" height="25" width="430"
+	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#SVG-animation" />
+	<text x="20" y="127">http://www.w3.org/TR/SVG11/feature#SVG-animation</text>
 
-	&lt;!-- Testing : http://www.w3.org/TR/SVG11/feature#SVGDOM-animation --&gt;
-	&lt;rect class="ko" x="10" y="135" height="25" width="430" /&gt;
-	&lt;rect class="ok" x="10" y="135" height="25" width="430"
-	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#SVGDOM-animation" /&gt;
-	&lt;text x="20" y="152"&gt;http://www.w3.org/TR/SVG11/feature#SVGDOM-animation&lt;/text&gt;
+	<!-- Testing : http://www.w3.org/TR/SVG11/feature#SVGDOM-animation -->
+	<rect class="ko" x="10" y="135" height="25" width="430" />
+	<rect class="ok" x="10" y="135" height="25" width="430"
+	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#SVGDOM-animation" />
+	<text x="20" y="152">http://www.w3.org/TR/SVG11/feature#SVGDOM-animation</text>
 
-	&lt;!-- Testing : http://www.w3.org/TR/SVG11/feature#SVG-dynamic --&gt;
-	&lt;rect class="ko" x="10" y="160" height="25" width="430" /&gt;
-	&lt;rect class="ok" x="10" y="160" height="25" width="430"
-	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#SVG-dynamic" /&gt;
-	&lt;text x="20" y="177"&gt;http://www.w3.org/TR/SVG11/feature#SVG-dynamic&lt;/text&gt;
+	<!-- Testing : http://www.w3.org/TR/SVG11/feature#SVG-dynamic -->
+	<rect class="ko" x="10" y="160" height="25" width="430" />
+	<rect class="ok" x="10" y="160" height="25" width="430"
+	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#SVG-dynamic" />
+	<text x="20" y="177">http://www.w3.org/TR/SVG11/feature#SVG-dynamic</text>
 
-	&lt;!-- Testing : http://www.w3.org/TR/SVG11/feature#SVGDOM-dynamic --&gt;
-	&lt;rect class="ko" x="10" y="185" height="25" width="430" /&gt;
-	&lt;rect class="ok" x="10" y="185" height="25" width="430"
-	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#SVGDOM-dynamic" /&gt;
-	&lt;text x="20" y="202"&gt;http://www.w3.org/TR/SVG11/feature#SVGDOM-dynamic&lt;/text&gt;
+	<!-- Testing : http://www.w3.org/TR/SVG11/feature#SVGDOM-dynamic -->
+	<rect class="ko" x="10" y="185" height="25" width="430" />
+	<rect class="ok" x="10" y="185" height="25" width="430"
+	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#SVGDOM-dynamic" />
+	<text x="20" y="202">http://www.w3.org/TR/SVG11/feature#SVGDOM-dynamic</text>
 
-	&lt;!-- Testing : http://www.w3.org/TR/SVG11/feature#CoreAttribute --&gt;
-	&lt;rect class="ko" x="10" y="210" height="25" width="430" /&gt;
-	&lt;rect class="ok" x="10" y="210" height="25" width="430"
-	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#CoreAttribute" /&gt;
-	&lt;text x="20" y="227"&gt;http://www.w3.org/TR/SVG11/feature#CoreAttribute&lt;/text&gt;
+	<!-- Testing : http://www.w3.org/TR/SVG11/feature#CoreAttribute -->
+	<rect class="ko" x="10" y="210" height="25" width="430" />
+	<rect class="ok" x="10" y="210" height="25" width="430"
+	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#CoreAttribute" />
+	<text x="20" y="227">http://www.w3.org/TR/SVG11/feature#CoreAttribute</text>
 
-	&lt;!-- Testing : http://www.w3.org/TR/SVG11/feature#Structure --&gt;
-	&lt;rect class="ko" x="10" y="235" height="25" width="430" /&gt;
-	&lt;rect class="ok" x="10" y="235" height="25" width="430"
-	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#Structure" /&gt;
-	&lt;text x="20" y="252"&gt;http://www.w3.org/TR/SVG11/feature#Structure&lt;/text&gt;
+	<!-- Testing : http://www.w3.org/TR/SVG11/feature#Structure -->
+	<rect class="ko" x="10" y="235" height="25" width="430" />
+	<rect class="ok" x="10" y="235" height="25" width="430"
+	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#Structure" />
+	<text x="20" y="252">http://www.w3.org/TR/SVG11/feature#Structure</text>
 
-	&lt;!-- Testing : http://www.w3.org/TR/SVG11/feature#BasicStructure --&gt;
-	&lt;rect class="ko" x="10" y="260" height="25" width="430" /&gt;
-	&lt;rect class="ok" x="10" y="260" height="25" width="430"
-	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#BasicStructure" /&gt;
-	&lt;text x="20" y="277"&gt;http://www.w3.org/TR/SVG11/feature#BasicStructure&lt;/text&gt;
+	<!-- Testing : http://www.w3.org/TR/SVG11/feature#BasicStructure -->
+	<rect class="ko" x="10" y="260" height="25" width="430" />
+	<rect class="ok" x="10" y="260" height="25" width="430"
+	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#BasicStructure" />
+	<text x="20" y="277">http://www.w3.org/TR/SVG11/feature#BasicStructure</text>
 
-	&lt;!-- Testing : http://www.w3.org/TR/SVG11/feature#ContainerAttribute --&gt;
-	&lt;rect class="ko" x="10" y="285" height="25" width="430" /&gt;
-	&lt;rect class="ok" x="10" y="285" height="25" width="430"
-	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#ContainerAttribute" /&gt;
-	&lt;text x="20" y="302"&gt;http://www.w3.org/TR/SVG11/feature#ContainerAttribute&lt;/text&gt;
+	<!-- Testing : http://www.w3.org/TR/SVG11/feature#ContainerAttribute -->
+	<rect class="ko" x="10" y="285" height="25" width="430" />
+	<rect class="ok" x="10" y="285" height="25" width="430"
+	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#ContainerAttribute" />
+	<text x="20" y="302">http://www.w3.org/TR/SVG11/feature#ContainerAttribute</text>
 
-	&lt;!-- Testing : http://www.w3.org/TR/SVG11/feature#ConditionalProcessing --&gt;
-	&lt;rect class="ko" x="10" y="310" height="25" width="430" /&gt;
-	&lt;rect class="ok" x="10" y="310" height="25" width="430"
-	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#ConditionalProcessing" /&gt;
-	&lt;text x="20" y="327"&gt;http://www.w3.org/TR/SVG11/feature#ConditionalProcessing&lt;/text&gt;
+	<!-- Testing : http://www.w3.org/TR/SVG11/feature#ConditionalProcessing -->
+	<rect class="ko" x="10" y="310" height="25" width="430" />
+	<rect class="ok" x="10" y="310" height="25" width="430"
+	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#ConditionalProcessing" />
+	<text x="20" y="327">http://www.w3.org/TR/SVG11/feature#ConditionalProcessing</text>
 
-	&lt;!-- Testing : http://www.w3.org/TR/SVG11/feature#Image --&gt;
-	&lt;rect class="ko" x="10" y="335" height="25" width="430" /&gt;
-	&lt;rect class="ok" x="10" y="335" height="25" width="430"
-	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#Image" /&gt;
-	&lt;text x="20" y="352"&gt;http://www.w3.org/TR/SVG11/feature#Image&lt;/text&gt;
+	<!-- Testing : http://www.w3.org/TR/SVG11/feature#Image -->
+	<rect class="ko" x="10" y="335" height="25" width="430" />
+	<rect class="ok" x="10" y="335" height="25" width="430"
+	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#Image" />
+	<text x="20" y="352">http://www.w3.org/TR/SVG11/feature#Image</text>
 
-	&lt;!-- Testing : http://www.w3.org/TR/SVG11/feature#Style --&gt;
-	&lt;rect class="ko" x="10" y="360" height="25" width="430" /&gt;
-	&lt;rect class="ok" x="10" y="360" height="25" width="430"
-	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#Style" /&gt;
-	&lt;text x="20" y="377"&gt;http://www.w3.org/TR/SVG11/feature#Style&lt;/text&gt;
+	<!-- Testing : http://www.w3.org/TR/SVG11/feature#Style -->
+	<rect class="ko" x="10" y="360" height="25" width="430" />
+	<rect class="ok" x="10" y="360" height="25" width="430"
+	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#Style" />
+	<text x="20" y="377">http://www.w3.org/TR/SVG11/feature#Style</text>
 
-	&lt;!-- Testing : http://www.w3.org/TR/SVG11/feature#ViewportAttribute --&gt;
-	&lt;rect class="ko" x="10" y="385" height="25" width="430" /&gt;
-	&lt;rect class="ok" x="10" y="385" height="25" width="430"
-	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#ViewportAttribute" /&gt;
-	&lt;text x="20" y="402"&gt;http://www.w3.org/TR/SVG11/feature#ViewportAttribute&lt;/text&gt;
+	<!-- Testing : http://www.w3.org/TR/SVG11/feature#ViewportAttribute -->
+	<rect class="ko" x="10" y="385" height="25" width="430" />
+	<rect class="ok" x="10" y="385" height="25" width="430"
+	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#ViewportAttribute" />
+	<text x="20" y="402">http://www.w3.org/TR/SVG11/feature#ViewportAttribute</text>
 
-	&lt;!-- Testing : http://www.w3.org/TR/SVG11/feature#Shape --&gt;
-	&lt;rect class="ko" x="10" y="410" height="25" width="430" /&gt;
-	&lt;rect class="ok" x="10" y="410" height="25" width="430"
-	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#Shape" /&gt;
-	&lt;text x="20" y="427"&gt;http://www.w3.org/TR/SVG11/feature#Shape&lt;/text&gt;
+	<!-- Testing : http://www.w3.org/TR/SVG11/feature#Shape -->
+	<rect class="ko" x="10" y="410" height="25" width="430" />
+	<rect class="ok" x="10" y="410" height="25" width="430"
+	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#Shape" />
+	<text x="20" y="427">http://www.w3.org/TR/SVG11/feature#Shape</text>
 
-	&lt;!-- Testing : http://www.w3.org/TR/SVG11/feature#Text --&gt;
-	&lt;rect class="ko" x="10" y="435" height="25" width="430" /&gt;
-	&lt;rect class="ok" x="10" y="435" height="25" width="430"
-	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#Text" /&gt;
-	&lt;text x="20" y="452"&gt;http://www.w3.org/TR/SVG11/feature#Text&lt;/text&gt;
+	<!-- Testing : http://www.w3.org/TR/SVG11/feature#Text -->
+	<rect class="ko" x="10" y="435" height="25" width="430" />
+	<rect class="ok" x="10" y="435" height="25" width="430"
+	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#Text" />
+	<text x="20" y="452">http://www.w3.org/TR/SVG11/feature#Text</text>
 
-	&lt;!-- Testing : http://www.w3.org/TR/SVG11/feature#BasicText --&gt;
-	&lt;rect class="ko" x="10" y="460" height="25" width="430" /&gt;
-	&lt;rect class="ok" x="10" y="460" height="25" width="430"
-	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#BasicText" /&gt;
-	&lt;text x="20" y="477"&gt;http://www.w3.org/TR/SVG11/feature#BasicText&lt;/text&gt;
+	<!-- Testing : http://www.w3.org/TR/SVG11/feature#BasicText -->
+	<rect class="ko" x="10" y="460" height="25" width="430" />
+	<rect class="ok" x="10" y="460" height="25" width="430"
+	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#BasicText" />
+	<text x="20" y="477">http://www.w3.org/TR/SVG11/feature#BasicText</text>
 
-	&lt;!-- Testing : http://www.w3.org/TR/SVG11/feature#PaintAttribute --&gt;
-	&lt;rect class="ko" x="10" y="485" height="25" width="430" /&gt;
-	&lt;rect class="ok" x="10" y="485" height="25" width="430"
-	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#PaintAttribute" /&gt;
-	&lt;text x="20" y="502"&gt;http://www.w3.org/TR/SVG11/feature#PaintAttribute&lt;/text&gt;
+	<!-- Testing : http://www.w3.org/TR/SVG11/feature#PaintAttribute -->
+	<rect class="ko" x="10" y="485" height="25" width="430" />
+	<rect class="ok" x="10" y="485" height="25" width="430"
+	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#PaintAttribute" />
+	<text x="20" y="502">http://www.w3.org/TR/SVG11/feature#PaintAttribute</text>
 
-	&lt;!-- Testing : http://www.w3.org/TR/SVG11/feature#BasicPaintAttribute --&gt;
-	&lt;rect class="ko" x="10" y="510" height="25" width="430" /&gt;
-	&lt;rect class="ok" x="10" y="510" height="25" width="430"
-	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#BasicPaintAttribute" /&gt;
-	&lt;text x="20" y="527"&gt;http://www.w3.org/TR/SVG11/feature#BasicPaintAttribute&lt;/text&gt;
+	<!-- Testing : http://www.w3.org/TR/SVG11/feature#BasicPaintAttribute -->
+	<rect class="ko" x="10" y="510" height="25" width="430" />
+	<rect class="ok" x="10" y="510" height="25" width="430"
+	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#BasicPaintAttribute" />
+	<text x="20" y="527">http://www.w3.org/TR/SVG11/feature#BasicPaintAttribute</text>
 
-	&lt;!-- Testing : http://www.w3.org/TR/SVG11/feature#OpacityAttribute --&gt;
-	&lt;rect class="ko" x="10" y="535" height="25" width="430" /&gt;
-	&lt;rect class="ok" x="10" y="535" height="25" width="430"
-	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#OpacityAttribute" /&gt;
-	&lt;text x="20" y="552"&gt;http://www.w3.org/TR/SVG11/feature#OpacityAttribute&lt;/text&gt;
+	<!-- Testing : http://www.w3.org/TR/SVG11/feature#OpacityAttribute -->
+	<rect class="ko" x="10" y="535" height="25" width="430" />
+	<rect class="ok" x="10" y="535" height="25" width="430"
+	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#OpacityAttribute" />
+	<text x="20" y="552">http://www.w3.org/TR/SVG11/feature#OpacityAttribute</text>
 
-	&lt;!-- Testing : http://www.w3.org/TR/SVG11/feature#GraphicsAttribute --&gt;
-	&lt;rect class="ko" x="10" y="560" height="25" width="430" /&gt;
-	&lt;rect class="ok" x="10" y="560" height="25" width="430"
-	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#GraphicsAttribute" /&gt;
-	&lt;text x="20" y="577"&gt;http://www.w3.org/TR/SVG11/feature#GraphicsAttribute&lt;/text&gt;
+	<!-- Testing : http://www.w3.org/TR/SVG11/feature#GraphicsAttribute -->
+	<rect class="ko" x="10" y="560" height="25" width="430" />
+	<rect class="ok" x="10" y="560" height="25" width="430"
+	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#GraphicsAttribute" />
+	<text x="20" y="577">http://www.w3.org/TR/SVG11/feature#GraphicsAttribute</text>
 
-	&lt;!-- Testing : http://www.w3.org/TR/SVG11/feature#BasicGraphicsAttribute --&gt;
-	&lt;rect class="ko" x="10" y="585" height="25" width="430" /&gt;
-	&lt;rect class="ok" x="10" y="585" height="25" width="430"
-	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#BasicGraphicsAttribute" /&gt;
-	&lt;text x="20" y="602"&gt;http://www.w3.org/TR/SVG11/feature#BasicGraphicsAttribute&lt;/text&gt;
+	<!-- Testing : http://www.w3.org/TR/SVG11/feature#BasicGraphicsAttribute -->
+	<rect class="ko" x="10" y="585" height="25" width="430" />
+	<rect class="ok" x="10" y="585" height="25" width="430"
+	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#BasicGraphicsAttribute" />
+	<text x="20" y="602">http://www.w3.org/TR/SVG11/feature#BasicGraphicsAttribute</text>
 
-	&lt;!-- Testing : http://www.w3.org/TR/SVG11/feature#Marker --&gt;
-	&lt;rect class="ko" x="10" y="610" height="25" width="430" /&gt;
-	&lt;rect class="ok" x="10" y="610" height="25" width="430"
-	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#Marker" /&gt;
-	&lt;text x="20" y="627"&gt;http://www.w3.org/TR/SVG11/feature#Marker&lt;/text&gt;
+	<!-- Testing : http://www.w3.org/TR/SVG11/feature#Marker -->
+	<rect class="ko" x="10" y="610" height="25" width="430" />
+	<rect class="ok" x="10" y="610" height="25" width="430"
+	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#Marker" />
+	<text x="20" y="627">http://www.w3.org/TR/SVG11/feature#Marker</text>
 
-	&lt;!-- Testing : http://www.w3.org/TR/SVG11/feature#ColorProfile --&gt;
-	&lt;rect class="ko" x="10" y="635" height="25" width="430" /&gt;
-	&lt;rect class="ok" x="10" y="635" height="25" width="430"
-	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#ColorProfile" /&gt;
-	&lt;text x="20" y="652"&gt;http://www.w3.org/TR/SVG11/feature#ColorProfile&lt;/text&gt;
+	<!-- Testing : http://www.w3.org/TR/SVG11/feature#ColorProfile -->
+	<rect class="ko" x="10" y="635" height="25" width="430" />
+	<rect class="ok" x="10" y="635" height="25" width="430"
+	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#ColorProfile" />
+	<text x="20" y="652">http://www.w3.org/TR/SVG11/feature#ColorProfile</text>
 
-	&lt;!-- Testing : http://www.w3.org/TR/SVG11/feature#Gradient --&gt;
-	&lt;rect class="ko" x="10" y="660" height="25" width="430" /&gt;
-	&lt;rect class="ok" x="10" y="660" height="25" width="430"
-	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#Gradient" /&gt;
-	&lt;text x="20" y="677"&gt;http://www.w3.org/TR/SVG11/feature#Gradient&lt;/text&gt;
+	<!-- Testing : http://www.w3.org/TR/SVG11/feature#Gradient -->
+	<rect class="ko" x="10" y="660" height="25" width="430" />
+	<rect class="ok" x="10" y="660" height="25" width="430"
+	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#Gradient" />
+	<text x="20" y="677">http://www.w3.org/TR/SVG11/feature#Gradient</text>
 
-	&lt;!-- Testing : http://www.w3.org/TR/SVG11/feature#Pattern --&gt;
-	&lt;rect class="ko" x="10" y="685" height="25" width="430" /&gt;
-	&lt;rect class="ok" x="10" y="685" height="25" width="430"
-	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#Pattern" /&gt;
-	&lt;text x="20" y="702"&gt;http://www.w3.org/TR/SVG11/feature#Pattern&lt;/text&gt;
+	<!-- Testing : http://www.w3.org/TR/SVG11/feature#Pattern -->
+	<rect class="ko" x="10" y="685" height="25" width="430" />
+	<rect class="ok" x="10" y="685" height="25" width="430"
+	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#Pattern" />
+	<text x="20" y="702">http://www.w3.org/TR/SVG11/feature#Pattern</text>
 
-	&lt;!-- Testing : http://www.w3.org/TR/SVG11/feature#Clip --&gt;
-	&lt;rect class="ko" x="10" y="710" height="25" width="430" /&gt;
-	&lt;rect class="ok" x="10" y="710" height="25" width="430"
-	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#Clip" /&gt;
-	&lt;text x="20" y="727"&gt;http://www.w3.org/TR/SVG11/feature#Clip&lt;/text&gt;
+	<!-- Testing : http://www.w3.org/TR/SVG11/feature#Clip -->
+	<rect class="ko" x="10" y="710" height="25" width="430" />
+	<rect class="ok" x="10" y="710" height="25" width="430"
+	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#Clip" />
+	<text x="20" y="727">http://www.w3.org/TR/SVG11/feature#Clip</text>
 
-	&lt;!-- Testing : http://www.w3.org/TR/SVG11/feature#BasicClip --&gt;
-	&lt;rect class="ko" x="10" y="735" height="25" width="430" /&gt;
-	&lt;rect class="ok" x="10" y="735" height="25" width="430"
-	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#BasicClip" /&gt;
-	&lt;text x="20" y="752"&gt;http://www.w3.org/TR/SVG11/feature#BasicClip&lt;/text&gt;
+	<!-- Testing : http://www.w3.org/TR/SVG11/feature#BasicClip -->
+	<rect class="ko" x="10" y="735" height="25" width="430" />
+	<rect class="ok" x="10" y="735" height="25" width="430"
+	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#BasicClip" />
+	<text x="20" y="752">http://www.w3.org/TR/SVG11/feature#BasicClip</text>
 
-	&lt;!-- Testing : http://www.w3.org/TR/SVG11/feature#Mask --&gt;
-	&lt;rect class="ko" x="10" y="760" height="25" width="430" /&gt;
-	&lt;rect class="ok" x="10" y="760" height="25" width="430"
-	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#Mask" /&gt;
-	&lt;text x="20" y="777"&gt;http://www.w3.org/TR/SVG11/feature#Mask&lt;/text&gt;
+	<!-- Testing : http://www.w3.org/TR/SVG11/feature#Mask -->
+	<rect class="ko" x="10" y="760" height="25" width="430" />
+	<rect class="ok" x="10" y="760" height="25" width="430"
+	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#Mask" />
+	<text x="20" y="777">http://www.w3.org/TR/SVG11/feature#Mask</text>
 
-	&lt;!-- Testing : http://www.w3.org/TR/SVG11/feature#Filter --&gt;
-	&lt;rect class="ko" x="10" y="785" height="25" width="430" /&gt;
-	&lt;rect class="ok" x="10" y="785" height="25" width="430"
-	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#Filter" /&gt;
-	&lt;text x="20" y="802"&gt;http://www.w3.org/TR/SVG11/feature#Filter&lt;/text&gt;
+	<!-- Testing : http://www.w3.org/TR/SVG11/feature#Filter -->
+	<rect class="ko" x="10" y="785" height="25" width="430" />
+	<rect class="ok" x="10" y="785" height="25" width="430"
+	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#Filter" />
+	<text x="20" y="802">http://www.w3.org/TR/SVG11/feature#Filter</text>
 
-	&lt;!-- Testing : http://www.w3.org/TR/SVG11/feature#BasicFilter --&gt;
-	&lt;rect class="ko" x="10" y="810" height="25" width="430" /&gt;
-	&lt;rect class="ok" x="10" y="810" height="25" width="430"
-	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#BasicFilter" /&gt;
-	&lt;text x="20" y="827"&gt;http://www.w3.org/TR/SVG11/feature#BasicFilter&lt;/text&gt;
+	<!-- Testing : http://www.w3.org/TR/SVG11/feature#BasicFilter -->
+	<rect class="ko" x="10" y="810" height="25" width="430" />
+	<rect class="ok" x="10" y="810" height="25" width="430"
+	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#BasicFilter" />
+	<text x="20" y="827">http://www.w3.org/TR/SVG11/feature#BasicFilter</text>
 
-	&lt;!-- Testing : http://www.w3.org/TR/SVG11/feature#DocumentEventsAttribute --&gt;
-	&lt;rect class="ko" x="10" y="835" height="25" width="430" /&gt;
-	&lt;rect class="ok" x="10" y="835" height="25" width="430"
-	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#DocumentEventsAttribute" /&gt;
-	&lt;text x="20" y="852"&gt;http://www.w3.org/TR/SVG11/feature#DocumentEventsAttribute&lt;/text&gt;
+	<!-- Testing : http://www.w3.org/TR/SVG11/feature#DocumentEventsAttribute -->
+	<rect class="ko" x="10" y="835" height="25" width="430" />
+	<rect class="ok" x="10" y="835" height="25" width="430"
+	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#DocumentEventsAttribute" />
+	<text x="20" y="852">http://www.w3.org/TR/SVG11/feature#DocumentEventsAttribute</text>
 
-	&lt;!-- Testing : http://www.w3.org/TR/SVG11/feature#GraphicalEventsAttribute --&gt;
-	&lt;rect class="ko" x="10" y="860" height="25" width="430" /&gt;
-	&lt;rect class="ok" x="10" y="860" height="25" width="430"
-	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#GraphicalEventsAttribute" /&gt;
-	&lt;text x="20" y="877"&gt;http://www.w3.org/TR/SVG11/feature#GraphicalEventsAttribute&lt;/text&gt;
+	<!-- Testing : http://www.w3.org/TR/SVG11/feature#GraphicalEventsAttribute -->
+	<rect class="ko" x="10" y="860" height="25" width="430" />
+	<rect class="ok" x="10" y="860" height="25" width="430"
+	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#GraphicalEventsAttribute" />
+	<text x="20" y="877">http://www.w3.org/TR/SVG11/feature#GraphicalEventsAttribute</text>
 
-	&lt;!-- Testing : http://www.w3.org/TR/SVG11/feature#AnimationEventsAttribute --&gt;
-	&lt;rect class="ko" x="10" y="885" height="25" width="430" /&gt;
-	&lt;rect class="ok" x="10" y="885" height="25" width="430"
-	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#AnimationEventsAttribute" /&gt;
-	&lt;text x="20" y="902"&gt;http://www.w3.org/TR/SVG11/feature#AnimationEventsAttribute&lt;/text&gt;
+	<!-- Testing : http://www.w3.org/TR/SVG11/feature#AnimationEventsAttribute -->
+	<rect class="ko" x="10" y="885" height="25" width="430" />
+	<rect class="ok" x="10" y="885" height="25" width="430"
+	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#AnimationEventsAttribute" />
+	<text x="20" y="902">http://www.w3.org/TR/SVG11/feature#AnimationEventsAttribute</text>
 
-	&lt;!-- Testing : http://www.w3.org/TR/SVG11/feature#Cursor --&gt;
-	&lt;rect class="ko" x="10" y="910" height="25" width="430" /&gt;
-	&lt;rect class="ok" x="10" y="910" height="25" width="430"
-	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#Cursor" /&gt;
-	&lt;text x="20" y="927"&gt;http://www.w3.org/TR/SVG11/feature#Cursor&lt;/text&gt;
+	<!-- Testing : http://www.w3.org/TR/SVG11/feature#Cursor -->
+	<rect class="ko" x="10" y="910" height="25" width="430" />
+	<rect class="ok" x="10" y="910" height="25" width="430"
+	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#Cursor" />
+	<text x="20" y="927">http://www.w3.org/TR/SVG11/feature#Cursor</text>
 
-	&lt;!-- Testing : http://www.w3.org/TR/SVG11/feature#Hyperlinking --&gt;
-	&lt;rect class="ko" x="10" y="935" height="25" width="430" /&gt;
-	&lt;rect class="ok" x="10" y="935" height="25" width="430"
-	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#Hyperlinking" /&gt;
-	&lt;text x="20" y="952"&gt;http://www.w3.org/TR/SVG11/feature#Hyperlinking&lt;/text&gt;
+	<!-- Testing : http://www.w3.org/TR/SVG11/feature#Hyperlinking -->
+	<rect class="ko" x="10" y="935" height="25" width="430" />
+	<rect class="ok" x="10" y="935" height="25" width="430"
+	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#Hyperlinking" />
+	<text x="20" y="952">http://www.w3.org/TR/SVG11/feature#Hyperlinking</text>
 
-	&lt;!-- Testing : http://www.w3.org/TR/SVG11/feature#XlinkAttribute --&gt;
-	&lt;rect class="ko" x="10" y="960" height="25" width="430" /&gt;
-	&lt;rect class="ok" x="10" y="960" height="25" width="430"
-	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#XlinkAttribute" /&gt;
-	&lt;text x="20" y="977"&gt;http://www.w3.org/TR/SVG11/feature#XlinkAttribute&lt;/text&gt;
+	<!-- Testing : http://www.w3.org/TR/SVG11/feature#XlinkAttribute -->
+	<rect class="ko" x="10" y="960" height="25" width="430" />
+	<rect class="ok" x="10" y="960" height="25" width="430"
+	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#XlinkAttribute" />
+	<text x="20" y="977">http://www.w3.org/TR/SVG11/feature#XlinkAttribute</text>
 
-	&lt;!-- Testing : http://www.w3.org/TR/SVG11/feature#View --&gt;
-	&lt;rect class="ko" x="10" y="1010" height="25" width="430" /&gt;
-	&lt;rect class="ok" x="10" y="1010" height="25" width="430"
-	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#View" /&gt;
-	&lt;text x="20" y="1027"&gt;http://www.w3.org/TR/SVG11/feature#View&lt;/text&gt;
+	<!-- Testing : http://www.w3.org/TR/SVG11/feature#View -->
+	<rect class="ko" x="10" y="1010" height="25" width="430" />
+	<rect class="ok" x="10" y="1010" height="25" width="430"
+	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#View" />
+	<text x="20" y="1027">http://www.w3.org/TR/SVG11/feature#View</text>
 
-	&lt;!-- Testing : http://www.w3.org/TR/SVG11/feature#Script --&gt;
-	&lt;rect class="ko" x="10" y="1035" height="25" width="430" /&gt;
-	&lt;rect class="ok" x="10" y="1035" height="25" width="430"
-	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#Script" /&gt;
-	&lt;text x="20" y="1052"&gt;http://www.w3.org/TR/SVG11/feature#Script&lt;/text&gt;
+	<!-- Testing : http://www.w3.org/TR/SVG11/feature#Script -->
+	<rect class="ko" x="10" y="1035" height="25" width="430" />
+	<rect class="ok" x="10" y="1035" height="25" width="430"
+	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#Script" />
+	<text x="20" y="1052">http://www.w3.org/TR/SVG11/feature#Script</text>
 
-	&lt;!-- Testing : http://www.w3.org/TR/SVG11/feature#Animation --&gt;
-	&lt;rect class="ko" x="10" y="1060" height="25" width="430" /&gt;
-	&lt;rect class="ok" x="10" y="1060" height="25" width="430"
-	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#Animation" /&gt;
-	&lt;text x="20" y="1077"&gt;http://www.w3.org/TR/SVG11/feature#Animation&lt;/text&gt;
+	<!-- Testing : http://www.w3.org/TR/SVG11/feature#Animation -->
+	<rect class="ko" x="10" y="1060" height="25" width="430" />
+	<rect class="ok" x="10" y="1060" height="25" width="430"
+	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#Animation" />
+	<text x="20" y="1077">http://www.w3.org/TR/SVG11/feature#Animation</text>
 
-	&lt;!-- Testing : http://www.w3.org/TR/SVG11/feature#Font --&gt;
-	&lt;rect class="ko" x="10" y="1085" height="25" width="430" /&gt;
-	&lt;rect class="ok" x="10" y="1085" height="25" width="430"
-	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#Font" /&gt;
-	&lt;text x="20" y="1102"&gt;http://www.w3.org/TR/SVG11/feature#Font&lt;/text&gt;
+	<!-- Testing : http://www.w3.org/TR/SVG11/feature#Font -->
+	<rect class="ko" x="10" y="1085" height="25" width="430" />
+	<rect class="ok" x="10" y="1085" height="25" width="430"
+	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#Font" />
+	<text x="20" y="1102">http://www.w3.org/TR/SVG11/feature#Font</text>
 
-	&lt;!-- Testing : http://www.w3.org/TR/SVG11/feature#BasicFont --&gt;
-	&lt;rect class="ko" x="10" y="1110" height="25" width="430" /&gt;
-	&lt;rect class="ok" x="10" y="1110" height="25" width="430"
-	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#BasicFont" /&gt;
-	&lt;text x="20" y="1127"&gt;http://www.w3.org/TR/SVG11/feature#BasicFont&lt;/text&gt;
+	<!-- Testing : http://www.w3.org/TR/SVG11/feature#BasicFont -->
+	<rect class="ko" x="10" y="1110" height="25" width="430" />
+	<rect class="ok" x="10" y="1110" height="25" width="430"
+	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#BasicFont" />
+	<text x="20" y="1127">http://www.w3.org/TR/SVG11/feature#BasicFont</text>
 
-	&lt;!-- Testing : http://www.w3.org/TR/SVG11/feature#Extensibility --&gt;
-	&lt;rect class="ko" x="10" y="1135" height="25" width="430" /&gt;
-	&lt;rect class="ok" x="10" y="1135" height="25" width="430"
-	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" /&gt;
-	&lt;text x="20" y="1152"&gt;http://www.w3.org/TR/SVG11/feature#Extensibility&lt;/text&gt;
-&lt;/svg&gt;
-</pre>
+	<!-- Testing : http://www.w3.org/TR/SVG11/feature#Extensibility -->
+	<rect class="ko" x="10" y="1135" height="25" width="430" />
+	<rect class="ok" x="10" y="1135" height="25" width="430"
+	      requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" />
+	<text x="20" y="1152">http://www.w3.org/TR/SVG11/feature#Extensibility</text>
+</svg>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.ko {
+```css
+.ko {
 	fill: #900;
 }
 
@@ -626,39 +538,39 @@ text{
   fill: #FFF;
   font: 12px sans-serif;
 }
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example", "400", "400")}}</p>
+{{EmbedLiveSample("Example", "400", "400")}}
 
-<p>See also <a href="/files/3286/requiredFeatures.svg">requiredFeatures.svg</a></p>
+See also [requiredFeatures.svg](/files/3286/requiredFeatures.svg)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG1.1", "struct.html#RequiredFeaturesAttribute", "requiredFeatures")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "struct.html#RequiredFeaturesAttribute", "requiredFeatures")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("DOMImplementation.hasFeature()")}}</li>
-</ul>
+*   {{domxref("DOMImplementation.hasFeature()")}}

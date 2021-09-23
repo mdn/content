@@ -7,77 +7,78 @@ tags:
   - SVG
   - SVG Attribute
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>calcMode</code></strong> attribute specifies the interpolation mode for the animation.</p>
+The **`calcMode`** attribute specifies the interpolation mode for the animation.
 
-<p>The default mode is <code>linear</code>, however if the attribute does not support linear interpolation (e.g. for strings), the <code>calcMode</code> attribute is ignored and discrete interpolation is used.</p>
+The default mode is `linear`, however if the attribute does not support linear interpolation (e.g. for strings), the `calcMode` attribute is ignored and discrete interpolation is used.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("animate")}}</li>
-  <li>{{SVGElement("animateColor")}}</li>
-  <li>{{SVGElement("animateMotion")}}</li>
-  <li>{{SVGElement("animateTransform")}}</li>
-</ul>
+*   {{SVGElement("animate")}}
+*   {{SVGElement("animateColor")}}
+*   {{SVGElement("animateMotion")}}
+*   {{SVGElement("animateTransform")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code>discrete</code> | <code>linear</code> | <code>paced</code> | <code>spline</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>linear</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>No</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <code>discrete</code> | <code>linear</code> | <code>paced</code> |
+        <code>spline</code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>linear</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>No</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt><code>discrete</code></dt>
- <dd>This specifies that the animation function will jump from one value to the next without any interpolation.</dd>
- <dt><code>linear</code></dt>
- <dd>Simple linear interpolation between values is used to calculate the animation function. Except for {{SVGElement("animateMotion")}}, this is the default value.</dd>
- <dt><code>paced</code></dt>
- <dd>Defines interpolation to produce an even pace of change across the animation. This is only supported for values that define a linear numeric range, and for which some notion of "distance" between points can be calculated (e.g. position, width, height, etc.). If paced is specified, any {{SVGAttr("keyTimes")}} or {{SVGAttr("keySplines")}} will be ignored. For {{SVGElement("animateMotion")}}, this is the default value.</dd>
- <dt><code>spline</code></dt>
- <dd>Interpolates from one value in the {{SVGAttr("values")}} list to the next according to a time function defined by a cubic Bézier spline. The points of the spline are defined in the {{SVGAttr("keyTimes")}} attribute, and the control points for each interval are defined in the {{SVGAttr("keySplines")}} attribute.</dd>
-</dl>
+*   `discrete`
+    *   : This specifies that the animation function will jump from one value to the next without any interpolation.
+*   `linear`
+    *   : Simple linear interpolation between values is used to calculate the animation function. Except for {{SVGElement("animateMotion")}}, this is the default value.
+*   `paced`
+    *   : Defines interpolation to produce an even pace of change across the animation. This is only supported for values that define a linear numeric range, and for which some notion of "distance" between points can be calculated (e.g. position, width, height, etc.). If paced is specified, any {{SVGAttr("keyTimes")}} or {{SVGAttr("keySplines")}} will be ignored. For {{SVGElement("animateMotion")}}, this is the default value.
+*   `spline`
+    *   : Interpolates from one value in the {{SVGAttr("values")}} list to the next according to a time function defined by a cubic Bézier spline. The points of the spline are defined in the {{SVGAttr("keyTimes")}} attribute, and the control points for each interval are defined in the {{SVGAttr("keySplines")}} attribute.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG Animations 2", "#CalcModeAttribute", "calcMode")}}</td>
-   <td>{{Spec2("SVG Animations 2")}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "animate.html#CalcModeAttribute", "calcMode")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("SVG Animations 2", "#CalcModeAttribute", "calcMode")}}
+      </td>
+      <td>{{Spec2("SVG Animations 2")}}</td>
+      <td>No change</td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "animate.html#CalcModeAttribute", "calcMode")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://www.w3.org/TR/2001/REC-smil-animation-20010904/#AccumulateAttribute">SMIL Animation specification</a></li>
-</ul>
+*   [SMIL Animation specification](https://www.w3.org/TR/2001/REC-smil-animation-20010904/#AccumulateAttribute)

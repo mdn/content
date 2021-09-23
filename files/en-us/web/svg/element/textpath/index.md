@@ -8,88 +8,88 @@ tags:
   - SVG Text Content
 browser-compat: svg.elements.textPath
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>To render text along the shape of a {{SVGElement("path")}}, enclose the text in a <strong><code>&lt;textPath&gt;</code></strong> element that has an {{SVGAttr("href")}} attribute with a reference to the {{SVGElement("path")}} element.</p>
+To render text along the shape of a {{SVGElement("path")}}, enclose the text in a **`<textPath>`** element that has an {{SVGAttr("href")}} attribute with a reference to the {{SVGElement("path")}} element.
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
+```html
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
 
-  &lt;!-- to hide the path, it is usually wrapped in a &lt;defs&gt; element --&gt;
-  &lt;!-- &lt;defs&gt; --&gt;
-  &lt;path id="MyPath" fill="none" stroke="red"
-        d="M10,90 Q90,90 90,45 Q90,10 50,10 Q10,10 10,40 Q10,70 45,70 Q70,70 75,50" /&gt;
-  &lt;!-- &lt;/defs&gt; --&gt;
+  <!-- to hide the path, it is usually wrapped in a <defs> element -->
+  <!-- <defs> -->
+  <path id="MyPath" fill="none" stroke="red"
+        d="M10,90 Q90,90 90,45 Q90,10 50,10 Q10,10 10,40 Q10,70 45,70 Q70,70 75,50" />
+  <!-- </defs> -->
 
-  &lt;text&gt;
-    &lt;textPath href="#MyPath"&gt;
+  <text>
+    <textPath href="#MyPath">
       Quick brown fox jumps over the lazy dog.
-    &lt;/textPath&gt;
-  &lt;/text&gt;
+    </textPath>
+  </text>
 
-&lt;/svg&gt;</pre>
+</svg>
+```
 
-<p>{{EmbedLiveSample('Example', 200, 200)}}</p>
+{{EmbedLiveSample('Example', 200, 200)}}
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<dl>
- <dt>{{SVGAttr("href")}}</dt>
- <dd>The URL to the path or basic shape on which to render the text. If the <code>path</code> attribute is set, <code>href</code> has no effect.<br>
- <small><em>Value type</em>: <a href="/en-US/docs/Web/SVG/Content_type#url"><strong>&lt;URL&gt;</strong></a> ; <em>Default value</em>: none; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("lengthAdjust")}}</dt>
- <dd>Where length adjustment should be applied to the text: the space between glyphs, or both the space and the glyphs themselves.<br>
- <small><em>Value type</em>: <code>spacing</code>|<code>spacingAndGlyphs</code>; <em>Default value</em>: <code>spacing</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("method")}}</dt>
- <dd>Which method to render individual glyphs along the path.<br>
- <small><em>Value type</em>: <code>align</code>|<code>stretch</code> ; <em>Default value</em>: <code>align</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("path")}}</dt>
- <dd>The path on which the text should be rendered.<br>
- <small><em>Value type</em>: <a href="/en-US/docs/Web/SVG/Content_type#path_data"><strong>&lt;path_data&gt;</strong></a> ; <em>Default value</em>: none; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("side")}}</dt>
- <dd>Which side of the path the text should be rendered.<br>
- <small><em>Value type</em>: <code>left</code>|<code>right</code> ; <em>Default value</em>: <code>left</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("spacing")}}</dt>
- <dd>How space between glyphs should be handled.<br>
- <small><em>Value type</em>: <code>auto</code>|<code>exact</code> ; <em>Default value</em>: <code>exact</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("startOffset")}}</dt>
- <dd>How far the beginning of the text should be offset from the beginning of the path.<br>
- <small><em>Value type</em>: <a href="/en-US/docs/Web/SVG/Content_type#length"><strong>&lt;length&gt;</strong></a>|<a href="/en-US/docs/Web/SVG/Content_type#percentage"><strong>&lt;percentage&gt;</strong></a>|<a href="/en-US/docs/Web/SVG/Content_type#number"><strong>&lt;number&gt;</strong></a> ; <em>Default value</em>: <code>0</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("textLength")}}</dt>
- <dd>The width of the space into which the text will render.<br>
- <small><em>Value type</em>: <a href="/en-US/docs/Web/SVG/Content_type#length"><strong>&lt;length&gt;</strong></a>|<a href="/en-US/docs/Web/SVG/Content_type#percentage"><strong>&lt;percentage&gt;</strong></a>|<a href="/en-US/docs/Web/SVG/Content_type#number"><strong>&lt;number&gt;</strong></a> ; <em>Default value</em>: <em>auto</em>; <em>Animatable</em>: <strong>yes</strong></small></dd>
-</dl>
+*   {{SVGAttr("href")}}
+    *   : The URL to the path or basic shape on which to render the text. If the `path` attribute is set, `href` has no effect.
+        *Value type*: [**\<URL>**](/en-US/docs/Web/SVG/Content_type#url) ; *Default value*: none; *Animatable*: **yes**
+*   {{SVGAttr("lengthAdjust")}}
+    *   : Where length adjustment should be applied to the text: the space between glyphs, or both the space and the glyphs themselves.
+        *Value type*: `spacing`|`spacingAndGlyphs`; *Default value*: `spacing`; *Animatable*: **yes**
+*   {{SVGAttr("method")}}
+    *   : Which method to render individual glyphs along the path.
+        *Value type*: `align`|`stretch` ; *Default value*: `align`; *Animatable*: **yes**
+*   {{SVGAttr("path")}}
+    *   : The path on which the text should be rendered.
+        *Value type*: [**\<path_data>**](/en-US/docs/Web/SVG/Content_type#path_data) ; *Default value*: none; *Animatable*: **yes**
+*   {{SVGAttr("side")}}
+    *   : Which side of the path the text should be rendered.
+        *Value type*: `left`|`right` ; *Default value*: `left`; *Animatable*: **yes**
+*   {{SVGAttr("spacing")}}
+    *   : How space between glyphs should be handled.
+        *Value type*: `auto`|`exact` ; *Default value*: `exact`; *Animatable*: **yes**
+*   {{SVGAttr("startOffset")}}
+    *   : How far the beginning of the text should be offset from the beginning of the path.
+        *Value type*: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage)|[**\<number>**](/en-US/docs/Web/SVG/Content_type#number) ; *Default value*: `0`; *Animatable*: **yes**
+*   {{SVGAttr("textLength")}}
+    *   : The width of the space into which the text will render.
+        *Value type*: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage)|[**\<number>**](/en-US/docs/Web/SVG/Content_type#number) ; *Default value*: *auto*; *Animatable*: **yes**
 
-<h3 id="Global_attributes">Global attributes</h3>
+### Global attributes
 
-<dl>
- <dt><a href="/en-US/docs/Web/SVG/Attribute/Core">Core Attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}</small></dd>
- <dt><a href="/en-US/docs/Web/SVG/Attribute/Styling">Styling Attributes</a></dt>
- <dd><small>{{SVGAttr('class')}}, {{SVGAttr('style')}}</small></dd>
- <dt><a href="/en-US/docs/Web/SVG/Attribute/Conditional_Processing">Conditional Processing Attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}</small></dd>
- <dt>Event Attributes</dt>
- <dd><small><a href="/en-US/docs/Web/SVG/Attribute/Events#global_event_attributes">Global event attributes</a>, <a href="/en-US/docs/Web/SVG/Attribute/Events#graphical_event_attributes">Graphical event attributes</a></small></dd>
- <dt><a href="/en-US/docs/Web/SVG/Attribute/Presentation">Presentation Attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}</small></dd>
- <dt>ARIA Attributes</dt>
- <dd><small><code>aria-activedescendant</code>, <code>aria-atomic</code>, <code>aria-autocomplete</code>, <code>aria-busy</code>, <code>aria-checked</code>, <code>aria-colcount</code>, <code>aria-colindex</code>, <code>aria-colspan</code>, <code>aria-controls</code>, <code>aria-current</code>, <code>aria-describedby</code>, <code>aria-details</code>, <code>aria-disabled</code>, <code>aria-dropeffect</code>, <code>aria-errormessage</code>, <code>aria-expanded</code>, <code>aria-flowto</code>, <code>aria-grabbed</code>, <code>aria-haspopup</code>, <code>aria-hidden</code>, <code>aria-invalid</code>, <code>aria-keyshortcuts</code>, <code>aria-label</code>, <code>aria-labelledby</code>, <code>aria-level</code>, <code>aria-live</code>, <code>aria-modal</code>, <code>aria-multiline</code>, <code>aria-multiselectable</code>, <code>aria-orientation</code>, <code>aria-owns</code>, <code>aria-placeholder</code>, <code>aria-posinset</code>, <code>aria-pressed</code>, <code>aria-readonly</code>, <code>aria-relevant</code>, <code>aria-required</code>, <code>aria-roledescription</code>, <code>aria-rowcount</code>, <code>aria-rowindex</code>, <code>aria-rowspan</code>, <code>aria-selected</code>, <code>aria-setsize</code>, <code>aria-sort</code>, <code>aria-valuemax</code>, <code>aria-valuemin</code>, <code>aria-valuenow</code>, <code>aria-valuetext</code>, <code>role</code></small></dd>
- <dt>XLink Attributes</dt>
- <dd><small>{{SVGAttr("xlink:title")}}</small></dd>
-</dl>
+*   [Core Attributes](/en-US/docs/Web/SVG/Attribute/Core)
+    *   : Most notably: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}
+*   [Styling Attributes](/en-US/docs/Web/SVG/Attribute/Styling)
+    *   : {{SVGAttr('class')}}, {{SVGAttr('style')}}
+*   [Conditional Processing Attributes](/en-US/docs/Web/SVG/Attribute/Conditional_Processing)
+    *   : Most notably: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
+*   Event Attributes
+    *   : [Global event attributes](/en-US/docs/Web/SVG/Attribute/Events#global_event_attributes), [Graphical event attributes](/en-US/docs/Web/SVG/Attribute/Events#graphical_event_attributes)
+*   [Presentation Attributes](/en-US/docs/Web/SVG/Attribute/Presentation)
+    *   : Most notably: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
+*   ARIA Attributes
+    *   : `aria-activedescendant`, `aria-atomic`, `aria-autocomplete`, `aria-busy`, `aria-checked`, `aria-colcount`, `aria-colindex`, `aria-colspan`, `aria-controls`, `aria-current`, `aria-describedby`, `aria-details`, `aria-disabled`, `aria-dropeffect`, `aria-errormessage`, `aria-expanded`, `aria-flowto`, `aria-grabbed`, `aria-haspopup`, `aria-hidden`, `aria-invalid`, `aria-keyshortcuts`, `aria-label`, `aria-labelledby`, `aria-level`, `aria-live`, `aria-modal`, `aria-multiline`, `aria-multiselectable`, `aria-orientation`, `aria-owns`, `aria-placeholder`, `aria-posinset`, `aria-pressed`, `aria-readonly`, `aria-relevant`, `aria-required`, `aria-roledescription`, `aria-rowcount`, `aria-rowindex`, `aria-rowspan`, `aria-selected`, `aria-setsize`, `aria-sort`, `aria-valuemax`, `aria-valuemin`, `aria-valuenow`, `aria-valuetext`, `role`
+*   XLink Attributes
+    *   : {{SVGAttr("xlink:title")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

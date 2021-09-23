@@ -8,98 +8,92 @@ tags:
   - SVG Graphics
 browser-compat: svg.elements.use
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>&lt;use&gt;</code></strong> element takes nodes from within the SVG document, and duplicates them somewhere else.</p>
+The **`<use>`** element takes nodes from within the SVG document, and duplicates them somewhere else.
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 30 10" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;circle id="myCircle" cx="5" cy="5" r="4" stroke="blue"/&gt;
-  &lt;use href="#myCircle" x="10" fill="blue"/&gt;
-  &lt;use href="#myCircle" x="20" fill="white" stroke="red"/&gt;
-  &lt;!--
+```html
+<svg viewBox="0 0 30 10" xmlns="http://www.w3.org/2000/svg">
+  <circle id="myCircle" cx="5" cy="5" r="4" stroke="blue"/>
+  <use href="#myCircle" x="10" fill="blue"/>
+  <use href="#myCircle" x="20" fill="white" stroke="red"/>
+  <!--
 stroke="red" will be ignored here, as stroke was already set on myCircle.
 Most attributes (except for x, y, width, height and (xlink:)href)
 do not override those set in the ancestor.
 That's why the circles have different x positions, but the same stroke value.
-  --&gt;
-&lt;/svg&gt;</pre>
+  -->
+</svg>
+```
 
-<p>{{EmbedLiveSample('Example', 100, 100)}}</p>
+{{EmbedLiveSample('Example', 100, 100)}}
 
-<p>The effect is the same as if the nodes were deeply cloned into a non-exposed DOM, then pasted where the <code>use</code> element is, much like cloned <a href="/en-US/docs/Web/HTML/Element/template">template elements</a> in HTML5.</p>
+The effect is the same as if the nodes were deeply cloned into a non-exposed DOM, then pasted where the `use` element is, much like cloned [template elements](/en-US/docs/Web/HTML/Element/template) in HTML5.
 
-<p>Most attributes on <code>use</code> do <strong>not</strong> override those already on the element <em>referenced</em> by <code>use</code>. (This differs from how CSS style attributes override those set 'earlier' in the cascade). <strong>Only</strong> the attributes {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}}, {{SVGAttr("height")}} and {{SVGAttr("href")}} on the <code>use</code> element will override those set on the referenced element. However, <em>any other attributes</em> not set on the referenced element <strong>will</strong> be applied to the <code>use</code> element.</p>
+Most attributes on `use` do **not** override those already on the element *referenced* by `use`. (This differs from how CSS style attributes override those set 'earlier' in the cascade). **Only** the attributes {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}}, {{SVGAttr("height")}} and {{SVGAttr("href")}} on the `use` element will override those set on the referenced element. However, *any other attributes* not set on the referenced element **will** be applied to the `use` element.
 
-<p>Since the cloned nodes are not exposed, care must be taken when using <a href="/en-US/docs/Web/CSS">CSS</a> to style a <code>use</code> element and its cloned descendants. CSS properties are not guaranteed to be inherited by the cloned DOM unless you explicitly request them using <a href="/en-US/docs/Web/CSS/inheritance">CSS inheritance</a>.</p>
+Since the cloned nodes are not exposed, care must be taken when using [CSS](/en-US/docs/Web/CSS) to style a `use` element and its cloned descendants. CSS properties are not guaranteed to be inherited by the cloned DOM unless you explicitly request them using [CSS inheritance](/en-US/docs/Web/CSS/inheritance).
 
-<p>For security reasons, browsers may apply the <a href="/en-US/docs/Web/Security/Same-origin_policy">same-origin policy</a> on <code>use</code> elements and may refuse to load a cross-origin URL in the {{SVGAttr("href")}} attribute. There is currently no defined way to set a cross-origin policy for <code>use</code> elements.</p>
+For security reasons, browsers may apply the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy) on `use` elements and may refuse to load a cross-origin URL in the {{SVGAttr("href")}} attribute. There is currently no defined way to set a cross-origin policy for `use` elements.
 
-<div class="warning">
-<p><strong>Warning:</strong> Since SVG 2, the {{SVGAttr("xlink:href")}} attribute is deprecated in favor of {{SVGAttr("href")}}. See {{SVGAttr("xlink:href")}} page for more information. However, {{SVGAttr("xlink:href")}} can still be required in practice for cross-browser compatibility (see the <a href="#browser_compatibility">compatibility table</a> below).</p>
-</div>
+> **Warning:** Since SVG 2, the {{SVGAttr("xlink:href")}} attribute is deprecated in favor of {{SVGAttr("href")}}. See {{SVGAttr("xlink:href")}} page for more information. However, {{SVGAttr("xlink:href")}} can still be required in practice for cross-browser compatibility (see the [compatibility table](#browser_compatibility) below).
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<dl>
- <dt>{{SVGAttr("href")}}</dt>
- <dd>The URL to an element/fragment that needs to be duplicated.<br>
- <small><em>Value type</em>: <a href="/en-US/docs/Web/SVG/Content_type#url"><strong>&lt;URL&gt;</strong></a> ; <em>Default value</em>: none; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("xlink:href")}}</dt>
- <dd>{{Deprecated_Header}}An <a href="/en-US/docs/Web/SVG/Content_type#iri">&lt;IRI&gt;</a> reference to an element/fragment that needs to be duplicated.<br>
- <small><em>Value type</em>: <a href="/en-US/docs/Web/SVG/Content_type#iri"><strong>&lt;IRI&gt;</strong></a> ; <em>Default value</em>: none; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("x")}}</dt>
- <dd>The x coordinate of the use element.<br>
- <small><em>Value type</em>: <a href="/en-US/docs/Web/SVG/Content_type#coordinate"><strong>&lt;coordinate&gt;</strong></a> ; <em>Default value</em>: <code>0</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("y")}}</dt>
- <dd>The y coordinate of the use element.<br>
- <small><em>Value type</em>: <a href="/en-US/docs/Web/SVG/Content_type#coordinate"><strong>&lt;coordinate&gt;</strong></a> ; <em>Default value</em>: <code>0</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("width")}}</dt>
- <dd>The width of the use element.<br>
- <small><em>Value type</em>: <a href="/en-US/docs/Web/SVG/Content_type#length"><strong>&lt;length&gt;</strong></a> ; <em>Default value</em>: <code>0</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("height")}}</dt>
- <dd>The height of the use element.<br>
- <small><em>Value type</em>: <a href="/en-US/docs/Web/SVG/Content_type#length"><strong>&lt;length&gt;</strong></a> ; <em>Default value</em>: <code>0</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
-</dl>
+*   {{SVGAttr("href")}}
+    *   : The URL to an element/fragment that needs to be duplicated.
+        *Value type*: [**\<URL>**](/en-US/docs/Web/SVG/Content_type#url) ; *Default value*: none; *Animatable*: **yes**
+*   {{SVGAttr("xlink:href")}}
+    *   : {{Deprecated_Header}}An [\<IRI>](/en-US/docs/Web/SVG/Content_type#iri) reference to an element/fragment that needs to be duplicated.
+        *Value type*: [**\<IRI>**](/en-US/docs/Web/SVG/Content_type#iri) ; *Default value*: none; *Animatable*: **yes**
+*   {{SVGAttr("x")}}
+    *   : The x coordinate of the use element.
+        *Value type*: [**\<coordinate>**](/en-US/docs/Web/SVG/Content_type#coordinate) ; *Default value*: `0`; *Animatable*: **yes**
+*   {{SVGAttr("y")}}
+    *   : The y coordinate of the use element.
+        *Value type*: [**\<coordinate>**](/en-US/docs/Web/SVG/Content_type#coordinate) ; *Default value*: `0`; *Animatable*: **yes**
+*   {{SVGAttr("width")}}
+    *   : The width of the use element.
+        *Value type*: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length) ; *Default value*: `0`; *Animatable*: **yes**
+*   {{SVGAttr("height")}}
+    *   : The height of the use element.
+        *Value type*: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length) ; *Default value*: `0`; *Animatable*: **yes**
 
-<div class="note">
-<p><strong>Note:</strong> <code>width</code>, and <code>height</code> have no effect on <code>use</code> elements, unless the element referenced has a <a href="/en-US/docs/Web/SVG/Attribute/viewBox">viewbox</a> - i.e. they only have an effect when <code>use</code> refers to a <code>svg</code> or <code>symbol</code> element.</p>
-</div>
+> **Note:** `width`, and `height` have no effect on `use` elements, unless the element referenced has a [viewbox](/en-US/docs/Web/SVG/Attribute/viewBox) - i.e. they only have an effect when `use` refers to a `svg` or `symbol` element.
 
-<div class="note">
-<p><strong>Note:</strong> Starting with SVG2, <code>x</code>, <code>y</code>, <code>width</code>, and <code>height</code> are <em>Geometry Properties</em>, meaning those attributes can also be used as CSS properties for that element.</p>
-</div>
+> **Note:** Starting with SVG2, `x`, `y`, `width`, and `height` are *Geometry Properties*, meaning those attributes can also be used as CSS properties for that element.
 
-<h3 id="Global_attributes">Global attributes</h3>
+### Global attributes
 
-<dl>
- <dt><a href="/en-US/docs/Web/SVG/Attribute/Core">Core Attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}</small></dd>
- <dt><a href="/en-US/docs/Web/SVG/Attribute/Styling">Styling Attributes</a></dt>
- <dd><small>{{SVGAttr('class')}}, {{SVGAttr('style')}}</small></dd>
- <dt><a href="/en-US/docs/Web/SVG/Attribute/Conditional_Processing">Conditional Processing Attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}</small></dd>
- <dt>Event Attributes</dt>
- <dd><small><a href="/en-US/docs/Web/SVG/Attribute/Events#global_event_attributes">Global event attributes</a>, <a href="/en-US/docs/Web/SVG/Attribute/Events#graphical_event_attributes">Graphical event attributes</a></small></dd>
- <dt><a href="/en-US/docs/Web/SVG/Attribute/Presentation">Presentation Attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}</small></dd>
- <dt>ARIA Attributes</dt>
- <dd><small><code>aria-activedescendant</code>, <code>aria-atomic</code>, <code>aria-autocomplete</code>, <code>aria-busy</code>, <code>aria-checked</code>, <code>aria-colcount</code>, <code>aria-colindex</code>, <code>aria-colspan</code>, <code>aria-controls</code>, <code>aria-current</code>, <code>aria-describedby</code>, <code>aria-details</code>, <code>aria-disabled</code>, <code>aria-dropeffect</code>, <code>aria-errormessage</code>, <code>aria-expanded</code>, <code>aria-flowto</code>, <code>aria-grabbed</code>, <code>aria-haspopup</code>, <code>aria-hidden</code>, <code>aria-invalid</code>, <code>aria-keyshortcuts</code>, <code>aria-label</code>, <code>aria-labelledby</code>, <code>aria-level</code>, <code>aria-live</code>, <code>aria-modal</code>, <code>aria-multiline</code>, <code>aria-multiselectable</code>, <code>aria-orientation</code>, <code>aria-owns</code>, <code>aria-placeholder</code>, <code>aria-posinset</code>, <code>aria-pressed</code>, <code>aria-readonly</code>, <code>aria-relevant</code>, <code>aria-required</code>, <code>aria-roledescription</code>, <code>aria-rowcount</code>, <code>aria-rowindex</code>, <code>aria-rowspan</code>, <code>aria-selected</code>, <code>aria-setsize</code>, <code>aria-sort</code>, <code>aria-valuemax</code>, <code>aria-valuemin</code>, <code>aria-valuenow</code>, <code>aria-valuetext</code>, <code>role</code></small></dd>
- <dt>XLink Attributes</dt>
- <dd><small>{{SVGAttr("xlink:href")}}, {{SVGAttr("xlink:title")}}</small></dd>
-</dl>
+*   [Core Attributes](/en-US/docs/Web/SVG/Attribute/Core)
+    *   : Most notably: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}
+*   [Styling Attributes](/en-US/docs/Web/SVG/Attribute/Styling)
+    *   : {{SVGAttr('class')}}, {{SVGAttr('style')}}
+*   [Conditional Processing Attributes](/en-US/docs/Web/SVG/Attribute/Conditional_Processing)
+    *   : Most notably: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
+*   Event Attributes
+    *   : [Global event attributes](/en-US/docs/Web/SVG/Attribute/Events#global_event_attributes), [Graphical event attributes](/en-US/docs/Web/SVG/Attribute/Events#graphical_event_attributes)
+*   [Presentation Attributes](/en-US/docs/Web/SVG/Attribute/Presentation)
+    *   : Most notably: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
+*   ARIA Attributes
+    *   : `aria-activedescendant`, `aria-atomic`, `aria-autocomplete`, `aria-busy`, `aria-checked`, `aria-colcount`, `aria-colindex`, `aria-colspan`, `aria-controls`, `aria-current`, `aria-describedby`, `aria-details`, `aria-disabled`, `aria-dropeffect`, `aria-errormessage`, `aria-expanded`, `aria-flowto`, `aria-grabbed`, `aria-haspopup`, `aria-hidden`, `aria-invalid`, `aria-keyshortcuts`, `aria-label`, `aria-labelledby`, `aria-level`, `aria-live`, `aria-modal`, `aria-multiline`, `aria-multiselectable`, `aria-orientation`, `aria-owns`, `aria-placeholder`, `aria-posinset`, `aria-pressed`, `aria-readonly`, `aria-relevant`, `aria-required`, `aria-roledescription`, `aria-rowcount`, `aria-rowindex`, `aria-rowspan`, `aria-selected`, `aria-setsize`, `aria-sort`, `aria-valuemax`, `aria-valuemin`, `aria-valuenow`, `aria-valuetext`, `role`
+*   XLink Attributes
+    *   : {{SVGAttr("xlink:href")}}, {{SVGAttr("xlink:title")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

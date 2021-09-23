@@ -7,60 +7,60 @@ tags:
   - SVG Descriptive
 browser-compat: svg.elements.desc
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>&lt;desc&gt;</code></strong> element provides an accessible, long-text description of any SVG <a href="/en-US/docs/Web/SVG/Element#container_elements">container element</a> or <a href="/en-US/docs/Web/SVG/Element#graphics_elements">graphics element</a>.</p>
+The **`<desc>`** element provides an accessible, long-text description of any SVG [container element](/en-US/docs/Web/SVG/Element#container_elements) or [graphics element](/en-US/docs/Web/SVG/Element#graphics_elements).
 
-<p>Text in a <code>&lt;desc&gt;</code> element is not rendered as part of the graphic. If the element can be described by visible text, it is possible to reference that text with the <code><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute">aria-describedby</a></code> attribute. If <code>aria-describedby</code> is used, it will take precedence over <code>&lt;desc&gt;</code>. </p>
+Text in a `<desc>` element is not rendered as part of the graphic. If the element can be described by visible text, it is possible to reference that text with the [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute) attribute. If `aria-describedby` is used, it will take precedence over `<desc>`. 
 
-<p>The hidden text of a <code>&lt;desc&gt;</code> element can also be concatenated with the visible text of other elements using multiple IDs in an <code>aria-describedby</code> value. In that case, the <code>&lt;desc&gt;</code> element must provide an ID for reference.</p>
+The hidden text of a `<desc>` element can also be concatenated with the visible text of other elements using multiple IDs in an `aria-describedby` value. In that case, the `<desc>` element must provide an ID for reference.
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;circle cx="5" cy="5" r="4"&gt;
-    &lt;desc&gt;
+```html
+<svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="5" cy="5" r="4">
+    <desc>
       I'm a circle and that description is here to
       demonstrate how I can be described, but is it
       really necessary to describe a simple circle
       like me?
-    &lt;/desc&gt;
-  &lt;/circle&gt;
-&lt;/svg&gt;</pre>
+    </desc>
+  </circle>
+</svg>
+```
 
-<p>{{EmbedLiveSample('Example', 150, '100%')}}</p>
+{{EmbedLiveSample('Example', 150, '100%')}}
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<p>This element only includes global attributes</p>
+This element only includes global attributes
 
-<h3 id="Global_attributes">Global attributes</h3>
+### Global attributes
 
-<dl>
- <dt><a href="/en-US/docs/Web/SVG/Attribute/Core">Core Attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr('id')}}</small></dd>
- <dt><a href="/en-US/docs/Web/SVG/Attribute/Styling">Styling Attributes</a></dt>
- <dd><small>{{SVGAttr('class')}}, {{SVGAttr('style')}}</small></dd>
- <dt>Event Attributes</dt>
- <dd><small><a href="/en-US/docs/Web/SVG/Attribute/Events#global_event_attributes">Global event attributes</a>, <a href="/en-US/docs/Web/SVG/Attribute/Events#document_element_event_attributes">Document element event attributes</a></small></dd>
-</dl>
+*   [Core Attributes](/en-US/docs/Web/SVG/Attribute/Core)
+    *   : Most notably: {{SVGAttr('id')}}
+*   [Styling Attributes](/en-US/docs/Web/SVG/Attribute/Styling)
+    *   : {{SVGAttr('class')}}, {{SVGAttr('style')}}
+*   Event Attributes
+    *   : [Global event attributes](/en-US/docs/Web/SVG/Attribute/Events#global_event_attributes), [Document element event attributes](/en-US/docs/Web/SVG/Attribute/Events#document_element_event_attributes)
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGElement("title")}}</li>
-</ul>
+*   {{SVGElement("title")}}

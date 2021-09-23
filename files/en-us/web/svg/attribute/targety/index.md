@@ -8,70 +8,68 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.feConvolveMatrix.targetY
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>targetY</code></strong> attribute determines the positioning in vertical direction of the convolution matrix relative to a given target pixel in the input image. The topmost row of the matrix is row number zero. The value must be such that: <code>0</code> &lt;= <code>targetY</code> &lt; {{SVGAttr("order")}}<code>Y</code>.</p>
+The **`targetY`** attribute determines the positioning in vertical direction of the convolution matrix relative to a given target pixel in the input image. The topmost row of the matrix is row number zero. The value must be such that: `0` <= `targetY` < {{SVGAttr("order")}}`Y`.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("feConvolveMatrix")}}</li>
-</ul>
+*   {{SVGElement("feConvolveMatrix")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td>{{cssxref("integer")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>floor({{SVGAttr("order")}}Y / 2)</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>{{cssxref("integer")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>floor({{SVGAttr("order")}}Y / 2)</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt><code>&lt;integer&gt;</code></dt>
- <dd>This value indicates the positioning in vertical direction of the convolution matrix relative to a given target pixel in the input image.</dd>
-</dl>
+*   `<integer>`
+    *   : This value indicates the positioning in vertical direction of the convolution matrix relative to a given target pixel in the input image.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Filters 1.0", "#element-attrdef-feconvolvematrix-targety", "targetY")}}</td>
-   <td>{{Spec2("Filters 1.0")}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "filters.html#feConvolveMatrixElementTargetYAttribute", "targetY")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("Filters 1.0", "#element-attrdef-feconvolvematrix-targety", "targetY")}}
+      </td>
+      <td>{{Spec2("Filters 1.0")}}</td>
+      <td>No change</td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "filters.html#feConvolveMatrixElementTargetYAttribute", "targetY")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGAttr("targetX")}}</li>
-</ul>
+*   {{SVGAttr("targetX")}}

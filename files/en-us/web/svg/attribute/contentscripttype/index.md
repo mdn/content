@@ -7,57 +7,60 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.svg.contentScriptType
 ---
-<div>{{SVGRef}}{{deprecated_header}}</div>
+{{SVGRef}}{{deprecated_header}}
 
-<p>The <strong><code>contentScriptType</code></strong> attribute specifies the default scripting language for the given document fragment on the {{SVGElement("svg")}} element.</p>
+The **`contentScriptType`** attribute specifies the default scripting language for the given document fragment on the {{SVGElement("svg")}} element.
 
-<p>This attribute sets the default scripting language used to process the value strings in <a href="/en-US/docs/Web/SVG/Attribute#Document_Event_Attributes">event attributes</a>. This language must be used for all instances of script that do not specify their own scripting language. The value specifies a media type, per <a href="http://www.ietf.org/rfc/rfc2046.txt">MIME Part Two: Media Types [RFC2046]</a>.</p>
+This attribute sets the default scripting language used to process the value strings in [event attributes](/en-US/docs/Web/SVG/Attribute#Document_Event_Attributes). This language must be used for all instances of script that do not specify their own scripting language. The value specifies a media type, per [MIME Part Two: Media Types \[RFC2046\]](http://www.ietf.org/rfc/rfc2046.txt).
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td>One of the content types specified in the <a href="http://www.ietf.org/rfc/rfc2046.txt">Media Types</a></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>application/ecmascript</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>No</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        One of the content types specified in the
+        <a href="http://www.ietf.org/rfc/rfc2046.txt">Media Types</a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>application/ecmascript</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>No</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG1.1", "script.html#ContentScriptTypeAttribute", "contentScriptType")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "script.html#ContentScriptTypeAttribute", "contentScriptType")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="http://www.ietf.org/rfc/rfc2046.txt">MIME Part Two: Media Types [RFC2046]</a></li>
- <li>{{SVGElement("script")}}</li>
-</ul>
+*   [MIME Part Two: Media Types \[RFC2046\]](http://www.ietf.org/rfc/rfc2046.txt)
+*   {{SVGElement("script")}}

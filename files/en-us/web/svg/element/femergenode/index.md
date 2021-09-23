@@ -10,72 +10,67 @@ tags:
   - SVG Filter
 browser-compat: svg.elements.feMergeNode
 ---
-<p>The <code>feMergeNode</code> takes the result of another filter to be processed by its parent {{ SVGElement("feMerge") }}.</p>
+The `feMergeNode` takes the result of another filter to be processed by its parent {{ SVGElement("feMerge") }}.
 
-<h2 id="Usage_context">Usage context</h2>
+## Usage context
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: html">&lt;svg width="200" height="200"
+```html
+<svg width="200" height="200"
  xmlns="http://www.w3.org/2000/svg"
- xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
+ xmlns:xlink="http://www.w3.org/1999/xlink">
 
-    &lt;filter id="feOffset" x="-40" y="-20" width="100" height="200"&gt;
-        &lt;feOffset in="SourceGraphic" dx="60" dy="60" /&gt;
-        &lt;feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur2" /&gt;
-        &lt;feMerge&gt;
-            &lt;feMergeNode in="blur2" /&gt;
-            &lt;feMergeNode in="SourceGraphic" /&gt;
-        &lt;/feMerge&gt;
-    &lt;/filter&gt;
+    <filter id="feOffset" x="-40" y="-20" width="100" height="200">
+        <feOffset in="SourceGraphic" dx="60" dy="60" />
+        <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur2" />
+        <feMerge>
+            <feMergeNode in="blur2" />
+            <feMergeNode in="SourceGraphic" />
+        </feMerge>
+    </filter>
 
-    &lt;rect x="40" y="40" width="100" height="100"
-       style="stroke: #000000; fill: green; filter: url(#feOffset);" /&gt;
-    &lt;rect x="40" y="40" width="100" height="100"
-        style="stroke: #000000; fill: green;" /&gt;
-&lt;/svg&gt;
-</pre>
+    <rect x="40" y="40" width="100" height="100"
+       style="stroke: #000000; fill: green; filter: url(#feOffset);" />
+    <rect x="40" y="40" width="100" height="100"
+        style="stroke: #000000; fill: green;" />
+</svg>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Example', 200, 200)}}</p>
+{{EmbedLiveSample('Example', 200, 200)}}
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<h3 id="Global_attributes">Global attributes</h3>
+### Global attributes
 
-<ul>
- <li><a href="/en-US/docs/Web/SVG/Attribute#core">Core attributes</a> »</li>
-</ul>
+*   [Core attributes](/en-US/docs/Web/SVG/Attribute#core) »
 
-<h3 id="Specific_attributes">Specific attributes</h3>
+### Specific attributes
 
-<ul>
- <li>{{ SVGAttr("in") }}</li>
-</ul>
+*   {{ SVGAttr("in") }}
 
-<h2 id="DOM_Interface">DOM Interface</h2>
+## DOM Interface
 
-<p>This element implements the <code><a href="/en-US/docs/DOM/SVGFEMergeNodeElement">SVGFEMergeNodeElement</a></code> interface.</p>
+This element implements the [`SVGFEMergeNodeElement`](/en-US/docs/DOM/SVGFEMergeNodeElement) interface.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{ SVGElement("filter") }}</li>
- <li>{{ SVGElement("animate") }}</li>
- <li>{{ SVGElement("set") }}</li>
- <li>{{ SVGElement("feMerge") }}</li>
- <li><a href="/en-US/docs/Web/SVG/Tutorial/Filter_effects">SVG tutorial: Filter effects</a></li>
-</ul>
+*   {{ SVGElement("filter") }}
+*   {{ SVGElement("animate") }}
+*   {{ SVGElement("set") }}
+*   {{ SVGElement("feMerge") }}
+*   [SVG tutorial: Filter effects](/en-US/docs/Web/SVG/Tutorial/Filter_effects)
 
-<p>{{SVGRef}}</p>
+{{SVGRef}}

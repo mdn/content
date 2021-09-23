@@ -9,37 +9,33 @@ tags:
   - SVG Animation
 browser-compat: svg.elements.discard
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>&lt;discard&gt;</code></strong> <a href="/en-US/docs/Web/SVG">SVG</a> element allows authors to specify the time at which particular elements are to be discarded, thereby reducing the resources required by an SVG user agent. This is particularly useful to help SVG viewers conserve memory while displaying long-running documents.</p>
+The **`<discard>`** [SVG](/en-US/docs/Web/SVG) element allows authors to specify the time at which particular elements are to be discarded, thereby reducing the resources required by an SVG user agent. This is particularly useful to help SVG viewers conserve memory while displaying long-running documents.
 
-<p>The <code>&lt;discard&gt;</code> element may occur wherever the {{SVGElement("animate")}} element may.</p>
+The `<discard>` element may occur wherever the {{SVGElement("animate")}} element may.
 
-<h2 id="Usage_context">Usage context</h2>
+## Usage context
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<h3 id="Global_attributes">Global attributes</h3>
+### Global attributes
 
-<ul>
- <li><a href="/en-US/docs/Web/SVG/Attribute#conditional_processing_attributes">Conditional processing attributes</a></li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#core_attributes">Core attributes</a></li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#aria_attributes">Aria attributes</a></li>
-</ul>
+*   [Conditional processing attributes](/en-US/docs/Web/SVG/Attribute#conditional_processing_attributes)
+*   [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
+*   [Aria attributes](/en-US/docs/Web/SVG/Attribute#aria_attributes)
 
-<h3 id="Specific_attributes">Specific attributes</h3>
+### Specific attributes
 
-<ul>
- <li>{{SVGAttr("begin")}}</li>
- <li>{{SVGAttr("href")}} (but note that <code>&lt;discard&gt;</code> has never supported <code>xlink:href</code>)</li>
-</ul>
+*   {{SVGAttr("begin")}}
+*   {{SVGAttr("href")}} (but note that `<discard>` has never supported `xlink:href`)
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

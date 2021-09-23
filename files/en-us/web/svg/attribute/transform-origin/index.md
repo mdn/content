@@ -6,183 +6,168 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.presentation.transform-origin
 ---
-<p>{{SVGRef()}}</p>
+{{SVGRef()}}
 
-<p>The <strong><code>transform-origin</code></strong> SVG attribute sets the origin for an item’s transformations. </p>
+The **`transform-origin`** SVG attribute sets the origin for an item’s transformations. 
 
-<p>You can use this attribute with any SVG element.</p>
+You can use this attribute with any SVG element.
 
-<div class="notecard note">
-<p><strong>Note:</strong> As a presentation attribute in SVG, <code>transform-origin</code> corresponds in syntax and behavior to the <code>transform-origin</code> property in CSS, and can be used as CSS property to style SVG. See the <a href="/en-US/docs/Web/CSS/transform-origin">CSS transform-origin</a> property for more information. </p>
-</div>
+> **Note:** As a presentation attribute in SVG, `transform-origin` corresponds in syntax and behavior to the `transform-origin` property in CSS, and can be used as CSS property to style SVG. See the [CSS transform-origin](/en-US/docs/Web/CSS/transform-origin) property for more information. 
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <td><strong>Values</strong></td>
-   <td>{{csssyntax("transform-origin")}}</td>
-  </tr>
-  <tr>
-   <td><strong>Default value</strong></td>
-   <td><code>0, 0</code></td>
-  </tr>
-  <tr>
-   <td><strong>Animatable</strong></td>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td><strong>Values</strong></td>
+      <td>{{csssyntax("transform-origin")}}</td>
+    </tr>
+    <tr>
+      <td><strong>Default value</strong></td>
+      <td><code>0, 0</code></td>
+    </tr>
+    <tr>
+      <td><strong>Animatable</strong></td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<div class="notecard note">
-<p><strong>Note:</strong> The default value of <code>transform-origin</code> is <code>0 0</code> for all SVG elements except for root <code>&lt;svg&gt;</code> elements and <code>&lt;svg&gt;</code> elements that are a direct child of a <a href="/en-US/docs/Web/SVG/Element/foreignObject">foreignObject</a>, and whose transform-origin is <code>50% 50%</code>, like other CSS elements.</p>
+> **Note:** The default value of `transform-origin` is `0 0` for all SVG elements except for root `<svg>` elements and `<svg>` elements that are a direct child of a [foreignObject](/en-US/docs/Web/SVG/Element/foreignObject), and whose transform-origin is `50% 50%`, like other CSS elements.
+
+The `transform-origin` property may be specified using one, two, or three values, where each value represents an offset. Offsets that are not explicitly defined are reset to their corresponding [initial values](/en-US/docs/Web/CSS/initial_value).
+
+If a single {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} value is defined, it represents the horizontal offset.
+
+If two or more values are defined and either no value is a keyword, or the only used keyword is `center`, then the first value represents the horizontal offset and the second represents the vertical offset.
+
+*   One-value syntax:
+
+    *   The value must be a [`<length>`](/en-US/docs/Web/CSS/length "The \<length> CSS data type represents a distance value. Lengths can be used in numerous CSS properties, such as width, height, margin, padding, border-width, font-size, and text-shadow."), a [`<percentage>`](/en-US/docs/Web/CSS/percentage "The \<percentage> CSS data type represents a percentage value. It is often used to define a size as relative to an element's parent object. Numerous properties can use percentages, such as width, height, margin, padding, and font-size."), or one of the keywords `left`, `center`, `right`, `top`, and `bottom`.
+*   Two-value syntax:
+
+    *   One value must be a [`<length>`](/en-US/docs/Web/CSS/length "The \<length> CSS data type represents a distance value. Lengths can be used in numerous CSS properties, such as width, height, margin, padding, border-width, font-size, and text-shadow."), a [`<percentage>`](/en-US/docs/Web/CSS/percentage "The \<percentage> CSS data type represents a percentage value. It is often used to define a size as relative to an element's parent object. Numerous properties can use percentages, such as width, height, margin, padding, and font-size."), or one of the keywords `left`, `center`, and `right`.
+    *   The other value must be a [`<length>`](/en-US/docs/Web/CSS/length "The \<length> CSS data type represents a distance value. Lengths can be used in numerous CSS properties, such as width, height, margin, padding, border-width, font-size, and text-shadow."), a [`<percentage>`](/en-US/docs/Web/CSS/percentage "The \<percentage> CSS data type represents a percentage value. It is often used to define a size as relative to an element's parent object. Numerous properties can use percentages, such as width, height, margin, padding, and font-size."), or one of the keywords `top`, `center`, and `bottom`.
+*   Three-value syntax:
+
+    *   The first two values are the same as for the two-value syntax.
+    *   The third value must be a [`<length>`](/en-US/docs/Web/CSS/length "The \<length> CSS data type represents a distance value. Lengths can be used in numerous CSS properties, such as width, height, margin, padding, border-width, font-size, and text-shadow."). It always represents the Z offset.
+
+## Example
+
+This example shows the code for one PNG image and three SVG images:
+
+1.  A PNG reference image.
+2.  An SVG reference image that uses no transformation.
+3.  An SVG image that uses `transform-origin` to do a transformation, with the expected result being an image identical to the reference image.
+4.  An SVG image that does not use `transform-origin` but does the same transformation using just [`transform`](/en-US/docs/Web/SVG/Attribute/transform), with the expected result being an image identical to the reference image.
+
+The fourth image image shows how to do the transformation in browsers that don't support `transform-origin` — because the code for the fourth image does the same transformation as the third image's `transform-origin`-based code, but by only using `transform`, without `transform-origin`.
+
+> **Note:** These examples use a modified version of a code snippet in a Stack Overflow [question](https://stackoverflow.com/q/67057190) from [Maxim Kulikov](https://stackoverflow.com/users/1033939/maxim-kulikov), as well as a modified version of a code snippet in an [answer](https://stackoverflow.com/a/67057754) from [Michael Mullany](https://stackoverflow.com/users/271353/michael-mullany) that accompanies the question. Both code snippets are used under the terms of the [CC BY-SA](https://creativecommons.org/licenses/by-sa/4.0/) license.)
+
+### HTML
+
+```html
+<h4>Reference image</h4>
+
+<div>
+  <figure>
+    <img src="reference.png" alt="PNG reference image"/>
+    <figcaption>Figure 1. PNG reference image. The images following this should look exactly the same as this.</figcaption>
+  </figure>
 </div>
 
-<p>The <code>transform-origin</code> property may be specified using one, two, or three values, where each value represents an offset. Offsets that are not explicitly defined are reset to their corresponding <a href="/en-US/docs/Web/CSS/initial_value">initial values</a>.</p>
+<div>
+  <figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+      <circle cx="100" cy="100" r="100" stroke="none" fill="black"/>
+      <line x1="100" y1="0" x2="100" y2="200" stroke="rebeccapurple" stroke-width="2"/>
+      <line x1="0" y1="100" x2="200" y2="100" stroke="rebeccapurple" stroke-width="2"/>
 
-<p>If a single {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} value is defined, it represents the horizontal offset.</p>
+      <circle cx="100" cy="100" r="75" stroke="none" fill="blue"/>
+      <line x1="100" y1="25" x2="100" y2="175" stroke="rebeccapurple" stroke-width="1.5"/>
+      <line x1="25" y1="100" x2="175" y2="100" stroke="rebeccapurple" stroke-width="1.5"/>
 
-<p>If two or more values are defined and either no value is a keyword, or the only used keyword is <code>center</code>, then the first value represents the horizontal offset and the second represents the vertical offset.</p>
+      <circle cx="100" cy="100" r="50" stroke="none" fill="red"/>
+      <line x1="100" y1="50" x2="100" y2="150" stroke="rebeccapurple" stroke-width="1"/>
+      <line x1="50" y1="100" x2="150" y2="100" stroke="rebeccapurple" stroke-width="1"/>
 
-<ul>
- <li>One-value syntax:
-  <ul>
-   <li>The value must be a <a href="/en-US/docs/Web/CSS/length" title="The &lt;length&gt; CSS data type represents a distance value. Lengths can be used in numerous CSS properties, such as width, height, margin, padding, border-width, font-size, and text-shadow."><code>&lt;length&gt;</code></a>, a <a href="/en-US/docs/Web/CSS/percentage" title="The &lt;percentage&gt; CSS data type represents a percentage value. It is often used to define a size as relative to an element's parent object. Numerous properties can use percentages, such as width, height, margin, padding, and font-size."><code>&lt;percentage&gt;</code></a>, or one of the keywords <code>left</code>, <code>center</code>, <code>right</code>, <code>top</code>, and <code>bottom</code>.</li>
-  </ul>
- </li>
- <li>Two-value syntax:
-  <ul>
-   <li>One value must be a <a href="/en-US/docs/Web/CSS/length" title="The &lt;length&gt; CSS data type represents a distance value. Lengths can be used in numerous CSS properties, such as width, height, margin, padding, border-width, font-size, and text-shadow."><code>&lt;length&gt;</code></a>, a <a href="/en-US/docs/Web/CSS/percentage" title="The &lt;percentage&gt; CSS data type represents a percentage value. It is often used to define a size as relative to an element's parent object. Numerous properties can use percentages, such as width, height, margin, padding, and font-size."><code>&lt;percentage&gt;</code></a>, or one of the keywords <code>left</code>, <code>center</code>, and <code>right</code>.</li>
-   <li>The other value must be a <a href="/en-US/docs/Web/CSS/length" title="The &lt;length&gt; CSS data type represents a distance value. Lengths can be used in numerous CSS properties, such as width, height, margin, padding, border-width, font-size, and text-shadow."><code>&lt;length&gt;</code></a>, a <a href="/en-US/docs/Web/CSS/percentage" title="The &lt;percentage&gt; CSS data type represents a percentage value. It is often used to define a size as relative to an element's parent object. Numerous properties can use percentages, such as width, height, margin, padding, and font-size."><code>&lt;percentage&gt;</code></a>, or one of the keywords <code>top</code>, <code>center</code>, and <code>bottom</code>.</li>
-  </ul>
- </li>
- <li>Three-value syntax:
-  <ul>
-   <li>The first two values are the same as for the two-value syntax.</li>
-   <li>The third value must be a <a href="/en-US/docs/Web/CSS/length" title="The &lt;length&gt; CSS data type represents a distance value. Lengths can be used in numerous CSS properties, such as width, height, margin, padding, border-width, font-size, and text-shadow."><code>&lt;length&gt;</code></a>. It always represents the Z offset.</li>
-  </ul>
- </li>
-</ul>
-
-<h2>Example</h2>
-
-<p>This example shows the code for one PNG image and three SVG images:</p>
-
-<ol>
-  <li>A PNG reference image.</li>
-  <li>An SVG reference image that uses no transformation.</li>
-  <li>An SVG image that uses <code>transform-origin</code> to do a transformation, with the expected result being an image identical to the reference image.</li>
-  <li>An SVG image that does not use <code>transform-origin</code> but does the same transformation using just <code><a href="/en-US/docs/Web/SVG/Attribute/transform">transform</a></code>, with the expected result being an image identical to the reference image.</li>
-</ol>
-
-<p>The fourth image image shows how to do the transformation in browsers that don't support <code>transform-origin</code> — because the code for the fourth image does the same transformation as the third image's <code>transform-origin</code>-based code, but by only using <code>transform</code>, without <code>transform-origin</code>.</p>
-
-<div class="notecard note">
-<p><strong>Note:</strong> These examples use a modified version of a code snippet in a Stack Overflow <a href="https://stackoverflow.com/q/67057190">question</a> from <a href="https://stackoverflow.com/users/1033939/maxim-kulikov">Maxim Kulikov</a>, as well as a modified version of a code snippet in an <a href="https://stackoverflow.com/a/67057754">answer</a> from <a href="https://stackoverflow.com/users/271353/michael-mullany">Michael Mullany</a> that accompanies the question. Both code snippets are used under the terms of the <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a> license.)</p>
+      <circle cx="100" cy="100" r="25" stroke="none" fill="yellow"/>
+      <line x1="100" y1="75" x2="100" y2="125" stroke="rebeccapurple" stroke-width="0.5"/>
+      <line x1="75" y1="100" x2="125" y2="100" stroke="rebeccapurple" stroke-width="0.5"/>
+    </svg>
+    <figcaption>Figure 2. SVG reference image. The images following this should look exactly the same as this.</figcaption>
+  </figure>
 </div>
 
-<h3 id="html">HTML</h3>
+<h4>Transformation with transform-origin</h4>
 
-<pre class="brush: html">&lt;h4&gt;Reference image&lt;/h4&gt;
+<div>
+  <figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+      <defs>
+        <g id="target-g-1">
+          <circle cx="100" cy="100" r="100" stroke="none"/>
+          <line x1="100" y1="0" x2="100" y2="200" stroke="rebeccapurple" stroke-width="2"/>
+          <line x1="0" y1="100" x2="200" y2="100" stroke="rebeccapurple" stroke-width="2"/>
+        </g>
+      </defs>
 
-&lt;div&gt;
-  &lt;figure&gt;
-    &lt;img src="reference.png" alt="PNG reference image"/&gt;
-    &lt;figcaption&gt;Figure 1. PNG reference image. The images following this should look exactly the same as this.&lt;/figcaption&gt;
-  &lt;/figure&gt;
-&lt;/div&gt;
-
-&lt;div&gt;
-  &lt;figure&gt;
-    &lt;svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"&gt;
-      &lt;circle cx="100" cy="100" r="100" stroke="none" fill="black"/&gt;
-      &lt;line x1="100" y1="0" x2="100" y2="200" stroke="rebeccapurple" stroke-width="2"/&gt;
-      &lt;line x1="0" y1="100" x2="200" y2="100" stroke="rebeccapurple" stroke-width="2"/&gt;
-
-      &lt;circle cx="100" cy="100" r="75" stroke="none" fill="blue"/&gt;
-      &lt;line x1="100" y1="25" x2="100" y2="175" stroke="rebeccapurple" stroke-width="1.5"/&gt;
-      &lt;line x1="25" y1="100" x2="175" y2="100" stroke="rebeccapurple" stroke-width="1.5"/&gt;
-
-      &lt;circle cx="100" cy="100" r="50" stroke="none" fill="red"/&gt;
-      &lt;line x1="100" y1="50" x2="100" y2="150" stroke="rebeccapurple" stroke-width="1"/&gt;
-      &lt;line x1="50" y1="100" x2="150" y2="100" stroke="rebeccapurple" stroke-width="1"/&gt;
-
-      &lt;circle cx="100" cy="100" r="25" stroke="none" fill="yellow"/&gt;
-      &lt;line x1="100" y1="75" x2="100" y2="125" stroke="rebeccapurple" stroke-width="0.5"/&gt;
-      &lt;line x1="75" y1="100" x2="125" y2="100" stroke="rebeccapurple" stroke-width="0.5"/&gt;
-    &lt;/svg&gt;
-    &lt;figcaption&gt;Figure 2. SVG reference image. The images following this should look exactly the same as this.&lt;/figcaption&gt;
-  &lt;/figure&gt;
-&lt;/div&gt;
-
-&lt;h4&gt;Transformation with transform-origin&lt;/h4&gt;
-
-&lt;div&gt;
-  &lt;figure&gt;
-    &lt;svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"&gt;
-      &lt;defs&gt;
-        &lt;g id="target-g-1"&gt;
-          &lt;circle cx="100" cy="100" r="100" stroke="none"/&gt;
-          &lt;line x1="100" y1="0" x2="100" y2="200" stroke="rebeccapurple" stroke-width="2"/&gt;
-          &lt;line x1="0" y1="100" x2="200" y2="100" stroke="rebeccapurple" stroke-width="2"/&gt;
-        &lt;/g&gt;
-      &lt;/defs&gt;
-
-      &lt;use href="#target-g-1" fill="black"/&gt;
-      &lt;use href="#target-g-1" fill="blue"
+      <use href="#target-g-1" fill="black"/>
+      <use href="#target-g-1" fill="blue"
           transform="scale(0.75 0.75)"
-          transform-origin="100 100"/&gt;
+          transform-origin="100 100"/>
 
-      &lt;svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="200" height="200" viewBox="0 0 200 200"&gt;
-        &lt;use href="#target-g-1" fill="red"
+      <svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="200" height="200" viewBox="0 0 200 200">
+        <use href="#target-g-1" fill="red"
           transform="scale(0.5 0.5)"
-          transform-origin="100 100"/&gt;
-        &lt;use href="#target-g-1" fill="yellow"
+          transform-origin="100 100"/>
+        <use href="#target-g-1" fill="yellow"
           transform="scale(0.25 0.25)"
-          transform-origin="100 100"/&gt;
-      &lt;/svg&gt;
-    &lt;/svg&gt;
+          transform-origin="100 100"/>
+      </svg>
+    </svg>
 
-    &lt;figcaption&gt;Figure 3. transform-origin used.
-      This image should look exactly the same as the reference image in Figure 2.&lt;/figcaption&gt;
-  &lt;/figure&gt;
-&lt;/div&gt;
+    <figcaption>Figure 3. transform-origin used.
+      This image should look exactly the same as the reference image in Figure 2.</figcaption>
+  </figure>
+</div>
 
-&lt;h4&gt;Transformation without transform-origin&lt;/h4&gt;
+<h4>Transformation without transform-origin</h4>
 
-&lt;div&gt;
-  &lt;figure&gt;
-    &lt;svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"&gt;
-      &lt;defs&gt;
-        &lt;g id="target-g-1"&gt;
-          &lt;circle cx="100" cy="100" r="100" stroke="none"/&gt;
-          &lt;line x1="100" y1="0" x2="100" y2="200" stroke="rebeccapurple" stroke-width="2"/&gt;
-          &lt;line x1="0" y1="100" x2="200" y2="100" stroke="rebeccapurple" stroke-width="2"/&gt;
-        &lt;/g&gt;
-      &lt;/defs&gt;
+<div>
+  <figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+      <defs>
+        <g id="target-g-1">
+          <circle cx="100" cy="100" r="100" stroke="none"/>
+          <line x1="100" y1="0" x2="100" y2="200" stroke="rebeccapurple" stroke-width="2"/>
+          <line x1="0" y1="100" x2="200" y2="100" stroke="rebeccapurple" stroke-width="2"/>
+        </g>
+      </defs>
 
-      &lt;use href="#target-g-1" fill="black"/&gt;
-      &lt;use href="#target-g-1" fill="blue"
-          transform="translate(100 100) scale(0.75 0.75) translate(-100 -100)"/&gt;
+      <use href="#target-g-1" fill="black"/>
+      <use href="#target-g-1" fill="blue"
+          transform="translate(100 100) scale(0.75 0.75) translate(-100 -100)"/>
 
-      &lt;svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="200" height="200" viewBox="0 0 200 200"&gt;
-        &lt;use href="#target-g-1" fill="red"
-            transform="translate(100 100) scale(0.5 0.5) translate(-100 -100)"/&gt;
-        &lt;use href="#target-g-1" fill="yellow"
-            transform="translate(100 100) scale(0.25 0.25) translate(-100 -100)"/&gt;
-      &lt;/svg&gt;
-    &lt;/svg&gt;
+      <svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="200" height="200" viewBox="0 0 200 200">
+        <use href="#target-g-1" fill="red"
+            transform="translate(100 100) scale(0.5 0.5) translate(-100 -100)"/>
+        <use href="#target-g-1" fill="yellow"
+            transform="translate(100 100) scale(0.25 0.25) translate(-100 -100)"/>
+      </svg>
+    </svg>
 
-    &lt;figcaption&gt;Figure 4. transform-origin not used.
-      This image should look exactly the same as the reference image in Figure 2.&lt;/figcaption&gt;
-  &lt;/figure&gt;
-&lt;/div&gt;
-</pre>
+    <figcaption>Figure 4. transform-origin not used.
+      This image should look exactly the same as the reference image in Figure 2.</figcaption>
+  </figure>
+</div>
+```
 
-<h3 id="css">CSS</h3>
+### CSS
 
-<pre class="brush: css">
+```css
     h4 {
       font-family: sans-serif;
     }
@@ -204,34 +189,38 @@ browser-compat: svg.attributes.presentation.transform-origin
       padding: 3px;
       text-align: center;
     }
-</pre>
+```
 
-<h3 id="result">Result</h3>
+### Result
 
-<p>{{ EmbedLiveSample('Example', 700, 1350) }}</p>
+{{ EmbedLiveSample('Example', 700, 1350) }}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <tbody>
-  <tr>
-   <td><strong>Specification</strong></td>
-   <td><strong>Status</strong></td>
-   <td><strong>Comment</strong></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS3 Transforms", "#transform-origin-property", "transform-origin")}}</td>
-   <td>{{Spec2("CSS3 Transforms")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG2", "styling.html#PresentationAttributes", "transform-origin")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td><strong>Specification</strong></td>
+      <td><strong>Status</strong></td>
+      <td><strong>Comment</strong></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("CSS3 Transforms", "#transform-origin-property", "transform-origin")}}
+      </td>
+      <td>{{Spec2("CSS3 Transforms")}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG2", "styling.html#PresentationAttributes", "transform-origin")}}
+      </td>
+      <td>{{Spec2("SVG2")}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

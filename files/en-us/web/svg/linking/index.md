@@ -5,48 +5,51 @@ tags:
   - Guide
   - SVG
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The {{SVGAttr("target")}} attribute on the SVG {{SVGElement("a")}} element doesn't work in Mozilla Firefox 1.5. When SVG documents are embedded within a parent HTML document using the tag:</p>
+The {{SVGAttr("target")}} attribute on the SVG {{SVGElement("a")}} element doesn't work in Mozilla Firefox 1.5. When SVG documents are embedded within a parent HTML document using the tag:
 
-<p>page1.html:</p>
+page1.html:
 
-<pre class="brush: html;">&lt;html&gt;
-  &lt;body&gt;
-    &lt;p&gt;This is a SVG button:&lt;/p&gt;
-    &lt;object width="100" height="50" type="image/svg+xml" data="button.svg"/&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</pre>
+```html
+<html>
+  <body>
+    <p>This is a SVG button:</p>
+    <object width="100" height="50" type="image/svg+xml" data="button.svg"/>
+  </body>
+</html>
+```
 
-<p>button.svg:</p>
+button.svg:
 
-<pre class="brush: xml">&lt;?xml version="1.1" encoding="UTF-8"?&gt;
-&lt;svg xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;a xlink:href="page2.html" target="_top"&gt;
-    &lt;g&gt;
-      &lt;!-- button graphical elements here --&gt;
-    &lt;/g&gt;
-  &lt;/a&gt;
-&lt;/svg&gt;
-</pre>
+```xml
+<?xml version="1.1" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg">
+  <a xlink:href="page2.html" target="_top">
+    <g>
+      <!-- button graphical elements here -->
+    </g>
+  </a>
+</svg>
+```
 
-<p>The specification says that the browser should navigate to the HTML document page2.html when the button graphics are clicked. However, <code>target</code> does not work with Mozilla's implementation of the SVG <code>&lt;a&gt;</code> element in Firefox 1.5. (The problem will be fixed in Firefox 2.0.)</p>
+The specification says that the browser should navigate to the HTML document page2.html when the button graphics are clicked. However, `target` does not work with Mozilla's implementation of the SVG `<a>` element in Firefox 1.5. (The problem will be fixed in Firefox 2.0.)
 
-<p>Anyway, the resultant behavior in Moz SVG is that page2.html will be loaded into the frame where the SVG button was (i.e. you would now have page2.html embedded inside a 100x50 pixel frame inside page1.html).</p>
+Anyway, the resultant behavior in Moz SVG is that page2.html will be loaded into the frame where the SVG button was (i.e. you would now have page2.html embedded inside a 100x50 pixel frame inside page1.html).
 
-<p>To get around this, requires a little ugly JavaScript hacking:</p>
+To get around this, requires a little ugly JavaScript hacking:
 
-<p>button.svg:</p>
+button.svg:
 
-<pre class="brush: xml;">&lt;?xml version="1.1" encoding="UTF-8"?&gt;
-&lt;svg xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;g onclick="top.document.href='page2.html'" cursor="pointer"&gt;
-    &lt;!-- button graphical elements here --&gt;
-  &lt;/g&gt;
-&lt;/svg&gt;
-</pre>
+```xml
+<?xml version="1.1" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg">
+  <g onclick="top.document.href='page2.html'" cursor="pointer">
+    <!-- button graphical elements here -->
+  </g>
+</svg>
+```
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>For an example of this solution at work see <a href="http://www.codedread.com/">www.codedread.com</a>.</p>
+For an example of this solution at work see [www.codedread.com](http://www.codedread.com/).

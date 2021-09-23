@@ -6,28 +6,34 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.presentation.alignment-baseline
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>alignment-baseline</code></strong> attribute specifies how an object is aligned with respect to its parent. This property specifies which baseline of this element is to be aligned with the corresponding baseline of the parent. For example, this allows alphabetic baselines in Roman text to stay aligned across font size changes. It defaults to the baseline with the same name as the computed value of the <code>alignment-baseline</code> property.</p>
+The **`alignment-baseline`** attribute specifies how an object is aligned with respect to its parent. This property specifies which baseline of this element is to be aligned with the corresponding baseline of the parent. For example, this allows alphabetic baselines in Roman text to stay aligned across font size changes. It defaults to the baseline with the same name as the computed value of the `alignment-baseline` property.
 
-<div class="note"><p><strong>Note:</strong> As a presentation attribute <code>alignment-baseline</code> can be used as a CSS property.</p></div>
+> **Note:** As a presentation attribute `alignment-baseline` can be used as a CSS property.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("tspan")}}</li>
-  <li>{{SVGElement("tref")}}</li>
-  <li>{{SVGElement("altGlyph")}}</li>
-  <li>{{SVGElement("textPath")}}</li>
-</ul>
+*   {{SVGElement("tspan")}}
+*   {{SVGElement("tref")}}
+*   {{SVGElement("altGlyph")}}
+*   {{SVGElement("textPath")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Value</th>
-      <td><code>auto</code> | <code>baseline</code> | <code>before-edge</code> | <code>text-before-edge</code> | <code>middle</code> | <code>central</code> | <code>after-edge</code> | <code>text-after-edge</code> | <code>ideographic</code> | <code>alphabetic</code> | <code>hanging</code> | <code>mathematical</code> | <code>top</code> | <code>center</code> | <code>bottom</code></td>
+      <td>
+        <code>auto</code> | <code>baseline</code> | <code>before-edge</code> |
+        <code>text-before-edge</code> | <code>middle</code> |
+        <code>central</code> | <code>after-edge</code> |
+        <code>text-after-edge</code> | <code>ideographic</code> |
+        <code>alphabetic</code> | <code>hanging</code> |
+        <code>mathematical</code> | <code>top</code> | <code>center</code> |
+        <code>bottom</code>
+      </td>
     </tr>
     <tr>
       <th scope="row">Default value</th>
@@ -40,99 +46,88 @@ browser-compat: svg.attributes.presentation.alignment-baseline
   </tbody>
 </table>
 
-<dl>
-  <dt><code>auto</code> {{deprecated_inline}}</dt>
-  <dd>The value is the dominant-baseline of the script to which the character belongs - i.e., use the dominant-baseline of the parent.</dd>
-  <dt><code>baseline</code></dt>
-  <dd>Uses the {{Glossary("dominant baseline")}} choice of the parent. Matches the box’s corresponding {{Glossary("baseline")}} to that of its parent.</dd>
-  <dt><code>before-edge</code> {{deprecated_inline}}</dt>
-  <dd>The alignment-point of the object being aligned is aligned with the "before-edge" baseline of the parent text content element.</dd>
-  <dt><code>text-bottom</code></dt>
-  <dd>Matches the bottom of the box to the top of the parent’s content area.</dd>
-  <dt><code>text-before-edge</code></dt>
-  <dd>
-    <p>The alignment-point of the object being aligned is aligned with the "text-before-edge" baseline of the parent text content element.</p>
+*   `auto` {{deprecated_inline}}
+    *   : The value is the dominant-baseline of the script to which the character belongs - i.e., use the dominant-baseline of the parent.
+*   `baseline`
+    *   : Uses the {{Glossary("dominant baseline")}} choice of the parent. Matches the box’s corresponding {{Glossary("baseline")}} to that of its parent.
+*   `before-edge` {{deprecated_inline}}
+    *   : The alignment-point of the object being aligned is aligned with the "before-edge" baseline of the parent text content element.
+*   `text-bottom`
+    *   : Matches the bottom of the box to the top of the parent’s content area.
+*   `text-before-edge`
+    *   : The alignment-point of the object being aligned is aligned with the "text-before-edge" baseline of the parent text content element.
 
-    <div class="note"><p><strong>Note:</strong> This keyword may be mapped to <code>text-top</code>.</p></div>
-  </dd>
-  <dt><code>middle</code></dt>
-  <dd>Aligns the vertical midpoint of the box with the baseline of the parent box plus half the x-height of the parent.</dd>
-  <dt><code>central</code></dt>
-  <dd>Matches the box’s central baseline to the central baseline of its parent.</dd>
-  <dt><code>after-edge</code> {{deprecated_inline}}</dt>
-  <dd>
-    <p>The alignment-point of the object being aligned is aligned with the "after-edge" baseline of the parent text content element.</p>
-  </dd>
-  <dt><code>text-top</code></dt>
-  <dd>Matches the top of the box to the top of the parent’s content area.</dd>
-  <dt><code>text-after-edge</code></dt>
-  <dd>
-    <p>The alignment-point of the object being aligned is aligned with the "text-after-edge" baseline of the parent text content element.</p>
+        > **Note:** This keyword may be mapped to `text-top`.
+*   `middle`
+    *   : Aligns the vertical midpoint of the box with the baseline of the parent box plus half the x-height of the parent.
+*   `central`
+    *   : Matches the box’s central baseline to the central baseline of its parent.
+*   `after-edge` {{deprecated_inline}}
+    *   : The alignment-point of the object being aligned is aligned with the "after-edge" baseline of the parent text content element.
+*   `text-top`
+    *   : Matches the top of the box to the top of the parent’s content area.
+*   `text-after-edge`
+    *   : The alignment-point of the object being aligned is aligned with the "text-after-edge" baseline of the parent text content element.
 
-    <div class="note"><p><strong>Note:</strong> This keyword may be mapped to <code>text-bottom</code>.</p></div>
-  </dd>
-  <dt><code>ideographic</code></dt>
-  <dd>Matches the box’s ideographic character face under-side baseline to that of its parent.</dd>
-  <dt><code>alphabetic</code></dt>
-  <dd>Matches the box’s alphabetic baseline to that of its parent.</dd>
-  <dt><code>hanging</code></dt>
-  <dd>
-    <p>The alignment-point of the object being aligned is aligned with the "hanging" baseline of the parent text content element.</p>
-  </dd>
-  <dt><code>mathematical</code></dt>
-  <dd>Matches the box’s mathematical baseline to that of its parent.</dd>
-  <dt><code>top</code></dt>
-  <dd>
-    <p>Aligns the top of the aligned subtree with the top of the line box.</p>
-  </dd>
-  <dt><code>center</code></dt>
-  <dd>Aligns the center of the aligned subtree with the center of the line box.</dd>
-  <dt><code>bottom</code></dt>
-  <dd>Aligns the bottom of the aligned subtree with the bottom of the line box.</dd>
-</dl>
+        > **Note:** This keyword may be mapped to `text-bottom`.
+*   `ideographic`
+    *   : Matches the box’s ideographic character face under-side baseline to that of its parent.
+*   `alphabetic`
+    *   : Matches the box’s alphabetic baseline to that of its parent.
+*   `hanging`
+    *   : The alignment-point of the object being aligned is aligned with the "hanging" baseline of the parent text content element.
+*   `mathematical`
+    *   : Matches the box’s mathematical baseline to that of its parent.
+*   `top`
+    *   : Aligns the top of the aligned subtree with the top of the line box.
+*   `center`
+    *   : Aligns the center of the aligned subtree with the center of the line box.
+*   `bottom`
+    *   : Aligns the bottom of the aligned subtree with the bottom of the line box.
 
-<p>SVG 2 introduces some changes to the definition of this property. In particular: the values <code>auto</code>, <code>before-edge</code>, and <code>after-edge</code> have been removed. For backwards compatibility, <code>text-before-edge</code> may be mapped to <code>text-top</code> and <code>text-after-edge</code> to <code>text-bottom</code>. Neither <code>text-before-edge</code> nor <code>text-after-edge</code> should be used with the {{cssxref("vertical-align")}} property.</p>
+SVG 2 introduces some changes to the definition of this property. In particular: the values `auto`, `before-edge`, and `after-edge` have been removed. For backwards compatibility, `text-before-edge` may be mapped to `text-top` and `text-after-edge` to `text-bottom`. Neither `text-before-edge` nor `text-after-edge` should be used with the {{cssxref("vertical-align")}} property.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: html">&lt;svg width="300" height="120" viewBox="0 0 300 120"
-     xmlns="http://www.w3.org/2000/svg"&gt;
+```html
+<svg width="300" height="120" viewBox="0 0 300 120"
+     xmlns="http://www.w3.org/2000/svg">
 
-    &lt;!-- Materialization of anchors --&gt;
-    &lt;path d="M60,10 L60,110
+    <!-- Materialization of anchors -->
+    <path d="M60,10 L60,110
              M30,10 L300,10
              M30,65 L300,65
              M30,110 L300,110
-             " stroke="grey" /&gt;
+             " stroke="grey" />
 
-    &lt;!-- Anchors in action --&gt;
-    &lt;text alignment-baseline="hanging"
-          x="60" y="10"&gt;A hanging&lt;/text&gt;
+    <!-- Anchors in action -->
+    <text alignment-baseline="hanging"
+          x="60" y="10">A hanging</text>
 
-    &lt;text alignment-baseline="middle"
-          x="60" y="65"&gt;A middle&lt;/text&gt;
+    <text alignment-baseline="middle"
+          x="60" y="65">A middle</text>
 
-    &lt;text alignment-baseline="baseline"
-          x="60" y="110"&gt;A baseline&lt;/text&gt;
+    <text alignment-baseline="baseline"
+          x="60" y="110">A baseline</text>
 
-    &lt;!-- Materialization of anchors --&gt;
-    &lt;circle cx="60" cy="10" r="3" fill="red" /&gt;
-    &lt;circle cx="60" cy="65" r="3" fill="red" /&gt;
-    &lt;circle cx="60" cy="110" r="3" fill="red" /&gt;
+    <!-- Materialization of anchors -->
+    <circle cx="60" cy="10" r="3" fill="red" />
+    <circle cx="60" cy="65" r="3" fill="red" />
+    <circle cx="60" cy="110" r="3" fill="red" />
 
-&lt;style&gt;&lt;![CDATA[
+<style><![CDATA[
 text{
     font: bold 36px Verdana, Helvetica, Arial, sans-serif;
 }
-]]&gt;&lt;/style&gt;
-&lt;/svg&gt;
-</pre>
+]]></style>
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<p>For object alignment in other elements (such as {{SVGElement("text")}}), see {{SVGAttr("dominant-baseline")}}.</p>
+For object alignment in other elements (such as {{SVGElement("text")}}), see {{SVGAttr("dominant-baseline")}}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
   <thead>
@@ -144,29 +139,37 @@ text{
   </thead>
   <tbody>
     <tr>
-      <td>{{SpecName("CSS3 Inline", "#propdef-alignment-baseline", "alignment-baseline")}}</td>
+      <td>
+        {{SpecName("CSS3 Inline", "#propdef-alignment-baseline", "alignment-baseline")}}
+      </td>
       <td>{{Spec2("CSS3 Inline")}}</td>
       <td>No change</td>
     </tr>
     <tr>
-      <td>{{SpecName("SVG2", "text.html#AlignmentBaselineProperty", "alignment-baseline")}}</td>
+      <td>
+        {{SpecName("SVG2", "text.html#AlignmentBaselineProperty", "alignment-baseline")}}
+      </td>
       <td>{{Spec2("SVG2")}}</td>
-      <td>Refers to the definition in CSS Inline Layout and notes the changes to <code>auto</code>, <code>before-edge</code>, <code>after-edge</code>, <code>text-before-edge</code>, and <code>text-after-edge</code></td>
+      <td>
+        Refers to the definition in CSS Inline Layout and notes the changes to
+        <code>auto</code>, <code>before-edge</code>, <code>after-edge</code>,
+        <code>text-before-edge</code>, and <code>text-after-edge</code>
+      </td>
     </tr>
     <tr>
-      <td>{{SpecName("SVG1.1", "text.html#AlignmentBaselineProperty", "alignment-baseline")}}</td>
+      <td>
+        {{SpecName("SVG1.1", "text.html#AlignmentBaselineProperty", "alignment-baseline")}}
+      </td>
       <td>{{Spec2("SVG1.1")}}</td>
       <td>Initial definition</td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{cssxref("CSS_Box_Alignment#baseline_alignment", "CSS alignment-baseline")}}</li>
-</ul>
+*   {{cssxref("CSS_Box_Alignment#baseline_alignment", "CSS alignment-baseline")}}

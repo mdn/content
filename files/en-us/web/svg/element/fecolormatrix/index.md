@@ -7,189 +7,179 @@ tags:
   - SVG Filter
 browser-compat: svg.elements.feColorMatrix
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>&lt;feColorMatrix&gt;</code></strong> SVG filter element changes colors based on a transformation matrix. Every pixel's color value <code>[R,G,B,A]</code> is <a href="https://en.wikipedia.org/wiki/Matrix_multiplication">matrix multiplied</a> by a 5 by 5 color matrix to create new color <code>[R<em>'</em>,G<em>'</em>,B<em>'</em>,A<em>'</em>]</code>.</p>
+The **`<feColorMatrix>`** SVG filter element changes colors based on a transformation matrix. Every pixel's color value `[R,G,B,A]` is [matrix multiplied](https://en.wikipedia.org/wiki/Matrix_multiplication) by a 5 by 5 color matrix to create new color `[R',G',B',A']`.
 
-<div class="notecard note">
-<p><strong>Note:</strong> The prime symbol <em><code><strong>'</strong></code></em> is used in mathematics indicate the result of a transformation.</p>
-</div>
+> **Note:** The prime symbol ***`'`*** is used in mathematics indicate the result of a transformation.
 
-<pre>| R<em>'</em> |     | r<sub>1</sub> r<sub>2</sub> r<sub>3</sub> r<sub>4</sub> r<sub>5</sub> |   | R |
-| G<em>'</em> |     | g<sub>1</sub> g<sub>2</sub> g<sub>3</sub> g<sub>4</sub> g<sub>5</sub> |   | G |
-| B<em>'</em> |  =  | b<sub>1</sub> b<sub>2</sub> b<sub>3</sub> b<sub>4</sub> b<sub>5</sub> | * | B |
-| A<em>'</em> |     | a<sub>1</sub> a<sub>2</sub> a<sub>3</sub> a<sub>4</sub> a<sub>5</sub> |   | A |
-| 1  |     | 0  0  0  0  1 |   | 1 |</pre>
+    | R' |     | r1 r2 r3 r4 r5 |   | R |
+    | G' |     | g1 g2 g3 g4 g5 |   | G |
+    | B' |  =  | b1 b2 b3 b4 b5 | * | B |
+    | A' |     | a1 a2 a3 a4 a5 |   | A |
+    | 1  |     | 0  0  0  0  1 |   | 1 |
 
-<p>In simplified terms, below is how each color channel in the new pixel is calculated. The last row is ignored because its values are constant.</p>
+In simplified terms, below is how each color channel in the new pixel is calculated. The last row is ignored because its values are constant.
 
-<pre>R<em>'</em> = r<sub>1</sub>*R + r<sub>2</sub>*G + r<sub>3</sub>*B + r<sub>4</sub>*A + r<sub>5</sub>
-G<em>'</em> = g<sub>1</sub>*R + g<sub>2</sub>*G + g<sub>3</sub>*B + g<sub>4</sub>*A + g<sub>5</sub>
-B<em>'</em> = b<sub>1</sub>*R + b<sub>2</sub>*G + b<sub>3</sub>*B + b<sub>4</sub>*A + b<sub>5</sub>
-A<em>'</em> = a<sub>1</sub>*R + a<sub>2</sub>*G + a<sub>3</sub>*B + a<sub>4</sub>*A + a<sub>5</sub>
-</pre>
+    R' = r1*R + r2*G + r3*B + r4*A + r5
+    G' = g1*R + g2*G + g3*B + g4*A + g5
+    B' = b1*R + b2*G + b3*B + b4*A + b5
+    A' = a1*R + a2*G + a3*B + a4*A + a5
 
-<p>Take the amount of red in the new pixel, or <code>R<em>'</em></code>:</p>
+Take the amount of red in the new pixel, or `R'`:
 
-<p>It is the sum of:</p>
+It is the sum of:
 
-<ul>
- <li><code>r<sub>1</sub></code> times the old pixel's red <code>R</code>,</li>
- <li><code>r<sub>2</sub></code> times the old pixel's green <code>G</code>,</li>
- <li><code>r<sub>3</sub></code> times of the old pixel's blue <code>B</code>,</li>
- <li><code>r<sub>4</sub></code> times the old pixel's alpha <code>A</code>,</li>
- <li>plus a shift <code>r<sub>5</sub></code>.</li>
-</ul>
+*   `r1` times the old pixel's red `R`,
+*   `r2` times the old pixel's green `G`,
+*   `r3` times of the old pixel's blue `B`,
+*   `r4` times the old pixel's alpha `A`,
+*   plus a shift `r5`.
 
-<p>These specified amounts can be any real number, though the final <strong>R'</strong> will be clamped between 0 and 1. The same goes for <strong>G'</strong>, <strong>B'</strong>, and <strong>A'</strong>.</p>
+These specified amounts can be any real number, though the final **R'** will be clamped between 0 and 1. The same goes for **G'**, **B'**, and **A'**.
 
-<pre>R'      =      r1 * R      +        r2 * G      +       r3 * B      +       r4 * A       +       r5
-New red = [ r1 * old red ] + [ r2 * old green ] + [ r3 * old Blue ] + [ r4 * old Alpha ] + [ shift of r5 ]</pre>
+    R'      =      r1 * R      +        r2 * G      +       r3 * B      +       r4 * A       +       r5
+    New red = [ r1 * old red ] + [ r2 * old green ] + [ r3 * old Blue ] + [ r4 * old Alpha ] + [ shift of r5 ]
 
-<p>If, say, we want to make a completely black image redder, we can make the <code>r<sub>5</sub></code> a positive real number <em>x</em>, boosting the redness on every pixel of the new image by <em>x</em>.</p>
+If, say, we want to make a completely black image redder, we can make the `r5` a positive real number *x*, boosting the redness on every pixel of the new image by *x*.
 
-<p>An <strong>identity matrix</strong> looks like this:</p>
+An **identity matrix** looks like this:
 
-<pre>     R G B A W
-R' | 1 0 0 0 0 |
-G' | 0 1 0 0 0 |
-B' | 0 0 1 0 0 |
-A' | 0 0 0 1 0 |
-</pre>
+         R G B A W
+    R' | 1 0 0 0 0 |
+    G' | 0 1 0 0 0 |
+    B' | 0 0 1 0 0 |
+    A' | 0 0 0 1 0 |
 
-<p>In it, every new value is exactly 1 times its old value, with nothing else added. It is recommended to start manipulating the matrix from here.</p>
+In it, every new value is exactly 1 times its old value, with nothing else added. It is recommended to start manipulating the matrix from here.
 
-<h2 id="Usage_context">Usage context</h2>
+## Usage context
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<h3 id="Global_attributes">Global attributes</h3>
+### Global attributes
 
-<ul>
- <li><a href="/en-US/docs/Web/SVG/Attribute#core_attributes">Core attributes</a></li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#presentation_attributes">Presentation attributes</a></li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes">Filter primitive attributes</a></li>
- <li>{{SVGAttr("class")}}</li>
- <li>{{SVGAttr("style")}}</li>
-</ul>
+*   [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
+*   [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
+*   [Filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes)
+*   {{SVGAttr("class")}}
+*   {{SVGAttr("style")}}
 
-<h3 id="Specific_attributes">Specific attributes</h3>
+### Specific attributes
 
-<ul>
- <li>{{SVGAttr("in")}}</li>
- <li>{{SVGAttr("type")}}</li>
- <li>{{SVGAttr("values")}}</li>
-</ul>
+*   {{SVGAttr("in")}}
+*   {{SVGAttr("type")}}
+*   {{SVGAttr("values")}}
 
-<h2 id="DOM_Interface">DOM Interface</h2>
+## DOM Interface
 
-<p>This element implements the {{domxref("SVGFEColorMatrixElement")}} interface.</p>
+This element implements the {{domxref("SVGFEColorMatrixElement")}} interface.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<pre class="brush: html; highlight[19-24,31-33,40-42,49-50]">&lt;svg width="100%" height="100%" viewBox="0 0 150 500"
+```html
+<svg width="100%" height="100%" viewBox="0 0 150 500"
     preserveAspectRatio="xMidYMid meet"
     xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
+    xmlns:xlink="http://www.w3.org/1999/xlink">
 
-  &lt;!-- ref --&gt;
-  &lt;defs&gt;
-    &lt;g id="circles"&gt;
-      &lt;circle cx="30" cy="30" r="20" fill="blue" fill-opacity="0.5" /&gt;
-      &lt;circle cx="20" cy="50" r="20" fill="green" fill-opacity="0.5" /&gt;
-      &lt;circle cx="40" cy="50" r="20" fill="red" fill-opacity="0.5" /&gt;
-    &lt;/g&gt;
-  &lt;/defs&gt;
-  &lt;use href="#circles" /&gt;
-  &lt;text x="70" y="50"&gt;Reference&lt;/text&gt;
+  <!-- ref -->
+  <defs>
+    <g id="circles">
+      <circle cx="30" cy="30" r="20" fill="blue" fill-opacity="0.5" />
+      <circle cx="20" cy="50" r="20" fill="green" fill-opacity="0.5" />
+      <circle cx="40" cy="50" r="20" fill="red" fill-opacity="0.5" />
+    </g>
+  </defs>
+  <use href="#circles" />
+  <text x="70" y="50">Reference</text>
 
-  &lt;!-- identity matrix --&gt;
-  &lt;filter id="colorMeTheSame"&gt;
-    &lt;feColorMatrix in="SourceGraphic"
+  <!-- identity matrix -->
+  <filter id="colorMeTheSame">
+    <feColorMatrix in="SourceGraphic"
         type="matrix"
         values="1 0 0 0 0
                 0 1 0 0 0
                 0 0 1 0 0
-                0 0 0 1 0" /&gt;
-   &lt;/filter&gt;
-  &lt;use href="#circles" transform="translate(0 70)" filter="url(#colorMeTheSame)" /&gt;
-  &lt;text x="70" y="120"&gt;Identity matrix&lt;/text&gt;
+                0 0 0 1 0" />
+   </filter>
+  <use href="#circles" transform="translate(0 70)" filter="url(#colorMeTheSame)" />
+  <text x="70" y="120">Identity matrix</text>
 
-  &lt;!-- Combine RGB into green matrix --&gt;
-  &lt;filter id="colorMeGreen"&gt;
-    &lt;feColorMatrix in="SourceGraphic"
+  <!-- Combine RGB into green matrix -->
+  <filter id="colorMeGreen">
+    <feColorMatrix in="SourceGraphic"
         type="matrix"
         values="0 0 0 0 0
                 1 1 1 1 0
                 0 0 0 0 0
-                0 0 0 1 0" /&gt;
-  &lt;/filter&gt;
-  &lt;use href="#circles" transform="translate(0 140)" filter="url(#colorMeGreen)" /&gt;
-  &lt;text x="70" y="190"&gt;rgbToGreen&lt;/text&gt;
+                0 0 0 1 0" />
+  </filter>
+  <use href="#circles" transform="translate(0 140)" filter="url(#colorMeGreen)" />
+  <text x="70" y="190">rgbToGreen</text>
 
-  &lt;!-- saturate --&gt;
-  &lt;filter id="colorMeSaturate"&gt;
-    &lt;feColorMatrix in="SourceGraphic"
+  <!-- saturate -->
+  <filter id="colorMeSaturate">
+    <feColorMatrix in="SourceGraphic"
         type="saturate"
-        values="0.2" /&gt;
-  &lt;/filter&gt;
-  &lt;use href="#circles" transform="translate(0 210)" filter="url(#colorMeSaturate)" /&gt;
-  &lt;text x="70" y="260"&gt;saturate&lt;/text&gt;
+        values="0.2" />
+  </filter>
+  <use href="#circles" transform="translate(0 210)" filter="url(#colorMeSaturate)" />
+  <text x="70" y="260">saturate</text>
 
-  &lt;!-- hueRotate --&gt;
-  &lt;filter id="colorMeHueRotate"&gt;
-    &lt;feColorMatrix in="SourceGraphic"
+  <!-- hueRotate -->
+  <filter id="colorMeHueRotate">
+    <feColorMatrix in="SourceGraphic"
         type="hueRotate"
-        values="180" /&gt;
-  &lt;/filter&gt;
-  &lt;use href="#circles" transform="translate(0 280)" filter="url(#colorMeHueRotate)" /&gt;
-  &lt;text x="70" y="330"&gt;hueRotate&lt;/text&gt;
+        values="180" />
+  </filter>
+  <use href="#circles" transform="translate(0 280)" filter="url(#colorMeHueRotate)" />
+  <text x="70" y="330">hueRotate</text>
 
-  &lt;!-- luminanceToAlpha --&gt;
-  &lt;filter id="colorMeLTA"&gt;
-    &lt;feColorMatrix in="SourceGraphic"
-        type="luminanceToAlpha" /&gt;
-  &lt;/filter&gt;
-  &lt;use href="#circles" transform="translate(0 350)" filter="url(#colorMeLTA)" /&gt;
-  &lt;text x="70" y="400"&gt;luminanceToAlpha&lt;/text&gt;
-&lt;/svg&gt;</pre>
+  <!-- luminanceToAlpha -->
+  <filter id="colorMeLTA">
+    <feColorMatrix in="SourceGraphic"
+        type="luminanceToAlpha" />
+  </filter>
+  <use href="#circles" transform="translate(0 350)" filter="url(#colorMeLTA)" />
+  <text x="70" y="400">luminanceToAlpha</text>
+</svg>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example", "100%", 700, "/files/4371/test.png")}}</p>
+{{EmbedLiveSample("Example", "100%", 700, "/files/4371/test.png")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGElement("filter")}}</li>
- <li>{{SVGElement("animate")}}</li>
- <li>{{SVGElement("set")}}</li>
- <li>{{SVGElement("feBlend")}}</li>
- <li>{{SVGElement("feComponentTransfer")}}</li>
- <li>{{SVGElement("feComposite")}}</li>
- <li>{{SVGElement("feConvolveMatrix")}}</li>
- <li>{{SVGElement("feDiffuseLighting")}}</li>
- <li>{{SVGElement("feDisplacementMap")}}</li>
- <li>{{SVGElement("feFlood")}}</li>
- <li>{{SVGElement("feGaussianBlur")}}</li>
- <li>{{SVGElement("feImage")}}</li>
- <li>{{SVGElement("feMerge")}}</li>
- <li>{{SVGElement("feMorphology")}}</li>
- <li>{{SVGElement("feOffset")}}</li>
- <li>{{SVGElement("feSpecularLighting")}}</li>
- <li>{{SVGElement("feTile")}}</li>
- <li>{{SVGElement("feTurbulence")}}</li>
- <li><a href="/en-US/docs/Web/SVG/Tutorial/Filter_effects">SVG tutorial: Filter effects</a></li>
-</ul>
+*   {{SVGElement("filter")}}
+*   {{SVGElement("animate")}}
+*   {{SVGElement("set")}}
+*   {{SVGElement("feBlend")}}
+*   {{SVGElement("feComponentTransfer")}}
+*   {{SVGElement("feComposite")}}
+*   {{SVGElement("feConvolveMatrix")}}
+*   {{SVGElement("feDiffuseLighting")}}
+*   {{SVGElement("feDisplacementMap")}}
+*   {{SVGElement("feFlood")}}
+*   {{SVGElement("feGaussianBlur")}}
+*   {{SVGElement("feImage")}}
+*   {{SVGElement("feMerge")}}
+*   {{SVGElement("feMorphology")}}
+*   {{SVGElement("feOffset")}}
+*   {{SVGElement("feSpecularLighting")}}
+*   {{SVGElement("feTile")}}
+*   {{SVGElement("feTurbulence")}}
+*   [SVG tutorial: Filter effects](/en-US/docs/Web/SVG/Tutorial/Filter_effects)

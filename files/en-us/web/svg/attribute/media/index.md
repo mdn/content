@@ -6,88 +6,104 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.style.media
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <code><strong>media</strong></code> attribute specifies a {{Glossary("media query")}} that must be matched for a style sheet to apply.</p>
+The **`media`** attribute specifies a {{Glossary("media query")}} that must be matched for a style sheet to apply.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("style")}}</li>
-</ul>
+*   {{SVGElement("style")}}
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html, body, svg {
+```css hidden
+html, body, svg {
   height: 100%;
-}</pre>
+}
+```
 
-<pre class="brush: html; highlight[5]">&lt;svg viewBox="0 0 240 220" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;style&gt;
+```html
+<svg viewBox="0 0 240 220" xmlns="http://www.w3.org/2000/svg">
+  <style>
     rect { fill: black; }
-  &lt;/style&gt;
-  &lt;style media="all and (min-width: 600px)"&gt;
+  </style>
+  <style media="all and (min-width: 600px)">
     rect { fill: seagreen; }
-  &lt;/style&gt;
+  </style>
 
-  &lt;text y="15"&gt;Resize the window to see the effect&lt;/text&gt;
-  &lt;rect y="20" width="200" height="200" /&gt;
-&lt;/svg&gt;</pre>
+  <text y="15">Resize the window to see the effect</text>
+  <rect y="20" width="200" height="200" />
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", "200", "200")}}</p>
+{{EmbedLiveSample("Example", "200", "200")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code><a href="/en-US/docs/Web/CSS/@media#media-query-list">&lt;media-query-list&gt;</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>all</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/CSS/@media#media-query-list"
+            >&#x3C;media-query-list></a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>all</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt><code>&lt;media-query-list&gt;</code></dt>
- <dd>
- <p>This value holds a media query that needs to match in order for the style sheet to be applied.</p>
+*   `<media-query-list>`
+    *   : This value holds a media query that needs to match in order for the style sheet to be applied.
 
- <p>If not specified, the style sheet is applied unconditionally.</p>
- </dd>
-</dl>
+        If not specified, the style sheet is applied unconditionally.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG2", "styling.html#StyleElementMediaAttribute", "media")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Changed the value definition from different media types as defined in CSS 2 to <code><a href="/en-US/docs/Web/CSS/@media#media-query-list">&lt;media-query-list&gt;</a></code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "styling.html#StyleElementMediaAttribute", "media")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("SVG2", "styling.html#StyleElementMediaAttribute", "media")}}
+      </td>
+      <td>{{Spec2("SVG2")}}</td>
+      <td>
+        Changed the value definition from different media types as defined in
+        CSS 2 to
+        <code
+          ><a href="/en-US/docs/Web/CSS/@media#media-query-list"
+            >&#x3C;media-query-list></a
+          ></code
+        >.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "styling.html#StyleElementMediaAttribute", "media")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

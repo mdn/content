@@ -5,125 +5,132 @@ tags:
   - NeedsBrowserCompatibility
   - NeedsExample
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>refX</code></strong> attribute defines the x coordinate of an element’s reference point.</p>
+The **`refX`** attribute defines the x coordinate of an element’s reference point.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("marker")}}</li>
-  <li>{{SVGElement("symbol")}}</li>
-</ul>
+*   {{SVGElement("marker")}}
+*   {{SVGElement("symbol")}}
 
-<h2 id="marker">marker</h2>
+## marker
 
-<p>For {{SVGElement("marker")}}, <code>refX</code> defines the x coordinate of the marker’s reference point, which is to be placed exactly at the marker’s position on the shape.</p>
+For {{SVGElement("marker")}}, `refX` defines the x coordinate of the marker’s reference point, which is to be placed exactly at the marker’s position on the shape.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td>{{cssxref("length-percentage")}} | {{cssxref("number")}} | <code>left</code> | <code>center</code> | <code>right</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>0</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        {{cssxref("length-percentage")}} |
+        {{cssxref("number")}} | <code>left</code> | <code>center</code> |
+        <code>right</code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt><code>&lt;length-percentage&gt;</code></dt>
- <dd>Lengths are interpreted as being in the coordinate system of the marker contents, after application of the {{SVGAttr("viewBox")}} and {{SVGAttr("preserveAspectRatio")}} attributes.<br>
- <br>
- Percentage values are interpreted as being a percentage of the {{SVGAttr("viewBox")}} width.</dd>
- <dt><code>&lt;number&gt;</code></dt>
- <dd>Numbers are interpreted as being in the coordinate system of the marker contents, after application of the {{SVGAttr("viewBox")}} and {{SVGAttr("preserveAspectRatio")}} attributes.</dd>
- <dt><code>left</code></dt>
- <dd>The reference point of the marker is placed at the left edge of the shape.</dd>
- <dt><code>center</code></dt>
- <dd>The reference point of the marker is placed at the horizontal center of the shape.</dd>
- <dt><code>right</code></dt>
- <dd>The reference point of the marker is placed at the right edge of the shape.</dd>
-</dl>
+*   `<length-percentage>`
+    *   : Lengths are interpreted as being in the coordinate system of the marker contents, after application of the {{SVGAttr("viewBox")}} and {{SVGAttr("preserveAspectRatio")}} attributes.
 
-<h2 id="symbol">symbol</h2>
+        Percentage values are interpreted as being a percentage of the {{SVGAttr("viewBox")}} width.
+*   `<number>`
+    *   : Numbers are interpreted as being in the coordinate system of the marker contents, after application of the {{SVGAttr("viewBox")}} and {{SVGAttr("preserveAspectRatio")}} attributes.
+*   `left`
+    *   : The reference point of the marker is placed at the left edge of the shape.
+*   `center`
+    *   : The reference point of the marker is placed at the horizontal center of the shape.
+*   `right`
+    *   : The reference point of the marker is placed at the right edge of the shape.
 
-<p>For {{SVGElement("symbol")}}, <code>refX</code> defines the x coordinate of the symbol, which is defined by the cumulative effect of the {{SVGAttr("x")}} attribute and any transformations on the {{SVGElement("symbol")}} and its host {{SVGElement("use")}} element.</p>
+## symbol
 
-<p>Unlike other positioning attributes, <code>refX</code> is interpreted as being in the coordinate system of the symbol contents, after application of the {{SVGAttr("viewBox")}} and {{SVGAttr("preserveAspectRatio")}} attributes. If the attribute is not specified, no horizontal adjustment is made, and the left side of the symbol’s rectangular viewport region (regardless of the <code>viewBox</code> coordinate) is positioned at the x coordinate.</p>
+For {{SVGElement("symbol")}}, `refX` defines the x coordinate of the symbol, which is defined by the cumulative effect of the {{SVGAttr("x")}} attribute and any transformations on the {{SVGElement("symbol")}} and its host {{SVGElement("use")}} element.
 
-<div class="note"><p><strong>Note:</strong> For backwards compatibility, the behavior when <code>refX</code> is not specified on a <code>&lt;symbol&gt;</code> element is different from when it is specified with a value of <code>0</code>, and therefore different from the behavior when an equivalent attribute is not specified on a {{SVGElement("marker")}} element.</p></div>
+Unlike other positioning attributes, `refX` is interpreted as being in the coordinate system of the symbol contents, after application of the {{SVGAttr("viewBox")}} and {{SVGAttr("preserveAspectRatio")}} attributes. If the attribute is not specified, no horizontal adjustment is made, and the left side of the symbol’s rectangular viewport region (regardless of the `viewBox` coordinate) is positioned at the x coordinate.
+
+> **Note:** For backwards compatibility, the behavior when `refX` is not specified on a `<symbol>` element is different from when it is specified with a value of `0`, and therefore different from the behavior when an equivalent attribute is not specified on a {{SVGElement("marker")}} element.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td>{{cssxref("length")}} | <code>left</code> | <code>center</code> | <code>right</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td>None</td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        {{cssxref("length")}} | <code>left</code> | <code>center</code> |
+        <code>right</code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt><code>&lt;length-percentage&gt;</code></dt>
- <dd>Lengths are interpreted as being in the coordinate system of the marker contents, after application of the {{SVGAttr("viewBox")}} and {{SVGAttr("preserveAspectRatio")}} attributes.<br>
- <br>
- Percentage values are interpreted as being a percentage of the {{SVGAttr("viewBox")}} width.</dd>
- <dt><code>&lt;number&gt;</code></dt>
- <dd>Numbers are interpreted as being in the coordinate system of the marker contents, after application of the {{SVGAttr("viewBox")}} and {{SVGAttr("preserveAspectRatio")}} attributes.</dd>
- <dt><code>left</code></dt>
- <dd>The reference point of the marker is placed at the left edge of the shape.</dd>
- <dt><code>center</code></dt>
- <dd>The reference point of the marker is placed at the horizontal center of the shape.</dd>
- <dt><code>right</code></dt>
- <dd>The reference point of the marker is placed at the right edge of the shape.</dd>
-</dl>
+*   `<length-percentage>`
+    *   : Lengths are interpreted as being in the coordinate system of the marker contents, after application of the {{SVGAttr("viewBox")}} and {{SVGAttr("preserveAspectRatio")}} attributes.
 
-<h2 id="Specifications">Specifications</h2>
+        Percentage values are interpreted as being a percentage of the {{SVGAttr("viewBox")}} width.
+*   `<number>`
+    *   : Numbers are interpreted as being in the coordinate system of the marker contents, after application of the {{SVGAttr("viewBox")}} and {{SVGAttr("preserveAspectRatio")}} attributes.
+*   `left`
+    *   : The reference point of the marker is placed at the left edge of the shape.
+*   `center`
+    *   : The reference point of the marker is placed at the horizontal center of the shape.
+*   `right`
+    *   : The reference point of the marker is placed at the right edge of the shape.
+
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG2", "painting.html#MarkerElementRefXAttribute", "refX")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Added keywords <code>left</code>, <code>center</code>, and <code>right</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG2", "struct.html#SymbolElementRefXAttribute", "refX")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Initial definition for <code>&lt;symbol&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "painting.html#MarkerElementRefXAttribute", "refX")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition for <code>&lt;marker&gt;</code></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("SVG2", "painting.html#MarkerElementRefXAttribute", "refX")}}
+      </td>
+      <td>{{Spec2("SVG2")}}</td>
+      <td>
+        Added keywords <code>left</code>, <code>center</code>, and
+        <code>right</code>.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG2", "struct.html#SymbolElementRefXAttribute", "refX")}}
+      </td>
+      <td>{{Spec2("SVG2")}}</td>
+      <td>Initial definition for <code>&#x3C;symbol></code></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "painting.html#MarkerElementRefXAttribute", "refX")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition for <code>&#x3C;marker></code></td>
+    </tr>
+  </tbody>
 </table>
 
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{SVGAttr("refY")}}  </li>
-</ul>
+*   {{SVGAttr("refY")}}

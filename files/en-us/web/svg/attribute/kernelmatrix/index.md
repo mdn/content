@@ -7,92 +7,100 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.feConvolveMatrix.kernelMatrix
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>the <strong><code>kernelMatrix</code></strong> attribute defines the list of numbers that make up the kernel matrix for the {{SVGElement("feConvolveMatrix")}} element.</p>
+the **`kernelMatrix`** attribute defines the list of numbers that make up the kernel matrix for the {{SVGElement("feConvolveMatrix")}} element.
 
-<p>Values are separated by space characters and/or a comma. The number of entries in the list must equal to <code>&lt;orderX&gt;</code> by <code>&lt;orderY&gt;</code> as defined in the {{SVGAttr("order")}} attribute.</p>
+Values are separated by space characters and/or a comma. The number of entries in the list must equal to `<orderX>` by `<orderY>` as defined in the {{SVGAttr("order")}} attribute.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("feConvolveMatrix")}}</li>
-</ul>
+*   {{SVGElement("feConvolveMatrix")}}
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html, body, svg {
+```css hidden
+html, body, svg {
   height: 100%;
-}</pre>
+}
+```
 
-<pre class="brush: html; highlight[3,6]">&lt;svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;filter id="convolveMatrix1" x="0" y="0" width="100%" height="100%"&gt;
-    &lt;feConvolveMatrix kernelMatrix="1 1 0 0 0 0 0 0 -1"/&gt;
-  &lt;/filter&gt;
-  &lt;filter id="convolveMatrix2" x="0" y="0" width="100%" height="100%"&gt;
-    &lt;feConvolveMatrix kernelMatrix="-1 0 0 0 0 0 0 0 1"/&gt;
-  &lt;/filter&gt;
+```html
+<svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg">
+  <filter id="convolveMatrix1" x="0" y="0" width="100%" height="100%">
+    <feConvolveMatrix kernelMatrix="1 1 0 0 0 0 0 0 -1"/>
+  </filter>
+  <filter id="convolveMatrix2" x="0" y="0" width="100%" height="100%">
+    <feConvolveMatrix kernelMatrix="-1 0 0 0 0 0 0 0 1"/>
+  </filter>
 
-  &lt;image xlink:href="//developer.mozilla.org/files/6457/mdn_logo_only_color.png" width="200" height="200"
-      style="filter:url(#convolveMatrix1);"/&gt;
-  &lt;image xlink:href="//developer.mozilla.org/files/6457/mdn_logo_only_color.png" width="200" height="200"
-      style="filter:url(#convolveMatrix2); transform:translateX(220px);"/&gt;
-&lt;/svg&gt;</pre>
+  <image xlink:href="//developer.mozilla.org/files/6457/mdn_logo_only_color.png" width="200" height="200"
+      style="filter:url(#convolveMatrix1);"/>
+  <image xlink:href="//developer.mozilla.org/files/6457/mdn_logo_only_color.png" width="200" height="200"
+      style="filter:url(#convolveMatrix2); transform:translateX(220px);"/>
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", "420", "200")}}</p>
+{{EmbedLiveSample("Example", "420", "200")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code><a href="/en-US/docs/Web/SVG/Content_type#List-of-Ts">&lt;list of numbers&gt;</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>None</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/SVG/Content_type#List-of-Ts"
+            >&#x3C;list of numbers></a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>None</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt><code>&lt;list of numbers&gt;</code></dt>
- <dd>
- <p>The list of {{cssxref("number")}}s that make up the kernel matrix for the convolution. Values are separated by space characters and/or a comma. The number of entries in the list must equal <code>&lt;orderX&gt;</code> times <code>&lt;orderY&gt;</code>.</p>
+*   `<list of numbers>`
+    *   : The list of {{cssxref("number")}}s that make up the kernel matrix for the convolution. Values are separated by space characters and/or a comma. The number of entries in the list must equal `<orderX>` times `<orderY>`.
 
- <p>If the result of <code>orderX</code> * <code>orderY</code> is not equal to the number of entries in the value list, the filter primitive acts as a pass through filter.</p>
- </dd>
-</dl>
+        If the result of `orderX` \* `orderY` is not equal to the number of entries in the value list, the filter primitive acts as a pass through filter.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Filters 1.0", "#element-attrdef-feconvolvematrix-kernelmatrix", "kernelMatrix")}}</td>
-   <td>{{Spec2("Filters 1.0")}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "filters.html#feConvolveMatrixElementKernelMatrixAttribute", "kernelMatrix")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("Filters 1.0", "#element-attrdef-feconvolvematrix-kernelmatrix", "kernelMatrix")}}
+      </td>
+      <td>{{Spec2("Filters 1.0")}}</td>
+      <td>No change</td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "filters.html#feConvolveMatrixElementKernelMatrixAttribute", "kernelMatrix")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

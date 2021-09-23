@@ -9,51 +9,45 @@ tags:
   - SVG Container
 browser-compat: svg.elements.missing-glyph
 ---
-<div>{{SVGRef}}{{deprecated_header}}</div>
+{{SVGRef}}{{deprecated_header}}
 
-<p>The <strong><code>&lt;missing-glyph&gt;</code></strong> <a href="/en-US/docs/Web/SVG">SVG</a> element's content is rendered, if for a given character the font doesn't define an appropriate {{SVGElement("glyph")}}.</p>
+The **`<missing-glyph>`** [SVG](/en-US/docs/Web/SVG) element's content is rendered, if for a given character the font doesn't define an appropriate {{SVGElement("glyph")}}.
 
-<h2 id="Usage_context">Usage context</h2>
+## Usage context
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<h3 id="Global_attributes">Global attributes</h3>
+### Global attributes
 
-<ul>
- <li><a href="/en-US/docs/Web/SVG/Attribute#core_attributes">Core attributes</a></li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#presentation_attributes">Presentation attributes</a></li>
- <li>{{SVGAttr("class")}}</li>
- <li>{{SVGAttr("style")}}</li>
-</ul>
+*   [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
+*   [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
+*   {{SVGAttr("class")}}
+*   {{SVGAttr("style")}}
 
-<h3 id="Specific_attributes">Specific attributes</h3>
+### Specific attributes
 
-<ul>
- <li>{{SVGAttr("d")}}</li>
- <li>{{SVGAttr("horiz-adv-x")}}</li>
- <li>{{SVGAttr("vert-origin-x")}}</li>
- <li>{{SVGAttr("vert-origin-y")}}</li>
- <li>{{SVGAttr("vert-adv-y")}}</li>
-</ul>
+*   {{SVGAttr("d")}}
+*   {{SVGAttr("horiz-adv-x")}}
+*   {{SVGAttr("vert-origin-x")}}
+*   {{SVGAttr("vert-origin-y")}}
+*   {{SVGAttr("vert-adv-y")}}
 
-<h2 id="DOM_Interface">DOM Interface</h2>
+## DOM Interface
 
-<p>This element implements the {{domxref("SVGMissingGlyphElement")}} interface.</p>
+This element implements the {{domxref("SVGMissingGlyphElement")}} interface.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGElement("font")}}</li>
- <li>{{SVGElement("glyph")}}</li>
- <li><a href="/en-US/docs/Web/SVG/Tutorial/SVG_fonts">SVG tutorial: SVG fonts</a></li>
-</ul>
+*   {{SVGElement("font")}}
+*   {{SVGElement("glyph")}}
+*   [SVG tutorial: SVG fonts](/en-US/docs/Web/SVG/Tutorial/SVG_fonts)

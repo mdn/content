@@ -7,69 +7,71 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.font-face.widths
 ---
-<div>{{SVGRef}}{{Deprecated_Header}}</div>
+{{SVGRef}}{{Deprecated_Header}}
 
-<p>The <strong><code>widths</code></strong> attribute indicates a list of range values, each followed by one or more {{Glossary("glyph")}} widths.</p>
+The **`widths`** attribute indicates a list of range values, each followed by one or more {{Glossary("glyph")}} widths.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("font-face")}}</li>
-</ul>
+*   {{SVGElement("font-face")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code><a href="/en-US/docs/Web/SVG/Content_type#number">&lt;number&gt;</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>None</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>No</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/SVG/Content_type#number"
+            >&#x3C;number></a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>None</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>No</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt><code>&lt;number&gt;</code></dt>
- <dd>
-   <p>This value is a comma-separated list of UCS range values as defined in <a href="https://www.iso.org/standard/29819.html">ISO 10646</a>, each followed by one or more glyph widths.</p>
-   <p>If this attribute is used, the {{SVGAttr("units-per-em")}} attribute must also be used.</p>
-   <p>If the range is omitted, a range of U+0-7FFFFFFF is assumed which covers all characters and their glyphs. If not enough glyph widths are given, the last in the list is replicated to cover that range. If too many widths are provided, the extras are ignored.</p>
- </dd>
-</dl>
+*   `<number>`
+    *   : This value is a comma-separated list of UCS range values as defined in [ISO 10646](https://www.iso.org/standard/29819.html), each followed by one or more glyph widths.
 
-<h2 id="Specifications">Specifications</h2>
+        If this attribute is used, the {{SVGAttr("units-per-em")}} attribute must also be used.
+
+        If the range is omitted, a range of U+0-7FFFFFFF is assumed which covers all characters and their glyphs. If not enough glyph widths are given, the last in the list is replicated to cover that range. If too many widths are provided, the extras are ignored.
+
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG1.1", "fonts.html#FontFaceElementWidthsAttribute", "widths")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "fonts.html#FontFaceElementWidthsAttribute", "widths")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://www.iso.org/standard/29819.html">ISO 10646</a></li>
-</ul>
+*   [ISO 10646](https://www.iso.org/standard/29819.html)

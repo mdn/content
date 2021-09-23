@@ -7,72 +7,74 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.presentation.glyph-orientation-horizontal
 ---
-<div>{{SVGRef}}{{Deprecated_Header}}</div>
+{{SVGRef}}{{Deprecated_Header}}
 
-<p>The <strong><code>glyph-orientation-horizontal</code></strong> attribute affects the amount that the current text position advances as each {{Glossary("glyph")}} is rendered.</p>
+The **`glyph-orientation-horizontal`** attribute affects the amount that the current text position advances as each {{Glossary("glyph")}} is rendered.
 
-<p>When the reference orientation direction is horizontal and the <code>glyph-orientation-horizontal</code> results in an orientation angle that is a multiple of 180 degrees, then the current text position is incremented according to the horizontal metrics of the glyph. Otherwise, if the value of this attribute is not a multiple of 180 degrees, then the current text position is incremented according to the vertical metrics of the glyph.</p>
+When the reference orientation direction is horizontal and the `glyph-orientation-horizontal` results in an orientation angle that is a multiple of 180 degrees, then the current text position is incremented according to the horizontal metrics of the glyph. Otherwise, if the value of this attribute is not a multiple of 180 degrees, then the current text position is incremented according to the vertical metrics of the glyph.
 
-<p>This attribute is applied only to text written in a horizontal {{SVGAttr("writing-mode")}}.</p>
+This attribute is applied only to text written in a horizontal {{SVGAttr("writing-mode")}}.
 
-<div class="note"><p><strong>Note:</strong> As a presentation attribute, <code>glyph-orientation-horizontal</code> can be used as a CSS property.</p></div>
+> **Note:** As a presentation attribute, `glyph-orientation-horizontal` can be used as a CSS property.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("altGlyph")}}</li>
-  <li>{{SVGElement("textPath")}}</li>
-  <li>{{SVGElement("text")}}</li>
-  <li>{{SVGElement("tref")}}</li>
-  <li>{{SVGElement("tspan")}}</li>
-</ul>
+*   {{SVGElement("altGlyph")}}
+*   {{SVGElement("textPath")}}
+*   {{SVGElement("text")}}
+*   {{SVGElement("tref")}}
+*   {{SVGElement("tspan")}}
 
-<h2 id="Context_notes">Context notes</h2>
+## Context notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code><a href="/en-US/docs/Web/SVG/Content_type#Angle">&lt;angle&gt;</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>0deg</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>No</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/SVG/Content_type#Angle"
+            >&#x3C;angle></a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>0deg</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>No</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt><code>&lt;angle&gt;</code></dt>
- <dd>
- <p>The value of the angle is restricted to 0, 90, 180, and 270 degrees. If another angle is specified, it is rounded to the closest of the permitted values.<br>
-  A value of <code>0deg</code> indicates that all glyphs are set with the top of the glyphs oriented towards the reference orientation. A value of <code>90deg</code> indicates an orientation of 90 degrees clockwise from the reference orientation.</p>
- </dd>
-</dl>
+*   `<angle>`
+    *   : The value of the angle is restricted to 0, 90, 180, and 270 degrees. If another angle is specified, it is rounded to the closest of the permitted values.
+        A value of `0deg` indicates that all glyphs are set with the top of the glyphs oriented towards the reference orientation. A value of `90deg` indicates an orientation of 90 degrees clockwise from the reference orientation.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG1.1", "text.html#GlyphOrientationHorizontalProperty", "glyph-orientation-horizontal")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "text.html#GlyphOrientationHorizontalProperty", "glyph-orientation-horizontal")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -7,23 +7,24 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.glyph.arabic-form
 ---
-<div>{{SVGRef}}{{Deprecated_Header}}</div>
+{{SVGRef}}{{Deprecated_Header}}
 
-<p>The <strong><code>arabic-form</code></strong> attribute indicates which of the four possible forms an Arabic glyph represents.</p>
+The **`arabic-form`** attribute indicates which of the four possible forms an Arabic glyph represents.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("glyph")}}</li>
-</ul>
+*   {{SVGElement("glyph")}}
 
-<h2 id="Context_notes">Context notes</h2>
+## Context notes
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Value</th>
-      <td><code>initial</code> | <code>medial</code> | <code>terminal</code> | <code>isolated</code></td>
+      <td>
+        <code>initial</code> | <code>medial</code> | <code>terminal</code> |
+        <code>isolated</code>
+      </td>
     </tr>
     <tr>
       <th scope="row">Default value</th>
@@ -36,18 +37,16 @@ browser-compat: svg.elements.glyph.arabic-form
   </tbody>
 </table>
 
-<dl>
-  <dt><code>initial</code></dt>
-  <dd>This value indicates that the glyph represents the initial form.</dd>
-  <dt><code>medial</code></dt>
-  <dd>This value indicates that the glyph represents the medial form.</dd>
-  <dt><code>terminal</code></dt>
-  <dd>This value indicates that the glyph represents the terminal form.</dd>
-  <dt><code>isolated</code></dt>
-  <dd>This value indicates that the glyph represents the isolated form.</dd>
-</dl>
+*   `initial`
+    *   : This value indicates that the glyph represents the initial form.
+*   `medial`
+    *   : This value indicates that the glyph represents the medial form.
+*   `terminal`
+    *   : This value indicates that the glyph represents the terminal form.
+*   `isolated`
+    *   : This value indicates that the glyph represents the isolated form.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
   <thead>
@@ -59,19 +58,19 @@ browser-compat: svg.elements.glyph.arabic-form
   </thead>
   <tbody>
     <tr>
-      <td>{{SpecName("SVG1.1", "fonts.html#GlyphElementArabicFormAttribute", "arabic-form")}}</td>
+      <td>
+        {{SpecName("SVG1.1", "fonts.html#GlyphElementArabicFormAttribute", "arabic-form")}}
+      </td>
       <td>{{Spec2("SVG1.1")}}</td>
       <td>Initial definition</td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://en.wikipedia.org/wiki/Arabic_alphabet">Wikipedia page on the Arabic alphabet</a></li>
-</ul>
+*   [Wikipedia page on the Arabic alphabet](https://en.wikipedia.org/wiki/Arabic_alphabet)

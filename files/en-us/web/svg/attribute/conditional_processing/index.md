@@ -9,28 +9,24 @@ tags:
   - SVG
 browser-compat: svg.attributes.conditional_processing
 ---
-<p>The SVG conditional processing attributes are all the attributes that can be specified on some SVG elements to control whether or not the element on which it appears should be rendered.</p>
+The SVG conditional processing attributes are all the attributes that can be specified on some SVG elements to control whether or not the element on which it appears should be rendered.
 
-<ul>
- <li><a href="#attr-requiredextensions">requiredExtensions</a></li>
- <li><a href="#attr-requiredfeatures">requiredFeatures</a></li>
- <li><a href="#attr-systemlanguage">systemLanguage</a></li>
-</ul>
+*   [requiredExtensions](#attr-requiredextensions)
+*   [requiredFeatures](#attr-requiredfeatures)
+*   [systemLanguage](#attr-systemlanguage)
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<dl>
- <dt>{{SVGAttr('requiredExtensions')}}</dt>
- <dd>List all the browser specific capabilities that must be supported by the browser to be allowed to render the associated element.<br>
- <small><em>Value</em>: A list of space-separated URI; <em>Animatable</em>: <strong>No</strong></small></dd>
- <dt>{{SVGAttr('requiredFeatures')}} {{deprecated_inline}}</dt>
- <dd>List all the features, <a href="https://www.w3.org/TR/SVG11/feature.html">as defined is the SVG 1.1 specification</a>, that must be supported by the browser to be allowed to render the associated element..<br>
- <small><em>Value</em>: A list of space-separated URI; <em>Animatable</em>: <strong>No</strong></small></dd>
- <dt>{{SVGAttr('systemLanguage')}}</dt>
- <dd>Indicates which language the user must have chosen to render the associated element.<br>
- <small><em>Value</em>: <a href="http://www.ietf.org/rfc/bcp/bcp47.txt">A list of comma-separated language ID</a>; <em>Animatable</em>: <strong>No</strong></small></dd>
-</dl>
+*   {{SVGAttr('requiredExtensions')}}
+    *   : List all the browser specific capabilities that must be supported by the browser to be allowed to render the associated element.
+        *Value*: A list of space-separated URI; *Animatable*: **No**
+*   {{SVGAttr('requiredFeatures')}} {{deprecated_inline}}
+    *   : List all the features, [as defined is the SVG 1.1 specification](https://www.w3.org/TR/SVG11/feature.html), that must be supported by the browser to be allowed to render the associated element..
+        *Value*: A list of space-separated URI; *Animatable*: **No**
+*   {{SVGAttr('systemLanguage')}}
+    *   : Indicates which language the user must have chosen to render the associated element.
+        *Value*: [A list of comma-separated language ID](http://www.ietf.org/rfc/bcp/bcp47.txt); *Animatable*: **No**
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

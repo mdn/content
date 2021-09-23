@@ -8,91 +8,86 @@ tags:
   - SVG Text Content
 browser-compat: svg.elements.glyph
 ---
-<div>{{SVGRef}}{{deprecated_header}}</div>
+{{SVGRef}}{{deprecated_header}}
 
-<p>A <strong><code>&lt;glyph&gt;</code></strong> defines a single glyph in an SVG font.</p>
+A **`<glyph>`** defines a single glyph in an SVG font.
 
-<h2 id="Usage_context">Usage context</h2>
+## Usage context
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<h3 id="Global_attributes">Global attributes</h3>
+### Global attributes
 
-<ul>
- <li><a href="/en-US/docs/Web/SVG/Attribute#core_attributes">Core attributes</a></li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#presentation_attributes">Presentation attributes</a></li>
- <li>{{SVGAttr("class")}}</li>
- <li>{{SVGAttr("style")}}</li>
-</ul>
+*   [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
+*   [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
+*   {{SVGAttr("class")}}
+*   {{SVGAttr("style")}}
 
-<h3 id="Specific_attributes">Specific attributes</h3>
+### Specific attributes
 
-<ul>
- <li>{{SVGAttr("d")}}</li>
- <li>{{SVGAttr("horiz-adv-x")}}</li>
- <li>{{SVGAttr("vert-origin-x")}}</li>
- <li>{{SVGAttr("vert-origin-y")}}</li>
- <li>{{SVGAttr("vert-adv-y")}}</li>
- <li>{{SVGAttr("unicode")}}</li>
- <li>{{SVGAttr("glyph-name")}}</li>
- <li>{{SVGAttr("orientation")}}</li>
- <li>{{SVGAttr("arabic-form")}}</li>
- <li>{{SVGAttr("lang")}}</li>
-</ul>
+*   {{SVGAttr("d")}}
+*   {{SVGAttr("horiz-adv-x")}}
+*   {{SVGAttr("vert-origin-x")}}
+*   {{SVGAttr("vert-origin-y")}}
+*   {{SVGAttr("vert-adv-y")}}
+*   {{SVGAttr("unicode")}}
+*   {{SVGAttr("glyph-name")}}
+*   {{SVGAttr("orientation")}}
+*   {{SVGAttr("arabic-form")}}
+*   {{SVGAttr("lang")}}
 
-<h2 id="DOM_Interface">DOM Interface</h2>
+## DOM Interface
 
-<p>This element implements the {{domxref("SVGGlyphElement")}} interface.</p>
+This element implements the {{domxref("SVGGlyphElement")}} interface.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<pre class="brush: html; highlight[17,18]">&lt;svg width="400px" height="300px" version="1.1"
-    xmlns="http://www.w3.org/2000/svg"&gt;
-&lt;!-- Example copied from https://www.w3.org/TR/SVG/fonts.html#GlyphElement --&gt;
-  &lt;defs&gt;
+```html
+<svg width="400px" height="300px" version="1.1"
+    xmlns="http://www.w3.org/2000/svg">
+<!-- Example copied from https://www.w3.org/TR/SVG/fonts.html#GlyphElement -->
+  <defs>
 
-    &lt;font id="Font1" horiz-adv-x="1000"&gt;
-      &lt;font-face font-family="Super Sans" font-weight="bold" font-style="normal"
+    <font id="Font1" horiz-adv-x="1000">
+      <font-face font-family="Super Sans" font-weight="bold" font-style="normal"
           units-per-em="1000" cap-height="600" x-height="400"
           ascent="700" descent="300"
-          alphabetic="0" mathematical="350" ideographic="400" hanging="500"&gt;
-        &lt;font-face-src&gt;
-          &lt;font-face-name name="Super Sans Bold"/&gt;
-        &lt;/font-face-src&gt;
-      &lt;/font-face&gt;
+          alphabetic="0" mathematical="350" ideographic="400" hanging="500">
+        <font-face-src>
+          <font-face-name name="Super Sans Bold"/>
+        </font-face-src>
+      </font-face>
 
-      &lt;missing-glyph&gt;&lt;path d="M0,0h200v200h-200z"/&gt;&lt;/missing-glyph&gt;
-      &lt;glyph unicode="!" horiz-adv-x="80" d="M0,0h200v200h-200z"&gt;&lt;/glyph&gt;
-      &lt;glyph unicode="@" d="M0,50l100,300l400,100z"&gt;&lt;/glyph&gt;
-    &lt;/font&gt;
-  &lt;/defs&gt;
-  &lt;text x="100" y="100"
+      <missing-glyph><path d="M0,0h200v200h-200z"/></missing-glyph>
+      <glyph unicode="!" horiz-adv-x="80" d="M0,0h200v200h-200z"></glyph>
+      <glyph unicode="@" d="M0,50l100,300l400,100z"></glyph>
+    </font>
+  </defs>
+  <text x="100" y="100"
       style="font-family: 'Super Sans', Helvetica, sans-serif;
-             font-weight: bold; font-style: normal"&gt;Text
-    using embedded font!&lt;/text&gt;
-&lt;/svg&gt;
-</pre>
+             font-weight: bold; font-style: normal">Text
+    using embedded font!</text>
+</svg>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example", 400, 300)}}</p>
+{{EmbedLiveSample("Example", 400, 300)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGElement("font")}}</li>
- <li>{{SVGElement("missing-glyph")}}</li>
- <li><a href="/en-US/docs/Web/SVG/Tutorial/SVG_fonts">SVG tutorial: SVG fonts</a></li>
-</ul>
+*   {{SVGElement("font")}}
+*   {{SVGElement("missing-glyph")}}
+*   [SVG tutorial: SVG fonts](/en-US/docs/Web/SVG/Tutorial/SVG_fonts)

@@ -8,73 +8,68 @@ tags:
   - SVG
 browser-compat: svg.elements.view
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>A view is a defined way to view the image, like a zoom level or a detail view.</p>
+A view is a defined way to view the image, like a zoom level or a detail view.
 
-<h2 id="Usage_context">Usage context</h2>
+## Usage context
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<h3 id="Global_attributes">Global attributes</h3>
+### Global attributes
 
-<ul>
- <li><a href="/en-US/docs/Web/SVG/Attribute#aria_attributes">Aria attributes</a> »</li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#core_attributes">Core attributes</a> »</li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#global_event_attributes">Global event attributes</a> »</li>
-</ul>
+*   [Aria attributes](/en-US/docs/Web/SVG/Attribute#aria_attributes) »
+*   [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes) »
+*   [Global event attributes](/en-US/docs/Web/SVG/Attribute#global_event_attributes) »
 
-<h3 id="Specific_attributes">Specific attributes</h3>
+### Specific attributes
 
-<ul>
- <li>{{SVGAttr("viewBox")}}</li>
- <li>{{SVGAttr("preserveAspectRatio")}}</li>
- <li>{{SVGAttr("zoomAndPan")}}</li>
- <li>{{SVGAttr("viewTarget")}}</li>
-</ul>
+*   {{SVGAttr("viewBox")}}
+*   {{SVGAttr("preserveAspectRatio")}}
+*   {{SVGAttr("zoomAndPan")}}
+*   {{SVGAttr("viewTarget")}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<pre class="brush: svg">
-&lt;svg viewBox="0 0 300 100" width="300" height="100"
-      xmlns="http://www.w3.org/2000/svg"&gt;
+```svg
+<svg viewBox="0 0 300 100" width="300" height="100"
+      xmlns="http://www.w3.org/2000/svg">
 
-  &lt;view id="one" viewBox="0 0 100 100" /&gt;
-  &lt;circle cx="50" cy="50" r="40" fill="red" /&gt;
+  <view id="one" viewBox="0 0 100 100" />
+  <circle cx="50" cy="50" r="40" fill="red" />
 
-  &lt;view id="two" viewBox="100 0 100 100" /&gt;
-  &lt;circle cx="150" cy="50" r="40" fill="green" /&gt;
+  <view id="two" viewBox="100 0 100 100" />
+  <circle cx="150" cy="50" r="40" fill="green" />
 
-  &lt;view id="three" viewBox="200 0 100 100" /&gt;
-  &lt;circle cx="250" cy="50" r="40" fill="blue" /&gt;
-&lt;/svg&gt;
-</pre>
+  <view id="three" viewBox="200 0 100 100" />
+  <circle cx="250" cy="50" r="40" fill="blue" />
+</svg>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">
-&lt;img src="example.svg" alt="three circles" width="300" height="100" /&gt;
-&lt;br /&gt;
-&lt;img src="example.svg#three" alt="blue circle" width="100" height="100" /&gt;
-</pre>
+```html
+<img src="example.svg" alt="three circles" width="300" height="100" />
+<br />
+<img src="example.svg#three" alt="blue circle" width="100" height="100" />
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example", "85ch", "240px")}}</p>
+{{EmbedLiveSample("Example", "85ch", "240px")}}
 
-<h2 id="DOM_Interface">DOM Interface</h2>
+## DOM Interface
 
-<p>This element implements the {{domxref("SVGViewElement")}} interface.</p>
+This element implements the {{domxref("SVGViewElement")}} interface.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-
-<p>{{Compat}}</p>
+{{Compat}}

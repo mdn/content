@@ -9,90 +9,86 @@ tags:
   - SVG Filter
 browser-compat: svg.elements.feSpecularLighting
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>&lt;feSpecularLighting&gt;</code></strong> <a href="/en-US/docs/Web/SVG">SVG</a> filter primitive lights a source graphic using the alpha channel as a bump map. The resulting image is an RGBA image based on the light color. The lighting calculation follows the standard specular component of <a href="https://en.wikipedia.org/wiki/Phong_reflection_model" rel="external">the Phong lighting model</a>. The resulting image depends on the light color, light position and surface geometry of the input bump map. The result of the lighting calculation is added. The filter primitive assumes that the viewer is at infinity in the z direction.</p>
+The **`<feSpecularLighting>`** [SVG](/en-US/docs/Web/SVG) filter primitive lights a source graphic using the alpha channel as a bump map. The resulting image is an RGBA image based on the light color. The lighting calculation follows the standard specular component of [the Phong lighting model](https://en.wikipedia.org/wiki/Phong_reflection_model). The resulting image depends on the light color, light position and surface geometry of the input bump map. The result of the lighting calculation is added. The filter primitive assumes that the viewer is at infinity in the z direction.
 
-<p>This filter primitive produces an image which contains the specular reflection part of the lighting calculation. Such a map is intended to be combined with a texture using the <code>add</code> term of the arithmetic {{SVGElement("feComposite")}} method. Multiple light sources can be simulated by adding several of these light maps before applying it to the texture image.</p>
+This filter primitive produces an image which contains the specular reflection part of the lighting calculation. Such a map is intended to be combined with a texture using the `add` term of the arithmetic {{SVGElement("feComposite")}} method. Multiple light sources can be simulated by adding several of these light maps before applying it to the texture image.
 
-<h2 id="Usage_context">Usage context</h2>
+## Usage context
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<h3 id="Global_attributes">Global attributes</h3>
+### Global attributes
 
-<ul>
- <li><a href="/en-US/docs/Web/SVG/Attribute#core_attributes">Core attributes</a></li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#presentation_attributes">Presentation attributes</a></li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes">Filter primitive attributes</a></li>
- <li>{{SVGAttr("class")}}</li>
- <li>{{SVGAttr("style")}}</li>
-</ul>
+*   [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
+*   [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
+*   [Filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes)
+*   {{SVGAttr("class")}}
+*   {{SVGAttr("style")}}
 
-<h3 id="Specific_attributes">Specific attributes</h3>
+### Specific attributes
 
-<ul>
- <li>{{SVGAttr("in")}}</li>
- <li>{{SVGAttr("surfaceScale")}}</li>
- <li>{{SVGAttr("specularConstant")}}</li>
- <li>{{SVGAttr("specularExponent")}}</li>
- <li>{{SVGAttr("kernelUnitLength")}}</li>
-</ul>
+*   {{SVGAttr("in")}}
+*   {{SVGAttr("surfaceScale")}}
+*   {{SVGAttr("specularConstant")}}
+*   {{SVGAttr("specularExponent")}}
+*   {{SVGAttr("kernelUnitLength")}}
 
-<h2 id="DOM_Interface">DOM Interface</h2>
+## DOM Interface
 
-<p>This element implements the {{domxref("SVGFESpecularLightingElement")}} interface.</p>
+This element implements the {{domxref("SVGFESpecularLightingElement")}} interface.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: html; highlight[4-7]">&lt;svg height="200" width="200" viewBox="0 0 220 220"
-    xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;filter id = "filter"&gt;
-    &lt;feSpecularLighting result="specOut"
-        specularExponent="20" lighting-color="#bbbbbb"&gt;
-      &lt;fePointLight x="50" y="75" z="200"/&gt;
-    &lt;/feSpecularLighting&gt;
-    &lt;feComposite in="SourceGraphic" in2="specOut"
-        operator="arithmetic" k1="0" k2="1" k3="1" k4="0"/&gt;
-  &lt;/filter&gt;
-  &lt;circle cx="110" cy="110" r="100" style="filter:url(#filter)"/&gt;
-&lt;/svg&gt;</pre>
+```html
+<svg height="200" width="200" viewBox="0 0 220 220"
+    xmlns="http://www.w3.org/2000/svg">
+  <filter id = "filter">
+    <feSpecularLighting result="specOut"
+        specularExponent="20" lighting-color="#bbbbbb">
+      <fePointLight x="50" y="75" z="200"/>
+    </feSpecularLighting>
+    <feComposite in="SourceGraphic" in2="specOut"
+        operator="arithmetic" k1="0" k2="1" k3="1" k4="0"/>
+  </filter>
+  <circle cx="110" cy="110" r="100" style="filter:url(#filter)"/>
+</svg>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example", 220, 220)}}</p>
+{{EmbedLiveSample("Example", 220, 220)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGElement("filter")}}</li>
- <li>{{SVGElement("feBlend")}}</li>
- <li>{{SVGElement("feColorMatrix")}}</li>
- <li>{{SVGElement("feComponentTransfer")}}</li>
- <li>{{SVGElement("feComposite")}}</li>
- <li>{{SVGElement("feConvolveMatrix")}}</li>
- <li>{{SVGElement("feDiffuseLighting")}}</li>
- <li>{{SVGElement("feDisplacementMap")}}</li>
- <li>{{SVGElement("feDistantLight")}}</li>
- <li>{{SVGElement("feFlood")}}</li>
- <li>{{SVGElement("feGaussianBlur")}}</li>
- <li>{{SVGElement("feImage")}}</li>
- <li>{{SVGElement("feMerge")}}</li>
- <li>{{SVGElement("feMorphology")}}</li>
- <li>{{SVGElement("feOffset")}}</li>
- <li>{{SVGElement("fePointLight")}}</li>
- <li>{{SVGElement("feSpotLight")}}</li>
- <li>{{SVGElement("feTile")}}</li>
- <li>{{SVGElement("feTurbulence")}}</li>
- <li><a href="/en-US/docs/Web/SVG/Tutorial/Filter_effects">SVG tutorial: Filter effects</a></li>
-</ul>
+*   {{SVGElement("filter")}}
+*   {{SVGElement("feBlend")}}
+*   {{SVGElement("feColorMatrix")}}
+*   {{SVGElement("feComponentTransfer")}}
+*   {{SVGElement("feComposite")}}
+*   {{SVGElement("feConvolveMatrix")}}
+*   {{SVGElement("feDiffuseLighting")}}
+*   {{SVGElement("feDisplacementMap")}}
+*   {{SVGElement("feDistantLight")}}
+*   {{SVGElement("feFlood")}}
+*   {{SVGElement("feGaussianBlur")}}
+*   {{SVGElement("feImage")}}
+*   {{SVGElement("feMerge")}}
+*   {{SVGElement("feMorphology")}}
+*   {{SVGElement("feOffset")}}
+*   {{SVGElement("fePointLight")}}
+*   {{SVGElement("feSpotLight")}}
+*   {{SVGElement("feTile")}}
+*   {{SVGElement("feTurbulence")}}
+*   [SVG tutorial: Filter effects](/en-US/docs/Web/SVG/Tutorial/Filter_effects)

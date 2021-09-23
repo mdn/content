@@ -6,96 +6,109 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.presentation.fill-opacity
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>fill-opacity</code></strong> attribute is a presentation attribute defining the opacity of the paint server (<em>color</em>, <em>gradient</em>, <em>pattern</em>, etc) applied to a shape.</p>
+The **`fill-opacity`** attribute is a presentation attribute defining the opacity of the paint server (*color*, *gradient*, *pattern*, etc) applied to a shape.
 
-<div class="note"><p><strong>Note:</strong> As a presentation attribute <code>fill-opacity</code> can be used as a CSS property.</p></div>
+> **Note:** As a presentation attribute `fill-opacity` can be used as a CSS property.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement('altGlyph')}}</li>
-  <li>{{SVGElement('circle')}}</li>
-  <li>{{SVGElement('ellipse')}}</li>
-  <li>{{SVGElement('path')}}</li>
-  <li>{{SVGElement('polygon')}}</li>
-  <li>{{SVGElement('polyline')}}</li>
-  <li>{{SVGElement('rect')}}</li>
-  <li>{{SVGElement('text')}}</li>
-  <li>{{SVGElement('textPath')}}</li>
-  <li>{{SVGElement('tref')}}</li>
-  <li>{{SVGElement('tspan')}}</li>
-</ul>
+*   {{SVGElement('altGlyph')}}
+*   {{SVGElement('circle')}}
+*   {{SVGElement('ellipse')}}
+*   {{SVGElement('path')}}
+*   {{SVGElement('polygon')}}
+*   {{SVGElement('polyline')}}
+*   {{SVGElement('rect')}}
+*   {{SVGElement('text')}}
+*   {{SVGElement('textPath')}}
+*   {{SVGElement('tref')}}
+*   {{SVGElement('tspan')}}
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!-- Default fill opacity: 1 --&gt;
-  &lt;circle cx="50" cy="50" r="40" /&gt;
+```html
+<svg viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Default fill opacity: 1 -->
+  <circle cx="50" cy="50" r="40" />
 
-  &lt;!-- Fill opacity as a number --&gt;
-  &lt;circle cx="150" cy="50" r="40"
-          fill-opacity="0.7" /&gt;
+  <!-- Fill opacity as a number -->
+  <circle cx="150" cy="50" r="40"
+          fill-opacity="0.7" />
 
-  &lt;!-- Fill opacity as a percentage --&gt;
-  &lt;circle cx="250" cy="50" r="40"
-          fill-opacity="50%" /&gt;
+  <!-- Fill opacity as a percentage -->
+  <circle cx="250" cy="50" r="40"
+          fill-opacity="50%" />
 
-  &lt;!-- Fill opacity as a CSS property --&gt;
-  &lt;circle cx="350" cy="50" r="40"
-          style="fill-opacity: .25;" /&gt;
-&lt;/svg&gt;</pre>
+  <!-- Fill opacity as a CSS property -->
+  <circle cx="350" cy="50" r="40"
+          style="fill-opacity: .25;" />
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", '100%', 150)}}</p>
+{{EmbedLiveSample("Example", '100%', 150)}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code>[0-1]</code> | <strong><a href="/docs/Web/SVG/Content_type#Paint">&lt;percentage&gt;</a></strong></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>1</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <code>[0-1]</code> |
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Paint"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>1</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<div class="note"><p><strong>Note:</strong> SVG2 introduces percentage values for <code>fill-opacity</code>, however, it is not widely supported yet (<em>See <a href="#browser_compatibility">Browser compatibility</a> below</em>) as a consequence, it is best practices to set opacity with a value in the range <code>[0-1]</code>.</p></div>
+> **Note:** SVG2 introduces percentage values for `fill-opacity`, however, it is not widely supported yet (*See [Browser compatibility](#browser_compatibility) below*) as a consequence, it is best practices to set opacity with a value in the range `[0-1]`.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG2", "painting.html#FillOpacityProperty", "fill-opacity")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Definition for shapes and texts</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "painting.html#FillOpacityProperty", "fill-opacity")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition for shapes and texts</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("SVG2", "painting.html#FillOpacityProperty", "fill-opacity")}}
+      </td>
+      <td>{{Spec2("SVG2")}}</td>
+      <td>Definition for shapes and texts</td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "painting.html#FillOpacityProperty", "fill-opacity")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition for shapes and texts</td>
+    </tr>
+  </tbody>
 </table>

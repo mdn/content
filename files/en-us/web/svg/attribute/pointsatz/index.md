@@ -7,84 +7,90 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.feSpotLight.pointsAtZ
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>pointsAtZ</code></strong> attribute represents the y location in the coordinate system established by attribute {{SVGAttr("primitiveUnits")}} on the {{SVGElement("filter")}} element of the point at which the light source is pointing, assuming that, in the initial local coordinate system, the positive z-axis comes out towards the person viewing the content and assuming that one unit along the z-axis equals one unit in x and y.</p>
+The **`pointsAtZ`** attribute represents the y location in the coordinate system established by attribute {{SVGAttr("primitiveUnits")}} on the {{SVGElement("filter")}} element of the point at which the light source is pointing, assuming that, in the initial local coordinate system, the positive z-axis comes out towards the person viewing the content and assuming that one unit along the z-axis equals one unit in x and y.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("feSpotLight")}}</li>
-</ul>
+*   {{SVGElement("feSpotLight")}}
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html, body, svg {
+```css hidden
+html, body, svg {
   height: 100%;
-}</pre>
+}
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg"&gt;
+```html
+<svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg">
 
-  &lt;filter id="lighting1" x="0" y="0" width="100%" height="100%"&gt;
-    &lt;feDiffuseLighting in="SourceGraphic"&gt;
-      &lt;feSpotLight x="100" y="100" z="50" pointsAtZ="0" /&gt;
-    &lt;/feDiffuseLighting&gt;
-  &lt;/filter&gt;
-  &lt;filter id="lighting2" x="0" y="0" width="100%" height="100%"&gt;
-    &lt;feDiffuseLighting in="SourceGraphic"&gt;
-      &lt;feSpotLight x="100" y="100" z="50" pointsAtZ="80" /&gt;
-    &lt;/feDiffuseLighting&gt;
-  &lt;/filter&gt;
+  <filter id="lighting1" x="0" y="0" width="100%" height="100%">
+    <feDiffuseLighting in="SourceGraphic">
+      <feSpotLight x="100" y="100" z="50" pointsAtZ="0" />
+    </feDiffuseLighting>
+  </filter>
+  <filter id="lighting2" x="0" y="0" width="100%" height="100%">
+    <feDiffuseLighting in="SourceGraphic">
+      <feSpotLight x="100" y="100" z="50" pointsAtZ="80" />
+    </feDiffuseLighting>
+  </filter>
 
-  &lt;rect x="0" y="0" width="200" height="200" style="filter: url(#lighting1);" /&gt;
-  &lt;rect x="0" y="0" width="200" height="200" style="filter: url(#lighting2); transform: translateX(220px);" /&gt;
-&lt;/svg&gt;</pre>
+  <rect x="0" y="0" width="200" height="200" style="filter: url(#lighting1);" />
+  <rect x="0" y="0" width="200" height="200" style="filter: url(#lighting2); transform: translateX(220px);" />
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", "220", "220")}}</p>
+{{EmbedLiveSample("Example", "220", "220")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>0</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Value</th>
-   <td>{{cssxref("number")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Value</th>
+      <td>{{cssxref("number")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Filters 1.0", "#element-attrdef-fespotlight-pointsatz", "pointsAtZ")}}</td>
-   <td>{{Spec2("Filters 1.0")}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "filters.html#feSpotLightPointsAtZAttribute", "pointsAtZ")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("Filters 1.0", "#element-attrdef-fespotlight-pointsatz", "pointsAtZ")}}
+      </td>
+      <td>{{Spec2("Filters 1.0")}}</td>
+      <td>No change</td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "filters.html#feSpotLightPointsAtZAttribute", "pointsAtZ")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

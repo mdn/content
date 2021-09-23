@@ -8,61 +8,45 @@ tags:
   - SVG
 browser-compat: svg.attributes.core
 ---
-<p>The SVG core attributes are all the common attributes that can be specified on any SVG element.</p>
+The SVG core attributes are all the common attributes that can be specified on any SVG element.
 
-<ul>
- <li><a href="#attr-id"><code>id</code></a></li>
- <li><a href="#attr-lang"><code>lang</code></a></li>
- <li><a href="#attr-tabindex"><code>tabindex</code></a></li>
- <li><a href="#attr-xml:base"><code>xml:base</code></a></li>
- <li><a href="#attr-xml:lang"><code>xml:lang</code></a></li>
- <li><a href="#attr-xml:space"><code>xml:space</code></a></li>
-</ul>
+*   [`id`](#attr-id)
+*   [`lang`](#attr-lang)
+*   [`tabindex`](#attr-tabindex)
+*   [`xml:base`](#attr-xml:base)
+*   [`xml:lang`](#attr-xml:lang)
+*   [`xml:space`](#attr-xml:space)
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<dl>
- <dt>{{SVGAttr('id')}}</dt>
- <dd>Defines a unique identifier (ID) which must be unique in the whole document. Its purpose is to identify the element when linking (using a fragment identifier), scripting, or styling (with CSS).<br>
- <small><em>Value</em>: Any valid ID string; <em>Animatable</em>: <strong>No</strong></small></dd>
- <dt>{{SVGAttr('lang')}}</dt>
- <dd>
- <p>Participates in defining the language of the element, the language that non-editable elements are written in or the language that editable elements should be written in. The tag contains one single entry value in the format defined in the <a href="https://www.ietf.org/rfc/bcp/bcp47.txt">Tags for Identifying Languages (BCP47) IETF document</a>.</p>
+*   {{SVGAttr('id')}}
+    *   : Defines a unique identifier (ID) which must be unique in the whole document. Its purpose is to identify the element when linking (using a fragment identifier), scripting, or styling (with CSS).
+        *Value*: Any valid ID string; *Animatable*: **No**
+*   {{SVGAttr('lang')}}
+    *   : Participates in defining the language of the element, the language that non-editable elements are written in or the language that editable elements should be written in. The tag contains one single entry value in the format defined in the [Tags for Identifying Languages (BCP47) IETF document](https://www.ietf.org/rfc/bcp/bcp47.txt).
 
- <div class="note">
- <p><strong>Note:</strong> SVG 2 introduced the new <code>lang</code> attributes. If both <code>lang</code> and <code>xml:lang</code> attribute are used, <code>xml:lang</code> has priority over <code>lang</code>.</p>
- </div>
+        > **Note:** SVG 2 introduced the new `lang` attributes. If both `lang` and `xml:lang` attribute are used, `xml:lang` has priority over `lang`.
 
- <p><small><em>Value</em>: Any valid language ID; <em>Animatable</em>: <strong>No</strong></small></p>
- </dd>
- <dt>{{SVGAttr('tabindex')}}</dt>
- <dd>The tabindex SVG attribute allows you to control whether an element is focusable and to define the relative order of the element for the purposes of sequential focus navigation.<br>
- <small><em>Value type</em>: <a href="/docs/Web/SVG/Content_type#Integer">&lt;integer&gt;</a>; <em>Animatable</em>: <strong>No</strong></small></dd>
- <dt>{{SVGAttr('xml:base')}}</dt>
- <dd>Specifies a base IRI other than the base IRI of the document.<br>
- <small><em>Value type</em>: <a href="/docs/Web/SVG/Content_type#IRI">&lt;IRI&gt;</a>; <em>Animatable</em>: <strong>No</strong></small></dd>
- <dt>{{SVGAttr('xml:lang')}}</dt>
- <dd>
- <p>It is a universal attribute allowed in all XML dialects to mark up the natural human language that an element contains. It's almost identical in usage to HTML's <a href="/en-US/docs/Web/HTML/Global_attributes/lang">lang</a>, but in conforming XML 1.0 documents, it does not allow the use of a null attribute value (<code>xml:lang=""</code>) to indicate an unknown language. Instead, use <code>xml:lang="und"</code>.</p>
+        *Value*: Any valid language ID; *Animatable*: **No**
+*   {{SVGAttr('tabindex')}}
+    *   : The tabindex SVG attribute allows you to control whether an element is focusable and to define the relative order of the element for the purposes of sequential focus navigation.
+        *Value type*: [\<integer>](/docs/Web/SVG/Content_type#Integer); *Animatable*: **No**
+*   {{SVGAttr('xml:base')}}
+    *   : Specifies a base IRI other than the base IRI of the document.
+        *Value type*: [\<IRI>](/docs/Web/SVG/Content_type#IRI); *Animatable*: **No**
+*   {{SVGAttr('xml:lang')}}
+    *   : It is a universal attribute allowed in all XML dialects to mark up the natural human language that an element contains. It's almost identical in usage to HTML's [lang](/en-US/docs/Web/HTML/Global_attributes/lang), but in conforming XML 1.0 documents, it does not allow the use of a null attribute value (`xml:lang=""`) to indicate an unknown language. Instead, use `xml:lang="und"`.
 
- <div class="note">
- <p><strong>Note:</strong> SVG 2 introduced the new <code>lang</code> attributes. If both <code>lang</code> and <code>xml:lang</code> attribute are used, <code>xml:lang</code> has priority over <code>lang</code>.</p>
- </div>
+        > **Note:** SVG 2 introduced the new `lang` attributes. If both `lang` and `xml:lang` attribute are used, `xml:lang` has priority over `lang`.
 
- <p><small><em>Value</em>: Any valid language ID; <em>Animatable</em>: <strong>No</strong></small></p>
- </dd>
- <dt>{{SVGAttr('xml:space')}} {{deprecated_inline}}</dt>
- <dd>
- <p>SVG supports the standard XML attribute <code>xml:space</code> to specify the handling of white space characters within a given {{ SVGElement("text") }} element's character data.</p>
+        *Value*: Any valid language ID; *Animatable*: **No**
+*   {{SVGAttr('xml:space')}} {{deprecated_inline}}
+    *   : SVG supports the standard XML attribute `xml:space` to specify the handling of white space characters within a given {{ SVGElement("text") }} element's character data.
 
- <div class="note">
- <p><strong>Note:</strong> Instead of using the <code>xml:space</code> attribute you should use the {{cssxref('white-space')}} CSS property.</p>
- </div>
+        > **Note:** Instead of using the `xml:space` attribute you should use the {{cssxref('white-space')}} CSS property.
 
- <p><small><em>Value</em>: <code><strong>default</strong></code> | <code>preserve</code>; <em>Animatable</em>: <strong>No</strong></small></p>
- </dd>
-</dl>
+        *Value*: **`default`** | `preserve`; *Animatable*: **No**
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

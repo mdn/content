@@ -7,87 +7,87 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.xlink.xlink_arcrole
 ---
-<div>{{SVGRef}}{{Deprecated_Header}}</div>
+{{SVGRef}}{{Deprecated_Header}}
 
-<p>The <strong><code>xlink:arcrole</code></strong> attribute specifies a contextual role for the element and corresponds to the <a href="https://www.w3.org/TR/rdf-primer/">RDF Primer</a> notion of a property.</p>
+The **`xlink:arcrole`** attribute specifies a contextual role for the element and corresponds to the [RDF Primer](https://www.w3.org/TR/rdf-primer/) notion of a property.
 
-<p>This contextual role can differ from the meaning of the resource when taken outside the context of this particular arc. For example, a resource might generically represent a "person," but in the context of a particular arc it might have the role of "mother" and in the context of a different arc it might have the role of "daughter."</p>
+This contextual role can differ from the meaning of the resource when taken outside the context of this particular arc. For example, a resource might generically represent a "person," but in the context of a particular arc it might have the role of "mother" and in the context of a different arc it might have the role of "daughter."
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("a")}}</li>
-  <li>{{SVGElement("altGlyph")}}</li>
-  <li>{{SVGElement("animate")}}</li>
-  <li>{{SVGElement("animateColor")}}</li>
-  <li>{{SVGElement("animateMotion")}}</li>
-  <li>{{SVGElement("animateTransform")}}</li>
-  <li>{{SVGElement("cursor")}}</li>
-  <li>{{SVGElement("feImage")}}</li>
-  <li>{{SVGElement("filter")}}</li>
-  <li>{{SVGElement("font-face-uri")}}</li>
-  <li>{{SVGElement("glyphRef")}}</li>
-  <li>{{SVGElement("image")}}</li>
-  <li>{{SVGElement("linearGradient")}}</li>
-  <li>{{SVGElement("mpath")}}</li>
-  <li>{{SVGElement("pattern")}}</li>
-  <li>{{SVGElement("radialGradient")}}</li>
-  <li>{{SVGElement("script")}}</li>
-  <li>{{SVGElement("set")}}</li>
-  <li>{{SVGElement("textPath")}}</li>
-  <li>{{SVGElement("tref")}}</li>
-  <li>{{SVGElement("use")}}</li>
-</ul>
+*   {{SVGElement("a")}}
+*   {{SVGElement("altGlyph")}}
+*   {{SVGElement("animate")}}
+*   {{SVGElement("animateColor")}}
+*   {{SVGElement("animateMotion")}}
+*   {{SVGElement("animateTransform")}}
+*   {{SVGElement("cursor")}}
+*   {{SVGElement("feImage")}}
+*   {{SVGElement("filter")}}
+*   {{SVGElement("font-face-uri")}}
+*   {{SVGElement("glyphRef")}}
+*   {{SVGElement("image")}}
+*   {{SVGElement("linearGradient")}}
+*   {{SVGElement("mpath")}}
+*   {{SVGElement("pattern")}}
+*   {{SVGElement("radialGradient")}}
+*   {{SVGElement("script")}}
+*   {{SVGElement("set")}}
+*   {{SVGElement("textPath")}}
+*   {{SVGElement("tref")}}
+*   {{SVGElement("use")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code><a href="/en-US/docs/Web/SVG/Content_type#iri">&lt;iri&gt;</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>None</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>No</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/SVG/Content_type#iri">&#x3C;iri></a></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>None</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>No</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt><code>&lt;iri&gt;</code></dt>
- <dd>This value specifies an {{Glossary("IRI")}} reference that identifies some resource that describes the intended property.</dd>
-</dl>
+*   `<iri>`
+    *   : This value specifies an {{Glossary("IRI")}} reference that identifies some resource that describes the intended property.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG1.1", "linking.html#XLinkArcRoleAttribute", "xlink:arcrole")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "linking.html#XLinkArcRoleAttribute", "xlink:arcrole")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://www.w3.org/TR/xlink/#link-semantics">Definition of the <code>xlink:arcrole</code> attribute in the XLink specification</a></li>
-</ul>
+*   [Definition of the `xlink:arcrole` attribute in the XLink specification](https://www.w3.org/TR/xlink/#link-semantics)

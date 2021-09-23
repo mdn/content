@@ -7,113 +7,111 @@ tags:
   - SVG Filter
 browser-compat: svg.elements.feGaussianBlur
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>&lt;feGaussianBlur&gt;</code></strong> <a href="/en-US/docs/Web/SVG">SVG</a> filter primitive blurs the input image by the amount specified in {{SVGAttr("stdDeviation")}}, which defines the bell-curve.</p>
+The **`<feGaussianBlur>`** [SVG](/en-US/docs/Web/SVG) filter primitive blurs the input image by the amount specified in {{SVGAttr("stdDeviation")}}, which defines the bell-curve.
 
-<h2 id="Usage_context">Usage context</h2>
+## Usage context
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<h3 id="Global_attributes">Global attributes</h3>
+### Global attributes
 
-<ul>
- <li><a href="/en-US/docs/Web/SVG/Attribute#core_attributes">Core attributes</a></li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#presentation_attributes">Presentation attributes</a></li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes">Filter primitive attributes</a></li>
- <li>{{SVGAttr("class")}}</li>
- <li>{{SVGAttr("style")}}</li>
-</ul>
+*   [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
+*   [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
+*   [Filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes)
+*   {{SVGAttr("class")}}
+*   {{SVGAttr("style")}}
 
-<h3 id="Specific_attributes">Specific attributes</h3>
+### Specific attributes
 
-<ul>
- <li>{{SVGAttr("in")}}</li>
- <li>{{SVGAttr("stdDeviation")}}</li>
- <li>{{SVGAttr("edgeMode")}}</li>
-</ul>
+*   {{SVGAttr("in")}}
+*   {{SVGAttr("stdDeviation")}}
+*   {{SVGAttr("edgeMode")}}
 
-<h2 id="DOM_Interface">DOM Interface</h2>
+## DOM Interface
 
-<p>This element implements the {{domxref("SVGFEGaussianBlurElement")}} interface.</p>
+This element implements the {{domxref("SVGFEGaussianBlurElement")}} interface.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="Simple_example">Simple example</h3>
+### Simple example
 
-<h4 id="SVG">SVG</h4>
+#### SVG
 
-<pre class="brush: html">&lt;svg width="230" height="120"
+```html
+<svg width="230" height="120"
  xmlns="http://www.w3.org/2000/svg"
- xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
+ xmlns:xlink="http://www.w3.org/1999/xlink">
 
-  &lt;filter id="blurMe"&gt;
-    &lt;feGaussianBlur in="SourceGraphic" stdDeviation="5" /&gt;
-  &lt;/filter&gt;
+  <filter id="blurMe">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
+  </filter>
 
-  &lt;circle cx="60"  cy="60" r="50" fill="green" /&gt;
+  <circle cx="60"  cy="60" r="50" fill="green" />
 
-  &lt;circle cx="170" cy="60" r="50" fill="green"
-          filter="url(#blurMe)" /&gt;
-&lt;/svg&gt;</pre>
+  <circle cx="170" cy="60" r="50" fill="green"
+          filter="url(#blurMe)" />
+</svg>
+```
 
-<h4 id="Result">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Simple_example",232,124,"/files/4227/feGaussianBlur.png")}}</p>
+{{EmbedLiveSample("Simple_example",232,124,"/files/4227/feGaussianBlur.png")}}
 
-<h3 id="Drop_shadow_example">Drop shadow example</h3>
+### Drop shadow example
 
-<h4 id="SVG_2">SVG</h4>
+#### SVG
 
-<pre class="brush: html">&lt;svg width="120" height="120"
+```html
+<svg width="120" height="120"
  xmlns="http://www.w3.org/2000/svg"
- xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
+ xmlns:xlink="http://www.w3.org/1999/xlink">
 
-  &lt;filter id="dropShadow"&gt;
-    &lt;feGaussianBlur in="SourceAlpha" stdDeviation="3" /&gt;
-    &lt;feOffset dx="2" dy="4" /&gt;
-    &lt;feMerge&gt;
-        &lt;feMergeNode /&gt;
-        &lt;feMergeNode in="SourceGraphic" /&gt;
-    &lt;/feMerge&gt;
-  &lt;/filter&gt;
+  <filter id="dropShadow">
+    <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
+    <feOffset dx="2" dy="4" />
+    <feMerge>
+        <feMergeNode />
+        <feMergeNode in="SourceGraphic" />
+    </feMerge>
+  </filter>
 
-  &lt;circle cx="60"  cy="60" r="50" fill="green"
-          filter="url(#dropShadow)" /&gt;
-&lt;/svg&gt;</pre>
+  <circle cx="60"  cy="60" r="50" fill="green"
+          filter="url(#dropShadow)" />
+</svg>
+```
 
-<h4 id="Result_2">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("Drop_shadow_example",125,124,"/files/4229/feGaussianBlur-dropshadow.png")}}</p>
+{{EmbedLiveSample("Drop_shadow_example",125,124,"/files/4229/feGaussianBlur-dropshadow.png")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGElement("filter")}}</li>
- <li>{{SVGElement("feBlend")}}</li>
- <li>{{SVGElement("feColorMatrix")}}</li>
- <li>{{SVGElement("feComponentTransfer")}}</li>
- <li>{{SVGElement("feComposite")}}</li>
- <li>{{SVGElement("feConvolveMatrix")}}</li>
- <li>{{SVGElement("feDiffuseLighting")}}</li>
- <li>{{SVGElement("feDisplacementMap")}}</li>
- <li>{{SVGElement("feFlood")}}</li>
- <li>{{SVGElement("feImage")}}</li>
- <li>{{SVGElement("feMerge")}}</li>
- <li>{{SVGElement("feMorphology")}}</li>
- <li>{{SVGElement("feOffset")}}</li>
- <li>{{SVGElement("feSpecularLighting")}}</li>
- <li>{{SVGElement("feTile")}}</li>
- <li>{{SVGElement("feTurbulence")}}</li>
- <li><a href="/en-US/docs/Web/SVG/Tutorial/Filter_effects">SVG tutorial: Filter effects</a></li>
-</ul>
+*   {{SVGElement("filter")}}
+*   {{SVGElement("feBlend")}}
+*   {{SVGElement("feColorMatrix")}}
+*   {{SVGElement("feComponentTransfer")}}
+*   {{SVGElement("feComposite")}}
+*   {{SVGElement("feConvolveMatrix")}}
+*   {{SVGElement("feDiffuseLighting")}}
+*   {{SVGElement("feDisplacementMap")}}
+*   {{SVGElement("feFlood")}}
+*   {{SVGElement("feImage")}}
+*   {{SVGElement("feMerge")}}
+*   {{SVGElement("feMorphology")}}
+*   {{SVGElement("feOffset")}}
+*   {{SVGElement("feSpecularLighting")}}
+*   {{SVGElement("feTile")}}
+*   {{SVGElement("feTurbulence")}}
+*   [SVG tutorial: Filter effects](/en-US/docs/Web/SVG/Tutorial/Filter_effects)

@@ -8,31 +8,34 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.font-face.ascent
 ---
-<div>{{SVGRef}}{{deprecated_header}}</div>
+{{SVGRef}}{{deprecated_header}}
 
-<p>The <strong><code>ascent</code></strong> attribute defines the maximum unaccented height of the font within the font coordinate system.</p>
+The **`ascent`** attribute defines the maximum unaccented height of the font within the font coordinate system.
 
-<p>If the attribute is not specified, the effect is as if the attribute were set to the difference between the {{SVGAttr("units-per-em")}} value and the {{SVGAttr("vert-origin-y")}} value for the corresponding font.</p>
+If the attribute is not specified, the effect is as if the attribute were set to the difference between the {{SVGAttr("units-per-em")}} value and the {{SVGAttr("vert-origin-y")}} value for the corresponding font.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("font-face")}}</li>
-</ul>
+*   {{SVGElement("font-face")}}
 
-<h2 id="font-face">font-face</h2>
+## font-face
 
-<p>For {{SVGElement("font-face")}}, <code>ascent</code> defines the maximum unaccented height of the font within the font coordinate system.</p>
+For {{SVGElement("font-face")}}, `ascent` defines the maximum unaccented height of the font within the font coordinate system.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Value</th>
-      <td><a href="/en-US/docs/Web/SVG/Content_type#number">&lt;number&gt;</a></td>
+      <td>
+        <a href="/en-US/docs/Web/SVG/Content_type#number">&#x3C;number></a>
+      </td>
     </tr>
     <tr>
       <th scope="row">Default value</th>
-      <td>Difference between {{SVGAttr("units-per-em")}} and {{SVGAttr("vert-origin-y")}}</td>
+      <td>
+        Difference between {{SVGAttr("units-per-em")}} and
+        {{SVGAttr("vert-origin-y")}}
+      </td>
     </tr>
     <tr>
       <th scope="row">Animatable</th>
@@ -41,7 +44,7 @@ browser-compat: svg.elements.font-face.ascent
   </tbody>
 </table>
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
   <thead>
@@ -53,13 +56,15 @@ browser-compat: svg.elements.font-face.ascent
   </thead>
   <tbody>
     <tr>
-      <td>{{SpecName("SVG1.1", "fonts.html#FontFaceElementAscentAttribute", "ascent")}}</td>
+      <td>
+        {{SpecName("SVG1.1", "fonts.html#FontFaceElementAscentAttribute", "ascent")}}
+      </td>
       <td>{{Spec2("SVG1.1")}}</td>
       <td>Initial definition</td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

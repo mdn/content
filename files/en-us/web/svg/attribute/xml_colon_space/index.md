@@ -1,97 +1,100 @@
 ---
-title: 'xml:space'
-slug: 'Web/SVG/Attribute/xml:space'
+title: xml:space
+slug: Web/SVG/Attribute/xml:space
 tags:
   - SVG
   - SVG Attribute
 browser-compat: svg.attributes.core.xml_space
 ---
-<div>{{SVGRef}}{{Deprecated_Header}}</div>
+{{SVGRef}}{{Deprecated_Header}}
 
-<p>SVG supports the built-in XML <strong><code>xml:space</code></strong> attribute to handle whitespace characters inside elements. Child elements inside an element may also have an <code>xml:space</code> attribute that overrides the parent's one.</p>
+SVG supports the built-in XML **`xml:space`** attribute to handle whitespace characters inside elements. Child elements inside an element may also have an `xml:space` attribute that overrides the parent's one.
 
-<div class="notecard note">
-<p><strong>Note:</strong> Instead of using the <code>xml:space</code> attribute, use the {{cssxref("white-space")}} CSS property.</p>
-</div>
+> **Note:** Instead of using the `xml:space` attribute, use the {{cssxref("white-space")}} CSS property.
 
-<p>This attribute influences how browsers parse text content and therefore changes the way the {{Glossary("DOM")}} is built. Therefore, changing this attribute's value through the DOM API may have no effect.</p>
+This attribute influences how browsers parse text content and therefore changes the way the {{Glossary("DOM")}} is built. Therefore, changing this attribute's value through the DOM API may have no effect.
 
-<p>You can use this attribute with any SVG element.</p>
+You can use this attribute with any SVG element.
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html, body, svg {
+```css hidden
+html, body, svg {
   height: 100%;
-}</pre>
+}
+```
 
-<pre class="brush: html; highlight[2,3]">&lt;svg viewBox="0 0 140 50" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;text y="20" xml:space="default"&gt;Default   spacing&lt;/text&gt;
-  &lt;text y="40" xml:space="preserve"&gt;Preserved   spacing&lt;/text&gt;
-&lt;/svg&gt;</pre>
+```html
+<svg viewBox="0 0 140 50" xmlns="http://www.w3.org/2000/svg">
+  <text y="20" xml:space="default">Default   spacing</text>
+  <text y="40" xml:space="preserve">Preserved   spacing</text>
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", "120", "50")}}</p>
+{{EmbedLiveSample("Example", "120", "50")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code>default</code> | <code>preserve</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>default</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>No</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td><code>default</code> | <code>preserve</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>default</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>No</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt><code>default</code></dt>
- <dd><p>With this value set, whitespace characters will be processed in this order:</p>
- <ol>
-  <li>All newline characters are removed.</li>
-  <li>All tab characters are converted into space characters.</li>
-  <li>All leading and trailing space characters are removed.</li>
-  <li>All contiguous space characters are collapsed into a single space character.</li>
- </ol>
- </dd>
- <dt><code>preserve</code></dt>
- <dd>
- <p>This value tells the user agent to convert all newline and tab characters into spaces. Then, it draws all space characters (including leading, trailing and multiple consecutive space characters).</p>
+*   `default`
+    *   : With this value set, whitespace characters will be processed in this order:
 
- <p>For example, the string "a   b" (three spaces between "a" and "b") separates "a" and "b" more than "a b" (one space between "a" and "b").</p>
- </dd>
-</dl>
+        1.  All newline characters are removed.
+        2.  All tab characters are converted into space characters.
+        3.  All leading and trailing space characters are removed.
+        4.  All contiguous space characters are collapsed into a single space character.
+*   `preserve`
+    *   : This value tells the user agent to convert all newline and tab characters into spaces. Then, it draws all space characters (including leading, trailing and multiple consecutive space characters).
 
-<h2 id="Specifications">Specifications</h2>
+        For example, the string "a   b" (three spaces between "a" and "b") separates "a" and "b" more than "a b" (one space between "a" and "b").
+
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG2", "struct.html#XMLSpaceAttribute", "xml:space")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Deprecates the attribute and suggests to use {{cssxref("white-space")}} instead.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "struct.html#XMLSpaceAttribute", "xml:space")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("SVG2", "struct.html#XMLSpaceAttribute", "xml:space")}}
+      </td>
+      <td>{{Spec2("SVG2")}}</td>
+      <td>
+        Deprecates the attribute and suggests to use
+        {{cssxref("white-space")}} instead.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "struct.html#XMLSpaceAttribute", "xml:space")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

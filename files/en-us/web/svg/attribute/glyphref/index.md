@@ -7,65 +7,65 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.altGlyph.glyphRef
 ---
-<div>{{SVGRef}}{{Deprecated_Header}}</div>
+{{SVGRef}}{{Deprecated_Header}}
 
-<p>The <code><strong>glyphRef</strong></code> attribute represents the glyph identifier, the format of which is dependent on the {{SVGAttr("format")}} of the given font.</p>
+The **`glyphRef`** attribute represents the glyph identifier, the format of which is dependent on the {{SVGAttr("format")}} of the given font.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("altGlyph")}}</li>
-  <li>{{SVGElement("glyphRef")}}</li>
-</ul>
+*   {{SVGElement("altGlyph")}}
+*   {{SVGElement("glyphRef")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code>&lt;string&gt;</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>None</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td><code>&#x3C;string></code></td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>None</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt><code>&lt;string&gt;</code></dt>
- <dd>This value represents the glyph identifier. Its format depends on the {{SVGAttr("format")}} of the given font.</dd>
-</dl>
+*   `<string>`
+    *   : This value represents the glyph identifier. Its format depends on the {{SVGAttr("format")}} of the given font.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG1.1", "text.html#GlyphRefElementGlyphRefAttribute", "glyphRef for &lt;glyphRef&gt;")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition for <code>&lt;glyphRef&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "text.html#AltGlyphElementGlyphRefAttribute", "altGlyph for &lt;altGlyph&gt;")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition for <code>&lt;altGlyph&gt;</code></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "text.html#GlyphRefElementGlyphRefAttribute", "glyphRef for &lt;glyphRef&gt;")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition for <code>&#x3C;glyphRef></code></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "text.html#AltGlyphElementGlyphRefAttribute", "altGlyph for &lt;altGlyph&gt;")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition for <code>&#x3C;altGlyph></code></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

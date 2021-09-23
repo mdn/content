@@ -8,192 +8,247 @@ tags:
   - SVG Filter
 browser-compat: svg.elements.feComposite
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>&lt;feComposite&gt;</code></strong> <a href="/en-US/docs/Web/SVG">SVG</a> filter primitive performs the combination of two input images pixel-wise in image space using one of the Porter-Duff compositing operations: <code>over</code>, <code>in</code>, <code>atop</code>, <code>out</code>, <code>xor</code>, <code>lighter</code>, or <code>arithmetic</code>.</p>
+The **`<feComposite>`** [SVG](/en-US/docs/Web/SVG) filter primitive performs the combination of two input images pixel-wise in image space using one of the Porter-Duff compositing operations: `over`, `in`, `atop`, `out`, `xor`, `lighter`, or `arithmetic`.
 
-<p>The table below shows each of these operations using an image of the MDN logo composited with a red circle:</p>
+The table below shows each of these operations using an image of the MDN logo composited with a red circle:
 
 <table class="no-markdown">
-  <tr>
-    <th>Operation</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td><p>over <img src="operation_over.png" alt="over operator"></p></td>
-    <td>The source graphic defined by the {{SVGAttr("in")}} attribute (the MDN logo) is placed over the destination graphic defined by the {{SVGAttr("in2")}} attribute (the circle).
-      <p>This is the <em>default operation</em>, which will be used if no operation or an unsupported operation is specified.</p>
-    </td>
-  </tr>
-  <tr>
-    <td><p>in <img src="operation_in.png" alt="in operator"></p></td>
-    <td>The parts of the source graphic defined by the <code>in</code> attribute that overlap the destination graphic defined in the <code>in2</code> attribute, replace the destination graphic.</td>
-  </tr>
-  <tr>
-    <td><p>out <img src="operation_out.png" alt="out operator"> </p></td>
-    <td>The parts of the source graphic defined by the <code>in</code> attribute that fall outside the destination graphic defined in the <code>in2</code> attribute, are displayed.</td>
-  </tr>
-  <tr>
-    <td><p>atop <img src="operation_atop.png" alt="atop operator"></p></td>
-    <td>The parts of the source graphic defined in the <code>in</code> attribute, which overlap the destination graphic defined in the <code>in2</code> attribute, replace the destination graphic. The parts of the destination graphic that do not overlap with the source graphic stay untouched.</td>
-  </tr>
-  <tr>
-    <td><p>xor <img src="operation_xor.png" alt="xor operator"></p></td>
-    <td>The non-overlapping regions of the source graphic defined in the <code>in</code> attribute and the destination graphic defined in the <code>in2</code> attribute are combined.</td>
-  </tr>
-  <tr>
-    <td><p>lighter <img src="operation_lighter.png" alt="lighter operator"> </p></td>
-    <td>The sum of the source graphic defined in the <code>in</code> attribute and the destination graphic defined in the <code>in2</code> attribute is displayed.</td>
-  </tr>
-  <tr>
-    <td><p>arithmetic <img src="operation_arithmetic.png" alt="arithmetic operator"></p></td>
-    <td>
-      <p>The <code>arithmetic</code> operation is useful for combining the output from the {{SVGElement("feDiffuseLighting")}} and {{SVGElement("feSpecularLighting")}} filters with texture data. If the <code>arithmetic</code> operation is chosen, each result pixel is computed using the following formula:</p>
-      <pre class="brush: plain">result = k1*i1*i2 + k2*i1 + k3*i2 + k4</pre>
-      <p>where:</p>
-      <ul>
-        <li><code>i1</code> and <code>i2</code> indicate the corresponding pixel channel values of the input image, which map to {{SVGAttr("in")}} and {{SVGAttr("in2")}} respectively</li>
-        <li>{{SVGAttr("k1")}}, {{SVGAttr("k2")}}, {{SVGAttr("k3")}}, and {{SVGAttr("k4")}} indicate the values of the attributes with the same name.</li>
-      </ul>
-    </td>
-  </tr>
+  <tbody>
+    <tr>
+      <th>Operation</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>
+        <p>over <img src="operation_over.png" alt="over operator" /></p>
+      </td>
+      <td>
+        The source graphic defined by the {{SVGAttr("in")}} attribute
+        (the MDN logo) is placed over the destination graphic defined by the
+        {{SVGAttr("in2")}} attribute (the circle).
+        <p>
+          This is the <em>default operation</em>, which will be used if no
+          operation or an unsupported operation is specified.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>in <img src="operation_in.png" alt="in operator" /></p>
+      </td>
+      <td>
+        The parts of the source graphic defined by the <code>in</code> attribute
+        that overlap the destination graphic defined in the
+        <code>in2</code> attribute, replace the destination graphic.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>out <img src="operation_out.png" alt="out operator" /></p>
+      </td>
+      <td>
+        The parts of the source graphic defined by the <code>in</code> attribute
+        that fall outside the destination graphic defined in the
+        <code>in2</code> attribute, are displayed.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>atop <img src="operation_atop.png" alt="atop operator" /></p>
+      </td>
+      <td>
+        The parts of the source graphic defined in the
+        <code>in</code> attribute, which overlap the destination graphic defined
+        in the <code>in2</code> attribute, replace the destination graphic. The
+        parts of the destination graphic that do not overlap with the source
+        graphic stay untouched.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>xor <img src="operation_xor.png" alt="xor operator" /></p>
+      </td>
+      <td>
+        The non-overlapping regions of the source graphic defined in the
+        <code>in</code> attribute and the destination graphic defined in the
+        <code>in2</code> attribute are combined.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>
+          lighter <img src="operation_lighter.png" alt="lighter operator" />
+        </p>
+      </td>
+      <td>
+        The sum of the source graphic defined in the <code>in</code> attribute
+        and the destination graphic defined in the <code>in2</code> attribute is
+        displayed.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>
+          arithmetic
+          <img src="operation_arithmetic.png" alt="arithmetic operator" />
+        </p>
+      </td>
+      <td>
+        <p>
+          The <code>arithmetic</code> operation is useful for combining the
+          output from the {{SVGElement("feDiffuseLighting")}} and
+          {{SVGElement("feSpecularLighting")}} filters with texture
+          data. If the <code>arithmetic</code> operation is chosen, each result
+          pixel is computed using the following formula:
+        </p>
+        <pre class="brush: plain">result = k1*i1*i2 + k2*i1 + k3*i2 + k4</pre>
+        <p>where:</p>
+        <ul>
+          <li>
+            <code>i1</code> and <code>i2</code> indicate the corresponding pixel
+            channel values of the input image, which map to
+            {{SVGAttr("in")}} and {{SVGAttr("in2")}} respectively
+          </li>
+          <li>
+            {{SVGAttr("k1")}}, {{SVGAttr("k2")}},
+            {{SVGAttr("k3")}}, and {{SVGAttr("k4")}} indicate the
+            values of the attributes with the same name.
+          </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Usage_context">Usage context</h2>
+## Usage context
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<h3 id="Global_attributes">Global attributes</h3>
+### Global attributes
 
-<ul>
-  <li><a href="/en-US/docs/Web/SVG/Attribute#core_attributes">Core attributes</a></li>
-  <li><a href="/en-US/docs/Web/SVG/Attribute#presentation_attributes">Presentation attributes</a></li>
-  <li><a href="/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes">Filter primitive attributes</a></li>
-  <li>{{SVGAttr("class")}}</li>
-  <li>{{SVGAttr("style")}}</li>
-</ul>
+*   [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
+*   [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
+*   [Filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes)
+*   {{SVGAttr("class")}}
+*   {{SVGAttr("style")}}
 
-<h3 id="Specific_attributes">Specific attributes</h3>
+### Specific attributes
 
-<ul>
-  <li>{{SVGAttr("in")}}: First input for the given filter primitive.</li>
-  <li>{{SVGAttr("in2")}}: Second input for the given filter primitive (works the same as the <code>in</code> attribute).</li>
-  <li>{{SVGAttr("operator")}}: <code>over</code> | <code>in</code> | <code>out</code> | <code>atop</code> | <code>xor</code> | <code>lighter</code> | <code>arithmetic</code></li>
-  <li>{{SVGAttr("k1")}}, {{SVGAttr("k2")}}, {{SVGAttr("k3")}}, {{SVGAttr("k4")}}: Values used for calculating the result pixel in <code>arithmetic</code> {{SVGAttr("operator")}} filter primitives.</li>
-</ul>
+*   {{SVGAttr("in")}}: First input for the given filter primitive.
+*   {{SVGAttr("in2")}}: Second input for the given filter primitive (works the same as the `in` attribute).
+*   {{SVGAttr("operator")}}: `over` | `in` | `out` | `atop` | `xor` | `lighter` | `arithmetic`
+*   {{SVGAttr("k1")}}, {{SVGAttr("k2")}}, {{SVGAttr("k3")}}, {{SVGAttr("k4")}}: Values used for calculating the result pixel in `arithmetic` {{SVGAttr("operator")}} filter primitives.
 
-<h2 id="DOM_Interface">DOM Interface</h2>
+## DOM Interface
 
-<p>This element implements the {{domxref("SVGFECompositeElement")}} interface.</p>
+This element implements the {{domxref("SVGFECompositeElement")}} interface.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>This example defines filters for each of the supported operations (<code>over</code>, <code>atop</code>, <code>lighter</code>, etc.), which composite an input <code>SourceGraphic</code> with an image of the MDN logo. The filters are each applied to a circle element, which is then used as the <code>SourceGraphic</code>.</p>
+This example defines filters for each of the supported operations (`over`, `atop`, `lighter`, etc.), which composite an input `SourceGraphic` with an image of the MDN logo. The filters are each applied to a circle element, which is then used as the `SourceGraphic`.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> <code>BackgroundImage</code> cannot be used as a compositing source on modern browsers, so we can't define a filter that composites using whatever pixels happen to be under the filter as one of the sources. The approach taken here is a <a href="/en-US/docs/Web/SVG/Attribute/in#workaround_for_backgroundimage">workaround because we can't use <code>BackgroundImage</code></a>.</p>
-</div>
+> **Note:** `BackgroundImage` cannot be used as a compositing source on modern browsers, so we can't define a filter that composites using whatever pixels happen to be under the filter as one of the sources. The approach taken here is a [workaround because we can't use `BackgroundImage`](/en-US/docs/Web/SVG/Attribute/in#workaround_for_backgroundimage).
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<pre class="brush: html">
+```html
 
-&lt;svg style="width:800px; height:400px; display: inline;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
-  &lt;defs&gt;
-    &lt;filter id="imageOver"&gt;
-      &lt;feImage xlink:href="mdn_logo_only_color.png" x="10px" y="10px" width="160px" /&gt;
-      &lt;feComposite in2="SourceGraphic" operator="over"/&gt;
-    &lt;/filter&gt;
-    &lt;filter id="imageIn"&gt;
-      &lt;feImage xlink:href="mdn_logo_only_color.png" x="10px" y="10px" width="160px" /&gt;
-      &lt;feComposite in2="SourceGraphic" operator="in"/&gt;
-    &lt;/filter&gt;
-    &lt;filter id="imageOut"&gt;
-      &lt;feImage xlink:href="mdn_logo_only_color.png" x="10px" y="10px" width="160px" /&gt;
-      &lt;feComposite in2="SourceGraphic" operator="out"/&gt;
-    &lt;/filter&gt;
-    &lt;filter id="imageAtop"&gt;
-      &lt;feImage xlink:href="mdn_logo_only_color.png" x="10px" y="10px" width="160px" /&gt;
-      &lt;feComposite in2="SourceGraphic" operator="atop"/&gt;
-    &lt;/filter&gt;
-    &lt;filter id="imageXor"&gt;
-      &lt;feImage xlink:href="mdn_logo_only_color.png" x="10px" y="10px" width="160px" /&gt;
-      &lt;feComposite in2="SourceGraphic" operator="xor"/&gt;
-    &lt;/filter&gt;
-    &lt;filter id="imageArithmetic"&gt;
-      &lt;feImage xlink:href="mdn_logo_only_color.png" x="10px" y="10px" width="160px" /&gt;
-      &lt;feComposite in2="SourceGraphic" operator="arithmetic" k1="0.1" k2="0.2" k3="0.3" k4="0.4" /&gt;
-    &lt;/filter&gt;
-    &lt;filter id="imageLighter"&gt;
-      &lt;feImage xlink:href="mdn_logo_only_color.png" x="10px" y="10px" width="160px" /&gt;
-      &lt;feComposite in2="SourceGraphic" operator="lighter"/&gt;
-    &lt;/filter&gt;
-  &lt;/defs&gt;
-  &lt;g transform="translate(0,25)"&gt;
-    &lt;circle cx="90px" cy="80px" r="70px" fill="#c00" style="filter:url(#imageOver)"/&gt;
-    &lt;text x="80" y="-5"&gt;over&lt;/text&gt;
-  &lt;/g&gt;
-  &lt;g transform="translate(200,25)"&gt;
-    &lt;circle cx="90px" cy="80px" r="70px" fill="#c00" style="filter:url(#imageIn)"/&gt;
-    &lt;text x="80" y="-5"&gt;in&lt;/text&gt;
-  &lt;/g&gt;
-  &lt;g transform="translate(400,25)"&gt;
-    &lt;circle cx="90px" cy="80px" r="70px" fill="#c00" style="filter:url(#imageOut)"/&gt;
-    &lt;text x="80" y="-5"&gt;out&lt;/text&gt;
-  &lt;/g&gt;
-  &lt;g transform="translate(600,25)"&gt;
-    &lt;circle cx="90px" cy="80px" r="70px" fill="#c00" style="filter:url(#imageAtop)"/&gt;
-    &lt;text x="80" y="-5"&gt;atop&lt;/text&gt;
-  &lt;/g&gt;
-  &lt;g transform="translate(0,240)"&gt;
-    &lt;circle cx="90px" cy="80px" r="70px" fill="#c00" style="filter:url(#imageXor)"/&gt;
-    &lt;text x="80" y="-5"&gt;xor&lt;/text&gt;
-  &lt;/g&gt;
-  &lt;g transform="translate(200,240)"&gt;
-    &lt;circle cx="90px" cy="80px" r="70px" fill="#c00" style="filter:url(#imageArithmetic)"/&gt;
-    &lt;text x="70" y="-5"&gt;arithmetic&lt;/text&gt;
-  &lt;/g&gt;
-  &lt;g transform="translate(400,240)"&gt;
-    &lt;circle cx="90px" cy="80px" r="70px" fill="#c00" style="filter:url(#imageLighter)"/&gt;
-    &lt;text x="80" y="-5"&gt;lighter&lt;/text&gt;
-  &lt;/g&gt;
-&lt;/svg&gt;
-</pre>
+<svg style="width:800px; height:400px; display: inline;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <filter id="imageOver">
+      <feImage xlink:href="mdn_logo_only_color.png" x="10px" y="10px" width="160px" />
+      <feComposite in2="SourceGraphic" operator="over"/>
+    </filter>
+    <filter id="imageIn">
+      <feImage xlink:href="mdn_logo_only_color.png" x="10px" y="10px" width="160px" />
+      <feComposite in2="SourceGraphic" operator="in"/>
+    </filter>
+    <filter id="imageOut">
+      <feImage xlink:href="mdn_logo_only_color.png" x="10px" y="10px" width="160px" />
+      <feComposite in2="SourceGraphic" operator="out"/>
+    </filter>
+    <filter id="imageAtop">
+      <feImage xlink:href="mdn_logo_only_color.png" x="10px" y="10px" width="160px" />
+      <feComposite in2="SourceGraphic" operator="atop"/>
+    </filter>
+    <filter id="imageXor">
+      <feImage xlink:href="mdn_logo_only_color.png" x="10px" y="10px" width="160px" />
+      <feComposite in2="SourceGraphic" operator="xor"/>
+    </filter>
+    <filter id="imageArithmetic">
+      <feImage xlink:href="mdn_logo_only_color.png" x="10px" y="10px" width="160px" />
+      <feComposite in2="SourceGraphic" operator="arithmetic" k1="0.1" k2="0.2" k3="0.3" k4="0.4" />
+    </filter>
+    <filter id="imageLighter">
+      <feImage xlink:href="mdn_logo_only_color.png" x="10px" y="10px" width="160px" />
+      <feComposite in2="SourceGraphic" operator="lighter"/>
+    </filter>
+  </defs>
+  <g transform="translate(0,25)">
+    <circle cx="90px" cy="80px" r="70px" fill="#c00" style="filter:url(#imageOver)"/>
+    <text x="80" y="-5">over</text>
+  </g>
+  <g transform="translate(200,25)">
+    <circle cx="90px" cy="80px" r="70px" fill="#c00" style="filter:url(#imageIn)"/>
+    <text x="80" y="-5">in</text>
+  </g>
+  <g transform="translate(400,25)">
+    <circle cx="90px" cy="80px" r="70px" fill="#c00" style="filter:url(#imageOut)"/>
+    <text x="80" y="-5">out</text>
+  </g>
+  <g transform="translate(600,25)">
+    <circle cx="90px" cy="80px" r="70px" fill="#c00" style="filter:url(#imageAtop)"/>
+    <text x="80" y="-5">atop</text>
+  </g>
+  <g transform="translate(0,240)">
+    <circle cx="90px" cy="80px" r="70px" fill="#c00" style="filter:url(#imageXor)"/>
+    <text x="80" y="-5">xor</text>
+  </g>
+  <g transform="translate(200,240)">
+    <circle cx="90px" cy="80px" r="70px" fill="#c00" style="filter:url(#imageArithmetic)"/>
+    <text x="70" y="-5">arithmetic</text>
+  </g>
+  <g transform="translate(400,240)">
+    <circle cx="90px" cy="80px" r="70px" fill="#c00" style="filter:url(#imageLighter)"/>
+    <text x="80" y="-5">lighter</text>
+  </g>
+</svg>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<div>{{EmbedLiveSample("Example", 100, 450)}}</div>
+{{EmbedLiveSample("Example", 100, 450)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li>{{SVGElement("filter")}}</li>
-  <li>{{SVGElement("animate")}}</li>
-  <li>{{SVGElement("set")}}</li>
-  <li>{{SVGElement("feBlend")}}</li>
-  <li>{{SVGElement("feColorMatrix")}}</li>
-  <li>{{SVGElement("feComponentTransfer")}}</li>
-  <li>{{SVGElement("feConvolveMatrix")}}</li>
-  <li>{{SVGElement("feDiffuseLighting")}}</li>
-  <li>{{SVGElement("feDisplacementMap")}}</li>
-  <li>{{SVGElement("feFlood")}}</li>
-  <li>{{SVGElement("feGaussianBlur")}}</li>
-  <li>{{SVGElement("feImage")}}</li>
-  <li>{{SVGElement("feMerge")}}</li>
-  <li>{{SVGElement("feMorphology")}}</li>
-  <li>{{SVGElement("feOffset")}}</li>
-  <li>{{SVGElement("feSpecularLighting")}}</li>
-  <li>{{SVGElement("feTile")}}</li>
-  <li>{{SVGElement("feTurbulence")}}</li>
-  <li><a href="/en-US/docs/Web/SVG/Tutorial/Filter_effects">SVG tutorial: Filter effects</a></li>
-</ul>
+*   {{SVGElement("filter")}}
+*   {{SVGElement("animate")}}
+*   {{SVGElement("set")}}
+*   {{SVGElement("feBlend")}}
+*   {{SVGElement("feColorMatrix")}}
+*   {{SVGElement("feComponentTransfer")}}
+*   {{SVGElement("feConvolveMatrix")}}
+*   {{SVGElement("feDiffuseLighting")}}
+*   {{SVGElement("feDisplacementMap")}}
+*   {{SVGElement("feFlood")}}
+*   {{SVGElement("feGaussianBlur")}}
+*   {{SVGElement("feImage")}}
+*   {{SVGElement("feMerge")}}
+*   {{SVGElement("feMorphology")}}
+*   {{SVGElement("feOffset")}}
+*   {{SVGElement("feSpecularLighting")}}
+*   {{SVGElement("feTile")}}
+*   {{SVGElement("feTurbulence")}}
+*   [SVG tutorial: Filter effects](/en-US/docs/Web/SVG/Tutorial/Filter_effects)

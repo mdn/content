@@ -7,87 +7,81 @@ tags:
   - SVG Filter
 browser-compat: svg.elements.feFlood
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>&lt;feFlood&gt;</code></strong> SVG filter primitive fills the filter subregion with the color and opacity defined by {{SVGAttr("flood-color")}} and {{SVGAttr("flood-opacity")}}.</p>
+The **`<feFlood>`** SVG filter primitive fills the filter subregion with the color and opacity defined by {{SVGAttr("flood-color")}} and {{SVGAttr("flood-opacity")}}.
 
-<h2 id="Usage_context">Usage context</h2>
+## Usage context
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<h3 id="Global_attributes">Global attributes</h3>
+### Global attributes
 
-<ul>
- <li><a href="/en-US/docs/Web/SVG/Attribute#core_attributes">Core attributes</a></li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#presentation_attributes">Presentation attributes</a></li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes">Filter primitive attributes</a></li>
- <li>{{SVGAttr("class")}}</li>
- <li>{{SVGAttr("style")}}</li>
-</ul>
+*   [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
+*   [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
+*   [Filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes)
+*   {{SVGAttr("class")}}
+*   {{SVGAttr("style")}}
 
-<h3 id="Specific_attributes">Specific attributes</h3>
+### Specific attributes
 
-<ul>
- <li>{{SVGAttr("flood-color")}}</li>
- <li>{{SVGAttr("flood-opacity")}}</li>
-</ul>
+*   {{SVGAttr("flood-color")}}
+*   {{SVGAttr("flood-opacity")}}
 
-<h2 id="DOM_Interface">DOM Interface</h2>
+## DOM Interface
 
-<p>This element implements the {{domxref("SVGFEFloodElement")}} interface.</p>
+This element implements the {{domxref("SVGFEFloodElement")}} interface.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="HTML_Content">HTML Content</h3>
+### HTML Content
 
-<pre class="brush: html">&lt;svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"&gt;
-  &lt;defs&gt;
-    &lt;filter id="floodFilter" filterUnits="userSpaceOnUse"&gt;
-      &lt;feFlood x="50" y="50" width="100" height="100"
-          flood-color="green" flood-opacity="0.5"/&gt;
-    &lt;/filter&gt;
-  &lt;/defs&gt;
+```html
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200">
+  <defs>
+    <filter id="floodFilter" filterUnits="userSpaceOnUse">
+      <feFlood x="50" y="50" width="100" height="100"
+          flood-color="green" flood-opacity="0.5"/>
+    </filter>
+  </defs>
 
-  &lt;use style="filter: url(#floodFilter);"/&gt;
-&lt;/svg&gt;</pre>
+  <use style="filter: url(#floodFilter);"/>
+</svg>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example", 200, 200)}}</p>
+{{EmbedLiveSample("Example", 200, 200)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat}}
 
-<p>{{Compat}}</p>
+## See also
 
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{SVGElement("filter")}}</li>
- <li>{{SVGElement("animate")}}</li>
- <li>{{SVGElement("animateColor")}}</li>
- <li>{{SVGElement("set")}}</li>
- <li>{{SVGElement("feBlend")}}</li>
- <li>{{SVGElement("feColorMatrix")}}</li>
- <li>{{SVGElement("feComponentTransfer")}}</li>
- <li>{{SVGElement("feComposite")}}</li>
- <li>{{SVGElement("feConvolveMatrix")}}</li>
- <li>{{SVGElement("feDiffuseLighting")}}</li>
- <li>{{SVGElement("feDisplacementMap")}}</li>
- <li>{{SVGElement("feGaussianBlur")}}</li>
- <li>{{SVGElement("feImage")}}</li>
- <li>{{SVGElement("feMerge")}}</li>
- <li>{{SVGElement("feMorphology")}}</li>
- <li>{{SVGElement("feOffset")}}</li>
- <li>{{SVGElement("feSpecularLighting")}}</li>
- <li>{{SVGElement("feTile")}}</li>
- <li>{{SVGElement("feTurbulence")}}</li>
- <li><a href="/en-US/docs/Web/SVG/Tutorial/Filter_effects">SVG tutorial: Filter effects</a></li>
-</ul>
+*   {{SVGElement("filter")}}
+*   {{SVGElement("animate")}}
+*   {{SVGElement("animateColor")}}
+*   {{SVGElement("set")}}
+*   {{SVGElement("feBlend")}}
+*   {{SVGElement("feColorMatrix")}}
+*   {{SVGElement("feComponentTransfer")}}
+*   {{SVGElement("feComposite")}}
+*   {{SVGElement("feConvolveMatrix")}}
+*   {{SVGElement("feDiffuseLighting")}}
+*   {{SVGElement("feDisplacementMap")}}
+*   {{SVGElement("feGaussianBlur")}}
+*   {{SVGElement("feImage")}}
+*   {{SVGElement("feMerge")}}
+*   {{SVGElement("feMorphology")}}
+*   {{SVGElement("feOffset")}}
+*   {{SVGElement("feSpecularLighting")}}
+*   {{SVGElement("feTile")}}
+*   {{SVGElement("feTurbulence")}}
+*   [SVG tutorial: Filter effects](/en-US/docs/Web/SVG/Tutorial/Filter_effects)

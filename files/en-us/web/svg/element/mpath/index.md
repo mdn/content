@@ -9,79 +9,74 @@ tags:
   - SVG Animation
 browser-compat: svg.elements.mpath
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>&lt;mpath&gt;</code></strong> sub-element for the {{SVGElement("animateMotion")}} element provides the ability to reference an external {{SVGElement("path")}} element as the definition of a motion path.</p>
+The **`<mpath>`** sub-element for the {{SVGElement("animateMotion")}} element provides the ability to reference an external {{SVGElement("path")}} element as the definition of a motion path.
 
-<h2 id="Usage_context">Usage context</h2>
+## Usage context
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<h3 id="Global_attributes">Global attributes</h3>
+### Global attributes
 
-<ul>
- <li><a href="/en-US/docs/Web/SVG/Attribute#core_attributes">Core attributes</a> »</li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#xlink_attributes">Xlink attributes</a> »</li>
-</ul>
+*   [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes) »
+*   [Xlink attributes](/en-US/docs/Web/SVG/Attribute#xlink_attributes) »
 
-<h3 id="Specific_attributes">Specific attributes</h3>
+### Specific attributes
 
-<ul>
- <li>{{SVGAttr("xlink:href")}}</li>
-</ul>
+*   {{SVGAttr("xlink:href")}}
 
-<h2 id="DOM_Interface">DOM Interface</h2>
+## DOM Interface
 
-<p>This element implements the {{domxref("SVGMPathElement")}} interface.</p>
+This element implements the {{domxref("SVGMPathElement")}} interface.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<pre class="brush: html; highlight[23]">&lt;svg width="100%" height="100%"  viewBox="0 0 500 300"
+```html
+<svg width="100%" height="100%"  viewBox="0 0 500 300"
      xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink" &gt;
+     xmlns:xlink="http://www.w3.org/1999/xlink" >
 
-  &lt;rect x="1" y="1" width="498" height="298"
-        fill="none" stroke="blue" stroke-width="2" /&gt;
+  <rect x="1" y="1" width="498" height="298"
+        fill="none" stroke="blue" stroke-width="2" />
 
-  &lt;!-- Draw the outline of the motion path in blue, along
-          with three small circles at the start, middle and end. --&gt;
-  &lt;path id="path1" d="M100,250 C 100,50 400,50 400,250"
-        fill="none" stroke="blue" stroke-width="7.06"  /&gt;
-  &lt;circle cx="100" cy="250" r="17.64" fill="blue"  /&gt;
-  &lt;circle cx="250" cy="100" r="17.64" fill="blue"  /&gt;
-  &lt;circle cx="400" cy="250" r="17.64" fill="blue"  /&gt;
+  <!-- Draw the outline of the motion path in blue, along
+          with three small circles at the start, middle and end. -->
+  <path id="path1" d="M100,250 C 100,50 400,50 400,250"
+        fill="none" stroke="blue" stroke-width="7.06"  />
+  <circle cx="100" cy="250" r="17.64" fill="blue"  />
+  <circle cx="250" cy="100" r="17.64" fill="blue"  />
+  <circle cx="400" cy="250" r="17.64" fill="blue"  />
 
-  &lt;!-- Here is a triangle which will be moved about the motion path.
+  <!-- Here is a triangle which will be moved about the motion path.
        It is defined with an upright orientation with the base of
-       the triangle centered horizontally just above the origin. --&gt;
-  &lt;path d="M-25,-12.5 L25,-12.5 L 0,-87.5 z"
-        fill="yellow" stroke="red" stroke-width="7.06"  &gt;
-    &lt;!-- Define the motion path animation --&gt;
-    &lt;animateMotion dur="6s" repeatCount="indefinite" rotate="auto" &gt;
-       &lt;mpath xlink:href="#path1"/&gt;
-    &lt;/animateMotion&gt;
-  &lt;/path&gt;
-&lt;/svg&gt;
-</pre>
+       the triangle centered horizontally just above the origin. -->
+  <path d="M-25,-12.5 L25,-12.5 L 0,-87.5 z"
+        fill="yellow" stroke="red" stroke-width="7.06"  >
+    <!-- Define the motion path animation -->
+    <animateMotion dur="6s" repeatCount="indefinite" rotate="auto" >
+       <mpath xlink:href="#path1"/>
+    </animateMotion>
+  </path>
+</svg>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example", 250, 165)}}</p>
+{{EmbedLiveSample("Example", 250, 165)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGElement("animateMotion")}}</li>
-</ul>
+*   {{SVGElement("animateMotion")}}

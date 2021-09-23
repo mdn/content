@@ -7,77 +7,80 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.presentation.kerning
 ---
-<div>{{SVGRef}}{{Deprecated_Header}}</div>
+{{SVGRef}}{{Deprecated_Header}}
 
-<p>The <strong><code>kerning</code></strong> attribute indicates whether the spacing between {{Glossary("glyph", "glyphs")}} should be adjusted based on kerning tables that are included in the relevant font (i.e., enable auto-kerning) or instead disable auto-kerning and set the spacing between them to a specific length (typically, zero).</p>
+The **`kerning`** attribute indicates whether the spacing between {{Glossary("glyph", "glyphs")}} should be adjusted based on kerning tables that are included in the relevant font (i.e., enable auto-kerning) or instead disable auto-kerning and set the spacing between them to a specific length (typically, zero).
 
-<div class="note"><p><strong>Note:</strong> As a presentation attribute <code>kerning</code> can be used as a CSS property. In CSS the property is called {{cssxref("font-kerning")}}, though.</p></div>
+> **Note:** As a presentation attribute `kerning` can be used as a CSS property. In CSS the property is called {{cssxref("font-kerning")}}, though.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("altGlyph")}}</li>
-  <li>{{SVGElement("textPath")}}</li>
-  <li>{{SVGElement("text")}}</li>
-  <li>{{SVGElement("tref")}}</li>
-  <li>{{SVGElement("tspan")}}</li>
-</ul>
+*   {{SVGElement("altGlyph")}}
+*   {{SVGElement("textPath")}}
+*   {{SVGElement("text")}}
+*   {{SVGElement("tref")}}
+*   {{SVGElement("tspan")}}
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html, body, svg {
+```css hidden
+html, body, svg {
   height: 100%;
   font: 36px Verdana, Helvetica, Arial, sans-serif;
-}</pre>
+}
+```
 
-<pre class="brush: html; highlight[3,8]">&lt;svg viewBox="0 0 150 125" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;text x="10" y="30" kerning="auto"&gt;auto&lt;/text&gt;
-  &lt;text x="10" y="70" kerning="0"&gt;number&lt;/text&gt;
-  &lt;text x="10" y="110" kerning="20px"&gt;length&lt;/text&gt;
-&lt;/svg&gt;</pre>
+```html
+<svg viewBox="0 0 150 125" xmlns="http://www.w3.org/2000/svg">
+  <text x="10" y="30" kerning="auto">auto</text>
+  <text x="10" y="70" kerning="0">number</text>
+  <text x="10" y="110" kerning="20px">length</text>
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", "200", "200")}}</p>
+{{EmbedLiveSample("Example", "200", "200")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code>auto</code> | <code><a href="/en-US/docs/Web/SVG/Content_type#Length">&lt;length&gt;</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>auto</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <code>auto</code> |
+        <code
+          ><a href="/en-US/docs/Web/SVG/Content_type#Length"
+            >&#x3C;length></a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>auto</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>This value indicates that the spacing between {{Glossary("glyph", "glyphs")}} is adjusted based on kerning tables that are included in the font that will be used.</dd>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>
- <p>If a length is provided, then auto-kerning is disabled. Instead, inter-character spacing is set to the given length.</p>
+*   `auto`
+    *   : This value indicates that the spacing between {{Glossary("glyph", "glyphs")}} is adjusted based on kerning tables that are included in the font that will be used.
+*   `<length>`
+    *   : If a length is provided, then auto-kerning is disabled. Instead, inter-character spacing is set to the given length.
 
- <p>If a length is provided without a unit identifier (e.g., an unqualified number such as 128), the length is processed as a width value in the current user coordinate system. If a unit identifier (e.g., <code>0.25em</code> or <code>1%</code>) is provided, then the length is converted into a corresponding value in the current user coordinate system.</p>
+        If a length is provided without a unit identifier (e.g., an unqualified number such as 128), the length is processed as a width value in the current user coordinate system. If a unit identifier (e.g., `0.25em` or `1%`) is provided, then the length is converted into a corresponding value in the current user coordinate system.
 
- <p>The most common scenario, other than <code>auto</code>, is to set <code>kerning</code> to a value of <code>0</code> so that auto-kerning is disabled.</p>
+        The most common scenario, other than `auto`, is to set `kerning` to a value of `0` so that auto-kerning is disabled.
 
- <p>The given length is added to the inter-character spacing value specified by the {{SVGAttr("letter-spacing")}} attribute.</p>
- </dd>
-</dl>
+        The given length is added to the inter-character spacing value specified by the {{SVGAttr("letter-spacing")}} attribute.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("font-kerning", "CSS font-kerning")}}</li>
-</ul>
+*   {{cssxref("font-kerning", "CSS font-kerning")}}

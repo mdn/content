@@ -10,44 +10,40 @@ tags:
   - SVG Text Content
 browser-compat: svg.elements.altGlyphItem
 ---
-<div>{{SVGRef}}{{deprecated_header}}</div>
+{{SVGRef}}{{deprecated_header}}
 
-<p>The <strong><code>&lt;altGlyphItem&gt;</code></strong> element provides a set of candidates for glyph substitution by the {{ SVGElement("altGlyph") }} element.</p>
+The **`<altGlyphItem>`** element provides a set of candidates for glyph substitution by the {{ SVGElement("altGlyph") }} element.
 
-<h2 id="Usage_context">Usage context</h2>
+## Usage context
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<h3 id="Global_attributes">Global attributes</h3>
+### Global attributes
 
-<ul>
- <li><a href="/en-US/docs/Web/SVG/Attribute#core">Core attributes</a></li>
-</ul>
+*   [Core attributes](/en-US/docs/Web/SVG/Attribute#core)
 
-<h3 id="Specific_attributes">Specific attributes</h3>
+### Specific attributes
 
-<p><em>None</em></p>
+*None*
 
-<h2 id="DOM_Interface">DOM Interface</h2>
+## DOM Interface
 
-<p>This element implements the {{domxref("SVGAltGlyphItemElement")}} interface.</p>
+This element implements the {{domxref("SVGAltGlyphItemElement")}} interface.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGElement("glyph")}}</li>
- <li>{{SVGElement("glyphRef")}}</li>
- <li>{{SVGElement("altGlyphDef")}}</li>
-</ul>
+*   {{SVGElement("glyph")}}
+*   {{SVGElement("glyphRef")}}
+*   {{SVGElement("altGlyphDef")}}

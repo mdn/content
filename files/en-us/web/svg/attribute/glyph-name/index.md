@@ -7,63 +7,61 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.glyph.glyph-name
 ---
-<div>{{SVGRef}}{{Deprecated_Header}}</div>
+{{SVGRef}}{{Deprecated_Header}}
 
-<p>The <strong><code>glyph-name</code></strong> attribute specifies the name of a {{Glossary("glyph")}}.</p>
+The **`glyph-name`** attribute specifies the name of a {{Glossary("glyph")}}.
 
-<p>It is recommended that glyph names be unique within a font. The glyph names can be used in situations where {{Glossary("Unicode")}} character numbers do not provide sufficient information to access the correct glyph, such as when there are multiple glyphs per Unicode character.</p>
+It is recommended that glyph names be unique within a font. The glyph names can be used in situations where {{Glossary("Unicode")}} character numbers do not provide sufficient information to access the correct glyph, such as when there are multiple glyphs per Unicode character.
 
-<p>The glyph names can be referenced in {{Glossary("kerning")}} definitions created by {{SVGElement("hkern")}} and {{SVGElement("vkern")}} elements.</p>
+The glyph names can be referenced in {{Glossary("kerning")}} definitions created by {{SVGElement("hkern")}} and {{SVGElement("vkern")}} elements.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("glyph")}}</li>
-</ul>
+*   {{SVGElement("glyph")}}
 
-<h2 id="Context_notes">Context notes</h2>
+## Context notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code>&lt;name&gt;#</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>None</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>No</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td><code>&#x3C;name>#</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>None</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>No</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt><code>&lt;name&gt;#</code></dt>
- <dd>This value specifies a comma-separated list of names for the glyph.</dd>
-</dl>
+*   `<name>#`
+    *   : This value specifies a comma-separated list of names for the glyph.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG1.1", "fonts.html#GlyphElementGlyphNameAttribute", "glyph-name")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "fonts.html#GlyphElementGlyphNameAttribute", "glyph-name")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -6,110 +6,113 @@ tags:
   - SVG
   - SVG:Tutorial
 ---
-<div>{{PreviousNext("Web/SVG/Tutorial/Texts", "Web/SVG/Tutorial/Clipping_and_masking")}}</div>
+{{PreviousNext("Web/SVG/Tutorial/Texts", "Web/SVG/Tutorial/Clipping_and_masking")}}
 
-<p>Now we're ready to start distorting our beautiful images. But first, let's formally introduce the {{SVGElement("g")}} element. With this helper, you can assign properties to a complete set of elements. Actually, that's its only purpose.</p>
+Now we're ready to start distorting our beautiful images. But first, let's formally introduce the {{SVGElement("g")}} element. With this helper, you can assign properties to a complete set of elements. Actually, that's its only purpose.
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: html">&lt;svg width="30" height="10"&gt;
-    &lt;g fill="red"&gt;
-        &lt;rect x="0" y="0" width="10" height="10" /&gt;
-        &lt;rect x="20" y="0" width="10" height="10" /&gt;
-    &lt;/g&gt;
-&lt;/svg&gt;
-</pre>
-</div>
+```html
+<svg width="30" height="10">
+    <g fill="red">
+        <rect x="0" y="0" width="10" height="10" />
+        <rect x="20" y="0" width="10" height="10" />
+    </g>
+</svg>
+```
 
-<p>{{ EmbedLiveSample('Example', '30', '10', '', 'Web/SVG/Tutorial/Basic_Transformations') }}</p>
+{{ EmbedLiveSample('Example', '30', '10', '', 'Web/SVG/Tutorial/Basic_Transformations') }}
 
-<p>All following transformations are summed up in an element's <code>transform</code> attribute. Transformations can be chained by concatenating them, separated by whitespace.</p>
+All following transformations are summed up in an element's `transform` attribute. Transformations can be chained by concatenating them, separated by whitespace.
 
-<h2 id="Translation">Translation</h2>
+## Translation
 
-<p>It may be necessary to move an element around, even though you can position it with the according attributes. For this purpose, the <code>translate()</code> transformation stands ready.</p>
+It may be necessary to move an element around, even though you can position it with the according attributes. For this purpose, the `translate()` transformation stands ready.
 
-<pre class="brush: html">&lt;svg width="40" height="50" style="background-color:#bff;"&gt;
-    &lt;rect x="0" y="0" width="10" height="10" transform="translate(30,40)" /&gt;
-&lt;/svg&gt;
-</pre>
+```html
+<svg width="40" height="50" style="background-color:#bff;">
+    <rect x="0" y="0" width="10" height="10" transform="translate(30,40)" />
+</svg>
+```
 
-<p>The example will render a rectangle, translated to the point (30,40) instead of (0,0).</p>
+The example will render a rectangle, translated to the point (30,40) instead of (0,0).
 
-<p>{{ EmbedLiveSample('Translation', '40', '50', '', 'Web/SVG/Tutorial/Basic_Transformations') }}</p>
+{{ EmbedLiveSample('Translation', '40', '50', '', 'Web/SVG/Tutorial/Basic_Transformations') }}
 
-<p>If the second value is not given, it is assumed to be <var>0</var>.</p>
+If the second value is not given, it is assumed to be *0*.
 
-<h2 id="Rotation">Rotation</h2>
+## Rotation
 
-<p>Rotating an element is quite a common task. Use the <code>rotate()</code> transformation for this:</p>
+Rotating an element is quite a common task. Use the `rotate()` transformation for this:
 
-<pre class="brush: html">&lt;svg width="31" height="31"&gt;
-    &lt;rect x="12" y="-10" width="20" height="20" transform="rotate(45)" /&gt;
-&lt;/svg&gt;
-</pre>
+```html
+<svg width="31" height="31">
+    <rect x="12" y="-10" width="20" height="20" transform="rotate(45)" />
+</svg>
+```
 
-<p>This example shows a square that is rotated by 45 degrees. The value for <code>rotate()</code> is given in degrees.</p>
+This example shows a square that is rotated by 45 degrees. The value for `rotate()` is given in degrees.
 
-<p>{{ EmbedLiveSample('Rotation', '31', '31', '', 'Web/SVG/Tutorial/Basic_Transformations') }}</p>
+{{ EmbedLiveSample('Rotation', '31', '31', '', 'Web/SVG/Tutorial/Basic_Transformations') }}
 
+## Multiple transformations
 
-<h2 id="Multiple_transformations">Multiple transformations</h2>
+Transformations can be concatenated easily just by separating them with spaces. For example, `translate()` and `rotate()` are common used transformations.
 
-<p>Transformations can be concatenated easily just by separating them with spaces. For example, <code>translate()</code> and <code>rotate()</code> are common used transformations.</p>
+```html
+<svg width="40" height="50" style="background-color:#bff;">
+    <rect x="0" y="0" width="10" height="10" transform="translate(30,40) rotate(45)" />
+</svg>
+```
 
-<pre class="brush: html">&lt;svg width="40" height="50" style="background-color:#bff;"&gt;
-    &lt;rect x="0" y="0" width="10" height="10" transform="translate(30,40) rotate(45)" /&gt;
-&lt;/svg&gt;
-</pre>
+This example shows again the small square shown above that this time is also rotated by 45 degrees.
 
-<p>This example shows again the small square shown above that this time is also rotated by 45 degrees.</p>
+## Skewing
 
+To make a rhombus out of our rectangle, the `skewX()` and `skewY()` transformations are available. Each one takes an angle that determines how far the element will be skewed.
 
-<h2 id="Skewing">Skewing</h2>
+## Scaling
 
-<p>To make a rhombus out of our rectangle, the <code>skewX()</code> and <code>skewY()</code> transformations are available. Each one takes an angle that determines how far the element will be skewed.</p>
+`scale()` changes the size of an element. It takes two numbers, the first being the *x* scale factor and the second being the *y* scale factor. The factors are taken as the ratio of the transformed dimension to the original. For example, *0.5 shrinks by 50%. If the second number is omitted, it is assumed to be equal to the first.*
 
-<h2 id="Scaling">Scaling</h2>
+## Complex transformations with `matrix()`
 
-<p><code>scale()</code> changes the size of an element. It takes two numbers, the first being the <em>x</em> scale factor and the second being the <em>y</em> scale factor. The factors are taken as the ratio of the transformed dimension to the original. For example, <var>0.5 shrinks by 50%. If the second number is omitted, it is assumed to be equal to the first.</var></p>
+All the above transformations can be expressed by a 2x3 transformation matrix. To combine several transformations, one can set the resulting matrix directly with the `matrix(a, b, c, d, e, f)` transformation which maps coordinates from a previous coordinate system into a new coordinate system by
 
-<h2 id="Complex_transformations_with_matrix()">Complex transformations with <code>matrix()</code></h2>
+<math display="block"><semantics><mrow><mo>{</mo><mtable rowspacing="0.5ex"><mtr><mtd><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>newCoordSys</mi></mrow></mstyle></msub><mo>=</mo><mi>a</mi><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub><mo>+</mo><mi>c</mi><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub><mo>+</mo><mi>e</mi></mtd></mtr><mtr><mtd><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>newCoordSys</mi></mrow></mstyle></msub><mo>=</mo><mi>b</mi><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub><mo>+</mo><mi>d</mi><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub><mo>+</mo><mi>f</mi></mtd></mtr></mtable></mrow><annotation encoding="TeX">\left\{ \begin{matrix} x_{\mathrm{prevCoordSys}} = a x_{\mathrm{newCoordSys}} + c y_{\mathrm{newCoordSys}} + e \\ y_{\mathrm{prevCoordSys}} = b x_{\mathrm{newCoordSys}} + d y_{\mathrm{newCoordSys}} + f \end{matrix} \right.</annotation></semantics></math>
 
-<p>All the above transformations can be expressed by a 2x3 transformation matrix. To combine several transformations, one can set the resulting matrix directly with the <code>matrix(a, b, c, d, e, f)</code> transformation which maps coordinates from a previous coordinate system into a new coordinate system by</p>
+See a [concrete example on the SVG transform documentation](/en-US/docs/Web/SVG/Attribute/transform#general_transformation). Detailed information about this property can be found in the [SVG Recommendation](https://www.w3.org/TR/SVG/coords.html#TransformMatrixDefined).
 
-<p><math display="block"><semantics><mrow><mo>{</mo><mtable rowspacing="0.5ex"><mtr><mtd><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>newCoordSys</mi></mrow></mstyle></msub><mo>=</mo><mi>a</mi><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub><mo>+</mo><mi>c</mi><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub><mo>+</mo><mi>e</mi></mtd></mtr><mtr><mtd><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>newCoordSys</mi></mrow></mstyle></msub><mo>=</mo><mi>b</mi><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub><mo>+</mo><mi>d</mi><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>prevCoordSys</mi></mrow></mstyle></msub><mo>+</mo><mi>f</mi></mtd></mtr></mtable></mrow><annotation encoding="TeX">\left\{ \begin{matrix} x_{\mathrm{prevCoordSys}} = a x_{\mathrm{newCoordSys}} + c y_{\mathrm{newCoordSys}} + e \\ y_{\mathrm{prevCoordSys}} = b x_{\mathrm{newCoordSys}} + d y_{\mathrm{newCoordSys}} + f \end{matrix} \right. </annotation></semantics></math></p>
+## Effects on Coordinate Systems
 
-<p>See a <a href="/en-US/docs/Web/SVG/Attribute/transform#general_transformation">concrete example on the SVG transform documentation</a>. Detailed information about this property can be found in the <a href="https://www.w3.org/TR/SVG/coords.html#TransformMatrixDefined">SVG Recommendation</a>.</p>
+When using transformations you establish a new coordinate system inside the element the transformations apply to. That means, the units you specify for the element and its children might not follow the 1:1 pixel mapping, but are also distorted, skewed, translated and scaled according to the transformation.
 
-<h2 id="Effects_on_Coordinate_Systems">Effects on Coordinate Systems</h2>
+```html
+<svg width="100" height="100">
+    <g transform="scale(2)">
+        <rect width="50" height="50" />
+    </g>
+</svg>
+```
 
-<p>When using transformations you establish a new coordinate system inside the element the transformations apply to. That means, the units you specify for the element and its children might not follow the 1:1 pixel mapping, but are also distorted, skewed, translated and scaled according to the transformation.</p>
+The resulting rectangular in the above example will be 100x100px. The more intriguing effects arise, when you rely on attributes like `userSpaceOnUse` and the such.
 
-<pre class="brush: html">&lt;svg width="100" height="100"&gt;
-    &lt;g transform="scale(2)"&gt;
-        &lt;rect width="50" height="50" /&gt;
-    &lt;/g&gt;
-&lt;/svg&gt;
-</pre>
+{{ EmbedLiveSample('Effects_on_Coordinate_Systems', '100', '100', '', 'Web/SVG/Tutorial/Basic_Transformations') }}
 
-<p>The resulting rectangular in the above example will be 100x100px. The more intriguing effects arise, when you rely on attributes like <code>userSpaceOnUse</code> and the such.</p>
+## Embedding SVG in SVG
 
-<p>{{ EmbedLiveSample('Effects_on_Coordinate_Systems', '100', '100', '', 'Web/SVG/Tutorial/Basic_Transformations') }}</p>
+In contrast to HTML, SVG allows you to embed other `svg` elements seamlessly. This way you can also create new coordinate systems by utilizing the `viewBox`, `width` and `height` of the inner `svg` element.
 
-<h2 id="Embedding_SVG_in_SVG">Embedding SVG in SVG</h2>
+```html
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100" height="100">
+  <svg width="100" height="100" viewBox="0 0 50 50">
+    <rect width="50" height="50" />
+  </svg>
+</svg>
+```
 
-<p>In contrast to HTML, SVG allows you to embed other <code>svg</code> elements seamlessly. This way you can also create new coordinate systems by utilizing the <code>viewBox</code>, <code>width</code> and <code>height</code> of the inner <code>svg</code> element.</p>
+The example above has basically the same effect as the one above, namely that the rect will be twice as large as specified.
 
-<pre class="brush: html">&lt;svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100" height="100"&gt;
-  &lt;svg width="100" height="100" viewBox="0 0 50 50"&gt;
-    &lt;rect width="50" height="50" /&gt;
-  &lt;/svg&gt;
-&lt;/svg&gt;
-</pre>
+{{ EmbedLiveSample('Embedding_SVG_in_SVG', '100', '100', '', 'Web/SVG/Tutorial/Basic_Transformations') }}
 
-<p>The example above has basically the same effect as the one above, namely that the rect will be twice as large as specified.</p>
-
-<p>{{ EmbedLiveSample('Embedding_SVG_in_SVG', '100', '100', '', 'Web/SVG/Tutorial/Basic_Transformations') }}</p>
-
-<div>{{PreviousNext("Web/SVG/Tutorial/Texts", "Web/SVG/Tutorial/Clipping_and_masking")}}</div>
+{{PreviousNext("Web/SVG/Tutorial/Texts", "Web/SVG/Tutorial/Clipping_and_masking")}}

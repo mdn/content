@@ -7,86 +7,86 @@ tags:
   - SVG
 browser-compat: svg.elements.clipPath
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>&lt;clipPath&gt;</code></strong> <a href="/en-US/docs/Web/SVG">SVG</a> element defines a clipping path, to be used by the {{SVGAttr("clip-path")}} property.</p>
+The **`<clipPath>`** [SVG](/en-US/docs/Web/SVG) element defines a clipping path, to be used by the {{SVGAttr("clip-path")}} property.
 
-<p>A clipping path restricts the region to which paint can be applied. Conceptually, parts of the drawing that lie outside of the region bounded by the clipping path are not drawn.</p>
+A clipping path restricts the region to which paint can be applied. Conceptually, parts of the drawing that lie outside of the region bounded by the clipping path are not drawn.
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 100 100"&gt;
-  &lt;clipPath id="myClip"&gt;
-    &lt;!--
+```html
+<svg viewBox="0 0 100 100">
+  <clipPath id="myClip">
+    <!--
       Everything outside the circle will be
       clipped and therefore invisible.
-    --&gt;
-    &lt;circle cx="40" cy="35" r="35" /&gt;
-  &lt;/clipPath&gt;
+    -->
+    <circle cx="40" cy="35" r="35" />
+  </clipPath>
 
-  &lt;!-- The original black heart, for reference --&gt;
-  &lt;path id="heart" d="M10,30 A20,20,0,0,1,50,30 A20,20,0,0,1,90,30 Q90,60,50,90 Q10,60,10,30 Z" /&gt;
+  <!-- The original black heart, for reference -->
+  <path id="heart" d="M10,30 A20,20,0,0,1,50,30 A20,20,0,0,1,90,30 Q90,60,50,90 Q10,60,10,30 Z" />
 
-  &lt;!--
+  <!--
     Only the portion of the red heart
     inside the clip circle is visible.
-  --&gt;
-  &lt;use clip-path="url(#myClip)" xlink:href="#heart" fill="red" /&gt;
-&lt;/svg&gt;</pre>
+  -->
+  <use clip-path="url(#myClip)" xlink:href="#heart" fill="red" />
+</svg>
+```
 
-<pre class="brush: css">/* With a touch of CSS for browsers who *
+```css
+/* With a touch of CSS for browsers who *
  * implemented the r Geometry Property. */
 
 @keyframes openYourHeart {from {r: 0} to {r: 60px}}
 
 #myClip circle {
   animation: openYourHeart 15s infinite;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample('Example', 100, 100)}}</p>
+{{EmbedLiveSample('Example', 100, 100)}}
 
-<p>A clipping path is conceptually equivalent to a custom viewport for the referencing element. Thus, it affects the <em>rendering</em> of an element, but not the element's <em>inherent geometry</em>. The bounding box of a clipped element (meaning, an element which references a <code>&lt;clipPath&gt;</code> element via a {{SVGAttr("clip-path")}} property, or a child of the referencing element) must remain the same as if it were not clipped.</p>
+A clipping path is conceptually equivalent to a custom viewport for the referencing element. Thus, it affects the *rendering* of an element, but not the element's *inherent geometry*. The bounding box of a clipped element (meaning, an element which references a `<clipPath>` element via a {{SVGAttr("clip-path")}} property, or a child of the referencing element) must remain the same as if it were not clipped.
 
-<p>By default, {{cssxref("pointer-events")}} are not dispatched on clipped regions. For example, a circle with a radius of <code>10</code> which is clipped to a circle with a radius of <code>5</code> will not receive "click" events outside the smaller radius.</p>
+By default, {{cssxref("pointer-events")}} are not dispatched on clipped regions. For example, a circle with a radius of `10` which is clipped to a circle with a radius of `5` will not receive "click" events outside the smaller radius.
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<dl>
- <dt>{{SVGAttr("clipPathUnits")}}</dt>
- <dd>Defines the coordinate system for the contents of the <code>&lt;clipPath&gt;</code> element.<br>
- <small><em>Value type</em>: <code>userSpaceOnUse</code>|<code>objectBoundingBox</code> ; <em>Default value</em>: <code>userSpaceOnUse</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
-</dl>
+*   {{SVGAttr("clipPathUnits")}}
+    *   : Defines the coordinate system for the contents of the `<clipPath>` element.
+        *Value type*: `userSpaceOnUse`|`objectBoundingBox` ; *Default value*: `userSpaceOnUse`; *Animatable*: **yes**
 
-<h3 id="Global_attributes">Global attributes</h3>
+### Global attributes
 
-<dl>
- <dt><a href="/en-US/docs/Web/SVG/Attribute/Core">Core Attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr('id')}}</small></dd>
- <dt><a href="/en-US/docs/Web/SVG/Attribute/Styling">Styling Attributes</a></dt>
- <dd><small>{{SVGAttr('class')}}, {{SVGAttr('style')}}</small></dd>
- <dt><a href="/en-US/docs/Web/SVG/Attribute/Conditional_Processing">Conditional Processing Attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}</small></dd>
- <dt><a href="/en-US/docs/Web/SVG/Attribute/Presentation">Presentation Attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}</small></dd>
-</dl>
+*   [Core Attributes](/en-US/docs/Web/SVG/Attribute/Core)
+    *   : Most notably: {{SVGAttr('id')}}
+*   [Styling Attributes](/en-US/docs/Web/SVG/Attribute/Styling)
+    *   : {{SVGAttr('class')}}, {{SVGAttr('style')}}
+*   [Conditional Processing Attributes](/en-US/docs/Web/SVG/Attribute/Conditional_Processing)
+    *   : Most notably: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
+*   [Presentation Attributes](/en-US/docs/Web/SVG/Attribute/Presentation)
+    *   : Most notably: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Related">Related</h2>
+## Related
 
-<ul>
- <li>Other clipping and masking SVG elements: {{SVGElement("mask")}}</li>
- <li>Some CSS properties: {{cssxref("clip-path")}}, {{cssxref("pointer-events")}}</li>
-</ul>
+*   Other clipping and masking SVG elements: {{SVGElement("mask")}}
+*   Some CSS properties: {{cssxref("clip-path")}}, {{cssxref("pointer-events")}}

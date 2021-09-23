@@ -9,62 +9,58 @@ tags:
   - SVG
 browser-compat: svg.elements.hatchpath
 ---
-<div>{{SVGRef}}{{SeeCompatTable}}</div>
+{{SVGRef}}{{SeeCompatTable}}
 
-<p>The <strong><code>&lt;hatchpath&gt;</code></strong> <a href="/en-US/docs/Web/SVG">SVG</a> element defines a hatch path used by the {{SVGElement("hatch")}} element.</p>
+The **`<hatchpath>`** [SVG](/en-US/docs/Web/SVG) element defines a hatch path used by the {{SVGElement("hatch")}} element.
 
-<h2 id="Usage_context">Usage context</h2>
+## Usage context
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<h3 id="Global_attributes">Global attributes</h3>
+### Global attributes
 
-<ul>
- <li><a href="/en-US/docs/Web/SVG/Attribute#core_attributes">Core attributes</a></li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#global_event_attributes">Global event attributes</a></li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#presentation_attributes">Presentation attributes</a></li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#style_attributes">Style attributes</a></li>
-</ul>
+*   [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
+*   [Global event attributes](/en-US/docs/Web/SVG/Attribute#global_event_attributes)
+*   [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
+*   [Style attributes](/en-US/docs/Web/SVG/Attribute#style_attributes)
 
-<h3 id="Specific_attributes">Specific attributes</h3>
+### Specific attributes
 
-<ul>
- <li>{{SVGAttr("d")}}</li>
- <li>{{SVGAttr("offset")}}</li>
-</ul>
+*   {{SVGAttr("d")}}
+*   {{SVGAttr("offset")}}
 
-<h2 id="DOM_Interface">DOM Interface</h2>
+## DOM Interface
 
-<p>This element implements the {{domxref("SVGHatchpathElement")}} interface.</p>
+This element implements the {{domxref("SVGHatchpathElement")}} interface.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<pre class="brush: html; highlight[5]">&lt;svg width="200" height="200" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;defs&gt;
-    &lt;hatch id="hatch" hatchUnits="userSpaceOnUse" pitch="5"
-        rotate="135"&gt;
-      &lt;hatchpath stroke="#a080ff" stroke-width="2"/&gt;
-    &lt;/hatch&gt;
-  &lt;/defs&gt;
+```html
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <hatch id="hatch" hatchUnits="userSpaceOnUse" pitch="5"
+        rotate="135">
+      <hatchpath stroke="#a080ff" stroke-width="2"/>
+    </hatch>
+  </defs>
 
-  &lt;rect fill="url(#hatch)" stroke="black" stroke-width="2"
-     x="10%" y="10%" width="80%" height="80%" /&gt;
-&lt;/svg&gt;</pre>
+  <rect fill="url(#hatch)" stroke="black" stroke-width="2"
+     x="10%" y="10%" width="80%" height="80%" />
+</svg>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example", 200, 200)}}</p>
+{{EmbedLiveSample("Example", 200, 200)}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGElement("hatch")}}</li>
-</ul>
+*   {{SVGElement("hatch")}}

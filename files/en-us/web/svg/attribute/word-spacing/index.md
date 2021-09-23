@@ -6,90 +6,94 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.presentation.word-spacing
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>word-spacing</code></strong> attribute specifies spacing behavior between words.</p>
+The **`word-spacing`** attribute specifies spacing behavior between words.
 
-<p>If a {{cssxref("length")}} is provided without a unit identifier (e.g. an unqualified number such as 128), the browser processes the &lt;length&gt; as a width value in the current user coordinate system.</p>
+If a {{cssxref("length")}} is provided without a unit identifier (e.g. an unqualified number such as 128), the browser processes the \<length> as a width value in the current user coordinate system.
 
-<p>If a &lt;length&gt; is provided with one of the unit identifiers (e.g. .25em or 1%), then the browser converts the &lt;length&gt; into a corresponding value in the current user coordinate system.</p>
+If a \<length> is provided with one of the unit identifiers (e.g. .25em or 1%), then the browser converts the \<length> into a corresponding value in the current user coordinate system.
 
-<div class="note"><p><strong>Note:</strong> As a presentation attribute, <code>word-spacing</code> can be used as a CSS property. See the {{cssxref("word-spacing", "CSS word-spacing")}} property for more information.</p></div>
+> **Note:** As a presentation attribute, `word-spacing` can be used as a CSS property. See the {{cssxref("word-spacing", "CSS word-spacing")}} property for more information.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("altGlyph")}}</li>
-  <li>{{SVGElement("text")}}</li>
-  <li>{{SVGElement("textPath")}}</li>
-  <li>{{SVGElement("tref")}}</li>
-  <li>{{SVGElement("tspan")}}</li>
-</ul>
+*   {{SVGElement("altGlyph")}}
+*   {{SVGElement("text")}}
+*   {{SVGElement("textPath")}}
+*   {{SVGElement("tref")}}
+*   {{SVGElement("tspan")}}
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html, body, svg {
+```css hidden
+html, body, svg {
   height: 100%;
-}</pre>
+}
+```
 
-<pre class="brush: html; highlight[2,3]">&lt;svg viewBox="0 0 250 50" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;text y="20" word-spacing="2"&gt;Bigger spacing between words&lt;/text&gt;
-  &lt;text x="0" y="40" word-spacing="-0.5"&gt;Smaller spacing between words&lt;/text&gt;
-&lt;/svg&gt;</pre>
+```html
+<svg viewBox="0 0 250 50" xmlns="http://www.w3.org/2000/svg">
+  <text y="20" word-spacing="2">Bigger spacing between words</text>
+  <text x="0" y="40" word-spacing="-0.5">Smaller spacing between words</text>
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", "250", "100")}}</p>
+{{EmbedLiveSample("Example", "250", "100")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code>normal</code> | {{cssxref("length")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Default values</th>
-   <td><code>normal</code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td><code>normal</code> | {{cssxref("length")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Default values</th>
+      <td><code>normal</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<p>For a description of the values, please refer to the <a href="/en-US/docs/Web/CSS/letter-spacing#values">CSS <code>letter-spacing</code></a> property.</p>
+For a description of the values, please refer to the [CSS `letter-spacing`](/en-US/docs/Web/CSS/letter-spacing#values) property.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Text", "#word-spacing-property", "word-spacing")}}</td>
-   <td>{{Spec2("CSS3 Text")}}</td>
-   <td>SVG 2 just refers to the definition in CSS Text 3.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "text.html#WordSpacingProperty", "word-spacing")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("CSS3 Text", "#word-spacing-property", "word-spacing")}}
+      </td>
+      <td>{{Spec2("CSS3 Text")}}</td>
+      <td>SVG 2 just refers to the definition in CSS Text 3.</td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "text.html#WordSpacingProperty", "word-spacing")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("word-spacing", "CSS word-spacing")}}</li>
-</ul>
+*   {{cssxref("word-spacing", "CSS word-spacing")}}

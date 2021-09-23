@@ -6,49 +6,45 @@ tags:
   - SVG
 browser-compat: svg.attributes.data
 ---
-<p>{{APIRef("SVG")}}</p>
+{{APIRef("SVG")}}
 
-<p>The <code><strong>data-*</strong></code> SVG attributes are called custom data attributes. They let SVG markup and its resulting DOM share information that standard attributes can't, usually for scripting purposes. Their custom data are available via the {{domxref("SVGElement")}} interface of the element the attributes belong to, with the {{domxref("SVGElement.dataset")}} property.</p>
+The **`data-*`** SVG attributes are called custom data attributes. They let SVG markup and its resulting DOM share information that standard attributes can't, usually for scripting purposes. Their custom data are available via the {{domxref("SVGElement")}} interface of the element the attributes belong to, with the {{domxref("SVGElement.dataset")}} property.
 
-<p>The <code>*</code> can be replaced by any characters allowed in <a href="https://www.w3.org/TR/REC-xml/#NT-Name">XML's rules for names</a>, with the following restrictions:</p>
+The `*` can be replaced by any characters allowed in [XML's rules for names](https://www.w3.org/TR/REC-xml/#NT-Name), with the following restrictions:
 
-<ul>
- <li>Can't start with <code>xml</code>.</li>
- <li>No semicolons (<code>;</code>, <code>U+003A</code>).</li>
- <li>No capital <code>A</code> to <code>Z</code> letters.</li>
-</ul>
+*   Can't start with `xml`.
+*   No semicolons (`;`, `U+003A`).
+*   No capital `A` to `Z` letters.
 
-<div class="note">
-<p><strong>Note:</strong> The {{domxref("SVGElement.dataset")}} property is a {{domxref("DOMStringMap")}} that provides the attribute <code>data-test-value</code> via <code>SVGElement.dataset.testValue</code>. Hyphen characters (<code>-</code>, <code>U+002D</code>) are removed and the next letter is capitalized, resulting in the {{Glossary("camelCase")}} format.</p>
-</div>
+> **Note:** The {{domxref("SVGElement.dataset")}} property is a {{domxref("DOMStringMap")}} that provides the attribute `data-test-value` via `SVGElement.dataset.testValue`. Hyphen characters (`-`, `U+002D`) are removed and the next letter is capitalized, resulting in the {{Glossary("camelCase")}} format.
 
-<p>You can use this attribute with any SVG element.</p>
+You can use this attribute with any SVG element.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('SVG2', "struct.html#DataAttributes", "data-*")}}</td>
-   <td>{{Spec2('SVG2')}}</td>
-   <td>Custom data attributes are new in SVG 2.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName('SVG2', "struct.html#DataAttributes", "data-*")}}
+      </td>
+      <td>{{Spec2('SVG2')}}</td>
+      <td>Custom data attributes are new in SVG 2.</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("SVGElement")}}</li>
- <li>The {{domxref("SVGElement.dataset")}} property used to access these attributes from scripts.</li>
- <li><a href="/en-US/docs/Web/Guide/HTML/Using_data_attributes">Using data attributes</a></li>
-</ul>
+*   {{domxref("SVGElement")}}
+*   The {{domxref("SVGElement.dataset")}} property used to access these attributes from scripts.
+*   [Using data attributes](/en-US/docs/Web/Guide/HTML/Using_data_attributes)

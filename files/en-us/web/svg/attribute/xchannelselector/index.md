@@ -8,98 +8,102 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.feDisplacementMap.xChannelSelector
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>xChannelSelector</code></strong> attribute indicates which color channel from {{SVGAttr("in2")}} to use to displace the pixels in {{SVGAttr("in")}} along the x-axis.</p>
+The **`xChannelSelector`** attribute indicates which color channel from {{SVGAttr("in2")}} to use to displace the pixels in {{SVGAttr("in")}} along the x-axis.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("feDisplacementMap")}}</li>
-</ul>
+*   {{SVGElement("feDisplacementMap")}}
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html, body, svg {
+```css hidden
+html, body, svg {
   height: 100%;
-}</pre>
+}
+```
 
-<pre class="brush: html; highlight[6,12]">&lt;svg viewBox="0 0 440 160" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;filter id="displacementFilter"&gt;
-    &lt;feImage xlink:href="mdn.svg"
-        x="0" y="0" width="100%" height="100%" result="abc"/&gt;
-    &lt;feDisplacementMap in2="abc" in="SourceGraphic"
-        scale="30" xChannelSelector="R"/&gt;
-  &lt;/filter&gt;
-  &lt;filter id="displacementFilter2"&gt;
-    &lt;feImage xlink:href="mdn.svg"
-        x="0" y="0" width="100%" height="100%" result="abc"/&gt;
-    &lt;feDisplacementMap in2="abc" in="SourceGraphic"
-        scale="30" xChannelSelector="B"/&gt;
-  &lt;/filter&gt;
+```html
+<svg viewBox="0 0 440 160" xmlns="http://www.w3.org/2000/svg">
+  <filter id="displacementFilter">
+    <feImage xlink:href="mdn.svg"
+        x="0" y="0" width="100%" height="100%" result="abc"/>
+    <feDisplacementMap in2="abc" in="SourceGraphic"
+        scale="30" xChannelSelector="R"/>
+  </filter>
+  <filter id="displacementFilter2">
+    <feImage xlink:href="mdn.svg"
+        x="0" y="0" width="100%" height="100%" result="abc"/>
+    <feDisplacementMap in2="abc" in="SourceGraphic"
+        scale="30" xChannelSelector="B"/>
+  </filter>
 
-  &lt;text x="10" y="60" font-size="50"
-      filter="url(#displacementFilter)"&gt;Some displaced text&lt;/text&gt;
-  &lt;text x="10" y="120" font-size="50"
-      filter="url(#displacementFilter2)"&gt;Some displaced text&lt;/text&gt;
-&lt;/svg&gt;</pre>
+  <text x="10" y="60" font-size="50"
+      filter="url(#displacementFilter)">Some displaced text</text>
+  <text x="10" y="120" font-size="50"
+      filter="url(#displacementFilter2)">Some displaced text</text>
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", "480", "200")}}</p>
+{{EmbedLiveSample("Example", "480", "200")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code>R</code> | <code>G</code> | <code>B</code> | <code>A</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>A</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td><code>R</code> | <code>G</code> | <code>B</code> | <code>A</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>A</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt><code>R</code></dt>
- <dd>This keyword specifies that the red color channel of the input image defined in {{SVGAttr("in2")}} will be used to displace the pixels of the input image defined in {{SVGAttr("in")}} along the x-axis.</dd>
- <dt><code>G</code></dt>
- <dd>This keyword specifies that the green color channel of the input image defined in {{SVGAttr("in2")}} will be used to displace the pixels of the input image defined in {{SVGAttr("in")}} along the x-axis.</dd>
- <dt><code>B</code></dt>
- <dd>This keyword specifies that the blue color channel of the input image defined in {{SVGAttr("in2")}} will be used to displace the pixels of the input image defined in {{SVGAttr("in")}} along the x-axis.</dd>
- <dt><code>A</code></dt>
- <dd>This keyword specifies that the alpha channel of the input image defined in {{SVGAttr("in2")}} will be used to displace the pixels of the input image defined in {{SVGAttr("in")}} along the x-axis.</dd>
-</dl>
+*   `R`
+    *   : This keyword specifies that the red color channel of the input image defined in {{SVGAttr("in2")}} will be used to displace the pixels of the input image defined in {{SVGAttr("in")}} along the x-axis.
+*   `G`
+    *   : This keyword specifies that the green color channel of the input image defined in {{SVGAttr("in2")}} will be used to displace the pixels of the input image defined in {{SVGAttr("in")}} along the x-axis.
+*   `B`
+    *   : This keyword specifies that the blue color channel of the input image defined in {{SVGAttr("in2")}} will be used to displace the pixels of the input image defined in {{SVGAttr("in")}} along the x-axis.
+*   `A`
+    *   : This keyword specifies that the alpha channel of the input image defined in {{SVGAttr("in2")}} will be used to displace the pixels of the input image defined in {{SVGAttr("in")}} along the x-axis.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Filters 1.0", "#element-attrdef-fedisplacementmap-xchannelselector", "xChannelSelector")}}</td>
-   <td>{{Spec2("Filters 1.0")}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "filters.html#feDisplacementMapXChannelSelectorAttribute", "xChannelSelector")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("Filters 1.0", "#element-attrdef-fedisplacementmap-xchannelselector", "xChannelSelector")}}
+      </td>
+      <td>{{Spec2("Filters 1.0")}}</td>
+      <td>No change</td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "filters.html#feDisplacementMapXChannelSelectorAttribute", "xChannelSelector")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

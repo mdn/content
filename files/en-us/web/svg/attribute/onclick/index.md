@@ -7,108 +7,120 @@ tags:
   - events
 browser-compat: svg.attributes.events.global.onclick
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <code><strong>onclick</strong></code> attribute specifies some script to run when the element is clicked.</p>
+The **`onclick`** attribute specifies some script to run when the element is clicked.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("a")}}</li>
-  <li>{{SVGElement("altGlyph")}}</li>
-  <li>{{SVGElement("animate")}}</li>
-  <li>{{SVGElement("animateMotion")}}</li>
-  <li>{{SVGElement("animateTransform")}}</li>
-  <li>{{SVGElement("circle")}}</li>
-  <li>{{SVGElement("defs")}}</li>
-  <li>{{SVGElement("desc")}}</li>
-  <li>{{SVGElement("ellipse")}}</li>
-  <li>{{SVGElement("foreignObject")}}</li>
-  <li>{{SVGElement("g")}}</li>
-  <li>{{SVGElement("image")}}</li>
-  <li>{{SVGElement("line")}}</li>
-  <li>{{SVGElement("linearGradient")}}</li>
-  <li>{{SVGElement("marker")}}</li>
-  <li>{{SVGElement("metadata")}}</li>
-  <li>{{SVGElement("mpath")}}</li>
-  <li>{{SVGElement("path")}}</li>
-  <li>{{SVGElement("pattern")}}</li>
-  <li>{{SVGElement("polygon")}}</li>
-  <li>{{SVGElement("polyline")}}</li>
-  <li>{{SVGElement("radialGradient")}}</li>
-  <li>{{SVGElement("rect")}}</li>
-  <li>{{SVGElement("script")}}</li>
-  <li>{{SVGElement("set")}}</li>
-  <li>{{SVGElement("stop")}}</li>
-  <li>{{SVGElement("style")}}</li>
-  <li>{{SVGElement("svg")}}</li>
-  <li>{{SVGElement("switch")}}</li>
-  <li>{{SVGElement("symbol")}}</li>
-  <li>{{SVGElement("text")}}</li>
-  <li>{{SVGElement("textPath")}}</li>
-  <li>{{SVGElement("title")}}</li>
-  <li>{{SVGElement("tref")}}</li>
-  <li>{{SVGElement("tspan")}}</li>
-  <li>{{SVGElement("use")}}</li>
-  <li>{{SVGElement("view")}}</li>
-</ul>
+*   {{SVGElement("a")}}
+*   {{SVGElement("altGlyph")}}
+*   {{SVGElement("animate")}}
+*   {{SVGElement("animateMotion")}}
+*   {{SVGElement("animateTransform")}}
+*   {{SVGElement("circle")}}
+*   {{SVGElement("defs")}}
+*   {{SVGElement("desc")}}
+*   {{SVGElement("ellipse")}}
+*   {{SVGElement("foreignObject")}}
+*   {{SVGElement("g")}}
+*   {{SVGElement("image")}}
+*   {{SVGElement("line")}}
+*   {{SVGElement("linearGradient")}}
+*   {{SVGElement("marker")}}
+*   {{SVGElement("metadata")}}
+*   {{SVGElement("mpath")}}
+*   {{SVGElement("path")}}
+*   {{SVGElement("pattern")}}
+*   {{SVGElement("polygon")}}
+*   {{SVGElement("polyline")}}
+*   {{SVGElement("radialGradient")}}
+*   {{SVGElement("rect")}}
+*   {{SVGElement("script")}}
+*   {{SVGElement("set")}}
+*   {{SVGElement("stop")}}
+*   {{SVGElement("style")}}
+*   {{SVGElement("svg")}}
+*   {{SVGElement("switch")}}
+*   {{SVGElement("symbol")}}
+*   {{SVGElement("text")}}
+*   {{SVGElement("textPath")}}
+*   {{SVGElement("title")}}
+*   {{SVGElement("tref")}}
+*   {{SVGElement("tspan")}}
+*   {{SVGElement("use")}}
+*   {{SVGElement("view")}}
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html, body, svg {
+```css hidden
+html, body, svg {
   height: 100%;
   margin: 0;
-}</pre>
+}
+```
 
-<pre class="brush: html; highlight[2]">&lt;svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;circle cx="100" cy="100" r="100" onclick="alert('You have clicked the circle.')" /&gt;
-&lt;/svg&gt;</pre>
+```html
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="100" cy="100" r="100" onclick="alert('You have clicked the circle.')" />
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", "220", "220")}}</p>
+{{EmbedLiveSample("Example", "220", "220")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code><a href="/en-US/docs/Web/SVG/Content_type#Anything">&lt;anything&gt;</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>None</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>No</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/SVG/Content_type#Anything"
+            >&#x3C;anything></a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>None</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>No</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG2", "interact.html#EventAttributes", "onclick")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "script.html#OnClickEventAttribute", "onclick")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("SVG2", "interact.html#EventAttributes", "onclick")}}
+      </td>
+      <td>{{Spec2("SVG2")}}</td>
+      <td>No change</td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "script.html#OnClickEventAttribute", "onclick")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

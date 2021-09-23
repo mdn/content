@@ -9,76 +9,72 @@ tags:
   - SVG Light Source
 browser-compat: svg.elements.fePointLight
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>&lt;fePointLight&gt;</code></strong> filter primitive defines a light source which allows to create a point light effect. It that can be used within a lighting filter primitive: {{SVGElement("feDiffuseLighting")}} or {{SVGElement("feSpecularLighting")}}.</p>
+The **`<fePointLight>`** filter primitive defines a light source which allows to create a point light effect. It that can be used within a lighting filter primitive: {{SVGElement("feDiffuseLighting")}} or {{SVGElement("feSpecularLighting")}}.
 
-<h2 id="Usage_context">Usage context</h2>
+## Usage context
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<h3 id="Global_attributes">Global attributes</h3>
+### Global attributes
 
-<ul>
- <li><a href="/en-US/docs/Web/SVG/Attribute#core_attributes">Core attributes</a></li>
-</ul>
+*   [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
 
-<h3 id="Specific_attributes">Specific attributes</h3>
+### Specific attributes
 
-<ul>
- <li>{{SVGAttr("x")}}</li>
- <li>{{SVGAttr("y")}}</li>
- <li>{{SVGAttr("z")}}</li>
-</ul>
+*   {{SVGAttr("x")}}
+*   {{SVGAttr("y")}}
+*   {{SVGAttr("z")}}
 
-<h2 id="DOM_Interface">DOM Interface</h2>
+## DOM Interface
 
-<p>This element implements the {{domxref("SVGFEPointLightElement")}} interface.</p>
+This element implements the {{domxref("SVGFEPointLightElement")}} interface.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<pre class="brush: html; highlight[7]">&lt;svg width="200" height="200" xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
-  &lt;defs&gt;
-    &lt;filter id="spotlight"&gt;
-      &lt;feSpecularLighting result="spotlight" specularConstant="1.5"
-          specularExponent="80" lighting-color="#FFF"&gt;
-        &lt;fePointLight x="50" y="50" z="220"/&gt;
-      &lt;/feSpecularLighting&gt;
-      &lt;feComposite in="SourceGraphic" in2="spotlight" operator="arithmetic"
-          k1="0" k2="1" k3="1" k4="0"/&gt;
-    &lt;/filter&gt;
-  &lt;/defs&gt;
+```html
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <filter id="spotlight">
+      <feSpecularLighting result="spotlight" specularConstant="1.5"
+          specularExponent="80" lighting-color="#FFF">
+        <fePointLight x="50" y="50" z="220"/>
+      </feSpecularLighting>
+      <feComposite in="SourceGraphic" in2="spotlight" operator="arithmetic"
+          k1="0" k2="1" k3="1" k4="0"/>
+    </filter>
+  </defs>
 
-  &lt;image xlink:href="/files/6457/mdn_logo_only_color.png" x="10%" y="10%"
-      width="80%" height="80%" style="filter:url(#spotlight);"/&gt;
-&lt;/svg&gt;</pre>
+  <image xlink:href="/files/6457/mdn_logo_only_color.png" x="10%" y="10%"
+      width="80%" height="80%" style="filter:url(#spotlight);"/>
+</svg>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample("Example", 200, 200)}}</p>
+{{EmbedLiveSample("Example", 200, 200)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGElement("filter")}}</li>
- <li>{{SVGElement("animate")}}</li>
- <li>{{SVGElement("set")}}</li>
- <li>{{SVGElement("feDiffuseLighting")}}</li>
- <li>{{SVGElement("feSpecularLighting")}}</li>
- <li>{{SVGElement("feDistantLight")}}</li>
- <li>{{SVGElement("feSpotLight")}}</li>
- <li><a href="/en-US/docs/Web/SVG/Tutorial/Filter_effects">SVG tutorial: Filter effects</a></li>
-</ul>
+*   {{SVGElement("filter")}}
+*   {{SVGElement("animate")}}
+*   {{SVGElement("set")}}
+*   {{SVGElement("feDiffuseLighting")}}
+*   {{SVGElement("feSpecularLighting")}}
+*   {{SVGElement("feDistantLight")}}
+*   {{SVGElement("feSpotLight")}}
+*   [SVG tutorial: Filter effects](/en-US/docs/Web/SVG/Tutorial/Filter_effects)

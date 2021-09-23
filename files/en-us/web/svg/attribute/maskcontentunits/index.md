@@ -6,100 +6,104 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.mask.maskContentUnits
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>maskContentUnits</code></strong> attribute indicates which coordinate system to use for the contents of the {{ SVGElement("mask") }} element.</p>
+The **`maskContentUnits`** attribute indicates which coordinate system to use for the contents of the {{ SVGElement("mask") }} element.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement('mask')}}</li>
-</ul>
+*   {{SVGElement('mask')}}
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;mask id="myMask1" maskContentUnits="userSpaceOnUse"&gt;
-    &lt;rect   fill="black" x="0" y="0" width="100%" height="100%" /&gt;
-    &lt;circle fill="white" cx="50" cy="50" r="35" /&gt;
-  &lt;/mask&gt;
+```html
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <mask id="myMask1" maskContentUnits="userSpaceOnUse">
+    <rect   fill="black" x="0" y="0" width="100%" height="100%" />
+    <circle fill="white" cx="50" cy="50" r="35" />
+  </mask>
 
-  &lt;mask id="myMask2" maskContentUnits="objectBoundingBox"&gt;
-    &lt;rect   fill="black" x="0" y="0" width="100%" height="100%" /&gt;
-    &lt;circle fill="white" cx=".5" cy=".5" r=".35" /&gt;
-  &lt;/mask&gt;
+  <mask id="myMask2" maskContentUnits="objectBoundingBox">
+    <rect   fill="black" x="0" y="0" width="100%" height="100%" />
+    <circle fill="white" cx=".5" cy=".5" r=".35" />
+  </mask>
 
-  &lt;!-- Some reference rect to materialized the mask --&gt;
-  &lt;rect id="r1" x="0"  y="0"  width="45" height="45" /&gt;
-  &lt;rect id="r2" x="0"  y="55" width="45" height="45" /&gt;
-  &lt;rect id="r3" x="55" y="55" width="45" height="45" /&gt;
-  &lt;rect id="r4" x="55" y="0"  width="45" height="45" /&gt;
+  <!-- Some reference rect to materialized the mask -->
+  <rect id="r1" x="0"  y="0"  width="45" height="45" />
+  <rect id="r2" x="0"  y="55" width="45" height="45" />
+  <rect id="r3" x="55" y="55" width="45" height="45" />
+  <rect id="r4" x="55" y="0"  width="45" height="45" />
 
-  &lt;!-- The first 3 rect are masked with useSpaceOnUse units --&gt;
-  &lt;use mask="url(#myMask1)" xlink:href="#r1" fill="red" /&gt;
-  &lt;use mask="url(#myMask1)" xlink:href="#r2" fill="red" /&gt;
-  &lt;use mask="url(#myMask1)" xlink:href="#r3" fill="red" /&gt;
+  <!-- The first 3 rect are masked with useSpaceOnUse units -->
+  <use mask="url(#myMask1)" xlink:href="#r1" fill="red" />
+  <use mask="url(#myMask1)" xlink:href="#r2" fill="red" />
+  <use mask="url(#myMask1)" xlink:href="#r3" fill="red" />
 
-  &lt;!-- The last rect is masked with objectBoundingBox units --&gt;
-  &lt;use mask="url(#myMask2)" xlink:href="#r4" fill="red" /&gt;
-&lt;/svg&gt;</pre>
+  <!-- The last rect is masked with objectBoundingBox units -->
+  <use mask="url(#myMask2)" xlink:href="#r4" fill="red" />
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", '100%', 200)}}</p>
+{{EmbedLiveSample("Example", '100%', 200)}}
 
-<h2 id="mask">mask</h2>
+## mask
 
-<p>For {{SVGElement("mask")}}, <code>maskContentUnits</code> defines the coordinate system in use for the content of the element.</p>
+For {{SVGElement("mask")}}, `maskContentUnits` defines the coordinate system in use for the content of the element.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code>userSpaceOnUse</code> | <code>objectBoundingBox</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>userSpaceOnUse</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td><code>userSpaceOnUse</code> | <code>objectBoundingBox</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>userSpaceOnUse</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt><code>userSpaceOnUse</code></dt>
- <dd>This value indicates that all coordinates inside the {{SVGElement('mask')}} element refer to the user coordinate system as defined when the mask was created.</dd>
- <dt><code>objectBoundingBox</code></dt>
- <dd>This value indicates that all coordinates inside the {{SVGElement('mask')}} element are relative to the bounding box of the element the mask is applied to. A bounding box could be considered the same as if the content of the {{ SVGElement("mask") }} were bound to a "<code>0 0 1 1</code>" {{ SVGAttr("viewbox") }}.</dd>
-</dl>
+*   `userSpaceOnUse`
+    *   : This value indicates that all coordinates inside the {{SVGElement('mask')}} element refer to the user coordinate system as defined when the mask was created.
+*   `objectBoundingBox`
+    *   : This value indicates that all coordinates inside the {{SVGElement('mask')}} element are relative to the bounding box of the element the mask is applied to. A bounding box could be considered the same as if the content of the {{ SVGElement("mask") }} were bound to a "`0 0 1 1`" {{ SVGAttr("viewbox") }}.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Masks", "#element-attrdef-mask-maskcontentunits", "maskContentUnits")}}</td>
-   <td>{{Spec2("CSS Masks")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "masking.html#MaskElementMaskContentUnitsAttribute", "maskContentUnits")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("CSS Masks", "#element-attrdef-mask-maskcontentunits", "maskContentUnits")}}
+      </td>
+      <td>{{Spec2("CSS Masks")}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "masking.html#MaskElementMaskContentUnitsAttribute", "maskContentUnits")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

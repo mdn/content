@@ -10,49 +10,43 @@ tags:
   - SVG Font
 browser-compat: svg.elements.hkern
 ---
-<div>{{SVGRef}}{{deprecated_header}}</div>
+{{SVGRef}}{{deprecated_header}}
 
-<p>The <strong><code>&lt;hkern&gt;</code></strong> <a href="/en-US/docs/Web/SVG">SVG</a> element allows to fine-tweak the horizontal distance between two glyphs. This process is known as <a href="https://en.wikipedia.org/wiki/Kerning">kerning</a>.</p>
+The **`<hkern>`** [SVG](/en-US/docs/Web/SVG) element allows to fine-tweak the horizontal distance between two glyphs. This process is known as [kerning](https://en.wikipedia.org/wiki/Kerning).
 
-<h2 id="Usage_context">Usage context</h2>
+## Usage context
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<h3 id="Global_attributes">Global attributes</h3>
+### Global attributes
 
-<ul>
- <li><a href="/en-US/docs/Web/SVG/Attribute#core_attributes">Core attributes</a></li>
-</ul>
+*   [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
 
-<h3 id="Specific_attributes">Specific attributes</h3>
+### Specific attributes
 
-<ul>
- <li>{{SVGAttr("u1")}}</li>
- <li>{{SVGAttr("g1")}}</li>
- <li>{{SVGAttr("u2")}}</li>
- <li>{{SVGAttr("g2")}}</li>
- <li>{{SVGAttr("k")}}</li>
-</ul>
+*   {{SVGAttr("u1")}}
+*   {{SVGAttr("g1")}}
+*   {{SVGAttr("u2")}}
+*   {{SVGAttr("g2")}}
+*   {{SVGAttr("k")}}
 
-<h2 id="DOM_Interface">DOM Interface</h2>
+## DOM Interface
 
-<p>This element implements the {{domxref("SVGHKernElement")}} interface.</p>
+This element implements the {{domxref("SVGHKernElement")}} interface.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGElement("font")}}</li>
- <li>{{SVGElement("glyph")}}</li>
- <li>{{SVGElement("vkern")}}</li>
- <li><a href="/en-US/docs/Web/SVG/Tutorial/SVG_fonts">SVG tutorial: SVG fonts</a></li>
-</ul>
+*   {{SVGElement("font")}}
+*   {{SVGElement("glyph")}}
+*   {{SVGElement("vkern")}}
+*   [SVG tutorial: SVG fonts](/en-US/docs/Web/SVG/Tutorial/SVG_fonts)

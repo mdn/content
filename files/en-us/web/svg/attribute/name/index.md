@@ -6,62 +6,62 @@ tags:
   - SVG
   - SVG Attribute
 ---
-<div>{{SVGRef}}{{Deprecated_Header}}</div>
+{{SVGRef}}{{Deprecated_Header}}
 
-<p>The <code><strong>name</strong></code> attribute specifies either the name of a color profile or a font face.</p>
+The **`name`** attribute specifies either the name of a color profile or a font face.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
- <li>{{ SVGElement("font-face-name") }}</li>
-</ul>
+*   {{ SVGElement("font-face-name") }}
 
-<h2 id="font-face-name">font-face-name</h2>
+## font-face-name
 
-<p>For {{SVGElement("font-face-name")}}, <code>name</code> defines the name of the font face.</p>
+For {{SVGElement("font-face-name")}}, `name` defines the name of the font face.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code>&lt;name&gt;</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><em>None</em></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td><code>&#x3C;name></code></td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><em>None</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<dl>
- <dt><code>&lt;name&gt;</code></dt>
- <dd>This value specifies the name of a local font. Unlike the syntax allowed between the parentheses of the <code>local(…)</code> clause in an <a href="/en-US/docs/Web/CSS/@font-face/src"><code>@font-face</code> rule <code>src</code></a> descriptor, the font name specified in this attribute is not surrounded in single or double quotes.</dd>
-</dl>
+*   `<name>`
+    *   : This value specifies the name of a local font. Unlike the syntax allowed between the parentheses of the `local(…)` clause in an [`@font-face` rule `src`](/en-US/docs/Web/CSS/@font-face/src) descriptor, the font name specified in this attribute is not surrounded in single or double quotes.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG1.1", "fonts.html#FontFaceNameElementNameAttribute", "name for &lt;font-face-name&gt;")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition for <code>&lt;font-face-name&gt;</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "color.html#ColorProfileElementNameAttribute", "name for &lt;color-profile&gt;")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition for <code>&lt;color-profile&gt;</code></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "fonts.html#FontFaceNameElementNameAttribute", "name for &lt;font-face-name&gt;")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition for <code>&#x3C;font-face-name></code></td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "color.html#ColorProfileElementNameAttribute", "name for &lt;color-profile&gt;")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition for <code>&#x3C;color-profile></code></td>
+    </tr>
+  </tbody>
 </table>

@@ -9,48 +9,44 @@ tags:
   - SVG Filter
 browser-compat: svg.elements.feFuncB
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>&lt;feFuncB&gt;</code></strong> <a href="/en-US/docs/Web/SVG">SVG</a> filter primitive defines the transfer function for the blue component of the input graphic of its parent {{SVGElement("feComponentTransfer")}} element.</p>
+The **`<feFuncB>`** [SVG](/en-US/docs/Web/SVG) filter primitive defines the transfer function for the blue component of the input graphic of its parent {{SVGElement("feComponentTransfer")}} element.
 
-<h2 id="Usage_context">Usage context</h2>
+## Usage context
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<h3 id="Global_attributes">Global attributes</h3>
+### Global attributes
 
-<ul>
- <li><a href="/en-US/docs/Web/SVG/Attribute#core_attributes">Core attributes</a></li>
- <li><a href="/en-US/docs/Web/SVG/Attribute#transfer_function_attributes">Transfer function attributes</a></li>
-</ul>
+*   [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
+*   [Transfer function attributes](/en-US/docs/Web/SVG/Attribute#transfer_function_attributes)
 
-<h3 id="Specific_attributes">Specific attributes</h3>
+### Specific attributes
 
-<p><em>None</em></p>
+*None*
 
-<h2 id="DOM_Interface">DOM Interface</h2>
+## DOM Interface
 
-<p>This element implements the {{domxref("SVGFEFuncBElement")}} interface.</p>
+This element implements the {{domxref("SVGFEFuncBElement")}} interface.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{SVGElement("filter")}}</li>
- <li>{{SVGElement("animate")}}</li>
- <li>{{SVGElement("set")}}</li>
- <li>{{SVGElement("feComponentTransfer")}}</li>
- <li>{{SVGElement("feFuncA")}}</li>
- <li>{{SVGElement("feFuncR")}}</li>
- <li>{{SVGElement("feFuncG")}}</li>
- <li><a href="/en-US/docs/Web/SVG/Tutorial/Filter_effects">SVG tutorial: Filter effects</a></li>
-</ul>
+*   {{SVGElement("filter")}}
+*   {{SVGElement("animate")}}
+*   {{SVGElement("set")}}
+*   {{SVGElement("feComponentTransfer")}}
+*   {{SVGElement("feFuncA")}}
+*   {{SVGElement("feFuncR")}}
+*   {{SVGElement("feFuncG")}}
+*   [SVG tutorial: Filter effects](/en-US/docs/Web/SVG/Tutorial/Filter_effects)

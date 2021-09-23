@@ -6,93 +6,121 @@ tags:
   - SVG Attribute
 browser-compat: svg.attributes.presentation.font-variant
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>font-variant</code></strong> attribute indicates whether the text is to be rendered using variations of the font's {{Glossary("glyph", "glyphs")}}.</p>
+The **`font-variant`** attribute indicates whether the text is to be rendered using variations of the font's {{Glossary("glyph", "glyphs")}}.
 
-<div class="note"><p><strong>Note:</strong> As a presentation attribute, <code>font-variant</code> can be used as a CSS property. See the {{cssxref("font-variant", "CSS font-variant")}} property for more information.</p></div>
+> **Note:** As a presentation attribute, `font-variant` can be used as a CSS property. See the {{cssxref("font-variant", "CSS font-variant")}} property for more information.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("altGlyph")}}</li>
-  <li>{{SVGElement("text")}}</li>
-  <li>{{SVGElement("textPath")}}</li>
-  <li>{{SVGElement("tref")}}</li>
-  <li>{{SVGElement("tspan")}}</li>
-</ul>
+*   {{SVGElement("altGlyph")}}
+*   {{SVGElement("text")}}
+*   {{SVGElement("textPath")}}
+*   {{SVGElement("tref")}}
+*   {{SVGElement("tspan")}}
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html, body, svg {
+```css hidden
+html, body, svg {
   height: 100%;
-}</pre>
+}
+```
 
-<pre class="brush: html; highlight[2,3]">&lt;svg viewBox="0 0 250 30" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;text y="20" font-variant="normal"&gt;Normal text&lt;/text&gt;
-  &lt;text x="100" y="20" font-variant="small-caps"&gt;Small-caps text&lt;/text&gt;
-&lt;/svg&gt;</pre>
+```html
+<svg viewBox="0 0 250 30" xmlns="http://www.w3.org/2000/svg">
+  <text y="20" font-variant="normal">Normal text</text>
+  <text x="100" y="20" font-variant="small-caps">Small-caps text</text>
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", "250", "30")}}</p>
+{{EmbedLiveSample("Example", "250", "30")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td>
-    <p><code>normal</code> | <code>none</code> | [ <code>&lt;common-lig-values&gt;</code> || <code>&lt;discretionary-lig-values&gt;</code> || <code>&lt;historical-lig-values&gt;</code> || <code>&lt;contextual-alt-values&gt;</code> || <code>stylistic( &lt;feature-value-name&gt; )</code> || <code>historical-forms</code> || <code>styleset( &lt;feature-value-name&gt;# )</code> || <code>character-variant( &lt;feature-value-name&gt;# )</code> || <code>swash( &lt;feature-value-name&gt; )</code> || <code>ornaments( &lt;feature-value-name&gt; )</code> || <code>annotation( &lt;feature-value-name&gt; )</code> || [ <code>small-caps</code> | <code>all-small-caps</code> | <code>petite-caps</code> | <code>all-petite-caps</code> | <code>unicase</code> | <code>titling-caps</code> ] || <code>&lt;numeric-figure-values&gt;</code> || <code>&lt;numeric-spacing-values&gt;</code> || <code>&lt;numeric-fraction-values&gt;</code> || <code>ordinal</code> || <code>slashed-zero</code> || <code>&lt;east-asian-variant-values&gt;</code> || <code>&lt;east-asian-width-values&gt;</code> || <code>ruby</code> ]</p>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>normal</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>Yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <p>
+          <code>normal</code> | <code>none</code> | [
+          <code>&#x3C;common-lig-values></code> ||
+          <code>&#x3C;discretionary-lig-values></code> ||
+          <code>&#x3C;historical-lig-values></code> ||
+          <code>&#x3C;contextual-alt-values></code> ||
+          <code>stylistic( &#x3C;feature-value-name> )</code> ||
+          <code>historical-forms</code> ||
+          <code>styleset( &#x3C;feature-value-name># )</code> ||
+          <code>character-variant( &#x3C;feature-value-name># )</code> ||
+          <code>swash( &#x3C;feature-value-name> )</code> ||
+          <code>ornaments( &#x3C;feature-value-name> )</code> ||
+          <code>annotation( &#x3C;feature-value-name> )</code> || [
+          <code>small-caps</code> | <code>all-small-caps</code> |
+          <code>petite-caps</code> | <code>all-petite-caps</code> |
+          <code>unicase</code> | <code>titling-caps</code> ] ||
+          <code>&#x3C;numeric-figure-values></code> ||
+          <code>&#x3C;numeric-spacing-values></code> ||
+          <code>&#x3C;numeric-fraction-values></code> || <code>ordinal</code> ||
+          <code>slashed-zero</code> ||
+          <code>&#x3C;east-asian-variant-values></code> ||
+          <code>&#x3C;east-asian-width-values></code> || <code>ruby</code> ]
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>normal</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>For a description of the values, please refer to the <a href="/en-US/docs/Web/CSS/font-variant#Values">CSS <code>font-variant</code></a> property.</p>
+For a description of the values, please refer to the [CSS `font-variant`](/en-US/docs/Web/CSS/font-variant#Values) property.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS4 Fonts", "#font-variant-prop", "font-variant")}}</td>
-   <td>{{Spec2("CSS4 Fonts")}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS3 Fonts", "#font-variant-prop", "font-variant")}}</td>
-   <td>{{Spec2("CSS3 Fonts")}}</td>
-   <td>Added many more keywords for different types of variations.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "text.html#FontVariantProperty", "font-variant")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("CSS4 Fonts", "#font-variant-prop", "font-variant")}}
+      </td>
+      <td>{{Spec2("CSS4 Fonts")}}</td>
+      <td>No change</td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("CSS3 Fonts", "#font-variant-prop", "font-variant")}}
+      </td>
+      <td>{{Spec2("CSS3 Fonts")}}</td>
+      <td>Added many more keywords for different types of variations.</td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "text.html#FontVariantProperty", "font-variant")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{cssxref("font-variant", "CSS font-variant")}}</li>
-</ul>
+*   {{cssxref("font-variant", "CSS font-variant")}}

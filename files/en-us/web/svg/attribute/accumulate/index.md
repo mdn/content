@@ -7,22 +7,20 @@ tags:
   - SVG
   - SVG Attribute
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>accumulate</code></strong> attribute controls whether or not an animation is cumulative.</p>
+The **`accumulate`** attribute controls whether or not an animation is cumulative.
 
-<p>It is frequently useful for repeated animations to build upon the previous results, accumulating with each iteration. This attribute said to the animation if the value is added to the previous animated attribute's value on each iteration.</p>
+It is frequently useful for repeated animations to build upon the previous results, accumulating with each iteration. This attribute said to the animation if the value is added to the previous animated attribute's value on each iteration.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("animate")}}</li>
-  <li>{{SVGElement("animateColor")}}</li>
-  <li>{{SVGElement("animateMotion")}}</li>
-  <li>{{SVGElement("animateTransform")}}</li>
-</ul>
+*   {{SVGElement("animate")}}
+*   {{SVGElement("animateColor")}}
+*   {{SVGElement("animateMotion")}}
+*   {{SVGElement("animateTransform")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
   <tbody>
@@ -41,18 +39,16 @@ tags:
   </tbody>
 </table>
 
-<dl>
-  <dt><code>sum</code></dt>
-  <dd>Specifies that each repeat iteration after the first builds upon the last value of the previous iteration.</dd>
-  <dt><code>none</code></dt>
-  <dd>Specifies that repeat iterations are not cumulative.</dd>
-</dl>
+*   `sum`
+    *   : Specifies that each repeat iteration after the first builds upon the last value of the previous iteration.
+*   `none`
+    *   : Specifies that repeat iterations are not cumulative.
 
-<p>This attribute is ignored if the target attribute value does not support addition, or if the animation element does not repeat.</p>
+This attribute is ignored if the target attribute value does not support addition, or if the animation element does not repeat.
 
-<p>This attribute will be ignored if the animation function is specified with only the {{SVGAttr("to")}} attribute.</p>
+This attribute will be ignored if the animation function is specified with only the {{SVGAttr("to")}} attribute.
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
   <thead>
@@ -61,23 +57,25 @@ tags:
       <th scope="col">Status</th>
       <th scope="col">Comment</th>
     </tr>
-   </thead>
-   <tbody>
-     <tr>
-       <td>{{SpecName("SVG Animations 2", "#AccumulateAttribute", "accumulate")}}</td>
-       <td>{{Spec2("SVG Animations 2")}}</td>
-       <td>No change</td>
-     </tr>
-     <tr>
-       <td>{{SpecName("SVG1.1", "animate.html#AccumulateAttribute", "accumulate")}}</td>
-       <td>{{Spec2("SVG1.1")}}</td>
-       <td>Initial definition</td>
-     </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("SVG Animations 2", "#AccumulateAttribute", "accumulate")}}
+      </td>
+      <td>{{Spec2("SVG Animations 2")}}</td>
+      <td>No change</td>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "animate.html#AccumulateAttribute", "accumulate")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
   </tbody>
 </table>
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
-  <li><a href="https://www.w3.org/TR/2001/REC-smil-animation-20010904/#AccumulateAttribute">SMIL Animation specification</a></li>
-</ul>
+*   [SMIL Animation specification](https://www.w3.org/TR/2001/REC-smil-animation-20010904/#AccumulateAttribute)

@@ -7,82 +7,80 @@ tags:
   - SVG Container
 browser-compat: svg.elements.mask
 ---
-<div>{{SVGRef}}</div>
+{{SVGRef}}
 
-<p>The <strong><code>&lt;mask&gt;</code></strong> element defines an alpha mask for compositing the current object into the background. A mask is used/referenced using the {{SVGAttr("mask")}} property.</p>
+The **`<mask>`** element defines an alpha mask for compositing the current object into the background. A mask is used/referenced using the {{SVGAttr("mask")}} property.
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<pre class="brush: html">&lt;svg viewBox="-10 -10 120 120"&gt;
-  &lt;mask id="myMask"&gt;
-    &lt;!-- Everything under a white pixel will be visible --&gt;
-    &lt;rect x="0" y="0" width="100" height="100" fill="white" /&gt;
+```html
+<svg viewBox="-10 -10 120 120">
+  <mask id="myMask">
+    <!-- Everything under a white pixel will be visible -->
+    <rect x="0" y="0" width="100" height="100" fill="white" />
 
-    &lt;!-- Everything under a black pixel will be invisible --&gt;
-    &lt;path d="M10,35 A20,20,0,0,1,50,35 A20,20,0,0,1,90,35 Q90,65,50,95 Q10,65,10,35 Z" fill="black" /&gt;
-  &lt;/mask&gt;
+    <!-- Everything under a black pixel will be invisible -->
+    <path d="M10,35 A20,20,0,0,1,50,35 A20,20,0,0,1,90,35 Q90,65,50,95 Q10,65,10,35 Z" fill="black" />
+  </mask>
 
-  &lt;polygon points="-10,110 110,110 110,-10" fill="orange" /&gt;
+  <polygon points="-10,110 110,110 110,-10" fill="orange" />
 
-  &lt;!-- with this mask applied, we "punch" a heart shape hole into the circle --&gt;
-  &lt;circle cx="50" cy="50" r="50" mask="url(#myMask)" /&gt;
-&lt;/svg&gt;</pre>
+  <!-- with this mask applied, we "punch" a heart shape hole into the circle -->
+  <circle cx="50" cy="50" r="50" mask="url(#myMask)" />
+</svg>
+```
 
-<p>{{EmbedLiveSample('Example', 100, 100)}}</p>
+{{EmbedLiveSample('Example', 100, 100)}}
 
-<h2 id="Attributes">Attributes</h2>
+## Attributes
 
-<dl>
- <dt>{{SVGAttr("height")}}</dt>
- <dd>This attribute defines the height of the masking area.<br>
- <small><em>Value type</em>: <a href="/en-US/docs/Web/SVG/Content_type#length"><strong>&lt;length&gt;</strong></a> ; <em>Default value</em>: <code>120%</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("maskContentUnits")}}</dt>
- <dd>This attribute defines the coordinate system for the contents of the <code>&lt;mask&gt;</code>.<br>
- <small><em>Value type</em>: <code>userSpaceOnUse</code>|<code>objectBoundingBox</code> ; <em>Default value</em>: <code>userSpaceOnUse</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("maskUnits")}}</dt>
- <dd>This attribute defines the coordinate system for attributes {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}} and {{SVGAttr("height")}} on the <code>&lt;mask&gt;</code>.<br>
- <small><em>Value type</em>: <code>userSpaceOnUse</code>|<code>objectBoundingBox</code> ; <em>Default value</em>: <code>objectBoundingBox</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("x")}}</dt>
- <dd>This attribute defines the x-axis coordinate of the top-left corner of the masking area.<br>
- <small><em>Value type</em>: <a href="/en-US/docs/Web/SVG/Content_type#coordinate"><strong>&lt;coordinate&gt;</strong></a> ; <em>Default value</em>: <code>-10%</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("y")}}</dt>
- <dd>This attribute defines the y-axis coordinate of the top-left corner of the masking area.<br>
- <small><em>Value type</em>: <a href="/en-US/docs/Web/SVG/Content_type#coordinate"><strong>&lt;coordinate&gt;</strong></a> ; <em>Default value</em>: <code>-10%</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
- <dt>{{SVGAttr("width")}}</dt>
- <dd>This attribute defines the width of the masking area.<br>
- <small><em>Value type</em>: <a href="/en-US/docs/Web/SVG/Content_type#length"><strong>&lt;length&gt;</strong></a> ; <em>Default value</em>: <code>120%</code>; <em>Animatable</em>: <strong>yes</strong></small></dd>
-</dl>
+*   {{SVGAttr("height")}}
+    *   : This attribute defines the height of the masking area.
+        *Value type*: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length) ; *Default value*: `120%`; *Animatable*: **yes**
+*   {{SVGAttr("maskContentUnits")}}
+    *   : This attribute defines the coordinate system for the contents of the `<mask>`.
+        *Value type*: `userSpaceOnUse`|`objectBoundingBox` ; *Default value*: `userSpaceOnUse`; *Animatable*: **yes**
+*   {{SVGAttr("maskUnits")}}
+    *   : This attribute defines the coordinate system for attributes {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}} and {{SVGAttr("height")}} on the `<mask>`.
+        *Value type*: `userSpaceOnUse`|`objectBoundingBox` ; *Default value*: `objectBoundingBox`; *Animatable*: **yes**
+*   {{SVGAttr("x")}}
+    *   : This attribute defines the x-axis coordinate of the top-left corner of the masking area.
+        *Value type*: [**\<coordinate>**](/en-US/docs/Web/SVG/Content_type#coordinate) ; *Default value*: `-10%`; *Animatable*: **yes**
+*   {{SVGAttr("y")}}
+    *   : This attribute defines the y-axis coordinate of the top-left corner of the masking area.
+        *Value type*: [**\<coordinate>**](/en-US/docs/Web/SVG/Content_type#coordinate) ; *Default value*: `-10%`; *Animatable*: **yes**
+*   {{SVGAttr("width")}}
+    *   : This attribute defines the width of the masking area.
+        *Value type*: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length) ; *Default value*: `120%`; *Animatable*: **yes**
 
-<h3 id="Global_attributes">Global attributes</h3>
+### Global attributes
 
-<dl>
- <dt><a href="/en-US/docs/Web/SVG/Attribute/Core">Core Attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr('id')}}</small></dd>
- <dt><a href="/en-US/docs/Web/SVG/Attribute/Styling">Styling Attributes</a></dt>
- <dd><small>{{SVGAttr('class')}}, {{SVGAttr('style')}}</small></dd>
- <dt><a href="/en-US/docs/Web/SVG/Attribute/Conditional_Processing">Conditional Processing Attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}</small></dd>
- <dt><a href="/en-US/docs/Web/SVG/Attribute/Presentation">Presentation Attributes</a></dt>
- <dd><small>Most notably: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}</small></dd>
-</dl>
+*   [Core Attributes](/en-US/docs/Web/SVG/Attribute/Core)
+    *   : Most notably: {{SVGAttr('id')}}
+*   [Styling Attributes](/en-US/docs/Web/SVG/Attribute/Styling)
+    *   : {{SVGAttr('class')}}, {{SVGAttr('style')}}
+*   [Conditional Processing Attributes](/en-US/docs/Web/SVG/Attribute/Conditional_Processing)
+    *   : Most notably: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
+*   [Presentation Attributes](/en-US/docs/Web/SVG/Attribute/Presentation)
+    *   : Most notably: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
-<p>{{svginfo}}</p>
+{{svginfo}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>Other clipping and masking SVG elements: {{SVGElement("clipPath")}}</li>
- <li>Clipping and masking CSS properties: {{cssxref("mask")}}, {{cssxref("mask-image")}},{{cssxref("mask-mode")}}, {{cssxref("mask-repeat")}}, {{cssxref("mask-position")}}, {{cssxref("mask-clip")}}, {{cssxref("mask-origin")}}, {{cssxref("mask-composite")}}, {{cssxref("mask-size")}}, {{cssxref("pointer-events")}}</li>
-</ul>
+*   Other clipping and masking SVG elements: {{SVGElement("clipPath")}}
+*   Clipping and masking CSS properties: {{cssxref("mask")}}, {{cssxref("mask-image")}},{{cssxref("mask-mode")}}, {{cssxref("mask-repeat")}}, {{cssxref("mask-position")}}, {{cssxref("mask-clip")}}, {{cssxref("mask-origin")}}, {{cssxref("mask-composite")}}, {{cssxref("mask-size")}}, {{cssxref("pointer-events")}}

@@ -7,77 +7,81 @@ tags:
   - SVG Attribute
 browser-compat: svg.elements.svg.zoomAndPan
 ---
-<div>{{SVGRef}}{{Deprecated_Header}}</div>
+{{SVGRef}}{{Deprecated_Header}}
 
-<p>The <code><strong>zoomAndPan</strong></code> attribute specifies whether the SVG document can be magnified and panned.</p>
+The **`zoomAndPan`** attribute specifies whether the SVG document can be magnified and panned.
 
-<p>Magnification in this context means the effect of a supplemental scale and translate transformation on the outermost SVG document fragment.</p>
+Magnification in this context means the effect of a supplemental scale and translate transformation on the outermost SVG document fragment.
 
-<p>Panning represents a translation (i.e., a shift) transformation on an SVG document fragment in response to a user interface action.</p>
+Panning represents a translation (i.e., a shift) transformation on an SVG document fragment in response to a user interface action.
 
-<p>You can use this attribute with the following SVG elements:</p>
+You can use this attribute with the following SVG elements:
 
-<ul>
-  <li>{{SVGElement("svg")}}</li>
-  <li>{{SVGElement("view")}}</li>
-</ul>
+*   {{SVGElement("svg")}}
+*   {{SVGElement("view")}}
 
-<h2>Example</h2>
+## Example
 
-<pre class="brush: css hidden">html, body, svg {
+```css hidden
+html, body, svg {
   height: 100%;
-}</pre>
+}
+```
 
-<pre class="brush: html; highlight[1]">&lt;svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" zoomAndPan="disable"&gt;
-  &lt;filter id="diffuseLighting" x="0" y="0" width="100%" height="100%"&gt;
-    &lt;feDiffuseLighting in="SourceGraphic" zoomAndPan="1"&gt;
-      &lt;fePointLight x="60" y="60" z="20" /&gt;
-    &lt;/feDiffuseLighting&gt;
-  &lt;/filter&gt;
+```html
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" zoomAndPan="disable">
+  <filter id="diffuseLighting" x="0" y="0" width="100%" height="100%">
+    <feDiffuseLighting in="SourceGraphic" zoomAndPan="1">
+      <fePointLight x="60" y="60" z="20" />
+    </feDiffuseLighting>
+  </filter>
 
-  &lt;rect x="0" y="0" width="200" height="200" style="filter: url(#diffuseLighting);" /&gt;
-&lt;/svg&gt;</pre>
+  <rect x="0" y="0" width="200" height="200" style="filter: url(#diffuseLighting);" />
+</svg>
+```
 
-<p>{{EmbedLiveSample("Example", "200", "200")}}</p>
+{{EmbedLiveSample("Example", "200", "200")}}
 
-<h2 id="Usage_notes">Usage notes</h2>
+## Usage notes
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Value</th>
-   <td><code>disable</code> | <code>magnify</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Default value</th>
-   <td><code>magnify</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Animatable</th>
-   <td>No</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td><code>disable</code> | <code>magnify</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>magnify</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>No</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 <table class="no-markdown">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG1.1", "interact.html#ZoomAndPanAttribute", "zoomAndPan")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{SpecName("SVG1.1", "interact.html#ZoomAndPanAttribute", "zoomAndPan")}}
+      </td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
