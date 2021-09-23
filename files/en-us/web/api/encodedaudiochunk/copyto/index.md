@@ -30,6 +30,8 @@ EncodedAudioChunk.copyTo(destination)
 
 ## Examples
 
+In the following example an {{domxref("EncodedAudioChunk")}} is created then copied.
+
 ```js
 const init = {
   type: 'key',
