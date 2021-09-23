@@ -44,11 +44,11 @@ FileSystemDirectoryEntry.getDirectory([path][, options][, successCallback][, err
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None.
 
 ### Exceptions
 
-- `NotFoundError` {{domxref("DOMException)}}
+- `NotFoundError` {{domxref("DOMException")}}
   - : Thrown if the `create` option was not specified (or was specified as
     `false`), and the directory doesn't exist.
 - `SecurityError`  {{domxref("DOMException")}}
@@ -107,8 +107,6 @@ the contents of the file. When that is loaded successfully (as indicated by the
 
 ## See also
 
-- [File and Directory
-  Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction
-  to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("FileSystemDirectoryEntry")}}
