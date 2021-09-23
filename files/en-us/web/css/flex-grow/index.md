@@ -81,7 +81,7 @@ The remaining space is the size of the flex container minus the size of all fle
   display: flex;
 
   justify-content: space-around;
-  flex-flow: row wrap;
+  flex-wrap: wrap;
   align-items: stretch;
 }
 
