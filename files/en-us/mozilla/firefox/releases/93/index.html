@@ -33,11 +33,16 @@ tags:
 
 <h3 id="JavaScript">JavaScript</h3>
 
+<ul>
+  <li>{{jsxref("Intl.supportedValuesOf()")}} is now supported, allowing code to enumerate values supported by an implementation, This might be used, for example, to download a polyfill for just the missing category of values ({{bug(1670033)}}).</li>
+</ul>
+
 <h4 id="removals_js">Removals</h4>
 
 <h3 id="HTTP">HTTP</h3>
 
 <ul>
+  <li>The SHA-256 algorithm is now supported for <a href="/en-US/docs/Web/HTTP/Authentication">HTTP Authentication</a> using digests. This allows much more secure authentication than previously available using the MD5 algorithm ({{bug(1682995)}}).</li>
   <li>The default HTTP {{HTTPHeader("ACCEPT")}} header for <em>images</em> changed to: <code>image/avif,image/webp,*/*</code> (following addition of support for the <a href="/en-US/docs/Web/Media/Formats/Image_types#avif">AVIF</a> image format). ({{bug(1682995)}}).</li>
 </ul>
 

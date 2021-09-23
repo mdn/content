@@ -44,31 +44,19 @@ FileSystemDirectoryEntry.getDirectory([path][, options][, successCallback][, err
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None.
 
-### Errors
+### Exceptions
 
-If an error occurs and an `errorCallback` was specified, it gets called with
-a single parameter: a {{domxref("DOMException")}} object describing the error. The
-name of the {{domxref("DOMException")}} indicates what type of error occurred, as follows:
-
-- `NotFoundError`
-  - : The `create` option was not specified (or was specified as
+- `NotFoundError` {{domxref("DOMException")}}
+  - : Thrown if the `create` option was not specified (or was specified as
     `false`), and the directory doesn't exist.
-- `SecurityError`
-  - : The request to access the directory was denied for security reasons.
-- `TypeMismatchError`
-  - : The path specified is not a directory; it's probably a file, but might be an
+- `SecurityError`  {{domxref("DOMException")}}
+  - : Thrown if the request to access the directory was denied for security reasons.
+- `TypeMismatchError` {{domxref("DOMException")}}
+  - : Thrown if the path specified is not a directory; it's probably a file, but might be an
     unsupported file descriptor such as a pipe; this depends on the user agent to some
     extent.
-
-## FileSystemFlags
-
-The `options` parameter is an object which is based on the
-{{domxref("FileSystemFlags")}} dictionary; it provides flags which make it possible to
-adjust the behavior of the `getDirectory()` method.
-
-{{page("/en-US/docs/Web/API/FileSystemFlags", "Properties")}}
 
 ## Example
 
@@ -119,8 +107,6 @@ the contents of the file. When that is loaded successfully (as indicated by the
 
 ## See also
 
-- [File and Directory
-  Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction
-  to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("FileSystemDirectoryEntry")}}

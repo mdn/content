@@ -39,15 +39,15 @@ A {{jsxref('Promise')}} which resolves with `undefined`.
 
 ### Exceptions
 
-- `TypeError`
-  - : If the name is not a valid string or contains characters not allowed on the file
+- `TypeError` {{domxref("DOMException")}}
+  - : Thrown if the name is not a valid string or contains characters not allowed on the file
     system
-- `NotAllowedError`
-  - : If {{domxref('PermissionStatus')}} is not 'granted'.
-- `InvalidModificationError`
-  - : If `recursive` is set to false and the entry to be removed has children.
-- `NotFoundError`
-  - : If an entry name is not found or matched
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Thrown if {{domxref('PermissionStatus')}} is not 'granted'.
+- `InvalidModificationError` {{domxref("DOMException")}}
+  - : Thrown if `recursive` is set to false and the entry to be removed has children.
+- `NotFoundError` {{domxref("DOMException")}}
+  - : Thrown if an entry name is not found or matched
 
 ## Examples
 

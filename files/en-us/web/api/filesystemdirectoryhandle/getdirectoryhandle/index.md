@@ -43,12 +43,12 @@ A {{jsxref('Promise')}} which resolves with a {{domxref('FileSystemDirectoryHand
 
 ### Exceptions
 
-- `NotAllowedError`
-  - : If {{domxref('PermissionStatus')}} is not 'granted'.
-- `TypeMismatchError`
-  - : If the returned entry is a file and not a directory.
-- `NotFoundError`
-  - : if directory doesn't exist and the `create` option is set to
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Thrown if {{domxref('PermissionStatus')}} is not 'granted'.
+- `TypeMismatchError` {{domxref("DOMException")}}
+  - : Thrown if the returned entry is a file and not a directory.
+- `NotFoundError` {{domxref("DOMException")}}
+  - : Thrown if directory doesn't exist and the `create` option is set to
     `false`.
 
 ## Examples

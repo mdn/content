@@ -11,8 +11,8 @@ browser-compat: api.CSSStyleDeclaration.setProperty
 {{ APIRef("CSSOM") }}
 
 The
-**`CSSStyleDeclaration.setProperty()`** method interface sets
-a new value for a property on a CSS style declaration object.
+**`CSSStyleDeclaration.setProperty()`** method interface sets
+a new value for a property on a CSS style declaration object.
 
 ## Syntax
 
@@ -22,33 +22,32 @@ style.setProperty(propertyName, value, priority);
 
 ### Parameters
 
-- *`propertyName`* is a {{domxref('DOMString')}} representing the
-  CSS property name (hyphen case) to be modified.
-- *`value`* {{optional_inline}} is a
-  {{domxref('DOMString')}} containing the new property value. If not specified, treated
-  as the empty string.
+- `propertyName`
+  - : A {{domxref('DOMString')}} representing the CSS property name (hyphen case) to be modified.
+- `value` {{optional_inline}}
+  - : A {{domxref('DOMString')}} containing the new property value. If not specified, treated
+    as the empty string.
+    > **Note:** `value` must not contain `"!important"`, that should be set using the `priority` parameter.
+- `priority` {{optional_inline}}
+  - : A {{domxref('DOMString')}} allowing the "important" CSS priority to be set. If not
+    specified, treated as the empty string. The following values are accepted:
 
-  - Note: *`value`* must not contain `"!important"` --
-    that should be set using the _`priority`_ parameter.
-
-- _`priority`_ {{optional_inline}} is a
-  {{domxref('DOMString')}} allowing the "important" CSS priority to be set. If not
-  specified, treated as the empty string. The following values are accepted:
-
-  - String value `"important"`
-  - Keyword `undefined`
-  - String empty value `""`
+    - String value `"important"`
+    - Keyword `undefined`
+    - String empty value `""`
 
 ### Return value
 
-- {{jsxref('undefined')}}
+None.
 
 ### Exceptions
 
-- {{domxref('DOMException')}} (NoModificationAllowedError): if the property or
-  declaration block is read only.
+- `NoModificationAllowedError` {{domxref('DOMException')}}
+  - : Thrown if the property or declaration block is read only.
 
-If *`priority`* can be omitted, JavaScript has a special simpler
+## Alternative usage
+
+If `priority` can be omitted, JavaScript has a special simpler
 syntax for setting a CSS property on a style declaration object:
 
 ```js
@@ -75,16 +74,15 @@ want.
 If so, we store a reference to this `CSSStyleRule` object in a variable. We
 then use three functions to generate random values for the properties in question, and
 update the rule with these values. In each case, this is done with the
-`setProperty()` method, for
-example `boxParaRule.style.setProperty('border', newBorder);`
+`setProperty()` method, for example `boxParaRule.style.setProperty('border', newBorder);`
 
 ### HTML
 
 ```html
 <div class="controls">
-  <button class="border">Border</button>
-  <button class="bgcolor">Background</button>
-  <button class="color">Text</button>
+  <button class="border">Border</button>
+  <button class="bgcolor">Background</button>
+  <button class="color">Text</button>
 </div>
 <div class="box">
   <p>Box</p>

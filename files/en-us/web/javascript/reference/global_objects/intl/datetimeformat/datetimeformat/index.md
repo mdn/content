@@ -344,4 +344,5 @@ for (const zoneName of timezoneNames) {
 ## See also
 
 - {{jsxref("Intl.DateTimeFormat")}}
+- {{jsxref("Intl.supportedValuesOf()")}}
 - {{jsxref("Global_Objects/Intl", "Intl")}}
