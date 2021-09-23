@@ -46,7 +46,7 @@ FileSystemDirectoryEntry.getDirectory([path][, options][, successCallback][, err
 
 {{jsxref("undefined")}}.
 
-### Errors
+### Exceptions
 
 - `NotFoundError` {{domxref("DOMException)}}
   - : Thrown if the `create` option was not specified (or was specified as
