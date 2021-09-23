@@ -33,8 +33,6 @@ The **`EncodedAudioChunk`** interface of the {{domxref('WebCodecs API','','',' '
 
 - {{domxref("EncodedAudioChunk.copyTo()")}}
   - : Copies the encoded audio data.
-
-
 ## Specifications
 
 {{Specifications}}

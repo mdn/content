@@ -26,7 +26,7 @@ EncodedAudioChunk.copyTo(destination)
 
 ### Return Value
 
-jsxref("Undefined").
+{{jsxref("Undefined")}}.
 
 ## Examples
 
