@@ -53,68 +53,25 @@ browser-compat: html.elements.input.input-search
 
 <h2 id="Additional_attributes">Additional attributes</h2>
 
-<p>In addition to the attributes that operate on all {{HTMLElement("input")}} elements regardless of their type, search field inputs support the following attributes:</p>
+<p>In addition to the attributes that operate on all {{HTMLElement("input")}} elements regardless of their type, search field inputs support the following attributes.</p>
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Attribute</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>{{anch("list")}}</code></td>
-   <td>The id of the &lt;datalist&gt; element that contains the optional pre-defined autocomplete options</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("maxlength")}}</code></td>
-   <td>The maximum number of characters the input should accept</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("minlength")}}</code></td>
-   <td>The minimum number of characters long the input can be and still be considered valid</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("pattern")}}</code></td>
-   <td>A regular expression the input's contents must match in order to be valid</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("placeholder")}}</code></td>
-   <td>An exemplar value to display in the input field whenever it is empty</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("readonly")}}</code></td>
-   <td>A Boolean attribute indicating whether or not the contents of the input should be read-only</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("size")}}</code></td>
-   <td>A number indicating how many characters wide the input field should be</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("spellcheck")}}</code></td>
-   <td>Controls whether or not to enable spell checking for the input field, or if the default spell checking configuration should be used</td>
-  </tr>
- </tbody>
-</table>
-
-<h3 id="attr-list"><code id="list">list</code></h3>
+<h3>list</h3>
 
 <p>The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The {{HTMLElement("datalist")}} provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the {{htmlattrxref("type", "input")}} are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.</p>
 
-<h3 id="attr-maxlength"><code id="maxlength">maxlength</code></h3>
+<h3>maxlength</h3>
 
 <p>The maximum number of characters (as UTF-16 code units) the user can enter into the search field. This must be an integer value 0 or higher. If no <code>maxlength</code> is specified, or an invalid value is specified, the search field has no maximum length. This value must also be greater than or equal to the value of <code>minlength</code>.</p>
 
 <p>The input will fail <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a> if the length of the text entered into the field is greater than <code>maxlength</code> UTF-16 code units long.</p>
 
-<h3 id="attr-minlength"><code id="minlength">minlength</code></h3>
+<h3>minlength</h3>
 
 <p>The minimum number of characters (as UTF-16 code units) the user can enter into the search field. This must be a non-negative integer value smaller than or equal to the value specified by <code>maxlength</code>. If no <code>minlength</code> is specified, or an invalid value is specified, the search input has no minimum length.</p>
 
 <p>The search field will fail <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a> if the length of the text entered into the field is fewer than <code>minlength</code> UTF-16 code units long.</p>
 
-<h3 id="attr-pattern"><code id="pattern">pattern</code></h3>
+<h3>pattern</h3>
 
 <p>The <code>pattern</code> attribute, when specified, is a regular expression that the input's {{htmlattrxref("value")}} must match in order for the value to pass <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a>. It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">guide on regular expressions</a>; the <code>'u'</code> flag is specified when compiling the regular expression, so that the pattern is treated as a sequence of Unicode code points, instead of as ASCII. No forward slashes should be specified around the pattern text.</p>
 
@@ -126,7 +83,7 @@ browser-compat: html.elements.input.input-search
 
 <p>See the section {{anch("Specifying a pattern")}} for details and an example.</p>
 
-<h3><code>placeholder</code></h3>
+<h3>placeholder</h3>
 
 <p>The <code>placeholder</code> attribute is a string that provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that demonstrates the expected type of data, rather than an explanatory message. The text <em>must not</em> include carriage returns or line feeds.</p>
 
@@ -136,7 +93,7 @@ browser-compat: html.elements.input.input-search
 <p><strong>Note:</strong> Avoid using the <code>placeholder</code> attribute if you can. It is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content. See {{SectionOnPage("/en-US/docs/Web/HTML/Element/input", "Labels and placeholders")}} for more information.</p>
 </div>
 
-<h3><code>readonly</code></h3>
+<h3>readonly</h3>
 
 <p>A Boolean attribute which, if present, means this field cannot be edited by the user. Its <code>value</code> can, however, still be changed by JavaScript code directly setting the {{domxref("HTMLInputElement")}} <code>value</code> property.</p>
 
@@ -144,13 +101,13 @@ browser-compat: html.elements.input.input-search
 <p><strong>Note:</strong> Because a read-only field cannot have a value, <code>required</code> does not have any effect on inputs with the <code>readonly</code> attribute also specified.</p>
 </div>
 
-<h3><code>size</code></h3>
+<h3>size</h3>
 
 <p>The <code>size</code> attribute is a numeric value indicating how many characters wide the input field should be. The value must be a number greater than zero, and the default value is 20. Since character widths vary, this may or may not be exact and should not be relied upon to be so; the resulting input may be narrower or wider than the specified number of characters, depending on the characters and the font ({{cssxref("font")}} settings in use).</p>
 
 <p>This does <em>not</em> set a limit on how many characters the user can enter into the field. It only specifies approximately how many can be seen at a time. To set an upper limit on the length of the input data, use the <code>{{anch("maxlength")}}</code> attribute.</p>
 
-<h3 id="attr-spellcheck"><code id="spellcheck">spellcheck</code></h3>
+<h3>spellcheck</h3>
 
 <p><code>spellcheck</code> is a global attribute which is used to indicate whether or not to enable spell checking for an element. It can be used on any editable content, but here we consider specifics related to the use of <code>spellcheck</code> on {{HTMLElement("input")}} elements. The permitted values for <code>spellcheck</code> are:</p>
 
@@ -171,34 +128,7 @@ browser-compat: html.elements.input.input-search
 
 <p>The following non-standard attributes are available to search input fields. As a general rule, you should avoid using them unless it can't be helped.</p>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Attribute</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>{{anch("autocorrect")}}</code></td>
-   <td>Whether or not to allow autocorrect while editing this input field. <strong>Safari only.</strong></td>
-  </tr>
-  <tr>
-   <td><code>{{anch("incremental")}}</code></td>
-   <td>Whether or not to send repeated {{event("search")}} events to allow updating live search results while the user is still editing the value of the field. <strong>WebKit and Blink only (Safari, Chrome, Opera, etc.).</strong></td>
-  </tr>
-  <tr>
-   <td><code>{{anch("mozactionhint")}}</code></td>
-   <td>A string indicating the type of action that will be taken when the user presses the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the field; this is used to determine an appropriate label for that key on a virtual keyboard. <strong>Firefox for Android only.</strong></td>
-  </tr>
-  <tr>
-   <td><code>{{anch("results")}}</code></td>
-   <td>The maximum number of items that should be displayed in the drop-down list of previous search queries. <strong>Safari only.</strong></td>
-  </tr>
- </tbody>
-</table>
-
-<h3 id="attr-autocorrect"><code id="autocorrect">autocorrect</code>> {{non-standard_inline}}</h3>
+<h3>autocorrect</h3>
 
 <p>A Safari extension, the <code>autocorrect</code> attribute is a string which indicates whether or not to activate automatic correction while the user is editing this field. Permitted values are:</p>
 
@@ -209,7 +139,7 @@ browser-compat: html.elements.input.input-search
  <dd>Disable automatic correction and text substitutions.</dd>
 </dl>
 
-<h3 id="attr-incremental"><code id="incremental">incremental</code> {{non-standard_inline}}</h3>
+<h3>incremental</h3>
 
 <p>The Boolean attribute <code>incremental</code> is a WebKit and Blink extension (so supported by Safari, Opera, Chrome, etc.) which, if present, tells the {{Glossary("user agent")}} to process the input as a live search. As the user edits the value of the field, the user agent sends {{event("search")}} events to the {{domxref("HTMLInputElement")}} object representing the search box. This allows your code to update the search results in real time as the user edits the search.</p>
 
@@ -217,7 +147,7 @@ browser-compat: html.elements.input.input-search
 
 <p>The <code>search</code> event is rate-limited so that it is not sent more frequently than an implementation-defined interval.</p>
 
-<h3 id="attr-mozactionhint"><code id="mozactionhint">mozactionhint</code> {{non-standard_inline}}</h3>
+<h3>mozactionhint</h3>
 
 <p>A Mozilla extension, supported by Firefox for Android, which provides a hint as to what sort of action will be taken if the user presses the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the field. This information is used to decide what kind of label to use on the <kbd>Enter</kbd> key on the virtual keyboard.</p>
 
@@ -227,7 +157,7 @@ browser-compat: html.elements.input.input-search
 
 <p>Permitted values are: <code>go</code>, <code>done</code>, <code>next</code>, <code>search</code>, and <code>send</code>. The browser decides, using this hint, what label to put on the enter key.</p>
 
-<h3 id="attr-results"><code id="results">results</code> {{non-standard_inline}}</h3>
+<h3>results</h3>
 
 <p>The <code>results</code> attribute—supported only by Safari—is a numeric value that lets you override the maximum number of entries to be displayed in the {{HTMLElement("input")}} element's natively-provided drop-down menu of previous search queries.</p>
 
@@ -253,7 +183,7 @@ browser-compat: html.elements.input.input-search
 <p><code>q</code> is the most common <code>name</code> given to search inputs, although it's not mandatory. When submitted, the data name/value pair sent to the server will be <code>q=searchterm</code>.</p>
 
 <div class="note">
-<p>You must remember to set a {{htmlattrxref("name", "input")}} for your input, otherwise nothing will be submitted.</p>
+<p><strong>Note:</strong> You must remember to set a {{htmlattrxref("name", "input")}} for your input, otherwise nothing will be submitted.</p>
 </div>
 
 <h3 id="Differences_between_search_and_text_types">Differences between search and text types</h3>
@@ -311,7 +241,7 @@ browser-compat: html.elements.input.input-search
 <p>There is no visual difference from the previous example, but screenreader users have way more information available to them.</p>
 
 <div class="note">
-<p><strong>Note</strong>: See <a href="/en-US/docs/Learn/Accessibility/WAI-ARIA_basics#signpostslandmarks">Signposts/Landmarks</a> for more information about such accessibility features.</p>
+<p><strong>Note:</strong> See <a href="/en-US/docs/Learn/Accessibility/WAI-ARIA_basics#signpostslandmarks">Signposts/Landmarks</a> for more information about such accessibility features.</p>
 </div>
 
 <h3 id="Physical_input_element_size">Physical input element size</h3>
@@ -335,7 +265,7 @@ browser-compat: html.elements.input.input-search
 <p><code>&lt;input&gt;</code> elements of type <code>search</code> have the same validation features available to them as regular <code>text</code> inputs. It is less likely that you'd want to use validation features in general for search boxes. In many cases, users should just be allowed to search for anything, but there are a few cases to consider, such as searches against data of a known format.</p>
 
 <div class="note">
-<p><strong>Note</strong>: HTML form validation is <em>not</em> a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data (or data which is too large, is of the wrong type, and so forth) is entered into your database.</p>
+<p><strong>Note:</strong> HTML form validation is <em>not</em> a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data (or data which is too large, is of the wrong type, and so forth) is entered into your database.</p>
 </div>
 
 <h3 id="A_note_on_styling">A note on styling</h3>
@@ -369,8 +299,7 @@ input:valid ~ span:after {
   &lt;/div&gt;
 &lt;/form&gt;</pre>
 
-<div class="hidden">
-<pre class="brush: css">input {
+<pre class="brush: css hidden">input {
   margin-right: 10px;
 }
 
@@ -385,7 +314,6 @@ input:valid ~ span:after {
     padding-left: 5px;
     position: absolute;
 }</pre>
-</div>
 
 <p>This renders like so:</p>
 
@@ -414,8 +342,7 @@ input:valid ~ span:after {
   &lt;/div&gt;
 &lt;/form&gt;</pre>
 
-<div class="hidden">
-<pre class="brush: css">input {
+<pre class="brush: css hidden">input {
   margin-right: 10px;
 }
 
@@ -430,7 +357,6 @@ input:valid ~ span:after {
     padding-left: 5px;
     position: absolute;
 }</pre>
-</div>
 
 <p>This renders like so:</p>
 
@@ -455,8 +381,7 @@ input:valid ~ span:after {
   &lt;/div&gt;
 &lt;/form&gt;</pre>
 
-<div class="hidden">
-<pre class="brush: css">input {
+<pre class="brush: css hidden">input {
   margin-right: 10px;
 }
 
@@ -471,7 +396,6 @@ input:valid ~ span:after {
     padding-left: 5px;
     position: absolute;
 }</pre>
-</div>
 
 <p>This renders like so:</p>
 

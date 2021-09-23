@@ -2153,7 +2153,7 @@
 /en-US/docs/DOM/window.locationbar	/en-US/docs/Web/API/Window/locationbar
 /en-US/docs/DOM/window.matchMedia	/en-US/docs/Web/API/Window/matchMedia
 /en-US/docs/DOM/window.menubar	/en-US/docs/Web/API/Window/menubar
-/en-US/docs/DOM/window.minimize	/en-US/docs/Web/API/Window/minimize
+/en-US/docs/DOM/window.minimize	/en-US/docs/Web/API/Window
 /en-US/docs/DOM/window.moveBy	/en-US/docs/Web/API/Window/moveBy
 /en-US/docs/DOM/window.moveTo	/en-US/docs/Web/API/Window/moveTo
 /en-US/docs/DOM/window.mozAnimationStartTime	/en-US/docs/Web/API/Window/mozAnimationStartTime
@@ -3338,7 +3338,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.locationbar	/en-US/docs/Web/API/Window/locationbar
 /en-US/docs/Document_Object_Model_(DOM)/window.matchMedia	/en-US/docs/Web/API/Window/matchMedia
 /en-US/docs/Document_Object_Model_(DOM)/window.menubar	/en-US/docs/Web/API/Window/menubar
-/en-US/docs/Document_Object_Model_(DOM)/window.minimize	/en-US/docs/Web/API/Window/minimize
+/en-US/docs/Document_Object_Model_(DOM)/window.minimize	/en-US/docs/Web/API/Window
 /en-US/docs/Document_Object_Model_(DOM)/window.moveBy	/en-US/docs/Web/API/Window/moveBy
 /en-US/docs/Document_Object_Model_(DOM)/window.moveTo	/en-US/docs/Web/API/Window/moveTo
 /en-US/docs/Document_Object_Model_(DOM)/window.mozAnimationStartTime	/en-US/docs/Web/API/Window/mozAnimationStartTime
@@ -5723,6 +5723,7 @@
 /en-US/docs/Mozilla/MathML_Project/Fonts	/en-US/docs/Web/MathML/Fonts
 /en-US/docs/Mozilla/Performance/Scroll-linked_effects	https://firefox-source-docs.mozilla.org/performance/scroll-linked_effects.html
 /en-US/docs/Mozilla/QA/Bug_writing_guidelines	https://bugzilla.mozilla.org/page.cgi?id=bug-writing.html
+/en-US/docs/Mozilla/Tech/Xray_vision	https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html
 /en-US/docs/Mozilla/Virtualenv	https://github.com/mdn/archived-content/tree/main/files/en-us/mozilla/virtualenv
 /en-US/docs/Mozilla_CSS_Extensions	/en-US/docs/Web/CSS/Mozilla_Extensions
 /en-US/docs/Mozilla_MathML_Project/Authoring	/en-US/docs/Web/MathML/Authoring
@@ -8455,6 +8456,10 @@
 /en-US/docs/Web/API/ScriptProcessorNode.bufferSize	/en-US/docs/Web/API/ScriptProcessorNode/bufferSize
 /en-US/docs/Web/API/ScriptProcessorNode.onaudioprocess	/en-US/docs/Web/API/ScriptProcessorNode/onaudioprocess
 /en-US/docs/Web/API/ScriptProcessorNode/audioprocess	/en-US/docs/Web/API/ScriptProcessorNode/audioprocess_event
+/en-US/docs/Web/API/ScrollToOptions	/en-US/docs/Web/API/Window/scroll
+/en-US/docs/Web/API/ScrollToOptions/behavior	/en-US/docs/Web/API/Window/scroll
+/en-US/docs/Web/API/ScrollToOptions/left	/en-US/docs/Web/API/Window/scroll
+/en-US/docs/Web/API/ScrollToOptions/top	/en-US/docs/Web/API/Window/scroll
 /en-US/docs/Web/API/Selection.addRange	/en-US/docs/Web/API/Selection/addRange
 /en-US/docs/Web/API/Selection.anchorNode	/en-US/docs/Web/API/Selection/anchorNode
 /en-US/docs/Web/API/Selection.anchorOffset	/en-US/docs/Web/API/Selection/anchorOffset
@@ -8850,6 +8855,7 @@
 /en-US/docs/Web/API/Window/convertPointFromPageToNode	/en-US/docs/Web/API/Window/webkitConvertPointFromPageToNode
 /en-US/docs/Web/API/Window/fetch	/en-US/docs/Web/API/fetch
 /en-US/docs/Web/API/Window/indexedDB	/en-US/docs/Web/API/indexedDB
+/en-US/docs/Web/API/Window/minimize	/en-US/docs/Web/API/Window
 /en-US/docs/Web/API/Window/mozRequestAnimationFrame	/en-US/docs/Web/API/window/requestAnimationFrame
 /en-US/docs/Web/API/Window/onabort	/en-US/docs/Web/API/GlobalEventHandlers/onabort
 /en-US/docs/Web/API/Window/onafterprint	/en-US/docs/Web/API/WindowEventHandlers/onafterprint
@@ -9401,7 +9407,7 @@
 /en-US/docs/Web/API/window.locationbar	/en-US/docs/Web/API/Window/locationbar
 /en-US/docs/Web/API/window.matchMedia	/en-US/docs/Web/API/Window/matchMedia
 /en-US/docs/Web/API/window.menubar	/en-US/docs/Web/API/Window/menubar
-/en-US/docs/Web/API/window.minimize	/en-US/docs/Web/API/Window/minimize
+/en-US/docs/Web/API/window.minimize	/en-US/docs/Web/API/Window
 /en-US/docs/Web/API/window.moveBy	/en-US/docs/Web/API/Window/moveBy
 /en-US/docs/Web/API/window.moveTo	/en-US/docs/Web/API/Window/moveTo
 /en-US/docs/Web/API/window.mozAnimationStartTime	/en-US/docs/Web/API/Window/mozAnimationStartTime
@@ -11622,6 +11628,7 @@
 /en-US/docs/XSL_Transformations_in_Mozilla_FAQ	/en-US/docs/Web/API/XSLTProcessor/XSL_Transformations_in_Mozilla_FAQ
 /en-US/docs/XSL_Transformations_in_Mozilla_FAQ_(external)	/en-US/docs/Web/API/XSLTProcessor/XSL_Transformations_in_Mozilla_FAQ
 /en-US/docs/XSL_Transforms	/en-US/docs/Web/API/XSLTProcessor
+/en-US/docs/Xray_vision	https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html
 /en-US/docs/acceptCharset	/en-US/docs/Web/API/HTMLFormElement/acceptCharset
 /en-US/docs/adData	/en-US/docs/Web/API/Web_Bluetooth_API
 /en-US/docs/addEventListener	/en-US/docs/Web/API/EventTarget/addEventListener

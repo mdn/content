@@ -49,7 +49,7 @@ Logical properties and values use the abstract terms _block_ and _inline_ to des
 - {{CSSxRef("border-block-start-width")}}
 - {{CSSxRef("border-block-style")}}
 - {{CSSxRef("border-block-width")}}
-- {{CSSxRef("border-color")}} (`logical` {{Experimental_Inline}} keyword)
+- {{CSSxRef("border-color")}}
 - {{CSSxRef("border-inline")}}
 - {{CSSxRef("border-inline-color")}}
 - {{CSSxRef("border-inline-end")}}
@@ -66,8 +66,8 @@ Logical properties and values use the abstract terms _block_ and _inline_ to des
 - {{CSSxRef("border-start-end-radius")}}
 - {{CSSxRef("border-end-start-radius")}}
 - {{CSSxRef("border-end-end-radius")}}
-- {{CSSxRef("border-style")}} (`logical` {{Experimental_Inline}} keyword)
-- {{CSSxRef("border-width")}} (`logical` {{Experimental_Inline}} keyword)
+- {{CSSxRef("border-style")}}
+- {{CSSxRef("border-width")}}
 - {{CSSxRef("margin")}} (`logical` {{Experimental_Inline}} keyword)
 - {{CSSxRef("margin-block")}}
 - {{CSSxRef("margin-block-end")}}
@@ -107,10 +107,10 @@ Logical properties and values use the abstract terms _block_ and _inline_ to des
 
 ### Deprecated properties
 
-- {{CSSxRef("offset-block-end")}} {{Non-standard_Inline}} {{Deprecated_Inline}} (now {{CSSxRef("inset-block-end")}} {{Experimental_Inline}})
-- {{CSSxRef("offset-block-start")}} {{Non-standard_Inline}} {{Deprecated_Inline}} (now {{CSSxRef("inset-block-start")}} {{Experimental_Inline}})
-- {{CSSxRef("offset-inline-end")}} {{Non-standard_Inline}} {{Deprecated_Inline}} (now {{CSSxRef("inset-inline-end")}} {{Experimental_Inline}})
-- {{CSSxRef("offset-inline-start")}} {{Non-standard_Inline}} {{Deprecated_Inline}} (now {{CSSxRef("inset-inline-start")}} {{Experimental_Inline}})
+- {{CSSxRef("offset-block-end")}} {{Non-standard_Inline}} {{Deprecated_Inline}} (now {{CSSxRef("inset-block-end")}})
+- {{CSSxRef("offset-block-start")}} {{Non-standard_Inline}} {{Deprecated_Inline}} (now {{CSSxRef("inset-block-start")}})
+- {{CSSxRef("offset-inline-end")}} {{Non-standard_Inline}} {{Deprecated_Inline}} (now {{CSSxRef("inset-inline-end")}})
+- {{CSSxRef("offset-inline-start")}} {{Non-standard_Inline}} {{Deprecated_Inline}} (now {{CSSxRef("inset-inline-start")}})
 
 ## Guides
 
@@ -126,13 +126,5 @@ Logical properties and values use the abstract terms _block_ and _inline_ to des
 | {{SpecName("CSS Logical Properties")}} | {{Spec2("CSS Logical Properties")}} | Initial definition. |
 
 ## Browser compatibility
-
-In general:
-
-- Firefox has support for the mapped properties — where there is a direct mapping from the physical to the logical version.
-- Chrome, from version 69, has support for the mapped properties.
-- Edge, from version 79, has the same support as Chrome.
-- Firefox 66 introduces support for two value shorthands, also behind a flag in Chrome.
-- Internet Explorer has no support.
 
 See the individual property pages for full compatibility information.
