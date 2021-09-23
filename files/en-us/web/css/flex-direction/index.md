@@ -77,13 +77,13 @@ Using the `flex-direction` property with values of `row-reverse` or `column-reve
 
 ```html
 <h4>This is a Column-Reverse</h4>
-<div id="content col-rev">
+<div id="col-rev" class="content">
   <div class="box red">A</div>
   <div class="box lightblue">B</div>
   <div class="box yellow">C</div>
 </div>
 <h4>This is a Row-Reverse</h4>
-<div id="content row-rev">
+<div id="row-rev" class="content">
   <div class="box red">A</div>
   <div class="box lightblue">B</div>
   <div class="box yellow">C</div>
@@ -93,7 +93,7 @@ Using the `flex-direction` property with values of `row-reverse` or `column-reve
 #### CSS
 
 ```css
-#content {
+.content {
   width: 200px;
   height: 200px;
   border: 1px solid #c3c3c3;
