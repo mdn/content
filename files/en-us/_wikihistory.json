@@ -89059,21 +89059,6 @@
       "wbamberg"
     ]
   },
-  "Web/API/Window/minimize": {
-    "modified": "2020-10-15T21:13:06.423Z",
-    "contributors": [
-      "mfuji09",
-      "mfluehr",
-      "lucian95",
-      "fscholz",
-      "teoli",
-      "cpigat",
-      "libreGeekingKid",
-      "Sheppy",
-      "ethertank",
-      "wellington7"
-    ]
-  },
   "Web/API/Window/moveBy": {
     "modified": "2020-10-15T21:09:31.878Z",
     "contributors": [
