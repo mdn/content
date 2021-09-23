@@ -19,7 +19,7 @@ browser-compat: html.elements.input.input-month
 ---
 <div>{{HTMLRef("Input_types")}}</div>
 
-<p><span class="seoSummary">{{HTMLElement("input")}} elements of type <strong><code>month</code></strong> create input fields that let the user enter a month and year allowing a month and year to be easily entered. The value is a string whose value is in the format "<code>YYYY-MM</code>", where <code>YYYY</code> is the four-digit year and <code>MM</code> is the month number.</span></p>
+<p>{{HTMLElement("input")}} elements of type <strong><code>month</code></strong> create input fields that let the user enter a month and year allowing a month and year to be easily entered. The value is a string whose value is in the format "<code>YYYY-MM</code>", where <code>YYYY</code> is the four-digit year and <code>MM</code> is the month number.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-month.html", "tabbed-shorter")}}</div>
 
@@ -27,11 +27,11 @@ browser-compat: html.elements.input.input-month
 
 <p>For those of you using a browser that doesn't support <code>month</code>, the screenshot below shows what it looks like in Chrome and Opera. Clicking the down arrow on the right hand side brings up a date picker that lets you select the month and year.</p>
 
-<p><img alt="" src="month-control-chrome.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="month-control-chrome.png"></p>
 
 <p>The Microsoft Edge <code>month</code> control looks like this:</p>
 
-<p><img alt="" src="month-control-edge.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="month-control-edge.png"></p>
 
 <table class="properties">
  <tbody>
@@ -62,83 +62,52 @@ browser-compat: html.elements.input.input-month
 
 <p>A {{domxref("DOMString")}} representing the value of the month and year entered into the input, in the form YYYY-MM (four or more digit year, then a hyphen ("<code>-</code>"), followed by the two-digit month). The format of the month string used by this input type is described in {{SectionOnPage("/en-US/docs/Web/HTML/Date_and_time_formats", "Format of a valid local month string")}}.</p>
 
+<h3>Setting a default value</h3>
+
 <p>You can set a default value for the input control by including a month and year inside the {{htmlattrxref("value", "input")}} attribute, like so:</p>
 
-<div id="value-example-1">
 <pre class="brush: html">&lt;label for="bday-month"&gt;What month were you born in?&lt;/label&gt;
 &lt;input id="bday-month" type="month" name="bday-month" value="2017-06"&gt;</pre>
 
-<p>{{EmbedLiveSample('value-example-1', 600, 60)}}</p>
-</div>
+<p>{{EmbedLiveSample('Setting_a_default_value', 600, 60)}}</p>
 
 <p>One thing to note is that the displayed date format differs from the actual <code>value</code>; most {{Glossary("user agent", "user agents")}} display the month and year in a locale-appropriate form, based on the set locale of the user's operating system, whereas the date <code>value</code> is always formatted <code>yyyy-MM</code>.</p>
 
 <p>When the above value is submitted to the server, for example, it will look like <code>bday-month=1978-06</code>.</p>
 
+<h3>Setting the value using JavaScript</h3>
+
 <p>You can also get and set the date value in JavaScript using the {{domxref("HTMLInputElement.value")}} property, for example:</p>
 
-<div id="value-example-2">
-<div class="hidden">
 <pre class="brush: html">&lt;label for="bday-month"&gt;What month were you born in?&lt;/label&gt;
 &lt;input id="bday-month" type="month" name="bday-month" value="2017-06"&gt;</pre>
-</div>
 
 <pre class="brush: js">var monthControl = document.querySelector('input[type="month"]');
 monthControl.value = '1978-06';</pre>
 
-<p>{{EmbedLiveSample("value-example-2", 600, 60)}}</p>
-</div>
+<p>{{EmbedLiveSample("Setting_the_value_using_JavaScript", 600, 60)}}</p>
 
 <h2 id="Additional_attributes">Additional attributes</h2>
 
-<p>In addition to the attributes common to {{HTMLElement("input")}} elements, month inputs offer the following attributes:</p>
+<p>In addition to the attributes common to {{HTMLElement("input")}} elements, month inputs offer the following attributes.</p>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Attribute</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>{{anch("list")}}</code></td>
-   <td>The id of the &lt;datalist&gt; element that contains the optional pre-defined autocomplete options</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("max")}}</code></td>
-   <td>The latest year and month to accept as a valid input</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("min")}}</code></td>
-   <td>The earliest year and month to accept as a valid input</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("readonly")}}</code></td>
-   <td>A Boolean which, if present, indicates that the input's value can't be edited</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("step")}}</code></td>
-   <td>A stepping interval to use when incrementing and decrementing the value of the input field</td>
-  </tr>
- </tbody>
-</table>
+<h3>list</h3>
 
-<p id="attr-list">{{page("/en-US/docs/Web/HTML/Element/input/text", "attr-list", 0, 1, 2)}}</p>
+<p>The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The {{HTMLElement("datalist")}} provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the {{htmlattrxref("type", "input")}} are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.</p>
 
-<h3 id="attr-max"><code id="max">max</code></h3>
+<h3>max</h3>
 
 <p>The latest year and month, in the string format discussed in the {{anch("Value")}} section above, to accept. If the {{htmlattrxref("value", "input")}} entered into the element exceeds this, the element fails <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a>. If the value of the <code>max</code> attribute isn't a valid string in "<code>yyyy-MM</code>" format, then the element has no maximum value.</p>
 
 <p>This value must specify a year-month pairing later than or equal to the one specified by the <code>min</code> attribute.</p>
 
-<h3 id="attr-min"><code id="min">min</code></h3>
+<h3>min</h3>
 
 <p>The latest year and month to accept, in the same "<code>yyyy-MM</code>" format described above. If the {{htmlattrxref("value", "input")}} of the element is less than this, the element fails <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a>. If a value is specified for <code>min</code> that isn't a valid year and month string, the input has no minimum value.</p>
 
 <p>This value must be a year-month pairing which is earlier than or equal to the one specified by the <code>max</code> attribute.</p>
 
-<h3 id="attr-readonly"><code id="readonly">readonly</code></h3>
+<h3>readonly</h3>
 
 <p>A Boolean attribute which, if present, means this field cannot be edited by the user. Its <code>value</code> can, however, still be changed from JavaScript code that directly sets the value of the {{domxref("HTMLInputElement.value")}} property.</p>
 
@@ -146,9 +115,15 @@ monthControl.value = '1978-06';</pre>
 <p><strong>Note:</strong> Because a read-only field cannot have a value, <code>required</code> does not have any effect on inputs with the <code>readonly</code> attribute also specified.</p>
 </div>
 
-<h3 id="attr-step"><code id="step">step</code></h3>
+<h3>step</h3>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/number", "step-include")}}</p>
+<p>The <code>step</code> attribute is a number that specifies the granularity that the value must adhere to, or the special value <code>any</code>, which is described below. Only values which are equal to the basis for stepping (<code>{{anch("min")}}</code> if specified, {{htmlattrxref("value", "input")}} otherwise, and an appropriate default value if neither of those is provided) are valid.</p>
+
+<p>A string value of <code>any</code> means that no stepping is implied, and any value is allowed (barring other constraints, such as <code>{{anch("min")}}</code> and <code>{{anch("max")}}</code>).</p>
+
+<div class="note">
+<p><strong>Note:</strong> When the data entered by the user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round to the nearest valid value, preferring numbers in the positive direction when there are two equally close options.</p>
+</div>
 
 <p>For <code>month</code> inputs, the value of <code>step</code> is given in months, with a scaling factor of 1 (since the underlying numeric value is also in months). The default value of <code>step</code> is 1 month.</p>
 
@@ -218,7 +193,7 @@ monthControl.value = '1978-06';</pre>
 
 <p>Here's a screenshot for those of you who aren't using a supporting browser:</p>
 
-<p><img alt="" src="month-required.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="month-required.png"></p>
 
 <p>Here's the CSS used in the above example. Here we make use of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS properties to style the input based on whether or not the current value is valid. We had to put the icons on a {{htmlelement("span")}} next to the input, not on the input itself, because in Chrome the generated content is placed inside the form control, and can't be styled or shown effectively.</p>
 
@@ -255,7 +230,7 @@ input:valid+span:after {
 
 <p>As mentioned above, the major problem with using date inputs at the time of writing is that many major browsers don't yet implement them all; only Chrome/Opera and Edge support it on desktop, and most modern browsers on mobile. As an example, the <code>month</code> picker on Chrome for Android looks like this:</p>
 
-<p><img alt="" src="month-android.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="month-android.png"></p>
 
 <p>Non-supporting browsers gracefully degrade to a text input, but this creates problems both in terms of consistency of user interface (the presented control will be different), and data handling.</p>
 
@@ -291,8 +266,7 @@ input:valid+span:after {
 
 <p>There's also the problem that the user won't necessarily know which of the many date formats is expected. We have work left to do.</p>
 
-<div class="hidden">
-<pre class="brush: css">div {
+<pre class="brush: css hidden">div {
   margin-bottom: 10px;
   position: relative;
 }
@@ -316,7 +290,6 @@ input:valid+span:after {
   content: '✓';
   padding-left: 5px;
 }</pre>
-</div>
 
 <p>The best way to deal with dates in forms in a cross-browser way (until all of the major browsers have supported them for a while) is to get the user to enter the month and year in separate controls ({{htmlelement("select")}} elements being popular; see below for an implementation), or use JavaScript libraries such as the <a href="https://jqueryui.com/datepicker/">jQuery date picker</a> plugin.</p>
 
@@ -369,8 +342,7 @@ input:valid+span:after {
 
 <p>The <code>&lt;select&gt;</code> for choosing the month is hardcoded with the names of the months, as they don't change (leaving localization out of things). The list of available year values is dynamically generated depending on the current year (see the code comments below for detailed explanations of how these functions work).</p>
 
-<div class="hidden">
-<pre class="brush: css">div {
+<pre class="brush: css hidden">div {
   margin-bottom: 10px;
   position: relative;
 }
@@ -394,7 +366,6 @@ input:valid+span:after {
   content: '✓';
   padding-left: 5px;
 }</pre>
-</div>
 
 <h3 id="JavaScript">JavaScript</h3>
 
@@ -449,7 +420,7 @@ function populateYears() {
 }</pre>
 
 <div class="note">
-<p><strong>Note</strong>: Remember that some years have 53 weeks in them (see <a href="https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year">Weeks per year</a>)! You'll need to take this into consideration when developing production apps.</p>
+<p><strong>Note:</strong> Remember that some years have 53 weeks in them (see <a href="https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year">Weeks per year</a>)! You'll need to take this into consideration when developing production apps.</p>
 </div>
 
 <h2 id="Specifications">Specifications</h2>

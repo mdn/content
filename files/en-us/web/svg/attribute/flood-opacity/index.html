@@ -11,7 +11,7 @@ browser-compat: svg.attributes.presentation.flood-opacity
 
 <p>The <strong><code>flood-opacity</code></strong> attribute indicates the opacity value to use across the current filter primitive subregion.</p>
 
-<p class="note"><strong>Note:</strong> As a presentation attribute, <code>flood-opacity</code> can be used as a CSS property.</p>
+<div class="note"><p><strong>Note:</strong> As a presentation attribute, <code>flood-opacity</code> can be used as a CSS property.</p></div>
 
 <p>You can use this attribute with the following SVG elements:</p>
 
@@ -19,12 +19,11 @@ browser-compat: svg.attributes.presentation.flood-opacity
   <li>{{SVGElement("feFlood")}} and {{SVGElement("feDropShadow")}}</li>
 </ul>
 
-<div id="topExample">
-<div class="hidden">
-<pre class="brush: css">html, body, svg {
+<h2>Example</h2>
+
+<pre class="brush: css hidden">html, body, svg {
   height: 100%;
 }</pre>
-</div>
 
 <pre class="brush: html; highlight[3,6]">&lt;svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;filter id="flood1"&gt;
@@ -38,8 +37,7 @@ browser-compat: svg.attributes.presentation.flood-opacity
   &lt;rect x="0" y="0" width="200" height="200" style="filter: url(#flood2); transform: translateX(220px);" /&gt;
 &lt;/svg&gt;</pre>
 
-<p>{{EmbedLiveSample("topExample", "420", "200")}}</p>
-</div>
+<p>{{EmbedLiveSample("Example", "420", "200")}}</p>
 
 <h2 id="Usage_notes">Usage notes</h2>
 

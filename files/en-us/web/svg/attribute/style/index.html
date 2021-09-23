@@ -8,14 +8,13 @@ browser-compat: svg.attributes.style.style
 ---
 <div>{{SVGRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>style</code></strong> attribute allows to style an element using {{Glossary("CSS")}} declarations. It functions identically to <a href="/en-US/docs/Web/HTML/Global_attributes/style">the <code>style</code> attribute in HTML</a>.</span></p>
+<p>The <strong><code>style</code></strong> attribute allows to style an element using {{Glossary("CSS")}} declarations. It functions identically to <a href="/en-US/docs/Web/HTML/Global_attributes/style">the <code>style</code> attribute in HTML</a>.</p>
 
 <p>You can use this attribute with any SVG element.</p>
 
-<div id="topExample">
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+<h2>Example</h2>
+
+<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
 
 <pre class="brush: html; highlight[3]">&lt;svg viewbox="0 0 100 60" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;rect width="80"  height="40" x="10" y="10"
@@ -23,8 +22,7 @@ browser-compat: svg.attributes.style.style
 &lt;/svg&gt;
 </pre>
 
-<p>{{EmbedLiveSample("topExample", "200", "120")}}</p>
-</div>
+<p>{{EmbedLiveSample("Example", "200", "120")}}</p>
 
 <h2 id="Usage_notes">Usage notes</h2>
 
@@ -47,9 +45,8 @@ browser-compat: svg.attributes.style.style
 
 <dl>
  <dt><code>&lt;style&gt;</code></dt>
- <dd>The syntax of style data depends on the style sheet language. By default, the style sheet language is <a href="/en-US/docs/Web/CSS">CSS</a>.</dd>
- <dd>
- <p class="note"><strong>Note:</strong> In theory, <a href="/en-US/docs/Web/SVG/Attribute/contentStyleType">the <code>contentStyleType</code> attribute</a> could be used to specify styling languages other than CSS, like <a href="/en-US/docs/Web/XSLT">XSL(T)</a>. However, this was never implemented satisfactorily in browsers, so you should not rely on it.</p>
+ <dd>The syntax of style data depends on the style sheet language. By default, the style sheet language is <a href="/en-US/docs/Web/CSS">CSS</a>.
+ <div class="note"><p><strong>Note:</strong> In theory, <a href="/en-US/docs/Web/SVG/Attribute/contentStyleType">the <code>contentStyleType</code> attribute</a> could be used to specify styling languages other than CSS, like <a href="/en-US/docs/Web/XSLT">XSL(T)</a>. However, this was never implemented satisfactorily in browsers, so you should not rely on it.</p></div>
  </dd>
 </dl>
 

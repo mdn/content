@@ -19,7 +19,7 @@ browser-compat: html.elements.input.input-url
 ---
 <div>{{HTMLRef("Input_types")}}</div>
 
-<p><span class="seoSummary">{{HTMLElement("input")}} elements of type <code><strong>url</strong></code> are used to let the user enter and edit a URL.</span></p>
+<p>{{HTMLElement("input")}} elements of type <code><strong>url</strong></code> are used to let the user enter and edit a URL.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-url.html", "tabbed-shorter")}}</div>
 
@@ -65,105 +65,102 @@ browser-compat: html.elements.input.input-url
 
 <h2 id="Additional_attributes">Additional attributes</h2>
 
-<p>In addition to the attributes that operate on all {{HTMLElement("input")}} elements regardless of their type, <code>url</code> inputs support the following attributes:</p>
+<p>In addition to the attributes that operate on all {{HTMLElement("input")}} elements regardless of their type, <code>url</code> inputs support the following attributes.</p>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Attribute</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>{{anch("list")}}</code></td>
-   <td>The id of the &lt;datalist&gt; element that contains the optional pre-defined autocomplete options</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("maxlength")}}</code></td>
-   <td>The maximum number of characters the input should accept</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("minlength")}}</code></td>
-   <td>The minimum number of characters long the input can be and still be considered valid</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("pattern")}}</code></td>
-   <td>A regular expression the input's contents must match in order to be valid</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("placeholder")}}</code></td>
-   <td>An exemplar value to display in the input field whenever it is empty</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("readonly")}}</code></td>
-   <td>A Boolean attribute indicating whether or not the contents of the input should be read-only</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("size")}}</code></td>
-   <td>A number indicating how many characters wide the input field should be</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("spellcheck")}}</code></td>
-   <td>Controls whether or not to enable spell checking for the input field, or if the default spell checking configuration should be used</td>
-  </tr>
- </tbody>
-</table>
+<h3>list</h3>
 
-<p id="attr-list">{{page("/en-US/docs/Web/HTML/Element/input/text", "attr-list", 0, 1, 2)}}</p>
+<p>The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The {{HTMLElement("datalist")}} provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the {{htmlattrxref("type", "input")}} are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.</p>
 
-<h3 id="attr-maxlength"><code id="maxlength">maxlength</code></h3>
+<h3>maxlength</h3>
 
 <p>The maximum number of characters (as UTF-16 code units) the user can enter into the <code>url</code> input. This must be an integer value 0 or higher. If no <code>maxlength</code> is specified, or an invalid value is specified, the <code>url</code> input has no maximum length. This value must also be greater than or equal to the value of <code>minlength</code>.</p>
 
 <p>The input will fail <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a> if the length of the text value of the field is greater than <code>maxlength</code> UTF-16 code units long. Constraint validation is only applied when the value is changed by the user.</p>
 
-<h3 id="attr-minlength"><code id="minlength">minlength</code></h3>
+<h3>minlength</h3>
 
 <p>The minimum number of characters (as UTF-16 code units) the user can enter into the <code>url</code> input. This must be an non-negative integer value smaller than or equal to the value specified by <code>maxlength</code>. If no <code>minlength</code> is specified, or an invalid value is specified, the <code>url</code> input has no minimum length.</p>
 
 <p>The input will fail <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a> if the length of the text entered into the field is fewer than <code>minlength</code> UTF-16 code units long. Constraint validation is only applied when the value is changed by the user.</p>
 
-<h3 id="attr-pattern"><code id="pattern">pattern</code></h3>
+<h3>pattern</h3>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "pattern-include")}}</p>
+<p>The <code>pattern</code> attribute, when specified, is a regular expression that the input's {{htmlattrxref("value")}} must match in order for the value to pass <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a>. It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">guide on regular expressions</a>; the <code>'u'</code> flag is specified when compiling the regular expression, so that the pattern is treated as a sequence of Unicode code points, instead of as ASCII. No forward slashes should be specified around the pattern text.</p>
+
+<p>If the specified pattern is not specified or is invalid, no regular expression is applied and this attribute is ignored completely.</p>
+
+<div class="note">
+<p><strong>Note:</strong> Use the {{htmlattrxref("title", "input")}} attribute to specify text that most browsers will display as a tooltip to explain what the requirements are to match the pattern. You should also include other explanatory text nearby.</p>
+</div>
 
 <p>See the section {{anch("Pattern validation")}} for details and an example.</p>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "attr-placeholder", 0, 1, 2)}}</p>
+<h3>placeholder</h3>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "attr-readonly", 0, 1, 2)}}</p>
+<p>The <code>placeholder</code> attribute is a string that provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that demonstrates the expected type of data, rather than an explanatory message. The text <em>must not</em> include carriage returns or line feeds.</p>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "attr-size", 0, 1, 2)}}</p>
+<p>If the control's content has one directionality ({{Glossary("LTR")}} or {{Glossary("RTL")}}) but needs to present the placeholder in the opposite directionality, you can use Unicode bidirectional algorithm formatting characters to override directionality within the placeholder; see {{SectionOnPage("/en-US/docs/Web/Localization/Unicode_Bidirectional_Text_Algorithm", "Overriding BiDi using Unicode control characters")}} for those characters.</p>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "attr-spellcheck", 0, 1, 2)}}</p>
+<div class="note">
+<p><strong>Note:</strong> Avoid using the <code>placeholder</code> attribute if you can. It is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content. See {{SectionOnPage("/en-US/docs/Web/HTML/Element/input", "Labels and placeholders")}} for more information.</p>
+</div>
+
+<h3>readonly</h3>
+
+<p>A Boolean attribute which, if present, means this field cannot be edited by the user. Its <code>value</code> can, however, still be changed by JavaScript code directly setting the {{domxref("HTMLInputElement")}} <code>value</code> property.</p>
+
+<div class="note">
+<p><strong>Note:</strong> Because a read-only field cannot have a value, <code>required</code> does not have any effect on inputs with the <code>readonly</code> attribute also specified.</p>
+</div>
+
+<h3>size</h3>
+
+<p>The <code>size</code> attribute is a numeric value indicating how many characters wide the input field should be. The value must be a number greater than zero, and the default value is 20. Since character widths vary, this may or may not be exact and should not be relied upon to be so; the resulting input may be narrower or wider than the specified number of characters, depending on the characters and the font ({{cssxref("font")}} settings in use).</p>
+
+<p>This does <em>not</em> set a limit on how many characters the user can enter into the field. It only specifies approximately how many can be seen at a time. To set an upper limit on the length of the input data, use the <code>{{anch("maxlength")}}</code> attribute.</p>
+
+
+<h3>spellcheck</h3>
+
+<p><code>spellcheck</code> is a global attribute which is used to indicate whether or not to enable spell checking for an element. It can be used on any editable content, but here we consider specifics related to the use of <code>spellcheck</code> on {{HTMLElement("input")}} elements. The permitted values for <code>spellcheck</code> are:</p>
+
+<dl>
+ <dt><code>false</code></dt>
+ <dd>Disable spell checking for this element.</dd>
+ <dt><code>true</code></dt>
+ <dd>Enable spell checking for this element.</dd>
+ <dt>"" (empty string) or no value</dt>
+ <dd>Follow the element's default behavior for spell checking. This may be based upon a parent's <code>spellcheck</code> setting or other factors.</dd>
+</dl>
+
+<p>An input field can have spell checking enabled if it doesn't have the {{anch("readonly")}} attribute set and is not disabled.</p>
+
+<p>The value returned by reading <code>spellcheck</code> may not reflect the actual state of spell checking within a control, if the {{Glossary("user agent", "user agent's")}} preferences override the setting.</p>
 
 <h2 id="Non-standard_attributes">Non-standard attributes</h2>
 
 <p>The following non-standard attributes are also available on some browsers. As a general rule, you should avoid using them unless it can't be helped.</p>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Attribute</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>{{anch("autocorrect")}}</code></td>
-   <td>A string indicating whether or not autocorrect is <code>on</code> or <code>off</code>. <strong>Safari only.</strong></td>
-  </tr>
-  <tr>
-   <td><code>{{anch("mozactionhint")}}</code></td>
-   <td>A string indicating the type of action that will be taken when the user presses the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the field; this is used to determine an appropriate label for that key on a virtual keyboard. <strong>Firefox for Android only.</strong></td>
-  </tr>
- </tbody>
-</table>
+<h3>autocorrect</h3>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "attr-autocorrect", 0, 1, 2)}}</p>
+<p>A Safari extension, the <code>autocorrect</code> attribute is a string which indicates whether or not to activate automatic correction while the user is editing this field. Permitted values are:</p>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/text", "attr-mozactionhint", 0, 1, 2)}}</p>
+<dl>
+ <dt><code>on</code></dt>
+ <dd>Enable automatic correction of typos, as well as processing of text substitutions if any are configured.</dd>
+ <dt><code>off</code></dt>
+ <dd>Disable automatic correction and text substitutions.</dd>
+</dl>
+
+<h3>mozactionhint</h3>
+
+<p>A Mozilla extension, supported by Firefox for Android, which provides a hint as to what sort of action will be taken if the user presses the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the field. This information is used to decide what kind of label to use on the <kbd>Enter</kbd> key on the virtual keyboard.</p>
+
+<div class="note">
+<p><strong>Note:</strong> This <a href="https://html.spec.whatwg.org/#input-modalities:-the-enterkeyhint-attribute">has been standardized</a> as the global attribute {{htmlattrxref("enterkeyhint")}}, but is not yet widely implemented. To see the status of the change being implemented in Firefox, see {{bug(1490661)}}.</p>
+</div>
+
+<p>Permitted values are: <code>go</code>, <code>done</code>, <code>next</code>, <code>search</code>, and <code>send</code>. The browser decides, using this hint, what label to put on the enter key.</p>
 
 <h2 id="Using_URL_inputs">Using URL inputs</h2>
 
@@ -172,7 +169,7 @@ browser-compat: html.elements.input.input-url
 <p>It's important, however, to note that this is not enough to ensure that the specified text is a URL which actually exists, corresponds to the user of the site, or is acceptable in any other way. It ensures that the value of the field is properly formatted to be a URL.</p>
 
 <div class="note">
-<p><strong>Note</strong>: It's also crucial to remember that a user can tinker with your HTML behind the scenes, so your site <em>must not</em> use this validation for any security purposes. You <em>must</em> verify the URL on the server-side of any transaction in which the provided text may have any security implications of any kind.</p>
+<p><strong>Note:</strong> A user can tinker with your HTML behind the scenes, so your site <em>must not</em> use this validation for any security purposes. You <em>must</em> verify the URL on the server-side of any transaction in which the provided text may have any security implications of any kind.</p>
 </div>
 
 <h3 id="A_simple_URL_input">A simple URL input</h3>
@@ -224,23 +221,23 @@ browser-compat: html.elements.input.input-url
 <p>{{EmbedLiveSample("Element_value_length", 600, 40) }}</p>
 
 <div class="note">
-<p><strong>Note</strong>: These attributes also affect validation; a value shorter or longer than the specified minimum/maximum lengths will be classified as invalid; in addition most browsers will refuse to let the user enter a value longer than the specified maximum length.</p>
+<p><strong>Note:</strong> These attributes also affect validation; a value shorter or longer than the specified minimum/maximum lengths will be classified as invalid; in addition most browsers will refuse to let the user enter a value longer than the specified maximum length.</p>
 </div>
 
 <h3 id="Providing_default_options">Providing default options</h3>
 
+<h4>Providing a single default using the value attribute</h4>
+
 <p>As always, you can provide a default value for a <code>url</code> input box by setting its {{htmlattrxref("value", "input")}} attribute:</p>
 
-<div id="Default_value">
 <pre class="brush: html">&lt;input id="myURL" name="myURL" type="url"
        value="http://www.example.com"&gt;</pre>
-</div>
 
-<p>{{EmbedLiveSample("Default_value", 600, 40)}}</p>
+<p>{{EmbedLiveSample("Providing_a_single_default_using_the_value_attribute", 600, 40)}}</p>
 
 <h4 id="Offering_suggested_values">Offering suggested values</h4>
 
-<p>Taking it a step farther, you can provide a list of default options from which the user can select by specifying the {{htmlattrxref("list", "input")}} attribute. This doesn't limit the user to those options, but does allow them to select commonly-used URLs more quickly. This also offers hints to {{htmlattrxref("autocomplete", "input")}}. The <code>list</code> attribute specifies the ID of a {{HTMLElement("datalist")}}, which in turn contains one {{HTMLElement("option")}} element per suggested value; each <code>option</code>'s <code>value</code> is the corresponding suggested value for the URL entry box.</p>
+<p>Taking it a step further, you can provide a list of default options from which the user can select by specifying the {{htmlattrxref("list", "input")}} attribute. This doesn't limit the user to those options, but does allow them to select commonly-used URLs more quickly. This also offers hints to {{htmlattrxref("autocomplete", "input")}}. The <code>list</code> attribute specifies the ID of a {{HTMLElement("datalist")}}, which in turn contains one {{HTMLElement("option")}} element per suggested value; each <code>option</code>'s <code>value</code> is the corresponding suggested value for the URL entry box.</p>
 
 <pre class="brush: html">&lt;input id="myURL" name="myURL" type="url"
        list="defaultURLs"&gt;
@@ -292,14 +289,12 @@ browser-compat: html.elements.input.input-url
 
 <p>As mentioned earlier, to make a URL entry required before the form can be submitted (you can't leave the field blank), you just need to include the {{htmlattrxref("required", "input")}} attribute on the input.</p>
 
-<div id="Making_a_URL_required_example">
 <pre class="brush: html">&lt;form&gt;
   &lt;input id="myURL" name="myURL" type="url" required&gt;
   &lt;button&gt;Submit&lt;/button&gt;
 &lt;/form&gt;</pre>
-</div>
 
-<p>{{EmbedLiveSample("Making_a_URL_required_example", 600, 40)}}</p>
+<p>{{EmbedLiveSample("Making_a_URL_required", 600, 40)}}</p>
 
 <p>Try submitting the above form with no value entered to see what happens.</p>
 
@@ -311,8 +306,7 @@ browser-compat: html.elements.input.input-url
 
 <p>Since inputs of type <code>url</code> validate against both the standard URL validation <em>and</em> the specified {{htmlattrxref("pattern", "input")}}, you can implement this easily. Let's see how:</p>
 
-<div class="hidden">
-<pre class="brush: css">div {
+<pre class="brush: css hidden">div {
   margin-bottom: 10px;
   position: relative;
   }
@@ -335,7 +329,6 @@ browser-compat: html.elements.input.input-url
     content: '✓';
     padding-left: 5px;
   }</pre>
-</div>
 
 <pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
@@ -370,7 +363,7 @@ browser-compat: html.elements.input.input-url
 <p>That's why, instead, we specify the string "The URL must be in a myco domain". By doing that, the resulting full error message might be something like "The entered text doesn't match the required pattern. The URL should be in a myco domain."</p>
 
 <div class="note">
-<p><strong>Note</strong>: If you run into trouble while writing your validation regular expressions and they're not working properly, check your browser's console; there may be helpful error messages there to aid you in solving the problem.</p>
+<p><strong>Note:</strong> If you run into trouble while writing your validation regular expressions and they're not working properly, check your browser's console; there may be helpful error messages there to aid you in solving the problem.</p>
 </div>
 
 <h2 id="Examples">Examples</h2>

@@ -14,7 +14,7 @@ browser-compat: svg.attributes.presentation.direction
 
 <p>In many cases, the bidirectional Unicode algorithm produces the desired result automatically, so this attribute doesn't need to be specified in those cases. For other cases, such as when using right-to-left languages, it may be sufficient to add the <code>direction</code> attribute to the outermost {{SVGElement("svg")}} element, and allow that direction to inherit to all text elements:</p>
 
-<p class="note"><strong>Note:</strong> As a presentation attribute, <code>direction</code> can be used as a CSS property. See {{cssxref("direction", "CSS direction")}} for further information.</p>
+<div class="note"><p><strong>Note:</strong> As a presentation attribute, <code>direction</code> can be used as a CSS property. See {{cssxref("direction", "CSS direction")}} for further information.</p></div>
 
 <p>You can use this attribute with the following SVG elements:</p>
 
@@ -26,12 +26,11 @@ browser-compat: svg.attributes.presentation.direction
   <li>{{SVGElement("tspan")}}</li>
 </ul>
 
-<div id="topExample">
-<div class="hidden">
-<pre class="brush: css">html, body, svg {
+<h2>Example</h2>
+
+<pre class="brush: css hidden">html, body, svg {
   height: 100%;
 }</pre>
-</div>
 
 <pre class="brush: html">&lt;svg viewBox="0 0 600 72" xmlns="http://www.w3.org/2000/svg"
     direction="rtl" lang="fa"&gt;
@@ -39,8 +38,6 @@ browser-compat: svg.attributes.presentation.direction
       font-size="36"&gt;داستان SVG 1.1 SE طولا ني است.&lt;/text&gt;
 &lt;/svg&gt;
 </pre>
-
-</div>
 
 <h2 id="Usage_notes">Usage notes</h2>
 

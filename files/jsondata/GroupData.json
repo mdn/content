@@ -839,6 +839,16 @@
       "properties": [],
       "events": []
     },
+    "Layout Instability API": {
+      "overview": ["Layout Instability API"],
+      "interfaces: ": [
+        "LayoutShift",
+        "LayoutShiftAttribution"
+      ],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "Long Tasks API": {
       "overview": ["Long Tasks API"],
       "interfaces": ["PerformanceLongTaskTiming", "TaskAttributionTiming"],
@@ -1222,6 +1232,7 @@
       "events": []
     },
     "Screen Orientation API": {
+      "overview": ["Screen Orientation API"],
       "guides": ["/docs/Web/API/CSS_Object_Model/Managing_screen_orientation"],
       "interfaces": ["ScreenOrientation"],
       "methods": [],
@@ -1676,6 +1687,55 @@
         "Window.customElements"
       ],
       "events": []
+    },
+    "WebCodecs API": {
+      "overview": ["WebCodecs API"],
+      "interfaces": [
+        "AudioData",
+        "AudioDecoder",
+        "AudioEncoder",
+        "AudioEncoderChunk",
+        "EncodedVideoChunk",
+        "ImageDecoder",
+        "ImageTrack",
+        "ImageTrackList",
+        "VideoDecoder",
+        "VideoEncoder",
+        "VideoColorSpace",
+        "VideoFrame"
+      ],
+      "methods": [],
+      "properties": [],
+      "events": [],
+      "dictionaries": [
+        "AudioDataInit",
+        "AudioDataCopyToOptions",
+        "AudioDecoderConfig",
+        "AudioDecoderInit",
+        "AudioDecoderSupport",
+        "AudioEncoderConfig",
+        "AudioEncoderInit",
+        "AudioEncoderSupport",
+        "PlaneLayout",
+        "EncodedAudioChunkInit",
+        "EncodedAudioChunkMetadata",
+        "EncodedVideoChunkInit",
+        "EncodedVideoChunkMetadata",
+        "ImageDecodeOptions",
+        "ImageDecodeResult",
+        "ImageDecoderInit",
+        "SvcOutputMetadata",
+        "VideoColorSpaceInit",
+        "VideoDecoderConfig",
+        "VideoDecoderInit",
+        "VideoDecoderSupport",
+        "VideoEncoderConfig",
+        "VideoEncoderInit",
+        "VideoEncoderSupport",
+        "VideoFrameBufferInit",
+        "VideoFrameCopyToOptions",
+        "VideoFrameInit"
+      ]
     },
     "Web Crypto API": {
       "overview": ["Web Crypto API"],

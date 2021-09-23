@@ -78,7 +78,7 @@ tags:
 
 <p>Each line of the request contains information about it. The first part is called the <strong>header</strong>, and contains useful information about the request, in the same way that an <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML">HTML head</a> contains useful information about an HTML document (but not the actual content itself, which is in the body):</p>
 
-<pre class="brush: http">GET https://developer.mozilla.org/en-US/search?q=client+server+overview&amp;topic=apps&amp;topic=html&amp;topic=css&amp;topic=js&amp;topic=api&amp;topic=webdev HTTP/1.1
+<pre class="brush: http">GET /en-US/search?q=client+server+overview&amp;topic=apps&amp;topic=html&amp;topic=css&amp;topic=js&amp;topic=api&amp;topic=webdev HTTP/1.1
 Host: developer.mozilla.org
 Connection: keep-alive
 Pragma: no-cache
@@ -88,7 +88,7 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
 Referer: https://developer.mozilla.org/en-US/
 Accept-Encoding: gzip, deflate, sdch, br
-<code>Accept-Charset: ISO-8859-1,UTF-8;q=0.7,*;q=0.7</code>
+Accept-Charset: ISO-8859-1,UTF-8;q=0.7,*;q=0.7
 Accept-Language: en-US,en;q=0.8,es;q=0.6
 Cookie: sessionid=6ynxs23n521lu21b1t136rhbv7ezngie; csrftoken=zIPUJsAZv6pcgCBJSCj1zU6pQZbfMUAT; dwf_section_edit=False; dwf_sg_task_completion=False; _gat=1; _ga=GA1.2.1688886003.1471911953; ffo=true
 </pre>
@@ -161,7 +161,7 @@ Content-Length: 41823
 
 <p>The text below shows the HTTP request made when a user submits new profile details on this site. The format of the request is almost the same as the <code>GET</code> request example shown previously, though the first line identifies this request as a <code>POST</code>. </p>
 
-<pre class="brush: http">POST https://developer.mozilla.org/en-US/profiles/hamishwillee/edit HTTP/1.1
+<pre class="brush: http">POST /en-US/profiles/hamishwillee/edit HTTP/1.1
 Host: developer.mozilla.org
 Connection: keep-alive
 Content-Length: 432
@@ -201,7 +201,7 @@ Content-Length: 0
 </pre>
 
 <div class="note">
-<p><strong>Note</strong>: The HTTP responses and requests shown in these examples were captured using the <a href="https://www.telerik.com/download/fiddler">Fiddler</a> application, but you can get similar information using web sniffers (e.g. <a href="https://websniffer.cc/">Websniffer</a>) or browser extensions like <a href="https://addons.mozilla.org/en-US/firefox/addon/httpfox/">HttpFox</a>. You can try this yourself. Use any of the linked tools, and then navigate through a site and edit profile information to see the different requests and responses. Most modern browsers also have tools that monitor network requests (for example, the <a href="/en-US/docs/Tools/Network_Monitor">Network Monitor</a> tool in Firefox).</p>
+<p><strong>Note</strong>: The HTTP responses and requests shown in these examples were captured using the <a href="https://www.telerik.com/download/fiddler">Fiddler</a> application, but you can get similar information using web sniffers (e.g. <a href="https://websniffer.cc/">Websniffer</a>) or packet analyzers like <a href="https://www.wireshark.org/">Wireshark</a>. You can try this yourself. Use any of the linked tools, and then navigate through a site and edit profile information to see the different requests and responses. Most modern browsers also have tools that monitor network requests (for example, the <a href="/en-US/docs/Tools/Network_Monitor">Network Monitor</a> tool in Firefox).</p>
 </div>
 
 <h2 id="Static_sites">Static sites</h2>
@@ -322,7 +322,6 @@ def junior(request):
 
 <ul>
  <li><a href="/en-US/docs/Learn/Server-side/First_steps/Introduction">Introduction to the server side</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview">Client-Server overview</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/First_steps/Web_frameworks">Server-side web frameworks</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/First_steps/Website_security">Website security</a></li>
 </ul>

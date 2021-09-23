@@ -10,7 +10,7 @@ browser-compat: svg.attributes.presentation.mask
 
 <p>The <strong><code>mask</code></strong> attribute is a presentation attribute mainly used to bind a given {{ SVGElement("mask") }} element with the element the attribute belongs to.</p>
 
-<p class="note"><strong>Note:</strong> As a presentation attribute {{cssxref('mask')}} can be used as a CSS property.</p>
+<div class="note"><p><strong>Note:</strong> As a presentation attribute {{cssxref('mask')}} can be used as a CSS property.</p></div>
 
 <p>You can use this attribute with the following SVG elements:</p>
 
@@ -36,10 +36,9 @@ browser-compat: svg.attributes.presentation.mask
   <li>{{SVGElement('use')}}</li>
 </ul>
 
-<div id="topExample">
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+<h2>Example</h2>
+
+<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
 
 <pre class="brush: html">&lt;svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;mask id="myMask" maskContentUnits="objectBoundingBox"&gt;
@@ -56,8 +55,7 @@ browser-compat: svg.attributes.presentation.mask
           mask="url(#myMask)"/&gt;
 &lt;/svg&gt;</pre>
 
-<p>{{EmbedLiveSample('topExample', '100%', 150)}}</p>
-</div>
+<p>{{EmbedLiveSample("Example", '100%', 150)}}</p>
 
 <p>Since SVG2, the {{cssxref('mask')}} attribute is defined as a css property and is a shorthand for many other properties: {{cssxref('mask-image')}}, {{cssxref('mask-mode')}}, {{cssxref('mask-repeat')}}, {{cssxref('mask-position')}}, {{cssxref('mask-clip')}}, {{cssxref('mask-origin')}}, {{cssxref('mask-size')}}, and {{cssxref('mask-composite')}}.</p>
 

@@ -10,7 +10,7 @@ browser-compat: svg.attributes.presentation.font-size
 
 <p>The <strong><code>font-size</code></strong> attribute refers to the size of the font from {{Glossary("baseline")}} to baseline when multiple lines of text are set solid in a multiline layout environment.</p>
 
-<p class="note"><strong>Note:</strong> As a presentation attribute, <code>font-size</code> can be used as a CSS property. See the {{cssxref("font-size", "CSS font-size")}} property for more information.</p>
+<div class="note"><p><strong>Note:</strong> As a presentation attribute, <code>font-size</code> can be used as a CSS property. See the {{cssxref("font-size", "CSS font-size")}} property for more information.</p></div>
 
 <p>You can use this attribute with the following SVG elements:</p>
 
@@ -22,20 +22,18 @@ browser-compat: svg.attributes.presentation.font-size
   <li>{{SVGElement("tspan")}}</li>
 </ul>
 
-<div id="topExample">
-<div class="hidden">
-<pre class="brush: css">html, body, svg {
+<h2>Example</h2>
+
+<pre class="brush: css hidden">html, body, svg {
   height: 100%;
 }</pre>
-</div>
 
 <pre class="brush: html; highlight[2,3]">&lt;svg viewBox="0 0 200 30" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;text y="20" font-size="smaller"&gt;smaller&lt;/text&gt;
   &lt;text x="100" y="20" font-size="2em"&gt;2em&lt;/text&gt;
 &lt;/svg&gt;</pre>
 
-<p>{{EmbedLiveSample("topExample", "200", "30")}}</p>
-</div>
+<p>{{EmbedLiveSample("Example", "200", "30")}}</p>
 
 <h2 id="Usage_notes">Usage notes</h2>
 

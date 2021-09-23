@@ -16,12 +16,11 @@ browser-compat: svg.elements.marker.orient
   <li>{{SVGElement("marker")}}</li>
 </ul>
 
-<div id="topExample">
-<div class="hidden">
-<pre class="brush: css">html, body, svg {
+<h2>Example</h2>
+
+<pre class="brush: css hidden">html, body, svg {
   height: 100%;
 }</pre>
-</div>
 
 <pre class="brush: html; highlight[5,11]">&lt;svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;defs&gt;
@@ -46,8 +45,7 @@ browser-compat: svg.elements.marker.orient
       marker-end="url(#dataArrow)" /&gt;
 &lt;/svg&gt;</pre>
 
-<p>{{EmbedLiveSample("topExample", "220", "220")}}</p>
-</div>
+<p>{{EmbedLiveSample("Example", "220", "220")}}</p>
 
 <h2 id="Usage_notes">Usage notes</h2>
 
@@ -75,13 +73,13 @@ browser-compat: svg.elements.marker.orient
  <dd>
  <p>If placed by {{SVGAttr("marker-start")}}, the marker is oriented 180° different from the orientation that would be used if <code>auto</code> where specified. For all other markers, <code>auto-start-reverse</code> means the same as <code>auto</code>.</p>
 
- <p class="note"><strong>Note:</strong> This allows a single arrowhead marker to be defined that can be used for both the start and end of a path, i.e. which points outwards from both ends.</p>
+ <div class="note"><p><strong>Note:</strong> This allows a single arrowhead marker to be defined that can be used for both the start and end of a path, i.e. which points outwards from both ends.</p></div>
  </dd>
  <dt><code>&lt;angle&gt;</code></dt>
  <dd>
  <p>This value indicates that the marker is oriented such that the specified angle is that measured between the shape's positive x-axis and the marker's positive x-axis.</p>
 
- <p class="note"><strong>Note:</strong> For example, if a value of <code>45</code> is given, then the marker's positive x-axis would be pointing down and right in the shape's coordinate system.</p>
+ <div class="note"><p><strong>Note:</strong> For example, if a value of <code>45</code> is given, then the marker's positive x-axis would be pointing down and right in the shape's coordinate system.</p></div>
  </dd>
  <dt><code>&lt;number&gt;</code></dt>
  <dd>This value indicates an angle in degrees. The marker is oriented such that the specified angle is that measured between the shape's positive x-axis and the marker's positive x-axis.</dd>

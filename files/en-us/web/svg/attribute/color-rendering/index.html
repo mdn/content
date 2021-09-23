@@ -8,11 +8,11 @@ browser-compat: svg.attributes.presentation.color-rendering
 ---
 <div>{{deprecated_header}}</div>
 
-<p class="seoSummary">The <strong><code>color-rendering</code></strong> attribute provides a hint to the SVG user agent about how to optimize its color interpolation and compositing operations.</p>
+<p>The <strong><code>color-rendering</code></strong> attribute provides a hint to the SVG user agent about how to optimize its color interpolation and compositing operations.</p>
 
 <p><code>color-rendering</code> takes precedence over {{SVGAttr("color-interpolation-filters")}}. For example, assume <code>color-rendering: optimizeSpeed</code> and <code>color-interpolation-filters: linearRGB</code>. In this case, the SVG user agent should perform color operations in a way that optimizes performance, which might mean sacrificing the color interpolation precision as specified by through the <code>linearRGB</code> value for <code>color-interpolation-filters</code>.</p>
 
-<p class="note"><strong>Note:</strong> As a presentation attribute, <code>color-rendering</code> can be used as a CSS property.</p>
+<div class="note"><p><strong>Note:</strong> As a presentation attribute, <code>color-rendering</code> can be used as a CSS property.</p></div>
 
 <p>You can use this attribute with the following SVG elements:</p>
 
@@ -48,12 +48,11 @@ browser-compat: svg.attributes.presentation.color-rendering
   <li>{{SVGElement("use")}}</li>
 </ul>
 
-<div id="topExample">
-<div class="hidden">
-<pre class="brush: css">html, body, svg {
+<h2>Example</h2>
+
+<pre class="brush: css hidden">html, body, svg {
   height: 100%;
 }</pre>
-</div>
 
 <pre class="brush: html; highlight[9,10,12,14">&lt;svg viewBox="0 0 480 200" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;defs&gt;
@@ -71,8 +70,7 @@ browser-compat: svg.attributes.presentation.color-rendering
   &lt;text x="290" y="50%" color-rendering="optimizeSpeed"&gt;speed-optimized&lt;/text&gt;
 &lt;/svg&gt;</pre>
 
-<p>{{EmbedLiveSample("topExample", "480", "200")}}</p>
-</div>
+<p>{{EmbedLiveSample("Example", "480", "200")}}</p>
 
 <h2 id="Usage_notes">Usage notes</h2>
 

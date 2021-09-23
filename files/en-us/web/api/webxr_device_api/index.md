@@ -62,6 +62,7 @@ The equipment may also include an accelerometer, barometer, or other sensors whi
 - {{DOMxRef("XRReferenceSpace")}}
 - {{DOMxRef("XRBoundedReferenceSpace")}}
 - {{domxref("XRReferenceSpaceEvent")}}
+- {{domxref("XRJointSpace")}}
 
 ### Views
 
@@ -75,21 +76,29 @@ The equipment may also include an accelerometer, barometer, or other sensors whi
 ### Pose
 
 - {{DOMxRef("XRPose")}}
+- {{DOMxRef("XRJointPose")}}
 - {{DOMxRef("XRViewerPose")}}
 
 ### Input
-
+- {{DOMxRef("XRHand")}}
 - {{DOMxRef("XRInputSource")}}
 - {{DOMxRef("XRInputSourceArray")}}
 - {{domxref("XRInputSourceEvent")}}
 - {{domxref("XRInputSourcesChangeEvent")}}
 
-### Layers / WebGL
+### Layers
 
 - {{DOMxRef("XRLayer")}}
-- {{DOMxRef("XRWebGLLayer")}}
+- {{DOMxRef("XRCompositionLayer")}}
+- {{DOMxRef("XRProjectionLayer")}}
+
+### WebGL binding
+
 - {{DOMxRef("XRWebGLBinding")}}
 - {{domxref("WebGLRenderingContext.makeXRCompatible()")}}
+- {{DOMxRef("XRWebGLLayer")}}
+- {{DOMxRef("XRSubImage")}}
+- {{DOMxRef("XRWebGLSubImage")}}
 
 ### Anchors
 
@@ -155,18 +164,75 @@ The following guides and tutorials are a great resource to learn how to comprehe
 
 ## Specifications
 
-| Specification                                                                                                                                                                                                                                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**WebXR Device API**](https://immersive-web.github.io/webxr/) ([Source](https://github.com/immersive-web/webxr), [Issues](https://github.com/immersive-web/webxr/issues), [Explainer](https://github.com/immersive-web/webxr/blob/master/explainer.md))                                                                                          |
-| [**WebXR Anchors Module**](https://immersive-web.github.io/anchors/) ([Source](https://github.com/immersive-web/anchors), [Issues](https://github.com/immersive-web/anchors/issues), [Explainer](https://github.com/immersive-web/anchors/blob/master/explainer.md))                                                                              |
-| [**WebXR Augmented Reality Module**](https://immersive-web.github.io/webxr-ar-module/) ([Source](https://github.com/immersive-web/webxr-ar-module), [Issues](https://github.com/immersive-web/webxr-ar-module/issues), [Explainer](https://github.com/immersive-web/webxr-ar-module/blob/master/ar-module-explainer.md))                          |
-| [**WebXR Depth Sensing Module**](https://immersive-web.github.io/depth-sensing/) ([Source](https://github.com/immersive-web/depth-sensing), [Issues](https://github.com/immersive-web/depth-sensing/issues), [Explainer](https://github.com/immersive-web/depth-sensing/blob/master/explainer.md))                                                |
-| [**WebXR DOM Overlays Module**](https://immersive-web.github.io/dom-overlays) ([Source](https://github.com/immersive-web/dom-overlays), [Issues](https://github.com/immersive-web/dom-overlays/issues), [Explainer](https://github.com/immersive-web/dom-overlays/blob/master/explainer.md))                                                      |
-| [**WebXR Gamepads Module**](https://immersive-web.github.io/webxr-gamepads-module/) ([Source](https://github.com/immersive-web/webxr-gamepads-module), [Issues](https://github.com/immersive-web/webxr-gamepads-module/issues), [Explainer](https://github.com/immersive-web/webxr-gamepads-module/blob/master/gamepads-module-explainer.md))     |
-| [**WebXR Hand Input Module**](https://immersive-web.github.io/webxr-hand-input/) ([Source](https://github.com/immersive-web/webxr-hand-input), [Issues](https://github.com/immersive-web/webxr-hand-input/issues), [Explainer](https://github.com/immersive-web/webxr-hand-input/blob/master/explainer.md))                                       |
-| [**WebXR Hit Test Module**](https://immersive-web.github.io/hit-test) ([Source](https://github.com/immersive-web/hit-test), [Issues](https://github.com/immersive-web/hit-test/issues), [Explainer](https://github.com/immersive-web/hit-test/blob/master/hit-testing-explainer.md))                                                              |
-| [**WebXR Layers API**](https://immersive-web.github.io/layers/) ([Source](https://github.com/immersive-web/layers), [Issues](https://github.com/immersive-web/layers/issues), [Explainer](https://github.com/immersive-web/layers/blob/master/explainer.md))                                                                                      |
-| [**WebXR Lighting Estimation API**](https://immersive-web.github.io/lighting-estimation/) ([Source](https://github.com/immersive-web/lighting-estimation), [Issues](https://github.com/immersive-web/lighting-estimation/issues), [Explainer](https://github.com/immersive-web/lighting-estimation/blob/master/lighting-estimation-explainer.md)) |
+<table>
+  <thead>
+    <tr>
+      <th>Specification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://immersive-web.github.io/webxr/"><strong>WebXR Device API</strong></a>
+      (<a href="https://github.com/immersive-web/webxr">Source</a>,
+       <a href="https://github.com/immersive-web/webxr/issues">Issues</a>,
+       <a href="https://github.com/immersive-web/webxr/blob/master/explainer.md">Explainer</a>)</td>
+    </tr>
+    <tr>
+      <td><a href="https://immersive-web.github.io/anchors/"><strong>WebXR Anchors Module</strong></a>
+      (<a href="https://github.com/immersive-web/anchors">Source</a>,
+       <a href="https://github.com/immersive-web/anchors/issues">Issues</a>,
+       <a href="https://github.com/immersive-web/anchors/blob/master/explainer.md">Explainer</a>)</td>
+    </tr>
+    <tr>
+      <td><a href="https://immersive-web.github.io/webxr-ar-module/"><strong>WebXR Augmented Reality Module</strong></a>
+      (<a href="https://github.com/immersive-web/webxr-ar-module">Source</a>,
+       <a href="https://github.com/immersive-web/webxr-ar-module/issues">Issues</a>,
+       <a href="https://github.com/immersive-web/webxr-ar-module/blob/master/ar-module-explainer.md">Explainer</a>)</td>
+    </tr>
+    <tr>
+      <td><a href="https://immersive-web.github.io/depth-sensing/"><strong>WebXR Depth Sensing Module</strong></a>
+      (<a href="https://github.com/immersive-web/depth-sensing">Source</a>,
+       <a href="https://github.com/immersive-web/depth-sensing/issues">Issues</a>,
+       <a href="https://github.com/immersive-web/depth-sensing/blob/master/explainer.md">Explainer</a>)</td>
+    </tr>
+    <tr>
+      <td><a href="https://immersive-web.github.io/dom-overlays"><strong>WebXR DOM Overlays Module</strong></a>
+      (<a href="https://github.com/immersive-web/dom-overlays">Source</a>,
+       <a href="https://github.com/immersive-web/dom-overlays/issues">Issues</a>,
+       <a href="https://github.com/immersive-web/dom-overlays/blob/master/explainer.md">Explainer</a>)</td>
+    </tr>
+    <tr>
+      <td><a href="https://immersive-web.github.io/webxr-gamepads-module/"><strong>WebXR Gamepads Module</strong></a>
+      (<a href="https://github.com/immersive-web/webxr-gamepads-module">Source</a>,
+       <a href="https://github.com/immersive-web/webxr-gamepads-module/issues">Issues</a>,
+       <a href="https://github.com/immersive-web/webxr-gamepads-module/blob/master/gamepads-module-explainer.md">Explainer</a>)</td>
+    </tr>
+    <tr>
+      <td><a href="https://immersive-web.github.io/webxr-hand-input/"><strong>WebXR Hand Input Module</strong></a>
+      (<a href="https://github.com/immersive-web/webxr-hand-input">Source</a>,
+       <a href="https://github.com/immersive-web/webxr-hand-input/issues">Issues</a>,
+       <a href="https://github.com/immersive-web/webxr-hand-input/blob/master/explainer.md">Explainer</a>)</td>
+    </tr>
+    <tr>
+      <td><a href="https://immersive-web.github.io/hit-test"><strong>WebXR Hit Test Module</strong></a>
+      (<a href="https://github.com/immersive-web/hit-test">Source</a>,
+       <a href="https://github.com/immersive-web/hit-test/issues">Issues</a>,
+       <a href="https://github.com/immersive-web/hit-test/blob/master/hit-testing-explainer.md">Explainer</a>)</td>
+    </tr>
+    <tr>
+      <td><a href="https://immersive-web.github.io/layers/"><strong>WebXR Layers API</strong></a>
+      (<a href="https://github.com/immersive-web/layers">Source</a>,
+       <a href="https://github.com/immersive-web/layers/issues">Issues</a>,
+       <a href="https://github.com/immersive-web/layers/blob/master/explainer.md">Explainer</a>)</td>
+    </tr>
+    <tr>
+      <td><a href="https://immersive-web.github.io/lighting-estimation/"><strong>WebXR Lighting Estimation API</strong></a>
+      (<a href="https://github.com/immersive-web/lighting-estimation">Source</a>,
+       <a href="https://github.com/immersive-web/lighting-estimation/issues">Issues</a>,
+       <a href="https://github.com/immersive-web/lighting-estimation/blob/master/lighting-estimation-explainer.md">Explainer</a>)</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Browser compatibility
 

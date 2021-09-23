@@ -109,11 +109,12 @@ tags:
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html">    &lt;h1&gt;ARIA Button Example&lt;/h1&gt;
-    &lt;ul id="nameList"&gt;&lt;/ul&gt;
-    &lt;label for="newName"&gt;Enter your Name: &lt;/label&gt;
-    &lt;input type="text" id="newName"&gt;
-    &lt;span role="button" tabindex="0" onclick="handleCommand(event)" onKeyDown="handleCommand(event)"&gt;Add Name&lt;/span&gt;</pre>
+<pre class="brush: html">&lt;h1&gt;ARIA Button Example&lt;/h1&gt;
+&lt;ul id="nameList"&gt;&lt;/ul&gt;
+&lt;label for="newName"&gt;Enter your Name: &lt;/label&gt;
+&lt;input type="text" id="newName"&gt;
+&lt;span role="button" tabindex="0" onclick="handleCommand(event)" onKeyDown="handleCommand(event)"&gt;Add Name&lt;/span&gt;
+</pre>
 
 <h4 id="CSS">CSS</h4>
 
@@ -126,39 +127,39 @@ tags:
 [role="button"]:hover,
 [role="button"]:focus,
 [role="button"]:active {
-   background-color: white;
-   color: navy;
+  background-color: white;
+  color: navy;
 }
 ul {
-    list-style: none;
+  list-style: none;
 }</pre>
 
 <h4 id="JavaScript">JavaScript</h4>
 
 <pre class="brush: js">function handleCommand(event) {
-    // Handles both mouse clicks and keyboard
-    // activate with Enter or Space
+  // Handles both mouse clicks and keyboard
+  // activate with Enter or Space
     
-    // Keypresses other then Enter and Space should not trigger a command
-    if (event instanceof KeyboardEvent &amp;&amp; event.key !== 'Enter' &amp;&amp; event.key !== ' ') {
-        return;
-    }
+  // Keypresses other then Enter and Space should not trigger a command
+  if (event instanceof KeyboardEvent &amp;&amp; event.key !== 'Enter' &amp;&amp; event.key !== ' ') {
+    return;
+  }
 
-    // Get the new name value from the input element
-    let newNameInput = document.getElementById('newName');
-    let name = newNameInput.value;
-    newNameInput.value = ''; // clear the text field
-    newNameInput.focus();  // give the text field focus to enable entering and additional name.
+  // Get the new name value from the input element
+  let newNameInput = document.getElementById('newName');
+  let name = newNameInput.value;
+  newNameInput.value = ''; // clear the text field
+  newNameInput.focus();  // give the text field focus to enable entering and additional name.
 
-    // Don't add blank entries to the list.
-    if(name.length &gt; 0) {
-        listItem = document.createElement('li');
-        listItem.appendChild(document.createTextNode(name));
+  // Don't add blank entries to the list.
+  if (name.length &gt; 0) {
+    listItem = document.createElement('li');
+    listItem.appendChild(document.createTextNode(name));
 
-        // Add the new name to the list.
-        let list = document.getElementById('nameList');
-        list.appendChild(listItem);
-    }
+    // Add the new name to the list.
+    let list = document.getElementById('nameList');
+    list.appendChild(listItem);
+  }
 }</pre>
 
 <p>{{EmbedLiveSample("Basic_button_example")}}</p>
@@ -189,14 +190,14 @@ ul {
 
 <pre class="brush: css">button,
 [role="button"] {
-    padding: 3px;
-    border: 2px solid transparent;
+  padding: 3px;
+  border: 2px solid transparent;
 }
 
 button:active,
 button:focus,
 [role="button"][aria-pressed="true"] {
-    border: 2px solid #000;
+  border: 2px solid #000;
 }
 </pre>
 
@@ -222,10 +223,10 @@ function toggleButton(element) {
   // Change aria-pressed to the opposite state
   element.setAttribute("aria-pressed", !pressed);
   // toggle the play state of the audio file
-  if(pressed) {
-     audio.pause();
+  if (pressed) {
+    audio.pause();
   } else {
-     audio.play();
+    audio.play();
   }
 }</pre>
 

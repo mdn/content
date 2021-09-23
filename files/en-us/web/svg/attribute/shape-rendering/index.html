@@ -10,7 +10,7 @@ browser-compat: svg.attributes.presentation.shape-rendering
 
 <p>The <strong><code>shape-rendering</code></strong> attribute provides hints to the renderer about what tradeoffs to make when rendering shapes like paths, circles, or rectangles.</p>
 
-<p class="note"><strong>Note:</strong> As a presentation attribute, <code>shape-rendering</code> can be used as a CSS property.</p>
+<div class="note"><p><strong>Note:</strong> As a presentation attribute, <code>shape-rendering</code> can be used as a CSS property.</p></div>
 
 <p>You can use this attribute with the following SVG elements:</p>
 
@@ -24,20 +24,18 @@ browser-compat: svg.attributes.presentation.shape-rendering
   <li>{{SVGElement("rect")}}</li>
 </ul>
 
-<div id="topExample">
-<div class="hidden">
-<pre class="brush: css">html, body, svg {
+<h2>Example</h2>
+
+<pre class="brush: css hidden">html, body, svg {
   height: 100%;
 }</pre>
-</div>
 
 <pre class="brush: html; highlight[2,3]">&lt;svg viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;circle cx="100" cy="100" r="100" shape-rendering="geometricPrecision"/&gt;
   &lt;circle cx="320" cy="100" r="100" shape-rendering="crispEdges"/&gt;
 &lt;/svg&gt;</pre>
 
-<p>{{EmbedLiveSample("topExample", "420", "220")}}</p>
-</div>
+<p>{{EmbedLiveSample("Example", "420", "220")}}</p>
 
 <h2 id="Usage_notes">Usage notes</h2>
 

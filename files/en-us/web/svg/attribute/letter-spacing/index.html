@@ -8,13 +8,13 @@ browser-compat: svg.attributes.presentation.letter-spacing
 ---
 <div>{{SVGRef}}</div>
 
-<p><span class="seoSummary">The <strong><code>letter-spacing</code></strong> attribute controls spacing between text characters, in addition to any spacing from the {{SVGAttr("kerning")}} attribute.</span></p>
+<p>The <strong><code>letter-spacing</code></strong> attribute controls spacing between text characters, in addition to any spacing from the {{SVGAttr("kerning")}} attribute.</p>
 
 <p>If the attribute value is a unitless number (like <code>128</code>), the browser processes it as a {{cssxref("length")}} in the current user coordinate system.</p>
 
 <p>If the attribute value has a unit identifier, such as <code>.25em</code> or <code>1%</code>, then the browser converts the &lt;length&gt; into its corresponding value in the current user coordinate system.</p>
 
-<p class="note"><strong>Note:</strong> As a presentation attribute, <code>letter-spacing</code> can be used as a CSS property. See the {{cssxref("letter-spacing", "CSS letter-spacing")}} property for more information.</p>
+<div class="note"><p><strong>Note:</strong> As a presentation attribute, <code>letter-spacing</code> can be used as a CSS property. See the {{cssxref("letter-spacing", "CSS letter-spacing")}} property for more information.</p></div>
 
 <p>You can use this attribute with the following SVG elements:</p>
 
@@ -26,20 +26,18 @@ browser-compat: svg.attributes.presentation.letter-spacing
   <li>{{SVGElement("tspan")}}</li>
 </ul>
 
-<div id="topExample">
-<div class="hidden">
-<pre class="brush: css">html, body, svg {
+<h2>Example</h2>
+
+<pre class="brush: css hidden">html, body, svg {
   height: 100%;
 }</pre>
-</div>
 
 <pre class="brush: html; highlight[2,3]">&lt;svg viewBox="0 0 400 30" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;text y="20" letter-spacing="2"&gt;Bigger letter-spacing&lt;/text&gt;
   &lt;text x="200" y="20" letter-spacing="-0.5"&gt;Smaller letter-spacing&lt;/text&gt;
 &lt;/svg&gt;</pre>
 
-<p>{{EmbedLiveSample("topExample", "200", "30")}}</p>
-</div>
+<p>{{EmbedLiveSample("Example", "200", "30")}}</p>
 
 <h2 id="Usage_notes">Usage notes</h2>
 
@@ -61,8 +59,6 @@ browser-compat: svg.attributes.presentation.letter-spacing
 </table>
 
 <p>For a description of the values, please refer to the <a href="/en-US/docs/Web/CSS/letter-spacing#values">CSS <code>letter-spacing</code></a> property.</p>
-
-<p class="note">Prior to Firefox 72 Firefox <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=371787">ignored <code>letter-spacing</code></a> and renders text without.</p>
 
 <h2 id="Specifications">Specifications</h2>
 

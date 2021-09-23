@@ -21,11 +21,10 @@ tags:
   <li>{{SVGElement("view")}}</li>
 </ul>
 
-<div id="topExample">
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }
+<h2>Example</h2>
+
+<pre class="brush: css hidden">html,body,svg { height:100% }
 svg:not(:root) { display: inline-block; }</pre>
-</div>
 
 <pre class="brush: html">&lt;svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;!--
@@ -73,18 +72,17 @@ svg:not(:root) { display: inline-block; }</pre>
   &lt;circle cx="50%" cy="50%" r="4" fill="white"/&gt;
 &lt;/svg&gt;</pre>
 
-<p>{{EmbedLiveSample('topExample', '100%', 200)}}</p>
-</div>
+<p>{{EmbedLiveSample("Example", '100%', 200)}}</p>
 
 <p>The exact effect of this attribute is influenced by the {{ SVGAttr("preserveAspectRatio") }} attribute.</p>
 
-<p class="note"><strong>Note:</strong> Values for <code><var>width</var></code> or <code><var>height</var></code> lower or equal to <code>0</code> disable rendering of the element.</p>
+<div class="note"><p><strong>Note:</strong> Values for <code><var>width</var></code> or <code><var>height</var></code> lower or equal to <code>0</code> disable rendering of the element.</p></div>
 
 <h2 id="marker">marker</h2>
 
 <p>For {{SVGElement('marker')}}, <code>viewBox</code> defines the position and dimension for the content of the <code>&lt;marker&gt;</code> element.</p>
 
-<table class="standard-table">
+<table class="properties">
  <tbody>
   <tr>
    <th scope="row">Value</th>
@@ -105,7 +103,7 @@ svg:not(:root) { display: inline-block; }</pre>
 
 <p>For {{SVGElement('pattern')}}, <code>viewBox</code> defines the position and dimension for the content of the pattern tile.</p>
 
-<table class="standard-table">
+<table class="properties">
  <tbody>
   <tr>
    <th scope="row">Value</th>
@@ -126,7 +124,7 @@ svg:not(:root) { display: inline-block; }</pre>
 
 <p>For {{SVGElement('svg')}}, <code>viewBox</code> defines the position and dimension for the content of the <code>&lt;svg&gt;</code> element.</p>
 
-<table class="standard-table">
+<table class="properties">
  <tbody>
   <tr>
    <th scope="row">Value</th>
@@ -147,7 +145,7 @@ svg:not(:root) { display: inline-block; }</pre>
 
 <p>For {{SVGElement('symbol')}}, <code>viewBox</code> defines the position and dimension for the content of the <code>&lt;symbol&gt;</code> element.</p>
 
-<table class="standard-table">
+<table class="properties">
  <tbody>
   <tr>
    <th scope="row">Value</th>
@@ -168,7 +166,7 @@ svg:not(:root) { display: inline-block; }</pre>
 
 <p>For {{SVGElement('view')}}, <code>viewBox</code> defines the position and dimension for the content of the <code>&lt;view&gt;</code> element.</p>
 
-<table class="standard-table">
+<table class="properties">
  <tbody>
   <tr>
    <th scope="row">Value</th>

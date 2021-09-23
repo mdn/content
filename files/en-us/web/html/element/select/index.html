@@ -38,8 +38,9 @@ browser-compat: html.elements.select
  <dt>{{htmlattrdef("disabled")}}</dt>
  <dd>This Boolean attribute indicates that the user cannot interact with the control. If this attribute is not specified, the control inherits its setting from the containing element, for example {{htmlelement("fieldset")}}; if there is no containing element with the <code>disabled</code> attribute set, then the control is enabled.</dd>
  <dt>{{htmlattrdef("form")}}</dt>
- <dd>The {{HTMLElement("form")}} element to associate the <code>&lt;select&gt;</code> with (its <em>form owner</em>). The value of this attribute must be the {{htmlattrxref("id")}} of a <code>&lt;form&gt;</code> in the same document. (If this attribute is not set, the <code>&lt;select&gt;</code> is associated with its ancestor <code>&lt;form&gt;</code> element, if any.)</dd>
- <dd>This attribute lets you associate <code>&lt;select&gt;</code> elements to <code>&lt;form&gt;</code>s anywhere in the document, not just inside a <code>&lt;form&gt;</code>. It can also override an ancestor <code>&lt;form&gt;</code> element.</dd>
+ <dd><p>The {{HTMLElement("form")}} element to associate the <code>&lt;select&gt;</code> with (its <em>form owner</em>). The value of this attribute must be the {{htmlattrxref("id")}} of a <code>&lt;form&gt;</code> in the same document. (If this attribute is not set, the <code>&lt;select&gt;</code> is associated with its ancestor <code>&lt;form&gt;</code> element, if any.)</p>
+ <p>This attribute lets you associate <code>&lt;select&gt;</code> elements to <code>&lt;form&gt;</code>s anywhere in the document, not just inside a <code>&lt;form&gt;</code>. It can also override an ancestor <code>&lt;form&gt;</code> element.
+ </p></dd>
  <dt>{{htmlattrdef("multiple")}}</dt>
  <dd>This Boolean attribute indicates that multiple options can be selected in the list. If it is not specified, then only one option can be selected at a time. When <code>multiple</code> is specified, most browsers will show a scrolling list box instead of a single line dropdown.</dd>
  <dt>{{htmlattrdef("name")}}</dt>
@@ -50,7 +51,7 @@ browser-compat: html.elements.select
  <dd>
  <p>If the control is presented as a scrolling list box (e.g. when <code>multiple</code> is specified), this attribute represents the number of rows in the list that should be visible at one time. Browsers are not required to present a select element as a scrolled list box. The default value is <code>0</code>.</p>
 
- <div class="note"><strong>Note:</strong> According to the HTML5 specification, the default value for size should be <code>1</code>; however, in practice, this has been found to break some web sites, and no other browser currently does that, so Mozilla has opted to continue to return <code>0</code> for the time being with Firefox.</div>
+ <div class="note"><p><strong>Note:</strong> According to the HTML5 specification, the default value for size should be <code>1</code>; however, in practice, this has been found to break some web sites, and no other browser currently does that, so Mozilla has opted to continue to return <code>0</code> for the time being with Firefox.</p></div>
  </dd>
 </dl>
 
@@ -65,7 +66,7 @@ browser-compat: html.elements.select
 <div class="notecard warning">
 <p><strong>Warning</strong>: The mechanism for selecting multiple non-contiguous items via the keyboard described below currently only seems to work in Firefox.</p>
 
-<p><strong>Also note:</strong> On macOS, the <kbd>Ctrl</kbd> + <kbd>Up</kbd> and <kbd>Ctrl</kbd> + <kbd>Down</kbd> shortcuts conflict with the OS default shortcuts for <em>Mission Control</em> and <em>Application windows</em>, so you'll have to turn these off before it will work.</p>
+<p>On macOS, the <kbd>Ctrl</kbd> + <kbd>Up</kbd> and <kbd>Ctrl</kbd> + <kbd>Down</kbd> shortcuts conflict with the OS default shortcuts for <em>Mission Control</em> and <em>Application windows</em>, so you'll have to turn these off before it will work.</p>
 </div>
 
 <p>Keyboard users can select multiple contiguous items by:</p>
@@ -158,7 +159,7 @@ browser-compat: html.elements.select
 </ul>
 
 <div class="notecard note">
-<p>Not all native features are supported, it's a Proof of Concept. IT starts from standard HTML but the same results can be achieved starting from JSON data, custom HTML, or other solutions.</p>
+<p><strong>Note:</strong> Not all native features are supported, it's a Proof of Concept. IT starts from standard HTML but the same results can be achieved starting from JSON data, custom HTML, or other solutions.</p>
 </div>
 
 <h4 id="HTML">HTML</h4>

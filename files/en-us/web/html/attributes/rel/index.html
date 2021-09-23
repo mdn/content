@@ -11,7 +11,7 @@ tags:
 ---
 <p>{{HTMLSidebar}}{{draft}}</p>
 
-<p class="summary">The <strong><code>rel</code></strong> attribute defines the relationship between a linked resource and the current document. Valid on {{htmlelement('link')}}, {{htmlelement('a')}}, {{htmlelement('area')}}, and {{htmlelement('form')}}, the supported values depend on the element on which the attribute is found.</p>
+<p>The <strong><code>rel</code></strong> attribute defines the relationship between a linked resource and the current document. Valid on {{htmlelement('link')}}, {{htmlelement('a')}}, {{htmlelement('area')}}, and {{htmlelement('form')}}, the supported values depend on the element on which the attribute is found.</p>
 
 <p>The type of relationships is given by the value of the <code>rel</code> attribute, which, if present, must have a value that is an unordered set of unique space-separated keywords. Differently from a <code>class</code> name, which does not express semantics, the <code>rel</code> attribute must express tokens that are semantically valid for both machines and humans. The current registries for the possible values of the <code>rel</code> attribute are the <a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">IANA link relation registry</a>, the <a href="https://html.spec.whatwg.org/multipage/links.html#linkTypes">HTML Living Standard</a>, and the freely-editable <a href="https://microformats.org/wiki/existing-rel-values">existing-rel-values page</a> in the microformats wiki, <a href="https://html.spec.whatwg.org/multipage/links.html#other-link-types">as suggested</a> by the Living Standard. If a <code>rel</code> attribute not present in one of the three sources above is used some HTML validators (such as the <a href="https://validator.w3.org/">W3C Markup Validation Service</a>) will generate a warning.</p>
 
@@ -232,7 +232,7 @@ tags:
 &lt;link rel=alternate href="/fr/pdf" hreflang=fr type=application/pdf title="French PDF"&gt;</pre>
 		</li>
 	</ul>
-  <p class="note">Note: The obsolete <code>rev="made"</code> is treated as <code>rel="alternate"</code></p>
+  <div class="note"><p><strong>Note:</strong> The obsolete <code>rev="made"</code> is treated as <code>rel="alternate"</code></p></div>
 	</dd>
 	<dt>{{htmlattrdef("author")}}</dt>
 	<dd>Indicates the author of the current document or article. Relevant for {{htmlelement('link')}}, {{htmlelement('a')}}, and {{htmlelement('area')}} elements, the <code>author</code> keyword creates a hyperlink. With {{htmlelement('a')}} and {{htmlelement('area')}}, it indicates the linked document (or <code>mailto:</code>) provides information about the author of the nearest {{htmlelement('article')}} ancestor if there is one, otherwise the entire document. For {{htmlelement('link')}}, it represents the author of the entire document.</dd>
@@ -248,7 +248,7 @@ tags:
 	<dd>Relevant to {{htmlelement('form')}}, {{htmlelement('link')}}, {{htmlelement('a')}}, and {{htmlelement('area')}}, the <code>help</code> keyword indicates that the linked to content provides context-sensitive help, providing information for the parent of the element defining the hyperlink, and its children. When used within <code>&lt;link&gt;</code>, the help is for the whole document. When included with {{htmlelement('a')}} and {{htmlelement('area')}} and supported, the default {{cssxref('cursor')}} will be <code>help</code> instead of <code>pointer</code>.</dd>
 	<dt>{{htmlattrdef("icon")}}</dt>
 	<dd>
-	<p>Valid with {{htmlelement('link')}}, the linked resource represents the icon, a resource for representing the page in the user interface, for the current document.</p>
+	<p><strong>Note:</strong> Valid with {{htmlelement('link')}}, the linked resource represents the icon, a resource for representing the page in the user interface, for the current document.</p>
 
 	<p>The most common use for the <code>icon</code> value is the favicon:</p>
 
@@ -257,7 +257,7 @@ tags:
 	<p>If there are multiple <code>&lt;link rel="icon"&gt;</code>s, the browser uses their <a href="media"><code>media</code></a> attribute, <a href="type"><code>type</code></a>, and <a href="sizes"><code>sizes</code></a> attributes to select the most appropriate icon. If several icons are equally appropriate, the last one is used. If the most appropriate icon is later found to be inappropriate, for example because it uses an unsupported format, the browser proceeds to the next-most appropriate, and so on.</p>
 
 	<div class="notecard note">
-	<p>Prior to Firefox 83 the <a href="/en-US/docs/Web/HTML/Attributes/crossorigin">crossorigin</a> attribute was not supported for <code>rel="icon"</code> there is also <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1121645">an open issue for Chrome</a>.</p>
+	<p><strong>Note:</strong> Prior to Firefox 83 the <a href="/en-US/docs/Web/HTML/Attributes/crossorigin">crossorigin</a> attribute was not supported for <code>rel="icon"</code> there is also <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1121645">an open issue for Chrome</a>.</p>
 	</div>
 
 	<p><strong>Note:</strong> Apple's iOS does not use this link type, nor the <a href="sizes"><code>sizes</code></a> attribute, like others mobile browsers do, to select a webpage icon for Web Clip or a start-up placeholder. Instead it uses the non-standard <a class="external external-icon" href="https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4"><code>apple-touch-icon</code></a> and <a class="external external-icon" href="https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6"><code>apple-touch-startup-image</code></a> respectively.</p>
@@ -266,7 +266,7 @@ tags:
 	</dd>
 	<dt>{{htmlattrdef("license")}}</dt>
 	<dd>
-	<p>Valid on the {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("form")}}, {{HTMLElement("link")}} elements, the <code>license</code> value indicates that the hyperlink leads to a document describing the licensing information; that the main content of the current document is covered by the copyright license described by the referenced document. If not inside the {{HTMLElement("head")}} element, the standard doesn't distinguish between a hyperlink applying to a specific part of the document or to the document as a whole. Only the data on the page can indicate this.</p>
+	<p><strong>Note:</strong> Valid on the {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("form")}}, {{HTMLElement("link")}} elements, the <code>license</code> value indicates that the hyperlink leads to a document describing the licensing information; that the main content of the current document is covered by the copyright license described by the referenced document. If not inside the {{HTMLElement("head")}} element, the standard doesn't distinguish between a hyperlink applying to a specific part of the document or to the document as a whole. Only the data on the page can indicate this.</p>
 
 	<pre class="brush: html">&lt;link rel="license" href="#license"&gt;</pre>
 
@@ -329,19 +329,8 @@ tags:
 <h3 id="Non-standard_values">Non-standard values</h3>
 
 <dl>
-	<dt>apple-touch-icon-precomposed</dt>
-	<dd>
-	<pre class="brush: html"> &lt;!-- third-generation iPad with high-resolution Retina display: --&gt;
-  &lt;link rel="apple-touch-icon-precomposed" sizes="144x144" href="/static/img/favicon144.e7e21ca263ca.png"&gt;
-  &lt;!-- iPhone with high-resolution Retina display: --&gt;
-  &lt;link rel="apple-touch-icon-precomposed" sizes="114x114" href="/static/img/favicon114.d526f38b09c5.png"&gt;
-  &lt;!-- first- and second-generation iPad: --&gt;
-  &lt;link rel="apple-touch-icon-precomposed" sizes="72x72" href="/static/img/favicon72.cc65d1d762a0.png"&gt;
-  &lt;!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: --&gt;
-  &lt;link rel="apple-touch-icon-precomposed" href="/static/img/favicon57.de33179910ae.png"&gt;
-  &lt;!-- basic favicon --&gt;
-  &lt;link rel="icon" href="/static/img/favicon32.7f3da72dcea1.png"&gt;</pre>
-	</dd>
+	<dt>{{htmlattrdef("apple-touch-icon")}}</dt>
+	<dd>Specifies the icon for a web application on an iOS device.</dd>
 </dl>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -391,13 +380,13 @@ tags:
 		<tr>
 			<td>{{SpecName("HTML3.2", "#link", "&lt;link&gt;")}}</td>
 			<td>
-			<p>{{Spec2("HTML3.2")}}<span class="spec-Obsolete"> (Obsolete)</span></p>
+			<p>{{Spec2("HTML3.2")}} (Obsolete)</p>
 			</td>
 			<td>Added <code>top</code>, <code>contents</code>, <code>index</code>, <code>glossary</code>, <code>copyright</code>, <code>next</code>, <code>previous</code>, <code>help</code>, and <code>search</code>.</td>
 		</tr>
 		<tr>
 			<td>{{RFC(1866, "HTML 2.0")}}</td>
-			<td>{{Spec2("HTML2.0")}}<span class="spec-Obsolete">(Obsolete)</span></td>
+			<td>{{Spec2("HTML2.0")}} (Obsolete)</td>
 			<td>Initial definition.</td>
 		</tr>
 	</tbody>

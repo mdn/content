@@ -124,7 +124,7 @@ Dog.prototype.toString = function dogToString() {
 }
 ```
 
-Or, using ES6 {{jsxref("Template_literals", "template strings", "", 1)}}:
+Or, using {{jsxref("Template_literals", "template strings", "", 1)}}:
 
 ```js
 Dog.prototype.toString = function dogToString() {
@@ -132,7 +132,7 @@ Dog.prototype.toString = function dogToString() {
 }
 ```
 
-With the preceding code in place, any time `theDog` is used in a string
+With the preceding code in place, any time `toString()` is used in a `Dog`
 context, JavaScript automatically calls the `dogToString()` function, which
 returns the following string:
 

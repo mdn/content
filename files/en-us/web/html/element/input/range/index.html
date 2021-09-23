@@ -16,7 +16,9 @@ browser-compat: html.elements.input.input-range
 ---
 <div>{{HTMLRef("Input_types")}}</div>
 
-<p><span class="seoSummary">{{HTMLElement("input")}} elements of type <strong><code>range</code></strong> let the user specify a numeric value which must be no less than a given value, and no more than another given value. The precise value, however, is not considered important. This is typically represented using a slider or dial control rather than a text entry box like the {{HTMLElement('input/number', 'number')}} input type.</span> Because this kind of widget is imprecise, it shouldn't typically be used unless the control's exact value isn't important.</p>
+<p>{{HTMLElement("input")}} elements of type <strong><code>range</code></strong> let the user specify a numeric value which must be no less than a given value, and no more than another given value. The precise value, however, is not considered important. This is typically represented using a slider or dial control rather than a text entry box like the {{HTMLElement('input/number', 'number')}} input type.</p>
+
+<p>Because this kind of widget is imprecise, it shouldn't typically be used unless the control's exact value isn't important.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-range.html", "tabbed-standard")}}</div>
 
@@ -69,80 +71,46 @@ browser-compat: html.elements.input.input-range
 
 <h2 id="Additional_attributes">Additional attributes</h2>
 
-<p>In addition to the attributes shared by all {{HTMLElement("input")}} elements, range inputs offer the following attributes:</p>
+<p>In addition to the attributes shared by all {{HTMLElement("input")}} elements, range inputs offer the following attributes.</p>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Attribute</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>{{anch("list")}}</code></td>
-   <td>The id of the &lt;datalist&gt; element that contains optional pre-defined options</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("max")}}</code></td>
-   <td>The maximum permitted value</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("min")}}</code></td>
-   <td>The minimum permitted value</td>
-  </tr>
-  <tr>
-   <td><code>{{anch("step")}}</code></td>
-   <td>The stepping interval, used both for user interface and validation purposes</td>
-  </tr>
- </tbody>
-</table>
+<h3>list</h3>
 
-<p id="attr-list">{{page("/en-US/docs/Web/HTML/Element/input/text", "attr-list", 0, 1, 2)}}</p>
+<p>The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The {{HTMLElement("datalist")}} provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the {{htmlattrxref("type", "input")}} are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.</p>
 
 <p>See the <a href="#a_range_control_with_hash_marks">range control with hash marks</a> below for an example of how the options on a range are denoted in supported browsers.</p>
 
-<h3 id="attr-max"><code id="max">max</code></h3>
+<h3>max</h3>
 
 <p>The greatest value in the range of permitted values. If the {{htmlattrxref("value", "input")}} entered into the element exceeds this, the element fails <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a>. If the value of the <code><a href="/en-US/docs/Web/HTML/Attributes/max">max</a></code> attribute isn't a number, then the element has no maximum value.</p>
 
 <p>This value must be greater than or equal to the value of the <code><a href="/en-US/docs/Web/HTML/Attributes/min">min</a></code> attribute. See the HTML <a href="/en-US/docs/Web/HTML/Attributes/max"><code>max</code></a> attribute.</p>
 
-<h3 id="attr-min"><code id="min">min</code></h3>
+<h3>min</h3>
 
 <p>The lowest value in the range of permitted values. If the {{htmlattrxref("value", "input")}} of the element is less than this, the element fails <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">constraint validation</a>. If a value is specified for <code>min</code> that isn't a valid number, the input has no minimum value.</p>
 
 <p>This value must be less than or equal to the value of the <code><a href="/en-US/docs/Web/HTML/Attributes/max">max</a></code> attribute. See the <a href="/en-US/docs/Web/HTML/Attributes/min">HTML <code>min </code>attribute.</a></p>
 
-<h3 id="attr-step"><code id="step">step</code></h3>
+<h3>step</h3>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/number", "step-include")}}</p>
+<p>The <code>step</code> attribute is a number that specifies the granularity that the value must adhere to, or the special value <code>any</code>, which is described below. Only values which are equal to the basis for stepping (<code>{{anch("min")}}</code> if specified, {{htmlattrxref("value", "input")}} otherwise, and an appropriate default value if neither of those is provided) are valid.</p>
+
+<p>A string value of <code>any</code> means that no stepping is implied, and any value is allowed (barring other constraints, such as <code>{{anch("min")}}</code> and <code>{{anch("max")}}</code>).</p>
+
+<div class="note">
+<p><strong>Note:</strong> When the data entered by the user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round to the nearest valid value, preferring numbers in the positive direction when there are two equally close options.</p>
+</div>
 
 <p>The default stepping value for <code>range</code> inputs is 1, allowing only integers to be entered, <em>unless</em> the stepping base is not an integer; for example, if you set <code>min</code> to -10 and <code>value</code> to 1.5, then a <code>step</code> of 1 will allow only values such as 1.5, 2.5, 3.5,... in the positive direction and -0.5, -1.5, -2.5,... in the negative direction. See the <a href="/en-US/docs/Web/HTML/Attributes/step">HTML <code>step</code> attribute</a>.</p>
 
-<h3 id="Non_Standard_Attributes">Non Standard Attributes</h3>
+<h2 id="Non_Standard_Attributes">Non Standard Attributes</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Attribute</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>{{anch("orient")}}</code></td>
-   <td>Sets the orientation of the range slider. <strong>Firefox only.</strong></td>
-  </tr>
- </tbody>
-</table>
+<h3>orient</h3>
 
-<h3 id="attr-orient"><code id="orient">orient</code> {{non-standard_inline}}</h3>
-
-<p id="orient-include">Similar to the -moz-orient non-standard CSS property impacting the {{htmlelement('progress')}} and {{htmlelement('meter')}} elements, the <code>orient</code> attribute defines the orientation of the range slider. Values include <code>horizontal</code>, meaning the range is rendered horizontally, and <code>vertical</code>, where the range is rendered vertically.</p>
+<p>Similar to the -moz-orient non-standard CSS property impacting the {{htmlelement('progress')}} and {{htmlelement('meter')}} elements, the <code>orient</code> attribute defines the orientation of the range slider. Values include <code>horizontal</code>, meaning the range is rendered horizontally, and <code>vertical</code>, where the range is rendered vertically.</p>
 
 <div class="notecard note">
-<p>Note: The following input attributes do not apply to the input range: <code>accept</code>, <code>alt</code>, <code>checked</code>, <code>dirname</code>, <code>formaction</code>, <code>formenctype</code>, <code>formmethod</code>, <code>formnovalidate</code>, <code>formtarget</code>, <code>height</code>, <code>maxlength</code>, <code>minlength</code>, <code>multiple</code>, <code>pattern</code>, <code>placeholder</code>, <code>readonly</code>, <code>required</code>, <code>size</code>, <code>src</code>, and <code>width</code>. Any of these attributes, if included, will be ignored.</p>
+<p><strong>Note:</strong> The following input attributes do not apply to the input range: <code>accept</code>, <code>alt</code>, <code>checked</code>, <code>dirname</code>, <code>formaction</code>, <code>formenctype</code>, <code>formmethod</code>, <code>formnovalidate</code>, <code>formtarget</code>, <code>height</code>, <code>maxlength</code>, <code>minlength</code>, <code>multiple</code>, <code>pattern</code>, <code>placeholder</code>, <code>readonly</code>, <code>required</code>, <code>size</code>, <code>src</code>, and <code>width</code>. Any of these attributes, if included, will be ignored.</p>
 </div>
 
 <h2 id="Examples">Examples</h2>
@@ -174,21 +142,21 @@ browser-compat: html.elements.input.input-range
 
 <p>By default, the granularity, is 1, meaning that the value is always an integer. You can change the {{htmlattrxref("step")}} attribute to control the granularity. For example, If you need a value between 5 and 10, accurate to two decimal places, you should set the value of <code>step</code> to 0.01:</p>
 
-<div id="Granularity_sample1">
+<h4>Setting the step attribute</h4>
+
 <pre class="brush: html">&lt;input type="range" min="5" max="10" step="0.01"&gt;</pre>
 
-<p>{{EmbedLiveSample("Granularity_sample1", 600, 40)}}</p>
-</div>
+<p>{{EmbedLiveSample("Setting_the_step_attribute", 600, 40)}}</p>
+
+<h4>Setting step to "any"</h4>
 
 <p>If you want to accept any value regardless of how many decimal places it extends to, you can specify a value of <code>any</code> for the {{htmlattrxref("step", "input")}} attribute:</p>
 
-<div id="Granularity_sample2">
 <pre class="brush: html">&lt;input type="range" min="0" max="3.14" step="any"&gt;</pre>
 
-<p>{{EmbedLiveSample("Granularity_sample2", 600, 40)}}</p>
+<p>{{EmbedLiveSample("Setting_step_to_any", 600, 40)}}</p>
 
 <p>This example lets the user select any value between 0 and π without any restriction on the fractional part of the value selected.</p>
-</div>
 
 <h3 id="Adding_hash_marks_and_labels">Adding hash marks and labels</h3>
 
@@ -316,63 +284,49 @@ browser-compat: html.elements.input.input-range
 </table>
 
 <div class="note">
-<p><strong>Note</strong>: Currently, no browser fully supports these features. Firefox doesn't support hash marks and labels at all, for example, while Chrome supports hash marks but doesn't support labels. Version 66 (66.0.3359.181) of Chrome supports labels but the {{htmlelement("datalist")}} tag has to be styled with CSS as its {{cssxref("display")}} property is set to <code>none</code> by default, hiding the labels.</p>
+<p><strong>Note:</strong> Currently, no browser fully supports these features. Firefox doesn't support hash marks and labels at all, for example, while Chrome supports hash marks but doesn't support labels. Version 66 (66.0.3359.181) of Chrome supports labels but the {{htmlelement("datalist")}} tag has to be styled with CSS as its {{cssxref("display")}} property is set to <code>none</code> by default, hiding the labels.</p>
 </div>
 
-<h3 id="Change_the_orientation">Change the orientation</h3>
+<h3>Creating vertical range controls</h3>
 
-<div class="xhidden">
 <p>By default, if a browser renders a range input as a slider, it will render it so that the knob slides left and right. When supported, we will be able to make the range vertical, to slide up and down with CSS by declaring a height value greater than the width value. This is not actually implemented yet by any of the major browsers. (See Firefox {{bug(981916)}}, <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=341071">Chrome bug 341071</a>). It also, perhaps, may still be <a href="https://github.com/whatwg/html/issues/4177">under discussion</a>.</p>
 
 <p>In the meantime, we can make the range vertical by rotating it using CSS transforms, or, by targeting each browser engine with their own method, which includes setting the {{cssxref('appearance')}} to <code>slider-vertical</code>, by using a non-standard <code>orient</code> attribute in Firefox, or by changing the text direction for Internet Explorer and Edge.</p>
 
+<h4>Horizontal range control</h4>
+
 <p>Consider this range control:</p>
 
-<div id="Orientation_sample1">
 <pre class="brush: html">&lt;input type="range" id="volume" min="0" max="11" value="7" step="1"&gt;</pre>
-</div>
 
-<p>{{EmbedLiveSample("Orientation_sample1", 200, 200, "orientation_sample1.png")}}</p>
+<p>{{EmbedLiveSample("Horizontal_range_control", 200, 200, "orientation_sample1.png")}}</p>
 
 <p>This control is horizontal (at least on most if not all major browsers; others might vary).</p>
-</div>
 
-<h3 id="Standards">Standards</h3>
+<h4>Standards-based vertical range control</h4>
 
 <p>According to the specification, making it vertical requires adding CSS to change the dimensions of the control so that it's taller than it is wide, like this:</p>
-
-<div id="Orientation_sample2">
-<h4 id="CSS">CSS</h4>
 
 <pre class="brush: css">#volume {
   height: 150px;
   width: 50px;
 }</pre>
 
-<h4 id="HTML">HTML</h4>
-
 <pre class="brush: html">&lt;input type="range" id="volume" min="0" max="11" value="7" step="1"&gt;</pre>
 
-<h4 id="Result">Result</h4>
-
-<p>{{EmbedLiveSample("Orientation_sample2", 200, 200, "orientation_sample2.png")}}</p>
-</div>
+<p>{{EmbedLiveSample("Standards-based_vertical_range_control", 200, 200, "orientation_sample2.png")}}</p>
 
 <p>Unfortunately, no major browsers currently support vertical range controls directly.</p>
 
-<h3 id="transform_rotate-90deg">transform: rotate(-90deg)</h3>
+<h4>Using transform</h4>
 
-<p>You can, however, create a vertical range control by drawing a horizontal range control on its side. The easiest way is to use CSS: by applying a {{cssxref("transform")}} to rotate the element, you can make it vertical. Let's take a look.</p>
-
-<h4 id="HTML_2">HTML</h4>
+<p>You can create a vertical range control by drawing a horizontal range control on its side. The easiest way is to use CSS: by applying a {{cssxref("transform")}} to rotate the element, you can make it vertical. Let's take a look.</p>
 
 <p>The HTML needs to be updated to wrap the {{HTMLElement("input")}} in a {{HTMLElement("div")}} to let us correct the layout after the transform is performed (since transforms don't automatically affect the layout of the page):</p>
 
 <pre class="brush: html">&lt;div class="slider-wrapper"&gt;
   &lt;input type="range" min="0" max="11" value="7" step="1"&gt;
 &lt;/div&gt;</pre>
-
-<h4 id="CSS_2">CSS</h4>
 
 <p>Now we need some CSS. First is the CSS for the wrapper itself; this specifies the display mode and size we want so that the page lays out correctly; in essence, it's reserving an area of the page for the slider so that the rotated slider fits into the reserved space without making a mess of things.</p>
 
@@ -396,20 +350,16 @@ browser-compat: html.elements.input.input-range
 
 <p>The size of the control is set to be 150 pixels long by 20 pixels tall. The margins are set to 0 and the {{cssxref("transform-origin")}} is shifted to the middle of the space the slider rotates through; since the slider is configured to be 150 pixels wide, it rotates through a box which is 150 pixels on each side. Offsetting the origin by 75px on each axis means we will rotate around the center of that space. Finally, we rotate counter-clockwise by 90°. The result: a range input which is rotated so the maximum value is at the top and the minimum value is at the bottom.</p>
 
-<p>{{EmbedLiveSample("transform_rotate-90deg", 200, 200, "orientation_sample3.png")}}</p>
+<p>{{EmbedLiveSample("Using_transform", 200, 200, "orientation_sample3.png")}}</p>
 
-<h3 id="appearance_property">appearance property</h3>
+<h4>Using the appearance property</h4>
 
 <p>The {{cssxref('appearance')}} property has a non-standard value of <code>slider-vertical</code> that, well, makes sliders vertical.</p>
-
-<h4 id="HTML_3">HTML</h4>
 
 <p>We use the same HTML as in the previous examples:</p>
 
 <pre class="brush: html">&lt;input type="range" min="0" max="11" value="7" step="1"&gt;
 </pre>
-
-<h4 id="CSS_3">CSS</h4>
 
 <p>We target just the inputs with a type of range:</p>
 
@@ -417,33 +367,27 @@ browser-compat: html.elements.input.input-range
   -webkit-appearance: slider-vertical;
 }</pre>
 
-<p>{{EmbedLiveSample("appearance_property", 200, 200)}}</p>
+<p>{{EmbedLiveSample("Using_the_appearance_property", 200, 200)}}</p>
 
-<h3 id="orient_attribute">orient attribute</h3>
+<h4>Using the orient attribute</h4>
 
 <p>In Firefox only, there is a non-standard <code>orient</code> property.</p>
-
-<h4 id="HTML_4">HTML</h4>
 
 <p>Use similar HTML as in the previous examples, we add the attribute with a value of <code>vertical</code>:</p>
 
 <pre class="brush: html">&lt;input type="range" min="0" max="11" value="7" step="1" orient="vertical"&gt;
 </pre>
 
-<p>{{EmbedLiveSample("orient_attribute", 200, 200)}}</p>
+<p>{{EmbedLiveSample("Using_the_orient_attribute", 200, 200)}}</p>
 
-<h3 id="writing-mode_bt-lr">writing-mode: bt-lr;</h3>
+<h4 id="writing-mode_bt-lr">writing-mode: bt-lr;</h4>
 
 <p>The {{cssxref('writing-mode')}} property should generally not be used to alter text direction for internationalization or localization purposes, but can be used for special effects. </p>
-
-<h4 id="HTML_5">HTML</h4>
 
 <p>We use the same HTML as in the previous examples:</p>
 
 <pre class="brush: html">&lt;input type="range" min="0" max="11" value="7" step="1"&gt;
 </pre>
-
-<h4 id="CSS_4">CSS</h4>
 
 <p>We target just the inputs with a type of range, changing the writing mode from the default to <code>bt-lr</code>, or bottom-to-top and left-to-right:</p>
 
@@ -453,18 +397,14 @@ browser-compat: html.elements.input.input-range
 
 <p>{{EmbedLiveSample("writing-mode_bt-lr", 200, 200)}}</p>
 
-<h3 id="Putting_it_all_together">Putting it all together</h3>
+<h4 id="Putting_it_all_together">Putting it all together</h4>
 
 <p>As each of the above examples works in different browsers, you can put all of them in a single example to make it work cross browser:</p>
-
-<h4 id="HTML_6">HTML</h4>
 
 <p>We keep the <code>orient</code> attribute with a value of <code>vertical</code> for Firefox:</p>
 
 <pre class="brush: html">&lt;input type="range" min="0" max="11" value="7" step="1" orient="vertical"&gt;
 </pre>
-
-<h4 id="CSS_5">CSS</h4>
 
 <p>We target just the inputs with a type of range, changing the writing mode from the default to <code>bt-lr</code>, or bottom-to-top and left-to-right, for Edge and Internet Explorer, and add <code>-webkit-appearance: slider-vertical</code> for all -webkit-based browsers:</p>
 

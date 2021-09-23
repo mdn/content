@@ -11,12 +11,11 @@ browser-compat: svg.elements.style
 
 <p>The SVG <strong><code>&lt;style&gt;</code></strong> element allows style sheets to be embedded directly within SVG content.</p>
 
-<p class="note">SVG's <code>style</code> element has the same attributes as the corresponding element in HTML (see HTML's {{HTMLElement("style")}} element).</p>
+<div class="note"><p><strong>Note:</strong> SVG's <code>style</code> element has the same attributes as the corresponding element in HTML (see HTML's {{HTMLElement("style")}} element).</p></div>
 
-<div id="Example">
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100%; margin: 0; padding: 0; }</pre>
-</div>
+<h2>Example</h2>
+
+<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
 
 <pre class="brush: html; highlight[4]">&lt;svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;style&gt;
@@ -31,18 +30,17 @@ browser-compat: svg.elements.style
 &lt;/svg&gt;</pre>
 
 <p>{{EmbedLiveSample('Example', 150, '100%')}}</p>
-</div>
 
 <h2 id="Attributes">Attributes</h2>
 
 <dl>
- <dt id="attr-type">{{SVGAttr("type")}}</dt>
+ <dt>{{SVGAttr("type")}}</dt>
  <dd>This attribute defines type of the style sheet language to use as a media type string.<br>
  <small><em>Value type</em>: <a href="/en-US/docs/Web/SVG/Content_type#string"><strong>&lt;string&gt;</strong></a>; <em>Default value</em>: <code>text/css</code>; <em>Animatable</em>: <strong>no</strong></small></dd>
- <dt id="attr-media">{{SVGAttr("media")}}</dt>
+ <dt>{{SVGAttr("media")}}</dt>
  <dd>This attribute defines to which {{cssxref('@media', 'media')}} the style applies.<br>
  <small><em>Value type</em>: <a href="/en-US/docs/Web/SVG/Content_type#string"><strong>&lt;string&gt;</strong></a>; <em>Default value</em>: <code>all</code>; <em>Animatable</em>: <strong>no</strong></small></dd>
- <dt id="attr-title">{{SVGAttr("title")}}</dt>
+ <dt>{{SVGAttr("title")}}</dt>
  <dd>This attribute the title of the style sheet which can be used to switch between alternate style sheets.<br>
  <small><em>Value type</em>: <a href="/en-US/docs/Web/SVG/Content_type#string"><strong>&lt;string&gt;</strong></a>; <em>Default value</em>: <em>none</em>; <em>Animatable</em>: <strong>no</strong></small></dd>
 </dl>

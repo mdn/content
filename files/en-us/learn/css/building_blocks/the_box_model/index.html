@@ -206,7 +206,7 @@ tags:
 
 <h4 id="Margin_collapsing">Margin collapsing</h4>
 
-<p>A key thing to understand about margins is the concept of <strong>margin collapsing</strong>. If you have two elements whose margins touch, and both margins are positive, those margins will combine to become one margin, and its size will be equal to the largest individual margin. If one margin is negative, its value will be <em>subtracted</em> from the total. Where both are negative, the margins will collapse and the largest value will be used.</p>
+<p>A key thing to understand about margins is the concept of <strong>margin collapsing</strong>. If you have two elements whose margins touch, and both margins are positive, those margins will combine to become one margin, and its size will be equal to the largest individual margin. If one margin is negative, its value will be <em>subtracted</em> from the total. Where both are negative, the margins will collapse and the smallest (furthest from zero) value will be used.</p>
 
 <p>In the example below, we have two paragraphs. The top paragraph has a <code>margin-bottom</code> of 50 pixels. The second paragraph has a <code>margin-top</code> of 30 pixels. The margins have collapsed together so the actual margin between the boxes is 50 pixels and not the total of the two margins.</p>
 
