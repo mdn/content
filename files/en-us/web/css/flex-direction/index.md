@@ -98,7 +98,6 @@ Using the `flex-direction` property with values of `row-reverse` or `column-reve
   height: 200px;
   border: 1px solid #c3c3c3;
   display: flex;
-  flex-direction: column-reverse;
 }
 
 .box {
